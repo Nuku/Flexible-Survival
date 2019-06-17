@@ -18,7 +18,7 @@ To fight:
 					repeat with x running from 1 to ( ( 100 - humanity of Player ) / 25 ):
 						add "Mental Mouse" to PossibleEncounters;
 		if insectlarva is true and larvaegg is 1 and gestation of Child is 0: [hunted by wasp hive anywhere outdoors]
-			if battleground is not "Mall" and battleground is not "Stables" and battleground is not "Hospital" and battleground is not "Museum" and battleground is not "Sealed":
+			if battleground is not "Mall" and battleground is not "Stable" and battleground is not "Hospital" and battleground is not "Museum" and battleground is not "Sealed":
 				if there is a name of "Black Wasp" in the Table of Random Critters:
 					add "Black Wasp" to PossibleEncounters;
 					if Libido of Player > 30:

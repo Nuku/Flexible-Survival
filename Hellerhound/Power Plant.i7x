@@ -182,7 +182,7 @@ carry out activating:
 			say "No matter how hard you try, none of the power lights for the different city areas seems to turn on and after some futile button-pushing, the system falls back into shutdown mode. Maybe there is something wrong with the power lines? Or the generator? It doesn't look too good, but at least you now know how to reactivate the system quickly.";
 			now findwires is 1;
 	else if findwires is 1:
-		say "The power light for the city blocks holding the library and mall is still off.";
+		say "The power light for the city blocks holding the library and mall is still off. Maybe there is something wrong with the power lines?";
 	else if findwires is 2 and fixedgens is 3:
 		say "The power for the library and mall is already on and that pulls most of the power of the damaged power plant. Also, there seems to be a lot more damage in the lines leading elsewhere, so this is as good as it is gonna get for now.";
 	else If findwires is 2 and fixedgens is 2: [turning the power on]

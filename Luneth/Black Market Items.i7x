@@ -530,15 +530,93 @@ The descmod of zephyr armored lab boots is "A pair of black rubber lab boots are
 The slot of zephyr armored lab boots is "feet".
 the scent of zephyr armored lab boots is "The lab boots smells of chemicals and rubber.".
 
-Part 8 - Zephyr Riot Shield
+Part 8 - zephyr bashing riot shield
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"zephyr riot shield"	"A black shield that zephyr's riot security use to suppress threats."	4	zephyr riot shield
+"zephyr bashing riot shield"	"[RiotShieldAttackDesc]"	4	zephyr bashing riot shield
 
-zephyr riot shield is an armament. It is part of the player. It has a weapon "[one of]your metal shield[or]your suppressive shield[or]your black shield[at random]". The weapon damage of zephyr riot shield is 8. The weapon type of zephyr riot shield is "Melee". It is not temporary.
+zephyr bashing riot shield is an armament. It is not temporary.
+It is part of the player. It has a weapon "[one of]your metal shield[or]your suppressive shield[or]your black shield[at random]".
+The weapon damage of zephyr bashing riot shield is 8.
+The weapon type of zephyr bashing riot shield is "Melee".
+The objsize of zephyr bashing riot shield is 4.
 
-the scent of the zephyr riot shield is "     The zephyr riot shield smells faintly of suppressive authority.".
+to say RiotShieldAttackDesc:
+	say "     A black shield that zephyr's riot security use to suppress threats. This one is yours, and you've chosen to use it for bashing people out of the way. You might [link]change your mind[as]riotshieldProtectMode[end link] though, and direct your shield to more defensive purposes instead.";
+
+the scent of the zephyr bashing riot shield is "     The zephyr protective riot shield smells faintly of suppressive authority.".
+
+riotshieldProtectMode is an action applying to one topic.
+
+understand "riotshieldProtectMode" as riotshieldProtectMode.
+
+check riotshieldProtectMode:
+	if carried of zephyr bashing riot shield < 1:
+		say "     What shield? You're not holding one right now.";
+
+carry out riotshieldProtectMode:
+	if zephyr bashing riot shield is equipped:
+		now zephyr bashing riot shield is not equipped;
+		say "     You lower your shield and look at it, contemplating how you can defend yourself instead of using it as a blunt weapon.";
+	else:
+		say "     You look at your shield, contemplating how you can defend yourself instead of using it as a blunt weapon.";
+	decrease carried of zephyr bashing riot shield by 1;
+	increase carried of zephyr protective riot shield by 1;
+
+
+Part 9 - zephyr protective riot shield
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"zephyr protective riot shield"	"[RiotShieldProtectDesc]"	4	zephyr protective riot shield
+
+zephyr protective riot shield is equipment. It is not temporary.
+the usedesc of zephyr protective riot shield is "[RiotShieldProtectUse]".
+The AC of zephyr protective riot shield is 46.
+The effectiveness of zephyr protective riot shield is 42.
+The objsize of zephyr protective riot shield is 4.
+The placement of zephyr protective riot shield is "body".
+The descmod of zephyr protective riot shield is "You hold the riot shield in hands, its size is large enough to cover most of your torso. It is painted black with the zephyr trademark branded across the front, just underneath the vision slot.".
+The slot of zephyr protective riot shield is "shield".
+
+to say RiotShieldProtectDesc:
+	say "     A black shield that zephyr's riot security use to suppress threats. This one is yours, and you've chosen to use it for defending yourself with. You might [link]change your mind[as]riotshieldAttackMode[end link] though, and direct your shield to more offensive purposes instead.";
+
+the scent of the zephyr protective riot shield is "     The zephyr protective riot shield smells faintly of suppressive authority.".
+
+to say RiotShieldProtectUse:
+	if zephyr protective riot shield is not equipped:
+		say "     While providing very nice protection, it is a bit unwieldly though, making it harder to move freely.";
+		decrease Dexterity of Player by 2;
+		add "RiotShieldDexPenalty" to Traits of Player;
+	else: [already equipped]
+		say "     You raise up the riot shield to protect most of your torso.";
+		increase Dexterity of Player by 2;
+		remove "RiotShieldDexPenalty" from Traits of Player;
+
+an everyturn rule:
+	if "RiotShieldDexPenalty" is listed in Traits of Player and zephyr protective riot shield is not equipped:
+		increase Dexterity of Player by 2;
+		remove "RiotShieldDexPenalty" from Traits of Player;
+
+riotshieldAttackMode is an action applying to one topic.
+
+understand "riotshieldAttackMode" as riotshieldAttackMode.
+
+check riotshieldAttackMode:
+	if carried of zephyr protective riot shield < 1:
+		say "     What shield? You're not holding one right now.";
+
+carry out riotshieldAttackMode:
+	if zephyr protective riot shield is equipped:
+		now zephyr protective riot shield is not equipped;
+		say "     You lower your shield and look at it, contemplating how you can use it to bash people out of the way, making it a blunt weapon.";
+	else:
+		say "     You look at your shield, contemplating how you can use it to bash people out of the way, making it a blunt weapon.";
+	decrease carried of zephyr protective riot shield by 1;
+	increase carried of zephyr bashing riot shield by 1;
+
 
 
 Black Market Items ends here.

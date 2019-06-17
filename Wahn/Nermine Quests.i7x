@@ -623,7 +623,7 @@ Section 7- Jackal ankh
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"Strange Ankh"	"a small golden ankh with an image of a jackal-headed beastman set into the base. It feels oddly warm in your hands"	5	strange ankh
+"strange ankh"	"A small golden ankh with an image of a jackal-headed beastman set into the base. It feels oddly warm in your hands."	5	strange ankh
 
 strange ankh is a grab object. It is part of the player. Understand "ankh" and "strange" as strange ankh.
 

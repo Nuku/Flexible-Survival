@@ -522,6 +522,7 @@ To Birth:
 			say "With a slow turn, they show off their pureblood [HeadSpeciesName of Child] form.";
 		else:
 			say "With a slow turn, they show off their [HeadSpeciesName of Child] head, their [TorsoSpeciesName of Child] front and [BackSpeciesName of Child] back. Your child has [ArmsSpeciesName of Child] arms, [LegsSpeciesName of Child] legs[if ShowTail is false] and a [AssSpeciesName of Child] behind[else], a [AssSpeciesName of Child] behind and a [TailSpeciesName of Child] tail[end if].";
+		LineBreak;
 		if Player is in Sitting Area and Chris is in Sitting Area:
 			say "     The young buck of an orc warrior looks at you with a broad grin as he continues to show off a bit more, stroking his large hands over the muscle-packed form of his body, then finally gravitating to his crotch. Experimentally wrapping his fingers around the thick shaft, he gives it a few strokes and grunts in pleasure as it fills out to an impressive length of green-skinned man-meat. Winking at you as he lets go and the huge cock swings down between his legs, he then turns to Chris, who'd been watching the birth of his son from a few steps away up until now. 'That's my boy!' Chris bellows out for the world to hear as he steps up to embrace the young orc warrior. 'Time for some male bonding with dad. See ya later!' your green-skinned offspring says over his shoulder, then the two of them walk off, boasting and chatting like frat brothers with each other.";
 		else:

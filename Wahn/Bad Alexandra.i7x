@@ -60,6 +60,9 @@ Version 1 of Bad Alexandra by Wahn begins here.
 [ 5 = licked her                                    ]
 [ 6 = tits                                          ]
 [ 7 = 69                                            ]
+[ 85 = Friesians oral                               ]
+[ 86 = Friesians cunn                               ]
+[ 87 = Friesians                                    ]
 [ 88 = Brutus oral                                  ]
 [ 89 = Brutus cunn                                  ]
 [ 90 = Brutus                                       ]
@@ -80,6 +83,8 @@ Version 1 of Bad Alexandra by Wahn begins here.
 [ 3 = Korvin                                        ]
 [ 4 = Carl                                          ]
 [ 5 = Brutus                                        ]
+[ 6 = Karel                                         ]
+[ 7 = Isaac                                         ]
 
 "Adds Alexandra the doberwoman as an NPC to the Flexible Survival game"
 
@@ -146,8 +151,12 @@ to say AlexandraPupDaddyName: [to use in text]
 		say "Korvin has ";
 	else if AlexandraPupDaddy is 4:
 		say "Carl has ";
-	else if AlexandraPupDaddy is 4:
+	else if AlexandraPupDaddy is 5:
 		say "Brutus has ";
+	else if AlexandraPupDaddy is 6:
+		say "Karel has ";
+	else if AlexandraPupDaddy is 7:
+		say "Isaac has ";
 
 [See Doberman file for collecting Alexandra.]
 
@@ -195,6 +204,10 @@ to say alexandradesc_bg:
 			say "You're curious if they will be half-husky or mostly doberman. ";
 		else if AlexandraPupDaddy is 5: [Brutus]
 			say "You're curious if they will show any of their demonic heritage or be all doberman. ";
+		else if AlexandraPupDaddy is 6: [Karel]
+			say "You're curious if they will show any of their equine heritage or be all doberman. ";
+		else if AlexandraPupDaddy is 7: [Isaac]
+			say "You're curious if they will show any of their equine heritage or be all doberman. ";
 		[jeans status]
 		if lust of Alexandra < 13: [slightly pregnant]
 			say "She's been needing to leave her jeans unbuttoned lately, to allow her growing belly enough space. ";
@@ -208,6 +221,8 @@ to say alexandradesc_bg:
 			say "There is a damp stain on the ass of her jeans under her short tail from the recent fucking you gave the dobie's backside. ";
 		else if ( lastdobiemess is 5 or lastdobiemess is 7 ): [player licked her]
 			say "The crotch of her jeans is wet with the excess juices from her recent climax. ";
+		else if lastdobiemess is 85 or lastdobiemess is 86 or lastdobiemess is 87: [Karel/Isaac]
+			say "The crotch of her jeans is wet with the stains of recent sex that smell strongly of horseman. ";
 		else if lastdobiemess is 88 or lastdobiemess is 89 or lastdobiemess is 90: [Brutus]
 			say "The crotch of her jeans is wet with the stains of recent sex that smell strongly of demon brute. ";
 		else if lastdobiemess is 91 or lastdobiemess is 92 or lastdobiemess is 93: [Carl]
@@ -240,6 +255,8 @@ to say alexandradesc_bg:
 	if lastfuck of Alexandra - turns < 5:
 		if (lastdobiemess is 3 or lastdobiemess is 6 or lastdobiemess is 97):
 			say "The dobie's muzzle is streaked with dry patches of your cum that she's occasionally licks at. ";
+		else if (lastdobiemess is 85):
+			say "The dobie's muzzle is streaked with dry patches of equine's cum that she's occasionally licks at. ";
 		else if (lastdobiemess is 88):
 			say "The dobie's muzzle is streaked with dry patches of Brutus's cum that she's occasionally licks at. ";
 		else if (lastdobiemess is 91):
@@ -1152,6 +1169,10 @@ To impregAlexandraChance with (x - text):
 				now AlexandraPupDaddy	is 4;
 			-- "Brutus":
 				now AlexandraPupDaddy	is 5;
+			-- "Karel":
+				now AlexandraPupDaddy	is 6;
+			-- "Isaac":
+				now AlexandraPupDaddy	is 7;
 	else:
 		if debugactive is 1:
 			say "     Impregnation fail! A chance of [AlexandraPregChance] in 10 didn't succeed.";
@@ -1225,6 +1246,10 @@ an everyturn rule:
 							now MaxHP of Spike is 4; [Carl Spike]
 						-- 5:
 							now MaxHP of Spike is 5; [Brutus Spike]
+						-- 6:
+							now MaxHP of Spike is 6; [Karel Spike]
+						-- 7:
+							now MaxHP of Spike is 7; [Isaac Spike]
 				increase Libido of Alexandra by AlexandraGrowingPups;
 				increase AlexandraPregCount by 1; [number of previous pregnancies]
 				now AlexandraGrowingPups is 0; [no pups in her now]

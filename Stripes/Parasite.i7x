@@ -1,4 +1,5 @@
 Version 1 of Parasite by Stripes begins here.
+[ Version 1.1 - Tweaked values to make it easier for the player to expel the parasite - Kurainyx]
 
 "Adds an event to gain the larva parasite and unlock the Black Wasp breeder insects."
 
@@ -62,7 +63,7 @@ Section 2 - Parasite
 
 an everyturn rule:
 	if insectlarva is true and skipturnblocker is 0:
-		increase Libido of Player by a random number between 1 and 3;
+		increase Libido of Player by a random number between 0 and 3;
 		if larvaegg is 0:
 			increase larvacounter by 1;
 			if Player is female and a random chance of 1 in 3 succeeds, increase larvacounter by 1;
@@ -70,25 +71,25 @@ an everyturn rule:
 			if "Maternal" is listed in feats of Player and a random chance of 1 in 3 succeeds, increase larvacounter by 1;
 			if larvacounter >= 12 and gestation of Child is 0:
 				say "     You can feel some activity inside your belly as the parasite inside you squirms about. You would be disturbed by this were it not strangely arousing. Your [if Player is female]womb[else]bowels[end if] feel warm as something rubs and pulses against your inner walls, spraying thick goo inside you. You find yourself longing to see those black wasps again. Noticing their enticing scent in the air, you soon realize that the smell is coming from you[if larvalaid > 2]. You realize that more unfertilized eggs have been laid inside you and the wasps will come looking to breed you again[else if larvalaid is 1 or larvalaid is 2] and realize the scent will draw the wasps again[end if].";
-				increase Libido of Player by 10;
+				increase Libido of Player by 6;
 				now larvacounter is 0;
 				now larvaegg is 1;
-			else if larvacounter is odd and a random chance of 3 in 5 succeeds:
+			else if larvacounter is odd and a random chance of 2 in 5 succeeds:
 				say "[one of]You stifle a moan of pleasure as you feel the insect creature inside you move about.[or]Your insides churn as you feel the larva inside you squirm around and reposition itself.[or]There is a bulge that moves across your belly momentarily.[or]You feel the parasite inside you rubbing against your inner walls in a strangely pleasurable manner.[or]You feel a stinging sensation of painful pleasure as the parasite inside you stabs something into you. You feel a rush of arousal a few moments later.[or]The larva shifts around again, showing briefly as a bulge across your belly before settling down again.[or]You continue to feel activity from the creature inside you from time to time, but have begun to grow used to its activity.[stopping]";
-				increase Libido of Player by 4;
+				increase Libido of Player by 3;
 		else if larvaegg is 1 and gestation of Child is 0:
-			increase Libido of Player by 3;
+			increase Libido of Player by 2;
 			if a random chance of 1 in 3 succeeds, decrease humanity of Player by 1;
 			increase larvacounter by 1;
 			if larvacounter >= ( 12 + larvalaid ) and gestation of Child is 0:
-				if humanity of Player - Libido of Player > 30:
+				if humanity of Player - Libido of Player > 20:
 					increase larvaexpel by 1;
 					if larvaexpel < 3:
 						say "     After enduring the squirming of the larva inside you and the strange, twisted urges you've been feeling because of it, something finally shifts inside you. You make your way somewhere private and groan as you push, expelling [if larvalaid > 2]the unfertilized egg goo from inside you[else]some thick, slimy goo from inside you[end if]. You feel relieved that you managed to endure the ordeal and can feel the parasite subside for the moment.";
 						now larvacounter is -5;
 						now larvaegg is 0;
 						SanBoost 3;
-						decrease Libido of Player by 5;
+						decrease Libido of Player by 12;
 					if larvaexpel is 3:
 						say "     After enduring the squirming of the larva inside you and the strange, twisted urges you've been feeling because of it, you feel a painful jab and an uncomfortable weight in your [if Player is female]womb[else]bowels[end if]. Making your way somewhere private, you groan in pain as your body pushes to expel the lump inside you. Finally, you manage to push it out and are surprised to find it not only more [if larvalaid < 2]thick goo[else]egg goo[end if], but the parasite itself. With it dead now after being prevented from fulfilling its life cycle repeatedly, you have managed to push it out, freeing you from its strange, parasitic hold. It is a pale creature, looking much like a bloated, insect larva with several tiny legs and phallic back end from which you suspect it released the [if larvalaid < 2]slimy goo[else]egg slime[end if] into you. While you'd rather have nothing more to do with the creature, you dispose of the larva in case the wasps would be drawn to its scent.";
 						now insectlarva is false;
@@ -111,7 +112,7 @@ an everyturn rule:
 			else if larvacounter is odd and a random chance of 1 in 2 succeeds:
 				say "[one of]You stifle a moan of pleasure as the larva inside you squirms.[or]Your insides feel strangely warm and needy and you find your mind wandering to those black wasps.[or]You feel an emptiness inside which you long for one of those wasps to fill.[or]You feel a warm splash of more goo across your insides. This unusual sensation only arouses you further.[or]You feel a painful sting inside you that is soon replaced by the warm rush of arousal. The scent of the hive grows stronger around you.[or]The larva rubs itself against your inner walls, resulting in a strangely pleasurable sensation, but one that also makes you long for something larger to fill you.[in random order]";
 		else if larvaegg is 2:
-			decrease Libido of Player by 4;
+			decrease Libido of Player by 6;
 			increase larvacounter by 1;
 			if Player is female and a random chance of 1 in 3 succeeds, increase larvacounter by 1;
 			if "Fertile" is listed in feats of Player and a random chance of 1 in 2 succeeds, increase larvacounter by 1;
@@ -247,6 +248,7 @@ When Play begins:
 	now altcombat entry is "blackwasp"; [ Row used to designate any special combat features, "default" for standard combat. ]
 	now BannedStatus entry is false;
 
+[
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -275,7 +277,7 @@ When Play begins:
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	[Mouth Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
 	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
 	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
 	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
@@ -346,6 +348,7 @@ When Play begins:
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
+]
 
 
 Table of Critter Combat (continued)

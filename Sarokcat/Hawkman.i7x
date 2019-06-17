@@ -12,12 +12,6 @@ Section 1 - Creature Responses
 to say hawkmandesc:
 	setmongender 3;  [creature is male]
 	choose row MonsterID from Table of Random Critters;
-	if "Male Preferred" is listed in feats of Player:
-		now sex entry is "Male";
-	else if "Herm Preferred" is listed in feats of Player:
-		now sex entry is "Both";
-	else:
-		now sex entry is "Female";
 	if inasituation is true:
 		stop the action; [details are taken care of at the event source]
 	say "     As you wander through the city streets, you hear a whistling sound from above and look up to see a powerful avian form swooping down towards you. You jump back as it lands right in front of you and get a closer look at the anthro raptor's body as he stalks towards you on taloned feet. The strange bird-man has large, hawk-like wings stretching out from his back, clearly flight-ready given the creature's aerial approach. He is covered in a rather soft and beautiful looking plumage of brown, layered feathers with ivory-white countershading. The obviously male creature is half-erect as he cocks his avian head to the side appraisingly, and you swear you can see a lecherous grin stretching across his beak as he leaps forward to attack.";
@@ -94,7 +88,7 @@ To say Hawkman loses:
 	increase hawkmanbeaten by 1;
 
 to say HawkmanCumMilking:
-	say "     After pulling an empty bottle out of your pack and setting it down where you can quickly reach it, you decide to take what you want from the defeated avian instead of letting him force it upon you. Slamming his shoulders down firmly, you tell the weakened bird to stay, , then reach for his crotch and start rubbing it. As his tapering shaft starts to fill out under your touch, the hawkman's indignant squawks die down before too much longer, with your former opponent beginning grind against your hand. He still struggles a little bit, wanting to be dominant and on top, but you growl at him until he stops resisting. Only then do you take the hand that was pressing down on his chest away, using it to caress his balls instead. Soon, you've got his manhood fully hard and standing straight up like a pole, pulsing slightly from the rapid beat of his heart.";
+	say "     After pulling an empty bottle out of your pack and setting it down where you can quickly reach it, you decide to take what you want from the defeated avian instead of letting him force it upon you. Slamming his shoulders down firmly, you tell the weakened bird to stay, then reach for his crotch and start rubbing it. As his tapering shaft starts to fill out under your touch, the hawkman's indignant squawks die down before too much longer, with your former opponent beginning grind against your hand. He still struggles a little bit, wanting to be dominant and on top, but you growl at him until he stops resisting. Only then do you take the hand that was pressing down on his chest away, using it to caress his balls instead. Soon, you've got his manhood fully hard and standing straight up like a pole, pulsing slightly from the rapid beat of his heart.";
 	say "     You stroke and fondle your defeated hawkman a bit, grinning as you push the groaning captive closer and closer to orgasm. You tease him by saying that maybe he should just be a good birdie and come to you when you whistle, which draws a grumpy screecg from him - right until you begin squeezing tighter and give his dick a long stroke up and down. With a chuckle, you continue to caress his manhood, and when he finally can't hold back any more, you quickly snatch up your prepared bottle and hold it to his cock, successfully catching spurt after spurt of milky white cum in it. He's got a respectable output and fills a little bit less than a third of the bottle before he sinks back in exhaustion, panting loudly. Looks like you've finished off the beaten hawk for now, so you cap the bottle of cum and pack it away, giving him a casual wave to slink off. Feathers still ruffled and untidy after having been defeated and milked, he nevertheless jumps into the air and flies off, looking for some place to lick his wounds and salve his pride.";
 	LineBreak;
 	say "[bold type]You gain a bottle of hawkman male cum![roman type][line break]";
@@ -117,7 +111,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now NewTypeInfection entry is true;
+	now NewTypeInfection entry is false;
 	now Species Name entry is "Hawkman";
 	add "Hawkman Male" to infections of AvianList;
 	add "Hawkman Male" to infections of AvianpredList;
@@ -181,6 +175,7 @@ When Play begins:
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
+[
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -209,7 +204,7 @@ When Play begins:
 	now Eye Color entry is "yellow"; [one word color descriptor]
 	now Eye Adjective entry is "round"; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 10; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	[Mouth Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
 	now Mouth Circumference entry is 10;
 	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
 	now Tongue Adjective entry is "blunt"; [one word descriptive adjective (wide/slobbery/...)]
@@ -280,6 +275,7 @@ When Play begins:
 	now Cunt Color entry is "pink"; [one word color descriptor]
 	now Clit Size entry is 2; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
+]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -287,7 +283,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now NewTypeInfection entry is true;
+	now NewTypeInfection entry is false;
 	now Species Name entry is "Hawkman";
 	add "Hawkman Female" to infections of AvianList;
 	add "Hawkman Female" to infections of AvianpredList;
@@ -351,6 +347,7 @@ When Play begins:
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
+[
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -379,7 +376,7 @@ When Play begins:
 	now Eye Color entry is "yellow"; [one word color descriptor]
 	now Eye Adjective entry is "round"; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 10; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	[Mouth Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
 	now Mouth Circumference entry is 10;
 	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
 	now Tongue Adjective entry is "blunt"; [one word descriptive adjective (wide/slobbery/...)]
@@ -450,6 +447,7 @@ When Play begins:
 	now Cunt Color entry is "pink"; [one word color descriptor]
 	now Clit Size entry is 2; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
+]
 
 when play ends:
 	if BodyName of Player is "Hawkman Male" or BodyName of Player is "Hawkman Female":

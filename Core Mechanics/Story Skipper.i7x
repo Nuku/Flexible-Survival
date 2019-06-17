@@ -15,9 +15,15 @@ The File of TraitSave (owned by another project) is called "FSTraitSave".
 The File of PlayerSave (owned by another project) is called "FSPlayerSave".
 The File of PlayerListsSave (owned by another project) is called "FSPlayerListsSave".
 The File of BeastSave (owned by another project) is called "FSBeastSave".
+The File of NoteSave (owned by another project) is called "FSNoteSave".
 
 PetList is a list of text that varies.[@Tag:NotSaved] [for stashing the pet objects in the Character Nexus]
 PetList is { "Nullpet", "Latex Vixen", "strange doll", "pink raccoon", "demon brute", "wukong", "human dog", "Retriever Girl", "rubber tigress", "frost giantess", "Little fox", "skunk kit", "equinoid warrior", "Felinoid Companion", "Cute Crab", "house cat", "Exotic Bird", "helper dog", "Gryphoness", "bee girl", "gshep", "mouse girl", "royal tiger", "doberman companion" };
+
+an everyturn rule:
+	if Player is in NPC Nexus:
+		say "     Trixie the fairy flutters into existence right next to you and looks at you with a puzzled expression. 'Now now, you really should be somewhere else. How in the world did you end up here? If you do remember the room where you're supposed to be, please report that on the FS Discord channel as a bug. But for now, let's get you back in the city at least.'";
+		move Player to Bunker;
 
 [----------------------------------------------------------------------------------]
 [ Testing Commands for partial Saving                                              ]
@@ -399,8 +405,7 @@ to CharacterRestore:
 					let TargetRoom be the object corresponding to a name of LocationName entry in the Table of GameRoomIDs;
 					move CharacterObject to TargetRoom;
 				else:
-					if debugactive is 1:
-						say "DEBUG -> Room [LocationName entry] does not exist. Character moved to NPC Nexus.[line break]";
+					say "DEBUG -> Room [LocationName entry] does not exist. '[CharacterIdName]' moved to NPC Nexus. Please report this error on the FS Discord Bug Report Channel![line break]";
 					move CharacterObject to NPC Nexus;
 				now Energy of CharacterObject is Energy entry;
 				now HP of CharacterObject is HP entry;
@@ -670,6 +675,21 @@ to BeastRestore:
 		say "No Beast Save File Found!";
 	blank out the whole of Table of GameBeasts; [empty out all old data]
 
+to NoteSave:
+	say "Saving Notes...";
+	write File of NoteSave from the Table of JournalNotes;
+	if debugactive is 1:
+		say "DEBUG -> File of NoteSave written.[line break]";
+
+to NoteRestore:
+	if the File of NoteSave exists:
+		say "Restoring Notes...";
+		read File of NoteSave into the Table of JournalNotes;
+		if debugactive is 1:
+			say "DEBUG -> Notes restored from FSNoteSave.[line break]";
+	else:
+		say "No Note Save File Found!";
+
 Section 2 - Trixie
 
 understand "export progress" as ProgressExport.
@@ -695,6 +715,7 @@ To SaveEverything:
 	ChildrenSave;
 	PlayerSave;
 	BeastSave;
+	NoteSave;
 	VariableSave;
 
 understand "Import Progress" as ProgressImport.
@@ -720,6 +741,7 @@ to say ProgressionImport:
 	TraitRestore;
 	PlayerRestore;
 	BeastRestore;
+	NoteRestore;
 	VariableLoad;
 
 Table of GameCharacterIDs (continued)

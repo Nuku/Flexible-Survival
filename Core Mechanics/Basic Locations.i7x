@@ -8,7 +8,7 @@ NPC Nexus	"nothing"
 NPC Nexus	"nowhere"
 
 NPC Nexus is a room.
-The description of NPC Nexus is "This is the extradimensional storage room for unused NPCs. If you somehow ended up here during an import, please include your 'FSCharacterSave.glkdata' file in a bug report on the FS Discord.".
+The description of NPC Nexus is "This is the extradimensional storage room for unused NPCs. If you somehow ended up here during an import, please include your 'FSCharacterSave.glkdata' file in a bug report on the FS Discord. Also - DON'T PANIC - Trixie will be along in the next turn to pick you up for a trip back into the bunker".
 
 
 Table of GameRoomIDs (continued)
@@ -43,6 +43,7 @@ Communal Shower	"Communal Shower"
 
 Communal Shower is north of Bunker.
 Communal Shower is a room. The description of Communal Shower is "[bshower desc]".
+Communal Shower is sleepsafe.
 lastShowerUse is a number that varies. lastShowerUse is usually 10000.
 
 after looking while player is in Communal Shower:
@@ -61,6 +62,7 @@ Underground Restroom	"Underground Restroom"
 
 Underground Restroom is northeast of Bunker.
 Underground Restroom is a room. The description of Underground Restroom is "[brestroom desc]".
+Underground Restroom is sleepsafe.
 
 after looking while player is in Underground Restroom:
 	project the Figure of Map_Bunker_Restroom_icon;
@@ -75,6 +77,7 @@ Maintenance Storeroom	"Maintenance Storeroom"
 
 Maintenance Storeroom is southwest of Bunker.
 Maintenance Storeroom is a room. The description of Maintenance Storeroom is "[bmaintenance desc]".
+Maintenance Storeroom is sleepsafe.
 
 after looking while player is in Maintenance Storeroom:
 	project the Figure of Map_Bunker_Storeroom_icon;
@@ -88,7 +91,9 @@ Table of GameRoomIDs (continued)
 Object	Name
 Grey Abbey Library	"Grey Abbey Library"
 
-Grey Abbey Library is a room. Grey Abbey Library is fasttravel. Grey Abbey Library is sleepsafe.
+Grey Abbey Library is a room.
+Grey Abbey Library is fasttravel.
+Grey Abbey Library is sleepsafe.
 The description of Grey Abbey Library is "[abbey desc]".
 The earea of Grey Abbey Library is "Outside".
 
@@ -169,7 +174,9 @@ Object	Name
 Breakroom	"Breakroom"
 
 Breakroom is west of Half-Renovated Room.
-Breakroom is a room. The description of Breakroom is "[gbreakroom desc]".
+Breakroom is a room.
+Breakroom is sleepsafe.
+The description of Breakroom is "[gbreakroom desc]".
 The invent of Breakroom is { "food" }.
 Library Microwave is an object. It is in Breakroom. It is fixed in place. Understand "microwave" as Library Microwave.
 The description of Library Microwave is "[LibraryMicrowaveDesc]".
@@ -214,6 +221,7 @@ Pantry	"Pantry"
 
 Pantry is west of Breakroom.
 Pantry is a room. The description of Pantry is "[gpantry desc]".
+Pantry is sleepsafe.
 
 after looking while player is in Pantry:
 	project the Figure of Map_Library_North1_icon;
@@ -227,6 +235,7 @@ Computer Lab	"Computer Lab"
 
 Computer Lab is south of Grey Abbey Library.
 Computer Lab is a room. The description of Computer Lab is "[gcomputerlab desc]".
+Computer Lab is sleepsafe.
 The invent of Computer Lab is { "soda" }.
 
 after looking while player is in Computer Lab:
@@ -241,7 +250,9 @@ Object	Name
 Back Of The Library	"Back Of The Library"
 
 Back Of The Library is east of Grey Abbey Library.
-Back Of The Library is a room. The description of Back Of The Library is "[gbackofthelibrary desc]".
+Back Of The Library is a room.
+Back Of The Library is sleepsafe.
+The description of Back Of The Library is "[gbackofthelibrary desc]".
 
 after looking while player is in Back Of The Library:
 	project the Figure of Map_Library_Back_icon;
@@ -255,6 +266,7 @@ Makeshift Rec Room	"Makeshift Rec Room"
 
 Makeshift Rec Room is north of Back Of The Library.
 Makeshift Rec Room is a room. The description of Makeshift Rec Room is "[grecroom desc]".
+Makeshift Rec Room is sleepsafe.
 
 after looking while player is in Makeshift Rec Room:
 	project the Figure of Map_Library_North4_icon;
@@ -282,6 +294,7 @@ Large Shed	"Large Shed"
 
 Large Shed is north of Courtyard.
 Large Shed is a room. The description of Large Shed is "[glargeshed desc]".
+Large Shed is sleepsafe.
 
 when play begins:
 	add "Broke-Ass Hoe" to invent of Large Shed;
@@ -311,6 +324,8 @@ Grey Abbey 2F	"Grey Abbey 2F"
 
 Grey Abbey 2F is above Grey Abbey Library.
 Grey Abbey 2F is a room. The description of Grey Abbey 2F is "[abbey 2F desc]".
+Grey Abbey 2F is sleepsafe.
+
 the scent of Grey Abbey 2F is "The smell of books permeates the air in the library, the musty odor is slightly more noticeable up here on the second floor thanks to the older, less frequently used tomes.".
 
 after looking while player is in Grey Abbey 2F:
@@ -325,6 +340,8 @@ Sitting Area	"Sitting Area"
 
 Sitting Area is northeast of Grey Abbey 2F.
 Sitting Area is a room. The description of Sitting Area is "[usittingarea desc]".
+Sitting Area is sleepsafe.
+
 The invent of Sitting Area is { "chips" }.
 
 after looking while player is in Sitting Area:
@@ -344,6 +361,7 @@ Garden View	"Garden View"
 
 Garden View is southeast of Sitting Area.
 Garden View is a room. The description of Garden View is "[ugardenview desc]".
+Garden View is sleepsafe.
 
 after looking while player is in Garden View:
 	project the figure of Map_Library_2F_East_icon;
@@ -358,6 +376,7 @@ Darkened Alcove	"Darkened Alcove"
 Darkened Alcove is southwest of Garden View.
 Darkened Alcove is southeast of Grey Abbey 2F.
 Darkened Alcove is a room. The description of Darkened Alcove is "[udarkenedalcove desc]".
+Darkened Alcove is sleepsafe.
 
 after looking while player is in Darkened Alcove:
 	project the figure of Map_Library_2F_South_icon;
@@ -371,6 +390,7 @@ Attic	"Attic"
 
 Attic is above Darkened Alcove.
 Attic is a room. The description of Attic is "[tattic desc]".
+Attic is sleepsafe.
 The invent of Attic is { "water bottle" }.
 
 to say tattic desc:
@@ -395,6 +415,7 @@ Trevor Labs Lobby	"Trevor Labs Lobby"
 
 Trevor Labs Lobby is a room. "     You're standing in the ground floor lobby of Trevor Labs. New age furniture has been ripped to shreds and thrown around, while the walls and floor are splattered in unknown liquids. Most of the gunk is creamy white, with some reddish-brown and even green streaks mixed in... all of it well dried by now thankfully. It is somewhat dark in here, but some emergency lights draw your attention to the stairs leading up and down.".
 The earea of Trevor Labs Lobby is "Sealed".
+Trevor Labs Lobby is sleepsafe.
 
 Trevor Labs Lobby is west of Outside Trevor Labs.
 
@@ -404,6 +425,7 @@ Object	Name
 
 2F Trevor Labs is a room. "     You're standing in a hallway on the second floor of the Trevor Labs. The lighting is dim, except for brilliant light shining from beneath a closed door at the end of the hallway. It casts a cone of brightness into the gloom. The area is silent and smells of disinfectant. There does not seem to be much here to look at besides a broken water cooler and a motivational poster with a kitten, encouraging you to hang in there.".
 2F Trevor Labs is above Trevor Labs Lobby.
+2F Trevor Labs is sleepsafe.
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -420,6 +442,7 @@ Park Entrance	"Park Entrance"
 Park Entrance is a room. "     Ah, the city park. Smell that fresh pine air, and the scent of - wait no, that grass has not been mowed for quite a while. Just how long ago did all this trouble start anyway? Time seems fluid these days, making it hard for you to remember. No matter what, the grass has started to creep up onto the pavement that leads further into the park (north) and all the other plants seem pretty overgrown and untamed too. The park's boundary wall remains largely intact, with a sign that welcomes you into the park, except during night hours, not that anyone is enforcing this rule at the moment.".
 Park Entrance is fasttravel.
 The earea of Park Entrance is "Park".
+Park Entrance is sleepsafe.
 
 Table of GameRoomIDs (continued)
 Object	Name

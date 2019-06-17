@@ -190,7 +190,7 @@ to say ClassMenu:[This is a one time use menu for this event only]
 		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4 or calcnumber is 5 or calcnumber is 6 or calcnumber is 7 or calcnumber is 8:
 			break;
 		else:
-			say "Invalid choice.  Please pick either [link]Warrior[as]1[end link], [link]Knight[as]2[end link], [link]Rogue[as]3[end link], [link]Bard[as]4[end link], [link]Marksman[as]5[end link], [link]Scout[as]6[end link], [link]Tactician[as]7[end link], or [link]Companion[as]8[end link].";
+			say "Invalid choice. Please pick either [link]Warrior[as]1[end link], [link]Knight[as]2[end link], [link]Rogue[as]3[end link], [link]Bard[as]4[end link], [link]Marksman[as]5[end link], [link]Scout[as]6[end link], [link]Tactician[as]7[end link], or [link]Companion[as]8[end link].";
 	if calcnumber is 1:
 		say "     '[bold type]Warrior[roman type]; a true fighter. Sometimes you just need to punch a unicorn in the face to get the job done, and you're the one with the strength to do that.'";
 		LineBreak;
@@ -503,9 +503,9 @@ to say Class Question:
 		[STR]
 		if StrClass is 2:
 			say "     'So... Why is it you fight? What do you fight for? Is it for yourself? Survival Is tough after everything that has happened, and there's no shame in it. Or is it that you fight for others and are trying to make things better, hoping to inspire them to do the same?";
-			say "     ([link]1[as]y[end link]) - For Myself";[Warrior]
+			say "     ([link]1[as]y[end link]) - For Myself"; [Warrior]
 			LineBreak;
-			say "     ([link]2[as]n[end link]) - For Others";[Knight]
+			say "     ([link]2[as]n[end link]) - For Others"; [Knight]
 			LineBreak;
 			if player consents:
 				say "     'It's good to be alone sometimes, yes?' he says as he stares up at the leaves flowing gently in the breeze. 'There's no one else there to distract you from what you have to do.'";
@@ -516,9 +516,9 @@ to say Class Question:
 		[DEX]
 		if DexClass is 2:
 			say "     'So... Just for fun, let's say that someone has something important that you really need. Would you rather just take it unnoticed, or would you try to put on the charm and convince them through wit or appeal to give it to you?'";
-			say "     ([link]1[as]y[end link]) - Steal";[Rogue]
+			say "     ([link]1[as]y[end link]) - Steal"; [Rogue]
 			LineBreak;
-			say "     ([link]2[as]n[end link]) - Charm";[Bard]
+			say "     ([link]2[as]n[end link]) - Charm"; [Bard]
 			LineBreak;
 			if player consents:
 				say "     'Sometimes it's better to just avoid it all, right?' he says as he looks off into the distance. 'There's enough trouble these days without stirring up more.'";
@@ -529,9 +529,9 @@ to say Class Question:
 		[PER]
 		if PerClass is 2:
 			say "     'So... Just for fun, let's say that you got a mission to find the identify an enemy target for later assassination. You get up on a hill and find the target in a field down below, perfectly in range of your crossbow! Would you take the shot, or go back and report in?'";
-			say "     ([link]1[as]y[end link]) - Take the Shot";[Marksman]
+			say "     ([link]1[as]y[end link]) - Take the Shot"; [Marksman]
 			LineBreak;
-			say "     ([link]2[as]n[end link]) - Report In";[Scout]
+			say "     ([link]2[as]n[end link]) - Report In"; [Scout]
 			LineBreak;
 			if player consents:
 				say "     'Why waste the opportunity, right?' he says as his fingers tighten on his bow at the thought. 'Still, there's often reasons to follow the mission to the letter. Sometimes there are details that the higher ups can't risk you being caught with yet, yes?'";
@@ -541,10 +541,10 @@ to say Class Question:
 				now TaniClassMemory is 6;
 		[INT]
 		if IntClass is 2:
-			say "'     So... You have followed Tani this far because we didn't really give you much of a choice, but if you had the choice, would you rather be the one planning and giving the missions or the one carrying them out so you can do your part to help others?'";
-			say "     ([link]1[as]y[end link]) - Leader";[Tactician]
+			say "     'So... You have followed Tani this far because we didn't really give you much of a choice, but if you had the choice, would you rather be the one planning and giving the missions or the one carrying them out so you can do your part to help others?'";
+			say "     ([link]1[as]y[end link]) - Leader"; [Tactician]
 			LineBreak;
-			say "     ([link]2[as]n[end link]) - Follower";[Companion]
+			say "     ([link]2[as]n[end link]) - Follower"; [Companion]
 			LineBreak;
 			if player consents:
 				say "     'You don't like to leave your fate to others, huh? You'd rather be the one pulling the strings.' Tani gives you a little smile. 'Well, stick with the Gildwings and maybe you'll be giving me orders someday.'";
@@ -608,7 +608,7 @@ to say GildwingClanAccept:
 		[Skin]
 		say "     Your skin begins to itch horribly as [if KoboldScaleColor is 1]rose-red[else if KoboldScaleColor is 2]azure[else if KoboldScaleColor is 3]forest-green[else if KoboldScaleColor is 4]charcoal-black[else if KoboldScaleColor is 5]snowy-white[else](Error, value invalid. Please report this issue to the FS Discord Server with KoboldScaleColor: [KoboldScaleColor].)[end if] scales form to cover your whole body. They interlock and smooth out and leaving you with sleek, [if KoboldScaleColor is 1]red[else if KoboldScaleColor is 2]blue[else if KoboldScaleColor is 3]green[else if KoboldScaleColor is 4]black[else if KoboldScaleColor is 5]white[else](Error, value invalid. Please report this issue to the FS Discord Server with KoboldScaleColor: [KoboldScaleColor].)[end if], kobold scales.";
 		now SkinName of player is "Avalon Kobold";
-		now Skin of Player is "[if KoboldScaleColor is 1][one of]crimson[or]red[or]rose-red[at random][else if KoboldScaleColor is 2][one of]azure[or]blue[or]sea-blue[at random][else if KoboldScaleColor is 3][one of]verdant[or]green[or]forest-green[at random][else if KoboldScaleColor is 4][one of]obsidian[or]black[or]charcoal-black[at random][else if KoboldScaleColor is 5][one of]alabaster[or]white[at random]snow-white[else](Error, value invalid. Please report this issue to the FS Discord Server with KoboldScaleColor: [KoboldScaleColor].)[end if] scales. Despite their protective nature, you can still feel everything just fine through your now draconic";
+		now Skin of Player is "[if KoboldScaleColor is 1][one of]crimson[or]red[or]rose-red[at random][else if KoboldScaleColor is 2][one of]azure[or]blue[or]sea-blue[at random][else if KoboldScaleColor is 3][one of]verdant[or]green[or]forest-green[at random][else if KoboldScaleColor is 4][one of]obsidian[or]black[or]charcoal-black[at random][else if KoboldScaleColor is 5][one of]alabaster[or]white[or]snow-white[at random][else](Error, value invalid. Please report this issue to the FS Discord Server with KoboldScaleColor: [KoboldScaleColor].)[end if] scales. Despite their protective nature, you can still feel everything just fine through your now draconic";
 		LineBreak;
 		[Chest]
 		if breast size of player > 0:
@@ -630,7 +630,7 @@ to say GildwingClanAccept:
 			say "     ";
 			LineBreak;]
 		[Tail]
-		say "     A sharp pressure builds at the base of your spine, quickly changing into a strange tingle that shifts outwards, traveling along your new reptilian tail as it settles into its new shape. Wiggling it back and forth, you confirm quickly how well it can move and shift your balance.  The perfect tail for a kobold!";
+		say "     A sharp pressure builds at the base of your spine, quickly changing into a strange tingle that shifts outwards, traveling along your new reptilian tail as it settles into its new shape. Wiggling it back and forth, you confirm quickly how well it can move and shift your balance. The perfect tail for a kobold!";
 		now TailName of player is "Avalon Kobold";
 		now tail of player is "A long and agile reptilian tail sways behind you, adjusting to your every movement to help you keep balance. It is surprisingly dexterous and you are able to control your tail as well as any other limb. It seems to wiggle at times when you are happy.";
 		now AssName of Player is ""; [wiping out the new style parts]
@@ -654,7 +654,7 @@ to say GildwingClanAccept:
 			now ovipregalways is true;
 			now ovipreglevel is 3;
 		[]
-		say "     Gildwing looks over your new kobold form with a pleased expression. 'This suits you well,' he says before calling out, 'Tyrin!' The red kobold quickly enters the cavern room, stopping for a moment as soon as he sees you. 'Oh! Our friend decided to join us? Tani will be happy about that.' The dragon gesture towards you. 'Please show [ObjectPro of player] around and explain how [ObjectPro of player] may help.' Tyrin nods and looks towards you. 'Follow me please,' he asks before leading you out into the main passageway.";
+		say "     Gildwing looks over your new kobold form with a pleased expression. 'This suits you well,' he says before calling out, 'Tyrin!' The red kobold quickly enters the cavern room, stopping for a moment as soon as he sees you. 'Oh! Our friend decided to join us? Tani will be happy about that.' The dragon gestures towards you. 'Please show [ObjectPro of player] around and explain how [SubjectPro of player] may help.' Tyrin nods and looks towards you. 'Follow me please,' he asks before leading you out into the main passageway.";
 		now Resolution of GildwingKoboldTest is 3;
 	else:
 		say "     'As you wish,' he says before calling Tyrin into the room. It isn't long before the red kobold makes his way over and stands next to you. '[if player is not defaultnamed][name of player][else]This new recruit has[end if] decided to join us. Please, show [ObjectPro of player] around and explain [PosAdj of player] role.' Tyrin bows politely to the dragon before turning to you with a slight grin. 'So, you'll be helping to Gildwings? That's good to hear! Follow me, and I'll explain how things work around here.'";

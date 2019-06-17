@@ -187,7 +187,7 @@ to say MelanieTalk3: [ask to meet Mr. B]
 			change the north exit of Branson & Partner Reception to B&P Company Offices;
 			change the south exit of B&P Company Offices to Branson & Partner Reception;
 			now HP of Melanie is 4; [player got free reign in the building now]
-	else if HP of Melanie is 4: [post quest visits to the boss]
+	else if HP of Melanie > 3 and HP of Melanie < 100: [post quest visits to the boss]
 		say "     'Of course - please go on up,' the receptionist tells you with a smile, and you ride the elevator up to Mr. Branson's office. Strolling along the short corridor decorated with potted plants and modern art, you enter his office shortly after. The large crocodile is amiable enough towards his business partner, chatting a bit and offering you a drink, too. After a little while, he throws back the last of his glass of whiskey, then ";
 		if Player is male:
 			say "bids you farewell. You leave and soon arrive back down at the reception desk.";

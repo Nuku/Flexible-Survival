@@ -180,7 +180,7 @@ to say BeatTheBovine:
 					increase CowBully by 1;
 			else:
 				if Player is male:
-					say "     You take hold of the cow girl's legs and nudge them apart, grinning and licking your lips at the sight of her massive bovine pussy. The cow girl shivers and whimpers in anticipation as you pull yourself up against her, your [Cock of Player] cock grinding against her wet snatch. You line yourself up and thrust in, ramming your length [if Cock Length of Player < 28]as deep inside her as you can manage. Gripping the cow girl's hips tightly as you pound away at her cunt, you can't stop yourself from moaning in pleasure. She groans and begs, 'Please fuck me deeper! I need more!' Annoyed that she seems unfazed by your efforts so far, you hilt yourself in one go to try and satisfy her. She grunts a little, but she says, 'I need more, please, I'm so empty'. You start bucking harder and faster into her, hoping to make up for your size with your passion[else]deep inside her. Gripping the cow girl's hips tightly as you pound away at her cunt, you can't stop yourself from moaning in pleasure. She groans and says, 'Oh yeah, just like that! I want everything you've got!' Pleased that she's loving your efforts so far, you hilt yourself in one go to push her over. She grunts and lets out a loud moo, unable to articulate her approval. You start bucking harder and faster into her[end if], feeling your climax building. You lean forward and wrap your arms underneath her body, your hands taking hold of her shoulders.";
+					say "     You take hold of the cow girl's legs and nudge them apart, grinning and licking your lips at the sight of her massive bovine pussy. The cow girl shivers and whimpers in anticipation as you pull yourself up against her, your [Cock of Player] cock grinding against her wet snatch. You line yourself up and thrust in, ramming your length [if Cock Length of Player < 28]as deep inside her as you can manage. Gripping the cow girl's hips tightly as you pound away at her cunt, you can't stop yourself from moaning in pleasure. She groans and begs, 'Please fuck me deeper! I need more!' Annoyed that she seems unfazed by your efforts so far, you hilt yourself in one go to try and satisfy her. She grunts a little, but she says, 'I need more, please, I'm so empty.' You start bucking harder and faster into her, hoping to make up for your size with your passion[else]deep inside her. Gripping the cow girl's hips tightly as you pound away at her cunt, you can't stop yourself from moaning in pleasure. She groans and says, 'Oh yeah, just like that! I want everything you've got!' Pleased that she's loving your efforts so far, you hilt yourself in one go to push her over. She grunts and lets out a loud moo, unable to articulate her approval. You start bucking harder and faster into her[end if], feeling your climax building. You lean forward and wrap your arms underneath her body, your hands taking hold of her shoulders.";
 					say "     With one last hard thrust, you bury your [cock size desc of Player] shaft in her depths and cum hard, [if Ball Size of Player < 14]dumping your seed into this cow girl, as she moos her orgasm[else]filling this cow girl up with every last bit of fertile seed you've got, making her moo loudly in orgasm[end if]. When you're finished with her, you get up and wipe your cock off on her ass, a few last spurts of cum splattering on her back. You take a bit of perverse pride at the state you've left the cow in and gather your things before heading back along the path. As you do, the bovine woman calls out after you, 'That was fun, but I don't think my bull is going to like you very much.' You stop in your tracks, wondering whether you should ask for more information on this bull of hers, but some loud crashing noises nearby send you running as fast as you can before the source of the crashing reaches you.";
 					increase CowBully by 1;
 				else:
@@ -406,6 +406,7 @@ When Play begins:
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
+[
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -434,7 +435,7 @@ When Play begins:
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	[Mouth Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
 	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
 	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
 	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
@@ -505,6 +506,7 @@ When Play begins:
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
+]
 
 
 Section 3 - Monster Heat

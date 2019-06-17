@@ -9,7 +9,7 @@ understand "quests" as ListOpenQuests.
 understand "quest" as ListOpenQuests.
 understand "questlist" as ListOpenQuests.
 
-To ListOpenQuests:
+carry out ListOpenQuests:
 	if journal is not owned:
 		say "     Sadly, losing your journal took all notes you made in it with it.";
 	else:
@@ -38,7 +38,7 @@ To ListOpenQuests:
 			if "Julian Quest" is listed in OpenQuests of Player:
 				say "     ";
 				JulianQuestLog;
-		[		
+		[
 		if "Industrial Sector Quest 1" is listed in OpenQuests of Player or "Industrial Sector Quest 2" is listed in OpenQuests of Player:
 			say "[bold type]Industrial Sector[roman type]:":
 			if "Industrial Sector Quest 1" is listed in OpenQuests of Player:
@@ -57,7 +57,7 @@ understand "completed quest" as ListCompletedQuests.
 understand "completedquestlist" as ListCompletedQuests.
 understand "completedquestlog" as ListCompletedQuests.
 
-To ListCompletedQuests:
+carry out ListCompletedQuests:
 	if journal is not owned:
 		say "     Sadly, losing your journal took all notes you made in it with it.";
 	else:

@@ -17,7 +17,6 @@ Version 1 of Chris by Wahn begins here.
 [ 100: zebra freed                                 ]
 
 [ Stamina of Chris - number of orc warrior sons    ]
-[ Perception of Chris - turn of the last training  ]
 
 [ Strength of Chris - interaction with eldest son  ]
 [   0: not met                                     ]
@@ -33,9 +32,6 @@ Version 1 of Chris by Wahn begins here.
 [  21: breeder Chris and Urik met                  ]
 [  22: breeder Chris and Urik got into talking     ]
 [  99: Urik warned away from breeder Chris         ]
-
-MaliksRandomCaptive is a number that varies. [@Tag:NotSaved]
-Perception of Chris is usually 20000.[@Tag:NotSaved]
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -74,25 +70,24 @@ ChrisPlayerOffspring is a number that varies.
 
 instead of sniffing Chris:
 	say "     Chris has got an attractive male scent.";
-
+	
 to say ChrisDesc:
 	if debugactive is 1:
-		say "DEBUG -> HP: [HP of Chris] <- DEBUG[line break]";
+		say "DEBUG -> HP: [HP of Chris]; Strength of Chris: [Strength of Chris]; Intelligence of Malik: [Intelligence of Malik]; Libido of Malik: [Libido of Malik]<- DEBUG[line break]";
 	if Libido of Chris is 0: [half-orc Chris]
-		say "     Chris is a young orc, with a lithe and muscled physique that lacks the sheer bulk and mass of an orc warrior. Still, the sleeveless shirt he found to wear is stretched tight over his hard pecs and abs, providing quite a nice sight. His other articles of clothing are a pair of shorts and some designer undies (known to be 'roomy' at the front), both of which ride pretty low, letting you glimpse the trimmed bush of his pubes. Something tells you that he'd be ready to push them off completely in a heartbeat, letting free the cock showing in a respectively sized bulge at the front. Chris's features are almost pretty but still masculine, with somewhat pronounced brow, a square jaw and yellow eyes. Two sharp tusks protrude from his lower mandible, giving him a dashing, somewhat wild look. Mid-length dark brown hair completes the picture of a very handsome man.";
-		say "     As Chris notices your intense gaze upon him, he smiles back at you, giving a little wave with his hand.";
+		say "     Chris is a young orc, with a lithe and muscled physique that lacks the sheer bulk and mass of an orc warrior. Still, the sleeveless shirt he found to wear is stretched tight over his hard pecs and abs, providing quite a nice sight. His other articles of clothing are a pair of shorts and some designer undies (known to be 'roomy' at the front), both of which ride pretty low, letting you glimpse the trimmed bush of his pubes. Something tells you that he'd be ready to push them off completely in a heartbeat, letting free the cock showing in a respectively sized bulge at the front. Chris's features are almost pretty but still masculine, with somewhat pronounced brow, a square jaw and yellow eyes. Two sharp tusks protrude from his lower mandible, giving him a dashing, somewhat wild look. Mid-length dark brown hair completes the picture of a very handsome man. As Chris notices your intense gaze upon him, he smiles back at you, giving a little wave with his hand.";
 	else if Libido of Chris is 1: [breeder Chris]
-		say "     Chris is a young orc, with a lithe and muscled physique that lacks the sheer bulk and mass of an orc warrior. As he's wearing nothing but a rather tight pair of shorts, you can clearly see the outline of an average-sized cock in them. His features are almost pretty but still masculine, with somewhat pronounced brow, a square jaw and yellow eyes. Two small tusks protrude from his lower mandible, looking rather cute, compared to a real orc's. Long, silky black hair hanging down over his shoulders completes the picture of a very handsome man.";
-		say "     As Chris notices your intense gaze upon him, he presents himself for your viewing pleasure, turning to show off his well-rounded ass. He really takes after his father, now that he's become an orc breeder.";
+		say "     Chris is a young orc, with a lithe and muscled physique that lacks the sheer bulk and mass of an orc warrior. As he's wearing nothing but a rather tight pair of shorts, you can clearly see the outline of an average-sized cock in them. His features are almost pretty but still masculine, with somewhat pronounced brow, a square jaw and yellow eyes. Two small tusks protrude from his lower mandible, looking rather cute, compared to a real orc's. Long, silky black hair hanging down over his shoulders completes the picture of a very handsome man. As Chris notices your intense gaze upon him, he presents himself for your viewing pleasure, turning to show off his well-rounded ass. He really takes after his father, now that he's become an orc breeder.";
 	else if Libido of Chris is 2: [warrior Chris]
-		say "     Chris is a young orc, but he already has the tall and powerful stature of an orc warrior, with rippling muscles on his big arms, strong pecs and washboard abs. As he's wearing nothing but a rather tight pair of shorts, you can clearly see the outline of a very respectable cock in them. His features are almost a bit brutish, in a 'handsome caveman' kind of way, with a strongly pronounced brow, a square jaw and yellow eyes. Two sharp tusks protrude from his lower mandible, giving him a dashing, somewhat wild look. Short, bristly black hair on his head completes the picture of an untamed orcish warrior.";
-		say "     As Chris notices your intense gaze upon him, he gives you a leering smile, as if to say 'I can take you when I want to'. [if Dexterity of Chris > 0 and Dexterity of Chris < 100]Proof of his aggressively dominant nature is never far away from the young orc warrior, in the form of Kai, the male zebra he took captive in the zoo. You're not too sure that you can strictly call the guy a zebra anymore though, with his green and black striped fur and the set of orcish tusks he sports now. Seems like he's more of an equine orc breeder now.[end if][line Break]";
+		say "     Chris is a young orc, but he already has the tall and powerful stature of an orc warrior, with rippling muscles on his big arms, strong pecs and washboard abs. As he's wearing nothing but a rather tight pair of shorts, you can clearly see the outline of a very respectable cock in them. His features are almost a bit brutish, in a 'handsome caveman' kind of way, with a strongly pronounced brow, a square jaw and yellow eyes. Two sharp tusks protrude from his lower mandible, giving him a dashing, somewhat wild look. Short, bristly black hair on his head completes the picture of an untamed orcish warrior. As Chris notices your intense gaze upon him, he gives you a leering smile, as if to say 'I can take you when I want to'.";
+		if Dexterity of Chris > 0 and Dexterity of Chris < 100:
+			say "     Proof of his aggressively dominant nature is never far away from the young orc warrior, in the form of Kai, the male zebra he took captive in the zoo. You're not too sure that you can strictly call the guy a zebra anymore though, with his green and black striped fur and the set of orcish tusks he sports now. Seems like he's more of an equine orc breeder now.";
 		if Stamina of Chris > 4:
 			say "     As a result of the many virile loads Chris pumped into you, the library has become the haven of a new tribe of orcs. [if Strength of Chris is 0]Several of your [Stamina of Chris] orc warrior sons[else]Malik and his brothers[end if] usually hang out with their chieftain father, drinking orc brews, boasting about the conquests they made out on the streets or starting playful wrestling matches with each other and their dad. Or maybe not so playful, as both participants usually end up with erections and they throw each other around without much restraint. The position of Chris as the leader doesn't seem to be in any danger though, as he hands-down beats anyone who tries, then sends them off with a manly hug and a slap on the ass to spend their energy outside.";
 		else if Stamina of Chris > 1:
 			say "     [if Strength of Chris is 0]The multiple orc warrior sons that you've fathered together with Chris[else]Malik and his brothers[end if] often hang out with their chieftain father, drinking orc brews, boasting about the conquests they made out on the streets or starting playful wrestling matches with each other and their dad. Or maybe not so playful, as both participants usually end up with erections and they throw each other around without much restraint. The position of Chris as the leader doesn't seem to be in any danger though, as he hands-down beats anyone who tries, then sends them off with a manly hug and a slap on the ass to spend their energy outside.";
 		else if Stamina of Chris > 0:
-			say "     [if Strength of Chris is 0]The orc warrior son you've fathered together with Chris[else]Malik[end if] usually hangs out with his father, and they share orc brews and boast about the conquests they made out on the streets. The two of them also start playful wrestling matches that usually end up giving both of them erections as they throw each other around without much restraint. Chris clearly is proud of his son, even though he beats him hands down in all of the matches. Aftewards, he sends the young man off with a manly hug and a slap on the ass to spend his energy outside.";
+			say "     [if Strength of Chris is 0]The orc warrior son you've fathered together with Chris[else]Malik[end if] often hangs out with his father, and they share orc brews and boast about the conquests they made out on the streets. The two of them also start playful wrestling matches that usually end up giving both of them erections as they throw each other around without much restraint. Chris clearly is proud of his son, even though he beats him hands down in all of the matches. Aftewards, he sends the young man off with a manly hug and a slap on the ass to spend his energy outside.";
 
 instead of conversing the Chris:
 	say "[ChrisTalkMenu]";
@@ -253,7 +248,7 @@ Instead of fucking the Chris:
 			now sortorder entry is 3;
 			now description entry is "Pound your dick into Chris";
 		[]
-		if Libido of Chris is 2:
+		if Libido of Chris is 0 or Libido of Chris is 2:
 			choose a blank row in table of fucking options;
 			now title entry is "Let the orc take your ass";
 			now sortorder entry is 4;

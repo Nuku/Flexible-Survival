@@ -254,7 +254,7 @@ to say hospfight1:		[staff fight]
 		else:
 			challenge "Enhanced Chimera";
 	if T is 7:
-		challenge "Jaguar";
+		challenge "Jaguar Male";
 
 
 to say hospfight2:		[prevents duplicate of raccoon, who is a unique individual]
@@ -269,7 +269,7 @@ to say hospfight2:		[prevents duplicate of raccoon, who is a unique individual]
 		else:
 			challenge "Enhanced Chimera";
 	if T is 5 or T is 6:
-		challenge "Jaguar";
+		challenge "Jaguar Male";
 
 
 to say hospfight3:		[no Raccoon, Psycho Weasel instead... generic fight]
@@ -286,7 +286,7 @@ to say hospfight3:		[no Raccoon, Psycho Weasel instead... generic fight]
 		else:
 			challenge "Enhanced Chimera";
 	if T is 7:
-		challenge "Jaguar";
+		challenge "Jaguar Male";
 
 
 to say hospfight4:		[no Raccoon, flags handled internally]
@@ -303,7 +303,7 @@ to say hospfight4:		[no Raccoon, flags handled internally]
 		add 5 to T; [Mismatched Chimera]
 	sort T in random order;
 	if entry 1 of T is 1, challenge "Psycho Weasel";
-	if entry 1 of T is 2, challenge "Jaguar";
+	if entry 1 of T is 2, challenge "Jaguar Male";
 	if entry 1 of T is 3, challenge "Fluffy Owl";
 	if entry 1 of T is 4, challenge "Vixen Nurse";
 	if entry 1 of T is 5:
@@ -976,7 +976,7 @@ hospfight is a number that varies.
 to say hospbigfight1:
 	now hospfight is 1;
 	now inasituation is true;
-	challenge "Jaguar";
+	challenge "Jaguar Male";
 	now inasituation is false;
 	if fightoutcome is 30:
 		say "[hospranaway]";
@@ -986,7 +986,7 @@ to say hospbigfight1:
 		stop the action;
 	say "     The second jaguar moves around the worktables steps past his fallen comrade to attack you as well.";
 	now inasituation is true;
-	challenge "Jaguar";
+	challenge "Jaguar Male";
 	now inasituation is false;
 	if fightoutcome > 19 and fightoutcome < 30:
 		say "[hosploss]";

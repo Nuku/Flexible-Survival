@@ -29,6 +29,14 @@ Version 2 of Horus by Rikaeus begins here.
 [   1: Lost once                                                        ]
 [   2: Lost twice                                                       ]
 
+HorusRoomConnection is a number that varies. [@Tag:NotSaved]
+
+an everyturn rule: [bugfixing rules for players that import savegames]
+	if Sky Tower is resolved and HorusRoomConnection is 0: [event resolved the right way, room not connected yet]
+		change up exit of High Rise District to Palace Near The Sun;
+		change down exit of Palace Near The Sun to High Rise District;
+		now HorusRoomConnection is 1; [make sure that it connects the room only once]
+
 Section A - Code for Horus and Zerbo
 
 HorusRelationship is a number that varies.
@@ -73,6 +81,8 @@ Instead of resolving Sky Tower:
 		change down exit of Palace Near The Sun to High Rise District;
 		now HorusRelationship is 1;
 		move player to Palace Near The Sun;
+		now Sky Tower is resolved;
+		now Resolution of Sky Tower is 1; [room connected]
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -242,9 +252,9 @@ instead of fucking the Horus:
 		say "     The God shakes his head and gives you a smile. 'I'm sorry but the Darkness requires my attention for now.' He says with an apologetic look in his eyes.";
 	else if HorusRelationship < 13:
 		say "     Horus gives you a soft smile and shakes his head. 'I'm sorry my friend but despite your small victory against the Darkness we still need to focus on it.' He starts before continuing with a chuckle. 'Afterall, what kind of king would I be if I focused on sex over solving a problem involving the people?' Looks like you won't be getting into bed with the deity until the issue with the mutant is solved.";
-	else if HorusRelationship > 13 and (lastfuck of Horus - turns < 3): [had sex 9 hours ago]
+	else if HorusRelationship > 12 and (lastfuck of Horus - turns < 3): [had sex 9 hours ago]
 		say "     As soon as you try to proposition the god he chuckles. 'My friend, as delectable as you are, I do have work to do. Come find me in a couple hours and then we can see about it.' Horus says.";
-	else if HorusRelationship > 13:
+	else if HorusRelationship > 12:
 		say "     Walking up to the sun deity you give him a sultry smirk and ask if he'd like to let out a little steam. He raises a brow at you before chuckling. 'Sure, why not, I have some free time on my hands.' Horus says, before asking you what you want to do in particular as he gestures for his retainers to leave the room.";
 		say "[HorusSexMenu]";
 
@@ -647,7 +657,7 @@ Instead of resolving Nightmare Showdown:
 				challenge "Destabilizing Mass";
 				if fightoutcome < 20: [won]
 					say "     Managing to nimbly dodge a tendril that shoots straight in your direction you spot a chance to go for the injection pen. Rolling towards it, you grab the item off the ground before jumping back at the creature. Slamming it downward onto it, you hear the hiss of the mechanism of the device as it pushes the cure into the massive being. Seconds pass without anything happening, causing you to fear it was a failure, however that is promptly thrown out the door when it starts to spazz out. The rapidly shapeshifting mass slowly starts to shrink and coalesce into a single shape. You're actually rather shocked when it shrinks to the point of being about four feet two.";
-					say "     When it finishes, laying on the ground is a short-ish person with pointy ears and dark blue hair wearing a lab coat. They groan before pushing themself off the ground before standing up, looking at you curiously. 'Were you the one who saved me?' He asks, the person clearly male from the body tone and facial features.  You nod though, you tell him that you had help from other people but yeah you're the one who delivered the cure. He thanks you profusely before introducing himself as Zerbo the gnome, a researcher. That last bit you tell him you know as much, as you've had to look into him to find a cure.";
+					say "     When it finishes, laying on the ground is a short-ish person with pointy ears and dark blue hair wearing a lab coat. They groan before pushing themself off the ground before standing up, looking at you curiously. 'Were you the one who saved me?' He asks, the person clearly male from the body tone and facial features. You nod though, you tell him that you had help from other people but yeah you're the one who delivered the cure. He thanks you profusely before introducing himself as Zerbo the gnome, a researcher. That last bit you tell him you know as much, as you've had to look into him to find a cure.";
 					WaitLineBreak;
 					say "     Mentioning the action that resulted in him becoming becoming a monster he blushes. Moving onward so he doesn't get too embarrassed, you ask him if he needs a place to stay. 'Yeah, that'd be great! I'm pretty sure my place is trashed.' He says with a cheerful grin. Inwardly you chuckle, as his place was destroyed from the rampage he went on as he transformed. However, you tell him that you'd be glad to host him where you're staying. He thanks you for that, after which the two of you promptly head for the Abbey. Thankfully the path on the way there is pretty safe so you two don't run into anything dangerous, managing to make it there without any trouble.";
 					say "     Once there the two of you have a look around, Zerbo probably trying to figure out which room is best for him to stay in. It doesn't take long for him to pick the Computer Lab, and grab a table that doesn't have anything on it. 'This is perfect for me to set my writing on and I can probably set up my chemicals in this corner,' the gnome says cheerfully. You smile at his enthusiasm and tell him you're glad that he's happy. Right after that you let him know that you'll allow him to settle in before you step away, a mental thought that you should probably return to Horus and let him know what happened.";
@@ -761,6 +771,7 @@ When Play begins:
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
+[
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -789,7 +800,7 @@ When Play begins:
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	[Mouth Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
 	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
 	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
 	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
@@ -860,6 +871,7 @@ When Play begins:
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
+]
    [ Row used to designate any special combat features, "default" for standard combat. ]
 
 to say Destabilizing Mass Wins:
@@ -937,6 +949,7 @@ When Play begins:
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
+[
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -965,7 +978,7 @@ When Play begins:
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	[Mouth Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
 	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
 	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
 	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
@@ -1036,6 +1049,7 @@ When Play begins:
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
+]
    [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Section D - Gnome infection
@@ -1109,6 +1123,7 @@ When Play begins:
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
+[
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -1137,7 +1152,7 @@ When Play begins:
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	[Mouth Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
 	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
 	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
 	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
@@ -1208,6 +1223,7 @@ When Play begins:
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
+]
    [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Horus ends here.

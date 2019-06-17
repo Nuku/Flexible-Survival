@@ -2578,11 +2578,16 @@ to say EricCarlScene6:
 				say "     You casually turn away from the scene and busy yourself with other things, trying to ignore the sexual noises the two of them make.";
 		-- 3:
 			say "     Coming into the library, you're just in time to hear an aroused groan echo in the main room. A quick look around reveals that it came from Carl, who is having quite a good time apparently. The canine soldier lies on his back, sprawled out on one of the bigger sofas further back in the library, gripping the upholstery tightly with both hands as someone is going down on his cock. The backrest of the sofa blocks your view at who that might be at first, but as you casually stroll closer a flash of red hair comes into view, bobbing up and down. Ah, looks like Eric is having fun with his anthro friend!";
-			say "     Eric is certainly busy with sucking dick and Carl hasn't seen you yet either - his head is lolling around just over the edge of the sofa, panting in lust and with his eyes closed. [bold type]You might just leave the two of them to have fun on their own ([link]Y[as]y[end link]) - or do you want to step up and have a closer look ([link]N[as]n[end link])?[roman type][line break]";
-			if Player consents:
+			say "     [bold type]Eric is certainly busy with sucking dick and Carl hasn't seen you yet either - his head is lolling around just over the edge of the sofa, panting in lust and with his eyes closed. How do you react to this?[roman type][line break]";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - Step up and have a closer look.";
+			say "     ([link]N[as]n[end link]) - Leave the two of them to have fun on their own.";
+			if Player consents: [watch]
 				LineBreak;
 				say "     Moving closer and around, you finally get a good view of both of them - not only Carl lying lengthwise on the sofa at its end but also Eric, who is on all fours between the husky's legs. Just like the soldier, Eric is completely naked with his clothes and running shoes in a small pile on the ground. The rear end of his lithe form is raised high as he has his head down over Carl's crotch, as well as his lips wrapped around the husky's erect shaft. Bobbing up and down quickly, Eric is eagerly giving his fuck-buddy a blow-job.";
-				say "     [bold type]Do you just want to watch ([link]Y[as]y[end link]) or would you like to participate yourself ([link]N[as]n[end link])?[roman type][line break]";
+				LineBreak;
+				say "     ([link]Y[as]y[end link]) - Just enjoy the show.";
+				say "     ([link]N[as]n[end link]) - Participate in some fun yourself.";
 				if Player consents: [watch the Eric on Carl BJ and Carl transferring his cum into Eric]
 					LineBreak;
 					say "     Quietly taking up a position behind a nearby bookshelf that promises full view of things going on, you're just in time before Carl raises his head and looks at Eric with a huge grin on his face. 'Yeah baby! Lick that head some more,' he pants loudly, prompting the red-headed student to pull off his shaft and reply teasingly, 'You mean like this?' That said, he slowly runs his tongue up the underside of Carl's erection until soon reaching its pointy head, then circles Carl's glans with the tip of his tongue. 'Nnnnghh!' the anthro canine grunts in clear arousal and puts a hand on his friend's head, affectionately tousling his hair a little before pulling Eric back down on his cock - taking all of it down to the base.";

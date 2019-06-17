@@ -3,6 +3,12 @@ Version 4 of Harold by Sarokcat begins here.
 
 "Adds an NPC to Flexible Survival with a well-stocked bar and a problem..."
 
+an everyturn rule: [bugfix for misplaced npcs 2019-06-08] [TODO: Remove in a month or so]
+	if Harold is in NPC Nexus:
+		move Harold to Palomino;
+	if Drink Bar is in NPC Nexus:
+		move Drink Bar to Palomino;
+
 
 Section 1 - Harold
 
@@ -11,7 +17,7 @@ Haroldaroused is a number that varies.[not a needed number, but used to set diff
 lastrandomharold is a number that varies. lastrandomharold is usually 250.
 Haroldfucked is a number that varies. Haroldfucked is usually 0.
 tattoohunter is a number that varies.
-Harold is in The Palomino.
+Harold is in Palomino.
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -290,7 +296,7 @@ Section 5 - Drink bar
 
 LastDrinkserved is a number that varies. LastDrinkserved is usually 250.
 Drinkserved is a number that varies. Drinkserved is usually 0.
-Drink bar is in The Palomino.
+Drink bar is in Palomino.
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -488,8 +494,8 @@ carry out Lagerdrinking:
 		say "     Harold looks at you for a minute thoughtfully, before sighing and shaking his head sadly. 'Sorry friend, I can only give you so much at a time. It's so you can have a drink or two to loosen up a bit, but not enough to get drunk hopefully,' the bartender says with an amused chuckle at the idea. 'Besides, it's actually pretty hard to keep stock up since there haven't been any deliveries from the outside world for a while. We have to be careful how much we give out in a day.' He gives an apologetic shrug, and you sigh and realize you will have to come back again later if you want another drink from the bar.";
 	else:
 		say "     Harold nods at you as you place your order, pulling a couple of bottles out from behind the bar, and mixing your drink with an expert's touch. It isn't long before he sets a glass of lager in front of you. Raising your glass to Harold, you take a nice long drink. The crisp taste of a good lager fills your mouth, and you drink it down eagerly, smacking your lips as you try to place the strangely arousing aftertaste the liquid has. Deciding to try another, you smile as you realize that the canny unicorn already has another lager set out on the bar for you. Saluting him again with your new glass, you continue to try to work out just what makes this lager so good. A pleasant buzz starts to set in, even as you realize that your body is beginning to change slightly. Though, in your mildly inebriated state, it is hard to think why that would be a problem.";
-		infect "Jaguar";
-		infect "Jaguar";
+		infect "Jaguar Male";
+		infect "Jaguar Male";
 		SanLoss 5;
 		PlayerDrink 5;
 		now lastDrinkserved is turns;

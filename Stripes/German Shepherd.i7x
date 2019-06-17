@@ -40,10 +40,12 @@ to say gsd_desc:
 	setmongender 3; [male]
 	choose row MonsterID in Table of Random Critters;
 	now gsd_attack is false;
+	[
 	if gsd_male is true:
 		gsd_set_male;
 	else:
 		gsd_unset_male;
+	]
 	now gsd_special is false;
 	if gsd_encounters > 2 and gsd_pet < 12 and inasituation is false and a random chance of gsd_encounters in 7 succeeds:
 		now gsd_special is true;
@@ -314,7 +316,9 @@ to say losetogsd:
 					say "     With that, he turns and simply walks away, leaving you leaning up against the wall while you feel the male shepherd's blessing and infection slowly spreading.";
 					now gsd_var is 0;
 					now gsd_male is true;
+					[
 					gsd_set_male;
+					]
 				else:			[female/herm]
 					say "     'Next time, don't fight me, bitch! Know your place!'[line break]     With a growl, he pulls you away from the wall and pushes you down onto all fours. He mouths at your neck and shoulder, making sure you can feel the threat of his fangs if you try and fight again, his hot breath washing over your skin. But his mood has shifted; having bested you, he now seems eager to enjoy his new toy.";
 			else:							[submitted right away]
@@ -341,7 +345,9 @@ to say losetogsd:
 				say "     Rumbling softly, he laps at your injuries, stemming any bleeding and once again causing the telltale burning sensation. The licking is soothing and you relax, enjoying receiving such kindness again from the alpha dog. Then, happy he's done his duty to his developing pack mate, he pads off, leaving you alone to learn and grow stronger.";
 				now gsd_var is 0;
 				now gsd_male is true;
+				[
 				gsd_set_male;
+				]
 			else:
 				say "     The German shepherd howls in triumph while standing over your beaten form. Though your vision is blurry, you can see his sheath starting to thicken and the tip of the monster's shaft poking free of the protective furry tube, pre dribbling from it. With an eager growl, he lowers his head and moves to deal with his new victim, rolling you onto your belly, then lifting your hips so your rear is up and presented to him.";
 		if gsd_var > 0:
@@ -383,6 +389,7 @@ to say gsd_special_lsex_00:
 			say "     Panting and sprawled on your back, the big male doesn't even bother to support his own weight as he shifts about while waiting impatiently for his knot to go down. As soon as he is able to, he pulls himself free, knot popping wetly from your rear and causing you to yelp in pain as you collapse on the ground.";
 			say "     'Next time, submit to your elder without me having to beat you, bitch,' he calls over his shoulder as he vanishes into a dark, dingy alleyway.";
 
+[
 To gsd_set_male:
 	choose row MonsterID in Table of Random Critters;
 	now sex entry is "Male";
@@ -392,7 +399,7 @@ To gsd_unset_male:
 	choose row MonsterID in Table of Random Critters;
 	now sex entry is "Female";
 	now Nipple Count entry is 8;
-
+]
 
 Section 3 - Player Victory
 
@@ -764,7 +771,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now NewTypeInfection entry is true;
+	now NewTypeInfection entry is false;
 	now Species Name entry is "German Shepherd";
 	add "German Shepherd Male" to infections of CanineList;
 	add "German Shepherd Male" to infections of FurryList;
@@ -827,6 +834,7 @@ When Play begins:
 	now altcombat entry is "gsd"; [ Row used to designate any special combat features, "default" for standard combat. ]
 	now BannedStatus entry is false;
 
+[
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -855,7 +863,7 @@ When Play begins:
 	now Eye Color entry is "amber"; [one word color descriptor]
 	now Eye Adjective entry is "round"; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 10; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	[Mouth Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
 	now Mouth Circumference entry is 7;
 	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
 	now Tongue Adjective entry is "long"; [one word descriptive adjective (wide/slobbery/...)]
@@ -925,6 +933,7 @@ When Play begins:
 	now Cunt Color entry is "pink"; [one word color descriptor]
 	now Clit Size entry is 2; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
+]
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -967,7 +976,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now NewTypeInfection entry is true;
+	now NewTypeInfection entry is false;
 	now Species Name entry is "German Shepherd";
 	add "German Shepherd Bitch" to infections of CanineList;
 	add "German Shepherd Bitch" to infections of FurryList;
@@ -1030,6 +1039,7 @@ When Play begins:
 	now altcombat entry is "gsd"; [ Row used to designate any special combat features, "default" for standard combat. ]
 	now BannedStatus entry is false;
 
+[
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -1058,7 +1068,7 @@ When Play begins:
 	now Eye Color entry is "amber"; [one word color descriptor]
 	now Eye Adjective entry is "round"; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 10; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	[Mouth Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
 	now Mouth Circumference entry is 7;
 	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
 	now Tongue Adjective entry is "long"; [one word descriptive adjective (wide/slobbery/...)]
@@ -1129,6 +1139,7 @@ When Play begins:
 	now Cunt Color entry is "pink"; [one word color descriptor]
 	now Clit Size entry is 2; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
+]
 
 
 

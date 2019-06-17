@@ -16,10 +16,14 @@ Version 1 of Adam by Wahn begins here.
 [   20: talked about future. Neutral response               ]
 [   30: talked about future. Told to stay a soldier         ]
 
-[ Thirst of Adam - Memories]
+[ Thirst of Adam - Memories                                 ]
 [   0: player didn't ask about his parents                  ]
 [   1: player learned of his 'odd memories'                 ]
 [   2: Tiny Tim first memory                                ]
+
+[ Stamina of Adam - Last fitness training turn              ]
+
+Stamina of Adam is usually 10000.
 
 [***********************************************************]
 [***********************************************************]
@@ -124,10 +128,16 @@ to say AdamTalkMenu:
 		now sortorder entry is 5;
 		now description entry is "Inquire about his future ambitions.";
 	[]
+	if Energy of Adam > 1:
+		choose a blank row in table of fucking options;
+		now title entry is "Workout together";
+		now sortorder entry is 6;
+		now description entry is "Suggest Adam some workout together.";
+	[]
 	if PlayerFucked of Adam is true:
 		choose a blank row in table of fucking options;
-		now title entry is "Sex";
-		now sortorder entry is 6;
+		now title entry is "Sex talk";
+		now sortorder entry is 7;
 		now description entry is "Ask Adam how his sex life is going.";
 	[]
 	sort the table of fucking options in sortorder order;
@@ -155,6 +165,8 @@ to say AdamTalkMenu:
 					say "[AdamTalkMemory1]";
 				if (nam is "His dreams for the future"):
 					say "[AdamTalkFuture]";
+				if (nam is "Workout together"):
+					say "[AdamFitness]";
 				if (nam is "Sex talk"):
 					say "[AdamTalkSex]";
 				wait for any key;
@@ -569,7 +581,112 @@ to say AdamAssFucked: [give Adam's tight ass a good fucking]
 [***********************************************************]
 [***********************************************************]
 [***********************************************************]
-Section 5 - Ending
+Section 5 - Fitness Training
+[***********************************************************]
+[***********************************************************]
+[***********************************************************]
+
+to say AdamFitness:
+	if Stamina of Adam - turns < 9: [trained together in the last 24 hours]
+		say "     As you consider training with Adam again, your sore muscles remind you that you've already had enough for today. As good and healthy as exercise is, you probably shouldn't overdo it. Body needs to recover, or you'll risk a serious injury, not to mention that you need to stay capable of defending yourself against the many threats overruning this dangerous city. In the end, you reconsider and decide to not bring that up, leaving the shared workout for another time.";
+	else: [ready for training]
+		if Hunger of Adam is 0: [first time bringing up the subject]
+			say "     You walk up to the half-minotaur, recalling that he mentioned a daily workout routine in one of your conversations. Bringing up the subject, you ask him if you could join him at some point. 'Are you sure about that? I mean, that's great! But it's really demanding! This is a military camp, after all!' Despite his attempts at warning you, he can't hide the excitement of having you accompanying him, were it not for his usually blushing cheeks whenever he sees and talks to you. But the proposal is serious, and you make sure he understands that. Giving him a friendly squeeze around his bicep, you also take the chance to compliment his broad musculature in an attempt to flatter him, leaving Adam chuckling shyly. Whatever he does shows some obvious results in his body, as you can't help but notice how firm his arm feels under your palm.";
+			say "     'Well, if that is what you want, I'd gladly show you the ropes!' he says with a bright smile, gesturing you to walk out of the tent by his side. You both share some circumstancial talking while moving out of the camp, allowing the beast-boy to lead you towards where he usually does his training, mostly around the camp with a few key open areas. 'Stretching is important, you should never forget warming up first, especially if you're going for something intense!' he informs you as he gives instructions on how you should do it. You simply follow what he does, which takes about a couple of minutes.";
+		else if Hunger of Adam is 1: [worked out with Adam once]
+			say "     You walk up to the half-minotaur, decided that you want to have another go at his demanding military routine. Bringing up the subject, you ask if you could join him again. 'Well, since you weren't half bad on the first time, I suppose I can put you through another session!' Clearly enthusiasmed, Adam pats you in the shoulder as he gestures you to walk out of the tent by his side. You both share some circumstancial talking while moving out of the camp, allowing the beast-boy to lead you towards where you did your training before. He goes on about the usual warm-up exercises as you follow after him.";
+		else if Hunger of Adam is 2: [working out regularly]
+			say "     You walk up to the half-minotaur, decided that you want to have another go at his demanding military routine. Bringing up the subject, you ask if you could join him again. 'Good timing! I was just about to go, if you want to tag along!' Happy to see you, Adam pats you in the shoulder as he gestures you to walk out of the tent by his side. You both share some circumstancial talking while moving out of the camp, allowing the beast-boy to lead you towards where you did your training before. He goes on about the usual warm-up exercises as you follow after him.";
+		WaitLineBreak;
+		let randomnumber be a random number from 1 to 3;
+		if randomnumber is:
+			-- 1: [resistance training]
+				say "     'Today we're going for some jogging, so I hope you're ready to get those legs to work!' says the half-minotaur as he starts to run ahead of you, a clear sign that it's time to move out. With quick steps, you dash to his side, keeping up the pace with the beast-boy. Both of you jog around the camp at a comfortable pace, starting to build up a sweat once you've completed a lap. You run for about more twenty minutes before your start running out of stamina, but Adam starts slowing down before you have to say anything. 'Alright, that's enough running for now, but we're not done yet.' he warns as he gives your shoulder a pat, gently pushing you towards a spot on the ground. 'We're gonna do some quick push-ups and sit-ups, now! Let's get on it!'";
+				say "     With barely enough time to catch your breath, you get in position next to him, lying down with your hands on the ground for the push-ups. Following his count the best way you can, you do one series, then shift to the sit-ups, and repeating a few couple of times before he tells you it's time to get up. You look at the half-minotaur, his flushing red face drenched in sweat, as must be yours, along with his t-shirt which tightly holds around his torso. Taking a few seconds to catch your breath, he charges ahead, shouting 'one more lap!' as he glances back at you. At the very brink of exhaustion, you do one last effort to accompany him through the end of the workout.";
+				WaitLineBreak;
+				say "     As you reach the end of the lap around the camp, Adam slows down, walking at a recovering pace as he waits for you to reach his side. 'That was a good one! [if Hunger of Adam is 0]I'm glad you could keep up with me, it seems you could fit in the military, after all![else]I'm glad we had another workout together! You just keep getting better at it.'[end if] he says, panting amidst his speech as he throws you a genuine smile, holding his shoulder-length hair back as a few drops of sweat run down his blushing face. You can feel his mild musky scent from here, intensified by the heat of exercise as the sight of the panting beast-boy captivates your attention. As you make it back to the camp, the half-minotaur fetches you a towel from the tent to allow you to dry yourself off, as he does the same.";
+				if a random chance of 1 in 3 succeeds:
+					StatChange "Stamina" by 1;
+			-- 2: [weight training]
+				say "     'Today we're having some muscle work. It's important to keep fit and strong, especially around here. We'll run up the hill and return to do some weight exercises, understood?' he says in a commanding tone you weren't expecting and you give him a surprised expression, to which he laughs at. 'Let's get started, then!' he adds before gesturing you to follow him. The terrain elevation he puts you through is, indeed, very effective at tiring your legs. Doesn't take you long to start sweating and feeling your muscles starting to struggle. Adam, however, seems very into it. Perhaps it's those furred limbs of his being naturally stronger, giving him the advantage. Nonetheless, you give your best to not disappoint the young soldier.";
+				say "     You both make it to the top of the hill, and you're barely given time to catch your breath. 'Alright, we're done going up. Now we return!' he says, immediately starting to walk back. You think going down is an easier task, but it turns out to be more difficult than you antecipated. Part of you just wants to roll over and let gravity take you, as you can barely feel your legs from all the physical effort, but besides that looking rather silly, you're sure the half-minotaur would scold you. Slowly arriving at your next destination, Adam compliments your performance before he heads inside the camp to grab the weights he talked about.";
+				WaitLineBreak;
+				say "     'Now that we're properly warmed up, it's time to get on these. Let's do a few series of each, just go along with what I do.' he instructs as he goes about all the exercises he's proposing. Some you do with him without a problem, but there are others you actually need his help to get the hang of it, namely regarding technique and execution. The young soldier's hands sometimes find their way on certain areas of your body - rather gently - so you can adjust your position and properly exercise your muscles. After all the intense workout he put you through, he tells you to stand up to do some more, promising it's the last for today.";
+				say "     When you're done with what he asks, you're both sweaty and tired, but made it to the end without giving up. 'That was a good one! [if Hunger of Adam is 0]I'm glad you could keep up with me, it seems you could fit in the military, after all![else]I'm glad we had another workout together! You just keep getting better at it.'[end if] he says, panting amidst his speech as he throws you a genuine smile, holding his shoulder-length hair back as a few drops of sweat run down his blushing face. You can feel his mild musky scent from here, intensified by the heat of exercise as the sight of the panting beast-boy captivates your attention. As you make it back to the camp, the half-minotaur fetches you a towel from the tent to allow you to dry yourself off, as he does the same.";
+				if a random chance of 1 in 3 succeeds:
+					StatChange "Strength" by 1;
+			-- 3: [sparring]
+				say "     'Today we'll be practicing reflexes and precision. No, we're not shooting anything, just sparring. You're with me on this?' he asks you with a smile, placing himself in front of you with his hands up. Nodding, you follow him and do the same, but before you can raise your hands, he continues 'Let's train some self-defense moves.' Seems like a good opportunity to learn a few more moves and tricks to aid you in battle. You both train some blows and strikes on eachother, including escape techniques and defensive blocks. At first, this doesn't seem like an especially tiring exercise, but Adam keeps you going, and soon, you're starting to work up a sweat.";
+				say "     'More important than strength is knowing where to strike and how to move around your opponent. A well-delivered blow can save you in a pinch.' The half-minotaur is a surprisingly good teacher. Soon, you're performing all the new moves somewhat decently, dodging and blocking most of his attacks, and he praises you for that. However, fighting a military soldier hand-to-hand, especially someone with animalistic genes, proves to be a much greater challenge than one could antecipate. Inevitably, the beast-boy completely outmatches you with a sequence of moves and quick blows too fast for you to even understand that send you to the ground.";
+				WaitLineBreak;
+				say "     Being temporarily dazed, you look to Adam as he extends his hand to help you get up. 'Alright, we're over for today, you took enough beating!' he playfully mocks you, and as a little revenge, you actually push him instead of standing up, making him fall on top of you. As you tease him with the talk about speed and reflexes, which he clearly didn't have right now, the half-minotaur laughs it off and points your [']lack of finesse['] in the way you turn the tables. However, during the brief moments of silence, you see the young soldier blushing and nervously chuckling, as he realizes he's sitting on top of you. Getting up, you decide not to pull another prank at your friend and just return to camp together.";
+				say "     'Well, that was a good one! [if Hunger of Adam is 0]I'm glad you could keep up with me, it seems you could fit in the military, after all![else]I'm glad we had another workout together! You just keep getting better at it.'[end if] he says, panting amidst his speech as he throws you a genuine smile, holding his shoulder-length hair back as a few drops of sweat run down his blushing face. You can feel his mild musky scent from here, intensified by the heat of exercise as the sight of the panting beast-boy captivates your attention. As you make it back to the camp, the half-minotaur fetches you a towel from the tent to allow you to dry yourself off, as he does the same.";
+				if a random chance of 1 in 3 succeeds:
+					StatChange "Dexterity" by 1;
+		LineBreak;
+		say "     [bold type]Having spent a nice little while with Adam, just working out and talking, you somehow feel a bit more like yourself again.[roman type] It's nice to have someone to share a few moments with.[line break]";
+		SanBoost 10;
+		now Stamina of Adam is turns;
+		WaitLineBreak;
+		say "     As you exchange a few more words about workout and fitness, to which Adam seems very eager in talking about, he then turns to you as you seemed to be about to part ways. [if Hunger of Adam is 0]'By the way, we've got working showers here, at the camp, if you ever need to use them. I'm heading off to take one right now, so...[else]'Anyway, I'm about to head off for a shower now, so...[end if] do you, uh... want to tag along?' he shyly asks as he scratches the back of his head, tilting it slightly to the side. Seems he's either inviting you to some hot and steamy time, or just genuinely caring about your hygiene affairs, as you're indeed a little stinky right now.";
+		say "     [bold type]Do you join Adam in the Camp showers?[roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Why not? He's such a good company, after all.";
+		say "     ([link]N[as]n[end link]) - You'll clean yourself after him.";
+		if player consents:
+			Linebreak;
+			say "     You reply to the half-minotaur with a nod as you start walking with him to the shower tent, following his lead through the camp. [if Hunger of Adam is 0]It seems they even have warm water, thanks to a generator you can hear chugging not too far from here. 'Oh, hope you don't mind the noise. It's all we can get with the power shortage if we don't want cold showers.' says the young soldier, referring to the noisy energy source.[else]You can hear the generator chugging not too far from here, which is a good sign, as you won't have to take a cold shower with your soldier buddy.[end if] When you approach the tent, Adam goes in first, leaving his towel on a nearby counter, as you do the same. The water tubes are connected from the outside, forming a clever contraption at the upper part of the tent, where the water comes out through shower faucets, controlled by two typically circular handles on each showering spot, in which temperature can be regulated. There's obviously nothing separating these areas, all soldiers are to stand naked in front of eachother while bathing their fit and dirty bodies.";
+			say "     [If player is naked]Moving right into the showers, as you have no clothes on[end if]Removing your gear, you move right into the showers and test the water as you exchange some more talking with your beast-boy friend, who stutters a little as he sees you naked in front of him. Focusing on taking his clothes off, the half-minotaur turns around and gets on it, leaving you with an obvious choice to make.";
+			say "     [bold type]Would you take the chance to peek at his physique while he's undressing?[roman type][line break]";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - It would be a nice sight, wouldn't it?";
+			say "     ([link]N[as]n[end link]) - Leave him be for now.";
+			if player consents:
+				Linebreak;
+				say "     You can't shake off the temptation when you glance at his athletic half-human body as he takes his sweaty t-shirt off with a quick tug, having a good look at his broad shoulders and well-built backside. Every corner of his torso is slightly glistening with the light and his muscles are still pumped from all the exercise time he shared with you. He takes off his shorts as well, sliding them through his furred legs and kicking them to the side, and your eyes inevitably land on his firm buttocks, covered in brown fur, as his soft meaty prick hangs above his nicely sized ballsac on the front, that is, when you're able to catch a glimpse at them once he turns to the side, facing the shower and walking to it. You get the feeling he notices you peeking, but you're not really caring at this point, as an arousing sensation starts building up around your groin, only further intensified by the warm water running over your body.";
+				if PlayerFucked of Adam is true:
+					AdamShowerSex;
+				else:
+					WaitLineBreak;
+					say "     There's very little talking happening between you both, only the sound of the running water reaching your ears as you wash your body. Something must be keeping the beast-boy from facing you, but you smile to yourself, knowing exactly what. You even hear Adam taking a deep breath, not because of how relaxing the water feels, but due to you being there, naked and at an arm-length distance of each other, and you could swear you saw his dick twitch a little. If the whim struck you, offering to rub his back would be a possibility. Feeling up his body as your hands slid all over his bare musculature, bathing very close to him, sharing the soap... But it might be better if you do this elsewhere, before someone shows up, as this isn't an exactly private place to have your first time with the shy half-minotaur. However, you're obliged to hide your arousal, as all the fantasizing made your blood rush. You wouldn't want to bother poor Adam even more, would you?";
+					say "     Eventually, you finish your shower, turn off the water and grab a towel to dry yourself off. The young soldier follows you soon, redressing himself [if player is not naked]as you do the same[else]while you wait for him[end if]. You give each other a pat and move out of the shower tent, feeling clean, refreshed, and a little bit sore. 'Anytime you're around, if you feel like sweating a bit, hit me up at the usual place!' says Adam as he walks away with a smile on his face, returning to his post shortly after.";
+			else:
+				Linebreak;
+				if PlayerFucked of Adam is true:
+					say "     Dismissing the thought, you turn your focus on rubbing your body off all the dirty bits caused by the intense workout. Adam later joins you after having removed his clothes, approaching the shower and turning his water on, cautiously testing its temperature as you did. 'Can never be too careful with these things, sometimes it comes out as too hot when you first turn it on.' says Adam as he turns to you, giving your body a quick glance and immediately blushing like always. Despite having already had some sex together, he's still very shy around you, but you know for sure that he likes what he sees, were it not for his half-hardening member that he's somewhat embarassed of showing.";
+					AdamShowerSex;
+				else:
+					say "     Dismissing the thought, you turn your focus on rubbing your body off all the dirty bits caused by the intense workout. However, you don't hear his hooves clopping for a while. That is, until you bend over to slide your hands across your legs with the soap. Out of curiosity, you glance around, only to catch Adam turning around in a rush, quickly stripping off his clothes and nearly getting his furred legs tangled between his shorts. You think for a second that he's about to lose his balance, but fortunately that doesn't happen, as he kicks the shorts to the side and heads to the shower. Pretending you didn't see anything, you turn back to your own affairs, but can't help wondering if he wasn't peeking at you.";
+					WaitLineBreak;
+					say "     There's very little talking happening between you both, only the sound of the running water reaching your ears as you wash your body. Something must be keeping the beast-boy from facing you, but you smile to yourself, knowing exactly what. You even hear Adam taking a deep breath, not because of how relaxing the water feels, but due to you being there, naked and at an arm-length distance of each other, and you could swear you saw his dick twitch a little. If the whim struck you, offering to rub his back would be a possibility. Feeling up his body as your hands slid all over his bare musculature, bathing very close to him, sharing the soap... But it might be better if you do this elsewhere, before someone shows up, as this isn't an exactly private place to have your first time with the shy half-minotaur. However, you're obliged to hide your arousal, as all the fantasizing made your blood rush. You wouldn't want to bother poor Adam even more, would you?";
+					say "     Eventually, you finish your shower, turn off the water and grab a towel to dry yourself off. The young soldier follows you soon, redressing himself [if player is not naked]as you do the same[else]while you wait for him[end if]. You give each other a pat and move out of the shower tent, feeling clean, refreshed, and a little bit sore. 'Anytime you're around, if you feel like sweating a bit, hit me up at the usual place!' says Adam as he walks away with a smile on his face, returning to his post shortly after.";
+		else: [didn't join Adam]
+			Linebreak;
+			say "     You let the half-minotaur know that you'll take care of that later, telling him to go on ahead. 'Alright, then. Well, if you happen to be around and feel like sweating a bit, hit me up at the usual place!' You give each other a pat as he walks away with a smile on his face, returning to his post shortly after.";
+
+to AdamShowerSex:
+	say "     Standing at an arm-length distance from each other, there's very little talking happening between you both, only the sound of the running water reaching your ears as you wash your body. However, despite the young soldier's shyness, he keeps throwing looks at you and even attempts to initiate conversation. 'Well... The workout has been doing you good!' he breaks the silence, smiling a lot as your eyes meet once again. One would think he invited you to join him in the showers half-expecting something to happen, and the mood is just right, as you've both forgotten all about washing for a moment. There is something you could do for him in response, if you so desire, or simply reply with sympathy as you carry on.";
+	say "     [bold type]Do you want to go with the flow and do something with Adam?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Step ahead and get him nicely soaped.";
+	say "     ([link]N[as]n[end link]) - Retribute the compliment and finish showering.";
+	If player consents:
+		LineBreak;
+		say "     With clear sexual tension between you two, there's just no chance you can resist getting hot with your beast-boy friend. As the young soldier is genuinely complimenting you, there's a need you feel in retributing his kindness by saying how good he looks, and how you'd love to show him a good time under the shower. He seems hesitant at first, as this isn't exactly a private place, but since nobody seems to be around for the moment, he lets you approach him. You then get to what your had in your mind, grabbing the soap in one hand and gently rub it across his back, while moving the other hand around his shoulders with a gentle squeeze. There's definitely solid musculature all over him, and you do your best to appreciate all the hard work the young soldier puts into his body by properly feeling him up.";
+		say "     'You're good at that. The way you rub...' he comments as his breathing gets deeper and your hands move lower, past his lumbar area. 'I mean, the massaging and all...' his voice suddenly interrupted by a soft moan as your hand slides around his furred buttocks. Out of plain boldness, you move it between them teasingly before you return to your main purpose, getting a pleased reaction from the half-minotaur. He leans his head back, feeling the water running down his torso, and unexpectedly, you feel his hands on your wrists, pushing them to his front, making you drop the soap as your body is brought closer to his. He says nothing, only a huff of pleasure as he feels your nimble grip around his chest.";
+		WaitLineBreak;
+		say "     There isn't much bathing happening right now, as you're deliberately teasing Adam around his sensitive spots, especially his nipples. You even give them a gentle squeeze, pulling out a moan from the beast-boy, before you slide them down over his rippled abs and below. He lets you, and you're sure about what you'll feel in your hands, a nice and throbbing ten inches long erection, perfectly human in shape, hardened by your loving touch. As soon as you wrap your fingers around it, Adam breathes deeply, to which you respond by kissing his neck and embracing him tighter. It doesn't stop there, as he turns his face to meet yours, your lips colliding with his shortly after. Rubbing his boner like only you know how, you share an intimate tongue play as the half-minotaur's hips start to give in, moving slightly with his dick under your care.";
+		say "     Gently turning the rest of him around to face you, Adam caresses the back of your head and pulls you, so you can both share the warm touch of the running water. His hands move around your chest, then to your [if player is male]cock and balls[else]genitalia[end if] to retribute the favor, and you find yourselves masturbating each other while making out, forgetting all about the world around you for a moment. As you're about to be driven over the edge, you stroke the young soldier faster and faster, to which he responds by doing his best to bring you to orgasm. Sharing some more tongue and hot saliva, you hear - and feel - the half-minotaur releasing a grunt as his grasp around you tightens. His [if player is male]skilled hands wrapped around your cock make you cum all over his abs[else]skilled fingers rubbing around your vulva make you hit your climax[end if] shortly after, and he doesn't stop stimulating you until the end of it.";
+		WaitLineBreak;
+		say "     Not shortly after follows your beast-boy friend, shooting his load towards your torso, spurt after spurt. Were it not for the water, you would have caught a cum bath from the half-minotaur. Instead, his seed was washed off the instant it hit your body, and you're left catching your breath as you slow down your stroking on the young soldier. 'This was good... you're so much fun to have around.' he says before he plants another kiss on your lips. 'We should probably finish up here before someone comes.' With the point taken, you both hurry up washing whatever's left from your sensual affair, turn off the water and grab a towel to dry yourself off. The half-minotaur follows you soon, redressing himself [if player is not naked]as you do the same[else]while you wait for him[end if]. You give each other a pat and move out of the shower tent, feeling clean, refreshed, and a little bit sore. 'Anytime you're around, if you feel like sweating a bit, hit me up at the usual place!' says Adam as he walks away with a smile on his face, returning to his post shortly after.";
+	else:
+		LineBreak;
+		say "     The young soldier is genuinely complimenting you, as you can see in his smile, so you find yourself in the need to retribute by saying how good he looks and how rewarding these workouts feel. By leading the talk to the subject of fitness, goal achievement and self-improvement, time flies past you as, eventually, the showering session ends. You turn off the water and grab a towel to dry yourself off. The half-minotaur follows you soon, redressing himself [if player is not naked]as you do the same[else]while you wait for him[end if]. You give each other a pat and move out of the shower tent, feeling clean, refreshed, and a little bit sore. 'Anytime you're around, if you feel like sweating a bit, hit me up at the usual place!' says Adam as he walks away with a smile on his face, returning to his post shortly after.";
+
+[***********************************************************]
+[***********************************************************]
+[***********************************************************]
+Section 6 - Ending
 [***********************************************************]
 [***********************************************************]
 [***********************************************************]
