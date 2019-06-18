@@ -27,8 +27,8 @@ Version 5 of Fang by Prometheus begins here.
 [ hunger of Fang                             ]
 [ 0 - Twins not born                         ]
 [ 1 - Impregnated player with twins          ]
-[ 2 - Lux born                        ]
-[ 3 - Umbra Born                       ]
+[ 2 - Lux born                               ]
+[ 3 - Umbra Born                             ]
 
 Section 1 - Fang the Feral Wolf
 
