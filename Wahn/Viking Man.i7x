@@ -219,7 +219,7 @@ When Play begins:
 	now HP entry is 80;
 	now lev entry is 9;
 	now wdam entry is 15;
-	now area entry is "Beach";             [ Case sensitive]
+	now area entry is "Nowhere";             [ Case sensitive]
 	[now area entry is "Nowhere";]         [ TODO: Disable until update]
 	now Cock Count entry is 1;             [ number of cocks if sex is 'Male' or 'Both' ]
 	now Cock Length entry is 10;

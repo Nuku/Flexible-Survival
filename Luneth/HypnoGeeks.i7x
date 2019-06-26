@@ -84,7 +84,7 @@ Instead of resolving a HypnoGeeks:
 				LineBreak;
 				say "[bold type]You gain 1 food![roman type][line break]";
 				say "[bold type]You gain 1 water bottle![roman type][line break]";
-				now PlayerMet of Landon is true;
+				now Stamina of Landon is 1;
 				increase carried of defective device by 1;
 				increase carried of food by 1;
 				increase carried of water bottle by 1;
@@ -208,7 +208,6 @@ an everyturn rule:
 			say "     'Now I'm gonna tell you how to find me again, but you will only remember it when I think that you would be ready to be of use.' Leaning in close, you can hear Arthur whispering something to you, but it sounds garbled, like how things sound when you're underwater. 'There, that should do it. Now you just have to remember two numbers, two and three. I know that prolly seems like a lot of work for someone as inferior as you, but trust me, you can do it, haha. Oh, and one more thing, don't you even dare try to tell my brother about any little secrets you think that you may have learned. I mean, accidents can happen to anyone, ya'know.' Arthur gives you a simple wink before everything turns black.";
 			move Player to Tenvale College Male Dorms;
 			say "     As the memory fades, you actually find yourself laying on the ground in the college dormitory without any memory how you got here. You look around and see nothing but closed doors... each with a number on them.";
-			now PlayerMet of Landon is true;
 			SanLoss 15;
 			now Resolution of HypnoGeeks is 73; [third flashback remembered]
 
