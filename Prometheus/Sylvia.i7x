@@ -307,19 +307,19 @@ to say SylviaTalk6: [Samples from friends]
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if AngieAroused > 1 and female is not banned and herm is not banned and female is not warded and herm is not warded:
+	if AngieAroused > 1 and FemaleList is not banned and HermList is not banned and FemaleList is not warded and HermList is not warded:
 		choose a blank row in table of fucking options;
 		now title entry is "Angie";
 		now sortorder entry is 1;
 		now description entry is "Have a trip to the zoo and see the herm panther";
 	[]
-	[if hp of Blanche > 2 and female is not banned and male is not banned and female is not warded and male is not warded:
+	[if hp of Blanche > 2 and FemaleList is not banned and MaleList is not banned and FemaleList is not warded and MaleList is not warded:
 		choose a blank row in table of fucking options;
 		now title entry is "Blanche";
 		now sortorder entry is 2;
 		now description entry is "Visit the wolf woman in her den";]
 	[]
-	if Bubble is booked and female is not banned and female is not warded:
+	if Bubble is booked and FemaleList is not banned and FemaleList is not warded:
 		choose a blank row in table of fucking options;
 		now title entry is "Bubble";
 		now sortorder entry is 3;
@@ -568,10 +568,10 @@ to DespairingBiologistEvent: [Meet Sylvia]
 	say "     Walking through the college, you see the occupants still acting in ways that you might expect from students: lying on the grass laughing with friends, chatting to each other as they walk carrying stacks of books, and standing in groups complaining about one thing or another. Among these activities are some that fit more with the recent events: a pretty pantheress on her knees treating several colleagues to handjobs, moaning from behind a bench as two students relieve some stress, and an elephant dressed in a groundskeeper uniform cleaning sperm from the lawns. Smirking, you continue down the path, thoughts of how the futures of these many people changed with the nanite outbreak.";
 	say "     As you turn a corner, you hear an argument. 'I don't want to swap my degree. I like biology, but the city has changed. Just yesterday, I saw a lion being chased by a gazelle. Darwin doesn't cover that!' a female voice says exasperatedly. Looking over, you see a border collie girl talking to a male wolf, both wearing clothes unlike many of the other residents of the city. 'You don't have to change degrees. Think of all of the creatures running around the city, or even just the college. Did Darwin catalog minotaurs or dragons? You could be the leading authority!' her companion replies enthusiastically. The collie tilts her head. 'I suppose so. Could be fun collecting the data, and there are a lot of never before seen animals...' she reasons.";
 	WaitLineBreak;
-	if (female is warded or female is banned or male is warded or male is banned):
+	if FemaleList is warded or FemaleList is banned or MaleList is warded or MaleList is banned:
 		say "     Her friend gives her a hug, the affection clearly visible to any onlookers such as yourself. 'Thank you Julian. I really needed that support and I do have an interest in mythological creatures so that sounds like a good career path for now,' the collie gratefully tells her friend. She then continues sultrily, 'I might even reward you for that later, but for now we have an observer. Both their eyes are on you by now, the wolf's hand lightly grasping the canine's waist. 'As you seem to be staring at us for a while I suppose we better introduce ourselves. I'm Sylvia, and this is Julian.' The wolf waves weakly, seemingly shy of you. 'So, what brings you to the college? You weren't a student or lecturer before the changes, and I'm guessing you aren't with the military. Researcher? Resident?' the female canine questions you.";
 		say "     You smirk and say that telling her would remove the air of mystery you've developed. Rolling her eyes in mock disgust and sitting on a bench, she gestures for you to sit down beside them. 'As you probably heard from our conversation, I was a biology student, though now our knowledge of biology is likely to change with what's happened to the city. I mainly focused on zoology, but I kept my options open,' the collie informs you, giving her companion's hand another squeeze in thanks for his support earlier. 'And Julian here is a physicist just to be dull. Though he is studying biophysics so he has some redeeming qualities.' The wolf sticks his tongue out at her in response to this, making her giggle. 'But you probably have places to go, so if you want to talk to me any further my room number is 059 in the female dormitories. You seemed nice enough so I look forward to seeing you again.' Noting the room in your head, you stand up and walk away, recognizing that they would like some privacy.";
-		if male is warded or male is banned:
+		if MaleList is warded or MaleList is banned:
 			now hpF of Sylvia is 1; [got room number]
 		else:
 			now hpM of Sylvia is 1; [got room number]
