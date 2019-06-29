@@ -2,6 +2,7 @@ Version 1 of Tehuantl by Wahn begins here.
 [ Original creature by GentlemanB - greatly expanded by Wahn]
 
 LastTehuantlCarlScene is a number that varies. LastTehuantlCarlScene is usually 10000.
+LastTehuantlSpikeScene is a number that varies. LastTehuantlSpikeScene is usually 10000.[@Tag:Notsaved][with the standard value, they'll be ready for a new event right after import, no need to save this one]
 TehuantlKorvinRelationship is a number that varies.
 LastTehuantlKorvinScene is a number that varies. LastTehuantlKorvinScene is usually 10000.
 
@@ -601,13 +602,12 @@ instead of going up from Grey Abbey Library while ((LastTehuantlCarlScene - turn
 				now Libido of Tehuantl is 2; [they fucked, player didn't watch]
 	now LastTehuantlCarlScene is turns;
 
-
 instead of going up from Grey Abbey Library while (LastTehuantlKorvinScene - turns > 6 and (Tehuantl is in Grey Abbey 2F and TehuantlKorvinRelationship is 0 and HP of Tehuantl > 49 and HP of Tehuantl < 100) and (gsd_pet >= 60 and gshep is tamed)):
 	move player to Grey Abbey 2F;
 	if debugactive is 1:
 		say "     DEBUG: TEHUANTL/Korvin TALK WALKIN; Libido of TEHUANTL: [Libido of Tehuantl][line break]";
 	if Libido of Tehuantl is 0: [first time]
-		say "     Coming up the library stairs, your gaze is immediately drawn tothe spotted form of your jaguarman pet Tehuantl, sitting cross-legged on the ground, and bent over his wooden shield. The piece of gear lies on the ground, the painted side down, and its surface shining in the rich brown of some tropical hardwood. The anthro jaguar holds a bottle of olive oil in his paw. He pours a little of its content carefully on the wood, then rubs it in with a rag, already pretty soaked in oil. You feel almost entranced as you watch the warrior maintain his tool. His determined, circling movements, intent on leaving no spot on the shield uncoated, and keeping the wood supple and strong, have you thinking: albeit he agreed to become your 'war-slave' and your pet, Tehuantl remains a proud, dutiful, and dependable man.";
+		say "     Coming up the library stairs, your gaze is immediately drawn to the spotted form of your jaguarman pet Tehuantl, sitting cross-legged on the ground, and bent over his wooden shield. The piece of gear lies on the ground, the painted side down, and its surface shining in the rich brown of some tropical hardwood. The anthro jaguar holds a bottle of olive oil in his paw. He pours a little of its content carefully on the wood, then rubs it in with a rag, already pretty soaked in oil. You feel almost entranced as you watch the warrior maintain his tool. His determined, circling movements, intent on leaving no spot on the shield uncoated, and keeping the wood supple and strong, have you thinking: albeit he agreed to become your 'war-slave' and pet, Tehuantl remains a proud, dutiful, and dependable man.";
 		say "     'Hey bushman - wanna do a rain dance for me? That's what you primitives do, right?' The words break the peaceful moment. You glance up, and notice Korvin, leaning against a bookshelf, near the jaguarman, and looking down on the tribal warrior. As Tehuantl doesn't react in any way to him, the German shepherd's muzzle draws into the creases of a frown, and he begins to walk towards the anthro feline. 'Hey, spotty dip-shit - I'm talking to you!' he barks at the jaguar; again, without any overt reply. However, you can spot Tehuantl's spotted tail twitching jerkily, an obvious sign of annoyance for anyone who ever had a house cat. His confidence unbroken, the dog mouths the words 'Watch this' to you. He seems to expect that you will be on his side as a 'wing-man'. Korvin just keeps at what he is doing, without waiting to see your actual reaction, calling out a mocking, 'Here, kitty kitty,' before he 'accidentally' steps right on Tehuantl's tail.";
 		WaitLineBreak;
 		say "     With a roar, the jaguar jumps up from where he was sitting, unfolding his digitigrade limbs from their cross-legged position in a remarkably fluid and graceful movement. Fangs bared, he whirls around to face the anthro dog, paw-hands raised to attack - right until the moment he sees you standing to the side, watching. Freezing in mid-pounce, the jaguar warrior easily ducks the balled fist Korvin sent his way in anticipation of his reaction. Then he gains two steps distance to the attack dog and turns his attention to you. '[Master]?' Tehuantl asks and nods towards Korvin, who looks like he is about to advance on him with balled fists.";

@@ -1085,6 +1085,7 @@ to selfimpregnate:
 			say "You choose not to accept the seed.";
 			if "Fang's Mate" is listed in feats of Player:
 				remove "Fang's Mate" from feats of Player;
+				now hunger of Fang is 0;
 			stop the action;
 	now gestation of Child is a random number from 24 to 48;
 	if HeadName of Player is "" or TorsoName of Player is "" or BackName of Player is "" or ArmsName of Player is "" or LegsName of Player is "" or AssName of Player is "" or TailName of Player is "": [player doesn't have all new type parts]

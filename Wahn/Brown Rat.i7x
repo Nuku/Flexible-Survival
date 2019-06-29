@@ -183,6 +183,6 @@ to say brown rat cum use:
 	PlayerDrink 10;
 	SanLoss 3;
 	if "Iron Stomach" is not listed in Feats of Player:
-		infect "Brown Rat";
+		infect "Brown Rat Male";
 
 Brown Rat ends here.
