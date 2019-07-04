@@ -1,4 +1,4 @@
-Version 1 of army ant by Glitch begins here.
+Version 1 of Army Ant by Glitch begins here.
 [ Version 1 - Transformations and descriptions - Glitch]
 
 "Adds an army ant infection to Flexible Survival's Wandering Monsters table"
@@ -8,7 +8,7 @@ Section 1 - Creature Responses
 to say armyantdesc:
 	setmongender 3; [creature is male]
 	say "     Before you is the fit and ready figure of an Army Ant. His body is covered in army camo-patterned, gleaming chitin-plated flesh that is sculpted for tone, compact muscle. His face is smooth and planed with chitin bands arching across the center, concealing where a nose would normally be. Fine, articulated plates form the brow and jawline, and the features are lean and stoic. Paired antennae jut from the scalp, and a pair of mandibular pincers flanks the mouth, which is otherwise humanoid. The eyes are ovoid and segmented, a honeycomb of fine gems forming otherwise homogeneous orbs. His insectile body excessively toned and trim with segmented indentations between the chest, abdomen, and hips. The musculature is chiseled, as if comprised of polished stones and hewn into a single, polished piece. His arms span out from his shoulders and where the abdomen and chest join. The upper pair are slightly larger, but both pairs are coated in polished, hunter green chitin, segmented and powerfully built but lean.";
-	say "     The knuckles have thicker knots of chitin while his digits end in fine-honed talons. His legs are like his arms, segmented and chitin-plated and are built powerfully. The fit form of his legs are broad in the quads and calves, but narrow at the joints with arced and barbed, bug-like feet. Behind him is the long, insect abdomen of an ant, bulbous and shinily encased in chitin. Between his legs, his groin sports segmented plates that conceal his pocketed genitals.";
+	say "     The knuckles have thicker knots of chitin while his digits end in fine-honed talons. His legs are like his arms, segmented and chitin-plated and are built powerfully. The fit form of his legs are broad in the quads and calves, but narrow at the joints with arced and barbed, bug-like feet. Behind him is the long, insect abdomen of an ant, bulbous and encased in shiny chitin. Between his legs, his groin sports segmented plates that conceal his pocketed genitals.";
 
 to say losetoarmyant:
 	if NonconList is not banned:
@@ -66,7 +66,7 @@ When Play begins:
 	now face entry is "smooth and planed with chitin bands arching across the center, concealing where a nose would normally be. Fine, articulated plates form the brow and jawline, and the features are lean and stoic. Paired antennae jut from the scalp, and a pair of mandibular pincers flanks the mouth, which is otherwise humanoid. The eyes are ovoid and segmented, a honeycomb of fine gems forming otherwise homogeneous orbs";
 	now body entry is "excessively toned and trim with segmented indentations between the chest, abdomen, and hips. The musculature is chiseled, as if comprised of polished stones and hewn into a single, polished piece";
 	now skin entry is "army camo-patterned, gleaming chitin-plated";
-	now tail entry is "Behind you is the long, insect abdomen of an ant, bulbous and shinily encased in chitin.";
+	now tail entry is "Behind you is the long, insect abdomen of an ant, bulbous and encased in shiny chitin.";
 	now cock entry is "glistening, upcurved";
 	now face change entry is "your face feels a compressing force surrounding it, smoothing down your features save for your cheekbones, brows, and jawline. The flesh grows rictus, stiffening and then splitting into major sections, and your brows and jaw thicken with a rugged, intimidating appearance. On either side of your mouth, thick points protrude and then segment to form pincer-like mandibles. From your scalp, long antennae grow, narrow segments at the base and longer ones near the ends. Your vision splits and reconfigures, adjusting for the many images coming in to become one cohesive sight with refined definition. Scents become clearer and much more distinct, and each tremor has a story to tell";
 	now body change entry is "your muscles ripple and spasm as waves of heat spill through them. Fibers align, and your sinews tighten while your musculature fine-tunes into fit, compact configurations. Where your chest meets your midsection and where your midsection meets your hips, the flesh narrows and pleats to form segments";

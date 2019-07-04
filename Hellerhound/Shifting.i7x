@@ -32,7 +32,7 @@ instead of resolving a Secure Area:
 				WaitLineBreak;
 				say "     The shimmering dissipated, you look towards the guards at the door, and with a shock realize they are of the Gargoyle infection. You could turn back now, or maybe you want to challenge them?";
 				if Player consents:
-					say "You march froward, and they attack.";
+					say "You march forward, and they attack.";
 					now dragatorwon is 0;
 					challenge "Gargoyle";
 					if lost is 1:
