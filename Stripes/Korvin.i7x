@@ -46,7 +46,7 @@ GShepLastScene is a number that varies. GShepLastScene is usually 255.
 ScaleValue of gshep is 3. [human sized]
 Cock Count of gshep is 1.
 Cock Length of gshep is 9.
-Ball Size of gshep is 4.
+Ball Size of gshep is 3.
 Ball Count of gshep is 2.
 Cunt Count of gshep is 0.
 Cunt Depth of gshep is 9.

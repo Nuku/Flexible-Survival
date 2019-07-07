@@ -57,6 +57,7 @@ Figure of Herm_Hyena_naked_icon is the file "Hyena_naked.jpg".
 Figure of HomoSapiens_icon is the file "Homo Sapiens.jpg".
 Figure of HornyDoctor_M_icon is the file "HornyDoctor_M_ig.jpg".
 Figure of Hulking_Cheerleader_icon is the file "Hulking_Cheerleader.jpg".
+Figure of Husky_Bitch_icon is the file "Husky_Bitch.jpg".
 Figure of Imp_clothed_icon is the file "Imp_clothed.jpg".
 Figure of Imp_naked_icon is the file "Imp_naked.jpg".
 Figure of Imp_face_icon is the file "Imp_face.jpg".
@@ -724,6 +725,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Horny Doctor_M"	Figure of HornyDoctor_M_icon	"Cooper"	g-white	"normal"	[only shown for males]
 "Human Survivor"	Figure of Brennan_clothed_icon	"SineAlas"	g-black	"normal"
 "Hulking Cheerleader"	Figure of Hulking_Cheerleader_icon	"Seija"	g-white	"normal"
+"Husky Bitch"	Figure of Husky_Bitch_icon	"Vashaa"	g-White	"normal"
 "Imp Male"	Figure of Imp_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Imp_naked"	Figure of Imp_naked_icon	"Kupo Klein"	g-white	"normal"
 "Imp_face"	Figure of Imp_face_icon	"Kupo Klein"	g-white	"normal"
@@ -1026,6 +1028,7 @@ carry out artistcredits:
 	say "     Homo Sapiens by Astro @ y-gallery.net[line break]";
 	say "     Horny Doctor (male) by Cooper @ furaffinity.net[line break]";
 	say "     Hulking Cheerleader by Seija @ ?[line break]";
+	say "     Husky Female by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Imp by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Incubus by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Kangaroo by Anonymous[line break]";

@@ -42,6 +42,12 @@ Version 1 of Carl by Wahn begins here.
 [   1: player encouraged Carl to start things with David                               ]
 [  99: player discouraged Carl to start things with David                              ]
 [                                                                                      ]
+[ Intelligence of Carl - interaction with Korvin                                       ]
+[   0: not talked with Korvin yet                                                      ]
+[   1: Carl pounded Korvin and showed him who's boss (didn't watch)                    ]
+[   2: Carl pounded Korvin and showed him who's boss (Player watched)                  ]
+[  99: stopped them from fucking                                                       ]
+[                                                                                      ]
 [ lust of Carl - interaction with Candy                                                ]
 [   0: nothing happened yet                                                            ]
 [   1: Candy came up to Carl and got fucked - player watched                           ]
@@ -68,7 +74,7 @@ Carl is a man.
 ScaleValue of Carl is 3. [human sized]
 Cock Count of Carl is 1.
 Cock Length of Carl is 9.
-Ball Size of Carl is 4.
+Ball Size of Carl is 3.
 Ball Count of Carl is 2.
 Cunt Count of Carl is 0.
 Cunt Depth of Carl is 9.
@@ -1401,6 +1407,43 @@ instead of going to Bunker while (HP of David is 4 and HP of Carl > 3 and HP of 
 	WaitLineBreak;
 	say "     Literally tied to David by his cock, Carl stays like that, hips pressed against the young man's cheeks, but they do lie down on their sides in a bit more comfortable a position. 'Feels good to let off some steam, doesn't it?' Carl softly says to David and strokes his chest, who chuckles and replies 'Oh yeah - as crazy as it feels to say that. Before all this, I'd never have believed someone telling me that I'd let myself be mounted by a male superior, and a dog to boot. But having your knot in me sure feels nice...'";
 	NPCSexAftermath David receives "AssFuck" from Carl;
+
+[
+instead of going up from Grey Abbey Library while (Carl is in Grey Abbey 2F and Intelligence of Carl is 0 and HP of Carl is 10 and gsd_pet >= 60 and gshep is tamed):
+	move player to Grey Abbey 2F;
+	if debugactive is 1:
+		say "     DEBUG: Carl/Korvin TALK WALKIN; Libido of Carl: [Libido of Carl][line break]";
+	if Intelligence of Carl is 0: [first time]
+		say "     Coming up the library stairs, you look around and see Carl over at the bookshelves along the north side of the building, picking some reading material for himself. He gives you a small wave in greeting, which you return, followed by going on to glance out of the windows for a moment, checking the outside for roaming creatures. Everything seems to be quiet right now. As you return your attention to the interior of the library, you see that Carl has picked a book and is on the way to return to his post, and that Korvin is going the other way. But just as they would have passed by each other, the German shepherd suddenly swerves a little in his path, deliberately bumping shoulders with Carl and making him drop the novel he is holding. 'Hey! Watch where you're going, dude!' Carl grumbles at him and bends over to pick the book back up, only to have Korvin scoff at him and kick it to tumble downstairs.";
+		say "     'What the fuck? What's wrong with you?' Carl shouts in annoyance, giving the other canine a shove. 'I'm not the one to weak to hold on to my shit, soldier boy! Dropping it and being too slow to get it back!' Korvin barks back at him, baring his teeth. 'Are you trying to imply that -' Carl starts to say, then glances down to see the tip of Korvin's cock sticking out of his sheath. 'Wait a minute! You stupid fucker are trying to provoke me and you're getting off on it?!' Korvin doesn't reply with anything but a growl, instead throwing a punch at Carl's muzzle. The husky soldier is able to duck away from the surprise attack, then goes after the other dog with a vengeance. A punch or two are exchanged before Carl ends up the victor, proving that trained military personnel is more than a match for street toughs. Holding one of Korvin's arms twisted uncomfortably behind his back, Carl has him pressed against the railing, unable to move.";
+		WaitLineBreak;
+		say "     'Fuck you!' Korvin shouts, struggling against the hold for another moment or two before finally stopping. 'So, are you just a bastard who got used to jumping people and fucking them anytime you wanted, or is this some canine dominance bullshit?' The german shepherd looks over his shoulder and scowls, with Carl blowing out his breath unimpressedly and then adding, 'That's it, right? Yeah, thought so. I feel it too, you know. But I'm not as far gone as you and can control myself, unless some stupid fucker provokes me!' As he says this, you realize that he isn't just holding Korvin against the railing to keep him pinned down, but also is grinding his crotch against the other man's ass. Looks like a bit of pack order is about to be established right here and now.";
+		LineBreak;
+		say "     [bold type]How do you react?[roman type][line break]";
+		say "     [link](1)[as]1[end link] - Watch them and enjoy the show.";
+		say "     [link](2)[as]2[end link] - Just ignore it, they'll do what they'll do on their own.";
+		say "     [link](3)[as]3[end link] - Walk over and break things up.";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 3:
+			say "Choice? (1-3)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to watch, [link]2[end link] to ignore them or [link]3[end link] to break things up.";
+		if calcnumber is 1: [watch]
+			LineBreak;
+			say "     Walking a little bit closer to a spot from which you'll have a nice view, you ";
+			now Intelligence of Carl is 2; [watched Carl fuck Korvin]
+		else if calcnumber is 2: [ignore]
+			LineBreak;
+			say "     With a shrug and the thought of 'Dogs will be dogs' coming to the forefront of your mind all on its own, you turn your attention to other things. It's not that easy to tune out the loud moans, barks and grunts coming from the two canines, but you manage for the most part. A little while later, Carl comes back to his post at the window, followed by Korvin. The two of them seem friendly enough with each other now, even as Carl tells the other canine, 'Now go get my book.' His tail wags in satisfaction as Korvin trots off without complaint, going downstairs to retrieve the novel he kicked earlier.";
+			now Intelligence of Carl is 1; [ignored them, Carl fucked Korvin]
+		else if calcnumber is 3: [stop]
+			say "     Walking up to the two canines, you arrive while Carl is still struggling to open his shorts with one hand and trying to get ready for fucking. Arms crossed in front of your chest, you loudly clear your throat, resulting in both of them giving the sort of little whine that dogs getting caught and feeling guilty make. 'Err, boss...' Korvin starts to say as Carl lets go of him, then scratches the back of his own neck embarrassedly. 'Yup, this is pretty much exactly what it looks like! Sorry for letting myself go this much. Not gonna happen again,' Carl admits shame-facedly. 'I'll just go back to my post now.' With that said, he hurries past you, not even pausing to re-do the button of his pants but just holding them up.";
+			say "     Korvin looks after the soldier in a huff, only addressing you as you tap your foot. 'Yo, I just... you know. Thought he can't be that much of a tough guy if you brought him in like me. T'was worth a shot to try to end above him in the pack.' Given the fact that Korvin was actually one of the canines that roam the streets and jump people, his humanity just about gone, there's little chance that you could convince him otherwise, so you let out an extrasperated sigh and just shrug it off. Then you tell him that he should respect Carl, now that he knows that the husky is stronger than him, and also keep out of his way from now on. 'Will do, boss!' your canine companion says in an obedient enough tone, after which you dismiss him to get back to your own business.";
+			now Intelligence of Carl is 99; [stopped them]
+]
 
 Section 5 - Endings
 

@@ -50,6 +50,7 @@ LastAtlantisCenterWalkin is a number that varies. LastAtlantisCenterWalkin is us
 LastResidentialWalkin is a number that varies. LastResidentialWalkin is usually 10000.
 LastMarketWalkin is a number that varies. LastMarketWalkin is usually 10000.
 AtlantisRoomConnection is a number that varies.[@Tag:NotSaved]
+LastAtlantisEvent is a number that varies. LastAtlantisEvent is usually 10000.
 
 an everyturn rule: [bugfixing rules for players that import savegames]
 	if Lost Trident is resolved and Resolution of Lost Trident < 2 and AtlantisRoomConnection is 0: [event resolved the right way, room not connected yet]
@@ -263,6 +264,10 @@ instead of going to Atlantis City Center while CenterVisits is 1 and (LastAtlant
 	move player to Atlantis City Center;
 	now LastAtlantisCenterWalkin is turns;
 
+after going to Atlantis City Center while PoseidonRelationship > 2 and (LastAtlantisEvent - turns < 4):
+	say "     You make your way into the city center and spot a bench that's open. Deciding to take a rest you take a seat. You start to relax and let time pass you by. However soon a shadow covers you and somebody sits by you. Looking to your left you notice it's Poseidon and you give him a smile, saying hello. The Atlantean king smiles back and returns the greeting. 'How're you doing?' He asks. You tell him that you're doing fine before returning the question. 'I'm doing fine, [if PoseidonRelationship is 3]I'm looking forward towards our first date[else if PoseidonRelationship is 4]I'm looking forward our next date[end if].' He says, giving you a hug. You hug him back and say that you can't wait for it. The two of you just sit there, enjoying each other's company before he says he needs to return to work, to which he stands up and heads back to the palace.";
+	now LastAtlantisEvent is turns;
+
 instead of going to Atlantis City Market while MarketVisits is 0:
 	say "     The first thing you notice when you enter the Market is a tall male shark-morph wearing a simple t-shirt and swim trunks. What catches your attention more than his attire was the acoustic guitar on his back, something that you're not entirely sure how it survives the water. The large guy was currently talking to what you believe to be a female octopus-morph standing at a stall. By her clothing and the fact that her shop is positioned in the middle of the entire market you assume that she is pretty important. Out of curiosity, you edge closer to listen to their conversation. 'So, Josie, do you think I could perform here?' the tall shark asks her, a pleading look on his face.";
 	say "     The woman hums for a bit until she lets out a sigh, speaking her mind soon after. 'Very well Kurt, you've helped the Atlantean Merchant Guild enough that I don't see any problem letting you set up shop here,' Josie says to him, a hand on her chin in thought. As soon as she utters those words, the octopus woman is scooped into a large hug by the grinning shark man who is thanking her profusely. The lady just simply rolls her eyes and pats him on the head, all the while trying to get out of the hug with her tentacles. Thankfully, she's put down a minute later. 'I won't let you down! I'm sure my music will make everyone happy!' Kurt says with a bright, toothy smile. Josie just nods and tells him that she expects him to do his best. From there the two part so you decide that you should probably continue on. Perhaps you can later see the shark perform?";
@@ -277,6 +282,13 @@ instead of going to Atlantis City Market while MarketVisits is 1 and (LastMarket
 	now LastMarketWalkin is turns;
 	SanBoost 30;
 
+after going to Atlantis City Market while Loyalty of Sheng > 2 and (LastAtlantisEvent - turns < 4):
+	if loyalty of Sheng is 3:
+		say "     Currently you're browsing the market stalls, looking to see what stuff they have. However, suddenly you feel a paw on your head, petting you. Turning around you're met with a big white tiger, who you instantly recognize as Sheng, your master in the bedroom, which causes you to blush. 'Hello there, what brings you here?' He asks softly, a tone a far cry from his usual one. Perplexed you instead answer, saying you're just looking around. 'Ah, browsing the merchandise eh? Well, it just so happens that I am too,' he says with a purr. That rumble causes your body to shiver which makes him smirk at you before he turns around. 'Hmph, I don't see anything of interest... though one thing has caught my eye... but it needs to approach me first for some more... fun if it wishes to come with me.' He says, implying sex subtly towards you. You just stumble over words as he walks away, leaving you kinda dumbfounded in the market.";
+		now LastAtlantisEvent is turns;
+	else if loyalty of Sheng is 4:
+		say "     Currently you're browsing the market stalls, looking to see what stuff they have. However all of a sudden you're pulled into someone's arms and lifted up like a pet. When you look up to see who it was, you see your master staring down at you. In happiness you nuzzle his neck before bearing your own, causing the man to lick at it. 'How's my pet doing?' He asks, running a hand long your collar. You smile and tell him you're doing good, causing him to scratch at your head while holding you with one arm. 'That's great, now... don't forget to visit your master every now and again okay?' He tells you with a stern look. You nod eagerly before you're let down. He pats your head and heads off, swishing his tail, causing you to look at him with a little bit of lust. before you're left where you were sat at.";
+		now LastAtlantisEvent is turns;
 
 instead of going to Atlantis City Residential while ResidentialVisits is 0:
 	say "     Upon your entrance to the residential area you don't really notice much with your sight but with your smell you do. Following the scent that attacks your senses you soon come upon a large entrance leading to someone's backyard in the neighborhood. At the top of the arc is a sign that reads 'Residential Cookout - All Welcome!' Out of curiosity, you wander on in and are set upon by what looks to be a female... humanoid cat-fish morph? Upon closer examination she doesn't appear to have any gills but does have a mix of traits from both feline and fish. Redirecting your attention to her face the woman is smiling at you widely, looking pretty inviting.";
@@ -292,6 +304,10 @@ instead of going to Atlantis City Residential while ResidentialVisits is 1 and (
 	now LastResidentialWalkin is turns;
 	PlayerEat 20;
 	PlayerDrink 20;
+
+after going to Atlantis City Residential while PlayerMet of Kurt is true and KurtRelationship > 2 and (LastAtlantisEvent - turns < 4):
+	say "     Making your way through the city's housing area you suddenly stumble upon a big buff person. Falling back you look up and chuckle as soon as you realize who it is. It's Kurt, which makes this situation rather hilarious since you started your friendship[if KurtRelationship is 4]-turned romance[end if] like this. The shark looks rather aplogetic and helps you up rather quickly. 'Oh I'm so sorry! Not again!' He says, brushing you off[if KurtRelationship is 4], before kissing you[end if]. You tell him that it's no problem and that it's just probably destiny for the two of you to repeteadly collide into each other. That just causes him to let out a chuckle, which you match. 'Well, I'm sure I can make it up back at my place... if you're interested?' Kurt says with a lustily look thrown in your direction. You smirk and tell him gladly when you have time. He then quickly apologizes again when a bell somewhere rings, saying he needs to be somewhere before leaving, leaving you alone where you are.";
+	now LastAtlantisEvent is turns;
 
 Section 4 - NPCs
 
