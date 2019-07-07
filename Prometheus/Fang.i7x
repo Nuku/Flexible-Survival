@@ -580,7 +580,7 @@ to say fangalphatrio:
 
 Chapter 2 - w/o Sandra	[Only available if 'girl' is banned, removing Sandra from the game]
 
-instead of going up from Bunker while ( lastfuck of Fang - turns >= 24 and HP of Fang is 1 and FemaleList is banned) and player is not neuter:	[ignored for 3+ days]
+instead of going up from Bunker while ( lastfuck of Fang - turns >= 24 and HP of Fang is 1) and player is not neuter:	[ignored for 3+ days]
 	now lastfuck of Fang is turns;
 	project the Figure of Fang_face_icon;
 	say "     After stepping from the bunker and closing the heavy door, you are pounced upon by something. As you start to struggle, you are surprised to find that it's Fang atop you. From his growls and the hard cock rubbing against you, you surmise that the wolf's not playing around. It's been some time since you've given the beast some attention and it looks like he's intent on satisfying his lusts with you whether you like it or not. As his throbbing shaft grinds against you while he tries to get a better grip on you, the scent from the powerful beast is quite enticing. It could be fun to just give in and let the big wolf have his way with you.";
