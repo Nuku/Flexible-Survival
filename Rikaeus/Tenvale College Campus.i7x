@@ -68,7 +68,7 @@ to say campusdesc:
 	say "     Tenvale College stretches out before you. The institution is wedged into a section of the city that has grown denser around it, giving the fairly open and green campus a refreshing contrast to the rest of the surroundings. Renowned for its strong sports program, you know that there are multiple large sporting locations on the edge of the campus, even though you can't see them from right here, due to various other buildings all around. To the northwest, northeast, east, and west are walkways that lead to other parts of the campus, cutting through the grassy expanse around you. Another pathway leads straight north, to a fountain where you see multiple students hanging out, clearly on free time.";
 	say "     Since it's summer, the number of students on campus is much lower than during the school year, but there are still a number of people around from the activity you can see. Certainly, there's the usual piles of scattered clothes and messy cum stains strewn about on the lawns, but the immediately visible residents appear to have taken their transformations in stride, seemingly going about their normal business as they would have before. An interesting approach certainly, given that on the campus parking lot to your south, several overturned cars lie scattered and strewn about by one or another of the bigger creatures roaming the city, and you can make out damage to this or that building as well.";
 
-Campus Grounds is a door. "To the south is an unobstructed path leading further on campus."  It is dangerous.
+Campus Grounds is a door. "To the south is an unobstructed path leading further on campus." It is dangerous.
 
 Campus Grounds is south of College Campus Entrance.
 

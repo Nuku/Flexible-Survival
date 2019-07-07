@@ -62,7 +62,7 @@ When Play begins:
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3;
-	now body descriptor entry is "[one of]slender[or]cool[as decreasingly likely outcomes]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"  Use [one of] to vary ]
+	now body descriptor entry is "[one of]slender[or]cool[as decreasingly likely outcomes]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "[one of]mallrat[or]rat[or]murine[or]ratty[at random]";
 	now magic entry is false;
 	now resbypass entry is false;

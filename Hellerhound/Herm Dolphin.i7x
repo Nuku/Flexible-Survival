@@ -170,7 +170,7 @@ When Play begins:
 	now HP entry is 100;
 	now lev entry is 10; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 12; [Amount of Damage monster Does when attacking.][altered for dolphin so that it does different dmg for each attack]
-	now area entry is "Beach"; [ Current options are 'Outside' and 'Mall', "High", "Beach", "Red", "Labs"  Case sensitive]
+	now area entry is "Beach"; [ Current options are 'Outside' and 'Mall', "High", "Beach", "Red", "Labs". Case sensitive]
 	now Cock Count entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now Cock Length entry is 24; [ Length infection will make cock grow to if cocks]
 	now Ball Size entry is 3; [ Size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
