@@ -70,7 +70,7 @@ PenileVirgin of Blake is false.
 SexuallyExperienced of Blake is true.
 TwistedCapacity of Blake is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Blake is false. [steriles can't knock people up]
-MainInfection of Blake is "Brown Rat".
+MainInfection of Blake is "Brown Rat Male".
 
 Blake is in Dirty Alley.
 The description of Blake is "[BlakeDesc]".

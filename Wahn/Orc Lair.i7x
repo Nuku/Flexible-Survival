@@ -131,7 +131,7 @@ Instead of resolving a Orcish Slave Raid:
 					else if fightoutcome >= 30: [fled]
 						say "[RunFromOrcSlavers]";
 					else if fightoutcome >= 10 and fightoutcome <= 19: [won]
-						now Resolution of Orcish Slave Raid is 5; [beat all orcs, orcs freed]
+						now Resolution of Orcish Slave Raid is 5; [beat all orcs, fox freed]
 						say "     Phew, the last orc collapses on top of the other two with the meaty thump of flesh on flesh. Looking around, you see the guy who got you into this whole mess just wiggling out of the last coil of rope the orc put around him, then stare at you and the beaten orcs. 'Err - thanks,' he says and immediately after runs off as fast as his feet will carry him, not trusting you - or pretty much anyone in this lawless city - enough to stand around and chat.";
 						LineBreak;
 						say "     [bold type]Now that you're all alone with the vanquished orcs, would you like to... have some fun with one of them ([link]Y[as]y[end link]), or do you just leave ([link]N[as]n[end link])?[roman type][line break]";
@@ -190,11 +190,15 @@ Instead of resolving a Orcish Slave Raid:
 	now inasituation is false;
 
 to say RunFromOrcSlavers:
-	now Resolution of Orcish Slave Raid is 3; [ran]
-	say "     Sometimes escape is the best - or only - option. Running as fast as you can, you flee and manage to make [']em lose sight of you after a short while. As you stand around a corner and pant heavily to catch your breath, you can hear them talk in their gruff voices. 'Bah - forget it, we lost [ObjectPro of Player].' 'Fine, let's get back to the other one then - though he'll be pretty sore and stretched out by the time we're done taking turns!' Their voices get quieter as they move away from you, making the last thing you hear 'Who cares? That's what breeders are for! He'll get used to it...'";
-	move Val to Slave Cell 1;
-	now ValPregCounter is 48;
-	now thirst of Val is 1;
+	if SlaveRaidEncounters is 0: [first time]
+		now Resolution of Orcish Slave Raid is 3; [ran]
+		say "     Sometimes escape is the best - or only - option. Running as fast as you can, you flee and manage to make [']em lose sight of you after a short while. As you stand around a corner and pant heavily to catch your breath, you can hear them talk in their gruff voices. 'Bah - forget it, we lost [ObjectPro of Player].' 'Fine, let's get back to the other one then - though he'll be pretty sore and stretched out by the time we're done taking turns!' Their voices get quieter as they move away from you, making the last thing you hear 'Who cares? That's what breeders are for! He'll get used to it...'";
+		move Val to Slave Cell 1;
+		now ValPregCounter is 48;
+		now thirst of Val is 1;
+		now SlaveRaidEncounters is 2; [fox enslaved]
+	else:
+		say "     Sometimes escape is the best - or only - option. Running as fast as you can, you flee and manage to make [']em lose sight of you after a short while. As you stand around a corner and pant heavily to catch your breath, you can hear them talk in their gruff voices. 'Bah - forget it, we lost [ObjectPro of Player].' 'Bah, let's find another one in the streets then. There's plenty who have nice and tight holes.' Their voices get quieter as they move away from you, making the last thing you hear 'Yeah, and they'll get used to a nice fat orc cock in them too!'";
 
 to say SubmitToOrcSlavers:
 	now Resolution of Orcish Slave Raid is 2; [submitted]

@@ -11,7 +11,6 @@ Version 1 of Sonny by Rikaeus begins here.
 [   6: has learned that he misses the taste of home        ]
 [   7: has cooked him manicotti                            ]
 [   8: has learned that he likes you, in a relationship    ]
-[   9: has taken Sonny out on a date                       ]
 [ 100: met, refused to help                                ]
 
 [ SonnyFood                                                ]
@@ -30,9 +29,14 @@ Version 1 of Sonny by Rikaeus begins here.
 [   0: anal virgin                                         ]
 [   1: player fucked him                                   ]
 
+[ SonnyPersonality                                         ]
+[   0: Submissive                                          ]
+[   1: Dominant                                            ]
+
 [variables]
 SonnyFood is a number that varies.
 SonnyQuest is a number that varies.
+SonnyPersonality is a number that varies.
 
 Section 1 - Basic Setup
 
@@ -128,6 +132,11 @@ to say SonnyTalkMenu:
 		now sortorder entry is 5;
 		now description entry is "Ask the sheep boy what exactly he misses about home";
 	[]
+	if SonnyRelationship is 8 and RamFucked > 0 and player is male:
+		choose a blank row in table of fucking options;
+		now title entry is "Confidence";
+		now sortorder entry is 6;
+		now description entry is "Work on the sheep boy's confidence by taking him to Leon";
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -152,6 +161,8 @@ to say SonnyTalkMenu:
 					say "[SonnyTalk4]";
 				if (nam is "Ask him about home"):
 					say "[SonnyTalk5]";
+				if (nam is "Confidence"):
+					say "[SonnyLeon1]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -174,13 +185,33 @@ to say SonnyTalk3: [send him to the library]
 	now HP of Sonny is 2;
 
 to say SonnyTalk4: [send him to the mall]
-	say "     'A-alright. I don't mind moving back to the mall,' he stutters out, looking rather sad. He works on packing up his area, getting all his stuff into one box. When he's done and carrying the box the sheep boy is standing in front of you. 'I'm... packed and ready to go,' he says, still rather depressed about the entire situation. You then lead him back to the mall, thankfully nothing bad happening on the way there. When Sonny's settled back in his usual place, he turns to you to speak. 'P-please don't forget to visit me, okay?' the guy asks you. You assure him that you'll try to visit him from time to time before you head back to the bunker.";
+	if SonnyPersonality is 0:
+		say "     'A-alright. I don't mind moving back to the mall,' he stutters out, looking rather sad. He works on packing up his area, getting all his stuff into one box. When he's done and carrying the box the sheep boy is standing in front of you. 'I'm... packed and ready to go,' he says, still rather depressed about the entire situation. You then lead him back to the mall, thankfully nothing bad happening on the way there. When Sonny's settled back in his usual place, he turns to you to speak. 'P-please don't forget to visit me, okay?' the guy asks you. You assure him that you'll try to visit him from time to time before you head back to the bunker.";
+	else if SonnyPersonality is 1:
+		say "     'Alright! I don't mind going back, but you better visit me alright?' He says giving you a stern look that causes you to nod. He packs up his area, you helping as you feel that you need to with his air of dominance around him. Once everything's packed up he turns to you. 'Mind escorting me?' He says, holding out an arm. You hook arms with him and lead him back to the mall, thankfully nothing happening. Once you get there you help him get settled back in. 'Now, like I said, visit me, afterall, we're lovers!' Sonny says with a chuckle. You assure him you'll visit him occasionally before heading back to the bunker.";
 	move Sonny to Mall Lockerroom;
 	now HP of Sonny is 1;
 
 to say SonnyTalk5: [ask him about home]
 	say "'O-oh, you remember that from our conversation?' he asks, shocked that you remembered. You smile at him, of course you'd remember, you do care for him. That sends the sheep into a bluster of stutters and fidgeting. You're quite sure that if he could, he'd be blushing as red as can be right now. Thankfully though it doesn't take long for the shy ovine to stop acting embarrassed. When he does, the wistful look is back on his face. 'Well... back at home, my mother would always make this amazing manicotti that we'd eat together,' Sonny says. It doesn't sound like a father was in the picture, you say as much and regret it when you do. The sheep has a sad look now as he tells you that his father died when he was young. 'B-b-but that's fine! My mom was all I needed,' he tells you. Nodding at his information, you head off. Maybe you could find a place where someone could teach you how to make manicotti?";
 	now SonnyFood is 1;
+
+to say SonnyLeon1:
+	say "     Walking up to the sheep boy from behind you give him a hug, causing him to let out an eep before relaxing in your arms. 'H-hey there!' Sonny says turning so that you can kiss him. You tell him that you want to help him get his confidence up, help him feel better about himself. 'R-really? How would you do this?' He asks, a curious, contemplative look in his eyes. You explain that you have a friend named Leon, who's a Ram who would probably be more than happy to help him. The sheep tilts his head at that but the nods. 'S-sure! If you think it'll help then I'll go with you!' Sonny says with a bit of determination on his face. Grinning at him you take him by the hand and lead him out of the abbey.";
+	say "     It takes you a fair bit of time to reach the New Ewe Store, but when you get there you knock on the door. A few seconds later, it's thrown open and you're met with the very ram you're looking for. 'Oh! If it isn't my favorite ewe! What can I do for you?' He asks, welcoming you guys in. Sonny looks confused at the exchange but follows you in nonetheless. As you head in, you prose your suggestion to Leon, who appears to think for a second before getting a smirk on his face. 'Well, he does seem pretty wimpy... but with you as his training partner, he definitely can become dominant.' He says with a chuckle. By now, your sheepy boyfriend is super confused and is about to say something when the ram asks you guys to follow him into the back room.";
+	WaitLineBreak;
+	say "     As soon as you're in there he gives you a look, one you're very familiar with, having been with him before. Instantly you remove any type of clothing and get on the ground. 'W-what are you doing?' Sonny asks, rather confused. 'They're being your training partner sheep boy.' Leon said before turning directly to him. 'Now, lose the damn stutter.' He orders firmly, just causing him to stutter again. 'I said... [bold type]lose the god damn stutter![roman type].' The ram shouts. 'Okay! Okay!' Sonny replies back, completely free of his stutter. 'Good, good, now we can move onto the good part.' Leon says with a nod.";
+	say "     'Now, sheep boy, stand in front of your lover here, and tell them what you want them to do.' The ram says, gesturing in a [']go on['] motion. Biting his lip, Sonny walks in front of you and checks to see in your eyes if this is really what you want. Seeing nothing but desire and love in them, he nods. 'I... I want you to take my cock out and suck it.' He says in a firm tone. You oblige him by undoing his pants, causing his length to slip out. You bring your face to it, a scent of musk hitting you and causing you to inhale it before you take it into your mouth, swirling your tongue around the tip, making him hold back a groan.";
+	WaitLineBreak;
+	say "     'Ugh, yeah that's good, take it deeper into your mouth.' Sonny groans, grabbing at your head. In the background you hear Leon mutter that he's a natural as you eye him stroking himself in the corner of your eye. However, you eagerly go further down your partner's cock, taking it inch by inch until it's suddenly balls deep in your mouth. 'Now fuck your mouth on my dick.' your sheep moans, enjoying every bit of your actions. Eager to encourage this side of him, you do as he asks, sliding up and down his length, a slick sloshing sound filling the room as you throatfuck yourself on his cock.";
+	say "     However, it seems that you sucking his cock isn't all he wants you to do. As he soon pulls out of your mouth and gives you a look. 'Turn around, bend over, and spread your cheeks for me.' Sonny orders. You eagerly do so, revealing your pucker to the sheep. Afterwhich you suddenly feel something blunt and wet at your hole. It's teased repeatedly by being rubbed about but never really pushed in. 'Come on, beg for my cock, like you want it.' He orders. Loving this new side of Sonny you practically scream out, saying that you want him to spear you with his thick length, to fuck you as hard as he can.";
+	WaitLineBreak;
+	say "     As soon as you finish saying those words Sonny pushes in, popping his cock into your hole and causing you to groan. It doesn't take long for him to fully hilt in you, his balls soon resting against your ass. He doesn't stay seated in you for long, pulling back and before slamming back in, causing you to lurch forward from the momentum. He continues to fuck you roughly like this for a while, sending massive amounts of pleasure through you as he does so, jabbing at your prostate with each thrust. As he does this,he reaches forward and grabs your head, yanking you back into a hot, passionate kiss that he practically dominates, tongue and all that makes your mind rather hazy.";
+	say "     You can tell his own pleasure is mounting as he's getting more and more desperate with his thrusts, but soon enough you're met with a cock in your face, Leon's to be specifically. It's quickly shoved into your mouth and you're made to suck on it as you're practically spitroasted by the two ovine. They tag team you for a while before their panting gets rougher and rougher and they both let out a roar and the same time. Creamy cum starts shooting both down your throat and into your ass, filling your in both ends, causing your own pleasure to soar.[if player is herm]You let out a loud muffled moan as your pussy twitches before it starts leaking fluids eveywhere just as your cock shoots its load all over the floor, creating a large puddle[else if player is male]You let out a loud muffled moan and your cock starts to spurt its own load, splattering all over the backroom floor, creating a large puddle[end if].";
+	WaitLineBreak;
+	say "     Both of them then pull out, causing you to collapse onto the floor onto your cum puddle. Leon snickers and turns to Sonny and speaks up. 'You did a pretty good job kid.' He says, but he's rather ignored by the sheep. Your lover instead picks you up and cuddles you into his arms, kissing you passionately and whispering about how much of a wonderful job you did. That causes you to smile happily and nuzzle him back. You're surprised when he picks you up and carries you out of the room and seemingly back to the abbey and into his bed where he snuggles you some more before the both of you nod off to sleep. When you wake up later, you feel that Sonny's personality has changed a lot.";
+	now SonnyPersonality is 1;
+	now lastfuck of Sonny is turns;
 
 Section 3 - Sex
 
@@ -189,10 +220,14 @@ instead of fucking the Sonny:
 	if SonnyRelationship < XXX): [romance quest not yet done]
 		say "     <hook for the romance quest>";
 ]
-	if Sonny is in Mall Lockerroom:
+	if Sonny is in Mall Lockerroom and SonnyPersonality is 0:
 		say "     'A-a-ah, I'm really sorry... but I'd rather not have sex in a public place like this,' the sheep boy says nervously. It might be a good idea to ask the guy to move in with you if sex is your desire.";
-	else if (lastfuck of Sonny - turns < 6): [he got fucked in the last 18 hours = 6 turns]
+	else if Sonny is in Mall Lockerroom and SonnyPersonality is 1:
+		say "     As much as I'd love to have fun with you in public, I'd rather us have fun back at the Abbey.' Sonny says with a smile in your direction. It might be better to have him move back if you want sex.";
+	else if SonnyPersonality is 0 and (lastfuck of Sonny - turns < 6): [he got fucked in the last 18 hours = 6 turns]
 		say "     'I'd love to... b-but I'm still very tired from last time,' he says, practically apologizing with his eyes. Sheesh, give the guy some time, you just fucked him!";
+	else if SonnyPersonality is 1 and (lastfuck of Sonny - turns < 3): [he got fucked in the last 9 hours = 3 turns]
+		say "     'I'd love to, but we just did a while ago, I need time to rest,' Sonny says with a chuckle.";
 	else: [ready for sex]
 		say "     As you walk up to Sonny, you can see him blush at the mention of sex, eagerness practically oozing off of him.";
 		wait for any key;
@@ -203,17 +238,18 @@ to say SonnySexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if Player is male: [only males and herms can get a blowjob]
+	if Player is male and SonnyPersonality is 0: [only males and herms can get a blowjob]
 		choose a blank row in table of fucking options;
 		now title entry is "Get a blowjob";
 		now sortorder entry is 1;
 		now description entry is "Let Sonny suck you off";
-	[
-	choose a blank row in table of fucking options;
-	now title entry is "Suck Sonny off"; [anyone can blow him]
-	now sortorder entry is 2;
-	now description entry is "Wrap your lips around the sheep boy's ovine shaft";
-	][]
+	[]
+	if SonnyPersonality is 1:
+		choose a blank row in table of fucking options;
+		now title entry is "Suck Sonny off"; [anyone can blow him]
+		now sortorder entry is 2;
+		now description entry is "Wrap your lips around the sheep boy's ovine shaft";
+	[]
 	if Player is male and Libido of Sonny is 0: [only males and herms can fuck him, virgin Sonny]
 		choose a blank row in table of fucking options;
 		now title entry is "Talk the friendly sheep into giving up his virginity";
@@ -279,7 +315,15 @@ to say SonnySex1: [oral on the player]
 	now lastfuck of Sonny is turns;
 
 to say SonnySex2: [oral on Sonny]
-	say "     A";
+	say "     Walking up to Sonny you seem to be projecting an eager aura which causes him to raise a brow to you. 'Oh, does my lover want something?' He asks, leaning against the wall while sitting on his bed. You nod before glancing at his crotch. 'Oh, you want a taste of me? Eh?' The sheep says with a smile before spreading his legs wide. 'Well then, who am I to deny you what you want, go right ahead.' He says, causing you to climb right on the bed and shove your face right into his crotch. Once your face meets his crotch you can feel the heat of it meet your face, causing you to let out a moan.";
+	say "     Inhaling you get a good whiff of his musk, which is a nice masculine smell, causing you to groan and nuzzle it. Popping open your jeans, you get thwapped in the face with his cock which is already leaking precum, which sticks to your face after having smacked you. Freeing the whole length and balls from the pair of pants you drag your tongue from his balls to his tip, taking in the taste and letting out a hum of contentment, enjoying this new side of Sonny. Moving your face further down you nuzzle your nose into his ballsack, letting the heavy and hazy smell coming from them envelop you.";
+	WaitLineBreak;
+	say "     Taking one of his orbs into your mouth you suck on it, swirling it around in your mouth, gaining a moan out of the sheep who pushes your face deeper into his crotch, clearly enjoying what you're doing. Once you've washed the sweat off of that one you switch to the other and repeat, groaning the entire time. After that, you slowly lick up his length, dragging your tongue up the veins that trace his cock until you reach the tip which is currently leaking precum. You happily lap up the fluid, smacking your lips as you taste it, letting him know you enjoy it all.";
+	say "     'Come on, enough fun, take my cock in your mouth, I wanna fuck your throat. I know you can take it.' Sonny orders, causing a shiver to go down your spine. Eagerly you comply, opening your mouth and engulfing the head of the length before slowly sliding down it. Your sheepy lover groans at your warm throat constricting around his dick, grabbing a hold of your head as you sink inch by inch deeper into your mouth. Soon enough you have him balls deep in you, his testicles sitting against your nose causing you to once more be surrounded by his scent.";
+	WaitLineBreak;
+	say "     However once you get comfortable Sonny pulls back and thrusts back in, beginning to fuck your face, his balls slapping against you with a wet sound from the saliva you coated on it. He repeatedly humps at you, his cock going in and out, a sloshing filling the room as he throatfucks you. You take it eagerly, enjoying the domination your sheepy boyfriend is putting on you, sometimes even meeting the thrusts he puts out. To help him out you swirl your tongue around his cock, licking and sucking at it each time he pushes it into your mouth, causing him to moan rather loudly each time.";
+	say "     With each thrust Sonny makes you can tell he gets closer, as your sheepy lover gets louder and more desperate with his moans and his balls start to tighten against your face. This allows you to prepare a bit for what's about to come. And oh boy does it come. About a minute later the sheep slams into your mouth one last time, groaning as rope after rope of cum pours down your throat, you trying your best to taste it with your tongue. When the last bit of cum peters off, Sonny pulls back with a panting breath and pulls you into his arms. 'Fuck that was hot come here.' He says before kissing you, not minding that his cum is in your mouth. The two of you make out, swapping his come back and forth as you lay there for a while. Twenty minutes later you get up and return to what you were doing earlier, giving the sheep a kiss goodbye, promising to return later.";
+	now lastfuck of Sonny is turns;
 
 to say SonnySex3: [virgin Sonny fucked]
 	say "     When you suggest fucking him, Sonny's eyes widen big time. 'W-w-what?' he stutters. You repeat yourself, this time wagging your eyebrows for emphasis. 'W-well, I-I'm a virgin,' the sheep boy says nervously. You tell him that you don't mind that and that you'll take it easy on him. The sincerity in your voice appears to win him over as he relaxes. However, that is rather short-lived as he appears to be nervous once more. You ask him the reason for that, making him look down on the floor. 'I-I have a request...' Sonny says, trailing off. Your raise one of your brows, curious as to what that request is. The sheep boy doesn't say anything, rather he takes your hand and pulls you over to what appears to be a crotch-height table. But that isn't what Sonny dragged you here for. No, the guy walks up to a large cloth to the left of the table and yanks it off. Instantly, a large, wide mirror is revealed, showing both of your reflections.";
@@ -357,10 +401,11 @@ instead of going to Half-Renovated Room while (SonnyRelationship is 7 and SonnyQ
 	say "     Upon entering the half-renovated room Sonny perks up from his area and bounds on over with a blush on his face. Curious about it, you ask him what he wants, not that he ever needs to ask of anything, really. 'Ah, well... Why do you hang out with me?' the sheep asks you, looking at the floor with a nervous look. You let out a hum before listing out the reasons off the top of your head. You tell him that he's kind, cute, cuddly, has a great personality, as well as a much longer list that would take a bit longer than the time they have to name. That prompts his entire face turning red and him looking like he wants to say something. Suddenly, though, he blurts it out. 'I like you, like, romantically!' Sonny shouts, causing you to raise a brow.";
 	say "     To be honest, you thought that you were going to be the first one to admit your feelings to the sheep, but it looks like he beat you to it. Oh well, you may as well say something, as it looks like he thinks that you're rejecting him because of you not saying anything. You quickly admit that you like him as well, romantically of course, causing a look of relief to flutter over his face. 'Do... you perhaps want to date?' he asks, which you admit is an odd question. Odd because most people in the current state of the world just stick to fucking rather than romantic relationships. But instead you smile at Sonny and nod, telling him you wouldn't mind it. He smiles happily at you and shuffles close to you before pulling you into a soft kiss that has a bit more feeling to it than the previous ones the two of you had. The sheep then backs away and says that maybe at a later time you two could go on a date maybe.";
 	now SonnyRelationship is 8;
+	now PlayerRomanced of Sonny is true;
+
 []
 [
 Section 5 - Endings
-
 when play ends:
 	if (HP of Sonny > 0): [player met him and got as far as seeing him as an NPC]
 		if humanity of Player < 10: [player went feral]

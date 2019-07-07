@@ -57,6 +57,7 @@ Figure of Herm_Hyena_naked_icon is the file "Hyena_naked.jpg".
 Figure of HomoSapiens_icon is the file "Homo Sapiens.jpg".
 Figure of HornyDoctor_M_icon is the file "HornyDoctor_M_ig.jpg".
 Figure of Hulking_Cheerleader_icon is the file "Hulking_Cheerleader.jpg".
+Figure of Husky_Bitch_icon is the file "Husky_Bitch.jpg".
 Figure of Imp_clothed_icon is the file "Imp_clothed.jpg".
 Figure of Imp_naked_icon is the file "Imp_naked.jpg".
 Figure of Imp_face_icon is the file "Imp_face.jpg".
@@ -179,6 +180,7 @@ Figure of Danny_naked_icon is the file "Danny_naked.jpg".
 Figure of Danny_clothed_icon is the file "Danny_clothed.jpg".
 Figure of Danny_face_icon is the file "Danny_face.jpg".
 Figure of Darius_face_icon is the file "Darius_face.jpg".
+Figure of Dash_icon is the file "Dash.jpg".
 Figure of David_naked_icon is the file "David_naked.jpg".
 Figure of David_clothed_icon is the file "David_clothed.jpg".
 Figure of David_hurt_icon is the file "David_hurt.jpg".
@@ -399,6 +401,7 @@ Figure of Map_Bunker_Main_icon is the file "Map_Bunker_Main.jpg".
 Figure of Map_Bunker_Restroom_icon is the file "Map_Bunker_Restroom.jpg".
 Figure of Map_Bunker_Shower_icon is the file "Map_Bunker_Shower.jpg".
 Figure of Map_Bunker_Storeroom_icon is the file "Map_Bunker_Storeroom.jpg".
+Figure of Map_City_icon is the file "CityMap_small.jpg".
 Figure of Map_Library_Back_icon is the file "Map_Library_Back.jpg".
 Figure of Map_Library_Front_icon is the file "Map_Library_Front.jpg".
 Figure of Map_Library_Fountain_icon is the file "Map_Library_Fountain.jpg".
@@ -641,6 +644,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Danny_clothed"	Figure of Danny_clothed_icon	"Dragonpunk"	g-white	"normal"
 "Danny_face_icon"	Figure of Danny_face_icon	"Dragonpunk"	g-white	"normal"
 "Darius_face"	Figure of Darius_face_icon	"SineAlas"	g-black	"normal"
+"Dash"	Figure of Dash_icon	"Conchi"	g-white	"normal"
 "David_naked"	Figure of David_naked_icon	"Keitaro87"	g-white	"normal"
 "David_clothed"	Figure of David_clothed_icon	"Keitaro87"	g-white	"normal"
 "David_hurt"	Figure of David_hurt_icon	"Keitaro87"	g-white	"normal"
@@ -721,6 +725,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Horny Doctor_M"	Figure of HornyDoctor_M_icon	"Cooper"	g-white	"normal"	[only shown for males]
 "Human Survivor"	Figure of Brennan_clothed_icon	"SineAlas"	g-black	"normal"
 "Hulking Cheerleader"	Figure of Hulking_Cheerleader_icon	"Seija"	g-white	"normal"
+"Husky Bitch"	Figure of Husky_Bitch_icon	"Vashaa"	g-White	"normal"
 "Imp Male"	Figure of Imp_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Imp_naked"	Figure of Imp_naked_icon	"Kupo Klein"	g-white	"normal"
 "Imp_face"	Figure of Imp_face_icon	"Kupo Klein"	g-white	"normal"
@@ -950,6 +955,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Map Bunker_Restroom"	Figure of Map_Bunker_Restroom_icon	"Goncalo"	g-black	"normal"
 "Map Bunker_Shower"	Figure of Map_Bunker_Shower_icon	"Goncalo"	g-black	"normal"
 "Map Bunker_Storeroom"	Figure of Map_Bunker_Storeroom_icon	"Goncalo"	g-black	"normal"
+"Map City"	Figure of Map_City_icon	"Goncalo"	g-black	"inline_only"
 "Map Library_Back"	Figure of Map_Library_Back_icon	"Goncalo"	g-black	"normal"
 "Map Library_Front"	Figure of Map_Library_Front_icon	"Goncalo"	g-black	"normal"
 "Map Library_Fountain"	Figure of Map_Library_Fountain_icon	"Goncalo"	g-black	"normal"
@@ -1022,6 +1028,7 @@ carry out artistcredits:
 	say "     Homo Sapiens by Astro @ y-gallery.net[line break]";
 	say "     Horny Doctor (male) by Cooper @ furaffinity.net[line break]";
 	say "     Hulking Cheerleader by Seija @ ?[line break]";
+	say "     Husky Female by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Imp by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Incubus by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Kangaroo by Anonymous[line break]";
@@ -1101,7 +1108,7 @@ carry out artistcredits:
 	say "     Christy by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Colleen (face) by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Corbin (face) by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
-[	say "     Dash by Conchi @ https://artisticconch.tumblr.com/[line break]";] [disabled until art integration]
+	say "     Dash by Conchi @ https://artisticconch.tumblr.com/[line break]";
 	say "     Danny (naked) by Laylo @ https://www.furaffinity.net/user/lay-lo/[line break]";
 	say "     Danny (design + dressed) by Dragonpunk @ furaffinity.net[line break]";
 	say "     Darius by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
@@ -1240,6 +1247,7 @@ carry out artistcredits:
 	say "     Talov & Kerr by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "Maps:[line break]";
 	say "     Mall Map by Anonymous @ -[line break]";
+	say "     City Map by Goncalo @ https://www.artstation.com/beepe/[line break]";
 	say "     Library Maps by Goncalo @ https://www.artstation.com/beepe/[line break]";
 
 ArtistBanning is an action applying to nothing.
@@ -1262,7 +1270,7 @@ carry out ArtistBanning:
 	artistbanmenu;
 
 to artistbanmenu: [more compact version]
-	let artistlist be {"Abelsword", "Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "Bix707", "Bludwing", "Boo3", "Brun69", "BushyCat", "Caltroplay", "Candy", "canned", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "ConnyChiwa", "Cooper", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "Goncalo", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Waxraven/WXRVN", "Luneth", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "Soryane", "SparklePens", "Strype", "Sususmiles", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "TylerAz", "Uniformvixen", "Unknown", "valdericblackstag", "Valen", "Vashaa", "Watsup", "Wemd", "Xenotropos"};
+	let artistlist be {"Abelsword", "Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "Bix707", "Bludwing", "Boo3", "Brun69", "BushyCat", "Caltroplay", "Candy", "canned", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Conchi", "ConnyChiwa", "Cooper", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "Goncalo", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Waxraven/WXRVN", "Luneth", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "Soryane", "SparklePens", "Strype", "Sususmiles", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "TylerAz", "Uniformvixen", "Unknown", "valdericblackstag", "Valen", "Vashaa", "Watsup", "Wemd", "Xenotropos"};
 	now calcnumber is -1;
 	let countnumber be 1;
 	let abmexit be 0;

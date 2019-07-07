@@ -6289,6 +6289,7 @@ Include Text Capture by Eric Eve.
 [Locations]
 Include Apocalypse Store by DrGryphon.
 Include Approaching the Capitol Building by Guest Writers.
+Include Astor by Rikaeus.
 Include Astroslide Field Locker-room by Kernog.
 Include Astroslide Field Showers by Kernog.
 Include Astroslide Football Field by Kernog.

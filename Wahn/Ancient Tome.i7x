@@ -170,9 +170,6 @@ to say TomeUse:
 	LineBreak;
 	say "[TomeExpansionUse]";
 
-to say TomeExpansionUse:
-	say "This appears to be not coded yet, so says Nuku/David.";
-
 instead of trading the ancient tome when the current action involves the Eric:
 	if TomeFound is 100: [Eric never looked into it]
 		say "     Pulling your backpack off, you dig around in it and find the thick tome. As you pull it out, Eric steps up and thanks you as he accepts the book. He exchanges some more words in friendly conversation with you, then walks off with the book held tightly to his chest.";
