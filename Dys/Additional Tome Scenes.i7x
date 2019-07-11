@@ -45,6 +45,12 @@ to say TomeSexMenu:
 		now sortorder entry is 2;
 		now description entry is "The demon fox sounds like it could be fun";
 	[]
+	if Resolution of Hellish Trashpile > 2 and Resolution of Hellish Trashpile < 99 and Resolution of Hell Realm is 0:
+		choose a blank row from table of fucking options;
+		now title entry is "Perform the Demonic Ritual";
+		now sortorder entry is 3;
+		now description entry is "Try to mimic the ritual you saw in the tape";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows from table of fucking options:
 		choose row y from the table of fucking options;
@@ -65,6 +71,8 @@ to say TomeSexMenu:
 						say "[TentacleSex]";
 					-- "Summon a demon fox":
 						say "[DemonFoxSummon]";
+					-- "Perform the Demonic Ritual":
+						say "[HellRealmRitual]";
 				wait for any key;
 		else if calcnumber is 0:
 			say "     Change your mind and do something else?";
