@@ -53,7 +53,7 @@ Start by adding the linter plugin. It'll ask you to install some dependencies as
 ## 6. Install Inform 7
 Install Inform 7! Flexible Survival runs on this game engine.
 
-http://inform7.com/download/
+http://inform7.com/downloads/
 
 However, Flexible Survival is too big for Inform! We have a custom 64-bit compiler that you will also have to install or else you will not be able to compile the game:
 
@@ -75,6 +75,7 @@ You will have to do this step every time a new folder is introduced (either pull
 It will make a symlink from your Inform project to the Github repo, so that the Inform engine knows where the files are stored for compilation.
 
 Here are the manual mapping of files if you do not want to use the script:
+
 | Action                      | File/Folder                        | At  |
 | --------------------------- | ---------------------------------- | --- |
 | Copy the file from the folder `Documents\Github\Inform` | `story.ni` | `Documents\Inform\Projects\Flexible Survival.inform\Source` |
