@@ -58,6 +58,10 @@ feline_pride_defeat is a truth state that varies. feline_pride_defeat is usually
 
 the scent of Leonard is "The feline smells strong and manly.".
 
+to LeonardIconRestore:
+	if HP of Leonard >= 6:
+		now the icon of Leonard is the figure of LeonardViolin_icon;
+
 to say Leonarddesc:
 	say "     Leonard is a lion-man like those you've seen in the park, but well-groomed and well-mannered. He has a strong, manly chest, which he loosely covers with his suit coat. While it could probably close, it certainly seems more comfortable open[if leopocketwatch is true]. He keeps an antique gold pocket watch in the breast pocket[end if]. He is covered in tawny fur and has a large, russet mane. His lower body is unclothed, leaving his sheath and plump balls exposed.";
 

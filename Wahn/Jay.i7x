@@ -41,6 +41,10 @@ The conversation of Jay is { "<This is nothing but a placeholder!>" }.
 The icon of Jay is Figure of Jay_elf_outfit_icon.
 The scent of Jay is "     Jay must wash regularly, as there is little discernible odor to his skin. What you do detect are motes of cinnamon, spices and a hint of gingerbread, the aroma complementing his appearance. There's also a faint trace of his ursine partner's musk, no doubt courtesy of their frequent lovemaking.".
 
+to JayIconRestore:
+	if thirst of Jay is 9: [suit delivered]
+		now the icon of Jay is Figure of Jay_suit_icon;
+
 to say JayDesc:
 	if debugactive is 1:
 		say "DEBUG -> Thirst: [thirst of Jay], JayMarkRelationship: [JayMarkRelationship], XP: [XP of Jay] <- DEBUG[line break]";

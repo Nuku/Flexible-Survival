@@ -128,6 +128,12 @@ The conversation of Sam is { "Thanks." }.
 the scent of Sam is "[samscent]".
 samformtalk is a truth state that varies. samformtalk is usually false.
 
+to SamIconRestore:
+	if HP of Sam >= 30 and HP of Sam <= 49:
+		now icon of Sam is figure of Vixentaur_icon;
+	else if HP of Sam >= 50 and HP of Sam <= 69:
+		now icon of Sam is figure of Dracovixentaur_icon;
+
 to say samscent:
 	if HP of Sam <= 4:
 		say "Sam himself smells human, though there is the lingering scent of several of his recent [']sample donors['] as well.";

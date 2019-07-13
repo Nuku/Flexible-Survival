@@ -17,6 +17,10 @@ gettinglee is a number that varies.
 
 the scent of Alex is "[alexscent]".
 
+to AlexIconRestore:
+	if alexbrunch >= 4:
+		now the icon of Alex is Figure of Alex_icon;
+
 to say alexscent:
 	if alexbrunch < 4:
 		say "Alex smells like a mix of human and ferret.";

@@ -17,6 +17,10 @@ understand "Matt" as Doctor Matt.
 understand "Left Behind Recording of Doctor Matt " as Doctor Matt.
 the icon of Doctor Matt is figure of DrMatt_face_icon.
 
+to DrMattIconRestore:
+	if HP of Doctor Matt is 100:
+		now the icon of Doctor Matt is figure of pixel;
+
 to say DrMattDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Doctor Matt] <- DEBUG[line break]";
