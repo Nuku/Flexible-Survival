@@ -43,7 +43,7 @@ When Play begins:
 	now desc entry is "[NemeanLiondesc]";                  [ Description of the creature when you encounter it. ]
 	now face entry is "now a head described by this text";      [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "that of a well-described new form put here";   [ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "fur/scales/patterns that now cover your";   [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
+	now skin entry is "fur/scales/patterns that now cover your";   [ Skin desc., format as the text "Your body is covered in (your text) skin." Note: the word 'skin' is automatically included at the end. ]
 	now tail entry is "Your tail gets a full sentence ending in a period.";   [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "feline";                  [ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "your head changes in some descriptive manner";   [ Face TF text, format as "Your face feels funny as (your text)." ]

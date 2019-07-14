@@ -4565,7 +4565,7 @@ The TF description of a rat dude is "sinks to their knees as black fur overwhelm
 
 Section - Rabbit Guy
 
-The rabbit vagina is a [ kind of] body part. The rabbit vagina is soft. The body part origin of the rabbit vagina is "pelvis". The shift of the rabbit vagina is "A powerful warmth builds in your belly before pressing down. Squirming, you can only gasp as the heat finds an outlet through a new orifice, thickly lipped, your new vagina is lined with soft white fur and hides between balls and ass." The desc of a rabbit vagina is "Between your balls and ass is a plump vagina of a rabbit, surrounded with white fur." The TF table of the rabbit vagina is Table 22.
+The rabbit vagina is a[ kind of] body part. The rabbit vagina is soft. The body part origin of the rabbit vagina is "pelvis". The shift of the rabbit vagina is "A powerful warmth builds in your belly before pressing down. Squirming, you can only gasp as the heat finds an outlet through a new orifice, thickly lipped, your new vagina is lined with soft white fur and hides between balls and ass." The desc of a rabbit vagina is "Between your balls and ass is a plump vagina of a rabbit, surrounded with white fur." The TF table of the rabbit vagina is Table 22.
 
 A rabbit guy is a infection model. It is a seeker. The description of a rabbit guy is "This obviously male rabbit sports a very human like cock that juts a foot from its crotch. It's holding chocolates and eggs and is always smiling. His expression is a little distant, but seems to come into a bit of focus if a female rabbit is around." The TF table of a rabbit guy is Table 22. a rabbit guy is male. A rabbit guy is fearful.
 
