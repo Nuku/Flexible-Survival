@@ -287,7 +287,7 @@ Instead of fucking the Danny:
 		say "     Danny smiles a little as you make your offer of having sex with him, then slowly shakes his head. 'Thank you, I'm flattered. But... I'm a little busy with my project to take photographs of all the creatures that came into existence in this chaos. I can't go out into the city since it is too dangerous, so hanging around here in the main corridor is my best shot at it. Sometimes you have to put aside your own pleasure for your art, you see?'";
 		say "     Looks like you won't get into his pants that easily - not without helping Danny with his fond desire to become a famous photographer, or possibly bringing a nice and interesting pet along to draw him into some sexy fun...";
 	else: [player did his quest and Danny likes him now]
-		say "     Danny smiles broadly as you make your offer of having sex with him, then takes your hand and leads you into the back room of the nearby photo shop. He's made a next for himself here, with a comfortable mattress in one corner of the room and his technical and photography gear set up to be worked with.";
+		say "     Danny smiles broadly as you make your offer of having sex with him, then takes your hand and leads you into the back room of the nearby photo shop. He's made a nest for himself here, with a comfortable mattress in one corner of the room and his technical and photography gear set up to be worked with.";
 		say "[DannySexMenu]";
 
 to say DannySexMenu:

@@ -744,6 +744,7 @@ Name(text)	Type(text)
 "lastCandyUrikInteraction"	"number"
 "LastCandyWalkin"	"number"
 "lastCarlEricInteraction"	"number"
+"lastCarlKorvinInteraction"	"number"
 "lastCarlSarahInteraction"	"number"
 "LastCatgirlFuck"	"number"
 "lastcheetahturns"	"number"

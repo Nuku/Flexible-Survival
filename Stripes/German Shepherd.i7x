@@ -652,24 +652,24 @@ to say gsd_special_final_00:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck him and recruit";
 		now sortorder entry is 1;
-		now description entry is "fuck him to secure your dominance over him";
+		now description entry is "Fuck him to secure your dominance over him";
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck him and banish";
 		now sortorder entry is 1;
-		now description entry is "fuck him before driving him off for good";
+		now description entry is "Fuck him before driving him off for good";
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Ride him and recruit";
 		now sortorder entry is 1;
-		now description entry is "ride him to secure your dominance over him";
+		now description entry is "Ride him to secure your dominance over him";
 		choose a blank row in table of fucking options;
 		now title entry is "Ride him and banish";
 		now sortorder entry is 1;
-		now description entry is "ride him before driving him off for good";
+		now description entry is "Ride him before driving him off for good";
 	choose a blank row in table of fucking options;
 	now title entry is "Humiliate and banish";
 	now sortorder entry is 5;
-	now description entry is "reinforce that he's been bested before driving him off for good";
+	now description entry is "Reinforce that he's been bested before driving him off for good";
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";

@@ -92,7 +92,7 @@ When Play begins:
 	add "Platypus" to infections of SheathedCockList;
 	add "Platypus" to infections of BipedalList;
 	add "Platypus" to infections of TailList;
-	add "MpregList" to infections of TailList;
+	add "Platypus" to infections of MpregList;
 	now Name entry is "Platypus";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]

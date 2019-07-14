@@ -1587,6 +1587,8 @@ to NumberVariableSave:
 			now NumberVarValue entry is LastCandyWalkin;
 		-- "lastCarlEricInteraction":
 			now NumberVarValue entry is lastCarlEricInteraction;
+		-- "lastCarlKorvinInteraction":
+			now NumberVarValue entry is lastCarlKorvinInteraction;
 		-- "lastCarlSarahInteraction":
 			now NumberVarValue entry is lastCarlSarahInteraction;
 		-- "LastCatgirlFuck":
@@ -5265,6 +5267,8 @@ to VariableNumberLoad:
 					now LastCandyWalkin is numberVarValue entry;
 				-- "lastCarlEricInteraction":
 					now lastCarlEricInteraction is numberVarValue entry;
+				-- "lastCarlKorvinInteraction":
+					now lastCarlKorvinInteraction is numberVarValue entry;
 				-- "lastCarlSarahInteraction":
 					now lastCarlSarahInteraction is numberVarValue entry;
 				-- "LastCatgirlFuck":
