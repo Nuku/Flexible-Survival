@@ -690,6 +690,19 @@ to NoteRestore:
 	else:
 		say "No Note Save File Found!";
 
+to CharacterIconRestore:
+	say "Restoring Character Icons...";
+	AlexIconRestore;
+	HadiyaIconRestore;
+	LeonardIconRestore;
+	RodAndRondaIconRestore;
+	SamIconRestore;
+	ChrisIconRestore;
+	DemonBruteIconRestore;
+	DiegoIconRestore;
+	JayIconRestore;
+	DrMattIconRestore;
+
 Section 2 - Trixie
 
 understand "export progress" as ProgressExport.
@@ -743,6 +756,7 @@ to say ProgressionImport:
 	BeastRestore;
 	NoteRestore;
 	VariableLoad;
+	CharacterIconRestore;
 
 Table of GameCharacterIDs (continued)
 object	name

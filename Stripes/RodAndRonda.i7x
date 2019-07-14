@@ -119,6 +119,12 @@ The description of Ronda Mallrat is "[rondadesc]".
 The conversation of Ronda is { "empty" }.
 Ronda Mallrat is in Mall Atrium.
 
+to RodAndRondaIconRestore:
+	if HP of Ronda is 100:
+		now the icon of Rod Mallrat is figure of pixel;
+		now the icon of Ronda is figure of RondaSR_icon;
+
+
 to say rondadesc:
 	if HP of Ronda is 0:
 		say "You have no idea if she was shapely before her infection, but she is now, with wide hips, narrow waist, and the latest of mall rat fashions. She wears a bright button that declares, 'I am a taken girl.' Aww. Her naked pink tail flickers with an unending energy as she looks about with active interest. Her lips are stained a deep red and her claws are all manicured and covered in sparkling motes. She takes care of herself, clearly. Even her white and spotted fur is glossy and healthy looking.";

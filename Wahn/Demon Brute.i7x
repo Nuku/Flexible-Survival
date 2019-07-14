@@ -37,6 +37,10 @@ to say demonbrutedesc:
 	else:
 		say "You see a massive beast ahead, with dark purple skin, a frightening face with slits for nostrils, yellow eyes with red irises, and sharp, intimidating teeth. Three matched pairs of horns crown his head, curved and getting smaller front to back. His entire body is gigantic and muscle-bound, and between his legs hangs a thick cock, flaccid for the time being. Behind that, his massive pair of balls dangle, swollen with cum. He also has a long, spade-tipped tail protruding from his tailbone, which is constantly flicking back and forth. He wears nothing but a grin.";
 
+to DemonBruteIconRestore:
+	if DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7: [cleansed]
+		now the icon of demon brute is Figure of BrutusGood_icon;
+
 to say demon brute wins:
 	if inasituation is true:
 		say ""; [dealt with at the source]

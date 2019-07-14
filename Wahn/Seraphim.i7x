@@ -281,7 +281,7 @@ When Play begins:
 	add "Seraphim Warrior" to the infections of OtherworldlyList;
 	add "Seraphim Warrior" to the infections of MaleList;
 	add "Seraphim Warrior" to the infections of BipedalList;
-	add "Seraphim Warrior" to the infections of Flightlist;
+	add "Seraphim Warrior" to the infections of FlightList;
 	now Name entry is "Seraphim Warrior";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is "Gabriel";

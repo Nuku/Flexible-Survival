@@ -39,6 +39,12 @@ The icon of Diego is Figure of Diego_icon.
 
 the linkaction of Diego is "[diegolinkaction]".
 
+to DiegoIconRestore:
+	if DiegoChanged is 2:
+		now the icon of Diego is Figure of DiegoFem_icon;
+	else if DiegoChanged is 1:
+		now the icon of Diego is Figure of pixel_icon;
+
 to say diegolinkaction:
 	if DiegoTalk is 0:
 		say "Possible Actions: [link]talk[as]talk Diego[end link], [link]smell[as]smell Diego[end link], [link]fuck[as]fuck Diego[end link][line break]";

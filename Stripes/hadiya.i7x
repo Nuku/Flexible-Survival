@@ -97,6 +97,10 @@ The fuckscene of Hadiya is "[sexwithHadiya]".
 the icon of Hadiya is usually Figure of Hadiya_0_icon.
 hgsqc is a number that varies.
 
+to HadiyaIconRestore:
+	if HP of Hadiya is 11 or HP of Hadiya is 12 or HP of Hadiya >= 61:
+		now the icon of Hadiya is Figure of Hadiya_icon;
+
 to say hadiyadesc:
 	if debugactive is 1:
 		say "DEBUG (Hadiya) -> HP: [HP of Hadiya], hadiyafucked: [hadiyafucked], lastfuck: [lastfuck of Hadiya], Hyena Gang ref: [if hadiyahyg is true]Y[else]N[end if] <- DEBUG[line break]";

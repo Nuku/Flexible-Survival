@@ -895,6 +895,7 @@ When Play begins:
 	add "Yamato Dragon" to infections of BarbedCockList;
 	add "Yamato Dragon" to infections of InternalCockList;
 	add "Yamato Dragon" to infections of QuadrupedalList;
+	add "Yamato Dragon" to infections of FlightList;
 	add "Yamato Dragon" to infections of TailList;
 	add "Yamato Dragon" to infections of TailweaponList;
 	now Name entry is "Yamato Dragon";

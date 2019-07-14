@@ -145,6 +145,7 @@ When Play begins:
 	add "Dracovixentaur" to infections of TaperedCockList;
 	add "Dracovixentaur" to infections of SheathedCockList;
 	add "Dracovixentaur" to infections of TaurList;
+	add "Dracovixentaur" to infections of FlightList;
 	add "Dracovixentaur" to infections of TailList;
 	add "Dracovixentaur" to infections of TailweaponList;
 	now Name entry is "Dracovixentaur"; [ Infection/Creature name. Capitalized. ]

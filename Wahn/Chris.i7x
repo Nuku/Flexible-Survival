@@ -71,6 +71,12 @@ ChrisPlayerOffspring is a number that varies.
 instead of sniffing Chris:
 	say "     Chris has got an attractive male scent.";
 
+to ChrisIconRestore:
+	if Libido of Chris is 2:
+		now the icon of Chris is Figure of OrcWarrior_random_icon;
+	else if Libido of Chris is 1:
+		now the icon of Chris is Figure of OrcBreeder_random_icon;
+
 to say ChrisDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Chris]; Strength of Chris: [Strength of Chris]; Intelligence of Malik: [Intelligence of Malik]; Libido of Malik: [Libido of Malik]<- DEBUG[line break]";

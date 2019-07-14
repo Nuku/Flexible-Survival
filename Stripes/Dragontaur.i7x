@@ -69,6 +69,7 @@ When Play begins:
 	add "Dragontaur" to infections of TaperedCockList;
 	add "Dragontaur" to infections of InternalCockList;
 	add "Dragontaur" to infections of TaurList;
+	add "Dragontaur" to infections of FlightList;
 	add "Dragontaur" to infections of TailList;
 	add "Dragontaur" to infections of TailweaponList;
 	now Name entry is "Dragontaur"; [ Infection/Creature name. Capitalized. ]
