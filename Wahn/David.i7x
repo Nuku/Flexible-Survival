@@ -294,12 +294,22 @@ object	name
 David	"David"
 
 David is a man.
-The description of David is "     David Jackson is a young soldier, pretty friendly if a bit shy. He has a slender but still muscular build, a handsome face and short-cut brown hair. [if debugactive is 1][line break]DEBUG -> Dexterity: [Dexterity of David], HP: [HP of David], Libido: [Libido of David], Lust: [lust of David], Thirst: [thirst of David] <- DEBUG[end if]".
+The description of David is "[DavidDesc]";
+
 The conversation of David is { "Oh, hello." }.
 The icon of David is Figure of David_clothed_icon.
 DavidBunkerEntry is a number that varies.
 BrutusEscalationTimer is a number that varies.
 DavidBrutusMarcVar is a number that varies.
+
+to say DavidDesc:
+	if debugactive is 1:
+		say "     DEBUG -> Dexterity: [Dexterity of David], HP: [HP of David], Libido: [Libido of David], Lust: [lust of David], Thirst: [thirst of David] <- DEBUG";
+	if David is in bunker:
+		project Figure of David_casualclothed_icon;
+	else:
+		project Figure of David_clothed_icon;
+	say "     David Jackson is a young soldier, pretty friendly if a bit shy. He has a slender but still muscular build, a handsome face and short-cut brown hair.";
 
 The scent of David is "     David has a nice masculine human smell.".
 

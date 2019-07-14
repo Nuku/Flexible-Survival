@@ -23,7 +23,7 @@ Section 1 - Starting Event
 
 vixcountdown is a number that varies. [Amount of turns allotted before the vixen (Bubble) can no longer be saved]
 dolphinbundle is a number that varies. [Increases the difficulty of escaping the Inflatable Dolphin bound state, ranging from 0-2]
-dolphinlist is a list of text that varies.[@Tag:NotSaved] [Creates a quasi-random pool of dolphins to check while searching for Bubble]
+dolphinlist is a list of text that varies. [Creates a quasi-random pool of dolphins to check while searching for Bubble]
 dolcastlefight is a number that varies. [Determines Bottlenose Toy scenes. 1 = win, 2 = loss (normal), 3 = loss (in castle)]
 bclatearrival is a number that varies. [Normally 0, set to 1 when visiting the castle after vixcountdown ends while away. Hides initial prompt after agreeing]
 bcuntethered is a number that varies. [Determines whether or not the Bouncy Castle is still tethered]
@@ -40,6 +40,13 @@ the sarea of Snared Vixen is "Beach".
 when play begins:
 	add Snared Vixen to BadSpots of FemaleList; [We may want to add an event later to allow people with 'girl' banned access to the Bouncy Castle]
 	add Snared Vixen to BadSpots of FurryList;
+	now Dolphinlist is { "C", "A", "X", "B", "X", "C", "A", "D", "X", "C", "X", "A" }; [Creates a list of letters that are pulled for later events]
+	let templist be { "A", "C", "D", "E"}; [Prepares additional events to add to dolphinlist]
+	sort templist in random order; [Sets these extra events to slots 3, 5, 9, and 11 for a quasi-random search]
+	now entry 3 of dolphinlist is entry 1 of tempList;
+	now entry 5 of dolphinlist is entry 2 of tempList;
+	now entry 9 of dolphinlist is entry 3 of tempList;
+	now entry 11 of dolphinlist is entry 4 of tempList;
 
 Instead of resolving a Snared Vixen:
 	say "     As you're traveling along the beach, you can hear some giggling in the distance. As you crest the next sandy rise, you can see several bright pink dolphin girls playing with a vixen they've found. She's struggling a little, but her resistance becomes less and less as the playful inflatables tease her body while taking off what few scraps of clothes she has. As they're several hundred yards away, you'd not be able to get there in time to interfere if you wanted to. It's hard to make out all the details at this distance.";
@@ -59,14 +66,8 @@ Instead of resolving a Snared Vixen:
 			say "     It would take a bit of work, but you should be able to swim all the way out to the bouncy castle thanks to your gills.";
 		now Bouncy Castle is known;
 		now HP of Bubble is 1;
+		[moved generating Dolphinlist to the game start, see above]
 		now vixcountdown is 29;
-		now dolphinlist is { "C", "A", "X", "B", "X", "C", "A", "D", "X", "C", "X", "A" }; [Creates a list of letters that are pulled for later events]
-		let templist be { "A", "C", "D", "E"}; [Prepares additional events to add to dolphinlist]
-		sort templist in random order; [Sets these extra events to slots 3, 5, 9, and 11 for a quasi-random search]
-		now entry 3 of dolphinlist is entry 1 of tempList;
-		now entry 5 of dolphinlist is entry 2 of tempList;
-		now entry 9 of dolphinlist is entry 3 of tempList;
-		now entry 11 of dolphinlist is entry 4 of tempList;
 		now Resolution of Snared Vixen is 1;	[Vixen was taken to Bouncy Castle]
 	else: [Aborts finding the Bouncy Castle entirely]
 		say "     Deciding that it's not of interest to you, you turn away and head back the way you came.";

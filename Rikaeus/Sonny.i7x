@@ -29,14 +29,13 @@ Version 1 of Sonny by Rikaeus begins here.
 [   0: anal virgin                                         ]
 [   1: player fucked him                                   ]
 
-[ SonnyPersonality                                         ]
+[ Intelligence of Sonny - formerly SonnyPersonality        ]
 [   0: Submissive                                          ]
 [   1: Dominant                                            ]
 
 [variables]
 SonnyFood is a number that varies.
 SonnyQuest is a number that varies.
-SonnyPersonality is a number that varies.
 
 Section 1 - Basic Setup
 
@@ -185,9 +184,9 @@ to say SonnyTalk3: [send him to the library]
 	now HP of Sonny is 2;
 
 to say SonnyTalk4: [send him to the mall]
-	if SonnyPersonality is 0:
+	if Intelligence of Sonny is 0:
 		say "     'A-alright. I don't mind moving back to the mall,' he stutters out, looking rather sad. He works on packing up his area, getting all his stuff into one box. When he's done and carrying the box the sheep boy is standing in front of you. 'I'm... packed and ready to go,' he says, still rather depressed about the entire situation. You then lead him back to the mall, thankfully nothing bad happening on the way there. When Sonny's settled back in his usual place, he turns to you to speak. 'P-please don't forget to visit me, okay?' the guy asks you. You assure him that you'll try to visit him from time to time before you head back to the bunker.";
-	else if SonnyPersonality is 1:
+	else if Intelligence of Sonny is 1:
 		say "     'Alright! I don't mind going back, but you better visit me alright?' He says giving you a stern look that causes you to nod. He packs up his area, you helping as you feel that you need to with his air of dominance around him. Once everything's packed up he turns to you. 'Mind escorting me?' He says, holding out an arm. You hook arms with him and lead him back to the mall, thankfully nothing happening. Once you get there you help him get settled back in. 'Now, like I said, visit me, afterall, we're lovers!' Sonny says with a chuckle. You assure him you'll visit him occasionally before heading back to the bunker.";
 	move Sonny to Mall Lockerroom;
 	now HP of Sonny is 1;
@@ -210,7 +209,7 @@ to say SonnyLeon1:
 	say "     You can tell his own pleasure is mounting as he's getting more and more desperate with his thrusts, but soon enough you're met with a cock in your face, Leon's to be specifically. It's quickly shoved into your mouth and you're made to suck on it as you're practically spitroasted by the two ovine. They tag team you for a while before their panting gets rougher and rougher and they both let out a roar and the same time. Creamy cum starts shooting both down your throat and into your ass, filling your in both ends, causing your own pleasure to soar.[if player is herm]You let out a loud muffled moan as your pussy twitches before it starts leaking fluids eveywhere just as your cock shoots its load all over the floor, creating a large puddle[else if player is male]You let out a loud muffled moan and your cock starts to spurt its own load, splattering all over the backroom floor, creating a large puddle[end if].";
 	WaitLineBreak;
 	say "     Both of them then pull out, causing you to collapse onto the floor onto your cum puddle. Leon snickers and turns to Sonny and speaks up. 'You did a pretty good job kid.' He says, but he's rather ignored by the sheep. Your lover instead picks you up and cuddles you into his arms, kissing you passionately and whispering about how much of a wonderful job you did. That causes you to smile happily and nuzzle him back. You're surprised when he picks you up and carries you out of the room and seemingly back to the abbey and into his bed where he snuggles you some more before the both of you nod off to sleep. When you wake up later, you feel that Sonny's personality has changed a lot.";
-	now SonnyPersonality is 1;
+	now Intelligence of Sonny is 1;
 	now lastfuck of Sonny is turns;
 
 Section 3 - Sex
@@ -220,13 +219,13 @@ instead of fucking the Sonny:
 	if SonnyRelationship < XXX): [romance quest not yet done]
 		say "     <hook for the romance quest>";
 ]
-	if Sonny is in Mall Lockerroom and SonnyPersonality is 0:
+	if Sonny is in Mall Lockerroom and Intelligence of Sonny is 0:
 		say "     'A-a-ah, I'm really sorry... but I'd rather not have sex in a public place like this,' the sheep boy says nervously. It might be a good idea to ask the guy to move in with you if sex is your desire.";
-	else if Sonny is in Mall Lockerroom and SonnyPersonality is 1:
+	else if Sonny is in Mall Lockerroom and Intelligence of Sonny is 1:
 		say "     As much as I'd love to have fun with you in public, I'd rather us have fun back at the Abbey.' Sonny says with a smile in your direction. It might be better to have him move back if you want sex.";
-	else if SonnyPersonality is 0 and (lastfuck of Sonny - turns < 6): [he got fucked in the last 18 hours = 6 turns]
+	else if Intelligence of Sonny is 0 and (lastfuck of Sonny - turns < 6): [he got fucked in the last 18 hours = 6 turns]
 		say "     'I'd love to... b-but I'm still very tired from last time,' he says, practically apologizing with his eyes. Sheesh, give the guy some time, you just fucked him!";
-	else if SonnyPersonality is 1 and (lastfuck of Sonny - turns < 3): [he got fucked in the last 9 hours = 3 turns]
+	else if Intelligence of Sonny is 1 and (lastfuck of Sonny - turns < 3): [he got fucked in the last 9 hours = 3 turns]
 		say "     'I'd love to, but we just did a while ago, I need time to rest,' Sonny says with a chuckle.";
 	else: [ready for sex]
 		say "     As you walk up to Sonny, you can see him blush at the mention of sex, eagerness practically oozing off of him.";
@@ -238,13 +237,13 @@ to say SonnySexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if Player is male and SonnyPersonality is 0: [only males and herms can get a blowjob]
+	if Player is male and Intelligence of Sonny is 0: [only males and herms can get a blowjob]
 		choose a blank row in table of fucking options;
 		now title entry is "Get a blowjob";
 		now sortorder entry is 1;
 		now description entry is "Let Sonny suck you off";
 	[]
-	if SonnyPersonality is 1:
+	if Intelligence of Sonny is 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Suck Sonny off"; [anyone can blow him]
 		now sortorder entry is 2;

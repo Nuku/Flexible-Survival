@@ -30,7 +30,7 @@ Instead of resolving a Guard Gryphon:
 			now Qytat Plaza is known;
 			now Guard Gryphon is resolved;
 		else:
-			say "     Seeing you coming closer, she adopts a defensive stance, looking ready to charge at you in order to drive you away.";
+			say "     Seeing you coming closer, she adopts a defensive stance, looking ready to charge at you.";
 			if carried of Gryphon Milk > 0:
 				say "     She doesn't seem sex-crazed like the other gryphons you found. Perhaps you can negotiate a peaceful deal with a token of your deeds. Their kind attacked you plenty of times, already, and you actually managed to fetch some of their milk. [bold type]Will you attempt a diplomatic approach by showing her a bottle of Gryphon Milk?[roman type][line break]";
 				Linebreak;
@@ -60,12 +60,16 @@ Instead of resolving a Guard Gryphon:
 						now Resolution of Guard Gryphon is 1; [left to come back later]
 					else if calcnumber is 3:
 						LineBreak;
-						say "     You're not ready to take such a drastic measure, and leave that very clear to her. 'Well, then. If you're not leaving, you give me no choice.' These are her last words before she charges at you, ready to fight and drive you away.";
+						say "     You're not ready to take such a drastic measure, and leave that very clear to her. 'Well, then. If you're not leaving, you give me no choice.' These are her last words before she flies in your direction, ready to fight and drive you away.";
 						GryphonGuardFight;
 				else:
-					Linebreak;
-					say "     It seems you have no other choice but to attempt to engage her in a conversation, though she doesn't seem inclined to do so. Understanding your intrusion as an offensive act, she flies to fight you and drive you away.";
+					LineBreak;
+					say "     There's no use in trying to talk to her when you can just beat the guard out of the way. With your decision made, you take the initiative and charge at her. The gryphoness stands ready to fight and drive you away.";
 					GryphonGuardFight;
+			else:
+				Linebreak;
+				say "     It seems you have no other choice but to attempt to engage her in a conversation, though she doesn't seem inclined to do so. Understanding your intrusion as an offensive act, she flies to fight you and drive you away.";
+				GryphonGuardFight;
 	else if Resolution of Guard Gryphon is 1:
 		if BodyName of Player is "Blue Gryphon Herm" and Player is pure:
 			say "     'I see you came back! And got a whole entire transformation all by yourself, huh?' she comments, eyeing you from head to talon. 'You see, the only reason I asked you this is because we'd like to keep the place I'm about to tell you about untouched by anything that isn't our kind. We tolerate outside gryphons because our kind has been lost to sex craziness after the nanites were spread among the city, so we're in dire need of sane allies.' The guard signals you to come closer, no longer in a defensive stance. 'We fear the entire species may succumb, one day... so we do our best to protect ourselves. You'll have to forgive me for my initial hostility. I'm Azure, by the way. Nice to meet you.'";
@@ -80,7 +84,7 @@ Instead of resolving a Guard Gryphon:
 		else:
 			say "     'I see you came back! Does it mean you reconsidered my proposal?' She asks, however from a distance, cautiously assuming a defensive stance as you approach her. [bold type]It seems she'd still turn you into one of her kind, but fighting is always an option.[roman type][line break]";
 			Linebreak;
-			say "     ([link]Y[as]y[end link]) - Accept the transformation";
+			say "     ([link]Y[as]y[end link]) - Accept the transformation.";
 			say "     ([link]N[as]n[end link]) - Fight the Guard.";
 			if player consents:
 				Linebreak;
@@ -89,16 +93,22 @@ Instead of resolving a Guard Gryphon:
 				Linebreak;
 				GryphonGuardFight;
 	else if Resolution of Guard Gryphon is 2:
-		say "     Without any words or hesitation, the gryphoness guard charges at you, ready to fight and drive you away.";
+		say "     Without any words or hesitation, the gryphoness guard flies in your direction, ready to fight and drive you away.";
 		GryphonGuardFight;
 
 to GryphonGuardMilkSolution:
 	say "     Looking at the options you have, you decide to accept her terms by letting her fully turn you into a Blue Gryphon. Noting your interest, she asks you to follow her over a hidden stash of transformative items. 'Have a few of these and it should do the job. If not, I have more.' she says, as you chug down everything she hands you. It doesn't take long until you start feeling the effects.";
+	WaitLineBreak;
 	now TailName of Player is "Blue Gryphon Herm";
+	now Tail of Player is "You have a thin, leonine tail swaying over your ass. Its [Skin of Player] length has a tuft of blue fur at the end.";
 	now FaceName of Player is "Blue Gryphon Herm";
+	now Face of Player is "powerful beak that protrudes in a clean curve. Above, feline ears twitch and turn above your altered features";
 	now SkinName of Player is "Blue Gryphon Herm";
+	now Skin of Player is "[one of]soft, blue, and furry[or]softly furred[at random]";
 	now BodyName of Player is "Blue Gryphon Herm";
+	now Body of Player is "dramatically altered, with powerful digitigrade legs of leonine musculature, great claws on your [Skin of Player] feetpaws. Behind you, two large feathery wings flutter on occasion";
 	now CockName of Player is "Blue Gryphon Herm";
+	now Cock of player is "[one of]sheathed and black[or]knotted[or]dense, black[or]inhumanly bulging[at random]";
 	say "     'There you go. Now you're officially one of my kind.' she says, in a rather happy tone, eyeing you from head to talon. 'You see, the only reason I asked you this is because we'd like to keep the place I'm about to tell you about untouched by anything that isn't our kind. We tolerate outside gryphons because our kind has been lost to sex craziness after the nanites were spread among the city, so we're in dire need of sane allies.' The guard signals you to come closer, no longer in a defensive stance. 'We fear the entire species may succumb, one day... so we do our best to protect ourselves. You'll have to forgive me for my initial hostility. I'm Azure, by the way. Nice to meet you.'";
 	say "     After exchanging some words between the rather kind gryphoness guard, she lets you know about her real duty, to point the new gryphons who've strayed away from the others in the city towards the location of a great staircase, ancient and powerful. Azure says it leads to some thing or some place called Qytat a'th Lundrues. Intrigued, you ask her more about the ghostly staircase that remains hidden from the outsiders, to which she reveals the fact it moves from time to time, but which comes to rest at the same spots. She gladly offers herself to escort you there, personally. There's no reason to reject such an offer, so you follow her to the mystical place, eventually ending in the flying city safely.";
 	now findablestairs is 1;

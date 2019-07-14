@@ -183,10 +183,12 @@ Figure of Darius_face_icon is the file "Darius_face.jpg".
 Figure of Dash_icon is the file "Dash.jpg".
 Figure of David_naked_icon is the file "David_naked.jpg".
 Figure of David_clothed_icon is the file "David_clothed.jpg".
+Figure of David_casualclothed_icon is the file "David_casualclothed.jpg".
 Figure of David_hurt_icon is the file "David_hurt.jpg".
 Figure of David_barechest_icon is the file "David_barechest.jpg".
 Figure of David_face_hurt_icon is the file "David_face_hurt.jpg".
 Figure of David_face_naked_icon is the file "David_face_naked.jpg".
+Figure of David_face_casualclothed_icon is the file "David_face_casualclothed.jpg".
 Figure of David_face_icon is the file "David_face.jpg".
 Figure of Diego_icon is the file "Diego.jpg".
 Figure of Diego_face_icon is the file "Diego_face.jpg".
@@ -647,11 +649,13 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Dash"	Figure of Dash_icon	"Conchi"	g-white	"normal"
 "David_naked"	Figure of David_naked_icon	"Keitaro87"	g-white	"normal"
 "David_clothed"	Figure of David_clothed_icon	"Keitaro87"	g-white	"normal"
+"David_casualclothed"	Figure of David_casualclothed_icon	"Keitaro87"	g-white	"normal"
 "David_hurt"	Figure of David_hurt_icon	"Keitaro87"	g-white	"normal"
 "David_barechest"	Figure of David_barechest_icon	"Keitaro87"	g-white	"normal"
 "David_face_hurt"	Figure of David_face_hurt_icon	"Keitaro87"	g-white	"normal"
 "David_face_naked"	Figure of David_face_naked_icon	"Keitaro87"	g-white	"normal"
 "David_face"	Figure of David_face_icon	"Keitaro87"	g-white	"normal"
+"David_face_casualclothed"	Figure of David_face_casualclothed_icon	"Keitaro87"	g-white	"normal"
 "Demon Brute"	Figure of DemonBrute_icon	"Lay"	g-black	"normal"
 "Dark Elf"	Figure of DarkElf_icon	"Nokturnalkittie"	g-black	"normal"
 "Diego"	Figure of Diego_icon	"valdericblackstag"	g-black	"normal"

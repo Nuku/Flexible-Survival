@@ -1587,6 +1587,8 @@ to NumberVariableSave:
 			now NumberVarValue entry is LastCandyWalkin;
 		-- "lastCarlEricInteraction":
 			now NumberVarValue entry is lastCarlEricInteraction;
+		-- "lastCarlKorvinInteraction":
+			now NumberVarValue entry is lastCarlKorvinInteraction;
 		-- "lastCarlSarahInteraction":
 			now NumberVarValue entry is lastCarlSarahInteraction;
 		-- "LastCatgirlFuck":
@@ -3670,6 +3672,12 @@ to TextListVariableSave:
 					choose a blank row in the table of GameTextLists;
 					now TextListVarName entry is CurrentVariableName;
 					now TextListVarValue entry is entry y of Childrenskins;
+		-- "Dolphinlist":
+			if the number of entries in Dolphinlist is not 0:
+				repeat with y running from 1 to the number of entries in Dolphinlist:
+					choose a blank row in the table of GameTextLists;
+					now TextListVarName entry is CurrentVariableName;
+					now TextListVarValue entry is entry y of Dolphinlist;
 		-- "lbcomplist":
 			if the number of entries in lbcomplist is not 0:
 				repeat with y running from 1 to the number of entries in lbcomplist:
@@ -5259,6 +5267,8 @@ to VariableNumberLoad:
 					now LastCandyWalkin is numberVarValue entry;
 				-- "lastCarlEricInteraction":
 					now lastCarlEricInteraction is numberVarValue entry;
+				-- "lastCarlKorvinInteraction":
+					now lastCarlKorvinInteraction is numberVarValue entry;
 				-- "lastCarlSarahInteraction":
 					now lastCarlSarahInteraction is numberVarValue entry;
 				-- "LastCatgirlFuck":
@@ -7347,6 +7357,7 @@ to VariableTextListLoad:
 		truncate Childrenbodies to 0 entries; [cleaning out the old data]
 		truncate Childrenfaces to 0 entries; [cleaning out the old data]
 		truncate Childrenskins to 0 entries; [cleaning out the old data]
+		truncate Dolphinlist to 0 entries; [cleaning out the old data]
 		truncate lbcomplist to 0 entries; [cleaning out the old data]
 		truncate ndmlist to 0 entries; [cleaning out the old data]
 		repeat with x running from 1 to the number of filled rows in the Table of GameTextLists:
@@ -7359,6 +7370,8 @@ to VariableTextListLoad:
 					add TextListVarValue entry to Childrenfaces;
 				-- "Childrenskins":
 					add TextListVarValue entry to Childrenskins;
+				-- "Dolphinlist":
+					add TextListVarValue entry to Dolphinlist;
 				-- "lbcomplist":
 					add TextListVarValue entry to lbcompList;
 				-- "ndmlist":

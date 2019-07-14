@@ -317,7 +317,7 @@ to say BadAlexandraTalkMenu:
 		now sortorder entry is 2;
 		now description entry is "Bring up that you want to go to the pediatrics clinic with her";
 	[]
-	if HP of Alexandra is 2 or HP of Alexandra is 4 and (demon brute is tamed and DBCaptureQuestVar is 5): [ or PlayerMet of Farmhand Horsemen is true or ("Feral Mutt" is listed in EncounteredEnemies of Player or "Feral Mutt Pack" is listed in EncounteredEnemies of Player)):] [not pregnant right now; possible candidates available]
+	if HP of Alexandra is 2 or HP of Alexandra is 4 and ((demon brute is tamed and DBCaptureQuestVar is 5) or PlayerMet of Farmhand Horsemen is true): [  or ("Feral Mutt" is listed in EncounteredEnemies of Player or "Feral Mutt Pack" is listed in EncounteredEnemies of Player)):] [not pregnant right now; possible candidates available]
 		choose a blank row in table of fucking options;
 		now title entry is "Breeding her (with others)";
 		now sortorder entry is 3;
