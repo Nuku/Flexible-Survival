@@ -18,6 +18,7 @@ when play begins:
 
 Instead of resolving a Guard Gryphon:
 	say "     You come across a hermaphrodite gryphon, this one with a red banner with an 8-pointed silver star in the center. She is watching the sky from a rooftop, as if watching for others of her kind in the air. The guard seems to notice your nearing presence as you approach her position.";
+	WaitLineBreak;
 	If resolution of Guard Gryphon is 0:
 		if BodyName of Player is "Blue Gryphon Herm" and Player is pure:
 			say "     But soon the guard realizes that you're not just another intruder, your appearance being the same of her kind. Carefully walking towards her, you sense lack of trust and caution from the gryphoness, but she ends up lowering her guard as you come closer. 'You don't seem lost to the infection like most of my kind.' she says, but before you can explain who you are, she makes the conclusion by herself. 'You might be an outsider, but honestly... we don't really care anymore. Our kind has been lost to sex craziness after the nanites were spread among the city, so we're in dire need of sane allies.' The guard signals you to come closer, no longer in a defensive stance. 'We fear the entire species may succumb, one day... so we do our best to protect ourselves. You'll have to forgive me for my initial hostility. I'm Azure, by the way. Nice to meet you.'";
@@ -27,6 +28,7 @@ Instead of resolving a Guard Gryphon:
 			change the up exit of Overgrown Rooftop to Staircase Entry; [...allowing them all to be listed... ]
 			change the east exit of Bright Alley to Staircase Entry; [...then swapping to the final one... ]
 			change the down exit of Staircase Entry to Bright Alley; [...and leaving it open, just in case.]
+			move player to Qytat Plaza;
 			now Qytat Plaza is known;
 			now Guard Gryphon is resolved;
 		else:
@@ -79,6 +81,7 @@ Instead of resolving a Guard Gryphon:
 			change the up exit of Overgrown Rooftop to Staircase Entry; [...allowing them all to be listed... ]
 			change the east exit of Bright Alley to Staircase Entry; [...then swapping to the final one... ]
 			change the down exit of Staircase Entry to Bright Alley; [...and leaving it open, just in case.]
+			move player to Qytat Plaza;
 			now Qytat Plaza is known;
 			now Guard Gryphon is resolved;
 		else:
@@ -116,6 +119,7 @@ to GryphonGuardMilkSolution:
 	change the up exit of Overgrown Rooftop to Staircase Entry; [...allowing them all to be listed... ]
 	change the east exit of Bright Alley to Staircase Entry; [...then swapping to the final one... ]
 	change the down exit of Staircase Entry to Bright Alley; [...and leaving it open, just in case.]
+	move player to Qytat Plaza;
 	now Qytat Plaza is known;
 	now Guard Gryphon is resolved;
 
