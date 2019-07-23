@@ -430,7 +430,7 @@ every turn (This is the check Hellhound rule):
 			if FaceName of Player is not "Hellhound":
 				LineBreak;
 				now FaceName of Player is "Hellhound";
-				now Face of Player is "leather dog collar around your neck and a yellow eyed, canine";
+				now Face of Player is "leather dog collar around your neck and a yellow-eyed, canine";
 				say "     Your face seems to heat up, and feel like soft putty for a few moments as the Hellhound's [']gift['] reveals itself for the curse it truly is, pulling your nose out, your mouth filling with canine teeth as your develop a scraggly, dirty furred canine head.";
 			if BodyName of Player is not "Hellhound":
 				LineBreak;
@@ -488,7 +488,7 @@ every turn (This is the check Hellhound rule):
 			if FaceName of Player is not "Hellhound":
 				LineBreak;
 				now FaceName of Player is "Hellhound";
-				now Face of Player is "leather dog collar around your neck and a yellow eyed, canine";
+				now Face of Player is "leather dog collar around your neck and a yellow-eyed, canine";
 				say "     Your face seems to heat up, and feel like soft putty for a few moments as the Hellhound's [']gift['] reveals itself for the curse it truly is, pulling your nose out, your mouth filling with canine teeth as your develop a scraggly, dirty furred canine head.";
 			if BodyName of Player is not "Hellhound":
 				LineBreak;
