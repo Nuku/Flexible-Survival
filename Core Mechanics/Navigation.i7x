@@ -1,290 +1,199 @@
 Version 1 of Navigation by Core Mechanics begins here.
 
+[ Note: The city areas and locations within are sorted alphabetically. Please put new rooms in the right spots as you add them ]
+Table of Navigation locations
+RoomObject	RoomName	NavText	NavList
+Grey Abbey Library	"Grey Abbey Library"	"Grey Abbey Library"	"Primary Rooms"
+Outside Trevor Labs	"Trevor Labs"	"Outside Trevor Labs"	"Primary Rooms"
+Approaching the Capitol Building	"Approaching the Capitol Building"	"Approaching the Capitol Building"	"Capitol District"
+Disused Garage	"Disused Garage"	"Disused Garage"	"Capitol District"
+Office Den	"Office Den"	"Office Den"	"Capitol District"
+Orc Lair Side Entrance	"Orc Lair"	"Orc Lair Side Entrance"	"Capitol District"
+Camp Bravo Entrance	"Camp Bravo"	"Camp Bravo Entrance"	"Central City"
+Gaming Den	"Gaming Den"	"Gaming Den"	"Central City"
+Green Apartment Building	"Green Apartment Building"	"Green Apartment Building"	"Central City"
+Fire Station 86	"Fire Station 86"	"Fire Station 86"	"Central City"
+Milking Facility Entrance	"Milking Facility Entrance"	"Milking Facility Entrance"	"Central City"
+Mini-Lab	"Mini-Lab"	"Mini-Lab"	"Central City"
+Pediatrics Lobby	"Pediatrics Lobby"	"Pediatrics Lobby"	"Central City"
+Pig Pen	"Pig Pen"	"Pig Pen"	"Central City"
+Police Station Twelve	"Police Station Twelve"	"Police Station Twelve"	"Central City"
+Rabbit Den	"Rabbit Den"	"Rabbit Den"	"Central City"
+Red Apartment	"Red Apartment"	"Red Apartment"	"Central City"
+Tyr's Club	"Tyr's Club"	"Tyr's Club"	"Central City"
+Park Entrance	"Park Entrance"	"Park Entrance"	"City Park"
+Equinoid Camp	"Equinoid Camp"	"Equinoid Camp"	"City Park"
+Lion's Den	"Lion's Den"	"Lion's Den"	"City Park"
+Smith Haven Mall Lot South	"Smith Haven Mall"	"Smith Haven Mall Lot South"	"Commercial District"
+Back Alley	"Back Alley"	"Back Alley"	"Commercial District"
+Comic Shop	"Comic Shop"	"Comic Shop"	"Commercial District"
+Isolated Street	"Isolated Street"	"Isolated Street"	"Commercial District"
+K9 Vans	"K9 Vans"	"K9 Vans"	"Commercial District"
+Kristen's Hideout	"Kristen's Hideout"	"Kristen's Hideout"	"Commercial District"
+Lingerie Store	"Lingerie Store"	"Lingerie Store"	"Commercial District"
+New Ewe Storeroom	"New Ewe Store"	"New Ewe Storeroom"	"Commercial District"
+Slut Rat Den	"Slut Rat Den"	"Slut Rat Den"	"Commercial District"
+The Palomino	"The Palomino"	"The Palomino"	"Commercial District"
+Froggy Hideout	"Froggy Hideout"	"Froggy Hideout"	"Commercial District"
+Dry Plains	"Dry Plains"	"Dry Plains"	"Dry Plains"
+McDermott Farm Entrance	"McDermott Farm Entrance"	"McDermott Farm Entrance"	"Dry Plains"
+Rocky Outcropping	"Rocky Outcropping"	"Rocky Outcropping"	"Dry Plains"
+State Fair	"State Fair"	"State Fair"	"Fairgrounds"
+Sweet Tooth	"Sweet Tooth"	"Sweet Tooth"	"Fairgrounds"
+Entrance to the High Rise District	"Entrance to the High Rise District"	"Entrance to the High Rise District"	"High Rise District"
+Agency	"Agency"	"Agency"	"High Rise District"
+Alex's Condo	"Alex's Condo"	"Alex's Condo"	"High Rise District"
+Argos Antiques	"Argos Antiques"	"Argos Antiques"	"High Rise District"
+Bone-Appetit	"Bone-Appetit"	"Bone-Appetit"	"High Rise District"
+Butterfly Grove	"Butterfly Grove"	"Butterfly Grove"	"High Rise District"
+Flower Garden	"Flower Garden"	"Flower Garden"	"High Rise District"
+Lizard Parlor	"Lizard Parlor"	"Lizard Parlor"	"High Rise District"
+Rex's Place	"Rex's Place"	"Rex's Place"	"High Rise District"
+Zephyr Lobby	"Zephyr"	"Zephyr Lobby"	"High Rise District"
+City Hospital	"City Hospital"	"City Hospital"	"Hospital"
+Psych Department	"Psych Department"	"Psych Department"	"Hospital"
+Nutso Factory	"Nutso Factory"	"Nutso Factory"	"Industrial Sector"
+Plant Overview	"Plant Overview"	"Plant Overview"	"Industrial Sector"
+Power Lines	"Power Lines"	"Power Lines"	"Industrial Sector"
+Abandoned Lot	"Abandoned Lot"	"Abandoned Lot"	"Junkyard"
+Hyena Shack	"Hyena Shack"	"Hyena Shack"	"Junkyard"
+Steven's Home	"Steven's Home"	"Steven's Home"	"Junkyard"
+Foxy Hideaway	"Foxy Hideaway"	"Foxy Hideaway"	"Misc"
+Qytat Plaza	"Qytat Plaza"	"Qytat Plaza"	"Misc"
+Shifting Room	"Shifting Room"	"Shifting Room"	"Misc"
+Museum Foyer	"Museum Foyer"	"Museum Foyer"	"Museum"
+Egypt Wing Entrance	"Egypt Wing Entrance"	"Egypt Wing Entrance"	"Museum"
+Entrance to the Red Light District	"Entrance to the Red Light District"	"Entrance to the Red Light District"	"Red Light District"
+Bradford's Camp	"Bradford's Camp"	"Bradford's Camp"	"Red Light District"
+Bright Alley	"Bright Alley"	"Bright Alley"	"Red Light District"
+Burned-Out Chapel	"Burned-Out Chapel"	"Burned-Out Chapel"	"Red Light District"
+Cuero Lobo	"Cuero Lobo"	"Cuero Lobo"	"Red Light District"
+Down Under Pub	"Down Under Pub"	"Down Under Pub"	"Red Light District"
+Gillian's Flat	"Gillian's Flat"	"Gillian's Flat"	"Red Light District"
+Police Car	"Police Car"	"Police Car"	"Red Light District"
+Porn Store	"Porn Store"	"Porn Store"	"Red Light District"
+Sanctuary Alleyway	"Sanctuary Alleyway"	"Sanctuary Alleyway"	"Red Light District"
+Sven's Place	"Sven's Place"	"Sven's Place"	"Red Light District"
+Tattoo Parlor	"Tattoo Parlor"	"Tattoo Parlor"	"Red Light District"
+Beach Plaza	"Beach Plaza"	"Beach Plaza"	"Seaside"
+Bouncy Castle	"Bouncy Castle"	"Bouncy Castle"	"Seaside"
+Island Pier	"Island Pier"	"Island Pier"	"Seaside"
+Pirate Island	"Pirate Island"	"Pirate Island"	"Seaside"
+Viking Ship	"Viking Ship"	"Viking Ship"	"Seaside"
+Stables Hotel	"Stables Hotel"	"Stables Hotel"	"The Stables"
+Master's Office	"Master's Office"	"Master's Office"	"The Stables"
+College Campus	"College Campus"	"College Campus"	"Tenvale College"
+Astroslide Football Field	"Astroslide Football Field"	"Astroslide Football Field"	"Tenvale College"
+Campus Gym	"Campus Gym"	"Campus Gym"	"Tenvale College"
+Paleontology Office	"Paleontology Office"	"Paleontology Office"	"Tenvale College"
+Phi Iota Gamma	"Phi Iota Gamma"	"Phi Iota Gamma"	"Tenvale College"
+Urban Forest	"Urban Forest"	"Urban Forest"	"Urban Forest"
+Bunny House	"Bunny House"	"Bunny House"	"Urban Forest"
+Deep Forest	"Deep Forest"	"Deep Forest"	"Urban Forest"
+Staghorn	"Staghorn"	"Staghorn"	"Urban Forest"
+Happy Puppy Kennel	"Happy Puppy Kennel"	"Happy Puppy Kennel"	"Urban Forest"
+Ironscale Hollow	"Ironscale Hollow"	"Ironscale Hollow"	"Urban Forest"
+Avalon-Crossroads	"Avalon-Crossroads"	"Avalon-Crossroads"	"Urban Forest"
+Warehouse District	"Warehouse District"	"Warehouse District"	"Warehouse District"
+Hyena Hideout	"Hyena Hideout"	"Hyena Hideout"	"Warehouse District"
+Mike's Home	"Mike's Home"	"Mike's Home"	"Warehouse District"
+Spider's Web	"Spider's Web"	"Spider's Web"	"Warehouse District"
+Wolfman Lair	"Wolfman Lair"	"Wolfman Lair"	"Warehouse District"
+Zoo Entrance	"Zoo Entrance"	"Zoo Entrance"	"Zoo"
+Gator Den	"Gator Den"	"Gator Den"	"Zoo"
+Tiger Den	"Tiger Den"	"Tiger Den"	"Zoo"
+
 destinationcheck is an action applying to nothing.
 
 understand "navigate" as destinationcheck.
 understand "nav" as destinationcheck.
 
 carry out destinationcheck:
-	[ Note: The city areas and locations within are sorted alphabetically. Please put new rooms in the right spots as you add them ]
-	[ Start of primary rooms - Grey Abbey Library and Trevor Labs ]
-	if Grey Abbey Library is known or Trevor Labs is known:
-		say "[bold type]Primary Rooms[roman type]: ";
-		if Grey Abbey Library is known:
-			say "[link][bracket]Grey Abbey Library[close bracket][as]nav Grey Abbey Library[end link] ";
-		if Outside Trevor Labs is known:
-			say "| [link][bracket]Trevor Labs[close bracket][as]nav Outside Trevor Labs[end link] ";
+	let PrintedPrimaryRooms be 0;
+	let PrintedCapitolDistrict be 0;
+	let PrintedCentralCity be 0;
+	let PrintedCityPark be 0;
+	let PrintedCommercialDistrict be 0;
+	let PrintedDryPlains be 0;
+	let PrintedFairgrounds be 0;
+	let PrintedHighRiseDistrict be 0;
+	let PrintedHospital be 0;
+	let PrintedIndustrialSector be 0;
+	let PrintedJunkyard be 0;
+	let PrintedMisc be 0;
+	let PrintedMuseum be 0;
+	let PrintedRedLightDistrict be 0;
+	let PrintedSeaside be 0;
+	let PrintedTheStables be 0;
+	let PrintedTenvaleCollege be 0;
+	let PrintedUrbanForest be 0;
+	let PrintedWarehouseDistrict be 0;
+	let PrintedZoo be 0;
+	repeat with x running from 1 to the number of rows in the Table of Navigation locations:
+		choose row x in the Table of Navigation locations;
+		if RoomObject entry is known:
+			if NavList entry is:
+				-- "Primary Rooms":
+					say "[if PrintedPrimaryRooms is 0][line break][bold type][NavList entry][roman type]: [else] | [end if][link][bracket][RoomName entry][close bracket][as]nav [NavText entry][end link]";
+					increment PrintedPrimaryRooms;
+				-- "Capitol District":
+					say "[if PrintedCapitolDistrict is 0][line break][bold type][NavList entry][roman type]: [else] | [end if][link][bracket][RoomName entry][close bracket][as]nav [NavText entry][end link]";
+					increment PrintedCapitolDistrict;
+				-- "Central City":
+					say "[if PrintedCentralCity is 0][line break][bold type][NavList entry][roman type]: [else] | [end if][link][bracket][RoomName entry][close bracket][as]nav [NavText entry][end link]";
+					increment PrintedCentralCity;
+				-- "City Park":
+					say "[if PrintedCityPark is 0][line break][bold type][NavList entry][roman type]: [else] | [end if][link][bracket][RoomName entry][close bracket][as]nav [NavText entry][end link]";
+					increment PrintedCityPark;
+				-- "Commercial District":
+					say "[if PrintedCommercialDistrict is 0][line break][bold type][NavList entry][roman type]: [else] | [end if][link][bracket][RoomName entry][close bracket][as]nav [NavText entry][end link]";
+					increment PrintedCommercialDistrict;
+				-- "Dry Plains":
+					say "[if PrintedDryPlains is 0][line break][bold type][NavList entry][roman type]: [else] | [end if][link][bracket][RoomName entry][close bracket][as]nav [NavText entry][end link]";
+					increment PrintedDryPlains;
+				-- "Fairgrounds":
+					say "[if PrintedFairgrounds is 0][line break][bold type][NavList entry][roman type]: [else] | [end if][link][bracket][RoomName entry][close bracket][as]nav [NavText entry][end link]";
+					increment PrintedFairgrounds;
+				-- "High Rise District":
+					say "[if PrintedHighRiseDistrict is 0][line break][bold type][NavList entry][roman type]: [else] | [end if][link][bracket][RoomName entry][close bracket][as]nav [NavText entry][end link]";
+					increment PrintedHighRiseDistrict;
+				-- "Hospital":
+					say "[if PrintedHospital is 0][line break][bold type][NavList entry][roman type]: [else] | [end if][link][bracket][RoomName entry][close bracket][as]nav [NavText entry][end link]";
+					increment PrintedHospital;
+				-- "Industrial Sector":
+					say "[if PrintedIndustrialSector is 0][line break][bold type][NavList entry][roman type]: [else] | [end if][link][bracket][RoomName entry][close bracket][as]nav [NavText entry][end link]";
+					increment PrintedIndustrialSector;
+				-- "Junkyard":
+					say "[if PrintedJunkyard is 0][line break][bold type][NavList entry][roman type]: [else] | [end if][link][bracket][RoomName entry][close bracket][as]nav [NavText entry][end link]";
+					increment PrintedJunkyard;
+				-- "Misc":
+					say "[if PrintedMisc is 0][line break][bold type][NavList entry][roman type]: [else] | [end if][link][bracket][RoomName entry][close bracket][as]nav [NavText entry][end link]";
+					increment PrintedMisc;
+				-- "Museum":
+					say "[if PrintedMuseum is 0][line break][bold type][NavList entry][roman type]: [else] | [end if][link][bracket][RoomName entry][close bracket][as]nav [NavText entry][end link]";
+					increment PrintedMuseum;
+				-- "Red Light District":
+					say "[if PrintedRedLightDistrict is 0][line break][bold type][NavList entry][roman type]: [else] | [end if][link][bracket][RoomName entry][close bracket][as]nav [NavText entry][end link]";
+					increment PrintedRedLightDistrict;
+				-- "Seaside":
+					say "[if PrintedSeaside is 0][line break][bold type][NavList entry][roman type]: [else] | [end if][link][bracket][RoomName entry][close bracket][as]nav [NavText entry][end link]";
+					increment PrintedSeaside;
+				-- "The Stables":
+					say "[if PrintedTheStables is 0][line break][bold type][NavList entry][roman type]: [else] | [end if][link][bracket][RoomName entry][close bracket][as]nav [NavText entry][end link]";
+					increment PrintedTheStables;
+				-- "Tenvale College":
+					say "[if PrintedTenvaleCollege is 0][line break][bold type][NavList entry][roman type]: [else] | [end if][link][bracket][RoomName entry][close bracket][as]nav [NavText entry][end link]";
+					increment PrintedTenvaleCollege;
+				-- "Urban Forest":
+					say "[if PrintedUrbanForest is 0][line break][bold type][NavList entry][roman type]: [else] | [end if][link][bracket][RoomName entry][close bracket][as]nav [NavText entry][end link]";
+					increment PrintedUrbanForest;
+				-- "Warehouse District":
+					say "[if PrintedWarehouseDistrict is 0][line break][bold type][NavList entry][roman type]: [else] | [end if][link][bracket][RoomName entry][close bracket][as]nav [NavText entry][end link]";
+					increment PrintedWarehouseDistrict;
+				-- "Zoo":
+					say "[if PrintedZoo is 0][line break][bold type][NavList entry][roman type]: [else] | [end if][link][bracket][RoomName entry][close bracket][as]nav [NavText entry][end link]";
+					increment PrintedZoo;
 	LineBreak;
-	[start of the capitol area]
-	if Approaching the Capitol Building is known or Disused Garage is known or Office Den is known or Orc Lair Side Entrance is known:
-		say "[bold type]Capitol District[roman type]: ";
-		if Approaching the Capitol Building is known:
-			say "[link][bracket]Approaching the Capitol Building[close bracket][as]nav Approaching the Capitol Building[end link] ";
-		if Disused Garage is known:
-			say "| [link][bracket]Disused Garage[close bracket][as]nav Disused Garage[end link] ";
-		if Office Den is known:
-			say "| [link][bracket]Office Den[close bracket][as]nav Office Den[end link] ";
-		if Orc Lair Side Entrance is known:
-			say "| [link][bracket]Orc Lair[close bracket][as]nav Orc Lair Side Entrance[end link] ";
-		LineBreak;
-	[a subsection of the 'outside' area (named Central City here)]
-	if Camp Bravo Entrance is known or Gaming Den is known or Green Apartment is known or Fire Station 86 is known or Milking Facility Entrance is known or Mini-Lab is known or Pediatrics Lobby is known or Pig Pen is known or Police Station Twelve is known or Rabbit Den is known or Red Apartment is known or Tyr's Club is known:
-		say "[bold type]Central City[roman type]: ";
-		if Camp Bravo Entrance is known:
-			say "| [link][bracket]Camp Bravo[close bracket][as]nav Camp Bravo Entrance[end link] ";
-		if Gaming Den is known:
-			say "| [link][bracket]Gaming Den[close bracket][as]nav Gaming Den[end link] ";
-		if Green Apartment Building is known:
-			say "| [link][bracket]Green Apartment Building[close bracket][as]nav Green Apartment Building[end link] ";
-		if Fire Station 86 is known:
-			say "| [link][bracket]Fire Station 86[close bracket][as]nav Fire Station 86[end link] ";
-		if Milking Facility Entrance is known:
-			say "| [link][bracket]Milking Facility Entrance[close bracket][as]nav Milking Facility Entrance[end link] ";
-		if Mini-Lab is known:
-			say "| [link][bracket]Mini-Lab[close bracket][as]nav Mini-Lab[end link] ";
-		if Pediatrics Lobby is known:
-			say "| [link][bracket]Pediatrics Lobby[close bracket][as]nav Pediatrics Lobby[end link] ";
-		if Pig Pen is known:
-			say "| [link][bracket]Pig Pen[close bracket][as]nav Pig Pen[end link] ";
-		if Police Station Twelve is known:
-			say "| [link][bracket]Police Station Twelve[close bracket][as]nav Police Station Twelve[end link] ";
-		if Rabbit Den is known:
-			say "| [link][bracket]Rabbit Den[close bracket][as]nav Rabbit Den[end link] ";
-		if Red Apartment is known:
-			say "| [link][bracket]Red Apartment[close bracket][as]nav Red Apartment[end link] ";
-		if Tyr's Club is known:
-			say "| [link][bracket]Tyr's Club[close bracket][as]nav Tyr's Club[end link] ";
-		LineBreak;
-	[start of the park area]
-	if Park Entrance is known or Equinoid Camp is known or Lion's Den is known:
-		say "[bold type]City Park[roman type]: ";
-		if Park Entrance is known:
-			say "[link][bracket]Park Entrance[close bracket][as]nav Park Entrance[end link] ";
-		if Equinoid Camp is known:
-			say "| [link][bracket]Equinoid Camp[close bracket][as]nav Equinoid Camp[end link] ";
-		if Lion's Den is known:
-			say "| [link][bracket]Lion's Den[close bracket][as]nav Lion's Den[end link] ";
-		LineBreak;
-	[another sub-section of the 'outside' area (named Commercial District here)]
-	if Smith Haven Mall Lot South is known or Back Alley is known or Comic Shop is known or Isolated Street is known or K9 Vans is known or Kristen's Hideout is known or Lingerie Store is known or New Ewe Storeroom is known or Slut Rat Den is known or The Palomino is known:
-		say "[bold type]Commercial District[roman type]: ";
-		if Smith Haven Mall Lot South is known:
-			say "[link][bracket]Smith Haven Mall[close bracket][as]nav Smith Haven Mall Lot South[end link] ";
-		if Back Alley is known:
-			say "| [link][bracket]Back Alley[close bracket][as]nav Back Alley[end link] ";
-		if Comic Shop is known:
-			say "| [link][bracket]Comic Shop[close bracket][as]nav Comic Shop[end link] ";
-		if Isolated Street is known:
-			say "| [link][bracket]Isolated Street[close bracket][as]nav Isolated Street[end link] ";
-		if K9 Vans is known:
-			say "| [link][bracket]K9 Vans[close bracket][as]nav K9 Vans[end link] ";
-		if Kristen's Hideout is known:
-			say "| [link][bracket]Kristen's Hideout[close bracket][as]nav Kristen's Hideout[end link] ";
-		if Lingerie Store is known:
-			say "| [link][bracket]Lingerie Store[close bracket][as]nav Lingerie Store[end link] ";
-		if New Ewe Storeroom is known:
-			say "| [link][bracket]New Ewe Store[close bracket][as]nav New Ewe Storeroom[end link] ";
-		if Slut Rat Den is known:
-			say "| [link][bracket]Slut Rat Den[close bracket][as]nav Slut Rat Den[end link] ";
-		if The Palomino is known:
-			say "| [link][bracket]The Palomino[close bracket][as]nav The Palomino[end link] ";
-		if Froggy Hideout is known:
-			say "| [link][bracket]Froggy Hideout[close bracket][as]nav Froggy Hideout[end link] ";
-		LineBreak;
-	[start of the dry plains area]
-	if Dry Plains is known or McDermott Farm Entrance is known or Rocky Outcropping is known:
-		say "[bold type]Dry Plains[roman type]: ";
-		if Dry Plains is known:
-			say "[link][bracket]Dry Plains[close bracket][as]nav Dry Plains[end link] ";
-		if McDermott Farm Entrance is known:
-			say "| [link][bracket]McDermott Farm Entrance[close bracket][as]nav McDermott Farm Entrance[end link] ";
-		if Rocky Outcropping is known:
-			say "| [link][bracket]Rocky Outcropping[close bracket][as]nav Rocky Outcropping[end link] ";
-		LineBreak;
-	[start of the fairgrounds area]
-	if State Fair is known or Sweet Tooth is known:
-		say "[bold type]Fairgrounds[roman type]: ";
-		if State Fair is known:
-			say "[link][bracket]State Fair[close bracket][as]nav State Fair[end link] ";
-		if Sweet Tooth is known:
-			say "| [link][bracket]Sweet Tooth[close bracket][as]nav Sweet Tooth[end link] ";
-		LineBreak;
-	[start of the high rise area]
-	if Entrance to the High Rise District is known or Agency is known or Alex's Condo is known or Argos Antiques is known or Bone-Appetit is known or Butterfly Grove is known or Flower Garden is known or Lizard Parlor is known or Rex's Place is known or Zephyr Lobby is known:
-		say "[bold type]High Rise District[roman type]: ";
-		if Entrance to the High Rise District is known:
-			say "[link][bracket]Entrance to the High Rise District[close bracket][as]nav Entrance to the High Rise District[end link] ";
-		if Agency is known:
-			say "| [link][bracket]Agency[close bracket][as]nav Agency[end link] ";
-		if Alex's Condo is known:
-			say "| [link][bracket]Alex's Condo[close bracket][as]nav Alex's Condo[end link] ";
-		if Argos Antiques is known:
-			say "| [link][bracket]Argos Antiques[close bracket][as]nav Argos Antiques[end link] ";
-		if Bone-Appetit is known:
-			say "| [link][bracket]Bone-Appetit[close bracket][as]nav Bone-Appetit[end link] ";
-		if Butterfly Grove is known:
-			say "| [link][bracket]Butterfly Grove[close bracket][as]nav Butterfly Grove[end link] ";
-		if Flower Garden is known:
-			say "| [link][bracket]Flower Garden[close bracket][as]nav Flower Garden[end link] ";
-		if Lizard Parlor is known:
-			say "| [link][bracket]Lizard Parlor[close bracket][as]nav Lizard Parlor[end link] ";
-		if Rex's Place is known:
-			say "| [link][bracket]Rex's Place[close bracket][as]nav Rex's Place[end link] ";
-		if Zephyr Lobby is known:
-			say "| [link][bracket]Zephyr[close bracket][as]nav Zephyr Lobby[end link] ";
-		LineBreak;
-	[start of the Hospital area]
-	if City Hospital is known or Psych Department is known:
-		say "[bold type]Hospital[roman type]: ";
-		if City Hospital is known:
-			say "[link][bracket]City Hospital[close bracket][as]nav City Hospital[end link] ";
-		if Psych Department is known:
-			say "| [link][bracket]Psych Department[close bracket][as]nav Psych Department[end link] ";
-		LineBreak;
-	[another sub-section of the 'outside' area (named Industrial Sector here)]
-	if Nutso Factory is known or Plant Overview is known or Power Lines is known:
-		say "[bold type]Industrial Sector[roman type]: ";
-		if Nutso Factory is known:
-			say "[link][bracket]Nutso Factory[close bracket][as]nav Nutso Factory[end link] ";
-		if Plant Overview is known:
-			say "| [link][bracket]Plant Overview[close bracket][as]nav Plant Overview[end link] ";
-		if Power Lines is known:
-			say "| [link][bracket]Power Lines[close bracket][as]nav Power Lines[end link] ";
-		LineBreak;
-	[start of Junkyard area]
-	if Abandoned Lot is known or Hyena Shack is known or Steven's Home is known:
-		say "[bold type]Junkyard[roman type]: ";
-		if Abandoned Lot is known:
-			say "[link][bracket]Abandoned Lot[close bracket][as]nav Abandoned Lot[end link] ";
-		if Hyena Shack is known:
-			say "| [link][bracket]Hyena Shack[close bracket][as]nav Hyena Shack[end link] ";
-		if Steven's Home is known:
-			say "| [link][bracket]Steven's Home[close bracket][as]nav Steven's Home[end link] ";
-		LineBreak;
-	[start of the misc area]
-	if Foxy Hideaway is known or Qytat Plaza is known or Shifting Room is known:
-		say "[bold type]Misc[roman type]: ";
-		if Foxy Hideaway is known:
-			say "[link][bracket]Foxy Hideaway[close bracket][as]nav Foxy Hideaway[end link] ";
-		if Qytat Plaza is known:
-			say "| [link][bracket]Qytat Plaza[close bracket][as]nav Qytat Plaza[end link] ";
-		if Shifting Room is known:
-			say "| [link][bracket]Shifting Room[close bracket][as]nav Shifting Room[end link] ";
-		LineBreak;
-	[start of the Museum area]
-	if Museum Foyer is known or Egypt Wing Entrance is known:
-		say "[bold type]Museum[roman type]: ";
-		if Museum Foyer is known:
-			say "[link][bracket]Museum Foyer[close bracket][as]nav Museum Foyer[end link] ";
-		if Egypt Wing Entrance is known:
-			say "| [link][bracket]Egypt Wing Entrance[close bracket][as]nav Egypt Wing Entrance[end link] ";
-		LineBreak;
-	[start of the red light area]
-	if Entrance to the Red Light District is known or Bradford's Camp is known or Bright Alley is known or Burned-Out Chapel is known or Cuero Lobo is known or Down Under Pub is known or Gillian's Flat is known or Police Car is known or Porn Store is known or Sanctuary Alleyway is known or Sven's Place is known or Tattoo Parlor is known:
-		say "[bold type]Red Light District[roman type]: ";
-		if Entrance to the Red Light District is known:
-			say "[link][bracket]Entrance to the Red Light District[close bracket][as]nav Entrance to the Red Light District[end link] ";
-		if Bradford's Camp is known:
-			say "| [link][bracket]Bradford's Camp[close bracket][as]nav Bradford's Camp[end link] ";
-		if Bright Alley is known:
-			say "| [link][bracket]Bright Alley[close bracket][as]nav Bright Alley[end link] ";
-		if Burned-Out Chapel is known:
-			say "| [link][bracket]Burned-Out Chapel[close bracket][as]nav Burned-Out Chapel[end link] ";
-		if Cuero Lobo is known:
-			say "| [link][bracket]Cuero Lobo[close bracket][as]nav Cuero Lobo[end link] ";
-		if Down Under Pub is known:
-			say "| [link][bracket]Down Under Pub[close bracket][as]nav Down Under Pub[end link] ";
-		if Gillian's Flat is known:
-			say "| [link][bracket]Gillian's Flat[close bracket][as]nav Gillian's Flat[end link] ";
-		if Police Car is known:
-			say "| [link][bracket]Police Car[close bracket][as]nav Sven's Place[end link] ";
-		if Porn Store is known:
-			say "| [link][bracket]Porn Store[close bracket][as]nav Porn Store[end link] ";
-		if Sanctuary Alleyway is known:
-			say "| [link][bracket]Sanctuary Alleyway[close bracket][as]nav Sanctuary Alleyway[end link] ";
-		if Sven's Place is known:
-			say "| [link][bracket]Sven's Place[close bracket][as]nav Sven's Place[end link] ";
-		if Tattoo Parlor is known:
-			say "| [link][bracket]Tattoo Parlor[close bracket][as]nav Tattoo Parlor[end link] ";
-		LineBreak;
-	[start of the seaside area]
-	if Beach Plaza is known or Bouncy Castle is known or Island Pier is known or Pirate Island is known or Viking Ship is known:
-		say "[bold type]Seaside[roman type]: ";
-		if Beach Plaza is known:
-			say "[link][bracket]Beach Plaza[close bracket][as]nav Beach Plaza[end link] ";
-		if Bouncy Castle is known:
-			say "| [link][bracket]Bouncy Castle[close bracket][as]nav Bouncy Castle[end link] ";
-		if Island Pier is known:
-			say "| [link][bracket]Island Pier[close bracket][as]nav Island Pier[end link] ";
-		if Pirate Island is known:
-			say "| [link][bracket]Pirate Island[close bracket][as]nav Pirate Island[end link] ";
-		if Viking Ship is known:
-			say "| [link][bracket]Viking Ship[close bracket][as]nav Viking Ship[end link] ";
-		LineBreak;
-	[start of the Stables area]
-	if Stables Hotel is known or Master's Office is known:
-		say "[bold type]The Stables[roman type]: ";
-		if Stables Hotel is known:
-			say "[link][bracket]Stables Hotel[close bracket][as]nav Stables Hotel[end link] ";
-		if Master's Office is known:
-			say "| [link][bracket]Master's Office[close bracket][as]nav Master's Office[end link] ";
-		LineBreak;
-	[start of the college area]
-	if College Campus is known or Astroslide Football Field is known or Campus Gym is known or Paleontology Office is known or Phi Iota Gamma is known:
-		say "[bold type]Tenvale College[roman type]: ";
-		if College Campus is known:
-			say "[link][bracket]College Campus[close bracket][as]nav College Campus[end link] ";
-		if Astroslide Football Field is known:
-			say "| [link][bracket]Astroslide Football Field[close bracket][as]nav Astroslide Football Field[end link] ";
-		if Campus Gym is known:
-			say "| [link][bracket]Campus Gym[close bracket][as]nav Campus Gym[end link] ";
-		if Paleontology Office is known:
-			say "| [link][bracket]Paleontology Office[close bracket][as]nav Paleontology Office[end link] ";
-		if Phi Iota Gamma is known:
-			say "| [link][bracket]Phi Iota Gamma[close bracket][as]nav Phi Iota Gamma[end link] ";
-		LineBreak;
-	[start of the forest area]
-	if Urban Forest is known or Bunny House is known or Deep Forest is known or Staghorn is known or Happy Puppy Kennel is known or Ironscale Hollow is known or Avalon-Crossroads is known:
-		say "[bold type]Urban Forest[roman type]: ";
-		if Urban Forest is known:
-			say "[link][bracket]Urban Forest[close bracket][as]nav Urban Forest[end link] ";
-		if Bunny House is known:
-			say "| [link][bracket]Bunny House[close bracket][as]nav Bunny House[end link] ";
-		if Deep Forest is known:
-			say "| [link][bracket]Deep Forest[close bracket][as]nav Deep Forest[end link] ";
-		if Staghorn is known:
-			say "| [link][bracket]Staghorn[close bracket][as]nav Staghorn[end link] ";
-		if Happy Puppy Kennel is known:
-			say "| [link][bracket]Happy Puppy Kennel[close bracket][as]nav Happy Puppy Kennel[end link] ";
-		if Ironscale Hollow is known:
-			say "| [link][bracket]Ironscale Hollow[close bracket][as]nav Ironscale Hollow[end link] ";
-		if Avalon-Crossroads is known:
-			say "| [link][bracket]Avalon-Crossroads[close bracket][as]nav Avalon-Crossroads[end link] ";
-		LineBreak;
-	[start of the warehouse area]
-	if Warehouse District is known or Hyena Hideout is known or Mike's Home is known or Spider's Web is known or Wolfman Lair is known:
-		say "[bold type]Warehouse District[roman type]: ";
-		if Warehouse District is known:
-			say "[link][bracket]Warehouse District[close bracket][as]nav Warehouse District[end link] ";
-		if Hyena Hideout is known:
-			say "| [link][bracket]Hyena Hideout[close bracket][as]nav Hyena Hideout[end link] ";
-		if Mike's Home is known:
-			say "| [link][bracket]Mike's Home[close bracket][as]nav Mike's Home[end link] ";
-		if Spider's Web is known:
-			say "| [link][bracket]Spider's Web[close bracket][as]nav Spider's Web[end link] ";
-		if Wolfman Lair is known:
-			say "| [link][bracket]Wolfman Lair[close bracket][as]nav Wolfman Lair[end link] ";
-		LineBreak;
-	[start of the zoo area]
-	if Zoo Entrance is known or Gator Den is known or Tiger Den is known:
-		say "[bold type]Zoo[roman type]: ";
-		if Zoo Entrance is known:
-			say "[link][bracket]Zoo Entrance[close bracket][as]nav Zoo Entrance[end link] ";
-		if Gator Den is known:
-			say "| [link][bracket]Gator Den[close bracket][as]nav Gator Den[end link] ";
-		if Tiger Den is known:
-			say "| [link][bracket]Tiger Den[close bracket][as]nav Tiger Den[end link] ";
-		LineBreak;
 
 navigating is an action applying to one thing.
 
