@@ -8077,7 +8077,7 @@ to HairShapeSetting:
 			-- 2:
 				now Hair Shape of Player is "curly";
 			-- 3:
-				now Hair Shape of Player is "wavey";
+				now Hair Shape of Player is "wavy";
 		now menuexit is 1;
 
 
