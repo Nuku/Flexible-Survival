@@ -77,7 +77,7 @@ to say Kitsune_NewMaleDomScenes:
 						say "[Kitsune_PowerBottom]";
 					-- "Have the fox tend to your shaft":
 						say "[Kitsune_OralDom]";
-					wait for any key;
+				wait for any key;
 		else if calcnumber is 0:
 			say "     Kitsune is wagging his tails with a sly smile.";
 			now sextablerun is 1;
@@ -163,7 +163,7 @@ Section 2.2 - Functions
 
 to Kitsune_FuckFinish:
 	now Kitsunearoused is 2;
-	kitsuneinfect;
+	infect "Kitsune";
 	now lastfuck of Kitsune is turns;
 
 Section 3 - Legacy Scenes

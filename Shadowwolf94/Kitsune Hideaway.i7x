@@ -191,6 +191,7 @@ to say PlayerDominant_Kitsune Scenes:
 						say "[Kitsune_DomDoggystyleAnal]";
 					-- "Ride him vaginally":
 						say "[Kitsune_DomRidingVag]";
+				wait for any key;
 		else if calcnumber is 0:
 			say "     Kitsune is wagging his tails with a sly smile.";
 			now sextablerun is 1;
@@ -244,7 +245,7 @@ to say Kitsune_DomMutualServicing:
 	PlayerEat 15;
 	PlayerDrink 15;
 	now Kitsunearoused is 2;
-	kitsuneinfect;
+	infect "Kitsune";
 	now lastfuck of Kitsune is turns;
 
 to say Kitsune_DomRidingAnal:
@@ -260,7 +261,7 @@ to say Kitsune_DomRidingAnal:
 	say "     Deserting any facade of civility, you both focus entirely on demonstrating your more primal sides, pounding against one another and letting out moans, grunts, and encouragement without any concern for being heard, perhaps even hoping that someone will hear and witness the Kitsune at your mercy. Spittle drips from the corner of the fox's mouth, his decorum shattered as he hammers his cock into you, muttering, 'Take my knot, master. Take all of me.' Desperate to feel his knot inside of you before he climaxes, you synchronize your efforts, and with a mighty effort, squeeze the bulb of flesh into the wet warmth of your anus. Achieving full penetration doesn't diminish the speed of the Kitsune's thrusts, his knot pulling against your sphincter but remaining sealed inside to throb rapidly against the walls of your rectum. Pain and pleasure mix to send euphoric jolts through your body as you realize that you are about to orgasm.";
 	say "     With a heated yell, you ejaculate between your bodies, cum splattering across your chest, the bottom of the Kitsune's chin, and raining down over the both of you. The strong scent of semen permeates the room and fills your nostrils, mixing with the vulpine's unique aroma, and the sweat of your exertion. A moment later, you feel the liquid warmth of the Kitsune's own climax fill your bowels, his cum trapped inside of you by his swollen knot, the bulge of which you are sure you can see distending your tummy. Rubbing your gut with one hand, you wonder how large his shaft currently is and whether he has any limit at all. Joined together for now, the Kitsune contents himself by resting his head on your shoulder and lightly licking your neck as he waits for his knot to shrink again. Apparently he, like every other canine to your knowledge, can't deflate his knot any faster than normal, and you wait for at least half an hour before you are able to separate from him, a veritable sea of cum spilling from your gaping anus and puddling on the floor. 'Don't worry. I'll clean it up. I'm sure you have places to be in order to save the city,' the vulpine reassures you. Accepting his offer, you hastily tidy up before considering what to do next.[mimpregchance]";
 	now Kitsunearoused is 2;
-	kitsuneinfect;
+	infect "Kitsune";
 	now lastfuck of Kitsune is turns;
 
 to say Kitsune_DomDoggystyleAnal:
@@ -272,7 +273,7 @@ to say Kitsune_DomDoggystyleAnal:
 	WaitLineBreak;
 	say "     By the time the two of you come down from your respective sexual highs, both of you can't help but pant and shiver as the pure ecstasy of the moment caresses itself up and down your bodies. Kitsune whines as you pull your hand out from under him - his cock is still shooting cum after all - and upon looking at the mess the other has made you find yourself smiling in perverted delight right as you lift your wet hand up to lick Kitsune's seed up from off of your fingers.";
 	now Kitsunearoused is 2;
-	kitsuneinfect;
+	infect "Kitsune";
 	now lastfuck of Kitsune is turns;
 
 to say Kitsune_DomRidingVag:
@@ -284,16 +285,14 @@ to say Kitsune_DomRidingVag:
 	WaitLineBreak;
 	say "     The heat and pure feel of such hot cum filling up the depths of your cunt makes you howl in time with Kitsune as you climax sneaks up on you without warning. Jerking as your back arches in between Kitsune's hold, you wrap your body tight around your lover as he begins to shudder as your wet snatch clamps vice tight around him. A flood of your own juice spreads over and around the vulpine's rigid length, and before long the knot inside of you can no longer hold anything back as you drench both the fox-man and your own thighs with the mixture of your love liquor. A quiet chuckle goes through Kitsune and you move your face over to look down into the other man's eyes to see what the joke is on. What you find is the devious smile of the other caressing Kitsune's face and a silent coil of fear, right before the silver vulpine leans up to place a chaste kiss onto your lips. Opening your mouth in shock, you inadvertently allow the other man to slip his tongue into your maw. Swirling his organ around inside and across your teeth before pulling back to snicker at you, it would seem that all the kitsune wanted was to see your surprise in order to spice up the waning climaxes you both are sharing. Your ire at this lasts all the way until the fox-man pulls his half deflated knot out of you. The feeling of no longer having your vulpine lover inside of you makes you somewhat doleful, but that sentiment only lasts until Kitsune wraps his arms around you in order to lay you down on top of him. You both end up snuggling up together and then drifting off to sleep before long.";
 	now Kitsunearoused is 2;
-	kitsuneinfect;
+	infect "Kitsune";
 	now lastfuck of Kitsune is turns;
 
-to kitsuneinfect:
-	[puts Kitsune as lead monster]
+[to kitsuneinfect: [puts Kitsune as lead monster]
 	setmonster "Kitsune";
-[	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]] [No monster is selected here]
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own] [No monster is selected here]
 	infect "Kitsune";
-[	now non-infectious entry is true;]
+	now non-infectious entry is true;]
 
 
 Section 5 - Creature Insertion
@@ -369,7 +368,7 @@ When Play begins:
 	now type entry is "vulpine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is true;
 	now resbypass entry is true;
-	now non-infectious entry is true;
+	now non-infectious entry is false;
 	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
