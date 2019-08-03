@@ -179,7 +179,7 @@ an everyturn rule:
 		now Gwen is nowhere;
 
 after going to Back Of The Library while HP of Gwen is 61:
-	say "     It takes you a few moment to notice that Gwen's not in the library. And more than not just being there, her stuff's gone as well. Aside from some of her childhood crayon drawings left on her bunk, she's cleared out. Asking Meredith about this, she's a little teary eyed, but says that Vanessa needed Gwen to go out on a very important mission. From how thoroughly she's cleared out and her mother's sad face, you know she won't be back here again. While neither of the centaurs will tell you what this mission is, it's clear they both feel it's important enough for her to go deal with it, but safe enough that she can handle it on her own. Meredith does talk about how she'll be seeing her sweet Gwenny again as soon as her own research is done.";
+	say "     It takes you a few moment to notice that Gwen's not in the library. And more than not just being there, her stuff's gone as well. Aside from some of her childhood crayon drawings left on her bunk, she's cleared out. Asking Meredith about this, she's a little teary-eyed, but says that Vanessa needed Gwen to go out on a very important mission. From how thoroughly she's cleared out and her mother's sad face, you know she won't be back here again. While neither of the centaurs will tell you what this mission is, it's clear they both feel it's important enough for her to go deal with it, but safe enough that she can handle it on her own. Meredith does talk about how she'll be seeing her sweet Gwenny again as soon as her own research is done.";
 	now HP of Gwen is 62;
 	now Gwen is nowhere;
 

@@ -91,7 +91,7 @@ Instead of Resolving a Runaway:
 		now Resolution of Runaway is 1; [encouraged him]
 	else:
 		LineBreak;
-		say "     Relaying to how being fucked against your will is not the best thing you've come to experience in the city, you watch as the freckle faced teen's eyes harden before the other nods at you somewhat tightly. 'I see. Thanks. That's... some serious food for thought.' The other turns his head to ignore you at that point, and not really sure what else you can say, you turn away from the hazel eyed youth to go about your business.";
+		say "     Relaying to how being fucked against your will is not the best thing you've come to experience in the city, you watch as the freckle faced teen's eyes harden before the other nods at you somewhat tightly. 'I see. Thanks. That's... some serious food for thought.' The other turns his head to ignore you at that point, and not really sure what else you can say, you turn away from the hazel-eyed youth to go about your business.";
 		now Resolution of Runaway is 2; [discouraged him]
 	increase score by 1;
 	now Runaway is resolved;
