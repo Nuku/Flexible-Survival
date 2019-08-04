@@ -532,7 +532,7 @@ to say SarahTalk3:
 				now SarahCured is 4; [the player gave her enough for a full treatment]
 				say "     For your efforts in saving Sarah from her progressing husky infection, you have earned the [']Dog Whisperer['] feat. Having proved your dedication in doing the right thing, your [bold type]charisma[roman type] has gone up by two, allowing you to empathize with others even more.";
 				add "Dog Whisperer" to feats of Player;
-				increase Charisma of Player by 2;
+				StatChange "Charisma" by 2;
 				decrease carried of libido suppressant by 5;
 			else: [don't give it to her]
 				LineBreak;
@@ -550,7 +550,7 @@ to say SarahTalk3:
 				now SarahCured is 4; [the player gave her enough for a full treatment]
 				say "     For your efforts in saving Sarah from her progressing husky infection, you have earned the [']Dog Whisperer['] feat. Having proved your dedication in doing the right thing, your [bold type]charisma[roman type] has gone up by two, allowing you to empathize with others even more.";
 				add "Dog Whisperer" to feats of Player;
-				increase Charisma of Player by 2;
+				StatChange "Charisma" by 2;
 				decrease carried of libido suppressant by 5;
 			else: [don't give it to her]
 				LineBreak;

@@ -8,11 +8,14 @@ The File of RoomSave (owned by another project) is called "FSRoomSave".
 The File of RoomInventorySave (owned by another project) is called "FSRoomInventorySave".
 The File of PossessionSave (owned by another project) is called "FSPossessionSave".
 The File of CharacterSave (owned by another project) is called "FSCharacterSave".
+The File of CharacterVariableSave (owned by another project) is called "FSCharacterVariableSave".
+The File of UnbornChildSave (owned by another project) is called "FSUnbornChildSave".
 The File of ChildrenSave (owned by another project) is called "FSChildrenSave".
 The File of ChildrenBunkerSave (owned by another project) is called "FSChildrenBunkerSave".
 The File of ChildrenRoamingSave (owned by another project) is called "FSChildrenRoamingSave".
 The File of TraitSave (owned by another project) is called "FSTraitSave".
 The File of PlayerSave (owned by another project) is called "FSPlayerSave".
+The File of NewPlayerSave (owned by another project) is called "FSNewPlayerSave".
 The File of PlayerListsSave (owned by another project) is called "FSPlayerListsSave".
 The File of BeastSave (owned by another project) is called "FSBeastSave".
 The File of NoteSave (owned by another project) is called "FSNoteSave".
@@ -319,11 +322,12 @@ to PossessionRestore:
 to CharacterSave:
 	say "Saving Characters...";
 	blank out the whole of Table of GameCharacters; [empty out all old data]
+	blank out the whole of Table of GameCharacterVariables; [empty out all old data]
 	blank out the whole of Table of GameTraits; [empty out all old data]
-	if number of persons > number of rows in the table of GameCharacters: [making sure we got enough room for all situations]
-		say "Error! Not enough rows to save all Characters in the table of GameCharacters. Please report this on the FS Discord.";
+	if number of persons > number of rows in the table of GameCharacterVariables: [making sure we got enough room for all situations]
+		say "Error! Not enough rows to save all Characters in the table of GameCharacterVariables. Please report this on the FS Discord.";
 	repeat with x running through persons: [rebuilds the table of GameCharacters with current data]
-		choose a blank row in the Table of GameCharacters;
+		choose a blank row in the Table of GameCharacterVariables;
 		if there is a object of X in the Table of GameCharacterIDs:
 			let CharacterName be the name corresponding to a object of X in the Table of GameCharacterIDs;
 			now Name entry is CharacterName;
@@ -331,15 +335,12 @@ to CharacterSave:
 			if location of x is not nothing:
 				let LocationDesignation be printed name of location of x;
 			now LocationName entry is LocationDesignation;
+			[Numbers]
 			now Energy entry is Energy of x;
 			now HP entry is HP of x;
 			now MaxHP entry is MaxHP of x;
 			now XP entry is XP of x;
 			now Level entry is Level of x;
-			now Armor entry is Armor of x;
-			now Weapon Damage entry is Weapon Damage of x;
-			now Capacity entry is Capacity of x;
-			now ScaleValue entry is ScaleValue of x;
 			now Strength entry is Strength of x;
 			now Dexterity entry is Dexterity of x;
 			now Stamina entry is Stamina of x;
@@ -348,27 +349,62 @@ to CharacterSave:
 			now Perception entry is Perception of x;
 			now Hunger entry is Hunger of x;
 			now Thirst entry is Thirst of x;
-			now SleepRhythm entry is SleepRhythm of x;
 			now Morale entry is Morale of x;
 			now Lust entry is Lust of x;
 			now Libido entry is Libido of x;
 			now Loyalty entry is Loyalty of x;
 			now Humanity entry is Humanity of x;
-			now Cocks entry is Cock Count of x;
-			now Cock Length entry is Cock Length of x;
-			now Cock Width entry is Ball Size of x;
-			now Testes entry is Ball Count of x;
-			now Cunts entry is Cunt Count of x;
-			now Cunt Depth entry is Cunt Depth of x;
-			now Cunt Width entry is Cunt Tightness of x;
-			now Breasts entry is Nipple Count of x;
+			now Body Weight entry is Body Weight of x;
+			now Body Definition entry is Body Definition of x;
+			now Androginity entry is Androginity of x;
+			now Mouth Length entry is Mouth Length of x;
+			now Mouth Circumference entry is Mouth Circumference of x;
+			now Tongue Length entry is Tongue Length of x;
 			now Breast Size entry is Breast Size of x;
+			now Nipple Count entry is Nipple Count of x;
+			now Asshole Depth entry is Asshole Depth of x;
+			now Asshole Tightness entry is Asshole Tightness of x;
+			now Cock Count entry is Cock Count of x;
+			now Cock Girth entry is Cock Girth of x;
+			now Cock Length entry is Cock Length of x;
+			now Ball Count entry is Ball Count of x;
+			now Ball Size entry is Ball Size of x;
+			now Cunt Count entry is Cunt Count of x;
+			now Cunt Depth entry is Cunt Depth of x;
+			now Cunt Tightness entry is Cunt Tightness of x;
+			now Clit Size entry is Clit Size of x;
+			now Armor entry is Armor of x;
+			now Capacity entry is Capacity of x;
+			now SleepRhythm entry is SleepRhythm of x;
+			now scalevalue entry is The scalevalue of x;
+			now PlayerLastSize entry is PlayerLastSize of x;
+			[Texts]
+			now MainInfection entry is MainInfection of x;
+			now FirstAnalPartner entry is FirstAnalPartner of x;
+			now FirstVaginalPartner entry is FirstVaginalPartner of x;
+			now FirstOralPartner entry is FirstOralPartner of x;
+			now FirstPenilePartner entry is FirstPenilePartner of x;
+			now Cock Size Desc entry is Cock Size Desc of x;
+			now Cunt Size Desc entry is Cunt Size Desc of x;
+			now Breast Size Desc entry is Breast Size Desc of x;
+			now Short Breast Size Desc entry is Short Breast Size Desc of x;
+			now Originalgender entry is Originalgender of x;
+			now PlayerOriginalgender entry is PlayerOriginalGender of x;
+			now PlayerLastGender entry is PlayerLastGender of x;
+			now PlayerLastBodytype entry is PlayerLastBodytype of x;
+			[Truth States]
 			now PlayerMet entry is PlayerMet of x;
 			now PlayerRomanced entry is PlayerRomanced of x;
+			now PlayerFriended entry is PlayerFriended of x;
+			now PlayerControlled entry is PlayerControlled of x;
 			now PlayerFucked entry is PlayerFucked of x;
 			now OralVirgin entry is OralVirgin of x;
 			now Virgin entry is Virgin of x;
 			now AnalVirgin entry is AnalVirgin of x;
+			now PenileVirgin entry is PenileVirgin of x;
+			now SexuallyExperienced entry is SexuallyExperienced of x;
+			now TwistedCapacity entry is TwistedCapacity of x;
+			now Sterile entry is Sterile of x;
 			if the number of entries in Traits of x is not 0:
 				repeat with y running from 1 to the number of entries in Traits of x: [rebuilds the table of GameTraits with current data]
 					choose a blank row in the table of GameTraits;
@@ -376,16 +412,114 @@ to CharacterSave:
 					now TraitText entry is entry y of Traits of x;
 		else:
 			say "Error! The character [x] is not listed in the Table of GameCharacterIDs and cannot be saved. Please report this on the FS Discord.";
-	write File of CharacterSave from the Table of GameCharacters; [freshly made table gets saved to file]
+	write File of CharacterVariableSave from the Table of GameCharacterVariables; [freshly made table gets saved to file]
 	write File of TraitSave from the Table of GameTraits; [freshly made table gets saved to file]
 	blank out the whole of Table of GameCharacters; [empty after saving]
+	blank out the whole of Table of GameCharacterVariables; [empty after saving]
 	blank out the whole of Table of GameTraits; [empty after saving]
 	if debugactive is 1:
-		say "DEBUG -> File of CharacterSave written.[line break]";
+		say "DEBUG -> File of CharacterVariableSave written.[line break]";
 		say "DEBUG -> File of TraitSave written.[line break]";
 
 to CharacterRestore:
-	if the File of CharacterSave exists:
+	if the File of CharacterVariableSave exists:
+		say "Restoring Characters...";
+		read File of CharacterVariableSave into the Table of GameCharacterVariables;
+		repeat with x running from 1 to the number of filled rows in the Table of GameCharacterVariables:
+			choose row x in the Table of GameCharacterVariables;
+			let CharacterIdName be Name entry;
+			if there is a name of CharacterIdName in the Table of GameCharacterIDs:
+				let CharacterObject be the object corresponding to a name of CharacterIdName in the Table of GameCharacterIDs;
+				if CharacterIdName is listed in PetList:
+					if debugactive is 1:
+						say "DEBUG -> Pets are part of the player, thus they don't get moved.[line break]";
+				[
+				else if CharacterIdName is "yourself":
+					if debugactive is 1:
+						say "DEBUG -> The player doesn't get moved.[line break]";
+				]
+				else if there is a name of LocationName entry in the Table of GameRoomIDs:
+					let TargetRoom be the object corresponding to a name of LocationName entry in the Table of GameRoomIDs;
+					move CharacterObject to TargetRoom;
+				else:
+					say "DEBUG -> Room [LocationName entry] does not exist. '[CharacterIdName]' moved to NPC Nexus. Please report this error on the FS Discord Bug Report Channel![line break]";
+					move CharacterObject to NPC Nexus;
+				[Numbers]
+				now Energy of CharacterObject is Energy entry;
+				now HP of CharacterObject is HP entry;
+				now MaxHP of CharacterObject is MaxHP entry;
+				now XP of CharacterObject is XP entry;
+				now Level of CharacterObject is Level entry;
+				now Strength of CharacterObject is Strength entry;
+				now Dexterity of CharacterObject is Dexterity entry;
+				now Stamina of CharacterObject is Stamina entry;
+				now Charisma of CharacterObject is Charisma entry;
+				now Intelligence of CharacterObject is Intelligence entry;
+				now Perception of CharacterObject is Perception entry;
+				now Hunger of CharacterObject is Hunger entry;
+				now Thirst of CharacterObject is Thirst entry;
+				now Morale of CharacterObject is Morale entry;
+				now Lust of CharacterObject is Lust entry;
+				now Libido of CharacterObject is Libido entry;
+				now Loyalty of CharacterObject is Loyalty entry;
+				now Humanity of CharacterObject is Humanity entry;
+				now Body Weight of CharacterObject is Body Weight entry;
+				now Body Definition of CharacterObject is Body Definition entry;
+				now Androginity of CharacterObject is Androginity entry;
+				now Mouth Length of CharacterObject is Mouth Length entry;
+				now Mouth Circumference of CharacterObject is Mouth Circumference entry;
+				now Tongue Length of CharacterObject is Tongue Length entry;
+				now Breast Size of CharacterObject is Breast Size entry;
+				now Nipple Count of CharacterObject is Nipple Count entry;
+				now Asshole Depth of CharacterObject is Asshole Depth entry;
+				now Asshole Tightness of CharacterObject is Asshole Tightness entry;
+				now Cock Count of CharacterObject is Cock Count entry;
+				now Cock Girth of CharacterObject is Cock Girth entry;
+				now Cock Length of CharacterObject is Cock Length entry;
+				now Ball Count of CharacterObject is Ball Count entry;
+				now Ball Size of CharacterObject is Ball Size entry;
+				now Cunt Count of CharacterObject is Cunt Count entry;
+				now Cunt Depth of CharacterObject is Cunt Depth entry;
+				now Cunt Tightness of CharacterObject is Cunt Tightness entry;
+				now Clit Size of CharacterObject is Clit Size entry;
+				now Armor of CharacterObject is Armor entry;
+				now Capacity of CharacterObject is Capacity entry;
+				now SleepRhythm of CharacterObject is SleepRhythm entry;
+				now scalevalue of CharacterObject is The scalevalue entry;
+				now PlayerLastSize of CharacterObject is PlayerLastSize entry;
+				[Texts]
+				now MainInfection of CharacterObject is MainInfection entry;
+				now FirstAnalPartner of CharacterObject is FirstAnalPartner entry;
+				now FirstVaginalPartner of CharacterObject is FirstVaginalPartner entry;
+				now FirstOralPartner of CharacterObject is FirstOralPartner entry;
+				now FirstPenilePartner of CharacterObject is FirstPenilePartner entry;
+				now Cock Size Desc of CharacterObject is Cock Size Desc entry;
+				now Cunt Size Desc of CharacterObject is Cunt Size Desc entry;
+				now Breast Size Desc of CharacterObject is Breast Size Desc entry;
+				now Short Breast Size Desc of CharacterObject is Short Breast Size Desc entry;
+				now Originalgender of CharacterObject is Originalgender entry;
+				now PlayerOriginalgender of CharacterObject is PlayerOriginalGender entry;
+				now PlayerLastGender of CharacterObject is PlayerLastGender entry;
+				now PlayerLastBodytype of CharacterObject is PlayerLastBodytype entry;
+				[Truth States]
+				now PlayerMet of CharacterObject is PlayerMet entry;
+				now PlayerRomanced of CharacterObject is PlayerRomanced entry;
+				now PlayerFriended of CharacterObject is PlayerFriended entry;
+				now PlayerControlled of CharacterObject is PlayerControlled entry;
+				now PlayerFucked of CharacterObject is PlayerFucked entry;
+				now OralVirgin of CharacterObject is OralVirgin entry;
+				now Virgin of CharacterObject is Virgin entry;
+				now AnalVirgin of CharacterObject is AnalVirgin entry;
+				now PenileVirgin of CharacterObject is PenileVirgin entry;
+				now SexuallyExperienced of CharacterObject is SexuallyExperienced entry;
+				now TwistedCapacity of CharacterObject is TwistedCapacity entry;
+				now Sterile of CharacterObject is Sterile entry;
+				if debugactive is 1:
+					say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] found and values restored.";
+			else:
+				if debugactive is 1:
+					say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] not found in Table of GameCharacterIDs!";
+	else if the File of CharacterSave exists:
 		say "Restoring Characters...";
 		read File of CharacterSave into the Table of GameCharacters;
 		repeat with x running from 1 to the number of filled rows in the Table of GameCharacters:
@@ -453,6 +587,7 @@ to CharacterRestore:
 	else:
 		say "No Character Save File Found!";
 	blank out the whole of Table of GameCharacters; [empty out all old data]
+	blank out the whole of Table of GameCharacterVariables; [empty after saving]
 	blank out the whole of Table of GameTraits; [empty out all old data]
 
 to TraitRestore:
@@ -534,11 +669,97 @@ to PlayerSave:
 			now ListName entry is "BlockList";
 			now EntryText entry is entry y of BlockList of Player;
 	write File of PlayerSave from the Table of PlayerData; [freshly made table gets saved to file]
-	write File of PlayerListsSave from the Table of PlayerLists; [freshly made table gets saved to file]
-	blank out the whole of Table of PlayerData; [empty after saving]
-	blank out the whole of Table of PlayerLists; [empty after saving]
 	if debugactive is 1:
 		say "DEBUG -> File of PlayerSave written.[line break]";
+	write File of PlayerListsSave from the Table of PlayerLists; [freshly made table gets saved to file]
+	if debugactive is 1:
+		say "DEBUG -> File of PlayerListsSave written.[line break]";
+	blank out the whole of Table of PlayerData; [empty after saving]
+	blank out the whole of Table of PlayerLists; [empty after saving]
+	if NewTypeInfectionActive is true: [new parts also active]
+		say "Saving Additional Player Data...";
+		blank out the whole of Table of NewPlayerData; [empty out all old data]
+		choose a blank row in the table of NewPlayerData;
+		now bodySpeciesName entry is BodySpeciesName of Player;
+		now faceSpeciesName entry is FaceSpeciesName of Player;
+		now skinSpeciesName entry is SkinSpeciesName of Player;
+		now HeadName entry is HeadName of Player;
+		now HeadSpeciesName entry is HeadSpeciesName of Player;
+		now Head Description entry is Head Description of Player;
+		now Head Adjective entry is Head Adjective of Player;
+		now Head Skin Adjective entry is Head Skin Adjective of Player;
+		now Head Color entry is Head Color of Player;
+		now Head Adornments entry is Head Adornments of Player;
+		now Hair Length entry is Hair Length of Player;
+		now Body Hair Length entry is Body Hair Length of Player;
+		now Hair Shape entry is Hair Shape of Player;
+		now Hair Color entry is Hair Color of Player;
+		now Hair Style entry is Hair Style of Player;
+		now Beard Style entry is Beard Style of Player;
+		now Eye Color entry is Eye Color of Player;
+		now Eye Adjective entry is Eye Adjective of Player;
+		now Tongue Adjective entry is Tongue Adjective of Player;
+		now Tongue Color entry is Tongue Color of Player;
+		now TorsoName entry is TorsoName of Player;
+		now TorsoSpeciesName entry is TorsoSpeciesName of Player;
+		now Torso Description entry is Torso Description of Player;
+		now Torso Adjective entry is Torso Adjective of Player;
+		now Torso Skin Adjective entry is Torso Skin Adjective of Player;
+		now Torso Color entry is Torso Color of Player;
+		now Torso Pattern entry is Torso Pattern of Player;
+		now Breast Adjective entry is Breast Adjective of Player;
+		now Torso Adornments entry is Torso Adornments of Player;
+		now Nipple Color entry is Nipple Color of Player;
+		now Nipple Shape entry is Nipple Shape of Player;
+		now BackName entry is BackName of Player;
+		now BackSpeciesName entry is BackSpeciesName of Player;
+		now Back Adornments entry is Back Adornments of Player;
+		now Back Skin Adjective entry is Back Skin Adjective of Player;
+		now Back Color entry is Back Color of Player;
+		now ArmsName entry is ArmsName of Player;
+		now ArmsSpeciesName entry is ArmsSpeciesName of Player;
+		now Arms Description entry is Arms Description of Player;
+		now Arms Skin Adjective entry is Arms Skin Adjective of Player;
+		now Arms Color entry is Arms Color of Player;
+		now Locomotion entry is Locomotion of Player;
+		now LegsName entry is LegsName of Player;
+		now LegsSpeciesName entry is LegsSpeciesName of Player;
+		now Legs Description entry is Legs Description of Player;
+		now Legs Skin Adjective entry is Legs Skin Adjective of Player;
+		now Legs Color entry is Legs Color of Player;
+		now AssName entry is AssName of Player;
+		now AssSpeciesName entry is AssSpeciesName of Player;
+		now Ass Description entry is Ass Description of Player;
+		now Ass Skin Adjective entry is Ass Skin Adjective of Player;
+		now Ass Color entry is Ass Color of Player;
+		now Ass Width entry is Ass Width of Player;
+		now TailName entry is TailName of Player;
+		now TailSpeciesName entry is TailSpeciesName of Player;
+		now Tail Description entry is Tail Description of Player;
+		now Tail Skin Adjective entry is Tail Skin Adjective of Player;
+		now Tail Color entry is Tail Color of Player;
+		now Asshole Color entry is Asshole Color of Player;
+		now CockName entry is CockName of Player;
+		now CockSpeciesName entry is CockSpeciesName of Player;
+		now Cock Description entry is Cock Description of Player;
+		now Cock Adjective entry is Cock Adjective of Player;
+		now Cock Color entry is Cock Color of Player;
+		now Ball Description entry is Ball Description of Player;
+		now CuntName entry is CuntName of Player;
+		now CuntSpeciesName entry is CuntSpeciesName of Player;
+		now Cunt Description entry is Cunt Description of Player;
+		now Cunt Adjective entry is Cunt Adjective of Player;
+		now Cunt Color entry is Cunt Color of Player;
+		now MaleInterest entry is MaleInterest of Player;
+		now TransMaleInterest entry is TransMaleInterest of Player;
+		now FemaleInterest entry is FemaleInterest of Player;
+		now TransFemaleInterest entry is TransFemaleInterest of Player;
+		now HermInterest entry is HermInterest of Player;
+		write File of NewPlayerSave from the Table of NewPlayerData; [freshly made table gets saved to file]
+		blank out the whole of Table of NewPlayerData; [empty after saving]
+		if debugactive is 1:
+			say "DEBUG -> File of NewPlayerSave written.[line break]";
+
 
 to PlayerRestore:
 	if the File of PlayerSave exists:
@@ -566,6 +787,7 @@ to PlayerRestore:
 			say "DEBUG -> Player Data restored.";
 	else:
 		say "No Player Save File Found!";
+	blank out the whole of Table of PlayerData; [empty out all old data]
 	if the File of PlayerListsSave exists:
 		say "Restoring Player Lists...";
 		read File of PlayerListsSave into the Table of PlayerLists;
@@ -592,11 +814,119 @@ to PlayerRestore:
 				-- "BlockList":
 					if EntryText entry is not listed in BlockList of Player:
 						add EntryText entry to BlockList of Player;
-	blank out the whole of Table of PlayerData; [empty out all old data]
 	blank out the whole of Table of PlayerLists; [empty out all old data]
+	if the File of NewPlayerSave exists:
+		say "Restoring Additional Player Data...";
+		read File of NewPlayerSave into the Table of NewPlayerData;
+		choose row 1 in the Table of NewPlayerData;
+		now bodySpeciesName of Player is BodySpeciesName entry;
+		now faceSpeciesName of Player is FaceSpeciesName entry;
+		now skinSpeciesName of Player is SkinSpeciesName entry;
+		now HeadName of Player is HeadName entry;
+		now HeadSpeciesName of Player is HeadSpeciesName entry;
+		now Head Description of Player is Head Description entry;
+		now Head Adjective of Player is Head Adjective entry;
+		now Head Skin Adjective of Player is Head Skin Adjective entry;
+		now Head Color of Player is Head Color entry;
+		now Head Adornments of Player is Head Adornments entry;
+		now Hair Length of Player is Hair Length entry;
+		now Body Hair Length of Player is Body Hair Length entry;
+		now Hair Shape of Player is Hair Shape entry;
+		now Hair Color of Player is Hair Color entry;
+		now Hair Style of Player is Hair Style entry;
+		now Beard Style of Player is Beard Style entry;
+		now Eye Color of Player is Eye Color entry;
+		now Eye Adjective of Player is Eye Adjective entry;
+		now Tongue Adjective of Player is Tongue Adjective entry;
+		now Tongue Color of Player is Tongue Color entry;
+		now TorsoName of Player is TorsoName entry;
+		now TorsoSpeciesName of Player is TorsoSpeciesName entry;
+		now Torso Description of Player is Torso Description entry;
+		now Torso Adjective of Player is Torso Adjective entry;
+		now Torso Skin Adjective of Player is Torso Skin Adjective entry;
+		now Torso Color of Player is Torso Color entry;
+		now Torso Pattern of Player is Torso Pattern entry;
+		now Breast Adjective of Player is Breast Adjective entry;
+		now Torso Adornments of Player is Torso Adornments entry;
+		now Nipple Color of Player is Nipple Color entry;
+		now Nipple Shape of Player is Nipple Shape entry;
+		now BackName of Player is BackName entry;
+		now BackSpeciesName of Player is BackSpeciesName entry;
+		now Back Adornments of Player is Back Adornments entry;
+		now Back Skin Adjective of Player is Back Skin Adjective entry;
+		now Back Color of Player is Back Color entry;
+		now ArmsName of Player is ArmsName entry;
+		now ArmsSpeciesName of Player is ArmsSpeciesName entry;
+		now Arms Description of Player is Arms Description entry;
+		now Arms Skin Adjective of Player is Arms Skin Adjective entry;
+		now Arms Color of Player is Arms Color entry;
+		now Locomotion of Player is Locomotion entry;
+		now LegsName of Player is LegsName entry;
+		now LegsSpeciesName of Player is LegsSpeciesName entry;
+		now Legs Description of Player is Legs Description entry;
+		now Legs Skin Adjective of Player is Legs Skin Adjective entry;
+		now Legs Color of Player is Legs Color entry;
+		now AssName of Player is AssName entry;
+		now AssSpeciesName of Player is AssSpeciesName entry;
+		now Ass Description of Player is Ass Description entry;
+		now Ass Skin Adjective of Player is Ass Skin Adjective entry;
+		now Ass Color of Player is Ass Color entry;
+		now Ass Width of Player is Ass Width entry;
+		now TailName of Player is TailName entry;
+		now TailSpeciesName of Player is TailSpeciesName entry;
+		now Tail Description of Player is Tail Description entry;
+		now Tail Skin Adjective of Player is Tail Skin Adjective entry;
+		now Tail Color of Player is Tail Color entry;
+		now Asshole Color of Player is Asshole Color entry;
+		now CockName of Player is CockName entry;
+		now CockSpeciesName of Player is CockSpeciesName entry;
+		now Cock Description of Player is Cock Description entry;
+		now Cock Adjective of Player is Cock Adjective entry;
+		now Cock Color of Player is Cock Color entry;
+		now Ball Description of Player is Ball Description entry;
+		now CuntName of Player is CuntName entry;
+		now CuntSpeciesName of Player is CuntSpeciesName entry;
+		now Cunt Description of Player is Cunt Description entry;
+		now Cunt Adjective of Player is Cunt Adjective entry;
+		now Cunt Color of Player is Cunt Color entry;
+		now MaleInterest of Player is MaleInterest entry;
+		now TransMaleInterest of Player is TransMaleInterest entry;
+		now FemaleInterest of Player is FemaleInterest entry;
+		now TransFemaleInterest of Player is TransFemaleInterest entry;
+		now HermInterest of Player is HermInterest entry;
+		if debugactive is 1:
+			say "DEBUG -> New Player Data restored.";
+	else if NewTypeInfectionActive is true:
+		say "No Additional Player Data Save File Found!";
+	blank out the whole of Table of NewPlayerData; [empty out all old data]
 
 to ChildrenSave:
-	say "Saving Children...";
+	say "Saving unborn children...";
+	blank out the whole of Table of ChildData; [empty out all old data]
+	choose a blank row in the table of ChildData;
+	now Gestation entry is Gestation of Child;
+	now bodySpeciesName entry is bodySpeciesName of Child;
+	now faceSpeciesName entry is faceSpeciesName of Child;
+	now skinSpeciesName entry is skinSpeciesName of Child;
+	now cockSpeciesName entry is cockSpeciesName of Child;
+	now HeadName entry is HeadName of Child;
+	now TorsoName entry is TorsoName of Child;
+	now BackName entry is BackName of Child;
+	now ArmsName entry is ArmsName of Child;
+	now LegsName entry is LegsName of Child;
+	now AssName entry is AssName of Child;
+	now TailName entry is TailName of Child;
+	now HeadSpeciesName entry is HeadSpeciesName of Child;
+	now TorsoSpeciesName entry is TorsoSpeciesName of Child;
+	now BackSpeciesName entry is BackSpeciesName of Child;
+	now ArmsSpeciesName entry is ArmsSpeciesName of Child;
+	now LegsSpeciesName entry is LegsSpeciesName of Child;
+	now AssSpeciesName entry is AssSpeciesName of Child;
+	now TailSpeciesName entry is TailSpeciesName of Child;
+	write File of UnbornChildSave from the Table of ChildData;
+	if debugactive is 1:
+		say "DEBUG -> File of UnbornChildrenSave written.[line break]";
+	say "Saving born children...";
 	write File of ChildrenSave from the Table of PlayerChildren;
 	write File of ChildrenBunkerSave from the Table of PlayerBunkerChildren;
 	write File of ChildrenRoamingSave from the Table of PlayerRoamingChildren;
@@ -606,8 +936,36 @@ to ChildrenSave:
 		say "DEBUG -> File of ChildrenRoamingSave written.[line break]";
 
 to ChildrenRestore:
+	if the File of UnbornChildSave exists:
+		say "Restoring unborn children...";
+		read File of UnbornChildSave into the Table of ChildData;
+		if debugactive is 1:
+			say "DEBUG -> Unborn children restored from FSUnbornChildSave.[line break]";
+		choose row 1 in the Table of ChildData;
+		now Gestation of Child is Gestation entry;
+		now bodySpeciesName of Child is bodySpeciesName entry;
+		now faceSpeciesName of Child is faceSpeciesName entry;
+		now skinSpeciesName of Child is skinSpeciesName entry;
+		now cockSpeciesName of Child is cockSpeciesName entry;
+		now HeadName of Child is HeadName entry;
+		now TorsoName of Child is TorsoName entry;
+		now BackName of Child is BackName entry;
+		now ArmsName of Child is ArmsName entry;
+		now LegsName of Child is LegsName entry;
+		now AssName of Child is AssName entry;
+		now TailName of Child is TailName entry;
+		now HeadSpeciesName of Child is HeadSpeciesName entry;
+		now TorsoSpeciesName of Child is TorsoSpeciesName entry;
+		now BackSpeciesName of Child is BackSpeciesName entry;
+		now ArmsSpeciesName of Child is ArmsSpeciesName entry;
+		now LegsSpeciesName of Child is LegsSpeciesName entry;
+		now AssSpeciesName of Child is AssSpeciesName entry;
+		now TailSpeciesName of Child is TailSpeciesName entry;
+		blank out the whole of Table of ChildData; [empty out all old data]
+	else:
+		say "No Unborn Children Save File Found!";
 	if the File of ChildrenSave exists:
-		say "Restoring Children...";
+		say "Restoring born children...";
 		read File of ChildrenSave into the Table of PlayerChildren;
 		if debugactive is 1:
 			say "DEBUG -> Children restored from FSPlayerChildrenSave.[line break]";

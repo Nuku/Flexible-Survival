@@ -28,8 +28,20 @@ Table of GameCharacters
 Name(text)	LocationName(text)	Energy(number)	HP(number)	MaxHP(number)	XP(number)	Level(number)	Armor(number)	Weapon Damage(number)	Capacity(number)	ScaleValue(number)	Strength(number)	Dexterity(number)	Stamina(number)	Charisma(number)	Intelligence(number)	Perception(number)	Hunger(number)	Thirst(number)	SleepRhythm(number)	Morale(number)	Lust(number)	Libido(number)	Loyalty(number)	Humanity(number)	Cocks(number)	Cock Length(number)	Cock Width(number)	Testes(number)	Cunts(number)	Cunt Depth(number)	Cunt Width(number)	Breasts(number)	Breast Size(number)	PlayerMet(truth state)	PlayerRomanced(truth state)	PlayerFucked(truth state)	OralVirgin(truth state)	Virgin(truth state)	AnalVirgin(truth state)
 with 1000 blank rows
 
+Table of GameCharacterVariables
+Name(text)	LocationName(text)	Energy(number)	HP(number)	MaxHP(number)	XP(number)	Level(number)	Strength(number)	Dexterity(number)	Stamina(number)	Charisma(number)	Intelligence(number)	Perception(number)	Hunger(number)	Thirst(number)	Morale(number)	Lust(number)	Libido(number)	Loyalty(number)	Humanity(number)	Body Weight(number)	Body Definition(number)	Androginity(number)	Mouth Length(number)	Mouth Circumference(number)	Tongue Length(number)	Breast Size(number)	Nipple Count(number)	Asshole Depth(number)	Asshole Tightness(number)	Cock Count(number)	Cock Girth(number)	Cock Length(number)	Ball Count(number)	Ball Size(number)	Cunt Count(number)	Cunt Depth(number)	Cunt Tightness(number)	Clit Size(number)	Armor(number)	Capacity(number)	SleepRhythm(number)	scalevalue(number)	PlayerLastSize(number)	MainInfection(text)	FirstAnalPartner(text)	FirstVaginalPartner(text)	FirstOralPartner(text)	FirstPenilePartner(text)	Cock Size Desc(text)	Cunt Size Desc(text)	Breast Size Desc(text)	Short Breast Size Desc(text)	Originalgender(text)	PlayerOriginalgender(text)	PlayerLastGender(text)	PlayerLastBodytype(text)	PlayerMet(truth state)	PlayerRomanced(truth state)	PlayerFriended(truth state)	PlayerControlled(truth state)	PlayerFucked(truth state)	OralVirgin(truth state)	Virgin(truth state)	AnalVirgin(truth state)	PenileVirgin(truth state)	SexuallyExperienced(truth state)	TwistedCapacity(truth state)	Sterile(truth state)
+with 1000 blank rows
+
 Table of PlayerData
 skin(text)	SkinName(text)	cock(text)	CockName(text)	face(text)	FaceName(text)	tail(text)	TailName(text)	body(text)	BodyName(text)	scent(text)	Cock Size Desc(text)	Cunt Size Desc(text)	Breast Size Desc(text)	Short Breast Size Desc(text)	bodydesc(text)	bodytype(text)
+with 1 blank row
+
+Table of NewPlayerData
+bodySpeciesName(text)	faceSpeciesName(text)	skinSpeciesName(text)	HeadName(text)	HeadSpeciesName(text)	Head Description(text)	Head Adjective(text)	Head Skin Adjective(text)	Head Color(text)	Head Adornments(text)	Hair Length(number)	Body Hair Length(number)	Hair Shape(text)	Hair Color(text)	Hair Style(text)	Beard Style(text)	Eye Color(text)	Eye Adjective(text)	Tongue Adjective(text)	Tongue Color(text)	TorsoName(text)	TorsoSpeciesName(text)	Torso Description(text)	Torso Adjective(text)	Torso Skin Adjective(text)	Torso Color(text)	Torso Pattern(text)	Breast Adjective(text)	Torso Adornments(text)	Nipple Color(text)	Nipple Shape(text)	BackName(text)	BackSpeciesName(text)	Back Adornments(text)	Back Skin Adjective(text)	Back Color(text)	ArmsName(text)	ArmsSpeciesName(text)	Arms Description(text)	Arms Skin Adjective(text)	Arms Color(text)	Locomotion(text)	LegsName(text)	LegsSpeciesName(text)	Legs Description(text)	Legs Skin Adjective(text)	Legs Color(text)	AssName(text)	AssSpeciesName(text)	Ass Description(text)	Ass Skin Adjective(text)	Ass Color(text)	Ass Width(number)	TailName(text)	TailSpeciesName(text)	Tail Description(text)	Tail Skin Adjective(text)	Tail Color(text)	Asshole Color(text)	CockName(text)	CockSpeciesName(text)	Cock Description(text)	Cock Adjective(text)	Cock Color(text)	Ball Description(text)	CuntName(text)	CuntSpeciesName(text)	Cunt Description(text)	Cunt Adjective(text)	Cunt Color(text)	MaleInterest(truth state)	TransMaleInterest(truth state)	FemaleInterest(truth state)	TransFemaleInterest(truth state)	HermInterest(truth state)
+with 1 blank row
+
+Table of ChildData
+Gestation(number)	bodySpeciesName(text)	faceSpeciesName(text)	skinSpeciesName(text)	cockSpeciesName(text)	tailSpeciesName(text)	HeadName(text)	TorsoName(text)	BackName(text)	ArmsName(text)	LegsName(text)	AssName(text)	TailName(text)	HeadSpeciesName(text)	TorsoSpeciesName(text)	BackSpeciesName(text)	ArmsSpeciesName(text)	LegsSpeciesName(text)	AssSpeciesName(text)
 with 1 blank row
 
 Table of PlayerLists
@@ -703,6 +715,7 @@ Name(text)	Type(text)
 "kpstatus"	"number"
 "KTO"	"number"
 "KTP"	"number"
+"KitsuneEventStage"	"number"
 "ktspeciesbonus"	"number"
 "KurtEvent"	"number"
 "KurtRelationship"	"number"

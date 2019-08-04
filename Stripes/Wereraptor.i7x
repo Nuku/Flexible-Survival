@@ -606,10 +606,10 @@ this is the wereraptor curse rule:
 			if daytimer is night:
 				if wrcurseactivity is false:
 					now wrcurseactivity is true;
-					increase dexterity of Player by 2;
-					increase strength of Player by 2;
-					decrease charisma of Player by 2;
-					decrease intelligence of Player by 2;
+					StatChange "Dexterity" by 2;
+					StatChange "Strength" by 2;
+					StatChange "Charisma" by -2;
+					StatChange "Intelligence" by -2;
 					say "     The power of your saurian transformation rushes through you again, growing back to full strength with the coming of the night. You feel a rush of hunger and arousal surging through your system as the lust to feed and fuck fills you again";
 					wrcurserestore;
 					say ".";
@@ -620,10 +620,10 @@ this is the wereraptor curse rule:
 			else:
 				if wrcurseactivity is true:
 					now wrcurseactivity is false;
-					decrease dexterity of Player by 2;
-					decrease strength of Player by 2;
-					increase charisma of Player by 2;
-					increase intelligence of Player by 2;
+					StatChange "Dexterity" by 2;
+					StatChange "Strength" by 2;
+					StatChange "Charisma" by -2;
+					StatChange "Intelligence" by -2;
 					say "     With the coming of the day, your saurian body spasms and twitches. The feral strength of your wereraptor form recedes for now as your features soften and you take on a form more akin to a reptilian humanoid, hiding your wilder true nature for the moment.";
 
 
@@ -648,10 +648,10 @@ to wrcursesave:
 		say ".";
 		[must be kept here to ensure proper saving]
 		say "     With the changes comes a surge of power to your body, increasing your strength and agility. But you can feel your mind being weakened as well, your instinctual urges pushing back more rational thought and behavior. You are filled with hunger from your body's transformation and your wereraptor's body desire to feed. Along with the hunger for food comes a hunger for sex, your lustful urges growing stronger as well.";
-		increase dexterity of Player by 2;
-		increase strength of Player by 2;
-		decrease charisma of Player by 2;
-		decrease intelligence of Player by 2;
+		StatChange "Dexterity" by 2;
+		StatChange "Strength" by 2;
+		StatChange "Charisma" by -2;
+		StatChange "Intelligence" by -2;
 	else if BodyName of Player is not "Wereraptor" or player is not pure:
 		say "     The power of your cursed transformation rushes through you again, pushing to restore your reptilian form. You feel a rush of hunger and arousal surging through your system as the lust to feed and fuck fills you again";
 		wrcurserestore;
@@ -757,11 +757,10 @@ to wrcurserecede:
 	if CockName of Player is "Wereraptor":
 		now CockName of Player is wrCockName;
 		now Cock of Player is wrcock;
-	decrease dexterity of Player by 2;
-	decrease strength of Player by 2;
-	increase charisma of Player by 2;
-	increase intelligence of Player by 2;
-
+	StatChange "Dexterity" by -2;
+	StatChange "Strength" by -2;
+	StatChange "Charisma" by 2;
+	StatChange "Intelligence" by 2;
 
 to wrcurserampage:
 	if there is a dangerous door in the location of the player or the location of Player is fasttravel:

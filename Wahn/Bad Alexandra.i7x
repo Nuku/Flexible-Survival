@@ -442,7 +442,6 @@ to say AlexandraContraceptionTalk:
 				wait for any key;
 				say "[BadAlexandraTalkMenu]"; [looping back for more talk]
 
-
 to say AlexandraCCounteroffer:
 	say "     [bold type]What do you do?[roman type][line break]";
 	LineBreak;
@@ -1016,11 +1015,11 @@ to say badAlexandraFang1: [let Fang fuck her]
 	if "Top Dog" is listed in feats of Player:
 		say "     Your [']Top Dog['] feat has been replaced by the [']Cuckold['] feat. Your [bold type]perception[roman type] has gone up by one and your earlier [bold type]charisma[roman type] bonus has been removed.";
 		remove "Top Dog" from feats of Player;
-		decrease charisma of Player by 1;
+		StatChange "Charisma" by -1;
 	else:
 		say "     You and Alexandra have earned the [']Cuckold['] feat, making her more fertile. Your [bold type]perception[roman type] has also gone up by one.";
 	add "Cuckold" to feats of Player;
-	increase perception of Player by 1;
+	StatChange "Perception" by 1;
 	now level of Alexandra is 2; [shared bitch]
 	now A_Fang is false; [new dialog for new status]
 	now lastdobiemess is 99; [last used by Fang]
@@ -1043,7 +1042,7 @@ to say badAlexandraFang2: [male player stops Fang and establishes dominance]
 	add "Top Dog" to feats of Player;
 	add "Player's Bitch" to Traits of Alexandra;
 	now AlexandraPlayersBitch is active;
-	increase perception of Player by 1;
+	StatChange "Perception" by 1;
 	decrease HP of Player by 10;
 	now level of Alexandra is 1; [unshared bitch]
 	now A_Fang is false; [new dialog for new status]

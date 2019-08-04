@@ -292,6 +292,7 @@ to say BeatTheBovine:
 		else:
 			say "     You step back from the fallen beast, amazed you've managed to defeat it. You leave your foe with an added spring in your step, confident in your ability to protect yourself from the dangers of this new world.";
 			increase VictoryOverDaBull by 1;]
+
 to say cow desc:
 	project the figure of Bovine_F_icon;
 	if Mooed is 0:

@@ -421,7 +421,7 @@ to say gsd_collar_scene:
 		now gsd_pet is 20; [Subby Korvin]
 	else:
 		say "     Approaching Korvin, you pull out the bag holding his new collar and call him over to you. Hearing your command, he responds promptly, eager for an opportunity to perhaps fight or fuck. Showing the shepherd the studded leather collar you've picked for him, his ears perk up at the unexpected surprise.";
-		say "     'I think you've earned something better than this frayed old thing,' you say as you untie the rope leash. Replacing it with the leather collar, you continue. 'You're my officially attack dog now, big guy. And with this on, everyone'll know you're not some stray to be fucked with.'";
+		say "     'I think you've earned something better than this frayed old thing,' you say as you untie the rope leash. Replacing it with the leather collar, you continue. 'You're officially my attack dog now, big guy. And with this on, everyone'll know you're not some stray to be fucked with.'";
 		WaitLineBreak;
 		if graphics is true:
 			project the figure of Korvin_blackcollar_face_icon;

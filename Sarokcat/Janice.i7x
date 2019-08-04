@@ -260,7 +260,7 @@ carry out Vixenposing:
 		say "     'Not right now, my lovely,' Janice murrs at you as she stretches languidly out on the couch, 'It is just much too much effort for me to put in right now... perhaps later,' she says teasingly as she relaxes on the soft cushion.";
 	else if janicetalk < 4:
 		say "     'Why should I waste my precious time training someone who isn't willing to show some interest in my own needs?' she asks with an exaggerated sigh and a dismissive wave of her paw. 'Why don't you go out there and find something to prove to this vixen you've got an interest in foxes?'";
-	else if BodyName of Player is not "Arctic fox":
+	else if BodyName of Player is not "Arctic Fox":
 		say "     'I can't train you how to best use your body sexily if you've not even got the body for it. Why don't we start by seeing if we can get you looking foxier?' she purrs, stretching out in a sensual display on her divan.";
 	else if janicearoused > 0:
 		now lastVixenposing is turns;

@@ -191,6 +191,7 @@ to say PlayerDominant_Kitsune Scenes:
 						say "[Kitsune_DomDoggystyleAnal]";
 					-- "Ride him vaginally":
 						say "[Kitsune_DomRidingVag]";
+					wait for any key;
 		else if calcnumber is 0:
 			say "     Kitsune is wagging his tails with a sly smile.";
 			now sextablerun is 1;

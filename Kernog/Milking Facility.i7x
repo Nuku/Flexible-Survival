@@ -44,14 +44,14 @@ to say milkingFacilityEntranceDesc:
 		if ESPP bunker keycard is owned:
 			say "     Following the address written on the note accompanying the keycard, you make your way to the abandoned [']Milking Facility['] it mentioned. The words [italic type]Emergency Supplies Production Project, Facility 14 -  Dairy Products[roman type] are written in big letters over the door. The door is still sealed, but the electronic lock seems to be in working condition, and waiting for a keycard.";
 		else:
-			say "     You stumble upon the entrance of a bunker. Before the Events, it was hidden in a boarded-up building. Now that the boards have been yanked open, and the concrete walls crumbled, the mysterious bunker is exposed to the outside world. The words [italic type]Emergency Supplies Production Project, Facility 14 -  Dairy Products[roman type] are written in big letters over the door. The door is still sealed, but the electronic lock seems to be in working condition, and waiting for a keycard. You notice, next to the identification device, a small plaque directing employees who have lost their card to a room in the Trevor Labs Building in the inner city. [bold type]Judging from the minus in front of the room number, it should be somewhere underground in that building[roman type].";
+			say "     You stumble upon the entrance of a bunker. Before the Events, it was hidden in a boarded-up building. Now that the boards have been yanked open, and the concrete walls crumbled, the mysterious bunker is exposed to the outside world. The words [italic type]Emergency Supplies Production Project, Facility 14 - Dairy Products[roman type] are written in big letters over the door. The door is still sealed, but the electronic lock seems to be in working condition, and waiting for a keycard. You notice, next to the identification device, a small plaque directing employees who have lost their card to a room in the Trevor Labs Building in the inner city. [bold type]Judging from the minus in front of the room number, it should be somewhere underground in that building[roman type].";
 	else:
 		if ESPP bunker keycard is owned:
 			say "     You face the entrance of the Dairy Products Facility. The metallic door is still sealed, but the electronic lock seems to be in working condition, and waiting for you to swipe in the keycard.";
 		else:
 			say "     You face the entrance of the Dairy Products Facility. The metallic door is still sealed, but the electronic lock seems to be in working condition, and waiting for a keycard. You notice, next to the identification device, a small plaque directing employees who have lost their card to a room in the Trevor Labs Building in the inner city. [bold type]Judging from the minus in front of the room number, it should be somewhere underground in that building[roman type].";
 
-instead of going in from Milking Facility Entrance while ESPP bunker keycard is not owned:
+instead of going inside from Milking Facility Entrance while ESPP bunker keycard is not owned:
 	say "     You cannot go in. You lack a keycard.";
 
 Section 2-1 Keycard situation
@@ -67,7 +67,7 @@ Instead of resolving a Milking Facility Keycard:
 		say "     You stumble upon an abandoned office. A metallic plaque is nailed next to the door, and reads [italic type]Emergency Supplies Production Project[roman type]. The only object remaining in the room is a heavy, metallic desk. Inside the drawer, you find a keycard labelled [italic type]Facility 14 -  Dairy Products[roman type]. You take it, in case you find said facility in the city.";
 	else:
 		say "     You stumble upon an abandoned office. A metallic plaque is nailed next to the door, and reads [italic type]Emergency Supplies Production Project[roman type]. Remembering the bunker you have found earlier, you search the room. The only object remaining in the room is a heavy, metallic desk, so it is quickly done. Inside the drawer, you find a keycard labelled [italic type]Facility 14 -  Dairy Products[roman type]. You take it, and make a mental note of returning to the bunker whenever you can.";
-	add "ESPP bunker keycard" to the invent of Player;
+	increase carried of ESPP bunker keycard by 1;
 	now Milking Facility Keycard is resolved;
 
 

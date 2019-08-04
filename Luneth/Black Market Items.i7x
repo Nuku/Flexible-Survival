@@ -432,7 +432,7 @@ The AC of zephyr riot chest piece is 40.
 The effectiveness of zephyr riot chest piece is 70.
 The placement of zephyr riot chest piece is "body".
 The descmod of zephyr riot chest piece is "A jet black chest piece encases your torso with the zephyr logo on it.".
-The slot of zephyr riot chest piece is "body".
+The slot of zephyr riot chest piece is "chest".
 the scent of zephyr riot chest piece is "The riot gear smells of metal and plastic.".
 
 Part 3 - Zephyr Riot Arm Guards
@@ -449,7 +449,7 @@ The taur-compatible of zephyr riot arm guards is true.
 The size of zephyr riot arm guards is 3.
 The AC of zephyr riot arm guards is 30.
 The effectiveness of zephyr riot arm guards is 60.
-The placement of zephyr riot arm guards is "arms".
+The placement of zephyr riot arm guards is "body".
 The descmod of zephyr riot arm guards is "A set of jet black arm guards that encase your arms with the zephyr logo on it.".
 The slot of zephyr riot arm guards is "arms".
 the scent of zephyr riot arm guards is "The riot gear smells of metal and plastic.".
@@ -468,7 +468,7 @@ The taur-compatible of zephyr riot shin guards is true.
 The size of zephyr riot shin guards is 3.
 The AC of zephyr riot shin guards is 30.
 The effectiveness of zephyr riot shin guards is 60.
-The placement of zephyr riot shin guards is "legs".
+The placement of zephyr riot shin guards is "body".
 The descmod of zephyr riot shin guards is "A set of jet black shin guards that encase your legs with the zephyr logo on it.".
 The slot of zephyr riot shin guards is "legs".
 the scent of zephyr riot shin guards is "The riot gear smells of metal and plastic.".
@@ -506,7 +506,7 @@ The taur-compatible of zephyr armored lab gloves is true.
 The size of zephyr armored lab gloves is 3.
 The AC of zephyr armored lab gloves is 20.
 The effectiveness of zephyr armored lab gloves is 15.
-The placement of zephyr armored lab gloves is "hands".
+The placement of zephyr armored lab gloves is "body".
 The descmod of zephyr armored lab gloves is "A pair of white rubber lab gloves are fitted over your hands with the zephyr logo patched over the back of your hand.".
 The slot of zephyr armored lab gloves is "hands".
 the scent of zephyr armored lab gloves is "The lab gloves smells of chemicals and rubber.".
@@ -525,7 +525,7 @@ The taur-compatible of zephyr armored lab boots is true.
 The size of zephyr armored lab boots is 3.
 The AC of zephyr armored lab boots is 20.
 The effectiveness of zephyr armored lab boots is 15.
-The placement of zephyr armored lab boots is "feet".
+The placement of zephyr armored lab boots is "body".
 The descmod of zephyr armored lab boots is "A pair of black rubber lab boots are fitted over your feet with the zephyr logo patched over the toes.".
 The slot of zephyr armored lab boots is "feet".
 the scent of zephyr armored lab boots is "The lab boots smells of chemicals and rubber.".
@@ -576,7 +576,7 @@ the usedesc of zephyr protective riot shield is "[RiotShieldProtectUse]".
 The AC of zephyr protective riot shield is 46.
 The effectiveness of zephyr protective riot shield is 42.
 The objsize of zephyr protective riot shield is 4.
-The placement of zephyr protective riot shield is "body".
+The placement of zephyr protective riot shield is "shield".
 The descmod of zephyr protective riot shield is "You hold the riot shield in hands, its size is large enough to cover most of your torso. It is painted black with the zephyr trademark branded across the front, just underneath the vision slot.".
 The slot of zephyr protective riot shield is "shield".
 

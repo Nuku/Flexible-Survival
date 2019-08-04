@@ -62,7 +62,7 @@ to say PowerUpUse:
 		SanLoss 10;
 	else:
 		increase PowerUpDrugTrip by 8;
-		increase Strength of Player by 6;
+		StatChange "Strength" by 6;
 		add "Roided Up" to Feats of Player;
 
 instead of sniffing powerup tablet:
@@ -72,7 +72,7 @@ an everyturn rule:
 	if PowerUpDrugTrip is 1:
 		say "     The feeling of unbridled power in you peters out and you suddenly feel weak as a kitten in comparison. You can't help but feel the desire to take another PowerUp tablet and get back to proper fighting form.";
 		now PowerUpDrugTrip is 0;
-		decrease Strength of Player by 6;
+		StatChange "Strength" by -6;
 		remove "Roided Up" from Feats of Player;
 	if PowerUpDrugTrip > 0:
 		decrease PowerUpDrugTrip by 1;

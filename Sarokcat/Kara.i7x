@@ -159,52 +159,46 @@ carry out Tattooplayer:
 			if Player consents:
 				say "'Hah, I knew it! Everyone always wants a dragon tattoo,' the hyena woman says with a slight smirk as she prepares the inks for application. 'Though I might have a few ideas on how to spice the tattoo up a bit... Amazing the inspiration you can find in the middle of a strange situation...' Kara says with a slight chuckle that makes you slightly nervous for a minute. Before you can protest however she pounces on you and you are forced to hold still and grit your teeth as the needles begin to pierce your skin...";
 				say "After what seems like several hours of having your skin pierced without rest, Kara eventually sighs slightly and steps back, putting the needle gun down as she looks over her work with a tired grin. 'There we go now, one sexy little tattoo for my rescuer, I even used some special additives I found while I was out and about, nothing but the best for my sexy little hero eh?' the hyena herm says with a teasing wink as she lets you up to admire your new rather lifelike tattoo.";
-				say "[bold type]Your strength has increased by 2![roman type][line break]";
 				add "Dragon Tattoo" to feats of Player;
 				now tatstatus is 1;
 				now tatsave is 2;
-				increase strength of Player by 2;
-				increase capacity of Player by 10;
+				StatChange "Strength" by 2;
 			else:
 				say "'No? Not a dragon person either, well I can't really blame you there, I have always preferred cats myself, or at least I used to...' Kara sighs slightly as a soft smile teases at her muzzle 'I never realized before just how sexy it could be to get pounded by a bunch of sexy studly hyenas... are you sure you don't want the hyena tattoo? No? Ah well then, how about a lithe and powerful hunting cat?' she asks with amusement as she gestures with one paw-like hand at some of the flash around the room depicting various hunting cats in stalking poses.";
 				if Player consents:
 					say "'Ah a cat it is! Not as sexy as a lovely slutty hyena perhaps, but probably the next best thing,' Kara says with some amusement as she grins down at your prone form for a second. 'So lithe and flexible, mmm yes, and you have to wonder what that raspy tongue would feel like on fur...' She moans with arousal for a second as one of her pawlike hands strokes over her soft, hyena-like fur for a minute. 'So hot and sexy, I bet you would love to pet a little pussy now wouldn't you? Or maybe you want to be petted? Either way I have the most wonderful idea for your tattoo,' the lust-filled hyena says with a rather disturbing grin as she goes to work on your body.";
 					say "After what seems like several hours of having your skin pierced without rest, Kara eventually sighs slightly and steps back, putting the needle gun down as she looks over her work with a tired grin. 'There we go now, one sexy little tattoo for my rescuer. I even used some special additives I found while I was out and about. Nothing but the best for my sexy little hero, eh?' the hyena herm says with a teasing wink as she lets you up to admire your new, rather lifelike tattoo.";
-					say "[bold type]Your dexterity has increased by 2![roman type][line break]";
 					add "Feline Tattoo" to feats of Player;
 					now tatstatus is 1;
 					now tatsave is 3;
-					increase dexterity of Player by 2;
+					StatChange "Dexterity" by 2;
 				else:
 					say "'Not a cat person? How about wolves instead? A knot can feel amazing inside you, you know,' Kara says with a rather lewd grin as she strokes her knotted black hyena cock with one hand as she looks at you inquiringly, 'Good hunters too, even if they do hang out in packs, very perceptive indeed.'";
 					if Player consents:
 						say "'Ah the call of the knot wins again! Though of course canines aren't the only ones with knots in the city now...' Kara says with a grin as she strokes her own thick black cock for a minute, your helpless body obviously exciting the hyena above you. 'Of course I can't blame you for wanting a nice sexy wolf on your body, after all, now that I have had some experience with a knot myself, I don't think I would turn down a wolf on my back either, if you know what I mean,' she says with a rather lewd wink and a slight moan as she leans over slightly on her stool as if making room for something to mount her obviously excited body. Her words bring to mind all kinds of canines and beasts on top of your body as well, though you have little enough time to think about that before the needles start to pierce your skin and the tattooing starts.";
 						say "After what seems like several hours of having your skin pierced without rest, Kara eventually sighs slightly and steps back, putting the needle gun down as she looks over her work with a tired grin. 'There we go now, one sexy little tattoo for my rescuer, I even used some special additives I found while I was out and about, nothing but the best for my sexy little hero eh?' the hyena herm says with a teasing wink as she lets you up to admire your new rather lifelike tattoo.";
-						say "[bold type]Your perception has increased by 2![roman type][line break]";
 						add "Wolf Tattoo" to feats of Player;
 						now tatstatus is 1;
 						now tatsave is 4;
-						increase perception of Player by 2;
+						StatChange "Perception" by 2;
 					else:
 						say "'Not up for being knotted right now? Well maybe later...' the hyena herm says with a rather smug smirk as she looks over some of the art in the shop. 'Ah I know! Maybe you are a bit more into equines! Perhaps a nice unicorn like you said Harold is? Supposed to be a great symbol of virility and stamina,' Kara says with a wink as she points at several pieces of artwork depicting surprisingly sexy unicorns positioned around the room.";
 						if Player consents:
 							say "'Ah I knew we would find a tattoo that would be perfect for you!' Kara says with a happy smile as she prepares her inks, 'I suppose I should have guessed as much, after all, who wouldn't like a bit of extra stamina? And you are here on behalf of a unicorn as well, maybe you have a bit of a thing for him eh?' the hyena artist says with a low chuckle as she shifts her body around to position the tattoo gun over your bound and helpless body. 'Speaking of Harold, that gives me an idea for just the sexiest little pose for your unicorn... one of his favorites as I recall, so be sure to give him a good long look at it when you stop back by the bar ok?' Kara says with a rather lewd grin and a wink before she goes to work on your body with the inks and needles.";
 							say "After what seems like several hours of having your skin pierced without rest, Kara eventually sighs slightly and steps back, putting the needle gun down as she looks over her work with a tired grin. 'There we go now, one sexy little tattoo for my rescuer, I even used some special additives I ah.. acquired from some people over at the stables, nothing but the best for my sexy little hero eh?' the hyena herm says with a teasing wink as she lets you up to admire your new rather lifelike tattoo.";
-							say "[bold type]Your stamina has increased by 2![roman type][line break]";
 							add "Unicorn Tattoo" to feats of Player;
 							now tatstatus is 1;
 							now tatsave is 5;
-							increase stamina of Player by 2;
+							StatChange "Stamina" by 2;
 						else:
 							say "'Not feeling up to a little horseplay today? Ah well, let's see...' your hyena captor says with a speculative glance around the room as she waves the needlegun around as if eager to finally get to work. 'Well I suppose there is always a tattoo for wisdom and intelligence, birds and gryphons are good for that, and I saw some lovely blue feathered models out in the city earlier... how about it?' Kara says with a happy grin as she looks down at you hopefully.";
 							if Player consents:
 								say "'Ah, a Gryphon person, is it?' Kara says with a lewd grin. 'I heard some of the other hyenas talking about wing size carrying over to other sizes too. Going to test it out, are you? Or maybe you already have?' the hyena tattooist says with a soft moan as she shifts around above you obviously excited by the thought, before looking down at your bound form lustily. 'I saw the sexiest model for it too the other day. Not as good as a sexy slutty hyena, of course, but then again, what is?' she asks you teasingly, not even waiting for a response as she leans over you and the needlegun goes to work on your surprisingly sensitive skin.";
 								say "After what seems like several hours of having your skin pierced without rest, Kara eventually sighs slightly and steps back, putting the needle gun down as she looks over her work with a tired grin. 'There we go now, one sexy little tattoo for my rescuer. I even used some special additives I found while I was out and about. Nothing but the best for my sexy little hero, eh?' the hyena herm says with a teasing wink as she lets you up to admire your new rather lifelike tattoo.";
-								say "[bold type]Your intelligence has increased by 2![roman type][line break]";
 								add "Gryphon Tattoo" to feats of Player;
 								now tatstatus is 1;
 								now tatsave is 6;
-								increase intelligence of Player by 2;
+								StatChange "Intelligence" by 2;
 							else:
 								say "'No? Well you must want something pretty special then. Unfortunately I'm fresh out of ideas as to what...' She looks down at you for a minute before sighing. 'And now I'm just not feeling the excitement anymore. Maybe you should come back and visit me again when you have a better idea of what you want...' the hyena herm says with a sad sigh as she undoes the straps and lets you up, before going back to stow her equipment away again, her disappointment at your lack of enthusiasm obvious.";
 	else if tatstatus is 1:
@@ -217,20 +211,19 @@ carry out Tattooplayer:
 				Remove "Hyena Tattoo" from feats of Player;
 			if "Dragon Tattoo" is listed in feats of Player:
 				Remove "Dragon Tattoo" from feats of Player;
-				decrease strength of Player by 2;
-				decrease capacity of Player by 10;
+				StatChange "Strength" by -2;
 			if "Feline Tattoo" is listed in feats of Player:
 				Remove "Feline Tattoo" from feats of Player;
-				decrease dexterity of Player by 2;
+				StatChange "Dexterity" by -2;
 			if "Wolf Tattoo" is listed in feats of Player:
 				Remove "Wolf Tattoo" from feats of Player;
-				decrease Perception of Player by 2;
+				StatChange "Perception" by -2;
 			if "Unicorn Tattoo" is listed in feats of Player:
 				Remove "Unicorn Tattoo" from feats of Player;
-				decrease stamina of Player by 2;
+				StatChange "Stamina" by -2;
 			if "Gryphon Tattoo" is listed in feats of Player:
 				Remove "Gryphon Tattoo" from feats of Player;
-				decrease Intelligence of Player by 2;
+				StatChange "Intelligence" by -2;
 		else:
 			say "'Thought you would be! It definitely suits you after all, and if any of those creatures out there are smart enough to ask where ya got such a sexy tat, you send [']em to me, especially if they are hyenas,' Kara says with a teasing wink before going back to what she was doing.";
 	else if tatstatus is 2:
@@ -260,7 +253,7 @@ carry out Pierceplayer:
 			add "Matriarch Piercing" to feats of Player;
 			now piercestatus is 1;
 			now piercesave is 1;
-			increase charisma of Player by 4;
+			StatChange "Charisma" by 4;
 			increase maxHP of Player by 30;
 		else if matriarchdefeated is 1:
 			say "'Oh hey you want a piercing?' Kara says with a smug smirk on her hyena-like face, 'Yeah I can see where a little failed slut like you would want a sexy little piercing to show the world just how submissive you are... Don't worry, I am sure I can find something to show your status around here...' the more dominant hyena says with a chuckle, her attitude making you blush slightly even as arousal runs through your body at her dominant tone and posture. You find yourself not able to resist in the least as she pushes you down into her working chair, before she begins digging through the cabinet next to you eagerly. After several minutes of searching, you hear Kara let out a yip of pleasure as she pulls out a thin series of chain links, and several small ring piercings and turns to you with a large grin across her muzzle.. The sight of all the cold metal about to pierce your skin makes you shudder nervously, unsure if this is really a good idea anymore, but you aren't given a chance to protest as Kara quickly and professionally attaches a nipple ring to each of your nipples, the cold metal rubbing up against your flesh feeling surprisingly good even as she threads the small chain between them so whenever one of them moves, all the other rings tug and tease at your other breasts. You moan slightly with lust even as she moves back to admire her work and attach a couple of small tinkling bells to your nipples as well. Kara stands back and admires her work with a lusty grin, even as you struggle with yourself trying not to cry out at the pleasure that shoots through your body when she tugs on the silver chain teasingly. You moan as you try to get used to the feeling of the chain and the piercings rubbing their smooth metal against your body and groan at how very sensitive your nipples now seem to be, with every movement of your body sending out a soft ringing noise as if to advertise your readiness to anything that might be nearby. Eventually though, you manage to get control of yourself again, and she lets you up to recover from the swift piercing, although even now, you aren't sure you will ever be fully recovered from the sexy sensations, at least not as long as you have these lovely piercings in you advertising your sluttiness for all to see and hear...";
@@ -277,7 +270,7 @@ carry out Pierceplayer:
 			add "Hyenastyle Piercings" to feats of Player;
 			now piercestatus is 1;
 			now piercesave is 4;
-			increase charisma of Player by 2;
+			StatChange "Charisma" by 2;
 		else:
 			say "'Interested in a piercing? Well honestly I kind of need to save what piercings I do have left for the rest of the gang...' Kara says with a short shrug, before looking back at you speculatively. 'Though I suppose I could work something out if you were to find me a new supply of material somewhere in town. I do owe you after all,' the pierced hyena says with a grin as she cocks her head at you in amusement, 'Though you really should consider going hyena like me, it's the greatest experience ever...'";
 			now piercingquest is 1;
@@ -291,12 +284,12 @@ carry out Pierceplayer:
 				Remove "NippleandChain Piercing" from feats of Player;
 			if "Hyenastyle Piercings" is listed in feats of Player:
 				Remove "Hyenastyle Piercings" from feats of Player;
-				decrease charisma of Player by 2;
+				StatChange "Charisma" by -2;
 			if "Nipple Piercing" is listed in feats of Player:
 				Remove "Nipple Piercing" from feats of Player;
 			if "Matriarch Piercing" is listed in feats of Player:
 				decrease maxHP of Player by 30;
-				decrease charisma of Player by 4;
+				StatChange "Charisma" by -4;
 				Remove "Matriarch Piercing" from feats of Player;
 		else:
 			say "'Sounds good to me!' the hyena herm says with a grin as she looks you up and down appraisingly. 'I have to admit, I think it looks damn sexy like that myself,' she says as she strokes her thick knotted hyena cock absently, the sight making your mouth water slightly...";
@@ -308,7 +301,7 @@ An everyturn rule:
 	if "NippleandChain Piercing" is listed in feats of Player:
 		if Libido of Player < 80:
 			now Libido of Player is 80;
-		if child is not born and gestation of child > 0:
+		if child is not born and gestation of child > 2:
 			if a random chance of 1 in 3 succeeds:
 				decrease gestation of child by 1;
 		if a random number between one and 20 < 6:

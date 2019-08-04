@@ -23,7 +23,7 @@ to say TentacleSex:
 
 to say TentaclesFirstEncounter:
 	say "     As you're going about your business, something suddenly wraps around your legs. You're harshly yanked backwards, and you fling out your arms in a desperate attempt to avoid smashing your face on the ground. Once that's been taken care of, you whirl around to look at what's ensnared you. The sight that greets you makes your skin go cold. A writhing mass of purple tentacles are jutting out of the ground, each coated in a slick, sticky slime. Desperately, you yank your foot away, managing to get it out of the tendril's grasp.";
-	say "     [bold type]You need to take advantage of you momentary freedom! What do you do?";
+	say "     [bold type]You need to take advantage of you momentary freedom! What do you do?[roman type][line break]";
 	say "     [link]Run away as fast as you can![as]y[end link] - (Y)[line break]";
 	say "     [link]See if you can find some sort of central mass.[as]n[end link] - (N)[line break]";
 	if Player consents:
