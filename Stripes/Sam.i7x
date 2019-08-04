@@ -1,7 +1,8 @@
-Version 2 of Sam by Stripes begins here.
+Version 3 of Sam by Stripes begins here.
 [Version 2.5 - surrendering to Rick]
 [Version 2.6 - Minor maintenance and character relocation - Luneth]
 [Version 3 - Added talk menu and Shrinking Shroom Expansion - Kurainyx]
+[Version 3.1 - Added unbirth and cock vore shrinking shroom scenes/bound states - Kurainyx]
 "Adds a fellow Researcher named Sam to the Flexible Survival game."
 
 [ HP of Sam                                                                    ]
@@ -45,6 +46,18 @@ Version 2 of Sam by Stripes begins here.
 [ 10 - Sam has Shrinking Shrooms                                               ]
 [ 11 - Opens Sam's Shrinking Shrooms sex scenes                                ]
 [ 12-20 - Timer for Sam giving player a Shrinking Shroom                       ]
+
+[ Strength of Sam                                                              ]
+[ 0 - Have not been Unbirthed by Sam                                           ]
+[ 1-2 - Unbirthed by Sam                                                       ]
+[ 3 - Sam will start Unbirth bound state                                       ]
+[ 4 - Subsequent Sam Unbirth bound state                                       ]
+
+[ Dexterity of Sam                                                             ]
+[ 0 - Have not been Cock Vored by Sam                                          ]
+[ 1-2 - Cock vored by Sam                                                      ]
+[ 3 - Sam will start Cock Vore bound state                                     ]
+[ 4 - Subsequent Sam Cock Vore bound state                                     ]
 
 Section 1 - Event
 
@@ -833,6 +846,16 @@ to say sexwithSam:
 			now sortorder entry is 9;
 			now description entry is "Use a shrinking shroom to go into Sam's ass";
 		[]
+			choose a blank row in table of fucking options;
+			now title entry is "Shrinking Shroom Unbirth";
+			now sortorder entry is 10;
+			now description entry is "Use a shrinking shroom to go into Sam's pussy";
+		[]
+			choose a blank row in table of fucking options;
+			now title entry is "Shrinking Shroom Cock";
+			now sortorder entry is 9;
+			now description entry is "Use a shrinking shroom to go into Sam's cock";
+		[]
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
@@ -869,6 +892,10 @@ to say sexwithSam:
 						say "[SamShroomOral]";
 					else if title entry is "Shrinking Shroom Anal":
 						say "[SamShroomAnal]";
+					else if title entry is "Shrinking Shroom Unbirth":
+						say "[SamShroomUnbirth]";
+					else if title entry is "Shrinking Shroom Cock":
+						say "[SamShroomCock]";
 			else:
 				say "Invalid Option.";
 
@@ -1108,7 +1135,7 @@ to say SamShroom:
 		now hunger of Sam is 10;
 	else if hunger of Sam is 10:	[Sam talk to open shrinking shroom vore scenes]
 		say "     'I've been studying the mushrooms from the shrinking zone, and your initial hypothesis about radiation affecting nanites is right. I haven't yet been able to determine exactly why, but these mutated nanites have been given shrinking properties. As you might already know, anyone that decides to eat these [italic type]shrinking shrooms[roman type] will be reduced to roughly the size of a mouse. Fortunately, the effect is only temporary. I'll continue studying these shrooms as I grow them, but if you want, I can spare you one every now and then.'";
-		say "     Sam pauses for a moment to look over your entire body before continuing, 'Actually, while we're on the subject of these shrinking shrooms, I've realized that they can also be used to help me gather some other valuable data, but I will need your help with that. You see, I've been interested in possibly studying the insides of a person transformed by the nanites, but I never had the means to, until now. My plan is to have you consume a shrinking shroom so that your miniaturized form can enter me either orally or anally. You'll then spend some time inside of me before I expel you from my body so that I can swab you for samples of my insides. I know that this is an odd request, but you're my best shot at this because it's not like I can ask any random person off the street if I could eat them, and for the same reason, I can't have you go around being eaten by potentially dangerous individuals. Nonetheless, I am aware that all of this sounds bizarre and dangerous, so you are under no obligation to do any of this. If you do decide to help me though, I assure you that not only will I take every precaution to ensure your safety, but I believe that I can make this experiment enjoyable for the both of us.'";
+		say "     Sam pauses for a moment to look over your entire body before continuing, 'Actually, while we're on the subject of these shrinking shrooms, I've realized that they can also be used to help me gather some other valuable data, but I will need your help with that. You see, I've been interested in possibly studying the insides of a person transformed by the nanites, but I never had the means to, until now. My plan is to have you consume a shrinking shroom so that your miniaturized form can enter me. You'll then spend some time inside of me before I expel you from my body so that I can swab you for samples of my insides. I know that this is an odd request, but you're my best shot at this because it's not like I can ask any random person off the street if I could eat them, and for the same reason, I can't have you go around being eaten by potentially dangerous individuals. Nonetheless, I am aware that all of this sounds bizarre and dangerous, so you are under no obligation to do any of this. If you do decide to help me though, I assure you that not only will I take every precaution to ensure your safety, but I believe that I can make this experiment enjoyable for the both of us.'";
 		now hunger of Sam is 11;
 	else if hunger of Sam is 20:	[Sam gives player a shrinking shroom]
 		say "     You ask if Sam can give you a shrinking shroom. 'Sure thing. Here you go.' Sam takes out a shrinking shroom from a covered storage container and then hands it to you with a smile.";
@@ -1160,6 +1187,50 @@ to say SamShroomAnal:	[Anal Shrinking Shroom scene]
 	say "     The tight tunnel makes it impossible for you to do anything but squirm, which quickly becomes a problem. Your head swims with lust from being exposed to the depths of Sam's intoxicating aroma, and the surrounding flesh caressing you from all sides only adds to the fire stirring in your loins. While you cannot tend to yourself by normal means, you're able to shift yourself until you can press your groin right up against a wall, grinding your [if player is male]cock[smn][else if player is female]cunt[sfn][else]crotch[end if] against the supple flesh. It doesn't take long for you to moan out in pleasure when your body twitches from your climax[if player is male], your cum smearing against the walls[else if player is female], your juices smearing against the walls[end if]. Exhausted from both your orgasm and the ordeal needed to achieve it, you slowly drift off to sleep to the oddly relaxing caress of Sam's anal walls as they draw you deeper and deeper into the taur.";
 	WaitLineBreak;
 	say "[SamShroomEnd]";
+
+to say SamShroomUnbirth:	[Unbirth Shrinking Shroom scene]
+	say "[SamShroomIntro]";
+	say "     'For this session, we're going to have you go in through my vagina with the hopes that you'll make it to my womb, which is where the best samples are,' Sam explains cheerfully. 'Since my hands aren't able to really reach back there, you're going to have to push your way in by yourself, but once you get in enough, my body should take care of the rest.' After you affirm your assent to the plan, Sam places you on a nearby table and turns around, pressing their rear up to the table's edge. 'Dive on in whenever you're ready,' Sam prompts as they lift their tail, presenting you with an unobstructed view of their enormous rear, including the pussy that you're about to delve into. Walking toward the pink tunnel's entrance that is nearly twice your shrunken height, you pick up the taur's musk.";
+	WaitLineBreak;
+	say "     The heady, alluring scent is magnified on your diminutive size, and any trepidation that you might have had is washed away by the intoxicating scent. In fact, the sweet smell makes you even more eager, hastening your movements to get closer to the inviting slit. Heat and potent musk washes over you when you step in front of Sam's cunt, and with no hesitation, you reach into the folds. Sam shivers from your touch, but they manage to remain still enough for you to get a stable footing and move the rest of your body into their sex. The pulsating walls are already slick to the touch, a clear sign of Sam's eagerness and anticipation to fully take you. Thanks to the wetness, you're able to push deeper into the slippery slit with ease, your wriggling body rubbing against the walls and making Sam moan in pleasure.";
+	say "     You relish the velvety sensations of the inner walls touching you, and when you reach far enough into the taur's canal where the passage narrows to the point where you're starting to be squished from both sides, the scientist's pussy clenches down on you, squeezing you between supple, soft flesh. There's a brief moment where you're trapped by the smothering, moist folds before Sam's sex takes over and sucks you in headfirst into the musky depths. Plunged into darkness, all that you know are the sounds and sensations of undulating flesh caressing you from every angle as you're dragged deeper into the canal, all while Sam's breaths grow heavier with arousal as the scientist enjoys your squirming form.";
+	WaitLineBreak;
+	say "     Of course, Sam is not the only one enjoying this [italic type]scientific[roman type] experiment. The warm, soft flesh pressing into you lights your own arousal, each clench of the surrounding walls drawing you in deeper while also sending a pulse of pleasure through you. Your [if player is male]cock[smn][else if player is female]cunt[sfn][else]crotch[end if] is subjugated to constant rubbing against velvety, supple flesh, and it doesn't take long for the caressing walls to make you moan out in pleasure when your body twitches from your climax[if player is male], your cum smearing against the walls[else if player is female], your juices smearing against the walls[end if]. While coming down from your orgasm, the clenching tunnel continues to ferry you deeper into the depths, your shifting surroundings gently kneading your weary body.";
+	say "     Your impromptu massage is interrupted when your head bumps into a wall, which opens slowly to accept your quivering body. You're pushed into a chamber barely big enough to allow you to move your limbs, and there's no question that you have made it into Sam's womb. Despite being forced to curl up into a ball in the confined space, the churning walls continue to squish around you, smothering you in comforting warmth and tender care. You feel safe and protected within Sam's womb. Exhausted from your journey and your recent climax, you feel safe and protected within Sam's womb, which causes you to relax and soon doze off in the enveloping embrace of soft flesh.";
+	WaitLineBreak;
+	if Strength of Sam < 3:		[Regular scene ending for first 3 unbirths]
+		say "[SamShroomEnd]";
+		increase Strength of Sam by 1;
+	else if Strength of Sam < 4:		[Unbirth scene now ends with bound state: first time]
+		say "     When you come to, you're confused when you see nothing but darkness, but the sounds of squelching flesh and the feel of supple walls kneading your body tells you that you're still within Sam's womb. 'Oh, you're awake,' Sam's voice echoes around you when the taur feels your stirring. 'So, uh, you're probably wondering why I haven't let you out by now. Well, I'll just cut to the chase and admit that I really enjoy having you so deep inside of me. I still intend to collect samples from you, but there's no rule saying that I can't have some fun, right? Judging by how you keep coming back to me, I presume that you find our little experiment enjoyable too. I propose from here on out that you'll stay with me a bit longer whenever we do this experiment. Of course, if you ever feel like you've had enough during a session, just do some struggling, and I'll let you out. Additionally, I'll release you myself after a while. As heavenly as it is having you inside of me, I'd rather play it safe and not have you inside of me for too long.'";
+		wait for any key;
+		SamUBBind;
+	else:	[Unbirth scene ends with bound state: subsequent times]
+		say "     When you come to, you're greeted by the sounds of squelching flesh and the feel of supple walls kneading your body, telling you that you're still within Sam's womb. 'Oh, you're awake,' Sam's voice echoes around you when the taur feels your stirring. 'So, uh, just like before, it feels so good having you inside of me. Just do some struggling if you want me to let you out. Otherwise, I'll release you myself after a while.'";
+		wait for any key;
+		SamUBBind;
+
+to say SamShroomCock:	[Cock Vore Shrinking Shroom scene]
+	say "[SamShroomIntro]";
+	say "     'I'm sure that you have observed that semen is one of the most common and potent methods of delivering the transformative nanites, so having you get samples of my own cum should give me plenty of material to research,' Sam explains. 'To be clear, you will be going inside of me through my penis and then be deposited into one of my balls. A bit odd, yes, but it's the best way to ensure the samples are [italic type]fresh[roman type].' After receiving your assent to the experiment, Sam smiles, and with you still in their hand, they move to lay on their side on a nearby mat with pillows on it. 'Now, I can't really reach down there with my hands, so you'll have to get things started by yourself,' the scientist informs after setting you down on the mat near their belly.";
+	WaitLineBreak;
+	say "     This offers you an unobstructed view of the taur's cock, which is lying just a short distance away from where you stand. As you get closer to the rod, the heady aroma of sex invades your senses, beckoning you to hasten your last few steps to your musky goal. Sam's already impressively huge tool now dwarfs your diminutive body, which just makes the upcoming experiment all the more enticing. You lay your hands on the girthy rod, making the taur shiver, as you admire the warm flesh, the rod seemingly throbbing in approval and eagerness from your touch. Walking right up to the slit, any trepidation that you might've had is washed away when you take a deep breath of potent musk, lighting your arousal, and you slowly stick your arms into the shaft.";
+	say "     'Th-that feels a bit weird, but also very interesting. K-keep going,' Sam says, along with delighted groans. Urged on by the scientist's words and the growing intensity of the lustful odor, you start inserting the top part of your body into the throbbing entrance, the slit stretching just enough for you to push in with ease. This earns you even more moans of pleasure from Sam, which continues to increase in intensity as you slowly insert the rest of your body the taur. However, you're not even halfway in when Sam apparently loses control to their lust, and everything starts shaking as they start humping madly.";
+	WaitLineBreak;
+	say "     Each thrust of the scientist's hips slurps a bit more of your body into the musky tunnel, which is drooling precum all over your body and making it all the more easier for the cock to take you in. Between the clenching walls drawing you in while Sam continues to thrust, your entire body is plunged into the darkness of the slimy tunnel, the walls pulsating and squeezing down on your hapless form. The trip through the tight passage doesn't last long, however, and you're soon dumped into a pool of slimy goo, signalling your arrival in one of the cum-filled balls of the taur. Bathing in warm, sticky seed and breathing in the intoxicating musk, your senses are overloaded by lust.";
+	say "     Smearing more of the heady cum on yourself while you work at your crotch, it doesn't take long for you to yowl out in pleasure as you reach your climax[if player is male], your cum adding to the pool that you're submerged in[else if player is female]your juices adding to the pool that you're submerged in[end if]. Yet despite your recent orgasm, being literally bathed in lust and arousing musk still leaves you horny, and it isn't long before you find yourself reaching for your [if player is male]cock[smn][else if player is female]cunt[sfn][else]crotch[end if] again. The living chamber of debauchery coaxes several more climaxes out of you before exhaustion finally overtakes your libido, and you soon doze off in the warm goo.";
+	WaitLineBreak;
+	if Dexterity of Sam < 3:		[Regular scene ending for first 3 cock vore]
+		say "[SamShroomEnd]";
+		increase Dexterity of Sam by 1;
+	else if Dexterity of Sam < 4:		[Cock vore scene now ends with bound state: first time]
+		say "     When you come to, you're confused when you see nothing but darkness, but the viscous, heated goo that most of your body is submerged in tells you that you're still within one of Sam's balls. 'Oh, you're awake,' Sam's voice echoes around you when the taur feels your stirring. 'So, uh, you're probably wondering why I haven't let you out by now. Well, I'll just cut to the chase and admit that I really enjoy having you so deep inside of me. I still intend to collect samples from you, but there's no rule saying that I can't have some fun, right? Judging by how you keep coming back to me, I presume that you find our little experiment enjoyable too. I propose from here on out that you'll stay with me a bit longer whenever we do this experiment. Of course, if you ever feel like you've had enough during a session, just do some struggling, and I'll let you out. Additionally, I'll release you myself after a while. As heavenly as it is having you inside of me, I'd rather play it safe and not have you inside of me for too long.'";
+		wait for any key;
+		SamCockBind;
+	else:	[Cock vore scene ends with bound state: subsequent times]
+		say "     When you come to, you're greeted by the sounds of squelching flesh and the feel of supple walls kneading your body, telling you that you're still within Sam's womb. 'Oh, you're awake,' Sam's voice echoes around you when the taur feels your stirring. 'So, uh, just like before, it feels so good having you inside of me. Just do some struggling if you want me to let you out. Otherwise, I'll release you myself after a while.'";
+		wait for any key;
+		SamCockBind;
 
 to say SamShroomEnd:
 	say "     When you come to, you find yourself lying on the floor of the shed with a blanket draped over you. Not only are you back to your usual size, but you had been thoroughly cleaned of your spelunking within Sam. Speaking of Sam, the transformed scientist is busy inspecting a set of vials, but they turn to you when they notice your movements. 'Oh good. You're awake,' Sam greets cheerfully. 'I have to admit that I had quite a bit of fun having you inside of me, but the most important part is that I got all sorts of valuable samples from you. Thank you again for all of your help. Of course, I can always use more samples, so if you feel like being my [italic type]little[roman type] assistant again, let me know.'";
@@ -1226,7 +1297,198 @@ to say DVimpregchance: [Allows for varied offspring by Sam/Dracovixentaur]
 	now MonsterID is monstermemory;
 
 
-Section 8 - Endings
+Section 8 - Bound state
+
+
+TempSamSanity is a number that varies.
+
+to SamUBBind:
+	now lustatt is Libido of Player;
+	now TempSamSanity is humanity of Player;
+	now calcnumber is -1;
+	let Trixieexit be 0;
+	while Trixieexit is 0:
+		if humanity of Player < 50:
+			now obliging is true;
+		checkboundrecover;
+		if clearnomore is 0, clear the screen;
+		if lustatt > 99:
+			say "     You're constantly being caressed from all sides by slick, supple walls. Every inch of you is tended to by the pulsating flesh, including your [if player is male]cock[smn][else if player is female]cunt[sfn][else]crotch[end if], which makes you pant with need. The encompassing erotic touches continue until you let out a loud moan as you reach your climax, all while Sam's womb walls continues to press into you, prolonging your orgasmic pleasure. Eventually, you come down from your lustful high, and the temptation to remain within the warm embrace of Sam's womb grows.";
+			LineBreak;
+			now struggleatt is 0;
+			if Libido of Player > 25, decrease Libido of Player by (Libido of Player / 10) + 1;
+			now lustatt is Libido of Player;
+			if enduring is true:
+				decrease humanity of Player by 5 + (psycheadjust * 2);
+			else:
+				decrease humanity of Player by 13 + (psycheadjust * 5);
+				if struggleatt > 0, decrease struggleatt by 1;
+		now enduring is false;
+		say "     You're within Sam's womb. [one of]The slick walls constantly caress and rub against you[or]You can hear the taur moan happily from how you're filling them so delightfully[or]'I know that I've probably said this more than a few times, but it feels so good having you inside of me,' Sam says[at random]. You can [bold type]S[roman type]truggle to let Sam know that you want to be let out, [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] to their womb, [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] to try and stay inside of the taur for as long as you can.[line break]";
+		say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break]";
+		say "[bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break]";
+		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break]";
+		say "Sanity: [humanity of Player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of Player]	Thirst: [thirst of Player]	Struggle: [SamStruggle]";
+		if humanity of Player < 1:
+			LineBreak;
+			say "     Sam's womb is just too heavenly to even think about leaving. The constant touch of soft, warm flesh all around you is incredibly soothing and gratifying, so much that you relax into the womb's embrace, intent on an elongated stay. An unknown time spent in warmth and comfort passes before you hear Sam grunt a few times and then the surrounding walls suddenly clamp down on you, squeezing you from all sides with squishy flesh. This only lasts for a moment before you're pushed feet first through a small hole. As Sam begins moaning in arousal, you are ferried through their canal, the walls wet with arousal. The trip from the womb takes less time than the journey to it, and it isn't long before Sam lets out one last moan of pleasure as they reach an orgasm, shooting you out of their pussy, along with a torrent of their juices. Thankfully, Sam had the foresight to put a cushion near their cunt beforehand, giving you a soft landing while they are occupied with their orgasm, although that doesn't stop you from getting drenched in their femcum.";
+			say "     Sam quickly recovers from their release, and they promptly begin cleaning you off. The scientist uses multiple rags to wipe you down and then storing the used cloths in various containers. 'Well, that was fun,' Sam says cheerfully after they finished cleaning you. 'I really enjoyed our time together, and I got plenty of research material to study, thanks to you. The effects of the shrinking shrooms should wear off pretty soon, so feel free to rest here until then.' Sure enough, you grow back to normal size after a few minutes. You promptly gather your belongings and think about what you should do next.";
+			wait for any key;
+			now humanity of Player is TempSamSanity;
+			cleanboundmemory;
+			now Trixieexit is 1;
+			follow the turnpass rule;
+		else:
+			let k be 0;
+			now keychar is "INVALID";
+			change the text of the player's command to "";
+			while keychar is "INVALID":
+				now k is the chosen letter;
+				translate k;
+				if the player's command matches "[number]":
+					now keychar is "[number understood]";
+			if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle":
+				LineBreak;
+				increase struggleatt by 1;
+				if struggleatt < 2:
+					say "     There's not too much room for you to move from your curled up position, but you're able to bang your limbs against your surroundings, though you make sure not to do it too hard and risk injuring Sam's interior. It only takes a few moments of struggling before there's a small jolt, followed by Sam's voice asking, 'Oh, are you ready to come out? Keep on struggling if that's the case.'";
+					increase lustatt by 7 + (lustadjust * 2);
+					wyvhumanityroll;
+					wait for any key;
+				else:
+					say "     Again, you move about within Sam's womb to get their attention. After you struggle for a bit more, Sam says, 'Alright, it seems like you're done with our little experiment. Just give me a few moments and I'll have you out of there.' You hear Sam grunt a few times and then the surrounding walls suddenly clamp down on you, squeezing you from all sides with squishy flesh. This only lasts for a moment before you're pushed feet first through a small hole. As Sam begins moaning in arousal, you are ferried through their canal, the walls wet with arousal. The trip from the womb takes less time than the journey to it, and it isn't long before Sam lets out one last moan of pleasure as they reach an orgasm, shooting you out of their pussy, along with a torrent of their juices. Thankfully, Sam had the foresight to put a cushion near their cunt beforehand, giving you a soft landing while they are occupied with their orgasm, although that doesn't stop you from getting drenched in their femcum.";
+					say "     Sam quickly recovers from their release, and they promptly begin cleaning you off. The scientist uses multiple rags to wipe you down and then storing the used cloths in various containers. 'Well, that was fun,' Sam says cheerfully after they finished cleaning you. 'I really enjoyed our time together, and I got plenty of research material to study, thanks to you. The effects of the shrinking shrooms should wear off pretty soon, so feel free to rest here until then.' Sure enough, you grow back to normal size after a few minutes. You promptly gather your belongings and think about what you should do next.";
+					cleanboundmemory;
+					now Trixieexit is 1;
+					follow the turnpass rule;
+					wait for any key;
+				next;
+			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
+				LineBreak;
+				if obliging is true:
+					decrease struggleatt by 1;
+					say "     [one of]Enveloped in warmth and caressing flesh, you relax inside of the living chamber[or]You feel too comfortable within Sam's womb to think about leaving at the moment[or]Soothed by the gentle caressing touches of the rippling walls, you doze off for a moment[at random].";
+					wyvhumanityroll;
+					increase lustatt by 14 + (lustadjust * 4);
+				else:
+					decrease struggleatt by 1;
+					say "     [one of]Enveloped in warmth and caressing flesh, you relax inside of the living chamber[or]You feel too comfortable within Sam's womb to think about leaving at the moment[or]Soothed by the gentle caressing touches of the rippling walls, you doze off for a moment[at random].";
+					wyvhumanityroll;
+					increase lustatt by 7 + (lustadjust * 2);
+				wait for any key;
+				next;
+			else:
+				LineBreak;
+				now enduring is true;
+				if boundrecover is true:
+					say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
+					now boundrecover is false;
+					SanBoost 3;
+				else:
+					say "     You try to calm yourself down, focusing on delaying your next climax to gather your thoughts.";
+					wyvhumanityroll;
+				LineBreak;
+				increase lustatt by 3 + lustadjust;
+				wait for any key;
+				next;
+			say "Invalid action.";
+
+to SamCockBind:
+	now lustatt is Libido of Player;
+	now TempSamSanity is humanity of Player;
+	now calcnumber is -1;
+	let Trixieexit be 0;
+	while Trixieexit is 0:
+		if humanity of Player < 50:
+			now obliging is true;
+		checkboundrecover;
+		if clearnomore is 0, clear the screen;
+		if lustatt > 99:
+			say "     Submerged in a pool of raw, gooey lust, it's only a matter of time for your libido to reach its breaking point, and once again, you can't think of anything but to tend to your growing arousal. Working at your [if player is male]cock[smn][else if player is female]cunt[sfn][else]crotch[end if], along with the assistance of intoxicating musk invading your senses, you are brought to another climax [if player is male], your cum adding to the pool that you're submerged in[else if player is female]your juices adding to the pool that you're submerged in[end if]. Eventually, you come down from your lustful high just enough to allow you to think about your next action, though your lingering horniness tempts you to remain within the pleasuarable confines of Sam's ball.";
+			LineBreak;
+			now struggleatt is 0;
+			if Libido of Player > 25, decrease Libido of Player by (Libido of Player / 10) + 1;
+			now lustatt is Libido of Player;
+			if enduring is true:
+				decrease humanity of Player by 5 + (psycheadjust * 2);
+			else:
+				decrease humanity of Player by 13 + (psycheadjust * 5);
+				if struggleatt > 0, decrease struggleatt by 1;
+		now enduring is false;
+		say "     You're within one of Sam's balls. [one of]Musky taur cum covers every inch of you, making your head swim with lust[or]You can hear the taur moan happily from how you're filling them so delightfully[or]'I know that I've probably said this more than a few times, but it feels so good having you inside of me,' Sam says[at random]. You can [bold type]S[roman type]truggle to let Sam know that you want to be let out, [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] to their womb, [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] to try and stay inside of the taur for as long as you can.[line break]";
+		say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break]";
+		say "[bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break]";
+		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break]";
+		say "Sanity: [humanity of Player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of Player]	Thirst: [thirst of Player]	Struggle: [SamStruggle]";
+		if humanity of Player < 1:
+			LineBreak;
+			say "     It's just far too pleasurable within Sam's ball to even think about leaving. The cum you're bathing in keeps you warm and in a constant state of delightful arousal. In fact, you can feel your lust cresting again, and once again, you tend to yourself to achieve yet another gratifying orgasm. Potent seed and musk is all that you know as you continuously bring yourself to climax, your horny self intent on an elongated stay within Sam's ball. You hear Sam grunt a few times and then the chamber that you're in jostles about, tossing you and the pool of around. This only lasts for a moment before you're ejected from Sam's ball. As the scientist moans in arousal, you are shot through the tight tunnel that is their cock and out back into the outside world. Thankfully, Sam had the foresight to put a cushion near their dick beforehand, giving you a soft landing while they are occupied with their orgasm, although that doesn't stop you from getting drenched in the seed that you were just bathing in moments ago.";
+			say "     Sam quickly recovers from their release, and they promptly begin cleaning you off. The scientist uses multiple rags to wipe you down and then storing the used cloths in various containers. 'Well, that was fun,' Sam says cheerfully after they finished cleaning you. 'I really enjoyed our time together, and I got plenty of research material to study, thanks to you. The effects of the shrinking shrooms should wear off pretty soon, so feel free to rest here until then.' Sure enough, you grow back to normal size after a few minutes. You promptly gather your belongings and think about what you should do next.";
+			wait for any key;
+			now humanity of Player is TempSamSanity;
+			cleanboundmemory;
+			now Trixieexit is 1;
+			follow the turnpass rule;
+		else:
+			let k be 0;
+			now keychar is "INVALID";
+			change the text of the player's command to "";
+			while keychar is "INVALID":
+				now k is the chosen letter;
+				translate k;
+				if the player's command matches "[number]":
+					now keychar is "[number understood]";
+			if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle":
+				LineBreak;
+				increase struggleatt by 1;
+				if struggleatt < 2:
+					say "     Your movements are dampened by the viscous seed, but you're able to bang your limbs against your surroundings, though you make sure not to do it too hard and risk injuring Sam's interior. It only takes a few moments of struggling before there's a small jolt, followed by Sam's voice asking, 'Oh, are you ready to come out? Keep on struggling if that's the case.'";
+					increase lustatt by 7 + (lustadjust * 2);
+					wyvhumanityroll;
+					wait for any key;
+				else:
+					say "     Again, you move about within Sam's ball to get their attention. After you struggle for a bit more, Sam says, 'Alright, it seems like you're done with our little experiment. Just give me a few moments and I'll have you out of there.' You hear Sam grunt a few times and then the chamber that you're in jostles about, tossing you and the pool of around. This only lasts for a moment before you're ejected from Sam's ball. As the scientist moans in arousal, you are shot through the tight tunnel that is their cock and out back into the outside world. Thankfully, Sam had the foresight to put a cushion near their dick beforehand, giving you a soft landing while they are occupied with their orgasm, although that doesn't stop you from getting drenched in the seed that you were just bathing in moments ago.";
+					say "     Sam quickly recovers from their release, and they promptly begin cleaning you off. The scientist uses multiple rags to wipe you down and then storing the used cloths in various containers. 'Well, that was fun,' Sam says cheerfully after they finished cleaning you. 'I really enjoyed our time together, and I got plenty of research material to study, thanks to you. The effects of the shrinking shrooms should wear off pretty soon, so feel free to rest here until then.' Sure enough, you grow back to normal size after a few minutes. You promptly gather your belongings and think about what you should do next.";
+					cleanboundmemory;
+					now Trixieexit is 1;
+					follow the turnpass rule;
+					wait for any key;
+				next;
+			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
+				LineBreak;
+				if obliging is true:
+					decrease struggleatt by 1;
+					say "     [one of]The warm seed that you're bathing in feels as comforting as a jacuzzi with the added bonus of making you horny[or]You feel too comfortable within Sam's ball to think about leaving at the moment[or]Heat and musk muddles your senses with lust, and you take the time to fondle yourself[at random].";
+					wyvhumanityroll;
+					increase lustatt by 14 + (lustadjust * 4);
+				else:
+					decrease struggleatt by 1;
+					say "     [one of]The warm seed that you're bathing in feels as comforting as a jacuzzi with the added bonus of making you horny[or]You feel too comfortable within Sam's ball to think about leaving at the moment[or]Heat and musk muddles your senses with lust, and you take the time to fondle yourself[at random].";
+					wyvhumanityroll;
+					increase lustatt by 7 + (lustadjust * 2);
+				wait for any key;
+				next;
+			else:
+				LineBreak;
+				now enduring is true;
+				if boundrecover is true:
+					say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
+					now boundrecover is false;
+					SanBoost 3;
+				else:
+					say "     You try to calm yourself down, focusing on delaying your next climax to gather your thoughts.";
+					wyvhumanityroll;
+				LineBreak;
+				increase lustatt by 3 + lustadjust;
+				wait for any key;
+				next;
+			say "Invalid action.";
+
+to say SamStruggle:
+	say "< [bracket]-[if struggleatt > 0]X[else]-[end if][close bracket]";
+
+
+Section 9 - Endings
 
 when play ends:
 	if BodyName of Player is "Feline Hexataur": [special surrender ending]
