@@ -3540,6 +3540,8 @@ This is the sex change rule:
 			if Cock Length of Player < 1 or Ball Size of Player < 1:
 				say "You barely have time to give a whimper as you cease to be a male.";
 				now Cock Count of Player is 0;
+				now Cock Length of Player is 0;
+				now Ball Size of Player is 0;
 			else:
 				say "[line break]";
 		if Cock Count of Player > 1 and a random chance of 2 in 5 succeeds and "All The Things" is not listed in feats of Player:
@@ -8812,6 +8814,8 @@ to say gsopt_start:
 		now Cunt Tightness of Player is 4;
 		now Nipple Count of Player is 2;
 		now Cock Count of Player is 0;
+		now Cock Length of Player is 0;
+		now Ball Size of Player is 0;
 		now Breast Size of Player is 2;
 [
 	if glstart is 1:
