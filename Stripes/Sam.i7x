@@ -853,7 +853,7 @@ to say sexwithSam:
 		[]
 			choose a blank row in table of fucking options;
 			now title entry is "Shrinking Shroom Cock";
-			now sortorder entry is 9;
+			now sortorder entry is 11;
 			now description entry is "Use a shrinking shroom to go into Sam's cock";
 		[]
 		repeat with y running from 1 to number of filled rows in table of fucking options:
