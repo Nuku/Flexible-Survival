@@ -475,7 +475,7 @@ to StatChange (Statname - a text) by (Value - a number):
 	if Value is 0:
 		say "ERROR: You just got a 0 point stat change. Please report on the FS Discord how you saw this.";
 	now Statname is Statname in lower case;
-	say "[bold type]Your [statname] has [if Value > 0]in[else]de[end if]creased by [value]![roman type][line break]";
+	say "[bold type]Your [statname] has [if Value > 0]in[else]de[end if]creased by [absolute value of Value to the nearest whole number]![roman type][line break]";
 	if Statname is:
 		-- "strength":
 			increase strength of Player by Value;
