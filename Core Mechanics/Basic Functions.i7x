@@ -223,7 +223,7 @@ carry out NPCSexAftermathAction:
 to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (GivingChar - a person):
 	if GivingChar is player:
 		if debugactive is 1:
-			say "DEBUG -> Player is the giving partner[line break]";
+			say "DEBUG -> Player is the giving partner for '[SexAct]'[line break]";
 		if PlayerFucked of TakingChar is false: [player never had sex with this NPC]
 			now PlayerFucked of TakingChar is true; [player sexed up this NPC]
 		if SexAct is "AssFuck":
@@ -264,7 +264,7 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				add printed name of TakingChar to OralVirginitiesTaken of Player;
 	else if TakingChar is player:
 		if debugactive is 1:
-			say "DEBUG -> Player is the receiving partner[line break]";
+			say "DEBUG -> Player is the receiving partner for '[SexAct]'[line break]";
 		if PlayerFucked of GivingChar is false: [player never had sex with this NPC]
 			now PlayerFucked of GivingChar is true; [player sexed up this NPC]
 		if SexAct is "AssFuck":
@@ -372,7 +372,7 @@ carry out CreatureSexAftermathAction:
 to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) from (GivingCharName - a text):
 	if GivingCharName is "Player":
 		if debugactive is 1:
-			say "DEBUG -> Player is the giving partner[line break]";
+			say "DEBUG -> Player is the giving partner for '[SexAct]'[line break]";
 		if SexAct is "AssFuck":
 			if PenileVirgin of Player is true:
 				now PenileVirgin of Player is false;
@@ -383,7 +383,7 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 				say "     [Bold Type]You have lost your penile virginity fucking the [TakingCharName in lower case]![roman type][line break]";
 	else if TakingCharName is "Player":
 		if debugactive is 1:
-			say "DEBUG -> Player is the receiving partner[line break]";
+			say "DEBUG -> Player is the receiving partner for '[SexAct]'[line break]";
 		if SexAct is "AssFuck":
 			if AnalVirgin of Player is true:
 				now AnalVirgin of Player is false;
@@ -475,7 +475,7 @@ to StatChange (Statname - a text) by (Value - a number):
 	if Value is 0:
 		say "ERROR: You just got a 0 point stat change. Please report on the FS Discord how you saw this.";
 	now Statname is Statname in lower case;
-	say "[bold type]Your [statname] has [if Value > 0]in[else]de[end if]creased by [value]![roman type][line break]";
+	say "[bold type]Your [statname] has [if Value > 0]in[else]de[end if]creased by [absolute value of Value to the nearest whole number]![roman type][line break]";
 	if Statname is:
 		-- "strength":
 			increase strength of Player by Value;
