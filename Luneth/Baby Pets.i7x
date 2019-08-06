@@ -196,7 +196,7 @@ Section 1.4 - Fox Kit Scenes
 
 Section 1.4.1 - Dash/Beta Fang
 
-after going to Computer Lab while (HP of Fang is 2 and Dash is booked):
+after going to Computer Lab while (HP of Fang is 2 and Dash is booked and FangDashRel is 0):
 	project Figure of Dash_icon;
 	say "     Walking into the computer lab you're shocked to see Fang inside instead of guarding the entrance like usual. At the moment the feral wolf is laying down in front of the small cubicle that Dash has claimed for himself. Fang begins to make a soft whimpering sound in the back of his throat, the display is a little shocking to say the least, you're not used to seeing your beta attempting to make himself seem small and unthreatening. After a few moments you see the small fox kit poke his head outside the little pseudo den, his curious eyes taking in the larger wolf with some apprehension.";
 	say "     Your beta finally acknowledges your presence giving you a curt nod, Dash takes this as his opening to make a run for it. Quickly evading Fang's attempt to catch him the fox kit hides behind your legs, you can almost picture Dash sticking his tongue out at the wolf while using you as a barrier. Fang doesn't let that stop him though, striding up to you the wolf leans his head behind you sniffing at Dash, taking in the small fox kits scent. Dash decides to yip at the larger wolf all the while looking up at you to save him.";
@@ -210,12 +210,12 @@ after going to Computer Lab while (HP of Fang is 2 and Dash is booked):
 		now FangDashRel is 1;
 	else:
 		say "     Reaching down you pick Dash up, holding him close to your chest. You scold Fang explaining that he is far too big to be roughhousing with the little fox. Walking back to the cubicle you place Dash inside and begin to drag Fang out towards the front of the Library.";
-		now FangDashRel is 0;
+		now FangDashRel is 99; [blocked]
 
 
 Section 1.4.2 - Dash/Alpha Fang
 
-after going to Computer Lab while ((HP of Fang is 3 or HP of Fang is 4 ) and Dash is booked):
+after going to Computer Lab while ((HP of Fang is 3 or HP of Fang is 4 ) and Dash is booked and FangDashRel is 0):
 	project Figure of Dash_icon;
 	say "     Walking into the computer lab you're shocked to see Fang inside instead of guarding the entrance like usual. At the moment the huge alpha wolf seems to be standing guard in front of the small cubicle that Dash has claimed for himself. After a few moments Fang lets out a firm bark at the little fox's den, eventually Dash decides to poke his head out to see what all the noise is about. Unfortunately the wolf was fully expecting this and before anyone can react he strikes, picking up the little fox with his teeth. Dash lets out a shrieking sound while in Fang's mouth, surprising even yourself you launch yourself at the large wolf making every attempt to get the kit away from what appears to be a very hungry alpha!";
 	say "     With what was more than likely meant to be a gentle push, Fang sends you flying to the ground. The great wolf then places the yipping fox kit down, but before he fully relaxes his jaws a single massive paw is settled down over Dash's tail to keep him from running away. Fang's luminescent eyes seem to smolder as he looks deep inside your own. 'The brat needs to learn to be strong!' The alphas words come out gravelly, more than likely from the fact that he only speaks so rarely. You open your mouth to respond with a comeback on your tongue only to be silenced quickly by the beast speaking to you. 'You have been a good mother for the pup... but he needs a man to make him a warrior!' [if Player is male]You can't help the confused look that passes over your face, obviously Fang picks up on it though. 'Yeah, you're male... but you coddle him like a baby that's sucking from your tits! He needs an alpha... to show him how to become a warrior in his own right one day.'[end if]";
@@ -233,7 +233,7 @@ after going to Computer Lab while ((HP of Fang is 3 or HP of Fang is 4 ) and Das
 	else:
 		LineBreak;
 		say "     Reaching down you pick Dash up, holding him close to your chest. You turn to Fang explaining that while he may be your alpha... if he [italic type]ever[roman type] goes near your kit again he will see just how dangerous coming between a parent and their baby is! Walking back to the cubicle you place Dash inside and stand guard as you wait for the wolf to leave.";
-		now FangDashRel is 0;
+		now FangDashRel is 99; [blocked]
 
 
 Section 1.5 - Fox Kit Ending

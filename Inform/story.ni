@@ -188,7 +188,7 @@ The player has a text called tailSpeciesName. TailSpeciesName is usually "Human"
 
 [Parts: head, torso, back, arms, legs, ass, tail, cock, cunt]
 [expanded set of Player specific infection parts]
-The player has a text called HeadName. HeadName is usually "Human".
+The player has a text called HeadName. HeadName is usually "". [set to "" instead of "Human" for now, to prevent freshly imported Player Characters from registering fully human for impregnation]
 The player has a text called HeadSpeciesName. HeadSpeciesName is usually "Human".
 The player has a text called Head Description. Head Description is usually "a typical human".
 The player has a text called Head Adjective. Head Adjective is usually "human".
@@ -205,7 +205,7 @@ The player has a text called Eye Color. Eye Color is usually "green".
 The player has a text called Eye Adjective. Eye Adjective is usually "round".
 The player has a text called Tongue Adjective. Tongue Adjective is usually "average".
 The player has a text called Tongue Color. Tongue Color is usually "pink".
-The player has a text called TorsoName. TorsoName is usually "Human".
+The player has a text called TorsoName. TorsoName is usually "". [set to "" instead of "Human" for now, to prevent freshly imported Player Characters from registering fully human for impregnation]
 The player has a text called TorsoSpeciesName. TorsoSpeciesName is usually "Human".
 The player has a text called Torso Description. Torso Description is usually "that of a regular human".
 The player has a text called Torso Adjective. Torso Adjective is usually "human".
@@ -216,18 +216,18 @@ The player has a text called Breast Adjective. Breast Adjective is usually "perk
 The player has a text called Torso Adornments. Torso Adornments is usually "".
 The player has a text called Nipple Color. Nipple Color is usually "light brown".
 The player has a text called Nipple Shape. Nipple Shape is usually "oval".
-The player has a text called BackName. BackName is usually "Human".
+The player has a text called BackName. BackName is usually "". [set to "" instead of "Human" for now, to prevent freshly imported Player Characters from registering fully human for impregnation]
 The player has a text called BackSpeciesName. BackSpeciesName is usually "Human".
 The player has a text called Back Adornments. Back Adornments is usually "".
 The player has a text called Back Skin Adjective. Back Skin Adjective is usually "".
 The player has a text called Back Color. Back Color is usually "fair".
-The player has a text called ArmsName. ArmsName is usually "Human".
+The player has a text called ArmsName. ArmsName is usually "". [set to "" instead of "Human" for now, to prevent freshly imported Player Characters from registering fully human for impregnation]
 The player has a text called ArmsSpeciesName. ArmsSpeciesName is usually "Human".
 The player has a text called Arms Description. Arms Description is usually "those of a regular human".
 The player has a text called Arms Skin Adjective. Arms Skin Adjective is usually "".
 The player has a text called Arms Color. Arms Color is usually "fair".
 The player has a text called Locomotion. Locomotion is usually "bipedal".
-The player has a text called LegsName. LegsName is usually "Human".
+The player has a text called LegsName. LegsName is usually "". [set to "" instead of "Human" for now, to prevent freshly imported Player Characters from registering fully human for impregnation]
 The player has a text called LegsSpeciesName. LegsSpeciesName is usually "Human".
 The player has a text called Legs Description. Legs Description is usually "that of a regular human, reaching all the way to the ground".
 The player has a text called Legs Skin Adjective. Legs Skin Adjective is usually "".
@@ -2678,7 +2678,7 @@ an everyturn rule:
 					increase PresentChance by 1;
 				if a random chance of PresentChance in 10 succeeds: [got a present]
 					add "offspring present" to invent of Bunker;
-			if HP of Blake > 50 and HP of Blake < 90: [Blake whoring]
+			if HP of Blake > 50 and HP of Blake < 90 and a random chance of 1 in 2 succeeds: [Blake whoring]
 				increase Energy of Blake by 1; [add on one profit share of whoring him out]
 		now LastTurnDay is true;
 		if WerewolfWatching is true: [she's only out at night]
@@ -4686,12 +4686,12 @@ to Rest:
 			if "Well Rested" is not listed in feats of Player:
 				FeatGain "Well Rested";
 				say "     Well Rested - All stats increased by 2!";
-				increase strength of Player by 2;
-				increase dexterity of Player by 2;
-				increase stamina of Player by 2;
-				increase charisma of Player by 2;
-				increase intelligence of Player by 2;
-				increase perception of Player by 2;
+				StatChange "Strength" by 2;
+				StatChange "Dexterity" by 2;
+				StatChange "Stamina" by 2;
+				StatChange "Charisma" by 2;
+				StatChange "Intelligence" by 2;
+				StatChange "Perception" by 2;
 			now WellRestedTimer is 6;
 
 carry out resting:
@@ -4714,6 +4714,20 @@ This is the explore rule:
 	if "Curious" is listed in feats of Player, increase bonus by 3;
 	if blindmode is true, increase bonus by 3; [increased odds of finding something interesting]
 	if a random chance of 2 in 5 succeeds, now roomfirst is 0; [Will it check for a room or situation first?]
+	let MonsterAttraction be 0;
+	if "Stealthy" is listed in feats of Player, decrease MonsterAttraction by 2;
+	if "Bad Luck" is listed in feats of Player, increase MonsterAttraction by 2;
+	[Initial 20% chance of a random encounter; 10% for Stealthy people, 30% for those with Bad Luck]
+	if something is 0 and a random chance of (4 + MonsterAttraction) in 20 succeeds and battleground is not "void" and battleground is not "Smith Haven":
+		if there is a area of Battleground in the Table of Random Critters:
+			say "Setting out to explore your surroundings, you encounter another inhabitant of the city.";
+			now something is 1;
+			Fight;
+			[extra fight for hardcore players]
+			if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of Player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
+				say "As you are trying to recover from your last encounter, another roving creature finds you.";
+				Fight;
+	[Chance for new locations - increased by perception]
 	if something is 0 and a random number from 1 to 20 < ( bonus + 7 ) and there is an unknown fasttravel room and battleground is "Outside" and roomfirst is 1:
 		let L be a random unknown fasttravel not private room;
 		if L is not nothing:
@@ -4724,6 +4738,7 @@ This is the explore rule:
 			plot;
 			now battleground is "void";
 			wait for any key;
+	[Chance for new events - increased by perception]
 	if something is 0 and a random number from 1 to 20 < ( bonus + 8 ) and there is an active unresolved situation:
 		let L be a random available situation;
 		If L is not nothing:
@@ -4738,6 +4753,7 @@ This is the explore rule:
 			now battleground is "void";
 			wait for any key;
 	now inasituation is false;
+	[Chance for new locations - increased by perception]
 	if something is 0 and a random number from 1 to 20 < ( bonus + 7 ) and there is an unknown fasttravel room and battleground is "Outside" and roomfirst is 0:
 		let L be a random unknown fasttravel not private room;
 		if L is not nothing:
@@ -4748,16 +4764,6 @@ This is the explore rule:
 			plot;
 			now battleground is "void";
 			wait for any key;
-	if "Stealthy" is listed in feats of Player, decrease bonus by 2 plus (( the perception of the player minus 10 ) divided by 2);
-	if "Bad Luck" is listed in feats of Player, increase bonus by 1;
-	if something is 1 and blindmode is true, decrease bonus by 3; [already found something, so normal chance of a critter]
-	if a random number from 1 to 20 < 15 plus bonus and battleground is not "void":
-		if there is a area of Battleground in the Table of Random Critters:
-			now something is 1;
-			Fight;
-			if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of Player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
-				say "As you are trying to recover from your last encounter, another roving creature finds you.";
-				Fight;
 	if something is 0:
 		if battleground is "Smith Haven":
 			say "Wandering around a bit, stroll through the Smith Haven Mall, but don't find anything that really draws your attention right now.";
@@ -5410,7 +5416,7 @@ This is the self examine rule:
 	LineBreak;
 	LineBreak;
 	repeat with x running through equipped owned equipment:
-		if placement of x is "helm":
+		if placement of x is "head":
 			if descmod of x is "":
 				break;
 			else:
@@ -5428,7 +5434,31 @@ This is the self examine rule:
 			else:
 				say "[descmod of x] ";
 	repeat with x running through equipped owned equipment:
+		if placement of x is "body":
+			if descmod of x is "":
+				break;
+			else:
+				say "[descmod of x] ";
+	repeat with x running through equipped owned equipment:
 		if placement of x is "chest":
+			if descmod of x is "":
+				break;
+			else:
+				say "[descmod of x] ";
+	repeat with x running through equipped owned equipment:
+		if placement of x is "arms":
+			if descmod of x is "":
+				break;
+			else:
+				say "[descmod of x] ";
+	repeat with x running through equipped owned equipment:
+		if placement of x is "hands":
+			if descmod of x is "":
+				break;
+			else:
+				say "[descmod of x] ";
+	repeat with x running through equipped owned equipment:
+		if placement of x is "legs":
 			if descmod of x is "":
 				break;
 			else:
@@ -6888,6 +6918,7 @@ Include Joshiro by Wahn.
 Include J'Reth by Prometheus.
 Include Juergen by Wahn.
 Include Julian by Prometheus.
+Include Kai by WhiteRabbit.
 Include Kara by Sarokcat.
 Include Karen by AGentlemanCalledB.
 Include Krampus by Wahn.
@@ -7707,6 +7738,7 @@ to gendersetting:
 				now Clit Size of Player is 3; [average]
 				now Cock Count of Player is 0; [no pre-infection herms]
 				now Cock Length of Player is 0;
+				now Ball Size of Player is 0;
 			now calcnumber is -1; [resetting calcnumber for the main menu]
 		else if calcnumber is 5: [Cunt Tightness]
 			now calcnumber is -1;
@@ -8079,7 +8111,7 @@ to HairShapeSetting:
 			-- 2:
 				now Hair Shape of Player is "curly";
 			-- 3:
-				now Hair Shape of Player is "wavey";
+				now Hair Shape of Player is "wavy";
 		now menuexit is 1;
 
 

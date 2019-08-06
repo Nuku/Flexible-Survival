@@ -138,10 +138,9 @@ instead of conversing the Fancy:
 			now BodyName of Player is "Nightmare";
 			now Body of Player is "the strong and powerful body of a black stallion, with blood red hooves and hoof tipped hands, as well as a large chest and fully digitigrade equine legs. Your new body is amazingly responsive and powerful feeling, with almost unnatural amounts of energy surging through you constantly";
 			attributeinfect "Nightmare";
-			increase strength of Player by 4;
-			increase stamina of Player by 4;
-			increase charisma of Player by 4;
-			say "Your strength, stamina and charisma have all increased by 4!";
+			StatChange "Strength" by 4;
+			StatChange "Stamina" by 4;
+			StatChange "Charisma" by 4;
 		else:
 			say "'Any word back on the ingredients we need? Or the item that was ordered from her?' Fancy says with a hopeful smile as she looks up at you eagerly, and you feel rather embarrassed as you shake your head and she sighs unhappily. 'Well keep trying... We can't keep the plan from the Stablemaster much longer...' the white mare says with some disappointment as she goes back to her duties as head mare.";
 	else if fancyquest is 13:
@@ -347,10 +346,8 @@ To say nightmaremagic:
 		say "Holding the strange vial up, you once again gaze curiously at the strange whitish liquid, with its unusual black and red streaks, recalling both the rush of power and the strangely fascinating taste of the liquid from your last drink. Feeling rather adventurous, you eagerly toss back the liquid in one large drink, before gasping as the fiery sensation once more burns its way down your throat and spreads throughout your body. You feel a sense of power growing within you, and you find yourself grinning ferally for a minute, before the bones in your jaw begin to stretch and snap. You groan as the burning sensation spreads throughout your face, your bones reshaping as your forehead flattens out and your eyes shift positions. The sensation is surprisingly pleasant however, feeling much more like a building pressure instead of pain, as something inside you slowly presses outwards and reshapes your face to better match that of a proper equine. After several minutes, your face begins to settle down into its new configuration, and you give out a rather equine snort of relief from your new large nostrils, even as you explore your larger mouth and flat teeth with your tongue, and your new sharper eyes scan your surroundings noticing things about them you never saw before. Flicking your ears from side to side, you notice several black and red strands from your new mane have a tendency to fall into view, their shining colors going quite well with the dark black fur of your new equine face. Amused and eager to see your new face, you glance into a nearby reflective surface, only to blink in surprise as you see your bright red eyes now almost seem to burn with an inner light, just like that small reservoir of power within you burns brighter now as well.";
 		now FaceName of Player is "Nightmare";
 		now Face of Player is "rather sexy coal black equine muzzle stretching forward from your face, your broad forehead and mobile black equine ears sitting atop your new countenance are rather sexy as well. Although the most striking features of your new face have to be your eyes, which burn from within with an inner fire that is almost mesmerizing to look at, and the dark black and red mane of hair which spills down the back and sides of your head, the iridescent strands of black and red hair seeming to almost burn with your every movement as they frame your new face.";
-		increase perception of Player by 4;
-		say "[bold type]Your perception has increased by 4![roman type][line break]";
-		increase intelligence of Player by 3;
-		say "[bold type]Your intelligence has increased by 3![roman type][line break]";
+		StatChange "Perception" by 4;
+		StatChange "Intelligence" by 3;
 		now fancyquest is 10;
 		now nightmaretf is 2;
 		stop the action;
@@ -359,10 +356,8 @@ To say nightmaremagic:
 		now Skin of Player is "[one of]dark black[or]shimmering black furred[or]Nightmare[or]Coal black[or]midnight black furred[or]shadowy furred[at random]";
 		now SkinName of Player is "Nightmare";
 		now fancyquest is 13;
-		say "[bold type]Your charisma has increased by 4![roman type][line break]";
-		say "[bold type]Your stamina has increased by 4![roman type][line break]";
-		increase charisma of Player by 4;
-		increase stamina of Player by 4;
+		StatChange "Charisma" by 4;
+		StatChange "Stamina" by 4;
 		now nightmaretf is 3;
 		stop the action;
 

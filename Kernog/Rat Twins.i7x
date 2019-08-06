@@ -191,9 +191,9 @@ to say ErinFuckBottom:
 	WaitLineBreak;
 	say "     The pendulum movement of Erin's hips has him eventually point the tip of his cock against your [if Player is male or anallevel is 3]ass[else][cunt size desc of Player] pussy[end if]. Like a ram it pushes forward, parting your inner walls in one fluid movement. Erin groans in pleasure on top of you, and wastes no time pumping his pelvis into you. The room fills with the loud and rhythmic slaps of your two bodies slamming together; first distanced and wet, then rapid and dry as you wrap your legs around the rat's torso and squeeze him against your [breast size desc of Player] bosom[if isTwinHere is 1]. Violet pumps her finger inside her pussy, trying to follow the more and more frantic pace of her sibling. You cannot see her from your position, but her loud moans are a testimony to her current state of arousal[end if].";
 	if TailName of Player is not "Human":
-		say "     Erin keeps slamming into you. His tail is entangling with yours during the intercourse, and you can feel it rub against your [tail of Player] tail. You reach your respective climax nearly at the same time, and your muscles clench around his virile member, as he paints your [if Player is male or anallevel is 3]anal cavity[else]womb[end if] white with his seed[if isTwinHere is 1]. A long shrill tells you that Violet has cummed hard as well[end if].";
+		say "     Erin keeps slamming into you. His tail is entangling with yours during the intercourse, and you can feel it rub against your [tail of Player] tail. You reach your respective climax nearly at the same time, and your muscles clench around his virile member, as he paints your [if Player is male or anallevel is 3]anal cavity[else]womb[end if] white with his seed[if isTwinHere is 1]. A long shrill tells you that Violet has come hard as well[end if].";
 	else:
-		say "     Erin keeps slamming into you. You reach your respective climax nearly at the same time, and your muscles clench around his virile member, as he paints your [if Player is male or anallevel is 3]anal cavity[else]womb[end if] white with his seed[if isTwinHere is 1]. A long shrill tells you that Violet has cummed hard as well[end if].";
+		say "     Erin keeps slamming into you. You reach your respective climax nearly at the same time, and your muscles clench around his virile member, as he paints your [if Player is male or anallevel is 3]anal cavity[else]womb[end if] white with his seed[if isTwinHere is 1]. A long shrill tells you that Violet has come hard as well[end if].";
 	say "     You stay there for a while, Erin and you trying to catch back your breath. Eventually, the male rat parts away from you[if Player is male], his crotch covered with your own semen[end if], but not before giving you a languorous kiss on the lips. 'I need some rest, but you are more than welcome if you want to do it again,' the male rodent tells you, before helping you to stand up and giving your clothes back.";
 	if Player is male or anallevel is 3:
 		NPCSexAftermath player receives "AssFuck" from Erin;
@@ -541,9 +541,9 @@ Rat Twins Invitation is a situation.
 The sarea of Rat Twins Invitation is "Nowhere".
 
 instead of going to Restaurant while (Rat Twins Invitation is active and Rat Twins Invitation is not resolved and HP of Erin is 1):
-	move player to Restaurant;
 	move Erin to Restaurant;
 	move Violet to Restaurant;
+	move player to Restaurant;
 	say "     As you enter the restaurant, a pair of waving arms catch your attention. 'Hey, it's our good samaritan!' a familiar voice says. The two rats are here, just like the message said. They seem to have made a corner of the restaurant theirs: a pair of cots are rolled up next to the table, alongside a bag of supplies, and a map of the city is sprawled on the table, held together by empty glasses and a mustard pot.";
 	say "     'A good thing someone was as curious as us. Did you follow this [']pirate booty['] rumor too?' the brother says hurriedly.'";
 	say "     'Maybe he'd want your name first?' his sibling asks. 'Unless you still want to be known as [']Bro Rat['] around these parts.'";
@@ -565,13 +565,13 @@ Part D - Restaurant Events
 
 [Add additional scenes here]
 instead of going to Restaurant while HP of Erin >= 2:
+	move player to Restaurant;
 	if vorelevel >= 2 and ublevel >= 2 and Strange Island is not resolved:
 		say "[strangeIsland]";
 	else if a random chance of 1 in 3 succeeds:
 		say "[ratTwincest]";
 
 to say ratTwincest:
-	move player to Restaurant;
 	say "     As you enter the restaurant, you head towards Erin and Violet's shelter, to say hi. The siblings do not seem to be at their usual spot at the moment. However, the door to the nearby storage room is ajar, and light peers from the opening. You approach from the door, only to hear familiar voices on the other side. 'Oh... Oh, Erin.'";
 	say "     [bold type]Do you peep on the rodent twins?[roman type][line break]";
 	say "([link]Y[as]y[end link]) - This kind of show turns you on.";
@@ -596,7 +596,6 @@ Strange Island is a situation.
 The sarea of Strange Island is "Nowhere".
 
 to say strangeIsland:
-	move player to Restaurant;
 	if level of Erin is 0:
 		say "     As soon as you enter the restaurant, you see Erin and Violet wave at you with big gestures. 'Great timing,' the sister said. 'Get over here.' Intrigued, you follow her and, after greeting Erin, take a seat. 'Hear this,' the female rat said, visibly excited. 'Do you know about Vohr Island?'";
 		if Inner Predator is resolved:

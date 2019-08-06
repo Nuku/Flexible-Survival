@@ -1117,12 +1117,9 @@ to say WolfTeamManager:
 		wolfmaninfect;
 		increase score by 25;
 		if strength of Player < 20:
-			increase strength of Player by 1;
-			increase capacity of Player by 5;
-			say "Your [bold type]strength[roman type] has been increased by 1.";
+			StatChange "Strength" by 1;
 		else if charisma of Player < 20:
-			increase charisma of Player by 1;
-			say "Your [bold type]charisma[roman type] has been increased by 1.";
+			StatChange "Charisma" by 1;
 		else:
 			increase maxHP of Player by level of Player / 2;
 			say "Your maximum [bold type]HP[roman type] has been increased by [level of Player / 2].";

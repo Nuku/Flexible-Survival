@@ -411,10 +411,9 @@ instead of conversing Amuran:
 		say "     Finding Amuran still meditating in front of the pool of water, he does not notice your approach; or, if he does, refuses to show it. Going up beside the insect-man and tapping on his plated shoulder, you wait patiently for Amuran to respond to your prodding. Soon enough, he turns to regard you, patiently letting you speak your mind. Digging into your bag and pulling out the emerald-colored metal scarab, Amuran's black eyes immediately focus on the conduit lying in your hands. Presenting the powerful object to him, you give him the mystical object, returning it to him.";
 		say "     Swiftly rising to his feet, Amuran slowly brings his chitinous hands to rest on the gleaming scarab; the metal sigil immediately releases a blast of white light, visually exploding in the warm air of the sanctuary. When your vision returns, the sigil is gone! Amuran still stands in front of you, however; releasing a long, contented sigh, you can tell he's quite pleased with the turn of events.";
 		say "     'Many thanks to you, young one, for returning that which was lost. I have little of value to you, but power should suffice.' Instantly bringing a plated hand to your head, you feel energy surge through you, overwhelming your mind. Mere seconds later, you feel Amuran's hand leave your head; you take a few moments to steady yourself and figure out what was done to you. You think that he gave you some sort of divine ability; you feel much stronger mentally!";
-		say "[bold type]     Your perception, intelligence, and charisma have all increased by 1![roman type]";
-		increase charisma of Player by 1;
-		increase intelligence of Player by 1;
-		increase perception of Player by 1;
+		StatChange "Charisma" by 1;
+		StatChange "Intelligence" by 1;
+		StatChange "Perception" by 1;
 		increase lust of Amuran by 1;
 		decrease carried of jade scarab by 1;
 	else if carried of winged sun is 1:
@@ -422,9 +421,9 @@ instead of conversing Amuran:
 		say "     Rapidly closing his chitinous hands over his sigil, beams of light begin to emanate from the emblem, shining out brilliantly in the warm air surrounding you. In a few seconds, a blast of orange light shoots out from the shining emblem; as the light fades, it seems that the sigil is gone. Standing in front of you is a contented-looking Amuran, stretching out happily in the shining rays of the sun.";
 		say "     'I extend my thanks to you, mortal, for bringing back that which belongs to me. There is nothing physical that I can give you in return, but I hope that power should do.' Rapidly putting an insectoid hand to your head, you feel bolts of divine energy shoot through you, soon overpowering your senses. Only seconds later, the bursts of energy end; Amuran removes his hand, and you take a few moments to gather your thoughts. Looking over yourself, you feel stronger, faster; it seems as if you were given a small blessing!";
 		say "[bold type]     Your strength, dexterity, and stamina have all increased by 1![roman type]";
-		increase strength of Player by 1;
-		increase dexterity of Player by 1;
-		increase stamina of Player by 1;
+		StatChange "Strength" by 1;
+		StatChange "Dexterity" by 1;
+		StatChange "Stamina" by 1;
 		increase lust of Amuran by 1;
 		decrease carried of winged sun by 1;
 	else if lust of Amuran is 2:

@@ -185,13 +185,11 @@ Instead of resolving a Hyena Challenge:
 			now NermineTalk is 3;
 			now RareQuesting is 9;
 			LineBreak;
-			say "[bold type]Your charisma has increased by 2![roman type][line break]";
-			increase charisma of Player by 2;
+			StatChange "Charisma" by 2;
 			now Hyena Challenge is resolved;
 		else:
 			say "     Following the trail of clues leads you to the edges of the territory claimed by the gang of herm hyenas and though you are pretty sure they have what you are looking for somewhere in their territory, you have no clue where to begin your search. It seems pretty obvious that you are going to need to ask some of the gang members for help in that regards, although you doubt they will cooperate without a fight. After some searching you do manage to find a pair of the anthro hermaphrodites lounging around the area, and while they seem friendly enough at first as they try to convince you to join their gang, their mood swiftly changes when they realize you have other plans. Changing their behavior in an instant, they turn and attack, striking at you before you can respond!";
-			say "[bold type]You lose 15 HP![roman type][line break]";
-			decrease HP of Player by 15;
+			PlayerWounded 15;
 			let HyenaFightCounter be 0;
 			now fightoutcome is 0; [reset]
 			while fightoutcome < 20 and HyenaFightCounter < 2: [runs for 2 times or until the player loses or flees]
@@ -427,8 +425,7 @@ Instead of resolving a Twisted fruit grove:
 		say "     Blinking, you realize how narrowly you avoided the plant's trap - if you had been as unsuspecting as the large predatory cat was, you probably would already be completely trapped by now. But then of course... you also realize the felinoid has just provided you with a perfect distraction. All of the greenery is busy with him, giving you the best chance you'll ever get to snatch up some of the fruit Nermine desires! Before you can stop to think, you dart through the curtain of hanging vines, which try to cling to and rip at you as you push through them, almost as if sensing your purpose. Quickly charging across the glade at a run, you pull the basked from where you had it strapped to your back, your eyes on the fruit hanging temptingly from the tree. The large plant sways its branches as you near it, its leaves rustling in alarm, followed by what seems to be a commanding creak and crack of the wood.";
 		say "     Reacting to the commotion, part of the more mobile plant creatures focus their attention more on you, with one or two actually letting go of the felinoid and sending their writhing tendrils worming your way. Glancing their way, you feel cautiously confident that you can make the snatch and grab before they intercept you - and you would have... if the tree hadn't forced a snare-like root through the surface at that moment. Catching your ankle, it tips you up and causes you to sprawl painfully across the ground just a little bit away from your goal. You roll over and prepare for a fight as the vines begins reach you several heartbeats later, intending to entrap you.";
 		LineBreak;
-		say "[bold type]You lose 25 HP![roman type][line break]";
-		decrease HP of Player by 15;
+		PlayerWounded 15;
 		let PlantFightCounter be 0;
 		now fightoutcome is 0; [reset]
 		while fightoutcome < 20 and PlantFightCounter < 3: [runs for 3 times or until the player loses or flees]
@@ -651,8 +648,7 @@ To say jackalankhmagic:
 		now tail of Player is "You have a long sleek jackal's tail attached to your rear, it seems to sway happily over your thickly muscled ass in a predatory manner as you move.";
 		say "[bold type]You lose a strange ankh![roman type][line break]";
 		now carried of strange ankh is 0;
-		say "[bold type]Your dexterity has increased by 4![roman type][line break]";
-		increase dexterity of Player by 4;
+		StatChange "Dexterity" by 4;
 		now RareQuesting is 4;
 		now JackalManTF is 1;
 		stop the action;
@@ -663,13 +659,8 @@ To say jackalankhmagic:
 		now SkinName of Player is "Jackalman";
 		say "[bold type]You lose a strange ankh![roman type][line break]";
 		now carried of strange ankh is 0;
-		say "[bold type]Your charisma has increased by 3![roman type][line break]";
-		increase charisma of Player by 3;
-		say "[bold type]Your stamina has increased by 3![roman type][line break]";
-		increase stamina of Player by 3;
-		increase maxHP of Player by level of Player plus 1;  [guaranteed HP boost once]
-		if remainder after dividing stamina of Player by 2 is 0:
-			increase maxHP of Player by level of Player plus 1;  [potential second boost]
+		StatChange "Charisma" by 3;
+		StatChange "Stamina" by 3;
 		now RareQuesting is 7;
 		now JackalManTF is 2;
 		stop the action;
@@ -682,10 +673,8 @@ To say jackalankhmagic:
 		now statuequest is 1;
 		say "[bold type]You lose a strange ankh![roman type][line break]";
 		now carried of strange ankh is 0;
-		say "[bold type]Your charisma has increased by 4![roman type][line break]";
-		increase charisma of Player by 4;
-		say "[bold type]Your perception has increased by 4![roman type][line break]";
-		increase perception of Player by 4;
+		StatChange "Charisma" by 4;
+		StatChange "Perception" by 4;
 		now JackalManTF is 3;
 		stop the action;
 	if JackalManTF is 3:
@@ -701,11 +690,8 @@ To say jackalankhmagic:
 		now Cock of Player is "[one of]canine[or]jackalman[or]jackal-like[or]knotted[at random]";
 		say "[bold type]You lose a strange ankh![roman type][line break]";
 		now carried of strange ankh is 0;
-		say "[bold type]Your strength has increased by 4![roman type][line break]";
-		increase strength of Player by 4;
-		increase capacity of Player by 20;
-		say "[bold type]Your dexterity has increased by 2![roman type][line break]";
-		increase dexterity of Player by 2;
+		StatChange "Strength" by 4;
+		StatChange "Dexterity" by 2;
 		now JackalManTF is 4;
 	if JackalManTF is 5:
 		say "     You examine the strange ankh in your hand, but it seems to slip out of your fingers. When you look for it, you can't seem to find it. Oh well, you'd already asked Nermine to reverse its effects, so that's probably for the best.";

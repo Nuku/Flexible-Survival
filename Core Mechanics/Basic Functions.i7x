@@ -223,7 +223,7 @@ carry out NPCSexAftermathAction:
 to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (GivingChar - a person):
 	if GivingChar is player:
 		if debugactive is 1:
-			say "DEBUG -> Player is the giving partner[line break]";
+			say "DEBUG -> Player is the giving partner for '[SexAct]'[line break]";
 		if PlayerFucked of TakingChar is false: [player never had sex with this NPC]
 			now PlayerFucked of TakingChar is true; [player sexed up this NPC]
 		if SexAct is "AssFuck":
@@ -264,7 +264,7 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				add printed name of TakingChar to OralVirginitiesTaken of Player;
 	else if TakingChar is player:
 		if debugactive is 1:
-			say "DEBUG -> Player is the receiving partner[line break]";
+			say "DEBUG -> Player is the receiving partner for '[SexAct]'[line break]";
 		if PlayerFucked of GivingChar is false: [player never had sex with this NPC]
 			now PlayerFucked of GivingChar is true; [player sexed up this NPC]
 		if SexAct is "AssFuck":
@@ -372,7 +372,7 @@ carry out CreatureSexAftermathAction:
 to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) from (GivingCharName - a text):
 	if GivingCharName is "Player":
 		if debugactive is 1:
-			say "DEBUG -> Player is the giving partner[line break]";
+			say "DEBUG -> Player is the giving partner for '[SexAct]'[line break]";
 		if SexAct is "AssFuck":
 			if PenileVirgin of Player is true:
 				now PenileVirgin of Player is false;
@@ -383,7 +383,7 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 				say "     [Bold Type]You have lost your penile virginity fucking the [TakingCharName in lower case]![roman type][line break]";
 	else if TakingCharName is "Player":
 		if debugactive is 1:
-			say "DEBUG -> Player is the receiving partner[line break]";
+			say "DEBUG -> Player is the receiving partner for '[SexAct]'[line break]";
 		if SexAct is "AssFuck":
 			if AnalVirgin of Player is true:
 				now AnalVirgin of Player is false;
@@ -424,24 +424,58 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 		let TakingCharIsNPC be 0;
 		let GivingChar be a person;
 		let TakingChar be a person;
+		if there is a name of GivingCharName in the Table of GameCharacterIDs:
+			now GivingChar is the object corresponding to a name of GivingCharName in the Table of GameCharacterIDs;
+			now GivingCharIsNPC is 1;
+		if there is a name of TakingCharName in the Table of GameCharacterIDs:
+			now TakingChar is the object corresponding to a name of TakingCharName in the Table of GameCharacterIDs;
+			now TakingCharIsNPC is 1;
+		if GivingCharIsNPC is 0 and TakingCharIsNPC is 0:
+			say "Error: The CreatureSexAftermath function should include at least one NPC if it is used. Please report this on the FS Discord and quote this full message. Giving Char: '[GivingCharName]' Taking Char: '[TakingCharName]'";
 		if debugactive is 1:
-			if there is a name of GivingCharName in the Table of GameCharacterIDs:
-				now GivingChar is the object corresponding to a name of GivingCharName in the Table of GameCharacterIDs;
-				now GivingCharIsNPC is 1;
-				say "GivingCharName: [GivingCharName], GivingCharIsNPC: [GivingCharIsNPC]";
-			if there is a name of TakingCharName in the Table of GameCharacterIDs:
-				now TakingChar is the object corresponding to a name of TakingCharName in the Table of GameCharacterIDs;
-				now TakingCharIsNPC is 1;
-				say "TakingCharName: [TakingCharName], TakingCharIsNPC: [TakingCharIsNPC]";
-			if GivingCharIsNPC is 0 and TakingCharIsNPC is 0:
-				say "Error: The CreatureSexAftermath function should include at least one NPC if it is used. Please report this on the FS Discord and quote this full message. Giving Char: '[GivingCharName]' Taking Char: '[TakingCharName]'";
-
+			say "GivingCharName: [GivingCharName], GivingCharIsNPC: [GivingCharIsNPC]";
+			say "TakingCharName: [TakingCharName], TakingCharIsNPC: [TakingCharIsNPC]";
+		if GivingCharIsNPC is 1:
+			if SexAct is "AssFuck":
+				if PenileVirgin of GivingChar is true:
+					now PenileVirgin of GivingChar is false;
+					say "     [Bold Type][GivingCharName] has lost their penile virginity fucking the [TakingCharName in lower case]'s ass![roman type][line break]";
+			else if SexAct is "PussyFuck":
+				if PenileVirgin of GivingChar is true:
+					now PenileVirgin of GivingChar is false;
+					say "     [Bold Type][GivingCharName] has lost their penile virginity fucking the [TakingCharName in lower case]![roman type][line break]";
+		else: [NPC takes]
+			if SexAct is "AssFuck":
+				if AnalVirgin of TakingChar is true:
+					now AnalVirgin of TakingChar is false;
+					say "     [Bold Type][TakingCharName] has lost their anal virginity to [GivingCharName in lower case]![roman type][line break]";
+					now FirstAnalPartner of TakingChar is GivingCharName;
+			else if SexAct is "PussyFuck":
+				if Virgin of TakingChar is true:
+					now Virgin of TakingChar is false;
+					say "     [Bold Type][TakingCharName] has lost their virginity to [GivingCharName in lower case]![roman type][line break]";
+					now FirstVaginalPartner of TakingChar is GivingCharName;
+			else if SexAct is "AssDildoFuck":
+				if AnalVirgin of TakingChar is true:
+					now AnalVirgin of TakingChar is false;
+					say "     [Bold Type][TakingCharName] has lost their anal virginity to [GivingCharName]![roman type][line break]";
+					now FirstAnalPartner of TakingChar is GivingCharName;
+			else if SexAct is "PussyDildoFuck":
+				if Virgin of TakingChar is true:
+					now Virgin of TakingChar is false;
+					say "     [Bold Type][TakingCharName] has lost their virginity to [GivingCharName]![roman type][line break]";
+					now FirstVaginalPartner of TakingChar is GivingCharName;
+			else if SexAct is "OralCock" or SexAct is "OralPussy":
+				if OralVirgin of TakingChar is true:
+					now OralVirgin of TakingChar is false;
+					say "     [Bold Type][TakingCharName] has lost their oral virginity to [GivingCharName in lower case]![roman type][line break]";
+					now FirstOralPartner of TakingChar is GivingCharName;
 
 to StatChange (Statname - a text) by (Value - a number):
 	if Value is 0:
 		say "ERROR: You just got a 0 point stat change. Please report on the FS Discord how you saw this.";
 	now Statname is Statname in lower case;
-	say "[bold type]Your [statname] has [if Value > 0]in[else]de[end if]creased by [value]![roman type][line break]";
+	say "[bold type]Your [statname] has [if Value > 0]in[else]de[end if]creased by [absolute value of Value to the nearest whole number]![roman type][line break]";
 	if Statname is:
 		-- "strength":
 			increase strength of Player by Value;
@@ -450,6 +484,13 @@ to StatChange (Statname - a text) by (Value - a number):
 			increase dexterity of Player by Value;
 		-- "stamina":
 			increase stamina of Player by Value;
+			if Value > 0:
+				if remainder after dividing stamina of Player by 2 is 0:
+					increase maxHP of Player by (Value / 2 + 1) * (level of Player + 1);
+			else:
+				if remainder after dividing stamina of Player by 2 is 1:
+					decrease maxHP of Player by (Value / 2 + 1) * (level of Player + 1);
+					if HP of Player > maxHP of Player, now HP of Player is maxHP of Player;
 		-- "charisma":
 			increase charisma of Player by Value;
 		-- "intelligence":

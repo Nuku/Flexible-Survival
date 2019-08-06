@@ -1907,7 +1907,7 @@ instead of going up from Bunker while (Helen is in the Grey Abbey Library and la
 		now Libido of Helen is 3;           [...by the Felinoid]
 		now HelenPregnant is 1;             [pregnancy timer]
 
-instead of going up from Bunker while (Helen is in the Grey Abbey Library and lastfuck of Helen - turns > 5 and (HP of Helen is 1 or HP of Helen is 11) and Fang is in the Grey Abbey Library and lastfuck of Fang - turns > 7 and ( HP of Fang is 1 or HP of Fang is 2 ) ):
+instead of going up from Bunker while (Helen is in the Grey Abbey Library and lastfuck of Helen - turns > 5 and (HP of Helen is 1 or HP of Helen is 11) and Fang is in the Grey Abbey Library and lastfuck of Fang - turns > 7 and ( HP of Fang is 1 or HP of Fang is 2 or HP of Fang is 3 or HP of Fang is 4 ) ):
 	move player to Grey Abbey Library;
 	if (HP of Fang is 1 or HP of Fang is 2): [Beta Fang]
 		say "     As you emerge from the underground bunker and step back into the library, you notice that Fang isn't at his spot next to the door. Wary of unannounced visitors, you look around for signs of a fight or any other indication of what happened. Nothing out of the ordinary in sight. Then you hear something from further back in the rows of bookshelves - growling.";

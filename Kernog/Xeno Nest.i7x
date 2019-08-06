@@ -171,11 +171,11 @@ to xenoLoot:
 	if Player consents:
 		LineBreak;
 		say "[bold type]You gain 1 food![roman type][line break]";
-		increase carried of water bottle by 2;
+		increase carried of food by 1;
 	else:
 		LineBreak;
 		say "[bold type]You gain 1 water bottle![roman type][line break]";
-		increase carried of water bottle by 2;
+		increase carried of water bottle by 1;
 
 Section 3 - Bound State
 

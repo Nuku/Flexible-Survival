@@ -120,7 +120,7 @@ Sailor Outfit is equipment.
 Sailor Outfit is not temporary.
 The AC of Sailor Outfit is 10.
 The effectiveness of Sailor Outfit is 40.
-The placement of Sailor Outfit is "body".
+The placement of Sailor Outfit is "chest".
 The descmod of Sailor Outfit is "A simple yet magical sailor outfit rests over your body.".
 The slot of Sailor Outfit is "body".
 
