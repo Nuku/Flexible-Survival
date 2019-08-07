@@ -12,12 +12,12 @@ an everyturn rule:
 			if WellRestedTimer <= 0:
 				FeatLoss "Well Rested";
 				say "     It has been a while since you last rested and any benefit you gained from it is now gone. You have lost the 'Well Rested' Feat, and all stats have decreased by 2 as a result.";
-				decrease strength of Player by 2;
-				decrease dexterity of Player by 2;
-				decrease stamina of Player by 2;
-				decrease charisma of Player by 2;
-				decrease intelligence of Player by 2;
-				decrease perception of Player by 2;
+				StatChange "Strength" by -2;
+				StatChange "Dexterity" by -2;
+				StatChange "Stamina" by -2;
+				StatChange "Charisma" by -2;
+				StatChange "Intelligence" by -2;
+				StatChange "Perception" by -2;
 			else:
 				decrease WellRestedTimer by 1;
 		else: [Not slept recently, getting tired.]
