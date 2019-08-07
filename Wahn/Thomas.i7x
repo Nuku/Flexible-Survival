@@ -63,6 +63,7 @@ Instead of resolving a Centaur Gangbang:
 	WaitLineBreak;
 	say "     'Look Raul, we caught ourselves a pervert. He was watching you fuck Sandy,' one of the centaurs tells the stallion still fucking the female. The other one holding their captive adds, 'Let's give him some action - another mare to share between us would be great to have.' They quickly strip the still somewhat dazed man naked, then lower him to the ground on all fours. Pulling his cheeks aside and pushing a finger inside the black man's ass, one of the centaurs remarks, 'Man, he's really tight... might be best if you go first, Raul - to get him wet, you now.'";
 	say "     With a sigh and a slurping noise, Raul the centaur pulls his long horsecock out of Sandy, then walks over to the captured human. His black shaft glistens in the [if daytimer is day]sunlight[else]moonlight[end if] with the mare's juices literally dripping from it. As one of his buddies takes his spot fucking the mare, he lines up his long shaft with the human's ass, then thrusts his flared head in deep.";
+	CreatureSexAftermath "Thomas" receives "AssFuck" from "Centaur Stallion";
 	LineBreak;
 	say "     The semiconscious man's gasps as he's penetrated from behind bring you back to reality from your sexually induced stupor.";
 	say "     [bold type]Can you really just stand here and watch this man get raped by those centaurs?[roman type][line break]";
@@ -144,6 +145,7 @@ to say LoseToCentaurs:
 	say "     Meanwhile Raul keeps fucking the black man with deep thrusts and soon he gives a lust-filled shout as he fills the human's ass with creamy centaur cum. Danny the centaur calls to him 'Wanna switch? I want to fuck that hole too and my bitch can clean you up.' Grinning, Raul agrees and pulls out of the human's ass with a wet slurping sound, then walks over to you and takes Danny's place. Presented with his long cock wet with the mare's juices and his cum, you take hold of it and start licking it all up. Grunts and moans from somewhere nearby tell you when Danny plunges his shaft into the black man's freshly fucked hole and starts thrusting...";
 	WaitLineBreak;
 	say "     The three centaurs take turns fucking the mare and human male, as well as getting blowjobs from you. Before too much longer, it's two mares as their other captive transforms further and further with each load of cum dumped into his hole. Soon he's fully female, sporting a nice pair of breasts and a deep pussy undoubtedly already bearing a developing foal. Finally when they are too exhausted to get their cocks up another time, the stallions have a short discussion if they should take you along too. 'Nah, we've got enough to do keeping an eye on this mare' - Raul says and slaps the former black man's equine ass and laughs as she whinnies - 'while we fully train her. Taking two and having them both run off in the night would just be stupid.' They herd their well-fucked mares away from the ruins, out into the wide plains where you lose sight of them. You're left behind, covered in centaur cum drying on your skin.";
+	CreatureSexAftermath "Player" receives "OralCock" from "Centaur Stallion";
 	infect "Centaur Mare"; [from the pussy juices]
 	infect "Centaur Stallion";
 	infect "Centaur Stallion";
@@ -182,7 +184,7 @@ PlayerControlled of Thomas is false.
 PlayerFucked of Thomas is false.
 OralVirgin of Thomas is false.
 Virgin of Thomas is true.
-AnalVirgin of Thomas is false.
+AnalVirgin of Thomas is true.
 PenileVirgin of Thomas is false.
 SexuallyExperienced of Thomas is true.
 MainInfection of Thomas is "Centaur Stallion".
@@ -727,6 +729,7 @@ to say ThomasSex1: [cock sucked by Thomas]
 	say "     Walking up to Thomas, you run your hands over his muscular chest, then pull his lips to yours for a kiss. After coming back up for air, you whisper 'You know what would be hot...' and pull Thomas's hands down to your crotch '...you sucking off my cock.' Smiling, Thomas pulls out your hard [Cock of Player] cock, pumping it in his hand. 'You know, just a short while ago I'd never have dreamed I'd be sucking someone off willingly. But I like getting you off, and anyways I owe you for saving my ass.'";
 	LineBreak;
 	say "     With that, he leans over and takes your shaft in his mouth, bobbing up and down on it. Being a man, he knows how to handle a cock and what you need, so the blowjob that follows is pretty amazing. Bringing you to the edge of cumming several times, then allowing you to catch your breath to prolong the experience, he has you highly wound up and aching to cum when he finally goes all out. You're deep in Thomas throat with his nose pressed against your crotch when you finally cum, squirting cum right into his stomach. The black centaur pulls back a bit before you're completely done so he can taste your seed, then shows it to you on his tongue and swallows it too.";
+	NPCSexAftermath Thomas receives "OralCock" from Player;
 	infect "Centaur Stallion";
 
 to say ThomasSex2: [sucking Thomas cock]
@@ -734,12 +737,14 @@ to say ThomasSex2: [sucking Thomas cock]
 	LineBreak;
 	say "     In no time at all your taur friend is moaning, then gasping in pleasure as you speed up your stroking him and bring your tongue into play, running it up the side of his cock. Arriving at the tip, you lick over the cock's flared head. Doing your best to fit his cockhead into your mouth, you stroke Thomas long cock with both hands. Under your skillful stimulation, it doesn't take long until you hear the centaur shout 'Ah - I'm getting real close!' quickly followed by his horsecock pulsing in your hand. The first two huge squirts of his cum are enough to fill your mouth, and while you swallow all that, he continues blasting away, further cumshots painting your face and chest in white.";
 	say "     As you stand up again and Thomas sees you, he grins and gives you a deep kiss, tasting his own sperm on your lips. 'Sorry for the mess. I've always shot big loads, and with these big stallion balls...'";
+	NPCSexAftermath Player receives "OralCock" from Thomas;
 	infect "Centaur Stallion";
 
 to say ThomasSex3: [cunt licked by Thomas]
 	say "     Walking up to Thomas, you run your hands over his muscular chest, then pull his lips to yours for a kiss. After coming back up for air, you whisper 'You know what would be hot...' and pull Thomas's hands down to your crotch '...you licking my pussy.' Smiling, Thomas peels off your clothes and starts stroking over your nether lips. 'As you wish. How about we lie down over there.'";
 	LineBreak;
 	say "     As you lie down, Thomas gets into position in front of you, then kneels so he can reach you when leaning forward with his upper body. He fondles you for a moment with his fingers, then spreads your pussy lips and starts to lick. Wow, he's got quite a long and talented tongue, your black centaur friend. Licking leads to soft sucking on your clit, then him pushing his tongue into your vagina. Then he goes back to pushing his fingers inside you, massaging your sensitive inner walls. With Thomas expertly masturbating your pussy, he brings you to the brink of orgasm time and again, then pulls back a bit until you've calmed down. Then after you don't know how long in a lustful haze, he takes out all the stops and just keeps going until you come, shouting in satisfaction as your whole body trembles in orgasm.";
+	NPCSexAftermath Thomas receives "OralPussy" from Player;
 	infect "Centaur Mare";
 
 to say ThomasSex4: [Thomas cunt licked/fingered]
@@ -749,6 +754,7 @@ to say ThomasSex4: [Thomas cunt licked/fingered]
 	say "     As he comes down from his orgasm high, you step up to Thomas and pull him into a kiss. In between making out vigorously, he says 'Having a pussy feels great! Thanks for talking me into this.'";
 	if HP of Thomas is 2:
 		now HP of Thomas is 3; [now he's ready for mare sex]
+	NPCSexAftermath Player receives "OralPussy" from Thomas;
 	infect "Centaur Stallion";
 
 to say ThomasSex5: [Thomas pussy fucked by player]
@@ -764,6 +770,7 @@ to say ThomasSex5: [Thomas pussy fucked by player]
 		say "     Soon, the wild ride you're giving him pushes the centaur herm over the edge and he orgasms, his pussy becoming even slicker with lots of femcum and a massive load gushing onto the ground out of his erect horsecock. Making him come gives your own arousal a big push, so you're not far behind, sinking your hard shaft deep inside Thomas's body one last time as a familiar tingle awakens in your balls. Then you come, spurt after spurt of your fertile seed jetting into the centaur herm's vagina and flooding his womb with cum.";
 	LineBreak;
 	say "     The both of you coming down from your orgasm highs, Thomas moves around to take you into his arms and kisses you. In between making out vigorously, he says 'I love having you fuck me. Thanks for talking me into this.'";
+	NPCSexAftermath Thomas receives "PussyFuck" from Player;
 	infect "Centaur Stallion";
 	if HP of Thomas is 3 and a random chance of 1 in 3 succeeds:
 		now HP of Thomas is 4; [knocked up by the player]
@@ -776,6 +783,7 @@ to say ThomasSex6: [player's pussy fucked by Thomas]
 	say "     After giving you a moment's rest he goes on fucking, tirelessly pounding his manhood into you. Soon, you're all hot and worked up again, moaning loudly with each of his thrusts. Thomas's long horsecock rubs you in all the right places, and before much longer, he drives you over the edge again, orgasming a second time. As you gasp in lust, he says 'Like that, baby? I'm gonna fill you up now.' That said, he relaxes his self-restraint, plunging in deep a few more times before his cock starts to pulse with spurt after spurt of centaur cum shooting directly into your womb[if gestation of Child is 0]. With the amount of Thomas seed creating a noticeable bulge in your belly, it's almost as if you're pregnant already[end if].[fimpregchance][fimpregchance]";
 	LineBreak;
 	say "     After he finally stops coming a while later, Thomas pulls his shaft out and quite a bit of his cum gushes out of your open hole to drip on the ground below. He steps to the side to allow you to stand up, then puts his arms around you and pulls you in for a kiss. In between making out vigorously, he says 'You liked the horse-dong, didn't you? At least that's one plus of this whole transformation business. Not that I had any problems before, but this tool is something else...'";
+	NPCSexAftermath Player receives "PussyFuck" from Thomas;
 	infect "Centaur Mare";
 
 to say ThomasSex7: [fingering Thomas ass]
@@ -796,6 +804,7 @@ to say ThomasSex8: [fucking Thomas ass]
 	say "     Soon, the wild ride you're giving him pushes the centaur over the edge and he orgasms, his sphincter gripping your shaft like a vise as a huge load of cum gushes from his horsecock onto the ground, creating a small puddle. With Thomas's hot hole tight around your cock and creating breathtaking sensations as you fuck him, you soon feel a familiar tingle rise in your balls. Plunging in one last time, you grind your hips against his equine rump and hold on tight as you come, shooting burst after burst of cum deep into his asshole.";
 	LineBreak;
 	say "     The both of you coming down from your orgasm highs, Thomas moves around to take you into his arms and kisses you. In between making out vigorously, he says 'I love having you fuck me. Thanks for talking me into this.'";
+	NPCSexAftermath Thomas receives "AssFuck" from Player;
 	infect "Centaur Stallion";
 
 to say ThomasSex9: [player's ass fucked by Thomas]
@@ -806,6 +815,7 @@ to say ThomasSex9: [player's ass fucked by Thomas]
 	say "     'Man, your ass is so hot and tight around my shaft. Makes me totally regret not accepting all my gay buddy Orin's offers when we were out partying.' Eager to experience everything you have to give, Thomas thrusts deep and holds still for a moment, reveling in the feeling of having his shaft buried in your insides. Then he starts up fucking in and out again, tirelessly pounding your ass. Accompanied by the slapping noises of his balls hitting your cheeks, your arousal quickly mounts. Before much longer, you moan loudly and [if Player is male]spray your seed all over the ground below[else if Player is female]drip copious amounts of femcum onto the ground[else]shudder in orgasm[end if]. As you gasp in lust, Thomas says 'Like that, baby? I'm gonna fill you up now.' That said, he relaxes his self-restraint, plunging in deep a few more times before his cock starts to pulse with spurt after spurt of centaur cum shooting deep into you[if gestation of Child is 0]. With the amount of Thomas seed creating a noticeable bulge in your belly, it looks almost as if you're pregnant right now[end if].[mimpregchance][mimpregchance]";
 	LineBreak;
 	say "     After he finally stops coming a while later, Thomas pulls his shaft out and quite a bit of his cum gushes out of your open hole to drip on the ground below. He steps to the side to allow you to stand up, then puts his arms around you and pulls you in for a kiss. In between making out vigorously, he says 'You liked the horse-dong, didn't you? At least that's one plus of this whole transformation business. Not that I had any problems before, but this tool is something else...'";
+	NPCSexAftermath Player receives "AssFuck" from Thomas;
 	infect "Centaur Stallion";
 
 Section 4 - Endings

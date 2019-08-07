@@ -21,7 +21,7 @@ the description of Abandoned Lot is "[LotDesc]".
 
 to say LotDesc:
 	say "In the industrial park on the outskirts of town, you find yourself in a vacant lot, filled with weeds and gravel. Even before the nanite outbreak, this place clearly off the beaten path and ill-used. Bordering the lot are a series of broken-down, graffiti-colored warehouses. Old 'Authorized Personnel Only' signs lay on the ground.";
-	say "A road leads east between the buildings. You can make out the entrance to a junkyard there";
+	say "A road leads east between the buildings. You can make out the entrance to a junkyard there.";
 
 Warehouse Door is a door. "[if the player is in Abandoned Lot]One of the warehouses has an entrance that is cleared of overgrowth. You can see footprints - human footprints, in fact! - leading up to it[else]There are many doors along the wall, but the only one open to you is the one leading outside[end if].";
 

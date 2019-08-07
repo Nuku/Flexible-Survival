@@ -67,7 +67,7 @@ Section 2 - Events
 
 Part 1 - Intro
 
-after going to Public Beach while (HP of Kai is 0):
+after going to Public Beach while (HP of Kai is 0 and a random chance of 1 in 3 succeeds):
 	say "     Walking to the entrance of the beach, you take a deep breath in, to smell the aromatic scent of the ocean. It draws you in, and you find you take your shoes off to feel the sand between your toes. You make your way over to the shore to walk along-side the ocean water, feeling the cool current run over your feet. Looking out to the ocean, you can see gigantic, crystal clear waves forming and crashing in the distance, the sunlight's reflection off the water creates a sparkling light that's almost blinding. The light makes your eyes start to water, making them close tight, when all of a sudden, you hear what sounds like a man hollering in excitement.";
 	say "     Opening your eyes and can see a tanned man on a surfboard, riding a huge wave that had just formed. The surfer seems to be riding the wave perfectly, when suddenly, he wipes out and disappears into the water. The waves die down and you watch worryingly for the surfer to come back to the surface. You scan all over the ocean water for the man, but see no signs of him anywhere, and everyone on the beach hasn't seemed to notice. While you're searching the ocean for the surfer, you wonder what to do? You could jump into the water and possibly save his life or just continue on your way, what will you do?";
 	LineBreak;
