@@ -102,6 +102,14 @@ to TextVariableSave:
 	if CurrentVariableName is:
 		-- "PronounChoice":
 			now TextVarValue entry is PronounChoice of Player;
+		-- "PetMuttBreed":
+			now TextVarValue entry is PetMuttBreed;
+		-- "PetMuttName":
+			now TextVarValue entry is PetMuttName;
+		-- "PetMuttColor":
+			now TextVarValue entry is PetMuttColor;
+		-- "PetMuttDetailedlook":
+			now TextVarValue entry is PetMuttDetailedlook;
 		-- "battleground":
 			now TextVarValue entry is battleground;
 		-- "bcfinalchairform":
@@ -3773,6 +3781,14 @@ to VariableTextLoad:
 			if TextVarName entry is:
 				-- "PronounChoice":
 					now PronounChoice of Player is TextVarValue entry;
+				-- "PetMuttBreed":
+					now PetMuttBreed is TextVarValue entry;
+				-- "PetMuttName":
+					now PetMuttName is TextVarValue entry;
+				-- "PetMuttColor":
+					now PetMuttColor is TextVarValue entry;
+				-- "PetMuttDetailedlook":
+					now PetMuttDetailedlook is TextVarValue entry;
 				-- "battleground":
 					now battleground is TextVarValue entry;
 				-- "bcfinalchairform":

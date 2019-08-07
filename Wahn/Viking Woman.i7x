@@ -776,7 +776,10 @@ to say VikingDesc:
 		say "     Error: The vikings should have left the area since you didn't snow up for the duel with their chief. Please report how you saw this.";
 
 to say VikingWomanAttacks:
-	say "[one of]She lands a shallow cut on you. Luckily, she's not trying to kill you, or she could have skewered you there...[or]The Viking woman slaps the broad side of her sword against your head, leaving you seeing stars for a moment.[or]A sudden kick against the side of your leg leaves you numb and weakened.[or]She slams her shield into your chest, driving the air from your lungs.[at random]";
+	if VikingRelationship is 9:
+		say "[one of]Chief Frithjof swings his axe and lands a hit on you, though you luckily manage to turn away from it in time so it just leaves a bleeding cut and doesn't take your arm off.[or]The Viking chieftain slams his shield against your chest, making you stumble backwards dazedly.[or]A sudden kick from the Viking Chieftain against the side of your leg leaves you numb and weakened.[or]You manage to evade a swing of his axe, but the chieftain slams the hilt of the weapon into your stomach, making you double over in pain.[or]Frithjof slams his shield into your chest, driving the air from your lungs.[or]Rushing at you with his shield held in front of him, Frithjof slams against you and bowls you over.[at random]";
+	else:
+		say "[one of]She lands a shallow cut on you. Luckily, she's not trying to kill you, or she could have skewered you there...[or]The Viking woman slaps the broad side of her sword against your head, leaving you seeing stars for a moment.[or]A sudden kick against the side of your leg leaves you numb and weakened.[or]She slams her shield into your chest, driving the air from your lungs.[at random]";
 
 Section 2 - Creature Insertion
 

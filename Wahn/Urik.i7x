@@ -141,15 +141,19 @@ Instead of fucking Urik:
 
 to say UrikSex1: [suck the orc]
 	say "     <WIP>";
+	NPCSexAftermath Player receives "OralCock" from Urik;
 
 to say UrikSex2: [get a BJ from Urik]
 	say "     <WIP>";
+	NPCSexAftermath Urik receives "OralCock" from Player;
 
 to say UrikSex3: [Urik fucks player pussy]
 	say "     <WIP>";
+	NPCSexAftermath Player receives "PussyFuck" from Urik;
 
 to say UrikSex4: [Urik fucks player ass]
 	say "     <WIP>";
+	NPCSexAftermath Player receives "AssFuck" from Urik;
 
 to say UrikSex5: [player fucks Urik]
 	if Urik is in Sitting Area: [library sex]
@@ -188,6 +192,7 @@ to say UrikSex5: [player fucks Urik]
 		WaitLineBreak;
 		say "     It doesn't look like the orc is willing to part with even the smallest amount of your seed, as his hole stays open and gaping for only a second or two before the ring muscle clenches tight again. The recuperative powers of orc physiology really are quite amazing, as he heals within moments - even if it is only an over-stretched pucker and not really a wound. Letting out a very satisfied groan, the orc half turns around to slump backwards onto the sofa, stretching out on its length without really caring about the section of it that is still damp with his cum.";
 		say "     'That was a blast!' the orc tells you with a grin and shows a thumbs-up. 'I'm looking forward to the next time you wanna relieve some pressure.' Looking down over himself, the orc sees a drop of cum clinging to his dickhead and quickly wipes it off with a finger he then brings up to his mouth to lick it off. Smacking his lips in satisfaction, Urik then takes a deep breath and says, 'Damn - it's still so hard to believe that getting pounded is even better than shafting a guy...' You leave him to ponder his new reality as an orc breeder and get dressed.";
+	NPCSexAftermath Urik receives "AssFuck" from Player;
 
 instead of conversing Urik:
 	LineBreak;
@@ -323,6 +328,7 @@ instead of navigating Grey Abbey Library while (Urik is in Sitting Area and Cand
 			LineBreak;
 			say "     Urik vanishes upstairs with Candy and before long, you can hear ecstatic moaning coming from up there, combined with the heavy slaps of a certain orc's full balls against Candy's ass. Sounds like the girly-boy is having the time of his life!";
 		now CandyUrikInteraction is 1; [initial scene done]
+		NPCSexAftermath Candy receives "AssFuck" from Urik;
 	else:
 		LineBreak;
 		say "     Stopping the orc cold with a forceful command, you stand before him with crossed arms as the orc turns around and looks at you sullenly. 'Aw, come on!' he growls out between his tusks, pointing at Candy. 'The slut was just asking for it, and you weren't using him, so I -' Urik falls silent as you wave him off, and command that he put the raccoon down. Reluctantly, he obeys, setting the candy striper down on his slender paws. You nod at the show of submission and step up to your orc slave, sliding a hand under his loincloth to cup his heavy balls and feel the more than half-hard cock he calls his own. With a reminder that he, his dick and the bounty of his balls is yours, you then send the orc back upstairs - with the express order that he may not fuck Candy without your permission.";

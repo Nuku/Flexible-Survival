@@ -4414,8 +4414,14 @@ To Vialchance (x - a text):
 		else if "Expert Researcher" is listed in feats of Player and a random number between 1 and 100 <= vialcollectible:
 			now vcoll is 1;
 		if vcoll is 1:
-			say "You manage to extract a vial of [special-style-1][x][roman type] nanites for study and use.";
-			add x to vials of Player;
+			let VialsOwned be 0;
+			repeat with z running through vials of Player:
+				if z is x, increase VialsOwned by 1;
+			if VialsOwned > 14:
+				say "You contemplate taking some more [special-style-1][x][roman type] nanite samples, but then decide against it as you already have plenty of those.";
+			else:
+				say "You manage to extract a vial of [special-style-1][x][roman type] nanites for study and use.";
+				add x to vials of Player;
 			now vcoll is 0;
 
 
@@ -6576,6 +6582,7 @@ Include Dragontaur by Stripes.
 Include Dragon Pool Toy by Hina Vache.
 Include Drone Wasp by Nuku Valente.
 Include Dryad by Hellerhound.
+Include Dwarves by Gherod.
 Include Easter Bunny by Stripes.
 Include Ebonflame Dragator by Blue Bishop.
 Include Ebonflame drake by Blue Bishop.
@@ -6945,6 +6952,7 @@ Include Micaela by Stripes.
 Include Midnight by Sarokcat.
 Include Milo by CrimsonAsh.
 Include Mouse Taur by Nuku Valente.
+Include Pet Mutt by CrimsonAsh.
 Include Nadia by Wahn.
 Include Nakoma by Song.
 Include Nala by CrimsonAsh.

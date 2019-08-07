@@ -117,6 +117,7 @@ to say WendyGryphonAftermath:
 			else:
 				say "     Speaking in calming tones to the cow, you walk up to her and stroke her fur for a moment until she gets used to your presence and lowers her head again to graze. Then you walk to her back end, gently lift her tail and have a look at her pussy. It's pretty large in human terms, but that's just to be expected from a bigger creature. Milky white cum slowly drips from her pussy lips. You pull our your hard cock and rub it up and down over her sex, then aim it right at her opening and push forward, spreading her slick passage with your manhood. For being so big and just having been fucked by a gryphon, Wendy is amazingly tight, instinctively gripping your member with her inner muscles. You pound into her with eager thrusts, not holding back for a second until you soon blast your own cum into Wendy to mingle with the gryphon's in her womb. Satisfied, you pull out, then put your clothes back on.";
 			now Resolution of Missing Cow is 1; [fucked Wendy]
+			NPCSexAftermath Wendy receives "PussyFuck" from Player;
 		else:
 			LineBreak;
 			say "     Fuck a cow? What strange ideas come up inside you these days... the nanites must be getting to you. You do your best to ignore that inner voice.";
@@ -201,6 +202,6 @@ instead of fucking the Wendy:
 		else:
 			say "     Looking to have some sexy time with Wendy, you walk up to her backside. Speaking in calming tones to the cow, you stroke her fur for a moment so she gets used to your touch, then gently lift her tail and look at her pussy. It's pretty large in human terms, as expected from a bigger creature, and it seems like she's ready and waiting for you to fuck her - seeing that she's pretty wet already. You pull out your hard cock and rub it up and down over her sex, then aim it right at her opening and push forward, spreading her slick passage with your manhood. Wendy's pussy is surprisingly tight, as she instinctively grips your member with her inner muscles. You pound into her with eager thrusts, filling the barn with lustful moans and moos. Fucking the docile bovine without holding back for a second, it doesn't take all that long until you blast your cum deep into her body.";
 			say "     Satisfied, you pull out, then step back from Wendy and get your clothes back in order. You're just exiting her stall when [one of]a horseman farmhand comes into the barn and notices what you're doing. His eyes go from you to Wendy, still with her backside turned to the stall entrance, leaking white cum from her freshly fucked pussy. A knowing smile spreading over his face, the man gives you a wink, then takes another cow to be milked.[or]you hear a creak from above. Looking up, you don't see anyone at the edge of the hayloft, but there might have been someone up there the whole time, watching you fuck the cow...[at random]";
-		now lastfuck of Wendy is turns;
+		NPCSexAftermath Wendy receives "PussyFuck" from Player;
 
 Wendy ends here.

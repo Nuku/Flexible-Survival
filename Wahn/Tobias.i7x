@@ -273,21 +273,26 @@ to say TobiasSexMenu:
 
 to say TobiasSex1: [oral on the player]
 	say "     A";
+	NPCSexAftermath Tobias receives "OralCock" from Player;
 
 to say TobiasSex2: [oral on Tobias]
 	say "     A";
+	NPCSexAftermath Player receives "OralCock" from Tobias;
 
 to say TobiasSex3: [virgin Tobias fucked]
 	say "     A";
+	NPCSexAftermath Tobias receives "AssFuck" from Player;
 
 to say TobiasSex4: [non-virgin Tobias fucked]
 	say "     A";
+	NPCSexAftermath Tobias receives "AssFuck" from Player;
 
 to say TobiasSex5: [Tobias fucks player pussy]
 	say "     A";
+	NPCSexAftermath Player receives "PussyFuck" from Tobias;
 
 to say TobiasSex6: [Tobias fucks player ass]
 	say "     A";
-
+	NPCSexAftermath Player receives "AssFuck" from Tobias;
 
 Tobias ends here.

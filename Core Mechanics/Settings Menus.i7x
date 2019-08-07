@@ -473,7 +473,9 @@ carry out huntinglisting:
 		if there is no area entry, next;
 		if there is no Name entry, next;
 		if area entry matches the text battleground, case insensitively:
-			say "[link][Name entry][as]hunt [Name entry][end link][line break]";
-
+			if enemy title entry is empty or enemy title entry is "":
+				say "[link][Name entry][as]hunt [Name entry][end link][line break]";
+			else:
+				say "[link][enemy title entry][as]hunt [enemy title entry][end link][line break]";
 
 Settings Menus ends here.
