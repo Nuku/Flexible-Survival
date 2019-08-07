@@ -421,8 +421,7 @@ to say sandrasex2: [become bunny siblings]
 			stop the action;
 		say "     She hikes up her dress, revealing her huge pussy. The vulva is about three inches long, and she reaches down to part those thick lips wetly with two fingers. A third finger dips inside, rubbing around slowly. She tenses and shudders from the intense feel of it, but does not linger for long, bringing out her now-glistening finger and holding it in front of your face. The musky fluid smells good - no, great - intoxicating your senses.";
 		say "     Without thinking much about it, you flick your tongue over it. As the sweet substance is swallowed, prickles run over your [Skin of Player] skin. Your head tingles intensely as your ears begin to go warm. Sandra giggles as she watches you, then pulls out a mirror quickly, letting you watch. A large pair of white rabbit ears gradually begins to sprout from your head, replacing what old ones you might've had. They grow long and sensitive, new sounds reaching you. Even Sandra's excited heartbeat seems to softly tick in those great furry limbs.";
-		say "[bold type]Your perception has increased by 1![roman type][line break]";
-		increase perception of Player by 1;
+		StatChange "perception" by 1;
 		now rabbitified is true;
 		[now Face of Player is "set of two long white rabbit ears twitching above your head, looking odd compared to your normal";
 		now FaceName of Player is "Rabbit Girl";]
@@ -440,8 +439,7 @@ to say sandrasex2: [become bunny siblings]
 				say "     'I think that's as much as I can do, but it feels like we're missing something in order for this to feel complete, you know?' Pondering over the notion, you imagine you'll have to figure it out for yourself. Perhaps a [bold type]lewd toy[roman type] of some sort is what she's looking for? Searching for something exactly appropriate is very unlikely in this mess of a city, so perhaps you should find a [bold type]store[roman type] that sells them?";
 				now TailName of Player is "Rabbit Girl";
 				now tail of Player is "You have a short white rabbit's tail above a shapely ass. It twitches when you're excited, wagging back and forth.";
-				increase dexterity of Player by 1;
-				say "[bold type]Your dexterity has increased by 1![roman type][line break]";
+				StatChange "dexterity" by 1;
 				increase score by 10;
 				now lastfuck of Sandra is turns;
 			else:

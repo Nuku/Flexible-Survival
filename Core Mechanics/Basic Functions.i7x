@@ -471,32 +471,32 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 					say "     [Bold Type][TakingCharName] has lost their oral virginity to [GivingCharName in lower case]![roman type][line break]";
 					now FirstOralPartner of TakingChar is GivingCharName;
 
-to StatChange (Statname - a text) by (Value - a number):
-	if Value is 0:
+to StatChange (Statname - a text) by (Modifier - a number):
+	if Modifier is 0:
 		say "ERROR: You just got a 0 point stat change. Please report on the FS Discord how you saw this.";
 	now Statname is Statname in lower case;
-	say "[bold type]Your [statname] has [if Value > 0]in[else]de[end if]creased by [absolute value of Value to the nearest whole number]![roman type][line break]";
+	say "[bold type]Your [statname] has [if Modifier > 0]in[else]de[end if]creased by [absolute value of Modifier to the nearest whole number]![roman type][line break]";
 	if Statname is:
 		-- "strength":
-			increase strength of Player by Value;
-			increase capacity of Player by Value * 5;
+			increase strength of Player by Modifier;
+			increase capacity of Player by Modifier * 5;
 		-- "dexterity":
-			increase dexterity of Player by Value;
+			increase dexterity of Player by Modifier;
 		-- "stamina":
-			increase stamina of Player by Value;
-			if Value > 0:
+			increase stamina of Player by Modifier;
+			if Modifier > 0:
 				if remainder after dividing stamina of Player by 2 is 0:
-					increase maxHP of Player by (Value / 2 + 1) * (level of Player + 1);
+					increase maxHP of Player by (Modifier / 2 + 1) * (level of Player + 1);
 			else:
 				if remainder after dividing stamina of Player by 2 is 1:
-					decrease maxHP of Player by (Value / 2 + 1) * (level of Player + 1);
+					decrease maxHP of Player by ((absolute value of Modifier to the nearest whole number) / 2 + 1) * (level of Player + 1);
 					if HP of Player > maxHP of Player, now HP of Player is maxHP of Player;
 		-- "charisma":
-			increase charisma of Player by Value;
+			increase charisma of Player by Modifier;
 		-- "intelligence":
-			increase intelligence of Player by Value;
+			increase intelligence of Player by Modifier;
 		-- "perception":
-			increase perception of Player by Value;
+			increase perception of Player by Modifier;
 [
 understand "teststatgain" as StatGainAction.
 

@@ -80,8 +80,7 @@ carry out bargainhunting:
 		else if Z is 4: [charisma necklace]
 			say "     Sorting through the strange bin of unusual treasures, your eye catches on a [bold type]breathtaking silver necklace[roman type]. Slowly pulling it out of the bin, you admire its fine craftsmanship. Unable to resist the urge to put your lovely new piece of jewelry on, you swiftly clasp it around your neck, and while it doesn't seem to do anything strange or magical, you certainly admire the way it accentuates your good looks in the mirror that Nermine produces for you to look into.";
 			LineBreak;
-			say "[bold type]Your charisma has increased by 1![roman type][line break]";
-			increase charisma of Player by 1;
+			StatChange "charisma" by 1;
 		else if Z is 5: [kinky porn]
 			if "Like Attracts Like" is listed in feats of Player:
 				if Player is kinky:
@@ -117,8 +116,7 @@ carry out bargainhunting:
 			if "Magpie Eyes" is listed in feats of Player:
 				say "     Smiling at your new piece of jewelry, you tuck your newest acquisition away with the rest of your small collection of glittery and shiny things. Finding a new treasure to keep makes you feel even better about yourself as you look around the store, your keen eyes seeking out new treasures to add to your collection.";
 				LineBreak;
-				say "[bold type]Your perception has increased by 1![roman type][line break]";
-				increase perception of Player by 1;
+				StatChange "perception" by 1;
 			else:
 				say "     Flipping the small piece of jewelry over and over in your hands, your eyes seem drawn to its every sparkly movement. The little piece of glass and gilt fascinates you with the pleasant way it reflects light and catches your gaze. Finally you blink, and happy at your new purchase tuck it away for later, the first piece of what might eventually become a small collection of glittery and shiny things. Your eyes dart around the area, now trained to better pick out small useful items in the oddest places, especially if they are shiny!";
 				LineBreak;

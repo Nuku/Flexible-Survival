@@ -406,15 +406,13 @@ to say brunchtimechange:
 		now SkinName of Player is "Ferret";
 		now Skin of Player is "soft, white fur that covers your";
 [
-		say "[bold type]Your charisma has increased by 1![roman type][line break]";
-		increase charisma of Player by 1;
+		StatChange "charisma" by 1;
 ]
 	if alexbrunch is 3:
 		now FaceName of Player is "Ferret";
 		now Face of Player is "that of an adorable mustelid with darting eyes that search for shinies. You have a cute, pink nose with plentiful whiskers on your ferrety muzzle";
 [
-		say "[bold type]Your intelligence has increased by 2![roman type][line break]";
-		increase intelligence of Player by 2;
+		StatChange "intelligence" by 2;
 ]
 	if alexbrunch is 4:
 		now BodyName of Player is "Ferret";
@@ -426,10 +424,8 @@ to say brunchtimechange:
 		now bodytype of Player is "[one of]mustelid[or]ferret-like[at random]";
 		now SleepRhythm of Player is 0;
 [
-		say "[bold type]Your dexterity has increased by 2![roman type][line break]";
-		say "[bold type]Your stamina has dropped by 1![roman type][line break]";
-		increase dexterity of Player by 2;
-		decrease stamina of Player by 1;
+		StatChange "dexterity" by 2;
+		StatChange "stamina" by -1;
 ]
 
 

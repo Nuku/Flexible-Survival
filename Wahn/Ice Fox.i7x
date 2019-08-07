@@ -605,8 +605,7 @@ to say MiyukiTalk4: [be blessed]
 	say "     As you make your request, Miyuki answers, 'Of course[if Player is not defaultnamed] [name of Player][end if]. It's the least I can do for your help. Come lay down, and please bare your stomach.' The ice fox sorceress leads you to her comfortable nest so that you can get comfortable, then retrieves one of the carambola fruit preserved in ice. Kneeling down next to you, she holds up one hand and concentrates until a bowl of clear ice forms in it. She then slowly squeezes the yellow fruit in her surprisingly strong hand, cracking its ice shell and pressing quite a bit of juice out to drip into the bowl. Miyuki dips two fingers into the juice and starts to paint on your belly, going back several times as she draws a five-pointed star on your skin. As she finishes it, the sorceress intones, 'Hear me, All-Mother! I beseech you to bless this being of your creation. Guide [ObjectPro of Player] through bringing a new generation into this world, so that life may flourish.'";
 	say "     When Miyuki falls silent after the last words are spoken, you feel a pleasant warmth radiating out from the star painted on your belly, suffusing all of your form and making you feel very well and rested, more so than at any point since this whole mess started.";
 	LineBreak;
-	say "[bold type]Your stamina has increased by 2![roman type][line break]";
-	increase stamina of Player by 2;
+	StatChange "stamina" by 2;
 	LineBreak;
 	say "[bold type]'All-Mother's Blessing' has been added to your feats![roman type][line break]";
 	add "All-Mother's Blessing" to feats of Player;
