@@ -211,17 +211,34 @@ understand "testNPCSexAftermath" as NPCSexAftermathAction.
 NPCSexAftermathAction is an action applying to nothing.
 
 carry out NPCSexAftermathAction:
-	say "Testing: Carl fucks player:";
+	if AnalVirgin of Player is true:
+		say "Player is an anal virgin.";
+	if PenileVirgin of Player is true:
+		say "Player is a penile virgin.";
+	say "Tehuantl: AnalVirgin: [AnalVirgin of Tehuantl]; PenileVirgin: [PenileVirgin of Tehuantl]";
+	say "Testing: Tehuantl fucks Player:[line break]";
+	NPCSexAftermath Tehuantl receives "AssFuck" from Player;
+	say "Testing: Player fucks Tehuantl:[line break]";
+	NPCSexAftermath Player receives "AssFuck" from Tehuantl;
+	say "Tehuantl: AnalVirgin: [AnalVirgin of Tehuantl]; PenileVirgin: [PenileVirgin of Tehuantl]";
+	say "Tehuantl: AnalVirgin: [AnalVirgin of Carl]; PenileVirgin: [PenileVirgin of Carl]";
+	now AnalVirgin of Carl is true;
+	now PenileVirgin of Carl is true;
+	say "Testing: Carl fucks player:[line break]";
 	NPCSexAftermath Player receives "AssFuck" from Carl;
-	say "Testing: Player fucks Carl:";
+	say "Testing: Player fucks Carl:[line break]";
 	NPCSexAftermath Carl receives "AssFuck" from Player;
+	say "Tehuantl: AnalVirgin: [AnalVirgin of Carl]; PenileVirgin: [PenileVirgin of Carl]";
 	[Options for SexAct are: AssFuck, PussyFuck, AssDildoFuck, PussyDildoFuck, OralCock, OralPussy]
-
 
 [ Note: Add Handjob, PussyFingering, AssFingering, Rimming to SexActs]
 
 to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (GivingChar - a person):
-	if GivingChar is player:
+	if debugactive is 1:
+		say "DEBUG -> NPCSexAftermath[line break]";
+		say "TakingChar: [Printed Name of TakingChar]";
+		say "GivingChar: [Printed Name of GivingChar]";
+	if GivingChar is Player:
 		if debugactive is 1:
 			say "DEBUG -> Player is the giving partner[line break]";
 		if PlayerFucked of TakingChar is false: [player never had sex with this NPC]
