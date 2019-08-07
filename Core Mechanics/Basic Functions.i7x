@@ -492,7 +492,8 @@ to StatChange (Statname - a text) by (Modifier - a number):
 	if Modifier is 0:
 		say "ERROR: You just got a 0 point stat change. Please report on the FS Discord how you saw this.";
 	now Statname is Statname in lower case;
-	say "[bold type]Your [statname] has [if Modifier > 0]in[else]de[end if]creased by [absolute value of Modifier to the nearest whole number]![roman type][line break]";
+	let AbsMod be absolute value of Modifier to the nearest whole number;
+	say "[bold type]Your [statname] has [if Modifier > 0]in[else]de[end if]creased by [AbsMod]![roman type][line break]";
 	if Statname is:
 		-- "strength":
 			increase strength of Player by Modifier;
@@ -500,14 +501,16 @@ to StatChange (Statname - a text) by (Modifier - a number):
 		-- "dexterity":
 			increase dexterity of Player by Modifier;
 		-- "stamina":
-			increase stamina of Player by Modifier;
-			if Modifier > 0:
-				if remainder after dividing stamina of Player by 2 is 0:
-					increase maxHP of Player by (Modifier / 2 + 1) * (level of Player + 1);
-			else:
-				if remainder after dividing stamina of Player by 2 is 1:
-					decrease maxHP of Player by ((absolute value of Modifier to the nearest whole number) / 2 + 1) * (level of Player + 1);
-					if HP of Player > maxHP of Player, now HP of Player is maxHP of Player;
+			repeat with x running from 1 to AbsMod:
+				if Modifier > 0:
+					increase stamina of Player by 1;
+					if remainder after dividing stamina of Player by 2 is 0:
+						increase maxHP of Player by level of Player + 1;
+				else:
+					decrease stamina of Player by 1;
+					if remainder after dividing stamina of Player by 2 is 1:
+						decrease maxHP of Player by level of Player + 1;
+						if HP of Player > maxHP of Player, now HP of Player is maxHP of Player;
 		-- "charisma":
 			increase charisma of Player by Modifier;
 		-- "intelligence":
