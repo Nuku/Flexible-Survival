@@ -331,6 +331,8 @@ to say MoreauDickSale:
 			if Cunt Count of Player > 1:
 				say "     An odd, wet noise has you peeking in time to see your [one of]cunt[sfn][or]puss[yfn][at random] vanish! With a strange slurp of closing flesh, you cease to be female altogether.";
 			now Cock Count of Player is 0;
+			now Cock Length of Player is 0;
+			now Ball Size of Player is 0;
 			now Cunt Count of Player is 0;
 			now CockName of Player is Name entry;
 			now Cock of Player is cock entry;
