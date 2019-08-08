@@ -78,6 +78,7 @@ Tattoo Parlor	"Tattoo Parlor"	"Tattoo Parlor"	"Red Light District"
 Beach Plaza	"Beach Plaza"	"Beach Plaza"	"Seaside"
 Bouncy Castle	"Bouncy Castle"	"Bouncy Castle"	"Seaside"
 Island Pier	"Island Pier"	"Island Pier"	"Seaside"
+Kai's Campsite	"Kai's Campsite"	"Kai's Campsite"	"Seaside"
 Pirate Island	"Pirate Island"	"Pirate Island"	"Seaside"
 Viking Ship	"Viking Ship"	"Viking Ship"	"Seaside"
 Stables Hotel	"Stables Hotel"	"Stables Hotel"	"The Stables"
@@ -102,6 +103,7 @@ Wolfman Lair	"Wolfman Lair"	"Wolfman Lair"	"Warehouse District"
 Zoo Entrance	"Zoo Entrance"	"Zoo Entrance"	"Zoo"
 Gator Den	"Gator Den"	"Gator Den"	"Zoo"
 Tiger Den	"Tiger Den"	"Tiger Den"	"Zoo"
+[ Note: The city areas and locations above are sorted alphabetically. Please put new rooms in the right spots as you add them ]
 
 destinationcheck is an action applying to nothing.
 
