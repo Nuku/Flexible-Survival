@@ -50,7 +50,8 @@ Sterile of Kai is false. [steriles can't knock people up]
 MainInfection of Kai is "Tiger Shark Male".
 The description of Kai is "[KaiDesc]".
 The conversation of Kai is { "mew" }.
-The scent of Kai is "[KaiScent]";
+The scent of Kai is "[KaiScent]".
+Kai is in Kai's Campsite.
 
 to say KaiDesc:
 	let randomnumber be a random number from 1 to 2;
