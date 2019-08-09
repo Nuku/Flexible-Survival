@@ -217,7 +217,7 @@ to say statraining:
 	decrease freecred by workoutprice;
 	if stamina of Player < 18:
 		say "     Your legs feel like rubber and you gulp down every breath of air like it's your last, but you feel like you'll be able to run just a little bit further next time thanks to your training.";
-		StatChange "Stramina" by 1;
+		StatChange "Stamina" by 1;
 		increase workoutprice by 35;
 		follow the turnpass rule;
 	else:
