@@ -1458,9 +1458,9 @@ to say posttlscene:
 	say "     'Now, as a reward for your continued service,' he says, turning back to you. 'I have prepared an injection to boost your physical abilities. It should result in increased physical strength, agility and endurance, as well as a more athletic body. It will also work to keep you physically fit against weaker infections. This should further obscure your identity should you not change species before being found.'";
 	say "     With the promise of being stronger and better able to deal with the hardships of the infected city, you hold out your arm for the injection. There is a shiver of activity inside you as the nanites go to work, bulking up your muscles and improving your physique as a whole. You become a more rugged version of yourself[if susan is visible]. Susan seems quite impressed by this improved version of you[end if].";
 	add "Physical Booster" to the feats of Player;
-	increase strength of Player by 2;
-	increase dexterity of Player by 2;
-	increase stamina of Player by 2;
+	StatChange "Strength" by 2;
+	StatChange "Dexterity" by 2;
+	StatChange "Stamina" by 2;
 	increase maxHP of Player by ( level of Player + 1 );
 	increase HP of Player by (level of Player + 1);
 	now hospcountdown is turns;

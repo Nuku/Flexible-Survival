@@ -41,8 +41,7 @@ to say capsuleuse:
 	say "Not sure, but trusting the unknown person who gave you this thing you pop the capsule into your mouth.";
 	if a random chance of 1 in 2 succeeds:
 		say "     A slightly stomach pain causes your knees give out and you find yourself kneeling onto the ground with your [one of]left[or]right[at random] hand being the only thing keeping your from face planting onto the ground. A second or two later the pain subsides and you shake your head before getting back up onto your feet. Berating yourself for taking an unknown substance from an unknown person you pause and then blink before noting that you feel rather...odd...all of a sudden. Could the capsule have really increased your stamina or is this some kind of placebo affect?";
-		say "[bold type]Your stamina has increased by 1![roman type][line break]";
-		increase the stamina of the player by 1;
+		StatChange "stamina" by 1;
 	else:
 		say "     Waiting for the results to kick in, you spend almost ten minutes waiting before you find yourself shrugging. Guess the guy was full of bull.";
 
@@ -120,7 +119,7 @@ Sailor Outfit is equipment.
 Sailor Outfit is not temporary.
 The AC of Sailor Outfit is 10.
 The effectiveness of Sailor Outfit is 40.
-The placement of Sailor Outfit is "body".
+The placement of Sailor Outfit is "chest".
 The descmod of Sailor Outfit is "A simple yet magical sailor outfit rests over your body.".
 The slot of Sailor Outfit is "body".
 

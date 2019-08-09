@@ -441,7 +441,7 @@ Park Entrance	"Park Entrance"
 
 Park Entrance is a room. "     Ah, the city park. Smell that fresh pine air, and the scent of - wait no, that grass has not been mowed for quite a while. Just how long ago did all this trouble start anyway? Time seems fluid these days, making it hard for you to remember. No matter what, the grass has started to creep up onto the pavement that leads further into the park (north) and all the other plants seem pretty overgrown and untamed too. The park's boundary wall remains largely intact, with a sign that welcomes you into the park, except during night hours, not that anyone is enforcing this rule at the moment.".
 Park Entrance is fasttravel.
-The earea of Park Entrance is "Park".
+The earea of Park Entrance is "Outside".
 Park Entrance is sleepsafe.
 
 Table of GameRoomIDs (continued)

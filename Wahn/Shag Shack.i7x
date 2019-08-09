@@ -231,6 +231,7 @@ to say ShagShackWhoringPayment:
 				say "a small container with some pills, from what you know this will raise the Libido of anyone who takes it.";
 				say "[bold type]You gain 1 libido pill![roman type][line break]";
 				increase carried of libido pill by 1;
+	follow the turnpass rule;
 
 the fuckscene of Jerome is "     As you make an amorous offer to the shark, Jerome laughs and shakes his head. 'Much as I'd love to, I'm busy with business. Can I interest you in having a go with my 'talent' in there instead?'".
 

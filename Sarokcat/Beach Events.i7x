@@ -294,19 +294,16 @@ Instead of resolving a Lucky seashell:
 	let T be a random number between one and five;
 	if T is 1:
 		say "     Finding the shell makes you scour the beach and pay much more attention to your surroundings as you continue on your walk, just in case there are any other such treasures. And while you don't actually find any more treasures on your trip down the beach, you do feel as if your eyes have become a bit sharper from the experience.";
-		increase perception of Player by 2;
-		say "[bold type]Your perception has increased by 2![roman type][line break]";
+		StatChange "Perception" by 2;
 	else if T is 2:
 		say "     Walking along the beach afterwards with a spring in your step, you scan the sands around you just in case something else useful turns up, and after just a short time, you spot a bottle of water! Wow this really must be your lucky day!";
 		increase carried of water bottle by 1;
 	else if T is 3:
 		say "     Walking along the beach with the shell in hand, you can't help but play at tossing the thing up and down in your hands as you travel, enjoying the look of it as it spins in the air, and the challenge of catching it quickly and accurately. Eventually you manage to drop it into the surf, and no matter how hard you look you don't find the shining shell again. Still you resolve to pay a bit more attention to how you move your hands from now on so you don't drop anything else important, and playing with the shell already made you more aware of their positioning, so it isn't a total loss";
-		say "[bold type]Your dexterity has increased by 2![roman type][line break]";
-		increase dexterity of Player by 2;
+		StatChange "Dexterity" by 2;
 	else if T is 4:
 		say "     Traveling along with the shell, it seems like tripping over it was the least of your worries today! Your walk turns into a harrowing experience as you slip on the sand and fall several times, the wind blows sand into your face, and your feet seem to find every rock on the beach. Deciding maybe it was the shells fault after the fourth time you are nearly dragged out to sea by a sudden wave, you toss the shining pretty thing into the sea from whence it came. You feel much more ragged from the experience, though it has taught you a bit about stubbornly enduring things...";
-		say "[bold type]Your stamina has increased by 2![roman type][line break]";
-		increase stamina of Player by 2;
+		StatChange "Stamina" by 2;
 	else:
 		say "     Taking the shell along with you, you find that it seems to make the day brighter as you carry it and makes you feel a bit more human just to have it with you. Eventually reaching the end of your walk, you set the shell back down on the beach so it can brighten someone else's day up like it did yours'";
 		SanBoost 20;

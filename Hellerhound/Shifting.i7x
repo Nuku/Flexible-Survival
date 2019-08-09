@@ -175,17 +175,16 @@ To transform:
 		now Cock of Player is cock entry;
 	if strength of Player < str entry:
 		say "You feel your muscles swelling with [Name entry] [one of]strength[or]physique[or]power[at random].";
-		increase strength of Player by 1;
-		increase capacity of Player by 5;
+		StatChange "Strength" by 1;
 	if Intelligence of Player < Int entry:
 		say "You feel your mind swelling with [Name entry] [one of]Intelligence[or]wit[or]complexity[at random].";
-		increase Intelligence of Player by 1;
+		StatChange "Intelligence" by 1;
 	if Dexterity of Player < Dex entry:
 		say "You feel your hand eye coordination swelling with [Name entry] [one of]Dexterity[or]physique[or]accuracy[at random].";
-		increase Dexterity of Player by 1;
+		StatChange "Dexterity" by 1;
 	if Stamina of Player < Sta entry:
 		say "You feel your body toughening with [Name entry] [one of]Stamina[or]physique[or]power[at random].";
-		increase Stamina of Player by 1;
+		StatChange "Stamina" by 1;
 		if remainder after dividing stamina of Player by 2 is 0:
 			increase maxHP of Player by level of Player plus 1;
 	if Perception of Player < Per entry:

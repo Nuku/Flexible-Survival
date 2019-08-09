@@ -260,7 +260,7 @@ carry out Vixenposing:
 		say "     'Not right now, my lovely,' Janice murrs at you as she stretches languidly out on the couch, 'It is just much too much effort for me to put in right now... perhaps later,' she says teasingly as she relaxes on the soft cushion.";
 	else if janicetalk < 4:
 		say "     'Why should I waste my precious time training someone who isn't willing to show some interest in my own needs?' she asks with an exaggerated sigh and a dismissive wave of her paw. 'Why don't you go out there and find something to prove to this vixen you've got an interest in foxes?'";
-	else if BodyName of Player is not "Arctic fox":
+	else if BodyName of Player is not "Arctic Fox":
 		say "     'I can't train you how to best use your body sexily if you've not even got the body for it. Why don't we start by seeing if we can get you looking foxier?' she purrs, stretching out in a sensual display on her divan.";
 	else if janicearoused > 0:
 		now lastVixenposing is turns;
@@ -274,8 +274,7 @@ carry out Vixenposing:
 			say "'That's it! Now you are getting it!' Janice exclaims happily, as you begin to move and sway your body with an increasing amount of control[if Kristen is visible]. Kristen assists you as well, caressing a paw here or there to help you find the desired poses[end if]. The new positions become much more natural as [if Kristen is visible]Janice[else]she[end if] makes a few small corrections to your form, before pulling you to her in a happy kiss. Soon you find yourself grinning as she settles back down on her couch to watch you strut your new stuff, and as you strike an increasingly slutty and sexy pose for the lusty vixen[if Kristen is visible]s[end if], you find yourself sure that it will be hard for anyone to resist your charms now!";
 			infect "Arctic fox";
 			if charisma of Player < 24:
-				increase charisma of Player by 1;
-				say "[bold type]Your charisma has increased by 1![roman type][line break]";
+				StatChange "charisma" by 1;
 		else:
 			say "You sigh as your sad attempt to pose and shift your body like a properly sexy fox fails miserably, and while Janice manages not to laugh at you outright, you can see the twinkle of amusement in her eyes as you once more trip over your own feet before giving up the attempt for now...";
 			decrease HP of Player by 10;

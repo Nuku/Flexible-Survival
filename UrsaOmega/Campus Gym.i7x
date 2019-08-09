@@ -175,8 +175,7 @@ to say strtraining:
 	decrease freecred by workoutprice;
 	if strength of Player < 18:
 		say "     You lift for what feels like hours, toiling under Randy's guidance to work your various muscle groups out. By the time you're finished, you feel like your limbs are made of jelly. You know that after you're done wincing, you'll be a bit stronger.";
-		say "[bold type]Your strength has increased by 1![roman type][line break]";
-		increase strength of Player by 1;
+		StatChange "Strength" by 1;
 		increase workoutprice by 35;
 	else:
 		say "     You lift for what feels like hours under Randy's approving observation, relishing the tense-relax rhythm of your muscles as you hoist an increasingly heavy series of weights. You feel victorious as you lift the final, heaviest one, the burn in your limbs only serving to drive you to greater feats of strength. Randy, grinning from your performance, give you a pat on the back, and you feel ready to take on the world!";
@@ -197,8 +196,7 @@ to say dextraining:
 	decrease freecred by workoutprice;
 	if dexterity of Player < 18:
 		say "     After the session, you feel much more flexible than when you started... Not to mention much more relaxed.";
-		say "[bold type]Your dexterity has increased by 1![roman type][line break]";
-		increase dexterity of Player by 1;
+		StatChange "Dexterity" by 1;
 		increase workoutprice by 35;
 		follow the turnpass rule;
 	else:
@@ -219,7 +217,7 @@ to say statraining:
 	decrease freecred by workoutprice;
 	if stamina of Player < 18:
 		say "     Your legs feel like rubber and you gulp down every breath of air like it's your last, but you feel like you'll be able to run just a little bit further next time thanks to your training.";
-		increase stamina of Player by 1;
+		StatChange "Stramina" by 1;
 		increase workoutprice by 35;
 		follow the turnpass rule;
 	else:

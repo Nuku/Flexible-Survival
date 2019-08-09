@@ -47,6 +47,8 @@ Figure of Giraffe_icon is the file "Giraffe_ig.jpg".
 Figure of GooGirl_icon is the file "GooGirl.jpg".
 Figure of BlueGryphon_icon is the file "BlueGryphon.jpg".
 Figure of BlueGryphon_face_icon is the file "BlueGryphon_face.jpg".
+Figure of GermanShepherd_hard_icon is the file "GermanShepherd_hard.jpg".
+Figure of GermanShepherd_naked_icon is the file "GermanShepherd_naked.jpg".
 Figure of Gunbunny_icon is the file "Gunbunny_ig.jpg".
 Figure of Ebonflame_Drake_icon is the file "Ebonflame_Drake.jpg".
 Figure of Hawkman_naked_icon is the file "Hawkman_naked.jpg".
@@ -701,6 +703,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Gabriel"	Figure of Gabriel_icon	"Darian821"	g-black	"normal"
 "Garrett"	Figure of Garrett_icon	"Catmonkshiro"	g-black	"normal"
 "Garth_face"	Figure of Garth_face_icon	"SineAlas"	g-white	"normal"
+"German Shepherd hard"	Figure of GermanShepherd_hard_icon	"Vashaa"	g-White	"normal"
+"German Shepherd naked"	Figure of GermanShepherd_naked_icon	"Vashaa"	g-White	"normal"
 "Gillian"	Figure of Gillian_icon	"Eevachu"	g-white	"normal"
 "Gina_face"	Figure of Gina_face_icon	"Vashaa"	g-black	"normal"
 "Giraffe"	Figure of Giraffe_icon	"Sharei"	g-white	"normal"
@@ -1022,6 +1026,7 @@ carry out artistcredits:
 	say "     Fire Sprite Male by Genelightfoot @ y-gallery.net[line break]";
 	say "     Fluffy Owl by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Friendship Pony by Anymouse1968 @ furaffinity.net[line break]";
+	say "     German Shepherd by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Giraffe by Sharei @ furaffinity.net[line break]";
 	say "     Goo Girl by Rastear @ y-gallery.net[line break]";
 	say "     Gunbunny by HBruton @ furaffinity.net[line break]";

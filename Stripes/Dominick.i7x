@@ -221,36 +221,36 @@ to say dominick_sexmenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Doggy style";
 		now sortorder entry is 1;
-		now description entry is "be fucked like a dog";
+		now description entry is "Be fucked like a dog";
 	[]
 	if Player is female and scalevalue of Player < 4 and HP of Dominick >= 4:
 		choose a blank row in table of fucking options;
 		now title entry is "Lap ride";
 		now sortorder entry is 2;
-		now description entry is "get bounced on the husky's big pole";
+		now description entry is "Get bounced on the husky's big pole";
 	[]
 	if ((player is female and HP of Dominick >= 4) or player is mpreg_ok):
 		choose a blank row in table of fucking options;
 		now title entry is "Anal";
 		now sortorder entry is 4;
-		now description entry is "take it up the ass";
+		now description entry is "Take it up the ass";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Suck his cock";
 	now sortorder entry is 8;
-	now description entry is "get between his legs and suck his cock for a sweet treat";
+	now description entry is "Get between his legs and suck his cock for a sweet treat";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Cock worship";
 	now sortorder entry is 9;
-	now description entry is "lavish that doggy cock with attention";
+	now description entry is "Lavish that doggy cock with attention";
 	[]
 	if HP of Dominick >= 5 and HP of Dominick < 10 and player is female and ( BodyName of Player is "Breederslut" or FaceName of Player is "Breederslut" ):
 		if "Submissive" is not listed in feats of Player and level of Player > 3:
 			choose a blank row in table of fucking options;
 			now title entry is "Beta training";
 			now sortorder entry is 98;
-			now description entry is "get trained to be his beta-bitch (locks role)";
+			now description entry is "Get trained to be his beta-bitch (locks role)";
 	[]
 [		if "Dominant" is not listed in feats of Player:
 			choose a blank row in table of fucking options;

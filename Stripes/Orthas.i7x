@@ -404,7 +404,7 @@ to say Orthasfuck:
 					if Player consents:
 						LineBreak;
 						now seed is 1;
-						delete tappeditem;
+						decrease carried of tappeditem by 1;
 					else:
 						LineBreak;
 						say "'Awww!' She pouts. 'Well, we can still have fun!'";
@@ -429,7 +429,7 @@ to say Orthasfuck:
 							now tappeditem is journal;
 				if tappeditem is not journal:
 					now seed is 1;
-					delete tappeditem;
+					decrease carried of tappeditem by 1;
 				else:
 					say "'Awww!' She pouts. 'Well, we can still have fun!'";
 			if seed is 0:

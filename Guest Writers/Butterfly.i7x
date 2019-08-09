@@ -286,6 +286,8 @@ To say butterfly attack:
 				if Cock Length of Player < 1 or Ball Size of Player < 1:
 					say "You barely have time to give a whimper as you cease to be a male.";
 					now Cock Count of Player is 0;
+					now Cock Length of Player is 0;
+					now Ball Size of Player is 0;
 				if Cock Count of Player > 1 and a random chance of 1 in 3 succeeds:
 					say "Sudden pleasure runs through one of your doomed [Cock of Player] cocks as it sprays the last of its seed, dwindling down to nothing at all and vanishing, leaving only the powerful orgasm to remember it by.";
 					decrease Cock Count of Player by 1;

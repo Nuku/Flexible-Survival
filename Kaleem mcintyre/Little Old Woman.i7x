@@ -21,9 +21,7 @@ Instead of resolving a Defenseless old lady:
 		say "[bold type]You gain 1 water bottle![roman type][line break]";
 		increase carried of chips by 1;
 		increase carried of water bottle by 2;
-		say "[bold type]Your strength has increased by 1![roman type][line break]";
-		increase strength of Player by 1;
-		increase capacity of Player by 5;
+		StatChange "Strength" by 1;
 		SanBoost 25;
 		increase score by 10;
 	else:

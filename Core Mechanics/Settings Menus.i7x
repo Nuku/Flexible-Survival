@@ -88,29 +88,22 @@ carry out Trixiecheating:
 				remove "Lil Better" from feats of Player;
 				say "Your 'Lil Better' cheating ability has been removed.";
 				increase score by 200;
-				decrease strength of Player by 1;
-				decrease capacity of Player by 5;
-				decrease dexterity of Player by 1;
-				decrease stamina of Player by 1;
-				decrease intelligence of Player by 1;
-				decrease charisma of Player by 1;
-				decrease perception of Player by 1;
-				if remainder after dividing stamina of Player by 2 is 1:
-					decrease maxHP of Player by level of Player plus 1;
-					if HP of Player > maxHP of Player, now HP of Player is maxHP of Player;
+				StatChange "Strength" by -1;
+				StatChange "Dexterity" by -1;
+				StatChange "Stamina" by -1;
+				StatChange "Intelligence" by -1;
+				StatChange "Charisma" by -1;
+				StatChange "Perception" by -1;
 			else:
 				add "Lil Better" to feats of Player;
 				decrease score by 400;
 				say "You have gained the 'Lil Better' cheat, but are penalized 400 points.";
-				increase strength of Player by 1;
-				increase capacity of Player by 5;
-				increase dexterity of Player by 1;
-				increase stamina of Player by 1;
-				increase intelligence of Player by 1;
-				increase charisma of Player by 1;
-				increase perception of Player by 1;
-				if remainder after dividing stamina of Player by 2 is 0:
-					increase maxHP of Player by level of Player plus 1;
+				StatChange "Strength" by 1;
+				StatChange "Dexterity" by 1;
+				StatChange "Stamina" by 1;
+				StatChange "Intelligence" by 1;
+				StatChange "Charisma" by 1;
+				StatChange "Perception" by 1;
 		else if calcnumber is 5:
 			if boosterfeats > 0:
 				say "This ability cannot be removed once gained.";
@@ -165,12 +158,12 @@ carry out Trixiecheating:
 				if "Well Rested" is listed in feats of Player: [They have slept recently, reduce/remove feat.]
 					FeatLoss "Well Rested";
 					say "     Due to activating [bold type]Insomniac[roman type] You have lost the 'Well Rested' Feat, and all stats have decreased by 2 as a result.";
-					decrease strength of Player by 2;
-					decrease dexterity of Player by 2;
-					decrease stamina of Player by 2;
-					decrease charisma of Player by 2;
-					decrease intelligence of Player by 2;
-					decrease perception of Player by 2;
+					StatChange "Strength" by -2;
+					StatChange "Dexterity" by -2;
+					StatChange "Stamina" by -2;
+					StatChange "Charisma" by -2;
+					StatChange "Intelligence" by -2;
+					StatChange "Perception" by -2;
 				if TerminatorSleepActivated is false:
 					now TerminatorSleepActivated is True;
 					decrease score by 100;
@@ -480,7 +473,9 @@ carry out huntinglisting:
 		if there is no area entry, next;
 		if there is no Name entry, next;
 		if area entry matches the text battleground, case insensitively:
-			say "[link][Name entry][as]hunt [Name entry][end link][line break]";
-
+			if enemy title entry is empty or enemy title entry is "":
+				say "[link][Name entry][as]hunt [Name entry][end link][line break]";
+			else:
+				say "[link][enemy title entry][as]hunt [enemy title entry][end link][line break]";
 
 Settings Menus ends here.
