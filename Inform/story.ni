@@ -4692,12 +4692,12 @@ to Rest:
 			if "Well Rested" is not listed in feats of Player:
 				FeatGain "Well Rested";
 				say "     Well Rested - All stats increased by 2!";
-				StatChange "Strength" by 2;
-				StatChange "Dexterity" by 2;
-				StatChange "Stamina" by 2;
-				StatChange "Charisma" by 2;
-				StatChange "Intelligence" by 2;
-				StatChange "Perception" by 2;
+				StatChange "Strength" by 2 silently;
+				StatChange "Dexterity" by 2 silently;
+				StatChange "Stamina" by 2 silently;
+				StatChange "Charisma" by 2 silently;
+				StatChange "Intelligence" by 2 silently;
+				StatChange "Perception" by 2 silently;
 			now WellRestedTimer is 6;
 
 carry out resting:
