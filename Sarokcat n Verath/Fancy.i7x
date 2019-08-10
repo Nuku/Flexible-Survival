@@ -328,8 +328,7 @@ To say nightmaremagic:
 		say "The strange salty yet delicious taste of the strange mixture washes over your tongue, and burns like fire or fine whiskey as it slides down your throat easily. Before you know it you have drank the whole vial and are licking your lips looking for more. It isn't long however, before you are distracted by a strange warmth growing within as what feels like a dim coal of power burning within you ignites. And you moan as your body begins to shift and reshape itself, your spine seeming to crack slightly and become more flexible, as a silken waterfall of fine horsehair erupts from your rear, spilling forth to form a surprisingly comfortable and handsome long black equine tail, with just the hint of a dark reddish color when the light reflects off of it. You swish your new tail behind you experimentally for a minute, finding it surprisingly easy to move and control, the new balance your tail provides to be quite helpful as well as handsome. You grin slightly with a strange pleasure at your new appendage, as well as the new sense of power burning within you awoken by the strange but delicious liquid.";
 		now TailName of Player is "Nightmare";
 		now tail of Player is "You have a long sexy shimmering equine tail swaying teasingly behind you, its silken black and deep red colored strands seeming to catch and bend the light slightly around themselves until they almost appear to burn with an inner dark fire with every step you take.";
-		say "[bold type]Your dexterity has increased by 5![roman type][line break]";
-		increase dexterity of Player by 5;
+		StatChange "dexterity" by 5;
 		now fancyquest is 7;
 		now nightmaretf is 1;
 		stop the action;
@@ -337,8 +336,7 @@ To say nightmaremagic:
 		say "Eyeing the unusual liquid dubiously for a minute, you watch the strange play of the light off the whitish fluid, noting the dark and almost red swirls within the vial. Feeling rather dubious, but increasingly curious about the vial, you decide you might as well get on with it, and carefully take a drink. The strange salty yet delicious taste of the strange mixture washes over your tongue, and burns like fire or fine whiskey as it slides down your throat easily. Before you know it you have drank the whole vial and are licking your lips looking for more. It isn't long however, before you are distracted by a strange warmth growing within as what feels like a dim coal of power burning within you ignites. And you moan as your body begins to shift and reshape itself, your spine seeming to crack slightly and become more flexible, as a silken waterfall of fine horsehair erupts from your rear, spilling forth to form a surprisingly comfortable and handsome long black equine tail, with just the hint of a dark reddish color when the light reflects off of it. You swish your new tail behind you experimentally for a minute, finding it surprisingly easy to move and control, the new balance your tail provides to be quite helpful as well as handsome. You grin slightly with a strange pleasure at your new appendage, as well as the new sense of power burning within you awoken by the strange but delicious liquid.";
 		now TailName of Player is "Nightmare";
 		now tail of Player is "You have a long sexy shimmering equine tail swaying teasingly behind you, its silken black and deep red colored strands seeming to catch and bend the light slightly around themselves until they almost appear to burn with an inner dark fire with every step you take.";
-		say "[bold type]Your dexterity has increased by 5![roman type][line break]";
-		increase dexterity of Player by 5;
+		StatChange "dexterity" by 5;
 		now fancyquest is 7;
 		now nightmaretf is 1;
 		stop the action;

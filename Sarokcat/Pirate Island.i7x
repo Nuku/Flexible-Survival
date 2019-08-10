@@ -87,8 +87,7 @@ carry out treasurehunt:
 					stop the action;
 				if T is 3:
 					say "     Walking through the caves, you find yourself starting to jog a bit, and then a bit more, as you move along the long cave, always following the left passage when it appears in an attempt to solve the maze of passages within. After some time you begin to tire, but there is no end to the cave in sight, as you move in the dim light you realize your surrounding seem increasingly familiar even as you continue to jog along. Finally in frustration you take a right turn instead of a left turn, and almost immediately shoot back out onto the beach from the cave you entered from, with an embarrassed glance behind you, you realize the left part of that cave looped in a large circle, and you have been running around it for hours. You sigh as you plop down on the beach to rest for a minute, still you do feel slightly more dexterous from all that jogging you find yourself thinking, as you let the waves lap at your body.[line break]";
-					say "[bold type]Your dexterity has increased by 1![roman type][line break]";
-					increase dexterity of Player by 1;
+					StatChange "dexterity" by 1;
 					stop the action;
 				If T is 4:
 					say "     Traveling along the dim caves, you can see small bits of light filter through from holes far above you in the cave walls, leaving you barely enough light to see as you slowly feel your way forward. The cave stretches on endlessly before you as you hunt for the treasure you know is in here somewhere, eventually you grow slightly careless as you move forward, and your foot comes down on empty air as you tumble forward into a natural pit in the rock. You lie there for a minute, cursing at the dark hole as your body aches with pain. Slowly you climb back out of the pit, and in too much pain to continue, you carefully make your way back to the entrance, the treasure still safe in its caves, for now...";

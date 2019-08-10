@@ -175,7 +175,6 @@ to say strtraining:
 	decrease freecred by workoutprice;
 	if strength of Player < 18:
 		say "     You lift for what feels like hours, toiling under Randy's guidance to work your various muscle groups out. By the time you're finished, you feel like your limbs are made of jelly. You know that after you're done wincing, you'll be a bit stronger.";
-		say "[bold type]Your strength has increased by 1![roman type][line break]";
 		StatChange "Strength" by 1;
 		increase workoutprice by 35;
 	else:

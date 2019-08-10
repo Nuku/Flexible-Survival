@@ -139,10 +139,8 @@ Instead of resolving Disorganization:
 		WaitLineBreak;
 		say "     You nod once more before answering with another affirmative. 'Ok. You can leave this walkie-talkie behind where you like. We suspect this frequency's been compromised and you don't want them following it back to you. I'm going to shut off the link to this channel. For security, I can't tell you the new channel and codes, so it'll be useless anyway. Over and out, kid. And hey, thanks so much for all you've done.' You barely have time to respond before gray noise comes over the transceiver as the line is suddenly cut. Lowering your head and then letting the walkie-talkie drop onto the ground you find yourself somewhat empty after having done all of this. Is this how it goes for those soldiers who serve faithfully?";
 		say "     Truth really is stranger than fiction because this all just can't be real. It just... hurts too much to be reality. Shivering and rubbing your arms you let out a half choked sob before shaking your head and then letting out a fierce yell. Your emotions are too chaotic to hold back your need to grieve any longer. Graciously enough, some force or another keeps any mutants away from you right now. Not even you could be sure of what you would do if you stumbled onto any of the creatures that plague this town right at the moment.";
-		increase perception of Player by 1;
-		say "[bold type]Your perception has increased by 1![roman type][line break]";
-		increase intelligence of Player by 1;
-		say "[bold type]Your intelligence has increased by 1![roman type][line break]";
+		StatChange "perception" by 1;
+		StatChange "intelligence" by 1;
 		decrease morale of Player by 15;
 		increase carried of food by 2;
 		increase carried of water bottle by 2;

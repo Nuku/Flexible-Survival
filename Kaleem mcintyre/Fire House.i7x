@@ -458,8 +458,7 @@ to say aidKenaz9:
 			say "     The workout with Kenaz proves to be grueling, not to mention exhausting as the hyper-sized Dalmatian puts you through the physical course of training that most firefighters have to go through in order to make the grade. By the time you've finished [one of]doing your hundredth push-up[or]running five miles around the city with Kenaz[or]doing your hundredth crunch[or]jumping over the jumping rope Kenaz had given you for the thousandth time[or]being grilled on the course curriculum while having Kenaz spot you on the weight bench the other had rigged from some [italic type]borrowed[roman type] equipment[at random], you puff and gasp for breath before slumping down into place as utter exhaustion overcomes you.";
 			say "     'Not bad. Not as good as someone who's spent their formative years training for this sort of thing, but like I said before, not bad. Keep this up and you'll make an excellent firefighter in no time.' Panting and then nodding to Kenaz, you lay your head back and close your eyes, right before you snap them open as you think over what Kenaz just said.";
 			if strength of Player < 18:
-				increase strength of Player by 1;
-				say "[bold type]Your strength has increased by 1![roman type][line break]";
+				StatChange "strength" by 1;
 			increase thirst of Player by 16;
 			increase hunger of Player by 15;
 			decrease Libido of Player by 15;
