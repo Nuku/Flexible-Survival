@@ -158,12 +158,12 @@ carry out Trixiecheating:
 				if "Well Rested" is listed in feats of Player: [They have slept recently, reduce/remove feat.]
 					FeatLoss "Well Rested";
 					say "     Due to activating [bold type]Insomniac[roman type] You have lost the 'Well Rested' Feat, and all stats have decreased by 2 as a result.";
-					StatChange "Strength" by -2;
-					StatChange "Dexterity" by -2;
-					StatChange "Stamina" by -2;
-					StatChange "Charisma" by -2;
-					StatChange "Intelligence" by -2;
-					StatChange "Perception" by -2;
+					StatChange "Strength" by -2 silently;
+					StatChange "Dexterity" by -2 silently;
+					StatChange "Stamina" by -2 silently;
+					StatChange "Charisma" by -2 silently;
+					StatChange "Intelligence" by -2 silently;
+					StatChange "Perception" by -2 silently;
 				if TerminatorSleepActivated is false:
 					now TerminatorSleepActivated is True;
 					decrease score by 100;

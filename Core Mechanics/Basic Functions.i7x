@@ -489,11 +489,18 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 					now FirstOralPartner of TakingChar is GivingCharName;
 
 to StatChange (Statname - a text) by (Modifier - a number):
+	StatChange Statname by Modifier silence state is 0;
+
+to StatChange (Statname - a text) by (Modifier - a number) silently:
+	StatChange Statname by Modifier silence state is 1;
+
+to StatChange (Statname - a text) by (Modifier - a number) silence state is (Silence - a number):
 	if Modifier is 0:
 		say "ERROR: You just got a 0 point stat change. Please report on the FS Discord how you saw this.";
 	now Statname is Statname in lower case;
 	let AbsMod be absolute value of Modifier to the nearest whole number;
-	say "[bold type]Your [statname] has [if Modifier > 0]in[else]de[end if]creased by [AbsMod]![roman type][line break]";
+	if Silence is 0:
+		say "[bold type]Your [statname] has [if Modifier > 0]in[else]de[end if]creased by [AbsMod]![roman type][line break]";
 	if Statname is:
 		-- "strength":
 			increase strength of Player by Modifier;
@@ -517,6 +524,8 @@ to StatChange (Statname - a text) by (Modifier - a number):
 			increase intelligence of Player by Modifier;
 		-- "perception":
 			increase perception of Player by Modifier;
+		-- otherwise:
+			say "ERROR: Invalid stat '[Statname]' used in StatChange. Please report on the FS Discord how you saw this.";
 [
 understand "teststatgain" as StatGainAction.
 
