@@ -1,5 +1,6 @@
 Version 1 of Adam by Wahn begins here.
 [Version 1 - Put into its own file]
+[Version 2 - Fitness Training - Gherod]
 
 [ HP of Adam - Camp Bravo Tracking                          ]
 [   0: never been to the camp                               ]
@@ -24,6 +25,7 @@ Version 1 of Adam by Wahn begins here.
 [ Stamina of Adam - Last fitness training turn              ]
 
 Stamina of Adam is usually 10000.
+AdamDoneTalking is a truth state that varies.[@Tag:NotSaved]
 
 [***********************************************************]
 [***********************************************************]
@@ -95,6 +97,7 @@ instead of conversing Adam:
 	say "[AdamTalkMenu]";
 
 to say AdamTalkMenu:
+	now AdamDoneTalking is false;
 	say "     [bold type]What do you want to talk to Adam about?[roman type][line break]";
 	LineBreak;
 	now sextablerun is 0;
@@ -167,10 +170,12 @@ to say AdamTalkMenu:
 					say "[AdamTalkFuture]";
 				if (nam is "Workout together"):
 					say "[AdamFitness]";
+					now AdamDoneTalking is true;
 				if (nam is "Sex talk"):
 					say "[AdamTalkSex]";
 				wait for any key;
-				say "[AdamTalkMenu]"; [looping back to keep talking with him]
+				if AdamDoneTalking is false: [override for after training]
+					say "[AdamTalkMenu]"; [looping back to keep talking with him]
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the young half-minotaur, shaking your head slightly as he gives a questioning look.";
