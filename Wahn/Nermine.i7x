@@ -92,6 +92,41 @@ object	name
 Nermine	"Nermine"
 
 Nermine is a woman.
+ScaleValue of Nermine is 3. [human sized]
+Body Weight of Nermine is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Nermine is 7. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Nermine is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Nermine is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Nermine is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Nermine is 6. [length in inches]
+Breast Size of Nermine is 3. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Nermine is 2. [count of nipples]
+Asshole Depth of Nermine is 8. [inches deep for anal fucking]
+Asshole Tightness of Nermine is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Nermine is 0. [number of cocks]
+Cock Girth of Nermine is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Nermine is 0. [length in inches]
+Ball Count of Nermine is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Nermine is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Nermine is 1. [number of cunts]
+Cunt Depth of Nermine is 9. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Nermine is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Nermine is 3. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Nermine is false.
+PlayerRomanced of Nermine is false.
+PlayerFriended of Nermine is false.
+PlayerControlled of Nermine is false.
+PlayerFucked of Nermine is false.
+OralVirgin of Nermine is false.
+Virgin of Nermine is false.
+AnalVirgin of Nermine is false.
+PenileVirgin of Nermine is false.
+SexuallyExperienced of Nermine is true.
+TwistedCapacity of Nermine is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Nermine is true. [steriles can't knock people up]
+MainInfection of Nermine is "".
 The description of Nermine is "[NermineDesc]".
 The conversation of Nermine is { "Mysterious!" }.
 

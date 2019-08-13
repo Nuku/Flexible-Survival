@@ -171,7 +171,6 @@ Object	Name
 Campus Racing	"Campus Racing"
 
 Campus Racing is a situation.
-Campus Racing is inactive.
 The sarea of Campus Racing is "Campus".
 
 after going to Athletic Street while (Campus Racing is active and Campus Racing is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
@@ -581,7 +580,6 @@ Object	Name
 Campus Patrol	"Campus Patrol"
 
 Campus Patrol is a situation.
-Campus Patrol is inactive.
 The sarea of Campus Patrol is "Campus".
 
 after going to College Walkway West while (Campus Patrol is active and Campus Patrol is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):

@@ -74,7 +74,42 @@ Table of GameCharacterIDs (continued)
 object	name
 Nadia	"Nadia"
 
-Nadia is a woman. The HP of Nadia is normally 0.
+Nadia is a woman.
+ScaleValue of Nadia is 3. [human sized]
+Body Weight of Nadia is 2. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Nadia is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Nadia is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Nadia is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Nadia is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Nadia is 5. [length in inches]
+Breast Size of Nadia is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Nadia is 2. [count of nipples]
+Asshole Depth of Nadia is 8. [inches deep for anal fucking]
+Asshole Tightness of Nadia is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Nadia is 0. [number of cocks]
+Cock Girth of Nadia is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Nadia is 0. [length in inches]
+Ball Count of Nadia is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Nadia is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Nadia is 1. [number of cunts]
+Cunt Depth of Nadia is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Nadia is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Nadia is 3. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Nadia is false.
+PlayerRomanced of Nadia is false.
+PlayerFriended of Nadia is false.
+PlayerControlled of Nadia is false.
+PlayerFucked of Nadia is false.
+OralVirgin of Nadia is false.
+Virgin of Nadia is false.
+AnalVirgin of Nadia is true.
+PenileVirgin of Nadia is true.
+SexuallyExperienced of Nadia is true.
+TwistedCapacity of Nadia is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Nadia is true. [steriles can't knock people up]
+MainInfection of Nadia is "".
 The description of Nadia is "[NadiaDesc]".
 The conversation of Nadia is { "Mew!" }.
 

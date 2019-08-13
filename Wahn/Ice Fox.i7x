@@ -502,7 +502,43 @@ Table of GameCharacterIDs (continued)
 object	name
 Miyuki	"Miyuki"
 
-Miyuki is a woman. Miyuki is in Ice Fox's Den.
+Miyuki is a woman.
+Miyuki is in Ice Fox's Den.
+ScaleValue of Miyuki is 3. [human sized]
+Body Weight of Miyuki is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Miyuki is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Miyuki is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Miyuki is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Miyuki is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Miyuki is 5. [length in inches]
+Breast Size of Miyuki is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Miyuki is 2. [count of nipples]
+Asshole Depth of Miyuki is 8. [inches deep for anal fucking]
+Asshole Tightness of Miyuki is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Miyuki is 1. [number of cocks]
+Cock Girth of Miyuki is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Miyuki is 9. [length in inches]
+Ball Count of Miyuki is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Miyuki is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Miyuki is 1. [number of cunts]
+Cunt Depth of Miyuki is 9. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Miyuki is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Miyuki is 3. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Miyuki is false.
+PlayerRomanced of Miyuki is false.
+PlayerFriended of Miyuki is false.
+PlayerControlled of Miyuki is false.
+PlayerFucked of Miyuki is false.
+OralVirgin of Miyuki is false.
+Virgin of Miyuki is false.
+AnalVirgin of Miyuki is false.
+PenileVirgin of Miyuki is false.
+SexuallyExperienced of Miyuki is true.
+TwistedCapacity of Miyuki is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Miyuki is false. [steriles can't knock people up]
+MainInfection of Miyuki is "Ice Fox".
 The description of Miyuki is "[MiyukiDesc]".
 The conversation of Miyuki is { "placeholder" }.
 
@@ -605,7 +641,8 @@ to say MiyukiTalk4: [be blessed]
 	say "     As you make your request, Miyuki answers, 'Of course[if Player is not defaultnamed] [name of Player][end if]. It's the least I can do for your help. Come lay down, and please bare your stomach.' The ice fox sorceress leads you to her comfortable nest so that you can get comfortable, then retrieves one of the carambola fruit preserved in ice. Kneeling down next to you, she holds up one hand and concentrates until a bowl of clear ice forms in it. She then slowly squeezes the yellow fruit in her surprisingly strong hand, cracking its ice shell and pressing quite a bit of juice out to drip into the bowl. Miyuki dips two fingers into the juice and starts to paint on your belly, going back several times as she draws a five-pointed star on your skin. As she finishes it, the sorceress intones, 'Hear me, All-Mother! I beseech you to bless this being of your creation. Guide [ObjectPro of Player] through bringing a new generation into this world, so that life may flourish.'";
 	say "     When Miyuki falls silent after the last words are spoken, you feel a pleasant warmth radiating out from the star painted on your belly, suffusing all of your form and making you feel very well and rested, more so than at any point since this whole mess started.";
 	LineBreak;
-	StatChange "stamina" by 2;
+	say "[bold type]Your stamina has increased by 2![roman type][line break]";
+	increase stamina of Player by 2;
 	LineBreak;
 	say "[bold type]'All-Mother's Blessing' has been added to your feats![roman type][line break]";
 	add "All-Mother's Blessing" to feats of Player;

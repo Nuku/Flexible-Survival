@@ -345,6 +345,41 @@ object	name
 Sarah	"Sarah"
 
 Sarah is a woman.
+ScaleValue of Sarah is 3. [human sized]
+Body Weight of Sarah is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Sarah is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Sarah is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Sarah is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Sarah is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Sarah is 5. [length in inches]
+Breast Size of Sarah is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Sarah is 2. [count of nipples]
+Asshole Depth of Sarah is 8. [inches deep for anal fucking]
+Asshole Tightness of Sarah is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Sarah is 0. [number of cocks]
+Cock Girth of Sarah is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Sarah is 0. [length in inches]
+Ball Count of Sarah is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Sarah is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Sarah is 1. [number of cunts]
+Cunt Depth of Sarah is 10. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Sarah is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Sarah is 3. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Sarah is false.
+PlayerRomanced of Sarah is false.
+PlayerFriended of Sarah is false.
+PlayerControlled of Sarah is false.
+PlayerFucked of Sarah is false.
+OralVirgin of Sarah is false.
+Virgin of Sarah is false.
+AnalVirgin of Sarah is true.
+PenileVirgin of Sarah is true.
+SexuallyExperienced of Sarah is true.
+TwistedCapacity of Sarah is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Sarah is false. [steriles can't knock people up]
+MainInfection of Sarah is "Husky Bitch".
 The description of Sarah is "[SarahDesc]";
 
 to say SarahDesc:

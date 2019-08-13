@@ -32,17 +32,27 @@ Malik	"Malik"
 
 Malik is a man.
 Malik is in NPC Nexus. [not currently placed in the game]
-[physical details as of game start]
 ScaleValue of Malik is 3. [human sized]
-Cock Count of Malik is 1.
-Cock Length of Malik is 13.
-Ball Size of Malik is 8.
-Ball Count of Malik is 2.
-Cunt Count of Malik is 0.
-Cunt Depth of Malik is 0.
-Cunt Tightness of Malik is 0.
-Nipple Count of Malik is 2. [2 nipples]
-Breast Size of Malik is 0.
+Body Weight of Malik is 7. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Malik is 8. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Malik is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Malik is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Malik is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Malik is 5. [length in inches]
+Breast Size of Malik is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Malik is 2. [count of nipples]
+Asshole Depth of Malik is 8. [inches deep for anal fucking]
+Asshole Tightness of Malik is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Malik is 1. [number of cocks]
+Cock Girth of Malik is 4. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Malik is 13. [length in inches]
+Ball Count of Malik is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Malik is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Malik is 0. [number of cunts]
+Cunt Depth of Malik is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Malik is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Malik is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Malik is true.
 PlayerRomanced of Malik is false.
@@ -54,7 +64,9 @@ Virgin of Malik is true.
 AnalVirgin of Malik is true.
 PenileVirgin of Malik is false.
 SexuallyExperienced of Malik is false.
-The MainInfection of Malik is "Orc Breeder".
+TwistedCapacity of Malik is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Malik is false. [steriles can't knock people up]
+MainInfection of Malik is "Orc Breeder".
 The description of Malik is "[MalikDesc]".
 The conversation of Malik is { "Mew!" }.
 
