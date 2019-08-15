@@ -501,7 +501,7 @@ Segment	Shift Text	Desc Text
 
 Section - Minotaur
 
-table minotaur - Minotuar shifts
+table minotaur - Minotaur shifts
 Segment	Shift Text	Desc Text	Unshift Text
 "head"	"You see nothing but red for a moment as loud snaps announce the rapid growth of a broad snout and large expressive ears. Your vision begins to return as fur sweeps over you, brown and white. A large golden nose suddenly pierces your new, large, nose, a moment of pain before it rests comfortably[if the destined femininity of the player is 1]. Your hair forms into tight dreadlocks of dull rest, hanging to the back of your neck[end if]."         	"You have the broad snout of a cow, covered in brown and white fur[if the destined femininity of the player is 1]. Your head is capped with thick, pointed, horns[end if][if the destined femininity of the player is 1]. You have tightly braided dreadlocks of dull red color that run to the back of your neck[end if]."	--
 "chest"	"Your body expands with new muscles as your torso becomes more barrel like, filled with the power of a bovine[if the destined femininity of the player is 1]. The growing strength ebbs a moment, taking a detour into your suddenly very active mammaries, swelling quite large before four large teats swell on each, hanging pink and naked[end if]."           	"You have a powerful, brown and white furred, torso of a cow[if the destined femininity of the player is 1]. You have a huge set of breasts with four thick, dangling teats on each, pink and exposed[end if]."	"Your back itches as it shifts"

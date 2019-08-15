@@ -94,7 +94,7 @@ when play ends:
 		now CockName of Player is "starvation";
 		say "     You have perished from [if hunger of Player >= 100 and thirst of Player >= 100]starvation and thirst[else if hunger of Player >= 100]starvation[else]thirst[end if] and are no more. Your body becomes a meal for another of the more predatory creatures roaming the city.";
 	else if BodyName of Player is "Tigertaur Sex Toy":
-		say "     Even though you try a few times, you never manage to escape the clutches of your tigertuar masters, and servicing them eventually becomes the only reason for your existence, supplanting all other thoughts you might once have had.";
+		say "     Even though you try a few times, you never manage to escape the clutches of your tigertaur masters, and servicing them eventually becomes the only reason for your existence, supplanting all other thoughts you might once have had.";
 		stop the action;
 	else if BodyName of Player is "Broken Husky Slut":
 		say "     The alpha husky that captured you, continued to break down both your mind and body. Eventually, he was able to build you into his perfect submissive partner and the fact that you ended up turning into one of the few precious deltas, well that certainly made his bid to rule the husky packs much more assured..";
@@ -118,7 +118,7 @@ when play ends:
 		say "     Being used as Lucifer's mare is finally enough to push you over the edge. You can't help but lie on the grass, dripping his cum and feeling it dry on your skin, until the feral mustang eventually returns to fuck you again, and again. Eventually, your form shifts to that of a true feral mare and you join the harem of the powerful stallion, well-bred and well-protected from any challenger to Lucifer's might.";
 		stop the action;
 	else if BodyName of Player is "Hell Prisoner":
-		say "     You have dwelved in far too deep into the demonic realm. Hell has taken you and imprisoned your soul for all eternity. Now you serve only to satisfy the demons['] every whim of any kind, your will broken facing an inevitable fate. There's no hope... nor salvation.";
+		say "     You have delved in far too deep into the demonic realm. Hell has taken you and imprisoned your soul for all eternity. Now you serve only to satisfy the demons['] every whim of any kind, your will broken facing an inevitable fate. There's no hope... nor salvation.";
 		stop the action;
 	else if BodyName of Player is "dead":
 		stop the action;

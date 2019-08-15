@@ -88,7 +88,7 @@ Darius's Crib is southeast of Boundary Street East. It is sleepsafe.
 The description of Darius's Crib is "[DariusCribDesc]".
 
 to say DariusCribDesc:
-	say "     Having passed through a short hallway after entering this building and walking past one door that is literally only held up by crime scene tape gluing it to its frame, you're in one of the other apartments of the building now. Or maybe two, as someone has knocked a large hole through the wall of next apartment. All in all, the place has a dingy and run-down feel to it and seems not particularly well cleaned up. Numerous mattresses lie on the floor, often stained by sexual fluids, and you can hear the barking of dog cubs from somewhere deeper in the other apartment. The kitchen counter seems to be where he lays out his stuff to sell, juding from a sign attached to it.";
+	say "     Having passed through a short hallway after entering this building and walking past one door that is literally only held up by crime scene tape gluing it to its frame, you're in one of the other apartments of the building now. Or maybe two, as someone has knocked a large hole through the wall of next apartment. All in all, the place has a dingy and run-down feel to it and seems not particularly well cleaned up. Numerous mattresses lie on the floor, often stained by sexual fluids, and you can hear the barking of dog cubs from somewhere deeper in the other apartment. The kitchen counter seems to be where he lays out his stuff to sell, judging from a sign attached to it.";
 
 The Darius's Inventory is a backdrop. It is in Darius's Crib. The description of the Darius's Inventory is "[Darius's Inventory List]".
 
