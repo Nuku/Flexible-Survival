@@ -603,7 +603,7 @@ to say wukongDesc:
 instead of conversing Wukong:
 	if Resolution of Monkey Duel is 1:
 		if humanity of Wukong is 0:
-			say "     [if Loyalty of Wukong is -1]'You accursed knave! Gnnk!' Wukong pulls at the collar that just sent him a shock. 'Just you wait until I'm out of this bondage.'[else if Loyalty of Wukong is 2]'Is this how you reward me for allowing you in my service? A thousand curses on you!' Wukong says as you enquire about him.[else]'And to say I considered you my friend. Traitor!' the former Monkey King laments, as you attempt to talk to him.[end if]";
+			say "     [if Loyalty of Wukong is -1]'You accursed knave! Gnnk!' Wukong pulls at the collar that just sent him a shock. 'Just you wait until I'm out of this bondage.'[else if Loyalty of Wukong is 2]'Is this how you reward me for allowing you in my service? A thousand curses on you!' Wukong says as you inquire about him.[else]'And to say I considered you my friend. Traitor!' the former Monkey King laments, as you attempt to talk to him.[end if]";
 		else if humanity of Wukong is 1:
 			say "     [if Loyalty of Wukong is -1]'Such disgrace. I have nothing to say to you.'[else if Loyalty of Wukong is 2]'You are enjoying seeing your former sovereign in this state, admit it.'[else]'W-Would you at least convince this Hanu to remove these ropes. I'm itching!'[end if]";
 		else if humanity of Wukong is 2:
