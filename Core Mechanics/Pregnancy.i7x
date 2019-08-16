@@ -318,37 +318,7 @@ To Birth:
 	[NOTE: add any and all exceptions from "They have your Eyes" HERE]
 	if "Human Carrier" is not listed in feats of Player and "Chase's Breeder" is not listed in feats of Player and "Chris's Breeder Slut" is not listed in feats of Player and "Fang's Mate" is not listed in feats of Player and "CheerBreeder" is not listed in feats of Player: [none of the exceptions apply, so we can overwrite]
 		if "They Have Your Eyes" is listed in feats of Player: [overwriting randoms, unbirthed creatures and snakes]
-			[making sure all body parts are available]
-			if HeadName of Player is "" or TorsoName of Player is "" or BackName of Player is "" or ArmsName of Player is "" or LegsName of Player is "" or AssName of Player is "" or TailName of Player is "": [player doesn't have all new type parts]
-				now HeadName of Child is FaceName of Player;
-				now TorsoName of Child is BodyName of Player;
-				now BackName of Child is BodyName of Player;
-				now ArmsName of Child is BodyName of Player;
-				now LegsName of Child is BodyName of Player;
-				now AssName of Child is TailName of Player;
-				now TailName of Child is TailName of Player;
-				now HeadSpeciesName of Child is FaceSpeciesName of Player;
-				now TorsoSpeciesName of Child is BodySpeciesName of Player;
-				now BackSpeciesName of Child is BodySpeciesName of Player;
-				now ArmsSpeciesName of Child is BodySpeciesName of Player;
-				now LegsSpeciesName of Child is BodySpeciesName of Player;
-				now AssSpeciesName of Child is TailSpeciesName of Player;
-				now TailSpeciesName of Child is TailSpeciesName of Player;
-			else: [player has all the parts]
-				now HeadName of Child is HeadName of Player;
-				now TorsoName of Child is TorsoName of Player;
-				now BackName of Child is BackName of Player;
-				now ArmsName of Child is ArmsName of Player;
-				now LegsName of Child is LegsName of Player;
-				now AssName of Child is AssName of Player;
-				now TailName of Child is TailName of Player;
-				now HeadSpeciesName of Child is HeadSpeciesName of Player;
-				now TorsoSpeciesName of Child is TorsoSpeciesName of Player;
-				now BackSpeciesName of Child is BackSpeciesName of Player;
-				now ArmsSpeciesName of Child is ArmsSpeciesName of Player;
-				now LegsSpeciesName of Child is LegsSpeciesName of Player;
-				now AssSpeciesName of Child is AssSpeciesName of Player;
-				now TailSpeciesName of Child is TailSpeciesName of Player;
+			SetInfectionsOf Child to infections of Player;
 	[Pureblood check]
 	let IsPureblood be false;
 	if HeadSpeciesName of Child is TorsoSpeciesName of Child:
@@ -714,20 +684,7 @@ To impregnate with (x - text):
 				say "You choose not to accept the seed.";
 				stop the action;
 		now gestation of Child is a random number from 24 to 48;
-		now HeadName of Child is "Football Wolfman";
-		now TorsoName of Child is "Football Wolfman";
-		now BackName of Child is "Football Wolfman";
-		now ArmsName of Child is "Football Wolfman";
-		now LegsName of Child is "Football Wolfman";
-		now AssName of Child is "Football Wolfman";
-		now TailName of Child is "Football Wolfman";
-		now HeadSpeciesName of Child is "Football Wolfman";
-		now TorsoSpeciesName of Child is "Football Wolfman";
-		now BackSpeciesName of Child is "Football Wolfman";
-		now ArmsSpeciesName of Child is "Football Wolfman";
-		now LegsSpeciesName of Child is "Football Wolfman";
-		now AssSpeciesName of Child is "Football Wolfman";
-		now TailSpeciesName of Child is "Football Wolfman";
+		SetInfectionsOf Child to "Football Wolfman";
 	else if "Chase's Breeder" is listed in feats of Player:
 		if "Selective Mother" is listed in feats of Player:
 			say "Do you wish to be impregnated with a Tiger child?";
@@ -738,20 +695,7 @@ To impregnate with (x - text):
 				remove "Chase's Breeder" from feats of Player;
 				stop the action;
 		now gestation of Child is a random number from 24 to 48;
-		now HeadName of Child is "Tiger";
-		now TorsoName of Child is "Tiger";
-		now BackName of Child is "Tiger";
-		now ArmsName of Child is "Tiger";
-		now LegsName of Child is "Tiger";
-		now AssName of Child is "Tiger";
-		now TailName of Child is "Tiger";
-		now HeadSpeciesName of Child is "Tiger";
-		now TorsoSpeciesName of Child is "Tiger";
-		now BackSpeciesName of Child is "Tiger";
-		now ArmsSpeciesName of Child is "Tiger";
-		now LegsSpeciesName of Child is "Tiger";
-		now AssSpeciesName of Child is "Tiger";
-		now TailSpeciesName of Child is "Tiger";
+		SetInfectionsOf Child to "Tiger";
 	else if "Fang's Mate" is listed in feats of Player:
 		if "Selective Mother" is listed in feats of Player:
 			say "Do you wish to be impregnated with Fang's child?";
@@ -763,20 +707,7 @@ To impregnate with (x - text):
 				now hunger of Fang is 0;
 				stop the action;
 		now gestation of Child is a random number from 24 to 48;
-		now HeadName of Child is "Feral Wolf";
-		now TorsoName of Child is "Feral Wolf";
-		now BackName of Child is "Feral Wolf";
-		now ArmsName of Child is "Feral Wolf";
-		now LegsName of Child is "Feral Wolf";
-		now AssName of Child is "Feral Wolf";
-		now TailName of Child is "Feral Wolf";
-		now HeadSpeciesName of Child is "Feral Wolf";
-		now TorsoSpeciesName of Child is "Feral Wolf";
-		now BackSpeciesName of Child is "Feral Wolf";
-		now ArmsSpeciesName of Child is "Feral Wolf";
-		now LegsSpeciesName of Child is "Feral Wolf";
-		now AssSpeciesName of Child is "Feral Wolf";
-		now TailSpeciesName of Child is "Feral Wolf";
+		SetInfectionsOf Child to "Feral Wolf";
 	else if "Chris's Breeder Slut" is listed in feats of Player:
 		if "Selective Mother" is listed in feats of Player:
 			say "Do you wish to be impregnated with an Orc Warrior child?";
@@ -787,20 +718,7 @@ To impregnate with (x - text):
 				remove "Chris's Breeder Slut" from feats of Player;
 				stop the action;
 		now gestation of Child is a random number from 24 to 48;
-		now HeadName of Child is "Orc Warrior";
-		now TorsoName of Child is "Orc Warrior";
-		now BackName of Child is "Orc Warrior";
-		now ArmsName of Child is "Orc Warrior";
-		now LegsName of Child is "Orc Warrior";
-		now AssName of Child is "Orc Warrior";
-		now TailName of Child is "Orc Warrior";
-		now HeadSpeciesName of Child is "Orc Warrior";
-		now TorsoSpeciesName of Child is "Orc Warrior";
-		now BackSpeciesName of Child is "Orc Warrior";
-		now ArmsSpeciesName of Child is "Orc Warrior";
-		now LegsSpeciesName of Child is "Orc Warrior";
-		now AssSpeciesName of Child is "Orc Warrior";
-		now TailSpeciesName of Child is "Orc Warrior";
+		SetInfectionsOf Child to "Orc Warrior";
 	else if "Human Carrier" is listed in feats of Player:
 		if "Selective Mother" is listed in feats of Player:
 			say "Do you wish to be impregnated with a human child?";
@@ -811,20 +729,7 @@ To impregnate with (x - text):
 				remove "Human Carrier" from feats of Player;
 				stop the action;
 		now gestation of Child is a random number from 24 to 48;
-		now HeadName of Child is "Human";
-		now TorsoName of Child is "Human";
-		now BackName of Child is "Human";
-		now ArmsName of Child is "Human";
-		now LegsName of Child is "Human";
-		now AssName of Child is "Human";
-		now TailName of Child is "Human";
-		now HeadSpeciesName of Child is "Human";
-		now TorsoSpeciesName of Child is "Human";
-		now BackSpeciesName of Child is "Human";
-		now ArmsSpeciesName of Child is "Human";
-		now LegsSpeciesName of Child is "Human";
-		now AssSpeciesName of Child is "Human";
-		now TailSpeciesName of Child is "Human";
+		SetInfectionsOf Child to "Human";
 	else: [normal pregnancy]
 		if "Selective Mother" is listed in feats of Player:
 			if Species Name entry is not "":
@@ -839,36 +744,7 @@ To impregnate with (x - text):
 		now gestation of Child is a random number from 24 to 48;
 		[making sure all body parts are available]
 		let Impregnator be a person;
-		if HeadName of Player is "" or TorsoName of Player is "" or BackName of Player is "" or ArmsName of Player is "" or LegsName of Player is "" or AssName of Player is "" or TailName of Player is "": [player doesn't have all new type parts]
-			now HeadName of Impregnator is FaceName of Player;
-			now TorsoName of Impregnator is BodyName of Player;
-			now BackName of Impregnator is BodyName of Player;
-			now ArmsName of Impregnator is BodyName of Player;
-			now LegsName of Impregnator is BodyName of Player;
-			now AssName of Impregnator is TailName of Player;
-			now TailName of Impregnator is TailName of Player;
-			now HeadSpeciesName of Impregnator is FaceSpeciesName of Player;
-			now TorsoSpeciesName of Impregnator is BodySpeciesName of Player;
-			now BackSpeciesName of Impregnator is BodySpeciesName of Player;
-			now ArmsSpeciesName of Impregnator is BodySpeciesName of Player;
-			now LegsSpeciesName of Impregnator is BodySpeciesName of Player;
-			now AssSpeciesName of Impregnator is TailSpeciesName of Player;
-			now TailSpeciesName of Impregnator is TailSpeciesName of Player;
-		else: [player has all the parts]
-			now HeadName of Impregnator is HeadName of Player;
-			now TorsoName of Impregnator is TorsoName of Player;
-			now BackName of Impregnator is BackName of Player;
-			now ArmsName of Impregnator is ArmsName of Player;
-			now LegsName of Impregnator is LegsName of Player;
-			now AssName of Impregnator is AssName of Player;
-			now TailName of Impregnator is TailName of Player;
-			now HeadSpeciesName of Impregnator is HeadSpeciesName of Player;
-			now TorsoSpeciesName of Impregnator is TorsoSpeciesName of Player;
-			now BackSpeciesName of Impregnator is BackSpeciesName of Player;
-			now ArmsSpeciesName of Impregnator is ArmsSpeciesName of Player;
-			now LegsSpeciesName of Impregnator is LegsSpeciesName of Player;
-			now AssSpeciesName of Impregnator is AssSpeciesName of Player;
-			now TailSpeciesName of Impregnator is TailSpeciesName of Player;
+		SetInfectionsOf Impregnator to infections of Player;
 		if "Breeding True" is listed in feats of Player: [child will always look like the father]
 			now HeadName of Child is x;
 			now TorsoName of Child is x;
@@ -894,20 +770,7 @@ To impregnate with (x - text):
 				now AssSpeciesName of Child is Name entry;
 				now TailSpeciesName of Child is Name entry;
 		else if "They Have Your Eyes" is listed in feats of Player: [child will always look like the player]
-			now HeadName of Child is HeadName of Impregnator;
-			now TorsoName of Child is TorsoName of Impregnator;
-			now BackName of Child is BackName of Impregnator;
-			now ArmsName of Child is ArmsName of Impregnator;
-			now LegsName of Child is LegsName of Impregnator;
-			now AssName of Child is AssName of Impregnator;
-			now TailName of Child is TailName of Impregnator;
-			now HeadSpeciesName of Child is HeadSpeciesName of Impregnator;
-			now TorsoSpeciesName of Child is TorsoSpeciesName of Impregnator;
-			now BackSpeciesName of Child is BackSpeciesName of Impregnator;
-			now ArmsSpeciesName of Child is ArmsSpeciesName of Impregnator;
-			now LegsSpeciesName of Child is LegsSpeciesName of Impregnator;
-			now AssSpeciesName of Child is AssSpeciesName of Impregnator;
-			now TailSpeciesName of Child is TailSpeciesName of Impregnator;
+			SetInfectionsOf Child to infections of Impregnator;
 		else: [random choosing]
 			if a random chance of 1 in 2 succeeds:
 				now HeadName of Child is Name entry;
@@ -1090,22 +953,7 @@ to selfimpregnate:
 				now hp of Fang is 0;
 			stop the action;
 	now gestation of Child is a random number from 24 to 48;
-	if HeadName of Player is "" or TorsoName of Player is "" or BackName of Player is "" or ArmsName of Player is "" or LegsName of Player is "" or AssName of Player is "" or TailName of Player is "": [player doesn't have all new type parts]
-		now HeadName of Child is FaceName of Player;
-		now TorsoName of Child is BodyName of Player;
-		now BackName of Child is BodyName of Player;
-		now ArmsName of Child is BodyName of Player;
-		now LegsName of Child is BodyName of Player;
-		now AssName of Child is TailName of Player;
-		now TailName of Child is TailName of Player;
-	else: [player has all the parts]
-		now HeadName of Child is HeadName of Player;
-		now TorsoName of Child is TorsoName of Player;
-		now BackName of Child is BackName of Player;
-		now ArmsName of Child is ArmsName of Player;
-		now LegsName of Child is LegsName of Player;
-		now AssName of Child is AssName of Player;
-		now TailName of Child is TailName of Player;
+	SetInfectionsOf Child to infections of Player;
 	say "[line break]     There is an odd sensation of warmth inside you and you get a pleasantly perverse feeling.";
 
 to say ovichance:		[to be used when either female or MPreg would work]

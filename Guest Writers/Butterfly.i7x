@@ -631,7 +631,7 @@ ButterflyBaby has a text called TailName. TailName is usually "Human".
 
 To impregnatebutterfly:
 	let Impregnator be a person;
-	if HeadName of Player is "" or TorsoName of Player is "" or BackName of Player is "" or ArmsName of Player is "" or LegsName of Player is "" or AssName of Player is "" or TailName of Player is "": [player doesn't have all new type parts]
+	if Player is not FullyNewTypeInfected: [player doesn't have all new type parts]
 		now HeadName of Impregnator is FaceName of Player;
 		now TorsoName of Impregnator is BodyName of Player;
 		now BackName of Impregnator is BodyName of Player;

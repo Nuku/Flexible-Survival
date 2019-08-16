@@ -933,7 +933,7 @@ Definition: A person (called x) is perminfected:
 	no;
 
 Definition: A person (called x) is pure:
-	if HeadName of Player is "" or TorsoName of Player is "" or BackName of Player is "" or ArmsName of Player is "" or LegsName of Player is "" or AssName of Player is "" or TailName of Player is "" or CockName of Player is "" or CuntName of Player is "": [player doesn't have all new type parts]
+	if Player is not FullyNewTypeInfected: [player doesn't have all new type parts]
 		if BodyName of x is FaceName of x:
 			if BodyName of x is TailName of x:
 				if BodyName of x is SkinName of x:
@@ -953,7 +953,7 @@ Definition: A person (called x) is pure:
 		no;
 
 Definition: A person (called x) is purehuman:
-	if HeadName of Player is "" or TorsoName of Player is "" or BackName of Player is "" or ArmsName of Player is "" or LegsName of Player is "" or AssName of Player is "" or TailName of Player is "" or CockName of Player is "" or CuntName of Player is "": [player doesn't have all new type parts]
+	if Player is not FullyNewTypeInfected: [player doesn't have all new type parts]
 		if BodyName of Player is "Human" or BodyName of Player is "Herm Human":
 			if FaceName of Player is "Human" or FaceName of Player is "Herm Human":
 				if TailName of Player is "Human" or TailName of Player is "Herm Human":
@@ -3648,7 +3648,7 @@ This is the sex change rule:
 
 This is the breast change rule:
 	choose row MonsterID from the Table of Random Critters;
-	if TorsoName of Player is not "": [new parts]
+	if Player is FullyNewTypeInfected: [new parts]
 		if Nipple Count of Player is not Nipple Count entry:
 			decrease Breast Size of Player by 2;
 			follow the breast descr rule;
@@ -5304,13 +5304,13 @@ This is the self examine rule:
 		-- 5:
 			say "enormous in size, a lot larger than any regular human ever could be.";
 	[ Infection Descriptions Below   ]
-	if HeadName of Player is not "" and NewTypeInfectionActive is true: [new infection on player and activated]
+	if Player is FullyNewTypeInfected and NewTypeInfectionActive is true: [new infection on player and activated]
 		say "Pulling out a small mirror, you check yourself over from head to toe, attempting to make sense of your current form. Your head and face resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance. [if Player is HasBeard]You have a [Hair Color of Player] [Beard Style of Player]. [end if][if Player is HasHeadHair]On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style. [end if]Inspecting your [Mouth Length Adjective of Player] mouth with both the mirror and your digits, you attempt to look past your [Tongue Length of Player] inch long, [Tongue Color of Player], [Tongue Adjective of Player] tongue and into your [Mouth Length Adjective of Player] throat. [if Player is HasHeadAdornments]Before moving on from your head, you give your [Head Adornments of Player] a proud glance followed by a light caress. [end if][line break]";
 	else: [old infection]
 		say "Your face is [Face of Player]. ";
-	if TorsoName of Player is "": [old infection]
+	if Player is not FullyNewTypeInfected: [old infection]
 		say "Looking at yourself, your body is covered in [Skin of Player] skin. ";
-	if TorsoName of Player is not "" and BackName of Player is not "" and ArmsName of Player is not "" and NewTypeInfectionActive is true: [new infection on player and activated]
+	if Player is FullyNewTypeInfected and NewTypeInfectionActive is true: [new infection on player and activated]
 		say "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]. Your [Limbs Adjective of Player] arms are [Arms Description of Player]";
 		if Arms Skin Adjective of Player is "":
 			say "[if Body Hair Length of Player > 1], covered in [Arms Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Arms Color of Player] skin[end if]";
@@ -5338,7 +5338,7 @@ This is the self examine rule:
 					if Nipple Count of Player > 4, say "The rest jostle for space [Breast Size of Player divided by three] inch[if Breast Size of Player divided by 3 is not 1]es[end if] from your belly. ";
 				else:
 					say "You have two [descr] breasts on your [Bodydesc of Player] chest, curving out [Breast Size of Player] inch[if Breast Size of Player is not 1]es[end if] from your chest. ";
-	if AssName of Player is not "" and TailName of Player is not "" and LegsName of Player is not "" and NewTypeInfectionActive is true: [new infection on player and activated]
+	if Player is FullyNewTypeInfected and NewTypeInfectionActive is true: [new infection on player and activated]
 		say "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]";
 		if Ass Skin Adjective of Player is "":
 			say "[if Body Hair Length of Player > 1], covered in [Ass Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Ass Color of Player] skin[end if]";
@@ -6319,6 +6319,7 @@ Include Pets by Core Mechanics.
 Include Pregnancy by Core Mechanics.
 Include Presets by Core Mechanics.
 Include Quest Log by Core Mechanics.
+Include Sex and Infection Functions by Core Mechanics.
 Include Status View by Core Mechanics.
 Include Sleeptimer by Core Mechanics.
 Include Tape Inventory by Core Mechanics.
