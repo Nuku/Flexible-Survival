@@ -188,7 +188,7 @@ The player has a text called tailSpeciesName. TailSpeciesName is usually "Human"
 
 [Parts: head, torso, back, arms, legs, ass, tail, cock, cunt]
 [expanded set of Player specific infection parts]
-The player has a text called HeadName. HeadName is usually "". [set to "" instead of "Human" for now, to prevent freshly imported Player Characters from registering fully human for impregnation]
+The player has a text called HeadName. HeadName is usually "Human".
 The player has a text called HeadSpeciesName. HeadSpeciesName is usually "Human".
 The player has a text called Head Description. Head Description is usually "a typical human".
 The player has a text called Head Adjective. Head Adjective is usually "human".
@@ -205,7 +205,7 @@ The player has a text called Eye Color. Eye Color is usually "green".
 The player has a text called Eye Adjective. Eye Adjective is usually "round".
 The player has a text called Tongue Adjective. Tongue Adjective is usually "average".
 The player has a text called Tongue Color. Tongue Color is usually "pink".
-The player has a text called TorsoName. TorsoName is usually "". [set to "" instead of "Human" for now, to prevent freshly imported Player Characters from registering fully human for impregnation]
+The player has a text called TorsoName. TorsoName is usually "Human".
 The player has a text called TorsoSpeciesName. TorsoSpeciesName is usually "Human".
 The player has a text called Torso Description. Torso Description is usually "that of a regular human".
 The player has a text called Torso Adjective. Torso Adjective is usually "human".
@@ -216,18 +216,18 @@ The player has a text called Breast Adjective. Breast Adjective is usually "perk
 The player has a text called Torso Adornments. Torso Adornments is usually "".
 The player has a text called Nipple Color. Nipple Color is usually "light brown".
 The player has a text called Nipple Shape. Nipple Shape is usually "oval".
-The player has a text called BackName. BackName is usually "". [set to "" instead of "Human" for now, to prevent freshly imported Player Characters from registering fully human for impregnation]
+The player has a text called BackName. BackName is usually "Human".
 The player has a text called BackSpeciesName. BackSpeciesName is usually "Human".
 The player has a text called Back Adornments. Back Adornments is usually "".
 The player has a text called Back Skin Adjective. Back Skin Adjective is usually "".
 The player has a text called Back Color. Back Color is usually "fair".
-The player has a text called ArmsName. ArmsName is usually "". [set to "" instead of "Human" for now, to prevent freshly imported Player Characters from registering fully human for impregnation]
+The player has a text called ArmsName. ArmsName is usually "Human".
 The player has a text called ArmsSpeciesName. ArmsSpeciesName is usually "Human".
 The player has a text called Arms Description. Arms Description is usually "those of a regular human".
 The player has a text called Arms Skin Adjective. Arms Skin Adjective is usually "".
 The player has a text called Arms Color. Arms Color is usually "fair".
 The player has a text called Locomotion. Locomotion is usually "bipedal".
-The player has a text called LegsName. LegsName is usually "". [set to "" instead of "Human" for now, to prevent freshly imported Player Characters from registering fully human for impregnation]
+The player has a text called LegsName. LegsName is usually "Human".
 The player has a text called LegsSpeciesName. LegsSpeciesName is usually "Human".
 The player has a text called Legs Description. Legs Description is usually "that of a regular human, reaching all the way to the ground".
 The player has a text called Legs Skin Adjective. Legs Skin Adjective is usually "".
