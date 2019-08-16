@@ -14,6 +14,11 @@ Definition: A person (called x) is FullyNewTypeInfected:
 	if CuntName of x is "", no;
 	yes;
 
+to decide if (x - a person) has a body of (i - a text):
+	if TorsoName of x is i, decide yes;
+	if BodyName of x is i, decide yes;
+	decide no;
+
 to SetInfectionsOf ( Target - a person ) to infections of ( Source - a person):
 	if Source is Player and Player is not FullyNewTypeInfected:
 		now HeadName of Target is FaceName of Source;

@@ -357,13 +357,13 @@ To Birth:
 		-- 10:
 			now ChildGender is "trans female";
 	[override for special species with gender bias - expand HERE for new species]
-	if BodyName of Child is "Platypus" and a random chance of 9 in 10 succeeds:
+	if Child has a body of "Platypus" and a random chance of 9 in 10 succeeds:
 		now ChildGender is "male";
-	if BodyName of Child is "Orc Warrior" or BodyName of Child is "Orc Breeder" and a random chance of 9 in 10 succeeds:
+	if Child has a body of "Orc Warrior" or Child has a body of "Orc Breeder" and a random chance of 9 in 10 succeeds:
 		now ChildGender is "male";
-	else if BodyName of Child is "Harpy" and a random chance of 15 in 20 succeeds:
+	else if Child has a body of "Harpy" and a random chance of 15 in 20 succeeds:
 		now ChildGender is "female";
-	else if BodyName of Child is "Blue Gryphon Herm" and a random chance of 15 in 20 succeeds:
+	else if Child has a body of "Blue Gryphon Herm" and a random chance of 15 in 20 succeeds:
 		now ChildGender is "herm";
 	[Checking for visible tails]
 	let ShowTail be false;
