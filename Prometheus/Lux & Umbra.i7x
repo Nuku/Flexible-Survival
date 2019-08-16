@@ -119,7 +119,7 @@ Virgin of Lux is true.
 AnalVirgin of Lux is true.
 PenileVirgin of Lux is true.
 SexuallyExperienced of Lux is false.
-MainInfection of Lux is "Alpha Wolf".
+MainInfection of Lux is "Feral Wolf".
 The description of Lux is "[Luxdesc]".
 The conversation of Lux is { "Bark! Woof! Woof!" }.
 
@@ -236,7 +236,7 @@ to say LuxTalk2:
 	AnalVirgin of Umbra is true.
 	PenileVirgin of Umbra is true.
 	SexuallyExperienced of Umbra is false.
-	MainInfection of Umbra is "Alpha Wolf".
+	MainInfection of Umbra is "Feral Wolf".
 	The description of Umbra is "[Umbradesc]".
 	The conversation of Umbra is { "Bark! Bark! Woof!" }.
 
