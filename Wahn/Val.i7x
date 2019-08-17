@@ -22,18 +22,27 @@ object	name
 Val	"Val"
 
 Val is a man.
-ScaleValue of Val is 3.
-Cock Count of Val is 1.
-Cock Length of Val is 8.
-Ball Size of Val is 4.
-Ball Count of Val is 2.
-Cunt Count of Val is 0.
-Cunt Depth of Val is 0.
-Cunt Tightness of Val is 0.
-Nipple Count of Val is 2. [2 nipples]
-Breast Size of Val is 0.
-TwistedCapacity of Val is true.
-Sterile of Val is false.
+ScaleValue of Val is 3. [human sized]
+Body Weight of Val is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Val is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Val is 3. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Val is 7. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Val is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Val is 4. [length in inches]
+Breast Size of Val is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Val is 2. [count of nipples]
+Asshole Depth of Val is 14. [inches deep for anal fucking]
+Asshole Tightness of Val is 4. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Val is 1. [number of cocks]
+Cock Girth of Val is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Val is 8. [length in inches]
+Ball Count of Val is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Val is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Val is 0. [number of cunts]
+Cunt Depth of Val is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Val is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Val is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Val is false.
 PlayerRomanced of Val is false.
@@ -45,6 +54,8 @@ Virgin of Val is true.
 AnalVirgin of Val is false.
 PenileVirgin of Val is false.
 SexuallyExperienced of Val is true.
+TwistedCapacity of Val is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Val is false. [steriles can't knock people up]
 MainInfection of Val is "Orc Breeder".
 The description of Val is "[ValDesc]".
 The conversation of Val is { "Mew!" }.

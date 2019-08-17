@@ -51,26 +51,39 @@ Pet Mutt	"Pet Mutt"
 
 Pet Mutt is a man.
 ScaleValue of Pet Mutt is 3. [human sized]
-Cock Count of Pet Mutt is 1.
-Cock Length of Pet Mutt is 8.
-Ball Size of Pet Mutt is 3.
-Ball Count of Pet Mutt is 2.
-Cunt Count of Pet Mutt is 0.
-Cunt Depth of Pet Mutt is 0.
-Cunt Tightness of Pet Mutt is 0.
-Nipple Count of Pet Mutt is 2. [2 nipples]
-Breast Size of Pet Mutt is 0.
+Body Weight of Pet Mutt is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Pet Mutt is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Pet Mutt is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Pet Mutt is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Pet Mutt is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Pet Mutt is 5. [length in inches]
+Breast Size of Pet Mutt is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Pet Mutt is 2. [count of nipples]
+Asshole Depth of Pet Mutt is 8. [inches deep for anal fucking]
+Asshole Tightness of Pet Mutt is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Pet Mutt is 1. [number of cocks]
+Cock Girth of Pet Mutt is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Pet Mutt is 9. [length in inches]
+Ball Count of Pet Mutt is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Pet Mutt is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Pet Mutt is 0. [number of cunts]
+Cunt Depth of Pet Mutt is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Pet Mutt is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Pet Mutt is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Pet Mutt is false.
 PlayerRomanced of Pet Mutt is false.
 PlayerFriended of Pet Mutt is false.
 PlayerControlled of Pet Mutt is false.
 PlayerFucked of Pet Mutt is false.
-OralVirgin of Pet Mutt is true.
+OralVirgin of Pet Mutt is false.
 Virgin of Pet Mutt is true.
 AnalVirgin of Pet Mutt is false.
 PenileVirgin of Pet Mutt is false.
 SexuallyExperienced of Pet Mutt is true.
+TwistedCapacity of Pet Mutt is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Pet Mutt is false. [steriles can't knock people up]
 MainInfection of Pet Mutt is "Feral Mutt".
 The description of Pet Mutt is "[Pet MuttDesc]".
 The conversation of Pet Mutt is { "<This is nothing but a placeholder!>" }.

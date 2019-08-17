@@ -381,19 +381,29 @@ Table of GameCharacterIDs (continued)
 object	name
 Mike	"Mike"
 
-Mike is a man. Mike is in Mike's Office.
+Mike is a man.
+Mike is in Mike's Office.
 ScaleValue of Mike is 3. [human sized]
-Cock Count of Mike is 1.
-Cock Length of Mike is 10.
-Ball Size of Mike is 5. [golfball sized balls]
-Ball Count of Mike is 2.
-Cunt Count of Mike is 0.
-Cunt Depth of Mike is 0.
-Cunt Tightness of Mike is 0.
-Nipple Count of Mike is 2.
-Breast Size of Mike is 0.
-TwistedCapacity of Mike is false.
-Sterile of Mike is false.
+Body Weight of Mike is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Mike is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Mike is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Mike is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Mike is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Mike is 5. [length in inches]
+Breast Size of Mike is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Mike is 2. [count of nipples]
+Asshole Depth of Mike is 8. [inches deep for anal fucking]
+Asshole Tightness of Mike is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Mike is 1. [number of cocks]
+Cock Girth of Mike is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Mike is 10. [length in inches]
+Ball Count of Mike is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Mike is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Mike is 0. [number of cunts]
+Cunt Depth of Mike is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Mike is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Mike is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Mike is false.
 PlayerRomanced of Mike is false.
@@ -405,8 +415,9 @@ Virgin of Mike is true.
 AnalVirgin of Mike is true.
 PenileVirgin of Mike is false.
 SexuallyExperienced of Mike is true.
+TwistedCapacity of Mike is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Mike is false. [steriles can't knock people up]
 MainInfection of Mike is "Blacktail Stag".
-
 The description of Mike is "[MikeDesc]".
 The conversation of Mike is { "Oh, hello." }.
 The icon of Mike is Figure of Mike_icon.
@@ -670,7 +681,43 @@ Table of GameCharacterIDs (continued)
 object	name
 Lea	"Lea"
 
-Lea is a woman. Lea is in Mike's Office.
+Lea is a woman.
+Lea is in Mike's Office.
+ScaleValue of Lea is 3. [human sized]
+Body Weight of Lea is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Lea is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Lea is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Lea is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Lea is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Lea is 4. [length in inches]
+Breast Size of Lea is 3. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Lea is 2. [count of nipples]
+Asshole Depth of Lea is 8. [inches deep for anal fucking]
+Asshole Tightness of Lea is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Lea is 0. [number of cocks]
+Cock Girth of Lea is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Lea is 0. [length in inches]
+Ball Count of Lea is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Lea is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Lea is 1. [number of cunts]
+Cunt Depth of Lea is 9. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Lea is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Lea is 3. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Lea is false.
+PlayerRomanced of Lea is false.
+PlayerFriended of Lea is false.
+PlayerControlled of Lea is false.
+PlayerFucked of Lea is false.
+OralVirgin of Lea is false.
+Virgin of Lea is false.
+AnalVirgin of Lea is true.
+PenileVirgin of Lea is true.
+SexuallyExperienced of Lea is true.
+TwistedCapacity of Lea is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Lea is false. [steriles can't knock people up]
+MainInfection of Lea is "Human".
 The description of Lea is "     Originally one of Mike's dogs, Lea is now a young human woman of about nineteen. She has shoulder-length blond hair and a slender physique, although her breasts have obviously filled out quite a bit to go with her pregnant belly. But no matter what she looks like - there's still only a dog's mind behind her eyes, so she walks on all fours and only uses barks and growls as communication[if HP of Mike < 5]. A deep gash from a leopardman's claw marks her side. It doesn't look good - she needs some bandages and most likely antibiotics too. And soon[else if HP of Mike > 4]. A clean white bandage covers most of her upper torso, protecting her healing wound from getting dirty again[end if].".
 The conversation of Lea is { "Woof." }.
 
@@ -696,32 +743,41 @@ object	name
 Xerxes	"Xerxes"
 
 Xerxes is a man.
-[physical details as of game start]
 ScaleValue of Xerxes is 3. [human sized]
-Cock Count of Xerxes is 1.
-Cock Length of Xerxes is 9.
-Ball Size of Xerxes is 5.
-Ball Count of Xerxes is 2.
-Cunt Count of xerxes is 0.
-Cunt Depth of Xerxes is 0.
-Cunt Tightness of Xerxes is 0.
-Nipple Count of Xerxes is 2.
-Breast Size of Xerxes is 0.
-TwistedCapacity of Xerxes is false.
-Sterile of Xerxes is false.
+Body Weight of Xerxes is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Xerxes is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Xerxes is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Xerxes is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Xerxes is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Xerxes is 5. [length in inches]
+Breast Size of Xerxes is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Xerxes is 2. [count of nipples]
+Asshole Depth of Xerxes is 8. [inches deep for anal fucking]
+Asshole Tightness of Xerxes is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Xerxes is 1. [number of cocks]
+Cock Girth of Xerxes is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Xerxes is 9. [length in inches]
+Ball Count of Xerxes is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Xerxes is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Xerxes is 0. [number of cunts]
+Cunt Depth of Xerxes is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Xerxes is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Xerxes is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Xerxes is false.
 PlayerRomanced of Xerxes is false.
 PlayerFriended of Xerxes is false.
 PlayerControlled of Xerxes is false.
 PlayerFucked of Xerxes is false.
-OralVirgin of Xerxes is true.
+OralVirgin of Xerxes is false.
 Virgin of Xerxes is true.
 AnalVirgin of Xerxes is true.
-PenileVirgin of Xerxes is true.
-SexuallyExperienced of Xerxes is false.
+PenileVirgin of Xerxes is false.
+SexuallyExperienced of Xerxes is true.
+TwistedCapacity of Xerxes is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Xerxes is false. [steriles can't knock people up]
 MainInfection of Xerxes is "Human".
-
 The description of Xerxes is "[XerxesDesc]".
 The conversation of Xerxes is { "Woof." }.
 LastXerxesTalk is a number that varies. LastXerxesTalk is usually 555.

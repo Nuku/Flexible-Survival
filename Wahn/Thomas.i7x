@@ -164,18 +164,27 @@ object	name
 Thomas	"Thomas"
 
 Thomas is a man.
-ScaleValue of Thomas is 4.
-Cock Count of Thomas is 1.
-Cock Length of Thomas is 28.
-Ball Size of Thomas is 4.
-Ball Count of Thomas is 2.
-Cunt Count of Thomas is 0.
-Cunt Depth of Thomas is 0.
-Cunt Tightness of Thomas is 0.
-Nipple Count of Thomas is 2. [2 nipples]
-Breast Size of Thomas is 0.
-TwistedCapacity of Thomas is false.
-Sterile of Thomas is false.
+ScaleValue of Thomas is 4. [human sized]
+Body Weight of Thomas is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Thomas is 8. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Thomas is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Thomas is 7. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Thomas is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Thomas is 4. [length in inches]
+Breast Size of Thomas is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Thomas is 2. [count of nipples]
+Asshole Depth of Thomas is 24. [inches deep for anal fucking]
+Asshole Tightness of Thomas is 3. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Thomas is 1. [number of cocks]
+Cock Girth of Thomas is 4. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Thomas is 28. [length in inches]
+Ball Count of Thomas is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Thomas is 5. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Thomas is 1. [number of cunts]
+Cunt Depth of Thomas is 24. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Thomas is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Thomas is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Thomas is false.
 PlayerRomanced of Thomas is false.
@@ -187,6 +196,8 @@ Virgin of Thomas is true.
 AnalVirgin of Thomas is true.
 PenileVirgin of Thomas is false.
 SexuallyExperienced of Thomas is true.
+TwistedCapacity of Thomas is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Thomas is false. [steriles can't knock people up]
 MainInfection of Thomas is "Centaur Stallion".
 The description of Thomas is "[ThomasDesc]".
 The conversation of Thomas is { "Mew!" }.

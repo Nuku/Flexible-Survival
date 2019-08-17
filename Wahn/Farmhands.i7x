@@ -16,7 +16,43 @@ Table of GameCharacterIDs (continued)
 object	name
 Farmhand Horsemen	"Farmhand Horsemen"
 
-Farmhand Horsemen is a man. The HP of Farmhand Horsemen is usually 0. Farmhand Horsemen is in Worker Barracks.
+Farmhand Horsemen is a man.
+Farmhand Horsemen is in Worker Barracks.
+ScaleValue of Farmhand Horsemen is 4. [human+ sized]
+Body Weight of Farmhand Horsemen is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Farmhand Horsemen is 8. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Farmhand Horsemen is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Farmhand Horsemen is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Farmhand Horsemen is 3.  [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Farmhand Horsemen is 4. [length in inches]
+Breast Size of Farmhand Horsemen is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Farmhand Horsemen is 2. [count of nipples]
+Asshole Depth of Farmhand Horsemen is 16. [inches deep for anal fucking]
+Asshole Tightness of Farmhand Horsemen is 3. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Farmhand Horsemen is 1. [number of cocks]
+Cock Girth of Farmhand Horsemen is 4. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Farmhand Horsemen is 16. [length in inches]
+Ball Count of Farmhand Horsemen is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Farmhand Horsemen is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Farmhand Horsemen is 0. [number of cunts]
+Cunt Depth of Farmhand Horsemen is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Farmhand Horsemen is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Farmhand Horsemen is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Farmhand Horsemen is false.
+PlayerRomanced of Farmhand Horsemen is false.
+PlayerFriended of Farmhand Horsemen is false.
+PlayerControlled of Farmhand Horsemen is false.
+PlayerFucked of Farmhand Horsemen is false.
+OralVirgin of Farmhand Horsemen is false.
+Virgin of Farmhand Horsemen is true.
+AnalVirgin of Farmhand Horsemen is true.
+PenileVirgin of Farmhand Horsemen is false.
+SexuallyExperienced of Farmhand Horsemen is true.
+TwistedCapacity of Farmhand Horsemen is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Farmhand Horsemen is false. [steriles can't knock people up]
+MainInfection of Farmhand Horsemen is "Horseman".
 The description of Farmhand Horsemen is "[FarmhandsDesc]".
 The conversation of Farmhand Horsemen is { "<This is nothing but a placeholder!>" }.
 The scent of Farmhand Horsemen is "     Walking up to one of the horsemen, you sniff at him - he has a nicely masculine scent, with a little bit of fur, straw and sweat in the mix. Seems like the guys are not adverse to doing some good and solid work for their boss at the farm. The farm worker you approached lowers a hand to rub the bulge at his crotch and says, 'I'm game if you wanna get to know me even better.' He chuckles amicably as you make an excuse and take a few steps back from him.".

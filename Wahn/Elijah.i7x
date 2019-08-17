@@ -147,17 +147,28 @@ Table of GameCharacterIDs (continued)
 object	name
 Elijah	"Elijah"
 
-Elijah is a man. The HP of Elijah is usually 0.
+Elijah is a man.
 ScaleValue of Elijah is 3. [human sized]
-Cock Count of Elijah is 1.
-Cock Length of Elijah is 12.
-Ball Size of Elijah is 5. [golfball sized balls]
-Ball Count of Elijah is 2.
-Cunt Count of Elijah is 0.
-Cunt Depth of Elijah is 0.
-Cunt Tightness of Elijah is 0.
-Nipple Count of Elijah is 2.
-Breast Size of Elijah is 0.
+Body Weight of Elijah is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Elijah is 8. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Elijah is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Elijah is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Elijah is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Elijah is 5. [length in inches]
+Breast Size of Elijah is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Elijah is 2. [count of nipples]
+Asshole Depth of Elijah is 8. [inches deep for anal fucking]
+Asshole Tightness of Elijah is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Elijah is 1. [number of cocks]
+Cock Girth of Elijah is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Elijah is 12. [length in inches]
+Ball Count of Elijah is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Elijah is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Elijah is 0. [number of cunts]
+Cunt Depth of Elijah is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Elijah is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Elijah is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Elijah is false.
 PlayerRomanced of Elijah is false.
@@ -169,6 +180,8 @@ Virgin of Elijah is true.
 AnalVirgin of Elijah is true.
 PenileVirgin of Elijah is true.
 SexuallyExperienced of Elijah is false.
+TwistedCapacity of Elijah is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Elijah is false. [steriles can't knock people up]
 MainInfection of Elijah is "Seraphim Warrior".
 
 The description of Elijah is "[Elijahdesc]".
