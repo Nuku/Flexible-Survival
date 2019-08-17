@@ -436,6 +436,7 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 				now OralVirgin of Player is false;
 				say "     [Bold Type]You have lost your oral virginity to the [GivingCharName in lower case]![roman type][line break]";
 				now FirstOralPartner of Player is GivingCharName;
+		now Lastfuck of Player is turns;
 	else:
 		let GivingCharIsNPC be 0;
 		let TakingCharIsNPC be 0;
@@ -443,9 +444,11 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 		let TakingChar be a person;
 		if there is a name of GivingCharName in the Table of GameCharacterIDs:
 			now GivingChar is the object corresponding to a name of GivingCharName in the Table of GameCharacterIDs;
+			now Lastfuck of GivingChar is turns;
 			now GivingCharIsNPC is 1;
 		if there is a name of TakingCharName in the Table of GameCharacterIDs:
 			now TakingChar is the object corresponding to a name of TakingCharName in the Table of GameCharacterIDs;
+			now Lastfuck of TakingChar is turns;
 			now TakingCharIsNPC is 1;
 		if GivingCharIsNPC is 0 and TakingCharIsNPC is 0:
 			say "Error: The CreatureSexAftermath function should include at least one NPC if it is used. Please report this on the FS Discord and quote this full message. Giving Char: '[GivingCharName]' Taking Char: '[TakingCharName]'";

@@ -106,7 +106,7 @@ instead of going east from Mall Atrium while (VentFoxEncounterCount < 2 and a ra
 			say "     Deciding it's probably best to just move along, you continue making your way to the East Wing.";
 	else if VentFoxEncounterCount is 1: [second time]
 		say "     As you head to the East Wing, you hear squeaking coming from the same shop you'd found [']Vent['] in. Sighing, you decide to make your way to the store to help the silly latex vulpine. Stepping inside, you don't even bother looking around before you go to the vent. You unfasten the cover again, pulling it, and the fox towards you. This time, he doesn't seem startled or scared. As a matter of fact, he almost looks relieved. You gently free him from the grate, but this time, he doesn't dash back into the ductwork immediately. Instead, the little creature leans down to pick up the bike wheel tubing that is still laying there with his teeth, dragging it along. He turns to look at you before running back into the vents.";
-		say "     Not bothering to put the cover back in place, you continue heading to the East Wing, a small smile on your [Face of Player] face. [bold type]Perhaps you could search around the mall to find how the fox got inside in the first place...[roman type]";
+		say "     Not bothering to put the cover back in place, you continue heading to the East Wing, a small smile on your [FaceSpeciesName of Player in lower case] face. [bold type]Perhaps you could search around the mall to find how the fox got inside in the first place...[roman type]";
 		now VentFoxEncounterCount is 2; [did the event twice]
 		now VentFoxRelationship is 2;
 

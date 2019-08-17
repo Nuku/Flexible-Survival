@@ -663,6 +663,21 @@ to PlayerSave:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "EncounteredEnemy";
 			now EntryText entry is entry y of EncounteredEnemies of Player;
+	if the number of entries in VirginitiesTaken of Player is not 0:
+		repeat with y running from 1 to the number of entries in VirginitiesTaken of Player: [rebuilds the table of GameTraits with current data]
+			choose a blank row in the table of PlayerLists;
+			now ListName entry is "VirginitiesTaken";
+			now EntryText entry is entry y of VirginitiesTaken of Player;
+	if the number of entries in AnalVirginitiesTaken of Player is not 0:
+		repeat with y running from 1 to the number of entries in AnalVirginitiesTaken of Player: [rebuilds the table of GameTraits with current data]
+			choose a blank row in the table of PlayerLists;
+			now ListName entry is "AnalVirginitiesTaken";
+			now EntryText entry is entry y of AnalVirginitiesTaken of Player;
+	if the number of entries in OralVirginitiesTaken of Player is not 0:
+		repeat with y running from 1 to the number of entries in OralVirginitiesTaken of Player: [rebuilds the table of GameTraits with current data]
+			choose a blank row in the table of PlayerLists;
+			now ListName entry is "OralVirginitiesTaken";
+			now EntryText entry is entry y of OralVirginitiesTaken of Player;
 	if the number of entries in BlockList of Player is not 0:
 		repeat with y running from 1 to the number of entries in BlockList of Player: [rebuilds the table of GameTraits with current data]
 			choose a blank row in the table of PlayerLists;
@@ -811,6 +826,15 @@ to PlayerRestore:
 				-- "EncounteredEnemy":
 					if EntryText entry is not listed in EncounteredEnemies of Player:
 						add EntryText entry to EncounteredEnemies of Player;
+				-- "VirginitiesTaken":
+					if EntryText entry is not listed in VirginitiesTaken of Player:
+						add EntryText entry to VirginitiesTaken of Player;
+				-- "AnalVirginitiesTaken":
+					if EntryText entry is not listed in AnalVirginitiesTaken of Player:
+						add EntryText entry to AnalVirginitiesTaken of Player;
+				-- "OralVirginitiesTaken":
+					if EntryText entry is not listed in OralVirginitiesTaken of Player:
+						add EntryText entry to OralVirginitiesTaken of Player;
 				-- "BlockList":
 					if EntryText entry is not listed in BlockList of Player:
 						add EntryText entry to BlockList of Player;

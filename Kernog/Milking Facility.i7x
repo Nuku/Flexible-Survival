@@ -29,7 +29,7 @@ name	desc	weight	object
 "ESPP bunker keycard"	"A metallic access card, marked with the address of a bunker for some unspecific secret project"	1	ESPP bunker keycard
 "manufactured milk"	"A bottle of milk manufactured at the milking factory"	1	manufactured milk
 
-ESPP bunker keycard is a grab object. It is a part of the player.
+ESPP bunker keycard is a grab object. It is a part of the player. It is not temporary.
 manufactured milk is a grab object. It is a part of the player. Understand "milk" as manufactured milk. manufactured milk is infectious. The strain of manufactured milk is "Bottlenose Toy". The trade of manufactured milk is "distilled milk". The purified of manufactured milk is "distilled milk". manufactured milk is milky.
 
 
