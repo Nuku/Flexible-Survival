@@ -39,6 +39,41 @@ Krampus	"Krampus"
 
 Krampus is a man.
 Krampus is in Krampus's Cave.
+ScaleValue of Krampus is 4. [human sized]
+Body Weight of Krampus is 8. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Krampus is 9. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Krampus is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Krampus is 7. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Krampus is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Krampus is 7. [length in inches]
+Breast Size of Krampus is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Krampus is 2. [count of nipples]
+Asshole Depth of Krampus is 10. [inches deep for anal fucking]
+Asshole Tightness of Krampus is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Krampus is 1. [number of cocks]
+Cock Girth of Krampus is 4. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Krampus is 14. [length in inches]
+Ball Count of Krampus is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Krampus is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Krampus is 0. [number of cunts]
+Cunt Depth of Krampus is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Krampus is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Krampus is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Krampus is false.
+PlayerRomanced of Krampus is false.
+PlayerFriended of Krampus is false.
+PlayerControlled of Krampus is false.
+PlayerFucked of Krampus is false.
+OralVirgin of Krampus is false.
+Virgin of Krampus is true.
+AnalVirgin of Krampus is true.
+PenileVirgin of Krampus is false.
+SexuallyExperienced of Krampus is true.
+TwistedCapacity of Krampus is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Krampus is false. [steriles can't knock people up]
+MainInfection of Krampus is "Goat-Demon".
 The description of Krampus is "[KrampusDesc]".
 The conversation of Krampus is { "<This is nothing but a placeholder!>" }.
 The scent of Krampus is "[KrampusScent]";
@@ -440,7 +475,7 @@ When Play begins:
 	now area entry is "Nowhere";       [ Case sensitive]
 	now Cock Count entry is 1;              [ number of cocks if sex is 'Male' or 'Both' ]
 	now Cock Length entry is 14;
-	now Ball Size entry is 3;         [ Size of balls ]
+	now Ball Size entry is 4;         [ Size of balls ]
 	now Nipple Count entry is 2;            [ Number of nipples. ]
 	now Breast Size entry is 0;        [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 	now Male Breast Size entry is 0;   [ Breast size for if Sex="Male", usually zero. ]

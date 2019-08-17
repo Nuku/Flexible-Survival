@@ -186,7 +186,42 @@ Table of GameCharacterIDs (continued)
 object	name
 Steven	"Steven"
 
-Steven is a person in the Storage Room. "A guard who you recognize as the doorkeeper stands, understandably, by the big steel door. A nametag says 'Steven'."
+Steven is a man in the Storage Room. "A guard who you recognize as the doorkeeper stands, understandably, by the big steel door. A nametag says 'Steven'."
+ScaleValue of Steven is 4. [human sized]
+Body Weight of Steven is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Steven is 8. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Steven is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Steven is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Steven is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Steven is 5. [length in inches]
+Breast Size of Steven is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Steven is 2. [count of nipples]
+Asshole Depth of Steven is 8. [inches deep for anal fucking]
+Asshole Tightness of Steven is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Steven is 1. [number of cocks]
+Cock Girth of Steven is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Steven is 15. [length in inches]
+Ball Count of Steven is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Steven is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Steven is 0. [number of cunts]
+Cunt Depth of Steven is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Steven is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Steven is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Steven is false.
+PlayerRomanced of Steven is false.
+PlayerFriended of Steven is false.
+PlayerControlled of Steven is false.
+PlayerFucked of Steven is false.
+OralVirgin of Steven is false.
+Virgin of Steven is true.
+AnalVirgin of Steven is true.
+PenileVirgin of Steven is false.
+SexuallyExperienced of Steven is true.
+TwistedCapacity of Steven is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Steven is false. [steriles can't knock people up]
+MainInfection of Steven is "Morgan Horse Stallion".
 The description of Steven is "A man in his thirties, wearing a security outfit. He looks from side to side with a distant look in his eyes. What kind of life did he have before the nanite invasion?".
 The conversation of Steven is {"[Steven flattery]", "What's it like out there? If I only had a gun, I might be able to assist you.", "I don't know how long this infestation has been going on. Long enough, in my opinion.", "None of us knew about the nanites. Just before things went berserk, we grabbed a building and brought in everyone from the streets. You should've seen it.", "Before everything went to hell, I had a house, a son, twenty grand a year. It's all gone now. Those people out there are all I have left.", "Part of me wants to just give in. If civilization is going to hell... but I guess that's why people like me, who don't have anything else, are here for, right?", "You know, if you can find any chips or sodas out there, I can get you a few medkits.", "I miss burger joints. And coffee. And the internet. Hell, even a phone call to my mother would be great.", "Back in college, I played the drums. You think I have time to take it back up?", "I'd offer you a seat, but I don't have a lot around the office. You don't mind standing, right?", "I volunteered to be a guard, just so I wouldn't be wallowing in misery. Plus, you get free health kits.", "I haven't washed this uniform in so long. I could really go for a non-infected shower."}.
 The fuckscene of Steven is "[sexwithSteven]".

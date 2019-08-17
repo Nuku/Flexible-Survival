@@ -91,7 +91,9 @@ to say SeraphDefeated:
 				say "     Standing up, you go and grab all the gear that you put down before deciding to have fun with Gabriel, then walk away, leaving the worn out and still panting angel to pick himself up on his own.";
 			now HP of Gabriel is 4;
 			now Cock Count of Gabriel is 1;
+			now Cock Girth of Gabriel is 3;
 			now Cock Length of Gabriel is 9;
+			now Ball Count of Gabriel is 2;
 			now Ball Size of Gabriel is 3;
 		else if HP of Gabriel is 4: [had sex before]
 			say "     Excited by the opportunity of having this magnificent creature at your mercy, you lean over him and start pulling off his armor piece by piece, then soon move on to undo the fastenings of his robe. 'Again?', Gabriel asks as you pull open his clothes and bare his muscled chest, then as you are undoing a golden belt-buckle, he adds, 'I've been feeling... different, since last time. My body... changed.' And it's true - pulling down the soft white fabric of his pants, you reveal that where previously there was only sexless smoothness, now a respectably sized manhood dangles between his legs. Gabriel looks down at his cock a bit sheepishly, then says, 'The tiny machines that infuse everything around here added this to me. It is... irregular. I wasn't created for -' Before he can add another word, you put a finger on his lips and shush him, all the while giving the angel a salacious grin.";
@@ -444,17 +446,27 @@ object	name
 Gabriel	"Gabriel"
 
 Gabriel is a man.
-[physical details as of game start]
 ScaleValue of Gabriel is 3. [human sized]
-Cock Count of Gabriel is 0.
-Cock Length of Gabriel is 0.
-Ball Size of Gabriel is 0.
-Ball Count of Gabriel is 0.
-Cunt Count of Gabriel is 0.
-Cunt Depth of Gabriel is 0.
-Cunt Tightness of Gabriel is 0.
-Nipple Count of Gabriel is 2.
-Breast Size of Gabriel is 0.
+Body Weight of Gabriel is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Gabriel is 8. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Gabriel is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Gabriel is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Gabriel is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Gabriel is 4. [length in inches]
+Breast Size of Gabriel is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Gabriel is 2. [count of nipples]
+Asshole Depth of Gabriel is 8. [inches deep for anal fucking]
+Asshole Tightness of Gabriel is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Gabriel is 0. [number of cocks]
+Cock Girth of Gabriel is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Gabriel is 0. [length in inches]
+Ball Count of Gabriel is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Gabriel is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Gabriel is 0. [number of cunts]
+Cunt Depth of Gabriel is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Gabriel is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Gabriel is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Gabriel is false.
 PlayerRomanced of Gabriel is false.
@@ -466,8 +478,9 @@ Virgin of Gabriel is true.
 AnalVirgin of Gabriel is true.
 PenileVirgin of Gabriel is true.
 SexuallyExperienced of Gabriel is false.
+TwistedCapacity of Gabriel is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Gabriel is false. [steriles can't knock people up]
 MainInfection of Gabriel is "Seraphim Warrior".
-
 The description of Gabriel is "[Gabrieldesc]".
 The icon of Gabriel is Figure of Gabriel_icon.
 The conversation of Gabriel is { "Mew!" }.

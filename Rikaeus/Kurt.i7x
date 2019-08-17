@@ -12,8 +12,8 @@ KurtRoomConnection is a number that varies.[@Tag:NotSaved]
 
 an everyturn rule: [bugfixing rules for players that import savegames]
 	if Predator's Lunch is resolved and KurtRoomConnection is 0: [event resolved the right way, room not connected yet]
-		change west exit of Atlantis City Residential to Kurt's Abode;
-		change east exit of Kurt's Abode to Atlantis City Residential;
+		change east exit of Atlantis City Residential to Kurt's Abode;
+		change west exit of Kurt's Abode to Atlantis City Residential;
 		now KurtRoomConnection is 1; [make sure that it connects the room only once]
 
 Table of GameEventIDs (continued)
@@ -70,12 +70,12 @@ to SecondKurtEvent:
 	say "     It doesn't take you two long before you reach a rather fancy eatery, and to be honest you're kind of glad it is not a fish place. As that would make you feel partially awkward. Instead it appears to be an expensive bar and grill. Kurt hailed down the person standing at the front of the place, to get you two a booth. The woman appears to notice him, and you swear would have stars in her eyes if it was possible, but the shark-morph just asks for a seat as calmly as possible. She was put out at first but quickly shrugged it off before leading you guys to your area. Upon sitting down the male smiles at you and crosses his arms, staring at you in curiosity, causing you to tilt your head at him.";
 	WaitLineBreak;
 	say "     'Soooo, why do you not act star-struck like everyone else does when they see me?' Kurt asks, sincere curiosity in his tone. You raise your brows at him but decide to answer him honestly, since he appears to be wanting a real answer. So, you tell him that you don't see why you should, since he's just like any other person, even if he does have a nice voice and music-playing skills. By then a waiter comes by to take your orders, to which you quickly give, and when you turn to look at your... lunch partner, he appears very intrigued by you. 'The fact that you think that of me makes you very interesting to me, [']cause it's hard to make friends here when everyone just sees you as a celebrity,' the shark says, a sigh soon escaping his lips afterwards. You nod having a vague understanding of what he means. A few minutes later your food comes by and you dig in, enjoying the taste of Atlantean cuisine.";
-	say "     After you finish your food the shark-morph nods to himself as if confirming something. 'You know what, whenever you're free come visit me at my abode. My house is to the west when you enter the residential area,' Kurt says to you, giving you a saucy smile. After saying that he gets up and puts the money on the table for the bill. As he walks away you take a good loo at him, and wonder if you really want to visit him at his home before quickly shrugging your shoulders and deciding that you'll think about it later. You then get up and make your own way out of the restaurant, heading out to do what you wanted to do afterwards.";
+	say "     After you finish your food the shark-morph nods to himself as if confirming something. 'You know what, whenever you're free come visit me at my abode. My house is to the east when you enter the residential area,' Kurt says to you, giving you a saucy smile. After saying that he gets up and puts the money on the table for the bill. As he walks away you take a good loo at him, and wonder if you really want to visit him at his home before quickly shrugging your shoulders and deciding that you'll think about it later. You then get up and make your own way out of the restaurant, heading out to do what you wanted to do afterwards.";
 	now KurtRelationship is 3;
 	now Predator's Lunch is resolved;
 	PlayerEat 30;
-	change west exit of Atlantis City Residential to Kurt's Abode;
-	change east exit of Kurt's Abode to Atlantis City Residential;
+	change east exit of Atlantis City Residential to Kurt's Abode;
+	change west exit of Kurt's Abode to Atlantis City Residential;
 	move Kurt to Kurt's Abode;
 	move player to Atlantis City Market;
 	now Predator's Club Night is active;

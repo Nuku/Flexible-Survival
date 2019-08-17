@@ -162,7 +162,42 @@ Table of GameCharacterIDs (continued)
 object	name
 Felix	"Felix"
 
-Felix is a man. The HP of Felix is normally 0.
+Felix is a man.
+ScaleValue of Felix is 4. [human+ sized]
+Body Weight of Felix is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Felix is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Felix is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Felix is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Felix is 3.  [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Felix is 4. [length in inches]
+Breast Size of Felix is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Felix is 2. [count of nipples]
+Asshole Depth of Felix is 14. [inches deep for anal fucking]
+Asshole Tightness of Felix is 3. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Felix is 1. [number of cocks]
+Cock Girth of Felix is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Felix is 14. [length in inches]
+Ball Count of Felix is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Felix is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Felix is 0. [number of cunts]
+Cunt Depth of Felix is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Felix is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Felix is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Felix is false.
+PlayerRomanced of Felix is false.
+PlayerFriended of Felix is false.
+PlayerControlled of Felix is false.
+PlayerFucked of Felix is false.
+OralVirgin of Felix is false.
+Virgin of Felix is true.
+AnalVirgin of Felix is true.
+PenileVirgin of Felix is false.
+SexuallyExperienced of Felix is true.
+TwistedCapacity of Felix is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Felix is false. [steriles can't knock people up]
+MainInfection of Felix is "Centaur Stallion".
 The description of Felix is "[FelixDesc]".
 The conversation of Felix is { "Mew!" }.
 lastFelixTalk is a number that varies. lastFelixTalk is usually 555. [turn-counter for talking delays (humanity restoration)]
@@ -470,7 +505,42 @@ Table of GameCharacterIDs (continued)
 object	name
 Andre	"Andre"
 
-Andre is a man. The HP of Andre is normally 0.
+Andre is a man.
+ScaleValue of Andre is 4. [human+ sized]
+Body Weight of Andre is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Andre is 8. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Andre is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Andre is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Andre is 3.  [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Andre is 4. [length in inches]
+Breast Size of Andre is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Andre is 2. [count of nipples]
+Asshole Depth of Andre is 16. [inches deep for anal fucking]
+Asshole Tightness of Andre is 3. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Andre is 1. [number of cocks]
+Cock Girth of Andre is 4. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Andre is 16. [length in inches]
+Ball Count of Andre is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Andre is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Andre is 0. [number of cunts]
+Cunt Depth of Andre is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Andre is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Andre is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Andre is false.
+PlayerRomanced of Andre is false.
+PlayerFriended of Andre is false.
+PlayerControlled of Andre is false.
+PlayerFucked of Andre is false.
+OralVirgin of Andre is false.
+Virgin of Andre is true.
+AnalVirgin of Andre is true.
+PenileVirgin of Andre is false.
+SexuallyExperienced of Andre is true.
+TwistedCapacity of Andre is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Andre is false. [steriles can't knock people up]
+MainInfection of Andre is "Plains Lizard Male".
 The description of Andre is "[AndreDesc]".
 The conversation of Andre is { "Mew!" }.
 lastAndreTalk is a number that varies. lastAndreTalk is usually 555.	     [turn-counter for talking delays (humanity restoration)]

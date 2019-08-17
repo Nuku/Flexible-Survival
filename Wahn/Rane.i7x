@@ -560,6 +560,41 @@ object	name
 Rane	"Rane"
 
 Rane is a man.
+ScaleValue of Rane is 4. [human sized]
+Body Weight of Rane is 7. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Rane is 9. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Rane is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Rane is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Rane is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Rane is 5. [length in inches]
+Breast Size of Rane is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Rane is 2. [count of nipples]
+Asshole Depth of Rane is 8. [inches deep for anal fucking]
+Asshole Tightness of Rane is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Rane is 1. [number of cocks]
+Cock Girth of Rane is 4. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Rane is 12. [length in inches]
+Ball Count of Rane is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Rane is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Rane is 0. [number of cunts]
+Cunt Depth of Rane is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Rane is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Rane is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Rane is false.
+PlayerRomanced of Rane is false.
+PlayerFriended of Rane is false.
+PlayerControlled of Rane is false.
+PlayerFucked of Rane is false.
+OralVirgin of Rane is false.
+Virgin of Rane is true.
+AnalVirgin of Rane is false.
+PenileVirgin of Rane is false.
+SexuallyExperienced of Rane is true.
+TwistedCapacity of Rane is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Rane is false. [steriles can't knock people up]
+MainInfection of Rane is "Blue Oni".
 The description of Rane is "[RaneDesc]".
 The conversation of Rane is { "Oh, hello." }.
 lastfuck of Rane is usually 555.
