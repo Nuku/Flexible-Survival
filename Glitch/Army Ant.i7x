@@ -215,7 +215,7 @@ Section 3 - Endings
 when play ends:
 	if BodyName of Player is "Army Ant":
 		if humanity of Player < 10:
-			say "     You succumb to your army ant infection. Life is far easier when the decisions are made by others. It was easy enough to find other Army Ants by the scent your kind leaves, instinctually drawn to the rest of the Hive. It's quite nice, not worrying about nervous, stressful things like what tomorrow brings because the Hive is what takes priority, what all is done to maintain, and you are but one cog in that living machine. You live for the Hive, and the Hive provides, whether it be sustenance or pleasures, companions or security.";
+			say "     You succumb to your army ant infection. Life is far easier when the decisions are made by others. It was easy enough to find other Army Ants by the scent your kind leaves, instinctively drawn to the rest of the Hive. It's quite nice, not worrying about nervous, stressful things like what tomorrow brings because the Hive is what takes priority, what all is done to maintain, and you are but one cog in that living machine. You live for the Hive, and the Hive provides, whether it be sustenance or pleasures, companions or security.";
 		else:
 			say "     You survive, but were infected by the army ant.";
 			if Cock Count of Player > 0:							[MALE/HERM]

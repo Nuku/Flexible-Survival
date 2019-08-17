@@ -556,7 +556,7 @@ Cat Toy Vendors is a situation.
 The sarea of Cat Toy Vendors is "Smith Haven".
 
 instead of resolving Cat Toy Vendors:
-	say "     Wandering through the hallways of the expansive Smith Haven Mall, you spot some cat-morphs selling various custom cat toys to their feline kin. Apparently a surprising number of the transformed people in the crowd of refugees in here are captivated by an instinctual love of mice on string. It is charming to see their wide-eyed expressions as many a head track a toy mouse being demonstrated, with them instinctually wiggling their butts as they get into a slightly pouncing stance. The vendors giggle to each other as a whole group of new customers line up and get ready to trade food and drinks for the small toys being sold.";
+	say "     Wandering through the hallways of the expansive Smith Haven Mall, you spot some cat-morphs selling various custom cat toys to their feline kin. Apparently a surprising number of the transformed people in the crowd of refugees in here are captivated by an instinctual love of mice on string. It is charming to see their wide-eyed expressions as many a head track a toy mouse being demonstrated, with them instinctively wiggling their butts as they get into a slightly pouncing stance. The vendors giggle to each other as a whole group of new customers line up and get ready to trade food and drinks for the small toys being sold.";
 	now Cat Toy Vendors is resolved;
 
 Table of GameEventIDs (continued)

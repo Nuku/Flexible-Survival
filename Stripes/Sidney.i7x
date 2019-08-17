@@ -168,7 +168,7 @@ to say sidneyoptions:
 			let y be 0;
 			if sa_redvixen is false:
 				increase y by 1;
-				say "[link]Option [y]:[as][y][end link] 'There's a lovely red vixen roaming around here. She's got such a nice figure and fluff in all the right places. She's alluring and beautiful. Fast, too,' he adds. 'I've seen a few randy beasts try to catch her, but she always gets away so easily. She does some of that crazy [']parcour['] stuff like it's nothing. We'll have to be quick if we want to catch her.' (dexterity)[line break]";
+				say "[link]Option [y]:[as][y][end link] 'There's a lovely red vixen roaming around here. She's got such a nice figure and fluff in all the right places. She's alluring and beautiful. Fast, too,' he adds. 'I've seen a few randy beasts try to catch her, but she always gets away so easily. She does some of that crazy [']parkour['] stuff like it's nothing. We'll have to be quick if we want to catch her.' (dexterity)[line break]";
 			if sa_otteress is false:
 				increase y by 1;
 				say "[link]Option [y]:[as][y][end link] 'I've seen this otter woman around her at times. She's so pretty - sleek and sexy. And flexible, too. I mean, I've seen her do some... well, you know,' he says, blushing a bit. 'It'd be nice to have a body like that. She seems pretty calm too, but I doubt she'd listen to me long enough to let me explain. You might be able to talk to her, or at least talk our way close enough to grab her.' (charisma or strength)[line break]";

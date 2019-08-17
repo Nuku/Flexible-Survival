@@ -34,7 +34,7 @@ When Play begins:
 	now victory entry is "[NonCombatError]";
 	now desc entry is "[NonCombatError]";
 	now face entry is "that of a golden retriever, with large folded ears atop your head and warm brown eyes. Your muzzle has a friendly appearance, giving off the effect that you're constantly smiling.";
-	now body entry is "that of a canine, with an adonis like torso with equally thick arms and digitigrade legs that end in large paws. Your hands have also become somewhat paw-like, while they have maintained some dexterity, it is clear they have become very canine, with short but slender digits topped with small claws";
+	now body entry is "that of a canine, with an Adonis-like torso with equally thick arms and digitigrade legs that end in large paws. Your hands have also become somewhat paw-like, while they have maintained some dexterity, it is clear they have become very canine, with short but slender digits topped with small claws";
 	now skin entry is "a thick, shiny coat of golden fur over your";
 	now tail entry is "Your tail is that of a golden retriever, long and covered with soft golden fur. It wags happily constantly without your input unless you make a conscious effort to stop it.";
 	now cock entry is "[one of]canine[or]knotted[or]sheathed[at random]";

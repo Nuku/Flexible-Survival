@@ -649,7 +649,7 @@ to say GildwingClanAccept:
 			WaitLineBreak;
 		[Womb]
 		if (Player is female or Player is mpreg_ok) and ovipregalways is false:
-			say "     You feel a shift in your belly as your insides adjusts to your new form. Instinctually, you know you now are an egg layer, ready to breed the next generation of kobolds.";
+			say "     You feel a shift in your belly as your insides adjusts to your new form. Instinctively, you know you now are an egg layer, ready to breed the next generation of kobolds.";
 			WaitLineBreak;
 			now ovipregalways is true;
 			now ovipreglevel is 3;
