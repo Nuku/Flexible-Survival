@@ -19,6 +19,15 @@ to decide if (x - a person) has a body of (i - a text):
 	if BodyName of x is i, decide yes;
 	decide no;
 
+to decide which text is GetSpeciesName from (N - a text):
+	if N is not "" and there is a Name of N in the Table of Random Critters:
+		choose a row with Name of N in the Table of Random Critters;
+		if Species Name entry is not "":
+			decide on Species Name entry;
+		else:
+			decide on N;
+	decide on ""; [Name not found or N is empty - Return "" as a failsafe]
+
 to SetInfectionsOf ( Target - a person ) to infections of ( Source - a person):
 	if Source is Player and Player is not FullyNewTypeInfected:
 		now HeadName of Target is FaceName of Source;
@@ -52,6 +61,9 @@ to SetInfectionsOf ( Target - a person ) to infections of ( Source - a person):
 		now TailSpeciesName of Target is TailSpeciesName of Source;
 
 to SetInfectionsOf ( Target - a person ) to ( Infection - a text ):
+	if there is no Name of Infection in the Table of Random Critters:
+		say "ERROR: Attempted to set the targets infection to '[Infection]'. Please report this on the FS Discord.[line break]";
+		stop the action;
 	now HeadName of Target is Infection;
 	now TorsoName of Target is Infection;
 	now BackName of Target is Infection;
