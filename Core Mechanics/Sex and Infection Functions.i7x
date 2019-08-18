@@ -64,6 +64,7 @@ to SetInfectionsOf ( Target - a person ) to ( Infection - a text ):
 	if there is no Name of Infection in the Table of Random Critters:
 		say "ERROR: Attempted to set the targets infection to '[Infection]'. Please report this on the FS Discord.[line break]";
 		stop the action;
+	let InfectionSpeciesName be GetSpeciesName from Infection;
 	now HeadName of Target is Infection;
 	now TorsoName of Target is Infection;
 	now BackName of Target is Infection;
@@ -71,12 +72,12 @@ to SetInfectionsOf ( Target - a person ) to ( Infection - a text ):
 	now LegsName of Target is Infection;
 	now AssName of Target is Infection;
 	now TailName of Target is Infection;
-	now HeadSpeciesName of Target is Infection;
-	now TorsoSpeciesName of Target is Infection;
-	now BackSpeciesName of Target is Infection;
-	now ArmsSpeciesName of Target is Infection;
-	now LegsSpeciesName of Target is Infection;
-	now AssSpeciesName of Target is Infection;
-	now TailSpeciesName of Target is Infection;
+	now HeadSpeciesName of Target is InfectionSpeciesName;
+	now TorsoSpeciesName of Target is InfectionSpeciesName;
+	now BackSpeciesName of Target is InfectionSpeciesName;
+	now ArmsSpeciesName of Target is InfectionSpeciesName;
+	now LegsSpeciesName of Target is InfectionSpeciesName;
+	now AssSpeciesName of Target is InfectionSpeciesName;
+	now TailSpeciesName of Target is InfectionSpeciesName;
 
 Sex and Infection Functions ends here.
