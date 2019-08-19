@@ -326,14 +326,12 @@ to say MoreauDickSale:
 			say "     The mannequin pulls the curtain closed and waits for you to present your body to it, stripping off any clothing that might get in the way. Meanwhile, the creature gives what you can only describe as a hungry stare. Then it steps forward and lays a hand on your chest, stroking it down your front almost sexually before it comes to cup your genitals. It is a touches you - a cool sensation to feel it against you, breaking the illusion a bit of it being a living thing. Something seems to tug at your self, drawing essence away from your body, and with an odd fascination, you glance down between your bodies, seeing its own crotch taking on a shape very much like your own.";
 			setmonster "Mannequin";
 			choose row MonsterID from the Table of Random Critters;
-			if Cock Count of Player > 1:
+			if Cock Count of Player > 0:
 				say "     Sudden pleasure runs through your doomed [Cock of Player] cock[smn] as [ittheym] spray[smv] the last of [itstheirm] seed, dwindling down to nothing at all and vanishing, leaving only [one of]the powerful[or]that final[at random] orgasm to remember [itthemm] by as you cease to be a male altogether.";
-			if Cunt Count of Player > 1:
+			if Cunt Count of Player > 0:
 				say "     An odd, wet noise has you peeking in time to see your [one of]cunt[sfn][or]puss[yfn][at random] vanish! With a strange slurp of closing flesh, you cease to be female altogether.";
-			now Cock Count of Player is 0;
-			now Cock Length of Player is 0;
-			now Ball Size of Player is 0;
-			now Cunt Count of Player is 0;
+			RemoveManhoodFrom Player;
+			RemoveWomanhoodFrom Player;
 			now CockName of Player is Name entry;
 			now Cock of Player is cock entry;
 			if "Body Shop Guarantee - Crotch" is listed in feats of Player:
