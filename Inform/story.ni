@@ -3539,9 +3539,7 @@ This is the sex change rule:
 			say "Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [if Cock Count of Player > 1][one of]cocks[or]penises[or]shafts[or]poles[at random] as they begin[else][one of]cock[or]man meat[or]shaft[or]pole[at random] as it begins[end if] to shrink. [if Cock Count of Player > 1]They dwindle[else]It dwindles[end if] in size, becoming [descr] while[if Player is internal] you imagine[end if] your [one of]balls[or]testicles[or]nuts[or]gonads[at random] become [Ball Size Adjective of Player]. ";
 			if Cock Length of Player < 1 or Ball Size of Player < 1:
 				say "You barely have time to give a whimper as you cease to be a male.";
-				now Cock Count of Player is 0;
-				now Cock Length of Player is 0;
-				now Ball Size of Player is 0;
+				RemoveManhoodFrom Player;
 			else:
 				say "[line break]";
 		if Cock Count of Player > 1 and a random chance of 2 in 5 succeeds and "All The Things" is not listed in feats of Player:
@@ -3630,7 +3628,7 @@ This is the sex change rule:
 			say "Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [if Cunt Count of Player > 1][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] as they begin to shrink. They dwindle[else][one of]cunt[or]pussy[or]vagina[or]cleft[at random] as it begins to shrink. It dwindles[end if] in size, becoming [descr]. ";
 			if Cunt Depth of Player < 1 or Cunt Tightness of Player < 1:
 				say "With a sickening noise, you cease to be female all together.";
-				now Cunt Count of Player is 0;
+				RemoveWomanhoodFrom Player;
 			else:
 				say "[line break]";
 		if Cunt Count of Player > 1 and a random chance of 2 in 5 succeeds and "All The Things" is not listed in feats of Player:
@@ -3773,9 +3771,7 @@ to grow cock by (x - a number):
 		continue the action;
 	else if "Single Sexed" is listed in feats of Player and player is female:
 		say "Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [one of]cunt[sfn][or]puss[yfn][or]vagina[sfn][or]cleft[sfn][at random] as [ittheyf] begin[sfv] to shrink. [ItTheyf] dwindle[sfv] in size before vanishing with a sickening noise as you cease to be female all together.";
-		now Cunt Count of Player is 0;
-		now Cunt Depth of Player is 0;
-		now Cunt Tightness of Player is 0;
+		RemoveWomanhoodFrom Player;
 	let prevcock be Cock Length of Player;
 	increase Cock Length of Player by a random number from 1 to x;
 	if "Modest Organs" is listed in feats of Player and Cock Length of Player > 8:
@@ -7182,29 +7178,25 @@ To startgenderlockshift:
 			now Cock Length of Player is 6;
 			now the Ball Size of the player is 3;
 			now Breast Size of Player is 0;
-			now Cunt Count of Player is 0;
-			now Cunt Depth of Player is 0;
+			RemoveWomanhoodFrom Player;
 		-- 4:		[female]
 			now Cunt Count of Player is 1;
 			now Cunt Depth of Player is 6;
 			now Cunt Tightness of Player is 4;
 			now Breast Size of Player is 2;
-			now Cock Count of Player is 0;
-			now Cock Length of Player is 0;
+			RemoveManhoodFrom Player;
 		-- 5:		[shemale]
 			now Cock Count of Player is 1;
 			now Cock Length of Player is 6;
 			now the Ball Size of the player is 3;
 			now Breast Size of Player is 2;
-			now Cunt Count of Player is 0;
-			now Cunt Depth of Player is 0;
+			RemoveWomanhoodFrom Player;
 		-- 6: [cuntboy]
 			now Cunt Count of Player is 1;
 			now Cunt Depth of Player is 6;
 			now Cunt Tightness of Player is 4;
 			now Breast Size of Player is 0;
-			now Cock Count of Player is 0;
-			now Cock Length of Player is 0;
+			RemoveManhoodFrom Player; [balls not included ;-)]
 		-- 7: [male herm]
 			now Cock Count of Player is 1;
 			now Cock Length of Player is 6;

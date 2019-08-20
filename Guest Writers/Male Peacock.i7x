@@ -22,19 +22,19 @@ to say peacockdesc:
 	now peacockcontrol is 0;
 
 to say peacockskin:
-	if Cock Length of Player > Cunt Depth of Player:
+	if CompareGenitals of Player > 0:
 		say "blue and green feathers covering your";
 	else:
 		say "brown-hued feathers covering your";
 
 to say peacocktail:
-	if Cock Length of Player > Cunt Depth of Player:
+	if CompareGenitals of Player > 0:
 		say "You have a beautiful fan of feathers for a tail. The feathers are decorated with hypnotic eyes";
 	else:
 		say "A feathered tail decorates your rear, like half of a long skirt";
 
 to say peacockasschange:
-	if Cock Length of Player > Cunt Depth of Player:
+	if CompareGenitals of Player > 0:
 		say "feathers emerge from it. They form a peacock tail that you are able to fan with ease";
 	else:
 		say "brown feathers emerge from it. They form a tail that comes down to your knees";
@@ -103,7 +103,7 @@ When Play begins:
 	now defeated entry is "The last hit knocks the blue bird on the ground. He stands up quickly and flees in a panic, his pride completely shattered."; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[peacockvictory]";
 	now desc entry is "[peacockdesc]";
-	now face entry is "bird-like head. You pass quite a bit of your time admiring your"; [ Face description, format as "Your face is (your text)."]
+	now face entry is "bird-like. You pass quite a bit of your time admiring it"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "tall and slender; your legs are double-jointed and bird-like, while your arms have been mutated into feathered wings, ending with five extra-thick feathers, flexible and mobile as fingers"; [ Body Description, format as "Your Body is (your text)"]
 	now skin entry is "[peacockskin]"; [ skin Description, format as "You have (your text) skin"]
 	now tail entry is "[peacocktail]."; [ Tail description, write a whole Sentence or leave blank. ]
@@ -349,7 +349,7 @@ Section 6 - Endings
 when play ends:
 	if BodyName of Player is "Peacock":
 		if humanity of Player < 10:
-			if Cock Length of Player > Cunt Depth of Player:
+			if CompareGenitals of Player > 0:
 				say "You decide to remain in the quarantined city. With your wits and abilities, you will surely find many different... ahem... [']fruits['] to taste.";
 			else:
 				say "You decide to remain in the quarantined city. You become the mate of a male peacock, or rather, his favorite mate. Neither of you wants to sacrifice his fun, after all...";

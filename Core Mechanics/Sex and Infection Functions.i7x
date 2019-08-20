@@ -28,6 +28,34 @@ to decide which text is GetSpeciesName from (N - a text):
 			decide on N;
 	decide on ""; [Name not found or N is empty - Return "" as a failsafe]
 
+to RemoveManhoodFrom ( x - a person ):
+	now Cock Count of x is 0;
+	now Cock Length of x is 0;
+	now Ball Size of x is 0;
+
+to RemoveWomanhoodFrom ( x - a person ):
+	now Cunt Count of x is 0;
+	now Cunt Depth of x is 0;
+	now Cunt Tightness of x is 0;
+
+[compares genitals and returns a number for the result]
+[ > 0 - x is either a pure male or a herm and the cock is longer ]
+[ = 0 - x is either a neuter or a herm and cock length and cunt depth are the same ]
+[ < 0 - x is either a pure female or a herm and the cunt is deeper ]
+to decide which number is CompareGenitals of ( x - a person ):
+	if x is puremale, decide on Cock Length of x;
+	if x is neuter, decide on 0;
+	if x is purefemale, decide on 0 - Cunt Depth of x;
+	[x is a herm:]
+	decide on Cock Length of x - Cunt Depth of x;
+
+[
+[ Example for later use. e. g.: if GetBallSize of Player > 4: ]
+to decide which number is GetBallSize of ( x - a person ):
+	if x is male, decide on Ball Size of x;
+	decide on 0;
+]
+
 to SetInfectionsOf ( Target - a person ) to infections of ( Source - a person):
 	if Source is Player and Player is not FullyNewTypeInfected:
 		now HeadName of Target is FaceName of Source;
