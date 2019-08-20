@@ -330,8 +330,8 @@ to say MoreauDickSale:
 				say "     Sudden pleasure runs through your doomed [Cock of Player] cock[smn] as [ittheym] spray[smv] the last of [itstheirm] seed, dwindling down to nothing at all and vanishing, leaving only [one of]the powerful[or]that final[at random] orgasm to remember [itthemm] by as you cease to be a male altogether.";
 			if Cunt Count of Player > 0:
 				say "     An odd, wet noise has you peeking in time to see your [one of]cunt[sfn][or]puss[yfn][at random] vanish! With a strange slurp of closing flesh, you cease to be female altogether.";
-			RemoveManhoodFrom Player;
-			RemoveWomanhoodFrom Player;
+			remove manhood from Player;
+			remove womanhood from Player;
 			now CockName of Player is Name entry;
 			now Cock of Player is cock entry;
 			if "Body Shop Guarantee - Crotch" is listed in feats of Player:

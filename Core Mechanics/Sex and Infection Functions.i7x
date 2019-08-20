@@ -28,12 +28,12 @@ to decide which text is GetSpeciesName from (N - a text):
 			decide on N;
 	decide on ""; [Name not found or N is empty - Return "" as a failsafe]
 
-to RemoveManhoodFrom ( x - a person ):
+to remove manhood from ( x - a person ):
 	now Cock Count of x is 0;
 	now Cock Length of x is 0;
 	now Ball Size of x is 0;
 
-to RemoveWomanhoodFrom ( x - a person ):
+to remove womanhood from ( x - a person ):
 	now Cunt Count of x is 0;
 	now Cunt Depth of x is 0;
 	now Cunt Tightness of x is 0;
@@ -42,7 +42,7 @@ to RemoveWomanhoodFrom ( x - a person ):
 [ > 0 - x is either a pure male or a herm and the cock is longer ]
 [ = 0 - x is either a neuter or a herm and cock length and cunt depth are the same ]
 [ < 0 - x is either a pure female or a herm and the cunt is deeper ]
-to decide which number is CompareGenitals of ( x - a person ):
+to decide which number is compare genitals of ( x - a person ):
 	if x is puremale, decide on Cock Length of x;
 	if x is neuter, decide on 0;
 	if x is purefemale, decide on 0 - Cunt Depth of x;

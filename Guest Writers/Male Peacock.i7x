@@ -22,19 +22,19 @@ to say peacockdesc:
 	now peacockcontrol is 0;
 
 to say peacockskin:
-	if CompareGenitals of Player > 0:
+	if compare genitals of Player > 0:
 		say "blue and green feathers covering your";
 	else:
 		say "brown-hued feathers covering your";
 
 to say peacocktail:
-	if CompareGenitals of Player > 0:
+	if compare genitals of Player > 0:
 		say "You have a beautiful fan of feathers for a tail. The feathers are decorated with hypnotic eyes";
 	else:
 		say "A feathered tail decorates your rear, like half of a long skirt";
 
 to say peacockasschange:
-	if CompareGenitals of Player > 0:
+	if compare genitals of Player > 0:
 		say "feathers emerge from it. They form a peacock tail that you are able to fan with ease";
 	else:
 		say "brown feathers emerge from it. They form a tail that comes down to your knees";
@@ -349,7 +349,7 @@ Section 6 - Endings
 when play ends:
 	if BodyName of Player is "Peacock":
 		if humanity of Player < 10:
-			if CompareGenitals of Player > 0:
+			if compare genitals of Player > 0:
 				say "You decide to remain in the quarantined city. With your wits and abilities, you will surely find many different... ahem... [']fruits['] to taste.";
 			else:
 				say "You decide to remain in the quarantined city. You become the mate of a male peacock, or rather, his favorite mate. Neither of you wants to sacrifice his fun, after all...";
