@@ -285,7 +285,7 @@ To say butterfly attack:
 				say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [if Cock Count of Player > 1][one of]cocks[or]lengths[or]shafts[or]poles[at random] as they begin to shrink. They dwindle[else][one of]cock[or]man meat[or]shaft[or]pole[at random] as it begins to shrink. It dwindles[end if] in size, becoming [descr]. ";
 				if Cock Length of Player < 1 or Ball Size of Player < 1:
 					say "You barely have time to give a whimper as you cease to be a male.";
-					RemoveManhoodFrom Player;
+					remove manhood from Player;
 				if Cock Count of Player > 1 and a random chance of 1 in 3 succeeds:
 					say "Sudden pleasure runs through one of your doomed [Cock of Player] cocks as it sprays the last of its seed, dwindling down to nothing at all and vanishing, leaving only the powerful orgasm to remember it by.";
 					decrease Cock Count of Player by 1;
@@ -303,7 +303,7 @@ To say butterfly attack:
 				say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [if Cunt Count of Player > 1][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] as they begin to shrink. They[else][one of]cunt[or]pussy[or]vagina[or]cleft[at random] as it begins to shrink. It[end if] dwindles in size, becoming [descr]. ";
 				if Cunt Depth of Player < 1 or Cunt Tightness of Player < 1:
 					say "With a sickening noise, you cease to be female all together.";
-					RemoveWomanhoodFrom Player;
+					remove womanhood from Player;
 				if Cunt Count of Player > 1 and a random chance of 1 in 3 succeeds:
 					say "An odd wet noise has you peeking in time to see one of your [one of]cunts[or]pussies[at random] have vanished!";
 					decrease Cunt Count of Player by 1;
