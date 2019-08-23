@@ -30,6 +30,14 @@ when play begins:
 	add Hanging out on the Green to BadSpots of MaleList;
 	add Hanging out on the Green to BadSpots of FurryList;
 
+RandallBradRoomConnection is a number that varies.[@Tag:NotSaved]
+
+an everyturn rule: [bugfixing rules for players that import savegames]
+	if New Roommates is resolved and RandallBradRoomConnection is 0: [event resolved the right way, room not connected yet]
+		change southwest exit of Tenvale College Male Dorms to Randall's Room;
+		change northeast exit of Randall's Room to Tenvale College Male Dorms;
+		now RandallBradRoomConnection is 1; [make sure that it connects the room only once]
+
 instead of going to College Walkway West while (Hanging out on the Green is active and Hanging out on the Green is not resolved and LastCampusWalkin - turns > 0 and StewartRelationship > 0 and RandallBradRelationship < 1 and a random chance of 1 in 3 succeeds):
 	move player to College Walkway West;
 	FirstRandallEvent;

@@ -25,6 +25,14 @@ EnrollmentTokens is a number that varies.
 AzraelRelationship is a number that varies.
 ClassPaymentAccepted is a truth state that varies.
 
+AzraelRoomConnection is a number that varies.[@Tag:NotSaved]
+
+an everyturn rule: [bugfixing rules for players that import savegames]
+	if AzraelRelationship is 2 and AzraelRoomConnection is 0: [event resolved the right way, room not connected yet]
+		change northwest exit of Second Floor Male Dorms to Your Dorm Room;
+		change southeast exit of Your Dorm Room to Second Floor Male Dorms;
+		now AzraelRoomConnection is 1; [make sure that it connects the room only once]
+
 Section 1 - Introduction Event
 
 instead of going up from College Administration Building while AzraelRelationship is 0:

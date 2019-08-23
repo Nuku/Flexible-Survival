@@ -17,6 +17,18 @@ StewartRelationship is a number that varies.
 CloudKnowledge is a number that varies.
 StewartLocationCounter is a number that varies.
 
+BelltowerCloudsRoomConnection is a number that varies.[@Tag:NotSaved]
+StewardRoomConnection is a number that varies.[@Tag:NotSaved]
+
+an everyturn rule: [bugfixing rules for players that import savegames]
+	if CloudKnowledge > 0 and BelltowerCloudsRoomConnection is 0: [event resolved the right way, room not connected yet]
+		change up exit of College Belltower to The Clouds;
+		now BelltowerCloudsRoomConnection is 1; [make sure that it connects the room only once]
+	if StewartRelationship is 2 and StewardRoomConnection is 0: [event resolved the right way, room not connected yet]
+		change south exit of Tenvale College Male Dorms to Stewart's Room;
+		change north exit of Stewart's Room to Tenvale College Male Dorms;
+		now StewardRoomConnection is 1; [make sure that it connects the room only once]
+
 [Room Declaration]
 
 Table of GameRoomIDs (continued)

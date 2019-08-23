@@ -136,6 +136,14 @@ ConfSvenEricInteraction is a number that varies.
 lastConfSvenEricInteraction is a number that varies.
 lastRaneEricInteraction is a number that varies.
 
+LockerroomRoomConnection is a number that varies.[@Tag:NotSaved]
+
+an everyturn rule: [bugfixing rules for players that import savegames]
+	if Barricaded Lockerroom is resolved and Resolution of Barricaded Lockerroom is 1 and LockerroomRoomConnection is 0: [event resolved the right way, room not connected yet]
+		change southeast exit of Athletic Street to Sports Arena Lockerroom;
+		change northwest exit of Sports Arena Lockerroom to Athletic Street;
+		now LockerroomRoomConnection is 1; [make sure that it connects the room only once]
+
 Section 1 - Meeting Event
 
 Table of GameEventIDs (continued)

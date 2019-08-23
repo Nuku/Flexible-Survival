@@ -28,12 +28,17 @@ SatyrFratPartyStage is a number that varies.
 SatyrFratRichardRelationship is a number that varies.
 SatyressStage is a number that varies.
 SatyrFratRoomConnection is a number that varies.[@Tag:NotSaved]
+RichardRoomConnection is a number that varies.[@Tag:NotSaved]
 
 an everyturn rule:
 	if SatyrFratPartyStage > 0 and SatyrFratPartyStage < 99 and SatyrFratRoomConnection is 0:
 		change the south exit of Greek Street to Satyr Frat Dummy Room;
 		change the north exit of Satyr Frat Dummy Room to Greek Street;
 		now SatyrFratRoomConnection is 1; [room connected]
+	if SatyrFratRichardRelationship is 4 and RichardRoomConnection is 0:
+		change the east exit of Tenvale College Dorms to Richard's Room; [connecting the location to the travel room]
+		change the west exit of Richard's Room to Tenvale College Dorms; [connecting the location to the travel room]
+		now RichardRoomConnection is 1; [room connected]
 
 to say Satyr Frat Party:
 	now battleground is "void";

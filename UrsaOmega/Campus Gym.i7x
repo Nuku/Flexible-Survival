@@ -11,6 +11,14 @@ Campus Gym by UrsaOmega begins here.
 
 ]
 
+CampusGymConnection is a number that varies.[@Tag:NotSaved]
+
+an everyturn rule: [bugfixing rules for players that import savegames]
+	if Working Out is resolved and CampusGymConnection is 0: [event resolved the right way, room not connected yet]
+		change southwest exit of Athletic Street to Campus Gym;
+		change northeast exit of Campus Gym to Athletic Street;
+		now CampusGymConnection is 1; [make sure that it connects the room only once]
+
 Section 1 - Finding the gym
 
 Table of GameEventIDs (continued)

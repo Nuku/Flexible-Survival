@@ -37,7 +37,7 @@ an everyturn rule: [bugfixing rules for players that import savegames]
 		now Jewel Heist is active;
 	if Resolution of Strange Sighting is 0 and Strange Sighting is active:
 		now Strange Sighting is not resolved;
-	if Strange Sighting is resolved and Resolution of Strange Sighting is 1 and KyrverthRoomConnection is 0: [event resolved the right way, room not connected yet]
+	if Strange Sighting is resolved and Resolution of Strange Sighting is 2 and KyrverthRoomConnection is 0: [event resolved the right way, room not connected yet]
 		change the South exit of Overgrown Street to Dragons Den;
 		change the North exit of Dragons Den to Overgrown Street;
 		now KyrverthRoomConnection is 1; [make sure that it connects the room only once]

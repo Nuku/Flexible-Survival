@@ -22,6 +22,14 @@ The sarea of Panda Inspiration is "Campus".
 when play begins:
 	add Panda Inspiration to BadSpots of MaleList;
 
+JakeRoomConnection is a number that varies.[@Tag:NotSaved]
+
+an everyturn rule: [bugfixing rules for players that import savegames]
+	if HP of Jake is 4 and JakeRoomConnection is 0: [event resolved the right way, room not connected yet]
+		change east exit of Second Floor Male Dorms to Jake's Room;
+		change west exit of Jake's Room to Second Floor Male Dorms;
+		now JakeRoomConnection is 1; [make sure that it connects the room only once]
+
 instead of going to Tenvale College Male Dorms while (Panda Inspiration is not resolved and LastCampusWalkin - turns > 0 and HP of Jake is 0 and a random chance of 1 in 3 succeeds):
 	move player to Tenvale College Male Dorms;
 	FirstJakeEvent;

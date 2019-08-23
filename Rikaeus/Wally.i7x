@@ -32,6 +32,14 @@ WallyOrcFled is a number that varies.
 InsightGained is a number that varies.
 WallyTrust is a number that varies.
 
+WallyRoomConnection is a number that varies.[@Tag:NotSaved]
+
+an everyturn rule: [bugfixing rules for players that import savegames]
+	if HP of Wally is 3 and WallyRoomConnection is 0: [event resolved the right way, room not connected yet]
+		change southwest exit of Second Floor Male Dorms to Wally's Room;
+		change east exit of Wally's Room to Second Floor Male Dorms;
+		now WallyRoomConnection is 1; [make sure that it connects the room only once]
+
 Table of GameEventIDs (continued)
 Object	Name
 College Hopeful	"College Hopeful"
