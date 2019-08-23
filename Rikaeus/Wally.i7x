@@ -193,6 +193,7 @@ to ThirdWallyEvent:
 	say "     Eagerly the otter grabs a pen and starts writing in the needed information for the papers. It takes not a few minutes for him to finish completing it and when he does the Dean nods and takes the documents and files them away. He then hands Wally a key before speaking to him. 'Your room is the southwest one on the second floor of the male doors and your classes start tomorrow,' the Angel explains to him before smiling softly at you guys. 'Enjoy your stay at Tenvale College,' the Dean says, causing the otter to nod happily. The two of you stand up and head out of the room. As you move out of the area, he turns towards you. 'I'm going to head to my new room and get settled in, you can visit me there whenever you want!' Wally says with an excited voice. You agree and say that you'll let him get to it as you head off on your own and he goes towards the dorms.";
 	now HP of Wally is 3;
 	move Wally to Wally's Room;
+	now Otter Class Sign Up is resolved;
 	change southwest exit of Second Floor Male Dorms to Wally's Room;
 	change east exit of Wally's Room to Second Floor Male Dorms;
 
