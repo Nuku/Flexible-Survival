@@ -4805,6 +4805,8 @@ balloversize is a number that varies.
 skipturnblocker is a number that varies.
 mpregcount is a number that varies.
 
+postimport rules is a rulebook.
+
 Everyturn rules is a rulebook.
 
 This is the turnpass rule:

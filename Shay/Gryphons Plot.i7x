@@ -31,6 +31,11 @@ Version 2 of Gryphons Plot by Shay begins here.
 [  91: player got a thanks from the soldier gryphons for trying to help                                  ]
 [ 100: player had no interest, event resolved                                                            ]
 
+a postimport rule: [bugfixing rules for players that import savegames]
+	let ResolvedGryphPlotList be {11, 18, 31, 32, 33, 34, 41, 42, 43, 45, 51, 59}; [list of missed resolutions]
+	if Gryphon's Plot is not resolved and Resolution of Gryphon's Plot is listed in ResolvedGryphPlotList:
+		now Gryphon's Plot is resolved; [Just resolve it]
+
 Table of GameEventIDs (continued)
 Object	Name
 Gryphon's Plot	"Gryphon's Plot"
@@ -142,7 +147,7 @@ instead of resolving a Gryphon's Plot:
 			LineBreak;
 			say "     Deciding that you want nothing to do with whatever the men are up to, you turn your back on the soldier's offer. Surprised by your reaction, but not deterred, they grudgingly, but determinedly, return to their task as you continue along your merry way.";
 			now Resolution of Gryphon's Plot is 19; [refused to sit with them]
-			now Gryphon's Plot is Resolved; [event will not come up again]
+		now Gryphon's Plot is Resolved; [event will not come up again]
 	else if Resolution of Gryphon's Plot is 30: [player watched the gryphons, soldiers are transformed]
 		say "     Walking through the ruins of the city, you come across a sight that you don't see all that often. Three gryphons huddled around a slowly dying fire ahead of you are wearing torn and stained army uniforms, telling you that the men haven't been transformed all that long, or at least have not succumbed to the infection yet, likely retaining much of their original personality. Then things click in your mind, and you remember the soldiers in that jeep being attacked by gryphons. This must be them!";
 		if BodyName of Player is "Blue Gryphon Herm" and player is pure:
@@ -182,7 +187,7 @@ instead of resolving a Gryphon's Plot:
 				LineBreak;
 				say "     Deciding that it is not worth the trouble, you leave the gathering of men and continue along your way throughout the city.";
 				now Resolution of Gryphon's Plot is 35; [player avoided soldier gryphons]
-				now Gryphon's Plot is Resolved; [event will not come up again]
+		now Gryphon's Plot is Resolved; [event will not come up again]
 	else if Resolution of Gryphon's Plot is 40: [player watched the gryphons, soldiers are transformed, and the player joined in for the submission]
 		say "     Walking through the ruins of the city, you come across a sight that you don't see all that often. Three gryphons huddled around a slowly dying fire ahead of you are wearing torn and stained army uniforms, telling you that the men haven't been transformed all that long, or at least have not succumbed to the infection yet, likely retaining much of their original personality. Then things click in your mind, and you remember the soldiers in that jeep being attacked by gryphons. This must be them!";
 		say "     Do you want to approach them and have a chat?";
@@ -240,10 +245,10 @@ instead of resolving a Gryphon's Plot:
 				else if fightoutcome is 90: [fled]
 					say "     Not having much faith in your ability to fight the men off, you flee. The soldiers donning unattended hard-ons shout curses in your direction in the wake of your successful escape...";
 					now Resolution of Gryphon's Plot is 44; [player fled from to the vengeful soldier gryphons]
-					now Gryphon's Plot is Resolved; [event will not come up again]
 		else:
 			say "     With a shrug you turn you turn your back on the group of gryphons and walk off down the street.";
 			now Resolution of Gryphon's Plot is 45; [player didn't speak to soldier gryphons]
+		now Gryphon's Plot is Resolved; [event will not come up again]
 	else if Resolution of Gryphon's Plot is 50: [player helped the gryphons, soldiers are transformed]
 		say "     Wandering through the ruins of the city, you see an unusual sight: There is a group of gryphons, still wearing the tattered remains of army uniforms upon their bodies as they sit huddled around a fire. Inching closer to the unlikely scene, you accidentally step on an empty aluminum can, causing the gryphon soldiers to jerk up in alarm as they are alerted to your presence. Spotting you, one of the gryphons exclaim, 'Hey, I know you. You are the one who helped those other gryphons make me like this! Let's see how strong you are without your friends along. Come on, guys, let's get [']em!' Seeing no other option than to fight, you ready your weapon.";
 		let GroupFightCounter be 0;
@@ -282,7 +287,7 @@ instead of resolving a Gryphon's Plot:
 		else if fightoutcome is 90: [fled]
 			say "     Not having much faith in your ability to fight the men off, you flee, the soldiers cursing at you as you disappear into the distance...";
 			now Resolution of Gryphon's Plot is 58; [player ran from the vengeful soldier gryphons]
-			now Gryphon's Plot is Resolved; [event will not come up again]
+		now Gryphon's Plot is Resolved; [event will not come up again]
 	else if Resolution of Gryphon's Plot is 90 or Resolution of Gryphon's Plot is 20: [player tried to help, failed, gryphons are pissed]
 		say "     Wandering through the ruins of the city, you see an unusual sight: There is a group of gryphons, still wearing the tattered remains of army uniforms upon their bodies as they sit huddled around a fire. Inching closer to the unlikely scene, you accidentally step on an empty aluminum can, causing the gryphon soldiers to jerk up in alarm as they are alerted to your presence. Spotting you, one of the gryphons exclaims, 'Hey, I know you. You tried to help us fight the gryphons off that one day. Don't worry about the fact that you didn't succeed. We still appreciate that you tried. Besides, all of us are starting to like our new forms anyway. I always wanted to fly when I was a kid. Granted, I was thinking it would be as an airplane pilot, but you know, growing wings of my own I guess is the next best thing.' The soldier then reaches into his pack, pulling out three MREs and hands them to you with a wink. 'For the road, kid. Good luck out there.' With that said, he returns to his seat near their makeshift fire, as you continue on your way, three MREs richer than before...";
 		LineBreak;
