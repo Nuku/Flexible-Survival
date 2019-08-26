@@ -568,7 +568,6 @@ Name(text)	Type(text)
 "GreenTumbTurn"	"number"
 "gryphoncomforted"	"number"
 "GryphonessKnowpreg"	"number"
-"GryphPlotTracking"	"number"
 "gsd_encounters"	"number"
 "gsd_pet"	"number"
 "gsd_var"	"number"

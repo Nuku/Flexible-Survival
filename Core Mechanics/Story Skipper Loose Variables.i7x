@@ -1221,8 +1221,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is gryphoncomforted;
 		-- "GryphonessKnowpreg":
 			now NumberVarValue entry is GryphonessKnowpreg;
-		-- "GryphPlotTracking":
-			now NumberVarValue entry is GryphPlotTracking;
 		-- "gsd_encounters":
 			now NumberVarValue entry is gsd_encounters;
 		-- "gsd_pet":
@@ -4909,8 +4907,6 @@ to VariableNumberLoad:
 					now gryphoncomforted is numberVarValue entry;
 				-- "GryphonessKnowpreg":
 					now GryphonessKnowpreg is numberVarValue entry;
-				-- "GryphPlotTracking":
-					now GryphPlotTracking is numberVarValue entry;
 				-- "gsd_encounters":
 					now gsd_encounters is numberVarValue entry;
 				-- "gsd_pet":
