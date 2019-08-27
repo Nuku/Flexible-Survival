@@ -4865,7 +4865,7 @@ This is the turnpass rule:
 			now z is z;
 		else:
 			now z is 1;
-		if BodyName of Player is "Human" or ( shiftable is 2 and humanity of Player > 49 ): [blocked for humans and active shifters]
+		if BodyName of Player is "Human" or ( Resolution of Secure Area is 2 and humanity of Player > 49 ): [blocked for humans and active shifters]
 			now z is 0;
 		if z is 1:
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:

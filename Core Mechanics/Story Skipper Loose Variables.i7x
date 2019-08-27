@@ -2453,8 +2453,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is shadowy;
 		-- "SharkFountainCounter":
 			now NumberVarValue entry is SharkFountainCounter;
-		-- "shiftable":
-			now NumberVarValue entry is shiftable;
 		-- "sierramem":
 			now NumberVarValue entry is sierramem;
 		-- "SilverToken":
@@ -6138,7 +6136,7 @@ to VariableNumberLoad:
 				-- "SharkFountainCounter":
 					now SharkFountainCounter is numberVarValue entry;
 				-- "shiftable":
-					now shiftable is numberVarValue entry;
+					now Resolution of Secure Area is numberVarValue entry;
 				-- "sierramem":
 					now sierramem is numberVarValue entry;
 				-- "SilverToken":

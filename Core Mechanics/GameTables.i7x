@@ -1200,7 +1200,6 @@ Name(text)	Type(text)
 "ShadowBeastEventState"	"number"
 "shadowy"	"number"
 "SharkFountainCounter"	"number"
-"shiftable"	"number"
 "sierramem"	"number"
 "SilverToken"	"number"
 "sirenfight"	"number"
