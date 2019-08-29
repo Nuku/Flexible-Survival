@@ -8,7 +8,7 @@ Shifting Room is a room. "[shiftingroom][line break]A room in a tent. The walls 
 It is private.
 It is fasttravel.
 
-a postimport rule:
+a postimport rule: [bugfixing rules for players that import savegames]
 	if Resolution of Secure Area > 0:
 		connect Shifting Room;
 
