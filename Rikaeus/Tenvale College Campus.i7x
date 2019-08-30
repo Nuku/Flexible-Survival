@@ -216,6 +216,10 @@ The description of Wally's Room is "[wallysroomdesc]"
 to say wallysroomdesc:
 	say "     Taking a glance around the otter's room you notice it's not that very decorated, though to be honest it does make sense, since he is new to the campus. What it is decorated with is bits and bobs obviously from his previous home, a computer for school-work, a bookshelf, and a bed. Deciding to take a look at the items from his cave, you wander around, looking at them. Some of them are seashells that you assume he found while wandering the beach. Another one of the items is a photo of a young teen and his parents, something you assume to be a family picture for Wally. The last of the major items appears to be what's on your friends bed and he's sitting on. It's a large blue quilt that covers the entire thing, seemingly handmade. It intrigues you, as you wonder if the otter made it himself. Other than all that the room is rather bare";
 
+to connect Wally's Room:
+	change southwest exit of Second Floor Male Dorms to Wally's Room;
+	change east exit of Wally's Room to Second Floor Male Dorms;
+
 [Room Declaration]
 
 Table of GameRoomIDs (continued)

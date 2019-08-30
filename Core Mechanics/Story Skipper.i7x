@@ -1066,6 +1066,10 @@ to CharacterIconRestore:
 	JayIconRestore;
 	DrMattIconRestore;
 
+to RunPostImportRules:
+	say "Running Post Import Rules...";
+	follow the postimport rules;
+
 Section 2 - Trixie
 
 understand "export progress" as ProgressExport.
@@ -1120,6 +1124,7 @@ to say ProgressionImport:
 	NoteRestore;
 	VariableLoad;
 	CharacterIconRestore;
+	RunPostImportRules;
 
 Table of GameCharacterIDs (continued)
 object	name

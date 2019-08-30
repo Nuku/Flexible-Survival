@@ -11,13 +11,9 @@ Campus Gym by UrsaOmega begins here.
 
 ]
 
-CampusGymConnection is a number that varies.[@Tag:NotSaved]
-
-an everyturn rule: [bugfixing rules for players that import savegames]
-	if Working Out is resolved and CampusGymConnection is 0: [event resolved the right way, room not connected yet]
-		change southwest exit of Athletic Street to Campus Gym;
-		change northeast exit of Campus Gym to Athletic Street;
-		now CampusGymConnection is 1; [make sure that it connects the room only once]
+a postimport rule: [bugfixing rules for players that import savegames]
+	if Working Out is resolved: [event resolved the right way, room not connected yet]
+		connect Campus Gym;
 
 Section 1 - Finding the gym
 
@@ -36,8 +32,7 @@ Instead of resolving a Working Out:
 		now Campus Gym is known;
 	else:
 		say "You mark the location on your map - it might be worth checking out later.";
-	change southwest exit of Athletic Street to Campus Gym;
-	change northeast exit of Campus Gym to Athletic Street;
+	connect Campus Gym;
 	now Working Out is resolved;
 
 Section 2 - Campus Gym
@@ -52,6 +47,10 @@ The description of Campus Gym is "The interior of the gym is in even better shap
 
 instead of sniffing Campus Gym:
 	say "The room smells like sweat and hard work.";
+
+to connect Campus Gym:
+	change southwest exit of Athletic Street to Campus Gym;
+	change northeast exit of Campus Gym to Athletic Street;
 
 Section 3 - Randy
 
