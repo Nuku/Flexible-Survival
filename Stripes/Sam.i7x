@@ -141,7 +141,7 @@ The conversation of Sam is { "Thanks." }.
 the scent of Sam is "[samscent]".
 samformtalk is a truth state that varies. samformtalk is usually false.
 
-to SamIconRestore:
+a postimport rule: [bugfixing rules for players that import savegames]
 	if HP of Sam >= 30 and HP of Sam <= 49:
 		now icon of Sam is figure of Vixentaur_icon;
 	else if HP of Sam >= 50 and HP of Sam <= 69:

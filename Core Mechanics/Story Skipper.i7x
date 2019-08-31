@@ -1053,19 +1053,6 @@ to NoteRestore:
 	else:
 		say "No Note Save File Found!";
 
-to CharacterIconRestore:
-	say "Restoring Character Icons...";
-	AlexIconRestore;
-	HadiyaIconRestore;
-	LeonardIconRestore;
-	RodAndRondaIconRestore;
-	SamIconRestore;
-	ChrisIconRestore;
-	DemonBruteIconRestore;
-	DiegoIconRestore;
-	JayIconRestore;
-	DrMattIconRestore;
-
 to RunPostImportRules:
 	say "Running Post Import Rules...";
 	follow the postimport rules;
@@ -1123,7 +1110,6 @@ to say ProgressionImport:
 	BeastRestore;
 	NoteRestore;
 	VariableLoad;
-	CharacterIconRestore;
 	RunPostImportRules;
 
 Table of GameCharacterIDs (continued)

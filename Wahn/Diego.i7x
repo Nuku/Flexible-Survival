@@ -39,7 +39,7 @@ The icon of Diego is Figure of Diego_icon.
 
 the linkaction of Diego is "[diegolinkaction]".
 
-to DiegoIconRestore:
+a postimport rule: [bugfixing rules for players that import savegames]
 	if DiegoChanged is 2:
 		now the icon of Diego is Figure of DiegoFem_icon;
 	else if DiegoChanged is 1:

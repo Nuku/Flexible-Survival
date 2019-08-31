@@ -17,7 +17,7 @@ understand "Matt" as Doctor Matt.
 understand "Left Behind Recording of Doctor Matt " as Doctor Matt.
 the icon of Doctor Matt is figure of DrMatt_face_icon.
 
-to DrMattIconRestore:
+a postimport rule: [bugfixing rules for players that import savegames]
 	if HP of Doctor Matt is 100:
 		now the icon of Doctor Matt is figure of pixel;
 
