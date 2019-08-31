@@ -10,6 +10,7 @@ Version 2 of Debugging Tools by Core Mechanics begins here.
 [ debugactive 1 = Debug on]
 
 debugactive is a number that varies.[@Tag:NotSaved] debugactive is 0.
+debuglevel is a number that varies.[@Tag:NotSaved] debuglevel is 1.
 RandomGenNumber is a number that varies.[@Tag:NotSaved]
 
 [ Todo: write Debug code to display _all_ NPC variables]
@@ -32,6 +33,27 @@ carry out debugmode:
 		if "Debugger" is listed in Traits of Player:
 			remove "Debugger" from Traits of Player;
 		now debugactive is 0;
+
+setdebuglevel is an action applying to one topic.
+understand "debuglevel [text]" as setdebuglevel.
+
+carry out setdebuglevel:
+	let newlevel be 0;
+	now newlevel is numerical value of topic understood;
+	if newlevel < 1 or newlevel > 6:
+		say "ERROR: level has to be between 1 and 6!";
+	else:
+		now debuglevel is newlevel;
+		say "Debug level set to [debuglevel]";
+
+to debug at level ( n - number ) say ( t - text ):
+	if debugactive is 1 and debuglevel >= n:
+		say t;
+
+to decide if debug is at level ( n - number ): [or higher]
+	if debugactive is 0, decide no;
+	if debuglevel < n, decide no;
+	decide yes;
 
 turncountdisplay is an action applying to nothing.
 understand "turn count" as turncountdisplay.
