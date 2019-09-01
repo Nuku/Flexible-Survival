@@ -147,7 +147,8 @@ to EventSave:
 		now SituationArea entry is sarea of x;
 	write File of EventSave from the Table of GameEvents; [freshly made table gets saved to file]
 	blank out the whole of Table of GameEvents; [empty it after saving]
-	debug at level 6 say "DEBUG -> File of EventSave written.[line break]";
+	if debug is at level 6:
+		say "DEBUG -> File of EventSave written.[line break]";
 
 to EventRestore:
 	if the File of EventSave exists:
@@ -171,9 +172,11 @@ to EventRestore:
 				[bugfix code after re-naming Midway to Fair]
 				if sarea of EventObject is "Midway":
 					now sarea of EventObject is "Fair";
-				debug at level 6 say "DEBUG -> [x]: EventIdName: [EventIdName] found and set to: [ResolveState entry], [ActiveState entry], Resolution: [Resolution entry]";
+				if debug is at level 6:
+					say "DEBUG -> [x]: EventIdName: [EventIdName] found and set to: [ResolveState entry], [ActiveState entry], Resolution: [Resolution entry]";
 			else:
-				debug at level 6 say "DEBUG -> [x]: EventIdName: [EventIdName] not found in Table of GameEventIDs!";
+				if debug is at level 6:
+					say "DEBUG -> [x]: EventIdName: [EventIdName] not found in Table of GameEventIDs!";
 	else:
 		say "No Event Save File Found!";
 	blank out the whole of Table of GameEvents; [empty it after restoring]
@@ -208,7 +211,8 @@ to RoomSave:
 	write File of RoomInventorySave from the Table of GameRoomInventories; [freshly made table gets saved to file]
 	blank out the whole of Table of GameRooms; [empty after saving]
 	blank out the whole of Table of GameRoomInventories; [empty after saving]
-	debug at level 6 say "DEBUG -> File of RoomSave written.[line break]";
+	if debug is at level 6:
+		say "DEBUG -> File of RoomSave written.[line break]";
 
 to RoomRestore:
 	if the File of RoomSave exists:
@@ -231,9 +235,11 @@ to RoomRestore:
 					now RoomObject is sleepsafe;
 				else:
 					now RoomObject is not sleepsafe;
-				debug at level 6 say "DEBUG -> [x]: RoomIdName: [RoomIdName] found and set to: [Reachability entry]; [ExplorationStatus entry]; [RestSafety entry]";
+				if debug is at level 6:
+					say "DEBUG -> [x]: RoomIdName: [RoomIdName] found and set to: [Reachability entry]; [ExplorationStatus entry]; [RestSafety entry]";
 			else:
-				debug at level 6 say "DEBUG -> [x]: RoomIdName: [RoomIdName] not found in Table of GameRoomIDs!";
+				if debug is at level 6:
+					say "DEBUG -> [x]: RoomIdName: [RoomIdName] not found in Table of GameRoomIDs!";
 	if the File of RoomInventorySave exists:
 		repeat with x running through rooms:
 			truncate Invent of x to 0 entries; [cleaning out the old data]
@@ -246,7 +252,8 @@ to RoomRestore:
 				let RoomObject be the object corresponding to a name of RoomIdName in the Table of GameRoomIDs;
 				add ItemName entry to Invent of RoomObject;
 			else:
-				debug at level 6 say "DEBUG -> [x]: RoomIdName: [RoomIdName] not found in Table of GameRoomIDs!";
+				if debug is at level 6:
+					say "DEBUG -> [x]: RoomIdName: [RoomIdName] not found in Table of GameRoomIDs!";
 	else:
 		say "No Room Save File Found!";
 	blank out the whole of Table of GameRooms; [empty out all old data]
@@ -280,7 +287,8 @@ to PossessionSave:
 			now CurseStatus entry is PossesssionCursed;
 	write File of PossessionSave from the Table of GamePossessions; [freshly made table gets saved to file]
 	blank out the whole of Table of GamePossessions; [empty after saving to file]
-	debug at level 6 say "DEBUG -> File of PossessionSave written.[line break]";
+	if debug is at level 6:
+		say "DEBUG -> File of PossessionSave written.[line break]";
 
 to PossessionRestore:
 	if the File of PossessionSave exists:
@@ -302,9 +310,11 @@ to PossessionRestore:
 						now PossessionObject is cursed;
 					else:
 						now PossessionObject is not cursed;
-				debug at level 6 say "DEBUG -> [x]: PossessionIdName: [PossessionIdName] found and set to: [carried of PossessionObject] carried and [stashed of PossessionObject] stored.";
+				if debug is at level 6:
+					say "DEBUG -> [x]: PossessionIdName: [PossessionIdName] found and set to: [carried of PossessionObject] carried and [stashed of PossessionObject] stored.";
 			else:
-				debug at level 6 say "DEBUG -> [x]: PossessionIdName: [PossessionIdName] not found in Table of Game Objects!";
+				if debug is at level 6:
+					say "DEBUG -> [x]: PossessionIdName: [PossessionIdName] not found in Table of Game Objects!";
 	else:
 		say "No Possession Save File Found!";
 	blank out the whole of Table of GamePossessions; [empty out all old data]
@@ -421,10 +431,12 @@ to CharacterRestore:
 			if there is a name of CharacterIdName in the Table of GameCharacterIDs:
 				let CharacterObject be the object corresponding to a name of CharacterIdName in the Table of GameCharacterIDs;
 				if CharacterIdName is listed in PetList:
-					debug at level 6 say "DEBUG -> Pets are part of the player, thus they don't get moved.[line break]";
+					if debug is at level 6:
+						say "DEBUG -> Pets are part of the player, thus they don't get moved.[line break]";
 				[
 				else if CharacterIdName is "yourself":
-					debug at level 6 say "DEBUG -> The player doesn't get moved.[line break]";
+					if debug is at level 6:
+						say "DEBUG -> The player doesn't get moved.[line break]";
 				]
 				else if there is a name of LocationName entry in the Table of GameRoomIDs:
 					let TargetRoom be the object corresponding to a name of LocationName entry in the Table of GameRoomIDs;
@@ -502,9 +514,11 @@ to CharacterRestore:
 				now SexuallyExperienced of CharacterObject is SexuallyExperienced entry;
 				now TwistedCapacity of CharacterObject is TwistedCapacity entry;
 				now Sterile of CharacterObject is Sterile entry;
-				debug at level 6 say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] found and values restored.";
+				if debug is at level 6:
+					say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] found and values restored.";
 			else:
-				debug at level 6 say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] not found in Table of GameCharacterIDs!";
+				if debug is at level 6:
+					say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] not found in Table of GameCharacterIDs!";
 	else if the File of CharacterSave exists:
 		say "Restoring Characters...";
 		read File of CharacterSave into the Table of GameCharacters;
@@ -514,10 +528,12 @@ to CharacterRestore:
 			if there is a name of CharacterIdName in the Table of GameCharacterIDs:
 				let CharacterObject be the object corresponding to a name of CharacterIdName in the Table of GameCharacterIDs;
 				if CharacterIdName is listed in PetList:
-					debug at level 6 say "DEBUG -> Pets are part of the player, thus they don't get moved.[line break]";
+					if debug is at level 6:
+						say "DEBUG -> Pets are part of the player, thus they don't get moved.[line break]";
 				[
 				else if CharacterIdName is "yourself":
-					debug at level 6 say "DEBUG -> The player doesn't get moved.[line break]";
+					if debug is at level 6:
+						say "DEBUG -> The player doesn't get moved.[line break]";
 				]
 				else if there is a name of LocationName entry in the Table of GameRoomIDs:
 					let TargetRoom be the object corresponding to a name of LocationName entry in the Table of GameRoomIDs;
@@ -563,9 +579,11 @@ to CharacterRestore:
 				now OralVirgin of CharacterObject is OralVirgin entry;
 				now Virgin of CharacterObject is Virgin entry;
 				now AnalVirgin of CharacterObject is AnalVirgin entry;
-				debug at level 6 say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] found and values restored.";
+				if debug is at level 6:
+					say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] found and values restored.";
 			else:
-				debug at level 6 say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] not found in Table of GameCharacterIDs!";
+				if debug is at level 6:
+					say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] not found in Table of GameCharacterIDs!";
 	else:
 		say "No Character Save File Found!";
 	blank out the whole of Table of GameCharacters; [empty out all old data]
@@ -590,7 +608,8 @@ to TraitRestore:
 					add TraitText entry to Traits of CharacterObject;
 					if TraitText entry is "Tamed": [pets]
 						now CharacterObject is tamed;
-					debug at level 6 say "DEBUG -> [x]: Added Trait: '[TraitText entry]' to [TraitOwner].";
+					if debug is at level 6:
+						say "DEBUG -> [x]: Added Trait: '[TraitText entry]' to [TraitOwner].";
 	else:
 		say "No Trait Save File Found!";
 
@@ -667,9 +686,11 @@ to PlayerSave:
 			now ListName entry is "BlockList";
 			now EntryText entry is entry y of BlockList of Player;
 	write File of PlayerSave from the Table of PlayerData; [freshly made table gets saved to file]
-	debug at level 6 say "DEBUG -> File of PlayerSave written.[line break]";
+	if debug is at level 6:
+		say "DEBUG -> File of PlayerSave written.[line break]";
 	write File of PlayerListsSave from the Table of PlayerLists; [freshly made table gets saved to file]
-	debug at level 6 say "DEBUG -> File of PlayerListsSave written.[line break]";
+	if debug is at level 6:
+		say "DEBUG -> File of PlayerListsSave written.[line break]";
 	blank out the whole of Table of PlayerData; [empty after saving]
 	blank out the whole of Table of PlayerLists; [empty after saving]
 	if NewTypeInfectionActive is true: [new parts also active]
@@ -753,7 +774,8 @@ to PlayerSave:
 		now HermInterest entry is HermInterest of Player;
 		write File of NewPlayerSave from the Table of NewPlayerData; [freshly made table gets saved to file]
 		blank out the whole of Table of NewPlayerData; [empty after saving]
-		debug at level 6 say "DEBUG -> File of NewPlayerSave written.[line break]";
+		if debug is at level 6:
+			say "DEBUG -> File of NewPlayerSave written.[line break]";
 
 
 to PlayerRestore:
@@ -783,7 +805,8 @@ to PlayerRestore:
 		now Short Breast Size Desc of Player is Short Breast Size Desc entry;
 		now bodydesc of Player is bodydesc entry;
 		now bodytype of Player is bodytype entry;
-		debug at level 6 say "DEBUG -> Player Data restored.";
+		if debug is at level 6:
+			say "DEBUG -> Player Data restored.";
 	else:
 		say "No Player Save File Found!";
 	blank out the whole of Table of PlayerData; [empty out all old data]
@@ -902,7 +925,8 @@ to PlayerRestore:
 		now FemaleInterest of Player is FemaleInterest entry;
 		now TransFemaleInterest of Player is TransFemaleInterest entry;
 		now HermInterest of Player is HermInterest entry;
-		debug at level 6 say "DEBUG -> New Player Data restored.";
+		if debug is at level 6:
+			say "DEBUG -> New Player Data restored.";
 	else if NewTypeInfectionActive is true:
 		say "No Additional Player Data Save File Found!";
 	blank out the whole of Table of NewPlayerData; [empty out all old data]
@@ -931,7 +955,8 @@ to ChildrenSave:
 	now AssSpeciesName entry is AssSpeciesName of Child;
 	now TailSpeciesName entry is TailSpeciesName of Child;
 	write File of UnbornChildSave from the Table of ChildData;
-	debug at level 6 say "DEBUG -> File of UnbornChildrenSave written.[line break]";
+	if debug is at level 6:
+		say "DEBUG -> File of UnbornChildrenSave written.[line break]";
 	say "Saving born children...";
 	write File of ChildrenSave from the Table of PlayerChildren;
 	write File of ChildrenBunkerSave from the Table of PlayerBunkerChildren;
@@ -945,7 +970,8 @@ to ChildrenRestore:
 	if the File of UnbornChildSave exists:
 		say "Restoring unborn children...";
 		read File of UnbornChildSave into the Table of ChildData;
-		debug at level 6 say "DEBUG -> Unborn children restored from FSUnbornChildSave.[line break]";
+		if debug is at level 6:
+			say "DEBUG -> Unborn children restored from FSUnbornChildSave.[line break]";
 		choose row 1 in the Table of ChildData;
 		now Gestation of Child is Gestation entry;
 		now bodySpeciesName of Child is bodySpeciesName entry;
@@ -972,19 +998,22 @@ to ChildrenRestore:
 	if the File of ChildrenSave exists:
 		say "Restoring born children...";
 		read File of ChildrenSave into the Table of PlayerChildren;
-		debug at level 6 say "DEBUG -> Children restored from FSPlayerChildrenSave.[line break]";
+		if debug is at level 6:
+			say "DEBUG -> Children restored from FSPlayerChildrenSave.[line break]";
 	else:
 		say "No Children Save File Found!";
 	if the File of ChildrenBunkerSave exists:
 		say "Restoring Children (Bunker)...";
 		read File of ChildrenBunkerSave into the Table of PlayerBunkerChildren;
-		debug at level 6 say "DEBUG -> Children restored from FSPlayerChildrenBunkerSave.[line break]";
+		if debug is at level 6:
+			say "DEBUG -> Children restored from FSPlayerChildrenBunkerSave.[line break]";
 	else:
 		say "No Children (Bunker) Save File Found!";
 	if the File of ChildrenRoamingSave exists:
 		say "Restoring Children (Roaming)...";
 		read File of ChildrenRoamingSave into the Table of PlayerRoamingChildren;
-		debug at level 6 say "DEBUG -> Children restored from FSPlayerChildrenRoamingSave.[line break]";
+		if debug is at level 6:
+			say "DEBUG -> Children restored from FSPlayerChildrenRoamingSave.[line break]";
 	else:
 		say "No Children (Roaming) Save File Found!";
 
@@ -1006,7 +1035,8 @@ to BeastSave:
 		now sex entry is BeastSex;
 	write File of BeastSave from the Table of GameBeasts; [freshly made table gets saved to file]
 	blank out the whole of Table of GameBeasts; [empty after saving]
-	debug at level 6 say "DEBUG -> File of BeastSave written.[line break]";
+	if debug is at level 6:
+		say "DEBUG -> File of BeastSave written.[line break]";
 
 to BeastRestore:
 	if the File of BeastSave exists:
@@ -1025,9 +1055,11 @@ to BeastRestore:
 					now Area entry is "Fair";
 				now non-infectious entry is BeastNonInfect;
 				now sex entry is BeastSex;
-				debug at level 6 say "DEBUG -> [x]: BeastName: [BeastName] Area entry set to [BeastArea]!";
+				if debug is at level 6:
+					say "DEBUG -> [x]: BeastName: [BeastName] Area entry set to [BeastArea]!";
 			else:
-				debug at level 6 say "DEBUG -> BeastName: [BeastName] not found in Table of Random Critters!";
+				if debug is at level 6:
+					say "DEBUG -> BeastName: [BeastName] not found in Table of Random Critters!";
 	else:
 		say "No Beast Save File Found!";
 	blank out the whole of Table of GameBeasts; [empty out all old data]
@@ -1035,13 +1067,15 @@ to BeastRestore:
 to NoteSave:
 	say "Saving Notes...";
 	write File of NoteSave from the Table of JournalNotes;
-	debug at level 6 say "DEBUG -> File of NoteSave written.[line break]";
+	if debug is at level 6:
+		say "DEBUG -> File of NoteSave written.[line break]";
 
 to NoteRestore:
 	if the File of NoteSave exists:
 		say "Restoring Notes...";
 		read File of NoteSave into the Table of JournalNotes;
-		debug at level 6 say "DEBUG -> Notes restored from FSNoteSave.[line break]";
+		if debug is at level 6:
+			say "DEBUG -> Notes restored from FSNoteSave.[line break]";
 	else:
 		say "No Note Save File Found!";
 

@@ -57,7 +57,8 @@ to VariableSave:
 	repeat with x running from 1 to the number of filled rows in the Table of GameVariableIDs:
 		choose row x in the Table of GameVariableIDs;
 		now CurrentVariableName is Name entry;
-		debug at level 6 say "Stashing variable [CurrentVariableName].";
+		if debug is at level 6:
+			say "Stashing variable [CurrentVariableName].";
 		if Type Entry is "text":
 			TextVariableSave;
 		else if Type Entry is "number":
@@ -71,22 +72,28 @@ to VariableSave:
 		else if Type Entry is "list of numbers":
 			NumberListVariableSave;
 	write File of TextSave from the Table of GameTexts; [freshly made table gets saved to file]
-	debug at level 6 say "TextSave File Written.";
+	if debug is at level 6:
+		say "TextSave File Written.";
 	blank out the whole of Table of GameTexts; [empty out all old data]
 	write File of NumberSave from the Table of GameNumbers; [freshly made table gets saved to file]
-	debug at level 6 say "NumberSave File Written.";
+	if debug is at level 6:
+		say "NumberSave File Written.";
 	blank out the whole of Table of GameNumbers; [empty out all old data]
 	write File of TruthSave from the Table of GameTruths; [freshly made table gets saved to file]
-	debug at level 6 say "TruthSave File Written.";
+	if debug is at level 6:
+		say "TruthSave File Written.";
 	blank out the whole of Table of GameTruths; [empty out all old data]
 	write File of IndexedTextSave from the Table of GameIndexedTexts; [freshly made table gets saved to file]
-	debug at level 6 say "IndexedTextSave File Written.";
+	if debug is at level 6:
+		say "IndexedTextSave File Written.";
 	blank out the whole of Table of GameIndexedTexts; [empty out all old data]
 	write File of TextListSave from the Table of GameTextLists; [freshly made table gets saved to file]
-	debug at level 6 say "TextListSave File Written.";
+	if debug is at level 6:
+		say "TextListSave File Written.";
 	blank out the whole of Table of GameTextLists; [empty out all old data]
 	write File of NumberListSave from the Table of GameNumberLists; [freshly made table gets saved to file]
-	debug at level 6 say "NumberListSave File Written.";
+	if debug is at level 6:
+		say "NumberListSave File Written.";
 	blank out the whole of Table of GameNumberLists; [empty out all old data]
 
 to TextVariableSave:
@@ -3766,8 +3773,12 @@ to VariableTextLoad:
 		say "Restoring Texts...";
 		read File of TextSave into the Table of GameTexts;
 		repeat with x running from 1 to the number of filled rows in the Table of GameTexts:
+			if there is no TextVarValue in row x of the Table of GameTexts:
+				debug at level 4 say "Skipping empty text [TextVarName in row x of the Table of GameTexts].[line break]";
+				next;
 			choose row x in the Table of GameTexts;
-			debug at level 6 say "Restoring text [TextVarName entry].";
+			if debug is at level 6:
+				say "Restoring text [TextVarName entry].";
 			if TextVarName entry is:
 				-- "PronounChoice":
 					now PronounChoice of Player is TextVarValue entry;
@@ -3995,7 +4006,8 @@ to VariableTextLoad:
 					now wrtail is TextVarValue entry;
 				-- "wrTailName":
 					now wrTailName is TextVarValue entry;
-			debug at level 6 say "DEBUG -> VarName '[TextVarName entry]' restored to '[TextVarValue entry]'.";
+			if debug is at level 6:
+				say "DEBUG -> VarName '[TextVarName entry]' restored to '[TextVarValue entry]'.";
 	else:
 		say "No Text Save File Found!";
 
@@ -4004,8 +4016,12 @@ to VariableNumberLoad:
 		say "Restoring Numbers...";
 		read File of NumberSave into the Table of GameNumbers;
 		repeat with x running from 1 to the number of filled rows in the Table of GameNumbers:
+			if there is no numberVarValue in row x of the Table of GameNumbers:
+				debug at level 4 say "Skipping empty Number [NumberVarName in row x of the Table of GameNumbers].[line break]";
+				next;
 			choose row x in the Table of GameNumbers;
-			debug at level 6 say "Restoring Number [NumberVarName entry].";
+			if debug is at level 6:
+				say "Restoring Number [NumberVarName entry].";
 			if NumberVarName entry is:
 				-- "featgained":
 					now featgained of Player is numberVarValue entry;
@@ -6659,7 +6675,8 @@ to VariableNumberLoad:
 					now zigseat is numberVarValue entry;
 				-- "zpc_Zc":
 					now zpc_Zc is numberVarValue entry;
-			debug at level 6 say "DEBUG -> VarName '[NumberVarName entry]' restored to '[NumberVarValue entry]'.";
+			if debug is at level 6:
+				say "DEBUG -> VarName '[NumberVarName entry]' restored to '[NumberVarValue entry]'.";
 	else:
 		say "No Number Save File Found!";
 
@@ -6669,7 +6686,8 @@ to VariableTruthLoad:
 		read File of TruthSave into the Table of GameTruths;
 		repeat with x running from 1 to the number of filled rows in the Table of GameTruths:
 			choose row x in the Table of GameTruths;
-			debug at level 6 say "Restoring Truth [TruthVarName entry].";
+			if debug is at level 6:
+				say "Restoring Truth [TruthVarName entry].";
 			if TruthVarName entry is:
 				-- "A_Candy":
 					now A_Candy is TruthVarValue entry;
@@ -7331,7 +7349,8 @@ to VariableTruthLoad:
 					now zigorhadiyaquest is TruthVarValue entry;
 				-- "zpc_inzone":
 					now zpc_inzone is TruthVarValue entry;
-			debug at level 6 say "DEBUG -> VarName '[TruthVarName entry]' restored to '[TruthVarValue entry]'.";
+			if debug is at level 6:
+				say "DEBUG -> VarName '[TruthVarName entry]' restored to '[TruthVarValue entry]'.";
 	else:
 		say "No Truth Save File Found!";
 
@@ -7341,7 +7360,8 @@ to VariableIndexedTextLoad:
 		read File of IndexedTextSave into the Table of GameIndexedTexts;
 		repeat with x running from 1 to the number of filled rows in the Table of GameIndexedTexts:
 			choose row x in the Table of GameIndexedTexts;
-			debug at level 6 say "Restoring IndexedText [IndexedTextVarName entry].";
+			if debug is at level 6:
+				say "Restoring IndexedText [IndexedTextVarName entry].";
 			if IndexedTextVarName entry is:
 				-- "bcupsize":
 					now bcupsize is IndexedTextVarValue entry;
@@ -7349,7 +7369,8 @@ to VariableIndexedTextLoad:
 					now bmagic is IndexedTextVarValue entry;
 				-- "cupsize":
 					now cupsize is IndexedTextVarValue entry;
-			debug at level 6 say "DEBUG -> VarName '[IndexedTextVarName entry]' restored to '[IndexedTextVarValue entry]'.";
+			if debug is at level 6:
+				say "DEBUG -> VarName '[IndexedTextVarName entry]' restored to '[IndexedTextVarValue entry]'.";
 	else:
 		say "No IndexedText Save File Found!";
 
@@ -7379,7 +7400,8 @@ to VariableTextListLoad:
 					add TextListVarValue entry to lbcompList;
 				-- "ndmlist":
 					add TextListVarValue entry to ndmList;
-			debug at level 6 say "DEBUG -> [x]: Added '[TextListVarValue entry]' to TextList [TextListName].";
+			if debug is at level 6:
+				say "DEBUG -> [x]: Added '[TextListVarValue entry]' to TextList [TextListName].";
 	else:
 		say "No TextList Save File Found!";
 
@@ -7421,7 +7443,8 @@ to VariableNumberListLoad:
 					add NumberListVarValue entry to pfpcList;
 				-- "velospostmusings":
 					add NumberListVarValue entry to velospostmusings;
-			debug at level 6 say "DEBUG -> [x]: Added '[NumberListVarValue entry]' to NumberList [NumberListName].";
+			if debug is at level 6:
+				say "DEBUG -> [x]: Added '[NumberListVarValue entry]' to NumberList [NumberListName].";
 	else:
 		say "No NumberList Save File Found!";
 
