@@ -39,12 +39,7 @@ to say KoboldInfectionMenu:
 	else if calcnumber is 2:
 		say "[KoboldScaleMenu]";
 	else if calcnumber is 3:
-		now scalevalue of player is 2;
-		now BodyName of player is "Avalon Kobold";
-		now FaceName of player is "Avalon Kobold";
-		now TailName of player is "Avalon Kobold";
-		now SkinName of player is "Avalon Kobold";
-		now CockName of player is "Avalon Kobold";
+		turn the Player into an "Avalon Kobold";
 	else if calcnumber is 4:
 		say "[KoboldSelectiveMenu]";
 	else if calcnumber is 5:
@@ -607,8 +602,6 @@ to say GildwingClanAccept:
 			LineBreak;
 		[Skin]
 		say "     Your skin begins to itch horribly as [if KoboldScaleColor is 1]rose-red[else if KoboldScaleColor is 2]azure[else if KoboldScaleColor is 3]forest-green[else if KoboldScaleColor is 4]charcoal-black[else if KoboldScaleColor is 5]snowy-white[else](Error, value invalid. Please report this issue to the FS Discord Server with KoboldScaleColor: [KoboldScaleColor].)[end if] scales form to cover your whole body. They interlock and smooth out and leaving you with sleek, [if KoboldScaleColor is 1]red[else if KoboldScaleColor is 2]blue[else if KoboldScaleColor is 3]green[else if KoboldScaleColor is 4]black[else if KoboldScaleColor is 5]white[else](Error, value invalid. Please report this issue to the FS Discord Server with KoboldScaleColor: [KoboldScaleColor].)[end if], kobold scales.";
-		now SkinName of player is "Avalon Kobold";
-		now Skin of Player is "[if KoboldScaleColor is 1][one of]crimson[or]red[or]rose-red[at random][else if KoboldScaleColor is 2][one of]azure[or]blue[or]sea-blue[at random][else if KoboldScaleColor is 3][one of]verdant[or]green[or]forest-green[at random][else if KoboldScaleColor is 4][one of]obsidian[or]black[or]charcoal-black[at random][else if KoboldScaleColor is 5][one of]alabaster[or]white[or]snow-white[at random][else](Error, value invalid. Please report this issue to the FS Discord Server with KoboldScaleColor: [KoboldScaleColor].)[end if] scales. Despite their protective nature, you can still feel everything just fine through your now draconic";
 		LineBreak;
 		[Chest]
 		if breast size of player > 0:
@@ -618,12 +611,6 @@ to say GildwingClanAccept:
 			LineBreak;
 		[Body]
 		say "     Your legs suddenly collapse underneath you, causing you to fall to your knees. Your legs and feet quiver as they bend and reconfigure into a more draconic digitigrade shape with a three-toed, raptor-like foot. Your hands clench involuntarily as your fingers merge in such a way that you are left with only four fingers instead of five, each tipped with a small claw. Feeling stable again, you push yourself to your feet and try to get used to your new stance.";
-		now BodyName of player is "Avalon Kobold";
-		now Body of Player is "lithe but surprisingly strong. It looks and feels perfect for a cave dwelling Kobold. [if player is female]Besides that, there is also a bit of a feminine curve to your hips, making them somewhat wider for egg laying. [end if]Your legs are digitigrade and end in three-toed feet, while your arms sport four fingered hands, each tipped with a small claw.";
-		now TorsoName of Player is ""; [wiping out the new style parts]
-		now BackName of Player is ""; [wiping out the new style parts]
-		now LegsName of Player is ""; [wiping out the new style parts]
-		now ArmsName of Player is ""; [wiping out the new style parts]
 		LineBreak;
 		[back]
 		[if player:
@@ -631,21 +618,13 @@ to say GildwingClanAccept:
 			LineBreak;]
 		[Tail]
 		say "     A sharp pressure builds at the base of your spine, quickly changing into a strange tingle that shifts outwards, traveling along your new reptilian tail as it settles into its new shape. Wiggling it back and forth, you confirm quickly how well it can move and shift your balance. The perfect tail for a kobold!";
-		now TailName of player is "Avalon Kobold";
-		now tail of player is "A long and agile reptilian tail sways behind you, adjusting to your every movement to help you keep balance. It is surprisingly dexterous and you are able to control your tail as well as any other limb. It seems to wiggle at times when you are happy.";
-		now AssName of Player is ""; [wiping out the new style parts]
 		LineBreak;
 		[Face]
 		say "     Your vision turns blurry and your head aches as it rearranges its shape. Pressure builds at the back of your skull as two small kobold horns grow, and by the time the headache clears and your vision returns, you are met with a small draconic snout with a mouth filled with pointy little teeth, making you look similar to a small dragon.";
-		now FaceName of player is "Avalon Kobold";
-		now Face of Player is "reptilian in shape and crowned with two small horns. Your wide, [Eye Color of player] eyes are surprisingly keen, even while in the dark. Small but sharp teeth and a pointed tongue complete your draconic visage";
-		now HeadName of Player is ""; [wiping out the new style parts]
 		LineBreak;
 		[Cock&Balls]
 		if player is male:
 			say "     Your crotch feels warm as your arousal flares, causing your [if player is internal][Cock of Player] cock to stir within you, slowly pushing its way out from your vent, beginning to pulse as its shape changes to something more fitting for a small lizard. It becomes smooth; tapering down until thickening into a pseudo-knot bulge at the base. As soon as the transformation is complete, the feeling starts to fade, and slowly your new kobold cock withdraws back into your genital slit[else][Cock of Player] cock to harden and grow to its full length, beginning to pulse as its shape starts to change. Your balls pull up, and for a moment you are worried that you are losing them, but you can feel them traveling within you to become internal. At the same time, your dick becomes something more fitting for a small lizard. It becomes smooth; tapering down until thickening into a pseudo-knot bulge at the base. You feel a new depth push inward as a vent is formed to house your new reptilian length. As soon as the transformation is complete, the feeling starts to fade, and slowly your new kobold cock withdraws into your genital slit, leaving it impossible to tell your gender merely by looking at your groin[end if].";
-			now CockName of player is "Avalon Kobold";
-			now Cock of Player is "[one of]reptilian[or]draconic[or]taperd[or]kobold[at random]";
 			WaitLineBreak;
 		[Womb]
 		if (Player is female or Player is mpreg_ok) and ovipregalways is false:
@@ -655,6 +634,7 @@ to say GildwingClanAccept:
 			now ovipreglevel is 3;
 		[]
 		say "     Gildwing looks over your new kobold form with a pleased expression. 'This suits you well,' he says before calling out, 'Tyrin!' The red kobold quickly enters the cavern room, stopping for a moment as soon as he sees you. 'Oh! Our friend decided to join us? Tani will be happy about that.' The dragon gestures towards you. 'Please show [ObjectPro of player] around and explain how [SubjectPro of player] may help.' Tyrin nods and looks towards you. 'Follow me please,' he asks before leading you out into the main passageway.";
+		turn the Player into an "Avalon Kobold";
 		now Resolution of GildwingKoboldTest is 3;
 	else:
 		say "     'As you wish,' he says before calling Tyrin into the room. It isn't long before the red kobold makes his way over and stands next to you. '[if player is not defaultnamed][name of player][else]This new recruit has[end if] decided to join us. Please, show [ObjectPro of player] around and explain [PosAdj of player] role.' Tyrin bows politely to the dragon before turning to you with a slight grin. 'So, you'll be helping to Gildwings? That's good to hear! Follow me, and I'll explain how things work around here.'";

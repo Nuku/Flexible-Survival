@@ -108,4 +108,68 @@ to SetInfectionsOf ( Target - a person ) to ( Infection - a text ):
 	now AssSpeciesName of Target is InfectionSpeciesName;
 	now TailSpeciesName of Target is InfectionSpeciesName;
 
+to attributeinfect with ( Infection - a text ):
+	let StoredMonsterID be MonsterID;
+	setmonster Infection;
+	attributeinfect;
+	now MonsterID is StoredMonsterID;
+
+to turn the/-- Player into a/an/-- ( Infection - a text ):
+	if there is no Name of Infection in the Table of Random Critters:
+		say "ERROR: Attempted to set the players infection to '[Infection]'. Please report this on the FS Discord.[line break]";
+		stop the action;
+	let InfectionSpeciesName be GetSpeciesName from Infection;
+	choose a row with Name of Infection in the Table of Random Critters;
+	if Player is not FullyNewTypeInfected: [player doesn't have all new type parts]
+		now BodyName of Player is Infection;
+		now FaceName of Player is Infection;
+		now TailName of Player is Infection;
+		now SkinName of Player is Infection;
+		now CockName of Player is Infection;
+		now BodySpeciesName of Player is InfectionSpeciesName;
+		now FaceSpeciesName of Player is InfectionSpeciesName;
+		now TailSpeciesName of Player is InfectionSpeciesName;
+		now SkinSpeciesName of Player is InfectionSpeciesName;
+		now CockSpeciesName of Player is InfectionSpeciesName;
+		now Body of Player is Body entry;
+		now Face of Player is Face entry;
+		now Tail of Player is Tail entry;
+		now Skin of Player is Skin entry;
+		now Cock of Player is Cock entry;
+		[wiping out the new style parts]
+		now HeadName of Player is "";
+		now TorsoName of Player is "";
+		now BackName of Player is "";
+		now ArmsName of Player is "";
+		now LegsName of Player is "";
+		now AssName of Player is "";
+		now CuntName of Player is "";
+		now HeadSpeciesName of Player is "";
+		now TorsoSpeciesName of Player is "";
+		now BackSpeciesName of Player is "";
+		now ArmsSpeciesName of Player is "";
+		now LegsSpeciesName of Player is "";
+		now AssSpeciesName of Player is "";
+		now CuntSpeciesName of Player is "";
+	else:
+		now HeadName of Player is Infection;
+		now TorsoName of Player is Infection;
+		now BackName of Player is Infection;
+		now ArmsName of Player is Infection;
+		now LegsName of Player is Infection;
+		now AssName of Player is Infection;
+		now TailName of Player is Infection;
+		now CockName of Player is Infection;
+		now CuntName of Player is Infection;
+		now HeadSpeciesName of Player is InfectionSpeciesName;
+		now TorsoSpeciesName of Player is InfectionSpeciesName;
+		now BackSpeciesName of Player is InfectionSpeciesName;
+		now ArmsSpeciesName of Player is InfectionSpeciesName;
+		now LegsSpeciesName of Player is InfectionSpeciesName;
+		now AssSpeciesName of Player is InfectionSpeciesName;
+		now TailSpeciesName of Player is InfectionSpeciesName;
+		now CockSpeciesName of Player is InfectionSpeciesName;
+		now CuntSpeciesName of Player is InfectionSpeciesName;
+	attributeinfect with Infection;
+
 Sex and Infection Functions ends here.
