@@ -6103,7 +6103,13 @@ to weakrandominfect: [does not bypass researcher protection]
 			break;
 		infect;
 
-to setmonster ( x - text ): [puts an infection (named x) as lead monster for later use]
+to setmonster ( x - text ):
+	setmonster x silence state is 0;
+
+to setmonster ( x - text ) silently: [suppresses the debug output]
+	setmonster x silence state is 1;
+
+to setmonster ( x - text ) silence state is (Silence - a number): [puts an infection (named x) as lead monster for later use]
 	let found be 0;
 	choose row MonsterID in the Table of Random Critters;
 	if Name entry exactly matches the text x, case insensitively:
@@ -6117,7 +6123,7 @@ to setmonster ( x - text ): [puts an infection (named x) as lead monster for lat
 				break;
 	if found is 0:
 		say "ERROR - Creature '[x]' not found. (setmonster)[line break]";
-	else if debugactive is 1:
+	else if debugactive is 1 and Silence is 0:
 		say "DEBUG: Current [']monster['] set to: [MonsterID] = [Name entry][line break]";
 
 Section x - Debug Commands - Not for release

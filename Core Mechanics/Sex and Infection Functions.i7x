@@ -110,7 +110,7 @@ to SetInfectionsOf ( Target - a person ) to ( Infection - a text ):
 
 to attributeinfect with ( Infection - a text ):
 	let StoredMonsterID be MonsterID;
-	setmonster Infection;
+	setmonster Infection silently;
 	attributeinfect;
 	now MonsterID is StoredMonsterID;
 
