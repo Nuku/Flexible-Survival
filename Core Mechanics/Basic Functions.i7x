@@ -576,6 +576,14 @@ to FindHighestPlayerStat:
 		now CurrentStat is Perception of Player;
 		now HighestPlayerStat is "perception";
 
+to unwield ( x - a grab object ):
+	if x is an armament and weapon of Player is weapon of x:
+		now weapon of Player is "[one of]your quick wit[or]your fists[or]a quick kick[or]your body[or]some impromptu wrestling[or]an unarmed strike[at random]";
+		now weapon damage of Player is 4;
+		now weapon type of Player is "Melee";
+		now weapon object of Player is journal;
+		say "You stop holding your [x].";
+
 Section 2 - Stripping
 
 [
