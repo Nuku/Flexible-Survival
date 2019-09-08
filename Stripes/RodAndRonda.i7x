@@ -119,7 +119,7 @@ The description of Ronda Mallrat is "[rondadesc]".
 The conversation of Ronda is { "empty" }.
 Ronda Mallrat is in Mall Atrium.
 
-to RodAndRondaIconRestore:
+a postimport rule: [bugfixing rules for players that import savegames]
 	if HP of Ronda is 100:
 		now the icon of Rod Mallrat is figure of pixel;
 		now the icon of Ronda is figure of RondaSR_icon;

@@ -784,7 +784,7 @@ to say KatyaFriendshipPath:
 			now HP of Katya is 2; [third visit completed successfully]
 		else:
 			LineBreak;
-			say "     The reply Katya gives you < encouraging. 'Fuck off. Stop bothering me,' she says, then waves vaguely into the wide open plain and adds, 'Go find your own place to hang out at - or be eaten by something. What do I care?!' With that said, the orc steps back into the crumbling walls of her camp, pulling the tarp closed behind her. Hm, seems like your attempt to chat her up let something to be desired. You won't get any further with her today, so there is nothing left but to shrug and wander away...";
+			say "     The reply Katya gives you is not very encouraging. 'Fuck off. Stop bothering me,' she says, then waves vaguely into the wide open plain and adds, 'Go find your own place to hang out at - or be eaten by something. What do I care?!' With that said, the orc steps back into the crumbling walls of her camp, pulling the tarp closed behind her. Hmm, seems like your attempt to chat her up left something to be desired. You won't get any further with her today, so there is nothing left but to shrug and wander away...";
 			wait for any key;
 			move player to Dry Plains;
 	else if HP of Katya is 2: [fourth visit]

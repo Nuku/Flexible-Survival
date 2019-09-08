@@ -71,7 +71,7 @@ ChrisPlayerOffspring is a number that varies.
 instead of sniffing Chris:
 	say "     Chris has got an attractive male scent.";
 
-to ChrisIconRestore:
+a postimport rule: [bugfixing rules for players that import savegames]
 	if Libido of Chris is 2:
 		now the icon of Chris is Figure of OrcWarrior_random_icon;
 	else if Libido of Chris is 1:

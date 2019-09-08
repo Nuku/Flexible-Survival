@@ -188,7 +188,7 @@ The player has a text called tailSpeciesName. TailSpeciesName is usually "Human"
 
 [Parts: head, torso, back, arms, legs, ass, tail, cock, cunt]
 [expanded set of Player specific infection parts]
-The player has a text called HeadName. HeadName is usually "". [set to "" instead of "Human" for now, to prevent freshly imported Player Characters from registering fully human for impregnation]
+The player has a text called HeadName. HeadName is usually "Human".
 The player has a text called HeadSpeciesName. HeadSpeciesName is usually "Human".
 The player has a text called Head Description. Head Description is usually "a typical human".
 The player has a text called Head Adjective. Head Adjective is usually "human".
@@ -205,7 +205,7 @@ The player has a text called Eye Color. Eye Color is usually "green".
 The player has a text called Eye Adjective. Eye Adjective is usually "round".
 The player has a text called Tongue Adjective. Tongue Adjective is usually "average".
 The player has a text called Tongue Color. Tongue Color is usually "pink".
-The player has a text called TorsoName. TorsoName is usually "". [set to "" instead of "Human" for now, to prevent freshly imported Player Characters from registering fully human for impregnation]
+The player has a text called TorsoName. TorsoName is usually "Human".
 The player has a text called TorsoSpeciesName. TorsoSpeciesName is usually "Human".
 The player has a text called Torso Description. Torso Description is usually "that of a regular human".
 The player has a text called Torso Adjective. Torso Adjective is usually "human".
@@ -216,18 +216,18 @@ The player has a text called Breast Adjective. Breast Adjective is usually "perk
 The player has a text called Torso Adornments. Torso Adornments is usually "".
 The player has a text called Nipple Color. Nipple Color is usually "light brown".
 The player has a text called Nipple Shape. Nipple Shape is usually "oval".
-The player has a text called BackName. BackName is usually "". [set to "" instead of "Human" for now, to prevent freshly imported Player Characters from registering fully human for impregnation]
+The player has a text called BackName. BackName is usually "Human".
 The player has a text called BackSpeciesName. BackSpeciesName is usually "Human".
 The player has a text called Back Adornments. Back Adornments is usually "".
 The player has a text called Back Skin Adjective. Back Skin Adjective is usually "".
 The player has a text called Back Color. Back Color is usually "fair".
-The player has a text called ArmsName. ArmsName is usually "". [set to "" instead of "Human" for now, to prevent freshly imported Player Characters from registering fully human for impregnation]
+The player has a text called ArmsName. ArmsName is usually "Human".
 The player has a text called ArmsSpeciesName. ArmsSpeciesName is usually "Human".
 The player has a text called Arms Description. Arms Description is usually "those of a regular human".
 The player has a text called Arms Skin Adjective. Arms Skin Adjective is usually "".
 The player has a text called Arms Color. Arms Color is usually "fair".
 The player has a text called Locomotion. Locomotion is usually "bipedal".
-The player has a text called LegsName. LegsName is usually "". [set to "" instead of "Human" for now, to prevent freshly imported Player Characters from registering fully human for impregnation]
+The player has a text called LegsName. LegsName is usually "Human".
 The player has a text called LegsSpeciesName. LegsSpeciesName is usually "Human".
 The player has a text called Legs Description. Legs Description is usually "that of a regular human, reaching all the way to the ground".
 The player has a text called Legs Skin Adjective. Legs Skin Adjective is usually "".
@@ -933,7 +933,7 @@ Definition: A person (called x) is perminfected:
 	no;
 
 Definition: A person (called x) is pure:
-	if HeadName of Player is "" or TorsoName of Player is "" or BackName of Player is "" or ArmsName of Player is "" or LegsName of Player is "" or AssName of Player is "" or TailName of Player is "" or CockName of Player is "" or CuntName of Player is "": [player doesn't have all new type parts]
+	if Player is not FullyNewTypeInfected: [player doesn't have all new type parts]
 		if BodyName of x is FaceName of x:
 			if BodyName of x is TailName of x:
 				if BodyName of x is SkinName of x:
@@ -953,7 +953,7 @@ Definition: A person (called x) is pure:
 		no;
 
 Definition: A person (called x) is purehuman:
-	if HeadName of Player is "" or TorsoName of Player is "" or BackName of Player is "" or ArmsName of Player is "" or LegsName of Player is "" or AssName of Player is "" or TailName of Player is "" or CockName of Player is "" or CuntName of Player is "": [player doesn't have all new type parts]
+	if Player is not FullyNewTypeInfected: [player doesn't have all new type parts]
 		if BodyName of Player is "Human" or BodyName of Player is "Herm Human":
 			if FaceName of Player is "Human" or FaceName of Player is "Herm Human":
 				if TailName of Player is "Human" or TailName of Player is "Herm Human":
@@ -2910,11 +2910,7 @@ To process (x - a grab object):
 		follow turnpass rule;
 	else if x is a armament:
 		if weapon of Player is weapon of x:		[unequip]
-			now weapon of Player is "[one of]your quick wit[or]your fists[or]a quick kick[or]your body[or]some impromptu wrestling[or]an unarmed strike[at random]";
-			now weapon damage of Player is 4;
-			now weapon type of Player is "Melee";
-			now weapon object of Player is journal;
-			say "You stop holding your [x].";
+			unwield x;
 		else: [equip]
 			now weapon object of Player is x;
 			now weapon of Player is weapon of x;
@@ -3515,9 +3511,7 @@ This is the sex change rule:
 		else if a random chance of 2 in 3 succeeds and "Just One" is not listed in feats of Player:	[Extra cocks at 67%]
 			increase Cock Count of Player by 1;
 		if singlesexadjust is 3 and sex entry is "Both":	[female remains female if herm infection]
-			now Cock Count of Player is 0;
-			now Cock Length of Player is 0;
-			now Ball Size of Player is 0;
+			remove manhood from Player;
 		if prevcock < Cock Count of Player:		[did new cock appear?]
 			follow the cock descr rule;
 			say "Your groin throbs with intense sensations as a [descr] [cock entry] [one of]cock[or]penis[or]shaft[or]maleness[at random] erupts from you, spurting a few excited streams of fluid as it settles into place.";
@@ -3531,17 +3525,13 @@ This is the sex change rule:
 			if Cock Length of Player < 5, now Cock Length of Player is 5;
 			if Ball Size of Player < 3, now Ball Size of Player is 3;
 		if (singlesexadjust is 1 or singlesexadjust is 2) and sex entry is "Female":		[male/herm becomes female if female infection]
-			now Cock Count of Player is 0;
-			now Cock Length of Player is 0;
-			now Ball Size of Player is 0;
+			remove manhood from Player;
 		if prevcock > Cock Length of Player or prevcock2 > Ball Size of Player:		[did cock actually shrink?]
 			follow the cock descr rule;
 			say "Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [if Cock Count of Player > 1][one of]cocks[or]penises[or]shafts[or]poles[at random] as they begin[else][one of]cock[or]man meat[or]shaft[or]pole[at random] as it begins[end if] to shrink. [if Cock Count of Player > 1]They dwindle[else]It dwindles[end if] in size, becoming [descr] while[if Player is internal] you imagine[end if] your [one of]balls[or]testicles[or]nuts[or]gonads[at random] become [Ball Size Adjective of Player]. ";
 			if Cock Length of Player < 1 or Ball Size of Player < 1:
 				say "You barely have time to give a whimper as you cease to be a male.";
-				now Cock Count of Player is 0;
-				now Cock Length of Player is 0;
-				now Ball Size of Player is 0;
+				remove manhood from Player;
 			else:
 				say "[line break]";
 		if Cock Count of Player > 1 and a random chance of 2 in 5 succeeds and "All The Things" is not listed in feats of Player:
@@ -3630,7 +3620,7 @@ This is the sex change rule:
 			say "Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [if Cunt Count of Player > 1][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] as they begin to shrink. They dwindle[else][one of]cunt[or]pussy[or]vagina[or]cleft[at random] as it begins to shrink. It dwindles[end if] in size, becoming [descr]. ";
 			if Cunt Depth of Player < 1 or Cunt Tightness of Player < 1:
 				say "With a sickening noise, you cease to be female all together.";
-				now Cunt Count of Player is 0;
+				remove womanhood from Player;
 			else:
 				say "[line break]";
 		if Cunt Count of Player > 1 and a random chance of 2 in 5 succeeds and "All The Things" is not listed in feats of Player:
@@ -3648,7 +3638,7 @@ This is the sex change rule:
 
 This is the breast change rule:
 	choose row MonsterID from the Table of Random Critters;
-	if TorsoName of Player is not "": [new parts]
+	if Player is FullyNewTypeInfected: [new parts]
 		if Nipple Count of Player is not Nipple Count entry:
 			decrease Breast Size of Player by 2;
 			follow the breast descr rule;
@@ -3773,9 +3763,7 @@ to grow cock by (x - a number):
 		continue the action;
 	else if "Single Sexed" is listed in feats of Player and player is female:
 		say "Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [one of]cunt[sfn][or]puss[yfn][or]vagina[sfn][or]cleft[sfn][at random] as [ittheyf] begin[sfv] to shrink. [ItTheyf] dwindle[sfv] in size before vanishing with a sickening noise as you cease to be female all together.";
-		now Cunt Count of Player is 0;
-		now Cunt Depth of Player is 0;
-		now Cunt Tightness of Player is 0;
+		remove womanhood from Player;
 	let prevcock be Cock Length of Player;
 	increase Cock Length of Player by a random number from 1 to x;
 	if "Modest Organs" is listed in feats of Player and Cock Length of Player > 8:
@@ -4813,6 +4801,8 @@ balloversize is a number that varies.
 skipturnblocker is a number that varies.
 mpregcount is a number that varies.
 
+postimport rules is a rulebook.
+
 Everyturn rules is a rulebook.
 
 This is the turnpass rule:
@@ -4871,7 +4861,7 @@ This is the turnpass rule:
 			now z is z;
 		else:
 			now z is 1;
-		if BodyName of Player is "Human" or ( shiftable is 2 and humanity of Player > 49 ): [blocked for humans and active shifters]
+		if BodyName of Player is "Human" or ( Resolution of Secure Area is 2 and humanity of Player > 49 ): [blocked for humans and active shifters]
 			now z is 0;
 		if z is 1:
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
@@ -5304,13 +5294,13 @@ This is the self examine rule:
 		-- 5:
 			say "enormous in size, a lot larger than any regular human ever could be.";
 	[ Infection Descriptions Below   ]
-	if HeadName of Player is not "" and NewTypeInfectionActive is true: [new infection on player and activated]
+	if Player is FullyNewTypeInfected and NewTypeInfectionActive is true: [new infection on player and activated]
 		say "Pulling out a small mirror, you check yourself over from head to toe, attempting to make sense of your current form. Your head and face resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance. [if Player is HasBeard]You have a [Hair Color of Player] [Beard Style of Player]. [end if][if Player is HasHeadHair]On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style. [end if]Inspecting your [Mouth Length Adjective of Player] mouth with both the mirror and your digits, you attempt to look past your [Tongue Length of Player] inch long, [Tongue Color of Player], [Tongue Adjective of Player] tongue and into your [Mouth Length Adjective of Player] throat. [if Player is HasHeadAdornments]Before moving on from your head, you give your [Head Adornments of Player] a proud glance followed by a light caress. [end if][line break]";
 	else: [old infection]
 		say "Your face is [Face of Player]. ";
-	if TorsoName of Player is "": [old infection]
+	if Player is not FullyNewTypeInfected: [old infection]
 		say "Looking at yourself, your body is covered in [Skin of Player] skin. ";
-	if TorsoName of Player is not "" and BackName of Player is not "" and ArmsName of Player is not "" and NewTypeInfectionActive is true: [new infection on player and activated]
+	if Player is FullyNewTypeInfected and NewTypeInfectionActive is true: [new infection on player and activated]
 		say "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]. Your [Limbs Adjective of Player] arms are [Arms Description of Player]";
 		if Arms Skin Adjective of Player is "":
 			say "[if Body Hair Length of Player > 1], covered in [Arms Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Arms Color of Player] skin[end if]";
@@ -5338,7 +5328,7 @@ This is the self examine rule:
 					if Nipple Count of Player > 4, say "The rest jostle for space [Breast Size of Player divided by three] inch[if Breast Size of Player divided by 3 is not 1]es[end if] from your belly. ";
 				else:
 					say "You have two [descr] breasts on your [Bodydesc of Player] chest, curving out [Breast Size of Player] inch[if Breast Size of Player is not 1]es[end if] from your chest. ";
-	if AssName of Player is not "" and TailName of Player is not "" and LegsName of Player is not "" and NewTypeInfectionActive is true: [new infection on player and activated]
+	if Player is FullyNewTypeInfected and NewTypeInfectionActive is true: [new infection on player and activated]
 		say "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]";
 		if Ass Skin Adjective of Player is "":
 			say "[if Body Hair Length of Player > 1], covered in [Ass Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Ass Color of Player] skin[end if]";
@@ -5818,6 +5808,7 @@ This is the male choice rule:
 	now the Ball Size of the player is 3;
 	now Nipple Count of Player is 2;
 	now Breast Size of Player is 0;
+	remove womanhood from Player;
 	now the current menu is table of Basic Actions;
 	say "You are a man.";
 	wait for any key;
@@ -5830,6 +5821,7 @@ This is the female choice rule:
 	now Cunt Tightness of Player is 3;
 	now Nipple Count of Player is 2;
 	now Breast Size of Player is 2;
+	remove manhood from Player;
 	now the current menu is table of Basic Actions;
 	say "You are a woman.";
 	wait for any key;
@@ -5878,6 +5870,7 @@ This is the starting gender rule:
 	now Ball Size of the player is 3;
 	now Nipple Count of Player is 2;
 	now Breast Size of Player is 0;
+	remove womanhood from Player;
 	rule succeeds.
 
 This is the Menu Exit Rule:
@@ -6106,7 +6099,13 @@ to weakrandominfect: [does not bypass researcher protection]
 			break;
 		infect;
 
-to setmonster ( x - text ): [puts an infection (named x) as lead monster for later use]
+to setmonster ( x - text ):
+	setmonster x silence state is 0;
+
+to setmonster ( x - text ) silently: [suppresses the debug output]
+	setmonster x silence state is 1;
+
+to setmonster ( x - text ) silence state is (Silence - a number): [puts an infection (named x) as lead monster for later use]
 	let found be 0;
 	choose row MonsterID in the Table of Random Critters;
 	if Name entry exactly matches the text x, case insensitively:
@@ -6120,7 +6119,7 @@ to setmonster ( x - text ): [puts an infection (named x) as lead monster for lat
 				break;
 	if found is 0:
 		say "ERROR - Creature '[x]' not found. (setmonster)[line break]";
-	else if debugactive is 1:
+	else if debugactive is 1 and Silence is 0:
 		say "DEBUG: Current [']monster['] set to: [MonsterID] = [Name entry][line break]";
 
 Section x - Debug Commands - Not for release
@@ -6319,6 +6318,7 @@ Include Pets by Core Mechanics.
 Include Pregnancy by Core Mechanics.
 Include Presets by Core Mechanics.
 Include Quest Log by Core Mechanics.
+Include Sex and Infection Functions by Core Mechanics.
 Include Status View by Core Mechanics.
 Include Sleeptimer by Core Mechanics.
 Include Tape Inventory by Core Mechanics.
@@ -6409,7 +6409,9 @@ Include Dmitri the Peacock by Aureas Gigas.
 Include Dry Plains Events by Stripes.
 Include Endings by Darthan.
 Include E-shocker by Stripes.
+Include Eva by Kurainyx.
 Include Event Rewrites by Draegon.
+Include Exploration Events by Kurainyx.
 Include Extra Added Scenes by Kaleem mcintyre.
 Include Extra College Events by Speedlover.
 Include Fair Events by Sarokcat.
@@ -6882,7 +6884,6 @@ Include Elijah by Wahn.
 Include Eric by Wahn.
 Include Eric Loyalty by Luneth.
 Include Erica by Wahn.
-Include Exploration Events by Kurainyx.
 Include Fancy by Sarokcat n Verath.
 Include Fang by Prometheus.
 Include Farmhands by Wahn.
@@ -7181,29 +7182,25 @@ To startgenderlockshift:
 			now Cock Length of Player is 6;
 			now the Ball Size of the player is 3;
 			now Breast Size of Player is 0;
-			now Cunt Count of Player is 0;
-			now Cunt Depth of Player is 0;
+			remove womanhood from Player;
 		-- 4:		[female]
 			now Cunt Count of Player is 1;
 			now Cunt Depth of Player is 6;
 			now Cunt Tightness of Player is 4;
 			now Breast Size of Player is 2;
-			now Cock Count of Player is 0;
-			now Cock Length of Player is 0;
+			remove manhood from Player;
 		-- 5:		[shemale]
 			now Cock Count of Player is 1;
 			now Cock Length of Player is 6;
 			now the Ball Size of the player is 3;
 			now Breast Size of Player is 2;
-			now Cunt Count of Player is 0;
-			now Cunt Depth of Player is 0;
+			remove womanhood from Player;
 		-- 6: [cuntboy]
 			now Cunt Count of Player is 1;
 			now Cunt Depth of Player is 6;
 			now Cunt Tightness of Player is 4;
 			now Breast Size of Player is 0;
-			now Cock Count of Player is 0;
-			now Cock Length of Player is 0;
+			remove manhood from Player; [balls not included ;-)]
 		-- 7: [male herm]
 			now Cock Count of Player is 1;
 			now Cock Length of Player is 6;
@@ -7687,13 +7684,12 @@ to gendersetting:
 					wait for any key;
 			now Cock Length of Player is calcnumber;
 			if Cock Length of Player is 0: [no cock at all!]
-				now Cock Count of Player is 0;
+				remove manhood from Player;
 			else: [cock present]
 				now Cock Count of Player is 1;
 				now Cock Girth of Player is 3; [average thickness]
 				now Ball Size of Player is 2; [dove-egg]
-				now Cunt Count of Player is 0; [no pre-infection herms]
-				now Cunt Depth of Player is 0;
+				remove womanhood from Player; [no pre-infection herms]
 			now calcnumber is -1; [resetting calcnumber for the main menu]
 		else if calcnumber is 2: [cock girth]
 			now calcnumber is -1;
@@ -7739,14 +7735,12 @@ to gendersetting:
 					wait for any key;
 			now Cunt Depth of Player is calcnumber;
 			if Cunt Depth of Player is 0: [no Cunt at all!]
-				now Cunt Count of Player is 0;
+				remove womanhood from Player;
 			else: [Cunt present]
 				now Cunt Count of Player is 1;
 				now Cunt Tightness of Player is 5; [tight]
 				now Clit Size of Player is 3; [average]
-				now Cock Count of Player is 0; [no pre-infection herms]
-				now Cock Length of Player is 0;
-				now Ball Size of Player is 0;
+				remove manhood from Player; [no pre-infection herms]
 			now calcnumber is -1; [resetting calcnumber for the main menu]
 		else if calcnumber is 5: [Cunt Tightness]
 			now calcnumber is -1;
@@ -8846,16 +8840,14 @@ to say gsopt_start:
 		now Cock Length of Player is 6;
 		now the Ball Size of the player is 3;
 		now Nipple Count of Player is 2;
-		now Cunt Count of Player is 0;
+		remove womanhood from Player;
 		now Breast Size of Player is 0;
 	else:		[defaults to female]
 		now Cunt Count of Player is 1;
 		now Cunt Depth of Player is 6;
 		now Cunt Tightness of Player is 4;
 		now Nipple Count of Player is 2;
-		now Cock Count of Player is 0;
-		now Cock Length of Player is 0;
-		now Ball Size of Player is 0;
+		remove manhood from Player;
 		now Breast Size of Player is 2;
 [
 	if glstart is 1:
@@ -9004,12 +8996,14 @@ to say silent_start:
 		now the Ball Size of the player is 3;
 		now Nipple Count of Player is 2;
 		now Breast Size of Player is 0;
+		remove womanhood from Player;
 	else: [defaults to female]
 		now Cunt Count of Player is 1;
 		now Cunt Depth of Player is 6;
 		now Cunt Tightness of Player is 4;
 		now Nipple Count of Player is 2;
 		now Breast Size of Player is 2;
+		remove manhood from Player;
 	if glstart is 1:
 		startgenderlockshift;
 	]

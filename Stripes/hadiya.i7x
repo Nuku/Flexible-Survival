@@ -97,7 +97,7 @@ The fuckscene of Hadiya is "[sexwithHadiya]".
 the icon of Hadiya is usually Figure of Hadiya_0_icon.
 hgsqc is a number that varies.
 
-to HadiyaIconRestore:
+a postimport rule: [bugfixing rules for players that import savegames]
 	if HP of Hadiya is 11 or HP of Hadiya is 12 or HP of Hadiya >= 61:
 		now the icon of Hadiya is Figure of Hadiya_icon;
 

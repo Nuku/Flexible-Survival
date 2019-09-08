@@ -1221,8 +1221,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is gryphoncomforted;
 		-- "GryphonessKnowpreg":
 			now NumberVarValue entry is GryphonessKnowpreg;
-		-- "GryphPlotTracking":
-			now NumberVarValue entry is GryphPlotTracking;
 		-- "gsd_encounters":
 			now NumberVarValue entry is gsd_encounters;
 		-- "gsd_pet":
@@ -2455,8 +2453,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is shadowy;
 		-- "SharkFountainCounter":
 			now NumberVarValue entry is SharkFountainCounter;
-		-- "shiftable":
-			now NumberVarValue entry is shiftable;
 		-- "sierramem":
 			now NumberVarValue entry is sierramem;
 		-- "SilverToken":
@@ -3775,6 +3771,8 @@ to VariableTextLoad:
 		say "Restoring Texts...";
 		read File of TextSave into the Table of GameTexts;
 		repeat with x running from 1 to the number of filled rows in the Table of GameTexts:
+			if there is no TextVarValue in row x of the Table of GameTexts:
+				next;
 			choose row x in the Table of GameTexts;
 			if debugactive is 1:
 				say "Restoring text [TextVarName entry].";
@@ -4015,6 +4013,8 @@ to VariableNumberLoad:
 		say "Restoring Numbers...";
 		read File of NumberSave into the Table of GameNumbers;
 		repeat with x running from 1 to the number of filled rows in the Table of GameNumbers:
+			if there is no numberVarValue in row x of the Table of GameNumbers:
+				next;
 			choose row x in the Table of GameNumbers;
 			if debugactive is 1:
 				say "Restoring Number [NumberVarName entry].";
@@ -4909,8 +4909,6 @@ to VariableNumberLoad:
 					now gryphoncomforted is numberVarValue entry;
 				-- "GryphonessKnowpreg":
 					now GryphonessKnowpreg is numberVarValue entry;
-				-- "GryphPlotTracking":
-					now GryphPlotTracking is numberVarValue entry;
 				-- "gsd_encounters":
 					now gsd_encounters is numberVarValue entry;
 				-- "gsd_pet":
@@ -6142,7 +6140,7 @@ to VariableNumberLoad:
 				-- "SharkFountainCounter":
 					now SharkFountainCounter is numberVarValue entry;
 				-- "shiftable":
-					now shiftable is numberVarValue entry;
+					now Resolution of Secure Area is numberVarValue entry;
 				-- "sierramem":
 					now sierramem is numberVarValue entry;
 				-- "SilverToken":

@@ -783,14 +783,19 @@ to PlayerRestore:
 		choose row 1 in the Table of PlayerData;
 		now Skin of Player is skin entry;
 		now SkinName of Player is SkinName entry;
+		now SkinSpeciesName of Player is GetSpeciesName from SkinName entry;
 		now Cock of Player is cock entry;
 		now CockName of Player is CockName entry;
+		now CockSpeciesName of Player is GetSpeciesName from CockName entry;
 		now Face of Player is face entry;
 		now FaceName of Player is FaceName entry;
+		now FaceSpeciesName of Player is GetSpeciesName from FaceName entry;
 		now tail of Player is tail entry;
 		now TailName of Player is TailName entry;
+		now TailSpeciesName of Player is GetSpeciesName from TailName entry;
 		now Body of Player is body entry;
 		now BodyName of Player is BodyName entry;
+		now BodySpeciesName of Player is GetSpeciesName from BodyName entry;
 		now scent of Player is scent entry;
 		now Cock Size Desc of Player is Cock Size Desc entry;
 		now Cunt Size Desc of Player is Cunt Size Desc entry;
@@ -1072,18 +1077,9 @@ to NoteRestore:
 	else:
 		say "No Note Save File Found!";
 
-to CharacterIconRestore:
-	say "Restoring Character Icons...";
-	AlexIconRestore;
-	HadiyaIconRestore;
-	LeonardIconRestore;
-	RodAndRondaIconRestore;
-	SamIconRestore;
-	ChrisIconRestore;
-	DemonBruteIconRestore;
-	DiegoIconRestore;
-	JayIconRestore;
-	DrMattIconRestore;
+to RunPostImportRules:
+	say "Running Post Import Rules...";
+	follow the postimport rules;
 
 Section 2 - Trixie
 
@@ -1138,7 +1134,7 @@ to say ProgressionImport:
 	BeastRestore;
 	NoteRestore;
 	VariableLoad;
-	CharacterIconRestore;
+	RunPostImportRules;
 
 Table of GameCharacterIDs (continued)
 object	name

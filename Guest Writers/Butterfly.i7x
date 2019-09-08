@@ -285,9 +285,7 @@ To say butterfly attack:
 				say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [if Cock Count of Player > 1][one of]cocks[or]lengths[or]shafts[or]poles[at random] as they begin to shrink. They dwindle[else][one of]cock[or]man meat[or]shaft[or]pole[at random] as it begins to shrink. It dwindles[end if] in size, becoming [descr]. ";
 				if Cock Length of Player < 1 or Ball Size of Player < 1:
 					say "You barely have time to give a whimper as you cease to be a male.";
-					now Cock Count of Player is 0;
-					now Cock Length of Player is 0;
-					now Ball Size of Player is 0;
+					remove manhood from Player;
 				if Cock Count of Player > 1 and a random chance of 1 in 3 succeeds:
 					say "Sudden pleasure runs through one of your doomed [Cock of Player] cocks as it sprays the last of its seed, dwindling down to nothing at all and vanishing, leaving only the powerful orgasm to remember it by.";
 					decrease Cock Count of Player by 1;
@@ -305,7 +303,7 @@ To say butterfly attack:
 				say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [if Cunt Count of Player > 1][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] as they begin to shrink. They[else][one of]cunt[or]pussy[or]vagina[or]cleft[at random] as it begins to shrink. It[end if] dwindles in size, becoming [descr]. ";
 				if Cunt Depth of Player < 1 or Cunt Tightness of Player < 1:
 					say "With a sickening noise, you cease to be female all together.";
-					now Cunt Count of Player is 0;
+					remove womanhood from Player;
 				if Cunt Count of Player > 1 and a random chance of 1 in 3 succeeds:
 					say "An odd wet noise has you peeking in time to see one of your [one of]cunts[or]pussies[at random] have vanished!";
 					decrease Cunt Count of Player by 1;
@@ -436,7 +434,7 @@ When Play begins:
 	[ Text or say command used when Monster is defeated.]
 	now victory entry is "[butterfly attack]";
 	now desc entry is "[mongendernum 4]The one hovering before you is a female with richly colored translucent wings and pale velvet skin. Her attractive face is framed by wavy blonde hair down to her chin. Beneath her undulating fringe two large [one of]brilliant[or]vibrant[or]vivid[or]and rich[at random] lime green eyes follow your movements. Two long antennae poke out the top of her head. [ButterflyAttire] [if ButterflyBabyGestation is 3]Small droplets of milk twinkle on the ducts of her nipples. [end if][if ButterflyRaped is 1]One of her hands moves protectively to cover her vagina as she recognizes you. [end if][ButterflyTummy] For a moment her mouth opens and what appears to be a long wiry proboscis uncoils out and then retracts back in almost faster than your eyes can see. Her back blends into a plump yellow and black striped abdomen. [if ButterflyRaped > 0 or inheat is true]She is carrying an ominous looking little black bag in her hand. [end if][if ButterflyRaped is 1]She glares at you [one of]angrily[or]furiously[or]enraged[or]fuming[or]seething in anger[or]with contempt[at random] flapping her wings erratically[else if ButterflyLikesYou is True and ButterflyLove is False]She smiles and looks at you [one of]shyly[or]bashfully[or]sheepishly[or]blushing slightly[at random][else if ButterflyLove is True]She looks at you [one of]adoringly[or]lovingly[or]passionately[or]devotedly[at random][else if ButterflyRevenge is True]She looks at you remarkably calmly considering your previous encounter[else]She looks at you [one of]apprehensively[or]cautiously[or]anxiously[or]nervously[at random][end if][if ButterflyRaped > 0]. Something tells you that submitting to her would be bad for your health[end if]."; [ Description of the creature when you encounter it.]
-	now face entry is "a pair of [one of]brilliant[or]vibrant[or]vivid[at random] green eyes, two antennae on top of your head, and a streamlined"; [ Face description, format as "Your face is (your text)"]
+	now face entry is "streamlined. It has a pair of [one of]brilliant[or]vibrant[or]vivid[at random] green eyes and two antennae on top of your head"; [ Face description, format as "Your face is (your text)"]
 	now body entry is "delicate and fragile, streamlined for flight. Two thin, bright and colorful wings stick out of your back. They aren't strong enough to allow you to fly, but with some effort you find you are able to hover without needing to walk"; [ Body Description, format as "Your Body is (your text)"]
 	now skin entry is "velvet and silky"; [ skin Description, format as "You have (your text) skin"]
 	now tail entry is "You have a large, round abdomen covered in yellow and black stripes."; [ Tail description, write a whole Sentence or leave blank. ]
@@ -631,7 +629,7 @@ ButterflyBaby has a text called TailName. TailName is usually "Human".
 
 To impregnatebutterfly:
 	let Impregnator be a person;
-	if HeadName of Player is "" or TorsoName of Player is "" or BackName of Player is "" or ArmsName of Player is "" or LegsName of Player is "" or AssName of Player is "" or TailName of Player is "": [player doesn't have all new type parts]
+	if Player is not FullyNewTypeInfected: [player doesn't have all new type parts]
 		now HeadName of Impregnator is FaceName of Player;
 		now TorsoName of Impregnator is BodyName of Player;
 		now BackName of Impregnator is BodyName of Player;

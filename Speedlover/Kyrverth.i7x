@@ -29,18 +29,15 @@ Add first ending, add cock/wing/horns tf to description (for later inclusion), a
 [Don't use any of these refs, they are not owned by FS.]
 
 
-KyrverthRoomConnection is a number that varies.[@Tag:NotSaved]
-an everyturn rule: [bugfixing rules for players that import savegames]
+a postimport rule: [bugfixing rules for players that import savegames]
 	if KyrverthStage > 0 and SilverToken is 0 and PlayerFriended of Kyrverth is false and Resolution of Jewel Heist is 0 and Jewel Heist is resolved: [player on the quest, hasn't got the token on them and hasn't handed it in either - so Jewel Heist should be unresolved]
 		now Jewel Heist is not resolved;
 	if KyrverthStage > 0 and Jewel Heist is inactive:
 		now Jewel Heist is active;
 	if Resolution of Strange Sighting is 0 and Strange Sighting is active:
 		now Strange Sighting is not resolved;
-	if Strange Sighting is resolved and Resolution of Strange Sighting is 1 and KyrverthRoomConnection is 0: [event resolved the right way, room not connected yet]
-		change the South exit of Overgrown Street to Dragons Den;
-		change the North exit of Dragons Den to Overgrown Street;
-		now KyrverthRoomConnection is 1; [make sure that it connects the room only once]
+	if Strange Sighting is resolved and Resolution of Strange Sighting is 2: [event resolved the right way, room not connected yet]
+		connect Dragons Den;
 
 Section 1 - Basic Setup
 
@@ -126,6 +123,10 @@ to say DragonsDenDesc:
 			say "     In the center of the room the large nest he made has been broken and remade. Now it is a heap of chainmail, and dragon [if KyrverthQuestHairGiven is true]hair[else]scales[end if] that he curls around at night, safe in the knowledge it cannot be taken without waking him. Bits of chainmail and dragon [if KyrverthQuestHairGiven is true]hair[else]scales[end if] are revealed when Kyrverth wakes, and glint in the light shining through the vault door, making patterns on the walls.";
 	else if KyrverthStage >= 4: [Stages 4, 5, or 6.]
 		say "     This pile of rubble is all that remains of the former bank. Larger pieces have been pushed out to the edge to create a nest of sorts, and in the center the former vault has had its walls split and pushed out in all directions, then flattened down to be the new floor. A hoard is in the center, containing all that is precious to Kyrverth, but you rarely see it as he spends most of his time curled around the former vault to protect it.";
+
+to connect Dragons Den:
+	change the South exit of Overgrown Street to Dragons Den;
+	change the North exit of Dragons Den to Overgrown Street;
 
 to say KyrverthDesc:
 	if KyrverthStage is 0:
@@ -623,8 +624,7 @@ Instead of resolving a Strange Sighting: [Very first meeting with the dragon]
 		increase carried of soda by 1;
 		WaitLineBreak;
 		now PlayerMet of Kyrverth is true;
-		change the South exit of Overgrown Street to Dragons Den;
-		change the North exit of Dragons Den to Overgrown Street;
+		connect Dragons Den;
 		move player to Grey Abbey Library;
 		increase score by 2;
 		now KyrverthLockoutTimer is (turns + 4);

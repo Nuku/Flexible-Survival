@@ -107,7 +107,7 @@ Instead of resolving a Paleontology Professor:
 					challenge "Wereraptor";
 					raptorrelease;
 					if fightoutcome >= 10 and fightoutcome <= 19:
-						say "     Managing to drive off the raptor creature, you take a moment to survey the office. I has been destroyed by the clawed menace trapped inside. The furniture is largely destroyed, the walls and door covered in slashes and everything a mess. Among the wreckage, there's a shattered display case with a large bone lying among the shards. Speaking of the door though, you are confused as you examine it, seeing the nails barring it were driven in from the inside as if the creature sealed itself away. Your search of the office does provide one small reward as you find a bag of stale chips in one of the drawers.";
+						say "     Managing to drive off the raptor creature, you take a moment to survey the office. It has been destroyed by the clawed menace trapped inside. The furniture is largely destroyed, the walls and door covered in slashes and everything a mess. Among the wreckage, there's a shattered display case with a large bone lying among the shards. Speaking of the door though, you are confused as you examine it, seeing the nails barring it were driven in from the inside as if the creature sealed itself away. Your search of the office does provide one small reward as you find a bag of stale chips in one of the drawers.";
 						now UtahGender is 1;
 						increase score by 25;
 						increment carried of chips;
@@ -137,7 +137,7 @@ Instead of resolving a Paleontology Professor:
 					challenge "Wereraptor";
 					raptorrelease;
 					if fightoutcome >= 10 and fightoutcome <= 19:
-						say "     Managing to drive off the raptor creature, you take a moment to survey the office. I has been destroyed by the clawed menace trapped inside. The furniture is largely destroyed, the walls and door covered in slashes and everything a mess. Among the wreckage, there's a shattered display case with a large bone lying among the shards. Speaking of the door though, you are confused as you examine it, seeing the nails barring it were driven in from the inside as if the creature sealed itself away. Your search of the office does provide one small reward as you find a bag of stale chips in one of the drawers.";
+						say "     Managing to drive off the raptor creature, you take a moment to survey the office. It has been destroyed by the clawed menace trapped inside. The furniture is largely destroyed, the walls and door covered in slashes and everything a mess. Among the wreckage, there's a shattered display case with a large bone lying among the shards. Speaking of the door though, you are confused as you examine it, seeing the nails barring it were driven in from the inside as if the creature sealed itself away. Your search of the office does provide one small reward as you find a bag of stale chips in one of the drawers.";
 						now UtahGender is 2;
 						increase score by 25;
 						increment carried of chips;
