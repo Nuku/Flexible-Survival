@@ -292,7 +292,7 @@ Instead of resolving a Lone Survivor:
 			else:
 				say "     Throwing yourself against the door, you try and try to break in, but it resists your feeble efforts without any trouble.";
 		WaitLineBreak;
-		project the figure of Brennan_clothed_icon;
+		project the Figure of AlphaWolf_naked_icon;
 		say "     Suddenly the sound of a wolf howling startles you, then another and another right after. And close too! You rush to the nearest window and glance out, seeing a pair of feral wolves dash across the empty, trash-filled street. They're hunting something or someone! Pressing your head against the windowpane to glance along the alleyway, you spot a person running from them - it is [if BrennanRelationship is 3]your friend, [end if]Brennan[if BrennanRelationship > 10], the human survivor you clashed with earlier[end if]. He clearly is in trouble as he seems to have lost his trusty baseball bat. Then a third wolf steps out from around the corner at the end of the alley - this one anthro in body shape, muscular and with a shaggy coat of black fur. He awaits the human survivor with bared teeth, eager to take him in a pincer movement with his chasing pack-mates.";
 		say "     [bold type]This doesn't look good for Brennan. Do you come to his assistance?[roman type][line break]";
 		LineBreak;

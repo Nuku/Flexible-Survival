@@ -15,6 +15,7 @@ an everyturn rule: [bugfixing rules for players that import savegames]
 				now MonsterID is y;
 				now area entry is "Nowhere";
 				break;
+		now AlexandraInfectionArea is 1;
 
 Section 1 - Creature Responses		[Note: Combat related portions deal with the Doberwoman Cop.]
 

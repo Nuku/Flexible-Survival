@@ -68,14 +68,228 @@ instead of sniffing Kitsune:
 
 instead of conversing the Kitsune:
 	if Kitsunetalk is 0: [first time you encounter the NPC text]
-		say "     'I've been waiting for you, little mortal. I'm so glad you've finally decided to come and claim your reward. The question next, however, is what will you claim exactly?' Kitsune looks at you with a predatory smile before winking knowingly in your direction. You swallow thickly as you wonder that yourself.";
-		say "     'You've done such a wonderful job at entertaining me that I think I'll stick around on this world to enjoy it some more. If you just so happen to come by every once in a while to visit, then that would make things all the better for both of us, don't you think?' Kitsune winks at you before licking his lips playfully.";
+		say "     'I've been waiting for you, little mortal. I'm so glad that you've finally decided to come and claim your reward. The question next, however, is what will you claim exactly?' Kitsune looks at you with a predatory smile before winking knowingly in your direction. You swallow thickly as you wonder that yourself.";
+		say "     'You've done such a wonderful job at entertaining me that I think I'll stick around on this world to enjoy it some more. If you just so happen to come by every once in a while to visit, then that would make things all the better for the both of us, don't you think?' Kitsune winks at you before licking his lips playfully.";
 		increase Kitsunetalk by 1;
 	else if Kitsunetalk is 1:
-		say "     [one of]'Hello little mortal, come to visit me today?'[or]'Believe it or not, I was actually waiting for you.'[or]'I keep wondering, but I'm just not sure of how you'd turn out if you became a kitsune.'[or]'This world is such a mess - always has been and will be, in my opinion, but you seem to be trying to make it a better place.'[or]'I thank you for the time you have given to me by associating with me.'[or]'This world... or the other... which one indeed.'[or]'All the world is made of but fools, animals, and men... and now, sadly enough, a mixture of all three.'[or]'Should I try and play some music for you? I think I have a flute around here... somewhere.'[or]'Have you ever heard of the Japanese legend about Inari? He's a rice deity in Asian lore, but really he's more of a grandfather figure to us kitsunes.'[or]'For every one hundred years that a kitsune ages he or she gains an additional tail. Care to guess how old I am? Hint: I'm not one thousand, yet.'[or]'Back home there aren't really that many of us kitsunes. Perhaps you would like to change that by becoming one of our numbers?' Kitsune says with a sly smile on his devious face.[or]'Falderal and fiddle dee dee... what a droll thing the human world can be sometimes. Will you make it more interesting for me, little one?'[at random]";
+		say "[KitsuneTalkMenu]";
+
+to say KitsuneTalkMenu:
+	say "[line break]";
+	say "The Kitsune smiles upon seeing your approach, raising a paw in greeting. 'Come to talk? What do you wish to talk about?'";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	[choose a blank row in table of fucking options;
+	now title entry is "Knowledge of the City";
+	now sortorder entry is 1;
+	now description entry is "Has he got anything interesting to tell you about the city";]
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "His impression of you";
+	now sortorder entry is 2;
+	now description entry is "What is the Kitsune's opinion of you";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				[if (nam is "Knowledge of the City"):
+					say "[KitsuneTalk1]";]
+				if (nam is "His impression of you"):
+					say "[KitsuneTalk2]";
+				WaitLineBreak;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You stand up, indicating an end to the conversation. The Kitsune smiles at you, gracefully fanning his tail behind him.";
+			WaitLineBreak;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
+
+[to say KitsuneTalk1:
+	say "     'You want me to tell you about the city? Aren't you the one gallivanting about?' the Kitsune responds before relenting. 'Fine. I suppose I haven't been entirely idle, and I may have some insight that could help you. But revealing all would be dull, so don't expect me to tell you everything. Hmm... what to tell you...";
+	say "     [KitsuneLocationComment][KitsuneGroupComment][KitsuneIndividualComment]";]
+
+to say KitsuneTalk2:
+	say "     'Aren't you self-centered?' the Kitsune chuckles before looking at you properly. 'Looking for my approval, or are you hoping to show off? Stand still and let me have a look at both your outward as well as inward form. After all, this seems like something that it is worth being thorough for. [if player is not naked]Remove your clothes for me please. I don't know why you lot insist on wearing anything beyond a collar or jewelry anyway. It just gets in the way.' Complying, you quickly strip and give the vulpine an unimpeded view of your naked body, turning when directed. [else]I must commend you on how liberated you are. Most of your kind seem to try and hide their bodies beneath cloth and armor, so it is refreshing to find someone like you who understands that it just gets in the way when you want to 'frolic'. You unabashedly display your naked form to the vulpine, turning when directed. [end if]'Hmm. Very nice. I haven't seen a soul quite like this for a while... Alright, what did you want to know? My impression of your physical state, or your mental condition?'";
+	say "     [bold type]Would you rather his opinion on your form or your mind? (Only Form available at the moment, sorry.)[roman type][line break]"; [Mind yet to be added]
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Form. What is his impression on your outward appearance?";
+	[say "     ([link]N[as]n[end link]) - Mind. You are curious what he can tell about your psyche.";]
+	if Player consents: [Physical]
+		say "     [KitsuneGenderComment] [KitsuneGenitalComment]";
+		say "     [KitsuneSpeciesComment] [KitsuneSizeComment]";
+	[else: [Mental]
+		say "     [KitsuneHHMLComment] [KitsuneLevelComment]";
+		say "     [KitsuneFeatComment]";]
+	[WaitLineBreak;
+	say "     [KitsuneClothesComment] [KitsuneWeaponComment] [KitsunePetComment]";]
 
 
-Section 3 - Kitsune requests
+Section 3 - Kitsune Comments
+
+to say KitsuneGenderComment: [Comments on player's gender]
+	if player is herm and breast size of Player is 0: [Male Herm]
+		say "     'I see that you bear the organs of both man and woman. I would be curious to know whether you were born as such, or inherited them from the ongoing catastrophe. One advantage that I hope that you have taken advantage of is the improved ability to penetrate while being penetrated. If you and your partners are flexible enough, you might even be able to have [italic type]all [roman type]of your holes filled at once. I am however noticing a flat chest though, which I must say has its own appeal even though it means that there is less of you to caress. [if player is mpreg_ok]I'm also sensing that you have a little secret. Something to do with an anal birthing chamber perhaps? [end if]";
+	else if player is herm and breast size of Player > 0: [Herm]
+		say "     'I see that you bear the organs of both man and woman. I would be curious to know whether you were born as such, or inherited them from the ongoing catastrophe. One advantage that I hope that you have taken advantage of is the improved ability to penetrate while being penetrated. If you and your partners are flexible enough, you might even be able to have [italic type]all [roman type]of your holes filled at once. I also like that you have breasts. Gives me more to caress and stroke while we speak of sweet nothings. [if player is mpreg_ok]I'm also sensing that you have a little secret. Something to do with an anal birthing chamber perhaps? [end if]";
+	else if player is male and breast size of Player is 0: [Male]
+		say "     'Oh my. Such a handsome man you are. If you've always had these looks then I'm sure that you were greatly admired by women, and probably men too. Otherwise, the outbreak in the city has really been kind to you. It would be selfish of you not to want to grace as many people with your presence, some more closely than others. Myself included, I might add[if player is mpreg_ok]. I'm also sensing that you have a little secret. Something that males don't normally have the ability to do[end if]. ";
+	else if player is male and breast size of Player > 0: [Dick Girl]
+		say "     'I don't know where to look. Your breast or your cock. They're both calling to me, and I don't know which I like more. I would be curious to know whether you have always been gifted so, or whether the ongoing catastrophe granted you such a pleasing body. All the fun of being able to penetrate someone while having them caress the curves of your chest. [if player is mpreg_ok]I'm also sensing that you have a little secret. Something to do with an anal birthing chamber perhaps? [end if]";
+	else if player is female and breast size of Player is 0: [Cuntboy]
+		say "     'I hope that you've been making mischief with that flat chest and the slit between your legs. Trick people into thinking that you bear the gifts of manhood, then shock them when you reveal that treasure between your legs. Having a flat chest has its own appeal, but it does mean that there is less of you to run my hands over. [if player is mpreg_ok]I'm also sensing that you have a little secret. Something to do with an anal birthing chamber perhaps? [end if]";
+	else if player is female and breast size of Player > 0: [Female]
+		say "     'Aren't you just a delight to sex-starved eyes, my dear. Have you had problems with men and women following you home and wanting to get to know you? I'm sure that the residents of the city have been noticing you too. I wouldn't mind being a little closer to you, running my hands over your breasts, then across your tummy before sneaking down towards your cleft for just a moment. [if player is mpreg_ok]I'm also sensing that you have a little secret. Something to do with an anal birthing chamber perhaps? [end if] ";
+	else: [Neuter]
+		say "     Oh. Well, you're a bit boring. Why are you so determined to miss out on the fun that you would disfigure yourself? Or was this forced upon you? If so, I'm sure there must be some sort of drug that can fix you one way or another. Pills? Potions? The loving touch of an over-enthusiastic lover to heal you of your deformity? Please excuse my rudeness, but your lack of genitals causes a sense of unease in me. [if player is mpreg_ok]I'm also sensing that you have a little secret. Something to do with an anal birthing chamber perhaps? [end if]";
+
+to say KitsuneGenitalComment: [Comments on player's genitals]
+	if cock length of Player is 0: [No penis]
+		say "Focusing on your groin, I can plainly tell you that you don't appear to have a penis. Were you aware of this? I certainly hope so. ";
+	else if cock length of Player < 5: [Small penis]
+		say "Your cock isn't even half the size of mine, but I get the impression that you know how to use it. Technique is more important than size[if CockName of Player is listed in infections of KnottedCockList]. I'm loving the knot as well. It really improves a penis[end if]. ";
+	else if cock length of Player < 8: [Average penis]
+		say "That looks to be a pretty normal sized cock. Not particularly large or small, though the average in the city is probably a bit bigger[if CockName of Player is listed in infections of KnottedCockList]. I'm loving the knot as well. It really improves a penis[end if]. ";
+	else if cock length of Player < 15: [Large penis]
+		say "That is an impressive cock you have there. Could really fill a person up, and there are plenty of candidates for such a filling[if CockName of Player is listed in infections of KnottedCockList]. The knot is an added bonus, just to make sure your partner stays where you want them[end if]. ";
+	else if cock length of Player < 21: [Huge penis]
+		say "Goodness. You're cock is nearly twice the size of mine! That's going to be more than a mouthful when that goes in, or the equivalent of any other orifice that you have offered to you[if CockName of Player is listed in infections of KnottedCockList]. Also, the knot will nicely stretch whomever you plug it into, ensuring that they won't forget being with you[end if]. ";
+	else: [Monstrous penis]
+		say "Watch where you swing that thing. You could definitely call that thing a spear, and I hope that you give it a regular polish, preferably with help[if CockName of Player is listed in infections of KnottedCockList]. You might want to warn your partners about the effect your knot may have on them though[end if]. ";
+	if Ball Size of Player is 0 or CockName of Player is listed in infections of InternalCockList: [No balls]
+		say "Either you don't have any balls, or you're hiding them from me. Rest assured, I will find out if you are hiding them from me. ";
+	else if Ball Size of Player is 1: [acorn-sized]
+		say "Ooh. Aren't your balls cute. They don't look like they'll whip up much batter, but I imagine that they'll sufficiently complete the cake. ";
+	else if Ball Size of Player is 2: [Dove egg size]
+		say "How delightfully normal your balls are. I'm glad to see that you haven't gone too wild with the growth hormones that I've seen your kind using. ";
+	else if Ball Size of Player is 3: [Chicken egg size]
+		say "Your balls are on the large side, aren't they? All the better for producing semen and letting your partner know when you have bottomed out. ";
+	else if Ball Size of Player is 4: [Goose egg size]
+		say "Your balls look like they would be noticeably heavy. Don't close your legs too quickly or you'll hurt yourself, though I imagine that they give you a lot of cum to plaster people with. ";
+	else if Ball Size of Player is 5: [Ostrich egg size]
+		say "Are you sure that your balls need to be that large? They make quite a nice target I would imagine, and you might then have trouble walking. On the up side, you can probably admire the bulge of your partner's tummy from your seed. ";
+	else if CockName of Player is "Tanuki":
+		say "From the look of it, you have a sleeping bag between your legs, along with the facilities to feed a small starving nation. You Tanukis really do love your balls. ";
+	else if Ball Size of Player is 6: [BasketBall Size]
+		say "I think that you have gotten carried away with growing your balls. Beyond being able to do a one man bukkake, there can't possibly be any advantage to having them that size, can there? ";
+	else: [Beach Ball Size]
+		say "Your balls look silly. I have no idea how you even walk. Do you perhaps bounce along on them before bathing in your own cum from the stimulation? ";
+	if cunt depth of Player is 0: [No vagina]
+		say "Unless I'm mistaken, you don't seem to have a pussy. Such a shame, I would have liked to pet it. ";
+	else if cunt depth of Player < 5: [Small vagina]
+		say "Your partners must love you, considering how tight I imagine you are, though I doubt they can go particularly deep. ";
+	else if cunt depth of Player < 8: [Average vagina]
+		say "I think that you should be able to fit most normal cocks in your pussy, though you might want to be careful with the extremely well-endowed. ";
+	else if cunt depth of Player < 15: [Large vagina]
+		say "Making sure you can take any cock you want in your pussy? Unless they are obscenely large, I think you've achieved your aim. ";
+	else if cunt depth of Player < 21: [Huge vagina]
+		say "Do you think that perhaps you've gone too far? There shouldn't be any cock that you can't fit in your pussy. ";
+	else: [Monstrous vagina]
+		say "I think by this point it isn't so much about what cocks you can fit in your pussy, but rather whether you can fit a person in there. I hope you have good muscle control in your vaginal walls. ";
+	if breast size of Player is 0: [Flat-chested]
+		say "Some might think that the absence of breasts detracts from your image. Not me. It has its own appeal and means that I can feel your heartbeat more easily.'";
+	else if breast size of Player < 3: [A or B]
+		say "I think that your breasts are very pretty. They compliment your appearance and give enough for a discerning fox to have a pleasurable squeeze.'";
+	else if breast size of Player < 5: [C or D]
+		say "Now those are some nice breasts if ever I saw some. Enough to give someone a comfy head rest while snuggling or snoozing, but small enough that your life can go on without much difficulty.'";
+	else: [E and upwards (Maybe DD. I don't know breast sizing)]
+		say "Those are quite considerably sized breasts. I think that you could almost use them as weapons, especially given the current state of the city.'";
+
+to say KitsuneSpeciesComment: [Comments on player's species]
+	if player is not pure:
+		say "     'Couldn't just settle on one infection could you? Had to try multiple, and now you don't really count as anything in particular beyond being chimeric. I suppose that I shouldn't discount the possibility that this was forced upon you though. If it pleases you, I could make you into quite the attractive kitsune like myself. Fluffy fur, multiple tails, dashing figure... what's not to like? That was a rhetorical question, just in case you were going to answer. I like myself and that's the main thing, just like it is important that you are content with whatever form you take. ";
+	else if headname of Player is "Kitsune":
+		say "     'Now there's an attractive form. I must compliment you on your impeccable choice in appearance, and whomever it was that gave you such a fine figure deserves a reward. Such lush fur and beautiful coloration really brings out your eyes. If I were you, I would be careful to stay looking like this while adventuring around the city and perhaps convincing others to consider it as a look. Because to be honest, who wouldn't look good as a multi-tailed fox? However with such a form comes responsibilities such as mischief and trickery, though not of the malicious kind, we aren't monsters. Perhaps you can tell me about your activities when you have the time. Preferably in [italic type]great detail[roman type]. ";
+	else if headname of Player is "Tanuki":
+		say "     'The intention seems to be there, but look at me. A kitsune. Now look at you. A tanuki. While I'm sure that you can be just as mischievous, don't you think that you would look better doing so with multiple tails and a dashing figure rather than waddling along with just one large tail? Well, I suppose the Tanuki in the park wins this round, but don't expect me to give up on you. I'll have you showing off luxuriant fur and the rakish smile of a fox eventually. Criticism aside, your form suits you admirably, and as long as you uphold the tradition of trickery, then I won't have much to complain about. ";
+	else if headname of Player is "Jackalman":
+		say "     'Came out on top over the shopkeeper in the mall, did you? I would imagine that you had help, and I think I know who from... Be careful of Nermine. She has access to allies that she shouldn't have, and I do not know her end goal. But you weren't asking about her, so back to you. I must say that the fur looks sleek and has its own inherent warmth, and such a lustrous black. The ears are a little large for my taste, but I would imagine that they allow you to hear things a lot more effectively. I also appreciate the toned body that it has given you, not too bulgy, but also giving one something firm to caress or hold while you are being intimate. ";
+	else if headname of Player is "Jackalboy":
+		say "     'Under the sway of the shopkeeper, are you? Be careful of her. She has access to allies that she shouldn't have, and I do not know her end goal. But you weren't asking about her, so back to you. I must say that the fur looks sleek and has its own inherent warmth, and such a lustrous black. The ears are a little large for my taste, but I would imagine that they allow you to hear things a lot more effectively. I also look forward to seeing how your body feels. There must be muscles somewhere, but you look so soft, just waiting for my paws to caress you. ";
+	else if headname of Player is "Nightmare":
+		say "     'Your form belies more power than one would expect from a horse. You also look a lot more... malevolent. Therefore, I deduce that you have taken over the Stables Hotel and are the new 'Stable Master'. Perhaps you should have considered other options for defeating him before you became a manifestation of nightmares. Between bored deities, practitioners of magic, and the few remaining scientists in the city, someone might have had more ideas on overcoming him. But I'm letting my prejudices control me. If you are happy with how you look, then who am I to judge? To be honest, I'm a little afraid of you. But only a little. ";
+	else if headname of Player is listed in infections of TaurList:
+		say "     'Ooh, you're tauric. How interesting. Has this change encouraged an interest in archery, or has it given you an obsession with pretending to be rider and steed, swinging your weapon at your foes? I jest, but you have to admit that it sounds pretty fun. Being a taur must give you all sorts of new possibilities. Increased speed, height advantage over many others, the ability to strap people beneath you [if player is male]so you can fuck them [end if]while you run... Or maybe you enjoy having them atop you, whether it is in the bedroom or galloping through the city. Explore these new possibilities. Take my word, it's fun. ";
+	else if headname of Player is listed in infections of LatexList:
+		say "     'I think that you're taking [']kinky['] to the next level by being made completely from latex, though I would imagine that it makes cleanup considerably easier after you've had your fun. Do you creak or squelch when you move as latex seems to do when worn as clothing, or does it just move out of the way, allowing you to move stealthily and avoid attracting the attention of predatory latex enthusiasts? While it isn't a form I would want to have myself, I can appreciate your adventurousness choosing it. So many of the city's residents seem to be boringly furry canines... ";
+	else if headname of Player is listed in infections of FoodList:
+		say "     'You're taking the capabilities of the nanites a little too far, don't you think? You're literally food. Gazelles might get hunted by lions, deer by wolves, and mice by hawks, but I think that even the prey might want a piece of you. Do you provide your own lubrication with syrup or perhaps creampies are a little more literal for you? The craftsmanship of your form is exquisite but surely there is the constant temptation to just have a lick to see what you taste like, possibly even a bite. Luckily the nanites will repair you so should you succumb to your curiosity... ";
+	else if headname of Player is listed in infections of MachineList:
+		say "     'You seem to have taken on a more mechanical appearance, and I'm not sure whether I would consider you a cyborg now considering your severely reduced organic matter. I'm a little saddened by this to be honest. Your world places greater importance on engineering marvels and less on the wonders of nature that are already surrounding you. I will however admit that you're less machine as much as inorganic life, so you do have some redeeming factors. Be careful of people offering you upgrades. You don't want to sacrifice autonomy for such tawdry features such as flashy lights or larger genitals. ";
+	else if headname of Player is listed in infections of SlimeList:
+		say "     Aren't you the cutest jelly I've ever seen. Or do you prefer to be called a pudding, flan, or slime? Whatever you call yourself, you look soft and wobbly, desirable traits in the current climate of the city. Do you have a flavor, or are you merely gelatinous? Sorry, my curiosity is overwhelming my manners. Your form looks like it would make squeezing through small gaps a lot easier, though you probably also need to be careful of gratings and drains. I won't even pretend to understand how your insides work, but you look happy and moderately healthy, so I shall leave it at that. ";
+	else if headname of Player is listed in infections of HumanList:
+		say "     'Well, aren't you the adventurous one? With all the beasts roaming the city and you still look human. Is there a particular reason behind this? A strong fondness for such a mundane appearance, or perhaps you haven't found the form which you desire? Might I suggest a certain fluffy vulpine form with the potential to gain an ever increasing number of tails as you age? I'd be more than willing to assist you. Though if you are sentimental about being human, I must say that I admire your willpower when surrounded by so much temptation. ";
+	else if headname of Player is listed in infections of AmphibianList:
+		say "     'You look... damp. I'm glad to see that you have found a source of moisture within the city to keep yourself well. I won't ask what it is, but I have a few ideas... I would imagine that there are some advantages to being perpetually slick such as always being lubed up, being able to fit through tight gaps, and going down slides would be immense fun with how you fast you could go. Equally, there must be disadvantages such as slimy handshakes and the fear of mold. No matter how you look, there are pros and cons. Except for me. I'm perfect. ";
+	else if headname of Player is listed in infections of AquaticList:
+		say "     'You look like a fish out of water, though apparently one with lungs. It would be unfortunate if you asphyxiated after all. Your flesh is quite eye-catching and seems to retain just enough moisture to remain shiny, almost as if you've just finished a shower in preparation for kinky times. The shimmer is mildly distracting, a feature that I hope you are taking advantage of. Make sure you are careful of any bigger fish in the figurative pond, or cats. No one is allowed to hurt my little fishy. At least, not without your permission. ";
+	else if headname of Player is listed in infections of AvianpredList:
+		say "     'I must say, your plumage looks soft, and such a regal look it gives you. Not as much as having nine tails would, but definitely a respectable image. Sharp claws to defend yourself, keen eyes to avoid missing any detail, and the mobility that your wings give you is something that even I'm a bit jealous of. I bet rodents are glad that you aren't hunting them because you would surely catch them with those looks. Or pitch, if that's your preference. Make sure you avoid patrolling aircraft as they are very confrontational with those trying to escape the city. ";
+	else if headname of Player is listed in infections of AvianList:
+		say "     'Aren't you flashy? Such resplendent plumage really dazzles the eyes. Have you considered using that against your foes? While I would imagine that it has its advantages for attracting a mate, you might also catch the eye of someone a bit more... predatory. Especially the large cats roaming the city, though more for sexual conquest than food, fortunately. Having wings would certainly help you too, for escape or to explore, just make sure you avoid patrolling aircraft as they are very confrontational with those trying to escape the city. ";
+	else if headname of Player is listed in infections of BovineList:
+		say "     'I was unaware that there were any farms nearby, or did you wander here from the plains? I jest, but with the number of wolves stalking the streets, a herbivore such as yourself is likely in a considerable amount of danger of becoming prey. Luckily, in the current situation, they are more likely to sate their lusts than their appetites, and with how you pull off the look, even I'm considering letting my instincts loose and basting you in sauce. I hope that I'm not making you uncomfortable. I wouldn't ever do something like that. At least not without your consent. ";
+	else if headname of Player is listed in infections of CanineList:
+		say "     'Who's a good [if player is male]boy[else if player is female]girl[else]doggy[end if]? Yes, it's you. Yes it's you. I'm sure I have some balls around here somewhere that you could play with if you wanted. You just have that look that makes me want to rub your tummy and maybe a bit more. Endearing eyes, soft fur, and such an expressive tail. Do you have a preference for herding sheep, hunting deer, or strengthening your bond with a companion? If so, make sure that these are your own thoughts, and not the programming of the nanites taking control of you. ";
+	else if headname of Player is listed in infections of CervineList:
+		say "     'You're slightly more adventurous with your form than I would expect from a mortal. Deer and elk are usually for the extra horny, if I might make an observation. With such muscular haunches, you must be quite the hit with the lupine community skulking around the city, though I imagine that a few other people will have also expressed interest in you. Don't be afraid to stand up for what you want. A moose with sharp hooves and hard antlers is no easy prey, even for a pack of wolves. So as long as you can mimic their strength, there will be few who can refuse your desires. ";
+	else if headname of Player is listed in infections of EquineList:
+		say "     'What a strapping steed you look. Elegant face and muscular haunches. I wonder whether this form has also gifted you with the speed and endurance that your species is known for, though equally, perhaps you have inherited the stubbornness of a mule. There's an entire hotel of your sort, though from what I hear, the manager is a bit of a nightmare to work with. Some of the employees aren't particularly kind-hearted either. I hope that you're getting enough socialization around the city, whether it is mere companionship or passionate copulation. We know how important that is to animals that live in herds. ";
+	else if headname of Player is listed in infections of FelineList:
+		say "     'Aren't you just the cutest kitten? Sharp claws, adorable tail, and yes... there's the pent-up rage dancing behind your eyes, or maybe that's lust. The two do have some similarities, and felines are renowned for both, especially in the tales. I imagine that this transformation has helped your hand-eye coordination and agility, but who knows? Perhaps you were ungainly and clumsy beforehand. Either way, you ooze a sense of reserved superiority, though perhaps that isn't the only thing you ooze, nor do I believe that it is always your dominant feeling. You wouldn't want people to think you predictable after all. I shall avoid giving you a tummy rub just in case. ";
+	else if headname of Player is listed in infections of InsectList:
+		say "     'You seem to be more adventurous with your form than many in the city. Well, those who have a choice anyway. There are rather a few ants, bees, and wasps hidden from the view of the military. The segmented body really accentuates your waist and your color really suits you. I wonder, do you feel an overwhelming urge to be part of a hive, or is your will stronger than that? Just think of all those drones rushing around at your beck and call, feeding, fucking, and comforting you. On the other hand, independence is one of your most attractive traits. That and your insightful conversations. ";
+	else if headname of Player is listed in infections of MarsupialList:
+		say "     'Do boomerangs or venomous creatures evoke intense feelings of lust from you? Weirdly, I've only seen your sort hopping about the Red Light District, but I'm sure that's just a coincidence. You have admirably strong legs, and I'm sure that some people would salivate at the thought of having them wrapped around their heads while they serviced you. The pouch may even allow you to transport your children around to help you defend yourself from aggressors, because there couldn't possibly be anything wrong with using your young as living weapons. ";
+	else if headname of Player is listed in infections of MustelidList:
+		say "     'That's quite the pungent odor you have there. I imagine it can be detected at quite a distance so you may be able to warn some people not to mess with you. There is also the chance that they could use this to prepare for your approach and ambush you instead, but everything has a trade off. Your form should allow you to squeeze through some gaps and fold yourself quite nicely, almost like an odorous noodle. Just make sure you don't get stuck. Some of the denizens of the city are quite opportunistic, and uninvited cream fillings can be embarrassing. ";
+	else if headname of Player is listed in infections of OrcList:
+		say "     'You're looking a little green? Are you alright, or have you contracted Orc? Orc is a condition where you bulk up and often experience noticeable tooth growth. Severe cases even exhibit elevated violent tendencies and a desire to rut or be rutted. I don't think that my skills are of a medical standard, but if I'm not mistaken, you are indeed an orc. I think that it has done wonders for your musculature, just make sure that you don't forget that you have a brain as well as brawn. Sex isn't as fun when your partner is busy trying to flex rather than thinking of innovative ways to spice up the coupling. ";
+	else if headname of Player is listed in infections of PlantList:
+		say "     'Hmm. From your appearance, it would seem that plant-life is making an effort to compete against animal and machine transformations. If someone looked closely enough, I think that they would see chloroplasts in your cells. With thickened cell walls, you may even have increased rigidity in some areas if you know what I'm saying... Bah, what do I know? I'm not a scientist. I hope that you have control of some vines so that you can use them like tentacles. While I doubt that the city needs it, with enough understanding of your form, you might be able to release pheromone-laced spores to aid in seduction. ";
+	else if headname of Player is listed in infections of PorcineList:
+		say "     'I really hope that you are polite with your sexual advances, or you're going to get called a pig in a not-so-nice manner. Between your generous body size, bristly hide, and distinguishing squeals and grunts, I hope that you don't put people off before they get to know your personality. Some advantages that you have are a keen nose, admirable intellect, and enough padding to allow the tightest of hugs to feel reassuring rather than restrictive. You may develop a greater appreciation of mud puddles but make sure you wash before attempting to woo someone who is less enthusiastic about dirt. ";
+	else if headname of Player is listed in infections of PrimateList:
+		say "     'You aren't that far off being human, so I don't think that I can complement your imagination, but you definitely look different. The muscular limbs, firm tummy, and characteristic gait of your species really shine through. If you ask nicely, I might even let you have a banana, though don't tell anyone as I wouldn't want them to know that you're my favorite. With how you are built, I would imagine that you could pummel your opponents quite easily, and, luckily for you, the nanites will fix them in time for you to claim your reward. Just remember that there is always someone, somewhere, who can defeat you and may give you a taste of your own medicine. ";
+	else if headname of Player is listed in infections of ReptileList:
+		say "     'Aren't you a majestic scaley beast. Pearly fangs, sharp claws, leathery hide... You really invoke deep feelings of lust for me... Please excuse my outburst, I shall try and give a more useful opinion. Your scales look like they could give you a decent amount of protection, though I hope that you don't have to contend with the perils of being ectothermic. Your visage should inspire respect from those you meet, but as some of them are utter boors, I wouldn't rely on this as a tactic. Instead you should probably demonstrate your skill with tooth and claw, but not too severely, especially if you want to claim your reward. You may also want them to be able to remember their foolishness in challenging you. ";
+	else if headname of Player is listed in infections of RodentList:
+		say "     'How often do people tell you that they can smell a rat? I would imagine that it gets old very quickly, as would, I assume, comments on the emotions a long hairless tail evokes. Because you've probably heard all of them, I shall speak no further on the subject and instead focus on your more savory features. Your eyes look sharp, as do your claws, though in obviously different ways. While I wouldn't suggest testing it, you may be able to contort through smaller gaps and survive greater falls. But you don't want to get stuck where a wandering creature might take advantage of you, nor do you want to become a stain on the pavement. ";
+	else if headname of Player is listed in infections of UrsineList:
+		say "     'I see that you have a thing for bears. Is it a size thing, or do you have a fetish for really tight hugs? The feel of a larger body pressed up against your own, wrapping you in an embrace and allowing you to feel their warmth through their fur... Mmmmm, such a delightful image. Perhaps I could persuade you at some point to allow me this feeling, or perhaps you would prefer to be the one hugged? Why not both? I have all the time in the world, or at least as long as your soldiers don't move in. I get the impression that they aren't big on hugs at the moment. ";
+	else if headname of Player is listed in infections of VulpineList:
+		say "     'So close to the perfect form, but you missed out slightly, don't you think? Still, such lush fur and beautiful coloration really brings out your eyes, and you only need a few more tails to improve the look. If you ask nicely, I might help you in the final step to becoming a kitsune. All it would take would be a hand in collecting some of my essence, or possibly a mouth... But back to you. Even as a normal fox, there are certain expectations. Ignore the myth about foxes only enjoying being penetrated themselves. Your sexual preferences should be your own. Also, while you don't need to be as mischievous as that coyote in the park, at least try and commit some trickery. There is a reputation to maintain. ";
+	else: [Anything else]
+		say "     ERROR. If you are seeing this, then it means that you are of an infection that we haven't covered in the dialogue. Could you please report this to the bug channel of the Flexible Survival Discord server, and we will try to remedy this. Thank you.";
+
+to say KitsuneSizeComment: [Comments on player's size]
+	if scalevalue of Player is 1:
+		say "My goodness, you are small. I would imagine that you have to be extra cautious of the infected in the city. Being stepped on, eaten, blown away, drowned in cum... so many things could go wrong. I don't know whether to view you as courageous or a fool.'";
+	else if scalevalue of Player is 2:
+		say "You're a little smaller than I would have thought, but I must say, it really emphasizes your cuteness. How could anyone hurt such an adorably-sized being such as yourself? Unless you're into that sort of thing, then I suppose they might be allowed to with permission. But if anyone bullies you, you know where to come.'";
+	else if scalevalue of Player is 3:
+		say "You seem to be a standard size for the creatures of this realm. Not too large, not too small. Being of similar height, it makes it easier for me to use your buildings and seats. Puts you on an even footing with the other infected too.'";
+	else if scalevalue of Player is 4:
+		say "You're a little larger than I would have thought, but I imagine such height comes with its advantages. You can see over most people's heads and look more intimidating. Are most of the infected cautious of you, or do their lusts overwhelm the fear response?'";
+	else: [Size 5]
+		say "You... are big. And even that feels like an understatement. Forget about looking over people, you could look over vehicular transports. I can't imagine how much you need to consume to sustain yourself, but I really hope that you haven't been feeding on other people. I doubt that the infected run at the sight of you, but if they could still think logically, they probably would.'";
+
+
+Section 4 - Kitsune requests
 
 [This is blocked for the moment, as it conflicts with the same request from Steven]
 [
@@ -118,7 +332,7 @@ Carry out kitwaterrequest:
 	increase Kitsunewater by 1;
 ]
 
-Section 4 - Fucking Kitsune
+Section 5 - Fucking Kitsune
 
 Instead of fucking Kitsune:
 	setmonster "Kitsune";
@@ -295,7 +509,7 @@ to say Kitsune_DomRidingVag:
 	now non-infectious entry is true;]
 
 
-Section 5 - Creature Insertion
+Section 6 - Creature Insertion
 
 to say Kitsune loss:
 	say "These are filler messages and should not be seen, as there's no fight with Kitsune.";

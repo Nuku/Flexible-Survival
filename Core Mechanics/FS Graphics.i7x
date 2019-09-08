@@ -12,6 +12,8 @@ Figure of pixel_icon is the file "pixel.jpg".
 
 [infection icons]
 Figure of AlphaHusky_icon is the file "FS_AlphaHusky.jpg".
+Figure of AlphaWolf_hard_icon is the file "AlphaWolf_hard.jpg".
+Figure of AlphaWolf_naked_icon is the file "AlphaWolf_naked.jpg".
 Figure of Amazon_icon is the file "Amazon.jpg".
 Figure of AnthroShaftBeast_icon is the file "AnthroSB_ig.jpg".
 Figure of Bear_icon is the file "fs_bear.jpg".
@@ -32,7 +34,7 @@ Figure of Cougar_icon is the file "Cougar_ig.jpg".
 Figure of DarkElf_icon is the file "Dark Elf.jpg".
 Figure of DemonBrute_icon is the file "Brutus_evil.jpg".
 [Figure of DobermanCop_icon is the file "DobermanCop_ig.jpg".]
-Figure of Donkeywoman_icon is the file "FS_DonkeyWoman.jpg".
+Figure of Donkeywoman_clothed_icon is the file "Donkeywoman_clothed.jpg".
 Figure of Dracovixentaur_icon is the file "dracovixentaur_ig.jpg".
 Figure of MagicDrake_icon is the file "FS_Dragoness.jpg".
 Figure of ElvenHunter_icon is the file "ElvenHunter.jpg".
@@ -176,6 +178,7 @@ Figure of Chris_clothed_icon is the file "Chris_clothed.jpg".
 Figure of Chris_naked_icon is the file "Chris_naked.jpg".
 Figure of Chris_face_icon is the file "Chris_face.jpg".
 Figure of Christy_pregnant_icon is the file "ChristyPregnant.jpg".
+Figure of Christy_face_icon is the file "Christy_face.jpg".
 Figure of Colleen_face_icon is the file "Colleen_face.jpg".
 Figure of Corbin_face_icon is the file "Corbin_face.jpg".
 Figure of Danny_naked_icon is the file "Danny_naked.jpg".
@@ -276,6 +279,7 @@ Figure of Medea_face_icon is the file "Medea_face.jpg".
 Figure of Mike_face_icon is the file "Mike_face.jpg".
 Figure of Mike_icon is the file "Mike.jpg".
 Figure of Monty_ass_icon is the file "Monty_ass.jpg".
+Figure of Monty_clothed_icon is the file "Monty_clothed.jpg".
 Figure of Monty_combat_icon is the file "Monty_combat.jpg".
 Figure of Monty_postcombat_icon is the file "Monty_postcombat.jpg".
 Figure of Monty_face_icon is the file "Monty_face.jpg".
@@ -579,6 +583,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Alexandra_naked_frown"	Figure of Alexandra_naked_frown_icon	"Lyttathebug"	g-black	"normal"
 "Alexandra_naked"	Figure of Alexandra_naked_icon	"Lyttathebug"	g-black	"normal"
 "Alex"	Figure of Alex_icon	"canned"	g-black	"normal"
+"Alpha Wolf hard"	Figure of AlphaWolf_hard_icon	"Vashaa"	g-White	"normal"
+"Alpha Wolf naked"	Figure of AlphaWolf_naked_icon	"Vashaa"	g-White	"normal"
 "Husky Alpha"	Figure of AlphaHusky_icon	"Anymouse1968"	g-white	"normal"
 "Amazonian"	Figure of Amazon_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Amy"	Figure of Amy_icon	"Sususmiles"	g-white	"normal"
@@ -641,6 +647,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Chris_naked"	Figure of Chris_naked_icon	"Kupo Klein"	g-white	"normal"
 "Chris_face_icon"	Figure of Chris_face_icon	"Kupo Klein"	g-black	"normal"
 "Christy_pregnant"	Figure of Christy_pregnant_icon	"Anymouse1968"	g-white	"normal"
+"Christy_face"	Figure of Christy_face_icon	"SineAlas"	g-white	"normal"
 "Colleen_face"	Figure of Colleen_face_icon	"SineAlas"	g-white	"normal"
 "Corbin_face"	Figure of Corbin_face_icon	"SineAlas"	g-white	"normal"
 "Cougar"	Figure of Cougar_icon	"catnamedfish"	g-white	"normal"
@@ -665,7 +672,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "DiegoFem"	Figure of DiegoFem_icon	"Damdidoo"	g-black	"normal"
 "DiegoFem_face"	Figure of DiegoFem_face_icon	"Damdidoo"	g-black	"normal"
 ["Doberman_Defeat"	Figure of DobermanCop_icon	"TheRedAngel"	g-white	"normal"]	[old image, disabled]
-"Donkeywoman"	figure of Donkeywoman_icon	"Anymouse1968"	g-white	"normal"
+"Donkeywoman"	figure of Donkeywoman_clothed_icon	"Vashaa"	g-white	"normal"
 "Doran"	Figure of Doran_icon	"Anymouse1968"	g-white	"normal"
 "Doran_face"	Figure of Doran_face_icon	"Anymouse1968"	g-white	"normal"
 "Dracovixentaur"	Figure of Dracovixentaur_icon	"Anymouse1968"	g-white	"normal"
@@ -996,6 +1003,7 @@ carry out artistcredits:
 	LineBreak;
 	say "Infections:[line break]";
 	say "     Alpha Husky by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Alpha Wolf by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Amazon by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Anthro Shaft Beast concept created by TwilightMaster @ furaffinity.net[line break]";
 	say "     Anthro Shaft Beast artwork by Demon-Man @ furaffinity.net[line break]";
@@ -1014,7 +1022,7 @@ carry out artistcredits:
 	say "     Dark Elf by Nokturnalkittie @ https://www.furaffinity.net/user/nokturnalkittie/[line break]";
 	say "     Demon Brute by Lay @ y-gallery.net[line break]";
 	say "     Doberman Cop by TheRedAngel @ furaffinity.net[line break]";
-	say "     Donkeywoman by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Donkeywoman by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Dracovixentaur by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Ebonflame Drake by Anonymous[line break]";
 	say "     Elven Hunter by Aosuka @ y-gallery.net[line break]";
@@ -1115,6 +1123,7 @@ carry out artistcredits:
 	say "     Chase by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Chris by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Christy by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Christy (face) by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Colleen (face) by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Corbin (face) by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Dash by Conchi @ https://artisticconch.tumblr.com/[line break]";

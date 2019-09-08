@@ -524,7 +524,6 @@ instead of conversing David:
 					if nam is "Tell him about Brutus's inner turmoil":
 						say "[DavidTalk7]";
 					wait for any key;
-					now lastfuck of David is turns;
 			else if calcnumber is 0:
 				now sextablerun is 1;
 				say "     You step back from the young soldier, shaking your head slightly as he gives a questioning look.";

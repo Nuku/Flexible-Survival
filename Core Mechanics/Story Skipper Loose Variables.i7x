@@ -983,8 +983,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is EricVirginityTaken;
 		-- "erminecolor":
 			now NumberVarValue entry is erminecolor;
-		-- "EweFucked":
-			now NumberVarValue entry is EweFucked;
 		-- "Fancyaroused":
 			now NumberVarValue entry is Fancyaroused;
 		-- "fancyffcount":
@@ -2325,8 +2323,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is rabbitsibling;
 		-- "rachelfuck":
 			now NumberVarValue entry is rachelfuck;
-		-- "RamFucked":
-			now NumberVarValue entry is RamFucked;
 		-- "ramlosstick":
 			now NumberVarValue entry is ramlosstick;
 		-- "ramtraining":
@@ -3771,8 +3767,6 @@ to VariableTextLoad:
 		say "Restoring Texts...";
 		read File of TextSave into the Table of GameTexts;
 		repeat with x running from 1 to the number of filled rows in the Table of GameTexts:
-			if there is no TextVarValue in row x of the Table of GameTexts:
-				next;
 			choose row x in the Table of GameTexts;
 			if debugactive is 1:
 				say "Restoring text [TextVarName entry].";
@@ -4013,8 +4007,6 @@ to VariableNumberLoad:
 		say "Restoring Numbers...";
 		read File of NumberSave into the Table of GameNumbers;
 		repeat with x running from 1 to the number of filled rows in the Table of GameNumbers:
-			if there is no numberVarValue in row x of the Table of GameNumbers:
-				next;
 			choose row x in the Table of GameNumbers;
 			if debugactive is 1:
 				say "Restoring Number [NumberVarName entry].";
@@ -4672,7 +4664,7 @@ to VariableNumberLoad:
 				-- "erminecolor":
 					now erminecolor is numberVarValue entry;
 				-- "EweFucked":
-					now EweFucked is numberVarValue entry;
+					now Stamina of Mary is numberVarValue entry;
 				-- "Fancyaroused":
 					now Fancyaroused is numberVarValue entry;
 				-- "fancyffcount":
@@ -6014,7 +6006,7 @@ to VariableNumberLoad:
 				-- "rachelfuck":
 					now rachelfuck is numberVarValue entry;
 				-- "RamFucked":
-					now RamFucked is numberVarValue entry;
+					now Stamina of Leon is numberVarValue entry;
 				-- "ramlosstick":
 					now ramlosstick is numberVarValue entry;
 				-- "ramtraining":
@@ -6140,7 +6132,7 @@ to VariableNumberLoad:
 				-- "SharkFountainCounter":
 					now SharkFountainCounter is numberVarValue entry;
 				-- "shiftable":
-					now Resolution of Secure Area is numberVarValue entry;
+					now shiftable is numberVarValue entry;
 				-- "sierramem":
 					now sierramem is numberVarValue entry;
 				-- "SilverToken":

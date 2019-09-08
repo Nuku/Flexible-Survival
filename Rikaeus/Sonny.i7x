@@ -131,7 +131,7 @@ to say SonnyTalkMenu:
 		now sortorder entry is 5;
 		now description entry is "Ask the sheep boy what exactly he misses about home";
 	[]
-	if SonnyRelationship is 8 and RamFucked > 0 and player is male:
+	if SonnyRelationship is 8 and Stamina of Leon > 0 and player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Confidence";
 		now sortorder entry is 6;

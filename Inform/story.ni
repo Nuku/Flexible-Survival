@@ -2678,7 +2678,7 @@ an everyturn rule:
 					increase PresentChance by 1;
 				if a random chance of PresentChance in 10 succeeds: [got a present]
 					add "offspring present" to invent of Bunker;
-			if HP of Blake > 50 and HP of Blake < 90 and a random chance of 1 in 2 succeeds: [Blake whoring]
+			if HP of Blake > 50 and HP of Blake < 90 and a random chance of 1 in 2 succeeds and Energy of Blake < 9: [Blake whoring]
 				increase Energy of Blake by 1; [add on one profit share of whoring him out]
 		now LastTurnDay is true;
 		if WerewolfWatching is true: [she's only out at night]
@@ -6879,6 +6879,7 @@ Include Doran by Blue Bishop.
 Include DrMoffatt by Stripes.
 Include DrUtah by Stripes.
 Include Duke by Wahn.
+Include Dullahan by Gherod.
 Include Egyptian Wing by Xenophiliac.
 Include Elijah by Wahn.
 Include Eric by Wahn.
@@ -6937,15 +6938,18 @@ Include Kyrverth by Speedlover.
 Include Lance by Verath.
 Include Landon by Luneth.
 Include Larissa by Stripes.
+Include Leon by Luneth.
 Include Leonard by Stripes.
 Include Lilith by Wahn.
 Include Lindsey by Sarokcat.
+Include Lingau by Wahn.
 Include Logan by Wahn.
 Include Lucy by Stripes.
 Include Lux & Umbra by Prometheus.
 Include Mack by Stripes.
 Include Malik by Wahn.
 Include Mark by Wahn.
+Include Mary by Luneth.
 Include Master Mind by Stripes.
 Include Matriarch NPC by Stripes.
 Include Meredith by Stripes.
