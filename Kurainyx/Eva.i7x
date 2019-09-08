@@ -94,7 +94,7 @@ to EvaAnalBind:
 			now obliging is true;
 		checkboundrecover;
 		if clearnomore is 0, clear the screen;
-		if lustatt > 99:
+		if lustatt > 99:	[Player orgasm automatically advances to next bound state phase]
 			if boundsegment is 1:
 				say "     Despite the rough skin of the tail binding you, the serpentine appendage feels oddly sensual, especially since it keeps on grinding against your [if player is male]cock[smn][else if player is female]cunt[sfn][else]crotch[end if]. You had been subjugated to the near constant tail rubbing for so long that you can feel the growing need in your loins until you are right at the edge of your breaking point. All it takes is one more clench from Eva's tail for you to let out a guttural moan of pleasure as you reach your climax[if player is male]your cum leaking from between Eva's tail coils to drip onto the sand[else if player is female]your juices leaking from between Eva's tail coils to drip onto the sand[end if]. Eva chuckles and teases, 'I said that we were going to have fun, but I didn't expect you to get into it so quick. Can't wait to get you into my ass.' Exhausted from your orgasm, you're unable to resist the shark pulling you right into her waiting arms.";
 				EvaAnalBindProgress;
@@ -110,7 +110,7 @@ to EvaAnalBind:
 				EvaAnalBindEnd;
 			now Libido of Player is 10;
 			now lustatt is Libido of Player;
-		else if struggleatt is 0:
+		else if struggleatt is 0:	[Bound state phase advances if struggle bar reaches zero]
 			if boundsegment is 1:
 				say "     Whether it's from exhaustion or just liking the idea of being the shark woman's toy, you eventually cease struggling. Eva's grin grows even wider as she pulls you right into her waiting arms. 'You and I are going to have so much fun. Can't wait to get you into my ass,' she says huskily.";
 				EvaAnalBindProgress;
@@ -124,9 +124,9 @@ to EvaAnalBind:
 				say "     Whether or not you put up a struggle, time and time again, you've submitted to Eva and allowed her to have her way with you. You've come this far, so why stop now? With you complying to her needs, Eva happily hums and says, 'You've been such a great toy, and I'm sure that you're all tired from tending to little old me. Let me send you somewhere nice to rest up. You'll enjoy it. I know I will.'";
 				EvaAnalBindEnd;
 		if enduring is true:
-			decrease humanity of Player by a random number from 3 to 7;
+			decrease humanity of Player by a random number from 2 to 6;
 		else:
-			decrease humanity of Player by a random number from 6 to 12;
+			decrease humanity of Player by a random number from 4 to 10;
 		if boundsegment is 1:
 			say "     Bound tight by Eva's serpentine tail, you're slowly dragged toward the hungry shark. You can try to [bold type]S[roman type]truggle out of the tail hold, or you can [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] Eva, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.[line break]";
 		else if boundsegment is 2:
@@ -140,7 +140,7 @@ to EvaAnalBind:
 		say "[bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break][run paragraph on]";
 		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break][run paragraph on]";
 		say "Sanity: [humanity of Player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of Player]	Thirst: [thirst of Player]	Struggle: [EvaStruggleBar][line break][run paragraph on]";
-		if humanity of Player < 1:
+		if humanity of Player < 1:		[Losing all sanity automatically plays next bound state phase after every round]
 			if boundsegment is 1:
 				say "     Though Eva has barely started using you for her lusty desires, the experiences you had beforehand has already weakened your mind to the point that you can't think of anything but give yourself to the domineering shark. With you putting up no more than a token struggle, Eva's grin grows even wider over your complete submission, and she pulls you right into her waiting arms. 'You and I are going to have so much fun. Can't wait to get you into my ass,' she says huskily.";
 				EvaAnalBindProgress;
@@ -205,7 +205,7 @@ to EvaAnalBind:
 						now Trixieexit is 1;
 						follow the turnpass rule;
 				increase lustatt by a random number from 2 to 8;
-				decrease humanity of Player by a random number from 1 to 3;
+				decrease humanity of Player by a random number from 1 to 2;
 				wait for any key;
 				next;
 			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
@@ -222,7 +222,7 @@ to EvaAnalBind:
 					increase lustatt by a random number from 6 to 12;
 				else:
 					increase lustatt by a random number from 4 to 10;
-				decrease humanity of Player by a random number from 4 to 10;
+				decrease humanity of Player by a random number from 3 to 7;
 				decrease struggleatt by 1;
 				LineBreak;
 				wait for any key;
@@ -246,7 +246,7 @@ to EvaAnalBind:
 					if a random chance of 1 in 2 succeeds:
 						decrease struggleatt by 1;
 					increase lustatt by a random number from 2 to 8;
-					decrease humanity of Player by a random number from 1 to 3;
+					decrease humanity of Player by a random number from 1 to 2;
 				LineBreak;
 				wait for any key;
 				next;
