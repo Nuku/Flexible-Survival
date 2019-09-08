@@ -122,6 +122,7 @@ Figure of Zebra_icon is the file "Zebra.jpg".
 Figure of Zebra_face_icon is the file "Zebra_face.jpg".
 
 [NPC icons]
+Figure of Ace_icon is the file "Ace.jpg".
 Figure of Adam_icon is the file "Adam.jpg".
 Figure of Alexandra_clothed_icon is the file "Alexandra_clothed.jpg".
 Figure of Alexandra_clothed_preg_icon is the file "Alexandra_clothed_preg.jpg".
@@ -365,6 +366,7 @@ Figure of Urik_face_icon is the file "Urik_face.jpg".
 Figure of Urik_naked_icon is the file "Urik_naked.jpg".
 Figure of Valerie_icon is the file "Valerie.jpg".
 Figure of Violet_face_icon is the file "Violet_face.jpg".
+Figure of Voodoo_Gecko_icon is the file "Voodoo_Gecko.jpg".
 Figure of Yatur_clothed_icon is the file "Yatur_clothed.jpg".
 Figure of Yatur_naked_icon is the file "Yatur_naked.jpg".
 Figure of Yolanda_icon is the file "Yolanda_ig.jpg".
@@ -571,6 +573,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Abcdefghij"	Figure of pixel	""	g-black	"normal" [blocker for first position]
 "Abcdefghij"	Figure of pixel_icon	""	g-black	"normal" [blocker for first position]
 "Adam"	Figure of Adam_icon	"Kadel"	g-white	"normal"
+"Ace"	Figure of Ace_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Alexandra_clothed"	Figure of Alexandra_clothed_icon	"Lyttathebug"	g-black	"normal"
 "Alexandra_clothed_preg"	Figure of Alexandra_clothed_preg_icon	"Lyttathebug"	g-black	"normal"
 "Alexandra_face"	Figure of Alexandra_face_icon	"Lyttathebug"	g-black	"normal"
@@ -929,6 +932,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Violet_face"	Figure of Violet_face_icon	"SineAlas"	g-black	"normal"
 "Vixentaur"	Figure of Vixentaur_icon	"Anymouse1968"	g-white	"normal"
 "Vixen Nurse"	Figure of VixenNurse_icon	"KV1NN4"	g-white	"normal"
+"Voodoo Gecko"	Figure of Voodoo_Gecko_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Werewolf (female)"	Figure of Werewolf_female_icon	"Watsup"	g-white	"normal"
 "Wildcat"	Figure of Wildcat_icon	"Strype"	g-white	"normal"
 "Wyvern_female"	Figure of Wyvern_female_icon	"Anonymous"	g-white	"normal"
@@ -1002,6 +1006,7 @@ carry out artistcredits:
 	say "Artwork Credits for Flexible Survival:[line break]";
 	LineBreak;
 	say "Infections:[line break]";
+	say "     Ace by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Alpha Husky by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Alpha Wolf by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Amazon by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
@@ -1087,6 +1092,7 @@ carry out artistcredits:
 	say "     Triceratops by HBruton @ furaffinity.net[line break]";
 	say "     Vixentaur by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Vixen Nurse by KV1NN4 @ furaffinity.net[line break]";
+	say "     Voodoo Gecko by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Werewolf (female) by Watsup @ https://www.furaffinity.net/user/watsup/[line break]";
 	say "     Wildcat by Strype @ furaffinity.net[line break]";
 	say "     Wyvern Female by Anonymous[line break]";

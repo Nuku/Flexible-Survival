@@ -6132,7 +6132,7 @@ to VariableNumberLoad:
 				-- "SharkFountainCounter":
 					now SharkFountainCounter is numberVarValue entry;
 				-- "shiftable":
-					now shiftable is numberVarValue entry;
+					now Resolution of Secure Area is numberVarValue entry;
 				-- "sierramem":
 					now sierramem is numberVarValue entry;
 				-- "SilverToken":
