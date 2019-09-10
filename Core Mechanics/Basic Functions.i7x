@@ -579,13 +579,43 @@ to FindHighestPlayerStat:
 		now CurrentStat is Perception of Player;
 		now HighestPlayerStat is "perception";
 
+to unwield ( x - a grab object ) silently:
+	unwield x silence state is 1;
+
 to unwield ( x - a grab object ):
-	if x is an armament and weapon of Player is weapon of x:
+	unwield x silence state is 0;
+
+to unwield ( x - a grab object ) silence state is (Silence - a number):
+	if x is an armament and weapon object of Player is x:
 		now weapon of Player is "[one of]your quick wit[or]your fists[or]a quick kick[or]your body[or]some impromptu wrestling[or]an unarmed strike[at random]";
 		now weapon damage of Player is 4;
 		now weapon type of Player is "Melee";
 		now weapon object of Player is journal;
-		say "You stop holding your [x].";
+		if Silence is 0:
+			say "You stop holding your [x].";
+
+to wield ( x - a grab object ) silently:
+	wield x silence state is 1;
+
+to wield ( x - a grab object ):
+	wield x silence state is 0;
+
+to wield ( x - a grab object ) silence state is (Silence - a number):
+	if x is owned and x is an armament:
+		now weapon object of Player is x;
+		now weapon of Player is weapon of x;
+		now weapon damage of Player is weapon damage of x;
+		now weapon type of Player is weapon type of x;
+		if x is ranged:
+			now weapon type of Player is "Ranged";
+		if Silence is 0:
+			say "You ready your [x]";
+			if x is unwieldy:
+				if scalevalue of Player > objsize of x:
+					say ". Your [if scalevalue of Player is 3]normal-size[else if scalevalue of Player is 4]large[else]massive[end if] [BodyName of Player] hand dwarfs the [x], making it [if scalevalue of Player - objsize of x > 3]very[else if scalevalue of Player - objsize of x is 3]rather[else]somewhat[end if] [one of]unwieldy[or]awkward[or]difficult[at random] to use accurately";
+				else:
+					say ". Your [if scalevalue of Player is 3]normal-size[else if scalevalue of Player is 2]small[else]tiny[end if] [BodyName of Player] hands are just too small to comfortably grip your [x], making swinging it a [if objsize of x - scalevalue of Player > 3]very[else if objsize of x - scalevalue of Player is 3]quite[else]a little[end if] [one of]unwieldy[or]awkward[or]difficult[at random]";
+			say ".";
 
 Section 2 - Stripping
 
