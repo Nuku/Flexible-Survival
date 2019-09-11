@@ -603,6 +603,8 @@ to TraitRestore:
 			if there is a name of TraitOwner in the Table of GameCharacterIDs:
 				let CharacterObject be the object corresponding to a name of TraitOwner in the Table of GameCharacterIDs;
 				if TraitText entry is not listed in Traits of CharacterObject:
+					if TraitText entry is "tamed": [bugfix for the lower case typo]
+						now TraitText entry is "Tamed";
 					add TraitText entry to Traits of CharacterObject;
 					if TraitText entry is "Tamed": [pets]
 						now CharacterObject is tamed;

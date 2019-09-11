@@ -592,7 +592,7 @@ instead of navigating Grey Abbey Library while (Strange Sorcerer is active and S
 						LineBreak;
 						say "     (You've gained the [bold type]demonologist[roman type] as your partner! You can make him your active companion by typing [bold type][link]pet demonologist[end link][roman type] anywhere, and initiate sex with him while active by typing [bold type][link]fuck demonologist[end link][roman type]. You can see all the pets and followers you have with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to leave a companion home for a while and go out alone? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type]. When dismissed, Xaedihr can be found at the Grey Abbey Library.)";
 						Move Xaedihr to Grey Abbey Library;
-						add "tamed" to Traits of demonologist;
+						add "Tamed" to Traits of demonologist;
 						Now demonologist is tamed;
 					else:
 						Linebreak;
@@ -613,7 +613,7 @@ instead of navigating Grey Abbey Library while (Strange Sorcerer is active and S
 		LineBreak;
 		say "     (You've gained the [bold type]demonologist[roman type] as your partner! You can make him your active companion by typing [bold type][link]pet demonologist[end link][roman type] anywhere, and initiate sex with him while active by typing [bold type][link]fuck demonologist[end link][roman type]. You can see all the pets and followers you have with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to leave a companion home for a while and go out alone? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type]. When dismissed, Xaedihr can be found at the Grey Abbey Library.)";
 		Move Xaedihr to Grey Abbey Library;
-		add "tamed" to Traits of demonologist;
+		add "Tamed" to Traits of demonologist;
 		Now demonologist is tamed;
 	Now Strange Sorcerer is resolved;
 
@@ -623,7 +623,7 @@ to SSOutOfQuestions:
 	LineBreak;
 	say "     (You've gained the [bold type]demonologist[roman type] as your partner! You can make him your active companion by typing [bold type][link]pet demonologist[end link][roman type] anywhere, and initiate sex with him while active by typing [bold type][link]fuck demonologist[end link][roman type]. You can see all the pets and followers you have with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to leave a companion home for a while and go out alone? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type]. When dismissed, Xaedihr can be found at the Grey Abbey Library.)";
 	Move Xaedihr to Grey Abbey Library;
-	add "tamed" to Traits of demonologist;
+	add "Tamed" to Traits of demonologist;
 	Now demonologist is tamed;
 	Now Strange Sorcerer is resolved;
 
@@ -1416,7 +1416,7 @@ Understand "GetXaedihr" as SkipToXaedihr.
 Carry out SkipToXaedihr:
 	move Xaedihr to Grey Abbey Library;
 	say "     Xaedihr is now in the Grey Abbey Library.";
-	add "tamed" to Traits of demonologist;
+	add "Tamed" to Traits of demonologist;
 	now demonologist is tamed;
 	say "     He is also a pet.";
 	now resolution of Hellish Trashpile is 3;
