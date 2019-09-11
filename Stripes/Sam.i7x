@@ -1333,10 +1333,11 @@ to SamUBBind:
 			LineBreak;
 			say "     Sam's womb is just too heavenly to even think about leaving. The constant touch of soft, warm flesh all around you is incredibly soothing and gratifying, so much that you relax into the womb's embrace, intent on an elongated stay. An unknown time spent in warmth and comfort passes before you hear Sam grunt a few times and then the surrounding walls suddenly clamp down on you, squeezing you from all sides with squishy flesh. This only lasts for a moment before you're pushed feet first through a small hole. As Sam begins moaning in arousal, you are ferried through their canal, the walls wet with arousal. The trip from the womb takes less time than the journey to it, and it isn't long before Sam lets out one last moan of pleasure as they reach an orgasm, shooting you out of their pussy, along with a torrent of their juices. Thankfully, Sam had the foresight to put a cushion near their cunt beforehand, giving you a soft landing while they are occupied with their orgasm, although that doesn't stop you from getting drenched in their femcum.";
 			say "     Sam quickly recovers from their release, and they promptly begin cleaning you off. The scientist uses multiple rags to wipe you down and then storing the used cloths in various containers. 'Well, that was fun,' Sam says cheerfully after they finished cleaning you. 'I really enjoyed our time together, and I got plenty of research material to study, thanks to you. The effects of the shrinking shrooms should wear off pretty soon, so feel free to rest here until then.' Sure enough, you grow back to normal size after a few minutes. You promptly gather your belongings and think about what you should do next.";
-			wait for any key;
 			now humanity of Player is TempSamSanity;
 			cleanboundmemory;
 			now Trixieexit is 1;
+			LibidoLoss 40;
+			wait for any key;
 			follow the turnpass rule;
 		else:
 			let k be 0;
@@ -1358,10 +1359,12 @@ to SamUBBind:
 				else:
 					say "     Again, you move about within Sam's womb to get their attention. After you struggle for a bit more, Sam says, 'Alright, it seems like you're done with our little experiment. Just give me a few moments and I'll have you out of there.' You hear Sam grunt a few times and then the surrounding walls suddenly clamp down on you, squeezing you from all sides with squishy flesh. This only lasts for a moment before you're pushed feet first through a small hole. As Sam begins moaning in arousal, you are ferried through their canal, the walls wet with arousal. The trip from the womb takes less time than the journey to it, and it isn't long before Sam lets out one last moan of pleasure as they reach an orgasm, shooting you out of their pussy, along with a torrent of their juices. Thankfully, Sam had the foresight to put a cushion near their cunt beforehand, giving you a soft landing while they are occupied with their orgasm, although that doesn't stop you from getting drenched in their femcum.";
 					say "     Sam quickly recovers from their release, and they promptly begin cleaning you off. The scientist uses multiple rags to wipe you down and then storing the used cloths in various containers. 'Well, that was fun,' Sam says cheerfully after they finished cleaning you. 'I really enjoyed our time together, and I got plenty of research material to study, thanks to you. The effects of the shrinking shrooms should wear off pretty soon, so feel free to rest here until then.' Sure enough, you grow back to normal size after a few minutes. You promptly gather your belongings and think about what you should do next.";
+					now humanity of Player is TempSamSanity;
 					cleanboundmemory;
 					now Trixieexit is 1;
-					follow the turnpass rule;
+					LibidoLoss 40;
 					wait for any key;
+					follow the turnpass rule;
 				next;
 			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
 				LineBreak;
@@ -1424,10 +1427,11 @@ to SamCockBind:
 			LineBreak;
 			say "     It's just far too pleasurable within Sam's ball to even think about leaving. The cum you're bathing in keeps you warm and in a constant state of delightful arousal. In fact, you can feel your lust cresting again, and once again, you tend to yourself to achieve yet another gratifying orgasm. Potent seed and musk is all that you know as you continuously bring yourself to climax, your horny self intent on an elongated stay within Sam's ball. You hear Sam grunt a few times and then the chamber that you're in jostles about, tossing you and the pool of around. This only lasts for a moment before you're ejected from Sam's ball. As the scientist moans in arousal, you are shot through the tight tunnel that is their cock and out back into the outside world. Thankfully, Sam had the foresight to put a cushion near their dick beforehand, giving you a soft landing while they are occupied with their orgasm, although that doesn't stop you from getting drenched in the seed that you were just bathing in moments ago.";
 			say "     Sam quickly recovers from their release, and they promptly begin cleaning you off. The scientist uses multiple rags to wipe you down and then storing the used cloths in various containers. 'Well, that was fun,' Sam says cheerfully after they finished cleaning you. 'I really enjoyed our time together, and I got plenty of research material to study, thanks to you. The effects of the shrinking shrooms should wear off pretty soon, so feel free to rest here until then.' Sure enough, you grow back to normal size after a few minutes. You promptly gather your belongings and think about what you should do next.";
-			wait for any key;
 			now humanity of Player is TempSamSanity;
 			cleanboundmemory;
 			now Trixieexit is 1;
+			LibidoLoss 40;
+			wait for any key;
 			follow the turnpass rule;
 		else:
 			let k be 0;
@@ -1449,10 +1453,12 @@ to SamCockBind:
 				else:
 					say "     Again, you move about within Sam's ball to get their attention. After you struggle for a bit more, Sam says, 'Alright, it seems like you're done with our little experiment. Just give me a few moments and I'll have you out of there.' You hear Sam grunt a few times and then the chamber that you're in jostles about, tossing you and the pool of around. This only lasts for a moment before you're ejected from Sam's ball. As the scientist moans in arousal, you are shot through the tight tunnel that is their cock and out back into the outside world. Thankfully, Sam had the foresight to put a cushion near their dick beforehand, giving you a soft landing while they are occupied with their orgasm, although that doesn't stop you from getting drenched in the seed that you were just bathing in moments ago.";
 					say "     Sam quickly recovers from their release, and they promptly begin cleaning you off. The scientist uses multiple rags to wipe you down and then storing the used cloths in various containers. 'Well, that was fun,' Sam says cheerfully after they finished cleaning you. 'I really enjoyed our time together, and I got plenty of research material to study, thanks to you. The effects of the shrinking shrooms should wear off pretty soon, so feel free to rest here until then.' Sure enough, you grow back to normal size after a few minutes. You promptly gather your belongings and think about what you should do next.";
+					now humanity of Player is TempSamSanity;
 					cleanboundmemory;
 					now Trixieexit is 1;
-					follow the turnpass rule;
+					LibidoLoss 40;
 					wait for any key;
+					follow the turnpass rule;
 				next;
 			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
 				LineBreak;
