@@ -172,6 +172,7 @@ When Play begins:
 	add "Skunk" to infections of SheathedCockList;
 	add "Skunk" to infections of BipedalList;
 	add "Skunk" to infections of TailList;
+	add "Skunk" to infections of TailweaponList;
 	now Name entry is "Skunk"; [Name of your new Monster]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
