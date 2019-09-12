@@ -149,6 +149,7 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	add "Chocolate Lab" to infections of CanineList;
 	add "Chocolate Lab" to infections of FoodList;
 	add "Chocolate Lab" to infections of HumorousList;
 	add "Chocolate Lab" to infections of FurryList;

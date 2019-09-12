@@ -102,7 +102,7 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Wolftaur"; [name of the overall species of the infection, used for children, ...]
-	add "Wolftaur" to infections of FelineList;
+	add "Wolftaur" to infections of CanineList;
 	add "Wolftaur" to infections of FurryList;
 	add "Wolftaur" to infections of NatureList;
 	add "Wolftaur" to infections of MaleList;

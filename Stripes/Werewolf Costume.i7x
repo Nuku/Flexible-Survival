@@ -65,6 +65,7 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Werewolf Costume";
+	add "Werewolf Costume" to infections of CanineList;
 	add "Werewolf Costume" to infections of BodyHorrorList;
 	add "Werewolf Costume" to infections of FurryList;
 	add "Werewolf Costume" to infections of MaleList;

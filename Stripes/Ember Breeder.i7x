@@ -85,6 +85,7 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	add "Ember Breeder" to infections of CanineList;
 	add "Ember Breeder" to infections of ReptileList;
 	add "Ember Breeder" to infections of FurryList;
 	add "Ember Breeder" to infections of MagicalList;
