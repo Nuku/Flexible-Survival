@@ -109,6 +109,7 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Snow Bat"; [name of the overall species of the infection, used for children, ...]
+	add "Snow Bat" to infections of FelineList;
 	add "Snow Bat" to infections of HybridList;
 	add "Snow Bat" to infections of FurryList;
 	add "Snow Bat" to infections of ScienceList;
