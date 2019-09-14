@@ -190,7 +190,7 @@ When Play begins:
 	add "Reptaur" to infections of HermList;
 	add "Reptaur" to infections of TaperedCockList;
 	add "Reptaur" to infections of InternalCockList;
-	add "Reptaur" to infections of BipedalList;
+	add "Reptaur" to infections of TaurList;
 	add "Reptaur" to infections of TailList;
 	add "Reptaur" to infections of TailweaponList;
 	now Name entry is "Reptaur"; [ Infection/Creature name. Capitalized. ]
