@@ -87,6 +87,7 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Harpy"; [name of the overall species of the infection, used for children, ...]
+	add "Harpy" to infections of AvianList;
 	add "Harpy" to infections of HybridList;
 	add "Harpy" to infections of FurryList;
 	add "Harpy" to infections of MythologicalList;
