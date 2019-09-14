@@ -220,6 +220,7 @@ When Play begins:
 	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	add "Hydra Beast" to infections of ReptileList;
 	add "Hydra Beast" to infections of FurryList;
+	add "Hydra Beast" to infections of MagicalList;
 	add "Hydra Beast" to infections of MythologicalList;
 	add "Hydra Beast" to infections of MaleList;
 	add "Hydra Beast" to infections of TaperedCockList;

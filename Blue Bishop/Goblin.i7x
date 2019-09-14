@@ -591,6 +591,7 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Goblin"; [name of the overall species of the infection, used for children, ...]
+	add "Goblin" to infections of MagicalList;
 	add "Goblin" to infections of MythologicalList;
 	add "Goblin" to infections of MaleList;
 	add "Goblin" to infections of BipedalList;
