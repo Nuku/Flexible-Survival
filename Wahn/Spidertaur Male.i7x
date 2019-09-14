@@ -206,6 +206,7 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Spidertaur";
+	add "Spidertaur Male" to infections of InsectList;
 	add "Spidertaur Male" to infections of HybridList;
 	add "Spidertaur Male" to infections of TaurList;
 	add "Spidertaur Male" to infections of MythologicalList;
