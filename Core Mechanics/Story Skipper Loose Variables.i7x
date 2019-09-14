@@ -983,8 +983,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is EricVirginityTaken;
 		-- "erminecolor":
 			now NumberVarValue entry is erminecolor;
-		-- "EweFucked":
-			now NumberVarValue entry is EweFucked;
 		-- "Fancyaroused":
 			now NumberVarValue entry is Fancyaroused;
 		-- "fancyffcount":
@@ -1221,8 +1219,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is gryphoncomforted;
 		-- "GryphonessKnowpreg":
 			now NumberVarValue entry is GryphonessKnowpreg;
-		-- "GryphPlotTracking":
-			now NumberVarValue entry is GryphPlotTracking;
 		-- "gsd_encounters":
 			now NumberVarValue entry is gsd_encounters;
 		-- "gsd_pet":
@@ -2327,8 +2323,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is rabbitsibling;
 		-- "rachelfuck":
 			now NumberVarValue entry is rachelfuck;
-		-- "RamFucked":
-			now NumberVarValue entry is RamFucked;
 		-- "ramlosstick":
 			now NumberVarValue entry is ramlosstick;
 		-- "ramtraining":
@@ -2455,8 +2449,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is shadowy;
 		-- "SharkFountainCounter":
 			now NumberVarValue entry is SharkFountainCounter;
-		-- "shiftable":
-			now NumberVarValue entry is shiftable;
 		-- "sierramem":
 			now NumberVarValue entry is sierramem;
 		-- "SilverToken":
@@ -4672,7 +4664,7 @@ to VariableNumberLoad:
 				-- "erminecolor":
 					now erminecolor is numberVarValue entry;
 				-- "EweFucked":
-					now EweFucked is numberVarValue entry;
+					now Stamina of Mary is numberVarValue entry;
 				-- "Fancyaroused":
 					now Fancyaroused is numberVarValue entry;
 				-- "fancyffcount":
@@ -4909,8 +4901,6 @@ to VariableNumberLoad:
 					now gryphoncomforted is numberVarValue entry;
 				-- "GryphonessKnowpreg":
 					now GryphonessKnowpreg is numberVarValue entry;
-				-- "GryphPlotTracking":
-					now GryphPlotTracking is numberVarValue entry;
 				-- "gsd_encounters":
 					now gsd_encounters is numberVarValue entry;
 				-- "gsd_pet":
@@ -6016,7 +6006,7 @@ to VariableNumberLoad:
 				-- "rachelfuck":
 					now rachelfuck is numberVarValue entry;
 				-- "RamFucked":
-					now RamFucked is numberVarValue entry;
+					now Stamina of Leon is numberVarValue entry;
 				-- "ramlosstick":
 					now ramlosstick is numberVarValue entry;
 				-- "ramtraining":
@@ -6142,7 +6132,7 @@ to VariableNumberLoad:
 				-- "SharkFountainCounter":
 					now SharkFountainCounter is numberVarValue entry;
 				-- "shiftable":
-					now shiftable is numberVarValue entry;
+					now Resolution of Secure Area is numberVarValue entry;
 				-- "sierramem":
 					now sierramem is numberVarValue entry;
 				-- "SilverToken":

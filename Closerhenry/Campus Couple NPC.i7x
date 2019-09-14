@@ -32,6 +32,10 @@ The description of Jadako's Room is "[jadakoroomdesc]".
 To say jadakoroomdesc:
 	say "     Jadako's room is a standard college dorm room. It's got different video game and anime posters hanging throughout, most depicting buff male characters. A television sits on a table with a collection of different DVDs, all of some anime or movie. A large, open glass window is on the other end of the room. Atop its windowsill is a collection of exotic sex toys, all proudly on display. The sheets to Jadako's bed are thrown about, suggesting he doesn't do a great job of staying tidy.";
 
+to connect Jadako's Room:
+	change the south exit of Jadako's Room to Tenvale College Male Dorms;
+	change the north exit of Tenvale College Male Dorms to Jadako's Room;
+
 Section 2 - Declaring Jadako and Joseph
 
 Table of GameCharacterIDs (continued)

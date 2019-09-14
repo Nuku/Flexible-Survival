@@ -276,7 +276,7 @@ Major's Tent is north of Parade Ground.
 The description of Major's Tent is "     You're in a sparely furnished military tent, holding only a field desk, a small table, several chairs and a field bed. Major Padgett, the camp's commander sits at the desk, reading scout reports and other paperwork. On top of the table at one wall of the tent rests a military radio.".
 
 Instead of sniffing Major's Tent:
-	say "     Even in here, the minotaur cum smell is still pretty strong. No wonder, since it's been rutting people in the area right before the tent.";
+	say "     Even in here, the minotaur cum smell is still pretty strong. No wonder, since the big hunk has been rutting people in the area right before the tent.";
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -287,7 +287,18 @@ West of the Parade Ground is the Quartermaster's Tent.
 The description of Quartermaster's Tent is "     You're in the large tent of Camp Bravo's quartermaster. It holds a long row of filled shelves in the back, combined with various crates stacked high and a few large sacks resting on the floor next to the quartermaster's field desk. A medical corpsman is bent over one of them, counting its contents.".
 
 Instead of sniffing Quartermaster's Tent:
-	say "     Even in here, the minotaur cum smell is still pretty strong. No wonder, since it's been rutting people in the area right before the tent.";
+	say "     Even in here, the minotaur cum smell is still pretty strong. No wonder, since the big hunk has been rutting people in the area right before the tent. The lingering aroma seems to have an effect on everyone here too, as everyone seems a fair bit more randy than you'd have expected from professional soldiers.";
+
+Soldier Tents is a room.
+East of the Parade Ground is the Soldier Tents.
+The description of Soldier Tents is "[SoldierTentDesc]".
+
+to say SoldierTentDesc:
+	say "     You're standing between numerous olive-green army tents, set up to house the various soldiers stationed here. Uniformed men and women come and go from their quarters, or hang around in groups talking to each other[if daytimer is night]. Even after sundown, there is a fair bit of activity here, as some shift or other is always on duty[end if].";
+	say "     The area is bordered by the back walls of two office buildings to the north and east, while the south side consists of a stretch city bus. It hasn't been parked there though, but rather must have impacted the building to the east when the driver lost control over it sometime during this whole mess. A little more than teen feet of the bus are actually inside the building, and the vehicle seems completely stuck in the hole it made.";
+
+Instead of sniffing Soldier Tents:
+	say "     Even in here, the minotaur cum smell is still pretty strong. No wonder, since the big hunk has been rutting people just west of here, on the parade ground. The lingering aroma seems to have an effect on everyone here too, as everyone seems a fair bit more randy than you'd have expected from professional soldiers.";
 
 Table of GameCharacterIDs (continued)
 object	name

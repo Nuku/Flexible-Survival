@@ -17,6 +17,12 @@ StewartRelationship is a number that varies.
 CloudKnowledge is a number that varies.
 StewartLocationCounter is a number that varies.
 
+a postimport rule: [bugfixing rules for players that import savegames]
+	if CloudKnowledge > 0: [event resolved the right way, room not connected yet]
+		connect The Clouds;
+	if StewartRelationship is 2: [event resolved the right way, room not connected yet]
+		connect Stewart's Room;
+
 [Room Declaration]
 
 Table of GameRoomIDs (continued)
@@ -29,9 +35,12 @@ The description of The Clouds is "[CloudDesc]"
 to say CloudDesc:
 	say "     Taking a good look around, you notice that all you can really see is clouds for miles. However, it isn't completely empty. No, rather you see groups of flight-capable people hanging out up where you are. Most of them appear to be college students, which is to be expected as this area [italic type]is[roman type] above the belltower. Just like below, you also catch the occasional group having sex out in the open, something that draws your attention before you quickly look away.";
 
+to connect The Clouds:
+	change up exit of College Belltower to The Clouds;
+
 instead of going Northwest from College Walkway Northwest while CloudKnowledge is 0:
 	say "     When you walk forward and reach the belltower you notice a couple winged people taking flight from the ground. Upon closer examination you see that they appear to be flying up to the clouds. You realize that there must be something up there and wonder what you need to do to reach that location. Suddenly though a gryphon approaches you with a smile. 'Hey there, you look confused,' he says in a joyful tone. You give an assent to that statement and ask how to get up there. 'Well, you could just grow wings or perhaps you could find someone with them that could take you up there. I can't cause I'm in a hurry,' he says, apologizing before leaving. When he does you're left with your own thoughts on getting to the clouds.";
-	change up exit of College Belltower to The Clouds;
+	connect The Clouds;
 	now CloudKnowledge is 1;
 
 instead of going Up from College Belltower:
@@ -58,6 +67,10 @@ The description of Stewart's Room is "[StewartRoomDesc]"
 
 to say StewartRoomDesc:
 	say "     The first thing you notice about the harpy-boy's room are the bookshelves that line the walls to the brim. If you hadn't already studied with the guy, you'd think he was a book nut. Instead you know that he's just enthusiastic about his grades. Thankfully, at least for your horny mind, Stewart's bed isn't covered in literary tomes of knowledge. Otherwise that'd make it really difficult to have sex.";
+
+to connect Stewart's Room:
+	change south exit of Tenvale College Male Dorms to Stewart's Room;
+	change north exit of Stewart's Room to Tenvale College Male Dorms;
 
 instead of going south from Tenvale College Male Dorms while Stewart is not in Stewart's Room:
 	say "     Upon touching the door handle you notice it's locked, realizing that Stewart must not be in his room at the moment. You decide to try again later, hoping that he's going to be there.";
@@ -211,8 +224,7 @@ to say StewartStudying:
 				say "     Quite soon after that he grips your head tightly and begins to thrust furiously into your throat. When the sounds of balls slapping against your chin and a dick going in and out of your mouth fill the room you wonder why nobody has noticed you two. But you quickly realize that they probably have but just don't care. So, instead you relish the feeling of the delicious cock entering and leaving your gullet rapidly, moaning whenever you taste his precum. [if Player is not neuter]You begin to masturbate yourself rather determinedly, trying to reach your own orgasm, the gesture making you start to pant as well. [end if]However, soon Stewart's thrusts become much more frantic, which makes you realize that your sex partner is slowly reaching his peak, something that doesn't take too long to actually happen.";
 				say "     With a loud grunt, the harpy boy thrusts one last time before he starts spilling his copious load into your stomach. However, he has just enough cognitive functions to pull back and let the cum pool in your mouth. [if Player is not neuter]Just as your partner finishes, you reach your own orgasm, grunting out loud as you ride it out. [end if]While the two of you would probably love to enjoy your post-coital bliss, you are in a public place so you promptly clean up and slide back into the chair next to him. 'Ah-uh that was nice....' he trails off, blushing rather hard. 'Um, if you want to help me later or something, you can see me in my room, I'm only there late at night though,' Stewart says. You ask him which dorm room his is. 'Oh! My room is immediately south as soon as you enter the building,' he tells you before he quickly gets back to work, you standing up.";
 				now StewartRelationship is 2;
-				change south exit of Tenvale College Male Dorms to Stewart's Room;
-				change north exit of Stewart's Room to Tenvale College Male Dorms;
+				connect Stewart's Room;
 			else:
 				say "     Realizing that you don't have much knowledge on any of those subjects, you decide to ask Stewart for his notes. With a confused look on his face, he hands them over. The harpy boy quickly realizes what you're doing when you start spouting off different questions to him. With a determined look on his face, he begins to answer them with fervor. You do this for each and every subject, though it does get a little hilarious when you reach the anatomy book which seems to be updated with penises from different infections and you notice the cum stains. Stewart blushes and quickly says that you've helped him enough before grabbing the book from your hands. Seeing that you won't get any further with him, you get up from the chair and stand.";
 		else:

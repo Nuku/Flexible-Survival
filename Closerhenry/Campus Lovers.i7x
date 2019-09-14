@@ -9,13 +9,10 @@ Version 2 of Campus Lovers by Closerhenry begins here.
 CampusLoversTrackingVariable is a number that varies.
 CampusLoversProgressTurn is a number that varies.
 CampusCoupleRelationship is a number that varies.
-JadakoRoomConnection is a number that varies.[@Tag:NotSaved]
 
-an everyturn rule:
-	if CampusCoupleRelationship is 1 and JadakoRoomConnection is 0: [event resolved the right way, room not connected yet]
-		change the south exit of Jadako's Room to Tenvale College Male Dorms;
-		change the north exit of Tenvale College Male Dorms to Jadako's Room;
-		now JadakoRoomConnection is 1; [make sure that it connects the room only once]
+a postimport rule: [bugfixing rules for players that import savegames]
+	if CampusCoupleRelationship is 1: [event resolved the right way, room not connected yet]
+		connect Jadako's Room;
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -111,8 +108,7 @@ to CampusLoversEvent:
 			now CampusCoupleRelationship is 1;
 			move Joseph to Jadako's Room;
 			move Jadako to Jadako's Room;
-			change the south exit of Jadako's Room to Tenvale College Male Dorms;
-			change the north exit of Tenvale College Male Dorms to Jadako's Room;
+			connect Jadako's Room;
 		else:
 			LineBreak;
 			say "     As hot as this is, you don't really have time to watch the two fuck. You take care to break away without causing too much noise. As you leave, you hear the two moaning loudly. At least they are having a good time...";
@@ -121,8 +117,7 @@ to CampusLoversEvent:
 			now CampusCoupleRelationship is 1;
 			move Joseph to Jadako's Room;
 			move Jadako to Jadako's Room;
-			change the south exit of Jadako's Room to Tenvale College Male Dorms;
-			change the north exit of Tenvale College Male Dorms to Jadako's Room;
+			connect Jadako's Room;
 	now CampusLoversProgressTurn is turns; [saves the last turn in which their story progressed]
 
 

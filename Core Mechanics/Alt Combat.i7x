@@ -555,7 +555,7 @@ This is the player attack rule:
 	LineBreak;
 	if monsterHP is not currentmonHP:
 		follow the monster injury rule;
-		say "[EnemyNameOrTitle] is [descr].";
+		say "[EnemyCapNameOrTitle] is [descr].";
 	if monsterHP > 0:
 		if BeforeCombat is 0:
 			choose row monstercom from table of Critter Combat;
@@ -786,7 +786,7 @@ to standardretaliate:
 	if monsterhit is true:
 		standardhit;
 	else:
-		say "[EnemyNameOrTitle] misses!";
+		say "[EnemyCapNameOrTitle] misses!";
 	now peppereyes is 0;
 	if HP of the player > 0 and Libido of Player < 110:
 		[wait for any key;]
@@ -835,7 +835,7 @@ to retaliate:
 			follow the monmiss entry; [perform an alternate miss scene, if it exists]
 		if missskip is 0:
 			choose row MonsterID from the Table of Random Critters;
-			say "[EnemyNameOrTitle] misses!";
+			say "[EnemyCapNameOrTitle] misses!";
 	now peppereyes is 0; [pepperspray wears off]
 	if bananapeeled > 0, decrease bananapeeled by 1;
 	if HP of the player > 0 and Libido of Player < 110:
@@ -876,7 +876,7 @@ to standardstrike:
 				now combat bonus is -25;
 		if autoattackmode is 3 and combat bonus < -15, now combat bonus is -15; [***if autopass, min. 30% chance to hit]
 		let the roll be a random number from 1 to 50;
-		say "[EnemyNameOrTitle] rolls 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: [run paragraph on]";
+		say "[EnemyCapNameOrTitle] rolls 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: [run paragraph on]";
 		if the roll plus the combat bonus > 20:
 			now monsterhit is true;
 		else:
@@ -1562,7 +1562,7 @@ this is the intstrike rule:
 				now combat bonus is -25;
 		if autoattackmode is 3 and combat bonus < -15, now combat bonus is -15; [***if autopass, min. 30% chance to hit]
 		let the roll be a random number from 1 to 50;
-		say "[EnemyNameOrTitle] rolls 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: [run paragraph on]";
+		say "[EnemyCapNameOrTitle] rolls 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: [run paragraph on]";
 		if the roll plus the combat bonus > 20:
 			now monsterhit is true;
 		else:

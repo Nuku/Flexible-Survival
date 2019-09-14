@@ -23,7 +23,7 @@ object	name
 Juergen	"Juergen"
 
 Juergen is a man.
-ScaleValue of Juergen is 4. [human sized]
+ScaleValue of Juergen is 4. [human+ sized]
 Body Weight of Juergen is 8. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 Body Definition of Juergen is 9. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]

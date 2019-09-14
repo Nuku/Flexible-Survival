@@ -17,7 +17,7 @@ gettinglee is a number that varies.
 
 the scent of Alex is "[alexscent]".
 
-to AlexIconRestore:
+a postimport rule: [bugfixing rules for players that import savegames]
 	if alexbrunch >= 4:
 		now the icon of Alex is Figure of Alex_icon;
 

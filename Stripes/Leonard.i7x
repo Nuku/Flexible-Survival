@@ -58,7 +58,7 @@ feline_pride_defeat is a truth state that varies. feline_pride_defeat is usually
 
 the scent of Leonard is "The feline smells strong and manly.".
 
-to LeonardIconRestore:
+a postimport rule: [bugfixing rules for players that import savegames]
 	if HP of Leonard >= 6:
 		now the icon of Leonard is the figure of LeonardViolin_icon;
 

@@ -37,7 +37,7 @@ to say demonbrutedesc:
 	else:
 		say "You see a massive beast ahead, with dark purple skin, a frightening face with slits for nostrils, yellow eyes with red irises, and sharp, intimidating teeth. Three matched pairs of horns crown his head, curved and getting smaller front to back. His entire body is gigantic and muscle-bound, and between his legs hangs a thick cock, flaccid for the time being. Behind that, his massive pair of balls dangle, swollen with cum. He also has a long, spade-tipped tail protruding from his tailbone, which is constantly flicking back and forth. He wears nothing but a grin.";
 
-to DemonBruteIconRestore:
+a postimport rule: [bugfixing rules for players that import savegames]
 	if DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7: [cleansed]
 		now the icon of demon brute is Figure of BrutusGood_icon;
 
@@ -1503,7 +1503,7 @@ When Play begins:
 	now body change entry is "your arms and legs begin to grow longer and more muscular. Your chest widens as well.";
 	now skin change entry is "you begin to feel a strange burning sensation. You look down, and realize that your skin has turned a deep shade of purple";
 	now ass change entry is "you feel it becoming tighter, leaner, and more fit. This is followed by a strange feeling at the base of your spine, and then there is a very strange, and painful, burning sensation, as if your flesh is boiling and liquefying. The pain lasts for some time, but, when it finally subsides, you can feel your new, long demon tail sway back and forth behind you, equipped with a spaded tip and everything"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it begins to grow thicker, large bumps sprouting up all across its surface. At first, you think it is some sort of strange disease, but, then you realize that this entire thing is some sort of disease";
+	now cock change entry is "it begins to grow thicker, large bumps sprouting up all across its surface";
 	now str entry is 20;
 	now dex entry is 9;
 	now sta entry is 14;
