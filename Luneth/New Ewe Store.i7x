@@ -301,7 +301,7 @@ instead of conversing the Mary:
 					infect "Ewe";
 					infect "Ewe";
 			else:
-				say "     'Oh, that's OK then, I understand if you have other things you'd rather do, but I'd really like it if you thought about it some more.'";
+				say "     'Oh, that's ok then, I understand if you have other things you'd rather do, but I'd really like it if you thought about it some more.'";
 
 
 Section 3 - Sex w/Leon or Mary
