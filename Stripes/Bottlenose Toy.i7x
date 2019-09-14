@@ -482,6 +482,7 @@ When Play begins:
 	now NewTypeInfection entry is false;
 	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	add "Bottlenose Toy" to infections of AquaticList;
+	add "Bottlenose Toy" to infections of LatexList;
 	add "Bottlenose Toy" to infections of FurryList;
 	add "Bottlenose Toy" to infections of ToyList;
 	add "Bottlenose Toy" to infections of FemaleList;
