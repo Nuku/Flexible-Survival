@@ -37,7 +37,7 @@ to say BeatCopperDragoness:
 	if inasituation is true:
 		say "     "; [dealt with at the event source]
 	else:
-		say "     Unable to withstand your blows any longer, the dragoness slumps over in defeat. Given the winged beast's massive size, it would be difficult for you to effectively have your way with the fallen dragoness[if scalevalue of Player > 4], even for your sizeable stature[end if]. Still, that doesn't mean that you can't play with the dragoness.";
+		say "     Unable to withstand your blows any longer, the dragoness slumps over in defeat. Given the winged beast's massive size, it would be difficult for you to effectively have your way with the fallen dragoness[if scalevalue of Player > 4], even for your sizable stature[end if]. Still, that doesn't mean that you can't play with the dragoness.";
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		[]

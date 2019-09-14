@@ -124,7 +124,7 @@ Instead of resolving a Centaur Gangbang:
 						now ThomasSaved is turns;
 						now Resolution of Centaur Gangbang is 3; [told Thomas he is a herm]
 					else if calcnumber is 2:[lie about it]
-						say "     You tell Thomas you don't see anything special about him - well, except being a centaur stallion. Visibly relieved, Thomas says 'Ok, thanks. I guess I'm just not used to this new body.' Turning his upper body, he takes a look at his equine body. 'Damn. Looking like this, I can't even get away out of the city anymore.' He growls to himself. 'But I'll show those fuckers - since they made me a centaur, let's see how they like it when I use this bad-boy on 'their' mares.' His black horsecock emerges from its sheath, dangling below his equine body and dribbling a bit of pre-cum.";
+						say "     You tell Thomas you don't see anything special about him - well, except being a centaur stallion. Visibly relieved, Thomas says 'OK, thanks. I guess I'm just not used to this new body.' Turning his upper body, he takes a look at his equine body. 'Damn. Looking like this, I can't even get away out of the city anymore.' He growls to himself. 'But I'll show those fuckers - since they made me a centaur, let's see how they like it when I use this bad-boy on 'their' mares.' His black horsecock emerges from its sheath, dangling below his equine body and dribbling a bit of pre-cum.";
 						now HP of Thomas is 51;
 						move Thomas to Dry Plains;
 						now Resolution of Centaur Gangbang is 4; [didn't tell Thomas he is a herm (and he becomes a male)]
@@ -444,7 +444,7 @@ to say ThomasTalk7:
 		say "     'Great! Let's go.' Putting the soda into a backpack, Thomas leads you out into the plains.";
 		say "[ThomasTalk8]";
 	else:
-		say "     'Ok, later then - let's hope the prairie dog diggers are willing to wait...'";
+		say "     'OK, later then - let's hope the prairie dog diggers are willing to wait...'";
 
 to say ThomasTalk8:
 	if graphics is true:
@@ -505,7 +505,7 @@ to say ThomasTalk9:
 	if graphics is true:
 		project the figure of Thomas_face_icon;
 	say "     Thomas leads you to a rather unremarkable spot out in the plains. There's nothing there really, except a few mid-sized rocks. Wondering what you're doing here, you walk a few steps, looking left and right before Thomas suddenly calls 'Stop! You're almost on the trap.' Pulling you back a step, he says 'They really did a good job, didn't they? Barely anything noticeable, except when you know exactly where to look. See - it starts at that rock there and goes all the way over here.' Watching the ground closely, it still takes a moment until you spot the edges of the trap.";
-	say "     'Ok, here's what we'll do. I'll get their attention and while they chase me, you can get their mare and run this way. And when they notice that you're taking their fucktoy away, they'll follow you and fall into the trap.'";
+	say "     'OK, here's what we'll do. I'll get their attention and while they chase me, you can get their mare and run this way. And when they notice that you're taking their fucktoy away, they'll follow you and fall into the trap.'";
 	WaitLineBreak;
 	say "     The two of you make your way towards the centaurs['] camp, splitting up when you see it in the distance. Thomas angles to the left while you sneak closer through the grass to the right. You hear Thomas's voice shout 'Hey assholes, you're even uglier than I remembered.' followed by shouts and galloping hooves. That's your chance... you rush into the midst of the small camp and find yourself face with a wide-eyed centaur mare. 'Come on - follow me. It's time to get out of here!' you tell her, and she readily complies - you're not quite sure if it's out of the desire to be freed, or just the habit of following orders.";
 	say "     Running out of and away from the small encampment with Sandy by your side, you hear some shouts and the beating of hooves behind you. Not wasting any time to look back, you just keep running and soon the marker rocks for the trap come into sight. Taking care not to cross the invisible line, you guide Sandy past the trap, then angle back behind it. There's a loud crashing noise as your followers try to take the shortest way to follow you and run right into the trap.";
@@ -630,7 +630,7 @@ Instead of fucking the Thomas:
 		say "ERROR-Thomas-100B: He should be avoiding the player now and not be seen again.";
 	else:
 		if (lastfuck of Thomas - turns < 5):
-			say "     Thomas says 'Sorry I'm still worn out from last time. Give me some space, ok?'";
+			say "     Thomas says 'Sorry I'm still worn out from last time. Give me some space, OK?'";
 		else:
 			say "[ThomasSexMenu]";
 

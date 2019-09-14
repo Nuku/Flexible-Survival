@@ -94,7 +94,7 @@ to say Stag wins:
 	say "     Looking down at you, the stag says 'I don't want to see you here again, asshole. Fuck off.' After giving you a last hostile stare, he walks off and leaves you lying in the dust.";
 
 to say Stag loses:
-	say "     Wiping a trickle of blood from his split lip, the stag takes a step back and says 'Ok, ok - you win. Do with me what you want, but I'll never show you where Lea and the others are.'";
+	say "     Wiping a trickle of blood from his split lip, the stag takes a step back and says 'OK, OK - you win. Do with me what you want, but I'll never show you where Lea and the others are.'";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -725,7 +725,7 @@ instead of fucking Lea:
 	if HP of Mike < 5:
 		say "     Mike roughly shoves you aside as you try to fondle Lea. 'Get a hold of yourself - can't you see she's hurt?'";
 	else if HP of Mike > 4:
-		say "     Mike puts a hand on your shoulder and pulls you aside. 'Lea is still recovering. She needs some rest, ok? Besides... she's mine - who did you think put those puppies in her belly?'";
+		say "     Mike puts a hand on your shoulder and pulls you aside. 'Lea is still recovering. She needs some rest, OK? Besides... she's mine - who did you think put those puppies in her belly?'";
 
 instead of conversing Lea:
 	if HP of Mike < 5:

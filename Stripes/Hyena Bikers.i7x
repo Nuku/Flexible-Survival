@@ -669,7 +669,7 @@ to say grantbitchsex5:
 
 to say grantfsex:
 	say "     The hyena male kisses you roughly, sliding his long tongue into your mouth even as he leads you over to a small pile of sheets beside the sheltered stairwell. He lowers you down onto them while his paws roam over your body, pulling off the last of your clothes before moving to fondle your breasts. He brings his muzzle to your bosom and licks your nipples before suckling playfully at them.";
-	say "     His paws move to your legs and spread them as he lines up his cock. You eagerly wrap them around his back, pulling him down into you as soon as he's in position. You moan loudly at the sudden penetration of his sizeable member, loving the feel of so much meat stuffed into you as he starts thrusting into you hard and fast.";
+	say "     His paws move to your legs and spread them as he lines up his cock. You eagerly wrap them around his back, pulling him down into you as soon as he's in position. You moan loudly at the sudden penetration of his sizable member, loving the feel of so much meat stuffed into you as he starts thrusting into you hard and fast.";
 	say "[grantstretch]";
 	[WaitLineBreak]
 	say "     You grip him tightly, rocking your hips up into each thrust the studly hyena makes. Your arms stroke his muscular back, feeling the strength of this impressive male fucking you. His tongue and lips keep at your nipples. He uses one paw to help support his weight while the other grips your ass, squeezing it as he pounds into you.";
@@ -684,7 +684,7 @@ to say grantfsex:
 
 to say grantmtop:
 	say "     The hyena male kisses you roughly, sliding his long tongue into your mouth even as he leads you over to a small pile of sheets beside the sheltered stairwell. He lowers you down onto all fours on them while his paws roam over your body, pulling off the last of your clothes before moving to fondle your ass and cock. He brings his muzzle to the back of your neck as he mounts you.";
-	say "     His paws move to your legs and spread them as he lines up his cock. You steady yourself with a soft moan of eagerness, pressing back as soon as he's in position. You whimper softly at the sudden penetration of his sizeable member. But it feels so good, thick and hard pressing into your tight rump, pressing delightfully against your prostate.";
+	say "     His paws move to your legs and spread them as he lines up his cock. You steady yourself with a soft moan of eagerness, pressing back as soon as he's in position. You whimper softly at the sudden penetration of his sizable member. But it feels so good, thick and hard pressing into your tight rump, pressing delightfully against your prostate.";
 	[WaitLineBreak]
 	say "     You dig your paws at the bedding the big male fucks you hard and fast, leaking a steady flow of precum into your bottom to get you slick. You can feel his muscular chest against your back as he nibbles and nips at your nape and ears. He uses one paw to help support his weight while the other grips your [CockName of Player] cock, squeezing it as he pounds into you.";
 	say "     'Mmm... you're such a nice, tight fuck. So smooth and tight around my cock, [if matriarchdefeated is 1]you eager slut[else]my lovely[end if],' he rumbles before taking the nape of your neck into his muzzle and growling softly. You tilt your head back and pant in pleasure, enjoying the lustful fucking you're getting.";

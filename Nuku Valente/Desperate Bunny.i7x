@@ -63,7 +63,7 @@ Instead of Resolving a Needy Rabbit Girl:
 				say "     [sexwithSandra]";
 				say "[bold type]You now know how to navigate to the rabbit den[roman type].";
 			else:
-				say "     She looks clearly disappointed and crosses her arms. 'I thought you were the kind of man to help me, but I guess I was wrong. Or maybe you're shy? Look, you're nice. Here's my address, ok? Come visit any time.";
+				say "     She looks clearly disappointed and crosses her arms. 'I thought you were the kind of man to help me, but I guess I was wrong. Or maybe you're shy? Look, you're nice. Here's my address, OK? Come visit any time.";
 			now Rabbit den is known;
 			increase score by 1;
 			now Needy Rabbit Girl is resolved;
@@ -164,7 +164,7 @@ to say sandtalk:
 		if rabbitsibling > 0 and a random chance of 1 in 10 succeeds:
 			say "     '[one of]If calling you [sangr] is no longer feels right[or]Remember, if you ever want me to stop calling you [sangr][stopping], just make a [bold type]Request[roman type].";
 		else:
-			say "     [one of]'Did I mention my name is Sandra yet? I can be sometimes a ditz about that.'[or]'It's so nice having someone around to talk with.'[or]'Do you think someone will come rescue us?'[or]'I hope my rabbit is ok. I mean, yeah, he did kind of bite me and turn me into a crazy rabbit lady, but he's still my pet.'[or]'You smell nice. God that sounded weird, sorry.'[or]'Hello there!'[at random]";
+			say "     [one of]'Did I mention my name is Sandra yet? I can be sometimes a ditz about that.'[or]'It's so nice having someone around to talk with.'[or]'Do you think someone will come rescue us?'[or]'I hope my rabbit is OK. I mean, yeah, he did kind of bite me and turn me into a crazy rabbit lady, but he's still my pet.'[or]'You smell nice. God that sounded weird, sorry.'[or]'Hello there!'[at random]";
 
 to sangenderquery:
 	say "     'Oh, thank you!' She seems very giddy over you agreeing to these terms. 'Alright, so";
@@ -224,7 +224,7 @@ to say sexwithSandra:
 	else if rabbitsibling > 0 and rabbitsibling < 5:
 		say "[sandrasex2]";
 	else if Player is neuter:
-		say "     'Uh, hon? No offense or anything, but you have nothing to play with. Fucking someone without any of that just feels weird to me, ok? Sorry.'";
+		say "     'Uh, hon? No offense or anything, but you have nothing to play with. Fucking someone without any of that just feels weird to me, OK? Sorry.'";
 	else if HP of Sandra is 0 and player is male:
 		say "[sandrasex_leadin]";
 		say "[sandrasex1]";
@@ -387,7 +387,7 @@ to say sandrasex1: [fuck the bunny]
 				increase score by 5;
 			else:
 				if Sandra is in rabbit den:
-					say "     Finished and getting dressed, you feel a hand tugging at you and turn to Sandra. 'Look... Being a rabbit makes me kind of nervous, but I'm not infectious, right? I mean, god that was a stupid way to put it. I like you, ok? I want to come with you, please?'";
+					say "     Finished and getting dressed, you feel a hand tugging at you and turn to Sandra. 'Look... Being a rabbit makes me kind of nervous, but I'm not infectious, right? I mean, god that was a stupid way to put it. I like you, OK? I want to come with you, please?'";
 					say "     Do you let her?";
 					if Player consents:
 						add "water bottle" to invent of bunker;
@@ -403,7 +403,7 @@ to say sandrasex1: [fuck the bunny]
 						now Rabbit Den is not known;
 						follow turnpass rule;
 					else:
-						say "     'Oh... well... ok, well, you know where to find me.' She sighs out and settles on her cot, watching you.";
+						say "     'Oh... well... OK, well, you know where to find me.' She sighs out and settles on her cot, watching you.";
 			now lastfuck of Sandra is turns;
 		[try looking;]
 
@@ -565,7 +565,7 @@ to say sandrasex4:
 	now lastfuck of Sandra is turns;
 
 to say sandrasex5: [Post-transformation toy sex]
-	say "     Offering to have some fun with the carrot-shaped toy, the rabbit girl grins as she goes to fetch it, quickly returning with the sizeable rod.";
+	say "     Offering to have some fun with the carrot-shaped toy, the rabbit girl grins as she goes to fetch it, quickly returning with the sizable rod.";
 	say "     '[one of]Oh boy[or]Mmm[or]Yes[or]Great[at random], [one of]let's get to planting this thing[or]time for some fun[or]time to bury the carrot[at random],[if rabbitsibling > 5] little[end if] [sangr]!' Giddy with anticipation, she ";
 	if rabbitsibling is 5:
 		say "hands you the thing before laying down to expose the excited, already-slick lips of her oversized cunt before you.";

@@ -5,7 +5,7 @@ Sarah by Wahn begins here.
 [ Expansion by Glitch                              ]
 
 [ SarahCured                                                                         ]
-[ 8: player told Sarah he wants to fuck, she doesn't want to be knocked up, anal ok  ]
+[ 8: player told Sarah he wants to fuck, she doesn't want to be knocked up, anal OK  ]
 [ 7: Sarah squashed the player's hopes for vaginal sex, and is about to offer anal   ]
 [ 6: Sarah is okay with player dominant oral sex                                     ]
 [ 5: Sarah is okay with oral sex (centered on her) with the player                   ]
