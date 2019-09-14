@@ -184,6 +184,7 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Reptaur"; [name of the overall species of the infection, used for children, ...]
+	add "Reptaur" to infections of ReptileList;
 	add "Reptaur" to infections of HybridList;
 	add "Reptaur" to infections of FurryList;
 	add "Reptaur" to infections of HermList;
