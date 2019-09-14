@@ -35,6 +35,7 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	add "Vulpogryph" to infections of VulpineList;
 	add "Vulpogryph" to infections of HybridList;
 	add "Vulpogryph" to infections of FurryList;
 	add "Vulpogryph" to infections of BluntCockList;
