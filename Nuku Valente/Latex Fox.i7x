@@ -95,6 +95,7 @@ When Play begins:
 	add "Latex Fox" to infections of LatexList;
 	add "Latex Fox" to infections of MaleList;
 	add "Latex Fox" to infections of TaperedCockList;
+	add "Latex Fox" to infections of KnottedCockList;
 	add "Latex Fox" to infections of SheathedCockList;
 	add "Latex Fox" to infections of BipedalList;
 	add "Latex Fox" to infections of TailList;

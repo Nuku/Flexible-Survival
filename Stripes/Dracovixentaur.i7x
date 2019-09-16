@@ -143,6 +143,7 @@ When Play begins:
 	add "Dracovixentaur" to infections of NatureList;
 	add "Dracovixentaur" to infections of HermList;
 	add "Dracovixentaur" to infections of TaperedCockList;
+	add "Dracovixentaur" to infections of KnottedCockList;
 	add "Dracovixentaur" to infections of SheathedCockList;
 	add "Dracovixentaur" to infections of TaurList;
 	add "Dracovixentaur" to infections of FlightList;

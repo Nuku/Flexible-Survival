@@ -35,6 +35,7 @@ When Play begins:
 	add "Arctic Fox" to infections of NatureList;
 	add "Arctic Fox" to infections of MaleList;
 	add "Arctic Fox" to infections of BarbedCockList;
+	add "Arctic fox" to infections of KnottedCockList;
 	add "Arctic Fox" to infections of SheathedCockList;
 	add "Arctic Fox" to infections of BipedalList;
 	add "Arctic Fox" to infections of TailList;

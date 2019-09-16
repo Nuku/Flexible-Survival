@@ -91,6 +91,7 @@ When Play begins:
 	add "Ember Breeder" to infections of MagicalList;
 	add "Ember Breeder" to infections of HermList;
 	add "Ember Breeder" to infections of BarbedCockList;
+	add "Ember Breeder" to infections of KnottedCockList;
 	add "Ember Breeder" to infections of SheathedCockList;
 	add "Ember Breeder" to infections of BipedalList;
 	add "Ember Breeder" to infections of TailList;
