@@ -113,6 +113,7 @@ When Play begins:
 	add "Ebonflame Dragator" to infections of FeralList;
 	add "Ebonflame Dragator" to infections of MythologicalList;
 	add "Ebonflame Dragator" to infections of HermList;
+	add "Ebonflame Dragator" to infections of BarbedCockList;
 	add "Ebonflame Dragator" to infections of TaperedCockList;
 	add "Ebonflame Dragator" to infections of InternalCockList;
 	add "Ebonflame Dragator" to infections of BipedalList;

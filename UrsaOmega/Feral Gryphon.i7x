@@ -170,6 +170,7 @@ When Play begins:
 	add "Feral Gryphon" to infections of FurryList;
 	add "Feral Gryphon" to infections of MythologicalList;
 	add "Feral Gryphon" to infections of MaleList;
+	add "Feral Gryphon" to infections of BarbedCockList;
 	add "Feral Gryphon" to infections of KnottedCockList;
 	add "Feral Gryphon" to infections of SheathedCockList;
 	add "Feral Gryphon" to infections of QuadrupedalList;

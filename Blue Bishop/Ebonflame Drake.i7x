@@ -89,6 +89,7 @@ When Play begins:
 	add "Ebonflame Drake" to infections of FurryList;
 	add "Ebonflame Drake" to infections of MythologicalList;
 	add "Ebonflame Drake" to infections of HermList;
+	add "Ebonflame Drake" to infections of BarbedCockList;
 	add "Ebonflame Drake" to infections of TaperedCockList;
 	add "Ebonflame Drake" to infections of InternalCockList;
 	add "Ebonflame Drake" to infections of BipedalList;

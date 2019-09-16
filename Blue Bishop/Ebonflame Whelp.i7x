@@ -108,6 +108,7 @@ When Play begins:
 	add "Ebonflame Whelp" to infections of FurryList;
 	add "Ebonflame Whelp" to infections of MythologicalList;
 	add "Ebonflame Whelp" to infections of MaleList;
+	add "Ebonflame Whelp" to infections of BarbedCockList;
 	add "Ebonflame Whelp" to infections of TaperedCockList;
 	add "Ebonflame Whelp" to infections of InternalCockList;
 	add "Ebonflame Whelp" to infections of BipedalList;

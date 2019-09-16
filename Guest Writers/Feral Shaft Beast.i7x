@@ -49,6 +49,7 @@ When Play begins:
 	now Species Name entry is "Feral Shaft Beast"; [name of the overall species of the infection, used for children, ...]
 	add "Feral Shaft Beast" to infections of BodyHorrorList;
 	add "Feral Shaft Beast" to infections of HermList;
+	add "Feral Shaft Beast" to infections of BarbedCockList;
 	add "Feral Shaft Beast" to infections of QuadrupedalList;
 	add "Feral Shaft Beast" to infections of TailList;
 	add "Feral Shaft Beast" to infections of TailweaponList;

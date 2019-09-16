@@ -49,6 +49,7 @@ When Play begins:
 	now Species Name entry is "Anthro Shaft Beast"; [name of the overall species of the infection, used for children, ...]
 	add "Anthro Shaft Beast" to infections of BodyHorrorList;
 	add "Anthro Shaft Beast" to infections of HermList;
+	add "Anthro Shaft Beast" to infections of BarbedCockList;
 	add "Anthro Shaft Beast" to infections of BipedalList;
 	add "Anthro Shaft Beast" to infections of TailList;
 	add "Anthro Shaft Beast" to infections of TailWeaponList;
