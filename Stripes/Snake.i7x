@@ -232,6 +232,7 @@ When Play begins:
 	add "Snake" to infections of FurryList;
 	add "Snake" to infections of NatureList;
 	add "Snake" to infections of TaperedCockList;
+	add "Snake" to infections of InternalCockList;
 	add "Snake" to infections of SerpentineList;
 	add "Snake" to infections of FeralmindList;
 	add "Snake" to infections of TailList;

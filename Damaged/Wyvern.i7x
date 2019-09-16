@@ -682,6 +682,7 @@ When Play begins:
 	add "Wyvern" to infections of MaleList;
 	add "Wyvern" to infections of BarbedCockList;
 	add "Wyvern" to infections of SheathedCockList;
+	add "Wyvern" to infections of InternalCockList;
 	add "Wyvern" to infections of BipedalList;
 	add "Wyvern" to infections of FlightList;
 	add "Wyvern" to infections of TailList;
