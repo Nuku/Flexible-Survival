@@ -95,6 +95,7 @@ When Play begins:
 	add "Ebonflame Drake" to infections of BipedalList;
 	add "Ebonflame Drake" to infections of FlightList;
 	add "Ebonflame Drake" to infections of TailList;
+	add "Ebonflame Drake" to infections of FirebreathList;
 	add "Ebonflame Drake" to infections of TailweaponList;
 	now Name entry is "Ebonflame Drake";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]

@@ -274,6 +274,7 @@ When Play begins:
 	add "Fire Sprite" to infections of NatureList;
 	add "Fire Sprite" to infections of BipedalList;
 	add "Fire Sprite" to infections of FlightList;
+	add "Fire Sprite" to infections of FirebreathList;
 	now Name entry is "Fire Sprite"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
@@ -323,7 +324,7 @@ When Play begins:
 	now non-infectious entry is false;
 	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own] [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
-	now altcombat entry is "FireSprite"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "firebreath"; [ Row used to designate any special combat features, "default" for standard combat. ]
 	now BannedStatus entry is false;
 
 [

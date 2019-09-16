@@ -719,6 +719,7 @@ When Play begins:
 	add "Feral Sea Dragon" to infections of InternalCockList;
 	add "Feral Sea Dragon" to infections of QuadrupedalList;
 	add "Feral Sea Dragon" to infections of TailList;
+	add "Feral Sea Dragon" to infections of FirebreathList;
 	add "Feral Sea Dragon" to infections of TailweaponList;
 	now Name entry is "Feral Sea Dragon";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]

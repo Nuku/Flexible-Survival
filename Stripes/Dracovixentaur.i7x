@@ -148,6 +148,7 @@ When Play begins:
 	add "Dracovixentaur" to infections of TaurList;
 	add "Dracovixentaur" to infections of FlightList;
 	add "Dracovixentaur" to infections of TailList;
+	add "Dracovixentaur" to infections of FirebreathList;
 	add "Dracovixentaur" to infections of TailweaponList;
 	now Name entry is "Dracovixentaur"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]

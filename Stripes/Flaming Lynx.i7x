@@ -153,6 +153,7 @@ When Play begins:
 	add "Flaming Lynx" to infections of SheathedCockList;
 	add "Flaming Lynx" to infections of BipedalList;
 	add "Flaming Lynx" to infections of TailList;
+	add "Flaming Lynx" to infections of FirebreathList;
 	now Name entry is "Flaming Lynx"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]

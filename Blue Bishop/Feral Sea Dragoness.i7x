@@ -527,6 +527,7 @@ When Play begins:
 	add "Feral Sea Dragoness" to infections of InternalCockList;
 	add "Feral Sea Dragoness" to infections of QuadrupedalList;
 	add "Feral Sea Dragoness" to infections of TailList;
+	add "Feral Sea Dragoness" to infections of FirebreathList;
 	add "Feral Sea Dragoness" to infections of TailweaponList;
 	now Name entry is "Feral Sea Dragoness";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
