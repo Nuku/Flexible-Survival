@@ -36,11 +36,6 @@ VoreList is a tag.
 The player has a list of text called WardList.
 The player has a list of text called BanList.
 
-when play begins:
-	add { "Bovine", "Behemoth", "Cerberus", "Ebonflame Dragator", "Ebonflame Whelp", "Feral Cheetah", "Feral Sea Dragon", "Feral Sea Dragoness", "Feral Gryphon", "Feral Shaft Beast", "Feral Wolf", "Flaming Lynx", "Friendship Pony", "Hydra Beast", "Latex Fox", "Latex Wolf", "Manticore", "Peculiar Dragon", "Pegasus", "Quilled Tousky", "Sabretooth", "Shadow Beast Male", "Sierrasaur", "Snake", "Wyvern", "Yamato Dragon", "Yamato Dragoness" } to infections of FeralList;
-	add { "Demon Brute" } to infections of DemonList;
-	add { "Mothgirl", "Smooth Collie Shemale" } to infections of TransList;
-
 to new ban menu:
 	let FlagList be { "Body Horror", "Furry", "Males", "Females", "Transgender", "Hermaphrodite", "Humorous", "Humanoid", "Hellspawn", "Feral"};
 	let TagList be {"Noncon", "Incest", "Vore", "Cockvore", "Mindcontrol"};

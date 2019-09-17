@@ -79,6 +79,7 @@ When Play begins:
 	add "Mothgirl" to infections of FurryList;
 	add "Mothgirl" to infections of NatureList;
 	add "Mothgirl" to infections of FemaleList;
+	add "Mothgirl" to infections of TransList;
 	add "Mothgirl" to infections of BipedalList;
 	add "Mothgirl" to infections of FlightList;
 	now Name entry is "Mothgirl"; [Name of your new Monster]
