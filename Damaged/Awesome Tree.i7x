@@ -93,6 +93,7 @@ When Play begins:
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Human"; [name of the overall species of the infection, used for children, ...]
 	add "Pod Person" to infections of HumanList;
+	add "Pod Person" to infections of HumorousList;
 	add "Pod Person" to infections of NatureList;
 	add "Pod Person" to infections of PlantList;
 	add "Pod Person" to infections of HermList;

@@ -484,6 +484,7 @@ When Play begins:
 	add "Bottlenose Toy" to infections of AquaticList;
 	add "Bottlenose Toy" to infections of LatexList;
 	add "Bottlenose Toy" to infections of FurryList;
+	add "Bottlenose Toy" to infections of HumorousList;
 	add "Bottlenose Toy" to infections of ToyList;
 	add "Bottlenose Toy" to infections of FemaleList;
 	add "Bottlenose Toy" to infections of BipedalList;

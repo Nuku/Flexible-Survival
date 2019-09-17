@@ -37,8 +37,6 @@ The player has a list of text called WardList.
 The player has a list of text called BanList.
 
 when play begins:
-	add { "Cock Cannon", "Feral Shaft Beast" } to infections of BodyHorrorList;
-	add { "Pod Person", "Bottlenose Toy", "Cock Cannon", "Quilled Tousky" } to infections of HumorousList;
 	add { "Ember Breeder", "Brown Bear Female", "Black Equinoid", "Bovine", "Chinchilla", "Deer", "Doberman Bitch", "Ebonflame Drake", "Ewe", "Feline", "Husky Bitch", "Fruit Bat", "German Shepherd Male", "Harpy", "Hyena Herm", "Dolphin Herm", "Blue Gryphon Herm", "Killer Whale", "Lizard Girl", "Painted Wolf Herm", "Shark Herm", "Pit bull", "Platypus", "Ram", "Red Kangaroo", "Sea Otter", "Gator Herm", "Smooth Collie Shemale", "Skunk", "Slut Rat", "Snow Bat", "Trash Coon", "Wildcat" } to infections of FurryList;
 	add { "Bovine", "Cock Cannon", "Demon Brute", "Feline", "Felinoid", "Feral Mutt", "Feral Sea Dragon", "Fruit Bat", "German Shepherd Male", "Junkman", "Killer Whale", "Latex Fox", "Latex Wolf", "Liquidshifter", "Ram", "Platypus", "Quilled Tousky", "Sandman", "Sea Otter", "Skunk", "Tentacle Horror" } to infections of MaleList;
 	add { "Ember Breeder", "Black Equinoid", "Deer", "Ebonflame Drake", "Hyena Herm", "Dolphin Herm", "Blue Gryphon Herm", "Painted Wolf Herm", "Panther Taur", "Parasitic Plant", "Shark Herm", "Gator Herm", "Sea Otter", "Slut Rat", "Spidergirl", "Wildcat" } to infections of HermList;
