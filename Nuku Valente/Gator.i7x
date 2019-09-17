@@ -106,6 +106,7 @@ When Play begins:
 	add "Gator Herm" to infections of TaperedCockList;
 	add "Gator Herm" to infections of SheathedCockList;
 	add "Gator Herm" to infections of BipedalList;
+	add "Gator Herm" to infections of SwimList;
 	add "Gator Herm" to infections of TailList;
 	add "Gator Herm" to infections of TailweaponList;
 	now Name entry is "Gator Herm"; [Name of your new Monster]

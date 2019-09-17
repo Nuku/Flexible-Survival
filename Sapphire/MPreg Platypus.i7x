@@ -91,6 +91,7 @@ When Play begins:
 	add "Platypus" to infections of BarbedCockList;
 	add "Platypus" to infections of SheathedCockList;
 	add "Platypus" to infections of BipedalList;
+	add "Platypus" to infections of SwimList;
 	add "Platypus" to infections of TailList;
 	add "Platypus" to infections of MpregList;
 	now Name entry is "Platypus";

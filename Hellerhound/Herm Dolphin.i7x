@@ -140,6 +140,7 @@ When Play begins:
 	add "Dolphin Herm" to infections of PrehensileCocklist;
 	add "Dolphin Herm" to infections of InternalCockList;
 	add "Dolphin Herm" to infections of BipedalList;
+	add "Dolphin Herm" to infections of SwimList;
 	add "Dolphin Herm" to infections of TailList;
 	add "Dolphin Herm" to infections of TailweaponList;
 	now Name entry is "Dolphin Herm"; [Name of your new Monster]
