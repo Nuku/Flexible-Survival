@@ -74,11 +74,11 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
-	add "GGG" to infections of FurryList;
-	add "GGG" to infections of NatureList;
-	add "GGG" to infections of HermList;
-	add "GGG" to infections of QuadrupedalList;
-	add "GGG" to infections of TailList;
+	add "Mammoth" to infections of FurryList;
+	add "Mammoth" to infections of NatureList;
+	add "Mammoth" to infections of HermList;
+	add "Mammoth" to infections of QuadrupedalList;
+	add "Mammoth" to infections of TailList;
 	now Name entry is "Mammoth"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
