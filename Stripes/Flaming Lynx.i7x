@@ -148,6 +148,7 @@ When Play begins:
 	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	add "Flaming Lynx" to infections of FelineList;
 	add "Flaming Lynx" to infections of FurryList;
+	add "Flaming Lynx" to infections of FeralList;
 	add "Flaming Lynx" to infections of MaleList;
 	add "Flaming Lynx" to infections of BarbedCockList;
 	add "Flaming Lynx" to infections of SheathedCockList;

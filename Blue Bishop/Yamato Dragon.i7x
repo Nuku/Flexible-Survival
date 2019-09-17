@@ -890,6 +890,7 @@ When Play begins:
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Yamato Dragon"; [name of the overall species of the infection, used for children, ...]
 	add "Yamato Dragon" to infections of ReptileList;
+	add "Yamato Dragon" to infections of FeralList;
 	add "Yamato Dragon" to infections of MythologicalList;
 	add "Yamato Dragon" to infections of FemaleList;
 	add "Yamato Dragon" to infections of BarbedCockList;

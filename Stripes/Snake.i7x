@@ -230,6 +230,7 @@ When Play begins:
 	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	add "Snake" to infections of ReptileList;
 	add "Snake" to infections of FurryList;
+	add "Snake" to infections of FeralList;
 	add "Snake" to infections of NatureList;
 	add "Snake" to infections of TaperedCockList;
 	add "Snake" to infections of InternalCockList;

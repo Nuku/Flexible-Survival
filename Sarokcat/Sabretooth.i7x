@@ -35,6 +35,7 @@ When Play begins:
 	now Species Name entry is "Sabretooth"; [name of the overall species of the infection, used for children, ...]
 	add "Sabretooth" to infections of FelineList;
 	add "Sabretooth" to infections of FurryList;
+	add "Sabretooth" to infections of FeralList;
 	add "Sabretooth" to infections of HistoricalList;
 	add "Sabretooth" to infections of NatureList;
 	add "Sabretooth" to infections of FemaleList;

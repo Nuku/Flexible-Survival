@@ -408,6 +408,7 @@ When Play begins:
 	now Species Name entry is "Sierrasaur"; [name of the overall species of the infection, used for children, ...]
 	add "Sierrasaur" to infections of ReptileList;
 	add "Sierrasaur" to infections of FurryList;
+	add "Sierrasaur" to infections of FeralList;
 	add "Sierrasaur" to infections of HistoricalList;
 	add "Sierrasaur" to infections of NatureList;
 	add "Sierrasaur" to infections of HermList;

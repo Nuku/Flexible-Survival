@@ -48,6 +48,7 @@ When Play begins:
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Feral Shaft Beast"; [name of the overall species of the infection, used for children, ...]
 	add "Feral Shaft Beast" to infections of BodyHorrorList;
+	add "Feral Shaft Beast" to infections of FeralList;
 	add "Feral Shaft Beast" to infections of HermList;
 	add "Feral Shaft Beast" to infections of BarbedCockList;
 	add "Feral Shaft Beast" to infections of QuadrupedalList;

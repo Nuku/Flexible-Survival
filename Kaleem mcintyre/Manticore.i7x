@@ -94,6 +94,7 @@ When Play begins:
 	add "Manticore" to infections of FelineList;
 	add "Manticore" to infections of HybridList;
 	add "Manticore" to infections of FurryList;
+	add "Manticore" to infections of FeralList;
 	add "Manticore" to infections of MythologicalList;
 	add "Manticore" to infections of HermList;
 	add "Manticore" to infections of BarbedCockList;

@@ -106,6 +106,7 @@ When Play begins:
 	now Species Name entry is "Ebonflame Dragon"; [name of the overall species of the infection, used for children, ...]
 	add "Ebonflame Whelp" to infections of ReptileList;
 	add "Ebonflame Whelp" to infections of FurryList;
+	add "Ebonflame Whelp" to infections of FeralList;
 	add "Ebonflame Whelp" to infections of MythologicalList;
 	add "Ebonflame Whelp" to infections of MaleList;
 	add "Ebonflame Whelp" to infections of BarbedCockList;

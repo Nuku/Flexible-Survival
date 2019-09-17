@@ -678,6 +678,7 @@ When Play begins:
 	now Species Name entry is "Wyvern"; [name of the overall species of the infection, used for children, ...]
 	add "Wyvern" to infections of ReptileList;
 	add "Wyvern" to infections of FurryList;
+	add "Wyvern" to infections of FeralList;
 	add "Wyvern" to infections of MythologicalList;
 	add "Wyvern" to infections of MaleList;
 	add "Wyvern" to infections of BarbedCockList;

@@ -521,6 +521,7 @@ When Play begins:
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Feral Sea Dragon"; [name of the overall species of the infection, used for children, ...]
 	add "Feral Sea Dragoness" to infections of ReptileList;
+	add "Feral Sea Dragoness" to infections of FeralList;
 	add "Feral Sea Dragoness" to infections of MythologicalList;
 	add "Feral Sea Dragoness" to infections of FemaleList;
 	add "Feral Sea Dragoness" to infections of BarbedCockList;

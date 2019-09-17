@@ -82,6 +82,7 @@ When Play begins:
 	now Species Name entry is "Pegasus"; [name of the overall species of the infection, used for children, ...]
 	add "Pegasus" to infections of EquineList;
 	add "Pegasus" to infections of FurryList;
+	add "Pegasus" to infections of FeralList;
 	add "Pegasus" to infections of MythologicalList;
 	add "Pegasus" to infections of HermList;
 	add "Pegasus" to infections of BluntCockList;

@@ -89,6 +89,7 @@ When Play begins:
 	now Species Name entry is "Shadow Beast";
 	add "Shadow Beast Male" to infections of FelineList;
 	add "Shadow Beast Male" to infections of FurryList;
+	add "Shadow Beast Male" to infections of FeralList;
 	add "Shadow Beast Male" to infections of ScienceList;
 	add "Shadow Beast Male" to infections of MaleList;
 	add "Shadow Beast Male" to infections of BarbedCockList;
