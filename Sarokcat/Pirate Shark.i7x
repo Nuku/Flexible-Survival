@@ -60,6 +60,7 @@ When Play begins:
 	add "Shark Herm" to infections of AquaticList;
 	add "Shark Herm" to infections of FurryList;
 	add "Shark Herm" to infections of NatureList;
+	add "Shark Herm" to infections of HermList;
 	add "Shark Herm" to infections of MaleList;
 	add "Shark Herm" to infections of TaperedCockList;
 	add "Shark Herm" to infections of InternalCockList;

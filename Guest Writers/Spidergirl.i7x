@@ -107,6 +107,7 @@ When Play begins:
 	add "Spidergirl" to infections of FurryList;
 	add "Spidergirl" to infections of MythologicalList;
 	add "Spidergirl" to infections of FemaleList;
+	add "Spidergirl" to infections of HermList;
 	add "Spidergirl" to infections of InternalCockList;
 	add "Spidergirl" to infections of OctapedalList;
 	add "Spidergirl" to infections of TailweaponList;

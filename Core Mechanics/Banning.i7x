@@ -37,7 +37,6 @@ The player has a list of text called WardList.
 The player has a list of text called BanList.
 
 when play begins:
-	add { "Ember Breeder", "Black Equinoid", "Deer", "Ebonflame Drake", "Hyena Herm", "Dolphin Herm", "Blue Gryphon Herm", "Painted Wolf Herm", "Panther Taur", "Parasitic Plant", "Shark Herm", "Gator Herm", "Sea Otter", "Slut Rat", "Spidergirl", "Wildcat" } to infections of HermList;
 	add { "Brown Bear Female", "Bottlenose Toy", "Bovine", "City Sprite", "Doberman Bitch", "Ewe", "Feline", "Husky Bitch", "Feral Sea Dragoness", "Harpy", "Lizard Girl", "Mothgirl", "Red Kangaroo", "Sea Otter", "Skunk", "Spidergirl", "Tentacle Horror", "Trash Coon" } to infections of FemaleList;
 	add { "Bovine", "Behemoth", "Cerberus", "Ebonflame Dragator", "Ebonflame Whelp", "Feral Cheetah", "Feral Sea Dragon", "Feral Sea Dragoness", "Feral Gryphon", "Feral Shaft Beast", "Feral Wolf", "Flaming Lynx", "Friendship Pony", "Hydra Beast", "Latex Fox", "Latex Wolf", "Manticore", "Peculiar Dragon", "Pegasus", "Quilled Tousky", "Sabretooth", "Shadow Beast Male", "Sierrasaur", "Snake", "Wyvern", "Yamato Dragon", "Yamato Dragoness" } to infections of FeralList;
 	add { "Demon Brute" } to infections of DemonList;
