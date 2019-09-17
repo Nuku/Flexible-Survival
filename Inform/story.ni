@@ -2172,10 +2172,10 @@ when play begins:
 
 when play begins:
 	add { "Bottlenose Toy", "Feral Sea Dragon", "Feral Sea Dragoness", "Dolphin Herm", "Killer Whale", "Shark Herm", "Platypus", "Sea Otter", "Gator Herm" } to infections of SwimList;
-]
 
 when play begins:
 	add { "Frost Drake", "Avalon Kobold" } to infections of OviImpregnatorList;
+]
 
 
 Part 2 - Rules
