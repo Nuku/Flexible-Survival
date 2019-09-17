@@ -283,6 +283,7 @@ When Play begins:
 	add "Feline" to infections of FurryList;
 	add "Feline" to infections of NatureList;
 	add "Feline" to infections of FemaleList;
+	add "Feline" to infections of MaleList;
 	add "Feline" to infections of BarbedCockList;
 	add "Feline" to infections of SheathedCockList;
 	add "Feline" to infections of BipedalList;

@@ -715,6 +715,7 @@ When Play begins:
 	add "Feral Sea Dragon" to infections of ReptileList;
 	add "Feral Sea Dragon" to infections of MythologicalList;
 	add "Feral Sea Dragon" to infections of FemaleList;
+	add "Feral Sea Dragon" to infections of MaleList;
 	add "Feral Sea Dragon" to infections of BarbedCockList;
 	add "Feral Sea Dragon" to infections of InternalCockList;
 	add "Feral Sea Dragon" to infections of QuadrupedalList;

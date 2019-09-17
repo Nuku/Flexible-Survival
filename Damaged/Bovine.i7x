@@ -351,6 +351,7 @@ When Play begins:
 	add "Bovine" to infections of FurryList;
 	add "Bovine" to infections of NatureList;
 	add "Bovine" to infections of FemaleList;
+	add "Bovine" to infections of MaleList;
 	add "Bovine" to infections of BluntCockList;
 	add "Bovine" to infections of SheathedCockList;
 	add "Bovine" to infections of BipedalList;
