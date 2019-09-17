@@ -88,6 +88,7 @@ When Play begins:
 	add "Reindeer" to infections of BluntCockList;
 	add "Reindeer" to infections of SheathedCockList;
 	add "Reindeer" to infections of BipedalList;
+	add "Reindeer" to infections of FlightList;
 	add "Reindeer" to infections of TailList;
 	now Name entry is "Reindeer"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
