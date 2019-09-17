@@ -168,6 +168,7 @@ When Play begins:
 	now Species Name entry is "Skunk"; [name of the overall species of the infection, used for children, ...]
 	add "Skunk" to infections of FurryList;
 	add "Skunk" to infections of NatureList;
+	add "Skunk" to infections of FemaleList;
 	add "Skunk" to infections of MaleList;
 	add "Skunk" to infections of SheathedCockList;
 	add "Skunk" to infections of BipedalList;

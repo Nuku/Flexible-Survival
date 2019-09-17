@@ -159,6 +159,7 @@ When Play begins:
 	add "Sea Otter" to infections of MustelidList;
 	add "Sea Otter" to infections of FurryList;
 	add "Sea Otter" to infections of NatureList;
+	add "Sea Otter" to infections of FemaleList;
 	add "Sea Otter" to infections of HermList;
 	add "Sea Otter" to infections of MaleList;
 	add "Sea Otter" to infections of TaperedCockList;

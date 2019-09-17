@@ -311,6 +311,7 @@ When Play begins:
 	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	add "Tentacle Horror" to infections of ScienceList;
 	add "Tentacle Horror" to infections of FurryList;
+	add "Tentacle Horror" to infections of FemaleList;
 	add "Tentacle Horror" to infections of HermList;
 	add "Tentacle Horror" to infections of MaleList;
 	add "Tentacle Horror" to infections of TentacleCockList;
