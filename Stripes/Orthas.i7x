@@ -548,6 +548,7 @@ When Play begins:
 	add "Dragon" to infections of InternalCockList;
 	add "Dragon" to infections of BipedalList;
 	add "Dragon" to infections of TailList;
+	add "Dragon" to infections of OviImpregnatorList;
 	add "Dragon" to infections of TailweaponList;
 	now Name entry is "Dragon"; [Name of your new Monster]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]

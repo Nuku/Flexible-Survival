@@ -119,6 +119,7 @@ When Play begins:
 	add "Ebonflame Dragator" to infections of BipedalList;
 	add "Ebonflame Dragator" to infections of FlightList;
 	add "Ebonflame Dragator" to infections of TailList;
+	add "Ebonflame Dragator" to infections of OviImpregnatorList;
 	add "Ebonflame Dragator" to infections of FirebreathList;
 	add "Ebonflame Dragator" to infections of TailweaponList;
 	now Name entry is "Ebonflame Dragator";

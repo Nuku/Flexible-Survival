@@ -77,6 +77,7 @@ When Play begins:
 	add "Squid" to infections of FemaleList;
 	add "Squid" to infections of TentacleCockList;
 	add "Squid" to infections of BipedalList;
+	add "Squid" to infections of OviImpregnatorList;
 	add "Squid" to infections of FeralmindList;
 	add "Squid" to infections of TailweaponList;
 	now Name entry is "Squid";

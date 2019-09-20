@@ -589,6 +589,7 @@ When Play begins:
 	add "Naga Hybrid" to infections of SheathedCockList;
 	add "Naga Hybrid" to infections of SerpentineList;
 	add "Naga Hybrid" to infections of TailList;
+	add "Naga Hybrid" to infections of OviImpregnatorList;
 	add "Naga Hybrid" to infections of TailweaponList;
 	now Name entry is "Naga Hybrid";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]

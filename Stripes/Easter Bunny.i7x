@@ -39,6 +39,7 @@ When Play begins:
 	add "Easter Bunny" to infections of HermList;
 	add "Easter Bunny" to infections of BipedalList;
 	add "Easter Bunny" to infections of TailList;
+	add "Easter Bunny" to infections of OviImpregnatorList;
 	now Name entry is "Easter Bunny";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]

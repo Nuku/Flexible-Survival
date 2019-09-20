@@ -71,6 +71,7 @@ When Play begins:
 	add "Dragontaur" to infections of TaurList;
 	add "Dragontaur" to infections of FlightList;
 	add "Dragontaur" to infections of TailList;
+	add "Dragontaur" to infections of OviImpregnatorList;
 	add "Dragontaur" to infections of FirebreathList;
 	add "Dragontaur" to infections of TailweaponList;
 	now Name entry is "Dragontaur"; [ Infection/Creature name. Capitalized. ]

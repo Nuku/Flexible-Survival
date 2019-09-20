@@ -691,6 +691,7 @@ When Play begins:
 	add "Magic Drake" to infections of InternalCockList;
 	add "Magic Drake" to infections of BipedalList;
 	add "Magic Drake" to infections of TailList;
+	add "Magic Drake" to infections of OviImpregnatorList;
 	add "Magic Drake" to infections of TailweaponList;
 	add "Magic Drake" to infections of FirebreathList;
 	now Name entry is "Magic Drake"; [ Infection/Creature name. Capitalized. ]

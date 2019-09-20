@@ -318,6 +318,7 @@ When Play begins:
 	add "Tiger Shark Male" to infections of BipedalList;
 	add "Tiger Shark Male" to infections of SwimList;
 	add "Tiger Shark Male" to infections of TailList;
+	add "Tiger Shark Male" to infections of OviImpregnatorList;
 	add "Tiger Shark Male" to infections of TailweaponList;
 	now Name entry is "Tiger Shark Male";
 	now enemy title entry is "Tiger Shark"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]

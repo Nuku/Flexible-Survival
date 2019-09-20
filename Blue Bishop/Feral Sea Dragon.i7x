@@ -722,6 +722,7 @@ When Play begins:
 	add "Feral Sea Dragon" to infections of QuadrupedalList;
 	add "Feral Sea Dragon" to infections of SwimList;
 	add "Feral Sea Dragon" to infections of TailList;
+	add "Feral Sea Dragon" to infections of OviImpregnatorList;
 	add "Feral Sea Dragon" to infections of FirebreathList;
 	add "Feral Sea Dragon" to infections of TailweaponList;
 	now Name entry is "Feral Sea Dragon";

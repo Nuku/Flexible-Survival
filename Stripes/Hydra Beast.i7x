@@ -228,6 +228,7 @@ When Play begins:
 	add "Hydra Beast" to infections of InternalCockList;
 	add "Hydra Beast" to infections of QuadrupedalList;
 	add "Hydra Beast" to infections of TailList;
+	add "Hydra Beast" to infections of OviImpregnatorList;
 	add "Hydra Beast" to infections of TailweaponList;
 	now Name entry is "Hydra Beast"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]

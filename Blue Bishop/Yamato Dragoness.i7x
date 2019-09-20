@@ -589,6 +589,7 @@ When Play begins:
 	add "Yamato Dragoness" to infections of QuadrupedalList;
 	add "Yamato Dragoness" to infections of FlightList;
 	add "Yamato Dragoness" to infections of TailList;
+	add "Yamato Dragoness" to infections of OviImpregnatorList;
 	add "Yamato Dragoness" to infections of FirebreathList;
 	add "Yamato Dragoness" to infections of TailweaponList;
 	now Name entry is "Yamato Dragoness";

@@ -898,6 +898,7 @@ When Play begins:
 	add "Yamato Dragon" to infections of QuadrupedalList;
 	add "Yamato Dragon" to infections of FlightList;
 	add "Yamato Dragon" to infections of TailList;
+	add "Yamato Dragon" to infections of OviImpregnatorList;
 	add "Yamato Dragon" to infections of FirebreathList;
 	add "Yamato Dragon" to infections of TailweaponList;
 	now Name entry is "Yamato Dragon";

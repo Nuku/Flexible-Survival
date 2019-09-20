@@ -192,6 +192,7 @@ When Play begins:
 	add "Reptaur" to infections of InternalCockList;
 	add "Reptaur" to infections of TaurList;
 	add "Reptaur" to infections of TailList;
+	add "Reptaur" to infections of OviImpregnatorList;
 	add "Reptaur" to infections of TailweaponList;
 	now Name entry is "Reptaur"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "Reptaur"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]

@@ -237,6 +237,7 @@ When Play begins:
 	add "Snake" to infections of SerpentineList;
 	add "Snake" to infections of FeralmindList;
 	add "Snake" to infections of TailList;
+	add "Snake" to infections of OviImpregnatorList;
 	add "Snake" to infections of TailweaponList;
 	now Name entry is "Snake";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]

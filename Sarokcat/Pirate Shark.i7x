@@ -67,6 +67,7 @@ When Play begins:
 	add "Shark Herm" to infections of BipedalList;
 	add "Shark Herm" to infections of SwimList;
 	add "Shark Herm" to infections of TailList;
+	add "Shark Herm" to infections of OviImpregnatorList;
 	add "Shark Herm" to infections of TailweaponList;
 	now Name entry is "Shark Herm";
 	now enemy title entry is "Pirate Shark"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]

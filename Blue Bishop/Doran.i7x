@@ -9,6 +9,7 @@ when play begins:
 	add "Peculiar Dragon" to infections of MaleList;
 	add "Peculiar Dragon" to infections of FurryList;
 	add "Peculiar Dragon" to infections of FeralList;
+	add "Peculiar Dragon" to infections of OviImpregnatorList;
 
 [ DoranPlayerRegard - raw string, determines what Doran calls the player.    ]
 [   Varies between "Master" and "Mistress", or "Pet", "Slave", "Bitch"       ]

@@ -529,6 +529,7 @@ When Play begins:
 	add "Feral Sea Dragoness" to infections of QuadrupedalList;
 	add "Feral Sea Dragoness" to infections of SwimList;
 	add "Feral Sea Dragoness" to infections of TailList;
+	add "Feral Sea Dragoness" to infections of OviImpregnatorList;
 	add "Feral Sea Dragoness" to infections of FirebreathList;
 	add "Feral Sea Dragoness" to infections of TailweaponList;
 	now Name entry is "Feral Sea Dragoness";

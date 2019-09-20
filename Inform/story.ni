@@ -1968,6 +1968,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	add "Anthro Dragoness" to infections of ReptileList;
+	add "Anthro Dragoness" to infections of OviImpregnatorList;
 	add "Anthro Dragoness" to infections of TailweaponList;
 
 understand the command "feed" as something new.

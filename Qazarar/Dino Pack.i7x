@@ -106,6 +106,7 @@ When Play begins:
 	add "Tiny Dino" to infections of InternalCockList;
 	add "Tiny Dino" to infections of BipedalList;
 	add "Tiny Dino" to infections of TailList;
+	add "Tiny Dino" to infections of OviImpregnatorList;
 	now Name entry is "Tiny Dino";
 	now enemy title entry is "Dino Pack"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]

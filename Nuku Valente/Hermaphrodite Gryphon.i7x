@@ -289,6 +289,7 @@ When Play begins:
 	add "Blue Gryphon Herm" to infections of BipedalList;
 	add "Blue Gryphon Herm" to infections of FlightList;
 	add "Blue Gryphon Herm" to infections of TailList;
+	add "Blue Gryphon Herm" to infections of OviImpregnatorList;
 	now Name entry is "Blue Gryphon Herm"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]

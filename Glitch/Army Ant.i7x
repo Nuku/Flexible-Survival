@@ -55,6 +55,7 @@ When Play begins:
 	add "Army Ant" to infections of InternalCockList;
 	add "Army Ant" to infections of HexapedalList;
 	add "Army Ant" to infections of TailList;
+	add "Army Ant" to infections of OviImpregnatorList;
 	now Name entry is "Army Ant"; [The creature's name as displayed and used in naming descriptions]
 	now enemy title entry is "Ant Warrior";
 	now enemy Name entry is ""; [specific name of unique enemy]

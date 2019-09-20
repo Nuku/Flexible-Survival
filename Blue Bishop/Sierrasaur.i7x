@@ -416,6 +416,7 @@ When Play begins:
 	add "Sierrasaur" to infections of InternalCockList;
 	add "Sierrasaur" to infections of BipedalList;
 	add "Sierrasaur" to infections of TailList;
+	add "Sierrasaur" to infections of OviImpregnatorList;
 	add "Sierrasaur" to infections of TailweaponList;
 	now Name entry is "Sierrasaur";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]

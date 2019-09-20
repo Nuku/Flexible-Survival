@@ -49,6 +49,7 @@ When Play begins:
 	add "Queen Bee" to infections of BipedalList;
 	add "Queen Bee" to infections of FlightList;
 	add "Queen Bee" to infections of TailList;
+	add "Queen Bee" to infections of OviImpregnatorList;
 	add "Queen Bee" to infections of TailweaponList;
 	now Name entry is "Queen Bee"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
