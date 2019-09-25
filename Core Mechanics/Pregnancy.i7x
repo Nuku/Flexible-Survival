@@ -746,29 +746,7 @@ To impregnate with (x - text):
 		let Impregnator be a person;
 		SetInfectionsOf Impregnator to infections of Player;
 		if "Breeding True" is listed in feats of Player: [child will always look like the father]
-			now HeadName of Child is x;
-			now TorsoName of Child is x;
-			now BackName of Child is x;
-			now ArmsName of Child is x;
-			now LegsName of Child is x;
-			now AssName of Child is x;
-			now TailName of Child is x;
-			if Species Name entry is not "":
-				now HeadSpeciesName of Child is Species Name entry;
-				now TorsoSpeciesName of Child is Species Name entry;
-				now BackSpeciesName of Child is Species Name entry;
-				now ArmsSpeciesName of Child is Species Name entry;
-				now LegsSpeciesName of Child is Species Name entry;
-				now AssSpeciesName of Child is Species Name entry;
-				now TailSpeciesName of Child is Species Name entry;
-			else:
-				now HeadSpeciesName of Child is Name entry;
-				now TorsoSpeciesName of Child is Name entry;
-				now BackSpeciesName of Child is Name entry;
-				now ArmsSpeciesName of Child is Name entry;
-				now LegsSpeciesName of Child is Name entry;
-				now AssSpeciesName of Child is Name entry;
-				now TailSpeciesName of Child is Name entry;
+			SetInfectionsOf Child to x;
 		else if "They Have Your Eyes" is listed in feats of Player: [child will always look like the player]
 			SetInfectionsOf Child to infections of Impregnator;
 		else: [random choosing]
