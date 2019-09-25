@@ -743,76 +743,14 @@ To impregnate with (x - text):
 				stop the action;
 		now gestation of Child is a random number from 24 to 48;
 		[making sure all body parts are available]
-		let Impregnator be a person;
-		SetInfectionsOf Impregnator to infections of Player;
+		SetInfectionsOf Impregnatee to infections of Player;
+		SetInfectionsOf Impregnator to x;
 		if "Breeding True" is listed in feats of Player: [child will always look like the father]
-			SetInfectionsOf Child to x;
-		else if "They Have Your Eyes" is listed in feats of Player: [child will always look like the player]
 			SetInfectionsOf Child to infections of Impregnator;
+		else if "They Have Your Eyes" is listed in feats of Player: [child will always look like the player]
+			SetInfectionsOf Child to infections of Impregnatee;
 		else: [random choosing]
-			if a random chance of 1 in 2 succeeds:
-				now HeadName of Child is Name entry;
-				if Species Name entry is not "":
-					now HeadSpeciesName of Child is Species Name entry;
-				else:
-					now HeadSpeciesName of Child is Name entry;
-			else:
-				now HeadName of Child is HeadName of Impregnator;
-				now HeadSpeciesName of Child is HeadSpeciesName of Impregnator;
-			if a random chance of 1 in 2 succeeds:
-				now TorsoName of Child is Name entry;
-				if Species Name entry is not "":
-					now TorsoSpeciesName of Child is Species Name entry;
-				else:
-					now TorsoSpeciesName of Child is Name entry;
-			else:
-				now TorsoName of Child is TorsoName of Impregnator;
-				now TorsoSpeciesName of Child is TorsoSpeciesName of Impregnator;
-			if a random chance of 1 in 2 succeeds:
-				now BackName of Child is Name entry;
-				if Species Name entry is not "":
-					now BackSpeciesName of Child is Species Name entry;
-				else:
-					now BackSpeciesName of Child is Name entry;
-			else:
-				now BackName of Child is BackName of Impregnator;
-				now BackSpeciesName of Child is BackSpeciesName of Impregnator;
-			if a random chance of 1 in 2 succeeds:
-				now ArmsName of Child is Name entry;
-				if Species Name entry is not "":
-					now ArmsSpeciesName of Child is Species Name entry;
-				else:
-					now ArmsSpeciesName of Child is Name entry;
-			else:
-				now ArmsName of Child is ArmsName of Impregnator;
-				now ArmsSpeciesName of Child is ArmsSpeciesName of Impregnator;
-			if a random chance of 1 in 2 succeeds:
-				now LegsName of Child is Name entry;
-				if Species Name entry is not "":
-					now LegsSpeciesName of Child is Species Name entry;
-				else:
-					now LegsSpeciesName of Child is Name entry;
-			else:
-				now LegsName of Child is LegsName of Impregnator;
-				now LegsSpeciesName of Child is LegsSpeciesName of Impregnator;
-			if a random chance of 1 in 2 succeeds:
-				now AssName of Child is Name entry;
-				if Species Name entry is not "":
-					now AssSpeciesName of Child is Species Name entry;
-				else:
-					now AssSpeciesName of Child is Name entry;
-			else:
-				now AssName of Child is AssName of Impregnator;
-				now AssSpeciesName of Child is AssSpeciesName of Impregnator;
-			if a random chance of 1 in 2 succeeds:
-				now TailName of Child is Name entry;
-				if Species Name entry is not "":
-					now TailSpeciesName of Child is Species Name entry;
-				else:
-					now TailSpeciesName of Child is Name entry;
-			else:
-				now TailName of Child is TailName of Impregnator;
-				now TailSpeciesName of Child is TailSpeciesName of Impregnator;
+			SetInfectionsOf Child randomized between Impregnator and Impregnatee;
 	if Player is not female:
 		say "[line break]     There is a pleasant sense of warmth from your lower belly, filling an emptiness you did not know was there.";
 		if pregtype is 0, now pregtype is 2; [mpreg]

@@ -117,6 +117,50 @@ to SetInfectionsOf ( Target - a person ) to ( Infection - a text ):
 	now AssSpeciesName of Target is InfectionSpeciesName;
 	now TailSpeciesName of Target is InfectionSpeciesName;
 
+to SetInfectionsOf ( Target - a person ) randomized between ( Impregnator - a person ) and ( Impregnatee - a person ):
+	if a random chance of 1 in 2 succeeds:
+		now HeadName of Target is HeadName of Impregnator;
+		now HeadSpeciesName of Target is HeadSpeciesName of Impregnator;
+	else:
+		now HeadName of Target is HeadName of Impregnatee;
+		now HeadSpeciesName of Target is HeadSpeciesName of Impregnatee;
+	if a random chance of 1 in 2 succeeds:
+		now TorsoName of Target is TorsoName of Impregnator;
+		now TorsoSpeciesName of Target is TorsoSpeciesName of Impregnator;
+	else:
+		now TorsoName of Target is TorsoName of Impregnatee;
+		now TorsoSpeciesName of Target is TorsoSpeciesName of Impregnatee;
+	if a random chance of 1 in 2 succeeds:
+		now BackName of Target is BackName of Impregnator;
+		now BackSpeciesName of Target is BackSpeciesName of Impregnator;
+	else:
+		now BackName of Target is BackName of Impregnatee;
+		now BackSpeciesName of Target is BackSpeciesName of Impregnatee;
+	if a random chance of 1 in 2 succeeds:
+		now ArmsName of Target is ArmsName of Impregnator;
+		now ArmsSpeciesName of Target is ArmsSpeciesName of Impregnator;
+	else:
+		now ArmsName of Target is ArmsName of Impregnatee;
+		now ArmsSpeciesName of Target is ArmsSpeciesName of Impregnatee;
+	if a random chance of 1 in 2 succeeds:
+		now LegsName of Target is LegsName of Impregnator;
+		now LegsSpeciesName of Target is LegsSpeciesName of Impregnator;
+	else:
+		now LegsName of Target is LegsName of Impregnatee;
+		now LegsSpeciesName of Target is LegsSpeciesName of Impregnatee;
+	if a random chance of 1 in 2 succeeds:
+		now AssName of Target is AssName of Impregnator;
+		now AssSpeciesName of Target is AssSpeciesName of Impregnator;
+	else:
+		now AssName of Target is AssName of Impregnatee;
+		now AssSpeciesName of Target is AssSpeciesName of Impregnatee;
+	if a random chance of 1 in 2 succeeds:
+		now TailName of Target is TailName of Impregnator;
+		now TailSpeciesName of Target is TailSpeciesName of Impregnator;
+	else:
+		now TailName of Target is TailName of Impregnatee;
+		now TailSpeciesName of Target is TailSpeciesName of Impregnatee;
+
 to attributeinfect with ( Infection - a text ):
 	let StoredMonsterID be MonsterID;
 	setmonster Infection silently;

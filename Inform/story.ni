@@ -380,6 +380,7 @@ child	"child"
 yourself	"yourself"
 Offspring	"offspring"
 Impregnator	"Impregnator"
+Impregnatee	"Impregnatee"
 
 Impregnator is a person.
 The printed name of Impregnator is "Impregnator".
@@ -408,6 +409,34 @@ Impregnator has a text called ArmsSpeciesName. ArmsSpeciesName is usually "Human
 Impregnator has a text called LegsSpeciesName. LegsSpeciesName is usually "Human".
 Impregnator has a text called AssSpeciesName. AssSpeciesName is usually "Human".
 Impregnator has a text called TailSpeciesName. TailSpeciesName is usually "Human".
+
+Impregnatee is a person.
+The printed name of Impregnatee is "Impregnatee".
+Impregnatee has text called name. The name of Impregnatee is usually "".
+Impregnatee has a text called BodyName. BodyName is usually "Human".
+Impregnatee has a text called FaceName. FaceName is usually "Human".
+Impregnatee has a text called SkinName. SkinName is usually "Human".
+Impregnatee has a text called CockName. CockName is usually "Human".
+Impregnatee has a text called TailName. TailName is usually "Human".
+Impregnatee has a text called bodySpeciesName. BodySpeciesName is usually "Human".
+Impregnatee has a text called faceSpeciesName. FaceSpeciesName is usually "Human".
+Impregnatee has a text called skinSpeciesName. SkinSpeciesName is usually "Human".
+Impregnatee has a text called cockSpeciesName. cockSpeciesName is usually "Human".
+Impregnatee has a text called tailSpeciesName. TailSpeciesName is usually "Human".
+Impregnatee has a text called HeadName. HeadName is usually "Human".
+Impregnatee has a text called TorsoName. TorsoName is usually "Human".
+Impregnatee has a text called BackName. BackName is usually "Human".
+Impregnatee has a text called ArmsName. ArmsName is usually "Human".
+Impregnatee has a text called LegsName. LegsName is usually "Human".
+Impregnatee has a text called AssName. AssName is usually "Human".
+Impregnatee has a text called TailName. TailName is usually "Human".
+Impregnatee has a text called HeadSpeciesName. HeadSpeciesName is usually "Human".
+Impregnatee has a text called TorsoSpeciesName. TorsoSpeciesName is usually "Human".
+Impregnatee has a text called BackSpeciesName. BackSpeciesName is usually "Human".
+Impregnatee has a text called ArmsSpeciesName. ArmsSpeciesName is usually "Human".
+Impregnatee has a text called LegsSpeciesName. LegsSpeciesName is usually "Human".
+Impregnatee has a text called AssSpeciesName. AssSpeciesName is usually "Human".
+Impregnatee has a text called TailSpeciesName. TailSpeciesName is usually "Human".
 
 
 Offspring is a person. [bunker children]
