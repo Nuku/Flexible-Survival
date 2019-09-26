@@ -341,35 +341,37 @@ The player has a list of text called PenileVirginitiesTaken.
 A person can be a trader.
 Scenario is a text that varies.
 
-Child is a person.
+a creature is a kind of person.
+a creature has a text called Name. Name is usually "".
+a creature has a text called BodyName. BodyName is usually "Human".
+a creature has a text called FaceName. FaceName is usually "Human".
+a creature has a text called SkinName. SkinName is usually "Human".
+a creature has a text called CockName. CockName is usually "Human".
+a creature has a text called TailName. TailName is usually "Human".
+a creature has a text called bodySpeciesName. BodySpeciesName is usually "Human".
+a creature has a text called faceSpeciesName. FaceSpeciesName is usually "Human".
+a creature has a text called skinSpeciesName. SkinSpeciesName is usually "Human".
+a creature has a text called cockSpeciesName. cockSpeciesName is usually "Human".
+a creature has a text called tailSpeciesName. TailSpeciesName is usually "Human".
+a creature has a text called HeadName. HeadName is usually "Human".
+a creature has a text called TorsoName. TorsoName is usually "Human".
+a creature has a text called BackName. BackName is usually "Human".
+a creature has a text called ArmsName. ArmsName is usually "Human".
+a creature has a text called LegsName. LegsName is usually "Human".
+a creature has a text called AssName. AssName is usually "Human".
+a creature has a text called TailName. TailName is usually "Human".
+a creature has a text called HeadSpeciesName. HeadSpeciesName is usually "Human".
+a creature has a text called TorsoSpeciesName. TorsoSpeciesName is usually "Human".
+a creature has a text called BackSpeciesName. BackSpeciesName is usually "Human".
+a creature has a text called ArmsSpeciesName. ArmsSpeciesName is usually "Human".
+a creature has a text called LegsSpeciesName. LegsSpeciesName is usually "Human".
+a creature has a text called AssSpeciesName. AssSpeciesName is usually "Human".
+a creature has a text called TailSpeciesName. TailSpeciesName is usually "Human".
+
+Child is a creature.
 The printed name of Child is "Child".
-Child has text called name. The name of Child is usually "".
 Child has a number called Gestation.
 Child can be born. Child is not born.
-Child has a text called BodyName. BodyName is usually "Human".
-Child has a text called FaceName. FaceName is usually "Human".
-Child has a text called SkinName. SkinName is usually "Human".
-Child has a text called CockName. CockName is usually "Human".
-Child has a text called TailName. TailName is usually "Human".
-Child has a text called bodySpeciesName. BodySpeciesName is usually "Human".
-Child has a text called faceSpeciesName. FaceSpeciesName is usually "Human".
-Child has a text called skinSpeciesName. SkinSpeciesName is usually "Human".
-Child has a text called cockSpeciesName. cockSpeciesName is usually "Human".
-Child has a text called tailSpeciesName. TailSpeciesName is usually "Human".
-Child has a text called HeadName. HeadName is usually "Human".
-Child has a text called TorsoName. TorsoName is usually "Human".
-Child has a text called BackName. BackName is usually "Human".
-Child has a text called ArmsName. ArmsName is usually "Human".
-Child has a text called LegsName. LegsName is usually "Human".
-Child has a text called AssName. AssName is usually "Human".
-Child has a text called TailName. TailName is usually "Human".
-Child has a text called HeadSpeciesName. HeadSpeciesName is usually "Human".
-Child has a text called TorsoSpeciesName. TorsoSpeciesName is usually "Human".
-Child has a text called BackSpeciesName. BackSpeciesName is usually "Human".
-Child has a text called ArmsSpeciesName. ArmsSpeciesName is usually "Human".
-Child has a text called LegsSpeciesName. LegsSpeciesName is usually "Human".
-Child has a text called AssSpeciesName. AssSpeciesName is usually "Human".
-Child has a text called TailSpeciesName. TailSpeciesName is usually "Human".
 Childrenfaces is a list of text that varies.
 Childrenskins is a list of text that varies.
 Childrenbodies is a list of text that varies.
@@ -382,61 +384,11 @@ Offspring	"offspring"
 Impregnator	"Impregnator"
 Impregnatee	"Impregnatee"
 
-Impregnator is a person.
+Impregnator is a creature.
 The printed name of Impregnator is "Impregnator".
-Impregnator has text called name. The name of Impregnator is usually "".
-Impregnator has a text called BodyName. BodyName is usually "Human".
-Impregnator has a text called FaceName. FaceName is usually "Human".
-Impregnator has a text called SkinName. SkinName is usually "Human".
-Impregnator has a text called CockName. CockName is usually "Human".
-Impregnator has a text called TailName. TailName is usually "Human".
-Impregnator has a text called bodySpeciesName. BodySpeciesName is usually "Human".
-Impregnator has a text called faceSpeciesName. FaceSpeciesName is usually "Human".
-Impregnator has a text called skinSpeciesName. SkinSpeciesName is usually "Human".
-Impregnator has a text called cockSpeciesName. cockSpeciesName is usually "Human".
-Impregnator has a text called tailSpeciesName. TailSpeciesName is usually "Human".
-Impregnator has a text called HeadName. HeadName is usually "Human".
-Impregnator has a text called TorsoName. TorsoName is usually "Human".
-Impregnator has a text called BackName. BackName is usually "Human".
-Impregnator has a text called ArmsName. ArmsName is usually "Human".
-Impregnator has a text called LegsName. LegsName is usually "Human".
-Impregnator has a text called AssName. AssName is usually "Human".
-Impregnator has a text called TailName. TailName is usually "Human".
-Impregnator has a text called HeadSpeciesName. HeadSpeciesName is usually "Human".
-Impregnator has a text called TorsoSpeciesName. TorsoSpeciesName is usually "Human".
-Impregnator has a text called BackSpeciesName. BackSpeciesName is usually "Human".
-Impregnator has a text called ArmsSpeciesName. ArmsSpeciesName is usually "Human".
-Impregnator has a text called LegsSpeciesName. LegsSpeciesName is usually "Human".
-Impregnator has a text called AssSpeciesName. AssSpeciesName is usually "Human".
-Impregnator has a text called TailSpeciesName. TailSpeciesName is usually "Human".
 
-Impregnatee is a person.
+Impregnatee is a creature.
 The printed name of Impregnatee is "Impregnatee".
-Impregnatee has text called name. The name of Impregnatee is usually "".
-Impregnatee has a text called BodyName. BodyName is usually "Human".
-Impregnatee has a text called FaceName. FaceName is usually "Human".
-Impregnatee has a text called SkinName. SkinName is usually "Human".
-Impregnatee has a text called CockName. CockName is usually "Human".
-Impregnatee has a text called TailName. TailName is usually "Human".
-Impregnatee has a text called bodySpeciesName. BodySpeciesName is usually "Human".
-Impregnatee has a text called faceSpeciesName. FaceSpeciesName is usually "Human".
-Impregnatee has a text called skinSpeciesName. SkinSpeciesName is usually "Human".
-Impregnatee has a text called cockSpeciesName. cockSpeciesName is usually "Human".
-Impregnatee has a text called tailSpeciesName. TailSpeciesName is usually "Human".
-Impregnatee has a text called HeadName. HeadName is usually "Human".
-Impregnatee has a text called TorsoName. TorsoName is usually "Human".
-Impregnatee has a text called BackName. BackName is usually "Human".
-Impregnatee has a text called ArmsName. ArmsName is usually "Human".
-Impregnatee has a text called LegsName. LegsName is usually "Human".
-Impregnatee has a text called AssName. AssName is usually "Human".
-Impregnatee has a text called TailName. TailName is usually "Human".
-Impregnatee has a text called HeadSpeciesName. HeadSpeciesName is usually "Human".
-Impregnatee has a text called TorsoSpeciesName. TorsoSpeciesName is usually "Human".
-Impregnatee has a text called BackSpeciesName. BackSpeciesName is usually "Human".
-Impregnatee has a text called ArmsSpeciesName. ArmsSpeciesName is usually "Human".
-Impregnatee has a text called LegsSpeciesName. LegsSpeciesName is usually "Human".
-Impregnatee has a text called AssSpeciesName. AssSpeciesName is usually "Human".
-Impregnatee has a text called TailSpeciesName. TailSpeciesName is usually "Human".
 
 
 Offspring is a person. [bunker children]
