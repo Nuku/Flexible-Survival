@@ -65,7 +65,7 @@ to decide which number is GetBallSize of ( x - a person ):
 	decide on 0;
 ]
 
-to SetInfectionsOf ( Target - a person ) to infections of ( Source - a person):
+to SetInfectionsOf ( Target - a person ) to infections of ( Source - a person ):
 	if Source is Player and Player is not FullyNewTypeInfected:
 		now HeadName of Target is FaceName of Source;
 		now TorsoName of Target is BodyName of Source;
@@ -117,49 +117,49 @@ to SetInfectionsOf ( Target - a person ) to ( Infection - a text ):
 	now AssSpeciesName of Target is InfectionSpeciesName;
 	now TailSpeciesName of Target is InfectionSpeciesName;
 
-to SetInfectionsOf ( Target - a person ) randomized between ( Impregnator - a person ) and ( Impregnatee - a person ):
+to SetInfectionsOf ( Target - a person ) randomized between ( Father - a person ) and ( Mother - a person ):
 	if a random chance of 1 in 2 succeeds:
-		now HeadName of Target is HeadName of Impregnator;
-		now HeadSpeciesName of Target is HeadSpeciesName of Impregnator;
+		now HeadName of Target is HeadName of Father;
+		now HeadSpeciesName of Target is HeadSpeciesName of Father;
 	else:
-		now HeadName of Target is HeadName of Impregnatee;
-		now HeadSpeciesName of Target is HeadSpeciesName of Impregnatee;
+		now HeadName of Target is HeadName of Mother;
+		now HeadSpeciesName of Target is HeadSpeciesName of Mother;
 	if a random chance of 1 in 2 succeeds:
-		now TorsoName of Target is TorsoName of Impregnator;
-		now TorsoSpeciesName of Target is TorsoSpeciesName of Impregnator;
+		now TorsoName of Target is TorsoName of Father;
+		now TorsoSpeciesName of Target is TorsoSpeciesName of Father;
 	else:
-		now TorsoName of Target is TorsoName of Impregnatee;
-		now TorsoSpeciesName of Target is TorsoSpeciesName of Impregnatee;
+		now TorsoName of Target is TorsoName of Mother;
+		now TorsoSpeciesName of Target is TorsoSpeciesName of Mother;
 	if a random chance of 1 in 2 succeeds:
-		now BackName of Target is BackName of Impregnator;
-		now BackSpeciesName of Target is BackSpeciesName of Impregnator;
+		now BackName of Target is BackName of Father;
+		now BackSpeciesName of Target is BackSpeciesName of Father;
 	else:
-		now BackName of Target is BackName of Impregnatee;
-		now BackSpeciesName of Target is BackSpeciesName of Impregnatee;
+		now BackName of Target is BackName of Mother;
+		now BackSpeciesName of Target is BackSpeciesName of Mother;
 	if a random chance of 1 in 2 succeeds:
-		now ArmsName of Target is ArmsName of Impregnator;
-		now ArmsSpeciesName of Target is ArmsSpeciesName of Impregnator;
+		now ArmsName of Target is ArmsName of Father;
+		now ArmsSpeciesName of Target is ArmsSpeciesName of Father;
 	else:
-		now ArmsName of Target is ArmsName of Impregnatee;
-		now ArmsSpeciesName of Target is ArmsSpeciesName of Impregnatee;
+		now ArmsName of Target is ArmsName of Mother;
+		now ArmsSpeciesName of Target is ArmsSpeciesName of Mother;
 	if a random chance of 1 in 2 succeeds:
-		now LegsName of Target is LegsName of Impregnator;
-		now LegsSpeciesName of Target is LegsSpeciesName of Impregnator;
+		now LegsName of Target is LegsName of Father;
+		now LegsSpeciesName of Target is LegsSpeciesName of Father;
 	else:
-		now LegsName of Target is LegsName of Impregnatee;
-		now LegsSpeciesName of Target is LegsSpeciesName of Impregnatee;
+		now LegsName of Target is LegsName of Mother;
+		now LegsSpeciesName of Target is LegsSpeciesName of Mother;
 	if a random chance of 1 in 2 succeeds:
-		now AssName of Target is AssName of Impregnator;
-		now AssSpeciesName of Target is AssSpeciesName of Impregnator;
+		now AssName of Target is AssName of Father;
+		now AssSpeciesName of Target is AssSpeciesName of Father;
 	else:
-		now AssName of Target is AssName of Impregnatee;
-		now AssSpeciesName of Target is AssSpeciesName of Impregnatee;
+		now AssName of Target is AssName of Mother;
+		now AssSpeciesName of Target is AssSpeciesName of Mother;
 	if a random chance of 1 in 2 succeeds:
-		now TailName of Target is TailName of Impregnator;
-		now TailSpeciesName of Target is TailSpeciesName of Impregnator;
+		now TailName of Target is TailName of Father;
+		now TailSpeciesName of Target is TailSpeciesName of Father;
 	else:
-		now TailName of Target is TailName of Impregnatee;
-		now TailSpeciesName of Target is TailSpeciesName of Impregnatee;
+		now TailName of Target is TailName of Mother;
+		now TailSpeciesName of Target is TailSpeciesName of Mother;
 
 to attributeinfect with ( Infection - a text ):
 	let StoredMonsterID be MonsterID;

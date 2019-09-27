@@ -657,12 +657,12 @@ ButterflyBaby is in NPC Nexus. [and there it will stay, as it is just a coding t
 The printed name of ButterflyBaby is "butterfly baby".
 
 To impregnatebutterfly:
-	SetInfectionsOf Impregnatee to infections of Player;
-	SetInfectionsOf Impregnator to "Butterfly";
-	if "Breeding True" is listed in feats of Player: [child will always look like the father]
-		SetInfectionsOf ButterflyBaby to infections of Impregnator;
-	else if "They Have Your Eyes" is listed in feats of Player: [child will always look like the player]
+	SetInfectionsOf Impregnator to infections of Player;
+	SetInfectionsOf Impregnatee to "Butterfly";
+	if "Breeding True" is listed in feats of Player: [child will always look like the mother]
 		SetInfectionsOf ButterflyBaby to infections of Impregnatee;
+	else if "They Have Your Eyes" is listed in feats of Player: [child will always look like the player]
+		SetInfectionsOf ButterflyBaby to infections of Impregnator;
 	else: [random choosing]
 		SetInfectionsOf ButterflyBaby randomized between Impregnator and Impregnatee;
 	now ButterflyBabyGestation is 0; [1;]
