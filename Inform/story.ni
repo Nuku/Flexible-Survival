@@ -360,6 +360,8 @@ a creature has a text called ArmsName. ArmsName is usually "Human".
 a creature has a text called LegsName. LegsName is usually "Human".
 a creature has a text called AssName. AssName is usually "Human".
 a creature has a text called TailName. TailName is usually "Human".
+a creature has a text called CockName. CockName is usually "Human".
+a creature has a text called CuntName. CuntName is usually "Human".
 a creature has a text called HeadSpeciesName. HeadSpeciesName is usually "Human".
 a creature has a text called TorsoSpeciesName. TorsoSpeciesName is usually "Human".
 a creature has a text called BackSpeciesName. BackSpeciesName is usually "Human".
@@ -367,6 +369,8 @@ a creature has a text called ArmsSpeciesName. ArmsSpeciesName is usually "Human"
 a creature has a text called LegsSpeciesName. LegsSpeciesName is usually "Human".
 a creature has a text called AssSpeciesName. AssSpeciesName is usually "Human".
 a creature has a text called TailSpeciesName. TailSpeciesName is usually "Human".
+a creature has a text called CockSpeciesName. CockSpeciesName is usually "Human".
+a creature has a text called CuntSpeciesName. CuntSpeciesName is usually "Human".
 
 Child is a creature.
 The printed name of Child is "Child".

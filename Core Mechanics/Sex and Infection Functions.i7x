@@ -74,6 +74,8 @@ to SetInfectionsOf ( Target - a person ) to infections of ( Source - a person ):
 		now LegsName of Target is BodyName of Source;
 		now AssName of Target is TailName of Source;
 		now TailName of Target is TailName of Source;
+		now CockName of Target is CockName of Source;
+		now CuntName of Target is CockName of Source;
 		now HeadSpeciesName of Target is FaceSpeciesName of Source;
 		now TorsoSpeciesName of Target is BodySpeciesName of Source;
 		now BackSpeciesName of Target is BodySpeciesName of Source;
@@ -81,6 +83,8 @@ to SetInfectionsOf ( Target - a person ) to infections of ( Source - a person ):
 		now LegsSpeciesName of Target is BodySpeciesName of Source;
 		now AssSpeciesName of Target is TailSpeciesName of Source;
 		now TailSpeciesName of Target is TailSpeciesName of Source;
+		now CockSpeciesName of Target is CockSpeciesName of Source;
+		now CuntSpeciesName of Target is CockSpeciesName of Source;
 	else:
 		now HeadName of Target is HeadName of Source;
 		now TorsoName of Target is TorsoName of Source;
@@ -89,6 +93,8 @@ to SetInfectionsOf ( Target - a person ) to infections of ( Source - a person ):
 		now LegsName of Target is LegsName of Source;
 		now AssName of Target is AssName of Source;
 		now TailName of Target is TailName of Source;
+		now CockName of Target is CockName of Source;
+		now CuntName of Target is CuntName of Source;
 		now HeadSpeciesName of Target is HeadSpeciesName of Source;
 		now TorsoSpeciesName of Target is TorsoSpeciesName of Source;
 		now BackSpeciesName of Target is BackSpeciesName of Source;
@@ -96,6 +102,8 @@ to SetInfectionsOf ( Target - a person ) to infections of ( Source - a person ):
 		now LegsSpeciesName of Target is LegsSpeciesName of Source;
 		now AssSpeciesName of Target is AssSpeciesName of Source;
 		now TailSpeciesName of Target is TailSpeciesName of Source;
+		now CockSpeciesName of Target is CockSpeciesName of Source;
+		now CuntSpeciesName of Target is CuntSpeciesName of Source;
 
 to SetInfectionsOf ( Target - a person ) to ( Infection - a text ):
 	if there is no Name of Infection in the Table of Random Critters:
@@ -109,6 +117,8 @@ to SetInfectionsOf ( Target - a person ) to ( Infection - a text ):
 	now LegsName of Target is Infection;
 	now AssName of Target is Infection;
 	now TailName of Target is Infection;
+	now CockName of Target is Infection;
+	now CuntName of Target is Infection;
 	now HeadSpeciesName of Target is InfectionSpeciesName;
 	now TorsoSpeciesName of Target is InfectionSpeciesName;
 	now BackSpeciesName of Target is InfectionSpeciesName;
@@ -116,6 +126,8 @@ to SetInfectionsOf ( Target - a person ) to ( Infection - a text ):
 	now LegsSpeciesName of Target is InfectionSpeciesName;
 	now AssSpeciesName of Target is InfectionSpeciesName;
 	now TailSpeciesName of Target is InfectionSpeciesName;
+	now CockSpeciesName of Target is InfectionSpeciesName;
+	now CuntSpeciesName of Target is InfectionSpeciesName;
 
 to SetInfectionsOf ( Target - a person ) randomized between ( Father - a person ) and ( Mother - a person ):
 	if a random chance of 1 in 2 succeeds:
