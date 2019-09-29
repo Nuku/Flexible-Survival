@@ -268,7 +268,7 @@ to say KyrverthNormalChat: [Quest give and normal chat]
 to say KyrverthMainChat:
 	let randomnumber be a random number from 1 to 100;
 	if randomnumber <= 5:
-		say "     'Some would say that a fire breathing person shouldn't have a nest made of flammable materials, but it's been ok so far...'";
+		say "     'Some would say that a fire breathing person shouldn't have a nest made of flammable materials, but it's been OK so far...'";
 	else if randomnumber <= 10:
 		say "     'Why am I not the same as the other dragons around the city? Not sure.'";
 	else if randomnumber <= 15:
@@ -350,7 +350,7 @@ to say KyrverthS5Chat:
 to say KyrverthS6Chat:
 	let randomnumber be a random number from 1 to 70;
 	if randomnumber <= 5:
-		say "     'Some would say that a fire breathing person shouldn't have a nest made of flammable materials, but it's been ok so far...'";
+		say "     'Some would say that a fire breathing person shouldn't have a nest made of flammable materials, but it's been OK so far...'";
 	else if randomnumber <= 10:
 		say "     'Why am I not the same as the other dragons around the city? Not sure.'";
 	else if randomnumber <= 15:
@@ -428,7 +428,7 @@ to say KyrverthMaleCheck:
 		Let Randomcharmvar be a random number between 1 and 30;
 		say "     [bold type]Rolling [Randomcharmvar]/30 + Charisma of [charisma of Player] vs 25: [roman type]";
 		if (Randomcharmvar + charisma of Player) < 25:
-			say "You try to convince the dragon that males are ok too, but he shakes his head, firm in the belief that he is into females and females only.";
+			say "You try to convince the dragon that males are OK too, but he shakes his head, firm in the belief that he is into females and females only.";
 		else:
 			now KyrverthMaleBoning is 1;
 			say "'Why not both?' you ask. A big strong dragon like him could have both a dragoness [bold type]and[roman type] a mate. People should be lining up for the honor!";
@@ -1168,7 +1168,7 @@ when play ends: [Unique TF endings for using the items above]
 			say "     When the military enters the city, you both greet them with open arms and as soon as you are released you head into distant mountains. Your mate turns out to be able to create gold from thin air, and he uses it to buy a home for you both. The two of you passionately make love regularly and quickly the military determination of 'not infectious' turns out to be a falsehood, first your skin starts to become scales, then you begin to take on more and more draconic traits to match your mate. He loves that your changes make you more like him and the love between you only deepens though the years";
 	[]
 	if KyrverthStage is 0 and (KyrverthEndingTimer - turns < 24): [Met him and never went to the dragons den, saw him in the last 3 days.]
-		say "     In the aftermath of the Military reentering the city you hear rumors of [one of]a little dragon that was found trying to rob a jewelry store and had to be tranquilized to be parted with his 'treasure'. You hope that the little dragon you met is ok[or]a ferocious dragon that had set up shop in an old gold mine that the military had trouble with. You wonder if it was the same dragon that you met and wonder what happened to make him so dangerous[at random].";
+		say "     In the aftermath of the Military reentering the city you hear rumors of [one of]a little dragon that was found trying to rob a jewelry store and had to be tranquilized to be parted with his 'treasure'. You hope that the little dragon you met is OK[or]a ferocious dragon that had set up shop in an old gold mine that the military had trouble with. You wonder if it was the same dragon that you met and wonder what happened to make him so dangerous[at random].";
 	[Aftermath text for Kyrverth. Needs to cover stages 0-6. Coming Soon(TM)]
 	[if (hp of Kyrverth > 0): [player met him and got as far as seeing him as an NPC]
 		if humanity of Player < 10: [player went feral]

@@ -14,6 +14,15 @@ Definition: A person (called x) is FullyNewTypeInfected:
 	if CuntName of x is "", no;
 	yes;
 
+to decide if ( x - a text ) is an/-- OviImpregnator:
+	let ExclusionList be { "", "None", "Human" };
+	if x is "Player":
+		if TorsoName of Player is not listed in ExclusionList and TorsoName of Player is listed in infections of OviImpregnatorList, decide yes;
+		if BodyName of Player is not listed in ExclusionList and BodyName of Player is listed in infections of OviImpregnatorList, decide yes;
+	else:
+		if x is not listed in ExclusionList and x is listed in infections of OviImpregnatorList, decide yes;
+	decide no;
+
 to decide if (x - a person) has a body of (i - a text):
 	if TorsoName of x is i, decide yes;
 	if BodyName of x is i, decide yes;

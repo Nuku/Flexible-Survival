@@ -342,6 +342,7 @@ When Play begins:
 	add "Wereraptor" to infections of SheathedCockList;
 	add "Wereraptor" to infections of BipedalList;
 	add "Wereraptor" to infections of TailList;
+	add "Wereraptor" to infections of OviImpregnatorList;
 	add "Wereraptor" to infections of TailweaponList;
 	now Name entry is "Wereraptor"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]

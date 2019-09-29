@@ -220,12 +220,15 @@ When Play begins:
 	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	add "Hydra Beast" to infections of ReptileList;
 	add "Hydra Beast" to infections of FurryList;
+	add "Hydra Beast" to infections of FeralList;
+	add "Hydra Beast" to infections of MagicalList;
 	add "Hydra Beast" to infections of MythologicalList;
 	add "Hydra Beast" to infections of MaleList;
 	add "Hydra Beast" to infections of TaperedCockList;
 	add "Hydra Beast" to infections of InternalCockList;
 	add "Hydra Beast" to infections of QuadrupedalList;
 	add "Hydra Beast" to infections of TailList;
+	add "Hydra Beast" to infections of OviImpregnatorList;
 	add "Hydra Beast" to infections of TailweaponList;
 	now Name entry is "Hydra Beast"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]

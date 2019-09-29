@@ -172,7 +172,7 @@ to say fsdf attack:
 			else if a random chance of 2 in 3 succeeds or lastfsdfeeding - turns < 8:
 				if Player is male:
 					say "     With a soft chirp, you watch as her thick tongue moves to caress your exposed, [cock size desc of Player] dick[smn]. The slick, writing appendage finding little difficulty in coaxing you into arousal, she promptly engulfs [if Cock Count of Player > 1]one of them[else]it[end if] within the depths of her eager maw [if Cock Length of Player < 14]immediately, your member wholly consumed lost in her depths[else]with only marginal difficulty, her elongated neck illustrating a lewd practicality by hilting your impressive member inside her voracious hole[end if].";
-					say "     You can't help but be overwhelmed by the sensation of her intense attendance, saliva[one of] strangely[or][stopping] potent in its ability to arouse you. [if Cock Length of Player < 10]No doubt as a result of this, combined with the fact that her maw is simply too large to articulately pleasure someone of your diminutive size, she often disengaged from her oral fixation to drag her slippery appendage across your torso and face before it returns back to your member[else]Her slippery appendage firmly wrapped around your sizeable tool, she bobs against the organ with fervent determination, her muffled songs of approval beckoned from her massive form strangely adept at eliciting further pleasure[end if]. [if scalevalue of Player < 4]Compelled by feral greed, her maw remains agape around your lower torso, which by now is absolutely drenched by her drool, her heated breath shielding you from the cold of the open, ocean air[else]The force of her avaricious maw often pushes your similarly sizeable form along the sand, clearly not intent on relinquishing your cock until it sates her tainted hunger[end if].";
+					say "     You can't help but be overwhelmed by the sensation of her intense attendance, saliva[one of] strangely[or][stopping] potent in its ability to arouse you. [if Cock Length of Player < 10]No doubt as a result of this, combined with the fact that her maw is simply too large to articulately pleasure someone of your diminutive size, she often disengaged from her oral fixation to drag her slippery appendage across your torso and face before it returns back to your member[else]Her slippery appendage firmly wrapped around your sizable tool, she bobs against the organ with fervent determination, her muffled songs of approval beckoned from her massive form strangely adept at eliciting further pleasure[end if]. [if scalevalue of Player < 4]Compelled by feral greed, her maw remains agape around your lower torso, which by now is absolutely drenched by her drool, her heated breath shielding you from the cold of the open, ocean air[else]The force of her avaricious maw often pushes your similarly sizable form along the sand, clearly not intent on relinquishing your cock until it sates her tainted hunger[end if].";
 					if Ball Size of Player > 5:
 						say "     Driven by an ecstatic haze, your [cock size desc of Player] cock explodes into the dragoness. You would think she'd yield to such a torrential flow, but [if scalevalue of Player < 4]instead her sexual greed gets the better of her more gentle demeanor as she throws your smaller form up into the air - maw and tongue gripped firmly on you and your hose - to swallow down your copious fluids with a fervent efficiency, forcing you cling to her head with dear life[else]her impressive girth shows little difficulty in handling your expansive release, snout pinning your firmly to the sand as she relentlessly consumes every last drop[end if][if Cock Count of Player > 2], your numerous free members spilling their seed along her elongated neck[else if Cock Count of Player is 2], your free member spilling its seed along her elongated neck[end if].";
 					else:
@@ -521,12 +521,16 @@ When Play begins:
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Feral Sea Dragon"; [name of the overall species of the infection, used for children, ...]
 	add "Feral Sea Dragoness" to infections of ReptileList;
+	add "Feral Sea Dragoness" to infections of FeralList;
 	add "Feral Sea Dragoness" to infections of MythologicalList;
 	add "Feral Sea Dragoness" to infections of FemaleList;
 	add "Feral Sea Dragoness" to infections of BarbedCockList;
 	add "Feral Sea Dragoness" to infections of InternalCockList;
 	add "Feral Sea Dragoness" to infections of QuadrupedalList;
+	add "Feral Sea Dragoness" to infections of SwimList;
 	add "Feral Sea Dragoness" to infections of TailList;
+	add "Feral Sea Dragoness" to infections of OviImpregnatorList;
+	add "Feral Sea Dragoness" to infections of FirebreathList;
 	add "Feral Sea Dragoness" to infections of TailweaponList;
 	now Name entry is "Feral Sea Dragoness";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]

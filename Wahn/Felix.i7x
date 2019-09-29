@@ -63,7 +63,7 @@ instead of navigating Dry Plains while (HP of Felix is 1 and Libido of Felix is 
 to say Stalker1:
 	say "     What do you do? Leave the meeting spot again and circle around in hope of catching the stalker ([link]Y[as]y[end link]), or tell him you don't have time right now ([link]N[as]n[end link]) ?";
 	if Player consents:
-		say "     You clap Felix on the shoulder and give him a hug, whispering, 'Ok, you stay calm and act normally. I'll circle around and come up from behind the rubble. Hopefully I can surprise whatever is watching you...";
+		say "     You clap Felix on the shoulder and give him a hug, whispering, 'OK, you stay calm and act normally. I'll circle around and come up from behind the rubble. Hopefully I can surprise whatever is watching you...";
 		LineBreak;
 		say "     With that, you wave goodbye to Felix and Thomas and make your way out into the plain in a wholly different direction. Trekking around the camp site in a wide arch, ducking into the grass as good as you can, you find yourself with the rubble mound between you and the centaurs. What next - do you want to climb over the rubble to surprise the watcher by coming from behind ([link]Y[as]y[end link]), or walk around it ([link]N[as]n[end link]) (with a higher chance of being seen)?";
 		if Player consents:
@@ -101,7 +101,7 @@ instead of navigating Dry Plains while (HP of Felix is 1 and Libido of Felix is 
 to say Stalker2:
 	say "     What do you do? Leave the meeting spot again and circle around in hope of catching the stalker ([link]Y[as]y[end link]), or tell him you don't have time right now ([link]N[as]n[end link]) ?";
 	if Player consents:
-		say "     You clap Felix on the shoulder and give him a hug, whispering, 'Ok, you stay calm and act normally. I'll circle around and come up from behind the rubble. Hopefully I can surprise your lizard stalker this time...";
+		say "     You clap Felix on the shoulder and give him a hug, whispering, 'OK, you stay calm and act normally. I'll circle around and come up from behind the rubble. Hopefully I can surprise your lizard stalker this time...";
 		say "     With that, you wave goodbye to Felix and Thomas and make your way out into the plain in a wholly different direction. Trekking around the camp site in a wide arch, ducking into the grass as good as you can, you find yourself with the rubble mound between you and the centaurs. What next - do you want to climb over the rubble to surprise the stalker by coming from behind ([link]Y[as]y[end link]), or walk around it ([link]N[as]n[end link]) (with a higher chance of being seen)?";
 		if Player consents:
 			let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
@@ -150,7 +150,7 @@ to say AndreMeeting:
 		LineBreak;
 		say "     Ah - he's taking a breath... now's your chance to get a word in edgewise. Do you tell him to go away and leave the centaurs in peace ([link]Y[as]y[end link]), or offer to introduce him to Felix, if the young centaur wants to meet him ([link]N[as]n[end link])?";
 		if Player consents:
-			say "     'Listen, I think it'd be best if you just left, ok? He wouldn't like someone like you who creeped after him anyways.' With that, you shut him up good. You continue, 'Give me that and go,' and take the pouch from his hands, then watch as the lizard runs off with tears in his eyes. Unlikely that he'll be back. With that, you walk back towards the centaurs.";
+			say "     'Listen, I think it'd be best if you just left, OK? He wouldn't like someone like you who creeped after him anyways.' With that, you shut him up good. You continue, 'Give me that and go,' and take the pouch from his hands, then watch as the lizard runs off with tears in his eyes. Unlikely that he'll be back. With that, you walk back towards the centaurs.";
 			now Libido of Felix is 99;
 		else:
 			say "     'Well, how about this - give me the bag and I'll bring it to Felix, then ask if he wants to meet you. You can't just follow him around forever.' Andre closes mouth on what he wanted to say, then nods with a hopeful look as he hands you the leather pouch. Saying, 'I'll wave if you can come over,' you walk back towards the centaurs.";
@@ -390,7 +390,7 @@ Instead of fucking the Felix:
 		say "ERROR-Felix-100B: He should be removed from the game.";
 	else:
 		if (lastfuck of Felix - turns < 6):
-			say "     Felix says, 'Sorry I'm still worn out from last time. Give me some space, ok?'";
+			say "     Felix says, 'Sorry I'm still worn out from last time. Give me some space, OK?'";
 		else if (Libido of Felix < 6 or Libido of Felix > 90):
 			say "     Felix says, 'Thanks for the offer - though I think I'll wait a bit more before doing any of that. I mean - you have my thanks for saving me, but... I want to be together with someone - not just have sex. Someone I care for.'";
 		else:
@@ -645,6 +645,7 @@ When Play begins:
 	add "Plains Lizard Male" to infections of TaperedCockList;
 	add "Plains Lizard Male" to infections of QuadrupedalList;
 	add "Plains Lizard Male" to infections of TailList;
+	add "Plains Lizard Male" to infections of OviImpregnatorList;
 	now Name entry is "Plains Lizard Male";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is "Andre";
@@ -815,7 +816,7 @@ Instead of fucking the Andre:
 		say "ERROR-Andre-100B: He should be removed from the game, together with Felix.";
 	else:
 		if (lastfuck of Andre - turns < 6):
-			say "     Andre says, 'Phew, I need a break for a bit. Another time, ok?'";
+			say "     Andre says, 'Phew, I need a break for a bit. Another time, OK?'";
 		else:
 			say "[AndreSexMenu]";
 

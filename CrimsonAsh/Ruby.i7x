@@ -196,6 +196,7 @@ When Play begins:
 	add "Crimson Dragon" to infections of InternalCockList;
 	add "Crimson Dragon" to infections of BipedalList;
 	add "Crimson Dragon" to infections of TailList;
+	add "Crimson Dragon" to infections of OviImpregnatorList;
 	now Name entry is "Crimson Dragon";
 	now enemy title entry is "Crimson Dragon";
 	now enemy Name entry is "Ruby";

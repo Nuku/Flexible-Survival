@@ -525,7 +525,7 @@ to say wyvgen_2: [Oral Receiving Cock]
 to say wyvgen_3: [Oral Receiving Cunt]
 	say "     Circling around to meet the wyvern at his front, the defeated beast growls lowly at you. Not immediately compliant though [ghe] may be, it's clear [ghe]'s too spent to put up any fight for long. Carefully, you expose your eager, [cunt size desc of Player] cunt[sfn] before [ghim], at first inclined to nip impotently at [if Cunt Count of Player > 1]one of them[else]it[end if], forcing you to swat the monster down until [ghe]'s gentler, eventually meeting it with [ghis] coarse, saliva-slicked tongue.";
 	say "     Prehensile appendage slathering its affection on your feminine portal, you can't help but press against the wyvern's snout, eventually forcing [ghim] to worm the slick organ within the confines of your hole[if Player is male], hardening dick[smn] grinding against his snout and[else if Cunt Count of Player > 2], its unattended sisters oozing against the [ghis] lips and[else if Cunt Count of Player is 2], its unattended sister oozing against the [ghis] lips and[else],[end if] no doubt filling [ghis] senses with the taste and scent of your honey. Unable to resist [ghis] growing, wanton need, the beast grinds [ghim]self against the ground, [ghis] own arousal brought about by your lewd task.";
-	say "     Eventually, [ghis] fervor drives [ghim] to dig [ghis] tongue entirely within your greedy hole - an act [if Cunt Depth of Player < 15]quickly stretching you to your limits, given how large [ghe] is[else]your sizeable hole can easily abide, in spite [ghis] large size[end if][if scalevalue of Player < 5] - pinning you against a wall[end if]. As you quickly approach your inevitable bliss, so too does your massive companion become more determined to taste your ecstasy.";
+	say "     Eventually, [ghis] fervor drives [ghim] to dig [ghis] tongue entirely within your greedy hole - an act [if Cunt Depth of Player < 15]quickly stretching you to your limits, given how large [ghe] is[else]your sizable hole can easily abide, in spite [ghis] large size[end if][if scalevalue of Player < 5] - pinning you against a wall[end if]. As you quickly approach your inevitable bliss, so too does your massive companion become more determined to taste your ecstasy.";
 	say "     In a few short seconds it's clear that you can hold back no longer, a cry forced out of you[if scalevalue of Player < 5] from against the wall[end if] before you are wracked in the throes of bliss, pussy tightening around the wyvern's writhing appendage, [if Player is male]your unattended cock[smn] staining the side of [ghis] muzzle as [ghe] loudly growls[else]loudly growling[end if] in tainted approval. Eventually, you manage to pull away from the monster, after [ghe] spent a moment idly licking your stretched and dripping hole.";
 	say "     Satisfied, you leave the wyvern, who you can clear see is lost in the throes of [ghis] own lust, having made a rather embarrassing, sticky mess of the ground [ghe]'s relegated [ghim]self to grinding against.";
 	CreatureSexAftermath "Wyvern" receives "OralPussy" from "Player"; [SexAftermath NYI: Female player gets a cuntjob from the wyvern]
@@ -678,15 +678,18 @@ When Play begins:
 	now Species Name entry is "Wyvern"; [name of the overall species of the infection, used for children, ...]
 	add "Wyvern" to infections of ReptileList;
 	add "Wyvern" to infections of FurryList;
+	add "Wyvern" to infections of FeralList;
 	add "Wyvern" to infections of MythologicalList;
 	add "Wyvern" to infections of MaleList;
 	add "Wyvern" to infections of BarbedCockList;
 	add "Wyvern" to infections of SheathedCockList;
+	add "Wyvern" to infections of InternalCockList;
 	add "Wyvern" to infections of BipedalList;
 	add "Wyvern" to infections of FlightList;
 	add "Wyvern" to infections of TailList;
-	add "Wyvern" to infections of TailweaponList;
 	add "Wyvern" to infections of OviImpregnatorList;
+	add "Wyvern" to infections of FirebreathList;
+	add "Wyvern" to infections of TailweaponList;
 	now Name entry is "Wyvern"; [Name of your new Monster]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
@@ -736,7 +739,7 @@ When Play begins:
 	now non-infectious entry is false;
 	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own] [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
-	now altcombat entry is "default";
+	now altcombat entry is "firebreath";
 	now BannedStatus entry is false;
 
 [

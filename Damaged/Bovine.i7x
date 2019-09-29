@@ -349,8 +349,10 @@ When Play begins:
 	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	add "Bovine" to infections of Bovinelist;
 	add "Bovine" to infections of FurryList;
+	add "Bovine" to infections of FeralList;
 	add "Bovine" to infections of NatureList;
 	add "Bovine" to infections of FemaleList;
+	add "Bovine" to infections of MaleList;
 	add "Bovine" to infections of BluntCockList;
 	add "Bovine" to infections of SheathedCockList;
 	add "Bovine" to infections of BipedalList;

@@ -137,6 +137,7 @@ When Play begins:
 	now Species Name entry is "Latex Wolf"; [name of the overall species of the infection, used for children, ...]
 	add "Latex Wolf" to infections of CanineList;
 	add "Latex Wolf" to infections of FurryList;
+	add "Latex Wolf" to infections of FeralList;
 	add "Latex Wolf" to infections of LatexList;
 	add "Latex Wolf" to infections of MaleList;
 	add "Latex Wolf" to infections of TaperedCockList;

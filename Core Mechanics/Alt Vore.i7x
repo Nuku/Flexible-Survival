@@ -535,8 +535,12 @@ Chapter 5 - UB by Player
 
 to ubbyplayer:
 	choose row MonsterID from the Table of Random Critters;
+	if ovipreglevel is 3 or (ovipreglevel is 2 and "Player" is an OviImpregnator):
+		now ovipregnant is true;
+	else:
+		now ovipregnant is false;
 	say "[ubbyplayer00]"; [Master ub scene]
-	say "     Indulging in this perversely twisted act has further weakened your grip on your own humanity even as you feel the nanites from your prey flooding your system [if ovipreglevel is 3]even as they are being encased in a protective shell[else]as they bond to your imprisoning womb via a rapidly forming placenta[end if]. With the [Name entry] taking root as your next child, you sigh in satisfaction, your maternal demands satisfied for now. The huge bulge of your belly goes down gradually as they regress somewhat in size, allowing you to eventually get up and continue on your way.";
+	say "     Indulging in this perversely twisted act has further weakened your grip on your own humanity even as you feel the nanites from your prey flooding your system [if ovipregnant is true]even as they are being encased in a protective shell[else]as they bond to your imprisoning womb via a rapidly forming placenta[end if]. With the [Name entry] taking root as your next child, you sigh in satisfaction, your maternal demands satisfied for now. The huge bulge of your belly goes down gradually as they regress somewhat in size, allowing you to eventually get up and continue on your way.";
 	decrease humanity of Player by 3;
 	now gestation of Child is a random number between 8 and 16;
 	now ubpreg is Name entry;
@@ -547,29 +551,7 @@ to ubbyplayer:
 		now researchbypass is 0;
 	increase ubcount by 1;
 	[All Child parts are the unbirthed creature - might be overwritten by the player having "They have your Eyes" during birth]
-	now HeadName of Child is Name entry;
-	now TorsoName of Child is Name entry;
-	now BackName of Child is Name entry;
-	now ArmsName of Child is Name entry;
-	now LegsName of Child is Name entry;
-	now AssName of Child is Name entry;
-	now TailName of Child is Name entry;
-	if Species Name entry is not "":
-		now HeadSpeciesName of Child is Species Name entry;
-		now TorsoSpeciesName of Child is Species Name entry;
-		now BackSpeciesName of Child is Species Name entry;
-		now ArmsSpeciesName of Child is Species Name entry;
-		now LegsSpeciesName of Child is Species Name entry;
-		now AssSpeciesName of Child is Species Name entry;
-		now TailSpeciesName of Child is Species Name entry;
-	else:
-		now HeadName of Child is Name entry;
-		now TorsoName of Child is Name entry;
-		now BackName of Child is Name entry;
-		now ArmsName of Child is Name entry;
-		now LegsName of Child is Name entry;
-		now AssName of Child is Name entry;
-		now TailName of Child is Name entry;
+	SetInfectionsOf Child to Name entry;
 
 Chapter 6 - UB Scenes
 

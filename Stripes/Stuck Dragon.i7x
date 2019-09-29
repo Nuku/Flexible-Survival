@@ -1346,6 +1346,7 @@ When Play begins:
 	add "Horny Dragon" to infections of InternalCockList;
 	add "Horny Dragon" to infections of QuadrupedalList;
 	add "Horny Dragon" to infections of TailList;
+	add "Horny Dragon" to infections of OviImpregnatorList;
 	now enemy title entry is "Horny Dragon";
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
@@ -1517,6 +1518,7 @@ When Play begins:
 	add "Slutty Dragoness" to infections of InternalCockList;
 	add "Slutty Dragoness" to infections of QuadrupedalList;
 	add "Slutty Dragoness" to infections of TailList;
+	add "Slutty Dragoness" to infections of OviImpregnatorList;
 	now enemy title entry is "Slutty Dragoness";
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]

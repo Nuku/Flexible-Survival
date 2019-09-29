@@ -22,6 +22,7 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Sphinx"; [name of the overall species of the infection, used for children, ...]
+	add "Sphinx" to infections of FelineList;
 	add "Sphinx" to infections of HybridList;
 	add "Sphinx" to infections of FurryList;
 	add "Sphinx" to infections of MythologicalList;

@@ -215,6 +215,7 @@ When Play begins:
 	add "Vixen Nurse" to infections of NatureList;
 	add "Vixen Nurse" to infections of FemaleList;
 	add "Vixen Nurse" to infections of TaperedCockList;
+	add "Vixen Nurse" to infections of KnottedCockList;
 	add "Vixen Nurse" to infections of SheathedCockList;
 	add "Vixen Nurse" to infections of BipedalList;
 	add "Vixen Nurse" to infections of TailList;

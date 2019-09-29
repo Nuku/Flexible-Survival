@@ -1034,7 +1034,7 @@ Instead of fucking the Amy:
 		now HP of Amy is 11;
 	else: [repeat sex]
 		if (lastfuck of Amy - turns < 2):
-			say "     As you approach Amy, the young husky bitch looks at you and sighs. 'I want to have sex with you, but I'm pretty exhausted from last time. Please give me a moment to rest, ok?'";
+			say "     As you approach Amy, the young husky bitch looks at you and sighs. 'I want to have sex with you, but I'm pretty exhausted from last time. Please give me a moment to rest, OK?'";
 		else:
 			say "[AmySexMenu]";
 

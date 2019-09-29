@@ -91,6 +91,7 @@ When Play begins:
 	add "Fire Elemental" to infections of FemaleList;
 	add "Fire Elemental" to infections of BarbedCockList;
 	add "Fire Elemental" to infections of BipedalList;
+	add "Fire Elemental" to infections of FirebreathList;
 	now Name entry is "Fire Elemental"; [Name of your new Monster]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]

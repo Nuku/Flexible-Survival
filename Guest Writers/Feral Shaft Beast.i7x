@@ -48,9 +48,12 @@ When Play begins:
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Feral Shaft Beast"; [name of the overall species of the infection, used for children, ...]
 	add "Feral Shaft Beast" to infections of BodyHorrorList;
+	add "Feral Shaft Beast" to infections of FeralList;
 	add "Feral Shaft Beast" to infections of HermList;
+	add "Feral Shaft Beast" to infections of BarbedCockList;
 	add "Feral Shaft Beast" to infections of QuadrupedalList;
 	add "Feral Shaft Beast" to infections of TailList;
+	add "Feral Shaft Beast" to infections of TailweaponList;
 	now Name entry is "Feral Shaft Beast"; [Name of your new Monster]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]

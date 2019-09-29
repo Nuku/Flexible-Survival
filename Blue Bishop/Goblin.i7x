@@ -26,7 +26,7 @@ to say losetogob_f:
 	if Player is male and Cock Length of Player < 14 and a random chance of 1 in 2 succeeds:
 		say "!' She moves a hand to grab [if Cock Count of Player > 1]one of your cocks[else]your cock[end if], stroking it as she shifts closer, her tongue lewdly caressing the [cock size desc of Player] tool until you are[if HP of Player < 1] forcibly[end if] made hard[if Cock Count of Player > 2], its brothers soon following there after[else if Cock Count of Player > 1], its brother soon following there after[end if]";
 		if scalevalue of Player > 3:
-			say ". You can't refuse to admit to yourself that it's a little embarrassing when such a small [if HP of Player > 0]creature[else]assailant[end if] is forced to scale your sizeable, [bodytype of Player] form to position herself over you";
+			say ". You can't refuse to admit to yourself that it's a little embarrassing when such a small [if HP of Player > 0]creature[else]assailant[end if] is forced to scale your sizable, [bodytype of Player] form to position herself over you";
 		else:
 			say ". Satisfied, she scrambles to position himself on top of your [bodytype of Player] form";
 		say ", the spry lady shifting her tattered loincloth over so that it won't get in the way of impaling herself with your throbbing organ, she grinds her shapely ass along its length.";
@@ -88,7 +88,7 @@ to say losetogob_m:
 	if anallevel > 1 and player is male and Cock Length of Player < 15 and a random chance of 1 in 6 succeeds:
 		say "!' He moves a hand to grab [if Cock Count of Player > 1]one of your cocks[else]your cock[end if], stroking it as he shifts closer, his tongue lewdly caressing the [cock size desc of Player] tool until you are[if HP of Player < 1] forcibly[end if] made hard[if Cock Count of Player > 2], its brothers soon following there after[else if Cock Count of Player > 1], its brother soon following there after[end if]";
 		if scalevalue of Player > 3:
-			say ". You can't refuse to admit to yourself that it's a little embarrassing when such a small [if HP of Player > 0]creature[else]assailant[end if] is forced to scale your sizeable, [bodytype of Player] form to position herself over you";
+			say ". You can't refuse to admit to yourself that it's a little embarrassing when such a small [if HP of Player > 0]creature[else]assailant[end if] is forced to scale your sizable, [bodytype of Player] form to position herself over you";
 		else:
 			say ". Satisfied, he scrambles to position himself on top of your [bodytype of Player] form";
 		say ", the spry lad shifting his tattered loincloth over so that it won't get in the way of impaling himself with your throbbing organ, his own standing proudly to attention as he grinds his shapely ass along its length. Apparently, this particular goblin is rather fond of going on a ride.";
@@ -591,6 +591,7 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Goblin"; [name of the overall species of the infection, used for children, ...]
+	add "Goblin" to infections of MagicalList;
 	add "Goblin" to infections of MythologicalList;
 	add "Goblin" to infections of MaleList;
 	add "Goblin" to infections of BipedalList;

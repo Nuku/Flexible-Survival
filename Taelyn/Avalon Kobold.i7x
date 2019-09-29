@@ -17,6 +17,7 @@ When Play begins:
 	add "Avalon Kobold" to infections of InternalCockList;
 	add "Avalon Kobold" to infections of BipedalList;
 	add "Avalon Kobold" to infections of TailList;
+	add "Avalon Kobold" to infections of OviImpregnatorList;
 	now name entry is "Avalon Kobold"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]

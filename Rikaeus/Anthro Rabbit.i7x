@@ -415,7 +415,7 @@ to say JockRabbitSexMenu:
 	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
-		now title entry is "Get worshipped as a jock bunny by the girls";
+		now title entry is "Get worshiped as a jock bunny by the girls";
 		now sortorder entry is 4;
 		now description entry is "The bunnies are already impressed by your size, now show them how impressive you really are";
 	[]
@@ -440,7 +440,7 @@ to say JockRabbitSexMenu:
 					say "[JockRabbitSex2]";
 				else if (nam is "Choose a rabbit girl to fuck"):
 					say "[JockRabbitSex3]";
-				else if (nam is "Get worshipped as a jock bunny by the girls"):
+				else if (nam is "Get worshiped as a jock bunny by the girls"):
 					say "[JockRabbitSex4]";
 				wait for any key;
 		else if calcnumber is 0:

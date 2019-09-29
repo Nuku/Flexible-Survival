@@ -80,6 +80,7 @@ When Play begins:
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Cock Cannon"; [name of the overall species of the infection, used for children, ...]
 	add "Cock Cannon" to infections of BodyHorrorList;
+	add "Cock Cannon" to infections of HumorousList;
 	add "Cock Cannon" to infections of MaleList;
 	add "Cock Cannon" to infections of BipedalList;
 	now Name entry is "Cock Cannon"; [Name of your new Monster]

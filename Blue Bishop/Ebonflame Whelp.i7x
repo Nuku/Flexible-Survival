@@ -106,13 +106,17 @@ When Play begins:
 	now Species Name entry is "Ebonflame Dragon"; [name of the overall species of the infection, used for children, ...]
 	add "Ebonflame Whelp" to infections of ReptileList;
 	add "Ebonflame Whelp" to infections of FurryList;
+	add "Ebonflame Whelp" to infections of FeralList;
 	add "Ebonflame Whelp" to infections of MythologicalList;
 	add "Ebonflame Whelp" to infections of MaleList;
+	add "Ebonflame Whelp" to infections of BarbedCockList;
 	add "Ebonflame Whelp" to infections of TaperedCockList;
 	add "Ebonflame Whelp" to infections of InternalCockList;
 	add "Ebonflame Whelp" to infections of BipedalList;
 	add "Ebonflame Whelp" to infections of FlightList;
 	add "Ebonflame Whelp" to infections of TailList;
+	add "Ebonflame Whelp" to infections of OviImpregnatorList;
+	add "Ebonflame Whelp" to infections of FirebreathList;
 	add "Ebonflame Whelp" to infections of TailweaponList;
 	now Name entry is "Ebonflame Whelp";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]

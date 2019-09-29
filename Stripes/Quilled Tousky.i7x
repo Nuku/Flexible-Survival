@@ -33,9 +33,11 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	add "Quilled Tousky" to infections of AvianList;
 	add "Quilled Tousky" to infections of CanineList;
 	add "Quilled Tousky" to infections of HumorousList;
 	add "Quilled Tousky" to infections of FurryList;
+	add "Quilled Tousky" to infections of FeralList;
 	add "Quilled Tousky" to infections of NatureList;
 	add "Quilled Tousky" to infections of MaleList;
 	add "Quilled Tousky" to infections of KnottedCockList;

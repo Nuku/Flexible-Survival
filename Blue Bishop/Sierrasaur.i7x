@@ -408,6 +408,7 @@ When Play begins:
 	now Species Name entry is "Sierrasaur"; [name of the overall species of the infection, used for children, ...]
 	add "Sierrasaur" to infections of ReptileList;
 	add "Sierrasaur" to infections of FurryList;
+	add "Sierrasaur" to infections of FeralList;
 	add "Sierrasaur" to infections of HistoricalList;
 	add "Sierrasaur" to infections of NatureList;
 	add "Sierrasaur" to infections of HermList;
@@ -415,6 +416,7 @@ When Play begins:
 	add "Sierrasaur" to infections of InternalCockList;
 	add "Sierrasaur" to infections of BipedalList;
 	add "Sierrasaur" to infections of TailList;
+	add "Sierrasaur" to infections of OviImpregnatorList;
 	add "Sierrasaur" to infections of TailweaponList;
 	now Name entry is "Sierrasaur";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]

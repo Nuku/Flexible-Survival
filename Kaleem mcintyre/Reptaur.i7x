@@ -184,13 +184,15 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Reptaur"; [name of the overall species of the infection, used for children, ...]
+	add "Reptaur" to infections of ReptileList;
 	add "Reptaur" to infections of HybridList;
 	add "Reptaur" to infections of FurryList;
 	add "Reptaur" to infections of HermList;
 	add "Reptaur" to infections of TaperedCockList;
 	add "Reptaur" to infections of InternalCockList;
-	add "Reptaur" to infections of BipedalList;
+	add "Reptaur" to infections of TaurList;
 	add "Reptaur" to infections of TailList;
+	add "Reptaur" to infections of OviImpregnatorList;
 	add "Reptaur" to infections of TailweaponList;
 	now Name entry is "Reptaur"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "Reptaur"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]

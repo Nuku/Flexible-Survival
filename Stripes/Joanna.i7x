@@ -472,7 +472,7 @@ This is the joannasexy rule:
 			else if "Microwaved" is listed in feats of Player:
 				say "WARNING: Sex shifting nanites detected! Allow?";
 				if Player consents:
-					say "Ok.";
+					say "OK.";
 					now skipcockchange is true;
 					follow the sex change rule;
 					now skipcockchange is false;
@@ -488,7 +488,7 @@ This is the joannasexy rule:
 			if "Microwaved" is listed in feats of Player:
 				say "WARNING: Sex shifting nanites detected! Allow?";
 				if Player consents:
-					say "Ok.";
+					say "OK.";
 					now skipcockchange is true;
 					follow the sex change rule;
 					now skipcockchange is false;

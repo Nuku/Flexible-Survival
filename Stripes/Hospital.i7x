@@ -1363,7 +1363,7 @@ to say tlvictory:
 		now HP of Doctor Matt is 102;
 		extend game by 56;
 		say "     With Dr Matt in good hands, you [if Susan is visible]and Susan [end if]bring your haul down the stairs in stages and then take it out the door. Having called for the helicopter pickup earlier, it arrives and you instruct the orderlies to load up the equipment before you all return to the hospital and the laboratory hidden within.";
-		say "     As the lab fades into the distance you can see the faint sign of incoming choppers coming to land there. It seems that Orthas called in the military to take the transformed doctor and any remaining research material. They've been dealt a sizeable setback to their plans.";
+		say "     As the lab fades into the distance you can see the faint sign of incoming choppers coming to land there. It seems that Orthas called in the military to take the transformed doctor and any remaining research material. They've been dealt a sizable setback to their plans.";
 	decrease the humanity of Player by 5;
 	increase score by 50;
 	LineBreak;

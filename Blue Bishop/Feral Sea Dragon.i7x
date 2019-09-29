@@ -713,12 +713,17 @@ When Play begins:
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Feral Sea Dragon"; [name of the overall species of the infection, used for children, ...]
 	add "Feral Sea Dragon" to infections of ReptileList;
+	add "Feral Sea Dragon" to infections of FeralList;
 	add "Feral Sea Dragon" to infections of MythologicalList;
 	add "Feral Sea Dragon" to infections of FemaleList;
+	add "Feral Sea Dragon" to infections of MaleList;
 	add "Feral Sea Dragon" to infections of BarbedCockList;
 	add "Feral Sea Dragon" to infections of InternalCockList;
 	add "Feral Sea Dragon" to infections of QuadrupedalList;
+	add "Feral Sea Dragon" to infections of SwimList;
 	add "Feral Sea Dragon" to infections of TailList;
+	add "Feral Sea Dragon" to infections of OviImpregnatorList;
+	add "Feral Sea Dragon" to infections of FirebreathList;
 	add "Feral Sea Dragon" to infections of TailweaponList;
 	now Name entry is "Feral Sea Dragon";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]

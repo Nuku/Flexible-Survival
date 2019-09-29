@@ -55,6 +55,7 @@ When Play begins:
 	add "Salamander" to infections of InternalCockList;
 	add "Salamander" to infections of BipedalList;
 	add "Salamander" to infections of TailList;
+	add "Salamander" to infections of OviImpregnatorList;
 	add "Salamander" to infections of FeralmindList;
 	add "Salamander" to infections of TailweaponList;
 	add "Salamander" to infections of FirebreathList;

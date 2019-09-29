@@ -6,9 +6,10 @@ Doran by Blue Bishop begins here.
 Section 1.0 - Doran Coding Miscellany
 
 when play begins:
-	add { "Peculiar Dragon" } to infections of MaleList;
-	add { "Peculiar Dragon" } to infections of FurryList;
-	add { "Peculiar Dragon" } to infections of FeralList;
+	add "Peculiar Dragon" to infections of MaleList;
+	add "Peculiar Dragon" to infections of FurryList;
+	add "Peculiar Dragon" to infections of FeralList;
+	add "Peculiar Dragon" to infections of OviImpregnatorList;
 
 [ DoranPlayerRegard - raw string, determines what Doran calls the player.    ]
 [   Varies between "Master" and "Mistress", or "Pet", "Slave", "Bitch"       ]
@@ -272,7 +273,7 @@ to say DoranVictory_MountHim: [fuck the dragon]
 	say "     'My victor ought not worry for my welfare, abuse me as much as it pleases them.' It's glaringly obvious by now that this beast is very heavily inclined towards submission. You expose your [cock size desc of Player] dick[smn] before [ghim], [if Cock Length of Player > 17]a very eager look in his eyes at the prospect of getting[else]clearly eager to be[end if] impaled by [if Cock Count of Player > 1]one of those things[else]such a thing[end if].";
 	say "     Approaching the dragon, you more rigorously invoke your arousal by grinding[if Cock Count of Player > 1] one of[end if] your hardening shaft[smn] against his well-toned rear, scales immaculate and smooth under your touch, illustrating that the creature takes very good care of his appearance. Slowly, you sink the[if Player is blunt] blunt[end if] head of[if Cock Count of Player > 1] one of[end if] your[if Cock Length of Player > 17] impressive[end if] tool[smn] past his fleshy, yielding anal ring, eliciting from the beast a series of approving moans at your initial pace.";
 	if Cock Length of Player > 17:
-		say "     Very quickly, his supple hole becomes increasingly strained to abide your member, but this only entices the beast to coax you on. 'Further, further!' is his reply, and with a bit of work and pre's slick lubrication, his tight tailpipe grows progressively willing to take your sizeable tool[if Player is knotted], up to the knot[end if], granting you the freedom to start fucking him proper.";
+		say "     Very quickly, his supple hole becomes increasingly strained to abide your member, but this only entices the beast to coax you on. 'Further, further!' is his reply, and with a bit of work and pre's slick lubrication, his tight tailpipe grows progressively willing to take your sizable tool[if Player is knotted], up to the knot[end if], granting you the freedom to start fucking him proper.";
 	else:
 		say "     He shows absolutely no difficulty in abiding your member[if Player is knotted], even tying its knot almost immediately[end if]. He doesn't seem to mind your ease, and is more inclined to revel in your exploitation of his form, supple abyss almost overwhelming in how assertively it milks the organ. 'Harder, harder!' is his demand, greedy for your abuse, as you're compelled to start fucking him proper.";
 	say "     [if scalevalue of Player > 3]Body visibly rocking against each successive thrust[else]Larger body barely moved by[end if] each successive thrust, [if Player is not internal]your balls audibly slap against [ghim], a wordless remark on[else]you are overtaken by[end if] your rising, wanton fervor. Your embrace on the reptile grows increasingly slick, coated by a thin veneer of sweat.";
@@ -1788,7 +1789,7 @@ to say DoranSub_AnalFuck: [Anal Catching] [BODY MODDED]
 	say "     Approaching the [gdragon], you more rigorously make yourself hard by grinding[if Cock Count of Player > 1] one of[end if] your hardening shaft[smn] between the cheeks of [ghis] well-toned rear, the immaculate and smooth caressing along your length. Slowly, you sink the[if Player is blunt] blunt[end if] head of[if Cock Count of Player > 1]one of [end if]your [if Cock Length of Player > 17]impressive [end if]tool[smn] past [ghis] fleshy, yielding anal ring, each successive inch forcing out a series of approving moans from the beast.";
 	if Cock Length of Player > 17:
 		say "     Very quickly, [ghis] supple hole becomes increasingly strained to abide your member, but this only this only seems to excite the [gdragon].";
-		say "     '[one of]More, [DoranPlayerRegard]. I need it all[or]Further, [DoranPlayerRegard], further[at random]!' [ghe] [if DoranRoleIntensity is 4]begs[else]asks[end if], and with a bit of work and pre's slick lubrication [ghis] tight tailpipe grows increasingly willing to take your sizeable tool[if Player is knotted], up to the knot[end if], allowing you the freedom to start fucking [ghim] proper.";
+		say "     '[one of]More, [DoranPlayerRegard]. I need it all[or]Further, [DoranPlayerRegard], further[at random]!' [ghe] [if DoranRoleIntensity is 4]begs[else]asks[end if], and with a bit of work and pre's slick lubrication [ghis] tight tailpipe grows increasingly willing to take your sizable tool[if Player is knotted], up to the knot[end if], allowing you the freedom to start fucking [ghim] proper.";
 	else:
 		say "     [gche] shows absolutely no difficulty in taking your member[if Player is knotted], even tying with it almost immediately[end if]. [gche] doesn't seem to mind your ease, reveling in being [if DoranRoleIntensity is 4]shamelessly used[else]ridden by[end if] you, supple abyss almost overwhelming in how [if DoranRoleIntensity is 4]obligingly[else]assertively[end if] it milks the organ.";
 		say "     '[one of]Fuck me, [DoranPlayerRegard][or]Harder, [DoranPlayerRegard], harder[at random]!' [ghe] [if DoranRoleIntensity is 4]pleads[else]demands[end if], the creature greedy for your throbbing meat as you're compelled to start fucking [ghim] proper.";
@@ -1982,14 +1983,14 @@ to say DoranSub_CatchCunt: [Cunt Catching] [BODY MODDED]
 			if DoranInternal is true:
 				say "stroke is exposed, smooth portal. Moans pulled from the [gdragon] with your gentle touch, you lean in further and prepare [ghim] with your tongue's caress across [ghis] nether lips";
 			else:
-				say "feel [ghis] [if DoranBallModStatus > 0]massive, oversized[else]sizeable, full[end if] sack and bulging sheath. Moans pulled from the [gdragon] with your gentle touch, you lean in further and prepare [ghim] with your tongue's caress";
+				say "feel [ghis] [if DoranBallModStatus > 0]massive, oversized[else]sizable, full[end if] sack and bulging sheath. Moans pulled from the [gdragon] with your gentle touch, you lean in further and prepare [ghim] with your tongue's caress";
 			say ", more that enough to bring [ghis] organ to its full size. Not feeling eager to subject yourself to the ride dry, you make some effort to slick the member beforehand, [if DoranBallModStatus > 0]not that it's difficult with the amount of precum [ghe]'s constantly oozing[else if scalevalue of Player > 3]finding little difficulty in achieving your goal[else], though you're not quite big enough to get the job done, the [gdragon] bending in to help you with [ghis] own[end if]. It's not long before it's ready, dripping with an aching need.";
 	else:
 		say "     Leaning in between [ghis] twin, powerful legs, your hands move to ";
 		if DoranInternal is true:
 			say "stroke is exposed, smooth portal. Moans pulled from the [gdragon] with your gentle touch, you lean in further and prepare [ghim] with your tongue's caress across [ghis] nether lips";
 		else:
-			say "feel [ghis] [if DoranBallModStatus > 0]massive, oversized[else]sizeable, full[end if] sack and bulging sheath. Moans pulled from the [gdragon] with your gentle touch, you lean in further and prepare [ghim] with your tongue's caress";
+			say "feel [ghis] [if DoranBallModStatus > 0]massive, oversized[else]sizable, full[end if] sack and bulging sheath. Moans pulled from the [gdragon] with your gentle touch, you lean in further and prepare [ghim] with your tongue's caress";
 		say ", more that enough to bring [ghis] organ to its full size. Not feeling eager to subject yourself to the ride dry, you make some effort to slick the member beforehand, [if DoranBallModStatus > 0]not that it's difficult with the amount of precum [ghe]'s constantly oozing[else if scalevalue of Player > 3]finding little difficulty in achieving your goal[else], though you're not quite big enough to get the job done, the [gdragon] bending in to help you with [ghis] own[end if]. It's not long before it's ready, dripping with an aching need.";
 	if scalevalue of Player < 4:
 		say "     Now ready, you climb atop the [gdragon]'s scaled undercarriage, carefully aiming the dripping rod for [if Cunt Count of Player > 1]one of your exposed cunts[else]your exposed cunt[end if].";
@@ -2040,14 +2041,14 @@ to say DoranSub_CatchAnal: [Anal Catching] [BODY MODDED]
 			if DoranInternal is true:
 				say "stroke is exposed, smooth portal. Moans pulled from the [gdragon] with your gentle touch, you lean in further and prepare [ghim] with your tongue's caress across [ghis] nether lips";
 			else:
-				say "feel [ghis] [if DoranBallModStatus > 0]massive, oversized[else]sizeable, full[end if] sack and bulging sheath. Moans pulled from the [gdragon] with your gentle touch, you lean in further and prepare [ghim] with your tongue's caress";
+				say "feel [ghis] [if DoranBallModStatus > 0]massive, oversized[else]sizable, full[end if] sack and bulging sheath. Moans pulled from the [gdragon] with your gentle touch, you lean in further and prepare [ghim] with your tongue's caress";
 			say ", more that enough to bring [ghis] organ to its full size. Not feeling eager to subject yourself to the ride dry, you make some effort to slick the member beforehand, [if DoranBallModStatus > 0]not that it's difficult with the amount of precum [ghe]'s constantly oozing[else if scalevalue of Player > 3]finding little difficulty in achieving your goal[else], though you're not quite big enough to get the job done, the [gdragon] bending in to help you with [ghis] own[end if]. It's not long before it's ready, dripping with an aching need.";
 	else:
 		say "     Leaning in between [ghis] twin, powerful legs, your hands move to ";
 		if DoranInternal is true:
 			say "stroke is exposed, smooth portal. Moans pulled from the [gdragon] with your gentle touch, you lean in further and prepare [ghim] with your tongue's caress across [ghis] nether lips";
 		else:
-			say "feel [ghis] [if DoranBallModStatus > 0]massive, oversized[else]sizeable, full[end if] sack and bulging sheath. Moans pulled from the [gdragon] with your gentle touch, you lean in further and prepare [ghim] with your tongue's caress";
+			say "feel [ghis] [if DoranBallModStatus > 0]massive, oversized[else]sizable, full[end if] sack and bulging sheath. Moans pulled from the [gdragon] with your gentle touch, you lean in further and prepare [ghim] with your tongue's caress";
 		say ", more that enough to bring [ghis] organ to its full size. Not feeling eager to subject yourself to the ride dry, you make some effort to slick the member beforehand, [if DoranBallModStatus > 0]not that it's difficult with the amount of precum [ghe]'s constantly oozing[else if scalevalue of Player > 3]finding little difficulty in achieving your goal[else], though you're not quite big enough to get the job done, the [gdragon] bending in to help you with [ghis] own[end if]. It's not long before it's ready, dripping with an aching need.";
 	if scalevalue of Player < 4:
 		say "     Now ready, you climb atop the [gdragon]'s scaled undercarriage, carefully aiming the dripping rod for your exposed ass.";
@@ -2134,7 +2135,7 @@ to say DoranSub_Rimjob: [Rimjob] [BODY MODDED]
 			say "     '[if DoranRoleIntensity is 4][one of]It pleases their [gdragon] that they could tend to them so[or]Oh, my [DoranPlayerRegard]'s ass is positively enviable[or]I could tend to [DoranPlayerRegard] like that for hours[at random][else][one of]I hope I satisfied [DoranPlayerRegard][or]That was certainly a fun little digression[or]Oh, the things [DoranPlayerRegard] asks of me[at random][end if]!' Grinning slyly, [ghe] returns back to [ghis] place of rest once [ghe]'s satisfied with your present state, letting you gather your thoughts and go about your business once more";
 
 to say DoranSub_SuckCock: [Oral Giving] [BODY MODDED]
-	say "     Approaching [ghim], you [if DoranRoleIntensity is 4]order[else]ask[end if] the [gdragon] to lay on [ghis] back, who's more than eager to oblige. Once Doran is in position, [ghis] [if DoranInternal is false and DoranBallModStatus > 0]sizeable genitalia is exposed before you, oversized sack and bulging sheath[else if DoranInternal is false]sizeable genitalia is exposed before you, ample sack and bulging sheath[else]genital slit is exposed before you, cockhead peeking from its home and[end if] left to your mercy[if DoranBallModStatus > 0], already leaking precum[end if]. [if DoranRoleIntensity is 4][gche][else]It seems [ghe][end if][']ll let you do as you please, so perhaps you could obsess over this lewd offering? Otherwise, you'll keep your distance as you attend to [ghim].";
+	say "     Approaching [ghim], you [if DoranRoleIntensity is 4]order[else]ask[end if] the [gdragon] to lay on [ghis] back, who's more than eager to oblige. Once Doran is in position, [ghis] [if DoranInternal is false and DoranBallModStatus > 0]sizable genitalia is exposed before you, oversized sack and bulging sheath[else if DoranInternal is false]sizable genitalia is exposed before you, ample sack and bulging sheath[else]genital slit is exposed before you, cockhead peeking from its home and[end if] left to your mercy[if DoranBallModStatus > 0], already leaking precum[end if]. [if DoranRoleIntensity is 4][gche][else]It seems [ghe][end if][']ll let you do as you please, so perhaps you could obsess over this lewd offering? Otherwise, you'll keep your distance as you attend to [ghim].";
 	if Player consents:
 		now tempnum is 1;
 		if DoranInternal is false:
@@ -2159,7 +2160,7 @@ to say DoranSub_SuckCock: [Oral Giving] [BODY MODDED]
 			else:
 				say "     Slowly, your hands move to feel [ghis] partially exposed dick, head drooling [if DoranBallModStatus > 0]considerably[else]slightly[end if] from your attention as you caress";
 		if DoranInternal is false:
-			say " that taut housing. Barely able to contain [ghis] proud tool, it clearly wishes to be rid of its occupant, curvature of [ghis] sizeable knot felt hiding within these confines for the moment";
+			say " that taut housing. Barely able to contain [ghis] proud tool, it clearly wishes to be rid of its occupant, curvature of [ghis] sizable knot felt hiding within these confines for the moment";
 			say "     Your hand gently pumps along the sheath's length, graced with groans from the [gdragon] and the feel of [ghis] tool rising from [ghis] depths, until [ghis] cock is completely rigid and eager. Precum [if DoranBallModStatus > 0]sputtering all over[else]staining[end if] [ghis] torso, it begs for attention.";
 		else:
 			say " [ghis] eager flesh. Your hand gently traces along its soft, precum-slicked length, causing the [gdragon] to subtly writhe against the tease. The portal strains to squeeze [ghis] tool through its scaled lips, until [ghis] cock is completely rigid and eager. Precum [if DoranBallModStatus > 0]sputtering all over[else]staining[end if] [ghis] torso, it begs for attention.";

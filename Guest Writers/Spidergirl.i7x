@@ -102,12 +102,16 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	add "Spidergirl" to infections of InsectList;
 	add "Spidergirl" to infections of HybridList;
 	add "Spidergirl" to infections of FurryList;
 	add "Spidergirl" to infections of MythologicalList;
 	add "Spidergirl" to infections of FemaleList;
+	add "Spidergirl" to infections of HermList;
 	add "Spidergirl" to infections of InternalCockList;
 	add "Spidergirl" to infections of OctapedalList;
+	add "Spidergirl" to infections of OviImpregnatorList;
+	add "Spidergirl" to infections of TailweaponList;
 	now Name entry is "Spidergirl";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]

@@ -250,6 +250,7 @@ When Play begins:
 	add "Kobold" to infections of InternalCockList;
 	add "Kobold" to infections of BipedalList;
 	add "Kobold" to infections of TailList;
+	add "Kobold" to infections of OviImpregnatorList;
 	now Name entry is "Kobold"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "Kobold Gang";
 	now enemy Name entry is ""; [specific name of unique enemy]

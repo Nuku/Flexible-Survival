@@ -208,6 +208,7 @@ When Play begins:
 	add "Frost Drake" to infections of InternalCockList;
 	add "Frost Drake" to infections of BipedalList;
 	add "Frost Drake" to infections of TailList;
+	add "Frost Drake" to infections of OviImpregnatorList;
 	add "Frost Drake" to infections of TailweaponList;
 	now Name entry is "Frost Drake";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]

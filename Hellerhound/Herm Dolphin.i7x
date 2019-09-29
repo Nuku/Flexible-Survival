@@ -97,7 +97,7 @@ to say dolphin fuck:
 		if "Microwaved" is listed in feats of Player:
 			say "WARNING: Sex shifting nanites detected! Allow?";
 			if Player consents:
-				say "Ok.";
+				say "OK.";
 				say "Your genitals feel odd as a cunt grows out of the base of your body, growing deeper and wider by the second.";
 				increase Cunt Count of Player by 1;
 				increase Cunt Depth of Player by 6;
@@ -119,7 +119,7 @@ to say dolphin fuck:
 			say "She slams her cock into your ass rather carelessly, her overlarge tool squeezing through your tight confines. It's clearly much too large for you, but that doesn't stop her from making a mess of your intestines. Her prehensile member worms its way into the depths of your bowels. A victim of this creature's ungodly length, you soon feel her malehood's intrusion invade your stomach where it relents, and you fear that if she were any longer, she could rightly impale you with her dick. She continues to thoroughly fuck you brains out, slamming your ass with dogged determination. You can visibly see the length of her rod bulge from your belly as she soon begins to orgasm.";
 			say "She lets out a chittering scream as she cums hard inside of you, stunning you and leaving you floating in the water. You can only watch, unreasoningly, as your belly gets bigger and bigger until you look positively bloated. A little while and expansion later, she begins to remove her cock with much wriggling and squirming to watch the cum inside of you get forced out into a cloud in the water once your entrance is clear.[impregchance] She then departs from you, clearly satisfied with her work on your poor soul, leaving you to float in the water, a mess of a person.";
 		else:
-			say "She eagerly slams her cock into your ass. In spite of her larger girth, your higher body size is more than enough to take her on, and she seems pleased by this. At least, at first. Her prehensile member worms its way into the depths of your bowels, but even this sizeable intruder can only wander so far into your labyrinth of flesh. She seems a little surprised by this, suggesting that she might not be used to handling a beast of your magnitude. You get the impression that she might be a little disappointed by this as well, perhaps used to the 'challenge' of contending with much smaller victims. Regardless, she continues fervently ramming you with her impressive dick. It's not long before she lets out a chittering scream in climax, unloading her cum into you. You feel her passionate fluids flood your inner depths, though her equally impressive load only manages to distend your belly ever slightly. Even her afterglow seems ruined by how well you can handle her release, and rather unceremoniously, she pulls her length from you in brisk departure.[impregchance]";
+			say "She eagerly slams her cock into your ass. In spite of her larger girth, your higher body size is more than enough to take her on, and she seems pleased by this. At least, at first. Her prehensile member worms its way into the depths of your bowels, but even this sizable intruder can only wander so far into your labyrinth of flesh. She seems a little surprised by this, suggesting that she might not be used to handling a beast of your magnitude. You get the impression that she might be a little disappointed by this as well, perhaps used to the 'challenge' of contending with much smaller victims. Regardless, she continues fervently ramming you with her impressive dick. It's not long before she lets out a chittering scream in climax, unloading her cum into you. You feel her passionate fluids flood your inner depths, though her equally impressive load only manages to distend your belly ever slightly. Even her afterglow seems ruined by how well you can handle her release, and rather unceremoniously, she pulls her length from you in brisk departure.[impregchance]";
 
 
 Section 2 - Creature Insertion
@@ -140,6 +140,7 @@ When Play begins:
 	add "Dolphin Herm" to infections of PrehensileCocklist;
 	add "Dolphin Herm" to infections of InternalCockList;
 	add "Dolphin Herm" to infections of BipedalList;
+	add "Dolphin Herm" to infections of SwimList;
 	add "Dolphin Herm" to infections of TailList;
 	add "Dolphin Herm" to infections of TailweaponList;
 	now Name entry is "Dolphin Herm"; [Name of your new Monster]

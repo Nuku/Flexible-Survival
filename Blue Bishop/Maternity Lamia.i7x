@@ -160,6 +160,7 @@ When Play begins:
 	add "Lamia" to infections of InternalCockList;
 	add "Lamia" to infections of SerpentineList;
 	add "Lamia" to infections of TailList;
+	add "Lamia" to infections of OviImpregnatorList;
 	add "Lamia" to infections of TailweaponList;
 	now Name entry is "Lamia"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]

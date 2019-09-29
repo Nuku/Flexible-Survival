@@ -131,7 +131,7 @@ to say Otter attack:
 					say ".";
 				WaitLineBreak;
 			else:
-				say ". After worshipping your cock and gotten you quite hard and eager, the male slides his body across yours, running his waterproof fur across your chest. The eager fellow slides his tail across your legs and presses down onto your shaft, taking it into his rear easily. He grinds and wriggles atop it, making your cock throb with need. A strange warmth builds in your cock as it plunges hard and fast into the otter male's rump, pleasure building in your body in the motion of the otters around you.";
+				say ". After worshiping your cock and gotten you quite hard and eager, the male slides his body across yours, running his waterproof fur across your chest. The eager fellow slides his tail across your legs and presses down onto your shaft, taking it into his rear easily. He grinds and wriggles atop it, making your cock throb with need. A strange warmth builds in your cock as it plunges hard and fast into the otter male's rump, pleasure building in your body in the motion of the otters around you.";
 				if Cock Count of Player > 1:
 					if FemaleList is not banned:
 						say "     Not to be left out, the females swim up, intent on your extra male meat. The flexible otters wriggle into position, the females taking turns with your additional maleness. The feel of their pussies around your cock is different from the male riding your cock, but both are equally enjoyable in their own ways.";
@@ -159,6 +159,8 @@ When Play begins:
 	add "Sea Otter" to infections of MustelidList;
 	add "Sea Otter" to infections of FurryList;
 	add "Sea Otter" to infections of NatureList;
+	add "Sea Otter" to infections of FemaleList;
+	add "Sea Otter" to infections of HermList;
 	add "Sea Otter" to infections of MaleList;
 	add "Sea Otter" to infections of TaperedCockList;
 	add "Sea Otter" to infections of SheathedCockList;

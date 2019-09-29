@@ -123,6 +123,7 @@ When Play begins:
 	add "Hawkman Male" to infections of BipedalList;
 	add "Hawkman Male" to infections of FlightList;
 	add "Hawkman Male" to infections of TailList;
+	add "Hawkman Male" to infections of OviImpregnatorList;
 	now Name entry is "Hawkman Male";
 	now enemy title entry is "Hawkman";
 	now enemy Name entry is ""; [specific name of unique enemy]
@@ -295,6 +296,7 @@ When Play begins:
 	add "Hawkman Female" to infections of BipedalList;
 	add "Hawkman Female" to infections of FlightList;
 	add "Hawkman Female" to infections of TailList;
+	add "Hawkman Female" to infections of OviImpregnatorList;
 	now Name entry is "Hawkman Female";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]

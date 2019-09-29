@@ -384,7 +384,7 @@ to say SusanSex3: [Hyper Fuck]
 to say SusanSex4: [Hyper Fun]
 	say "     Susan eyeballs your [cock size desc of Player] shaft with wide-eyed amazement. 'I was so surprised you could take me with that big cock of yours before. Let's go for it again. Just... just go slow,' she adds, your impressive size still quite daunting. The sexy doe leans in and takes in the scent of your manhood with a soft, needy sigh. Her soft warm tongue bathes over your [Cock of Player] pole as she strokes it with her soft palms. Pleasant tingles run through your loins as she continues to lather your cock with her tongue until it's glistening with her saliva.";
 	WaitLineBreak;
-	say "     You guide the pretty doe to lay on her back and spread her legs. Now longing for the [cock size desc of Player] cock she's been worshipping so ardently, she puts her arms around you as you get into position atop her. Lining up your cock to her juicy pussy, you lock your lips to hers and ease forward[if Cock Length of Player > 24]. You go extra slow for your delicate doe, letting her cervine cunt adjust and stretch to accept your massive meat[else]. You go slow for your loving doe, letting her cervine cunt adjust and stretch to fit your oversized meat[end if]. Susan moans into the kiss and hugs you all the tighter, her body quivering in delight as she's penetrated to fully.";
+	say "     You guide the pretty doe to lay on her back and spread her legs. Now longing for the [cock size desc of Player] cock she's been worshiping so ardently, she puts her arms around you as you get into position atop her. Lining up your cock to her juicy pussy, you lock your lips to hers and ease forward[if Cock Length of Player > 24]. You go extra slow for your delicate doe, letting her cervine cunt adjust and stretch to accept your massive meat[else]. You go slow for your loving doe, letting her cervine cunt adjust and stretch to fit your oversized meat[end if]. Susan moans into the kiss and hugs you all the tighter, her body quivering in delight as she's penetrated to fully.";
 	WaitLineBreak;
 	say "     As you break the kiss and lean up, you're treated to the lovely sight of your cervine lover panting in pleasure as you fuck her. Her cream-furred breasts jiggle and nicely with every large thrust of your pulsing rod into her[if Cock Length of Player >= 36]. Her chest is stretched visibly by your titanic member's phallic shape[else if Cock Length of Player >= 24]. Her tummy is stretched by your mighty member to raise a phallic bulge that moves with every thrust[else]. Her tummy shows a notable bulge from having your large member stuffed inside her[end if]. She rubs a paw over her plumped tummy in blissful awe.";
 	WaitLineBreak;
@@ -701,7 +701,7 @@ to deerfy:
 		if "Microwaved" is listed in feats of Player:
 			say "WARNING: Sex shifting nanites detected! Allow?";
 			if Player consents:
-				say "Ok.";
+				say "OK.";
 				follow the sex change rule;
 			else:
 				say "You wave a tiny microwave transmitter over the affected area. Ahhh, all clean!";
@@ -716,7 +716,7 @@ to deerfy:
 		if "Microwaved" is listed in feats of Player:
 			say "WARNING: Sex altering nanites detected! Allow?";
 			if Player consents:
-				say "Ok.";
+				say "OK.";
 				follow the sex change rule;
 			else:
 				say "You wave a tiny microwave transmitter over the affected area. Ahhh, all clean!";

@@ -128,6 +128,7 @@ When Play begins:
 	add "Killer Whale" to infections of PrehensileCocklist;
 	add "Killer Whale" to infections of InternalCockList;
 	add "Killer Whale" to infections of BipedalList;
+	add "Killer Whale" to infections of SwimList;
 	add "Killer Whale" to infections of TailList;
 	add "Killer Whale" to infections of TailweaponList;
 	now Name entry is "Killer Whale"; [Name of your new Monster]

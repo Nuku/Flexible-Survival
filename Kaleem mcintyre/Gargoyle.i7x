@@ -74,6 +74,7 @@ When Play begins:
 	add "Gargoyle" to infections of BipedalList;
 	add "Gargoyle" to infections of FlightList;
 	add "Gargoyle" to infections of TailList;
+	add "Gargoyle" to infections of OviImpregnatorList;
 	add "Gargoyle" to infections of TailweaponList;
 	now Name entry is "Gargoyle";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]

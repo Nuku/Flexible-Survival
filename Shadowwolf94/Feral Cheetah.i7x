@@ -213,6 +213,7 @@ When Play begins:
 	now Species Name entry is "Cheetah"; [name of the overall species of the infection, used for children, ...]
 	add "Feral Cheetah" to infections of FelineList;
 	add "Feral Cheetah" to infections of FurryList;
+	add "Feral Cheetah" to infections of FeralList;
 	add "Feral Cheetah" to infections of NatureList;
 	add "Feral Cheetah" to infections of MaleList;
 	add "Feral Cheetah" to infections of BarbedCockList;

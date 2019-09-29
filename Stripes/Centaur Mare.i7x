@@ -62,6 +62,7 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Centaur"; [name of the overall species of the infection, used for children, ...]
+	add "Centaur Mare" to infections of EquineList;
 	add "Centaur Mare" to infections of HybridList;
 	add "Centaur Mare" to infections of FurryList;
 	add "Centaur Mare" to infections of MythologicalList;

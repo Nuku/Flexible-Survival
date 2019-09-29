@@ -425,6 +425,7 @@ When Play begins:
 	add "Butterfly" to infections of InternalCockList;
 	add "Butterfly" to infections of BipedalList;
 	add "Butterfly" to infections of FlightList;
+	add "Butterfly" to infections of OviImpregnatorList;
 	now Name entry is "Butterfly"; [Name of your new Monster]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is "Mariposa";

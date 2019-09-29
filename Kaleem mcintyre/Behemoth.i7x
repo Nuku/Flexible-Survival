@@ -91,6 +91,7 @@ When Play begins:
 	now Species Name entry is "Behemoth"; [name of the overall species of the infection, used for children, ...]
 	add "Behemoth" to infections of HybridList;
 	add "Behemoth" to infections of FurryList;
+	add "Behemoth" to infections of FeralList;
 	add "Behemoth" to infections of HermList;
 	add "Behemoth" to infections of BluntCockList;
 	add "Behemoth" to infections of QuadrupedalList;

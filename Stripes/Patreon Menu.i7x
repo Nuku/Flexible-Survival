@@ -212,7 +212,7 @@ to sslvl12:
 		decrease XP of Player by val * ( level of Player ) * ( level of Player + 1 );
 		[ say "XP decreased to [XP of Player].";]
 		now val is 12 - level of Player;
-		[ say "Levelling up [value] times.";]
+		[ say "Leveling up [value] times.";]
 		repeat with x running from 1 to val:
 			level up;
 		increase vetcheater by 1;
