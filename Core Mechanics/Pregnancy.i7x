@@ -98,6 +98,20 @@ callovi is a truth state that varies. callovi is usually false; [true = ovi preg
 
 Chapter 2 - Pregnancy/Birth Detailing and Protocols
 
+to decide which text is random child gender:
+	let GenderList be { "male", "male", "male", "female", "female", "female" };
+	if HermList is not warded and HermList is not banned:
+		add { "herm", "herm" } to GenderList;
+	if TransList is not warded and TransList is not banned:
+		add { "trans male", "trans female" } to GenderList;
+	let ChildGenderRoll be a random number from 1 to the number of entries in GenderList;
+	decide on "[entry ChildGenderRoll of GenderList]";
+
+to decide which text is random child personality:
+	let PersonalityList be { "friendly", "playful", "mean", "curious", "stubborn", "independent", "sassy", "assertive", "meek", "extroverted", "introverted", "mischievious" };
+	let ChildPersonalityRoll be a random number from 1 to the number of entries in PersonalityList;
+	decide on "[entry ChildPersonalityRoll of PersonalityList]";
+
 to pregprotocol:
 	if ebgatorhijack > 0 or ebwhelphijack > 0:
 		decrease hijackgestation by 1;
@@ -329,33 +343,7 @@ To Birth:
 						if HeadSpeciesName of Child is TailSpeciesName of Child:
 							now IsPureblood is true;
 	[gender]
-	let ChildGender be "male";
-	let ChildGenderRoll be a random number from 1 to 10;
-	if HermList is warded or HermList is banned and (ChildGenderRoll is 7 or ChildGenderRoll is 8):
-		now ChildGenderRoll is a random number from 1 to 6;
-	if TransList is warded or TransList is banned and (ChildGenderRoll is 9 or ChildGenderRoll is 10):
-		now ChildGenderRoll is a random number from 1 to 6;
-	if ChildGenderRoll is:
-		-- 1:
-			now ChildGender is "male";
-		-- 2:
-			now ChildGender is "male";
-		-- 3:
-			now ChildGender is "male";
-		-- 4:
-			now ChildGender is "female";
-		-- 5:
-			now ChildGender is "female";
-		-- 6:
-			now ChildGender is "female";
-		-- 7:
-			now ChildGender is "herm";
-		-- 8:
-			now ChildGender is "herm";
-		-- 9:
-			now ChildGender is "trans male";
-		-- 10:
-			now ChildGender is "trans female";
+	let ChildGender be random child gender;
 	[override for special species with gender bias - expand HERE for new species]
 	if Child has a body of "Platypus" and a random chance of 9 in 10 succeeds:
 		now ChildGender is "male";
@@ -381,33 +369,7 @@ To Birth:
 	let IsFeral be false;
 	if "Wild Womb" is listed in feats of Player:
 		now IsFeral is true;
-	let ChildPersonality be "";
-	let ChildPersonalityRoll be a random number from 1 to 12;
-	if ChildPersonalityRoll is:
-		-- 1:
-			now ChildPersonality is "friendly";
-		-- 2:
-			now ChildPersonality is "playful";
-		-- 3:
-			now ChildPersonality is "mean";
-		-- 4:
-			now ChildPersonality is "curious";
-		-- 5:
-			now ChildPersonality is "stubborn";
-		-- 6:
-			now ChildPersonality is "independent";
-		-- 7:
-			now ChildPersonality is "sassy";
-		-- 8:
-			now ChildPersonality is "assertive";
-		-- 9:
-			now ChildPersonality is "meek";
-		-- 10:
-			now ChildPersonality is "extroverted";
-		-- 11:
-			now ChildPersonality is "introverted";
-		-- 12:
-			now ChildPersonality is "mischievious";
+	let ChildPersonality be random child personality;
 	let PlayerRelationship be "indifferent";
 	if IsFeral is true:
 		if a random chance of 1 in 2 succeeds:
@@ -743,76 +705,14 @@ To impregnate with (x - text):
 				stop the action;
 		now gestation of Child is a random number from 24 to 48;
 		[making sure all body parts are available]
-		let Impregnator be a person;
-		SetInfectionsOf Impregnator to infections of Player;
+		SetInfectionsOf Impregnatee to infections of Player;
+		SetInfectionsOf Impregnator to x;
 		if "Breeding True" is listed in feats of Player: [child will always look like the father]
-			SetInfectionsOf Child to x;
-		else if "They Have Your Eyes" is listed in feats of Player: [child will always look like the player]
 			SetInfectionsOf Child to infections of Impregnator;
+		else if "They Have Your Eyes" is listed in feats of Player: [child will always look like the player]
+			SetInfectionsOf Child to infections of Impregnatee;
 		else: [random choosing]
-			if a random chance of 1 in 2 succeeds:
-				now HeadName of Child is Name entry;
-				if Species Name entry is not "":
-					now HeadSpeciesName of Child is Species Name entry;
-				else:
-					now HeadSpeciesName of Child is Name entry;
-			else:
-				now HeadName of Child is HeadName of Impregnator;
-				now HeadSpeciesName of Child is HeadSpeciesName of Impregnator;
-			if a random chance of 1 in 2 succeeds:
-				now TorsoName of Child is Name entry;
-				if Species Name entry is not "":
-					now TorsoSpeciesName of Child is Species Name entry;
-				else:
-					now TorsoSpeciesName of Child is Name entry;
-			else:
-				now TorsoName of Child is TorsoName of Impregnator;
-				now TorsoSpeciesName of Child is TorsoSpeciesName of Impregnator;
-			if a random chance of 1 in 2 succeeds:
-				now BackName of Child is Name entry;
-				if Species Name entry is not "":
-					now BackSpeciesName of Child is Species Name entry;
-				else:
-					now BackSpeciesName of Child is Name entry;
-			else:
-				now BackName of Child is BackName of Impregnator;
-				now BackSpeciesName of Child is BackSpeciesName of Impregnator;
-			if a random chance of 1 in 2 succeeds:
-				now ArmsName of Child is Name entry;
-				if Species Name entry is not "":
-					now ArmsSpeciesName of Child is Species Name entry;
-				else:
-					now ArmsSpeciesName of Child is Name entry;
-			else:
-				now ArmsName of Child is ArmsName of Impregnator;
-				now ArmsSpeciesName of Child is ArmsSpeciesName of Impregnator;
-			if a random chance of 1 in 2 succeeds:
-				now LegsName of Child is Name entry;
-				if Species Name entry is not "":
-					now LegsSpeciesName of Child is Species Name entry;
-				else:
-					now LegsSpeciesName of Child is Name entry;
-			else:
-				now LegsName of Child is LegsName of Impregnator;
-				now LegsSpeciesName of Child is LegsSpeciesName of Impregnator;
-			if a random chance of 1 in 2 succeeds:
-				now AssName of Child is Name entry;
-				if Species Name entry is not "":
-					now AssSpeciesName of Child is Species Name entry;
-				else:
-					now AssSpeciesName of Child is Name entry;
-			else:
-				now AssName of Child is AssName of Impregnator;
-				now AssSpeciesName of Child is AssSpeciesName of Impregnator;
-			if a random chance of 1 in 2 succeeds:
-				now TailName of Child is Name entry;
-				if Species Name entry is not "":
-					now TailSpeciesName of Child is Species Name entry;
-				else:
-					now TailSpeciesName of Child is Name entry;
-			else:
-				now TailName of Child is TailName of Impregnator;
-				now TailSpeciesName of Child is TailSpeciesName of Impregnator;
+			SetInfectionsOf Child randomized between Impregnator and Impregnatee;
 	if Player is not female:
 		say "[line break]     There is a pleasant sense of warmth from your lower belly, filling an emptiness you did not know was there.";
 		if pregtype is 0, now pregtype is 2; [mpreg]
