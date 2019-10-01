@@ -2899,22 +2899,10 @@ To process (x - a grab object):
 			now Lastjournaluse is turns;
 		follow turnpass rule;
 	else if x is a armament:
-		if weapon of Player is weapon of x:		[unequip]
+		if weapon object of Player is x: [unequip]
 			unwield x;
 		else: [equip]
-			now weapon object of Player is x;
-			now weapon of Player is weapon of x;
-			now weapon damage of Player is weapon damage of x;
-			now weapon type of Player is weapon type of x;
-			if x is ranged:
-				now weapon type of Player is "Ranged";
-			say "You ready your [x]";
-			if x is unwieldy:
-				if scalevalue of Player > objsize of x:
-					say ". Your [if scalevalue of Player is 3]normal-size[else if scalevalue of Player is 4]large[else]massive[end if] [BodyName of Player] hand dwarfs the [x], making it [if scalevalue of Player - objsize of x > 3]very[else if scalevalue of Player - objsize of x is 3]rather[else]somewhat[end if] [one of]unwieldy[or]awkward[or]difficult[at random] to use accurately";
-				else:
-					say ". Your [if scalevalue of Player is 3]normal-size[else if scalevalue of Player is 2]small[else]tiny[end if] [BodyName of Player] hands are just too small to comfortably grip your [x], making swinging it a [if objsize of x - scalevalue of Player > 3]very[else if objsize of x - scalevalue of Player is 3]quite[else]a little[end if] [one of]unwieldy[or]awkward[or]difficult[at random]";
-			say ".";
+			wield x;
 	else if x is equipment:
 		if x is equipped: [unequip]
 			if x is not cursed: [explanation why the item can't be taken off is to be done in the item description]
