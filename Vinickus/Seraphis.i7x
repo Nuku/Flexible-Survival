@@ -6,56 +6,57 @@ Version 1 of Seraphis by Vinickus begins here.
 [ 100: met, refused                                          ]
 
 [ hp of Seraphis                                             ]
-[   1-15: Seraphis is dominant one.                                     ]
-[   16-30: Seraphis is submissive one.                            ]
-[   50-60: Seraphis was abandoned at some point, and broken by various other horny beasts in the plains.                              ]
+[   1-15: Seraphis is dominant one.                          ]
+[   16-30: Seraphis is submissive one.                       ]
+[   50-60: Seraphis was abandoned at some point, and broken by various other horny beasts in the plains. ]
 [   50: Seraphis was left.]
-[   61: Seraphis is pleased with the player character, but mostly neutral towards them sexually.]
-[   199: Seraphis event chain was abandoned.]
+[   61: Seraphis is pleased with the Player character, but mostly neutral towards them sexually.]
+[   199: Seraphis event chain was abandoned.                 ]
 
-[ libido of Seraphis                                         ]
+[ Libido of Seraphis                                         ]
 [   0: anal virgin                                           ]
-[   1: player fucked him                                     ]
+[   1: Player fucked him                                     ]
 
 
 Section 1 - Basic Setup
 
+Table of GameCharacterIDs (continued)
+object	name
+Seraphis	"Seraphis"
 
 Seraphis is a man.
 The description of Seraphis is "[SeraphisDesc]".
 The conversation of Seraphis is { "<Hello.>"}.
 The scent of Seraphis is "     He radiates a strong, equine musk."
 SeraphisRelationship is a number that varies.
-SeraphisContent is a number that varies. [Determines if Seraphis will let the player through the gate.]
-MarkedSeraphisCum is a number that varies. [Determines if the player has been covered/marked by Seraphis' potent seed.]
-ConclaveKnowledge is a number that varies. [Determines if the Conclave knows of the player.]
-PlayerInformed is a number that varies. [Determines if the player knows how Seraphis was dosed.]
+SeraphisContent is a number that varies. [Determines if Seraphis will let the Player through the gate.]
+MarkedSeraphisCum is a number that varies. [Determines if the Player has been covered/marked by Seraphis's potent seed.]
+ConclaveKnowledge is a number that varies. [Determines if the Conclave knows of the Player.]
+PlayerInformed is a number that varies. [Determines if the Player knows how Seraphis was dosed.]
 [Seraphis is in Slaver Village Gate.]
 SeraphisNeedy is a number that varies. [Helps differentiate the two dominant Seraphis scenes for this event.]
 
 Section 2 - Seraphis Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Conflict within the Plains	"Conflict within the Plains"
+
 Conflict within the Plains is a situation. The level of Conflict within the Plains is 6.
 The sarea of Conflict within the Plains is "Plains".
 when play begins:
-	add Conflict within the Plains to badspots of MaleList;
-	add Conflict within the Plains to badspots of FurryList;
-
-Plant Ruins Encounters is a situation. Plant Ruins Encounters is resolved. The level of Plant Ruins Encounters is 6.
-The sarea of Plant Ruins Encounters is "Plains".
-when play begins:
-	add Plant Ruins Encounters to badspots of MaleList;
-	add Plant Ruins Encounters to badspots of FurryList;
+	add Conflict within the Plains to Badspots of MaleList;
+	add Conflict within the Plains to Badspots of FurryList;
 
 Instead of resolving a Conflict Within the Plains:
 	if HP of Seraphis is 0: [First interaction]
 		say "     Moving through the plains rarely brings much of interest to your eyes, but as you don't have much else to do during your travel through the grasses, you let your eyes wander far and wide. Surprisingly, you notice a glint of light off to the side. As you focus your gaze that way, it repeats again and again in irregular intervals, drawing your attention to what might be reflecting [if daytimer is day]sun[else]moon[end if]light out here. The source definitely seems to be on the move, and after studying another half-dozen flashes, you manage to pin down the direction and speed of your curiosity. Your drive to learn what the object is outweighs any wariness within your mind, so you set out to close the distance.";
 		say "     It takes a few minutes of running through the grass to begin making out any details at all, but eventually, you do manage to learn that it isn't one source of reflected light, but three, moving from right to left in the intermediate distance. After another minute or two more of running, you're finally close enough to make out what's before you: Three angry, gorilla-like beings in metallic armor that are chasing a centaur. Before your very eyes, they drive him into a field of crumbling ruins and pen him in against a wall, blocking any further flight. The situation looks rather risky, as the conflict of whoever they are might splash over on you.";
-		say "     [bold type]It looks rather risky. Maybe leaving and coming back another time would be for the best, but then you might miss something. Do you run or stay?[roman type][line break]";
+		say "     [bold type]It looks rather risky, maybe leaving and coming back another time would be for the best, but then you might miss something. Do you run or stay?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Stay and see what's happening.";
 		say "     ([link]N[as]n[end link]) - Run, run, and keep running in whatever direction isn't this one.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     You move in closer to get a better look at the three armored, almost gorilla-looking individuals. Their armor covers them from head to toe, leaving no possible way to see a single bit of skin, hair, or any other identifying factor. All that you can go off of is their general shape and posture. They stand hunched over, their arms stretching down to their knees and obviously quite large, judging by the sheer diameter of the armor around them, and ending with fists curled up into metal balls. All the metal covering their bodies is also entirely based around straight plates and angled connections between them. The helmets they wear are square in the back half, and around where one would assume the ears are, they angle at forty-five degrees towards the middle of the entities['] faces. It all gives off an almost rugged science fiction appearance, and the all-metal look easily reflects any light directed at it, explaining the light glints.";
 			say "     With these threatening forms before you, your muscles tense up, either from aggression towards these hostile figures, worry about yourself, or sheer outrage at how they're treating such a majestic centaur. His hair is short, buzz cuts running across the sides with a bit of it barely making it toward the top. Even with just seeing his back, his body is well-sculpted and hard to look away from, his equine half matching the human half with lithe, powerful muscles. It looks like he isn't wearing a thing over any part of his body, though that could be because he was stripped by the beasts crowding in on him. Even with him looking to be in danger, and being so dashing, should you get in trouble with him, or even for him? You don't know him, so why risk it? Still, he could be friendly, helpful even. Of course, you could always sneak closer and listen in, then go from there.";
@@ -72,7 +73,7 @@ Instead of resolving a Conflict Within the Plains:
 				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 					break;
 				else:
-					say "Invalid choice. Type [link]1[end link] to Listen in, [link]2[end link] to Sneak up or [link]3[end link] to Run.";
+					say "Invalid choice. Type [link]1[end link] to listen in, [link]2[end link] to sneak up or [link]3[end link] to run.";
 			if calcnumber is 1:
 				LineBreak;
 				say "     As you try to keep yourself unseen, you creep close enough to overhear voices, and lucky for you, all four figures seem completely consumed by their own presence. However, their tone carries quite a bit of disdain, and as you cue more into who is talking when, you notice that the centaur is uncharacteristically quiet. The only ones that seem to be speaking are the gorilla-like beings. Their grunt-filled voices ring out with significant bass, and much like their muscled forms, ooze with hostility and significant strength, doing little to make the situation feel safe.";
@@ -86,7 +87,7 @@ Instead of resolving a Conflict Within the Plains:
 				WaitLineBreak;
 				say "     'Dammit. Get back here!' the centaur hoarsely yells. You know that's something you're definitely not going to do without a good reason. You try to question him for a decent idea as to what's going on, but you mostly get grunts and lusty comments. The only solace about this entire situation is the fact that his hooves seem firmly stuck where they're planted. Deciding that you need to investigate him more thoroughly, you move around his broad form, getting close and running your hands along his equine body, out of reach of his human torso.";
 				say "     His hairs bristle against your skin, the fur strangely coarse in places, but soft and yielding in others. You find your hands trailing closer to the centaur's flank as you walk, taking no time before they find themselves grasping at the cushioned rear of the horse-man. 'I change... to slave, no...' You hear him give out what sounds like a protest, but his words are jumbled and messy. Though they make you hesitate, you still rub and squeeze at his ass, your digits roaming closer to the pucker in the middle of his rump. 'I'll be your... turned slave,' he grunts out, unable to form a coherent sentence.";
-				if player is not male: [Content relies on player having a dick]
+				if Player is not male: [Content relies on Player having a dick]
 					say "     [SeraphisAvoid]";
 				else: [Options for males]
 					LineBreak;
@@ -113,16 +114,15 @@ Instead of resolving a Conflict Within the Plains:
 						say "     While he is hot and awfully tempting to bend over for, or even use, you decide that it's not worth the risks of dealing with someone so... unstable. At least, that is, for now.";
 						now HP of Seraphis is 50;
 						now Conflict Within the Plains is resolved;
-						[now Plant Ruins Encounters is unresolved;]
 			else if calcnumber is 2:
 				LineBreak;
 				say "     You question your decision each second you get closer to the four figures, the shorter distance giving you a far more stark view of the situation. The centaur is easily kept docile, by what, you don't know, and it's disconcerting to see such a powerful beast rendered so mute. And as you get closer, the three hulking beasts around the distressed centaur cock their heads, causing you to instinctively drop to the ground barely fifty feet from where they're standing. Your instincts guide you to drop behind a lone bush, instead of right in the open, so as they look at where you were standing just seconds before, they see nothing threatening. However, you feel a light breeze blowing past you and right towards the three hulking creatures.";
 				say "     You instinctively take a few deep breaths, sniffing at whatever scent might be discernable from everything else. Unfortunately, there's not much hiding that you very much have a detectable scent, which is made even more clear when the three gorilla-like beings look directly at you. You can't tell much from their masks, but you're almost certain there's a sneer spreading across their faces at that moment. Surprisingly enough though, they turn back to the centaur and run their hands over him, whispering something into his ear before they wander off, one of them glaring in your direction frequently as they go.";
-				now ConclaveKnowledge is 1; [The Conclave knows of the player character]
+				now ConclaveKnowledge is 1; [The Conclave knows of the Player character]
 				WaitLineBreak;
 				say "     When you can only barely make out the three armored beings in the distance, you carefully move closer to the centaur, your eyes darting over his form, taking in every slight twitch or movement. 'Don't get too close, whoever you are.' You're a little startled, but his voice comes across as calm and well-mannered, or at least that's what he's attempting to get across. You can tell that he's quite nervous and just a little twitchy, which doesn't frankly surprise you. 'Don't touch my hide, or you'll get the oil on you too.' As you try to question him on what he's talking about, you catch movement from around his flank, his equine shaft pushing out and downward as the seconds go by. His fluids also drip out like a broken faucet, and it leaves much of his shaft shiny with pre.";
 				say "     He hasn't moved since you laid eyes on him, his hooves entirely flat to the dirt under them. His leg muscles give off a twitch here and there, but his hooves seem unable to move from their immediate spot. However, he doesn't really have to move to influence the area around him, because saying that his musk is palpable is an understatement. It almost overwhelms you with need several times and makes it ever harder to understand anything he says, but you manage to catch him saying something about an oil, or liquid, referred to as Morphing Lust, and how it influences the person it gets on or in. 'Just... just stay... let me fuck you, and it'll be handled. You'll enjoy it, and I'll get my needs dealt with.' He turns to look at you. 'Plus, you look like you could take a load or three.'";
-				if player is not male: [Content relies on player having a dick]
+				if Player is not male: [Content relies on Player having a dick]
 					say "     [SeraphisAvoid]";
 				else: [Options for males]
 					LineBreak;
@@ -146,17 +146,16 @@ Instead of resolving a Conflict Within the Plains:
 						LineBreak;
 						say "     Considering that he can't really move from where he's standing, it's not hard to stay away from him, and after a few hours, it begins to look like as though he's coming down from his lust high. More intelligence is visible within his eyes with each passing second, and as the third or fourth hour passes, you can see his cock is deflating a little. However, he's still very evidently horny, but at least a little more in control than before. 'Huh. You're a rather... unique individual. Most would have jumped at the chance for a fuck, especially nowadays.'";
 						say "     You tell him about what you've been through so far, leaving out anything too risky, and his face seems to lighten up a bit. 'Ah, so you avoided the brunt of the start. Lucky, ";
-						if bodyname of player is "Human":
+						if bodyname of Player is "Human":
 							say "and you've even kept your own body.' His equine shaft jerks up a bit as he says that. ";
 						else:
 							say "well, for the most part, for you definitely lost your old body,' he remarks with some evident disappointment. ";
 						say "'Either way, I need to get out of this, so if you'd mind standing back for a second...' The centaur pauses as he looks down, eyes closed the next second. Then, with a flick of a wrist, his eyes open again, his hooved feet lifting one after another.";
 						WaitLineBreak;
-						say "     'There we go. Now, for introductions,' he mentions as he turns to you. 'I'm Seraphis, and I must thank you for distracting those three before they could do anything to me that was too severe.' You acknowledge his thanks and give your own name. 'Well, thank you for trusting me with your name[if player is not defaultnamed], [name of player][end if]. Beyond that, I have to go deal with someone immediately. I do hope we meet again though. Goodbye,' he gracefully declares as his arm crosses his waist and his human half bows. He then moves away, getting into a gallop seconds later.";
+						say "     'There we go. Now, for introductions,' he mentions as he turns to you. 'I'm Seraphis, and I must thank you for distracting those three before they could do anything to me that was too severe.' You acknowledge his thanks and give your own name. 'Well, thank you for trusting me with your name[if Player is not defaultnamed], [name of Player][end if]. Beyond that, I have to go deal with someone immediately. I do hope we meet again though. Goodbye,' he gracefully declares as his arm crosses his waist and his human half bows. He then moves away, getting into a gallop seconds later.";
 						now SeraphisContent is 1;
 						now HP of Seraphis is 61;
 						now Conflict Within the Plains is resolved;
-						[now Plant Ruins Encounters is unresolved;]
 					else if calcnumber is 3:
 						LineBreak;
 						say "[SubmissiveSeraphisFirst]";
@@ -165,14 +164,26 @@ Instead of resolving a Conflict Within the Plains:
 				say "     You decide that whatever is going on here is too strange and dangerous for you, drawing you to get up and move away quickly and quietly.";
 				now HP of Seraphis is 50;
 				now Conflict Within the Plains is resolved;
-				[now Plant Ruins Encounters is unresolved;]
 		else:
 			LineBreak;
 			say "     You move away as hastily as you can manage without making much noise. Soon you're far, far away from anything immediately dangerous, relatively, at least.";
 			now HP of Seraphis is 50;
 			now Conflict Within the Plains is resolved;
-			[now Plant Ruins Encounters is unresolved;]
 
+	
+Table of GameEventIDs (continued)
+Object	Name
+Plant Ruins Encounters	"Plant Ruins Encounters"
+
+Plant Ruins Encounters is a situation. The level of Plant Ruins Encounters is 6.
+The sarea of Plant Ruins Encounters is "Plains".
+
+The Prereq1 of Plant Ruins Encounters is Conflict Within the Plains.
+The Prereq1Resolution of Plant Ruins Encounters is { 0 }.
+
+when play begins:
+	add Plant Ruins Encounters to Badspots of MaleList;
+	add Plant Ruins Encounters to Badspots of FurryList;
 
 instead of resolving a Plant Ruins Encounters:
 	if HP of Seraphis is 1:
@@ -182,12 +193,12 @@ instead of resolving a Plant Ruins Encounters:
 		say "     With more than a little hesitation, the big male sets you back down. 'Whatever brings you here, I could definitely use a good brain to pick, and a nice servant to poke.' He then gives a wry smirk, before turning and walking back into the dilapidated building. The moans pick up again a few moments after Seraphis disappears from view, and with how horned up his musk has made you, it's hard to resist investigating further. So investigate you do, heading towards the crumpled doorway that the big beast just went through. Once at the door, and after a few seconds of hesitance, you peak around the edge, looking straight into what should be a stone interior.";
 		say "     The inside of the building is entirely coated in vines of various hues and thickness. There's nothing about the vines that one could call ordinary though, as each one carries several polyps along them, every one evenly spaced from the last. The farther along the vine the polyps seem to be, the smaller they get. Within the last ten feet of each vine, before they reach their pointed ends, most polyps seem to be no bigger than a pebble. However, near the beginnings of each vine, there are polyps that easily look the size of an average adult human, but even that comparison makes you feel like your mind is underselling the true scale of them. These very same growths seem to vary from open to closed at random intervals, showing little or no patterns in that regard. The insides look very fleshy though, and each one looks to be quite comfortable to reside within, if you desired such a fate. You have doubts you'd ever be free again, but somehow that seems like a small price to pay.";
 		WaitLineBreak;
-		say "     Of all the various pods, growths, and vines that catch your attention, the movements from within most of the large, closed pods leave an even bigger impression. 'Come on in[if player is not defaultnamed], [name of player][end if].' You hear from the centaur.";
+		say "     Of all the various pods, growths, and vines that catch your attention, the movements from within most of the large, closed pods leave an even bigger impression. 'Come on in[if Player is not defaultnamed], [name of Player][end if].' You hear from the centaur.";
 		say "     [bold type]This entire situation is questionable at best. If you leave now, you could avoid anything unsavory done to you, or by you, but this may be your only chance to see more. Do you take your first step in, or step away, and leave this and Seraphis behind?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Go through the doorway, and to a possibly new view on life.";
 		say "     ([link]N[as]n[end link]) - Leave this area and never turn back.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     Walking through the doorway, you see the vines are more unresolved than you originally thought they'd be. One vine in particular is moving at a breakneck pace: shoving itself in and out of the rear-end of a quite wriggly anubian jackal. The pale green, tentacle-like object never loses rhythm. The long, rapid strokes would even look robotic, if it wasn't for the slithery pulsing, or circular motions it uses to drag out ever more moans. The most notable reaction to your arrival comes from the jackal, in a form that could only be described as a pleading groan. 'This is the viper that got me into that trivial mess a bit ago. Apparently the power he sought, found him wanting.' Seraphis clops over to you, resting a hand on your shoulder before squeezing it. 'This hopefully shows what happens to those who plot against me.'";
 			say "     Desire gleams in Seraphis' eyes as the groaning continues unabated. Looking back over at the anubian, you see his body quivering and jerking back and forth, his butt's muscles tensing as he tries to squeeze his cheeks closed. The male's back constantly flexes too, enunciating his lithe, athletic form even more. It's quite hard to pull your eyes away from his body, but Seraphis' fingers drop into your field of view before snapping. 'I didn't show you this so that you could be Induced.' Before you can ask what he means, the centaur saunters over to the restrained male, placing a hand on the jackal's ass as he stares back at you. 'He used to be such a dominant man, so eager to seed a tight hole. But his virility has a newfound purpose,' he says as he glances around the room. 'More's the pity.'";
@@ -200,17 +211,17 @@ instead of resolving a Plant Ruins Encounters:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Let the jackal stay out in the open, free to be used as bait for anything in the area.";
 			say "     ([link]N[as]n[end link]) - Give the jackal entirely to the plant - feeding his entire body into a stasis-sack, much like the plants other victims.";
-			if player consents:
+			if Player consents:
 				LineBreak;
 				say "     With your decision passed on, the centaur gives off a moaning neigh, his sheathe's throbbing drawing your eyes to his flank. 'That's what I wanted to hear. Now to give you a taste of what can truly be done around here.' Seraphis' body then starts to radiate a brilliant white light. It soon streaks with blue, cilia-like tendrils, as the male appears to shift into something else. Within seconds your eyes fill with a searing pain, your hands reflexively jerking up in-front of your face: eyelids clenching tight to block out the blinding spectacle.";
-				say "     Once the pain and light ebb, you hear shaky moans. Out of reflex, you open your eyes with timid curiosity, slowly removing your hands from view as you glare at the sight before you. A lithe, bipedal equine that stands over seven feet, steps behind the jackal - his muscular cheeks supplanting your view of the canine's. 'Don't worry[if player is not defaultnamed], [name of player][end if], I'm still me,' the male declares. Your eyes then dart over his lower back as his glutes clench, hips moving back before lurching forward: drawing out a long sigh from the equine, and a muffled moan from the jackal. 'Can't say I've ever frotted with a vine before this,' Seraphis chuckles out.";
+				say "     Once the pain and light ebb, you hear shaky moans. Out of reflex, you open your eyes with timid curiosity, slowly removing your hands from view as you glare at the sight before you. A lithe, bipedal equine that stands over seven feet, steps behind the jackal - his muscular cheeks supplanting your view of the canine's. 'Don't worry[if Player is not defaultnamed], [name of Player][end if], I'm still me,' the male declares. Your eyes then dart over his lower back as his glutes clench, hips moving back before lurching forward: drawing out a long sigh from the equine, and a muffled moan from the jackal. 'Can't say I've ever frotted with a vine before this,' Seraphis chuckles out.";
 				WaitLineBreak;
 				say "     Waving you over, the equine man gives you a lusty grin. Both his hands then disappear from view, followed by his hips lurching into gear: sounds of wet slaps, slurps, and open palm smacks proceeding after the vigorous thrusting begins.";
 				say "     [bold type]Do you head over like ordered, or excuse yourself and let him continue with his lustful aspirations alone?[roman type][line break]";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Move over to Seraphis' side, like ordered.";
 				say "     ([link]N[as]n[end link]) - Let Seraphis know you're leaving, then go back to exploring.";
-				if player consents:
+				if Player consents:
 					LineBreak;
 					say "     As you move over to his side, Seraphis starts humping with ever more aggression and force. However, his entire demeaner stays several steps back from actual anger. It's all mesmerizing in the moment; the undulating equine body drawing your eyes, as the sounds and smells of sexual abandon draw in your mind. There's also the strange sight of watching a plant vine thrust in and out of the jackal's hole, mirroring the equine shaft right above it. You are drawn forward by the twin digits working in tandem, thinking you'll just get a bit closer, before you find yourself mere inches from the equine's groin. You are lost in the burning need to take in the virile musk, to get a closer look at that wet shaft plundering those depths, to taste it.";
 					say "     Seraphis' large hand slaps the other male's ass, making you jump back. The edges of your vision darken as you feel like you're floating, even as you snap out of your reverie. Seraphis is all too happy to watch you jump, wearing an ever widening grin. His voice only comes to you when your eyes meet his, 'be more careful about how close your face gets to one of these vines. I can only protect you so much.' You find yourself stumbling backwards once more, your mouth huffing as your lungs burn. 'I also tend to have a strong...' His mouth then releases grunts from the dexterious pleasure of the jackal's ass, the canine pushing his rear back into each thrust. 'Just watch what you breathe into those tiny lungs of yours.' Seraphis then slows his thrusts and gives you an almost sympathetic look, before turning back to the traitor and continuing his rough dominance.";
@@ -246,7 +257,7 @@ Section 3 - Seraphis Location and Details
 [if SeraphisContent is 0: [Seraphis isn't pleased enough to open the gate]]
 
 
-[if SeraphisContent is 1: [Seraphis sees the player as worthy of entrance]]
+[if SeraphisContent is 1: [Seraphis sees the Player as worthy of entrance]]
 
 
 to say SeraphisDesc:
@@ -264,8 +275,8 @@ Section 4 - Talk
 Section 5 - Sex
 
 to say DominantSeraphisFirst:
-	if player is male:
-		say "     [if SeraphisNeedy is 1]His words seems to draw you to serve him, to help bring down his need.[else]You give in to his stuttered speaking and decide that it'd be best to help him first.[end if] The sheer sexual musk radiating off of him only makes it that much harder to resist your [if player is dominant]typically repressed submissive urges[else if player is submissive]powerful and needy submissive side[end if]. You can't help but walk to his side, stroking a hand through his fur as you lean down for a closer look at his dripping need. You have to question your decision as you do so though, as you're immediately hit with an even more powerful whiff of musk.";
+	if Player is male:
+		say "     [if SeraphisNeedy is 1]His words seems to draw you to serve him, to help bring down his need.[else]You give in to his stuttered speaking and decide that it'd be best to help him first.[end if] The sheer sexual musk radiating off of him only makes it that much harder to resist your [if Player is dominant]typically repressed submissive urges[else if Player is submissive]powerful and needy submissive side[end if]. You can't help but walk to his side, stroking a hand through his fur as you lean down for a closer look at his dripping need. You have to question your decision as you do so though, as you're immediately hit with an even more powerful whiff of musk.";
 		say "     Your cock lurches and releases a good dollop of pre as you take a deep breath, your body drawn to take in more air after feeling the sheer heat emitting from his crotch. Of course, none of that helps your already aching cock and needy body, making everything all the more sensitive. You can't resist any of your lust-addled mind's needs any longer. You reach forward, grasping the fluid-covered cock, giving it a few pumps as you get onto your hands and knees, working yourself right under the beast of a man. The musk right next to his genitals is close to the strongest smelling masculine scent that you've ever encountered, however it is a moot point by now, as your brain is already entirely consumed by the scent and lust.";
 		WaitLineBreak;
 		say "     Once you get close enough to his cock, you drag your tongue up his shaft, snaking your way along the bulging veins covering his cock, going from the low hanging, cum-packed orbs, to the flaring tip. When your tongue is nice and covered in the pre dribbling down his dick, you eagerly suck it back into your mouth, swishing the seed around and around, savoring every little taste you can get before swallowing it. Before long, you find your lips sucking and kissing at his tip, his urethra rewarding your dutiful attention with more of his musky nectar. You then happily sit down under him, spreading your legs and giving yourself easy, comfortable access to his sexual fluids, the top of your head brushing against the big male's belly as missed cum, and your saliva, drip down over your chest and groin.";
@@ -280,7 +291,7 @@ to say DominantSeraphisFirst:
 		say "     Fully ready, you push back, relaxing your hole as slurping sounds greet your ears, and the wet cock spears further into you, lubed by the sexual fluids constantly leaking out of it. Of course, more whinnies fill your ears when the flare scrapes your inner walls, the cock burying itself deeper within, and the hips of the big beast aid that with infrequent but forceful thrusts. Once past the medial ring, it doesn't take long to find your ass brushing against fur and the male's sheathe, your own testicles feeling a light touch from the heavy testicles of the far bigger male.";
 		say "     You begin to pull yourself away, letting his cock slip from your hole inch by inch, but as you do, the centaur beats you to it, pulling back halfway before slamming forwards again, burying his dick all the way once more. Instinctively tightening your grip on the male's front legs, you keep yourself steady as wet slap after wet slap fills the area, slippery, slurping noises aiding in the orgasmic sound of sex. You find it hard not to enjoy the idea of being used by the powerful beast, and the musk makes any resistance impossible, so you stay braced, relaxing and tightening your anus at the right times to encourage the centaur even more.";
 		WaitLineBreak;
-		say "     Thrust upon thrust upon thrust, and he's still pounding you with no sign of stopping, even after what feels like hours of your ass being used. You do feel yourself approaching an edge though, and it quickly gets closer and closer as his flare rubs against your swelling prostate more with each second. Within a short period of time, you jerk and thrust and hump, trying to [if player is knotted]knot something that isn't there [else]fuck something that isn't there [end if]while also trying to keep fucking yourself on the equine breeding rod. Before you even realize it, you're being filled with warmth, your own cum firing out while the rod within you pulses and expands.";
+		say "     Thrust upon thrust upon thrust, and he's still pounding you with no sign of stopping, even after what feels like hours of your ass being used. You do feel yourself approaching an edge though, and it quickly gets closer and closer as his flare rubs against your swelling prostate more with each second. Within a short period of time, you jerk and thrust and hump, trying to [if Player is knotted]knot something that isn't there [else]fuck something that isn't there [end if]while also trying to keep fucking yourself on the equine breeding rod. Before you even realize it, you're being filled with warmth, your own cum firing out while the rod within you pulses and expands.";
 		say "     The flare digs into your inner walls as the superior male breeds your hole. Minutes go by, and your orgasm passes as you're constantly filled with so much seed that it goops at your entrance before falling down to the ground in loud splats. Most of it seems to cling to you though, caking your groin in white sexual fluids. When you finally feel the pressure ease and the warmth inside you stop growing, you hear a breathy, hushed voice say, 'Thank you for that.' You then see his hands appear and shortly thereafter, his hooves pick up off of the ground.";
 		WaitLineBreak;
 		say "     'I really needed the help there.' He gives a light chuckle before backing up, your body too drained to do more than stay upright, swiftly failing when his flare starts pulling at your anus. 'You'd be fun to train, but I need to go deal with someone first. And the name's Seraphis, by the way. However, you'll most likely not use that name much, if at all.' Seraphis then turns to you, walking over your form with his cock angled at your face. 'Lick me clean. None of my seed should go to waste.' You use what little energy you have left to do as your told, the musk minimizing your desire to go against anything he says. The salty fluids soon rush over your tongue as you lap up the cum, making sure to pay special attention to his medial ring and behind his flare. After a short period of this, he backs off. 'Good. Now I'll leave you to deal with yourself for now. I'm sure we'll meet again soon.' He gives a wry smile before turning away and moving into a gallop.";
@@ -291,32 +302,32 @@ to say DominantSeraphisFirst:
 		now Plant Ruins Encounters is unresolved;
 
 to say SubmissiveSeraphisFirst:
-	if player is male:
+	if Player is male:
 		if anallevel < 2:
-			say "     You open up your clothes and let your [cockname of player] genitals flop out, your eyes completely locked onto this beast's flank. The donut hole back here, plus the curvy rump around it, is hard to look away from. You know how good it's going to feel to sink your cock down to the root in it, all the while grinding your hips into him. You gather up as much spit as you can in your mouth, and when there's enough of it, you spit it onto his ass, using your cock to smear it around and into his hole. You then angle his flank down towards your hips.";
+			say "     You open up your clothes and let your [cockname of Player] genitals flop out, your eyes completely locked onto this beast's flank. The donut hole back here, plus the curvy rump around it, is hard to look away from. You know how good it's going to feel to sink your cock down to the root in it, all the while grinding your hips into him. You gather up as much spit as you can in your mouth, and when there's enough of it, you spit it onto his ass, using your cock to smear it around and into his hole. You then angle his flank down towards your hips.";
 		else:
-			say "     You open up your clothes and let your [cockname of player] genitals flop out, your eyes completely locked onto this beast's flank. The donut hole back here, plus the curvy rump around it, is hard to look away from. You know how good it's going to feel to sink your cock down to the root in it, all the while grinding your hips into him, but you can't resist getting a nice taste of that ass before anything else. Which is why you immediately, and a bit harshly, yank his tail out of the way. Your rough treatment earns you a nice sight of his donut and a quiet, whimpering neigh. With your sight now locked in on your goal, you drop to one knee, propping yourself up as you push your face between those sexy equine curves.";
+			say "     You open up your clothes and let your [cockname of Player] genitals flop out, your eyes completely locked onto this beast's flank. The donut hole back here, plus the curvy rump around it, is hard to look away from. You know how good it's going to feel to sink your cock down to the root in it, all the while grinding your hips into him, but you can't resist getting a nice taste of that ass before anything else. Which is why you immediately, and a bit harshly, yank his tail out of the way. Your rough treatment earns you a nice sight of his donut and a quiet, whimpering neigh. With your sight now locked in on your goal, you drop to one knee, propping yourself up as you push your face between those sexy equine curves.";
 			say "     Your nose is quickly met with a strong, masculine musk, and as you poke your tongue out, the taste of sweat and the very same musk that you smelled, greets you. With a near mad vigor, you run your tongue over every nook and cranny of his ass, gracing the hole ever so slightly at random intervals, keeping the centaur on edge the entire time. It doesn't take long for his hole to start winking, his excitement growing with each swipe of your tongue, each huffed breath over his ass. Whinny after whinny starts filling your ears, panting gasps and moans following each one, and as you finally move over his twitching hole, you dart your tongue straight into him.";
 			WaitLineBreak;
 			say "     With your tongue wiggling about in his depths, you sloppily thrust it in and out, swiping it around the edges of the inner walls. While you keep up your pleasuring of the beast, you can't help but reach out with your free hand to grip at his ass, rubbing and squeezing his furred flank. You smile to yourself at the sheer noises the centaur makes, giving into the satisfaction of twisting another to your whims. Just as you think about that, you hear huffed utterances, 'Please...pl-please. Fuck. Fuck me.' Your smile grows even more, glee filling you as you give one more thrust of your tongue and one last suck on his hole. With that, you pull back, angling his flank down towards your hips. With the centaur's strong back legs lowered, his hips are easy to get into the right position.";
-		say "     The big male's flank is soon mere inches from your cock, and as you pull it closer to your tip, you can feel heat radiate off of his rear. That heat envelopes your crotch, driving your lusts further, and as you push your hips forward, you feel his saliva-slickened hole part for your [cock length of player] breeding rod. As you sink inch after inch inside of him, sheathing your cock into his depths, you move your hand from his flank, resting it on your hip as you push into him. While you sink further in, the lust that filled you before doubles, no, triples as the donut hole tightens and loosens constantly. The hole is quite large, but it has more muscles than most any other hole you've been in, and the mad beast uses them with exceptional skill.";
+		say "     The big male's flank is soon mere inches from your cock, and as you pull it closer to your tip, you can feel heat radiate off of his rear. That heat envelopes your crotch, driving your lusts further, and as you push your hips forward, you feel his saliva-slickened hole part for your [cock length of Player] breeding rod. As you sink inch after inch inside of him, sheathing your cock into his depths, you move your hand from his flank, resting it on your hip as you push into him. While you sink further in, the lust that filled you before doubles, no, triples as the donut hole tightens and loosens constantly. The hole is quite large, but it has more muscles than most any other hole you've been in, and the mad beast uses them with exceptional skill.";
 		WaitLineBreak;
 		say "     Even with how needy he is, you still feel exceptionally skilled muscle movements, twitches, and control. It all drives you closer to the edge even faster than if your sole goal was to get off, but this lustful half-beast still has a great deal more use to you. As you pump in and out of his quivering hole, you do everything you can to not think of the slick, suctioning hole quivering around your cock, or how it feels when you slam your hips into him, his raised anus pressing against your groin, or how it feels to be pistoning in and out of that warm, fleshy pit.";
-		say "     It's all for naught though, and you find your balls tensing and rising with each second, your cock pulsing as you hit the edge and shoot right past it[if player is knotted], shoving your knot straight into his ass[end if]. As you feel your seed pumping through your shaft, the ecstasy of orgasm rushes over your body, filling you with more savage desire as you [if player is knotted]yank your knot out and shove it back in, continuing to pound him as you slip it in and out of [else]keep pounding in and out of [end if]the fleshy hole.";
+		say "     It's all for naught though, and you find your balls tensing and rising with each second, your cock pulsing as you hit the edge and shoot right past it[if Player is knotted], shoving your knot straight into his ass[end if]. As you feel your seed pumping through your shaft, the ecstasy of orgasm rushes over your body, filling you with more savage desire as you [if Player is knotted]yank your knot out and shove it back in, continuing to pound him as you slip it in and out of [else]keep pounding in and out of [end if]the fleshy hole.";
 		WaitLineBreak;
-		say "     Your violent [if player is knotted]knot-fucking [else]fucking [end if]picks up as your need slows, soon dropping as you eventually just press your hips firmly to his flank[if player is knotted], popping your knot into him deeper than ever[end if]. Your body freezes, your head and back bending backwards, forcing you on your toes, in a silent howl as you release into the centaur. The only movement you give off is the occasional pulse rushing through your body, signaling your spurts of seed shooting into your newfound mount. With each spurt, the warmth of the half-equine's hole grows exponentially, giving your sensitive penis a newfound escalation of pleasure.";
-		say "     As the pleasure tapers off, you lower your head, looking over the expanding and contracting back of the centaur. The pants slow as you stay buried within the male, his hole going lax around you, allowing bits of your semen to flow out around your softening shaft. As more trickles out and covers your crotch in bits of seed, you grip onto the man's hips with both hands, releasing his tail as you pull out[if player is knotted], your extra-sensitive knot making you shiver as it pops out[end if]. You feel his muscles moving, his body trying to push back as you pull out, but you manage to hold him in place long enough to fully withdraw. Happy with how eager he is, you slap a hand against his flank, the centaur raising his ass back up to almost chest level.";
+		say "     Your violent [if Player is knotted]knot-fucking [else]fucking [end if]picks up as your need slows, soon dropping as you eventually just press your hips firmly to his flank[if Player is knotted], popping your knot into him deeper than ever[end if]. Your body freezes, your head and back bending backwards, forcing you on your toes, in a silent howl as you release into the centaur. The only movement you give off is the occasional pulse rushing through your body, signaling your spurts of seed shooting into your newfound mount. With each spurt, the warmth of the half-equine's hole grows exponentially, giving your sensitive penis a newfound escalation of pleasure.";
+		say "     As the pleasure tapers off, you lower your head, looking over the expanding and contracting back of the centaur. The pants slow as you stay buried within the male, his hole going lax around you, allowing bits of your semen to flow out around your softening shaft. As more trickles out and covers your crotch in bits of seed, you grip onto the man's hips with both hands, releasing his tail as you pull out[if Player is knotted], your extra-sensitive knot making you shiver as it pops out[end if]. You feel his muscles moving, his body trying to push back as you pull out, but you manage to hold him in place long enough to fully withdraw. Happy with how eager he is, you slap a hand against his flank, the centaur raising his ass back up to almost chest level.";
 		WaitLineBreak;
 		say "     You're about to congratulate him on how well he sated you, but he talks first, 'That was great... but I need to go deal with someone.' With a little irritation in your voice, you warn him about not having thought of your wants first, but decide to let him go. First, however, you request his name, and that he clean you up. 'My name is Seraphis, sir. And alright.' He then reaches both hands down, closing his eyes for a few seconds before lifting each hoof off of the ground. 'There,' he whispers, turning towards you. 'So you have a cloth?' You grin at him before grabbing his head and pulling it down towards you, roughly kissing him.";
 		say "     After a solid minute of making out, you step back, pulling his head lower. You let his face grace your chest, stomach, and when he reaches your groin, you push him against it, smearing seed over his face as he does nothing. After a few seconds of grinding him into your crotch, he gets the hint, giving a trepid lick or two before getting into it, swiping his tongue over your whitened groin. He gathers up a nice bit of seed then swallows it, rinsing and repeating until he gets most of it off of you, and then he sucks your cock into his mouth. This elicits a firm moan from you as he suckles all of the loose sexual fluids off of you.";
 		WaitLineBreak;
-		say "     When you hear a few loud, content gulps, you thrust your hips forward and yank his face all the way to your crotch. [if player is knotted]Your still partially engorged knot gives a bit of trouble while shoving your dick into him, but he opens his cheeks wider, and it pops right in easily enough[end if] ";
+		say "     When you hear a few loud, content gulps, you thrust your hips forward and yank his face all the way to your crotch. [if Player is knotted]Your still partially engorged knot gives a bit of trouble while shoving your dick into him, but he opens his cheeks wider, and it pops right in easily enough[end if]. ";
 		if WSlevel is 3:
-			say ". [if player is knotted]With your knot plugging his face hole, you feel more than confident in filling him with far more fluids than he expected, and no doubt he'll be forced to take however much you deign to give. [else]With your cock plunged deep into his mouth and undoubtedly a bit down his throat, you feel quite assured in your next idea of asserting who's in control.[end if] So without any further delay, you relax your bladder, letting the warm liquid flow through your cock and into him.";
-			say "     A look of surprise covers his face, but you can feel his throat reflexively swallowing, his body easily accepting his new place. Still carrying a confused and hesitant look, he sucks down every drop you give him, drinking greedily as you relax and let more of your piss fill him. It doesn't take long for your bladder to completely empty, or for him to drink it all down, and once you feel satisfied, you [if player is knotted]pop your knot out of his mouth [else]pull your cock out of his mouth[end if], wiping the tip on his tongue for good measure.";
+			say "[if Player is knotted]With your knot plugging his face hole, you feel more than confident in filling him with far more fluids than he expected, and no doubt he'll be forced to take however much you deign to give. [else]With your cock plunged deep into his mouth and undoubtedly a bit down his throat, you feel quite assured in your next idea of asserting who's in control. [end if]So without any further delay, you relax your bladder, letting the warm liquid flow through your cock and into him.";
+			say "     A look of surprise covers his face, but you can feel his throat reflexively swallowing, his body easily accepting his new place. Still carrying a confused and hesitant look, he sucks down every drop you give him, drinking greedily as you relax and let more of your piss fill him. It doesn't take long for your bladder to completely empty, or for him to drink it all down, and once you feel satisfied, you [if Player is knotted]pop your knot out of his mouth[else]pull your cock out of his mouth[end if], wiping the tip on his tongue for good measure.";
 			WaitLineBreak;
 		else:
-			say ". You then pull your hips back, thrusting forward a second later and hearing the smacking sound of your hips slamming against his face[if player is knotted], and the slickening feeling of your knot popping back into his drooling mouth[end if]. Almost content with the dominating display, you grind into him, holding his head in place as you rub against his face[if player is knotted], pushing your almost deflated knot deeper into his mouth[end if]. When you grow tired of using him, [if player is knotted]you pop your knot out of his mouth[else]you pull out of his now sloppy mouth and step back.[end if]";
+			say "You then pull your hips back, thrusting forward a second later and hearing the smacking sound of your hips slamming against his face[if Player is knotted], and the slickening feeling of your knot popping back into his drooling mouth[end if]. Almost content with the dominating display, you grind into him, holding his head in place as you rub against his face[if Player is knotted], pushing your almost deflated knot deeper into his mouth[end if]. When you grow tired of using him, [if Player is knotted]you pop your knot out of his mouth[else]you pull out of his now sloppy mouth and step back[end if].";
 		say "     You watch as he rises up to his full height, eyes glazed and body sluggish. When he seems to fully recover, he clears his throat and announces his intent, 'I must take care of that insolent fool.' However, he still looks to you, eyes questioning. You give him a single nod, and he gallops away. With nothing but dust remaining of his presence, you redress and tidy yourself up before leaving the area.";
 		now Conflict Within the Plains is resolved;
 		now HP of Seraphis is 16;
