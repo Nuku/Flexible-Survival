@@ -621,10 +621,10 @@ this is the wereraptor curse rule:
 			else:
 				if wrcurseactivity is true:
 					now wrcurseactivity is false;
-					StatChange "Dexterity" by 2;
-					StatChange "Strength" by 2;
-					StatChange "Charisma" by -2;
-					StatChange "Intelligence" by -2;
+					StatChange "Dexterity" by -2;
+					StatChange "Strength" by -2;
+					StatChange "Charisma" by 2;
+					StatChange "Intelligence" by 2;
 					say "     With the coming of the day, your saurian body spasms and twitches. The feral strength of your wereraptor form recedes for now as your features soften and you take on a form more akin to a reptilian humanoid, hiding your wilder true nature for the moment.";
 
 
