@@ -88,7 +88,7 @@ instead of resolving Sword Nest:
 			say "     Do you submit?";
 			if Player consents:
 				SanLoss 15;
-				say "     You dip your [Face of Player] head into the slime and suck greedily. It sates your hunger and thirst.";
+				say "     You dip your [FaceSpeciesName of Player in lower case] head into the slime and suck greedily. It sates your hunger and thirst.";
 				weakrandominfect; [more from second batch affect researcher]
 				weakrandominfect;
 				weakrandominfect;

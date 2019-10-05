@@ -68,6 +68,7 @@ When Play begins:
 	add "Vixentaur" to infections of FurryList;
 	add "Vixentaur" to infections of FemaleList;
 	add "Vixentaur" to infections of TaperedCockList;
+	add "Vixentaur" to infections of KnottedCockList;
 	add "Vixentaur" to infections of SheathedCockList;
 	add "Vixentaur" to infections of TaurList;
 	add "Vixentaur" to infections of TailList;

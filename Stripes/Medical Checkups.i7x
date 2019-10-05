@@ -119,8 +119,6 @@ instead of conversing the Doctor Medea:
 				say "     'I cannot help you. I specialize in childbirth and minor illnesses. As the latter are not occurring with the nanite plague. Maybe I could help if you were a female?'";
 				say "     She pauses and ponders for a moment. 'There is another possibility as well. With the changes the spreading infection can create, it may be possible to allow a male individual to form a surrogate womb for impregnation. I had just started to look into those possibilities. Perhaps you might be interested in becoming my test subject for this. To accomplish this, I would first need you to obtain some medical supplies I would need. The delivery truck was supposed to arrive the day of the outbreak, so you may be able to locate it. Here is a list of what I need. I would need those supplies regardless if you choose to undergo this procedure or if you find a means to become female.' She provides you with the list and describes the truck used by the delivery company, asking that you keep an eye out for it.";
 				now Medeaget is 1;
-				now Abandoned Truck is active;
-				now Abandoned Truck is not resolved;
 				now HP of doctor Medea is 2;
 			else if Medeaget is 1:
 				say "     'I cannot help you. I specialize in childbirth and minor illnesses. As the latter are not occurring with the nanite plague. Maybe I could help if you were a female?'";
@@ -180,7 +178,12 @@ instead of conversing the Doctor Medea:
 				else:
 					LineBreak;
 					say "     The lizard doctor seems a little disappointed in your reply, but nods. 'Until you're able to become pregnant, there's not much more that I can do for you. If you won't accept to undergo the procedure, you'd best go out into the city and change into a female or herm,' she says.";
+	CheckAbandonedTruck;
 
+to CheckAbandonedTruck:
+	if Medeaget is 1:
+		now Abandoned Truck is active;
+		now Abandoned Truck is not resolved;
 
 Section 3 - Medical Adjustments
 
@@ -191,13 +194,11 @@ to say Medeaadjustments:
 		say "     'I could determine if you are pregnant. For anything past that, I'm going to need your assistance in obtaining the necessary supplies. With those, I could make you more fertile, or sterilize you. With even more equipment, I might be able to do even more than that,' she says with an odd eagerness in her tone.";
 		say "     'I would be able to render further assistance to you, changing some of the fertility-related aspects of your altered body, but I lack the materials necessary for such an operation,' the lizard doctor says. 'There should be some in a medical delivery truck that was supposed to arrive the day the infection started. Here is a list of the items I'll need.' She provides you with the list and describes the truck used by the delivery company, asking that you keep an eye out for it.";
 		now Medeaget is 1;
-		now Abandoned Truck is active;
-		now Abandoned Truck is not resolved;
+		CheckAbandonedTruck;
 		stop the action;
 	else if Medeaget is 1:
 		say "     'I could determine if you are pregnant and check on it with my current instrumentation. For anything more, you'll need to get those materials I asked about earlier. They should be in the abandoned truck I described.'";
-		now Abandoned Truck is active;
-		now Abandoned Truck is not resolved;
+		CheckAbandonedTruck;
 		stop the action;
 	else if Medeaget is 2:
 		say "     'Wonderful! You managed to get the supplies. Thanks! I can now provide you with more services and resume my work on my pills again!' the lizard doctor says happily.";
@@ -673,13 +674,11 @@ to say Medeaassistance_plot:
 			say "     'The most basic of these is my lack of general supplies with which to do my job. At present, I can do little more than determine if a patient is pregnant and provide basic pre-natal. For anything past that, I'm going to need your assistance in obtaining the necessary supplies. With those, I could make you more fertile, or sterilize you. With even more equipment, I might be able to do even more than that,' she says with an odd eagerness in her tone.";
 			say "     'I would be able to render further assistance to you, changing some of the fertility-related aspects of your altered body, but I lack the materials necessary for such an operation,' the lizard doctor says. 'There should be some in a medical delivery truck that was supposed to arrive the day the infection started. Here is a list of the items I'll need.' She provides you with the list and describes the truck used by the delivery company, asking that you keep an eye out for it.";
 			now Medeaget is 1;
-			now Abandoned Truck is active;
-			now Abandoned Truck is not resolved;
+			CheckAbandonedTruck;
 			stop the action;
 		else if Medeaget is 1:
 			say "     'As I've mentioned, there's little I can do in this regard until my most basic supplies are restocked. If you want my help, you'll need to get those materials I asked about earlier. They should be in the abandoned truck I described.'";
-			now Abandoned Truck is active;
-			now Abandoned Truck is not resolved;
+			CheckAbandonedTruck;
 			stop the action;
 		else if Medeaget is 2:
 			say "     'Wonderful! You managed to get the supplies. Thanks! I can now do medical work again!' the lizard doctor says happily.";

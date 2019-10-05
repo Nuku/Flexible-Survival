@@ -3,7 +3,7 @@ Version 2 of Gryphons Plot by Shay begins here.
 [ Version 1 - Ideas for expansion by Wahn]
 [ Version 2 - Complete rewrite by Shay ]
 
-[ GryphPlotTracking                                                                                      ]
+[ Resolution of Gryphon's Plot                                                                           ]
 [   0: never ran into the event                                                                          ]
 [   1: had the event before, failed to find the fight                                                    ]
 [  10: player helped the soldiers                                                                        ]
@@ -12,7 +12,17 @@ Version 2 of Gryphons Plot by Shay begins here.
 [  19: refused to sit with the thankful soldiers                                                         ]
 [  20: player tried to help, fled - soldiers transformed, these specific gryphons pissed at the player   ]
 [  30: player watched the gryphons do their thing                                                        ]
+[  31: gryphon player talked to the soldier gryphons                                                     ]
+[  32: gryphon player avoided the soldier gryphons                                                       ]
+[  33: human player talked to soldier gryphons                                                           ]
+[  34: infected player talked to soldier gryphons                                                        ]
+[  35: player avoided soldier gryphons                                                                   ]
 [  40: player watched the gryphons do their thing and joined in for the submission                       ]
+[  41: player submitted to the vengeful soldier gryphons                                                 ]
+[  42: player fought off the vengeful soldier gryphons                                                   ]
+[  43: player lost to the vengeful soldier gryphons                                                      ]
+[  44: player fled from to the vengeful soldier gryphons                                                 ]
+[  45: player didn't speak to soldier gryphons                                                           ]
 [  50: player helped the gryphons                                                                        ]
 [  51: player fought off vengeful soldier gryphons                                                       ]
 [  58: player ran from vengeful soldier gryphons                                                         ]
@@ -21,7 +31,10 @@ Version 2 of Gryphons Plot by Shay begins here.
 [  91: player got a thanks from the soldier gryphons for trying to help                                  ]
 [ 100: player had no interest, event resolved                                                            ]
 
-GryphPlotTracking is a number that varies.
+a postimport rule: [bugfixing rules for players that import savegames]
+	let ResolvedGryphPlotList be {11, 18, 31, 32, 33, 34, 41, 42, 43, 45, 51, 59}; [list of missed resolutions]
+	if Gryphon's Plot is not resolved and Resolution of Gryphon's Plot is listed in ResolvedGryphPlotList:
+		now Gryphon's Plot is resolved; [Just resolve it]
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -35,7 +48,7 @@ when play begins:
 	add Gryphon's Plot to BadSpots of FurryList;
 
 instead of resolving a Gryphon's Plot:
-	if GryphPlotTracking is 0 or GryphPlotTracking is 1: [first time or repeat after failing to find them]
+	if Resolution of Gryphon's Plot is 0 or Resolution of Gryphon's Plot is 1: [first time or repeat after failing to find them]
 		say "     As you make your way through the city, a loud screeching noise catches your attention. Your eyes quickly survey the immediate area, the noise sounding awfully close to one a gryphon would make. As another screech joins the first, you realize that not just one gryphon is involved. As the gryphon's calls transform from warning to aggressive, you find yourself wondering what is going on, and if you should take a risk in order to find out. The area being filled with many buildings, it is likely the sound may be bouncing off of them, which could lead to you being misled. Despite this, you conclude that finding the source would be difficult, but not impossible.";
 		say "     Of course, the question is, do you want to?[line break]";
 		LineBreak;
@@ -80,20 +93,16 @@ instead of resolving a Gryphon's Plot:
 						increase GroupFightCounter by 1;
 					if fightoutcome < 20: [player won]
 						say "[PlayerWinsVsGryphonPlot1]";
-						now GryphPlotTracking is 10; [player helped the soldiers]
 						now Resolution of Gryphon's Plot is 10; [player helped the soldiers]
 					else if fightoutcome > 19 and fightoutcome < 30: [lost]
 						say "[PlayerLosesVsGryphonPlot1]";
-						now GryphPlotTracking is 90; [player tried to help, failed - soldiers transformed, these specific gryphons pissed at the player]
 						now Resolution of Gryphon's Plot is 90; [player tried to help, failed - soldiers transformed, these specific gryphons pissed at the player]
 					else if fightoutcome is 90: [fled]
 						say "[PlayerFleesVsGryphonPlot1]";
-						now GryphPlotTracking is 20; [player tried to help, failed - soldiers transformed, these specific gryphons pissed at the player]
-						now Resolution of Gryphon's Plot is 20; [player tried to help, failed - soldiers transformed, these specific gryphons pissed at the player]
+						now Resolution of Gryphon's Plot is 20; [player tried to help, fled - soldiers transformed, these specific gryphons pissed at the player]
 				else if calcnumber is 2: [helping the gryphons]
 					LineBreak;
 					say "[PlayerHelpsGryphonPlot1]";
-					now GryphPlotTracking is 50; [player helped the gryphons]
 					now Resolution of Gryphon's Plot is 50; [player helped the gryphons]
 				else if calcnumber is 3: [watching]
 					LineBreak;
@@ -101,20 +110,17 @@ instead of resolving a Gryphon's Plot:
 				else: [leaving]
 					LineBreak;
 					say "     Taking one last look at the scene you decide, the situation clearly isn't your problem. Quietly stepping back, you wander away slowly to avoid to attracting any unwanted attention to yourself. Soon, you are well out of sight of the event as the screeching and other noises die down. Although you didn't wish to be involved, a part of you can't help but wonder how things worked out. Despite the fact that you are curious, you decide that alone isn't enough to go back and possibly run into any trouble that may still linger there. Forcibly pushing the recent event out of mind, you continue on your merry way.";
-					now GryphPlotTracking is 100; [player had no interest]
 					now Resolution of Gryphon's Plot is 100; [player had no interest]
 					now Gryphon's Plot is Resolved; [event will not come up again]
 			else: [not perceptive enough / unlucky]
 				say "     Setting out in search of where the gryphons are, you wander through the deserted streets. Some time later, as you continue trekking through the cities['] rubble for the source of the noise, all sounds eventually cease. Hm, seems like you won't find that group of gryphons today. Maybe if you were a bit more perceptive, you might have found a quicker way to get to them...";
-				now GryphPlotTracking is 1; [player failed to find them]
 				now Resolution of Gryphon's Plot is 1; [player failed to find them]
 		else: [refused to investigate]
 			LineBreak;
 			say "     With a shrug, you try to ignore the noises and concentrate on your immediate surroundings instead. Surviving in the city is difficult enough without actively going out to find trouble...";
-			now GryphPlotTracking is 100; [player had no interest]
 			now Resolution of Gryphon's Plot is 100; [player had no interest]
 			now Gryphon's Plot is Resolved; [event will not come up again]
-	else if GryphPlotTracking is 10: [player helped the soldiers, gryphons are pissed]
+	else if Resolution of Gryphon's Plot is 10: [player helped the soldiers, gryphons are pissed]
 		say "     As you wander through the streets of the creature-infested city, you stumble upon a group of non-infected human soldiers. Inching forward to take a closer look, something inside your head clicks. You knew they looked familiar, it is the soldiers you saved from the gryphons awhile back! One of the men spots you and waves you over, patting a place on the ground beside him.";
 		say "     Do you join them?";
 		LineBreak;
@@ -132,20 +138,17 @@ instead of resolving a Gryphon's Plot:
 				LineBreak;
 				say "[bold type]You gain 3 units of food![roman type][line break]";
 				increase carried of food by 3;
-				now GryphPlotTracking is 11; [helped the soldiers beat up the gryphons]
 				now Resolution of Gryphon's Plot is 11; [helped the soldiers beat up the gryphons]
 			else:
 				LineBreak;
 				say "     Turning the soldiers down, you watch as the looks on their faces instantly turn from happy to disappointed. Rising from your place on the ground, you say your goodbyes to the men. They see you off with solemn waves as you continue along your merry way.";
-				now GryphPlotTracking is 18; [refused to help the soldiers beat up the gryphons]
 				now Resolution of Gryphon's Plot is 18; [refused to help the soldiers beat up the gryphons]
 		else:
 			LineBreak;
 			say "     Deciding that you want nothing to do with whatever the men are up to, you turn your back on the soldier's offer. Surprised by your reaction, but not deterred, they grudgingly, but determinedly, return to their task as you continue along your merry way.";
-			now GryphPlotTracking is 19; [refused to sit with them]
 			now Resolution of Gryphon's Plot is 19; [refused to sit with them]
-			now Gryphon's Plot is Resolved; [event will not come up again]
-	else if GryphPlotTracking is 30: [player watched the gryphons, soldiers are transformed]
+		now Gryphon's Plot is Resolved; [event will not come up again]
+	else if Resolution of Gryphon's Plot is 30: [player watched the gryphons, soldiers are transformed]
 		say "     Walking through the ruins of the city, you come across a sight that you don't see all that often. Three gryphons huddled around a slowly dying fire ahead of you are wearing torn and stained army uniforms, telling you that the men haven't been transformed all that long, or at least have not succumbed to the infection yet, likely retaining much of their original personality. Then things click in your mind, and you remember the soldiers in that jeep being attacked by gryphons. This must be them!";
 		if BodyName of Player is "Blue Gryphon Herm" and player is pure:
 			say "     Being a gryphon yourself, you can't help but feel like the guys might react badly to your presence. Still, do you want to approach them?";
@@ -159,7 +162,7 @@ instead of resolving a Gryphon's Plot:
 			else:
 				LineBreak;
 				say "     Deciding that it is not worth the trouble, you leave the gathering of men and continue along your way throughout the city. After all, you have enough trouble as it is, why go actively look for it?";
-				now Resolution of Gryphon's Plot is 32; [gryphon player avoided to the soldier gryphons]
+				now Resolution of Gryphon's Plot is 32; [gryphon player avoided the soldier gryphons]
 		else:
 			say "     Do you want to approach them and have a chat?";
 			LineBreak;
@@ -183,9 +186,9 @@ instead of resolving a Gryphon's Plot:
 			else:
 				LineBreak;
 				say "     Deciding that it is not worth the trouble, you leave the gathering of men and continue along your way throughout the city.";
-				now Resolution of Gryphon's Plot is 34; [player avoided soldier gryphons]
-				now Gryphon's Plot is Resolved; [event will not come up again]
-	else if GryphPlotTracking is 40: [player watched the gryphons, soldiers are transformed, and the player joined in for the submission]
+				now Resolution of Gryphon's Plot is 35; [player avoided soldier gryphons]
+		now Gryphon's Plot is Resolved; [event will not come up again]
+	else if Resolution of Gryphon's Plot is 40: [player watched the gryphons, soldiers are transformed, and the player joined in for the submission]
 		say "     Walking through the ruins of the city, you come across a sight that you don't see all that often. Three gryphons huddled around a slowly dying fire ahead of you are wearing torn and stained army uniforms, telling you that the men haven't been transformed all that long, or at least have not succumbed to the infection yet, likely retaining much of their original personality. Then things click in your mind, and you remember the soldiers in that jeep being attacked by gryphons. This must be them!";
 		say "     Do you want to approach them and have a chat?";
 		LineBreak;
@@ -241,12 +244,12 @@ instead of resolving a Gryphon's Plot:
 					now Resolution of Gryphon's Plot is 43; [player lost to the vengeful soldier gryphons]
 				else if fightoutcome is 90: [fled]
 					say "     Not having much faith in your ability to fight the men off, you flee. The soldiers donning unattended hard-ons shout curses in your direction in the wake of your successful escape...";
-					now Gryphon's Plot is Resolved; [event will not come up again]
 					now Resolution of Gryphon's Plot is 44; [player fled from to the vengeful soldier gryphons]
 		else:
 			say "     With a shrug you turn you turn your back on the group of gryphons and walk off down the street.";
 			now Resolution of Gryphon's Plot is 45; [player didn't speak to soldier gryphons]
-	else if GryphPlotTracking is 50: [player helped the gryphons, soldiers are transformed]
+		now Gryphon's Plot is Resolved; [event will not come up again]
+	else if Resolution of Gryphon's Plot is 50: [player helped the gryphons, soldiers are transformed]
 		say "     Wandering through the ruins of the city, you see an unusual sight: There is a group of gryphons, still wearing the tattered remains of army uniforms upon their bodies as they sit huddled around a fire. Inching closer to the unlikely scene, you accidentally step on an empty aluminum can, causing the gryphon soldiers to jerk up in alarm as they are alerted to your presence. Spotting you, one of the gryphons exclaim, 'Hey, I know you. You are the one who helped those other gryphons make me like this! Let's see how strong you are without your friends along. Come on, guys, let's get [']em!' Seeing no other option than to fight, you ready your weapon.";
 		let GroupFightCounter be 0;
 		now fightoutcome is 0; [reset]
@@ -264,7 +267,6 @@ instead of resolving a Gryphon's Plot:
 			LineBreak;
 			say "[bold type]You gain 2 units of food![roman type][line break]";
 			increase carried of food by 2;
-			now GryphPlotTracking is 51; [player fought off vengeful soldier gryphons]
 			now Resolution of Gryphon's Plot is 51; [player fought off vengeful soldier gryphons]
 		else if fightoutcome > 19 and fightoutcome < 30: [lost]
 			say "     Not strong enough to single-handedly defeat the vengeful group of gryphons, you fall to your knees, the loser of the battle. With pleased smirks, the soldiers converge upon you, two of them taking turns beating you as the third helps himself to any items he wants from your pack. Between the two of them, it isn't long before you have thoroughly learned your lesson, falling into a state of unconsciousness.";
@@ -281,19 +283,16 @@ instead of resolving a Gryphon's Plot:
 				decrease carried of water bottle by 3;
 			else:
 				say "     You wake three hours later, your body stiff as you collect your pack, which you notice has the same heft as before. You guess that despite the gryphons taking apart its contents, they couldn't find anything that they wanted. Shrugging your shoulders at the fact and ignoring the protests of your thoroughly bruised body, you slowly, but surely, continue along your way, making a note in your head to try and avoid the soldiers should you encounter them in the near future...";
-				now GryphPlotTracking is 59; [player got a beating from vengeful soldier gryphons]
 				now Resolution of Gryphon's Plot is 59; [player got a beating from vengeful soldier gryphons]
 		else if fightoutcome is 90: [fled]
 			say "     Not having much faith in your ability to fight the men off, you flee, the soldiers cursing at you as you disappear into the distance...";
-			now GryphPlotTracking is 58; [player ran from the vengeful soldier gryphons]
 			now Resolution of Gryphon's Plot is 58; [player ran from the vengeful soldier gryphons]
-			now Gryphon's Plot is Resolved; [event will not come up again]
-	else if GryphPlotTracking is 90 or GryphPlotTracking is 20: [player tried to help, failed, gryphons are pissed]
+		now Gryphon's Plot is Resolved; [event will not come up again]
+	else if Resolution of Gryphon's Plot is 90 or Resolution of Gryphon's Plot is 20: [player tried to help, failed, gryphons are pissed]
 		say "     Wandering through the ruins of the city, you see an unusual sight: There is a group of gryphons, still wearing the tattered remains of army uniforms upon their bodies as they sit huddled around a fire. Inching closer to the unlikely scene, you accidentally step on an empty aluminum can, causing the gryphon soldiers to jerk up in alarm as they are alerted to your presence. Spotting you, one of the gryphons exclaims, 'Hey, I know you. You tried to help us fight the gryphons off that one day. Don't worry about the fact that you didn't succeed. We still appreciate that you tried. Besides, all of us are starting to like our new forms anyway. I always wanted to fly when I was a kid. Granted, I was thinking it would be as an airplane pilot, but you know, growing wings of my own I guess is the next best thing.' The soldier then reaches into his pack, pulling out three MREs and hands them to you with a wink. 'For the road, kid. Good luck out there.' With that said, he returns to his seat near their makeshift fire, as you continue on your way, three MREs richer than before...";
 		LineBreak;
 		say "[bold type]You gain 3 units of food![roman type][line break]";
 		increase carried of food by 3;
-		now GryphPlotTracking is 91; [player got a thanks from the soldier gryphons for trying to help]
 		now Resolution of Gryphon's Plot is 91; [player got a thanks from the soldier gryphons for trying to help]
 		now Gryphon's Plot is Resolved; [event will not come up again]
 
@@ -499,11 +498,9 @@ to say PlayerWatchesGryphonPlot1: [player observes the gryphons]
 		fimpregchance;
 		mimpregchance;
 		mimpregchance;
-		now GryphPlotTracking is 40; [player watched the gryphons do their thing and joined in for the submission]
 		now Resolution of Gryphon's Plot is 40; [player watched the gryphons do their thing and joined in for the submission]
 	else:
 		say "     Deciding not to risk it, you silently get up from your hiding place and start to make your way to a safe distance from the scene. You can still hear the sounds of the gryphons['] orgy, as you continue along your way through the ruins of the infested city...";
-		now GryphPlotTracking is 30; [player watched the gryphons do their thing]
 		now Resolution of Gryphon's Plot is 30; [player watched the gryphons do their thing]
 
 Gryphons Plot ends here.

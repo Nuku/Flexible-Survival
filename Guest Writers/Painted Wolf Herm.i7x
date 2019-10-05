@@ -89,6 +89,7 @@ When Play begins:
 	add "Painted Wolf Herm" to infections of CanineList;
 	add "Painted Wolf Herm" to infections of FurryList;
 	add "Painted Wolf Herm" to infections of NatureList;
+	add "Painted Wolf Herm" to infections of HermList;
 	add "Painted Wolf Herm" to infections of MaleList;
 	add "Painted Wolf Herm" to infections of TaperedCockList;
 	add "Painted Wolf Herm" to infections of KnottedCockList;

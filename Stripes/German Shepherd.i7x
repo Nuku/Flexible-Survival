@@ -92,6 +92,7 @@ to say gsd_desc:
 		if gsd_encounters < 3, now gsd_encounters is 3;
 		now gsd_fled is true; [marked as having fled, will clear on win/loss]
 	else:
+		project Figure of GermanShepherd_naked_icon;
 		say "     You're faced with a large, bipedal canine creature. Standing on digitigrade legs, the large canine sports the [one of]traditional brown and tan[or]subtle blue and tan[or]striking black and silver[at random] fur patterns. It's completely unclothed, which makes it QUITE clear that this is a [']He[']. He's got a furry canine sheath resting against his belly and a pair of golf ball-sized balls dangling beneath. He looks you over for a moment, tail starting to wag with increasing enthusiasm as he does. His cock also starts to poke free of its sheath as well, a warning as to what's on his doggified mind. The crazed canine [one of]lets out a rough growl. 'Mmmmm... playtime.'[or][if Player is female]swaggers towards you. 'Good. I was hoping to find a cunt to be my bitch[else]growls aggressively. 'I'm top dog around here. And I'll prove it[end if].'[or]pants with his tongue lolling out. 'Play!' he barks repeatedly as he rushes at you, fists raised and teeth bared - clearly willing to play rough.[or]cracks his knuckles before charging at you.[or]barks a few times before leaping at you.[or]growls aggressively as he stalks towards you.[at random]";
 		increase gsd_encounters by 1;
 		if gsd_encounters > 6, now gsd_encounters is 6;
@@ -236,6 +237,7 @@ Section 2 - Monster Victory
 to say losetogsd:
 	choose row MonsterID in Table of Random Critters;
 	if gsd_special is false:
+		project Figure of GermanShepherd_hard_icon;
 		now gsd_var is 0;
 		if a random chance of 1 in 3 succeeds:
 			say "     The German shepherd bears you down with a dominant growl before slapping his cock across your face. You know what he wants and [if HP of Player > 0]are happy to provide. That[else]decide it best to just relent and do it. Besides, that[end if] canine cock is strangely enticing. You open your mouth and let it slide past your lips. The first taste of doggy pre is enough to push away any lingering concerns. You play your tongue over the canine rod while collecting a flavorful mess to swallow down.";
@@ -427,6 +429,7 @@ to say beatthegsd:
 [ - Generic Player Victory Scenes - ]
 
 to say gsd_generic_vsex_00:
+	project Figure of GermanShepherd_hard_icon;
 	say "     As the German shepherd lets out a pained and injured whine, he sinks to the ground with his ears folding down, beaten. You feel a desire to turn the tables on this over-confident dog.";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -652,24 +655,24 @@ to say gsd_special_final_00:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck him and recruit";
 		now sortorder entry is 1;
-		now description entry is "fuck him to secure your dominance over him";
+		now description entry is "Fuck him to secure your dominance over him";
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck him and banish";
 		now sortorder entry is 1;
-		now description entry is "fuck him before driving him off for good";
+		now description entry is "Fuck him before driving him off for good";
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Ride him and recruit";
 		now sortorder entry is 1;
-		now description entry is "ride him to secure your dominance over him";
+		now description entry is "Ride him to secure your dominance over him";
 		choose a blank row in table of fucking options;
 		now title entry is "Ride him and banish";
 		now sortorder entry is 1;
-		now description entry is "ride him before driving him off for good";
+		now description entry is "Ride him before driving him off for good";
 	choose a blank row in table of fucking options;
 	now title entry is "Humiliate and banish";
 	now sortorder entry is 5;
-	now description entry is "reinforce that he's been bested before driving him off for good";
+	now description entry is "Reinforce that he's been bested before driving him off for good";
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";

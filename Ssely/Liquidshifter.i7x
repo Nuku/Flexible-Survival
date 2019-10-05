@@ -51,6 +51,7 @@ When Play begins:
 	now NewTypeInfection entry is false;
 	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	add "Liquidshifter" to infections of ReptileList;
+	add "Liquidshifter" to infections of SlimeList;
 	add "Liquidshifter" to infections of FurryList;
 	add "Liquidshifter" to infections of LatexList;
 	add "Liquidshifter" to infections of MaleList;

@@ -32,7 +32,7 @@ instead of resolving a Secure Area:
 				WaitLineBreak;
 				say "     The shimmering dissipated, you look towards the guards at the door, and with a shock realize they are of the Gargoyle infection. You could turn back now, or maybe you want to challenge them?";
 				if Player consents:
-					say "You march froward, and they attack.";
+					say "You march forward, and they attack.";
 					now dragatorwon is 0;
 					challenge "Gargoyle";
 					if lost is 1:
@@ -52,8 +52,8 @@ instead of resolving a Secure Area:
 							say "     The door creaks open, and you walk into the dimly lit area.";
 							say "     There are glyphs and writings covering the wall, and some show people in various states of infection. Looking closer, you notice that the writings seem to denote that the nanites can be controlled, but it doesn't show how. You will have to search elsewhere for more information.";
 							increase the score by 500;
-							now shiftable is 1;
 							now Secure Area is resolved;
+							connect Shifting Room;
 							now Resolution of Secure Area is 1; [shifting ability gained]
 						else:
 							say "     The door refuses to budge, and you go on your way, disappointed that you couldn't get any further.";
@@ -70,8 +70,6 @@ instead of resolving a Secure Area:
 
 Section 2 - Shifting
 
-shiftable is a number that varies.
-
 shifting is an action applying to one topic.
 understand the command "shift" as something new.
 understand "shift [text]" as shifting.
@@ -81,7 +79,7 @@ ttransform is a number that varies.
 tmonster is a number that varies.
 
 carry out shifting:
-	if shiftable is 0 or shiftable is 1:
+	if Resolution of Secure Area < 2:
 		say "You do not know how to do that!";
 		stop the action;
 	if the humanity of Player < 50:
@@ -175,17 +173,16 @@ To transform:
 		now Cock of Player is cock entry;
 	if strength of Player < str entry:
 		say "You feel your muscles swelling with [Name entry] [one of]strength[or]physique[or]power[at random].";
-		increase strength of Player by 1;
-		increase capacity of Player by 5;
+		StatChange "Strength" by 1;
 	if Intelligence of Player < Int entry:
 		say "You feel your mind swelling with [Name entry] [one of]Intelligence[or]wit[or]complexity[at random].";
-		increase Intelligence of Player by 1;
+		StatChange "Intelligence" by 1;
 	if Dexterity of Player < Dex entry:
 		say "You feel your hand eye coordination swelling with [Name entry] [one of]Dexterity[or]physique[or]accuracy[at random].";
-		increase Dexterity of Player by 1;
+		StatChange "Dexterity" by 1;
 	if Stamina of Player < Sta entry:
 		say "You feel your body toughening with [Name entry] [one of]Stamina[or]physique[or]power[at random].";
-		increase Stamina of Player by 1;
+		StatChange "Stamina" by 1;
 		if remainder after dividing stamina of Player by 2 is 0:
 			increase maxHP of Player by level of Player plus 1;
 	if Perception of Player < Per entry:
@@ -199,7 +196,7 @@ To transform:
 		now Libido of Player is the libido entry;
 
 when play ends:
-	if shiftable is 2:
+	if Resolution of Secure Area is 2:
 		if the humanity of Player > 50:
 			say "Your knowledge of how to shift aids you when you decide to help the rescue, and as a reward for your help, the army decides to replace the nanites you had with a new kind that do not spread.";
 		else:

@@ -238,6 +238,7 @@ When Play begins:
 	add "Pink Gel" to infections of SlimeList;
 	add "Pink Gel" to infections of FemaleList;
 	add "Pink Gel" to infections of TentacleCockList;
+	add "Pink Gel" to infections of NoLegList;
 	add "Pink Gel" to infections of SlidingList;
 	now Name entry is "Pink Gel"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
@@ -406,6 +407,7 @@ When Play begins:
 	add "Blue Gel" to infections of SlimeList;
 	add "Blue Gel" to infections of MaleList;
 	add "Blue Gel" to infections of TentacleCockList;
+	add "Blue Gel" to infections of NoLegList;
 	add "Blue Gel" to infections of SlidingList;
 	now Name entry is "Blue Gel"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
@@ -574,6 +576,7 @@ When Play begins:
 	add "Purple Gel" to infections of SlimeList;
 	add "Purple Gel" to infections of HermList;
 	add "Purple Gel" to infections of TentacleCockList;
+	add "Purple Gel" to infections of NoLegList;
 	add "Purple Gel" to infections of SlidingList;
 	now Name entry is "Purple Gel"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]

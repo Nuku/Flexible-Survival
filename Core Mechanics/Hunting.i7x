@@ -411,13 +411,15 @@ carry out HuntAction:
 	follow the turnpass rule;
 
 to huntingfightchance:
-	let the bonus be (( the perception of the player minus 10 ) divided by 2);
-	if "Stealthy" is listed in feats of Player, now bonus is -1;
-	if "Curious" is listed in feats of Player, increase bonus by 2;
-	if "Bad Luck" is listed in feats of Player, increase bonus by 1;
-	if a random number from 1 to 20 < 7 plus bonus and battleground is not "void":
+	let MonsterAttraction be 0;
+	if "Stealthy" is listed in feats of Player, decrease MonsterAttraction by 2;
+	if "Bad Luck" is listed in feats of Player, increase MonsterAttraction by 2;
+	[Initial 20% chance of a random encounter; 10% for Stealthy people, 30% for those with Bad Luck]
+	if a random chance of (4 + MonsterAttraction) in 20 succeeds and battleground is not "void" and battleground is not "Smith Haven":
 		if there is a area of Battleground in the Table of Random Critters:
+			say "Setting out to hunt, you encounter another inhabitant of the city.";
 			Fight;
+			[extra fight for hardcore players]
 			if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of Player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
 				say "As you are trying to recover from your last encounter, another roving creature finds you.";
 				Fight;

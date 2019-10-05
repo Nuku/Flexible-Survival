@@ -118,6 +118,7 @@ When Play begins:
 	add "Siren" to infections of BipedalList;
 	add "Siren" to infections of FlightList;
 	add "Siren" to infections of TailList;
+	add "Siren" to infections of OviImpregnatorList;
 	now Name entry is "Siren"; [Name of your new Monster]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]

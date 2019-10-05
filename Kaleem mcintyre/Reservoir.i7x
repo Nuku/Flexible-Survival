@@ -415,7 +415,7 @@ Instead of resolving a A Fight to remember:
 				wait for any key;
 				challenge "Blob";
 				if fightoutcome >= 10 and fightoutcome <= 19:
-					say "Seeing the gelatos creature broken into a million pieces you let out a roar of triumph as you pump your fist up into the air. That battle may have been daunting but in the end you triumphed and for that you now can take a moment to feel proud about yourself. Done? Ok, now go and unfreeze the reservoir and then finish cleaning it up so that the city can have water again!";
+					say "Seeing the gelatos creature broken into a million pieces you let out a roar of triumph as you pump your fist up into the air. That battle may have been daunting but in the end you triumphed and for that you now can take a moment to feel proud about yourself. Done? OK, now go and unfreeze the reservoir and then finish cleaning it up so that the city can have water again!";
 					now resevquest is 7;
 					now Fight to remember is resolved;
 					now PassionAfterTheBattle is active;
@@ -451,7 +451,7 @@ Instead of resolving a A Fight to remember:
 					wait for any key;
 					challenge "Blob";
 					if fightoutcome >= 10 and fightoutcome <= 19:
-						say "Seeing the gelatos creature broken into a million pieces you let out a roar of triumph as you pump your fist up into the air. That battle may have been daunting but in the end you triumphed and for that you now can take a moment to feel proud about yourself. Done? Ok, now go and unfreeze the reservoir and then finish cleaning it up so that the city can have water again!";
+						say "Seeing the gelatos creature broken into a million pieces you let out a roar of triumph as you pump your fist up into the air. That battle may have been daunting but in the end you triumphed and for that you now can take a moment to feel proud about yourself. Done? OK, now go and unfreeze the reservoir and then finish cleaning it up so that the city can have water again!";
 						now resevquest is 7;
 						now A Fight to remember is resolved;
 						now PassionAfterTheBattle is active;
@@ -482,7 +482,7 @@ Instead of resolving a A Fight to remember:
 					wait for any key;
 					challenge "Blob";
 					if fightoutcome >= 10 and fightoutcome <= 19:
-						say "Seeing the gelatos creature broken into a million pieces you let out a roar of triumph as you pump your fist up into the air. That battle may have been daunting but in the end you triumphed and for that you now can take a moment to feel proud about yourself. Done? Ok, now go and unfreeze the reservoir and then finish cleaning it up so that the city can have water again!";
+						say "Seeing the gelatos creature broken into a million pieces you let out a roar of triumph as you pump your fist up into the air. That battle may have been daunting but in the end you triumphed and for that you now can take a moment to feel proud about yourself. Done? OK, now go and unfreeze the reservoir and then finish cleaning it up so that the city can have water again!";
 						now resevquest is 7;
 						now A Fight to remember is resolved;
 						now PassionAfterTheBattle is active;

@@ -263,7 +263,7 @@ Breast Size of Amy is 2. [B cup at the start]
 This will allow you to make use of these values in scenes, and be quite useful if you have a NPC that might gender shift or the like.
 An example:
 ```
-if cock length of player > cunt length of Amy + 2: [some stretching allowed]
+if Cock Length of Player > Cunt Depth of Amy + 2: [some stretching allowed]
 	say "     The female husky wines a little as you bottom out inside her before your cock is all the way in. 'Not so deep please, you're too big.' [...]'";
 else if cock length of player < cunt length of Amy - 3: [a bit small, eh?]
 	say "     The female husky gives a needy whine and asks, 'Are you, ehm... already in?'";

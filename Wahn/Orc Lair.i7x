@@ -131,7 +131,7 @@ Instead of resolving a Orcish Slave Raid:
 					else if fightoutcome >= 30: [fled]
 						say "[RunFromOrcSlavers]";
 					else if fightoutcome >= 10 and fightoutcome <= 19: [won]
-						now Resolution of Orcish Slave Raid is 5; [beat all orcs, orcs freed]
+						now Resolution of Orcish Slave Raid is 5; [beat all orcs, fox freed]
 						say "     Phew, the last orc collapses on top of the other two with the meaty thump of flesh on flesh. Looking around, you see the guy who got you into this whole mess just wiggling out of the last coil of rope the orc put around him, then stare at you and the beaten orcs. 'Err - thanks,' he says and immediately after runs off as fast as his feet will carry him, not trusting you - or pretty much anyone in this lawless city - enough to stand around and chat.";
 						LineBreak;
 						say "     [bold type]Now that you're all alone with the vanquished orcs, would you like to... have some fun with one of them ([link]Y[as]y[end link]), or do you just leave ([link]N[as]n[end link])?[roman type][line break]";
@@ -190,11 +190,15 @@ Instead of resolving a Orcish Slave Raid:
 	now inasituation is false;
 
 to say RunFromOrcSlavers:
-	now Resolution of Orcish Slave Raid is 3; [ran]
-	say "     Sometimes escape is the best - or only - option. Running as fast as you can, you flee and manage to make [']em lose sight of you after a short while. As you stand around a corner and pant heavily to catch your breath, you can hear them talk in their gruff voices. 'Bah - forget it, we lost [ObjectPro of Player].' 'Fine, let's get back to the other one then - though he'll be pretty sore and stretched out by the time we're done taking turns!' Their voices get quieter as they move away from you, making the last thing you hear 'Who cares? That's what breeders are for! He'll get used to it...'";
-	move Val to Slave Cell 1;
-	now ValPregCounter is 48;
-	now thirst of Val is 1;
+	if SlaveRaidEncounters is 0: [first time]
+		now Resolution of Orcish Slave Raid is 3; [ran]
+		say "     Sometimes escape is the best - or only - option. Running as fast as you can, you flee and manage to make [']em lose sight of you after a short while. As you stand around a corner and pant heavily to catch your breath, you can hear them talk in their gruff voices. 'Bah - forget it, we lost [ObjectPro of Player].' 'Fine, let's get back to the other one then - though he'll be pretty sore and stretched out by the time we're done taking turns!' Their voices get quieter as they move away from you, making the last thing you hear 'Who cares? That's what breeders are for! He'll get used to it...'";
+		move Val to Slave Cell 1;
+		now ValPregCounter is 48;
+		now thirst of Val is 1;
+		now SlaveRaidEncounters is 2; [fox enslaved]
+	else:
+		say "     Sometimes escape is the best - or only - option. Running as fast as you can, you flee and manage to make [']em lose sight of you after a short while. As you stand around a corner and pant heavily to catch your breath, you can hear them talk in their gruff voices. 'Bah - forget it, we lost [ObjectPro of Player].' 'Bah, let's find another one in the streets then. There's plenty who have nice and tight holes.' Their voices get quieter as they move away from you, making the last thing you hear 'Yeah, and they'll get used to a nice fat orc cock in them too!'";
 
 to say SubmitToOrcSlavers:
 	now Resolution of Orcish Slave Raid is 2; [submitted]
@@ -1675,6 +1679,7 @@ instead of conversing the Orc Mob:
 						say "     This now leaves you alone in the wood, with a powerful feral beast in your grasp and at your mercy. In short, he's exactly what you need to impress everyone back at the orc lair. [bold type]Do you want to introduce the canine into his new role as an orcish fuckhole ([link]Y[as]y[end link]), or maybe just knock him out, leaving the beast to roam free while you go back empty handed ([link]N[as]n[end link])?[roman type][line break]";
 						if Player consents:
 							LineBreak;
+							project the Figure of AlphaWolf_hard_icon;
 							say "     You set out with the others to find a slave, so now that you got this proud wolf subdued, of course you're gonna fuck him! Keeping him pinned down, you yank up his tail, exposing the tight tailstar waiting for you there - twitching in apprehension, which only makes this all the more delicious. He whimpers a little, then starts making some boastful threats as you let go of his muzzle to grab the furry rear of your captive. Ignoring his impotent complaints, you instead grab his tail with your other hand and press your throbbing member against his back door. The fearful whine as you penetrate him with your cockhead seems like the sweetest music to your ears. He tries to scrape himself forward, but you keep a tight grip on the alpha wolf, moaning in his ear as you sink your [cock size desc of Player] [Cock of Player] cock into his tight ass. The wolf's hole [if Cock Length of Player >= 24]has trouble stretching to accommodate your massive meat, but you keep at it, forcing it[else]slowly relaxes to accommodate your thrusting pole, forced[end if] to accept you so you can bugger him thoroughly.";
 							say "     Reaching beneath him, you find that his cock has become quite hard and is leaking precum steadily. Chuckling at this, you tease the beaten wolf about how much he clearly likes being the bitch. He growls and tries to respond that he's not a female, and not your bitch, but you just laughingly tell him that orcs usually prefer males and thrust harder into him, pressing against his prostate and making him moan. His penis throbs in your hand, releasing a large spurt of precum as his ears dip down in shame. Your cock throbs in response as well as you revel in making this dominant male submit to you. You fuck him hard until he howls in defeat, cumming a large puddle of wolf cum onto the ground from being pounded in the ass. This sends you over the edge and you cram your shaft deep inside him, cumming hard and filling him [if Ball Size of Player >= 5]to the point of overflowing [end if]with your hot load.";
 							WaitLineBreak;

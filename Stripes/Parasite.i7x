@@ -195,6 +195,7 @@ When Play begins:
 	add "Black Wasp" to infections of FlightList;
 	add "Black Wasp" to infections of FeralmindList;
 	add "Black Wasp" to infections of TailList;
+	add "Black Wasp" to infections of OviImpregnatorList;
 	add "Black Wasp" to infections of TailweaponList;
 	now Name entry is "Black Wasp"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]

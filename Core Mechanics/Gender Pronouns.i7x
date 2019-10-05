@@ -683,6 +683,12 @@ to say guygal:
 	else:
 		say "gal";
 
+to say parent:
+	if PronounSet of Player is "Male" or PronounSet of Player is "Neutral":
+		say "father";
+	else:
+		say "mother";
+
 to say mister:
 	if PronounSet of Player is "Male" or PronounSet of Player is "Neutral":
 		say "mister";

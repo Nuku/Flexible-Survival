@@ -292,6 +292,7 @@ to say BeatTheBovine:
 		else:
 			say "     You step back from the fallen beast, amazed you've managed to defeat it. You leave your foe with an added spring in your step, confident in your ability to protect yourself from the dangers of this new world.";
 			increase VictoryOverDaBull by 1;]
+
 to say cow desc:
 	project the figure of Bovine_F_icon;
 	if Mooed is 0:
@@ -348,8 +349,10 @@ When Play begins:
 	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	add "Bovine" to infections of Bovinelist;
 	add "Bovine" to infections of FurryList;
+	add "Bovine" to infections of FeralList;
 	add "Bovine" to infections of NatureList;
 	add "Bovine" to infections of FemaleList;
+	add "Bovine" to infections of MaleList;
 	add "Bovine" to infections of BluntCockList;
 	add "Bovine" to infections of SheathedCockList;
 	add "Bovine" to infections of BipedalList;

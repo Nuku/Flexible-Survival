@@ -11,6 +11,7 @@ nodonkeywomansex is a number that varies.
 donkeywomanfucked is a number that varies.
 
 to say Donkeywoman wins:
+	project Figure of Donkeywoman_clothed_icon;
 	say "     The donkey woman laughs in amusement as you collapse helplessly before her. 'Is that all you have in you? I do so enjoy it when they put up more of a struggle,' she says with a chuckle as she hauls you to your feet before pinning you up against the wall. 'And now for the fun part,' she says with a wicked grin as she traces the tip of her whip over your chest teasingly.";
 	if Player is male and BodyName of Player is "Donkeyman" and CockName of Player is "Donkeyman" and a random chance of 3 in 5 succeeds:
 		say "     The feel of the supple leather trailing over your skin makes you groan with arousal, and she snickers as she reaches out to stroke your already powerfully erect cock teasingly. 'It seems you're well on your way to becoming a donkey plaything,' she asks with an evil chuckle as she rubs her soft leather-clad body up against you teasingly. 'I see you've not been harnessed up properly. So no chosen mistress yet?' she asks teasingly. As she speaks, she uses the handle of her whip to jiggle your [Ball Size Adjective of Player] [Balls] a little, as if examining or weighing them[if Ball Size of Player < 5] disdainfully[else if Ball Size of Player < 8] critically[else if Ball Size of Player > 4] almost longingly[end if]. A shiver of pleasure and fear runs down your spine as you picture yourself trussed up as the playtoy for one of these kinky, dominant donkeywomen. Her hand strokes your [Cock of Player] shaft again teasingly, distracting you from your thoughts as she presses you up against the wall even more eagerly than before.";
@@ -42,8 +43,8 @@ to say Donkeywoman wins:
 		else:
 			infect "Donkeywoman";
 
-
 To say Donkeywoman loses:
+	project Figure of Donkeywoman_clothed_icon;
 	choose row MonsterID from the Table of Random Critters;
 	increase donkeywomanbeaten by 1;
 	if ( Cock Count of Player is 0 ) or ( nodonkeywomansex > 2 and the remainder after dividing nodonkeywomansex by 5 is not 0 ) or ( donkeywomanbeaten < 3 ):
@@ -68,6 +69,11 @@ To say Donkeywoman loses:
 		else:
 			say "     Rather than give in to the temptation, you give the donkeywoman a rough shove with your heel even as she tries to rise. She bites back a whimper and forces herself to her feet defiantly. 'You would make for a fine jenny. Clearly you're in no mood for that lesson right now. But don't worry, I'll try again when you're in a less obstinate mood, my recalcitrant plaything.' With that, she staggers off down the dimly lit corridor, doing her best to maintain her authoritative poise despite her defeat.";
 			increase nodonkeywomansex by 1;
+
+to say DonkeywomanDesc:
+	project Figure of Donkeywoman_clothed_icon;
+	setmongender 4;
+	say "     Wandering through the building, you round a corner and come face to face with a Donkeywoman. The tall Donkeywoman looks down at you with a derisive smirk. 'What do we have here?' she asks as she roughly grabs your chin and twists your head side to side, examining you. Too scared to say anything, all you can do is look at her with a dumb expression on your face. Looking her over, you can see that she is dressed in a tight studded leather corset that is barely able to contain her more than ample tits as well as a spiked leather collar and spiked cuffs. She is wearing a pair of modified thigh high boots. Her sleek gray fur and donkey mane Mohawk give her a sinister air. Tapping the whip she's carrying in her other hand against her thigh, she says 'I think someone needs a lesson in discipline. Isn't that right, my little soon-to-be [if Player is male]donkey[else]jenny[end if]?'";
 
 
 Section 2 - Creature Insertion
@@ -95,7 +101,7 @@ When Play begins:
 	now attack entry is "[one of]The sexy donkeywoman lets out a loud braying laugh as she mocks your attempt to escape, the sound making you feel surprisingly submissive.[or]She lashes out at you with her short riding crop, its stinging bite making you feel strangely more submissive with each strike.[or]She reaches out and traces the tip of her whip over your skin teasingly, the touch of the soft leather making you shudder with desire.[or]She raises her whip to strike at you, and as you duck away, her other hand lashes out at you and strikes you square in the face, knocking you back![or]She strides forward confidently, describing lovingly just what kind of strangely sexy bondage games she has in store for you, her words making you shudder slightly with a strange desire to give in to the powerful female and let her have her way with you.[or]She charges right at you and twists aside at the last second, bringing her hand around to grab at your crotch teasingly.[at random]";
 	now defeated entry is "[Donkeywoman loses]";
 	now victory entry is "[Donkeywoman wins]";
-	now desc entry is "[mongendernum 4]     Wandering through the building, you round a corner and come face to face with a Donkeywoman. The tall Donkeywoman looks down at you with a derisive smirk. 'What do we have here?' she asks as she roughly grabs your chin and twists your head side to side, examining you. Too scared to say anything, all you can do is look at her with a dumb expression on your face. Looking her over, you can see that she is dressed in a tight studded leather corset that is barely able to contain her more than ample tits as well as a spiked leather collar and spiked cuffs. She is wearing a pair of modified thigh high boots. Her sleek gray fur and donkey mane Mohawk give her a sinister air. Tapping the whip she's carrying in her other hand against her thigh, she says 'I think someone needs a lesson in discipline. Isn't that right, my little soon-to-be [if Player is male]donkey[else]jenny[end if]?'"; [ Description of the creature when you encounter it.]
+	now desc entry is "[DonkeywomanDesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "long, asinine muzzle, with two large equine ears and a short close cropped mane of hair, and a plain leather collar which complements your rather sexy donkey-like face"; [You have a (your text) face."]
 	now body entry is "both strong and slender, your well-muscled form and powerful limbs easily suited for both work and sex, and you balance easily on the balls of your slightly hoof-like feet, even as you run your slender hands over your extremely sensitive and aroused body happily";
 	now skin entry is "[one of]gray furred[or]silken gray[or]gray hide covered[at random]";

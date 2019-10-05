@@ -221,36 +221,36 @@ to say dominick_sexmenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Doggy style";
 		now sortorder entry is 1;
-		now description entry is "be fucked like a dog";
+		now description entry is "Be fucked like a dog";
 	[]
 	if Player is female and scalevalue of Player < 4 and HP of Dominick >= 4:
 		choose a blank row in table of fucking options;
 		now title entry is "Lap ride";
 		now sortorder entry is 2;
-		now description entry is "get bounced on the husky's big pole";
+		now description entry is "Get bounced on the husky's big pole";
 	[]
 	if ((player is female and HP of Dominick >= 4) or player is mpreg_ok):
 		choose a blank row in table of fucking options;
 		now title entry is "Anal";
 		now sortorder entry is 4;
-		now description entry is "take it up the ass";
+		now description entry is "Take it up the ass";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Suck his cock";
 	now sortorder entry is 8;
-	now description entry is "get between his legs and suck his cock for a sweet treat";
+	now description entry is "Get between his legs and suck his cock for a sweet treat";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Cock worship";
 	now sortorder entry is 9;
-	now description entry is "lavish that doggy cock with attention";
+	now description entry is "Lavish that doggy cock with attention";
 	[]
 	if HP of Dominick >= 5 and HP of Dominick < 10 and player is female and ( BodyName of Player is "Breederslut" or FaceName of Player is "Breederslut" ):
 		if "Submissive" is not listed in feats of Player and level of Player > 3:
 			choose a blank row in table of fucking options;
 			now title entry is "Beta training";
 			now sortorder entry is 98;
-			now description entry is "get trained to be his beta-bitch (locks role)";
+			now description entry is "Get trained to be his beta-bitch (locks role)";
 	[]
 [		if "Dominant" is not listed in feats of Player:
 			choose a blank row in table of fucking options;
@@ -522,7 +522,7 @@ to say sexwithDominick_04:
 
 to say sexwithDominick_05:
 	say "     Dropping to your knees before the studly male, you take his stiff member in both hands and start nuzzling it. You take in his manly scent with a soft moan. It sends a shiver up your spine[if Player is female] and makes you wet between your thighs[end if]. There's something captivating about that wonderfully cock. You feel you have to lavish that perfect doggy dong with the attention it so obviously deserves. You start to lick and kiss all over it, drawing a pleasured growl from the husky.";
-	say "     When you nuzzle down to his plump, virile balls, you feel the soft brush of fur against your sides. The stud's other pets have moved alongside you and start worshipping that beautiful cock of his as well. While a part of you doesn't want to share, you know the husky wants them to help. Besides, his penis deserves all the attention it can get. And so the three of you swap between his hefty balls, plump sheath, throbbing shaft and drooling glans. And once it emerges and swells up, his thick knot is given plenty of attention as well.";
+	say "     When you nuzzle down to his plump, virile balls, you feel the soft brush of fur against your sides. The stud's other pets have moved alongside you and start worshiping that beautiful cock of his as well. While a part of you doesn't want to share, you know the husky wants them to help. Besides, his penis deserves all the attention it can get. And so the three of you swap between his hefty balls, plump sheath, throbbing shaft and drooling glans. And once it emerges and swells up, his thick knot is given plenty of attention as well.";
 	WaitLineBreak;
 	say "     The confident male stands up proudly as his trio of pets pay homage to his virility. You are given the occasional pat on the head or ear scritch, just like the other two doggy girls get[if Player is female]. 'Look at this - three fine bitches who know their place. Now be sure to lick every inch of it[else]. 'Now you pay attention to my two fine bitches here. They know how to treat my stud cock.' He slaps it across your face. 'You're nothing but a cock-sucking whore for a real male's cock[end if].' His words have you increase your efforts, trying to please the dominant alpha.";
 	say "     The three of you continue your licking, kissing and caressing of his shaft until he's about to blow. With a sharp bark, he commands you all to 'Sit!' and then to 'Beg.' Sitting up and begging like dogs, the two girls lean in closer to you and you follow suit. With their heads to either side of yours, they hold their muzzles open and whimper with need while Dom pumps his throbbing member. You open your mouth just as the husky's hot seed begins to spew forth, splattering across your face and into your open mouth. He shifts his aim, making sure to reward the three of you with a messy coating of his semen. It clings to you and it delightfully sticky and rich in flavor. You all obediently hold steady while he cums onto you, only relaxing once he's finished and commands you to clean each other up. There's a lot of hot [if Player is purefemale]lesbian [end if]kissing and licking between the three of you while the spent husky watches on with a smug smile on his muzzle. 'Good girls. Now play nice. There's plenty to go around.'";

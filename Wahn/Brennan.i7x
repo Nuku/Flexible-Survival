@@ -292,7 +292,7 @@ Instead of resolving a Lone Survivor:
 			else:
 				say "     Throwing yourself against the door, you try and try to break in, but it resists your feeble efforts without any trouble.";
 		WaitLineBreak;
-		project the figure of Brennan_clothed_icon;
+		project the Figure of AlphaWolf_naked_icon;
 		say "     Suddenly the sound of a wolf howling startles you, then another and another right after. And close too! You rush to the nearest window and glance out, seeing a pair of feral wolves dash across the empty, trash-filled street. They're hunting something or someone! Pressing your head against the windowpane to glance along the alleyway, you spot a person running from them - it is [if BrennanRelationship is 3]your friend, [end if]Brennan[if BrennanRelationship > 10], the human survivor you clashed with earlier[end if]. He clearly is in trouble as he seems to have lost his trusty baseball bat. Then a third wolf steps out from around the corner at the end of the alley - this one anthro in body shape, muscular and with a shaggy coat of black fur. He awaits the human survivor with bared teeth, eager to take him in a pincer movement with his chasing pack-mates.";
 		say "     [bold type]This doesn't look good for Brennan. Do you come to his assistance?[roman type][line break]";
 		LineBreak;
@@ -2178,10 +2178,10 @@ to BrennanRomulusRemusUndieSniff:
 		now lust of Brennan is 100; [played buzz-kill for wolf sex]
 
 an everyturn rule:
-	if (player is in Survivor Refuge and lust of Brennan is 1 and (TimekeepingVar is 0 or TimekeepingVar is -8 or TimekeepingVar is 7 or TimekeepingVar is -1) and lastBrennanWolfScene - turns > 3 and a random chance of 1 in 2 succeeds): [wolf sex ok, pre-dawn or early morning, 2 turn lockout, 50% chance]
+	if (player is in Survivor Refuge and lust of Brennan is 1 and (TimekeepingVar is 0 or TimekeepingVar is -8 or TimekeepingVar is 7 or TimekeepingVar is -1) and lastBrennanWolfScene - turns > 3 and a random chance of 1 in 2 succeeds): [wolf sex OK, pre-dawn or early morning, 2 turn lockout, 50% chance]
 		BrennanRomulusCrotchSniff;
 
-after going to Survivor Refuge while (lust of Brennan is 1 and (TimekeepingVar is 0 or TimekeepingVar is -8 or TimekeepingVar is 7 or TimekeepingVar is -1) and lastBrennanWolfScene - turns > 3 and a random chance of 1 in 2 succeeds): [wolf sex ok, pre-dawn or early morning, 2 turn lockout, 50% chance]
+after going to Survivor Refuge while (lust of Brennan is 1 and (TimekeepingVar is 0 or TimekeepingVar is -8 or TimekeepingVar is 7 or TimekeepingVar is -1) and lastBrennanWolfScene - turns > 3 and a random chance of 1 in 2 succeeds): [wolf sex OK, pre-dawn or early morning, 2 turn lockout, 50% chance]
 	BrennanRomulusCrotchSniff;
 
 to BrennanRomulusCrotchSniff:
@@ -2203,10 +2203,10 @@ to BrennanRomulusCrotchSniff:
 	now lastBrennanWolfScene is turns;
 
 an everyturn rule:
-	if (player is in Survivor Refuge and (lust of Brennan is 2 or lust of Brennan is 3) and (TimekeepingVar is -3 or TimekeepingVar is -4 or TimekeepingVar is 5 or TimekeepingVar is 4) and a random chance of 1 in 2 succeeds): [wolf sex ok, Brennan awake and in the apartment, 50% chance]
+	if (player is in Survivor Refuge and (lust of Brennan is 2 or lust of Brennan is 3) and (TimekeepingVar is -3 or TimekeepingVar is -4 or TimekeepingVar is 5 or TimekeepingVar is 4) and a random chance of 1 in 2 succeeds): [wolf sex OK, Brennan awake and in the apartment, 50% chance]
 		BrennanRomulusBellyRub;
 
-after going to Survivor Refuge while ((lust of Brennan is 2 or lust of Brennan is 3) and (TimekeepingVar is -3 or TimekeepingVar is -4 or TimekeepingVar is 5 or TimekeepingVar is 4) and a random chance of 1 in 2 succeeds): [wolf sex ok, Brennan awake and in the apartment, 50% chance]
+after going to Survivor Refuge while ((lust of Brennan is 2 or lust of Brennan is 3) and (TimekeepingVar is -3 or TimekeepingVar is -4 or TimekeepingVar is 5 or TimekeepingVar is 4) and a random chance of 1 in 2 succeeds): [wolf sex OK, Brennan awake and in the apartment, 50% chance]
 	BrennanRomulusBellyRub;
 
 to BrennanRomulusBellyRub:
@@ -2219,10 +2219,10 @@ to BrennanRomulusBellyRub:
 	now lastBrennanWolfScene is turns;
 
 an everyturn rule:
-	if (player is in Survivor Refuge and lust of Brennan is 4 and (TimekeepingVar is 0 or TimekeepingVar is -8 or TimekeepingVar is 7 or TimekeepingVar is -1) and lastBrennanWolfScene - turns > 3 and a random chance of 1 in 2 succeeds): [wolf sex ok, pre-dawn or early morning, 2 turn lockout, 50% chance]
+	if (player is in Survivor Refuge and lust of Brennan is 4 and (TimekeepingVar is 0 or TimekeepingVar is -8 or TimekeepingVar is 7 or TimekeepingVar is -1) and lastBrennanWolfScene - turns > 3 and a random chance of 1 in 2 succeeds): [wolf sex OK, pre-dawn or early morning, 2 turn lockout, 50% chance]
 		BrennanRomulusRemusSniffing;
 
-after going to Survivor Refuge while (lust of Brennan is 4 and (TimekeepingVar is 0 or TimekeepingVar is -8 or TimekeepingVar is 7 or TimekeepingVar is -1) and lastBrennanWolfScene - turns > 3 and a random chance of 1 in 2 succeeds): [wolf sex ok, pre-dawn or early morning, 2 turn lockout, 50% chance]
+after going to Survivor Refuge while (lust of Brennan is 4 and (TimekeepingVar is 0 or TimekeepingVar is -8 or TimekeepingVar is 7 or TimekeepingVar is -1) and lastBrennanWolfScene - turns > 3 and a random chance of 1 in 2 succeeds): [wolf sex OK, pre-dawn or early morning, 2 turn lockout, 50% chance]
 	BrennanRomulusRemusSniffing;
 
 to BrennanRomulusRemusSniffing:
@@ -2239,7 +2239,7 @@ an everyturn rule:
 	if (player is in Survivor Refuge and lust of Brennan is 5 and (TimekeepingVar is 0 or TimekeepingVar is -8 or TimekeepingVar is 7 or TimekeepingVar is -1) and lastBrennanWolfScene - turns > 3 and a random chance of 1 in 2 succeeds):
 		BrennanRomulusFirstOral;
 
-after going to Survivor Refuge while (lust of Brennan is 5 and (TimekeepingVar is 0 or TimekeepingVar is -8 or TimekeepingVar is 7 or TimekeepingVar is -1) and lastBrennanWolfScene - turns > 3 and a random chance of 1 in 2 succeeds): [wolf sex ok, pre-dawn or early morning, 2 turn lockout, 50% chance]
+after going to Survivor Refuge while (lust of Brennan is 5 and (TimekeepingVar is 0 or TimekeepingVar is -8 or TimekeepingVar is 7 or TimekeepingVar is -1) and lastBrennanWolfScene - turns > 3 and a random chance of 1 in 2 succeeds): [wolf sex OK, pre-dawn or early morning, 2 turn lockout, 50% chance]
 	BrennanRomulusFirstOral;
 
 to BrennanRomulusFirstOral:
@@ -2269,10 +2269,10 @@ to BrennanRomulusFirstOral:
 	now lastBrennanWolfScene is turns;
 
 an everyturn rule:
-	if (player is in Survivor Refuge and lust of Brennan is 6 and (TimekeepingVar is 6 or TimekeepingVar is -2) and lastBrennanWolfScene - turns > 3 and a random chance of 1 in 2 succeeds): [wolf sex ok, mid-morning, 2 turn lockout, 50% chance]
+	if (player is in Survivor Refuge and lust of Brennan is 6 and (TimekeepingVar is 6 or TimekeepingVar is -2) and lastBrennanWolfScene - turns > 3 and a random chance of 1 in 2 succeeds): [wolf sex OK, mid-morning, 2 turn lockout, 50% chance]
 		BrennanRomulusRemusThreesome;
 
-after going to Survivor Refuge while (lust of Brennan is 6 and (TimekeepingVar is 6 or TimekeepingVar is -2) and lastBrennanWolfScene - turns > 3 and a random chance of 1 in 2 succeeds): [wolf sex ok, mid-morning, 2 turn lockout, 50% chance]
+after going to Survivor Refuge while (lust of Brennan is 6 and (TimekeepingVar is 6 or TimekeepingVar is -2) and lastBrennanWolfScene - turns > 3 and a random chance of 1 in 2 succeeds): [wolf sex OK, mid-morning, 2 turn lockout, 50% chance]
 	BrennanRomulusRemusThreesome;
 
 to BrennanRomulusRemusThreesome:
@@ -2287,7 +2287,7 @@ to BrennanRomulusRemusThreesome:
 		say "     Quietly walking closer, you give the door a tiny bit of a push, widening the gap to watch through. From your new position, you can see Brennan stretched out across the bed on his back, legs spread and presenting his pussy to Romulus, who is busy lapping at his folds with eager sweeps of the tongue. But that's not the only wolf on the bed, as Remus is standing over his master, straddling his upper body and panting happily while the trans-man is jerking his erect cock. Both the feral's tails are beating up a storm, emphasizing how ecstatically happy they are to be allowed some intimate time with their alpha. Before long, Brennan can't restrain himself any longer and raises his head to take the wolf's dickhead between his lips, suckling on the bright red shaft while pumping and squeezing its length at a frantic pace.";
 		say "     Romulus's cock remains rock hard while he eats out Brennan, the wolf taking great pleasure from servicing his master. You can even see a line of pre-cum leak from it to add to a small soaked spot on the bed below. Meanwhile, his pack-mate's thrusts grow wilder and wilder, humping into Brennan's mouth and grasping hand while panting loudly with arousal. When Brennan adds his second hand to clench tightly around Remus's knot, the wolf is pushed right over the edge, grunting lustfully as his cock starts to unload into the trans-man's mouth. The wolf's whole body twitches with every spurt of thick lupine seed, all of which is eagerly swallowed by his cock-sucking master. Brennan clearly enjoys this sticky treat, his hips rolling up against Romulus's muzzle while he guzzles Remus's cum. Wetness leaks from his damp, clenching folds, the heady nectar dousing his companion's parted muzzle, only to be lapped up again with quick, firm licks that make the man arch beneath his feral lovers.";
 		WaitLineBreak;
-		say "     The combination of his companions cumming into his mouth and eating out his pussy is enough for the human survivor to reach the point of no return. Brennan lets out a lewd, muffled groan around the knotted cock in his mouth, bucking on the bed as Romulus's tongue pushes deep between his nether lips, hungrily slurping up femcum. The three of them enter a flurry of licking, humping and moaning, totally inseparable until their orgasms eventually ebb off. After a little breather to calm his nerves, Brennan lets go of Remus's cock and allows him to pull out. The wolf then turns around to give his alpha a tongue-filled doggy kiss, licking up the little dribbles of pre and cum that escaped the human's mouth. Meanwhile, the man lowers both of his hands to his crotch, gently pulling a still-licking Romulus away from his pussy. The wolf gives a little whine in response, all too eager to continue orally worshipping his master. Brennan buries his fingers in the thick fur of the wolf's neck, stroking and petting him to relax the lustful lupine.";
+		say "     The combination of his companions cumming into his mouth and eating out his pussy is enough for the human survivor to reach the point of no return. Brennan lets out a lewd, muffled groan around the knotted cock in his mouth, bucking on the bed as Romulus's tongue pushes deep between his nether lips, hungrily slurping up femcum. The three of them enter a flurry of licking, humping and moaning, totally inseparable until their orgasms eventually ebb off. After a little breather to calm his nerves, Brennan lets go of Remus's cock and allows him to pull out. The wolf then turns around to give his alpha a tongue-filled doggy kiss, licking up the little dribbles of pre and cum that escaped the human's mouth. Meanwhile, the man lowers both of his hands to his crotch, gently pulling a still-licking Romulus away from his pussy. The wolf gives a little whine in response, all too eager to continue orally worshiping his master. Brennan buries his fingers in the thick fur of the wolf's neck, stroking and petting him to relax the lustful lupine.";
 		say "     Soon, Remus tires of lapping at Brennan's face and pads a few steps to the side, throwing himself onto the mattress to slowly lick his own cock clean. Following the feral with his gaze, Brennan chuckles and sits up, then pulls Romulus's head close to smile at the wolf. 'You two are something else,' the human survivor says in a satisfied and happy tone. 'Thank you Romulus, that was a lot of fun!' And with that, he leans forward to plant a kiss on his wet nose, which almost instantly leads into making out with the wolf. The interspecies couple suckle on each other's tongues and swap spit for a little while, until Brennan eventually pulls back and looks his wolf right in the eyes. 'You know what? I think someone deserves a reward for being such a good wolf!' he adds in a playful tone, one hand wandering underneath the canine and squeezing his still very much erect cock.";
 		WaitLineBreak;
 		say "     Romulus gives a happy bark, thinking he's going to get a handjob - but then Brennan wraps his arms around the wolf's chest and pulls him along as he lays back, ending up with the wolf stretched out on his naked chest. The canine gives his alpha a puzzled look and a quick lick of the face, then freezes in motion when Brennan guides his cock to rub against his labia. The wolf's whole body stiffens as his tension and lust rise beyond all bounds, and the human's hands move his slick shaft to nudge his opening. 'Go on, fuck your human, wolfie! I wanna feel your cock inside me,' Brennan commands loudly and lustfully, his other arm hugging the feral beast against his chest. Romulus doesn't hesitate a single second after hearing his master's request, immediately thrusting in and spearing the gasping human's pussy with his canine shaft.";
@@ -2304,10 +2304,10 @@ to BrennanRomulusRemusThreesome:
 	now lastBrennanWolfScene is turns;
 
 an everyturn rule:
-	if (player is in Survivor Refuge and lust of Brennan > 6 and Libido of Brennan > 0 and Libido of Brennan < 101 and (TimekeepingVar is 6 or TimekeepingVar is -2) and lastBrennanWolfScene - turns > 3 and a random chance of 1 in 2 succeeds): [wolf sex ok, mid-morning, 2 turn lockout, 50% chance]
+	if (player is in Survivor Refuge and lust of Brennan > 6 and Libido of Brennan > 0 and Libido of Brennan < 101 and (TimekeepingVar is 6 or TimekeepingVar is -2) and lastBrennanWolfScene - turns > 3 and a random chance of 1 in 2 succeeds): [wolf sex OK, mid-morning, 2 turn lockout, 50% chance]
 		BrennanWolfRepeatThreesome;
 
-after going to Survivor Refuge while (lust of Brennan > 6 and Libido of Brennan > 0 and Libido of Brennan < 101 and (TimekeepingVar is 6 or TimekeepingVar is -2) and lastBrennanWolfScene - turns > 3 and a random chance of 1 in 2 succeeds): [wolf sex ok, mid-morning, 2 turn lockout, 50% chance]
+after going to Survivor Refuge while (lust of Brennan > 6 and Libido of Brennan > 0 and Libido of Brennan < 101 and (TimekeepingVar is 6 or TimekeepingVar is -2) and lastBrennanWolfScene - turns > 3 and a random chance of 1 in 2 succeeds): [wolf sex OK, mid-morning, 2 turn lockout, 50% chance]
 	BrennanWolfRepeatThreesome;
 
 to BrennanWolfRepeatThreesome:

@@ -168,7 +168,7 @@ to say Tiger Shark wins:
 			if Player is male:
 				say "     The shark moves on to grab your [CockName of Player in lower case] cock, lifting it up. For a second, you are worried as he gets his teeth-filled mouth closer and closer - but he only licks along your tip. ";
 				if CockName of Player is "Feral Sea Dragon" or CockName of Player is "Feral Sea Dragoness":
-					say "Your captor almost seems obsessed with your length, as he keeps worshipping it. He then encases your spade-like tip within his maw, ";
+					say "Your captor almost seems obsessed with your length, as he keeps worshiping it. He then encases your spade-like tip within his maw, ";
 				else:
 					say "He then encases your tip within his maw, ";
 				say "licking your erection some more. The brawler drives the tip of his tongue into your urethra, wanting to get more of your precum. You claw at the sand at this intrusion. While it doesn't feel entirely unpleasant, the stretching sensation makes you a bit strained. Thankfully, the shark slips the agile organ from your insides soon after, moving on to engulf your entire cock within his maw. His tongue now rests on the underside of your dick, as he drives his head back and forth, fucking his own mouth on your cock. You shift, and move your hands to hold his head. He doesn't seem to like that, ever so slightly nipping your cock. This warning is enough to make you take your hands away and instead you just use them to keep yourself upright.";
@@ -318,6 +318,7 @@ When Play begins:
 	add "Tiger Shark Male" to infections of BipedalList;
 	add "Tiger Shark Male" to infections of SwimList;
 	add "Tiger Shark Male" to infections of TailList;
+	add "Tiger Shark Male" to infections of OviImpregnatorList;
 	add "Tiger Shark Male" to infections of TailweaponList;
 	now Name entry is "Tiger Shark Male";
 	now enemy title entry is "Tiger Shark"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]

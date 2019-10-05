@@ -11,6 +11,10 @@ Campus Gym by UrsaOmega begins here.
 
 ]
 
+a postimport rule: [bugfixing rules for players that import savegames]
+	if Working Out is resolved: [event resolved the right way, room not connected yet]
+		connect Campus Gym;
+
 Section 1 - Finding the gym
 
 Table of GameEventIDs (continued)
@@ -28,8 +32,7 @@ Instead of resolving a Working Out:
 		now Campus Gym is known;
 	else:
 		say "You mark the location on your map - it might be worth checking out later.";
-	change southwest exit of Athletic Street to Campus Gym;
-	change northeast exit of Campus Gym to Athletic Street;
+	connect Campus Gym;
 	now Working Out is resolved;
 
 Section 2 - Campus Gym
@@ -44,6 +47,10 @@ The description of Campus Gym is "The interior of the gym is in even better shap
 
 instead of sniffing Campus Gym:
 	say "The room smells like sweat and hard work.";
+
+to connect Campus Gym:
+	change southwest exit of Athletic Street to Campus Gym;
+	change northeast exit of Campus Gym to Athletic Street;
 
 Section 3 - Randy
 
@@ -175,8 +182,7 @@ to say strtraining:
 	decrease freecred by workoutprice;
 	if strength of Player < 18:
 		say "     You lift for what feels like hours, toiling under Randy's guidance to work your various muscle groups out. By the time you're finished, you feel like your limbs are made of jelly. You know that after you're done wincing, you'll be a bit stronger.";
-		say "[bold type]Your strength has increased by 1![roman type][line break]";
-		increase strength of Player by 1;
+		StatChange "Strength" by 1;
 		increase workoutprice by 35;
 	else:
 		say "     You lift for what feels like hours under Randy's approving observation, relishing the tense-relax rhythm of your muscles as you hoist an increasingly heavy series of weights. You feel victorious as you lift the final, heaviest one, the burn in your limbs only serving to drive you to greater feats of strength. Randy, grinning from your performance, give you a pat on the back, and you feel ready to take on the world!";
@@ -197,8 +203,7 @@ to say dextraining:
 	decrease freecred by workoutprice;
 	if dexterity of Player < 18:
 		say "     After the session, you feel much more flexible than when you started... Not to mention much more relaxed.";
-		say "[bold type]Your dexterity has increased by 1![roman type][line break]";
-		increase dexterity of Player by 1;
+		StatChange "Dexterity" by 1;
 		increase workoutprice by 35;
 		follow the turnpass rule;
 	else:
@@ -219,7 +224,7 @@ to say statraining:
 	decrease freecred by workoutprice;
 	if stamina of Player < 18:
 		say "     Your legs feel like rubber and you gulp down every breath of air like it's your last, but you feel like you'll be able to run just a little bit further next time thanks to your training.";
-		increase stamina of Player by 1;
+		StatChange "Stamina" by 1;
 		increase workoutprice by 35;
 		follow the turnpass rule;
 	else:
@@ -296,7 +301,7 @@ to say wrestlesex:
 	if Player is male:
 		say ". Randy reaches down and grips [if Cock Count of Player > 1]one of [end if]your [cock size desc of Player] [Cock of Player] cock[smn], stroking it in time with his thrusts";
 	say ".";
-	say "     You feel your orgasm rapidly approaching, and you tighten your legs around Randy as he leans over you, increasing the speed and intensity of his thrusts. He hilts himself deep inside you and comes with a great bellow, and you feel your [if Player is female]womb[else]rectum[end if] fill with hot, thick rhino seed[impregchance]. You're not far behind him, thanks to his stimulation, and you [if Player is male]shoot your own [Cum Load Size of Player] load across your chest[else if Player is female]cry out as pleasure blossoms in your lower half your cunt clenches around his thick manhood[else]cry out as pleasure blossoms in your lower half and your ass clenches around his thick cock[end if].";
+	say "     You feel your orgasm rapidly approaching, and you tighten your legs around Randy as he leans over you, increasing the speed and intensity of his thrusts. He hilts himself deep inside you and comes with a great bellow, and you feel your [if Player is female]womb[else]rectum[end if] fill with hot, thick rhino seed.[impregchance] You're not far behind him, thanks to his stimulation, and you [if Player is male]shoot your own [Cum Load Size of Player] load across your chest[else if Player is female]cry out as pleasure blossoms in your lower half your cunt clenches around his thick manhood[else]cry out as pleasure blossoms in your lower half and your ass clenches around his thick cock[end if].";
 	say "     [if HP of Randy is 0]'Damn, haven't had that good of a fuck in a long time!' [else]'Fuck, you're good at that!' [end if]Randy pants. 'Rematch sometime?' he says hopefully as you disentangle your bodies. He finds a towel and you dry off before getting your gear together and leaving.";
 	infect "Rhino";
 	now lastfuck of Randy is turns;

@@ -31,7 +31,7 @@ Gene_attack of Small_Lioness_gene is {claw,bite};
 
 The pdesc of Small_Lioness_gene is "You are a female lioness. You are only about four feet tall, though you have large B cups for your height. Your exposed sex is swollen and dripping with need. Your nipples are visible and black, begging to be sucked on.".
 
-The npcdesc of Small_Lioness_gene is "A small cute girl, about four feet in height, covered in tan fur with round lion ears and a bright smile. She is quite developed for her size, sporting B cups and wide hips. She seems to be eyeing UOY rather provacatively.".
+The npcdesc of Small_Lioness_gene is "A small cute girl, about four feet in height, covered in tan fur with round lion ears and a bright smile. She is quite developed for her size, sporting B cups and wide hips. She seems to be eyeing UOY rather provocatively.".
 
 The ploss of Small_Lioness_gene is "You scream as your thoughts are consumed entirely by the spreading tan fur, your mind shifting to simpler, more feral concepts until you can think of nothing but pouncing on others."
 
@@ -69,7 +69,7 @@ Section 2 - Small Lioness Definition
 
 A Small Lioness is a kind of monster. The body of a Small Lioness is usually {Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene}. A Small Lioness is monstrous. A Small Lioness is fully infected. A Small Lioness is usually unsuited. A Small Lioness is female. A Small Lioness is tailed. The monster gene of a Small Lioness is Small_Lioness_gene.
 
-The description of Small Lioness is "A small cute girl, about four feet in height, covered in fur with round lion ears and a bright smile. She is quite developed for her size, sporting B cups and wide hips. She seems to be eyeing UOY rather provacatively."
+The description of Small Lioness is "A small cute girl, about four feet in height, covered in fur with round lion ears and a bright smile. She is quite developed for her size, sporting B cups and wide hips. She seems to be eyeing UOY rather provocatively."
 
 The hitdesc of Small Lioness is "scratches YOU in the bodypart, spreading feline infection further!".
 

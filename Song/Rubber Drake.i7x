@@ -34,6 +34,7 @@ When Play begins:
 	add "Rubber Drake" to infections of TaperedCockList;
 	add "Rubber Drake" to infections of BipedalList;
 	add "Rubber Drake" to infections of TailList;
+	add "Rubber Drake" to infections of OviImpregnatorList;
 	add "Rubber Drake" to infections of TailweaponList;
 	add "Rubber Drake" to infections of FirebreathList;
 	now Name entry is "Rubber Drake"; [ Infection/Creature name. Capitalized. ]

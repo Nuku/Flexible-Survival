@@ -22,7 +22,7 @@ to say wrestlingwolfattack:
 				if "Microwaved" is listed in feats of Player:
 					say "WARNING: Sex shifting nanites detected! Allow?";
 					if Player consents:
-						say "Ok.";
+						say "OK.";
 						say "     As the large wolf's cum seeps into you, you feel a wet heat at your groin. Checking, you discover what you already suspected from the strange new sensations: you have a brand new cunt between your legs.";
 						now Cunt Count of Player is 1;
 						now Cunt Tightness of Player is 1;

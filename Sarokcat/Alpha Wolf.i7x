@@ -11,6 +11,7 @@ AlphaWolfBeaten is a number that varies.
 AlphaWolfReplaced is a truth state that varies. AlphaWolfReplaced is usually false.
 
 to say AlphaWolfdesc:
+	project the Figure of AlphaWolf_naked_icon;
 	setmongender 3;  [creature is male]
 	say "     Sauntering through the forest towards you, a large male wolf pads on all fours, his thick black fur gleaming in the light. Spying you, he quickly raises himself up onto his digitigrade legs, a feral grin crossing his muzzle as his new upright stance reveals his semi-erect canine cock for all to see. '[one of]Oh look, a chew toy for me to play with[or]Hmm now the question is, will you submit to the packleader with or without a struggle? Either way sounds fun to me[or]I can't wait to see you on all fours beneath me[at random],' he says, dominance rolling off of him in waves[if AlphaWolfReplaced is true]. While similar to the alpha wolf you've seen before, this one is clearly a different one. Whether that means the last one had his position usurped or if this is a new pack entirely is unclear, it seems this new alpha's just as confidence of his success[else], making you shudder as you realize you have definitely managed to encounter an alpha wolf[end if].";
 	if AlphaWolfReplaced is true:			[reset for new alpha wolf]
@@ -20,6 +21,7 @@ to say AlphaWolfdesc:
 
 
 to say Alpha Wolf attack:
+	project the Figure of AlphaWolf_hard_icon;
 	if wolffight is 3:		[ Trickster event fight ]
 		say "     The alpha wolf growls and pushes you to the ground. He presses his partially-shaved body down atop you and pulls off your remaining clothes before grinding his cock into your face. His throbbing meat is red and canine, dripping alluringly scented precum. As you try to resist, he grabs your head and pushes himself into your mouth. 'Mmm... take it, you little bitch. This'll teach you to get some cur to try shaving me,' he growls. You moan softly around it as he starts to fuck your face hard and fast. His hot meat twitches inside your muzzle, leaking precum steadily as he pounds into you. As its taste fills your mouth and his scent fills your nose, you find yourself no longer resisting and soon you're licking and sucking that throbbing shaft greedily. He releases a howling chuckle and keeps pumping, forcing his long shaft down your throat and pounding his knot against your lips. He eventually cums with a loud howl and sends his thick seed flowing down your throat to warm your belly with the tingles of infection.";
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
@@ -70,6 +72,7 @@ To say Alpha Wolf loss:
 		if debugactive is 1:
 			say "     DEBUG: EMPTY SCENE IN THE FILE 'Alpha Wolf.i7x' - DEALING WITH THE EVENT OUTCOME IS TAKEN CARE OF ELSEWHERE[line break]";
 	else: [regular combat victory]
+		project the Figure of AlphaWolf_hard_icon;
 		increase AlphaWolfBeaten by 3;
 		if wolffight is not 3 and AlphaWolfBeaten >= 8 and a random chance of AlphaWolfBeaten in 15 succeeds:
 			decrease AlphaWolfBeaten by 4;

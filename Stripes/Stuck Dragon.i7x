@@ -262,6 +262,7 @@ mchristybottom is a truth state that varies. mchristybottom is usually false.		[
 
 
 to say christydesc:
+	project the Figure of Christy_face_icon;
 	say "[dragonessupdate]"; [making sure dragoness/Christy's egg status is up to date]
 	if HP of Christy is 0 or HP of Christy is 1:
 		say "     She looks like a dragon that was ripped straight from the pages of a fairy tale. The dragoness has beautiful, scarlet-colored scales and emerald-colored eyes. There are two large wings on her back. She is laying on her front and her body is so large that it is completely stuck in the doorway with no space between her body and the doorframe. The infection must have caused her to rapidly grow to a huge size as she was trying to get through the doorway and became stuck before making it. The concrete wall around the doorframe has cracked, but not given way yet.";
@@ -277,6 +278,7 @@ instead of sniffing Christy:
 		say "The large, virile dragon smells strongly of the arousal he's trying to suppress.";
 
 Instead of conversing the Christy:
+	project the Figure of Christy_face_icon;
 	say "[dragonessupdate]"; [making sure dragoness/Christy's egg status is up to date]
 	if HP of Christy is 0:
 		if lust of Christy is 0 and Libido of Christy is 0:
@@ -563,6 +565,7 @@ Instead of fucking the Christy:
 			say "[christysex]";
 
 to say christysex:
+	project the Figure of Christy_face_icon;
 	if Player is male and Cock Length of Player > 4:		[cock of adequate size]
 		if BodyName of Player is "Horny Dragon" or BodyName of Player is "Slutty Dragoness":
 			say "     Christy rumbles in appreciation as she feels your draconic body moving against hers and preparing to mount and fill her needy cunt. Being smaller than her, you partially cover that large backside of hers as she lowers her pussy into position for you to mate her. 'Mmm... I prefer your new look. You make a fine, sexy dragon,' she rumbles. 'Mmm... take me like the wild beast you are,' she adds, blushing at her own words, but unable to take them back";
@@ -604,6 +607,7 @@ to say christysex:
 
 
 to say christysex2:		[post-caught variation]
+	project the Figure of Christy_face_icon;
 	if Player is male and Cock Length of Player > 4:		[cock of adequate size]
 		if BodyName of Player is "Horny Dragon" or BodyName of Player is "Slutty Dragoness":
 			say "     Christy moans softly with desire as she feels your draconic body moving against hers and preparing to mount and fill her needy cunt. Being smaller than her, you partially cover that large backside of hers as she lowers her pussy into position for you to mate her. 'Mmm... I prefer your new look. You make a fine, sexy dragon,' she rumbles. 'Mmm... take me like the wild beast you are,' she adds, blushing at her own words, but unable to take them back";
@@ -647,6 +651,7 @@ to say christysex2:		[post-caught variation]
 Section 7 - Oral / UB / Spanking
 
 to say christyoral:
+	project the Figure of Christy_face_icon;
 	now tempnum is 0;
 	if HP of Christy < 8 or a random chance of 1 in 2 succeeds:		[Oral w/Christy]
 		if HP of Christy is 4:
@@ -821,6 +826,7 @@ when play begins:
 	add Dragon Prey to BadSpots of FurryList;
 
 Instead of resolving Dragon Prey:
+	project the Figure of Christy_face_icon;
 	let finale be 0;
 	say "     As you're searching around outdoors in the hopes of finding something to help you out, you are instead found by someone who's been looking for you. While you were on watch for creatures hidden among the buildings, you forgot to check the sky and it's only when a large shadow passes over you that you remember to look up... just as an angry (and familiar) red dragoness slams down atop you, pinning you to the ground. 'Got you, my nasty little [']hero['],' she growls, voice dripping with vitriol as flames and smoke lick at the edge of her fangorious mouth. 'I've been looking all over for you after you ran away before we could finish talking,' she rumbles angrily. 'So, what do you have to say for yourself before I punish you, you wretched liar?' she growls.";
 	say "     It seems like this is going to be your last chance.";
@@ -1340,6 +1346,7 @@ When Play begins:
 	add "Horny Dragon" to infections of InternalCockList;
 	add "Horny Dragon" to infections of QuadrupedalList;
 	add "Horny Dragon" to infections of TailList;
+	add "Horny Dragon" to infections of OviImpregnatorList;
 	now enemy title entry is "Horny Dragon";
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
@@ -1511,6 +1518,7 @@ When Play begins:
 	add "Slutty Dragoness" to infections of InternalCockList;
 	add "Slutty Dragoness" to infections of QuadrupedalList;
 	add "Slutty Dragoness" to infections of TailList;
+	add "Slutty Dragoness" to infections of OviImpregnatorList;
 	now enemy title entry is "Slutty Dragoness";
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]

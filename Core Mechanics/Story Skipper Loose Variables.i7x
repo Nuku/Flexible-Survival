@@ -102,6 +102,14 @@ to TextVariableSave:
 	if CurrentVariableName is:
 		-- "PronounChoice":
 			now TextVarValue entry is PronounChoice of Player;
+		-- "PetMuttBreed":
+			now TextVarValue entry is PetMuttBreed;
+		-- "PetMuttName":
+			now TextVarValue entry is PetMuttName;
+		-- "PetMuttColor":
+			now TextVarValue entry is PetMuttColor;
+		-- "PetMuttDetailedlook":
+			now TextVarValue entry is PetMuttDetailedlook;
 		-- "battleground":
 			now TextVarValue entry is battleground;
 		-- "bcfinalchairform":
@@ -975,8 +983,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is EricVirginityTaken;
 		-- "erminecolor":
 			now NumberVarValue entry is erminecolor;
-		-- "EweFucked":
-			now NumberVarValue entry is EweFucked;
 		-- "Fancyaroused":
 			now NumberVarValue entry is Fancyaroused;
 		-- "fancyffcount":
@@ -1213,8 +1219,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is gryphoncomforted;
 		-- "GryphonessKnowpreg":
 			now NumberVarValue entry is GryphonessKnowpreg;
-		-- "GryphPlotTracking":
-			now NumberVarValue entry is GryphPlotTracking;
 		-- "gsd_encounters":
 			now NumberVarValue entry is gsd_encounters;
 		-- "gsd_pet":
@@ -1587,6 +1591,8 @@ to NumberVariableSave:
 			now NumberVarValue entry is LastCandyWalkin;
 		-- "lastCarlEricInteraction":
 			now NumberVarValue entry is lastCarlEricInteraction;
+		-- "lastCarlKorvinInteraction":
+			now NumberVarValue entry is lastCarlKorvinInteraction;
 		-- "lastCarlSarahInteraction":
 			now NumberVarValue entry is lastCarlSarahInteraction;
 		-- "LastCatgirlFuck":
@@ -2317,8 +2323,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is rabbitsibling;
 		-- "rachelfuck":
 			now NumberVarValue entry is rachelfuck;
-		-- "RamFucked":
-			now NumberVarValue entry is RamFucked;
 		-- "ramlosstick":
 			now NumberVarValue entry is ramlosstick;
 		-- "ramtraining":
@@ -2445,8 +2449,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is shadowy;
 		-- "SharkFountainCounter":
 			now NumberVarValue entry is SharkFountainCounter;
-		-- "shiftable":
-			now NumberVarValue entry is shiftable;
 		-- "sierramem":
 			now NumberVarValue entry is sierramem;
 		-- "SilverToken":
@@ -3670,6 +3672,12 @@ to TextListVariableSave:
 					choose a blank row in the table of GameTextLists;
 					now TextListVarName entry is CurrentVariableName;
 					now TextListVarValue entry is entry y of Childrenskins;
+		-- "Dolphinlist":
+			if the number of entries in Dolphinlist is not 0:
+				repeat with y running from 1 to the number of entries in Dolphinlist:
+					choose a blank row in the table of GameTextLists;
+					now TextListVarName entry is CurrentVariableName;
+					now TextListVarValue entry is entry y of Dolphinlist;
 		-- "lbcomplist":
 			if the number of entries in lbcomplist is not 0:
 				repeat with y running from 1 to the number of entries in lbcomplist:
@@ -3765,6 +3773,14 @@ to VariableTextLoad:
 			if TextVarName entry is:
 				-- "PronounChoice":
 					now PronounChoice of Player is TextVarValue entry;
+				-- "PetMuttBreed":
+					now PetMuttBreed is TextVarValue entry;
+				-- "PetMuttName":
+					now PetMuttName is TextVarValue entry;
+				-- "PetMuttColor":
+					now PetMuttColor is TextVarValue entry;
+				-- "PetMuttDetailedlook":
+					now PetMuttDetailedlook is TextVarValue entry;
 				-- "battleground":
 					now battleground is TextVarValue entry;
 				-- "bcfinalchairform":
@@ -4648,7 +4664,7 @@ to VariableNumberLoad:
 				-- "erminecolor":
 					now erminecolor is numberVarValue entry;
 				-- "EweFucked":
-					now EweFucked is numberVarValue entry;
+					now Stamina of Mary is numberVarValue entry;
 				-- "Fancyaroused":
 					now Fancyaroused is numberVarValue entry;
 				-- "fancyffcount":
@@ -4885,8 +4901,6 @@ to VariableNumberLoad:
 					now gryphoncomforted is numberVarValue entry;
 				-- "GryphonessKnowpreg":
 					now GryphonessKnowpreg is numberVarValue entry;
-				-- "GryphPlotTracking":
-					now GryphPlotTracking is numberVarValue entry;
 				-- "gsd_encounters":
 					now gsd_encounters is numberVarValue entry;
 				-- "gsd_pet":
@@ -5259,6 +5273,8 @@ to VariableNumberLoad:
 					now LastCandyWalkin is numberVarValue entry;
 				-- "lastCarlEricInteraction":
 					now lastCarlEricInteraction is numberVarValue entry;
+				-- "lastCarlKorvinInteraction":
+					now lastCarlKorvinInteraction is numberVarValue entry;
 				-- "lastCarlSarahInteraction":
 					now lastCarlSarahInteraction is numberVarValue entry;
 				-- "LastCatgirlFuck":
@@ -5990,7 +6006,7 @@ to VariableNumberLoad:
 				-- "rachelfuck":
 					now rachelfuck is numberVarValue entry;
 				-- "RamFucked":
-					now RamFucked is numberVarValue entry;
+					now Stamina of Leon is numberVarValue entry;
 				-- "ramlosstick":
 					now ramlosstick is numberVarValue entry;
 				-- "ramtraining":
@@ -6116,7 +6132,7 @@ to VariableNumberLoad:
 				-- "SharkFountainCounter":
 					now SharkFountainCounter is numberVarValue entry;
 				-- "shiftable":
-					now shiftable is numberVarValue entry;
+					now Resolution of Secure Area is numberVarValue entry;
 				-- "sierramem":
 					now sierramem is numberVarValue entry;
 				-- "SilverToken":
@@ -7347,6 +7363,7 @@ to VariableTextListLoad:
 		truncate Childrenbodies to 0 entries; [cleaning out the old data]
 		truncate Childrenfaces to 0 entries; [cleaning out the old data]
 		truncate Childrenskins to 0 entries; [cleaning out the old data]
+		truncate Dolphinlist to 0 entries; [cleaning out the old data]
 		truncate lbcomplist to 0 entries; [cleaning out the old data]
 		truncate ndmlist to 0 entries; [cleaning out the old data]
 		repeat with x running from 1 to the number of filled rows in the Table of GameTextLists:
@@ -7359,6 +7376,8 @@ to VariableTextListLoad:
 					add TextListVarValue entry to Childrenfaces;
 				-- "Childrenskins":
 					add TextListVarValue entry to Childrenskins;
+				-- "Dolphinlist":
+					add TextListVarValue entry to Dolphinlist;
 				-- "lbcomplist":
 					add TextListVarValue entry to lbcompList;
 				-- "ndmlist":

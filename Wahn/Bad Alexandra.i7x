@@ -317,7 +317,7 @@ to say BadAlexandraTalkMenu:
 		now sortorder entry is 2;
 		now description entry is "Bring up that you want to go to the pediatrics clinic with her";
 	[]
-	if HP of Alexandra is 2 or HP of Alexandra is 4 and (demon brute is tamed and DBCaptureQuestVar is 5): [ or PlayerMet of Farmhand Horsemen is true or ("Feral Mutt" is listed in EncounteredEnemies of Player or "Feral Mutt Pack" is listed in EncounteredEnemies of Player)):] [not pregnant right now; possible candidates available]
+	if HP of Alexandra is 2 or HP of Alexandra is 4 and ((demon brute is tamed and DBCaptureQuestVar is 5) or PlayerMet of Farmhand Horsemen is true): [  or ("Feral Mutt" is listed in EncounteredEnemies of Player or "Feral Mutt Pack" is listed in EncounteredEnemies of Player)):] [not pregnant right now; possible candidates available]
 		choose a blank row in table of fucking options;
 		now title entry is "Breeding her (with others)";
 		now sortorder entry is 3;
@@ -441,7 +441,6 @@ to say AlexandraContraceptionTalk:
 				say "     As you tell her that you've decided against contraception after all, Alexandra gives you a broad grin. 'Guess that means it's time for some hard banging soon, eh? Getting me bred and full with a litter of pups?' She wiggles her breasts enticingly at you, not at all sorry that she'll still be fertile.";
 				wait for any key;
 				say "[BadAlexandraTalkMenu]"; [looping back for more talk]
-
 
 to say AlexandraCCounteroffer:
 	say "     [bold type]What do you do?[roman type][line break]";
@@ -1016,11 +1015,11 @@ to say badAlexandraFang1: [let Fang fuck her]
 	if "Top Dog" is listed in feats of Player:
 		say "     Your [']Top Dog['] feat has been replaced by the [']Cuckold['] feat. Your [bold type]perception[roman type] has gone up by one and your earlier [bold type]charisma[roman type] bonus has been removed.";
 		remove "Top Dog" from feats of Player;
-		decrease charisma of Player by 1;
+		StatChange "Charisma" by -1;
 	else:
 		say "     You and Alexandra have earned the [']Cuckold['] feat, making her more fertile. Your [bold type]perception[roman type] has also gone up by one.";
 	add "Cuckold" to feats of Player;
-	increase perception of Player by 1;
+	StatChange "Perception" by 1;
 	now level of Alexandra is 2; [shared bitch]
 	now A_Fang is false; [new dialog for new status]
 	now lastdobiemess is 99; [last used by Fang]
@@ -1043,7 +1042,7 @@ to say badAlexandraFang2: [male player stops Fang and establishes dominance]
 	add "Top Dog" to feats of Player;
 	add "Player's Bitch" to Traits of Alexandra;
 	now AlexandraPlayersBitch is active;
-	increase perception of Player by 1;
+	StatChange "Perception" by 1;
 	decrease HP of Player by 10;
 	now level of Alexandra is 1; [unshared bitch]
 	now A_Fang is false; [new dialog for new status]

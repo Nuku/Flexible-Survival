@@ -77,8 +77,7 @@ carry out Midnightmimicking:
 		say "Watching the large cat closely, you think you begin to realize just how to achieve the same kind of fluid movement, and Angie grins and even Midnight gives you a chuff of approval as you try to move through some of the same tricks Angie put the large cat through. Angie helps by calling out some suggestions as you do, and soon you find yourself stalking around the store with an almost predatory grace, feeling more spry and nimble than ever before, almost feeling a bit like a large cat yourself.'";
 		infect "Panther Herm";
 		if dexterity of Player < 24:
-			say "[bold type]Your dexterity has increased by 1![roman type][line break]";
-			increase dexterity of Player by 1;
+			StatChange "dexterity" by 1;
 		stop the action;
 	else:
 		say "You sigh as Angie snickers at your pathetic attempts to mimic the way the large feline moves, Midnight giving you a disgusted sniff as you trip and stumble and trip into several displays, obviously having not grasped something important in your studies. Giving up your attempts, you resolve to try to mimic the powerful felines movements again later.";

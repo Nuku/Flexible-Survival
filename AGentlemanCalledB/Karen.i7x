@@ -185,7 +185,7 @@ to say KarenTalk1:
 			say "     Noticing Karen looking a little down, you ask her what's on her mind. 'It's been a while now since we got away from Rex, but I still can't remember much of who I was before I met him. It's a little bit frightening, not knowing who you are,' she says, clearly struggling to keep her emotions in check. Recalling that Francois seemed to remember her from before the outbreak, you suggest going to see him. Karen perks up a little at the suggestion. 'Really? Do you think he would help? I suppose it couldn't hurt,' she replies with a weak smile. 'It'll be nice to see another friendly face, at least.'";
 			now HP of Karen is 6;
 		else:
-			say " 	 [one of]'Thanks again for bringing me with you. I feel so much safer with you around.'[or]'It's nice to be able to think clearly again, but I'm still having trouble remembering much of my old life.'[or]'I hope Rex isn't out causing trouble for someone else now that he doesn't have me keeping him occupied.'[or]'I still feel that need welling up inside me occasionally... promise me you won't let me give in to it again, ok?'[at random]";
+			say " 	 [one of]'Thanks again for bringing me with you. I feel so much safer with you around.'[or]'It's nice to be able to think clearly again, but I'm still having trouble remembering much of my old life.'[or]'I hope Rex isn't out causing trouble for someone else now that he doesn't have me keeping him occupied.'[or]'I still feel that need welling up inside me occasionally... promise me you won't let me give in to it again, OK?'[at random]";
 	else:
 		if HP of Karen > 4:
 			say " 	 Karen is not around, you should call her over first.";

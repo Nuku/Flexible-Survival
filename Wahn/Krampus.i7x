@@ -39,6 +39,41 @@ Krampus	"Krampus"
 
 Krampus is a man.
 Krampus is in Krampus's Cave.
+ScaleValue of Krampus is 4. [human sized]
+Body Weight of Krampus is 8. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Krampus is 9. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Krampus is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Krampus is 7. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Krampus is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Krampus is 7. [length in inches]
+Breast Size of Krampus is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Krampus is 2. [count of nipples]
+Asshole Depth of Krampus is 10. [inches deep for anal fucking]
+Asshole Tightness of Krampus is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Krampus is 1. [number of cocks]
+Cock Girth of Krampus is 4. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Krampus is 14. [length in inches]
+Ball Count of Krampus is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Krampus is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Krampus is 0. [number of cunts]
+Cunt Depth of Krampus is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Krampus is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Krampus is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Krampus is false.
+PlayerRomanced of Krampus is false.
+PlayerFriended of Krampus is false.
+PlayerControlled of Krampus is false.
+PlayerFucked of Krampus is false.
+OralVirgin of Krampus is false.
+Virgin of Krampus is true.
+AnalVirgin of Krampus is true.
+PenileVirgin of Krampus is false.
+SexuallyExperienced of Krampus is true.
+TwistedCapacity of Krampus is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Krampus is false. [steriles can't knock people up]
+MainInfection of Krampus is "Goat-Demon".
 The description of Krampus is "[KrampusDesc]".
 The conversation of Krampus is { "<This is nothing but a placeholder!>" }.
 The scent of Krampus is "[KrampusScent]";
@@ -301,7 +336,7 @@ to say KrampusBondage2:
 			WaitLineBreak;
 			say "     'Yuck! Eerk!' she protests. 'What was that?' Krampus asks, puffing his chest and walking next to the bunny. 'She-she squirted on me? Th-that's gross.' 'Gross? I would say that is a shame.' 'W-Why?' 'Because this is all the lube that you will get.' Krampus slams his hand on the bunny's crotch, shaking the vibrator inside. 'No-no-no-no! I'll be a good girl! I'll be a good girl, see!' She licks your clit as fast as she can. 'Be a nice kid and clean her pussy, too,' the goat-demon commands. The bunny abides and licks your juices in a hurry. Eventually, you cum hard thanks to the help of the young woman. ";
 	say "'Good,' Krampus asserts, hands to his hips. 'Very good. Now, back to the bag you go.' Grabbing the [if KSackPull is 0]wolf[else]bunny[end if] by the neck, he throws the captive carelessly into his red sack, oblivious to some begged pleas for freedom. 'You will get a proper punishment later. Consider this a mitigation.'";
-	say "     The goat turns towards you and observes for a moment. A hand to his chin, he admires the tired but relieved expression on your [FaceName of Player in lower case] face. Eventually, he reaches for your wrists and unlocks the manacles, allowing you to plant your feet firmly on the floor. He removes the spreader bar, setting you completely free. Grabbing your butt possessively, the demon nudges you towards the exit. 'That's enough punishment for today, slut. Get out of here. Like you've seen, I've got some harder cases to take care of now.' Following his gaze, you see the huge, red sack next to the heap of furs that serves as his bed, and you remember the [if KSackPull is 0]wolf[else]bunny[end if] trapped inside.";
+	say "     The goat turns towards you and observes for a moment. A hand to his chin, he admires the tired but relieved expression on your [FaceSpeciesName of Player in lower case] face. Eventually, he reaches for your wrists and unlocks the manacles, allowing you to plant your feet firmly on the floor. He removes the spreader bar, setting you completely free. Grabbing your butt possessively, the demon nudges you towards the exit. 'That's enough punishment for today, slut. Get out of here. Like you've seen, I've got some harder cases to take care of now.' Following his gaze, you see the huge, red sack next to the heap of furs that serves as his bed, and you remember the [if KSackPull is 0]wolf[else]bunny[end if] trapped inside.";
 	LineBreak;
 	say "     As you start to collect your clothes and get dressed again, you can't help but feel that this was just one of the many possible punishments the goat-demon has in store for those on his naughty list. [bold type]Maybe he'll decide on something different next time.[roman type][line break]";
 
@@ -315,7 +350,7 @@ to say KrampusBondage3:
 	if WSLevel is 3:[Trigger warning, watersports]
 		say "     After several minutes of futile wiggling, you feel something heavy get on the bed. The sound of the manacles clinking tells you that it is Krampus. Your hunch is confirmed when the demonic goat pushes his pre-dripping glans into your mouth. 'Be a sweet [if Player is male]boy[else]girl[end if] and drink it up.' You have barely the time to emit an inquisitive moan when you feel a stream of warm liquid flow down your mouth. Your eyes bulge under the rubber[if Player is submissive], your excitement rising[else]your panic peaking[end if] as you realize that the goat is using you as his personal toilet. 'Oooh, that felt good. I should do this more often.' You squeal as the acidic taste of urine floods your taste buds for half-a-minute. Groaning in relief, Krampus walks away and returns to his seat to watch the end of your losing battle with the vibrating wand.";
 	else:
-		say "     After several minutes of futile wiggling, you feel something heavy get on the bed. The sound of the manacles clinking tells you that it is Krampus. Your hunch is confirmed when the demonic goat pushes his pre-dripping glans into your mouth. He grabs your hooded [FaceName of Player in lower case] head and pushes his shaft down your throat. Your eyes bulge under the rubber[if Player is submissive], your excitement rising[else]your panic peaking[end if] as there is no way to escape the demon's face-fuck. 'Couldn't. Resist,' Krampus says, punctuating each word with a thrust of his hips. 'Big. Empty. Hole. Waiting. For my. Cock. Hrnnnng!' His cock spasms on your mouth, and you feel warm, thick spunk go down your esophagus. Fortunately, Krampus pulls out right away and showers your rubber-sack with his cum. 'Oooh, that felt good.' You squeal as you try to catch your breath, still locked into a losing battle with the vibrating wand. Groaning in relief, Krampus walks away and returns to his seat to watch the rest of the show.";
+		say "     After several minutes of futile wiggling, you feel something heavy get on the bed. The sound of the manacles clinking tells you that it is Krampus. Your hunch is confirmed when the demonic goat pushes his pre-dripping glans into your mouth. He grabs your hooded [FaceSpeciesName of Player in lower case] head and pushes his shaft down your throat. Your eyes bulge under the rubber[if Player is submissive], your excitement rising[else]your panic peaking[end if] as there is no way to escape the demon's face-fuck. 'Couldn't. Resist,' Krampus says, punctuating each word with a thrust of his hips. 'Big. Empty. Hole. Waiting. For my. Cock. Hrnnnng!' His cock spasms on your mouth, and you feel warm, thick spunk go down your esophagus. Fortunately, Krampus pulls out right away and showers your rubber-sack with his cum. 'Oooh, that felt good.' You squeal as you try to catch your breath, still locked into a losing battle with the vibrating wand. Groaning in relief, Krampus walks away and returns to his seat to watch the rest of the show.";
 	if Player is male:
 		say "     The wand eventually pushes you past your limits. You moan and thrash in your rubber prison as your own cock spurts its load. You feel it spread under the rubber sheet, staining your lower body[if Ball Size of Player > 3]. Unfortunately, since the mutations made you so productive, it goes on, and on, and on, until your entire body is soaked in your own sexual fluids[end if].";
 	else:
@@ -440,7 +475,7 @@ When Play begins:
 	now area entry is "Nowhere";       [ Case sensitive]
 	now Cock Count entry is 1;              [ number of cocks if sex is 'Male' or 'Both' ]
 	now Cock Length entry is 14;
-	now Ball Size entry is 3;         [ Size of balls ]
+	now Ball Size entry is 4;         [ Size of balls ]
 	now Nipple Count entry is 2;            [ Number of nipples. ]
 	now Breast Size entry is 0;        [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 	now Male Breast Size entry is 0;   [ Breast size for if Sex="Male", usually zero. ]

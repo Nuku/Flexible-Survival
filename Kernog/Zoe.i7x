@@ -14,7 +14,7 @@ Initial event ----|
 [Traits and stats]
 [
 Loyalty: state of Zoe. 0 = jaded, 5 = friendly, 7 = expérimentation (sodo), 8 = expérimentation 2 (pegging, dp normale), 9 = expérimentation 3 (RP dom) 10 = expérimentation 4 (dp même trou, RP sub)
-XP: indicates if a saved Zoe has somthing to give the player
+XP: indicates if a saved Zoe has somthing to give the Player
 HP: hidden variable tracking the quest's outcome for dialogue variation (0 = best, 1 = good)
 
 Resolution of Zoe's event Rabbit Tagger:
@@ -23,9 +23,9 @@ Resolution of Zoe's event Rabbit Tagger:
 
 
 Virgin: Zoe is still a virgin. Unlocks a special scene if Zoe keeps that trait after getting the good outcome of her quest
-Used: the captured Zoe is servicing patrons inside the Van, and is currently inaccessible by the player
-Propositioned: the player solicited a saved Zoe for sex, who refused.
-Decided: Zoe is decided to have sex with the player. Is used in Saved branch dialogue, to avoid Zoe propositioning the player several times
+Used: the captured Zoe is servicing patrons inside the Van, and is currently inaccessible by the Player
+Propositioned: the Player solicited a saved Zoe for sex, who refused.
+Decided: Zoe is decided to have sex with the Player. Is used in Saved branch dialogue, to avoid Zoe propositioning the Player several times
 
 Zoe goes to Makeshift Rec Room if saved
 
@@ -143,7 +143,6 @@ instead of fucking Zoe:
 				say "[ZoeFirstTime]";
 			else:
 				say "[ZoeSecondTime]";
-			NPCSexAftermath Zoe receives "PussyFuck" from player;
 			if Loyalty of Zoe < 11:
 				increase Loyalty of Zoe by 1;
 		else:
@@ -154,17 +153,19 @@ instead of fucking Zoe:
 	else:
 		say "[ZoeMolest]";
 
-[First time of Zoe with the player, if she is still a virgin]
+[First time of Zoe with the Player, if she is still a virgin]
 to say ZoeFirstTime:
 	say "     Zoe remains silent for a moment, and finally says. 'Okay. Follow me, I know a more private place.' You walk with her for at least ten minutes, until she leads you to a small apartment. The walls are covered with paintings. 'This was my home, before everything happened.' Zoe leads you to her bedroom. The bed is gone ('I needed the boards for to nail all the windows shut,' she explains), but the big cot is still there, on the ground. 'Let's take our time. I want to do this well.'";
 	say "     You slowly take off each other's clothes. Zoe passes her furry hand on your body. [if Player is purehuman]'It's weird that normal people like you are a rarity now. I guess I'm lucky,'[else if Player is pure]'[BodyName of Player] huh? In high school, a friend showed me some furry porn, you know? It feels weird that it almost became the norm around here,'[else]'Nothing matches with you. It looks funny... I guess I'm lucky to only have muted into a rabbit,'[end if] she says. You make out with Zoe. Time slows down as everything is deadly quiet around you. Your hand slowly reaches down to grope the rabbit's butt, but she surprises you by reaching your crotch at the same time. Not wanting to be outdone, your fingers continue down Zoe's butt-crack and caress her nethers. You start gasping and moaning as your hands discover each other's intimacy.";
 	WaitLineBreak;
 	if Player is not male:
-		say "     'Hey, can I try, er, licking it?' Zoe asks sheepishly. You chuckle, and tell her she ought to know what it feels like as well. You have the young girl lie down on the cot, on her side, then take the opposite position. 'Oh God, I'm so nervous,' you hear her whisper. You approach your mouth from her private parts. 'Ah. I-I can feel your breath on... Me,' Zoe says. You answer that you feel her breath too, and tell her to do as what you do. Then, you surround her little pleasure button with your lips and suck. You hear Zoe gasp loudly in surprise, followed by her mouth imitating yours. You both play with your partner's clit, sucking and licking it, the room becoming lively with your respective groans. 'Mmm. Aah. Mmmf. Oh God, I'm already w-wet. Mmm...";
+		say "     'Hey, can I try, er, licking it?' Zoe asks sheepishly. You chuckle, and tell her she ought to know what it feels like as well. You have the young girl lie down on the cot, on her side, then take the opposite position. 'Oh God, I'm so nervous,' you hear her whisper. You approach your mouth to her private parts. 'Ah. I-I can feel your breath on... Me,' Zoe says. You answer that you feel her breath too, and tell her to do as what you do. Then, you surround her little pleasure button with your lips and suck. You hear Zoe gasp loudly in surprise, followed by her mouth imitating yours. You both play with your partner's clit, sucking and licking it, the room becoming lively with your respective groans. 'Mmm. Aah. Mmmf. Oh God, I'm already w-wet. Mmm...";
 		say "     You take a moment to pause, and warn the bunny that you're going to push a finger in, and to tell you if she wants you to stop. 'O-Okay. I-Er... I'm used to, you know, use two, okay?', she replies. You run your index along Zoe's labia. She seems rather sensitive, trembling each time you press your finger a little. After a little teasing, you plunge your digit inside her, and after some stretching, a second one. 'Ahn!' Zoe squeals, before getting back on your clit. You combine moving your fingers and using your mouth, for dramatic effect.";
 		WaitLineBreak;
 		say "     You are at it for barely more than a minute when Zoe starts to pant loudly, and tenses up. 'Oh fuck, this is too m-much. I'm gonna... Ahh... Nggg!' The bunny girl's tight cunt squeezes on your fingers as she goes into the quickest and the most intense orgasm in her life yet. You keep moving your fingers inside her, and make sure that she rides her climax as long as possible. When you finally pull them off, they are drenched in fem-cum. 'Ahh... Oh...' Zoe pants. 'S-Sorry. I didn't mean to, to come so quickly,' she starts saying. You reassure her and say that having fun is the most important and that she'll get used to it pretty quickly. 'B-But what about you?' she asks. You smile, and say that if she is still up for it, she could finish what she started.";
 		say "     Wanting to encourage her, you sit on the cot and spread your legs, inviting her to approach. Zoe gives you a timid smile, then crawl towards you. She puts her mouth against your pussy and resumes licking. Under your directions, and your encouragements, she does a great job, and gets bolder and bolder. Eventually, she finds herself running her small tongue all the way your [cunt size desc of Player] cunt, ending it with a series of strong suckings on your clit. This eventually brings you over the edge. Your body folds around the bunny's head as you go through your own, noisy climax.";
+		NPCSexAftermath Zoe receives "OralPussy" from Player;
+		NPCSexAftermath Player receives "OralPussy" from Zoe;
 	else:
 		say "     'Okay. I... I want to try a blowjob,' Zoe asks as she gets to her knees. You smile and stop her, instructing her to lie on her side, telling her that you want to make her feel good too. After she lies down, you do the same, in the opposite direction. Under your instructions, Zoe starts by kissing and licking your [if Cock Count of Player > 2]main cock while one of her hands holds one of your other shafts[else if Cock Count of Player > 1]main cock while one of her hands holds your other shaft[else][CockName of Player] cock[end if]. Her first attempts are clumsy, but she quickly becomes bolder, and before you know it, she is wrapping her bunny lips around the head of your cock. After your warn her to be careful with the teeth[if Zoe is PlayerCumLoadInflates], and to not take too much of your [cock size desc of Player] member[end if], you focus on her own intimate parts. Your fingers run along her virgin vagina while you shower her small pleasure button with sucks and kisses, using the resonances of her moans on your cock as an indicator.";
 		say "     Despite feeling her teeth touching your glans a couple of times, Zoe does a good job, and you apply yourself to do yours as well. You slowly insert one finger inside her pussy. Her muscles squeeze down on your finger joints, so you let the young girl relax before putting the rest of your finger in. You go at it progressively, a second finger joining the first one, then as many others as needed for her to take your [cock size desc of Player] member. 'Will it be alright?' Zoe asks. You reassure her that the nanites will help and make it good as long as she goes at her pace, using your fingers now slipping effortlessly inside her as proof.";
@@ -175,10 +176,12 @@ to say ZoeFirstTime:
 		say "     After several minutes of intense fucking, Zoe's moans get louder and longer, and her eyes fixate on something far away, beyond the ceiling. 'Ah, fuck. God. Gah. Aaah! Aaah! Nnnn!' Zoe goes through what may not be the first orgasm of her life, but assuredly the first one that someone else brought to her. Her entire being clamps down on you, refuses to let you go. You are not going anywhere, though, reaching your own climax roughly at the same time. 'Mmm... I-I feel something... Warm...' the bunny groans as your [Cum Load Size of Player] load fills her womb. After the both of you recover from your pleasure high, you resolve yourself to pull out from Zoe after a final kiss and roll to the side. She immediately rolls over you, and you spend a good hour cuddling together. Then, after cleaning and clothing yourself, you return to the library. Zoe keeps a wide grin on her face during the whole walk.";
 		WaitLineBreak;
 		say "     Zoe and you take some time to rest and cuddle, before getting your clothes back on. Before leaving, the bunny kiss you on the cheek, which quickly turns into a longer French kiss. 'Thank you. I was anxious at first, but it was awesome.' You make your way back to the library, a feeling of relaxation and giddiness flowing in you.";
+		NPCSexAftermath Zoe receives "OralCock" from Player;
+		NPCSexAftermath Zoe receives "PussyFuck" from Player;
 	LibidoLoss 50;
 	SanBoost 10;
 
-[First time of Zoe with the player, if the wolverine molested her before - Unused at the moment. I keep it in case I extend the other story branch]
+[First time of Zoe with the Player, if the wolverine molested her before - Unused at the moment. I keep it in case I extend the other story branch]
 to say ZoeSecondTime:
 	say "     Zoe remains silent for a moment, and finally says. 'Okay. Follow me, I know a more private place.' You walk with her for at least ten minutes, until she leads you to a small apartment. The walls are covered with paintings. 'This was my home, before everything happened.' Zoe leads you to her bedroom. The bed is gone ('I needed the boards for to nail all the windows shut,' she explains), but the big cot is still there, on the ground. 'Let's take our time. I want to do this well.'";
 	say "     Zoe starts to hurriedly take her clothes off, but you stop her. 'What? You don't want to do it anymore?' You explain to her that the both of you need to take your time, that good sex is not immediate gratification, even in these times. You take Zoe in your arms. She starts to recoil, but you do not try to force her into your hug, and she eventually relaxes. Your lips meet her, and you spend a long time with her in a deep kiss. Undressing comes naturally as you fondle and explore each other's body. Eventually, the turn of your bottom clothes comes. [if Player is purehuman]'It's weird that normal people like you are a rarity now. I guess I'm lucky,'[else if Player is pure]'[BodyName of Player] huh? In high school, a friend showed me some furry porn, you know? It feels weird that it almost became the norm around here,'[else]'Nothing matches with you. It looks funny... I guess I'm lucky to only have muted into a rabbit,'[end if] she says. You make out with Zoe. Time slows down as everything is deadly quiet around you. Your hand slowly reaches down to grope the rabbit's butt, but she surprises you by reaching your crotch at the same time. Not wanting to be outdone, your fingers continue down Zoe's butt-crack and caress her nethers. You start gasping and moaning as your hands discover each other's intimacy.";
@@ -189,6 +192,9 @@ to say ZoeSecondTime:
 		WaitLineBreak;
 		say "     You are at it for barely more than a minute when Zoe starts to pant loudly, and tenses up. 'Oh fuck, this is too m-much. I'm gonna... Ahh... Nggg!' The bunny girl's tight cunt squeezes on your fingers as she goes into the quickest and the most intense orgasm in her life yet. You keep moving your fingers inside her, and make sure that she rides her climax as long as possible. When you finally pull them off, they are drenched in fem-cum. 'Ahh... Oh...' Zoe pants. 'S-Sorry. I didn't mean to, to come so quickly,' she starts saying. You reassure her and say that having fun is the most important and that she'll get used to it pretty quickly. 'B-But what about you?' she asks. You smile, and say that if she is still up for it, she could finish what she started.";
 		say "     Wanting to encourage her, you sit on the cot and spread your legs, inviting her to approach. Zoe gives you a timid smile, then crawl towards you. She puts her mouth against your pussy and resumes licking. Under your directions, and your encouragements, she does a great job, and gets bolder and bolder. Eventually, she finds herself running her small tongue all the way your [cunt size desc of Player] cunt, ending it with a series of strong suckings on your clit. This eventually brings you over the edge. Your body folds around the bunny's head as you go through your own, noisy climax.";
+		NPCSexAftermath Zoe receives "OralPussy" from Player;
+		NPCSexAftermath Zoe receives "DildoPussyFuck" from Player;
+		NPCSexAftermath Player receives "OralPussy" from Zoe;
 	else:
 		say "     'Okay. I... I want to try a blowjob,' Zoe asks as she gets to her knees. You smile and stop her, instructing her to lie on her side, telling her that you want to make her feel good too. After she lies down, you do the same, in the opposite direction. Under your instructions, Zoe starts by kissing and licking your [if Cock Count of Player > 2]main cock while one of her hands holds one of your other shafts[else if Cock Count of Player > 1]main cock while one of her hands holds your other shaft[else][CockName of Player] cock[end if]. Her first attempts are clumsy, but she quickly becomes bolder, and before you know it, she is wrapping her bunny lips around the head of your cock. After your warn her to be careful with the teeth[if Zoe is PlayerCumLoadInflates], and to not take too much of your [cock size desc of Player] member[end if], you focus on her own intimate parts. Your fingers run along her virgin vagina while you shower her small pleasure button with sucks and kisses, using the resonances of her moans on your cock as an indicator.";
 		say "     Despite feeling her teeth touching your glans a couple of times, Zoe does a good job, and you apply yourself to do yours as well. You slowly insert one finger inside her pussy. Her muscles squeeze down on your finger joints, so you let the young girl relax before putting the rest of your finger in. You go at it progressively, a second finger joining the first one, then as many others as needed for her to take your [cock size desc of Player] member. 'Will it be alright?' Zoe asks. You reassure her that the nanites will help and make it good as long as she goes at her pace, using your fingers now slipping effortlessly inside her as proof.";
@@ -199,6 +205,8 @@ to say ZoeSecondTime:
 		say "     After several minutes of intense fucking, Zoe's moans get louder and longer, and her eyes fixate on something far away, beyond the ceiling. 'Ah, fuck. God. Gah. Aaah! Aaah! Nnnn!' Zoe goes through what may not be the first orgasm of her life, but assuredly the first one that someone else brought to her. Her entire being clamps down on you, refuses to let you go. You are not going anywhere, though, reaching your own climax roughly at the same time. 'Mmm... I-I feel something... Warm...' the bunny groans as your [Cum Load Size of Player] load fills her womb. After the both of you recover from your pleasure high, you resolve yourself to pull out from Zoe after a final kiss and roll to the side. She immediately rolls over you, and you spend a good hour cuddling together. Then, after cleaning and clothing yourself, you return to the library. Zoe keeps a wide grin on her face during the whole walk.";
 		WaitLineBreak;
 		say "     Zoe and you take some time to rest and cuddle, before getting your clothes back on. Before leaving, the bunny kiss you on the cheek, which quickly turns into a longer French kiss. 'Thank you. I was anxious at first, but it was awesome.' You make your way back to the library, a feeling of relaxation and giddiness flowing in you.";
+		NPCSexAftermath Zoe receives "OralCock" from Player;
+		NPCSexAftermath Zoe receives "PussyFuck" from Player;
 	LibidoLoss 50;
 	SanBoost 10;
 
@@ -238,7 +246,7 @@ to say ZoeGoodFuckMenu:
 		now sortorder entry is 2;
 		now description entry is "You do not fill the conditions: having a penis, and allowing anal content";
 	[]
-	if Loyalty of Zoe >= 8 and (player is female or (player is male and anallevel > 1)):
+	if Loyalty of Zoe >= 8 and (Player is female or (Player is male and anallevel > 1)):
 		choose a blank row in table of fucking options;
 		now title entry is "Pegging";
 		now sortorder entry is 3;
@@ -249,7 +257,7 @@ to say ZoeGoodFuckMenu:
 		now sortorder entry is 3;
 		now description entry is "You do not fill the conditions: having a vagina, and allowing anal content";
 	[]
-	if Loyalty of Zoe >= 9 and player is submissive:
+	if Loyalty of Zoe >= 9 and Player is submissive:
 		choose a blank row in table of fucking options;
 		now title entry is "Roleplay (sub)";
 		now sortorder entry is 4;
@@ -260,7 +268,7 @@ to say ZoeGoodFuckMenu:
 		now sortorder entry is 4;
 		now description entry is "You do not fill the conditions: having the [bold type]submissive[roman type] trait";
 	[]
-	if Loyalty of Zoe >= 10 and player is dominant:
+	if Loyalty of Zoe >= 10 and Player is dominant:
 		choose a blank row in table of fucking options;
 		now title entry is "Roleplay (dom)";
 		now sortorder entry is 5;
@@ -271,7 +279,7 @@ to say ZoeGoodFuckMenu:
 		now sortorder entry is 5;
 		now description entry is "You do not fill the conditions: having the [bold type]submissive[roman type] trait";
 	[]
-	if Loyalty of Zoe >= 11 and Cock Count of Player > 2 and player is kinky:
+	if Loyalty of Zoe >= 11 and Cock Count of Player > 2 and Player is kinky:
 		choose a blank row in table of fucking options;
 		now title entry is "Multi-cock fun";
 		now sortorder entry is 6;
@@ -300,12 +308,12 @@ to say ZoeGoodFuckMenu:
 				now sextablerun is 1;
 				if nam is "Vanilla":
 					say "[ZoeSexZoeChoice]";
-					NPCSexAftermath Zoe receives "PussyFuck" from player;
+					NPCSexAftermath Zoe receives "PussyFuck" from Player;
 					if Loyalty of Zoe < 11:
 						increase Loyalty of Zoe by 1;
 				else if nam is "Anal":
 					say "[ZoeSexAnal]";
-					NPCSexAftermath Zoe receives "AssFuck" from player;
+					NPCSexAftermath Zoe receives "AssFuck" from Player;
 					if Loyalty of Zoe < 11:
 						increase Loyalty of Zoe by 1;
 				else if nam is "Pegging":
@@ -314,18 +322,18 @@ to say ZoeGoodFuckMenu:
 						increase Loyalty of Zoe by 1;
 				else if nam is "Roleplay (sub)":
 					say "[ZoeSexRPSub]";
-					NPCSexAftermath Zoe receives "PussyFuck" from player;
+					NPCSexAftermath Zoe receives "PussyFuck" from Player;
 					if Loyalty of Zoe < 11:
 						increase Loyalty of Zoe by 1;
 				else if nam is "Roleplay (dom)":
 					say "[ZoeSexRPDom]";
-					NPCSexAftermath Zoe receives "PussyFuck" from player;
+					NPCSexAftermath Zoe receives "PussyFuck" from Player;
 					if Loyalty of Zoe < 11:
 						increase Loyalty of Zoe by 1;
 				else if nam is "Multi-cock fun":
 					say "[ZoeSexDP]";
-					NPCSexAftermath Zoe receives "PussyFuck" from player;
-					NPCSexAftermath Zoe receives "AssFuck" from player;
+					NPCSexAftermath Zoe receives "PussyFuck" from Player;
+					NPCSexAftermath Zoe receives "AssFuck" from Player;
 					if Loyalty of Zoe < 11:
 						increase Loyalty of Zoe by 1;
 				else if nam is "*Anal - Locked*" or nam is "*Pegging - Locked*" or nam is "*Roleplay (sub) - Locked*" or nam is "*Roleplay (dom) - Locked*" or nam is "*Multi-cock fun - Locked*":
@@ -374,11 +382,11 @@ to say ZoeSexPeg:
 		say "     Zoe sits on the same chair than last time, and you kneel in front of her. 'Do your magic, I'll be in my happy place,' she says as she closes her eyes. You open your mouth and start working on her fake cock as if it was a real one. Zoe sighs as she plays her fantasy in her head, but you notice that she regularly open her looks to watch you, and that she gets as much pleasure from it. Her hand is assertively put on your head, and guides your rhythm. 'That's it. Make it wet. Make me wet.' After a moment, you notice that Zoe has opened her eyes and looks at you. 'That's enough teasing already. On your knees, [if Player is defaultnamed]my little toy[else][name of Player][end if]!'";
 	WaitLineBreak;
 	if Player is not female or anallevel is 3:
-		say "     [if anallevel is 3 and player is female]As you turn around and present your bare butt to the bunny, you ask her to use your ass. 'In the ass? Well, sure, if that's your kink.' [else]You turn around and present your bare butt to the bunny 'Only one way to go, but here,' she says as she pats your [Skin of Player] butt. [end if]Zoe starts pushing in. You let out a long moan as the rubbery strap-on slowly advances into your ass. 'You okay, [if Player is defaultnamed]sugar[else][name of Player][end if]?' You nod and take her wrist, encouraging her to go further. Once she bottoms out, the bunny girl seems a little lost. She begins giving little pumps, only to be surprised by the resistance she encounters, which reverberates on her own end. 'Oh, damn.' She picks up in rhythm and intensity little by little while you [if Player is male]jerk off[else if Player is female]finger yourself[end if]. You eventually cum and splatter the carpet with your sexual fluids. Looking back and seeing Zoe's elated face, you can tell that she reached her own climax not long after you.";
-		NPCSexAftermath player receives "DildoAssFuck" from zoe;
+		say "     [if anallevel is 3 and Player is female]As you turn around and present your bare butt to the bunny, you ask her to use your ass. 'In the ass? Well, sure, if that's your kink.' [else]You turn around and present your bare butt to the bunny 'Only one way to go, but here,' she says as she pats your [Skin of Player] butt. [end if]Zoe starts pushing in. You let out a long moan as the rubbery strap-on slowly advances into your ass. 'You okay, [if Player is defaultnamed]sugar[else][name of Player][end if]?' You nod and take her wrist, encouraging her to go further. Once she bottoms out, the bunny girl seems a little lost. She begins giving little pumps, only to be surprised by the resistance she encounters, which reverberates on her own end. 'Oh, damn.' She picks up in rhythm and intensity little by little while you [if Player is male]jerk off[else if Player is female]finger yourself[end if]. You eventually cum and splatter the carpet with your sexual fluids. Looking back and seeing Zoe's elated face, you can tell that she reached her own climax not long after you.";
+		NPCSexAftermath Player receives "DildoAssFuck" from Zoe;
 	else:
 		say "     Zoe starts pushing in. You let out a long moan as the rubbery strap-on slowly advances into your [cunt size desc of Player] pussy. 'You okay, [if Player is defaultnamed]sugar[else][name of Player][end if]?' You nod and take her wrist, encouraging her to go further. Once she bottoms out, the bunny girl seems a little lost. She begins giving little pumps, only to be surprised by the resistance she encounters, which reverberates on her own end. 'Oh, damn.' She picks up in rhythm and intensity little by little while you [if Player is male]jerk off[else if Player is female]play with your clit[end if]. You eventually cum and splatter the carpet with your sexual fluids. Looking back and seeing Zoe's elated face, you can tell that she reached her own climax not long after you.";
-		NPCSexAftermath player receives "DildoPussyFuck" from zoe;
+		NPCSexAftermath Player receives "DildoPussyFuck" from Zoe;
 	say "     Zoe grins while she pulls out of you. 'This was fun. We should do this more often.' You help Zoe clean her toy and the mess you made, then head back with her Zoe to the library.";
 
 to say ZoeSexRPSub:
@@ -468,17 +476,17 @@ to say ZoeMolest:
 				now sextablerun is 1;
 				if nam is "Mouth":
 					say "[ZoeMolestMouth]";
-					NPCSexAftermath Zoe receives "OralFuck" from player;
+					NPCSexAftermath Zoe receives "OralFuck" from Player;
 				if nam is "Pussy":
 					say "[ZoeMolestVag]";
-					NPCSexAftermath Zoe receives "PussyFuck" from player;
+					NPCSexAftermath Zoe receives "PussyFuck" from Player;
 				if nam is "Ass":
 					say "[ZoeMolestAnal]";
-					NPCSexAftermath Zoe receives "AssFuck" from player;
+					NPCSexAftermath Zoe receives "AssFuck" from Player;
 				if nam is "Double penetration":
 					say "[ZoeMolestDP]";
-					NPCSexAftermath Zoe receives "PussyFuck" from player;
-					NPCSexAftermath Zoe receives "AssFuck" from player;
+					NPCSexAftermath Zoe receives "PussyFuck" from Player;
+					NPCSexAftermath Zoe receives "AssFuck" from Player;
 				wait for any key;
 				now Suspicious Van is closed;
 				follow the turnpass rule;
@@ -546,7 +554,7 @@ an everyturn rule:
 
 Part B - Suspicious Van
 
-[The van is where Zoe will be if she is captured. It is a container with specific rules. Locked until Zoe's quest is resolved, it is guarded by a Wolverine Pimp, with which the player will interact]
+[The van is where Zoe will be if she is captured. It is a container with specific rules. Locked until Zoe's quest is resolved, it is guarded by a Wolverine Pimp, with which the Player will interact]
 Suspicious Van is a closed container. It is openable.
 Suspicious Van is locked.
 Suspicious Van is in Smith Haven Mall Lot West.
@@ -601,28 +609,28 @@ instead of sniffing Wolverine Pimp:
 	say "The wolverine gives off an intimidating, bestial smell.";
 
 instead of trading the food when the current action involves the Wolverine Pimp:
-	if "Used" is listed in the traits of Zoe or player is not male or the Suspicious Van is open:
+	if "Used" is listed in the traits of Zoe or Player is not male or the Suspicious Van is open:
 		say "[wolverineTradeRefuse]";
 	else:
 		say "[wolverineTrade]";
 		decrease carried of food by 1;
 
 instead of trading the water bottle when the current action involves the Wolverine Pimp:
-	if "Used" is listed in the traits of Zoe or player is not male or the Suspicious Van is open:
+	if "Used" is listed in the traits of Zoe or Player is not male or the Suspicious Van is open:
 		say "[wolverineTradeRefuse]";
 	else:
 		say "[wolverineTrade]";
 		decrease carried of water bottle by 1;
 
 instead of trading the chips when the current action involves the Wolverine Pimp:
-	if "Used" is listed in the traits of Zoe or player is not male or the Suspicious Van is open:
+	if "Used" is listed in the traits of Zoe or Player is not male or the Suspicious Van is open:
 		say "[wolverineTradeRefuse]";
 	else:
 		say "[wolverineTrade]";
 		decrease carried of chips by 1;
 
 instead of trading the soda when the current action involves the Wolverine Pimp:
-	if "Used" is listed in the traits of Zoe or player is not male or the Suspicious Van is open:
+	if "Used" is listed in the traits of Zoe or Player is not male or the Suspicious Van is open:
 		say "[wolverineTradeRefuse]";
 	else:
 		say "[wolverineTrade]";
@@ -654,7 +662,7 @@ Instead of going southeast from Smith Haven Mall Lot West while Suspicious Van i
 		LineBreak;
 		say "'Your loss...' the wolverine says. He closes the door of the van and lets you go.";
 		now Suspicious Van is closed;
-		move player to Smith Haven Mall Lot South;
+		move Player to Smith Haven Mall Lot South;
 
 Instead of going northeast from Smith Haven Mall Lot West while Suspicious Van is open:
 	say "As you start to walk away from the vehicle, the guard stops you. 'Having second thoughts? No refunds, boy!'[line break]";
@@ -662,7 +670,7 @@ Instead of going northeast from Smith Haven Mall Lot West while Suspicious Van i
 		LineBreak;
 		say "'Your loss...' the wolverine says. He closes the door of the van and lets you go.";
 		now Suspicious Van is closed;
-		move player to Smith Haven Mall Lot North;
+		move Player to Smith Haven Mall Lot North;
 
 Section 3 - Quest Events
 
@@ -675,7 +683,7 @@ The sarea of Rabbit Tagger is "Nowhere".
 
 [Event trigger]
 instead of going to Smith Haven Mall Lot West while (a random chance of 1 in 3 succeeds and Rabbit Tagger is not resolved):
-	move player to Smith Haven Mall Lot West;
+	move Player to Smith Haven Mall Lot West;
 	ZoeTheTaggerRabbitEvents;
 	now Rabbit Tagger is resolved;
 
@@ -708,7 +716,7 @@ to ZoeTheTaggerRabbitEvents:
 			say "towards the western parking lot. 'You're going to make some community work for us, you little whore.'";
 			say "     'No, let me go! Someone, help!'";
 			say "     The sound of a loud slap interrupts the rabbit's shouting, just as the pair turns around the corner, leaving you alone.";
-		now Resolution of Rabbit Tagger is 1; [the player let Zoe get captured]
+		now Resolution of Rabbit Tagger is 1; [the Player let Zoe get captured]
 		now Zoe is in Suspicious Van;
 		move Wolverine Pimp to Smith Haven Mall Lot West;
 	else: [stop him]
@@ -719,7 +727,7 @@ to ZoeTheTaggerRabbitEvents:
 		say "     You take care to quickly get out of dodge too before the wolverine recovers, putting some of the wrecked cars and then the mall itself between the two of you so he can't get a good look at you. Best if he doesn't know whom to 'thank' for his situation. Once everything has quieted down, you prepare yourself to make your way back to the mall, when you hear a cough behind you. You turn around, and find Zoe staring at you, a smile on her face. 'Thanks a lot. I had the scare of my life.' You reply that she is welcome. 'What the hell happened to this place? Security guards have always been assholes, even before this mess, but he was going to... To force himself on me? Just like that?'";
 		say "     The white bunny seems to ponder something. 'Hey, would you know of a safe place? I have a small hideout already, but the place is rundown, and I would feel safer with someone else around.' You tell her about the library. 'A bunker? Wow. I guess I should have picked up reading and known about this place. I'll pick up my things and find a place. Maybe in that [bold type]rec room[roman type] I helped decorating, a couple of years ago. Don't worry, I won't take much space, [bold type]and I will usually be out during the day. If you see me around the night, feel free to visit. I may have things to share with you[roman type].'";
 		say "     You wish good luck to Zoe as she runs back into the city to make good on your offer.";
-		now Resolution of Rabbit Tagger is 2; [the player helped her escape]
+		now Resolution of Rabbit Tagger is 2; [the Player helped her escape]
 		now Loyalty of Zoe is 5;
 		move Zoe to Makeshift Rec Room;
 

@@ -206,14 +206,14 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Centaur"; [name of the overall species of the infection, used for children, ...]
-	add "Centaur" to infections of EquineList;
-	add "Centaur" to infections of FurryList;
-	add "Centaur" to infections of MythologicalList;
-	add "Centaur" to infections of MaleList;
-	add "Centaur" to infections of BluntCockList;
-	add "Centaur" to infections of SheathedCockList;
-	add "Centaur" to infections of TaurList;
-	add "Centaur" to infections of TailList;
+	add "Mutant Centaur" to infections of EquineList;
+	add "Mutant Centaur" to infections of FurryList;
+	add "Mutant Centaur" to infections of MythologicalList;
+	add "Mutant Centaur" to infections of MaleList;
+	add "Mutant Centaur" to infections of BluntCockList;
+	add "Mutant Centaur" to infections of SheathedCockList;
+	add "Mutant Centaur" to infections of TaurList;
+	add "Mutant Centaur" to infections of TailList;
 	now Name entry is "Mutant Centaur"; [Name of your new Monster]
 	now enemy title entry is "Mutant Centaur"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]

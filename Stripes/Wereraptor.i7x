@@ -107,7 +107,7 @@ Instead of resolving a Paleontology Professor:
 					challenge "Wereraptor";
 					raptorrelease;
 					if fightoutcome >= 10 and fightoutcome <= 19:
-						say "     Managing to drive off the raptor creature, you take a moment to survey the office. I has been destroyed by the clawed menace trapped inside. The furniture is largely destroyed, the walls and door covered in slashes and everything a mess. Among the wreckage, there's a shattered display case with a large bone lying among the shards. Speaking of the door though, you are confused as you examine it, seeing the nails barring it were driven in from the inside as if the creature sealed itself away. Your search of the office does provide one small reward as you find a bag of stale chips in one of the drawers.";
+						say "     Managing to drive off the raptor creature, you take a moment to survey the office. It has been destroyed by the clawed menace trapped inside. The furniture is largely destroyed, the walls and door covered in slashes and everything a mess. Among the wreckage, there's a shattered display case with a large bone lying among the shards. Speaking of the door though, you are confused as you examine it, seeing the nails barring it were driven in from the inside as if the creature sealed itself away. Your search of the office does provide one small reward as you find a bag of stale chips in one of the drawers.";
 						now UtahGender is 1;
 						increase score by 25;
 						increment carried of chips;
@@ -137,7 +137,7 @@ Instead of resolving a Paleontology Professor:
 					challenge "Wereraptor";
 					raptorrelease;
 					if fightoutcome >= 10 and fightoutcome <= 19:
-						say "     Managing to drive off the raptor creature, you take a moment to survey the office. I has been destroyed by the clawed menace trapped inside. The furniture is largely destroyed, the walls and door covered in slashes and everything a mess. Among the wreckage, there's a shattered display case with a large bone lying among the shards. Speaking of the door though, you are confused as you examine it, seeing the nails barring it were driven in from the inside as if the creature sealed itself away. Your search of the office does provide one small reward as you find a bag of stale chips in one of the drawers.";
+						say "     Managing to drive off the raptor creature, you take a moment to survey the office. It has been destroyed by the clawed menace trapped inside. The furniture is largely destroyed, the walls and door covered in slashes and everything a mess. Among the wreckage, there's a shattered display case with a large bone lying among the shards. Speaking of the door though, you are confused as you examine it, seeing the nails barring it were driven in from the inside as if the creature sealed itself away. Your search of the office does provide one small reward as you find a bag of stale chips in one of the drawers.";
 						now UtahGender is 2;
 						increase score by 25;
 						increment carried of chips;
@@ -342,6 +342,7 @@ When Play begins:
 	add "Wereraptor" to infections of SheathedCockList;
 	add "Wereraptor" to infections of BipedalList;
 	add "Wereraptor" to infections of TailList;
+	add "Wereraptor" to infections of OviImpregnatorList;
 	add "Wereraptor" to infections of TailweaponList;
 	now Name entry is "Wereraptor"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
@@ -606,10 +607,10 @@ this is the wereraptor curse rule:
 			if daytimer is night:
 				if wrcurseactivity is false:
 					now wrcurseactivity is true;
-					increase dexterity of Player by 2;
-					increase strength of Player by 2;
-					decrease charisma of Player by 2;
-					decrease intelligence of Player by 2;
+					StatChange "Dexterity" by 2;
+					StatChange "Strength" by 2;
+					StatChange "Charisma" by -2;
+					StatChange "Intelligence" by -2;
 					say "     The power of your saurian transformation rushes through you again, growing back to full strength with the coming of the night. You feel a rush of hunger and arousal surging through your system as the lust to feed and fuck fills you again";
 					wrcurserestore;
 					say ".";
@@ -620,10 +621,10 @@ this is the wereraptor curse rule:
 			else:
 				if wrcurseactivity is true:
 					now wrcurseactivity is false;
-					decrease dexterity of Player by 2;
-					decrease strength of Player by 2;
-					increase charisma of Player by 2;
-					increase intelligence of Player by 2;
+					StatChange "Dexterity" by 2;
+					StatChange "Strength" by 2;
+					StatChange "Charisma" by -2;
+					StatChange "Intelligence" by -2;
 					say "     With the coming of the day, your saurian body spasms and twitches. The feral strength of your wereraptor form recedes for now as your features soften and you take on a form more akin to a reptilian humanoid, hiding your wilder true nature for the moment.";
 
 
@@ -648,10 +649,10 @@ to wrcursesave:
 		say ".";
 		[must be kept here to ensure proper saving]
 		say "     With the changes comes a surge of power to your body, increasing your strength and agility. But you can feel your mind being weakened as well, your instinctual urges pushing back more rational thought and behavior. You are filled with hunger from your body's transformation and your wereraptor's body desire to feed. Along with the hunger for food comes a hunger for sex, your lustful urges growing stronger as well.";
-		increase dexterity of Player by 2;
-		increase strength of Player by 2;
-		decrease charisma of Player by 2;
-		decrease intelligence of Player by 2;
+		StatChange "Dexterity" by 2;
+		StatChange "Strength" by 2;
+		StatChange "Charisma" by -2;
+		StatChange "Intelligence" by -2;
 	else if BodyName of Player is not "Wereraptor" or player is not pure:
 		say "     The power of your cursed transformation rushes through you again, pushing to restore your reptilian form. You feel a rush of hunger and arousal surging through your system as the lust to feed and fuck fills you again";
 		wrcurserestore;
@@ -757,11 +758,10 @@ to wrcurserecede:
 	if CockName of Player is "Wereraptor":
 		now CockName of Player is wrCockName;
 		now Cock of Player is wrcock;
-	decrease dexterity of Player by 2;
-	decrease strength of Player by 2;
-	increase charisma of Player by 2;
-	increase intelligence of Player by 2;
-
+	StatChange "Dexterity" by -2;
+	StatChange "Strength" by -2;
+	StatChange "Charisma" by 2;
+	StatChange "Intelligence" by 2;
 
 to wrcurserampage:
 	if there is a dangerous door in the location of the player or the location of Player is fasttravel:
@@ -978,7 +978,7 @@ to say wrcureattempt:
 		WaitLineBreak;
 		say "     You stagger to your feet, feeling very weak and worn from your blood loss, but also as if a great burden has been lifted from you. You watch as the last of your blood bubbles on the fossilized bones and disappears. You're uncertain if it boiled away or was absorbed into the dry bones, but it is gone. In short order, the slashes on your shoulders fade away, healed and gone as if they were never there. Having beaten its power, you know you cannot be tainted by it again.";
 		say "     Not wanting to linger here any longer, you prepare to leave only to notice that the silver knife is missing. You suspect it's somehow already found its way back to Nermine.";
-		if weapon object of Player is silver knife, now weapon object of Player is journal;
+		if weapon object of Player is silver knife, unwield silver knife silently;
 		now carried of silver knife is 0;
 		if humanity of Player < 100:
 			SanBoost 1;
@@ -996,12 +996,12 @@ to say wrcureattempt:
 		else:
 			say "     The wereraptor growls victoriously and grabs the potion with visible trepidation before racing headlong to the balcony overlooking the lower floors. With a hissing laugh, he tosses the vial down as you scream. There is a distance crash as your precious cure is destroyed. Dr. Utah clacks back across the tiled floor and runs his taloned hand across your body. 'Soon you will come to accept your proper nature and forsake your foolish reluctance. It is time for the saurians to rise again, new and stronger.' He leans in closer and runs his tongue along your face. 'I look forward to hunting with you,' he adds with a grope between your legs before turning and leaving.";
 		say "     Once you've recovered enough to stand, you prepare yourself to leave. You glance around and realize that your silver knife is gone. You suspect it's somehow already found its way back to Nermine. With your cure gone and your payment made, you get the feeling that you're on your own now.";
-		if weapon object of Player is silver knife, now weapon object of Player is journal;
+		if weapon object of Player is silver knife, unwield silver knife silently;
 		now carried of silver knife is 0;
 		now wrcurseNermine is 10;
 	else:
 		say "     As you turn and run, the speedy wereraptor makes a final charge and swipes her claws at you. This knocks the potion from your hand, sending it tumbling to the ground and breaking. With its scent in the air, your revulsion kicks in and you move quickly to get away, the transformed professor fleeing as well. When you stop and try to catch your breath now that you're far from the smell of it, you realize that your silver knife is missing as well. You suspect it's somehow already found its way back to Nermine. With your cure gone and your payment made, you get the feeling that you're on your own now.";
-		if weapon object of Player is silver knife, now weapon object of Player is journal;
+		if weapon object of Player is silver knife, unwield silver knife silently;
 		now carried of silver knife is 0;
 		now wrcurseNermine is 10;
 

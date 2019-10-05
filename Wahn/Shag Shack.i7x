@@ -21,6 +21,41 @@ object	name
 Jerome	"Jerome"
 
 Jerome is a man.
+ScaleValue of Jerome is 3. [human sized]
+Body Weight of Jerome is 7. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Jerome is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Jerome is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Jerome is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Jerome is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Jerome is 6. [length in inches]
+Breast Size of Jerome is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Jerome is 2. [count of nipples]
+Asshole Depth of Jerome is 10. [inches deep for anal fucking]
+Asshole Tightness of Jerome is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Jerome is 1. [number of cocks]
+Cock Girth of Jerome is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Jerome is 9. [length in inches]
+Ball Count of Jerome is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Jerome is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Jerome is 0. [number of cunts]
+Cunt Depth of Jerome is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Jerome is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Jerome is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Jerome is false.
+PlayerRomanced of Jerome is false.
+PlayerFriended of Jerome is false.
+PlayerControlled of Jerome is false.
+PlayerFucked of Jerome is false.
+OralVirgin of Jerome is false.
+Virgin of Jerome is true.
+AnalVirgin of Jerome is false.
+PenileVirgin of Jerome is false.
+SexuallyExperienced of Jerome is true.
+TwistedCapacity of Jerome is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Jerome is true. [steriles can't knock people up]
+MainInfection of Jerome is "".
 The description of Jerome is "[JeromeDesc]".
 The conversation of Jerome is { "Pay up!" }.
 Jerome is in Shag Shack Entrance.
@@ -215,7 +250,7 @@ to say ShagShackWhoringPayment:
 		let randomnumber be a random number from 1 to 4;
 		if randomnumber is:
 			-- 1:
-				say "[one of]two bottles of clean water that actually look in good shape, and two cans of peaches[or]two cans of canned meat that appear to be in an ok state and two water bottles that look clear enough to reflect light without problem[at random].";
+				say "[one of]two bottles of clean water that actually look in good shape, and two cans of peaches[or]two cans of canned meat that appear to be in an OK state and two water bottles that look clear enough to reflect light without problem[at random].";
 				say "[bold type]You gain 2 food and 2 water bottles![roman type][line break]";
 				increase carried of food by 2;
 				increase carried of water bottle by 2;
@@ -231,6 +266,7 @@ to say ShagShackWhoringPayment:
 				say "a small container with some pills, from what you know this will raise the Libido of anyone who takes it.";
 				say "[bold type]You gain 1 libido pill![roman type][line break]";
 				increase carried of libido pill by 1;
+	follow the turnpass rule;
 
 the fuckscene of Jerome is "     As you make an amorous offer to the shark, Jerome laughs and shakes his head. 'Much as I'd love to, I'm busy with business. Can I interest you in having a go with my 'talent' in there instead?'".
 
@@ -706,7 +742,7 @@ to say ShagShackSex9: [Bryce the wolftaur]
 	say "     Your arousal begins to peak, and you decide that your hands shouldn't be away from Bryce's glorious shaft any longer. You touch it gently, feeling the heat of his member, then begin to wrap your fingers around it. To your simultaneous dismay and delight, its girth is too great for you to grasp with a single hand. You simply cover as much of it as you can with your hands, before beginning to rub up and down the length, feeling the size between your palms, and feeling the shaft twitch and bob in response to your actions.";
 	say "     You move one of your hands further down the wolftaur's member, until you reach the large ball-sack below it. Beginning to speed up your motions, doing as much as you can with the one hand remaining on his canine dick, you fondle his balls with the other, enjoying the full feeling between your fingers. 'I'm sure you have more you want to do down there, from how interested you were. Go ahead, suck my dick,' you faintly hear Bryce speak from above you. It doesn't take any more encouragement than that.";
 	WaitLineBreak;
-	say "     You move your head further under his tauric body, until his massive cock hangs close, the tip only the slightest distance from your face. Finally your mouth joins your hands in worshipping the canine member, the tip filling your mouth while you work the rest of the shaft and balls manually. You close your eyes and focus further, working your stretched lips further down the dick, the feeling in your mouth getting fuller even as your progress slows. Not long after that you come to your limit, the cock halfway down your throat, and you are unable to fit anymore of the shaft in as your nose bumps against his bulging knot.";
+	say "     You move your head further under his tauric body, until his massive cock hangs close, the tip only the slightest distance from your face. Finally your mouth joins your hands in worshiping the canine member, the tip filling your mouth while you work the rest of the shaft and balls manually. You close your eyes and focus further, working your stretched lips further down the dick, the feeling in your mouth getting fuller even as your progress slows. Not long after that you come to your limit, the cock halfway down your throat, and you are unable to fit anymore of the shaft in as your nose bumps against his bulging knot.";
 	say "     Determined to see this through, however, you begin to bob up and down fervently on as much of the shaft as you can fit into your mouth, still avidly supporting yourself with your hands, alternating each one between rubbing the knot and feeling up his heavy orbs. Soon you begin to feel his canine dick throbbing more and more, and a motion in his balls to match. Bracing for the peak you can see coming, you shove your face down his cock as far as you can go again, your lips meeting the knot. Not a moment later you feel his balls contract, as pulses of hot canine cum shoot down your throat repeatedly, the heady scent of his arousal and release filling your nose just as Bryce's sticky load fills your stomach.";
 	WaitLineBreak;
 	say "     When his orgasm ends, you pull back off of his canine cock, giving the tip one last parting lick, before climbing back up to your feet. Bryce looks at you, seemingly very pleased with your performance. 'You did very well at that, better than I've seen in a good while. Feel free to come back any time you're in the shack.' You find yourself smiling as you walk back out, the satisfying feeling of the load you swallowed the sole reminder of your enjoyable encounter.";
@@ -794,7 +830,7 @@ to say ShagShackSex12: [Ryan, by Mizu]
 		say "     His pussy squeezes around your cock, massaging it, stroking it. A rush of his fluids runs out over your balls, and he lets out a long, animalistic moan, muffled by your body. Just as passionately, you buck up into his folds, all of the sensations proving to be too much for you. A heavy, bestial groan exits your lips as you cum inside of your lover, your balls tightening and your cock pulsing. Rope after rope fills up Ryan's womb. Your seed bursts from his cunny, joining the drying pool on the mattress below.";
 		say "     Gradually, the lightning leaves your body, and you come to, cradling the exhausted vulpine in your arms. You're both breathing hard, and carefully, you move your arms to be more secure around Ryan's body. You cuddle him close and stroke across his fur softly. A faint mumble catches your attention, and you tilt your head, leaning closer to hear. 'Thank you... sir...' he murmurs again, almost too quiet to hear. You tell him that you're always happy to help and give the side of his head a small kiss. It isn't long before you realize that he's fallen asleep, and, being rather exhausted from the lovemaking yourself, you decide to join him.";
 		WaitLineBreak;
-		say "     When you wake, Ryan already has his eyes open. Smiling down at you kindly, he gives you a brief kiss to your lips, which deepens after a moment. He does pull away, though, and nuzzles at your cheek. 'I know you have places to be, sir,' he says, softly. 'You should go. But promise me that you'll come back soon, ok?' As you sit up, the fox still on your lap, you nod. Beaming at you, Ryan nonetheless squeaks as you lift him up, setting him down on the bed. With another kiss to his nose, you stand, retrieve your pants, and wave as you head out towards the door.";
+		say "     When you wake, Ryan already has his eyes open. Smiling down at you kindly, he gives you a brief kiss to your lips, which deepens after a moment. He does pull away, though, and nuzzles at your cheek. 'I know you have places to be, sir,' he says, softly. 'You should go. But promise me that you'll come back soon, OK?' As you sit up, the fox still on your lap, you nod. Beaming at you, Ryan nonetheless squeaks as you lift him up, setting him down on the bed. With another kiss to his nose, you stand, retrieve your pants, and wave as you head out towards the door.";
 	if RyanFucked < 5:
 		increase RyanFucked by 1;
 
@@ -1216,7 +1252,7 @@ to say ShagShackSex22: [by Hierophant]
 			say "     Her magic ignites your libido again, your cock growing painfully stiff in record time as she plays. There's no nervousness in the Muse's playing. She's truly adjusted to this work. You feel a pressure on your lap and the texture of feathers, her magic giving the impression of the bird straddling you even as she sits across from you. There's still no hesitation to her magic, that sensation of being ridden overwhelming you as you begin roughly mating with the bird magically. You've fully adjusted to the oddity of this supernatural coupling, treating it like you would any other sexual encounter as you slake your lusts.";
 			say "     Her playing begins to reach a crescendo with time, both of you approaching your very peaks. It feels just as good as last time as you reach the edge, anticipating the powerful climax you know is coming. And soon enough, the both of you share cries of pleasure as you climax into her yet again. You both come down from the bliss of release, Cassandra visibly dazed by the intensity of her orgasm. She breathes heavily, breasts heaving as she lies back on the mattress and tries to recover. 'Hhhfff... amazing. Thanks for that. Can't wait to do it again!' she adds, as you dress yourself and head out.";
 		else if Player is female:
-			say "     You're not even remotely surprised as your cunt goes moist in an instant, well used to the Muse's odd effect on your biology. Instead, you relax yourself, getting ready for whatever she has in store... and then a spectral apparition of a dog's penis appears, bright-red and already drooling precum. 'I'm good at dog dicks, apparently,' Cassandra says, as the pointed tip begins probing at your entrance... then shoves half of itself in at once. The sensation of being fucked right off the bat by an animal's cock is intense, your legs instinctually trying to squeeze around a lover's hips but finding no purchase as it plunges in and out of your folds. With all the intensity of being roughly mounted by a real canine, you moan loudly, enjoying the animalistic coupling provided by the bird's magic.";
+			say "     You're not even remotely surprised as your cunt goes moist in an instant, well used to the Muse's odd effect on your biology. Instead, you relax yourself, getting ready for whatever she has in store... and then a spectral apparition of a dog's penis appears, bright-red and already drooling precum. 'I'm good at dog dicks, apparently,' Cassandra says, as the pointed tip begins probing at your entrance... then shoves half of itself in at once. The sensation of being fucked right off the bat by an animal's cock is intense, your legs instinctively trying to squeeze around a lover's hips but finding no purchase as it plunges in and out of your folds. With all the intensity of being roughly mounted by a real canine, you moan loudly, enjoying the animalistic coupling provided by the bird's magic.";
 			say "     You're not entirely sure how long the fucking goes on for, as you close your eyes and imagine a particularly handsome [one of]great dane[or]German Shepherd[or]dalmatian[or]husky[or]malamute[or]borzoi[at random] attached to the cock plowing you, but eventually, you feel a knot begin to bump against your lips. The thrusts get more intense... and then it pushes in to the hilt, the knot locking inside you, and the cock giving a rough throb before hot semen gushes into your folds. You're not entirely sure where it's all coming from, but you can hardly complain as the sensation of getting filled drives you hard over the edge.";
 			say "     Cassandra ends the song as your climax ends, the cock inside of you... and its seed... disappearing into thin air entirely. Cassandra gives a cheeky, little bow, grinning at you. 'Thank you, thank you, I'm here all week,' she states. For a moment, you just lie there, enjoying the afterglow of your supernatural mating, while Cassandra idly plays out the bassline to a song you remember hearing on the radio once or twice. Seems even Muses appreciate pop, sometimes. 'Glad that you had a good time, sweetie. I'll see you soon, huh?' she asks, as you finally stand, dressing yourself and shakily leaving the room.";
 		else:

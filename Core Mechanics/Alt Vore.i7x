@@ -19,11 +19,11 @@ ubpreg is a text that varies. ubpreg is usually "false".
 
 VoreExclusion is a marker.	[list of infections to not be vored]
 when play begins:
-	add { "Smooth Collie Shemale", "Raccoon", "Doberman Bitch", "Nightmare", "Sphinx", "Hyena matriarch", "Blob", "Skunkbeast Lord", "Blue Chaffinch", "Peacock", "Hippo", "Albino Mouse", "Malayan Tiger Male", "Sea Lion and Orca Toys", "Siamese Cat", "Anthro Goat", "Brown Bear Female", "Gator Herm", "Dragon", "Feral Cheetah", "Badger", "Opossum Herm", "Latex Vixen Herm", "Wrestling Wolf", "Blacktail Stag", "Football Wolfman", "Reindeer", "Triceratops", "Butterfly", "German Shepherd Male", "Magic Drake", "Monkey", "Lamia", "Jackal Guard", "Mental Mouse", "Mushroom Men", "Parasitic Plant", "Sugar Ferret", "Anthro Rabbit", "City Sprite", "Koballoon", "Sea Otter", "Yamato Dragon", "Yamato Dragoness", "Giant", "Feral Sea Dragon", "Feral Sea Dragoness", "Wyvern", "Pod Person", "Tentacle Horror", "Sierrasaur", "Mammoth", "Hydra Beast", "Xeno Drone", "Peculiar Dragon", "Sea Horror", "Cum Girl", "Flesh Blob", "Jaguar Warrior", "Gypsy Horse Transman", "Plains Lizard Male", "Thought Eater", "Viking Woman", "Megakitty", "Royal Tiger" } to infections of VoreExclusion;
+	add { "Smooth Collie Shemale", "Raccoon", "Doberman Bitch", "Nightmare", "Sphinx", "Hyena matriarch", "Blob", "Skunkbeast Lord", "Blue Chaffinch", "Peacock", "Hippo", "Albino Mouse", "Malayan Tiger Male", "Sea Lion and Orca Toys", "Siamese Cat", "Anthro Goat", "Brown Bear Female", "Gator Herm", "Dragon", "Feral Cheetah", "Badger", "Opossum Herm", "Latex Vixen Herm", "Wrestling Wolf", "Blacktail Stag", "Football Wolfman", "Reindeer", "Triceratops", "Butterfly", "German Shepherd Male", "Magic Drake", "Monkey", "Lamia", "Jackal Guard", "Mental Mouse", "Mushroom Men", "Parasitic Plant", "Sugar Ferret", "Anthro Rabbit", "City Sprite", "Koballoon", "Sea Otter", "Yamato Dragon", "Yamato Dragoness", "Giant", "Feral Sea Dragon", "Feral Sea Dragoness", "Wyvern", "Pod Person", "Tentacle Horror", "Sierrasaur", "Mammoth", "Hydra Beast", "Xeno Drone", "Peculiar Dragon", "Sea Horror", "Cum Girl", "Flesh Blob", "Jaguar Warrior", "Gypsy Horse Transman", "Plains Lizard Male", "Thought Eater", "Viking Woman", "Megakitty", "Royal Tiger", "Slime Cube" } to infections of VoreExclusion;
 
 HardVoreExclusion is a marker. [list of infections to not be hard vored - similar to above list, but also includes non-flesh monsters]
 when play begins:
-	add { "Smooth Collie Shemale", "Raccoon", "Doberman Bitch", "Nightmare", "Sphinx", "Hyena matriarch", "Blob", "Skunkbeast Lord", "Blue Chaffinch", "Peacock", "Hippo", "Albino Mouse", "Malayan Tiger Male", "Sea Lion and Orca Toys", "Siamese Cat", "Anthro Goat", "Brown Bear Female", "Gator Herm", "Dragon", "Feral Cheetah", "Badger", "Opossum Herm", "Latex Vixen Herm", "Wrestling Wolf", "Blacktail Stag", "Football Wolfman", "Reindeer", "Triceratops", "Butterfly", "German Shepherd Male", "Magic Drake", "Monkey", "Lamia", "Jackal Guard", "Mental Mouse", "Mushroom Men", "Parasitic Plant", "Yamato Dragon", "Yamato Dragoness", "Giant", "Feral Sea Dragon", "Feral Sea Dragoness", "Wyvern", "Pod Person", "Tentacle Horror", "Sierrasaur", "Mammoth", "Hydra Beast", "Xeno Drone", "Peculiar Dragon", "Sea Horror", "Cum Girl", "Flesh Blob", "Jaguar Warrior", "Gypsy Horse Transman", "Plains Lizard Male", "Thought Eater", "Viking Woman", "Megakitty", "Royal Tiger", "Sugar Ferret", "Anthro Rabbit", "Koballoon", "City Sprite", "Sea Otter", "Black Wasp", "Cock Cannon", "Clockwork Fox", "Automaton", "Blue Gel", "Bottlenose Toy", "Chocolate Lab", "Goo Girl", "Latex Fox", "Latex Ermine", "Latex Wolf", "Werewolf Costume", "Naiad", "Pink Gel", "Purple Gel", "Rubber Tigress", "Sand Man", "Teddy Bear", "Plush Lion" } to infections of HardVoreExclusion;
+	add { "Smooth Collie Shemale", "Raccoon", "Doberman Bitch", "Nightmare", "Sphinx", "Hyena matriarch", "Blob", "Skunkbeast Lord", "Blue Chaffinch", "Peacock", "Hippo", "Albino Mouse", "Malayan Tiger Male", "Sea Lion and Orca Toys", "Siamese Cat", "Anthro Goat", "Brown Bear Female", "Gator Herm", "Dragon", "Feral Cheetah", "Badger", "Opossum Herm", "Latex Vixen Herm", "Wrestling Wolf", "Blacktail Stag", "Football Wolfman", "Reindeer", "Triceratops", "Butterfly", "German Shepherd Male", "Magic Drake", "Monkey", "Lamia", "Jackal Guard", "Mental Mouse", "Mushroom Men", "Parasitic Plant", "Yamato Dragon", "Yamato Dragoness", "Giant", "Feral Sea Dragon", "Feral Sea Dragoness", "Wyvern", "Pod Person", "Tentacle Horror", "Sierrasaur", "Mammoth", "Hydra Beast", "Xeno Drone", "Peculiar Dragon", "Sea Horror", "Cum Girl", "Flesh Blob", "Jaguar Warrior", "Gypsy Horse Transman", "Plains Lizard Male", "Thought Eater", "Viking Woman", "Megakitty", "Royal Tiger", "Sugar Ferret", "Anthro Rabbit", "Koballoon", "City Sprite", "Sea Otter", "Black Wasp", "Cock Cannon", "Clockwork Fox", "Automaton", "Blue Gel", "Bottlenose Toy", "Chocolate Lab", "Goo Girl", "Latex Fox", "Latex Ermine", "Latex Wolf", "Werewolf Costume", "Naiad", "Pink Gel", "Purple Gel", "Rubber Tigress", "Sand Man", "Teddy Bear", "Plush Lion", "Slime Cube" } to infections of HardVoreExclusion;
 
 Section 1 - Event
 
@@ -134,28 +134,27 @@ to vorebyplayer:
 		if vv is 1:
 			if strength of Player < str entry and str entry >= ( 12 + level of Player ):
 				say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your muscles swelling with [Name entry] [one of]strength[or]physique[or]power[at random].";
-				increase strength of Player by 1;
-				increase capacity of Player by 5;
+				StatChange "Strength" by 1;
 		if vv is 2:
 			if Intelligence of Player < int entry and int entry >= ( 12 + level of Player ):
 				say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your mind swelling with [Name entry] [one of]intelligence[or]wit[or]complexity[at random].";
-				increase intelligence of Player by 1;
+				StatChange "Intelligence" by 1;
 		if vv is 3:
 			if dexterity of Player < dex entry and dex entry >= ( 12 + level of Player ):
 				say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your hand-eye coordination improving with [Name entry] [one of]dexterity[or]physique[or]accuracy[at random].";
-				increase dexterity of Player by 1;
+				StatChange "Dexterity" by 1;
 		if vv is 4:
 			if stamina of Player < sta entry and sta entry >= ( 12 + level of Player ):
 				say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your body toughening with [Name entry] [one of]stamina[or]physique[or]power[at random].";
-				increase stamina of Player by 1;
+				StatChange "Stamina" by 1;
 		if vv is 5:
 			if perception of Player < per entry and per entry >= ( 12 + level of Player ):
 				say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your senses being heightened with [Name entry] [one of]perception[or]aptitude[or]feral attention[at random].";
-				increase perception of Player by 1;
+				StatChange "Perception" by 1;
 		if vv is 6:
 			if charisma of Player < cha entry and cha entry >= ( 12 + level of Player ):
 				say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your social sense improving with [Name entry] [one of]charisma[or]natural charm[or]pheromones[at random].";
-				increase charisma of Player by 1;
+				StatChange "Charisma" by 1;
 	if "Safe Appetite" is not listed in feats of Player:
 		say "     Indulging in this monstrous act has further weakened your grip on your own humanity even as you feel the nanites from your prey flooding your system as your belly quickly seeks to consume them. Your hunger, satisfied for now, is decreased dramatically.";
 		now researchbypass is 1;
@@ -536,8 +535,12 @@ Chapter 5 - UB by Player
 
 to ubbyplayer:
 	choose row MonsterID from the Table of Random Critters;
+	if ovipreglevel is 3 or (ovipreglevel is 2 and "Player" is an OviImpregnator):
+		now ovipregnant is true;
+	else:
+		now ovipregnant is false;
 	say "[ubbyplayer00]"; [Master ub scene]
-	say "     Indulging in this perversely twisted act has further weakened your grip on your own humanity even as you feel the nanites from your prey flooding your system [if ovipreglevel is 3]even as they are being encased in a protective shell[else]as they bond to your imprisoning womb via a rapidly forming placenta[end if]. With the [Name entry] taking root as your next child, you sigh in satisfaction, your maternal demands satisfied for now. The huge bulge of your belly goes down gradually as they regress somewhat in size, allowing you to eventually get up and continue on your way.";
+	say "     Indulging in this perversely twisted act has further weakened your grip on your own humanity even as you feel the nanites from your prey flooding your system [if ovipregnant is true]even as they are being encased in a protective shell[else]as they bond to your imprisoning womb via a rapidly forming placenta[end if]. With the [Name entry] taking root as your next child, you sigh in satisfaction, your maternal demands satisfied for now. The huge bulge of your belly goes down gradually as they regress somewhat in size, allowing you to eventually get up and continue on your way.";
 	decrease humanity of Player by 3;
 	now gestation of Child is a random number between 8 and 16;
 	now ubpreg is Name entry;
@@ -548,29 +551,7 @@ to ubbyplayer:
 		now researchbypass is 0;
 	increase ubcount by 1;
 	[All Child parts are the unbirthed creature - might be overwritten by the player having "They have your Eyes" during birth]
-	now HeadName of Child is Name entry;
-	now TorsoName of Child is Name entry;
-	now BackName of Child is Name entry;
-	now ArmsName of Child is Name entry;
-	now LegsName of Child is Name entry;
-	now AssName of Child is Name entry;
-	now TailName of Child is Name entry;
-	if Species Name entry is not "":
-		now HeadSpeciesName of Child is Species Name entry;
-		now TorsoSpeciesName of Child is Species Name entry;
-		now BackSpeciesName of Child is Species Name entry;
-		now ArmsSpeciesName of Child is Species Name entry;
-		now LegsSpeciesName of Child is Species Name entry;
-		now AssSpeciesName of Child is Species Name entry;
-		now TailSpeciesName of Child is Species Name entry;
-	else:
-		now HeadName of Child is Name entry;
-		now TorsoName of Child is Name entry;
-		now BackName of Child is Name entry;
-		now ArmsName of Child is Name entry;
-		now LegsName of Child is Name entry;
-		now AssName of Child is Name entry;
-		now TailName of Child is Name entry;
+	SetInfectionsOf Child to Name entry;
 
 Chapter 6 - UB Scenes
 

@@ -149,7 +149,7 @@ to say DukeShawnFirstTimeSex:
 		LineBreak;
 		say "     Silently moving back a bit from the two men, you turn to leave, but are stopped from actually walking away by quite a few sheep encircling the scene now. One of them gives you a meaning-laden 'Meeeh', then returns its attention to Duke and Shawn. Observed by a growing flock of spectators, still oblivious to anything except each other, the dissimilar partners eventually reach a breathtaking and quite noisy orgasm. There is a shout of 'I'm coming!' by Shawn, right at the same time as Duke gasps in lust himself.";
 	WaitLineBreak;
-	say "     As they come down from their respective climaxes, lying in the grass and holding one another, Shawn finally looks up and sees all the sheep standing in a circle around them. 'Did you like the show, guys and gals? Sadly, it's over for now... and I'm not letting go of this doggie until we're done cuddling. Just go back to the group-hug and get some sleep, ok?' Almost seems like the gathered sheep understood what he said, as they give a chorus of 'Meeh', then trot back over to where the rest of their herd are. The crowd around you now having vanished, you're left standing alone before the exhausted ram and German shepherd.";
+	say "     As they come down from their respective climaxes, lying in the grass and holding one another, Shawn finally looks up and sees all the sheep standing in a circle around them. 'Did you like the show, guys and gals? Sadly, it's over for now... and I'm not letting go of this doggie until we're done cuddling. Just go back to the group-hug and get some sleep, OK?' Almost seems like the gathered sheep understood what he said, as they give a chorus of 'Meeh', then trot back over to where the rest of their herd are. The crowd around you now having vanished, you're left standing alone before the exhausted ram and German shepherd.";
 	say "     Seeing you there, Duke says 'Oh, err - sorry for just leaving you to wait while we... got distracted'. He continues to tell Shawn all about your part in getting him transformed, both of them thanking you effusively afterwards.";
 	now lastfuck of Duke is turns;
 	move Shawn to Sheep Meadow SE;
@@ -191,7 +191,7 @@ to say DukeShawnSheepScene:
 
 instead of fucking the Duke:
 	if daytimer is day: [he doesn't talk to the player during the day]
-		say "     Duke says [one of]'I take my duty protect the herd seriously, not now'[or]'I have to stay vigilant so the herd is safe, please don't distract me'[or]'I don't have time to chat now, sorry'[or]'Look for me this evening if you want to talk, ok?'[at random], not even taking his eyes off the sheep and ignoring any attempt to start a conversation.";
+		say "     Duke says [one of]'I take my duty protect the herd seriously, not now'[or]'I have to stay vigilant so the herd is safe, please don't distract me'[or]'I don't have time to chat now, sorry'[or]'Look for me this evening if you want to talk, OK?'[at random], not even taking his eyes off the sheep and ignoring any attempt to start a conversation.";
 	else:
 		if HP of Duke < 10:
 			say "     As you make Duke your offer of some nice time together, he looks over to you and shakes his head. 'I'm flattered, but... no. I hardly know you, after all...'";

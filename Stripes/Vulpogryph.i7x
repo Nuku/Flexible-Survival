@@ -35,13 +35,17 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	add "Vulpogryph" to infections of AvianList;
+	add "Vulpogryph" to infections of VulpineList;
 	add "Vulpogryph" to infections of HybridList;
 	add "Vulpogryph" to infections of FurryList;
 	add "Vulpogryph" to infections of BluntCockList;
 	add "Vulpogryph" to infections of KnottedCockList;
 	add "Vulpogryph" to infections of SheathedCockList;
 	add "Vulpogryph" to infections of BipedalList;
+	add "Vulpogryph" to infections of FlightList;
 	add "Vulpogryph" to infections of TailList;
+	add "Vulpogryph" to infections of OviImpregnatorList;
 	now Name entry is "Vulpogryph"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]

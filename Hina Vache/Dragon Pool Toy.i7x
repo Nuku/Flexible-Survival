@@ -79,6 +79,7 @@ When Play begins:
 	add "Dragon Pool Toy" to infections of InternalCockList;
 	add "Dragon Pool Toy" to infections of BipedalList;
 	add "Dragon Pool Toy" to infections of TailList;
+	add "Dragon Pool Toy" to infections of OviImpregnatorList;
 	add "Dragon Pool Toy" to infections of TailweaponList;
 	now Name entry is "Dragon Pool Toy";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]

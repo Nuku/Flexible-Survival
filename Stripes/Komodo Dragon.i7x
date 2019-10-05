@@ -84,15 +84,16 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
-	add "GGG" to infections of ReptileList;
-	add "GGG" to infections of FurryList;
-	add "GGG" to infections of NatureList;
-	add "GGG" to infections of MaleList;
-	add "GGG" to infections of TaperedCockList;
-	add "GGG" to infections of InternalCockList;
-	add "GGG" to infections of QuadrupedalList;
-	add "GGG" to infections of TailList;
-	add "GGG" to infections of TailweaponList;
+	add "Komodo Dragon" to infections of ReptileList;
+	add "Komodo Dragon" to infections of FurryList;
+	add "Komodo Dragon" to infections of NatureList;
+	add "Komodo Dragon" to infections of MaleList;
+	add "Komodo Dragon" to infections of TaperedCockList;
+	add "Komodo Dragon" to infections of InternalCockList;
+	add "Komodo Dragon" to infections of QuadrupedalList;
+	add "Komodo Dragon" to infections of TailList;
+	add "Komodo Dragon" to infections of OviImpregnatorList;
+	add "Komodo Dragon" to infections of TailweaponList;
 	now Name entry is "Komodo Dragon"; [Name of your new Monster]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]

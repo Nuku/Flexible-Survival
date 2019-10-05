@@ -199,6 +199,7 @@ When Play begins:
 	now Species Name entry is "Feral Wolf"; [name of the overall species of the infection, used for children, ...]
 	add "Feral Wolf" to infections of CanineList;
 	add "Feral Wolf" to infections of FurryList;
+	add "Feral Wolf" to infections of FeralList;
 	add "Feral Wolf" to infections of NatureList;
 	add "Feral Wolf" to infections of MaleList;
 	add "Feral Wolf" to infections of TaperedCockList;

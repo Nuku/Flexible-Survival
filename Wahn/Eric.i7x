@@ -136,6 +136,14 @@ ConfSvenEricInteraction is a number that varies.
 lastConfSvenEricInteraction is a number that varies.
 lastRaneEricInteraction is a number that varies.
 
+LockerroomRoomConnection is a number that varies.[@Tag:NotSaved]
+
+an everyturn rule: [bugfixing rules for players that import savegames]
+	if Barricaded Lockerroom is resolved and Resolution of Barricaded Lockerroom is 1 and LockerroomRoomConnection is 0: [event resolved the right way, room not connected yet]
+		change southeast exit of Athletic Street to Sports Arena Lockerroom;
+		change northwest exit of Sports Arena Lockerroom to Athletic Street;
+		now LockerroomRoomConnection is 1; [make sure that it connects the room only once]
+
 Section 1 - Meeting Event
 
 Table of GameEventIDs (continued)
@@ -217,7 +225,43 @@ Table of GameCharacterIDs (continued)
 object	name
 Eric	"Eric"
 
-Eric is a man. Eric is in Sports Arena Lockerroom. The HP of Eric is usually 0.
+Eric is a man.
+Eric is in Sports Arena Lockerroom.
+ScaleValue of Eric is 3. [human sized]
+Body Weight of Eric is 2. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Eric is 7. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Eric is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Eric is 4. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Eric is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Eric is 4. [length in inches]
+Breast Size of Eric is 2. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Eric is 2. [count of nipples]
+Asshole Depth of Eric is 8. [inches deep for anal fucking]
+Asshole Tightness of Eric is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Eric is 0. [number of cocks]
+Cock Girth of Eric is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Eric is 0. [length in inches]
+Ball Count of Eric is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Eric is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Eric is 1. [number of cunts]
+Cunt Depth of Eric is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Eric is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Eric is 3. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Eric is false.
+PlayerRomanced of Eric is false.
+PlayerFriended of Eric is false.
+PlayerControlled of Eric is false.
+PlayerFucked of Eric is false.
+OralVirgin of Eric is false.
+Virgin of Eric is true.
+AnalVirgin of Eric is true.
+PenileVirgin of Eric is false.
+SexuallyExperienced of Eric is true.
+TwistedCapacity of Eric is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Eric is false. [steriles can't knock people up]
+MainInfection of Eric is "Human".
 The description of Eric is "[EricDesc]".
 The conversation of Eric is { "Mew!" }.
 EricFleeingCountdown is a number that varies.
@@ -1630,7 +1674,7 @@ to say EricSex12_22_32_Male: [horse-hung Eric, male/herm player]
 		LineBreak;
 		say "     Do you want him to fuck your ass while you do David ([link]Y[as]y[end link]), or would you rather see the two of them 69 ([link]N[as]n[end link])?";
 		if Player consents: [Eric fucks player, who fucks David]
-			say "     As you give him your ok, a lustful gleam begins to full Eric's eyes. Smiling, the gives you another peck on the lips, then jumps off the bed to move behind you. As you fuck David, you can feel Eric's hands on your cheeks, softly squeezing and spreading them, then rubbing the flared head of his cock up and down your crack. Using the copious amounts of precum leaking from his cock-head, he lubes your hole, then presses his shaft against your ready pucker and slides into your body. The large head and impressive length of the cock makes you moan and scream in lust, all restraint lost in the pleasure at fucking and being fucked at the same time.";
+			say "     As you give him your OK, a lustful gleam begins to full Eric's eyes. Smiling, the gives you another peck on the lips, then jumps off the bed to move behind you. As you fuck David, you can feel Eric's hands on your cheeks, softly squeezing and spreading them, then rubbing the flared head of his cock up and down your crack. Using the copious amounts of precum leaking from his cock-head, he lubes your hole, then presses his shaft against your ready pucker and slides into your body. The large head and impressive length of the cock makes you moan and scream in lust, all restraint lost in the pleasure at fucking and being fucked at the same time.";
 			WaitLineBreak;
 			say "     Being the center of a fuck sandwich quickly has you pretty hot and bothered, and before too much longer, you moan 'I'm gonna... cummMMM!' Grabbing David's hips, you grind your crotch against his ass, plunging your manhood as deep into the soldier boy as you can as the first spurt of your seed starts filling his hole. With your whole body shuddering in the grip of orgasm and twitching anal muscles flexing around Eric's shaft, it's not much of a surprise that the college athlete soon follows you to the point of no return. Giving a need-filled grunt as his large balls start churning out spurt after spurt of cum, Eric wraps his arms around you from behind and holds you tight.[mimpregchance]";
 			WaitLineBreak;
@@ -2282,7 +2326,7 @@ after going down from the Grey Abbey Library while (Eric is in Bunker and (HP of
 			say "     Tapping his nose with a large finger, Rane winks at Eric, then continues, 'As for my loincloth, it's just right not to burden me in a fight - and well, if you got it, flaunt it. Hah - shows just the right amount of skin while leaving enough to the imagination, and also easy to get in and out of. I do have a great body, isn't that right? Ah, why ask - I know you couldn't keep your hands off it.' Pushing his upper body up from Rane's chest and bracing himself against the oni's pecs, Eric puts on a mock-outraged expression and says, 'Hey! I'm not mister grabby-hands who preys on boys in the shower. You offered!' They keep on with a bit of playful bickering, until they're eventually interrupted by Rane's cock softening far enough to slip out of Eric's hole as the cuntboy is tickled by his oni friend - and a whole lot of cum and female juices gushes out of the trans teen's pussy, splashing all over Rane's crotch, then running between his legs and soaking into the couch.";
 			WaitLineBreak;
 			say "     Eric looks down in awe at the mess between their bodies, with still more cum dripping out between his still pretty stretched pussy lips. 'Wow. All of that was in me? You're really a beast when it comes to sex.' Rane just gives him a dashing grin, together with a playful growl. 'Oh dear, I think the couch is ruined. No way to clean all that up,' Eric adds a moment later as he checks out the full extent of the cum-stain they created. Letting out a long laugh, Rane gets up, gently helping Eric to his feet as they both survey the 'damage' to the furniture. 'I wouldn't say it's ruined - it's just marked. A memento of the first time my little buddy was in the driver's seat. It's a sturdy couch, perfect to fuck on. This can be 'our spot' for the next time.'";
-			say "     The college athlete looks at his oni friend, hands on his hips as he remarks, 'You sound mighty sure that there will be a 'next time'. Rane leans down a bit, pulling Eric close and looking him in the eye, then says, 'Look, I am what I am. I love to fuck. I live to fuck. Simple as that. I admit I got carried away with you the first time...' Eric quickly amends that it was twice. 'Yeah, ok, I messed up those times. But with us making up right here and now - on 'our spot', things are fine between us, right? Why stop with a good thing?' Eric gapes for a second at the boundless self-assurance and trust in his ability to charm anyone's clothes off - then gives a smiling sigh and gives in, caressing Rane's muscled side. The oni grins broadly, 'Hah, third time's the charm, right?'";
+			say "     The college athlete looks at his oni friend, hands on his hips as he remarks, 'You sound mighty sure that there will be a 'next time'. Rane leans down a bit, pulling Eric close and looking him in the eye, then says, 'Look, I am what I am. I love to fuck. I live to fuck. Simple as that. I admit I got carried away with you the first time...' Eric quickly amends that it was twice. 'Yeah, OK, I messed up those times. But with us making up right here and now - on 'our spot', things are fine between us, right? Why stop with a good thing?' Eric gapes for a second at the boundless self-assurance and trust in his ability to charm anyone's clothes off - then gives a smiling sigh and gives in, caressing Rane's muscled side. The oni grins broadly, 'Hah, third time's the charm, right?'";
 			WaitLineBreak;
 			say "     Eric looks lost in thought for a bit, while Rane patiently waits for what he'll say. Finally Eric replies, 'If I'm being honest, then all three times felt great. But it was all so new, I mean, first this...' Eric motions down towards his genitals, 'just happened, and I used to have a penis there, and now it's like a girls and I've not used it much. So it felt weird at first when you... 'took me' the first time and you're really big, so it almost kinda hurt. Then I was just worried that you were going to make me one of those - things - outside where all I'd be doing is being your slave. I don't want to be like that. And well, this last time, it felt real good. It's just been so very confusing, with this...' He motions to his genitals. '...and being stalked by monsters and then you. And now - I mean, what are we?'";
 			say "     Rane holds up a hand to stop him, 'You're rambling too much. Speak plainly and simple. It works for me.' Eric takes a moment to compose himself and starts, 'So what does this make me? Your boyfriend... uh... girlfriend?' Rane laughs hard, then ruffles Eric's hair and points out, 'Don't take this the wrong way, but I'm not the type. That implies going steady, and well, sorry, that's just not my thing. Besides, I got a feeling about you, I don't think you're the steady type yourself. I'm sure there's a few other guys around whom you'd like to take for a ride too, eh? [if HP of David is 4]Like that military stud? [end if][if Carl is in Grey Abbey 2F]Maybe the soldier doggie? [end if][if Hayato is in Darkened Alcove]My oddly shy big red oni counterpart possibly? He just sits and meditates all day and could definitively use some action to take a load off. I've seen you trying to peek in on him. [end if]";
@@ -3047,7 +3091,7 @@ to say EricUrikBJ:
 	if Player consents: [watch]
 		LineBreak;
 		project the Figure of Eric_Urik_naked_icon;
-		say "     The muscle-packed orc wakes up in a flash, raising his head from where it was resting on the back of the sofa and looking around. As he sees Eric, a smile crosses Urik's face and he lets his eyes wander down to the college student's tight shorts and back up again while sliding an arm around his midriff. 'Hey there li'l buddy,' the orc slave says to Eric in a husky tone, stroking his side a bit with a large hand. You can't help but wonder at how much Urik's demeanor to Eric changed since the two of them met - from rough treatment and rejection to now... actually being pretty nice to the slender human sitting next to him. Sure, you had a word with Urik, but this is still quite a development - its almost as if the big brute can't help but feel a connection to the lithe college student.";
+		say "     The muscle-packed orc wakes up in a flash, raising his head from where it was resting on the back of the sofa and looking around. As he sees Eric, a smile crosses Urik's face and he lets his eyes wander down to the college student's tight shorts and back up again while sliding an arm around his midriff. 'Hey there li'l buddy,' the orc slave says to Eric in a husky tone, stroking his side a bit with a large hand. You can't help but wonder at how much Urik's demeanor to Eric changed since the two of them met - from rough treatment and rejection to now... actually being pretty nice to the slender human sitting next to him. Sure, you had a word with Urik, but this is still quite a development - it's almost as if the big brute can't help but feel a connection to the lithe college student.";
 		say "     Seeing the orc sit there relaxedly, one arm around and holding his smaller friend, the association that comes up in your mind is more of a protective big brother than a ruthless orc slaver (even a former one). Of course, if Urik and Eric were siblings, that'd be an... interesting family dynamic all of its own, as the thin loincloth hiding Urik's shaft twitches a little and you can see him getting harder by the second. He feels something for Eric alright - and at least half of it is lust. With a beaming smile baring one tusk, Urik tousles Eric's hair and asks, 'So, what up li'l E? Your pussy itching for some attention? Told ya to be more direct - what are'ya still wearing clothes for then?!' Hooking a thumb under the belt-line of Eric's shorts, the orc starts to push them down, only to have the college athlete squeeze his arm to stop.";
 		WaitLineBreak;
 		say "     'N-no, that's not... it,' Eric says in a mixture of stumbling over his words and pausing before the last. 'I - um, you see...' he stutters on, and after a few seconds, Urik's brows draw together and the orc asks demandingly, 'Got a problem? Some bastard making trouble? I'll give him a thrashing and -' Eric quickly puts his hand back on Urik's chest, softly pushing to keep the orc from getting up while he hastily bursts out with, 'Nononono - it is just... I wanted to thank you. For - for being so nice to me now. Besides the... sex and all.' The young cuntboy starts blushing a little after saying the last bit, but still smiles happily at his big friend. Seems like there were more interactions between them than you thought - well, that was only to be expected in hindsight... they're living in the same building and it's not like you've got them under constant surveillance.";

@@ -187,6 +187,7 @@ When Play begins:
 	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	add "Cerberus" to infections of CanineList;
 	add "Cerberus" to infections of FurryList;
+	add "Cerberus" to infections of FeralList;
 	add "Cerberus" to infections of MythologicalList;
 	add "Cerberus" to infections of HermList;
 	add "Cerberus" to infections of TaperedCockList;

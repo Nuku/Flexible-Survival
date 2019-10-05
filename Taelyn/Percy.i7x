@@ -196,7 +196,7 @@ to say PercyTalk19:
 		say "     Percy hands you a spear that feels fairly good in your hands. You can't even tell that the shaft used to be a hoe, but the blade at the end was still recognizable as your old pocket knife. 'I hope this helps. It's not my best work, but it should be reliable.'";
 		increase carried of Makeshift-Spear by 1;
 	else if Stamina of Percy is 2: [Vambrace]
-		say "     Percy hands you a pear of leather vambraces. The design engraved into it's surface is elegant and makes Percy's skill as a armor clear. 'The materials took some working with, but I think they turned out well.'";
+		say "     Percy hands you a pair of leather vambraces. The design engraved into it's surface is elegant and makes Percy's skill as an armorer clear. 'The materials took some working with, but I think they turned out well.'";
 		increase carried of leather vambraces by 1;
 	else if Stamina of Percy is 3: [Gambeson]
 		say "     Percy hands you what looks like a coat made out if a quilt. Despite its poofy appearance, the gambeson is surprisingly heavy for cloth armor. 'It takes a while to stitch together that many layers of cloth. You would be surprised how effective it can be though.'";
@@ -467,11 +467,12 @@ to say PercyCrafting1: [Con 1]
 			LineBreak;
 			say "     You hand Percy the materials who looks them over with experienced eye. 'Hmmm. This knife is old but well made, Likely military. Cold War maybe?' The Pangolin puts the two materials off the side before returning his focus to you. 'Anyways, this shouldn't take too long. I'll have to remove the blade and fasten it to the haft, then secure it with some binding. I should have it done in a [bold type]few hours[roman type].'";
 			LineBreak;
-			say "[bold type]Pocketknife removed.[roman type][line break]";
+			unwield pocketknife silently;
 			delete pocketknife;
-			LineBreak;
-			say "[bold type]Broke-Ass Hoe removed.[roman type][line break]";
+			say "[bold type]Pocketknife removed.[roman type][line break]";
+			unwield Broke-Ass Hoe silently;
 			delete Broke-Ass Hoe;
+			say "[bold type]Broke-Ass Hoe removed.[roman type][line break]";
 			now Strength of Percy is a random number from 2 to 3; [sets the needed time to a random value]
 			now Stamina of Percy is 1;
 			CreditLoss 50;

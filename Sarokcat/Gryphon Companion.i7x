@@ -462,7 +462,7 @@ Instead of resolving Gryphoness nest:
 						now Resolution of Gryphoness nest is 10; [female player recruited her]
 						now Gryphoness nest is resolved;
 				else:
-					say "     Denise sighs as you shake your head, 'It's ok...' she says sadly as she inches away from you and hangs her head down, 'I understand that no one really wants to take the risk of being around something like me now anyways, I might as well just go try to find the other gryphons and see if they at least still want me.' She sighs as she buries her face down in the soft cushions of her bed, ignoring your further attempts to talk to her. You sigh as you eventually work your way down the narrow path outside, wondering if perhaps you shouldn't have handled that differently after all...";
+					say "     Denise sighs as you shake your head, 'It's OK...' she says sadly as she inches away from you and hangs her head down, 'I understand that no one really wants to take the risk of being around something like me now anyways, I might as well just go try to find the other gryphons and see if they at least still want me.' She sighs as she buries her face down in the soft cushions of her bed, ignoring your further attempts to talk to her. You sigh as you eventually work your way down the narrow path outside, wondering if perhaps you shouldn't have handled that differently after all...";
 					now Resolution of Gryphoness nest is 11; [told Denise no]
 					now Gryphoness nest is resolved;
 		else: [charisma check fail]

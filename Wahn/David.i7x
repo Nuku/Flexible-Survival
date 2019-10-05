@@ -294,12 +294,22 @@ object	name
 David	"David"
 
 David is a man.
-The description of David is "     David Jackson is a young soldier, pretty friendly if a bit shy. He has a slender but still muscular build, a handsome face and short-cut brown hair. [if debugactive is 1][line break]DEBUG -> Dexterity: [Dexterity of David], HP: [HP of David], Libido: [Libido of David], Lust: [lust of David], Thirst: [thirst of David] <- DEBUG[end if]".
+The description of David is "[DavidDesc]";
+
 The conversation of David is { "Oh, hello." }.
 The icon of David is Figure of David_clothed_icon.
 DavidBunkerEntry is a number that varies.
 BrutusEscalationTimer is a number that varies.
 DavidBrutusMarcVar is a number that varies.
+
+to say DavidDesc:
+	if debugactive is 1:
+		say "     DEBUG -> Dexterity: [Dexterity of David], HP: [HP of David], Libido: [Libido of David], Lust: [lust of David], Thirst: [thirst of David] <- DEBUG";
+	if David is in bunker:
+		project Figure of David_casualclothed_icon;
+	else:
+		project Figure of David_clothed_icon;
+	say "     David Jackson is a young soldier, pretty friendly if a bit shy. He has a slender but still muscular build, a handsome face and short-cut brown hair.";
 
 The scent of David is "     David has a nice masculine human smell.".
 
@@ -514,7 +524,6 @@ instead of conversing David:
 					if nam is "Tell him about Brutus's inner turmoil":
 						say "[DavidTalk7]";
 					wait for any key;
-					now lastfuck of David is turns;
 			else if calcnumber is 0:
 				now sextablerun is 1;
 				say "     You step back from the young soldier, shaking your head slightly as he gives a questioning look.";
@@ -614,11 +623,11 @@ to say DavidTalk4: [talk about Brutus]
 					say "     Leaning forward to lick his forked tongue over the young soldier's chest, then along his neck, Brutus gives a lust-filled grunt, the veins on his hard shaft throbbing in anticipation. He picks up David, one hand cupping his ass, the other guiding the human's head to his own so they can kiss, then carries him over to a crate that's hip-height for himself and covered in some soft plastic wrap. As he lowers David onto it softly, the demon says 'I wanted you since I first saw you - and now that you're my friend, I want you even more.' His large hand strokes over David's chest, stops to jerk the man's cock a few times before moving even lower, rubbing over his butthole, pulling a breathless pant from the soldier.";
 					WaitLineBreak;
 					if lust of David is 0: [anal virgin]
-						say "     David moans 'I - I haven't had anyone... go there before', still somewhat hesitant even though deeply in the grasp of his own lust. With surprising gentleness, Brutus replies, 'Don't worry my friend, I'll go slow, at first. Make it good.' then leans forward to kiss David on the lips before crouching down and bringing his tongue to lick the man's buttcheeks. Then he moves it along David's crack, playing over his pucker several times before pushing it inside, probing and licking him. After several minutes of this during which David's hole is carefully teased and spread, lubed with Brutus's spit as David moans and writhes in pleasure, your demon companion stands up again, now bringing his hard shaft up against David with a guiding hand. Looking down with clear concern for the human, Brutus caresses his chest again, then says 'Tell me how fast I can go, ok?' and gets a nod from the lying human.";
+						say "     David moans 'I - I haven't had anyone... go there before', still somewhat hesitant even though deeply in the grasp of his own lust. With surprising gentleness, Brutus replies, 'Don't worry my friend, I'll go slow, at first. Make it good.' then leans forward to kiss David on the lips before crouching down and bringing his tongue to lick the man's buttcheeks. Then he moves it along David's crack, playing over his pucker several times before pushing it inside, probing and licking him. After several minutes of this during which David's hole is carefully teased and spread, lubed with Brutus's spit as David moans and writhes in pleasure, your demon companion stands up again, now bringing his hard shaft up against David with a guiding hand. Looking down with clear concern for the human, Brutus caresses his chest again, then says 'Tell me how fast I can go, OK?' and gets a nod from the lying human.";
 						say "     After nudging the tip of his shaft against David's pucker several times to prepare him for what's coming, Brutus presses in, giving a deep grunt of pleasure as his head pops into the soldier's body. David's reaction is a short, pained gasp, as he loses his virginity to a very large male indeed and Brutus stops immediately, holding still inside him. After a few deep breaths, David pants 'Keep going', and the demon brute takes up sinking his manhood into him slowly again, bit by bit spreading the freshly deflowered human's passage around his shaft. At some point, the pleasurable feelings of having the bumps on Brutus's cock rub his insides outweigh the discomfort, and David's utterances turn from gasps and pants to moans, coupled with demands to take him deeper. Finally, the demon bottoms out inside him and leans in for another long kiss.";
 						now lust of David is 51; [de-virginized by Brutus]
 					else:
-						say "     David moans 'I'm still a bit new to this, never did it with men before... [if lust of David < 50]you know, your master[else]you know, getting here[end if]', still somewhat hesitant even though deeply in the grasp of his own lust. With surprising gentleness, Brutus replies, 'Don't worry my friend, I'll go slow, at first. Make it good.' then leans forward to kiss David on the lips before crouching down and bringing his tongue to lick the man's buttcheeks. Then he moves it along David's crack, playing over his pucker several times before pushing it inside, probing and licking him. After several minutes of this during which David's hole is carefully teased and spread, lubed with Brutus's spit as David moans and writhes in pleasure, your demon companion stands up again, now bringing his hard shaft up against David with a guiding hand. Looking down with clear concern for the human, Brutus caresses his chest again, then says 'Tell me how fast I can go, ok?' and gets a nod from the lying human.";
+						say "     David moans 'I'm still a bit new to this, never did it with men before... [if lust of David < 50]you know, your master[else]you know, getting here[end if]', still somewhat hesitant even though deeply in the grasp of his own lust. With surprising gentleness, Brutus replies, 'Don't worry my friend, I'll go slow, at first. Make it good.' then leans forward to kiss David on the lips before crouching down and bringing his tongue to lick the man's buttcheeks. Then he moves it along David's crack, playing over his pucker several times before pushing it inside, probing and licking him. After several minutes of this during which David's hole is carefully teased and spread, lubed with Brutus's spit as David moans and writhes in pleasure, your demon companion stands up again, now bringing his hard shaft up against David with a guiding hand. Looking down with clear concern for the human, Brutus caresses his chest again, then says 'Tell me how fast I can go, OK?' and gets a nod from the lying human.";
 						say "     After nudging the tip of his shaft against David's pucker several times to prepare him for what's coming, Brutus presses in, giving a deep grunt of pleasure as his head pops into the soldier's body. Thankfully being prepared to taking a dick through your own intimate encounters with him as well as Brutus's oral attention, David is relaxed about taking him, reacting only with a short gasp, then says 'I'm okay, keep going.' After a few moment of hesitation, the demon brute takes up sinking his manhood into him slowly again, bit by bit spreading the human's passage around his shaft. David pants and moans in lust, and after a while even calls out for Brutus to go faster, deeper. Finally, the demon bottoms out inside him and leans in for another long kiss.";
 					WaitLineBreak;
 					say "     Raising his upper body back up, the horny demon puts his hands on David's shoulders to hold him from sliding back on his padded crate, then slowly pulls out of him before thrusting back in with a lusty grunt, his massive balls hitting David's ass with a meaty slap. He goes slow at first, then speeds up bit by bit as the young soldier's inner muscles are stretched out and get used to the thick invading member moving in and out of David's body. Before long, their loud moans and gasps are joined by scraping sounds as the crate David is lying on gets shifted further and further back when Brutus's harder thrusts hit it. Which means that you can relax your self-control finally, no longer having to suppress your own noises with all the racket they're making. Having been thoroughly turned on by spying on your friend's coupling, you bring your hand to your crotch, [if Player is male]stroking your manhood[else]stroking yourself[end if] in rhythm with Brutus's thrusts.";
@@ -640,14 +649,14 @@ to say DavidTalk4: [talk about Brutus]
 			say "     Maybe it's not such a great idea after all. David might not like you arranging things, manipulating him and Brutus...";
 	else if Libido of David is 54 or Libido of David is 55: [talking after they had sex]
 		if Thirst of David is 20: [player + David are lovers]
-			say "     As you bring your demon companion up, David gets a bit red in the face then hastily says 'Err - he was a great help in the storeroom. Too bad we didn't find anything usef-' Stopping himself, the handsome soldier bites his lip for a second, then bursts out in a sobbed, 'I - damn it! I fucked up and had sex with Brutus! What's wrong with me? Coming to this city and meeting you, falling for you even though I had a girlfriend back home. And now, I can't resist getting it on with an acutal demon! God, but Brutus is a really great guy - so big and strong, but nevertheless so gentle when it counts, and so nice even though he's a demon and...' His stream of words abates suddenly and he really takes in your knowing expression throughout all this in for the first time. 'Wait - why are you grinning like that? Did you... know?' As the light of realization goes on in his eyes, David continues, 'You arranged it, didn't you? But - but what about us?' Looking unsure and confused in a very cute way, he turns to you for answers.";
+			say "     As you bring your demon companion up, David gets a bit red in the face then hastily says 'Err - he was a great help in the storeroom. Too bad we didn't find anything usef-' Stopping himself, the handsome soldier bites his lip for a second, then bursts out in a sobbed, 'I - damn it! I fucked up and had sex with Brutus! What's wrong with me? Coming to this city and meeting you, falling for you even though I had a girlfriend back home. And now, I can't resist getting it on with an actual demon! God, but Brutus is a really great guy - so big and strong, but nevertheless so gentle when it counts, and so nice even though he's a demon and...' His stream of words abates suddenly and he really takes in your knowing expression throughout all this in for the first time. 'Wait - why are you grinning like that? Did you... know?' As the light of realization goes on in his eyes, David continues, 'You arranged it, didn't you? But - but what about us?' Looking unsure and confused in a very cute way, he turns to you for answers.";
 			LineBreak;
 			say "     [bold type]What do you tell David in response?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - You love him, and Brutus too, so why not make this a three way relationship.";
 			say "     ([link]N[as]n[end link]) - Being with him sure is fun, but you didn't want to stand in the way of what he and Brutus could have.";
 			if Player consents: [three way relationship!]
 				LineBreak;
-				say "     Drawing him close to you and kissing the soldier on the mouth, you caress David's cheek and tell him that you love him, as well as Brutus. And with the demon having sworn his undying service to your person, you're quite sure that he'd jump at being with both of you at the same time too. The conflict of his shared affection for two people melts away in David's mind and he smiles, then cries in happyness about what you're telling him. For the next little while, you just hold him and make out with him, until the ecstatically happy man finally calms down and gives a happy sigh.";
+				say "     Drawing him close to you and kissing the soldier on the mouth, you caress David's cheek and tell him that you love him, as well as Brutus. And with the demon having sworn his undying service to your person, you're quite sure that he'd jump at being with both of you at the same time too. The conflict of his shared affection for two people melts away in David's mind and he smiles, then cries in happiness about what you're telling him. For the next little while, you just hold him and make out with him, until the ecstatically happy man finally calms down and gives a happy sigh.";
 				now thirst of David is 21; [player + David + Brutus three way relationship]
 			else: [step back to fuck buddy status]
 				LineBreak;
@@ -1068,7 +1077,7 @@ after of going to Parade Ground while thirst of David is 5 and HP of David is 3:
 	else:
 		LineBreak;
 		now thirst of David is 10; [fuck-buddy]
-		say "     'Oh, ok - just buddies, you say. I'll go back to Ann then when all this is over.'";
+		say "     'Oh, OK - just buddies, you say. I'll go back to Ann then when all this is over.'";
 
 after of going to Bunker while Dexterity of David is 0 and HP of David is 4 and (DavidBunkerEntry - turns > 8) and Sven is in Bunker and HP of Sven >= 8 and HP of Sven < 50:
 	if debugactive is 1:
@@ -1139,7 +1148,7 @@ after of going to Bunker while thirst of David is 5 and HP of David is 4:
 	else:
 		LineBreak;
 		now thirst of David is 10; [fuck-buddy]
-		say "     'Oh, ok - just buddies, you say. I'll go back to Ann then when all this is over.";
+		say "     'Oh, OK - just buddies, you say. I'll go back to Ann then when all this is over.";
 
 after of going to Bunker while Eric is in Bunker and thirst of David > 5 and HP of David is 4 and HP of Eric > 0 and lust of Eric is 0: [David spots Eric's genitals and wants to talk about them]
 	if debugactive is 1:

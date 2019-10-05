@@ -536,7 +536,7 @@ to RanaeBind:
 					now Trixieexit is 1;
 					end the story saying "You became a fulltime servant for a frog.";
 				else:
-					say "     'That's a good [if cocks of player > 1]boy[else]girl[end if]. No more struggling. Just give yourself to me,' Ranae says, even though your movements had ceased some time ago. The frog woman hugs her bulging belly and giggles softly. 'You know, I'm actually going to miss you. With how you kept on spoiling me, I would've loved to keep you around as my servant. Unfortunately, this city has all sorts of crazy stuff going on, and I'm not going to let some freaks take you away from me. At least this way, I get to keep you forever, not to mention having you as a tasty treat.' Ranae pauses for a moment when her stomach gurgles, and she smiles as she uses her hands to rub gentle circles over her belly. 'Rest well, my servant. You're mine now... All mine...'";
+					say "     'That's a good [if player is male]boy[else]girl[end if]. No more struggling. Just give yourself to me,' Ranae says, even though your movements had ceased some time ago. The frog woman hugs her bulging belly and giggles softly. 'You know, I'm actually going to miss you. With how you kept on spoiling me, I would've loved to keep you around as my servant. Unfortunately, this city has all sorts of crazy stuff going on, and I'm not going to let some freaks take you away from me. At least this way, I get to keep you forever, not to mention having you as a tasty treat.' Ranae pauses for a moment when her stomach gurgles, and she smiles as she uses her hands to rub gentle circles over her belly. 'Rest well, my servant. You're mine now... All mine...'";
 					now voreloss is true;
 					now BodyName of player is "Frog Food";
 					now Trixieexit is 1;

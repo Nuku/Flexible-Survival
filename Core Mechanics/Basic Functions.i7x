@@ -211,19 +211,36 @@ understand "testNPCSexAftermath" as NPCSexAftermathAction.
 NPCSexAftermathAction is an action applying to nothing.
 
 carry out NPCSexAftermathAction:
-	say "Testing: Carl fucks player:";
+	if AnalVirgin of Player is true:
+		say "Player is an anal virgin.";
+	if PenileVirgin of Player is true:
+		say "Player is a penile virgin.";
+	say "Tehuantl: AnalVirgin: [AnalVirgin of Tehuantl]; PenileVirgin: [PenileVirgin of Tehuantl]";
+	say "Testing: Tehuantl fucks Player:[line break]";
+	NPCSexAftermath Tehuantl receives "AssFuck" from Player;
+	say "Testing: Player fucks Tehuantl:[line break]";
+	NPCSexAftermath Player receives "AssFuck" from Tehuantl;
+	say "Tehuantl: AnalVirgin: [AnalVirgin of Tehuantl]; PenileVirgin: [PenileVirgin of Tehuantl]";
+	say "Tehuantl: AnalVirgin: [AnalVirgin of Carl]; PenileVirgin: [PenileVirgin of Carl]";
+	now AnalVirgin of Carl is true;
+	now PenileVirgin of Carl is true;
+	say "Testing: Carl fucks player:[line break]";
 	NPCSexAftermath Player receives "AssFuck" from Carl;
-	say "Testing: Player fucks Carl:";
+	say "Testing: Player fucks Carl:[line break]";
 	NPCSexAftermath Carl receives "AssFuck" from Player;
+	say "Tehuantl: AnalVirgin: [AnalVirgin of Carl]; PenileVirgin: [PenileVirgin of Carl]";
 	[Options for SexAct are: AssFuck, PussyFuck, AssDildoFuck, PussyDildoFuck, OralCock, OralPussy]
-
 
 [ Note: Add Handjob, PussyFingering, AssFingering, Rimming to SexActs]
 
 to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (GivingChar - a person):
-	if GivingChar is player:
+	if debugactive is 1:
+		say "DEBUG -> NPCSexAftermath[line break]";
+		say "TakingChar: [Printed Name of TakingChar]";
+		say "GivingChar: [Printed Name of GivingChar]";
+	if GivingChar is Player:
 		if debugactive is 1:
-			say "DEBUG -> Player is the giving partner[line break]";
+			say "DEBUG -> Player is the giving partner for '[SexAct]'[line break]";
 		if PlayerFucked of TakingChar is false: [player never had sex with this NPC]
 			now PlayerFucked of TakingChar is true; [player sexed up this NPC]
 		if SexAct is "AssFuck":
@@ -264,7 +281,7 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				add printed name of TakingChar to OralVirginitiesTaken of Player;
 	else if TakingChar is player:
 		if debugactive is 1:
-			say "DEBUG -> Player is the receiving partner[line break]";
+			say "DEBUG -> Player is the receiving partner for '[SexAct]'[line break]";
 		if PlayerFucked of GivingChar is false: [player never had sex with this NPC]
 			now PlayerFucked of GivingChar is true; [player sexed up this NPC]
 		if SexAct is "AssFuck":
@@ -372,7 +389,7 @@ carry out CreatureSexAftermathAction:
 to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) from (GivingCharName - a text):
 	if GivingCharName is "Player":
 		if debugactive is 1:
-			say "DEBUG -> Player is the giving partner[line break]";
+			say "DEBUG -> Player is the giving partner for '[SexAct]'[line break]";
 		if SexAct is "AssFuck":
 			if PenileVirgin of Player is true:
 				now PenileVirgin of Player is false;
@@ -383,7 +400,7 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 				say "     [Bold Type]You have lost your penile virginity fucking the [TakingCharName in lower case]![roman type][line break]";
 	else if TakingCharName is "Player":
 		if debugactive is 1:
-			say "DEBUG -> Player is the receiving partner[line break]";
+			say "DEBUG -> Player is the receiving partner for '[SexAct]'[line break]";
 		if SexAct is "AssFuck":
 			if AnalVirgin of Player is true:
 				now AnalVirgin of Player is false;
@@ -419,43 +436,99 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 				now OralVirgin of Player is false;
 				say "     [Bold Type]You have lost your oral virginity to the [GivingCharName in lower case]![roman type][line break]";
 				now FirstOralPartner of Player is GivingCharName;
+		now Lastfuck of Player is turns;
 	else:
 		let GivingCharIsNPC be 0;
 		let TakingCharIsNPC be 0;
 		let GivingChar be a person;
 		let TakingChar be a person;
+		if there is a name of GivingCharName in the Table of GameCharacterIDs:
+			now GivingChar is the object corresponding to a name of GivingCharName in the Table of GameCharacterIDs;
+			now Lastfuck of GivingChar is turns;
+			now GivingCharIsNPC is 1;
+		if there is a name of TakingCharName in the Table of GameCharacterIDs:
+			now TakingChar is the object corresponding to a name of TakingCharName in the Table of GameCharacterIDs;
+			now Lastfuck of TakingChar is turns;
+			now TakingCharIsNPC is 1;
+		if GivingCharIsNPC is 0 and TakingCharIsNPC is 0:
+			say "Error: The CreatureSexAftermath function should include at least one NPC if it is used. Please report this on the FS Discord and quote this full message. Giving Char: '[GivingCharName]' Taking Char: '[TakingCharName]'";
 		if debugactive is 1:
-			if there is a name of GivingCharName in the Table of GameCharacterIDs:
-				now GivingChar is the object corresponding to a name of GivingCharName in the Table of GameCharacterIDs;
-				now GivingCharIsNPC is 1;
-				say "GivingCharName: [GivingCharName], GivingCharIsNPC: [GivingCharIsNPC]";
-			if there is a name of TakingCharName in the Table of GameCharacterIDs:
-				now TakingChar is the object corresponding to a name of TakingCharName in the Table of GameCharacterIDs;
-				now TakingCharIsNPC is 1;
-				say "TakingCharName: [TakingCharName], TakingCharIsNPC: [TakingCharIsNPC]";
-			if GivingCharIsNPC is 0 and TakingCharIsNPC is 0:
-				say "Error: The CreatureSexAftermath function should include at least one NPC if it is used. Please report this on the FS Discord and quote this full message. Giving Char: '[GivingCharName]' Taking Char: '[TakingCharName]'";
+			say "GivingCharName: [GivingCharName], GivingCharIsNPC: [GivingCharIsNPC]";
+			say "TakingCharName: [TakingCharName], TakingCharIsNPC: [TakingCharIsNPC]";
+		if GivingCharIsNPC is 1:
+			if SexAct is "AssFuck":
+				if PenileVirgin of GivingChar is true:
+					now PenileVirgin of GivingChar is false;
+					say "     [Bold Type][GivingCharName] has lost their penile virginity fucking the [TakingCharName in lower case]'s ass![roman type][line break]";
+			else if SexAct is "PussyFuck":
+				if PenileVirgin of GivingChar is true:
+					now PenileVirgin of GivingChar is false;
+					say "     [Bold Type][GivingCharName] has lost their penile virginity fucking the [TakingCharName in lower case]![roman type][line break]";
+		else: [NPC takes]
+			if SexAct is "AssFuck":
+				if AnalVirgin of TakingChar is true:
+					now AnalVirgin of TakingChar is false;
+					say "     [Bold Type][TakingCharName] has lost their anal virginity to [GivingCharName in lower case]![roman type][line break]";
+					now FirstAnalPartner of TakingChar is GivingCharName;
+			else if SexAct is "PussyFuck":
+				if Virgin of TakingChar is true:
+					now Virgin of TakingChar is false;
+					say "     [Bold Type][TakingCharName] has lost their virginity to [GivingCharName in lower case]![roman type][line break]";
+					now FirstVaginalPartner of TakingChar is GivingCharName;
+			else if SexAct is "AssDildoFuck":
+				if AnalVirgin of TakingChar is true:
+					now AnalVirgin of TakingChar is false;
+					say "     [Bold Type][TakingCharName] has lost their anal virginity to [GivingCharName]![roman type][line break]";
+					now FirstAnalPartner of TakingChar is GivingCharName;
+			else if SexAct is "PussyDildoFuck":
+				if Virgin of TakingChar is true:
+					now Virgin of TakingChar is false;
+					say "     [Bold Type][TakingCharName] has lost their virginity to [GivingCharName]![roman type][line break]";
+					now FirstVaginalPartner of TakingChar is GivingCharName;
+			else if SexAct is "OralCock" or SexAct is "OralPussy":
+				if OralVirgin of TakingChar is true:
+					now OralVirgin of TakingChar is false;
+					say "     [Bold Type][TakingCharName] has lost their oral virginity to [GivingCharName in lower case]![roman type][line break]";
+					now FirstOralPartner of TakingChar is GivingCharName;
 
+to StatChange (Statname - a text) by (Modifier - a number):
+	StatChange Statname by Modifier silence state is 0;
 
-to StatChange (Statname - a text) by (Value - a number):
-	if Value is 0:
+to StatChange (Statname - a text) by (Modifier - a number) silently:
+	StatChange Statname by Modifier silence state is 1;
+
+to StatChange (Statname - a text) by (Modifier - a number) silence state is (Silence - a number):
+	if Modifier is 0:
 		say "ERROR: You just got a 0 point stat change. Please report on the FS Discord how you saw this.";
 	now Statname is Statname in lower case;
-	say "[bold type]Your [statname] has [if Value > 0]in[else]de[end if]creased by [value]![roman type][line break]";
+	let AbsMod be absolute value of Modifier to the nearest whole number;
+	if Silence is 0:
+		say "[bold type]Your [statname] has [if Modifier > 0]in[else]de[end if]creased by [AbsMod]![roman type][line break]";
 	if Statname is:
 		-- "strength":
-			increase strength of Player by Value;
-			increase capacity of Player by Value * 5;
+			increase strength of Player by Modifier;
+			increase capacity of Player by Modifier * 5;
 		-- "dexterity":
-			increase dexterity of Player by Value;
+			increase dexterity of Player by Modifier;
 		-- "stamina":
-			increase stamina of Player by Value;
+			repeat with x running from 1 to AbsMod:
+				if Modifier > 0:
+					increase stamina of Player by 1;
+					if remainder after dividing stamina of Player by 2 is 0:
+						increase maxHP of Player by level of Player + 1;
+				else:
+					decrease stamina of Player by 1;
+					if remainder after dividing stamina of Player by 2 is 1:
+						decrease maxHP of Player by level of Player + 1;
+						if HP of Player > maxHP of Player, now HP of Player is maxHP of Player;
 		-- "charisma":
-			increase charisma of Player by Value;
+			increase charisma of Player by Modifier;
 		-- "intelligence":
-			increase intelligence of Player by Value;
+			increase intelligence of Player by Modifier;
 		-- "perception":
-			increase perception of Player by Value;
+			increase perception of Player by Modifier;
+		-- otherwise:
+			say "ERROR: Invalid stat '[Statname]' used in StatChange. Please report on the FS Discord how you saw this.";
 [
 understand "teststatgain" as StatGainAction.
 
@@ -505,6 +578,44 @@ to FindHighestPlayerStat:
 	if Perception of Player > CurrentStat:
 		now CurrentStat is Perception of Player;
 		now HighestPlayerStat is "perception";
+
+to unwield ( x - a grab object ) silently:
+	unwield x silence state is 1;
+
+to unwield ( x - a grab object ):
+	unwield x silence state is 0;
+
+to unwield ( x - a grab object ) silence state is (Silence - a number):
+	if x is an armament and weapon object of Player is x:
+		now weapon of Player is "[one of]your quick wit[or]your fists[or]a quick kick[or]your body[or]some impromptu wrestling[or]an unarmed strike[at random]";
+		now weapon damage of Player is 4;
+		now weapon type of Player is "Melee";
+		now weapon object of Player is journal;
+		if Silence is 0:
+			say "You stop holding your [x].";
+
+to wield ( x - a grab object ) silently:
+	wield x silence state is 1;
+
+to wield ( x - a grab object ):
+	wield x silence state is 0;
+
+to wield ( x - a grab object ) silence state is (Silence - a number):
+	if x is owned and x is an armament:
+		now weapon object of Player is x;
+		now weapon of Player is weapon of x;
+		now weapon damage of Player is weapon damage of x;
+		now weapon type of Player is weapon type of x;
+		if x is ranged:
+			now weapon type of Player is "Ranged";
+		if Silence is 0:
+			say "You ready your [x]";
+			if x is unwieldy:
+				if scalevalue of Player > objsize of x:
+					say ". Your [if scalevalue of Player is 3]normal-size[else if scalevalue of Player is 4]large[else]massive[end if] [BodyName of Player] hand dwarfs the [x], making it [if scalevalue of Player - objsize of x > 3]very[else if scalevalue of Player - objsize of x is 3]rather[else]somewhat[end if] [one of]unwieldy[or]awkward[or]difficult[at random] to use accurately";
+				else:
+					say ". Your [if scalevalue of Player is 3]normal-size[else if scalevalue of Player is 2]small[else]tiny[end if] [BodyName of Player] hands are just too small to comfortably grip your [x], making swinging it a [if objsize of x - scalevalue of Player > 3]very[else if objsize of x - scalevalue of Player is 3]quite[else]a little[end if] [one of]unwieldy[or]awkward[or]difficult[at random]";
+			say ".";
 
 Section 2 - Stripping
 

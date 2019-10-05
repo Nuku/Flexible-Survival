@@ -91,6 +91,41 @@ object	name
 Stella	"Stella"
 
 Stella is a woman.
+ScaleValue of Stella is 3. [human sized]
+Body Weight of Stella is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Stella is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Stella is 7. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Stella is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Stella is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Stella is 5. [length in inches]
+Breast Size of Stella is 4. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Stella is 2. [count of nipples]
+Asshole Depth of Stella is 8. [inches deep for anal fucking]
+Asshole Tightness of Stella is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Stella is 1. [number of cocks]
+Cock Girth of Stella is 4. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Stella is 10. [length in inches]
+Ball Count of Stella is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Stella is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Stella is 1. [number of cunts]
+Cunt Depth of Stella is 9. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Stella is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Stella is 4. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Stella is false.
+PlayerRomanced of Stella is false.
+PlayerFriended of Stella is false.
+PlayerControlled of Stella is false.
+PlayerFucked of Stella is false.
+OralVirgin of Stella is false.
+Virgin of Stella is false.
+AnalVirgin of Stella is true.
+PenileVirgin of Stella is false.
+SexuallyExperienced of Stella is true.
+TwistedCapacity of Stella is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Stella is false. [steriles can't knock people up]
+MainInfection of Stella is "Dalmatian Herm".
 The description of Stella is "[stelladesc]".
 The conversation of Stella is { "Try my dick!" }.
 The icon of Stella is Figure of Stella_icon.
@@ -176,19 +211,19 @@ to say Stellasexmenu:
 	choose a blank row in table of fucking options;
 	now title entry is "Fellatio";
 	now sortorder entry is 1;
-	now description entry is "suck that doggy cock";
+	now description entry is "Suck that doggy cock";
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Doggy-Style";
 		now sortorder entry is 2;
-		now description entry is "bend over and get shagged";
+		now description entry is "Bend over and get shagged";
 	choose a blank row in table of fucking options;
 	now title entry is "Spooning";
 	if Player is female:
 		now sortorder entry is 3;
 	else:
 		now sortorder entry is 6;
-	now description entry is "get shagged from behind";
+	now description entry is "Get shagged from behind";
 [	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Missionary";
@@ -197,18 +232,18 @@ to say Stellasexmenu:
 	choose a blank row in table of fucking options;
 	now title entry is "Anal";
 	now sortorder entry is 5;
-	now description entry is "take it up the arse";
+	now description entry is "Take it up the arse";
 	if Player is submissive:
 		choose a blank row in table of fucking options;
 		now title entry is "Dominant doggy";
 		now sortorder entry is 7;
-		now description entry is "be this Brit's bitch";
+		now description entry is "Be this Brit's bitch";
 	if HP of Stella >= 4:	[threesomes]
 		if Jimmy is visible and lastfuck of Jimmy - turns >= 6 and HP of Jimmy >= 4 and player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Oral threesome with Jimmy";
 			now sortorder entry is 10;
-			now description entry is "let Jimmy suck you both off";
+			now description entry is "Let Jimmy suck you both off";
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -248,31 +283,36 @@ to say Stellasexmenu:
 to say stellasex1:
 	say "     Offering to blow her, she grins and strokes her swelling penis. 'That's the spirit,' she says in her cheerful British accent. As you drop to your knees in front of her, she offers her canine cock with a doggy grin on her muzzle. It's a reddish-pink in color and thoroughly canine in form. It may just be the infection, but looking at it makes your mouth start to water. [one of]After giving it a teasing lick[or]after some kisses along its six-inch length[or]After a playful lick across her pussy[at random], you let it slide past your lips and start sucking the dalmatian herm off.";
 	say "     Stella's doghood pulses and throbs in your mouth, drooling precum across your tongue. You lick and suck on it eagerly while she strokes her paws over your head[one of]. While sucking on that juicy dogcock, you brush your fingers across her pussy lips. After some light teasing, you slip a pair of fingers into her dripping folds and work them in and out. She pants in excitement at this and starts thrusting into your mouth, all the more eager to fuck your face[or]. While sucking on that juicy dogcock, you can't help but notice her lack of balls, her penis growing up from her pussy like an enlarged clit, but shaped like a dog's wang. You're distracted from your musing as she starts thrusting into your mouth because your attention's wavered[or]. While sucking on that juicy dogcock, you feel across it with your tongue, lavishing attention upon it. You work especially attentively across her pointed glans and dribbling cumslit. As her excitement builds, she grips your head more firm and starts thrusting into your mouth[at random]. Panting heavily with excitement, she grits her teeth and whines like a dog, her climax approaching. And with barks of excitement, she presses your face to her groin and cums hard, pumping her canine cum down your throat.";
+	NPCSexAftermath Player receives "OralCock" from Stella;
 
 to say stellasex2:
 	say "     Suggesting that you go for doggy style, she grins and strokes her swelling penis. 'That's always been my favorite. And it's even better now that I'm on top,' she says in her cheerful British accent. Dropping to your knees and raising your ass, she gives your butt a playful grab before moving her canine cock into position. She brushes the pointed, drooling tip across your wet folds for a few passes to get you all the more excited before easing forward. As she mounts you, she leans overtop you, licking and nibbling at your ears and the back of your neck.";
 	say "     Panting with her tongue hanging out, the horny herm drives her animal cock into you again and again. She fucks you well, clearly having learned a lot on how to please a lady from having been boned herself so often[if Breast Size of Player > 0 and a random chance of 1 in 3 succeeds]. Supporting herself with one arm, she brings her other paw to your chest, caressing your breasts. Her groping, while eager, is still tender and includes a lot of teasing of your nipples to heighten your own enjoyment[else if Player is male and a random chance of 1 in 3 succeeds]. Supporting herself with one arm, she brings her other paw to your crotch, stroking your [Cock of Player] shaft. She works over your manhood with the practiced skill of someone who's handled plenty of men in the past[else]. Supporting herself with one arm, she brings her other paw to your crotch, stroking your [cunt size desc of Player] pussy while she stuffs it. Her fingers tease your clit and caress over your folds even as she slides her pulsing rod between them[end if]. She keeps a nice, brisk pace and anticipates when it's time to change it up or shift positions slightly. For a while, she draws it out like this, but eventually her own lusts win over and she starts banging away at you hard and fast, panting heavily as her canine urges take over.";
-	say "     With a final, hard thrust, she pops her growing knot into you, tying her pulsing, cum-spurting rod inside you. Her canine seed, copious for one with no ballsack, splashes against the back of your vagina. As it builds up, having nowhere else to go, it flows into your womb. While waiting for her extended climax to end and her knot to go down, she snuggles with you, her paws roaming over your [bodytype of Player] body appreciatively.[impregchance]";
+	say "     With a final, hard thrust, she pops her growing knot into you, tying her pulsing, cum-spurting rod inside you. Her canine seed, copious for one with no ballsack, splashes against the back of your vagina. As it builds up, having nowhere else to go, it flows into your womb. While waiting for her extended climax to end and her knot to go down, she snuggles with you, her paws roaming over your [bodytype of Player] body appreciatively.";
+	NPCSexAftermath Player receives "PussyFuck" from Stella;
 
 to say stellasex3:
 	say "     Suggesting some spooning, she grins and strokes her swelling penis. 'A fine choice. A fine choice indeed,' she says in her cheerful British accent. She helps you divest of your gear before pushing you gently to get onto her cot. She climbs into it right behind you. Things are [if scalevalue of Player < 4]a little[else]quite[end if] tight, but she manages to snuggle up behind you. She grinds her canine cock against your ass and between your buns while nuzzling at the back of your neck. She snuffles at your ear and gives it a playful nibble as she gets lined up and then thrusts into your [if Player is female]juicy cunt[else]crinkled hole[end if].";
 	say "     Panting with her tongue hanging out, the horny herm drives her animal cock into you again and again. She fucks you at a leisurely pace so as not to push you off. This lets you enjoy the firm push of that doggy dong into your [if Player is female]hot tunnel delightfully[else]ass, buggering you skillfully[end if], allowing you to feel its exotic, animalistic shape as it moves in and out of you.";
 	say "     With you resting atop one of her arms, she cuddles you with that one while the other roams across your [bodydesc of Player] body[if Breast Size of Player > 0]. Her paw stops for a time at your chest, groping and fondling your tits in a playful manner that is never too rough[end if]. Eventually, her paw makes it way to your crotch[if Player is herm]. After playfully brushing over your erection, she slips beneath it to tease your cock-filled pussy. Spreading her fingers into a V, she rubs her furry digits along either side of her thrusting shaft, further stimulating your cunt[else if Player is female]. After playfully tickling your thigh, she slips those last few inches to tease your cock-filled pussy. Spreading her fingers into a V, she rubs her furry digits along either side of her thrusting shaft, further stimulating your cunt[else if Player is male]. After playfully brushing over your erection, she takes hold of it and starts masturbating you in time to her slow, steady thrusting[else]. Finding it disappointingly bare, she rubs at your genderless groin, soothing that unfocused ache for release you have a little[end if].";
-	say "     As her excitement builds towards its peak, she grinds her knot firmly against your by now [if Player is female]soaked petals[else]relaxed and stretched hole[end if]. She pants with her long, doggy tongue draped across your neck as her canine urges come to the fore. A few more thrust and she finally manages to pop her growing knot into you, locking her cum-spurting rod inside you. You can feel the hot rush of her canine seed flowing into your [if Player is female]cunt and onwards to your womb[else]bowels as it splashes across your over-stimulated prostate[end if][if Player is not neuter]. Having that throbbing bulb of knot buried inside you becomes too much and you cry out lustfully as you orgasm in blissful delight[else]. Having that throbbing bulb of knot buried inside you seems to be finally enough to push you over the top. Your anus clenches around her doggy dick as waves of unfocused sexual pleasure shudders through your body without a proper outlet. Your [bodytype of Player] body aches, but it's a good kind of ache[end if]. While waiting for her extended climax to end and her knot to go down, she snuggles with you, her paw caressing your side while she licks and kisses at your neck.[impregchance]";
+	say "     As her excitement builds towards its peak, she grinds her knot firmly against your by now [if Player is female]soaked petals[else]relaxed and stretched hole[end if]. She pants with her long, doggy tongue draped across your neck as her canine urges come to the fore. A few more thrust and she finally manages to pop her growing knot into you, locking her cum-spurting rod inside you. You can feel the hot rush of her canine seed flowing into your [if Player is female]cunt and onwards to your womb[else]bowels as it splashes across your over-stimulated prostate[end if][if Player is not neuter]. Having that throbbing bulb of knot buried inside you becomes too much and you cry out lustfully as you orgasm in blissful delight[else]. Having that throbbing bulb of knot buried inside you seems to be finally enough to push you over the top. Your anus clenches around her doggy dick as waves of unfocused sexual pleasure shudders through your body without a proper outlet. Your [bodytype of Player] body aches, but it's a good kind of ache[end if]. While waiting for her extended climax to end and her knot to go down, she snuggles with you, her paw caressing your side while she licks and kisses at your neck.";
+	NPCSexAftermath Player receives "[if player is female]PussyFuck[else]AssFuck[end if]" from Stella;
 
 to say stellasex4:
 	say "***missionary";
+	NPCSexAftermath Player receives "PussyFuck" from Stella;
 
 to say stellasex5:
 	say "     Suggesting that she take you in the ass, she grins and strokes her swelling penis. '[if Player is female]Ooo! Kinky girl! I like that[else]Mmmm! Sounds good. Bend over and lemme at that arse of yours[end if],' she says in her cheerful British accent. Dropping to your knees and raising your ass, she gives your butt a playful grab before moving her canine cock into position. She rubs the pointed, drooling tip against your pucker, letting her pre lube you up a little as she gets your back passage to ease open. As she mounts you, she leans overtop you, licking and nibbling at your ears and the back of your neck.";
 	say "     Panting with her tongue hanging out, the horny herm drives her animal cock into you again and again. She fucks you well, clearly having learned a lot on how to please a lover from having been boned herself so often[if Breast Size of Player > 0 and a random chance of 1 in 3 succeeds]. Supporting herself with one arm, she brings her other paw to your chest, caressing your breasts. Her groping, while eager, is still tender and includes a lot of teasing of your nipples to heighten your own enjoyment[else if Player is male and a random chance of 1 in 3 succeeds]. Supporting herself with one arm, she brings her other paw to your crotch, stroking your [Cock of Player] shaft. She works over your manhood with the practiced skill of someone who's handled plenty of men in the past[end if]. She keeps a nice, brisk pace[if Player is male], grinding her throbbing cock against your prostate with every thrust, and[else],[end if] then easing off before you can get too excited. For a while, she draws it out like this, but eventually her own lusts win over and she starts banging away at you hard and fast, panting heavily as her canine urges take over.";
-	say "     With a final, hard thrust, she pops her growing knot into you, tying her pulsing, cum-spurting rod inside you. Her canine seed, copious for one with no ballsack, splashes [if Player is male]against your prostate[else]around inside your bowels[end if]. As it builds up, having nowhere else to go, it can only flow deeper into you. While waiting for her extended climax to end and her knot to go down, she snuggles with you, her paws roaming over your [bodytype of Player] body appreciatively.[mimpregchance]";
+	say "     With a final, hard thrust, she pops her growing knot into you, tying her pulsing, cum-spurting rod inside you. Her canine seed, copious for one with no ballsack, splashes [if Player is male]against your prostate[else]around inside your bowels[end if]. As it builds up, having nowhere else to go, it can only flow deeper into you. While waiting for her extended climax to end and her knot to go down, she snuggles with you, her paws roaming over your [bodytype of Player] body appreciatively.";
+	NPCSexAftermath Player receives "AssFuck" from Stella;
 
 to say stellasex6:
 	say "     As you offer to let Stella fuck you, there's a little something in your voice that causes her canine ears to perk up. Sensing the submissive need in your tone, she gives a doggy grin and a sniff. 'Smells like someone's looking forward to their chance to be my bitch[if HP of Stella >= 4] again[end if]. Don't worry, I'll give you the proper shagging a slut like you deserves,' she says with a lustful growl in her voice. Pressing you down onto a bench, she gives your rear a couple of slaps with her cock, making you blush as you grow all the more aroused by her mistreatment of you.";
 	say "     Having gotten herself quite worked up as well, precum drools from her cock onto your [if Player is female]pussy[else]tight pucker[end if] as she gets into position. Not in the mood to wait any long, she takes the nape of your neck in her muzzle and thrusts into you. Thankfully, she shows a little restraint, but is still steady and inexorable in her determination to stuff your [if Player is female]needy cunt[else]back passage[end if]. Her paws roam over your body, groping and teasing you as she pants in your ear about what a slutty bitch you are, lusting for dog cock so badly. You can only pant and moan beneath her, feeling like the dog herm's bitch and loving it as she pounds away at you.";
-	say "     With a final, hard thrust, she pops her growing knot into you, tying her pulsing, cum-spurting rod inside you. Her canine seed, copious for one with no ballsack, splashes [if Player is female]against your cervix[else if Player is male]against your prostate[else]around inside your bowels[end if]. As it builds up, having nowhere else to go, it can only flow deeper into you. While waiting for her extended climax to end and her knot to go down, she continues to grope and fondle you, enjoying your whimpers of pleasure and lustful cries as her paws roam over your [bodytype of Player] body appreciatively.[impregchance]";
-
+	say "     With a final, hard thrust, she pops her growing knot into you, tying her pulsing, cum-spurting rod inside you. Her canine seed, copious for one with no ballsack, splashes [if Player is female]against your cervix[else if Player is male]against your prostate[else]around inside your bowels[end if]. As it builds up, having nowhere else to go, it can only flow deeper into you. While waiting for her extended climax to end and her knot to go down, she continues to grope and fondle you, enjoying your whimpers of pleasure and lustful cries as her paws roam over your [bodytype of Player] body appreciatively.";
+	NPCSexAftermath Player receives "[if player is female]PussyFuck[else]AssFuck[end if]" from Stella;
 
 to stellainfect:
 	setmonster "Dalmatian Male";
@@ -303,7 +343,8 @@ to say stellajimmy01:
 	say "     While she'd obviously enjoyed the show of Jimmy working over your cock, she's much happier with his muzzle back on her instead of just his paw. While it's her turn to get blown again, the corgi keeps a paw on your cock, stroking your saliva-slick shaft to keep you hard for him. Not that you need much help with the sight of him working the dalmatian's dick in and out of his muzzle.";
 	say "     The playful corgi swaps between you both several times, steadily working your excitement higher with every round[if the remainder after dividing level of Stella by 3 is 0]. Eventually, Stella can't hold back any longer and holds the playful dog's head. She gives a long, happy moan and bucks her hips. From the wet sounds of Jimmy swallowing, you know she's pumping a big load of canine cum into the corgi's belly. Jimmy pumps at your cock all the faster while sucking down the dalmatian's seed, soon driving you to cum messily across his face and muzzle[else if the remainder after dividing level of Stella by 3 is 1]. As you're building towards climax, Jimmy keeps his muzzle on your shaft a little longer, ensuring that you're the one to pop off in his muzzle this time. He moans wetly as you shoot blast after blast of your [Cum Load Size of Player] load into his mouth and down his throat. Meanwhile, Stella's been masturbated to her own climax, spraying her semen across the corgi's sucking muzzle[else]. With you both about to blow, Jimmy changes over to rapidly stroking you both off while exchanging licks across the tips of your cocks. It's not long before this results in the two of you cumming messily across the cute corgi's face and muzzle. He aims both spurting dongs towards his open mouth, catching what he can on his tongue and letting the rest spray onto him sloppily[end if]. When it's all over, the smaller dog smiles happily, licking his tongue across his messy muzzle to get the rest of his tasty treat.";
 	increase level of Stella by 1;
-	now lastfuck of Jimmy is turns;
+	NPCSexAftermath Jimmy receives "OralCock" from Player;
+	NPCSexAftermath Jimmy receives "OralCock" from Stella;
 
 [  HP of Stella     ]
 [ overall status     ]

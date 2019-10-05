@@ -81,6 +81,7 @@ When Play begins:
 	add "Bald Eagle" to infections of BipedalList;
 	add "Bald Eagle" to infections of FlightList;
 	add "Bald Eagle" to infections of TailList;
+	add "Bald Eagle" to infections of OviImpregnatorList;
 	now Name entry is "Bald Eagle"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]

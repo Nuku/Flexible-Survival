@@ -50,13 +50,9 @@ Version 2 of Vent Fox by Dys begins here.
 [   2 = Small                                                        ]
 [   3 = Average                                                      ]
 
-GarageRoomConnection is a number that varies.[@Tag:NotSaved]
-
-an everyturn rule:
-	if VentFoxContentLevel is 3 and GarageRoomConnection is 0:
-		change the North exit of Smith Haven Mall Lot West to Maintenance Garage;
-		change the South exit of Maintenance Garage to Smith Haven Mall Lot West;
-		now GarageRoomConnection is 1; [room connected]
+a postimport rule: [bugfixing rules for players that import savegames]
+	if VentFoxContentLevel is 3:
+		connect Maintenance Garage;
 
 Section 0 - Variables
 
@@ -106,7 +102,7 @@ instead of going east from Mall Atrium while (VentFoxEncounterCount < 2 and a ra
 			say "     Deciding it's probably best to just move along, you continue making your way to the East Wing.";
 	else if VentFoxEncounterCount is 1: [second time]
 		say "     As you head to the East Wing, you hear squeaking coming from the same shop you'd found [']Vent['] in. Sighing, you decide to make your way to the store to help the silly latex vulpine. Stepping inside, you don't even bother looking around before you go to the vent. You unfasten the cover again, pulling it, and the fox towards you. This time, he doesn't seem startled or scared. As a matter of fact, he almost looks relieved. You gently free him from the grate, but this time, he doesn't dash back into the ductwork immediately. Instead, the little creature leans down to pick up the bike wheel tubing that is still laying there with his teeth, dragging it along. He turns to look at you before running back into the vents.";
-		say "     Not bothering to put the cover back in place, you continue heading to the East Wing, a small smile on your [Face of Player] face. [bold type]Perhaps you could search around the mall to find how the fox got inside in the first place...[roman type]";
+		say "     Not bothering to put the cover back in place, you continue heading to the East Wing, a small smile on your [FaceSpeciesName of Player in lower case] face. [bold type]Perhaps you could search around the mall to find how the fox got inside in the first place...[roman type]";
 		now VentFoxEncounterCount is 2; [did the event twice]
 		now VentFoxRelationship is 2;
 
@@ -232,6 +228,10 @@ The description of Maintenance Garage is "[MaintenanceGarageDescription]".
 
 to say MaintenanceGarageDescription:
 	say "     Vent's new home is sparsely decorated. A few workbenches line the rear wall, and a hydraulic lift is off to one side of the room. Aside from that, there's not much to see. Off to one corner, you can see Vent. He gives you a toothy grin as he sees you, eager to spend time with you.";
+
+to connect Maintenance Garage:
+	change the North exit of Smith Haven Mall Lot West to Maintenance Garage;
+	change the South exit of Maintenance Garage to Smith Haven Mall Lot West;
 
 Section 4 - Menus
 
@@ -748,8 +748,7 @@ to say VentFoxLastScavScene:
 	say "     Now that the guard has been dealt with, you and your friend continue your search for some easily accessible rubber. Looking around the lot, you eventually see a totaled truck. Upon closer examination, you notice there's a whole bed-full of tires in it! Vent seems to realize this too, as he hops up into the back of the truck, making quick work of the tires. Soon enough, he's devoured them all, and grown in size as well. Your foxy compatriot now stands taller than a horse when at full size. Of course, he doesn't stay that large for long, quickly shrinking back down to a much more manageable size, hopping out of the truck bed. With his hunger sated, the two of you make your way back to his hide out.";
 	now VentFoxContentLevel is 3;
 	now VentFoxLastFed is turns;
-	change the North exit of Smith Haven Mall Lot West to Maintenance Garage;
-	change the South exit of Maintenance Garage to Smith Haven Mall Lot West;
+	connect Maintenance Garage;
 
 Chapter 2 - Sex Scenes
 
@@ -1274,8 +1273,7 @@ Carry out MaxOutVentStats:
 	now VentFoxEncounterCount is 3;
 	now VentFoxContentLevel is 3;
 	now VentFoxRelationship is 3;
-	change the North exit of Smith Haven Mall Lot West to Maintenance Garage;
-	change the South exit of Maintenance Garage to Smith Haven Mall Lot West;
+	connect Maintenance Garage;
 
 ShowVentStats is an action applying to nothing.
 Understand "ventstats" as ShowVentStats.

@@ -33,9 +33,11 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	add "Quilled Tousky" to infections of AvianList;
 	add "Quilled Tousky" to infections of CanineList;
 	add "Quilled Tousky" to infections of HumorousList;
 	add "Quilled Tousky" to infections of FurryList;
+	add "Quilled Tousky" to infections of FeralList;
 	add "Quilled Tousky" to infections of NatureList;
 	add "Quilled Tousky" to infections of MaleList;
 	add "Quilled Tousky" to infections of KnottedCockList;
@@ -85,7 +87,7 @@ When Play begins:
 	now loot entry is "tousky quill";
 	now lootchance entry is 25; [ Chance of loot dropping 0-100 ]
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]chubby[or]mish-mashed[or]short[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"  Use [one of] to vary ]
+	now body descriptor entry is "[one of]chubby[or]mish-mashed[or]short[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "[one of]hybrid[or]canine[or]puppy[at random]"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false;

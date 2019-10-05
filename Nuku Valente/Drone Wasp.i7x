@@ -47,6 +47,7 @@ When Play begins:
 	add "Drone Wasp" to infections of BipedalList;
 	add "Drone Wasp" to infections of FlightList;
 	add "Drone Wasp" to infections of TailList;
+	add "Drone Wasp" to infections of OviImpregnatorList;
 	add "Drone Wasp" to infections of TailweaponList;
 	now Name entry is "Drone Wasp"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
