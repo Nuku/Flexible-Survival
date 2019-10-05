@@ -22,19 +22,19 @@ to say peacockdesc:
 	now peacockcontrol is 0;
 
 to say peacockskin:
-	if Cock Length of Player > Cunt Depth of Player:
+	if compare genitals of Player > 0:
 		say "blue and green feathers covering your";
 	else:
 		say "brown-hued feathers covering your";
 
 to say peacocktail:
-	if Cock Length of Player > Cunt Depth of Player:
+	if compare genitals of Player > 0:
 		say "You have a beautiful fan of feathers for a tail. The feathers are decorated with hypnotic eyes";
 	else:
 		say "A feathered tail decorates your rear, like half of a long skirt";
 
 to say peacockasschange:
-	if Cock Length of Player > Cunt Depth of Player:
+	if compare genitals of Player > 0:
 		say "feathers emerge from it. They form a peacock tail that you are able to fan with ease";
 	else:
 		say "brown feathers emerge from it. They form a tail that comes down to your knees";
@@ -60,7 +60,7 @@ to say peacockvictory:
 		say "     With another flourish of his tail, you drop to your knees in front of him. You can see his growing member emerging from a slit buried in the soft plumage of his crotch. 'I need some relief, so get to it,' he says, rippling those dazzling tailfeathers. Unresisting, you lean in, taking the bird's cock into your mouth. Running your hands over his feathered hips, you work that avian shaft with your lips, tongue, and palate until your efforts are finally rewarded with a hot, sticky mess. The bird groans in orgasmic release as you swallow each pulse, savoring the exotic flavor of his seed.";
 		WaitLineBreak;
 		if anallevel > 1 and a random chance of 1 in 2 succeeds: [EXTRA ANAL]
-			say "     Once drained, the peacock's shaft withdraws, and he gently tilts your head up to look at him and his colorful tail. He gives it a mesmerizing wave, and your mind rapidly drifts away. Enthralled by his enticing display, you don't protest when the presumably spent peafowl guides you up on unsteady footing, his scaly arms steadying your ascent. 'You thought that we were finished?' he enquires teasingly, making your knees tremble as you try to parse the meaning of his words in your sex- and hypnosis-induced haze. Chuckling softly, the resplendent bird guides you up against the coarse brick of the wall, using one of his taloned feet to spread your legs apart.";
+			say "     Once drained, the peacock's shaft withdraws, and he gently tilts your head up to look at him and his colorful tail. He gives it a mesmerizing wave, and your mind rapidly drifts away. Enthralled by his enticing display, you don't protest when the presumably spent peafowl guides you up on unsteady footing, his scaly arms steadying your ascent. 'You thought that we were finished?' he inquires teasingly, making your knees tremble as you try to parse the meaning of his words in your sex- and hypnosis-induced haze. Chuckling softly, the resplendent bird guides you up against the coarse brick of the wall, using one of his taloned feet to spread your legs apart.";
 			say "     A moan spills past your lips as the handsome male begins to undress you, pulling down any clothes or equipment obscuring your lower half. You bury your face against the dirty red brick, your eyes fluttering closed. His talon-tipped hands glide over the curve of your rear, taking a moment to admire what's rightfully his. 'Such a fine piece of ass,' the fowl whispers into your ear, curling his thumbs to pry the dark cleft apart. The cool air of your exposure draws a shiver of delight, and you push your rear back with mounting excitement, steeling yourself for the mind-melting pleasure your experienced partner is sure to provide.";
 			WaitLineBreak;
 			say "     You feel the warm, stiff contact of his shaft against your bottom, the long and tapered organ smearing his fluids over your yearning flesh. You sigh out with pleasure as his tip teases your star, gently encircling it and lubricating your rim. By the time he pushes his wonderful rod inside of your rear, you can think of nothing but the immense pleasure of giving yourself over to this sexy, assertive bird and the bestial length spearing you open, pushing all the way to the hilt inside of your gripping asshole. Your entire body grows tense with arousal as you're enveloped in his lustrous feathers, metallic hues cradling your back and sides as he begins to pound into you.";
@@ -95,6 +95,7 @@ When Play begins:
 	add "Peacock" to infections of InternalCockList;
 	add "Peacock" to infections of BipedalList;
 	add "Peacock" to infections of TailList;
+	add "Peacock" to infections of OviImpregnatorList;
 	now Name entry is "Peacock";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
@@ -103,7 +104,7 @@ When Play begins:
 	now defeated entry is "The last hit knocks the blue bird on the ground. He stands up quickly and flees in a panic, his pride completely shattered."; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[peacockvictory]";
 	now desc entry is "[peacockdesc]";
-	now face entry is "bird-like head. You pass quite a bit of your time admiring your"; [ Face description, format as "Your face is (your text)."]
+	now face entry is "bird-like. You pass quite a bit of your time admiring it"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "tall and slender; your legs are double-jointed and bird-like, while your arms have been mutated into feathered wings, ending with five extra-thick feathers, flexible and mobile as fingers"; [ Body Description, format as "Your Body is (your text)"]
 	now skin entry is "[peacockskin]"; [ skin Description, format as "You have (your text) skin"]
 	now tail entry is "[peacocktail]."; [ Tail description, write a whole Sentence or leave blank. ]
@@ -349,7 +350,7 @@ Section 6 - Endings
 when play ends:
 	if BodyName of Player is "Peacock":
 		if humanity of Player < 10:
-			if Cock Length of Player > Cunt Depth of Player:
+			if compare genitals of Player > 0:
 				say "You decide to remain in the quarantined city. With your wits and abilities, you will surely find many different... ahem... [']fruits['] to taste.";
 			else:
 				say "You decide to remain in the quarantined city. You become the mate of a male peacock, or rather, his favorite mate. Neither of you wants to sacrifice his fun, after all...";

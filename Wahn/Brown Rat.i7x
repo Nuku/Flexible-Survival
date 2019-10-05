@@ -56,7 +56,7 @@ When Play begins:
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3;
-	now body descriptor entry is "[one of]slender[or]wiry[as decreasingly likely outcomes]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"  Use [one of] to vary ]
+	now body descriptor entry is "[one of]slender[or]wiry[as decreasingly likely outcomes]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "[one of]rat[or]murine[or]ratty[at random]";
 	now magic entry is false;
 	now resbypass entry is false;
@@ -183,6 +183,6 @@ to say brown rat cum use:
 	PlayerDrink 10;
 	SanLoss 3;
 	if "Iron Stomach" is not listed in Feats of Player:
-		infect "Brown Rat";
+		infect "Brown Rat Male";
 
 Brown Rat ends here.

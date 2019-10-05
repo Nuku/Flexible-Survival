@@ -22,7 +22,7 @@ to say losetoReptaur:
 			WaitLineBreak;
 			say "     As the seconds turn into minutes, the pace set between you and the Reptaur steadily increases as you and then mutant fuck each other with progressively stronger bucks, both of you equaling the strength the other exerts, as your cum begins to boil inside of your balls. Groaning as you reach the point of no return you arch into the reptile holding you down just as your cock strokes over that all too familiar pleasurable spot inside of the Reptaur's vice tight backside to urge the mutant into its climax. You find yourself cumming seconds later however, as your balls shoot their load into the Reptaur, but instead of moaning in rapture you find your throat tightening in pain as agony rips throughout your shoulder.";
 			WaitLineBreak;
-			say "     Jaws locked firmly into your shoulder blade, the Reptaur hisses its orgasm into your flesh as something milky and thick covers your groin. With your shoulder screaming in pain you gaze at the Reptaur, with its muscles taunt and its body shivering from the physical exertion the serpentine creature just spent, as the reptile's impossibly long tail hikes itself up into the air before everything goes black. When next you come to you find the Reptuar pulling its fangs back from your shoulder as it hisses the end of its climax into your face. Turning your head slightly to see yellow venom dripping out of the pinpricks you find yourself ruefully chuckling at the oddity of what just happened, that is, right before you watch your scaly master pull itself up from your body to turn to go off on its way.";
+			say "     Jaws locked firmly into your shoulder blade, the Reptaur hisses its orgasm into your flesh as something milky and thick covers your groin. With your shoulder screaming in pain you gaze at the Reptaur, with its muscles taunt and its body shivering from the physical exertion the serpentine creature just spent, as the reptile's impossibly long tail hikes itself up into the air before everything goes black. When next you come to you find the Reptaur pulling its fangs back from your shoulder as it hisses the end of its climax into your face. Turning your head slightly to see yellow venom dripping out of the pinpricks you find yourself ruefully chuckling at the oddity of what just happened, that is, right before you watch your scaly master pull itself up from your body to turn to go off on its way.";
 			say "This might not have been so odd, had you not found yourself looking at your cum dripping out of the creature's well worn cunt.";
 		else:
 			if BodyName of Player is not "Reptaur":
@@ -35,7 +35,7 @@ to say losetoReptaur:
 				WaitLineBreak;
 				say "     Your cock quickly finds purchase inside of the hot and moist cunt of the other Reptaur and don't stop the croon of glee that purses free from your lips as you quickly hump yourself into your lover with almost furious thrusts of your hips. Arching its hips and then hissing a groan of pleasure the other reptile bows its head as it submits itself to your forceful acquisition of its body. Grunting and moaning in pleasure you take the side of the other Reptaur's shoulder into your [FaceName of Player] jaw and then hold it down as you proceed to quicken your pace.";
 				WaitLineBreak;
-				say "     Hammering your pelvis into the other reptile's backside you can feel your already overly excited body getting hotter as your cum churns around inside of your balls, threatening to give up their contents at any second now. Releasing the other's shoulder you hiss quietly into the Reptaur's neck as you hump with several more powerful thrusts before stilling and then unleashing your cum in a massive wave inside of the other serpent's body. Your warm seed flooding your playmate's cunt sends your submissive lover into a frenzy as the Reptuar beneath you gasps and then shudders before lifting its tail up high in a sign of acquiescence. You smirk as you can feel the juices of the other's pussy drenching down the side of your groin, but you keep the other held steady until you have finished with it.";
+				say "     Hammering your pelvis into the other reptile's backside you can feel your already overly excited body getting hotter as your cum churns around inside of your balls, threatening to give up their contents at any second now. Releasing the other's shoulder you hiss quietly into the Reptaur's neck as you hump with several more powerful thrusts before stilling and then unleashing your cum in a massive wave inside of the other serpent's body. Your warm seed flooding your playmate's cunt sends your submissive lover into a frenzy as the Reptaur beneath you gasps and then shudders before lifting its tail up high in a sign of acquiescence. You smirk as you can feel the juices of the other's pussy drenching down the side of your groin, but you keep the other held steady until you have finished with it.";
 		infect "Reptaur";
 	else:
 		if a random chance of 1 in 2 succeeds:
@@ -48,7 +48,7 @@ to say losetoReptaur:
 			say "     Fangs holding you tight and cock leaking pre down the side of your legs, you find yourself slipping in and out of a world of delirium as both pleasure and pain battle for supremacy inside of your head. However, it's the wet warmth of the scaly mutant filling your depths to the brim with his cum that has you climaxing in seconds as gush after gush of hot cum surges out to puddle down on the ground between the two of you. It take several minutes before the last of the Reptaur's sticky cum has trailed out of his internal balls before the serpentine creature pulls you up off of his now matted lap. Bizarrely enough the creature is actually gentle as he set you onto your unsteady feet before getting back onto his four feet to go off about his way.[impregchance]";
 		else:
 			if BodyName of Player is not "Reptaur":
-				say "     When the Reptaur grabs you up and then brings you into his hold, you find yourself slightly confused as to what's about to happen as you focus in on the claws holding onto your throat. However, when the scaly creature runs its long, serpentine tongue across your [FaceName of Player] neck, you find yourself calmed by the smooth and moist organ playfully teasing its way across your throat. This proves to be a fatal mistake on your part because the serpent quickly bites down onto your shoulder, sending a sharp wave of pain racing throughout your spine. Gasping and then yelping as you instinctually flail around in an effort to try and get away you find the Reptaur holding onto you tightly as its venom seeps into your bloodstream.";
+				say "     When the Reptaur grabs you up and then brings you into his hold, you find yourself slightly confused as to what's about to happen as you focus in on the claws holding onto your throat. However, when the scaly creature runs its long, serpentine tongue across your [FaceName of Player] neck, you find yourself calmed by the smooth and moist organ playfully teasing its way across your throat. This proves to be a fatal mistake on your part because the serpent quickly bites down onto your shoulder, sending a sharp wave of pain racing throughout your spine. Gasping and then yelping as you instinctively flail around in an effort to try and get away you find the Reptaur holding onto you tightly as its venom seeps into your bloodstream.";
 				WaitLineBreak;
 				say "     Seconds later, when its venom has completely seeped into you, the Reptaur pulls its jaw back from off of your tender, and now aching skin, and then gently sets you onto the ground. Without a word it turns and then leaves you. Idly you reach up to rub the side of your healing neck as confusion sweeps throughout your mind.";
 			else:
@@ -184,13 +184,15 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Reptaur"; [name of the overall species of the infection, used for children, ...]
+	add "Reptaur" to infections of ReptileList;
 	add "Reptaur" to infections of HybridList;
 	add "Reptaur" to infections of FurryList;
 	add "Reptaur" to infections of HermList;
 	add "Reptaur" to infections of TaperedCockList;
 	add "Reptaur" to infections of InternalCockList;
-	add "Reptaur" to infections of BipedalList;
+	add "Reptaur" to infections of TaurList;
 	add "Reptaur" to infections of TailList;
+	add "Reptaur" to infections of OviImpregnatorList;
 	add "Reptaur" to infections of TailweaponList;
 	now Name entry is "Reptaur"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "Reptaur"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]

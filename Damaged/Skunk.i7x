@@ -168,10 +168,12 @@ When Play begins:
 	now Species Name entry is "Skunk"; [name of the overall species of the infection, used for children, ...]
 	add "Skunk" to infections of FurryList;
 	add "Skunk" to infections of NatureList;
+	add "Skunk" to infections of FemaleList;
 	add "Skunk" to infections of MaleList;
 	add "Skunk" to infections of SheathedCockList;
 	add "Skunk" to infections of BipedalList;
 	add "Skunk" to infections of TailList;
+	add "Skunk" to infections of TailweaponList;
 	now Name entry is "Skunk"; [Name of your new Monster]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
@@ -200,7 +202,7 @@ When Play begins:
 	now HP entry is 64;              [- How many HP has the monster got? -]
 	now lev entry is 5;              [- Level of the Monster, you get this much HP if you win, or this much HP halved if you loose -]
 	now wdam entry is 10;            [-Amount of Damage monster Does when attacking.-]
-	now area entry is "Forest";      [- Current options are "Outside" and "Mall"  Case sensitive-]
+	now area entry is "Forest";      [- Current options are "Outside" and "Mall". Case sensitive-]
 	now Cock Count entry is 0;            [- How many cocks will the infection try and cause if sex is "Male" or "Both"-]
 	now Cock Length entry is 0;      [- Length infection will make cock grow to if cocks-]
 	now Ball Size entry is 0;       [- Size of balls apparently ;) sneaky Nuku-]

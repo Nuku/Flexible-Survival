@@ -91,8 +91,10 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Manticore"; [name of the overall species of the infection, used for children, ...]
+	add "Manticore" to infections of FelineList;
 	add "Manticore" to infections of HybridList;
 	add "Manticore" to infections of FurryList;
+	add "Manticore" to infections of FeralList;
 	add "Manticore" to infections of MythologicalList;
 	add "Manticore" to infections of HermList;
 	add "Manticore" to infections of BarbedCockList;

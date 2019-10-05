@@ -92,6 +92,41 @@ object	name
 Nermine	"Nermine"
 
 Nermine is a woman.
+ScaleValue of Nermine is 3. [human sized]
+Body Weight of Nermine is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Nermine is 7. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Nermine is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Nermine is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Nermine is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Nermine is 6. [length in inches]
+Breast Size of Nermine is 3. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Nermine is 2. [count of nipples]
+Asshole Depth of Nermine is 8. [inches deep for anal fucking]
+Asshole Tightness of Nermine is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Nermine is 0. [number of cocks]
+Cock Girth of Nermine is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Nermine is 0. [length in inches]
+Ball Count of Nermine is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Nermine is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Nermine is 1. [number of cunts]
+Cunt Depth of Nermine is 9. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Nermine is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Nermine is 3. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Nermine is false.
+PlayerRomanced of Nermine is false.
+PlayerFriended of Nermine is false.
+PlayerControlled of Nermine is false.
+PlayerFucked of Nermine is false.
+OralVirgin of Nermine is false.
+Virgin of Nermine is false.
+AnalVirgin of Nermine is false.
+PenileVirgin of Nermine is false.
+SexuallyExperienced of Nermine is true.
+TwistedCapacity of Nermine is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Nermine is true. [steriles can't knock people up]
+MainInfection of Nermine is "".
 The description of Nermine is "[NermineDesc]".
 The conversation of Nermine is { "Mysterious!" }.
 
@@ -1200,23 +1235,20 @@ To say jackaltotemmagic:
 		say "     Staring at your new appendage you find yourself experimentally moving it from side to side a few times, and watch as it responds with surprising dexterity. Taking a few steps you are surprised to find your new tail helping your balance greatly. To yourself, you have to admit, the nice jackal tail does look rather hot on you. A strange sensation in your hand makes you look down, where you see the little token turn into fine grains of black sand and slip through your fingers, then blow away on a sudden gust of wind coming out of nowhere. Huh. Guess its purpose has been fulfilled, so you won't need it anymore...";
 		now TailName of Player is "Jackalboy";
 		now tail of Player is "You have a sleek black-furred jackal's tail attached to your rear. It seems to sway happily over your tight sexy ass with every step you take.";
-		say "[bold type]Your dexterity has increased by 3![roman type][line break]";
-		increase dexterity of Player by 3;
+		StatChange "Dexterity" by 4;
 		now JackalBoyTF is 1;
 	else if JackalBoyTF is 1:
 		say "     Taking hold of this new jackal figurine, you nervously rub it between your hands several times, wondering what will happen this time. The totem seems to grow warm before crumbling into dust between your fingers, making your hands start to tingle strangely as the dust sticks to them, covering them in blackness. Looking down at your skin, you blink as the night-black color starts to spread, covering your hands in shiny blackness. You quickly realize as the blackness surges up your arms and starts to cover your body in leaps and bounds that it is actually shiny black fur, sleek dark jackal fur just like Nermine's. For some reason, the idea of having soft and sexy black fur just like the nice and wonderful shopkeeper of that strange shop seems to make you feel happier and more content, and also perhaps just a bit horny as well. Somehow you are sure your nice new pelt of soft fur will appeal to more than just the shopkeeper as well, and find yourself looking forward to showing off your new beautiful pelt.";
 		now Skin of Player is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]";
 		now SkinName of Player is "Jackalboy";
-		say "[bold type]Your charisma has increased by 4![roman type][line break]";
-		increase charisma of Player by 4;
+		StatChange "Charisma" by 4;
 		now JackalBoyTF is 2;
 	else if JackalBoyTF is 2:
 		say "     Taking out the shiny black jackal statue, you get the impression for a second that this particular jackal totem is grinning at you, but when you take a closer look you see that it looks just like the other statues. You rub the little figurine eagerly, looking forward to whatever powerful change this one will bring out in you. There it is again! This time, you are sure that you've seen the totem grin and wink at you, so you raise it to right in front of your eyes once more. As you focus on the black jackal intently, he wags his ears at you and grins, then suddenly crumbles into dust that a gust of what seems to be warm desert air blows straight into your face. You reach your hands up to feel your face, even as it seems to crack and shift, your sight clouding over as your eyes seem to change. When you can see again a second later, the lower half of your face seems to shift, pulling forward into a black-furred muzzle like a jackal would have.";
 		say "     While you are feeling the sides of this new jackal-like face, even as the bones settle and it finishes forming, new scents explode through your brain as your nose finishes shifting into place atop your narrow canine muzzle. You blink several times as you focus on something else than your own face for a second, finding that you see the world through new sharper eyes, and all sounds around you intensify as your new black canine ears finish shifting to stand straight up on your changed head. A feral grin stretches your new muzzle wide as you think of how happy Nermine will be to see your newest change, your mind filled with thoughts of Nermine and the need to please the wonderful jackal-woman. As you take in the world through your new heightened senses, you find yourself hoping she will be pleased enough with you to help you on your way to becoming even more the happy little jackal you just know you need to be.";
 		now FaceName of Player is "Jackalboy";
 		now Face of Player is "narrow canine head, with a long, sleek muzzle and a nicely flattened forehead. Your golden eyes seem to take in every aspect of the world around you as your sleek jackal ears swivel around on top of your head to catch the faintest noise. You can't help but enjoy how much your mistress seems to like your new jackal's head";
-		say "[bold type]Your perception has increased by 3![roman type][line break]";
-		increase perception of Player by 3;
+		StatChange "Perception" by 3;
 		now JackalBoyTF is 3;
 	else if JackalBoyTF is 3:
 		say "     Pulling this small jackal totem out, you find yourself grinning along with the statue as you realize that surely this figurine will be the last one you will need. Rubbing the little statue eagerly you feel a surge of warmth as it seems to melt under your hands, not crumbling like the others but melding with your body to become part of you. You don't have much time to think about this however, as your entire body starts to tingle and shift this time, your muscles seeming to ripple and smooth out, to give you a softer and more delicate appearance. You can feel the sharp claws of a jackal pushing out of your hands and feet, even as your body begins to take on a slightly more animalistic shape. Your heels lift slightly off the ground as your rear legs crack and shift to a more stable stance and your feet seem to spread apart on new jackal paws.";
@@ -1228,11 +1260,8 @@ To say jackaltotemmagic:
 		attributeinfect "Jackalboy";
 		now CockName of Player is "Jackalboy";
 		now Cock of Player is "[one of]canine[or]Jackalboy[or]jackal-like[or]knotted[at random]";
-		say "[bold type]Your strength has decreased by 2![roman type][line break]";
-		decrease strength of Player by 2;
-		decrease capacity of Player by 10;
-		say "[bold type]Your dexterity has increased by 4![roman type][line break]";
-		increase dexterity of Player by 4;
+		StatChange "Strength" by 2;
+		StatChange "Dexterity" by 4;
 		now JackalBoyTF is 4;
 
 An everyturn rule:

@@ -14,7 +14,7 @@ The sarea of Mysterious Stranger is "Outside".
 Instead of resolving a Mysterious Stranger:
 	say "     'Hey, you over there with the [FaceName of Player] face. Come here for a second.' It's the sound of the other's voice that makes you stop dead in your tracks more than what the other just said. Having not become used to being addressed so casually you stop dead in your tracks and then turn to have a look over at the...[italic type]man[roman type], at least you think it's a man from the sound of the other's voice, standing in front of an overturned Cadillac. Some unfamiliar instinct has you lowering your guard as you step closer to the unknown person, who oddly enough seems quite human given his very [italic type]normal[roman type] looking gait.";
 	WaitLineBreak;
-	say "     'Say, you look like the kinda persona that could use a little [italic type]somethin somethin[roman type] to help perk [if Player is male]him[else]them[end if] up. So why not try this?' The man calmly fishes through a backpack sitting on the ground next to him and then hands something over to you. Hesitantly you stretch out your hand out and then watch as the stranger drops three small capsules into your hand. Looking over them, you immediately wonder if you've just been given a narcotic, but before you can ask the question the other the mysterious stranger is chuckling and shaking his head at you.";
+	say "     'Say, you look like the kinda persona that could use a little [italic type]somethin' somethin'[roman type] to help perk [if Player is male]him[else]them[end if] up. So why not try this?' The man calmly fishes through a backpack sitting on the ground next to him and then hands something over to you. Hesitantly you stretch out your hand out and then watch as the stranger drops three small capsules into your hand. Looking over them, you immediately wonder if you've just been given a narcotic, but before you can ask the question the other the mysterious stranger is chuckling and shaking his head at you.";
 	WaitLineBreak;
 	say "     'Don't worry. It's not dope or anything like that - though something stronger than a gin and tonic might be a necessity in these strange times. Let's just call these little joys...[italic type]stamina boosters[roman type] and leave it like that.' The man chuckles at you from underneath the shade of the black detective hat that he has draped onto his head before picking up his pack and then slinging it over his shoulder. 'Be seeing you around.' And with that the other is gone. Not sure you blink as you watch the other go off about his way before shaking your head as you realize just where you are at the moment.";
 	WaitLineBreak;
@@ -41,8 +41,7 @@ to say capsuleuse:
 	say "Not sure, but trusting the unknown person who gave you this thing you pop the capsule into your mouth.";
 	if a random chance of 1 in 2 succeeds:
 		say "     A slightly stomach pain causes your knees give out and you find yourself kneeling onto the ground with your [one of]left[or]right[at random] hand being the only thing keeping your from face planting onto the ground. A second or two later the pain subsides and you shake your head before getting back up onto your feet. Berating yourself for taking an unknown substance from an unknown person you pause and then blink before noting that you feel rather...odd...all of a sudden. Could the capsule have really increased your stamina or is this some kind of placebo affect?";
-		say "[bold type]Your stamina has increased by 1![roman type][line break]";
-		increase the stamina of the player by 1;
+		StatChange "stamina" by 1;
 	else:
 		say "     Waiting for the results to kick in, you spend almost ten minutes waiting before you find yourself shrugging. Guess the guy was full of bull.";
 
@@ -120,7 +119,7 @@ Sailor Outfit is equipment.
 Sailor Outfit is not temporary.
 The AC of Sailor Outfit is 10.
 The effectiveness of Sailor Outfit is 40.
-The placement of Sailor Outfit is "body".
+The placement of Sailor Outfit is "chest".
 The descmod of Sailor Outfit is "A simple yet magical sailor outfit rests over your body.".
 The slot of Sailor Outfit is "body".
 

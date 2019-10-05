@@ -678,7 +678,7 @@ to say Leonardmusing:
 	if HP of Leonard >= 4:
 		say "     'Ah, [if HP of Leonard >= 16]mate[else if HP of Leonard >= 9]love[else]my pet[end if] - love...' He attempts to circumnavigate Velos's position in the argument by vying for your favor, moving to you, though trying to keep his distance from your occupant. 'Don't listen to this... ludicrous creature's deception. He cannot even conceive my feelings for you.'";
 		say "     Staring into his eyes, you can't help but be pulled along by his words; however, before he can go any further, you're hit with a sharp jolt that tremors through your spine, Velos pulling you away from the lion's influence. Your attention drawn from Leonard, he moves to pull the lion's attention from you, prodding the feline in the torso, smearing his immaculate fur with the serpent's bodily lubricant.";
-		say "     'Ah, ah, now. Quite telling that you'd try to find someone else to do your job for you at a moment's difficulty.' Chastising him, Leonard backs away from you, instinctually trying to rub off the smear, and beginning to look quite cross.";
+		say "     'Ah, ah, now. Quite telling that you'd try to find someone else to do your job for you at a moment's difficulty.' Chastising him, Leonard backs away from you, instinctively trying to rub off the smear, and beginning to look quite cross.";
 	else:
 		say "     'You come into MY home and accuse ME of deception? What right have you to challenge me, parasite?'";
 		say "     'Oh, I wouldn't be so rude as to claim you -deceived- anyone. I'm certain you were completely honest when you compelled your victims into fetching these baubles.' Maintaining his composure in spite of Leonard's rapidly diminishing, this only seems to anger him further.";

@@ -282,7 +282,7 @@ understand "allitemcheat" as allitemcheat.
 check allitemcheat:
 	if debugactive is 0, say "You aren't currently debugging!" instead;
 
-carry out itemcheat:
+carry out allitemcheat:
 	repeat with x running through grab objects:
 		increase carried of x by 1;
 

@@ -69,6 +69,7 @@ When Play begins:
 	add "Triceratops" to infections of InternalCockList;
 	add "Triceratops" to infections of BipedalList;
 	add "Triceratops" to infections of TailList;
+	add "Triceratops" to infections of OviImpregnatorList;
 	add "Triceratops" to infections of TailweaponList;
 	now Name entry is "Triceratops"; [Name of your new Monster]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]

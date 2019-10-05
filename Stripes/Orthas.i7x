@@ -404,7 +404,7 @@ to say Orthasfuck:
 					if Player consents:
 						LineBreak;
 						now seed is 1;
-						delete tappeditem;
+						decrease carried of tappeditem by 1;
 					else:
 						LineBreak;
 						say "'Awww!' She pouts. 'Well, we can still have fun!'";
@@ -429,7 +429,7 @@ to say Orthasfuck:
 							now tappeditem is journal;
 				if tappeditem is not journal:
 					now seed is 1;
-					delete tappeditem;
+					decrease carried of tappeditem by 1;
 				else:
 					say "'Awww!' She pouts. 'Well, we can still have fun!'";
 			if seed is 0:
@@ -548,6 +548,7 @@ When Play begins:
 	add "Dragon" to infections of InternalCockList;
 	add "Dragon" to infections of BipedalList;
 	add "Dragon" to infections of TailList;
+	add "Dragon" to infections of OviImpregnatorList;
 	add "Dragon" to infections of TailweaponList;
 	now Name entry is "Dragon"; [Name of your new Monster]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]

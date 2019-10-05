@@ -29,18 +29,15 @@ Add first ending, add cock/wing/horns tf to description (for later inclusion), a
 [Don't use any of these refs, they are not owned by FS.]
 
 
-KyrverthRoomConnection is a number that varies.[@Tag:NotSaved]
-an everyturn rule: [bugfixing rules for players that import savegames]
+a postimport rule: [bugfixing rules for players that import savegames]
 	if KyrverthStage > 0 and SilverToken is 0 and PlayerFriended of Kyrverth is false and Resolution of Jewel Heist is 0 and Jewel Heist is resolved: [player on the quest, hasn't got the token on them and hasn't handed it in either - so Jewel Heist should be unresolved]
 		now Jewel Heist is not resolved;
 	if KyrverthStage > 0 and Jewel Heist is inactive:
 		now Jewel Heist is active;
 	if Resolution of Strange Sighting is 0 and Strange Sighting is active:
 		now Strange Sighting is not resolved;
-	if Strange Sighting is resolved and Resolution of Strange Sighting is 1 and KyrverthRoomConnection is 0: [event resolved the right way, room not connected yet]
-		change the South exit of Overgrown Street to Dragons Den;
-		change the North exit of Dragons Den to Overgrown Street;
-		now KyrverthRoomConnection is 1; [make sure that it connects the room only once]
+	if Strange Sighting is resolved and Resolution of Strange Sighting is 2: [event resolved the right way, room not connected yet]
+		connect Dragons Den;
 
 Section 1 - Basic Setup
 
@@ -126,6 +123,10 @@ to say DragonsDenDesc:
 			say "     In the center of the room the large nest he made has been broken and remade. Now it is a heap of chainmail, and dragon [if KyrverthQuestHairGiven is true]hair[else]scales[end if] that he curls around at night, safe in the knowledge it cannot be taken without waking him. Bits of chainmail and dragon [if KyrverthQuestHairGiven is true]hair[else]scales[end if] are revealed when Kyrverth wakes, and glint in the light shining through the vault door, making patterns on the walls.";
 	else if KyrverthStage >= 4: [Stages 4, 5, or 6.]
 		say "     This pile of rubble is all that remains of the former bank. Larger pieces have been pushed out to the edge to create a nest of sorts, and in the center the former vault has had its walls split and pushed out in all directions, then flattened down to be the new floor. A hoard is in the center, containing all that is precious to Kyrverth, but you rarely see it as he spends most of his time curled around the former vault to protect it.";
+
+to connect Dragons Den:
+	change the South exit of Overgrown Street to Dragons Den;
+	change the North exit of Dragons Den to Overgrown Street;
 
 to say KyrverthDesc:
 	if KyrverthStage is 0:
@@ -267,7 +268,7 @@ to say KyrverthNormalChat: [Quest give and normal chat]
 to say KyrverthMainChat:
 	let randomnumber be a random number from 1 to 100;
 	if randomnumber <= 5:
-		say "     'Some would say that a fire breathing person shouldn't have a nest made of flammable materials, but it's been ok so far...'";
+		say "     'Some would say that a fire breathing person shouldn't have a nest made of flammable materials, but it's been OK so far...'";
 	else if randomnumber <= 10:
 		say "     'Why am I not the same as the other dragons around the city? Not sure.'";
 	else if randomnumber <= 15:
@@ -349,7 +350,7 @@ to say KyrverthS5Chat:
 to say KyrverthS6Chat:
 	let randomnumber be a random number from 1 to 70;
 	if randomnumber <= 5:
-		say "     'Some would say that a fire breathing person shouldn't have a nest made of flammable materials, but it's been ok so far...'";
+		say "     'Some would say that a fire breathing person shouldn't have a nest made of flammable materials, but it's been OK so far...'";
 	else if randomnumber <= 10:
 		say "     'Why am I not the same as the other dragons around the city? Not sure.'";
 	else if randomnumber <= 15:
@@ -427,7 +428,7 @@ to say KyrverthMaleCheck:
 		Let Randomcharmvar be a random number between 1 and 30;
 		say "     [bold type]Rolling [Randomcharmvar]/30 + Charisma of [charisma of Player] vs 25: [roman type]";
 		if (Randomcharmvar + charisma of Player) < 25:
-			say "You try to convince the dragon that males are ok too, but he shakes his head, firm in the belief that he is into females and females only.";
+			say "You try to convince the dragon that males are OK too, but he shakes his head, firm in the belief that he is into females and females only.";
 		else:
 			now KyrverthMaleBoning is 1;
 			say "'Why not both?' you ask. A big strong dragon like him could have both a dragoness [bold type]and[roman type] a mate. People should be lining up for the honor!";
@@ -623,8 +624,7 @@ Instead of resolving a Strange Sighting: [Very first meeting with the dragon]
 		increase carried of soda by 1;
 		WaitLineBreak;
 		now PlayerMet of Kyrverth is true;
-		change the South exit of Overgrown Street to Dragons Den;
-		change the North exit of Dragons Den to Overgrown Street;
+		connect Dragons Den;
 		move player to Grey Abbey Library;
 		increase score by 2;
 		now KyrverthLockoutTimer is (turns + 4);
@@ -1168,7 +1168,7 @@ when play ends: [Unique TF endings for using the items above]
 			say "     When the military enters the city, you both greet them with open arms and as soon as you are released you head into distant mountains. Your mate turns out to be able to create gold from thin air, and he uses it to buy a home for you both. The two of you passionately make love regularly and quickly the military determination of 'not infectious' turns out to be a falsehood, first your skin starts to become scales, then you begin to take on more and more draconic traits to match your mate. He loves that your changes make you more like him and the love between you only deepens though the years";
 	[]
 	if KyrverthStage is 0 and (KyrverthEndingTimer - turns < 24): [Met him and never went to the dragons den, saw him in the last 3 days.]
-		say "     In the aftermath of the Military reentering the city you hear rumors of [one of]a little dragon that was found trying to rob a jewelry store and had to be tranquilized to be parted with his 'treasure'. You hope that the little dragon you met is ok[or]a ferocious dragon that had set up shop in an old gold mine that the military had trouble with. You wonder if it was the same dragon that you met and wonder what happened to make him so dangerous[at random].";
+		say "     In the aftermath of the Military reentering the city you hear rumors of [one of]a little dragon that was found trying to rob a jewelry store and had to be tranquilized to be parted with his 'treasure'. You hope that the little dragon you met is OK[or]a ferocious dragon that had set up shop in an old gold mine that the military had trouble with. You wonder if it was the same dragon that you met and wonder what happened to make him so dangerous[at random].";
 	[Aftermath text for Kyrverth. Needs to cover stages 0-6. Coming Soon(TM)]
 	[if (hp of Kyrverth > 0): [player met him and got as far as seeing him as an NPC]
 		if humanity of Player < 10: [player went feral]

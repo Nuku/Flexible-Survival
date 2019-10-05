@@ -178,6 +178,7 @@ When Play begins:
 	add "Latex Vixen Herm" to infections of LatexList;
 	add "Latex Vixen Herm" to infections of HermList;
 	add "Latex Vixen Herm" to infections of TaperedCockList;
+	add "Latex Vixen Herm" to infections of KnottedCockList;
 	add "Latex Vixen Herm" to infections of SheathedCockList;
 	add "Latex Vixen Herm" to infections of BipedalList;
 	add "Latex Vixen Herm" to infections of TailList;

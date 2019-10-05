@@ -9,13 +9,10 @@ Version 2 of Campus Lovers by Closerhenry begins here.
 CampusLoversTrackingVariable is a number that varies.
 CampusLoversProgressTurn is a number that varies.
 CampusCoupleRelationship is a number that varies.
-JadakoRoomConnection is a number that varies.[@Tag:NotSaved]
 
-an everyturn rule:
-	if CampusCoupleRelationship is 1 and JadakoRoomConnection is 0: [event resolved the right way, room not connected yet]
-		change the south exit of Jadako's Room to Tenvale College Male Dorms;
-		change the north exit of Tenvale College Male Dorms to Jadako's Room;
-		now JadakoRoomConnection is 1; [make sure that it connects the room only once]
+a postimport rule: [bugfixing rules for players that import savegames]
+	if CampusCoupleRelationship is 1: [event resolved the right way, room not connected yet]
+		connect Jadako's Room;
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -84,7 +81,7 @@ to CampusLoversEvent:
 		if Player consents:
 			LineBreak;
 			say "     You sneak closer, intent on hearing what - or who - the students are talking about. 'I knew that dude was a fag. Always stayed longer after practice too. Bet the old man has been boning him for years!' one student, a male rabbit morph, laughs. For some reason, the gossip is ringing a bell, but you can't place a finger on why until a different student, a German shepherd, cuts in. 'Man, you always were an idiot! Guess you were the only one Jer didn't come out to. None of us cared. And no, the coach always kept things professional. You know - like the amazing guy he is. But now... good for them. The city's gone to hell in a hand-basket, so I for one am glad that they found each other.' At that moment, it clicks, and you remember the student and coach couple you spied on earlier. You think the student's name was Jadako and he called his companion Coach Weber.";
-			say "     'Whatever. All because people are turning into animals doesn't mean it's ok to go around fucking your teacher and being a complete fag,' the rabbit replies with disdain. The third student, a crow morph, lets out a groan. 'Rod, you're being a complete ass. I'm getting real tired of this shit you keep saying,' he huffs. 'Yeah, man. Just chill. No reason to say shit like that,' the German shepherd joins in. 'It's just a joke you too, no need to get on my case like that,' the rabbit complains. His friends aren't convinced, however. 'Listen, man, if you're gonna be all homophobic and shit we aren't gonna hang out with you anymore. Fix your attitude next time you wanna do anything, dude,' the shepherd states as he and his crow friend turn around and walk off. Rod stares after them with a scowl on his face for a few seconds, then angrily stalks off in the other direction. Glancing back, the canine student sees him go and shakes his head, then wraps his arm around the crow's shoulder, who reaches around his boyfriend's back to give him a squeeze in turn.";
+			say "     'Whatever. All because people are turning into animals doesn't mean it's OK to go around fucking your teacher and being a complete fag,' the rabbit replies with disdain. The third student, a crow morph, lets out a groan. 'Rod, you're being a complete ass. I'm getting real tired of this shit you keep saying,' he huffs. 'Yeah, man. Just chill. No reason to say shit like that,' the German shepherd joins in. 'It's just a joke you too, no need to get on my case like that,' the rabbit complains. His friends aren't convinced, however. 'Listen, man, if you're gonna be all homophobic and shit we aren't gonna hang out with you anymore. Fix your attitude next time you wanna do anything, dude,' the shepherd states as he and his crow friend turn around and walk off. Rod stares after them with a scowl on his face for a few seconds, then angrily stalks off in the other direction. Glancing back, the canine student sees him go and shakes his head, then wraps his arm around the crow's shoulder, who reaches around his boyfriend's back to give him a squeeze in turn.";
 			LineBreak;
 			say "     Looks like the two of them have been really careful about not showing what they feel - or Rod is just totally oblivious. As for the coach and student you observed earlier - word of their relationship is clearly getting around. Makes you wonder if that creates any problems for the two. Maybe you could try to find them?";
 			now Resolution of Campus Lovers is 3; [listened in #2]
@@ -111,8 +108,7 @@ to CampusLoversEvent:
 			now CampusCoupleRelationship is 1;
 			move Joseph to Jadako's Room;
 			move Jadako to Jadako's Room;
-			change the south exit of Jadako's Room to Tenvale College Male Dorms;
-			change the north exit of Tenvale College Male Dorms to Jadako's Room;
+			connect Jadako's Room;
 		else:
 			LineBreak;
 			say "     As hot as this is, you don't really have time to watch the two fuck. You take care to break away without causing too much noise. As you leave, you hear the two moaning loudly. At least they are having a good time...";
@@ -121,8 +117,7 @@ to CampusLoversEvent:
 			now CampusCoupleRelationship is 1;
 			move Joseph to Jadako's Room;
 			move Jadako to Jadako's Room;
-			change the south exit of Jadako's Room to Tenvale College Male Dorms;
-			change the north exit of Tenvale College Male Dorms to Jadako's Room;
+			connect Jadako's Room;
 	now CampusLoversProgressTurn is turns; [saves the last turn in which their story progressed]
 
 

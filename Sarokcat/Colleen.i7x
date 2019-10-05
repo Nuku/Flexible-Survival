@@ -180,7 +180,7 @@ instead of conversing the Colleen:
 				increase ColleenTalk by 1;
 			else:
 				say "     'Thanks again for all your help,' Colleen says as she gestures to her freshly bound ankle before glancing over at Sarah. 'Your friend helped me out in getting patched up and told me a little bit about what's going on in the city. I don't want to think about what might have happened to me if you hadn't shown up to help out. We soldiers were given no real clue what we were up against - they just sent us in to gather information,' Colleen says with a sigh, then looks around in the bunker and smiles. 'Seems you found a nice place to hole up in though, and I'm not the only stray you have been picking up, eh? At least there is plenty of room here, even if it is a bit sparse.'";
-				say "     Lowering her voice a bit, Colleen continues, 'I am just a little bit worried about sharing a room with someone that heavily infected. I mean - she seems to be holding out ok, but you never know.' She eyes Sarah with a bit of worry, though you think you might notice hint of interest there as well. 'At least she is something relatively safe like a dog. I don't mind dogs at all really, I even used to have one when I was little,' Colleen says with a fond smile, before turning back to look at you. 'I'm seriously grateful to you for all you've done, for both of us, she told me how you helped her too. Although I know it isn't much, I found a medkit in the library, and I want you to have it,' she says as she hands you a medkit.";
+				say "     Lowering her voice a bit, Colleen continues, 'I am just a little bit worried about sharing a room with someone that heavily infected. I mean - she seems to be holding out OK, but you never know.' She eyes Sarah with a bit of worry, though you think you might notice hint of interest there as well. 'At least she is something relatively safe like a dog. I don't mind dogs at all really, I even used to have one when I was little,' Colleen says with a fond smile, before turning back to look at you. 'I'm seriously grateful to you for all you've done, for both of us, she told me how you helped her too. Although I know it isn't much, I found a medkit in the library, and I want you to have it,' she says as she hands you a medkit.";
 				WaitLineBreak;
 				increase carried of medkit by 1;
 				say "You received a medkit!";
@@ -318,9 +318,9 @@ carry out ColleenSpraying:
 				say "     'Sorry there, little one,' she says with mock sincerity. 'I got rid of that silly little canister a while ago. It's not like anyone here was going to be needing it after all,' Colleen says with a soft husky laugh as she rubs herself up against your body suggestively.";
 			else if ColleenSlut is 1:
 				project the Figure of Colleen_face_icon;
-				say "     'You want to undo some of these wonderful changes? That sounds pretty strange to me...' Colleen says with a sad look on her husky face. 'Well ok, I suppose, but I won't use it on either myself or your pet there,' she says with a gesture at where your happy little bitch is sitting in the corner. 'It is waaay too much fun being a bitch for us to want to be anything else... but I suppose I can still use it on you if you want.'";
+				say "     'You want to undo some of these wonderful changes? That sounds pretty strange to me...' Colleen says with a sad look on her husky face. 'Well OK, I suppose, but I won't use it on either myself or your pet there,' she says with a gesture at where your happy little bitch is sitting in the corner. 'It is waaay too much fun being a bitch for us to want to be anything else... but I suppose I can still use it on you if you want.'";
 				if Player consents:
-					say "     'Well ok, here goes nothing,' the husky slut says nervously as she uncaps the small spray bottle, being careful to make sure it is pointed well away from her, before spraying you with the strange antiseptic smelling liquid. You can feel the strange liquid burn and tingle as it sinks into your body, surprisingly you find yourself feeling a little better and more human almost immediately.";
+					say "     'Well OK, here goes nothing,' the husky slut says nervously as she uncaps the small spray bottle, being careful to make sure it is pointed well away from her, before spraying you with the strange antiseptic smelling liquid. You can feel the strange liquid burn and tingle as it sinks into your body, surprisingly you find yourself feeling a little better and more human almost immediately.";
 					now Face of Player is "human";
 					now FaceName of Player is "human";
 					now Body of Player is "human";
@@ -337,9 +337,9 @@ carry out ColleenSpraying:
 					say "     'See isn't it just better to be like this!' Colleen says as she wags her tail happily at you. 'I'm so glad you agree with me!'";
 			else if SarahSlut > 3:
 				project the Figure of Colleen_face_icon;
-				say "     'Well ok, I admit the spray might still work on you, but it certainly won't work on your little pet over there, and I definitely feel too good to want to use it on myself, so I can use it on you if you really want me to... But it seems so boring if you ask me...' Colleen says as she pants slightly, her tail wagging eagerly behind her, obviously enjoying her infection and probably hoping you do as well. Do you ask her to spray you anyways?";
+				say "     'Well OK, I admit the spray might still work on you, but it certainly won't work on your little pet over there, and I definitely feel too good to want to use it on myself, so I can use it on you if you really want me to... But it seems so boring if you ask me...' Colleen says as she pants slightly, her tail wagging eagerly behind her, obviously enjoying her infection and probably hoping you do as well. Do you ask her to spray you anyways?";
 				if Player consents:
-					say "     'Well ok, here goes nothing,' Colleen says with a drooping tail as she uncaps the small spray bottle before spraying you with the strange antiseptic smelling liquid. You can feel the strange liquid burn and tingle as it sinks into your body, surprisingly you find yourself feeling a little better and more human almost immediately.";
+					say "     'Well OK, here goes nothing,' Colleen says with a drooping tail as she uncaps the small spray bottle before spraying you with the strange antiseptic smelling liquid. You can feel the strange liquid burn and tingle as it sinks into your body, surprisingly you find yourself feeling a little better and more human almost immediately.";
 					now Face of Player is "human";
 					now FaceName of Player is "human";
 					now Body of Player is "human";
@@ -356,13 +356,13 @@ carry out ColleenSpraying:
 				else:
 					say "     'See!' Colleen says happily. 'I knew you would understand how much fun being like this is!' she says as she wags her naked body at you.'";
 			else if SarahSlut > 0:
-				say "     'Well ok, the spray bottle is full so it should still work on you, and it might work to help Sarah over there regain a bit of her sanity as well, but treating someone as far gone as her would take the whole bottle at once. So you need to decide what you want to do,' Colleen says as she uncaps the small spray bottle and holds it up. Do ask her to help Sarah?'";
+				say "     'Well OK, the spray bottle is full so it should still work on you, and it might work to help Sarah over there regain a bit of her sanity as well, but treating someone as far gone as her would take the whole bottle at once. So you need to decide what you want to do,' Colleen says as she uncaps the small spray bottle and holds it up. Do ask her to help Sarah?'";
 				if Player consents:
-					say "     'Ok! You're the boss!' Colleen says, as she turns and ambushes Sarah with the spray can, a chemical smell fills the bunker, warring with the scent of needy husky, as she unloads the can on the husky. Sarah looks offended at first, and then somewhat embarrassed as she blushes and clutches her clothes tightly to her. Soon the can clicks empty, and you can see that Sarah looks about as clearheaded now as she did right after you first found her...";
+					say "     'OK! You're the boss!' Colleen says, as she turns and ambushes Sarah with the spray can, a chemical smell fills the bunker, warring with the scent of needy husky, as she unloads the can on the husky. Sarah looks offended at first, and then somewhat embarrassed as she blushes and clutches her clothes tightly to her. Soon the can clicks empty, and you can see that Sarah looks about as clearheaded now as she did right after you first found her...";
 					now SarahSlut is 0;
 					now ColleenSpray is 3;
 				else:
-					say "     'Well ok, you're the boss, and it probably would have only been a temporary fix for her anyways, so here goes nothing,' Colleen says as she uncaps the small spray bottle before spraying you with the strange antiseptic smelling liquid. You can feel the strange liquid burn and tingle as it sinks into your body. Surprisingly, you find yourself feeling a little better and more human almost immediately.";
+					say "     'Well OK, you're the boss, and it probably would have only been a temporary fix for her anyways, so here goes nothing,' Colleen says as she uncaps the small spray bottle before spraying you with the strange antiseptic smelling liquid. You can feel the strange liquid burn and tingle as it sinks into your body. Surprisingly, you find yourself feeling a little better and more human almost immediately.";
 					now Face of Player is "human";
 					now FaceName of Player is "human";
 					now Body of Player is "human";
@@ -376,9 +376,9 @@ carry out ColleenSpraying:
 					SanBoost 20;
 					increase ColleenSpray by 1;
 			else:
-				say "     'Well ok, the spray bottle is full so it should still work on you. Want me to spray you now?'";
+				say "     'Well OK, the spray bottle is full so it should still work on you. Want me to spray you now?'";
 				if Player consents:
-					say "     'Well ok, here goes nothing,' Colleen says as she uncaps the small spray bottle before spraying you with the strange antiseptic smelling liquid. You can feel the strange liquid burn and tingle as it sinks into your body. Surprisingly, you find yourself feeling a little better and more human almost immediately.";
+					say "     'Well OK, here goes nothing,' Colleen says as she uncaps the small spray bottle before spraying you with the strange antiseptic smelling liquid. You can feel the strange liquid burn and tingle as it sinks into your body. Surprisingly, you find yourself feeling a little better and more human almost immediately.";
 					now Face of Player is "human";
 					now FaceName of Player is "human";
 					now Body of Player is "human";
@@ -394,7 +394,7 @@ carry out ColleenSpraying:
 				else:
 					say "     'Okay, I'll hold on to it some more then,' Colleen tells you and tugs the small spray bottle away.";
 		else:
-			say "     'Well ok, here goes nothing,' Colleen says as she uncaps the small spray bottle before spraying you with the strange antiseptic smelling liquid. You can feel the strange liquid burn and tingle as it sinks into your body. Surprisingly, you find yourself feeling a little better and more human almost immediately.";
+			say "     'Well OK, here goes nothing,' Colleen says as she uncaps the small spray bottle before spraying you with the strange antiseptic smelling liquid. You can feel the strange liquid burn and tingle as it sinks into your body. Surprisingly, you find yourself feeling a little better and more human almost immediately.";
 			now Face of Player is "human";
 			now FaceName of Player is "human";
 			now Body of Player is "human";
@@ -408,7 +408,7 @@ carry out ColleenSpraying:
 			SanBoost 20;
 			increase ColleenSpray by 1;
 	else if ColleenSpray is 1:
-		say "     'Ok, let's try that again! I only have about enough for one more dose after this,' Colleen warns you as she once again sprays you with the foul smelling liquid again, the tingling feeling spreading through you again, although strangely it seems to be much less strong this time. Perhaps the chemicals are losing their effectiveness?";
+		say "     'OK, let's try that again! I only have about enough for one more dose after this,' Colleen warns you as she once again sprays you with the foul smelling liquid again, the tingling feeling spreading through you again, although strangely it seems to be much less strong this time. Perhaps the chemicals are losing their effectiveness?";
 		now Body of Player is "human";
 		now BodyName of Player is "human";
 		now scalevalue of Player is 3;
@@ -754,6 +754,6 @@ When play ends:
 				say "     Colleen is extremely happy when the rescue arrives, and while she has picked up a few minor traits from her time spent with you in the bunker, she is still recognizable and mostly human. She manages to talk to several of the military troops that rescue you and puts in several good words for you based on how you helped her survive. This means the military is more than happy to let you out of the city while they deal with the more important and dangerous beasts still left inside. Colleen keeps in touch with you as you begin to make a life for yourself afterwards, which includes semi-regular visits on weekends to let off some steam. As you lay in bed together after some sweaty sex with the trained woman, she usually talks a little about the ongoing containment mission of the city.";
 				say "     Having an on and off again lover in the military does have its scary moments too though, as Colleen's scouting missions usually put her in the thick of making sure no infective beasts manage to make it out of the city. Sometimes it takes days before you hear back from her, but in the end you always do, with Colleen having some new and exciting stories to tell. And not only that, as the continued exposure to new active nanites does change little things about her, despite all that the army scientists can do about it. Nothing big though, and the brave soldier doesn't have to worry about losing her humanity - but you have to admit that it is quite interesting to find out just what the color of her eyes - or the shape and size of her pussy - is when she returns to you the next time.";
 			else: [no sex between Colleen and the player]
-				say "     Colleen is extremely happy when the rescue arrives, and while she has picked up a few minor traits from her time spent with you in the bunker, she is still recognizable and mostly human. She manages to talk to several of the military troops that rescue you and puts in several good words for you based on how you helped her survive. This means the military is more than happy to let you out of the city while they deal with the more important and dangerous beasts still left inside. Colleen keeps in touch with you as you begin to make a life for yourself afterwards, until finally you lose contact with her after she goes on a scouting mission in the area around the city to make sure none of the beasts managed to escape. You find yourself alternatively hoping she turns up ok and unchanged, or wondering if she would be happy to welcome you and change you into whatever she became if you hunted her down...";
+				say "     Colleen is extremely happy when the rescue arrives, and while she has picked up a few minor traits from her time spent with you in the bunker, she is still recognizable and mostly human. She manages to talk to several of the military troops that rescue you and puts in several good words for you based on how you helped her survive. This means the military is more than happy to let you out of the city while they deal with the more important and dangerous beasts still left inside. Colleen keeps in touch with you as you begin to make a life for yourself afterwards, until finally you lose contact with her after she goes on a scouting mission in the area around the city to make sure none of the beasts managed to escape. You find yourself alternatively hoping she turns up OK and unchanged, or wondering if she would be happy to welcome you and change you into whatever she became if you hunted her down...";
 
 Colleen ends here.

@@ -63,7 +63,7 @@ Instead of Resolving a Needy Rabbit Girl:
 				say "     [sexwithSandra]";
 				say "[bold type]You now know how to navigate to the rabbit den[roman type].";
 			else:
-				say "     She looks clearly disappointed and crosses her arms. 'I thought you were the kind of man to help me, but I guess I was wrong. Or maybe you're shy? Look, you're nice. Here's my address, ok? Come visit any time.";
+				say "     She looks clearly disappointed and crosses her arms. 'I thought you were the kind of man to help me, but I guess I was wrong. Or maybe you're shy? Look, you're nice. Here's my address, OK? Come visit any time.";
 			now Rabbit den is known;
 			increase score by 1;
 			now Needy Rabbit Girl is resolved;
@@ -164,7 +164,7 @@ to say sandtalk:
 		if rabbitsibling > 0 and a random chance of 1 in 10 succeeds:
 			say "     '[one of]If calling you [sangr] is no longer feels right[or]Remember, if you ever want me to stop calling you [sangr][stopping], just make a [bold type]Request[roman type].";
 		else:
-			say "     [one of]'Did I mention my name is Sandra yet? I can be sometimes a ditz about that.'[or]'It's so nice having someone around to talk with.'[or]'Do you think someone will come rescue us?'[or]'I hope my rabbit is ok. I mean, yeah, he did kind of bite me and turn me into a crazy rabbit lady, but he's still my pet.'[or]'You smell nice. God that sounded weird, sorry.'[or]'Hello there!'[at random]";
+			say "     [one of]'Did I mention my name is Sandra yet? I can be sometimes a ditz about that.'[or]'It's so nice having someone around to talk with.'[or]'Do you think someone will come rescue us?'[or]'I hope my rabbit is OK. I mean, yeah, he did kind of bite me and turn me into a crazy rabbit lady, but he's still my pet.'[or]'You smell nice. God that sounded weird, sorry.'[or]'Hello there!'[at random]";
 
 to sangenderquery:
 	say "     'Oh, thank you!' She seems very giddy over you agreeing to these terms. 'Alright, so";
@@ -224,7 +224,7 @@ to say sexwithSandra:
 	else if rabbitsibling > 0 and rabbitsibling < 5:
 		say "[sandrasex2]";
 	else if Player is neuter:
-		say "     'Uh, hon? No offense or anything, but you have nothing to play with. Fucking someone without any of that just feels weird to me, ok? Sorry.'";
+		say "     'Uh, hon? No offense or anything, but you have nothing to play with. Fucking someone without any of that just feels weird to me, OK? Sorry.'";
 	else if HP of Sandra is 0 and player is male:
 		say "[sandrasex_leadin]";
 		say "[sandrasex1]";
@@ -245,36 +245,36 @@ to say sandrasexmenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Sex up the bunny";
 		now sortorder entry is 1;
-		now description entry is "offer the bunny a good dicking";
+		now description entry is "Offer the bunny a good dicking";
 	if HP of Sandra is 3 and lastfuck of Colleen - turns < 4:
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome w/Colleen";
 		now sortorder entry is 10;
-		now description entry is "invite the husky to join you";
+		now description entry is "Invite the husky to join you";
 	if HP of Philip is 2 and lastfuck of Philip - turns < 6:
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome w/Philip";
 		now sortorder entry is 11;
-		now description entry is "partake in piggy cock together";
+		now description entry is "Partake in piggy cock together";
 	choose a blank row in table of fucking options;
 	now title entry is "Cunnilingus";
 	now sortorder entry is 2;
-	now description entry is "eat the bunny girl out";
+	now description entry is "Eat the bunny girl out";
 	if Player is male or ( player is female and rabbitsibling >= 2 ):
 		choose a blank row in table of fucking options;
 		now title entry is "69";
 		now sortorder entry is 3;
-		now description entry is "have a sexy 69 with the bunny cutie";
+		now description entry is "Have a sexy 69 with the bunny cutie";
 	if rabbitsibling > 0 and rabbitsibling < 5:
 		choose a blank row in table of fucking options;
 		now title entry is "Rabbit Kin Induction";
 		now sortorder entry is 4;
-		now description entry is "undergo the process of being changed to be like Sandra";
+		now description entry is "Undergo the process of being changed to be like Sandra";
 	else if rabbitsibling > 4:
 		choose a blank row in table of fucking options;
 		now title entry is "Rabbit Sister Fun";
 		now sortorder entry is 4;
-		now description entry is "have some toy fun with your rabbit sister";
+		now description entry is "Have some toy fun with your rabbit sister";
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -387,7 +387,7 @@ to say sandrasex1: [fuck the bunny]
 				increase score by 5;
 			else:
 				if Sandra is in rabbit den:
-					say "     Finished and getting dressed, you feel a hand tugging at you and turn to Sandra. 'Look... Being a rabbit makes me kind of nervous, but I'm not infectious, right? I mean, god that was a stupid way to put it. I like you, ok? I want to come with you, please?'";
+					say "     Finished and getting dressed, you feel a hand tugging at you and turn to Sandra. 'Look... Being a rabbit makes me kind of nervous, but I'm not infectious, right? I mean, god that was a stupid way to put it. I like you, OK? I want to come with you, please?'";
 					say "     Do you let her?";
 					if Player consents:
 						add "water bottle" to invent of bunker;
@@ -403,7 +403,7 @@ to say sandrasex1: [fuck the bunny]
 						now Rabbit Den is not known;
 						follow turnpass rule;
 					else:
-						say "     'Oh... well... ok, well, you know where to find me.' She sighs out and settles on her cot, watching you.";
+						say "     'Oh... well... OK, well, you know where to find me.' She sighs out and settles on her cot, watching you.";
 			now lastfuck of Sandra is turns;
 		[try looking;]
 
@@ -421,8 +421,7 @@ to say sandrasex2: [become bunny siblings]
 			stop the action;
 		say "     She hikes up her dress, revealing her huge pussy. The vulva is about three inches long, and she reaches down to part those thick lips wetly with two fingers. A third finger dips inside, rubbing around slowly. She tenses and shudders from the intense feel of it, but does not linger for long, bringing out her now-glistening finger and holding it in front of your face. The musky fluid smells good - no, great - intoxicating your senses.";
 		say "     Without thinking much about it, you flick your tongue over it. As the sweet substance is swallowed, prickles run over your [Skin of Player] skin. Your head tingles intensely as your ears begin to go warm. Sandra giggles as she watches you, then pulls out a mirror quickly, letting you watch. A large pair of white rabbit ears gradually begins to sprout from your head, replacing what old ones you might've had. They grow long and sensitive, new sounds reaching you. Even Sandra's excited heartbeat seems to softly tick in those great furry limbs.";
-		say "[bold type]Your perception has increased by 1![roman type][line break]";
-		increase perception of Player by 1;
+		StatChange "perception" by 1;
 		now rabbitified is true;
 		[now Face of Player is "set of two long white rabbit ears twitching above your head, looking odd compared to your normal";
 		now FaceName of Player is "Rabbit Girl";]
@@ -440,8 +439,7 @@ to say sandrasex2: [become bunny siblings]
 				say "     'I think that's as much as I can do, but it feels like we're missing something in order for this to feel complete, you know?' Pondering over the notion, you imagine you'll have to figure it out for yourself. Perhaps a [bold type]lewd toy[roman type] of some sort is what she's looking for? Searching for something exactly appropriate is very unlikely in this mess of a city, so perhaps you should find a [bold type]store[roman type] that sells them?";
 				now TailName of Player is "Rabbit Girl";
 				now tail of Player is "You have a short white rabbit's tail above a shapely ass. It twitches when you're excited, wagging back and forth.";
-				increase dexterity of Player by 1;
-				say "[bold type]Your dexterity has increased by 1![roman type][line break]";
+				StatChange "dexterity" by 1;
 				increase score by 10;
 				now lastfuck of Sandra is turns;
 			else:
@@ -507,10 +505,8 @@ to say sandrasex2: [become bunny siblings]
 			say ". 'You know, I think it's probably best if I move in with you! Makes it easier to find me, and this place isn't nearly as safe as it used to be.' Agreeing with her, the two of you help pack up her stuff and head off to the bunker.";
 		LineBreak;
 		say "     While the ritual seemed to be mostly ceremony, you can't help but feel slightly changed by the event[if rabbitsibling is 6], and Sandra seems to have been affected as well[end if].";
-		say "[bold type]Your dexterity has increased by 1![roman type][line break]";
-		say "[bold type]Your stamina has increased by 1![roman type][line break]";
-		increase dexterity of Player by 1;
-		increase stamina of Player by 1;
+		StatChange "Dexterity" by 1;
+		StatChange "Stamina" by 1;
 		now lastfuck of Sandra is turns;
 		increase score by 25;
 		if Sandra is not in Bunker:
@@ -569,7 +565,7 @@ to say sandrasex4:
 	now lastfuck of Sandra is turns;
 
 to say sandrasex5: [Post-transformation toy sex]
-	say "     Offering to have some fun with the carrot-shaped toy, the rabbit girl grins as she goes to fetch it, quickly returning with the sizeable rod.";
+	say "     Offering to have some fun with the carrot-shaped toy, the rabbit girl grins as she goes to fetch it, quickly returning with the sizable rod.";
 	say "     '[one of]Oh boy[or]Mmm[or]Yes[or]Great[at random], [one of]let's get to planting this thing[or]time for some fun[or]time to bury the carrot[at random],[if rabbitsibling > 5] little[end if] [sangr]!' Giddy with anticipation, she ";
 	if rabbitsibling is 5:
 		say "hands you the thing before laying down to expose the excited, already-slick lips of her oversized cunt before you.";
@@ -653,6 +649,7 @@ to say sandraColleentrio:
 		say "[sctriomale]";
 	else:
 		say "[sctriofemale]";
+	now lastfuck of Colleen is turns;
 
 to say sctriomale:
 	say "     Taking a seat on her bunk, you slide the bunny girl into your lap, rubbing your stiff length[smn] against her ass and fluffy tail. She moans softly as you tease her nipples while Colleen hops up to give her another doggy kiss. You grind against her softly-furred bottom, leaking precum onto her [if Cock Length of Player > 12]back[else]tail[end if] until you can't wait any longer and want more.";

@@ -84,6 +84,7 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Dryad"; [name of the overall species of the infection, used for children, ...]
+	add "Dryad" to infections of PlantList;
 	add "Dryad" to infections of MythologicalList;
 	add "Dryad" to infections of HermList;
 	add "Dryad" to infections of BipedalList;

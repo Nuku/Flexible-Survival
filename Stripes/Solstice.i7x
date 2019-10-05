@@ -207,8 +207,7 @@ carry out lessontiming:
 			increase diceroll by bonus;
 			if diceroll > 10:
 				say " and also picking up a few tips and pointers on how to be a good treasure hunter.";
-				say "[bold type]Your perception has increased by 1![roman type][line break]";
-				increase perception of Player by 1;
+				StatChange "perception" by 1;
 			else:
 				say " even if you didn't manage to learn anything useful from her [']lesson['] this time.";
 		else:

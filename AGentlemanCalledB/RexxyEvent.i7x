@@ -226,12 +226,15 @@ the scent of Rex is "     The large retriever carries the strong musk of a viril
 instead of conversing the Rex:
 	if HP of Karen is 3 and Dog Treats is owned:
 		say "     You slowly approach Rex, sliding your bag off your shoulders as you step towards him. As you get close, Rex's ears suddenly perk up and he begins sniffing the air around you. 'Is that wonderful scent what I think it is?' Rex asks, eagerly trying to peer into your bag.";
-		say "     You hesitate a moment before reaching into your sack for the treats. You may only get one shot at this. Are you sure you are ready? (Y-make your escape attempt now! N-hide the cookies from Rex, you're not ready to escape just yet.)";
+		say "     You hesitate a moment before reaching into your sack for the treats. You may only get one shot at this. Are you sure you are ready?";
+		say "     ([link]Y[as]y[end link]) - Make your escape attempt now!";
+		say "     ([link]N[as]n[end link]) - Hide the cookies from Rex, you're not ready to escape just yet.";
 		if Player consents:
+			LineBreak;
 			say "     With a knowing grin you reach into your backpack, digging out the bag of treats you retrieved from the bakery. Rex begins panting heavily as you pull the brown paper bag out, even drooling a bit from the corner of his mouth. 'My lovely stray bringing ME a treat? And how did you know these were my favorite?' Rex asks happily as you drop the bag into his waiting paws. With a sharp whistle he calls Karen over before digging into the bag. He divides the treats up into a few small piles, pushing one towards Karen, who barks happily in response before digging in. Next he offers one pile to you, which you politely refuse, despite a strong desire to enjoy the share he's offering you. With a confused smirk and a shrug, Rex combines your pile with his own before he begins eating. With the two retrievers seemingly distracted by your gift, you slowly begin creeping around the room, carefully approaching your prize sitting on a side table near Rex's favorite seat. Soon the bone is within your grasp again, and you reach out to take it, only to stop just short when you hear a low growl behind you. Slowly turning around, you find yourself face to face with Rex. Apparently your little distraction wasn't enough to occupy him long. You glance towards the door on the other side of the room, then back to Rex, realizing that it's unlikely you'll be able to get past with him blocking your escape. Trying to flee this situation is probably not an option.";
 			now HP of Karen is 4;
 			now inasituation is true;
-			challenge "Retriever Female";
+			challenge "Retriever Male";
 			now inasituation is false;
 			if fightoutcome is 30:
 				say "     You jump back and grab the bone off the nearby table, deciding to try and make a break for it. Unfortunately your earlier assessment was quite correct and as you try to weave past Rex he steps back to block your escape, catching you by the throat as you collide with him. Before you have a chance to react, he lifts you into the air and throws you to the ground, knocking the wind out of you and sending the bone flying out of your grasp.";
@@ -275,6 +278,7 @@ instead of conversing the Rex:
 				follow the turnpass rule;
 				stop the action;
 		else:
+			LineBreak;
 			say "     Deciding you're not quite ready to follow through with your plans, you hide your bag behind your back, playing dumb as best you can in response to Rex's questions about its contents. Eventually Rex tires of trying to discover the bag's contents and turns to leave you be.";
 	else if HP of Rex is 5:
 		say "     'Ah, I'm glad to see you've come to accept my offer,' the large male says, waving a small blue collar towards you.";

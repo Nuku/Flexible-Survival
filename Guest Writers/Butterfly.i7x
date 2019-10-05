@@ -285,7 +285,7 @@ To say butterfly attack:
 				say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [if Cock Count of Player > 1][one of]cocks[or]lengths[or]shafts[or]poles[at random] as they begin to shrink. They dwindle[else][one of]cock[or]man meat[or]shaft[or]pole[at random] as it begins to shrink. It dwindles[end if] in size, becoming [descr]. ";
 				if Cock Length of Player < 1 or Ball Size of Player < 1:
 					say "You barely have time to give a whimper as you cease to be a male.";
-					now Cock Count of Player is 0;
+					remove manhood from Player;
 				if Cock Count of Player > 1 and a random chance of 1 in 3 succeeds:
 					say "Sudden pleasure runs through one of your doomed [Cock of Player] cocks as it sprays the last of its seed, dwindling down to nothing at all and vanishing, leaving only the powerful orgasm to remember it by.";
 					decrease Cock Count of Player by 1;
@@ -303,7 +303,7 @@ To say butterfly attack:
 				say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [if Cunt Count of Player > 1][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] as they begin to shrink. They[else][one of]cunt[or]pussy[or]vagina[or]cleft[at random] as it begins to shrink. It[end if] dwindles in size, becoming [descr]. ";
 				if Cunt Depth of Player < 1 or Cunt Tightness of Player < 1:
 					say "With a sickening noise, you cease to be female all together.";
-					now Cunt Count of Player is 0;
+					remove womanhood from Player;
 				if Cunt Count of Player > 1 and a random chance of 1 in 3 succeeds:
 					say "An odd wet noise has you peeking in time to see one of your [one of]cunts[or]pussies[at random] have vanished!";
 					decrease Cunt Count of Player by 1;
@@ -412,6 +412,42 @@ To say butterfly attack:
 			say "You suddenly feel a strange feeling of achievement in your [Ball Size Adjective of Player] [Balls].";
 		follow the ButterflyTummyDesc rule;
 
+to ButterFlyChildBirth:
+	say "[bold type]Please name your child: [roman type]";
+	get typed command as playerinput;
+	now Name of ButterflyBaby is playerinput;
+	choose a blank row in the Table of PlayerChildren;
+	now Name entry is Name of ButterflyBaby;
+	now BirthTurn entry is turns;
+	now Gender entry is random child gender;
+	now Head entry is HeadName of ButterflyBaby;
+	now Torso entry is TorsoName of ButterflyBaby;
+	now Back entry is BackName of ButterflyBaby;
+	now Arms entry is ArmsName of ButterflyBaby;
+	now Legs entry is LegsName of ButterflyBaby;
+	now Ass entry is AssName of ButterflyBaby;
+	now Tail entry is TailName of ButterflyBaby;
+	now ShowTail entry is false;
+	now ShowLegs entry is true;
+	now Pureblood entry is false;
+	if HeadName of ButterflyBaby is TorsoName of ButterflyBaby:
+		if HeadName of ButterflyBaby is BackName of ButterflyBaby:
+			if HeadName of ButterflyBaby is ArmsName of ButterflyBaby:
+				if HeadName of ButterflyBaby is LegsName of ButterflyBaby:
+					if HeadName of ButterflyBaby is AssName of ButterflyBaby:
+						if HeadName of ButterflyBaby is TailName of ButterflyBaby:
+							now Pureblood entry is true;
+	now Albino entry is false;
+	now Melanism entry is false;
+	now Personality entry is random child personality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	now ButterflyBabyGestation is 0;
+	now ButterflyPregnant is False;
+	follow the ButterflyTummyDesc rule;
+	increase perception of Player by 2;
+	WaitLineBreak;
+
 Section 4 - Monster Definition
 
 When Play begins:
@@ -434,7 +470,7 @@ When Play begins:
 	[ Text or say command used when Monster is defeated.]
 	now victory entry is "[butterfly attack]";
 	now desc entry is "[mongendernum 4]The one hovering before you is a female with richly colored translucent wings and pale velvet skin. Her attractive face is framed by wavy blonde hair down to her chin. Beneath her undulating fringe two large [one of]brilliant[or]vibrant[or]vivid[or]and rich[at random] lime green eyes follow your movements. Two long antennae poke out the top of her head. [ButterflyAttire] [if ButterflyBabyGestation is 3]Small droplets of milk twinkle on the ducts of her nipples. [end if][if ButterflyRaped is 1]One of her hands moves protectively to cover her vagina as she recognizes you. [end if][ButterflyTummy] For a moment her mouth opens and what appears to be a long wiry proboscis uncoils out and then retracts back in almost faster than your eyes can see. Her back blends into a plump yellow and black striped abdomen. [if ButterflyRaped > 0 or inheat is true]She is carrying an ominous looking little black bag in her hand. [end if][if ButterflyRaped is 1]She glares at you [one of]angrily[or]furiously[or]enraged[or]fuming[or]seething in anger[or]with contempt[at random] flapping her wings erratically[else if ButterflyLikesYou is True and ButterflyLove is False]She smiles and looks at you [one of]shyly[or]bashfully[or]sheepishly[or]blushing slightly[at random][else if ButterflyLove is True]She looks at you [one of]adoringly[or]lovingly[or]passionately[or]devotedly[at random][else if ButterflyRevenge is True]She looks at you remarkably calmly considering your previous encounter[else]She looks at you [one of]apprehensively[or]cautiously[or]anxiously[or]nervously[at random][end if][if ButterflyRaped > 0]. Something tells you that submitting to her would be bad for your health[end if]."; [ Description of the creature when you encounter it.]
-	now face entry is "a pair of [one of]brilliant[or]vibrant[or]vivid[at random] green eyes, two antennae on top of your head, and a streamlined"; [ Face description, format as "Your face is (your text)"]
+	now face entry is "streamlined. It has a pair of [one of]brilliant[or]vibrant[or]vivid[at random] green eyes and two antennae on top of your head"; [ Face description, format as "Your face is (your text)"]
 	now body entry is "delicate and fragile, streamlined for flight. Two thin, bright and colorful wings stick out of your back. They aren't strong enough to allow you to fly, but with some effort you find you are able to hover without needing to walk"; [ Body Description, format as "Your Body is (your text)"]
 	now skin entry is "velvet and silky"; [ skin Description, format as "You have (your text) skin"]
 	now tail entry is "You have a large, round abdomen covered in yellow and black stripes."; [ Tail description, write a whole Sentence or leave blank. ]
@@ -616,72 +652,19 @@ Table of GameCharacterIDs (continued)
 object	name
 ButterflyBaby	"ButterflyBaby"
 
-ButterflyBaby is a person.
+ButterflyBaby is a creature.
 ButterflyBaby is in NPC Nexus. [and there it will stay, as it is just a coding tool]
-ButterflyBaby has text called name. The name of ButterflyBaby is usually "".
-ButterflyBaby has a text called HeadName. HeadName is usually "Human".
-ButterflyBaby has a text called TorsoName. TorsoName is usually "Human".
-ButterflyBaby has a text called BackName. BackName is usually "Human".
-ButterflyBaby has a text called ArmsName. ArmsName is usually "Human".
-ButterflyBaby has a text called LegsName. LegsName is usually "Human".
-ButterflyBaby has a text called AssName. AssName is usually "Human".
-ButterflyBaby has a text called TailName. TailName is usually "Human".
+The printed name of ButterflyBaby is "butterfly baby".
 
 To impregnatebutterfly:
-	let Impregnator be a person;
-	if HeadName of Player is "" or TorsoName of Player is "" or BackName of Player is "" or ArmsName of Player is "" or LegsName of Player is "" or AssName of Player is "" or TailName of Player is "": [player doesn't have all new type parts]
-		now HeadName of Impregnator is FaceName of Player;
-		now TorsoName of Impregnator is BodyName of Player;
-		now BackName of Impregnator is BodyName of Player;
-		now ArmsName of Impregnator is BodyName of Player;
-		now LegsName of Impregnator is BodyName of Player;
-		now AssName of Impregnator is TailName of Player;
-		now TailName of Impregnator is TailName of Player;
-	else: [player has all the parts]
-		now HeadName of Impregnator is HeadName of Player;
-		now TorsoName of Impregnator is TorsoName of Player;
-		now BackName of Impregnator is BackName of Player;
-		now ArmsName of Impregnator is ArmsName of Player;
-		now LegsName of Impregnator is LegsName of Player;
-		now AssName of Impregnator is AssName of Player;
-		now TailName of Impregnator is TailName of Player;
-	if "They Have Your Eyes" is listed in feats of Player: [ButterflyBaby will always look like the player]
-		now HeadName of ButterflyBaby is HeadName of Impregnator;
-		now TorsoName of ButterflyBaby is TorsoName of Impregnator;
-		now BackName of ButterflyBaby is BackName of Impregnator;
-		now ArmsName of ButterflyBaby is ArmsName of Impregnator;
-		now LegsName of ButterflyBaby is LegsName of Impregnator;
-		now AssName of ButterflyBaby is AssName of Impregnator;
-		now TailName of ButterflyBaby is TailName of Impregnator;
+	SetInfectionsOf Impregnator to infections of Player;
+	SetInfectionsOf Impregnatee to "Butterfly";
+	if "Breeding True" is listed in feats of Player: [child will always look like the mother]
+		SetInfectionsOf ButterflyBaby to infections of Impregnatee;
+	else if "They Have Your Eyes" is listed in feats of Player: [child will always look like the player]
+		SetInfectionsOf ButterflyBaby to infections of Impregnator;
 	else: [random choosing]
-		if a random chance of 1 in 2 succeeds:
-			now HeadName of ButterflyBaby is "Butterfly";
-		else:
-			now HeadName of ButterflyBaby is HeadName of Impregnator;
-		if a random chance of 1 in 2 succeeds:
-			now TorsoName of ButterflyBaby is "Butterfly";
-		else:
-			now TorsoName of ButterflyBaby is TorsoName of Impregnator;
-		if a random chance of 1 in 2 succeeds:
-			now BackName of ButterflyBaby is "Butterfly";
-		else:
-			now BackName of ButterflyBaby is BackName of Impregnator;
-		if a random chance of 1 in 2 succeeds:
-			now ArmsName of ButterflyBaby is "Butterfly";
-		else:
-			now ArmsName of ButterflyBaby is ArmsName of Impregnator;
-		if a random chance of 1 in 2 succeeds:
-			now LegsName of ButterflyBaby is "Butterfly";
-		else:
-			now LegsName of ButterflyBaby is LegsName of Impregnator;
-		if a random chance of 1 in 2 succeeds:
-			now AssName of ButterflyBaby is "Butterfly";
-		else:
-			now AssName of ButterflyBaby is AssName of Impregnator;
-		if a random chance of 1 in 2 succeeds:
-			now TailName of ButterflyBaby is "Butterfly";
-		else:
-			now TailName of ButterflyBaby is TailName of Impregnator;
+		SetInfectionsOf ButterflyBaby randomized between Impregnator and Impregnatee;
 	now ButterflyBabyGestation is 0; [1;]
 	follow the ButterflyTummyDesc rule;
 	now ButterflyPregnant is True;
@@ -890,34 +873,9 @@ to say butterfly grove scene:
 		say "[bold type]You gain 1 testosterone pill![roman type][line break]";
 		now carried of testosterone pill is 1;
 	else if ButterflyRaped > 1 and ButterflyPregnant is True and ButterflyBabyGestation is 3:
-		say "You stumble upon the butterfly who appears to have recently given birth and is nursing a child on her breast. At first she's unsure how you'll react, but as you show interest in the in the child she develops a cautious trust. The nanites rapidly transfer personality and knowledge from you and your partner's genes to the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [HeadName of ButterflyBaby] head, their [TorsoName of ButterflyBaby] front and [BackName of ButterflyBaby] back. Your ButterflyBaby has [ArmsName of ButterflyBaby] arms, [LegsName of ButterflyBaby] legs and a [AssName of ButterflyBaby] behind. Your child, hungry for knowledge and experience of the world decides to stay with you.";
-		say "[bold type]Please name your child: [roman type]";
-		get typed command as playerinput;
-		now Name of ButterflyBaby is playerinput;
-		choose a blank row in the Table of PlayerChildren;
-		now Name entry is Name of ButterflyBaby;
-		now BirthTurn entry is turns;
-		now Head entry is HeadName of ButterflyBaby;
-		now Torso entry is TorsoName of ButterflyBaby;
-		now Back entry is BackName of ButterflyBaby;
-		now Arms entry is ArmsName of ButterflyBaby;
-		now Legs entry is LegsName of ButterflyBaby;
-		now Ass entry is AssName of ButterflyBaby;
-		now Tail entry is TailName of ButterflyBaby;
-		now Showtail entry is false;
-		if HeadName of ButterflyBaby is TorsoName of ButterflyBaby:
-			if HeadName of ButterflyBaby is BackName of ButterflyBaby:
-				if HeadName of ButterflyBaby is ArmsName of ButterflyBaby:
-					if HeadName of ButterflyBaby is LegsName of ButterflyBaby:
-						if HeadName of ButterflyBaby is AssName of ButterflyBaby:
-							if HeadName of ButterflyBaby is TailName of ButterflyBaby:
-								now Pureblood entry is true;
+		say "You stumble upon the butterfly who appears to have recently given birth and is nursing a child on her breast. At first she's unsure how you'll react, but as you show interest in the in the child she develops a cautious trust. The nanites rapidly transfer personality and knowledge from you and your partner's genes to the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [HeadName of ButterflyBaby] head, their [TorsoName of ButterflyBaby] front and [BackName of ButterflyBaby] back. Your butterfly baby has [ArmsName of ButterflyBaby] arms, [LegsName of ButterflyBaby] legs and a [AssName of ButterflyBaby] behind. Your child, hungry for knowledge and experience of the world decides to stay with you.";
+		ButterFlyChildBirth;
 		[now ButterflyProcreated is True;]
-		now ButterflyBabyGestation is 0;
-		now ButterflyPregnant is False;
-		follow the ButterflyTummyDesc rule;
-		increase perception of Player by 2;
-		WaitLineBreak;
 		say "You decide to head back to the library.";
 		move player to Grey Abbey library;
 		follow the turnpass rule;
@@ -1039,34 +997,9 @@ to say butterfly grove scene:
 	else if ButterflyLove is True and ButterflyBabyGestation is 3 and ButterflyRaped is 0:
 		say "The butterfly girl is hovering before you. [ButterflyAttire][ButterflyTummy]";
 		WaitLineBreak;
-		say "Your butterfly lover embraces you clearly in discomfort. 'I-it's time,' she moans as fluids vacate beneath her bulging tummy. You sit her down on the cleanest spot you can find and spread her knees as her breathing becomes erratic. As she begins to exert and sweat you do what you can to ease the process even if it's only offering her your hand, the hand of her mate, to squeeze. Slowly the top of the baby's head emerges from her birthing canal. You offer encouragement as she heaves and slowly the head emerges, and once past the shoulders the child slips free. Moments later the infant is suckling at one of its mother's [ButterflyBreastDesc] breasts enjoying its first proper meal. You comfort your lover as she tends to the newborn's needs. The nanites rapidly transfer personality and knowledge from you and your partner's genes to the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [HeadName of ButterflyBaby] head, their [TorsoName of ButterflyBaby] front and [BackName of ButterflyBaby] back. Your ButterflyBaby has [ArmsName of ButterflyBaby] arms, [LegsName of ButterflyBaby] legs and a [AssName of ButterflyBaby] behind. You and your lover decide together that your child needs knowledge of the world and will stay with you.";
-		say "[bold type]Please name your child: [roman type]";
-		get typed command as playerinput;
-		now Name of ButterflyBaby is playerinput;
-		choose a blank row in the Table of PlayerChildren;
-		now Name entry is Name of ButterflyBaby;
-		now BirthTurn entry is turns;
-		now Head entry is HeadName of ButterflyBaby;
-		now Torso entry is TorsoName of ButterflyBaby;
-		now Back entry is BackName of ButterflyBaby;
-		now Arms entry is ArmsName of ButterflyBaby;
-		now Legs entry is LegsName of ButterflyBaby;
-		now Ass entry is AssName of ButterflyBaby;
-		now Tail entry is TailName of ButterflyBaby;
-		now Showtail entry is false;
-		if HeadName of ButterflyBaby is TorsoName of ButterflyBaby:
-			if HeadName of ButterflyBaby is BackName of ButterflyBaby:
-				if HeadName of ButterflyBaby is ArmsName of ButterflyBaby:
-					if HeadName of ButterflyBaby is LegsName of ButterflyBaby:
-						if HeadName of ButterflyBaby is AssName of ButterflyBaby:
-							if HeadName of ButterflyBaby is TailName of ButterflyBaby:
-								now Pureblood entry is true;
+		say "Your butterfly lover embraces you clearly in discomfort. 'I-it's time,' she moans as fluids vacate beneath her bulging tummy. You sit her down on the cleanest spot you can find and spread her knees as her breathing becomes erratic. As she begins to exert and sweat you do what you can to ease the process even if it's only offering her your hand, the hand of her mate, to squeeze. Slowly the top of the baby's head emerges from her birthing canal. You offer encouragement as she heaves and slowly the head emerges, and once past the shoulders the child slips free. Moments later the infant is suckling at one of its mother's [ButterflyBreastDesc] breasts enjoying its first proper meal. You comfort your lover as she tends to the newborn's needs. The nanites rapidly transfer personality and knowledge from you and your partner's genes to the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [HeadName of ButterflyBaby] head, their [TorsoName of ButterflyBaby] front and [BackName of ButterflyBaby] back. Your butterfly baby has [ArmsName of ButterflyBaby] arms, [LegsName of ButterflyBaby] legs and a [AssName of ButterflyBaby] behind. You and your lover decide together that your child needs knowledge of the world and will stay with you.";
+		ButterFlyChildBirth;
 		now ButterflyProcreated is True;
-		now ButterflyBabyGestation is 0;
-		now ButterflyPregnant is False;
-		follow the ButterflyTummyDesc rule;
-		increase perception of Player by 2;
-		wait for any key;
 	else if ButterflyProcreated is True and ButterflyLove is True and ButterflyRaped is 0 and player is male:
 		say "The butterfly girl is hovering before you. [ButterflyAttire][ButterflyTummy]";
 		WaitLineBreak;
@@ -1074,7 +1007,7 @@ to say butterfly grove scene:
 		say "Do you follow?";
 		if Player consents:
 			if cute panties is owned:
-				say "Your naked lover spots something sticking out of your pocket and looks at you with a curious expression. You pull the pair of cute panties out and show them to her. She stretches them out examining them closely, her antennae twitching quizzically, but she remains perplexed. You offer to show her their purpose, and taking the panties back you stoop down and lift one of her legs through the appropriate hole, and then move on to the other leg as she reacts in surprise. Pulling them up her velvet thighs and in to place, you realize how lucky it is that they're low-cut since they don't get in the way of her large abdomen. She twists around with her arms in the air to view them from various angles. Still curious, she tugs at them, clearly not used to the feeling. Your [cocktext]cock[if Cock Count of Player > 1]s were[else] was[end if] already standing to attention, but to your surprise, the sight of her camel toe takes it up a notch further. With your arm moving instinctually, you reach for it and fondle her through the fabric as she continues to show more interest in the panties than what you're doing.";
+				say "Your naked lover spots something sticking out of your pocket and looks at you with a curious expression. You pull the pair of cute panties out and show them to her. She stretches them out examining them closely, her antennae twitching quizzically, but she remains perplexed. You offer to show her their purpose, and taking the panties back you stoop down and lift one of her legs through the appropriate hole, and then move on to the other leg as she reacts in surprise. Pulling them up her velvet thighs and in to place, you realize how lucky it is that they're low-cut since they don't get in the way of her large abdomen. She twists around with her arms in the air to view them from various angles. Still curious, she tugs at them, clearly not used to the feeling. Your [cocktext]cock[if Cock Count of Player > 1]s were[else] was[end if] already standing to attention, but to your surprise, the sight of her camel toe takes it up a notch further. With your arm moving instinctively, you reach for it and fondle her through the fabric as she continues to show more interest in the panties than what you're doing.";
 				WaitLineBreak;
 				say "As you put an arm around her midriff and suck at her earlobe, she awakens to your advance and starts stroking your [Skin of Player] [if Breast Size of Player > 0][breast size desc of Player] boobs[else]chest[end if]. You kneel down on the ground as the butterfly follows, pausing a moment first to give you a good close-up of the panties. She sits on your lap, her panties pressed against your throbbing cock[smn] as you both kiss passionately and hold each other close. As you grope her [ButterflyBreastDesc] breasts you wonder quietly how she'd react to a bra. You reach down and pull the crotch of her panties aside exposing her cunt as she peers down still intrigued at this mysterious piece of cloth. She maneuvers for penetration and a moment later you're in the heat of sex as she rides [if Cock Count of Player > 1]one of your rods[else]your rod[end if] fervently. Sensing your member harden she lets it slip out as you cum expelling a sizable load of sperm over her new panties. She climbs off and tries to examine them as best she can before starting to take them off. You enjoy her usual [']au naturale['] look returning from behind as she strips. As she continues to examine the sodden panties curiously you offer to take them back, but she immediately moves them out of your reach. Stepping away she holds them up to her face, and breathes in your scent. Delirious with excitement, she speeds off, still clutching the panties to her face.";
 				say "[bold type]You lose 1 cute panties![roman type][line break]";
@@ -1103,7 +1036,7 @@ to say butterfly grove scene:
 		say "Do you follow?";
 		if Player consents:
 			if cute panties is owned:
-				say "Your naked lover spots something sticking out of your pocket and looks at you with a curious expression. You pull the pair of cute panties out and show them to her. She stretches them out examining them closely, her antennae twitching quizzically, but she remains perplexed. You offer to show her their purpose, and taking the panties back you stoop down and lift one of her legs through the appropriate hole, and then move on to the other leg as she reacts in surprise. Pulling them up her velvet thighs and in to place, you realize how lucky it is that they're low-cut since they don't get in the way of her large abdomen. She twists around with her arms in the air to view them from various angles. Still curious, she tugs at them, clearly not used to the feeling. Your [cunt size desc of Player] vagina[if Cunt Count of Player > 1]s were[else] was[end if] already becoming damp, but to your surprise, the sight of her camel toe takes it up a notch further. With your arm moving instinctually, you reach for it and fondle her through the fabric as she continues to show more interest in the panties than what you're doing.";
+				say "Your naked lover spots something sticking out of your pocket and looks at you with a curious expression. You pull the pair of cute panties out and show them to her. She stretches them out examining them closely, her antennae twitching quizzically, but she remains perplexed. You offer to show her their purpose, and taking the panties back you stoop down and lift one of her legs through the appropriate hole, and then move on to the other leg as she reacts in surprise. Pulling them up her velvet thighs and in to place, you realize how lucky it is that they're low-cut since they don't get in the way of her large abdomen. She twists around with her arms in the air to view them from various angles. Still curious, she tugs at them, clearly not used to the feeling. Your [cunt size desc of Player] vagina[if Cunt Count of Player > 1]s were[else] was[end if] already becoming damp, but to your surprise, the sight of her camel toe takes it up a notch further. With your arm moving instinctively, you reach for it and fondle her through the fabric as she continues to show more interest in the panties than what you're doing.";
 				WaitLineBreak;
 				say "As you put an arm around her midriff and suck at her earlobe, she awakens to your advance and starts stroking your [Skin of Player] [if Breast Size of Player > 0][breast size desc of Player] boobs[else]chest[end if]. You kneel down on the ground as the butterfly follows, pausing a moment first to give you a good close-up of the panties. She sits on your lap as you both kiss passionately and hold each other close. As you fondle her [ButterflyBreastDesc] breasts you wonder quietly how she'd react to a bra. You reach down and pull the crotch of her panties aside exposing her cunt as she peers down still intrigued at this mysterious piece of cloth. You both begin to finger each other's cunts and soon are in the heat of sex as she kneads your [if Cunt Count of Player > 1]many pussies[else]pussy[end if] fervently. In a moment of pure ecstasy you both cum as her liquid pours over your lap and you spray a sizable load of fluid over her new panties. She climbs off and tries to examine them as best she can before starting to take them off. You enjoy her usual [']au naturale['] look returning from behind as she strips. As she continues to examine the sodden panties curiously you offer to take them back, but she immediately moves them out of your reach. Stepping away she holds them up to her face, and breathes in your scent. Delirious with excitement, she speeds off, still clutching the panties to her face.";
 				say "[bold type]You lose 1 cute panties![roman type][line break]";

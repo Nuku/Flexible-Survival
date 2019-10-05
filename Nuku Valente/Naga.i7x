@@ -135,6 +135,7 @@ When Play begins:
 	add "Naga" to infections of InternalCockList;
 	add "Naga" to infections of SerpentineList;
 	add "Naga" to infections of TailList;
+	add "Naga" to infections of OviImpregnatorList;
 	add "Naga" to infections of TailweaponList;
 	now Name entry is "Naga";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]

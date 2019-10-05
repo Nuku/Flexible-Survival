@@ -276,7 +276,7 @@ Major's Tent is north of Parade Ground.
 The description of Major's Tent is "     You're in a sparely furnished military tent, holding only a field desk, a small table, several chairs and a field bed. Major Padgett, the camp's commander sits at the desk, reading scout reports and other paperwork. On top of the table at one wall of the tent rests a military radio.".
 
 Instead of sniffing Major's Tent:
-	say "     Even in here, the minotaur cum smell is still pretty strong. No wonder, since it's been rutting people in the area right before the tent.";
+	say "     Even in here, the minotaur cum smell is still pretty strong. No wonder, since the big hunk has been rutting people in the area right before the tent.";
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -287,7 +287,18 @@ West of the Parade Ground is the Quartermaster's Tent.
 The description of Quartermaster's Tent is "     You're in the large tent of Camp Bravo's quartermaster. It holds a long row of filled shelves in the back, combined with various crates stacked high and a few large sacks resting on the floor next to the quartermaster's field desk. A medical corpsman is bent over one of them, counting its contents.".
 
 Instead of sniffing Quartermaster's Tent:
-	say "     Even in here, the minotaur cum smell is still pretty strong. No wonder, since it's been rutting people in the area right before the tent.";
+	say "     Even in here, the minotaur cum smell is still pretty strong. No wonder, since the big hunk has been rutting people in the area right before the tent. The lingering aroma seems to have an effect on everyone here too, as everyone seems a fair bit more randy than you'd have expected from professional soldiers.";
+
+Soldier Tents is a room.
+East of the Parade Ground is the Soldier Tents.
+The description of Soldier Tents is "[SoldierTentDesc]".
+
+to say SoldierTentDesc:
+	say "     You're standing between numerous olive-green army tents, set up to house the various soldiers stationed here. Uniformed men and women come and go from their quarters, or hang around in groups talking to each other[if daytimer is night]. Even after sundown, there is a fair bit of activity here, as some shift or other is always on duty[end if].";
+	say "     The area is bordered by the back walls of two office buildings to the north and east, while the south side consists of a stretch city bus. It hasn't been parked there though, but rather must have impacted the building to the east when the driver lost control over it sometime during this whole mess. A little more than teen feet of the bus are actually inside the building, and the vehicle seems completely stuck in the hole it made.";
+
+Instead of sniffing Soldier Tents:
+	say "     Even in here, the minotaur cum smell is still pretty strong. No wonder, since the big hunk has been rutting people just west of here, on the parade ground. The lingering aroma seems to have an effect on everyone here too, as everyone seems a fair bit more randy than you'd have expected from professional soldiers.";
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -693,7 +704,7 @@ to say CampBravoMenPrepping:
 				say "     You hand the man the dildo, then walk him through inserting it, going slow so his buddy's relaxed asshole doesn't tighten up again. Soon he's shafting the redhead deeply with the sex toy, encouraged by the man's lustful moans at having his prostate stimulated. Before too much longer, the slender soldier shoots a big load all over the side of the crate he's leaning against. After getting his breath back, he says 'That was amazing - come on, your turn... you'll like it.' After the bigger soldier takes his place, the redhead pulls the dildo out of his own ass and starts to push the slippery tip against his partner's opening...";
 			else: [fuck the redhead yourself]
 				LineBreak;
-				say "     You quickly strip off your own clothing, then step up beside the beefy soldier, softly pulling his hands away from his teammate's hole. Lining up your hard shaft with the redhead's ass, you say 'There's something much better than a dildo to stretch a man's hole...', then move forward, touching his pucker with the tip of your cock. Putting your arms around the man's chest, holding him close and stroking his muscles, you whisper 'Just relax and push back a bit.' into his ear as you push forward, slowly spreading his hole around your cock. Then the head is in and moves deeper, exploring this tight tunnel where no man has gone before. And from the red-headed soldier's moans, you're quite well received in his virgin depths.";
+				say "     You quickly strip off your own clothing, then step up beside the beefy soldier, softly pulling his hands away from his teammate's hole. Lining up your hard shaft with the redhead's ass, you say, 'There's something much better than a dildo to stretch a man's hole...', then move forward, touching his pucker with the tip of your cock. Putting your arms around the man's chest, holding him close and stroking his muscles, you whisper 'Just relax and push back a bit.' into his ear as you push forward, slowly spreading his hole around your cock. Then the head is in and moves deeper, exploring this tight tunnel where no man has gone before. And from the red-headed soldier's moans, you're quite well received in his virgin depths.";
 				say "     After bottoming out in him, you give the man a moment to get used to your girth, then fuck his virgin ass, becoming someone he'll never forget - the first guy to fuck him. Your soldier's hole is so warm and tight that you almost forget everything but fucking him - until you hear a moan right next to you and remember the second soldier standing there. The larger, more muscular man has obviously become pretty aroused by watching you shaft his partner and his jerking his own hard-on with his strong hands. Taking a look at his ripped body, long cock and muscled butt, you instantly decide what to do next.";
 				WaitLineBreak;
 				say "     Pulling your redhead soldier's lips to yours, you give him a quick kiss, then slowly pull out of his ass and present the ready and slightly gaping opening to the other soldier. 'Your turn,' you say, and the man eagerly takes the spot behind his mate, then sinks himself in him with a satisfied groan. You give him a minute to get really into fucking his teammate, their moans and the slapping noises of one man's hips against the other's ass filling the tent.";

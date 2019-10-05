@@ -5,7 +5,7 @@ Sarah by Wahn begins here.
 [ Expansion by Glitch                              ]
 
 [ SarahCured                                                                         ]
-[ 8: player told Sarah he wants to fuck, she doesn't want to be knocked up, anal ok  ]
+[ 8: player told Sarah he wants to fuck, she doesn't want to be knocked up, anal OK  ]
 [ 7: Sarah squashed the player's hopes for vaginal sex, and is about to offer anal   ]
 [ 6: Sarah is okay with player dominant oral sex                                     ]
 [ 5: Sarah is okay with oral sex (centered on her) with the player                   ]
@@ -318,7 +318,7 @@ to say HuskyAlphaWin:
 			say "     The alpha husky's free paw dips down, cupping your jaw before his thumb and opposing digit dig in, forcing it to spread, willing or not. The heat of that canine cock pulls away only briefly before its musky taper is thrust between your lips. The crude flavor of hot, male flesh and heady pre slide across your tongue as the girthy member plows past your lips. You're given a close view of the husky's powerful abs, quivering and taut, while his root sinks into the slick depths of your mouth and punches back into the resisting confines of your throat. The furred heat of his sac grinds up against your chin while he hilts in, the swell base where the husky's knot is partially swollen butts against your tightly-spread lips.";
 			say "     The slickness of your saliva is sloshed around within your mouth and spilt from your spread lips as that throbbing organ drives into the split, forcing the spittle free. One of the husky's paws reaches down, gripping around your throat, and the second follows sui. You can feel his grip over your windpipe even while his dick drills down through its depths, obscenely bulging your throat out into his own grip. Barely able to draw in nasal breaths between thrusts, you are getting light-headed, and your senses swim. Your nostrils are continually filled with the potent musk of the canine's fuckmeat while the husky plunges your gagging, quivering depths, spittle drizzling down over his balls. Your eyes begin to roll, but the fierce thrusts keep you from slipping into unconsciousness, each slap of hefty nuts and taut thighs jarring you briefly into sharp reality.";
 			WaitLineBreak;
-			say "     Your jaw quakes, strained by the continued piston of the canine's flesh pounding into you again and again, and your throat's slick, tight passage is reamed through juicily. His grip squeezes tighter around your neck, and the husky intensifies his pace while using you like a living fleshlight. The hot slsh and juicy shlup of the oral fucking mingles with a rolling growl from the alpha before he brusquely pulls out, still coated in your throat juices. The domineering dog grips his twitching root before your swimming gaze, a haze of lust and breathlessness fogging your brain, and a raucous cough rattles through your hoarse throat. You can make out the turgid, gleaming knot at the base and see his nuts tugging tight before a hot wad of spunk shoots right into your eye. The sting of the salty surprise is joined by gooey ropes of stinking, hot semen spattering searing hot ropes across your face and puffy, abused lips. Soon, you're utterly coated facially in the alpha husky's musk-rich jizz.";
+			say "     Your jaw quakes, strained by the continued piston of the canine's flesh pounding into you again and again, and your throat's slick, tight passage is reamed through juicily. His grip squeezes tighter around your neck, and the husky intensifies his pace while using you like a living fleshlight. The hot 'slsh' and juicy 'shlup' of the oral fucking mingles with a rolling growl from the alpha before he brusquely pulls out, still coated in your throat juices. The domineering dog grips his twitching root before your swimming gaze, a haze of lust and breathlessness fogging your brain, and a raucous cough rattles through your hoarse throat. You can make out the turgid, gleaming knot at the base and see his nuts tugging tight before a hot wad of spunk shoots right into your eye. The sting of the salty surprise is joined by gooey ropes of stinking, hot semen spattering searing hot ropes across your face and puffy, abused lips. Soon, you're utterly coated facially in the alpha husky's musk-rich jizz.";
 			say "     'Nngh, that was actually pretty good, slut. I might make you one of my bitches, yet,' his words come in a post-climax rumble, his powerful chest heaving as he casually wipes his dick off against your scalp.";
 			LineBreak; [Spot for future decision to go be a part of his pack, but with negatives to rep]
 	else:
@@ -345,6 +345,41 @@ object	name
 Sarah	"Sarah"
 
 Sarah is a woman.
+ScaleValue of Sarah is 3. [human sized]
+Body Weight of Sarah is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Sarah is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Sarah is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Sarah is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Sarah is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Sarah is 5. [length in inches]
+Breast Size of Sarah is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Sarah is 2. [count of nipples]
+Asshole Depth of Sarah is 8. [inches deep for anal fucking]
+Asshole Tightness of Sarah is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Sarah is 0. [number of cocks]
+Cock Girth of Sarah is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Sarah is 0. [length in inches]
+Ball Count of Sarah is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Sarah is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Sarah is 1. [number of cunts]
+Cunt Depth of Sarah is 10. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Sarah is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Sarah is 3. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Sarah is false.
+PlayerRomanced of Sarah is false.
+PlayerFriended of Sarah is false.
+PlayerControlled of Sarah is false.
+PlayerFucked of Sarah is false.
+OralVirgin of Sarah is false.
+Virgin of Sarah is false.
+AnalVirgin of Sarah is true.
+PenileVirgin of Sarah is true.
+SexuallyExperienced of Sarah is true.
+TwistedCapacity of Sarah is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Sarah is false. [steriles can't knock people up]
+MainInfection of Sarah is "Husky Bitch".
 The description of Sarah is "[SarahDesc]";
 
 to say SarahDesc:
@@ -532,7 +567,7 @@ to say SarahTalk3:
 				now SarahCured is 4; [the player gave her enough for a full treatment]
 				say "     For your efforts in saving Sarah from her progressing husky infection, you have earned the [']Dog Whisperer['] feat. Having proved your dedication in doing the right thing, your [bold type]charisma[roman type] has gone up by two, allowing you to empathize with others even more.";
 				add "Dog Whisperer" to feats of Player;
-				increase Charisma of Player by 2;
+				StatChange "Charisma" by 2;
 				decrease carried of libido suppressant by 5;
 			else: [don't give it to her]
 				LineBreak;
@@ -550,7 +585,7 @@ to say SarahTalk3:
 				now SarahCured is 4; [the player gave her enough for a full treatment]
 				say "     For your efforts in saving Sarah from her progressing husky infection, you have earned the [']Dog Whisperer['] feat. Having proved your dedication in doing the right thing, your [bold type]charisma[roman type] has gone up by two, allowing you to empathize with others even more.";
 				add "Dog Whisperer" to feats of Player;
-				increase Charisma of Player by 2;
+				StatChange "Charisma" by 2;
 				decrease carried of libido suppressant by 5;
 			else: [don't give it to her]
 				LineBreak;

@@ -9,7 +9,7 @@ Segment	Shift Text																					Desc Text
 "head"		"The black latex moves over YOUR head like a hood, leaving a muzzle that's white on the bottom with a head that's all black, all completed by the pair of cat-like ears sitting atop it."		"You have a rubber skunk's head."
 "chest"		"A sea of black moves over YOUR back and a sea of white over your chest, the white gathering into a pair of B-cup breasts while a matching stripe forms down the middle of the black."	"Your white latex chest sports a pair of B-sized breasts."
 "gut"		"The rubber covers YOUR gut in creamy white, making it far more shapely and feminine."												"Your creamy white gut has very feminine curves."
-"pelvis"		"You feel the rubber penetrating deeply as your groin changes, becoming something... a little different."										"You have been deeply pentrated in the groin by black shiny latex."
+"pelvis"		"You feel the rubber penetrating deeply as your groin changes, becoming something... a little different."										"You have been deeply penetrated in the groin by black shiny latex."
 "left upper arm"	"The stuff flows over YOUR left upper arm, the shiny black accentuating its increasingly sleek shape."										"Your upper left arm is coated in black latex and very shapely."
 "left forearm"	"The rubber squeezes over YOUR left forearm, morphing it into a daintier and more feminine form."											"Your left forearm is thin and covered in black rubber."
 "left hand"	"The black latex covers YOUR left hand, making it look far smoother and more delicate... up until the claws sprout from your fingertips."							"Your left hand looks like that of a woman, aside from the claws."

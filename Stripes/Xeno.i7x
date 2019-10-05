@@ -74,6 +74,7 @@ When Play begins:
 	add "Xeno Drone" to infections of OvipositorList;
 	add "Xeno Drone" to infections of QuadrupedalList;
 	add "Xeno Drone" to infections of TailList;
+	add "Xeno Drone" to infections of OviImpregnatorList;
 	add "Xeno Drone" to infections of TailweaponList; [usable for Tail Strike feat]
 	now Name entry is "Xeno Drone"; [Name of your new Monster]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]

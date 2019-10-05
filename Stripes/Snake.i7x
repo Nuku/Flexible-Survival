@@ -55,7 +55,7 @@ to say losetosnake:
 			say ". Clearly, this snake believes that it can tag along even though you're already carrying [snakeocc] occupant[if snakeocc > 1]s[end if]";
 		say ".";
 		say "     With no restraint or further preparation, it soon thereafter thrusts its slender head past your supple folds, pushing itself deeper and deeper[if Cunt Tightness of Player < 13], its substantial girth stretching you to your limits[end if]. It doesn't relent in its descent, coiled grip on you tightening as it assails your cervix, its persistent endeavors eventually forcing it through that, as well. [if scalevalue of Player < 4]Your body visibly bulges almost instantly[else]You feel increasingly heavy and bloated[end if], flooded with the contents of the snake's lengthy body, inch after successive inch forced into you. Soon enough the final, remnant measure is pulled from inside until naught of the creature remains exposed any longer.";
-		say "     Body trembling in the wake of abiding such a[if scalevalue of Player < 4] sizeable[else]n[end if] occupant, it doesn't seem inclined to depart or torment your further. Twisted powers that be, the snake is gradually integrated into you as it would a normal pregnancy, your bloated form slowly shrinking to something more manageable[if snakeocc > 0]. From what you can guess, the additional 'passenger' has also set back your pregnancy by a little bit[end if]. [if snakedomm < 2]The cheeky serpent seems to have got[else]This cheeky serpent also managed to get[end if] it in its head that it could sap your vitality by hijacking your womb, [if snakedomm < 2]regardless of the repercussions[else]even though such a deranged endeavor will doubtlessly rewrite its mind to assume it's your offspring[end if]!";
+		say "     Body trembling in the wake of abiding such a[if scalevalue of Player < 4] sizable[else]n[end if] occupant, it doesn't seem inclined to depart or torment your further. Twisted powers that be, the snake is gradually integrated into you as it would a normal pregnancy, your bloated form slowly shrinking to something more manageable[if snakeocc > 0]. From what you can guess, the additional 'passenger' has also set back your pregnancy by a little bit[end if]. [if snakedomm < 2]The cheeky serpent seems to have got[else]This cheeky serpent also managed to get[end if] it in its head that it could sap your vitality by hijacking your womb, [if snakedomm < 2]regardless of the repercussions[else]even though such a deranged endeavor will doubtlessly rewrite its mind to assume it's your offspring[end if]!";
 		say "     Eventually, [if HP of Player > 0]you recover enough from the ordeal[else]the venom wears off[end if], allowing you to slowly get back to your feet, [if scalevalue of Player < 4]overly bloated body making this a particularly difficult task[else if snakeocc > 0]forced to contend with your further exacerbated pregnancy[else]forced to contend with your new and significantly progressed pregnancy[end if], to say nothing of the your unsated lust in the wake of such treatment.";
 		if snakeocc is 0:
 			now snakehijack is 1;
@@ -140,7 +140,7 @@ to snakecoresex:
 		else:
 			say "[if Cock Count of Player > 1]one of them[else]the tool[end if] with little restraint or difficulty";
 		if (Cock Count of Player is 2 and Cock Length of Player > 14) or Cock Length of Player > 18:
-			say ", its elongated body visibly bulging to contain such a sizeable measure of flesh";
+			say ", its elongated body visibly bulging to contain such a sizable measure of flesh";
 		say ".";
 		say "     Tight, slick confines massaging your engulfed cock[if Cock Length of Player < 21 and Cock Count of Player > 1]s[end if], the serpent's grip tightens more and more around you, as if to try and squeeze you into bliss. Its prolonged, audibly wet endeavors [if Libido of Player > 20]quickly[else]eventually[end if] forces you to cry out, constrained tool[if Cock Length of Player < 21 and Cock Count of Player > 1]s[end if] spurting gouts of [if Cock Length of Player < 21 and Cock Count of Player > 1]their[else]its[end if] [Cum Load Size of Player] load into its slick, voracious maw";
 		if (Cock Count of Player > 1 and Cock Length of Player > 20) or Cock Count of Player > 2:
@@ -230,11 +230,14 @@ When Play begins:
 	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	add "Snake" to infections of ReptileList;
 	add "Snake" to infections of FurryList;
+	add "Snake" to infections of FeralList;
 	add "Snake" to infections of NatureList;
 	add "Snake" to infections of TaperedCockList;
+	add "Snake" to infections of InternalCockList;
 	add "Snake" to infections of SerpentineList;
 	add "Snake" to infections of FeralmindList;
 	add "Snake" to infections of TailList;
+	add "Snake" to infections of OviImpregnatorList;
 	add "Snake" to infections of TailweaponList;
 	now Name entry is "Snake";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]

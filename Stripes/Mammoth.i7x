@@ -74,16 +74,16 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
-	add "GGG" to infections of FurryList;
-	add "GGG" to infections of NatureList;
-	add "GGG" to infections of HermList;
-	add "GGG" to infections of QuadrupedalList;
-	add "GGG" to infections of TailList;
+	add "Mammoth" to infections of FurryList;
+	add "Mammoth" to infections of NatureList;
+	add "Mammoth" to infections of HermList;
+	add "Mammoth" to infections of QuadrupedalList;
+	add "Mammoth" to infections of TailList;
 	now Name entry is "Mammoth"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
-	now attack entry is "[one of]The mammoth slams into you, trying to smother you with her hairy bosom![or]The mammoth herm swings her semi-hard cock at you like a meat club. THWACK![or]The mastadon knocks you over and drops her hefty ballsack onto your face, teabagging you with the heavy orbs![or]The mammoth herm grabs you with her trunk, trying to choke the fight out of you![or]The mastadon punches you violently with its powerful fists![or]The mastadon herm jabs at you with her ivory tusks![at random]"; [ Successful attack message ]
+	now attack entry is "[one of]The mammoth slams into you, trying to smother you with her hairy bosom![or]The mammoth herm swings her semi-hard cock at you like a meat club. THWACK![or]The mastodon knocks you over and drops her hefty ballsack onto your face, teabagging you with the heavy orbs![or]The mammoth herm grabs you with her trunk, trying to choke the fight out of you![or]The mastodon punches you violently with its powerful fists![or]The mastodon herm jabs at you with her ivory tusks![at random]"; [ Successful attack message ]
 	now defeated entry is "[beatthemammoth]"; [ Text when monster loses. ]
 	now victory entry is "[losetomammoth]"; [ Text when monster wins. ]
 	now desc entry is "[mammothdesc]"; [ Description of the creature when you encounter it. ]

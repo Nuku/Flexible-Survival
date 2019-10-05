@@ -8,16 +8,19 @@ Shifting Room is a room. "[shiftingroom][line break]A room in a tent. The walls 
 It is private.
 It is fasttravel.
 
-ShiftingRoomConnection is a number that varies.[@Tag:NotSaved]
+a postimport rule: [bugfixing rules for players that import savegames]
+	if Resolution of Secure Area > 0:
+		connect Shifting Room;
 
-an everyturn rule:
-	if shiftable is 1 and ShiftingRoomConnection is 0:
-		change the north exit of Qytat Plaza to Shifting Room;
-		now ShiftingRoomConnection is 1; [room connected]
+to connect Shifting Room:
+	change the north exit of Qytat Plaza to Shifting Room;
+	change the south exit of Shifting Room to Qytat Plaza;
+
 
 to say shiftingroom:
 	say "As you walk towards the tent to the north, you see a bunch of muddy footprints leading inside. You follow, but the mud seems to have been cleaned from in here, since the whole room is pristine. The acrid tang of nanites no longer permeates the air here, and the soft bluish glow warms you.";
-	now shiftable is 2;
+	connect Shifting Room;
+	now Resolution of Secure Area is 2;
 
 the scent of shifting room is "The scent in here is very strange and otherworldly, but also heavy with the many musky scents you've encountered in the city.".
 

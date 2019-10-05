@@ -430,7 +430,7 @@ every turn (This is the check Hellhound rule):
 			if FaceName of Player is not "Hellhound":
 				LineBreak;
 				now FaceName of Player is "Hellhound";
-				now Face of Player is "leather dog collar around your neck and a yellow eyed, canine";
+				now Face of Player is "leather dog collar around your neck and a yellow-eyed, canine";
 				say "     Your face seems to heat up, and feel like soft putty for a few moments as the Hellhound's [']gift['] reveals itself for the curse it truly is, pulling your nose out, your mouth filling with canine teeth as your develop a scraggly, dirty furred canine head.";
 			if BodyName of Player is not "Hellhound":
 				LineBreak;
@@ -488,7 +488,7 @@ every turn (This is the check Hellhound rule):
 			if FaceName of Player is not "Hellhound":
 				LineBreak;
 				now FaceName of Player is "Hellhound";
-				now Face of Player is "leather dog collar around your neck and a yellow eyed, canine";
+				now Face of Player is "leather dog collar around your neck and a yellow-eyed, canine";
 				say "     Your face seems to heat up, and feel like soft putty for a few moments as the Hellhound's [']gift['] reveals itself for the curse it truly is, pulling your nose out, your mouth filling with canine teeth as your develop a scraggly, dirty furred canine head.";
 			if BodyName of Player is not "Hellhound":
 				LineBreak;
@@ -546,6 +546,9 @@ When Play begins:
 	now fheat entry is true;
 	now mpregheat entry is true;
 	now mpregtrigger entry is "     Your [if Player is male]shaft throbs, tip poking free of your sheath, foul yellow cream oozing from the tip as your balls seem to endlessly churn in an infernal rut your member oozes cum constantly. Your bowels quiver and ache with a foul need, a musky scent laced with pheromones and brimstone seeping from it as your tainted body longs to be bred. These desires war inside you, driving you mad with the urge to bury your cock in someone or something, or to have your bowels[else]bowels quiver and ache with a foul need, a musky scent laced with pheromones and brimstone seeping from it as your tainted body longs to be bred. These infernal desires feel like they might overwhelm you, your tainted body longing to be[end if] bred full of some hellish spawn.";
+
+When Play begins:
+	add "Hellhound" to infections of KnottedCockList;
 
 
 Book 4 - Return to the Church

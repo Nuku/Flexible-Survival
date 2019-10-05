@@ -143,17 +143,23 @@ to say VikingManSexMenu:
 to say BeatenVikingManLoot:
 	say "...";
 
-to say BeatenVikingManSex1:
+to say BeatenVikingManSex1: [milk him]
 	say "...";
 
-to say BeatenVikingManSex2:
+to say BeatenVikingManSex2: [blow him]
 	say "...";
+	CreatureSexAftermath "Player" receives "OralCock" from "Viking Man";
 
-to say BeatenVikingManSex3:
+to say BeatenVikingManSex3: [ride his cock]
 	say "...";
+	if player is female:
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Viking Man";
+	else:
+		CreatureSexAftermath "Player" receives "AssFuck" from "Viking Man";
 
-to say BeatenVikingManSex4:
+to say BeatenVikingManSex4: [fuck his ass]
 	say "...";
+	CreatureSexAftermath "Viking Man" receives "AssFuck" from "Player";
 
 to say VikingManAttacks:
 	if VikingRelationship is 9:

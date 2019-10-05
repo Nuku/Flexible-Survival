@@ -207,7 +207,42 @@ Table of GameCharacterIDs (continued)
 object	name
 Finn	"Finn"
 
-Finn is a man. The HP of Finn is usually 0.
+Finn is a man.
+ScaleValue of Finn is 4. [human+ sized]
+Body Weight of Finn is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Finn is 8. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Finn is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Finn is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Finn is 3.  [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Finn is 4. [length in inches]
+Breast Size of Finn is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Finn is 2. [count of nipples]
+Asshole Depth of Finn is 16. [inches deep for anal fucking]
+Asshole Tightness of Finn is 3. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Finn is 1. [number of cocks]
+Cock Girth of Finn is 4. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Finn is 15. [length in inches]
+Ball Count of Finn is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Finn is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Finn is 0. [number of cunts]
+Cunt Depth of Finn is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Finn is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Finn is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Finn is false.
+PlayerRomanced of Finn is false.
+PlayerFriended of Finn is false.
+PlayerControlled of Finn is false.
+PlayerFucked of Finn is false.
+OralVirgin of Finn is false.
+Virgin of Finn is true.
+AnalVirgin of Finn is true.
+PenileVirgin of Finn is false.
+SexuallyExperienced of Finn is true.
+TwistedCapacity of Finn is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Finn is false. [steriles can't knock people up]
+MainInfection of Finn is "Horseman".
 The description of Finn is "[FinnDesc]".
 The conversation of Finn is { "<This is nothing but a placeholder!>" }.
 The scent of Finn is "     Finn smells nicely masculine, with a little bit of fur, straw and sweat in the mix. Seems like he's not adverse to doing some good and solid work for his boss at the farm.".

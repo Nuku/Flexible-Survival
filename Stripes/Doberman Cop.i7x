@@ -15,6 +15,7 @@ an everyturn rule: [bugfixing rules for players that import savegames]
 				now MonsterID is y;
 				now area entry is "Nowhere";
 				break;
+		now AlexandraInfectionArea is 1;
 
 Section 1 - Creature Responses		[Note: Combat related portions deal with the Doberwoman Cop.]
 
@@ -309,15 +310,9 @@ to say weaponconf:
 				say "She takes your whip and sword away, making sure to grab them using an evidence bag. 'Just think about the damage you could have caused with these. You're too much of a loose cannon to be trusted with them. I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster!'";
 			else:							[lost the fight]
 				say "She takes your whip and sword away, making sure to grab them using an evidence bag. 'I can't let a half-crazed fool like you run around with something like this. You cannot be trusted with something this dangerous and I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster!'";
-			if weapon object of Player is dirty whip:
-				now weapon damage of Player is 4;
-				now weapon type of Player is "Melee";
-				now weapon object of Player is journal;
-			if weapon object of Player is infected sword:
-				now weapon damage of Player is 4;
-				now weapon type of Player is "Melee";
-				now weapon object of Player is journal;
+			unwield dirty whip silently;
 			delete dirty whip;
+			unwield infected sword silently;
 			delete infected sword;
 		else if dirty whip is owned:
 			if dobielibido >= 100 and inasituation is false:
@@ -330,10 +325,7 @@ to say weaponconf:
 				say "She takes your whip away, making sure to grab it using an evidence bag. 'Just think about the damage you could have caused with this. You're too much of a loose cannon to be trusted with it. I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster!'";
 			else:							[lost the fight]
 				say "She takes your whip away, making sure to grab it using an evidence bag. 'I can't let a half-crazed fool like you run around with something like this. You cannot be trusted with something this dangerous and I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster!'";
-			if weapon object of Player is dirty whip:
-				now weapon damage of Player is 4;
-				now weapon type of Player is "Melee";
-				now weapon object of Player is journal;
+			unwield dirty whip silently;
 			delete dirty whip;
 		else if infected sword is owned:
 			if dobielibido >= 100 and inasituation is false:
@@ -346,10 +338,7 @@ to say weaponconf:
 				say "She takes your sword away, making sure to grab it using an evidence bag. 'Just think about the damage you could have caused with this. You're too much of a loose cannon to be trusted with it. I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster!'";
 			else:							[lost the fight]
 				say "She takes your sword away, making sure to grab it using an evidence bag. 'I can't let a half-crazed fool like you run around with something like this. You cannot be trusted with something this dangerous and I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster!'";
-			if weapon object of Player is infected sword:
-				now weapon damage of Player is 4;
-				now weapon type of Player is "Melee";
-				now weapon object of Player is journal;
+			unwield infected sword silently;
 			delete infected sword;
 
 

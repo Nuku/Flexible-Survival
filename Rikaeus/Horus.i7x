@@ -1,7 +1,7 @@
 Version 2 of Horus by Rikaeus begins here.
 [Version 2 - Continuation of the Quest, New Npc, Sex With Horus.]
 
-[ HorusRelationship                                                     ]
+[ HP of Horus - Formerly Horusrelationship                              ]
 [   0: Have not encountered Horus at Tower to the Sky                   ]
 [   1: Have met Horus and gained access to palace Near The Sun          ]
 [   2: Has talked to Horus about the Darkness growing at the Capitol    ]
@@ -24,7 +24,7 @@ Version 2 of Horus by Rikaeus begins here.
 [  97: Returns to Lilith with info, she makes a cure to it              ]
 [  98: Goes back to Horus, tells him of the cure Lilith made            ]
 
-[ PediatricsLoss                                                        ]
+[ Stamina of Horus - Formerly Pediatricloss                             ]
 [   0: Have not loss                                                    ]
 [   1: Lost once                                                        ]
 [   2: Lost twice                                                       ]
@@ -39,8 +39,6 @@ an everyturn rule: [bugfixing rules for players that import savegames]
 
 Section A - Code for Horus and Zerbo
 
-HorusRelationship is a number that varies.
-PediatricsLoss is a number that varies.
 TroublemakerLost is a truth state that varies. TroublemakerLost is usually false.
 HorusFollowers is a truth state that varies. HorusFollowers is usually false.
 
@@ -79,7 +77,7 @@ Instead of resolving Sky Tower:
 		now PlayerMet of Horus is true;
 		change up exit of High Rise District to Palace Near The Sun;
 		change down exit of Palace Near The Sun to High Rise District;
-		now HorusRelationship is 1;
+		now HP of Horus is 1;
 		move player to Palace Near The Sun;
 		now Sky Tower is resolved;
 		now Resolution of Sky Tower is 1; [room connected]
@@ -133,8 +131,8 @@ to say HorusDesc:
 	say "     Taking a look at the Sun God you muse that he would pass as a pretty stunning specimen of a human if it weren't for his head. Horus is olive skinned for the most part, wearing an Egyptian-like kilt that appears to be made of the finest and softest cotton that could be found, assuredly looking comfortable. Beyond that, he appears to be wearing no other piece of clothing, opting for simply a golden necklace with a jade scarab attached to it. As for the problem of the above neck variety, the male has the head of a falcon, which definitely separates him from other humans. Occasionally you see him talking with one of his servants, ordering them to check out certain areas of the city.";
 
 instead of conversing the Horus:
-	if HorusRelationship < 1: [should be not yet available]
-		say "     ERROR: Horus shouldn't be where a player can see him yet, heck you shouldn't even have access to this room yet! Please report to Rikaeus on the FS Discord and quote this tracking number for easier bugfixing: [HorusRelationship]";
+	if HP of Horus < 1: [should be not yet available]
+		say "     ERROR: Horus shouldn't be where a player can see him yet, heck you shouldn't even have access to this room yet! Please report to Rikaeus on the FS Discord and quote this tracking number for easier bugfixing: [HP of Horus]";
 	else:
 		say "     Horus looks in your direction and as you approach him and gives you a soft smile, as if indirectly gesturing for you to ask what you will.";
 		say "[HorusTalkMenu]";
@@ -150,25 +148,25 @@ to say HorusTalkMenu:
 	now sortorder entry is 1;
 	now description entry is "Ask him about the named Sun God and why he goes by that title now.";
 	[]
-	if (HorusRelationship > 0 and HorusRelationship < 4) or HorusRelationship is 12:
+	if (HP of Horus > 0 and HP of Horus < 4) or HP of Horus is 12:
 		choose a blank row in table of fucking options;
 		now title entry is "Darkness";
 		now sortorder entry is 2;
 		now description entry is "Ask him about the growing darkness he has sensed.";
 	[]
-	if HorusRelationship is 4 and PlayerMet of Medea is true:
+	if HP of Horus is 4 and PlayerMet of Medea is true:
 		choose a blank row in table of fucking options;
 		now title entry is "Medea";
 		now sortorder entry is 3;
 		now description entry is "Tell him about the Lizard-Woman who might be able to help";
 	[
-	if HorusRelationship is 4 and PlayerMet of Lilith is true:
+	if HP of Horus is 4 and PlayerMet of Lilith is true:
 		choose a blankrow in table of fucking options;
 		now title entry is "Lilith";
 		now sortorder entry is 4;
 		now description entry is "Tell him about the demoness who... possibly might be able to help";
 	]
-	if HorusRelationship is 10:
+	if HP of Horus is 10:
 		choose a blank row in table of fucking options;
 		now title entry is "Cure";
 		now sortorder entry is 5;
@@ -215,46 +213,46 @@ to say HorusRa:
 	say "     With one last question before you leave the God be, you ask him why he chooses the name Horus over Ra or simply Horakhty? 'Ah, well, that choice was all mine and had to do with how a vast majority of my followers appeared to prefer it over the others,' Horus explains with a chuckle. That makes you smile before nodding at the explanation. Deciding that you've gained enough information you tell him that you'll let him return him to whatever he was doing. He chuckles and nods at you before turning his attention and voice towards one of the various falcon beings around you guys.";
 
 to say HorusDarkness:
-	if HorusRelationship is 1:
+	if HP of Horus is 1:
 		say "     Deciding that you may as well help against whatever this darkness is, you speak up and tell Horus such. He gives you a smile and leans forward, clutching both of his hands. 'I'm glad that you've agreed to help me despite the dangers to you,' he says with happiness in his voice. Standing up promptly you get your first show of he God's power since you've arrived here as he waves his hands and a projection of an area with cracks that spew ash and magma. From the angle you can tell that it's an overview of the area rather than a view from the ground. But overall you are able to understand where this projection is looking at.";
 		say "     'The darkness seems to have taken root in the ruins of what remains of the mortal's government area. However, I am unable to actually get a lock onto where it is,' Horus tells you with a sigh. You tilt your head at this, shouldn't he be able to easily find anything with his power? This in turn causes the deity to shake his own at you. 'Not really. I think whatever the problem is, it's constantly shifting its body. That usually prevents me from getting a good read on someone.' The Sun Deity shifts in his throne as he says this. 'I want you to go there and for now, get a closer look at what it is, don't get too in over your head,' Horus kindly says, concern in his voice. You promise him you won't, preparing yourself for what you have to do.";
 		WaitLineBreak;
 		say "     Before you can leave however, the Sun God stops you. 'I must impart you some last information about the enemy at hand,' he says as he waves his hand again causing the image to disappear. 'Whatever the darkness is, it appears to only target relatively strong people. As, no offense to my servants, whenever I sent any of them to go scout the area, any of the well-trained ones never came back,' Horus informs you, causing you to wonder what exactly this thing is. You nod and hope inwardly you're strong enough to attract its attention, despite the shudder that runs through your body as you think of that as you let him return to his business.";
 		now Nightmare Mutation is active;
-		now HorusRelationship is 2;
-	else if HorusRelationship is 2:
+		now HP of Horus is 2;
+	else if HP of Horus is 2:
 		say "     Horus gives you a confused look, possibly wondering why you're still here. 'Young one, why haven't you gone to the place where the darkness is located? Does something have you concerned?' he asks, his face changing to one of worry. You assure him that you're alright and that you are going to head to the capitol area soon. He smiles at that, nodding before speaking. 'Please be quick, this enemy could be devastating for the city,' the Deity requests of you, before returning to what he was doing.";
-	else if HorusRelationship is 3:
+	else if HP of Horus is 3:
 		say "     With a resolute look you pull the cloth out and unwrap it slightly, showing the wriggling piece of whatever it is to Horus. As soon as it catches the deity's eyes they widen in shock and he kind of backs up in his seat in horror. 'That's... worse than what I was thinking. I was hoping for a better situation than this,' he says, muttering the last sentence. You ask him, with a hopeful tone, if he knows what it is, describing what you had fought and what it had done. The terrifying scene was still front facing in your mind and probably will for a while. He shakes his head and lets out a sigh before speaking.";
 		say "     'I don't know exactly what it is, as it appears to be of nanite origins. Which despite being a deity we aren't omniscient, no we get our knowledge like everyone else, just at an easier learning curve,' he says, groaning a few seconds later and rubbing his forehead. 'The reason I said it's worse than what I was thinking is because I can feel its intent, or emotions so to speak. And that thing appears to be ravenously hungry for food and power,' Horus explains, causing you to nod, understanding his earlier reaction with a better point of view.";
 		WaitLineBreak;
 		say "     Suddenly though the Sun Deity gets a look on his face that makes you think that he had an idea. 'I think we might be able to solve this issue but there[']s one problem though,' Horus says, sighing at the end. You raise a brow at him and ask what it is, surely it isn[']t too hard? He shakes his head and leans back into the throne, crossing his hands in his lap. 'If we had a knowledgeable doctor who could examine this sample, we might be able to find a way to beat it. But sadly, the last one I knew was millenia ago.' He says with another groan. Perhaps you could find someone that can look it over? You voice this to the God and he gives you a thankful look. 'I[']d appreciate that, now I must explain the situation to my servants, I apologize.' He says, turning his attention towards the falcon beings.";
-		now HorusRelationship is 4;
-	else if HorusRelationship is 12:
+		now HP of Horus is 4;
+	else if HP of Horus is 12:
 		say "     You smile at him and tell the sun deity that the job is done. This brings out a matching but much larger grin on Horus' face as he lets out a happy laugh. 'This is great my friend! With the darkness gone, this world doesn't have to worry that much of impending extinction.' He says, sagging back into his throne in relief. You nod, replying that you hope that the both of you can finally get some relaxation rather than running around trying to prevent some blob from killing people. Speaking of that, you tell him that the now gnome named Zerbo is staying with you. 'Ah, that's rather kind of you. Please keep an eye on him, the guilt of having unknowingly killed people is strong, so he may need your support.' Horus explains, resulting in another nod from you. 'Before you go, in the future I may have a reward ready for you, a blessing of some sorts,' the sun deity says before allowing one of his retainers to step forward.";
-		now HorusRelationship is 13;
+		now HP of Horus is 13;
 
 to say HorusMedea:
 	say "     With a certain person in mind to help you two, you begin to speak. In no short length you explain to the deity that you have had the decency of meeting a pediatric doctor named Doctor Medea. As soon as you mention her job description, Horus looks at you with confusion. 'I don't know how someone trained in the way of helping someone giving birth would help us here,' he says rather confused about your suggestion. You roll your eyes at Horus and tell him that you really don't have a better idea. Plus, you guys might get lucky and she might have experience researching things. With a sigh he shrugs his shoulders before speaking. 'Well, we don't have much to lose,' the God says with a shake of his head.";
 	say "     He turns to one of his servants and for the first time you notice that he switches languages. It's an old language, that much is for sure, but the bird-headed male definitely understands him. After a minute they turn and leave the room. 'I want you to approach this woman with a request to examine the material,' Horus says to you before turning in the direction of the other person returning quite quickly. In their hands is a petri dish, more than likely containing the wriggling sample of whatever you fought before. You accept it with a nod, before carefully putting it somewhere safe so that it wouldn't break open. 'When you get news, come let me know,' the Sun God says with a comforting smile, one that you return before you leave.";
-	now HorusRelationship is 5;
+	now HP of Horus is 5;
 
 to say HorusLilith:
 	say "     ";
 
 to say HorusCure:
 	say "     Pulling out the vial you present it to the Sun God. You tell him that the Pediatrics doctor managed to possibly work out a cure for the enemy you face. Horus instantly smiles in your direction, clearly happy about what you're telling him. 'That's great my friend! Now you can finally finish the fight against the darkness encroaching upon us,' he says. You nod and say that you'll make sure to take care of it as soon as possible. Inwardly you hope that the cure works as you don't know what other solution there is. Turning around you let the deity get back to his work.";
-	now HorusRelationship is 11;
+	now HP of Horus is 11;
 	now Nightmare Showdown is active;
 
 instead of fucking the Horus:
-	if HorusRelationship < 4:
+	if HP of Horus < 4:
 		say "     The God shakes his head and gives you a smile. 'I'm sorry but the Darkness requires my attention for now.' He says with an apologetic look in his eyes.";
-	else if HorusRelationship < 13:
+	else if HP of Horus < 13:
 		say "     Horus gives you a soft smile and shakes his head. 'I'm sorry my friend but despite your small victory against the Darkness we still need to focus on it.' He starts before continuing with a chuckle. 'Afterall, what kind of king would I be if I focused on sex over solving a problem involving the people?' Looks like you won't be getting into bed with the deity until the issue with the mutant is solved.";
-	else if HorusRelationship > 12 and (lastfuck of Horus - turns < 3): [had sex 9 hours ago]
+	else if HP of Horus > 12 and (lastfuck of Horus - turns < 3): [had sex 9 hours ago]
 		say "     As soon as you try to proposition the god he chuckles. 'My friend, as delectable as you are, I do have work to do. Come find me in a couple hours and then we can see about it.' Horus says.";
-	else if HorusRelationship > 12:
+	else if HP of Horus > 12:
 		say "     Walking up to the sun deity you give him a sultry smirk and ask if he'd like to let out a little steam. He raises a brow at you before chuckling. 'Sure, why not, I have some free time on my hands.' Horus says, before asking you what you want to do in particular as he gestures for his retainers to leave the room.";
 		say "[HorusSexMenu]";
 
@@ -343,7 +341,7 @@ to say ZerboDesc:
 
 instead of conversing the Zerbo:
 	if Loyalty of Zerbo < 1: [should be not yet available]
-		say "     ERROR: Zerbo shouldn't be where a player can see him yet, heck you shouldn't even have access to this room yet! Please report to Rikaeus on the FS Discord and quote this tracking number for easier bugfixing: [HorusRelationship]";
+		say "     ERROR: Zerbo shouldn't be where a player can see him yet, heck you shouldn't even have access to this room yet! Please report to Rikaeus on the FS Discord and quote this tracking number for easier bugfixing: [HP of Horus]";
 	else:
 		say "     Tapping the gnome on the back he jumps a bit in the chair before he turns towards you chuckling. 'Ahaha, you spooked me there, what do you need friend?' He asks, looking at you with interested eyes.";
 		say "[ZerboTalkMenu]";
@@ -457,7 +455,7 @@ to say ZerboSex1:
 
 Section B - Event Code
 
-instead of navigating Pediatrics Lobby while HorusRelationship is 5:
+instead of navigating Pediatrics Lobby while HP of Horus is 5:
 		say "[NavCheck Pediatrics Lobby]";
 		if NavCheckReturn is false, stop the action; [can't navigate there right now]
 		move player to Pediatrics Lobby;
@@ -471,7 +469,7 @@ instead of navigating Pediatrics Lobby while HorusRelationship is 5:
 		say "     'I ended up getting attached to one of the kids, a sweet little baby boy who I found out had Tay-Sachs, a genetic disorder that ended up never letting him reach school age,' Medea says, tears running down her face before promptly wiping them off. 'I tried my hardest to work up a cure or a treatment for it, but as you know, Rome wasn't built in a day, let alone three, and I failed.' You don't really know what to say here, so you just let her speak and get her story out. 'So, I changed jobs, becoming a Pediatrics doctor, and in my free time vowed to research the cure to that disease... of course come the nanites it basically cured it for me,' she says, shaking her head.";
 		WaitLineBreak;
 		say "     Sighing, she sits straight up before looking at you. 'Nevertheless, I can help you, and what the hell it'll be fun to dust off my geneticist talents.' As she says this, she gives you a look over before nodding. 'You can be of some help as well, there have been some people occasionally coming by and messing around with the lobby, by the time you take care of them I should hopefully be done. They should be hanging out at the High Rise,' Medea orders you with a firm glance. You give her a shocked look at how fast she says she can examine the sample. The lizard rolls her eyes and takes the petri dish over to a section of the office. 'It's not that hard, it's not like you're asking me to reverse engineer genes or something, now shoo!' she says as she turns to the sample with an extremely excited look, causing you to leave back to the lobby.";
-		now HorusRelationship is 6;
+		now HP of Horus is 6;
 		now Pediatrics Troublemakers is unresolved;
 
 Table of GameEventIDs (continued)
@@ -488,7 +486,7 @@ when play begins:
 	add Pediatrics Troublemakers to BadSpots of FurryList;
 
 instead of resolving Pediatrics Troublemakers:
-	if HorusRelationship is 6:
+	if HP of Horus is 6:
 		if TroublemakerLost is true:
 			say "     Having made your way back to where you found the trio before, you look at the dark alleyway with your eyes narrowed and scoff at it. Quickly you head on in, hoping you can get it over with this time. Just like before you find the trio further in, messing around with some of the stray objects sitting around. When they see you they laugh and chuckle, asking if you're here to get 'owned' by them. You shake your head and say they're gonna be the ones defeated before you charge at one of the leopardmen, intent on beating them all.";
 		else:
@@ -502,7 +500,7 @@ instead of resolving Pediatrics Troublemakers:
 			say "     Groaning on the floor you push up and get ready to fight again, not letting what just happened get to you. With a determined look, suddenly a mystical and powerful sensation runs through your body, you suddenly feel revitalized and healed a little for battle. You charge forward at the next one you can see, which is the bunny with guns, ready for a fight hoping you can win this one.";
 			increase HP of Player by 40;
 			if HP of Player > maxHP of Player, now HP of Player is maxHP of Player;
-			increase PediatricsLoss by 1;
+			increase Stamina of Horus by 1;
 		else if fightoutcome >= 30: [fled]
 			say "     Deciding that your enemies are far too difficult to face at the moment you back away and then quickly dart out of the alleyway. As you turn your head the three enemies are growing smaller and smaller until you can't see them anymore. Once you're out of sight, you realize that you'll need to go back eventually but for now you just lean up against a wall to catch your breath.";
 			if TroublemakerLost is false:
@@ -513,9 +511,9 @@ instead of resolving Pediatrics Troublemakers:
 				say "     Standing triumphantly over the gun wielding bunny you turn your attention towards the last standing member of the trio, the second leopardman. You don't give him enough time to run away before you charge at him, with whatever your preferred weapon is. As you approach the feline himself gains a determined look of his own, clearly wanting to make his last stand.";
 			else if fightoutcome > 19 and fightoutcome < 30: [lost]
 				say "     With a determined look you push yourself off the floor, shaking off the troubles that just transpired and stumble onto your feet. You wont give up on this, you'll definitely hold up your end of the deal. You think this as you charge forward towards the last enemy remaining, the leopard, intent on finishing him. After all, he's the only one left, just defeat him and you're done here.";
-				increase PediatricsLoss by 1;
-				if PediatricsLoss is 2:
-					now PediatricsLoss is 0;
+				increase Stamina of Horus by 1;
+				if Stamina of Horus is 2:
+					now Stamina of Horus is 0;
 					if TroublemakerLost is false:
 						now TroublemakerLost is true;
 					say "[PediatricsTroubleFail]";
@@ -527,36 +525,36 @@ instead of resolving Pediatrics Troublemakers:
 				say "     Realizing that you can't finish off the leopard, you turn tail and run, disappearing into the alley and out the end you came in. Panting and breathing hard, you lean up against a building on the streets and think that you definitely will have to come back later when you can. After all, you have to hold up your end of the deal with Dr. Medea.";
 				if TroublemakerLost is false:
 					now TroublemakerLost is true;
-				now PediatricsLoss is 0;
+				now Stamina of Horus is 0;
 		if TroublemakerLost is false: [player hasn't completely lost / fled yet]
 			challenge "Leopardman";
 			if fightoutcome < 20: [won]
-				say "     With a smirk, you look towards the defeated forms of [if PediatricsLoss is 1]the ones you've downed[else]all of them[end if], watching the trio complain to each other about their incompetency. You walk up to them and give them a stern glare and ask them if they're not going to bother Dr. Medea again. Making a step towards them, they quickly nod eagerly and run away, causing you to chuckle inwardly. You whistle as you walk away, inwardly thinking they'll probably just mess with someone else but hey, it's not your problem anymore. Now for you to head back to the good ol['] doctor.";
-				now HorusRelationship is 7;
+				say "     With a smirk, you look towards the defeated forms of [if Stamina of Horus is 1]the ones you've downed[else]all of them[end if], watching the trio complain to each other about their incompetency. You walk up to them and give them a stern glare and ask them if they're not going to bother Dr. Medea again. Making a step towards them, they quickly nod eagerly and run away, causing you to chuckle inwardly. You whistle as you walk away, inwardly thinking they'll probably just mess with someone else but hey, it's not your problem anymore. Now for you to head back to the good ol['] doctor.";
+				now HP of Horus is 7;
 			else if fightoutcome > 19 and fightoutcome < 30: [lost]
 				say "     Falling to the ground with a moan, you look up and see the leopardman smirking at you. You roll your eyes and are determined to get up with all your energy. Quickly you push up and stand, using all the strength you can and you do manage it, to the shock of the feline. However on your end, you feel a magical energy filling your body, urging you to continue on.";
-				increase PediatricsLoss by 1;
-				if PediatricsLoss is 2:
+				increase Stamina of Horus by 1;
+				if Stamina of Horus is 2:
 					say "[PediatricsTroubleFail]";
-					now PediatricsLoss is 0;
+					now Stamina of Horus is 0;
 					if TroublemakerLost is false:
 						now TroublemakerLost is true;
 				else:
 					say "     You manage to hold on to all that energy and keep standing. This actually appears to impress all of the trio who approach you with a contemplative look. 'You're... glowing like the sun,' one of the leopardmen mutters, staring at you in awe. Glancing down at yourself, sure enough you are giving off an aura of the star in the sky that gives everyone light. It's such a magnificent radiance that it has enraptured the once enemies you were fighting. In fact, it's a tad bit terrifying, to the point that they're bowing to you. This is an odd circumstance considering that you had lost to them once.";
 					WaitLineBreak;
 					say "     Deciding to use your newfound power, whether it's a gift or what, you order the three to leave Dr. Medea alone. It's absurd and scary how quickly they comply as they nod eagerly and stand. Not really wanting the trio to be there any longer you shoo them off, causing them to happily run, though they do send a longing look in your direction that causes you to shudder a bit. A few seconds after that you feel the magic power leave you, causing you to feel rather exhausted but you nevertheless have completed what you came here for, hopefully Medea has finished her end of the deal.";
-					now HorusRelationship is 7;
+					now HP of Horus is 7;
 					now HorusFollowers is true;
 			else if fightoutcome >= 30: [fled]
 				say "     Not thinking that you could beat the leopardman you dash away from him, running towards the end of the alleyway that you came in from. When you get out of the dark passageway you are panting and breathing hard. You lean up against a building and think hard, realizing that you'll have to come back here sometime later to finish your end of the bargain before showing your face back at Medea's office. With a groan you walk off, to head somewhere else, vowing to return.";
 				if TroublemakerLost is false:
 					now TroublemakerLost is true;
-				now PediatricsLoss is 0;
+				now Stamina of Horus is 0;
 
 to say PediatricsTroubleFail:
 say "     However suddenly all your energy leaves you and you end up on the ground. Laying on the ground exhausted, you hear chuckling and laughing from behind you. Looking up and around you see the trio pointing at you and sneering in your direction. 'That was pathetic!' one of the leopardmen says. They all send their own insults and jeers towards you before telling you to try better next time before you start to slink off away from them and out of the alley to lick your wounds. Hopefully you can get them next time, because you really wouldn't want to return to Medea empty-handed. After all, she is helping you with the research that you desperately need right now.";
 
-instead of navigating Pediatrics Lobby while HorusRelationship is 7:
+instead of navigating Pediatrics Lobby while HP of Horus is 7:
 		say "[NavCheck Pediatrics Lobby]";
 		if NavCheckReturn is false, stop the action; [can't navigate there right now]
 		move player to Pediatrics Lobby;
@@ -564,7 +562,7 @@ instead of navigating Pediatrics Lobby while HorusRelationship is 7:
 		say "     'I managed to isolate the DNA and take a close look at the genetics of the sample you gave me and... let me tell you it's a piece of work,' Medea says with a sigh. Reaching over to her notes and looking over them she continues to explain a bit of what she means. 'When I experimented a bit on it, I noticed something, while it is intent on absorbing other creatures, it's not them that they're interested in, at least entirely,' she says, scratching her head. You ask her what she's talking about, as it appeared rather intent on attacking you. Rolling her eyes, she starts talking again. 'That's because it's only interest is obtaining new strains of nanites,' Medea says with a pointed look. Then reaching over and tapping you on the chest. 'You my friend must have something that it's interested in,' she chuckles.";
 		WaitLineBreak;
 		say "     With a sigh you ask her if she was able to figure out any way to stop the thing it originated from. She sadly shakes her head though promptly after she does give a smile. 'No, but I do recognize some of the genetic work, which concerns me,' Medea says with a frown. You return her facial expression and ask her what she means. 'Well, when I first moved here a while back, I heard of a geneticist named Jeremiah, so I looked into his work and the sample shows traces of it,' the lizardwoman says. You quickly ask the doctor if he could have done this on purpose and she hurriedly shakes her head. 'No, he was a kind man, intent on solving many diseases. I can tell you where his research area was though,' she says. You thank her for her help, to which Medea just smiles and says it was no problem as you helped her in turn. After getting the information from her you leave her be, telling her that you'll return if you find anything.";
-		now HorusRelationship is 8;
+		now HP of Horus is 8;
 		now Patient Zero is not resolved;
 
 Table of GameEventIDs (continued)
@@ -576,15 +574,15 @@ Patient Zero is resolved.
 The sarea of Patient Zero is "high"
 
 instead of resolving Patient Zero:
-	if HorusRelationship is 8:
+	if HP of Horus is 8:
 		say "     Wandering the streets of the High Rise District you look at the tall buildings, searching for the offices that Medea told you about. Thankfully though you soon enough spot the one you were looking for and pull open the door. You find yourself in a lobby area, which looks typical for a multi-office building like this. Bypassing the desk you look at the directory to search for the suite number that you were given and quickly find it. Noticing a sign by the list of offices you curse when you see it as it tells you the elevator is broken. So even if the power was on somehow, you'll have to use the stairs. So with a groan you make your way to the staircase.";
 		say "     It takes you a while to get up the stairs, due to the large amount of floors you have traverse. Soon enough you reach the required level and open up the door. When you enter the hallway, you're met with a white walled and floored area. Making your way down the tiled passage you look at the various doors, searching for one labeled Jeremiah. Thankfully it doesn't take you long to find it, approaching the entrance. Turning the doorknob you enter the researcher's lab. At first you weren't expecting much but as soon as you get in, those thoughts were wiped away with what sights met you immediately after.";
 		WaitLineBreak;
 		say "     The research lab was completely trashed, shelves crashed on the floor, desks crushed and chairs thrown about the place. The first thing to draw your attention are the notes on the floor, to which you collect in a pile. Beginning to read them you realize that Jeremiah was messing with his own genetics. However, when the nanites hit, he began to experiment with the various infections however as the notes go on you see that there was an accident in the lab. In a fit of clumsiness he knocked over a shelf and spilled a whole lot of vials of nanites and it appeared to have corrupted his own nanites.";
 		say "     Putting the papers away, you make your way over to the destroyed vials you notice the pool of stuff on the floor. Seeing that there's an intact vial you grab it and carefully try to edge the pool into the vial, using whatever you can find to push it in. Once you filled it up you pocket it safely and then stand up, brushing off your legs. Turning around, something catches your eye on a chair, causing you to walk over to it. When you get there, you find a piece of cloth with some blood on it. Thinking that'll be enough you pocket and head on out, making your way down and out of the building. Hopefully the doctor will be able to do something with the stuff you've found.";
-		now HorusRelationship is 9;
+		now HP of Horus is 9;
 
-instead of navigating Pediatrics Lobby while HorusRelationship is 9:
+instead of navigating Pediatrics Lobby while HP of Horus is 9:
 		say "[NavCheck Pediatrics Lobby]";
 		if NavCheckReturn is false, stop the action; [can't navigate there right now]
 		move player to Pediatrics Lobby;
@@ -592,7 +590,7 @@ instead of navigating Pediatrics Lobby while HorusRelationship is 9:
 		say "     Immediately after finishing the notes she moves to the vial and takes out a slide and pours a bit of it onto it and puts it under the microscope and looks at it. 'Interesting, it looks like the nanites are constantly fighting each other for dominance, there appears to be a god awful amount of infections here, at the bare minimum I count thirty,' she says, humming with interest. 'It's a good thing you didn't touch it, granted just your hand wouldn't really do much... Jeremiah must have gotten soaked with these,' Medea muses aloud, before removing the slide and putting the cloth on the slide.";
 		WaitLineBreak;
 		say "     As soon as she looks into the microscope she lets out a small gasp before quickly grabbing a dropper. Bringing it over to the cloth she puts a few drops onto the blood. Suddenly the blood is sucked up and absorbed into drops, increasing its size. She takes the sample and pours it into a new vial. Promptly she takes the vial and walks over to you, placing it into your hand. 'So, I'm hoping that this will work. It contains Jeremiah's original nanites. If you manage to defeat him again, pour this onto him and it MIGHT just revert his transformation, if the nanites are smart enough to remember his original form,' Medea says with a sigh. You nod and thank her for her help and wish the lizard-woman luck on her Pediatrics Clinic.";
-		now HorusRelationship is 10;
+		now HP of Horus is 10;
 
 [Boss-Esque Events]
 
@@ -608,7 +606,7 @@ when play begins:
 	add Nightmare Mutation to BadSpots of BodyHorrorList;
 
 Instead of resolving Nightmare Mutation:
-	if HorusRelationship is 2:
+	if HP of Horus is 2:
 		now inasituation is true;
 		now fightstatus is 0;
 		say "     Having been a good twenty minutes wandering around the capitol district you wonder if you're ever going to actually run into or find any information about this darkness. Letting out a sigh and kicking a rock that's in your path you continuing to walk around. However, when the piece of stone that you let launch ends up slamming against a knocked down street sign, letting a loud clang ring out. 'Help! Is someone out there!' A scream is uttered seconds later from around the corner of a building. The voice is terrifyingly desperate sounding, exactly as if the person shouting it is fighting for their life rather their body. But... that can't be? The nanites prevent most forms of death other than instantaneous.";
@@ -620,7 +618,7 @@ Instead of resolving Nightmare Mutation:
 		if fightoutcome < 20: [won]
 			say "     With one last powerful strike you knock the creature to the ground, seemingly having won the fight. However, to your horror it gets back up, looking not hurt at all. Thankfully though seconds later, it appears to turn and run away, as if terrified of you. Although you're pretty sure that it's not at all. Plopping yourself on the ground with a sigh of relief you let yourself recover for a bit before you head off, possibly to report to Horus about what you encountered. After all, the Sun God is bound to want to know about what happened here, as whatever that thing was, it's super dangerous.";
 			say "     A few minutes later after resting, you get up and get ready to leave. However, before you can go, something catches your sight in the corner of your eyes. It's a tiny wriggling piece of something that appears to be rapidly shifting colors. Curious, you walk up to it and pick it up, examining it closer before quickly realizing something, it's a part of that creature you just fought! It must have broke off when you were fighting the thing, but what are you going to do with it though? Quickly looking around you see a stray piece of cloth and hurriedly grab it and wrap the piece in it, making sure it can't interact with any part of you, just in case. Once you're done you start heading off, figuring you should get back to Horus as soon as possible.";
-			now HorusRelationship is 3;
+			now HP of Horus is 3;
 			now inasituation is false;
 			now Nightmare Mutation is resolved;
 		else if fightoutcome is 22: [submitted]
@@ -644,7 +642,7 @@ when play begins:
 	add Nightmare Showdown to BadSpots of BodyHorrorList;
 
 Instead of resolving Nightmare Showdown:
-	if HorusRelationship is 11:
+	if HP of Horus is 11:
 		now inasituation is true;
 		now fightstatus is 0;
 		say "     Returning to where you found the creature before, you wonder if it moved elsewhere as you don't spot it. However, that thought doesn't remain for much longer as you see something large out of the corner of your eyes. Turning around quickly you see the rapidly shifting being once more, making its way towards you. The cure is on your person but you don't think you could inject it without getting touched with the intent to be eaten by it. So you more than likely have to fight it and get it weakened to do anything. So, with a deep breath you sink down into a fighting stance and get ready to lunge at it.";
@@ -662,7 +660,7 @@ Instead of resolving Nightmare Showdown:
 					say "     Mentioning the action that resulted in him becoming becoming a monster he blushes. Moving onward so he doesn't get too embarrassed, you ask him if he needs a place to stay. 'Yeah, that'd be great! I'm pretty sure my place is trashed.' He says with a cheerful grin. Inwardly you chuckle, as his place was destroyed from the rampage he went on as he transformed. However, you tell him that you'd be glad to host him where you're staying. He thanks you for that, after which the two of you promptly head for the Abbey. Thankfully the path on the way there is pretty safe so you two don't run into anything dangerous, managing to make it there without any trouble.";
 					say "     Once there the two of you have a look around, Zerbo probably trying to figure out which room is best for him to stay in. It doesn't take long for him to pick the Computer Lab, and grab a table that doesn't have anything on it. 'This is perfect for me to set my writing on and I can probably set up my chemicals in this corner,' the gnome says cheerfully. You smile at his enthusiasm and tell him you're glad that he's happy. Right after that you let him know that you'll allow him to settle in before you step away, a mental thought that you should probably return to Horus and let him know what happened.";
 					move player to Computer Lab;
-					now HorusRelationship is 12;
+					now HP of Horus is 12;
 					now inasituation is false;
 					now Nightmare Showdown is resolved;
 					move Zerbo to Computer Lab;

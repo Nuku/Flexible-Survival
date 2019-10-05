@@ -32,6 +32,10 @@ The description of Jadako's Room is "[jadakoroomdesc]".
 To say jadakoroomdesc:
 	say "     Jadako's room is a standard college dorm room. It's got different video game and anime posters hanging throughout, most depicting buff male characters. A television sits on a table with a collection of different DVDs, all of some anime or movie. A large, open glass window is on the other end of the room. Atop its windowsill is a collection of exotic sex toys, all proudly on display. The sheets to Jadako's bed are thrown about, suggesting he doesn't do a great job of staying tidy.";
 
+to connect Jadako's Room:
+	change the south exit of Jadako's Room to Tenvale College Male Dorms;
+	change the north exit of Tenvale College Male Dorms to Jadako's Room;
+
 Section 2 - Declaring Jadako and Joseph
 
 Table of GameCharacterIDs (continued)
@@ -164,7 +168,7 @@ to say JadakoTalkMenu:
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
-			say "     You step back from Jadako, who looks at you a little funny. 'Ok, nevermind, I guess?' he questions.";
+			say "     You step back from Jadako, who looks at you a little funny. 'OK, nevermind, I guess?' he questions.";
 			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
@@ -241,7 +245,7 @@ to say JosephTalk1:
 	say "     You ask Joseph about himself. How did he get his job, where he came from, and other things. 'Well, I always wanted to stick with Track and Field after college, and it just so happened that the previous coach was retiring the year I graduated. The college hired me pretty quickly since I did so well as a student. I think this would have been my 14th year teaching. Shame that this whole thing happened, lots of people got hurt because of it,' he says solemnly, but quickly shakes himself out of the moment of sadness.";
 
 to say JosephTalk2:
-	say "     You ask Joseph about Jadako. 'Ah, Jay's a great student. He took Track and Field really seriously. You wouldn't believe how often I'd see him on the track running, trying to build his endurance and speed. He was one of the best students in the program. Had a bit of a problem making friends, though. I'm glad to see that he's gotten a lot more social, though. I'll admit, it surprised me when I met him after all this happened, him being a cat all of a sudden, and then when he came onto me, I guess I realized I always saw a lot of myself in him. I feel bad breaking professionality, but these are changing times. I'd rather him be with me then some person who'd just take advantage of him,' he states protectively. It seems like these two really do love each other. It makes you happy to know more people experience more than just blind lust.";
+	say "     You ask Joseph about Jadako. 'Ah, Jay's a great student. He took Track and Field really seriously. You wouldn't believe how often I'd see him on the track running, trying to build his endurance and speed. He was one of the best students in the program. Had a bit of a problem making friends, though. I'm glad to see that he's gotten a lot more social, though. I'll admit, it surprised me when I met him after all this happened, him being a cat all of a sudden, and then when he came onto me, I guess I realized I always saw a lot of myself in him. I feel bad breaking professionality, but these are changing times. I'd rather him be with me than some person who'd just take advantage of him,' he states protectively. It seems like these two really do love each other. It makes you happy to know more people experience more than just blind lust.";
 
 to say JosephTalk3:
 	say "     You inquire about Track and Field and the team. 'Well, our school may be known for its football team, but we had one hell of a track team. We'd always place high up, and not just because of my expert coaching skills,' he chuckles. 'No, the students cared a lot about track. Always practicing together and trying help each other, the team was like a family. Sad to say, other than Jadako, I don't know what happened to the other students. I hope they're alright. I don't know what I'd do if I found out something bad happened to them...' You assure him that they're probably fine. He nods, saying, 'Thank you. Usually, the teacher is supposed to give the encouragement, but I appreciate it.'";
@@ -316,7 +320,7 @@ to say CampusCoupleSexMenu:
 	clear the screen and hyperlink list;
 
 to say CampusCoupleSex1:
-	say "     You suggest that the two lovers take you in between them. Jadako agrees eagerly, happily exclaiming 'Sounds good to me! Isn't everyday I get to top.' Jadako reaches down, lightly stroking his already hard feline cock. [if Player is female]'Ok, but I'll just let you know I'm an ass-man,'[else]'Sounds good to me. I'll take a piece of that ass,'[end if] Joseph chuckles as he walks around behind you, squeezing your ass. You and the coach both strip bare, while Jadako lets out a little laugh. 'You both really should just go au naturel. It's way easier,' he suggests sultrily. Joseph lets out a sarcastic laugh, but you can't help but think you wouldn't mind seeing more of the coach naked. Jadako opens a nearby cabinet and pulls out a bottle of lube, which he tosses to the canine behind you. Coach Weber catches the bottle, but looks at it closely. 'I thought you kept the lube in that cabinet,' the muscular anthro wonders. 'Oh, I do. I also keep some in this cabinet. And the nightstand, and the dresser, and the closet...' Jadako lists.";
+	say "     You suggest that the two lovers take you in between them. Jadako agrees eagerly, happily exclaiming 'Sounds good to me! Isn't everyday I get to top.' Jadako reaches down, lightly stroking his already hard feline cock. [if Player is female]'OK, but I'll just let you know I'm an ass-man,'[else]'Sounds good to me. I'll take a piece of that ass,'[end if] Joseph chuckles as he walks around behind you, squeezing your ass. You and the coach both strip bare, while Jadako lets out a little laugh. 'You both really should just go au naturel. It's way easier,' he suggests sultrily. Joseph lets out a sarcastic laugh, but you can't help but think you wouldn't mind seeing more of the coach naked. Jadako opens a nearby cabinet and pulls out a bottle of lube, which he tosses to the canine behind you. Coach Weber catches the bottle, but looks at it closely. 'I thought you kept the lube in that cabinet,' the muscular anthro wonders. 'Oh, I do. I also keep some in this cabinet. And the nightstand, and the dresser, and the closet...' Jadako lists.";
 	LineBreak;
 	say "     The room is silent for a moment as you (and most likely Joseph as well) consider why Jadako has so much lube. 'Okaaaaaay...' Joseph says as he uncaps the bottle of lube and gets a healthy amount on his hands. 'You should probably get on your knees now on the coffee table,' Joseph instructs. You comply to the coach as he rubs the lube over his cock, getting his shaft nice and slippery. The coffee table has a nice pillowtop, protecting your knees from the hard wood. Jadako stands in front if you, his cock dangling only a few inches from your face. It twitches ever so often, obviously excited to go in a hole for once. A drop of drool falls from you open mouth, which causes the feline to let out a little chuckle. 'And I thought I was the cock slut... Obviously I have a lot to learn from you,' he purrs as gives his cock a single pump. Behind you, the sound of a cap closing reveals that Joseph is all lubed up now.";
 	WaitLineBreak;

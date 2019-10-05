@@ -878,7 +878,7 @@ We can calculate the sine of an angle in degrees using the phrase 'the sine of X
 
 We can use fixed point numbers or integer numbers.
 
-The method used to calculate the sine of a number is the Taylor expansion series for the sine of a number. The angle is normalised into the range 0 to 360 degrees. If the angle is 0, 90, 180, 270 or 360, the results 0, 1, 0, -1, 0 are returned. If the angle is not one of these numbers, the angle is further normalised to 0 to 90 degrees, converted to radians and the result calculated from the Taylor Series for this angle.
+The method used to calculate the sine of a number is the Taylor expansion series for the sine of a number. The angle is normalized into the range 0 to 360 degrees. If the angle is 0, 90, 180, 270 or 360, the results 0, 1, 0, -1, 0 are returned. If the angle is not one of these numbers, the angle is further normalized to 0 to 90 degrees, converted to radians and the result calculated from the Taylor Series for this angle.
 
 We can calculate the arcsin of a number in the range -1 to 1 by using the phrase 'the arcsine of X'. Values outside the range -1 to 1 will return the result 0.0000.
 

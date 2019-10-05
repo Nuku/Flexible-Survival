@@ -334,6 +334,7 @@ When Play begins:
 	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	add "Friendship Pony" to infections of EquineList;
 	add "Friendship Pony" to infections of FurryList;
+	add "Friendship Pony" to infections of FeralList;
 	add "Friendship Pony" to infections of HumorousList;
 	add "Friendship Pony" to infections of LatexList;
 	add "Friendship Pony" to infections of FemaleList;

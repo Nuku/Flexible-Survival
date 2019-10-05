@@ -93,6 +93,7 @@ When Play begins:
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Human"; [name of the overall species of the infection, used for children, ...]
 	add "Pod Person" to infections of HumanList;
+	add "Pod Person" to infections of HumorousList;
 	add "Pod Person" to infections of NatureList;
 	add "Pod Person" to infections of PlantList;
 	add "Pod Person" to infections of HermList;
@@ -100,7 +101,7 @@ When Play begins:
 	now Name entry is "Pod Person"; [Name of your new Monster]
 	now enemy title entry is "Awesome Tree"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[awesome attack]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[awesome defeat]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[awesome vict]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]

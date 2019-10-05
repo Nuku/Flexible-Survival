@@ -102,8 +102,7 @@ Instead of resolving a The Dorms Part Three:
 		say "     Interestingly enough, the last character in the former showering-area-turned-brothel is standing by off himself and looking at you with a carefully guarded gaze. Tall, imposing and impossibly muscular, the black bear anthro watches you with a cautious glare as he stands with his arms folded over his chest. Not quite understanding why, or rather how, the other is resisting this smorgasbord of carnal delight, you walk over to talk to him to ask him just that. 'You coming to join the orgy, kid?' The ursine speaks with a voice that clearly has some age behind it. You blink twice before answering back that you were going to ask him the very same question, all the while trying your hardest to figure just how old this guy was. The black bear chuckles at you almost ruefully as watches confusion dance on your face. 'Before this whole thing started, I was a married gym teacher. So unlike the group in front of me, I've got more control over myself.' The bear puffs up proudly, but then flushes some when you give him a [']look[']. The ursine then ducks his head to the side to cough nervously. 'Well that, and my old lady would kill me if I so much as sneezed the wrong way at the students here. She's a lunch lady here, FYI.'";
 		LineBreak;
 		say "Not really understanding, you nod to the bear and then step your way casually around the Alpha Husky, who is now on his umpteenth orgasm of the day, out of them shower room. Heading down the hall, you chuckle to yourself as you think over the black bear's words. Just how scary must someone be to make their spouse so afraid they wouldn't even attempt to try and have sex with a willing, not to mention of legal age, partner during these dark and debased times?";
-		increase Libido of Player by 15;
-		if Libido of Player > 100, now Libido of Player is 100;
+		LibidoBoost 15;
 		increase score by 1;
 		now Resolution of The Dorms Part Three is 1; [went in]
 	else:
@@ -145,22 +144,18 @@ Instead of resolving a Training Room:
 			say "     Making the decision that you could use some extra leg power, you go over to a lonesome treadmill and the proceed to turn the machine on. Hopping onto the machine you start the machine up and then begin jogging lightly to get yourself going. Quickly though you find that the speed is far too slow for you and you turn the dial of the treadmill up higher so that you can start to move faster. Going at an increased speed feels much, much better to you and in running faster you let your mind and thoughts simply slip away as you move on instinct. Before long you notice the sounds of others around you and you turn your head to see several of the student body looking at you with praise on their faces to see you going so fast. Not really understanding you look down and then note that you are going almost faster than a cheetah as your legs move of their own accord. Seeing this and then feeling your heart hammering inside of your body at a breakneck pace you decide to slow down before you hurt something. When you finally do stop though your body feels as though you could have gone on for almost half an hour longer, though you are somewhat thirsty and hungry at the same time.";
 			WaitLineBreak;
 			say "     Coming to realize that this is enough for one day, you walk nonchalantly out of the room without saying a word to some of the cheering guys and girls talking about you. A few hands do smack your rump however, the offer to come and [']see them later['] being whispered into your ear before the wolverine guarding the front door growls loudly to scare everyone back to what they were doing. You blush some, but make your way out without incident. Between the glare you get from wolverine and the lewd slaps you received across your rump you have a feeling you won't be back here anytime too soon... or ever.";
-			say "[bold type]Your dexterity has increased by 1![roman type][line break]";
-			increase dexterity of Player by 1;
+			StatChange "Dexterity" by 1;
 			now Resolution of Training Room is 1; [Treadmill / Dex Training]
 		else:
 			LineBreak;
 			say "     Deciding that you could do with some more arm and upper muscles strength, you go over to a lonely-looking stack machine and then proceed to adjust the pin into what weight on the contraption to what you think you can pump. Once that has been accomplished you go over and sit down and take the handlebars to begin pumping iron. What you find is that the weight you have set is so minuscule that you nearly send the plates of iron up to the roof. Not feeling the strain that you know you should be feeling you blink to yourself in confusion as you look at the now hovering piece of metal. Slowly releasing the handlebar you get up and then return to the backside of the stack machine to replace the pin under a greater set of plates before returning to your seat. This time you find that you can feel a slight burn as you pull the handlebar down into yourself. Grunting in satisfaction as your arms start to flex and strain from the effort you begin a long series of reps over the course of the next hour.";
 			WaitLineBreak;
 			say "     When you finally get done, on your fiftieth set of twenty-five reps, you find that your arms are sore, but in a pleasant sort of way as you get up from your seat. When you do however, you nearly bump face first into someone standing behind you. Blinking owlishly and then turning your head up you find that several of the assembled students are cheering at you in praise of your efforts. Blushing and then smiling nervously you nod to thank them and then proceed to leave out of the room. Sadly you don't manage to do so without several slaps across the ass and a few offers to [']meet up later['] being tossed you way. The wolverine guard growls out loud when he sees that things are about to get out of control and immediately everyone scatters to go back to what they doing. The big male glares at you as you pass and you suddenly get the feeling that coming back might not be a good option. It's fine though as suddenly you feel very hungry and thirsty for some reason. Maybe it'd be a good time to get something to eat now?";
-			say "[bold type]Your strength has increased by 1![roman type][line break]";
-			increase strength of Player by 1;
-			increase capacity of Player by 5;
+			StatChange "Strength" by 1;
 			now Resolution of Training Room is 2; [Stacks / Str Training]
-		increase hunger of Player by 15;
-		increase thirst of Player by 10;
-		increase Libido of Player by 12;
-		if Libido of Player > 100, now Libido of Player is 100;
+		PlayerEat 15;
+		PlayerDrink 10;
+		LibidoBoost 12;
 	else:
 		LineBreak;
 		say "     Shaking your head, you decide just to marvel at all the other sporty anthros here instead of trying to work out. You already get enough of a workout just trying to survive this screwed up city anyway, what with either trying to escape feral mutants or fighting them when your feet can't get you out of danger. Looking over the assembled crowd for several more minutes, you finally get your fill of the college's gym almost an hour later. From what you can see, everything here is as it should be, and it will continue to be so with the wolverine guarding the place. So, turning on your heel, you tip your head to the big male and then walk out without looking back.";

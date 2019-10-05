@@ -890,12 +890,16 @@ When Play begins:
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Yamato Dragon"; [name of the overall species of the infection, used for children, ...]
 	add "Yamato Dragon" to infections of ReptileList;
+	add "Yamato Dragon" to infections of FeralList;
 	add "Yamato Dragon" to infections of MythologicalList;
 	add "Yamato Dragon" to infections of FemaleList;
 	add "Yamato Dragon" to infections of BarbedCockList;
 	add "Yamato Dragon" to infections of InternalCockList;
 	add "Yamato Dragon" to infections of QuadrupedalList;
+	add "Yamato Dragon" to infections of FlightList;
 	add "Yamato Dragon" to infections of TailList;
+	add "Yamato Dragon" to infections of OviImpregnatorList;
+	add "Yamato Dragon" to infections of FirebreathList;
 	add "Yamato Dragon" to infections of TailweaponList;
 	now Name entry is "Yamato Dragon";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]

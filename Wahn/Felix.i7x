@@ -63,7 +63,7 @@ instead of navigating Dry Plains while (HP of Felix is 1 and Libido of Felix is 
 to say Stalker1:
 	say "     What do you do? Leave the meeting spot again and circle around in hope of catching the stalker ([link]Y[as]y[end link]), or tell him you don't have time right now ([link]N[as]n[end link]) ?";
 	if Player consents:
-		say "     You clap Felix on the shoulder and give him a hug, whispering, 'Ok, you stay calm and act normally. I'll circle around and come up from behind the rubble. Hopefully I can surprise whatever is watching you...";
+		say "     You clap Felix on the shoulder and give him a hug, whispering, 'OK, you stay calm and act normally. I'll circle around and come up from behind the rubble. Hopefully I can surprise whatever is watching you...";
 		LineBreak;
 		say "     With that, you wave goodbye to Felix and Thomas and make your way out into the plain in a wholly different direction. Trekking around the camp site in a wide arch, ducking into the grass as good as you can, you find yourself with the rubble mound between you and the centaurs. What next - do you want to climb over the rubble to surprise the watcher by coming from behind ([link]Y[as]y[end link]), or walk around it ([link]N[as]n[end link]) (with a higher chance of being seen)?";
 		if Player consents:
@@ -101,7 +101,7 @@ instead of navigating Dry Plains while (HP of Felix is 1 and Libido of Felix is 
 to say Stalker2:
 	say "     What do you do? Leave the meeting spot again and circle around in hope of catching the stalker ([link]Y[as]y[end link]), or tell him you don't have time right now ([link]N[as]n[end link]) ?";
 	if Player consents:
-		say "     You clap Felix on the shoulder and give him a hug, whispering, 'Ok, you stay calm and act normally. I'll circle around and come up from behind the rubble. Hopefully I can surprise your lizard stalker this time...";
+		say "     You clap Felix on the shoulder and give him a hug, whispering, 'OK, you stay calm and act normally. I'll circle around and come up from behind the rubble. Hopefully I can surprise your lizard stalker this time...";
 		say "     With that, you wave goodbye to Felix and Thomas and make your way out into the plain in a wholly different direction. Trekking around the camp site in a wide arch, ducking into the grass as good as you can, you find yourself with the rubble mound between you and the centaurs. What next - do you want to climb over the rubble to surprise the stalker by coming from behind ([link]Y[as]y[end link]), or walk around it ([link]N[as]n[end link]) (with a higher chance of being seen)?";
 		if Player consents:
 			let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
@@ -150,7 +150,7 @@ to say AndreMeeting:
 		LineBreak;
 		say "     Ah - he's taking a breath... now's your chance to get a word in edgewise. Do you tell him to go away and leave the centaurs in peace ([link]Y[as]y[end link]), or offer to introduce him to Felix, if the young centaur wants to meet him ([link]N[as]n[end link])?";
 		if Player consents:
-			say "     'Listen, I think it'd be best if you just left, ok? He wouldn't like someone like you who creeped after him anyways.' With that, you shut him up good. You continue, 'Give me that and go,' and take the pouch from his hands, then watch as the lizard runs off with tears in his eyes. Unlikely that he'll be back. With that, you walk back towards the centaurs.";
+			say "     'Listen, I think it'd be best if you just left, OK? He wouldn't like someone like you who creeped after him anyways.' With that, you shut him up good. You continue, 'Give me that and go,' and take the pouch from his hands, then watch as the lizard runs off with tears in his eyes. Unlikely that he'll be back. With that, you walk back towards the centaurs.";
 			now Libido of Felix is 99;
 		else:
 			say "     'Well, how about this - give me the bag and I'll bring it to Felix, then ask if he wants to meet you. You can't just follow him around forever.' Andre closes mouth on what he wanted to say, then nods with a hopeful look as he hands you the leather pouch. Saying, 'I'll wave if you can come over,' you walk back towards the centaurs.";
@@ -162,7 +162,42 @@ Table of GameCharacterIDs (continued)
 object	name
 Felix	"Felix"
 
-Felix is a man. The HP of Felix is normally 0.
+Felix is a man.
+ScaleValue of Felix is 4. [human+ sized]
+Body Weight of Felix is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Felix is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Felix is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Felix is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Felix is 3.  [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Felix is 4. [length in inches]
+Breast Size of Felix is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Felix is 2. [count of nipples]
+Asshole Depth of Felix is 14. [inches deep for anal fucking]
+Asshole Tightness of Felix is 3. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Felix is 1. [number of cocks]
+Cock Girth of Felix is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Felix is 14. [length in inches]
+Ball Count of Felix is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Felix is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Felix is 0. [number of cunts]
+Cunt Depth of Felix is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Felix is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Felix is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Felix is false.
+PlayerRomanced of Felix is false.
+PlayerFriended of Felix is false.
+PlayerControlled of Felix is false.
+PlayerFucked of Felix is false.
+OralVirgin of Felix is false.
+Virgin of Felix is true.
+AnalVirgin of Felix is true.
+PenileVirgin of Felix is false.
+SexuallyExperienced of Felix is true.
+TwistedCapacity of Felix is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Felix is false. [steriles can't knock people up]
+MainInfection of Felix is "Centaur Stallion".
 The description of Felix is "[FelixDesc]".
 The conversation of Felix is { "Mew!" }.
 lastFelixTalk is a number that varies. lastFelixTalk is usually 555. [turn-counter for talking delays (humanity restoration)]
@@ -355,7 +390,7 @@ Instead of fucking the Felix:
 		say "ERROR-Felix-100B: He should be removed from the game.";
 	else:
 		if (lastfuck of Felix - turns < 6):
-			say "     Felix says, 'Sorry I'm still worn out from last time. Give me some space, ok?'";
+			say "     Felix says, 'Sorry I'm still worn out from last time. Give me some space, OK?'";
 		else if (Libido of Felix < 6 or Libido of Felix > 90):
 			say "     Felix says, 'Thanks for the offer - though I think I'll wait a bit more before doing any of that. I mean - you have my thanks for saving me, but... I want to be together with someone - not just have sex. Someone I care for.'";
 		else:
@@ -470,7 +505,42 @@ Table of GameCharacterIDs (continued)
 object	name
 Andre	"Andre"
 
-Andre is a man. The HP of Andre is normally 0.
+Andre is a man.
+ScaleValue of Andre is 4. [human+ sized]
+Body Weight of Andre is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Andre is 8. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Andre is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Andre is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Andre is 3.  [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Andre is 4. [length in inches]
+Breast Size of Andre is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Andre is 2. [count of nipples]
+Asshole Depth of Andre is 16. [inches deep for anal fucking]
+Asshole Tightness of Andre is 3. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Andre is 1. [number of cocks]
+Cock Girth of Andre is 4. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Andre is 16. [length in inches]
+Ball Count of Andre is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Andre is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Andre is 0. [number of cunts]
+Cunt Depth of Andre is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Andre is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Andre is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Andre is false.
+PlayerRomanced of Andre is false.
+PlayerFriended of Andre is false.
+PlayerControlled of Andre is false.
+PlayerFucked of Andre is false.
+OralVirgin of Andre is false.
+Virgin of Andre is true.
+AnalVirgin of Andre is true.
+PenileVirgin of Andre is false.
+SexuallyExperienced of Andre is true.
+TwistedCapacity of Andre is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Andre is false. [steriles can't knock people up]
+MainInfection of Andre is "Plains Lizard Male".
 The description of Andre is "[AndreDesc]".
 The conversation of Andre is { "Mew!" }.
 lastAndreTalk is a number that varies. lastAndreTalk is usually 555.	     [turn-counter for talking delays (humanity restoration)]
@@ -575,6 +645,7 @@ When Play begins:
 	add "Plains Lizard Male" to infections of TaperedCockList;
 	add "Plains Lizard Male" to infections of QuadrupedalList;
 	add "Plains Lizard Male" to infections of TailList;
+	add "Plains Lizard Male" to infections of OviImpregnatorList;
 	now Name entry is "Plains Lizard Male";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is "Andre";
@@ -745,7 +816,7 @@ Instead of fucking the Andre:
 		say "ERROR-Andre-100B: He should be removed from the game, together with Felix.";
 	else:
 		if (lastfuck of Andre - turns < 6):
-			say "     Andre says, 'Phew, I need a break for a bit. Another time, ok?'";
+			say "     Andre says, 'Phew, I need a break for a bit. Another time, OK?'";
 		else:
 			say "[AndreSexMenu]";
 

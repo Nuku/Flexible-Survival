@@ -22,18 +22,27 @@ object	name
 Val	"Val"
 
 Val is a man.
-ScaleValue of Val is 3.
-Cock Count of Val is 1.
-Cock Length of Val is 8.
-Ball Size of Val is 4.
-Ball Count of Val is 2.
-Cunt Count of Val is 0.
-Cunt Depth of Val is 0.
-Cunt Tightness of Val is 0.
-Nipple Count of Val is 2. [2 nipples]
-Breast Size of Val is 0.
-TwistedCapacity of Val is true.
-Sterile of Val is false.
+ScaleValue of Val is 3. [human sized]
+Body Weight of Val is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Val is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Val is 3. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Val is 7. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Val is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Val is 4. [length in inches]
+Breast Size of Val is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Val is 2. [count of nipples]
+Asshole Depth of Val is 14. [inches deep for anal fucking]
+Asshole Tightness of Val is 4. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Val is 1. [number of cocks]
+Cock Girth of Val is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Val is 8. [length in inches]
+Ball Count of Val is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Val is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Val is 0. [number of cunts]
+Cunt Depth of Val is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Val is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Val is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Val is false.
 PlayerRomanced of Val is false.
@@ -45,6 +54,8 @@ Virgin of Val is true.
 AnalVirgin of Val is false.
 PenileVirgin of Val is false.
 SexuallyExperienced of Val is true.
+TwistedCapacity of Val is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Val is false. [steriles can't knock people up]
 MainInfection of Val is "Orc Breeder".
 The description of Val is "[ValDesc]".
 The conversation of Val is { "Mew!" }.
@@ -252,8 +263,8 @@ to say ValSex1: [fucking him]
 	say "     Val just takes everything you can give, even moaning to take him ever faster and harder, while at the same time flexing his inner muscles to grip and squeeze your thrusting shaft for maximum pleasure. Getting a good ass-fucking drives the eager orc breeder over the edge before much longer, almost shouting 'Just like that, yeah, YEAH - aahhh - I'm coming!' as his cock sprays a pretty hefty load of cum all over his chest. His inner muscles twitch and flex with each shot of seed erupting from Val's cock, giving you all new stimulating sensations as you move in and out of him. Just a moment later, you reach the climax of your arousal and come, filling the orc's insides with spurt after spurt of your warm seed.";
 	WaitLineBreak;
 	say "     After that, the slutty little orc breeder just stays lying on the bench, enjoying the afterglow of his orgasm and the full feeling you gave him. You on the other hand go and grab your gear and clothes to get dressed, as you don't have the time to lounge around all day like this kept slave.";
+	NPCSexAftermath Val receives "AssFuck" from Player;
 	infect "Orc Warrior";
-	now lastfuck of Val is turns;
 
 to say ValSex2: [riding him]
 	if Player is female:
@@ -261,18 +272,19 @@ to say ValSex2: [riding him]
 		say "     Giving a reflexive 'Yes [master],' Val immediately obeys, quickly walking over to his bed and lying down on his back. Then he raises and spreads his legs, holding them open so you have full access to his oh so fuck-able butt. You take a moment to savor the sight of this strong and muscular yet totally submissive orc presenting himself to you, idly dropping your gear and clothes as you do so. But after the last piece of cloth falls to the ground, you surprise Val by ordering him to lower his legs and climbing on the bed to kneel over his body, your legs left and right of his hips. The orc breeder's eyes go wide as you reach down to find his cock, holding it straight up as you lower your hips bit by bit. Val pants in need as his erection presses against your nether lips, then sinks inside between them. He gasps 'Yeah, feels so good. Thank you!' as you impale yourself fully on his shaft, gripping it tightly with your inner muscles.";
 		WaitLineBreak;
 		say "     It's amazing how quickly the usually so submissive orc breeder starts to get into thrusting up against you hard and deep. Might be that it's all his pent-up urges from just bottoming all the time or maybe there's a bit of his old self Vincent left in there somewhere - not that you care that much about which it is currently, riding Val's shaft and gasping as he hammers into you from below. You just lean back, enjoying the thorough fucking you're getting while supporting yourself with both hands gripping Val's legs.";
-		say "     The lithe orc breeder really knows what he's doing, rotating his hips a bit to give you all kinds of great sensations and often hitting your g-spot. Well, as often as he gets fucked, he almost has to know all the tricks by now. Val keeps fucking you with admirable stamina for quite a while, then finally his moans rise in volume and urgency and his thrusts get faster and faster. Not much later, he almost shouts 'Yeah, YEAH - aahhh - I'm coming!' as his cock blasts a hefty load of cum deep into you. Getting bred by the green-skinned slave and feeling his cock pulse inside you was the last little push you yourself needed to get off, so you join him in orgasm only a second later.[fimpregchance]";
+		say "     The lithe orc breeder really knows what he's doing, rotating his hips a bit to give you all kinds of great sensations and often hitting your g-spot. Well, as often as he gets fucked, he almost has to know all the tricks by now. Val keeps fucking you with admirable stamina for quite a while, then finally his moans rise in volume and urgency and his thrusts get faster and faster. Not much later, he almost shouts 'Yeah, YEAH - aahhh - I'm coming!' as his cock blasts a hefty load of cum deep into you. Getting bred by the green-skinned slave and feeling his cock pulse inside you was the last little push you yourself needed to get off, so you join him in orgasm only a second later.";
 		WaitLineBreak;
 		say "     Sinking down to sit on Val's hips with his cock still inside you, you lean forward and kiss him, then just lie on the bed for a while, basking in your orgasms afterglow together. You wish you could stay like this for some more time, but eventually you have to get back to the tricky business of surviving in this chaotic city...";
+		NPCSexAftermath Player receives "PussyFuck" from Val;
 	else:
 		say "     Stepping up to Val, you put your arms around him and grope the firm, round cheeks of his butt. The orc breeder moans deeply as you touch him, leaning in against you with the eagerness of a true submissive, his own cock quickly hardening to press against your stomach. Pulling his cheeks apart, you rub a finger up and down the orc's crack, teasingly stroking over his pucker before pushing in. Val's muscle yields readily to your invasion, well-used to such treatment by now - as becomes apparent when you feel the wetness of cum around your probing digit. Seems like the panting breeder already got fucked by his masters today, and likely more than once. You continue to finger him for a moment longer, delighting in the little gasps and groans you can make him do, then switch over to his front and take hold of the orc's hard cock. After stroking the thick piece of man-meat a few times and cupping Val's full balls, you tell him to get on the cot at the back of the cell.";
 		say "     Giving a reflexive 'Yes [master],' Val immediately obeys, quickly walking over to his bed and lying down on his back. Then he raises and spreads his legs, holding them open so you have full access to his oh so fuck-able butt. You take a moment to savor the sight of this strong and muscular yet totally submissive orc presenting himself to you, idly dropping your gear and clothes as you do so. But after the last piece of cloth falls to the ground, you surprise Val by ordering him to lower his legs and climbing on the bed to kneel over his body, your legs left and right of his hips. The orc breeder's eyes go wide as you reach down to find his cock, holding it straight up as you lower your hips bit by bit. Val pants in need as his erection presses against your waiting hole, then sinks inside as your pucker yields to his member. He gasps 'Yeah, feels so good. Thank you!' as you impale yourself fully on his shaft, gripping it tightly with your inner muscles.";
 		WaitLineBreak;
 		say "     It's amazing how quickly the usually so submissive orc breeder starts to get into thrusting up against you hard and deep. Might be that it's all his pent-up urges from just bottoming all the time or maybe there's a bit of orc warrior sexual dominance even in the most docile breeder - not that you care that much about which it is currently, riding Val's shaft and gasping as he hammers into you from below. You just lean back, enjoying the thorough fucking you're getting while supporting yourself with both hands gripping Val's legs.";
-		say "     The lithe orc breeder really knows what he's doing, rotating his hips a bit to give you all kinds of great sensations and often hitting your prostate. Well, as often as he gets fucked, he almost has to know all the tricks by now. Val keeps fucking you with admirable stamina for quite a while, then finally his moans rise in volume and urgency and his thrusts get faster and faster. Not much later, he almost shouts 'Yeah, YEAH - aahhh - I'm coming!' as his cock blasts a hefty load of cum deep into you. Getting bred by the green-skinned slave and feeling his cock pulse inside you was the last little push you yourself needed to get off, so you join him in orgasm only a second later[if Player is male]. Your [Cock of Player] cock twitches and jerks as your body trembles in pleasure, spraying your own creamy load all over Val and the bed[end if].[mimpregchance]";
+		say "     The lithe orc breeder really knows what he's doing, rotating his hips a bit to give you all kinds of great sensations and often hitting your prostate. Well, as often as he gets fucked, he almost has to know all the tricks by now. Val keeps fucking you with admirable stamina for quite a while, then finally his moans rise in volume and urgency and his thrusts get faster and faster. Not much later, he almost shouts 'Yeah, YEAH - aahhh - I'm coming!' as his cock blasts a hefty load of cum deep into you. Getting bred by the green-skinned slave and feeling his cock pulse inside you was the last little push you yourself needed to get off, so you join him in orgasm only a second later[if Player is male]. Your [Cock of Player] cock twitches and jerks as your body trembles in pleasure, spraying your own creamy load all over Val and the bed[end if].";
 		WaitLineBreak;
 		say "     Sinking down to sit on Val's hips with his cock still inside you, you lean forward and kiss him, then just lie on the bed for a while, basking in your orgasms afterglow together. You wish you could stay like this for some more time, but eventually you have to get back to the tricky business of surviving in this chaotic city...";
+		NPCSexAftermath Player receives "AssFuck" from Val;
 	infect "Orc Breeder";
-	now lastfuck of Val is turns;
 
 Val ends here.
