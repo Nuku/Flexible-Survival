@@ -6884,6 +6884,7 @@ Include Hadiya by Stripes.
 Include Hanu by Kernog.
 Include Harold by Sarokcat.
 Include Hayato by Stripes.
+Include Help Book by Prometheus.
 Include HornyHorsey by femtoAmpere.
 [Include Horus by Rikaeus.]
 Include Hungry Boar Man by Closerhenry.
