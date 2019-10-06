@@ -198,7 +198,6 @@ When Play begins:
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Feral Wolf"; [name of the overall species of the infection, used for children, ...]
 	add "Feral Wolf" to infections of CanineList;
-	add "Feral Wolf" to infections of FurryList;
 	add "Feral Wolf" to infections of FeralList;
 	add "Feral Wolf" to infections of NatureList;
 	add "Feral Wolf" to infections of MaleList;
@@ -207,6 +206,7 @@ When Play begins:
 	add "Feral Wolf" to infections of SheathedCockList;
 	add "Feral Wolf" to infections of QuadrupedalList;
 	add "Feral Wolf" to infections of FeralmindList;
+	add "Feral Wolf" to infections of PackmindList;
 	add "Feral Wolf" to infections of TailList;
 	now Name entry is "Feral Wolf"; [Name of your new Monster]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
