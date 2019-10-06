@@ -82,8 +82,8 @@ to PlayerHunger (N - number):
 	LineBreak;
 	say "     [bold type]Your hunger has increased by [N]![roman type][line break]";
 	decrease hunger of Player by N;
-	if hunger of Player < 0:
-		now hunger of Player is 0;
+	if hunger of Player > 100:
+		now hunger of Player is 100;
 
 to ThirstReset:
 	LineBreak;
@@ -101,6 +101,8 @@ to PlayerThirst (N - number):
 	LineBreak;
 	say "     [bold type]Your thirst has increased by [N]![roman type][line break]";
 	increase thirst of Player by N;
+	if thirst of Player > 100:
+		now thirst of Player is 100;
 
 to PlayerMaxHeal:
 	LineBreak;

@@ -42,14 +42,25 @@ Retriever Girl is a pet. Retriever Girl is a part of the player.
 understand "Karen" as Retriever Girl.
 [Physical details as of game start]
 ScaleValue of Retriever Girl is 3. [human sized]
+Body Weight of Retriever Girl is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Retriever Girl is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Retriever Girl is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 SleepRhythm of Retriever Girl is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Mouth Length of Retriever Girl is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Retriever Girl is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Retriever Girl is 6. [length in inches]
 Cock Count of Retriever Girl is 0. [No cock]
+Cock Girth of Retriever Girl is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
 Cock Length of Retriever Girl is 0. [ ]
 Ball Size of Retriever Girl is 0. [  ]
 Ball Count of Retriever Girl is 0. [No balls]
-Cunt Count of Retriever Girl is 1. [No pussy]
-Cunt Depth of Retriever Girl is 10. [No Cunt]
+Cunt Count of Retriever Girl is 1. [1 pussy]
+Cunt Depth of Retriever Girl is 10. [can take 10 inch dicks]
 Cunt Tightness of Retriever Girl is 2. [No Cunt]
+Clit Size of Retriever Girl is 1. [size 1-5, very small/small/average/large/very large]
+Asshole Depth of Retriever Girl is 13. [inches deep for anal fucking]
+Asshole Tightness of Retriever Girl is 3. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
 Nipple Count of Retriever Girl is 4. [4 nipples]
 Breast Size of Retriever Girl is 2. [B Cup at the start]
 [Basic Interaction states as of game start]
@@ -185,7 +196,7 @@ to say KarenTalk1:
 			say "     Noticing Karen looking a little down, you ask her what's on her mind. 'It's been a while now since we got away from Rex, but I still can't remember much of who I was before I met him. It's a little bit frightening, not knowing who you are,' she says, clearly struggling to keep her emotions in check. Recalling that Francois seemed to remember her from before the outbreak, you suggest going to see him. Karen perks up a little at the suggestion. 'Really? Do you think he would help? I suppose it couldn't hurt,' she replies with a weak smile. 'It'll be nice to see another friendly face, at least.'";
 			now HP of Karen is 6;
 		else:
-			say " 	 [one of]'Thanks again for bringing me with you. I feel so much safer with you around.'[or]'It's nice to be able to think clearly again, but I'm still having trouble remembering much of my old life.'[or]'I hope Rex isn't out causing trouble for someone else now that he doesn't have me keeping him occupied.'[or]'I still feel that need welling up inside me occasionally... promise me you won't let me give in to it again, OK?'[at random]";
+			say " 	 [one of]'Thanks again for bringing me with you. I feel so much safer with you around.'[or]'It's nice to be able to think clearly again, but I'm still having trouble remembering much of my old life.'[or]'I hope Rex isn't out causing trouble for someone else now that he doesn't have me keeping him occupied.'[or]'I still feel that need welling up inside me occasionally... promise me you won't let me give in to it again, ok?'[at random]";
 	else:
 		if HP of Karen > 4:
 			say " 	 Karen is not around, you should call her over first.";

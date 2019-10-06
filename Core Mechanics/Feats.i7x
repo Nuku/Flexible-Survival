@@ -23,7 +23,7 @@ understand "volunteer" as featgetting.
 Check featgetting:
 	if HP of Doctor Matt is 0, say "Volunteer for what now? You are a strange person. Considering what game this is, that says a lot!" instead;
 	if featgained of Player > ( ( level of Player divided by 3 ) + foodwaterbonus + nerminefeat + boosterfeats ): [not ready for more feats]
-		if Doctor Matt is present:
+		if Doctor Matt is visible:
 			say "     As you step up to him and volunteer for testing, Dr. Matt picks up a little scanner and circles it over your torso, then shakes his head. 'I'm sorry, you're not yet ready for further procedures. You see, the nanite structures that are receptive to adjustment and reprogramming aren't all that prevalent and get deconstructed by the rest after I send a signal that seems to be lacking the right codes. It'll take some time before I can experiment on you again.'" instead;
 		else:
 			say "You do not yet qualify for more feats." instead;
@@ -110,7 +110,7 @@ To FunFeatget:
 			if calcnumber > 0 and calcnumber <= the number of filled rows in table of gainable feats:
 				now current menu selection is calcnumber;
 				follow the gainfeat rule;
-				decrease featgained of Player by 1;
+				[decrease featgained of Player by 1;]
 				if featqualified is 0, break;
 			else if Playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
 				say "Selection aborted.";

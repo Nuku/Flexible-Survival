@@ -82,7 +82,7 @@ Figure of Mareslut_icon is the file "Mareslut_naked.jpg".
 Figure of Mannequin_icon is the file "Mannequin.jpg".
 Figure of MathTeacher_icon is the file "MathTeacher.png".
 Figure of Megakitty_icon is the file "Megakitty_ig.jpg".
-Figure of MentalMice_icon is the file "FS_MentalMice.jpg".
+Figure of MentalMice_icon is the file "Mental_Mice.jpg".
 Figure of MessyPig_icon is the file "FS_MessyPig.jpg".
 Figure of Naga_icon is the file "Naga.jpg".
 Figure of NinjaCat_F_icon is the file "CatNinja_F_ig.jpg".
@@ -97,7 +97,7 @@ Figure of Ram_icon is the file "FS_Ram.jpg".
 Figure of Reindeer_icon is the file "Reindeer_ig.jpg".
 Figure of SandMan_icon is the file "Sand Man.jpg".
 Figure of ShadowBeast_icon is the file "ShadowBeast.jpg".
-Figure of Pewter_Consort_icon is the file "Pewter_Consort.png".
+Figure of Pewter_Consort_icon is the file "Pewter_Consort.jpg".
 Figure of PirateShark_icon is the file "sharkpirate.png".
 Figure of Ram_naked_icon is the file "Ram_naked.jpg".
 Figure of SiameseCat_icon is the file "siamesecats_ig.jpg".
@@ -109,6 +109,7 @@ Figure of SpartanHelot_dressed_icon is the file "SpartanHelot_dressed.jpg".
 Figure of SpartanHelot_naked_icon is the file "SpartanHelot_naked.jpg".
 Figure of Spartan_icon is the file "Spartan.jpg".
 Figure of Succubus_clothed_icon is the file "Succubus_clothed.jpg".
+Figure of SugarGlider_icon is the file "Sugar_Glider.jpg".
 Figure of ThoughtEater_icon is the file "ThoughtEater.jpg".
 Figure of TigressHooker_icon is the file "tigresshooker_ig.jpg".
 Figure of Triceratops_icon is the file "triceratops_ig.jpg".
@@ -402,6 +403,8 @@ Figure of Talov_Kerr_Barrel_icon is the file "Talov_Kerr_Barrel.jpg". [satyrs wi
 Figure of Talov_Kerr_Party_icon is the file "Talov_Kerr_Party.jpg". [satyrs in the frat party]
 Figure of RaneDefendingEric_icon is the file "Rane&Eric1.jpg". [Hellhound fight]
 Figure of RaneSavingEric_icon is the file "Rane&Eric2.jpg". [after the Hellhound fight]
+Figure of SkinDiagram1_icon is the file "SkinDiagram1.jpg".
+Figure of SkinDiagram2_icon is the file "SkinDiagram2.jpg".
 
 [maps]
 Figure of Beach_Overlook_icon is the file "Beach_overlook.jpg".
@@ -809,7 +812,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Math Teacher"	Figure of MathTeacher_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Medea_face"	Figure of Medea_face_icon	"LocksTO"	g-white	"normal"
 "Megakitty"	Figure of Megakitty_icon	"BushyCat"	g-white	"normal"
-"Mental Mouse"	Figure of MentalMice_icon	""	g-white	"normal"
+"Mental Mouse"	Figure of MentalMice_icon	"Xilrayne"	g-white	"normal"
 "Messy Pig"	Figure of MessyPig_icon	"Anymouse1968"	g-white	"normal"
 "Micaela"	Figure of Micaela_icon	"Kattzie"	g-white	"normal"
 "Mike_face"	Figure of Mike_face_icon	"SineAlas"	g-black	"normal"
@@ -894,10 +897,13 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Stella"	Figure of Stella_icon	"Furball"	g-white	"normal"
 "Skarnoth_undies"	Figure of Skarnoth_undies_icon	"Kien-Biu"	g-black	"normal"
 "Skarnoth_naked"	Figure of Skarnoth_naked_icon	"Kien-Biu"	g-black	"normal"
+"Skin Diagram 1"	Figure of SkinDiagram1_icon	"Wahn"	g-white	"normal"
+"Skin Diagram 1"	Figure of SkinDiagram2_icon	"Wahn"	g-white	"normal"
 "Spike_clothed"	Figure of Spike_clothed_icon	"Lyttathebug"	g-black	"normal"
 "Spike_face"	Figure of Spike_face_icon	"SineAlas"	g-black	"normal"
 "Spike_naked"	Figure of Spike_naked_icon	"Lyttathebug"	g-black	"normal"
 "Succubus"	Figure of Succubus_clothed_icon	"Kupo Klein"	g-white	"normal"
+"Sugar Glider"	Figure of SugarGlider_icon	"Xilrayne"	g-black	"normal"
 "Susan_face"	Figure of Susan_face_icon	"SineAlas"	g-black	"normal"
 "Sven_naked"	Figure of Sven_naked_icon	"Brun69"	g-black	"normal"
 "Sven_tail"	Figure of Sven_tail_icon	"Brun69"	g-black	"normal"
@@ -1062,6 +1068,7 @@ carry out artistcredits:
 	say "     Mammoth Pure Succumb by Boo3 @ furaffinity.net[line break]";
 	say "     Mannequin by Rastear @ y-gallery.net[line break]";
 	say "     Math Teacher by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
+	say "     Mental Mice by Xilrayne @ https://inkbunny.net/Xilrayne[line break]";
 	say "     Messy Pig by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Megakitty by BushyCat @ furaffinity.net[line break]";
 	say "     Naga by Rastear @ y-gallery.net[line break]";
@@ -1087,6 +1094,7 @@ carry out artistcredits:
 	say "     Spartan by Obieblu @ tumblr.com[line break]";
 	say "     Spartan & Helot by Obieblu @ tumblr.com[line break]";
 	say "     Succubus by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
+	say "     Sugar Glider by Xilrayne @ https://inkbunny.net/Xilrayne[line break]";
 	say "     Thought Eater by Rastear @ y-gallery.net[line break]";
 	say "     Tigress Hooker by Sharei @ furaffinity.net[line break]";
 	say "     Triceratops by HBruton @ furaffinity.net[line break]";
@@ -1267,6 +1275,7 @@ carry out artistcredits:
 	say "     Rane & Eric Scenes by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
 	say "     Sam's Bad End by The_Negative @ furaffinity.net[line break]";
 	say "     Shy Vixen by Watsup @ https://www.furaffinity.net/user/watsup/[line break]";
+	say "     Skin Diagrams by Wahn @ https://www.furaffinity.net/user/wahn/[line break]";
 	say "     Skunkbeast Lord Battle by MoT @ furaffinity.net[line break]";
 	say "     Spidertaur by CrashBurnDraw @ y-gallery.net[line break]";
 	say "     Talov & Kerr by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
@@ -1295,7 +1304,7 @@ carry out ArtistBanning:
 	artistbanmenu;
 
 to artistbanmenu: [more compact version]
-	let artistlist be {"Abelsword", "Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "Bix707", "Bludwing", "Boo3", "Brun69", "BushyCat", "Caltroplay", "Candy", "canned", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Conchi", "ConnyChiwa", "Cooper", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "Goncalo", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Waxraven/WXRVN", "Luneth", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "Soryane", "SparklePens", "Strype", "Sususmiles", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "TylerAz", "Uniformvixen", "Unknown", "valdericblackstag", "Valen", "Vashaa", "Watsup", "Wemd", "Xenotropos"};
+	let artistlist be {"Abelsword", "Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "Bix707", "Bludwing", "Boo3", "Brun69", "BushyCat", "Caltroplay", "Candy", "canned", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Conchi", "ConnyChiwa", "Cooper", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "Goncalo", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Waxraven/WXRVN", "Luneth", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "Soryane", "SparklePens", "Strype", "Sususmiles", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "TylerAz", "Uniformvixen", "Unknown", "valdericblackstag", "Valen", "Vashaa", "Wahn", "Watsup", "Wemd", "Xenotropos"};
 	now calcnumber is -1;
 	let countnumber be 1;
 	let abmexit be 0;

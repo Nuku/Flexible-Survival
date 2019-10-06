@@ -4,6 +4,30 @@ Version 1 of Basic Clothing Items by Core Mechanics begins here.
 
 "Adds new equipment for the player."
 
+PlayerClothingGenderAppearance is a number that varies.[@Tag:Notsaved]
+PlayerClothingSlutty is a number that varies.[@Tag:Notsaved]
+PlayerClothingStyle is a number that varies.[@Tag:Notsaved]
+PlayerClothingSport is a number that varies.[@Tag:Notsaved]
+PlayerClothingBDSM is a number that varies.[@Tag:Notsaved]
+
+to CalculateEquipmentValues:
+	[reset all of these values]
+	now PlayerClothingGenderAppearance is 0;
+	now PlayerClothingSlutty is 0;
+	now PlayerClothingSport is 0;
+	now PlayerClothingBDSM is 0;
+	[now we go through all equipped equipment to calculate the values]
+	repeat with z running through equipped equipment:
+		increase PlayerClothingGenderAppearance by GenderAppearance of z;
+		if "Slutty" is listed in traits of z:
+			increase PlayerClothingSlutty by 1;
+		if "Stylish" is listed in traits of z:
+			increase PlayerClothingStyle by 1;
+		if "Sporty" is listed in traits of z:
+			increase PlayerClothingSport by 1;
+		if "BDSM" is listed in traits of z:
+			increase PlayerClothingBDSM by 1;
+
 [ Section 1 - Waist Items ]
 
 When Play begins:
@@ -43,6 +67,7 @@ ripped jeans is equipment.
 It is not temporary.
 The plural of ripped jeans is true.
 The taur-compatible of ripped jeans is false.
+The GenderAppearance of ripped jeans is 0.
 The size of ripped jeans is 3.
 The AC of ripped jeans is 0.
 The effectiveness of ripped jeans is 0.
@@ -56,6 +81,7 @@ black jeans is equipment.
 It is not temporary.
 The plural of black jeans is true.
 The taur-compatible of black jeans is false.
+The GenderAppearance of black jeans is 0.
 The size of black jeans is 3.
 The AC of black jeans is 0.
 The effectiveness of black jeans is 0.
@@ -69,6 +95,7 @@ sturdy jeans is equipment.
 It is not temporary.
 The plural of sturdy jeans is true.
 The taur-compatible of sturdy jeans is false.
+The GenderAppearance of sturdy jeans is 0.
 The size of sturdy jeans is 3.
 The AC of sturdy jeans is 0.
 The effectiveness of sturdy jeans is 0.
@@ -82,6 +109,7 @@ skinny jeans is equipment.
 It is not temporary.
 The plural of skinny jeans is true.
 The taur-compatible of skinny jeans is false.
+The GenderAppearance of skinny jeans is 0.
 The size of skinny jeans is 3.
 The AC of skinny jeans is 0.
 The effectiveness of skinny jeans is 0.
@@ -95,6 +123,7 @@ hot pants is equipment.
 It is not temporary.
 The plural of hot pants is true.
 The taur-compatible of hot pants is false.
+The GenderAppearance of hot pants is -1.
 The size of hot pants is 3.
 The AC of hot pants is 0.
 The effectiveness of hot pants is 0.
@@ -108,6 +137,7 @@ gray pants is equipment.
 It is not temporary.
 The plural of gray pants is true.
 The taur-compatible of gray pants is false.
+The GenderAppearance of gray pants is 0.
 The size of gray pants is 3.
 The AC of gray pants is 0.
 The effectiveness of gray pants is 0.
@@ -121,6 +151,7 @@ camo pants is equipment.
 It is not temporary.
 The plural of camo pants is true.
 The taur-compatible of camo pants is false.
+The GenderAppearance of camo pants is 1.
 The size of camo pants is 3.
 The AC of camo pants is 0.
 The effectiveness of camo pants is 0.
@@ -134,6 +165,7 @@ jogging pants is equipment.
 It is not temporary.
 The plural of jogging pants is true.
 The taur-compatible of jogging pants is false.
+The GenderAppearance of jogging pants is 0.
 The size of jogging pants is 3.
 The AC of jogging pants is 0.
 The effectiveness of jogging pants is 0.
@@ -147,6 +179,7 @@ bermuda shorts is equipment.
 It is not temporary.
 The plural of bermuda shorts is true.
 The taur-compatible of bermuda shorts is false.
+The GenderAppearance of bermuda shorts is 0.
 The size of bermuda shorts is 3.
 The AC of bermuda shorts is 0.
 The effectiveness of bermuda shorts is 0.
@@ -160,6 +193,8 @@ black miniskirt is equipment.
 It is not temporary.
 The plural of black miniskirt is false.
 The taur-compatible of black miniskirt is false.
+The GenderAppearance of black miniskirt is -1.
+The Traits of black miniskirt is {"Slutty","Stylish"}.
 The size of black miniskirt is 3.
 The AC of black miniskirt is 0.
 The effectiveness of black miniskirt is 0.
@@ -173,6 +208,7 @@ pencil skirt is equipment.
 It is not temporary.
 The plural of pencil skirt is false.
 The taur-compatible of pencil skirt is false.
+The GenderAppearance of pencil skirt is -1.
 The size of pencil skirt is 3.
 The AC of pencil skirt is 0.
 The effectiveness of pencil skirt is 0.
@@ -186,6 +222,7 @@ floral skirt is equipment.
 It is not temporary.
 The plural of floral skirt is false.
 The taur-compatible of floral skirt is false.
+The GenderAppearance of floral skirt is -1.
 The size of floral skirt is 3.
 The AC of floral skirt is 0.
 The effectiveness of floral skirt is 0.
