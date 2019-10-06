@@ -2,6 +2,11 @@ Version 1 of Monty by Wahn begins here.
 [Version 1 - Put into its own file]
 
 [ Monty, the NPC                                                        ]
+
+[ Stamina of Monty - location                                           ]
+[   0: out in the city                                                  ]
+[   1: in Camp Bravo                                                    ]
+
 [ Libido of Monty - sexual interactions                                 ]
 [   0: nothing yet since the meeting event                              ]
 [   1: player didn't offer help with his toys                           ]
@@ -15,7 +20,9 @@ Version 1 of Monty by Wahn begins here.
 
 Section 1 - events
 
-after going to Parade Ground while (Lone Soldier is resolved and Resolution of Lone Soldier is 1 or Resolution of Lone Soldier is 2):
+after going to Parade Ground while (Lone Soldier is resolved and (Resolution of Lone Soldier is 1 or Resolution of Lone Soldier is 2) and Stamina of Monty is 0):
+	try looking;
+	LineBreak;
 	say "     As you stroll onto the parade ground and start to look around, you're suddenly approached by a muscular, African-American man with a surprised expression on his face. He's about six foot tall, shaved bald, and you've seen him before - in fact, you've seen pretty much all of him, down to the chocolate-brown buns of his ass. Remembering how you encountered Monty on the streets, culminating in [if Resolution of Lone Soldier is 1]watching a heavy load of minotaur cum leak from his ass[else]eating a tasty load of minotaur cum from his ass[end if], an inevitable grin crosses your features as you greet him. 'What the hell are you doing here?' the man asks, starting out a little loud and then quickly dropping to a half-whisper as some others turn to look what's going on. While you're still thinking of a reply, he meets your eyes, then gives a minute nod to the bystanders and adds for their ears, 'You're late for the debriefing. Come on, gotta hurry up!'";
 	say "     Grabbing your upper arm with a strong hand, the soldier pulls you along with him to the east, passing through a few rows of smaller tents until you find yourself standing before the windowless side wall of an office building, right next to where a crashed city bus is sticking through the wall. It's a fairly out of the way corner of the camp, so just the right spot for a private conversation. 'So. What's going on here? You helped me out with that hyena out there on the streets, and after that... well, you know what you did. And now you're just casually wandering into a secure army camp?' For a second, you wonder how he'd react if you said that the camp isn't really that secure, what with their own horny minotaur bull breeding [if HP of Adam > 3]both male and female soldiers[else]all of the strapping soldier hunks[end if] right in the center and everyone's reasoning pretty out of whack given the constant cloud of the bull-man's musk inflaming people's libido pretty fiercely. Might not be the best of options to say, though.";
 	LineBreak;
@@ -42,6 +49,7 @@ after going to Parade Ground while (Lone Soldier is resolved and Resolution of L
 		say "     You clear your throat and admit to him that it was fairly easy to gain access to the camp with a little bit of lying. Monty frowns as he hears this, then looks you up and down. 'I guess with the usual behavior of the infected, someone simply walking up and having a chat would seem fairly believable. Listen, I don't think you're a bad sort, and don't want to cause trouble by exposing you. One mostly sane civvy wandering about in the camp won't cause issues in the end. Still, you better be on your best manners!' He holds your gaze with an intense expression until you nod in assent. 'Good. Now, something else...' Pressing his lips together, the black man then looks around to make sure no one is in earshot and asks, 'Err, you didn't tell anyone about our encounter, did you? How it ended, especially.' Embarrassment is clearly written on his face, even though his dark skin hides any blush that might be there. Putting an understanding smile on your face, you ensure him that none of that has been shared with anyone.";
 	say "     'Thanks. I might have glossed over it a bit in my after-action report when I got back to the camp. As far as that goes, there was just some unfortunate 'slippage' during the heat of the action when fighting some hyenas.' Rubbing the back of his neck and blowing out his breath, Monty looks aside for a few seconds, then catches himself and chuckles under his breath as he looks back at you. 'Anyways, thanks for understanding. By the way, I'm in the tent over there, with nine other guys, so you know where to find me if you wanna talk. Just don't bring up any embarrassing topics unless we're alone.' That said, he walks you over through the rows of tents, stopping in front of his own. 'Got some tasks to do right now, but see ya later, alright?'";
 	wait for any key;
+	now Stamina of Monty is 1;
 	move Monty to Soldier Tents;
 	move Player to Soldier Tents;
 
@@ -87,7 +95,7 @@ SexuallyExperienced of Monty is true.
 TwistedCapacity of Monty is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Monty is false. [steriles can't knock people up]
 MainInfection of Monty is "Human".
-The description of Monty is "[MontyDesc]";
+The description of Monty is "[MontyDesc]".
 The conversation of Monty is { "Oh, hello." }.
 
 to say MontyDesc:
@@ -105,6 +113,7 @@ instead of conversing Monty:
 	say "[MontyTalkMenu]";
 
 to say MontyTalkMenu:
+	Let TalkDone be false;
 	say "     [bold type]What do you want to talk about with Monty?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -124,13 +133,13 @@ to say MontyTalkMenu:
 	now sortorder entry is 3;
 	now description entry is "Ask his opinion on Tiny Tim";
 	[]
-	if Libido of Monty is 0;
+	if Libido of Monty is 0:
 		choose a blank row in table of fucking options;
 		now title entry is "His 'special transport' mission";
 		now sortorder entry is 4;
 		now description entry is "Talk about what he was doing, and the aftermath";
 	[]
-	if Libido of Monty > 1;
+	if Libido of Monty > 1:
 		choose a blank row in table of fucking options;
 		now title entry is "His asshole";
 		now sortorder entry is 5;
@@ -160,10 +169,14 @@ to say MontyTalkMenu:
 					say "[MontyTalk3]";
 				if nam is "His 'special transport' mission":
 					say "[MontyTalk4]";
+					now TalkDone is true;
 				if nam is "His asshole":
 					say "[MontyTalk5]";
+					if Intelligence of Monty > 2:
+						now TalkDone is true;
 				wait for any key;
-				say "[MontyTalkMenu]";
+				if TalkDone is false:
+					say "[MontyTalkMenu]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the soldier, shaking your head slightly as he gives a questioning look.";
@@ -322,7 +335,7 @@ to say MontyTalk5:
 		else if Libido of Monty > 3:
 			say "     Rubbing the back of his neck, Monty blows out his breath and says, 'So, I'm not going to turn into a minotaur, or anything nonhuman. Now that's a relief! Thanks a lot for taking me to see Doctor Matt.' With a chuckle, he then adds, 'Man, what a diagnosis: 'Superior to normal asshole.' And it's been fun to explore with you. Kinda curious how... how far we could take it. I mean, if I have this freaky hole, why not run it through its paces before it wears off?'";
 
-say MontyDoctorMattTalk1:
+to say MontyDoctorMattTalk1:
 	if HP of Doctor Matt > 5 and Doctor Matt is in Primary Lab: [player interacted and he's still available]
 		say "     Remembering Doctor Matt, you wonder if he could make heads or tails out of what's been going on with Monty. That could return some peace of mind to the black man, and you guess that the good doctor also wouldn't mind the opportunity to gather some additional information about what is going on. Might be worth the trip, so you tell Monty about the researcher. 'If that guy knows his shit and can give me a checkup, I'm all for it! Trevor Labs you said? Hm, some of the intel I was briefed with said to avoid the whole area, that it was a nest of monsters.' With a shrug, you tell him that it didn't seem any worse than the rest of the city to yourself. 'You know your way around, so I guess whoever reported that must have been mistaken. Could you maybe lead me there and do some introductions?'";
 		LineBreak;
@@ -364,9 +377,11 @@ to say MontyDoctorMattVisit:
 	say "     The three of you move to sit on some of the less damaged pieces of lobby furniture and play cards for what feels like quite a while, using glass shards of various sizes as ersatz money. Interestingly, Monty ends up with a quite admirable stack of fragments of the front door in front of himself. You can't quite tell if he's good at poker or just lucky today, although there's a little suspicion in you hat Orthas might be letting him win at least some of the time. She certainly does her best to be friendly, that's for sure. Some time later, the sound of creaking rubber makes you look up and see the red-suited form of Doctor Matt up at the railing of the stairs to the upper floor. 'Ah, there you are. I've got some results to show you,' he says, then turns around and goes back into his lab.";
 	WaitLineBreak;
 	say "     'The doctor is very smart, but I think he sometimes simply forgets to be nice. I'm sure it'll be good news, don't worry about it.' Orthas tells Monty in a friendly tone, reaching out to pat his leg above the knee and giving it a gentle squeeze. 'Thank you,' the black man replies, touching the dragoness's arm, then gets up and quickly takes the stairs two steps at a time. You hurry after him, also curious about what Matt found out. Arriving in the lab, you are greeted by Matt standing in front of a workstation with some fairly large scientific device on it. 'If you would direct your attention to the screen over there, I can show you something interesting,' he says, fiddling with the equipment as he does so. You watch the image on the screen, which depicts a skin sample, likely one of Monty's. Then a syringe or something moves closer, delivering a droplet of fluid to touch it, after which you can see the skin rapidly being transformed.";
-	say "     'This is the typical reaction of an organism being exposed to the nanites. Now observe what happens when we add some of the hunter-killer nanites of XN-02.' The doctor adjusts something and a second syringe deposits a droplet to mix with the first, which instantly stops the ongoing transformation, leaving the sample halfway changed. 'What Mister Freeman and his compatriots are injecting themselves with are nanites too, who do nothing but search out other nanites and destroy them. Contrary to the rogue, highly developed nanites that are causing this city-wide outbreak, which do have some swarm-movement capability, the experimental devices depend on being moved by external forces. In short, blood being pumped throughout a host's body and carrying them along. This is a valid method of transportation that spreads their protection in the body. But not quite everywhere.'";
+	say "     'This is the typical reaction of an organism being exposed to the nanites. Now observe what happens when we add some of the hunter-killer nanites of XN-02.' The doctor adjusts something and a second syringe deposits a droplet to mix with the first, which instantly stops the ongoing transformation, leaving the sample halfway changed. 'What Mister Freeman and his compatriots are injecting themselves with are nanites too, who do nothing but search out other nanites and destroy them. Contrary to the rogue, highly developed nanites that are causing this city-wide outbreak, which do have some swarm-movement capability, the experimental devices depend on being moved by external forces. In short, blood being pumped throughout a host's body and carrying them along. This is a valid method of transportation that spreads their protection in the body. But not quite everywhere.' Stepping up to a drawing board, he sketches a diagram of what you recognize as human skin, with various different layers.";
+	project the Figure of SkinDiagram1_icon;
 	WaitLineBreak;
-	say "     Stepping up to a drawing board, he sketches a diagram of what you recognize as human skin, with various different layers. 'As you may know, the uppermost layer of skin is called the epidermis, which is a protective sheath over the deeper layers. It is further made up of different strata of cells: corneum, granulosum, spinosum and basale. The only place where cells are created is the basal stratum at the bottom, after which they are pushed upwards by further newly formed cells and adapt to specific purposes. The important point for Mister Freeman is that there are no blood vessels in the epidermis, with only the lowest stratum being supplied through the blood vessels of the dermis beneath. So they are the last cells that actually are in contact with the hunter-killer nanites.' That said, he takes two differently colored markers and shades the lower half of the sketch green, the upper half red.";
+	project the Figure of SkinDiagram2_icon;
+	say "     'As you may know, the uppermost layer of skin is called the epidermis, which is a protective sheath over the deeper layers. It is further made up of different strata of cells: corneum, granulosum, spinosum and basale. The only place where cells are created is the basal stratum at the bottom, after which they are pushed upwards by further newly formed cells and adapt to specific purposes. The important point for Mister Freeman is that there are no blood vessels in the epidermis, with only the lowest stratum being supplied through the blood vessels of the dermis beneath. So they are the last cells that actually are in contact with the hunter-killer nanites.' That said, he takes two differently colored markers and shades the lower half of the sketch green, the upper half red.";
 	say "     'During his prolonged exposure to nanite-rich seminal fluid, Mister Freeman's upper cell layers got worked on by the invading nanites. Frankly, they're now far superior to normal skin - more flexible, mobile and structured in a flawless pattern. This results in higher resistance to damage, rapid healing of wounds and increased strechability. What they do not possess is the ability to reproduce, and since his basal cells were protected, the effect will wear off eventually as the epidermis skin cells flake off naturally over time.' Capping his markers and turning back to the two of you, Doctor Matt gives you a smile. 'A fascinating case to study, thank you for giving me the opportunity to do so. Are there any questions?' Monty shakes himself out of staring at the diagram, reaching one arm behind his back as if to touch his ass, then shying away from doing so. 'So you're saying I got a minotaur ass now? Will I get hairy and whatnot else? Or even a tail?!'";
 	WaitLineBreak;
 	say "     With the sigh of a teacher having to deal with a somewhat slow student, Matt points at the diagram. 'For your first question: Technically yes, but there is generally little differentiation between epidermis cells in any of the mammalian strains I have been able to study so far. But even if you had formed reptilian scales, without cell replenishment those would flake off over time too.' Adding a bulbous shape beneath the previously sketched layers and drawing long parallel lines upwards that penetrate all the way up through the skin, he adds, 'As for question two: No, hair-forming cells are part of the dermis. No attacking nanites had a chance of reaching them. Same thing for your third question. Forming a tail is impossible without an infection in replicating cells.' You can hear a sigh of relief from Monty at those words and the black soldier strokes over his shaved head as he blows out a long breath. 'Thank you for explaining it to me, doctor. It's a relief to hear that I'm still human and there won't be any long-term side effects.'";
@@ -374,7 +389,6 @@ to say MontyDoctorMattVisit:
 	WaitLineBreak;
 	say "     The dragoness follows up by leaning in and not quite whispering into his ear, 'The offer still stands, by the way. You can have a feel if you want, Monty. To celebrate, or whatever.' The man swallows visibly and licks his lips... but then the moment starting to build between them is interrupted as you also reach the end of the stair and the soldier moves to make room for you. Afterwards, he looks back and forth between the two of you, trying to come up with something fitting to say, but Orthas waves him off with a smile. 'I can see you're on the jump, and don't wanna keep you. Next time then, eh?' This is delivered with a wink and oh so casual shake of her chest, making the breasts of the dragoness wobble enticingly. 'Be safe out there, and don't be strangers you two. It's so hard these days to find anyone to hang out with.' After some friendly pats, Monty and you leave the Trevor Labs buildings and retrace your steps back to the military camp. A little while later, you're greeted by the familiar face of Marc at the Camp Bravo entrance, who lets you in right away.";
 	now Intelligence of Monty is 3; [he knows he's fully human and only has a super stretchy asshole]
-	stop the action; [I hope this should prevent the talk menu from looping back to more talk right afterwards - test before release]
 
 Instead of fucking Monty:
 	if (lastfuck of Monty - turns < 5):
