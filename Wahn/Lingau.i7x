@@ -225,6 +225,7 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Cane Toad";
+	add "Cane Toad Male" to infections of AmphibianList;
 	add "Cane Toad Male" to infections of NatureList;
 	add "Cane Toad Male" to infections of MaleList;
 	add "Cane Toad Male" to infections of TaperedCockList;

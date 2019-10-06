@@ -1047,6 +1047,41 @@ object	name
 Tiny Tim	"Tiny Tim"
 
 Tiny Tim is a man.
+ScaleValue of Tiny Tim is 4. [human sized]
+Body Weight of Tiny Tim is 7. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Tiny Tim is 9. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Tiny Tim is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Tiny Tim is 7. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Tiny Tim is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Tiny Tim is 7. [length in inches]
+Breast Size of Tiny Tim is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Tiny Tim is 2. [count of nipples]
+Asshole Depth of Tiny Tim is 12. [inches deep for anal fucking]
+Asshole Tightness of Tiny Tim is 3. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Tiny Tim is 1. [number of cocks]
+Cock Girth of Tiny Tim is 5. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Tiny Tim is 18. [length in inches]
+Ball Count of Tiny Tim is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Tiny Tim is 5. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Tiny Tim is 0. [number of cunts]
+Cunt Depth of Tiny Tim is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Tiny Tim is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Tiny Tim is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Tiny Tim is false.
+PlayerRomanced of Tiny Tim is false.
+PlayerFriended of Tiny Tim is false.
+PlayerControlled of Tiny Tim is false.
+PlayerFucked of Tiny Tim is false.
+OralVirgin of Tiny Tim is false.
+Virgin of Tiny Tim is true.
+AnalVirgin of Tiny Tim is false.
+PenileVirgin of Tiny Tim is false.
+SexuallyExperienced of Tiny Tim is true.
+TwistedCapacity of Tiny Tim is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Tiny Tim is false. [steriles can't knock people up]
+MainInfection of Tiny Tim is "Minotaur".
 The description of Tiny Tim is "     The large minotaur affectionately called 'Tiny Tim' by the soldiers in the camp currently sits on the ground beside the hitching post used in couplings with him. He's a magnificently well-built creature, at least nine feet tall and with large curved horns adoring his bull-like head. His otherwise human upper body shows thick, ropey muscles under bronzed skin. Beginning at the hip downwards, he has dark brown shaggy fur covering strong two-jointed legs that end in hooves. Between his legs dangles a long human-like cock and two large balls. The minotaur almost constantly half-hard, his manhood springing up instantly to its full one and a half feet of erect length every time the creature sees or smells a sexual partner."
 Tiny Tim is in Parade Ground.
 The icon of Tiny Tim is Figure of TinyTim_icon.

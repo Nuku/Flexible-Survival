@@ -183,6 +183,9 @@ Instead of Resolving a Vet supplies:
 	if isHellhound is true:
 		say "     But before you can even come to any sort of decision, you feel the burning pain of hellfire within you. Your hellhound tainted body clearly will not allow you to use such measures to potentially alter your pact with the fel beast.";
 		now Vet supplies is resolved;
+	else if diego's heirloom collar is equipped:
+		say "     While still thinking about it, your hand seemingly moves on its own, rising to your neck and tracing the band of sturdy leather around your neck, as if to remind you that you're Diego's plaything. This makes you realize that injecting yourself with some stuff you just found somewhere would be a mistake. With a shrug, you fling the bag into the bushes and move on.";
+		now Vet supplies is resolved;
 	else if Player consents:
 		say "     Deciding to try your luck with the animal drugs, you sort them out until you have male and female hormone shots and treatments fully laid out, as well as having figured out just how to apply them properly. Now that leaves you with just one last decision... which shots do you want to take? Female (1), male (2), both (3) or change your mind and take none (0)?";
 		now calcnumber is -1;

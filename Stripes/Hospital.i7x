@@ -1281,8 +1281,8 @@ to say tlloss:
 	LineBreak;
 	wait for any key;
 	now HP of Doctor Matt is 101;
-	move Doctor Matt to dark basement;
-	move Orthas to dark basement;
+	now Doctor Matt is nowhere;
+	now Orthas is nowhere;
 	if Susan is visible:
 		move susan to Hidden Lab;
 	now the door west of Outside Trevor Labs is locked; [not sure how to do this]
