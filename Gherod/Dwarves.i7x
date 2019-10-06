@@ -1,4 +1,6 @@
-Version 1 of Dwarves by Gherod begins here.
+Version 2 of Dwarves by Gherod begins here.
+[Version 1 - File created - Gherod]
+[Version 2 - 1 Submit Scene, Collapsed Tunnel event, Golden Greathammer weapon - Gherod]
 
 "Adds an entire new race, the dwarves, in form of a new infection and a new roaming creature past an introductory event."
 
@@ -25,19 +27,23 @@ Instead of resolving a Savage Dwarf:
 			say "     After your last hit, the dwarf lies defeated on the ground, and his unability to move allowed you enough time to get out of there, back to safety and away from the crazy short man.";
 		else if fightoutcome > 19 and fightoutcome < 30: [lost]
 			say "     With yet another blow from his hammer, his strength proves to be higher than yours. After an intense and hard fight, your efforts fail you as the dwarf overtakes you. Bruised and defeated, you now remain at his mercy.";
-			if a random chance of 1 in 2 succeeds: [player gets facefucked]
-				DwarfFucksOral;
-			else:
-				if player is female: [has a pussy, gets knocked up]
-					if a random chance of 1 in 2 succeeds:
+			let randomnumber be a random number from 1 to 3;
+			if randomnumber is:
+				-- 1: [facefuck]
+					DwarfFucksOral;
+				-- 2: [fuck]
+					if player is female: [has a pussy]
+						if a random chance of 1 in 2 succeeds:
+							DwarfFucksAnal;
+						else:
+							DwarfFucksPussy;
+					else: [no pussy]
 						DwarfFucksAnal;
-					else:
-						DwarfFucksPussy;
-				else: [no pussy]
-					DwarfFucksAnal;
+				-- 3: [facesitting]
+					DwarfFacesit;
 		else if fightoutcome is 30: [fled]
 			say "     Running away as fast as you can, you manage to outrun the dwarf. It's a rather easy task, as his short legs really are not match for yours. After getting out of track, you return to relative safety.";
-		say "     This is new. You don't think this dwarf will be an unique case, and you might actually encounter more like him during your stay here. Anyway, he's gone now, so you're free to return to your previous tasks.";
+		say "     This is new. You don't think this dwarf will be an unique case, and you might actually encounter more like him during your stay here. Anyway, he's gone now, so you're free to return to your previous tasks. However, there might be something interesting regarding that [bold type]collapsed tunnel[roman type]... Perhaps you should investigate it in the future.";
 		now Savage Dwarf is resolved;
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
 			choose row y in Table of Random Critters;
@@ -50,6 +56,149 @@ Instead of resolving a Savage Dwarf:
 		LineBreak;
 		say "     Deciding you have better things to do than to listen to an old crazy short person smashing some rubble while shouting towards nothing, you turn around with a shrug, returning to your previous path.";
 
+Table of GameEventIDs (continued)
+Object	Name
+Collapsed Tunnel	"Collapsed Tunnel"
+
+Collapsed Tunnel is a situation.
+The Prereq1 of Collapsed Tunnel is Savage Dwarf.
+The sarea of Collapsed Tunnel is "Forest".
+
+Instead of resolving a Collapsed Tunnel:
+	if resolution of Collapsed Tunnel is 0: [first time]
+		say "     During your walk around the forest, you come across a familiar path near the rocky cliffs where the collapsed tunnel was found, and with it, the horny dwarf who's now roaming around. Tracing your steps back to the place, you remember the rubble that used to cover the entirety of the passage ahead of you, now partially removed to allow anyone to make it across. You suppose this is the work of the dwarf, who was finally able to remove the obstacles in order to make it to the other side. There's a chance that you might find something interesting if you decide to investigate, but beware that you're very likely to be trespassing dwarven territory. If you have any companions with you, they'll stay at the entrance to make sure you won't get stuck inside while exploring. [bold type]Do you wish to go on ahead, or leave the place for now?[roman type][line break]";
+		LineBreak;
+		CTunnel1;
+	else if resolution of Collapsed Tunnel is 1: [returned before entering]
+		say "     During your walk around the forest, you happen to pass by the tunnel leading into the rocky cliff, with the way now partially clear of rubble. There's no change since you last encountered the place like this, and you're again left with the choice to either investigate or leave. Do keep in mind that you're very likely to be trespassing dwarven territory if you choose to proceed. If you have any companions with you, they'll stay at the entrance to make sure you won't get stuck inside while exploring. [bold type]Do you wish to go on ahead, or leave the place for now?[roman type][line break]";
+		LineBreak;
+		CTunnel1;
+	else if resolution of Collapsed Tunnel is 2: [returned after finding the trap]
+		say "     During your walk around the forest, you happen to pass by the tunnel leading into the rocky cliff, with the way now free for you to cross without any hard efforts. There's no change since you've last entered the place, and you recall having found a trap on your way deeper thanks to your great perception. Figuring that you had no way to proceed, you chose to leave in order to return some other day, and now here you are. How will you deal with this obstacle, provided your options?";
+		LineBreak;
+		CTunnel2;
+
+to CTunnel1:
+	say "     ([link]Y[as]y[end link]) - Investigate the passage.";
+	say "     ([link]N[as]n[end link]) - Leave for now.";
+	if player consents:
+		LineBreak;
+		CTunnel1Pathway;
+	else:
+		LineBreak;
+		say "     It's probably for the best that you stay away from this place, for now. Perhaps when you find yourself more ready to venture into hostile territory...";
+		now resolution of Collapsed Tunnel is 1;
+
+to CTunnel1Pathway:
+	say "     Choosing to press on ahead, you realize that the opening made is a little too short for you, so you have to clear some more of the scrap that's keeping you from going across. Clearly, this suggests that someone of a small stature made it through, likely to be dwarven in origin. You proceed with caution, paying attention to any strange sound that might be heard at this point, as you carefully step through the rubble and move what's still blocking you with your hands. There's all kinds of stuff used to block the entrance, from metal scraps to wooden broken crates, and you have to watch out not to get injured by any of the rusty blades menacingly pointed at you. Whoever wanted this path closed really made sure that it stood that way, and whoever opened it really wanted to make it through!";
+	say "     The path is tricky, but achievable. Once you're done with most of the stuff, you see less and less serving as obstacles, and so you're free to walk forward. The tunnel itself isn't very wide, and there are points you need to lean your back to make it across, however the pathing doesn't extend itself for too long. Several more steps and you start seeing light in what seems to be a larger room, one enough for you to actually stand up straight and freely explore. It's actually a relief once your feet land on solid floor, some kind of stone mosaic covering the area. It seems to be some kind of basement, with walls made of stone and only a few torches scattered around the walls. There are a few ornaments on the floor near them, so dusty that you can't actually see their natural colors, and boxes with all sorts of trinkets and other things, suggesting that this might serve as some sort of antique storage. It smells of old, and there's not a single noise to be heard.";
+	WaitLineBreak;
+	say "     You suppose it's no use lingering here, so you're set to explore the area around you. There's only one way to follow, so you get on that immediately. Following through the corridors gives you a whole another feeling of where you are, as the structures seem really old, even too much for just a simple underground warehouse. It gives you the feeling of some kind of old ruins, excavated and built in a large scale, even more so for dwarves. There are some large doors along the massive corridor, but none of them are open and you don't think there's any way to force them. You've got no choice but to walk forward and hope to find something worth coming here.";
+	say "     With a few minutes worth of walking, you arrive at another room, behind one of the doors that you could actually manage to slip through. There are armor stands, some filled with rusty and heavy armor of a dwarf's stature, swords, shields and other large two-handed weapons. Seems like you just stepped into an armory, or at least some place where the dwarves store their old equipment. Any of this would be too heavy or bothersome for you to take, and the armor is not even usable... You figure it should be better to investigate this room a little more, having a look at every bit and corner, and you do manage to find an adjacent chamber with something covered with a large blanket. Sounds like treasure, and it makes sense the dwarves would attempt to protect good equipment from deterioration.";
+	WaitLineBreak;
+	let bonus be (( perception of player minus 5 ) divided by 2);
+	let diceroll be a random number from 1 to 20;
+	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Perception Check):[line break]";
+	if diceroll + bonus >= 13: [player detects trap]
+		say "     However, as you're heading into the room, you notice that something feels off. You look around, carefully and attentively, and you're relieved to know that you have escaped a well concealed trap! Well, at least for now. The trap is still there, and while it might not be deadly, it will be enough to immobilize you completely if it hits you. It seems to be armed with ropes and activated by a pressure plate, which is most certainly activated with your weight. To make things worse, there's no companions around to help you with this, as you had to leave them behind guarding the tunnel's entrance for you.";
+		WaitLineBreak;
+		CTunnel2;
+	else: [player falls directly into trap]
+		say "     However, as you're heading into the room, you fail to notice something that ends up getting you in trouble. When you feel the pressure plate lowering down beneath your feet, it is already too late.";
+		WaitLineBreak;
+		CTunnel2Trap;
+
+to CTunnel2:
+	say "     Will you attempt to [bold type]disarm the trap, just trigger it, or simply take your leave?[roman type] If your interest for the dwarves is nothing more than this, you can always choose to [bold type]avoid this place from now on[roman type], although that will leave you out of any further clues about their civilization.";
+	LineBreak;
+	say "     [link](1)[as]1[end link] - Attempt to disarm the trap.";
+	say "     [link](2)[as]2[end link] - Trigger it.";
+	say "     [link](3)[as]3[end link] - Leave for now.";
+	say "     [link](4)[as]4[end link] - Leave and avoid this place forever.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 4:
+		say "Choice? (1-4)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to attempt to disarm the trap, [link]2[end link] to trigger the trap, [link]3[end link] to leave this place or [link]4[end link] to leave for good.";
+	if calcnumber is 1: [attempt to disarm]
+		LineBreak;
+		say "     You chose to attempt to disarm the trap, which will be a somewhat difficult thing to do. Nonetheless, you're motivated to give it a good try.";
+		let bonus be (( dexterity of player minus 10 ) divided by 2);
+		let diceroll be a random number from 1 to 20;
+		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Dexterity Check):[line break]";
+		if diceroll + bonus >= 12: [player disarms trap]
+			say "     The trigger seems to be a large pressure plate in front of you, or rather, several of them. They're pretty much unavoidable and need a good amount of weight to activate, that of an equivalent to a living bipedal. Studying the trap, you eventually discover that you can remove the access from the trigger to the trap by tapping into one of the mechanisms, which you can access easily. You're dexterous enough to not trigger it accidentally and successfuly deactivate the trap, freeing your way ahead of any obstacles.";
+			WaitLineBreak;
+			CTunnel3;
+		else: [player fails, triggers the trap]
+			say "     The trigger seems to be a large pressure plate in front of you, or rather, several of them. They're pretty much unavoidable and need a good amount of weight to activate, that of an equivalent to a living bipedal. Studying the trap, you eventually discover that you can remove the access from the trigger to the trap by tapping into one of the mechanisms, which you can access easily. Or so you thought... One wrong step and you fall right into one of the plates, accidentally triggering the trap!";
+			WaitLineBreak;
+			CTunnel2Trap;
+	else if calcnumber is 2: [player triggers the trap]
+		say "     Questioning your good sense, you decide to actually trigger the trap and see what happens...";
+		WaitLineBreak;
+		CTunnel2Trap;
+	else if calcnumber is 3: [player leaves for the moment]
+		say "     Taking a moment to process the problem ahead of you, making a decision comes naturally, as you understand you're not ready to face this yet. Better leave the place as it is and return some time later. Who knows, you might even be able to disarm the trap if you're dexterous enough.";
+		now resolution of Collapsed Tunnel is 2;
+	else if calcnumber is 4:
+		say "     Taking a moment to process the problem ahead of you, making a decision comes after some deep thinking. You're not all that interested in the dwarves, and honestly, you have better things to do. There's simply nothing else to be found and the entire trip seemed a waste of time, so you decide to close this matter for good and leave, never to return.";
+		now resolution of Collapsed Tunnel is 99;
+
+to CTunnel2Trap:
+	say "     All of the sudden, something around you starts moving quickly, and there's no time to possibly react to what's to come. Ropes, strategically placed all around the room, move towards you too quickly for your eyes to be able to follow and wrap themselves around your feet, legs and arms. Your body spins impossibly fast as you're brought up to hang in the air, effectively immobilized as your movements are blocked by the trap. Once you're finally still, you glance around and inspect the ropes wrapped all over you. Any attempt to free yourself proves to be futile as you wiggle around helplessly, and nobody seems to be nearby to help you. You're not even so sure you want anyone to come, even, as this trap was here for a reason you're very well aware of. Nonetheless, you have no choice but to wait and pray that this doesn't come to bite you in the back, and try to find a way to release yourself in the meantime, if there is any.";
+	WaitLineBreak;
+	say "     Some time passes and you're about to give up your hope, until you hear steps coming from one of the corridors. A very familiar voice reaches your ears as the short figure approaches you. 'Now, isn't this a surprise? Looks like someone fell into a dwarven trap! And I know this someone... What are you doing here?' asks the roaming dwarf you've encountered before in a sarcastic tone, as if mocking your demise. Knowing him well, he's probably enjoying seeing you all tied up and at anyone's mercy, were it not for the already prominent bulge in his pants. 'I suppose I could free you, but... Do I want to? Is there anything you can offer me?' he asks, taking several steps towards you while taking a sip from his canteen bottle.";
+	say "     You don't think you'll be able to get your way out of this without obliging any of the dwarf's requests, whatever they might be, but you have an idea of what he wants from you. In fact, this proves to be an excellent opportunity for the short burly man to use you in any way he desires, and he's not going to waste it. It's not like you have a choice, either... 'I could use a release, actually... And seeing you here so helpless can't be by chance, right? How about I make use of your holes in exchange for your freedom, eh? Sounds like a good deal to you? It does to me.' He doesn't waste any time undoing his belt and pulling his pants down, his thick and meaty cock bouncing back up as he does so, hard and throbbing with a trace of precum oozing from the slit.";
+	WaitLineBreak;
+	say "     'Time to get to work, my [boygirl]! Gotta pay your debt beforehand.' teases the small man as he rubs his shaft all over your lips, and you've got no choice but to obey. Giving your best to satisfy the horny dwarf, you open your mouth and kiss the length of his manhood as he slides it back to meet your lips with his glistening tip, the sweet surface caressing your taste buds as your tongue wraps around the glans. The dwarf lets out a pleasure grunt as he feels you working his cock, pushing it into your mouth as he takes hold of your head. He's actually gentle about it at first, but he makes you deepthroat his dick to the very last inch. 'That's it... That's a good [boygirl]. Like sucking this cock, don't you? Bet you longed for it...'";
+	say "     His taunts continue as he makes you take his manhood down your throat, and eventually, he's grabbing you firmly to fuck your face. As his balls hit your chin, you hear the ropes around you squeak because of the movement, your entire body swinging back and forth as the dwarf takes your throat like a fuckhole. He's got a huge satisfied grin in his face, knowing he owns you for as long as he desires, [if player is submissive]and you can't help but feel incredibly turned on by it as your submissive instincts kick in, only thinking about the many ways he could use you[else]and you have no choice but to endure everything that comes into his mind, whatever it may be, as you remain at his mercy[end if]... 'Darn, it feels good! I was needing this!' his deep voice rumbles in your ears while his cock throbs in your mouth and throat still, and after a couple few more thrusts, he pulls out slowly.";
+	WaitLineBreak;
+	say "     'That's enough mouth for now. You got me all nice and wet, now... Let's see what else you can offer me.' His strong hand caresses your body all over, exploring all his possibilities, though you just know he's going to stop right where he does before it actually happens, feeling your glutes up with both hands from behind you. The dwarf spreads your legs so he can get between them, [if player is not naked]and you feel him taking off your lower gear to expose your ass[else]and you feel him giving the back of your bare thighs a nice squeeze[end if] before spreading your cheeks and sliding a finger above your pucker. 'You [if player is female]do have a nice cunt, but I feel like having something tighter right now[else]have a really nice looking butt. Just what I needed[end if]. Hope you don't mind me using your asshole and breed it full of some good dwarven cum...' he teases you, chuckling as he presses his finger inside your anus, rubbing it around to prepare it for his thick meat.";
+	say "     'Since you didn't make a fuss and actually were a good [boygirl] for me so far, I'll give you a treat.' he informs you as, moments later, you feel a wet, warm and nimble something caressing your hole. His tongue, wiggling around your back entrance masterfully as it presses in further, soon accompanied by some lips as he makes out with your anus. In a momentary change of focus, [if player is male]the dwarf gives your balls a nice brief tugging with his mouth, leaving your [cock of player] manhood throbbing even more[else if player is female]gives your pussy a broad licking and a kiss, leaving you even hornier[else]gives your genderless crotch a big kiss, leaving you even hornier[end if], before turning his attention to your asshole once more. His bushy beard tickles between your glutes, which makes you move your ass against his face a little harder, a gesture he seems to appreciate as he shoves his tongue deeper in your pucker";
+	WaitLineBreak;
+	say "     While the stocky short man is tonguefucking your ass, he's also sliding his hands all over your legs, buttocks and sometimes your front genitalia, seemingly caring about your own pleasure as well, all the while he has full control over you. Your hole stretches around his tongue, which is going deep and back out repeatedly, giving you blissful sensations as he truly puts an effort into eating your ass out. With a hasty retreat, he pulls his tongue out and kisses your pucker goodbye, standing up with his cock in hand. 'Alright, that's enough for you. Better put that tasty ass to use elsewhere now, yeah?' he says as you're already feeling the warm tip of his prick kissing your anus, and it's not long until he starts pushing.";
+	say "     His considerable thickness starts filling you once he's past your anal orifice's first resistance, and slides in without much trouble thanks to the preparation he made sure you had. As you're hanging immobile, the dwarf is free to fuck your ass as much as the whim takes him, grabbing you by the hips to aid his thrusting motions, burying his cock as deep as he can inside you. There's almost no pain on your side, and eventually it all starts feeling too good. There's something in you urging you to let out an audible moan, [if player is female]with his manhood pressuring against your pleasure spot[else]with his manhood hitting your prostate with vigor[end if]... 'You're liking it, aren't you? Like getting your holes used while you're all tied up, eh? Could have thought about this before, it's so much fun...!'";
+	WaitLineBreak;
+	say "     He's been fucking you for some time now and you can't help yourself but to really enjoy it. The stocky dwarf knows when to get rough, pounding you as hard as he can with surprising strength, you even feel your body swinging back and forth as he thrusts, and you can hear him grunting as he slows down. 'Fuck, I'm getting really close... I was gonna cum in your ass, but tell you what, I'll let you pick between ass or mouth. Don't take too long deciding or I might just end up cumming ballsdeep inside you!' he tells you, and you sure can feel his cock throbbing like mad. He gave you a choice, so what's it going to be? [bold type]Want to swallow the dwarf's cum or let him fill your ass?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Ask him to cum in your mouth.";
+	say "     ([link]N[as]n[end link]) - Let him fill your ass.";
+	if player consents:
+		LineBreak;
+		say "     Amidst your breathy moans, you manage to let him know that you want his cum in your mouth, [if player is submissive]and saying this made you blush[else]and you can't believe you actually said that[end if], as it feels somewhat degrading in a way. The stocky short man throws a chuckle as he hears you, pulling out his cock from your fucked hole and walking around to your face. 'My [boygirl][']s thirsty, huh? It's a big one coming, hope that quenches it...' he teases you while forcing his manhood between your lips. You open your mouth and take his hard member once again, having a taste of your own ass as he fucks your face. He doesn't last long, as within several seconds, he lets out a beastly grunt as you feel a thick shot of cum coating the insides of your mouth, before he proceeds to shove his cock completely in you.";
+		say "     You're forced to directly swallow his entire load, spurt after spurt, all landing down in your stomach for the next minute it's being pumped out of his dick and into you. Doing your best to swallow, you inevitably need to urge him to get some breathing, as he's been ballsdeep in your mouth for quite some time now! With some muffled groans, he eventually pulls out, a drop of semen still escaping by your lips. 'Fuuuck yeah! It's been fucking long since I had a good release like this. This was great! You've done really well, my [boygirl]!' he praises you, rubbing your head as he looks down on your eyes, his dick still resting against your nose and cheek, traces of cum still visibly leaking onto your face.";
+		WaitLineBreak;
+	else:
+		LineBreak;
+		say "     Amidst your breathy moans, you manage to let him know that you want his load in your ass, [if player is submissive]and saying this made you blush[else]and you can't believe you actually said that[end if], as it feels somewhat degrading in a way. The stocky short man throws a chuckle as he hears you, pushing his cock deep inside you once more and tightening his grip on both sides of your hips. 'As you wish, my [boygirl]. I was hoping you'd pick that one.' he teases you while picking up the pace with him pounding your ass, without any slowing down. He doesn't last long, as within several seconds, he lets out a beastly grunt as you feel a thick shot of cum coating the insides of your back entrance, before he proceeds to shove his cock completely in you with few sporadic thrusts.";
+		say "     You feel his entire load, spurt after spurt, being delivered inside you for the next minute it's being pumped out of his dick and into you. Doing your best to endure his thickness pulsing in your hole, you have only to wait until his orgasm subsides. A drop of semen leaks from your used fuckhole, followed by some more as he pulls back. 'Fuuuck yeah! It's been fucking long since I had a good release like this. This was great! You've done really well, my [boygirl]!' he praises you, giving your butt a playful slap, his dick still resting between your ass cheeks and dropping a few more traces of cum onto your back.";
+		WaitLineBreak;
+	say "     'Now I suppose I have to free you, huh...' he says in a reluctant tone, pushing his meat back in his pants and redressing himself. 'Well, let's have a look around first. Gotta thank you somehow for getting me rid of any traps on the way to some treasure.' You immediately protest, accusing him of breaking the deal, but he stops you right there. 'Come on, I did you a favor... Imagine what would it be hanging in there for so long without a good fuck? I'd be crazy!' he mocks you, walking towards the big blanket you saw before falling into the trap. He uncovers it, revealing a big stonehammer in pristine conditions, probably the only usable thing in here! 'Oh my... Now this is worth my trip here. Were you taking this?' he turns to you, asking you the question with a sarcastic tone. 'Well, guess not anymore.'";
+	say "     He takes the stonehammer with him, leaving you behind with a naughty smirk. 'Pray that the dwarves find you here, who knows if you'll get a gangbang from them. That'd be fun to watch, but I guess that's not what will happen!' he laughs, leaving the room and you behind, still hanging in the air stuck with the ropes, and with your spoils! You curse him with your words, but he's nowhere to be seen anymore. Furious - and also because he fucked you and didn't have the decency to get you off as well - you let out an enraged movement with your arm. And you must be in luck, as the device comes crumbling apart just when you do that, sending you to hit the floor with the ropes still wrapped around you, but not tense anymore, allowing you to move your hands and arms around to untie yourself.";
+	WaitLineBreak;
+	say "     It takes you a bit to get free from the trap, so you're not able to chase the dwarf. Nonetheless, you think you had enough of this place for a day and proceed to walk to the exit. You'll have to find this guy if you want to get your hands on what is deservingly yours.";
+	say " < more to be added soon >";
+	now resolution of Collapsed Tunnel is 3; [player didn't get the golden greathammer]
+
+to CTunnel3: [player successfully gets past the trap]
+	say "     Now your way to your treasure is free! Eagerly, you walk towards the spot where you saw your spoils, hopeful that it will be enough to call this exploration worth it. Pulling the blanket away, your eyes widen as they land on a large stonehammer made of gold and in pristine conditions! You can't believe that you've stumbled on a weapon like this, beautiful and seemingly deadly! Looks like a great opportunity to acquire yourself a brand new means of beating your enemies, but the question is... [bold type]Do you actually want to steal from the dwarves and take this weapon with you?[roman type] That might provoke them... [bold type]but if you leave it here like nothing happened, they might just never come out of hiding.[roman type] What will you do?";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Take the weapon with you.";
+	say "     ([link]N[as]n[end link]) - Leave it there. You have no interest in provoking the dwarves.";
+	if player consents:
+		LineBreak;
+		say "     This is too good to pass. It is a two-handed weapon made addorned with gold, one of the most beautiful weapons you've ever seen. Plus, it looks pretty strong! No way you're going to leave this here, to remain forgotten and risking it ending up in the wrong hands. Carefully, you remove it from its resting place. You already knew it would be heavy, but not this heavy! Nonetheless, you're strong enough to carry it with you. Now it's only a matter of returning to the tunnel and get the hell out of here before someone notices anything missing, or see you carrying something that isn't supposedly yours.";
+		now carried of golden greathammer is 1;
+		now resolution of Collapsed Tunnel is 4; [player got out with the stonehammer, dwarves are provoked]
+	else:
+		LineBreak;
+		say "     It's not a good idea. You'll end up provoking an entire civilation for just a hammer. As beautiful and powerful as it may be, it's guarded for a reason, so you put the blanket on it again and get ready to take your leave. You've had enough of this place for a day, and don't think there's anything else to do here, so you walk towards the exit and call it done.";
+		now resolution of Collapsed Tunnel is 98; [player didn't take the stonehammer, dwarves remain hidden indefinitely]
+
 Section 2 - Creature Responses
 
 to say Dwarf wins:
@@ -61,16 +210,20 @@ to say Dwarf wins:
 		else: [player loses]
 			say "     Having sustained so much damage from the dwarf's heavy pommeling, you're no longer capable to hold your ground against him. Your strength fails you as you're forced on your knees in front of the short man, his face showing a snarky grin as he looks down at you. 'Beating you to submission was easier than I thought. Look at you now! In your due place, at my full mercy.' With a sudden move, he gives you a kick on the chest, throwing you off balance to the ground. He keeps his dirty boot just below your beck, looking down at you with an amused chuckle. 'Now, if you do what you're told, things will go well for you. If not, then I'll just remind you who's the boss, here...' he says while making a suggestive movement with his hammer, reminding you of how painful his strikes felt. The dwarf certainly has the ways to make you regret any disobedience[if player is submissive], though your submissive instincts make you so eager to be used by him that he shouldn't worry too much about it[end if].";
 		WaitLineBreak;
-		if a random chance of 1 in 2 succeeds: [player gets facefucked]
-			DwarfFucksOral;
-		else:
-			if player is female: [has a pussy, gets knocked up]
-				if a random chance of 1 in 2 succeeds:
+		let randomnumber be a random number from 1 to 3;
+		if randomnumber is:
+			-- 1: [facefuck]
+				DwarfFucksOral;
+			-- 2: [fuck]
+				if player is female: [has a pussy]
+					if a random chance of 1 in 2 succeeds:
+						DwarfFucksAnal;
+					else:
+						DwarfFucksPussy;
+				else: [no pussy]
 					DwarfFucksAnal;
-				else:
-					DwarfFucksPussy;
-			else: [no pussy]
-				DwarfFucksAnal;
+			-- 3: [facesitting]
+				DwarfFacesit;
 
 to DwarfFucksOral:
 	say "     'Now, time to put your mouth to work. And you better do it right!' he says while positioning himself just above your head, which stands tall enough to reach his still covered bulge. The dwarf makes sure you feel his erection growing larger in his pants by pulling your face straight towards it. 'That's it, be a good [boygirl] for me and smell my junk. Bet you're liking this, aren't you?' the dwarf keeps teasing you as his tool hardens so much that it starts feeling constricted for the short man, as if begging for release out of those pants. 'I think I'm gonna love shoving this down your throat... Making you choke on it as you take it deep down... all the way...!' You sense eagerness in your burly captor's raspy voice [if player is submissive], making you want to taste his cock even more than you already did, [end if]as he starts undoing his large belt, dropping his gear on the ground followed by the pants.";
@@ -103,6 +256,16 @@ to DwarfFucksAnal:
 	say "     At some point, he pulls out of your asshole, your face flushed as you're released to collapse on the ground, exhausted. Standing and looking down at you is the dwarf with his still half-hard length, shaking any leftovers of his cum still oozing down his cock, which lands on your back, as he lets out a mischievous chuckle. 'Damn... I would keep you... but you know... I have no place of my own and I don't wanna share you with anyone else who ends up passing by, so... I'll let you go. You can always come back for me by yourself, ain't that right?' Laughing, he gets ready to leave by shoving his wide cock out of view back into his underwear, pulling his pants back up and tightening the belt, all this while eyeing you from above. 'See you later, bitch [boygirl]!' he shouts, carrying his stone hammer by his shoulder and walking away.";
 	say "     You're left lying on the ground with your insides filled with dwarf cum for some time before you can stand up.";
 
+to DwarfFacesit:
+	say "     'I'm having a little itch between my asscheeks, so how about you... scratch it for me? With your tongue... For a good while?' he says as a mischievous grin spreads through his face. Forcing you to lie down on the ground, he proceeds to undo his belt and drop his pants, giving his thick manhood a few strokes as he looks down on you, licking his lips. 'Mmm, damn, that's a good sight. You're gonna be a good ass cushion for me, aren't you, [boygirl]? Oh yes you are...' he teases you, positioning himself above your face, feet on each side of your head, his ass aiming for your nose, and before you know it, he's already dropping down, giving your face a hug with his hairy buttcheeks. 'Oooh fuck yeah! Lick that hole for me! I wanna feel that tongue inside my ass, you hear me little bitch?'";
+	say "     Though it's your nose almost completely buried inside his fuzzy ass, he grinds his anus all over your face, with a tendency to just kiss your lips back as he demands you to use your tongue on him. Without any further ado, you oblige him [if player is submissive]eagerly, as his commands turn you on[else]reluctantly, but with enough effort so that he is satisfied[end if], and press your wet tongue inside his asshole, to which he immediately lets out a pleased grunt. 'Yes! That's it! Oooh you're hitting the spot, lick it all over, my [boygirl]! I could kiss you right now, but might as well do it with my ass!' he teases you, pressing his hairy butt against your face harder as you're hold in place under him, your tongue condemned to lick and worship his hungry hole.";
+	WaitLineBreak;
+	say "     You're effectively making out with his bum, and he's grinding it really hard against your face, wanting to take anything he wants, and sometimes you find yourself being forced to pull your tongue out of his hole and feel your own saliva being rubbed all across your nose and cheeks. He keeps doing this over and over again, so excited that you think he's actually getting off from feeling your face between his hairy buttocks. At some point, he is barely letting you breathe, his compact ass still managing to cover most of your nose with each movement, and eventually returns to your lips. 'Tonguefuck me, bitch! I'm not leaving until you make me cum with that tongue!' he orders you with his manly deep voice, making your soul trembling.";
+	say "     Doing your best to fuck the dwarf's ass with your tongue, you push it deep in and back out as fast as you can, trying to give him a really good time just like he demands, though that makes his ass wiggle and grind against you even harder. You figure that must be your work exciting the short burly man even further, though you can feel him shaking above you, as if he was jerking off to your efforts. If you keep it up, he might just cum, so you put your best effort, shoving your tongue in, wiggling, licking his insides as good as you can, making the dwarf moan in ecstacy. He really likes getting rimmed, it seems, as he's now also pulling your head against the crevice between his hairy cheeks. 'You're fucking great at this... I'm about to cum!'";
+	WaitLineBreak;
+	say "     It's not long from when he says that to the actual orgasm. Within a few moments, he's grunting and moaning in beastly manners, shooting his load all over your chest, and as this happens, you feel his asshole clenching around your tongue with each shot. 'Fuuuuck yeah! Damn! I was fucking needing this! You're such a good seat for my fuzzy ass, my [boygirl]! Will definitely consider doing this more often to you.' he taunts you, still sitting on your face as he squeezes his cock out of any leftovers of cum, all landing on your body. 'Damn... I would keep you... but you know... I have no place of my own and I don't wanna share you with anyone else who ends up passing by, so... I'll let you go. You can always come back for me by yourself, ain't that right?' Laughing, he gets ready to leave by standing up, shoving his wide cock out of view back into his underwear, pulling his pants back up and tightening the belt, all this while eyeing you from above. 'See you later, bitch [boygirl]!' he shouts, carrying his stone hammer by his shoulder and walking away.";
+	say "     You're left with your face flushed, catching your breath after this ordeal, and take some time to recover before you can stand up.";
+
 to say Dwarf loses:
 	if inasituation is true:
 		say ""; [dealt with at the source]
@@ -132,11 +295,6 @@ to say Dwarf loses:
 			now title entry is "Ride his cock";
 			now sortorder entry is 4;
 			now description entry is "Milk his meaty prick with your ass";
-		[]
-			choose a blank row in table of fucking options;
-			now title entry is "Walk Away";
-			now sortorder entry is 5;
-			now description entry is "Leave the dwarf behind and walk away";
 		[]
 		sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -399,6 +557,8 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
+Section 4-1 - Items
+
 Table of Game Objects (continued)
 name	desc	weight	object
 "dwarven ale"	"a canteen bottle with some sort of strong alcoholic beverage inside. It's obviously dwarven in origin."	1	dwarven ale
@@ -412,6 +572,17 @@ the usedesc of dwarven ale is "You bring the canteen bottle to your mouth and ch
 instead of sniffing dwarven ale:
 	say "This beverage smells a lot like alcohol. It must be very strong.";
 
-Section 4 - Endings
+Section 4-2 - Weapons
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"golden greathammer"	"A very well preserved, large stonehammer vastly coated in gold, with artistic details carved all over the shaft and its tip's support. It is truly a beautiful piece. It's exceptionally heavy too, making it difficult to handle."	12	golden greathammer
+
+golden greathammer is an armament. It is part of the player. It has a weapon "[one of]your golden greathammer[or]your heavy golden greathammer[or]your heavy weapon[or]your beautiful golden greathammer[at random]". The weapon damage of golden greathammer is 14. The weapon type of golden greathammer is "Melee". It is not temporary. the objsize of golden greathammer is 4. the hitbonus of golden greathammer is -2.
+
+instead of sniffing medium sledge:
+	say "The beautiful golden greathammer smells of old, due to its age, and has an obvious trace of metallic scent.";
+
+Section 5 - Endings
 
 Dwarves ends here.
