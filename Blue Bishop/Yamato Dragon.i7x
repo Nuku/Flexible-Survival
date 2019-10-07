@@ -13,6 +13,7 @@ ydcolor is a number that varies.
 yamatdom is a number that varies.
 
 to say Yamato Dragon attack:
+	project the Figure of YamatoDragon_hard_icon;
 	if HP of Player > 0:
 		say "     You ultimately choose to surrender yourself to the serpentine dragon's mercy, dropping what you were carrying and offering yourself freely. When it's clear that this isn't some trick he pulls closer, a mouthless voice flooding your hearing.";
 	else:
@@ -345,6 +346,7 @@ to yamatbiasshift:
 				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the female dragon. Surely your fate is tied to her, should you succumb[roman type].";
 
 to say yamato dragon desc:
+	project the Figure of YamatoDragon_soft_icon;
 	setmongender 3; [creature is male]
 	choose row MonsterID from Table of Random Critters;
 	if "Male Preferred" is listed in feats of Player:
@@ -375,6 +377,7 @@ to say ydskinchange:
 	say "you find yourself suddenly forced to abide the growth of large, smooth [if ydcolor is 0]red[else if ydcolor is 1]blue[else]green[end if] scales grow upon your back, smaller, coarser yellow scales quickly adorning your front and underside";
 
 to say Yamato Dragon loss:
+	project the Figure of YamatoDragon_hard_icon;
 	say "     You successfully manage to fend off the massive dragon... Or, at least, he seems to yield to you, [one of]perhaps figuring that this fight is going nowhere for him[or]no doubt satisfied with you[stopping]. Pulling back, he glares down at you.";
 	say "     '[one of]Alright[or]Very well[or]I see now[at random], ";
 	if BodyName of Player is "Yamato Dragon" or BodyName of Player is "Yamato Dragoness":
