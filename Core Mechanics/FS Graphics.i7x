@@ -36,6 +36,8 @@ Figure of DarkElf_icon is the file "Dark Elf.jpg".
 Figure of DemonBrute_icon is the file "Brutus_evil.jpg".
 [Figure of DobermanCop_icon is the file "DobermanCop_ig.jpg".]
 Figure of Donkeywoman_clothed_icon is the file "Donkeywoman_clothed.jpg".
+Figure of Donkeyman_soft_icon is the file "Donkeyman_soft.jpg".
+Figure of Donkeyman_hard_icon is the file "Donkeyman_hard.jpg".
 Figure of Dracovixentaur_icon is the file "dracovixentaur_ig.jpg".
 Figure of MagicDrake_icon is the file "FS_Dragoness.jpg".
 Figure of ElvenHunter_icon is the file "ElvenHunter.jpg".
@@ -119,8 +121,12 @@ Figure of Vixentaur_icon is the file "vixentaur_ig.jpg".
 Figure of Werewolf_female_icon is the file "Werewolf.jpg".
 Figure of Wildcat_icon is the file "wildcat_ig.jpg".
 Figure of Wyvern_female_icon is the file "Wyvern_female.jpg".
-Figure of YamatoDragon_hard_icon is the file "YamatoDragon_hard.jpg".
-Figure of YamatoDragon_soft_icon is the file "YamatoDragon_soft.jpg".
+Figure of YamatoDragon_red_hard_icon is the file "YamatoDragon_red_hard.jpg".
+Figure of YamatoDragon_red_soft_icon is the file "YamatoDragon_red_soft.jpg".
+Figure of YamatoDragon_green_hard_icon is the file "YamatoDragon_green_hard.jpg".
+Figure of YamatoDragon_green_soft_icon is the file "YamatoDragon_green_soft.jpg".
+Figure of YamatoDragon_blue_hard_icon is the file "YamatoDragon_blue_hard.jpg".
+Figure of YamatoDragon_blue_soft_icon is the file "YamatoDragon_blue_soft.jpg".
 Figure of YuppieMink_icon is the file "FSTF_YuppieMink_ig.jpg".
 Figure of Zebra_icon is the file "Zebra.jpg".
 Figure of Zebra_face_icon is the file "Zebra_face.jpg".
@@ -683,6 +689,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "DiegoFem_face"	Figure of DiegoFem_face_icon	"Damdidoo"	g-black	"normal"
 ["Doberman_Defeat"	Figure of DobermanCop_icon	"TheRedAngel"	g-white	"normal"]	[old image, disabled]
 "Donkeywoman"	figure of Donkeywoman_clothed_icon	"Vashaa"	g-white	"normal"
+"Donkeyman soft"	figure of Donkeyman_soft_icon	"Vashaa"	g-white	"normal"
+"Donkeyman hard"	figure of Donkeyman_hard_icon	"Vashaa"	g-white	"normal"
 "Doran"	Figure of Doran_icon	"Anymouse1968"	g-white	"normal"
 "Doran_face"	Figure of Doran_face_icon	"Anymouse1968"	g-white	"normal"
 "Dracovixentaur"	Figure of Dracovixentaur_icon	"Anymouse1968"	g-white	"normal"
@@ -949,8 +957,12 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Yatur_clothed"	Figure of Yatur_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Yatur_naked"	Figure of Yatur_naked_icon	"Kupo Klein"	g-white	"normal"
 "Yolanda"	Figure of Yolanda_icon	"SandySchreiber"	g-white	"normal"
-"Yamato Dragon"	Figure of YamatoDragon_hard_icon	"Vashaa"	g-white	"normal"
-"Yamato Dragon"	Figure of YamatoDragon_soft_icon	"Vashaa"	g-white	"normal"
+"Yamato Dragon Red Hard"	Figure of YamatoDragon_red_hard_icon	"Vashaa"	g-white	"normal"
+"Yamato Dragon Red Soft"	Figure of YamatoDragon_red_soft_icon	"Vashaa"	g-white	"normal"
+"Yamato Dragon Blue Hard"	Figure of YamatoDragon_blue_hard_icon	"Vashaa"	g-white	"normal"
+"Yamato Dragon Blue Soft"	Figure of YamatoDragon_blue_soft_icon	"Vashaa"	g-white	"normal"
+"Yamato Dragon Green Hard"	Figure of YamatoDragon_green_hard_icon	"Vashaa"	g-white	"normal"
+"Yamato Dragon Green Soft"	Figure of YamatoDragon_green_soft_icon	"Vashaa"	g-white	"normal"
 "Yuppie Mink_F"	Figure of YuppieMink_icon	"Anymouse1968"	g-white	"normal"	[only shown for female version]
 "Zebra Stallion"	Figure of Zebra_icon	"Purplepardus"	g-black	"normal"
 "Zigor"	Figure of Zigor_icon	"AugurMew"	g-black	"normal"
@@ -1041,6 +1053,7 @@ carry out artistcredits:
 	say "     Demon Brute by Lay @ y-gallery.net[line break]";
 	say "     Doberman Cop by TheRedAngel @ furaffinity.net[line break]";
 	say "     Donkeywoman by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
+	say "     Donkeyman by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Dracovixentaur by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Ebonflame Drake by Anonymous[line break]";
 	say "     Elven Hunter by Aosuka @ y-gallery.net[line break]";

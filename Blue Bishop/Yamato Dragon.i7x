@@ -10,10 +10,11 @@ MYDTBMM is a number that varies. [Male Yamato Dragon TBM Memory]
 MYDAM is a number that varies. [Male Yamato Dragon Anal Memory]
 MYDGM is a number that varies. [Male Yamato Dragon Gimmick Memory]
 ydcolor is a number that varies.
+YDEnemyColor is a number that varies.[@Tag:NotSaved]
 yamatdom is a number that varies.
 
 to say Yamato Dragon attack:
-	project the Figure of YamatoDragon_hard_icon;
+	ProjectYamatoDragon_hard;
 	if HP of Player > 0:
 		say "     You ultimately choose to surrender yourself to the serpentine dragon's mercy, dropping what you were carrying and offering yourself freely. When it's clear that this isn't some trick he pulls closer, a mouthless voice flooding your hearing.";
 	else:
@@ -346,7 +347,8 @@ to yamatbiasshift:
 				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the female dragon. Surely your fate is tied to her, should you succumb[roman type].";
 
 to say yamato dragon desc:
-	project the Figure of YamatoDragon_soft_icon;
+	now YDEnemyColor is a random number between 0 and 2;
+	ProjectYamatoDragon_soft;
 	setmongender 3; [creature is male]
 	choose row MonsterID from Table of Random Critters;
 	if "Male Preferred" is listed in feats of Player:
@@ -367,7 +369,7 @@ to say yamato dragon desc:
 	now firebreathready is false;
 	psycheeval;
 	libidoeval;
-	say "     [if showlocale is true]Traveling through the park[else]Suddenly[end if], you find yourself beset by a dragon of eastern myth. Massive and serpentine in frame, airborne in spite of being wingless, his [one of]red[or]blue[or]green[at random] scales and yellow underbelly shimmering in the [if daytimer is night]starlight[else]sunlight[end if]. You instinctively attempt to find cover, but this only encourages him to pursue you on ground, a lustful hunger agleam in his eyes.";
+	say "     [if showlocale is true]Traveling through the park[else]Suddenly[end if], you find yourself beset by a dragon of eastern myth. Massive and serpentine in frame, airborne in spite of being wingless, his [if YDEnemyColor is 0]red[else if YDEnemyColor is 1]blue[else]green[end if] scales and yellow underbelly shimmering in the [if daytimer is night]starlight[else]sunlight[end if]. You instinctively attempt to find cover, but this only encourages him to pursue you on ground, a lustful hunger agleam in his eyes.";
 
 to say ydskinchange:
 	let tempnum be ydcolor;
@@ -376,8 +378,26 @@ to say ydskinchange:
 	if ydcolor is 3, now ydcolor is 0;
 	say "you find yourself suddenly forced to abide the growth of large, smooth [if ydcolor is 0]red[else if ydcolor is 1]blue[else]green[end if] scales grow upon your back, smaller, coarser yellow scales quickly adorning your front and underside";
 
+to ProjectYamatoDragon_soft:
+	if YDEnemyColor is:
+		-- 0:
+			project the Figure of YamatoDragon_red_soft_icon;
+		-- 1:
+			project the Figure of YamatoDragon_blue_soft_icon;
+		-- 2:
+			project the Figure of YamatoDragon_green_soft_icon;
+
+to ProjectYamatoDragon_hard:
+	if YDEnemyColor is:
+		-- 0:
+			project the Figure of YamatoDragon_red_hard_icon;
+		-- 1:
+			project the Figure of YamatoDragon_blue_hard_icon;
+		-- 2:
+			project the Figure of YamatoDragon_green_hard_icon;
+
 to say Yamato Dragon loss:
-	project the Figure of YamatoDragon_hard_icon;
+	ProjectYamatoDragon_hard;
 	say "     You successfully manage to fend off the massive dragon... Or, at least, he seems to yield to you, [one of]perhaps figuring that this fight is going nowhere for him[or]no doubt satisfied with you[stopping]. Pulling back, he glares down at you.";
 	say "     '[one of]Alright[or]Very well[or]I see now[at random], ";
 	if BodyName of Player is "Yamato Dragon" or BodyName of Player is "Yamato Dragoness":
