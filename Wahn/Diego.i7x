@@ -12,6 +12,8 @@ Version 2 of Diego by Wahn begins here.
 [   4: player went to the villa in the day, grabbed the collar after fight  ]
 [   5: player tried to get the collar sneakily, then ran off in the fight   ]
 [   6: player had the collar put onto them by Hunter                        ]
+[   7: player with the collar on talked to Diego                            ]
+[  50: player delivered the collar                                          ]
 [  98: player lost/fled from Hunter in the fight                            ]
 [  99: player didn't show any interest so far                               ]
 [ 100: blocked/failed                                                       ]
@@ -1280,6 +1282,7 @@ to say DiegoCollarWearingAftermath:
 		if "Female Preferred" is not listed in Feats of Player:
 			add "Female Preferred" to Feats of Player;
 			say "     [bold type]You gained the 'Female Preferred' feat![roman type][line break]";
+	now XP of Diego is 7; [player has the collar on, got fucked]
 
 to say DiegoCollarDeliveryAftermath:
 	say "     'Thanks a lot, you don't know how much this means to me. Really irked me a lot to know that fucker had my family heirloom. Here, let me reward you for your help!' With that said, he strolls over to a somewhat out of the way clump of bushes, reaching inside it and retrieving a bulging plastic shopping bag. He hands the weighty load over and you see that it contains several soda cans as well as bags of chips.";
@@ -1309,6 +1312,8 @@ to say DiegoCollarDeliveryAftermath:
 	else:
 		LineBreak;
 		say "     In a friendly but firm tone, you turn the coyote down. He takes your rejection well enough with little more than a slight dip of his tail, followed by a shrug. 'Oh well, guess I'll find someone else to help me with this specific plan then. Doesn't mean we can't enjoy hatching some other fun plans together though, alright?'";
+		now carried of diego's heirloom collar is 0;
+		now XP of Diego is 50; [collar delivered]
 
 
 Diego ends here.

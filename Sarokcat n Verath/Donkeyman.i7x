@@ -6,6 +6,7 @@ Version 1 of Donkeyman by Sarokcat n Verath begins here.
 Section 1 - Creature Responses
 
 to say Donkeyman wins:
+	project the Figure of Donkeyman_hard_icon;
 	if Player is female:
 		say "     The donkeyman lets out a low braying laugh as you collapse to your knees in front of him, the amused sound echoing around you as the leather-clad beast sizes you up for a minute. His masked face stretches out in an equine grin as he reaches down to stroke the side of your face with his hand. 'A pretty little female for me to teach a lesson to. This is going to a rare treat,' he says, his harsh amused tone making you shudder slightly as the aroused musk of the male beast fills your head and makes you whimper slightly as your body begins to heat up with desire.";
 		say "     'Well, since you are obviously far too weak and submissive to top me properly, it looks like I will just have to top you instead...' he says with some amusement as he pulls a strip of leather out and moves around you. You find yourself whimpering slightly, feeling strangely submissive as his powerful musk surrounds you. You open your mouth to try to say something, or protest, only to find it filled with the rough taste of leather. You try to spit out the piece of leather, only to hear the donkey chuckle behind you as he finishes securing the crude gag in your mouth before a sharp shove comes from behind you. You tip forward on your knees, and you reach out to catch yourself before your face hits the ground, only to realize as his coarse hands grip your thighs that was precisely what he wanted you to do.";
@@ -38,6 +39,7 @@ to say Donkeyman wins:
 
 
 To say Donkeyman loses:
+	project the Figure of Donkeyman_hard_icon;
 	say "     The male donkey collapses under the weight of your last powerful blow, moaning with what appears to pleasure as he falls to the ground, obviously both bruised and aroused by your vicious assault. He moans through his leather hood as he reaches down with his hands and begins to stroke his massively aroused shaft, his erect equine cock sticking nearly straight up as he lies back on the ground and moans with pleasure. Looking down at the highly aroused donkey, you realize that apparently your fight with him was definitely his idea of foreplay, and now that you are the victor you could easily take advantage of his situation.";
 	say "     [bold type]What do you want to do now?[roman type][line break]";
 	LineBreak;
@@ -67,6 +69,11 @@ To say Donkeyman loses:
 		LineBreak;
 		say "     You watch for a minute, with a kind of morbid fascination as the donkeyman continues to stroke himself with increasingly desperate strokes, before he finally lets out a loud neigh and his thick equine cum erupts from his cock like a geyser. You step back as he covers himself, his harness, and a good portion of the wall and floor with his seed, before the donkeyman collapses as limply as his cock in the spreading puddle of donkey cum. Shaking your head slightly to clear it after the strangely erotic sight, you continue along your way.";
 
+to say DonkeymanDesc:
+	project the Figure of Donkeyman_soft_icon;
+	setmongender 3;
+	say "     Wandering through the building you are tripped by a donkeyman. Built like an amateur bodybuilder, you can't help notice that he's more human than donkey. The only parts of him that are donkey is his head, ears, tail, rough gray fur, and genitals that look like they would be more at home on a Clydesdale than a donkey. His face and head is covered with a leather hood with holes for his eyes, ears and nose. A leather harness wraps around his thick chest and the chaps he's wearing look painted on. Heavy engineer boots cover his feet. Looking down at you with a look that chills you to the bone, he says, 'I can't wait to see you all geared up and looking like a proper jack!'";
+
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
@@ -92,7 +99,7 @@ When Play begins:
 	now attack entry is "[one of]The powerful donkey twists around and kicks out at you with one of his boot covered hooves![or]He charges forward swinging wildly![or]The powerful donkeyman grabs you and tries to pin you up against the wall![or]The strangely sexy donkey strokes his cock teasingly, the sight making you feel strangely aroused.[or]he charges forward, slamming his powerful donkey-like body right into you![or]He strikes at you powerfully, only to overbalance and trip, sending both of you sprawling to the ground![or]The donkey like brute swings his powerful fist right into your gut![at random]";
 	now defeated entry is "[Donkeyman loses]";
 	now victory entry is "[Donkeyman wins]";
-	now desc entry is "[mongendernum 3]     Wandering through the building you are tripped by a donkeyman. Built like an amateur bodybuilder, you can't help notice that he's more human than donkey. The only parts of him that are donkey is his head, ears, tail, rough gray fur, and genitals that look like they would be more at home on a Clydesdale than a donkey. His face and head is covered with a leather hood with holes for his eyes, ears and nose. A leather harness wraps around his thick chest and the chaps he's wearing look painted on. Heavy engineer boots cover his feet. Looking down at you with a look that chills you to the bone, he says, 'I can't wait to see you all geared up and looking like a proper jack!'";
+	now desc entry is "[DonkeymanDesc]";
 	now face entry is "that of a narrow donkey-like face, with a crudely made leather mask covering most of your muzzle, which only emphasizes your striking donkey-like eyes and expressive large equine ears which sit on top of your new face"; [You have a (your text) face."]
 	now body entry is "powerful and muscular, built much like a beast of burdens, you have broad shoulders and powerfully built legs, you have managed to find some boots somewhere to cover your rough, mostly human feet and have made a rough harness out of strips of leather and rope to help make you feel more comfortable";
 	now skin entry is "[one of]gray furred[or]coarse furred[or]rough gray[at random]";
