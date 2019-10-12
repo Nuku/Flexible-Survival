@@ -173,7 +173,7 @@ to SetInfectionsOf ( Target - a person ) randomized between ( Father - a person 
 		now TailName of Target is TailName of Mother;
 		now TailSpeciesName of Target is TailSpeciesName of Mother;
 
-to attributeinfect with ( Infection - a text ):
+to attributeinfect with/-- ( Infection - a text ):
 	let StoredMonsterID be MonsterID;
 	setmonster Infection silently;
 	attributeinfect;

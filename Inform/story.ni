@@ -4353,14 +4353,6 @@ to attributeinfect:		[sets the player values from the new attributes]
 	else:
 		now SleepRhythm of Player is 0; [standard]
 
-To attributeinfect (x - text):
-	repeat with y running from 1 to number of filled rows in Table of Random Critters:
-		choose row y in Table of Random Critters;
-		if Name entry exactly matches the text x, case insensitively:
-			now MonsterID is y;
-			attributeinfect;
-			break;
-
 To Vialchance (x - a text):
 	choose row MonsterID from Table of Random Critters;
 	if researchbypass is 1, continue the action;
