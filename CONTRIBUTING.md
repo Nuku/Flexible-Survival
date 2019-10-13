@@ -55,11 +55,13 @@ Install Inform 7! Flexible Survival runs on this game engine.
 
 http://inform7.com/downloads/
 
+<!--
 However, Flexible Survival is too big for Inform! We have a custom 64-bit compiler that you will also have to install or else you will not be able to compile the game:
 
 https://drive.google.com/file/d/0BxUh1iVHP4kiM3JjTF8za2V0TG8/view
 
 Move this file to `C:\Program Files (x86)\Inform 7\Compilers` and replace `ni.exe` with this one.
+-->
 
 ## 7. Set up the Inform project for the first time
 Start Inform and set up "Flexible Survival" as a new project with that exact name! Then close Inform. You only have to do this once.
