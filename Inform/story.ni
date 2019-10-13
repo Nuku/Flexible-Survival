@@ -57,7 +57,7 @@ Section Help Menu
 Table of Basic Help Options (continued)
 title	description
 "Getting Started"	"Welcome to Flexible Survival! To get started with playing there are a few commands you need to know. [line break] In order to move around, you can use the compass directions (north, south, east, west, etc), move 'in' and 'out' of buildings, and 'nav' or 'navigate' between areas. [line break]  You can 'explore' the world to find events, monsters, and new areas, or 'hunt' for something specific. [line break] To interact with things around you, you can 'look', 'get', 'smell', 'fuck', 'talk' to, or 'drop' items. If you do pick things up, you can access you inventory with 'inv'.[line break]If you find yourself running low on food or water, you may need to 'scavenge' around the city."
-"Hunting"	"You can hunt for specific creatures. Go to a place you can explore from, like the library.[line break]You there? OK, now type [bold type]hunt (creature)[roman type].[line break]You are not assured success, but a critter is 3 times more likely to show up when actively looked for.[line break]You can also hunt for locations, if you know their name.[line break]Hunting for something doesn't require that you use the entire name, and can sometimes have multiple results, for example 'hunt dragon' in the park would hunt for both yamato dragon and yamato dragoness, but 'hunt dragoness' would only hunt for the yamato dragoness."
+"Hunting"	"You can hunt for specific creatures. Go to a place you can explore from, like the library.[line break]You there? Ok, now type [bold type]hunt (creature)[roman type].[line break]You are not assured success, but a critter is 3 times more likely to show up when actively looked for.[line break]You can also hunt for locations, if you know their name.[line break]Hunting for something doesn't require that you use the entire name, and can sometimes have multiple results, for example 'hunt dragon' in the park would hunt for both yamato dragon and yamato dragoness, but 'hunt dragoness' would only hunt for the yamato dragoness."
 "Trading"	"You can trade with certain denizens of the city. Simple [bold type]give x to y[roman type], like give soda to bob. If they want it, they'll give you something back for it. Trades are final, but usually worth it."
 "Scoring"	"Staying alive, making friends, and unearthing the mysteries of the city get you points. Losing battles saps points. See how high a score you can manage!"
 "Items"	"You will come to have a variety of items. Here are some useful commands.[line break][line break]Item: See a list of items you own.[line break]look (item): Look at a specific item.[line break]use (item): Use an item[line break]get (item): grab a specific item.[line break]get all: get everything in the room.[line break]junk (item): destroy an item forever.[line break]drop (item): drop the item on the floor, so you can pick it up later."
@@ -605,6 +605,12 @@ internalbypass is a truth state that varies. internalbypass is usually false.
 
 Definition: A person (called x) is internal:
 	if CockName of x is listed in infections of InternalCockList and internalbypass is false, yes;
+	no;
+
+A person can be sheathed. A person is usually not sheathed.
+
+Definition: A person (called x) is sheathed:
+	if CockName of Player is listed in infections of SheathedCockList, yes;
 	no;
 
 A person can be knotted. A person is usually not knotted.
@@ -6446,13 +6452,11 @@ Include Park Events by Sarokcat.
 Include Patreon Menu by Stripes.
 Include Pepperspray by Stripes.
 Include Pet Shop by Wahn.
-[Include Pursuit of Science by Kaleem Mcintyre.]
 Include Qytat Shifters by Hellerhound.
 Include Random Events by Hiccup.
 Include Rane Events by KorekaBii.
 Include Recordings by Wahn.
 Include Red Events by Stripes.
-[Include Researcher Studio by Kaleem Mcintyre.]
 Include Reservoir by Kaleem Mcintyre.
 Include Rubber Sneakers by Kernog.
 Include Satyr Frat by Wahn.
