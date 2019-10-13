@@ -37,6 +37,19 @@ set "NI_64Bit=%INFORM_BINDIR%\ni64.exe"
 set "FS_INSTALLDIR=C:\Program Files (x86)\Silver Games LLC\flexible\Flexible Survival\Release"
 set "BUILD_OUTPUT=%INFORM_FS%\Build\output.gblorb"
 
+:: Symlink story.ni
+set "INFORM_FS_SOURCE=%INFORM_FS%\Source"
+set "GITHUB_FS=%USERPROFILE%\Documents\Github\Flexible-Survival"
+echo [INFO] Making symlink for story.ni in Inform folder
+fsutil reparsepoint query "%INFORM_FS_SOURCE%\story.ni" >nul && (
+  echo [INFO]   Removing existing symlink...
+  del "%INFORM_FS_SOURCE%\story.ni"
+) || (
+  echo [INFO]   Backing up story.ni
+  move /Y "%INFORM_FS_SOURCE%\story.ni" "%INFORM_FS_SOURCE%\story_old.ni"
+)
+mklink "%INFORM_FS_SOURCE%\story.ni" "%GITHUB_FS%\Inform\story.ni"
+
 "%NI_64Bit%" -release -internal "%INFORM_INTERNAL%" -project "%INFORM_FS%" -external "%INFORM_DATADIR%" -format=ulx
 if errorlevel 1 (
 	pause
