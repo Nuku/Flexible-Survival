@@ -173,7 +173,7 @@ instead of conversing the Doctor Medea:
 				if Player consents:
 					LineBreak;
 					say "     She seems pleased at the prospect of helping you become pregnant by granting you this strange ability. The procedure is swiftly accomplished. The lizard doctor smiles and strokes over your belly, grinning at the thought of it swelling with life.";
-					add "MPreg" to feats of Player;
+					FeatGain "MPreg";
 					say "[Medeaadjustments]";
 				else:
 					LineBreak;
@@ -388,19 +388,19 @@ to say Medeaadjustments:
 					remove "Fertile" from feats of Player;
 					say "     Dr. Medea seems a little disappointed in your choice, but performs the procedure, removing your excessive fertility. 'There, you should have a normal level of fertility now. Well, normal for this new, rapidly gestating standard among the infected. I hope you will still have an enjoyable and productive time,' she says, tidying up her instruments.";
 				else if nam is "Gain impregnation control":
-					add "Selective Mother" to feats of Player;
+					FeatGain "Selective Mother";
 					say "     Dr. Medea performs the procedure, altering your womb to only accept a male's seed when you desire it. 'I hope you have an enjoyable and productive time,' she says, tidying up her instruments.";
 				else if nam is "Remove sterility":
 					remove "Sterile" from feats of Player;
 					say "     Dr. Medea performs the procedure with pleasure, removing the change that made you sterile. 'There we go. Much better,' she says. 'I hope you'll have an enjoyable and productive time now,' she adds, tidying up her instruments.";
 				else if nam is "Gain increased fertility":
-					add "Fertile" to feats of Player;
+					FeatGain "Fertile";
 					say "     Dr. Medea performs the procedure with pleasure, altering your body to be even more fertile. 'You should be much more fertile and also experience accelerated gestation thanks to this procedure. I hope you have an enjoyable and very productive time,' she says, tidying up her instruments.";
 				else if nam is "Become sterile":
 					if Player is impreg_now:
 						say "     Dr. Medea shakes her head. 'I cannot perform such a procedure while you're pregnant. Guess we'll just have to skip it,' she adds cheerfully.";
 					else:
-						add "Sterile" to feats of Player;
+						FeatGain "Sterile";
 						say "     Dr. Medea seems particularly disappointed in your choice, but performs the procedure, rendering you sterile. 'There, you should no longer be able to produce offspring, except in rare cases. Be aware that the nanite infection may overcome this in time, but it should last at least until the rescue comes. Provided you don't change your mind and let me restore you, that is,' she says, sounding a little hopeful as she tidies up her instruments.";
 				else if nam is "Heat exam":
 					say "     The lizard doctor pokes and prods at you with a few instruments, throwing in the (mis)use of a few fingers in there as well[if inheat is true]. By the time she's done, you're left panting and moaning, much to her obvious delight[else]. By the time she's done, you aren't quite sure if you want it to continue or are glad it's over[end if]. She checks her data quickly and runs a couple of quick tests.";
@@ -558,10 +558,10 @@ to say Medeaadjustments:
 						now TailSpeciesName of Child is "Latex Fox";
 						now ubpreg is "Latex Fox";
 					now playercanub is true;
-					add "UB Pred" to feats of Player;
+					FeatGain "UB Pred";
 					now ubcount is 1;
 					decrease humanity of Player by 3;
-					say "     You have the [bold type]UB Predator[roman type] feat, granting you the ability to unbirth fallen foes. If you're not pregnant, there is a chance your body will want to use your enemy to fill your womb. You may adjust some vore related settings via the [bold type]vore menu[roman type].";
+					say "     You now have the ability to unbirth fallen foes. If you're not pregnant, there is a chance your body will want to use your enemy to fill your womb. You may adjust some vore related settings via the [bold type]vore menu[roman type].";
 					now Gestation of Child is a random number between 8 and 16;
 					now pregtype is 1;
 					if "Safe Appetite" is not listed in feats of Player:

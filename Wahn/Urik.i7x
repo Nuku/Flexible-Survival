@@ -128,7 +128,6 @@ Instead of fucking Urik:
 				say "[title entry]: [description entry]?";
 				if Player consents:
 					let nam be title entry;
-					clear the screen and hyperlink list;
 					now sextablerun is 1;
 					if nam is "Suck Urik's cock":
 						say "[UrikSex1]";
@@ -249,7 +248,6 @@ instead of conversing Urik:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if nam is "Just chat":
 					say "[UrikTalk1]";

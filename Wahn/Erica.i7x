@@ -284,7 +284,6 @@ instead of conversing the Erica:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if nam is "Just chat":
 					say "[EricaTalk1]";
@@ -400,7 +399,6 @@ to say EricaSexMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if nam is "Have her blow your cock":
 					say "[EricaSex1]";

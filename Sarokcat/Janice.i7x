@@ -32,16 +32,26 @@ Janice	"Janice"
 Janice is a woman.
 [Physical details as of game start]
 ScaleValue of Janice is 3. [human sized]
+Body Weight of Janice is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Janice is 2. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+Androginity of Janice is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 SleepRhythm of Janice is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Janice is 0. [X cock]
-Cock Length of Janice is 0. [X Inches]
-Ball Size of Janice is 0.
-Ball Count of Janice is 0. [X balls]
-Cunt Count of Janice is 1. [X pussy]
-Cunt Depth of Janice is 8. [X Cunt]
-Cunt Tightness of Janice is 4. [X Cunt]
-Nipple Count of Janice is 2. [X nipples]
-Breast Size of Janice is 4. [X at the start]
+Mouth Length of Janice is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Janice is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Janice is 5. [length in inches]
+Cock Count of Janice is 0. [number of cocks]
+Cock Girth of Janice is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Janice is 0. [length in inches]
+Ball Size of Janice is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Ball Count of Janice is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Cunt Count of Janice is 1. [number of cunts]
+Cunt Depth of Janice is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Janice is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Janice is 1. [size 1-5, very small/small/average/large/very large]
+Asshole Depth of Janice is 10. [inches deep for anal fucking]
+Asshole Tightness of Janice is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Nipple Count of Janice is 2. [count of nipples]
+Breast Size of Janice is 4. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 [Basic Interaction states as of game start]
 TwistedCapacity of Janice is false. [can not take oversized members without pain]
 Sterile of Janice is true.
@@ -206,6 +216,7 @@ to say sexwithjanice:
 					say "     Your cock grows even stiffer with desire as you take the sexy vixen up on her offer, your arms wrapping around her sexy waist even as you slide your cock into her needy folds, the feel of her soft body parting to welcome you inside is absolutely heaven, causing you to moan with delight even as she yips softly underneath you in pleasure. Something about your position feels so natural as you slowly pull out before thrusting into your vixen's sexy body again, her soft yips and moans only encouraging you to go faster and harder as you begin to thrust into her with increasing speed, your swelling knot slipping in and out of her with each thrust. It isn't long before you end up giving yourself over to the wonderful pleasure of mounting your mate, and are panting and yipping just as eagerly as she is as she writhes happily underneath you. Soon your knot has swelled inside her to the point where it won't slip out of her lithe body anymore, and you groan with pleasure as her tight walls lock around your knot tying you together.";
 					say "     Unable to pull out fully anymore, you find yourself rocking your hips against her with increased vigor even as her wonderfully tight passage squeezes your knot with every movement, your balls churning with anticipation even as your pointed tip presses deeply into her body. Her soft fur underneath you feels absolutely amazing as she rocks back against you eagerly, and you can't hold back any longer, and you bury your face in her soft fur as your vulpine rod begins to spill its load into her soft womb. The pleasure is almost overwhelming as her passage rocks and tightens around your vulpine cock as Janice cries out in orgasm as well, her body squeezing and massaging your knot as she tries to milk every last bit of fertile sperm out of you.";
 					say "     Gasping with pleasure as you lie on top of her, still tied together by your swollen knot, you find yourself moaning happily as the sexy vixen shifts underneath you, and looking up you see a mischievous twinkle in her eye as she grins back over her shoulder at you. You moan with surprise and pleasure as she shifts forward, pulling you up onto the couch with her by your still buried cock, the sensation nearly making you pass out with pleasure as she pulls you close and cuddles her soft body up against you murring happily. Your arms full of soft sexy vixen, you find yourself smiling happily as well, as you lie there with your soft sexy mate waiting for your knot to deflate...";
+					NPCSexAftermath Janice receives "PussyFuck" from Player;
 					infect "Arctic fox";
 					infect "Arctic fox";
 					now lastfuck of Janice is turns;
@@ -215,6 +226,7 @@ to say sexwithjanice:
 				else:
 					say "     'Why I thought you would never ask,' Janice says with a teasing smile on her muzzle as she traces one of her slim vulpine paws down her soft white fur teasingly, 'why don't you come over here and put that lovely cock of yours to good use...' she says teasingly as she spreads her legs out to the side slightly, giving you a perfect view of her soft damp pink sex, even as the aroma of a vixen in heat fills your head, causing your cock to grow increasingly aroused in anticipation. You find yourself grinning with delight as you take in the sexy white vixen spread open before you for your pleasure, the sight far too enticing for your lust-filled body to refuse as you move onto the couch with her. You can swear you see a rather vixenish grin cross Janice's muzzle as she reaches her paws up and runs them over your [Skin of Player] chest, her soft touch making you moan as she wraps her arms around you and pulls you down into her embrace. The feel of her silken soft white fur as it rubs against your sensitive body is amazing, and you groan with pleasure as she lifts her hips up teasingly to rub her damp sex against the base of your cock.";
 					say "     Unable to hold back the burning desire building in your cock, you shift your hips on her next teasing pass. This slides you into her waiting cunt and you both share a gasp of delight. Janice moans happily as your cock sheaths itself in her warm willing body, her long legs wrapping around your waist as she rubs up against you encouragingly. Though with the amazing feeling of her tight needy body massaging your cock, you need little encouragement to begin thrusting into her harder and faster than ever. Your body burning with building pleasure even as the vixen underneath you pants and yips in response to every one of your thrusts, her small noises of pleasure making you grin happily, even as the pleasure begins to grow almost too great to contain. You cry out as you bury your head against her softly furred shoulder, your body tensing against Janice's soft form as your orgasm spills over you. The feel of your cock spilling its seed inside her warm depths is absolutely amazing, her inner walls gripping you tight even as she cries out in pleasure as well, her soft claws running down your back as you hold onto each other tightly. Eventually you find yourself panting for breath as your orgasm begins to subside, and you smile as you feel a small lick on the side of your face as a smiling Janice gives you a soft kiss of thanks. Slowly the two of you pull apart from each other, with the vixen giving you a sly teasing smile as you both relax on the couch and try to recover from the amazingly intense experience.";
+					NPCSexAftermath Janice receives "PussyFuck" from Player;
 					infect "Arctic fox";
 					infect "Arctic fox";
 					now lastfuck of Janice is turns;
@@ -229,6 +241,7 @@ to say janiceoral:
 	say "     Janice licks her muzzle as she eyes your [cock size desc of Player] [Cock of Player] cock. 'Mmm... I was just thinking I could go for some nice, hard meat in my muzzle,' she murrs, pulling you into her arms and running one paw down your side as the other guides you to lay back on her divan. 'How about we give [if Cock Count of Player > 1]these[else]this[end if] [if Cock Length of Player > 10]bad boy[else if Cock Length of Player > 4]sexy cock[else]little fellow[end if][smn] of yours some proper attention?' she says with a wink before running her tongue slowly along the underside of your shaft[if Cock Length of Player < 6]. 'Maybe we can perk him up a little while we're at it,' she adds, giving you another lick[end if].";
 	say "     The snow white vixen presses her bosom down around your [Cock of Player] cock[smn], mashing those soft, warm globes around your meat. She rocks her chest forward, rubbing those beautiful tits of hers against your pulsing shaft[smn][if Cock Length of Player < 4], releasing it from time to time so she can lick and suck at your [cock size desc of Player] manhood[else] while running her tongue along it as well[end if]. She works her tongue expertly over your shaft, sliding sensually over your aroused flesh while sensually gazing up at you with a sexy smile on her muzzle.";
 	say "     Between her tonguework and the titty-fuck, it's not too long before you're moaning that you're about to cum. She brings her muzzle up to the top of your pulsing shaft, wrapping her lips around it while her paw finishes stroking you off. You blast your hot cream into her muzzle and down her throat, feeding the lustful vixen your cum. Once you're done, she grins and licks her lips slowly and runs her paws down her sexy body[if Ball Size of Player > 6], now greatly bloated from your huge output[else if Ball Size of Player > 5], now with a plumper belly from your large load[end if].";
+	NPCSexAftermath Janice receives "OralCock" from Player;
 	infect "Arctic fox";
 	now lastfuck of Janice is turns;
 

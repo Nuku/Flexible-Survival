@@ -41,8 +41,7 @@ to say losetoplatypus:
 	if BodyName of Player is "Platypus" and player is pure and player is not mpreg_ok and player is puremale:
 		LineBreak;
 		say "     You feel something tingling in your belly as it grows warm and put your hands on it in concern. Then a thought clicks suddenly into your head: You can now become pregnant through anal sex, much like the platypus who did this to you.";
-		say "     [']MPreg['] has been added to your list of feats.";
-		add "MPreg" to feats of Player;
+		FeatGain "MPreg";
 		say "[ovichance]";
 
 to say beattheplatypus:

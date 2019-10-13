@@ -404,7 +404,6 @@ Instead of fucking David:
 				say "[title entry]: [description entry]?";
 				if Player consents:
 					let nam be title entry;
-					clear the screen and hyperlink list;
 					now sextablerun is 1;
 					if nam is "Suck David's cock":
 						say "[DavidSex1]";
@@ -507,7 +506,6 @@ instead of conversing David:
 				say "[title entry]: [description entry]?";
 				if Player consents:
 					let nam be title entry;
-					clear the screen and hyperlink list;
 					now sextablerun is 1;
 					if nam is "Just chat":
 						say "[DavidTalk1]";

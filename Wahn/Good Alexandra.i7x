@@ -1515,9 +1515,7 @@ to say A_Task56:
 			increase score by 25;
 	else:
 		say "     She points out several neighborhoods that have lower mutant activity that she's not yet patrolled, hopeful that a few survivors might be found before monster number rise. You listen to her detail the situation in those areas and promise to check them out the next chance you get. You take some time to study her map in detail, especially some of the city's key landmarks and any relatively safe routes or paths she's marked between them. Knowing those should help you get around more easily.";
-		say "[bold type]You have gained the [']City Map['] feat.[roman type]";
-		add "City Map" to feats of Player;
-		say "[bestowcitymapfeat]";
+		FeatGain "City Map";
 	now HP of Alexandra is 67;
 
 

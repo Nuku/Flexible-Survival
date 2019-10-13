@@ -216,7 +216,7 @@ carry out PregStatus:
 	else:
 		say "-";
 	say "[line break]female_vacant: ";
-	if Player is male_vacant:
+	if Player is fem_vacant:
 		say "+";
 	else:
 		say "-";
@@ -296,6 +296,7 @@ carry out itemcheat:
 	repeat with x running through grab objects:
 		if the printed name of x exactly matches the text topic understood, case insensitively:
 			increase carried of x by 1;
+			say "     You gain 1 [printed name of x]!";
 			break;
 
 allitemcheat is an action applying to nothing.
@@ -305,6 +306,7 @@ check allitemcheat:
 	if debugactive is 0, say "You aren't currently debugging!" instead;
 
 carry out allitemcheat:
+	say "     You gain one of everything!";
 	repeat with x running through grab objects:
 		increase carried of x by 1;
 

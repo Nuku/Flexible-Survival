@@ -110,7 +110,7 @@ To FunFeatget:
 			if calcnumber > 0 and calcnumber <= the number of filled rows in table of gainable feats:
 				now current menu selection is calcnumber;
 				follow the gainfeat rule;
-				[decrease featgained of Player by 1;]
+				decrease featgained of Player by 1; [fun feats are not counted]
 				if featqualified is 0, break;
 			else if Playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
 				say "Selection aborted.";

@@ -125,7 +125,6 @@ instead of fucking the Gorilla Team-Members:
 				say "[title entry]: [description entry]?";
 				if Player consents:
 					let nam be title entry;
-					clear the screen and hyperlink list;
 					now sextablerun is 1;
 					if nam is "Join in for a cum-bath (giving)":
 						say "[GorillaTeamSex1]";
@@ -321,13 +320,15 @@ to PeepingRomanEvent:
 		now Resolution of PeepingRoman is 2; [didn't peep]
 
 to say FootballTeamSlice1:
-	say "     You put the tape that Roman gave you inside the recorder and press [']play[']. The video starts on a close-up of a Black young man's face. 'How do you... Ah. There we go,' he says, before pulling the camera away from his face. It is a rather good-looking young man, clad in football gear. As he was about to speak, another player tugs him by his braids. 'Hey, Zach, is it rolling? Come on, man. Sighing, Zach turns the camera over, showing another, younger Black male. His naked chest still wet from the shower and a towel on his waist. 'You should get some clothes, Mike,' you can hear Zach say.";
+	say "     You put the tape you found in the football locker-room inside the recorder and press [']play[']. The video starts on a close-up of a Black young man's face. 'How do you... Ah. There we go,' he says, before pulling the camera away from his face. It is a rather good-looking young man, clad in football gear. Just as he draws breath to say something else, a hand reaches into the picture to tug on his braids.";
+	say "     'Hey, Zach, is it rolling? Come on, man.' Sighing, Zach turns the camera over, showing another black male looking very much like a younger version of Zach. His naked chest still wet from the shower and a towel on his waist.";
+	say "     'You should get some clothes, Mike,' you can hear Zach say.";
 	say "     'Aw, but I wanted to give a little fan-service for the ladies,' Mike jokes.";
 	say "     'And the boys, too?' Zach asks.";
 	say "     '[italic type]Especially[roman type] the boys, Z,' Zach's brother adds in a softer voice.";
-	say "     'Zach, Mike, what are you doing with the camera?' someone says out of field. The camera turns, showing a strong-looking man in his thirties.";
 	WaitLineBreak;
-	say "     'This camera is for the team's blog. It's not a toy,' the older white-skinned male chastised.";
+	say "     'Zach, Mike, what are you doing with the camera?' someone says out of field. The camera turns, showing a strong-looking man in his thirties.";
+	say "     'This camera is for the team's blog. It's not a toy,' the older white-skinned male chastises.";
 	say "     'Sorry, coach Roman,' Zach says. Behind Roman, the locker-room is bristling with activity. Players come and go; some wave to the camera, before the feed stops. You realize that this is the morning before the start of the infection, and that there will not be any blog to upload to.";
 
 

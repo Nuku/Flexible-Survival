@@ -140,7 +140,7 @@ to say Yamato Dragon attack:
 				if MYDAM is 3 and player is not twistcapped:
 					LineBreak;
 					say "     [italic type]...After some time you realize that your escapades with the massive dragon has had some permanent effect on you. Your anal ring feels permanently stretchier...[roman type][line break]";
-					if Player is not twistcapped, add "Twisted Capacity" to feats of Player;
+					FeatGain "Twisted Capacity";
 			else if Player is female and a random chance of 1 in 2 succeeds:
 				say "     Talons wrapping around your serpentine frame, the dragon pulls you up into the air, dragging you along as he ascends. [if HP of Player < 1 and player is not submissive]Instinctively struggling against the beast's hold, being let go quickly stops being an option, given how high up you are[else]At the mercy of this beast, you watch on as the earth becomes more and more distance, instinctively driving you to cling to him in return[end if]. Entirely exposed before him as you are, he presses you against his growing arousal, forced to abide his hardening cock as he grinds it between your legs.";
 				if MYDGM is 0:
@@ -253,7 +253,7 @@ to say Yamato Dragon attack:
 				if MYDAM is 3 and player is not twistcapped:
 					LineBreak;
 					say "     [italic type]...After some time you realize that your escapades with the massive dragon has had some permanent effect on you. Your anal ring feels permanently stretchier...[roman type][line break]";
-					if Player is not twistcapped, add "Twisted Capacity" to feats of Player;
+					FeatGain "Twisted Capacity";
 			else if Player is female and a random chance of 1 in 2 succeeds:
 				say "     [if HP of Player < 1 and player is not submissive]Making a final attempt to crawl free, you only encourage the oversized reptile to pull you back by one of[else]Forced to gawk at the oversized reptile, he offers you a twisted grin as he begins pulling you closer by[end if] your legs. Your front exposed, he buries his [if scalevalue of Player < 5]massive[else]large[end if] snout between your thighs. Coarse scales grinding against you vulnerable, [bodytype of Player] frame, you must abide his thick tongue's shameless attention, firmly caressing your [cunt size desc of Player] cunt[sfn]. In the distance, forced to watch the crotch of his own serpentine form, you see his massive cock slowly growing hard against the open air.";
 				if MYDGM is 0:
@@ -791,7 +791,7 @@ to say YamatM_5: [Anal Catching]
 		if MYDAM is 3 and player is not twistcapped:
 			LineBreak;
 			say "     [italic type]...After some time you realize that your escapades with the massive dragon has had some permanent effect on you. Your anal ring feels permanently stretchier...[roman type][line break]";
-			if Player is not twistcapped, add "Twisted Capacity" to feats of Player;
+			FeatGain "Twisted Capacity";
 	else: [Has Twistcap]
 		say "     [if tempnum is 1]Now[else]Once he's[end if] ready for you, you're more than eager to get this ball rolling, much to the serpent's surprise. As soon as you'll oblige, he lifts you up over the mountain of flesh, slowly lowering your ass against its oozing tip. You brace yourself as your body gradually abide his dick as it slowly sinks past your anal ring.";
 		say "     '[one of]Such a tight fit[or]I will be sure to make it fit[or]Ha, this will be fun to watch[at random]...' Practically giddy with dark anticipation, the monster continues to slowly impale you with his massive cock, [if scalevalue of Player < 5]quickly[else]gradually[end if] reaching your supposed limits before exceeding them, stomach beginning to visibly bulge with the silhouette of the organ, each successive throb sending powerful tremors across the whole of your [bodytype of Player] body.";
@@ -1336,7 +1336,7 @@ when play ends:
 							say ", no matter how strange";
 						say ". Ultimately, you seem more than happy with your eternal fate as her plaything...";
 		else:
-			say "     After being processed by the military, you find yourself returning to the normal world - as normal as it can be after all that's happened. Your large, elongated body makes finding suitable living space something of a challenge, but you eventually manage.";
+			say "     After being processed by the military, you find yourself returning to the normal world - as normal as it can be after all that's happened[if ScaleValue of Player > 3]. Your large, elongated body makes finding suitable living space something of a challenge, but you eventually manage[end if].";
 			if Player is pure:
 				say "     Your pure form makes you an incredibly high-value asset for lunar new year celebrations, bidders often paying top dollar for your attendance in their revelry. It's not even a particularly hard job, and it allows you the opportunity to travel abroad and enjoy the company of many a new people, either in public or in private.";
 			else:

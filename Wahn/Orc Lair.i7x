@@ -1118,8 +1118,8 @@ to say OrcGangbang1:
 	infect "Orc Breeder";
 	if BodyName of Player is "Orc Breeder" and player is pure and player is not mpreg_ok:
 		LineBreak;
-		say "     You feel something change deep inside you, as all the cum the three orcs filled you with completes your transformation to a real orc breeder. You'll now be able to be impregnated through anal sex. The ['][bold type]MPreg[roman type]['] feat has been added to your list.";
-		add "MPreg" to feats of Player;
+		say "     You feel something change deep inside you, as all the cum the three orcs filled you with completes your transformation to a real orc breeder. You'll now be able to be impregnated through anal sex.";
+		FeatGain "MPreg";
 	SanLoss 10;
 	if MulAnalAcceptance < 10 and MulAnalAcceptance > 1:
 		decrease MulAnalAcceptance by 1;
@@ -1163,8 +1163,8 @@ to say OrcGangbang2:
 	infect "Orc Breeder";
 	if BodyName of Player is "Orc Breeder" and player is pure and player is not mpreg_ok:
 		LineBreak;
-		say "     You feel something change deep inside you, as all the cum the three orcs filled you with completes your transformation to a real orc breeder. You'll now be able to be impregnated through anal sex. The ['][bold type]MPreg[roman type]['] feat has been added to your list.";
-		add "MPreg" to feats of Player;
+		say "     You feel something change deep inside you, as all the cum the three orcs filled you with completes your transformation to a real orc breeder. You'll now be able to be impregnated through anal sex.";
+		FeatGain "MPreg";
 	SanLoss 10;
 	if MulAnalAcceptance < 10 and MulAnalAcceptance > 1:
 		decrease MulAnalAcceptance by 1;

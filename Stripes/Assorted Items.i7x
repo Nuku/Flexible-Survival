@@ -39,25 +39,25 @@ understand "libpill" as libido pill.
 
 check pillgiving someone (called x):
 	if libido pill is not owned:
-		say "It'd be easier to do that if you even had one.";
+		say "It'd be easier to do that if you even had one." instead;
 	else if x is Trixie:
 		say "     'Silly, that's not going to work on me. I'm not really here at all,' she says in a wavering voice while waving her arms around mystically. 'OooOOooOOOOooo!'" instead;
 	else if x is Velos:
 		say "     'Umm... I don't think that'll work on me, given my current state. Besides, I'm kind of disturbed that you'd even offer it to me.'" instead;
 	else if x is Doctor Matt:
-		say "     Doctor Matt looks suspiciously at the pill you offer him. He takes a few steps towards the back wall of the room, hovering his hand over the intercom. 'You can't expect me to open my suit and take such a thing? You're not going feral on me, are you? Control yourself, or I'll have to call Orthas!'";
+		say "     Doctor Matt looks suspiciously at the pill you offer him. He takes a few steps towards the back wall of the room, hovering his hand over the intercom. 'You can't expect me to open my suit and take such a thing? You're not going feral on me, are you? Control yourself, or I'll have to call Orthas!'" instead;
 	else if x is Elijah and HP of Elijah < 4:
-		say "     Now is probably not a good time for that.";
+		say "     Now is probably not a good time for that." instead;
 	else if x is Anastasia and HP of Anastasia < 5:
-		say "     Now is probably not a good time for that.";
+		say "     Now is probably not a good time for that." instead;
 	else if x is Solstice and HP of Solstice < 5:
-		say "     Now is probably not a good time for that.";
+		say "     Now is probably not a good time for that." instead;
 	else if x is Kristen and HP of Kristen > 10 and HP of Kristen < 16:
-		say "     Now is probably not a good time for that.";
+		say "     Now is probably not a good time for that." instead;
 	else if x is Onyx and HP of Onyx is 9:
-		say "     Now is probably not a good time for that.";
+		say "     Now is probably not a good time for that." instead;
 	else if x is Rod Mallrat and HP of Ronda < 100:
-		say "     Rod has no interest in taking those or trading for them.";
+		say "     Rod has no interest in taking those or trading for them." instead;
 	[character specific restrictions, such as when the <lastfuck of x> variable is used for other things, would go here.]
 	else if x is a pet:
 		if x is not tamed:

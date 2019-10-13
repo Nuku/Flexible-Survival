@@ -202,7 +202,7 @@ to say resevfight1:
 	if T is 2:
 		challenge "Demon Brute";
 	if T is 3:
-		challenge "spidergirl";
+		challenge "Spidergirl";
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -236,7 +236,7 @@ To say resevfight2:
 	if T is 3:
 		challenge "Demon Brute";
 	if T is 4:
-		challenge "spidergirl";
+		challenge "Spidergirl";
 
 Table of GameEventIDs (continued)
 Object	Name

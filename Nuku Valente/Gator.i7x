@@ -358,7 +358,6 @@ to say gator den scene:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if nam is "Spend time with the gator":
 					say "[GatorDenSex]";

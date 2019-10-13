@@ -554,8 +554,7 @@ to say MoreauFaceBuyPayment:
 			now FaceName of Player is Name entry;
 			now Face of Player is face entry;
 			now BodyShopGuaranteedFace is Name entry;
-			if "Body Shop Guarantee - Face" is not listed in feats of Player:
-				add "Body Shop Guarantee - Face" to feats of Player;
+			FeatGain "Body Shop Guarantee - Face";
 		say "[line break][MoreauBuySuccessful]";
 		now MoreauPaymentAccepted is false;
 
@@ -667,8 +666,7 @@ to say MoreauBodyBuyPayment:
 			now Body of Player is body entry;
 			now BodyShopGuaranteedBody is Name entry;
 			attributeinfect; [sets the new attributes]
-			if "Body Shop Guarantee - Body" is not listed in feats of Player:
-				add "Body Shop Guarantee - Body" to feats of Player;
+			FeatGain "Body Shop Guarantee - Body";
 		say "[line break][MoreauBuySuccessful]";
 		now MoreauPaymentAccepted is false;
 
@@ -779,8 +777,7 @@ to say MoreauSkinBuyPayment:
 			now SkinName of Player is Name entry;
 			now Skin of Player is skin entry;
 			now BodyShopGuaranteedSkin is Name entry;
-			if "Body Shop Guarantee - Skin" is not listed in feats of Player:
-				add "Body Shop Guarantee - Skin" to feats of Player;
+			FeatGain "Body Shop Guarantee - Skin";
 		say "[line break][MoreauBuySuccessful]";
 		now MoreauPaymentAccepted is false;
 
@@ -891,8 +888,7 @@ to say MoreauTailBuyPayment:
 			now TailName of Player is Name entry;
 			now tail of Player is tail entry;
 			now BodyShopGuaranteedTail is Name entry;
-			if "Body Shop Guarantee - Tail" is not listed in feats of Player:
-				add "Body Shop Guarantee - Tail" to feats of Player;
+			FeatGain "Body Shop Guarantee - Tail";
 		say "[line break][MoreauBuySuccessful]";
 		now MoreauPaymentAccepted is false;
 
@@ -1004,8 +1000,7 @@ to say MoreauCrotchBuyPayment:
 			now CockName of Player is Name entry;
 			now Cock of Player is cock entry;
 		now BodyShopGuaranteedCrotch is Name entry;
-		if "Body Shop Guarantee - Crotch" is not listed in feats of Player:
-			add "Body Shop Guarantee - Crotch" to feats of Player;
+		FeatGain "Body Shop Guarantee - Crotch";
 		say "[line break][MoreauBuySuccessful]";
 		now MoreauPaymentAccepted is false;
 

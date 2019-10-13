@@ -98,35 +98,41 @@ to say sexwithTesterbot:
 to say testerbotselection:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Anal";
 	now sortorder entry is 5;
 	now description entry is "Have the robot fuck your ass.";
 	now toggle entry is testerbotsexy rule;
+	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Face fuck";
 		now sortorder entry is 1;
 		now description entry is "Use testorbot to orally please you.";
 		now toggle entry is testerbotsexy rule;
+	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck Testerbot";
 		now sortorder entry is 2;
 		now description entry is "Fill one of the robot's pussy-like orifices.";
 		now toggle entry is testerbotsexy rule;
+	[]
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Fucked by Testerbot";
 		now sortorder entry is 3;
 		now description entry is "Order the robot to push one of those probes in you.";
 		now toggle entry is testerbotsexy rule;
+	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Anal on Testerbot";
 		now sortorder entry is 4;
 		now description entry is "Fill the robot's anal orifice.";
 		now toggle entry is testerbotsexy rule;
+	[]
 	sort the table of fucking options in sortorder order;
 	while sextablerun is 0:
 		repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -137,11 +143,9 @@ to say testerbotselection:
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry][line break]";
-			say "Is this what you want?";
+			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if nam is "Face fuck":
 					say "     Ordering the robot onto its knees, you bring your cock to its false mouth. 'Oh. It is so big,' the robot says in a bored, monotone voice before leaning forward and taking your cock into its mouth. The artificial orifice squeezes and sucks at your cock, leaking some lube to keep the hole slick as you start fucking its face. You grab onto the handle on the top of its head and pound away. You hear a whirr and a click before a recording starts playing of soft, wet moans, clearly lifted from some porno to play on a cassette inside the robot. You pump the robot's face over your cock until finally you grunt and cum hard, blasting your seed into his mouth. Finished, the robot stands up slowly and the leaking cum from the orifice with a disdainful wipe of its hand, then drags itself back over to the corner to plug in and recharge.";
@@ -162,7 +166,7 @@ to say testerbotselection:
 		else:
 			say "Invalid Option.";
 			wait for any key;
-		clear the screen;
+	clear the screen and hyperlink list;
 
 [This is the section to put the chosen option into effect, playing out the sex scene.]
 

@@ -63,7 +63,7 @@ Instead of resolving a Inner Predator:
 			say "     Sitting back, dazed, you feel the form of the husky sliding into your gut, your belly now bulging out as if you were massively pregnant. With an audible rumble, your stomach starts to churn and you feel the body of your foe begin to melt away, the nanites in your body throwing your digestive processes into overdrive. Various gurgles can be heard as the once bulky canine is turned into a nutrient-rich liquid for your predator body. Within minutes, your belly has shrunk to a mere paunch as you feel the rush of the digested creature wash through your body.";
 			say "     A smile crosses your face as you pat your shrinking belly. You feel... content now, as if consuming the defeated creature has fulfilled some deep purpose in your infected body. Plus, you shouldn't have to worry about food for a while. Pulling yourself back up and retrieving all your gear, you head back out into the infested city with a surprising bounce in your step.";
 			say "     Maybe this isn't such a bad thing after all...?";
-			add "Vore Predator" to feats of Player;
+			FeatGain "Vore Predator";
 			now playercanvore is true;
 			increase vorecount by 1;
 			LineBreak;
@@ -88,7 +88,7 @@ Instead of resolving a Inner Predator:
 			say "     Sitting back, dazed, you feel the form of the fox sliding into your gut, your belly now bulging out as if you were massively pregnant. With an audible rumble, your stomach starts to churn and you feel the body of your foe begin to melt away, the nanites in your body throwing your digestive processes into overdrive. Various gurgles can be heard as the once bulky latex fox is turned into a nutrient-rich liquid for your predator body. Within minutes and with a large belch, your belly has shrunk to a mere paunch as you feel the rush of the digested creature wash through your body.";
 			say "     A smile crosses your face as you pat your shrinking belly. You feel... content now, as if consuming the defeated creature has fulfilled some deep purpose in your infected body. Plus, you shouldn't have to worry about food for a while. Pulling yourself back up and retrieving all your gear, you head back out into the infested city with a surprising bounce in your step.";
 			say "     Maybe this isn't such a bad thing after all...?";
-			add "Vore Predator" to feats of Player;
+			FeatGain "Vore Predator";
 			now playercanvore is true;
 			increase vorecount by 1;
 			LineBreak;

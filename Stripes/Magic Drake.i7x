@@ -161,8 +161,7 @@ to say losetomagicdrake:
 	say "[mdscaletweak]";
 	if mdrakeanal >= 3 and player is not twistcapped:
 		say "     From the way your asshole and insides have been so thoroughly used, abused and stretched by the dragoness's cock, you have a feeling that you'll never quite be the same again.";
-		say "     [bracket]You have gained the 'Twisted Capacity' feat and are now stretchy enough to take some astonishingly huge things inside you.[close bracket][line break]";
-		add "Twisted Capacity" to feats of Player;
+		FeatGain "Twisted Capacity";
 	increase mdrakeloss by 1;
 
 
@@ -581,8 +580,7 @@ to say mdrake_pvictory_05:
 	increase mdrakeanal by 1;
 	if mdrakeanal >= 3 and player is not twistcapped:
 		say "     From the way your asshole and insides have been so thoroughly used, abused and stretched by the dragoness's cock, you have a feeling that you'll never quite be the same again.";
-		say "     [bracket]You have gained the 'Twisted Capacity' feat and are now stretchy enough to take some astonishingly huge things inside you.[close bracket][line break]";
-		add "Twisted Capacity" to feats of Player;
+		FeatGain "Twisted Capacity";
 
 to say mdrake_pvictory_06:		[Receive fellatio]
 	say "     Feeling you deserve some small payback for the trouble this lust-crazed creature's been causing, you take hold of your [cock size desc of Player] cock and stroke it to erection. The sight of it catches the sorceress's attention, partially distracting her from her efforts to rise. As you approach her draconic muzzle, she licks her lips and releases a needy moan. And when you bring your [Cock of Player] manhood just barely within reach, her reptilian tongue stretches out to lick its tip.";
@@ -635,8 +633,7 @@ to say mdstaff_overgrown:
 	increase mdrakeanal by 1;
 	if mdrakeanal >= 3 and player is not twistcapped:
 		say "     From the way your asshole and insides have been so thoroughly used, abused and stretched by the dragoness's cock, you have a feeling that you'll never quite be the same again.";
-		say "     [bracket]You have gained the 'Twisted Capacity' feat and are now stretchy enough to take some astonishingly huge things inside you.[close bracket][line break]";
-		add "Twisted Capacity" to feats of Player;
+		FeatGain "Twisted Capacity";
 	if mdrakeoversized < 5 or inasituation is true:
 		infect "Magic Drake";
 	decrease humanity of Player by a random number between 2 and 4;

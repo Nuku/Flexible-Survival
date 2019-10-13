@@ -436,9 +436,9 @@ to say randomvetfight:				[more suitable pets can be added]
 	if tempnum is 2:
 		challenge "Smooth Collie Shemale";
 	if tempnum is 3:
-		challenge "Pit bull";
+		challenge "Pit Bull";
 	if tempnum is 4:
-		challenge "Cute Chinchilla Woman";
+		challenge "Chinchilla";
 	if tempnum is 5:
 		challenge "German Shepherd Male";
 	if tempnum is 6:

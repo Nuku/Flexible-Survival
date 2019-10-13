@@ -269,7 +269,6 @@ Instead of conversing the Ranae:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if nam is "Check up on her":
 					say "[RanaeCheckUp]";
@@ -428,7 +427,6 @@ instead of fucking the Ranae:
 				say "[title entry]: [description entry]?";
 				if Player consents:
 					let nam be title entry;
-					clear the screen and hyperlink list;
 					now sextablerun is 1;
 					if nam is "Ass Worship":
 						say "[RanaeAss]";

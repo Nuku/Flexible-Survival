@@ -308,6 +308,11 @@ to say SpikeTalkMenu:
 		now sortorder entry is 8;
 		now description entry is "Request a tuft of Spike's fur";
 	[]
+		choose a blank row in table of fucking options;
+		now title entry is "Ask him for some cum";
+		now sortorder entry is 9;
+		now description entry is "Request a sample of Spike's cum";
+	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -338,6 +343,8 @@ to say SpikeTalkMenu:
 					say "[SpikeTalk7]";
 				else if (nam is "Ask him for some fur"):
 					say "[SpikeTalk8]";
+				else if (nam is "Ask him for some cum"):
+					say "[SpikeTalk9]";
 				wait for any key;
 				say "[SpikeTalkMenu]";
 		else if calcnumber is 0:
@@ -389,22 +396,32 @@ to say SpikeTalk9: [cum request]
 	if (lastfuck of Spike - turns < 2): [he came in the last 3 hours]
 		say "     Spike looks at you somewhat wide-eyed, then clears his throat. 'Uhm, I - I need a moment to, you know, be ready for another go, [SpikePlayerAddress]. Sorry, but that's just a fact.'";
 	else:
+		if Libido of Spike is 0: [no special relationship yet]
+			say "     As you step up and ask Spike straight out to give you some cum, you notice his Adam's Apple bounce a little as he swallows. 'Er, of course [SpikePlayerAddress]. Just give me a moment alone, alright?' With that said, he quietly takes the empty plastic bottle you dig out of your pack and vanishes into a quiet corner, getting busy stroking himself. It doesn't take all that long before he returns, with the bottle capped and containing his 'donation' as per your request. Pulling out a pen, you scribble on the label of the bottle what is in there, then add it to your pack.";
 		if Libido of Spike < 20: [eager for any sex]
 			say "     As you step up and ask Spike straight out to give you some cum, he blushes a little under his fur, then smiles and the tip of his tongue dangles out of his mouth for a second before he catches himself. 'Oh, wait! You aren't suggesting doing something with each other, you're just... wanting my fluids?' Something in his voice tells you that he's disappointed in this realization.";
 			say "[bold type]Do you want to make the cum donation more fun for Spike after all?[roman type][line break]";
 			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Jerk him off yourself and milk your dobie companion.";
+			say "     ([link]Y[as]y[end link]) - Jerk him off yourself and milk some cum from your dobie companion.";
 			say "     ([link]N[as]n[end link]) - He can take care of himself.";
 			if Player consents:
 				LineBreak;
-				say "     ...";
+				say "     Leaning forward and running your hand up behind Spike's head, you pull him in to kiss his muzzle softly. Caressing his sensitive ears, you go on to say that he's your very special dobie companion and you of course want more from him than cum - but you do want that too, right at the moment. Pulling out one of the empty plastic bottles that you collected sometime during your travels, you hand it to the young man, then casually step around him and wrap your arms around his chest from behind. 'Oh? Oooh,' the slender canine pants as your hands move to touch his chest, stroking and caressing his nipples through the thinly stretched material of his mesh shirt. Nuzzling the side of his neck, you take a whiff of his fresh but still masculine scent. You can feel his tail twitch a little where it is pinned between both of your bodies, and the young man would no doubt wag happily if that wasn't the case.";
+				say "     'Mmmmh, [SpikePlayerAddress]. That feels nice!' he says, his free hand stretching back to rub your side in return. You continue to caress and fondle the dobie for a little while, often stroking the straight edge of his ears and whispering in them what a good boy and good dog he is for you. Given the stimulation, there's little wonder that the front of his pants are soon tented, and you eventually move on to obtaining what you want, popping the button and then pulling down the ziiper of Spike's jeans. Craning your neck to look around him, your gaze falls on the pointy head of his red knotted cock, sticking out straight from his crotch. Your canine companion's tongue lolls out of his mouth as he pants in lust and his body tenses when you reach for his erection, wrapping your fingers around its hot shaft.";
+				WaitLineBreak;
+				say "     The young man is happily obedient and content with you taking care of him, leaning into your touch and being quite receptive for each little touch and caress. His hand on your side is simply holding on now, though it gives you a squeeze or two at times when your strokes really hit the mark. Wanting to make this more than just milking him for some seed as quickly as possible, you keep caressing Spike, at times slowing down to squeeze his pre-knot bulge and tracing your fingertips along the outside of his tapering dickhead. With him breathing harder and harder, starting to hump into your grasp subconsciously, you know that he's getting close and remind the young doberman that he must be ready to catch his load. 'Yeah, totally,' he grunts, not really registering your words.";
+				say "     Trying again, you gently nibble on the base of his ear and stop moving your hand, which allows the horny dobie to calm down a little and actually understand what you're saying. 'Oh! Yeah, sure thing, [SpikePlayerAddress],' he replies a little sheepishly, taking off the cap of the bottle you gave him and holding it ready to catch his impending spurts of canine seed. Giving his shaft a slow stroke up and down, you tell him that you're very proud of him, turning into such a strong and reliable companion for you, ready to do anything you ask of him. The praise makes Spike stand a bit straighter as he soaks it up, and that is the moment you start going all out, really jerking his manhood with no holds barred. Between getting the approval that he craves and the build-up of physical pleasure you've been giving him so far, it isn't hard at all to push the young male over the edge.";
+				WaitLineBreak;
+				say "     'Fffuuckkk YEAH!' Spike barks out in the throes of his orgasm, with his trembling hands barely coordinated enough to move the bottle to his cum-slit. Still, being the good boy that he is, your dobie does manage the task and the first thick blast of his cum shoots straight into the container, hitting the lower end with a quiet thud, followed by another and another. Keeping your fingers wrapped around his shaft and squeezing the bulge of his now-swollen knot, your other hand cups his balls, rolling and squeezing them gently. You can feel his cum-factories throbbing under your fingertips, almost as if they're working overtime to satisfy your demand for their creamy treasure.";
+				say "     Keeping Spike in your embrace, you stroke, caress and touch him for some time, during which he demonstrates just how virile a young buck of a German shepherd he really is. His erection just keeps spurting out more cum, not as explosively as the first blasts, but still far longer than any human male would have lasted. Glancing down and seeing that he filled about the lower third of the small plastic bottle you gave him, you can't help but wonder if your tight grip on his knot has something to do with it. Maybe his body is trying to make sure he fills his bitch up? No matter which, your little milking fun with the doberman is a roaring success, as it put your companion in an amazing mood and he produced a respectable dose of creamy fluid. The happy dog even digs a pen out of his pocket and writes on the label what is in the bottle, then hands it over to you with a smile and a lick of your cheek.";
 			else:
 				LineBreak;
 				say "     Leaning forward and running your hand up behind Spike's head, you pull him in to kiss his muzzle softly. Caressing his sensitive ears as you explain that there will be other times in which you'll spend some fun moments with each other, the explanation follows that right now, you do actually just need for him to fill one of the empty plastic bottles you collected up as far as he can. 'Okay then, anything for you [SpikePlayerAddress]. Just give me a moment alone, alright?' With that said, he accepts a bottle from you and vanishes into a quiet corner, tail wagging behind his back. The young dobie gets busy stroking himself right quick, so it doesn't take all that long before he returns, with the bottle capped and containing his 'donation' as per your request. He even digs a pen out of his pocket and writes on the label what is in the bottle.";
 		else if Libido of Spike < 40: [pressured into subby sex]
 			say "     As you step up and ask Spike straight out to give you some cum, you notice his Adam's Apple bounce a little as he swallows. 'Er, of course [SpikePlayerAddress]. Just give me a moment alone, alright?' With that said, he quietly takes the empty plastic bottle you dig out of your pack and vanishes into a quiet corner, getting busy stroking himself. It doesn't take all that long before he returns, with the bottle capped and containing his 'donation' as per your request. Pulling out a pen, you scribble on the label of the bottle what is in there, then add it to your pack.";
 		else if Libido of Spike < 60: [forced into subby sex]
-			say "...";
+			say "     As you step up and command that Spike give you some cum, milked into a plastic bottle, you notice his Adam's Apple bounce a little as he swallows. 'Er, of course [SpikePlayerAddress]. Just give me a moment alone, alright?' As he reaches out for the bottle, you smack his muzzle with it and in a harsh tone demand to know if you ordered him to go into a corner to do his business. 'No, I - I thought...' the young man starts, but seeing the unimpressed sneer that this brings to your face, he falls silent again. Without another word, he quietly undoes the button and zipper of his pants, pushing them down to start rubbing his sheath and tease out the length of his manhood. Nervously glancing up at you from having his head lowered, he gets himself fully hard before much longer.";
+			say "     You step up to the slender, toned body of your dobie companion and bump his hand aside to stroke he red shaft of his canine cock a few times, then grab bim by the balls and nod for him to proceed. Rolling the furry cum-factories between your fingers and giving them firm, but not actually painful squeezes, you keep Spike literally well in hand while he jerks himself off, holding the empty bottle ready. You can't help but smile at the control you have over the young man, revelling in your power while he milks himself dutifully. The strokes along his knotted length come faster and faster before long, and he lets out a grunt, then starts to blast his seed into the bottle. Throb after throb of rich canine spunk lands in the plastic container, filling about the lower third of the small bottle before his orgasm ebbs off. Pulling it from his grasp with a casual command to clean himself up, you turn your back on Spike and label the bottle, then add it to your pack.";
 		LineBreak;
 		say "     You gain some doberman male cum!";
 		increase carried of doberman male cum by 1;

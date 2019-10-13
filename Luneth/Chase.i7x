@@ -696,9 +696,7 @@ to say DomChaseSex2: [Fucked by Chase anal]
 			[commented out till the special offspring are prepared]
 			[
 			if Player is impreg_now: [has become pregnant]
-				if "Chase's Breeder" is not listed in feats of Player:
-					say "[bold type]'Chase's Breeder' has been added to your feats![roman type][line break]";
-					add "Chase's Breeder" to feats of Player; [tiger baby, no matter what]
+				FeatGain "Chase's Breeder"; [tiger baby, no matter what]
 			]
 		WaitLineBreak;
 		if Player is male:
@@ -723,9 +721,7 @@ to say DomChaseSex2: [Fucked by Chase anal]
 			[commented out till the special offspring are prepared]
 			[
 			if Player is impreg_now: [has become pregnant]
-				if "Chase's Breeder" is not listed in feats of Player:
-					say "[bold type]'Chase's Breeder' has been added to your feats![roman type][line break]";
-					add "Chase's Breeder" to feats of Player; [tiger baby, no matter what]
+				FeatGain "Chase's Breeder"; [tiger baby, no matter what]
 			]
 		WaitLineBreak;
 		say "     Not being able to help but [if Ball Size of Player < 4 and Cock Length of Player < 4]squeal as the great feline fills you up, your [Cum Load Size of Player] load shoots onto your groin[else]groan as the great feline fills you up, your [Cum Load Size of Player] load shoots all of yourself[end if]. Before long, the roundness of your stomach has doubled in size, leaving you looking heavily pregnant. Looking forward, you see the same smaller tiger-man stroking his prick, watching the coupling between you and your mate. 'Boy, come here.' Hearing Chase's voice makes the man stop touching himself and approach his king. 'You followed my orders perfectly, so here's an offer for you. I want you to shoot your load onto my mate. He won't mind a bit.' The lesser cat needs no further prodding and continues to jack off, looking down into your half-lidded eyes. Closer than you would have assumed, it's not long before he sprays his load across your chest, coating your nipples with his sticky offering. Leaning down it almost appears as if the kitty is going to kiss you, that is until your master takes a firm grip on his throat.";

@@ -332,9 +332,7 @@ To Say slutratdenscene:
 		continue the action;
 	now lastratvisit is turns;
 	if SlutRatDenVisitTimes is 0:
-		say "     You follow your memory back through the sewers, pulling yourself along the, sometimes frighteningly narrow, pipes. At points you have to crawl on hands and knees for what feels like an hour. You wonder to yourself how the rat managed to haul you so effortlessly all this way, but you are determined. The scent of them hits you first, and you hasten your steps.";
-		say "     Heart pounding, you start to run down the tunnel, skidding on the slimy floor and almost falling as you turn sharply and half dive into the den. The rats are there and look up at you with clear surprise.";
-		say "     'Fresh bitch just can't wait for more,' says one of the rats as she smoothly slides to her feet. A hand dips between her shapely thighs to grab at the obscenely swollen package there as she eyes you with an intense desire burning in her eyes, 'Bitch doesn't know her place. I'll show her how things work around here...' She advances towards you with a leer.";
+		say "     You follow your memory back through the sewers, pulling yourself along the, sometimes frighteningly narrow, pipes. At points you have to crawl on hands and knees for what feels like an hour. You wonder to yourself how the rat managed to haul you so effortlessly all this way, but you are determined. The scent of them hits you first, and you hasten your steps. Heart pounding, you start to run down the tunnel, skidding on the slimy floor and almost falling as you turn sharply and half dive into the den. The rats are there and look up at you with clear surprise. 'Fresh bitch just can't wait for more,' says one of the rats as she smoothly slides to her feet. A hand dips between her shapely thighs to grab at the obscenely swollen package there as she eyes you with an intense desire burning in her eyes, 'Bitch doesn't know her place. I'll show her how things work around here...' She advances towards you with a leer.";
 		now inasituation is true;
 		Challenge "Slut Rat";
 		now inasituation is false;
@@ -640,7 +638,7 @@ to say ratstopoolhall:
 			say "     You manage to get the rats worked up, a growing enthusiasm running through the group. One voice complains about the prospect of fighting those felines, but you manage to curtail the spreading discord by emphasizing that they're sexy, herm kitties. You go on about how big and sexy the slut rats are and you girl will be able to out-sexy those stupid cats until they don't know what hit them. The crowd starts to roar and pours out of the den, dragging you along, off to set your plan into motion right away. You'd better be ready for it, because there's no turning back now.";
 			say "[poolhallattack]";
 	else:
-		say "     Returning to the den, you try to get the rats interested in going after the pool hall, but they don't really listen to you much. You'll need a more ratty body to excite their attention long enough to listen to you.";
+		say "     Returning to the den, you try to get the rats interested in going after the pool hall, but they don't really listen to you much. [bold type]You'll need a more ratty body to excite their attention long enough to listen to you.[roman type][line break]";
 
 to say poolhallattack:
 	now inasituation is true;

@@ -237,7 +237,6 @@ to say SavinaSexMenu:
 			say "[title entry]: Shall you [description entry]?";
 			if Player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if nam is "Get tail-pegged":
 					say "[SavinaSexAnal]";
