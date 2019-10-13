@@ -159,7 +159,6 @@ to say MontyTalkMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if nam is "Just chat":
 					say "[MontyTalk1]";
@@ -449,7 +448,6 @@ Instead of fucking Monty:
 				say "[title entry]: [description entry]?";
 				if Player consents:
 					let nam be title entry;
-					clear the screen and hyperlink list;
 					now sextablerun is 1;
 					if nam is "Suck Monty's cock":
 						say "[MontySex1]";

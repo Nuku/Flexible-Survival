@@ -42,25 +42,30 @@ to say beattheGryphon:
 	say "     The beaten gryphon gives an angry cry, clearly disappointed you were not easier prey. Feeling that he deserves to have the tables turned on him, there's a brief moment when you might catch the beast before he makes his escape[if carried of gryphon cum > 0 and HP of Garrett >= 5]. You're also reminded that you have a bottle of Garrett's special gryphon cum milk. This might be a fun opportunity to get the creature to drink some[end if]. Shall you take it?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Mount him";
 		now sortorder entry is 1;
-		now description entry is "drive your cock home in his oh-so-conveniently raised rear end";
+		now description entry is "Drive your cock home in his oh-so-conveniently raised rear end";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Get fucked";
 	now sortorder entry is 2;
-	now description entry is "roll him over and mount that knotted cock swinging between his legs";
+	now description entry is "Roll him over and mount that knotted cock swinging between his legs";
+	[]
 	if carried of gryphon cum > 0 and HP of Garrett >= 5 and inasituation is false:
 		if Player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Garrett's special milk - Give anal";
 			now sortorder entry is 98;
-			now description entry is "offer the manly drink to it and fuck it";
+			now description entry is "Offer the manly drink to it and fuck it";
+	[]
 		choose a blank row in table of fucking options;
 		now title entry is "Garrett's special milk - Receive anal";
 		now sortorder entry is 99;
-		now description entry is "offer the manly drink to it and get fucked";
+		now description entry is "Offer the manly drink to it and get fucked";
+	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -149,7 +154,7 @@ to say feralgryph_milk02:
 	say "     He breeds you roughly, his cock pistoning in and out of your back passage with an animalistic zeal[if Player is male]. You can feel your own [Cock of Player] cock[smn] throbbing in response to the battering your prostate is receiving. It dribbles precum over the ground as the gryphon's huge ball-sack smacks against your own on each thrust[end if]. The gryphon isn't rough with you, giving you soft nips and nuzzles on the shoulders as it pounds into you lustfully. Each push presses the swollen bulge of the gryphon's knot against your pucker, adding to the myriad wonderful sensations the feral ass-fucking brings you.";
 	WaitLineBreak;
 	if scalevalue of Player < 3 and player is not twistcapped:
-		say "     He grinds it against your [if Player is female]cunt-lips[else]anus[end if], but isn't able to fit it in. He settles for pounding your depths with the rest of his length, before finally pressing his cock deep within you, his knot sitting just outside your straining entrance.";
+		say "     He grinds it against your anus, but isn't able to fit it in. He settles for pounding your depths with the rest of his length, before finally pressing his cock deep within you, his knot sitting just outside your straining entrance.";
 	else:
 		say "     He grinds it against you with each thrust, and you can feel your entrance stretch open a little further each time under the incessant pressure. On one particularly firm thrust, the knot reaches its widest point, spreading your asshole that last little bit needed; on the next, it pops into you fully. The sudden surge of fullness this brings causes you to moan and your back door to squeeze back tightly around the base of the knot, tying the two of you together to finish your hot gay rut.";
 	say "     He screeches in lustful release as you feel his cock twitch and the first hot rope of gryphon-cum splash inside you[if Player is male]. You reach your own climax, your [cock size desc of Player] cock[smn] shooting your own cum over the ground[end if]. The gryphon comes for what feels like minutes; by the time he's finished, his seed is drooling from you, squelching around his softening cock. He dismounts you once his knot's gone down so it can pop out with a wet, slurping sound as a gush of gryphon cum follows it out your well-fucked hole. The gryphon turns around to nuzzle you with a chirping purr and [one of]panting a soft 'Thanks.' [or]asking 'Is there more?' while licking his beak. [or]moaning 'So hot!' [at random]A little shocked to hear the creature speak, you direct it to Qytat and Garrett for more hot gryphon stud action before it departs in that direction.[mimpregchance]";

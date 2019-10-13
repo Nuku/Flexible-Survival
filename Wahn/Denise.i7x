@@ -61,7 +61,6 @@ instead of conversing the Denise:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if nam is "Her human self":
 					say "[DeniseTalk1]";
@@ -157,7 +156,6 @@ Instead of fucking the Denise:
 				say "[title entry]: [description entry]?";
 				if Player consents:
 					let nam be title entry;
-					clear the screen and hyperlink list;
 					now sextablerun is 1;
 					if nam is "Get a blowjob from Denise":
 						say "[DeniseSex1]";

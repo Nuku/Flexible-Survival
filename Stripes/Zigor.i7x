@@ -163,8 +163,7 @@ to say zigor_S1_analtraining:
 		increase XP of Zigor by 1;
 		if XP of Zigor is 3:
 			say "     'It pleases me to see you coming along so well, cachorro. That should help with your ordeals in the city as well as let us move on to some more intense pleasures,' he says with a toothy smile in that sensual accent of his. He gives your ass a firm squeeze with his claws digging in, causing your ass to clench and squeeze down around that extremely large buttplug it is holding with ease. As he leaves you there to enjoy the sensation of fullness and being delightfully stretched inside, you eye his collection with a hunger for the various huge toys.";
-			say "     [bracket]You have gained the [bold type]Twisted Capacity[roman type] feat.[close bracket]";
-			add "Twisted Capacity" to feats of Player;
+			FeatGain "Twisted Capacity";
 			increase score by 20;
 		else:
 			say "     After several lashings across the ass with the switch, he relents. 'You did well enough, I suppose,' the wolf says in his sensual, Iberian accent. 'Perhaps we'll have you try something [if XP of Zigor is 1]a little bigger[else]with real girth to it[end if] next time.' Feeling the sore ache from your ass despite the nanite infection, you are filled with both trepidation and anticipation for more. He leaves you tied up and stuffed for quite some time, your ass gradually becoming used to the added extension. During this time, your eyes drawn to his collection and those even larger toys awaiting you.";

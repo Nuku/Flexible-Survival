@@ -167,11 +167,9 @@ carry out supersponsor:
 				say "     You've already received this reward.";
 		else if calcnumber is 11:
 			if "Sanity Saver" is not listed in feats of Player:
-				say "     You shield your sanity from all harm.";
-				add "Sanity Saver" to feats of Player;
+				FeatGain "Sanity Saver";
 			else:
-				say "     You release the iron clad defense of your mind.";
-				remove "Sanity Saver" from feats of Player;
+				FeatLoss "Sanity Saver";
 		else if calcnumber is 12:
 			repeat with petget running through pets:
 				now petget is tamed;

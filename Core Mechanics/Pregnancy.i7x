@@ -926,13 +926,14 @@ to selfimpregnate:
 			increase score by 0;
 		else:
 			say "You choose not to accept the seed.";
-			if "Fang's Mate" is listed in feats of Player:
-				remove "Fang's Mate" from feats of Player;
-				now hp of Fang is 0;
 			stop the action;
 	now gestation of Child is a random number from 24 to 48;
 	SetInfectionsOf Child to infections of Player;
 	say "[line break]     There is an odd sensation of warmth inside you and you get a pleasantly perverse feeling.";
+	if Player is not female:
+		if pregtype is 0, now pregtype is 2; [mpreg]
+	else:
+		if pregtype is 0, now pregtype is 1; [fpreg]
 
 to say ovichance:		[to be used when either female or MPreg would work]
 	ovichance;

@@ -456,7 +456,6 @@ to say BlakeWhoreSexMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if nam is "Jerk him, but deny orgasm":
 					say "[BlakeSex1]";

@@ -168,7 +168,6 @@ instead of conversing the Team Captain Roman:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if nam is "Chat":
 					if GorillasMember < 3:
@@ -383,7 +382,6 @@ to say RomanFuck1:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if nam is "Vaginal fuck":
 					say "[RomanFuck1Vag]";
@@ -500,7 +498,6 @@ to say RomanFuck2:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if nam is "Vaginal fuck":
 					say "[RomanFuck2Vag]";

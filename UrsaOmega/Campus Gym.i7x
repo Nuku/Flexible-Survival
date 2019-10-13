@@ -107,7 +107,6 @@ instead of conversing Randy:
 					say "Is this what you want?";
 					if Player consents:
 						let nam be title entry;
-						clear the screen and hyperlink list;
 						now sextablerun is 1;
 						if nam is "Strength training":
 							say "[strtraining]";
@@ -117,6 +116,7 @@ instead of conversing Randy:
 							say "[statraining]";
 						else if (nam is "Leave"):
 							say "You decide not to train right now.";
+			clear the screen and hyperlink list;
 		else:
 			say "You can't afford training right now...";
 

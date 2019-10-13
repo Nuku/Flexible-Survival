@@ -1455,8 +1455,8 @@ to say CheerleaderPractice:
 				remove "Sterile" from feats of Player;
 				say "     After having bathed your reproductive organs in such an incredible amount of virile wolfman cum, your sterility is a thing of the past. Seems like even though the wolfmen normally aren't infective, the nanites in them and their fluids refuse to have their further breeding denied and simply fix you up.";
 			LineBreak;
-			add "Cheerbreeder" to feats of Player;
-			say "     You feel something changing deep inside you as your body prepares itself to birth wolfmen - and only wolfmen - in the future. The [']Cheerbreeder['] feat has been added to your list.";
+			say "     You feel something changing deep inside you as your body prepares itself to birth wolfmen - and only wolfmen - in the future.";
+			FeatGain "Cheerbreeder";
 			now HP of Septus is 52;
 		else:
 			LineBreak;

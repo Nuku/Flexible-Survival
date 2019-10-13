@@ -1197,24 +1197,6 @@
 |Drgryphon|Apocalypse Store|Apocalypse Shorts|Equipment|
 |Drgryphon|Apocalypse Store|Apocalypse Hoodie|Equipment|
 |Drgryphon|Apocalypse Store|Apocalypse Scarf|Equipment|
-|Kaleem Mcintyre|Researcher Studio|20140908213124/7855:Mon 8 September 2014 21:31|indexing|
-|Kaleem Mcintyre|Researcher Studio|Researcher Studio|room|
-|Kaleem Mcintyre|Researcher Studio|MainRoom|room|
-|Kaleem Mcintyre|Researcher Studio|Omio|woman|
-|Kaleem Mcintyre|Researcher Studio|Bedroom|room|
-|Kaleem Mcintyre|Researcher Studio|Kitchen|room|
-|Kaleem Mcintyre|Researcher Studio|Vacant Upstairs|room|
-|Kaleem Mcintyre|Researcher Studio|Nightstand|thing|
-|Kaleem Mcintyre|Researcher Studio|VacantUpstairs|room|
-|Kaleem Mcintyre|Researcher Studio|Glass Window|thing|
-|Kaleem Mcintyre|Researcher Studio|For the Future|situation|
-|Kaleem Mcintyre|Researcher Studio|Omiotalk|value|
-|Kaleem Mcintyre|Researcher Studio|omq|value|
-|Kaleem Mcintyre|Researcher Studio|LastOmioteatime|value|
-|Kaleem Mcintyre|Researcher Studio|Omioteatime|value|
-|Kaleem Mcintyre|Researcher Studio|Omioteatime|action|
-|Kaleem Mcintyre|Researcher Studio|unlocknightstand|action|
-|Kaleem Mcintyre|Researcher Studio|Lookingoutwindow|action|
 |Kaleem Mcintyre|Warehouse District|20140908213124/1413:Mon 8 September 2014 21:31|indexing|
 |Kaleem Mcintyre|Warehouse District|Warehouse District|room|
 |Kaleem Mcintyre|Warehouse District|Boardwalk|door|
@@ -1886,7 +1868,6 @@
 |Wahn|Underground Events|mindshield helmet|Equipment|
 |Wahn|Underground Events|Holding Cell Four|situation|
 |Wahn|Underground Events|CaptiveBreederEncounter|value|
-|Wahn|Underground Events|AbandonedRoomStatus|value|
 |Wahn|Underground Events|MSStorageVisited|value|
 |Wahn|Underground Events|CellFourVisits|value|
 |Agentlemancalledb|Sugar Feud|20140908213124/2880:Mon 8 September 2014 21:31|indexing|

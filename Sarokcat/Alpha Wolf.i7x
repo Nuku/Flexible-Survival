@@ -122,7 +122,6 @@ To say Alpha Wolf loss:
 					say "Is this what you want?";
 					if Player consents:
 						let nam be title entry;
-						clear the screen and hyperlink list;
 						now sextablerun is 1;
 						if nam is "Fuck the wolf":
 							say "[AlphaWolfSex1]";
@@ -137,6 +136,8 @@ To say Alpha Wolf loss:
 		else:
 			say "The large, black-furred wolf sinks to the ground his tail tucked between his legs as his ears droop back, his mouth falling open in astonishment. 'You? You managed to defeat an alpha? This must be a mistake...' the wolf mutters to himself as he lowers his head and exposes his neck in acknowledgment of your dominance... for now. Once the wolf has backed a short distance away, his head comes back up and he stares right into your eyes for a minute before opening his mouth in a lupine laugh. 'Don't think this is over little one, you definitely have my attention now... You might even manage to make a good little alpha bitch someday at this rate,' he says with a barking laugh, before he turns and lopes off down the road[if AlphaWolfBeaten > 3]. Despite his losses, it seems the alpha wolf's infected mind remains confident in his superiority[end if].";
 		now wolffight is 1;  [victory]
+	wait for any key;
+	clear the screen and hyperlink list;
 
 to say AlphaWolfSex1: [fuck the wolf]
 	say "     Deciding you want to give the over-confident wolf a taste of his own medicine and put him in his place, you keep him pinned down and yank up his tail, exposing his tight tailstar. He whimpers a little and starts making boastful threats, but you don't listen, instead just pressing your throbbing cock against his back entrance and enjoying his whine as you push into him. He tries to scrape himself forward, but you keep a tight grip on him, moaning in his ear as you sink your [cock size desc of Player] [Cock of Player] cock into his tight ass. The wolf's hole [if Cock Length of Player >= 24]has trouble stretching to accommodate your massive meat, but you keep at it, forcing it[else]slowly relaxes to accommodate your thrusting pole, forced[end if] to accept you so you can bugger him thoroughly.";

@@ -497,8 +497,7 @@ to say BoghrimFirstFuck:
 		say "     Waiting some time longer till the last little spurt of his load is deposited deep inside your hole, the orc pulls out with a wet slurp and moves to kneel beside you on the bed. Giving you a little poke in the side with his elbow and a wide grin, he add with a chuckle, 'Watch this.' Then Boghrim bellows, 'Clean us up, slave!', which results in Jason almost jumping off the bed... or well, at least instantly coming to stand on his feet from the sudden fright. The panting young man then kneels down immediately and goes down on his master, slurping the remnants of his load up from the orc's shaft and lapping at his pubes. After Boghrim has been cleaned of cum, Jason moves on to you, licking up your own load before getting in position to eat his master's cum out of your hole.";
 		WaitLineBreak;
 		say "     Eventually, as Jason finishes with you two and joins Boghrim in a post-coital nap cuddled up against his master's side, you get back up from the bed and gather up your belongings. While doing so, you notice that the sting of the teethmarks on your shoulder has already faded completely, and by craning your neck a bit, you see that the nanites have already healed them over - though not without leaving two spots of distinctive scarring. Something to remember your first time with Boghrim by, it seems. Putting on your clothes and gear, you then make your way back down into the drinking hall.";
-	if "Boghrim's Mark" is not listed in feats of Player:
-		add "Boghrim's Mark" to feats of Player;
+	FeatGain "Boghrim's Mark";
 	now HP of Boghrim is 1;
 
 to say BoghrimSex1: [get fucked]

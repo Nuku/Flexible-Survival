@@ -473,17 +473,13 @@ instead of resolving Hunt Of Mammoth Proportions:
 			say "     The two of you get off the tired mammoth, and leave her dazed on the floor. Wukong leads you to his lair, and washes his cum-stained fur in a small artificial pond that had been installed for the exposition. He invites you to take a bath as well, and you eventually wash each other's back while talking about today's battle. 'I cannot find higher praises to give you, my friend,' Wukong says as the both of you begin to dry off. 'And so, I wish to reward you properly.'";
 			say "     'You are skilled, but your moves and your stance are a mess. You need proper lessons in kung fu. Let me give you some tips.' And so, you spend the next hours learning basic martial art moves under Wukong's tutoring. It is not much, but the experience that you have accumulated over the past days gives you the feeling that they will be extremely useful.";
 			if "Martial Artist" is not listed in feats of Player:
-				say "[bold type]You receive the martial artist feat.[roman type]";
-				add "Martial Artist" to feats of Player;
+				FeatGain "Martial Artist";
 			else if "Black Belt" is not listed in feats of Player:
-				say "[bold type]You receive the black belt feat.[roman type]";
-				add "Black Belt" to feats of Player;
+				FeatGain "Black Belt";
 			else if "Natural Armaments" is not listed in feats of Player:
-				say "[bold type]You receive the Natural Armaments feat.[roman type]";
-				add "Natural Armaments" to feats of Player;
+				FeatGain "Natural Armaments";
 			else:
-				say "[bold type]You receive one dexterity point[roman type]";
-				increase dexterity of Player by 1;
+				StatChange "Dexterity" by 1;
 			say "     You part ways with the monkey king, and in good terms, for once. You hope that it will last.";
 			now Loyalty of Wukong is 2;
 			now Resolution of Hunt Of Mammoth Proportions is 1; [fought + won]
@@ -651,7 +647,6 @@ instead of fucking Wukong:
 				say "[title entry]: [description entry]?";
 				if Player consents:
 					let nam be title entry;
-					clear the screen and hyperlink list;
 					now sextablerun is 1;
 					if nam is "Train":
 						say "[WukongTrainingTrain]";

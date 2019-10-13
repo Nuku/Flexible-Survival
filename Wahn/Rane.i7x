@@ -810,7 +810,6 @@ Instead of fucking Rane:
 				say "[title entry]: [description entry]?";
 				if Player consents:
 					let nam be title entry;
-					clear the screen and hyperlink list;
 					now sextablerun is 1;
 					if nam is "Suck Rane's cock":
 						say "[RaneSex1]";

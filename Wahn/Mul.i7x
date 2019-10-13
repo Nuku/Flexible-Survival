@@ -178,7 +178,6 @@ to say MulLockerroomSexMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if nam is "Take him from behind":
 					say "[MulLockerroomSex1]";
@@ -738,7 +737,6 @@ to say MulLibrarySexMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if nam is "Take him from behind":
 					say "[MulLibrarySex1]";

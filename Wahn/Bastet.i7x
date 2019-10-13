@@ -359,7 +359,6 @@ to say BastetTalkMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if nam is "Herself":
 					say "[BastetTalk1]";
@@ -468,7 +467,6 @@ to say BastetSexMenu:
 				say "[title entry]: [description entry]?";
 				if Player consents:
 					let nam be title entry;
-					clear the screen and hyperlink list;
 					now sextablerun is 1;
 					if nam is "Challenge her to another round of sexual 'combat'.":
 						say "[BastetSexBattleRepeats]";

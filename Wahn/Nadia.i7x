@@ -629,6 +629,10 @@ Instead of resolving a Bird Troubles:
 		now Resolution of Bird Troubles is 99; [refused Nadia]
 	now Bird Troubles is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Lost Chick	"Lost Chick"
+
 Lost Chick is a situation. The level of Lost Chick is 5. Lost Chick is inactive.
 The sarea of Lost Chick is "Campus".
 

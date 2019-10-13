@@ -66,17 +66,13 @@ carry out bargainhunting:
 				increase carried of water bottle by 2;
 			else:
 				say "     You smile as you once more come across one of those strange and very refreshing vials of liquid. Quickly pulling the small vial out of the bin, you waste no time in taking a small sip of the strangely colored liquid within. To your disappointment the drink seems somewhat less refreshing this time, although you can still feel your body tingling as the liquid obviously does something to you.";
-				LineBreak;
-				say "[bold type]'Spartan Diet' has been added to your feats![roman type][line break]";
-				add "Spartan Diet" to feats of Player;
+				FeatGain "Spartan Diet";
 		else if Z is 3: [magic bag]
 			if "Strong Back" is listed in feats of Player:
 				say "     Hunting through the strange bin of unusual bargains, you feel some kind of strap tangle around your arm and quickly pull it out to see what you managed to catch. Much to your disappointment, the strap is attached to a small, ornamental bag of some sort. Glancing in the bag, you can see that it is empty, and even putting something inside it seems to have no effect on either the bag or the item. Sighing, you tuck your new purchase into your pack, realizing that sometimes you win, and sometimes you lose.";
 			else:
 				say "     Reaching around in the strange bin of treasures, you feel some kind of strap tangle around your arm as you move the unusual items around. Pulling your arm out, you see that you have actually pulled out an odd belt pouch and realize you just ended up purchasing it by pulling it out of the bin. Sighing, you take a look at the pouch and realize it is empty. Just another small storage bag then. At least it looks like it can be strapped easily to your backpack. After securing your new pouch, you begin to put a few small items in it just to help sort things out, and are surprised to realize that items in your new pouch don't seem to weigh much of anything compared to those outside the pouch. Excited at this new discovery, you quickly fill your new pouch up to the brim, and while it may not be large enough to hold everything you have, it certainly makes carrying your current load much easier!";
-				LineBreak;
-				say "[bold type]'Strong Back' has been added to your feats![roman type][line break]";
-				add "Strong Back" to feats of Player;
+				FeatGain "Strong Back";
 		else if Z is 4: [charisma necklace]
 			say "     Sorting through the strange bin of unusual treasures, your eye catches on a [bold type]breathtaking silver necklace[roman type]. Slowly pulling it out of the bin, you admire its fine craftsmanship. Unable to resist the urge to put your lovely new piece of jewelry on, you swiftly clasp it around your neck, and while it doesn't seem to do anything strange or magical, you certainly admire the way it accentuates your good looks in the mirror that Nermine produces for you to look into.";
 			LineBreak;
@@ -90,14 +86,10 @@ carry out bargainhunting:
 					SanLoss 25;
 				else:
 					say "     Rummaging around in the strange bin, you find your hands rustling up against several small folded pieces of paper. Curious you pull the sheaf of paper out and unfold it so you can get a better look at what is written on it. Much to your surprise, you see the papers are filled with [bold type]detailed stories and images of beasts and humans copulating[roman type] in all sorts of strange and twisted manners. As you slowly look through the papers, you find yourself growing increasingly more and more aroused by the strange scenes you find depicted there, wondering just how it would feel to take part in some of those actions. Hearing movement behind you, you quickly fold the papers up and stick them in your pack with a blush as you notice Nermine leaning over curiously to see what you are staring at so intently. Perhaps you should study your purchase later and in private. Strange, before now, you never realized just how kinky you really are...";
-					LineBreak;
-					say "[bold type]'Kinky' has been added to your feats![roman type][line break]";
-					add "Kinky" to feats of Player;
+					FeatGain "Kinky";
 			else:
 				say "     Hunting through the bin, you find your hands drawn to a small charm of some sort. There is just something irresistible about it... you can't help but take hold of the piece of jewelry and pull it out of the bin. Holding it up, you find yourself admiring the [bold type]strange-looking charm[roman type]. It almost looks like a stylized version of your own form right now! You wonder if this charm would be as attractive to other people or infected like yourself, and end up shrugging as you hang your new purchase off your backpack. Guess you'll find out before long!";
-				LineBreak;
-				say "[bold type]'Like Attracts Like' has been added to your feats![roman type][line break]";
-				add "Like Attracts Like" to feats of Player;
+				FeatGain "Like Attracts Like";
 		else if Z is 6: [cat charm]
 			if FurryList is not banned and MaleList is not banned:
 				say "     Poking absently through the bin, your eye catches on a [bold type]small cat-like charm[roman type] tucked away in the corner. Pulling the little piece of jewelry out you smile at the stylized image of a pouncing cat as you rub the strange metal charm between your fingers. Then suddenly, it seems to slip through your fingers - or rather melt, as you try to catch it and notice that the thing didn't slip but rather is covering part of your fingers now as a silver sheen. Before you have much time to stare at it, the flowing metal seems to be absorbed by your skin, vanishing without a trace. As you scratch your head, puzzled about the strange effect, you realize your body is feeling slightly different...";
@@ -119,9 +111,7 @@ carry out bargainhunting:
 				StatChange "perception" by 1;
 			else:
 				say "     Flipping the small piece of jewelry over and over in your hands, your eyes seem drawn to its every sparkly movement. The little piece of glass and gilt fascinates you with the pleasant way it reflects light and catches your gaze. Finally you blink, and happy at your new purchase tuck it away for later, the first piece of what might eventually become a small collection of glittery and shiny things. Your eyes dart around the area, now trained to better pick out small useful items in the oddest places, especially if they are shiny!";
-				LineBreak;
-				say "[bold type]'Magpie Eyes' has been added to your feats![roman type][line break]";
-				add "Magpie Eyes" to feats of Player;
+				FeatGain "Magpie Eyes";
 		else if Z is 8: [puzzle box]
 			say "     Reaching deep into the bin, you find a hand-sized square box. Running your fingers over its smooth sides you notice it seems to have odd lines carved into it. Deciding to pull the box out for a better look, you realize you have just purchased some kind of [bold type]Chinese puzzle box[roman type], covered in small blocks seemingly able to be pushed or moved around the surface of the small container. Eager to see what might be inside, you spend some time working at and manipulating the box, slowly figuring out its secrets as you draw closer to finishing the puzzle. Finally with a triumphant cry you manage to slide the lid of the box open, only to find a small piece of paper within. Pulling out the paper you note it reads, 'The treasure is not in the finding, but in the journey.' All that work for a small fortune-cookie saying? Still you feel that all that work on the puzzle box has definitely helped you at puzzling out problems, so maybe it wasn't a waste after all...";
 			LineBreak;
@@ -269,9 +259,7 @@ carry out bargainhunting:
 				SanLoss 10;
 			else:
 				say "     Pushing through the strange piles of unusual items stuffed into the overflowing bin, you blink as you come across a [bold type]shiny silver charm[roman type] on a charm bracelet [bold type]shaped a bit like a canine cock[roman type]. Grinning you pull the small piece of jewelry out of the bin, feeling slightly amused that someone would actually go to such great effort to make and design such a thing. With a chuckle, you experimentally slip the bracelet onto your arm where it seems to fit perfectly. Somehow the feel of the silver cock-charm against your skin makes you feel slightly more aroused almost immediately. You can feel your body warming up in arousal as your libido goes into high gear, and somehow thoughts of all sorts of bestial sex seem to become even more attractive to your increasingly lust-fogged mind. Your hands stray down to rub your groin needfully as you begin to pant, finding it impossible to think of anything other than sex anymore, lovely, hot, bestial, sex... mmmmm yum...";
-				LineBreak;
-				say "[bold type]'Horny Bastard' has been added to your feats![roman type][line break]";
-				add "Horny Bastard" to feats of Player;
+				FeatGain "Horny Bastard";
 		else if Z is 19: [Nermine's romance novels]
 			if RomanceBooksFound is 0: [first time]
 				say "     Reaching into the bin, you can feel what seems to be some sort of book-cover under your hands. As you feel around, you realize that it isn't just one book, but a [bold type]small bundle of books tied together[roman type]. Curious, you draw the lot of them out of the bin, and are surprised to see the image of a half-naked jackal pirate looking at you from the cover of the first book. Slightly confused and curious you glance at the covers of the other books you pulled out with it, and see they all depict rather sexy-looking jackal men posing suggestively in a variety of different situations. You open one of the books and begin to flip through it, and quickly realize it is a rather hardcore romance novel featuring several bestial people, chief among them a handsome male jackal lead that swash-buckles his way through the hearts and beds of a large number of various women.";
@@ -351,10 +339,7 @@ carry out bargainhunting:
 			else:
 				say "     Looking through the strange bin of bargain items, you come across a piece of rolled parchment, which seems slightly warm to the touch. Curious, you pull the item out of the bin and unroll it to take a closer look. What you find on its inside is some sort of color-coded [bold type]map of the city[roman type], with several rather familiar-looking landmarks clearly noted... although at the same time, something seems subtly off about the layout. Looking closely at the strange map and its hand-drawn depiction of a modern city on so ancient a material, you notice something fascinating. It doesn't actually seem to be depicting the city as it was, but as it actually currently is, with blocked streets noted carefully, as well as several new areas delineated and marked, as well as with several safe routes to those areas clearly noted!";
 				say "     As you watch the parchment map, you catch sight of actual movement in its content! Looks as if someone was drawing on it, right before your eyes, marking another street slowly and declaring it impassible, changing all of the travel routes nearby to allow for that fact. Realizing what a treasure you have found, you grin happily as you tuck your new city map away in your pack safely.";
-				LineBreak;
-				say "[bold type]'City Map' has been added to your feats![roman type]";
-				add "City Map" to feats of Player;
-				say "[bestowcitymapfeat]";
+				FeatGain "City Map";
 		else if Z is 22: [collar]
 			if Player is submissive:
 				say "     Reaching down into the depths of the bargain bin, your hand touches on a rather familiar shape, pulling the item up, you find yourself smiling to see you have found a lovely little [bold type]slave's collar[roman type]. Looking at the collar reminds you of how much fun it can be to submit to a stronger more dominant mate, and your mind drifts to several of the sexy creatures in the city, lingering on just how much fun it could to be to just be theirs, their happy little slutty pet, happy to serve their every whim and need. Panting slightly as you think back on all your former submissions, you find yourself feeling increasingly happy and ready for thing to come, as you slip the collar into your pack as a happy reminder of all the submissive pleasure in your past, and hopefully all the lovely times in your future as well...";
@@ -369,9 +354,7 @@ carry out bargainhunting:
 			else:
 				say "     Searching through the piles of strangely colored and unusual items in the bargain bin, you find your eye caught by a rather unusual-looking collar. Pulling the object out, you realize that it is made for a human neck instead of that of an animal, and looking closer shows you that instead of a normal latch, this collar appears to have a small lock instead, making it impossible for the wearer to remove it without the key. For some reason, merely examining the collar makes your body increasingly aroused. The feel of its soft leather over your skin seems surprisingly sexy, and your arousal only intensifies when you realize that it is actually [bold type]a slave collar[roman type]. The thought makes you blush slightly as you realize that it is the perfect collar for one to wear when one is submitting to one's master or mistress, and several shiny metal rings on it serve a perfect attachment-points for a leash...";
 				say "     You can't help but pant slightly at the amazingly arousing yet disturbing thought of being used like a submissive sex-pet, and try to discard the collar... only to find yourself pausing slightly, unable to bring yourself to throw away such an amazingly sexy item, and the promise of happy submission it carries. Looking around slightly to see if Nermine is watching, you slide the collar into your pack almost guiltily, feeling increasingly submissive and slutty due to your action and whatever hold the collar has over you...";
-				LineBreak;
-				say "[bold type]'Submissive' has been added to your feats![roman type][line break]";
-				add "Submissive" to feats of Player;
+				FeatGain "Submissive";
 		else if Z is 23: [bad luck]
 			if "Bad Luck" is listed in feats of Player:
 				say "     Reaching into the bargain bin, you almost groan as you feel your bad luck building up, likely going to ruin whatever attempt you make at retrieving an item from the bin. Feeling rather annoyed at the unfair world, you sigh helplessly and decide not to fight fate as you grab whatever comes to hand before pulling it out to look at it, obviously not expecting much given your luck. Imagine your surprise however, when the item you pulled out appears to be a [bold type]custom soda holder[roman type], the kind used at beaches and for parties, and mostly full as well! What a nice surprise you find yourself thinking for a minute... right before the first soda slips out of the holder, and lands right on your foot!";
@@ -386,10 +369,7 @@ carry out bargainhunting:
 			else:
 				say "     Reaching into the bargain bin with high hopes, you feel something rather thin and metallic under your fingers. Pulling it out you find yourself staring into a rather [bold type]nicely-made hand mirror[roman type]. Admiring the fine looking object, you take a look at your reflection, only to gasp in surprise as it shows you kneeling on the floor in front of a shadowy figure, your features strange and twisted. They are a mixture of several other beasts, only somehow weaker and less dominant, your eyes wide and glazed without any sign of free will left, though obviously still recognizable as your own. Strangely enough even as you stare at it, the eyes of the shadowy figure turn and bore into your own eyes, and you gasp and drop the mirror in surprise.";
 				say "     The sound of the mirror shattering as it hits the floor snaps you out of your shock, and you look down at the mess even as Nermine tsks at you sadly. 'Is going to be seven years bad luck from now on, Nermine fears.' Her pronouncement makes you shudder slightly, as you feel a chill go down your spine... As creepy as the mirror was, you can't actually bring yourself to feel bad that it was destroyed.";
-				if "Bad Luck" is not listed in feats of Player:
-					LineBreak;
-					say "[bold type]'Bad Luck' has been added to your feats![roman type][line break]";
-					add "Bad Luck" to feats of Player;
+				FeatGain "Bad Luck";
 		else if Z is 24: [Nermine lecture]
 			say "     As you start to reach into the bargain bin to search, [bold type]Nermine reaches out and stops you[roman type]. 'Nermine has bad feeling about the bin at this time. Maybe her friendly customer would like to accept a bit of advice on things from Nermine instead?' she says, and glancing down into the seemingly bottomless bin, you swear you see something moving around in the piles of strange charms and items! Feeling rather lucky that Nermine intervened, you nod absently, and listen with increasing interest as the jackaless gives you several rather useful tips and teaches you a few small tricks to help keep you alive in the city as it is now. You come out of it feeling like you learned some important things! Although strangely enough after your conversation, just what it was that you were taught is hard to recall. You do remember they were quite significant...";
 			LineBreak;
@@ -410,9 +390,7 @@ carry out bargainhunting:
 			else:
 				say "     Rummaging through the bin, you feel some sort of cloth band snag in your fingers, and being somewhat interested in what kind of cloth item is in a bin like this, you pull it out for a better look. You blink in surprise to find it is a surprisingly [bold type]functional-looking armband, with the sign of the red cross[roman type] on it. Somewhat on impulse, you slide the armband on and admire it for a minute. Just the feeling of its weight on your arm makes you feel a bit safer and more like a paramedic, and you pose in amusement for a minute like you were about to bandage someone up... only to realize that you actually feel like you know how to bandage someone professionally!";
 				say "     Surprised, you look down at your new armband in wonder, only to discover that it is nowhere to be found! Shaking your head slightly at the weirdness of the situation, you look around for it a little while, before sighing and realizing that despite the disappearance, your strange new medical skills are there to stay...";
-				LineBreak;
-				say "[bold type]'Expert Medic' has been added to your feats![roman type][line break]";
-				add "Expert Medic" to feats of Player;
+				FeatGain "Expert Medic";
 		else if Z is 26: [compass]
 			say "     Looking through the strange bin full of treasures and junk (and you can't actually be sure which is which...) you find your attention drawn to a rather [bold type]interesting-looking compass[roman type] made out of some iridescent metal. Feeling curious you pull the compass out and look at it closely, only to be surprised as the needle on its face starts to spin around and around with increasing speed. Just staring at the spinning needle makes you feel quite dizzy and disoriented, and you stumble around for a minute, your head swimming as you blink and try to clear it. By the time your vertigo clears, you note with shock that the compass seems to have vanished! Looking up from your empty hand, the next surprise is already waiting for you, as Nermine's store seems to have vanished as well, and you now are in some place completely different with absolutely no idea how you got there!";
 			wait for any key;
@@ -453,9 +431,7 @@ carry out bargainhunting:
 			else:
 				say "     Poking through the rather unusual bargain bin cautiously, you come across a strange-looking stone statue, which looks like some kind of primitive idol. Pulling the idol out of the bin for a better look, you see that it appears to be a squat humanoid made up of many different animals mixed together, the melding of the different beasts remarkably smoothly done for such a sculpture. As you turn it from side to side to get a better look, you are surprised and nearly drop the small idol when its head turns and winks one reptilian eye at you, while its other feline eye watches you closely. Your mouth drops open in shock as you hold the idol out for Nermine to see, just as the small stone figurine stretches its misshapen limbs out, sending a beam of rainbow light to wash over you while the idol itself fades away into nothingness.";
 				say "     'Ah! Nermine sees her customer has found a bargain indeed. How fortunate to get the [bold type]blessing of Horguth the Changeable[roman type]. The ancient god does not show himself to just anyone. Some may consider such a blessing to be mixed, for surely change shall come much more easily now, both good and bad.' The jackaless says this with no little amusement, as you stare at your now empty hand in disbelief.";
-				LineBreak;
-				say "[bold type]'Mutable' has been added to your feats![roman type][line break]";
-				add "Mutable" to feats of Player;
+				FeatGain "Mutable";
 		else if Z is 28: [rescue beacon]
 			say "     Looking through the bin full of items, you come across an item that looks like some kind of strange radio, and feeling somewhat hopeful you pull it out of the bin. Interestingly enough, the item appears to be some kind of [bold type]military radio beacon[roman type], probably some sort of distress beacon of one kind or another. More importantly, it looks like it might still work as well! Feeling excited for a moment, you realize that if you were to trigger the beacon, the military might hurry up their efforts to come rescue you! Then again, they might be a little disappointed to find it wasn't a military team that set it off... but still it would be worth it to get out of this crazy town... unless you feel more comfortable staying in the changed city after all...";
 			say "     [bold type]Do you trigger the beacon?[roman type][line break]";
@@ -485,9 +461,7 @@ carry out bargainhunting:
 			else:
 				say "     Sorting through the bin, you are surprised to find a rather modern-seeming book tucked away amidst all the rest of the clutter. Deciding that anything in this bin is probably not quite what it seems, you curiously pull the book out to take a look at it. You blink in surprise as you look at the title, [bold type]'How to train a good pet (and how to make your slaves love you) Volume IV'[roman type] Feeling rather amused at the title, you decide to flip through the book absently, only to find yourself blushing slightly at all the pictures of women and men in animal costumes being trained alongside regular animals. Strangely enough, most of the training tips contained within would apply equally well to both intelligent beasts and wild animals, and as you skim the book in a kind of rapt fascination, you find yourself learning quite a bit about how to train your pets to work and fight with you better... or your slaves...";
 				say "     After skimming it once, almost toss the rather disturbing (yet also oddly helpful) book away, only to stop and tuck it away in your pack on impulse... who knows it just might come in handy again sometime...";
-				LineBreak;
-				say "[bold type]'Good Teacher' has been added to your feats![roman type][line break]";
-				add "Good Teacher" to feats of Player;
+				FeatGain "Good Teacher";
 		else:
 			say "     Rummaging through all the strange items in the bin, you find yourself pulling out an object you are sure you have seen somewhere else around the city, and sigh despondently as you tuck your new common item back in your backpack.";
 			LineBreak;

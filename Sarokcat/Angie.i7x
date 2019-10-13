@@ -479,7 +479,7 @@ to say AngieTalk7: [be her mate]
 		WaitLineBreak;
 		say "     You lie there for a minute, Angie leaning over you and still purring loudly as her shaft pulses inside you with the quickly ebbing spurts of cum. Slowly, reason returns to her eyes, banishing her inner animal's intense stare to replace it with a much softer, loving expression. She gives you a loving kiss on the mouth, then pants 'Now you're my mate, truly my mate. Ah, how I love you for all you did - saving me and being with me. I - I'm sorry for scratching your back, that was just something that seemed... like I had to do it then. Forgive me?' A beaming smile spreads over Angie's face as you look up at her and nod, then she kisses you again and softly caresses your cheek with a paw.";
 		say "     Eventually her cock starts to soften and she pulls it back out of you, then looks down at your now cum-dripping hole. From the aroused mrowl she makes at that moment, it becomes obvious that her libido is prodding her to have another go, but exhaustion wins out over it and she just steps forward to help you up again. 'That was unbelievably amazing,' she says with a smile at you, stroking her fur happily. 'Stay here with me and let's do that again soon. I know I just can't wait,' Angie says with a dreamy smile as she looks down at your naked and sweaty form, her words speaking to some part of you that imagines all kinds of sexy things to do with her as your girlfriend. The increasingly erotic images fill your mind and make your body tingle with desire again even as you try to recover from your intense orgasm.";
-	add "Angie's Mate" to feats of Player;
+	FeatGain "Angie's Mate";
 	now AngieHappy is 4;
 
 
@@ -554,7 +554,6 @@ to say AngieSexMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if (nam is "Fuck her"):
 					say "[AngieSex1]";

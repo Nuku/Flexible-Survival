@@ -967,7 +967,7 @@ to say badAlexandraFang1: [let Fang fuck her]
 		StatChange "Charisma" by -1;
 	else:
 		say "     You and Alexandra have earned the [']Cuckold['] feat, making her more fertile. Your [bold type]perception[roman type] has also gone up by one.";
-	add "Cuckold" to feats of Player;
+	FeatGain "Cuckold";
 	StatChange "Perception" by 1;
 	now level of Alexandra is 2; [shared bitch]
 	now A_Fang is false; [new dialog for new status]
@@ -988,7 +988,7 @@ to say badAlexandraFang2: [male player stops Fang and establishes dominance]
 	say "     When you're done cumming in her[if Ball Size of Player > 6] and she's left so stuffed she struggles to move with all your virile semen in her[else if Ball Size of Player > 5] and she's left with a bulge in her belly from all your virile semen in her[end if], you pull out and wipe your cock off across her panting muzzle. She looks up at you with increased submission and loyalty from the rough and public claiming of her. Feeling satisfied, you march back to the library doors and pull them open. Turning to her, you whistle and tell her to come back inside, calling her like a dog. She responds obediently, staggering to her feet and walking back in - naked, leaking cum and wagging her tail as she goes. Once she's in, you step back out, grab Fang by the scruff of the neck and drag him back in as well. You're quite confident that they both now know she belongs to you exclusively.";
 	LineBreak;
 	say "     You and Alexandra have earned the [']Top Dog['] feat, making her more fertile. Your [bold type]charisma[roman type] has also gone up by one.";
-	add "Top Dog" to feats of Player;
+	FeatGain "Top Dog";
 	add "Player's Bitch" to Traits of Alexandra;
 	now AlexandraPlayersBitch is active;
 	StatChange "Perception" by 1;
@@ -1126,6 +1126,8 @@ To impregAlexandraChance with (x - text):
 	else:
 		if debugactive is 1:
 			say "     Impregnation fail! A chance of [AlexandraPregChance] in 10 didn't succeed.";
+			if Sterile of Alexandra is true:
+				say "     Note: She's on contraceptives, so no matter how high the chance is, it can't succeed.";
 
 an everyturn rule:
 	if Alexandra is booked and HP of Alexandra < 50:

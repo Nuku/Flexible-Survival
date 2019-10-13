@@ -1247,12 +1247,8 @@ to say DiegoCollarWearingAftermath:
 		now Cock Count of Player is 0;
 		now Cock Length of Player is 0;
 		now Ball Size of Player is 0;
-		if "Always A Pussy" is not listed in Feats of Player:
-			add "Always A Pussy" to Feats of Player;
-			say "     [bold type]You gained the 'Always A Pussy' feat![roman type][line break]";
-		if "Female Preferred" is not listed in Feats of Player:
-			add "Female Preferred" to Feats of Player;
-			say "     [bold type]You gained the 'Female Preferred' feat![roman type][line break]";
+		FeatGain "Always A Pussy";
+		FeatGain "Female Preferred";
 	else if player is female:
 		say "Then his hand moves down to your crotch, stroking over your nether lips. 'Very nice. Now be a good puppy and get into position, will you?' A paw-hand pressing down lightly on your shoulder guides you to sink down on all fours, presenting yourself in doggy-style position. Kneeling behind you and resting a hand on your ass as he leans down to sniff your crotch, Diego chuckles amusedly.";
 		WaitLineBreak;
@@ -1260,12 +1256,8 @@ to say DiegoCollarWearingAftermath:
 		say "     As the trickster starts to fuck you in a steady rhythm, your low moans at being penetrated gradually become higher in pitch with every new thrust of his, proceeding to make you more of a female bit by bit. He loves pushing his length into your increasingly aroused cunt, sliding all the way to the knot in the gripping, dripping chalice. You can't help but pant hotly as you feel the coyote's wet tongue brush over your nape, followed by a more primal shudder as his teeth lightly nip at your bared neck. Somehow, this physical show of dominance has an even bigger effect than him entering you with his erection, instilling deep instincts of submission and belonging as your mind adjusts to be new female plaything. After a moment, he lets go of your nape again, nuzzling his muzzle against the crook of your neck as he keeps fucking with deep thrusts. You feel Diego's tongue lick you, followed by him grunting into your ear, 'Getting kinda close babe!'";
 		WaitLineBreak;
 		say "     You know just how to react to that, flexing your internal muscles around the coyote's shaft and making him groan in lust. 'Now that's what I call a good bitch!' he howls in arousal, taking out all the stops and really pounding into you now, soon burying the full length of his manhood inside your body one last time as it starts to throb, flooding your depths with his potent seed.' Your arousal skyrockets right along with his and femcum gushes around his thrusting shaft as you feel spurt after spurt of cum being pumped into you. The feeling of tightness increases as his knot swells up to lock his dick and cum inside your pussy, making sure you'll be soaking in his load for some time to come. As Diego and yourself sink down on the ground, connected by the hip, he proceeds to whisper more commands in your ear, intending to make sure that you stay a proper little plaything for the future too.";
-		if "Always A Pussy" is not listed in Feats of Player:
-			add "Always A Pussy" to Feats of Player;
-			say "     [bold type]You gained the 'Always A Pussy' feat![roman type][line break]";
-		if "Female Preferred" is not listed in Feats of Player:
-			add "Female Preferred" to Feats of Player;
-			say "     [bold type]You gained the 'Female Preferred' feat![roman type][line break]";
+		FeatGain "Always A Pussy";
+		FeatGain "Female Preferred";
 	else: [neuter]
 		say "Then his hand moves down to stroke over your crotch, not finding much there. 'No, this won't do, I'm afraid. Some would just make do with the ass, but I'd much rather you have a nice and ready pussy! Now be a good puppy and get into position, will you?' A paw-hand pressing down lightly on your shoulder indicates that both of the things he said were a command, and you sink down on all fours, presenting yourself in doggy-style position while a strange tingle starts to spread over your crotch. Kneeling behind you and resting a hand on your ass as he leans down to watch the transformation, Diego chuckles amusedly.";
 		WaitLineBreak;
@@ -1276,12 +1268,8 @@ to say DiegoCollarWearingAftermath:
 		now Cunt Count of Player is 1;
 		now Cunt Depth of Player is 8;
 		now Cunt Tightness of Player is 1;
-		if "Always A Pussy" is not listed in Feats of Player:
-			add "Always A Pussy" to Feats of Player;
-			say "     [bold type]You gained the 'Always A Pussy' feat![roman type][line break]";
-		if "Female Preferred" is not listed in Feats of Player:
-			add "Female Preferred" to Feats of Player;
-			say "     [bold type]You gained the 'Female Preferred' feat![roman type][line break]";
+		FeatGain "Always A Pussy";
+		FeatGain "Female Preferred";
 	now XP of Diego is 7; [player has the collar on, got fucked]
 
 to say DiegoCollarDeliveryAftermath:

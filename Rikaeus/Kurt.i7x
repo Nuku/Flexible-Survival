@@ -85,6 +85,7 @@ Object	Name
 Predator's Club Night	"Predator's Club Night"
 
 Predator's Club Night is a situation.
+Predator's Club Night is inactive.
 Prereq1 of Predator's Club Night is Predator's Lunch.
 The sarea of Predator's Club Night is "Nowhere".
 
@@ -92,7 +93,7 @@ when play begins:
 	add Predator's Club Night to badspots of MaleList;
 	add Predator's Club Night to badspots of FurryList;
 
-after going to Atlantis City Entrance while (PlayerFucked of Kurt is true and KurtRelationship is 3 and KurtEvent - turns > 2 and The Palomino is known):
+after going to Atlantis City Entrance while (Predator's Club Night is active and PlayerFucked of Kurt is true and KurtRelationship is 3 and KurtEvent - turns > 2 and The Palomino is known):
 	ThirdKurtEvent;
 
 instead of resolving Predator's Club Night:
