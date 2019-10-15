@@ -35,6 +35,7 @@ set "NI_64Bit=%INFORM_BINDIR%\ni64.exe"
 
 :: Change this to the actual FS installdir, if you've installed FS elsewhere (which is recommended)
 set "FS_INSTALLDIR=C:\Program Files (x86)\Silver Games LLC\flexible\Flexible Survival\Release"
+
 set "BUILD_OUTPUT=%INFORM_FS%\Build\output.gblorb"
 
 :: Symlink story.ni
