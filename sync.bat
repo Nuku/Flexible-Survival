@@ -27,7 +27,7 @@ if '%errorlevel%' NEQ '0' (
 echo [INFO] Starting...
 
 echo [INFO] Making symlink for .ctags in User folder
-fsutil reparsepoint query "%USERPROFILE%\.ctags" | find "Symbolic Link" >nul && (
+fsutil reparsepoint query "%USERPROFILE%\.ctags" >nul && (
   echo [INFO]   Removing existing symlink...
   del "%USERPROFILE%\.ctags"
 ) || (
@@ -36,8 +36,8 @@ fsutil reparsepoint query "%USERPROFILE%\.ctags" | find "Symbolic Link" >nul && 
 )
 mklink "%USERPROFILE%\.ctags" "%USERPROFILE%\Documents\Github\Flexible-Survival\.ctags"
 
-echo [INFO] Making symlink for .story.ni in Inform folder
-fsutil reparsepoint query "%USERPROFILE%\Documents\Inform\Projects\Flexible Survival.inform\Source\story.ni" | find "Symbolic Link" >nul && (
+echo [INFO] Making symlink for story.ni in Inform folder
+fsutil reparsepoint query "%USERPROFILE%\Documents\Inform\Projects\Flexible Survival.inform\Source\story.ni" >nul && (
   echo [INFO]   Removing existing symlink...
   del "%USERPROFILE%\Documents\Inform\Projects\Flexible Survival.inform\Source\story.ni"
 ) || (
@@ -47,7 +47,7 @@ fsutil reparsepoint query "%USERPROFILE%\Documents\Inform\Projects\Flexible Surv
 mklink "%USERPROFILE%\Documents\Inform\Projects\Flexible Survival.inform\Source\story.ni" "%USERPROFILE%\Documents\Github\Flexible-Survival\Inform\story.ni"
 
 echo [INFO] Making symlink for .gblorb in Program Files folder
-fsutil reparsepoint query "%PROGRAMFILES(X86)%\Silver Games LLC\flexible\Flexible Survival\Release\Flexible Survival.gblorb" | find "Symbolic Link" >nul && (
+fsutil reparsepoint query "%PROGRAMFILES(X86)%\Silver Games LLC\flexible\Flexible Survival\Release\Flexible Survival.gblorb" >nul && (
   echo [INFO]   Removing existing symlink...
   del "%PROGRAMFILES(X86)%\Silver Games LLC\flexible\Flexible Survival\Release\Flexible Survival.gblorb"
 ) || (
