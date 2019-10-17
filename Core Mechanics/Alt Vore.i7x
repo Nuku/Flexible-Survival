@@ -160,7 +160,7 @@ to vorebyplayer:
 		now researchbypass is 1;
 		infect;
 		now researchbypass is 0;
-	decrease hunger of Player by ( 4 * scale entry ) + a random number between 8 and 16;
+	decrease hunger of Player by ( 4 * ( 5 + scale entry - scalevalue of Player ) ) + a random number between 8 and 16;
 	if hunger of Player < 0, now hunger of Player is 0;
 	decrease humanity of Player by 3;
 	increase vorecount by 1;
