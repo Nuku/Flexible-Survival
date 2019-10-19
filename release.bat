@@ -1,28 +1,28 @@
 @echo off & setlocal EnableDelayedExpansion
 
 :: BatchGotAdmin
-:-------------------------------------
+:: -------------------------------------
 REM --> Check for permissions
 >nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
 
 REM --> If error flag set, we do not have admin.
 if errorlevel 1 (
-    echo Requesting administrative privileges...
-    goto UACPrompt
+	echo Requesting administrative privileges...
+	goto UACPrompt
 ) else ( goto gotAdmin )
 
 :UACPrompt
-    echo Set UAC = CreateObject^("Shell.Application"^) > "%temp%\getadmin.vbs"
-    echo UAC.ShellExecute "%~s0", "", "", "runas", 1 >> "%temp%\getadmin.vbs"
+echo Set UAC = CreateObject^("Shell.Application"^) > "%temp%\getadmin.vbs"
+echo UAC.ShellExecute "%~s0", "", "", "runas", 1 >> "%temp%\getadmin.vbs"
 
-    "%temp%\getadmin.vbs"
-    exit /B
+"%temp%\getadmin.vbs"
+exit /B
 
 :gotAdmin
-    if exist "%temp%\getadmin.vbs" ( del "%temp%\getadmin.vbs" )
-    pushd "%CD%"
-    CD /D "%~dp0"
-:--------------------------------------
+if exist "%temp%\getadmin.vbs" ( del "%temp%\getadmin.vbs" )
+pushd "%CD%"
+CD /D "%~dp0"
+:: --------------------------------------
 
 set "INFORM_INSTALLDIR=%ProgramFiles(x86)%\Inform 7"
 set "INFORM_BINDIR=%INFORM_INSTALLDIR%\Compilers"
@@ -33,30 +33,26 @@ set "INFORM_FS=%INFORM_DATADIR%\Projects\Flexible Survival.inform"
 :: Change this, if you've downloaded the 64 Bit ni.exe elsewhere
 set "NI_64Bit=%INFORM_BINDIR%\ni64.exe"
 
-:: Change this to the actual FS installdir, if you've installed FS elsewhere (which is recommended)
-set "FS_INSTALLDIR=C:\Program Files (x86)\Silver Games LLC\flexible\Flexible Survival\Release"
-
-set "BUILD_OUTPUT=%INFORM_FS%\Build\output.gblorb"
-
 :: Symlink story.ni
 set "INFORM_FS_SOURCE=%INFORM_FS%\Source"
 set "GITHUB_FS=%USERPROFILE%\Documents\Github\Flexible-Survival"
 echo [INFO] Making symlink for story.ni in Inform folder
 fsutil reparsepoint query "%INFORM_FS_SOURCE%\story.ni" >nul && (
-  echo [INFO]   Removing existing symlink...
-  del "%INFORM_FS_SOURCE%\story.ni"
+	echo [INFO]   Removing existing symlink...
+	del "%INFORM_FS_SOURCE%\story.ni"
 ) || (
-  echo [INFO]   Backing up story.ni
-  move /Y "%INFORM_FS_SOURCE%\story.ni" "%INFORM_FS_SOURCE%\story_old.ni"
+	echo [INFO]   Backing up story.ni
+	move /Y "%INFORM_FS_SOURCE%\story.ni" "%INFORM_FS_SOURCE%\story_old.ni"
 )
 mklink "%INFORM_FS_SOURCE%\story.ni" "%GITHUB_FS%\Inform\story.ni"
 
+:: Build everything into a .gblorb
+set "BUILD_OUTPUT=%INFORM_FS%\Build\output.gblorb"
 "%NI_64Bit%" -release -internal "%INFORM_INTERNAL%" -project "%INFORM_FS%" -external "%INFORM_DATADIR%" -format=ulx
 if errorlevel 1 (
 	pause
 	goto :eof
 )
-
 "%INFORM_BINDIR%\inform6.exe" -w~S~DG "%INFORM_FS%\Build\auto.inf" "%INFORM_FS%\Build\output.ulx"
 "%INFORM_BINDIR%\cBlorb.exe" -windows "%INFORM_FS%\Release.blurb" "%BUILD_OUTPUT%"
 
@@ -79,7 +75,13 @@ set DATESTAMP=%gmt_year%%gmt_month%%gmt_day%
 set TIMESTAMP=%gmt_hour%%gmt_minute%
 :: --------------------------------------------
 
-:: Copies the gblorb to the FS_INSTALLDIR and add an UTC based timestamp
+:: Grab the installation path of FS
+for /f "usebackq tokens=3*" %%a in (`reg query "HKLM\SOFTWARE\WOW6432Node\Silver Games LLC\flexible" /v "Path"`) do (
+	set _FS_ROOT=%%a %%b
+)
+set "FS_INSTALLDIR=!_FS_ROOT!Flexible Survival\Release"
+
+:: Copies the gblorb to the FS_INSTALLDIR and adds an UTC based timestamp
 set "FS_GBLORB=Flexible Survival %DATESTAMP%-%TIMESTAMP%.gblorb"
 set "BUILD_TARGET=%FS_INSTALLDIR%\%FS_GBLORB%"
 cp "%BUILD_OUTPUT%" "%BUILD_TARGET%"
