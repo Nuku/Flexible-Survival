@@ -84,7 +84,7 @@ set "FS_INSTALLDIR=!_FS_ROOT!Flexible Survival\Release"
 :: Copies the gblorb to the FS_INSTALLDIR and adds an UTC based timestamp
 set "FS_GBLORB=Flexible Survival %DATESTAMP%-%TIMESTAMP%.gblorb"
 set "BUILD_TARGET=%FS_INSTALLDIR%\%FS_GBLORB%"
-cp "%BUILD_OUTPUT%" "%BUILD_TARGET%"
+copy /Y "%BUILD_OUTPUT%" "%BUILD_TARGET%"
 goto :eof
 
 :: --------------------------------------------
