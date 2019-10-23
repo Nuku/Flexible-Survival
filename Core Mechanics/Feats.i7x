@@ -239,7 +239,7 @@ instead of addfeating the basic feats:
 		addfeat "Spartan Diet" with "You don't need 2 liters of water and great feasts to keep you going! You become thirsty and hungry slower.";
 	if featunlock is 1:	[available after hospital quest]
 		addfeat "Vore Predator" with "Your hunger has gone out of control. Let your foes beware!";
-	if "Vore Predator" is listed in feats of Player and "Iron Stomach" is listed in feats of Player:
+	if ("Vore Predator" is listed in feats of Player or "UB Pred" is listed in feats of Player) and "Iron Stomach" is listed in feats of Player:
 		addfeat "Safe Appetite" with "You will not gain infection from consuming your foes.";
 	if stamina of Player > 14:
 		addfeat "Toughened" with "You take less damage than others (-20% damage)";
