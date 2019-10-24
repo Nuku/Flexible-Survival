@@ -1154,7 +1154,7 @@ to win:
 	let ok be 1;
 	let voreprompted be false;
 	let ubprompted be false;
-	if Playercanvore is true and inasituation is false and scalevalue of Player >= scale entry and fightoutcome is 10 and vorechoice is not 2:
+	if Player can vore and inasituation is false and scalevalue of Player >= scale entry and fightoutcome is 10 and vorechoice is not 2:
 		let vorechance be 25 + ( hunger of Player * 2 );
 		if "Automatic Survival" is listed in feats of Player, now vorechance is 75;
 		if vorecount > 20:
@@ -1166,7 +1166,7 @@ to win:
 		if a random chance of vorechance in 300 succeeds or hunger of Player > 80:					[chance for vore]
 			if Name entry is not listed in infections of VoreExclusion and enemy type entry is 0: [not on the exclude list and non-unique infection]
 				now voreprompted is true; [player will be prompted for vore]
-	if Playercanub is true and inasituation is false and scalevalue of Player >= scale entry and fightoutcome is 10 and ubchoice is not 2 and gestation of Child is 0 and larvaegg is not 2 and player is female:
+	if Player can UB and inasituation is false and scalevalue of Player >= scale entry and fightoutcome is 10 and ubchoice is not 2 and gestation of Child is 0 and larvaegg is not 2 and player is female:
 		let vorechance be 25 + ( Cunt Tightness of Player * 5 );
 		if vorechance > 125, now vorechance is 125;
 		if "Fertile" is listed in feats of Player, increase vorechance by 25;

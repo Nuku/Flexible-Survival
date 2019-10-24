@@ -314,7 +314,7 @@ to say Medeaadjustments:
 			now sortorder entry is 7;
 			now description entry is "Talk to you about egg-laying";
 		[]
-		if Medeaub is true and playercanub is false and gestation of Child is 0:
+		if Medeaub is true and Player cannot UB and gestation of Child is 0:
 			choose a blank row in table of fucking options;
 			now title entry is "Gain unbirthing ability";
 			now sortorder entry is 8;
@@ -539,6 +539,7 @@ to say Medeaadjustments:
 						now TailSpeciesName of Child is "Husky";
 						now ubpreg is "Husky Bitch";
 					else:
+						setmonster "Latex Fox";
 						say "     As you approach the rummaging creature, part of you can't help but be pleased to see that it is a latex fox. That small part of you which is still able to reason can't help but think it appropriate[if Resolution of Inner Predator is 1]. Given how your first meal was also one of these rubbery guys, there is a certain symmetry to that[end if]. He seems pleased to see you as well, smelling your arousal and sniffing his way towards your crotch. Making no effort to dissuade him, you seem like a willing playmate and he approaches with eager caution.";
 						say "     When he brings his muzzle in to lick at your leaking pussy, your body is struck with another throbbing sense of the void inside you. You look down at the cute fox with new, maternally longing instincts, feeling that he'd be perfect to fill it. Before you can even think about it, you grab the fox by the head and yank it forward, driving his muzzle into your hot, needy cunny. Your pussy stretches as you continue to pull him in, stretching around his vulpine head with an orgasmic effort that has you moaning. Your juices soak his head and shoulders, making it easier for your tugging inner walls to start pulling them in as well.";
 						say "     Having succumbed to this instinctual drive, you are unable to control yourself, your body acting of its own volition to satisfy that inner need. Even with the foreknowledge of what would happen, what's happening would still be quite disturbing and shocking were it not for the extreme pleasure the act provides. There is considerable effort to doing it, your vaginal muscles having to stretch and pull in unnatural ways to drag your prey deeper and deeper into you.";
@@ -562,7 +563,6 @@ to say Medeaadjustments:
 						now AssSpeciesName of Child is "Latex Fox";
 						now TailSpeciesName of Child is "Latex Fox";
 						now ubpreg is "Latex Fox";
-					now playercanub is true;
 					FeatGain "UB Pred";
 					now ubcount is 1;
 					decrease humanity of Player by 3;

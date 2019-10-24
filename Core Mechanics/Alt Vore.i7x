@@ -10,14 +10,12 @@ Version 3 of Alt Vore by Core Mechanics begins here.
 
 Section 0 - Variables
 
-playercanvore is a truth state that varies.
 vorecount is a number that varies.
 vorechoice is a number that varies.
 vorespecial1 is a truth state that varies. vorespecial1 is usually false.
 hvoreoffer is a truth state that varies. hvoreoffer is usually false.
 hvorecount is a number that varies.
 hvorelevel is a number that varies. hvorelevel is usually 1.
-playercanub is a truth state that varies.
 ubcount is a number that varies.
 ubchoice is a number that varies.
 ubspecial1 is a truth state that varies. ubspecial1 is usually false.
@@ -35,8 +33,16 @@ to decide if the/-- Player can vore:
 	if "Vore Predator" is listed in feats of Player, decide yes;
 	decide no;
 
+to decide if the/-- Player can't/cannot vore:
+	if "Vore Predator" is not listed in feats of Player, decide yes;
+	decide no;
+
 to decide if the/-- Player can UB/unbirth:
 	if "UB Pred" is listed in feats of Player, decide yes;
+	decide no;
+
+to decide if the/-- Player can't/cannot UB/unbirth:
+	if "UB Pred" is not listed in feats of Player, decide yes;
 	decide no;
 
 Section 1 - Event
@@ -52,7 +58,7 @@ when play begins:
 
 a postimport rule: [bugfixing rules for players that import savegames]
 	if Inner Predator is resolved and Resolution of Inner Predator is 0:
-		if "Vore Predator" is listed in feats of Player:
+		if Player can vore:
 			now Resolution of Inner Predator is 1;
 		else if MaleList is banned and FemaleList is banned:
 			now Resolution of Inner Predator is 99;
@@ -121,7 +127,6 @@ Instead of resolving a Inner Predator:
 			now researchbypass is 0;
 			increase score by 20;
 		FeatGain "Vore Predator";
-		now playercanvore is true;
 		increase vorecount by 1;
 		now Resolution of Inner Predator is 1; [player drank the vial]
 	else:

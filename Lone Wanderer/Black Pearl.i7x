@@ -77,7 +77,7 @@ to say blackpearlusing:
 			say "Yes, you are already almost perfect - your vagina will serve perfectly, its size certainly almost enough to bury this treasure within you. Planting the blackness on your lips, you take note of how your vagina still slightly expands to allow this object to gain even easier purchase within these folds. Breathing out in satisfaction, you start fingering yourself with your clawed, thick digits, preparing your depths for the arrival of this slickened orb. Playing with yourself for a little while, you feel that you are warmed up enough and start pushing the perfect sphere against your folds. Rumbling in pleasure, you witness your folds changing as you see your labia practically latching on to your beloved, little thing, your clitoris following suit.";
 		WaitLineBreak;
 		say "     Trembling in pleasure at the completed changes, you see that your crotch, just like all of you, is pitch-black. Examining your new cunt more closely, you take note that your elongated clitoris is prehensile, able to lick along the orb that is practically getting sucked in by your contracting muscles. Just like your tongue, it also seems to have its own sense of taste and your mind is overwhelmed with these new sensations. You can taste the orb and your own juices by stroking over it with your new appendage. On both sides of your cunt, you can also see several protrusions similar to the ones that make the beard of a catfish. They are very sensitive, ";
-		if vorelevel is 3 or "Vore Predator" is listed in feats of Player:
+		if vorelevel is 3 or Player can vore:
 			say "and they would allow you to lick your prey with them while your improved clitoral length pins them. Spurred on by that fantasy, you let your walls do their work. ";
 		else:
 			say "and you can even move them forward. Surprised, you realize that you can even grasp the pearl with them, helping yourself in a new way to push your treasure down your greedy depths. ";
@@ -104,7 +104,7 @@ when play ends:
 		else:
 			say "Memories of a distant past come flooding to you, giving you a sense of urgency to head back to the beach. There are preparations to be made and the sea does need the presence of its worthy ruler again. ";
 		say "Back in the sea, you dwell in the deeps, finding refuge within some old ruins. For the years to come, you occasionally come out to hunt for unsuspecting prey to ";
-		if vorelevel is 3 or "Vore Predator" is listed in feats of Player:
+		if vorelevel is 3 or Player can vore:
 			say "stuff them down your [if Player is male]majestic rod[else]depths[end if]. Once done playing with them, you release them with mind-shattering orgasms. Your prey always finds themselves not only turned into a form similar to yours, but also malleable to your will.";
 		else:
 			say "constrict them in your coils. The sight of these land dwellers screaming and fighting for air in your coils does feel exhilarating. None can hope to free themselves of your grasp. Nearly all of them find themselves surprised, but also grateful, when you don't drown them in the seemingly infinite depths of the ocean but instead bring them to your sanctuary. Within the ruins, your captives start taking a shape similar to yours, as you end up showing your affections to them daily, making sure that they all mature nicely. This treatment also has your new disciples be very open to your suggestions and commands; many end up devoting themselves to you with the ones who leave you still making others into creatures of the void.";

@@ -1789,8 +1789,6 @@ Name(text)	Type(text)
 "ovipregmedeatalk"	"truth state"
 "ovipregnant"	"truth state"
 "pewtertorsosuppress"	"truth state"
-"playercanub"	"truth state"
-"playercanvore"	"truth state"
 "PlayerPigBodied"	"truth state"
 "ppatt"	"truth state"
 "pr_task01"	"truth state"
