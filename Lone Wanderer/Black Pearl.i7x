@@ -10,6 +10,7 @@ The level of Curious Pearl is 5. [minimum level to find the event]
 Curious Pearl is inactive.
 
 when play begins:
+	add Curious Pearl to BadSpots of MaleList;
 	add Curious Pearl to BadSpots of FurryList;
 	add Curious Pearl to BadSpots of FeralList;
 
