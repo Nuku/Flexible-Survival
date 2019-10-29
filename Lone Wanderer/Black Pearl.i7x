@@ -6,12 +6,12 @@ Section 0 - Event
 
 Curious Pearl is a situation.
 The sarea of Curious Pearl is "Beach".
-The level of Valuable RLD Artifact is 5. [minimum level to find the event]
+The level of Curious Pearl is 5. [minimum level to find the event]
 Curious Pearl is inactive.
 
 when play begins:
 	add Curious Pearl to BadSpots of FurryList;
-	add Valuable Warehouse Artifact to badspots of FeralList;
+	add Curious Pearl to BadSpots of FeralList;
 
 Instead of resolving Curious Pearl:
 	if KyrverthStage is 3:
