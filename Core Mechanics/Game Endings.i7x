@@ -1,5 +1,57 @@
 Version 1 of Game Endings by Core Mechanics begins here.
 
+EndingID is a number that varies.[@Tag:NotSaved] EndingID is usually 1.
+
+a Game Ending is a kind of object.
+TheEnd is a Game Ending.[@Tag:NotSaved]
+TheEnd has a truth state called Player imprisoned. Player imprisoned is usually false. [The player got imprisoned, enslaved and so on. Always involuntarily.]
+TheEnd has a truth state called Player leaving. Player leaving is usually false. [The player left 'everything' behind. Always voluntarily.]
+TheEnd has a truth state called Player died. Player died is usually false. [The player died. Includes starvation, dehydration, eaten alive and so on.]
+TheEnd has a text called Ending Reason. Ending Reason is usually "". [The reason or cause of the ending. Extra info, like "starvation", "dehydration", "Wyvern" (in case of vore death for example) and so on.]
+
+to setending ( Ending - text ):
+	setending ending silence state is 0;
+
+to setending ( Ending - text ) silently: [suppresses the debug output]
+	setending ending silence state is 1;
+
+to setending ( Ending - text ) silence state is ( Silence - a number ): [sets the ending ID by its name entry for later use]
+	let found be 0;
+	repeat with y running from 1 to number of filled rows in Table of GameEndings:
+		choose row y in Table of GameEndings;
+		if priority entry <= 0:
+			next;
+		if Name entry exactly matches the text Ending, case insensitively:
+			now found is 1;
+			now EndingID is y;
+			break;
+	if found is 0:
+		say "ERROR - Ending '[Ending]' not found. (setending)[line break]";
+	else if debugactive is 1 and Silence is 0:
+		say "DEBUG: Current [']ending['] set to: [EndingID] = [name entry][line break]";
+
+to trigger ending ( Ending - a text ):
+	setending Ending;
+	let found be 0;
+	choose row EndingID in the Table of GameEndings;
+	if Priority entry >= 0: [Make sure, that the ending was found and EndingID is set correctly]
+		if Name entry exactly matches the text Ending, case insensitively:
+			now found is 1;
+	if found is 1:
+		now Triggered entry is true;
+
+to decide if ending ( Ending - a text ) is triggered:
+	setending Ending silently;
+	let found be 0;
+	choose row EndingID in the Table of GameEndings;
+	if Priority entry >= 0:
+		if Name entry exactly matches the text Ending, case insensitively:
+			now found is 1;
+	if found is 1:
+		if Triggered entry is true:
+			decide yes;
+	decide no;
+
 vetcheat is an action applying to nothing.
 understand "i am a pro" as vetcheat.
 
@@ -114,9 +166,10 @@ when play ends:
 	else if BodyName of Player is "Demon Slave":
 		say "     Your new reality in hell focuses on satisfying Skarnoth's every desire - of which there are many, mostly carnal ones. As the overlord of his own little demonic realm, your master has the power to play with your body shape too, transforming you as he wishes to better enjoy breaking you to his will...";
 		stop the action;
-	else if BodyName of Player is "Lucifer's Mare":
-		say "     Being used as Lucifer's mare is finally enough to push you over the edge. You can't help but lie on the grass, dripping his cum and feeling it dry on your skin, until the feral mustang eventually returns to fuck you again, and again. Eventually, your form shifts to that of a true feral mare and you join the harem of the powerful stallion, well-bred and well-protected from any challenger to Lucifer's might.";
-		stop the action;
+	else if ending "Lucifer's Mare" is triggered:
+		follow the Lucifer's Mare rule;
+		if Player imprisoned of TheEnd is true:
+			stop the action;
 	else if BodyName of Player is "Hell Prisoner":
 		say "     You have delved in far too deep into the demonic realm. Hell has taken you and imprisoned your soul for all eternity. Now you serve only to satisfy the demons['] every whim of any kind, your will broken facing an inevitable fate. There's no hope... nor salvation.";
 		stop the action;
