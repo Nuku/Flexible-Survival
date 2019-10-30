@@ -30,7 +30,7 @@ to setending ( Ending - text ) silence state is ( Silence - a number ): [sets th
 	else if debugactive is 1 and Silence is 0:
 		say "DEBUG: Current [']ending['] set to: [EndingID] = [name entry][line break]";
 
-to trigger ending ( Ending - a text ):
+to trigger the/-- ending ( Ending - a text ):
 	setending Ending;
 	let found be 0;
 	choose row EndingID in the Table of GameEndings;
@@ -40,7 +40,7 @@ to trigger ending ( Ending - a text ):
 	if found is 1:
 		now Triggered entry is true;
 
-to decide if ending ( Ending - a text ) is triggered:
+to decide if the/-- ending ( Ending - a text ) is triggered:
 	setending Ending silently;
 	let found be 0;
 	choose row EndingID in the Table of GameEndings;
@@ -51,6 +51,20 @@ to decide if ending ( Ending - a text ) is triggered:
 		if Triggered entry is true:
 			decide yes;
 	decide no;
+
+to decide if one of the/-- endings in (Endings - a list of texts) is triggered:
+	repeat with N running from 1 to the number of entries in Endings:
+		if ending "[entry N of Endings]" is triggered:
+			decide yes;
+	decide no;
+
+[
+to decide if all of the/-- endings in (Endings - a list of texts) are triggered:
+	repeat with N running from 1 to the number of entries in Endings:
+		if not ending "[entry N of Endings]" is triggered:
+			decide no;
+	decide yes;
+]
 
 vetcheat is an action applying to nothing.
 understand "i am a pro" as vetcheat.

@@ -28,6 +28,10 @@ to decide if (x - a person) has a body of (i - a text):
 	if BodyName of x is i, decide yes;
 	decide no;
 
+to decide if (x - a person) has no body of (i - a text):
+	if x has a body of i, decide no;
+	decide yes;
+
 to decide which text is GetSpeciesName from (N - a text):
 	if N is not "" and there is a Name of N in the Table of Random Critters:
 		choose a row with Name of N in the Table of Random Critters;
