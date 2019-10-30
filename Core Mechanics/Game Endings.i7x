@@ -100,6 +100,34 @@ When play ends:
 	say "----------";
 	follow the self examine rule;
 	LineBreak;
+	[Go through the Table of GameEndings]
+	sort the Table of GameEndings in Priority order;
+	repeat with N running from 1 to the number of rows in the Table of GameEndings:
+		if there is no Priority in row N of the Table of GameEndings:
+			if debug is at level 5:
+				say "DEBUG (Info): Skipping a blank row in the Table of GameEndings.";
+			next; [Failsafe. Should never happen.]
+		choose row N in the Table of GameEndings;
+		if Priority entry is 0:
+			if debug is at level 5:
+				say "DEBUG (Info): Skipping the initial row in the Table of GameEndings.";
+			next; [Skip the initial row.]
+		if debug is at level 6:
+			let SubtypeString be "";
+			if Subtype entry is not "":
+				now SubtypeString is " ([Subtype entry])";
+			say "DEBUG: Handling ending ['][Name entry]['], Type: [Type entry][SubtypeString], Priority: [Priority entry], Triggered: [if Triggered entry is true]yes[else]no[end if].";
+		follow the Ending entry;
+		if Player imprisoned of TheEnd is true or Player died of TheEnd is true:
+			if debug is at level 6:
+				say "DEBUG: The Player is either dead or imprisoned, enslaved and so on. Finishing here![line break]";
+			break;
+	[FS Multiplayer AD here]
+	say "----------[line break]";
+	say "I hope you enjoyed playing that as much as we enjoyed coding/writing it! It doesn't have to end here though! Come join other mutants and play in the Multiplayer Flexible Survival universe with us!";
+	say "https://flexiblesurvival.com/[line break]";
+	say "Once you have a character, click [']direct control['], and we'll be there, waiting to give a hand!";
+	say "Already have a MUD/MUCK/MUSH client? We're at flexiblesurvival.com port 2222";
 
 to ratetheplayer:
 	if gsgl is 1 and score > 0:
@@ -180,10 +208,6 @@ when play ends:
 	else if BodyName of Player is "Demon Slave":
 		say "     Your new reality in hell focuses on satisfying Skarnoth's every desire - of which there are many, mostly carnal ones. As the overlord of his own little demonic realm, your master has the power to play with your body shape too, transforming you as he wishes to better enjoy breaking you to his will...";
 		stop the action;
-	else if ending "Lucifer's Mare" is triggered:
-		follow the Lucifer's Mare rule;
-		if Player imprisoned of TheEnd is true:
-			stop the action;
 	else if BodyName of Player is "Hell Prisoner":
 		say "     You have delved in far too deep into the demonic realm. Hell has taken you and imprisoned your soul for all eternity. Now you serve only to satisfy the demons['] every whim of any kind, your will broken facing an inevitable fate. There's no hope... nor salvation.";
 		stop the action;
