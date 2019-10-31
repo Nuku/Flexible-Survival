@@ -362,8 +362,12 @@ this is the DVtaurscent rule:
 
 Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "Dracovixentaur":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Dracovixentaur Infection"	"Infection"	""	Dracovixentaur Infection rule	100	false
+
+This is the Dracovixentaur Infection rule:
+	if Player has a body of "Dracovixentaur":
 		if humanity of Player < 10:
 			if HP of Sam >= 10 and HP of Sam <= 29:
 				say "***Succumb w/Sam as Dragontaur. Should not be possible.";

@@ -1532,8 +1532,15 @@ to say SarahDavidScene3:
 	now DavidSarahInteraction is 2;
 	now lastDavidSarahInteraction is turns;
 
-when play ends:
+Section 2 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Sarah's Epilogue"	"NPC"	""	Sarah's Epilogue rule	90	false
+
+This is the Sarah's Epilogue rule:
 	if Sarah is in the bunker:
+		trigger ending "Sarah's Epilogue";
 		if SarahCured > 3: [fully cured]
 			if humanity of Player < 10: [player succumbed]
 				say "     Returning to the bunker, you waste no time in pouncing on the little husky you left there earlier - but Sarah actually manages to slip from your grasp. Distraught at seeing her hero and friend in such a state, she runs towards the exit out of the bunker, slamming the door in front of your nose with only a second to spare. Bouncing off the heavy steel door in your haste, Sarah is gone by the time you've picked yourself up from the ground again. You soon give up searching for her, shrugging off any further thought of the young woman as your body's lusts push other priorities aside...";

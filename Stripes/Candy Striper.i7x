@@ -762,7 +762,11 @@ to say totalcoonification:		[version 1 - direct shift, no gender controls]
 
 Section 8 - Endings
 
-when play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Candy's Epilogue"	"NPC"	""	Candy's Epilogue rule	90	false
+
+This is the Candy's Epilogue rule:
 	if BodyName of Player is "Raccoon":
 		if humanity of Player < 10:
 			if coonstatus < 100:				[Coon player - Coon non-pet]

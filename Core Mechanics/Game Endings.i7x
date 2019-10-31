@@ -27,7 +27,7 @@ to setending ( Ending - text ) silence state is ( Silence - a number ): [sets th
 			break;
 	if found is 0:
 		say "ERROR - Ending '[Ending]' not found. (setending)[line break]";
-	else if debugactive is 1 and Silence is 0:
+	else if debug is at level 4 and Silence is 0:
 		say "DEBUG: Current [']ending['] set to: [EndingID] = [name entry][line break]";
 
 to trigger the/-- ending ( Ending - a text ):

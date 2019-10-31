@@ -258,8 +258,12 @@ this is the drtaurpounce rule:		[double-damage pouncing]
 
 Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "Dragontaur":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Dragontaur Infection"	"Infection"	""	Dragontaur Infection rule	100	false
+
+This is the Dragontaur Infection rule:
+	if Player has a body of "Dragontaur":
 		if humanity of Player < 10:
 			if HP of Sam >= 10 and HP of Sam <= 29:
 				if Player is herm:
