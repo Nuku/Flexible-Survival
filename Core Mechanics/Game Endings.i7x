@@ -104,19 +104,15 @@ When play ends:
 	sort the Table of GameEndings in Priority order;
 	repeat with N running from 1 to the number of rows in the Table of GameEndings:
 		if there is no Priority in row N of the Table of GameEndings:
-			if debug is at level 5:
-				say "DEBUG (Info): Skipping a blank row in the Table of GameEndings.";
 			next; [Failsafe. Should never happen.]
 		choose row N in the Table of GameEndings;
 		if Priority entry is 0:
-			if debug is at level 5:
-				say "DEBUG (Info): Skipping the initial row in the Table of GameEndings.";
 			next; [Skip the initial row.]
 		if debug is at level 6:
 			let SubtypeString be "";
 			if Subtype entry is not "":
 				now SubtypeString is " ([Subtype entry])";
-			say "DEBUG: Handling ending ['][Name entry]['], Type: [Type entry][SubtypeString], Priority: [Priority entry], Triggered: [if Triggered entry is true]yes[else]no[end if].";
+			say "DEBUG: Handling ending ['][Name entry]['], Type: [Type entry][SubtypeString], Priority: [Priority entry], Triggered: [if Triggered entry is true]yes[else]no[end if].[no line break]";
 		follow the Ending entry;
 		if Player imprisoned of TheEnd is true or Player died of TheEnd is true:
 			if debug is at level 6:
@@ -179,15 +175,18 @@ to ratetheplayer:
 		say ".";
 	LineBreak;
 
-when play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Player Starvation"	"Death"	"Starvation"	Player Starvation rule	1	false
+
+This is the Player Starvation rule:
 	if thirst of Player >= 100 or hunger of Player >= 100:	[blocking regular endings]
-		now BodyName of Player is "starvation";
-		now FaceName of Player is "starvation";
-		now SkinName of Player is "starvation";
-		now TailName of Player is "starvation";
-		now CockName of Player is "starvation";
+		trigger ending "Player Starvation";
 		say "     You have perished from [if hunger of Player >= 100 and thirst of Player >= 100]starvation and thirst[else if hunger of Player >= 100]starvation[else]thirst[end if] and are no more. Your body becomes a meal for another of the more predatory creatures roaming the city.";
-	else if BodyName of Player is "Tigertaur Sex Toy":
+		now Player died of TheEnd is true;
+
+when play ends:
+	if BodyName of Player is "Tigertaur Sex Toy":
 		say "     Even though you try a few times, you never manage to escape the clutches of your tigertaur masters, and servicing them eventually becomes the only reason for your existence, supplanting all other thoughts you might once have had.";
 		stop the action;
 	else if BodyName of Player is "Broken Husky Slut":
