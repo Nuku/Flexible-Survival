@@ -237,7 +237,8 @@ instead of going east from Smith Haven Mall Lot East while (HP of Blake < 50):
 					say "     The horny rodent continues to pleasure himself until with a lustful groan, he experiences his biggest climax ever. His orgasm lasts for a while, torrents of white spunk spraying all over the ground and the nearby walls, and when it finally ends, Blake collapses onto the ground with a tired but satisfied smirk. Although his dick and balls had shrunken back down after expelling your cummy remains, they're clearly bigger now, thanks to your [italic type]contribution[roman type], making them all the more enticing for the alluring rat to lure in more people for him to exploit.";
 					WaitLineBreak;
 					now voreloss is true;
-					now BodyName of Player is "dead";
+					now Ending Reason of TheEnd is "Blake's Cock Vore";
+					trigger ending "Player has died";
 					end the story saying "You got turned into rat cum";
 				else:
 					say "     Exhausted from the overwhelming pleasure and the twisted ordeal, you soon pass out. It's unknown how much time you spend in Blake's balls, but when you do wake up, you find that you are back in the dirty alley that the rat calls his home. Although you are able to breathe fresh air again, you are still covered in the trash rat's seed, making you feel lightheaded from the heady scent. 'You're a really good cock filler, slut,' Blake says, leering at you with a lascivious grin as he watches you stagger back onto your feet. 'Come back again. Maybe next time I'll make you part of my load instead of shooting you out.' As you clean up and leave, your thoughts are still clouded by Blake's words and scent, tempting you to return and service the domineering rat again.";
@@ -255,7 +256,8 @@ instead of going east from Smith Haven Mall Lot East while (HP of Blake < 50):
 					say "     The stomach walls press into you, squishing you from every side with slick, supple flesh. Though a part of you understands the perilous situation that you are in, the linger hypnotic scent of Blake's stench continues to permeate the air, dulling your senses into submissive pleasure. 'Just relax in there, slut,' echoes Blake's dominant voice from all around you. 'Forget about everything else because you're all mine now.' You do as the rat says and yield to his stomach as it kneads and rolls you around, the churning motions oddly soothing and enjoyable. The pleasurable sensations of the rat's innards make your consciousness slowly ebb away until, with one final groan of delight, you pass out, melting away in a sea of bliss to feed Blake's insatiable appetite and his dominating endeavors.";
 					WaitLineBreak;
 					now voreloss is true;
-					now BodyName of Player is "dead";
+					now Ending Reason of TheEnd is "Blake's Anal Vore";
+					trigger ending "Player has died";
 					end the story saying "You got up and close with a rat's dirty ass";
 				else:
 					say "     Exhausted from the overwhelming pleasure and the twisted ordeal, you soon pass out. It's unknown how much time you spend in Blake's stomach, but when you do wake up, you find that you are back in the dirty alley that the rat calls his home. Although you are able to breathe fresh air again, the trash rat's intoxicating musk clings to your body, making you feel lightheaded from the heady scent. 'You make for a good toy, slut,' Blake says, leering at you with a lascivious grin as he watches you stagger back onto your feet. 'Come back again. Maybe next time that I stick you in my ass, I'll leave you in there for good.' As you clean up and leave, your thoughts are still clouded by Blake's words and scent, tempting you to return and service the domineering rat again.";

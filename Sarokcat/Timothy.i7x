@@ -418,6 +418,7 @@ This is the Blue Gryphon Herm Infection rule:
 	if one of the endings in { "Timothy's Breeding Gryphon", "IceCreamTruck Bad End", "Garrett's BFF", "Returning to Timothy", "My Little Gryphoness" } is triggered:
 		make no decision;
 	if Player has a body of "Blue Gryphon Herm": [Gryphon body w/neither Timothy nor Denise goes here]
+		trigger ending "Blue Gryphon Herm Infection";
 		say "     During your rescue from the infected city and the subsequent processing, you have a fairly easy time of it thanks to your infection. As the gryphon form you have picked up is a fairly common one, the testing period you undergo is pretty brief. You make a few friends among the other gryphons there before getting released.";
 		say "     Looking to make a new life for yourself, you manage to get yourself a courier job once you get the hang of flying on your new wings. While it doesn't pay that well, it lets you fly around and get paid for it. And having kept in touch with the other gryphons and part-gryphons you'd gotten to know, you can usual get a flying companion or a bed companion whenever you like.";
 		if HP of Garrett >= 7:

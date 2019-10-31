@@ -84,11 +84,7 @@ to say DemonBruteVictoryFuck:
 		say "     Panting and grinning over you, the demon holds his cock in place inside your pussy. It feels as if he has lodged his cockhead into your painfully stretched cervix, creating a seal so none of his cum can escape your bloated womb - even as more pulses into you. Just as you begin to think he might continue till you burst, a terrible shudder goes through your limp body and the pressure lessens - as if his hot cum is being suffused throughout your being, making you absorb the demonic corruption.";
 		if DBCaptureQuestVar is 4:
 			say "     The brute stands up, holding you against his broad chest with one massive hand, your pussy still speared on his thick member. As you feel the demon's cum start running out of you, the creature licks you with his long forked tongue. 'I'll just keep fucking you till you're only a whimpering little bitch - and then throw you to the others so they can fill your sloppy holes too! But let's get to more comfortable surroundings first...' With that, your surroundings shimmer and disappear and you find yourself somewhere else. From the fires, screams and horrible scenes you can see all around you, it must be the demon's home in hell - and now yours too. Forever.";
-			now TailName of Player is "DBrute Slave";
-			now FaceName of Player is "DBrute Slave";
-			now SkinName of Player is "DBrute Slave";
-			now BodyName of Player is "DBrute Slave";
-			now CockName of Player is "DBrute Slave";
+			trigger ending "DBrute Slave";
 			end the story saying "You're stuck in hell - there's no coming back from that!";
 		else:
 			say "     When he finally pulls his softening cock from you, your gaping, wrecked vagina lets loose a river of hot demon jizz from your insides. Laughing at your broken mortal form, he leaves you to wallow in the pool of steaming demon cum still pouring from your gaping slit. As he disappears into thin air, you still find yourself shuddering as waves of tiny orgasms continue to wrack your twitching cunny. As you stand shakily to gather your belongings and what little dignity you have left, you wonder if you should be concerned by how much you enjoyed being taken by that terrible brute.[fimpregchance]";
@@ -120,11 +116,7 @@ to say DemonBruteVictoryFuck:
 		WaitLineBreak;
 		if DBCaptureQuestVar is 4:
 			say "     The brute stands up, holding you against his broad chest with one massive hand, your asshole still speared on his thick member. As you feel the demon's cum start running out of you, the creature licks you with his long forked tongue. 'I'll just keep fucking you till you're only a whimpering little bitch - and then throw you to the others so they can fill your sloppy holes too! But let's get to more comfortable surroundings first...' With that, your surroundings shimmer and disappear and you find yourself somewhere else. From the fires, screams and horrible scenes you can see all around you, it must be the demon's home in hell - and now yours too. Forever.";
-			now TailName of Player is "DBrute Slave";
-			now FaceName of Player is "DBrute Slave";
-			now SkinName of Player is "DBrute Slave";
-			now BodyName of Player is "DBrute Slave";
-			now CockName of Player is "DBrute Slave";
+			trigger ending "DBrute Slave";
 			end the story saying "You're stuck in hell - there's no coming back from that!";
 		else:
 			say "     Panting and grinning over you, he holds his cock in place inside your ass, creating a seal so none of his cum can escape your distended anus. You groan at the sensation of the hot cum being suffused throughout your limp body, absorbing the demonic corruption. When he finally pulls his softening cock from you, your distended stomach still lets loose a river of hot demon jizz from your ass. Laughing at your broken mortal form, he leaves you to wallow in the pool of steaming demon cum still pouring from your ass. As he disappears into thin air, you still find yourself coughing up globules of his seed. As you stand to gather your belongings and what little dignity you have left, you wonder if you should be concerned by how much you enjoyed being taken by that terrible brute.[mimpregchance]";
@@ -156,11 +148,7 @@ to say DemonBruteVictoryFuck:
 		WaitLineBreak;
 		if DBCaptureQuestVar is 4:
 			say "     The brute stands up, holding you against his broad chest with one massive hand and your asshole still speared on his thick member. As you feel the demon's cum start running out of you, the creature licks you with his long forked tongue. 'I'll just keep fucking you till you're only a whimpering little bitch - and then throw you to the others so they can fill your sloppy holes too! But let's get to more comfortable surroundings first...' With that, your surroundings shimmer and disappear and you find yourself somewhere else. From the fires, screams and horrible scenes you can see all around you, it must be the demon's home in hell - and now yours too. Forever.";
-			now TailName of Player is "DBrute Slave";
-			now FaceName of Player is "DBrute Slave";
-			now SkinName of Player is "DBrute Slave";
-			now BodyName of Player is "DBrute Slave";
-			now CockName of Player is "DBrute Slave";
+			trigger ending "DBrute Slave";
 			end the story saying "You're stuck in hell - there's no coming back from that!";
 		else:
 			say "     Panting and grinning over you, he holds his cock in place inside your ass, creating a seal so none of his cum can escape your distended anus. You groan at the sensation of the hot cum being suffused throughout your limp body, absorbing the demonic corruption. When he finally pulls his softening cock from you, your distended stomach still lets loose a river of hot demon jizz from your ass. Laughing at your broken mortal form, he leaves you to wallow in the pool of steaming demon cum still pouring from your ass. As he disappears into thin air, you still find yourself coughing up globules of his seed. As you stand to gather your belongings and what little dignity you have left, you wonder if you should be concerned by how much you enjoyed being taken by that terrible brute.[mimpregchance]";
@@ -1690,8 +1678,19 @@ instead of sniffing the demon brute:
 
 Section 5 - Endings
 
-when play ends:
-	if BodyName of Player is "demon brute":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"DBrute Slave"	"BadEnd"	"Slave"	DBrute Slave rule	1	false
+"Demon Brute Infection"	"Infection"	""	Demon Brute Infection rule	100	false
+
+This is the DBrute Slave rule:
+	if ending "DBrute Slave" is triggered:
+		say "     Your new reality in hell focuses on satisfying the relentless lusts of your demon brute masters, as well as being shared around for any other hellspawn he feels like allowing a ride...";
+		now Player imprisoned of TheEnd is true;
+
+This is the Demon Brute Infection rule:
+	if Player has a body of "Demon Brute":
+		trigger ending "Demon Brute Infection";
 		if humanity of Player < 10:
 			say "     You find yourself overcome with lust, your balls simply aching, ready to burst. You need to find some relief, and soon! You go on a proper rampage, pushing over small trees and walls, and smashing in windows, and generally wreaking havoc. You eventually spot what you want, a woman in her prime. She is a [one of]human-feline mix, with large cat-ears, a tail, and beautiful black fur[or]husky-human mix, with soft white and gray fur and a puffy white-gray tail[at random]. You seize her, and, without much resistance on her part, are able to gain control. You tear her clothes away, revealing her naked, furry body. She seems too overcome with lust to worry about the size of your cock. But, then again, you aren't the only one with a large tool, and you aren't the first to rut with this girl. She wraps her arms and legs around your large body, her wet sex exposed and moistening, ready for your massive meat. You thrust into her without hesitating, and before long the both of you are moaning and grunting two lust-filled monsters mating like the animals they have become. During the ordeal, the girl climaxes several times, each time becoming more intense than the last. You can feel that you are approaching your climax as well, and your grunts become more frequent. Then, as she is hit by her most powerful orgasm yet, her tight sex squeezes your big meat, enough to push you ever the edge. You begin to come, shooting your seed up inside your new bitch. She pants and moans as your cum fills her womb, causing it to swell to a great size. Massive quantities of cum spill out onto the ground beneath your feet, and a constant stream of it is leaking out around your cock. You realize that this ordeal was too much for the girl, and that she has passed out. Since you really enjoyed your time with this girl, you decide to hold onto her as you disappear back to your den, that safe-room you started your journey in. You set up the cot, and then lay her down on it, her pussy still leaking fluid. Months of wild mating later, and she is heavily pregnant with your brood, which gives you the utmost satisfaction.";
 		else:

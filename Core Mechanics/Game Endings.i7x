@@ -178,6 +178,8 @@ to ratetheplayer:
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
 "Player Starvation"	"Death"	"Starvation"	Player Starvation rule	1	false
+"Player has died"	"Death"	""	Player has died rule	1	false
+"Epilogue Intro"	"Epilogue"	""	Epilogue Intro rule	5	false
 
 This is the Player Starvation rule:
 	if thirst of Player >= 100 or hunger of Player >= 100:	[blocking regular endings]
@@ -185,37 +187,17 @@ This is the Player Starvation rule:
 		say "     You have perished from [if hunger of Player >= 100 and thirst of Player >= 100]starvation and thirst[else if hunger of Player >= 100]starvation[else]thirst[end if] and are no more. Your body becomes a meal for another of the more predatory creatures roaming the city.";
 		now Player died of TheEnd is true;
 
-when play ends:
-	if BodyName of Player is "Tigertaur Sex Toy":
-		say "     Even though you try a few times, you never manage to escape the clutches of your tigertaur masters, and servicing them eventually becomes the only reason for your existence, supplanting all other thoughts you might once have had.";
-		stop the action;
-	else if BodyName of Player is "Broken Husky Slut":
-		say "     The alpha husky that captured you, continued to break down both your mind and body. Eventually, he was able to build you into his perfect submissive partner and the fact that you ended up turning into one of the few precious deltas, well that certainly made his bid to rule the husky packs much more assured..";
-		stop the action;
-	else if BodyName of Player is "DBrute Slave":
-		say "     Your new reality in hell focuses on satisfying the relentless lusts of your demon brute masters, as well as being shared around for any other hellspawn he feels like allowing a ride...";
-		stop the action;
-	else if BodyName of Player is "Hunter's Bitch":
-		if Player is female:
-			say "     Having succumbed to the alpha husky's indoctrination, your next few days are spent being fucked again and again, until you are nothing but another husky bitch in Hunter's pack. Still, you only ever play second fiddle to Garnet, whom he is absolutely obsessed by, having gone so far as to search out the movie starlet to take for himself and make her a bitch. Therefore, most of your alpha's time is spent having sex with her. You're drawn into his play with the transformed movie star too, often being ordered to lick cum from her pussy or make out with the woman, with Hunter watching or fucking you as you do so.";
-		else: [male & neuter]
-			if "Male Preferred" is not listed in feats of Player: [can transform to female]
-				say "     Having succumbed to the alpha husky's indoctrination, your next few days are spent being fucked again and again, with the dominant canine gleefully commenting about[if Player is male] your cock shrinking more and more, until [end if]the moment when the flesh of your crotch forms the first folds of a new and virgin pussy. Not that you keep your cherry more than a few minutes, as he takes great pleasure to [']claim['] you fully by humping a heavy load into the virginal womb of yours. Still, you only ever play second fiddle to Garnet, whom he is absolutely obsessed by, spending most of the day having sex with her. You're drawn into his play with the transformed movie star too, often being ordered to lick cum from her pussy or make out with the woman, with Hunter watching or fucking you as you do so.";
-			else: [player can't become female]
-				say "     Having succumbed to the alpha husky's indoctrination, your next few days are spent being fucked again and again, with the dominant canine growling a little about the fact that your gender doesn't seem to want to change at all. Still, he breaks you in good as his bitch-boy, used to taking that thick shaft all the time and serving as his guard for when the dominant male goes all out fucking Garnet. Having gone so far as to search out the movie starlet in the middle of the nanite apocalypse, just to take her for himself and make her a bitch, the man is absolutely obsessed with her. You're drawn into his play with the transformed movie star too, often being ordered to lick his cum from her pussy, with Hunter watching or fucking your ass as you do so.";
-		stop the action;
-	else if BodyName of Player is "Demon Slave":
-		say "     Your new reality in hell focuses on satisfying Skarnoth's every desire - of which there are many, mostly carnal ones. As the overlord of his own little demonic realm, your master has the power to play with your body shape too, transforming you as he wishes to better enjoy breaking you to his will...";
-		stop the action;
-	else if BodyName of Player is "Hell Prisoner":
-		say "     You have delved in far too deep into the demonic realm. Hell has taken you and imprisoned your soul for all eternity. Now you serve only to satisfy the demons['] every whim of any kind, your will broken facing an inevitable fate. There's no hope... nor salvation.";
-		stop the action;
-	else if BodyName of Player is "dead":
-		stop the action;
-	else if humanity of Player < 10 and HP of the player > 0:
+This is the Player has died rule:
+	if ending "Player has died" is triggered:
+		now Player died of TheEnd is true;
+
+This is the Epilogue Intro rule: [The player didn't die or bad ended]
+	if humanity of Player < 10 and HP of the player > 0:
 		if BodyName of Player is "Anthro Dragoness" and HP of Doctor Matt <= 100:
+			trigger ending "Epilogue Intro";
 			say "Following some unknown instinct, you seek out another of your own, and home in on Orthas, the dragon that was guarding the lab. She pets you gently along your neck and makes soothing sounds that has you almost purring. She proves to be a loving and kind mistress and you protect her fiercely for the remainder of your long life.";
 	else:
+		trigger ending "Epilogue Intro";
 		say "You emerge from your harrowing experience with your mind intact, with your [BodyName of Player] form and [FaceName of Player] face.";
 		if BodyName is "Human":
 			say "Despite the traumas set on you, you do your best to fit back in with humanity after the rescue arrives.";
