@@ -91,7 +91,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "superhot" as supersponsor.
+understand "nanowrimo" as supersponsor.
 
 When play ends:
 	clear the screen;

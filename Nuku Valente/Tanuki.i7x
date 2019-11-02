@@ -573,6 +573,7 @@ instead of sniffing Tanuki Mom:
 	say "     She smells as if she applied some slightly over-strong perfume with a mixture of flowers and vanilla. Your sniffing of her prompts a casual flick of her tail. 'Don't make it odd,' she laughs out.";
 	add "TanukiPerfume" to TanukiTopics.
 
+
 instead of conversing the Tanuki Mom:
 	LineBreak;
 	say "What do you want to talk with Tanuki about?";
@@ -583,6 +584,7 @@ instead of conversing the Tanuki Mom:
 	now title entry is "Survival";
 	now sortorder entry is 1;
 	now description entry is "Get some tricks about surviving these harsh times";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Romance";
 	now sortorder entry is 2;
@@ -606,14 +608,6 @@ instead of conversing the Tanuki Mom:
 		now sortorder entry is 3;
 		now description entry is "Suggest that the two of you cook together";
 	[]
-	[
-	choose a blank row in table of fucking options;
-	now title entry is "Fighting";
-	now sortorder entry is 4;
-	now description entry is "Talk about fighting with Boghrim";
-	sort the table of fucking options in sortorder order;
-	]
-	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -629,14 +623,16 @@ instead of conversing the Tanuki Mom:
 			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Cooking"):
+				if (nam is "Survival"):
 					say "[TanukiSurvivalTalk]";
 				if (nam is "Romance"):
 					say "[TanukiRomanceTalk]";
-				if (nam is "Cooking"):
-					say "[TanukiHuntingTalk]";
 				if (nam is "Ladel"):
 					say "[TanukiLadelTalk]";
+				if (nam is "Perfume"):
+					say "[TanukiPerfumeTalk]";
+				if (nam is "Cooking"):
+					say "[TanukiCookingTalk]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -676,9 +672,19 @@ To say TanukiSurvivalTalk:
 		if scalevalue of Player < 4:
 			say "He tucks a furry finger under your chin, lifting it slightly. 'Now, I know I'm not your, you know, original dad, and that's alright. My biologicals are all off that way.' He points to the East. 'I invited them to come along, but they said this place was too far. Maybe I'll find another place that's closer to them? Nevermind me, this is about you!' He pats your shoulders softly. 'Now let's see...'";
 		else:
-			say "He cranes his head back a little to look up at you. 'I've never had such a large child before. It's kind of exciting, to tell you the truth. Don't worry about it though. A good father is a good father, no matter how big or small he might be.' He wags a finger as he talks, nodding to himself. 'Now as for advice...'";		
+			say "He cranes his head back a little to look up at you. 'I've never had such a large child before. It's kind of exciting, to tell you the truth. Don't worry about it though. A good father is a good father, no matter how big or small he might be.' He wags a finger as he talks, nodding to himself. 'Now as for advice...'";
 
+to say TanukiRomanceTalk:
+	say "     ";
+	say "     ";
 
+to say TanukiPerfumeTalk:
+	say "     ";
+	say "     ";
+
+to say TanukiCookingTalk:
+	say "     ";
+	say "     ";
 
 
 to say TanukiLadelTalk:

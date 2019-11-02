@@ -79,7 +79,8 @@ set TIMESTAMP=%gmt_hour%%gmt_minute%
 for /f "usebackq tokens=3*" %%a in (`reg query "HKLM\SOFTWARE\WOW6432Node\Silver Games LLC\flexible" /v "Path"`) do (
 	set _FS_ROOT=%%a %%b
 )
-set "FS_INSTALLDIR=!_FS_ROOT!Flexible Survival\Release"
+call :Trim _FS_ROOT_TRIMMED !_FS_ROOT!
+set "FS_INSTALLDIR=%_FS_ROOT_TRIMMED%Flexible Survival\Release"
 
 :: Copies the gblorb to the FS_INSTALLDIR and adds an UTC based timestamp
 set "FS_GBLORB=Flexible Survival %DATESTAMP%-%TIMESTAMP%.gblorb"
@@ -96,5 +97,10 @@ goto :eof
 set _var=%1
 set _value=%2
 set gmt_!_var!=!_value!
+goto :eof
+
+:Trim
+set Params=%*
+for /f "tokens=1*" %%a in ("!Params!") do set %1=%%b
 goto :eof
 :: --------------------------------------------
