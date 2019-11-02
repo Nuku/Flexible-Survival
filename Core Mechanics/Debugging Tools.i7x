@@ -24,25 +24,35 @@ understand "debug" as debugmode.
 
 carry out debugmode:
 	if debugactive is 0:
-		say "NPC DEBUG MODE ACTIVATED.";
-		if "Debugger" is not listed in Traits of Player:
-			add "Debugger" to Traits of Player;
-		now debugactive is 1;
+		activate debug mode;
 	else:
-		say "NPC DEBUG MODE DISABLED.";
-		if "Debugger" is listed in Traits of Player:
-			remove "Debugger" from Traits of Player;
-		now debugactive is 0;
+		disable debug mode;
 
 setdebuglevel is an action applying to one topic.
 understand "debuglevel [text]" as setdebuglevel.
 
+to activate debug mode:
+	say "NPC DEBUG MODE ACTIVATED.";
+	if "Debugger" is not listed in Traits of Player:
+		add "Debugger" to Traits of Player;
+	now debugactive is 1;
+
+to disable debug mode:
+	say "NPC DEBUG MODE DISABLED.";
+	if "Debugger" is listed in Traits of Player:
+		remove "Debugger" from Traits of Player;
+	now debugactive is 0;
+
 carry out setdebuglevel:
 	let newlevel be 0;
 	now newlevel is numerical value of topic understood;
-	if newlevel < 1 or newlevel > 6:
-		say "ERROR: level has to be between 1 and 6!";
+	if newlevel < 0 or newlevel > 6:
+		say "ERROR: level has to be between 0 and 6!";
+	else if newlevel is 0:
+		disable debug mode; [Always give feedback, even if already disabled]
 	else:
+		if debugactive is 0:
+			activate debug mode;
 		now debuglevel is newlevel;
 		say "Debug level set to [debuglevel]";
 

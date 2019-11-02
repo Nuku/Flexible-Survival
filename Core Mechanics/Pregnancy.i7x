@@ -254,7 +254,7 @@ to detailbirth:
 		if Player is female and pregtype < 2:
 			if "All-Mother's Blessing" is listed in feats of Player:
 				say "     A radiant glow starts to spread over your belly, settling into the shape of a five-pointed star. Any sense of discomfort brought on by the impending birth vanishes without a trace as pleasant warmth suffuses your whole being. All on their own, your arms come up in a holding pose, and as they do, the [if ovipregnant is true]large egg that has[else]two wolf pups that have[end if] been growing inside of you suddenly appear in your grasp. After such an effortless birth, you joyfully hug your offspring in a caring embrace.";
-			else if Playercanub is true:
+			else if Player can UB:
 				say "     The powerful muscles in your altered, stretchable cunt have little difficulty with the birth, an act that becomes quite pleasurable for you. You simply recline and relax, letting your instincts take over as you easily push out the [if ovipregnant is true]large egg[else]two slimy wolf pups[end if] from your [bodytype of Player] body. They slip out almost effortlessly along your well-lubricated tunnel, ready to be welcomed in your caring embrace.";
 			else if Cunt Tightness of Player > 10:
 				say "     Your [descr] sex almost laughs at the idea of birth. You recline and concentrate, and your mutated [bodytype of Player] body pushes the [if ovipregnant is true]large egg[else]two slimy wolf pups[end if] almost effortlessly out of your well-lubricated tunnel, ready to be welcomed in your caring embrace.";
@@ -290,11 +290,11 @@ to detailbirth:
 			say "     There is a shifting in your lower belly as your special incubation chamber opens, releasing something large and heavy into your bowels. With the completion of your unusual pregnancy fast approaching, you settle without much choice, breathing quickly as your body spasms in readiness.";
 		follow cunt descr rule;
 		if Player is female and pregtype < 2:
-			if Playercanub is true and ubpreg is not "false":
+			if Player can UB and ubpreg is not "false":
 				say "     Your altered, stretchable cunt with its powerful muscles quiver in echo to the pleasure you felt when it earlier consumed the [ubpreg] now leaving your womb[if ovipregnant is true] as a large egg[end if]. You recline and concentrate, feeling your mutated [bodytype of Player] body easily slipping your new child from it. Again, there is some effort, but it is far easier as they slip along your well-lubricated tunnel to enter your caring embrace.";
 			else if "All-Mother's Blessing" is listed in feats of Player:
 				say "     A radiant glow starts to spread over your belly, settling into the shape of a five-pointed star. Any sense of discomfort brought on by the impending birth vanishes without a trace as pleasant warmth suffuses your whole being. All of their own, your arms come up in a holding pose, and as they do, the [if ovipregnant is true]large egg[else]child[end if] that has been growing inside you suddenly appears in your grasp. After such an effortless birth, you joyfully hug your offspring in a caring embrace.";
-			else if Playercanub is true:
+			else if Player can UB:
 				say "     Your altered, stretchable cunt with its powerful muscles have little difficulty with the birth, an act that becomes quite pleasurable for you. You simply recline and relax, letting your instincts take over, slipping the [if ovipregnant is true]large egg[else]child[end if] easily free from your [bodytype of Player] body. They slip almost effortlessly along your well lubricated tunnel to reach your caring embrace.";
 			else if Cunt Tightness of Player > 10:
 				say "     Your [descr] sex almost laughs at the idea of birth. You recline and concentrate and can feel your mutated [bodytype of Player] body easily slipping the [if ovipregnant is true]large egg[else]child[end if] free of you, slipping almost effortlessly along your well lubricated tunnel to reach your caring embrace.";
@@ -308,7 +308,7 @@ to detailbirth:
 				decrease morale of Player by 10;
 		else:
 			let ubpreggers be 0;
-			if Playercanub is true and ubpreg is not "false", now ubpreggers is 1;
+			if Player can UB and ubpreg is not "false", now ubpreggers is 1;
 			if "All-Mother's Blessing" is listed in feats of Player:
 				say "     A radiant glow starts to spread over your belly, settling into the shape of a five-pointed star. Any sense of discomfort brought on by the impending birth vanishes without a trace as pleasant warmth suffuses your whole being. All of their own, your arms come up in a holding pose, and as they do, the large egg[if ubpreggers is 1] now encapsulating the engulfed [ubpreg][end if] that had been inside you suddenly appears in your grasp. After such an effortless birth, you joyfully hug your offspring in a caring embrace.";
 				increase mpregcount by 1;
@@ -390,7 +390,7 @@ To Birth:
 		now HasMelanism is true;
 	[On to the birthing]
 	LineBreak;
-	if (playercanub is true and ubpreg is not "false") or snakehijack > 0: [Unbirth and Snake Hijack]
+	if (Player can UB and ubpreg is not "false") or snakehijack > 0: [Unbirth and Snake Hijack]
 		if Player is female and pregtype < 2:
 			if Nipple Count of Player > 0:
 				say "     Your child [if ovipregnant is true]pushes free of the flexible shell enclosing it and you gather it into your arms so it may suckle[else]suckles[end if] at your [breast size desc of Player] breast. Strange sensations sweep over your [bodytype of Player] body as it drinks down its new mother's milk. Having regressed partially during their time in your womb, they grow back to maturity while suckling[if IsFeral is true], giving you a dark sense of fulfillment[else], further strengthening their bond to you[end if]. They have not been left unchanged by their incubation within you";
@@ -589,7 +589,7 @@ To Birth:
 		say "[bold type]Please name your ([ChildPersonality], [ChildGender]) child: [roman type]";
 		get typed command as playerinput;
 		now Name of Child is playerinput;
-		if (playercanub is true and ubpreg is not "false") or snakehijack > 0: [Unbirth and Snake Hijack]
+		if (Player can UB and ubpreg is not "false") or snakehijack > 0: [Unbirth and Snake Hijack]
 			if IsFeral is true:
 				if snakehijack > 0:
 					say "     Retaining its feral nature, it departs to stalk the city once more, leaving you to recover from the ordeal of childbirth. At the very least, its regression doesn't necessarily raise the number of creatures in the city, but you worry over who might end up a victim to that creature next";
@@ -747,7 +747,7 @@ to fimpregchance:		[Female-particular Pregnancy Roll]
 		if "Fang's Mate" is listed in feats of Player, decrease target by 10;
 		if inheat is true, decrease target by 3;
 		if inheat is true and heatlevel is 3, decrease target by 1;
-		if Playercanub is true, increase target by 1;
+		if Player can UB, increase target by 1;
 		choose row MonsterID from the Table of Random Critters;
 		if a random chance of 2 in target succeeds:
 			if callovi is true or ovipreglevel is 3:
@@ -774,7 +774,7 @@ to mimpregchance:		[MPreg-particular Pregnancy Roll]
 		if "Fang's Mate" is listed in feats of Player, decrease target by 10;
 		if inheat is true, decrease target by 3;
 		if inheat is true and heatlevel is 3, decrease target by 1;
-		if Playercanub is true, increase target by 1;
+		if Player can UB, increase target by 1;
 		choose row MonsterID from the Table of Random Critters;
 		if a random chance of 2 in target succeeds:
 			if callovi is true or ovipreglevel is 3:
@@ -800,7 +800,7 @@ to selfimpregchance:
 		if "Fertile" is listed in feats of Player, decrease target by 3;
 		if inheat is true, decrease target by 3;
 		if inheat is true and heatlevel is 3, decrease target by 1;
-		if Playercanub is true, increase target by 1;
+		if Player can UB, increase target by 1;
 		choose row MonsterID from the Table of Random Critters;
 		if a random chance of 2 in target succeeds:
 			if callovi is true or ovipreglevel is 3:

@@ -764,11 +764,9 @@
 |Stripes|Alt Vore|20140908213124/7659:Mon 8 September 2014 21:31|indexing|
 |Stripes|Alt Vore|VoreExclusion|marker|
 |Stripes|Alt Vore|Inner Predator|scavevent|
-|Stripes|Alt Vore|playercanvore|value|
 |Stripes|Alt Vore|vorecount|value|
 |Stripes|Alt Vore|vorechoice|value|
 |Stripes|Alt Vore|vorespecial1|value|
-|Stripes|Alt Vore|playercanub|value|
 |Stripes|Alt Vore|ubcount|value|
 |Stripes|Alt Vore|ubchoice|value|
 |Stripes|Alt Vore|ubspecial1|value|

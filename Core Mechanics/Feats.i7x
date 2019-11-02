@@ -239,7 +239,7 @@ instead of addfeating the basic feats:
 		addfeat "Spartan Diet" with "You don't need 2 liters of water and great feasts to keep you going! You become thirsty and hungry slower.";
 	if featunlock is 1:	[available after hospital quest]
 		addfeat "Vore Predator" with "Your hunger has gone out of control. Let your foes beware!";
-	if "Vore Predator" is listed in feats of Player and "Iron Stomach" is listed in feats of Player:
+	if (Player can vore or Player can UB) and "Iron Stomach" is listed in feats of Player:
 		addfeat "Safe Appetite" with "You will not gain infection from consuming your foes.";
 	if stamina of Player > 14:
 		addfeat "Toughened" with "You take less damage than others (-20% damage)";
@@ -327,7 +327,6 @@ This is the gainfeat rule:
 			say "     Having gained the [']Instinctive Combat['] feat, you now have access to the 'Auto Attack' command. These are the same as picking the same option over and over again during combat. No different results, just less typing for faster gameplay.[line break]Type [bold type][link]auto attack normal[end link][roman type] for the default method of combat (choose each action).[line break]Type [bold type][link]auto attack berserk[end link][roman type] to always attack in combat.[line break]Type [bold type][link]auto attack pass[end link][roman type] to always pass in combat.[line break]Type [bold type][link]auto attack coward[end link][roman type] to always flee in combat.[line break]Type [bold type][link]auto attack submit[end link][roman type] to always submit in combat.[line break]You may review these commands at any time by using the [link]help[end link] command.";
 		if nam is "Vore Predator":
 			say "     Having gained the [']Vore Predator['] feat, you can now access the [bold type]vore menu[roman type] command. It can also be accessed using Trixie's cheat menu ([bold type]iwannacheat[roman type]). It is used for adjusting vore-related game settings.";
-			now playercanvore is true;
 		if nam is "Mugger":
 			say "     You will now get a flat rate increase to item drops from monsters based on your perception. This ability can be can turned on or off by using the [bold type]mugger[roman type] command and is currently [bold type][if muggerison is true]ON[else]OFF[end if][roman type].";
 		if nam is "Vampiric":

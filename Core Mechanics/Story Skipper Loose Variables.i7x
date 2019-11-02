@@ -3470,10 +3470,6 @@ to TruthVariableSave:
 			now TruthVarValue entry is ovipregnant;
 		-- "pewtertorsosuppress":
 			now TruthVarValue entry is pewtertorsosuppress;
-		-- "playercanub":
-			now TruthVarValue entry is playercanub;
-		-- "playercanvore":
-			now TruthVarValue entry is playercanvore;
 		-- "PlayerPigBodied":
 			now TruthVarValue entry is PlayerPigBodied;
 		-- "ppatt":
@@ -7173,10 +7169,6 @@ to VariableTruthLoad:
 					now ovipregnant is TruthVarValue entry;
 				-- "pewtertorsosuppress":
 					now pewtertorsosuppress is TruthVarValue entry;
-				-- "playercanub":
-					now playercanub is TruthVarValue entry;
-				-- "playercanvore":
-					now playercanvore is TruthVarValue entry;
 				-- "PlayerPigBodied":
 					now PlayerPigBodied is TruthVarValue entry;
 				-- "ppatt":
