@@ -108,6 +108,8 @@ to EvaChoice:	[Choices for subsequent meetings]
 	else if calcnumber is 2:	[Anal Vore]
 		say "     'That's what I like to hear,' Eva says as her tail makes it way toward you. The appendage is unusually long, allowing it to snake around you and effectively wrap loop after loop around you until more than half of you is coiled up. 'Now come here and let me play with you,' Eva commands before she suddenly tugs you forward, causing you to lose your balance and fall to the sand. You gasp a little when the coils trapping you briefly squeeze, only to moan a second later when a section of the shark's tail snakes between your legs to rub against your [if player is male]cock[smn][else if player is female]cunt[sfn][else]crotch[end if]. Distracted by the teasing appendage fondling you, Eva starts pulling her tail, along with you, back to her. You can either wait for Eva to drag you to her, or struggle out of her tail if you want to escape the horny shark's embrace.";
 		WaitLineBreak;
+		now boundsegment is 1;
+		now struggleatt is 2;
 		EvaAnalBind;
 	else if calcnumber is 3:	[Leave]
 		say "     The flirty grin Eva is wearing instantly disappears when you tell her that you're not interested in playing with her, replacing it with a slight frown. However, the shark soon adopts a grin again, although one more subdued than earlier. 'Well, it's your loss. I would've shown you a heck of a time, but, hey, I get it that sometimes you're not in the mood or have things to do. Just make sure to come back when you're ready to have some fun again. I'll be waiting, cutie.'";
