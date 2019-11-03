@@ -1057,7 +1057,6 @@ to say VillaFightVsHunter2:
 				say "     Despite your exhaustion, you are of ready enough mind to tune out the alpha husky's brainwashing commands. Thinking of everything and anything you can instead, you have to wait through quite a while of him indoctrinating Garnet, up to the point at which his shaft eventually softens enough to slip out of your pussy. Not long after that, both of them get off you and Hunter throws your equipment unceremoniously onto your stretched-out, sticky form. 'You weren't a half bad lay, but I got a really high class bitch to finish training. I'd rather fuck her all day and breed some pups than waste my time with you. Get up, and out!' With that said, the alpha husky laughs as you get up and start to stumble to the door, aching all over. He's not done with his cruel sport after all though, as the next thing you feel his foot-paw on your rump, giving you a kick that sends you sprawling on the floor!";
 				say "     Laughing, Hunter follows you and keeps giving you light shoves with his paw, all the while jeering, 'I said get out, you worthless bitch. Too stupid to pot one foot in front of the other, eh?' You're on your knees, collecting your stuff when you realize that among the fallen items is the prize of your mission here - the collar that Diego sent you to get. You grab for it, only to have it wrenched out of your hand. 'You wanted this so badly, so you should wear it! Show the world just how much of a slut you are!' ";
 				increase carried of diego's heirloom collar by 1;
-				now XP of Diego is 6; [got the collar after fight, even though the player lost]
 				let OtherCollarPresent be false;
 				repeat with z running through equipped equipment:
 					if slot of z is "neck":
@@ -1071,7 +1070,7 @@ to say VillaFightVsHunter2:
 				WaitLineBreak;
 				say "     Hunter continues to harass you all the way to the ladder you left standing at the boundary wall. He gruffly commands that you climb over the wall, grumbling as you're not quite fast enough to comply. As you reach the top and crouch high on the brick barrier to catch your breath, the man takes hold of the ladder and shoves it right at you, pushing you to tumble off the wall to the other side. You land on top of some bushes, which is a mixed blessing as they soften your fall, yet have a few branches that come close to impaling you. Wounded and hurting, you get back to your feet and flee from the neighborhood. Only when you have gained some distance do you stop and reach up to your throat, feeling over the collar that you've obtained for Diego. Not quite in the way originally planned, but you've got it at least.";
 				PlayerWounded 30;
-				now XP of Diego is 98; [lost/fled]
+				now XP of Diego is 6; [got the collar after fight, even though the player lost]
 			else:
 				say "     Even though you're not the prime target of Hunter's indoctrination, in your current state of exhaustion, still with the shaft of the alpha husky inside your body and his massive load doing its best to impregnate you, his words find fertile ground in your mind. You're his bitch and belong to the alpha, that is made clear to you again and again, until it is engraved into your mind. Then, when the dominant male eventually demands for Garnet to give him his due as her alpha, you join the woman in her refrain of being his. Hunter is somewhat surprised, but nonetheless quite pleased at having yet another obedient bitch to enjoy, and he adds you to his pack.";
 				now BodyName of Player is "Hunter's Bitch";
@@ -1091,7 +1090,6 @@ to say VillaFightVsHunter2:
 				say "     Despite your exhaustion, you are of ready enough mind to tune out the alpha husky's brainwashing commands. TThinking of everything and anything you can instead, you have to wait through quite a while of him indoctrinating Garnet, up to the point at which his shaft eventually softens enough to slip out of your well-bred asshole. Not long after that, both of them get off you and Hunter throws your equipment unceremoniously onto your stretched-out, sticky form. 'I'm half minded to keep working on you till you're a nice and subby bitch, but then... why go through the trouble if I have the most beautiful husky of all here already. I'd rather fuck her all day and breed some pups than waste my time with you. Get up, and out!' With that said, the alpha husky laughs as you get up and start to stumble to the door, aching all over. He's not done with his cruel sport after all though, as the next thing you feel his his foot-paw on your rump, giving you a kick that sends you sprawling on the floor!";
 				say "     Laughing, Hunter follows you and keeps giving you light shoves with his paw, all the while jeering, 'I said get out, you worthless bitch. Too stupid to pot one foot in front of the other, eh?' You're on your knees, collecting your stuff when you realize that among the fallen items is the prize of your mission here - the collar that Diego sent you to get. You grab for it, only to have it wrenched out of your hand. 'You wanted this so badly, so you should wear it! Show the world just how much of a slut you are!' ";
 				increase carried of diego's heirloom collar by 1;
-				now XP of Diego is 6; [got the collar after fight, even though the player lost]
 				let OtherCollarPresent be false;
 				repeat with z running through equipped equipment:
 					if slot of z is "neck":
@@ -1105,12 +1103,11 @@ to say VillaFightVsHunter2:
 				WaitLineBreak;
 				say "     Hunter continues to harass you all the way to the ladder you left standing at the boundary wall. He gruffly commands that you climb over the wall, grumbling as you're not quite fast enough to comply. As you reach the top and crouch high on the brick barrier to catch your breath, the man takes hold of the ladder and shoves it right at you, pushing you to tumble off the wall to the other side. You land on top of some bushes, which is a mixed blessing as they soften your fall, yet have a few branches that come close to impaling you. Wounded and hurting, you get back to your feet and flee from the neighborhood. Only when you have gained some distance do you stop and reach up to your throat, feeling over the collar that you've obtained for Diego. Not quite in the way originally planned, but you've got it at least.";
 				PlayerWounded 30;
-				now XP of Diego is 98; [lost/fled]
+				now XP of Diego is 6; [got the collar after fight, even though the player lost]
 			else:
 				say "     Even though you're not the prime target of Hunter's indoctrination, in your current state of exhaustion, still with the shaft of the alpha husky inside your body and his massive load squishing around in your chute, the husky's words find fertile ground in your mind. You're his bitch and belong to the alpha, that is made clear to you again and again, until it is engraved into your mind. But then, when his shaft eventually softens enough to slip out of your well-bred asshole, all the husky does is grabbing your equipment unceremoniously throwing it onto your stretched-out, sticky form. 'I'm half minded to keep working on you till you're a nice and subby bitch, but then... why go through the trouble if I have the most beautiful husky of all here already. Get up, and out!' Confusion at being shoved away like this by the man you belong to gives way to blind obedience, as it's not your place to think, just to obey.";
 				say "     With that said, the alpha husky laughs as you scramble to obey, getting up and starting to stumble to the door, aching all over. He's not done with his cruel sport though, as the next thing you feel his foot-paw on your rump, giving you a kick that sends you sprawling on the floor! Laughing, Hunter follows you and keeps giving you light shoves with his paw, all the while jeering, 'I said get out, you worthless bitch. Too stupid to pot one foot in front of the other, eh?' You're on your knees, collecting your stuff when you realize that among the fallen items is the prize of your mission here - the collar that Diego sent you to get. You grab for it, only to have it wrenched out of your hand. 'You wanted this so badly, so you should wear it!' ";
 				increase carried of diego's heirloom collar by 1;
-				now XP of Diego is 6; [got the collar after fight, even though the player lost]
 				let OtherCollarPresent be false;
 				repeat with z running through equipped equipment:
 					if slot of z is "neck":
@@ -1194,8 +1191,7 @@ to say DCollarUse:
 		now diego's heirloom collar is equipped;
 		add "Diego's Bitch" to Traits of Player;
 
-
-instead of navigating Park Entrance while (XP of Diego is 98 or XP of Diego is 3 or XP of Diego is 4):
+instead of navigating Park Entrance while (XP of Diego is 98 or (XP of Diego > 2 and XP of Diego < 7)):
 	say "[NavCheck Park Entrance]";
 	if NavCheckReturn is false, stop the action;
 	move player to Park Entrance;
@@ -1204,6 +1200,9 @@ instead of navigating Park Entrance while (XP of Diego is 98 or XP of Diego is 3
 	if XP of Diego is 6 and diego's heirloom collar is equipped: [Hunter put the collar on the player]
 		say "the collar around your neck. Then a wide grin starts spreading over his muzzle. You explain that Hunter kinda kicked your ass and then put the collar on you. Rather than show sympathy with your pain, Diego chuckles openly, then says, 'And he just let you go after? Hah, Hunter never was the brightest tool in the shed!'";
 		say "[DiegoCollarWearingAftermath]";
+	else if XP of Diego is 6:
+		say "your tense expression grin. You explain that Hunter put it on you before he chased you away and that you had a hell of a time getting it off. Diego seems puzzled at your words and asks, [bold type]'How the fuck did you get rid of the collar? That's supposed to be impossible! Please report what you did on the FS Discord!'[roman type][line break]";
+		now XP of Diego is 97; [player lost the collar somehow?]
 	else if diego's heirloom collar is equipped:
 		say "the collar around your neck. Then a wide grin starts spreading over his muzzle. You explain that you kinda wanted to try out how it feels around your neck, and that you didn't really feel like taking it off ever since. Diego chuckles at your words and says, 'You're just aching to please, aren't you? This is working out even better than I thought!'";
 		say "[DiegoCollarWearingAftermath]";
@@ -1247,8 +1246,12 @@ to say DiegoCollarWearingAftermath:
 		now Cock Count of Player is 0;
 		now Cock Length of Player is 0;
 		now Ball Size of Player is 0;
-		FeatGain "Always A Pussy";
+		if "Male Preferred" is listed in Feats of Player:
+			FeatLoss "Male Preferred";
+		if "Herm Preferred" is listed in Feats of Player:
+			FeatLoss "Herm Preferred";
 		FeatGain "Female Preferred";
+		FeatGain "Always A Pussy";
 	else if player is female:
 		say "Then his hand moves down to your crotch, stroking over your nether lips. 'Very nice. Now be a good puppy and get into position, will you?' A paw-hand pressing down lightly on your shoulder guides you to sink down on all fours, presenting yourself in doggy-style position. Kneeling behind you and resting a hand on your ass as he leans down to sniff your crotch, Diego chuckles amusedly.";
 		WaitLineBreak;
@@ -1256,8 +1259,12 @@ to say DiegoCollarWearingAftermath:
 		say "     As the trickster starts to fuck you in a steady rhythm, your low moans at being penetrated gradually become higher in pitch with every new thrust of his, proceeding to make you more of a female bit by bit. He loves pushing his length into your increasingly aroused cunt, sliding all the way to the knot in the gripping, dripping chalice. You can't help but pant hotly as you feel the coyote's wet tongue brush over your nape, followed by a more primal shudder as his teeth lightly nip at your bared neck. Somehow, this physical show of dominance has an even bigger effect than him entering you with his erection, instilling deep instincts of submission and belonging as your mind adjusts to be new female plaything. After a moment, he lets go of your nape again, nuzzling his muzzle against the crook of your neck as he keeps fucking with deep thrusts. You feel Diego's tongue lick you, followed by him grunting into your ear, 'Getting kinda close babe!'";
 		WaitLineBreak;
 		say "     You know just how to react to that, flexing your internal muscles around the coyote's shaft and making him groan in lust. 'Now that's what I call a good bitch!' he howls in arousal, taking out all the stops and really pounding into you now, soon burying the full length of his manhood inside your body one last time as it starts to throb, flooding your depths with his potent seed.' Your arousal skyrockets right along with his and femcum gushes around his thrusting shaft as you feel spurt after spurt of cum being pumped into you. The feeling of tightness increases as his knot swells up to lock his dick and cum inside your pussy, making sure you'll be soaking in his load for some time to come. As Diego and yourself sink down on the ground, connected by the hip, he proceeds to whisper more commands in your ear, intending to make sure that you stay a proper little plaything for the future too.";
-		FeatGain "Always A Pussy";
+		if "Male Preferred" is listed in Feats of Player:
+			FeatLoss "Male Preferred";
+		if "Herm Preferred" is listed in Feats of Player:
+			FeatLoss "Herm Preferred";
 		FeatGain "Female Preferred";
+		FeatGain "Always A Pussy";
 	else: [neuter]
 		say "Then his hand moves down to stroke over your crotch, not finding much there. 'No, this won't do, I'm afraid. Some would just make do with the ass, but I'd much rather you have a nice and ready pussy! Now be a good puppy and get into position, will you?' A paw-hand pressing down lightly on your shoulder indicates that both of the things he said were a command, and you sink down on all fours, presenting yourself in doggy-style position while a strange tingle starts to spread over your crotch. Kneeling behind you and resting a hand on your ass as he leans down to watch the transformation, Diego chuckles amusedly.";
 		WaitLineBreak;
@@ -1268,8 +1275,12 @@ to say DiegoCollarWearingAftermath:
 		now Cunt Count of Player is 1;
 		now Cunt Depth of Player is 8;
 		now Cunt Tightness of Player is 1;
-		FeatGain "Always A Pussy";
+		if "Male Preferred" is listed in Feats of Player:
+			FeatLoss "Male Preferred";
+		if "Herm Preferred" is listed in Feats of Player:
+			FeatLoss "Herm Preferred";
 		FeatGain "Female Preferred";
+		FeatGain "Always A Pussy";
 	now XP of Diego is 7; [player has the collar on, got fucked]
 
 to say DiegoCollarDeliveryAftermath:

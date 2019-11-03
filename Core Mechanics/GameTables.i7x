@@ -10,7 +10,7 @@ with 1000 blank rows
 
 Table of GameEvents
 Name(text)	ResolveState (text)	ActiveState(text)	Resolution(number)	SituationArea(text)
-with 1000 blank rows
+with 2000 blank rows
 
 Table of GameRooms
 Name(text)	Reachability(text)	ExplorationStatus(text)	RestSafety(text)

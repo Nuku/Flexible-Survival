@@ -5270,7 +5270,7 @@ This is the self examine rule:
 		-- 4:
 			say "are superhumanly tall.";
 		-- 5:
-			say "enormous in size, a lot larger than any regular human ever could be.";
+			say "are enormous in size, a lot larger than any regular human ever could be.";
 	[ Infection Descriptions Below   ]
 	if Player is FullyNewTypeInfected and NewTypeInfectionActive is true: [new infection on player and activated]
 		say "Pulling out a small mirror, you check yourself over from head to toe, attempting to make sense of your current form. Your head and face resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance. [if Player is HasBeard]You have a [Hair Color of Player] [Beard Style of Player]. [end if][if Player is HasHeadHair]On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style. [end if]Inspecting your [Mouth Length Adjective of Player] mouth with both the mirror and your digits, you attempt to look past your [Tongue Length of Player] inch long, [Tongue Color of Player], [Tongue Adjective of Player] tongue and into your [Mouth Length Adjective of Player] throat. [if Player is HasHeadAdornments]Before moving on from your head, you give your [Head Adornments of Player] a proud glance followed by a light caress. [end if][line break]";

@@ -1522,34 +1522,36 @@ dolchecking is an action applying to one number.
 
 check dolchecking:
 	if location of Player is not Castle Throne Room, say "You don't see those here." instead;
+	let x be the number understood;
+	let status be "";
+	if x > 12:
+		say "There are only a dozen to search." instead;
+	if x < 1:
+		say "Which one did you want to search?" instead;
 
 carry out dolchecking: [Picks events from dolphinlist, defined earlier in the document]
 	let x be the number understood;
 	let status be "";
-	if x > 12:
-		say "There are only a dozen to search.";
-	else:
-		let status be entry x of dolphinList;
-		if status is "A":
+	let status be entry x of dolphinList;
+	if status is "A":
+		say "[dolcheckA]";
+	else if status is "B":
+		now entry x of dolphinlist is "A";
+		say "[dolcheckB]";
+	else if status is "C": [Does not generate another empty suit since the victim isn't removed]
+		say "[dolcheckC]";
+	else if status is "D":
+		now entry x of dolphinlist is "A";
+		say "[dolcheckD]";
+	else if status is "E":
+		if HP of Bubble is 2: [No need to check for 1, since navigating to the castle inherently sets this to 2]
+			say "[dolcheckE]";
+		else if HP of Bubble > 2 and HP of Bubble < 99: [Adjusts event after Bubble is saved]
 			say "[dolcheckA]";
-		else if status is "B":
-			now entry x of dolphinlist is "A";
-			say "[dolcheckB]";
-		else if status is "C": [Does not generate another empty suit since the victim isn't removed]
-			say "[dolcheckC]";
-		else if status is "D":
-			now entry x of dolphinlist is "A";
+		else: [Adjusts event after Bubble is lost]
 			say "[dolcheckD]";
-		else if status is "E":
-			if HP of Bubble is 2: [No need to check for 1, since navigating to the castle inherently sets this to 2]
-				say "[dolcheckE]";
-			else if HP of Bubble > 2 and HP of Bubble < 99: [Adjusts event after Bubble is saved]
-				say "[dolcheckA]";
-			else: [Adjusts event after Bubble is lost]
-				say "[dolcheckD]";
-		else:
-			say "Error - unknown variation.";
-
+	else:
+		say "Error - unknown variation.";
 
 to dolboundstate:
 	let partialengulf be 0;

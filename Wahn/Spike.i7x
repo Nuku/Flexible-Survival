@@ -2,75 +2,78 @@ Version 2 of Spike by Wahn begins here.
 [Version 1 - New Character - Wahn]
 [Version 2 - New Naming Rules, Anal Scenes - Wahn]
 
-[ HP of Spike                                      ]
-[   0: not met yet                                 ]
-[   1: recruited                                   ]
-[  99: sent into the city                          ]
-[ 100: sent back to Alexandra                      ]
+[ HP of Spike                                                ]
+[   0: not met yet                                           ]
+[   1: recruited                                             ]
+[  99: sent into the city                                    ]
+[ 100: sent back to Alexandra                                ]
 
-[ MaxHP of Spike - who is his daddy?               ]
-[   1: Player                                      ]
-[   2: Fang                                        ]
-[   3: Korvin                                      ]
-[   4: Carl                                        ]
-[   5: Brutus                                      ]
-[   6: Karel                                       ]
-[   7: Isaac                                       ]
-[   8: Random farmhand horsemen                    ]
+[ MaxHP of Spike - who is his daddy?                         ]
+[   1: Player                                                ]
+[   2: Fang                                                  ]
+[   3: Korvin                                                ]
+[   4: Carl                                                  ]
+[   5: Brutus                                                ]
+[   6: Karel                                                 ]
+[   7: Isaac                                                 ]
+[   8: Random farmhand horsemen                              ]
 
-[ thirst of Spike - what does he call the player?  ]
-[  0: <name of Player>                             ]
-[  1: standard setting - Boss                      ]
-[  2: Don                                          ]
-[  3: Capo                                         ]
-[  4: Kingpin                                      ]
-[  5: Oyabun                                       ]
-[  6: Chief                                        ]
-[ 11: Daddy                                        ]
-[ 12: Dad                                          ]
-[ 13: Stepdaddy                                    ]
-[ 14: Stepdad                                      ]
-[ 15: Master                                       ]
-[ 21: Mommy                                        ]
-[ 22: Mom                                          ]
-[ 23: Stepmommy                                    ]
-[ 24: Stepmom                                      ]
-[ 25: Mistress                                     ]
+[ thirst of Spike - what does he call the player?            ]
+[  0: <name of Player>                                       ]
+[  1: standard setting - Boss                                ]
+[  2: Don                                                    ]
+[  3: Capo                                                   ]
+[  4: Kingpin                                                ]
+[  5: Oyabun                                                 ]
+[  6: Chief                                                  ]
+[ 11: Daddy                                                  ]
+[ 12: Dad                                                    ]
+[ 13: Stepdaddy                                              ]
+[ 14: Stepdad                                                ]
+[ 15: Master                                                 ]
+[ 21: Mommy                                                  ]
+[ 22: Mom                                                    ]
+[ 23: Stepmommy                                              ]
+[ 24: Stepmom                                                ]
+[ 25: Mistress                                               ]
 
-[ Libido of Spike - Spike in subby position        ]
-[  0: nothing yet                                  ]
-[  1: talked into oral service / BJ                ]
-[  2: anal virginity taken (nicely)                ]
-[  3: repeat anal sex (nicely)                     ]
-[  4: nothing yet                                  ]
-[ 21: pressured into oral service / BJ             ]
-[ 22: anal virginity taken (strict)                ]
-[ 23: repeat anal sex (strict)                     ]
-[ 24: nothing yet                                  ]
-[ 41: forced into oral service / BJ                ]
-[ 42: anal virginity taken (forcefully)            ]
-[ 43: repeat anal sex (forceful)                   ]
-[ 44: nothing yet                                  ]
+[ Libido of Spike - Spike in subby position                  ]
+[  0: nothing yet                                            ]
+[  1: talked into oral service / BJ                          ]
+[  2: anal virginity taken (nicely)                          ]
+[  3: repeat anal sex (nicely)                               ]
+[  4: nothing yet                                            ]
+[ 21: pressured into oral service / BJ                       ]
+[ 22: anal virginity taken (strict)                          ]
+[ 23: repeat anal sex (strict)                               ]
+[ 24: nothing yet                                            ]
+[ 41: forced into oral service / BJ                          ]
+[ 42: anal virginity taken (forcefully)                      ]
+[ 43: repeat anal sex (forceful)                             ]
+[ 44: nothing yet                                            ]
 
-[ lust of Spike - sex tracking                     ]
-[  0: never had sex with the player                ]
-[  1: got blown by the player                      ]
-[  2: fucked the player's pussy                    ]
-[  3: fucked the player's ass                      ]
-[  4: fucked the player's pussy + ass              ]
+[ lust of Spike - sex tracking                               ]
+[  0: never had sex with the player                          ]
+[  1: got blown by the player                                ]
+[  2: fucked the player's pussy                              ]
+[  3: fucked the player's ass                                ]
+[  4: fucked the player's pussy + ass                        ]
 
-[ Intelligence - transformation knowledge          ]
-[  0: never discussed anything                     ]
-[  0: never discussed anything                     ]
-[  0: never discussed anything                     ]
+[ Intelligence - transformation knowledge                    ]
+[  0: never discussed anything                               ]
+[  0: never discussed anything                               ]
+[  0: never discussed anything                               ]
 
-[ Energy - Relationship with Tehuantl              ]
-[   0: never met                                   ]
-[   1: they're training                            ]
-[   2: Spike got a BJ, player watched              ]
-[   3: Spike got a BJ, player didn't watch         ]
-[ 100: Player stopped things cold between them     ]
-
+[ Energy - Relationship with Tehuantl                        ]
+[   0: never met                                             ]
+[   1: they're training                                      ]
+[   2: Spike got a BJ, player watched                        ]
+[   3: Spike got a BJ, player didn't watch                   ]
+[   4: shared jerking, player watched                        ]
+[   5: shared jerking, player did not watch                  ]
+[   6: Tehuantl has permission t get fucked by Spike         ]
+[  50: Player commanded T to just have oral from now on      ]
+[ 100: Player stopped things cold between them               ]
 
 thirst of Spike is usually 1. [standard setting change]
 MaxHP of Spike is usually 1. [for now the player is always the father as the default]
@@ -313,6 +316,12 @@ to say SpikeTalkMenu:
 		now sortorder entry is 9;
 		now description entry is "Request a sample of Spike's cum";
 	[]
+	if Energy of Spike > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Talk about Tehuantl";
+		now sortorder entry is 10;
+		now description entry is "Ask him about the jaguarman";
+	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -345,6 +354,8 @@ to say SpikeTalkMenu:
 					say "[SpikeTalk8]";
 				else if (nam is "Ask him for some cum"):
 					say "[SpikeTalk9]";
+				else if (nam is "Talk about Tehuantl"):
+					say "[SpikeTalk10]";
 				wait for any key;
 				say "[SpikeTalkMenu]";
 		else if calcnumber is 0:
@@ -373,7 +384,7 @@ to say SpikeTalk5: [military]
 	say "     Bringing up the topic of the military and their presence in the city draws little attention from Spike. Only when you keep looking at him, one eyebrow raised as you wait for a reply does the young doberman say, 'Um, what about them? Isn't it some sort of loser gang or something? I got some inherited memories from mom and she thought they are supposed to be a big deal, but I've got my doubts. From what I've seen out in the city, lots of those soldiers got taken as sluts and breeding bitches by all sorts of creatures. Pretty weak and pathetic in my book.' Shrugging and putting aside all thought on the military, Spike clears his throat and adds, 'Now if you want a group that truly has to be reckoned with, just look at the hyenas. They're strong, take what they wand and no one fucks around with them, that's for sure!'";
 
 to say SpikeTalk6: [food]
-	say "     Mentioning the topic of food, spike stands up a little straighter and gives you a self-confident look. 'No need to worry about that with me [SpikePlayerAddress]. I know how to take care of myself and won't take up any of your supplies at all. There are lots of places where one can scavenge for good stuff and even if you don't find anything yourself, someone else out on the streets will have. Most of the time you just gotta wait till they start rutting with someone or something, then make off with the food. And if they wise up and try to stop me - I'm plenty tough enough to rough up someone who wants a beating.'";
+	say "     Mentioning the topic of food, Spike stands up a little straighter and gives you a self-confident look. 'No need to worry about that with me [SpikePlayerAddress]. I know how to take care of myself and won't take up any of your supplies at all. There are lots of places where one can scavenge for good stuff and even if you don't find anything yourself, someone else out on the streets will have. Most of the time you just gotta wait till they start rutting with someone or something, then make off with the food. And if they wise up and try to stop me - I'm plenty tough enough to rough up someone who wants a beating.'";
 
 to say SpikeTalk7: [transformation]
 	say "     Bringing up the topic of transformations with Spike, he looks a bit puzzled at you and scratches the back of his neck. 'Hm, I never really thought about how they really work to be honest. I mean - I've seen that shit go down, mostly after someone got the snot beaten out of them. When they're all beaten down and don't even struggle anymore, see? The winner gets on top, humps the poor bitch or dude and poof, there's two of the critters in the street. But that's not really what you're after, is it? Just giving in, pfft!' Rolling his eyes and making a throwing-away gesture, he discards the idea as ridiculous[if Libido of Spike > 40 and Libido of Spike < 61]which makes you chuckle internally, as that's exactly what you have him doing when you forcefully push him into sex[end if]. Then suddenly, the young doberman taps the side of his muzzle and gets an excited look on his face. 'You know, the way to become something else, on purpose and all, might be to... err, invite it in? Let down your guard and really want it.'";
@@ -426,6 +437,14 @@ to say SpikeTalk9: [cum request]
 		say "     You gain some doberman male cum!";
 		increase carried of doberman male cum by 1;
 		now lastfuck of Spike is turns;
+
+to say SpikeTalk10: [Tehuantl Talk]
+	if Energy of Spike is 100:
+		say "     Mentioning your jaguar warrior companion to Spike makes the young man stand up a little straighter, tensing visibly. We, err... I haven't talked to him since you know what. So, not much to say there. Honest!' Raising your eyebrow at the dobie, you hold his gaze for a long moment, then eventually give a gradual nod, accepting his assertions.";
+	else if Energy of Spike > 6 and Energy of Spike < 50:
+		say "     Mentioning your jaguar warrior companion to Spike makes the young man stand up a little straighter, his tail starting to wag. A smile spreads over his muzzle and the young man happily says, 'He's a great guy to hang out with, I'm learning a whole lot from that cat! Fighting, and how to act, and... man, that hole on him is just awesome around my dick! You're just the best, [SpikePlayerAddress], taking people like him into your organization!' Raising your eyebrow at the dobie and giving an amused smile at his obvious liking of Tehuantl, you chat a little bit more about the jaguar warrior before moving on to other topics.";
+	else:
+		say "     Mentioning your jaguar warrior companion to Spike makes the young man stand up a little straighter, his tail starting to wag. A smile spreads over his muzzle and the young man happily says, 'He's a great guy to hang out with, I'm learning a whole lot from that cat! Fighting, and how to act, and everything really. I feel that I'm getting to be a much better right-hand man with him training me. You're just the best, [SpikePlayerAddress], taking people like him into your organization!' Raising your eyebrow at the dobie and giving an amused smile at his obvious liking of Tehuantl, you chat a little bit more about the jaguar warrior before moving on to other topics.";
 
 to say SpikeRenameMenu:
 	project the figure of Spike_face_icon;
@@ -1279,7 +1298,7 @@ instead of going up from Grey Abbey Library while (LastTehuantlSpikeScene - turn
 			say "     'Warriors on campaign spend long days away from any comfort of home. They should be well-prepared to take care of one another and share pleasure. Mictlantecuhtli stalks us always, and better it be in his domain of health and virility that death, eh?' 'Yeah, sure. You're right,' Spike replies in a pant, not really listening as he is focused on the pleasure the jaguar warrior is giving him. Tehuantl doesn't mind, instead moving on to bob his head up and down on his trainee's shaft, sucking and slurping at it with eager attention. He cradles Spike's balls with his free hand, rolling them gently between his fingers while tightly holding on to the dobie's cock. Given such skillful stimulation, the anthro canine is pushed to higher and higher arousal in short notice, and before long, his knot starts to swell, forcing the fingers wrapped around it further apart with each beat of the young man's heart.";
 			WaitLineBreak;
 			say "     Keeping him in a tight grip to give Spike the sensation of being balls-deep in someone, Tehuantl sinks his muzzle over the pointy shaft, enveloping it fully and dancing his tongue along the hard length. 'I'm gonna cuuuummmmMMMMMM!' Spike howls out suddenly, bucking up as he passes the point of no return, his cock erupting with a heavy load of canine cum that splashes the back of the jaguar's throat, to be eagerly swallowed. [if PlayerFucked of Spike is false and MaxHP of Spike is 1]You can't help but feel pride at your son's first time with your spotted sex toy, feeding the feline his load like he's doing right now. [else if MaxHP of Spike is 1]Seeing your son come down Tehuantl's throat gives you a tingle of arousal, and you move a hand to your crotch, rubbing it. [else]Seeing your dobie boytoy come down Tehuantl's throat gives you a tingle of arousal, and you move a hand to your crotch, rubbing it. [end if]Tehuantl keeps his student's erection in his muzzle for a long while, only bobbing up and down a little and breathing through his nose as he catches every last spurt of Spike's seed. Only when the dobie's orgasm eventually ebbs does he pull back, raising his head from where it was bent over Spike's crotch.";
-			say "     Tehuantl licks his muzzle and smiles down at the panting canine, then pats him proudly on the chest. 'The god smiles upon you, clearly. That was a rich, tasty load. 'Okay, if you say so,' Spike replies a bit weakly, still out of breath from just having come. He lies there on his back, grinning broadly and rolling his head around a little bit. Then he suddenly lifts his head to look at the jaguar and says, 'Wait a moment. Did you say that we have to please 'each other' earlier? Does that mean I got to...' Tehuantl smiles and holds him back from sitting up with his hand, then replies with a chuckle, 'Relax[if MaxHP of Spike is 1]pup. [else]. [end if]All in its own time. And only if you wish so. For now, rest. You did good in your workout.' And with that, the anthro jaguar gets up and walks away, just past where you are standing and giving you a deep nod of his head as he walks by.";
+			say "     Tehuantl licks his muzzle and smiles down at the panting canine, then pats him proudly on the chest. 'The god smiles upon you, clearly. That was a rich, tasty load.' 'Okay, if you say so,' Spike replies a bit weakly, still out of breath from just having come. He lies there on his back, grinning broadly and rolling his head around a little bit. Then he suddenly lifts his head to look at the jaguar and says, 'Wait a moment. Did you say that we have to please 'each other' earlier? Does that mean I got to...' Tehuantl smiles and holds him back from sitting up with his hand, then replies with a chuckle, 'Relax[if MaxHP of Spike is 1]pup. [else]. [end if]All in its own time. And only if you wish so. For now, rest. You did good in your workout.' And with that, the anthro jaguar gets up and walks away, just past where you are standing and giving you a deep nod of his head as he walks by.";
 			now Energy of Spike is 2; [they got their BJ, player watched]
 		else if calcnumber is 2:
 			say "     A smile crosses your face at the clear affection of Tehuantl for his student, and Spike's innocently-natured reaction. You're about to turn away from the two of them as you notice a slight up-tick of the jaguar warrior's head, making his gaze cross your location and followed by a respectful dip of his muzzle. Then he opens it and leans down, starting to lick your [if PlayerFucked of Spike is false and MaxHP of Spike is 1]son. [else if MaxHP of Spike is 1]studly son. [else if PlayerFucked of Spike is true]dobie boytoy. [else]dobie. [end if] With a chuckle, you walk off.";
@@ -1291,7 +1310,78 @@ instead of going up from Grey Abbey Library while (LastTehuantlSpikeScene - turn
 			LineBreak;
 			say "     After giving the two of them what amounts to a bucket of ice-water just as they started having fun, you don't think you'll have to worry about Tehuantl and Spike getting frisky again anytime soon...";
 			now Energy of Spike is 100; [stopped things cold]
+	else if Energy of Spike is 2 or Energy of Spike is 3: [training walkin 2]
+		say "     As you start going up the library stairs, you hear some loud grunts and a bark or two coming from upstairs. Curious what is going on, you take the steps two at a time, rushing to follow the sounds to an open area behind a number of bookshelves, where an exercise mat has been rolled out on the ground. On it are Spike and Tehuantl, naked down to their fur, and... the dobie is fucking your jaguar warrior?! Then you look closer and see that while Spike's on top of Tehuantl, one arm wrapped around his chest from behind, the other clamped down on the back of the anthro jaguar's right forearm and pinning it to the ground, there's no humping going on. They're wrestling! Both of them groan and grunt as muscles are flexed and tensed as the spotted feline strains against the grip of his opponent. 'Got you this time,' Spike gasps out breathlessly, after which Tehuantl appears to give in, relaxing his pinned arm and even tapping the mat once.";
+		say "     A lightning-quick follow-up betrays Tehuantl's move as a ruse, as he swings the one free arm he has up, hooks Spike's head with his hand and gives a sharp pull sideways, rolling both of them over that way. 'Waaahh!' the dobie groans as his sure-thought victory is taken from him, the sudden reversal of up and down leaving him confused for a moment. This is long enough for the trained jaguar warrior to capitalize greatly on it, wrenching his other arm free and twisting his own body like an oiled snake. Somehow, he ends up sideways on Spike, his hips and midriff in contact with the young canine's chest, one leg pinning Spike's left arm, the right arm clamped down in an iron grip. 'Never relax your attention on the enemy unless you're absolutely certain you've won,' the spotted male advises sage-like while his student struggles afterwards, futilely tensing his arms, then trying to kick with his legs and raising into a bridge - which doesn't work, with Tehuantl lying on top of him.";
+		WaitLineBreak;
+		say "     Finally, the young man lets out a long groan, letting his head sink back on the mat. 'I give up, you win. Again!' A warm chuckle escapes Tehuantl's throat, but the jaguar doesn't let up before Spike has thumped one of his paws on the ground three times. Only then does he let go of Spike's arms, rising up on all fours and taking his muscled weight off the young man. Straightening his upper body, the jaguar then sits back on his haunches, looking down at his student. 'Do not despair, son of [if MaxHP of Spike is 1 and player is not defaultnamed][Name of Player][else]Alexandra[end if]. You almost [italic type]did[roman type] have me. If you just had angled this to brace against the roll -' he taps the dobie's knee, then gives his thigh a little squeeze, 'I could not have escaped your grasp.' Groaning and rolling his eyes, Spike takes a deep breath, then says with a laugh, 'Gah, now you tell me! If I wasn't totally beat, I'd ask for a rematch!'";
+		say "     'In time we will do that, [if MaxHP of Spike is 1]pup[else]young warrior[end if]. Though right now there is another hindrance for that too,' the muscled feline tells his student, then reaches down to wrap his fingers around the red rocket of Spike's cock, fully erect as it is right now. 'Fuck!' Spike calls out in surprise and sits up in a jerk, wide-open eyes staring down at his manhood, then meeting Tehuantl's gaze. '[if Libido of Spike < 2]I'm no fag! why the hell is -[else]I'm not - er, I mean, I didn't plan on -[end if]' he starts to say, only to be shushed by the jaguarman. 'It's perfectly natural. Rubbing against each other, with our blood pumping. I told you that warriors bond, this is just another part of it.' As he says this, Tehuantl starts to stroke his canine companion. Tensing momentarily as he tries to decide if he needs to push the other man off to prove his masculinity, Spike is quickly won over by the pleasure he is getting and pants out, 'Fine then, keep going!'";
+		LineBreak;
+		say "     Looks like Spike's in for some fun. [bold type]Do you want to intervene? The jaguar is your pet after all...[roman type][line break]";
+		LineBreak;
+		say "     [link](1)[as]1[end link] - Let them have their fun and bond. It'll be good for both of them.";
+		say "     [link](2)[as]2[end link] - Leave them to their fun and walk away.";
+		say "     [link](3)[as]3[end link] - Step out from behind the shelf and split them up.";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 3:
+			say "Choice? (1-3)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to let them do it and watch, [link]2[end link] to leave or [link]3[end link] to split them up.";
+		if calcnumber is 1:
+			LineBreak;
+			say "     A smile crosses your face at the clear affection of Tehuantl for his student, and Spike's innocently-natured reaction. Then you notice a slight up-tick of the jaguar warrior's head, making his gaze cross your location and followed by a respectful dip of his muzzle. Seems that at least one of them knows you're here and watching, and apparently [if MaxHP of Spike is 1]he sees taking care of all your son's needs and desires[else]he sees giving a show[end if] as just another duty of a war-slave. He purrs as he strokes Spike's erection and moves his other hand to touch the young dobie's chest, running it down his front. Panting and bracing his upper body with both hands on the ground behind his back, the canine enjoys his trainer's caresses, most of the time staring into space or having his eyes closed.";
+			say "     At some point though, he does throw a look to the side, taking in Tehuantl in his naked glory, including the jaguar warrior's own erect cock. 'Oh!' Spike says, staring at the other man's shaft almost spellbound for a little while before his right hand finally moves to slowly reach for it. As he takes hold of the Aztec warrior's shaft, the feline's purr intensifies greatly. When Spike actually starts stroking, Tehuantl leans in to him and licks the side of his neck, keeping up nuzzling the young man as they caress each other. The spotted male's other hand shifts down to join the first, now cupping his partner's balls as well as holding his red rocked in a tight grip. 'That feels nice,' Spike pants, moving his head a little to rub his muzzle against the side of the jaguar's furry head. In response, Tehuantl rolls his student's balls gently between his fingers while intensifying the stroking movements of his other hand.";
+			WaitLineBreak;
+			say "     Given the skillful stimulation, the anthro canine is pushed to higher and higher arousal in short notice, and before long, his knot starts to swell, forcing the fingers wrapped around it further apart with each beat of the young man's heart. Keeping him in a tight grip to give Spike the sensation of being balls-deep in someone, Tehuantl shifts his other hand to the top of the dobie's length, jerking up and down and rubbing the head. 'I'm gonna cuuuummmmMMMMMM!' Spike howls out suddenly, hips bucking up reflexively as he passes the point of no return, his cock erupting with a heavy load of canine cum that splashes down all over the mat they've been training on. [if PlayerFucked of Spike is false and MaxHP of Spike is 1]You can't help but feel a little bit of pride at your son's virility, with the first shot flying about four feet. [else if MaxHP of Spike is 1]Seeing your son come gives you a tingle of arousal, and you move a hand to your crotch, rubbing it. [else]Seeing your dobie boytoy come gives you a tingle of arousal, and you move a hand to your crotch, rubbing it. [end if][line break]";
+			say "     As Spike's hand movements ebbed off when his own orgasm hit, Tehuantl gently slips his own fingers underneath the doberman's, taking over the gripping position around his erection. He proceeds to jerk himself off in a rapid pace, really going at it to push himself and quickly barreling towards a purr-heavy orgasm. With a lusty growl, the jaguarman's cock throbs hard and blasts out a spurt of cum that hits Spike's side, creating a white streak on his black fur. More and more of his rich seed follows, making a bit of a mess of [if MaxHP of Spike is 1]your boy's[else]your dobie companion's[end if] coat. It takes a few moments until Spike's high ebbs off far enough that he realizes what just happened, but eventually the anthro canine looks down and groans. 'Man, did you have to slime me up like that? Now I'm all sticky and washing with cold water is a bitch!'";
+			WaitLineBreak;
+			say "     'You won't need to clean yourself that way, [if MaxHP of Spike is 1]pup[else]young warrior[end if],' Tehuantl says in a smoothly delivered purr, then scoots back a little, lowering his head. The next thing that he does is demonstrate the typical feline way of washing someone, as he starts to lick his own cum off Spike's fur, tracing over the young man's side with broad strokes. 'Oh, I-' Spike starts to say, moving his arm out of the way to allow the other man better access and then kinda running out of ideas what to say, now that he's being cat-washed. Meanwhile, Tehuantl seems to enjoy his self-appointed task quite a bit, and you can see that he pauses a few times between licks, simply keeping his nose buried in Spike's fur and breathing in the masculine, somewhat sweaty aroma of the young man. He keeps lapping at the dobie for a little while before sitting up again and declaring him all clean.";
+			say "     'Phew, that was... something,' Spike says, rubbing the back of his neck and looking in the air for a second, as if worried to meet Tehuantl's gaze. '[if Libido of Spike < 2 or Libido of Spike > 40]Listen, I'm not really into guys, so don't get any ideas. As you said, it was just because of the touching and stuff. Alright?' [else]Listen, I'm more of a pussy-hound really. Well, mostly anyways, so don't expect something like this all the time. Alright?' [end if]Tehuantl gives a shrug after licking his muzzle, and replies, 'In my experience, one should never limit themselves to just one thing. There is much to be missed that way.' Then he smiles at the canine and pats him gently on the chest. 'You did good today, boy. I'm proud to be your teacher and look forward to taking this up another day.' 'Thanks,' Spike replies a bit weakly, not quite knowing how to deal with the praise. Having said what he wanted, the anthro jaguar gets up a moment later and walks away, just past where you are standing and giving you a deep nod of his head as he walks by.";
+			now Energy of Spike is 4; [shared jerking, player watched]
+		else if calcnumber is 2:
+			say "     A smile crosses your face at the clear affection of Tehuantl for his student, and Spike's innocently-natured reaction. You're about to turn away from the two of them as you notice a slight up-tick of the jaguar warrior's head, making his gaze cross your location and followed by a respectful dip of his muzzle. Then turns his attention fully back to Spike, jerking your [if PlayerFucked of Spike is false and MaxHP of Spike is 1]son. [else if MaxHP of Spike is 1]studly son. [else if PlayerFucked of Spike is true]dobie boytoy. [else]dobie. [end if]As you are about to turn, you see that the jaguar is erect as well and idly wonder if he'll get some action himself this time. Then you shrug and walk off with a chuckle.";
+			now Energy of Spike is 5; [shared jerking, player didn't watch]
+		else:[no BJ for Spike]
+			LineBreak;
+			say "     You decide that Spike's gotten enough of a workout for today and step closer, sharply calling Tehuantl's name. Whipping around instantly, the anthro cat gasps out the word 'Tlacahua,' falling back to his natural Nahuatl word for master in his surprise. He wilts a little as you look at him expectantly, glancing over to Spike and back at you, 'I was just instructing your [if MaxHP of Spike is 1]pup[else]young warrior[end if], and... gods! Let my desire to see him excel and reward him for his gains lead me astray, [Master]. Frivously wanting to indulge with him and not taking keeping guard on the street outside! Forgive me, I won't let this happen again!' With that, the muscular jaguar jumps up to his feet and rushes away hastily, wanting to take an overlook post at the windows. This leaves you and the dobie behind, with Spike letting himself drop flat on the exercise mat.";
+			say "     'Uhm, hi [SpikePlayerAddress]. I was just, you know, training with him,' the young man pants out a moment later, moving his hands to cover his erection. Then come the words, 'He's only helping me a little, to be a better right-hand man for you. I... should go too. Freshen up a bit.' The last bit is said after he sniffs himself, no doubt remembering Tehuantl's attraction to the good, honest sweat he worked up. And true to his words, Spike quickly rolls the mat up and is hurrying away just moments later.";
+			LineBreak;
+			say "     After giving the two of them what amounts to a bucket of ice-water just as they started having fun, you don't think you'll have to worry about Tehuantl and Spike getting frisky again anytime soon...";
+			now Energy of Spike is 100; [stopped things cold]
 	now LastTehuantlSpikeScene is turns;
+
+instead of going up from Grey Abbey Library while (Tehuantl is in Grey Abbey 2F and Energy of Spike > 3 and Energy of Spike < 100 and HP of Tehuantl > 49 and HP of Tehuantl < 100):
+	move player to Grey Abbey 2F;
+	say "     As you walk up the stairs of the library, you're greeted by the sight of Tehuantl standing at one of the windows, dutifully keeping watch. His gaze sweeps over the street outside, left and right, before he glances into the interior of the building a little while later and sees you. As your eyes meet, the jaguar's tail twitches and he starts walking over, clearly having something on his mind that he needs to talk to you about. Kneeling before you, he says, 'Tlacahua,' falling back to his natural Nahuatl word for master. 'I humbly beg your guidance. As you know, I have been instructing your [if MaxHP of Spike is 1]offspring[else]canine follower[end if], teaching him the arts of war. Part of that is bonding with your fellow warriors, but recently I fear I strayed beyond what I should. In the throes of lust, I dirtied his fur with my seed, then licked him clean. As his scent filled my nose I admit I felt the desire to serve him as I do you. Physically, not just as a warrior-slave.'";
+	LineBreak;
+	say "     [bold type]How do you react to the jaguar's admission?[roman type][line break]";
+	LineBreak;
+	say "     [link](1)[as]1[end link] - Be a generous master and free him to offer his sexual favors to Spike too.";
+	say "     [link](2)[as]2[end link] - He can keep training Spike, but shouldn't go beyond oral sex in their 'bonding'.";
+	say "     [link](3)[as]3[end link] - His furry ass is yours. No more of this impertinence!";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 3:
+		say "Choice? (1-3)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to let Spike fuck Tehuantl, [link]2[end link] to restrict their interactions to oral at max or [link]3[end link] to split them up.";
+	if calcnumber is 1:
+		LineBreak;
+		say "     Reaching out to stroke over the soft fur of your feline companion, you caress his side before moving on to grope his ass with a grin on your face. Then you clear your throat and add that he's been a dutiful servant ever since the museum, and you do not see any problem with him getting closer with Spike. [if MaxHP of Spike is 1]Your son[else]The boy[end if] has more needs than just training his body, so why not expand Tehuantl's duties in this way. 'Thank you, [master]. I will serve him as I do you,' comes the jaguar warrior's reply, delivered with a purr and with him leaning in to nuzzle your cheek.";
+		now Energy of Spike is 6; [ready for more sexy fun]
+	else if calcnumber is 2:
+		LineBreak;
+		say "     Reaching out to lay a hand on the shoulder of your feline companion, you give it a squeeze. Then you clear your throat and add that he's been a dutiful servant ever since the museum, and you do not see any problem with him training Spike, but his sexual favors shouldn't be extended to [if MaxHP of Spike is 1]your son[else]the boy[end if]. Nothing beyond what they've already done, at least. 'I see, [master]. I hear you and will obey,' comes the jaguar warrior's reply, delivered with him coming to attention, then returning to the window to keep lookout.";
+		now Energy of Spike is 50; [no sex, just oral from now on]
+	else if calcnumber is 3:
+		LineBreak;
+		say "     Putting on a serious expression, you grab the jaguarman by the scruff of his neck and bend his head back, pointedly staring into his eyes. In no uncertain terms, you tell the spotted feline that he's [bold type]yours[roman type] and should quickly put any such thoughts out of his mind. After wrapping up your growled instructions, you shove the man back, almost sending him sprawling on the ground. 'Yes, [master]. I will keep my distance from now on,' Tehuantl replies as he catches himself, then slinks back to the window, taking up a guarding position once more.";
+		now Energy of Spike is 100; [stopped things cold]
 
 [
 after navigating Grey Abbey Library while (LastTehuantlSpikeScene - turns > 6 and Tehuantl is in Grey Abbey 2F and Spike is in Sitting Area and Energy of Spike > 0 and Energy of Spike < 4 and HP of Tehuantl > 49 and HP of Tehuantl < 100):
