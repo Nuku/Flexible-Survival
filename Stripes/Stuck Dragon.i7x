@@ -1336,7 +1336,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Dragon"; [name of the overall species of the infection, used for children, ...]
 	now Name entry is "Horny Dragon"; [Name of your new Monster]
 	add "Horny Dragon" to infections of ReptileList;
 	add "Horny Dragon" to infections of FurryList;
@@ -1508,7 +1508,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Dragon"; [name of the overall species of the infection, used for children, ...]
 	now Name entry is "Slutty Dragoness"; [Name of your new Monster]
 	add "Slutty Dragoness" to infections of ReptileList;
 	add "Slutty Dragoness" to infections of FurryList;
