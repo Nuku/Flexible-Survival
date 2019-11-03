@@ -86,6 +86,7 @@ Instead of resolving a The Dorms Part Three:
 	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
 		LineBreak;
+		project the Figure of HuskyAlpha_hard_icon;
 		say "     Deciding that being a bit of a letch won't be the worst thing you've ever done, you tentatively step inside of the bathing/bathroom room to see what's going on.";
 		let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;

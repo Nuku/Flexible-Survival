@@ -58,6 +58,7 @@ when play begins:
 	add Centaur Gangbang to BadSpots of MaleList;                [male centaurs]
 
 Instead of resolving a Centaur Gangbang:
+	project the Figure of CentaurStallion_hard_icon;
 	say "     Moving between the large piles of rubble left by several buildings, you hear some noise from further ahead and decide to investigate. You make your way forward carefully, ducking behind the remains of walls and anything else available, and pretty soon a small group of centaurs comes into sight. There are three stallions and a mare, with one of the males on her back, his long cock plunging in and out of her dripping pussy. The other two stand next to them, cheering their buddy on and fondling the mare's body and breasts.";
 	say "     You watch the centaurs mating for a while, unnoticed in your hiding place. Then it becomes obvious that there is someone else observing them - the clatter of rocks pulls your attention to the side, where you spot a lone human halfway up a pile of rubble. It's a black man with blond dreadlocks, clothed in little more than a pair of ragged jeans. Seems like he's been through a lot already. Looking back at the centaurs, the two bystander stallions are already galloping towards this interloper, intent expressions on their faces. The man curses and dashes off, running down the pile's incline and trying to get away. Sadly for him, centaurs on their four legs are a lot faster and they quickly catch up. After a short struggle, they carry the now dazed man back to the other centaurs between them.";
 	WaitLineBreak;

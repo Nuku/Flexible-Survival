@@ -128,6 +128,7 @@ when play begins:
 	add Hunting Party to BadSpots of FurryList;
 
 Instead of resolving a Hunting Party:
+	project the Figure of CentaurMare_icon;
 	say "     Walking along a broken up patch of roadway, you hear loud clopping coming your way from over the small hillock beside you. Getting ready for a fight, you spot a female centaur galloping down the slope towards you, but then she charges right past you. It's then that you notice that her hooves are not the only ones you hear as several horsemen come running over the hill. They are wearing cowboy hats and a few of them have lassos at the ready. Most thankfully run past you, continuing their pursuit of the escaping centauress, but a pair stop to deal with you.";
 	WaitLineBreak;
 	if Nightmaremastery is 1:

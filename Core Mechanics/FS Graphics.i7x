@@ -30,6 +30,8 @@ Figure of Cerberus_icon is the file "Cerberus.jpg".
 Figure of ChocoLab_icon is the file "ChocoLab_ig.jpg".
 Figure of SSCollie_icon is the file "FSTF_SSCollie_ig.jpg".
 Figure of CheetahWoman_icon is the file "CheetahWoman.png".
+Figure of CentaurStallion_hard_icon is the file "CentaurStallion_hard.jpg".
+Figure of CentaurStallion_soft_icon is the file "CentaurStallion_soft.jpg".
 Figure of CentaurMare_icon is the file "CentaurMare.jpg".
 Figure of Cougar_icon is the file "Cougar_ig.jpg".
 Figure of DarkElf_icon is the file "Dark Elf.jpg".
@@ -64,6 +66,8 @@ Figure of Herm_Hyena_naked_icon is the file "Hyena_naked.jpg".
 Figure of HomoSapiens_icon is the file "Homo Sapiens.jpg".
 Figure of HornyDoctor_M_icon is the file "HornyDoctor_M_ig.jpg".
 Figure of Hulking_Cheerleader_icon is the file "Hulking_Cheerleader.jpg".
+Figure of HuskyAlpha_hard_icon is the file "HuskyAlpha_hard.jpg".
+Figure of HuskyAlpha_soft_icon is the file "HuskyAlpha_soft.jpg".
 Figure of Husky_Bitch_icon is the file "Husky_Bitch.jpg".
 Figure of Imp_clothed_icon is the file "Imp_clothed.jpg".
 Figure of Imp_naked_icon is the file "Imp_naked.jpg".
@@ -600,7 +604,6 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Alex"	Figure of Alex_icon	"canned"	g-black	"normal"
 "Alpha Wolf hard"	Figure of AlphaWolf_hard_icon	"Vashaa"	g-White	"normal"
 "Alpha Wolf naked"	Figure of AlphaWolf_naked_icon	"Vashaa"	g-White	"normal"
-"Husky Alpha"	Figure of AlphaHusky_icon	"Anymouse1968"	g-white	"normal"
 "Amazonian"	Figure of Amazon_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Amy"	Figure of Amy_icon	"Sususmiles"	g-white	"normal"
 "Amy_face"	Figure of Amy_face_icon	"Sususmiles"	g-white	"normal"
@@ -654,6 +657,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Carl_Eric_sofa_fuck_3"	Figure of Carl_Eric_sofa_fuck_3_icon	"Lyttathebug"	g-black	"normal"
 "Carl_Eric_sofa_fuck_4"	Figure of Carl_Eric_sofa_fuck_4_icon	"Lyttathebug"	g-black	"normal"
 "Catgirl"	Figure of Fiona_icon	"Valen"	g-white	"normal"
+"Centaur Stallion hard"	Figure of CentaurStallion_hard_icon	"Vashaa"	g-black	"normal"
+"Centaur Stallion soft"	Figure of CentaurStallion_soft_icon	"Vashaa"	g-black	"normal"
 "Centaur Mare"	Figure of CentaurMare_icon	"Vashaa"	g-black	"normal"
 "Cerberus"	Figure of Cerberus_icon	"Anonymous"	g-white	"normal"
 "Chase_face"	Figure of Chase_face_icon	"SineAlas"	g-black	"normal"
@@ -758,6 +763,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Horny Doctor_M"	Figure of HornyDoctor_M_icon	"Cooper"	g-white	"normal"	[only shown for males]
 "Human Survivor"	Figure of Brennan_clothed_icon	"SineAlas"	g-black	"normal"
 "Hulking Cheerleader"	Figure of Hulking_Cheerleader_icon	"Seija"	g-white	"normal"
+"Husky Alpha Hard"	Figure of HuskyAlpha_hard_icon	"Vashaa"	g-white	"normal"
+"Husky Alpha soft"	Figure of HuskyAlpha_soft_icon	"Vashaa"	g-white	"normal"
 "Husky Bitch"	Figure of Husky_Bitch_icon	"Vashaa"	g-White	"normal"
 "Imp Male"	Figure of Imp_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Imp_naked"	Figure of Imp_naked_icon	"Kupo Klein"	g-white	"normal"
@@ -1031,7 +1038,6 @@ carry out artistcredits:
 	LineBreak;
 	say "Infections:[line break]";
 	say "     Ace by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
-	say "     Alpha Husky by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Alpha Wolf by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Amazon by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Anthro Shaft Beast concept created by TwilightMaster @ furaffinity.net[line break]";
@@ -1044,6 +1050,7 @@ carry out artistcredits:
 	say "     Bottlenose Toy by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Catgirl by Valen @ ?[line break]";
 	say "     Cat Ninja (female) by Bix707 @ furaffinity.net[line break]";
+	say "     Centaur Stallion by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Centaur Mare by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Cerberus by Anonymous[line break]";
 	say "     Cheetah Woman by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
@@ -1076,6 +1083,7 @@ carry out artistcredits:
 	say "     Homo Sapiens by Astro @ y-gallery.net[line break]";
 	say "     Horny Doctor (male) by Cooper @ furaffinity.net[line break]";
 	say "     Hulking Cheerleader by Seija @ ?[line break]";
+	say "     Husky Alpha by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Husky Female by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Imp by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Incubus by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";

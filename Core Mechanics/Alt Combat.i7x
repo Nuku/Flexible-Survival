@@ -1732,6 +1732,4 @@ this is the firebreath rule:
 			if firebreathcount > 40, now firebreathcount is 40;
 		retaliate;
 
-
-
 Alt Combat ends here.
