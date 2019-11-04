@@ -227,7 +227,7 @@ An everyturn rule:
 		increase mqcountdown by 1;
 		if mqcountdown is 9:
 			now Sgt Marks is nowhere;
-			say "[line break]     [bold type]Your 24 hours are up. Sgt Marks has left without you.[roman type]";
+			say "[line break]     [bold type]Your 24 hours are up. Sgt Marks has left without you.[roman type][line break]";
 			now mqcountdown is 10;
 
 the fuckscene of Sgt Marks is "     'Smarten up and save it for those fine pussies. They'll be all ours once this is over.'";

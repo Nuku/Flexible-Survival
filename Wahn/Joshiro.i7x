@@ -165,6 +165,7 @@ Instead of resolving a Slut Wanderer:
 		LineBreak;
 		say "     With a shrug, you leave the alley and Joshiro behind and simply continue on.";
 		now Resolution of Slut Wanderer is 99; [disinterest]
+		now Slut Wanderer is resolved;
 
 to say JoshiroSloppyAlleyFuck:
 	say "     You tear your gaze away from the non-hostile and sexually satisfied feline to focus on Joshiro instead, who's still slumped on the ground, semi-conscious after the hard fuck he just got. Something about how this Asian Adonis lies there sprawled out, sweaty, vulnerable, and all fucked out stirs your own lust greatly. Tossing your gear against the side of a dumpster and making quick time undressing yourself, you stand over him, your cock proudly erect as you look at the gaping chasm of the martial artist's leaking fuckhole. You can't help but throw the large cat a respectful look, he must be hung like a donkey to leave Joshiro in such a state. Wanting a better look before you take advantage of the easy lay the shadow beast has made for you, you flip the sex-addled fighter over on to his back. His physique is definitively worth the effort, as you enjoy a few moments of ogling, then groping and kneading his chiseled form.";

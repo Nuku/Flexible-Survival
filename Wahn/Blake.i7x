@@ -405,7 +405,7 @@ to say BlakeCounterstrike:
 to say BlakeWhoreSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
-	say "     [bold type]What do you want to do to Blake?[roman type]";
+	say "     [bold type]What do you want to do to Blake?[roman type][line break]";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Jerk him, but deny orgasm";

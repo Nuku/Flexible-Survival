@@ -9,6 +9,7 @@ Section 1- Electric shockers
 
 Section 2 - Hyena cages
 
+
 Table of GameEventIDs (continued)
 Object	Name
 Hyena cages	"Hyena cages"
@@ -16,10 +17,40 @@ Hyena cages	"Hyena cages"
 Hyena cages is a situation.
 The sarea of Hyena cages is "Zoo".
 
-Instead of Resolving a Hyena cages:
-	say "     You come across an enclosure that looks like it was burst open from the inside. Taking a closer look, you notice it looks almost like some of the bars were bitten clean through! You inspect the plaque and find that this was actually once the hyena enclosure. Well, now you know where all the hyenas wandering the city came from, and here you thought it was just the natural evolution of scavengers into scavenging hyenas. As you are about to leave, you gleam from the 'fun facts' section that the hyena has one of the most powerful bites in the animal kingdom, strong enough even to chew through metal. You resolve to be more careful next time you face one of the cackling beasts.";
+instead of resolving a Hyena cages:
+	say "     As you walk around the zoo you come to an enclosure. A couple of the metal bars that once held its residents inside are broken and bent, leaving a gap large enough for a human-sized creature to get through. Whatever escaped must have been quite strong to break solid steel. With a cursory glance at the enclosure you can see a pile of cloth scraps lies just outside the bars, the smell of cum wafts over from the pile leaving little doubt as what might have happened to it.";
+	LineBreak;
+	say "     [bold type]Do you want to search the cummy pile of cloth?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Search the pile";
+	say "     ([link]N[as]n[end link]) - Leave";
+	if Player consents:
+		LineBreak;
+		say "     You carefully root through the soggy pile of rags, discovering a badly damaged camera and, in what used to be a pocket, a granola bar still in its package. The camera unfortunately no longer works, but you manage to eject a tape from it.";
+		say "[bold type]You gain 1 food![roman type][line break]";
+		increase carried of food by 1;
+		LineBreak;
+		say "[bold type]Hyena Breakout Video has been added to your tape inventory![roman type][line break]";
+		add "Hyena Breakout Video" to tapes of Player;
+		now resolution of Hyena cages is 1; [Player Investigated]
+	else:
+		LineBreak;
+		say "     You decide against touching the dangerous-looking rags and move along, leaving the broken enclosure behind you.";
+		now resolution of Hyena cages is 2; [Player did not investigate]
 	now Hyena cages is resolved;
 
+to say Hyena Breakout Video:
+	say "     You slide the tape found in the hyena enclosure into the camera, pushing down on the side panel till it locks into place with a *click*. Then you fold out the small screen of the device, looking at it expectantly as you press 'Play' next. The screen flashes to life and you see the animal enclosure from earlier, only this time it's inhabited. Two hyenas pace back and forth in the enclosure, eyeing the bars expectantly.";
+	say "     Without warning the hyena on the left jumps at the bars, snapping and growling at the cameraman. The sudden movement causes the holder of the camera to fall backwards, and as their arms flail to catch themself the camera goes flying. It lands several feet away, miraculously still intact, pointing toward the male figure now flat on his back. In the few moments it took for all of this to happen the other hyena has joined the first, and the bars begin to bow dangerously outward, creaking in warning. With a sudden snap two of the bars break almost at the same time, releasing both of the feral hyenas. The man, jerked out of his stupor by the loud sound, scrambles to his feet and turns to run.";
+	WaitLineBreak;
+	say "     No sooner has the man started running toward the camera before the first hyena jumps onto his back, pushing him to the ground. The second hyena comes around the man's front, and it's then that you notice the dark pink rocket starting to lengthen and swell in obvious arousal under its belly, informing you that it's most likely a male. The hyena on the man's back starts clawing with its hind legs, trying to push the man's pants down while still being hunched over on his back. After only a few tries his trousers drop, along with his underwear, leaving them in tatters around his ankles and the man's skin streaked with pink or red scratch marks. As the man's pants fall, two things become apparent: First of all that the hyena's cock, pointing down toward the ground, is so big its tip nearly touches the floor. Secondly, against all logic, the man is starting to get an erection of his own, his semi-hard length clearly visible against the hyena's bigger and darker shaft.";
+	say "     The second Hyena approaches the man's face, its cock swaying slowly underneath its belly with each step. Rising up against the man's head and shoulders, managing to avoid bumping heads with its partner, the hyena ends up with said cock poised in front of the poor victim's mouth. After having it shoved against his face a few times, likely getting hyena precum smeared all over his face, the man finally opens his lips for the pointed head. As soon as the hyena's prick enters the man's mouth it starts violently jackhammering into his mouth, making the man choke and cough from the rough facefucking.";
+	WaitLineBreak;
+	say "     Even as the second hyena pounds away at the man's mouth, the first one lines its shaft up for the held-down man's behind, hips jerking with each attempt to get inside. At first it seems to be aiming a little too low, as though used to a different kind of anatomy, but after a dozen or so tries it finally hits the mark. The man jerks a little as it shoves its whole length in on the first thrust, but he doesn't try to move away. Instead, after a few seconds of hesitation, he actually seems to push back against the cock in his ass. The hyena doesn't really need to be encouraged though, as it's already enthusiastically pounding in and out of its victim's ass, just like the other one is doing at the front. A few minutes later the second hyena cackles with pleasure and slams its cock into the man's mouth one final time. You can see its balls, larger now than they were before, contract almost rhythmically, and the man's Adam's apple bobbing up and down with each swallow makes it obvious what's happening. The clear liquid slowly dripping from his own neglected erection makes it just as obvious that he's enjoying himself.";
+	say "     Suddenly, half-hidden as it is behind the hyena's lower body, you can see the man's face begin to shift, elongating and turning more bestial. Fur starts sprouting on his cheeks, and as he gasps for air you see a glint of sharp teeth growing in his mouth. The man then groans, seemingly in pleasure, as the spotted fur spreads further down his body. The hyena behind him speeds up, ramming its hard cock in and out with animalistic fury, and then lets out a sound halfway between a growl and a groan as it buries its cock as deep as possible inside its initially reluctant mate and holds still. The man's skin goes flush as the progress of the fur spreading over his body speeds up, now reaching down to his legs and arms. You can see him twitch and shudder as the bones shift underneath the skin and fur, and he gradually ends up with an animal's legs and furry, padded hands and feet.";
+	WaitLineBreak;
+	say "     The man isn't the only one to change either; the two hyenas also seem to be affected, though in their case their limbs lenghten slightly, the digits on their front paws growing longer, and despite the small screen you think you can detect a small hint of awareness in their eyes. A minute or two later, when the two hyenas push themselves off the man, it's to stand somewhat awkwardly on their hind legs, looking down at the now anthro hyena between them.";
+	say "     The next few minutes of the tape show the newly transformed hyena man making out with his partners, his long sloppy tongue mingling with theirs. When they finally pull away and turn to depart, the former human tears off the remainders of his now tattered shirt, steps out of his ruined pants, and tosses the scraps nonchalantly aside. Whether intentional or accidentally, they land on top of the camera, smearing the lens with cum and leaving it in near-complete darkness. A little while later the batteries die and the video ends.";
 
 Section 3 - Pachyderm predicament
 

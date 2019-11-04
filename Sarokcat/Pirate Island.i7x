@@ -262,7 +262,7 @@ Instead of resolving Findingboat:
 		now boatfound is 2;
 	else if boatfound is 4:
 		say "     You find a small rowboat that's been dragged up into the short strip of woods along this section of beach. It seems to have been here for a while, but still looks serviceable. You certainly wouldn't be able to take any long trips with it, but it should be capable of the trip out to Vohr Island.";
-		say "[bold type]You can now navigate to Vohr Island[roman type]";
+		say "[bold type]You can now navigate to Vohr Island[roman type][line break]";
 		now Island Pier is known;
 		now boatfound is 2;
 	else:

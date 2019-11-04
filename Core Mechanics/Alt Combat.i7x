@@ -671,7 +671,7 @@ This is the flee rule:
 	if rubber sneakers are equipped:
 		LibidoBoost 20;
 		if Libido of Player >= 100:
-			say "     You start running away as fast as you can. Unfortunately, your already aroused body cannot sustain the side-effect of the rubber sneakers. You cum hard and tumble on the ground in exhaustion. You barely have the time to stand back up before your adversary catches up with you. The cursed item keeps your libido high, and you remain terribly aroused, about to cum at the smallest attempt to sprint. [bold type]It may not be a good idea to attempt fleeing again, unless you find a way to reduce your libido first.[roman type]";
+			say "     You start running away as fast as you can. Unfortunately, your already aroused body cannot sustain the side-effect of the rubber sneakers. You cum hard and tumble on the ground in exhaustion. You barely have the time to stand back up before your adversary catches up with you. The cursed item keeps your libido high, and you remain terribly aroused, about to cum at the smallest attempt to sprint. [bold type]It may not be a good idea to attempt fleeing again, unless you find a way to reduce your libido first.[roman type][line break]";
 			now Libido of Player is 70;
 			SanLoss 5;
 			choose row monstercom from table of Critter Combat;
@@ -1645,21 +1645,21 @@ this is the firebreath rule:
 			let fbhit be 0; [Missed]
 		if Name entry is "Ebonflame Dragator":
 			if fbhit is 2:
-				say "[special-style-2]The [one of]dragator[or]creature[or]croc-beast[at random] lets out a primordial roar, energies and chemicals in its belly light up the inside of his mouth. A bright red wave of fire is spat out at you. You try to evade, but the fiery blast washes over you. You suffer [dam] damage![roman type]";
+				say "[special-style-2]The [one of]dragator[or]creature[or]croc-beast[at random] lets out a primordial roar, energies and chemicals in its belly light up the inside of his mouth. A bright red wave of fire is spat out at you. You try to evade, but the fiery blast washes over you. You suffer [dam] damage![roman type][line break]";
 			else if fbhit is 1:
 				say "The [one of]dragator[or]creature[or]croc-beast[at random] lets out a primordial roar, energies and chemicals in its belly light up the inside of his mouth. A bright red wave of [special-style-2]fire[roman type] is spat out at you. You move to evade, but are still caught in part of the blast. You suffer [special-style-2][dam][roman type] damage!";
 			else:
 				say "The [one of]dragator[or]creature[or]croc-beast[purely at random] lets out a primordial roar, energies and chemicals in its belly light up the inside of his mouth. A bright red fireball is spat out in your direction, but you manage to evade it!";
 		else if Name entry is "Ebonflame Drake":
 			if fbhit is 2:
-				say "[one of]She[or]The drake[or]The dragon creature[purely at random] braces herself against the ground debris and expels the deep breath it took moments ago. Unable to get out of the way, you throw up your arms to protect yourself as her gaping maw looses a fireball at you. You are burned for [dam] damage![roman type]";
+				say "[one of]She[or]The drake[or]The dragon creature[purely at random] braces herself against the ground debris and expels the deep breath it took moments ago. Unable to get out of the way, you throw up your arms to protect yourself as her gaping maw looses a fireball at you. You are burned for [dam] damage![roman type][line break]";
 			else if fbhit is 1:
 				say "[one of]She[or]The drake[or]The dragon creature[purely at random] braces herself against the ground debris and expels the deep breath she took moments ago. You attempt to move out of the way, but are still partially caught in the [special-style-2]fireball[roman type] loosed from her maw. You are burned for [special-style-2][dam][roman type] damage!";
 			else:
 				say "[one of]She[or]The drake[or]The dragon creature[purely at random] braces herself against the ground debris and expels the deep breath she took moments ago. Scrambling, you manage to dive out of the way of the fireball she hurls at you from her maw!";
 		else if Name entry is "Ebonflame Whelp":
 			if fbhit is 2:
-				say "[special-style-2]The [one of]whelp[or]creature[or]ebonflame whelp[purely at random] hiccups, then burps, then finally coughs up a small fireball which is lobbed at you. It strikes you squarely in the [one of]face[or]chest[purely at random]. You take [dam] damage![roman type]";
+				say "[special-style-2]The [one of]whelp[or]creature[or]ebonflame whelp[purely at random] hiccups, then burps, then finally coughs up a small fireball which is lobbed at you. It strikes you squarely in the [one of]face[or]chest[purely at random]. You take [dam] damage![roman type][line break]";
 			else if fbhit is 1:
 				say "The [one of]whelp[or]creature[or]ebonflame whelp[purely at random] hiccups, then burps, then finally coughs up a small [special-style-2]fireball[roman type] which is lobbed at you. You try to evade, but it catches you on your [one of]leg[or]arm[or]shoulder[purely at random]. You take [special-style-2][dam][roman type] damage!";
 			else:
@@ -1694,7 +1694,7 @@ this is the firebreath rule:
 				say "The [one of]scaly sorceress[or]magical drake[or]dragon woman[or]buxom shemale[at random] opens her maw and unleashed a stream of sparkling flames. Her head swivels after you, chasing you with the blast, but you manage to evade the magical flames until the fiery attack is over.";
 		else:
 			if fbhit is 2:
-				say "[special-style-2][one of]Your opponent[or]The [EnemyNameOrTitle][or]Your enemy[purely at random] unleashes a blast of fire at you. The flames wash over you, burning you badly. You take [dam] damage![roman type]";
+				say "[special-style-2][one of]Your opponent[or]The [EnemyNameOrTitle][or]Your enemy[purely at random] unleashes a blast of fire at you. The flames wash over you, burning you badly. You take [dam] damage![roman type][line break]";
 			else if fbhit is 1:
 				say "[one of]Your opponent[or]The [EnemyNameOrTitle][or]Your enemy[purely at random] unleashes a blast of [special-style-2]fire[roman type] at you. You try to evade, but are still partially caught in the flames, burning you. You take [special-style-2][dam][roman type] damage!";
 			else:
@@ -1731,7 +1731,5 @@ this is the firebreath rule:
 			increase firebreathcount by a random number between 2 and 6;
 			if firebreathcount > 40, now firebreathcount is 40;
 		retaliate;
-
-
 
 Alt Combat ends here.

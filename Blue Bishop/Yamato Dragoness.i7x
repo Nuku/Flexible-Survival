@@ -430,7 +430,7 @@ to say YamatF_1: [cunt pitching]
 		now tempnum is 1;
 	else:
 		now tempnum is 0;
-	if Cunt Depth of Player < 22 and Cock Count of Player > 1:
+	if Cock Length of Player < 22 and Cock Count of Player > 1:
 		say "     Given how large she is, you figure you could fit [if Cock Count of Player is 2]both[else]two[end if] of your cocks down into her, shall you try?";
 		if Player consents:
 			say "     Very well. Shall it be down both her holes? Otherwise, you'll only go for her vaginal passage.";

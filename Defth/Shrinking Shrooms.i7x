@@ -328,6 +328,7 @@ to say ChineseUB:
 	now Resolution of Little Trouble is 5; [shrunk, UB'd]
 
 to say ChineseTrouble:
+	project the Figure of HuskyAlpha_hard_icon;
 	say "     Looking around, you soon discover the source of that noise when you slip through the five inch gap between the leaned-to door and its frame. Now, you're in the main room of what must have been some sort of restaurant before, filled with lots of tables and chairs. The wall that separated this place from the house next door has partially collapsed, creating a crude connection between the buildings. The other room looks like it belongs to a love hotel, with a pinkish pattern on the furniture and wallpaper. Above a round bed in the middle of the room, an intact mirror is attached to the ceiling, completing the impression of having stumbled into a porn movie. The scene on top of that bed right now fits very well too.";
 	say "     A male husky is pounding away at a smaller husky bitch like there is no tomorrow, his toned muscles rippling every time he pounds into the little bitch. Sometimes, she almost is pushed off of the bed by the sheer power in his thrusts, but the dominant dog quickly grabs her anyway he can before that happens, even gripping her neck and momentarily choking her. No matter how harshly she is treated, the horny girl under the rutting husky enjoys the treatment, her tongue hanging out of her mouth as she pants loudly. She is drooling at being fucked like this too, making her fur glisten wetly and creating spots on the mattress.";
 	WaitLineBreak;

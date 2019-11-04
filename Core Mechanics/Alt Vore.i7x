@@ -139,7 +139,7 @@ Instead of resolving a Inner Predator:
 	if boatfound <= 1:
 		now boatfound is 4;
 	if boatfound is 2 or boatfound is 3:
-		say "[bold type]You can now navigate to Vohr Island[roman type]";
+		say "[bold type]You can now navigate to Vohr Island[roman type][line break]";
 		now Island Pier is known;
 	now Inner Predator is resolved;
 

@@ -55,7 +55,7 @@ Instead of Resolving a Forced Adoption:
 			delete Dog Bone;
 			now Rex's Place is known;
 			now HP of Rex is 5;
-			say "[bold type]Rex's Place is now known.[roman type]";
+			say "[bold type]Rex's Place is now known.[roman type][line break]";
 			now Resolution of Forced Adoption is 1; [met Rex]
 			now Forced Adoption is resolved;
 		else:

@@ -191,13 +191,13 @@ An everyturn rule:
 			now ValPregnancy is 4;     [so he can tell the player about their kid in the next meeting]
 		now ValPregCounter is 0;
 	else if ValPregCounter is 3 and player is not in Slave Cell 1 and HP of Val is 2:
-		say "     [bold type]You remember that the time for the birth of Val's child should be soon. Maybe you should visit the orc breeder in his cell to be at his side when that happens...[roman type]";
+		say "     [bold type]You remember that the time for the birth of Val's child should be soon. Maybe you should visit the orc breeder in his cell to be at his side when that happens...[roman type][line break]";
 	else if ValPregCounter is 12:
 		now ValPregnancy is 3;   [very visible pregnancy]
 		if Player is in Slave Cell 1:
-			say "     [bold type]Seeing Val's belly bulge larger and larger, you start wondering what will happen once his time to give birth comes.[roman type]";
+			say "     [bold type]Seeing Val's belly bulge larger and larger, you start wondering what will happen once his time to give birth comes.[roman type][line break]";
 		else if HP of Val is 2: [player knows he is pregnant]
-			say "     [bold type]You remember that the time for the birth of Val's child should be sometime during the next day or two. Maybe you should visit the orc breeder in his cell to be at his side when that happens...[roman type]";
+			say "     [bold type]You remember that the time for the birth of Val's child should be sometime during the next day or two. Maybe you should visit the orc breeder in his cell to be at his side when that happens...[roman type][line break]";
 	else if ValPregCounter is 24:
 		now ValPregnancy is 2;   [visible pregnancy]
 	if ValPregCounter > 1:

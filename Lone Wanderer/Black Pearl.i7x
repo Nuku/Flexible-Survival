@@ -17,7 +17,7 @@ when play begins:
 Instead of resolving Curious Pearl:
 	if KyrverthStage is 3:
 		say "     Remembering Kyrverth's desire for treasure, you look around whether you can find anything. Somehow you know that something is under one of those rocks; it's hidden within the sand in plain sight. What you pull out has your mouth agape - a large sphere that lacks any color. In fact, this orb even seems to absorb most of light that hits its smooth, pitch black surface. Some of the light is still reflected, leaving a brilliant shimmer. Turning it with your hands, this thing does really seem to be perfect with its spherical shape. At some point you blink rapidly as some reflected [if daytimer is day]sunlight[else]moonlight[end if] directly shines into your eyes. You feel a bit confused and spaced out, as if everything you were doing before is gone. Judging by the [if daytimer is day]sun[else]moon[end if], you do seem to have been standing around here for a while. This pearl seems to have an influence over you, and you don't know whether carrying it around is a good idea...";
-		say "     [bold type]Will you take it?[roman type]";
+		say "     [bold type]Will you take it?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Take it.";
 		say "     ([link]N[as]n[end link]) - Leave it be.";

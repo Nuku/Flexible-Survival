@@ -285,7 +285,7 @@ to say alexandradesc_bg:
 		say "     Speaking of her duty, she's stationed herself by the library entrance, acting as your rough and tough guard to the safe haven inside[if HP of Alexandra is 3 or HP of Alexandra is 5], not letting her current state hold her back[end if][if Fang is booked]. She shares this duty with Fang, alternating with the wolf[end if]. Having kept her nightstick, it hangs at the ready for those who would disturb the safety of your hideout.";
 	else if Alexandra is in Worker Barracks:
 		say "     Speaking of her duty, she's mostly hanging around in the back of the main barracks room, leaning against a wall as she ogles the many horseman studs living in the building. She seems happy with her current task of serving as a breeding bitch, most of the time even leaving the top button of her pants undone and all too often sliding a hand inside to play with herself a litte. Still, that doesn't mean she isn't a tough bitch either, as she still keeps her nightstick fairly close, ready to be picked up in case the Farm is attacked or something like that.";
-	if HP of Alexandra > 3:
+	if HP of Alexandra > 3 and Alexandra is in Grey Abbey Library:
 		say "     Alexandra's [Libido of Alexandra] pups are younger Dobermans, having matured quickly to be roughly in their teens[if Libido of Alexandra > 4]. They are a mix of boys and girls among the litters[end if]. They are a rough and rambunctious lot who hang out in one of the side rooms most of the time. They do go outside on occasion to find some trouble to get into. They do seem fairly self-sufficient though.";
 
 to say alexandratalk_bg:
@@ -351,11 +351,17 @@ to say BadAlexandraTalkMenu:
 		now sortorder entry is 2;
 		now description entry is "Bring up that you want to go to the pediatrics clinic with her";
 	[]
-	if HP of Alexandra is 2 or HP of Alexandra is 4 and ((demon brute is tamed and DBCaptureQuestVar is 5) or PlayerMet of Farmhand Horsemen is true): [  or ("Feral Mutt" is listed in EncounteredEnemies of Player or "Feral Mutt Pack" is listed in EncounteredEnemies of Player)):] [not pregnant right now; possible candidates available]
+	if (HP of Alexandra is 2 or HP of Alexandra is 4 or HP of Alexandra is 5) and ((demon brute is tamed and DBCaptureQuestVar is 5) or PlayerMet of Farmhand Horsemen is true): [  or ("Feral Mutt" is listed in EncounteredEnemies of Player or "Feral Mutt Pack" is listed in EncounteredEnemies of Player)):] [not pregnant right now; possible candidates available]
 		choose a blank row in table of fucking options;
 		now title entry is "Breeding her (with others)";
 		now sortorder entry is 3;
 		now description entry is "Tell Alexandra that you want to get her knocked up by partners you choose";
+	[]
+	if Alexandra is in Worker Barracks:
+		choose a blank row in table of fucking options;
+		now title entry is "Taking her back to the library";
+		now sortorder entry is 4;
+		now description entry is "Bring your bitch back to the Grey Abbey Library";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Her family";
@@ -401,6 +407,8 @@ to say BadAlexandraTalkMenu:
 					say "[AlexandraFertilityTrip]";
 				else if (nam is "Breeding her (with others)"):
 					say "[AlexandraBreedingMenu]"; [See file Alexandra Breeding.i7x in Wahn's folder]
+				else if (nam is "Taking her back to the library"):
+					say "[AlexandraBreeding_LibraryReturn]"; [See file Alexandra Breeding.i7x in Wahn's folder]
 				else if (nam is "Her family"):
 					say "[AlexandraBackstory1]";
 				else if (nam is "Growing up and her adult life"):
@@ -532,7 +540,6 @@ to say AlexandraFertilityTrip: [taking her to Medea for fertility treatments]
 		remove "Fertility Treatment Option" from Traits of Alexandra;
 		add "Fertility Treatments" to Traits of Alexandra;
 		now Pediatrics Lobby is known; [navpoint unlock]
-
 
 to say AlexandraBackstory1: [family]
 	say "     Alexandra takes a seat in one of the chairs, rocking on its back legs and lighting up a smoke. 'My folks were crooks. Did drugs and petty crimes to pay for the habit. It was a pretty shitty home to grow up in, so I was taken away by Child Services when they finally got caught. Not that that was much better, but I tried to convince myself I was better than them. I decided to become a cop and tried my best to be [']a moral and upright person['],' she says with obvious scorn for her previous self.";

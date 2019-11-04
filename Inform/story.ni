@@ -64,7 +64,7 @@ title	description
 "Weapons"	"Some items you find make good weapons! Be sure to [bold type]use (weapon)[roman type] before a battle to have them at hand."
 "Graphics"	"Graphics can be enabled or disabled by typing [bold type]graphics[roman type]."
 "Scavenging"	"Type [bold type]scavenge[roman type] in any room you can fast travel from to hunt for food and water."
-"Socializing"	"You can [bold type]talk (person)[roman type] to chat. If they are of more personal interest with you, you can also [bold type]fuck (person)[roman type]"
+"Socializing"	"You can [bold type]talk (person)[roman type] to chat. If they are of more personal interest with you, you can also [bold type]fuck (person)[roman type][line break]"
 "Ending Early"	"Type [bold type]end now[roman type] to cause the game to end early. Alternatively you can [bold type]give in[roman type] to the infection."
 "Play On"	"You want to skip that ending? Go for it. Type [bold type]play on[roman type] and time will cease to be a concern. You will not get endings though."
 "Wait Less"	"Tired of having to click more to continue much of the text?. Type [bold type]Waits Off[roman type] to skip many delays.[line break]Don't like the change and want to go back? Type [bold type]Waits On[roman type] to return to the default."
@@ -2716,7 +2716,7 @@ to guesstimate time at (x - a number):
 
 To Extend game by (x - a number):
 	decrease targetturns by x;
-	say "[bold type]((You have earned additional time: [x divided by 8] days, [(remainder after dividing x by 8) times 3] hours))[roman type]";
+	say "[bold type]((You have earned additional time: [x divided by 8] days, [(remainder after dividing x by 8) times 3] hours))[roman type][line break]";
 
 
 To process (x - a grab object):
@@ -2944,7 +2944,7 @@ To process (x - a grab object):
 					say "     [bold type]The [x] [if plural of x is true]are simply too big! They are meant for much larger beings than yourself[else]is simply too big! It is meant for much larger beings than yourself[end if].[roman type][line break]";
 					continue the action;
 			else:
-				say "     [bold type]You start wearing the [x].[roman type]";
+				say "     [bold type]You start wearing the [x].[roman type][line break]";
 				now x is equipped;
 	else if x is a medkit:
 		let healed be 10 + level of Player + ( ( intelligence of Player minus 10 ) divided by 2 );
@@ -4007,7 +4007,7 @@ to OldInfectionRoll: [old infections with less body parts made before 07.05.2019
 			now Cock Description of Player is ""; [wiping out the new style parts]
 			now Cunt Description of Player is ""; [wiping out the new style parts]
 			if Name entry is listed in infections of InternalCockList and internalbypass is true:
-				say "[italic type]...After some time, it appears that your balls re-emerge, in spite of this strain's normally internal anatomy.[roman type]";
+				say "[italic type]...After some time, it appears that your balls re-emerge, in spite of this strain's normally internal anatomy.[roman type][line break]";
 
 to NewInfectionRoll:
 	choose row MonsterID from the Table of Random Critters;
@@ -4305,7 +4305,7 @@ to NewInfectionRoll:
 			choose row MonsterID from the Table of Random Critters;
 			now Cock of Player is Cock Adjective entry;
 			if Name entry is listed in infections of InternalCockList and internalbypass is true:
-				say "[italic type]...After some time, it appears that your balls re-emerge, in spite of this strain's normally internal anatomy.[roman type]";
+				say "[italic type]...After some time, it appears that your balls re-emerge, in spite of this strain's normally internal anatomy.[roman type][line break]";
 	else if x is 9:
 		follow the sex change rule;
 		if Cuntname of Player is not Name entry:
@@ -5068,9 +5068,9 @@ This is the player injury rule:
 	else if per <= 40:
 		now descr is "[if Playerpoison > 0][special-style-1]poisoned[roman type] and [end if][one of]wounded[or]bashed around[or]significantly harmed[at random]";
 	else if per <= 80:
-		now descr is "[one of]scuffed[or]bruised[or]still in the fight[at random][if Playerpoison > 0], but [special-style-1]poisoned[roman type]";
+		now descr is "[one of]scuffed[or]bruised[or]still in the fight[at random][if Playerpoison > 0], but [special-style-1]poisoned[roman type][line break]";
 	else:
-		now descr is "[one of]healthy[or]energetic[or]largely unharmed[at random][if Playerpoison > 0], but [special-style-1]poisoned[roman type]";
+		now descr is "[one of]healthy[or]energetic[or]largely unharmed[at random][if Playerpoison > 0], but [special-style-1]poisoned[roman type][line break]";
 	rule succeeds;
 
 This is the brain descr rule:
@@ -5270,7 +5270,7 @@ This is the self examine rule:
 		-- 4:
 			say "are superhumanly tall.";
 		-- 5:
-			say "enormous in size, a lot larger than any regular human ever could be.";
+			say "are enormous in size, a lot larger than any regular human ever could be.";
 	[ Infection Descriptions Below   ]
 	if Player is FullyNewTypeInfected and NewTypeInfectionActive is true: [new infection on player and activated]
 		say "Pulling out a small mirror, you check yourself over from head to toe, attempting to make sense of your current form. Your head and face resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance. [if Player is HasBeard]You have a [Hair Color of Player] [Beard Style of Player]. [end if][if Player is HasHeadHair]On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style. [end if]Inspecting your [Mouth Length Adjective of Player] mouth with both the mirror and your digits, you attempt to look past your [Tongue Length of Player] inch long, [Tongue Color of Player], [Tongue Adjective of Player] tongue and into your [Mouth Length Adjective of Player] throat. [if Player is HasHeadAdornments]Before moving on from your head, you give your [Head Adornments of Player] a proud glance followed by a light caress. [end if][line break]";
@@ -5521,9 +5521,9 @@ This is the self examine rule:
 					say "child '[Name entry]'";
 				say " is a pureblood [Head entry]. ";
 			if Albino entry is true:
-				say "[bold type]Their pigmentation is muted and almost white, except for the eyes that appear red. [roman type]";
+				say "[bold type]Their pigmentation is muted and almost white, except for the eyes that appear red. [roman type][line break]";
 			else if Melanism entry is true:
-				say "[bold type]Their pigmentation is almost pure black. [roman type]";
+				say "[bold type]Their pigmentation is almost pure black. [roman type][line break]";
 			say "You have a [PlayerRelationship entry] relationship with them, and your child's personality is rather [Personality entry].";
 		else:
 			repeat with x running from 1 to number of filled rows in Table of PlayerChildren:
@@ -5548,9 +5548,9 @@ This is the self examine rule:
 						say "child '[Name entry]'";
 					say " is a pureblood [Head entry]. ";
 				if Albino entry is true:
-					say "[bold type]Their pigmentation is muted and almost white, except for the eyes that appear red. [roman type]";
+					say "[bold type]Their pigmentation is muted and almost white, except for the eyes that appear red. [roman type][line break]";
 				else if Melanism entry is true:
-					say "[bold type]Their pigmentation is almost pure black. [roman type]";
+					say "[bold type]Their pigmentation is almost pure black. [roman type][line break]";
 				say "You have a [PlayerRelationship entry] relationship with them, and your child's personality is rather [Personality entry].";
 	if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 1: [more than one child of both types combined]
 		say "They all are as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
@@ -5605,9 +5605,9 @@ to say OffspringDesc:
 					say "child '[Name entry]'";
 				say " is a pureblood [Head entry]. ";
 			if Albino entry is true:
-				say "[bold type]Their pigmentation is muted and almost white, except for the eyes that appear red. [roman type]";
+				say "[bold type]Their pigmentation is muted and almost white, except for the eyes that appear red. [roman type][line break]";
 			else if Melanism entry is true:
-				say "[bold type]Their pigmentation is almost pure black. [roman type]";
+				say "[bold type]Their pigmentation is almost pure black. [roman type][line break]";
 			say "You have a [PlayerRelationship entry] relationship with them, and your child's personality is rather [Personality entry].";
 		else:
 			repeat with x running from 1 to number of filled rows in Table of PlayerBunkerChildren:
@@ -5632,9 +5632,9 @@ to say OffspringDesc:
 						say "child '[Name entry]'";
 					say " is a pureblood [Head entry]. ";
 				if Albino entry is true:
-					say "[bold type]Their pigmentation is muted and almost white, except for the eyes that appear red. [roman type]";
+					say "[bold type]Their pigmentation is muted and almost white, except for the eyes that appear red. [roman type][line break]";
 				else if Melanism entry is true:
-					say "[bold type]Their pigmentation is almost pure black. [roman type]";
+					say "[bold type]Their pigmentation is almost pure black. [roman type][line break]";
 				say "You have a [PlayerRelationship entry] relationship with them, and your child's personality is rather [Personality entry].";
 	if (number of filled rows in Table of PlayerBunkerChildren) > 1:
 		say "They all are as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
@@ -8601,7 +8601,7 @@ to eyecolorsetting: [ Green, Blue, Gray, Brown, Hazel, Amber, Red]
 		now menuexit is 1;
 
 to playernaming:
-	say "[bold type]Please enter new name: [roman type]";
+	say "[bold type]Please enter new name: [roman type][line break]";
 	get typed command as playerinput;
 	now name of Player is playerinput;
 
@@ -8634,9 +8634,9 @@ to say menuwardlist:
 			say "Mindcontrol ";
 		if VoreList is warded:
 			say "Vore ";
-		say "[close bracket][roman type]";
+		say "[close bracket][roman type][line break]";
 	else:
-		say "[bold type]None Warded[roman type]";
+		say "[bold type]None Warded[roman type][line break]";
 
 to say menubanlist:
 	if CockVoreList is banned or FurryList is banned or MaleList is banned or FemaleList is banned or HumorousList is banned or DemonList is banned or HermList is banned or IncestList is banned or TransList is banned or MindcontrolList is banned or NonconList is banned or VoreList is banned:
@@ -8667,9 +8667,9 @@ to say menubanlist:
 			say "Mindcontrol ";
 		if VoreList is banned:
 			say "Vore ";
-		say "[close bracket][roman type]";
+		say "[close bracket][roman type][line break]";
 	else:
-		say "[bold type]None Banned[roman type]";
+		say "[bold type]None Banned[roman type][line break]";
 
 to say gsopt_1:
 	now calcnumber is -1;

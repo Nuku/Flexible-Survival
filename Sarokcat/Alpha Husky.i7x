@@ -14,6 +14,7 @@ losttoalphahusky is a number that varies.
 
 to say Alpha Husky Desc:
 	setmongender 3;
+	project the Figure of HuskyAlpha_soft_icon;
 	if inasituation is true:
 		say ""; [dealt with at the source of the event]
 	else:
@@ -23,6 +24,7 @@ to say Alpha Husky attack:
 	if inasituation is true:
 		say ""; [dealt with at the source of the event]
 	else:
+		project the Figure of HuskyAlpha_hard_icon;
 		increase losttoalphahusky by 1;
 		if Player is female:
 			if BodyName of Player is "Husky Bitch":
@@ -127,6 +129,7 @@ to say alpha huskypack lost:
 
 to say alpha huskypack victory:
 	choose row MonsterID from Table of Random Critters;
+	project the Figure of HuskyAlpha_hard_icon;
 	if Player is not submissive:
 		say "     You stand victorious as the huskies whimper in defeat. They know who the one in charge is, for now at least. One of the downed dogs rolls over in front of you, paws in the air and wagging his tail. The others join in with soft yelps and whines, endeavoring to win your favor.";
 		if humanity of Player > 60 or Libido of Player < 50:
@@ -194,6 +197,7 @@ To say Alpha Husky loss:
 	if inasituation is true:
 		say ""; [dealt with at the source of the event]
 	else if SarahSlut > 3:
+		project the Figure of HuskyAlpha_hard_icon;
 		say "     'You're tougher than I thought,' the alpha says as he looks at you speculatively, his nose working as he sniffs around you for a second, before a grin crosses his muzzle. 'And it looks like you already have tamed a bitch or two yourself,' he says with a chuckle, obviously scenting your lusty husky pet's heat-filled odor still clinging to your body. 'If you want, I suppose I could give you a few pointers on being a proper alpha to them, one pack leader to another,' the canine says with a wink, his offer sounding surprisingly helpful as you think of how much fun it would be to be a proper alpha for your little pets back in the bunker...";
 		say "[bold type]Do you take him up on his offer?[roman type][line break]";
 		LineBreak;
@@ -231,10 +235,10 @@ To say Alpha Husky loss:
 		else:
 			say "     This encounter reminds you of your deal with bounty hunter, Bradford. You should go see him about getting your share of the reward.";
 
-
 to caughtthealphahusky:
+	project the Figure of HuskyAlpha_hard_icon;
 	LineBreak;
-	say "     [bold type]What do you want to do with the male husky now?[roman type]";
+	say "     [bold type]What do you want to do with the male husky now?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

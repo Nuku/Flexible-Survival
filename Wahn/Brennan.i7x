@@ -630,7 +630,7 @@ instead of resolving Wolf Whisperer:
 		else:
 			LineBreak;
 			say "     Ignoring the wounded wolf as he circles back around to bark at you some more and giving pleading whines. After several moments of this, he growls in obvious frustration and you chase him off with some thrown rocks, going back to what you were doing.";
-			say "     [bold type]Thinking back about what happened as you continue to scavenge (without much luck), you can't help but wonder what you'd have found if you went with the wolf. Maybe you missed something important, if Brennan was actually in trouble.[roman type]";
+			say "     [bold type]Thinking back about what happened as you continue to scavenge (without much luck), you can't help but wonder what you'd have found if you went with the wolf. Maybe you missed something important, if Brennan was actually in trouble.[roman type][line break]";
 			now Bunny Frat Invite is inactive;
 			now Entrance Checks is inactive;
 			now Trip to the Water Tower is inactive;
@@ -811,7 +811,7 @@ Instead of resolving Trip to the Water Tower:
 				say "     Absolutely speechless until the giant has actually moved out of sight, Brennan turns to you with wide eyes and then says, 'Oh fuck! Fuck. Fuck. FUCK! Damn it! How - why - was that thing in the water tower?' Fairly shell-shocked yourself, you shrug, then check out why your arm is suddenly wet. It's blood, trickling from a long (but shallow) groove that a piece of shrapnel dug into your arm. Brennan immediately reacts by pulling his medkit, helping you clean the wound and keeping a sterile cover pressed on it until it heals over. '[italic type]That[roman type] certainly didn't go as planned!' he swears under his breath. 'Really hope this doesn't come back to bite us in the ass.' The two of you make your way back the way you came from, making a concerted effort to avoid the trail of destruction that the goo colossus has left in its wake.";
 				LineBreak;
 				say "     The goo colossus will surely make the plans of the military to pacify the city [italic type]much[roman type] more difficult!";
-				say "     [bold type]Your rescue has been delayed by two full weeks![roman type]";
+				say "     [bold type]Your rescue has been delayed by two full weeks![roman type][line break]";
 				extend game by (14 times 8); [14 days time extension]
 				now GooColossusProgress is 1; [player and Brennan freed the beast!]
 				now Resolution of Trip to the Water Tower is 1; [player and Brennan freed the beast!]
