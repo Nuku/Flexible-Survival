@@ -436,7 +436,7 @@ to salabind:
 
 to say salastrugglebar:
 	if boundsegment is 0:
-		say "[if struggleatt is 3]<< X[end if][if struggleatt is 2]X[else if struggleatt > 2]~[end if][if struggleatt is 1]X[else if struggleatt > 1]~[end if][if struggleatt is 0]X[else if struggleatt > 0]~[end if] [italic type][bracket]--[close bracket][roman type]";
+		say "[if struggleatt is 3]<< X[end if][if struggleatt is 2]X[else if struggleatt > 2]~[end if][if struggleatt is 1]X[else if struggleatt > 1]~[end if][if struggleatt is 0]X[else if struggleatt > 0]~[end if] [italic type][bracket]--[close bracket][roman type][line break]";
 	else:
 		say "< [bracket]-[if struggleatt > 0]X[else]-[end if][close bracket]";
 

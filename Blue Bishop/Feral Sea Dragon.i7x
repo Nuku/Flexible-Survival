@@ -1136,9 +1136,9 @@ to fsdmvore:
 
 to say fsdstrugglebar:
 	if boundsegment is 1:
-		say "[if tempnum2 is 4][italic type]~--~ [roman type][end if]< [bracket]-[if struggleatt > 1][bold type]X[roman type][else]-[end if][if struggleatt > 0][bold type]X[roman type][else]-[end if][close bracket] [if boundmod > 1]}} [else if boundmod > 0]} [end if][italic type][bracket]---[close bracket][roman type]";
+		say "[if tempnum2 is 4][italic type]~--~ [roman type][end if]< [bracket]-[if struggleatt > 1][bold type]X[roman type][else]-[end if][if struggleatt > 0][bold type]X[roman type][else]-[end if][close bracket] [if boundmod > 1]}} [else if boundmod > 0]} [end if][italic type][bracket]---[close bracket][roman type][line break]";
 	else if boundsegment is 2:
-		say "~-[if struggleatt > 0][bold type]X[roman type][else]-[end if]~ [italic type][bracket]---[close bracket][roman type] [italic type][bracket]---[close bracket][roman type]";
+		say "~-[if struggleatt > 0][bold type]X[roman type][else]-[end if]~ [italic type][bracket]---[close bracket][roman type] [italic type][bracket]---[close bracket][roman type][line break]";
 	else:
 		say "[if boundmod2 is 0][italic type]~--~[roman type] < [italic type][bracket]---[close bracket][roman type] [end if][bracket]-[if struggleatt > 1][bold type]X[roman type][else]-[end if][if struggleatt > 0][bold type]X[roman type][else]-[end if][close bracket] [if boundmod2 is 1] > [italic type]~--~[roman type][end if]";
 

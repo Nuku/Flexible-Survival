@@ -95,7 +95,7 @@ Trial of Courage is inactive.
 
 instead of resolving a Trial of Courage: [Finding the amulet in the park]
 	say "     While navigating through the park, you come upon what seems to be a large amphitheater. It looks distinctly Greek, composed of stone in intricate designs, though the details of the works seem to be faded and worn with age. Everything about the structure paints it as something far older than should be in this park. Despite the strangeness of the world, this still stands out as particularly interesting, and the sight of it reminds you of what Aster asked you to look for. After all, there are very few places that look more like they hold forgotten treasures of ancient heroes than this.";
-	say "[bold type]Do you want to investigate?[roman type]";
+	say "[bold type]Do you want to investigate?[roman type][line break]";
 	LineBreak;
 	if Player consents:
 		say "     You decide it's worth checking out more closely, and you move carefully towards the ancient amphitheater. Soon enough, you find an entrance, and when you enter you can easily see that the interior looks much more well-kept than the outer portions. The first thing to catch your eye when you enter is a tall column, with text inscribed on the front in large lettering. At first, it seems to be in an unknown language, but as you examine it in more detail, it seems to resolve itself into something more familiar. While it seems almost like a riddle, you're reasonably certain that it describes a trial necessary to obtain the 'treasures' within. If you're going to get that amulet, you'll have to play along.";

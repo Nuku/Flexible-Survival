@@ -248,7 +248,7 @@ to say findfirefighter5:
 
 to say findfirefighter6:
 	say "     'You've found three firefighters already, congratulations!' Homaru chuckles at you while saying this. 'There's only one other still here in the city, but he'll be by on his own time,' Homaru says cryptically. 'Anyways, why don't you go back and check to see how Kenaz is? You might be surprised if you do.' And with that Homaru waves you off. Maybe going to the firehouse would be wise?";
-	say "[bold type]There are no more firefighters to find now! Head back to the Fire House![roman type]";
+	say "[bold type]There are no more firefighters to find now! Head back to the Fire House![roman type][line break]";
 
 
 Informant ends here.

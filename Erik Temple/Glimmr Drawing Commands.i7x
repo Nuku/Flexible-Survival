@@ -1379,13 +1379,13 @@ To say b:
 	say "[bold type]";
 
 To say /b:
-	say "[roman type]";
+	say "[roman type][line break]";
 
 To say i:
 	say "[italic type]";
 
 To say /i:
-	say "[roman type]";
+	say "[roman type][line break]";
 
 
 Chapter - Debugging commands

@@ -272,7 +272,7 @@ gryphoncomforted is a number that varies.
 
 Instead of resolving Lonely Gryphoness:
 	say "     Traveling through the deserted streets, you hear a strange and rather sad song echoing through the empty streets, its strange beautiful notes making you feel somewhat sad and lonely yourself. Looking around for the source, you think the sound is coming from the top of a nearby apartment building. You are torn between the idea of climbing up the fire escape to see who is making the noise or just standing here and basking in the music.";
-	say "     [bold type]Do you climb up to see who is singing?[roman type]";
+	say "     [bold type]Do you climb up to see who is singing?[roman type][line break]";
 	if Player consents:
 		LineBreak;
 		project Figure of BlueGryphon_icon;

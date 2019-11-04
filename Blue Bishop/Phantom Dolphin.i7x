@@ -25,7 +25,7 @@ to say flotlook:
 		say "     This odd thing raises a lot of questions. Why is it just floating there? Shouldn't it be the same as all the other infected here? Without having to touch it, you can see that the thing clearly has a hole for 'use', so it's clearly the product of this blight's influence. If you're so daring as to 'play' with it, you imagine the end result may be equally unpredictable...";
 		say "     [italic type][if flotintense < 2]The thing looks completely inanimate. You're fairly certain there'll be little to no consequence in using it right now[else if flotintense < 4]The thing appears to be mostly in a mundane state right now, but it seems to subtly become excited as you approach. You could probably get away with using it[else if flotintense < 6]The thing seems tinged with a streak of wanton menace. You could probably get away with using it, but not for long[else if flotintense < 8]You feel ill at ease near the thing, as though you're being drawn to the tainted object. You don't think it'd be particularly wise to use it right now[else]The thing seems to undulate from the corners of your eyes, as though thrumming with an otherworldly need. You feel overwhelmingly drawn to the thing, but you'd have to be insane to use it now[end if]...[roman type][line break]";
 		if flotmarked is true:
-			say "     [italic type]You feel as though you've been marked by this object.[roman type]";
+			say "     [italic type]You feel as though you've been marked by this object.[roman type][line break]";
 	LineBreak;
 
 flotmarked is a truth state that varies.

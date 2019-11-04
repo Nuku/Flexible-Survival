@@ -50,7 +50,7 @@ instead of sniffing Gorilla Team-Members:
 
 instead of conversing the Gorilla Team-Members:
 	if HP of Roman is 3:
-		say "     You have a heavy secret concerning the team captain. [bold type]Do you wish you wish to share it? This decision will certainly break Roman, and without him you will probably not be able to work for the team anymore. Then again, free bitch to play with the other boys.[roman type]";
+		say "     You have a heavy secret concerning the team captain. [bold type]Do you wish you wish to share it? This decision will certainly break Roman, and without him you will probably not be able to work for the team anymore. Then again, free bitch to play with the other boys.[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) 'Hey, guys! You won't believe what I saw the other day!'";
 		say "     ([link]N[as]n[end link]) No. You are not this cruel.";

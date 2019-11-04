@@ -324,7 +324,7 @@ to say DemonFoxFirstSubmit:
 	say "[mimpregchance]";
 	say "[mimpregchance]";
 	WaitLineBreak;
-	say "     You turn to look at the fox once more, only to be greeted with empty space. It seems the fox has gone for now... [italic type]Perhaps you could summon him once more with the book, if you so desire.[roman type]";
+	say "     You turn to look at the fox once more, only to be greeted with empty space. It seems the fox has gone for now... [italic type]Perhaps you could summon him once more with the book, if you so desire.[roman type][line break]";
 	infect "Demon Fox";
 	now DemonFox_Encountered is true;
 	now DemonFox_PlayerSubmitted is true; [submitted]

@@ -789,7 +789,7 @@ to NermineRequestHelp:
 			LineBreak;
 			if MaleList is banned or FurryList is banned or FemaleList is banned:
 				say "     'Oh, Nermine is seeing now that she looks closer at her visitor that [SubjectPro of Player] will not be able to help her. She is feeling sad to see someone restrict their fun so. Being not so picky would be much more interesting, she thinks.' Saying this, Nermine shakes her jackal head sadly.";
-				say "[bold type](The helping quest requires guy, girl and furry content to be available.)[roman type]";
+				say "[bold type](The helping quest requires guy, girl and furry content to be available.)[roman type][line break]";
 			else:
 				say "     'Excellent!' the jackaless says as she claps her hands happily, before reaching underneath the counter. 'Nermine loves to help out her customers!' she says as she brings a small item up from beneath and holds it out to you. Closer inspection reveals the object to be a small black statue of a jackalman with his arms crossed across his chest. Glancing up at Nermine you see the jackal-woman give you a sly wink, then add, 'Nermine thinks this will help her new friend look much better, and get in touch with the power of the jackal. Go on, give it a try!' she says as she hands you the small totem. 'It is no charge for this one. A gift from Nermine to help get started.' The canine shopkeeper says with a grin on her muzzle, as you look down at the little item in your hands with curiosity.";
 				LineBreak;

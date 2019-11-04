@@ -82,7 +82,7 @@ to say WYVDESC:
 		if level of Player < 20:
 			say "     With a low growl it opens its great maw, hailing you with a barrage of strange, yellowish-white ooze, the strong adhesive fusing you to the ground. You manage to pry some of the viscous fluid free of you, but if feels as though contact with it has drained you slightly. This monster is simply too much for you to handle right now, and your best bet is simply to pull yourself free and make a run for it.";
 		else if WYVLEV is 0:
-			say "     Being familiar with the great creature's tactics, you dodge as it makes its attempt to catch you with an opening volley of goop. You feel a rush of excitement, of wild fervor and charge at the gigantic creature before you even realize what you're doing. Perhaps you're tired of always running from them, perhaps it is some new madness brought on by the infection, but you feel compelled to stand and fight the enormous beast. [bold type]From this point on, you will face the monster directly.[roman type]";
+			say "     Being familiar with the great creature's tactics, you dodge as it makes its attempt to catch you with an opening volley of goop. You feel a rush of excitement, of wild fervor and charge at the gigantic creature before you even realize what you're doing. Perhaps you're tired of always running from them, perhaps it is some new madness brought on by the infection, but you feel compelled to stand and fight the enormous beast. [bold type]From this point on, you will face the monster directly.[roman type][line break]";
 		else:
 			say "     It sets upon you with a hail of its goop, but by this point you're so adept that you easily outmaneuver it. [if scalevalue of Player < 4]You feel that same crazed compulsion to take on the creature so much larger than you. [end if]You raise your [if weapon object of Player is journal]fists[else]weapon in the air[end if] and give a wild battle cry before rushing at it.";
 		if level of Player >= 20:
@@ -1029,7 +1029,7 @@ boundcounter is a number that varies.
 
 to say wyvstrugglebar:
 	if boundsegment is 1:
-		say "< [bracket]-[if struggleatt > 0][bold type]X[roman type][else]-[end if][close bracket] [italic type][bracket]---[close bracket][roman type]";
+		say "< [bracket]-[if struggleatt > 0][bold type]X[roman type][else]-[end if][close bracket] [italic type][bracket]---[close bracket][roman type][line break]";
 	else:
 		say "[if boundmod is 0]< [italic type][bracket]--[close bracket][roman type] [end if][bracket]-[if struggleatt > 1][bold type]X[roman type][else]-[end if][if struggleatt > 0][bold type]X[roman type][else]-[end if][close bracket] [if boundmod is 1] >[end if]";
 
@@ -1170,18 +1170,18 @@ to wyvorgy:
 		say " to be female, the other ";
 		if wyvkinocc > 1:
 			if wyvkin1gen + wyvkin2gen + wyvkin3gen + wyvkin4gen > 2:
-				say "[bold type]Three[roman type]";
+				say "[bold type]Three[roman type][line break]";
 			else if wyvkin1gen + wyvkin2gen + wyvkin3gen + wyvkin4gen > 1:
-				say "[bold type]Two[roman type]";
+				say "[bold type]Two[roman type][line break]";
 			else:
-				say "[bold type]One[roman type]";
+				say "[bold type]One[roman type][line break]";
 		else if wyvkinocc is 1:
 			if wyvkin1gen + wyvkin2gen + wyvkin3gen > 1:
-				say "[bold type]Two[roman type]";
+				say "[bold type]Two[roman type][line break]";
 			else:
-				say "[bold type]One[roman type]";
+				say "[bold type]One[roman type][line break]";
 		else:
-			say "[bold type]One[roman type]";
+			say "[bold type]One[roman type][line break]";
 		say " being male, blatantly aroused";
 	say " as they approach, easily overtaking and pinning you to the ground. Bickering between each other on who should go first, you'll likely want to pull yourself out of this pile of junk before they have their way with you, or worse yet, their [if WYVGEN is 0]'matron'[else]matron[end if] return...";
 	wait for any key;
@@ -1364,16 +1364,16 @@ to wyvernheadapply:
 	if a random chance of 1 in 2 succeeds:
 		if wyvkinassign is 1:
 			now wyvkin1att is 1;
-			say "     Wyvern [bold type]A[roman type]";
+			say "     Wyvern [bold type]A[roman type][line break]";
 		else if wyvkinassign is 2:
 			now wyvkin2att is 1;
-			say "     Wyvern [bold type]B[roman type]";
+			say "     Wyvern [bold type]B[roman type][line break]";
 		else if wyvkinassign is 3:
 			now wyvkin3att is 1;
-			say "     Wyvern [bold type]C[roman type]";
+			say "     Wyvern [bold type]C[roman type][line break]";
 		else if wyvkinassign is 4:
 			now wyvkin4att is 1;
-			say "     Wyvern [bold type]D[roman type]";
+			say "     Wyvern [bold type]D[roman type][line break]";
 		say ", feeling particularly affectionate, forces its scaled lips on your own, thick, coarse tongue escaping his maw to force its way into yours. Writhing, slick appendage [if scalevalue of Player < 4]much too large for you[else]overwhelming you[end if], the beast insists on forcing it down your throat, gaping maw [if scalevalue of Player < 3]practically engulfing your head[else]pressed firmly against you[end if].";
 		increase pewterheadvar1 by 1;
 	else:
@@ -1381,31 +1381,31 @@ to wyvernheadapply:
 			increase pewterheadvar2 by 1;
 			if wyvkinassign is 1:
 				now wyvkin1att is 2;
-				say "     Wyvern [bold type]A[roman type]";
+				say "     Wyvern [bold type]A[roman type][line break]";
 			else if wyvkinassign is 2:
 				now wyvkin2att is 2;
-				say "     Wyvern [bold type]B[roman type]";
+				say "     Wyvern [bold type]B[roman type][line break]";
 			else if wyvkinassign is 3:
 				now wyvkin3att is 2;
-				say "     Wyvern [bold type]C[roman type]";
+				say "     Wyvern [bold type]C[roman type][line break]";
 			else if wyvkinassign is 4:
 				now wyvkin4att is 2;
-				say "     Wyvern [bold type]D[roman type]";
+				say "     Wyvern [bold type]D[roman type][line break]";
 			say " moves to climb up on you, his drooling, bestial cock prodding insistently against your face. Intense, masculine scent causing you to gasp, he's quick to exploit this, forcing its blunt head down your maw. [if scalevalue of Player < 4]Way too much for you to take at once[else]Quite a lot to take all at once[end if], it's a fight to keep a clear head with him trying to ram it down your throat.";
 		else:
 			increase pewterheadvar3 by 1;
 			if wyvkinassign is 1:
 				now wyvkin1att is 3;
-				say "     Wyvern [bold type]A[roman type]";
+				say "     Wyvern [bold type]A[roman type][line break]";
 			else if wyvkinassign is 2:
 				now wyvkin2att is 3;
-				say "     Wyvern [bold type]B[roman type]";
+				say "     Wyvern [bold type]B[roman type][line break]";
 			else if wyvkinassign is 3:
 				now wyvkin3att is 3;
-				say "     Wyvern [bold type]C[roman type]";
+				say "     Wyvern [bold type]C[roman type][line break]";
 			else if wyvkinassign is 4:
 				now wyvkin4att is 3;
-				say "     Wyvern [bold type]D[roman type]";
+				say "     Wyvern [bold type]D[roman type][line break]";
 			say " moves to climb up on you, her oozing, bestial cunt grinding insistently against your face. [if scalevalue of Player < 4]Quite a lot to take all at once[else]Showing absolutely no restraint[end if], your face is smeared with her tainted honey, making it very difficult to think straight.";
 	increase pewterheadocc by 1;
 
@@ -1415,16 +1415,16 @@ to wyvernbodyapply:
 	increase pewterbodyocc by 1;
 	if wyvkinassign is 1:
 		now wyvkin1att is 4;
-		say "     Wyvern [bold type]A[roman type]";
+		say "     Wyvern [bold type]A[roman type][line break]";
 	else if wyvkinassign is 2:
 		now wyvkin2att is 4;
-		say "     Wyvern [bold type]B[roman type]";
+		say "     Wyvern [bold type]B[roman type][line break]";
 	else if wyvkinassign is 3:
 		now wyvkin3att is 4;
-		say "     Wyvern [bold type]C[roman type]";
+		say "     Wyvern [bold type]C[roman type][line break]";
 	else if wyvkinassign is 4:
 		now wyvkin4att is 4;
-		say "     Wyvern [bold type]D[roman type]";
+		say "     Wyvern [bold type]D[roman type][line break]";
 	say " moves to lick and nip at your [bodytype of Player] form, grinding itself against your torso[if Breast Size of Player > 0] as their abuse eventually shifts to your breasts[end if]. [if scalevalue of Player < 4]Not having much room to work with[else]Having plenty of room to work with[end if], it shows no restraint in making a sticky, sore mess of your [bodydesc of Player] form.";
 
 to wyverngenitalapply:
@@ -1433,61 +1433,61 @@ to wyverngenitalapply:
 			increase pewtercuntocc by 1;
 			if wyvkinassign is 1:
 				now wyvkin1att is 5;
-				say "     Wyvern [bold type]A[roman type]";
+				say "     Wyvern [bold type]A[roman type][line break]";
 			else if wyvkinassign is 2:
 				now wyvkin2att is 5;
-				say "     Wyvern [bold type]B[roman type]";
+				say "     Wyvern [bold type]B[roman type][line break]";
 			else if wyvkinassign is 3:
 				now wyvkin3att is 5;
-				say "     Wyvern [bold type]C[roman type]";
+				say "     Wyvern [bold type]C[roman type][line break]";
 			else if wyvkinassign is 4:
 				now wyvkin4att is 5;
-				say "     Wyvern [bold type]D[roman type]";
+				say "     Wyvern [bold type]D[roman type][line break]";
 			say ", screeching eagerly, rams his cock into[if Cunt Count of Player > 1] one of[end if] your cunt[sfn][if pewtercuntocc > 1], joining the other wyvern already in there[end if]. Wracked with intense spasms as the beast shows no restraint in inching it in deeper, you're given little time to acclimate to this[if pewtercuntocc > 1] second[end if] intrusion.";
 		else:
 			increase pewterassocc by 1;
 			if wyvkinassign is 1:
 				now wyvkin1att is 6;
-				say "     Wyvern [bold type]A[roman type]";
+				say "     Wyvern [bold type]A[roman type][line break]";
 			else if wyvkinassign is 2:
 				now wyvkin2att is 6;
-				say "     Wyvern [bold type]B[roman type]";
+				say "     Wyvern [bold type]B[roman type][line break]";
 			else if wyvkinassign is 3:
 				now wyvkin3att is 6;
-				say "     Wyvern [bold type]C[roman type]";
+				say "     Wyvern [bold type]C[roman type][line break]";
 			else if wyvkinassign is 4:
 				now wyvkin4att is 6;
-				say "     Wyvern [bold type]D[roman type]";
+				say "     Wyvern [bold type]D[roman type][line break]";
 			say ", screeching eagerly, rams his cock up your ass[if pewterassocc > 1], joining the other wyvern already in there[end if]. Wracked with intense spasms as the beast shows no restraint in inching it in deeper, you're given little time to acclimate to this[if pewterassocc > 1] second[end if] intrusion.";
 		increase pewtergenitalcap by 1;
 	else if pewtercockocc < 1: [female]
 		if Player is male:
 			if wyvkinassign is 1:
 				now wyvkin1att is 7;
-				say "     Wyvern [bold type]A[roman type]";
+				say "     Wyvern [bold type]A[roman type][line break]";
 			else if wyvkinassign is 2:
 				now wyvkin2att is 7;
-				say "     Wyvern [bold type]B[roman type]";
+				say "     Wyvern [bold type]B[roman type][line break]";
 			else if wyvkinassign is 3:
 				now wyvkin3att is 7;
-				say "     Wyvern [bold type]C[roman type]";
+				say "     Wyvern [bold type]C[roman type][line break]";
 			else if wyvkinassign is 4:
 				now wyvkin4att is 7;
-				say "     Wyvern [bold type]D[roman type]";
+				say "     Wyvern [bold type]D[roman type][line break]";
 			say ", [if scalevalue of Player < 4]crawling[else]climbing[end if] on top of you, positions herself over[if Cock Count of Player > 1] one of[end if] your dick[smn] before firmly ramming her tight, bestial cunt down on it. Screeching loudly at you, the beast eagerly rides against your[if scalevalue of Player < 3] smaller,[end if] [bodytype of Player] form.";
 		else:
 			if wyvkinassign is 1:
 				now wyvkin1att is 8;
-				say "     Wyvern [bold type]A[roman type]";
+				say "     Wyvern [bold type]A[roman type][line break]";
 			else if wyvkinassign is 2:
 				now wyvkin2att is 8;
-				say "     Wyvern [bold type]B[roman type]";
+				say "     Wyvern [bold type]B[roman type][line break]";
 			else if wyvkinassign is 3:
 				now wyvkin3att is 8;
-				say "     Wyvern [bold type]C[roman type]";
+				say "     Wyvern [bold type]C[roman type][line break]";
 			else if wyvkinassign is 4:
 				now wyvkin4att is 8;
-				say "     Wyvern [bold type]D[roman type]";
+				say "     Wyvern [bold type]D[roman type][line break]";
 			say ", [if scalevalue of Player < 4]crawling[else]climbing[end if] on top of you, grinds her dripping, bestial cunt against your [if Player is male]over-endowed dick[else if Player is female]own[else]genital-less crotch[end if]. Screeching loudly at you, the beast desperately writhes against your[if scalevalue of Player < 3] smaller,[end if] [bodytype of Player] form.";
 		increase pewtercockocc by 1;
 		increase pewtergenitalcap by 1;

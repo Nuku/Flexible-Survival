@@ -77,7 +77,7 @@ to say beatthejaguar:
 			else:
 				say "     Deciding you should focus on more important stuff right now, you turn away from the defeated orderly and return to the matter at hand.";
 		else:
-			say "     [bold type]Should you take a ride on that cock of his or just let him go?[roman type]";
+			say "     [bold type]Should you take a ride on that cock of his or just let him go?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Ride that cock.";
 			say "     ([link]N[as]n[end link]) - Let him go.";

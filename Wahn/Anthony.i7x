@@ -172,7 +172,7 @@ to say AnthonyTalk2: [helping]
 		else: [helped the shepherds]
 			say "     'I was gonna ask you to help out Shawn and Duke, but you already did that, didn't you? I'm glad you could help them. It'd have been terrible if Duke lost his boyfriend forever to these damned nanites. Let me give you a reward for your help.' With that, the anthro anteater starts turning to go into the kitchen and grab another tasty treat for you.";
 			LineBreak;
-			say "     [bold type]Do you wait patiently for him to get you some food, or would you rather pull him against yourself for a kiss and a more 'personal' reward?[roman type]";
+			say "     [bold type]Do you wait patiently for him to get you some food, or would you rather pull him against yourself for a kiss and a more 'personal' reward?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Wait.";
 			say "     ([link]N[as]n[end link]) - Pull him in.";
