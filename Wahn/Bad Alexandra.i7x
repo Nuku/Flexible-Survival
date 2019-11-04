@@ -351,11 +351,17 @@ to say BadAlexandraTalkMenu:
 		now sortorder entry is 2;
 		now description entry is "Bring up that you want to go to the pediatrics clinic with her";
 	[]
-	if HP of Alexandra is 2 or HP of Alexandra is 4 and ((demon brute is tamed and DBCaptureQuestVar is 5) or PlayerMet of Farmhand Horsemen is true): [  or ("Feral Mutt" is listed in EncounteredEnemies of Player or "Feral Mutt Pack" is listed in EncounteredEnemies of Player)):] [not pregnant right now; possible candidates available]
+	if (HP of Alexandra is 2 or HP of Alexandra is 4 or HP of Alexandra is 5) and ((demon brute is tamed and DBCaptureQuestVar is 5) or PlayerMet of Farmhand Horsemen is true): [  or ("Feral Mutt" is listed in EncounteredEnemies of Player or "Feral Mutt Pack" is listed in EncounteredEnemies of Player)):] [not pregnant right now; possible candidates available]
 		choose a blank row in table of fucking options;
 		now title entry is "Breeding her (with others)";
 		now sortorder entry is 3;
 		now description entry is "Tell Alexandra that you want to get her knocked up by partners you choose";
+	[]
+	if Alexandra is in Worker Barracks:
+		choose a blank row in table of fucking options;
+		now title entry is "Taking her back to the library";
+		now sortorder entry is 4;
+		now description entry is "Bring your bitch back to the Grey Abbey Library";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Her family";
@@ -401,6 +407,8 @@ to say BadAlexandraTalkMenu:
 					say "[AlexandraFertilityTrip]";
 				else if (nam is "Breeding her (with others)"):
 					say "[AlexandraBreedingMenu]"; [See file Alexandra Breeding.i7x in Wahn's folder]
+				else if (nam is "Taking her back to the library"):
+					say "[AlexandraBreeding_LibraryReturn]"; [See file Alexandra Breeding.i7x in Wahn's folder]
 				else if (nam is "Her family"):
 					say "[AlexandraBackstory1]";
 				else if (nam is "Growing up and her adult life"):

@@ -122,7 +122,7 @@ instead of conversing the Anthony:
 	now sortorder entry is 2;
 	now description entry is "Ask if there's anything he needs help with";
 	[]
-	if PlayerMet of Farmhand Horsemen is true and FriesianRelationship is 2 and Energy of Alexandra > 1: [knows the twins, Alexandra was fucked by horsecock already]
+	if PlayerMet of Farmhand Horsemen is true and FriesianRelationship is 2 and Energy of Alexandra > 0: [knows the twins, Alexandra was fucked by horsecock already]
 		choose a blank row in table of fucking options;
 		now title entry is "Talk about Alexandra";
 		now sortorder entry is 3;
@@ -197,9 +197,17 @@ to say AnthonyTalk2: [helping]
 		say "     Clicking his claws together thoughtfully, he finally says 'I'll have to get back to you on that later, not sure what would be right for your skill-set at the moment. Just sending you to milk cows would be a waste of your time...' (further quests remain to be written - please have patience)";
 
 to say AnthonyTalk3:
-	say "     Clearing your throat, you bring up that your doberwoman companion Alexandra spent some time in the worker barracks, really enjoying her visit there and getting to know the horsemen quite closely. 'Oh, she did?' Anthony replies, correctly interpreting the tone in which you said it and nodding slowly as his imagination paints a picture of what happened in the barracks. 'Well, that's good then. Isn't it? If she enjoyed herself and the men got a little bit of relief. I'd been worrying something fierce about them becoming too pent-up.' Chuckling and smoothing over the anteater's worries, you pat his arm and tell him that you were wondering if Alexandra actually might stay for a longer while.";
-	say "     He thinks about it for a moment and says, 'I'm fine with that in general terms, but there need to be some ground rules. I mean, the men do have to do their work or this whole place will be swallowed up by the plains. And the same applies to your friend. If she eats our food, she'll have to take a turn with the chores. Wouldn't be fair to the guys otherwise.' For a moment, you think about asking if being bred by a dozen equine studs counts as a needed chore, but then just nod instead, replying that it won't be a problem and that Alexandra's strong and resourceful, being able to take anyon- err, anything that she'll have to do.";
-	now Intelligence of Alexandra is 1; [talked with Anthony about letting her stay at the farm]
+	if Intelligence of Alexandra is 0:
+		say "     Clearing your throat, you bring up that your doberwoman companion Alexandra spent some time in the worker barracks, really enjoying her visit there and getting to know the horsemen quite closely. 'Oh, she did?' Anthony replies, correctly interpreting the tone in which you said it and nodding slowly as his imagination paints a picture of what happened in the barracks. 'Well, that's good then. Isn't it? If she enjoyed herself and the men got a little bit of relief. I'd been worrying something fierce about them becoming too pent-up.' Chuckling and smoothing over the anteater's worries, you pat his arm and tell him that you were wondering if Alexandra actually might stay for a longer while.";
+		say "     He thinks about it for a moment and says, 'I'm fine with that in general terms, but there need to be some ground rules. I mean, the men do have to do their work or this whole place will be swallowed up by the plains. And the same applies to your friend. If she eats our food, she'll have to take a turn with the chores. Wouldn't be fair to the guys otherwise.' For a moment, you think about asking if being bred by a dozen equine studs counts as a needed chore, but then just nod instead, replying that it won't be a problem and that Alexandra's strong and resourceful, being able to take anyon- err, anything that she'll have to do.";
+		now Intelligence of Alexandra is 1; [talked with Anthony about letting her stay at the farm]
+	else if Intelligence of Alexandra is 1: [may come to the farm, in theory]
+		say "     As you bring up Alexandra again, Anthony nods to you. 'As I said - I'm fine with you bringing her in general terms, but there need to be some ground rules. I mean, the men do have to do their work or this whole place will be swallowed up by the plains. And the same applies to your friend. If she eats our food, she'll have to take a turn with the chores. Wouldn't be fair to the guys otherwise.' For a moment, you think about asking if being bred by a dozen equine studs counts as a needed chore, but then just nod instead, replying that it won't be a problem and that Alexandra's strong and resourceful, being able to take anyon- err, anything that she'll have to do.";
+	else if Intelligence of Alexandra is 2: [has been at the farm at least once]
+		if Alexandra is in Worker Barracks:
+			say "     As you bring up Alexandra, Anthony nods and says, 'I went to have a talk with your friend. She's got quite a mouth on her, for a lady, that's for sure. Still, she seems well-liked enough among the men, and tough-skinned enough to not be pushed around by them. Heard good things about her when it comes to chores too - all the farmhands were singing her praises, if you can believe that.' You smile to yourself as you imagine what Alexandra might have done to earn such endorsements, and you're fairly sure that she never did any housework to earn their affections.";
+		else:
+			say "     As you bring up Alexandra, Anthony nods and says, 'I've actually had some of the men asking if she'd visit us again. Your canine companion sure has made a lot of friends in the time she was here. Only heard good things about her when it came to chores too - so I wouldn't mind at all if you brought her back.' You smile to yourself as you imagine what Alexandra might have done to earn such endorsements, and you're fairly sure that she never did any housework to earn their affections.";
 
 instead of fucking the Anthony:
 	project the figure of Anthony_face_icon;
