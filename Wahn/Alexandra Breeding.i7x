@@ -9,11 +9,12 @@ Version 1 of Alexandra Breeding by Wahn begins here.
 [ Intelligence of Alexandra - Talking with Anthony about the farm and her ]
 [  0: nothing yet                                                         ]
 [  1: got his okay for leaving her on the farm for a while                ]
+[  2: actually has been at the farm before                                ]
 
 [ Energy of Alexandra - Breeding with the horseman twins                  ]
 [  0: nothing yet                                                         ]
 [  1: Alexandra met and fucked them before                                ]
-[  2: Talked about the farm with Alexandra                                ]
+[  2: Took her to the farm before                                         ]
 
 [ Planned content                                                         ]
 [   1: let evil Brutus pound Alexandra + female player breeding option    ]
@@ -165,7 +166,7 @@ to say AlexandraBreedingMenu:
 		now sortorder entry is 5;
 		now description entry is "Let the Friesian farmhands double-team Alexandra";
 	[]
-	if PlayerMet of Farmhand Horsemen is true and FriesianRelationship is 2 and Energy of Alexandra > 1: [knows the twins, Alexandra was fucked by horsecock already]
+	if PlayerMet of Farmhand Horsemen is true and FriesianRelationship is 2 and Energy of Alexandra > 0 and Alexandra is not in Worker Barracks: [knows the twins, Alexandra was fucked by horsecock already]
 		choose a blank row in table of fucking options;
 		now title entry is "Take her to the farm for an extended stay in the worker barracks";
 		now sortorder entry is 7;
@@ -193,15 +194,18 @@ to say AlexandraBreedingMenu:
 				else if (nam is "That pair of black stallion twins you saw at the McDermott Farm" or nam is "That pair of black stallion twins you met at the McDermott Farm" or nam is "Karel and Isaac, the black stallion twins"):
 					say "[AlexandraBreeding_Karel_Isaac]";
 				else if (nam is "Take her to the farm for an extended stay in the worker barracks"):
-					say "[AlexandraBreeding_BarracksMove]";
-				wait for any key;
+					if Intelligence of Alexandra < 2: [first time]
+						say "[AlexandraBreeding_BarracksMove]";
+					else: [repeats]
+						say "[AlexandraBreeding_BarracksReturn]";
+				[wait for any key;]
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the doberwoman bitch and tell her that you'll have to continue your conversation at another time. She looks at you in puzzlement, then turns her attention back to [if Alexandra is in Grey Abbey Library]guarding the entrance[else if Alexandra is in Worker Barracks]ogling the farmhand workers[else]ERROR, LOCATION TASK NOT SET[end if].";
-			wait for any key;
+			[wait for any key;]
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
+	[clear the screen and hyperlink list;]
 
 to say AlexandraBreeding_Mutt:
 	say "...";
@@ -536,6 +540,7 @@ to say AlexandraBreeding_Karel_Isaac:
 		say "[AlexandraFriesianSexMenu]";
 		LineBreak;
 		say "     After setting down your backpack and making sure that the library is still secure, you return to where Alexandra is hanging out. Hooking a hand behind the ex-cop's head and pulling her in for a kiss on the muzzle, you ask the dobie bitch what she thought of your little trip to the farm. She laughs and replies, 'Well boss, I think that was one of the best ideas you've had since I met you. Those horsecocks really fill a woman up, that's for sure! Karel and Issac are cute too, in their country-boy way. I almost was sorry to have to go after, wouldn't have minded to keep going with em, one to fuck while the other recovers, hah!' Grinning to yourself at the tough but willing slut you've made out of the prim and proper policewoman in such a short time, you place a hand on her belly [if Sterile of Alexandra is true]and imagine it bulging out under a thrusting cock. [else]as you imagine it swelling with a litter of puppies. [end if][bold type]The idea of just keeping her at the farm for a while, for repeated breeding sticks in the back of your head. Maybe you can bring it up sometime...[roman type][line break]";
+		now Energy of Alexandra is 1;
 	else if Energy of Alexandra > 0: [repeat]
 		if Alexandra is in Grey Abbey Library: [still got to move her there]
 			say "     A smile plays over your lips as you tell Alexandra that you're taking her back to the farm for another session with Karel and Isaac. The former cop lets out an amused snort, then comment, 'Hah! Good thing you're so invested in your little breeding program, if I'm getting pounded by grade A stud-meat because of that. I won't even complain about how stupid an idea it is to do a road trip through monster-infested streets just to see me knocked up.' Grabbing her by the back of the neck, you pull the bitch closer and kiss her a little forcefully. Letting your hands wander over her breasts, you remind Alexandra that she's your bitch, and if you want to have her bred by someone specific, or just stake her out to be fucked by anyone wandering past, that's your choice. 'Hey boss, I didn't say I wasn't going to spread my legs! No need to get rough, I'm down for some breeding, so let's get going!'";
@@ -875,6 +880,9 @@ to say AlexandraBreeding_BarracksMove:
 			WaitLineBreak;
 			say "     All in all, the introduction of Alexandra as the new resident breeding bitch of the farm is a roaring success, leaving your bad dog bitch an accepted visitor among the group of farmhands. While the air in the building is quite testosterone-laden now that there's an available female around, things still are stable enough that you have no worries about leaving her there for a long while. With a last grope of Alexandra's ass and drawing her into a demanding kiss, you let go of your bitch and stand back while Karel and Isaac are explaining the living arrangements of the farm and get fresh sheets so she can claim an unoccupied bottom bunk.";
 			add "Supervised Breeding" to Traits of Alexandra;
+		now Energy of Alexandra is 2; [was taken to the farm before]
+		if Intelligence of Alexandra < 2:
+			now Intelligence of Alexandra is 2;
 		move Alexandra to Worker Barracks;
 		move Player to Worker Barracks;
 

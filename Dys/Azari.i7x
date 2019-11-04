@@ -68,7 +68,7 @@ to say Azari_Intro:
 	say "     As you look around the area, your eyes fall upon a door marked [']Staff Only['] against the rear wall of the store. A piece of paper is taped just below that, a scribbled warning talking about a feral latex fox. Curiosity piqued, you step towards the door, passing several of the shack's patrons and workers. The closer you get, the more you feel like people are watching you. Sure enough, a cursory glance reveals that a fair few people have stopped what they're doing to observe you. Just as you're about to open the door, you hear someone loudly clear their throat. 'I'd be wary of going into Azari's room.'";
 	LineBreak;
 	say "     Turning around, you see Jerome approaching you, a grimace on his face. 'That's what we call him - Azari. He's been there longer than we've been open, and we've only ever had one patron go in there. You should've seen the look on their face when they bolted.' You give a nod at the shark's words and reconsider your course of action.";
-	say "     [bold type]Do you proceed anyway?[roman type]";
+	say "     [bold type]Do you proceed anyway?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes";
 	LineBreak;
@@ -77,7 +77,7 @@ to say Azari_Intro:
 	if Player consents:
 		[now PlayerMet of Azari is true;] [commented out for now, as the further content does not exist]
 		say "     You shake your head, resolving to stick with your original course of action. With a tug, the door swings open, and you step over the threshold into what appears to be some kind of old storeroom. Boxes are stacked in one corner, seemingly untouched for months. Hazy light filters in through a dust-covered window on the far wall. You take a few more steps, allowing the door to swing closed behind you as you look around for the fox. Nothing really seems to be here.";
-		say "     [bold type]Surely you're not going to go down this easily. Do you struggle against the fox?[roman type]";
+		say "     [bold type]Surely you're not going to go down this easily. Do you struggle against the fox?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";

@@ -277,7 +277,7 @@ To say inbox of (chosen email - an email program):
 				say "[message entry]";
 				if answered entry is true:
 					say "(R)";
-				say "[roman type]";
+				say "[roman type][line break]";
  		say "[run paragraph on]".
 
 Table of Messages

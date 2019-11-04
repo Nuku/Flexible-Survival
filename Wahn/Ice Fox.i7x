@@ -484,7 +484,7 @@ to say ArcticEnclosureEntry:
 		now BodyName of Player is "Tigertaur Sex Toy";
 		end the story saying "You certainly won't be getting out from that situation!";
 	else if fightoutcome is 30: [fled]
-		say "     Managing to flee from the building, you shake the angry tigertaurs off with some difficulty. Sadly this means that they're now forewarned about you wanting to move in on their territory. They'll surely be ready for you next time, and might very well set traps. Somehow you don't think going back would be such a good idea, so you resolve not to. [bold type]You've failed this task for Miyuki.[roman type]";
+		say "     Managing to flee from the building, you shake the angry tigertaurs off with some difficulty. Sadly this means that they're now forewarned about you wanting to move in on their territory. They'll surely be ready for you next time, and might very well set traps. Somehow you don't think going back would be such a good idea, so you resolve not to. [bold type]You've failed this task for Miyuki.[roman type][line break]";
 		now Resolution of Arctic Enclosure is 3; [fled, quest failed]
 		now HP of Miyuki is 100; [failed]
 	now Arctic Enclosure is resolved;

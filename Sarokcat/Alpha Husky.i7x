@@ -238,7 +238,7 @@ To say Alpha Husky loss:
 to caughtthealphahusky:
 	project the Figure of HuskyAlpha_hard_icon;
 	LineBreak;
-	say "     [bold type]What do you want to do with the male husky now?[roman type]";
+	say "     [bold type]What do you want to do with the male husky now?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

@@ -223,7 +223,7 @@ to say ErinVoyeurKo:
 
 [to say ErinThreeSome:
 	say "     Erin and Violet's rat ears twitch with perfect synchronicity as you make your proposition.";
-	say "[bold type]Do you want to top or to bottom during the threesome?[roman type]";
+	say "[bold type]Do you want to top or to bottom during the threesome?[roman type][line break]";
 	say "[link]Top[as]y[end link] You want to take an active role.";
 	say "[link]Bottom[as]n[end link] You want to service the two rats.";
 	if Player consents:
@@ -451,7 +451,7 @@ to say VioletVoyeurKo:
 	[Ideas to implement: multicock version for both twins bottoming]
 [to say VioletThreeSome:
 	say "     Erin and Violet's rat ears twitch with perfect synchronicity as you make your proposition.";
-	say "[bold type]Do you want to top or to bottom during the threesome?[roman type]";
+	say "[bold type]Do you want to top or to bottom during the threesome?[roman type][line break]";
 	say "[link]Top[as]y[end if] You want to take an active role.";
 	say "[link]Bottom[as]n[end if] You want to service the two rats.";
 	if Player consents:
@@ -554,7 +554,7 @@ instead of going to Restaurant while (Rat Twins Invitation is active and Rat Twi
 	PlayerEat 12;
 	PlayerDrink 12;
 	SanBoost 10;
-	say "[bold type]Your hunger and thirst decrease thanks to the meal the siblings offered. Having a normal social interaction allows you to recover some humanity.[roman type]";
+	say "[bold type]Your hunger and thirst decrease thanks to the meal the siblings offered. Having a normal social interaction allows you to recover some humanity.[roman type][line break]";
 	now HP of Erin is 2;
 	[Twins meeting events unlocked by this event are unresolved here]
 	now Tied Rat Twins is active;
@@ -614,7 +614,7 @@ to say strangeIsland:
 	else if boatfound is 2 or boatfound is 3:
 		say "     You mention your boat to the twins. 'Yay, you got us a boat! Awesome!' the sister says loudly, before hugging you tight against her furry body. 'Okay. Now that step 1 is a-go, we can start collecting some supplies for the trip. A tent, some food... You know, the essentials.'";
 		say "     'For now, could you just make a short trip there and see if there's a safe place we could stay? I don't mind if you want to explore further, but don't go into the military base without us, yet. 'Remember to [bold type]save your position[roman type] on your phone. Just in case,' Erin warns.";
-		say "[bold type]You can now navigate to Vohr Island[roman type]";
+		say "[bold type]You can now navigate to Vohr Island[roman type][line break]";
 		now Island Pier is known;
 		now Strange Island is resolved;
 	now level of Erin is 1;
@@ -666,8 +666,8 @@ instead of resolving Tied Rat Twins:
 		say "     You walk inside the shop, if only to check what is the source of all this buzzing. It is even louder when in the shop, as if several toys had been set off at once. And, more worryingly, you hear several persons scream through a gag. You head towards the source of the noise, behind the counter. You stumble upon Eric and Violet. The twins seem to have been caught in the middle of their own patrol, and they have been bound together sturdily with leather cuffs and ropes. They have been forced face-to-face, a vibrating wand stuck against their conjoined crotches. As a 'bonus', Violet got her holes spread apart by dildos, while you recognize the shape of a prostate massager stuck into Erin's ass. For added humiliation, their rodent muzzles have been taped to each other, having them share an embarrassing kiss.";
 		say "     Just as you are coming around, the twins squirm ineffectively against each other, they climax together, probably another of a long series. You hurriedly help them get out of their bounds, and toys. 'Thanks, [if Player is not defaultnamed][name of Player][else]pal[end if],' Erin says weakly. 'It was one hell of an hour. I think I came enough for... Like... A whole week,' Violet comments. 'We were attacked by looters and they caught up with us as we ran away inside,' Erin says. 'Bad idea,' Violet agrees. 'Thankfully, we had stashed our loot before these fuckers get to us. Let us share something with you.'";
 		say "     True to her word, Violet and Erin guide you to a bin just outside the shop, and pull out a bag of chips and an already used bottle of water. 'Watch out on the streets,' Erin says before parting with you.";
-		say "[bold type]You gain 1 bag of chips.[roman type]";
-		say "[bold type]You gain 1 bottle of dirty water.[roman type]";
+		say "[bold type]You gain 1 bag of chips.[roman type][line break]";
+		say "[bold type]You gain 1 bottle of dirty water.[roman type][line break]";
 		increase carried of chips by 1;
 		increase carried of dirty water by 1;
 	else:

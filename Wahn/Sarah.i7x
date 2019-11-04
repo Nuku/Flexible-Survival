@@ -1120,7 +1120,7 @@ An everyturn rule:
 		say "     As you wait around in the bunker, ";
 		say "[SarahOffersAnal]";
 	if SarahPregnant is 1:
-		say "     [bold type]You have a strange feeling in your body, as if you somehow just know that more of your offspring have entered this world. Maybe you should go back and check on Sarah in the bunker... and make sure she is filled with your fertile seed again.[roman type]";
+		say "     [bold type]You have a strange feeling in your body, as if you somehow just know that more of your offspring have entered this world. Maybe you should go back and check on Sarah in the bunker... and make sure she is filled with your fertile seed again.[roman type][line break]";
 		increase SarahPups by a random number between 1 and 4;
 		increase score by a random number between 5 and 10;
 		if "Proud Parent" is listed in feats of Player:

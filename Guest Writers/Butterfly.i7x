@@ -413,7 +413,7 @@ To say butterfly attack:
 		follow the ButterflyTummyDesc rule;
 
 to ButterFlyChildBirth:
-	say "[bold type]Please name your child: [roman type]";
+	say "[bold type]Please name your child: [roman type][line break]";
 	get typed command as playerinput;
 	now Name of ButterflyBaby is playerinput;
 	choose a blank row in the Table of PlayerChildren;

@@ -1366,9 +1366,9 @@ to artistbanmenu: [more compact version]
 
 to BlockCheck (x - text):
 	if x is not listed in BlockList of Player:
-		say "[bold type][special-style-1]On  [roman type]";
+		say "[bold type][special-style-1]On  [roman type][line break]";
 	else:
-		say "[bold type][special-style-2]Off  [roman type]";
+		say "[bold type][special-style-2]Off  [roman type][line break]";
 
 to artistbanswitch (name - text):
 	if name is not listed in BlockList of Player:

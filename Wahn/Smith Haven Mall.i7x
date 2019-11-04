@@ -204,7 +204,7 @@ To say malleastwing:
 	else:
 		say "     With it currently dark outside, the only source of illumination in the mall is from the various candles, lanterns, and occasional computer tablets being used. The warm glow of the lights, while not cheery, is far from being gloomy. But even with the low light it's still hard to see very far into the wing.";
 		say "     As you carefully walk along, you can see the mallrats either sleeping, cuddling, gathered around some of the lanterns playing varied board and card games, or playing games on the tablets and smartphones some of the rats have.";
-		say "     [bold type]To the east, something that looks like snowfall forms a white curtain cutting you off from the easternmost part of the mall.[roman type]";
+		say "     [bold type]To the east, something that looks like snowfall forms a white curtain cutting you off from the easternmost part of the mall.[roman type][line break]";
 
 
 the scent of Mall East Wing is "It smells like the mallrats.".

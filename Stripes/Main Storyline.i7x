@@ -73,7 +73,7 @@ Section 1 - Talking w/Dr Matt (this drives the Main Storyline quests)
 Instead of conversing the Doctor Matt:
 	if HP of Doctor Matt is 100:
 		say "     'If you are listening to this, you are probably still in the city. My condolences. I have left behind some facilities for you. You will find they can enhance your abilities due to the nanite infection.";
-		say "     [bold type]((Every 3 levels, starting at level 3, you may gain one feat by coming here and typing volunteer))[roman type]";
+		say "     [bold type]((Every 3 levels, starting at level 3, you may gain one feat by coming here and typing volunteer))[roman type][line break]";
 		say "     'God Speed and Good Luck,' says the recording before clicking off.";
 		stop the action;
 	if HP of Doctor Matt is 0:
@@ -89,7 +89,7 @@ Instead of conversing the Doctor Matt:
 		extend game by 16;
 		now HP of Doctor Matt is 1;
 		now PlayerMet of Doctor Matt is true;
-		say "[bold type]((Every 3 levels, starting at level 3, you may gain one feat by coming here and typing volunteer))[roman type]";
+		say "[bold type]((Every 3 levels, starting at level 3, you may gain one feat by coming here and typing volunteer))[roman type][line break]";
 	else:
 		say "[DrMattTalkMenu]";
 		now PlayerMet of Doctor Matt is true;

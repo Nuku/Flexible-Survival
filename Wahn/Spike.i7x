@@ -263,7 +263,7 @@ instead of conversing doberman companion:
 
 to say SpikeTalkMenu:
 	project the figure of Spike_face_icon;
-	say "     [bold type]What do you want to talk with Spike about?[roman type]";
+	say "     [bold type]What do you want to talk with Spike about?[roman type][line break]";
 	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;

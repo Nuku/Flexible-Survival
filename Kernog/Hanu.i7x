@@ -98,7 +98,7 @@ instead of fucking Hanu:
 	if Monkey Duel is unresolved:
 		say "     The monkey chuckles. 'I am flatted by your proposal, my friend, but I must refuse. My mind fights with the urges that came with this body, and I cannot allow any lapse.'";
 	else if Resolution of Monkey Duel is 1:
-		say "     Hanu smiles. 'I must once again deny your request. However, if lust stirs your loins, you can train with me and Wukong to work it out.' [bold type]What do you say?[roman type]";
+		say "     Hanu smiles. 'I must once again deny your request. However, if lust stirs your loins, you can train with me and Wukong to work it out.' [bold type]What do you say?[roman type][line break]";
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		[]
@@ -214,7 +214,7 @@ to MonkeyDuel:
 				WaitLineBreak;
 				move player to Museum;
 				now Resolution of Monkey Duel is 1; [Hanu won]
-				say "[italic type]Wukong was forced to leave the Museum by Hanu. However, you feel that his threats were not empty.[roman type]";
+				say "[italic type]Wukong was forced to leave the Museum by Hanu. However, you feel that his threats were not empty.[roman type][line break]";
 			else:
 				LineBreak;
 				say "     'Hanu's back bumps into the podium. Hanu is distracted for a second. Long enough for Wukong to pole-vault in the air with his staff and drop-kick Hanu. You see the older monkey fly in the air, toppling the podium and crashing into an exposition case behind. While Hanu crawls on the ground, knocked out, Wukong notices the shock collar, that Hanu dropped on the floor during his fall. 'Well, that is interesting.'";
@@ -226,7 +226,7 @@ to MonkeyDuel:
 					say "     Finally taking notice of you, Wukong looks in your direction. 'I did not think you were the one to bring gifts, [if Player is not defaultnamed][name of Player][else]my friend[end if]. And here you are, offering me a new pet, just for me.' The golden-furred monkey runs up to you and steals a kiss from your lips. 'Hee hee. You know, while you were gone, I went out and made a number of followers. I will have them make the home of this pitiful excuse for a monkey mine and move there once it is done.' Wukong grabs Hanu by the collar. 'Just be careful. I tried to tell them about you, but they hardly listen. Not really quality servant material, unlike you. Take care~.' Once the two monkeys are gone, you also make your way to the museum's lobby.";
 				else:
 					say "     Finally taking notice of you, Wukong looks in your direction. '[if Player is not defaultnamed][name of Player][else]You[end if]... I did not forget the humiliation that you put me through. 'While you were away, I went out and made a number of followers. First, I will have them make the home of this pitiful excuse for a monkey mine and move there once it is done. After that, I will come for [italic type]you[roman type]. Just you wait.' Wukong grabs Hanu by the collar, and disappear into the museum. Once the two monkeys are gone, you also make your way to the museum's lobby.";
-				say "[italic type]Wukong's thugs should be at the Zoo, by the time you go back.[roman type]";
+				say "[italic type]Wukong's thugs should be at the Zoo, by the time you go back.[roman type][line break]";
 				WaitLineBreak;
 				move player to Museum;
 				now Resolution of Monkey Duel is 2; [Wukong won]
@@ -238,7 +238,7 @@ to MonkeyDuel:
 			say "     'Yeah. The King wants us to make this place our turf while the other guy has been driven away. Apparently, he will come here in a few days to visit.'";
 			say "     'With his new bitch?'";
 			say "     'Heh heh. Nothing better than to twist the knife in the wound, right?'";
-			say "The two monkeys snicker and walk away. [italic type]It seems that Hanu lost in your absence, and that Wukong sent some thugs at the Zoo.[roman type]";
+			say "The two monkeys snicker and walk away. [italic type]It seems that Hanu lost in your absence, and that Wukong sent some thugs at the Zoo.[roman type][line break]";
 			now Resolution of Monkey Duel is 3; [left the monkeys to fight]
 		now the area corresponding to a name of "Monkey" in the Table of Random Critters is "Nowhere";
 		now the area corresponding to a name of "Monkey Thug" in the Table of Random Critters is "Zoo";

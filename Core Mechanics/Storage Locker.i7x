@@ -58,7 +58,7 @@ to displayplinv:
 		let y be 0;
 		repeat with x running through all owned grab objects:
 			increase y by 1;
-			say "[x] = [carried of x] [link][bracket]S[close bracket][as]stash [x][end link]  [link][bracket]A[close bracket][as]stashall [x][end link][roman type]";
+			say "[x] = [carried of x] [link][bracket]S[close bracket][as]stash [x][end link]  [link][bracket]A[close bracket][as]stashall [x][end link][roman type][line break]";
 			if the remainder after dividing y by invcolumns is 0:
 				LineBreak;
 			else:
@@ -80,7 +80,7 @@ to displaystorage:
 		let y be 0;
 		repeat with x running through all stored grab objects:
 			increase y by 1;
-			say "[x] = [stashed of x] [link][bracket]R[close bracket][as]retrieve [x][end link]  [link][bracket]A[close bracket][as]retrieveall [x][end link][roman type]";
+			say "[x] = [stashed of x] [link][bracket]R[close bracket][as]retrieve [x][end link]  [link][bracket]A[close bracket][as]retrieveall [x][end link][roman type][line break]";
 			if the remainder after dividing y by invcolumns is 0:
 				LineBreak;
 			else:

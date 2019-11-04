@@ -399,16 +399,16 @@ to say BryonyGuard3:
 		let randomnumber be a random number from 1 to 4;
 		if randomnumber is:
 			-- 1:
-				say "[bold type]You gain some food![roman type]";
+				say "[bold type]You gain some food![roman type][line break]";
 				increase carried of food by 1;
 			-- 2:
-				say "[bold type]You gain a water bottle![roman type]";
+				say "[bold type]You gain a water bottle![roman type][line break]";
 				increase carried of water bottle by 1;
 			-- 3:
-				say "[bold type]You gain a bag of chips![roman type]";
+				say "[bold type]You gain a bag of chips![roman type][line break]";
 				increase carried of chips by 1;
 			-- 4:
-				say "[bold type]You gain a can of soda![roman type]";
+				say "[bold type]You gain a can of soda![roman type][line break]";
 				increase carried of soda by 1;
 		LineBreak;
 	else:

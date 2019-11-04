@@ -314,7 +314,7 @@ This is the gainfeat rule:
 		if nam is "Automatic Survival":
 			decrease featgained of Player by 1;
 			remove "Automatic Survival" from feats of Player;
-			say "[bold type]This ability is now controlled by Trixie. Your feat slot has been returned to you.[roman type]";
+			say "[bold type]This ability is now controlled by Trixie. Your feat slot has been returned to you.[roman type][line break]";
 			wait for any key;
 		if nam is "More Time", extend game by 24;
 		now Featqualified is 0;
