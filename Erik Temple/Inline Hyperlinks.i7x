@@ -418,7 +418,7 @@ Since we are shortcutting normal processes with our new hyperlink processing rul
 A companion rule for input redirects the player's typed direction command in the same way. (A better way to do this would be to change the "direction understood" to a random direction before going, but we choose to lie in the hole we've dug ourselves...
 
 	*: Hyperlink processing rule when the player is deranged and the current hyperlink ID < 13:
-		say "[input-style-for-glulx]go ???[roman type][line break]";
+		say "[input-style-for-glulx]go ???[roman type]";
 		if there is an ID of current hyperlink ID in the Table of Going Actions:
 			choose row with ID of current hyperlink ID in the Table of Going Actions;
 			let X be a stored action;

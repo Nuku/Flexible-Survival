@@ -466,12 +466,12 @@ to say VentFoxPrefsMenu:[Menu for setting preferences.]
 	clear the screen and hyperlink list;
 	while calcnumber is not -100:
 		LineBreak;
-		say "     [bold type]Size[roman type][line break]";
+		say "     [bold type]Size[roman type]";
 		LineBreak;
 		say "     [link](1)[as]1[end link] - Size during submissive sex.";
 		say "     (2) - [italic type]Not yet available[roman type].";
 		LineBreak;
-		say "     [bold type]Content[roman type][line break]";
+		say "     [bold type]Content[roman type]";
 		LineBreak;
 		say "     (3) - [italic type]Not yet available[roman type].";
 		say "     [link](4)[as]4[end link] - Watersports level.";
