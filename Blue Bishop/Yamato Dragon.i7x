@@ -1257,11 +1257,11 @@ to yamatmstomachascent:
 
 to say yamatstrugglebar:
 	if boundsegment is 0:
-		say "< [bracket]-[if struggleatt > 0][bold type]X[roman type][else]-[end if][close bracket] [bold type][if boundmod > 1]}} [else if boundmod > 0]} [end if][roman type][italic type][bracket]--[close bracket] [bracket]---[close bracket] [bracket]---[close bracket][roman type][line break]";
+		say "< [bracket]-[if struggleatt > 0][bold type]X[roman type][else]-[end if][close bracket] [bold type][if boundmod > 1]}} [else if boundmod > 0]} [end if][roman type][italic type][bracket]--[close bracket] [bracket]---[close bracket] [bracket]---[close bracket][roman type]";
 	else if boundsegment is 1:
-		say "[italic type][bracket]--[close bracket][roman type] < [bracket]-[if struggleatt > 0][bold type]X[roman type][else]-[end if][close bracket] [bold type][if boundmod > 1]}} [else if boundmod > 0]} [end if][roman type][italic type][bracket]---[close bracket] [bracket]---[close bracket][roman type][line break]";
+		say "[italic type][bracket]--[close bracket][roman type] < [bracket]-[if struggleatt > 0][bold type]X[roman type][else]-[end if][close bracket] [bold type][if boundmod > 1]}} [else if boundmod > 0]} [end if][roman type][italic type][bracket]---[close bracket] [bracket]---[close bracket][roman type]";
 	else if boundsegment is 2:
-		say "[italic type][bracket]--[close bracket] [bracket]--[close bracket][roman type] < [bracket]-[if struggleatt > 1][bold type]X[roman type][else]-[end if][if struggleatt > 0][bold type]X[roman type][else]-[end if][close bracket] [bold type][if boundmod > 2]}}} [else if boundmod > 1]}} [else if boundmod > 0]} [end if][roman type][italic type][bracket]---[close bracket][roman type][line break]";
+		say "[italic type][bracket]--[close bracket] [bracket]--[close bracket][roman type] < [bracket]-[if struggleatt > 1][bold type]X[roman type][else]-[end if][if struggleatt > 0][bold type]X[roman type][else]-[end if][close bracket] [bold type][if boundmod > 2]}}} [else if boundmod > 1]}} [else if boundmod > 0]} [end if][roman type][italic type][bracket]---[close bracket][roman type]";
 	else if boundsegment is 3:
 		say "[italic type][bracket]--[close bracket] [bracket]--[close bracket] [bracket]---[close bracket][roman type] [bracket]-[if struggleatt > 1][bold type]X[roman type][else]-[end if][if struggleatt > 0][bold type]X[roman type][else]-[end if][close bracket] >";
 	else:

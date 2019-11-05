@@ -426,7 +426,7 @@ to say KyrverthMaleCheck:
 	if Player consents:
 		LineBreak;
 		Let Randomcharmvar be a random number between 1 and 30;
-		say "     [bold type]Rolling [Randomcharmvar]/30 + Charisma of [charisma of Player] vs 25: [roman type][line break]";
+		say "     [bold type]Rolling [Randomcharmvar]/30 + Charisma of [charisma of Player] vs 25: [roman type]";
 		if (Randomcharmvar + charisma of Player) < 25:
 			say "You try to convince the dragon that males are OK too, but he shakes his head, firm in the belief that he is into females and females only.";
 		else:
@@ -674,7 +674,7 @@ Instead of resolving a Jewel Heist:
 		say "     Deciding that discretion is the better part of valor, you return to the library. Maybe try again later?";
 		Let Randomsneakvar be a random number between 1 and 30;
 		if (Randomsneakvar + dexterity of Player) < 25:
-			say "     [bold type]Rolling [Randomsneakvar] + Dexterity of [dexterity of Player] vs 25: [roman type][line break]";
+			say "     [bold type]Rolling [Randomsneakvar] + Dexterity of [dexterity of Player] vs 25: [roman type]";
 			say "     The wolverine notices you leaving and chases you down the street, stopping at the end and returning to the store. You get the feeling he will be extra vigilant now he knows the store is a target.";
 			now JewelHeistCaught is 1;
 			now Resolution of Jewel Heist is 2; [Player did not do event and was spotted by the wolverine guard, may re-encounter later]
@@ -691,7 +691,7 @@ to say JewelHeistSneak:
 	if Player consents:
 		LineBreak;
 		Let Randomsneakvar be a random number between 1 and 30;
-		say "     [bold type]Rolling [Randomsneakvar] + Dexterity of [dexterity of Player] vs 25: [roman type][line break]";
+		say "     [bold type]Rolling [Randomsneakvar] + Dexterity of [dexterity of Player] vs 25: [roman type]";
 		if (Randomsneakvar + dexterity of Player) < 25:
 			say "Almost immediately an alarm goes off, blaring loudly into the night. The wolverine comes around the corner, and he does NOT look happy.";
 			say "[JewelHeistFight]";
@@ -715,7 +715,7 @@ to say JewelHeistSneak:
 			say "     Deciding that discretion is the better part of valor, you return to the library. Maybe try again later?";
 			Let Randomsneakvar be a random number between 1 and 30;
 			if (Randomsneakvar + dexterity of Player) < 25:
-				say "     [bold type]Rolling [Randomsneakvar] + Dexterity of [dexterity of Player] vs 25: [roman type][line break]";
+				say "     [bold type]Rolling [Randomsneakvar] + Dexterity of [dexterity of Player] vs 25: [roman type]";
 				say "     The wolverine notices you leaving and chases you down the street, stopping at the end and returning to the store. You get the feeling he will be extra vigilant now he knows the store is a target.";
 				now JewelHeistCaught is 1;
 				now Resolution of Jewel Heist is 2; [Player did not do event and was spotted by the wolverine guard, may re-encounter later]

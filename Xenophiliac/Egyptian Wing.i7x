@@ -18,9 +18,7 @@ Instead of Resolving a Egyptian Wing:
 	say "     Exploring the halls of the city's museum, you're amazed at the sheer amount of archaic objects on display; artifacts and relics from across the globe are here, objects from different times in humanity's lifetime proudly presented throughout the hallways of the Museum. Haphazardly choosing a corridor to follow, you continue to be astounded by the insane amount of history and knowledge present, learning so much in your brief jaunts through the labyrinthine passages. So enraptured by the exhibits within, you almost barge straight into an information sigh standing in the middle of the corridor, barely preventing yourself from bashing yourself against it. Glaring irritatedly at the offending signpost, you take a second to read the notice, wondering what's so important that someone left it in the middle of the hallway. Displayed in bold lettering across the paper tacked to the signpost is:";
 	LineBreak;
 	say "     [bold type]   The Egyptian Wing[roman type][line break]";
-	LineBreak;
 	say "     [bold type]Come see the wonders[roman type][line break]";
-	LineBreak;
 	say "     [bold type]    of Ancient Egypt![roman type][line break]";
 	LineBreak;
 	WaitLineBreak;

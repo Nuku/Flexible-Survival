@@ -136,7 +136,7 @@ carry out bfanditesting2:
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
 		if there is no altcombat in row y of the Table of Random Critters:
-			say "[Name entry]: [special-style-2]UNSET![roman type][line break]";
+			say "[Name entry]: [special-style-2]UNSET![roman type]";
 		else:
 			if altcombat entry is "default":
 				say "[Name entry]: DEFAULT[line break]";
@@ -173,7 +173,7 @@ carry out bfanditesting3:
 				say ". [bold type]Scavevent[roman type] (All-zones)";
 				increase scavsitnum by 1;
 			else if z is a scavevent:
-				say ". [bold type]Scavevent[roman type][line break]";
+				say ". [bold type]Scavevent[roman type]";
 				increase scavsitnum by 1;
 			say ".";
 			if z is unresolved, increase unressit by 1;
@@ -210,7 +210,7 @@ carry out bfanditesting4:
 			say ". [bold type]Scavevent[roman type] (All-zones)";
 			increase scavsitnum by 1;
 		else if z is a scavevent:
-			say ". [bold type]Scavevent[roman type][line break]";
+			say ". [bold type]Scavevent[roman type]";
 			increase scavsitnum by 1;
 		say ".";
 		if z is unresolved, increase unressit by 1;

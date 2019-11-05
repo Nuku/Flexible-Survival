@@ -74,11 +74,11 @@ to new ban menu:
 
 to bancheck (name - text):
 	if name is listed in BanList of Player:
-		say "[bold type]BANNED[roman type][line break]";
+		say "[bold type]BANNED[roman type]";
 	else if name is listed in WardList of Player:
-		say "[bold type]WARDED[roman type][line break]";
+		say "[bold type]WARDED[roman type]";
 	else:
-		say "[bold type]Normal[roman type][line break]";
+		say "[bold type]Normal[roman type]";
 	say "[line break]";
 
 to banchange (name - text):

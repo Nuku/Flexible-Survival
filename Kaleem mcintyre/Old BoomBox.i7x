@@ -94,7 +94,7 @@ instead of sniffing BoomBox:
 	say "     The faint scent of good old times seem to waft around the old jam machine. Memories of days gone by, some of them before your time, flitter through your head as you sniff the machine in question. For some reason though, that doesn't bother you much.";
 
 Instead of using BoomBox:
-	say "[bold type]Play[roman type][line break]";
+	say "[bold type]Play[roman type]";
 
 BoomBoxPlay is an action applying to nothing.
 

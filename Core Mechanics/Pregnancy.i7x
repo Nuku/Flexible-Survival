@@ -422,9 +422,9 @@ To Birth:
 		else:
 			say ".";
 		if IsAlbino is true:
-			say "Their pigmentation is muted and almost white, except for the eyes that appear red. [bold type]They're an albino![roman type][line break]";
+			say "Their pigmentation is muted and almost white, except for the eyes that appear red. [bold type]They're an albino![roman type]";
 		else if HasMelanism is true:
-			say "Their pigmentation is almost pure black. [bold type]They've got melanism![roman type][line break]";
+			say "Their pigmentation is almost pure black. [bold type]They've got melanism![roman type]";
 		LineBreak;
 		say "As you spend a little time with your 'offspring', you get the feeling that they have a [ChildPersonality] personality.";
 	else if "Chase's Breeder" is listed in feats of Player: [special NPC impregnation]
@@ -501,9 +501,9 @@ To Birth:
 		else:
 			say "They pop free and stand, a feral look of wanton desire on their [HeadSpeciesName of Child] head as they stretch [if ShowLegs is true][ArmsSpeciesName of Child] arms and [LegsSpeciesName of Child] legs. [else]their [ArmsSpeciesName of Child] arms. [end if]You see that your child has a [TorsoSpeciesName of Child] front and [BackSpeciesName of Child] back, with a [AssSpeciesName of Child] behind[if ShowTail is true] and a [TailSpeciesName of Child] tail[end if].";
 		if IsAlbino is true:
-			say "Their pigmentation is muted and almost white, except for the eyes that appear red. [bold type]They're an albino![roman type][line break]";
+			say "Their pigmentation is muted and almost white, except for the eyes that appear red. [bold type]They're an albino![roman type]";
 		else if HasMelanism is true:
-			say "Their pigmentation is almost pure black. [bold type]They've got melanism![roman type][line break]";
+			say "Their pigmentation is almost pure black. [bold type]They've got melanism![roman type]";
 		LineBreak;
 		say "In the little time you spend with your offspring, you get the feeling that they have a [ChildPersonality] personality.";
 	else: ["normal pregnancies"]
@@ -526,9 +526,9 @@ To Birth:
 			else:
 				say "Your child has [ArmsSpeciesName of Child] arms[if ShowTail is true] and a [TailSpeciesName of Child] tail[end if].";
 		if IsAlbino is true:
-			say "Their pigmentation is muted and almost white, except for the eyes that appear red. [bold type]They're an albino![roman type][line break]";
+			say "Their pigmentation is muted and almost white, except for the eyes that appear red. [bold type]They're an albino![roman type]";
 		else if HasMelanism is true:
-			say "Their pigmentation is almost pure black. [bold type]They've got melanism![roman type][line break]";
+			say "Their pigmentation is almost pure black. [bold type]They've got melanism![roman type]";
 		LineBreak;
 		say "As you spend a little time with your offspring, you get the feeling that they have a [ChildPersonality] personality.";
 		increase hunger of Player by 3;
@@ -536,7 +536,7 @@ To Birth:
 	if IsFeral is false:
 		if ("Chase's Breeder" is not listed in feats of Player) and ("Fang's Mate" is not listed in feats of Player) and ("Chris's Breeder Slut" is not listed in feats of Player): [kids that run off to their fathers]
 			LineBreak;
-			say "[bold type]Please name your ([ChildPersonality], [ChildGender]) child: [roman type][line break]";
+			say "[bold type]Please name your ([ChildPersonality], [ChildGender]) child: [roman type]";
 			get typed command as playerinput;
 			now Name of Child is playerinput;
 			LineBreak;
@@ -586,7 +586,7 @@ To Birth:
 		if perception of Player < 24, increase perception of Player by 1;
 	else: [feral child]
 		LineBreak;
-		say "[bold type]Please name your ([ChildPersonality], [ChildGender]) child: [roman type][line break]";
+		say "[bold type]Please name your ([ChildPersonality], [ChildGender]) child: [roman type]";
 		get typed command as playerinput;
 		now Name of Child is playerinput;
 		if (Player can UB and ubpreg is not "false") or snakehijack > 0: [Unbirth and Snake Hijack]
