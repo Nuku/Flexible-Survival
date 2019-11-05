@@ -144,7 +144,7 @@ Instead of resolving a Rundown Boutique:
 	increase carried of chips by 1;
 	increase carried of soda by 1;
 	increase carried of water bottle by 1;
-	say "[bold type]You gained a bag of chips, one soda, and a bottle of water[roman type][line break]";
+	say "[bold type]You gained a bag of chips, one soda, and a bottle of water.[roman type][line break]";
 	WaitLineBreak;
 	say "     With your pack filled with new supplies, you go on to inspect the dress that's still hanging in the locker. Carefully pulling it out, you find that it is a sleek one piece dress, and most importantly, there's not even a scratch on it. Unfortunately, a dress such as this would not be practical for you[if scalevalue of Player < 3], given how you're too small for it[else if scalevalue of Player > 3], given how you're too large for it[end if]. However, you recall how Ranae has been looking for some new clothes, and this dress seems to be the perfect size for her. Safely stowing the garment away, you exit the boutique and make a note to visit the frog woman soon with your gift.";
 	now hunger of Ranae is 5;		[Found black dress]
@@ -156,7 +156,7 @@ Instead of resolving a Boarded-up Building:		[Figurine]
 	WaitLineBreak;
 	say "     However, not wanting to give up so quickly, you make your way to the opposite side of the building and find a sleeping bag and a small pack tucked away in the corner. You quickly check to make sure that there's nothing else in the rest of the building before you search through the makeshift camp. Judging by the layer of dust on the items, it looks like the owner of the meager belongings will not be returning. Searching through the pack, you find a tin of food, which you happily pocket, as well as an odd object wrapped up with newspaper. Peeling away the paper, you find a small figurine of a woman attached to a dome-like wooden base.";
 	say "     The tiny female is wearing a green dress that completely covers her legs, and she has one arm raised up high with another stretched out in a dancing pose. Turning the object around, you find a wind-up key at the back of the base. You give the key a few turns, which makes the figurine start to slowly spin around as the soft sounds of a music box begins playing. Although the song and dance is short, it is charming enough to make you smile a little. As you look over the figurine, wondering what you're going to do with it, the dancer's green dress grabs your attention, the color almost the same shade as Ranae's skin. Perhaps the frog girl will appreciate a gift like this. After covering the gift back up with newspaper and safely tucking the gift away in your pack, you exit the building through the same window you crawled in through, making a note to bring your find to Ranae when you have the time.";
-	say "     [bold type]You found a can of food[roman type][line break]";
+	say "     [bold type]You found a can of food.[roman type][line break]";
 	increase carried of food by 1;
 	now perception of Ranae is 1;		[Found figurine]
 	now Boarded-up Building is resolved;

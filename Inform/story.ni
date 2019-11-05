@@ -4909,8 +4909,8 @@ This is the turnpass rule:
 		if number of filled rows in Table of PlayerChildren > 0 and a random chance of 1 in 2 succeeds, increase hunger of Player by 1;
 		if "Spartan Diet" is listed in feats of Player and hunger of Player > 0 and a random chance of 1 in 2 succeeds:
 			decrease hunger of Player by 1;
-	if Player can vore and scalevalue of Player > 1:
-		increase hunger of Player by a random number between 1 and (1 + scalevalue of Player);
+	if "Vore Predator" is listed in feats of Player:
+		increase hunger of Player by a random number between 1 and 5;
 		if "Spartan Diet" is listed in feats of Player and hunger of Player > 0 and a random chance of 1 in 2 succeeds:
 			decrease hunger of Player by 1;
 	if a random number from 1 to 25 > ( a random number between 1 and ( stamina of Player + 1 ) ):
@@ -8634,9 +8634,9 @@ to say menuwardlist:
 			say "Mindcontrol ";
 		if VoreList is warded:
 			say "Vore ";
-		say "[close bracket][roman type][line break]";
+		say "[close bracket][roman type]";
 	else:
-		say "[bold type]None Warded[roman type][line break]";
+		say "[bold type]None Warded[roman type]";
 
 to say menubanlist:
 	if CockVoreList is banned or FurryList is banned or MaleList is banned or FemaleList is banned or HumorousList is banned or DemonList is banned or HermList is banned or IncestList is banned or TransList is banned or MindcontrolList is banned or NonconList is banned or VoreList is banned:
@@ -8667,9 +8667,9 @@ to say menubanlist:
 			say "Mindcontrol ";
 		if VoreList is banned:
 			say "Vore ";
-		say "[close bracket][roman type][line break]";
+		say "[close bracket][roman type]";
 	else:
-		say "[bold type]None Banned[roman type][line break]";
+		say "[bold type]None Banned[roman type]";
 
 to say gsopt_1:
 	now calcnumber is -1;

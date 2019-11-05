@@ -47,7 +47,7 @@ To say Dolphin loses:
 			WaitLineBreak;
 			say "Closer";
 			WaitLineBreak;
-			say "[bold type] AND closer[roman type][line break]";
+			say "[bold type] AND closer[roman type]";
 			WaitLineBreak;
 			say "She then whips her body up and sprays you with a different bunch of clicks, totally stunning your body. 'Now it is my turn to play with you...' she mutters.";
 			say "[dolphin fuck]";

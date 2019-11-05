@@ -65,7 +65,7 @@ to ratetheplayer:
 		say "Th- What, 9000?!";
 	else:
 		say "The Lord Humungus!";
-	say "[roman type][line break]";
+	say "[roman type]";
 	if the score > 999:
 		say "Your performance was so excellent, we'll give you a little... help, for your next run through. Type 'I am a pro' to gain 200 XP. It only works once per character";
 		if bookfound is not 0:
