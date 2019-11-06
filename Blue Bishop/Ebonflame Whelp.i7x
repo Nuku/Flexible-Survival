@@ -275,9 +275,16 @@ When Play begins:
 
 Section 3 - Miscellaneous
 
-when play ends:
-	if BodyName of Player is "Ebonflame Whelp" and humanity of Player < 10:
+[
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Ebonflame Whelp Infection"	"Infection"	""	Ebonflame Whelp Infection rule	100	false
+
+This is the Ebonflame Whelp Infection rule:
+	if Player has a body of "Ebonflame Whelp" and humanity of Player < 10:
+		trigger ending "Ebonflame Whelp Infection";
 		say "NA." [placeholder for bound state loss]
+]
 
 to ebwhelphijackroutine:
 	LineBreak;
