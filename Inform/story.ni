@@ -4784,6 +4784,9 @@ postimport rules is a rulebook.
 Everyturn rules is a rulebook.
 
 This is the turnpass rule:
+	if the story has ended:
+		follow the everyturn rules;
+		rule succeeds;
 	follow the cock descr rule;
 	if "Sanity Saver" is listed in the feats of Player:
 		now humanity of Player is 100;
