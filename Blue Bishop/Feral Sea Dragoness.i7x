@@ -744,8 +744,9 @@ to fsdfvore:
 			now Skin of Player is skin entry;
 			now Body of Player is body entry;
 			now Cock of Player is cock entry;
-			now voreloss is true;
 			now Trixieexit is 1;
+			trigger ending "Feral Sea Dragon Vore";
+			now Ending Reason of TheEnd is "Vore by Feral Sea Dragoness";
 			end the story saying "You became a Feral Sea Dragoness's meal!";
 		else:
 			let k be 0;

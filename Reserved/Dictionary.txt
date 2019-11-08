@@ -1962,7 +1962,6 @@
 |Blue Bishop|Sierrasaur|struggleatt|value|
 |Blue Bishop|Sierrasaur|bsextimer|value|
 |Blue Bishop|Sierrasaur|boundstate|value|
-|Blue Bishop|Sierrasaur|voreloss|value|
 |Blue Bishop|Sierrasaur|psycheadjust|value|
 |Blue Bishop|Sierrasaur|lustadjust|value|
 |Blue Bishop|Sierrasaur|boundrecover|value|

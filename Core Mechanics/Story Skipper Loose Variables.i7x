@@ -3614,8 +3614,6 @@ to TruthVariableSave:
 			now TruthVarValue entry is vgeckoboost;
 		-- "violinspritefight":
 			now TruthVarValue entry is violinspritefight;
-		-- "voreloss":
-			now TruthVarValue entry is voreloss;
 		-- "vorespecial1":
 			now TruthVarValue entry is vorespecial1;
 		-- "weakwilled":
@@ -7313,8 +7311,6 @@ to VariableTruthLoad:
 					now vgeckoboost is TruthVarValue entry;
 				-- "violinspritefight":
 					now violinspritefight is TruthVarValue entry;
-				-- "voreloss":
-					now voreloss is TruthVarValue entry;
 				-- "vorespecial1":
 					now vorespecial1 is TruthVarValue entry;
 				-- "weakwilled":

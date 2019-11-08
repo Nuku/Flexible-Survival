@@ -1865,7 +1865,6 @@ Name(text)	Type(text)
 "velossavedyes"	"truth state"
 "vgeckoboost"	"truth state"
 "violinspritefight"	"truth state"
-"voreloss"	"truth state"
 "vorespecial1"	"truth state"
 "weakwilled"	"truth state"
 "WerewolfWatching"	"truth state"

@@ -315,7 +315,7 @@ to say WYVVIC:
 				increase lustatt by 20;
 			else:
 				say "     Satisfied, the wyvern eventually pulls herself free of you, not giving you much of her regard beyond her need before taking flight once more. It takes you several moments to figure out up from down after the whole ordeal before you start pulling yourself free. Once free, it takes quite a while to clean yourself off and just as long to not feel completely sore all over.";
-	if voreloss is false and boundstate is false:
+	if the story has not ended and boundstate is false:
 		if WYVGEN is 1 and BodyName of Player is "Wyvern":
 			if WYVSF < 3:
 				increase WYVSF by 1;
@@ -898,23 +898,9 @@ to wyvore:
 		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break][run paragraph on]";
 		say "Sanity: [humanity of Player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of Player]	Thirst: [thirst of Player]	Struggle: [wyvstrugglebar][line break][run paragraph on]";
 		if humanity of Player < 1:
-			repeat with y running from 1 to number of filled rows in Table of Random Critters:
-				choose row y in Table of Random Critters;
-				if Name entry is "Wyvern":
-					now MonsterID is y;
-					break;
-			now BodyName of Player is "Wyvern";
-			now FaceName of Player is "Wyvern";
-			now TailName of Player is "Wyvern";
-			now SkinName of Player is "Wyvern";
-			now CockName of Player is "Wyvern";
-			now tail of Player is tail entry;
-			now Face of Player is face entry;
-			now Skin of Player is skin entry;
-			now Body of Player is body entry;
-			now Cock of Player is cock entry;
-			now voreloss is true;
 			now Trixieexit is 1;
+			trigger ending "Wyvern Vore";
+			now Ending Reason of TheEnd is "Vore by Wyvern";
 			end the story saying "You became a Wyvern's meal!";
 		else:
 			let k be 0;
@@ -1235,22 +1221,9 @@ to wyvorgy:
 		now enduring is false;
 		say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break][run paragraph on][bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break][run paragraph on][bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break][run paragraph on] Sanity: [humanity of Player]/ 100	Lust: [lustatt]/100 [bold type]A:[roman type] [if wyvkin1gen is 1]Male[else]Female[end if]: [wyvkin1lib]/100 [bold type]B:[roman type] [if wyvkin2gen is 1]Male[else]Female[end if]: [wyvkin2lib]/100 [bold type]C[roman type] [if wyvkinocc < 1]--[else if wyvkin3gen is 1]Male[else]Female[end if]: [wyvkin3lib]/100 [bold type]D:[roman type] [if wyvkinocc < 2]--[else if wyvkin4gen is 1]Male[else]Female[end if]: [wyvkin4lib]/100	Struggle: _-[if struggleatt > 2][bold type]X[roman type][else]-[end if][if struggleatt > 1][bold type]X[roman type][else]-[end if][if struggleatt > 0][bold type]X[roman type][else]-[end if]_[line break][run paragraph on]";
 		if humanity of Player < 1:
-			repeat with y running from 1 to number of filled rows in Table of Random Critters:
-				choose row y in Table of Random Critters;
-				if Name entry is "Wyvern":
-					now MonsterID is y;
-					break;
-			now BodyName of Player is "Wyvern";
-			now FaceName of Player is "Wyvern";
-			now TailName of Player is "Wyvern";
-			now SkinName of Player is "Wyvern";
-			now CockName of Player is "Wyvern";
-			now tail of Player is tail entry;
-			now Face of Player is face entry;
-			now Skin of Player is skin entry;
-			now Body of Player is body entry;
-			now Cock of Player is cock entry;
+			turn the Player into a "Wyvern";
 			now Trixieexit is 1;
+			trigger ending "Wyvern Orgy";
 			end the story saying "You lost your mind while bound!";
 		else:
 			let k be 0;
@@ -2004,50 +1977,58 @@ to wyvernsanityroll:
 
 Section 4 - Miscellaneous
 
-when play ends:
-	if BodyName of Player is "Wyvern":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Wyvern Vore"	"Voreloss"	""	Wyvern Vore rule	1	false
+"Wyvern Orgy"	"Boundstate"	""	Wyvern Orgy rule	1	false
+"Wyvern Infection"	"Infection"	""	Wyvern Infection rule	100	false
+
+This is the Wyvern Vore rule:
+	if ending "Wyvern Vore" is triggered:
+		say "     The distinct bulge that you once occupied gradually receding, the wyvern punctuates your utter defeat with a concussive screech, you ultimately ending up as nothing more than a mere meal to this beast. Satisfied, [ghe] takes flight once more, no doubt to subject other victims to a similar fate...";
+		now Player died of TheEnd is true;
+
+This is the Wyvern Orgy rule:
+	if ending "Wyvern Orgy" is triggered:
+		say "     Mind completely lost in a haze of lust, you succumb to your fate in the wyvern's nest. You never quite grow to the same scale as your captor-turned-parent, and your time in this nest has driven you to remain within, forever the beast's tainted offspring.";
+		say "     Not being particularly bright, the wyvern [ghim]self doesn't notice that you remain when your kin eventually fly off on their own and are replaced, eager to feed and play with you whenever free. Your siblings, as they come and go, also have plenty of time to play with their eager [if Player is submissive]little fucktoy[else]companion[end if]...";
+		now Player imprisoned of TheEnd is true;
+
+This is the Wyvern Infection rule:
+	if Player has a body of "Wyvern":
+		trigger ending "Wyvern Infection";
 		if humanity of Player < 10:
-			if voreloss is true:
-				say "     The distinct bulge that you once occupied gradually receding, the wyvern punctuates your utter defeat with a concussive screech, you ultimately ending up as nothing more than a mere meal to this beast. Satisfied, [ghe] takes flight once more, no doubt to subject other victims to a similar fate...";
-			else if boundstate is true:
-				say "     Mind completely lost in a haze of lust, you succumb to your fate in the wyvern's nest. You never quite grow to the same scale as your captor-turned-parent, and your time in this nest has driven you to remain within, forever the beast's tainted offspring.";
-				say "     Not being particularly bright, the wyvern [ghim]self doesn't notice that you remain when your kin eventually fly off on their own and are replaced, eager to feed and play with you whenever free. Your siblings, as they come and go, also have plenty of time to play with their eager ";
-				if Player is submissive:
-					say "little fucktoy...";
+			if WYVSF is 0:
+				if MaleList is banned or wyvernbias < 3 or MaleList is warded:
+					now WYVSF is 3;
+				else if FemaleList is banned or wyvernbias > 3 or FemaleList is warded:
+					now WYVSF is 1;
 				else:
-					say "companion...";
-			else:
-				if WYVSF is 0:
-					if MaleList is banned or wyvernbias < 3 or MaleList is warded:
-						now WYVSF is 3;
-					else if FemaleList is banned or wyvernbias > 3 or FemaleList is warded:
-						now WYVSF is 1;
-					else:
-						now WYVSF is 2;
-				if WYVSF is 2:
-					let tempnum be a random number between 1 and 2;
-					if tempnum is 1:
-						now WYVSF is 1;
-					else if tempnum is 2:
-						now WYVSF is 3;
-				say "     Your feral urges overtake you, reaching your final stage of infection. Compelled to take to the sky with now fully-formed wings, you seek out the first wyvern you might find";
-				if WYVSF is 1:
-					say ". You happen upon a male wyvern, no doubt requiring a moment to understand your pleas to be its mate. More than eager to oblige";
-					if Player is female:
-						say ", your life is soon filled with the sounds and sensations of constant breeding, offering up countless eggs in the wake of your new mate's wanton need.";
-					else:
-						say ", it never crosses the beast's thick skull that - as a [if Player is male]male[else]neuter[end if] - you might be completely incapable of offering him offspring; he fucks you all the same";
-						if Player is mpreg_ok:
-							say ", and when you do eventually offer him offspring this comes at no surprise to him";
-						say ".";
-					if Player is submissive:
-						say "     So inclined to be this beast's little cum dumpster, you find that this behavior is inevitably rewarded when you quickly find that you are subject to a great number of additional mates, all eager to fill your hole. By your feral reasoning, you only find great joy in being used so frequently.";
-				else if WYVSF is 3:
-					say ". You happen upon a female wyvern, no doubt requiring a moment to understand your pleas to be her mate. More than eager to oblige";
-					if Player is male:
-						say ", your life soon filled with the sounds and sensations of constant breeding, constantly filling your new mate with seed, when you can.";
-					else:
-						say ", it quickly becomes clear that you don't have the equipment to breed with her. Regardless, you often help her hunt for new 'offspring', sometimes partaking in the act yourself. You grow rather fond of your new children, their initial struggles eventually melting away in favor of childlike obedience.";
+					now WYVSF is 2;
+			if WYVSF is 2:
+				let tempnum be a random number between 1 and 2;
+				if tempnum is 1:
+					now WYVSF is 1;
+				else if tempnum is 2:
+					now WYVSF is 3;
+			say "     Your feral urges overtake you, reaching your final stage of infection. Compelled to take to the sky with now fully-formed wings, you seek out the first wyvern you might find";
+			if WYVSF is 1:
+				say ". You happen upon a male wyvern, no doubt requiring a moment to understand your pleas to be its mate. More than eager to oblige";
+				if Player is female:
+					say ", your life is soon filled with the sounds and sensations of constant breeding, offering up countless eggs in the wake of your new mate's wanton need.";
+				else:
+					say ", it never crosses the beast's thick skull that - as a [if Player is male]male[else]neuter[end if] - you might be completely incapable of offering him offspring; he fucks you all the same";
+					if Player is mpreg_ok:
+						say ", and when you do eventually offer him offspring this comes at no surprise to him";
+					say ".";
+				if Player is submissive:
+					say "     So inclined to be this beast's little cum dumpster, you find that this behavior is inevitably rewarded when you quickly find that you are subject to a great number of additional mates, all eager to fill your hole. By your feral reasoning, you only find great joy in being used so frequently.";
+			else if WYVSF is 3:
+				say ". You happen upon a female wyvern, no doubt requiring a moment to understand your pleas to be her mate. More than eager to oblige";
+				if Player is male:
+					say ", your life soon filled with the sounds and sensations of constant breeding, constantly filling your new mate with seed, when you can.";
+				else:
+					say ", it quickly becomes clear that you don't have the equipment to breed with her. Regardless, you often help her hunt for new 'offspring', sometimes partaking in the act yourself. You grow rather fond of your new children, their initial struggles eventually melting away in favor of childlike obedience.";
 		else:
 			say "     The military is a little reluctant to release such a brutish-looking creature from custody when you're inevitably brought in, but when it's made clear that you're not going to cause trouble you're let off back into the world.";
 			say "     You could never quite get the whole 'flying' thing down pat, so you generally keep yourself to the ground, as difficult as this sometimes makes maneuvering the world, though that people are so often inclined to give you space is a slight balm to this particular sting.";
