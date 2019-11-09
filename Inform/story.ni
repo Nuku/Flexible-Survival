@@ -4784,15 +4784,18 @@ postimport rules is a rulebook.
 Everyturn rules is a rulebook.
 
 This is the turnpass rule:
+	now fightstatus is 0;
+	now looknow is 0;
+	now ishunting is false;
+	now showlocale is true;
+	if the story has ended:
+		follow the everyturn rules;
+		rule succeeds;
 	follow the cock descr rule;
 	if "Sanity Saver" is listed in the feats of Player:
 		now humanity of Player is 100;
 	follow the cunt descr rule;
 	follow the breast descr rule;
-	now fightstatus is 0;
-	now looknow is 0;
-	now ishunting is false;
-	now showlocale is true;
 	if HP of Velos > 2:
 		if Velos is not in the location of the player:		[traveling w/player]
 			now Velos is in the location of the player;
@@ -4909,8 +4912,8 @@ This is the turnpass rule:
 		if number of filled rows in Table of PlayerChildren > 0 and a random chance of 1 in 2 succeeds, increase hunger of Player by 1;
 		if "Spartan Diet" is listed in feats of Player and hunger of Player > 0 and a random chance of 1 in 2 succeeds:
 			decrease hunger of Player by 1;
-	if "Vore Predator" is listed in feats of Player:
-		increase hunger of Player by a random number between 1 and 5;
+	if Player can vore and scalevalue of Player > 1:
+		increase hunger of Player by a random number between 1 and (1 + scalevalue of Player);
 		if "Spartan Diet" is listed in feats of Player and hunger of Player > 0 and a random chance of 1 in 2 succeeds:
 			decrease hunger of Player by 1;
 	if a random number from 1 to 25 > ( a random number between 1 and ( stamina of Player + 1 ) ):
