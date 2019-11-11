@@ -513,9 +513,14 @@ to say parasiticlust:
 
 Section 6 - Endings
 
-when play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Parasitic Plant Infection"	"Infection"	"Mixed"	Parasitic Plant Infection rule	100	false
+
+This is the Parasitic Plant Infection rule:
 	if vinetrapped is 0:
-		if BodyName of Player is "Parasitic Plant":
+		if Player has a body of "Parasitic Plant":
+			trigger ending "Parasitic Plant Infection";
 			if humanity of Player < 10:			[succumb]
 				if HP of Joanna > 0 and HP of Joanna < 90:			[Joanna saved]
 					say "     As your plant-like urges take the fore, you sink into a passive state. You are a peaceful, bliss-filled plant creature, wandering the city in search of sex. You feel a thirst, a hunger for the sexual fluids of others and give yourself to them whenever you can. Many are quite willing to indulge your needs, sometimes repeatedly, filling you with cum or soaking you in their juices until you are briefly satisfied. You experience a life of varied lust, seeking out as many different creatures as you can.";

@@ -2,6 +2,10 @@ Sex and Infection Functions by Core Mechanics begins here.
 [Version 1 - Pulled Together into its own file]
 "Basic Functions for Sex, Sexual Changes and Infections of the Flexible Survival game"
 
+Definition: A person (called x) is sterile:
+	if "Sterile" is listed in feats of x, yes;
+	no;
+
 Definition: A person (called x) is FullyNewTypeInfected:
 	if HeadName of x is "", no;
 	if TorsoName of x is "", no;
