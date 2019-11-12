@@ -430,7 +430,7 @@ Section 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Salamander Servant"	"BadEnd"	"Servant"	Salamander Servant rule	1	false
+"Salamander Servant"	"BadEnd"	"Servant"	Salamander Servant rule	2	false
 
 This is the Salamander Servant rule:
 	if ending "Salamander Servant" is triggered:

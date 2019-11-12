@@ -1493,7 +1493,7 @@ Section 9 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Rick's Lil Playthings"	"BadEnd"	"Sex Slave"	Rick's Lil Playthings rule	1	false
+"Rick's Lil Playthings"	"BadEnd"	"Sex Slave"	Rick's Lil Playthings rule	2	false
 "Sam's Epilogue"	"NPC"	""	Sam's Epilogue rule	90	false
 
 This is the Rick's Lil Playthings rule:

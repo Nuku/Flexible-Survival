@@ -1566,7 +1566,7 @@ Section 8 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Hell Prisoner"	"BadEnd"	"Prisoner"	Hell Prisoner rule	1	false
+"Hell Prisoner"	"BadEnd"	"Prisoner"	Hell Prisoner rule	2	false
 
 This is the Hell Prisoner rule:
 	if ending "Hell Prisoner" is triggered:

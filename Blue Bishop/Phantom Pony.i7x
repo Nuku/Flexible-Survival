@@ -451,7 +451,7 @@ to say blotstrugglebar:
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Blotted by Inflatable Pony"	"BadEnd"	"Sex Slave"	Blotted by Inflatable Pony rule	1	false
+"Blotted by Inflatable Pony"	"BadEnd"	"Sex Slave"	Blotted by Inflatable Pony rule	2	false
 
 This is the Blotted by Inflatable Pony rule:
 	if ending "Blotted by Inflatable Pony" is triggered:

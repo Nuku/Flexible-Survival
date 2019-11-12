@@ -719,7 +719,7 @@ to say DiegoSex10: [Diego's ass fucked - against the wall, police style]
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Hunter's Bitch"	"BadEnd"	"Sex Slave"	Hunter's Bitch rule	1	false
+"Hunter's Bitch"	"BadEnd"	"Sex Slave"	Hunter's Bitch rule	2	false
 "Player fucked Diego"	"NPC"	""	Player fucked Diego rule	90	false
 
 This is the Hunter's Bitch rule:

@@ -437,7 +437,7 @@ to say flotstrugglebar:
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Flotted by Discarded Dolphin"	"BadEnd"	"Sex Slave"	Flotted by Discarded Dolphin rule	1	false
+"Flotted by Discarded Dolphin"	"BadEnd"	"Sex Slave"	Flotted by Discarded Dolphin rule	2	false
 
 This is the Flotted by Discarded Dolphin rule:
 	if ending "Flotted by Discarded Dolphin" is triggered:

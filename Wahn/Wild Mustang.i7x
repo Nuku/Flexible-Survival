@@ -749,7 +749,7 @@ Section 4 - Ending
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Lucifer's Mare"	"BadEnd"	"Sex Slave"	Lucifer's Mare rule	1	false
+"Lucifer's Mare"	"BadEnd"	"Sex Slave"	Lucifer's Mare rule	2	false
 
 This is the Lucifer's Mare rule:
 	if ending "Lucifer's Mare" is triggered:

@@ -457,7 +457,7 @@ Section 5 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Broken Husky Slut"	"BadEnd"	"Sex Slave"	Broken Husky Slut rule	1	false
+"Broken Husky Slut"	"BadEnd"	"Sex Slave"	Broken Husky Slut rule	2	false
 
 This is the Broken Husky Slut rule:
 	if ending "Broken Husky Slut" is triggered:

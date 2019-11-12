@@ -788,7 +788,7 @@ Section 7 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Tigertaur Sex Toy"	"BadEnd"	"Sex Slave"	Tigertaur Sex Toy rule	1	false
+"Tigertaur Sex Toy"	"BadEnd"	"Sex Slave"	Tigertaur Sex Toy rule	2	false
 
 This is the Tigertaur Sex Toy rule:
 	if ending "Tigertaur Sex Toy" is triggered:
