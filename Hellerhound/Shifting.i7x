@@ -195,8 +195,14 @@ To transform:
 		say "You can't help but [one of]feel your thoughts drifting towards sex[or]notice that the attributes of [Name entry] were very appealing[or]wonder if getting to know these creatures in the biblical sense would be all that bad[at random].";
 		now Libido of Player is the libido entry;
 
-when play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Shifter Check"	"Special"	""	Shifter Check rule	6	false
+
+This is the Shifter Check rule:
 	if Resolution of Secure Area is 2:
+		trigger ending "Shifter Check";
+		add "Infection" to Excluded Types of TheEnd;
 		if the humanity of Player > 50:
 			say "Your knowledge of how to shift aids you when you decide to help the rescue, and as a reward for your help, the army decides to replace the nanites you had with a new kind that do not spread.";
 		else:

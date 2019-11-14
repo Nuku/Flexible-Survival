@@ -7,7 +7,8 @@ TheEnd is a Game Ending.[@Tag:NotSaved]
 TheEnd has a truth state called Player imprisoned. Player imprisoned is usually false. [The player got imprisoned, enslaved and so on. Always involuntarily.]
 TheEnd has a truth state called Player leaving. Player leaving is usually false. [The player left 'everything' behind. Always voluntarily.]
 TheEnd has a truth state called Player died. Player died is usually false. [The player died. Includes starvation, dehydration, eaten alive and so on.]
-TheEnd has a text called Ending Reason. Ending Reason is usually "". [The reason or cause of the ending. Extra info, like "starvation", "dehydration", "Wyvern" (in case of vore death for example) and so on.]
+TheEnd has a text called Ending Reason. Ending Reason is usually "". [The cause of the ending. Extra info, like "Vore by Wyvern" (in case of vore death for example) and so on.]
+TheEnd has a list of texts called Excluded Types. [Ending types to be excluded.]
 
 to setending ( Ending - text ):
 	setending ending silence state is 0;
@@ -113,6 +114,10 @@ When play ends:
 			if Subtype entry is not "":
 				now SubtypeString is " ([Subtype entry])";
 			say "DEBUG: Handling ending ['][Name entry]['], Type: [Type entry][SubtypeString], Priority: [Priority entry], Triggered: [if Triggered entry is true]yes[else]no[end if].[no line break]";
+		if Type entry is listed in Excluded Types of TheEnd:
+			if debug is at level 6:
+				say " (EXCLUDED)[line break]";
+			next;
 		follow the Ending entry;
 		if Player imprisoned of TheEnd is true or Player died of TheEnd is true:
 			if debug is at level 6:
