@@ -1130,7 +1130,6 @@
 |Kaleem Mcintyre|Dog House|Fin|value|
 |Kaleem Mcintyre|Dog House|Tyraffection|value|
 |Kaleem Mcintyre|Dog House|Homarusearch|value|
-|Kaleem Mcintyre|Dog House|darkdays|value|
 |Kaleem Mcintyre|Tyr's Club|20140908213124/20096:Mon 8 September 2014 21:31|indexing|
 |Kaleem Mcintyre|Tyr's Club|Tyr's Club|room|
 |Kaleem Mcintyre|Tyr's Club|Tyr|man|
@@ -1277,7 +1276,6 @@
 |Kaleem Mcintyre|Misc 4|Girl Time|situation|
 |Kaleem Mcintyre|Misc 4|Snake Charmer|situation|
 |Kaleem Mcintyre|Misc 4|Spiritual Love|situation|
-|Kaleem Mcintyre|Misc 4|spiritlove|value|
 |Stripes|Main Storyline|20140908213124/12424:Mon 8 September 2014 21:31|indexing|
 |Stripes|Main Storyline|Doctor Matt|person|
 |Stripes|Main Storyline|infection monitor|Grab Object|

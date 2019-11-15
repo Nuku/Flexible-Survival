@@ -773,8 +773,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is damageout;
 		-- "DariusLostItems":
 			now NumberVarValue entry is DariusLostItems;
-		-- "darkdays":
-			now NumberVarValue entry is darkdays;
 		-- "DavidBrutusMarcVar":
 			now NumberVarValue entry is DavidBrutusMarcVar;
 		-- "DavidBunkerEntry":
@@ -2545,8 +2543,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is SonnyRelationship;
 		-- "SpidertaurRelationship":
 			now NumberVarValue entry is SpidertaurRelationship;
-		-- "spiritlove":
-			now NumberVarValue entry is spiritlove;
 		-- "Spriteconsent":
 			now NumberVarValue entry is Spriteconsent;
 		-- "Spritedefeat":
@@ -4459,8 +4455,6 @@ to VariableNumberLoad:
 					now damageout is numberVarValue entry;
 				-- "DariusLostItems":
 					now DariusLostItems is numberVarValue entry;
-				-- "darkdays":
-					now darkdays is numberVarValue entry;
 				-- "DavidBrutusMarcVar":
 					now DavidBrutusMarcVar is numberVarValue entry;
 				-- "DavidBunkerEntry":
@@ -6235,8 +6229,6 @@ to VariableNumberLoad:
 					now SonnyRelationship is numberVarValue entry;
 				-- "SpidertaurRelationship":
 					now SpidertaurRelationship is numberVarValue entry;
-				-- "spiritlove":
-					now spiritlove is numberVarValue entry;
 				-- "Spriteconsent":
 					now Spriteconsent is numberVarValue entry;
 				-- "Spritedefeat":
