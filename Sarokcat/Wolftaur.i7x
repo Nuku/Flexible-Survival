@@ -301,7 +301,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 
 This is the Wolftaur Infection rule:
 	if Player has a body of "Wolftaur":
-		trigger ending "Wolftaur Infection";
+		trigger ending "Wolftaur Infection"; [Here it states, that the ending has been played.]
 		if level of Lindsey > 3:
 			if humanity of Player < 10:
 				if Player is female:

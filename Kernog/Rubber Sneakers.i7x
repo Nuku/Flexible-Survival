@@ -114,8 +114,13 @@ an everyturn rule:
 
 Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "Rubber Puma":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Rubber Puma Infection"	"Infection"	""	Rubber Puma Infection rule	100	false
+
+This is the Rubber Puma Infection rule:
+	if Player has a body of "Rubber Puma":
+		trigger ending "Rubber Puma Infection";
 		if humanity of Player < 10:
 			say "     Having never found a way to remove the infected sneakers (or tried to), you succumb, body and mind, to the Rubber Puma infection. You elude the military countless times, thanks to your extraordinary athletic abilities, until your very existence becomes an urban legend. Soon, every jogger and sportsman of the area know of the Rubber Puma. They say that, if you run or exercise alone, during the night, the Puma chases you. [subjpro_cap of Player] outruns you; [subjpro of Player] always do. Then, [subjpro of Player] molests you all night, before leaving by your body a pair of rubber sport shoes. They say that those who choose to wear these shoes never come back.";
 		else:

@@ -502,8 +502,13 @@ to say beesexqueen:
 
 Section 4 - Endings
 
-when play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Honey's Epilogue"	"Companion"	"Pet"	Honey's Epilogue rule	75	false
+
+This is the Honey's Epilogue rule:
 	if bee girl is tamed:
+		trigger ending "Honey's Epilogue"; [Here it states, that the ending has been played.]
 		if BodyName of Player is "Queen Bee":
 			now tempnum is 0; [content in Queen Bee]
 		else if humanity of Player < 10 and BodyName of Player is "Black Equinoid":

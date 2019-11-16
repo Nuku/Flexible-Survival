@@ -93,12 +93,17 @@ to say blackpearlusing:
 	now TailName of Player is "Leviathan";
 	now SkinName of Player is "Leviathan";
 	now CockName of Player is "Leviathan";
+	trigger ending "Leviathan Rising";
 	end the story saying "You have become the Leviathan.";
 
 Section 2 - Endings
 
-when play ends:
-	if BodyName of Player is "Leviathan":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Leviathan Rising"	"BadEnd"	""	Leviathan Rising rule	2	false
+
+This is the Leviathan Rising rule:
+	if ending "Leviathan Rising" is triggered:
 		say "     The Great Leviathan has awakened. How could you have been blind your entire life? You were always destined for greatness and divinity. It just took this magnificent pearl to bring it out of you. ";
 		if location of play is beach:
 			say "Standing on the beach, you squint at the light reflecting in the water. Without a second thought, you slither towards the water, feeling somewhat vulnerable out here. You need to dive down back into the darkness, to grow and establish your rule over the sea again. ";
@@ -110,5 +115,6 @@ when play ends:
 		else:
 			say "constrict them in your coils. The sight of these land dwellers screaming and fighting for air in your coils does feel exhilarating. None can hope to free themselves of your grasp. Nearly all of them find themselves surprised, but also grateful, when you don't drown them in the seemingly infinite depths of the ocean but instead bring them to your sanctuary. Within the ruins, your captives start taking a shape similar to yours, as you end up showing your affections to them daily, making sure that they all mature nicely. This treatment also has your new disciples be very open to your suggestions and commands; many end up devoting themselves to you with the ones who leave you still making others into creatures of the void.";
 		say "     One day, you'll rise from the abyss again and finish what you started years ago, but this time, nobody will be able to stop you.";
+		now Player imprisoned of TheEnd is true; [The player is lost and will *never* return to society, not even for a brief visit. So same category aka bad end.]
 
 Black Pearl ends here.

@@ -308,8 +308,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Monkey":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Monkey Infection"	"Infection"	""	Monkey Infection rule	100	false
+
+This is the Monkey Infection rule:
+	if Player has a body of "Monkey":
+		trigger ending "Monkey Infection";
 		if humanity of Player < 10:
 			say "     Losing the remnants of your sanity, you seek out the Monkey King and pledges loyalty to him. You spend the following days with your new leader, training under him and catering to his every whims, many of which are of carnal nature. Eventually, other victims of the Monkey King strain join you, and soon, with the Museum as your base, your gang takes on the other groups in the city, with you as of one the gang's lieutenants.";
 		else:

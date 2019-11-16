@@ -238,8 +238,13 @@ to say mnfacequote:
 Section 3 - Endings
 
 [
-when play ends:
-	if BodyName of Player is "Nerdy Mouse":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Nerdy Mouse Infection"	"Infection"	""	Nerdy Mouse Infection rule	100	false
+
+This is the Nerdy Mouse Infection rule:
+	if Player has a body of "Nerdy Mouse":
+		trigger ending "Nerdy Mouse Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You give in to the vast nerdiness inside your head. After pouring over all of the books you can find in the library you grow bored and desire a more structured path of learning. Wandering around, you eventually find yourself at the College Campus and are overjoyed at the thought of getting a higher education. Almost immediately you find yourself on the receiving end of a wedgie to shouts of 'NERD!'. Ah, sweet academia.";
 		else:
