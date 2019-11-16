@@ -784,7 +784,7 @@ to YamatFvore:
 		if humanity of Player < 1:
 			now Trixieexit is 1;
 			trigger ending "Yamato Dragon Vore";
-			now Ending Reason of TheEnd is "Vore by Yamato Dragoness";
+			the Player was ended by "Vore by Yamato Dragoness";
 			end the story saying "You became a Yamato Dragoness's meal!";
 		else:
 			let k be 0;

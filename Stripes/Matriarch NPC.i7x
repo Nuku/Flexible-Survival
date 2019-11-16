@@ -290,7 +290,7 @@ to HyenaMatBind:
 			wait for any key;
 			now Trixieexit is 1;
 			trigger ending "Hyena Matriarch Vore";
-			now Ending Reason of TheEnd is "Vore by Hyena Matriarch";
+			the Player was ended by "Vore by Hyena Matriarch";
 			end the story saying "You were demoted to hyena food";
 		else:
 			let k be 0;

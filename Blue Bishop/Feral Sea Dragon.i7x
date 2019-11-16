@@ -926,7 +926,7 @@ to fsdmvore:
 		if humanity of Player < 1:
 			now Trixieexit is 1;
 			trigger ending "Feral Sea Dragon Vore";
-			now Ending Reason of TheEnd is "Vore by Feral Sea Dragon";
+			the Player was ended by "Vore by Feral Sea Dragon";
 			end the story saying "You became a Feral Sea Dragon's meal!";
 		else:
 			let k be 0;
@@ -1138,7 +1138,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 This is the Feral Sea Dragon Vore rule:
 	if ending "Feral Sea Dragon Vore" is triggered:
 		say "     Your strength completely sapped, you black out. The sea dragon's meager bulge receding as you're unmade, the beast roars out in utter satisfaction once he's finished, your ultimate fate to be nothing more than a meal for a monster. Sated for now, the creature would no doubt seek other victims to sate his substantial hunger...";
-		now Player died of TheEnd is true;
+		the Player is vored;
 
 This is the Feral Sea Dragon Infection rule:
 	if Player has a body of "Feral Sea Dragon" or Player has a body of "Feral Sea Dragoness":

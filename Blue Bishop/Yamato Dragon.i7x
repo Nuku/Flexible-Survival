@@ -1169,7 +1169,7 @@ to YamatMvore:
 		if humanity of Player < 1:
 			now Trixieexit is 1;
 			trigger ending "Yamato Dragon Vore";
-			now Ending Reason of TheEnd is "Vore by Yamato Dragon";
+			the Player was ended by "Vore by Yamato Dragon";
 			end the story saying "You became a Yamato Dragon's meal!";
 		else:
 			let k be 0;
@@ -1287,10 +1287,10 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 This is the Yamato Dragon Vore rule:
 	if ending "Yamato Dragon Vore" is triggered:
 		let MVore be 1;
-		if Ending Reason of TheEnd is "Vore by Yamato Dragoness":
+		if Player ended by "Vore by Yamato Dragoness":
 			now MVore is 0;
 		say "     [if scalevalue of Player < 4]B[else]Substantive b[end if]ulg that once was you, having sunk to the lowermost pits of the monster's labyrinthine organs, gradually begins to recede until nothing remains. The dragon[if MVore is 0]ess[end if][']s, no doubt, bottomless hunger [if scalevalue of Player > 3]only partially[else]barely[end if] sated by its pitiful victim, [if MVore is 1]he[else]she[end if] gradually floats off in search of new prey to fall under [if MVore is 1]his[else]her[end if] raw might, nobody the wiser to your ultimate fate...";
-		now Player died of TheEnd is true;
+		the Player is vored;
 
 This is the Yamato Dragon Infection rule:
 	if Player has a body of "Yamato Dragon" or Player has a body of "Yamato Dragoness":

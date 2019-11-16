@@ -540,10 +540,10 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 
 This is the Blake's Anal Vore rule:
 	if ending "Blake's Anal Vore" is triggered:
-		now Player died of TheEnd is true;
+		the Player is vored;
 
 This is the Blake's Cock Vore rule:
 	if ending "Blake's Cock Vore" is triggered:
-		now Player died of TheEnd is true;
+		the Player is vored;
 
 Blake ends here.

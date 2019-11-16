@@ -903,7 +903,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 This is the Pewter Consort Orgy rule:
 	if ending "Pewter Consort Orgy" is triggered:
 		say "     Unable to retain your humanity after being subjected to this perpetual orgy, it eventually becomes all you know, subjected to a seemingly endless cascade of colors and sensation in an almost hypnotic fashion, seemingly sustained by their collective radiance and their sexual fluids. You never manage to leave and observe the fate of the world outside, but at this point it seems of little issue to you...";
-		now Player leaving of TheEnd is true;
+		the Player has left;
 
 This is the Pewter Consort Infection rule:
 	if ending "Pewter Consort Orgy" is triggered:

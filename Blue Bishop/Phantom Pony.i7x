@@ -459,7 +459,7 @@ This is the Blotted by Inflatable Pony rule:
 		say "     When it's clear there's nothing that can be done for you, you're eventually shipped from place to place, until the sting of your fate subsides in the consciousness of those who have been caring for you. Eventually, some seedy types manage to buy you off and cart you to a brothel that specializes in your 'Type'.";
 		say "     Apparently, the pony is still 'Rideable'[if Player is male and anallevel < 3 and Cunt Count of Player is 0], especially with your cock[smn] exposed, like they are[end if]. Customers from far and wide come to make use of you, now subject to the whims of the pony and these complete strangers, who you can only barely glimpse at through your prison's eyes.";
 		say "     It's clear the pony has some sort of intelligence to it, as it does eventually ease up to make the task of being perpetually milked not completely banal over time, and it does seems to shake things up with you on the occasion by varying the stimulation or coming up with different implements or just doing something peculiar. Ultimately, though, it seems content subjecting you to this eternal fate, and over time it manages to convert you to its way of thinking...";
-		now Player imprisoned of TheEnd is true;
+		the Player is imprisoned;
 
 
 Phantom Pony ends here.

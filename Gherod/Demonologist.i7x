@@ -531,7 +531,7 @@ to HellRealmBadEnd5: [player is dragged by the tentacle traps and eaten alive]
 	say "     Though this luxurious treatment doesn't come without a consequence. As you're stripped off your freedom of action and thoughts, reduced to a plaything for a demonic tentacle beast, there's no way to escape your inevitable fate. While you're being pulled deeper into the darkness of Hell, your begin losing your senses. Its members are much wider here, enough for you to fit in. It doesn't take too long as you feel something viscous and slimy sliding by your head over to your neck, as you're feeling yourself being pulled deeper into one enormous pulsing fleshy tunnel. You struggle to realize what's happening to you as your entire body is taken by the beast, having slurped you down to your torso, then to your legs, until only your feet remained outside.";
 	say "     Making one hungry last throb, the giant tentacle sucks you in to the last inch, sending you into its bowels, where you're left sinking in the inner juices of the demonic creature. You fall into an eternal slumber as you feel yourself melting away, and the most disturbing part is that it's the best thing you ever felt in your now ending life.";
 	now battleground is "Void";
-	now Ending Reason of TheEnd is "Hell's meal";
+	the Player was ended by "Hell's meal";
 	trigger ending "Player has died";
 	end the story saying "Your body and soul have been devoured by an hellish beast.";
 
@@ -1571,7 +1571,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 This is the Hell Prisoner rule:
 	if ending "Hell Prisoner" is triggered:
 		say "     You have delved in far too deep into the demonic realm. Hell has taken you and imprisoned your soul for all eternity. Now you serve only to satisfy the demons['] every whim of any kind, your will broken facing an inevitable fate. There's no hope... nor salvation.";
-		now Player imprisoned of TheEnd is true;
+		the Player is imprisoned;
 
 
 

@@ -115,6 +115,6 @@ This is the Leviathan Rising rule:
 		else:
 			say "constrict them in your coils. The sight of these land dwellers screaming and fighting for air in your coils does feel exhilarating. None can hope to free themselves of your grasp. Nearly all of them find themselves surprised, but also grateful, when you don't drown them in the seemingly infinite depths of the ocean but instead bring them to your sanctuary. Within the ruins, your captives start taking a shape similar to yours, as you end up showing your affections to them daily, making sure that they all mature nicely. This treatment also has your new disciples be very open to your suggestions and commands; many end up devoting themselves to you with the ones who leave you still making others into creatures of the void.";
 		say "     One day, you'll rise from the abyss again and finish what you started years ago, but this time, nobody will be able to stop you.";
-		now Player imprisoned of TheEnd is true; [The player is lost and will *never* return to society, not even for a brief visit. So same category aka bad end.]
+		the Player is gone;
 
 Black Pearl ends here.

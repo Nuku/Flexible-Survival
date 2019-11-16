@@ -102,7 +102,7 @@ Instead of resolving a Hungry dog:
 					say "     The foul odors of the monster's last meal assault your nose, and you almost puke. Holding yourself, you take a look at your surroundings. It is almost pitch-black, but somehow, you can see some of what is happening in here. You somehow landed on a safe place, everywhere else being filled with acid. There are some bones and even flesh still intact floating in the caustic sea. But your luck is only finite. With rising dread, you hear the gurgle noises of the digestion starting. Your safe place shifts, making you lose your footing and land in the acid. That is how you die. As someone's meal.";
 					WaitLineBreak;
 					now battleground is "void";
-					now Ending Reason of TheEnd is "Shrinking Shrooms eaten alive";
+					the Player was ended by "Shrinking Shrooms eaten alive";
 					trigger ending "Player has died";
 					end the story saying "You were eaten alive!";
 				else:
@@ -112,7 +112,7 @@ Instead of resolving a Hungry dog:
 						say "     The foul odor of his last meal still lingers in the air, if you can even call it air. You hold your nose in a vain chance to stop the smell, but it only opens your mouth to the taste of the air around you. There is a little more room in the beast's stomach, although not much, and you are still held in place. Left without much to do but wait, your own thoughts betray you. The grim reality is that there is only one way out now, and you won't be alive at the end. He moves slightly, and you feel the tremor in his stomach. The gurgle noises are a sign of what is to come, a clamor for food that only those who hunt in this land have, or to someone like in your situation, a herald to their final moments. You take a look around and see the surrounding liquid coming to you like a death tide. You silently weep, once again mourning how it wasn't supposed to end like this...'";
 						WaitLineBreak;
 						now battleground is "void";
-						now Ending Reason of TheEnd is "Shrinking Shrooms eaten alive";
+						the Player was ended by "Shrinking Shrooms eaten alive";
 						trigger ending "Player has died";
 						end the story saying "You were eaten alive!";
 					else:
@@ -132,7 +132,7 @@ Instead of resolving a Hungry dog:
 					say "     Your captor finally bites down, holding you against the tight and lubed place. Twitching, tugging, and pulling you deeper towards the belly of the beast, the pain of being penetrated by his teeth destroy any sense of pleasure in this act. You can't see much, except for some snippets of light that shines into his mouth. Your [FaceName of Player] head is chewed while his tongue holds you in place. The slippery sensation keeps pulling you deeper inside the beast jaws, as it keeps squeezing you with his tightness. The pressure keeps building until your neck snaps, giving you a quick death. But you already knew what was going to happen after that.";
 					WaitLineBreak;
 					now battleground is "Void";
-					now Ending Reason of TheEnd is "Shrinking Shrooms eaten alive";
+					the Player was ended by "Shrinking Shrooms eaten alive";
 					trigger ending "Player has died";
 					end the story saying "You were eaten alive!";
 				else:
@@ -394,7 +394,7 @@ to say ChineseTrouble:
 				now sextablerun is 1;
 				say "     Giving up on the idea of leaving this, you wait for your death, which comes in due time.";
 				now battleground is "void";
-				now Ending Reason of TheEnd is "Shrinking Shrooms eaten alive";
+				the Player was ended by "Shrinking Shrooms eaten alive";
 				trigger ending "Player has died";
 				end the story saying "You were eaten alive!";
 				wait for any key;
@@ -443,7 +443,7 @@ to say ChineseTrouble:
 				now sextablerun is 1;
 				say "     Giving up on any hope of survival, you sit down, breathing the polluted air and being squished by her muscles from the inside of her stomach. The end will take just a few more moments...";
 				now battleground is "void";
-				now Ending Reason of TheEnd is "Shrinking Shrooms eaten alive";
+				the Player was ended by "Shrinking Shrooms eaten alive";
 				trigger ending "Player has died";
 				end the story saying "You were eaten alive!";
 				wait for any key;
@@ -456,7 +456,7 @@ to say AlphaKick:
 		say "     With a huge windup, you kick him with all the strength you have left, making your surroundings shake a bit. But before you can follow up, a more powerful quake goes through the husky's insides, with the wall of his stomach bulging out suddenly to throw you to the other side of the chamber and land in a puddle of stomach acid. Flinching in pain, you realize that he must have punched his own stomach. You smile at the thought and drag yourself to your feet again, then pummel his insides some more. This won't save you, but at least the bastard is gonna have indigestion.";
 		WaitLineBreak;
 		now battleground is "void";
-		now Ending Reason of TheEnd is "Shrinking Shrooms eaten alive";
+		the Player was ended by "Shrinking Shrooms eaten alive";
 		trigger ending "Player has died";
 		end the story saying "You were eaten alive!";
 	else:
@@ -471,7 +471,7 @@ to say AlphaClimb:
 		say "     The walls of his gullet are slick and often twitch, several times feeling as if he is trying to gulp you down again. But you persevere, holding onto anything you can get a grip on. Finally, you're back in his muzzle and run down the squishy length of his tongue to jump out through his parted teeth, only to land in the husky's raised paw. 'So, my prey wants to be properly chewed before being my meal,' he says and gives a sadistic laugh. 'Don't worry, now you will be a proper meal.' You are tossed back in his mouth, but this time, you are chewed down before being swallowed.";
 		WaitLineBreak;
 		now battleground is "void";
-		now Ending Reason of TheEnd is "Shrinking Shrooms eaten alive";
+		the Player was ended by "Shrinking Shrooms eaten alive";
 		trigger ending "Player has died";
 		end the story saying "You were eaten alive!";
 	else:
@@ -485,7 +485,7 @@ to say AlphaDive:
 		say "     You jump in the acid, ignoring all of the pain. It makes your flesh burn as it is eaten away while you try to find any opening deeper into his digestive tract. But it's all in vain. Soon, you pass out from the pain, and are quickly digested without a trace.";
 		WaitLineBreak;
 		now battleground is "void";
-		now Ending Reason of TheEnd is "Shrinking Shrooms eaten alive";
+		the Player was ended by "Shrinking Shrooms eaten alive";
 		trigger ending "Player has died";
 		end the story saying "You were eaten alive!";
 	else:
@@ -499,7 +499,7 @@ to say BitchClimb:
 		say "     Pushing aside her flesh to make your way proves harder than any place you climbed combined with any hole you crawled inside. Your body is still slippery with the cum and the fluids from the bitch, causing you to slide. But still, you make your way to her muzzle, finally seeing the outside world again. Hope comes back to your heart... and are quickly shattered, as the alpha is waiting for you. 'Look at that little rascal,' he says looking directly at you inside her mouth. 'Thought you'd make it, but no. You're still going down!' As the husky laughs, the bitch clamps her teeth shut, closing the last sliver of light you are ever going to see, then throws her head back and swallows you again. This time, you don't have the energy to even struggle anymore...";
 		WaitLineBreak;
 		now battleground is "void";
-		now Ending Reason of TheEnd is "Shrinking Shrooms eaten alive";
+		the Player was ended by "Shrinking Shrooms eaten alive";
 		trigger ending "Player has died";
 		end the story saying "You were eaten alive!";
 	else:
@@ -513,7 +513,7 @@ to say BitchDive:
 		say "     You jump in the acid, ignoring all of the pain. It makes your flesh burn as it is eaten away while you try to find any opening deeper into his digestive tract. But it's all in vain. Soon, you pass out from the pain, and are quickly digested without a trace.";
 		WaitLineBreak;
 		now battleground is "void";
-		now Ending Reason of TheEnd is "Shrinking Shrooms eaten alive";
+		the Player was ended by "Shrinking Shrooms eaten alive";
 		trigger ending "Player has died";
 		end the story saying "You were eaten alive!";
 	else:

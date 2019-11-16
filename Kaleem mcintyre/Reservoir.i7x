@@ -571,7 +571,7 @@ This is the Reservoir Oozing rule:
 	if ending "Reservoir Oozing" is triggered:
 		say "Having lost to the blob monster you are no longer aware of yourself as an individual but as one who is part of a greater whole. Sloshing and moving throughout the reservoir many other mutants have found their way here to your home. Those unable to get away from your tentacles have been dragged underneath the murky waters to become one with you. However, those able to get away have moved on and long since become but a distant memory. Yet when the [italic type]new ones[roman type] come along you feel a sudden fear as a burning heat begins to churn your waters. Memories of long ago surface and instantly you feel threatened beyond measure.";
 		say "Rising up from out of your watery home you find attacking the newcomers without thought. The sheer need to survive makes you try to either engulf the newcomers or disembowel them with your tentacles. There's much shouting and noise coming from all around but when the [italic type]new ones[roman type] begin to retreat you feel a sense of nervousness that makes you hesitant to return back into the reservoir. Perhaps it's time to move into deeper waters outsider. The faint memory of the ocean has you warbling in glee and quickly you sink down into the waters to try and plan your escape.";
-		now Player imprisoned of TheEnd is true;
+		the Player is lost;
 
 This is the Reservoir Epilogue rule:
 	if waterworks is 1:

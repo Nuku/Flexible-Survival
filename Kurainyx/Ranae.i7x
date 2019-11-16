@@ -536,7 +536,7 @@ to RanaeBind:
 					say "     'That's a good [if player is male]boy[else]girl[end if]. No more struggling. Just give yourself to me,' Ranae says, even though your movements had ceased some time ago. The frog woman hugs her bulging belly and giggles softly. 'You know, I'm actually going to miss you. With how you kept on spoiling me, I would've loved to keep you around as my servant. Unfortunately, this city has all sorts of crazy stuff going on, and I'm not going to let some freaks take you away from me. At least this way, I get to keep you forever, not to mention having you as a tasty treat.' Ranae pauses for a moment when her stomach gurgles, and she smiles as she uses her hands to rub gentle circles over her belly. 'Rest well, my servant. You're mine now... All mine...'";
 					now Trixieexit is 1;
 					trigger ending "Ranae Vore";
-					now Ending Reason of TheEnd is "Vore by Ranae";
+					the Player was ended by "Vore by Ranae";
 					end the story saying "You let a frog have her way with you.";
 		else:
 			let k be 0;
@@ -605,12 +605,12 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 
 This is the Ranae Vore rule:
 	if ending "Ranae Vore" is triggered:
-		now Player died of TheEnd is true;
+		the Player is vored;
 
 This is the Ranae's Servant rule:
 	if ending "Ranae's Servant" is triggered:
 		say "     When the military comes, you and Ranae are processed together. Though your subservient attitude to your froggy mistress raises a few eyebrows, the both of you are eventually deemed safe and released back into the outside world. With you in tow, Ranae is quick to make contact with her parents. The reunion is met with all sorts of surprise on the parents' side when they find that not only is their daughter now an anthropomorphic frog, but she has a much more confident and domineering attitude, especially when she introduces you as her servant. Nonetheless, they are more than happy to welcome you and their froggy daughter. With Ranae's parents both being influential business people, the frog gets a managerial position in a small company, with you as her personal assistant. While you tend to your mistress's every need, Ranae finds great success in her new role, thanks to the assertiveness that she gained. With the money Ranae rakes in from her work, you have the opportunity to live close to the lap of luxury, but instead, you find more comfort in the stomach of your mistress whenever she has you fulfil your role as her belly filler.";
-		now Player imprisoned of TheEnd is true;
+		the Player is enslaved;
 
 
 Ranae ends here.

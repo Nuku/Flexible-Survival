@@ -900,7 +900,7 @@ to wyvore:
 		if humanity of Player < 1:
 			now Trixieexit is 1;
 			trigger ending "Wyvern Vore";
-			now Ending Reason of TheEnd is "Vore by Wyvern";
+			the Player was ended by "Vore by Wyvern";
 			end the story saying "You became a Wyvern's meal!";
 		else:
 			let k be 0;
@@ -1986,13 +1986,13 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 This is the Wyvern Vore rule:
 	if ending "Wyvern Vore" is triggered:
 		say "     The distinct bulge that you once occupied gradually receding, the wyvern punctuates your utter defeat with a concussive screech, you ultimately ending up as nothing more than a mere meal to this beast. Satisfied, [ghe] takes flight once more, no doubt to subject other victims to a similar fate...";
-		now Player died of TheEnd is true;
+		the Player is vored;
 
 This is the Wyvern Orgy rule:
 	if ending "Wyvern Orgy" is triggered:
 		say "     Mind completely lost in a haze of lust, you succumb to your fate in the wyvern's nest. You never quite grow to the same scale as your captor-turned-parent, and your time in this nest has driven you to remain within, forever the beast's tainted offspring.";
 		say "     Not being particularly bright, the wyvern [ghim]self doesn't notice that you remain when your kin eventually fly off on their own and are replaced, eager to feed and play with you whenever free. Your siblings, as they come and go, also have plenty of time to play with their eager [if Player is submissive]little fucktoy[else]companion[end if]...";
-		now Player imprisoned of TheEnd is true;
+		the Player is gone;
 
 This is the Wyvern Infection rule:
 	if Player has a body of "Wyvern":

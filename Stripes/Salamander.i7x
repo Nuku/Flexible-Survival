@@ -435,7 +435,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 This is the Salamander Servant rule:
 	if ending "Salamander Servant" is triggered:
 		say "     Doomed to be a plaything for the Salamander, she often enjoys your company both inside and outside of her. Having completely lost your sanity you can only eagerly oblige your fiery new mistress and attend to her every need. You memory soon becomes nothing more than a blur of your seemingly eternal attendance and the warm feel of her soft, inner flesh...";
-		now Player imprisoned of TheEnd is true;
+		the Player is enslaved;
 
 
 Salamander ends here.

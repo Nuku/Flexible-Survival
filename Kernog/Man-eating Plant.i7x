@@ -294,7 +294,7 @@ to manEatingPlantVore:
 		if humanity of Player < 1:
 			now Trixieexit is 1;
 			trigger ending "Man-eating Plant Vore";
-			now Ending Reason of TheEnd is "Vore by Man-eating Plant";
+			the Player was ended by "Vore by Man-eating Plant";
 			end the story saying "Became plant nanite nutriment";
 		else:
 			let k be 0;
@@ -366,7 +366,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 This is the Man-eating Plant Vore rule:
 	if ending "Man-eating Plant Vore" is triggered:
 		say "     Three weeks after your capture, a military expedition lands on the island. As they progress through the forest, they come upon the plant that captured you. They watch with resignation at the outline of your body, trapped inside like many other victims before and after you throughout the island, unmoving and slowly digested by the plant. Sighing, the leader of the platoon signals one of the flamethrower-wielding troopers and has him burn the plant, the tree, and your half-digested, forever unidentified corpse.";
-		now Player died of TheEnd is true;
+		the Player is vored;
 
 Section 6 - man-eating flower seed
 

@@ -251,12 +251,12 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 
 This is the Timothy's Breeding Gryphon rule:
 	if ending "Timothy's Breeding Gryphon" is triggered:
-		now Player leaving of TheEnd is true;
+		the Player has left;
 
 This is the IceCreamTruck Bad End rule:
 	if ending "IceCreamTruck Bad End" is triggered:
 		say "     You settle into a simple, satisfying life with the hermaphrodite gryphon who found you and brought you back to her nest. Your frequent lovemaking wipes away the remaining scraps of your humanity, reducing you to nothing more than a lustful gryphon [if Player is herm]herm like[else if Player is male and player is not submissive]stud for[else if Player is female]bitch for[else]toy for[end if] your sultry, assertive companion. The thought occurs to you that you might have been something else in a past life, but it's chased from your mind the moment you [if Player is puremale and player is not submissive]drive your length into your lover's wet folds again, her cunt squeezing like a vise to milk you for another clutch of eggs[else]feel her length drive deep inside of you again, sending immense pleasure crashing through every nerve in your body[end if]. Those vague recollections wither and fade to nothing, and eventually all you can think of is the ecstasy you share with each other, your days and nights at the nest melting into a blur of hazy pleasure as your bodies entwine, thrust and grind with carefree, wanton abandon.";
-		now Player leaving of TheEnd is true;
+		the Player has left;
 
 This is the Garrett's BFF rule:
 	if one of the endings in { "Timothy's Breeding Gryphon", "IceCreamTruck Bad End" } is triggered:

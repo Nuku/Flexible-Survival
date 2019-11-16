@@ -444,7 +444,7 @@ This is the Flotted by Discarded Dolphin rule:
 		say "     Cool ocean water the only balm against the intense heat of your perpetual enslavement, you're barely able to discern what the dolphin is actually doing, seemingly content to swim around playfully, meeting various creatures and peoples - all of whom appear wholly unaware of your ultimate fate, even as you moan out loudly with each thrust of the vinyl toy's tendrils.";
 		say "     On occasion, the creature even seems inclined to have fun with some of those it encounters, often [if Player is puremale and anallevel < 3]used to ride[else]made to be ridden by[end if] them. You're unsure if inflatable toy particularly enjoys this, or if it likes to surprise you from time to time.";
 		say "     No doubt content to milk you until the end of days, your memories blur into a haze of constant orgasms. Writhing against your tight, slippery prison with each motion against the waters, it's eventually all you can think of...";
-		now Player imprisoned of TheEnd is true;
+		the Player is imprisoned;
 
 
 Phantom Dolphin ends here.

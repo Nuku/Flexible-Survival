@@ -318,7 +318,7 @@ to say SavinaFatalBeg:
 	say "     Eventually, the snake has her fill of sampling your flavor, and you feel your dark prison shift when Savina tilts her head back, letting gravity send you down her gullet. You moan wantonly as the familiar, pulsating walls close in on you while you make your journey into the serpent's depths. The surrounding supple flesh caressing your own feels even more wondrous than before now that you have stripped of yourself of all of your possessions, leaving nothing to interfere with their heavenly touch. Bound by the tight confines and trapped in darkness, the writhing walls pressing down on you is the only thing that you know, and the enthralling massage seems to affect not only your body but your mind as well, driving you mad with arousal.";
 	say "     It does not take long before you reach your climax, the feel of your [if Player is herm]cock[smn] and cunt[sfn] rubbing against the living tunnel's walls, the sensation too much for you to handle as your cum and juices paint the snake's interior[else if Player is male]cock[smn] rubbing against the living tunnel's walls, the sensation too much for you to handle as your cum paints the snake's interior[else if Player is female]cunt[sfn] rubbing against the living tunnel's walls, the sensation too much for you to handle as your juices paint the snake's interior[else]crotch rubbing against the living tunnel's walls, the sensation too much for you to handle[end if]. And it is only the first of many. With your overwhelming desire to please your mistress and the constant squeezing of the encompassing walls, your orgasms come swiftly and frequently, suspending you in an endless cycle of bliss. The pure euphoria as you gradually become one with Savina is everything you could have wished for and then some, and you dearly hope that the serpent derives just as much pleasure from using you. As you are ferried into the deepest depths of the snake, your senses are washed away by the rapturous, churning stomach until you let your weary self rest, offering your final gift to your mistress.";
 	wait for any key;
-	now Ending Reason of TheEnd is "Vore by Savina";
+	the Player was ended by "Vore by Savina";
 	trigger ending "Savina Vore";
 	end the story saying "Savina hums in delight when she feels your sluggish movements come to an end. Rubbing the shrinking bulge in her midsection, she says, 'You were an excellent meal, my pet. Enjoy being a part of me forever.' As the massive snake's stomach claims you to fuel her mighty form, Savina slithers off in search of her next meal, or better yet, her next pet.";
 
@@ -329,7 +329,7 @@ to say SavinaFatalKeep:
 	say "     Trapped inside of the ravenous predator's mouth, her tongue pushes and swirls around you, savoring your succulent flavor and even eliciting a few satisfied moans from the serpent herself. Worn down both physically and mentally, you do not resist while you are tossed all around the dark chamber and squished against soft, slippery surfaces. Despite the turbulent ordeal, you soon grow accustomed to being nothing more than a tasty morsel and even start to derive pleasure from being rubbed against the slick flesh. Your senses muddled by the oral ministrations and a growing haze of arousal, you hardly notice when Savina is done tasting you until the rippling tunnel that is her gullet eagerly accepts you into its compressing embrace.";
 	say "     All too familiar walls of flesh squeeze and rub every inch of your bound form as you are carried deeper into the dark depths. Whether it's Savina's charm or just you accepting that you cannot escape the dominant snake, you hardly feel any worry about the perilous situation that you are in. Instead, you just focus on the tingles of pleasure that the slippery walls give you as they knead your weary body, lulling you into a state of relaxation. The snake's stomach feels oddly comfortable, almost like being stuffed inside of a full-body sleeping bag tailored to fit just you, and the soothing caresses from all sides only enhance the bliss. Feeling safe and snug inside of your mistress, you start to feel drowsy while your eyelids grow heavy, and the last thing you hear before you fall asleep is Savina saying, 'Sweet dreams, my pet.'";
 	wait for any key;
-	now Ending Reason of TheEnd is "Vore by Savina";
+	the Player was ended by "Vore by Savina";
 	trigger ending "Savina Vore";
 	end the story saying "Savina hums in delight when she feels your sluggish movements come to an end. Rubbing the shrinking bulge in her midsection, she says, 'You were an excellent meal, my pet. Enjoy being a part of me forever.' As the massive snake's stomach claims you to fuel her mighty form, Savina slithers off in search of her next meal, or better yet, her next pet.";
 
@@ -393,6 +393,6 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 
 This is the Savina Vore rule:
 	if ending "Savina Vore" is triggered:
-		now Player died of TheEnd is true;
+		the Player is vored;
 
 Savina ends here.

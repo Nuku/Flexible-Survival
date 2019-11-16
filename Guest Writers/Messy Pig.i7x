@@ -378,7 +378,7 @@ to MessyPigBind:
 		if humanity of Player < 1:
 			now Trixieexit is 1;
 			trigger ending "Pig Vore";
-			now Ending Reason of TheEnd is "Vore by Messy Pig";
+			the Player was ended by "Vore by Messy Pig";
 			end the story saying "A pig pigged out on you";
 		else:
 			let k be 0;

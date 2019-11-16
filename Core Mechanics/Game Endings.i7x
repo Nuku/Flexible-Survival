@@ -10,6 +10,41 @@ TheEnd has a truth state called Player died. Player died is usually false. [The 
 TheEnd has a text called Ending Reason. Ending Reason is usually "". [The cause of the ending. Extra info, like "Vore by Wyvern" (in case of vore death for example) and so on.]
 TheEnd has a list of texts called Excluded Types. [Ending types to be excluded.]
 
+to the/-- Player has left:
+	now Player leaving of TheEnd is true;
+
+to decide if the/-- Player left:
+	if Player leaving of TheEnd is true, decide yes;
+	decide no;
+
+to the/-- Player is gone/imprisoned/enslaved/lost:
+	now Player imprisoned of TheEnd is true;
+
+to decide if the/-- Player/Player's gone/imprisoned/enslaved/lost:
+	if Player imprisoned of TheEnd is true, decide yes;
+	decide no;
+
+to the/-- Player is dead/killed/murdered/vored:
+	now Player died of TheEnd is true;
+
+to decide if the/-- Player/Player's dead/killed/murdered/vored:
+	if Player died of TheEnd is true, decide yes;
+	decide no;
+
+to the/-- Player was/-- ended by ( R - a text ):
+	now Ending Reason of TheEnd is R;
+
+to decide if the/-- Player/Player's ended by ( R - a text ):
+	if Ending Reason of TheEnd is R, decide yes;
+	decide no;
+
+to exclude ( type - a text ) endings:
+	add type to Excluded Types of TheEnd;
+
+to decide if ( Type - a text ) endings are excluded:
+	if Type is listed in Excluded Types of TheEnd, decide yes;
+	decide no;
+
 to setending ( Ending - text ):
 	setending ending silence state is 0;
 
@@ -114,12 +149,12 @@ When play ends:
 			if Subtype entry is not "":
 				now SubtypeString is " ([Subtype entry])";
 			say "DEBUG: Handling ending ['][Name entry]['], Type: [Type entry][SubtypeString], Priority: [Priority entry], Triggered: [if Triggered entry is true]yes[else]no[end if].[no line break]";
-		if Type entry is listed in Excluded Types of TheEnd:
+		if Type entry endings are excluded:
 			if debug is at level 6:
 				say " (EXCLUDED)[line break]";
 			next;
 		follow the Ending entry;
-		if Player imprisoned of TheEnd is true or Player died of TheEnd is true:
+		if Player dead or Player imprisoned:
 			if debug is at level 6:
 				say "DEBUG: The Player is either dead or imprisoned, enslaved and so on. Finishing here![line break]";
 			break;
@@ -190,11 +225,11 @@ This is the Player Starvation rule:
 	if thirst of Player >= 100 or hunger of Player >= 100:	[blocking regular endings]
 		trigger ending "Player Starvation";
 		say "     You have perished from [if hunger of Player >= 100 and thirst of Player >= 100]starvation and thirst[else if hunger of Player >= 100]starvation[else]thirst[end if] and are no more. Your body becomes a meal for another of the more predatory creatures roaming the city.";
-		now Player died of TheEnd is true;
+		the Player is dead;
 
 This is the Player has died rule:
 	if ending "Player has died" is triggered:
-		now Player died of TheEnd is true;
+		the Player is dead;
 
 This is the Epilogue Intro rule: [The player didn't die or bad ended]
 	if humanity of Player < 10 and HP of the player > 0:

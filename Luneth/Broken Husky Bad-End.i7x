@@ -462,7 +462,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 This is the Broken Husky Slut rule:
 	if ending "Broken Husky Slut" is triggered:
 		say "     The alpha husky that captured you, continued to break down both your mind and body. Eventually, he was able to build you into his perfect submissive partner and the fact that you ended up turning into one of the few precious deltas, well that certainly made his bid to rule the husky packs much more assured..";
-		now Player imprisoned of TheEnd is true;
+		the Player is enslaved;
 
 
 Broken Husky Bad-End ends here.

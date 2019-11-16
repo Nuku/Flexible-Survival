@@ -1500,7 +1500,7 @@ This is the Rick's Lil Playthings rule:
 	if ending "Rick's Lil Playthings" is triggered:
 		say "     Having given yourself over to Rick, you and Sammie are made into lovely hybrid feline hexataurs for the dominant tigertaur to use and whelp whenever shi chooses to do so, which shi does quite a lot given that shi's made the former lab into hir new den. Very rarely does either your or Sammie's bellies stay flat as the lustful tigertaur spends many a day filling the two of you with hir cubs, all of whom grow up into being exotic hybrid felinetaurs like their [']mothers[']. And having two conjoined taur bodies, each with a womb of its own, you breed and whelp quite the pride of sexy kittens.";
 		say "     When the some of the military happens to stumble over your little den, Rick takes that as a sign to lead you, Sammie, and your cubs out of the city and into the rest of the world. From what little you remember of that time, you recall that some of the soldiers had given chase, but very few could keep up with the small band of felinetaurs, and those who did manage to catch up to the lot of you... well, currently you find yourself watching as Rick busies hirself with breeding one of them while the others lounge around you, Sammie, and the pair of cubs the two of you are currently nursing.";
-		now Player imprisoned of TheEnd is true;
+		the Player is enslaved;
 
 This is the Sam's Epilogue rule:
 	if Player has no body of "Vixentaur" and Player has no body of "Dragontaur" and Player has no body of "Dracovixentaur":

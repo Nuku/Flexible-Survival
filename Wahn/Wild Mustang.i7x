@@ -754,6 +754,6 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 This is the Lucifer's Mare rule:
 	if ending "Lucifer's Mare" is triggered:
 		say "     Being used as Lucifer's mare is finally enough to push you over the edge. You can't help but lie on the grass, dripping his cum and feeling it dry on your skin, until the feral mustang eventually returns to fuck you again, and again. Eventually, your form shifts to that of a true feral mare and you join the harem of the powerful stallion, well-bred and well-protected from any challenger to Lucifer's might.";
-		now Player imprisoned of TheEnd is true;
+		the Player is enslaved;
 
 Wild Mustang ends here.

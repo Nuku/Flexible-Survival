@@ -256,7 +256,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 This is the Hyena Matriarch Vore rule:
 	if ending "Hyena Matriarch Vore" is triggered:
 		say "     Your role as the matriarch's meal serves the gang leader far more than what you could do as a breeder bitch. Her leadership grows as news of your demise to her stomach spreads throughout the gang. Gina becomes one of the matriarch's most favorite aides, and as she continues to bring in new recruits, the gang's ranks swell, even if some of them disappear when she arranges a private meeting with her and the matriarch. With rumors of the hyena leader's carnivorous urges circulating through the gang, her orders are carried out diligently, even more so than usual, as members fear that they might displease their leader. With a mixture of fear and dominance, the gang's influence spread under the matriarch's rule, and her rule goes uncontested, no one daring to risk sharing the same fate that you ended up in.";
-		now Player died of TheEnd is true;
+		the Player is vored;
 
 This is the Hyena Matriarch Epilogue rule:
 	if matriarchowned is 1:

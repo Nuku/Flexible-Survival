@@ -746,7 +746,7 @@ to fsdfvore:
 			now Cock of Player is cock entry;
 			now Trixieexit is 1;
 			trigger ending "Feral Sea Dragon Vore";
-			now Ending Reason of TheEnd is "Vore by Feral Sea Dragoness";
+			the Player was ended by "Vore by Feral Sea Dragoness";
 			end the story saying "You became a Feral Sea Dragoness's meal!";
 		else:
 			let k be 0;

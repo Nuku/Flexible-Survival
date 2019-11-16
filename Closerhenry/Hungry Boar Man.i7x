@@ -626,7 +626,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 This is the Pig Vore rule:
 	if ending "Pig Vore" is triggered:
 		say "     The piggy rumbles happily, your last bit of resistance having fade away some time ago, as you add to her ample amounts of fat. Thanks to your contribution, her stomach bulges out even more, as well as her rear, allowing her to subdue her prey more easily. Despite giving her a bountiful meal, it doesn't take long for the female swine to get hungry again. Trundling off with her increased girth, the gluttonous pig goes off to sate her hunger and her lust.";
-		now Player died of TheEnd is true;
+		the Player is vored;
 
 This is the Philip's Epilogue rule:
 	if Player has no body of "Messy Pig" and Player has no body of "Piggy":

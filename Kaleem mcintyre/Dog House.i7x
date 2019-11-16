@@ -292,7 +292,7 @@ This is the Dog House New Bitch rule:
 	if ending "Dog House New Bitch" is triggered:
 		say "     Having lost yourself and your will to the same drug that the wolftaurs had given to Tyr, you are now just another bitch in the cells with all the others. Without a sense of self or purpose, the remainder of your days are spent getting stuffed full of cock for the viewing pleasure of the crowd upstairs, while your nights are spent yowling alongside your Dobie friend as you both press your gaping and leaking bitchcunts through the bars of the cells for the males to yowl over. Save for the comfort of the other bitches around you, and one special Doberman female in particular, you have little to help fill the growing ache inside of you as the drug you had been given made you sterile. No one comes to help save you, and when the military does arrive to clean up the town, you and all of the other canines, both bitch and male alike, are herded into two large and separate vans and then smuggled out of the city.";
 		say "     The last thing of importance that you can recall, many, many years later, is the face of the Doberman who you've come to somewhat cherish, being ripped away from you, never to be seen again. You don't know why that's so important, especially after you're sold to an influential owner that fills you up night after night, but it does stick out in the lustful haze that has become your mind.";
-		now Player imprisoned of TheEnd is true;
+		the Player is enslaved;
 
 
 Dog House ends here.

@@ -202,7 +202,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 This is the Shifter Check rule:
 	if Resolution of Secure Area is 2:
 		trigger ending "Shifter Check";
-		add "Infection" to Excluded Types of TheEnd;
+		exclude "Infection" endings;
 		if the humanity of Player > 50:
 			say "Your knowledge of how to shift aids you when you decide to help the rescue, and as a reward for your help, the army decides to replace the nanites you had with a new kind that do not spread.";
 		else:

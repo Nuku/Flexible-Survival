@@ -517,6 +517,6 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 This is the Demon Slave rule:
 	if ending "Demon Slave" is triggered:
 		say "     Your new reality in hell focuses on satisfying Skarnoth's every desire - of which there are many, mostly carnal ones. As the overlord of his own little demonic realm, your master has the power to play with your body shape too, transforming you as he wishes to better enjoy breaking you to his will...";
-		now Player imprisoned of TheEnd is true;
+		the Player is enslaved;
 
 Skarnoth ends here.

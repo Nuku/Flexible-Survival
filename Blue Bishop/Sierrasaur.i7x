@@ -606,7 +606,7 @@ this is the Sierrasaur's Sex Toy rule:
 		else:
 			say ". You prove to be a little bit of a nuisance, as you're rather ill-inclined to share your adoptive parent's fleshy abode with new prospects. Your caretaker doesn't seem to mind all that much, even if it proves a bit inconvenient at times";
 		say ". In time, all your memory is a blur of the reptiles['] taut, unyielding flesh flooding and enveloping you day in and day out...";
-		now Player imprisoned of TheEnd is true;
+		the Player is enslaved;
 
 This is the Sierrasaur Infection rule:
 	if Player has a body of "Sierrasaur":

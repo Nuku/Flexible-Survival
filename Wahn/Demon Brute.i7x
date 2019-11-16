@@ -1686,7 +1686,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 This is the DBrute Slave rule:
 	if ending "DBrute Slave" is triggered:
 		say "     Your new reality in hell focuses on satisfying the relentless lusts of your demon brute masters, as well as being shared around for any other hellspawn he feels like allowing a ride...";
-		now Player imprisoned of TheEnd is true;
+		the Player is enslaved;
 
 This is the Demon Brute Infection rule:
 	if Player has a body of "Demon Brute":

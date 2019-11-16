@@ -793,7 +793,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 This is the Tigertaur Sex Toy rule:
 	if ending "Tigertaur Sex Toy" is triggered:
 		say "     Even though you try a few times, you never manage to escape the clutches of your tigertaur masters, and servicing them eventually becomes the only reason for your existence, supplanting all other thoughts you might once have had.";
-		now Player imprisoned of TheEnd is true;
+		the Player is enslaved;
 
 [
 when play ends:

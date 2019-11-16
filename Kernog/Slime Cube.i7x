@@ -233,7 +233,7 @@ to slimeCubeVore:
 		if humanity of Player < 1:
 			now Trixieexit is 1;
 			trigger ending "Slime Cube Vore";
-			now Ending Reason of TheEnd is "Vore by Slime Cube";
+			the Player was ended by "Vore by Slime Cube";
 			end the story saying "Digested by a slime.";
 		else:
 			let k be 0;
@@ -304,7 +304,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 This is the Slime Cube Vore rule:
 	if ending "Slime Cube Vore" is triggered:
 		say "     The last of your consciousness fades away. You are already comatose when the hotness upon your skin turns into a burning sensation and your body dissolves piece by piece, until only your bones remain, to be digested for the weeks to come.";
-		now Player died of TheEnd is true;
+		the Player is vored;
 
 
 Slime Cube ends here.
