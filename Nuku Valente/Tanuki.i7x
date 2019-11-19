@@ -417,8 +417,13 @@ When Play begins:
 ]
 
 
-when play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Tanuki Satisfaction"	"Special"	""	Tanuki Satisfaction rule	60	false
+
+This is the Tanuki Satisfaction rule:
 	if SatisfiedTanuki is 0:
+		trigger ending "Tanuki Satisfaction";
 		say "Your tanuki blood serves you well. They say Tanuki are shapeshifters as well, but you never quite get past size shifting. A handy enough trick on its own? The ability to at least transition from tanuki form to human is quite useful at least!";
 		if humanity of Player < 10:
 			increase humanity of Player by 20;

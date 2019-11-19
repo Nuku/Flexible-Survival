@@ -325,8 +325,13 @@ To mousefuck:
 
 Section 4 - Endings
 
-When play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Lisa's and Svetlana's Epilogue"	"NPC"	"Mixed"	Lisa's and Svetlana's Epilogue rule	90	false
+
+This is the Lisa's and Svetlana's Epilogue rule:
 	if mousefucked > 1 and humanity of Player > 9:
+		trigger ending "Lisa's and Svetlana's Epilogue";
 		increase score by 5;
 		say "     You receive an occasional letter or call from Lisa. It turns out she made it through alright and has joined up with a group called the [']Prometheans[']. It sounds like some kind of weird cult thing, but at least she is happy and safe. You remain good pen pals with the mousetaur you met in that fallen city";
 		if mousespot > 0:
@@ -335,6 +340,7 @@ When play ends:
 		else:
 			say ".";
 	if HP of Sven is 54 and humanity of Player > 9:		[Svetlana endings]
+		trigger ending "Lisa's and Svetlana's Epilogue";
 		if Player is male:
 			say "     Svetlana keeps in touch with you[if mousefucked > 1] as well[end if], even coming to visit you at times when her mistress permits it. It seems Lisa's quite busy with her duties (which are never really elaborated upon), which keeps her from accompanying her pet. Burly guards keep the pink snowmeow safe on these journeys, making you feel that Lisa has become someone of import. You consider asking the pink kitty at times, but her lustful appetite for your attention during these visits always distracts you. You have long, energetic breeding sessions with the kitty, making sure she's well and truly knocked up before letting her leave. She and Lisa won't allow anyone else to breed the pink snowmeow but her brave hero, so you always make sure to do your duty as best and as often as you can during these rare visits.";
 		else:

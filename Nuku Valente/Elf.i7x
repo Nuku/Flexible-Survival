@@ -262,8 +262,15 @@ When Play begins:
 ]
 
 
-when play ends:
-	if BodyName of Player is "Wood Elf":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Wood Elf Infection"	"Infection"	""	Wood Elf Infection rule	100	false
+
+This is the Wood Elf Infection rule:
+	if Player has a body of "Wood Elf":
+		trigger ending "Wood Elf Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     Your last vestige of humanity lost to the pull of your elven kin's influence, you feel yourself compelled to meet up with them, eventually brought into their tribe. Over time, you learn the purpose of the tribe as some manner of scouting party, checking to see if they should make their move on this realm or not, ";
 			if ElfEncounters > 4:

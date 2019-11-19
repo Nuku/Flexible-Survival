@@ -394,8 +394,16 @@ to say HuskyBitchFurUse:
 instead of sniffing husky bitch fur:
 	say "The fur has a pleasing, not too strong, animal-like scent.";
 
-when play ends:
-	if BodyName of Player is "Husky Bitch":
+
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Husky Bitch Infection"	"Infection"	""	Husky Bitch Infection rule	100	false
+
+This is the Husky Bitch Infection rule:
+	if Player has a body of "Husky Bitch":
+		trigger ending "Husky Bitch Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You are completely lost to your urges, an alpha predator, stalking the ruins of the city. Ah, but you are not alone. A pack coalesces around you, a dozen of so like-minded canines, howling their madness and need to an uncaring sky. Superior numbers and ferocity make you more than a match for the other beasts loose in the city. It doesn't take long before the echoing howls, calling your fellows to hunt, cause even the most ferocious mutants and monsters to look for a place to hide from the lustful tide of your husky pack. Those caught are either devoured or subdued and dragged back to your dens, their bodies changed and their minds worn down by a furious night of animal passion. Thick cum fills their every hole, the slick passion of the females coating their cocks and muzzles. Any female captured is pregnant by dawn, and with the high birth rate needed to keep up with the attrition rate, the city is not safe. You are the absolute ruler of your domain. A pity your mind is too far gone to appreciate it.";
 		else:
