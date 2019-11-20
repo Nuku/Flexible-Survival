@@ -4320,12 +4320,19 @@ to NewInfectionRoll:
 			now Cunt Color of Player is Cunt Color entry;
 			now Clit Size of Player is Clit Size entry;
 
-to attributeinfect:		[sets the player values from the new attributes]
+to attributeinfect:
+	attributeinfect silence state is 0;
+
+to attributeinfect silently:
+	attributeinfect silence state is 1;
+
+to attributeinfect silence state is ( Silence - a number ): [sets the player values from the new attributes]
 	choose row MonsterID from the Table of Random Critters;
 	if BodyName of Player is listed in infections of TaurList or BodyName of Player is listed in infections of NoLegList:
 		repeat with z running through equipped equipment:
 			if taur-compatible of z is false:
-				say "     [bold type]Sadly, the [z] [if plural of z is true]are incompatible with your new body type, so you can do nothing but take them off[else]is incompatible with your new body type, so you can do nothing but take it off[end if].[roman type][line break]";
+				if Silence is 0:
+					say "     [bold type]Sadly, the [z] [if plural of z is true]are incompatible with your new body type, so you can do nothing but take them off[else]is incompatible with your new body type, so you can do nothing but take it off[end if].[roman type][line break]";
 				now z is not equipped;
 	if there is a scale in row MonsterID of the Table of Random Critters:
 		if scalevalue of Player is not scale entry:
@@ -4333,15 +4340,19 @@ to attributeinfect:		[sets the player values from the new attributes]
 			repeat with z running through equipped equipment:
 				if size of z > 0: [size restricted equipment]
 					if (scalevalue of Player - size of z > 1):
-						say "     [bold type]You quickly rip your [z] off your body before [if plural of z is true]they are destroyed when you grow larger than they could support[else]it is destroyed when you grow larger than it could support[end if].[roman type][line break]";
+						if Silence is 0:
+							say "     [bold type]You quickly rip your [z] off your body before [if plural of z is true]they are destroyed when you grow larger than they could support[else]it is destroyed when you grow larger than it could support[end if].[roman type][line break]";
 						now z is not equipped;
 					else if (scalevalue of Player - size of z is 1):
-						say "     [bold type]Your [z] stretches a bit as it is forced to conform to a larger body.[roman type][line break]";
+						if Silence is 0:
+							say "     [bold type]Your [z] stretches a bit as it is forced to conform to a larger body.[roman type][line break]";
 					else if (scalevalue of Player - size of z < -1):
-						say "     [bold type]As you shrink, [z] becomes far too big to fit you. You have little choice but to take [if plural of z is true]them[else]it[end if] off.[roman type][line break]";
+						if Silence is 0:
+							say "     [bold type]As you shrink, [z] becomes far too big to fit you. You have little choice but to take [if plural of z is true]them[else]it[end if] off.[roman type][line break]";
 						now z is not equipped;
 					else if (scalevalue of Player - size of z is -1):
-						say "     [bold type]Your [z] hangs fairly on your now smaller frame.[roman type][line break]";
+						if Silence is 0:
+							say "     [bold type]Your [z] hangs fairly on your now smaller frame.[roman type][line break]";
 	else:
 		now scalevalue of Player is 3;
 	if there is a body descriptor in row MonsterID of the Table of Random Critters:

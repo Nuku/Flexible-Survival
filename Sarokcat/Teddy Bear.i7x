@@ -98,17 +98,8 @@ to teddybearvored:
 		now XP of Player is 0;  [prevents accidental level up]
 		if the player is not lonely, now XP of companion of Player is 0;
 		now non-infectious entry is true;  [prevents regular teddy bear infection from occurring]
-		now TailName of Player is "Teddy Bear";
-		now FaceName of Player is "Teddy Bear";
-		now SkinName of Player is "Teddy Bear";
-		now BodyName of Player is "Teddy Bear";
-		now CockName of Player is "Teddy Bear";
-		now tail of Player is tail entry;
-		now Face of Player is face entry;
-		now Skin of Player is skin entry;
-		now Body of Player is body entry;
-		now Cock of Player is cock entry;
-		attributeinfect;
+		setmonster "Teddy Bear" silently;
+		turn the Player into a "Teddy Bear" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
 		if Libido of Player < 30, now Libido of Player is 30;
 		now humanity of Player is 0;
 		now battleground is "void";

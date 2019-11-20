@@ -530,53 +530,20 @@ to say plrtcl:
 			LineBreak;
 			say "     Now, if only you could find another plush lion to play with you...";
 			setmonster "Plush Lion";
-			choose row MonsterID from the Table of Random Critters;
-			now SkinName of Player is "Plush Lion";
-			now CockName of Player is "Plush Lion";
-			now BodyName of Player is "Plush Lion";
-			now FaceName of Player is "Plush Lion";
-			now TailName of Player is "Plush Lion";
-			now tail of Player is the tail entry;
-			now Face of Player is the face entry;
-			now Skin of Player is the skin entry;
-			now Body of Player is the body entry;
-			now Cock of Player is the cock entry;
-			attributeinfect "Plush Lion";
+			turn the Player into a "Plush Lion";
 		else if tempnum is 2:
 			say "     Sorting through the unusual and strange items in the bargain bin, you blink as you come across an [bold type]inflatable tiger[roman type]. Pulling out the small rubber toy, you grin in bemusement at what a silly little thing like this is doing in such a strange place. Looking it over quickly, it seems to have surprisingly survived its time in the bargain bin unpunctured. You give it a light squeeze between your hands and it pops with an odd, meow-like bang, causing you to jump back in surprise. The popped balloon toy hangs limply in your hands... which start to tingle. Looking down, you realize that the toy's rubber skin is melting into your own and spreading all over your body! Panicking slightly, you try to shake the stuff off of you - to no avail. As your head shifts an inflates into a more feline form, you blink your plasticky eyes as you realize that having such lovely, smooth skin could be a good thing.";
 			LineBreak;
 			say "     Now, if only you could find another rubber kitty to play with you...";
 			setmonster "Rubber tigress";
-			choose row MonsterID from the Table of Random Critters;
-			now SkinName of Player is "Rubber tigress";
-			now CockName of Player is "Rubber tigress";
-			now BodyName of Player is "Rubber tigress";
-			now FaceName of Player is "Rubber tigress";
-			now TailName of Player is "Rubber tigress";
-			now tail of Player is the tail entry;
-			now Face of Player is the face entry;
-			now Skin of Player is the skin entry;
-			now Body of Player is the body entry;
-			now Cock of Player is the cock entry;
-			attributeinfect "Rubber tigress";
+			turn the Player into a "Rubber tigress";
 		else:
 			say "     Sorting through the unusual and strange items in the bargain bin, you blink as you come across a strange chocolate treat. Held in a rather plain box, this two-pound [bold type]chocolate hound[roman type] is small, but solid. You presume it must be a leftover from Easter and pop the top to take a better look. Certainly, you feel, this would make a tastier treat than some of your recent meals. Your mouth waters as the scent of delicious, quality milk chocolate fills the air. You pull it out and look it over, telling yourself you'll just take a nibble and save the rest for the next time you're hungry. The canine confectionary seems well molded, with considerable attention to detail, further instilling the idea that it's a quality product in your mind. But then, you start to notice flaws and few details being slightly off... and more and more after that.";
 			say "     Turning the chocolate figure around to look at its front end again, you realize that it isn't actually a lack of detail - the chocolate itself is rapidly growing soft! More so than the warmth of your hands could realistically make it... and soon, it is actually flowing down over your hands as if it had a life of its own! You can't help yourself and start gobbling down the chocolate, licking off the tasty treat from your fingers and moaning in pleasure as its smooth sweetness flows down your throat even as your hands get stickier and the brown starts to spread up your arms. As you lick up the last of the flowing chocolate, you realize that your hands underneath have become chocolate paws! Panicking slightly, you try to shake the stuff off of you - to no avail. Soon you are blinking your dark chocolate eyes as the chocolate sinks deeper and you become solid chocolate like the dog you found.";
 			LineBreak;
 			say "     Now, if only you could find another confectionary to play with you...";
 			setmonster "Chocolate Lab";
-			choose row MonsterID from the Table of Random Critters;
-			now SkinName of Player is "Chocolate Lab";
-			now CockName of Player is "Chocolate Lab";
-			now BodyName of Player is "Chocolate Lab";
-			now FaceName of Player is "Chocolate Lab";
-			now TailName of Player is "Chocolate Lab";
-			now tail of Player is the tail entry;
-			now Face of Player is the face entry;
-			now Skin of Player is the skin entry;
-			now Body of Player is the body entry;
-			now Cock of Player is the cock entry;
-			attributeinfect "Chocolate Lab";
+			turn the Player into a "Chocolate Lab";
 
 Table of Game Objects (continued)
 name	desc	weight	object

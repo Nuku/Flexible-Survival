@@ -225,22 +225,8 @@ Instead of Resolving a Chocolate Treat:
 			increase hunger of Player by 12;
 			if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 5 and 10;
 			if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 5;
-		repeat with y running from 1 to number of filled rows in Table of Random Critters:
-			choose row y in Table of Random Critters;
-			if Name entry is "Chocolate Lab":
-				now MonsterID is y;
-				break;
-		now TailName of Player is "Chocolate Lab";
-		now FaceName of Player is "Chocolate Lab";
-		now SkinName of Player is "Chocolate Lab";
-		now BodyName of Player is "Chocolate Lab";
-		now CockName of Player is "Chocolate Lab";
-		attributeinfect;
-		now tail of Player is tail entry;
-		now Face of Player is face entry;
-		now Skin of Player is skin entry;
-		now Body of Player is body entry;
-		now Cock of Player is cock entry;
+		setmonster "Chocolate Lab" silently;
+		turn the Player into a "Chocolate Lab";
 		if hellHoundLevel is 0:
 			follow the sex change rule;
 			follow the sex change rule;

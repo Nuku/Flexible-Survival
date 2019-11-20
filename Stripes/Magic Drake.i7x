@@ -645,19 +645,8 @@ to say mdstaff_overgrown:
 	if Libido of Player > 100, now Libido of Player is 100;
 	if mdrakeoversized >= 5 and inasituation is false:
 		now mdrakeoversized is 100;
-		choose row MonsterID from the Table of Random Critters;
 		now humanity of Player is 0;
-		now TailName of Player is "Magic Drake";
-		now FaceName of Player is "Magic Drake";
-		now SkinName of Player is "Magic Drake";
-		now BodyName of Player is "Magic Drake";
-		now CockName of Player is "Magic Drake";
-		attributeinfect;
-		now tail of Player is tail entry;
-		now Face of Player is face entry;
-		now Skin of Player is skin entry;
-		now Body of Player is body entry;
-		now Cock of Player is cock entry;
+		turn the Player into a "Magic Drake" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
 		if hellHoundLevel is 0:
 			follow the sex change rule;
 			follow the sex change rule;

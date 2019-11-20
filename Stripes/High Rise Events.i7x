@@ -312,21 +312,10 @@ Instead of resolving a Veterinary Hospital:
 				now Resolution of Veterinary Hospital is 2; [won and got medea's supplies]
 			else if fightoutcome >= 20 and fightoutcome <= 29:
 				say "     After the panther taur's had her way with you, she pushes you back inside her veterinary clinic home. Lost in a daze of animal lust, you don't resist as she secures you with a collar and leash to the wall before mounting you. You're fucked over and over again in numerous positions, fed on a diet of her cum and milk until you're nothing but another lust-crazed panther taur by the time she releases you out into the city[if Player is impreg_ok] with a belly full of her cubs[end if].";
-				setmonster "Panther Taur";
-				choose row MonsterID from the Table of Random Critters;
+				setmonster "Panther Taur" silently;
+				turn the Player into a "Panther Taur" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
 				now humanity of Player is 0;
 				if Libido of Player < 90, now Libido of Player is 90;
-				now TailName of Player is "Panther Taur";
-				now FaceName of Player is "Panther Taur";
-				now SkinName of Player is "Panther Taur";
-				now BodyName of Player is "Panther Taur";
-				now CockName of Player is "Panther Taur";
-				now Body of Player is body entry;
-				now Face of Player is face entry;
-				now tail of Player is tail entry;
-				now Skin of Player is skin entry;
-				now Cock of Player is cock entry;
-				attributeinfect;
 				follow the sex change rule;
 				follow the sex change rule;
 				wait for any key;
@@ -583,22 +572,8 @@ Instead of resolving a Cameo:
 			if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 5 and 10;
 			if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 5;
 		[puts Chocolate Lab as lead monster for infection and impregnation]
-		repeat with y running from 1 to number of filled rows in Table of Random Critters:
-			choose row y in Table of Random Critters;
-			if Name entry is "Chocolate Lab":
-				now MonsterID is y;
-				break;
-		now TailName of Player is "Chocolate Lab";
-		now FaceName of Player is "Chocolate Lab";
-		now SkinName of Player is "Chocolate Lab";
-		now BodyName of Player is "Chocolate Lab";
-		now CockName of Player is "Chocolate Lab";
-		attributeinfect;
-		now tail of Player is tail entry;
-		now Face of Player is face entry;
-		now Skin of Player is skin entry;
-		now Body of Player is body entry;
-		now Cock of Player is cock entry;
+		setmonster "Chocolate Lab" silently;
+		turn the Player into a "Chocolate Lab";
 		if hellHoundLevel is 0:
 			follow the sex change rule;
 			follow the sex change rule;

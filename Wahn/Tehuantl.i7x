@@ -553,7 +553,7 @@ instead of resolving Feline Relief:
 			say "     As the brutal fucking continues, you feel your body shifting and changing, your mouth and anus being molded around those rubber cocks as they thrust into you. Cool, thick liquid rubber begins leaking out from around the strap-on cocks, slowly spreading across your body with each thrust. As the last of your mind begins to fade away the liquid latex begins sealing seamlessly around your body, squeezing tightly around you as it molds you into an only vaguely human shape.";
 			say "     By the time the latex mistresses finally withdraw from you, there is very little 'you' left, replaced by a placid living rubber sex doll, another toy for their collection. You are slightly disappointed when the latex women untie you from the counter, tossing your limp rubber form into the pile with all their other playthings before they head back out into the city, but you know if you wait patiently like a good toy, your mistresses will return to play with you again.";
 			now HP of Tehuantl is 255;
-			now BodyName of Player is "Rubber Sex Doll";
+			now BodyName of Player is "Rubber Sex Doll"; [NOTE: I guess, this could be removed without issues when the GameEndings table is finished (@Stadler#3007)]
 			now FaceName of Player is "Rubber Sex Doll";
 			now SkinName of Player is "Rubber Sex Doll";
 			now TailName of Player is "Rubber Sex Doll";

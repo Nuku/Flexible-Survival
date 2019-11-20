@@ -343,22 +343,7 @@ to say mqlostfight:
 to say totalTH:
 	if Libido of Player < 70:
 		now Libido of Player is 70;
-	repeat with y running from 1 to number of filled rows in Table of Random Critters:	[puts Tigress Hooker as lead monster...]
-		choose row y in Table of Random Critters;
-		if Name entry is "Malayan Tiger Herm":
-			now MonsterID is y;
-			break;
-	now TailName of Player is "Malayan Tiger Herm";
-	now FaceName of Player is "Malayan Tiger Herm";
-	now SkinName of Player is "Malayan Tiger Herm";
-	now BodyName of Player is "Malayan Tiger Herm";
-	now CockName of Player is "Malayan Tiger Herm";
-	attributeinfect;
-	now tail of Player is tail entry; [...to make for quicker and accurate copying of TH appearance.]
-	now Face of Player is face entry;
-	now Skin of Player is skin entry;
-	now Body of Player is body entry;
-	now Cock of Player is cock entry;
+	turn the Player into a "Malayan Tiger Herm";
 	if "Male Preferred" is listed in feats of Player:
 [		say "(Male Preferred, locked results)";]
 		if Player is not male:			[Minimum of TH standard or greater]
@@ -498,7 +483,7 @@ to say BTchangeover:
 			now Nipple Count of Player is 0;
 			now Breast Size of Player is 0;
 	if Player is female:
-		now TailName of Player is "Big Tigress";
+		now TailName of Player is "Big Tigress"; [TODO: Add a Table of Random Critters entry for "Big Tigress" (@Stadler#3007)]
 		now FaceName of Player is "Big Tigress";
 		now SkinName of Player is "Big Tigress";
 		now BodyName of Player is "Big Tigress";
@@ -513,7 +498,7 @@ to say BTchangeover:
 		now Body of Player is "powerfully built with a feminine flair and feline fluidity of motion. Your body moves sensually with every step, but with hidden power. Your hands are human in shape, but with feline claws, pawpads and fur";
 		now Cock of Player is "ebon feline";
 	else:
-		now TailName of Player is "Big Tiger";
+		now TailName of Player is "Big Tiger"; [TODO: Add a Table of Random Critters entry for "Big Tiger" (@Stadler#3007)]
 		now FaceName of Player is "Big Tiger";
 		now SkinName of Player is "Big Tiger";
 		now BodyName of Player is "Big Tiger";

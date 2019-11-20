@@ -331,22 +331,8 @@ Instead of resolving a Watering Hole:
 
 to say eaglefulltf:
 	[puts Bald Eagle as lead monster for infection and impregnation]
-	repeat with y running from 1 to number of filled rows in Table of Random Critters:
-		choose row y in Table of Random Critters;
-		if Name entry is "Bald Eagle":
-			now MonsterID is y;
-			break;
-	now TailName of Player is "Bald Eagle";
-	now FaceName of Player is "Bald Eagle";
-	now SkinName of Player is "Bald Eagle";
-	now BodyName of Player is "Bald Eagle";
-	now CockName of Player is "Bald Eagle";
-	attributeinfect;
-	now tail of Player is tail entry;
-	now Face of Player is face entry;
-	now Skin of Player is skin entry;
-	now Body of Player is body entry;
-	now Cock of Player is cock entry;
+	setmonster "Bald Eagle" silently;
+	turn the Player into a "Bald Eagle";
 	if hellHoundLevel is 0:
 		follow the sex change rule;
 		follow the sex change rule;

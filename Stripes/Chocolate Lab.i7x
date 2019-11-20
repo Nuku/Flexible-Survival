@@ -30,18 +30,10 @@ to say losetolab:
 				say "     However, their attacks are undaunted by your resistance. They continue putting everything they have against you, focusing all their thoughts on the singular goal of breaking you. Before long it no longer feels like three individuals pushing against you, but a single combined force as if their thoughts have begun to flow together in a single collective consciousness. Suddenly, fear. Panic. Terror. You feel the emotions of the labs rolling though you as they come to the same realization as you do. In their combined effort their own minds have begun to merge together under the immense pressure. Caught in the turmoil of the panicking labs your concentration begins slipping, and you find yourself being dragged down with the labs, all four of you melting away into each other as you become one.";
 				WaitLineBreak;
 				say "     You awaken sometime later, pulling your chocolate body together as you rise to all fours. You flow into the shape of a giant chocolate dog, easily over six feet tall. With a wet bark you set out into the city, eager to sate your powerful canine appetite for chocolate and sex.";
-				now TailName of Player is "Chocolate Lab";
-				now FaceName of Player is "Chocolate Lab";
-				now SkinName of Player is "Chocolate Lab";
-				now BodyName of Player is "Chocolate Lab";
-				now CockName of Player is "Chocolate Lab";
-				attributeinfect;
+				setmonster "Chocolate Lab" silently;
+				turn the Player into a "Chocolate Lab" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
 				now scalevalue of Player is 4;
-				now tail of Player is tail entry;
-				now Face of Player is face entry;
-				now Skin of Player is skin entry;
 				now Body of Player is "that of a large quadrupedal canine. Standing over six feet tall, you are a jumbo-sized chocolate lab, with a flowing, shifting chocolate body. Your skin flows and runs like melting chocolate and you carry an overwhelming but alluring scent of cocoa.";
-				now Cock of Player is cock entry;
 				now labhost is 4;
 				now humanity of Player is 0;
 				now battleground is "void";
@@ -52,18 +44,9 @@ to say losetolab:
 				say "     Bested by yet another lab, all you can do is groan weakly as the confectionary canine pushes you to the ground. With two labs already inside you working excitedly, the third is already sinking into your softening body by the time you're on the ground. Once the third lab has disappeared inside your body, you feel their chocolate forms churning throughout your body. You are helpless to resist with the three labs now making up the majority of your chocolaty body as they begin reshaping your entire form. Your features melt away, replaced by the visage of a flowing chocolate dog. Your struggle to hold onto yourself against the will of the three labs is a short one, their combined consciousness quickly overwhelming you, leaving the labs to reshape your mind just as easily as they did your body. You feel the last of your human thoughts and desires melt away, quickly replaced by the simple needs of your benefactors.";
 				WaitLineBreak;
 				say "     With your mind and body fully reshaped into that of a chocolate lab, you bark with excitement as the others separate themselves from your new body, leaving you panting happily as they grin and give you slobbery, chocolaty licks and nuzzles, welcoming you into the pack.";
-				now TailName of Player is "Chocolate Lab";
-				now FaceName of Player is "Chocolate Lab";
-				now SkinName of Player is "Chocolate Lab";
-				now BodyName of Player is "Chocolate Lab";
-				now CockName of Player is "Chocolate Lab";
-				attributeinfect;
+				setmonster "Chocolate Lab" silently;
+				turn the Player into a "Chocolate Lab" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
 				now scalevalue of Player is 4;
-				now tail of Player is tail entry;
-				now Face of Player is face entry;
-				now Skin of Player is skin entry;
-				now Body of Player is body entry;
-				now Cock of Player is cock entry;
 				now labhost is 3;
 				now humanity of Player is 0;
 				now battleground is "void";
@@ -366,22 +349,8 @@ this is the Choclab piggyback rule:
 		if humanity of Player < 1 and BodyName of Player is "Chocolate Lab":
 			say "     Subject to the constant influence of the chocolate lab[if labhost is 2]s[end if] infesting your body, your mind slowly begins to melt away, leaving it and your body to be freely reshaped by the chocolate canine[if labhost is 2]s[end if]. The last of your resistance fades and you slowly sink to the ground, melting into a gooey chocolate mess. You feel the [if labhost is 2]labs rejoice as they set about finishing their[else]lab rejoice as it sets about finishing its[end if] work. Sometime later your [if labhost is 2]pack[else]companion[end if] finally separates from your body, waiting eagerly as you pull yourself together, taking the shape of another flowing, chocolate dog. You happily lick and nuzzle your [if labhost is 2]new pack[else]companion[end if] as they return the love, finally welcoming you into the pack properly. With a wet bark they bound off into the city, and you follow behind eagerly, marking the beginning of your simple new life as a chocolate lab.";
 			[puts Chocolate Lab as lead monster for infection and impregnation]
-			repeat with y running from 1 to number of filled rows in Table of Random Critters:
-				choose row y in Table of Random Critters;
-				if Name entry is "Chocolate Lab":
-					now MonsterID is y;
-					break;
-			now TailName of Player is "Chocolate Lab";
-			now FaceName of Player is "Chocolate Lab";
-			now SkinName of Player is "Chocolate Lab";
-			now BodyName of Player is "Chocolate Lab";
-			now CockName of Player is "Chocolate Lab";
-			attributeinfect;
-			now tail of Player is tail entry;
-			now Face of Player is face entry;
-			now Skin of Player is skin entry;
-			now Body of Player is body entry;
-			now Cock of Player is cock entry;
+			setmonster "Chocolate Lab" silently;
+			turn the Player into a "Chocolate Lab" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
 			now humanity of Player is 0;
 			now battleground is "void";
 			now labhost is 3;

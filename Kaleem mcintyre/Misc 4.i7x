@@ -128,7 +128,7 @@ Instead of resolving Spiritual Love:
 			LineBreak;
 			now Spiritual love is resolved;
 			now humanity of Player is 0;
-			now TailName of Player is "Spirit Wolf";
+			now TailName of Player is "Spirit Wolf"; [TODO: Add a Table of Random Critters entry for "Spirit Wolf" (@Stadler#3007)]
 			now FaceName of Player is "Spirit Wolf";
 			now SkinName of Player is "Spirit Wolf";
 			now BodyName of Player is "Spirit Wolf";
