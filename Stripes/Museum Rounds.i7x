@@ -208,18 +208,7 @@ to say mre05_prey:
 	if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 0 and 5;
 	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 5;
 	setmonster "Caveman";
-	choose row MonsterID in Table of Random Critters;
-	now TailName of Player is "Caveman";
-	now FaceName of Player is "Caveman";
-	now SkinName of Player is "Caveman";
-	now BodyName of Player is "Caveman";
-	now CockName of Player is "Caveman";
-	attributeinfect;
-	now tail of Player is tail entry;
-	now Face of Player is face entry;
-	now Skin of Player is skin entry;
-	now Body of Player is body entry;
-	now Cock of Player is cock entry;
+	turn the Player into a "Caveman";
 	if hellHoundLevel is 0:
 		follow the sex change rule;
 		follow the sex change rule;
@@ -254,18 +243,7 @@ to say mre05_hunter:
 	if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 0 and 5;
 	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 5;
 	setmonster "Caveman";
-	choose row MonsterID in Table of Random Critters;
-	now TailName of Player is "Caveman";
-	now FaceName of Player is "Caveman";
-	now SkinName of Player is "Caveman";
-	now BodyName of Player is "Caveman";
-	now CockName of Player is "Caveman";
-	attributeinfect;
-	now tail of Player is tail entry;
-	now Face of Player is face entry;
-	now Skin of Player is skin entry;
-	now Body of Player is body entry;
-	now Cock of Player is cock entry;
+	turn the Player into a "Caveman";
 	if hellHoundLevel is 0:
 		follow the sex change rule;
 		follow the sex change rule;
@@ -342,17 +320,7 @@ to say mrevent08:
 				LineBreak;
 				say "     Eager for more sex with the unusual yet sexy vulpines, you return their affectionate snuggling with caresses and gropes of your own. Soon enough, you're pulled into some fun with a [if Player is male]tod and a vixen. After sharing some more kisses and having some of their oil spread across your loins to lube you up again, you are sandwiched between them. You thrust into the lustful girl's mechanized cunny while the guy's pistoning cock is thrust into you. You moan between them, fucking and being fucked in rhythmic unison[else if Player is female]pair of tods. After sharing some more kisses and having some of their oil spread across your loins and holes to lube you up again, you are sandwiched between them, fucked in both the front and the back in rhythmic unison[else]pair of tods. After sharing some more kisses and having some of their oil spread across your anus to lube you up again, you are spitroasted between them, fucked in both the mouth and the rear in rhythmic unison[end if]. As the sex continues, your cries become more chiming as you increasingly lose yourself to your vulpine lovers['] infection. As the orgy goes on and you pass around from partner to partner, you become more and more like the clockwork foxes you're fucking. To say you lose track of time would be inaccurate, as your ticking mind is quite aware of every second of the clock, but it no longer matters to you how long you stay with these sexy vulpines, for you are one of them through and through.";
 				now humanity of Player is 0;
-				now TailName of Player is "Clockwork Fox";
-				now FaceName of Player is "Clockwork Fox";
-				now SkinName of Player is "Clockwork Fox";
-				now BodyName of Player is "Clockwork Fox";
-				now CockName of Player is "Clockwork Fox";
-				attributeinfect;
-				now tail of Player is tail entry;
-				now Face of Player is face entry;
-				now Skin of Player is skin entry;
-				now Body of Player is body entry;
-				now Cock of Player is cock entry;
+				turn the Player into a "Clockwork Fox" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
 				if hellHoundLevel is 0:
 					follow the sex change rule;
 					follow the sex change rule;
@@ -391,17 +359,7 @@ to say mrevent08:
 				LineBreak;
 				say "     Eager for more sex with the unusual yet sexy vulpines, you return their affectionate snuggling with caresses and gropes of your own. Soon enough, you're pulled into some fun with a [if Player is male]tod and a vixen. After sharing some more kisses and having some of their oil spread across your loins to lube you up again, you are sandwiched between them. You thrust into the lustful girl's mechanized cunny while the guy's pistoning cock is thrust into you. You moan between them, fucking and being fucked in rhythmic unison[else if Player is female]pair of tods. After sharing some more kisses and having some of their oil spread across your loins and holes to lube you up again, you are sandwiched between them, fucked in both the front and the back in rhythmic unison[else]pair of tods. After sharing some more kisses and having some of their oil spread across your anus to lube you up again, you are spitroasted between them, fucked in both the mouth and the rear in rhythmic unison[end if]. As the sex continues, your cries become more chiming as you increasingly lose yourself to your vulpine lovers['] infection. As the orgy goes on and you pass around from partner to partner, you become more and more like the clockwork foxes you're fucking. To say you lose track of time would be inaccurate, as your ticking mind is quite aware of every second of the clock, but it no longer matters to you how long you stay with these sexy vulpines, for you are one of them through and through.";
 				now humanity of Player is 0;
-				now TailName of Player is "Clockwork Fox";
-				now FaceName of Player is "Clockwork Fox";
-				now SkinName of Player is "Clockwork Fox";
-				now BodyName of Player is "Clockwork Fox";
-				now CockName of Player is "Clockwork Fox";
-				attributeinfect;
-				now tail of Player is tail entry;
-				now Face of Player is face entry;
-				now Skin of Player is skin entry;
-				now Body of Player is body entry;
-				now Cock of Player is cock entry;
+				turn the Player into a "Clockwork Fox" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
 				if hellHoundLevel is 0:
 					follow the sex change rule;
 					follow the sex change rule;

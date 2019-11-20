@@ -74,17 +74,8 @@ instead of navigating Equinoid Camp while equinoidstatus is 10:
 				say "     But you are given little opportunity to notice that, as Amaryllis is now pulling you into her lap and atop her erect shaft and sinking it into you with a soft nicker of pleasure. Straddling her hips, you begin riding her throbbing cock while she runs her hands over your chest. As the first splatters of equinoid cum start spraying onto you both, you're already fucking wildly and soon she's cumming hard with a loud neigh of delight, pumping her hot seed into you. You can feel the equinoid seed soaking into you [if Player is mpreg_ok]even as you're being bred by the lovely one you're riding[else]and give a hazy sigh, your sexless body left to stew in pent-up pleasure[end if].[mimpregchance]";
 				say "     Bathed, anointed and having consummated with the equinoids, you rise from the musky waters as one of them. You feel much closer to this strong people. Exiting the large hall, you go out into the compound with a greater appreciation for the simple life they live with nature. While a few of them move away, many greet you as one of them now that you've been properly welcomed into the herd.";
 			SanLoss 20;
-			now TailName of Player is "Black Equinoid";
-			now FaceName of Player is "Black Equinoid";
-			now SkinName of Player is "Black Equinoid";
-			now BodyName of Player is "Black Equinoid";
-			now CockName of Player is "Black Equinoid";
-			attributeinfect;
-			now tail of Player is tail entry;
-			now Face of Player is face entry;
-			now Skin of Player is skin entry;
-			now Body of Player is body entry;
-			now Cock of Player is cock entry;
+			setmonster "Black Equinoid" silently;
+			turn the Player into a "Black Equinoid";
 			WaitLineBreak;
 			if Libido of Player < 30, now Libido of Player is 30;
 			if humanity of Player < 21:

@@ -674,7 +674,7 @@ to say bckingchair:
 				Waitlinebreak;
 				now bcending is 3;
 				now bcfinalchairform is BodyName of Player;
-				now BodyName of Player is "Captured";
+				now BodyName of Player is "Captured"; [NOTE: I guess, this could be removed without issues when the GameEndings table is finished (@Stadler#3007)]
 				now FaceName of Player is "Captured";
 				now SkinName of Player is "Captured";
 				now TailName of Player is "Captured";
@@ -717,7 +717,7 @@ to say bckingchair_accept:
 	WaitLineBreak;
 	now bcending is 3;
 	now bcfinalchairform is BodyName of Player;
-	now BodyName of Player is "Captured";
+	now BodyName of Player is "Captured"; [NOTE: I guess, this could be removed without issues when the GameEndings table is finished (@Stadler#3007)]
 	now FaceName of Player is "Captured";
 	now SkinName of Player is "Captured";
 	now TailName of Player is "Captured";
@@ -837,7 +837,7 @@ to say bcpptendril:
 				WaitLineBreak;
 				now bcending is 5;
 				now bcfinalpillarform is BodyName of Player;
-				now BodyName of Player is "Captured";
+				now BodyName of Player is "Captured"; [NOTE: I guess, this could be removed without issues when the GameEndings table is finished (@Stadler#3007)]
 				now FaceName of Player is "Captured";
 				now SkinName of Player is "Captured";
 				now TailName of Player is "Captured";
@@ -883,7 +883,7 @@ to say bcpptendril_accept:
 	WaitLineBreak;
 	now bcending is 5;
 	now bcfinalpillarform is BodyName of Player;
-	now BodyName of Player is "Captured";
+	now BodyName of Player is "Captured"; [NOTE: I guess, this could be removed without issues when the GameEndings table is finished (@Stadler#3007)]
 	now FaceName of Player is "Captured";
 	now SkinName of Player is "Captured";
 	now TailName of Player is "Captured";
@@ -1101,7 +1101,7 @@ to chairboundstate:
 			say "     By the time the haze lifts, you realize that the chair has recovered and is resuming to engulf you. The tubes have continued to climb up your arms and legs. They join up with the other material from the seat itself, starting to seal you in seamlessly. The vinyl flows up across your back and melds with the hood, encapsulating you fully. While it is hard to tell from within your latex prison, you get the feeling that you're sinking. Even as your mind sinks away, fading away beneath the gas that keeps you constantly aroused, so does the pod encapsulating you fade back into the floor. Slick liquid flows in around you and your gear is either dissolved or expelled from the pod, leaving you naked and able to enjoy smooth stimulation over every square inch of your body. You give in to the pleasure, succumbing as a mindless prisoner of lust as you enjoy orgasm after orgasm in the hidden safety of your new home.";
 			WaitLineBreak;
 			now bcending is 1;
-			now BodyName of Player is "Captured";
+			now BodyName of Player is "Captured"; [NOTE: I guess, this could be removed without issues when the GameEndings table is finished (@Stadler#3007)]
 			now FaceName of Player is "Captured";
 			now SkinName of Player is "Captured";
 			now TailName of Player is "Captured";
@@ -1347,7 +1347,7 @@ to chairpassivelosses:
 				say "     Even as your mind sinks away, fading away beneath the gas that keeps you constantly aroused, so does the pod encapsulating you fade back into the floor. Slick liquid flows in around you and your gear is either dissolved or expelled from the pod, leaving you naked and able to enjoy smooth stimulation over every square inch of your body. You give in to the pleasure, succumbing as a mindless prisoner of lust as you enjoy orgasm after orgasm in the hidden safety of your new home.";
 				WaitLineBreak;
 				now bcending is 1;
-				now BodyName of Player is "Captured";
+				now BodyName of Player is "Captured"; [NOTE: I guess, this could be removed without issues when the GameEndings table is finished (@Stadler#3007)]
 				now FaceName of Player is "Captured";
 				now SkinName of Player is "Captured";
 				now TailName of Player is "Captured";
@@ -1388,7 +1388,7 @@ to say bcchairsubmit:
 	say "     You push yourself to further heights, your sex-crazed mind only seeking another release and more pleasure. When your climax finally comes[if Player is male] and you pump your hot seed into the sex chair[end if], your cries are muffled by the thick rod stuffed into your mouth[if Cunt Count of Player > 1]. Your cunts clamp down around the throbbing dildos inside you as you release another flow of your hot juices over them, soaking yourself and the seat[else if Cunt Count of Player is 1]. Your cunt clamps down around the throbbing dildo inside you as you release another flow of your hot juices over it, soaking yourself and the seat[end if]. Once spent, you collapse onto the seat, basking in the powerful afterglow and breathing in more of that arousing gas as you pant for breath. Even as your mind sinks away, fading away beneath the gas that keeps you constantly aroused, so does the pod encapsulating you fade back into the floor. Slick liquid flows in around you and your gear is either dissolved or expelled from the pod, leaving you naked and able to enjoy smooth stimulation over every square inch of your body. You give in to the pleasure, giving yourself over to become a part of this wonderful castle and to the wonderful delights your new home can give.";
 	WaitLineBreak;
 	now bcending is 2;
-	now BodyName of Player is "Captured";
+	now BodyName of Player is "Captured"; [NOTE: I guess, this could be removed without issues when the GameEndings table is finished (@Stadler#3007)]
 	now FaceName of Player is "Captured";
 	now SkinName of Player is "Captured";
 	now TailName of Player is "Captured";
@@ -1607,7 +1607,7 @@ to dolboundstate:
 				say "     With the pleasure of each movement rolling through your body and the sounds of their trills and laughter echoing through you mind, you're soon able to focus on nothing but the excitement around you. Finally the girls seem to tire of their play, several of them pick you up and hang you alongside the other inflatable dolphin suits lining the walls of the castle before jumping back into the sea and heading for the shore. With the breathing tube in your mouth, all you can do is moan softly as the strange suit continues to pleasure you over and over again, seeming to draw strength from it.";
 				now dolinfloss is -100;
 				now non-infectious entry is true; [prevents regular dolphin girl infection from occurring]
-				now TailName of Player is "Bottlenose Toy";
+				now TailName of Player is "Bottlenose Toy"; [NOTE: No `turn the Player into` here, because variations of the standard desc are used for the game over (@Stadler#3007)]
 				now FaceName of Player is "Bottlenose Toy";
 				now SkinName of Player is "Bottlenose Toy";
 				now BodyName of Player is "Bottlenose Toy";
@@ -1849,7 +1849,7 @@ to say dolcheckA:		[empty]
 		say "     After playing in the water for a while, the girls decide to frolic in the bouncy castle and you're pulled back inside[if Player is not neuter]. You cum several more times as the girls push, pull and squeeze the inflatable suit, dragging you out of the ocean into their floating castle[end if]. With you safely aboard, the excited girls resume their giggling playtime with you as their new toy. The dolphin girls bounce around the castle happily, occasionally stopping to squeeze each other's inflatable bodies, or lick at the slits between their legs, but there are always several girls focusing on you, lavishing attention on the inflatable suit. With the pleasure of each movement rolling through your body and the sounds of their trills and laughter echoing through you mind, you're soon able to focus on nothing but the excitement around you. Finally the girls seem to tire of their play, several of them pick you up and hang you alongside the other inflatable dolphin suits lining the walls of the castle before jumping back into the sea and heading for the shore. With the breathing tube in your mouth, all you can do is moan softly as the strange suit continues to pleasure you over and over again, seeming to draw strength from it.";
 		now dolinfloss is -100;
 		now non-infectious entry is true; [prevents regular dolphin girl infection from occurring]
-		now TailName of Player is "Bottlenose Toy";
+		now TailName of Player is "Bottlenose Toy"; [NOTE: No `turn the Player into` here, because variations of the standard desc are used for the game over (@Stadler#3007)]
 		now FaceName of Player is "Bottlenose Toy";
 		now SkinName of Player is "Bottlenose Toy";
 		now BodyName of Player is "Bottlenose Toy";
@@ -2104,7 +2104,7 @@ to say bcchairfinal1: [FLOT - Check?]
 					say "     Even as your mind sinks away, fading away beneath the gas that keeps you constantly aroused, so does the pod encapsulating you fade back into the floor. Slick liquid flows in around you and your gear is either dissolved or expelled from the pod, leaving you naked and able to enjoy smooth stimulation over every square inch of your body. You give in to the pleasure, succumbing as a mindless prisoner of lust as you enjoy orgasm after orgasm in the hidden safety of your new home.";
 					WaitLineBreak;
 					now bcending is 1;
-					now BodyName of Player is "Captured";
+					now BodyName of Player is "Captured"; [NOTE: I guess, this could be removed without issues when the GameEndings table is finished (@Stadler#3007)]
 					now FaceName of Player is "Captured";
 					now SkinName of Player is "Captured";
 					now TailName of Player is "Captured";
@@ -2160,7 +2160,7 @@ to say bcchairfinal2:
 	say "     You push yourself to further heights, your sex-crazed mind only seeking another release and more pleasure. When your climax finally comes[if Player is male] and you pump your hot seed into the sex chair[end if], your cries are muffled by the thick rod stuffed into your mouth[if Cunt Count of Player > 1]. Your cunts clamp down around the throbbing dildos inside you as you release another flow of your hot juices over them, soaking yourself and the seat[else if Cunt Count of Player is 1]. Your cunt clamps down around the throbbing dildo inside you as you release another flow of your hot juices over it, soaking yourself and the seat[end if]. Once spent, you collapse onto the seat, basking in the powerful afterglow and breathing in more of that arousing gas as you pant for breath. Even as your mind sinks away, fading away beneath the gas that keeps you constantly aroused, so does the pod encapsulating you fade back into the floor. Slick liquid flows in around you and your gear is either dissolved or expelled from the pod, leaving you naked and able to enjoy smooth stimulation over every square inch of your body. You give in to the pleasure, giving yourself over to become a part of this wonderful castle and to the wonderful delights your new home can give.";
 	WaitLineBreak;
 	now bcending is 2;
-	now BodyName of Player is "Captured";
+	now BodyName of Player is "Captured"; [NOTE: I guess, this could be removed without issues when the GameEndings table is finished (@Stadler#3007)]
 	now FaceName of Player is "Captured";
 	now SkinName of Player is "Captured";
 	now TailName of Player is "Captured";
@@ -2196,7 +2196,7 @@ to say bcfinal2:		[Fail - caught w/vixen]
 	say "     As you [if Player is male]fuck her[else]grope and fondle her[end if], the big orca around you sways and rocks, her well-stuffed body most likely being fucked by the horny sea lion. This is confirmed soon enough with a rush of his hot seed and mind-numbing gas spraying into her uterus, filling it up and coating you both in the gooey semen. This is enough to have you both cum hard before conscious thought fades and you eventually pass out in one another's arms.";
 	WaitLineBreak;
 	now bcending is 4;
-	now BodyName of Player is "Captured";
+	now BodyName of Player is "Captured"; [NOTE: I guess, this could be removed without issues when the GameEndings table is finished (@Stadler#3007)]
 	now FaceName of Player is "Captured";
 	now SkinName of Player is "Captured";
 	now TailName of Player is "Captured";

@@ -203,22 +203,8 @@ to say animeclublost:
 	say "     Things continue on like this, the four of you having a sexy orgy of tentacular fun. Every available hole is filled repeatedly by tentacle cocks and left overflowing with the hentai fan's tainted seed. Several more videos are watched over the course of this viewing, their sexy contents sinking into your mind even as your body is changed more and more to be like those sexily animated girls getting fucked alongside you";
 	SanLoss 25;
 	[puts Anime Babe as lead monster for infection and impregnation]
-	repeat with y running from 1 to number of filled rows in Table of Random Critters:
-		choose row y in Table of Random Critters;
-		if Name entry is "Anime Babe":
-			now MonsterID is y;
-			break;
-	now TailName of Player is "Anime Babe";
-	now FaceName of Player is "Anime Babe";
-	now SkinName of Player is "Anime Babe";
-	now BodyName of Player is "Anime Babe";
-	now CockName of Player is "Anime Babe";
-	attributeinfect;
-	now tail of Player is tail entry;
-	now Face of Player is face entry;
-	now Skin of Player is skin entry;
-	now Body of Player is body entry;
-	now Cock of Player is cock entry;
+	setmonster "Anime Babe" silently;
+	turn the Player into a "Anime Babe";
 	if hellHoundLevel is 0:
 		follow the sex change rule;
 		follow the sex change rule;

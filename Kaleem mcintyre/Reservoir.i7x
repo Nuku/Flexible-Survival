@@ -423,7 +423,7 @@ Instead of resolving a A Fight to remember:
 					now A Fight to remember is resolved;
 					now oozing is 1;
 					now humanity of Player is 0;
-					now TailName of Player is "Blob";
+					now TailName of Player is "Blob"; [NOTE: I guess, this could be removed without issues when the GameEndings table is finished (@Stadler#3007)]
 					now FaceName of Player is "Blob";
 					now SkinName of Player is "Blob";
 					now BodyName of Player is "Blob";

@@ -743,22 +743,7 @@ instead of navigating Grey Abbey Library while (Candy is in the Bunker and HP of
 Section 7 - Total Coonification
 
 to say totalcoonification:		[version 1 - direct shift, no gender controls]
-	repeat with y running from 1 to number of filled rows in Table of Random Critters:	[puts Raccoon as lead monster...]
-		choose row y in Table of Random Critters;
-		if Name entry is "Raccoon":
-			now MonsterID is y;
-			break;
-	now TailName of Player is "Raccoon";
-	now FaceName of Player is "Raccoon";
-	now SkinName of Player is "Raccoon";
-	now BodyName of Player is "Raccoon";
-	now CockName of Player is "Raccoon";
-	attributeinfect "Raccoon";
-	now tail of Player is tail entry; [...to make for quicker and accurate copying of Raccoon appearance.]
-	now Face of Player is face entry;
-	now Skin of Player is skin entry;
-	now Body of Player is body entry;
-	now Cock of Player is cock entry;
+	turn the Player into a "Raccoon";
 
 Section 8 - Endings
 

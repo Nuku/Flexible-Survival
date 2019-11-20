@@ -180,18 +180,8 @@ carry out supersponsor:
 			now carried of Smug Confidence is 1;
 			say "Ah, there it is. Don't forget to use it.";
 		else if calcnumber is 14:
+			turn the Player into a "Human";
 			Now bodydesc of Player is "[one of]average[or]normal[or]unchanged[at random]";
-			Now bodytype of Player is "Human";
-			Now Skin of Player is "smooth";
-			Now Cock of Player is "[one of]normal[or]flesh-toned[or]uninfected[or]human[at random]";
-			Now Face of Player is "Human";
-			Now tail of Player is "Human";
-			Now Body of Player is "Human";
-			Now BodyName of Player is "Human";
-			Now FaceName of Player is "Human";
-			Now SkinName of Player is "Human";
-			Now CockName of Player is "Human";
-			Now TailName of Player is "Human";
 		else:
 			now Trixieexit is 1;
 		LineBreak;

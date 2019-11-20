@@ -84,21 +84,8 @@ Instead of resolving a Sugar Shack:
 
 to say fullSugarGliderTF:
 	[puts Sugar Glider as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in Table of Random Critters:
-		choose row y in Table of Random Critters;
-		if Name entry is "Sugar Glider":
-			now MonsterID is y;
-			break;
-	now TailName of Player is "Sugar Glider";
-	now FaceName of Player is "Sugar Glider";
-	now SkinName of Player is "Sugar Glider";
-	now BodyName of Player is "Sugar Glider";
-	now CockName of Player is "Sugar Glider";
-	now tail of Player is tail entry;
-	now Face of Player is face entry;
-	now Skin of Player is skin entry;
-	now Body of Player is body entry;
-	now Cock of Player is cock entry;
+	setmonster "Sugar Glider" silently;
+	turn the Player into a "Sugar Glider";
 	if hellHoundLevel is 0:
 		follow the sex change rule;
 		follow the sex change rule;

@@ -88,7 +88,7 @@ to say blackpearlusing:
 		say "     Getting ready for this act, you start relaxing and drive one of your clawed digits into your anus, fingering yourself. Unfortunately, your state of mind doesn't allow you to get much more than one of your thick fingers inside, and you just press the black pearl against your opening in your impatience. Surprisingly, you do end up relaxing as the cool yet slickened ball is pressed against your anal ring. It feels like never before were you able to relax better, and your opening gives way easily. With a 'plop', your anus even latches onto the pearl, changing when the black orb starts entering you. It seems that triangular, little shapes have grown within your anal ring which you can extend at will, similar to your claws. They seem to be perfectly made for this situation as these little 'mandibles' are perfectly able to latch onto the pearl and keep pushing it in. When it finally enters you, you roar out in a strained yet pleasurable state when you feel the orb still travel along your intestines, rubbing against your most sensitive spots, until you lose track of it, the shape having disappeared into you forever.";
 	say "     With the pearl inside of you, you have been completed and you roar out a high-pitched noise, announcing your return to this world.";
 	WaitLineBreak;
-	now BodyName of Player is "Leviathan";
+	now BodyName of Player is "Leviathan"; [TODO: Add a Table of Random Critters entry for "Leviathan" (@Stadler#3007)]
 	now FaceName of Player is "Leviathan";
 	now TailName of Player is "Leviathan";
 	now SkinName of Player is "Leviathan";

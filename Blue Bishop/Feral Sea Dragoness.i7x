@@ -729,21 +729,8 @@ to fsdfvore:
 		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break][run paragraph on]";
 		say "Sanity: [humanity of Player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of Player]	Thirst: [thirst of Player]	Struggle: [fsdstrugglebar][line break][run paragraph on]";
 		if humanity of Player < 1:
-			repeat with y running from 1 to number of filled rows in Table of Random Critters:
-				choose row y in Table of Random Critters;
-				if Name entry is "Feral Sea Dragon":
-					now MonsterID is y;
-					break;
-			now BodyName of Player is "Feral Sea Dragon";
-			now FaceName of Player is "Feral Sea Dragon";
-			now TailName of Player is "Feral Sea Dragon";
-			now SkinName of Player is "Feral Sea Dragon";
-			now CockName of Player is "Feral Sea Dragon";
-			now tail of Player is tail entry;
-			now Face of Player is face entry;
-			now Skin of Player is skin entry;
-			now Body of Player is body entry;
-			now Cock of Player is cock entry;
+			setmonster "Feral Sea Dragon" silently;
+			turn the Player into a "Feral Sea Dragon" silently;
 			now voreloss is true;
 			now Trixieexit is 1;
 			end the story saying "You became a Feral Sea Dragoness's meal!";

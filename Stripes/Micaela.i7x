@@ -293,17 +293,7 @@ to say sexwithMicaela_bf:
 	say "     Eventually, you wake up, sore, sticky and leaking excess semen from your overused holes. Micaela's flopped out beside you, still zonked out after the wild bunny-fucking. You try to rouse her with a few nudges and then light taps on her fuzzy cheeks, but she does little more than moan softly. A quick check under her skirt shows that even her usually half-hard or more cock is completely flaccid";
 	if ebcheck is false:
 		say ". And a quick check of yourself has you realize that you've become a cute Easter bunny not unlike your overzealous lover. And after what you've just experienced, you don't feel at all upset about this change.";
-		now BodyName of Player is "Easter Bunny";
-		now FaceName of Player is "Easter Bunny";
-		now SkinName of Player is "Easter Bunny";
-		now TailName of Player is "Easter Bunny";
-		now CockName of Player is "Easter Bunny";
-		attributeinfect;
-		now tail of Player is tail entry;
-		now Face of Player is face entry;
-		now Skin of Player is skin entry;
-		now Body of Player is body entry;
-		now Cock of Player is cock entry;
+		turn the Player into a "Easter Bunny";
 		now Libido of Player is Libido of Player / 4;
 	else:
 		say ". You can't help but smile and giggle happily, pleased with yourself to have satisfied your fellow Easter bunny so thoroughly.";

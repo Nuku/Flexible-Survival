@@ -241,33 +241,11 @@ to say sexwithLeon:
 					WaitLineBreak;
 					say "     When he's done and pulls out this time, you're too weak and worn to manage to ask for more. All you can manage is a baaing moan before passing out in the mound of scented wool, excess semen leaking from your overfilled ass. Confident that you're fully his now, he leaves you there to return to the store. Left surrounded in the cum-stained wool and filled with infected semen, your body changes, completely becoming the flock's male ewe in body as well as mind. It is some time later before one of the sheep comes to collect you, bringing you out to join the others in working the store like the loyal, loving ewe you are through and through.";
 					if FemaleList is not banned and "Male Preferred" is not listed in feats of Player:
-						setmonster "Ewe";
-						choose row MonsterID from the Table of Random Critters;
-						now TailName of Player is "Ewe";
-						now FaceName of Player is "Ewe";
-						now SkinName of Player is "Ewe";
-						now BodyName of Player is "Ewe";
-						now CockName of Player is "Ewe";
-						now tail of Player is tail entry;
-						now Face of Player is face entry;
-						now Skin of Player is skin entry;
-						now Body of Player is body entry;
-						now Cock of Player is cock entry;
-						attributeinfect;
+						setmonster "Ewe" silently;
+						turn the Player into an "Ewe" silently;
 					else:
-						setmonster "Ram";
-						choose row MonsterID from the Table of Random Critters;
-						now TailName of Player is "Ram";
-						now FaceName of Player is "Ram";
-						now SkinName of Player is "Ram";
-						now BodyName of Player is "Ram";
-						now CockName of Player is "Ram";
-						now tail of Player is tail entry;
-						now Face of Player is face entry;
-						now Skin of Player is skin entry;
-						now Body of Player is body entry;
-						now Cock of Player is cock entry;
-						attributeinfect;
+						setmonster "Ram" silently;
+						turn the Player into a "Ram" silently;
 					now Stamina of Leon is 1;
 					wait for any key;
 					end the story saying "You have joined Leon's flock as his special male ewe.";

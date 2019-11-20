@@ -61,17 +61,8 @@ to plushlionvored:
 		now XP of Player is 0;  [prevents accidental level up]
 		if the player is not lonely, now XP of companion of Player is 0;
 		now non-infectious entry is true;  [prevents regular plush lion infection from occurring]
-		now TailName of Player is "Plush Lion";
-		now FaceName of Player is "Plush Lion";
-		now SkinName of Player is "Plush Lion";
-		now BodyName of Player is "Plush Lion";
-		now CockName of Player is "Plush Lion";
-		now tail of Player is tail entry;
-		now Face of Player is face entry;
-		now Skin of Player is skin entry;
-		now Body of Player is body entry;
-		now Cock of Player is cock entry;
-		attributeinfect;
+		setmonster "Plush Lion" silently;
+		turn the Player into a "Plush Lion";
 		if Libido of Player < libido entry, now Libido of Player is libido entry;
 		now humanity of Player is 0;
 		now battleground is "void";

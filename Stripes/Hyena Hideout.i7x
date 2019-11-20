@@ -265,20 +265,10 @@ to say hyenamat_challenge:
 
 
 to say hyenamat_victorytf:
-	setmonster "Hyena Herm";
-	choose row MonsterID from the Table of Random Critters;
 	say "     As the hyena orgy goes on, you feel a growing sense of confidence and empowerment. Looking over yourself, you can see that the victory has not left you unchanged. Your hyena body's gotten larger and stronger with an improved physique. You gain several inches of height as well, making you all the more impressive for leading the gang. You've become a powerful figure suitable for your new role as the gang's matriarch.";
-	now TailName of Player is "Hyena Herm";
-	now FaceName of Player is "Hyena Herm";
-	now SkinName of Player is "Hyena Herm";
-	now BodyName of Player is "Hyena Herm";
-	now CockName of Player is "Hyena Herm";
-	now tail of Player is tail entry;
-	now Face of Player is face entry;
-	now Skin of Player is skin entry;
-	now Body of Player is body entry;
-	now Cock of Player is cock entry;
-	attributeinfect;
+	setmonster "Hyena Herm" silently;
+	turn the Player into a "Hyena Herm";
+	choose row MonsterID from the Table of Random Critters;
 	now Cock Length entry is 15; [ Length infection will make cock grow to if cocks]
 	now Ball Size entry is 3; [ Size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	now Nipple Count entry is 2; [ Number of nipples infection will give you (males have nipples too) ]

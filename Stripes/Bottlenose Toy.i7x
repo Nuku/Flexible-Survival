@@ -185,7 +185,7 @@ to say losetodolphinflatable:
 				now XP of Player is 0; [prevents accidental level up]
 				if the player is not lonely, now XP of companion of Player is 0;
 				now non-infectious entry is true; [prevents regular dolphin girl infection from occurring]
-				now TailName of Player is "Bottlenose Toy";
+				now TailName of Player is "Bottlenose Toy"; [TODO: Seems outdated. Remove this? (@Stadler#3007)]
 				now FaceName of Player is "Bottlenose Toy";
 				now SkinName of Player is "Bottlenose Toy";
 				now BodyName of Player is "Bottlenose Toy";
@@ -329,7 +329,7 @@ to bottleboundstate:
 			now dolinfloss is -100;
 			now XP of Player is 0;
 			now non-infectious entry is true; [prevents regular dolphin girl infection from occurring]
-			now TailName of Player is "Bottlenose Toy";
+			now TailName of Player is "Bottlenose Toy"; [NOTE: No `turn the Player into` here, because variations of the standard desc are used for the game over (@Stadler#3007)]
 			now FaceName of Player is "Bottlenose Toy";
 			now SkinName of Player is "Bottlenose Toy";
 			now BodyName of Player is "Bottlenose Toy";

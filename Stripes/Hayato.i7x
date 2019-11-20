@@ -612,19 +612,9 @@ to say onilairassault:
 
 to say onilairlost1:
 	now HP of Hayato is 96;
-	setmonster "Red Oni";
+	setmonster "Red Oni" silently;
 	choose row MonsterID in Table of Random Critters;
-	now TailName of Player is "Red Oni";
-	now FaceName of Player is "Red Oni";
-	now SkinName of Player is "Red Oni";
-	now BodyName of Player is "Red Oni";
-	now CockName of Player is "Red Oni";
-	attributeinfect;
-	now tail of Player is tail entry;
-	now Face of Player is face entry;
-	now Skin of Player is skin entry;
-	now Body of Player is body entry;
-	now Cock of Player is cock entry;
+	turn the Player into a "Red Oni" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
 	if hellHoundLevel is 0:
 		follow the sex change rule;
 		follow the sex change rule;

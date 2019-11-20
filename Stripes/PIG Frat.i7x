@@ -155,19 +155,7 @@ to say pig_fratinitiation:
 	SanLoss 30;
 	if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 4 and 8;
 	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 4 and 8;
-	setmonster "Piggy";
-	choose row MonsterID from the Table of Random Critters;
-	now TailName of Player is "Piggy";
-	now FaceName of Player is "Piggy";
-	now SkinName of Player is "Piggy";
-	now BodyName of Player is "Piggy";
-	now CockName of Player is "Piggy";
-	attributeinfect;
-	now tail of Player is tail entry;
-	now Face of Player is face entry;
-	now Skin of Player is skin entry;
-	now Body of Player is body entry;
-	now Cock of Player is cock entry;
+	turn the Player into a "Piggy";
 	if Libido of Player < 45, now Libido of Player is 45;
 	if humanity of Player < 10:
 		if Player is not female and FemaleList is not banned:

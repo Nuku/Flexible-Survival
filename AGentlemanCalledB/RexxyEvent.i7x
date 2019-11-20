@@ -415,21 +415,8 @@ Section 7 - ALL the scenes
 
 to say fullRetrieverTF:
 	[puts Retriever as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in Table of Random Critters:
-		choose row y in Table of Random Critters;
-		if Name entry is "Retriever Female":
-			now MonsterID is y;
-			break;
-	now TailName of Player is "Retriever Female";
-	now FaceName of Player is "Retriever Female";
-	now SkinName of Player is "Retriever Female";
-	now BodyName of Player is "Retriever Female";
-	now CockName of Player is "Retriever Female";
-	now tail of Player is tail entry;
-	now Face of Player is face entry;
-	now Skin of Player is skin entry;
-	now Body of Player is body entry;
-	now Cock of Player is cock entry;
+	setmonster "Retriever Female" silently;
+	turn the Player into a "Retriever Female";
 	if hellHoundLevel is 0:
 		follow the sex change rule;
 		follow the sex change rule;

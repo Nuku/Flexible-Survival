@@ -101,23 +101,7 @@ to say mouseapts:
 		wait for any key;
 
 to say fullmousification:
-	[puts Mental Mouse as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in Table of Random Critters:
-		choose row y in Table of Random Critters;
-		if Name entry is "Mental Mouse":
-			now MonsterID is y;
-			break;
-	now TailName of Player is "Mental Mouse";
-	now FaceName of Player is "Mental Mouse";
-	now SkinName of Player is "Mental Mouse";
-	now BodyName of Player is "Mental Mouse";
-	now CockName of Player is "Mental Mouse";
-	attributeinfect;
-	now tail of Player is tail entry;
-	now Face of Player is face entry;
-	now Skin of Player is skin entry;
-	now Body of Player is body entry;
-	now Cock of Player is cock entry;
+	turn the Player into a "Mental Mouse";
 
 
 Section 2 - Mouse Girl Pet

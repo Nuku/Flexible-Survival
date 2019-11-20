@@ -179,12 +179,27 @@ to SetInfectionsOf ( Target - a person ) randomized between ( Father - a person 
 		now TailSpeciesName of Target is TailSpeciesName of Mother;
 
 to attributeinfect with/-- ( Infection - a text ):
+	attributeinfect Infection silence state is 0;
+
+to attributeinfect with/-- ( Infection - a text ) silently:
+	attributeinfect Infection silence state is 1;
+
+to attributeinfect with/-- ( Infection - a text ) silence state is ( Silence - a number ):
 	let StoredMonsterID be MonsterID;
 	setmonster Infection silently;
-	attributeinfect;
+	if Silence is 0:
+		attributeinfect;
+	else:
+		attributeinfect silently;
 	now MonsterID is StoredMonsterID;
 
 to turn the/-- Player into a/an/-- ( Infection - a text ):
+	turn Player into Infection silence state is 0;
+
+to turn the/-- Player into a/an/-- ( Infection - a text ) silently:
+	turn Player into Infection silence state is 1;
+
+to turn the/-- Player into a/an/-- ( Infection - a text ) silence state is ( Silence - a number ):
 	if there is no Name of Infection in the Table of Random Critters:
 		say "ERROR: Attempted to set the players infection to '[Infection]'. Please report this on the FS Discord.[line break]";
 		stop the action;
@@ -240,6 +255,9 @@ to turn the/-- Player into a/an/-- ( Infection - a text ):
 		now TailSpeciesName of Player is InfectionSpeciesName;
 		now CockSpeciesName of Player is InfectionSpeciesName;
 		now CuntSpeciesName of Player is InfectionSpeciesName;
-	attributeinfect with Infection;
+	if Silence is 0:
+		attributeinfect with Infection;
+	else:
+		attributeinfect with Infection silently;
 
 Sex and Infection Functions ends here.

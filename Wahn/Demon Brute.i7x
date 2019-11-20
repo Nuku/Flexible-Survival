@@ -505,7 +505,7 @@ instead of trading the demon tooth when the current action involves the Nermine:
 					now inasituation is false;
 					if fightoutcome >= 20 and fightoutcome <= 29: [lost]
 						say "[DemonBruteVictoryFuck]";
-						now BodyName of Player is "Captured";
+						now BodyName of Player is "Captured"; [NOTE: I guess, this could be removed without issues when the GameEndings table is finished (@Stadler#3007)]
 						now FaceName of Player is "Captured";
 						now SkinName of Player is "Captured";
 						now TailName of Player is "Captured";
