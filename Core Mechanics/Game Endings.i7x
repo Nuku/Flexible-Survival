@@ -63,7 +63,7 @@ to setending ( Ending - text ) silence state is ( Silence - a number ): [sets th
 			break;
 	if found is 0:
 		say "ERROR - Ending '[Ending]' not found. (setending)[line break]";
-	else if debug is at level 4 and Silence is 0:
+	else if debug is at level 6 and Silence is 0:
 		say "DEBUG: Current [']ending['] set to: [EndingID] = [name entry][line break]";
 
 to trigger the/-- ending ( Ending - a text ):
@@ -144,18 +144,18 @@ When play ends:
 		choose row N in the Table of GameEndings;
 		if Priority entry is 0:
 			next; [Skip the initial row.]
-		if debug is at level 6:
+		if debug is at level 9:
 			let SubtypeString be "";
 			if Subtype entry is not "":
 				now SubtypeString is " ([Subtype entry])";
 			say "DEBUG: Handling ending ['][Name entry]['], Type: [Type entry][SubtypeString], Priority: [Priority entry], Triggered: [if Triggered entry is true]yes[else]no[end if].[no line break]";
 		if Type entry endings are excluded:
-			if debug is at level 6:
+			if debug is at level 9:
 				say " (EXCLUDED)[line break]";
 			next;
 		follow the Ending entry;
 		if Player dead or Player imprisoned:
-			if debug is at level 6:
+			if debug is at level 9:
 				say "DEBUG: The Player is either dead or imprisoned, enslaved and so on. Finishing here![line break]";
 			break;
 	[FS Multiplayer AD here]

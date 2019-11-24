@@ -782,5 +782,46 @@ carry out TagListReadout:
 	say "FirebreathList: [Infections of FirebreathList][line break][line break]";
 	say "TailweaponList: [Infections of TailweaponList][line break][line break]";
 
+EndingTableReadout is an action applying to nothing.
+
+understand "EndingTableReadout" as EndingTableReadout.
+
+check EndingTableReadout:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out EndingTableReadout:
+	let NameCol be "";
+	let TypeCol be "";
+	let SubTypeCol be "";
+	let EndingCol be "";
+	let PriorityCol be "";
+	let TriggeredCol be "";
+	let RowNumberCol be "";
+	say "[fixed letter spacing]";
+	say "row  | Name                              | Type                 | Subtype      | Ending                               | Priority | Triggered[line break]";
+	say "     | (text)                            | (text)               | (text)       | (rule)                               | (number) | (truth state)[line break]";
+	say "-----|-----------------------------------|----------------------|--------------|--------------------------------------|----------|--------------[line break]";
+	sort the Table of GameEndings in Priority order;
+	repeat with N running from 1 to the number of rows in the Table of GameEndings:
+		choose row N in the Table of GameEndings;
+		if there is no Name in row N of the Table of GameEndings:
+			now NameCol is "--";
+			now TypeCol is "--";
+			now SubTypeCol is "--";
+			now EndingCol is "--";
+		else:
+			now NameCol is "'[Name entry]'";
+			now TypeCol is "'[Type entry]'";
+			now SubTypeCol is "'[SubType entry]'";
+			[now EndingCol is "[Ending entry]";]
+			now EndingCol is "[Name entry] rule";
+		now PriorityCol is "[Priority entry]";
+		now TriggeredCol is "[Triggered entry]";
+		now RowNumberCol is "[N]";
+		say "[RowNumberCol formatted to 4 characters] | [NameCol formatted to 33 characters] | [TypeCol formatted to 20 characters] | [SubTypeCol formatted to 12 characters] | [EndingCol formatted to 36 characters] | [PriorityCol formatted to 8 characters] | [TriggeredCol][line break]";
+	say "[variable letter spacing]";
+
 
 Debugging Tools ends here.
