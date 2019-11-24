@@ -28,8 +28,8 @@ carry out debugmode:
 	else:
 		disable debug mode;
 
-setdebuglevel is an action applying to one topic.
-understand "debuglevel [text]" as setdebuglevel.
+setdebuglevel is an action applying to one number.
+understand "debuglevel [number]" as setdebuglevel.
 
 to activate debug mode:
 	say "NPC DEBUG MODE ACTIVATED.";
@@ -44,10 +44,9 @@ to disable debug mode:
 	now debugactive is 0;
 
 carry out setdebuglevel:
-	let newlevel be 0;
-	now newlevel is numerical value of topic understood;
-	if newlevel < 0 or newlevel > 6:
-		say "ERROR: level has to be between 0 and 6!";
+	let newlevel be the number understood;
+	if newlevel < 0 or newlevel > 10:
+		say "ERROR: level has to be between 0 and 10!";
 	else if newlevel is 0:
 		disable debug mode; [Always give feedback, even if already disabled]
 	else:
