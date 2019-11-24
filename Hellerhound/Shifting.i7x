@@ -203,6 +203,7 @@ This is the Shifter Check rule:
 	if Resolution of Secure Area is 2:
 		trigger ending "Shifter Check";
 		exclude "Infection" endings;
+		exclude "NPCSharedInfection" endings;
 		if the humanity of Player > 50:
 			say "Your knowledge of how to shift aids you when you decide to help the rescue, and as a reward for your help, the army decides to replace the nanites you had with a new kind that do not spread.";
 		else:

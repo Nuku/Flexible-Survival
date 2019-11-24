@@ -1260,10 +1260,16 @@ to femonyxsex5:
 
 Section 5 - Endings
 
-when play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Onyx['] Epilogue"	"NPC"	""	Onyx' Epilogue rule	90	false
+
+This is the Onyx' Epilogue rule:
 	if Onyxmareslut is 3:
+		trigger ending "Onyx['] Epilogue";
 		say "     Your time at the Stables has been surprisingly pleasant, once you stopped fighting your purpose and your captivity, you came to really enjoy being bound and helpless for all the stallions to use. And use you they did! You had many visitors at first from among the stallions, though your favorite was the big black stallion who captured you in the first place. It wasn't long before you begin responding to your new name, 'Obsidian', and loving your equally sexy new black furred mares body, and once the training was over and you are finally released from the training stall, you make sure to thank Onyx very personally for his help in making you such a sexy little mare. So much so that he had trouble walking for several days afterwards, much to the amusement of his fellow stallions. Eventually though you settle down to your new life as a rather powerful and sexy mareslut, and with your enhanced submissiveness you find you have a real strong client base among those who like to dominate their partners and tie them up. Of course eventually you are shifted over to work with some of the breeding mares more often, and you look back on that time fondly as you sit with your many black foals gathered around you and grin at just how many of them look like that handsome young stallion that still visits you often... and recall how glad you are that you convinced him to stay in the Stables like a good horsey, and how glad you are that he did the same to you as well!";
 	else if Onyxboislut is 3:
+		trigger ending "Onyx['] Epilogue";
 		say "     Your time at the Stables has been surprisingly pleasant, once you stopped fighting your purpose and your captivity, you came to really enjoy being bound and helpless for all the stallions to use. And use you they did! You had many visitors at first from among the stallions, though your favorite was the big black stallion who captured you in the first place. It wasn't long before you begin responding to your new name, 'Obsidian', and loving your equally sexy new black furred stallionboi body. And once the training was over and you are finally released from the training stall, you make sure to thank Onyx very personally for his help in making you such a sexy little manwhorse. So much so that you have trouble walking for several days afterwards, much to the amusement of his fellow stallions. Eventually though, you settle down to your new life as a rather girly and sex-hungry stallionboi. And with your enhanced submissiveness, you find you have a real strong client base among those who like to dominate their male partners and tie them up. Of course, eventually you are shifted over to work with many of the other stallionbois and eagerly take your position as one of the most sub among them, letting them play at being studs by fucking you until you pass out, overflowing with the cum from all your loving friends. Your big, handsome young stallion still visits you often to remind you that you still belong to him. At these times more than any other, you recall how glad you are that you convinced him to stay in the Stables like a good horsey, and how glad you are that he did the same to you as well!";
 
 

@@ -469,7 +469,7 @@ This is the Retriever Female Infection rule:
 This is the Rex' and Karen's Epilogue rule:
 	if Player has no body of "Retriever Female":
 		if (HP of Rex > 9 and HP of Rex < 50) or (HP of Rex is 4) or (Retriever Girl is tamed):
-			trigger ending "Rex' and Karen's Epilogue";
+			trigger ending "Rex['] and Karen's Epilogue";
 		if HP of Rex > 9 and HP of Rex < 50:
 			if humanity of Player < 10:
 				say "     With your mind lost to another infection out in the city, you quickly forget your submission to Rex, and your place as his pet. He and Karen search the city for you for some time, even enlisting the aid any other survivor they can find in exchange for a share of Rex's stockpiled supplies. Despite their titanic effort the pair is never able to find you among the horde of mindless mutants in the city, eventually leaving you and it behind to find a new home outside once the military moves in.";
