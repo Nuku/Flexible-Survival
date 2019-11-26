@@ -334,8 +334,13 @@ to say cheetahwomaninheat:
 
 Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "Cheetah Woman":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Cheetah Woman Infection"	"Infection"	""	Cheetah Woman Infection rule	100	false
+
+This is the Cheetah Woman Infection rule:
+	if Player has a body of "Cheetah Woman":
+		trigger ending "Cheetah Woman Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is male:
 				say "     Surrendering to your baser instincts, you find yourself running and running through the city, until you once more end up back in the zoo where you found that cheetah before. Following where your nose and your cock lead you, you soon find where the cheetah has made her den in one of the empty enclosures, and much to your surprise, she isn't alone either. You find her there slowly teasing another female cheetah as they relax during the day, the other female is obviously a new convert to the cheetah way of life much like yourself, but you find yourself unable to care about that anymore with the sight of two females in front of you. Their gazes focus on you as you proudly approach, a soft grin spreading across the muzzle of the cheetah you encountered earlier as she recognizes your fine spots and masculine scent.";

@@ -981,7 +981,7 @@ to say artemissf_sex:
 	now artemisstatefairrt is true;
 
 to artemisinfect:
-	setmonster "Rubber tigress";
+	setmonster "Rubber Tigress";
 	choose row MonsterID from Table of Random Critters;
 	let holdertext be "";
 	now holdertext is sex entry;

@@ -1009,7 +1009,7 @@ when play ends:
 	[Sven special cases]
 	if Sven is in the bunker and HP of Sven < 30 and BodyName of Player is not "Snow Leopard" and BodyName of Player is not "Siamese Cat" and BodyName is not "Snow Bat":
 		if humanity of Player < 10:
-			if ( BodyName of Player is "Panther Herm" and angiearoused is 3 ) or ( felinoid companion is tamed and BodyName of Player is "Felinoid" ) or BodyName of Player is "Rubber tigress" or BodyName of Player is "Plush Lion":
+			if ( BodyName of Player is "Panther Herm" and angiearoused is 3 ) or ( felinoid companion is tamed and BodyName of Player is "Felinoid" ) or BodyName of Player is "Rubber Tigress" or BodyName of Player is "Plush Lion":
 				increase score by 0; [blank - Special Sven succumb endings as per species of Player]
 			else if HP of Sven > 3 and HP of Sven < 8:
 				say "     When you succumb to your infection, Sven's loyalty to you makes him waver, but he manages to make his escape from the bunker, running off into the city. What rational thought you have left doesn't think much of his chances and expect he'll end up in the arms of a lustful snow leopard or taken as a fuck-toy by one of the many other creatures out there.";

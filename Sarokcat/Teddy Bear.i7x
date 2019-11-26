@@ -105,6 +105,7 @@ to teddybearvored:
 		now battleground is "void";
 		now combat abort is 1;
 		WaitLineBreak;
+		trigger ending "Teddy Beared";
 		end the story saying "Having been consumed by the teddy bear, you've been turned into another of the plush bears roaming the fairgrounds.";
 		stop the action;
 
@@ -280,12 +281,23 @@ When Play begins:
 ]
 
 
-when play ends:
-	if BodyName of Player is "Teddy Bear":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Teddy Beared"	"BadEnd"	"Force TF"	Teddy Beared rule	2	false
+"Teddy Bear Infection"	"Infection"	""	Teddy Bear Infection rule	100	false
+
+This is the Teddy Beared rule:
+	if ending "Teddy Beared" is triggered:
+		say "     You stay together in the state fair with your plushie friend, feeling very happy together. You snuggle and play together often, [if Player is male]fucking her with your plush cock[else if Player is female]licking each other with your velvety tongues[else]licking her with your velvety tongue[end if] and roaming the midway in search of others to cuddle with. From time to time you stumble across other teddy bears like yourselves and have a grand old time together, but other times you're even luckier and find a human. Having been shown how to do it by your pink friend, you really enjoy swallowing them down to give them an extra-special belly hug, helping them to become more happy teddy bears to wander around the fair. You always have a particularly good time meeting up with them again as bears and enjoying soft, plush sex with those you've changed in this manner.";
+		the Player is lost;
+
+This is the Teddy Bear Infection rule:
+	if Player has a body of "Teddy Bear":
+		trigger ending "Teddy Bear Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
-			if teddyvored is -100:
-				say "     You stay together in the state fair with your plushie friend, feeling very happy together. You snuggle and play together often, [if Player is male]fucking her with your plush cock[else if Player is female]licking each other with your velvety tongues[else]licking her with your velvety tongue[end if] and roaming the midway in search of others to cuddle with. From time to time you stumble across other teddy bears like yourselves and have a grand old time together, but other times you're even luckier and find a human. Having been shown how to do it by your pink friend, you really enjoy swallowing them down to give them an extra-special belly hug, helping them to become more happy teddy bears to wander around the fair. You always have a particularly good time meeting up with them again as bears and enjoying soft, plush sex with those you've changed in this manner.";
-			else if the player is pure:
+			if the player is pure:
 				say "     Surrendering to your new instincts, you lie low when the rescue comes. Seeing an opportunity, you stow away in the back of one of the trucks, acting like nothing more than a large stuffed animal until you can eventually sneak away when no one is looking. You wander around several cities, appearing to be a lost toy or placing yourself in donation bins until someone takes you home and you can convert them into another plush animal like yourself. Eventually someone tracks you down on purpose by following the rumors. Pretending to still be a normal stuffed toy, you listen to him explain his plan before deciding to go along with it.";
 				say "     It turns out he is the owner of an [']adult['] shop that rents out several rather kinky dolls and plushies to people to use, you and he proceed into a lucrative partnership where he rents you out to an unsuspecting buyer, and when the time is right you convert the buyer into a new animal yourself, and you both return to the shop to be rented out again. It takes some planning but eventually you even manage to convert your shop partner as well, and soon you both have a large collection of other adult animal toys ready for any occasion.";
 			else:

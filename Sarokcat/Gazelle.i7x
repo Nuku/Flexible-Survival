@@ -248,8 +248,15 @@ When Play begins:
 ]
 
 
-when play ends:
-	if BodyName of Player is "Gazelle":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Gazelle Infection"	"Infection"	""	Gazelle Infection rule	100	false
+
+This is the Gazelle Infection rule:
+	if Player has a body of "Gazelle":
+		trigger ending "Gazelle Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is female:
 				if Player is male:

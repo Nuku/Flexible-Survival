@@ -355,8 +355,15 @@ When Play begins:
 ]
 
 
-when play ends:
-	if BodyName of Player is "Alpha Wolf":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Alpha Wolf Infection"	"Infection"	""	Alpha Wolf Infection rule	100	false
+
+This is the Alpha Wolf Infection rule:
+	if Player has a body of "Alpha Wolf":
+		trigger ending "Alpha Wolf Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is female:
 				say "Your fragile mind snaps and you growl, dropping to all fours as you run off into the city. Still running alone seems wrong on some deep fundamental level, and you let out a forlorn howl of loneliness to the sky above. Soon you hear an answering howl that sends a tingle down your changed spine, and you dash off through the city to find the howler. As you come upon him, you find his proud form surrounded by the rest of his pack, which greets you eagerly as you approach. Finally feeling at ease, you greet the proud, strong alpha wolf that turned you into this wonderful creature, and he welcomes you into the pack by taking you right there in the moonlight for all to see. Finally you feel free and happy while a sense of belonging washes over you, his strong alpha seed finding its way into your body, marking you as his now and forever. As you run off into the night with the rest of the pack, you know you will bear him many strong pups, and together your pack will rule this city as your new territory.";

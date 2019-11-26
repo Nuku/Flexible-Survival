@@ -209,8 +209,15 @@ When Play begins:
 ]
 
 
-when play ends:
-	if BodyName of Player is "Mareslut":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Mareslut Infection"	"Infection"	""	Mareslut Infection rule	100	false
+
+This is the Mareslut Infection rule:
+	if Player has a body of "Mareslut":
+		trigger ending "Mareslut Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is female:
 				say "     Finally unable to fight your new instincts any longer, you find yourself returning eagerly to the Stables, where you are sure you will find someone who will understand your bodies new instincts and needs. The guards at the door seem completely unsurprised at your return, and you wonder absently if they realized you were going to end up like this from the moment they let you bribe your way in. Grinning happily, you decide to 'thank' the guards properly later, just in case, and you give them an extra wiggle of your sexy hips as you saunter inside. Once inside the stables again, the scents of equine sex and leather fill your nose, and you find yourself whickering happily like a good little mare as you begin to feel like you have finally found your way home, enticing you to follow the scents deeper into the building. As you follow the scents of sex and musk further in, it isn't long before you encounter several of your fellow mares, who happily greet you and admire your fine new equine pelt as they lead you down the halls to a new room of your own, where several of them help you settle in with a nice and playful 'massage', their own hoof-like hands and equine tongues tracing over your body teasingly, even as you eagerly return your new herd mates attentions.";

@@ -271,6 +271,8 @@ When Play begins:
 ]
 
 
+Section 3 - satyr wine
+
 Table of Game Objects (continued)
 name	desc	weight	object
 "satyr wine"	"A small sample of some dark wine you found left behind by one of those strange Satyr folk, it looks like there is about enough left for a single mouthful."	1	satyr wine
@@ -287,13 +289,19 @@ instead of sniffing satyr wine:
 	say "The wine is aromatic and quite powerful. And after everything you've seen in this strange city, you could definitely go for a drink.";
 
 
-when play ends:
-	if BodyName of Player is "Satyr":
+Section 4 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Satyr Infection"	"Infection"	""	Satyr Infection rule	100	false
+
+This is the Satyr Infection rule:
+	if Player has a body of "Satyr":
+		trigger ending "Satyr Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     Finally giving in to your base desires, you run back to the museum where you know there is a party going on. Running into several other satyrs, they welcome you with alcoholic grins as they pass you a cup, a new vigor and zest for living in the moment shooting through you as you drink. Soon you are carousing just as hard as they are, enjoying the moment for all it is worth, and charging off down the halls in pursuit whenever one of you manages to spot a lovely little tease of a nymph. You lose all track of time as you party the days and nights away, but as neither you nor the nymphs never seem to get any older, who cares? At one point several people with guns came around to try to get you to leave, but as they didn't have any booze of their own, you helpfully offered them some of yours, and soon enough they came around to your way of thinking as they joined the party. Strangely enough the rest of them seemed to avoid your party after that, you would almost think they didn't know how to have fun, not that you could really bring yourself to care through the happy fog of alcohol and sex that you pass the carefree days in.";
 		else:
 			say "     Rescued by the military, you wander around a bit, people giving you odd looks due to your goat-like lower body. Still, most of the changes are easy enough to hide when viewed from the waist up. This leads you to find your true calling in life as a bartender, your nimble hands and your ingrained reverence for the booze serving you well. Soon you earn enough to buy your own bar, which you call [']The Satyrs Revel['], amused by the ironic name. Your bar becomes one of the hottest in the city, your parties always seeming to have that extra something others lack. While most of the people who get a good look at you in your new bar think you're merely in a costume, you are happy to let many of the woman find out how real you are for themselves, and while your new life is sadly lacking in any naked nymphs, you have to admit you have found the next best thing.";
-
 
 
 Satyr ends here.

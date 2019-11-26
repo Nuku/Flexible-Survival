@@ -402,6 +402,8 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 "Husky Bitch Infection"	"Infection"	""	Husky Bitch Infection rule	100	false
 
 This is the Husky Bitch Infection rule:
+	if ending "Husky Bitch with Colleen" is triggered:
+		make no decision;
 	if Player has a body of "Husky Bitch":
 		trigger ending "Husky Bitch Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:

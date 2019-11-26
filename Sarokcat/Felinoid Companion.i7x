@@ -411,7 +411,11 @@ to say felinoidpet_puren:
 
 Section 4 - Endings
 
-when play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Klauz['] Epilogue"	"Companion"	"Pet"	Klauz' Epilogue rule	75	false
+
+This is the Klauz' Epilogue rule:
 	if Felinoid companion is tamed:
 		if BodyName of Player is "Felinoid":
 			if humanity of Player < 10:
@@ -457,17 +461,18 @@ when play ends:
 		else:
 			if humanity of Player < 10:
 				say "     When you finally surrender completely to the infection, the felinoid you saved tries to guide you back to the park and his den, but you are having none of it. Growling, you manage to drive the pushy felinoid off, his injuries still hampering him enough that you can drive him away easily, and while you think you spot him hanging around several times over the next few days, he doesn't try approaching you again, letting you settle into your new more feral life without his interference.";
-			else if BodyName of Player is "Feral Wolf" and ( HP of Fang is 3 or HP of Fang is 4 ):
+			else if Player has a body of "Feral Wolf" and HP of Fang is listed in { 3, 4 }:
 				[ see Feral Wolf file for this ending ]
-				now tempnum is 0;
+				make no decision;
 			else:
-				if Player is female and ( HP of Fang is 3 or HP of Fang is 4 ):
+				if Player is female and HP of Fang is listed in { 3, 4 }:
 					[ see Fang file for this ending ]
-					now tempnum is 0;
+					make no decision;
 				else if Player is female:
 					say "     Rescued from the city with your mind intact, you manage to convince the military that your companion is not actually a threat. You don't think they would have bought it, if it weren't for how bad things in the city were getting for them, and they couldn't afford to take the time out to check him carefully, especially since he was on his best behavior for you at the time. You feel rather proud of once more having saved your new friend, as you take him with you to set up your new life in the outside world. The attractive felinoid's musk is as strong as ever however, making you increasingly horny the longer you stay around him, and you realize that you need to do something about it unless you want to end up with felinoid cubs in your belly. You take your felinoid friend to see a nice male vet to see if anything can be done, only to find that after only a minute in the room with your companion's strong male musk, the male vet is on his way to being a female feline. The erotic sight of watching the former male being mounted by your friend turns you on so much you end up orgasming several times just watching. Sneaking your pet back out of the vets, you decide to have some more fun with this, hitting several different bars most nights, and bringing the unsuspecting men who hit on you the most home with you. You enjoy watching as your companions makes the horny men into equally horny women, changing their viewpoint on life drastically, some of them you even let your felinoid companion change fully into female cats for him to breed. This forces you to move several times before you finally settle down someplace to stay for good, you and your companion settling in happily, while a strange explosion of pregnant female felinoids hits the area, even as your own belly begins to show signs of his fertility...";
 				else:
 					say "     Rescued from the city with your mind intact, you manage to convince the military that your companion is not actually a threat. You don't think they would have bought it, if it weren't for how bad things in the city were getting for them, and they couldn't afford to take the time out to check him carefully, especially since he was on his best behavior at the time. Starting up a new life in the outside world, your felinoid companion is a great help to you, as not only is he able to watch your back, his strangely attractive musk is as strong as ever. You enjoy how easily woman flock to you when you wear even a hint of musk, but the most amusing discovery is when you bring a friend home to meet him, and discover your male friend is soon a woman. You have great fun with this ability of your companion, turning several men who annoy you into women instead, you even let your companion finish changing several of them all the way into female felines for his own amusement. Strangely you still seem resistant to the transformative effects of being around him, retaining your manhood even as others lose theirs, as a side benefit, most of the ones your companion change seem strangely submissive as well, making your life much easier. Soon you both have managed to acquire a small harem of women, both felinoid and human to play with as you start your new lives.";
+		trigger ending "Klauz['] Epilogue"; [Here it states, that the ending has been played.]
 
 [ HP of Felinoid companion ]
 [ # of times had sex       ]

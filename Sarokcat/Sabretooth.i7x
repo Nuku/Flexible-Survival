@@ -198,6 +198,8 @@ When Play begins:
 ]
 
 
+Section 3 - Chipped Tooth
+
 Table of Game Objects (continued)
 name	desc	weight	object
 "Chipped tooth"	"A rather large chipped piece of tooth, obviously knocked off of something with tremendous fangs"	1	Chipped tooth
@@ -210,10 +212,15 @@ instead of sniffing Chipped tooth:
 	say "The large fang somehow smells quite old despite looking rather new.";
 
 
+Section 4 - Endings
 
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Sabretooth Infection"	"Infection"	""	Sabretooth Infection rule	100	false
 
-when play ends:
-	if BodyName of Player is "Sabretooth":
+This is the Sabretooth Infection rule:
+	if Player has a body of "Sabretooth":
+		trigger ending "Sabretooth Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is male:
 				if Player is female:

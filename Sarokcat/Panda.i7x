@@ -216,8 +216,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Panda":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Panda Infection"	"Infection"	""	Panda Infection rule	100	false
+
+This is the Panda Infection rule:
+	if Player has a body of "Panda":
+		trigger ending "Panda Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is male:
 				if Player is female:
