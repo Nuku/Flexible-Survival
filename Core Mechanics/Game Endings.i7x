@@ -9,6 +9,7 @@ TheEnd has a truth state called Player leaving. Player leaving is usually false.
 TheEnd has a truth state called Player died. Player died is usually false. [The player died. Includes starvation, dehydration, eaten alive and so on.]
 TheEnd has a text called Ending Reason. Ending Reason is usually "". [The cause of the ending. Extra info, like "Vore by Wyvern" (in case of vore death for example) and so on.]
 TheEnd has a list of texts called Excluded Types. [Ending types to be excluded.]
+TheEnd has a list of texts called Ending Flags. [Additional ending flags, like "Taur Player" for example.]
 
 to the/-- Player has left:
 	now Player leaving of TheEnd is true;
@@ -92,6 +93,14 @@ to decide if one of the/-- endings in (Endings - a list of texts) is triggered:
 	repeat with N running from 1 to the number of entries in Endings:
 		if ending "[entry N of Endings]" is triggered:
 			decide yes;
+	decide no;
+
+to add the/-- ending flag ( F - a text ):
+	add F to Ending Flags of TheEnd;
+
+to decide if the/-- ending flag ( F - a text ) is set:
+	if F is listed in Ending Flags of TheEnd:
+		decide yes;
 	decide no;
 
 [

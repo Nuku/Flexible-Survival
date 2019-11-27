@@ -1495,8 +1495,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is KoballoonLossCounter;
 		-- "KoballoonMet":
 			now NumberVarValue entry is KoballoonMet;
-		-- "KoballoonSexBadEnd":
-			now NumberVarValue entry is KoballoonSexBadEnd;
 		-- "koboldgangmet":
 			now NumberVarValue entry is koboldgangmet;
 		-- "koboldgangsubs":
@@ -5179,8 +5177,6 @@ to VariableNumberLoad:
 					now KoballoonLossCounter is numberVarValue entry;
 				-- "KoballoonMet":
 					now KoballoonMet is numberVarValue entry;
-				-- "KoballoonSexBadEnd":
-					now KoballoonSexBadEnd is numberVarValue entry;
 				-- "koboldgangmet":
 					now koboldgangmet is numberVarValue entry;
 				-- "koboldgangsubs":

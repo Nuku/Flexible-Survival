@@ -1004,11 +1004,12 @@ to say anubismaskuse:
 	LineBreak;
 	say "     Over the next few minutes, you can do nothing but watch as the black fur slowly engulfs and changes your body. At first, you dread the change, but the further the change progresses, the stronger strange, new instincts creep into you. When the fur reaches the middle of your chest, you don't mind the change, and from the knees down, you welcome it. Time passes, and you wonder what will be left when you are completely engulfed. Will you still be yourself? Will these new instincts take over? You have no time to think on the issue, as the change completes at your feet, and everything goes black.";
 	WaitLineBreak;
-	now BodyName of Player is "Jackal King"; [optional, custom infection for a loss sequence]
+	now BodyName of Player is "Jackal King"; [TODO: Add a Table of Random Critters entry for "Jackal King" (@Stadler#3007)]
 	now FaceName of Player is "Jackal King";
 	now TailName of Player is "Jackal King";
 	now SkinName of Player is "Jackal King";
 	now CockName of Player is "Jackal King";
+	trigger ending "Kyrverth Jackal King";
 	end the story saying "You have become the Jackal King.";
 
 instead of sniffing Anubis Mask:
@@ -1030,11 +1031,12 @@ to say racinghorseshoeuse:
 	say "     The energy fizzles inside of you and suddenly [one of]focuses on[or]moves to[at random] your groin. In the fastest [one of]change[or]transformation[at random] you have had so far, [if Player is female]your pussy closes up, [end if]a sheath forms, and [if Player is male]your [one of]cock[or]dick[at random] within is suddenly much larger and[else]the large [one of]cock[or]dick[at random] within is[end if] equine-shaped: long and wide, a medial ring halfway up, and a flare at the top throbs before being covered in a mare's mouth as she quickly begins to suck. Her mouth is heaven, and her long head is able to take you down to the hilt. The energy still [one of]fizzing[or]buzzing[at random] inside of you heightens your pleasure, and combined with her masterful [one of]tongue[or]skill[at random] you don't last long. Your body tenses up, and you tell her that you are about to [one of]cum[or]blow[at random]. Pressure mounts up and builds, and just as you are thinking that you can't take anymore, she releases and pulls back, letting an explosion of cum cover her face and chest. It covers her in spurt after spurt, way more than you would normally produce. The reason for that soon becomes obvious - now that her head is out of the way, you can see what the tingling in your groin was for. Your[if Player is female] new[end if] sack is stretched tight by your [one of]newly[or]now[at random] [one of]massive[or]huge[at random] balls.";
 	say "     The mare leans forward, stroking your cock seductively to grab your attention. She puts her mouth to your ear, breathlessly whispering 'So, will you stay?' Your dick is as hard as [one of]a rock[or]diamond[at random] in her hands and you immediately say yes. The energy within you surges a final time and focuses on your shoulders. On each side, a circle of chestnut fur turns white, with a number [one of]69[or]34[at random] forming in black fur to mark you as their racer.";
 	WaitLineBreak;
-	now BodyName of Player is "Racehorse"; [optional, custom infection for a loss sequence]
+	now BodyName of Player is "Racehorse"; [TODO: Add a Table of Random Critters entry for "Racehorse" (@Stadler#3007)]
 	now FaceName of Player is "Racehorse";
 	now TailName of Player is "Racehorse";
 	now SkinName of Player is "Racehorse";
 	now CockName of Player is "Racehorse";
+	trigger ending "Kyrverth Racehorse";
 	end the story saying "You have become a racehorse for the stables."; [one to two sentences in bold]
 
 instead of sniffing Racing Horseshoe:
@@ -1087,11 +1089,12 @@ to say goldensculptureuse:
 		say "     Being utterly [if Player is submissive]dominated[else]filled[end if] like this quickly brings to towards another orgasm, and just as you reach your peak the dragons head fills in and his [one of]handsome[or]strong[or]masculine[at random] [one of]grin[or]smile[at random] appears to the side of your vision as he knots you again and you both [one of]cry out[or]shout[or]scream[or]roar[at random] in pleasure. His [one of]strong[or]muscled[at random] arms hold you while you wait for the knot to go down. You rest in that place together, secure in the knowledge your new [if Player is submissive]master[else]mate[end if] will take care of you.";
 	WaitLineBreak;
 	[Make ending happen]
-	now BodyName of Player is "Golden Dragon"; [optional, custom infection for a loss sequence]
+	now BodyName of Player is "Golden Dragon"; [TODO: Add a Table of Random Critters entry for "Golden Dragon" (@Stadler#3007)]
 	now FaceName of Player is "Golden Dragon";
 	now TailName of Player is "Golden Dragon";
 	now SkinName of Player is "Golden Dragon";
 	now CockName of Player is "Golden Dragon";
+	trigger ending "Kyrverth Golden Dragon";
 	end the story saying "You have become a golden dragon."; [one to two sentences in bold]
 
 instead of sniffing Golden Sculpture:
@@ -1117,11 +1120,14 @@ to say tigersuituse:
 	say "feeling returns to you. Being a massive tiger doesn't feel that good at first, you stumble around trying to get your coordination back for an embarrassingly long time before finally realizing that your tail isn't just for show. Once you have your bearings, you look at yourself from head to toe.";
 	say "     8ft tall, your muscled body is a typical tiger, if a bit big. Your feet and paws seem a little too big for your body, but you can't complain for having better weapons in [bold type]this[roman type] city. Something else that seems slightly big is your sheath. Poking out is an ample cock for your body size, its size and spines at the tip are sure to please any future partner.";
 	WaitLineBreak;
-	now BodyName of Player is "Fighting Tiger"; [optional, custom infection for a loss sequence]
+	if BodyName of Player is listed in infections of TaurList:
+		add the ending flag "Taur Player";
+	now BodyName of Player is "Fighting Tiger"; [TODO: Add a Table of Random Critters entry for "Fighting Tiger" (@Stadler#3007)]
 	now FaceName of Player is "Fighting Tiger";
 	now TailName of Player is "Fighting Tiger";
 	now SkinName of Player is "Fighting Tiger";
 	now CockName of Player is "Fighting Tiger";
+	trigger ending "Kyrverth Fighting Tiger";
 	end the story saying "You have been consumed by the suit, and are now a fighting tiger."; [one to two sentences in bold]
 
 instead of sniffing Tiger Suit:
@@ -1129,48 +1135,28 @@ instead of sniffing Tiger Suit:
 
 Section 5 - Endings [TO BE COMPLETED 		...At some point.]
 
-when play ends: [Unique TF endings for using the items above]
-	if BodyName of Player is "Fighting Tiger": [Tiger Suit endings]
-		if BodyName of Player is listed in infections of taurlist: [Taur ending]
-			say "     The costume has already closed up around you, but hits a snag when your tauric body prevents it from closing completely. The second it has finished changing your main body, you feel a pulse sent backwards and as the pulse passes it makes the hairs on your rear end stand up. Slowly your tauric lower half changes to match your upper half. Looking at yourself, your body looks like one of the Tigertaurs at the zoo - if the Tigertaurs went to the gym. Returning to normal life is a laughable idea, your massive body keeps hitting things by accident and with your changed shape, sitting in an office just isn't an option. The good news is that you don't need to look far to find a new job. The military happily takes you on as you are able to fight like a normal soldier while carrying supplies for the entire group on your back.";
-		else if Player is Submissive: [sub ending]
-			say "     Your new body shivers, apparently not done changing. A black leather collar materializes around your neck. A black band with a D ring on the front, apparently your form has changed to match your submissive tendencies. Going back to normal life is all but impossible. Your thoughts almost constantly shift to sex and your form intimidates most normal people, at least when they aren't staring at your neck. While the leather collar isn't stuck to you, every time you leave it behind it finds its way back on to you within a few hours. You would suggest teleportation if you didn't know for sure it was impossible. It's not until a misread map leads you into a rather adult club that you find your true calling. While you are distracted someone sneaks up on you and by the time you feel the tug it's already too late, your new master has you leashed. You find yourself unable to resist commands while they hold the leash and are brought back to their house for a new stress free, submissive life.";
-			say "     After a while you don't even need the leash anymore, your body, or maybe your mind get accustomed to obeying such a dominant person and you obey [bold type]any[roman type] command. You didn't even realize it was possible, but an offhand comment has your cock shrinking and chest bulging. You always return to your base form after a few hours, but your body obeys commands to change just as readily as commands to move. Never having to worry about money, food, or other mundane concerns feels freeing, and you find yourself wishing this experience will never end.";
-		else if Player is Dominant: [Dominant Ending]
-			say "     Your new body shivers, apparently not done changing. A black leather harness materializes around your torso. An X across your chest, apparently your form has changed to match your dominant tendencies. Going back to normal life is all but impossible. Your thoughts almost constantly shift to sex and your form intimidates most normal people. While the leather harness on your chest isn't stuck to you, every time you leave it behind it finds its way back on to you within a few hours. You would suggest teleportation if you didn't know for sure it was impossible. The harness gets you some awkward questions when out and about and it's not until a misread map leads you into a gay bar that you find your true calling. Every week you visit a clients house and utterly dominate them for hours on end. This causes both of you great pleasure and at the end of the weekend they always pay handsomely.";
-		else: [Normal Ending]
-			say "     Going back to normal life is almost impossible, your body looks comical when you sit in the tiny chairs found in an office. At first you try to find work with being an escort, but while the ladies love your size compared to the average tiger, they find out it's just [bold type]too[roman type] big. Eventually you stumble into a gym and the friendly owner quickly takes you under his wing. You quickly find the world of fashion needs more underwear models and the world of celebrities needs more bodyguards. Working with your new friend in the gym, your skills in boxing begin to rise and you start taking on amateur bouts as well. Your new work life pays well, but at the end of the day you are now part tiger, and your body has needs. You find yourself trying the other side of the fence and loving it, since your massive penis seems to be a key that actually fits in many a guys backdoor.";
-	else if BodyName of Player is "Racehorse": [Racehorse shoe ending]
-		say "     After the military comes into the city, you stick with the folks at the Stables. Between regular orgies, you are an athlete of sorts. Representing the stables, you go up against the cheetahs from the Zoo and greyhounds from a gym across the city. You quickly develop a taste for winning, because the best prize isn't the money or mares, but the asses of the losers. Normal sex is sweetened massively by the thrill of victory, and you work hard to win. You put more and more effort into your training, and soon, the Stables is in contention for having the fastest team in the country.";
-	else if BodyName of Player is "Jackal King": [Jackal Mask Ending]
-		say "     Upon waking up, you look into the mirror you previously sought out. Looking back at you has [one of]no[or]little[or]barely any[at random] resemblance to what you were before. The mask has changed you completely into a jackal, and considering the markings, probably the jackal king. [if Player is female]Wait, the king? You feel your flat chest. Where did they go? You reach down and feel a telltale bulge. Oh... Your instincts distract you from your gender change and point you towards the rest of your body, and you take it all in. [end if]Standing at almost nine feet tall, your athletic body is toned but thin, and short, black hair covers you from your head to your new paws. Tall, pointed ears let you hear all around, and your handsomeness is accentuated by the golden markings painted on your face and body. Something inside of you nudges your brain away from admiring yourself and on to more pressing matters. A king cannot go without subjects!";
-		let randomnumber be a random number from 1 to 2;
-		if randomnumber is 1: [Ending 1]
-			say "     You immediately head to the mall and grab Nermine. One quick bonk to the head and she is out. You barely feel her weight when you put her on your shoulder and walk out. Nobody there tries to stop the kidnapping as they are all too intimidated to take action. You soon find a place to begin your rule. Nermine tries to escape but finds herself unable to resist against your commands. You find her body quick to change at your words, and soon, there is little left of the sassy shopkeep. It is not long until you and your voluptuous new queen begin to expand your domain. You find yourself able to overpower other infections and soon have a small empire at your command.";
-		else: [Ending 2]
-			say "     The museum - amusing how where you gained your infection will also be your starting place to spread it. Your incredibly strong infection overpowers others, and you soon find your dominion expanding. Nymphs and Satyrs are changed into jackal servants while sabretooth cats become sabretoothed jackals. It's not long before you don't even need to make contact with an individual[one of], just being nearby causes them to gain jackal traits[or] before they start to gain jackal traits[at random].";
-			let randomnumber be a random number from 1 to 2;
-			if randomnumber is 1: [Ending 2a]
-				say "     When the army comes in, you welcome them with open arms. Posing yourself as a generous savior, the military doesn't investigate much, preoccupied with more troublesome characters as they are. You set up in a nearby city, and it doesn't take long before you control most of it and get yourself appointed mayor.";
-			else: [Ending 2b]
-				say "     When the army comes in, you and your subjects meet them with force. At first, it is a soldier here and there, but as your 'army' grows, whole squads begin to disappear. By the time the military begins to realize that they are facing an organized enemy, you almost completely control the area. The military has no choice but to negotiate with you, and eventually, you are given the city as yours, as long as you clear out the rest of the infected for the military. The soldiers never notice how a good proportion of infected never make it out; they are just happy they don't have to deal with them any more. As your ranks swell, you have no intention of staying put - already looking towards expanding to other cities.";
-	else if BodyName of Player is "Golden Dragon": [Gold Dildo Ending]
-		if Player is male or player is herm:
-			say "     When the military enters the city, you are asleep and they mistake you for a golden statue at first, you give them a bit of a surprise when the 'statue' wakes up, but you quickly make friends with the soldiers and they escort you to the border wall where you are examined by scientists. Unlike most people they keep you for three days and take lots of samples, especially from your scales. It's not until you ask a nearby colonel what is so interesting about your scales that the scientists are busted, your scales contain gold! They were melting them down, scraping off the organic stuff, and selling it for money. The military quickly issues you with a formal apology and releases you into the world, hoping to sweep it under the rug.";
-			LineBreak;
-			say "     For a while you drift around from place to place, finding it hard to hold a job other than the hardest of manual labor due to walking on all fours, but eventually you end up in the mountains of Japan. You copy some of the scientists, sell your shedded scales for money and use the money to build a sanctuary deep into the mountains - dedicated to infected people like yourself who have trouble fitting into normal society.";
-			say "     Your sanctuary becomes wildly popular, with many infected individuals coming from far and wide to be able to live in peace and not have to worry about making ends meet. Driven by some unknown instinct you have them swear an oath to you before they can enter the sanctuary, making you their lord and protector. At first you do this as a deterrent, to make sure the persons arriving really want to be there, but when the first person makes the oath you find out why the instinct is there - your horns grow! It is an extremely strange sensation to feel them grow out each time someone swears to you, but by the time the arrivals to your sanctuary begin to slow you have a massive pair of what looks like antlers and you are extremely proud of them.";
-			WaitLineBreak;
-			say "     'Normal' human media attempts to do a story on your sanctuary a few times, but each time you stop them at a narrow area of the path and stop them from going any further. Your residents are not to be gawked at, they are there to live their lives in peace. Your majestic figure silhouetted against the sun and the idea of the location slowly become legend for the downtrodden infected of society.";
-		else if Player is female:
-			say "     When the military enters the city, you both greet them with open arms and as soon as you are released you head into distant mountains. Your mate turns out to be able to create gold from thin air, and he uses it to buy a home for you both. The two of you passionately make love regularly and quickly the military determination of 'not infectious' turns out to be a falsehood, first your skin starts to become scales, then you begin to take on more and more draconic traits to match your mate. He delights in your changes and the love between you only deepens when your belly begins to expand with his child.";
-		else if Player is neuter:
-			say "     When the military enters the city, you both greet them with open arms and as soon as you are released you head into distant mountains. Your mate turns out to be able to create gold from thin air, and he uses it to buy a home for you both. The two of you passionately make love regularly and quickly the military determination of 'not infectious' turns out to be a falsehood, first your skin starts to become scales, then you begin to take on more and more draconic traits to match your mate. He loves that your changes make you more like him and the love between you only deepens though the years";
-	[]
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Kyrverth's Epilogue"	"NPC"	""	Kyrverth's Epilogue rule	90	false
+"Kyrverth Jackal King"	"Special"	""	Kyrverth Jackal King rule	97	false
+"Kyrverth Racehorse"	"Special"	""	Kyrverth Racehorse rule	97	false
+"Kyrverth Golden Dragon"	"Special"	""	Kyrverth Golden Dragon rule	97	false
+"Kyrverth Fighting Tiger"	"Special"	""	Kyrverth Fighting Tiger rule	97	false
+
+This is the Kyrverth's Epilogue rule:
+	[ [If those endings ever get finished use this rather than multiple trigger ending calls.]
+	if KyrverthStage is 0 and (KyrverthEndingTimer - turns >= 24):
+		make no decision;
+	if HP of Kyrverth is 0:
+		make no decision;
+	trigger ending "Kyrverth's Epilogue"; [Here it states, that the ending has been played.]
+	]
 	if KyrverthStage is 0 and (KyrverthEndingTimer - turns < 24): [Met him and never went to the dragons den, saw him in the last 3 days.]
+		trigger ending "Kyrverth's Epilogue"; [Here it states, that the ending has been played.]
 		say "     In the aftermath of the Military reentering the city you hear rumors of [one of]a little dragon that was found trying to rob a jewelry store and had to be tranquilized to be parted with his 'treasure'. You hope that the little dragon you met is OK[or]a ferocious dragon that had set up shop in an old gold mine that the military had trouble with. You wonder if it was the same dragon that you met and wonder what happened to make him so dangerous[at random].";
 	[Aftermath text for Kyrverth. Needs to cover stages 0-6. Coming Soon(TM)]
 	[if (hp of Kyrverth > 0): [player met him and got as far as seeing him as an NPC]
+		trigger ending "Kyrverth's Epilogue"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10: [player went feral]
 			if hp of Kyrverth is 1: [Kyrverth is at the mall when the game ends]
 				if KyrverthRelationship < XXX: [non relationship ending]
@@ -1193,5 +1179,59 @@ when play ends: [Unique TF endings for using the items above]
 					say "     ...";
 				else if KyrverthRelationship > XXX: [relationship ending]
 					say "     ...";]
+
+[Unique TF endings for using the items above]
+This is the Kyrverth Jackal King rule:
+	if ending "Kyrverth Jackal King" is triggered:
+		say "     Upon waking up, you look into the mirror you previously sought out. Looking back at you has [one of]no[or]little[or]barely any[at random] resemblance to what you were before. The mask has changed you completely into a jackal, and considering the markings, probably the jackal king. [if Player is female]Wait, the king? You feel your flat chest. Where did they go? You reach down and feel a telltale bulge. Oh... Your instincts distract you from your gender change and point you towards the rest of your body, and you take it all in. [end if]Standing at almost nine feet tall, your athletic body is toned but thin, and short, black hair covers you from your head to your new paws. Tall, pointed ears let you hear all around, and your handsomeness is accentuated by the golden markings painted on your face and body. Something inside of you nudges your brain away from admiring yourself and on to more pressing matters. A king cannot go without subjects!";
+		let randomnumber be a random number from 1 to 2;
+		if randomnumber is 1: [Ending 1]
+			say "     You immediately head to the mall and grab Nermine. One quick bonk to the head and she is out. You barely feel her weight when you put her on your shoulder and walk out. Nobody there tries to stop the kidnapping as they are all too intimidated to take action. You soon find a place to begin your rule. Nermine tries to escape but finds herself unable to resist against your commands. You find her body quick to change at your words, and soon, there is little left of the sassy shopkeep. It is not long until you and your voluptuous new queen begin to expand your domain. You find yourself able to overpower other infections and soon have a small empire at your command.";
+		else: [Ending 2]
+			say "     The museum - amusing how where you gained your infection will also be your starting place to spread it. Your incredibly strong infection overpowers others, and you soon find your dominion expanding. Nymphs and Satyrs are changed into jackal servants while sabretooth cats become sabretoothed jackals. It's not long before you don't even need to make contact with an individual[one of], just being nearby causes them to gain jackal traits[or] before they start to gain jackal traits[at random].";
+			let randomnumber be a random number from 1 to 2;
+			if randomnumber is 1: [Ending 2a]
+				say "     When the army comes in, you welcome them with open arms. Posing yourself as a generous savior, the military doesn't investigate much, preoccupied with more troublesome characters as they are. You set up in a nearby city, and it doesn't take long before you control most of it and get yourself appointed mayor.";
+			else: [Ending 2b]
+				say "     When the army comes in, you and your subjects meet them with force. At first, it is a soldier here and there, but as your 'army' grows, whole squads begin to disappear. By the time the military begins to realize that they are facing an organized enemy, you almost completely control the area. The military has no choice but to negotiate with you, and eventually, you are given the city as yours, as long as you clear out the rest of the infected for the military. The soldiers never notice how a good proportion of infected never make it out; they are just happy they don't have to deal with them any more. As your ranks swell, you have no intention of staying put - already looking towards expanding to other cities.";
+		exclude "Infection" endings;
+		exclude "NPCSharedInfection" endings;
+
+This is the Kyrverth Golden Dragon rule:
+	if ending "Kyrverth Golden Dragon" is triggered:
+		if Player is male or player is herm:
+			say "     When the military enters the city, you are asleep and they mistake you for a golden statue at first, you give them a bit of a surprise when the 'statue' wakes up, but you quickly make friends with the soldiers and they escort you to the border wall where you are examined by scientists. Unlike most people they keep you for three days and take lots of samples, especially from your scales. It's not until you ask a nearby colonel what is so interesting about your scales that the scientists are busted, your scales contain gold! They were melting them down, scraping off the organic stuff, and selling it for money. The military quickly issues you with a formal apology and releases you into the world, hoping to sweep it under the rug.";
+			LineBreak;
+			say "     For a while you drift around from place to place, finding it hard to hold a job other than the hardest of manual labor due to walking on all fours, but eventually you end up in the mountains of Japan. You copy some of the scientists, sell your shedded scales for money and use the money to build a sanctuary deep into the mountains - dedicated to infected people like yourself who have trouble fitting into normal society.";
+			say "     Your sanctuary becomes wildly popular, with many infected individuals coming from far and wide to be able to live in peace and not have to worry about making ends meet. Driven by some unknown instinct you have them swear an oath to you before they can enter the sanctuary, making you their lord and protector. At first you do this as a deterrent, to make sure the persons arriving really want to be there, but when the first person makes the oath you find out why the instinct is there - your horns grow! It is an extremely strange sensation to feel them grow out each time someone swears to you, but by the time the arrivals to your sanctuary begin to slow you have a massive pair of what looks like antlers and you are extremely proud of them.";
+			WaitLineBreak;
+			say "     'Normal' human media attempts to do a story on your sanctuary a few times, but each time you stop them at a narrow area of the path and stop them from going any further. Your residents are not to be gawked at, they are there to live their lives in peace. Your majestic figure silhouetted against the sun and the idea of the location slowly become legend for the downtrodden infected of society.";
+		else if Player is female:
+			say "     When the military enters the city, you both greet them with open arms and as soon as you are released you head into distant mountains. Your mate turns out to be able to create gold from thin air, and he uses it to buy a home for you both. The two of you passionately make love regularly and quickly the military determination of 'not infectious' turns out to be a falsehood, first your skin starts to become scales, then you begin to take on more and more draconic traits to match your mate. He delights in your changes and the love between you only deepens when your belly begins to expand with his child.";
+		else if Player is neuter:
+			say "     When the military enters the city, you both greet them with open arms and as soon as you are released you head into distant mountains. Your mate turns out to be able to create gold from thin air, and he uses it to buy a home for you both. The two of you passionately make love regularly and quickly the military determination of 'not infectious' turns out to be a falsehood, first your skin starts to become scales, then you begin to take on more and more draconic traits to match your mate. He loves that your changes make you more like him and the love between you only deepens though the years";
+		exclude "Infection" endings;
+		exclude "NPCSharedInfection" endings;
+
+This is the Kyrverth Racehorse rule:
+	if ending "Kyrverth Racehorse" is triggered:
+		say "     After the military comes into the city, you stick with the folks at the Stables. Between regular orgies, you are an athlete of sorts. Representing the stables, you go up against the cheetahs from the Zoo and greyhounds from a gym across the city. You quickly develop a taste for winning, because the best prize isn't the money or mares, but the asses of the losers. Normal sex is sweetened massively by the thrill of victory, and you work hard to win. You put more and more effort into your training, and soon, the Stables is in contention for having the fastest team in the country.";
+		exclude "Infection" endings;
+		exclude "NPCSharedInfection" endings;
+
+This is the Kyrverth Fighting Tiger rule:
+	if ending "Kyrverth Fighting Tiger" is triggered:
+		if the ending flag "Taur Player" is set: [Taur ending]
+			say "     The costume has already closed up around you, but hits a snag when your tauric body prevents it from closing completely. The second it has finished changing your main body, you feel a pulse sent backwards and as the pulse passes it makes the hairs on your rear end stand up. Slowly your tauric lower half changes to match your upper half. Looking at yourself, your body looks like one of the Tigertaurs at the zoo - if the Tigertaurs went to the gym. Returning to normal life is a laughable idea, your massive body keeps hitting things by accident and with your changed shape, sitting in an office just isn't an option. The good news is that you don't need to look far to find a new job. The military happily takes you on as you are able to fight like a normal soldier while carrying supplies for the entire group on your back.";
+		else if Player is Submissive: [sub ending]
+			say "     Your new body shivers, apparently not done changing. A black leather collar materializes around your neck. A black band with a D ring on the front, apparently your form has changed to match your submissive tendencies. Going back to normal life is all but impossible. Your thoughts almost constantly shift to sex and your form intimidates most normal people, at least when they aren't staring at your neck. While the leather collar isn't stuck to you, every time you leave it behind it finds its way back on to you within a few hours. You would suggest teleportation if you didn't know for sure it was impossible. It's not until a misread map leads you into a rather adult club that you find your true calling. While you are distracted someone sneaks up on you and by the time you feel the tug it's already too late, your new master has you leashed. You find yourself unable to resist commands while they hold the leash and are brought back to their house for a new stress free, submissive life.";
+			say "     After a while you don't even need the leash anymore, your body, or maybe your mind get accustomed to obeying such a dominant person and you obey [bold type]any[roman type] command. You didn't even realize it was possible, but an offhand comment has your cock shrinking and chest bulging. You always return to your base form after a few hours, but your body obeys commands to change just as readily as commands to move. Never having to worry about money, food, or other mundane concerns feels freeing, and you find yourself wishing this experience will never end.";
+		else if Player is Dominant: [Dominant Ending]
+			say "     Your new body shivers, apparently not done changing. A black leather harness materializes around your torso. An X across your chest, apparently your form has changed to match your dominant tendencies. Going back to normal life is all but impossible. Your thoughts almost constantly shift to sex and your form intimidates most normal people. While the leather harness on your chest isn't stuck to you, every time you leave it behind it finds its way back on to you within a few hours. You would suggest teleportation if you didn't know for sure it was impossible. The harness gets you some awkward questions when out and about and it's not until a misread map leads you into a gay bar that you find your true calling. Every week you visit a clients house and utterly dominate them for hours on end. This causes both of you great pleasure and at the end of the weekend they always pay handsomely.";
+		else: [Normal Ending]
+			say "     Going back to normal life is almost impossible, your body looks comical when you sit in the tiny chairs found in an office. At first you try to find work with being an escort, but while the ladies love your size compared to the average tiger, they find out it's just [bold type]too[roman type] big. Eventually you stumble into a gym and the friendly owner quickly takes you under his wing. You quickly find the world of fashion needs more underwear models and the world of celebrities needs more bodyguards. Working with your new friend in the gym, your skills in boxing begin to rise and you start taking on amateur bouts as well. Your new work life pays well, but at the end of the day you are now part tiger, and your body has needs. You find yourself trying the other side of the fence and loving it, since your massive penis seems to be a key that actually fits in many a guys backdoor.";
+		exclude "Infection" endings;
+		exclude "NPCSharedInfection" endings;
+
 
 Kyrverth ends here.

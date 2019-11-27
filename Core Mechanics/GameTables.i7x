@@ -699,7 +699,6 @@ Name(text)	Type(text)
 "knightcrestnum"	"number"
 "KoballoonLossCounter"	"number"
 "KoballoonMet"	"number"
-"KoballoonSexBadEnd"	"number"
 "koboldgangmet"	"number"
 "koboldgangsubs"	"number"
 "KoboldScaleColor"	"number"

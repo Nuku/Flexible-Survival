@@ -593,8 +593,13 @@ to Anastasiasexchange:
 
 Section 8 - Endings
 
-when play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Anastasia's Epilogue"	"NPC"	""	Anastasia's Epilogue rule	90	false
+
+This is the Anastasia's Epilogue rule:
 	if HP of Anastasia >= 7:
+		trigger ending "Anastasia's Epilogue"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     Not long after your mind falls and you are lost to the infection, there is a fiery column which rises into the air. There is a triumphant ring to it, though also a hint of sadness. You do not notice this event, too caught up in your new, lustful existence.";
 		else:
