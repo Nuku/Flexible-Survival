@@ -255,8 +255,6 @@ when play begins:
 	add Watering Hole to BadSpots of MaleList;
 	add Watering Hole to BadSpots of FurryList;
 
-WateringHoleBadEnd is a number that varies. WateringHoleBadEnd is usually 0.
-
 Instead of resolving a Watering Hole:
 	choose row MonsterID in Table of Random Critters;
 	setmonster "Bald Eagle";
@@ -295,8 +293,8 @@ Instead of resolving a Watering Hole:
 				say "     The trip to his nest is a blur of baser instincts. One moment, you're soaring through the skies, dancing with your lover in an intricate mating display; the next, you're landing in a conifer near an idyllic lake, the city a distant silhouette on the horizon. Your eagle mate is quick to press you down against his nest, a cushy bed of natural materials and manmade goods. The blanket you rest on smells strongly of the eagle male's scent, a heady blend of feathers, pine, and avian sex that makes you want to bury your face in it forever.";
 				say "     Your legs are [if Player is female]spread apart[else]pushed up and spread[end if] as he presses in against you from above, keeping you pinned beneath his supple weight. Your mate aligns his dripping cocktip with your [if Player is female]slick and wanting folds, smearing that pulsing, bestial length against your needy cunt[else]eager rear entrance, smearing that pulsing, bestial length around your rim[end if] before aligning it properly. He sinks himself inside of you with a single claiming stroke, stretching your [if Player is female]slavering pussy[else]hungry hole[end if] around him, every nerve in your body aching to be taken by the dominant male. His large wings cast a tarp over your body, obscuring your vision to what dim light flitters through his dense brown plumage. His possessive embrace keeps you mired in his arousing scent while he fucks you through several powerful orgasms, stretching you wide around that ample eagle cock throughout. [if Player is herm]Each hot squirt and spurt of your cum takes with it the last vestiges of your humanity, leaving[else if Player is female]Each hot squirt of femcum around his rigid dick takes with it the last vestiges of your humanity, leaving[else if Player is male]Each strained spurt from your [cock size desc of Player] cock[smn] takes with it the last vestiges of your humanity, leaving[else]The hot and wild sex leaves[end if] no room for anything in your broken mind but the desire to be [if Player is impreg_ok]a horny, well-bred receptacle for his eggs, nothing but a vessel to be stuffed with and impregnated by[else]his slutty mate and plaything, nothing but a vessel to be stuffed and bloated with[end if] his amazing eagle seed for the rest of your simple existence.";
 				wait for any key;
-				now WateringHoleBadEnd is 1; [See the Bald Eagle file for the ending]
 				now humanity of Player is 0;
+				trigger ending "Watering Hole Bad End";
 				end the story saying "You have given yourself over to your handsome eagle mate.";
 		else:
 			say "     He seems upset that you've refused his offer, but lets you approach the pond to take some water regardless. His hands move back to his cock, stroking and pumping at it casually. As you lean in to take some water though, he quickly swoops in to attack you and you stumble back a few steps away from the pond onto firmer soil and prepare to fight. It seems he'll try to have his way with you, regardless of your wishes.";
@@ -392,5 +390,20 @@ Instead of resolving a Treasure Hunters:
 		increase score by 1;
 		now Resolution of Treasure Hunters is 6; [Player is not Gang Member]
 	now Treasure Hunters is resolved;
+
+
+Section 10 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Watering Hole Bad End"	"BadEnd"	""	Watering Hole Bad End rule	2	false
+
+This is the Watering Hole Bad End rule:
+	if ending "Watering Hole Bad End" is triggered:
+		say "     Giving yourself over to your insatiable avian mate, you are reduced to nothing more than his lusty, [if Player is impreg_ok]egg-bearing[else]well-fucked[end if] [if Player is puremale]he-hen[else]hen[end if], a mindless toy and nest warmer who welcomes his presence with worshipful attention. The studly male sustains your lifestyle with frequent hunting flights, spending long hours scavenging supplies for his favorite sedentary fucktoy. At times it feels like an eternity before he returns, and once he does, your libido drives you to beg for him to claim you, all other needs secondary to your altered body's demands. You fuck, then feast, then fuck again, losing yourself in a blur of pleasure as you writhe against each other in the makeshift, cum-soaked bedding.";
+		say "     Over time, the details of your past life grow hazier, then disappear altogether. After one session, you find that you can't even remember your name - not that you'd need to, what with this handsome hunk to do all the thinking for you. You shiver at the thought of others sharing this simple-minded bliss, and you eagerly accompany your partner when he violates those unlucky few who enter your hunting territory, sharing the ecstasy of the infection by transforming them into sexy little eagle-morphs like you. Though he spends long hours grooming them as he did you on that fateful day, you take solace in the fact that soon you'll be entwined again, reunited with your mate in a mindless fucking frenzy.";
+		say "     When the military arrives, your safe distance from the city provides you with a distant vantage to observe their operations. By then, you have only dim awareness of their actions, much preferring devoting every waking second to wrapping your tongue around your mate's hard avian cock or pushing back against his waist as he bucks into your [if Player is female]needy, gripping folds[else]horny, cum-sullied asshole[end if]. The sweltering heat of sex eventually becomes your whole world, little more than a hollow shell of a conscience whose simple sapience is limited to chirping and moaning for more cock[if Player is impreg_ok], more cum, and more eggs for your ever-growing brood[else] and more cum, his horny buttslut to pin and ravage to his infectious, corrupted content[end if], soon knowing nothing more than the instinct-driven bliss that permeates you to your core.";
+		the Player is gone;
+
 
 Dry Plains Events ends here.

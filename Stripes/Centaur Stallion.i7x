@@ -326,8 +326,13 @@ the scent of centaur hair is "The hairs smell of women and horses, and the dry p
 
 Section 5 - Endings
 
-when play ends:
-	if BodyName of Player is "Centaur Stallion" or BodyName of Player is "Centaur Mare":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Centaur Stallion Infection"	"Infection"	""	Centaur Stallion Infection rule	100	false
+
+This is the Centaur Stallion Infection rule:
+	if Player has a body of "Centaur Stallion" or Player has a body of "Centaur Mare":
+		trigger ending "Centaur Stallion Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     As your infection spreads within you, you find yourself drawn back to the open plains at the edge of the city. There, you seek out the other centaurs and join their herd";
 			if Player is herm:

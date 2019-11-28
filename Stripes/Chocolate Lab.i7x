@@ -383,8 +383,13 @@ this is the Choclab piggyback rule:
 
 Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "Chocolate Lab":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Chocolate Lab Infection"	"Infection"	""	Chocolate Lab Infection rule	100	false
+
+This is the Chocolate Lab Infection rule:
+	if Player has a body of "Chocolate Lab":
+		trigger ending "Chocolate Lab Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if labhost is 4: [lost to three labs; big dog ending]
 				say "     You wander the streets, drawn by your nose to seek out chocolate, which you ingest ravenously wherever found, and eventually your nose has you cross paths with another of those confectionary canines. Your mouth fills with thick, chocolaty saliva as you eye the smaller dog hungrily, but before you can make your move, the smaller lab spots you and makes a run for it.";

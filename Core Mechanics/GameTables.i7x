@@ -189,7 +189,6 @@ Name(text)	Type(text)
 "BastetApproval"	"number"
 "BastetSexBattleCount"	"number"
 "battleitem"	"number"
-"bcending"	"number"
 "bclatearrival"	"number"
 "bcuntethered"	"number"
 "beatgrnymph"	"number"
