@@ -1194,9 +1194,14 @@ When Play begins:
 
 Section 4 - Endings
 
-when play ends:
-	if humanity of Player < 10:
-		if BodyName of Player is "German Shepherd Male" or BodyName of Player is "German Shepherd Bitch":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"German Shepherd Infection"	"Infection"	""	German Shepherd Infection rule	100	false
+
+This is the German Shepherd Infection rule:
+	if Player has a body of "German Shepherd Male" or Player has a body of "German Shepherd Bitch":
+		trigger ending "German Shepherd Infection"; [Here it states, that the ending has been played.]
+		if humanity of Player < 10:
 			if gsd_pet > 0 and gsd_pet < 10:
 				if Player is herm:			[HERM]
 					say "     You don't know what to do. Your mind is a swirl of confused thoughts and you sink to all fours, sobbing and staining the ground with your tears, and precum, cock dripping to the ground in thick strands, cunt leaking honey down along it, making quite a mess. He finds you, though, the German shepherd. His presence becomes clear when his tongue runs across your crotch, up along your male and female genders in one firm motion. You tense and gasp, and turn to look, but he's already clambering up on you, thrusting into his property, you. You feel complete, and sing out in pleasure as he breeds you. Your seed splashes across the ground as you cum with him, filled with his potent seed. When you've calmed down, he guides you to the pack, where you will remain for the rest of your life.";
@@ -1214,8 +1219,7 @@ when play ends:
 					say "     Ever hear of the big bad wolf? It was the last thought that fluttered through your fading mind. You dropped to all fours, cock wagging under you as you prowled the streets, preying on anything with a hole. You develop a preference for mutants, and discover the pleasure of filling different beasts with your hybrid canine pups, at least until you fall into the sewers one day. With a bruised ankle, you watched fearfully as a strange, canine-like mutant approached you. She had a pouch, and several large breasts, and she was dual gendered. She drew you to a breast and let you drink of her sweet milk until the pain stopped, then pushed you onto your back roughly and fucked herself with your cock for six hours. By the time the marathon was over, your animal-like mind had decided she was your alpha, and you remained her loyal stud dog ever since.";
 [			else:			[***]
 				say "Succumbed w/Korvin tamed.";]
-	else:
-		if BodyName of Player is "German Shepherd Male" or BodyName of Player is "German Shepherd Bitch":
+		else:
 			say "     When the military forces come in to rescue what citizens they can, you go along with them. Being mostly canine in form, you go along readily with them. Your body, compared to others they've seen, raises little concern among the military. As a canine, you are given an offer to join the military, trying to appeal to your instincts for loyalty, but you feel you are too [if gsd_pet > 1 and gsd_pet < 10]submissive[else]independent[end if] to make a good recruit and decline.";
 			if gsd_pet > 0 and gsd_pet < 10:
 				if Player is herm:			[HERM]
