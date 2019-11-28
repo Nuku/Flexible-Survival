@@ -1596,7 +1596,7 @@ to dolboundstate:
 				now combat abort is 1;
 				WaitLineBreak;
 				now Trixieexit is 1;
-				trigger ending "Dolpin Suit Trapped";
+				trigger ending "Dolphin Suit Trapped";
 				end the story saying "Trapped in the inflatable dolphin suit, your mind slowly fades away until there are no thoughts left in your air-filled head but that of playing at the beach.";
 			else:
 				let k be 0;
@@ -1838,7 +1838,7 @@ to say dolcheckA:		[empty]
 		now battleground is "void";
 		now combat abort is 1;
 		WaitLineBreak;
-		trigger ending "Dolpin Suit Trapped";
+		trigger ending "Dolphin Suit Trapped";
 		end the story saying "Trapped in the inflatable dolphin suit, your mind slowly fades away until there are no thoughts left in your air-filled head but that of playing at the beach.";]
 
 

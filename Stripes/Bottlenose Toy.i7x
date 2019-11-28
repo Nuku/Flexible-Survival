@@ -209,7 +209,7 @@ to say losetodolphinflatable:
 				now battleground is "void";
 				now combat abort is 1;
 				WaitLineBreak;
-				trigger ending "Dolpin Suit Trapped";
+				trigger ending "Dolphin Suit Trapped";
 				end the story saying "Trapped in the inflatable dolphin suit, your mind slowly fades away until there are no thoughts left in your air-filled head but that of playing at the beach.";
 				stop the action;
 ]
@@ -355,7 +355,7 @@ to bottleboundstate:
 			now combat abort is 1;
 			WaitLineBreak;
 			now Trixieexit is 1;
-			trigger ending "Dolpin Suit Trapped";
+			trigger ending "Dolphin Suit Trapped";
 			end the story saying "Trapped in the inflatable dolphin suit, your mind slowly fades away until there are no thoughts left in your air-filled head but that of playing at the beach.";
 		else:
 			let k be 0;
@@ -653,11 +653,11 @@ Section 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Dolpin Suit Trapped"	"BadEnd"	""	Dolpin Suit Trapped rule	2	false
+"Dolphin Suit Trapped"	"BadEnd"	""	Dolphin Suit Trapped rule	2	false
 "Bottlenose Toy Infection"	"Infection"	""	Bottlenose Toy Infection rule	100	false
 
-This is the Dolpin Suit Trapped rule:
-	if ending "Dolpin Suit Trapped" is triggered:
+This is the Dolphin Suit Trapped rule:
+	if ending "Dolphin Suit Trapped" is triggered:
 		say "     Safely stored away in the [if dolphinmode is 3]floating bouncy castle[else]small storage building[end if], you are continuously pleasured by the dolphin suit wrapped around you. What little remains of your fading mind is vaguely aware that you're being changed by the slick inner walls rubbing against you. You are unclear on what's happening and don't really care, your thoughts evaporating away as you become as empty and airheaded as those cute girls on the beach. After some time has passed (probably a few days, though you were unable to count them as you were only dimly aware of the growing and fading light outside), several of the girls return to the [if dolphinmode is 3]colorful castle[else]building[end if] and remove you and the inflatable dolphin suit.";
 		say "     Snuggling and kissing it, they slowly open it up and release you. Their fin-hands run over your new, smooth skin and inflatable body, having been transformed a new feral dolphin toy. You are happy to be released and merrily play with several of the girls in the water while one of them licks the inside of the suit clean and bundles it up for the next happy victim they can find to put into it.";
 		if Player is male:
