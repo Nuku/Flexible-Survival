@@ -42,13 +42,15 @@ to say losetomagicdrake:
 			say "     [if HP of Player > 0]Submitting yourself to the dragoness's whims rather than fight further, you[else]Resisting as best you can, you can eventually fight no longer and[end if] are groped and manhandled by your assailant. Her clawed hands squeeze, pinch and fondle you all over, inspecting your [bodydesc of Player] body, especially your ass. While this is going on, she is also grinding her throbbing cock over you, a five foot pillar of green flesh that drools thick precum. 'Mmm... yes... I can work with this.'";
 			say "     Having reached some kind of decision, she takes her staff and slaps its headpiece against your ass repeatedly. 'Gj v fem yenf wef bmjl jbrab Ahrtob's sab-n-datbjl,' she chants incomprehensibly. Tingles run through your flesh beyond just the sting of the spanking. Looking back, you can see a glowing aura around the end of the staff that seems to spew forth from the golden phallus. It clings to you and seeps into your ass, inducing a transformation to make it fuller and rounded. As the dragoness cums, veritably soaking you in her excessive spooge, there comes an orgasmically pleasurable surge through you and a long, reptilian tail forms at your rear.";
 			now TailName of Player is "Magic Drake";
-			now tail of Player is tail entry;
+			now TailSpeciesName of Player is "Magic Drake";
+			now Tail of Player is tail entry;
 			now mdasslevel is 2;
 		else:
 			say "     [if HP of Player > 0]Submitting yourself to the dragoness's whims rather than fight further, you[else]Resisting as best you can, you can eventually fight no longer and[end if] are groped and manhandled by your assailant. She eyes your altered ass and gives it a hard swat. 'Oh, this will not do at all. Where's the fine booty we were working on? You're a naughty familiar and deserve to be punished,' she says with a teasing growl. She grinds her throbbing cock against you, that five foot pillar of green flesh drooling precum onto you.";
 			say "     Drawing upon her magical powers, she takes her staff and slaps its headpiece against your ass repeatedly. 'Gj v fem yenf wef bmjl jbrab Ahrtob's sab-n-datbjl,' she chants incomprehensibly. Tingles run through your flesh beyond just the sting of the spanking. Looking back, you can see a glowing aura around the end of the staff that seems to spew forth from the golden phallus. It clings to you and seeps into your ass, inducing a transformation to make it fuller and rounded. As the dragoness cums, veritably soaking you in her excessive spooge, there comes an orgasmically pleasurable surge through you and a long, reptilian tail forms at your rear[if mdasslevel is 3]. By the time her spell's completed, that plump, rounded booty from before has returned[else if mdasslevel is 4]. By the time her spell's completed, that impressively large booty from before has returned[else if mdasslevel is 5]. By the time her spell's completed, that huge booty from before has returned[else if mdasslevel is 6]. By the time her spell's completed, that titanic mega-booty from before has returned[end if].";
 			now TailName of Player is "Magic Drake";
-			now tail of Player is tail entry;
+			now TailSpeciesName of Player is "Magic Drake";
+			now Tail of Player is tail entry;
 	else if mdasslevel < 2:		[first loss, but already infected]
 		say "     [if HP of Player > 0]Submitting yourself to the dragoness's whims rather than fight further, you[else]Resisting as best you can, you can eventually fight no longer and[end if] are groped and manhandled by your assailant. Her clawed hands squeeze, pinch and fondle you all over, inspecting your [bodydesc of Player] body, especially your ass. While this is going on, she is also grinding her throbbing cock over you, a five foot pillar of green flesh that drools thick precum. 'Mmm... yes... Already started, I see. All the better; I can certainly work with this.'";
 		say "     Having reached some kind of decision, she grabs you by your draconic tail and easily raises your ass in the air. Holding you like that with one arm, she swings her staff with the other, swatting your rear with it. 'Mbk feth jsic rf'btvr fem yn wef bmjl jbra Wj-Thiban jc febj gibs sa,' she chants incomprehensibly. Tingles run through your flesh beyond just the sting of the spanking. Looking back, you can see a glowing aura around the end of the staff that seems to spew forth from the golden phallus. It clings to you and seeps into your ass, inducing a transformation to make it fuller and rounded. As the dragoness cums, veritably soaking you in her excessive spooge, you feel it and the magic seeping into you, corrupting you further even as your ass plumps up a little more.";
@@ -453,6 +455,7 @@ to say beatthemagicdrake:
 								say ". The tingly energy floods your senses and flows into you, causing your head to transform. You can feel your cranium pulse and throb, building up until there comes a loud snap. More pops and snaps follow as your head shifts and reshapes itself. A draconic muzzle pushes forth and a pair of small horns grow on the top of your head";
 								choose row MonsterID from the Table of Random Critters;
 								now FaceName of Player is "Magic Drake";
+								now FaceSpeciesName of Player is "Magic Drake";
 								now Face of Player is face entry;
 							say ". The dragoness laughs at your feeble attempt to use her magic.";
 							now mdstaffface is true;
@@ -491,6 +494,7 @@ to say beatthemagicdrake:
 									say "     The magic doesn't quite end up working as expected though, spraying all across your groin. It seeps into your crotch with a pleasant tingle that suffuses your [if Player is herm]cock[smn] and cunt[sfn][else if Player is male]cock[smn][else]cunt[sfn][end if]. The magical energy clings to your sensitive loins and sinks right into them, causing them to shift and change[if Player is herm]. The flesh of your loins changes and your manhood and your pussy lips are transformed[else if Player is male]. The flesh of your loins changes and your manhood is transformed[else]. The flesh of your loins changes and your pussy lips are transformed[end if], taking on a rich, green hue as you become infected, much to the dragoness's amused delight.";
 									choose row MonsterID from the Table of Random Critters;
 									now CockName of Player is "Magic Drake";
+									now CockSpeciesName of Player is "Magic Drake";
 									now Cock of Player is cock entry;
 									increase Libido of Player by 5;
 								else if mdstaffaction is 5:		[cock growth]
@@ -556,6 +560,7 @@ to say mdrake_pvictory_03:
 		if CockName of Player is not "Magic Drake":
 			say "     Having your genitals overloaded with the dragoness's semen has left your penis transformed. While human-like in shape, it is now made of green flesh and your pubic hair has been replaced by a patch of green scales. You can feel a warmth in your balls as your semen is corrupted and transformed by the lingering dragon cum still in there, making it draconic as well.";
 			now CockName of Player is "Magic Drake";
+			now CockSpeciesName of Player is "Magic Drake";
 			now Cock of Player is cock entry;
 			if Ball Size of Player < 36:
 				increase Ball Size of Player by ( 50 - Ball Size of Player ) / 10;
@@ -652,10 +657,11 @@ to say mdstaff_overgrown:
 			follow the sex change rule;
 		if Libido of Player < 45, now Libido of Player is 45;
 		wait for any key;
+		trigger ending "Magic Dragoness's Familiar";
 		end the story saying "Having accepted your role as the dragoness's familiar, you go off with the sorceress.";
 		now battleground is "void";
-		wait for any key;
 		follow the turnpass rule;
+		wait for any key;
 		stop the action;
 
 
@@ -859,11 +865,27 @@ to say mdscaletweak:
 	else:
 		now scale entry is 3;
 
+
 Section 3 - Endings
 
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Magic Dragoness's Familiar"	"Leaving"	""	Magic Dragoness's Familiar rule	10	false
+"Magic Dragoness's Servant"	"Leaving"	""	Magic Dragoness's Servant rule	10	false
+["Magic Drake Infection"	"Infection"	""	Magic Drake Infection rule	100	false]
+
+This is the Magic Dragoness's Familiar rule:
+	if ending "Magic Dragoness's Familiar" is triggered:
+		the Player has left;
+
+This is the Magic Dragoness's Servant rule:
+	if ending "Magic Dragoness's Servant" is triggered:
+		the Player has left;
+
 [
-when play ends:
-	if BodyName of Player is "Magic Drake":
+This is the Magic Drake Infection rule:
+	if Player has a body of "Magic Drake":
+		trigger ending "Magic Drake Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You succumb to your template infection.";
 		else:
@@ -911,9 +933,10 @@ to say mdrake_bad_end:
 		[I was thinking that would be the submit option, the pc then ending up in the drakes temple as her concubine and species idol. The entire city having turned into magic drakes thanks to the magic she can get the pc to build up from butt stuffin. The bigger the pcs butt, the more magic she gets. Thats sorta what i wanted. Submit and she makes a perfect society of lust, size and plenty thanks to the rampant amount of magic around. Everyone gets to live lives of pleasure without need or want with her as their goddess ( all the magic flowing to her will certainly let her achieve that.)]
 		decrease score by 25;
 		now humanity of Player is 0;
-		follow the turnpass rule;
+		trigger ending "Magic Dragoness's Servant";
 		end the story saying "In the end, the city becomes a paradise for all within it. From the sheer power of your goddess' magic, there is more than enough of everything to go around, letting everyone pursue their own desires and passions, usually involving quite a lot of fucking one way or another. All the stuffing and swallowing and more, all in the magic drake's name, feeds her powers with just as much fervor as the fucking itself. Your mistress has created a flawless utopia, a perfect society of lust and massive sizes—and you can't wait to see that utopia be shared with the rest of the world.";
 		now battleground is "void";
+		follow the turnpass rule;
 	else: [resist path]
 		say "     Barely mustering the willpower, you shake your head to her question. As much as you want to submit to her every desire, something is keeping you from giving up on your other tasks. Behind you, you hear a huff from the drake, and can imagine the look of disappointment she must be wearing clearly. 'Well, I suppose you can't be as wise as me, little familiar. But even if you aren't ready yet, that isn't going to stop me from taking what's mine, and you are mine. Don't worry, I'll show you just how wonderful it will be.' You hardly have time to process her words before you feel a titanic slap on your ass, the resting weight leaving you with no doubt that it's the drake's member, magically enhanced to match your massive booty.";
 		say "     She slowly pulls herself further back, the tip of her member dragging across your skin, leaving a small trail of her pre as a taste of what's to come. Soon her rod is in place, poised to enter your passageway at her command. You steel yourself, ready to resist the pleasures she's sure to inflict on you, but nothing happens. Not willing to give her any satisfaction, you stay perfectly still, eyes closed, not giving her any acknowledgment. Eventually you hear a hearty chuckle. 'So brave, familiar, but so foolish. No matter how hard you resist, you'll give in to me.' Almost the second she finishes speaking, she thrusts forward, driving her massive shaft deeply into you in a single powerful stroke, driving the breath out of you and breaking your silence with an involuntary moan.";
@@ -960,8 +983,9 @@ to say mdrake_bad_end:
 		say "     Anyone looking at you at the moment would see that both you and the drake are covered in a crackling aura of magic, slowly increasing the both of you in size—with your ass and her entire package both growing far more than the rest. The endless reaming at the hands of the drake continues to increase the pleasure you feel in each moment, as her power grows to match her size. Soon you can barely think, so powerful is the pleasure she continues to gift you with via her ever larger cock. Finally she reaches her climax and paints your insides with a truly incredible amount of cum, courtesy of her equally large balls. Both of you cry out in pleasure at the same time, the magic swirling and rushing around the pair of you all being drawn into your mistress, giving her an even greater boost. With her newfound power, few things are beyond her reach, but you are satisfied with being exactly where you are, forever.";
 		decrease score by 25;
 		now humanity of Player is 0;
-		follow the turnpass rule;
+		trigger ending "Magic Dragoness's Familiar";
 		end the story saying "The city has changed, now a feudal land full of strife. Massively endowed draconic warlords, formed in the drake's image, each have seized their own territory, ruling as they see fit. For most of them, that involves taking what they want, when they want. Usually this means that those living under the control of one of these warlords serve as toys for them to fuck at their leisure. Even if they were to escape, they'd simply end up servicing a different draconic ruler instead, leading to a tenuous sort of piece. Those outside the city feel safe for now, but it's only a matter of time before the drake ventures out and converts them as well, conquering more and more of the world with her size and magic power. As for you, you spend all of eternity as the drake's familiar and toy, exactly as you wish.";
 		now battleground is "void";
+		follow the turnpass rule;
 
 Magic Drake ends here.

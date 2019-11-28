@@ -3,6 +3,29 @@ Version 4 of Joanna by Stripes begins here.
 
 "Adds a Kinkajou-Plant NPC named Joanna to the Flexible Survival game"
 
+[
+[ HP of Joanna      ]
+[ 0 = never met     ]
+[ 1 = saved         ] = joannatalk = 0   //  joannaharoldtalk is 1   //  lust of joanna is 0
+[ 2 = had oral/handjob            ] = 2+ joannatalk = 1  //  lust of joanna is 0
+[ 3 = had sex                     ] lust = 0
+[ 4 = more sex                    ] lust = 0
+[ 5 = more sex                    ]
+[ 6 = refused her seed on initial offer ] = joannaoffernum = 1  //  lust of joanna is 3+
+[ 7 = accepted her seed ] = lust of joanna is 3+
+
+[ 90 = helped w/dogs          ] Dog Chase resolved, joannadogsaved is true, Palomino is known
+[ 91 = asked Harold about her ]
+[ 92 = chat w/Joanna          ]
+
+
+[ lust of Joanna     ]
+[ 0 = no plant exam  ]
+[ 1 = had plant exam ]
+[ 2 = drank Joanna's juice - transition ]
+[ 3 = drank Joanna's juice ]
+]
+
 Section 1 - Event
 
 Table of GameEventIDs (continued)
@@ -106,9 +129,9 @@ to say losejoannafight:
 	now Libido of Player is 100;
 	now thirst of Player is 0;
 	now hunger of Player is 0;
+	trigger ending "You got Planted";
 	end the story saying "You were consumed by the giant parasitic plant.";
 	now battleground is "void"; [blocks a post-event fight]
-	now vinetrapped is 2;
 	wait for any key;
 	follow the turnpass rule;
 	stop the action;
@@ -653,34 +676,15 @@ Definition: a person is planttailed:
 	no;
 
 
-[
-[ HP of Joanna      ]
-[ 0 = never met     ]
-[ 1 = saved         ] = joannatalk = 0   //  joannaharoldtalk is 1   //  lust of joanna is 0
-[ 2 = had oral/handjob            ] = 2+ joannatalk = 1  //  lust of joanna is 0
-[ 3 = had sex                     ] lust = 0
-[ 4 = more sex                    ] lust = 0
-[ 5 = more sex                    ]
-[ 6 = refused her seed on initial offer ] = joannaoffernum = 1  //  lust of joanna is 3+
-[ 7 = accepted her seed ] = lust of joanna is 3+
-
-[ 90 = helped w/dogs          ] Dog Chase resolved, joannadogsaved is true, Palomino is known
-[ 91 = asked Harold about her ]
-[ 92 = chat w/Joanna          ]
-
-
-[ lust of Joanna     ]
-[ 0 = no plant exam  ]
-[ 1 = had plant exam ]
-[ 2 = drank Joanna's juice - transition ]
-[ 3 = drank Joanna's juice ]
-]
-
-
 Section 10 - Endings
 
-when play ends:
-	if vinetrapped is 2:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"You got Planted"	"BadEnd"	""	You got Planted rule	2	false
+"Joanna's Epilogue"	"NPC"	""	Joanna's Epilogue rule	90	false
+
+This is the You got Planted rule:
+	if ending "You got Planted" is triggered:
 		say "     You eventually awaken again as the flower petals open, allowing the morning sun to shine down on you. Drawing strength from its light, you start to rise, helped out of flower by several of the vines. Stretching your arms wide, you bask in the light and sigh in pleasure, feeling the pleasure of feeding all across your body. You don't know how long you stay there, your mind foggy and thinking little at all, but are woken from your reverie by another nearby flower opening. You walk over and help the lovely creature inside, a plant girl much like you, but with an animal face, muzzle and tail. For a moment, there's a passing memory as if you'd seen her before, but it fades away. She has lovely flowers in her green hair, a green plant-like body with red across her kinkajou face. Her long, red, tendril-tongue slides out and dives into your mouth and you can feel her cock tendrils begin to stir.";
 		say "     After a long session of lovemaking on the grass where you put your vines and tendrils into one another while feeding from the sunlight, you finally look up and find the sun high in the sky. Feeling full and sated, you take your lover's hand in yours and follow a growing urge within you both to leave and find another place to set down your roots, this one fully overgrown by the giant plant. Kissing the giant plant's vines and bulbs, you both suck sweet juices from them before going. Again taking her hand in yours, you entwine your viney fingers and, with some effort to uproot yourselves, head on your way.";
 		say "     You travel with your companion across the city. Traveling across the paved streets is unpleasant, not being able to feel the earth or dig into the soil, but you do so whenever you can to refresh yourselves. While most of the creatures of the city stay out of your way, you do end up fighting with some on your journey and you make sure to leave them full of sticky nectar and sap, hoping they'll share in the joy of becoming peaceful plants instead of squabbling mammals. And with all the fighting going on at the city's edge, you and your companion are able to slowly creep past the lines of those fighting mammals (humans, was it?) during a conflict. It is slow going and it's very tempting to lay down your roots and stop, but you encourage one another to keep going, wanting only the best of locations for your lover. Having grown some small branches and leaves to look like bushes, you move with the patience of a growing plant and creep inches at a time while they fight around you with the other creatures.";
@@ -688,10 +692,11 @@ when play ends:
 		if hellHoundLevel > 0:
 			say "     With your mind almost completely erased by your transformation into a plant, you forget about your pact with the hellhound. But he does not forget. Having given into your life as a corrupting plant creature infecting others, your dark contract has only been delayed to prepare you for a new role in the afterlife.";
 			say "     When that times comes at the end of your long life as a plant, you are pulled into the pits of Hades and given a life of as a foul tree there. Having spent centuries growing and corrupting others in life, your body is now twisted and turned to new, dark aims on your unending task to satisfy the lustful urges of the demonic hounds. They mark your large trunk with their foul, burning urine, letting its corruption seep into you. Your vaginal flowers are fucked by the hound's cocks and your tendrils made to pump your tainted fluids into their bitches. Your branches grow dark fruit which break open and release plant-like hounds to add to Hell's numbers.";
-		stop the action;
+		the Player is gone;
 
-when play ends:		[See Parasitic Plant for player specific endings]
+This is the Joanna's Epilogue rule: [See Parasitic Plant for player specific endings]
 	if HP of Joanna > 0 and HP of Joanna < 90:
+		trigger ending "Joanna's Epilogue"; [Here it states, that the ending has been played.]
 		say "     Joanna remains in the infected city when the military rolls through, happy with her new life in her garden. It becomes a safe rest stop for visitors and explorers of the city. She always welcomes them and makes many friends among them, sharing her beautiful and lustful body with them to satisfy their urges[if HP of Joanna >= 5]. She soon gets the nickname of [']Kinky Jo['], notorious for being up for pretty much any kind of fun imaginable with those who come to share in her garden's beauty[else if HP of Joanna > 2]. Being a lustful plant herm, she's happy to please any guests to her lovely garden in numerous ways[end if].";
 		if humanity of Player >= 10:
 			say "     These visitors help you keep in touch with her, carrying the occasional letter to her. She writes about her peaceful, happy life and the various visitors and friends she's made, always thankful for your timely rescue and continued friendship[if Player is plantbodied and plantdefeat > 0]. She particularly enjoys hearing about your happy life as a lustful plant and sharing the plant seeds with your orgy group[end if].";
