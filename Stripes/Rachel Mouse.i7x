@@ -334,8 +334,13 @@ to say racheloral:
 
 Section 4 - Endings
 
-when play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Rachel's Epilogue"	"Companion"	"Pet"	Rachel's Epilogue rule	75	false
+
+This is the Rachel's Epilogue rule:
 	if mouse girl is tamed:
+		trigger ending "Rachel's Epilogue"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if BodyName of Player is "Albino Mouse" or BodyName of Player is "Mental Mouse":
 				say "     Giving into your murine urges, you fully accept Rachel, and the whole of the mouse collective, into your mind. Becoming one with them, your own mind recedes away to make room for the united minds of the mice. You love them all, but love Rachel the most of all. The mouse girl who was willing to accompany you into the city, to risk losing you to let you come to this point on your own, is your special mate among the group, though all those in the collective are your lovers. From your frequent matings, there comes several lovely children who are exceptionally powerful from your chosen union, helping the making the mouse collective even stronger. Several of them move to help be part of new nests, forming an interconnected web of hive-minds that cannot be resisted, growing slowly, secretly, around the world.";
