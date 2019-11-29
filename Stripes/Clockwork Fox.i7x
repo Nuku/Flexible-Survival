@@ -283,7 +283,7 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Clockwork Fox Infection"	"Infection"	""	Clockwork Fox Infection rule	100	false
+"Clockwork Fox Infection"	"Infection"	""	Clockwork Fox Infection rule	1000	false
 
 This is the Clockwork Fox Infection rule:
 	if Player has a body of "Clockwork Fox":

@@ -515,7 +515,7 @@ Section 6 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Parasitic Plant Infection"	"Infection"	"Mixed"	Parasitic Plant Infection rule	100	false
+"Parasitic Plant Infection"	"Infection"	"Mixed"	Parasitic Plant Infection rule	1000	false
 
 This is the Parasitic Plant Infection rule:
 	if vinetrapped is 0:

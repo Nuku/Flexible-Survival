@@ -256,7 +256,7 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Ember Breeder Infection"	"Infection"	""	Ember Breeder Infection rule	100	false
+"Ember Breeder Infection"	"Infection"	""	Ember Breeder Infection rule	1000	false
 
 This is the Ember Breeder Infection rule:
 	if Player has a body of "Ember Breeder":

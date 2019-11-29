@@ -723,8 +723,8 @@ Instead of resolving a Concession Stand:
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Ever-Shifting Pet"	"BadEnd"	"Pet"	Ever-Shifting Pet rule	2	false
-"Fun-Loving Beach Toy"	"BadEnd"	""	Fun-Loving Beach Toy rule	2	false
+"Ever-Shifting Pet"	"BadEnd"	"Pet"	Ever-Shifting Pet rule	20	false
+"Fun-Loving Beach Toy"	"BadEnd"	""	Fun-Loving Beach Toy rule	20	false
 
 This is the Ever-Shifting Pet rule:
 	if ending "Ever-Shifting Pet" is triggered:

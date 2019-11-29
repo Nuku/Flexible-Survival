@@ -208,7 +208,7 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Human Mutant Infection"	"Infection"	""	Human Mutant Infection rule	100	false
+"Human Mutant Infection"	"Infection"	""	Human Mutant Infection rule	1000	false
 
 [ Player becomes either a crazed or a reveling cock-voring monstrosity ]
 This is the Human Mutant Infection rule:

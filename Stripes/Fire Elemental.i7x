@@ -289,7 +289,7 @@ Section 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Fire Elemental Infection"	"Infection"	""	Fire Elemental Infection rule	100	false
+"Fire Elemental Infection"	"Infection"	""	Fire Elemental Infection rule	1000	false
 
 This is the Fire Elemental Infection rule:
 	if Player has a body of "Fire Elemental":

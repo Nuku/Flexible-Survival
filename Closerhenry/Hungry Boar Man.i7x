@@ -619,9 +619,9 @@ Section 6 - Ending the Piggy
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Pig Vore"	"Voreloss"	""	Pig Vore rule	1	false
-"Philip's Epilogue"	"NPC"	""	Philip's Epilogue rule	90	false
-"Pig Infection"	"Infection"	""	Pig Infection rule	100	false
+"Pig Vore"	"Voreloss"	""	Pig Vore rule	10	false
+"Philip's Epilogue"	"NPC"	""	Philip's Epilogue rule	900	false
+"Pig Infection"	"Infection"	""	Pig Infection rule	1000	false
 
 This is the Pig Vore rule:
 	if ending "Pig Vore" is triggered:

@@ -235,7 +235,7 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Gargoyle Infection"	"Infection"	""	Gargoyle Infection rule	100	false
+"Gargoyle Infection"	"Infection"	""	Gargoyle Infection rule	1000	false
 
 This is the Gargoyle Infection rule:
 	if Player has a body of "Gargoyle":

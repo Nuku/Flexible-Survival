@@ -1816,7 +1816,7 @@ Section 9 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Hospital Quest Epilogue"	"Story"	""	Hospital Quest Epilogue rule	95	false
+"Hospital Quest Epilogue"	"Story"	""	Hospital Quest Epilogue rule	950	false
 
 This is the Hospital Quest Epilogue rule:
 	if hospquest is 13 and humanity of Player > 9:			[helped Dr Matt]

@@ -192,7 +192,7 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Prairie Dog Infection"	"Infection"	""	Prairie Dog Infection rule	100	false
+"Prairie Dog Infection"	"Infection"	""	Prairie Dog Infection rule	1000	false
 
 This is the Prairie Dog Infection rule:
 	if Player has a body of "Prairie Dog":

@@ -1132,7 +1132,7 @@ Section 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Angie's Epilogue"	"NPC"	""	Angie's Epilogue rule	90	false
+"Angie's Epilogue"	"NPC"	""	Angie's Epilogue rule	900	false
 
 This is the Angie's Epilogue rule:
 	if AngieAroused is 2:

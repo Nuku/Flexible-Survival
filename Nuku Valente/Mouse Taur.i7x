@@ -327,7 +327,7 @@ Section 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Lisa's and Svetlana's Epilogue"	"NPC"	"Mixed"	Lisa's and Svetlana's Epilogue rule	90	false
+"Lisa's and Svetlana's Epilogue"	"NPC"	"Mixed"	Lisa's and Svetlana's Epilogue rule	900	false
 
 This is the Lisa's and Svetlana's Epilogue rule:
 	if mousefucked > 1 and humanity of Player > 9:

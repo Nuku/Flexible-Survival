@@ -260,7 +260,7 @@ Section 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Dragontaur Infection"	"Infection"	""	Dragontaur Infection rule	100	false
+"Dragontaur Infection"	"Infection"	""	Dragontaur Infection rule	1000	false
 
 This is the Dragontaur Infection rule:
 	if Player has a body of "Dragontaur":

@@ -242,12 +242,12 @@ Section 5 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Timothy's Breeding Gryphon"	"Leaving"	"Breeder"	Timothy's Breeding Gryphon rule	10	false
-"IceCreamTruck Bad End"	"Leaving"	""	IceCreamTruck Bad End rule	10	false
-"Garrett's BFF"	"NPCSharedInfection"	""	Garrett's BFF rule	50	false
-"Returning to Timothy"	"NPCSharedInfection"	""	Returning to Timothy rule	50	false
-"My Little Gryphoness"	"Companion"	"Pet"	My Little Gryphoness rule	75	false
-"Blue Gryphon Herm Infection"	"Infection"	""	Blue Gryphon Herm Infection rule	100	false
+"Timothy's Breeding Gryphon"	"Leaving"	"Breeder"	Timothy's Breeding Gryphon rule	100	false
+"IceCreamTruck Bad End"	"Leaving"	""	IceCreamTruck Bad End rule	100	false
+"Garrett's BFF"	"NPCSharedInfection"	""	Garrett's BFF rule	500	false
+"Returning to Timothy"	"NPCSharedInfection"	""	Returning to Timothy rule	500	false
+"My Little Gryphoness"	"Companion"	"Pet"	My Little Gryphoness rule	750	false
+"Blue Gryphon Herm Infection"	"Infection"	""	Blue Gryphon Herm Infection rule	1000	false
 
 This is the Timothy's Breeding Gryphon rule:
 	if ending "Timothy's Breeding Gryphon" is triggered:

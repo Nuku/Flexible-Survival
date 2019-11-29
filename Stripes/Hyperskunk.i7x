@@ -190,7 +190,7 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Hyperskunk Infection"	"Infection"	""	Hyperskunk Infection rule	100	false
+"Hyperskunk Infection"	"Infection"	""	Hyperskunk Infection rule	1000	false
 
 [A sample structure for succumbing/surviving messages at the end of the game.]
 [Numerous other examples can be found in existing creature files.]

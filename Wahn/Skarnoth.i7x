@@ -512,7 +512,7 @@ Section 6 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Demon Slave"	"BadEnd"	"Slave"	Demon Slave rule	2	false
+"Demon Slave"	"BadEnd"	"Slave"	Demon Slave rule	20	false
 
 This is the Demon Slave rule:
 	if ending "Demon Slave" is triggered:

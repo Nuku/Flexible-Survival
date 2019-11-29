@@ -342,8 +342,8 @@ Section 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Latex Wolf Succumbed"	"BadEnd"	"Mixed"	Latex Wolf Succumbed rule	2	false
-"Latex Wolf Infection"	"Infection"	""	Latex Wolf Infection rule	100	false
+"Latex Wolf Succumbed"	"BadEnd"	"Mixed"	Latex Wolf Succumbed rule	20	false
+"Latex Wolf Infection"	"Infection"	""	Latex Wolf Infection rule	1000	false
 
 This is the Latex Wolf Succumbed rule:
 	if humanity of Player >= 10 or the Player has no body of "Latex Wolf":

@@ -202,7 +202,7 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Opossum Herm Infection"	"Infection"	""	Opossum Herm Infection rule	100	false
+"Opossum Herm Infection"	"Infection"	""	Opossum Herm Infection rule	1000	false
 
 This is the Opossum Herm Infection rule:
 	if Player has a body of "Opossum Herm":

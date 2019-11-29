@@ -573,7 +573,7 @@ Section 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Ocelot Infection"	"Infection"	""	Ocelot Infection rule	100	false
+"Ocelot Infection"	"Infection"	""	Ocelot Infection rule	1000	false
 
 This is the Ocelot Infection rule:
 	if Player has a body of "Ocelot":

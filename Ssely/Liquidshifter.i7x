@@ -217,7 +217,7 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Liquidshifter Infection"	"Infection"	""	Liquidshifter Infection rule	100	false
+"Liquidshifter Infection"	"Infection"	""	Liquidshifter Infection rule	1000	false
 
 This is the Liquidshifter Infection rule:
 	if Player has a body of "Liquidshifter":

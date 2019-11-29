@@ -432,7 +432,7 @@ Section 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Cerberus Infection"	"Infection"	""	Cerberus Infection rule	100	false
+"Cerberus Infection"	"Infection"	""	Cerberus Infection rule	1000	false
 
 This is the Cerberus Infection rule:
 	if Player has a body of "Cerberus":

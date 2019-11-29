@@ -408,7 +408,7 @@ Section 5 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Sonny's Epilogue"	"NPC"	""	Sonny's Epilogue rule	90	false
+"Sonny's Epilogue"	"NPC"	""	Sonny's Epilogue rule	900	false
 
 This is the Sonny's Epilogue rule:
 	if (HP of Sonny > 0): [player met him and got as far as seeing him as an NPC]

@@ -158,7 +158,7 @@ Section 6 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Spritiual Love Ending"	"BadEnd"	""	Spritiual Love Ending rule	2	false
+"Spritiual Love Ending"	"BadEnd"	""	Spritiual Love Ending rule	20	false
 
 This is the Spritiual Love Ending rule:
 	if ending "Spritiual Love Ending" is triggered:

@@ -396,7 +396,7 @@ Section 10 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Watering Hole Bad End"	"BadEnd"	""	Watering Hole Bad End rule	2	false
+"Watering Hole Bad End"	"BadEnd"	""	Watering Hole Bad End rule	20	false
 
 This is the Watering Hole Bad End rule:
 	if ending "Watering Hole Bad End" is triggered:

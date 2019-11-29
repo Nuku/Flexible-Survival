@@ -336,7 +336,7 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Plush Lion Infection"	"Infection"	""	Plush Lion Infection rule	100	false
+"Plush Lion Infection"	"Infection"	""	Plush Lion Infection rule	1000	false
 
 This is the Plush Lion Infection rule:
 	if Player has a body of "Plush Lion":

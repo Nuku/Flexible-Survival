@@ -600,8 +600,8 @@ Section 5 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Ranae Vore"	"Voreloss"	""	Ranae Vore rule	1	false
-"Ranae's Servant"	"BadEnd"	"Servant"	Ranae's Servant rule	2	false
+"Ranae Vore"	"Voreloss"	""	Ranae Vore rule	10	false
+"Ranae's Servant"	"BadEnd"	"Servant"	Ranae's Servant rule	20	false
 
 This is the Ranae Vore rule:
 	if ending "Ranae Vore" is triggered:

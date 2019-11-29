@@ -1281,8 +1281,8 @@ Section 5 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Yamato Dragon Vore"	"Voreloss"	""	Yamato Dragon Vore rule	1	false
-"Yamato Dragon Infection"	"Infection"	""	Yamato Dragon Infection rule	100	false
+"Yamato Dragon Vore"	"Voreloss"	""	Yamato Dragon Vore rule	10	false
+"Yamato Dragon Infection"	"Infection"	""	Yamato Dragon Infection rule	1000	false
 
 This is the Yamato Dragon Vore rule:
 	if ending "Yamato Dragon Vore" is triggered:

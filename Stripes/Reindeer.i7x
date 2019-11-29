@@ -372,7 +372,7 @@ Section 5 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Reindeer Infection"	"Infection"	""	Reindeer Infection rule	100	false
+"Reindeer Infection"	"Infection"	""	Reindeer Infection rule	1000	false
 
 This is the Reindeer Infection rule:
 	if ending "Susan's Epilogue" is triggered:

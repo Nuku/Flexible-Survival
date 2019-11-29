@@ -290,7 +290,7 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Killer Whale Infection"	"Infection"	""	Killer Whale Infection rule	100	false
+"Killer Whale Infection"	"Infection"	""	Killer Whale Infection rule	1000	false
 
 This is the Killer Whale Infection rule:
 	if Player has a body of "Killer Whale":

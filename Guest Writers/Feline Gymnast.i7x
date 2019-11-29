@@ -390,7 +390,7 @@ Section 3 - Endings
 [
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Feline Gymnast Infection"	"Infection"	""	Feline Gymnast Infection rule	100	false
+"Feline Gymnast Infection"	"Infection"	""	Feline Gymnast Infection rule	1000	false
 
 This is the Feline Gymnast Infection rule:
 	if Player has a body of "Feline Gymnast":

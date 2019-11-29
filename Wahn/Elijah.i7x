@@ -2105,7 +2105,7 @@ Section 7 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Elijah's Epilogue"	"NPC"	""	Elijah's Epilogue rule	90	false
+"Elijah's Epilogue"	"NPC"	""	Elijah's Epilogue rule	900	false
 
 This is the Elijah's Epilogue rule:
 	if Elijah is in the bunker:

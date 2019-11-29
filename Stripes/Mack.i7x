@@ -292,7 +292,7 @@ Section 7 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Macadamia's Epilogue"	"NPC"	""	Macadamia's Epilogue rule	90	false
+"Macadamia's Epilogue"	"NPC"	""	Macadamia's Epilogue rule	900	false
 
 This is the Macadamia's Epilogue rule:
 	if Player has a body of "Gray Squirrel":

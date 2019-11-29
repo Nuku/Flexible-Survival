@@ -250,8 +250,8 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Hyena Matriarch Vore"	"Voreloss"	""	Hyena Matriarch Vore rule	1	false
-"Hyena Matriarch Epilogue"	"NPC"	""	Hyena Matriarch Epilogue rule	90	false
+"Hyena Matriarch Vore"	"Voreloss"	""	Hyena Matriarch Vore rule	10	false
+"Hyena Matriarch Epilogue"	"NPC"	""	Hyena Matriarch Epilogue rule	900	false
 
 This is the Hyena Matriarch Vore rule:
 	if ending "Hyena Matriarch Vore" is triggered:

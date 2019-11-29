@@ -150,7 +150,7 @@ to say Christy_ending:
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Boris['] New Toy"	"BadEnd"	"Sex Slave"	Boris' New Toy rule	2	false
+"Boris['] New Toy"	"BadEnd"	"Sex Slave"	Boris' New Toy rule	20	false
 
 This is the Boris' New Toy rule:
 	if ending "Boris['] New Toy" is triggered:

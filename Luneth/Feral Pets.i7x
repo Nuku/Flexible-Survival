@@ -428,7 +428,7 @@ Section 2.4 - House Cat Ending
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Dinah's Epilogue"	"Companion"	"Pet"	Dinah's Epilogue rule	75	false
+"Dinah's Epilogue"	"Companion"	"Pet"	Dinah's Epilogue rule	750	false
 
 This is the Dinah's Epilogue rule:
 	if house cat is tamed:
@@ -618,7 +618,7 @@ Section 3.4 - Exotic Bird Ending
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Chirpy's Epilogue"	"Companion"	"Pet"	Chirpy's Epilogue rule	75	false
+"Chirpy's Epilogue"	"Companion"	"Pet"	Chirpy's Epilogue rule	750	false
 
 This is the Chirpy's Epilogue rule:
 	if Exotic Bird is tamed:
@@ -929,7 +929,7 @@ Section 4.4 - Helper Dog Ending
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Hobo's Epilogue"	"Companion"	"Pet"	Hobo's Epilogue rule	75	false
+"Hobo's Epilogue"	"Companion"	"Pet"	Hobo's Epilogue rule	750	false
 
 This is the Hobo's Epilogue rule:
 	if helper dog is tamed:

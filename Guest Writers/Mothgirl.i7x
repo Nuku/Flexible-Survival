@@ -240,7 +240,7 @@ When Play begins:
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Mothgirl Infection"	"Infection"	""	Mothgirl Infection rule	100	false
+"Mothgirl Infection"	"Infection"	""	Mothgirl Infection rule	1000	false
 
 This is the Mothgirl Infection rule:
 	if Player has a body of "Mothgirl":

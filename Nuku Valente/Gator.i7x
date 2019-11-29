@@ -558,8 +558,8 @@ Section 5 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Gator Herm Vore"	"Voreloss"	""	Gator Herm Vore rule	1	false
-"Gator Herm Infection"	"Infection"	""	Gator Herm Infection rule	100	false
+"Gator Herm Vore"	"Voreloss"	""	Gator Herm Vore rule	10	false
+"Gator Herm Infection"	"Infection"	""	Gator Herm Infection rule	1000	false
 
 This is the Gator Herm Vore rule:
 	if ending "Gator Herm Vore" is triggered:

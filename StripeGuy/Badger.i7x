@@ -196,7 +196,7 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Badger Infection"	"Infection"	""	Badger Infection rule	100	false
+"Badger Infection"	"Infection"	""	Badger Infection rule	1000	false
 
 This is the Badger Infection rule:
 	if Player has a body of "Badger":

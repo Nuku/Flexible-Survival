@@ -535,8 +535,8 @@ to say BlakeSex7:
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Blake's Anal Vore"	"Voreloss"	""	Blake's Anal Vore rule	1	false
-"Blake's Cock Vore"	"Voreloss"	""	Blake's Cock Vore rule	1	false
+"Blake's Anal Vore"	"Voreloss"	""	Blake's Anal Vore rule	10	false
+"Blake's Cock Vore"	"Voreloss"	""	Blake's Cock Vore rule	10	false
 
 This is the Blake's Anal Vore rule:
 	if ending "Blake's Anal Vore" is triggered:

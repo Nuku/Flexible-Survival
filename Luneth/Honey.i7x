@@ -493,7 +493,7 @@ Section 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Honey's Epilogue"	"Companion"	"Pet"	Honey's Epilogue rule	75	false
+"Honey's Epilogue"	"Companion"	"Pet"	Honey's Epilogue rule	750	false
 
 This is the Honey's Epilogue rule:
 	if Player has a body of "Queen Bee":

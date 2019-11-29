@@ -708,7 +708,7 @@ Section 4 - Endings	[This portion deals with the Doberman infection for Kaleem's
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Doberman Bitch Infection"	"Infection"	""	Doberman Bitch Infection rule	100	false
+"Doberman Bitch Infection"	"Infection"	""	Doberman Bitch Infection rule	1000	false
 
 This is the Doberman Bitch Infection rule:
 	if Player has a body of "Doberman Bitch":

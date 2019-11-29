@@ -480,7 +480,7 @@ Section 5 - Endings
 [
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Tiger Shark Male Infection"	"Infection"	""	Tiger Shark Male Infection rule	100	false
+"Tiger Shark Male Infection"	"Infection"	""	Tiger Shark Male Infection rule	1000	false
 
 This is the Tiger Shark Male Infection rule:
 	if Player has a body of "Tiger Shark Male":

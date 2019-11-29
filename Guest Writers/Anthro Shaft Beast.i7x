@@ -262,7 +262,7 @@ to say broodmother call:
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Anthro Shaft Beast Infection"	"Infection"	""	Anthro Shaft Beast Infection rule	100	false
+"Anthro Shaft Beast Infection"	"Infection"	""	Anthro Shaft Beast Infection rule	1000	false
 
 This is the Anthro Shaft Beast Infection rule:
 	if Player has a body of "Anthro Shaft Beast":

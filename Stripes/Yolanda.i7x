@@ -693,8 +693,8 @@ Section 6 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Jewelry box ending add-on"	"Quest"	""	Jewelry box ending add-on rule	85	false
-["Yolanda's Epilogue"	"NPC"	""	Yolanda's Epilogue rule	90	false]
+"Jewelry box ending add-on"	"Quest"	""	Jewelry box ending add-on rule	850	false
+["Yolanda's Epilogue"	"NPC"	""	Yolanda's Epilogue rule	900	false]
 
 This is the Jewelry box ending add-on rule:
 	if jbfound is 2 and humanity of Player >= 10:		[Jewelry box ending add-on]

@@ -307,7 +307,7 @@ Section 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Human Hybrid Infection"	"Infection"	""	Human Hybrid Infection rule	100	false
+"Human Hybrid Infection"	"Infection"	""	Human Hybrid Infection rule	1000	false
 
 This is the Human Hybrid Infection rule:
 	if Player has a body of "Human Hybrid":

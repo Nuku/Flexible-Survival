@@ -367,8 +367,8 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Feral Wolf Infection"	"Infection"	""	Feral Wolf Infection rule	100	false
-"Fang's Beta"	"NPCSharedInfection"	""	Fang's Beta rule	100	false
+"Feral Wolf Infection"	"Infection"	""	Feral Wolf Infection rule	1000	false
+"Fang's Beta"	"NPCSharedInfection"	""	Fang's Beta rule	1000	false
 
 This is the Feral Wolf Infection rule:
 	if HP of Fang is listed in { 3, 4 }:

@@ -1618,7 +1618,7 @@ Section 10 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Artemis['] Epilogue"	"Companion"	"Pet"	Artemis' Epilogue rule	75	false
+"Artemis['] Epilogue"	"Companion"	"Pet"	Artemis' Epilogue rule	750	false
 
 This is the Artemis' Epilogue rule:
 	if rubber tigress is tamed:

@@ -419,7 +419,7 @@ When Play begins:
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Tanuki Satisfaction"	"Special"	""	Tanuki Satisfaction rule	60	false
+"Tanuki Satisfaction"	"Special"	""	Tanuki Satisfaction rule	600	false
 
 This is the Tanuki Satisfaction rule:
 	if SatisfiedTanuki is 0:

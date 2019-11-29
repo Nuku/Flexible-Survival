@@ -4309,7 +4309,7 @@ Section 6 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Doran's Epilogue"	"NPC"	""	Doran's Epilogue rule	90	false
+"Doran's Epilogue"	"NPC"	""	Doran's Epilogue rule	900	false
 
 This is the Doran's Epilogue rule:
 	if DoranFirstTalk is true and humanity of Player > 10:

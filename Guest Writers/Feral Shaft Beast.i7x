@@ -222,7 +222,7 @@ to sharethelust:
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Feral Shaft Beast Infection"	"Infection"	""	Feral Shaft Beast Infection rule	100	false
+"Feral Shaft Beast Infection"	"Infection"	""	Feral Shaft Beast Infection rule	1000	false
 
 This is the Feral Shaft Beast Infection rule:
 	if Player has a body of "Feral Shaft Beast":

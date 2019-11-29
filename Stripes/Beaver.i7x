@@ -312,7 +312,7 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Beaver Infection"	"Infection"	""	Beaver Infection rule	100	false
+"Beaver Infection"	"Infection"	""	Beaver Infection rule	1000	false
 
 This is the Beaver Infection rule:
 	if Player has a body of "Beaver":

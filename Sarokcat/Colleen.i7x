@@ -658,11 +658,11 @@ Section 6 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Colleen's Bunker Epilogue"	"NPC"	""	Colleen's Bunker Epilogue rule	90	false
-"Colleen's Human Epilogue"	"NPC"	""	Colleen's Human Epilogue rule	90	false
-"Colleen's Solo Epilogue"	"NPC"	""	Colleen's Solo Epilogue rule	90	false
-"Husky Bitch with Colleen"	"NPCSharedInfection"	""	Husky Bitch with Colleen rule	90	false
-"Husky Alpha Infection"	"Infection"	""	Husky Alpha Infection rule	100	false
+"Colleen's Bunker Epilogue"	"NPC"	""	Colleen's Bunker Epilogue rule	900	false
+"Colleen's Human Epilogue"	"NPC"	""	Colleen's Human Epilogue rule	900	false
+"Colleen's Solo Epilogue"	"NPC"	""	Colleen's Solo Epilogue rule	900	false
+"Husky Bitch with Colleen"	"NPCSharedInfection"	""	Husky Bitch with Colleen rule	900	false
+"Husky Alpha Infection"	"Infection"	""	Husky Alpha Infection rule	1000	false
 
 This is the Husky Bitch with Colleen rule:
 	if Player has a body of "Husky Bitch":

@@ -387,7 +387,7 @@ Section 7 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Mutant Centaur Infection"	"Infection"	""	Mutant Centaur Infection rule	100	false
+"Mutant Centaur Infection"	"Infection"	""	Mutant Centaur Infection rule	1000	false
 
 This is the Mutant Centaur Infection rule:
 	if Player has a body of "Mutant Centaur":

@@ -349,7 +349,7 @@ Section 6 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Peacock Infection"	"Infection"	""	Peacock Infection rule	100	false
+"Peacock Infection"	"Infection"	""	Peacock Infection rule	1000	false
 
 This is the Peacock Infection rule:
 	if Player has a body of "Peacock":

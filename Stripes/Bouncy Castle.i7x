@@ -2288,11 +2288,11 @@ Section 7 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Bouncy Castle Prisoner"	"BadEnd"	""	Bouncy Castle Prisoner rule	2	false
-"Bouncy Castle Exhibit"	"BadEnd"	""	Bouncy Castle Exhibit rule	2	false
-"Bouncy Castle New Chair"	"BadEnd"	""	Bouncy Castle New Chair rule	2	false
-"Bouncy Castle New Pool Toys"	"BadEnd"	""	Bouncy Castle New Pool Toys rule	2	false
-"Bouncy Castle New Pillar"	"BadEnd"	""	Bouncy Castle New Pillar rule	2	false
+"Bouncy Castle Prisoner"	"BadEnd"	""	Bouncy Castle Prisoner rule	20	false
+"Bouncy Castle Exhibit"	"BadEnd"	""	Bouncy Castle Exhibit rule	20	false
+"Bouncy Castle New Chair"	"BadEnd"	""	Bouncy Castle New Chair rule	20	false
+"Bouncy Castle New Pool Toys"	"BadEnd"	""	Bouncy Castle New Pool Toys rule	20	false
+"Bouncy Castle New Pillar"	"BadEnd"	""	Bouncy Castle New Pillar rule	20	false
 
 This is the Bouncy Castle Prisoner rule:
 	if ending "Bouncy Castle Prisoner" is triggered:

@@ -398,7 +398,7 @@ Section 9 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Demon Orgy"	"BadEnd"	""	Demon Orgy rule	2	false
+"Demon Orgy"	"BadEnd"	""	Demon Orgy rule	20	false
 
 This is the Demon Orgy rule:
 	if ending "Demon Orgy" is triggered:

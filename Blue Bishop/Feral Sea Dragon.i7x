@@ -1132,8 +1132,8 @@ Section 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Feral Sea Dragon Vore"	"Voreloss"	""	Feral Sea Dragon Vore rule	1	false
-"Feral Sea Dragon Infection"	"Infection"	""	Feral Sea Dragon Infection rule	100	false
+"Feral Sea Dragon Vore"	"Voreloss"	""	Feral Sea Dragon Vore rule	10	false
+"Feral Sea Dragon Infection"	"Infection"	""	Feral Sea Dragon Infection rule	1000	false
 
 This is the Feral Sea Dragon Vore rule:
 	if ending "Feral Sea Dragon Vore" is triggered:

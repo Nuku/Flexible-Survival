@@ -286,7 +286,7 @@ Section 2 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Dog House New Bitch"	"BadEnd"	"Sex Slave"	Dog House New Bitch rule	2	false
+"Dog House New Bitch"	"BadEnd"	"Sex Slave"	Dog House New Bitch rule	20	false
 
 This is the Dog House New Bitch rule:
 	if ending "Dog House New Bitch" is triggered:

@@ -528,8 +528,8 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Submissive Koballoon Sex"	"BadEnd"	"Sex Slave"	Submissive Koballoon Sex rule	2	false
-"Dominant Koballoon Sex"	"Leaving"	""	Dominant Koballoon Sex rule	10	false
+"Submissive Koballoon Sex"	"BadEnd"	"Sex Slave"	Submissive Koballoon Sex rule	20	false
+"Dominant Koballoon Sex"	"Leaving"	""	Dominant Koballoon Sex rule	100	false
 
 This is the Submissive Koballoon Sex rule:
 	if ending "Submissive Koballoon Sex" is triggered:

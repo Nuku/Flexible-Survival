@@ -268,7 +268,7 @@ Section 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Latex Mistress Infection"	"Infection"	""	Latex Mistress Infection rule	100	false
+"Latex Mistress Infection"	"Infection"	""	Latex Mistress Infection rule	1000	false
 
 This is the Latex Mistress Infection rule:
 	if Player has a body of "Latex Mistress":

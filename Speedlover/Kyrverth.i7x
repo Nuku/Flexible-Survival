@@ -1137,11 +1137,11 @@ Section 5 - Endings [TO BE COMPLETED 		...At some point.]
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Kyrverth's Epilogue"	"NPC"	""	Kyrverth's Epilogue rule	90	false
-"Kyrverth Jackal King"	"Special"	""	Kyrverth Jackal King rule	97	false
-"Kyrverth Racehorse"	"Special"	""	Kyrverth Racehorse rule	97	false
-"Kyrverth Golden Dragon"	"Special"	""	Kyrverth Golden Dragon rule	97	false
-"Kyrverth Fighting Tiger"	"Special"	""	Kyrverth Fighting Tiger rule	97	false
+"Kyrverth's Epilogue"	"NPC"	""	Kyrverth's Epilogue rule	900	false
+"Kyrverth Jackal King"	"Special"	""	Kyrverth Jackal King rule	970	false
+"Kyrverth Racehorse"	"Special"	""	Kyrverth Racehorse rule	970	false
+"Kyrverth Golden Dragon"	"Special"	""	Kyrverth Golden Dragon rule	970	false
+"Kyrverth Fighting Tiger"	"Special"	""	Kyrverth Fighting Tiger rule	970	false
 
 This is the Kyrverth's Epilogue rule:
 	[ [If those endings ever get finished use this rather than multiple trigger ending calls.]

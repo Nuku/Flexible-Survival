@@ -359,7 +359,7 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Alpha Wolf Infection"	"Infection"	""	Alpha Wolf Infection rule	100	false
+"Alpha Wolf Infection"	"Infection"	""	Alpha Wolf Infection rule	1000	false
 
 This is the Alpha Wolf Infection rule:
 	if Player has a body of "Alpha Wolf":

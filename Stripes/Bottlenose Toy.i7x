@@ -653,8 +653,8 @@ Section 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Dolphin Suit Trapped"	"BadEnd"	""	Dolphin Suit Trapped rule	2	false
-"Bottlenose Toy Infection"	"Infection"	""	Bottlenose Toy Infection rule	100	false
+"Dolphin Suit Trapped"	"BadEnd"	""	Dolphin Suit Trapped rule	20	false
+"Bottlenose Toy Infection"	"Infection"	""	Bottlenose Toy Infection rule	1000	false
 
 This is the Dolphin Suit Trapped rule:
 	if ending "Dolphin Suit Trapped" is triggered:

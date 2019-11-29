@@ -210,7 +210,7 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Drone Wasp Infection"	"Infection"	""	Drone Wasp Infection rule	100	false
+"Drone Wasp Infection"	"Infection"	""	Drone Wasp Infection rule	1000	false
 
 This is the Drone Wasp Infection rule:
 	if Player has a body of "Drone Wasp":

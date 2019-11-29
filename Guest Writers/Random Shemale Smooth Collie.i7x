@@ -495,7 +495,7 @@ Section 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Smooth Collie Shemale Infection"	"Infection"	""	Smooth Collie Shemale Infection rule	100	false
+"Smooth Collie Shemale Infection"	"Infection"	""	Smooth Collie Shemale Infection rule	1000	false
 
 This is the Smooth Collie Shemale Infection rule:
 	if Player has a body of "Smooth Collie Shemale":

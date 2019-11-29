@@ -370,7 +370,7 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Panther Taur Infection"	"Infection"	""	Panther Taur Infection rule	100	false
+"Panther Taur Infection"	"Infection"	""	Panther Taur Infection rule	1000	false
 
 This is the Panther Taur Infection rule:
 	if Player has a body of "Panther Taur":

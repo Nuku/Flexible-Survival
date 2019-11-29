@@ -195,7 +195,7 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Tiger Infection"	"Infection"	""	Tiger Infection rule	100	false
+"Tiger Infection"	"Infection"	""	Tiger Infection rule	1000	false
 
 This is the Tiger Infection rule:
 	if Player has a body of "Tiger":

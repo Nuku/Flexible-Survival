@@ -749,7 +749,7 @@ Section 7 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Serenity's Servant"	"BadEnd"	"Servant"	Serenity's Servant rule	2	false
+"Serenity's Servant"	"BadEnd"	"Servant"	Serenity's Servant rule	20	false
 
 This is the Serenity's Servant rule:
 	if ending "Serenity's Servant" is triggered:

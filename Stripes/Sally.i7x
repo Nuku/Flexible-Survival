@@ -98,7 +98,7 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Sally's Epilogue"	"NPC"	""	Sally's Epilogue rule	90	false
+"Sally's Epilogue"	"NPC"	""	Sally's Epilogue rule	900	false
 
 This is the Sally's Epilogue rule:
 	if HP of Doctor Matt is 104:						[Sally the slutpet]

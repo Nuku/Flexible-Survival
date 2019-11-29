@@ -288,7 +288,7 @@ Section 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Ninja Cat Infection"	"Infection"	""	Ninja Cat Infection rule	100	false
+"Ninja Cat Infection"	"Infection"	""	Ninja Cat Infection rule	1000	false
 
 This is the Ninja Cat Infection rule:
 	if Player has a body of "Ninja Cat":

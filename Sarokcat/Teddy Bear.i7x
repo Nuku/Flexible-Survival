@@ -285,8 +285,8 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Teddy Beared"	"BadEnd"	"Force TF"	Teddy Beared rule	2	false
-"Teddy Bear Infection"	"Infection"	""	Teddy Bear Infection rule	100	false
+"Teddy Beared"	"BadEnd"	"Force TF"	Teddy Beared rule	20	false
+"Teddy Bear Infection"	"Infection"	""	Teddy Bear Infection rule	1000	false
 
 This is the Teddy Beared rule:
 	if ending "Teddy Beared" is triggered:

@@ -410,7 +410,7 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Kobold Infection"	"Infection"	""	Kobold Infection rule	100	false
+"Kobold Infection"	"Infection"	""	Kobold Infection rule	1000	false
 
 This is the Kobold Infection rule:
 	if Player has a body of "Kobold":

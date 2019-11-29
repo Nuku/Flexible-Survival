@@ -604,7 +604,7 @@ Section 5 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Hellhound Curse"	"BadEnd"	"Mixed"	Hellhound Curse rule	2	false
+"Hellhound Curse"	"BadEnd"	"Mixed"	Hellhound Curse rule	20	false
 
 This is the Hellhound Curse rule:
 	if hellHoundLevel > 0:

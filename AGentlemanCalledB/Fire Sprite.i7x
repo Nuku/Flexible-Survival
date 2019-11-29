@@ -492,7 +492,7 @@ Section 5 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Fire Sprite Infection"	"Infection"	""	Fire Sprite Infection rule	100	false
+"Fire Sprite Infection"	"Infection"	""	Fire Sprite Infection rule	1000	false
 
 This is the Fire Sprite Infection rule:
 	if Player has a body of "Fire Sprite":

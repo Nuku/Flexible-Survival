@@ -801,7 +801,7 @@ Section 7 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Fang's Epilogue"	"NPC"	"Mixed"	Fang's Epilogue rule	90	false
+"Fang's Epilogue"	"NPC"	"Mixed"	Fang's Epilogue rule	900	false
 
 This is the Fang's Epilogue rule:
 	if Fang is not in the Grey Abbey Library:

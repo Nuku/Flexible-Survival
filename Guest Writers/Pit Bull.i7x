@@ -556,7 +556,7 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Pit Bull Infection"	"Infection"	""	Pit Bull Infection rule	100	false
+"Pit Bull Infection"	"Infection"	""	Pit Bull Infection rule	1000	false
 
 This is the Pit Bull Infection rule:
 	if Player has a body of "Pit Bull":

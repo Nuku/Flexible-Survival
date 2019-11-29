@@ -389,7 +389,7 @@ Section 5 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Savina Vore"	"Voreloss"	""	Savina Vore rule	1	false
+"Savina Vore"	"Voreloss"	""	Savina Vore rule	10	false
 
 This is the Savina Vore rule:
 	if ending "Savina Vore" is triggered:

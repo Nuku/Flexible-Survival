@@ -739,9 +739,9 @@ Section 3 - Endings
 [
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Pink Gel Infection"	"Infection"	""	Pink Gel Infection rule	100	false
-"Blue Gel Infection"	"Infection"	""	Blue Gel Infection rule	100	false
-"Purple Gel Infection"	"Infection"	""	Purple Gel Infection rule	100	false
+"Pink Gel Infection"	"Infection"	""	Pink Gel Infection rule	1000	false
+"Blue Gel Infection"	"Infection"	""	Blue Gel Infection rule	1000	false
+"Purple Gel Infection"	"Infection"	""	Purple Gel Infection rule	1000	false
 
 This is the Pink Gel Infection rule:
 	if Player has a body of "Pink Gel":

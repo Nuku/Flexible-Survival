@@ -454,7 +454,7 @@ Section 9 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Hadiya's Epilogue"	"NPC"	""	Hadiya's Epilogue rule	90	false
+"Hadiya's Epilogue"	"NPC"	""	Hadiya's Epilogue rule	900	false
 
 This is the Hadiya's Epilogue rule:
 	if ( ( HP of Hadiya >= 13 and HP of Hadiya < 50 ) or ( HP of Hadiya >= 63 and HP of Hadiya < 100 ) ) and humanity of Player >= 10:

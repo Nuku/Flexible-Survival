@@ -257,7 +257,7 @@ Section 3 - Miscellaneous
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Ebonflame Drake Infection"	"Infection"	""	Ebonflame Drake Infection rule	100	false
+"Ebonflame Drake Infection"	"Infection"	""	Ebonflame Drake Infection rule	1000	false
 
 This is the Ebonflame Drake Infection rule:
 	if Player has a body of "Ebonflame Drake":

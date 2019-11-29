@@ -232,7 +232,7 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Black Equinoid Infection"	"Infection"	""	Black Equinoid Infection rule	100	false
+"Black Equinoid Infection"	"Infection"	""	Black Equinoid Infection rule	1000	false
 
 This is the Black Equinoid Infection rule:
 	if Player has a body of "Black Equinoid":

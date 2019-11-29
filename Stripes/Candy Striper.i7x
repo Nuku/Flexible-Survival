@@ -749,7 +749,7 @@ Section 8 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Candy's Epilogue"	"NPC"	""	Candy's Epilogue rule	90	false
+"Candy's Epilogue"	"NPC"	""	Candy's Epilogue rule	900	false
 
 This is the Candy's Epilogue rule:
 	if BodyName of Player is "Raccoon":

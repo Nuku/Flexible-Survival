@@ -589,8 +589,8 @@ Section 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Sierrasaur's Sex Toy"	"BadEnd"	"Sex Slave"	Sierrasaur's Sex Toy rule	2	false
-"Sierrasaur Infection"	"Infection"	""	Sierrasaur Infection rule	100	false
+"Sierrasaur's Sex Toy"	"BadEnd"	"Sex Slave"	Sierrasaur's Sex Toy rule	20	false
+"Sierrasaur Infection"	"Infection"	""	Sierrasaur Infection rule	1000	false
 
 this is the Sierrasaur's Sex Toy rule:
 	if ending "Sierrasaur's Sex Toy" is triggered:

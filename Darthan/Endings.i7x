@@ -6,7 +6,7 @@ Section 1 Human Ending
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Human Ending"	"Story"	""	Human Ending rule	80	false
+"Human Ending"	"Story"	""	Human Ending rule	800	false
 
 This is the Human Ending rule:
 	if Player has a body of "Human":

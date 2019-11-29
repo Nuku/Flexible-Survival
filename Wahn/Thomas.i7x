@@ -834,7 +834,7 @@ Section 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Thomas['] Epilogue"	"NPC"	""	Thomas' Epilogue rule	90	false
+"Thomas['] Epilogue"	"NPC"	""	Thomas' Epilogue rule	900	false
 
 This is the Thomas' Epilogue rule:
 	if (HP of Thomas > 0 and HP of Thomas < 100) and Dry Plains is known and humanity of Player > 10: [player met him and is sane]

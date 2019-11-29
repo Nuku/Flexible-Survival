@@ -191,7 +191,7 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Gray Squirrel Infection"	"Infection"	""	Gray Squirrel Infection rule	100	false
+"Gray Squirrel Infection"	"Infection"	""	Gray Squirrel Infection rule	1000	false
 
 This is the Gray Squirrel Infection rule:
 	if Player has a body of "Gray Squirrel":

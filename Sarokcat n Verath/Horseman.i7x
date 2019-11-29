@@ -225,7 +225,7 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Horseman Infection"	"Infection"	""	Horseman Infection rule	100	false
+"Horseman Infection"	"Infection"	""	Horseman Infection rule	1000	false
 
 This is the Horseman Infection rule:
 	if Player has a body of "Horseman":

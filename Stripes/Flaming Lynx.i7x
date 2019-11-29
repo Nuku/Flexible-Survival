@@ -315,7 +315,7 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Flaming Lynx Infection"	"Infection"	""	Flaming Lynx Infection rule	100	false
+"Flaming Lynx Infection"	"Infection"	""	Flaming Lynx Infection rule	1000	false
 
 This is the Flaming Lynx Infection rule:
 	if Player has a body of "Flaming Lynx":

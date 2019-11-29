@@ -497,7 +497,7 @@ Section 6 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Ferret Infection"	"Infection"	""	Ferret Infection rule	100	false
+"Ferret Infection"	"Infection"	""	Ferret Infection rule	1000	false
 
 This is the Ferret Infection rule:
 	if Player has a body of "Ferret":

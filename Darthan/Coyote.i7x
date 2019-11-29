@@ -228,7 +228,7 @@ to coyotify: [Used for infection purposes.]
 [
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Coyote Infection"	"Infection"	""	Coyote Infection rule	100	false
+"Coyote Infection"	"Infection"	""	Coyote Infection rule	1000	false
 
 This is the Coyote Infection rule:
 	if Player has a body of "Coyote":

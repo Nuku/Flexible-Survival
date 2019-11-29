@@ -413,7 +413,7 @@ Section 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Klauz['] Epilogue"	"Companion"	"Pet"	Klauz' Epilogue rule	75	false
+"Klauz['] Epilogue"	"Companion"	"Pet"	Klauz' Epilogue rule	750	false
 
 This is the Klauz' Epilogue rule:
 	if Felinoid companion is tamed:

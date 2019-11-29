@@ -399,7 +399,7 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Husky Bitch Infection"	"Infection"	""	Husky Bitch Infection rule	100	false
+"Husky Bitch Infection"	"Infection"	""	Husky Bitch Infection rule	1000	false
 
 This is the Husky Bitch Infection rule:
 	if ending "Husky Bitch with Colleen" is triggered:

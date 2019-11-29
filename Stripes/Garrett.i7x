@@ -400,7 +400,7 @@ Section 6 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Garrett's Epilogue"	"NPC"	""	Garrett's Epilogue rule	90	false
+"Garrett's Epilogue"	"NPC"	""	Garrett's Epilogue rule	900	false
 
 This is the Garrett's Epilogue rule:
 	if Player has a body of "Blue Gryphon Herm" or Player has a body of "Feral Gryphon":

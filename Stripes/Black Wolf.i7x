@@ -209,7 +209,7 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Black Wolf Infection"	"Infection"	""	Black Wolf Infection rule	100	false
+"Black Wolf Infection"	"Infection"	""	Black Wolf Infection rule	1000	false
 
 This is the Black Wolf Infection rule:
 	if Player has a body of "Black Wolf":

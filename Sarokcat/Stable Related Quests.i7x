@@ -575,7 +575,7 @@ instead of resolving a Horsepitfight:
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Horse Pit Fight Abuse"	"BadEnd"	"Sex Slave"	Horse Pit Fight Abuse rule	2	false
+"Horse Pit Fight Abuse"	"BadEnd"	"Sex Slave"	Horse Pit Fight Abuse rule	20	false
 
 This is the Horse Pit Fight Abuse rule:
 	if ending "Horse Pit Fight Abuse" is triggered:

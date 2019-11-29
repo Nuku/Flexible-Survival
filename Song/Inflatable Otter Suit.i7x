@@ -549,7 +549,7 @@ Section 5 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Inflatable Otter Suit Sex Slave"	"BadEnd"	"Sex Slave"	Inflatable Otter Suit Sex Slave rule	2	false
+"Inflatable Otter Suit Sex Slave"	"BadEnd"	"Sex Slave"	Inflatable Otter Suit Sex Slave rule	20	false
 
 This is the Inflatable Otter Suit Sex Slave rule: [Bad end to display after complete sanity loss or encasement.]
 	if ending "Inflatable Otter Suit Sex Slave" is triggered:

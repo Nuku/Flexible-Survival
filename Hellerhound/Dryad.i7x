@@ -248,7 +248,7 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Dryad Infection"	"Infection"	""	Dryad Infection rule	100	false
+"Dryad Infection"	"Infection"	""	Dryad Infection rule	1000	false
 
 This is the Dryad Infection rule:
 	if Player has a body of "Dryad":

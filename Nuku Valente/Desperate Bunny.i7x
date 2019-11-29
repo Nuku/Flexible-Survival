@@ -683,7 +683,7 @@ Section 6 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Sandra's Epilogue"	"NPC"	""	Sandra's Epilogue rule	90	false
+"Sandra's Epilogue"	"NPC"	""	Sandra's Epilogue rule	900	false
 
 This is the Sandra's Epilogue rule:
 	if Sandra is in the Bunker:

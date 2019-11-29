@@ -308,7 +308,7 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Corrupted Spawner Infection"	"Infection"	""	Corrupted Spawner Infection rule	100	false
+"Corrupted Spawner Infection"	"Infection"	""	Corrupted Spawner Infection rule	1000	false
 
 This is the Corrupted Spawner Infection rule:
 	if Player has a body of "Corrupted Spawner":

@@ -245,7 +245,7 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Flesh Blob Infection"	"Infection"	""	Flesh Blob Infection rule	100	false
+"Flesh Blob Infection"	"Infection"	""	Flesh Blob Infection rule	1000	false
 
 This is the Flesh Blob Infection rule:
 	if Player has a body of "Flesh Blob":

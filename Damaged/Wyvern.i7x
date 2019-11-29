@@ -1979,9 +1979,9 @@ Section 4 - Miscellaneous
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Wyvern Vore"	"Voreloss"	""	Wyvern Vore rule	1	false
-"Wyvern Orgy"	"Boundstate"	""	Wyvern Orgy rule	2	false
-"Wyvern Infection"	"Infection"	""	Wyvern Infection rule	100	false
+"Wyvern Vore"	"Voreloss"	""	Wyvern Vore rule	10	false
+"Wyvern Orgy"	"Boundstate"	""	Wyvern Orgy rule	20	false
+"Wyvern Infection"	"Infection"	""	Wyvern Infection rule	1000	false
 
 This is the Wyvern Vore rule:
 	if ending "Wyvern Vore" is triggered:

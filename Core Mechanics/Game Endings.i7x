@@ -226,9 +226,9 @@ to ratetheplayer:
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Player Starvation"	"Death"	"Starvation"	Player Starvation rule	1	false
-"Player has died"	"Death"	""	Player has died rule	1	false
-"Epilogue Intro"	"Epilogue"	""	Epilogue Intro rule	5	false
+"Player Starvation"	"Death"	"Starvation"	Player Starvation rule	10	false
+"Player has died"	"Death"	""	Player has died rule	10	false
+"Epilogue Intro"	"Epilogue"	""	Epilogue Intro rule	50	false
 
 This is the Player Starvation rule:
 	if thirst of Player >= 100 or hunger of Player >= 100:	[blocking regular endings]

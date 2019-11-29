@@ -1680,8 +1680,8 @@ Section 5 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"DBrute Slave"	"BadEnd"	"Slave"	DBrute Slave rule	2	false
-"Demon Brute Infection"	"Infection"	""	Demon Brute Infection rule	100	false
+"DBrute Slave"	"BadEnd"	"Slave"	DBrute Slave rule	20	false
+"Demon Brute Infection"	"Infection"	""	Demon Brute Infection rule	1000	false
 
 This is the DBrute Slave rule:
 	if ending "DBrute Slave" is triggered:

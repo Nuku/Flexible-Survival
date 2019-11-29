@@ -310,7 +310,7 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Hyena Herm Infection"	"Infection"	""	Hyena Herm Infection rule	100	false
+"Hyena Herm Infection"	"Infection"	""	Hyena Herm Infection rule	1000	false
 
 This is the Hyena Herm Infection rule:
 	if ending "Hyena Matriarch Epilogue" is triggered:

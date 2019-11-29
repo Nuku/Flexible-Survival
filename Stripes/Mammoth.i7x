@@ -238,7 +238,7 @@ Section 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Mammoth Infection"	"Infection"	""	Mammoth Infection rule	100	false
+"Mammoth Infection"	"Infection"	""	Mammoth Infection rule	1000	false
 
 [A sample structure for succumbing/surviving messages at the end of the game.]
 [Numerous other examples can be found in existing creature files.]

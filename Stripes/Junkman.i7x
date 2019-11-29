@@ -222,7 +222,7 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Junkman Infection"	"Infection"	""	Junkman Infection rule	100	false
+"Junkman Infection"	"Infection"	""	Junkman Infection rule	1000	false
 
 This is the Junkman Infection rule:
 	if Player has a body of "Junkman":

@@ -543,7 +543,7 @@ Section 8 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Sidney's Epilogue"	"NPC"	""	Sidney's Epilogue rule	90	false
+"Sidney's Epilogue"	"NPC"	""	Sidney's Epilogue rule	900	false
 
 This is the Sidney's Epilogue rule:
 	if humanity of Player < 10 or if HP of Sidney < 3:

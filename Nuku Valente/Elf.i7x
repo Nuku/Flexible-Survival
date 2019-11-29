@@ -266,7 +266,7 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Wood Elf Infection"	"Infection"	""	Wood Elf Infection rule	100	false
+"Wood Elf Infection"	"Infection"	""	Wood Elf Infection rule	1000	false
 
 This is the Wood Elf Infection rule:
 	if Player has a body of "Wood Elf":

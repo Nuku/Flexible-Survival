@@ -240,7 +240,7 @@ Section 1.5 - Fox Kit Ending
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Dash's Epilogue"	"Companion"	"Pet"	Dash's Epilogue rule	75	false
+"Dash's Epilogue"	"Companion"	"Pet"	Dash's Epilogue rule	750	false
 
 This is the Dash's Epilogue rule:
 	if little fox is tamed:

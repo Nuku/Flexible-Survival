@@ -897,8 +897,8 @@ Section 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Pewter Consort Orgy"	"Boundstate"	""	Pewter Consort Orgy rule	10	false
-"Pewter Consort Infection"	"Infection"	""	Pewter Consort Infection rule	100	false
+"Pewter Consort Orgy"	"Boundstate"	""	Pewter Consort Orgy rule	100	false
+"Pewter Consort Infection"	"Infection"	""	Pewter Consort Infection rule	1000	false
 
 This is the Pewter Consort Orgy rule:
 	if ending "Pewter Consort Orgy" is triggered:

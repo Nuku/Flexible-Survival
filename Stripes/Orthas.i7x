@@ -710,7 +710,7 @@ Section 7 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Orthas['] Epilogue"	"NPC"	""	Orthas' Epilogue rule	90	false
+"Orthas['] Epilogue"	"NPC"	""	Orthas' Epilogue rule	900	false
 
 This is the Orthas' Epilogue rule:
 	if HP of Orthas is listed in { 4, 5, 6 } and humanity of Player > 10 and HP of Doctor Matt <= 100:

@@ -696,7 +696,7 @@ Section 7 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Kitsune Infection"	"Infection"	""	Kitsune Infection rule	100	false
+"Kitsune Infection"	"Infection"	""	Kitsune Infection rule	1000	false
 
 This is the Kitsune Infection rule:
 	if Player has a body of "Kitsune":

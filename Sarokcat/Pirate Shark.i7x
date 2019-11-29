@@ -237,8 +237,8 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Pirate Treasure Quest Epilogue"	"Quest"	""	Pirate Treasure Quest Epilogue rule	95	false
-"Shark Herm Infection"	"Infection"	""	Shark Herm Infection rule	100	false
+"Pirate Treasure Quest Epilogue"	"Quest"	""	Pirate Treasure Quest Epilogue rule	950	false
+"Shark Herm Infection"	"Infection"	""	Shark Herm Infection rule	1000	false
 
 This is the Pirate Treasure Quest Epilogue rule:
 	if Player has a body of "Shark Herm":

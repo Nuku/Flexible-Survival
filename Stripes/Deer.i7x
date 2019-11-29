@@ -726,8 +726,8 @@ Section 7 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Susan's Epilogue"	"NPCSharedInfection"	""	Susan's Epilogue rule	90	false
-"Deer Infection"	"Infection"	""	Deer Infection rule	100	false
+"Susan's Epilogue"	"NPCSharedInfection"	""	Susan's Epilogue rule	900	false
+"Deer Infection"	"Infection"	""	Deer Infection rule	1000	false
 
 This is the Susan's Epilogue rule:
 	if Susan is not in primary lab and Susan is not in hidden lab:

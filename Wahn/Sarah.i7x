@@ -1537,7 +1537,7 @@ Section 2 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Sarah's Epilogue"	"NPC"	""	Sarah's Epilogue rule	90	false
+"Sarah's Epilogue"	"NPC"	""	Sarah's Epilogue rule	900	false
 
 This is the Sarah's Epilogue rule:
 	if Sarah is in the bunker:

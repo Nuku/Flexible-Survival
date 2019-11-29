@@ -260,7 +260,7 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Great Dane Infection"	"Infection"	""	Great Dane Infection rule	100	false
+"Great Dane Infection"	"Infection"	""	Great Dane Infection rule	1000	false
 
 This is the Great Dane Infection rule:
 	if Player has a body of "Great Dane":

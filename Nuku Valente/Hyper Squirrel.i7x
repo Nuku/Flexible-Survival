@@ -695,7 +695,7 @@ Section 6 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Snow's Epilogue"	"NPC"	"Mixed"	Snow's Epilogue rule	90	false
+"Snow's Epilogue"	"NPC"	"Mixed"	Snow's Epilogue rule	900	false
 
 This is the Snow's Epilogue rule:
 	if Snow is in Grey Abbey Library:

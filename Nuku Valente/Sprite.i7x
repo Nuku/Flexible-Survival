@@ -258,7 +258,7 @@ Section 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"City Sprite Infection"	"Infection"	""	City Sprite Infection rule	100	false
+"City Sprite Infection"	"Infection"	""	City Sprite Infection rule	1000	false
 
 This is the City Sprite Infection rule:
 	if Player has a body of "City Sprite":

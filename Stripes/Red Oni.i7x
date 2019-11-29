@@ -229,8 +229,8 @@ Section 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Red Oni with Hayato"	"NPCSharedInfection"	""	Red Oni with Hayato rule	90	false
-["Red Oni Infection"	"Infection"	""	Red Oni Infection rule	100	false]
+"Red Oni with Hayato"	"NPCSharedInfection"	""	Red Oni with Hayato rule	900	false
+["Red Oni Infection"	"Infection"	""	Red Oni Infection rule	1000	false]
 
 This is the Red Oni with Hayato rule:
 	if Player has a body of "Red Oni" and HP of Hayato is 96:

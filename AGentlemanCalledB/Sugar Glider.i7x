@@ -337,7 +337,7 @@ Section 4 - Endings [Awaiting sugar ferret tie ins]
 [
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Sugar Glider Infection"	"Infection"	""	Sugar Glider Infection rule	100	false
+"Sugar Glider Infection"	"Infection"	""	Sugar Glider Infection rule	1000	false
 
 This is the Sugar Glider Infection rule:
 	if Player has a body of "Sugar Glider":

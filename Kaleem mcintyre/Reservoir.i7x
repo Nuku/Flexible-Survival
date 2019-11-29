@@ -564,8 +564,8 @@ Section 7 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Reservoir Oozing"	"BadEnd"	""	Reservoir Oozing rule	2	false
-"Reservoir Epilogue"	"Story"	""	Reservoir Epilogue rule	95	false
+"Reservoir Oozing"	"BadEnd"	""	Reservoir Oozing rule	20	false
+"Reservoir Epilogue"	"Story"	""	Reservoir Epilogue rule	950	false
 
 This is the Reservoir Oozing rule:
 	if ending "Reservoir Oozing" is triggered:

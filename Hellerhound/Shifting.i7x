@@ -197,7 +197,7 @@ To transform:
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Shifter Check"	"Special"	""	Shifter Check rule	6	false
+"Shifter Check"	"Special"	""	Shifter Check rule	60	false
 
 This is the Shifter Check rule:
 	if Resolution of Secure Area is 2:

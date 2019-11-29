@@ -595,7 +595,7 @@ Section 8 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Anastasia's Epilogue"	"NPC"	""	Anastasia's Epilogue rule	90	false
+"Anastasia's Epilogue"	"NPC"	""	Anastasia's Epilogue rule	900	false
 
 This is the Anastasia's Epilogue rule:
 	if HP of Anastasia >= 7:

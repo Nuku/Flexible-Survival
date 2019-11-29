@@ -331,7 +331,7 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Mismatched Chimera Infection"	"Infection"	""	Mismatched Chimera Infection rule	100	false
+"Mismatched Chimera Infection"	"Infection"	""	Mismatched Chimera Infection rule	1000	false
 
 This is the Mismatched Chimera Infection rule:
 	if Player has a body of "Mismatched Chimera":

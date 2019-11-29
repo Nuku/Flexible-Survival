@@ -424,7 +424,7 @@ Section 6 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Mental Mouse Infection"	"Infection"	""	Mental Mouse Infection rule	100	false
+"Mental Mouse Infection"	"Infection"	""	Mental Mouse Infection rule	1000	false
 
 This is the Mental Mouse Infection rule:
 	if Player has a body of "Mental Mouse" or ( Player has a body of "Albino Mouse" and mouse girl is tamed ):

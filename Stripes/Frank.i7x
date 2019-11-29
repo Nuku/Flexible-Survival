@@ -514,7 +514,7 @@ Section 9 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Frank's Epilogue"	"NPC"	""	Frank's Epilogue rule	90	false
+"Frank's Epilogue"	"NPC"	""	Frank's Epilogue rule	900	false
 
 This is the Frank's Epilogue rule:
 	if ( franksex > 2 or frankmalesex > 2 ) and Player has no body of "Skunk" and Player has no body of "Skunk Taur" and Player has no body of "Skunkbeast Lord":

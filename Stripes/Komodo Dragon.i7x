@@ -296,7 +296,7 @@ Section 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Komodo Dragon Infection"	"Infection"	""	Komodo Dragon Infection rule	100	false
+"Komodo Dragon Infection"	"Infection"	""	Komodo Dragon Infection rule	1000	false
 
 This is the Komodo Dragon Infection rule:
 	if Player has a body of "Komodo Dragon":

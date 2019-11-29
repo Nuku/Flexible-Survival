@@ -502,7 +502,7 @@ Section 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Hawkman Infection"	"Infection"	""	Hawkman Infection rule	100	false
+"Hawkman Infection"	"Infection"	""	Hawkman Infection rule	1000	false
 
 This is the Hawkman Infection rule:
 	if Player has a body of "Hawkman Male" or Player has a body of "Hawkman Female":

@@ -564,7 +564,7 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Orca Sex Slave"	"BadEnd"	"Sex Slave"	Orca Sex Slave rule	2	false
+"Orca Sex Slave"	"BadEnd"	"Sex Slave"	Orca Sex Slave rule	20	false
 
 This is the Orca Sex Slave rule: [Bad end to display after complete sanity loss or encasement.]
 	if ending "Orca Sex Slave" is triggered:

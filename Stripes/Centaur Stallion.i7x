@@ -328,7 +328,7 @@ Section 5 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Centaur Stallion Infection"	"Infection"	""	Centaur Stallion Infection rule	100	false
+"Centaur Stallion Infection"	"Infection"	""	Centaur Stallion Infection rule	1000	false
 
 This is the Centaur Stallion Infection rule:
 	if Player has a body of "Centaur Stallion" or Player has a body of "Centaur Mare":

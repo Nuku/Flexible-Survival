@@ -409,8 +409,8 @@ When Play begins:
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Retriever Female Infection"	"Infection"	""	Retriever Female Infection rule	100	false
-"Rex['] and Karen's Epilogue"	"NPC"	""	Rex' and Karen's Epilogue rule	90	false
+"Retriever Female Infection"	"Infection"	""	Retriever Female Infection rule	1000	false
+"Rex['] and Karen's Epilogue"	"NPC"	""	Rex' and Karen's Epilogue rule	900	false
 
 This is the Retriever Female Infection rule:
 	if Player has a body of "Retriever Female":

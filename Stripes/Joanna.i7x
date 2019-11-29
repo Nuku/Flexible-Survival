@@ -680,8 +680,8 @@ Section 10 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"You got Planted"	"BadEnd"	""	You got Planted rule	2	false
-"Joanna's Epilogue"	"NPC"	""	Joanna's Epilogue rule	90	false
+"You got Planted"	"BadEnd"	""	You got Planted rule	20	false
+"Joanna's Epilogue"	"NPC"	""	Joanna's Epilogue rule	900	false
 
 This is the You got Planted rule:
 	if ending "You got Planted" is triggered:

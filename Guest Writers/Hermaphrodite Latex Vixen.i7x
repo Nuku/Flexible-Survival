@@ -341,7 +341,7 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Latex Vixen Herm Infection"	"Infection"	""	Latex Vixen Herm Infection rule	100	false
+"Latex Vixen Herm Infection"	"Infection"	""	Latex Vixen Herm Infection rule	1000	false
 
 This is the Latex Vixen Herm Infection rule:
 	if Player has a body of "Latex Vixen Herm":

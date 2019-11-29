@@ -870,9 +870,9 @@ Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Magic Dragoness's Familiar"	"Leaving"	""	Magic Dragoness's Familiar rule	10	false
-"Magic Dragoness's Servant"	"Leaving"	""	Magic Dragoness's Servant rule	10	false
-["Magic Drake Infection"	"Infection"	""	Magic Drake Infection rule	100	false]
+"Magic Dragoness's Familiar"	"Leaving"	""	Magic Dragoness's Familiar rule	100	false
+"Magic Dragoness's Servant"	"Leaving"	""	Magic Dragoness's Servant rule	100	false
+["Magic Drake Infection"	"Infection"	""	Magic Drake Infection rule	1000	false]
 
 This is the Magic Dragoness's Familiar rule:
 	if ending "Magic Dragoness's Familiar" is triggered:
