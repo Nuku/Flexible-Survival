@@ -226,8 +226,15 @@ When Play begins:
 ]
 
 
-when play ends:
-	if BodyName of Player is "Triceratops":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Triceratops Infection"	"Infection"	""	Triceratops Infection rule	1000	false
+
+This is the Triceratops Infection rule:
+	if Player has a body of "Triceratops":
+		trigger ending "Triceratops Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You can feel a growing rhythm in your mind, almost like music. You start to follow that funky beat, drawing you through the city. As you travel, you spot a clothing store display and break into it, wanting the clothes on display. With your change in attire, you continue on, eventually coming to the museum, striding in with confidence. You snap your fingers and stride to the beat playing in your mind. Your platform shoes echo in the antechamber as you start to dance. The sphinx at the front desk watches you with an inscrutable expression, but it is not for her you are dancing. When the rhythm of your steps is matched by that of another, the female triceratops striding into the room from one of the museum halls, then your dance can begin in earnest with your partner.";
 			say "     You stride meaningfully across the room towards her, stepping to the rhythm. She dances tantalizingly as you come over to her. With your arms around her, you both start to dance with energy, kissing and touching each other between the moves of your passionate mating dance[if Player is male]. Your funky, lime-green bellbottoms rock to the motion of your hips while your tail sways behind you. Half-open over your chest is a large-collared shirt, resplendent in colors and patterns to draw the female's eye and she is clearly pleased with your bright, vibrant plumage. You strike a pose, swaying your hips and pointing, indicating to head further into the museum. With a grin, she strides off, her shoes still tapping out the beat while you move in time after her, following her to her nest, soon to be the love nest of you both[else]. Resplendent in your lime-green wrap dress, you sway your hips and while your tail moves behind you. You have sets of hoop earrings that you've turned into golden rings to adorn your upper horns. You strike a pose and the other female moves up beside you, without exchanging a glance, you both dance and stride down the museum halls in search of dance partners so you may fill your shared nest with eggs[end if].";

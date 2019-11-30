@@ -288,8 +288,15 @@ An everyturn rule:
 			decrease humanity of Player by a random number between 0 and 1;
 
 
-when play ends:
-	if BodyName of Player is "Snow Bat":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Snow Bat Infection"	"Infection"	""	Snow Bat Infection rule	1000	false
+
+This is the Snow Bat Infection rule:
+	if Player has a body of "Snow Bat":
+		trigger ending "Snow Bat Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10 and HP of Sven is 54 and player is male:	[Special: Male/Herm Snow Bat + Svetlana]
 			say "     As your will to resist the infection falters and fails, you succumb to your dark thirst and head off into the city to sate it. After leaving behind a few random meals passed out after your feeding, you head off to your true goal. Now having the strength to fly after feeding, you take to the night air. While part of your memories are hazy, you do recall a female snow leopard waiting to see you again and make your way there one evening. Standing in the shadows outside, you purr softly and wait for her to notice you. Hearing you, she is drawn out and into your arms. She mewls softly as you seduce her into a kiss before you bite her neck and drink her blood while mating her. You only drink a little, wanting to draw out the pleasure of enjoying her, sending her back into the store to wait for the next evening. She comes to you willingly every night, her dark lover, to let you feed and fuck her. After a few days, she grows weaker and you lure her away from her mouse mistress to be yours.";
 			say "     You fly off with her into the night, taking her to your hidden lair in a high-rise tower. The floor you've chosen has been isolated from the others by rubble and contains several windowless rooms, perfect for your daytime sleeping. Svetlana, unable to escape even if she wanted to, becomes yours to mate and feed upon, filling her with your hybrid spawn.";

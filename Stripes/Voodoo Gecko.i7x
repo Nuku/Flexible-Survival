@@ -392,8 +392,13 @@ to say drinkgeckocum:
 
 Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "Voodoo Gecko":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Voodoo Gecko Infection"	"Infection"	""	Voodoo Gecko Infection rule	1000	false
+
+This is the Voodoo Gecko Infection rule:
+	if Player has a body of "Voodoo Gecko":
+		trigger ending "Voodoo Gecko Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     As the voodoo chanting in your mind grows louder, your human personality is twisted and subsumed. Heeding the call, you search the fairgrounds until drawn to one of the haunted houses. With a heavy voodoo theme to it, you know it is where you belong. As if sensing your arrival, several gecko shaman step out to greet you.";
 			if Player is pure:

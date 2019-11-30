@@ -281,8 +281,13 @@ Definition: a person is xenotailed:
 
 Section 5 - Endings
 
-when play ends:
-	if BodyName of Player is "Xeno Drone":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Xeno Drone Infection"	"Infection"	""	Xeno Drone Infection rule	1000	false
+
+This is the Xeno Drone Infection rule:
+	if Player has a body of "Xeno Drone":
+		trigger ending "Xeno Drone Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You succumb to your horrific infection, feeling its silent power and reveling in it. You head out into the city to seek your prey, eager to breed and spread your kind to satisfy your lustful instincts. ";
 			if Player is herm:

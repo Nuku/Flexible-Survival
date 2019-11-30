@@ -231,8 +231,15 @@ When Play begins:
 ]
 
 
-when play ends:
-	if BodyName of Player is "Trash Coon":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Trash Coon Infection"	"Infection"	""	Trash Coon Infection rule	1000	false
+
+This is the Trash Coon Infection rule:
+	if Player has a body of "Trash Coon":
+		trigger ending "Trash Coon Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     As your human mind falters, it is filled with a longing for trash and scavenging. You find your way to the city mall and set up your home among the many dumpsters behind the food court. Several of the rats who live there become friends with you, though only a few are willing to have a romp with you in the messy trash, much preferring their clean stores and mall. They try to encourage you to come in and live with them, but you much prefer your messy home, though you'll go through the trouble of cleaning up (a little) to visit on occasion.";
 		else:

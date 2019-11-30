@@ -240,9 +240,15 @@ When Play begins:
 ]
 
 
+Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Wildcat":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Wildcat Infection"	"Infection"	""	Wildcat Infection rule	1000	false
+
+This is the Wildcat Infection rule:
+	if Player has a body of "Wildcat":
+		trigger ending "Wildcat Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     As it becomes harder to maintain your human thoughts, you are drawn back to the large scrapyard. There, your instincts lead you across the maze of wrecked cars and old junk to a work area. Several large, powerful felines are at work here, stripping down the old cars and fashioning weapons and armor from them. You pick up a car side panel and start to warp it into shape with your powerful paws. There is a brief glance from hulking cats before they get back to work, accepting you among them as you start to make your own suit of junkyard armor. It is a long process to make, but it is your own and you celebrate by letting one of the sexy felines help you take it off. Your yowls of lust carry across the junkyard that night, and many other nights as you enjoy the pleasures of your big, powerful lovers.";
 			say "     When the soldiers come into the city in force, you and the other felines are ready for them, having fortified by the scrapyard with improvised weapons and defenses. You capture or drive off the squads sent against you, acting as protectors of those who live in the discarded junk. Your people make trades with several other factions, selling tools and weapons from your forges for supplies or captured soldiers to further add to your numbers.";

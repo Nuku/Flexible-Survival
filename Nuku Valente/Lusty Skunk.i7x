@@ -25,7 +25,7 @@ After resolving a Lusty Skunk, try looking;
 
 Skunkform is an action applying to nothing.
 
-To Skunkform:
+To Skunkform: [TODO: This looks kinda incomplete. Maybe revisit the whole thing? (@Stadler#3007)]
 	if skunkbeaststatus is 1:
 		[puts Skunkbeast Lord as lead monster]
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
@@ -41,7 +41,7 @@ To Skunkform:
 	else:
 		now Body of Player is "somewhat shapely, but could pass for normal - at least from the waist up. Below that, you're dramatically transformed, having the head of a female skunk morph protruding from your groin, looking around, talking, and generally making nice. The black and white furred skunk paws for feet are also a hint that something is amiss. Strangely, your upper body is that of a human, melding into a furry lower half smoothly. Your ass has been replaced with a whole body of a skunk, with wide back hips that conceal your genitals, now riding far behind you. Your lower body is powerful looking, with large claws at the end of the back feet";
 		now tail of Player is "You have a broad, striped, skunk tail.";
-		now BodyName of Player is "Skunk Taur";
+		now BodyName of Player is "Skunk Taur"; [TODO: Add a Table of Random Critters entry for "Skunk Taur" (@Stadler#3007)]
 		now TailName of Player is "Skunk Taur";
 		now scalevalue of Player is 4;
 		now bodydesc of Player is "tauric";

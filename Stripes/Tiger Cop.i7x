@@ -906,7 +906,11 @@ When Play begins:
 
 Section 10 - Endings
 
-when play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Tiger Cop Endings"	"Special"	"Mixed"	Tiger Cop Endings rule	970	false
+
+This is the Tiger Cop Endings rule: [TODO: Reorganize this mess later on (@Stadler#3007)]
 	[force auto-change of name. Prevents problems with dirty water, etc... with endings]
 	[Does not resolve issues with children/use of descriptive names during the game, but better than nothing]
 	if BodyName of Player is "Malayan Tiger Male":

@@ -238,8 +238,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Squid":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Squid Infection"	"Infection"	""	Squid Infection rule	1000	false
+
+This is the Squid Infection rule:
+	if Player has a body of "Squid":
+		trigger ending "Squid Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     With thoughts of the cool waters of the ocean, you head back to the beach area as your infection starts rewriting your mind. Discarding you pack, you slide your sleek body into the water and swim out to find the other squids. You join their underwater school, frolicking and fondling one another happily under the waves[if Player is male]. Having a cock, you are quite popular with the cute girls[end if].";
 		else:

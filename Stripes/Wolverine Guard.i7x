@@ -299,9 +299,15 @@ When Play begins:
 ]
 
 
+Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Wolverine Guard":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Wolverine Guard Infection"	"Infection"	""	Wolverine Guard Infection rule	1000	false
+
+This is the Wolverine Guard Infection rule:
+	if Player has a body of "Wolverine Guard":
+		trigger ending "Wolverine Guard Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if jamessex is 3 and player is female:
 				say "     You find your growing urge to protect and defend your post increasing. Joining James at the Central Library, you become his mate and share the duty with him. He accepts him place now, no longer fighting his powerful body. Most of the time, you both guard it together, though occasionally alone so the other can get a brief nap. As with that first time, you rut often on the library steps. The lustful growls of your animalistic sex carry far, warning any would be interlopers away. You eventually bear him some kits, who grow big and strong like their parents and take up the duty to protect the library as well. You live peaceably with the librarians inside, guarding their home and leaving them undisturbed. There is some commotion when the soldiers come through the city, but you, your mate and your offspring are able to drive them off, protecting your post.";
