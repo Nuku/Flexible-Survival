@@ -36,22 +36,8 @@ Instead of resolving a Skunkbeast Battle:
 			say "     You are knocked down by the skunkbeast lord. Pinning you down with one of his massive paws, he slams the other down onto the gun repeatedly, shattering and grinding the hated thing into the ground. With you trapped and defeated, several of the female skunks rush up, laving attention upon the victory, nuzzling and caressing him all over. Special attention is paid to his large, throbbing cock, which they stroke and rub with lustful moans and playful grins at you. That's when you realize that they're keeping the dripping, pulsing meat pointed straight at you and you are awash in a torrent of skunk semen as the giant growls loudly and proudly in triumphant climax.";
 			now humanity of Player is 0;
 			[puts Skunk as lead monster for infection and impregnation]
-			repeat with y running from 1 to number of filled rows in Table of Random Critters:
-				choose row y in Table of Random Critters;
-				if Name entry is "Skunk":
-					now MonsterID is y;
-					break;
-			now TailName of Player is "Skunk";
-			now FaceName of Player is "Skunk";
-			now SkinName of Player is "Skunk";
-			now BodyName of Player is "Skunk";
-			now CockName of Player is "Skunk";
-			attributeinfect;
-			now tail of Player is tail entry;
-			now Face of Player is face entry;
-			now Skin of Player is skin entry;
-			now Body of Player is body entry;
-			now Cock of Player is cock entry;
+			setmonster "Skunk" silently;
+			turn the Player into a "Skunk" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
 			if hellHoundLevel is 0:
 				follow the sex change rule;
 				follow the sex change rule;
@@ -91,17 +77,7 @@ Instead of resolving a Skunkbeast Battle:
 			SanLoss 25;
 			if "Strong Psyche" is listed in feats of Player, SanBoost 5;
 			if "Weak Psyche" is listed in feats of Player, SanLoss 5;
-			now TailName of Player is "Skunkbeast Lord";
-			now FaceName of Player is "Skunkbeast Lord";
-			now SkinName of Player is "Skunkbeast Lord";
-			now BodyName of Player is "Skunkbeast Lord";
-			now CockName of Player is "Skunkbeast Lord";
-			attributeinfect;
-			now tail of Player is tail entry;
-			now Face of Player is face entry;
-			now Skin of Player is skin entry;
-			now Body of Player is body entry;
-			now Cock of Player is cock entry;
+			turn the Player into a "Skunkbeast Lord";
 			if "Herm Preferred" is listed in feats of Player or "Female Preferred" is listed in feats of Player or "Always A Pussy" is listed in feats of Player or (isHellhound is true and maleHound is false):	[Forced female]
 				if Player is not female, now Cunt Count of Player is 1;
 				if Cunt Depth of Player < Cunt Depth entry, now Cunt Depth of Player is Cunt Depth entry;

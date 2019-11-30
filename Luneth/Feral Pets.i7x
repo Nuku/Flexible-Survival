@@ -207,7 +207,7 @@ Instead of resolving Lost Crab:
 			now cute crab is tamed;
 			add "Tamed" to Traits of cute crab;
 			move Snips to Computer Lab;
-			say "[bold type](The cute crab is now tamed! You can make it your active pet by typing [link]pet cute crab[as]pet cute crab[end link]. You can see all of the pets that you have tamed with the [link]pet[as]pet[end link] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [link]pet dismiss[as]pet dismiss[end link], or just [link]dismiss[as]dismiss[end link])[roman type]";
+			say "[bold type](The cute crab is now tamed! You can make it your active pet by typing [link]pet cute crab[as]pet cute crab[end link]. You can see all of the pets that you have tamed with the [link]pet[as]pet[end link] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [link]pet dismiss[as]pet dismiss[end link], or just [link]dismiss[as]dismiss[end link])[roman type][line break]";
 			now Resolution of Lost Crab is 1; [fed the crab]
 		else:
 			say "     The crab scuttles away sadly.";

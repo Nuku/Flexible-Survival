@@ -90,7 +90,7 @@ Instead of resolving Nerd's Opinion:
 	if tribe of Player is latex foxes:
 		say "The nerdy vixen could be seen adjusting her glasses as she padded towards you, her thighs squeaking with every step. [if turns minus lastfuck of nerd < fuckfrequency of nerd and lastfuck of nerd > 0]You can't help but notice she's slightly waddling, likely due to the roughness of your last encounter. You can still see thick globs of white, sticky substance running down those glossy thighs. Though she seemed unperturbed by this; however, you cannot help but snicker quietly to yourself. [end if]She eyes you for a moment before speaking, 'Books is good boss, but I only can understand the pictures...' She frowns, staring at you for a moment, seeming to be slightly embarrassed. It seems your tribe isn't the sharpest of tools in the shed. So you all opt to sell them off to the highest bidder![line break][line break]";
 		let x be a random number from 100 to 400;
-		say "Selling the books, you earned [bold type]$[x].[roman type]";
+		say "Selling the books, you earned [bold type]$[x].[roman type][line break]";
 		if x > 300:
 			say "Who knew books could sell for so much?";
 		if x < 200:

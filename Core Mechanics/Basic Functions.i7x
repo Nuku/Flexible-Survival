@@ -81,9 +81,9 @@ to PlayerEat (N - number):
 to PlayerHunger (N - number):
 	LineBreak;
 	say "     [bold type]Your hunger has increased by [N]![roman type][line break]";
-	decrease hunger of Player by N;
-	if hunger of Player < 0:
-		now hunger of Player is 0;
+	increase hunger of Player by N;
+	if hunger of Player > 100:
+		now hunger of Player is 100;
 
 to ThirstReset:
 	LineBreak;
@@ -101,6 +101,8 @@ to PlayerThirst (N - number):
 	LineBreak;
 	say "     [bold type]Your thirst has increased by [N]![roman type][line break]";
 	increase thirst of Player by N;
+	if thirst of Player > 100:
+		now thirst of Player is 100;
 
 to PlayerMaxHeal:
 	LineBreak;
@@ -167,6 +169,11 @@ to ScoreGain (N - number):
 	say "     [bold type]Your score has increased by [N]![roman type][line break]";
 	increase the score by N;
 
+to XPGain (N - number):
+	LineBreak;
+	say "     [bold type]You have gained [N] XP![roman type][line break]";
+	increase XP of Player by N;
+
 to CreditLoss (N - number):
 	LineBreak;
 	say "     [bold type][N] freecred [if N is 1]has[else]have[end if] been deducted from your Zephyr account![roman type][line break]";
@@ -180,19 +187,21 @@ to CreditGain (N - number):
 to FeatLoss (Featname - text):
 	LineBreak;
 	if Featname is listed in feats of Player:
-		say "     [bold type][Featname] has been removed from your feats![roman type][line break]";
+		say "     [bold type]'[Featname]' has been removed from your feats![roman type][line break]";
 		remove Featname from feats of Player;
 	else if debugactive is 1:
-		say "ERROR: Trying to remove [Featname], which the player does not have.";
+		say "ERROR: Trying to remove '[Featname]', which the player does not have.";
 
 to FeatGain (Featname - text):
 	LineBreak;
 	if Featname is not listed in feats of Player:
-		say "     [bold type][Featname] has been added to your feats![roman type][line break]";
+		say "     [bold type]'[Featname]' has been added to your feats![roman type][line break]";
 		add Featname to feats of Player;
 		sort feats of Player;
+		if Featname is "City Map":
+			say "[bestowcitymapfeat]";
 	else if debugactive is 1:
-		say "ERROR: Trying to add [Featname], which the player already has.";
+		say "ERROR: Trying to add '[Featname]', which the player already has.";
 
 to MoraleLoss (N - number):
 	LineBreak;
@@ -236,8 +245,8 @@ carry out NPCSexAftermathAction:
 to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (GivingChar - a person):
 	if debugactive is 1:
 		say "DEBUG -> NPCSexAftermath[line break]";
-		say "TakingChar: [Printed Name of TakingChar]";
-		say "GivingChar: [Printed Name of GivingChar]";
+		say "TakingChar: [Printed Name of TakingChar][line break]";
+		say "GivingChar: [Printed Name of GivingChar][line break]";
 	if GivingChar is Player:
 		if debugactive is 1:
 			say "DEBUG -> Player is the giving partner for '[SexAct]'[line break]";

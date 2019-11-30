@@ -304,7 +304,6 @@ to say ZoeGoodFuckMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if nam is "Vanilla":
 					say "[ZoeSexZoeChoice]";
@@ -472,7 +471,6 @@ to say ZoeMolest:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if nam is "Mouth":
 					say "[ZoeMolestMouth]";

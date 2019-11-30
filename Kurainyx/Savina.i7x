@@ -94,7 +94,7 @@ to say SavinaIntroFight:			[Player fights with Gargoyle. Winning creates the Dee
 		say "     With your mediocre prize still in your grasp, you take another glance at the empty water bottles littering the tent floor and guess that they also held unclean water as well. Upon closer inspection, you also note that the sleeping bag was mostly damaged on the inside with scratches and claw marks. Piecing together the clues, it seems like that the former owner of this camp had became infected from drinking too much tainted water and transformed during their sleep, making them go feral and abandon the camp. Perhaps that gargoyle you dealt with a few moments ago was even the same person. Regardless, it doesn't look like that they will be returning to this place, so you exit the tent as you pack away the remaining dirty water next to the can of food you found earlier.";
 		increase carried of dirty water by 1;
 		increase carried of food by 1;
-		say "[bold type]You gained a bottle of dirty water along with a can of food.[roman type]";
+		say "[bold type]You gained a bottle of dirty water along with a can of food.[roman type][line break]";
 		now Resolution of Abandoned Camp is 99;		[Player vore level too low to meet Savina]
 		if vorelevel > 1:	[Event continues unless 'Less Vore' is set]
 			WaitLineBreak;
@@ -215,13 +215,13 @@ to say SavinaSexMenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Beg Savina to eat you";
 		now sortorder entry is 6;
-		now description entry is "You can't resist begging for Savina to eat you. [bold type]Your adventure will come to an end[roman type]";
+		now description entry is "You can't resist begging for Savina to eat you. [bold type]Your adventure will come to an end[roman type][line break]";
 	[]
 	if SavinaTempt is 5:	[Leads to ending]
 		choose a blank row in table of fucking options;
 		now title entry is "Savina wants to keep you";
 		now sortorder entry is 7;
-		now description entry is "Savina finds you too tasty to let you go. [bold type]Your adventure will come to an end[roman type]";
+		now description entry is "Savina finds you too tasty to let you go. [bold type]Your adventure will come to an end[roman type][line break]";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -237,7 +237,6 @@ to say SavinaSexMenu:
 			say "[title entry]: Shall you [description entry]?";
 			if Player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if nam is "Get tail-pegged":
 					say "[SavinaSexAnal]";

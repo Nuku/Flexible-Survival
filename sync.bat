@@ -1,4 +1,4 @@
-@echo off
+@echo off & setlocal EnableDelayedExpansion
 
 :: BatchGotAdmin
 :-------------------------------------
@@ -24,10 +24,17 @@ if '%errorlevel%' NEQ '0' (
     CD /D "%~dp0"
 :--------------------------------------
 
+:: Grab the installation path of FS
+for /f "usebackq tokens=3*" %%a in (`reg query "HKLM\SOFTWARE\WOW6432Node\Silver Games LLC\flexible" /v "Path"`) do (
+	set _FS_ROOT=%%a %%b
+)
+call :Trim _FS_ROOT_TRIMMED !_FS_ROOT!
+set "FS_INSTALLDIR=%_FS_ROOT_TRIMMED%Flexible Survival\Release"
+
 echo [INFO] Starting...
 
 echo [INFO] Making symlink for .ctags in User folder
-fsutil reparsepoint query "%USERPROFILE%\.ctags" | find "Symbolic Link" >nul && (
+fsutil reparsepoint query "%USERPROFILE%\.ctags" >nul && (
   echo [INFO]   Removing existing symlink...
   del "%USERPROFILE%\.ctags"
 ) || (
@@ -36,8 +43,8 @@ fsutil reparsepoint query "%USERPROFILE%\.ctags" | find "Symbolic Link" >nul && 
 )
 mklink "%USERPROFILE%\.ctags" "%USERPROFILE%\Documents\Github\Flexible-Survival\.ctags"
 
-echo [INFO] Making symlink for .story.ni in Inform folder
-fsutil reparsepoint query "%USERPROFILE%\Documents\Inform\Projects\Flexible Survival.inform\Source\story.ni" | find "Symbolic Link" >nul && (
+echo [INFO] Making symlink for story.ni in Inform folder
+fsutil reparsepoint query "%USERPROFILE%\Documents\Inform\Projects\Flexible Survival.inform\Source\story.ni" >nul && (
   echo [INFO]   Removing existing symlink...
   del "%USERPROFILE%\Documents\Inform\Projects\Flexible Survival.inform\Source\story.ni"
 ) || (
@@ -47,14 +54,14 @@ fsutil reparsepoint query "%USERPROFILE%\Documents\Inform\Projects\Flexible Surv
 mklink "%USERPROFILE%\Documents\Inform\Projects\Flexible Survival.inform\Source\story.ni" "%USERPROFILE%\Documents\Github\Flexible-Survival\Inform\story.ni"
 
 echo [INFO] Making symlink for .gblorb in Program Files folder
-fsutil reparsepoint query "%PROGRAMFILES(X86)%\Silver Games LLC\flexible\Flexible Survival\Release\Flexible Survival.gblorb" | find "Symbolic Link" >nul && (
+fsutil reparsepoint query "%FS_INSTALLDIR%\Flexible Survival.gblorb" >nul && (
   echo [INFO]   Removing existing symlink...
-  del "%PROGRAMFILES(X86)%\Silver Games LLC\flexible\Flexible Survival\Release\Flexible Survival.gblorb"
+  del "%FS_INSTALLDIR%\Flexible Survival.gblorb"
 ) || (
   echo [INFO]   Backing up .gblorb
-  move /Y "%PROGRAMFILES(X86)%\Silver Games LLC\flexible\Flexible Survival\Release\Flexible Survival.gblorb" "%PROGRAMFILES(X86)%\Silver Games LLC\flexible\Flexible Survival\Release\Flexible Survival_old.gblorb"
+  move /Y "%FS_INSTALLDIR%\Flexible Survival.gblorb" "%FS_INSTALLDIR%\Flexible Survival_old.gblorb"
 )
-mklink "%PROGRAMFILES(X86)%\Silver Games LLC\flexible\Flexible Survival\Release\Flexible Survival.gblorb" "%USERPROFILE%\Documents\Inform\Projects\Flexible Survival.materials\Release\Flexible Survival.gblorb"
+mklink "%FS_INSTALLDIR%\Flexible Survival.gblorb" "%USERPROFILE%\Documents\Inform\Projects\Flexible Survival.materials\Release\Flexible Survival.gblorb"
 
 echo [INFO] Making Flexible Survival.materials folder in Inform folder
 mkdir "%USERPROFILE%\Documents\Inform\Projects\Flexible Survival.materials"
@@ -83,3 +90,9 @@ for /d %%D in (*) do (
 )
 
 pause
+goto :eof
+
+:Trim
+set Params=%*
+for /f "tokens=1*" %%a in ("!Params!") do set %1=%%b
+goto :eof

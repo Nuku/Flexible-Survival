@@ -354,7 +354,6 @@ to say GarthAndySexMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if nam is "Take Garth from behind":
 					say "[GarthAndySex1]";
@@ -555,7 +554,6 @@ to say RazorbackBoarSexMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if nam is "Take him from behind":
 					say "[RazorbackBoarSex1]";

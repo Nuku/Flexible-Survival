@@ -700,7 +700,7 @@ Instead of resolving a Concession Stand:
 				wait for any key;
 				now humanity of Player is 9;
 				increase foodvendor by 1;
-				now TailName of Player is "Shifting Pet";
+				now TailName of Player is "Shifting Pet"; [NOTE: I guess, this could be removed without issues when the GameEndings table is finished (@Stadler#3007)]
 				now FaceName of Player is "Shifting Pet";
 				now SkinName of Player is "Shifting Pet";
 				now BodyName of Player is "Shifting Pet";
@@ -844,22 +844,8 @@ Instead of resolving a Beach Party:
 		SanLoss 20;
 		increase morale of Player by 5;
 		[puts Bottlenose Toy as lead monster for infection and impregnation]
-		repeat with y running from 1 to number of filled rows in Table of Random Critters:
-			choose row y in Table of Random Critters;
-			if Name entry is "Bottlenose Toy":
-				now MonsterID is y;
-				break;
-		now TailName of Player is "Bottlenose Toy";
-		now FaceName of Player is "Bottlenose Toy";
-		now SkinName of Player is "Bottlenose Toy";
-		now BodyName of Player is "Bottlenose Toy";
-		now CockName of Player is "Bottlenose Toy";
-		attributeinfect;
-		now tail of Player is tail entry;
-		now Face of Player is face entry;
-		now Skin of Player is skin entry;
-		now Body of Player is body entry;
-		now Cock of Player is cock entry;
+		setmonster "Bottlenose Toy" silently;
+		turn the Player into a "Bottlenose Toy";
 		if hellHoundLevel is 0:
 			follow the sex change rule;
 			follow the sex change rule;

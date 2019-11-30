@@ -276,22 +276,7 @@ to say nogging:
 	if Libido of Player > 100, now Libido of Player is 100;
 	if humanity of Player < 1:
 		say "     Drunk on the egg nog, you drink all of it you have down, losing yourself in the holiday spirit as your mind unravels.";
-		repeat with y running from 1 to number of filled rows in Table of Random Critters:
-			choose row y in Table of Random Critters;
-			if Name entry is "Reindeer":
-				now MonsterID is y;
-				break;
-		now TailName of Player is "Reindeer";
-		now FaceName of Player is "Reindeer";
-		now SkinName of Player is "Reindeer";
-		now BodyName of Player is "Reindeer";
-		now CockName of Player is "Reindeer";
-		attributeinfect;
-		now tail of Player is tail entry;
-		now Face of Player is face entry;
-		now Skin of Player is skin entry;
-		now Body of Player is body entry;
-		now Cock of Player is cock entry;
+		turn the Player into a "Reindeer" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
 		end the story saying "You gave in to the holiday spirit.";
 		now battleground is "void";
 

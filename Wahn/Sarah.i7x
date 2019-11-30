@@ -65,6 +65,7 @@ when play begins:
 	add Husky Pack to BadSpots of FurryList;
 
 instead of resolving a Husky Pack:
+	project the Figure of HuskyAlpha_soft_icon;
 	say "     Rounding a corner in one of the inner-city blocks, you run right into the leader of a small husky pack, his fur cushioning the impact. As you jump back from the imposing anthro canine, he snarls in your face, drawing back his lips from a muzzle full of white and sharp teeth. 'Fuck off,' the alpha husky growls in annoyance and is immediately supported by the group of husky bitches following behind him. 'You better run, [if Player is female]skank[else]asshole[end if]!' one of them barks and gives you a quite rude gesture, then a second laughs in a shrill tone and adds, 'That's right. Our man will fuck you up otherwise.' Between the group of naked anthro females, you catch a glimpse of a thin human woman with a red leather collar on a leash. She has got a hand on the collar and clearly is uncomfortable with the tightness against her throat. And not only that - from the way the leash is stretched taut between her and the male, he has been dragging her along by force. Both of the items still bear price tags, so your guess would be that this little gang just came out of the nearby pet store after outfitting the newest unwilling recruit to his harem of bitches.";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Apologize and leave as quickly as you can.";
@@ -566,7 +567,7 @@ to say SarahTalk3:
 				say "     Sarah's eyes go wide and she can't help but give a happy little bark as you explain that you do have a stash of libido suppressant to give her. Trembling in excitement as she stands before you on her slender paws, the husky hybrid's tail wags up a storm as you pull five syringes out of your pack, handing the handful of them to her. 'I - I don't even know what to say,' she replies, tears of joy in her eyes. Leaning in to plant a peck on your cheek, she then hurries away to her bed to pack away the medicine you so laboriously gathered for her. Moments later, she is back by your side, a huge happy grin on her face. 'I want to give you something,' she tells you, then raises her hands to her neck and undoes the red collar there. 'Don't even know why I kept this thing on so long, but... here, take it as a reminder of what you saved me from and everything you did for me.' Handing you the narrow band of red leather with trembling fingers, she smiles and walks back to her bed, murmuring about trying out a new dosage next.";
 				now SarahCured is 4; [the player gave her enough for a full treatment]
 				say "     For your efforts in saving Sarah from her progressing husky infection, you have earned the [']Dog Whisperer['] feat. Having proved your dedication in doing the right thing, your [bold type]charisma[roman type] has gone up by two, allowing you to empathize with others even more.";
-				add "Dog Whisperer" to feats of Player;
+				FeatGain "Dog Whisperer";
 				StatChange "Charisma" by 2;
 				decrease carried of libido suppressant by 5;
 			else: [don't give it to her]
@@ -584,7 +585,7 @@ to say SarahTalk3:
 				say "     Sarah's eyes go wide and she can't help but give a happy little bark as you explain that you do have a stash of libido suppressant to give her. Trembling in excitement as she stands before you on her slender paws, the husky hybrid's tail wags up a storm as you pull five syringes out of your pack, handing the handful of them to her. 'I - I don't even know what to say,' she replies, tears of joy in her eyes. Leaning in to plant a peck on your cheek, she then hurries away to her bed to pack away the medicine you so laboriously gathered for her. Moments later, she is back by your side, a huge happy grin on her face. 'I want to give you something,' she tells you, then raises her hands to her neck and undoes the red collar there. 'Don't even know why I kept this thing on so long, but... here, take it as a reminder of what you saved me from and everything you did for me.' Handing you the narrow band of red leather with trembling fingers, she smiles and walks back to her bed, murmuring about trying out a new dosage next.";
 				now SarahCured is 4; [the player gave her enough for a full treatment]
 				say "     For your efforts in saving Sarah from her progressing husky infection, you have earned the [']Dog Whisperer['] feat. Having proved your dedication in doing the right thing, your [bold type]charisma[roman type] has gone up by two, allowing you to empathize with others even more.";
-				add "Dog Whisperer" to feats of Player;
+				FeatGain "Dog Whisperer";
 				StatChange "Charisma" by 2;
 				decrease carried of libido suppressant by 5;
 			else: [don't give it to her]
@@ -1119,7 +1120,7 @@ An everyturn rule:
 		say "     As you wait around in the bunker, ";
 		say "[SarahOffersAnal]";
 	if SarahPregnant is 1:
-		say "     [bold type]You have a strange feeling in your body, as if you somehow just know that more of your offspring have entered this world. Maybe you should go back and check on Sarah in the bunker... and make sure she is filled with your fertile seed again.[roman type]";
+		say "     [bold type]You have a strange feeling in your body, as if you somehow just know that more of your offspring have entered this world. Maybe you should go back and check on Sarah in the bunker... and make sure she is filled with your fertile seed again.[roman type][line break]";
 		increase SarahPups by a random number between 1 and 4;
 		increase score by a random number between 5 and 10;
 		if "Proud Parent" is listed in feats of Player:
@@ -1128,7 +1129,7 @@ An everyturn rule:
 		else if SarahPups > 11:
 			say "Having sired so many puppies, you feel buoyed with happiness and a greater urge to get through this ordeal to protect them.";
 			say "You and Sarah have earned the [']Proud Parent['] feat, making her more fertile and you more eager to protect your growing kennel.";
-			add "Proud Parent" to feats of Player;
+			FeatGain "Proud Parent";
 			increase morale of the player by 5;
 			increase score by 12;
 		now SarahPregnant is 0;

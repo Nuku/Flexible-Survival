@@ -131,11 +131,12 @@ instead of going east from Smith Haven Mall Lot East while (HP of Blake < 50):
 				LineBreak;
 				say "     You stumble away, leaving the dark alley behind. It is a bit of a relief to go out into the open area of the parking lot, but somehow you can't shake the feeling of something oily having touched your mind.";
 				[Note: No actual compulsion, just freaking the player out a bit]
-				now HP of Blake is 1; [rejected by Blake or refused him]
+				now HP of Blake is 99; [rejected by Blake]
 				move player to Smith Haven Mall Lot East; [player is thrown out after each scene]
 			else if calcnumber is 2:
 				LineBreak;
 				say "     Reaching up to grab your head, you concentrate hard on who and what you are, trying to shake off what Blake did to you. As you stumble out into the open space of the parking lot, it feels like his influence is lifting bit by bit and you feel more like yourself again.";
+				now HP of Blake is 99; [rejected by Blake]
 				move player to Smith Haven Mall Lot East; [player is thrown out after each scene]
 			else:
 				LineBreak;
@@ -183,7 +184,7 @@ instead of going east from Smith Haven Mall Lot East while (HP of Blake < 50):
 			else:
 				LineBreak;
 				say "[BlakeCounterstrike]";
-	else if HP of Blake is 1 or (HP of Blake is 99 and player is male): [refused him before /sent away as non-male before]
+	else if (HP of Blake is 1 or HP of Blake is 99): [refused him before /sent away as non-male before]
 		if Player is not male:
 			say "     As you walk up to him, Blake grins broadly and gets up, then comes up to you and moves uncomfortably close. The musk that clings to him like a shroud wafts thickly in your nose, making it harder and harder to concentrate. 'Hmm... you want to expose yourself to me. Urgently,' he states in his deep, resonating voice, grinning at you with that ever-present mischief. Your body reacts immediately, completely bypassing your sluggish mind as it does what Blake told you to do. Despite this, he's less than pleased when he sees that you're not the least bit male, snapping out the harsh words, 'Ah, fuck off! You can come back when you're a dude.'";
 			now HP of Blake is 99;
@@ -402,7 +403,7 @@ to say BlakeCounterstrike:
 to say BlakeWhoreSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
-	say "     [bold type]What do you want to do to Blake?[roman type]";
+	say "     [bold type]What do you want to do to Blake?[roman type][line break]";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Jerk him, but deny orgasm";
@@ -456,7 +457,6 @@ to say BlakeWhoreSexMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if nam is "Jerk him, but deny orgasm":
 					say "[BlakeSex1]";

@@ -222,7 +222,7 @@ to say KyrverthTalk: [Quest turnin check]
 		EnableKyrverthItemEvents;
 		WaitLineBreak;
 	else if Kyrverthitemget is not 0 and KyrverthStage is 3:
-		say "     As you are about to talk to Kyrverth, you are reminded of the [KyrverthItemSay]. [bold type]Should you give it to him?[roman type]";
+		say "     As you are about to talk to Kyrverth, you are reminded of the [KyrverthItemSay]. [bold type]Should you give it to him?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -245,7 +245,7 @@ to say KyrverthTalk: [Quest turnin check]
 to say KyrverthNormalChat: [Quest give and normal chat]
 	if KyrverthQuestGiven is 0:
 		if KyrverthStage is 0 and (KyrverthTimer - turns >= 2):
-			say "     'Hi there, would you be willing to help me out? I have been trying to build up a hoard, but it's a bit too dangerous for me out there. Would you be willing to help get the first few [one of]pieces[or]parts[or]bits[at random] of my hoard? You should be able to find something in the [bold type]high rise district[roman type], maybe somewhere that deals in [bold type]jewels?[roman type]";
+			say "     'Hi there, would you be willing to help me out? I have been trying to build up a hoard, but it's a bit too dangerous for me out there. Would you be willing to help get the first few [one of]pieces[or]parts[or]bits[at random] of my hoard? You should be able to find something in the [bold type]high rise district[roman type], maybe somewhere that deals in [bold type]jewels?[roman type][line break]";
 			now Jewel Heist is not resolved;
 			now KyrverthQuestGiven is 1;
 		else if KyrverthStage is 1 or KyrverthStage is 2 and (KyrverthTimer - turns >= 6):
@@ -457,7 +457,7 @@ to say KyrverthAnalSex: [For null and male players]
 				say "     The dragon looks over your tiny form as you make your offer before shaking his head in refusal. 'As much as I'd like to, you're too small. I don't want to hurt you, after all.'";
 			else:
 				say "     The dragon looks over your tiny form as you make your offer, and he hesitates for a moment before shaking his head. 'I don't think that's a very good idea. I could hurt you.'";
-				[say "     [bold type]He does have a valid point, but you can probably convince him to take you anyway. Shall you do so?[roman type]";
+				[say "     [bold type]He does have a valid point, but you can probably convince him to take you anyway. Shall you do so?[roman type][line break]";
 				LineBreak;
 				say "     [link](Y)[as]y[end link] - Yes.";
 				say "     [link](N)[as]n[end link] - No.";
@@ -656,7 +656,7 @@ Instead of resolving a Jewel Heist:
 	if Player consents:
 		LineBreak;
 		if JewelHeistCaught is 0:
-			say "As you close in, you notice a back alley, do you want to [bold type]continue with your original plan or explore alternative options?[roman type]";
+			say "As you close in, you notice a back alley, do you want to [bold type]continue with your original plan or explore alternative options?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Fight.";
 			say "     ([link]N[as]n[end link]) - Sneak.";
@@ -805,7 +805,7 @@ Instead of resolving a Valuable Museum Artifact:
 	else:
 		say "     As you walk down an unexplored hall, a glint from one side catches your eye. A mask sits in the center of a side room, surrounded by Egyptian artefacts. You step closer and examine it in detail.";
 		say "     The mask is shaped like a jackals head and looks like it is mostly made of a blue gem. Inlaid gold lines cover the mask, accentuating the lines that shape the head. A plaque in front doesn't reveal much: 'Mask of Anubis - unknown origins, unknown date of creation. At least 2500 years old. Rumored to be the most sacred artefact of an ancient cult, this was given to the leader to allow them to lead them in times of crisis, supposedly by becoming the embodiment of Anubis.'";
-		say "     You can tell this is extremely valuable, [bold type]maybe Kyrverth would like it?[roman type]";
+		say "     You can tell this is extremely valuable, [bold type]maybe Kyrverth would like it?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Steal it.";
 		say "     ([link]N[as]n[end link]) - Leave it as is.";
@@ -831,7 +831,7 @@ Instead of resolving a Valuable Warehouse Artifact:
 		say "     As you explore the warehouse district, one in particular catches your eye. Unlike most of the others that have wooden doors and small locks, this particular building has a hand scanner and reinforced metal door. [']Something this beefy couldn't be for something worthless['] you reason - you should get in. A ladder on the next warehouse along looks promising, you climb to one roof and jump the 4ft distance to your targets roof. Walking around the roof, all the windows look to be shut, locked, and tough, but one at the end catches your eye. A crack spiderwebs out from the center, and to one side a rock lays on the ground, the obvious culprit. You walk over and grab it, taking a breath before bringing it down once, twice, three times on the glass. The window has shattered and looks on the brink of dropping. You carefully pick pieces of glass out rather than let it drop and quickly make a hole large enough to fit through. Dropping down to the platform below, you look down to see that the warehouse is full of complex equipment. None of it looks small enough for you to take, assuming that any of it would be of use to you. In the center of the room a wooden crate looks interesting - and out of place.";
 		say "     You drop down to the concrete floor and walk over to it. A label on the top says 'Prototype-0042501x, highly effective, shelved due to cost.'. This looks promising. You pry off the lid and throw it to one side, revealing... a tiger? No, not a tiger, a tiger costume. You shudder to think what this would look like with someone in it. Eight feet tall and heavily muscled like a bodybuilder, large razor sharp claws, and a long thick tail. If you could flip it over, you are sure you would see a fierce visage. Pushing the flap at the back open, you see complex wiring and tech inside. You think this could be worth a pretty penny, and a perfect gift for Kyrverth.";
 		LineBreak;
-		say "     [bold type]Should you take it to him?[roman type]";
+		say "     [bold type]Should you take it to him?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Steal it.";
 		say "     ([link]N[as]n[end link]) - Leave it as is.";
@@ -856,7 +856,7 @@ Instead of resolving a Valuable RLD Artifact:
 	else:
 		say "     As you walk through the red light district, [one of]a porn shop[or]'adult' shop[at random] catches your eye. Unlike the rest of the city it seems relatively unscathed. You are skeptical of finding anything of use (like food or water) from a porn store, but decide to explore it anyway. Inside the shop all manner of deviant objects catch your eye, from BDSM to the massive variety of sex toys. One wall in particular is especially interesting. Comprised entirely of dildos, it ranges from a tiny black dildo the size of your finger, to a massive one almost two feet long. Next to that you see some shapes you recognize. From a knotted canine dong, to a gigantic flared equine penis, to a barbed feline cock, you even see some strange cocks, like tentacles or mashups of multiple types of penises.";
 		say "     At the end of the row sits your prize, on a plinth and inside a glass box an intricate golden cock draws your eye. The shaft is obviously not human, a knot at the base quickly dispels that illusion. The entire cock is tapered from tip to knot like a tentacle, but from the tip lines emerge and go back a few inches in a cross shape, the purpose unknown. This dildo is solid gold - if the sign in front of it is to be believed.";
-		say "     [bold type]You can tell it's pretty valuable. Maybe Kyrverth would like it?[roman type]";
+		say "     [bold type]You can tell it's pretty valuable. Maybe Kyrverth would like it?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Steal it.";
 		say "     ([link]N[as]n[end link]) - Leave it be.";
@@ -880,7 +880,7 @@ Instead of resolving a Valuable Stables Artifact:
 		say "     How did you get here? It shouldn't be possible. Please report this to the developers on the FS discord.";
 	else:
 		say "     Seeing a light from one side, you investigate and see a small opening you have never seen before. You peek your head inside and see lines of trophies and ribbons along either side and a silvery horseshoe on display in the center of the room. Obviously the stables was pretty successful before the city went crazy. You approach the box and read the plaque on the front: 'This aluminum horseshoe was worn by Winning Brew when she set the record for the fastest horse in the world, recorded over two furlongs, and has since been given to the winner of the stables derby each year.' You get the feeling this could be extremely valuable.";
-		say "     [bold type]Maybe Kyrverth would like it?[roman type]";
+		say "     [bold type]Maybe Kyrverth would like it?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Steal it.";
 		say "     ([link]N[as]n[end link]) - Leave it be.";

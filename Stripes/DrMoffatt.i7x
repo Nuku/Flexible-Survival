@@ -662,45 +662,45 @@ an everyturn rule:
 				decrease strength of Player by level of Doctor Moffatt;
 				if strength of Player < 1, now strength of Player is 1;
 				say "     A big wave of fatigue washes over your body. Did the effect of Doctor Moffat's hypnosis end?";
-				say "[bold type]The bonus in strength brought by your hypnosis session has ended.[roman type]";
+				say "[bold type]The bonus in strength brought by your hypnosis session has ended.[roman type][line break]";
 			else if dexterity of Doctor Moffatt is 2:
 				decrease dexterity of Player by level of Doctor Moffatt;
 				if dexterity of Player < 1, now dexterity of Player is 1;
 				say "     You feel as if your hands suddenly went numb. Did the effect of Doctor Moffat's hypnosis end?";
-				say "[bold type]The bonus in dexterity brought by your hypnosis session has ended.[roman type]";
+				say "[bold type]The bonus in dexterity brought by your hypnosis session has ended.[roman type][line break]";
 			else if dexterity of Doctor Moffatt is 3:
 				decrease stamina of Player by level of Doctor Moffatt;
 				if stamina of Player < 1, now stamina of Player is 1;
 				say "     You start panting, and feel the need to take a break. Did the effect of Doctor Moffat's hypnosis end?";
-				say "[bold type]The bonus in stamina brought by your hypnosis session has ended.[roman type]";
+				say "[bold type]The bonus in stamina brought by your hypnosis session has ended.[roman type][line break]";
 			else if dexterity of Doctor Moffatt is 4:
 				decrease perception of Player by level of Doctor Moffatt;
 				if perception of Player < 1, now perception of Player is 1;
 				say "     Your vision becomes more blurry, and the world becomes more numb around you. Did the effect of Doctor Moffat's hypnosis end?";
-				say "[bold type]The bonus in perception brought by your hypnosis session has ended.[roman type]";
+				say "[bold type]The bonus in perception brought by your hypnosis session has ended.[roman type][line break]";
 			else if dexterity of Doctor Moffatt is 5:
 				decrease charisma of Player by level of Doctor Moffatt;
 				if charisma of Player < 1, now charisma of Player is 1;
 				say "     You begin to feel bad into your own body, and your posture becomes less assured. Did the effect of Doctor Moffat's hypnosis end?";
-				say "[bold type]The bonus in charisma brought by your hypnosis session has ended.[roman type]";
+				say "[bold type]The bonus in charisma brought by your hypnosis session has ended.[roman type][line break]";
 			else if dexterity of Doctor Moffatt is 6:
 				decrease intelligence of Player by level of Doctor Moffatt;
 				if intelligence of Player < 1, now intelligence of Player is 1;
 				say "     Your head starts hurting, and you realize that you forgot what you were heading to. Did the effect of Doctor Moffat's hypnosis end?";
-				say "[bold type]The bonus in intelligence brought by your hypnosis session has ended.[roman type]";
+				say "[bold type]The bonus in intelligence brought by your hypnosis session has ended.[roman type][line break]";
 			now dexterity of Doctor Moffatt is 0;
 			if level of Doctor Moffatt is:
 			-- 1:
-				say "[bold type]You should return to Doctor Moffatt, and undertake another hypnosis session.[roman type]";
+				say "[bold type]You should return to Doctor Moffatt, and undertake another hypnosis session.[roman type][line break]";
 			-- 2:
-				say "[bold type]You immediately think about going back to Doctor Moffatt, for another hypnosis session.[roman type]";
+				say "[bold type]You immediately think about going back to Doctor Moffatt, for another hypnosis session.[roman type][line break]";
 			-- 3:
-				say "[bold type]You need to go back to Moffatt. Now.[roman type]";
+				say "[bold type]You need to go back to Moffatt. Now.[roman type][line break]";
 			-- 4:
-				say "[bold type]Without a second thought, you head to the hospital, and check with the Mistress.[roman type]";
+				say "[bold type]Without a second thought, you head to the hospital, and check with the Mistress.[roman type][line break]";
 				move player to Psych Department;
 			-- 5:
-				say "[bold type]As if your mind blanked out, you find yourself in front of Mistress Moffat's office, a blissful smile on your face.[roman type]";
+				say "[bold type]As if your mind blanked out, you find yourself in front of Mistress Moffat's office, a blissful smile on your face.[roman type][line break]";
 				move player to Psych Department;
 		[Once the weaning period has passed, the hypnosis effect goes one step back]
 		if lust of Doctor Moffatt is 0:
@@ -769,22 +769,22 @@ carry out hypnoSession:
 			-- 5: say "[hypnoCatch5]";
 	if dexterity of Doctor Moffatt is:
 		-- 1:
-			say "[bold type]Your strength raises momentarily by [level of Doctor Moffatt]![roman type]";
+			say "[bold type]Your strength raises momentarily by [level of Doctor Moffatt]![roman type][line break]";
 			increase strength of Player by level of Doctor Moffatt;
 		-- 2:
-			say "[bold type]Your dexterity raises momentarily by [level of Doctor Moffatt]![roman type]";
+			say "[bold type]Your dexterity raises momentarily by [level of Doctor Moffatt]![roman type][line break]";
 			increase dexterity of Player by level of Doctor Moffatt;
 		-- 3:
-			say "[bold type]Your stamina raises momentarily by [level of Doctor Moffatt]![roman type]";
+			say "[bold type]Your stamina raises momentarily by [level of Doctor Moffatt]![roman type][line break]";
 			increase stamina of Player by level of Doctor Moffatt;
 		-- 4:
-			say "[bold type]Your perception raises momentarily by [level of Doctor Moffatt]![roman type]";
+			say "[bold type]Your perception raises momentarily by [level of Doctor Moffatt]![roman type][line break]";
 			increase perception of Player by level of Doctor Moffatt;
 		-- 5:
-			say "[bold type]Your charisma raises momentarily by [level of Doctor Moffatt]![roman type]";
+			say "[bold type]Your charisma raises momentarily by [level of Doctor Moffatt]![roman type][line break]";
 			increase charisma of Player by level of Doctor Moffatt;
 		-- 6:
-			say "[bold type]Your intelligence raises momentarily by [level of Doctor Moffatt]![roman type]";
+			say "[bold type]Your intelligence raises momentarily by [level of Doctor Moffatt]![roman type][line break]";
 			increase intelligence of Player by level of Doctor Moffatt;
 
 to say hypnoScene1: [Raising strength]

@@ -130,7 +130,7 @@ Instead of resolving Spiritual Love:
 			now Spiritual love is resolved;
 			now humanity of Player is 0;
 			now spiritlove is 1;
-			now TailName of Player is "Spirit Wolf";
+			now TailName of Player is "Spirit Wolf"; [TODO: Add a Table of Random Critters entry for "Spirit Wolf" (@Stadler#3007)]
 			now FaceName of Player is "Spirit Wolf";
 			now SkinName of Player is "Spirit Wolf";
 			now BodyName of Player is "Spirit Wolf";

@@ -42,8 +42,8 @@ to say OrcVictorious:
 		infect "Orc Breeder";
 		if BodyName of Player is "Orc Breeder" and player is pure and player is not mpreg_ok:
 			LineBreak;
-			say "     You feel something change deep inside you, as all the cum the orc filled you with completes your transformation to a real orc breeder. You'll now be able to be impregnated through anal sex. The [']MPreg['] feat has been added to your list.";
-			add "MPreg" to feats of Player;
+			say "     You feel something change deep inside you, as all the cum the orc filled you with completes your transformation to a real orc breeder. You'll now be able to be impregnated through anal sex.";
+			FeatGain "MPreg";
 		if Player is in Breeder Lockup A or player is in Dark Hallway 1 or player is in Dark Hallway 2 or player is in Orc Lair Side Entrance:
 			LineBreak;
 			say "     Satisfied at having gotten his rocks off, the orc drags you back to the cells and throws you into one. You can hear him murmur to himself as he walks off 'I'll have to offer the brothers one of my sluts to trade for this one. Damned fine ass...'";

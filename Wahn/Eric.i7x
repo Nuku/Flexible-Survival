@@ -2288,7 +2288,7 @@ after going down from the Grey Abbey Library while (Eric is in Bunker and (HP of
 	if Player consents:
 		LineBreak;
 		say "     Eyes dropping down to the book lying forgotten in the young man's lap, you lift the cover a bit to peek at the title, then chat a bit with him about it. With a thankful sigh, Eric recounts the story of the book so far - a quite exciting adventure story about a group of teenagers trapped in a mysterious, shifting labyrinth filled with monsters. You keep chatting for a while longer, then eventually say your goodbyes and let him get back to reading.";
-		say "     [bold type]Something tells you that the topic of Rane is now settled for good in Eric's mind. He'll likely avoid the oni from now on.[roman type]";
+		say "     [bold type]Something tells you that the topic of Rane is now settled for good in Eric's mind. He'll likely avoid the oni from now on.[roman type][line break]";
 		now Dexterity of Eric is 40; [avoids Rane in the future]
 	else:
 		LineBreak;

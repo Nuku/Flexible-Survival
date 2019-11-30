@@ -28,6 +28,11 @@ to decide if (x - a person) has a body of (i - a text):
 	if BodyName of x is i, decide yes;
 	decide no;
 
+[@Todo: Handle new style infection here when implemented]
+to decide if (x - a person) has a skin of (i - a text):
+	if SkinName of x is i, decide yes;
+	decide no;
+
 to decide which text is GetSpeciesName from (N - a text):
 	if N is not "" and there is a Name of N in the Table of Random Critters:
 		choose a row with Name of N in the Table of Random Critters;
@@ -173,13 +178,28 @@ to SetInfectionsOf ( Target - a person ) randomized between ( Father - a person 
 		now TailName of Target is TailName of Mother;
 		now TailSpeciesName of Target is TailSpeciesName of Mother;
 
-to attributeinfect with ( Infection - a text ):
+to attributeinfect with/-- ( Infection - a text ):
+	attributeinfect Infection silence state is 0;
+
+to attributeinfect with/-- ( Infection - a text ) silently:
+	attributeinfect Infection silence state is 1;
+
+to attributeinfect with/-- ( Infection - a text ) silence state is ( Silence - a number ):
 	let StoredMonsterID be MonsterID;
 	setmonster Infection silently;
-	attributeinfect;
+	if Silence is 0:
+		attributeinfect;
+	else:
+		attributeinfect silently;
 	now MonsterID is StoredMonsterID;
 
 to turn the/-- Player into a/an/-- ( Infection - a text ):
+	turn Player into Infection silence state is 0;
+
+to turn the/-- Player into a/an/-- ( Infection - a text ) silently:
+	turn Player into Infection silence state is 1;
+
+to turn the/-- Player into a/an/-- ( Infection - a text ) silence state is ( Silence - a number ):
 	if there is no Name of Infection in the Table of Random Critters:
 		say "ERROR: Attempted to set the players infection to '[Infection]'. Please report this on the FS Discord.[line break]";
 		stop the action;
@@ -235,6 +255,9 @@ to turn the/-- Player into a/an/-- ( Infection - a text ):
 		now TailSpeciesName of Player is InfectionSpeciesName;
 		now CockSpeciesName of Player is InfectionSpeciesName;
 		now CuntSpeciesName of Player is InfectionSpeciesName;
-	attributeinfect with Infection;
+	if Silence is 0:
+		attributeinfect with Infection;
+	else:
+		attributeinfect with Infection silently;
 
 Sex and Infection Functions ends here.

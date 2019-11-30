@@ -2,16 +2,20 @@ Version 3 of Alt Vore by Core Mechanics begins here.
 [Version 3.2 - More hard vore ]
 [- Originally Authored By: Stripes -]
 
+[ Resolution of Inner Predator                                ]
+[   0: never ran into the event                               ]
+[   1: player drank the vial                                  ]
+[   2: player didn't drink the vial                           ]
+[  99: event closed because both males and females are banned ]
+
 Section 0 - Variables
 
-playercanvore is a truth state that varies.
 vorecount is a number that varies.
 vorechoice is a number that varies.
 vorespecial1 is a truth state that varies. vorespecial1 is usually false.
 hvoreoffer is a truth state that varies. hvoreoffer is usually false.
 hvorecount is a number that varies.
 hvorelevel is a number that varies. hvorelevel is usually 1.
-playercanub is a truth state that varies.
 ubcount is a number that varies.
 ubchoice is a number that varies.
 ubspecial1 is a truth state that varies. ubspecial1 is usually false.
@@ -25,6 +29,22 @@ HardVoreExclusion is a marker. [list of infections to not be hard vored - simila
 when play begins:
 	add { "Smooth Collie Shemale", "Raccoon", "Doberman Bitch", "Nightmare", "Sphinx", "Hyena matriarch", "Blob", "Skunkbeast Lord", "Blue Chaffinch", "Peacock", "Hippo", "Albino Mouse", "Malayan Tiger Male", "Sea Lion and Orca Toys", "Siamese Cat", "Anthro Goat", "Brown Bear Female", "Gator Herm", "Dragon", "Feral Cheetah", "Badger", "Opossum Herm", "Latex Vixen Herm", "Wrestling Wolf", "Blacktail Stag", "Football Wolfman", "Reindeer", "Triceratops", "Butterfly", "German Shepherd Male", "Magic Drake", "Monkey", "Lamia", "Jackal Guard", "Mental Mouse", "Mushroom Men", "Parasitic Plant", "Yamato Dragon", "Yamato Dragoness", "Giant", "Feral Sea Dragon", "Feral Sea Dragoness", "Wyvern", "Pod Person", "Tentacle Horror", "Sierrasaur", "Mammoth", "Hydra Beast", "Xeno Drone", "Peculiar Dragon", "Sea Horror", "Cum Girl", "Flesh Blob", "Jaguar Warrior", "Gypsy Horse Transman", "Plains Lizard Male", "Thought Eater", "Viking Woman", "Megakitty", "Royal Tiger", "Sugar Ferret", "Anthro Rabbit", "Koballoon", "City Sprite", "Sea Otter", "Black Wasp", "Cock Cannon", "Clockwork Fox", "Automaton", "Blue Gel", "Bottlenose Toy", "Chocolate Lab", "Goo Girl", "Latex Fox", "Latex Ermine", "Latex Wolf", "Werewolf Costume", "Naiad", "Pink Gel", "Purple Gel", "Rubber Tigress", "Sand Man", "Teddy Bear", "Plush Lion", "Slime Cube" } to infections of HardVoreExclusion;
 
+to decide if the/-- Player can vore:
+	if "Vore Predator" is listed in feats of Player, decide yes;
+	decide no;
+
+to decide if the/-- Player can't/cannot vore:
+	if "Vore Predator" is not listed in feats of Player, decide yes;
+	decide no;
+
+to decide if the/-- Player can UB/unbirth:
+	if "UB Pred" is listed in feats of Player, decide yes;
+	decide no;
+
+to decide if the/-- Player can't/cannot UB/unbirth:
+	if "UB Pred" is not listed in feats of Player, decide yes;
+	decide no;
+
 Section 1 - Event
 
 Table of GameEventIDs (continued)
@@ -36,10 +56,20 @@ The sarea of Inner Predator is "Allzones".
 when play begins:
 	add Inner Predator to BadSpots of FurryList;
 
+a postimport rule: [bugfixing rules for players that import savegames]
+	if Inner Predator is resolved and Resolution of Inner Predator is 0:
+		if Player can vore:
+			now Resolution of Inner Predator is 1;
+		else if MaleList is banned and FemaleList is banned:
+			now Resolution of Inner Predator is 99;
+		else:
+			now Resolution of Inner Predator is 2;
+
 Instead of resolving a Inner Predator:
 	if MaleList is banned and FemaleList is banned:
 		say "     Picking your way between several immobile and abandoned cars, you spot an all to familiar sight in the road ahead. Piles of clothing, ripped and covered in various fluids, along with the personal items of whomever (or whatever) use to be in those clothes. Among the shredded clothes and scattered items, one specific thing catches your eye - a sealed briefcase. Polished and very official looking, with its clasp broken from the evident scuffle that had taken place here, it rests atop a torn lab coat. Curious, and hoping to find something you might be able to use, you crack the case open slowly. Sadly, it is empty, someone clearly having gotten here first and emptied it.";
 		say "(This event is closed if both guy and girl are banned.)";
+		now Resolution of Inner Predator is 99; [event closed because both males and females are banned]
 		now Inner Predator is resolved;
 		continue the action;
 	say "     Picking your way between several immobile and abandoned cars, you spot an all to familiar sight in the road ahead. Piles of clothing, ripped and covered in various fluids, along with the personal items of whomever (or whatever) use to be in those clothes. Among the shredded clothes and scattered items, one specific thing catches your eye - a sealed briefcase. Polished and very official looking, with its clasp broken from the evident scuffle that had taken place here, it rests atop a torn lab coat. Curious, and hoping to find something you might be able to use, you crack the case open slowly.";
@@ -63,9 +93,6 @@ Instead of resolving a Inner Predator:
 			say "     Sitting back, dazed, you feel the form of the husky sliding into your gut, your belly now bulging out as if you were massively pregnant. With an audible rumble, your stomach starts to churn and you feel the body of your foe begin to melt away, the nanites in your body throwing your digestive processes into overdrive. Various gurgles can be heard as the once bulky canine is turned into a nutrient-rich liquid for your predator body. Within minutes, your belly has shrunk to a mere paunch as you feel the rush of the digested creature wash through your body.";
 			say "     A smile crosses your face as you pat your shrinking belly. You feel... content now, as if consuming the defeated creature has fulfilled some deep purpose in your infected body. Plus, you shouldn't have to worry about food for a while. Pulling yourself back up and retrieving all your gear, you head back out into the infested city with a surprising bounce in your step.";
 			say "     Maybe this isn't such a bad thing after all...?";
-			add "Vore Predator" to feats of Player;
-			now playercanvore is true;
-			increase vorecount by 1;
 			LineBreak;
 			say "     You have the [bold type]Vore Predator[roman type] feat, increasing your hunger growth dramatically. The higher your hunger (and the more often you do it), the more likely you'll be tempted to consume your enemies whole to sate your hunger while also infecting you. You may adjust some vore related settings via the [bold type]vore menu[roman type].";
 			if "Automatic Survival" is listed in feats of Player:
@@ -88,9 +115,6 @@ Instead of resolving a Inner Predator:
 			say "     Sitting back, dazed, you feel the form of the fox sliding into your gut, your belly now bulging out as if you were massively pregnant. With an audible rumble, your stomach starts to churn and you feel the body of your foe begin to melt away, the nanites in your body throwing your digestive processes into overdrive. Various gurgles can be heard as the once bulky latex fox is turned into a nutrient-rich liquid for your predator body. Within minutes and with a large belch, your belly has shrunk to a mere paunch as you feel the rush of the digested creature wash through your body.";
 			say "     A smile crosses your face as you pat your shrinking belly. You feel... content now, as if consuming the defeated creature has fulfilled some deep purpose in your infected body. Plus, you shouldn't have to worry about food for a while. Pulling yourself back up and retrieving all your gear, you head back out into the infested city with a surprising bounce in your step.";
 			say "     Maybe this isn't such a bad thing after all...?";
-			add "Vore Predator" to feats of Player;
-			now playercanvore is true;
-			increase vorecount by 1;
 			LineBreak;
 			say "     You have the [bold type]Vore Predator[roman type] feat, increasing your hunger growth dramatically. The higher your hunger (and the more often you do it), the more likely you'll be tempted to consume your enemies whole to sate your hunger while also infecting you. You may adjust some vore related settings via the [bold type]vore menu[roman type].";
 			if "Automatic Survival" is listed in feats of Player:
@@ -102,17 +126,20 @@ Instead of resolving a Inner Predator:
 			infect "Latex Fox";
 			now researchbypass is 0;
 			increase score by 20;
+		FeatGain "Vore Predator";
+		increase vorecount by 1;
+		now Resolution of Inner Predator is 1; [player drank the vial]
 	else:
-		say "     You toss the mysterious vial back into the briefcase and pocket the candy bar. There are enough weird and out-of-control elements already present in the city. The last thing you need is to go messing around with another. Deciding not to risk whatever's in the vial to be found by another, you toss the briefcase and its contents into a small garbage fire nearby.";
-		say "     Oh well, at least you got a candy bar out of it.";
+		say "     Deciding that ingesting anything found in a mysterious briefcase is probably a very bad idea you opt to instead try and figure out what it is that you're holding. After storing the vial safely in your pack and pocketing the candy bar you begin to scan over some of the documents. Most of it is beyond your understanding, mostly medical lingo, some test results and other foreign terms, but a warning in particular caught your eye: 'Warning: Do not test the effects of application to the vaginal region'. It would seem that one of the documents talks about some abnormal effects if applied in such a manner, but much of it refers to a lot of medical language and anatomical terms you do not understand. You decide after pondering for a moment that you should [if PlayerMet of Medea is true]check in with Doctor Medea and see if she[else]go find someone, perhaps a doctor or specialist in gynecology and see if they[end if] might be able to decipher the document.";
 		increase carried of chips by 1;
 		increase score by 5;
+		now Resolution of Inner Predator is 2; [player didn't drink the vial]
 	LineBreak;
 	say "     As you are about to leave, a piece of paper sliding out of the briefcase catches your attention. It seems to be a detailed map [if Island Pier is known]to Vohr Island[else]to a small island off the coast, known as Vohr Island[end if], possibly linked to these experiments. It seems reachable from the beach, if you [if boatfound is 2 or boatfound is 3]use your boat[else]hunt for a boat there[end if].";
 	if boatfound <= 1:
 		now boatfound is 4;
 	if boatfound is 2 or boatfound is 3:
-		say "[bold type]You can now navigate to Vohr Island[roman type]";
+		say "[bold type]You can now navigate to Vohr Island[roman type][line break]";
 		now Island Pier is known;
 	now Inner Predator is resolved;
 
@@ -160,7 +187,7 @@ to vorebyplayer:
 		now researchbypass is 1;
 		infect;
 		now researchbypass is 0;
-	decrease hunger of Player by ( 4 * scale entry ) + a random number between 8 and 16;
+	decrease hunger of Player by ( 4 * ( 5 + scale entry - scalevalue of Player ) ) + a random number between 8 and 16;
 	if hunger of Player < 0, now hunger of Player is 0;
 	decrease humanity of Player by 3;
 	increase vorecount by 1;

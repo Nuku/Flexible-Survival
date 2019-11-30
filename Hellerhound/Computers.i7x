@@ -279,7 +279,7 @@ To say inbox of (chosen email - an email program):
 				if answered entry is true:
 					say "(R)";
 				say "[roman type]";
- 		say "[run paragraph on]".
+		say "[run paragraph on]".
 
 Table of Messages
 topic	message	arrival time	read	answered	description

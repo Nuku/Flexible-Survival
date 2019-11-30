@@ -528,7 +528,6 @@ Instead of fucking Aelias:
 				say "[title entry]: [description entry]?";
 				if Player consents:
 					let nam be title entry;
-					clear the screen and hyperlink list;
 					now sextablerun is 1;
 					if nam is "Let Aelias fuck you in the sling":
 						say "[AeliasSex1]";

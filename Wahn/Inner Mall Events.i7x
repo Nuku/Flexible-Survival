@@ -374,7 +374,7 @@ Instead of resolving a Donkey Needs:
 			say "     Gently patting Axel on the shoulder, you tell him that you have other plans right now. He is visibly deflated at the possibility of getting his rocks off being denied, but takes your decision well enough. The donkey shrugs and says, 'Okay then, maybe another time?' With a hopeful glance to you, he pushes off from the wall and walks away, moving out of sight in the crowd.";
 		else:
 			LineBreak;
-			say "     Putting on a serious expression, you look Axel straight in the eye and tell him that you won't be going down on him. Not now, nor ever in the future. The donkey boy gets a bit flustered at this open and definite rejection, swallowing and nodding as you ask if he understands you. 'I - um, I guess I'll just go then. Sorry for asking.' With that, the anthro equine hastily walks off into the crowd and does his best to vanish from sight. [bold type]After this embarrassment, he might just avoid you for good from now on.[roman type]";
+			say "     Putting on a serious expression, you look Axel straight in the eye and tell him that you won't be going down on him. Not now, nor ever in the future. The donkey boy gets a bit flustered at this open and definite rejection, swallowing and nodding as you ask if he understands you. 'I - um, I guess I'll just go then. Sorry for asking.' With that, the anthro equine hastily walks off into the crowd and does his best to vanish from sight. [bold type]After this embarrassment, he might just avoid you for good from now on.[roman type][line break]";
 			now AxelRelationship is 100; [avoids the player]
 			now Donkey Needs is resolved;
 			now Donkey Chat is resolved;

@@ -416,20 +416,8 @@ to quietrestorenightmareform:
 	now nmformswitch is false;
 	if BodyName of Player is not "Nightmare" or the player is not pure:
 		now nmformswitch is true;
-		setmonster "Nightmare";
-		choose row MonsterID from the Table of Random Critters;
-		if Name entry is "Nightmare":
-			now BodyName of Player is "Nightmare";
-			now FaceName of Player is "Nightmare";
-			now SkinName of Player is "Nightmare";
-			now TailName of Player is "Nightmare";
-			now CockName of Player is "Nightmare";
-			now Body of Player is body entry;
-			now Face of Player is face entry;
-			now Skin of Player is skin entry;
-			now tail of Player is tail entry;
-			now Cock of Player is cock entry;
-			attributeinfect "Nightmare";
+		setmonster "Nightmare" silently;
+		turn the Player into a "Nightmare";
 
 
 Section 5 - Leather Duster

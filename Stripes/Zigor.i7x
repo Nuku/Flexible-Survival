@@ -163,8 +163,7 @@ to say zigor_S1_analtraining:
 		increase XP of Zigor by 1;
 		if XP of Zigor is 3:
 			say "     'It pleases me to see you coming along so well, cachorro. That should help with your ordeals in the city as well as let us move on to some more intense pleasures,' he says with a toothy smile in that sensual accent of his. He gives your ass a firm squeeze with his claws digging in, causing your ass to clench and squeeze down around that extremely large buttplug it is holding with ease. As he leaves you there to enjoy the sensation of fullness and being delightfully stretched inside, you eye his collection with a hunger for the various huge toys.";
-			say "     [bracket]You have gained the [bold type]Twisted Capacity[roman type] feat.[close bracket]";
-			add "Twisted Capacity" to feats of Player;
+			FeatGain "Twisted Capacity";
 			increase score by 20;
 		else:
 			say "     After several lashings across the ass with the switch, he relents. 'You did well enough, I suppose,' the wolf says in his sensual, Iberian accent. 'Perhaps we'll have you try something [if XP of Zigor is 1]a little bigger[else]with real girth to it[end if] next time.' Feeling the sore ache from your ass despite the nanite infection, you are filled with both trepidation and anticipation for more. He leaves you tied up and stuffed for quite some time, your ass gradually becoming used to the added extension. During this time, your eyes drawn to his collection and those even larger toys awaiting you.";
@@ -307,7 +306,7 @@ to say zigor_S2_04_MM:		[ stage 4 - offer of finale - MM ]
 		say "     When his knot finally goes down and he pulls out, hot lupine seed drains from your abused hole and pools beneath you. You're left suspended like that, your master leaving you tied up in the dark basement while he returns to his atelier. He eventually returns much later with the other dominant wolves to show them his newest creation and sex pet, each of them quite enjoying the opportunity to examine the artisan's newest work. Together they put you through your paces, fucking you multiple times while praising Zigor's craftsmanship even while punishing you for every minor flaw or imperfect attempt to satisfy them. You prove to be quite responsive to this treatment and are a great hit with the wolves, if the strength and volume of their orgasms are to be any true judge[if zigseat is 1]. They seem quite excited at having a tauric leather wolf to join their pack's sex slaves[end if]. You are left aching and satisfied by the end of it, additionally pleased that you are deemed ready to be brought upstairs and put to work with the others in the leatherwork shop.";
 		say "     You are his sex slave and his property now - and nothing could please you more than that.";
 		now humanity of Player is 0;
-		now BodyName of Player is "Leather Wolf";
+		now BodyName of Player is "Leather Wolf"; [TODO: Add a Table of Random Critters entry for "Leather Wolf" (@Stadler#3007)]
 		now FaceName of Player is "Leather Wolf";
 		now SkinName of Player is "Leather Wolf";
 		now TailName of Player is "Leather Wolf";

@@ -252,11 +252,11 @@ Instead of resolving a Beach Detector Site:
 	else:
 		say ". You remove one of the detectors from the suitcase and hide the case among some tall grass. Hoping the thing is waterproof, you bundle it up in a couple of plastic bags you have in your pack just in case, then head into the water, swimming out towards the rocky spire. As you struggle to make it out there, a creature moves in to attack.";
 		if a random chance of 1 in 2 succeeds:
-			challenge "feral sea dragon";
+			challenge "Feral Sea Dragon";
 		else if a random chance of 1 in 2 succeeds:
 			challenge "Dolphin Herm";
 		else:
-			challenge "feral sea dragoness";
+			challenge "Feral Sea Dragoness";
 		if lost is 1:
 			say "     Defeated, you are forced back to the beach. You'll have to try again later and hope the creature has moved on.";
 			now Resolution of Beach Detector Site is 2; [detector not placed yet, lost fight]

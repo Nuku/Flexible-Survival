@@ -33,7 +33,7 @@ Use Scoring.
 
 [ Basic Functions moved to Basic Functions.i7x in Core Mechanics]
 
-The release number is 66.
+The release number is 67.
 The story creation year is 2010.
 The maximum score is 2500.
 
@@ -57,14 +57,14 @@ Section Help Menu
 Table of Basic Help Options (continued)
 title	description
 "Getting Started"	"Welcome to Flexible Survival! To get started with playing there are a few commands you need to know. [line break] In order to move around, you can use the compass directions (north, south, east, west, etc), move 'in' and 'out' of buildings, and 'nav' or 'navigate' between areas. [line break]  You can 'explore' the world to find events, monsters, and new areas, or 'hunt' for something specific. [line break] To interact with things around you, you can 'look', 'get', 'smell', 'fuck', 'talk' to, or 'drop' items. If you do pick things up, you can access you inventory with 'inv'.[line break]If you find yourself running low on food or water, you may need to 'scavenge' around the city."
-"Hunting"	"You can hunt for specific creatures. Go to a place you can explore from, like the library.[line break]You there? OK, now type [bold type]hunt (creature)[roman type].[line break]You are not assured success, but a critter is 3 times more likely to show up when actively looked for.[line break]You can also hunt for locations, if you know their name.[line break]Hunting for something doesn't require that you use the entire name, and can sometimes have multiple results, for example 'hunt dragon' in the park would hunt for both yamato dragon and yamato dragoness, but 'hunt dragoness' would only hunt for the yamato dragoness."
+"Hunting"	"You can hunt for specific creatures. Go to a place you can explore from, like the library.[line break]You there? Ok, now type [bold type]hunt (creature)[roman type].[line break]You are not assured success, but a critter is 3 times more likely to show up when actively looked for.[line break]You can also hunt for locations, if you know their name.[line break]Hunting for something doesn't require that you use the entire name, and can sometimes have multiple results, for example 'hunt dragon' in the park would hunt for both yamato dragon and yamato dragoness, but 'hunt dragoness' would only hunt for the yamato dragoness."
 "Trading"	"You can trade with certain denizens of the city. Simple [bold type]give x to y[roman type], like give soda to bob. If they want it, they'll give you something back for it. Trades are final, but usually worth it."
 "Scoring"	"Staying alive, making friends, and unearthing the mysteries of the city get you points. Losing battles saps points. See how high a score you can manage!"
 "Items"	"You will come to have a variety of items. Here are some useful commands.[line break][line break]Item: See a list of items you own.[line break]look (item): Look at a specific item.[line break]use (item): Use an item[line break]get (item): grab a specific item.[line break]get all: get everything in the room.[line break]junk (item): destroy an item forever.[line break]drop (item): drop the item on the floor, so you can pick it up later."
 "Weapons"	"Some items you find make good weapons! Be sure to [bold type]use (weapon)[roman type] before a battle to have them at hand."
 "Graphics"	"Graphics can be enabled or disabled by typing [bold type]graphics[roman type]."
 "Scavenging"	"Type [bold type]scavenge[roman type] in any room you can fast travel from to hunt for food and water."
-"Socializing"	"You can [bold type]talk (person)[roman type] to chat. If they are of more personal interest with you, you can also [bold type]fuck (person)[roman type]"
+"Socializing"	"You can [bold type]talk (person)[roman type] to chat. If they are of more personal interest with you, you can also [bold type]fuck (person)[roman type][line break]"
 "Ending Early"	"Type [bold type]end now[roman type] to cause the game to end early. Alternatively you can [bold type]give in[roman type] to the infection."
 "Play On"	"You want to skip that ending? Go for it. Type [bold type]play on[roman type] and time will cease to be a concern. You will not get endings though."
 "Wait Less"	"Tired of having to click more to continue much of the text?. Type [bold type]Waits Off[roman type] to skip many delays.[line break]Don't like the change and want to go back? Type [bold type]Waits On[roman type] to return to the default."
@@ -428,6 +428,8 @@ Equipment has a text called descmod. The descmod of equipment is usually "".
 Equipment has a text called placement. The placement of equipment is usually "end".
 Equipment has a text called slot. The slot of equipment is usually "".
 Equipment has a truth state called taur-compatible. The taur-compatible of equipment is usually false.
+Equipment has a number called GenderAppearance. The GenderAppearance of equipment is usually 0. [neutral]
+Equipment has a list of text called Traits.
 Equipment has a number called size. The size of equipment is usually 3.
 Equipment has a number called AC. The AC of equipment is usually 0.
 Equipment has a number called effectiveness. The effectiveness of equipment is usually 0.
@@ -603,6 +605,12 @@ internalbypass is a truth state that varies. internalbypass is usually false.
 
 Definition: A person (called x) is internal:
 	if CockName of x is listed in infections of InternalCockList and internalbypass is false, yes;
+	no;
+
+A person can be sheathed. A person is usually not sheathed.
+
+Definition: A person (called x) is sheathed:
+	if CockName of Player is listed in infections of SheathedCockList, yes;
 	no;
 
 A person can be knotted. A person is usually not knotted.
@@ -2708,7 +2716,7 @@ to guesstimate time at (x - a number):
 
 To Extend game by (x - a number):
 	decrease targetturns by x;
-	say "[bold type]((You have earned additional time: [x divided by 8] days, [(remainder after dividing x by 8) times 3] hours))[roman type]";
+	say "[bold type]((You have earned additional time: [x divided by 8] days, [(remainder after dividing x by 8) times 3] hours))[roman type][line break]";
 
 
 To process (x - a grab object):
@@ -2936,7 +2944,7 @@ To process (x - a grab object):
 					say "     [bold type]The [x] [if plural of x is true]are simply too big! They are meant for much larger beings than yourself[else]is simply too big! It is meant for much larger beings than yourself[end if].[roman type][line break]";
 					continue the action;
 			else:
-				say "     [bold type]You start wearing the [x].[roman type]";
+				say "     [bold type]You start wearing the [x].[roman type][line break]";
 				now x is equipped;
 	else if x is a medkit:
 		let healed be 10 + level of Player + ( ( intelligence of Player minus 10 ) divided by 2 );
@@ -3999,7 +4007,7 @@ to OldInfectionRoll: [old infections with less body parts made before 07.05.2019
 			now Cock Description of Player is ""; [wiping out the new style parts]
 			now Cunt Description of Player is ""; [wiping out the new style parts]
 			if Name entry is listed in infections of InternalCockList and internalbypass is true:
-				say "[italic type]...After some time, it appears that your balls re-emerge, in spite of this strain's normally internal anatomy.[roman type]";
+				say "[italic type]...After some time, it appears that your balls re-emerge, in spite of this strain's normally internal anatomy.[roman type][line break]";
 
 to NewInfectionRoll:
 	choose row MonsterID from the Table of Random Critters;
@@ -4297,7 +4305,7 @@ to NewInfectionRoll:
 			choose row MonsterID from the Table of Random Critters;
 			now Cock of Player is Cock Adjective entry;
 			if Name entry is listed in infections of InternalCockList and internalbypass is true:
-				say "[italic type]...After some time, it appears that your balls re-emerge, in spite of this strain's normally internal anatomy.[roman type]";
+				say "[italic type]...After some time, it appears that your balls re-emerge, in spite of this strain's normally internal anatomy.[roman type][line break]";
 	else if x is 9:
 		follow the sex change rule;
 		if Cuntname of Player is not Name entry:
@@ -4312,12 +4320,19 @@ to NewInfectionRoll:
 			now Cunt Color of Player is Cunt Color entry;
 			now Clit Size of Player is Clit Size entry;
 
-to attributeinfect:		[sets the player values from the new attributes]
+to attributeinfect:
+	attributeinfect silence state is 0;
+
+to attributeinfect silently:
+	attributeinfect silence state is 1;
+
+to attributeinfect silence state is ( Silence - a number ): [sets the player values from the new attributes]
 	choose row MonsterID from the Table of Random Critters;
 	if BodyName of Player is listed in infections of TaurList or BodyName of Player is listed in infections of NoLegList:
 		repeat with z running through equipped equipment:
 			if taur-compatible of z is false:
-				say "     [bold type]Sadly, the [z] [if plural of z is true]are incompatible with your new body type, so you can do nothing but take them off[else]is incompatible with your new body type, so you can do nothing but take it off[end if].[roman type][line break]";
+				if Silence is 0:
+					say "     [bold type]Sadly, the [z] [if plural of z is true]are incompatible with your new body type, so you can do nothing but take them off[else]is incompatible with your new body type, so you can do nothing but take it off[end if].[roman type][line break]";
 				now z is not equipped;
 	if there is a scale in row MonsterID of the Table of Random Critters:
 		if scalevalue of Player is not scale entry:
@@ -4325,15 +4340,19 @@ to attributeinfect:		[sets the player values from the new attributes]
 			repeat with z running through equipped equipment:
 				if size of z > 0: [size restricted equipment]
 					if (scalevalue of Player - size of z > 1):
-						say "     [bold type]You quickly rip your [z] off your body before [if plural of z is true]they are destroyed when you grow larger than they could support[else]it is destroyed when you grow larger than it could support[end if].[roman type][line break]";
+						if Silence is 0:
+							say "     [bold type]You quickly rip your [z] off your body before [if plural of z is true]they are destroyed when you grow larger than they could support[else]it is destroyed when you grow larger than it could support[end if].[roman type][line break]";
 						now z is not equipped;
 					else if (scalevalue of Player - size of z is 1):
-						say "     [bold type]Your [z] stretches a bit as it is forced to conform to a larger body.[roman type][line break]";
+						if Silence is 0:
+							say "     [bold type]Your [z] stretches a bit as it is forced to conform to a larger body.[roman type][line break]";
 					else if (scalevalue of Player - size of z < -1):
-						say "     [bold type]As you shrink, [z] becomes far too big to fit you. You have little choice but to take [if plural of z is true]them[else]it[end if] off.[roman type][line break]";
+						if Silence is 0:
+							say "     [bold type]As you shrink, [z] becomes far too big to fit you. You have little choice but to take [if plural of z is true]them[else]it[end if] off.[roman type][line break]";
 						now z is not equipped;
 					else if (scalevalue of Player - size of z is -1):
-						say "     [bold type]Your [z] hangs fairly on your now smaller frame.[roman type][line break]";
+						if Silence is 0:
+							say "     [bold type]Your [z] hangs fairly on your now smaller frame.[roman type][line break]";
 	else:
 		now scalevalue of Player is 3;
 	if there is a body descriptor in row MonsterID of the Table of Random Critters:
@@ -4350,14 +4369,6 @@ to attributeinfect:		[sets the player values from the new attributes]
 		now SleepRhythm of Player is 1; [day-preferred]
 	else:
 		now SleepRhythm of Player is 0; [standard]
-
-To attributeinfect (x - text):
-	repeat with y running from 1 to number of filled rows in Table of Random Critters:
-		choose row y in Table of Random Critters;
-		if Name entry exactly matches the text x, case insensitively:
-			now MonsterID is y;
-			attributeinfect;
-			break;
 
 To Vialchance (x - a text):
 	choose row MonsterID from Table of Random Critters;
@@ -4784,15 +4795,18 @@ postimport rules is a rulebook.
 Everyturn rules is a rulebook.
 
 This is the turnpass rule:
+	now fightstatus is 0;
+	now looknow is 0;
+	now ishunting is false;
+	now showlocale is true;
+	if the story has ended:
+		follow the everyturn rules;
+		rule succeeds;
 	follow the cock descr rule;
 	if "Sanity Saver" is listed in the feats of Player:
 		now humanity of Player is 100;
 	follow the cunt descr rule;
 	follow the breast descr rule;
-	now fightstatus is 0;
-	now looknow is 0;
-	now ishunting is false;
-	now showlocale is true;
 	if HP of Velos > 2:
 		if Velos is not in the location of the player:		[traveling w/player]
 			now Velos is in the location of the player;
@@ -4909,8 +4923,8 @@ This is the turnpass rule:
 		if number of filled rows in Table of PlayerChildren > 0 and a random chance of 1 in 2 succeeds, increase hunger of Player by 1;
 		if "Spartan Diet" is listed in feats of Player and hunger of Player > 0 and a random chance of 1 in 2 succeeds:
 			decrease hunger of Player by 1;
-	if "Vore Predator" is listed in feats of Player:
-		increase hunger of Player by a random number between 1 and 5;
+	if Player can vore and scalevalue of Player > 1:
+		increase hunger of Player by a random number between 1 and (1 + scalevalue of Player);
 		if "Spartan Diet" is listed in feats of Player and hunger of Player > 0 and a random chance of 1 in 2 succeeds:
 			decrease hunger of Player by 1;
 	if a random number from 1 to 25 > ( a random number between 1 and ( stamina of Player + 1 ) ):
@@ -5068,9 +5082,9 @@ This is the player injury rule:
 	else if per <= 40:
 		now descr is "[if Playerpoison > 0][special-style-1]poisoned[roman type] and [end if][one of]wounded[or]bashed around[or]significantly harmed[at random]";
 	else if per <= 80:
-		now descr is "[one of]scuffed[or]bruised[or]still in the fight[at random][if Playerpoison > 0], but [special-style-1]poisoned[roman type]";
+		now descr is "[one of]scuffed[or]bruised[or]still in the fight[at random][if Playerpoison > 0], but [special-style-1]poisoned[roman type][line break]";
 	else:
-		now descr is "[one of]healthy[or]energetic[or]largely unharmed[at random][if Playerpoison > 0], but [special-style-1]poisoned[roman type]";
+		now descr is "[one of]healthy[or]energetic[or]largely unharmed[at random][if Playerpoison > 0], but [special-style-1]poisoned[roman type][line break]";
 	rule succeeds;
 
 This is the brain descr rule:
@@ -5270,7 +5284,7 @@ This is the self examine rule:
 		-- 4:
 			say "are superhumanly tall.";
 		-- 5:
-			say "enormous in size, a lot larger than any regular human ever could be.";
+			say "are enormous in size, a lot larger than any regular human ever could be.";
 	[ Infection Descriptions Below   ]
 	if Player is FullyNewTypeInfected and NewTypeInfectionActive is true: [new infection on player and activated]
 		say "Pulling out a small mirror, you check yourself over from head to toe, attempting to make sense of your current form. Your head and face resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance. [if Player is HasBeard]You have a [Hair Color of Player] [Beard Style of Player]. [end if][if Player is HasHeadHair]On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style. [end if]Inspecting your [Mouth Length Adjective of Player] mouth with both the mirror and your digits, you attempt to look past your [Tongue Length of Player] inch long, [Tongue Color of Player], [Tongue Adjective of Player] tongue and into your [Mouth Length Adjective of Player] throat. [if Player is HasHeadAdornments]Before moving on from your head, you give your [Head Adornments of Player] a proud glance followed by a light caress. [end if][line break]";
@@ -5521,9 +5535,9 @@ This is the self examine rule:
 					say "child '[Name entry]'";
 				say " is a pureblood [Head entry]. ";
 			if Albino entry is true:
-				say "[bold type]Their pigmentation is muted and almost white, except for the eyes that appear red. [roman type]";
+				say "[bold type]Their pigmentation is muted and almost white, except for the eyes that appear red. [roman type][line break]";
 			else if Melanism entry is true:
-				say "[bold type]Their pigmentation is almost pure black. [roman type]";
+				say "[bold type]Their pigmentation is almost pure black. [roman type][line break]";
 			say "You have a [PlayerRelationship entry] relationship with them, and your child's personality is rather [Personality entry].";
 		else:
 			repeat with x running from 1 to number of filled rows in Table of PlayerChildren:
@@ -5548,9 +5562,9 @@ This is the self examine rule:
 						say "child '[Name entry]'";
 					say " is a pureblood [Head entry]. ";
 				if Albino entry is true:
-					say "[bold type]Their pigmentation is muted and almost white, except for the eyes that appear red. [roman type]";
+					say "[bold type]Their pigmentation is muted and almost white, except for the eyes that appear red. [roman type][line break]";
 				else if Melanism entry is true:
-					say "[bold type]Their pigmentation is almost pure black. [roman type]";
+					say "[bold type]Their pigmentation is almost pure black. [roman type][line break]";
 				say "You have a [PlayerRelationship entry] relationship with them, and your child's personality is rather [Personality entry].";
 	if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 1: [more than one child of both types combined]
 		say "They all are as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
@@ -5605,9 +5619,9 @@ to say OffspringDesc:
 					say "child '[Name entry]'";
 				say " is a pureblood [Head entry]. ";
 			if Albino entry is true:
-				say "[bold type]Their pigmentation is muted and almost white, except for the eyes that appear red. [roman type]";
+				say "[bold type]Their pigmentation is muted and almost white, except for the eyes that appear red. [roman type][line break]";
 			else if Melanism entry is true:
-				say "[bold type]Their pigmentation is almost pure black. [roman type]";
+				say "[bold type]Their pigmentation is almost pure black. [roman type][line break]";
 			say "You have a [PlayerRelationship entry] relationship with them, and your child's personality is rather [Personality entry].";
 		else:
 			repeat with x running from 1 to number of filled rows in Table of PlayerBunkerChildren:
@@ -5632,9 +5646,9 @@ to say OffspringDesc:
 						say "child '[Name entry]'";
 					say " is a pureblood [Head entry]. ";
 				if Albino entry is true:
-					say "[bold type]Their pigmentation is muted and almost white, except for the eyes that appear red. [roman type]";
+					say "[bold type]Their pigmentation is muted and almost white, except for the eyes that appear red. [roman type][line break]";
 				else if Melanism entry is true:
-					say "[bold type]Their pigmentation is almost pure black. [roman type]";
+					say "[bold type]Their pigmentation is almost pure black. [roman type][line break]";
 				say "You have a [PlayerRelationship entry] relationship with them, and your child's personality is rather [Personality entry].";
 	if (number of filled rows in Table of PlayerBunkerChildren) > 1:
 		say "They all are as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
@@ -6452,13 +6466,11 @@ Include Park Events by Sarokcat.
 Include Patreon Menu by Stripes.
 Include Pepperspray by Stripes.
 Include Pet Shop by Wahn.
-[Include Pursuit of Science by Kaleem Mcintyre.]
 Include Qytat Shifters by Hellerhound.
 Include Random Events by Hiccup.
 Include Rane Events by KorekaBii.
 Include Recordings by Wahn.
 Include Red Events by Stripes.
-[Include Researcher Studio by Kaleem Mcintyre.]
 Include Reservoir by Kaleem Mcintyre.
 Include Rubber Sneakers by Kernog.
 Include Satyr Frat by Wahn.
@@ -6884,6 +6896,7 @@ Include Hadiya by Stripes.
 Include Hanu by Kernog.
 Include Harold by Sarokcat.
 Include Hayato by Stripes.
+Include Help Book by Prometheus.
 Include HornyHorsey by femtoAmpere.
 [Include Horus by Rikaeus.]
 Include Hungry Boar Man by Closerhenry.
@@ -6934,6 +6947,7 @@ Include Meredith by Stripes.
 Include Micaela by Stripes.
 Include Midnight by Sarokcat.
 Include Milo by CrimsonAsh.
+Include Monty by Wahn.
 Include Mouse Taur by Nuku Valente.
 Include Pet Mutt by CrimsonAsh.
 Include Nadia by Wahn.
@@ -8601,7 +8615,7 @@ to eyecolorsetting: [ Green, Blue, Gray, Brown, Hazel, Amber, Red]
 		now menuexit is 1;
 
 to playernaming:
-	say "[bold type]Please enter new name: [roman type]";
+	say "[bold type]Please enter new name: [roman type][line break]";
 	get typed command as playerinput;
 	now name of Player is playerinput;
 

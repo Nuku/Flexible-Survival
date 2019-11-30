@@ -2,6 +2,7 @@ Kitsune Hideaway by Shadowwolf94 begins here.
 [original by Kaleem Mcintyre]
 [1.1 - Moved to Shadowwolf94's folder]
 [1.2 - Player Dominant scenes added - Prometheus]
+[1.3 - Talk Menu Expanded]
 
 "Adds a Foxy Hideaway"
 

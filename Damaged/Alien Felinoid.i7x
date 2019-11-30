@@ -273,10 +273,11 @@ infect name	heat cycle	heat duration	trigger text	description text	heat start	he
 --	--	--	--	--	--	--	--	--	--	--
 
 to say felinoidheat:
-	if heatform is 0:
-		say "     Whining as you find yourself fingering your pussy in abandon before managing to snap out of your needy haze for a brief moment. Looking down at your hand, covered in your fluids, you raise it tentatively. Suddenly the scent of your body hits you and you begin lapping at your fingers, tasting your musk, needing more.";
-	else:
-		say "     Whining as you find yourself fingering your sopping pussy in abandon, before managing to snap out of your needy haze for a brief moment. Looking down at your hand, covered in your fluids, you raise it tentatively. Suddenly the scent of your body hits you, so like a wild cat in heat, can't help but push those fingers back in for a few more minutes before you're able to move on.";
+	if Player is female:
+		if heatform is 0:
+			say "     Whining as you find yourself fingering your pussy in abandon before managing to snap out of your needy haze for a brief moment. Looking down at your hand, covered in your fluids, you raise it tentatively. Suddenly the scent of your body hits you and you begin lapping at your fingers, tasting your musk, needing more.";
+		else:
+			say "     Whining as you find yourself fingering your sopping pussy in abandon, before managing to snap out of your needy haze for a brief moment. Looking down at your hand, covered in your fluids, you raise it tentatively. Suddenly the scent of your body hits you, so like a wild cat in heat, can't help but push those fingers back in for a few more minutes before you're able to move on.";
 	infect "Felinoid";
 	increase Libido of Player by 15;
 

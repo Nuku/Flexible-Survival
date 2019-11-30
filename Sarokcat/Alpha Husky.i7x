@@ -14,6 +14,7 @@ losttoalphahusky is a number that varies.
 
 to say Alpha Husky Desc:
 	setmongender 3;
+	project the Figure of HuskyAlpha_soft_icon;
 	if inasituation is true:
 		say ""; [dealt with at the source of the event]
 	else:
@@ -23,6 +24,7 @@ to say Alpha Husky attack:
 	if inasituation is true:
 		say ""; [dealt with at the source of the event]
 	else:
+		project the Figure of HuskyAlpha_hard_icon;
 		increase losttoalphahusky by 1;
 		if Player is female:
 			if BodyName of Player is "Husky Bitch":
@@ -110,6 +112,7 @@ to say alpha huskypack lost:
 	if HP of Player < 1:
 		say "     The pack laughs and cheers as you submit to their superior numbers. They push you over, and suddenly, your mouth is full of dog cock as one sits down on you, shoving his member into you and starting to rut eagerly with reckless abandon. You feel another husky rifling through your pockets. Are they mugging you? It seems so, as one gives a delighted bark and dashes off with something of yours, bringing it to the alpha husky to admire. You try to voice complaint, but can only get out a muffled whine around the cock filling you. The horny dog straddling your face howls, filling you with salty dog cum and forcing himself forward. Your jaw hurts as the knot is forced past it, leaving you tied to the lusty canine.";
 		say "     Time passes, and the sounds of the others grow quieter. You can't see them either, but you can't see much but the thighs of your rapist. He pulls free of your sore mouth and barks a word of thanks before hopping to his feet and dashing off, leaving you to recover.";
+		CreatureSexAftermath "Player" receives "OralCock" from "Husky Alpha";
 		let z be a random owned grab object;
 		decrease carried of z by 1;
 [		sort invent of the player in random order; ]
@@ -121,10 +124,12 @@ to say alpha huskypack lost:
 		if Player is female:
 			say "     A wet, slippery, canine tongue delves up into your cunt, lapping at your [CockName of Player] sex as they tease at your clit with claw tips carefully. Your sex sings with forced pleasure as the dogs work diligently to bring you to delirious heights.";
 		say "     You shudder and spasm as climax hits you like a freight train, feeding hungry husky mouths with your fluids. They work you until you have no further to give and lower you back to the ground gently. The alpha stands over you, his tail wagging. 'Next time.'";
+		CreatureSexAftermath "Husky Alpha" receives "[if player is male]OralCock[else if player is female]OralPussy[else if player is herm and a random chance of 1 in 2 succeeds]OralCock[else if player is herm]OralPussy[end if]" from "Player";
 
 
 to say alpha huskypack victory:
 	choose row MonsterID from Table of Random Critters;
+	project the Figure of HuskyAlpha_hard_icon;
 	if Player is not submissive:
 		say "     You stand victorious as the huskies whimper in defeat. They know who the one in charge is, for now at least. One of the downed dogs rolls over in front of you, paws in the air and wagging his tail. The others join in with soft yelps and whines, endeavoring to win your favor.";
 		if humanity of Player > 60 or Libido of Player < 50:
@@ -139,12 +144,12 @@ to say alpha huskypack victory:
 			else:
 				say "     One husky approaches and rears up, pressing his snout to your face before he licks across face and neck, then bares his throat to you. Without thinking about it, you bite him lightly across the exposed windpipe, and he shudders with a potent feeling of submission. As the thrill of owning him runs through you, you barely register another dog moving around behind you.";
 			if Player is female:
-				say "     The dog behind you nuzzles against your [TailName of Player] ass a moment before he rears up, placing his paw-hands on your shoulders and drawing in for a firm hug from behind. He growls in your ear in a way that seems nothing but adoring. He runs his tongue across your ears and the side of your face, grinding his increasingly hard shaft against your ass as your front is worked over. His pointed dog cock seems to avoid your cunt, at least until you decide that you want to be fucked. You reach behind yourself and guide his twitching member to your [CockName of Player] [cunt size desc of Player] gash. He needs no further prompting and thrusts firmly into you, taking your wet tunnel with sharp, deep pushes and howling out his love for his alpha queen. [impregchance]";
+				say "     The dog behind you nuzzles against your [TailName of Player] ass a moment before he rears up, placing his paw-hands on your shoulders and drawing in for a firm hug from behind. He growls in your ear in a way that seems nothing but adoring. He runs his tongue across your ears and the side of your face, grinding his increasingly hard shaft against your ass as your front is worked over. His pointed dog cock seems to avoid your cunt, at least until you decide that you want to be fucked. You reach behind yourself and guide his twitching member to your [CockName of Player] [cunt size desc of Player] gash. He needs no further prompting and thrusts firmly into you, taking your wet tunnel with sharp, deep pushes and howling out his love for his alpha queen.";
 				CreatureSexAftermath "Player" receives "PussyFuck" from "Husky Alpha";
 			else:
 				say "     The dog behind you nuzzles against your [TailName of Player] ass a moment before he rears up, placing his paw-hands on your shoulders and drawing in for a firm hug from behind. He growls in your ear in a way that seems nothing but adoring. He runs his tongue across your ears and the side of your face, grinding his increasingly hard shaft against your ass as your front is worked over. The narrow end of his raging erection nudges against your asshole, and he pulls away sharply, whining as if he did a bad thing. You give out a growl of your own, reaching back to pull him forward and into yourself. With a happy yelp, he buries himself into your tight back door, filling you with rapid strokes as he yelps and barks with delight at being permitted to mount his alpha.";
 				CreatureSexAftermath "Player" receives "AssFuck" from "Husky Alpha";
-			say "     With the pleasure coming from both ends, it is not long before your body seizes in climax. Your cry mixes with those of the canines, shuddering and pressing tight together as hot cum flows between. They are eager to clean you. One volunteers to be your pillow, and another, your blanket, as they all snuggle tightly up to you until you pass into a restful sleep.[impregchance]";
+			say "     With the pleasure coming from both ends, it is not long before your body seizes in climax. Your cry mixes with those of the canines, shuddering and pressing tight together as hot cum flows between. They are eager to clean you. One volunteers to be your pillow, and another, your blanket, as they all snuggle tightly up to you until you pass into a restful sleep.";
 			SanLoss 20;
 			if humanity of Player < 10:
 				say "[alpha pack victory ending]";
@@ -192,6 +197,7 @@ To say Alpha Husky loss:
 	if inasituation is true:
 		say ""; [dealt with at the source of the event]
 	else if SarahSlut > 3:
+		project the Figure of HuskyAlpha_hard_icon;
 		say "     'You're tougher than I thought,' the alpha says as he looks at you speculatively, his nose working as he sniffs around you for a second, before a grin crosses his muzzle. 'And it looks like you already have tamed a bitch or two yourself,' he says with a chuckle, obviously scenting your lusty husky pet's heat-filled odor still clinging to your body. 'If you want, I suppose I could give you a few pointers on being a proper alpha to them, one pack leader to another,' the canine says with a wink, his offer sounding surprisingly helpful as you think of how much fun it would be to be a proper alpha for your little pets back in the bunker...";
 		say "[bold type]Do you take him up on his offer?[roman type][line break]";
 		LineBreak;
@@ -229,10 +235,10 @@ To say Alpha Husky loss:
 		else:
 			say "     This encounter reminds you of your deal with bounty hunter, Bradford. You should go see him about getting your share of the reward.";
 
-
 to caughtthealphahusky:
+	project the Figure of HuskyAlpha_hard_icon;
 	LineBreak;
-	say "     [bold type]What do you want to do with the male husky now?[roman type]";
+	say "     [bold type]What do you want to do with the male husky now?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

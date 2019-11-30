@@ -10,9 +10,11 @@ MYDTBMM is a number that varies. [Male Yamato Dragon TBM Memory]
 MYDAM is a number that varies. [Male Yamato Dragon Anal Memory]
 MYDGM is a number that varies. [Male Yamato Dragon Gimmick Memory]
 ydcolor is a number that varies.
+YDEnemyColor is a number that varies.[@Tag:NotSaved]
 yamatdom is a number that varies.
 
 to say Yamato Dragon attack:
+	ProjectYamatoDragon_hard;
 	if HP of Player > 0:
 		say "     You ultimately choose to surrender yourself to the serpentine dragon's mercy, dropping what you were carrying and offering yourself freely. When it's clear that this isn't some trick he pulls closer, a mouthless voice flooding your hearing.";
 	else:
@@ -138,7 +140,7 @@ to say Yamato Dragon attack:
 				if MYDAM is 3 and player is not twistcapped:
 					LineBreak;
 					say "     [italic type]...After some time you realize that your escapades with the massive dragon has had some permanent effect on you. Your anal ring feels permanently stretchier...[roman type][line break]";
-					if Player is not twistcapped, add "Twisted Capacity" to feats of Player;
+					FeatGain "Twisted Capacity";
 			else if Player is female and a random chance of 1 in 2 succeeds:
 				say "     Talons wrapping around your serpentine frame, the dragon pulls you up into the air, dragging you along as he ascends. [if HP of Player < 1 and player is not submissive]Instinctively struggling against the beast's hold, being let go quickly stops being an option, given how high up you are[else]At the mercy of this beast, you watch on as the earth becomes more and more distance, instinctively driving you to cling to him in return[end if]. Entirely exposed before him as you are, he presses you against his growing arousal, forced to abide his hardening cock as he grinds it between your legs.";
 				if MYDGM is 0:
@@ -251,7 +253,7 @@ to say Yamato Dragon attack:
 				if MYDAM is 3 and player is not twistcapped:
 					LineBreak;
 					say "     [italic type]...After some time you realize that your escapades with the massive dragon has had some permanent effect on you. Your anal ring feels permanently stretchier...[roman type][line break]";
-					if Player is not twistcapped, add "Twisted Capacity" to feats of Player;
+					FeatGain "Twisted Capacity";
 			else if Player is female and a random chance of 1 in 2 succeeds:
 				say "     [if HP of Player < 1 and player is not submissive]Making a final attempt to crawl free, you only encourage the oversized reptile to pull you back by one of[else]Forced to gawk at the oversized reptile, he offers you a twisted grin as he begins pulling you closer by[end if] your legs. Your front exposed, he buries his [if scalevalue of Player < 5]massive[else]large[end if] snout between your thighs. Coarse scales grinding against you vulnerable, [bodytype of Player] frame, you must abide his thick tongue's shameless attention, firmly caressing your [cunt size desc of Player] cunt[sfn]. In the distance, forced to watch the crotch of his own serpentine form, you see his massive cock slowly growing hard against the open air.";
 				if MYDGM is 0:
@@ -345,6 +347,8 @@ to yamatbiasshift:
 				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the female dragon. Surely your fate is tied to her, should you succumb[roman type].";
 
 to say yamato dragon desc:
+	now YDEnemyColor is a random number between 0 and 2;
+	ProjectYamatoDragon_soft;
 	setmongender 3; [creature is male]
 	choose row MonsterID from Table of Random Critters;
 	if "Male Preferred" is listed in feats of Player:
@@ -365,7 +369,7 @@ to say yamato dragon desc:
 	now firebreathready is false;
 	psycheeval;
 	libidoeval;
-	say "     [if showlocale is true]Traveling through the park[else]Suddenly[end if], you find yourself beset by a dragon of eastern myth. Massive and serpentine in frame, airborne in spite of being wingless, his [one of]red[or]blue[or]green[at random] scales and yellow underbelly shimmering in the [if daytimer is night]starlight[else]sunlight[end if]. You instinctively attempt to find cover, but this only encourages him to pursue you on ground, a lustful hunger agleam in his eyes.";
+	say "     [if showlocale is true]Traveling through the park[else]Suddenly[end if], you find yourself beset by a dragon of eastern myth. Massive and serpentine in frame, airborne in spite of being wingless, his [if YDEnemyColor is 0]red[else if YDEnemyColor is 1]blue[else]green[end if] scales and yellow underbelly shimmering in the [if daytimer is night]starlight[else]sunlight[end if]. You instinctively attempt to find cover, but this only encourages him to pursue you on ground, a lustful hunger agleam in his eyes.";
 
 to say ydskinchange:
 	let tempnum be ydcolor;
@@ -374,7 +378,26 @@ to say ydskinchange:
 	if ydcolor is 3, now ydcolor is 0;
 	say "you find yourself suddenly forced to abide the growth of large, smooth [if ydcolor is 0]red[else if ydcolor is 1]blue[else]green[end if] scales grow upon your back, smaller, coarser yellow scales quickly adorning your front and underside";
 
+to ProjectYamatoDragon_soft:
+	if YDEnemyColor is:
+		-- 0:
+			project the Figure of YamatoDragon_red_soft_icon;
+		-- 1:
+			project the Figure of YamatoDragon_blue_soft_icon;
+		-- 2:
+			project the Figure of YamatoDragon_green_soft_icon;
+
+to ProjectYamatoDragon_hard:
+	if YDEnemyColor is:
+		-- 0:
+			project the Figure of YamatoDragon_red_hard_icon;
+		-- 1:
+			project the Figure of YamatoDragon_blue_hard_icon;
+		-- 2:
+			project the Figure of YamatoDragon_green_hard_icon;
+
 to say Yamato Dragon loss:
+	ProjectYamatoDragon_hard;
 	say "     You successfully manage to fend off the massive dragon... Or, at least, he seems to yield to you, [one of]perhaps figuring that this fight is going nowhere for him[or]no doubt satisfied with you[stopping]. Pulling back, he glares down at you.";
 	say "     '[one of]Alright[or]Very well[or]I see now[at random], ";
 	if BodyName of Player is "Yamato Dragon" or BodyName of Player is "Yamato Dragoness":
@@ -768,7 +791,7 @@ to say YamatM_5: [Anal Catching]
 		if MYDAM is 3 and player is not twistcapped:
 			LineBreak;
 			say "     [italic type]...After some time you realize that your escapades with the massive dragon has had some permanent effect on you. Your anal ring feels permanently stretchier...[roman type][line break]";
-			if Player is not twistcapped, add "Twisted Capacity" to feats of Player;
+			FeatGain "Twisted Capacity";
 	else: [Has Twistcap]
 		say "     [if tempnum is 1]Now[else]Once he's[end if] ready for you, you're more than eager to get this ball rolling, much to the serpent's surprise. As soon as you'll oblige, he lifts you up over the mountain of flesh, slowly lowering your ass against its oozing tip. You brace yourself as your body gradually abide his dick as it slowly sinks past your anal ring.";
 		say "     '[one of]Such a tight fit[or]I will be sure to make it fit[or]Ha, this will be fun to watch[at random]...' Practically giddy with dark anticipation, the monster continues to slowly impale you with his massive cock, [if scalevalue of Player < 5]quickly[else]gradually[end if] reaching your supposed limits before exceeding them, stomach beginning to visibly bulge with the silhouette of the organ, each successive throb sending powerful tremors across the whole of your [bodytype of Player] body.";
@@ -1313,7 +1336,7 @@ when play ends:
 							say ", no matter how strange";
 						say ". Ultimately, you seem more than happy with your eternal fate as her plaything...";
 		else:
-			say "     After being processed by the military, you find yourself returning to the normal world - as normal as it can be after all that's happened. Your large, elongated body makes finding suitable living space something of a challenge, but you eventually manage.";
+			say "     After being processed by the military, you find yourself returning to the normal world - as normal as it can be after all that's happened[if ScaleValue of Player > 3]. Your large, elongated body makes finding suitable living space something of a challenge, but you eventually manage[end if].";
 			if Player is pure:
 				say "     Your pure form makes you an incredibly high-value asset for lunar new year celebrations, bidders often paying top dollar for your attendance in their revelry. It's not even a particularly hard job, and it allows you the opportunity to travel abroad and enjoy the company of many a new people, either in public or in private.";
 			else:

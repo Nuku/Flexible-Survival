@@ -161,8 +161,7 @@ to say losetomagicdrake:
 	say "[mdscaletweak]";
 	if mdrakeanal >= 3 and player is not twistcapped:
 		say "     From the way your asshole and insides have been so thoroughly used, abused and stretched by the dragoness's cock, you have a feeling that you'll never quite be the same again.";
-		say "     [bracket]You have gained the 'Twisted Capacity' feat and are now stretchy enough to take some astonishingly huge things inside you.[close bracket][line break]";
-		add "Twisted Capacity" to feats of Player;
+		FeatGain "Twisted Capacity";
 	increase mdrakeloss by 1;
 
 
@@ -581,8 +580,7 @@ to say mdrake_pvictory_05:
 	increase mdrakeanal by 1;
 	if mdrakeanal >= 3 and player is not twistcapped:
 		say "     From the way your asshole and insides have been so thoroughly used, abused and stretched by the dragoness's cock, you have a feeling that you'll never quite be the same again.";
-		say "     [bracket]You have gained the 'Twisted Capacity' feat and are now stretchy enough to take some astonishingly huge things inside you.[close bracket][line break]";
-		add "Twisted Capacity" to feats of Player;
+		FeatGain "Twisted Capacity";
 
 to say mdrake_pvictory_06:		[Receive fellatio]
 	say "     Feeling you deserve some small payback for the trouble this lust-crazed creature's been causing, you take hold of your [cock size desc of Player] cock and stroke it to erection. The sight of it catches the sorceress's attention, partially distracting her from her efforts to rise. As you approach her draconic muzzle, she licks her lips and releases a needy moan. And when you bring your [Cock of Player] manhood just barely within reach, her reptilian tongue stretches out to lick its tip.";
@@ -635,8 +633,7 @@ to say mdstaff_overgrown:
 	increase mdrakeanal by 1;
 	if mdrakeanal >= 3 and player is not twistcapped:
 		say "     From the way your asshole and insides have been so thoroughly used, abused and stretched by the dragoness's cock, you have a feeling that you'll never quite be the same again.";
-		say "     [bracket]You have gained the 'Twisted Capacity' feat and are now stretchy enough to take some astonishingly huge things inside you.[close bracket][line break]";
-		add "Twisted Capacity" to feats of Player;
+		FeatGain "Twisted Capacity";
 	if mdrakeoversized < 5 or inasituation is true:
 		infect "Magic Drake";
 	decrease humanity of Player by a random number between 2 and 4;
@@ -648,19 +645,8 @@ to say mdstaff_overgrown:
 	if Libido of Player > 100, now Libido of Player is 100;
 	if mdrakeoversized >= 5 and inasituation is false:
 		now mdrakeoversized is 100;
-		choose row MonsterID from the Table of Random Critters;
 		now humanity of Player is 0;
-		now TailName of Player is "Magic Drake";
-		now FaceName of Player is "Magic Drake";
-		now SkinName of Player is "Magic Drake";
-		now BodyName of Player is "Magic Drake";
-		now CockName of Player is "Magic Drake";
-		attributeinfect;
-		now tail of Player is tail entry;
-		now Face of Player is face entry;
-		now Skin of Player is skin entry;
-		now Body of Player is body entry;
-		now Cock of Player is cock entry;
+		turn the Player into a "Magic Drake" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
 		if hellHoundLevel is 0:
 			follow the sex change rule;
 			follow the sex change rule;
@@ -893,7 +879,7 @@ when play ends:
 ]
 
 to say mdrake_bad_end:
-	say "     Once more you lay helpless before the drake, begging to be taken by your mistress. The sight of you on the ground before her causes her to smirk, and with a twirl of her staff you can feel the now familiar sensation of your ass ballooning outward with her magic, reaching the incredibly size she pushed it to the last time you saw her. As you're distracted by the pillowy cheeks you now have, the drake circles around you and gives one a smack, sending a shockwave over the surface. 'Ah, you accept my magic so easily now, like the wonderful little familiar you are. I think that now I've perfected the spell, you see, and it's time to make you perfect. Doesn't that sound wonderful?' A moment passes, before you realize that it wasn't simply a rhetorical question. No matter what happens, you're not sure you'll ever escape her charms. [bold type]Do you give in fully to the drake?[roman type]";
+	say "     Once more you lay helpless before the drake, begging to be taken by your mistress. The sight of you on the ground before her causes her to smirk, and with a twirl of her staff you can feel the now familiar sensation of your ass ballooning outward with her magic, reaching the incredibly size she pushed it to the last time you saw her. As you're distracted by the pillowy cheeks you now have, the drake circles around you and gives one a smack, sending a shockwave over the surface. 'Ah, you accept my magic so easily now, like the wonderful little familiar you are. I think that now I've perfected the spell, you see, and it's time to make you perfect. Doesn't that sound wonderful?' A moment passes, before you realize that it wasn't simply a rhetorical question. No matter what happens, you're not sure you'll ever escape her charms. [bold type]Do you give in fully to the drake?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Become hers completely.";
 	say "     ([link]N[as]n[end link]) - No, never!";

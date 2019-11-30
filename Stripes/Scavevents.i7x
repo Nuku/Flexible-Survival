@@ -457,7 +457,7 @@ Instead of resolving a Plains Scavenging:
 					now y is "water bottle";
 				if scavengetarget is "soda":
 					now y is "soda";
-	say "Roaming across the endless field of grass that makes up the plains you find your brushing a hand across your face as a strong and stray breeze passes along your [one of][bodytype of Player][or][bodydesc of Player][at random] body. Striding across one giant grassy knoll you happen to notice [y] not too far off in the distance. Looking around to be sure that you're not seeing a mirage, you quickly run over to [y] to capture it before something else can.";
+	say "Roaming across the endless field of grass that makes up the plains you find yourself brushing a hand across your face as a strong and stray breeze passes along your [one of][bodytype of Player][or][bodydesc of Player][at random] body. Striding across one giant grassy knoll you happen to notice [y] not too far off in the distance. Looking around to be sure that you're not seeing a mirage, you quickly run over to [y] to capture it before something else can.";
 	now x is a random number from 1 to 3;
 	if x is 1:
 		say "The item in question waits silently for you [one of]on the ground among some tall grass[or]with small bugs crawling over it[or]on top of a large cropping of bushes[or]within the branches of a lonesome tree[or]down in a large hole[or]resting in a dry puddle[or]underneath a pile of straw[or]down the side of a hill[or]right next to a wooden fence[at random].";

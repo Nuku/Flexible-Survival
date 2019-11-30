@@ -277,7 +277,6 @@ to say SatyrFratSexMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if nam is "Arrange a drinking competition with some dudes":
 					say "[SatyrFratSex1]";
