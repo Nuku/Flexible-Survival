@@ -292,10 +292,16 @@ Instead of resolving a Hunted Survivor:
 			now Resolution of Hunted Survivor is 4; [man fled from player, was captured by the beasts]
 	now Hunted Survivor is resolved;
 
+
 Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "Shadow Beast Male":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Shadow Beast Male Infection"	"Infection"	""	Shadow Beast Male Infection rule	1000	false
+
+This is the Shadow Beast Male Infection rule:
+	if Player has a body of "Shadow Beast Male":
+		trigger ending "Shadow Beast Male Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is male: [male+herm]
 				if Player is submissive: [male+sub]

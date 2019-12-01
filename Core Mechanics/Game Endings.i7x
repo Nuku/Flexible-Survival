@@ -164,7 +164,7 @@ When play ends:
 			next;
 		follow the Ending entry;
 		if Player dead or Player imprisoned:
-			if debug is at level 9:
+			if debug is at level 1:
 				say "DEBUG: The Player is either dead or imprisoned, enslaved and so on. Finishing here![line break]";
 			break;
 	[FS Multiplayer AD here]

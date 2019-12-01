@@ -1567,28 +1567,49 @@ to say elk trans cow fur use:
 
 Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "Elk Tribe Bull":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Elk Tribe Bull Infection"	"Infection"	""	Elk Tribe Bull Infection rule	1000	false
+"Elk Tribe Cow Infection"	"Infection"	""	Elk Tribe Cow Infection rule	1000	false
+"Elk Tribe Herm Infection"	"Infection"	""	Elk Tribe Herm Infection rule	1000	false
+"Elk Tribe Trans Bull Infection"	"Infection"	""	Elk Tribe Trans Bull Infection rule	1000	false
+"Elk Tribe Trans Cow Infection"	"Infection"	""	Elk Tribe Trans Cow Infection rule	1000	false
+
+This is the Elk Tribe Bull Infection rule:
+	if Player has a body of "Elk Tribe Bull":
+		trigger ending "Elk Tribe Bull Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     ...";
 		else:
 			say "     ...";
-	else if BodyName of Player is "Elk Tribe Cow":
+
+This is the Elk Tribe Cow Infection rule:
+	if Player has a body of "Elk Tribe Cow":
+		trigger ending "Elk Tribe Cow Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     ...";
 		else:
 			say "     ...";
-	else if BodyName of Player is "Elk Tribe Herm":
+
+This is the Elk Tribe Herm Infection rule:
+	if Player has a body of "Elk Tribe Herm":
+		trigger ending "Elk Tribe Herm Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     ...";
 		else:
 			say "     ...";
-	else if BodyName of Player is "Elk Tribe Trans Bull":
+
+This is the Elk Tribe Trans Bull Infection rule:
+	if Player has a body of "Elk Tribe Trans Bull":
+		trigger ending "Elk Tribe Trans Bull Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     ...";
 		else:
 			say "     ...";
-	else if BodyName of Player is "Elk Tribe Trans Cow":
+
+This is the Elk Tribe Trans Cow Infection rule:
+	if Player has a body of "Elk Tribe Trans Cow":
+		trigger ending "Elk Tribe Trans Cow Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     ...";
 		else:

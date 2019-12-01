@@ -229,11 +229,17 @@ to say cowboy milk use:
 
 cowboy milk is infectious. The strain of cowboy milk is "Gypsy Horse Transman".
 
-Section 3 - Endings
 
 [
-when play ends:
-	if BodyName of Player is "Gypsy Horse Transman":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Gypsy Horse Transman Infection"	"Infection"	""	Gypsy Horse Transman Infection rule	1000	false
+
+This is the Gypsy Horse Transman Infection rule:
+	if Player has a body of "Gypsy Horse Transman":
+		trigger ending "Gypsy Horse Transman Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if level of Player > 10:
 				say "     A";
