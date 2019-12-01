@@ -295,8 +295,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Hermaid":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Hermaid Infection"	"Infection"	""	Hermaid Infection rule	1000	false
+
+This is the Hermaid Infection rule:
+	if Player has a body of "Hermaid":
+		trigger ending "Hermaid Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     Unable and unwilling to resist the call you hear, you soon find yourself on the shores of the Warehouse District, where you first met your Hermaid companions. The sounds and scents of the water is music to your ears; the lapping waves, the caws of the sea birds, the smell of salt water that permeates the air. The call of the sea is even stronger here, and you know that it is time to answer that call. Wading into the water, your legs finally merge into one long tail as you begin swimming out to sea, never again to step foot on land. Your new sisters come to meet you, taking you deep into the depths of the sea, to your new life.";
 		else:

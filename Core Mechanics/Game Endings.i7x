@@ -138,7 +138,7 @@ carry out vetcheat:
 
 understand "nanowrimo" as supersponsor.
 
-When play ends:
+when play ends:
 	clear the screen;
 	say "[bold type]Game Over![roman type][line break]";
 	ratetheplayer;

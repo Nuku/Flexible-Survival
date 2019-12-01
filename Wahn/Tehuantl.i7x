@@ -675,9 +675,17 @@ instead of going up from Grey Abbey Library while (LastTehuantlKorvinScene - tur
 to say TehuantlSex_FuckKorvin:
 	say "     As you come up to your jaguarman pet Tehuantl, he immediately rises and comes to attention, proudly standing in front of you in all of his naked glory. Something in your demeanor or expression must have betrayed your lusty intent, as he smiles eagerly and lets out a pleased rumble from the depth of his throat, then says, 'How may I serve my tlacahua?'";
 
-[Section 7 - Endings
-when play ends:
-	if BodyName of Player is "Jaguar Male":
+
+[
+Section 7 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Jaguar Male Infection"	"Infection"	""	Jaguar Male Infection rule	1000	false
+
+This is the Jaguar Male Infection rule:
+	if Player has a body of "Jaguar Male":
+		trigger ending "Jaguar Male Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You succumb to your Jaguar infection.";
 		else:
@@ -687,7 +695,8 @@ when play ends:
 			else if "Sterile" is not listed in feats of Player:	[F-BREEDABLE]
 				say "     Additional text for a female survivor who can become preggers.";
 			else:									[F-STERILE]
-				say "     Additional text for a female survivor who cannot become preggers.";]
+				say "     Additional text for a female survivor who cannot become preggers.";
+]
 
 [
 TehuantlCheating is an action applying to one topic.

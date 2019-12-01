@@ -1720,8 +1720,13 @@ Instead of sniffing viking sword:
 [
 Section 7 - Endings
 
-when play ends:
-	if BodyName of Player is "Viking Woman":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Viking Woman Infection"	"Infection"	""	Viking Woman Infection rule	1000	false
+
+This is the Viking Woman Infection rule:
+	if Player has a body of "Viking Woman":
+		trigger ending "Viking Woman Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10: [succumbed]
 			say "     A";
 		else: [sane]

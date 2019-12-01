@@ -454,8 +454,13 @@ to HistoryLectureVisit:
 
 Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "Spartan Warrior":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Spartan Warrior Infection"	"Infection"	""	Spartan Warrior Infection rule	1000	false
+
+This is the Spartan Warrior Infection rule:
+	if Player has a body of "Spartan Warrior":
+		trigger ending "Spartan Warrior Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10: [succumbed]
 			if Player is female:[female + herm]
 				if Player is submissive:

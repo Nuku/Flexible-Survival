@@ -665,8 +665,13 @@ to say AeliasSex6: [player ties Aelias up and jerks him off]
 
 Section 5 - Endings
 
-when play ends:
-	if BodyName of Player is "Spidertaur Male":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Spidertaur Male Infection"	"Infection"	""	Spidertaur Male Infection rule	1000	false
+
+This is the Spidertaur Male Infection rule:
+	if Player has a body of "Spidertaur Male":
+		trigger ending "Spidertaur Male Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is male:
 				say "Your predatory instincts take over and you make your lair in one of the many empty buildings in the city. Capturing creatures out on the streets, you drag them into your web, proudly hanging them up in cocoons of sticky silk strands. Keeping some females and choice males to impregnate and have some fun with, the rest just serve as stored food for when you get hungry.";

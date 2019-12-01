@@ -392,6 +392,7 @@ When Play begins:
 ]
 
 
+Section 3 - Tentecle Tip Item
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -415,8 +416,15 @@ to TEInfect:
 	infect "Thought Eater";
 	now non-infectious entry is true;
 
-when play ends:
-	if BodyName of Player is "Thought Eater":
+Section 4 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Thought Eater Infection"	"Infection"	""	Thought Eater Infection rule	1000	false
+
+This is the Thought Eater Infection rule:
+	if Player has a body of "Thought Eater":
+		trigger ending "Thought Eater Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10: [succumbed]
 			say "     Your worldview shifting further and further from anything close to human, you eventually succumb to your urges to own and control others. Your first victim is a husky you meet out on the street, easily overpowering her mind and making her yours. From then on, it's pretty easy to gather more slaves, using her as a puppet to parade in front of others and draw them closer.";
 			say "     As your power and number of followers grows more and more, you prepare for the impending arrival of the military by moving your lair to a mostly empty industrial area, keeping your slaves out of sight in a large warehouse. When one, then a day later another, army scout finally comes along, you manage to dominate them quickly enough so neither of them can give word of anything, then send them on their way. With the men reporting the area to be empty, the military's sweep just passes over you and your slaves, leaving you undiscovered.";

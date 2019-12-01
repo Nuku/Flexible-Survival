@@ -918,8 +918,13 @@ to say TestCreature6 fur use:
 
 Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "TestCreature6 Male":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"TestCreature6 Male Infection"	"Infection"	""	TestCreature6 Male Infection rule	1000	false
+
+This is the TestCreature6 Male Infection rule:
+	if Player has a body of "TestCreature6 Male":
+		trigger ending "TestCreature6 Male Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     Giving yourself over to the TestCreature6 infection taking over your body and mind you wander aimlessly about the city until you find yourself stumbling over a slightly familiar looking white and black spotted four legged canine. When the other gets a hold of your scent the TestCreature6 immediately senses something wrong as it turns to look you over. Slowly padding its way over to try and administer comfort onto you, you find yourself whimpering back at the other as the need to rut as well as play overtakes your sensibilities. At the touch of the TestCreature6's cold nose touches your legs you kneel down next to the other Dal and then nuzzle the other four legged canine in turn before whining at it in confusion. Quickly as can be the feral creature barks into your face and then grabs you by your arm with its sharpened teeth to drag you off somewhere.";
 			say "     Not having a reason to fight you simply let the other take you to wherever it's trying to get to. When you ultimately find yourself coming to a red brick edifice, which [italic type]really[roman type] looks familiar to you, you bark happily as you think that you've finally found the place where you belong. This fact is made even more certain when your new friend releases your arm and then goes over to bark and scratch at the front door to the building. Upon getting a response from someone from the inside you find yourself panting in joy as your bright eyes look over the form of a tall white and black spotted canine, this one standing on two legs instead of all fours, whom your confused canine mind screams at you that you should know intimately. Hurriedly you go over to tackle the other and then proceed to show them in rampant licks across the face.";

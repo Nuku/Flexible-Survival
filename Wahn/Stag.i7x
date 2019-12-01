@@ -2079,26 +2079,26 @@ Section 7 - Ares
 
 Section 8 - Endings
 
-when play ends:
-	if BodyName of Player is "Blacktail Stag":
-		if humanity of Player < 10:
-			if HP of Mike > 0 and HP of Mike < 99: [player met and talked with Mike]
-				say "As you succumb to the infection, you drift aimlessly through the city for a while until you run into Mike by chance. A bit sad to see someone he knew reduced to such a state, he takes you along and cares for you, putting you in a spacious kennel with his human dogs[if Player is male]. Randy creature that you are, you impregnate several of the females, becoming the progenitor of a very successful breed of pet humans in the changed world[end if][if Player is female]. The male transformed dogs find you irresistible and are constantly eager to mount you, which results in more than one litter of human puppies[end if].";
-			else: [only had unfriendly contact with Mike]
-				say "As you succumb to the infection, you drift aimlessly through the city for a while, having sex with anyone you come across. After a while, there's a whole herd of willing does and a few stags following you. You lead them to the park to live among the trees, unconcerned about what's going on outside of it.";
-		else:
-			say "When the rescue comes, you're carted into a holding facility and poked and prodded for a little while before they give you some shots to make you non-infective and release you into the outside world. As busy as they are with the more hostile infected resisting their efforts, there's not much time spent on you.";
-			say "As you adjust to living among regular people again, your sleek lines attract many. Even though you end up getting a job as forest ranger and spend a lot of time in the wilderness, several amorous encounters with hikers lead to more and more people visiting the area. Soon there's a small party every weekend, with everyone dancing around a bonfire and getting laid by you before they pair up with one another.";
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Xerxes['] Epilogue"	"NPC"	""	Xerxes' Epilogue rule	900	false
+"Helen's Epilogue"	"NPC"	""	Helen's Epilogue rule	900	false
+"Mike's Epilogue"	"NPC"	""	Mike's Epilogue rule	900	false
+"Blacktail Stag Infection"	"Infection"	""	Blacktail Stag Infection rule	1000	false
+
+This is the Xerxes' Epilogue rule:
 	if Xerxes is in the Grey Abbey Library:
-		LineBreak;
+		trigger ending "Xerxes['] Epilogue"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "After succumbing to your infection, you forget all about Xerxes, who faithfully waits for you to come back until he's half-starved. As his hunger finally overwhelms his sense of duty, he moves out into the city and is caught by a pack of female huskies. With them, he's pretty well taken care of from then on, as he gets fed pretty well and is allowed to mount them all the time to satisfy their urges.";
 		else:
 			say "Since the soldiers most likely wouldn't believe you if you told them that Xerxes is actually a dog - and your dog - you get a bit creative when they come for you. Soon they're convinced he's a regular survivor who had a mental break and whom you took care of. You whisper to him to stay calm and that you'll come get him before he gets carted away to a psych ward. When you're released yourself soon after, you stay close to the holding facility until you manage to acquire a key by getting one of the orderlies dead drunk one night. Sneaking into the facility under cover of darkness, you find and free Xerxes, then make your escape. From then on, your faithful dog never leaves your side for long, always ready to guard your home[if lust of Xerxes > 0] and share your bed[end if].";
 			if lust of Xerxes > 3:
 				say "The human dog continues to grow gradually smarter and more at ease with his human body. He certainly maintains his canine mindset and prefers to live as such, though he can pass for human when needed. And while you are able to teach him how other people act, he has little interest in doing so when unnecessary. Having no sense of modesty or sexual hangups, he only becomes a better and better sexual partner who's open to anything and anyone as long as you, as his master, will allow it.";
+
+This is the Helen's Epilogue rule:
 	if Helen is in the Grey Abbey Library:
-		LineBreak;
+		trigger ending "Helen's Epilogue"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "After succumbing to your infection, you forget all about Helen, who faithfully waits for you to come back until she's half-starved. As her hunger finally overwhelms her sense of duty, she moves out into the city and is caught by an alpha husky who incorporates her into his pack. With them, she's pretty well taken care of from then on, as she gets fed pretty well and is often mounted by the pack leader. Over time, she bears several human-shaped puppies for him.";
 			if HelenPregnant > 0:
@@ -2131,13 +2131,27 @@ when play ends:
 					say "Several months later, she gives birth to the offspring of Ares, a beautiful human boy. He develops quickly over the following weeks and months, and you're relieved when he turns out to be a relatively bright kid - able to understand his mother's canine growls as well as human language. It's quite a bit of work to keep up with him, especially when he enters puberty and the well-developed sex drive as well as cunning of his father comes through. By the time you realize what's happening and have a stern talk with him about holding back a bit and using condoms, he managed to impregnate half the (mostly married) woman he was lawn-mowing for, a teacher and several cheerleaders - all the while double-teaming the girls by having sex with their boyfriends too. His growth spurts eventually slow to human levels and by the time he's a year old, the by then teenage looking kid gets into college...";
 				else if Libido of Helen is 6: [by Carl]
 					say "Several months later, she gives birth to the offspring of Carl, a beautiful human boy. He develops quickly over the following weeks and months, and you're relieved when he turns out to be a relatively bright kid - able to understand his mother's canine growls as well as human language. It's quite a bit of work to keep up with him, as he's a very active and energetic boy, eager to make friends with just about anyone. Being the captain of the school's football team and quite popular opens a lot of possibilities for him when he soon enters puberty and his well-developed sex drive kicks in. Thankfully his first experiments are with a male teammate and when you find them in bed together the morning after, you have a little talk about being safe and using condoms. Following your instructions about that, the young man manages to avoid getting anyone pregnant, even as he builds up quite a big pack of male and female friends to have sex with him and each other. His growth spurts eventually slow to human levels and by the time he's a year old, the by then teenage looking kid gets into college...";
+
+This is the Mike's Epilogue rule:
 	if HP of Mike is 100:
-		LineBreak;
+		trigger ending "Mike's Epilogue"; [Here it states, that the ending has been played.]
 		say "You don't see Mike or Lea ever again, as they were taken to the leopardmen's lair to serve as the feline's play-toys. With them face-fucking Mike all the time, forcing him to swallow their cum, it doesn't take very long until he becomes a leopardess in heat. He and Lea are the center of many a gang-bang, during which Mike is knocked up several times with litters of leopard kits. After his and Lea's daughter is born and grows to sexual maturity, she joins the lineup of submissive breeding holes for the gang.";
 	else if HP of Mike > 4 and HP of Mike < 98 and humanity of Player > 10:
-		LineBreak;
+		trigger ending "Mike's Epilogue"; [Here it states, that the ending has been played.]
 		say "As the military moves into the city Mike tries to explain his special situation, but the soldiers just ignore him and try to 'free those poor people' - earning the men several painful bites from the dogs. That leads to all of Mike's party being locked up together in a warehouse-turned-holding-facility at the outskirts of the city. It takes almost three weeks before finally a doctor comes along to check them out. With him actually listening to what Mike says and having a look at the tattoos and identification chips the 'brainwashed humans' still have from their dog days, all of them are transferred to the regular medical facility. After Mike gets a shot to make him non-infectious, he's set free with all his dogs.";
 		say "Months later his child with Lea is born, turning out to be a beautiful little girl who grows up to be a teenager within one year before her aging stabilizes to human levels. Having inherited her father's intelligence as well as the ability to understand and talk to dogs from Lea, she grows up with a unique perspective...";
 		say "Mike goes on to running a lucrative business, breeding his human dogs with each other and training their human-dog offspring. With a pure-bred 'homo canis' going for about the price of a good racehorse, mostly to wealthier changed people, he buys a large ranch out in the countryside. You having a standing invitation from Mike to come over whenever you want, quite a few of your weekends are spent enjoying trips into the natural setting and... other entertainments.";
+
+This is the Blacktail Stag Infection rule:
+	if Player has a body of "Blacktail Stag":
+		trigger ending "Blacktail Stag Infection"; [Here it states, that the ending has been played.]
+		if humanity of Player < 10:
+			if HP of Mike > 0 and HP of Mike < 99: [player met and talked with Mike]
+				say "As you succumb to the infection, you drift aimlessly through the city for a while until you run into Mike by chance. A bit sad to see someone he knew reduced to such a state, he takes you along and cares for you, putting you in a spacious kennel with his human dogs[if Player is male]. Randy creature that you are, you impregnate several of the females, becoming the progenitor of a very successful breed of pet humans in the changed world[end if][if Player is female]. The male transformed dogs find you irresistible and are constantly eager to mount you, which results in more than one litter of human puppies[end if].";
+			else: [only had unfriendly contact with Mike]
+				say "As you succumb to the infection, you drift aimlessly through the city for a while, having sex with anyone you come across. After a while, there's a whole herd of willing does and a few stags following you. You lead them to the park to live among the trees, unconcerned about what's going on outside of it.";
+		else:
+			say "When the rescue comes, you're carted into a holding facility and poked and prodded for a little while before they give you some shots to make you non-infective and release you into the outside world. As busy as they are with the more hostile infected resisting their efforts, there's not much time spent on you.";
+			say "As you adjust to living among regular people again, your sleek lines attract many. Even though you end up getting a job as forest ranger and spend a lot of time in the wilderness, several amorous encounters with hikers lead to more and more people visiting the area. Soon there's a small party every weekend, with everyone dancing around a bonfire and getting laid by you before they pair up with one another.";
 
 Stag ends here.
