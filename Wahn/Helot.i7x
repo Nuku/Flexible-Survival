@@ -381,8 +381,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Helot Manservant":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Helot Manservant Infection"	"Infection"	""	Helot Manservant Infection rule	1000	false
+
+This is the Helot Manservant Infection rule:
+	if Player has a body of "Helot Manservant":
+		trigger ending "Helot Manservant Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10: [succumbed]
 			if Player is submissive:
 				if FuckedBySpartan is 1: [had sex with a Spartan - wants to go back]

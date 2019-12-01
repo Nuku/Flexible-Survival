@@ -471,8 +471,13 @@ Instead of resolving a Twisted fruit grove:
 	else: [the rare item quest is not active and neither is the captured felinoid available]
 		say "     Traveling through the twists and turns of the park, you notice that the scenery is starting to change and becoming more and more twisted and vine-covered with every step. Eventually you reach a thin curtain of vines blocking entry to an overgrown glade, you can see a number of those strange twisted plants moving around through the vines, seeming to congregate around some kind of warped tree. You can smell a soft tempting odor coming from within the glade, and almost find yourself stepping through the vines to investigate closer. Backing off you shake your head to try to clear it, and quickly turn and run down the path back the way you came, somehow sure that the entire situation is some kind of trap.";
 
-When play ends:
-	if Vinetrapped is 1:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Twisted Fruit Grove Aftermath"	"BadEnd"	""	Twisted Fruit Grove Aftermath rule	20	false
+
+This is the Twisted Fruit Grove Aftermath rule:
+	if Vinetrapped is 1: [ Maybe combine this with an `end the story saying "...";`? (@Stadler#3007)]
+		trigger ending "Twisted Fruit Grove Aftermath";
 		say "     You eventually awaken again somewhat as something nudges you - everything seems to be somewhat diffuse and foggy as you try to figure out where you are, or even what you are. Then again, something nudges against you softly, and you turn your attention down to see what appears to be some kind of strange cat-like creature made up entirely of vines and tendrils, small flowers staring up at you where eyes would normally be. For some reason the vine-creature seems vaguely familiar to you, as you stretch out several of your own vines to pet its head, your tendril-like fingers tangling with the vines of its body and sending a soft surge of pleasure through you both. Looking at yourself you realize you are completely made of vines as well, though in a slightly more humanoid shape.";
 		say "     Something about that realization makes you feel vaguely happier, as your somewhat confused mind takes pleasure in all of this green perfection. The feline nudges you again, and you turn your attention back to what your fellow plant wants. Tangling your vines with the feline's again, you realize that it is time for you both to move to a new area, this one already growing overcrowded with your other growing brethren. With some effort you manage to uproot yourself, feeling unsteady as you spread your roots out to get a better purchase on the top of the ground, glancing at your new companion you realize they might have a better idea of how to do things, as with more vine-stalks on the ground it would be much easier to balance. Quickly shifting yourself downwards, you signal your readiness to your new companion, and together the two of you head out of the grove to find yourself a new location to anchor yourself so you can continue to grow.";
 		WaitLineBreak;
@@ -482,7 +487,7 @@ When play ends:
 		say "     Working together you easily manage to subdue the intruding creature and start to milk the trapped thing for its nutrients, before eventually taking pity on the poor thing and wrapping it in your vines so it can be protected while it becomes a much better plant. You vaguely recall the animal was something called a human, which almost means something to your foggy mind, but is probably unimportant. Eventually more of the animals show up, in ones and twos as if looking for something, and your glade grows quickly as you and your companion take turns showing them the pleasures of being anchored to the soil as well. Before long your first converts are eagerly helping you convert others as well, and as you bask in the sun and rub your vines through those of your once feline companion, you realize you truly have found a wonderful place for your new glade...";
 		if hellHoundLevel > 0:
 			say "     With your mind almost completely erased by your transformation into a plant, you forget about your pact with the hellhound. But he does not forget. Having given into your life as a corrupting plant creature infecting others, your dark contract has only been delayed to prepare you for a new role in the afterlife. When that times comes at the end of your long life as a plant, you are pulled into the pits of Hades and given a life of as a foul tree there. Having spent centuries growing and corrupting others in life, your body is now twisted and turned to new, dark aims on your unending task to satisfy the lustful urges of the demonic hounds. They mark your large trunk with their foul, burning urine, letting its corruption seep into you. Your vaginal flowers are fucked by the hound's cocks and your tendrils made to pump your tainted fluids into their bitches. Your branches grow dark fruit which break open and release plant-like hounds to add to Hell's numbers.";
-		stop the action;
+		the Player is lost;
 
 
 Section 6- Rare Item case
@@ -606,8 +611,13 @@ to say sexwithrarecounter:
 	else:
 		say "     You don't think Nermine would appreciate you making a mess like that on her nice clean counter. Maybe you should wait until she isn't watching first?";
 
-When play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Mostly Jackalman Infection"	"Infection"	""	Mostly Jackalman Infection rule	1000	false
+
+This is the Mostly Jackalman Infection rule:
 	If JackalManTF is 3:
+		trigger ending "Mostly Jackalman Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     Surrendering fully to the infection, you begin to settle into your new feral life, fighting to adapt to your new body with its pretty wild instincts. Then at some point, you receive a strange sort of dream - in it, Nermine comes and visits you, somehow rendering you unable to move as she crouches down and strokes your soft black fur. 'Oh how sad it is to see such a lovely partner reduced to just a beast,' the jackal-woman says, her words confusing to your lust-addled mind as she strokes your soft sides. 'Still, at least Nermine's former assistant is happy as a horny little beast in the city. Even though it is a very strange-looking beast one must admit,' she says teasingly as she pets your canine head for a while. 'Do not worry little one, Nermine is here to help, she does still owe for all the help after all.'";
 			say "     As she is tracing some kind of pattern on your skin, a strange warm sensation spreads out from where Nermine touches you. Soon you find yourself shuddering in pleasure, your body filled with nearly orgasmic bliss as something sweeps through you, and before you know it you wake up as your body is wracked with a mighty orgasm. Blinking muzzily, you notice that something has changed, and as you look over yourself, you realize that your body is no longer the mixed form you have grown used to, but a handsome, bestial, fully changed body. You grin as you look around, half expecting to see the jackal-woman from your dream. Disappointingly, there is no one there, but you think you can catch a teasing hint of some lingering perfume. Dismissing the strange encounter from your bestial mind, you quickly get back to your new life as a happier full member of your new species.";
@@ -645,7 +655,8 @@ To say jackalankhmagic:
 	if JackalManTF is 0:
 		say "     You smile as you rub the small golden ankh between your hands, the warm metal feeling nice and almost soft as you rub at it. Suddenly the small ankh almost seems to melt into your hands, leaving a soft tingling dusting of gold where the small trinket was before. As you stare at your palms, you feel a strange shifting sensation in your body, seeming to center on your rear. Glancing over your shoulder, you are surprised to see your ass starting to stretch and change, your rear flattening out as a long predatory black jackal-like tail forms behind you. In a strangely pleasant stretching sensation, your new tail grows until its tip is hanging just below your knees. You stare down at the appendage and can't help but try it out - moving the tail from side to side a little a few times, with it reacting with surprising dexterity. Next, you take a few steps and are pleased to note that it helps your balance greatly. Thinking to yourself, the though of how hot and sexy the jackal tail looks comes unbidden to your mind...";
 		now TailName of Player is "Jackalman";
-		now tail of Player is "You have a long sleek jackal's tail attached to your rear, it seems to sway happily over your thickly muscled ass in a predatory manner as you move.";
+		now TailSpeciesName of Player is "Jackal";
+		now Tail of Player is "You have a long sleek jackal's tail attached to your rear, it seems to sway happily over your thickly muscled ass in a predatory manner as you move.";
 		say "[bold type]You lose a strange ankh![roman type][line break]";
 		now carried of strange ankh is 0;
 		StatChange "Dexterity" by 4;
@@ -655,8 +666,9 @@ To say jackalankhmagic:
 	if JackalManTF is 1:
 		say "     Eagerly gripping the next small ankh, you rub your prize softly between your hands again, your fingers tracing over the jackalman's form set into the base. Once more the gold seems to grow warm and melt into your body, the golden color staining your hands slightly, before a darker black color begins to spread out from where the ankh was, your hands quickly becoming covered in a smooth, shiny and black fur. As the blackness spreads down your arms and starts to cover your body completely, you realize that you will be looking just like Nermine soon, garbed in such a beautiful black coat. The thought of having a powerful dark jackal's fur makes you grin. As you shift, the idea of looking more and more like a powerful jackal to match the nice and sexy shopkeeper of that strange shop begins to make you feel almost predatory, and more than a little horny as well.";
 		say "     Feeling over your new thick black jackal pelt, you are somehow sure your nice new fur will appeal to more than just the shopkeeper as well, and quite possibly provide a handsome defense from attackers.[line break]";
-		now Skin of Player is "[one of]dark black[or]sleek black furred[or]jackal-furred[at random]";
 		now SkinName of Player is "Jackalman";
+		now SkinSpeciesName of Player is "Jackal";
+		now Skin of Player is "[one of]dark black[or]sleek black furred[or]jackal-furred[at random]";
 		say "[bold type]You lose a strange ankh![roman type][line break]";
 		now carried of strange ankh is 0;
 		StatChange "Charisma" by 3;
@@ -668,6 +680,7 @@ To say jackalankhmagic:
 		say "     Taking out the latest of the shiny gold ankhs, you rub your black-furred hands over its shiny surface eagerly, grinning as it seems to warm up underneath your hands, before melting away into your body again. You can feel your grin spreading as you look at the soft dusting of gold in your hands, as your face begins to tingle strongly. Reaching up to scratch the itch, you feel the shift under your fingers as your face begins to push forward into a dark canine muzzle. Your hands explore the new shape of your head even while the muscles and bones are still in flux, taking on the shape of powerful jaws. You can feel your sight sharpening, as your eyes shift and change as well, altering to give you a proper predatory stare as they finish becoming the sharp knowing eyes of a jackal.";
 		say "     Touching the sides of your new jackal-like face, you feel the bones begin to settle into their new configuration, your canine grin now full of sharp pointed teeth and your nose sorting through a variety of new scents even as your ears shift to the top of your changed head. The sights and sounds of the world around you gain an entirely new clarity. Finding a reflective surface after a little bit of searching, you can't help but admire your new strong and dignified jackal looks, and your grin intensifies as you think about the effect your new face will have on the unsuspecting little jackal bitch in the shop. If this is just your reward for your help so far, you can't but wonder eagerly just how much better it will when you can complete the change and fully become a strong and powerful jackalman.";
 		now FaceName of Player is "Jackalman";
+		now FaceSpeciesName of Player is "Jackal";
 		now Face of Player is "narrow canine face, with a long sleek muzzle and a nicely flattened forehead, your face is painted with a soft shimmering pattern of golden dust, accentuating your deep golden eyes. Your appearance seems both predatory and strangely sexy at the same time.";
 		now RareQuesting is 11;
 		now statuequest is 1;
@@ -684,9 +697,11 @@ To say jackalankhmagic:
 		say "     The changes finally finish and you look down at yourself as the warm pleasant sensation fades, a grin stretching over your muzzle as you realize that your body seems to have become both lean and powerful now, your whipcord-like muscles rippling over your new anthro body with every movement. You stretch yourself out, shaking the kinks out of your new muscles, enjoying the feel of a powerful predatory body built for speed and strength both in and out of combat. Thin tracings of gold patterns adorn the fur of your body now as well as your face, accentuating your well-toned look. Stretching again, you enjoy how natural and proper your new form feels on you.";
 		say "     The thought of Nermine crosses your mind as you admire yourself, and you can hardly wait to see just what the lovely jackal shopkeeper thinks about your new form as well. A grin crosses your muzzle as you wonder if what the jackal man said about your 'irresistible' new attraction is true, and you find yourself growing aroused at the very thought of the proper little jackal-woman panting and begging you for more. You decide you will have to investigate that possibility at some point soon, as you stretch out your new more canine legs, before heading out into the city again with confidence.";
 		now BodyName of Player is "Jackalman";
+		now BodySpeciesName of Player is "Jackal";
 		now Body of Player is "strong and powerful, nicely muscled with bestial digitigrade legs and jackal-like feet, your hands ending in sharp jackal-like claws. Your tough body displays your feral power for all to see, and is a perfect type of body for such a powerful jackal man like yourself...";
 		attributeinfect "Jackalman";
 		now CockName of Player is "Jackalman";
+		now CockSpeciesName of Player is "Jackal";
 		now Cock of Player is "[one of]canine[or]jackalman[or]jackal-like[or]knotted[at random]";
 		say "[bold type]You lose a strange ankh![roman type][line break]";
 		now carried of strange ankh is 0;
@@ -705,25 +720,30 @@ An everyturn rule:
 			if TailName of Player is not "Jackalman":
 				say "Your ass tingles as it shifts and changes while you watch, a pleasant sensation stealing over you as the power of the ankh you used returns your body to a proper form, your jackal-like tail reforming behind you. Its sleek dark presence behind you proving that its power is stronger then your more recent infection.";
 				now TailName of Player is "Jackalman";
-				now tail of Player is "You have a long sleek jackal's tail attached to your rear, it seems to sway happily over your thickly muscled ass in a predatory manner as you move.";
+				now TailSpeciesName of Player is "Jackal";
+				now Tail of Player is "You have a long sleek jackal's tail attached to your rear, it seems to sway happily over your thickly muscled ass in a predatory manner as you move.";
 		if JackalManTF >= 2:
 			if SkinName of Player is not "Jackalman":
 				say "Your skin seems to writhe and twitch, as if something were fighting underneath the surface, soon you can see patches of silky soft black jackal fur once more pushing their way out of your body. The fur continues to spread in a pleasurable wave as the other infection is conquered, until finally your entire body is covered in its dark softness once again.";
 				now SkinName of Player is "Jackalman";
+				now SkinSpeciesName of Player is "Jackal";
 				now Skin of Player is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]";
 		if JackalManTF >= 3:
 			if FaceName of Player is not "Jackalman":
 				say "You feel a strange discontent building in your head, as your face seems to burn and flex, its external form not matching that of your internal jackal, causing you to snap and snarl even as the bones in your face begin to shift and stretch again, and you let out a loud howl of triumphant pleasure as your face reshape itself back into a proper jackals visage, your grin once more stretching your muzzle as your gold dusted black fur settles in once more over your handsome jackals countenance.";
 				now FaceName of Player is "Jackalman";
+				now FaceSpeciesName of Player is "Jackal";
 				now Face of Player is "narrow canine face, with a long sleek muzzle and a nicely flattened forehead, your face is painted with a soft shimmering pattern of golden dust, accentuating your deep golden eyes. Your appearance seeming both predatory, and strangely sexy at the same time";
 		if JackalManTF >= 4:
 			if BodyName of Player is not "Jackalman":
 				say "Your body seems to twist and warp, your muscles heating up again as your body fights the outside infection. Soon enough you can feel your form twisting and warping back into the proper and powerful shape of a predatory jackal.";
 				now BodyName of Player is "Jackalman";
+				now BodySpeciesName of Player is "Jackal";
 				now Body of Player is "strong and powerful, nicely muscled with bestial digitigrade legs and jackal-like feet, your hands ending in sharp jackal-like claws. Your tough body displays your feral power for all to see, and is a perfect type of body for such a powerful jackal man like yourself";
 				attributeinfect "Jackalman";
 			if CockName of Player is not "Jackalman":
 				now CockName of Player is "Jackalman";
+				now CockSpeciesName of Player is "Jackal";
 				now Cock of Player is "[one of]canine[or]jackalman[or]jackal-like[or]knotted[at random]";
 
 Nermine Quests ends here.

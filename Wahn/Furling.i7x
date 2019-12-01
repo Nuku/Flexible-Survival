@@ -302,8 +302,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Furling":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Furling Infection"	"Infection"	""	Furling Infection rule	1000	false
+
+This is the Furling Infection rule:
+	if Player has a body of "Furling":
+		trigger ending "Furling Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is female:
 				if "Sterile" is not listed in feats of Player:

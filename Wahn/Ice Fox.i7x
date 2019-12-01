@@ -789,6 +789,7 @@ Section 7 - Endings
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
 "Tigertaur Sex Toy"	"BadEnd"	"Sex Slave"	Tigertaur Sex Toy rule	20	false
+["Miyuki's Epilogue"	"NPC"	""	Miyuki's Epilogue rule	900	false]
 
 This is the Tigertaur Sex Toy rule:
 	if ending "Tigertaur Sex Toy" is triggered:
@@ -796,8 +797,9 @@ This is the Tigertaur Sex Toy rule:
 		the Player is enslaved;
 
 [
-when play ends:
+This is the Miyuki's Epilogue rule:
 	if (MiyukiRelationship > 0 and MiyukiRelationship < 100): [player met her and had friendly relations]
+		trigger ending "Miyuki's Epilogue"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10: [player went feral]
 			say "     ...";
 		else:

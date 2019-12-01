@@ -235,11 +235,15 @@ When Play begins:
 ]
 
 
-
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Hulking Cheerleader":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Hulking Cheerleader Infection"	"Infection"	""	Hulking Cheerleader Infection rule	1000	false
+
+This is the Hulking Cheerleader Infection rule:
+	if Player has a body of "Hulking Cheerleader":
+		trigger ending "Hulking Cheerleader Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     As you succumb to the infection, you feel all concerns other than the pussy hunt game fade from your mind. You make your way to the campus and carve off a very respectable section of it for your own, beating all challengers intruding into your territory. With your fertile seed soon taking hold in all the females in your turf, and quite a few in your neighbor's too, you rapidly rise in the rankings. A group of female soldiers straying into the wrong area of the city finally gives you the last push to get all the way to the top, cementing your position as champion as you breed them one by one.";
 		else:

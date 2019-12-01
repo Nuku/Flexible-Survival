@@ -289,10 +289,16 @@ to say mammoth jerky use:
 	PlayerEat 20;
 	infect "Homo Sapiens";
 
+
 Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "Homo Sapiens":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Homo Sapiens Infection"	"Infection"	""	Homo Sapiens Infection rule	1000	false
+
+This is the Homo Sapiens Infection rule:
+	if Player has a body of "Homo Sapiens":
+		trigger ending "Homo Sapiens Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     As you succumb fully to the nanites and the way you think is re-adjusted to what their jumbled programming deems right, you fall back into a more primitive mindset, befitting the early human tribes. Survival comes first - yours, then the tribe's - and if there is a need, you fight and take what is necessary to survive. Albeit a rather cut-throat outlook, it works - and you do survive the following days and weeks as part of the primitive tribe carving out a part of the museum as their territory. Things are... simpler, since your mind has no room for any second thoughts about something like cooking gryphon eggs or wearing the tanned fur of a jaguarman.";
 			say "     When the military finally comes to evacuate your group of seemingly 'normal human survivors', there is a brutal clash as you wipe the floor with the soldiers, taking the women as spoils and initiating the bravest of them into the tribe, all of them quickly transformed to fit in. The rest is left naked at the entrance of the museum, to live or die as they will. When you turn to walk back down the corridor to tribal land, your thoughts are on enjoying yourself with the new members. You barely register the shouts and gasps from behind you as the other museum inhabitants and creatures coming by on the street pick off the defenseless naked men.";

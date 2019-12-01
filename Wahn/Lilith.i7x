@@ -789,11 +789,17 @@ to say LilithSex9: [sandwich fuck with Brutus]
 			now LilithPregnancy is 1; [invisibly pregnant]
 	wait for any key;
 
-Section 3 - Endings
 
 [
-when play ends:
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Lilith's Epilogue"	"NPC"	""	Lilith's Epilogue rule	900	false
+
+This is the Lilith's Epilogue rule:
 	if (HP of Lilith > 0: [player met her and is sane]
+		trigger ending "Lilith's Epilogue"; [Here it states, that the ending has been played.]
 		say "     A";
 ]
 Lilith ends here.

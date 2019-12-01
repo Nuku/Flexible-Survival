@@ -299,8 +299,15 @@ When Play begins:
 ]
 
 
-when play ends:
-	if BodyName of Player is "Naiad":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Naiad Infection"	"Infection"	""	Naiad Infection rule	1000	false
+
+This is the Naiad Infection rule:
+	if Player has a body of "Naiad":
+		trigger ending "Naiad Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "Before long, your instincts take over, driving you to seek out a body of water to claim for your own. As you find a suitable lake in a park and do so, its contents supernaturally become fresh and clean again, a rarity in this stricken city. This causes all kinds of people to search out your lake, the infected as well as the rare human survivors. You allow most to drink, punishing those who try to pollute your water and inviting selected guests to swim and couple with you.";
 			say "When the military finally moves in, some soldiers think you a surviving human and try to 'rescue' you - which doesn't go so well for them. They end up wet as drowned rats and washed all the way to the park entrance - except for a cute one you decide to keep for a while and play with. In the end, you're marked down as 'too much trouble to bring in' and left in peace. So there you stay, in your pristine enchanted lake in the middle of the chaotic infected city.";
