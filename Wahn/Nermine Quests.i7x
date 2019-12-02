@@ -374,7 +374,6 @@ Instead of resolving a Twisted fruit grove:
 					now FelinoidRescued is 2;
 					now RareQuesting is 2;
 					now Twisted fruit grove is resolved;
-					stop the action;
 				else if fightoutcome > 19 and fightoutcome < 30: [lost]
 					say "     You moan as the vines wrap around you as tightly as they have the newly trapped felinoid, his fight having been lost sometime during your own harsh battle. The vine's cock-like flowers invade your every orifice as they begin to cocoon your helpless body with their green leafy tendrils, anchoring you in place, unable to even lift a finger to escape. You can feel the scent of the area invading your mind as your body continues to become more and more plant-like, your mind starting to fade as you realize that before much longer you will be more plant than animal, rooted here in the glade like several of the other strange plants.";
 					say "     Struggling in your viney bonds, there is no one left to save you this time. Your struggles slowly fade, as your mind fills with the strangely relaxing scent of the glade, and your body gives in to the wonderful pleasure of the vines massaging it. Soon you can't even remember why you would want to struggle, or even why you would want to do anything other than relax here in your nice safe cocoon, your mind slowly fading completely as your new roots sink into the soil and vines growing from yourself beginning to entwine with those around you.";
@@ -383,7 +382,7 @@ Instead of resolving a Twisted fruit grove:
 					now Body of Player is "Parasitic Plant";
 					now BodyName of Player is "Parasitic Plant";
 					attributeinfect "Parasitic Plant";
-					follow the turnpass rule;
+					end the story saying "You became one with the twisted fruit grove.";
 				else if fightoutcome is 30: [fled]
 					say "     Abandoning the fight, you tear loose from the vines that already have begun to wind their way around your body and simply run. As you scramble away in a wild sprint, you look over your shoulder and see the cocoon holding the felinoid, still weakly struggling in its bounds. There is not a speck of fur visible of the large feline, but you know that he is in there from the trapped yowls and mews he is giving. You feel vaguely guilty as you tear through the curtain of hanging vines without stopping, leaving the cat to struggle against his viney prison on his own.";
 					WaitLineBreak;
@@ -392,7 +391,7 @@ Instead of resolving a Twisted fruit grove:
 					LineBreak;
 					say "[bold type]Your sanity decreases by 25![roman type][line break]";
 					SanLoss 25;
-					stop the action;
+				stop the action;
 			else:
 				LineBreak;
 				say "     Unable to bring yourself to face another series of fights - for a creature that would probably only try to convert you later anyways - you quickly turn and run down the path you came in by, feeling vaguely guilty as you put the strange glade and the trapped feline behind you. Too late to change your mind now, as the cat would surely have been fully transformed if you ever went back...";
@@ -407,7 +406,7 @@ Instead of resolving a Twisted fruit grove:
 			now Body of Player is "Parasitic Plant";
 			now BodyName of Player is "Parasitic Plant";
 			attributeinfect "Parasitic Plant";
-			follow the turnpass rule;
+			end the story saying "You became one with the twisted fruit grove.";
 		else if fightoutcome is 30: [fled]
 			say "     Abandoning the fight, you tear loose from the vines that already have begun to wind their way around your body and simply run. As you scramble away in a wild sprint, you look over your shoulder and see the cocoon holding the felinoid, still weakly struggling in its bounds. There is not a speck of fur visible of the large feline, but you know that he is in there from the trapped yowls and mews he is giving. You feel vaguely guilty as you tear through the curtain of hanging vines without stopping, leaving the cat to struggle against his viney prison on his own.";
 			WaitLineBreak;
@@ -417,7 +416,7 @@ Instead of resolving a Twisted fruit grove:
 			say "[bold type]Your sanity decreases by 25![roman type][line break]";
 			SanLoss 25;
 			now inasituation is false;
-			stop the action;
+		stop the action;
 	if RareQuesting is 1:
 		say "     Traveling through the twists and turns of the park, you notice the scenery seems to slowly be twisting and changing, becoming even more vine covered and lewd with every step you take. Remembering the quest Nermine sent you on, you take this to be a sign you are headed in the right direction, and hurry quickly down the path eager to get this over with. The landscape seems to grow increasingly disturbing as you travel, until eventually the path ahead is blocked by a thin curtain of vines sporting strange flowers. Looking through the hanging vines you can see what appears to be a quiet glade with a strangely warped tree in the center, a number of strange small vine-covered bushes scattered in the area around it. Looking closely at the tree you can see several large flesh-colored fruits hanging from its branches, and you notice a strong enticing smell hanging in the air, drawing you forward.";
 		say "     Before you know it, you are moving forward as if in a trance, ready to step into the glade - but just before you actually do, a movement from the other side of the warped tree draws your attention and breaks you out of it. The vines forming the boundary back there are being pushed aside as one of the golden-furred felinoids roaming the area slowly stalks into open, his head held high as he sniffs the air, obviously as entranced by the teasing scent as you were. You freeze as you watch the beast slowly cross the glade, your hand poised to draw the vines aside as he approaches the tree. And then the deception is revealed - as all of the plants seem to explode into motion around the startled feline, the vines and tendrils lying across the ground suddenly slithering and reaching out to trap and entwine the feral beast! The felinoid roars as he rips the vines apart even as they try to twist around and cocoon him, trying to push more flowers with their entrancing scent into his face and sink cock-like fruit into any opening they can find.";

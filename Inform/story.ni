@@ -4800,7 +4800,6 @@ This is the turnpass rule:
 	now ishunting is false;
 	now showlocale is true;
 	if the story has ended:
-		follow the everyturn rules;
 		rule succeeds;
 	follow the cock descr rule;
 	if "Sanity Saver" is listed in the feats of Player:
