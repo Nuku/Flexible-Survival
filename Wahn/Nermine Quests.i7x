@@ -382,6 +382,7 @@ Instead of resolving a Twisted fruit grove:
 					now Body of Player is "Parasitic Plant";
 					now BodyName of Player is "Parasitic Plant";
 					attributeinfect "Parasitic Plant";
+					WaitLineBreak;
 					end the story saying "You became one with the twisted fruit grove.";
 				else if fightoutcome is 30: [fled]
 					say "     Abandoning the fight, you tear loose from the vines that already have begun to wind their way around your body and simply run. As you scramble away in a wild sprint, you look over your shoulder and see the cocoon holding the felinoid, still weakly struggling in its bounds. There is not a speck of fur visible of the large feline, but you know that he is in there from the trapped yowls and mews he is giving. You feel vaguely guilty as you tear through the curtain of hanging vines without stopping, leaving the cat to struggle against his viney prison on his own.";
@@ -406,6 +407,7 @@ Instead of resolving a Twisted fruit grove:
 			now Body of Player is "Parasitic Plant";
 			now BodyName of Player is "Parasitic Plant";
 			attributeinfect "Parasitic Plant";
+			WaitLineBreak;
 			end the story saying "You became one with the twisted fruit grove.";
 		else if fightoutcome is 30: [fled]
 			say "     Abandoning the fight, you tear loose from the vines that already have begun to wind their way around your body and simply run. As you scramble away in a wild sprint, you look over your shoulder and see the cocoon holding the felinoid, still weakly struggling in its bounds. There is not a speck of fur visible of the large feline, but you know that he is in there from the trapped yowls and mews he is giving. You feel vaguely guilty as you tear through the curtain of hanging vines without stopping, leaving the cat to struggle against his viney prison on his own.";
