@@ -336,7 +336,6 @@ Twisted fruit grove	"Twisted fruit grove"
 Twisted fruit grove is a situation. The level of twisted fruit grove is 4.
 The Sarea of Twisted fruit grove is "Park".
 FelinoidRescued is a number that varies.
-Vinetrapped is a number that varies.
 when play begins:
 	add Twisted fruit grove to badspots of HermList;
 
@@ -377,11 +376,8 @@ Instead of resolving a Twisted fruit grove:
 				else if fightoutcome > 19 and fightoutcome < 30: [lost]
 					say "     You moan as the vines wrap around you as tightly as they have the newly trapped felinoid, his fight having been lost sometime during your own harsh battle. The vine's cock-like flowers invade your every orifice as they begin to cocoon your helpless body with their green leafy tendrils, anchoring you in place, unable to even lift a finger to escape. You can feel the scent of the area invading your mind as your body continues to become more and more plant-like, your mind starting to fade as you realize that before much longer you will be more plant than animal, rooted here in the glade like several of the other strange plants.";
 					say "     Struggling in your viney bonds, there is no one left to save you this time. Your struggles slowly fade, as your mind fills with the strangely relaxing scent of the glade, and your body gives in to the wonderful pleasure of the vines massaging it. Soon you can't even remember why you would want to struggle, or even why you would want to do anything other than relax here in your nice safe cocoon, your mind slowly fading completely as your new roots sink into the soil and vines growing from yourself beginning to entwine with those around you.";
-					now vinetrapped is 1;
-					decrease humanity of Player by 100;
-					now Body of Player is "Parasitic Plant";
-					now BodyName of Player is "Parasitic Plant";
-					attributeinfect "Parasitic Plant";
+					turn the Player into a "Parasitic Plant" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
+					trigger ending "Twisted Fruit Grove Aftermath";
 					end the story saying "You became one with the twisted fruit grove.";
 				else if fightoutcome is 30: [fled]
 					say "     Abandoning the fight, you tear loose from the vines that already have begun to wind their way around your body and simply run. As you scramble away in a wild sprint, you look over your shoulder and see the cocoon holding the felinoid, still weakly struggling in its bounds. There is not a speck of fur visible of the large feline, but you know that he is in there from the trapped yowls and mews he is giving. You feel vaguely guilty as you tear through the curtain of hanging vines without stopping, leaving the cat to struggle against his viney prison on his own.";
@@ -401,11 +397,8 @@ Instead of resolving a Twisted fruit grove:
 		else if fightoutcome > 19 and fightoutcome < 30: [lost]
 			say "     You moan as the vines wrap around you as tightly as they have the newly trapped felinoid, his fight having been lost sometime during your own harsh battle. The vine's cock-like flowers invade your every orifice as they begin to cocoon your helpless body with their green leafy tendrils, anchoring you in place, unable to even lift a finger to escape. You can feel the scent of the area invading your mind as your body continues to become more and more plant-like, your mind starting to fade as you realize that before much longer you will be more plant than animal, rooted here in the glade like several of the other strange plants.";
 			say "     Struggling in your viney bonds, there is no one left to save you this time. Your struggles slowly fade, as your mind fills with the strangely relaxing scent of the glade, and your body gives in to the wonderful pleasure of the vines massaging it. Soon you can't even remember why you would want to struggle, or even why you would want to do anything other than relax here in your nice safe cocoon, your mind slowly fading completely as your new roots sink into the soil and vines growing from yourself beginning to entwine with those around you.";
-			now vinetrapped is 1;
-			decrease humanity of Player by 100;
-			now Body of Player is "Parasitic Plant";
-			now BodyName of Player is "Parasitic Plant";
-			attributeinfect "Parasitic Plant";
+			turn the Player into a "Parasitic Plant" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
+			trigger ending "Twisted Fruit Grove Aftermath";
 			end the story saying "You became one with the twisted fruit grove.";
 		else if fightoutcome is 30: [fled]
 			say "     Abandoning the fight, you tear loose from the vines that already have begun to wind their way around your body and simply run. As you scramble away in a wild sprint, you look over your shoulder and see the cocoon holding the felinoid, still weakly struggling in its bounds. There is not a speck of fur visible of the large feline, but you know that he is in there from the trapped yowls and mews he is giving. You feel vaguely guilty as you tear through the curtain of hanging vines without stopping, leaving the cat to struggle against his viney prison on his own.";
@@ -475,8 +468,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 "Twisted Fruit Grove Aftermath"	"BadEnd"	""	Twisted Fruit Grove Aftermath rule	20	false
 
 This is the Twisted Fruit Grove Aftermath rule:
-	if Vinetrapped is 1: [ Maybe combine this with an `end the story saying "...";`? (@Stadler#3007)]
-		trigger ending "Twisted Fruit Grove Aftermath";
+	if ending "Twisted Fruit Grove Aftermath" is triggered:
 		say "     You eventually awaken again somewhat as something nudges you - everything seems to be somewhat diffuse and foggy as you try to figure out where you are, or even what you are. Then again, something nudges against you softly, and you turn your attention down to see what appears to be some kind of strange cat-like creature made up entirely of vines and tendrils, small flowers staring up at you where eyes would normally be. For some reason the vine-creature seems vaguely familiar to you, as you stretch out several of your own vines to pet its head, your tendril-like fingers tangling with the vines of its body and sending a soft surge of pleasure through you both. Looking at yourself you realize you are completely made of vines as well, though in a slightly more humanoid shape.";
 		say "     Something about that realization makes you feel vaguely happier, as your somewhat confused mind takes pleasure in all of this green perfection. The feline nudges you again, and you turn your attention back to what your fellow plant wants. Tangling your vines with the feline's again, you realize that it is time for you both to move to a new area, this one already growing overcrowded with your other growing brethren. With some effort you manage to uproot yourself, feeling unsteady as you spread your roots out to get a better purchase on the top of the ground, glancing at your new companion you realize they might have a better idea of how to do things, as with more vine-stalks on the ground it would be much easier to balance. Quickly shifting yourself downwards, you signal your readiness to your new companion, and together the two of you head out of the grove to find yourself a new location to anchor yourself so you can continue to grow.";
 		WaitLineBreak;

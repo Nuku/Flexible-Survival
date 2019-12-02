@@ -2801,8 +2801,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is VikingUltimatum;
 		-- "VikingWar":
 			now NumberVarValue entry is VikingWar;
-		-- "Vinetrapped":
-			now NumberVarValue entry is Vinetrapped;
 		-- "violinfound":
 			now NumberVarValue entry is violinfound;
 		-- "vixcountdown":
@@ -6483,8 +6481,6 @@ to VariableNumberLoad:
 					now VikingUltimatum is numberVarValue entry;
 				-- "VikingWar":
 					now VikingWar is numberVarValue entry;
-				-- "Vinetrapped":
-					now Vinetrapped is numberVarValue entry;
 				-- "violinfound":
 					now violinfound is numberVarValue entry;
 				-- "vixcountdown":

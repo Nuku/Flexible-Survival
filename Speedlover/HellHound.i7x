@@ -624,8 +624,6 @@ This is the Hellhound Curse rule:
 			now T is 0; [do nothing statement]
 		else if BodyName of Player is "Chocolate Lab" and FaceName of Player is "Chocolate Lab" and CockName of Player is "Chocolate Lab" and SkinName of Player is "Chocolate Lab" and TailName of Player is "Chocolate Lab":				[made into Chocolate Lab]
 			now T is 0; [do nothing statement]
-		else if vinetrapped is 1 or vinetrapped is 2:						[full plant TF]
-			now T is 0; [do nothing statement]
 		else if foodvendor is 4:											[food vendor's sex slave]
 			now T is 0; [do nothing statement]
 		else if centrallib is 7:											[captured by librarian harpies]

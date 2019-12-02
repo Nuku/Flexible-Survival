@@ -2999,7 +2999,6 @@
 |Sarokcat|Nermine|statuequest|value|
 |Sarokcat|Nermine|anubisrequest|value|
 |Sarokcat|Nermine|Felinoidrescued|value|
-|Sarokcat|Nermine|Vinetrapped|value|
 |Sarokcat|Nermine|Rarequesting|value|
 |Sarokcat|Nermine|dollfound|value|
 |Sarokcat|Nermine|testnermine|action|

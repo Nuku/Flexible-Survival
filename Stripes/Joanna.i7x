@@ -695,10 +695,29 @@ This is the You got Planted rule:
 		the Player is gone;
 
 This is the Joanna's Epilogue rule: [See Parasitic Plant for player specific endings]
+	let JoannasEpilogueShown be false;
 	if HP of Joanna > 0 and HP of Joanna < 90:
-		trigger ending "Joanna's Epilogue"; [Here it states, that the ending has been played.]
+		now JoannasEpilogueShown is true;
 		say "     Joanna remains in the infected city when the military rolls through, happy with her new life in her garden. It becomes a safe rest stop for visitors and explorers of the city. She always welcomes them and makes many friends among them, sharing her beautiful and lustful body with them to satisfy their urges[if HP of Joanna >= 5]. She soon gets the nickname of [']Kinky Jo['], notorious for being up for pretty much any kind of fun imaginable with those who come to share in her garden's beauty[else if HP of Joanna > 2]. Being a lustful plant herm, she's happy to please any guests to her lovely garden in numerous ways[end if].";
 		if humanity of Player >= 10:
 			say "     These visitors help you keep in touch with her, carrying the occasional letter to her. She writes about her peaceful, happy life and the various visitors and friends she's made, always thankful for your timely rescue and continued friendship[if Player is plantbodied and plantdefeat > 0]. She particularly enjoys hearing about your happy life as a lustful plant and sharing the plant seeds with your orgy group[end if].";
+	if Player has a body of "Parasitic Plant" or plantdefeat is 0:
+		if JoannasEpilogueShown is true:
+			trigger ending "Joanna's Epilogue"; [Here it states, that the ending has been played.]
+		make no decision;
+	if HP of Joanna >= 7 and HP of Joanna < 90 and humanity of Player >= 10:
+		now JoannasEpilogueShown is true;
+		LineBreak;
+		say "     When rescue arrives, you decide to hide the existence of Joanna's seed resting within you, deciding that it is now a part of what you are. You live a rather normal life, except for the very, very frequent sex, of course. Nymphomania is not really high on the list of mental illnesses you get locked up for and it's certainly a lot more common these days.";
+	else if CockName of Player is "Parasitic Plant":	[non-plant, but plant groin w/seed]
+		now JoannasEpilogueShown is true;
+		LineBreak;
+		if humanity of Player < 40 and humanity of Player >= 10:
+			say "     When rescue arrives, you decide to hide the existence of the plant seed resting within you, deciding that it is now a part of what you are. You live a rather normal life, except for the very, very frequent sex, of course. Nymphomania is not really high on the list of mental illnesses you get locked up for and it's certainly a lot more common these days.";
+		else:
+			say "     When rescue arrives, you have the seed removed from your belly, glad to have the lust-inducing parasite removed.";
+	if JoannasEpilogueShown is true:
+		trigger ending "Joanna's Epilogue"; [Here it states, that the ending has been played.]
+
 
 Joanna ends here.

@@ -1355,7 +1355,6 @@ Name(text)	Type(text)
 "VikingSpartanWar"	"number"
 "VikingUltimatum"	"number"
 "VikingWar"	"number"
-"Vinetrapped"	"number"
 "violinfound"	"number"
 "vixcountdown"	"number"
 "vixentaurcatch"	"number"
