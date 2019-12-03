@@ -46,6 +46,15 @@ to decide if ( Type - a text ) endings are excluded:
 	if Type is listed in Excluded Types of TheEnd, decide yes;
 	decide no;
 
+to add the/-- ending flag ( F - a text ):
+	add F to Ending Flags of TheEnd;
+
+to decide if the/-- ending flag ( F - a text ) is set:
+	if F is listed in Ending Flags of TheEnd:
+		decide yes;
+	decide no;
+
+[setending is internally used for trigger ending and related functions. Not designed to be useful outside of that.]
 to setending ( Ending - text ):
 	setending ending silence state is 0;
 
@@ -93,14 +102,6 @@ to decide if one of the/-- endings in (Endings - a list of texts) is triggered:
 	repeat with N running from 1 to the number of entries in Endings:
 		if ending "[entry N of Endings]" is triggered:
 			decide yes;
-	decide no;
-
-to add the/-- ending flag ( F - a text ):
-	add F to Ending Flags of TheEnd;
-
-to decide if the/-- ending flag ( F - a text ) is set:
-	if F is listed in Ending Flags of TheEnd:
-		decide yes;
 	decide no;
 
 [
