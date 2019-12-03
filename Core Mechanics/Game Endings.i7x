@@ -4,18 +4,18 @@ EndingID is a number that varies.[@Tag:NotSaved] EndingID is usually 1.
 
 a Game Ending is a kind of object.
 TheEnd is a Game Ending.[@Tag:NotSaved]
+TheEnd has a truth state called Player died. Player died is usually false. [The player died. Includes starvation, dehydration, eaten alive and so on.]
 TheEnd has a truth state called Player imprisoned. Player imprisoned is usually false. [The player got imprisoned, enslaved and so on. Always involuntarily.]
 TheEnd has a truth state called Player leaving. Player leaving is usually false. [The player left 'everything' behind. Always voluntarily.]
-TheEnd has a truth state called Player died. Player died is usually false. [The player died. Includes starvation, dehydration, eaten alive and so on.]
 TheEnd has a text called Ending Reason. Ending Reason is usually "". [The cause of the ending. Extra info, like "Vore by Wyvern" (in case of vore death for example) and so on.]
-TheEnd has a list of texts called Excluded Types. [Ending types to be excluded.]
 TheEnd has a list of texts called Ending Flags. [Additional ending flags, like "Taur Player" for example.]
+TheEnd has a list of texts called Excluded Types. [Ending types to be excluded.]
 
-to the/-- Player has left:
-	now Player leaving of TheEnd is true;
+to the/-- Player is dead/killed/murdered/vored:
+	now Player died of TheEnd is true;
 
-to decide if the/-- Player left:
-	if Player leaving of TheEnd is true, decide yes;
+to decide if the/-- Player/Player's dead/killed/murdered/vored:
+	if Player died of TheEnd is true, decide yes;
 	decide no;
 
 to the/-- Player is gone/imprisoned/enslaved/lost:
@@ -25,11 +25,11 @@ to decide if the/-- Player/Player's gone/imprisoned/enslaved/lost:
 	if Player imprisoned of TheEnd is true, decide yes;
 	decide no;
 
-to the/-- Player is dead/killed/murdered/vored:
-	now Player died of TheEnd is true;
+to the/-- Player has left:
+	now Player leaving of TheEnd is true;
 
-to decide if the/-- Player/Player's dead/killed/murdered/vored:
-	if Player died of TheEnd is true, decide yes;
+to decide if the/-- Player left:
+	if Player leaving of TheEnd is true, decide yes;
 	decide no;
 
 to the/-- Player was/-- ended by ( R - a text ):
@@ -39,19 +39,19 @@ to decide if the/-- Player/Player's ended by ( R - a text ):
 	if Ending Reason of TheEnd is R, decide yes;
 	decide no;
 
-to exclude ( type - a text ) endings:
-	add type to Excluded Types of TheEnd;
-
-to decide if ( Type - a text ) endings are excluded:
-	if Type is listed in Excluded Types of TheEnd, decide yes;
-	decide no;
-
 to add the/-- ending flag ( F - a text ):
 	add F to Ending Flags of TheEnd;
 
 to decide if the/-- ending flag ( F - a text ) is set:
 	if F is listed in Ending Flags of TheEnd:
 		decide yes;
+	decide no;
+
+to exclude ( Type - a text ) endings:
+	add Type to Excluded Types of TheEnd;
+
+to decide if ( Type - a text ) endings are excluded:
+	if Type is listed in Excluded Types of TheEnd, decide yes;
 	decide no;
 
 [setending is internally used for trigger ending and related functions. Not designed to be useful outside of that.]
@@ -98,14 +98,14 @@ to decide if the/-- ending ( Ending - a text ) is triggered:
 			decide yes;
 	decide no;
 
-to decide if one of the/-- endings in (Endings - a list of texts) is triggered:
+to decide if one of the/-- endings in ( Endings - a list of texts ) is triggered:
 	repeat with N running from 1 to the number of entries in Endings:
 		if ending "[entry N of Endings]" is triggered:
 			decide yes;
 	decide no;
 
 [
-to decide if all of the/-- endings in (Endings - a list of texts) are triggered:
+to decide if all of the/-- endings in ( Endings - a list of texts ) are triggered:
 	repeat with N running from 1 to the number of entries in Endings:
 		if not ending "[entry N of Endings]" is triggered:
 			decide no;
