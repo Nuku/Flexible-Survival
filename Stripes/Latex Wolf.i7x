@@ -340,23 +340,29 @@ to say lwmast2:
 
 Section 4 - Endings
 
+to Latex Wolf Succumbed Intro:
+	say "     As the infection runs its course, it spreads through your body, changing you more and more into a non-anthro, latex wolf. When the rescue begins, you can hear a strange, ultrasonic siren off in the distance with your improved hearing and are drawn to it. Fire trucks arrive, sirens blaring with teams of soldiers around them. They are spraying down several other latex wolves and foxes who have arrived. You run up to one, yipping and wagging your tail in the hopes of a cure. As you move closer to the truck, you are pointed out and sprayed with a strange chemical.";
+
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
 "Latex Wolf Succumbed"	"BadEnd"	"Mixed"	Latex Wolf Succumbed rule	20	false
+"Latex Wolf back to Nature"	"Special"	""	Latex Wolf back to Nature rule	990	false
 "Latex Wolf Infection"	"Infection"	""	Latex Wolf Infection rule	1000	false
 
 This is the Latex Wolf Succumbed rule:
 	if humanity of Player >= 10 or the Player has no body of "Latex Wolf":
 		make no decision; [Survival ending handled below]
 	trigger ending "Latex Wolf Succumbed"; [Here it states, that the ending has been played.]
-	say "     As the infection runs its course, it spreads through your body, changing you more and more into a non-anthro, latex wolf. When the rescue begins, you can hear a strange, ultrasonic siren off in the distance with your improved hearing and are drawn to it. Fire trucks arrive, sirens blaring with teams of soldiers around them. They are spraying down several other latex wolves and foxes who have arrived. You run up to one, yipping and wagging your tail in the hopes of a cure. As you move closer to the truck, you are pointed out and sprayed with a strange chemical.";
 	if intelligence of Player < 16 or dexterity of Player < 24:
 		if a random chance of 2 in 3 succeeds:
-			say "     You turn your head back and watch as the latex melts off of your body leaving fur underneath. You fall down and whimper as you realize that you are no longer a latex wolf, but instead trapped as a real one even as you feel what remains of your mind fading. The soldiers exclaim in surprise at your incomplete destruction and startling transformation, but you dash off into the city before they can prevent your escape. Under the cover of night, you slink off into the wilderness, mind that of a semi-intelligent wolf.";
+			add the ending flag "LW back to Nature";
+			make no decision;
 		else:
+			Latex Wolf Succumbed Intro;
 			say "     You gurgle wetly as you feel yourself starting the melt. You struggle to escape, but another truck turns its hose on you and you melt away into another messy stain of latex goo in the wake of the deadly trucks.";
 			the Player is dead;
 	else:
+		Latex Wolf Succumbed Intro;
 		say "     You gurgle wetly as you feel yourself starting to melt, turning into a fluid goo. You struggle over to a nearby drain and dive into it, flowing through the grate. You can faintly hear some commotion above concerning your escape, but can hardly understand it. You do manage to congeal enough to pull yourself onto a ledge and down a side passage before a large rush of the strange solvent is sprayed down after you. You are quite weakened for a time, but do learn to pull yourself partially back together, now a liquid latex wolf.";
 		say "     Now immune to the call of the siren, you follow the fire trucks['] path back to their base, consuming the melted wolves and foxes left in their wake, growing larger and larger. By the time you get to their depot, you are twice the size of their fire trucks and attack them. You flow across their lines, easily overpowering them while they're busy trying to refill the trucks. Immune to their weapons, you encircle the soldiers and amuse yourself with them, eating some and stuffing others into any orifice you care to create. Finally, with your overfull balls churning with liquid latex cum, you spray your semen over those still remaining. As they start to change into latex wolves, you chuckle maliciously and turn the hose on them, subjecting them to the same deadly fate as they tried to impose on you. As they howl and squirm, unable to get away, you slurp down all the tasty goo with a vicious grin.";
 		say "     You spend the next day collecting more playtoys as well as another latex wolf. You cum over the soldiers and then melt them, letting the latex wolf enjoy the tasty treat and grow into another giant, fluid wolf like yourself. You and your enormous mate track down any of your previous allies in the city you can still find and enjoy playing with them before consuming them. Unstoppable, you both run rampant across the city from time to time, transforming and eating the other, lesser infected when not squirming together in fluidic sex in a large basin.";
@@ -370,7 +376,15 @@ This is the Latex Wolf Succumbed rule:
 		if Breast Size of Player > 26, now Breast Size of Player is 26;
 		the Player is gone;
 
+This is the Latex Wolf back to Nature rule:
+	if the ending flag "LW back to Nature" is set:
+		trigger ending "Latex Wolf back to Nature"; [Here it states, that the ending has been played.]
+		Latex Wolf Succumbed Intro;
+		say "     You turn your head back and watch as the latex melts off of your body leaving fur underneath. You fall down and whimper as you realize that you are no longer a latex wolf, but instead trapped as a real one even as you feel what remains of your mind fading. The soldiers exclaim in surprise at your incomplete destruction and startling transformation, but you dash off into the city before they can prevent your escape. Under the cover of night, you slink off into the wilderness, mind that of a semi-intelligent wolf.";
+
 This is the Latex Wolf Infection rule:
+	if ending "Latex Wolf back to Nature" is triggered:
+		make no decision;
 	if humanity of Player < 10 or the Player has no body of "Latex Wolf":
 		make no decision; [Succumb ending handled above]
 	trigger ending "Latex Wolf Infection"; [Here it states, that the ending has been played.]
