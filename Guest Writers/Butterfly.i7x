@@ -646,7 +646,7 @@ This is the Butterfly Infection rule:
 	if ending "Butterfly Girl Epilogue" is triggered:
 		make no decision;
 	if Player has a body of "Butterfly":
-		trigger ending "Butterfly Infection";
+		trigger ending "Butterfly Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "As you lose the last fragment of your humanity you fall back on your instincts resorting to extracting nectar from plants. You generally keep away from humans and other creatures. They always seem to be out to catch you. For some reason you have visions of being pinned in a display cabinet and want to avoid that at all costs. There was one human though so enchanted by the colorful patterns on your wings who slowly gained your trust. In due time you became inseparable.";
 		else:
