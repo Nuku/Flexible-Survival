@@ -2139,8 +2139,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is OfficeGirlsDominance;
 		-- "OfficeGirlsFriendship":
 			now NumberVarValue entry is OfficeGirlsFriendship;
-		-- "OgreMeetings":
-			now NumberVarValue entry is OgreMeetings;
 		-- "OliverRelationship":
 			now NumberVarValue entry is OliverRelationship;
 		-- "Onyxboislut":
@@ -5829,8 +5827,6 @@ to VariableNumberLoad:
 					now OfficeGirlsDominance is numberVarValue entry;
 				-- "OfficeGirlsFriendship":
 					now OfficeGirlsFriendship is numberVarValue entry;
-				-- "OgreMeetings":
-					now OgreMeetings is numberVarValue entry;
 				-- "OliverRelationship":
 					now OliverRelationship is numberVarValue entry;
 				-- "Onyxboislut":

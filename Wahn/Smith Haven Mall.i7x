@@ -115,11 +115,11 @@ The description of Smith Haven Mall Lot West is "[mallwestlot]".
 earea of Smith Haven Mall Lot West is "Outside".
 
 To say mallwestlot:
-	If daytimer is day:
+	If daytimer is day: [daytime]
 		say "     You walk along the parking lot's main access road into the mall's west lot, looking through some of the cars for any left over food or water. Finally making it, you look around and find that it's just more of the same, the carnage of rampant sex splattered all over the vehicles. Sitting on the northwest corner of the lot is a large gas station with a convenience store, the lingering scent of gasoline wafting towards you on the breeze. In the southwest part of the lot you can see another building. The sign sitting on the edge of its roof reads as China South Buffet.";
-	else if findwires is 2 and fixedgens > 2:
+	else if findwires is 2 and fixedgens > 2: [power on]
 		say "     With the parking lot lights illuminating the area, you walk along the parking lot's main access road into the mall's west lot. Finally making it, you look around as best as you can and find that it's just more of the same, the carnage of rampant sex splattered all over the vehicles. The sign on the side of the JCPenney's building is lit and all the lights are on at the large gas station sitting on the northwest corner of the lot. When you pause long enough, you can smell the lingering scent of gasoline wafting towards you on the breeze. In the southwest part of the lot you can see another building with some lights on. The illuminated sign sitting on the edge of its roof reads as China South Buffet.";
-	else:
+	else: [night]
 		say "     You slowly and carefully make your way along the dark parking lot's main access road, keeping an eye peeled for anything that might try to surprise you. Finally making it to the west lot, it's hard to tell if there is anything much different. You find on the northwest corner of the lot what looks like a large gas station with a convenience store. The lingering scent of gasoline wafting towards you on the breeze confirms it. Curiosity spurning you on, you continue exploring the west lot until spotting a building, which you know is the China South Buffet.";
 
 

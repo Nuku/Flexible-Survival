@@ -101,7 +101,6 @@ to say libraryentrance:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			say "Is this what you want?";
 			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;

@@ -303,6 +303,7 @@ A person has a truth state called PenileVirgin. PenileVirgin is usually true. [n
 A person has a truth state called SexuallyExperienced. SexuallyExperienced is usually false. [not saved till new infection system update]
 A person has a truth state called TwistedCapacity. TwistedCapacity is usually false. [not saved till new infection system update]
 A person has a truth state called Sterile. Sterile is usually false. [not saved till new infection system update]
+A person has a truth state called Sleeping. Sleeping is usually false. [should not be saved? unless someone wants to make sleeping beauty]
 A person has a text called Originalgender. Originalgender is usually "Undefined". [original gender of the pre-transform person]
 A person has a text called PlayerOriginalgender. PlayerOriginalGender is usually "Undefined". [first meeting gender with the player]
 A person has a text called PlayerLastGender. PlayerLastGender is usually "Undefined". [gender of the player during the last meeting]
@@ -543,6 +544,12 @@ Definition: A grab object (called x) is wielded:
 Definition: A grab object (called x) is unwieldy:		[applies to armaments only]
 	if grab object is journal, no;
 	if the absolute value of ( scalevalue of Player - objsize of x ) > 1, yes;
+	no;
+
+A person can be asleep. A person is usually not asleep.
+
+Definition: A person (called x) is asleep:
+	if Sleeping of x is true, yes;
 	no;
 
 A person can be defaultnamed. A person is usually defaultnamed.
@@ -1089,6 +1096,12 @@ Definition: A person (called x) is barechest:
 
 Definition: A person (called x) is naked:
 	if x is barecrotch and x is barechest and x is barefoot:
+		yes;
+	else:
+		no;
+
+Definition: A person (called x) is gimpy:
+	if gimp mask is equipped:
 		yes;
 	else:
 		no;
@@ -6627,6 +6640,7 @@ Include Gryphons Plot by Shay.
 Include Gunbunny by Stripes.
 Include Harpy by Nuku Valente.
 Include Hawkman by Sarokcat.
+Include Hellfire Demon by Gherod.
 Include Helot by Wahn.
 Include Hentai Fan by Stripes.
 Include Herm Dolphin by Hellerhound.
@@ -6946,6 +6960,7 @@ Include Meredith by Stripes.
 Include Micaela by Stripes.
 Include Midnight by Sarokcat.
 Include Milo by CrimsonAsh.
+Include Mogdraz by Gherod.
 Include Monty by Wahn.
 Include Mouse Taur by Nuku Valente.
 Include Pet Mutt by CrimsonAsh.
@@ -7245,8 +7260,7 @@ To startFeatget: [alternate featget used for start] [Checkpoint-]
 			if calcnumber > 0 and calcnumber <= the number of filled rows in table of gainable feats:
 				now current menu selection is calcnumber;
 				choose row current menu selection from the table of gainable feats;
-				say "[title entry]: [description entry][line break]";
-				say "Is this what you want?";
+				say "[title entry]: [description entry]?";
 				if Player consents:
 					now freefeatgeneral is the title in row calcnumber of table of gainable feats; [important change from regular featget]
 					now featqualified is 0;
@@ -7277,8 +7291,7 @@ To startFunFeatget: [alternate funfeatget used for start]
 			if calcnumber > 0 and calcnumber <= the number of filled rows in table of gainable feats:
 				now current menu selection is calcnumber;
 				choose row current menu selection from the table of gainable feats;
-				say "[title entry]: [description entry][line break]";
-				say "Is this what you want?";
+				say "[title entry]: [description entry]?";
 				if Player consents:
 					now freefeatfun is the title in row calcnumber of table of gainable feats; [important change from regular featget]
 					now featqualified is 0;
@@ -8647,9 +8660,9 @@ to say menuwardlist:
 			say "Mindcontrol ";
 		if VoreList is warded:
 			say "Vore ";
-		say "[close bracket][roman type]";
+		say "[close bracket][roman type][line break]";
 	else:
-		say "[bold type]None Warded[roman type]";
+		say "[bold type]None Warded[roman type][line break]";
 
 to say menubanlist:
 	if CockVoreList is banned or FurryList is banned or MaleList is banned or FemaleList is banned or HumorousList is banned or DemonList is banned or HermList is banned or IncestList is banned or TransList is banned or MindcontrolList is banned or NonconList is banned or VoreList is banned:
@@ -8680,9 +8693,9 @@ to say menubanlist:
 			say "Mindcontrol ";
 		if VoreList is banned:
 			say "Vore ";
-		say "[close bracket][roman type]";
+		say "[close bracket][roman type][line break]";
 	else:
-		say "[bold type]None Banned[roman type]";
+		say "[bold type]None Banned[roman type][line break]";
 
 to say gsopt_1:
 	now calcnumber is -1;

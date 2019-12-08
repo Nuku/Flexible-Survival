@@ -3,6 +3,7 @@ Sarah by Wahn begins here.
 [ Expanded by Stripes                              ]
 [ Re-write and expansion by Wahn                   ]
 [ Expansion by Glitch                              ]
+[ Added Evil DB support - Gherod]
 
 [ SarahCured                                                                         ]
 [ 8: player told Sarah he wants to fuck, she doesn't want to be knocked up, anal OK  ]
@@ -65,7 +66,6 @@ when play begins:
 	add Husky Pack to BadSpots of FurryList;
 
 instead of resolving a Husky Pack:
-	project the Figure of HuskyAlpha_soft_icon;
 	say "     Rounding a corner in one of the inner-city blocks, you run right into the leader of a small husky pack, his fur cushioning the impact. As you jump back from the imposing anthro canine, he snarls in your face, drawing back his lips from a muzzle full of white and sharp teeth. 'Fuck off,' the alpha husky growls in annoyance and is immediately supported by the group of husky bitches following behind him. 'You better run, [if Player is female]skank[else]asshole[end if]!' one of them barks and gives you a quite rude gesture, then a second laughs in a shrill tone and adds, 'That's right. Our man will fuck you up otherwise.' Between the group of naked anthro females, you catch a glimpse of a thin human woman with a red leather collar on a leash. She has got a hand on the collar and clearly is uncomfortable with the tightness against her throat. And not only that - from the way the leash is stretched taut between her and the male, he has been dragging her along by force. Both of the items still bear price tags, so your guess would be that this little gang just came out of the nearby pet store after outfitting the newest unwilling recruit to his harem of bitches.";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Apologize and leave as quickly as you can.";
@@ -458,6 +458,12 @@ to say SarahTalkMenu:
 		now sortorder entry is 4;
 		now description entry is "Talk about what she thinks caused the infection";
 	[]
+	if resolution of Demonic Redemption is 2 and companion of player is demon brute:
+		choose a blank row in table of fucking options;
+		now title entry is "Ask her for help regarding your Demon Brute";
+		now sortorder entry is 5;
+		now description entry is "Ask Sarah if she can do something for the Demon Brute.";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -481,6 +487,8 @@ to say SarahTalkMenu:
 					say "[SarahTalk3]";
 				if (nam is "Theories on the outbreak"):
 					say "[SarahTalk4]";
+				if (nam is "Ask her for help regarding your Demon Brute"):
+					say "[SarahTalk_DB]";
 				wait for any key;
 				say "[SarahTalkMenu]";
 		else if calcnumber is 0:
@@ -1120,7 +1128,7 @@ An everyturn rule:
 		say "     As you wait around in the bunker, ";
 		say "[SarahOffersAnal]";
 	if SarahPregnant is 1:
-		say "     [bold type]You have a strange feeling in your body, as if you somehow just know that more of your offspring have entered this world. Maybe you should go back and check on Sarah in the bunker... and make sure she is filled with your fertile seed again.[roman type][line break]";
+		say "     [bold type]You have a strange feeling in your body, as if you somehow just know that more of your offspring have entered this world. Maybe you should go back and check on Sarah in the bunker... and make sure she is filled with your fertile seed again.[roman type]";
 		increase SarahPups by a random number between 1 and 4;
 		increase score by a random number between 5 and 10;
 		if "Proud Parent" is listed in feats of Player:

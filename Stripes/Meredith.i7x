@@ -389,43 +389,43 @@ to say Meredithsexmenu:
 			choose a blank row in table of fucking options;
 			now title entry is "Fuck her";
 			now sortorder entry is 1;
-			now description entry is "pound that mare pussy";
+			now description entry is "Pound that mare pussy";
 		else:
 			choose a blank row in table of fucking options;
 			now title entry is "Taur-style fuck";
 			now sortorder entry is 1;
-			now description entry is "mount that mare";
+			now description entry is "Mount that mare";
 [		choose a blank row in table of fucking options;
 		now title entry is "Anal";
 		now sortorder entry is 2;
-		now description entry is "have a go at Mare's ass";]
+		now description entry is "Have a go at Mare's ass";]
 		choose a blank row in table of fucking options;
 		now title entry is "Blow job";
 		now sortorder entry is 3;
-		now description entry is "have Mare suck you off";
+		now description entry is "Have Mare suck you off";
 	choose a blank row in table of fucking options;
 	now title entry is "Eat her out";
 	now sortorder entry is 4;
-	now description entry is "lick Mare's juicy pussy";
+	now description entry is "Lick Mare's juicy pussy";
 [	choose a blank row in table of fucking options;
 	now title entry is "Fist her";
 	now sortorder entry is 5;
-	now description entry is "pound her pussy with your arm";]
+	now description entry is "Pound her pussy with your arm";]
 	if lastfuck of Vanessa - turns >= 8 and Meredith_Vanessa_fun1 is true:
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome w/Vanessa";
 		now sortorder entry is 6;
-		now description entry is "have Vanessa join in on the fun";
+		now description entry is "Have Vanessa join in on the fun";
 	if lastfuck of Colleen - turns >= 4 and Meredith_Colleen_fun1 is true:
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome w/Colleen";
 		now sortorder entry is 7;
-		now description entry is "have Colleen join in on the fun";
+		now description entry is "Gave Colleen join in on the fun";
 [	if HP of Meredith >= 11 and XP of Meredith is 0:	[able to get preggers and not preggers right now]
 		choose a blank row in table of fucking options;
 		now title entry is "UB fun";
 		now sortorder entry is 10;
-		now description entry is "take a turn inside the mare's womb";]
+		now description entry is "Take a turn inside the mare's womb";]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -436,8 +436,7 @@ to say Meredithsexmenu:
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry][line break]";
-			say "Is this what you want?";
+			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
