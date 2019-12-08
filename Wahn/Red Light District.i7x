@@ -130,4 +130,49 @@ instead of smelling Boundary Street West:
 
 Porn Store is northwest of Boundary Street West.
 
+Table of GameRoomIDs (continued)
+Object	Name
+Boundary Street North	"Boundary Street North"
+
+Boundary Street North is a room.
+Boundary Street North is north of Entrance to the Red Light District.
+The earea of Boundary Street North is "Red".
+The description of Boundary Street North is "[RedLightBoundaryNorthDesc]".
+
+to say RedLightBoundaryNorthDesc:
+	say "     You're on a road that runs along the border to the red light district, past the prominent [']SEX SEX SEX['] neon signs along the facades of a number of buildings on the street sides before you. Though without power to support the alluring shine of all the signage, it just seems kinda dingy. Some piles of uncollected trash litter the street, and the way splits into a few thin and shady alleys, though they seem to have nothing of interest. However, the road extends a bit further, onto a building with a neon sign saying [']TOYS['], alongside a pair of handcuffs, and further beyond where an ominous, faint red light shines through a thinner street just around the corner to the right.";
+
+instead of smelling Boundary Street North:
+	say "     This place smells very strongly of sex, with a musky scent of arousal hanging thick in the air. This neighborhood was clearly struck hard by the infection, being particularly vulnerable. The scents of several lustful creatures waft by your nose, so strong that their origins can't be far off. You catch the scent of what you guess to be [one of]a hyper-masculine creature[or]some kind of feline creature[or]a strong latex source[or]a dark and powerful female[or]arousing pollen[or]a large marsupial[or]an arousing perfume[or]a herm and cheap sex[at random], making your head swim a bit before you shake the sensation off.";
+
+Table of GameRoomIDs (continued)
+Object	Name
+Northern Street	"Northern Street"
+
+Northern Street is a room.
+Northern Street is north of Boundary Street North.
+The earea of Northern Street is "Red".
+The description of Northern Street is "[RedLightNorthStreetDesc]".
+
+to say RedLightNorthStreetDesc:
+	say "     You're in the middle of the northern road, coming across a building with neon signs saying [']TOYS['], alongside a pair of handcuffs, indicating this must have been some kind of store for the kinky fans of sex toys. Besides it, there's still a small pile of uncollected trash. The road itself extends just around the corner towards east, into a thinner street where an ominous, faint red light dims through. Traveling south would lead you towards the crossroad marking the entrance to the Red Light District.";
+
+instead of smelling Northern Street:
+	say "     This place smells very strongly of sex, with a musky scent of arousal hanging thick in the air. This neighborhood was clearly struck hard by the infection, being particularly vulnerable. The scents of several lustful creatures waft by your nose, so strong that their origins can't be far off. You catch the scent of what you guess to be [one of]a hyper-masculine creature[or]some kind of feline creature[or]a strong latex source[or]a dark and powerful female[or]arousing pollen[or]a large marsupial[or]an arousing perfume[or]a herm and cheap sex[at random], making your head swim a bit before you shake the sensation off.";
+
+Table of GameRoomIDs (continued)
+Object	Name
+Crimson Street	"Crimson Street"
+
+Crimson Street is a room.
+Crimson Street is east of Northern Street.
+The earea of Crimson Street is "Red".
+The description of Crimson Street is "[RedLightCrimsonStreetDesc]".
+
+to say RedLightCrimsonStreetDesc:
+	say "     You have arrived at the entrance of the Crimson Street, in which a strange and ominous red light dims through with no logical explanation. It seems pretty empty and oddly silent, without anything of interest at the first glance. All the buildings here look either abandoned or looted, although everything looks mysteriously clean, unlike the other streets. Staying here gives you an offsetting feeling you can't quite specify, but besides that, it seems you cannot proceed any further from here, unless any of these buildings are of any interest to you at some point.";
+
+instead of smelling Northern Street:
+	say "     There's an unsettling sweet smell around here, rather captivating the more you try to feel it. It's not perfume, nor anything of the sort, but it strikes you as something seductively demonic in nature.";
+
 Red Light District ends here.

@@ -1,5 +1,6 @@
 Version 1 of Carl by Wahn begins here.
 [Version 1.1 - Small Fix]
+[Version 1.2 - Added support for Evil Demon Brute path - Gherod]
 
 "Adds a husky NPC to Flexible Survival, entering the game as an aftermath of the soldier squad events"
 
@@ -205,6 +206,12 @@ to say CarlTalkMenu:
 	now sortorder entry is 8;
 	now description entry is "Ask Carl about what he knows";
 	[]
+	if resolution of Demonic Redemption > 1 and resolution of Demonic Redemption < 99 and DBCaptureQuestVar is 5:
+		choose a blank row in table of fucking options;
+		now title entry is "Ask him for help regarding your Demon Brute";
+		now sortorder entry is 9;
+		now description entry is "Ask Carl if he can do something for the Demon Brute.";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -238,6 +245,8 @@ to say CarlTalkMenu:
 					say "[CarlTalk7]";
 				else if (nam is "Talk about the military presence"):
 					say "[CarlTalk8]";
+				else if (nam is "Ask him for help regarding your Demon Brute"):
+					say "[CarlTalk_DB]";
 				wait for any key;
 				say "[CarlTalkMenu]";
 		else if calcnumber is 0:
