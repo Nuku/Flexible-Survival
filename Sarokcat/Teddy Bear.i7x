@@ -65,6 +65,7 @@ to say teddybearsex:
 	say "     Moving in on the fallen bear, you pin her down and press your [bodytype of Player] body down onto her plush form. She squirms a little at first, but giggles and settles down as you get your [Cock of Player] cock lined up with her strategically placed hole. With a gentle push, you slide your [cock size desc of Player] penis into that velvety opening. You can feel those fabric walls squeeze and caress over you each time you thrust into the pink, padded bear.";
 	say "     As you continue fucking the living plush, you release her arms and wrap them around her soft body, cuddling her like the big, sexy stuffy she is. She puts her arms around you in return, hugging you back and pulling you against her with every thrust you make. Her ursine muzzle gives you soft kisses all over your face as you fuck her until you cry out in orgasm, shooting your [Cum Load Size of Player] load into her plush pussy and soaking her polyfill insides with your semen.";
 	say "     Spent and happy, you rest atop her for a while as she continues to hug you, content to be your plush pillow for a while. Eventually you realize that you should get moving again and reluctantly pull free of her padded arms. She gives a little sigh of disappointment, but contents herself with rubbing her tummy, feeling the warm mess being absorbed into her plush padding.";
+	CreatureSexAftermath "Teddy Bear" receives "PussyFuck" from "Player";
 
 
 to say teddybear69:
@@ -76,9 +77,13 @@ to say teddybear69:
 	if Player consents:
 		say "     Feeling too happy to take notice of what's going on, you are content to enjoy the licking and the soft feel of the bear's muzzle around your feet and ankles. As she continues to sit up, the pleasant sensation moves up to envelop more of your legs. When she reaches your hips, you start to wonder what's going on, but those thoughts are pushed aside when her tongue finds its way to your crotch again. The feel of it across your [if Player is herm]cock[smn] and cunt[sfn][else if Player is male]cock[smn][else if Player is female]cunt[sfn][end if] causes you to moan and grow aroused once again.";
 		say "     While it takes a little longer to get you off this time, it is no less pleasant an experience - perhaps even better from the added sensation of her soft muzzle and throat squeezing and rubbing along your lower body. As she gets you to cum for the second time, she opens her mouth wider and raises you up. She lowers you down into her plush maw, swallowing down your [bodytype of Player] body even as she's swallowing down your sexual fluids. It is only as she ursine muzzle is closing around your head before your very eyes that you realize what's happening all too late. But you're also too fuzzy-headed and awash in pleasure to even think of resisting. You curl up happily in the warm embrace of the plush bear's belly, drifting off into a peaceful sleep.";
+		CreatureSexAftermath "Teddy Bear" receives "[if player is male]OralCock[else]OralPussy[end if]" from "Player";
+		CreatureSexAftermath "Player" receives "OralPussy" from "Teddy Bear";
 		teddybearvored;
 	else:
 		say "     Realizing what's about to happen, you shake the fluff from your mind and pull yourself up. The plush bear gives a soft sigh of disappointment and flops back onto the ground. Her disappointment doesn't last long though, as she contents herself with [if Player is male]rubbing her cum-filled tummy[else]licking her cum-damp muzzle[end if] while your fluids are absorbed into her polyfill padding. Having dealt with the strange bear, you're now free to continue on your way.";
+		CreatureSexAftermath "Teddy Bear" receives "[if player is male]OralCock[else]OralPussy[end if]" from "Player";
+		CreatureSexAftermath "Player" receives "OralPussy" from "Teddy Bear";
 		now Libido of Player is ( 2 * Libido of Player ) / 3;
 
 to teddybearvored:
