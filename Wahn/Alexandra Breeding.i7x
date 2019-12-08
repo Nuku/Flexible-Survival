@@ -49,6 +49,18 @@ I always/often bring home/visit these NPCs: always most to all of the ladies, wh
 Threesomes and/or extra scenes between these bunker/library NPCs would be awesome:
 The following NPCs I like the most (why?): Alexandra Nadia, Fang, Amy, Sarah and other ladies that interact with others
 The following NPCs I dislike the most (why?): pig and because he is a slob
+
+
+i wanted do scenes listed below or something similar unless you have other suggestions
+
+growth phase: wants more horse "meat" and is looking forward to spending time with the rest of the barracks
+
+Solo: Spit roast or maybe another idea
+Join: "69" with player on top
+Alexandra gets a great view of what kind of breeding she is getting and a face full of balls and cum.
+Twins walk-in:   watch,  aftermath
+Barracks bang: watch,  join,  walk-in watch, walk-in aftermath
+
 ]
 
 
@@ -60,6 +72,7 @@ The following NPCs I dislike the most (why?): pig and because he is a slob
 Section 1 - Events
 
 after going to Grey Abbey Library while (HP of Alexandra is 2 or HP of Alexandra is 4 and AlexandraBrutusPups > 7 and AlexandraBrutusInteraction > 40 and AlexandraBrutusInteraction < 52 and Lastfuck of Alexandra - turns > 4 and a random chance of 1 in 2 succeeds):
+	try looking;
 	AlexandraBrutus_Unchained;
 
 instead of navigating Grey Abbey Library while (HP of Alexandra is 2 or HP of Alexandra is 4 and AlexandraBrutusPups > 7 and AlexandraBrutusInteraction > 40 and AlexandraBrutusInteraction < 52 and Lastfuck of Alexandra - turns > 4 and a random chance of 1 in 2 succeeds):
@@ -69,7 +82,177 @@ instead of navigating Grey Abbey Library while (HP of Alexandra is 2 or HP of Al
 	AlexandraBrutus_Unchained;
 
 after going to Worker Barracks while (HP of Alexandra is 2 or HP of Alexandra is 4 and AlexandraBrutusPups > 7 and AlexandraBrutusInteraction > 40 and AlexandraBrutusInteraction < 52 and Lastfuck of Alexandra - turns > 4 and a random chance of 1 in 2 succeeds):
+	try looking;
 	AlexandraBrutus_Unchained;
+
+after going to Worker Barracks while (HP of Alexandra is 2 or HP of Alexandra is 4 and "Barracks Slut" is listed in Traits of Alexandra and Lastfuck of Alexandra - turns > 2 and a random chance of 1 in 5 succeeds):
+	try looking;
+	let randomnumber be a random number from 1 to 1; [so far there is only one walk-in option]
+	if randomnumber is:
+		-- 1:
+			say "     As you enter the building, your attention is immediately drawn to the other end of the main room, where you can see the towering form of an anthro Clydesdale stud outlined against the back wall. The large horseman is completely naked, allowing you to see the muscles moving under his slightly sweat-matted coat as he pumps his hips back and forth, accompanied by moans and barks in a familiar voice. Looking a bit closer, you see Alexandra's long, slender legs wrapped around his hips, while her leather-clad arms are pinned against the wall by his strong hands. 'Harder, you bastard! Yeah, just like that!' the former cop calls out between her gasps of pleasure, making it clear that she's enjoying herself quite a bit. For a moment you just stare at the action going on right in the open, before registering the rest of your surroundings, which is filled with several further equines - sitting at the table, leaning against walls or just standing around, all of whom are watching the pair fucking in front of them.";
+			say "     Barely taking his eyes off the show, one of the men nearest to yourself comments, 'Quite a fuckpuppy you dropped off with us, [sir]. This is the third guy she's taking in a row!' Chuckling, he nods to two nearby beds in which you can see naked farmhands stretched out on their backs, 'recuperating' after a round with your dobie bitch. Still half-hard, one of the guys has a small cum-puddle on his abs, apparently being too worn out to clean himself up right now. 'Everyone's waiting around to be picked next,' your neighbor states, 'Sure hope it's me. I had to promise Karel quite a thing to trade his grass-cutting shift with me.' An urgent bark draws your attention fully back to Alexandra and her equine stud, who by now is franticly thrusting into her wet snatch, grunting deeply as he gets closer and closer to orgasm.";
+			say "[AlexandraFarmhandStandingFuckMenu]";
+
+[
+		-- 2:
+			say "";
+		-- 3:
+			say "";
+]
+
+to say AlexandraFarmhandStandingFuckMenu:
+	project the figure of Alexandra_naked_icon;
+	LineBreak;
+	[farmhands went first, so their impregchance comes before anything the player does]
+	impregAlexandraChance with "Farmhand Horseman";
+	impregAlexandraChance with "Farmhand Horseman";
+	impregAlexandraChance with "Farmhand Horseman";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	say "     [bold type]Do you want to do anything now?[roman type][line break]";
+	[]
+		choose a blank row in table of fucking options;
+		now title entry is "Move closer and keep watching";
+		now sortorder entry is 1;
+		now description entry is "Observe Alexandra being bred (again)";
+	[]
+	if player is male:
+		choose a blank row in table of fucking options;
+		now title entry is "Step up and take the next spot fucking her";
+		now sortorder entry is 2;
+		now description entry is "Make use of your rights as Alexandra's master";
+	[]
+	if player is female:
+		choose a blank row in table of fucking options;
+		now title entry is "Offer your own pussy to be bred too";
+		now sortorder entry is 3;
+		now description entry is "Join Alexandra as another barracks slut today";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Eat out the dobie's well-bred pussy";
+	now sortorder entry is 4;
+	now description entry is "Get on top of her in a 69 and lap the cum out of your bitch";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Move closer and keep watching"):
+					say "[AlexandraFarmhandStanding_Watch]";
+				else if (nam is "Step up and take the next spot fucking her"):
+					say "[AlexandraFarmhandStanding_Fuck]";
+				else if (nam is "Offer your own pussy to be bred too"):
+					say "[AlexandraFarmhandStanding_Join]";
+				else if (nam is "Eat out the dobie's well-bred pussy"):
+					say "[AlexandraFarmhandStanding_Eat]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     Shrugging, you pull your attention away from the doberwoman as she's railed by the massive prick of her stallion and try to focus on other things. It's not easy, given the sheer noise the two of them make as they eventually climax together, followed by a somewhat breathless Alexandra picking the man next to you as her followup partner, and they begin to grind against each other in your full view. Some time later, the action eventually dies down, with the quadruple-bred bitch requiring a bit of a rest too.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
+
+to say AlexandraFarmhandStanding_Watch:
+	say "     A grin spreads across your face as you tell the horseman next to you that he just might be next. 'Yeah, I really hope so,' he replies, planting a hand on the crotch of his pants and giving the bulge there a squeeze. Patting his arm and nodding for the guy to come along, you stroll towards the action, bypassing several others and getting a prime spot to see what's going on. From your new position, you see more of the former cop past the broad chest of the horseman: she's naked except for an open leather jacket, which has been pushed back so her well-rounded breasts are in full view. The fur between her legs looks wet and matted with cum, some of which keeps squirting out of her in a frothy mess every time the equine thrusts in deeply.";
+	say "     Seeing a roughly fifteen-inch long horse cock pull out and then thrust into your bitch again, causing a visible bulge to appear in her stomach, you ";
+	if Cunt Depth of Alexandra + 2 < 15: [standard values: 10 (+2 stretching allowance) vs 15]
+		say "can't help but wonder at the flexibility her body shows for such massive penetrations. Despite his huge size, Alexandra takes him with eagerness and loud moans, either not feeling any discomfort or her arousal drowning it out. ";
+		if TwistedCapacity of Alexandra is false:
+			increase Cunt Depth of Alexandra by 1; [oversized fucks stretch characters bit by bit]
+	else: [he actually fits into her]
+		say "can't help but be amazed at the flexibility her body shows for such massive penetrations. By now, the bitch is well-used to being shafted by exceptional pieces of man-meat, and she takes him with eagerness that is accompanied by loud moans. ";
+	say "Their shared sounds of ecstasy mount in volume and become more urgent quickly, with the stallion really hammering in and out of Alexandra now. The tough dobie bitch takes even this intense workout in stride, panting like she is in heat and with her tail wagging in the air beneath her. Then all of a sudden, an almost animalistic howl of lust wells up from the depth of her throat and she bucks against the horseman's hips in orgasm, the slender legs around his hips trembling and jerking. The equine stud isn't far behind, not with his erection being squeezed and stimulated by the spasming muscles in her pussy, and he grunts deeply as he starts to unload into her squelching depths, adding his own baby batter to the potent load already in her womb.";
+	WaitLineBreak;
+	say "     Closing the last few steps to the tall and muscled farm worker, you clap your hand jovially on his shoulder, asking if he's enjoying himself. 'Yeah, who wouldn't with this sexy bitch clamped around their dick?!' comes his well-pleased reply, followed by him half-turning his upper body to turn to you and stiffening as he realizes it's you. 'I - er,' he starts cautiously, only to relax as he sees you're smiling. After all, you dropped Alexandra off here to do exactly this. Clearing his throat, the man goes on to say, 'Thanks for getting us some action, [sir]! Your own hand will only do for so long, eh? And your woman here is a trooper!' Realizing that he's still holding the blissed-out Alexandra's arms pinned to the wall, he shifts his grip, instead holding her by the ass, with the other arm wrapping around her upper body to pull the bitch to his chest. 'Hey boss,' the dobie pants breathlessly as her gaze falls on you. 'Just spending some little time with the guys, you know.'";
+	say "     A chuckle goes through the room, intermixed with the guys at the table knocking on the wood and a few voices calling, 'Yeah!', 'She's a top tier bitch!' and 'Pick me for the next ride and I'll show you an even better ride!' The stallion still balls-deep inside Alexandra starts to look speculatively at you, eyes wandering down to your crotch as he asks, 'So, guess you want the next ride? Her being your bitch and all...' You wave him off and reply that you're happy to watch for now, but that you know someone who's just waiting to sink into her. With a grin, you point at the stallion you brought with you to the front, who starts beaming a lusty smile. Within seconds, he's got his pants pushed down to his ankles, kicking them off an eyeblink later and stepping forward on his hooves with a thick equine shaft leading the way. 'Really appreciate this, [sir]!' he tells you happily and reaches out to grope Alexandra's breasts.";
+	WaitLineBreak;
+	say "     'You sure put me among many eager boys with lots of stamina, boss! Good that I'm ready to handle them,' Alexandra barks out amusedly, tail waggking as she's happy to be the center of attention. The farmhand still balls-deep inside her leans his head forward to kiss Alexandra and says, 'Let's do this again soon babe!' 'Sure thing, I'll keep you in mind, stud!' she replies after giving him a wet doggy kiss that quickly becomes a three-way as she tugs on the new guy to come closer too. The former cop spends some moments going back and forth between them in making out, until the newcomer eventually bumps his coworker with an elbow and grunts, 'Come on, hand her over!' Almost reluctantly, the farmhand draws Alexandra away from his hips, his shaft literally white with frothed cum as it emerges. Finally only the flared head of his organ is inside her, tugging a little at her opening from the inside.";
+	say "     Your chosen successor for breeding Alexandra snakes his arms under her, getting a good grip and pulling her off the other farmhand in a gush of cum to splatter onto the floor and their hooves, only stopping as he rams her down on his own erection. Wet and dripping as she is, even the massive size of his shaft is no hindrance in penetrating your breeding bitch, with Alexandra giving a lusty gasp as she is filled to the brim, even showing a small bulge in her stomach from the sheer length of his shaft. 'Fuck,' she pants breathlessly as he starts to hammer her sex, turning around as if to show off his new cocksleeve to everyone in the room. You watch for a little while longer while yet another male takes Alexandra, then eventually gain some distance, secure in the knowledge that your slut's got all the cock she can take coming for her, and coming in her soon after.";
+
+to say AlexandraFarmhandStanding_Takeover:
+	say "     A grin spreads on your face as you tell the horseman next to you that he'll have to wait. It's your turn with the bitch next. His eyebrows draw together a little and the farmhand opens his mouth as if to protest, but he stops himself and just huffs out an indrawn breath. 'Fine, I guess - she's your slut after all. Still looking forward to having a go at her later myself though.' Quickly dropping your gear [if player is not naked]and clothing [end if]on a free bed nearby, in the wise anticipation of a fun but messy time with Alexandra, you saunter over to where she's being railed against the wall. Getting closer, you see more of the former cop past the broad chest of the horseman: she's naked except for an open leather jacket, which has been pushed back so her well-rounded breasts are in full view. The fur between her legs looks wet and matted with cum, some of which keeps squirting out of her in a frothy mess every time the equine thrusts in deeply.";
+	say "     Seeing a roughly fifteen-inch long horse cock pull out and then thrust into your bitch again, causing a visible bulge to appear in her stomach, you ";
+	if Cunt Depth of Alexandra + 2 < 15: [standard values: 10 (+2 stretching allowance) vs 15]
+		say "can't help but wonder at the flexibility her body shows for such massive penetrations. Despite his huge size, Alexandra takes him with eagerness and loud moans, either not feeling any discomfort or her arousal drowning it out. ";
+		if TwistedCapacity of Alexandra is false:
+			increase Cunt Depth of Alexandra by 1; [oversized fucks stretch characters bit by bit]
+	else: [he actually fits into her]
+		say "can't help but be amazed at the flexibility her body shows for such massive penetrations. By now, the bitch is well-used to being shafted by exceptional pieces of man-meat, and she takes him with eagerness that is accompanied by loud moans. ";
+	say "Their shared sounds of ecstasy mount in volume and become more urgent quickly, with the stallion really hammering in and out of Alexandra now. The tough dobie bitch takes even this intense workout in stride, panting like she is in heat and with her tail wagging in the air beneath her. Then all of a sudden, an almost animalistic howl of lust wells up from the depth of her throat and she bucks against the horseman's hips in orgasm, the slender legs around his hips trembling and jerking. The equine stud isn't far behind, not with his erection being squeezed and stimulated by the spasming muscles in her pussy, and he grunts deeply as he starts to unload into her squelching depths, adding his own baby batter to the potent load already in her womb.";
+	WaitLineBreak;
+	say "     Closing the last few steps to the tall and muscled farm worker, you clap your hand jovially on his shoulder, asking if he's enjoying himself. 'Yeah, who wouldn't with this sexy bitch clamped around their dick?!' comes his well-pleased reply, followed by him half-turning his upper body to turn to you and stiffening as he realizes it's you. 'I - er,' he starts cautiously, only to relax as he sees you're smiling. After all, you dropped Alexandra off here to do exactly this. Clearing his throat, the man goes on to say, 'Thanks for getting us some action, [sir]! Your own hand will only do for so long, eh? And your woman here is a trooper!' Realizing that he's still holding the blissed-out Alexandra's arms pinned to the wall, he shifts his grip, instead holding her by the ass, with the other arm wrapping around her upper body to pull the bitch to his chest. 'Hey boss,' the dobie pants breathlessly as her gaze falls on you. 'Just spending some little time with the guys, you know.'";
+	say "     A chuckle goes through the room, intermixed with the guys at the table knocking on the wood and a few voices calling, 'Yeah!', 'She's a top tier bitch!' and 'Pick me for the next ride and I'll show you an even better ride!' The stallion still balls-deep inside Alexandra starts to look speculatively at you, eyes wandering down to your crotch as he asks, 'So, guess you want the next ride? Her being your bitch and all...' You nod and wave him over to the nearest bed with the stallion obediently carrying his cocksleeve over to it, bending over the frame and lowering her onto the mattress, then almost reluctantly withdrawing himself from the well-bred cavern of her sex. His flared shaft is literally white with frothed cum as he pulls out and the man tells Alexandra, 'Let's do this again soon babe!' 'How could I say no to that,' she barks back in amusement, reaching out to slide her hand over his cock before licking off his seed from her fingers. 'Fuck,' he pants lustfully under his breath before stepping aside and making room for you.";
+	WaitLineBreak;
+
+to say AlexandraFarmhandStanding_Fuck:
+	say "[AlexandraFarmhandStanding_Takeover]";
+	say "     Sitting on the edge of the bed for a moment, stroking your hand over her supine form and teasing Alexandra's nipples, you grin down at your bad dog bitch. She meets your eyes and pants, 'Hell, boss. Gotta say that your plan of turning me into a puppy mill really has some interesting sides. Like taking a few [italic type]yards[roman type] of equine dicks a day! It's fun to be the willing whore for so many stallions!' A cheer from your spectators makes you look up and wave to the men, followed by announcing that you're taking a turn with what's yours now. With that said, you rise halfway, then swing your leg over Alexandra and get on the bed with her. Spreading the former cop's legs, to take her in the classic missionary position, your dick twitches as you glance down at her and you revel in the fact that you took a dutiful woman this far, turning her into your fucktoy, now literally drenched in a bunch of guy's seed and loving it.";
+	say "     Guiding your [cock of player] shaft in between her legs, you brush the dickhead against her folds, still open and slick from the stallions who went before you. Despite her having been railed long and hard today already, you can be sure that the bitch will be a nicely tight fuck, kinda a nice upside of a civilization-endangering nanite infection. Pushing forward into the squelching depths of your breeding slut, you grin at the canine gyrating her hips beneath you and moaning, 'Yeah boss, take your bad dog!' Her eager gasp entices you to thrust in hard, ";
+	if Cunt Depth of Alexandra + 2 < Cock Length of Player:
+		say "your long shaft popping right past the opening to her womb and making the woman groan and buck beneath you. It's clearly not the first time someone has pushed in there today, and with all the cum already fucked into her, Alexandra's innermost passage isn't all that hard to penetrate, with the pleasure far outweighing pain for the bitch. You can't help but feel a bit of pride at your fucktoy at being able to take such massive penetrations and lean forward to bring your head up to hers. ";
+	else: [player actually fits into her]
+		say "your shaft filling her receptive pussy and making the woman moan beneath you. She's warm, tight and very wet around your shaft, filled to the brim with equine cum. You can't help but feel a bit of pride at your fucktoy at being able to take such massive penetrations and lean forward to bring your head up to hers. ";
+	say "Meeting the dobie's muzzle in a hungry kiss and sucking on her floppy tongue, you hammer into her again and again, fucking with deep strokes.";
+	WaitLineBreak;
+	say "     Chuckling and a comment of, 'Yeah, look at [ObjectPro of Player] going! No wonder she's agreed to be [PosAdj of Player] bitch!' reminds you that you have an audience. Then a second stallion snorts, 'Just you wait for my turn. She'll be smitten with this dick and drop her panties at the snap of my fingers from then on,' followed by a reply of 'Which panties?! The slut's not wearing any!' Raising your head and looking over to them, two large farmhands who're standing nearby and stroking themselves casually as they watch, you grin widely and pull yourself out of Alexandra's snatch, brushing your dickhead over her clit and drawing fresh moans from her. Then you aim a little lower and thrust in hard, all the way until your balls slap against Alexandra's skin. The bitch gasps at the sudden deep penetration and wraps her arms around your body, clinging on for the rapid-fire pounding that follows, as you prove to the audience that you're the true master of this dobie.";
+	say "     Stimulating the anthro canine mercilessly, you drive her over the edge before much longer, with Alexandra letting out rapid, breathless pants and clutching you even tighter, her blunt claws leaving some light scratches on your back. She bucks against your body wildly, all the while her cum-filled pussy trembles and twitches around your manhood, almost milking your cock. Your own climax isn't far behind either, not with the sensations of her sex feeling so very good, and you bury yourself all the way into her with a deep grunt soon after. Gasping for air, you feel your balls tighten and pulse as the first heavy blast of creamy seed spurts deep into Alexandra, mingling with the earlier deposits of multiple equine studs. While you're still grinding against her, shooting more and more cum into the former cop, Alexandra licks your cheek and pants out, 'Man, with you as her boss, a bitch really gets all she can take!' And with that, she sinks back on the mattress, halfway passed out as she tries to recover from the exhaustion of constant sex.";
+	WaitLineBreak;
+	say "[AlexandraFarmhandStanding_TakeoverAftermath]";
+
+to say AlexandraFarmhandStanding_Join:
+	say "     A grin spreads over your face as you step up to the man next to you, reaching out to plant a hand on the bulge in his jeans and telling him that he doesn't really have to wait to get some pussy. The farmhand stares at you for a second, his eyes dancing up and down over your form before he gulps and a smile spreads over his face. 'We can do that, [sir].' Coming to stand at attention, the muscular male pops the button of his pants and pulls its zipper down, freeing a rapidly hardening equine shaft. Wrapping both hands around the length of his manhood, he slowly strokes up and down along its length, with the flared cock soon reaching its full 16 inches of erect length. With him showing his best piece off, you proceed to do the same, [if Player is not naked]pulling your clothes off in a[else]putting on a[end if] little show that has your stud entranced in no time at all, dripping pre-cum from the slit of his dickhead. And he's not the only one, as several of the other men in the room turn to watch, giving wolf-whistles and little cheers.";
+	say "     Standing naked in the midst of the whole work crew, you stroke your hand over the Clydesdale's firm pecs, then reach up to hook it behind his neck and pull the guy in for a kiss. While making out, he shimmys his jeans the rest of the way down, kicking them off urgently. The next thing you know is that you're being lifted in his strong arms, with the horseman's hands underneath your ass as he holds you tight against his body. 'Hold on to my shoulders, alright?' he tells you, waiting for you to do so before removing one hand from your ass to grab his cock and lining it up with your waiting pussy.  With a little bit of squeezing, his large flared head pops past your opening and slides deep into your body, with the guy lowering you relatively gently onto his cock. 'Nnngh, nice and tight,' he grunts as he bottoms out, squeezing your ass appreciatively.";
+	WaitLineBreak;
+	say "     Held aloft by his strong arms and the huge cock you're now impaled on, you're carried over to where Alexandra is still being railed, every step of your own anthro making his dick shift inside you and rub sensitive spots. Soon, he steps up besides the other naked Clydesdale, calling out a proud, 'Hey bro, look what I got!' An amused snort is the only reply, thought the other male gives you a lusty once-over with his gaze. Then you hear a female voice say, 'Hey boss, guess you wanted some equine action yourself, eh? Quite a feeling to be ridden by a horse!' You can't help but to agree, half-moaning your reply to Alexandra as your stud chooses that moment to grind his cock into your sex and almost taking your breath away with the sensations it creates.";
+	say "     All around your little double-feature of standing fucks, you hear more horsemen chatting, laughing and cheering on their brethren, with some things you can make out being, 'What, there's two bitches now?!' 'Yeah, guess the bossy one is as much as a nympho as the doberman. Guess [SubjectPro of Player]'d have to be if [SubjectPro of Player] usually lives with Alexandra.'' 'Fuck, I wanna do both of em!' From the sounds of it, your added participation has made today an occasion that will be very well remembered indeed. The men continue to chat, but you're too distracted by your stud starting to jack-hammer is pick into your pussy to really take any notice of it after that. Your world basically shrinks to just the important parts, yourself, the towering equine holding you against his crotch and the almost one and a half foot long shaft buried in your snatch.";
+	WaitLineBreak;
+	say "...";
+
+to say AlexandraFarmhandStanding_Eat:
+	say "[AlexandraFarmhandStanding_Takeover]";
+	say "     Sitting on the edge of the bed for a moment, stroking your hand over her supine form and teasing Alexandra's nipples, you grin down at your bad dog bitch. She meets your eyes and pants, 'Hell, boss. Gotta say that your plan of turning me into a puppy mill really has some interesting sides. Like taking a few [italic type]yards[roman type] of equine dicks a day! It's fun to be the willing whore for so many stallions!' A cheer from your spectators makes you look up and wave to the men, followed by announcing that you're taking a turn with what's yours now. With that said, you rise halfway, then swing your leg over Alexandra and get on the bed with her, in the classical 69 position. On all fours on top of the doberwoman, you can't help but get a good whiff of the manly aroma of equine cum and revel for a second in the fact that you took a dutiful policewoman this far, turning her into your fucktoy, now literally drenched in a bunch of guy's seed and loving it.";
+	say "     A lick over your [if player is male]erect cock[else if player is female]moist folds[else]sensitive crotch[end if] shakes you out of your thoughts, followed by Alexandra's sloppy tongue washing over your skin once more. 'You like the look of that, eh boss? Your doggie bitch, squelchingly full of cum[if Sterile of Alexandra is false] and most likely already knocked up again[end if]!' Choosing to show your feelings in actions, not words, you lower your head and lick her clit, tasting equine seed as you play your tongue over her pleasure-button. 'Nnghh,' comes Alexandra's reply, somewhat muffled as she's got her muzzle pressed to your crotch, giving back oral pleasure in turn. Your mutual stimulation encourages you to go deeper, tracing the outer folds of her sex with the tip of your tongue before dipping in between them and lapping up a little of the potent mixture of equine seed and female juices.";
+	WaitLineBreak;
+	say "     You spend the next little while with your head between Alexandra's legs, eating out her stallion-stretched pussy and teasing its sensitive pleasure-points with patient attention, all the while humping your own hips up and down as you enjoy the former cop's talented tongue. With yourself being fresh instead of already having orgasmed several times, it's little wonder that the anthro canine's ministrations drive you past the point of no return first, groaning in lust as you [if player is male]come while inside of her muzzle, spurting your seed over Alexandra's tongue[else if player is female]come, with her wet nose pressed against your clit and Alexandra's tongue wiggling inside your pussy[else]come, trembling all over as your body writhes in ecstasy[end if]. You ride out your orgasm, enjoying every moment of it, then take a deep breath and get back to work on your bitch's pussy, happy to give her a reward for being a good little fuckpet.";
+	say "     Now going all out in servicing her, eager to share your pleasure with Alexandra, you not only suckle and lick on her clit but also bring in your fingers to dig in between her nether lips. Pulling them out wet with cum just gives you more to lick up, and you lick and finger your anthro doggie while her moans get louder and more urgent by the moment. Then Alexandra bucks up under you, grinding her crotch against your face and lets out a needy whimper, followed by barks of pleasure as you plant your mouth over her clit and suck on it. 'Fffuckk yeah!' the bitch pants out loud, riding the wave of her climax. You keep at it, never letting up from her clit or wiggling your fingers inside her pussy while she's still trembling and twitching, doing your best to extend her orgasm as long as you can. This culminates in your dobie bitch eventually going limp on the bed, head lolling a little with closed eyes as she finds herself in sensory overload.";
+	WaitLineBreak;
+	say "[AlexandraFarmhandStanding_TakeoverAftermath]";
+
+to say AlexandraFarmhandStanding_TakeoverAftermath:
+	say "     You stay in intimate closeness with Alexandra for a little while, before eventually extracting yourself from the bed and standing up. Lots of grinning faces from the farmhands tell you that they enjoyed the show quite a bit. [bold type]Some sidelong glances the guys are giving Alexandra and yourself seem to ask the question of who'll go next, to which your answer is:[roman type][line break]";
+	say "     [link](1)[as]1[end link] - They'll figure it out between each other.";
+	say "     [link](2)[as]2[end link] - Wave the guy you talked with at the start over.";
+	say "     [link](3)[as]3[end link] - They should give it a rest for now.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 3:
+		say "Choice? (1-3)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to let them sort it out, [link]2[end link] to wave the hoseman you talked with over or [link]3[end link] to let her rest.";
+	if calcnumber is 1:
+		LineBreak;
+		say "     With a chuckle, you wave them to step up and have a go with Alexandra, then stroll over to where you stashed your gear [if player is not naked]and clothing[end if]. Behind you, there's some murmuring and quiet discussion, followed by an amused bark, then the wet and squelching noises of sex. Having already gotten off, you more or less ignore the action going on around Alexandra until it eventually dies down and she is stable on her legs enough again to put her pants back on.";
+	else if calcnumber is 2:
+		LineBreak;
+		say "     With a chuckle, you point at the guy you talked before, right after coming in here. He looks left and right, if you might be meaning someone else, then smiles broadly as he realizes that it's his lucky day. Almost instantly, the bulge in his pants grows a little and he has to adjust his manhood while walking over to you. 'Thanks, I've been looking forward to having a go!' the man says, squeezing your upper arm in a show of comraderie. Telling him to have fun, you then stroll over to where you stashed your gear [if player is not naked]and clothing[end if]. Behind you, there's some murmuring and quiet discussion, followed by an amused bark, then the wet and squelching noises of sex. Having already gotten off, you more or less ignore the action going on around Alexandra until it eventually dies down and she is stable on her legs enough again to put her pants back on.";
+	else:
+		say "     Clearing your throat, you announce that the guys should give Alexandra a rest for now. Some grumbling and groaning fills the room at your proclamation, but the men take your ruling obediently enough. Meanwhile, Alexandra is too out of it to even react, having dozed off on the bed. With a last look at her mostly naked, cum-covered form, you stroll over to where you stashed your gear [if player is not naked]and clothing[end if].";
 
 to AlexandraBrutus_Unchained:
 	now AlexandraBrutusInteraction is 52; [Alexandra ready for unchained sex]

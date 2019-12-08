@@ -4320,19 +4320,12 @@ to NewInfectionRoll:
 			now Cunt Color of Player is Cunt Color entry;
 			now Clit Size of Player is Clit Size entry;
 
-to attributeinfect:
-	attributeinfect silence state is 0;
-
-to attributeinfect silently:
-	attributeinfect silence state is 1;
-
-to attributeinfect silence state is ( Silence - a number ): [sets the player values from the new attributes]
+to attributeinfect:		[sets the player values from the new attributes]
 	choose row MonsterID from the Table of Random Critters;
 	if BodyName of Player is listed in infections of TaurList or BodyName of Player is listed in infections of NoLegList:
 		repeat with z running through equipped equipment:
 			if taur-compatible of z is false:
-				if Silence is 0:
-					say "     [bold type]Sadly, the [z] [if plural of z is true]are incompatible with your new body type, so you can do nothing but take them off[else]is incompatible with your new body type, so you can do nothing but take it off[end if].[roman type][line break]";
+				say "     [bold type]Sadly, the [z] [if plural of z is true]are incompatible with your new body type, so you can do nothing but take them off[else]is incompatible with your new body type, so you can do nothing but take it off[end if].[roman type][line break]";
 				now z is not equipped;
 	if there is a scale in row MonsterID of the Table of Random Critters:
 		if scalevalue of Player is not scale entry:
@@ -4340,19 +4333,15 @@ to attributeinfect silence state is ( Silence - a number ): [sets the player val
 			repeat with z running through equipped equipment:
 				if size of z > 0: [size restricted equipment]
 					if (scalevalue of Player - size of z > 1):
-						if Silence is 0:
-							say "     [bold type]You quickly rip your [z] off your body before [if plural of z is true]they are destroyed when you grow larger than they could support[else]it is destroyed when you grow larger than it could support[end if].[roman type][line break]";
+						say "     [bold type]You quickly rip your [z] off your body before [if plural of z is true]they are destroyed when you grow larger than they could support[else]it is destroyed when you grow larger than it could support[end if].[roman type][line break]";
 						now z is not equipped;
 					else if (scalevalue of Player - size of z is 1):
-						if Silence is 0:
-							say "     [bold type]Your [z] stretches a bit as it is forced to conform to a larger body.[roman type][line break]";
+						say "     [bold type]Your [z] stretches a bit as it is forced to conform to a larger body.[roman type][line break]";
 					else if (scalevalue of Player - size of z < -1):
-						if Silence is 0:
-							say "     [bold type]As you shrink, [z] becomes far too big to fit you. You have little choice but to take [if plural of z is true]them[else]it[end if] off.[roman type][line break]";
+						say "     [bold type]As you shrink, [z] becomes far too big to fit you. You have little choice but to take [if plural of z is true]them[else]it[end if] off.[roman type][line break]";
 						now z is not equipped;
 					else if (scalevalue of Player - size of z is -1):
-						if Silence is 0:
-							say "     [bold type]Your [z] hangs fairly on your now smaller frame.[roman type][line break]";
+						say "     [bold type]Your [z] hangs fairly on your now smaller frame.[roman type][line break]";
 	else:
 		now scalevalue of Player is 3;
 	if there is a body descriptor in row MonsterID of the Table of Random Critters:
@@ -4795,18 +4784,15 @@ postimport rules is a rulebook.
 Everyturn rules is a rulebook.
 
 This is the turnpass rule:
-	now fightstatus is 0;
-	now looknow is 0;
-	now ishunting is false;
-	now showlocale is true;
-	if the story has ended:
-		follow the everyturn rules;
-		rule succeeds;
 	follow the cock descr rule;
 	if "Sanity Saver" is listed in the feats of Player:
 		now humanity of Player is 100;
 	follow the cunt descr rule;
 	follow the breast descr rule;
+	now fightstatus is 0;
+	now looknow is 0;
+	now ishunting is false;
+	now showlocale is true;
 	if HP of Velos > 2:
 		if Velos is not in the location of the player:		[traveling w/player]
 			now Velos is in the location of the player;
@@ -7246,8 +7232,7 @@ To startFeatget: [alternate featget used for start] [Checkpoint-]
 			if calcnumber > 0 and calcnumber <= the number of filled rows in table of gainable feats:
 				now current menu selection is calcnumber;
 				choose row current menu selection from the table of gainable feats;
-				say "[title entry]: [description entry][line break]";
-				say "Is this what you want?";
+				say "[title entry]: [description entry]?";
 				if Player consents:
 					now freefeatgeneral is the title in row calcnumber of table of gainable feats; [important change from regular featget]
 					now featqualified is 0;
@@ -7278,8 +7263,7 @@ To startFunFeatget: [alternate funfeatget used for start]
 			if calcnumber > 0 and calcnumber <= the number of filled rows in table of gainable feats:
 				now current menu selection is calcnumber;
 				choose row current menu selection from the table of gainable feats;
-				say "[title entry]: [description entry][line break]";
-				say "Is this what you want?";
+				say "[title entry]: [description entry]?";
 				if Player consents:
 					now freefeatfun is the title in row calcnumber of table of gainable feats; [important change from regular featget]
 					now featqualified is 0;
@@ -8648,9 +8632,9 @@ to say menuwardlist:
 			say "Mindcontrol ";
 		if VoreList is warded:
 			say "Vore ";
-		say "[close bracket][roman type]";
+		say "[close bracket][roman type][line break]";
 	else:
-		say "[bold type]None Warded[roman type]";
+		say "[bold type]None Warded[roman type][line break]";
 
 to say menubanlist:
 	if CockVoreList is banned or FurryList is banned or MaleList is banned or FemaleList is banned or HumorousList is banned or DemonList is banned or HermList is banned or IncestList is banned or TransList is banned or MindcontrolList is banned or NonconList is banned or VoreList is banned:
@@ -8681,9 +8665,9 @@ to say menubanlist:
 			say "Mindcontrol ";
 		if VoreList is banned:
 			say "Vore ";
-		say "[close bracket][roman type]";
+		say "[close bracket][roman type][line break]";
 	else:
-		say "[bold type]None Banned[roman type]";
+		say "[bold type]None Banned[roman type][line break]";
 
 to say gsopt_1:
 	now calcnumber is -1;

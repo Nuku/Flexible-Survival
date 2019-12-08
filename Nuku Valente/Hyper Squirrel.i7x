@@ -238,36 +238,36 @@ to say snowsexmenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Vaginal on Snow";
 		now sortorder entry is 1;
-		now description entry is "fuck the horny squirrel";
+		now description entry is "Fuck the horny squirrel";
 		if Cock Length of Player > 4 and Cock Length of Player < 16 and nosquirrelanal is false:
 			choose a blank row in table of fucking options;
 			now title entry is "Anal on Snow";
 			now sortorder entry is 2;
-			now description entry is "fuck the squirrel's tight hole";
+			now description entry is "Fuck the squirrel's tight hole";
 	if Player is female and Cunt Depth of Player >= 10 and Cunt Tightness of Player >= 4:
 		choose a blank row in table of fucking options;
 		now title entry is "Vaginal on player";
 		now sortorder entry is 3;
-		now description entry is "get fucked by the squirrel";
+		now description entry is "Get fucked by the squirrel";
 	if Player is not neuter:
 [		if anallevel > 1:
 			choose a blank row in table of fucking options;
 			now title entry is "Anal on player";
 			now sortorder entry is 4;
-			now description entry is "get butt-fucked by the squirrel"; ]
+			now description entry is "Get butt-fucked by the squirrel"; ]
 		if Player is submissive and ( player is female and Cunt Depth of Player >= 10 and Cunt Tightness of Player >= 4 ) or anallevel > 1:
 			choose a blank row in table of fucking options;
 			now title entry is "Dommed and fucked";
 			now sortorder entry is 5;
-			now description entry is "have the squirrel take you hard";
+			now description entry is "Have the squirrel take you hard";
 	choose a blank row in table of fucking options;
 	now title entry is "Fellatio";
 	now sortorder entry is 6;
-	now description entry is "suck the squirrel's big cock";
+	now description entry is "Suck the squirrel's big cock";
 	choose a blank row in table of fucking options;
 	now title entry is "Cunnilingus";
 	now sortorder entry is 7;
-	now description entry is "eat out the squirrel's snatch";
+	now description entry is "Eat out the squirrel's snatch";
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -277,8 +277,7 @@ to say snowsexmenu:
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry][line break]";
-			say "Is this what you want?";
+			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;

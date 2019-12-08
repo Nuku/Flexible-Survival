@@ -352,9 +352,17 @@ Figure of Sonny_halfwool_nude_icon is the file "Sonny_halfwool_nude.jpg".
 Figure of Sonny_shaved_jeans_icon is the file "Sonny_shaved_jeans.jpg".
 Figure of Sonny_shaved_nude_icon is the file "Sonny_shaved_nude.jpg".
 Figure of Sonny_face_icon is the file "Sonny_face.jpg".
+Figure of Spike_jacket_icon is the file "Spike_jacket.jpg".
 Figure of Spike_clothed_icon is the file "Spike_clothed.jpg".
+Figure of Spike_shirtless_icon is the file "Spike_shirtless.jpg".
+Figure of Spike_jockstrap_icon is the file "Spike_jockstrap.jpg".
+Figure of Spike_straps_icon is the file "Spike_straps.jpg".
+Figure of Spike_straps_hard_icon is the file "Spike_straps_hard.jpg".
+Figure of Spike_speedo_icon is the file "Spike_speedo.jpg".
 Figure of Spike_face_icon is the file "Spike_face.jpg".
-Figure of Spike_naked_icon is the file "Spike_naked.jpg".
+Figure of Spike_hard_icon is the file "Spike_hard.jpg".
+Figure of Spike_naked_hard_icon is the file "Spike_naked_hard.jpg".
+Figure of Spike_naked_soft_icon is the file "Spike_naked_soft.jpg".
 Figure of Stella_icon is the file "Stella_ig.jpg".
 Figure of Susan_face_icon is the file "Susan_face.jpg".
 Figure of Sven_naked_icon is the file "Sven_naked.jpg".
@@ -922,9 +930,17 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Skarnoth_naked"	Figure of Skarnoth_naked_icon	"Kien-Biu"	g-black	"normal"
 "Skin Diagram 1"	Figure of SkinDiagram1_icon	"Wahn"	g-white	"normal"
 "Skin Diagram 1"	Figure of SkinDiagram2_icon	"Wahn"	g-white	"normal"
+"Spike_jacket"	Figure of Spike_jacket_icon	"Lyttathebug"	g-black	"normal"
 "Spike_clothed"	Figure of Spike_clothed_icon	"Lyttathebug"	g-black	"normal"
-"Spike_face"	Figure of Spike_face_icon	"SineAlas"	g-black	"normal"
-"Spike_naked"	Figure of Spike_naked_icon	"Lyttathebug"	g-black	"normal"
+"Spike_shirtless"	Figure of Spike_shirtless_icon	"Lyttathebug"	g-black	"normal"
+"Spike_jockstrap"	Figure of Spike_jockstrap_icon	"Lyttathebug"	g-black	"normal"
+"Spike_straps"	Figure of Spike_straps_icon	"Lyttathebug"	g-black	"normal"
+"Spike_straps_hard"	Figure of Spike_straps_hard_icon	"Lyttathebug"	g-black	"normal"
+"Spike_speedo"	Figure of Spike_speedo_icon	"Lyttathebug"	g-black	"normal"
+"Spike_hard"	Figure of Spike_hard_icon	"Lyttathebug"	g-black	"normal"
+"Spike_naked_hard"	Figure of Spike_naked_hard_icon	"Lyttathebug"	g-black	"normal"
+"Spike_speedo"	Figure of Spike_naked_soft_icon	"Lyttathebug"	g-black	"normal"
+"Spike_naked_soft"	Figure of Spike_face_icon	"SineAlas"	g-black	"normal"
 "Succubus"	Figure of Succubus_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Sugar Glider"	Figure of SugarGlider_icon	"Xilrayne"	g-black	"normal"
 "Susan_face"	Figure of Susan_face_icon	"SineAlas"	g-black	"normal"
