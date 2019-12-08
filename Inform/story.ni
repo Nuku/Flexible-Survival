@@ -303,6 +303,7 @@ A person has a truth state called PenileVirgin. PenileVirgin is usually true. [n
 A person has a truth state called SexuallyExperienced. SexuallyExperienced is usually false. [not saved till new infection system update]
 A person has a truth state called TwistedCapacity. TwistedCapacity is usually false. [not saved till new infection system update]
 A person has a truth state called Sterile. Sterile is usually false. [not saved till new infection system update]
+A person has a truth state called Sleeping. Sleeping is usually false. [should not be saved? unless someone wants to make sleeping beauty]
 A person has a text called Originalgender. Originalgender is usually "Undefined". [original gender of the pre-transform person]
 A person has a text called PlayerOriginalgender. PlayerOriginalGender is usually "Undefined". [first meeting gender with the player]
 A person has a text called PlayerLastGender. PlayerLastGender is usually "Undefined". [gender of the player during the last meeting]
@@ -543,6 +544,12 @@ Definition: A grab object (called x) is wielded:
 Definition: A grab object (called x) is unwieldy:		[applies to armaments only]
 	if grab object is journal, no;
 	if the absolute value of ( scalevalue of Player - objsize of x ) > 1, yes;
+	no;
+
+A person can be asleep. A person is usually not asleep.
+
+Definition: A person (called x) is asleep:
+	if Sleeping of x is true, yes;
 	no;
 
 A person can be defaultnamed. A person is usually defaultnamed.
@@ -1089,6 +1096,12 @@ Definition: A person (called x) is barechest:
 
 Definition: A person (called x) is naked:
 	if x is barecrotch and x is barechest and x is barefoot:
+		yes;
+	else:
+		no;
+
+Definition: A person (called x) is gimpy:
+	if gimp mask is equipped:
 		yes;
 	else:
 		no;
@@ -6614,6 +6627,7 @@ Include Gryphons Plot by Shay.
 Include Gunbunny by Stripes.
 Include Harpy by Nuku Valente.
 Include Hawkman by Sarokcat.
+Include Hellfire Demon by Gherod.
 Include Helot by Wahn.
 Include Hentai Fan by Stripes.
 Include Herm Dolphin by Hellerhound.
@@ -6933,6 +6947,7 @@ Include Meredith by Stripes.
 Include Micaela by Stripes.
 Include Midnight by Sarokcat.
 Include Milo by CrimsonAsh.
+Include Mogdraz by Gherod.
 Include Monty by Wahn.
 Include Mouse Taur by Nuku Valente.
 Include Pet Mutt by CrimsonAsh.
@@ -6979,7 +6994,7 @@ Include Sidney by Stripes.
 Include Sirius by Prometheus.
 Include Skarnoth by Wahn.
 Include Skarnoth Loyalty by Luneth.
-Include Skarnoth-Brutus Scenes by Luneth.
+Include Skarnoth Brutus Scenes by Luneth.
 Include Solstice by Stripes.
 Include Sonny by Rikaeus.
 Include Spike by Wahn.
