@@ -1690,7 +1690,7 @@ to say SpikeTalk11: [talk about Urik]
 			LineBreak;
 			say "     Stepping up and throwing an arm around Spike's shoulders, you pat his chest and tell him that maybe he shouldn't train with the orc. Being lithe and quick on his paws is quite something already, and in trying to be a muscle hunk, he could very well trade down. Spike almost soaks up each word of praise you give him, his chest swelling a little and the tail behind his back starting to wag. 'Really? I mean, yeah totally! I'll focus on getting quicker instead! I wanna be my best for you, [SpikePlayerAddress]!'";
 			now Stamina of Spike is 100;
-		else if calnumber is 3:
+		else if calcnumber is 3:
 			LineBreak;
 			say "     Stepping up and putting a hand on Spike's shoulder, you look into his eyes and tell him that he really shouldn't pay any mind to what Urik's saying. The orc just likes to goad and push people, and reacting to it just makes things worse. He'll just find new things to rib him with. 'But I wanna show that asshole that...' Spike starts to reply angrily, only to stop and say, 'Oh! Uhm, I'm doing exactly what he wanted, aren't I? Damn, you're right [SpikePlayerAddress]! Enough of this then. I'll keep my distance and won't pay him no mind anymore.'";
 			now Stamina of Spike is 100;
@@ -1715,7 +1715,7 @@ to say SpikeTalk11: [talk about Urik]
 			LineBreak;
 			say "     Stepping up and throwing an arm around Spike's shoulders, you pat his chest and tell him that maybe he shouldn't train with the orc. Being lithe and quick on his paws is quite something already, and in trying to be a muscle hunk, he could very well trade down. Spike almost soaks up each word of praise you give him, his chest swelling a little and the tail behind his back starting to wag. 'Really? I mean, yeah totally! I'll focus on getting quicker instead! I wanna be my best for you, [SpikePlayerAddress]!'";
 			now Stamina of Spike is 100;
-		else if calnumber is 3:
+		else if calcnumber is 3:
 			LineBreak;
 			say "     Stepping up and putting a hand on Spike's shoulder, you look into his eyes and tell him that you worry about there being more than just an energy drink in what Urik gave him to drink. There's a good possibility that it had at least some orc cum in it. The young doberman gapes at you, then sticks out his tongue in disgust, running his fingers over it as if to scrape off some horrible taste. 'Eww, really? Bleh, that's just... who would do such a thing? Oh wait, a total asshole would. Almost forgot who we're talking about! I think I need some mouthwash.' With the young man being quite obviously repelled by the thought of Urik's seed in his mouth, you can be sure that he won't accept any more drinks from the orc.";
 			now Stamina of Spike is 53;

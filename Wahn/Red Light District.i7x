@@ -132,32 +132,32 @@ Porn Store is northwest of Boundary Street West.
 
 Table of GameRoomIDs (continued)
 Object	Name
-Boundary Street North	"Boundary Street North"
+Northern Street 1	"Northern Street 1"
 
-Boundary Street North is a room.
-Boundary Street North is north of Entrance to the Red Light District.
-The earea of Boundary Street North is "Red".
-The description of Boundary Street North is "[RedLightBoundaryNorthDesc]".
+Northern Street 1 is a room.
+Northern Street 1 is north of Entrance to the Red Light District.
+The earea of Northern Street 1 is "Red".
+The description of Northern Street 1 is "[RedLightNorthStreet2Desc]".
 
-to say RedLightBoundaryNorthDesc:
+to say RedLightNorthStreet1Desc:
 	say "     You're on a road that runs along the border to the red light district, past the prominent [']SEX SEX SEX['] neon signs along the facades of a number of buildings on the street sides before you. Though without power to support the alluring shine of all the signage, it just seems kinda dingy. Some piles of uncollected trash litter the street, and the way splits into a few thin and shady alleys, though they seem to have nothing of interest. However, the road extends a bit further, onto a building with a neon sign saying [']TOYS['], alongside a pair of handcuffs, and further beyond where an ominous, faint red light shines through a thinner street just around the corner to the right.";
 
-instead of smelling Boundary Street North:
+instead of smelling Northern Street 1:
 	say "     This place smells very strongly of sex, with a musky scent of arousal hanging thick in the air. This neighborhood was clearly struck hard by the infection, being particularly vulnerable. The scents of several lustful creatures waft by your nose, so strong that their origins can't be far off. You catch the scent of what you guess to be [one of]a hyper-masculine creature[or]some kind of feline creature[or]a strong latex source[or]a dark and powerful female[or]arousing pollen[or]a large marsupial[or]an arousing perfume[or]a herm and cheap sex[at random], making your head swim a bit before you shake the sensation off.";
 
 Table of GameRoomIDs (continued)
 Object	Name
-Northern Street	"Northern Street"
+Northern Street 2	"Northern Street 2"
 
-Northern Street is a room.
-Northern Street is north of Boundary Street North.
+Northern Street 2 is a room.
+Northern Street 2 is north of Northern Street 1.
 The earea of Northern Street is "Red".
-The description of Northern Street is "[RedLightNorthStreetDesc]".
+The description of Northern Street is "[RedLightNorthStreet2Desc]".
 
-to say RedLightNorthStreetDesc:
-	say "     You're in the middle of the northern road, coming across a building with neon signs saying [']TOYS['], alongside a pair of handcuffs, indicating this must have been some kind of store for the kinky fans of sex toys. Besides it, there's still a small pile of uncollected trash. The road itself extends just around the corner towards east, into a thinner street where an ominous, faint red light dims through. Traveling south would lead you towards the crossroad marking the entrance to the Red Light District.";
+to say RedLightNorthStreet2Desc:
+	say "     You're in the middle of the northern road, coming across a building with neon signs saying [']TOYS['], alongside a pair of handcuffs, indicating this must have been some kind of store for the kinky fans of sex toys. Besides it, there's still a small pile of uncollected trash. Towards the northeast, there is a thinner street where an ominous, faint red light dims through. Traveling south would lead you towards the crossroad marking the entrance to the Red Light District.";
 
-instead of smelling Northern Street:
+instead of smelling Northern Street 2:
 	say "     This place smells very strongly of sex, with a musky scent of arousal hanging thick in the air. This neighborhood was clearly struck hard by the infection, being particularly vulnerable. The scents of several lustful creatures waft by your nose, so strong that their origins can't be far off. You catch the scent of what you guess to be [one of]a hyper-masculine creature[or]some kind of feline creature[or]a strong latex source[or]a dark and powerful female[or]arousing pollen[or]a large marsupial[or]an arousing perfume[or]a herm and cheap sex[at random], making your head swim a bit before you shake the sensation off.";
 
 Table of GameRoomIDs (continued)
@@ -165,7 +165,7 @@ Object	Name
 Crimson Street	"Crimson Street"
 
 Crimson Street is a room.
-Crimson Street is east of Northern Street.
+Crimson Street is northeast of Northern Street 2.
 The earea of Crimson Street is "Red".
 The description of Crimson Street is "[RedLightCrimsonStreetDesc]".
 

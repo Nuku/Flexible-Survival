@@ -93,6 +93,8 @@ Figure of MathTeacher_icon is the file "MathTeacher.png".
 Figure of Megakitty_icon is the file "Megakitty_ig.jpg".
 Figure of MentalMice_icon is the file "Mental_Mice.jpg".
 Figure of MessyPig_icon is the file "FS_MessyPig.jpg".
+Figure of Minotaur_hard_icon is the file "Minotaur_hard.jpg".
+Figure of Minotaur_naked_icon is the file "Minotaur_naked.jpg".
 Figure of Naga_icon is the file "Naga.jpg".
 Figure of NinjaCat_F_icon is the file "CatNinja_F_ig.jpg".
 Figure of NinjaCat_M_icon is the file "NinjaCat_M_ig.jpg".
@@ -105,6 +107,7 @@ Figure of QueenBee_icon is the file "QueenBee_ig.jpg".
 Figure of Ram_icon is the file "FS_Ram.jpg".
 Figure of Reindeer_icon is the file "Reindeer_ig.jpg".
 Figure of SandMan_icon is the file "Sand Man.jpg".
+Figure of Satyress_naked_icon is the file "Satyress.jpg".
 Figure of ShadowBeast_icon is the file "ShadowBeast.jpg".
 Figure of Pewter_Consort_icon is the file "Pewter_Consort.jpg".
 Figure of PirateShark_icon is the file "sharkpirate.png".
@@ -848,6 +851,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Micaela"	Figure of Micaela_icon	"Kattzie"	g-white	"normal"
 "Mike_face"	Figure of Mike_face_icon	"SineAlas"	g-black	"normal"
 "Mike"	Figure of Mike_icon	"Darian821"	g-black	"normal"
+"Minotaur hard"	Figure of Minotaur_hard_icon	"Vashaa"	g-White	"normal"
+"Minotaur naked"	Figure of Minotaur_naked_icon	"Vashaa"	g-White	"normal"
 "Monty_ass"	Figure of Monty_ass_icon	"Obieblu"	g-white	"normal"
 "Monty_combat"	Figure of Monty_combat_icon	"Obieblu"	g-white	"normal"
 "Monty_postcombat"	Figure of Monty_postcombat_icon	"Obieblu"	g-white	"normal"
@@ -905,6 +910,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Sarah_face"	Figure of Sarah_face_icon	"Lyttathebug"	g-white	"normal"
 "Sarah_face_naked"	Figure of Sarah_face_naked_icon	"Lyttathebug"	g-white	"normal"
 "Sarah_naked"	Figure of Sarah_naked_icon	"Lyttathebug"	g-white	"normal"
+"Satyress_naked"	Figure of Satyress_naked_icon	"Vashaa"	g-White	"normal"
 "Septus"	Figure of Septus_icon	"Feralise"	g-black	"normal"
 "Septus_face"	Figure of Septus_face_icon	"Cirrusthecloud"	g-black	"normal"
 "SgtMarks"	Figure of SgtMarks_icon	"Anyare"	g-white	"normal"
@@ -1120,6 +1126,7 @@ carry out artistcredits:
 	say "     Mental Mice by Xilrayne @ https://inkbunny.net/Xilrayne[line break]";
 	say "     Messy Pig by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Megakitty by BushyCat @ furaffinity.net[line break]";
+	say "     Minotaur by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Naga by Rastear @ y-gallery.net[line break]";
 	say "     Ninja Cat (female) by Bix707 @ furaffinity.net[line break]";
 	say "     Ninja Cat (male) by <redacted>[line break]";
@@ -1135,6 +1142,7 @@ carry out artistcredits:
 	say "     Ram by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Reindeer by MoT @ furaffinity.net[line break]";
 	say "     Sand Man by Rastear @ y-gallery.net[line break]";
+	say "     Satyress by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Shadow Beast by Hioshiru @ https://www.furaffinity.net/user/hioshiru/[line break]";
 	say "     Shemale Smooth Collie by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Siamese Cats by RedCoatCat @ furaffinity.net[line break]";
