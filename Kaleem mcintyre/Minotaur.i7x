@@ -8,10 +8,12 @@ Version 2 of Minotaur by Kaleem mcintyre begins here.
 "Adds Minotaur to Flexible Survival."
 
 to say minodesc:
+	project Figure of Minotaur_naked_icon;
 	setmongender 3; [creature is male]
 	say "     Looking over the burly beast in front of you, you look over the eight foot, muscular frame of what can only be a Minotaur. With an unkempt brown furred hide, a head like that of a bull, and two huge ivory white horns jutting out above its brow, the bullman snorts loudly in your direction in an obvious sign of challenge. With arms wide enough to circle you in an unforgiving bear hug you see that the Minotaur's upper body sits atop two Adonis-like legs which are oddly jointed and covered in fur. Body packed with a dense padding of heavy muscles on a human-like frame, the bull kicks a hoof up back behind it as it lowers its head down in readiness to charge. A private peek would reveal that the bullman has a titanic, throbbing, precum-leaking bullcock and two fat, bowling ball-sized balls swaying underneath the skimpy loincloth the other has futilely wrapped around its thick waist.";
 
 to say losetomino:
+	project Figure of Minotaur_hard_icon;
 	if Player is female:
 		if a random chance of 2 in 5 succeeds:
 			say "     Having defeated you the Minotaur wastes no time in stalking over to where you lay prone before his sweat soaked and battle charged form. Reaching down the bullman rips your clothes free from your [BodyName of Player] form and then lowers itself down to slid its pulsating manhood along your moist vagina, quickly coating its hard length in a mixture of your arousal and his pre cum. With little fanfare the bullman spears you with his massive girth in a single rough thrust of his meaty hips. Slowly, but forcefully the Minotaur slides his throbbing length into your nethers, the stimulation of the many throbbing veins along the bullman's cock sends you spiraling over the edge of painful rapture as the Minotaur treats you to a forceful style of fucking that's made everything beforehand seem like a joke. The heavy bulge of his cock rippling through your midsection makes a moan shoot free from your lips as your pulsing cunt wraps around the bullman's throbbing cock like a vice. Humping and thrusting like the stud bull he is while mooing and grunting with concentrated effort to fill you full of his calfs, the Minotaur uses you like a cheap sex toy as he grinds and humps his massive cock into your aching twat hard enough that you end up seeing stars ever time his groin presses flush against your own.";
@@ -39,6 +41,7 @@ to say losetomino:
 
 
 to say beatthemino:
+	project Figure of Minotaur_hard_icon;
 	say "Having defeated the monstrous Minotaur you look at the other with lustful eyes as you think about all the fun you could have will the bullman.";
 	say "     [bold type]Maybe it would be good time to let out some frustration?[roman type][line break]";
 	LineBreak;

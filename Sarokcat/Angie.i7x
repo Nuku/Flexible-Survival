@@ -217,16 +217,26 @@ Angie	"Angie"
 Angie is a woman.
 [Physical details as of game start]
 ScaleValue of Angie is 3. [human sized]
+Body Weight of Angie is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Angie is 2. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+Androginity of Angie is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 SleepRhythm of Angie is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Angie is 1. [X cock]
-Cock Length of Angie is 8. [X Inches]
-Ball Size of Angie is 4.
-Ball Count of Angie is 2. [X balls]
-Cunt Count of Angie is 1. [X pussy]
-Cunt Depth of Angie is 8. [X Cunt]
-Cunt Tightness of Angie is 4. [X Cunt]
-Nipple Count of Angie is 2. [X nipples]
-Breast Size of Angie is 4. [X at the start]
+Mouth Length of Angie is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Angie is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Angie is 5. [length in inches]
+Cock Count of Angie is 1. [number of cocks]
+Cock Girth of Angie is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Angie is 8. [length in inches]
+Ball Size of Angie is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Ball Count of Angie is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Cunt Count of Angie is 1. [number of cunts]
+Cunt Depth of Angie is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Angie is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Angie is 1. [size 1-5, very small/small/average/large/very large]
+Asshole Depth of Angie is 10. [inches deep for anal fucking]
+Asshole Tightness of Angie is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Nipple Count of Angie is 2. [count of nipples]
+Breast Size of Angie is 4. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 [Basic Interaction states as of game start]
 TwistedCapacity of Angie is false. [can not take oversized members without pain]
 Sterile of Angie is false.
@@ -554,6 +564,7 @@ to say AngieSexMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
+				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if (nam is "Fuck her"):
 					say "[AngieSex1]";

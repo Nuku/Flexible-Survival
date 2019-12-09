@@ -678,7 +678,11 @@ It is temporary.
 
 to say DobermanBitchFurUse:
 	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	setmonster "Doberman Bitch";
+	choose row MonsterID from the Table of Random Critters;
+	now non-infectious entry is false;
 	infect "Doberman Bitch";
+	now non-infectious entry is true;
 
 instead of sniffing doberman bitch fur:
 	say "The fur has a pleasing, not too strong, animal-like scent.";

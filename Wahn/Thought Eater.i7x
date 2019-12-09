@@ -72,50 +72,52 @@ to say TESlaveSexMenu:
 	setmonster "Herm Human";
 	choose row MonsterID from the Table of Random Critters;
 	blank out the whole of table of fucking options;
+	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him blow your cock";
 		now sortorder entry is 1;
-		now description entry is "Let the herm slave blow you.";
+		now description entry is "Let the herm slave blow you";
 		now toggle entry is TESlaveSex rule;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Suck his cock";
 	now sortorder entry is 2;
-	now description entry is "Put the Asian dude's shaft in your mouth.";
+	now description entry is "Put the Asian dude's shaft in your mouth";
 	now toggle entry is TESlaveSex rule;
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him lick your pussy";
 		now sortorder entry is 3;
-		now description entry is "Put the herm slave's mouth to good use.";
+		now description entry is "Put the herm slave's mouth to good use";
 		now toggle entry is TESlaveSex rule;
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck his pussy";
 		now sortorder entry is 4;
-		now description entry is "Fill the herm slave's pussy with your cock.";
+		now description entry is "Fill the herm slave's pussy with your cock";
 		now toggle entry is TESlaveSex rule;
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Let him fuck your pussy";
 		now sortorder entry is 5;
-		now description entry is "Ride the Asian dude's cock.";
+		now description entry is "Ride the Asian dude's cock";
 		now toggle entry is TESlaveSex rule;
 	if (Cock Count of Player > 1):
 		choose a blank row in table of fucking options;
 		now title entry is "Take his ass";
 		now sortorder entry is 6;
-		now description entry is "Fill the herm slave's ass with your cock.";
+		now description entry is "Fill the herm slave's ass with your cock";
 		now toggle entry is TESlaveSex rule;
 	choose a blank row in table of fucking options;
 	now title entry is "Let him fuck your ass";
 	now sortorder entry is 7;
-	now description entry is "Ride the Asian dude's cock.";
+	now description entry is "Ride the Asian dude's cock";
 	now toggle entry is TESlaveSex rule;
 	choose a blank row in table of fucking options;
 	now title entry is "Nothing";
 	now sortorder entry is 8;
-	now description entry is "Don't have sex with the herm slave after all.";
+	now description entry is "Don't have sex with the herm slave after all";
 	now toggle entry is TESlaveSex rule;
 	sort the table of fucking options in sortorder order;
 	change the current menu to table of fucking options;
@@ -125,8 +127,7 @@ to say TESlaveSexMenu:
 This is the TESlaveSex rule:
 	choose row Current Menu Selection in table of fucking options;
 	let nam be title entry;
-	say "[title entry]: [description entry][line break]";
-	say "Is this what you want?";
+	say "[title entry]: [description entry]?";
 	if Player consents:
 		decrease menu depth by 1;
 		clear the screen;

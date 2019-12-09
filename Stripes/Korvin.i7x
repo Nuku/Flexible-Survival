@@ -93,6 +93,27 @@ object	name
 Korvin	"Korvin"
 
 Korvin is a man.
+ScaleValue of Korvin is 3. [human sized]
+Cock Count of Korvin is 1.
+Cock Length of Korvin is 9.
+Ball Size of Korvin is 3.
+Ball Count of Korvin is 2.
+Cunt Count of Korvin is 0.
+Cunt Depth of Korvin is 9.
+Cunt Tightness of Korvin is 2.
+Nipple Count of Korvin is 2. [2 nipples]
+Breast Size of Korvin is 0.
+[Basic Interaction states as of game start]
+PlayerMet of Korvin is false.
+PlayerRomanced of Korvin is false.
+PlayerFriended of Korvin is false.
+PlayerControlled of Korvin is false.
+PlayerFucked of Korvin is false.
+OralVirgin of Korvin is false.
+Virgin of Korvin is true.
+AnalVirgin of Korvin is false.
+PenileVirgin of Korvin is false.
+SexuallyExperienced of Korvin is true.
 The description of Korvin is "[Korvindesc]".
 
 instead of fucking Korvin:
@@ -226,7 +247,7 @@ to say gshep_postfightargue:		[Post-fight argument]
 	increase weapon damage of gshep by 1;
 	now GShepLastScene is turns;
 	if gsd_pet is 12 or gsd_pet is 13 or gsd_pet is 14:
-		if ( gshep_postfight > 0 and gshep_sexscene > 0 and gshep_bed_scene > 0 ) or ( gshep_postfight > 0 and gshep_sexscene > 0 and gshep_inactive > 0 ) or ( gshep_postfight > 0 and gshep_bed_scene > 0 and gshep_inactive > 0 ) or ( gshep_sexscene > 0 and gshep_bed_scene > 0 and gshep_inactive > 0 ):
+		if ( gshep_postfight > 0 and gshep_sexscene > 0 and gshep_bed_scene > 0 and gshep_inactive > 0 ):
 			say "[gshep_collar_prompt]";
 	WaitLineBreak;
 
@@ -278,7 +299,7 @@ to say gshep_sexargue:				[Sex role argument]
 			say "     You lick each other's loins clean before separating and getting up. You give the g-shep's ass a light swat and his tail gives a happy wag, sending him on his way. You take your time gathering up your clothes and equipment, enjoying the blissful afterglow.";
 		now gshep_sexscene is 1;
 		now GShepLastScene is turns;
-	if ( gshep_postfight > 0 and gshep_sexscene > 0 and gshep_bed_scene > 0 ) or ( gshep_postfight > 0 and gshep_sexscene > 0 and gshep_inactive > 0 ) or ( gshep_postfight > 0 and gshep_bed_scene > 0 and gshep_inactive > 0 ) or ( gshep_sexscene > 0 and gshep_bed_scene > 0 and gshep_inactive > 0 ):
+	if ( gshep_postfight > 0 and gshep_sexscene > 0 and gshep_bed_scene > 0 and gshep_inactive > 0 ):
 		say "[gshep_collar_prompt]";
 
 instead of going down from the Grey Abbey Library while gshep is tamed and ( gsd_pet is 12 or gsd_pet is 13 or gsd_pet is 14 ) and GShepLastScene - turns >= 4 and player is not neuter and (gshep_bed_scene is 0 or gshep_inactive is 0) and a random chance of 2 in 3 succeeds: [Discipline argument / inactivity argument]
@@ -344,7 +365,7 @@ to say gshep_bedcrumbs:
 			say "     As soon as you're able to pull free from the knot, you pull off of the dog's dick. The excess semen flows out, much of it making a mess on and between his thighs as well as your bunk. Giving his rope collar a tug, you order him to clean up the mess he's made of your bed when he's recovered. 'And no more getting crumbs on my bed. When I want to fuck you, you'll know it, you slut,' you add with a light bap on his nose. Korvin climbs out of the bed and obediently cleans up your bunk and the floor around it without delay or backtalk.";
 		now gshep_bed_scene is 1;
 	now GShepLastScene is turns;
-	if ( gshep_postfight > 0 and gshep_sexscene > 0 and gshep_bed_scene > 0 ) or ( gshep_postfight > 0 and gshep_sexscene > 0 and gshep_inactive > 0 ) or ( gshep_postfight > 0 and gshep_bed_scene > 0 and gshep_inactive > 0 ) or ( gshep_sexscene > 0 and gshep_bed_scene > 0 and gshep_inactive > 0 ):
+	if ( gshep_postfight > 0 and gshep_sexscene > 0 and gshep_bed_scene > 0 and gshep_inactive > 0 ):
 		say "[gshep_collar_prompt]";
 
 to say gshep_inactive_scene:
@@ -381,7 +402,7 @@ to say gshep_inactive_scene:
 		say "     When the two of you return to the library, he goes to find somewhere to curl up. You know he won't always do so patiently, but you're confident he'll wait until called upon from now on. You continue on into the bunker, getting back to what you were doing before.";
 		now gshep_inactive is 1;
 		now companion of Player is nullpet;
-	if ( gshep_postfight > 0 and gshep_sexscene > 0 and gshep_bed_scene > 0 ) or ( gshep_postfight > 0 and gshep_sexscene > 0 and gshep_inactive > 0 ) or ( gshep_postfight > 0 and gshep_bed_scene > 0 and gshep_inactive > 0 ) or ( gshep_sexscene > 0 and gshep_bed_scene > 0 and gshep_inactive > 0 ):
+	if ( gshep_postfight > 0 and gshep_sexscene > 0 and gshep_bed_scene > 0 and gshep_inactive > 0 ):
 		say "[gshep_collar_prompt]";
 
 
