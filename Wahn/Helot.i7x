@@ -435,13 +435,14 @@ Instead of Resolving a Wandering Helot:
 				else:
 					say "     You wait... and wait...";
 					say "     And unfortunately, no signs of him. It's very unlikely that you'll ever see him today, so you're left no choice but to give up on this idea for now. Maybe some other time you'll be luckier.";
-			if calcnumber is 2: [No]
+			else if calcnumber is 2: [No]
 				LineBreak;
 				say "     Right now you have other things in mind, so you just get going through the street and resume your exploration.";
 			else if calcnumber is 3:
 				LineBreak;
 				say "     You decide to leave this place, and for good this time, avoiding the area so that you can erase any chance of meeting the wandering helot again.";
 				now resolution of Wandering Helot is 99;
+				now Wandering Helot is resolved;
 
 to WanderingHelot1:
 	say "     Sounds like you have some options here. [bold type]You could try to tackle him down by surprise and take his loot, attempt to talk to him as he passes by, or just remain hidden and leave him be.[roman type][line break]";
@@ -462,7 +463,7 @@ to WanderingHelot1:
 		LineBreak;
 		say "     You decide to wait until he's in range for a surprise attack, build up your strength and, once he comes close enough, you rush at him!";
 		WanderingHelotTackle;
-	if calcnumber is 2: [talk]
+	else if calcnumber is 2: [talk]
 		say "     Deciding not to resort to violence, you think it might be a good thing to try to get to know the helot! What could go wrong in trying to talk to a former slave carrying an enormous amount of loot on his back, after all? With this in mind, you wait for him to walk up to your position. Exiting from the alley street and towards him, you greet him in the most friendly way you find possible. 'Aah! Who's this?! A thief?! You won't get anything from me!' You rush to explain that you're not a thief and that you just want to talk to him...";
 		let bonus be (( charisma of player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
@@ -478,7 +479,7 @@ to WanderingHelot1:
 				say "     With you now on your knees in front of him, you bring your hands over his shaft and balls, giving each one of them a nice gentle squeeze before you lick the underline of his meat stick right towards the top of his already throbbing erection. 'Is that all you've got? That's how bad you want some of my hard earned lood?!' he taunts you, but the moans he lets out while you work his cock betray his attempts at looking tough. Eventually, he just loses himself in the sensation of your warm tongue and mouth covering every pulsing inch of his dong, and he stops talking altogether, leaning his head back and simply enjoying your treatment. Now with the helot fully under the influence of your amazing cocksucking skills, you manage to pick up the pace and lead him closer to the edge...";
 				say "     'Fuck, I wasn't expecting you to be so good...' he says, which is actually flattering. Grabbing his balls with one hand and stroking the rest of his shaft with the other, you give it all into sucking the entirety of his length, and that soon drives him near orgasm. You have a feeling he tries to make you slow down, but he doesn't seem very sure of that, and so you know you have the green light to make him cum right away. Stroking his dick with increased vigor as your tongue works the tip of his cock, leaking precum like crazy, his moaning intensifies as he gets closer to cum...";
 				WaitLineBreak;
-				say "     You don't intend on stopping or slowing down either, and your efforts are rewarded when he shoots his load without even warning you, some of the heavy goblets of cum hitting you right in the face, warm and thick spurt after spurt being shot so hard you think he probably didn't have a release like this for too long! He goes on and on for several seconds, and you wouldn't believe on the mess he made if you hadn't seen it. You wait until his orgasm subsides, giving his dick another polite kiss before you stand up, awaiting his part of the deal. 'Alright... Fuck! I'll give you something.' He takes something out of his backpack and hands it to you. It's a";
+				say "     You don't intend on stopping or slowing down either, and your efforts are rewarded when he shoots his load without even warning you, some of the heavy goblets of cum hitting you right in the face, warm and thick spurt after spurt being shot so hard you think he probably didn't have a release like this for too long! He goes on and on for several seconds, and you wouldn't believe on the mess he made if you hadn't seen it. You wait until his orgasm subsides, giving his dick another polite kiss before you stand up, awaiting his part of the deal. 'Alright... Fuck! I'll give you something.' He takes something out of his backpack and hands it to you. It's a ";
 				let randomnumber be a random number from 1 to 4;
 				if randomnumber is:
 					-- 1:
@@ -501,12 +502,13 @@ to WanderingHelot1:
 		else: [fails]
 			say "     But your words fall into deaf ears. He refuses to listen to anything you say, and before you know it, he brings his arms between both of you in order to proceed into pushinig your away. He surely mnages to hit you good! You have no way to keep balance and avoid falling hard on the ground with the might of a former slave warrior. He uses this opportunity to run away with the loot, leaving you behind knocked down and in pain. All you can do is see him run into one of the many streets, not giving you enough time to chase him after you manage to get up on your feet. That was unfortunate, but you may be able to catch him wandering around in this area again tomorrow or so, hopefully...";
 		now WanderingHelotTimer is turns;
-	if calcnumber is 3: [let him pass]
+	else if calcnumber is 3: [let him pass]
 		say "     Right now, you have other things in mind, so you just remain hidden and let the helot pass by, resuming your journey right afterwards.";
 		now WanderingHelotTimer is turns;
-	if calcnumber is 4: [let him pass and avoid forever]
+	else if calcnumber is 4: [let him pass and avoid forever]
 		say "     You have other things to worry about, and the helot is not one of them. After waiting some time for the helot to get through the street and past you, you take note of the area in order to avoid it in the future.";
 		now resolution of Wandering Helot is 99;
+		now Wandering Helot is resolved;
 
 to WanderingHelotTackle:
 	let bonus be (( strength of player minus 10 ) divided by 2);
@@ -654,9 +656,9 @@ Instead of resolving a Generous Helot:
 		if player consents:
 			say "     You nod, extending your hand to grab the [bold type]canned food[roman type], and he lets you have it. There's a smile on his face as he takes his leave, not even looking behind. How odd...";
 			increase carried of food by 1;
+			now GenerousHelotTimer is turns;
 		else:
 			say "     You shake your head, refusing his offering and arguing that he, instead, could use extra food. He lowers his arm, looking at you in disappointment. 'Master doesn't let me have it. If I bring this back, he won't share it with me, and I can't eat it...' Even so, you encourage him to have the food for himself, and after a few attempts, he finally decides to pull the can open and start eating hungrily. 'Thanks. You're good.' he says, with few more than those words before he takes his leave. You feel like you did the right thing.";
-			say "     Your [bold type]sanity has improved a bit.[roman type][line break]";
 			Sanboost 5;
 			now Generous Helot is resolved;
 

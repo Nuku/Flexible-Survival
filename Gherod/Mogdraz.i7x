@@ -41,6 +41,7 @@ when play begins:
 [   2: Mogdraz met Xaedihr                   ]
 
 to say MogdrazIntro:
+	WaitLineBreak;
 	say "     The next moments are spent swinging around slightly while positioned across his shoulder. It doesn't seem that the demon carried you around for a long distance, but you're unable to perceive your current location. You begin to hear your surroundings closing in, as if you have entered an interior, going downwards by what seems to be stairs, and then there's music playing. Reminds you of a lounge, or some sort of nightclub with easy listening sounds, and some people on the background. But you don't seem to get past the center of the noise, instead it looks like you were brought through another passage into the back of the building. This is just you trying to guess where you are being taken, things could be very different by the time your hood is removed...";
 	say "     Then, you are hurled into something soft. Feels like a bed of some sort, and you feel someone, or something... pulling your hood out. Your eyes take time to get used to the light, and only then you can check your surroundings. A bedroom of some sort, painted and decorated in black and red, with all kinds of... Tools and ropes, sex toys... Just what is this place?! And then, someone talks to you, a man very similar to the hellfire demons you encountered, except... Well, slightly different. His beard is longer and fuzzier, and he's overall hairier. Also, compared to the other demons' outfits, this one actually seems to have gotten a leather jockstrap of his size, as well as some crotch revealing leather pants and boots. Being near him makes you feel rather strange at first, though he breaks the silence soon enough.";
 	WaitLineBreak;
@@ -81,6 +82,7 @@ to say MogdrazIntro:
 	say "     'You see, I do run a business, and there is one thing I am looking for. Two, in fact! Patrons and Escorts! If you fancy demons, you can pay upfront, and I will provide you with a professional one of your choice... Or, if you wish to be on the other side taking your clients, you can do so and I will pay you a percentage of what you get! But I'm afraid you'll have to look like a demon... If your only desire is matching up with other patrons, however, you may do so for free at the lounge! Such a fine deal, is it not?' He accompanies you out of the room and into the lounge he mentioned. 'Anything else you want to discuss, I will be in my usual sofa. I like watching the action happen, and someone has to keep an eye on the clientele, right?'";
 	say "     As he finishes explaining things, he proceeds to show the space around. It is a fairly normal nightclub, with a pervert or two around the corner every now and then. Sounds like you could give it a try, now that you know its location in the Red Light District.";
 	now resolution of An Hellish Introduction is 1;
+	move player to Hellfire Club;
 	now Hellfire Club is known;
 	connect Hellfire Club;
 	WaitLineBreak;
@@ -88,6 +90,11 @@ to say MogdrazIntro:
 		say "     Just as you're about to leave, a familiar silhouette shows up by the entrance, walking towards you. Judging from the absence of guards, you come to a pretty obvious conclusion of who it is. Your companion Xaedihr has followed you back here, and he made sure to clear his own way...";
 		WaitLineBreak;
 		MogdrazXaedihr;
+
+instead of going north from Crimson Street while (resolution of An Hellish Introduction is 1 and companion of player is demonologist):
+	say "     Just as you're about to make an entrance, your sorcerer friend immediately bends the will of the hellfire demons standing as guards, forcing them to collapse on the ground with powerful magic. 'I knew something was going on here.' You try to stop him, to no avail, as he charges ahead into the club. There is nothing you can do but to follow after him, hoping he doesn't make any further trouble...";
+	WaitLineBreak;
+	MogdrazXaedihr;
 
 to MogdrazXaedihr:
 	say "     'So this is where they take the so called slaves. Thank you for showing me.' he says, as the club goes into an uproar about an intruder having made it through. Mogdraz storms out of his corner with several demons accompanying him towards you both as he shouts 'What is the meaning of this?!' inquisitively. You urge to tell him Xaedihr is your friend and that he means no harm, looking back at the mage with a pleading look to not cause any trouble here. Although you're surprised by the sorcerer's reaction... His eyes widen and he's speechless for a moment, Mogdraz's expression also changing abruptly once they see eachother. You have no idea what is going on, but surely this must be something important, so you do not interfere.";
@@ -98,6 +105,7 @@ to MogdrazXaedihr:
 	WaitLineBreak;
 	say "     Mogdraz chuckles, getting up from his chair and talking as he walks over to the door. 'Even the most strong-willed crave for someone in charge, sometimes. To let go for once and feel someone taking control... Sometimes, they need that. I simply provide what the heart truly desires. But I don't keep their souls, so they're free to go anytime...! They simply choose not to.' Both you and Xaedihr follow him to the exit. The sorcerer makes a polite bow as the club master responds in the same manner, a formal greeting between good friends in nobility, perhaps. 'I shall send you what I learn, Xaed. Just be careful and don't do anything you would regret. Oh, and... Good to see you.' says Mogdraz, as you and Xaedihr take your leave, the dark mage showing signs of joy and hope in his face.";
 	say "     The half-demon now turns to you with a sincere smile. 'Thank you, friend. If it wasn't for you I would have never re-encountered the only demon I owe my life to.' Indeed, this is something you don't see everyday, given Xaedihr's innate hate for the hellspawn. And Mogdraz seems to be capable of dimension traveling, surprisingly. There is a lot you still don't know about that demon... Maybe you can know more by talking to him the next time you find yourself at the Hellfire Club.";
+	now resolution of An Hellish Introduction is 2;
 
 [***********************************************************]
 [***********************************************************]
@@ -316,23 +324,23 @@ to say MogdrazDate:
 			say "     Once more, you invite Mogdraz for a stroll around the vicinity, given the possibility of him not being busy right now. 'Yeah, sure! Let's head out, I could use the time...' With that said, he stands up and accompanies you to the exit of the club, making a turn towards the most quiet streets...";
 			say "     Stopping at a completely empty one, where nobody is even lurking around, you both share a nice conversation for a good while. 'I have to say you were a nice surprise. Maybe one of the best my boys ever brought to me.' he tells you, his bright yellow eyes looking directly at you in the most sincere gaze. 'You know, I've been thinking about that question you first asked me, and well, given the fact my doubts were erased, I...' he doesn't finish the sentence, instead walking towards you... 'Y'know...' There's a wall behind you, and he doesn't seem to be stopping. His enormous frame overshadows you as he's close to pin you against the building's robust surface. By now, you can smell his scent, oddly arousing and masculine, as things around you heat up quite a lot all of the sudden. It's not long before you can feel his sizable bulge rubbing against [if scalevalue of player > 3]yours[else if scalevalue of player is 3]your midriff[else]you[end if], alarmingly huge in size and pulsing slightly. In a weird mixture of confusion and lust, you turn your face to him and ask what is going on.";
 			WaitLineBreak;
-		if player is submissive or HP of Mogdraz is 20:
-			say "     'Realizing what you're into actually makes me interested in experimenting with you... Someone I don't have to use any kind of power to bend their will. Knowing you genuinely like me is a very good score towards gaining my affection, and I just want to show you that";
-		else if player is dominant or HP of Mogdraz is 10:
-			say "     'I know you prefer to dominate, and often top... But I'm a big guy with big needs, and you turn me on for your uniqueness... Say, would you like to make me happy, even as a Dom? Besides that, knowing you genuinely like me is a very good score towards gaining my affection, and I just want to show you that";
-		else:
-			say "     'You're curious about the fantasy of either being dominated or submitting to someone, but you're also intrigued about me, are you not? Well... Knowing you genuinely like me is a very good score towards gaining my affection, and I just want to show you that";
-		say "...' His advances leave you with a decision to make. [bold type]Do you want to let this happen, or would you rather keep Mogdraz as your friend only[roman type], refusing any sex with him from now on? [if player is dominant]Note that Mogdraz is a fairly dominant individual, and he might not be easy to reason with him regarding his sexual role...[end if][line break]";
-		LineBreak;
-		say "     ([link]Y[as]y[end link]) - This is all you've been wanting ever since!";
-		say "     ([link]N[as]n[end link]) - Let's just be friends.";
-		if player consents:
-			Linebreak;
-			MogdrazFirstSex;
-		else:
-			Linebreak;
-			say "     You put your hands forward, not to touch his body, but to push him away gently, turning your face over. He takes the hint, and pulls back, rather embarassed. 'Yeah, uh... sorry. I'm not good at this either. It was inconsiderate of me to assume you'd want a fuck right now...' he says, the air around you cooling down and shifting to a most awkward atmosphere. Despite this, you try telling him you'd be willing to become his friend, and keep things clear like that. 'Yeah, sure... I'd be more than happy to keep you as a friend. And you're welcome to visit my place anytime!' he says, with a sincere smile. With this out of the way, you're both free to return to the club. Things slowly come back to normal before you have to follow separate ways, and you're glad he understood your request.";
-			now libido of Mogdraz is 99; [no sex with Mogdraz]
+			if player is submissive or HP of Mogdraz is 20:
+				say "     'Realizing what you're into actually makes me interested in experimenting with you... Someone I don't have to use any kind of power to bend their will. Knowing you genuinely like me is a very good score towards gaining my affection, and I just want to show you that";
+			else if player is dominant or HP of Mogdraz is 10:
+				say "     'I know you prefer to dominate, and often top... But I'm a big guy with big needs, and you turn me on for your uniqueness... Say, would you like to make me happy, even as a Dom? Besides that, knowing you genuinely like me is a very good score towards gaining my affection, and I just want to show you that";
+			else:
+				say "     'You're curious about the fantasy of either being dominated or submitting to someone, but you're also intrigued about me, are you not? Well... Knowing you genuinely like me is a very good score towards gaining my affection, and I just want to show you that";
+			say "...' His advances leave you with a decision to make. [bold type]Do you want to let this happen, or would you rather keep Mogdraz as your friend only[roman type], refusing any sex with him from now on? [if player is dominant]Note that Mogdraz is a fairly dominant individual, and he might not be easy to reason with him regarding his sexual role...[end if][line break]";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - This is all you've been wanting ever since!";
+			say "     ([link]N[as]n[end link]) - Let's just be friends.";
+			if player consents:
+				Linebreak;
+				MogdrazFirstSex;
+			else:
+				Linebreak;
+				say "     You put your hands forward, not to touch his body, but to push him away gently, turning your face over. He takes the hint, and pulls back, rather embarassed. 'Yeah, uh... sorry. I'm not good at this either. It was inconsiderate of me to assume you'd want a fuck right now...' he says, the air around you cooling down and shifting to a most awkward atmosphere. Despite this, you try telling him you'd be willing to become his friend, and keep things clear like that. 'Yeah, sure... I'd be more than happy to keep you as a friend. And you're welcome to visit my place anytime!' he says, with a sincere smile. With this out of the way, you're both free to return to the club. Things slowly come back to normal before you have to follow separate ways, and you're glad he understood your request.";
+				now libido of Mogdraz is 99; [no sex with Mogdraz]
 	else:
 		LineBreak;
 		say "     Maybe you should take it as a hint to step back for now. Mogdraz doesn't seem to be the kind of guy you'd want to mess things up with. You excuse yourself politely, and he eyes you as you go.";
