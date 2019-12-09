@@ -81,10 +81,12 @@ to say ChrisDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Chris]; Strength of Chris: [Strength of Chris]; Intelligence of Malik: [Intelligence of Malik]; Libido of Malik: [Libido of Malik]<- DEBUG[line break]";
 	if Libido of Chris is 0: [half-orc Chris]
+		project the Figure of Chris_clothed_icon;
 		say "     Chris is a young orc, with a lithe and muscled physique that lacks the sheer bulk and mass of an orc warrior. Still, the sleeveless shirt he found to wear is stretched tight over his hard pecs and abs, providing quite a nice sight. His other articles of clothing are a pair of shorts and some designer undies (known to be 'roomy' at the front), both of which ride pretty low, letting you glimpse the trimmed bush of his pubes. Something tells you that he'd be ready to push them off completely in a heartbeat, letting free the cock showing in a respectively sized bulge at the front. Chris's features are almost pretty but still masculine, with somewhat pronounced brow, a square jaw and yellow eyes. Two sharp tusks protrude from his lower mandible, giving him a dashing, somewhat wild look. Mid-length dark brown hair completes the picture of a very handsome man. As Chris notices your intense gaze upon him, he smiles back at you, giving a little wave with his hand.";
 	else if Libido of Chris is 1: [breeder Chris]
 		say "     Chris is a young orc, with a lithe and muscled physique that lacks the sheer bulk and mass of an orc warrior. As he's wearing nothing but a rather tight pair of shorts, you can clearly see the outline of an average-sized cock in them. His features are almost pretty but still masculine, with somewhat pronounced brow, a square jaw and yellow eyes. Two small tusks protrude from his lower mandible, looking rather cute, compared to a real orc's. Long, silky black hair hanging down over his shoulders completes the picture of a very handsome man. As Chris notices your intense gaze upon him, he presents himself for your viewing pleasure, turning to show off his well-rounded ass. He really takes after his father, now that he's become an orc breeder.";
 	else if Libido of Chris is 2: [warrior Chris]
+		project the Figure of Warrior Chris_clothed_icon;
 		say "     Chris is a young orc, but he already has the tall and powerful stature of an orc warrior, with rippling muscles on his big arms, strong pecs and washboard abs. As he's wearing nothing but a rather tight pair of shorts, you can clearly see the outline of a very respectable cock in them. His features are almost a bit brutish, in a 'handsome caveman' kind of way, with a strongly pronounced brow, a square jaw and yellow eyes. Two sharp tusks protrude from his lower mandible, giving him a dashing, somewhat wild look. Short and bristly dark brown hair on his head completes the picture of an untamed orcish warrior. As Chris notices your intense gaze upon him, he gives you a leering smile, as if to say 'I can take you when I want to'.";
 		if Dexterity of Chris > 0 and Dexterity of Chris < 100:
 			say "     Proof of his aggressively dominant nature is never far away from the young orc warrior, in the form of Kai, the male zebra he took captive in the zoo. You're not too sure that you can strictly call the guy a zebra anymore though, with his green and black striped fur and the set of orcish tusks he sports now. Seems like he's more of an equine orc breeder now.";
@@ -159,7 +161,7 @@ to say ChrisTalkMenu:
 	else if Libido of Chris is 1:
 		project the figure of Orcbreeder_random_icon;
 	else if Libido of Chris is 2:
-		project the figure of Orcwarrior_random_icon;
+		project the Figure of Warrior Chris_clothed_icon;
 	say "What do you want to talk with Chris about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -233,7 +235,7 @@ Instead of fucking the Chris:
 		else if Libido of Chris is 1:
 			project the figure of Orcbreeder_random_icon;
 		else if Libido of Chris is 2:
-			project the figure of Orcwarrior_random_icon;
+			project the Figure of Warrior Chris_naked_icon;
 		blank out the whole of table of fucking options;
 		[]
 		if Player is male:
