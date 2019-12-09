@@ -394,6 +394,8 @@ Figure of Urik_naked_icon is the file "Urik_naked.jpg".
 Figure of Valerie_icon is the file "Valerie.jpg".
 Figure of Violet_face_icon is the file "Violet_face.jpg".
 Figure of Voodoo_Gecko_icon is the file "Voodoo_Gecko.jpg".
+Figure of Warrior Chris_clothed_icon is the file "Warrior Chris_clothed.jpg".
+Figure of Warrior Chris_naked_icon is the file "Warrior Chris_naked.jpg".
 Figure of Yatur_clothed_icon is the file "Yatur_clothed.jpg".
 Figure of Yatur_naked_icon is the file "Yatur_naked.jpg".
 Figure of Yolanda_icon is the file "Yolanda_ig.jpg".
@@ -985,6 +987,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Vixentaur"	Figure of Vixentaur_icon	"Anymouse1968"	g-white	"normal"
 "Vixen Nurse"	Figure of VixenNurse_icon	"KV1NN4"	g-white	"normal"
 "Voodoo Gecko"	Figure of Voodoo_Gecko_icon	"Waxraven/WXRVN"	g-white	"normal"
+"Warrior Chris_clothed"	Figure of Warrior Chris_clothed_icon	"Kupo Klein"	g-white	"normal"
+"Warrior Chris_naked"	Figure of Warrior Chris_naked_icon	"Kupo Klein"	g-white	"normal"
 "Werewolf (female)"	Figure of Werewolf_female_icon	"Watsup"	g-white	"normal"
 "Wildcat"	Figure of Wildcat_icon	"Strype"	g-white	"normal"
 "Wyvern_female"	Figure of Wyvern_female_icon	"Anonymous"	g-white	"normal"
