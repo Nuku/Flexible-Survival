@@ -346,7 +346,7 @@ When Play begins:
 	now type entry is "demonic";          [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is true;
 	now resbypass entry is false;
-	now non-infectious entry is false;
+	now non-infectious entry is true;
 	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 2;      [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
@@ -461,10 +461,23 @@ name	desc	weight	object
 "hellfire seed"	"The white, gooey seed of one of your past demonic lovers. It smells very sweet, a little like burnt cream, and feels really hot."	1	demon seed
 
 hellfire seed is a grab object.
+the usedesc of hellfire seed is "[hellfire seed use]";
 
-hellfire seed is infectious. The strain of hellfire seed is "Hellfire Demon". hellfire seed is cum.
+to say hellfire seed use:
+	say "     The warm, sticky liquid tastes almost too hot, but very sweet, as you drink it. You feel the warm seed going down your throat, leaving the delightful sensation of a tasty and hot beverage.";
+	PlayerDrink 2;
+	if "Iron Stomach" is not listed in Feats of Player:
+		HellfireDemonInfect;
 
-the usedesc of hellfire seed is "The warm, sticky liquid tastes almost too hot, but very sweet, as you drink it.";
+to HellfireDemonInfect:
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
+		if Name entry is "Hellfire Demon":
+			now MonsterID is y;
+			break;
+	now non-infectious entry is false;
+	infect "Hellfire Demon";
+	now non-infectious entry is true;
 
 instead of sniffing hellfire seed:
 	say "The demonic semen smells sweet, a little like burnt cream.";
