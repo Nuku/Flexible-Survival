@@ -137,7 +137,7 @@ Northern Street 1	"Northern Street 1"
 Northern Street 1 is a room.
 Northern Street 1 is north of Entrance to the Red Light District.
 The earea of Northern Street 1 is "Red".
-The description of Northern Street 1 is "[RedLightNorthStreet2Desc]".
+The description of Northern Street 1 is "[RedLightNorthStreet1Desc]".
 
 to say RedLightNorthStreet1Desc:
 	say "     You're on a road that runs along the border to the red light district, past the prominent [']SEX SEX SEX['] neon signs along the facades of a number of buildings on the street sides before you. Though without power to support the alluring shine of all the signage, it just seems kinda dingy. Some piles of uncollected trash litter the street, and the way splits into a few thin and shady alleys, though they seem to have nothing of interest. However, the road extends a bit further, onto a building with a neon sign saying [']TOYS['], alongside a pair of handcuffs, and further beyond where an ominous, faint red light shines through a thinner street just around the corner to the right.";
@@ -151,8 +151,8 @@ Northern Street 2	"Northern Street 2"
 
 Northern Street 2 is a room.
 Northern Street 2 is north of Northern Street 1.
-The earea of Northern Street is "Red".
-The description of Northern Street is "[RedLightNorthStreet2Desc]".
+The earea of Northern Street 2 is "Red".
+The description of Northern Street 2 is "[RedLightNorthStreet2Desc]".
 
 to say RedLightNorthStreet2Desc:
 	say "     You're in the middle of the northern road, coming across a building with neon signs saying [']TOYS['], alongside a pair of handcuffs, indicating this must have been some kind of store for the kinky fans of sex toys. Besides it, there's still a small pile of uncollected trash. Towards the northeast, there is a thinner street where an ominous, faint red light dims through. Traveling south would lead you towards the crossroad marking the entrance to the Red Light District.";
@@ -172,7 +172,7 @@ The description of Crimson Street is "[RedLightCrimsonStreetDesc]".
 to say RedLightCrimsonStreetDesc:
 	say "     You have arrived at the entrance of the Crimson Street, in which a strange and ominous red light dims through with no logical explanation. It seems pretty empty and oddly silent, without anything of interest at the first glance. All the buildings here look either abandoned or looted, although everything looks mysteriously clean, unlike the other streets. Staying here gives you an offsetting feeling you can't quite specify, but besides that, it seems you cannot proceed any further from here, unless any of these buildings are of any interest to you at some point.";
 
-instead of smelling Northern Street:
+instead of smelling Crimson Street:
 	say "     There's an unsettling sweet smell around here, rather captivating the more you try to feel it. It's not perfume, nor anything of the sort, but it strikes you as something seductively demonic in nature.";
 
 Red Light District ends here.
