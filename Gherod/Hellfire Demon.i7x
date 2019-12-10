@@ -17,9 +17,9 @@ to say HellDemon wins:
 				say "[MogdrazIntro]";
 			else:
 				say "     Unable to resist such a powerful presence, you immediately submit to the demon's will, his eyes following your movements with great satisfaction, as you kneel down in front of him. 'Finally someone who knows their place. That's a good start, but let's see how much you can handle.' With that said, the hellish creature prepares to use you as he sees fit...";
-				if a random chance of 1 in 2 succeeds or if player is neuter:
+				if a random chance of 1 in 2 succeeds:
 					HellDemonBJForced;
-				else if player is male:
+				else if player is male or player is neuter:
 					HellDemonAnalForced;
 				else if player is female:
 					HellDemonPussyForced;
@@ -30,13 +30,13 @@ to say HellDemon wins:
 					say "     You're also wondering why Xaedihr hasn't done anything to rescue you... Is that why you bring powerful companions with you? To see you being carried around - or worse! - by some random demonic creature?! He better be following you...";
 				say "[MogdrazIntro]";
 			else:
-			say "     Unable to continue fighting the so mighty and powerful demon, you immediately give in to his will, his eyes following your movements with great satisfaction as you're forced to kneel down in front of him. 'You know how to put up a fight! That left me all boned up... Perfect, I was just thinking about testing your holes.' With that said, the hellish creature prepares to use you as he sees fit...";
-			if a random chance of 1 in 2 succeeds:
-				HellDemonBJForced;
-			else if player is male or if player is neuter:
-				HellDemonAnalForced;
-			else if player is female:
-				HellDemonPussyForced;
+				say "     Unable to continue fighting the so mighty and powerful demon, you immediately give in to his will, his eyes following your movements with great satisfaction as you're forced to kneel down in front of him. 'You know how to put up a fight! That left me all boned up... Perfect, I was just thinking about testing your holes.' With that said, the hellish creature prepares to use you as he sees fit...";
+				if a random chance of 1 in 2 succeeds:
+					HellDemonBJForced;
+				else if player is male or player is neuter:
+					HellDemonAnalForced;
+				else if player is female:
+					HellDemonPussyForced;
 
 to HellDemonBJForced:
 	say "     He moves towards you, groping on his ever growing bulge as he approaches, barely contained by the dark jockstrap he's wearing. Without a warning, you feel his strong hand on the back of your head pushing you, your nose and face in general pressed against the by now massive bump in his reductive underwear. His musk is overwhelming, feels like a drug is taking over your system slowly, you could name it pheromones, but it gets harder to think the more you take it in through your nostrils. You're naturally compelled to just open your mouth and gobble up on the sizable protrusion. 'Like all the others, you just can't help it... Do we smell that good?' he teasingly asks, throwing a laugh by the time you're sliding your tongue all over it. You simply have no will of your own anymore, it's as if something took control of your actions and it's just impossible to fight it...";
@@ -60,14 +60,14 @@ to HellDemonAnalForced:
 	say "     With your insides so stretched around his huge demon cock, you remain impaled on it for several moments of being fucked deep and hard, with the devil now on top of you, smothering you against the harsh ground, whispering in your ear 'Who's a good bitch? Taking a huge dick in the ass... Yes, it's only you...' he taunts you, ";
 	if player is submissive:
 		say "and you feel yourself craving to be used by this demon even more, and whoever he might want to bring along, over and over, your submissive tendencies starting to sprout out as the numerous possibilities arise in your mind. This feeling of his dick just stretching your hole over it, burying itself in your ass, making you feel properly owned as it fills you so well... Only if you could be tied up and left helpless to be fucked by the hugest demonic cocks like this one... You're glad to let your mind slip away as he claims you, wrecking your ass like it's meant to be, each thrust harder than the last.";
-else:
+	else:
 		say "and you still feel some pain in your ass as he keeps pushing his cock in, slipping so deep inside until he's ballsdeep in you, keeping you pinned down underneath him... His size is just too much for you to comfortably handle, and there's even a slight bulge on your belly with the thickness of his shaft throbbing inside your bowels. You can't do anything about it, nor you have the will to resist, as he fucks you, pulling and shoving his dick back in again and again, the next time harder than the last.";
 	say "     As he gets harder and rougher with you, his grunting continues, louder than before, his grip around your body almost painfully tight, and soon he's fucking you so hard and deep you feel like you're going to get split in two. He continues, encouraged by your squirming, your own moaning bringing him pleasure and the will to give it all into you. 'Fuck... I'm going to fill you up so good!' You have no other choice but to await him to reach his climax, and soon enough, you're feeling an absurd amount of cum being delivered inside you, almost too hot for you to endure as your bowels are flooded with the hottest and thickest demonic seed for a long minute. He rests his length fully inside you, throbbing to the very last drop of cum, making your belly swell with the enormous amount of jizz sloshing inside you.";
 	WaitLineBreak;
 	say "     With the deed done, the demon stands up and looks at you with a satisfied grin. 'You take it well, but you could still use some practice. Keep sucking dick and getting fucked by the biggest ones you can find, it will do you good.' he says, before he retreats back to the shadows. You, however, can't do the same, as you're so full and so unexplainably dizzy that you can't even manage to stand on your feet. You have to it out for a while before you can proceed with your affairs.";
 	CreatureSexAftermath "Player" receives "AssFuck" from "Hellfire Demon";
 
-HellDemonPussyForced:
+to HellDemonPussyForced:
 	say "     He moves towards you, groping on his ever growing bulge as he approaches, barely contained by the dark jockstrap he's wearing. With a forceful push, he makes you bend over on fours with his overpowering might[if player is not naked], stripping you of any gear in his sight,[end if] and slaps one of your asscheeks hard. 'All this fighting got me boned up! Hope you don't mind me taking your cunt.' Completely helpless to resist, the demon pushes you even lower, to the ground, as he tops you, grabbing you from underneath with just enough angle to be able to rub your vulva against his throbbing meat. He teases you too, groping your chest and rubbing you down all over, his scorching hot body and the air around him making you lose any will to struggle, arousal and wicked desire taking place, instead.";
 	say "     'All ready for a good fuck now, aren't we?' he says, finally pressing his pulsing demonic cock against your labia. You can already feel it slipping inside as he slowly and steadily pushes in. He holds your arms down and helps himself settle inside you, his rock solid erection being buried somewhat painfully in you for moments, before you become relaxed enough to start taking it in, which you're surprisingly able to do so. In this, he pounds slowly at first, only for a few moments, before he starts to raise the rhythm, making his heavy ballsac swing back and forth with powerful momentum. 'Sliding in so easily... Someone's enjoying it, yeah? You were born for this.' he keeps taunting you, fucking your womanhood relentlessly with slow and deeper thrusts.";
 	WaitLineBreak;
@@ -188,7 +188,7 @@ to say HellDemonFacefuck:
 		say "the sensation of letting go your own limits, delivering yourself to the pleasure of having such an expert in sex driving you insane with lust... The sheer thought makes you throb harder than before, only wanting to feel his tongue, the walls of his mouth, his throat, everything wrapped tight around your meat as hard as you can facefuck him. Only if you could keep having this, surrounded by lust, sex and desire for as long as you wished, as long as you craved it... Only if you could have that, you could keep getting naughty with sexy devils like this demon whenever your heart craved for this kind of thing...";
 	say "     Now that you have found a great use for his huge horns, you keep your grip tight around them as you keep thrusting into the demon's mouth, moving his head according to your momentum, never letting go as long as you can feel his warm insides around your penis. A little while after, you start feeling yourself getting closer to climax, but your mind tells you to never stop. It just feels to good to think about anything else but the pleasure you're getting from this, and it's not long until you're cumming down the demon's throat. He urges to hungrily swallow all the sperm you keep shooting for the duration of your orgasm, until the very last drop! You let go of his horns, and with a last suck, he licks the remaining drops of cum that are still leaking from your half-hard member.";
 	WaitLineBreak;
-	say "     'T'was splendid... You sure are naughty...! Hope we meet again. Maybe next time you won't be able to resist me at all.' With this said, the demon retreats back to the shadows. You're left to catch your breath, but in your mind still run thoughts of debauchery for a good while... There's something [italian type]odd[roman type] about this kind of demons...";
+	say "     'T'was splendid... You sure are naughty...! Hope we meet again. Maybe next time you won't be able to resist me at all.' With this said, the demon retreats back to the shadows. You're left to catch your breath, but in your mind still run thoughts of debauchery for a good while... There's something [italic type]odd[roman type] about this kind of demons...";
 	CreatureSexAftermath "Hellfire Demon" receives "OralCock" from "Player";
 
 to say HellDemonFuck:
@@ -225,7 +225,7 @@ to say HellDemonAnal:
 		say "'Feels great, doesn't it? Imagine if you were an everyday's slave at our place... I could come fill you up so good like this... Your days would be filled with constant pleasure, perfect for a true submissive like you to enjoy.' His words surely bring excitement to your soul, and you're already imagining yourself bound, left helpless to be used and abused by any of those hot devilish people";
 	else:
 		say "'Feels great, doesn't it? See what you've been missing... If you'd just give in, I could probably bring you with me. We'd have a lot of fun either way.' His words manage to get some curiosity going in your mind";
-	say ". Figuring it's time to get going, the demon stands up and leaves you lying on the ground, still full of his seed. 'Hope we meet again. Maybe next time you won't be able to resist me at all.' With this said, the demon retreats back to the shadows. You're left to wait out until you process enough of his cum, in your mind still running thoughts of debauchery for a good while... There's something [italian type]odd[roman type] about this kind of demons...'";
+	say ". Figuring it's time to get going, the demon stands up and leaves you lying on the ground, still full of his seed. 'Hope we meet again. Maybe next time you won't be able to resist me at all.' With this said, the demon retreats back to the shadows. You're left to wait out until you process enough of his cum, in your mind still running thoughts of debauchery for a good while... There's something [italic type]odd[roman type] about this kind of demons...'";
 	CreatureSexAftermath "Player" receives "AnalFuck" from "Hellfire Demon";
 
 to say HellDemonCun:
@@ -265,7 +265,7 @@ to say HellDemonPussy:
 
 to LJockstrapPickup:
 	if carried of leather jockstrap < 1:
-		say "     Though while that happens, you happen to come accross the jockstrap left behind by the demon when he removed it before you. Luckily enough, as it is quite dark around here and it's barely visible if you hadn't paid attention. It smells greatly of his sweet musk... There's no way to guarantee safety in using it, but it [italian type]should[roman type] be fine, since it's in good conditions.";
+		say "     Though while that happens, you happen to come accross the jockstrap left behind by the demon when he removed it before you. Luckily enough, as it is quite dark around here and it's barely visible if you hadn't paid attention. It smells greatly of his sweet musk... There's no way to guarantee safety in using it, but it [italic type]should[roman type] be fine, since it's in good conditions.";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Pick it up.";
 		say "     ([link]N[as]n[end link]) - Just leave it.";
