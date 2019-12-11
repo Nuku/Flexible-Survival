@@ -36,6 +36,16 @@ to decide if (x - a person) has no body of (i - a text):
 	if x has a body of i, decide no;
 	decide yes;
 
+to decide if the/-- Player has a non-shifting body of (i - a text):
+	if Player is shifter, decide no;
+	if Player has a body of i, decide yes;
+	decide no;
+
+to decide if the/-- Player has no non-shifting body of (i - a text):
+	if Player is shifter, decide yes;
+	if Player has a body of i, decide no;
+	decide yes;
+
 [@Todo: Handle new style infection here when implemented]
 to decide if (x - a person) has a skin of (i - a text):
 	if SkinName of x is i, decide yes;

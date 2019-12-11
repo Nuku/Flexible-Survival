@@ -467,7 +467,7 @@ This is the Retriever Female Infection rule:
 				say "     You lead [if HP of Rex is 4]an otherwise normal[else]a relatively normal[end if] life outside the city, ending up working as a [if Player is female]waitress[else]waiter[end if] in an upscale restaurant catering mostly to other infected survivors. The friendly and upbeat demeanor provided by your retriever infection proves to be a valuable asset in this line of work, and your attractive canine body ensures you never have trouble finding someone who will let you follow them home for a night of lustful fun.";
 
 This is the Rex' and Karen's Epilogue rule:
-	if Player has no body of "Retriever Female":
+	if Player has no non-shifting body of "Retriever Female":
 		if (HP of Rex > 9 and HP of Rex < 50) or (HP of Rex is 4) or (Retriever Girl is tamed):
 			trigger ending "Rex['] and Karen's Epilogue";
 		if HP of Rex > 9 and HP of Rex < 50:

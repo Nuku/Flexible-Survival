@@ -383,7 +383,7 @@ This is the My Little Gryphoness rule:
 	if one of the endings in { "Timothy's Breeding Gryphon", "IceCreamTruck Bad End", "Garrett's BFF", "Returning to Timothy" } is triggered:
 		make no decision;
 	trigger the ending "My Little Gryphoness";
-	if Player has a body of "Blue Gryphon Herm":
+	if Player has a non-shifting body of "Blue Gryphon Herm":
 		if humanity of Player < 10:
 			if Player is herm:
 				say "     Giving into the infection and embracing your new gryphonic instincts, you and your lovely companion take off into the sky together, your new wings lifting you aloft easily. Your companion's song fills the air with its lovely tunes as you soar through the skies above the city together. Soon the two of you find a nice secluded spot away from the city and the press of the military and other infected, and you settle down to enjoy your new lives together, your days filled with the joys of flight, song, and lots and lots of sex. You both take turns mating each other lustily, often several times a day, and after a while you can't help but smile at the sight her belly growing large and round with the fruits of your labors... but then again, your belly is also beginning to show the fruits of her labors as well, and you smile as you realize your little family is about to get a lot larger...";
@@ -405,13 +405,11 @@ This is the My Little Gryphoness rule:
 				say "[garrett_ending_add-on_2]";
 	else:
 		if humanity of Player < 10:
-			if Player has a body of "Feral Gryphon":
-				now timothyfucked is timothyfucked;  [do-nothing - See Feral Gryphon endings]
 			if Player is male:
 				say "     When you surrender to the lusty instincts inside you, Denise tries to stay away for a while, but is unable to take the loneliness of life in the city without anyone to talk to, especially after having had a friend even for a short time. Soon you hear her soft song through the city, and almost instinctively you follow it to where she is waiting for you. She smiles as she welcomes you with open arms, and lets you change her and make her yours, so she can follow you wherever you go in your new life in the city...";
 			else:
 				say "     Taking your surrender to your feral instincts as a sign, Denise stops fighting her own instincts, and while she stays with you for a short while, soon she flies off in search of other gryphons to mount her and make her a proper breeder just like you...";
-		else if Player has no body of "Siren":
+		else if Player has no non-shifting body of "Siren":
 			say "     Rescued from the city, you manage to convince Denise to come with you as you make your way out into the new world. Her shy demeanor makes it somewhat easy for you to keep her with you as you try to settle in to your new life. Eventually she becomes happy settling in wherever you are, though she does manage to accumulate a large variety of music, which she often listens to wistfully.";
 
 This is the Blue Gryphon Herm Infection rule:

@@ -621,7 +621,7 @@ Section 5 - Monster Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Butterfly Girl Epilogue"	"NPC"	""	Butterfly Girl Epilogue rule	900	false
+"Butterfly Girl Epilogue"	"NPCSharedInfection"	""	Butterfly Girl Epilogue rule	900	false
 "Butterfly Infection"	"Infection"	""	Butterfly Infection rule	1000	false
 
 This is the Butterfly Girl Epilogue rule:

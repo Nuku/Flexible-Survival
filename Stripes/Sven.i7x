@@ -348,14 +348,12 @@ to say SvenRescueFight:
 	else if fightoutcome >= 20 and fightoutcome <= 29:
 		say "     After the snow leopard has dealt with you, it catches sight of Sven in the stairwell, mewling softly as he plays with himself in his shorts. Too aroused by the show he received and drawn in by the feline's scent, he doesn't flee as it pads over, switching to move on all fours. He moans softly as it nuzzles and licks his face, pulling off his clothes and mounting him right there. He mewls and moans lustfully as he's taken by the strong male, slowly transforming as their loud rutting continues. Recovering enough to get back up, you can see that the humanity's gone from Sven's eyes and he's succumb to his infection. As there is nothing else you can do for him than to wish him well, you slink away quietly to nurse your wounds and search elsewhere.";
 		now HP of Sven is 99;
-		move Sven to dark basement;
 		now Sven is nowhere;
 		move player to Entrance to the Red Light District;
 		decrease score by 20;
 	else:
 		say "     Unwilling to continue fighting the snow leopard, you turn and flee. But he does not pursue you, instead turning his attention to Sven, who is curled up at the top of the stairwell, watching the battle. Aroused by the sight and scent of the snow leopard, he is fondling himself in his shorts and does not try to run as the creature pads over on all fours. Sven moans softly as it nuzzles and licks his face, pulling off his clothes and mounting him right there. You turn away and continue to make your escape, sure that there will soon be another of those sexy snow leopards prowling the area.";
 		now HP of Sven is 99;
-		move Sven to dark basement;
 		now Sven is nowhere;
 		move player to Entrance to the Red Light District;
 		decrease score by 20;
@@ -395,7 +393,7 @@ An everyturn rule:
 			say "     Sven, or Svetlana now, smiles shyly at you, opening her mouth to say something. Lisa's paw dips down between the kitty's legs to tease over her covered pussy, rubbing and teasing her until there's a growing wet patch in her swimsuit. 'She's so much more fun now that my pet kitty's got a nice, wet pussy. You should give her a try sometime.' She teases the snowmeow like this for a little while before eventually tiring of the game for now to tend to the store.";
 			increase score by 10;
 			now HP of Sven is 53;
-		move Sven to dark basement;
+		now Sven is nowhere;
 		move Svetlana to Porn Store;
 
 after going to Bunker while HP of Sven is 9:
@@ -1013,7 +1011,7 @@ This is the Sven's Epilogue rule:
 	[Sven special cases]
 	if Sven is in the bunker and HP of Sven < 30 and BodyName of Player is not "Snow Leopard" and BodyName of Player is not "Siamese Cat" and BodyName is not "Snow Bat":
 		if humanity of Player < 10:
-			if ( BodyName of Player is "Panther Herm" and angiearoused is 3 ) or ( felinoid companion is tamed and BodyName of Player is "Felinoid" ) or BodyName of Player is "Rubber Tigress" or BodyName of Player is "Plush Lion":
+			if ( Player has a non-shifting body of "Panther Herm" and angiearoused is 3 ) or ( felinoid companion is tamed and Player has a non-shifting body of "Felinoid" ) or Player has a non-shifting body of "Rubber Tigress" or Player has a non-shifting body of "Plush Lion":
 				make no decision; [blank - Special Sven succumb endings as per species of Player]
 			else if HP of Sven > 3 and HP of Sven < 8:
 				now SvenEpilogueShown is true;
@@ -1032,7 +1030,7 @@ This is the Sven's Epilogue rule:
 				now SvenEpilogueShown is true;
 				say "     Candy visits often, having grown quite fond of the sexy snowmeow during their shared time in the infected city. While the pink coonboi has his own lovers now, he always has time for your special kitty. Whenever business or other obligations take you away from him, you happily leave Sven with Candy, safe in the knowledge that he'll be cared for and have a good time with the girly coon. And you always enjoy listening to Sven shyly tell you every sordid detail of his visit and how the coon and his myriad lovers made use of your sexy pet's body. These seem to get more elaborate and involved as time goes on, as the coon makes bigger and bigger plans to celebrate the kitty's visit with lustful orgies centered around the exotically colorful snowmeow.";
 	[other Sven the fuck-toy pet interactions]
-	if Sven is in the bunker and HP of Sven < 30 and BodyName of Player is not "Siamese Cat":	[Siamese union w/Sven blocks these]
+	if Sven is in the bunker and HP of Sven < 30 and Player has no non-shifting body of "Siamese Cat":	[Siamese union w/Sven blocks these]
 		if humanity of Player < 10:
 			make no decision; [Interactions while succumbed, if any, would go here]
 		else:

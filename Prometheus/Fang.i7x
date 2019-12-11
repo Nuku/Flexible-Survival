@@ -815,7 +815,7 @@ This is the Fang's Epilogue rule:
 			if Sandra is in the bunker:
 				say "     Sandra, thankful to the big wolf for helping to keep everyone safe in the bunker, is always very kind to the big wolf when she comes to visit. Often, during visits or get-togethers at your place, you'll find that the bunny's quietly slipped away. Always knowing where you'll find her, you'll check and see her safely beneath the big wolf, getting his large, red cock stuffed into her cunt. The bunny's tummy grows large after one of these visits and she eventually gives birth to a pair of wolf cubs with bunny ears and a tail. These quiet, taciturn boys are never lacking in companionship, always having numerous lovers drawn in by the strong bodies and brooding nature, eager to bend over for them.";
 	else if HP of Fang is listed in { 3, 4 }: [ alpha Fang ]
-		if Player has a body of "Feral Wolf":
+		if Player has a non-shifting body of "Feral Wolf":
 			[ see Feral Wolf file for this ending ]
 			make no decision;
 		trigger ending "Fang's Epilogue";
@@ -826,7 +826,7 @@ This is the Fang's Epilogue rule:
 				say "     Having succumbed to another infection, Fang has lost his slutty bitch and, having no more reason to stay, leaves the bunker. With his newfound confidence, he forms a small pack of his own.";
 		else:
 			say "     When the military comes, you worry about how they'll react to Fang. Secretly your lupine alpha, you keep that fact hidden when speaking to the military. His bestial form distresses the soldiers, but you do your best to appease them. As the squad leader tries to move you out of the way, telling you the wolf can't come, Fang pads confidently in front of you growls for him to let you go. Clearing his throat, he starts talking with some difficulty. In anticipation of this moment, it's clear your clever master has spent some time among the library stacks reading in preparation. With his clearly rational arguments (albeit cribbed from the philosophy section), he's able to articulate clearly his points and that he WILL be going with you. While two soldiers remain with guns trained on him, the rest of the squad moves on to inspect and search the rest of the building. You hug your wonderful alpha's head before going along to show them the rest of the place. He gives your cheek a lick and ignores the soldiers guarding him as inconsequential, having impressed their alpha, and strides back to his favorite resting spot to await departure.";
-			if Player has a body of "Felinoid" and felinoid companion is tamed:
+			if Player has a non-shifting body of "Felinoid" and felinoid companion is tamed:
 				[ see Felinoid Companion file for this ending ]
 				rule succeeds;
 			if Felinoid companion is tamed and player is female:

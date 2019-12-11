@@ -924,7 +924,7 @@ This is the Tiger Cop Endings rule: [TODO: Reorganize this mess later on (@Stadl
 	if CockName of Player is "Malayan Tiger Male":
 		now CockName of Player is "Malayan Tiger Herm";
 	if mqstatus is 0 or mqstatus is 1:				[no motel quest / incomplete]
-		if BodyName of Player is "Malayan Tiger Herm":
+		if Player has a non-shifting body of "Malayan Tiger Herm":
 			if humanity of Player < 10:
 				say "[THendingC]";
 			else:
@@ -932,7 +932,7 @@ This is the Tiger Cop Endings rule: [TODO: Reorganize this mess later on (@Stadl
 	if mqstatus is 99:						[refused the motel key hunt]
 		if humanity of Player > 9:				[all survivors get a standard add-on]
 			say "[THending_refusal][line break]";
-		if BodyName of Player is "Malayan Tiger Herm":
+		if Player has a non-shifting body of "Malayan Tiger Herm":
 			if humanity of Player < 10:
 				say "[THendingD]";
 			else:
@@ -940,7 +940,7 @@ This is the Tiger Cop Endings rule: [TODO: Reorganize this mess later on (@Stadl
 	if mqstatus is 2:							[gave keys, did not accompany]
 		if humanity of Player > 9:				[all survivors get a standard add-on]
 			say "[THending_helper][line break]";
-		if BodyName of Player is "Malayan Tiger Herm":
+		if Player has a non-shifting body of "Malayan Tiger Herm":
 			if humanity of Player < 10:
 				say "[THendingE]";
 			else if TailName of Player is "Malayan Tiger Herm" and FaceName of Player is "Malayan Tiger Herm" and SkinName of Player is "Malayan Tiger Herm":			[visibly fully tigress]
@@ -948,7 +948,7 @@ This is the Tiger Cop Endings rule: [TODO: Reorganize this mess later on (@Stadl
 			else:
 				say "[THendingA]";
 	if mqstatus is 4:							[fled from motel hunt]
-		if BodyName of Player is "Malayan Tiger Herm":
+		if Player has a non-shifting body of "Malayan Tiger Herm":
 			if humanity of Player < 10:
 				say "[THendingF]";
 			else if TailName of Player is "Malayan Tiger Herm" and FaceName of Player is "Malayan Tiger Herm" and SkinName of Player is "Malayan Tiger Herm":			[visibly fully tigress]

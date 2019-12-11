@@ -428,7 +428,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 
 This is the Klauz' Epilogue rule:
 	if Felinoid companion is tamed:
-		if BodyName of Player is "Felinoid":
+		if Player has a non-shifting body of "Felinoid":
 			if humanity of Player < 10:
 				if Player is female:
 					say "     Finally giving in to your needs as Klauz must have known you would, you crouch down submissively before him finally, realizing what a good and patient mate he has been. You yowl happily as he covers your body, his teeth gripping your scruff as he finally takes you properly, his cock sinking into you as he makes you his pet instead of playing at being yours. Your new felinoid muzzle drops open in a happy grin as you can feel each thrust of his wonderful cock inside you chipping away at what remains of your humanity, your memories of your old life as a human completely useless to you now. As the wonderful male cat mates you properly, you realize now that this is why you saved him, and stayed with him so much, you needed a nice strong mate to take you and make you his, to fill your heat-filled belly up with his handsome feline cubs while you serve his every need. You roar in pleasure as you feel him shoot his fertile sperm into you, locking you into your new form permanently, and sealing his claim on your body. You pant happily as your new mate licks your own new coat of soft golden fur tenderly, and you moan as after a short rest, he begins to mount you again. Roaring in pleasure, you vow to be a good pet for your handsome and caring mate, eagerly moving underneath him, as he works hard to plant his seed in you again, knowing that soon you will be expanding your little family with some of his handsome cubs to care for, the very thought of the handsome little felines growing in your belly making you roar again in pleasure, looking forward to a long and very full life, and a very full belly.";
@@ -472,7 +472,7 @@ This is the Klauz' Epilogue rule:
 		else:
 			if humanity of Player < 10:
 				say "     When you finally surrender completely to the infection, the felinoid you saved tries to guide you back to the park and his den, but you are having none of it. Growling, you manage to drive the pushy felinoid off, his injuries still hampering him enough that you can drive him away easily, and while you think you spot him hanging around several times over the next few days, he doesn't try approaching you again, letting you settle into your new more feral life without his interference.";
-			else if Player has a body of "Feral Wolf" and HP of Fang is listed in { 3, 4 }:
+			else if Player has a non-shifting body of "Feral Wolf" and HP of Fang is listed in { 3, 4 }:
 				[ see Feral Wolf file for this ending ]
 				make no decision;
 			else:

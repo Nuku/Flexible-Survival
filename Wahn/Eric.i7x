@@ -3553,7 +3553,7 @@ This is the Eric's Epilogue rule:
 		if EricVirginityTaken is 3: [felinoid]
 			now EricsEpilogueShown is true;
 			if (humanity of Player < 10):
-				if BodyName of Player is "Felinoid":
+				if Player has a non-shifting body of "Felinoid":
 					say "     Eric turns out to be a good fuck-toy for you and your felinoid mate, both your entrancing musk making him a very happy addition to your pride - eager to follow any command and be mounted again and again. It doesn't take long till it becomes obvious that the feline actually impregnated Eric when he took his virginity - and a small litter of kittens is growing in Eric's womb...";
 				else:
 					if Player is male:

@@ -668,7 +668,7 @@ Section 6 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Colleen's Bunker Epilogue"	"NPC"	""	Colleen's Bunker Epilogue rule	900	false
+"Colleen's Bunker Epilogue"	"NPCSharedInfection"	""	Colleen's Bunker Epilogue rule	900	false
 "Colleen's Human Epilogue"	"NPC"	""	Colleen's Human Epilogue rule	900	false
 "Colleen's Solo Epilogue"	"NPC"	""	Colleen's Solo Epilogue rule	900	false
 "Husky Bitch with Colleen"	"NPCSharedInfection"	""	Husky Bitch with Colleen rule	900	false
@@ -747,7 +747,7 @@ This is the Colleen's Bunker Epilogue rule:
 				say "     After getting you and Sarah out of the city, you enjoy being the alpha of your small pack, especially once you add the normal husky dog to your group. And while at it can be hard to make ends meet and support your pack properly at first, your dominant attitude soon has you landing better and better jobs, until eventually you are well situated to support the entire pack. Once that happens you find yourself eyeing your co workers speculatively, wondering just how much better they would look as properly trained husky sluts themselves, after all, now seems like it might be a good time to start expanding the pack again...";
 
 This is the Colleen's Solo Epilogue rule:
-	if Player has a body of "Husky Alpha" and ( Colleen is bunkered or Sarah is bunkered ):	[***This is an imperfect solution]
+	if Player has a non-shifting body of "Husky Alpha" and ( Colleen is bunkered or Sarah is bunkered ):	[***This is an imperfect solution]
 		make no decision;
 	if ColleenSlut is 1:
 		trigger ending "Colleen's Solo Epilogue";

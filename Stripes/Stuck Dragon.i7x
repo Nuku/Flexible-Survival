@@ -1844,12 +1844,12 @@ This is the Christy's Epilogue rule:
 	if HP of Christy < 50:
 		if NoIntroduction is 1:
 			trigger ending "Christy's Epilogue"; [Here it states, that the ending has been played.]
-			if Player has a body of "Slutty Dragoness":
+			if Player has a non-shifting body of "Slutty Dragoness":
 				if humanity of Player < 10:
 					say "     With your humanity gone, you aimlessly wander the city streets until the military arrives and captures you. They examine you until they discover that you're no longer infectious, then they sell you to a zoo. Since they feed you well and provide you with a nice, warm cave to be your home, you decide to stay there for a time. But when an anthro dragon comes to the zoo one day and catches your eye, you decide it's time to move on. With a hop and a flap, you leap onto the bars of the cage over your enclosure and bend them apart easily. As the other patrons scream and run, the dragon remains, locked in your gaze. You scoop him up in your large paw and, after a few false starts, fly off with him to set up a love nest of your own.";
 				else:
 					say "     Although you survived with your humanity intact, you still have trouble controlling the lust of your slutty dragoness body. Over time, you learn to control the lust with meditation... and orgies, lots and lots of orgies. With that under at least partial control, you are able to focus on making a living in this changed world with your changed body. Succeeding at learning to fly, you take up a job as a courier. With your strong dragon body, you are able to transport large packages, often bringing them into infected areas. And once there, there are always plenty of excited people to satisfy your lusts by fucking your needy body.";
-			else if Player has a body of "Horny Dragon":
+			else if Player has a non-shifting body of "Horny Dragon":
 				if humanity of Player < 10:
 					say "     Following a compulsion, you spread your wings and fly away from the city. You find a nice cave to live in, then you set about fulfilling your instinctive urge to kidnap princesses and accumulate a horde of treasure. The occasional hero who comes wanting to play the brave knight to slay the dragon and save the princess make for an enjoyable divertissement as well. These princesses are eventually returned full of eggs and, after a few times, start looking forward to their next kidnapping.";
 				else:

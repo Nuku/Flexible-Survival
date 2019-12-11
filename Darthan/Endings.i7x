@@ -9,7 +9,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 "Human Ending"	"Story"	""	Human Ending rule	800	false
 
 This is the Human Ending rule:
-	if Player has a body of "Human":
+	if Player has a non-shifting body of "Human":
 		trigger ending "Human Ending";
 		if the player is pure:
 			say "[purehumanend]";

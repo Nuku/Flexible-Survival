@@ -1153,7 +1153,7 @@ This is the Angie's Epilogue rule:
 		else:
 			say "     Angie is happy to come with you when you are rescued, and is an eager and enthusiastic companion as you make your way back into normal society. It's nice to have another city survivor with you who understands what you went through, and the strong carnal desires you managed to wake in her make her an eager and passionate lover as well. Still, you eventually lose her once again to her first love, as she finally manages to get a job at one of the major zoos in the area. Her cat-like attributes will be a major plus, she tells you eagerly, as the zoo she managed to get a job at has one of the best large cat programs around. Feeling happy for her though somewhat more lonely now, you wish her well as she goes off to her new job, seeming happy and eager, and obviously very interested in a little 'after hours' work with some of the larger cats. But as she did say you could come by and visit anytime, and she might even introduce you to some of her 'favorites' among the big cats if you do, hmmm...";
 	if AngieAroused is 50:
-		if Player has a body of "Panther Herm":
+		if Player has a non-shifting body of "Panther Herm":
 			if humanity of Player < 10:
 				if Player is male:
 					if Player is female:

@@ -533,7 +533,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 "Frank's Epilogue"	"NPC"	""	Frank's Epilogue rule	900	false
 
 This is the Frank's Epilogue rule:
-	if ( franksex > 2 or frankmalesex > 2 ) and Player has no body of "Skunk" and Player has no body of "Skunk Taur" and Player has no body of "Skunkbeast Lord":
+	if ( franksex > 2 or frankmalesex > 2 ) and Player has no non-shifting body of "Skunk" and Player has no non-shifting body of "Skunk Taur" and Player has no non-shifting body of "Skunkbeast Lord":
 		if humanity of Player > 9:
 			trigger ending "Frank's Epilogue";
 			say "     When the soldiers come through the city to rescue you and the others, you tell them about Frank secure in his comic shop. But when they go to retrieve him, he opts not to leave, unable to part with his precious store and collection. You remain in contact with Frank through correspondence from time to time carried by those brave enough to enter the infected city. He has reopened the store, stocking his shelves with more books he scavenges from his one-time competitors['] abandoned locations and private collections left among the fallen city. He only has a few customers, as most of the people living there now have little interest in such pursuits, but it makes him happy just to be open again. He does remember his time with you fondly. From his letters, he seems a little lonely, though he does have a few [']special customers['] who come to enjoy his company as well as his wares. You are happy that he has at least some companionship as well as his books.";

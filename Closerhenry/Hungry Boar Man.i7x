@@ -629,7 +629,7 @@ This is the Pig Vore rule:
 		the Player is vored;
 
 This is the Philip's Epilogue rule:
-	if Player has no body of "Messy Pig" and Player has no body of "Piggy":
+	if Player has no non-shifting body of "Messy Pig" and Player has no non-shifting body of "Piggy":
 		if Philip is in the Large Shed:
 			trigger ending "Philip's Epilogue";
 			if humanity of Player < 10:

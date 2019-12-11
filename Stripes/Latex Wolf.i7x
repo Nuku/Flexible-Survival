@@ -345,11 +345,13 @@ to Latex Wolf Succumbed Intro:
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Latex Wolf Succumbed"	"BadEnd"	"Mixed"	Latex Wolf Succumbed rule	20	false
+"Latex Wolf Succumbed"	"BadEnd"	""	Latex Wolf Succumbed rule	20	false
 "Latex Wolf back to Nature"	"Special"	""	Latex Wolf back to Nature rule	990	false
 "Latex Wolf Infection"	"Infection"	""	Latex Wolf Infection rule	1000	false
 
 This is the Latex Wolf Succumbed rule:
+	if Player is shifter:
+		make no decision;
 	if humanity of Player >= 10 or the Player has no body of "Latex Wolf":
 		make no decision; [Survival ending handled below]
 	trigger ending "Latex Wolf Succumbed"; [Here it states, that the ending has been played.]

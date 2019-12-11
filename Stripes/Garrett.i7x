@@ -403,7 +403,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 "Garrett's Epilogue"	"NPC"	""	Garrett's Epilogue rule	900	false
 
 This is the Garrett's Epilogue rule:
-	if Player has a body of "Blue Gryphon Herm" or Player has a body of "Feral Gryphon":
+	if Player has a non-shifting body of "Blue Gryphon Herm" or Player has a non-shifting body of "Feral Gryphon":
 		make no decision; [do nothing - see those forms for endings]
 	if HP of Garrett >= 7 and humanity of Player >= 10:
 		trigger ending "Garrett's Epilogue"; [Here it states, that the ending has been played.]

@@ -1826,7 +1826,7 @@ This is the Hospital Quest Epilogue rule:
 		if HP of Doctor Mouse is 2:					[Dr Mouse defeated]
 			say "When the military comes into the city, they are helped by Dr Matt's findings. This research keeps more of the soldiers safe and helps them rescue and treat more borderline infection cases, saving many more lives from succumbing to instinctual changes. You are quietly awarded a medal at a small ceremony for your services. Over the years, the doctor's research helps many, stemming the tide of anarchy across the nation, and even the world.";
 	else if hospquest > 13 and humanity of Player > 9:	[helped Dr Mouse]
-		if Player has no body of "Wolverine Guard":
+		if Player has no non-shifting body of "Wolverine Guard":
 			trigger ending "Hospital Quest Epilogue";
 			if HP of Doctor Matt is 101:				[Dr Matt not defeated]
 				say "When the military comes through, you are taken in by the army. In the chaos of trying to deal with so many infected, you receive little scrutiny and your false identity is not questioned. You discreetly ask a few questions and hear that the military's chief scientist is little help to them, with most of her developments having [']sexual side-effects['] that make a lot of the men worried to use them. After you are cleared, you start to settle into your new life, occasionally hearing from Dr Mouse and helping the underground scientist with [']samples['] when needed. He continues his research, selling his enhancements and customized strains to the highest bidder. Occasionally, he has a new one for you. It is always something subtle that will go unnoticed, but helps you in your new life[if Susan is in Hidden Lab]. Susan continues to accompany him as an assistant and a lover for you[end if].";

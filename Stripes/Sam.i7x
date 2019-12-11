@@ -1503,7 +1503,7 @@ This is the Rick's Lil Playthings rule:
 		the Player is enslaved;
 
 This is the Sam's Epilogue rule:
-	if Player has no body of "Vixentaur" and Player has no body of "Dragontaur" and Player has no body of "Dracovixentaur":
+	if Player has no non-shifting body of "Vixentaur" and Player has no non-shifting body of "Dragontaur" and Player has no non-shifting body of "Dracovixentaur":
 		if humanity of Player < 10:
 			if HP of Sam >= 10 and HP of Sam <= 29:
 				say "     After you succumb to the infection and do not return, Sam strikes back out on his own, heading into the city to enjoy the sexy creatures populating the fallen city. He breeds many new dragontaur whelps as his powerful body allows him to mount many a lustful creature.";

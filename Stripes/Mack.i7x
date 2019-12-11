@@ -295,7 +295,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 "Macadamia's Epilogue"	"NPC"	""	Macadamia's Epilogue rule	900	false
 
 This is the Macadamia's Epilogue rule:
-	if Player has a body of "Gray Squirrel":
+	if Player has a non-shifting body of "Gray Squirrel":
 		make no decision; [for Gray Squirrel endings, see that file.]
 	if HP of Macadamia < 13:
 		make no decision;
