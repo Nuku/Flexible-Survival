@@ -2733,6 +2733,7 @@ To Extend game by (x - a number):
 
 
 To process (x - a grab object):
+	let tan be hunger of player;
 	if x is temporary and x is owned:
 		say "You eagerly use the [x]!";
 		let found be 0;
@@ -3012,6 +3013,10 @@ To process (x - a grab object):
 			now HP of Player is maxHP of Player;
 		say "Using your healing booster, you inject the mix into your body, giving a quick boost to your infected body's healing rate. You regain [special-style-1][healed][roman type] HP.";
 		delete healing booster;
+	if tan > hunger of player and "Tanuki Salts" is listed in feats of player:
+		say "Dashing a little tanuki salts helped things along. Mmm, divinely tasty.";
+		playerEat 5;
+		increase the morale of the player by 5;
 
 
 understand "talk [person]" as conversing.
