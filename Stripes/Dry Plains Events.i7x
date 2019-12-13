@@ -97,11 +97,66 @@ Hardware Store Ruins is a situation.
 The sarea of Hardware Store Ruins is "Plains".
 
 Instead of resolving a Hardware Store Ruins:
-	say "     Coming across the remains of a hardware store, you are very hopeful to find something of use in it. The rubble is difficult to move and the task quickly becomes both tiring and frustrating. More and more as you work, you come to believe this place was picked completely clean before it collapsed. While some parts are too buried to reach and check, those you can find yield nothing of value at all. After a long and fruitless search, you grab the pack of nails you found and bash them into a board using a rock. You wrap some fabric tape around the base to give you a better grip and end up with a crude spiked club.";
-	say "     Spiked club obtained!";
-	increase carried of spiked club by 1;
-	increase score by 5;
-	now Hardware Store Ruins is resolved;
+	say "     You wander across the dry plains, following the path of a worn-down road as it meanders through the rolling hills. The smell of dust still lingers in the air, likely the result of a herd of centaurs as they move through the plains. Not wanting to be caught off guard, you walk with further haste, until the dust settles, and you can once again relax. You pause for a moment to catch your breath. Taking the opportunity to survey your	surroundings, you think you spot a number of buildings up ahead. You approach to a safe distance, your eyes scanning the horizon for both peril and plunder, until eventually, they settle on the ruins of an old hardware store.";
+	say "     [bold type]Do you want to investigate the ruins? [roman type]There's a good chance you could find some useful tools, but it looks risky, and rummaging around in the debris might bring unwanted attention.";
+	LineBreak;
+	if Player consents:
+		let diceRoll be a random number from 1 to 20;
+		let bonus be ( ( the Perception of the player minus 10 ) divided by 2 );
+		let perceptionRoll be diceRoll plus bonus;
+		say "     You proceed to clamber into the ruins, moving aside fallen junk in an effort to find something of use. The rubble is difficult to move and the task quickly becomes both tiring and frustrating. More and	more as you work, you come to believe this place was picked completely clean before it collapsed. While some parts are too buried to reach and check, those you can find yield nothing of value at all. At one point, you notice a solid plank of wood buried under the rubble that looks like it might be of use. You give it a tug, but it barely moves. You pull again, getting it to budge this time, but you can see that it's a bit longer than you thought and moves much of the surrounding rubble along with it.";
+		say "     You roll 1d20([diceRoll])+[bonus] = [special-style-1][perceptionRoll][roman type] vs [special-style-2]10[roman type] (Perception Check):[line break]";
+		if perceptionRoll < 10:
+			say "     Giving one last heave on the plank, you manage to dislodge it. What you didn't notice is that it was the only thing holding back a pile of rubble above you. It begins to topple down, and you dive away just in time to avoid being hit. The crash echoes through the store. Checking yourself over, you are relieved to find yourself undamaged, save for a few scrapes and bruises.";
+			say "     On that note, you decide you've done enough rummaging for today. You are about to head out when you hear voices in the distance. It seems the noise of your rummaging has attracted some visitors. You slip into the shadows of one of the few walls still standing, hoping to avoid detection. Peeking around the corner, you count three centaurs approaching your position. You pull back into hiding and ponder your next move.";
+			say "     [bold type]Do you challenge the group to a fight? [roman type]Otherwise you can try to sneak away without being seen.";
+			LineBreak;
+			if Player consents:
+				say "[CentaurHardwareFight]";
+			else:
+				let diceRoll be a random number from 1 to 20;
+				let bonus be ( ( the Dexterity of the player minus 10 ) divided by 2 );
+				let dexterityRoll be diceRoll plus bonus;
+				say "     You roll 1d20([diceRoll])+[bonus]: [special-style-1][dexterityRoll][roman type] vs [special-style-2]10[roman type] (Dexterity Check):[line break]";
+				if dexterityRoll < 10:
+					say "     You slink deeper into the shadows and turn to depart in the other direction. You are able to follow the shadow of the crumbling wall for some time, but eventually it ends. With the ceiling having collapsed quite some time ago, you are left to cross a brightly lit gap before you can reach safety. You take your chances and speed across the opening in a standing crouch, but halfway through, you hear one of the centaurs shout. You've been spotted!";
+					say "[CentaurHardwareFight]";
+				else:
+					say "     You slink deeper into the shadows and turn to depart in the other direction. You are able to follow the shadow of the crumbling wall for some time, but eventually it ends. With the ceiling having collapsed quite some time ago, you are left to cross a brightly lit gap before you can reach safety. Glancing at the group of centaurs, you wait until they appear to be distracted and then make your move. You cross to the other side of the opening and make it to the edge of the ruins. Hopping over the final pile of rubble, you make a sprint back to the dry plains. Sparing a glance to the rear, you see no signs of pursuit. Looks like you made out, leaving the pack of centaurs none the wiser.";
+		else:
+			say "     Realizing that the 2x2 is holding the surrounding junk together, you proceed more cautiously lest it all come tumbling down on you. You approach from a different angle, and this time, you find you are able to easily slide the plank out of its rubble prison. Although it's a bit longer than you would prefer, you find that it would make for a nice club with some improvements. You grab a pack of nails you found previously and bash them into the board using a rock. You wrap some fabric tape, also scavenged from within the ruins, around the base to give you a better grip and end up with a crude spiked club.";
+			say "     [bold type]Spiked club obtained![roman type][line break]";
+			increase carried of spiked club by 1;
+			increase score by 5;
+			now Hardware Store Ruins is resolved;
+	else:
+		say "     Deciding discretion is the better part of valor, you pass the ruins by and continue on with your journey. You	keep an eye open for any trouble, but there are no further disturbances along your pleasant stroll.";
+
+to say CentaurHardwareFight:
+	let enemySelector be 0;
+	let i be 0;
+	now fightoutcome is 0;
+	while i < 3:
+		now inasituation is true;
+		let enemySelector be a random number from 1 to 2;
+		if enemySelector is 1:
+			challenge "Centaur Mare";
+		else:
+			challenge "Centaur Stallion";
+		now inasituation is false;
+		increase i by 1;
+	if fightoutcome < 20: [player victory]
+		say "     You stand over the defeated centaurs, breathing heavily after the fight. You take a moment to revel in your victory, but with only three to their number, you realize there's a good possibility that more of them might be nearby. Deciding it's best to get out of here before more show up, you pick your way out of the mess of rubble which toppled over in the chaos. Perhaps you can return and continue your search when there's a little less foot traffic around.";
+	else if fightoutcome > 19 and fightoutcome < 30: [player loss]
+		say "     You slump to the floor, defeated at the hands of the small centaur scouting party. They grin wickedly, eager to have their way with you. One of them steps forward and grabs you by the collar, roughly dragging you to the center of the group while the others clear some room to have some fun.";
+		if enemySelector is 1:
+			say "[losetocentaurmare]";
+		else:
+			say "[losetocentaurstallion]";
+	else if fightoutcome is 90: [player fled]
+		say "     Escaping from the grasp of the centaurs, you quickly dash around a corner of rubble and begin to run. The centaurs attempt to give chase, but they're bulky form gives them trouble navigating the debris of the hardware store. Sparing a glance behind you, you see that they've given up the chase, and you slow your retreat to a more comfortable pace. You make your way out of the ruins and endeavour to come back later, when it's a little less dangerous around. Perhaps then you'll be able to find something useful.";
+	else:
+		say "You should not be seeing this.";
 
 
 Table of Game Objects (continued)
