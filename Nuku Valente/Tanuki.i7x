@@ -623,6 +623,7 @@ instead of conversing the Tanuki Mom:
 			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
+				if hp of tanuki mom is 0, now hp of tanuki mom is 1;
 				if (nam is "Survival"):
 					say "[TanukiSurvivalTalk]";
 				if (nam is "Romance"):
@@ -636,7 +637,7 @@ instead of conversing the Tanuki Mom:
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
-			say "     The tanuki gives you a rather big grin, patting his round belly.";
+			say "     The tanuki gives you a rather big grin, patting her round belly.";
 			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
