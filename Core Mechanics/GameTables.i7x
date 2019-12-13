@@ -1022,7 +1022,6 @@ Name(text)	Type(text)
 "ocelotsize"	"number"
 "OfficeGirlsDominance"	"number"
 "OfficeGirlsFriendship"	"number"
-"OgreMeetings"	"number"
 "OliverRelationship"	"number"
 "Onyxboislut"	"number"
 "onyxdma"	"number"

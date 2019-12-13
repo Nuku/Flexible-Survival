@@ -150,16 +150,26 @@ Klauz	"Klauz"
 
 Klauz is a man.
 ScaleValue of Klauz is 3. [roughly human sized]
+Body Weight of Klauz is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Klauz is 4. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+Androginity of Klauz is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 SleepRhythm of Klauz is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Klauz is 1.
-Cock Length of Klauz is 14.
-Ball Size of Klauz is 4. [goose egg sized balls]
-Ball Count of Klauz is 2.
-Cunt Count of Klauz is 0.
-Cunt Depth of Klauz is 0.
-Cunt Tightness of Klauz is 0.
-Nipple Count of Klauz is 2.
-Breast Size of Klauz is 0.
+Mouth Length of Klauz is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Klauz is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Klauz is 6. [length in inches]
+Cock Count of Klauz is 1. [number of cocks]
+Cock Girth of Klauz is 4. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Klauz is 9. [length in inches]
+Ball Size of Klauz is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Ball Count of Klauz is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Cunt Count of Klauz is 0. [number of cunts]
+Cunt Depth of Klauz is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Klauz is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Klauz is 0. [size 1-5, very small/small/average/large/very large]
+Asshole Depth of Klauz is 10. [inches deep for anal fucking]
+Asshole Tightness of Klauz is 1. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Nipple Count of Klauz is 2. [count of nipples]
+Breast Size of Klauz is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 [Basic Interaction states as of game start]
 TwistedCapacity of Klauz is false. [can not take oversized members without pain]
 Sterile of Klauz is false.
@@ -269,7 +279,7 @@ to say sexwithfelinoidpet:
 		say "     He pushes his wet cock deep into you with ease. You can feel each bump and barb rub against your hole and your inner walls. Once you feel his heavy pair of balls resting against your own, he begins to hump you in earnest. His barbs fill you with pleasure as they rub against your insides[if Player is male] causing you steadily leak precum beneath you[end if]. The nubs on his shaft quickly, and repeatedly, go in and out of your [if Player is female]quivering cunny[else]clenching ring[end if] sending shivers up your spine[if Player is male]. With each hard thrust in, you can feel his balls slap against your own accompanied by a wet slurp coming from your abused hole[end if]. You can't help but moan beneath the dominant male as he fucks you. Even though he is your comrade and you took him in as your pet, you have continued to allow him to become the more dominant party, allowing him to have his way with you whenever you please. The dominant male picks up the pace of his already rough fucking.";
 		say "     After some time, he bites down hard on the nape of your neck, surely drawing blood. The rough bite sets you over the edge as you cum [if Player is male]beneath the dominant male painting the ground with your sticky seed[else]hard, your vaginal walls gripping at his feline rod[end if]. Not much longer he releases your nape and releases a loud roar as he thrusts his feline shaft deep inside of you and releases shoots his virile seed deep into you. He pulls his cock out, which causes you to moan for more, and shoots the last two or three shoots onto your ass. Which you are sure is a way to mark his territory. As per usual, he walks back around you and has you lick his cock clean. You've begun to enjoy the taste of his cum more and more, but most importantly you are happy to have pleased the dominant male. After you lick his cock clean, he struts away leaving you by yourself. You quickly put your gear back on, savoring the taste of his musk trapped on your lips.";
 		NPCSexAftermath Player receives "OralCock" from Klauz;
-		NPCSexAftermath Player receives "[if player is female]PussyFuck[else if player is male]AssFuck[end if]" from Klauz;
+		NPCSexAftermath Player receives "[if player is female]PussyFuck[else]AssFuck[end if]" from Klauz;
 		increase HP of Felinoid companion by 1;
 	else if BodyName of Player is "Felinoid" and player is pure and child is not born and gestation of Child is 0: [ player must not already be pregnant]
 		if Player is female:
@@ -365,6 +375,7 @@ to say felinoidpet_puref:
 	say "     His orgasm fading, he gives a firm nip and drives your front against the ground before his feet change stance, then he pulls out in a swift, brutal, motion. The barbs catch firmly in your sensitive flesh and all you can feel is dizzying intensity, as if your entire form were made of fire for what feels like forever. As your trembling limbs return to your control, you can see him quietly licking himself clean, satisfied and content again.";
 	NPCSexAftermath Player receives "PussyFuck" from Klauz;
 	now Libido of Player is Libido of Player / 3;
+	say "[impregchance]";
 	increase HP of Felinoid companion by 1;
 
 
@@ -373,7 +384,7 @@ to say felinoidpet_purem:
 		say "     The large feline licks and laps at your cock, his rough tongue feeling wonderful across your barbed manhood. He lets his tongue trail up and down your [cock size desc of Player] erection and over your balls. As he continues, you grow increasingly aroused, leaking precum steadily and losing yourself in the excitement. The scent of felinoid musk hangs heavy in the air, turning you on all the more and clouding your judgment.";
 		say "     When he stops licking suddenly, you mewl in disappointment. He pads around behind you and, with a push of his powerful paws, knocks you down onto all fours. You moan as his nose finds its way under your tail and that rough tongue of his slathers across your anus this time. Lost in your lustful haze, you shift to a firmly quadrupedal stance and mewl again, this time with need.";
 		say "     The big feline moves atop you, brushing his stiff and leaking penis between your cheeks. Taking the nape of your neck in his teeth, he humps a few times before getting lined up and driving that barbed rod of his into your tight back passage. Those stimulating bumps send shivers of pleasure through your feline body and you pant and moan as he fucks you hard and fast, taking you as he would a female. Your cock throbs between your legs, dribbling a growing pool of precum onto the ground as you're incredibly turned on by being fucked by the feral cat.";
-		say "     Klauz's climax strikes before you are even fully aware of it, splashing hotly against your prostate. Spurt after spurt of feline semen fills you, stuffing your bowels with the virile male's load. Being fucked and stuffed by the powerful feline is soon too much for you and you mrowl loudly as you orgasm, spraying your own feline seed onto the ground. You grind back against him even as you cum, eager to take as much as the powerful male atop you can give.[mimpregchance]";
+		say "     Klauz's climax strikes before you are even fully aware of it, splashing hotly against your prostate. Spurt after spurt of feline semen fills you, stuffing your bowels with the virile male's load. Being fucked and stuffed by the powerful feline is soon too much for you and you mrowl loudly as you orgasm, spraying your own feline seed onto the ground. You grind back against him even as you cum, eager to take as much as the powerful male atop you can give.";
 		say "     When he's done, the big cat quickly dismounts and pushes you over with a paw. Weak and lost in a haze of lust, you flop onto the ground, welcoming the more dominant cat's cock into your mouth so you can suck it clean of the last traces of semen. Only once you're done cleaning him and he's padded off does the musk-fueled lust gradually leave and you come back to your senses enough to get up and continue on.";
 		NPCSexAftermath Player receives "AssFuck" from Klauz;
 		NPCSexAftermath Player receives "OralCock" from Klauz;

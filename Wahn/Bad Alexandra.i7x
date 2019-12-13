@@ -621,7 +621,7 @@ Section 2 - Bad Girl Sexxxings
 Part 1 - Bad Alexandra Sex Selection
 
 to say sexwithAlexandra_bg:
-	if "Horny Bastard" is listed in Traits of Alexandra and lastfuck of Alexandra - turns < 4:
+	if "Horny Bastard" is listed in Traits of Alexandra and lastfuck of Alexandra - turns < 3:
 		say "     'Not that I don't want to boss, but you gotta let me have a little while to rest. Just can't keep up with your libido, you nymphomaniac.'";
 	else if "Horny Bastard" is not listed in Traits of Alexandra and lastfuck of Alexandra - turns < 6:
 		say "     'As fun as this has been, I do need at least a short break before we go again[if HP of Alexandra < 50], boss[end if].'";

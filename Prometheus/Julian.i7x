@@ -48,7 +48,7 @@ Julian's Room is a room.
 The description of Julian's Room is "[JuliansRoomDesc]".
 
 to say JuliansRoomDesc:
-	say "     Julian's room looks like ordered chaos. There are piles of books, games, and other belongings lying around, but he seems to know where things are. His bed is crumpled, but mostly made, strands of fur covering the duvet. Beneath the bed, a locked case pokes out, the contents as of yet unknown. Despite the mess, his desk space is clean, a powerless laptop pushed carefully to the side to make space for several pads of paper.";
+	say "     Julian's room looks like ordered chaos. There are piles of books, games, and other belongings lying around, but he seems to know where things are. His bed is crumpled, but mostly made, strands of fur covering the duvet, and a soft toy of a wolf snuggles in the corner. Beneath the bed, a locked case pokes out, the contents as of yet unknown. Despite the mess, his desk space is clean, a powerless laptop pushed carefully to the side to make space for several pads of paper.";
 
 Section 2 - NPC Declaration
 

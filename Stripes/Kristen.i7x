@@ -582,47 +582,47 @@ to say kristentfsexmenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck her";
 		now sortorder entry is 1;
-		now description entry is "fuck the sexy fox";
+		now description entry is "Fuck the sexy fox";
 		[]
 		if Libido of Kristen is 4:
 			choose a blank row in table of fucking options;
 			now title entry is "Against the wall";
 			now sortorder entry is 2;
-			now description entry is "pin her back to the wall and fuck her senseless";
+			now description entry is "Pin her back to the wall and fuck her senseless";
 		[]
 		if Libido of Kristen is 3:
 			choose a blank row in table of fucking options;
 			now title entry is "Cock worship + sex";
 			now sortorder entry is 2;
-			now description entry is "enjoy some oral attention from your loving mate before fucking her";
+			now description entry is "Enjoy some oral attention from your loving mate before fucking her";
 		[]
 		if Libido of Kristen is 2:
 			choose a blank row in table of fucking options;
 			now title entry is "Lap ride";
 			now sortorder entry is 2;
-			now description entry is "take her for a ride in your lap";
+			now description entry is "Zake her for a ride in your lap";
 		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Blow job";
 		now sortorder entry is 5;
-		now description entry is "use her muzzle";
+		now description entry is "Use her muzzle";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Give cunnilingus";
 	now sortorder entry is 6;
-	now description entry is "eat her out";
+	now description entry is "Eat her out";
 	[
 	choose a blank row in table of fucking options;
 	now title entry is "69";
 	now sortorder entry is 7;
-	now description entry is "share some mutual oral pleasure";
+	now description entry is "Share some mutual oral pleasure";
 	]
 	if Janice is visible and lastfuck of Janice - turns >= 6:
 		if Player is male:									[***lez still needed]
 			choose a blank row in table of fucking options;
 			now title entry is "Threesome w/Janice";
 			now sortorder entry is 9;
-			now description entry is "have a threesome with the vulpine hotties";
+			now description entry is "Have a threesome with the vulpine hotties";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -634,8 +634,7 @@ to say kristentfsexmenu:
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry][line break]";
-			say "Is this what you want?";
+			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
