@@ -308,11 +308,8 @@ instead of sniffing Back Room:
 Section 4 - Trapped Dragon Front
 
 a postimport rule: [bugfixing rules for players that import savegames]
-	if MainInfection of Christy is not "Slutty Dragoness" and MainInfection of Christy is not "Horny Dragon":
-		if HP of Christy < 50 or HP of Christy >= 90:
-			now MainInfection of Christy is "Slutty Dragoness";
-		else:
-			now MainInfection of Christy is "Horny Dragon";
+	if HP of Christy >= 50 and HP of Christy < 90:
+		now MainInfection of Christy is "Horny Dragon";
 
 Table of GameCharacterIDs (continued)
 object	name

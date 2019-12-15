@@ -699,6 +699,7 @@ to wrbodysave:
 	now wrbodytype is bodytype of Player;
 	now wrdaycycle is SleepRhythm of Player;
 	now BodyName of Player is "Wereraptor";
+	now BodySpeciesName of Player is "Wereraptor";
 	now Body of Player is body entry;
 	attributeinfect;
 	say ". Your body contorts painfully as [body change entry]";
@@ -708,6 +709,7 @@ to wrfacesave:
 	now wrFaceName is FaceName of Player;
 	now wrface is Face of Player;
 	now FaceName of Player is "Wereraptor";
+	now FaceSpeciesName of Player is "Wereraptor";
 	now Face of Player is face entry;
 	say ". Your face cracks and pops as [face change entry]";
 
@@ -716,6 +718,7 @@ to wrskinsave:
 	now wrSkinName is SkinName of Player;
 	now wrskin is Skin of Player;
 	now SkinName of Player is "Wereraptor";
+	now SkinSpeciesName of Player is "Wereraptor";
 	now Skin of Player is skin entry;
 	say ". Your skin feels tight and raw as [skin change entry]";
 
@@ -724,6 +727,7 @@ to wrtailsave:
 	now wrTailName is TailName of Player;
 	now wrtail is tail of Player;
 	now TailName of Player is "Wereraptor";
+	now TailSpeciesName of Player is "Wereraptor";
 	now tail of Player is tail entry;
 	say ". Your hindquarters stiffen with a harsh pop as [ass change entry]";
 
@@ -732,6 +736,7 @@ to wrcocksave:
 	now wrCockName is CockName of Player;
 	now wrcock is Cock of Player;
 	now CockName of Player is "Wereraptor";
+	now CockSpeciesName of Player is "Wereraptor";
 	now Cock of Player is cock entry;
 	if Player is male:
 		say ". Your groin feels a surge of wild power as [cock change entry]";
@@ -741,6 +746,7 @@ to wrcocksave:
 to wrcurserecede:
 	if BodyName of Player is "Wereraptor":
 		now BodyName of Player is wrBodyName;
+		now BodySpeciesName of Player is wrBodyName;
 		now Body of Player is wrbody;
 		now scalevalue of Player is wrscalevalue;
 		now bodydesc of Player is wrbodydesc;
@@ -748,15 +754,19 @@ to wrcurserecede:
 		now SleepRhythm of Player is wrdaycycle;
 	if FaceName of Player is "Wereraptor":
 		now FaceName of Player is wrFaceName;
+		now FaceSpeciesName of Player is wrFaceName;
 		now Face of Player is wrface;
 	if SkinName of Player is "Wereraptor":
 		now SkinName of Player is wrSkinName;
+		now SkinSpeciesName of Player is wrSkinName;
 		now Skin of Player is wrskin;
 	if TailName of Player is "Wereraptor":
 		now TailName of Player is wrTailName;
+		now TailSpeciesName of Player is wrTailName;
 		now tail of Player is wrtail;
 	if CockName of Player is "Wereraptor":
 		now CockName of Player is wrCockName;
+		now CockSpeciesName of Player is wrCockName;
 		now Cock of Player is wrcock;
 	StatChange "Dexterity" by -2;
 	StatChange "Strength" by -2;

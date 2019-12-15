@@ -294,6 +294,8 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 		if PlayerFucked of GivingChar is false: [player never had sex with this NPC]
 			now PlayerFucked of GivingChar is true; [player sexed up this NPC]
 		if SexAct is "AssFuck":
+			if debug is at level 1:
+				say "DEBUG -> MainInfection of [GivingChar] is '[MainInfection of GivingChar]'[line break]";
 			if AnalVirgin of Player is true:
 				now AnalVirgin of Player is false;
 				say "     [Bold Type]You have lost your anal virginity to [GivingChar]![roman type][line break]";
@@ -306,6 +308,8 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 					else:
 						mimpregchance;
 		else if SexAct is "PussyFuck":
+			if debug is at level 1:
+				say "DEBUG -> MainInfection of [GivingChar] is '[MainInfection of GivingChar]'[line break]";
 			if Virgin of Player is true:
 				now Virgin of Player is false;
 				say "     [Bold Type]You have lost your virginity to [GivingChar]![roman type][line break]";

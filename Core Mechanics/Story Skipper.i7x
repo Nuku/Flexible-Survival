@@ -488,7 +488,7 @@ to CharacterRestore:
 				now scalevalue of CharacterObject is The scalevalue entry;
 				now PlayerLastSize of CharacterObject is PlayerLastSize entry;
 				[Texts]
-				now MainInfection of CharacterObject is MainInfection entry;
+				[now MainInfection of CharacterObject is MainInfection entry;]
 				now FirstAnalPartner of CharacterObject is FirstAnalPartner entry;
 				now FirstVaginalPartner of CharacterObject is FirstVaginalPartner entry;
 				now FirstOralPartner of CharacterObject is FirstOralPartner entry;

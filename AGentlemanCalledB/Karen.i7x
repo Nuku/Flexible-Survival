@@ -106,6 +106,7 @@ Karen	"Karen"
 
 Karen is a woman.
 The description of Karen is "[KarenDesc]".
+MainInfection of Karen is "Retriever Female".
 
 instead of sniffing Karen:
 	say "[KarenScent]";
