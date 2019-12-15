@@ -1548,6 +1548,8 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 "Sarah's Epilogue"	"NPC"	""	Sarah's Epilogue rule	900	false
 
 This is the Sarah's Epilogue rule:
+	if humanity of Player < 10 and the Player left:
+		make no decision; [Skip this, if the player succumbed to the infection and has left (everything behind).]
 	if Sarah is in the bunker:
 		trigger ending "Sarah's Epilogue";
 		if SarahCured > 3: [fully cured]
