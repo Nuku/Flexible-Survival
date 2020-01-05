@@ -6835,6 +6835,7 @@ Include Adam by Wahn.
 Include Alex by Stripes.
 Include Arcanologist by Taelyn.
 Include Bad Alexandra by Wahn.
+Include Allen by Wahn.
 Include Alexandra Breeding by Wahn.
 Include Alexandra Cuckolding by Wahn.
 Include Alpha Fang Scenes by Nuku Valente.
@@ -6876,6 +6877,7 @@ Include Daisy by Sarokcat n Verath.
 Include Danny by Wahn.
 Include Darius by Wahn.
 Include David by Wahn.
+Include Davies by Wahn.
 Include Deer by Stripes.
 Include Denise by Wahn.
 Include Demonologist by Gherod.
