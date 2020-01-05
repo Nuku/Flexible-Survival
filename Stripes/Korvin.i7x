@@ -19,6 +19,11 @@ Version 2 of Korvin by Stripes begins here.
 
 "Adds character specific info for Korvin the GSD pet."
 
+a postimport rule: [bugfixing code]
+	if gshep_postfight > 0 and gshep_sexscene > 0 and gshep_bed_scene > 0 and gshep_inactive > 0 and gsd_pet < 15:
+		now gsd_pet is 15;
+
+
 the linkaction of Korvin is "[korvinlinkaction]".
 
 to say korvinlinkaction:
@@ -206,7 +211,8 @@ to say korvinsexmenu:
 		now lastfuck of gshep is turns;
 	else if gsd_pet is 13:
 		say "[gshep_sexargue]";
-		now gsd_pet is 14;
+		if gsd_pet < 14:
+			now gsd_pet is 14;
 		now lastfuck of gshep is turns;
 	else if gsd_pet is 14:
 		say "<***repeats for now>";
@@ -246,9 +252,8 @@ to say gshep_postfightargue:		[Post-fight argument]
 	increase dexterity of gshep by 1;
 	increase weapon damage of gshep by 1;
 	now GShepLastScene is turns;
-	if gsd_pet is 12 or gsd_pet is 13 or gsd_pet is 14:
-		if ( gshep_postfight > 0 and gshep_sexscene > 0 and gshep_bed_scene > 0 and gshep_inactive > 0 ):
-			say "[gshep_collar_prompt]";
+	if ( gshep_postfight > 0 and gshep_sexscene > 0 and gshep_bed_scene > 0 and gshep_inactive > 0 ):
+		say "[gshep_collar_prompt]";
 	WaitLineBreak;
 
 to say gshep_sexargue:				[Sex role argument]

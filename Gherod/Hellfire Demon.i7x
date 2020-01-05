@@ -277,13 +277,16 @@ to LJockstrapPickup:
 
 to say HellDemon Desc:
 	setmongender 3;
-	say "     Standing in front of you is yet another intimidating creature of Hell. A deep crimson, tall and powerful demon, with large tauric horns on the top of his head, approaches you from the darkness. Your eyes inevitably land on the massive bulge barely contained by a leather jockstrap, jiggling slightly at each step that he takes. On top of that, his athletic body is covered in muscle, with a simply harness around his hairy pectorals, and while he generally looks more human in appearance than the brutish of demons, his dark sharp claws still prove a threat to you. With a grin on his face, he speaks to you:[line break]";
-	if gimp mask is equipped:
-		say "     'A gimp mask? Such depravity... so delicious! [bold type]You'll make a great slave candidate for Master Mogdraz![roman type] Be a good [boygirl] and I'll take you there. Or don't, and I'll drag you with me anyway! He will be very... very pleased to meet you.' With this, the demon lunges himself at you.";
-	else if BodyName of Player is "Hellfire Demon" and FaceName of Player is "Hellfire Demon": [player looks like a Hellfire Demon]
-		say "     'Fancy meetin' you here! Did you get fucked so much that you became one of us? Should've just asked Master Mogdraz for a joining pass, I'm sure he'd provide you with enough juice... in exchange for your soul. Now be a good lad and do what you're told, or I'll make you.' With this, the demon lunges himself at you.";
-	else:
-		say "     'Oh... Are you lost? Wrong time to be walking this side of the streets... Master needs more slave candidates, I just deliver. Though I'll enjoy testing you first.' With this, the demon lunges himself at you.";
+	if inasituation is true:
+		say ""; [taken care of in the event]
+	else: [standard scene]
+		say "     Standing in front of you is yet another intimidating creature of Hell. A deep crimson, tall and powerful demon, with large tauric horns on the top of his head, approaches you from the darkness. Your eyes inevitably land on the massive bulge barely contained by a leather jockstrap, jiggling slightly at each step that he takes. On top of that, his athletic body is covered in muscle, with a simple harness around his hairy pectorals, and while he generally looks more human in appearance than the brutish of demons, his dark sharp claws still prove a threat to you. With a grin on his face, he speaks to you:[line break]";
+		if gimp mask is equipped:
+			say "     'A gimp mask? Such depravity... so delicious! [bold type]You'll make a great slave candidate for Master Mogdraz![roman type] Be a good [boygirl] and I'll take you there. Or don't, and I'll drag you with me anyway! He will be very... very pleased to meet you.' With this, the demon lunges himself at you.";
+		else if BodyName of Player is "Hellfire Demon" and FaceName of Player is "Hellfire Demon": [player looks like a Hellfire Demon]
+			say "     'Fancy meetin' you here! Did you get fucked so much that you became one of us? Should've just asked Master Mogdraz for a joining pass, I'm sure he'd provide you with enough juice... in exchange for your soul. Now be a good lad and do what you're told, or I'll make you.' With this, the demon lunges himself at you.";
+		else:
+			say "     'Oh... Are you lost? Wrong time to be walking this side of the streets... Master needs more slave candidates, I just deliver. Though I'll enjoy testing you first.' With this, the demon lunges himself at you.";
 
 Section 3 - Creature Insertion
 
@@ -458,7 +461,7 @@ Section 4-1 - Items
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"hellfire seed"	"The white, gooey seed of one of your past demonic lovers. It smells very sweet, a little like burnt cream, and feels really hot."	1	demon seed
+"hellfire seed"	"The white, gooey seed of one of your past demonic lovers. It smells very sweet, a little like burnt cream, and feels really hot."	1	hellfire seed
 
 hellfire seed is a grab object.
 the usedesc of hellfire seed is "[hellfire seed use]";

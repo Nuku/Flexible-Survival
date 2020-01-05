@@ -129,6 +129,7 @@ Figure of VixenNurse_icon is the file "VixenNurse_ig.jpg".
 Figure of Vixentaur_icon is the file "vixentaur_ig.jpg".
 Figure of Werewolf_female_icon is the file "Werewolf.jpg".
 Figure of Wildcat_icon is the file "wildcat_ig.jpg".
+Figure of Wood_Elf_icon is the file "Wood Elf.jpg".
 Figure of Wyvern_female_icon is the file "Wyvern_female.jpg".
 Figure of YamatoDragon_red_hard_icon is the file "YamatoDragon_red_hard.jpg".
 Figure of YamatoDragon_red_soft_icon is the file "YamatoDragon_red_soft.jpg".
@@ -991,6 +992,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Warrior Chris_naked"	Figure of Warrior Chris_naked_icon	"Kupo Klein"	g-white	"normal"
 "Werewolf (female)"	Figure of Werewolf_female_icon	"Watsup"	g-white	"normal"
 "Wildcat"	Figure of Wildcat_icon	"Strype"	g-white	"normal"
+"Wood Elf"	Figure of Wood_Elf_icon	"Vashaa"	g-White	"normal"
 "Wyvern_female"	Figure of Wyvern_female_icon	"Anonymous"	g-white	"normal"
 "Yatur_clothed"	Figure of Yatur_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Yatur_naked"	Figure of Yatur_naked_icon	"Kupo Klein"	g-white	"normal"
@@ -1165,6 +1167,7 @@ carry out artistcredits:
 	say "     Voodoo Gecko by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Werewolf (female) by Watsup @ https://www.furaffinity.net/user/watsup/[line break]";
 	say "     Wildcat by Strype @ furaffinity.net[line break]";
+	say "     Wood Elf by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Wyvern Female by Anonymous[line break]";
 	say "     Yamato Dragon by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Yuppie Mink by Anymouse1968 @ furaffinity.net[line break]";

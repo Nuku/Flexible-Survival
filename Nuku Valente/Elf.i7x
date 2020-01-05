@@ -12,6 +12,7 @@ ElfEncounters is a number that varies. ElfEncounters is usually 0.
 ElfRimming is a number that varies. ElfRimming is usually 0.
 
 to say ElfWins:
+	project the Figure of Wood_Elf_icon;
 	if HP of Player < 1:
 		say "     Finally overtaken, you slump to your feet in exhaustion. The elf laughs, grinning as she approaches to pin you onto the ground and seating herself atop you.";
 		say "     '[one of]Hmm[or]Oh[or]Yes[at random], [one of]I love to play with my prey[or]I think you'll do[or]you should've ran. I love it when they run[at random]...' ";
@@ -40,6 +41,7 @@ to say ElfWins:
 		say "     The elf's endeavors persist for what seems like forever until you finally cry out, finding twisted bliss after being rendered so sensitive[if Player is male], wasting your [Cum Load Size of Player] load onto the earth[else if Cunt Count of Player > 1], aching cunt[sfn] making a further mess of the earth[end if]. Mocking and chastising you, the elven lady does thankfully relent, pulling her bow free from you and giving one final, playful swat with it before parting. It takes a fair amount of time to recover, your behind no doubt very red and sore following the whole ordeal.";
 
 To say ElfLoses:
+	project the Figure of Wood_Elf_icon;
 	say "     You knock the elf back and she topples to her bottom";
 	if Libido of Player > 29:
 		say ". Shall you try to have your way with her before she flees?";
@@ -87,6 +89,7 @@ To say ElfLoses:
 
 to say ElfDesc:
 	setmongender 4; [creature is female]
+	project the Figure of Wood_Elf_icon;
 	say "     [if ElfEncounters is 0]At first glance, you run into what appears to be a human, but something's a little off[else]You run into an elven woman[end if]. Vaguely Asian, lightly tanned features exposed before you, the lady's lithe build is betrayed by her voluptuous curves, barely contained within the confines of her paltry, silken attire.";
 	say "     '[one of]You've overstepped your bounds, stranger[or]These woods shall own all that dwell within[or]Ah, yes, you'll suffice[or]Just the kind of fun I was looking for[at random]!' Grinning fiercely, she makes her long, ornate bow very apparent to you, her golden hair flowing in the open air. It's clear she's not going to let you off without a fight.";
 	if ElfEncounters is 0, now ElfEncounters is 1;
