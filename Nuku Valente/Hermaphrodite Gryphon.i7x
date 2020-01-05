@@ -14,6 +14,7 @@ To say losetohgryphon:
 	if inasituation is true:
 		say ""; [taken care of at the event source]
 	else:
+		project Figure of BlueGryphon_hard_icon;
 		now nohgryphonsex is 0;
 		let analchance be 5;
 		if Player is submissive, increase analchance by 2;
@@ -99,6 +100,7 @@ To say beatthehgryphon:
 	if inasituation is true:
 		say ""; [taken care of at the event source]
 	else:
+		project Figure of BlueGryphon_hard_icon;
 		increase hgryphonwin by 1;
 		if Player is neuter:
 			say "[one of]The once proud beast is knocked to the ground, her wings drawn protectively. Victorious, you move on.[or]Succumbing to her wounds, the gryphon collapses at your feet, posing no further threat.[at random]";
@@ -260,6 +262,7 @@ to say hgryphon_TG:
 	if HP of Garrett < 6, now HP of Garrett is 6;
 
 to say HermGryphonDesc:
+	project Figure of BlueGryphon_soft_icon;
 	setmongender 5;
 	if inasituation is true:
 		say ""; [taken care of at the event source]
