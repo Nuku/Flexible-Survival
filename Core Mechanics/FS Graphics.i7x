@@ -54,6 +54,8 @@ Figure of Giraffe_icon is the file "Giraffe_ig.jpg".
 Figure of GooGirl_icon is the file "GooGirl.jpg".
 Figure of BlueGryphon_icon is the file "BlueGryphon.jpg".
 Figure of BlueGryphon_face_icon is the file "BlueGryphon_face.jpg".
+Figure of BlueGryphon_hard_icon is the file "Blue Gryphon hard.jpg".
+Figure of BlueGryphon_soft_icon is the file "Blue Gryphon soft.jpg".
 Figure of Gazelle_hard_icon is the file "Gazelle_hard.jpg".
 Figure of Gazelle_soft_icon is the file "Gazelle_soft.jpg".
 Figure of GermanShepherd_hard_icon is the file "GermanShepherd_hard.jpg".
@@ -774,6 +776,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Helen"	Figure of Helen_naked_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Helot Manservant"	Figure of Helot_icon	"Obieblu"	g-white	"normal"
 "Blue Gryphon Herm"	Figure of BlueGryphon_icon	"dbd"	g-black	"normal"
+"Blue Gryphon hard"	Figure of BlueGryphon_hard_icon	"Vashaa"	g-white	"normal"
+"Blue Gryphon soft"	Figure of BlueGryphon_soft_icon	"Vashaa"	g-white	"normal"
 "Hermaphrodite Gryphon Face"	Figure of BlueGryphon_face_icon	"dbd"	g-black	"normal"
 "Latex Vixen Herm"	Figure of LatexVixen_icon	"Anymouse1968"	g-white	"normal"
 "Hyena Herm"	Figure of Herm_Hyena_clothed_icon	"Vashaa"	g-White	"normal"
@@ -1116,6 +1120,7 @@ carry out artistcredits:
 	say "     Hawkman by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Helot by Obieblu @ tumblr.com[line break]";
 	say "     Hermaphrodite Gryphon by dbd @ furaffinity.net[line break]";
+	say "     Hermaphrodite Gryphon by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Hermaphrodite Latex Vixen by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Homo Sapiens by Astro @ y-gallery.net[line break]";
 	say "     Horny Doctor (male) by Cooper @ furaffinity.net[line break]";
