@@ -11,6 +11,7 @@ MFSDUBM is a truth state that varies. MFSDUBM is usually false.
 Section 1 - Creature Responses
 
 to say fsdm attack:
+	project the Figure of SeaDragon_hard_icon;
 	if FemaleList is not banned: [change target to male for infection if valid]
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
 			choose row y in Table of Random Critters;
@@ -202,6 +203,7 @@ to say fsdm attack:
 
 
 To say fsdm loss:
+	project the Figure of SeaDragon_hard_icon;
 	if a random chance of fsdsub in 9 succeeds:
 		now boundmod is 1;
 		say "     Before you can land the final blow, the dragon suddenly backs away and concedes to you. His demeanor rather peculiar, you can summize that you've defeated this one before, and has succumbed to newfound, submissive inclinations";
@@ -227,6 +229,7 @@ To say fsdm loss:
 				say "     You turn to depart, having nothing else to gain from this encounter.";
 
 to say fsdm desc:
+	project the Figure of SeaDragon_soft_icon;
 	setmongender 3; [creature is male]
 	psycheeval;
 	libidoeval;
