@@ -7037,6 +7037,7 @@ Include Val by Wahn.
 Include Vanessa by Stripes.
 Include Velos by Blue Bishop.
 Include Vent Fox by Dys.
+Include Voria by Kurainyx.
 Include Wally by Rikaeus.
 Include Wendy by Wahn.
 Include Wild Mustang by Wahn.
