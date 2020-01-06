@@ -78,6 +78,9 @@ and if there is anything left i will let do whatever with Corbin
 [  51: Fuck shared last time - she's eager for more                            ]
 [  52: Brutus + Alexandra unchained sex                                        ]
 
+AlexandraFarmhandEventCooldown is a number that varies. [@Tag:Notsaved]
+AlexandraFarmhandEventCooldown is usually 20000.
+
 Section 0 - Breeding Menu
 
 to say AlexandraBreedingMenu:
@@ -532,7 +535,7 @@ Definition: A person (called x) is SupervisedBreeder:
 	if "Supervised Breeding" is listed in Traits of x, yes;
 	no;
 
-after going to Worker Barracks while (HP of Alexandra is 2 or HP of Alexandra is 4 and "Barracks Slut" is listed in Traits of Alexandra and Lastfuck of Alexandra - turns > 2 and a random chance of 1 in 5 succeeds): [Alexandra is NOT pregnant, has been made the barracks slut, hasn't been fucked in 3 turns, 20% chance]
+after going to Worker Barracks while (HP of Alexandra is 2 or HP of Alexandra is 4 and "Barracks Slut" is listed in Traits of Alexandra and AlexandraFarmhandEventCooldown - turns > 3 and a random chance of 3 in 4 succeeds): [Alexandra is NOT pregnant, has been made the barracks slut, hasn't been fucked in 3 turns, 20% chance]
 	try looking;
 	let randomnumber be a random number from 1 to 5;
 	if randomnumber is:
@@ -548,8 +551,9 @@ after going to Worker Barracks while (HP of Alexandra is 2 or HP of Alexandra is
 			say "[AlexandraFarmhandDripping]";
 		-- 5:
 			say "[AlexandraFarmhandJerking]";
+	now AlexandraFarmhandEventCooldown is turns;
 
-after going to Worker Barracks while (HP of Alexandra is 3 or HP of Alexandra is 5 and "Barracks Slut" is listed in Traits of Alexandra and Lastfuck of Alexandra - turns > 2 and a random chance of 1 in 5 succeeds): [Alexandra IS pregnant, has been made the barracks slut, hasn't been fucked in 3 turns, 20% chance]
+after going to Worker Barracks while (HP of Alexandra is 3 or HP of Alexandra is 5 and "Barracks Slut" is listed in Traits of Alexandra and AlexandraFarmhandEventCooldown - turns > 3 and a random chance of 3 in 4 succeeds): [Alexandra IS pregnant, has been made the barracks slut, hasn't been fucked in 3 turns, 20% chance]
 	try looking;
 	let randomnumber be a random number from 1 to 3; [so far there is only one walk-in option]
 	if randomnumber is:
@@ -559,8 +563,9 @@ after going to Worker Barracks while (HP of Alexandra is 3 or HP of Alexandra is
 			say "[AlexandraFarmhandCunni]";
 		-- 3:
 			say "[AlexandraFarmhandJerking]";
+	now AlexandraFarmhandEventCooldown is turns;
 
-after going to Worker Barracks while (HP of Alexandra is 2 or HP of Alexandra is 4 and "Supervised Breeding" is listed in Traits of Alexandra and Lastfuck of Alexandra - turns > 2 and a random chance of 1 in 5 succeeds): [Alexandra is NOT pregnant, has been told you'll supervise breeding, hasn't been fucked in 3 turns, 20% chance]
+after going to Worker Barracks while (HP of Alexandra is 2 or HP of Alexandra is 4 and "Supervised Breeding" is listed in Traits of Alexandra and AlexandraFarmhandEventCooldown - turns > 3 and a random chance of 1 in 2 succeeds): [Alexandra is NOT pregnant, has been told you'll supervise breeding, hasn't been fucked in 3 turns, 20% chance]
 	try looking;
 	let randomnumber be a random number from 1 to 3; [so far there is only one walk-in option]
 	if randomnumber is:
@@ -570,8 +575,9 @@ after going to Worker Barracks while (HP of Alexandra is 2 or HP of Alexandra is
 			say "[AlexandraFarmhandCunni]";
 		-- 3:
 			say "[AlexandraFarmhandJerking]";
+	now AlexandraFarmhandEventCooldown is turns;
 
-after going to Worker Barracks while (HP of Alexandra is 3 or HP of Alexandra is 5 and "Supervised Breeding" is listed in Traits of Alexandra and Lastfuck of Alexandra - turns > 2 and a random chance of 1 in 5 succeeds): [Alexandra IS pregnant, has been told you'll supervise breeding, hasn't been fucked in 3 turns, 20% chance]
+after going to Worker Barracks while (HP of Alexandra is 3 or HP of Alexandra is 5 and "Supervised Breeding" is listed in Traits of Alexandra and AlexandraFarmhandEventCooldown - turns > 3 and a random chance of 1 in 2 succeeds): [Alexandra IS pregnant, has been told you'll supervise breeding, hasn't been fucked in 3 turns, 20% chance]
 	try looking;
 	let randomnumber be a random number from 1 to 3; [so far there is only one walk-in option]
 	if randomnumber is:
@@ -581,6 +587,7 @@ after going to Worker Barracks while (HP of Alexandra is 3 or HP of Alexandra is
 			say "[AlexandraFarmhandCunni]";
 		-- 3:
 			say "[AlexandraFarmhandJerking]";
+	now AlexandraFarmhandEventCooldown is turns;
 
 to say AlexandraFarmhandJerking: [farmhand being jerked by Alexandra]
 	say "     As you enter the building, you immediately notice a pair of horsemen standing near the entrance, talking to one another and chuckling. 'Think he'll make it? It's one tall order with a bitch like her working him over!' one of them says, with the second replying, 'Fuck, no! Not in a million years. But who cares if the training sessions with Alexandra are so much fun anyways.' Following their gazes over to one of the beds lined up throughout the large room, you can see what they're talking about. Another farmhand is stretched out on his bed, bare-ass naked and panting with a pit of a pinched expression on his face. Alexandra is sitting next to him on the corner of the bed, both her hands wrapped around the muscular male's erect shaft. She is stroking up and down along its length, then leans in to run her tongue over his head in a slow tease before pulling back again.";
