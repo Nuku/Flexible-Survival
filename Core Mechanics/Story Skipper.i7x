@@ -1092,16 +1092,22 @@ Carry out ProgressExport:
 	say "[ProgressionExport]";
 
 To say ProgressionExport:
-	if Player is not lonely:
-		say "     Preparing to travel to an alternate reality, you send your current companion away to await this in a safe place.";
-		try Dismissing;
-	if wrcursestatus is 5:
-		wrcurserecede; [puts player back to normal form and restores proper stats for saving]
+	say "     [bold type]Do you really want to start the export process?[roman type][line break]";
 	LineBreak;
-	say "     Writing save files.";
-	SaveEverything;
-	if wrcursestatus is 5:
-		wrcursesave; [puts player back to complete wereraptor form]
+	say "     ([link]Y[as]y[end link]) - Sure, I'll wait a minute (or five) to write files containing my progress!";
+	say "     ([link]N[as]n[end link]) - Erh, not right now.";
+	if Player consents:
+		LineBreak;
+		if Player is not lonely:
+			say "     Preparing to travel to an alternate reality, you send your current companion away to await this in a safe place.";
+			try Dismissing;
+		if wrcursestatus is 5:
+			wrcurserecede; [puts player back to normal form and restores proper stats for saving]
+		LineBreak;
+		say "     Writing save files.";
+		SaveEverything;
+		if wrcursestatus is 5:
+			wrcursesave; [puts player back to complete wereraptor form]
 
 To SaveEverything:
 	EventSave;
