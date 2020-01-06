@@ -1,9 +1,5 @@
 Version 1 of Denise by Wahn begins here.
 
-a postimport rule: [bugfixing rules for players that import savegames]
-	if MainInfection of Denise is not "Blue Gryphon Herm":
-		now MainInfection of Denise is "Blue Gryphon Herm";
-
 Table of GameCharacterIDs (continued)
 object	name
 Denise	"Denise"
