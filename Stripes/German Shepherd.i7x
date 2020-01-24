@@ -837,7 +837,7 @@ When Play begins:
 	now non-infectious entry is false;
 	now Cross-Infection entry is "German Shepherd Bitch"; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
-	now altcombat entry is "gsd"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 	now BannedStatus entry is false;
 
 [
