@@ -397,140 +397,9 @@ to say tight end use:
 
 Section 2 - Outfitters Rack
 
-Part 1 - Zephyr Riot Helmet
+[Note - For the armor pieces, check the file in core mechanics called basic clothing items]
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"zephyr riot helmet"	"A helmet that zephyr has its security team use when dealing with emergencies."	3	zephyr riot helmet
-
-zephyr riot helmet is a grab object.
-zephyr riot helmet is equipment.
-It is not temporary.
-The plural of zephyr riot helmet is false.
-The taur-compatible of zephyr riot helmet is true.
-The size of zephyr riot helmet is 3.
-The AC of zephyr riot helmet is 30.
-The effectiveness of zephyr riot helmet is 60.
-The placement of zephyr riot helmet is "head".
-The descmod of zephyr riot helmet is "A jet black helmet with the zephyr logo on it rests atop your head.".
-The slot of zephyr riot helmet is "head".
-the scent of zephyr riot helmet is "The riot gear smells of metal and plastic.".
-
-Part 2 - Zephyr Riot Chest Piece
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"zephyr riot chest piece"	"A chest piece that zephyr has its security team use when dealing with emergencies."	6	zephyr riot chest piece
-
-zephyr riot chest piece is a grab object.
-zephyr riot chest piece is equipment.
-It is not temporary.
-The plural of zephyr riot chest piece is false.
-The taur-compatible of zephyr riot chest piece is true.
-The size of zephyr riot chest piece is 3.
-The AC of zephyr riot chest piece is 40.
-The effectiveness of zephyr riot chest piece is 70.
-The placement of zephyr riot chest piece is "body".
-The descmod of zephyr riot chest piece is "A jet black chest piece encases your torso with the zephyr logo on it.".
-The slot of zephyr riot chest piece is "chest".
-the scent of zephyr riot chest piece is "The riot gear smells of metal and plastic.".
-
-Part 3 - Zephyr Riot Arm Guards
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"zephyr riot arm guards"	"A set of arm guards that cover the back of your hands all the way up to your shoulders. Zephyr has its security team use these when dealing with emergencies."	3	zephyr riot arm guards
-
-zephyr riot arm guards is a grab object.
-zephyr riot arm guards is equipment.
-It is not temporary.
-The plural of zephyr riot arm guards is false.
-The taur-compatible of zephyr riot arm guards is true.
-The size of zephyr riot arm guards is 3.
-The AC of zephyr riot arm guards is 30.
-The effectiveness of zephyr riot arm guards is 60.
-The placement of zephyr riot arm guards is "body".
-The descmod of zephyr riot arm guards is "A set of jet black arm guards that encase your arms with the zephyr logo on it.".
-The slot of zephyr riot arm guards is "arms".
-the scent of zephyr riot arm guards is "The riot gear smells of metal and plastic.".
-
-Part 4 - Zephyr Riot Shin Guards
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"zephyr riot shin guards"	"A set of shin guards that cover your legs from your feet up to your thighs. Zephyr has its security team use these when dealing with emergencies."	4	zephyr riot shin guards
-
-zephyr riot shin guards is a grab object.
-zephyr riot shin guards is equipment.
-It is not temporary.
-The plural of zephyr riot shin guards is false.
-The taur-compatible of zephyr riot shin guards is true.
-The size of zephyr riot shin guards is 3.
-The AC of zephyr riot shin guards is 30.
-The effectiveness of zephyr riot shin guards is 60.
-The placement of zephyr riot shin guards is "body".
-The descmod of zephyr riot shin guards is "A set of jet black shin guards that encase your legs with the zephyr logo on it.".
-The slot of zephyr riot shin guards is "legs".
-the scent of zephyr riot shin guards is "The riot gear smells of metal and plastic.".
-
-Part 5 - Zephyr Armored Lab Coat
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"zephyr armored lab coat"	"A Lab coat specifically modified by zephyr for their researchers out in the field. It has underpadding and a sheet of bendable plastic woven inside the fabric."	4	zephyr armored lab coat
-
-zephyr armored lab coat is a grab object.
-zephyr armored lab coat is equipment.
-It is not temporary.
-The plural of zephyr armored lab coat is false.
-The taur-compatible of zephyr armored lab coat is true.
-The size of zephyr armored lab coat is 3.
-The AC of zephyr armored lab coat is 50.
-The effectiveness of zephyr armored lab coat is 35.
-The placement of zephyr armored lab coat is "body".
-The descmod of zephyr armored lab coat is "A white and black lab coat rests upon your shoulders with the zephyr logo embroidered over your shoulder blades.".
-The slot of zephyr armored lab coat is "chest".
-the scent of zephyr armored lab coat is "The lab coat smells of chemicals and synthetic fibers.".
-
-Part 6 - Zephyr Armored Lab Gloves
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"zephyr armored lab gloves"	"A set of lab gloves specifically modified by zephyr for their researchers out in the field. It has a sheet of bendable plastic woven inside the rubber."	1	zephyr armored lab gloves
-
-zephyr armored lab gloves is a grab object.
-zephyr armored lab gloves is equipment.
-It is not temporary.
-The plural of zephyr armored lab gloves is false.
-The taur-compatible of zephyr armored lab gloves is true.
-The size of zephyr armored lab gloves is 3.
-The AC of zephyr armored lab gloves is 20.
-The effectiveness of zephyr armored lab gloves is 15.
-The placement of zephyr armored lab gloves is "body".
-The descmod of zephyr armored lab gloves is "A pair of white rubber lab gloves are fitted over your hands with the zephyr logo patched over the back of your hand.".
-The slot of zephyr armored lab gloves is "hands".
-the scent of zephyr armored lab gloves is "The lab gloves smells of chemicals and rubber.".
-
-Part 7 - Zephyr Armored Lab Boots
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"zephyr armored lab boots"	"A pair of lab boots specifically modified by zephyr for their researchers out in the field. It has a sheet of bendable plastic woven inside the rubber."	1	zephyr armored lab boots
-
-zephyr armored lab boots is a grab object.
-zephyr armored lab boots is equipment.
-It is not temporary.
-The plural of zephyr armored lab boots is false.
-The taur-compatible of zephyr armored lab boots is true.
-The size of zephyr armored lab boots is 3.
-The AC of zephyr armored lab boots is 20.
-The effectiveness of zephyr armored lab boots is 15.
-The placement of zephyr armored lab boots is "body".
-The descmod of zephyr armored lab boots is "A pair of black rubber lab boots are fitted over your feet with the zephyr logo patched over the toes.".
-The slot of zephyr armored lab boots is "feet".
-the scent of zephyr armored lab boots is "The lab boots smells of chemicals and rubber.".
-
-Part 8 - zephyr bashing riot shield
+Part 1 - zephyr bashing riot shield
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -565,7 +434,7 @@ carry out riotshieldProtectMode:
 	increase carried of zephyr protective riot shield by 1;
 
 
-Part 9 - zephyr protective riot shield
+Part 2 - zephyr protective riot shield
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -577,7 +446,7 @@ The AC of zephyr protective riot shield is 46.
 The effectiveness of zephyr protective riot shield is 42.
 The objsize of zephyr protective riot shield is 4.
 The placement of zephyr protective riot shield is "shield".
-The descmod of zephyr protective riot shield is "You hold the riot shield in hands, its size is large enough to cover most of your torso. It is painted black with the zephyr trademark branded across the front, just underneath the vision slot.".
+The descmod of zephyr protective riot shield is "You hold the riot shield in your hands, its size is large enough to cover most of your torso. It is painted black with the zephyr trademark branded across the front, just underneath the vision slot.".
 The slot of zephyr protective riot shield is "shield".
 
 to say RiotShieldProtectDesc:

@@ -310,7 +310,7 @@ to say RomanEncourage:
 		say "     Everyone goes back to their business, and once Roman finishes to say goodbye to the last group, he traps you in a very, very tight hug. '[if Player is not defaultnamed][name of Player], [end if]I cannot find the words to thank you,' he says. 'It's like a weight just lifted from my shoulders. If I can do anything... [italic type]anything[roman type] to repay you, tell me. I consider you one of my closest friends. Actually...'";
 		say "     Roman runs to the locker-room, and comes back a couple of minutes later, a football helmet in his hands. 'I want you to take this. First one I received when joining the team, and still good,' the Gorilla explains as he lobs the helmet in your arms. 'You're going back into the city, right? You'll need it.' Thanking profusely Roman, you strap the helmet to your backpack.";
 		say "[bold type]You gain a football helmet![roman type][line break]";
-		increase carried of football helmet by 1;
+		increase carried of tenvale gorillas football helmet by 1;
 		now HP of Roman is 5;
 	else:
 		say "     You give your best arguments to Roman. 'Thank you for your concern, but I don't think I am ready yet,' he replies. Nonetheless, your words had some effect on him.";

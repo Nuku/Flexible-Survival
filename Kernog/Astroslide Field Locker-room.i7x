@@ -81,9 +81,9 @@ to say RomanHumiliation:
 	say "     'Rmmmf!'";
 	say "     'Oh, fuck! He - no - she's extra tight!'";
 	say "     Minutes pass. The gorillas all take their turn into their former captain, and as the others arrive, see the scene, and learn of the captain's dirty secret, Roman's torment is prolonged for the whole part of an hour, then two. At first, Roman is struggling, but by his third penetration and fourth forced blowjob, a powerful, forced orgasm shakes his body under the cheers of the crowd. After some time, the gorillas all decide to [']get some rest['], though not before defacing Roman's body with a red marker. Now that the gorillas are not around him anymore, Roman's cum-covered body appears in all his glory. His belly is inflated with all the gorilla semen he was forced to intake, and some drips out from his pussy and mouth. Roman pants, tears drying on his face. Your eyes and his meet, but there is nothing but broken lust in his expression. He's broken.";
-	say "     As you start to make your way out, you notice that the door to Roman's room is ajar. You take a look inside and see a blue football helmet lying on a small bench. With a shrug, you opportunistically snag the helmet and add it to your possessions.";
+	say "     As you start to make your way out, you notice that the door to Roman's room is ajar. You take a look inside and see a black football helmet lying on a small bench. With a shrug, you opportunistically snag the helmet and add it to your possessions.";
 	say "[bold type]You gain a football helmet![roman type][line break]";
-	increase carried of football helmet by 1;
+	increase carried of tenvale gorillas football helmet by 1;
 
 [General Sex menu]
 instead of fucking the Gorilla Team-Members:
