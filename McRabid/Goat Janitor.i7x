@@ -230,8 +230,15 @@ When Play begins:
 ]
 
 
-when play ends:
-	if BodyName of Player is "Anthro Goat":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Anthro Goat Infection"	"Infection"	""	Anthro Goat Infection rule	1000	false
+
+This is the Anthro Goat Infection rule:
+	if Player has a body of "Anthro Goat":
+		trigger ending "Anthro Goat Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You succumb to your Goat Janitor infection and eventually wander past the city hospital. 'You're late!' a somewhat familiar voice shouts. A glance up to the entrance you see a very angry goat in coveralls. After an hour of being berated for how young people are ruining today's economy with their laziness and loud music, you find yourself mopping one of the many hallways of the hospital in your own coveralls as your boss continues to complaints over a walkie talkie.";
 		else:

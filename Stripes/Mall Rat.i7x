@@ -201,8 +201,13 @@ Definition: a person is mallrattailed:
 
 Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "Mall Rat":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Mall Rat Infection"	"Infection"	""	Mall Rat Infection rule	1000	false
+
+This is the Mall Rat Infection rule:
+	if Player has a body of "Mall Rat":
+		trigger ending "Mall Rat Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if HP of Lucy <= 1:
 				if Smith Haven Mall Lot South is known:

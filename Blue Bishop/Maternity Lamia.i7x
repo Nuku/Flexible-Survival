@@ -438,8 +438,13 @@ this is the lamiaboob rule:	[***]
 
 Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "Lamia":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Lamia Infection"	"Infection"	""	Lamia Infection rule	1000	false
+
+This is the Lamia Infection rule:
+	if Player has a body of "Lamia":
+		trigger ending "Lamia Infection";
 		if humanity of Player < 10:
 			say "     Ultimately overtaken by your infection, you're inevitably drawn back to the hospital. Finally meeting the other lamia there, she greets you with open arms.";
 			say "     'There you are! Oh, you want to offer a helping hand? That's great!' Giggling a little, she presses her ample bosom against your similarly infected form, entwining with yours as she welcomes her new assistant. Over time, the two of you happen upon other, unsuspecting victims to 'care' for. The outside world is so very harsh anyways, it's much better that they stay inside where it's safe, with the two of you...";

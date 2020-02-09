@@ -186,11 +186,17 @@ When Play begins:
 ]
 
 
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Hyperskunk Infection"	"Infection"	""	Hyperskunk Infection rule	1000	false
+
 [A sample structure for succumbing/surviving messages at the end of the game.]
 [Numerous other examples can be found in existing creature files.]
-
-when play ends:
-	if BodyName of Player is "Hyperskunk":
+This is the Hyperskunk Infection rule:
+	if Player has a body of "Hyperskunk":
+		trigger ending "Hyperskunk Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:		[succumb]
 			say "     As you continue to lose yourself to the infection, you give in to the instinctual lusts of your body. You are drawn back to the psych department of the hospital with a desire to see the sexy skunk there again. She welcomes you a smile and is more than happy to continue your sessions by going even more 'in-depth' with them until you're nothing but her lusty pet: another ornamental skunk and sex toy, but a living one this time. She keeps you in her office most of the time, using you as she sees fit. And when she finds new test subjects to experiment with, she is more than happy to showcase you to them as well. You have fun tempting these people into playing with you, your sexy mistress always happy to monitor their responses.";
 			if hospquest < 2:

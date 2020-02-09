@@ -340,8 +340,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Feral Gryphon":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Feral Gryphon Infection"	"Infection"	"Mixed"	Feral Gryphon Infection rule	1000	false
+
+This is the Feral Gryphon Infection rule:
+	if Player has a body of "Feral Gryphon":
+		trigger ending "Feral Gryphon Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is pure and HP of Garrett >= 7 and player is puremale:
 				say "     As you succumb to your gryphon infection, you can feel your mind descending to bestial urges. Before you completely lose yourself, you make your way back to Qytat and Garrett's milking operation. The milkman greets you happily and makes a special place for you among his prized milkers. The doses of processed he-gryphon milk you receive do help keep more of your intellect intact even as they fuel your gay lusts and gryphon desires.";

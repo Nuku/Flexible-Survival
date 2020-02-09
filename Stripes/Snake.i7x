@@ -435,8 +435,13 @@ this is the snakebite rule:
 
 Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "Snake":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Snake Infection"	"Infection"	""	Snake Infection rule	1000	false
+
+This is the Snake Infection rule:
+	if Player has a body of "Snake":
+		trigger ending "Snake Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     As your serpent instincts take over as your humanity fades away, you travel back to the grassy plains at the edge of the city. There you set up a nest in a burrow you made among the cluster of trees. There a many of the enlarged snakes around and they make fine lovers when you cannot capture larger prey to sate your lusts before sating your hunger";
 			if FaceName of Player is "Snake":

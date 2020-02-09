@@ -295,8 +295,13 @@ this is the wtaurpounce rule:		[double-damage pouncing]
 
 Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "Wolftaur":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Wolftaur Infection"	"Infection"	""	Wolftaur Infection rule	1000	false
+
+This is the Wolftaur Infection rule:
+	if Player has a body of "Wolftaur":
+		trigger ending "Wolftaur Infection"; [Here it states, that the ending has been played.]
 		if level of Lindsey > 3:
 			if humanity of Player < 10:
 				if Player is female:

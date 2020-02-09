@@ -277,8 +277,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Human Giant":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Human Giant Infection"	"Infection"	""	Human Giant Infection rule	1000	false
+
+This is the Human Giant Infection rule:
+	if Player has a body of "Human Giant":
+		trigger ending "Human Giant Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     As your thoughts grow simpler and slower, you head out into the city and stumble around for a while, hardly noticing as everything gradually gets smaller and smaller. Unable to recognize the fact that you're actually growing, but finding the city increasingly confining, you make your way to the relative openness of the zoo. There you find a giant man being tied to the ground as military teams struggle to lash him down with steel cables. Growling at these pests, you come charging in, swatting them aside by the handful and tearing out the metal cables (which seem only as thick wires to you) to free the other giant. As he gets up, the military calls the retreat, forced to abandon their attempt. As you're helping the giant out of the last of the tangle, you can see groups of the zoo animals moving in on the injured soldiers you've left in your wake. Knowing they'll be taken care of, you turn your attention to the giant.";
 			say "     He's very grateful for the rescue and thanks you for finally coming to help him with the zoo. He claims to have been getting the situation under control until those little soldier people showed up, but is really glad that you're here now to help him with it. You settle down, living there with him, playing around with the animals, getting them back into their cages, giving them the occasional soldier you find as a treat";

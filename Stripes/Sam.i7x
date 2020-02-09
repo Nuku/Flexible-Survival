@@ -554,15 +554,11 @@ to assaultonminilab:
 				say "     Wanting to be a part of the forming feline coalition, you shuck out of your clothes and then obediently head over to the tigertaur, your head cast down to show your submission. Grinning like mad, the tigertaur moves away from her new pet, reassuringly the other with a lick across hir new snout, before stalking over to you with a smug air surrounding hirself. 'Well,' the tigertaur begins slowly as shi walks around you. 'I think I can find room for you in my new streak, little one. Though first I think you and Sammie over there should become more [italic type]acquainted[roman type] with one another, if you catch my drift.' Looking up and nodding at your new mistress you eagerly head over to where Sammy is watching the both of you, the newly made hybrid busily rubbing her squirming stomach with one of her new paws. A feline smile crossing hir face...";
 				now surrender is 1;
 				now humanity of Player is 0;
-				now TailName of Player is "Feline Hexataur";
-				now FaceName of Player is "Feline Hexataur";
-				now SkinName of Player is "Feline Hexataur";
-				now BodyName of Player is "Feline Hexataur";
-				now CockName of Player is "Feline Hexataur";
 				now scalevalue of Player is 5;
 				now bodydesc of Player is "silky";
 				now bodytype of Player is "feline";
 				now SleepRhythm of Player is 0;
+				trigger ending "Rick's Lil Playthings";
 				end the story saying "Surrendering to Rick the tigertaur you willing become another breeder kitty for the herm.";
 				wait for any key;
 				now battleground is "void";
@@ -1495,12 +1491,19 @@ to say SamStruggle:
 
 Section 9 - Endings
 
-when play ends:
-	if BodyName of Player is "Feline Hexataur": [special surrender ending]
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Rick's Lil Playthings"	"BadEnd"	"Sex Slave"	Rick's Lil Playthings rule	20	false
+"Sam's Epilogue"	"NPC"	""	Sam's Epilogue rule	900	false
+
+This is the Rick's Lil Playthings rule:
+	if ending "Rick's Lil Playthings" is triggered:
 		say "     Having given yourself over to Rick, you and Sammie are made into lovely hybrid feline hexataurs for the dominant tigertaur to use and whelp whenever shi chooses to do so, which shi does quite a lot given that shi's made the former lab into hir new den. Very rarely does either your or Sammie's bellies stay flat as the lustful tigertaur spends many a day filling the two of you with hir cubs, all of whom grow up into being exotic hybrid felinetaurs like their [']mothers[']. And having two conjoined taur bodies, each with a womb of its own, you breed and whelp quite the pride of sexy kittens.";
 		say "     When the some of the military happens to stumble over your little den, Rick takes that as a sign to lead you, Sammie, and your cubs out of the city and into the rest of the world. From what little you remember of that time, you recall that some of the soldiers had given chase, but very few could keep up with the small band of felinetaurs, and those who did manage to catch up to the lot of you... well, currently you find yourself watching as Rick busies hirself with breeding one of them while the others lounge around you, Sammie, and the pair of cubs the two of you are currently nursing.";
-		stop the action;
-	else if BodyName of Player is not "Vixentaur" and BodyName of Player is not "Dragontaur" and BodyName of Player is not "Dracovixentaur":
+		the Player is enslaved;
+
+This is the Sam's Epilogue rule:
+	if Player has no non-shifting body of "Vixentaur" and Player has no non-shifting body of "Dragontaur" and Player has no non-shifting body of "Dracovixentaur":
 		if humanity of Player < 10:
 			if HP of Sam >= 10 and HP of Sam <= 29:
 				say "     After you succumb to the infection and do not return, Sam strikes back out on his own, heading into the city to enjoy the sexy creatures populating the fallen city. He breeds many new dragontaur whelps as his powerful body allows him to mount many a lustful creature.";

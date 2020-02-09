@@ -247,8 +247,15 @@ When Play begins:
 ]
 
 
-when play ends:
-	if BodyName of Player is "Donkeyman":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Donkeyman Infection"	"Infection"	""	Donkeyman Infection rule	1000	false
+
+This is the Donkeyman Infection rule:
+	if Player has a body of "Donkeyman":
+		trigger ending "Donkeyman Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is male and player is submissive:
 				say "     Finally unable to fight your new instincts and submissive urges any longer, you find yourself returning eagerly to the Stables, knowing they will surely have a place for someone like you. They guards just wave you in as you arrive with smirks on their faces, though you are too caught up with the need to find a means to properly fulfill your submissive needs. Hurrying inside, you pass the empty lobby and start roaming the halls. And while it feels so long to your needy body, it is only a few minutes before you run into another donkeyman like yourself. Your lustful instincts and submissive desires have you begging him to fuck you. Not one to refuse such an offer, he pushes you into one of the rooms and ties your wrists to the bedposts. Even as he enjoys your body, he continues your training, teaching you everything he knows about being a subby plaything over the next several hours.";

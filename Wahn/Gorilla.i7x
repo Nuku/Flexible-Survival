@@ -296,8 +296,13 @@ When Play begins:
 
 Section 8 - Endings
 
-when play ends:
-	if BodyName of Player is "Football Gorilla":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Football Gorilla Infection"	"Infection"	""	Football Gorilla Infection rule	1000	false
+
+This is the Football Gorilla Infection rule:
+	if Player has a body of "Football Gorilla":
+		trigger ending "Football Gorilla Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     As you lose your last shreds of humanity, you feel the need to join your team supplant all other concerns. Roaming the campus until you run into one of the other gorillas, you let him guide you to their club headquarters and join in for almost constant training and practice games - with some sexy fun between the players themselves and any fans coming along being thrown in. When the military finally moves in, soldiers try to evacuate the campus and attempt to interrupt a game - which doesn't go over well. It's only a matter of moments before your organized team has overwhelmed the squad of men and takes an 'ah, it's almost half-time and we got these guys on our hands' break - which involves you [if Player is male]sinking your manhood into a tight soldier's ass[else]riding a soldier's cock while holding him down[end if] in a wild gangbang.";
 			say "     There aren't any attempts to move you from the campus for a while after that, until a smooth-talking businessman comes along one day and tells you about the creation of the 'Shifted American Football League' - totally wrapping all the gorillas around his finger with stories of athletic battle and glory. Soon, the whole team agrees to lets him manage them and follows him readily to the military's medical holding facility for a 'pre-game' checkup. After being prodded and poked, then given injections to make you noninfectious, your manager leads you off to become one of the top teams in the league - with him cashing in almost all the profits. Though at least he has to work hard to keep this exploitation going - keeping under control a whole team of wild and boisterous gorillas who'll want to fuck anyone they encounter...";

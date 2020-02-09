@@ -250,8 +250,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Platypus":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Platypus Infection"	"Infection"	""	Platypus Infection rule	1000	false
+
+This is the Platypus Infection rule:
+	if Player has a body of "Platypus":
+		trigger ending "Platypus Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You hear a call in your mind, the call of other platypus like yourself. Following the call through the ruined city, you pass many infected creatures, but they don't seem to bother you, much less matter right now. The closer the call gets, the more platypuses you see following the same road. Soon the city is left behind and you find yourself at the beach.";
 			say "     One by one, all the platypuses around you start diving into the water, swimming away to leave the dry world behind. The call pulls you towards the water, and though you try to fight it, you find yourself wading in, looking for a good mate, ready to start your own family with. As you search the shallow waters, another platypus finds you, and something sparks between you, knowing that this is the one that you'll spend your life with.";

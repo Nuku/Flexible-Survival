@@ -444,11 +444,16 @@ When Play begins:
 [A sample structure for succumbing/surviving messages at the end of the game.]
 [Numerous other examples can be found in existing creature files.]
 
+[
 Section 5 - Endings
 
-[
-when play ends:
-	if BodyName of Player is "Squire":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Squire Infection"	"Infection"	""	Squire Infection rule	1000	false
+
+This is the Squire Infection rule:
+	if Player has a body of "Squire":
+		trigger ending "Squire Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You succumb to your template infection.";
 		else:

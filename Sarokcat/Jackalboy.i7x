@@ -205,8 +205,16 @@ to jackalboyify:
 	infect;
 	now non-infectious entry is true;  [...then close to prevent random infection]
 
-when play ends:
-	if BodyName of Player is "Jackalboy":
+
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Jackalboy Infection"	"Infection"	""	Jackalboy Infection rule	1000	false
+
+This is the Jackalboy Infection rule:
+	if Player has a body of "Jackalboy":
+		trigger ending "Jackalboy Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is male:
 				say "     Looking around the city, you finally realize your true purpose in life, and hurry back to the shop where your wonderful mistress is waiting. You arrive back just in time as not much later your mistress closes up the doors for a while so the military can hunt through the city without bothering the two of you as you become even better acquainted. Eventually after you have worshiped every inch of your lovely mistress's divine body with your tongue and your hands several times, she decides to reopen the shop for a bit. You are only partially surprised at the fact that when she opens the store front, it now opens out onto a bustling street in some other city entirely. Soon you are happily fetching things and tidying the store for her during the day, while after hours she rewards you for your loyal service by playing with your body and letting you worship her own. As the days pass into years and then decades, you realize that you never seem to grow any taller or stronger, and neither you nor your mistress ever seem to age, taking it as just another sign of the perfection of your wonderful forms. You are a perfectly happy pet jackal boy for your mistress, now and forever, just like you wanted to be, and while you will certainly never be her equal or true mate, you are still happy and filled with the joy of being allowed to serve and pleasure her as often as you can.";

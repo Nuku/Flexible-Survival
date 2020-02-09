@@ -221,8 +221,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Caveman":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Caveman Infection"	"Infection"	""	Caveman Infection rule	1000	false
+
+This is the Caveman Infection rule:
+	if Player has a body of "Caveman":
+		trigger ending "Caveman Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You succumb to your caveman infection, your mind regressing to a simpler, devolved state. You find the city confusing and troublesome and run away until you find a comfortable cave deep in the woods, away from everyone else.";
 		else:

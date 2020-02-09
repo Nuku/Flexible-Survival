@@ -270,23 +270,9 @@ to salabind:
 				say "completely transforming into one of her kin, this new strain compelling you to obey her every whim";
 			say ". It's only then that you stop being siphoned off into the salamander, but you nonetheless succumb to a terrible, inevitable fate...";
 			wait for any key;
-			repeat with y running from 1 to number of filled rows in Table of Random Critters:
-				choose row y in Table of Random Critters;
-				if Name entry is "Salamander":
-					now MonsterID is y;
-					break;
-			now BodyName of Player is "Salamander";
-			now FaceName of Player is "Salamander";
-			now TailName of Player is "Salamander";
-			now SkinName of Player is "Salamander";
-			now CockName of Player is "Salamander";
-			now tail of Player is tail entry;
-			now Face of Player is face entry;
-			now Skin of Player is skin entry;
-			now Body of Player is body entry;
-			now Cock of Player is cock entry;
-			now voreloss is true;
+			turn the Player into a "Salamander";
 			now Trixieexit is 1;
+			trigger ending "Salamander Servant";
 			end the story saying "You lost your mind while bound!";
 		else:
 			let k be 0;
@@ -442,14 +428,14 @@ to say salastrugglebar:
 
 Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "Salamander": [Needs to be corrected if standard endings are added]
-		if voreloss is true and humanity of Player < 10:
-			say "     Doomed to be a plaything for the Salamander, she often enjoys your company both inside and outside of her. Having completely lost your sanity you can only eagerly oblige your fiery new mistress and attend to her every need. You memory soon becomes nothing more than a blur of your seemingly eternal attendance and the warm feel of her soft, inner flesh...";
-		[
-		else:
-			say "<sane ending>";
-		]
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Salamander Servant"	"BadEnd"	"Servant"	Salamander Servant rule	20	false
+
+This is the Salamander Servant rule:
+	if ending "Salamander Servant" is triggered:
+		say "     Doomed to be a plaything for the Salamander, she often enjoys your company both inside and outside of her. Having completely lost your sanity you can only eagerly oblige your fiery new mistress and attend to her every need. You memory soon becomes nothing more than a blur of your seemingly eternal attendance and the warm feel of her soft, inner flesh...";
+		the Player is enslaved;
 
 
 Salamander ends here.

@@ -609,8 +609,15 @@ When Play begins:
 ]
 
 
-when play ends:
-	if BodyName of Player is "Zebra Stallion":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Zebra Stallion Infection"	"Infection"	""	Zebra Stallion Infection rule	1000	false
+
+This is the Zebra Stallion Infection rule:
+	if Player has a body of "Zebra Stallion":
+		trigger ending "Zebra Stallion Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is female and player is dominant and (ZebraLossCount > 4):
 				say "     Finally free of the last vestiges of your humanity, you make your way to the zoo, eager to assert your rightful place in the new world order. It's not long before you find what you're looking for; your servile stallion, the key to your plan. He yields his harem to you, and you assess the strengths and weaknesses of your sizable herd. It's obvious that your pet zebra wanted more of a harem than a real fighting force as even the few boy-mares you have are more suited to breeding than battle. You institute drills for all herd members not currently foaling, and between raiding and special sessions with some willing fillies, you even out the gender imbalance in your herd. It takes a few weeks, but thankfully, the nanites make it easy to achieve your goal of a strong gang.";
@@ -649,6 +656,9 @@ when play ends:
 			say "     What makes the scales tip in your favor is when the two of you are approached by a [one of]horse[or]lion[or]tiger[or]deer[or]gator[or]wolf[or]hyena[at random]morph who offers an interesting proposition. They'd noticed that during the outbreak that horsecock was a popular treat for many, though they declined to say whether they knew from personal experience, and they were wondering if you and your stud would like to work at their escort agency. Your stallion eagerly agrees for the both of you, but he insists that both of you will only have to fuck, not get fucked. 'I'm a top, and this guy's ass belongs to me.' This is an easy caveat to accommodate, and it's not long before the two of you become some of the agency's most requested escorts. Though you fuck a lot of ass and pussy on the job, at home, it's you with your legs over your head, screaming for your stud to stuff you with his horsecock[if Player is mpreg_ok] and put a foal in you[end if].";
 		else:
 			say "     Rescued finally by the military, you find yourself standing out in life afterwards due to your strange new zebra-like form. Eventually, you manage to find yourself a job that pays well enough, and though your promotion opportunities seem slim, it at least pays the bills. You find yourself feeling terribly isolated and alone at times as a changed creature in a world surrounded by humans, these feelings usually leading you to one of the local bars to drink until you feel better. On one of these trips, however, you run into another changed, a [one of]horse[or]lion[or]tiger[or]deer[or]gator[or]wolf[or]hyena[at random]-morph of all things, and while not quite of the same species, you certainly do find plenty in common in a world full of humans. Eventually, you end up back at your place, and a few nights later, you end up over at theirs. Almost before you know it, you are spending all of your free time together, and eventually, just end up getting a larger place for the both of you. You both find yourselves trying to make life better for the changed, or at least lower the level of discrimination. The two of you eventually attract several other misfit changed in the area, those without any others of their species around for support, and soon, you move into an even larger place, which is often full of many different species, working and living together in harmony (for the most part). It may be a very strange collection of individuals, but it looks like you managed to find a herd of your own to belong to after all...";
+
+
+Section 4 - Zebra Fur
 
 Table of Game Objects (continued)
 name	desc	weight	object

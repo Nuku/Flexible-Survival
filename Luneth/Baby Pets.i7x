@@ -238,8 +238,13 @@ after going to Computer Lab while ((HP of Fang is 3 or HP of Fang is 4 ) and Das
 
 Section 1.5 - Fox Kit Ending
 
-when play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Dash's Epilogue"	"Companion"	"Pet"	Dash's Epilogue rule	750	false
+
+This is the Dash's Epilogue rule:
 	if little fox is tamed:
+		trigger ending "Dash's Epilogue"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     When you give in to your feral instincts, the little fox you rescued stays with you, traveling with you and helping as best he can, trying to help you hunt and teasing at you to play with him. Finally though he grows large enough that one day he leaves on his own, fully able to forage for himself now, and leaving you to your fate. You miss the little creature occasionally... when you can remember him anyways.";
 		else:

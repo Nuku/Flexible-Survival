@@ -1130,7 +1130,6 @@
 |Kaleem Mcintyre|Dog House|Fin|value|
 |Kaleem Mcintyre|Dog House|Tyraffection|value|
 |Kaleem Mcintyre|Dog House|Homarusearch|value|
-|Kaleem Mcintyre|Dog House|darkdays|value|
 |Kaleem Mcintyre|Tyr's Club|20140908213124/20096:Mon 8 September 2014 21:31|indexing|
 |Kaleem Mcintyre|Tyr's Club|Tyr's Club|room|
 |Kaleem Mcintyre|Tyr's Club|Tyr|man|
@@ -1277,7 +1276,6 @@
 |Kaleem Mcintyre|Misc 4|Girl Time|situation|
 |Kaleem Mcintyre|Misc 4|Snake Charmer|situation|
 |Kaleem Mcintyre|Misc 4|Spiritual Love|situation|
-|Kaleem Mcintyre|Misc 4|spiritlove|value|
 |Stripes|Main Storyline|20140908213124/12424:Mon 8 September 2014 21:31|indexing|
 |Stripes|Main Storyline|Doctor Matt|person|
 |Stripes|Main Storyline|infection monitor|Grab Object|
@@ -1333,7 +1331,6 @@
 |Stripes|Bouncy Castle|dolphinbundle|value|
 |Stripes|Bouncy Castle|dolphinlist|value|
 |Stripes|Bouncy Castle|dolcastlefight|value|
-|Stripes|Bouncy Castle|bcending|value|
 |Stripes|Bouncy Castle|rowing|value|
 |Stripes|Bouncy Castle|bcswordplay|value|
 |Stripes|Bouncy Castle|bcseenplayroom|value|
@@ -1962,7 +1959,6 @@
 |Blue Bishop|Sierrasaur|struggleatt|value|
 |Blue Bishop|Sierrasaur|bsextimer|value|
 |Blue Bishop|Sierrasaur|boundstate|value|
-|Blue Bishop|Sierrasaur|voreloss|value|
 |Blue Bishop|Sierrasaur|psycheadjust|value|
 |Blue Bishop|Sierrasaur|lustadjust|value|
 |Blue Bishop|Sierrasaur|boundrecover|value|
@@ -3003,7 +2999,6 @@
 |Sarokcat|Nermine|statuequest|value|
 |Sarokcat|Nermine|anubisrequest|value|
 |Sarokcat|Nermine|Felinoidrescued|value|
-|Sarokcat|Nermine|Vinetrapped|value|
 |Sarokcat|Nermine|Rarequesting|value|
 |Sarokcat|Nermine|dollfound|value|
 |Sarokcat|Nermine|testnermine|action|

@@ -226,8 +226,15 @@ to say smilodon cum use:
 	say "Taking out the small bottle you keep your smilodon cum in, you put it to your lips and chug down the creamy liquid. Tasty, and somehow you feel the need for more of it...";
 	Infect "Saber Kitty";
 
-when play ends:
-	if BodyName of Player is "Saber Kitty":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Saber Kitty Infection"	"Infection"	""	Saber Kitty Infection rule	1000	false
+
+This is the Saber Kitty Infection rule:
+	if Player has a body of "Saber Kitty":
+		trigger ending "Saber Kitty Infection";
 		if humanity of Player < 10:
 			say "     You can't hold back the urges of your feline need anymore. You go in search for a powerful virile male, preferable another smilodon. Every male you come across you can't help but want to show the pleasures of being a sexy saber kitty, as well as females. Whenever you run across a fellow smilodon you can't help but submit and play around. Your belly is almost always full of an oncoming litter, otherwise you suffer a never ending heat.";
 		else:

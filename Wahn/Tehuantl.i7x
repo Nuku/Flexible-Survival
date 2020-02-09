@@ -328,9 +328,9 @@ to say TehuantlandSven:
 			say "     [if Player is not neuter]As you watch the show, you can't help but let your own hands drift down towards your excited groin and begin playing with yourself as you watch the feline intercourse. [end if]Before long Tehuantl's rough fucking has her approaching a powerful climax and with a yowl of ecstasy she drives herself down Sven's length, soaking his fur with her juices as she orgasms. Meanwhile, Tehuantl's wild orgasm is enough to push Sven over the edge as well, and you watch as his entire body tenses up, knowing his seed is being unloaded deep inside Tehuantl's body.";
 			say "     As the two begin to come down from their respective climaxes, Tehuantl stares down at the exhausted snowmeow beneath her, licking her lips as she releases a shoulder to scratch his chin gently. Then, without another word, she begins her motion again, clearly intent on riding the submissive snow leopard to another orgasm before she'll be satisfied. Sven is a far less active participant in this second fucking, struggling to keep in time with Tehuantl's eager bouncing. By the time Tehuantl reaches her second climax, Sven can do little more than moan beneath her. With another yowl Tehuantl soaks both their crotches in a fresh wave of her feminine juices, shivering in delight as orgasm rolls through her.";
 			say "     Finally sated, the lustful jaguar rolls off the exhausted snowmeow, licking and nuzzling his face as she lays beside him for a short time before getting to her feet and strutting back towards her favorite seat by the balcony, their combined juices dripping from her swollen cunt the entire way. As Sven begins stumbling to his unsteady feet, you decide it best to [if Player is not neuter]clean up your own mess and [end if]slip back downstairs before you're seen.";
-			NPCSexAftermath Tehuantl receives "PussyFuck" from Sven;
 		else:
 			say "     Deciding to leave your feline pets be, you try to put the thought out of your mind as Sven disappears upstairs. Soon after you hear the jingling of Tehuantl's belled collar and some hushed conversation upstairs before you turn your attention to other things.";
+		NPCSexAftermath Tehuantl receives "PussyFuck" from Sven;
 [
 	else:
 		say "***Alternate Sven scene w/Tehuantl."; ]
@@ -553,7 +553,7 @@ instead of resolving Feline Relief:
 			say "     As the brutal fucking continues, you feel your body shifting and changing, your mouth and anus being molded around those rubber cocks as they thrust into you. Cool, thick liquid rubber begins leaking out from around the strap-on cocks, slowly spreading across your body with each thrust. As the last of your mind begins to fade away the liquid latex begins sealing seamlessly around your body, squeezing tightly around you as it molds you into an only vaguely human shape.";
 			say "     By the time the latex mistresses finally withdraw from you, there is very little 'you' left, replaced by a placid living rubber sex doll, another toy for their collection. You are slightly disappointed when the latex women untie you from the counter, tossing your limp rubber form into the pile with all their other playthings before they head back out into the city, but you know if you wait patiently like a good toy, your mistresses will return to play with you again.";
 			now HP of Tehuantl is 255;
-			now BodyName of Player is "Rubber Sex Doll"; [NOTE: I guess, this could be removed without issues when the GameEndings table is finished (@Stadler#3007)]
+			now BodyName of Player is "Rubber Sex Doll";
 			now FaceName of Player is "Rubber Sex Doll";
 			now SkinName of Player is "Rubber Sex Doll";
 			now TailName of Player is "Rubber Sex Doll";
@@ -675,9 +675,17 @@ instead of going up from Grey Abbey Library while (LastTehuantlKorvinScene - tur
 to say TehuantlSex_FuckKorvin:
 	say "     As you come up to your jaguarman pet Tehuantl, he immediately rises and comes to attention, proudly standing in front of you in all of his naked glory. Something in your demeanor or expression must have betrayed your lusty intent, as he smiles eagerly and lets out a pleased rumble from the depth of his throat, then says, 'How may I serve my tlacahua?'";
 
-[Section 7 - Endings
-when play ends:
-	if BodyName of Player is "Jaguar Male":
+
+[
+Section 7 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Jaguar Male Infection"	"Infection"	""	Jaguar Male Infection rule	1000	false
+
+This is the Jaguar Male Infection rule:
+	if Player has a body of "Jaguar Male":
+		trigger ending "Jaguar Male Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You succumb to your Jaguar infection.";
 		else:
@@ -687,7 +695,8 @@ when play ends:
 			else if "Sterile" is not listed in feats of Player:	[F-BREEDABLE]
 				say "     Additional text for a female survivor who can become preggers.";
 			else:									[F-STERILE]
-				say "     Additional text for a female survivor who cannot become preggers.";]
+				say "     Additional text for a female survivor who cannot become preggers.";
+]
 
 [
 TehuantlCheating is an action applying to one topic.

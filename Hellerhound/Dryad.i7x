@@ -244,8 +244,15 @@ When Play begins:
 ]
 
 
-when play ends:
-	if BodyName of Player is "Dryad":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Dryad Infection"	"Infection"	""	Dryad Infection rule	1000	false
+
+This is the Dryad Infection rule:
+	if Player has a body of "Dryad":
+		trigger ending "Dryad Infection";
 		say "     Life as a dryad is hard. Your naked stature and vines, not to mention fear of clothes, keep you separate from the normal humans. They also constantly get you in trouble with the law, who are still trying to cope with your kind's breach of public nudity. ";
 		if the humanity of Player < 10:
 			say "The revival of the city does you no good, and you are soon behind bars for several acts of misconduct. You end up with a life sentence and spend the rest of your time attempting to control the impulses the nanites wired into you.";

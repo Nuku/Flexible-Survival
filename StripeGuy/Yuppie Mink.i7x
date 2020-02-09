@@ -271,11 +271,15 @@ When Play begins:
 ]
 
 
-
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Yuppie Mink":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Yuppie Mink Infection"	"Infection"	""	Yuppie Mink Infection rule	1000	false
+
+This is the Yuppie Mink Infection rule:
+	if Player has a body of "Yuppie Mink":
+		trigger ending "Yuppie Mink Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     Lost in the inhuman desires that rule your body and the shell of your mind, you leave the city. The dueling needs you feel to breed and rule end up making you quite dysfunctional, barely able to even survive until you find your way to another yuppie mink who is not quite as far gone as you are. What begins as a mindless fuckfest eventually becomes something like an arranged marriage, in that they arrange continual survival for you, and your body is married to their genitals. It works out well enough for you in the long run, not that you are ever aware enough to truly realize and appreciate it.";
 		else:

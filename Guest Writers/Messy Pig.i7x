@@ -376,23 +376,9 @@ to MessyPigBind:
 		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break]";
 		say "Sanity: [humanity of Player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of Player]	Thirst: [thirst of Player]	Struggle: [MessyPigStruggle]";
 		if humanity of Player < 1:
-			repeat with y running from 1 to number of filled rows in Table of Random Critters:
-				choose row y in Table of Random Critters;
-				if Name entry is "Messy Pig":
-					now MonsterID is y;
-					break;
-			now voreloss is true;
-			now BodyName of Player is "Messy Pig";
-			now FaceName of Player is "Messy Pig";
-			now TailName of Player is "Messy Pig";
-			now SkinName of Player is "Messy Pig";
-			now CockName of Player is "Messy Pig";
-			now tail of Player is tail entry;
-			now Face of Player is face entry;
-			now Skin of Player is skin entry;
-			now Body of Player is body entry;
-			now Cock of Player is cock entry;
 			now Trixieexit is 1;
+			trigger ending "Pig Vore";
+			the Player was ended by "Vore by Messy Pig";
 			end the story saying "A pig pigged out on you";
 		else:
 			let k be 0;

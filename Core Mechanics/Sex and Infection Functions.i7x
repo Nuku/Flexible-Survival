@@ -2,6 +2,10 @@ Sex and Infection Functions by Core Mechanics begins here.
 [Version 1 - Pulled Together into its own file]
 "Basic Functions for Sex, Sexual Changes and Infections of the Flexible Survival game"
 
+Definition: A person (called x) is sterile:
+	if "Sterile" is listed in feats of x, yes;
+	no;
+
 Definition: A person (called x) is FullyNewTypeInfected:
 	if HeadName of x is "", no;
 	if TorsoName of x is "", no;
@@ -27,6 +31,20 @@ to decide if (x - a person) has a body of (i - a text):
 	if TorsoName of x is i, decide yes;
 	if BodyName of x is i, decide yes;
 	decide no;
+
+to decide if (x - a person) has no body of (i - a text):
+	if x has a body of i, decide no;
+	decide yes;
+
+to decide if the/-- Player has a non-shifting body of (i - a text):
+	if Player is shifter, decide no;
+	if Player has a body of i, decide yes;
+	decide no;
+
+to decide if the/-- Player has no non-shifting body of (i - a text):
+	if Player is shifter, decide yes;
+	if Player has a body of i, decide no;
+	decide yes;
 
 [@Todo: Handle new style infection here when implemented]
 to decide if (x - a person) has a skin of (i - a text):

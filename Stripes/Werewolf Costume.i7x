@@ -231,8 +231,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Werewolf Costume":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Werewolf Costume Infection"	"Infection"	""	Werewolf Costume Infection rule	1000	false
+
+This is the Werewolf Costume Infection rule:
+	if Player has a body of "Werewolf Costume":
+		trigger ending "Werewolf Costume Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     With the infection leaving your mind nearly as empty as your head now is, you wander off into the city and find your way back to the State Fair. You find your way to one of the many haunted houses and join the other varied costume monsters shambling around within. There are monsters, werewolves, ghosts, zombies and many other varieties of costume creatures there. You have a great time living with them, roaming the park and hijacking the bodies of the other creatures of the midway to allow you to sate your needs.";
 			say "     Coming back from one of these, you run into a soldier and can hear many others coming up. He stiffens and glances back, then whips off his backpack and tosses it to you. 'Quick! Get in!' he whispers. You catch a hint of gasoline and smoke in the air and you can see several black columns of smoke rising from the way you were headed. Scared, but knowing your thin, costume-like body would not survive a flamethrower, you nod. After dumping the contents behind a booth, you crawl into the pack and deflate yourself as much as you can. It is a little cramped, but you manage it.";

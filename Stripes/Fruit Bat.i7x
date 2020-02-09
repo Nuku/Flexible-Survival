@@ -309,12 +309,16 @@ When Play begins:
 ]
 
 
-
+[
 Section 3 - Endings
 
-[
-when play ends:
-	if BodyName of Player is "Fruit Bat":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Fruit Bat Infection"	"Infection"	""	Fruit Bat Infection rule	1000	false
+
+This is the Fruit Bat Infection rule:
+	if Player has a body of "Fruit Bat":
+		trigger ending "Fruit Bat Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You succumb to your template infection.";
 		else:

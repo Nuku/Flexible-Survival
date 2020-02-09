@@ -466,9 +466,15 @@ When Play begins:
 ]
 
 
+Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Siamese Cat":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Siamese Cat Infection"	"Infection"	""	Siamese Cat Infection rule	1000	false
+
+This is the Siamese Cat Infection rule:
+	if Player has a body of "Siamese Cat":
+		trigger ending "Siamese Cat Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if HP of Sven > 0 and HP of Sven < 49:
 				say "     As your mind starts to unravel, you set off across the city, wandering in search of something, though you know not what. You somehow find your way back to Sven and have a long bout of wild, lustful sex with the feline[if HP of Sven < 8], completing his transformation into a hybrid snow leopard/siamese cat[end if]. Together, you and he set off into the city one cooler evening and come across another pair of felines who seem familiar to you and you are drawn to them. As you get closer, you can see that the conjoined cats are having some playful fun together.";

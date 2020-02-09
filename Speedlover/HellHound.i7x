@@ -412,6 +412,8 @@ When Play begins:
 	now mpregheat entry is true;
 	now mpregtrigger entry is "     Your [if Player is male]shaft throbs, tip poking free of your sheath, foul yellow cream oozing from the tip as your balls seem to endlessly churn in an infernal rut your member oozes cum constantly. Your bowels quiver and ache with a foul need, a musky scent laced with pheromones and brimstone seeping from it as your tainted body longs to be bred. These desires war inside you, driving you mad with the urge to bury your cock in someone or something, or to have your bowels[else]bowels quiver and ache with a foul need, a musky scent laced with pheromones and brimstone seeping from it as your tainted body longs to be bred. These infernal desires feel like they might overwhelm you, your tainted body longing to be[end if] bred full of some hellish spawn.";
 
+When Play begins:
+	add "Hellhound" to infections of KnottedCockList;
 
 Section 3 - Return to the Church
 
@@ -600,8 +602,13 @@ to say church_hellhound_lose:
 
 Section 5 - Endings
 
-When play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Hellhound Curse"	"BadEnd"	"Mixed"	Hellhound Curse rule	20	false
+
+This is the Hellhound Curse rule:
 	if hellHoundLevel > 0:
+		trigger ending "Hellhound Curse";
 		Let T be 0;
 		if BodyName of Player is "Reindeer" and FaceName of Player is "Reindeer" and CockName of Player is "Reindeer" and SkinName of Player is "Reindeer" and TailName of Player is "Reindeer":									[gave into the holiday spirit]
 			say "     Having given in to the magic of the holidays, you are freed from the Hellhound's curse.";
@@ -616,8 +623,6 @@ When play ends:
 		else if BodyName of Player is "Big Tigress" and FaceName of Player is "Big Tigress" and CockName of Player is "Big Tigress" and SkinName of Player is "Big Tigress" and TailName of Player is "Big Tigress":					[victory at tigress motel]
 			now T is 0; [do nothing statement]
 		else if BodyName of Player is "Chocolate Lab" and FaceName of Player is "Chocolate Lab" and CockName of Player is "Chocolate Lab" and SkinName of Player is "Chocolate Lab" and TailName of Player is "Chocolate Lab":				[made into Chocolate Lab]
-			now T is 0; [do nothing statement]
-		else if vinetrapped is 1 or vinetrapped is 2:						[full plant TF]
 			now T is 0; [do nothing statement]
 		else if foodvendor is 4:											[food vendor's sex slave]
 			now T is 0; [do nothing statement]
@@ -637,11 +642,13 @@ When play ends:
 				else if humanity of Player < 1:
 					say "     As your mind fades, more and more of your infernal taint comes to the fore, hands becoming paws, face stretching out into a muzzle, coarse dirty fur spreading all over your body. Eventually, you're so far gone that you start to couple with common animals without hesitation, and it's when you are tied in a feral mutt you discovered wandering the streets that a green, flickering glow appears behind you.";
 					say "     The rough grip on your collar startles you enough to let out a surprised yelp, but the huge, clawed, red hand rubs your ears. 'Easy, mutt! It's just time to go home, that is all. You've had enough fun in the mortal realm.' You let out a disappointed whine, bones melting and reforming as your body alters further to suit your mindless nature. Now you are nothing more than a mindless hellhound, incapable of reasoned thought or speech, unlike the beast that initially corrupted you. 'Come, boy! There's a gate for you to help guard and bitches to breed. If you're good, I may let you out to play with the mortals again someday.'"; [Rutting beast, loyal demon, or resisting mortal.]
+					the Player is enslaved;
 				else if humanity of Player < 33:
 					say "     Suddenly, the air in front of you shimmers, giving off a sickly yellow light. A single point seems to hang there for a few moments before it begins to - well, the only word you can use to describe what happens is the air seems to [']tear[']. Furnace-like heat hits you in the face from the black, lightless void. The edges of the ever-growing hole are rimmed in luminescent yellow. Every now and again, a drop seems to fall to the ground from the edge of the growing portal, hissing and leaving a scorch mark.";
 					say "     'Time to go home, BITCH!' you hear from behind you before being shoved into the blackened void of the hellgate. As you start to plummet, you let out a startled scream. The darkness is so complete, you cannot even see yourself as the impossible heat steals the air from your lungs. After a few moments, you sink into an unconsciousness as black as your surroundings.";
 					say "     Groggily, you feel yourself come to and there is a soft, metallic chink as you shift. Opening your eyes, you find heavy, iron manacles wrapped around your wrists. A similar weight on your ankles tell you those are also restrained. Around you stand hundreds of infernal hounds. The demonic dogs pant quietly, some licking their chops, some letting out soft eager growls and all of them showing some signs of arousal. As they begin to close in, you let out a shiver at the perverse hunger in all of the bitches['] eyes. You know they will keep you rutting from now until eternity, only allowed to rest while collapsed on their backs, your member twitching and pulsing within.";
 					say "     Hellish or heavenly? Well, I suppose that's up to you.";
+					the Player is enslaved;
 				else: [Male Tainted Human]
 					say "     Your demonic [']luck['] holds and, as the whole city dissolves in chaos, you manage to escape. Weeks later, you stumble into an uninfected location, find a job, and try to return to the life you once had. But the longer you go without... indulging yourself, the harder and tighter your hellhound shaft becomes. It's probably only a matter of time before you end up doing your demonic master's bidding... or in escaping, perhaps you already are.";
 			else:
@@ -651,11 +658,13 @@ When play ends:
 				else if humanity of Player < 1:	[Female animal]
 					say "     As your mind fades, more and more of your infernal taint comes to the fore, hands becoming paws, face stretching out into a muzzle, coarse dirty fur spreading all over your body. Eventually, you're so far gone that you start to couple with common animals without hesitation, and it's when you are tied beneath a feral mutt you discovered wandering the streets that a green, flickering glow appears behind you.";
 					say "     The rough grip on your collar startles you enough to let out a surprised yelp, but the huge, clawed, red hand rubs your ears. 'Easy, bitch! It's just time to go home, that is all. You've had enough fun in the mortal realm.' You let out a disappointed whine, bones melting and reforming as your body alters further to suit your mindless nature. Now you are nothing more than a mindless hellhound, incapable of reasoned thought or speech, unlike the beast that initially corrupted you. 'Come, girl. There's a gate for you to help guard and plenty of males waiting to make sure you remain heavy with pups. If you're good, I may let you out to play with the mortals again someday.'";
+					the Player is enslaved;
 				else if humanity of Player < 33:	[Female bipedal demon Dog]
 					say "     Suddenly, the air in front of you shimmers, giving off a sickly yellow light. A single point seems to hang there for a few moments before it begins to - well, the only word you can use to describe what happens is the air seems to [']tear[']. Furnace-like heat hits you in the face from the black, lightless void. The edges of the ever-growing hole are rimmed in luminescent yellow. Every now and again, a drop seems to fall to the ground from the edge of the growing portal, hissing and leaving a scorch mark.";
 					say "     'Time to go home, BITCH!' you hear from behind you before being shoved into the blackened void of the hellgate. As you start to plummet, you let out a startled scream. The darkness is so complete, you cannot even see yourself as the impossible heat steals the air from your lungs. After a few moments, you sink into an unconsciousness as black as your surroundings.";
 					say "     Groggily, you feel yourself come to and there is a soft metallic chink as you shift. Opening your eyes, you find heavy, iron manacles wrapped around your wrists. A similar weight on your ankles tell you those are also restrained. Around you stand hundreds of infernal hounds. The demonic dogs pant quietly, some licking their chops, some letting out soft eager growls and all of them showing some signs of arousal. As they begin to close in, you let out a shiver and run a paw over your belly, knowing it will soon be swollen and heavy with their demonic spawn, doomed to an eternity as a bitch whelping litter after litter.";
 					say "     Hellish or heavenly? Well, I suppose that's up to you.";
+					the Player is enslaved;
 				else:	[Female Tainted Human]
 					say "     Your demonic [']luck['] holds and, as the whole city dissolves in chaos, you manage to escape. Weeks later, you stumble into an uninfected location, find a job, and try to return to the life you once had. But the longer you go without... indulging yourself, the hotter and wetter your hellhound sex throbs and leaks. It's probably only a matter of time before you end up doing your demonic master's bidding... or in escaping, perhaps you already are.";
 

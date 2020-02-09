@@ -65,8 +65,7 @@ to say hermaphrodite latex vixen defeat:
 			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 				now current menu selection is calcnumber;
 				choose row calcnumber in table of fucking options;
-				say "[title entry]: Shall you [description entry].";
-				say "Is this what you want?";
+				say "[title entry]: [description entry]?";
 				if Player consents:
 					let nam be title entry;
 					now sextablerun is 1;
@@ -337,8 +336,15 @@ When Play begins:
 ]
 
 
-when play ends:
-	if BodyName is "Latex Vixen Herm":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Latex Vixen Herm Infection"	"Infection"	""	Latex Vixen Herm Infection rule	1000	false
+
+This is the Latex Vixen Herm Infection rule:
+	if Player has a body of "Latex Vixen Herm":
+		trigger ending "Latex Vixen Herm Infection";
 		if humanity of Player < 10:
 			say "The animal lust overcomes you, and you spend the rest of your days working as one of the [one of]most expensive[or]dirtiest[or]sluttiest[or]most demanded[or]nastiest[at random] whores at 'Big Mama's House of Desire', a brothel opened up by the Hermaphrodite Latex Vixen that infected you. You are quite happy spending your days with your legs spread, being a cum dump for anyone who walks into the shop, especially given that if you are still not satisfied at the end of the day, Big Mama is more than happy to finish you off.";
 		else:

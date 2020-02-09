@@ -681,12 +681,17 @@ to say sandraphiliptrio:
 
 Section 6 - Endings
 
-When play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Sandra's Epilogue"	"NPC"	""	Sandra's Epilogue rule	900	false
+
+This is the Sandra's Epilogue rule:
 	if Sandra is in the Bunker:
 		if Fang is in the Grey Abbey Library and HP of Fang is 3 and ColleenAlpha is 0 and humanity of Player < 10:
 			[succumb: alpha Fang takes uncontested Sandra ]
-			increase score by 0; [do nothing statement]
-		else if HP of Player > 0:
+			make no decision; [skip this rule]
+		if HP of Player > 0:
+			trigger ending "Sandra's Epilogue"; [Here it states, that the ending has been played.]
 			if humanity of Player < 10 and ColleenAlpha > 0:
 				say "     Sandra ends up going off with Colleen, the dominant husky taking her to be the pack's bunny slut and to be bred full of adorable husky-bunny hybrid pups. On the rare occasions that her alpha allows her to spend time with you, the bunny tells you how much she is enjoying her new life, falling into her role as a plaything for the horny canines.";
 			else if humanity of Player < 10:

@@ -253,8 +253,15 @@ When Play begins:
 ]
 
 
-when play ends:
-	if BodyName of Player is "Harpy":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Harpy Infection"	"Infection"	""	Harpy Infection rule	1000	false
+
+This is the Harpy Infection rule:
+	if Player has a body of "Harpy":
+		trigger ending "Harpy Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if centrallib is 7:
 				say "     As a harpy in the library, you quietly tend to the stacks as do the others. The guard outside makes sure that you are rarely disturbed, leaving you and your sisters to quietly read most of the time. On occasion, you fly out into the city to pluck up a [if Player is female]male to satisfy your needs and give you an egg for the season. Sometimes, if he's cute enough, smart enough and quiet enough, you [']allow['] him to stay, making him into the newest harpy of the aerie[else]female or herm to satisfy your lusts, screwing her until you're sure she'll grow round with a harpy egg. Sometimes, if she's cute enough, smart enough and quiet enough, you [']allow['] her to stay, making her into the newest harpy of the aerie[end if][if Player is male]. The other harpies also enjoy your cock often, many of them getting eggs from you[end if][if Player is puremale]. You have become an unusual creature of myth and legend, the rare male librarian[end if].";

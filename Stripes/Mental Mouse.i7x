@@ -422,8 +422,13 @@ the scent of cheese is "The cheese smells quite delicious.".
 
 Section 6 - Endings
 
-when play ends:
-	if BodyName of Player is "Mental Mouse" or ( BodyName of Player is "Albino Mouse" and mouse girl is tamed ):
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Mental Mouse Infection"	"Infection"	""	Mental Mouse Infection rule	1000	false
+
+This is the Mental Mouse Infection rule:
+	if Player has a body of "Mental Mouse" or ( Player has a body of "Albino Mouse" and mouse girl is tamed ):
+		trigger ending "Mental Mouse Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     Something seems to click inside you and the mouse-like call you've been hearing in your mind comes in loud and clear. No longer resisting it, you welcome the other mice into your mind, feeling the joy and happiness of being united with them. There was nothing to fear at all from it, a wonderful union of your mind to theirs. As your own thoughts fade into the background - still there, but secondary - you follow their call back to the mouse nest. Welcomed by the beautiful mice, you snuggle up with them and share in their company, thoughts and sensations as you make love together, truly together.";
 		else:

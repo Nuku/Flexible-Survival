@@ -731,8 +731,9 @@ to fsdfvore:
 		if humanity of Player < 1:
 			setmonster "Feral Sea Dragon" silently;
 			turn the Player into a "Feral Sea Dragon" silently;
-			now voreloss is true;
 			now Trixieexit is 1;
+			trigger ending "Feral Sea Dragon Vore";
+			the Player was ended by "Vore by Feral Sea Dragoness";
 			end the story saying "You became a Feral Sea Dragoness's meal!";
 		else:
 			let k be 0;

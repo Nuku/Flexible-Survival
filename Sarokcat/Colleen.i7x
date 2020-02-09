@@ -72,16 +72,26 @@ Colleen	"Colleen"
 Colleen is a woman.
 [Physical details as of game start]
 ScaleValue of Colleen is 3. [human sized]
+Body Weight of Colleen is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Colleen is 4. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+Androginity of Colleen is 7. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 SleepRhythm of Colleen is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Colleen is 0. [X cock]
-Cock Length of Colleen is 0. [X Inches]
-Ball Size of Colleen is 0.
-Ball Count of Colleen is 0. [X balls]
-Cunt Count of Colleen is 1. [X pussy]
-Cunt Depth of Colleen is 6. [X Cunt]
-Cunt Tightness of Colleen is 4. [X Cunt]
-Nipple Count of Colleen is 2. [X nipples]
-Breast Size of Colleen is 3. [X at the start]
+Mouth Length of Colleen is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Colleen is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Colleen is 5. [length in inches]
+Cock Count of Colleen is 0. [number of cocks]
+Cock Girth of Colleen is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Colleen is 0. [length in inches]
+Ball Size of Colleen is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Ball Count of Colleen is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Cunt Count of Colleen is 1. [number of cunts]
+Cunt Depth of Colleen is 6. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Colleen is 1. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Colleen is 1. [size 1-5, very small/small/average/large/very large]
+Asshole Depth of Colleen is 9. [inches deep for anal fucking]
+Asshole Tightness of Colleen is 1. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Nipple Count of Colleen is 2. [count of nipples]
+Breast Size of Colleen is 3. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 [Basic Interaction states as of game start]
 TwistedCapacity of Colleen is false. [can not take oversized members without pain]
 Sterile of Colleen is true.
@@ -656,9 +666,18 @@ to say Colleen_pretfsex02:
 
 Section 6 - Endings
 
-when play ends:
-	if BodyName of Player is "Husky Bitch":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Colleen's Bunker Epilogue"	"NPCSharedInfection"	""	Colleen's Bunker Epilogue rule	900	false
+"Colleen's Human Epilogue"	"NPC"	""	Colleen's Human Epilogue rule	900	false
+"Colleen's Solo Epilogue"	"NPC"	""	Colleen's Solo Epilogue rule	900	false
+"Husky Bitch with Colleen"	"NPCSharedInfection"	""	Husky Bitch with Colleen rule	900	false
+"Husky Alpha Infection"	"Infection"	""	Husky Alpha Infection rule	1000	false
+
+This is the Husky Bitch with Colleen rule:
+	if Player has a body of "Husky Bitch":
 		if ColleenAlpha > 2:
+			trigger ending "Husky Bitch with Colleen"; [Exclude normal 'Husky Bitch Infection' ending]
 			project the Figure of Colleen_face_icon;
 			if humanity of Player < 10:
 				if Player is male:
@@ -674,6 +693,7 @@ when play ends:
 				else:
 					say "     Rescued by the military, they take you and Colleen and Sarah with you back to civilization, the military not even realizing that the powerful naked husky with you was once one of their own soldiers. Knowing the system the way she does, Colleen is soon able to arrange it so you are all released back into society with only minimal examination, and as you go about setting up your new life she quickly moves in with you and your slutty pet even without you asking. You find yourself unable to argue with her strong dominant tendencies, and soon find yourself and your pet obeying most of her commands without question, as she proceeds to arrange your lives and schedules for you. Soon enough the two of you are functioning like a pair of properly trained dogs as you snap to obey your lovely alphas commands, happy to be rewarded by soft pets and touches when you do a good job. Sometimes your new alpha takes her small pack of huskies out on the town to see what fun you can all find together as you hit the bars and nightclubs, you find yourself happy and content with your new life, although your alpha has had a gleam in her eye lately as she mentions the possibility of finding a nice stud to have the two of you bred with...";
 		else if Alphahuskypet > 3:
+			trigger ending "Husky Bitch with Colleen"; [Exclude normal 'Husky Bitch Infection' ending]
 			project the Figure of Colleen_face_icon;
 			if Player is female:
 				if humanity of Player < 10:
@@ -684,8 +704,9 @@ when play ends:
 			else:
 				say "     You wonder sometimes about the other husky male you ran into at one point, and find yourself strangely disappointed at how unsuited your new body is for joining their pack, neither strong and alpha like, nor nice and female for them to fuck, you somehow can't help but feel like something of a failure...";
 
-When play ends:
-	if BodyName of Player is "Husky Alpha" and ( Colleen is bunkered or Sarah is bunkered ):	[***This is an imperfect solution]
+This is the Colleen's Bunker Epilogue rule:
+	if Player has a body of "Husky Alpha" and ( Colleen is bunkered or Sarah is bunkered ):	[***This is an imperfect solution]
+		trigger ending "Colleen's Bunker Epilogue";
 		if ColleenSlut is 1:
 			project the Figure of Colleen_face_icon;
 			if humanity of Player < 10:
@@ -693,6 +714,7 @@ When play ends:
 			else:
 				say "     When the military comes, and Colleen realizes rescue is here, she panics and runs off into the city, unable to abandon her new sluttish life as a roaming husky slut. And while you go with the rescue squad you still wonder about the fate of the lusty little husky stray you had such fun reducing the former military woman into. You hear back occasionally from several of the people who go into the city to try to look for friends, family, or just thrills, about how many of them have been approached by a strange lonely husky woman with a collar in her mouth and a begging look. And find yourself hoping that someday the little stray will find herself a proper husky pack to use and take care of her like the one you have made out here with your slutty little Sarah and several other people you have helped to embrace their inner husky slut. Eventually you decide to help the little husky slut out, and you grin as you begin to train several new pets to take on a specific job for you, sending your newly made huskies into the city to find the obviously lonely Colleen, and bring her back to you, where you can find her a proper home and owner. Or maybe even a nice place by your fire with all your other husky pets if she still wants...";
 		else if ColleenCollared is 1:
+			trigger ending "Colleen's Bunker Epilogue";
 			project the Figure of Colleen_face_icon;
 			if humanity of Player < 10:
 				say "     Colleen eagerly joins you and Sarah as you form your new pack and head out into the city to find even more pack members, her military experience standing you in good stead as she helps you track down the rest of her former squad mates. Soon she is enthusiastically welcoming several of her former military friends into the pack, the three of you easily able to overcome whatever other changes they have gained from their time in the city, and you smile as your pack of huskies grows larger and more powerful with each addition. Your pets help you to train your new pack mates as proper little slutty huskies just like them, and before long you are leading one of the most powerful packs of dogs in the city, all of them properly subservient to their alpha.";
@@ -702,6 +724,7 @@ When play ends:
 				say "     The general is surprised to discover after a very long night filled with amazing sex, that the husky pet you lent him actually used to be the soldier he knew as Colleen, and moreover that she was happy and excited to be a little husky slut pet. You spend some time explaining to him how much happier she is like this and how she wanted to share that feeling with him, especially if that means she can help you in any way. He is very surprised at the situation and even more surprised when you offer to have him and as many of his other 'select' friends over as often as they want to visit, to enjoy your slutty little pack-mates. And while slightly reluctant at first, he soon agrees when you invite him or his friends to bring their own ladies over, and they can watch while you teach them to be just as happy and proper pets for them mates as your little pets are for you.";
 				say "     You aren't surprised when he visits again soon, becoming a rather regular guest at your house, often with several other important people in tow, and while most of them are more than happy to be persuaded by your dominant attitude and the lusty scent of sex your pets always exude. On occasion you find one protesting enough that you need to train them personally and show them just how wonderful it is to be a slutty little husky spreading her legs for her alpha or anyone else the alpha wants. On the whole, you soon build up a rather large group of people who owe you favors, and enjoy their new pets as well as their visits to your own well trained pack immensely, these contacts enabling you and your fellow huskies to live nice and comfortable new lives, and even prepare for all the pups that are sure to follow any day now...";
 		else if ColleenAlpha > 2:
+			trigger ending "Colleen's Bunker Epilogue";
 			project the Figure of Colleen_face_icon;
 			if humanity of Player < 10:
 				if Player is male:
@@ -713,27 +736,40 @@ When play ends:
 					say "     'Like my new pack? I made it myself,' she says with amusement as she gestures with her paw at the husky bitches surrounding you. 'They took a bit of work to find scattered as they were throughout in the city, and a bit more work to make sure they ended up as slutty little husky bitches like us, but it was worth it,' Colleen says with a husky grin as she continues to move forward, driving you back step by step as you try to keep an eye on all the huskies arrayed against you as well as their equally intimidating alpha. 'I'd love you to meet the rest of my airborne assault squad, each and every one of them much happier now as slutty little huskies like your pet here, and like you were supposed to be...' she says with an upset sigh as she glares at your dominant form, and you glare back, your hackles rising as she tries to intimidate you into submission. 'I had plans for a submissive little pet like you in the pack, nice fun plans I was sure you would enjoy... but now there is a problem, there can only be one alpha bitch in a pack after all...' she says with a canine chuckle as she glares at you, the tension in the air rising as you glare back, unable to bring yourself to submit to her dominance as you glance around the pack looking for any signs of weakness.";
 					say "     'That's enough,' Colleen says with a sigh, waving her paw and breaking the staring contest as she calls her pack back to her side. 'Since I suppose I do owe you a little something for showing me how good life can be like this...' the husky bitch says with a canine grin as she strokes her paw down the soft fur of her side. 'I'll let you go this time, I'll even let you take your other little pet with you, since you went to all the work to train her properly... But if we run into each other again and you don't have a pack to back you up...' Colleen grins as she snaps her muzzle at you teasingly. 'I suppose we will find out who the real alpha is once and for all...' With those last teasing words, Colleen gathers up her pack and lopes off into the city, leaving you feeling slightly relieved as your pet presses up against your side lovingly. Petting Sarah on the head absently, you gather up your sexy pet and head out into the city yourself, already looking forward to finding some soldiers of your own, and building a pack to rival Colleen's as soon as possible... you are already looking forward to training them to be nice and proper pets like Sarah even as you approach the edges of the city and the two of you begin to work on enlarging your pack of sexy slutty huskies...";
 			else:			[***]
+				trigger ending "Colleen's Bunker Epilogue";
 				say "     When the rescue comes, you lead the military back to the bunker where Colleen and Sarah were staying, only to be surprised to find it empty, your sensitive canine nose telling you that you just missed another pack of huskies visiting the area, and it looks like Colleen was leading them! You sigh as you realize the somewhat alpha-like military husky led them off to some other location in the city she must have found while she was exploring and obviously putting a pack together. The military aren't able to search, considering how pressed they are by all the other infected trying to capture and convert them, and you are forced to abandon your pet and return to their camp with them. In camp your canine looks stand you in good stead, and they ask few questions about your infectiousness at all before releasing you back into normal society.";
 				say "     [one of]You wander aimlessly for a while, unable to settle for a subservient position now that you have embraced your dominant instincts, and soon your sexual appetite leads you to interact with some rather shady people. Interestingly enough, this leads you to discover your new calling, as you help your new friends to train several people from the city, and even some perfectly normal women, to be lusty little sexpets for them and their clients. You even change several of them into slutty little huskies, happy to serve any clients needs at any time. While the pay is nice, you take more pleasure in the training, enjoying reducing the formerly independent women to slutty little pets, and you even keep a few of your favorites as the start of your new pack, and you wonder idly sometimes if Colleen is having just as much fun back in the city...[or]You wander aimlessly for a while, eventually settling in to a series of different jobs at several different bars and stores in the area. One thing that stands you in good stead in your new life however, is your sexual prowess and attractive husky body, making it easy enough to convince people to 'follow you home,' and 'play with the husky'. In a nice intimate manner, of course once they are nice and worked up, it is easy enough for you to train them to be proper slutty little huskies for your pleasure. Their bodies and minds easily molded into proper pets for your amusement and sexual enjoyment, soon you have quite a pack built up around you, and have to move to a new area with your pack to start again once some of the locals get suspicious of your increasing numbers. As time goes on and your pack grows more numerous and powerful, you are able to focus more and more on the important things, like ensuring they are all nice and well bred, with their bellies round and full of your puppies at all times. And while none of them are ever quite as much fun as your first pet Sarah was, they are more than happy to serve your every whim, and soon once a few more litters are born, you can begin to spread through your new city until everyone can understand the joy of being a lusty submissive husky slut... just like all your other pets.[at random]";
 		else:
+			trigger ending "Colleen's Bunker Epilogue";
 			if humanity of Player < 10:
 				say "     Once you have gathered Sarah up from the bunker where you left her, you head out in the city with your little husky pet to find more people to add to your small pack. Soon your pack is growing greatly as you pick off individual soldiers together, tempting them into following you or Sarah away from their companions, where you can train them to be properly responsive husky bitches, your experience in helping Sarah embrace her husky instincts serving you well as you train soldier after soldier to be proper pack members... And soon you have plans for spreading out and finding other cities once you have slipped past the military cordon... where your pack can slip in and show them just how much fun it is to play with mans best friend... before they become huskies themselves...";
 			else:
 				say "     After getting you and Sarah out of the city, you enjoy being the alpha of your small pack, especially once you add the normal husky dog to your group. And while at it can be hard to make ends meet and support your pack properly at first, your dominant attitude soon has you landing better and better jobs, until eventually you are well situated to support the entire pack. Once that happens you find yourself eyeing your co workers speculatively, wondering just how much better they would look as properly trained husky sluts themselves, after all, now seems like it might be a good time to start expanding the pack again...";
-	else if ColleenSlut is 1:
+
+This is the Colleen's Solo Epilogue rule:
+	if Player has a non-shifting body of "Husky Alpha" and ( Colleen is bunkered or Sarah is bunkered ):	[***This is an imperfect solution]
+		make no decision;
+	if ColleenSlut is 1:
+		trigger ending "Colleen's Solo Epilogue";
 		project the Figure of Colleen_face_icon;
 		if humanity of Player < 10:
 			say "     When you finally surrender to the infection, Colleen happily joins you and Sarah as you roam the city seeking your destiny, while she may not be as close to you as your first and most important pet, she tries hard to be a good little pet for you as well for a time. Eventually the needy little husky bitch manages to persuade you to take her in and make her yours on a more permanent basis, as she happily becomes just another submissive pet for your pleasures...";
 		else:
 			say "     When the military comes, and Colleen realizes rescue is here, she panics and runs off into the city, unable to abandon her new sluttish life as a roaming husky slut. And while you go with the rescue squad you still wonder about the fate of the lusty little husky stray you had such fun reducing the former military woman into. You hear back occasionally from several of the people who go into the city to try to look for friends, family, or just thrills, about how many of them have been approached by a strange lonely husky woman with a collar in her mouth and a begging look. And find yourself hoping that someday the little stray will find herself a proper owner to use and take care of her like you take care of your little pet Sarah... Maybe you should go back yourself to check on her sometime and see if she still wants to be your pet now that you have a new life out here...";
 	else if ColleenCollared is 1:
+		trigger ending "Colleen's Solo Epilogue";
 		project the Figure of Colleen_face_icon;
 		if humanity of Player < 10:
 			say "     Colleen eagerly joins you and Sarah as you head out into the city to find your way in the world, her body shifting and changing even faster than your other pets did to match your new form, the influence of the both of you playing with your third pet encouraging her to fully accept her new shape as eagerly as she accepted her life as a husky. Soon she is following along with the two of you happily, eager to be part of whatever life has in store for the three of you.";
 		else:
 			say "     When rescued by the military, having Colleen as a pet stood you in good stead, as she knew just the best way to make sure they let you all go easily. She seems slightly sad when you leave the military base and the remnants of her old life, but is very happy to be a nice pet for you just like Sarah is. You enjoy having her with her, although two lusty little husky sluts around the house can be a bit much to keep up with sometimes, and eventually come up with a great idea to make sure everyone is properly happy. After a bit of time to train her properly and prepare her, you call up one of the more important military men that Colleen used to know, and he seems curious enough to come over for dinner one night. You make sure to make it a night to remember, as you offer your guest every courtesy, including the use of your teasing little husky pet, which after several hours of her heat-filled scent teasing him, he decides to accept.";
 			say "     The general is surprised to discover after a very long night filled with amazing sex, that the husky pet you lent him actually used to be the soldier he knew as Colleen, and moreover that she was happy and excited to be a little husky slutpet. You spend some time explaining to him how she thought of him when she realized that it was kind of hard on you to maintain a house with so many needy pets, and that she was wondering if he would like to be her new owner. While surprised at the situation and the offer, he soon agrees to take her in as his pet, persuaded by her expertly trained tongue and needy slit, the situation making you smile even as he leads his new pet off with a leash. You just know he will be back to visit again soon, and if you ever need anything from him, his pet will certainly help you convince him to agree, and she will certainly enjoy her time back underneath a military man, you think with amusement as you turn back to enjoy your own husky pet.";
-	else if BodyName of Player is "Husky Alpha":
+
+This is the Husky Alpha Infection rule:
+	if one of the endings in { "Colleen's Bunker Epilogue", "Colleen's Solo Epilogue" } is triggered:
+		make no decision;
+	if Player has a body of "Husky Alpha":
+		trigger ending "Husky Alpha Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     Having lost yourself to the infection, your canine instincts take over and you head into the city to form a new pack of your own. You dominate several of the canines around, turning them into a pack of loyal huskies and eke out a small territory for yourselves. Your pack captures wandering travelers from time to time, gaining a few members this way. You lose others from time to time as your weaker pack-mates at lost in fights. It is a tough existence at times, but one fueled by an eagerness and a canine lust that keeps you going.";
 		else:
@@ -745,8 +781,9 @@ When play ends:
 				say ". You instead take this opportunity to get to know many of the other huskies in the compound. They recognize your alpha nature quickly and gain an obedient respect for you. Despite not having succumbed, their new instincts still affect them and you are easily able to gain their loyalty and affection, making yourself the alpha female among them.";
 				say "     Once you and the others are treated and released, you set up a new home for yourselves as the new pack the military was kind enough to gather for you. With your stronger alpha infection in the presence of so many other huskies, your infection soon overpowers the treatment to make you non-infectious. Having already gathered a large pack of your own, you set to work on the lone male you found. While at the military base, you made certain to ensnare this very rare male husky as part of your group. You mate with him numerous times and train him to take charge and dominate the other submissive husky girls, working him to gradually become an alpha male for the pack. But you make certain he knows his place and maintain enough of his submissive nature to keep yourself as his mistress as well. With so many females already gathered for him to breed, your pack only occasionally enjoys adding a new female from time to time, helping to hide the hidden cell of canine infection. It is with the second and third generation that there's a surge of huskies, your pack's numerous offspring spreading out and forming lesser packs of their own by infecting others.";
 
-When play ends:
+This is the Colleen's Human Epilogue rule:
 	if ColleenFound is 1: [brought into the library, not transformed]
+		trigger ending "Colleen's Human Epilogue";
 		if humanity of Player < 10:
 			say "     Finally overcome with your strong bestial instincts to breed, fuck, and spread the infection, you recall where a perfect new pet is waiting for you, nice and safe, and above all unsuspecting, in your bunker. Swiftly returning to the library, you manage to behave long enough to convince Colleen to let you in, where you immediately pounce on her and fuck her like the beast you are. The former soldier moans and pants underneath you, her body shifting and changing as you spread your infection to your new friend. You ravish her body until her form is as twisted and changed as yours, a perfect match for the wonderful new beast you have become, and then over the course of the next day or so, you keep the new Colleen trapped in the bunker with you while you mate her even more thoroughly, enjoying the way her mind changes more and more with each sexual encounter, as she loses her humanity bit by bit, the infection conquering her mind as easily as it conquered yours, making her little more than a beast just like you. Finally satisfied, you head out into the city to seek out even more new conquests to spread your glorious new form to, sure in the knowledge that your most recent convert will be doing the same elsewhere in the city as well...";
 		else:

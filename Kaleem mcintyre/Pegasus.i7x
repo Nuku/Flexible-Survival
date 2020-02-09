@@ -259,8 +259,15 @@ The usedesc of Pegasus Quill is "The quill you picked up is actually a large fea
 [Numerous other examples can be found in existing creature files.]
 
 
-when play ends:
-	if BodyName of Player is "Pegasus":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Pegasus Infection"	"Infection"	""	Pegasus Infection rule	1000	false
+
+This is the Pegasus Infection rule:
+	if Player has a body of "Pegasus":
+		trigger ending "Pegasus Infection";
 		if humanity of Player < 10:
 			say "     Succumbing to the infection, you find yourself looking off to the far horizon as your human mind begins to fade like mist in the morning. It doesn't take long for you to spread your wings and take off into the [if daytimer is day]clear blue yonder[else]starry skies above[end if] as the sheer need to be [italic type]free[roman type] overcomes your senses. It takes a moment of trying, but quickly you get the hang of flying and soon you are making your way across both land and sea as you instinctively search for a mate, equal to you in both strength and power, but with a soul clear enough that your restless spirit can find home beside it. Something silently calls you back [']home['] to where your ancestral herd once congregated at in days long since gone by. Vehemently you hope that whoever you find will be randy enough to [if Player is herm]fill the ache burning throughout your mixed gendered sexes[else if Player is male]quiet the incessant need to rut buzzing throughout your mind as your nuts sway heavily between your legs while the length of your throbbing horse shaft spurts pearls of cum from out of the head of your equine sex[else if Player is female]still the deep need burning inside of your fluttering pussy[else]be willing to quell the lustful need your genderless body cannot release on its own[end if]. You whicker a silent prayer to the Great Winged One, the first of the first pegasi, for aid in this venture.";
 		else:

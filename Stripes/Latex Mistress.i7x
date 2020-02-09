@@ -266,8 +266,13 @@ Definition: a person is ltxmtailed:
 [
 Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "Latex Mistress":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Latex Mistress Infection"	"Infection"	""	Latex Mistress Infection rule	1000	false
+
+This is the Latex Mistress Infection rule:
+	if Player has a body of "Latex Mistress":
+		trigger ending "Latex Mistress Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You succumb to your template infection.";
 		else:

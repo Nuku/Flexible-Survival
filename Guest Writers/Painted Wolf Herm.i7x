@@ -251,8 +251,15 @@ When Play begins:
 ]
 
 
-when play ends:
-	if BodyName of Player is "Painted Wolf Herm":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Painted Wolf Herm Infection"	"Infection"	""	Painted Wolf Herm Infection rule	1000	false
+
+This is the Painted Wolf Herm Infection rule:
+	if Player has a body of "Painted Wolf Herm":
+		trigger ending "Painted Wolf Herm Infection";
 		if humanity of Player < 10:
 			if Player is female:
 				say "     Falling prey to the infection, you wander off into the park to sate your lusts. You are drawn there by a faint scent that grows as you track your target. Finding the hermaphrodite wolf before you is releasing that rich blend of masculine and feminine scents, you approach her quickly, moaning with need. You bend over for hir, displaying your own lovely attributes to hir. Shi takes hir time teasing you, caressing your [if Player is male]throbbing cock and [end if]dripping cunt. You are reduced to moaning, needful yips at all the unsatisfying attention to your genitals.";

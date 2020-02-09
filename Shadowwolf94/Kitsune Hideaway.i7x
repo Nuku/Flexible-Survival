@@ -692,9 +692,15 @@ When Play begins:
 ]
 
 
+Section 7 - Endings
 
-when play ends:
-	if BodyName of Player is "Kitsune":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Kitsune Infection"	"Infection"	""	Kitsune Infection rule	1000	false
+
+This is the Kitsune Infection rule:
+	if Player has a body of "Kitsune":
+		trigger ending "Kitsune Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     Without knowing it your mind soon begins to push all of your human thoughts away to replace them with that of a kitsune's. This turns out to be both a blessing and a curse as new thoughts and memories, many of them too indescribable to the human mind, soon start to flood into your brain without you being able to control them. A keening cry soon makes you drop down onto your knees as your body begins to illuminate with a bluish light, the likes of which start to actually make the shadows around you crawl around like snakes. Power. Pure and unadulterated power is now coursing throughout your body, but without the control needed to handle it your form is soon turning in on itself to try and stop the sudden influx of energy. A cool hand ghosts over your head and instantly everything just stops. Blinking and then looking up with confused azure eyes you find the one that had given you your form staring down at you somewhat bemused.";
 			say "     'I had a feeling that this might happen, though honestly I was hoping that it wouldn't,' Kitsune says, and you can only tilt your head to the side as you try and figure out what the other means. 'Don't try and think right now. You'll only make yourself sick, little kit.' The soothing voice of the other kitsune speaks into your head and instantly you want to do nothing more than cuddle up with the other in order to bury yourself underneath the older male's fluffy silver tails. 'Let's leave this place and return home, there is much I have to begin teaching you about how to be a proper kitsune.' With a flick of his graceful silver hand Kitsune summons up a large blue ball of fire and then brings it to his muzzle to blow against the flame. The mystic fire turns into a rolling cloud that soon over takes both you and he and the next thing that you know you are being transported away from the mundane world of humans. No one you know would ever see you again because in the other world where Kitsune resides you would spend the next nine hundred plus years studying how to be a proper kitsune. Though four hundred or so of those years would be spent as the other's bed mate.";

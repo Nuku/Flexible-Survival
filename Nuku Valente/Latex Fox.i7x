@@ -257,8 +257,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Latex Fox":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Latex Fox Infection"	"Infection"	""	Latex Fox Infection rule	1000	false
+
+This is the Latex Fox Infection rule:
+	if Player has a body of "Latex Fox":
+		trigger ending "Latex Fox Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     Driven mad with your new, rubbery instincts, you leave the bunker and wander the city, looking for further victims";
 			if Player is male:

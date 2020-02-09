@@ -257,12 +257,21 @@ When Play begins:
 ]
 
 
-when play ends:
-	if BodyName of Player is "Dire Wolf":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Dire Wolf Infection"	"Infection"	""	Dire Wolf Infection rule	1000	false
+
+This is the Dire Wolf Infection rule:
+	if Player has a body of "Dire Wolf":
+		trigger ending "Dire Wolf Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "Giving in to your feral nature, you prowl the city streets, enforcing your status as the biggest and most dominant. Your mind is gone and now only the most primal of instincts remain.";
 		else:
 			say "Returning to modern society proves to be hard for you. Your feral tendencies make it hard for you to be accepted in large urban areas, so you move out to a more secluded area in the mountains. You make your living by hunting deer and the like, your wolf senses giving you a major edge over anything else, and soon enough you have a comfortable and stable life to live till you're a gray muzzle.";
+
+Section 4 - Dire-Wolf Cum
 
 Table of Game Objects (continued)
 name	desc	weight	object

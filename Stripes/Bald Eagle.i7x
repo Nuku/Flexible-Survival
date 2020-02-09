@@ -250,13 +250,16 @@ to say useeaglefeather:
 	say "     After twirling the feather around by the quill, you decide to start brushing is along your face. The soft feel of it brushing against you feels very nice. You continue this for a while until finally noticing that the feather has shrunk away and been absorbed into you.";
 
 
-when play ends:
-	if BodyName of Player is "Bald Eagle":
-		if WateringHoleBadEnd is 1:
-			say "     Giving yourself over to your insatiable avian mate, you are reduced to nothing more than his lusty, [if Player is impreg_ok]egg-bearing[else]well-fucked[end if] [if Player is puremale]he-hen[else]hen[end if], a mindless toy and nest warmer who welcomes his presence with worshipful attention. The studly male sustains your lifestyle with frequent hunting flights, spending long hours scavenging supplies for his favorite sedentary fucktoy. At times it feels like an eternity before he returns, and once he does, your libido drives you to beg for him to claim you, all other needs secondary to your altered body's demands. You fuck, then feast, then fuck again, losing yourself in a blur of pleasure as you writhe against each other in the makeshift, cum-soaked bedding.";
-			say "     Over time, the details of your past life grow hazier, then disappear altogether. After one session, you find that you can't even remember your name - not that you'd need to, what with this handsome hunk to do all the thinking for you. You shiver at the thought of others sharing this simple-minded bliss, and you eagerly accompany your partner when he violates those unlucky few who enter your hunting territory, sharing the ecstasy of the infection by transforming them into sexy little eagle-morphs like you. Though he spends long hours grooming them as he did you on that fateful day, you take solace in the fact that soon you'll be entwined again, reunited with your mate in a mindless fucking frenzy.";
-			say "     When the military arrives, your safe distance from the city provides you with a distant vantage to observe their operations. By then, you have only dim awareness of their actions, much preferring devoting every waking second to wrapping your tongue around your mate's hard avian cock or pushing back against his waist as he bucks into your [if Player is female]needy, gripping folds[else]horny, cum-sullied asshole[end if]. The sweltering heat of sex eventually becomes your whole world, little more than a hollow shell of a conscience whose simple sapience is limited to chirping and moaning for more cock[if Player is impreg_ok], more cum, and more eggs for your ever-growing brood[else] and more cum, his horny buttslut to pin and ravage to his infectious, corrupted content[end if], soon knowing nothing more than the instinct-driven bliss that permeates you to your core.";
-		else if humanity of Player < 10:
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Bald Eagle Infection"	"Infection"	""	Bald Eagle Infection rule	1000	false
+
+This is the Bald Eagle Infection rule:
+	if Player has a body of "Bald Eagle":
+		trigger ending "Bald Eagle Infection"; [Here it states, that the ending has been played.]
+		if humanity of Player < 10:
 			say "     As your infection progresses beyond the point of return, your human mind fails as your transformation progresses further. Your body alters and your wings become strong enough to carry yourself in flight. Finding a high point to soar from on your first flight, you take the air and soon learn to catch the wind and fly out to the plains at the edge of the city. You set up a small aerie in a tall building overlooking much of it, allowing you to hunt for food or prey for your lusts. While it is a nice spot, you find yourself dissatisfied when the soldiers start moving through the city below, stirring up the prey to battle or into hiding. Sick of their meddling, you fly off over their lines one evening. Your new aerie is set up in the mountains by a river with delicious fish for food and hikers to satisfy your other hungers.";
 		else:
 			if FaceName of Player is "Bald Eagle" and SkinName of Player is "Bald Eagle":

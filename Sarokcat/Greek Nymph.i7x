@@ -202,8 +202,15 @@ When Play begins:
 ]
 
 
-when play ends:
-	if BodyName of Player is "Greek Nymph":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Greek Nymph Infection"	"Infection"	""	Greek Nymph Infection rule	1000	false
+
+This is the Greek Nymph Infection rule:
+	if Player has a body of "Greek Nymph":
+		trigger ending "Greek Nymph Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "Surrendering to your nymph-like desires, you laugh as you run back towards the museum, somehow knowing that you will find the rest of your sisters there, and the always wonderful-to-tease satyrs. Reaching the large museum halls, you join your sisters, happily dancing and playing the days away. At some point, some people try to come and 'rescue' you. Being happy enough as is, you let the men among them come 'rescue' you from your temporary boredom, laughing as they join the satyrs in their revels, and you eagerly help the women amongst them who are envious of your beauty find the inner nymph within themselves. Soon, most of the visitors stop coming, and you hear this military thing has set up some kind of cordon to keep people out. Still, occasionally, new people slip inside, drawn by the lure of endless joy and pleasure, and you and your sisters welcome them with open arms. Sometimes, you think about heading outside and spreading joy and fun to the people out there, but you are unable to work up the motivation to do so... Perhaps one of these days though, you will help the world embrace a life of endless joy and pleasure... Until then, you are too busy living that life yourself...";
 		else:

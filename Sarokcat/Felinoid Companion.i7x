@@ -150,16 +150,26 @@ Klauz	"Klauz"
 
 Klauz is a man.
 ScaleValue of Klauz is 3. [roughly human sized]
+Body Weight of Klauz is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Klauz is 4. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+Androginity of Klauz is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 SleepRhythm of Klauz is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Klauz is 1.
-Cock Length of Klauz is 14.
-Ball Size of Klauz is 4. [goose egg sized balls]
-Ball Count of Klauz is 2.
-Cunt Count of Klauz is 0.
-Cunt Depth of Klauz is 0.
-Cunt Tightness of Klauz is 0.
-Nipple Count of Klauz is 2.
-Breast Size of Klauz is 0.
+Mouth Length of Klauz is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Klauz is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Klauz is 6. [length in inches]
+Cock Count of Klauz is 1. [number of cocks]
+Cock Girth of Klauz is 4. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Klauz is 9. [length in inches]
+Ball Size of Klauz is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Ball Count of Klauz is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Cunt Count of Klauz is 0. [number of cunts]
+Cunt Depth of Klauz is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Klauz is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Klauz is 0. [size 1-5, very small/small/average/large/very large]
+Asshole Depth of Klauz is 10. [inches deep for anal fucking]
+Asshole Tightness of Klauz is 1. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Nipple Count of Klauz is 2. [count of nipples]
+Breast Size of Klauz is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 [Basic Interaction states as of game start]
 TwistedCapacity of Klauz is false. [can not take oversized members without pain]
 Sterile of Klauz is false.
@@ -269,7 +279,7 @@ to say sexwithfelinoidpet:
 		say "     He pushes his wet cock deep into you with ease. You can feel each bump and barb rub against your hole and your inner walls. Once you feel his heavy pair of balls resting against your own, he begins to hump you in earnest. His barbs fill you with pleasure as they rub against your insides[if Player is male] causing you steadily leak precum beneath you[end if]. The nubs on his shaft quickly, and repeatedly, go in and out of your [if Player is female]quivering cunny[else]clenching ring[end if] sending shivers up your spine[if Player is male]. With each hard thrust in, you can feel his balls slap against your own accompanied by a wet slurp coming from your abused hole[end if]. You can't help but moan beneath the dominant male as he fucks you. Even though he is your comrade and you took him in as your pet, you have continued to allow him to become the more dominant party, allowing him to have his way with you whenever you please. The dominant male picks up the pace of his already rough fucking.";
 		say "     After some time, he bites down hard on the nape of your neck, surely drawing blood. The rough bite sets you over the edge as you cum [if Player is male]beneath the dominant male painting the ground with your sticky seed[else]hard, your vaginal walls gripping at his feline rod[end if]. Not much longer he releases your nape and releases a loud roar as he thrusts his feline shaft deep inside of you and releases shoots his virile seed deep into you. He pulls his cock out, which causes you to moan for more, and shoots the last two or three shoots onto your ass. Which you are sure is a way to mark his territory. As per usual, he walks back around you and has you lick his cock clean. You've begun to enjoy the taste of his cum more and more, but most importantly you are happy to have pleased the dominant male. After you lick his cock clean, he struts away leaving you by yourself. You quickly put your gear back on, savoring the taste of his musk trapped on your lips.";
 		NPCSexAftermath Player receives "OralCock" from Klauz;
-		NPCSexAftermath Player receives "[if player is female]PussyFuck[else if player is male]AssFuck[end if]" from Klauz;
+		NPCSexAftermath Player receives "[if player is female]PussyFuck[else]AssFuck[end if]" from Klauz;
 		increase HP of Felinoid companion by 1;
 	else if BodyName of Player is "Felinoid" and player is pure and child is not born and gestation of Child is 0: [ player must not already be pregnant]
 		if Player is female:
@@ -365,6 +375,7 @@ to say felinoidpet_puref:
 	say "     His orgasm fading, he gives a firm nip and drives your front against the ground before his feet change stance, then he pulls out in a swift, brutal, motion. The barbs catch firmly in your sensitive flesh and all you can feel is dizzying intensity, as if your entire form were made of fire for what feels like forever. As your trembling limbs return to your control, you can see him quietly licking himself clean, satisfied and content again.";
 	NPCSexAftermath Player receives "PussyFuck" from Klauz;
 	now Libido of Player is Libido of Player / 3;
+	say "[impregchance]";
 	increase HP of Felinoid companion by 1;
 
 
@@ -373,7 +384,7 @@ to say felinoidpet_purem:
 		say "     The large feline licks and laps at your cock, his rough tongue feeling wonderful across your barbed manhood. He lets his tongue trail up and down your [cock size desc of Player] erection and over your balls. As he continues, you grow increasingly aroused, leaking precum steadily and losing yourself in the excitement. The scent of felinoid musk hangs heavy in the air, turning you on all the more and clouding your judgment.";
 		say "     When he stops licking suddenly, you mewl in disappointment. He pads around behind you and, with a push of his powerful paws, knocks you down onto all fours. You moan as his nose finds its way under your tail and that rough tongue of his slathers across your anus this time. Lost in your lustful haze, you shift to a firmly quadrupedal stance and mewl again, this time with need.";
 		say "     The big feline moves atop you, brushing his stiff and leaking penis between your cheeks. Taking the nape of your neck in his teeth, he humps a few times before getting lined up and driving that barbed rod of his into your tight back passage. Those stimulating bumps send shivers of pleasure through your feline body and you pant and moan as he fucks you hard and fast, taking you as he would a female. Your cock throbs between your legs, dribbling a growing pool of precum onto the ground as you're incredibly turned on by being fucked by the feral cat.";
-		say "     Klauz's climax strikes before you are even fully aware of it, splashing hotly against your prostate. Spurt after spurt of feline semen fills you, stuffing your bowels with the virile male's load. Being fucked and stuffed by the powerful feline is soon too much for you and you mrowl loudly as you orgasm, spraying your own feline seed onto the ground. You grind back against him even as you cum, eager to take as much as the powerful male atop you can give.[mimpregchance]";
+		say "     Klauz's climax strikes before you are even fully aware of it, splashing hotly against your prostate. Spurt after spurt of feline semen fills you, stuffing your bowels with the virile male's load. Being fucked and stuffed by the powerful feline is soon too much for you and you mrowl loudly as you orgasm, spraying your own feline seed onto the ground. You grind back against him even as you cum, eager to take as much as the powerful male atop you can give.";
 		say "     When he's done, the big cat quickly dismounts and pushes you over with a paw. Weak and lost in a haze of lust, you flop onto the ground, welcoming the more dominant cat's cock into your mouth so you can suck it clean of the last traces of semen. Only once you're done cleaning him and he's padded off does the musk-fueled lust gradually leave and you come back to your senses enough to get up and continue on.";
 		NPCSexAftermath Player receives "AssFuck" from Klauz;
 		NPCSexAftermath Player receives "OralCock" from Klauz;
@@ -411,9 +422,13 @@ to say felinoidpet_puren:
 
 Section 4 - Endings
 
-when play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Klauz['] Epilogue"	"Companion"	"Pet"	Klauz' Epilogue rule	750	false
+
+This is the Klauz' Epilogue rule:
 	if Felinoid companion is tamed:
-		if BodyName of Player is "Felinoid":
+		if Player has a non-shifting body of "Felinoid":
 			if humanity of Player < 10:
 				if Player is female:
 					say "     Finally giving in to your needs as Klauz must have known you would, you crouch down submissively before him finally, realizing what a good and patient mate he has been. You yowl happily as he covers your body, his teeth gripping your scruff as he finally takes you properly, his cock sinking into you as he makes you his pet instead of playing at being yours. Your new felinoid muzzle drops open in a happy grin as you can feel each thrust of his wonderful cock inside you chipping away at what remains of your humanity, your memories of your old life as a human completely useless to you now. As the wonderful male cat mates you properly, you realize now that this is why you saved him, and stayed with him so much, you needed a nice strong mate to take you and make you his, to fill your heat-filled belly up with his handsome feline cubs while you serve his every need. You roar in pleasure as you feel him shoot his fertile sperm into you, locking you into your new form permanently, and sealing his claim on your body. You pant happily as your new mate licks your own new coat of soft golden fur tenderly, and you moan as after a short rest, he begins to mount you again. Roaring in pleasure, you vow to be a good pet for your handsome and caring mate, eagerly moving underneath him, as he works hard to plant his seed in you again, knowing that soon you will be expanding your little family with some of his handsome cubs to care for, the very thought of the handsome little felines growing in your belly making you roar again in pleasure, looking forward to a long and very full life, and a very full belly.";
@@ -457,17 +472,18 @@ when play ends:
 		else:
 			if humanity of Player < 10:
 				say "     When you finally surrender completely to the infection, the felinoid you saved tries to guide you back to the park and his den, but you are having none of it. Growling, you manage to drive the pushy felinoid off, his injuries still hampering him enough that you can drive him away easily, and while you think you spot him hanging around several times over the next few days, he doesn't try approaching you again, letting you settle into your new more feral life without his interference.";
-			else if BodyName of Player is "Feral Wolf" and ( HP of Fang is 3 or HP of Fang is 4 ):
+			else if Player has a non-shifting body of "Feral Wolf" and HP of Fang is listed in { 3, 4 }:
 				[ see Feral Wolf file for this ending ]
-				now tempnum is 0;
+				make no decision;
 			else:
-				if Player is female and ( HP of Fang is 3 or HP of Fang is 4 ):
+				if Player is female and HP of Fang is listed in { 3, 4 }:
 					[ see Fang file for this ending ]
-					now tempnum is 0;
+					make no decision;
 				else if Player is female:
 					say "     Rescued from the city with your mind intact, you manage to convince the military that your companion is not actually a threat. You don't think they would have bought it, if it weren't for how bad things in the city were getting for them, and they couldn't afford to take the time out to check him carefully, especially since he was on his best behavior for you at the time. You feel rather proud of once more having saved your new friend, as you take him with you to set up your new life in the outside world. The attractive felinoid's musk is as strong as ever however, making you increasingly horny the longer you stay around him, and you realize that you need to do something about it unless you want to end up with felinoid cubs in your belly. You take your felinoid friend to see a nice male vet to see if anything can be done, only to find that after only a minute in the room with your companion's strong male musk, the male vet is on his way to being a female feline. The erotic sight of watching the former male being mounted by your friend turns you on so much you end up orgasming several times just watching. Sneaking your pet back out of the vets, you decide to have some more fun with this, hitting several different bars most nights, and bringing the unsuspecting men who hit on you the most home with you. You enjoy watching as your companions makes the horny men into equally horny women, changing their viewpoint on life drastically, some of them you even let your felinoid companion change fully into female cats for him to breed. This forces you to move several times before you finally settle down someplace to stay for good, you and your companion settling in happily, while a strange explosion of pregnant female felinoids hits the area, even as your own belly begins to show signs of his fertility...";
 				else:
 					say "     Rescued from the city with your mind intact, you manage to convince the military that your companion is not actually a threat. You don't think they would have bought it, if it weren't for how bad things in the city were getting for them, and they couldn't afford to take the time out to check him carefully, especially since he was on his best behavior at the time. Starting up a new life in the outside world, your felinoid companion is a great help to you, as not only is he able to watch your back, his strangely attractive musk is as strong as ever. You enjoy how easily woman flock to you when you wear even a hint of musk, but the most amusing discovery is when you bring a friend home to meet him, and discover your male friend is soon a woman. You have great fun with this ability of your companion, turning several men who annoy you into women instead, you even let your companion finish changing several of them all the way into female felines for his own amusement. Strangely you still seem resistant to the transformative effects of being around him, retaining your manhood even as others lose theirs, as a side benefit, most of the ones your companion change seem strangely submissive as well, making your life much easier. Soon you both have managed to acquire a small harem of women, both felinoid and human to play with as you start your new lives.";
+		trigger ending "Klauz['] Epilogue"; [Here it states, that the ending has been played.]
 
 [ HP of Felinoid companion ]
 [ # of times had sex       ]

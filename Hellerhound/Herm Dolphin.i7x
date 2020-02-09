@@ -336,8 +336,15 @@ this is the dolattack rule:		[possible sonic attack and sets upcoming strike]
 			now wdam entry is 4;
 
 
-when play ends:
-	if BodyName of Player is "Dolphin Herm":
+Section 4 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Dolphin Herm Infection"	"Infection"	""	Dolphin Herm Infection rule	1000	false
+
+This is the Dolphin Herm Infection rule:
+	if Player has a body of "Dolphin Herm":
+		trigger ending "Dolphin Herm Infection";
 		if humanity of Player < 10:
 			say "Your mind snaps with the pressure of the idea of joining the pod. You go feral and join the pod of dolphinoids that lives near your city, occasionally venturing to the southern waters to mate with other pods.";
 		else:

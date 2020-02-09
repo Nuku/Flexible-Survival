@@ -143,14 +143,19 @@ to say Christy_ending:
 	now bodydesc of Player is "plump";
 	now bodytype of Player is "[one of]plush[or]leonine[or]costume-like[at random]";
 	now SleepRhythm of Player is 0;
+	trigger ending "Boris['] New Toy";
 	end the story saying "You lose yourself to your new identity.";
 	follow the turnpass rule;
 	stop the action;
 
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Boris['] New Toy"	"BadEnd"	"Sex Slave"	Boris' New Toy rule	20	false
 
-when play ends:
-	if Christyquest is 4:
+This is the Boris' New Toy rule:
+	if ending "Boris['] New Toy" is triggered:
 		say "     When you and your pride leader are finally recovered from the decimated city, there seems to be some talk about what to do with the two of you. You are adamant about remaining together with Boris, and he is just as reluctant to be separated from you. You are stuck in military custody for a while as a bit of a novelty, until finally somehow word gets out to some people in the entertainment industry about the two of you. Before you know it, they have arranged for you and Boris to be released and offered you both jobs. You are somewhat unsure, but Boris seems happy to accept, and soon you are starring in your own live action shows, reliving the best times of your life as you act them out for the cameras. You find yourself loving your new job, as you get to enjoy being yourself, and chasing villains for the audience seems to come to you naturally, even though some of the themes are now more adult then you remember. Whatever else happens, though, you are always looking forward to the next time Arthur the Antelope shows up on the set. While you know it's just a costume and not the real Arthur, nothing gives you quite as much of a thrill as foiling his twisted schemes, and maybe, just maybe, you will manage to catch him for good one of these times! There is talk of movies and touring, which is nice enough, but your favorite times are when you and Boris get to spend some alone time in your small pride making even more close memories.";
+		the Player is lost;
 
 Table of GameCharacterIDs (continued)
 object	name

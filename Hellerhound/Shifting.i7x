@@ -70,6 +70,10 @@ instead of resolving a Secure Area:
 
 Section 2 - Shifting
 
+Definition: a person is shifter:
+	if Resolution of Secure Area is 2, yes;
+	no;
+
 shifting is an action applying to one topic.
 understand the command "shift" as something new.
 understand "shift [text]" as shifting.
@@ -195,19 +199,20 @@ To transform:
 		say "You can't help but [one of]feel your thoughts drifting towards sex[or]notice that the attributes of [Name entry] were very appealing[or]wonder if getting to know these creatures in the biblical sense would be all that bad[at random].";
 		now Libido of Player is the libido entry;
 
-when play ends:
-	if Resolution of Secure Area is 2:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Shifter Check"	"Special"	""	Shifter Check rule	60	false
+
+This is the Shifter Check rule:
+	if Player is shifter:
+		trigger ending "Shifter Check";
+		exclude "Infection" endings;
+		exclude "NPCSharedInfection" endings;
 		if the humanity of Player > 50:
 			say "Your knowledge of how to shift aids you when you decide to help the rescue, and as a reward for your help, the army decides to replace the nanites you had with a new kind that do not spread.";
 		else:
 			say "Your feral impulses prevent the concentration required for shifting, and the knowledge doesn't return until the rescue comes.";
 			say "You are unable to choose a form and spend your days changing to whatever suits you. Within a few days of the revitalization of the city, the spy force contacts you, ringing your phone off the hook for hours until you finally return home. They offer you work and give such bonuses and pay that you can't resist. Your ability helps, and the only work you have to do is mimicking the knowledge of who you are impersonating, training yourself for future success.";
-		now Body of Player is "nothing";
-		now BodyName of Player is "nothing";
-		now scalevalue of Player is 3;
-		now bodydesc of Player is "shapeshifting";
-		now bodytype of Player is "shapeshifter";
-		now SleepRhythm of Player is 0;
-		say "((Being a shapeshifter, your normal ending for your body type is suppressed))";
+		say "((Being a shapeshifter, your normal ending for your body type is suppressed))[line break]";
 
 Shifting ends here.

@@ -208,13 +208,17 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Drone Wasp":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Drone Wasp Infection"	"Infection"	""	Drone Wasp Infection rule	1000	false
+
+This is the Drone Wasp Infection rule:
+	if Player has a body of "Drone Wasp":
+		trigger ending "Drone Wasp Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
-			if bee girl is tamed:
-				say "     Hearing a faint buzzing in your mind, you are drawn back to the park, followed at a distance by a worried Honey. There you meet up with several others from the wasp nest and join them. When Honey is spotted in the bushes nearby, the other drones charge in to attack to kill the rival insect, but you stop them. Still sensing a faint connection in your failing mind, you are able to coax the scared bee girl into your arms and, with the help of the others, help her to become a lovely wasp like yourselves. She moans in ecstasy, climaxing repeatedly as a new, permanent stinger grows in to replace her lost one, becomes a strong and beautiful member of the wasp nest and a lifelong companion to you.";
-			else:
-				say "     Hearing a faint buzzing in your mind, you are drawn back to the park. There you meet up with several others from the wasp nest and join them, lustfully giving yourself over to the pleasure of your insectile bodies. You go along with them, following the buzzing sound you're sensing back to the nest which has been set up in one of the park maintenance buildings. There you enjoy a pleasant life of work and sex with the other beautiful wasps.";
+			if ending "Honey's Epilogue" is triggered:
+				make no decision;
+			say "     Hearing a faint buzzing in your mind, you are drawn back to the park. There you meet up with several others from the wasp nest and join them, lustfully giving yourself over to the pleasure of your insectile bodies. You go along with them, following the buzzing sound you're sensing back to the nest which has been set up in one of the park maintenance buildings. There you enjoy a pleasant life of work and sex with the other beautiful wasps.";
 		else:
 			say "     Your unusual body is analyzed by the military scientists, but you are given little concern. You do happen to befriend a helicopter pilot, chatting with him while you're in a waiting area, and he's come in with reports after another extraction. He chats with you for a while and even visits you a few times at the compound where you're being held with a large group of others";
 			if Player is female:

@@ -448,8 +448,13 @@ to say bobcatheatsex5:		[receive anal]
 
 Section 6 - Endings
 
-when play ends:
-	if BodyName of Player is "Latex Bobcat":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Latex Bobcat Infection"	"Infection"	""	Latex Bobcat Infection rule	1000	false
+
+This is the Latex Bobcat Infection rule:
+	if Player has a body of "Latex Bobcat":
+		trigger ending "Latex Bobcat Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is pure:
 				project Figure of Bobcat2_icon;

@@ -288,8 +288,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Killer Whale":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Killer Whale Infection"	"Infection"	""	Killer Whale Infection rule	1000	false
+
+This is the Killer Whale Infection rule:
+	if Player has a body of "Killer Whale":
+		trigger ending "Killer Whale Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10: [SUCCUMB]
 			say "     As the last of your humanity is washed away like a sand castle by the waves of the ocean, you are drawn back to the beachside. You join the other beachgoers and lose yourself in the enjoyment of the beachfront area. You swim among the other creatures, strong and powerful. You are not troubled by the other predators often and happily satisfy your urges on the others swimming in the area.";
 			if orcadom < 4 and player is male:

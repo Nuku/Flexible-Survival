@@ -54,6 +54,8 @@ Figure of Giraffe_icon is the file "Giraffe_ig.jpg".
 Figure of GooGirl_icon is the file "GooGirl.jpg".
 Figure of BlueGryphon_icon is the file "BlueGryphon.jpg".
 Figure of BlueGryphon_face_icon is the file "BlueGryphon_face.jpg".
+Figure of BlueGryphon_hard_icon is the file "Blue Gryphon hard.jpg".
+Figure of BlueGryphon_soft_icon is the file "Blue Gryphon soft.jpg".
 Figure of Gazelle_hard_icon is the file "Gazelle_hard.jpg".
 Figure of Gazelle_soft_icon is the file "Gazelle_soft.jpg".
 Figure of GermanShepherd_hard_icon is the file "GermanShepherd_hard.jpg".
@@ -93,6 +95,8 @@ Figure of MathTeacher_icon is the file "MathTeacher.png".
 Figure of Megakitty_icon is the file "Megakitty_ig.jpg".
 Figure of MentalMice_icon is the file "Mental_Mice.jpg".
 Figure of MessyPig_icon is the file "FS_MessyPig.jpg".
+Figure of Minotaur_hard_icon is the file "Minotaur_hard.jpg".
+Figure of Minotaur_naked_icon is the file "Minotaur_naked.jpg".
 Figure of Naga_icon is the file "Naga.jpg".
 Figure of NinjaCat_F_icon is the file "CatNinja_F_ig.jpg".
 Figure of NinjaCat_M_icon is the file "NinjaCat_M_ig.jpg".
@@ -105,10 +109,13 @@ Figure of QueenBee_icon is the file "QueenBee_ig.jpg".
 Figure of Ram_icon is the file "FS_Ram.jpg".
 Figure of Reindeer_icon is the file "Reindeer_ig.jpg".
 Figure of SandMan_icon is the file "Sand Man.jpg".
+Figure of Satyress_naked_icon is the file "Satyress.jpg".
 Figure of ShadowBeast_icon is the file "ShadowBeast.jpg".
 Figure of Pewter_Consort_icon is the file "Pewter_Consort.jpg".
 Figure of PirateShark_icon is the file "sharkpirate.png".
 Figure of Ram_naked_icon is the file "Ram_naked.jpg".
+Figure of SeaDragon_hard_icon is the file "Sea Dragon hard.jpg".
+Figure of SeaDragon_soft_icon is the file "Sea Dragon soft.jpg".
 Figure of SiameseCat_icon is the file "siamesecats_ig.jpg".
 Figure of SnowBat_icon is the file "SnowBat_ig.jpg".
 Figure of SnowLeopard_icon is the file "SnowLeopard.jpg".
@@ -126,6 +133,7 @@ Figure of VixenNurse_icon is the file "VixenNurse_ig.jpg".
 Figure of Vixentaur_icon is the file "vixentaur_ig.jpg".
 Figure of Werewolf_female_icon is the file "Werewolf.jpg".
 Figure of Wildcat_icon is the file "wildcat_ig.jpg".
+Figure of Wood_Elf_icon is the file "Wood Elf.jpg".
 Figure of Wyvern_female_icon is the file "Wyvern_female.jpg".
 Figure of YamatoDragon_red_hard_icon is the file "YamatoDragon_red_hard.jpg".
 Figure of YamatoDragon_red_soft_icon is the file "YamatoDragon_red_soft.jpg".
@@ -352,9 +360,17 @@ Figure of Sonny_halfwool_nude_icon is the file "Sonny_halfwool_nude.jpg".
 Figure of Sonny_shaved_jeans_icon is the file "Sonny_shaved_jeans.jpg".
 Figure of Sonny_shaved_nude_icon is the file "Sonny_shaved_nude.jpg".
 Figure of Sonny_face_icon is the file "Sonny_face.jpg".
+Figure of Spike_jacket_icon is the file "Spike_jacket.jpg".
 Figure of Spike_clothed_icon is the file "Spike_clothed.jpg".
+Figure of Spike_shirtless_icon is the file "Spike_shirtless.jpg".
+Figure of Spike_jockstrap_icon is the file "Spike_jockstrap.jpg".
+Figure of Spike_straps_icon is the file "Spike_straps.jpg".
+Figure of Spike_straps_hard_icon is the file "Spike_straps_hard.jpg".
+Figure of Spike_speedo_icon is the file "Spike_speedo.jpg".
 Figure of Spike_face_icon is the file "Spike_face.jpg".
-Figure of Spike_naked_icon is the file "Spike_naked.jpg".
+Figure of Spike_hard_icon is the file "Spike_hard.jpg".
+Figure of Spike_naked_hard_icon is the file "Spike_naked_hard.jpg".
+Figure of Spike_naked_soft_icon is the file "Spike_naked_soft.jpg".
 Figure of Stella_icon is the file "Stella_ig.jpg".
 Figure of Susan_face_icon is the file "Susan_face.jpg".
 Figure of Sven_naked_icon is the file "Sven_naked.jpg".
@@ -383,6 +399,8 @@ Figure of Urik_naked_icon is the file "Urik_naked.jpg".
 Figure of Valerie_icon is the file "Valerie.jpg".
 Figure of Violet_face_icon is the file "Violet_face.jpg".
 Figure of Voodoo_Gecko_icon is the file "Voodoo_Gecko.jpg".
+Figure of Warrior Chris_clothed_icon is the file "Warrior Chris_clothed.jpg".
+Figure of Warrior Chris_naked_icon is the file "Warrior Chris_naked.jpg".
 Figure of Yatur_clothed_icon is the file "Yatur_clothed.jpg".
 Figure of Yatur_naked_icon is the file "Yatur_naked.jpg".
 Figure of Yolanda_icon is the file "Yolanda_ig.jpg".
@@ -633,6 +651,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Boghrim_naked"	Figure of Boghrim_naked_icon	"Kupo Klein"	g-white	"normal"
 "Boghrim_face"	Figure of Boghrim_face_icon	"Kupo Klein"	g-black	"normal"
 "Bottlenose Toy_Human"	Figure of Bottlenose_icon	"Anymouse1968"	g-white	"normal"	[only shown for humanoid version]
+"Bottlenose Trapped"	Figure of BT_Trapped_icon	"Anymouse1968"	g-white	"normal"
 "Bovine_F"	Figure of Bovine_F_icon	""	g-white	"normal"	[only shown for female version]
 "Boy_To_Fox_Shampoo1"	Figure of Boy_To_Fox_Shampoo1_icon	"Watsup"	g-white	"normal"
 "Boy_To_Fox_Shampoo2"	Figure of Boy_To_Fox_Shampoo2_icon	"Watsup"	g-white	"normal"
@@ -758,6 +777,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Helen"	Figure of Helen_naked_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Helot Manservant"	Figure of Helot_icon	"Obieblu"	g-white	"normal"
 "Blue Gryphon Herm"	Figure of BlueGryphon_icon	"dbd"	g-black	"normal"
+"Blue Gryphon hard"	Figure of BlueGryphon_hard_icon	"Vashaa"	g-white	"normal"
+"Blue Gryphon soft"	Figure of BlueGryphon_soft_icon	"Vashaa"	g-white	"normal"
 "Hermaphrodite Gryphon Face"	Figure of BlueGryphon_face_icon	"dbd"	g-black	"normal"
 "Latex Vixen Herm"	Figure of LatexVixen_icon	"Anymouse1968"	g-white	"normal"
 "Hyena Herm"	Figure of Herm_Hyena_clothed_icon	"Vashaa"	g-White	"normal"
@@ -840,6 +861,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Micaela"	Figure of Micaela_icon	"Kattzie"	g-white	"normal"
 "Mike_face"	Figure of Mike_face_icon	"SineAlas"	g-black	"normal"
 "Mike"	Figure of Mike_icon	"Darian821"	g-black	"normal"
+"Minotaur hard"	Figure of Minotaur_hard_icon	"Vashaa"	g-White	"normal"
+"Minotaur naked"	Figure of Minotaur_naked_icon	"Vashaa"	g-White	"normal"
 "Monty_ass"	Figure of Monty_ass_icon	"Obieblu"	g-white	"normal"
 "Monty_combat"	Figure of Monty_combat_icon	"Obieblu"	g-white	"normal"
 "Monty_postcombat"	Figure of Monty_postcombat_icon	"Obieblu"	g-white	"normal"
@@ -897,6 +920,9 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Sarah_face"	Figure of Sarah_face_icon	"Lyttathebug"	g-white	"normal"
 "Sarah_face_naked"	Figure of Sarah_face_naked_icon	"Lyttathebug"	g-white	"normal"
 "Sarah_naked"	Figure of Sarah_naked_icon	"Lyttathebug"	g-white	"normal"
+"Satyress_naked"	Figure of Satyress_naked_icon	"Vashaa"	g-White	"normal"
+"Sea Dragon Hard"	Figure of SeaDragon_hard_icon	"Vashaa"	g-white	"normal"
+"Sea Dragon Soft"	Figure of SeaDragon_soft_icon	"Vashaa"	g-white	"normal"
 "Septus"	Figure of Septus_icon	"Feralise"	g-black	"normal"
 "Septus_face"	Figure of Septus_face_icon	"Cirrusthecloud"	g-black	"normal"
 "SgtMarks"	Figure of SgtMarks_icon	"Anyare"	g-white	"normal"
@@ -922,9 +948,17 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Skarnoth_naked"	Figure of Skarnoth_naked_icon	"Kien-Biu"	g-black	"normal"
 "Skin Diagram 1"	Figure of SkinDiagram1_icon	"Wahn"	g-white	"normal"
 "Skin Diagram 1"	Figure of SkinDiagram2_icon	"Wahn"	g-white	"normal"
+"Spike_jacket"	Figure of Spike_jacket_icon	"Lyttathebug"	g-black	"normal"
 "Spike_clothed"	Figure of Spike_clothed_icon	"Lyttathebug"	g-black	"normal"
-"Spike_face"	Figure of Spike_face_icon	"SineAlas"	g-black	"normal"
-"Spike_naked"	Figure of Spike_naked_icon	"Lyttathebug"	g-black	"normal"
+"Spike_shirtless"	Figure of Spike_shirtless_icon	"Lyttathebug"	g-black	"normal"
+"Spike_jockstrap"	Figure of Spike_jockstrap_icon	"Lyttathebug"	g-black	"normal"
+"Spike_straps"	Figure of Spike_straps_icon	"Lyttathebug"	g-black	"normal"
+"Spike_straps_hard"	Figure of Spike_straps_hard_icon	"Lyttathebug"	g-black	"normal"
+"Spike_speedo"	Figure of Spike_speedo_icon	"Lyttathebug"	g-black	"normal"
+"Spike_hard"	Figure of Spike_hard_icon	"Lyttathebug"	g-black	"normal"
+"Spike_naked_hard"	Figure of Spike_naked_hard_icon	"Lyttathebug"	g-black	"normal"
+"Spike_speedo"	Figure of Spike_naked_soft_icon	"Lyttathebug"	g-black	"normal"
+"Spike_naked_soft"	Figure of Spike_face_icon	"SineAlas"	g-black	"normal"
 "Succubus"	Figure of Succubus_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Sugar Glider"	Figure of SugarGlider_icon	"Xilrayne"	g-black	"normal"
 "Susan_face"	Figure of Susan_face_icon	"SineAlas"	g-black	"normal"
@@ -962,8 +996,11 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Vixentaur"	Figure of Vixentaur_icon	"Anymouse1968"	g-white	"normal"
 "Vixen Nurse"	Figure of VixenNurse_icon	"KV1NN4"	g-white	"normal"
 "Voodoo Gecko"	Figure of Voodoo_Gecko_icon	"Waxraven/WXRVN"	g-white	"normal"
+"Warrior Chris_clothed"	Figure of Warrior Chris_clothed_icon	"Kupo Klein"	g-white	"normal"
+"Warrior Chris_naked"	Figure of Warrior Chris_naked_icon	"Kupo Klein"	g-white	"normal"
 "Werewolf (female)"	Figure of Werewolf_female_icon	"Watsup"	g-white	"normal"
 "Wildcat"	Figure of Wildcat_icon	"Strype"	g-white	"normal"
+"Wood Elf"	Figure of Wood_Elf_icon	"Vashaa"	g-White	"normal"
 "Wyvern_female"	Figure of Wyvern_female_icon	"Anonymous"	g-white	"normal"
 "Yatur_clothed"	Figure of Yatur_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Yatur_naked"	Figure of Yatur_naked_icon	"Kupo Klein"	g-white	"normal"
@@ -1084,6 +1121,7 @@ carry out artistcredits:
 	say "     Hawkman by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Helot by Obieblu @ tumblr.com[line break]";
 	say "     Hermaphrodite Gryphon by dbd @ furaffinity.net[line break]";
+	say "     Hermaphrodite Gryphon by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Hermaphrodite Latex Vixen by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Homo Sapiens by Astro @ y-gallery.net[line break]";
 	say "     Horny Doctor (male) by Cooper @ furaffinity.net[line break]";
@@ -1104,6 +1142,7 @@ carry out artistcredits:
 	say "     Mental Mice by Xilrayne @ https://inkbunny.net/Xilrayne[line break]";
 	say "     Messy Pig by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Megakitty by BushyCat @ furaffinity.net[line break]";
+	say "     Minotaur by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Naga by Rastear @ y-gallery.net[line break]";
 	say "     Ninja Cat (female) by Bix707 @ furaffinity.net[line break]";
 	say "     Ninja Cat (male) by <redacted>[line break]";
@@ -1119,6 +1158,8 @@ carry out artistcredits:
 	say "     Ram by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Reindeer by MoT @ furaffinity.net[line break]";
 	say "     Sand Man by Rastear @ y-gallery.net[line break]";
+	say "     Satyress by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
+	say "     Sea Dragon by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Shadow Beast by Hioshiru @ https://www.furaffinity.net/user/hioshiru/[line break]";
 	say "     Shemale Smooth Collie by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Siamese Cats by RedCoatCat @ furaffinity.net[line break]";
@@ -1136,6 +1177,7 @@ carry out artistcredits:
 	say "     Voodoo Gecko by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Werewolf (female) by Watsup @ https://www.furaffinity.net/user/watsup/[line break]";
 	say "     Wildcat by Strype @ furaffinity.net[line break]";
+	say "     Wood Elf by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Wyvern Female by Anonymous[line break]";
 	say "     Yamato Dragon by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Yuppie Mink by Anymouse1968 @ furaffinity.net[line break]";

@@ -364,8 +364,14 @@ When Play begins:
 Section 3 - Endings
 
 [
-when play ends:
-	if BodyName of Player is "Cheesecake":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Cheesecake Infection"	"Infection"	""	Cheesecake Infection rule	1000	false
+"Gingerbread Infection"	"Infection"	""	Gingerbread Infection rule	1000	false
+
+This is the Cheesecake Infection rule:
+	if Player has a body of "Cheesecake":
+		trigger ending "Cheesecake Infection";
 		if humanity of Player < 10:
 			say "     You succumb to your Cheesecake infection.";
 		else:
@@ -377,8 +383,9 @@ when play ends:
 			else:									[F-STERILE]
 				say "     Additional text for a female survivor who cannot become preggers.";
 
-when play ends:
-	if BodyName of Player is "Gingerbread":
+This is the Gingerbread Infection rule:
+	if Player has a body of "Gingerbread":
+		trigger ending "Gingerbread Infection";
 		if humanity of Player < 10:
 			say "     You succumb to your Gingerbread infection.";
 		else:

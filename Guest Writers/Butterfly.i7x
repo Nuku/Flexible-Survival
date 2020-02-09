@@ -619,32 +619,39 @@ When Play begins:
 
 Section 5 - Monster Endings
 
-when play ends:
-	if BodyName of Player is "Butterfly":
-		let player_sterile be False;
-		if "Sterile" is listed in feats of Player:
-			now player_sterile is True;
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Butterfly Girl Epilogue"	"NPCSharedInfection"	""	Butterfly Girl Epilogue rule	900	false
+"Butterfly Infection"	"Infection"	""	Butterfly Infection rule	1000	false
+
+This is the Butterfly Girl Epilogue rule:
+	if Player has a body of "Butterfly" and ButterflyLove is true:
+		trigger ending "Butterfly Girl Epilogue";
 		if humanity of Player < 10:
-			if ButterflyLove is True:
-				say "You settle down with that Butterfly, your mind under the spell of her pheromones and bewitched by the colorful patterns on her wings. She welcomes you with open arms and cherishes your every moment together. ";
-				if Player is male:
-					say "You have a very passionate and active sex life[if Player_sterile is true], but are unable to have children[else] resulting in regular pregnancies, but your children no longer show any signs of sentience and rapidly fly off following their instincts[end if].";
-				else if Player is female:
-					say "You are unable to have children, but the two of you are inseparable all the same living as a happy lesbian couple with a very passionate and active sex life.";
-			else:
-				say "As you lose the last fragment of your humanity you fall back on your instincts resorting to extracting nectar from plants. You generally keep away from humans and other creatures. They always seem to be out to catch you. For some reason you have visions of being pinned in a display cabinet and want to avoid that at all costs. There was one human though so enchanted by the colorful patterns on your wings who slowly gained your trust. In due time you became inseparable.";
+			say "You settle down with that Butterfly, your mind under the spell of her pheromones and bewitched by the colorful patterns on her wings. She welcomes you with open arms and cherishes your every moment together. ";
+			if Player is male:
+				say "You have a very passionate and active sex life[if Player is sterile], but are unable to have children[else] resulting in regular pregnancies, but your children no longer show any signs of sentience and rapidly fly off following their instincts[end if].";
+			else if Player is female:
+				say "You are unable to have children, but the two of you are inseparable all the same living as a happy lesbian couple with a very passionate and active sex life.";
 		else:
-			if ButterflyLove is True:
-				say "You rush back to your lover's welcoming arms. She worries about re-entering human society, but your confidence eases her fears. Together you are rescued and rejoin society.";
-				say "A media frenzy erupts as you rapidly become the poster couple for the infection. ";
-				if Player is male:
-					say "Finding she enjoys being in front of the camera your lover takes up fashion modeling, but she's only really comfortable as long as it's you taking the pictures. Together you make a successful team as fashion houses and cosmetics firms worldwide keep you in work and help fund your comfortable lifestyle. You have a very passionate and active sex life, [if Player_sterile is true]but are unable to have children[else]resulting in a handful of children. They all follow their own path just like normal human children, although their exotic looks make them a magnet for many[end if].";
-				else if Player is female:
-					say "You are unable to have children, but the two of you are inseparable all the same living as a happy lesbian couple with a very active and passionate sex life. Finding you both enjoy being in front of the camera you take up fashion modeling together. You make a successful team as fashion houses and cosmetics firms worldwide keep you in work, and help fund your comfortable lifestyle. ";
-				say "Even in your later years you look back fondly on the infection as a blessing. Every morning as you wake and see your lover's familiar face you're reminded of how even if you had to do it all again you wouldn't change a thing.";
-			else:
-				say "You are rescued and rejoin society.";
-				say "A media frenzy erupts as you become the poster child for the infection. Finding you enjoy being in front of the camera you take up fashion modeling, but retire quickly finding the life lonely. At that time you find yourself inspired by your memories of Doctor Matt and finish your education. After graduation you enter the scientific community studying the infection. Your first-hand insight proves invaluable, and you rapidly rise through the ranks as your discoveries mount. One day while on the job you meet an intern who catches your fancy. A short time later you're living together as lovers. It's a happy life, [if ButterflyRaped is 0]leaving you with no regrets[else]but no matter how it seems on the surface, you still find yourself uncomfortable over your treatment of the butterfly back during the infection. As a way to atone, you donate large sums of money to charities looking after the infected[end if].";
+			say "You rush back to your lover's welcoming arms. She worries about re-entering human society, but your confidence eases her fears. Together you are rescued and rejoin society.";
+			say "A media frenzy erupts as you rapidly become the poster couple for the infection. ";
+			if Player is male:
+				say "Finding she enjoys being in front of the camera your lover takes up fashion modeling, but she's only really comfortable as long as it's you taking the pictures. Together you make a successful team as fashion houses and cosmetics firms worldwide keep you in work and help fund your comfortable lifestyle. You have a very passionate and active sex life, [if Player is sterile]but are unable to have children[else]resulting in a handful of children. They all follow their own path just like normal human children, although their exotic looks make them a magnet for many[end if].";
+			else if Player is female:
+				say "You are unable to have children, but the two of you are inseparable all the same living as a happy lesbian couple with a very active and passionate sex life. Finding you both enjoy being in front of the camera you take up fashion modeling together. You make a successful team as fashion houses and cosmetics firms worldwide keep you in work, and help fund your comfortable lifestyle. ";
+			say "Even in your later years you look back fondly on the infection as a blessing. Every morning as you wake and see your lover's familiar face you're reminded of how even if you had to do it all again you wouldn't change a thing.";
+
+This is the Butterfly Infection rule:
+	if ending "Butterfly Girl Epilogue" is triggered:
+		make no decision;
+	if Player has a body of "Butterfly":
+		trigger ending "Butterfly Infection"; [Here it states, that the ending has been played.]
+		if humanity of Player < 10:
+			say "As you lose the last fragment of your humanity you fall back on your instincts resorting to extracting nectar from plants. You generally keep away from humans and other creatures. They always seem to be out to catch you. For some reason you have visions of being pinned in a display cabinet and want to avoid that at all costs. There was one human though so enchanted by the colorful patterns on your wings who slowly gained your trust. In due time you became inseparable.";
+		else:
+			say "You are rescued and rejoin society.";
+			say "A media frenzy erupts as you become the poster child for the infection. Finding you enjoy being in front of the camera you take up fashion modeling, but retire quickly finding the life lonely. At that time you find yourself inspired by your memories of Doctor Matt and finish your education. After graduation you enter the scientific community studying the infection. Your first-hand insight proves invaluable, and you rapidly rise through the ranks as your discoveries mount. One day while on the job you meet an intern who catches your fancy. A short time later you're living together as lovers. It's a happy life, [if ButterflyRaped is 0]leaving you with no regrets[else]but no matter how it seems on the surface, you still find yourself uncomfortable over your treatment of the butterfly back during the infection. As a way to atone, you donate large sums of money to charities looking after the infected[end if].";
 
 Section 6 - Monster Rules
 

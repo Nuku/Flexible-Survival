@@ -238,8 +238,13 @@ When Play begins:
 ]
 
 
-when play ends:
-	if BodyName is "Mothgirl":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Mothgirl Infection"	"Infection"	""	Mothgirl Infection rule	1000	false
+
+This is the Mothgirl Infection rule:
+	if Player has a body of "Mothgirl":
+		trigger ending "Mothgirl Infection";
 		if humanity of Player < 10:
 			say "You do not have any prejudice to any particular infected creature, except spidergirls whose nature invites trouble. You flit around acting on the instincts of wanting sex or having sex with numerable partners.";
 		else:

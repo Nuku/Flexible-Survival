@@ -785,9 +785,14 @@ instead of conversing the Pool Table:
 
 Section 9 - Endings
 
-When play ends:
-	if humanity of Player < 10 and HP of the player > 0:
-		if BodyName of Player is "Slut Rat":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Slut Rat Infection"	"Infection"	""	Slut Rat Infection rule	1000	false
+
+This is the Slut Rat Infection rule:
+	if Player has a body of "Slut Rat":
+		trigger ending "Slut Rat Infection"; [Here it states, that the ending has been played.]
+		if humanity of Player < 10:
 			say "     You can no longer deny your new basic needs. You flee to the mall and its comforting sewers. Following your instincts, you are soon in the welcoming embrace of your rodent sisters, who take turns fucking and being fucked by you for what feels like days in a celebration of your coming around. Your family remains there, hiding from the rescue, and living out your days together.";
 			if slutratcor > 4:
 				say "     Your [Skin of Player] hide slowly tints to a deep angry red shade, turning towards black at your hands and feet. Those feet harden into cloven like hooves as the months go by and strange images assault you in your fevered lust dreams. It all comes to a crest when you awaken to a rat sister mounted on top of you, riding you for all your worth. As you climax together, you realize that this is Rod's girl. She leans in and licks her tongue over your nose, gazing into your eyes, 'It's time,' she whispers. You rise with her, each smelling of the other, and leave the other rats behind. Your dark lords have need of you both.";
@@ -797,8 +802,7 @@ When play ends:
 					say "     You are neither dominant nor submissive of your rat sisters, living as equals. This is not without its frictions, as you do not all have the same ideas, but you always managed to reach an accord, eventually. Sometimes this involves taking or being taken until someone realizes the error of their ways in a pile of sweat and other fluids, but you don't find that to be a disagreeable way to work things out.";
 				if slutratsub > 6:
 					say "     The others call you [']little sister['] when they are very happy with you, and [']bitch['] the rest of the time. You are the omega of the group, made to do the more menial of tasks. Still, their love for you is unquestionable, and they protect you from any and all threats to your sewer lair.";
-	else:
-		if BodyName of Player is "Slut Rat":
+		else:
 			say "     Despite your sanity, you find your thoughts drifting back to your rodent sisters. When the rescue comes, you point them out. They put out a terrific struggle, but, with your help, they are rounded up successfully and brought out of the city. They slowly come around to sentience again, and you all live together, working a massage parlor as a strangely loving family. No customer leaves unhappy.";
 
 

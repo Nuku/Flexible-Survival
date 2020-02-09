@@ -540,12 +540,12 @@ to say DemonLairAttack:
 			say "     Eventually Skarnoth pulls his prick out of your mouth, gleefully spurting slightly glowing demon cum over your face for good measure. He even hits you in the right eye (on purpose), which stings like hell, then wipes the last drops of his load on your other cheek as you rub at the clenched eyelid. 'That's a good pet. I'll enjoy having you again and again,' the demon says with a cruel grin, then stands up again. He starts walking away, only to pause after a few steps and look over his shoulder. 'Oh yeah, you may come too, slut. Do it now.' His eyes glow even brighter for a second as demonic power lashes out with the command - overwhelming you with a sudden orgasm. Bucking on the hard ground as you scream in lust, [if Player is male]your cock erupts with cum, blasting away everything that your balls have to give and making a total mess of yourself[else if Player is female]your pussy starts leaking and squirting femcum like crazy, making a total mess of yourself and forming a puddle between your legs[else]your sexless body is wracked by unfulfilled breeding imperatives that turn you into a drooling mess[end if]. Skarnoth laughs at the spectacle and says, 'Someone will be along to clean you up eventually.' With that, he walks out of the room, leaving you behind in your still twitching and totally exhausted state.";
 			WaitLineBreak;
 			now battleground is "Void";
-			now BodyName of Player is "Demon Slave";
+			trigger ending "Demon Slave";
 			end the story saying "You're stuck in hell - there's no coming back from that!";
 		else if fightoutcome >= 30: [fled]
 			say "     You might have gotten away from Skarnoth himself for a second, turning your back on Elijah and running from the demon prince's bedroom, but as fate will have it, a large group of demons come through the pentagram gate just as you reach the hub. Within moments, you're overwhelmed and brought before their master once more, who gleefully fastens your very own slave collar around your neck and then introduces you to the beginning of an eternity of servitude in hell.";
 			now battleground is "Void";
-			now BodyName of Player is "Demon Slave";
+			trigger ending "Demon Slave";
 			end the story saying "You're stuck in hell - there's no coming back from that!";
 		else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 			say "     As you knock the demon prince to the ground, the two sex demons who had been keeping Elijah engaged in team-work attacks look rather shocked at the fact that a mortal beat their master. The two of them share a wide-eyed gaze, then turn and flee out the door, abandoning Skarnoth without a second thought. 'That is the weakness of forced obedience,' Elijah says with audible contempt, then quickly moves to the bed to free the captive. Meanwhile, Skarnoth pushes himself up into a half-crouch, looking at you defiantly as he sneers, 'You think I'm beaten?! You've seen nothing yet!' The demon spits at you, the gob almost hitting your foot, then looks at Elijah with a sneer. 'I notice you're not wearing your blade, little angel. Just how do you plan to finish this then? A bit hard to strike down a man in judgement without it, hah. Goody two-shoes angels are too weak to get their hands dirty - I know you, remember?'";
@@ -2103,31 +2103,34 @@ to say fledfromchurchdemons:
 
 Section 7 - Endings
 
-when play ends:
-	if BodyName of Player is "Demon Slave":
-		say ""; [dealt with in Skarnoth's file]
-	else:
-		if (Elijah is in the bunker) and (HP of Elijah is 99): [evil Elijah]
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Elijah's Epilogue"	"NPC"	""	Elijah's Epilogue rule	900	false
+
+This is the Elijah's Epilogue rule:
+	if Elijah is in the bunker:
+		trigger ending "Elijah's Epilogue";
+		if HP of Elijah is 99: [evil Elijah]
 			if (humanity of Player < 10):
 				say "     When you succumb to your infection, Elijah keeps you with him in the bunker for a while, fucking you and making you suck his cock whenever he fancies. After a while, he gets bored with you and releases you out into the city. You see him a few times after that as he grabs one or two new playtoys for himself, and he even fucks you again as he runs into you out on the streets. He doesn't recognize you though, or he just doesn't care for anything but a mouth or hole to satisfy his lust in.";
 			else:
 				say "     When the soldiers come through the city to rescue you and the others, Elijah decides not to leave. He says he's got a good thing going there, with all of the shifted people out on the streets to fuck as he pleases or grab and keep as more long-term pets and fucktoys in the bunker[if SarahSlut is 4]. Just like you did, he remarks with a nod over to Sarah[end if].";
-		else if (Elijah is in the bunker) and (HP of Elijah is 1 or HP of Elijah is 2): [still injured]
+		else if HP of Elijah is 1 or HP of Elijah is 2: [still injured]
 			if (humanity of Player < 10):
 				say "     When you succumb to your infection, you forget about the injured angel you left behind unconscious on a cot in the bunker. Luckily, divine emissaries are pretty tough, so he's still alive when a team of soldiers checks out the library bunker for sane survivors. You see him again one more time several weeks later, now garbed in military clothing and part of a team trying to pacify the ferals in the city. It is a close thing, but you manage to escape from them in the ruined streets.";
 			else:
 				say "     When the soldiers come through the city to rescue you and the others, the injured angel you have in the bunker is airlifted out on a helicopter. You don't see him again after that, but in the following weeks hear rumors about a powerful winged protector that joined the teams of soldiers trying to contain the feral outbreak in the city.";
-		else if (Elijah is in the bunker) and (HP of Elijah is 3): [virgin angel]
+		else if HP of Elijah is 3: [virgin angel]
 			if (humanity of Player < 10):
 				say "     When you succumb to your infection, Elijah sets out and tries to heal you, grasping your head in both hands and praying for your sanity. He fails - you're just too far gone, with almost nothing of your former self remaining inside. With tears in his eyes, he lets you go. Devastated about his inability to save you, he becomes somewhat fanatic about containing the outbreak, patrolling the borders of the city day and night, stopping anyone with even the slightest hint of change from leaving.";
 			else:
 				say "     When the soldiers come through the city to rescue you and the others, you're all taken to a containment facility for medical evaluation and quarantine. Elijah calmly exclaims that he's not actually infected, but in his natural form and asks to speak to the nearest priest. The military chaplain who gets called in is pretty surprised about Elijah's status report, during which he absolves the angel after an earnest confession of having lost his flaming sword in the line of duty. Asked about a replacement, he has to admit that the army doesn't really have a supply of divine weaponry and quickly changes the topic to other ways Elijah might be helping them. Soon the angel is released from the holding facility and brought elsewhere, but not before thanking you again for saving him.";
 				say "     You don't see that much of Elijah after that, but are told he joined the special unit responsible for containing the outbreak. That job keeps him too busy to visit, although he does send you letters and greeting cards for your birthday and Christmas every year, without fail.";
-		else if (Elijah is in the bunker) and (HP of Elijah is 4): [human-like]
+		else if HP of Elijah is 4: [human-like]
 			if (humanity of Player < 10):
 				say "     When you succumb to your infection, Elijah is heartbroken about losing the friend and lover who helped him explore his newfound humanity. He sets out and tries to heal you, grasping your head in both hands and praying for your sanity - but fails. You're just too far gone, with almost nothing of your former self remaining inside. With tears in his eyes, he lets you go to live out your time in the city. Devastated about his inability to save you, he becomes somewhat fanatic about containing the outbreak, patrolling the borders of the city day and night, stopping anyone with even the slightest hint of change from leaving.";
 			else:
-				if BodyName of Player is listed in the infections of DemonList or BodyName of Player is "Hellhound": [can't stand demons]
+				if Player is not shifter and (BodyName of Player is listed in the infections of DemonList or Player has a body of "Hellhound"): [can't stand demons]
 					say "     When the soldiers come through the city to rescue you and the others, you're all taken to a containment facility for medical evaluation and quarantine. Elijah calmly exclaims that he's not actually infected, but in his natural form and asks to speak to the nearest priest. The military chaplain who gets called in is pretty surprised about Elijah's status report, during which he absolves the angel after an earnest confession of having lost his flaming sword in the line of duty. Then Elijah pulls you to the side, explaining that he's thankful for you saving him and showing him the pleasant side of being almost human - but that he just can't bear the touch of your corrupted form. With a tear in his eye, he gives you a little goodbye wave and leaves with the chaplain. You don't see any more of Elijah after that, but are told he joined the special unit responsible for containing the outbreak.";
 				else: [living together]
 					say "     When the soldiers come through the city to rescue you and the others, you're all taken to a containment facility for medical evaluation and quarantine. Elijah calmly exclaims that he's not actually infected, but in his natural form and asks to speak to the nearest priest. The military chaplain who gets called in is pretty surprised about Elijah's status report, during which he absolves the angel after an earnest confession of having lost his flaming sword in the line of duty. Then Elijah requests a leave of absence, stating that in his weakened form he can't fight too well, vowing instead to do good in other ways.";

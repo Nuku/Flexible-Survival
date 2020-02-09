@@ -195,8 +195,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Unicorn":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Unicorn Infection"	"Infection"	""	Unicorn Infection rule	1000	false
+
+This is the Unicorn Infection rule:
+	if Player has a body of "Unicorn":
+		trigger ending "Unicorn Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is female:
 				say "     Surrendering to your new powerful herd instincts, you quickly make your way back to your handsome stallion at the bar. The sight of his strong powerful form as you return to the palomino makes you moan with desire as you realize that you need to be his. Harold grins with amusement as you stalk forward on your sexy new silvery hooves, his horn shimmering comfortingly in the light as you quickly slip behind the bar, and surrender yourself to your stallion where everyone can watch. The unicorn stud claims you thoroughly much to the cheers of several of the patrons, and you find yourself lost in lustful pleasure as you orgasm again and again while the lights and music pulse around you. Eventually your stud needs to return to serving drinks for a while, and once you have managed to recover somewhat from your claiming, you happily move to help. Soon your naked unicorn body is draped with silver necklaces and a sexy leather vest of your own, hanging open in the front to give your stallion easy access to your pert pink nipples, and you have become just as much of a fixture behind the bar as he is. Your regular sex shows with your mate continue to get rave reviews, and you are more than happy to invite a few other curious customers to come join you, and while most of them stick to their drinks, you find yourself grinning when several unsuspecting soldiers come in and start hitting on you. Harold grins and gives you a wink as you serve them some of his 'special' unicorn reserve, and you look forward to helping your stallion tame several new mares soon enough...";

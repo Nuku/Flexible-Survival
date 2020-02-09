@@ -699,6 +699,7 @@ to wrbodysave:
 	now wrbodytype is bodytype of Player;
 	now wrdaycycle is SleepRhythm of Player;
 	now BodyName of Player is "Wereraptor";
+	now BodySpeciesName of Player is "Wereraptor";
 	now Body of Player is body entry;
 	attributeinfect;
 	say ". Your body contorts painfully as [body change entry]";
@@ -708,6 +709,7 @@ to wrfacesave:
 	now wrFaceName is FaceName of Player;
 	now wrface is Face of Player;
 	now FaceName of Player is "Wereraptor";
+	now FaceSpeciesName of Player is "Wereraptor";
 	now Face of Player is face entry;
 	say ". Your face cracks and pops as [face change entry]";
 
@@ -716,6 +718,7 @@ to wrskinsave:
 	now wrSkinName is SkinName of Player;
 	now wrskin is Skin of Player;
 	now SkinName of Player is "Wereraptor";
+	now SkinSpeciesName of Player is "Wereraptor";
 	now Skin of Player is skin entry;
 	say ". Your skin feels tight and raw as [skin change entry]";
 
@@ -724,6 +727,7 @@ to wrtailsave:
 	now wrTailName is TailName of Player;
 	now wrtail is tail of Player;
 	now TailName of Player is "Wereraptor";
+	now TailSpeciesName of Player is "Wereraptor";
 	now tail of Player is tail entry;
 	say ". Your hindquarters stiffen with a harsh pop as [ass change entry]";
 
@@ -732,6 +736,7 @@ to wrcocksave:
 	now wrCockName is CockName of Player;
 	now wrcock is Cock of Player;
 	now CockName of Player is "Wereraptor";
+	now CockSpeciesName of Player is "Wereraptor";
 	now Cock of Player is cock entry;
 	if Player is male:
 		say ". Your groin feels a surge of wild power as [cock change entry]";
@@ -741,6 +746,7 @@ to wrcocksave:
 to wrcurserecede:
 	if BodyName of Player is "Wereraptor":
 		now BodyName of Player is wrBodyName;
+		now BodySpeciesName of Player is wrBodyName;
 		now Body of Player is wrbody;
 		now scalevalue of Player is wrscalevalue;
 		now bodydesc of Player is wrbodydesc;
@@ -748,15 +754,19 @@ to wrcurserecede:
 		now SleepRhythm of Player is wrdaycycle;
 	if FaceName of Player is "Wereraptor":
 		now FaceName of Player is wrFaceName;
+		now FaceSpeciesName of Player is wrFaceName;
 		now Face of Player is wrface;
 	if SkinName of Player is "Wereraptor":
 		now SkinName of Player is wrSkinName;
+		now SkinSpeciesName of Player is wrSkinName;
 		now Skin of Player is wrskin;
 	if TailName of Player is "Wereraptor":
 		now TailName of Player is wrTailName;
+		now TailSpeciesName of Player is wrTailName;
 		now tail of Player is wrtail;
 	if CockName of Player is "Wereraptor":
 		now CockName of Player is wrCockName;
+		now CockSpeciesName of Player is wrCockName;
 		now Cock of Player is wrcock;
 	StatChange "Dexterity" by -2;
 	StatChange "Strength" by -2;
@@ -1041,14 +1051,23 @@ to say wrcurseaccept:
 	now wrcurseNermine is 12;
 
 
+Section 5 - Endings
 
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Wereraptor Curse Aftermath"	"Special"	""	Wereraptor Curse Aftermath rule	990	false
 
-when play ends:
+This is the Wereraptor Curse Aftermath rule:
+	if wrcursestatus is listed in { 0, 1, 100 }:
+		make no decision;
+	if wrcursestatus is 2 and humanity of Player >= 10:
+		make no decision;
+	trigger ending "Wereraptor Curse Aftermath"; [Here it states, that the ending has been played.]
 	if wrcursestatus is 2:
 		if humanity of Player < 10:
 			say "     As your infection is taking hold and your old self is failing, there is another struggle going on inside you. You can feel something wild and primal briefly struggle for freedom, but it is too old and weak, and soon fades away with an angry hiss at being denied its return.";
 	else if wrcursestatus >= 3 and wrcursestatus <= 6:
-		if BodyName of Player is "Wereraptor":
+		if Player has a body of "Wereraptor": [NOTE: The player being a shifter is ignored here (@Stadler#3007)]
 			if humanity of Player < 10:
 				say "     You succumb to the strange, saurian affliction, much of your mind becomes that of the primitive beast lurking inside you. You grow to live for the wild hunt for food and sex at night, mauling and cursing others. During the day, you revert back to whatever infection may be affecting you at the time, but the true you is only hiding behind it, waiting for nightfall to surprise your prey and strike.";
 			else:
@@ -1059,7 +1078,7 @@ when play ends:
 			else:
 				say "     When rescue comes, you do your best to hide your saurian affliction. It is very difficult and takes a considerable toll on you as you fearfully hold it back each night, remaining in your daytime form. Thankfully, it does seem to understand the need to hide while you're at the military compound, though it doesn't like it. You hear the occasional mumble of anomalies with your testing, but nothing further seems to stem from it. In time, you are released and you make a new life for yourself. After the long stay at the facility, you have gained some ability to restrain your curse and it only rises during the full moon to strike. At these times, you don't hold it back, letting it run free. There are reports of monthly attacks by a lizard creature, but it is never caught as it cannot be tracked down after the hunt.";
 	else if wrcursestatus is 7:
-		if BodyName of Player is "Wereraptor":
+		if Player has a body of "Wereraptor": [NOTE: The player being a shifter is ignored here (@Stadler#3007)]
 			if humanity of Player < 10:
 				say "     As the last vestiges of your humanity are consumed by your wereraptor identity, you return to Dr. Utah and join [if UtahGender is 1]him[else]her[end if] in preparation for the rise of the new saurian people, remaining in the fallen city for a time. You, and others like yourselves, form into [']The Society of the Sickle[']. Training yourselves to gain partial control over your transformation, you are able to slip into society and hide yourselves among them, working in secret to infect others and add new members to your order. Seeming at first like other ferals, the spread of wereraptors goes largely unnoticed at first. But those who becomes wereraptors remain so, even if infected with other strains, keeping them among your ever-growing numbers.";
 			else:

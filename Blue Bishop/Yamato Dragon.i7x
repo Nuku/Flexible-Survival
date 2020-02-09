@@ -313,7 +313,7 @@ to say Yamato Dragon attack:
 				else:
 					say ", forcing you to abide his lust-fueled fury as you're beleaguered frame is doused by his sexual fluids";
 				say ". It takes a moment of recovery before he finally pulls you free of his softening dick, setting off into the sky once more and leaving you to clean yourself of the excessive mess.";
-	if voreloss is false:
+	if the story has not ended:
 		now tempnum is 1;
 		yamatbiasshift;
 		now tempnum is 0;
@@ -1167,14 +1167,10 @@ to YamatMvore:
 		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break][run paragraph on]";
 		say "Sanity: [humanity of Player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of Player]	Thirst: [thirst of Player]	Struggle: [yamatstrugglebar][line break][run paragraph on]";
 		if humanity of Player < 1:
-			now BodyName of Player is "Yamato Dragon";
-			now FaceName of Player is "Yamato Dragon";
-			now TailName of Player is "Yamato Dragon";
-			now SkinName of Player is "Yamato Dragon";
-			now CockName of Player is "Yamato Dragon";
-			now voreloss is true;
-			now tempnum is 1;
 			now Trixieexit is 1;
+			trigger ending "Yamato Dragon Vore";
+			the Player was ended by "Vore by Yamato Dragon";
+			end the story saying "You became a Yamato Dragon's meal!";
 		else:
 			let k be 0;
 			now keychar is "INVALID";
@@ -1283,58 +1279,69 @@ to yamatbowelmovement:
 
 Section 5 - Endings
 
-when play ends:
-	if BodyName of Player is "Yamato Dragon" or BodyName of Player is "Yamato Dragoness":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Yamato Dragon Vore"	"Voreloss"	""	Yamato Dragon Vore rule	10	false
+"Yamato Dragon Infection"	"Infection"	""	Yamato Dragon Infection rule	1000	false
+
+This is the Yamato Dragon Vore rule:
+	if ending "Yamato Dragon Vore" is triggered:
+		let MVore be 1;
+		if Player ended by "Vore by Yamato Dragoness":
+			now MVore is 0;
+		say "     [if scalevalue of Player < 4]B[else]Substantive b[end if]ulg that once was you, having sunk to the lowermost pits of the monster's labyrinthine organs, gradually begins to recede until nothing remains. The dragon[if MVore is 0]ess[end if][']s, no doubt, bottomless hunger [if scalevalue of Player > 3]only partially[else]barely[end if] sated by its pitiful victim, [if MVore is 1]he[else]she[end if] gradually floats off in search of new prey to fall under [if MVore is 1]his[else]her[end if] raw might, nobody the wiser to your ultimate fate...";
+		the Player is vored;
+
+This is the Yamato Dragon Infection rule:
+	if Player has a body of "Yamato Dragon" or Player has a body of "Yamato Dragoness":
+		trigger ending "Yamato Dragon Infection";
 		if humanity of Player < 10:
-			if voreloss is true:
-				say "     [if scalevalue of Player < 4]B[else]Substantive b[end if]ulg that once was you, having sunk to the lowermost pits of the monster's labyrinthine organs, gradually begins to recede until nothing remains. The dragon[if tempnum is 0]ess[end if][']s, no doubt, bottomless hunger [if scalevalue of Player > 3]only partially[else]barely[end if] sated by its pitiful victim, [if tempnum is 1]he[else]she[end if] gradually floats off in search of new prey to fall under [if tempnum is 1]his[else]her[end if] raw might, nobody the wiser to your ultimate fate...";
-			else:
-				if YDSF is 0:
-					if Player is female and (Cock Count of Player is 0 or (player is male and a random chance of 1 in 2 succeeds)):
-						if MaleList is banned or MaleList is warded:
-							now YDSF is 4;
-						else:
-							now YDSF is 1;
+			if YDSF is 0:
+				if Player is female and (Cock Count of Player is 0 or (player is male and a random chance of 1 in 2 succeeds)):
+					if MaleList is banned or MaleList is warded:
+						now YDSF is 4;
 					else:
-						if FemaleList is banned or FemaleList is warded:
-							now YDSF is 1;
-						else:
-							now YDSF is 4;
-				if yamatdom is 3:
-					say "     Finally overtaken by your infection, an overwhelming sense of power fills you're very being and compels you to seek out your kin.";
-					say "     Once you encounter one, you engage in an intense battle until ";
-					if YDSF is 1 or YDSF is 2:
-						say "he finally concedes. It doesn't take much work after that until the dragon serves your every whim without question";
-						if Player is submissive or player is kinky:
-							say ", no matter how strange it might be";
-						say ". Over time, more join his ranks, the word of your strength spreading far and wide, until subjects start to come with the deliberate desire to serve you.";
-					else:
-						say "she finally concedes. It doesn't take much work after that until the dragoness serves your every whim without question";
-						if Player is submissive or player is kinky:
-							say ", no matter how strange it might be";
-						say ". Over time, more join her ranks, the word of your strength spreading far and wide, until subjects start to come with the deliberate desire to serve you.";
-					say "     As you settle into your new position, you find yourself growing in size until you're a match for any of your kin. Your every need attended to, you slowly forget everything about your past, until all that remains is your insatiable lust and unmatched power...";
+						now YDSF is 1;
 				else:
-					say "     Finally overtaken by your infection, you grow drunk with an intoxicating need to serve your betters, compelling you to seek out your kin.";
-					say "     Once you encounter one you put up a token fight, if only so the dragon";
-					if YDSF is 1 or YDSF is 2:
-						say " is allowed the opportunity to display his absolute power over you before you submit yourself. He ultimately seems satisfied with your offering, and it's not long before you're just another plaything in his harem";
-						if Player is submissive:
-							say ". So eager you are to serve, that you quickly end up a plaything for the other consorts, until you're eventually regarded as the sluttiest and most pitiful in his harem";
-						say ".";
-						say "     Your memory becomes a blur of constant servitude under your master, satisfying his every, tainted need";
-						if Player is kinky:
-							say ", no matter how strange";
-						say ". Ultimately, you seem more than happy with your eternal fate as his plaything...";
+					if FemaleList is banned or FemaleList is warded:
+						now YDSF is 1;
 					else:
-						say "ess is allowed the opportunity to display her absolute power over you before your submit yourself. She ultimately seems satisfied with your offering, and it's not long before you're just another plaything in her harem";
-						if Player is submissive:
-							say ". So eager you are to serve, that you quickly end up a plaything for the other consorts, until you're eventually regarded as the sluttiest and most pitiful in her harem";
-						say ".";
-						say "     Your memory becomes a blur of constant servitude under your mistress, satisfying her every, tainted need";
-						if Player is kinky:
-							say ", no matter how strange";
-						say ". Ultimately, you seem more than happy with your eternal fate as her plaything...";
+						now YDSF is 4;
+			if yamatdom is 3:
+				say "     Finally overtaken by your infection, an overwhelming sense of power fills you're very being and compels you to seek out your kin.";
+				say "     Once you encounter one, you engage in an intense battle until ";
+				if YDSF is 1 or YDSF is 2:
+					say "he finally concedes. It doesn't take much work after that until the dragon serves your every whim without question";
+					if Player is submissive or player is kinky:
+						say ", no matter how strange it might be";
+					say ". Over time, more join his ranks, the word of your strength spreading far and wide, until subjects start to come with the deliberate desire to serve you.";
+				else:
+					say "she finally concedes. It doesn't take much work after that until the dragoness serves your every whim without question";
+					if Player is submissive or player is kinky:
+						say ", no matter how strange it might be";
+					say ". Over time, more join her ranks, the word of your strength spreading far and wide, until subjects start to come with the deliberate desire to serve you.";
+				say "     As you settle into your new position, you find yourself growing in size until you're a match for any of your kin. Your every need attended to, you slowly forget everything about your past, until all that remains is your insatiable lust and unmatched power...";
+			else:
+				say "     Finally overtaken by your infection, you grow drunk with an intoxicating need to serve your betters, compelling you to seek out your kin.";
+				say "     Once you encounter one you put up a token fight, if only so the dragon";
+				if YDSF is 1 or YDSF is 2:
+					say " is allowed the opportunity to display his absolute power over you before you submit yourself. He ultimately seems satisfied with your offering, and it's not long before you're just another plaything in his harem";
+					if Player is submissive:
+						say ". So eager you are to serve, that you quickly end up a plaything for the other consorts, until you're eventually regarded as the sluttiest and most pitiful in his harem";
+					say ".";
+					say "     Your memory becomes a blur of constant servitude under your master, satisfying his every, tainted need";
+					if Player is kinky:
+						say ", no matter how strange";
+					say ". Ultimately, you seem more than happy with your eternal fate as his plaything...";
+				else:
+					say "ess is allowed the opportunity to display her absolute power over you before your submit yourself. She ultimately seems satisfied with your offering, and it's not long before you're just another plaything in her harem";
+					if Player is submissive:
+						say ". So eager you are to serve, that you quickly end up a plaything for the other consorts, until you're eventually regarded as the sluttiest and most pitiful in her harem";
+					say ".";
+					say "     Your memory becomes a blur of constant servitude under your mistress, satisfying her every, tainted need";
+					if Player is kinky:
+						say ", no matter how strange";
+					say ". Ultimately, you seem more than happy with your eternal fate as her plaything...";
 		else:
 			say "     After being processed by the military, you find yourself returning to the normal world - as normal as it can be after all that's happened[if ScaleValue of Player > 3]. Your large, elongated body makes finding suitable living space something of a challenge, but you eventually manage[end if].";
 			if Player is pure:

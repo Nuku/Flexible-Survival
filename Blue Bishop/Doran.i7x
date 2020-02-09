@@ -4305,8 +4305,15 @@ to say doranmusing: [Requires first talking to Doran]
 	say "     '[DoranPlayerRegard], I beg of them, if they have other friends, don't bring them to me.' Instinctively, you ask why, to which [ghe] reels back slightly, 'I beg once more, [DoranPlayerRegard], what we share must between us only.' [gche] won't budge any further on the subject, and you're ultimately forced to leave it at that.";
 	add 24 to velospostmusings;
 
-when play ends:
+Section 6 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Doran's Epilogue"	"NPC"	""	Doran's Epilogue rule	900	false
+
+This is the Doran's Epilogue rule:
 	if DoranFirstTalk is true and humanity of Player > 10:
+		trigger ending "Doran's Epilogue";
 		say "     Oddly enough, after you were rescued, the [gdragon] named Doran was nowhere to be found; none of the soldiers who were a part of the rescue operation saw such a creature or heard of anyone with that particular name. To this day, you wonder if [ghe] was ever even real to begin with...";
 
 Doran ends here.

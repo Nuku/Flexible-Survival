@@ -281,8 +281,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Clockwork Fox":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Clockwork Fox Infection"	"Infection"	""	Clockwork Fox Infection rule	1000	false
+
+This is the Clockwork Fox Infection rule:
+	if Player has a body of "Clockwork Fox":
+		trigger ending "Clockwork Fox Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     As your humanity is ground away by the inner clicking of your increasingly mechanical mind, you automatically make your way back to the shadowy museum. There, you meet up with several other mechanical foxes and vixens who have set up their dens in a hall displaying the growth of mechanical clockwork from its beginnings in the 13th Century and onto the later mechanical marvels designed before electricity hastened to make the art obsolete. As you're setting up your new den among the others, several of them snuggle up to you, clearly wanting to welcome you properly into the mechanical skulk with a good, long winding.";
 		else:

@@ -320,8 +320,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Impala":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Impala Infection"	"Infection"	""	Impala Infection rule	1000	false
+
+This is the Impala Infection rule:
+	if Player has a body of "Impala":
+		trigger ending "Impala Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You succumb fully to your impala instincts, joining up with a herd of other impalas roaming the plains.";
 			if Player is not female and player is submissive:

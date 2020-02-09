@@ -215,8 +215,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Liquidshifter":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Liquidshifter Infection"	"Infection"	""	Liquidshifter Infection rule	1000	false
+
+This is the Liquidshifter Infection rule:
+	if Player has a body of "Liquidshifter":
+		trigger ending "Liquidshifter Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "You succumb to your liquidshifter infection, your mind having been left into a pile of goo and corruption, the feeling of letting go into absolute bliss filling you with just that - perfect bliss. Over time, the liquidshifter's grasp on the area seemed to grow, the gluey substance that was left by their stride was covering the majority of the land, minds lost to the bliss of their new form.";
 		else:

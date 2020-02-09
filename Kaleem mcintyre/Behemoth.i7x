@@ -266,8 +266,15 @@ instead of sniffing behemoth horn:
 The usedesc of behemoth horn is "Taking the behemoth horn and rolling it around inside of your hand you find you have the sudden strange urge to place the onyx piece of bone up against your skull. Not seeing any reason why you shouldn't, you place the horn on top of your head, right between your scalp and forehead. When nothing immediately happens you shrug and think nothing more of it, but when you remove your hand and then horn continues to stay in place realize that something is about to happen to you. The onset of a throbbing in your skull and at your backside are definitely clues towards this assumption as you find yourself grunting somewhat in discomfort as your body goes to shifting around on its own.";
 
 
-when play ends:
-	if BodyName of Player is "Behemoth":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Behemoth Infection"	"Infection"	""	Behemoth Infection rule	1000	false
+
+This is the Behemoth Infection rule:
+	if Player has a body of "Behemoth":
+		trigger ending "Behemoth Infection";
 		if humanity of Player < 10:
 			say "     With your mind becoming lost to the infection strain of the Behemoth running throughout your body you find yourself growling and roaring without knowing why before taking off towards the plains. By the time you get there any other infection has ran its course out of you and now you are another sixteen foot long behemoth like the rest of your brethren.";
 			if Player is male:

@@ -251,11 +251,16 @@ Definition: a person is breedersluttailed:
 	no;
 
 
+[
 Section 9 - Endings
 
-[
-when play ends:
-	if BodyName of Player is "Breederslut":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Breederslut Infection"	"Infection"	""	Breederslut Infection rule	1000	false
+
+This is the Breederslut Infection rule:
+	if Player has a body of "Breederslut":
+		trigger ending "Breederslut Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if HP of Dominick is 0:
 				say "***never met Dominick.";

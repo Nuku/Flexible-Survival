@@ -408,8 +408,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Kobold":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Kobold Infection"	"Infection"	""	Kobold Infection rule	1000	false
+
+This is the Kobold Infection rule:
+	if Player has a body of "Kobold":
+		trigger ending "Kobold Infection";
 		if humanity of Player < 10:
 			say "You succumb to your instincts, casting off your humanity to the infection. You abandon your clothes, seeking out your kobold brethren. They eagerly welcome you, using your body until you are just another kobold in their ranks. Eventually you forge a strong bond with your kobold family, and learn all of the tricks of the trade. When the military storms in, you all are prepared. Many soldiers enter the red light district, but you and your family ambush them time and time again, trapping the soldiers and breeding them until they are just another set of horny, submissive kobolds. As your family grows, the orgies only grow more frequent. A day doesn't roll by without you and the other lower-tiered kobolds are filled by many other kobolds, but you wouldn't have it any other way.";
 		else:

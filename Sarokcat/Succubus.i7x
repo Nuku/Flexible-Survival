@@ -19,6 +19,7 @@ to say Succubus attack:
 			WaitLineBreak;
 			say "     You groan as you feel your orgasm building, unable to resist her body's teasing of your manhood, your cock seeming to become even more sensitive as you spill your seed into her, your body shuddering with pleasure even as her pussy milks your cock of every drop of seed. She chuckles down at you as you lie there gasping with pleasure underneath her, her breasts shaking in front of you as evidence of her own female orgasm, 'That was a good start,' she says teasingly as she begins to rub up against your hypersensitive body all over again, 'But surely you don't think we are done quite yet?' The succubus purrs out, and you moan as you can feel your cock growing hard again under the ministrations of her amazingly enticing pussy. You lose track of anything but the pleasure as she begins to fuck you again, only able to catch small flashes of her body moving against yours, as you cry out several times over the next hour.";
 			say "     Eventually when even her talents are unable to coax your cock into life for another round, she grins as she finally gets off of you, leaving you lying there on the ground panting desperately as you try to think. 'You were fun, I bet you would make a good little pet...' She purrs as she looks down at you appraisingly, and you blink up at her, barely having the energy to muster a reaction as she reaches down and pets your head affectionately. 'If you ever get bored of just wandering around out here, and want to be a nice well-fucked sexy little pet, just hunt me down again sometime... I'm looking forward to it already,' the succubus says with a smile, before turning and stalking off down the streets of the red light district, her hips swaying seductively with each step.";
+			CreatureSexAftermath "Succubus" receives "PussyFuck" from "Player";
 		else:
 			if BodyName of Player is "Succubus":
 				say "     'Ah looking good there, very good,' the succubus says teasingly as she rubs her naked body up against your own unprotesting form, the fight having gone out of you at some point as you stare at your fellow succubus happily. 'Almost a proper succubus already, I bet you just can't wait,' she says as she hugs you to her, her lips meeting your own as she kisses you enthusiastically your own mouth parting almost automatically as you find your tongue meeting hers in a deep teasing kiss. You groan into her mouth as her hands roam your body, seeming to know exactly where to touch and tease you to bring you the most pleasure, your own hands soon rubbing over the succubus's body just as eagerly as the amazing pleasure fills your mind.";
@@ -118,12 +119,12 @@ When Play begins:
 	now face entry is "that of a beautiful human's, your strange slit pupiled eyes and the small horns poking out of your hair, the only clue that your almost perfect features hide the lusty desires of a succubus behind your innocent"; [You have a (your text) face."]
 	now body entry is "surprisingly perfect, your muscles and curves nicely defined, your long eye-catching legs perfect for showing off, and your soft hands with their long nails are just made for stroking and petting the opposite sex. The only true sign of your unusual nature, are the two large bat-like wings, folded up against your back, and while they are not quite powerful enough to lift you aloft yet, though you think that might change sometime soon"; [ Body Description, format as "Your Body is (your text)"]
 	now skin entry is "[one of]soft, human[or]pale[or]perfect[at random]"; [ skin Description, format as "You have (your text) skin"]
-	now tail entry is ""; [ Tail description, write a whole Sentence or leave blank. ]
+	now tail entry is "You have a perfect sexy ass with a long, slender tail attached. It is a classic devil tail: thin, red and ending in a spaded tip."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "[one of]amazing[or]incubus[or]perfect[or]human-like[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into a softer more sexual appearance, soft horns pushing out of your lovely new waterfall of long silken hair"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "invisible hands seem to massage your muscles, rubbing and molding your body into a more attractive form, though you are soon distracted from this change by the strange feeling of your skin stretching and pressing out from your back. Looking over your shoulder you can't help but stare in wonder as two large bunches of flesh push out of your back, before shifting and stretching themselves out into two surprisingly good looking wings"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "your skin seems to soften and glow with a sexual sheen, any blemishes and unwanted hair wiped away by the amazingly wonderful feeling changes"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "it tightens up into a perfect sexy ass"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now ass change entry is "it tightens up into a perfect sexy ass. Then a long and thin tail grows out of your back just above it, sporting a spaded tip at the end"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it seems to grow partially erect and twitch eagerly, almost like it has a mind of its own, eagerly hunting for the next chance to be put to use"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 16;
 	now dex entry is 20;
@@ -262,8 +263,15 @@ When Play begins:
 ]
 
 
-when play ends:
-	if BodyName of Player is "Succubus":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Succubus Infection"	"Infection"	""	Succubus Infection rule	1000	false
+
+This is the Succubus Infection rule:
+	if Player has a body of "Succubus":
+		trigger ending "Succubus Infection"; [Here it states, that the ending has been played.]
 		if Player is pure and graphics is true, project the figure of Succubus_clothed_icon;
 		if humanity of Player < 10: [succumb]
 			if Player is female: [female + herm]

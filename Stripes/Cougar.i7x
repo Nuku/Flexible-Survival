@@ -228,8 +228,15 @@ When Play begins:
 ]
 
 
-when play ends:
-	if BodyName of Player is "Cougar":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Cougar Infection"	"Infection"	""	Cougar Infection rule	1000	false
+
+This is the Cougar Infection rule:
+	if Player has a body of "Cougar":
+		trigger ending "Cougar Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     Losing yourself in the lustful, animalistic urges of your feline body, you wander out into the city for satisfaction. In time, you come across an overturned bus, as if drawn by the scent of the horny feline living within. You mate with her repeatedly, your yowls of pleasure loud [if Player is herm]as you take turns fucking one another[else if Player is male]as you fuck her again and again[else]as she fucks you again and again[end if]. Together, you capture a few others to be mates as well, but find the increasing military activity to be more of a distraction than a source of new playthings. Taking your collected mates, you head off to another bus you spotted elsewhere in your travels through the city, one still able to run. When a weak point in the military lines opens up, your mate, with lingering skills from her past life, pushes the bus through the gap and gets you away from the city.";
 			say "     While the busload of pumas celebrate lustfully, the orgy is sadly brief. As the military will eventually track the bus that got through, you start dropping off cougars in pairs as you go, letting them slip into the woods to escape on foot or to gain other means of transport. You and the driver are the last to go, commandeering a car and making its driver and passenger into the first of your new set of lovers. The cougars, having spread out from across a stretch of a hundred miles, cannot be contained and many small towns become puma colonies.";

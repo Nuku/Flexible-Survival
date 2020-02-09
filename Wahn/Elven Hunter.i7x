@@ -290,8 +290,15 @@ When Play begins:
 ]
 
 
-when play ends:
-	if BodyName of Player is "Elven Hunter":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Elven Hunter Infection"	"Infection"	""	Elven Hunter Infection rule	1000	false
+
+This is the Elven Hunter Infection rule:
+	if Player has a body of "Elven Hunter":
+		trigger ending "Elven Hunter Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     Feeling all attachments to humanity and this world fading, you make your way to the park and go looking for the elves. Soon you hear one, at first, then many hunting horns in the distance, but drawing closer and closer. A large party of elves on horses and other, less easily recognizable beasts, breaks through the underbrush and surrounds you. The elf you met before is among them, and invites you to accompany the hunt through this and other worlds. You accept, swinging yourself on top of a black stallion that gets brought forward for you, then ride with them into the magical mist of a large portal, leaving this world - for now.";
 		else:

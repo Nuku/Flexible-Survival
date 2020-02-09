@@ -327,9 +327,15 @@ When Play begins:
 ]
 
 
+Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Mismatched Chimera":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Mismatched Chimera Infection"	"Infection"	""	Mismatched Chimera Infection rule	1000	false
+
+This is the Mismatched Chimera Infection rule:
+	if Player has a body of "Mismatched Chimera":
+		trigger ending "Mismatched Chimera Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     As your identity collapses, you are left with your fractured mind and instincts. Lacking any true focus to your instincts, you wander the city in a haze. You pass from one territory group to another, mating with the creatures there, but never transforming further, remaining a mismatched hodgepodge of creatures. Several try to keep you as a mate or prisoner, but you always escape eventually and move on. Your existence is aimless and with little conscious thought, but filled with sex of endless variety from all those you meet.";
 			if "Sterile" is not listed in feats of Player and player is female:

@@ -1028,6 +1028,7 @@ Object	Name
 Survivor Refuge	"Survivor Refuge"
 
 Survivor Refuge is a room. Survivor Refuge is above Green Lobby.
+Survivor Refuge is sleepsafe.
 The description of Survivor Refuge is "[SurvivorRefugeDesc]".
 
 to say SurvivorRefugeDesc:
@@ -1041,6 +1042,7 @@ Object	Name
 Brennan's Bedroom	"Brennan's Bedroom"
 
 Brennan's Bedroom is a room. Brennan's Bedroom is west of Survivor Refuge.
+Brennan's Bedroom is sleepsafe.
 The description of Brennan's Bedroom is "[BrennansRoomDesc]".
 
 to say BrennansRoomDesc:
@@ -1051,6 +1053,7 @@ Object	Name
 Brennan's Bathroom	"Brennan's Bathroom"
 
 Brennan's Bathroom is a room. Brennan's Bathroom is south of Survivor Refuge.
+Brennan's Bathroom is sleepsafe.
 The description of Brennan's Bathroom is "[BrennansBathroomDesc]".
 
 to say BrennansBathroomDesc:

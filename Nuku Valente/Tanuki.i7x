@@ -417,8 +417,13 @@ When Play begins:
 ]
 
 
-when play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Tanuki Satisfaction"	"Special"	""	Tanuki Satisfaction rule	600	false
+
+This is the Tanuki Satisfaction rule:
 	if SatisfiedTanuki is 0:
+		trigger ending "Tanuki Satisfaction";
 		say "Your tanuki blood serves you well. They say Tanuki are shapeshifters as well, but you never quite get past size shifting. A handy enough trick on its own? The ability to at least transition from tanuki form to human is quite useful at least!";
 		if humanity of Player < 10:
 			increase humanity of Player by 20;
@@ -623,6 +628,7 @@ instead of conversing the Tanuki Mom:
 			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
+				if hp of tanuki mom is 0, now hp of tanuki mom is 1;
 				if (nam is "Survival"):
 					say "[TanukiSurvivalTalk]";
 				if (nam is "Romance"):
@@ -636,7 +642,7 @@ instead of conversing the Tanuki Mom:
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
-			say "     The tanuki gives you a rather big grin, patting his round belly.";
+			say "     The tanuki gives you a rather big grin, patting her round belly.";
 			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
@@ -683,8 +689,20 @@ to say TanukiPerfumeTalk:
 	say "     ";
 
 to say TanukiCookingTalk:
-	say "     ";
-	say "     ";
+	if "Tanuki Salts" is listed in feats of the player:
+		say "'You already have my salts. I'm Tanuki, not a cooking spirit.' She shakes her ladel at you lightly, flecks of fluid littering the area. 'I don[']t have other cooking tips for you.'";
+	else:
+		say "     'Cooking?' Her face lights up in a great jovial smile. 'Eating is one of my favorite things, and cooking leads to eating, so it makes sense that I happen to enjoy that too.' She waves her ladel at you lightly. 'Now, I prefer when someone else cooks for me, but sometimes you just have to do it yourself, and doing it with someone you like is almost as good. Fortunately, you're here.'";
+		say "     She turns away, her 'coon tail swaying behind her. 'Now, this is where you expect me to say something about [']cooking with love['], but you can forget that.' She produces a small paper packet from her apron and shakes it towards you, producing a rattle that implies it's filled with some small particles, like salt perhaps? 'This has run in the
+	 family... Mmm...' She taps her chin with a single finger, her voice dipping a moment. 'When did I steal these...? Oh, nevermind. I[']ve had them for ages!'";
+		wait for any key;
+		say "     She flings the packet at you suddenly. 'And now, I entrust them to you. Don[']t worry, I have a spare.' She jiggles a packet that hadn't been in her hand a moment before. 'But what use is a spice you don[']t know how to use? Let[']s get to cooking.' She whistles cheerrfully as she pulls out a massive wok and slams it down on a fire that sprouts into being just in time and she begins tossing in all manner of vegetables and fish, frying it all up as she sprinkles the seasoning in time with the song she sings. 'The song is not optional,' she reminds before continuing the ballad to the food, rocking left and right as she works. 'Get that for me.' She points to a shelf just behind you that surely hadn[']t been there.";
+		wait for any key;
+		say "     As soon as you get it in her hand, she upends the bamboo container into the sizzling wok, producing a fresh wave of scents and steam. 'Almost done! We are going to eat like kings today. Oh, oh a queen? Royalty! We'll do that for sure.' She tosses the cube aside, it vanishing before it hits the ground. With a grand swirl of the wok, the food sloshes up over the side, and falls to strike two plates, becoming two perfectly assembled offerings. Tanuki mom grabs one and stuffs it towards you without delay. 'Eat up!'";
+		say "     The food makes your tongue burn, but only a moment before it yields to a powerful wave of savory umami notes that chase your hunger away. You feel entirely refreshed after consuming this divine meal. 'Now you can make some yourself,' she advises, her voice a bit off as she's in the middle of stuffing her face.";
+		now the hunger of the player is 0;
+		increase score by 20;
+		add "Tanuki Salts" to feats of the player.
 
 
 to say TanukiLadelTalk:
@@ -694,7 +712,7 @@ to say TanukiLadelTalk:
 		say "Naughty boy, you[']ll get no dessert if you don't stop that.' Her voice strains as she plays keepaway with the ladel, bits of goop getting everywhere, including on you. Where it lands, it's warm and tingly. She seems to notice a spot as it dissolves into you. 'You did that on purpose, didn't you?' She puts her hands on her hips, foot tapping on the air she's floating on. 'I swear, having a child is such a test.'";
 		decrease humanity of player by 10;
 		increase libido of player by 10;
-		say "Your libido has increased and your humanity decreased";
+		say "Your libido has increased and your humanity decreased.";
 	else:
 		say "'Good. Now what else can momma help you with?' She flutters her lashes a little too much, smiling at you.";
 

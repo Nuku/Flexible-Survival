@@ -294,8 +294,13 @@ this is the komodotoxic rule:
 
 Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "Komodo Dragon":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Komodo Dragon Infection"	"Infection"	""	Komodo Dragon Infection rule	1000	false
+
+This is the Komodo Dragon Infection rule:
+	if Player has a body of "Komodo Dragon":
+		trigger ending "Komodo Dragon Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     As your human mind falls apart, the nanites rebuild it with primitive instincts for lust and hunger. Becoming a brutish creature, you descend below the surface to live in the sewers and tunnels beneath the city. You roam those depths in search of others creatures who live there or those foolish enough to descend into your domain. There they become your prey, to be used to satisfy one or both of your hungers. On occasion, you encounter another of your kind and, after a vicious battle, a victor is decided and wild sex follows[if Player is impreg_ok]. You are impregnated after several of these territorial battles and later leave a clutch of komodo dragon eggs behind to add to your numbers beneath the city[end if][if Player is male]. You sire clutches of eggs in several of the female prey you capture and choose to release, ensure more of your kind will spread and continue to haunt the dark places of the world[end if].";
 		else:

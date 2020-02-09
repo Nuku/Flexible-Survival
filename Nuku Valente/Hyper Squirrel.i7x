@@ -238,36 +238,36 @@ to say snowsexmenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Vaginal on Snow";
 		now sortorder entry is 1;
-		now description entry is "fuck the horny squirrel";
+		now description entry is "Fuck the horny squirrel";
 		if Cock Length of Player > 4 and Cock Length of Player < 16 and nosquirrelanal is false:
 			choose a blank row in table of fucking options;
 			now title entry is "Anal on Snow";
 			now sortorder entry is 2;
-			now description entry is "fuck the squirrel's tight hole";
+			now description entry is "Fuck the squirrel's tight hole";
 	if Player is female and Cunt Depth of Player >= 10 and Cunt Tightness of Player >= 4:
 		choose a blank row in table of fucking options;
 		now title entry is "Vaginal on player";
 		now sortorder entry is 3;
-		now description entry is "get fucked by the squirrel";
+		now description entry is "Get fucked by the squirrel";
 	if Player is not neuter:
 [		if anallevel > 1:
 			choose a blank row in table of fucking options;
 			now title entry is "Anal on player";
 			now sortorder entry is 4;
-			now description entry is "get butt-fucked by the squirrel"; ]
+			now description entry is "Get butt-fucked by the squirrel"; ]
 		if Player is submissive and ( player is female and Cunt Depth of Player >= 10 and Cunt Tightness of Player >= 4 ) or anallevel > 1:
 			choose a blank row in table of fucking options;
 			now title entry is "Dommed and fucked";
 			now sortorder entry is 5;
-			now description entry is "have the squirrel take you hard";
+			now description entry is "Have the squirrel take you hard";
 	choose a blank row in table of fucking options;
 	now title entry is "Fellatio";
 	now sortorder entry is 6;
-	now description entry is "suck the squirrel's big cock";
+	now description entry is "Suck the squirrel's big cock";
 	choose a blank row in table of fucking options;
 	now title entry is "Cunnilingus";
 	now sortorder entry is 7;
-	now description entry is "eat out the squirrel's snatch";
+	now description entry is "Eat out the squirrel's snatch";
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -277,8 +277,7 @@ to say snowsexmenu:
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry][line break]";
-			say "Is this what you want?";
+			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
@@ -691,13 +690,20 @@ When Play begins:
 ]
 
 
-When play ends:
+Section 6 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Snow's Epilogue"	"NPC"	"Mixed"	Snow's Epilogue rule	900	false
+
+This is the Snow's Epilogue rule:
 	if Snow is in Grey Abbey Library:
 		if HP of the player > 0:
+			trigger ending "Snow's Epilogue"; [Here it states, that the ending has been played.]
 			if humanity of Player < 10:
 				say "     Snow abandons the idea of being saved when you go feral and she joins you in the city, remaining close at your side and becoming like a pack member to you, adoring and loving. Your life with her as a wild squirrel is one of bestial lust as you spend much of your day fucking one another in the squirrel's den they've set up in a small home near a cluster of acorn trees. From time to time, you and the others will snag a poor, unprepared person and fuck them into submission, adding another squirrel to your numbers. When there gets to be too many for your small home, a group breaks off to find a new home to claim as a nest. But you and Snow always remain there along with your first pair of wild lovers";
 			else:
-				if BodyName of Player is "Hyper Squirrel":
+				if Player has a non-shifting body of "Hyper Squirrel":
 					say "     Your squirrel body arouses little interest, being a rather mundane creature, if one they've only seen in you and Snow to date. You don't mention the arousing power of the wild squirrels you and Snow encountered for fear they'd think you capable of the same. After your eventual release, you and Snow settle down together, becoming lovers and mates.";
 					say "     You get a small home together in the suburbs of a new city, picking one with a large acorn tree out front. Your neighbors are a little shy and nervous around you at first, though squirrels are cute and safe enough that they soon get used to you. And when you start making acorn butter and other nut treats for them come fall, they're even friendlier still. Though it certainly doesn't hurt that the acorn butter is made with some squirrel cum. While not able to infect them, it gets them quite aroused and soon you and Snow are often having sex with many of your neighbors, both men and women";
 				else:

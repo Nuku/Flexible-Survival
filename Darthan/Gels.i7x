@@ -736,8 +736,16 @@ When Play begins:
 
 Section 3 - Endings
 
-[when play ends:
-	if BodyName of Player is "Pink Gel":
+[
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Pink Gel Infection"	"Infection"	""	Pink Gel Infection rule	1000	false
+"Blue Gel Infection"	"Infection"	""	Blue Gel Infection rule	1000	false
+"Purple Gel Infection"	"Infection"	""	Purple Gel Infection rule	1000	false
+
+This is the Pink Gel Infection rule:
+	if Player has a body of "Pink Gel":
+		trigger ending "Pink Gel Infection";
 		if humanity of Player < 10:
 			say "     ";
 		else:
@@ -751,8 +759,9 @@ Section 3 - Endings
 			else: [Neuter Version]
 				say "     ";
 
-when play ends:
-	if BodyName of Player is "Blue Gel":
+This is the Blue Gel Infection rule:
+	if Player has a body of "Blue Gel":
+		trigger ending "Blue Gel Infection";
 		if humanity of Player < 10:
 			say "     ";
 		else:
@@ -766,8 +775,9 @@ when play ends:
 			else: [Neuter Version]
 				say "     ";
 
-when play ends:
-	if BodyName of Player is "Purple Gel":
+This is the Purple Gel Infection rule:
+	if Player has a body of "Purple Gel":
+		trigger ending "Purple Gel Infection";
 		if humanity of Player < 10:
 			say "     ";
 		else:

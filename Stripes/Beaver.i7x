@@ -310,8 +310,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Beaver":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Beaver Infection"	"Infection"	""	Beaver Infection rule	1000	false
+
+This is the Beaver Infection rule:
+	if Player has a body of "Beaver":
+		trigger ending "Beaver Infection"; [Here it states, that the ending has been played.]
 		if Player is male and player is pure:
 			project the figure of Beaver2_icon;
 		if humanity of Player < 10:

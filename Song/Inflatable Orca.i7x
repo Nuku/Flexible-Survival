@@ -69,8 +69,8 @@ to orcabind:
 			if orcaintense is 6: [Complete encasement. Instant game over. Placed above in top bind code to display orgasm, then complete submission.]
 				say "     With the last of your humanity forcefully fucked out of you, the castle senses your complete submission and begins to draw you and your partner into itself. The bondage bag seals together at the seams, and your new pod eases into the floor. The last you hear of the outside world is a dolphin girl giggling at your demise, but you're entirely too distracted by your lovely, sexy partner to care.";
 				WaitLineBreak;
-				now BodyName of Player is "OrcaSexSlave";
 				now humanity of Player is 0;
+				trigger ending "Orca Sex Slave";
 				end the story saying "You are milked perpetually by the toy.";
 				now Trixieexit is 1;
 			if orcaintense < 6: [Hides content to prevent endings colliding]
@@ -99,8 +99,8 @@ to orcabind:
 					say "     Breathing in that wonderful gas, succumbing to the immense pleasure of it all, your mind eventually snaps and you sink back against the floor, dazed and confused. Your new, feral self welcomes the constant influx of pleasure, overwhelming all other thoughts, including those of escape. Instead, you breathe deeply of the mind-altering gas, [if Player is male]all too happy to continue stuffing her squeezing, sordid cunt[else]relaxing against the orca, even as she rides you[end if] through climax after powerful climax.";
 				say "     With the last of your humanity forcefully fucked out of you, the castle senses your complete submission and begins to draw you and your partner into itself. The bondage bag seals together at the seams, and your new pod eases into the floor. The last you hear of the outside world is a dolphin girl giggling at your demise, but you're entirely too distracted by your lovely, sexy partner to care.";
 				WaitLineBreak;
-				now BodyName of Player is "OrcaSexSlave";
 				now humanity of Player is 0;
+				trigger ending "Orca Sex Slave";
 				end the story saying "You are milked perpetually by the toy.";
 				now Trixieexit is 1;
 			else: [Section of actions possible during the bind.]
@@ -562,9 +562,14 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends: [Bad end to display after complete sanity loss or encasement.]
-	if BodyName of Player is "OrcaSexSlave":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Orca Sex Slave"	"BadEnd"	"Sex Slave"	Orca Sex Slave rule	20	false
+
+This is the Orca Sex Slave rule: [Bad end to display after complete sanity loss or encasement.]
+	if ending "Orca Sex Slave" is triggered:
 		say "     You spend the rest of your life as the inflatable orca's sex slave, dutifully [if Player is male]breeding her to make more inflatable servants for the castle[else]servicing her slippery cunt[end if]. Your pod is periodically filled with a heady, arousing gas that only fuels your endless lusts, each sticky climax driving you deeper into your lustful haze until you're nothing more than an air-headed parody of your former self. It's a simple existence, but your feral mind relishes every moment with your loving, demanding mistress.";
 		say "     The castle fills the void on its surface by dispensing another inflatable orca and bondage bag in the great hall. Trilling softly, the new orca is just as eager as the last to turn any unsuspecting visitor into another sex-hungry slave for the castle. You'd relish the company if your mind were not too far gone to appreciate it.";
+		the Player is enslaved;
 
 Inflatable Orca ends here.

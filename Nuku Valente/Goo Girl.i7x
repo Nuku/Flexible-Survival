@@ -274,8 +274,13 @@ to say googirlskinchange:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Goo Girl":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Goo Girl Infection"	"Infection"	""	Goo Girl Infection rule	1000	false
+
+This is the Goo Girl Infection rule:
+	if Player has a body of "Goo Girl":
+		trigger ending "Goo Girl Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     With a body of jello, your prospects of benevolent rescue are slim, not that you feel much urge for that anymore anyway. You descend into the darkness and [']greet['] those foolish enough to follow. Your undulating form and increasingly skillful teases draw a few more curious souls to your bosom than might otherwise be tempted to go looking.";
 			if Cunt Depth of Player > 20:

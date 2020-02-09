@@ -72,50 +72,52 @@ to say TESlaveSexMenu:
 	setmonster "Herm Human";
 	choose row MonsterID from the Table of Random Critters;
 	blank out the whole of table of fucking options;
+	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him blow your cock";
 		now sortorder entry is 1;
-		now description entry is "Let the herm slave blow you.";
+		now description entry is "Let the herm slave blow you";
 		now toggle entry is TESlaveSex rule;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Suck his cock";
 	now sortorder entry is 2;
-	now description entry is "Put the Asian dude's shaft in your mouth.";
+	now description entry is "Put the Asian dude's shaft in your mouth";
 	now toggle entry is TESlaveSex rule;
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him lick your pussy";
 		now sortorder entry is 3;
-		now description entry is "Put the herm slave's mouth to good use.";
+		now description entry is "Put the herm slave's mouth to good use";
 		now toggle entry is TESlaveSex rule;
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck his pussy";
 		now sortorder entry is 4;
-		now description entry is "Fill the herm slave's pussy with your cock.";
+		now description entry is "Fill the herm slave's pussy with your cock";
 		now toggle entry is TESlaveSex rule;
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Let him fuck your pussy";
 		now sortorder entry is 5;
-		now description entry is "Ride the Asian dude's cock.";
+		now description entry is "Ride the Asian dude's cock";
 		now toggle entry is TESlaveSex rule;
 	if (Cock Count of Player > 1):
 		choose a blank row in table of fucking options;
 		now title entry is "Take his ass";
 		now sortorder entry is 6;
-		now description entry is "Fill the herm slave's ass with your cock.";
+		now description entry is "Fill the herm slave's ass with your cock";
 		now toggle entry is TESlaveSex rule;
 	choose a blank row in table of fucking options;
 	now title entry is "Let him fuck your ass";
 	now sortorder entry is 7;
-	now description entry is "Ride the Asian dude's cock.";
+	now description entry is "Ride the Asian dude's cock";
 	now toggle entry is TESlaveSex rule;
 	choose a blank row in table of fucking options;
 	now title entry is "Nothing";
 	now sortorder entry is 8;
-	now description entry is "Don't have sex with the herm slave after all.";
+	now description entry is "Don't have sex with the herm slave after all";
 	now toggle entry is TESlaveSex rule;
 	sort the table of fucking options in sortorder order;
 	change the current menu to table of fucking options;
@@ -125,8 +127,7 @@ to say TESlaveSexMenu:
 This is the TESlaveSex rule:
 	choose row Current Menu Selection in table of fucking options;
 	let nam be title entry;
-	say "[title entry]: [description entry][line break]";
-	say "Is this what you want?";
+	say "[title entry]: [description entry]?";
 	if Player consents:
 		decrease menu depth by 1;
 		clear the screen;
@@ -392,6 +393,7 @@ When Play begins:
 ]
 
 
+Section 3 - Tentecle Tip Item
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -415,8 +417,15 @@ to TEInfect:
 	infect "Thought Eater";
 	now non-infectious entry is true;
 
-when play ends:
-	if BodyName of Player is "Thought Eater":
+Section 4 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Thought Eater Infection"	"Infection"	""	Thought Eater Infection rule	1000	false
+
+This is the Thought Eater Infection rule:
+	if Player has a body of "Thought Eater":
+		trigger ending "Thought Eater Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10: [succumbed]
 			say "     Your worldview shifting further and further from anything close to human, you eventually succumb to your urges to own and control others. Your first victim is a husky you meet out on the street, easily overpowering her mind and making her yours. From then on, it's pretty easy to gather more slaves, using her as a puppet to parade in front of others and draw them closer.";
 			say "     As your power and number of followers grows more and more, you prepare for the impending arrival of the military by moving your lair to a mostly empty industrial area, keeping your slaves out of sight in a large warehouse. When one, then a day later another, army scout finally comes along, you manage to dominate them quickly enough so neither of them can give word of anything, then send them on their way. With the men reporting the area to be empty, the military's sweep just passes over you and your slaves, leaving you undiscovered.";

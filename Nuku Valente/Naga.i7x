@@ -294,9 +294,16 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if humanity of Player < 10:
-		if BodyName of Player is "Naga":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Naga Infection"	"Infection"	""	Naga Infection rule	1000	false
+
+This is the Naga Infection rule:
+	if humanity of Player >= 10:
+		make no decision; [succumb ending only so far]
+	if Player has a body of "Naga":
+		trigger ending "Naga Infection"; [Here it states, that the ending has been played.]
+		if humanity of Player < 10:
 			say "     Losing your mind to the infection, you find yourself slithering down the ruined streets of the city until you make your way to a dilapidated building that's more intact than it first seems. Making the undamaged basement into your new den, you spend the next few weeks gathering as much food as you can before going out and taking captive one of the soldiers who just so happened to have been prowling around your den.";
 			if Player is male:
 				say "     Curling around the other with your long, serpentine form, you inject your venom into the struggling male - his whimpers and pleas annoying you to no end - and then breed your increasingly complacent victim for days to come. Flushing out his humanity with your continuous mating, you find your efforts bearing fruit as, almost a week later, the former soldier's skin begins to harden as his incoming scales push out from his once flabby skin.";

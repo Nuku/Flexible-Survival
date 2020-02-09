@@ -292,9 +292,9 @@ to manEatingPlantVore:
 		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break][run paragraph on]";
 		say "Sanity: [humanity of Player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of Player]	Thirst: [thirst of Player]	Struggle: [maneatingPlantStruggleBar][line break][run paragraph on]";
 		if humanity of Player < 1:
-			now voreloss is true;
 			now Trixieexit is 1;
-			now BodyName of Player is "Man-eating Plant";
+			trigger ending "Man-eating Plant Vore";
+			the Player was ended by "Vore by Man-eating Plant";
 			end the story saying "Became plant nanite nutriment";
 		else:
 			let k be 0;
@@ -357,11 +357,16 @@ to say maneatingPlantStruggleBar:
 	say "< [italic type][bracket]-[if struggleatt is 1]---[bold type]X[roman type][else if struggleatt is 2]--[bold type]XX[roman type][else if struggleatt is 3]-[bold type]XXX[roman type][else]-[bold type]XXXX[roman type]";
 
 
-Section 4 - Endings
+Section 5 - Endings
 
-when play ends:
-	if BodyName of Player is "Man-eating Plant":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Man-eating Plant Vore"	"Voreloss"	""	Man-eating Plant Vore rule	10	false
+
+This is the Man-eating Plant Vore rule:
+	if ending "Man-eating Plant Vore" is triggered:
 		say "     Three weeks after your capture, a military expedition lands on the island. As they progress through the forest, they come upon the plant that captured you. They watch with resignation at the outline of your body, trapped inside like many other victims before and after you throughout the island, unmoving and slowly digested by the plant. Sighing, the leader of the platoon signals one of the flamethrower-wielding troopers and has him burn the plant, the tree, and your half-digested, forever unidentified corpse.";
+		the Player is vored;
 
 Section 6 - man-eating flower seed
 

@@ -24,6 +24,10 @@ Table of GamePossessions
 Name(text)	CarriedNumber(number)	StoredNumber(number)	EquippedStatus(truth state)	CurseStatus(truth state)
 with 1000 blank rows
 
+Table of GameEndings
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+--	--	--	--	0	false
+
 Table of GameCharacters
 Name(text)	LocationName(text)	Energy(number)	HP(number)	MaxHP(number)	XP(number)	Level(number)	Armor(number)	Weapon Damage(number)	Capacity(number)	ScaleValue(number)	Strength(number)	Dexterity(number)	Stamina(number)	Charisma(number)	Intelligence(number)	Perception(number)	Hunger(number)	Thirst(number)	SleepRhythm(number)	Morale(number)	Lust(number)	Libido(number)	Loyalty(number)	Humanity(number)	Cocks(number)	Cock Length(number)	Cock Width(number)	Testes(number)	Cunts(number)	Cunt Depth(number)	Cunt Width(number)	Breasts(number)	Breast Size(number)	PlayerMet(truth state)	PlayerRomanced(truth state)	PlayerFucked(truth state)	OralVirgin(truth state)	Virgin(truth state)	AnalVirgin(truth state)
 with 1000 blank rows
@@ -185,7 +189,6 @@ Name(text)	Type(text)
 "BastetApproval"	"number"
 "BastetSexBattleCount"	"number"
 "battleitem"	"number"
-"bcending"	"number"
 "bclatearrival"	"number"
 "bcuntethered"	"number"
 "beatgrnymph"	"number"
@@ -331,7 +334,6 @@ Name(text)	Type(text)
 "damagein"	"number"
 "damageout"	"number"
 "DariusLostItems"	"number"
-"darkdays"	"number"
 "DavidBrutusMarcVar"	"number"
 "DavidBunkerEntry"	"number"
 "DavidSarahInteraction"	"number"
@@ -696,7 +698,6 @@ Name(text)	Type(text)
 "knightcrestnum"	"number"
 "KoballoonLossCounter"	"number"
 "KoballoonMet"	"number"
-"KoballoonSexBadEnd"	"number"
 "koboldgangmet"	"number"
 "koboldgangsubs"	"number"
 "KoboldScaleColor"	"number"
@@ -1022,7 +1023,6 @@ Name(text)	Type(text)
 "ocelotsize"	"number"
 "OfficeGirlsDominance"	"number"
 "OfficeGirlsFriendship"	"number"
-"OgreMeetings"	"number"
 "OliverRelationship"	"number"
 "Onyxboislut"	"number"
 "onyxdma"	"number"
@@ -1223,7 +1223,6 @@ Name(text)	Type(text)
 "SonnyQuest"	"number"
 "SonnyRelationship"	"number"
 "SpidertaurRelationship"	"number"
-"spiritlove"	"number"
 "Spriteconsent"	"number"
 "Spritedefeat"	"number"
 "SquadEncounters"	"number"
@@ -1355,7 +1354,6 @@ Name(text)	Type(text)
 "VikingSpartanWar"	"number"
 "VikingUltimatum"	"number"
 "VikingWar"	"number"
-"Vinetrapped"	"number"
 "violinfound"	"number"
 "vixcountdown"	"number"
 "vixentaurcatch"	"number"
@@ -1861,7 +1859,6 @@ Name(text)	Type(text)
 "velossavedyes"	"truth state"
 "vgeckoboost"	"truth state"
 "violinspritefight"	"truth state"
-"voreloss"	"truth state"
 "vorespecial1"	"truth state"
 "weakwilled"	"truth state"
 "WerewolfWatching"	"truth state"

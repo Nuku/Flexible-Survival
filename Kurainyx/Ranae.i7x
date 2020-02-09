@@ -529,15 +529,14 @@ to RanaeBind:
 					say "     You awaken some time later, only to find yourself still within Ranae's stomach. You're unsure how long you've been trapped inside of the frog, and by all means, you should be worried if she intends to digest you, but instead, you feel calm and relaxed. The pliant flesh of her churning stomach caresses every inch of your weary body, all while the soft, rhythmic beating of her heart echoes in the background, the dulcet sounds acting almost like a lullaby, further pacifying you. There's nothing but warmth, comfort, and safety within Ranae, and you eventually fall asleep again. Every time you come to, you find that you are still within the amphibian's embrace, and sometimes, you either feel Ranae cradle her filled belly or hear her words of how you're such a good servant to her before you are lulled back into restful slumber. Thoughts of time and your responsibilities disappear, replaced by nothing more than adoration and submission for your amphibian mistress, and you are more than willing to remain inside of her, even if it means that you will eventually fade away, your final act of servitude as her servant.";
 					say "     However, ending up as food for her doesn't seem to be on the menu just yet as after some more time had passed, you feel your surroundings churn violently before pushing you up and out of Ranae's stomach, and after a short trip through the constricting tunnel of her throat, you are spat out of the frog and onto the floor. Shivering from the cold and the hard ground, you already long to be returned to the warm, soft embrace of your mistress. You can see that you are back in Ranae's space in the library, and the domineering frog herself is smiling at you with both smugness and pride. 'Aww, what's the matter? Already missing being eaten by me?' she teases. 'I'll have to admit, you're absolutely delicious, and I was tempted to actually make you into my dinner. But that would be such a waste of a good servant. You've done nothing but obediently follow my orders and shower me with gifts. I'm not going to get rid all of that just for a quick meal. Don't worry though. I know how much that you loved being inside of me, and you're lucky that I like having you fill my belly, so here's how things are going to go. From now on, you're mine. You're going to be at my beck and call, twenty-four seven, which includes being my belly filler. Got it?'";
 					say "     You agree to Ranae's terms without hesitation, binding yourself to a lifetime of servitude to the domineering frog.";
-					now voreloss is true;
-					now BodyName of player is "Froggy Servant";
 					now Trixieexit is 1;
+					trigger ending "Ranae's Servant";
 					end the story saying "You became a fulltime servant for a frog.";
 				else:
 					say "     'That's a good [if player is male]boy[else]girl[end if]. No more struggling. Just give yourself to me,' Ranae says, even though your movements had ceased some time ago. The frog woman hugs her bulging belly and giggles softly. 'You know, I'm actually going to miss you. With how you kept on spoiling me, I would've loved to keep you around as my servant. Unfortunately, this city has all sorts of crazy stuff going on, and I'm not going to let some freaks take you away from me. At least this way, I get to keep you forever, not to mention having you as a tasty treat.' Ranae pauses for a moment when her stomach gurgles, and she smiles as she uses her hands to rub gentle circles over her belly. 'Rest well, my servant. You're mine now... All mine...'";
-					now voreloss is true;
-					now BodyName of player is "Frog Food";
 					now Trixieexit is 1;
+					trigger ending "Ranae Vore";
+					the Player was ended by "Vore by Ranae";
 					end the story saying "You let a frog have her way with you.";
 		else:
 			let k be 0;
@@ -599,10 +598,19 @@ say "< [bracket]-[if struggleatt > 0]X[else]-[end if][close bracket]";
 
 Section 5 - Endings
 
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Ranae Vore"	"Voreloss"	""	Ranae Vore rule	10	false
+"Ranae's Servant"	"BadEnd"	"Servant"	Ranae's Servant rule	20	false
 
-when play ends:
-	if BodyName of player is "Froggy Servant":
+This is the Ranae Vore rule:
+	if ending "Ranae Vore" is triggered:
+		the Player is vored;
+
+This is the Ranae's Servant rule:
+	if ending "Ranae's Servant" is triggered:
 		say "     When the military comes, you and Ranae are processed together. Though your subservient attitude to your froggy mistress raises a few eyebrows, the both of you are eventually deemed safe and released back into the outside world. With you in tow, Ranae is quick to make contact with her parents. The reunion is met with all sorts of surprise on the parents' side when they find that not only is their daughter now an anthropomorphic frog, but she has a much more confident and domineering attitude, especially when she introduces you as her servant. Nonetheless, they are more than happy to welcome you and their froggy daughter. With Ranae's parents both being influential business people, the frog gets a managerial position in a small company, with you as her personal assistant. While you tend to your mistress's every need, Ranae finds great success in her new role, thanks to the assertiveness that she gained. With the money Ranae rakes in from her work, you have the opportunity to live close to the lap of luxury, but instead, you find more comfort in the stomach of your mistress whenever she has you fulfil your role as her belly filler.";
+		the Player is enslaved;
 
 
 Ranae ends here.

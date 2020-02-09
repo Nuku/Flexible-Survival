@@ -490,8 +490,13 @@ the scent of glowing ember is "The small ember smells faintly smoky.".
 
 Section 5 - Endings
 
-when play ends:
-	if BodyName of Player is "Fire Sprite":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Fire Sprite Infection"	"Infection"	""	Fire Sprite Infection rule	1000	false
+
+This is the Fire Sprite Infection rule:
+	if Player has a body of "Fire Sprite":
+		trigger ending "Fire Sprite Infection";
 		if humanity of Player < 10:
 			say "     As your fire sprite infection spreads through your mind like wildfire, you soon desire little more than to share the gift of the flame inside you with the world, delighting in the havoc and destruction wrought by the beautiful cleansing flames.";
 			if Player is male:

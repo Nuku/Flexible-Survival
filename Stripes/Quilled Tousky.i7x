@@ -220,9 +220,17 @@ to say usetouskyquill:
 
 the scent of tousky quill is "The colorful quill's scent muddles your mind, making you feel stupid and giddy.".
 
+
 [
-when play ends:
-	if BodyName of Player is "Template":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Quilled Tousky Infection"	"Infection"	""	Quilled Tousky Infection rule	1000	false
+
+This is the Quilled Tousky Infection rule:
+	if Player has a body of "Quilled Tousky":
+		trigger ending "Quilled Tousky Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You succumb to your template infection.";
 		else:

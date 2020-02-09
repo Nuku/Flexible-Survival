@@ -191,8 +191,15 @@ When Play begins:
 ]
 
 
-when play ends:
-	if BodyName of Player is "Tiger":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Tiger Infection"	"Infection"	""	Tiger Infection rule	1000	false
+
+This is the Tiger Infection rule:
+	if Player has a body of "Tiger":
+		trigger ending "Tiger Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is female:
 				say "     Finally giving in completely to your new instincts, you find yourself returning automatically to the tiger den, when you return, you find several of the other tigers eyeing you hopefully, but you have eyes only for Chase, something deep within you burning hot with need at the sight of the tiger who changed you, his scent still marking your body as his. You find yourself stalking up to the surprised looking tiger male, he quickly gets the idea when you reach out and start stroking his cock as you rub your furred tiger body up against him. Soon he hauls you off to one of the small pallets in the room, and your lustful cries fill the den as he fulfills his role as your newly chosen mate, filling your eager body with his seed and marking you as his. Eventually sated, you lie next to your strong and handsome mate while he whispers words to you, he seems glad you decided to embrace your true nature and give yourself over to him and being his tigress, and he promises to take care of your needs and see you are always well bred and full of his little tiger cubs. While it is hard to make much sense of his words, you catch the gist of your mates comments, and rumble in happy satisfaction at being the chosen mate of such a big and strong tiger, and you look forward to giving him many big and strong cubs...";

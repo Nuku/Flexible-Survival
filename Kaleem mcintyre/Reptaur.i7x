@@ -379,10 +379,15 @@ this is the rtaurpounce rule:		[double-damage pouncing]
 	say "You are [descr].";
 
 
+Section 4 - Endings
 
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Reptaur Infection"	"Infection"	""	Reptaur Infection rule	1000	false
 
-when play ends:
-	if BodyName of Player is "Reptaur":
+This is the Reptaur Infection rule:
+	if Player has a body of "Reptaur":
+		trigger ending "Reptaur Infection";
 		if humanity of Player < 10:
 			say "     Falling prey to the Reptaur strain, you find yourself losing control over your senses and instinctively head deep into the city to become lost amongst your feral kin in the park. You find the rest of your days becoming a blur as you feed, fuck, and fight any who decide to harm the little patch you've made for yourself. The small herd of other Reptaurs that become something like your family make up the difference for whatever emotional needs you may require, and as for the sex... well, that's never in small demand, especially when you and your kin begin capturing lone soldiers who end up straying too far from their post to [italic type]blow off a little steam[roman type].";
 		else:

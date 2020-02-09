@@ -1010,7 +1010,7 @@ to say VikingDuelDeath:
 	say "     With a final combination of a shield-bash to the head and a heavy kick against your leg, you fall down into the sand. Holding your sprained - possibly broken - leg with both hands as you scream in pain, you don't even see the Viking Chieftain's axe raise and fall to put an end to your suffering - by separating your head from the body below.";
 	say "     The matter at hand dealt with, the Vikings move back to their boats and row out to the larger ship, many stopping to give your lifeless body a kick on the way over. The last one to leave is Sonya, giving your remains a disappointed look, then stepping into a boat to be brought back to the Viking ship.";
 	now battleground is "void";
-	now BodyName of Player is "dead";
+	trigger ending "Player has died";
 	end the story saying "You're dead - DEAD!";
 
 to say VikingDuelEscape:
@@ -1716,15 +1716,17 @@ It has a weapon "shining steel blade". The weapon damage of viking sword is 8. T
 Instead of sniffing viking sword:
 	say "The blade smells of nothing but metal. Sonya always kept it clean without fail, and you've done the same since you got it.";
 
-Section 7 - Endings
-
-when play ends:
-	if BodyName of Player is "dead":
-		stop the action;
 
 [
-when play ends:
-	if BodyName of Player is "Viking Woman":
+Section 7 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Viking Woman Infection"	"Infection"	""	Viking Woman Infection rule	1000	false
+
+This is the Viking Woman Infection rule:
+	if Player has a body of "Viking Woman":
+		trigger ending "Viking Woman Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10: [succumbed]
 			say "     A";
 		else: [sane]

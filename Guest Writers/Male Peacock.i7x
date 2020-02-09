@@ -347,8 +347,13 @@ instead of sniffing peacock feather:
 
 Section 6 - Endings
 
-when play ends:
-	if BodyName of Player is "Peacock":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Peacock Infection"	"Infection"	""	Peacock Infection rule	1000	false
+
+This is the Peacock Infection rule:
+	if Player has a body of "Peacock":
+		trigger ending "Peacock Infection";
 		if humanity of Player < 10:
 			if compare genitals of Player > 0:
 				say "You decide to remain in the quarantined city. With your wits and abilities, you will surely find many different... ahem... [']fruits['] to taste.";

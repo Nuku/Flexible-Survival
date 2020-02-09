@@ -387,8 +387,14 @@ When Play begins:
 
 Section 3 - Endings
 
-[when play ends:
-	if BodyName of Player is "Feline Gymnast":
+[
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Feline Gymnast Infection"	"Infection"	""	Feline Gymnast Infection rule	1000	false
+
+This is the Feline Gymnast Infection rule:
+	if Player has a body of "Feline Gymnast":
+		trigger ending "Feline Gymnast Infection";
 		if humanity of Player < 10:
 			say "     You succumb to your template infection.";
 		else:

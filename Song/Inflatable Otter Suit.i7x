@@ -184,8 +184,8 @@ to InflatableOtterSuitSubmit:
 	say "     Eventually, even stroking yourself off becomes too much of a challenge, the air in the suit's arms pulling them tight against your chest. Your ass is spread by a large, smooth plug that begins to subtly vibrate, stimulating your prostate directly. You are taken by surprise when a viscous liquid begins to secrete from your gag. It's warm, thick, and pleasantly sweet, putting your mind at ease and soothing your throat as it flows down your gullet. After a moment, you come to the dim realization that the fluid is a potent aphrodisiac, your length twitching turgidly through one long, almost constant climax that destroys the final remnants of your sanity. The zipper seems to melt away into the plastic until there's nothing there to suggest that it ever existed, leaving you trapped within the suit's smooth, dark vinyl.";
 	say "     You moan, whine and squeal through one crashing orgasm after another, your sore length remaining stiff throughout, any form of refractory period negated by the arousing, nourishing fluid it sustains you with and the unearthly pleasure pulsing through every nerve and pore. Your neck is forced stiff by the dense air around it until you're unable to do anything but stare at the ceiling. The reflection of your trapped form slowly fades away as the eyes of the suit become fully opaque, leaving you alone in the claustrophobic darkness - but you don't mind. All that matters to you now is the ecstasy of serving the vinyl suit, thinking of nothing more than your next squealing climax.";
 	wait for any key;
-	now BodyName of Player is "InflatableOtterSuitSexSlave";
 	now humanity of Player is 0;
+	trigger ending "Inflatable Otter Suit Sex Slave";
 	end the story saying "Willfully submitting to the inflatable otter suit, its endless stimulation has become your whole word.";
 
 
@@ -214,8 +214,8 @@ to InflatableOtterSuitBind:
 				say "     The suit rewards your submission by pressing a large, smooth probe into your yearning backside, the plug inflating once within to stimulate your silky inner walls. The added pressure against your prostate keeps your turgid cock drooling between peaks, a slurry of seed trickling down your length to add to the squelching coat of cum that slickens your enslavement. You relish the feeling of the plug swelling deeper when you climax, the smooth vinyl massaging your colon with rhythmic ripples and pulses. As you clench your ass around that delightful protrusion, the suit's eyes gradually go opaque, your meager vision of the outside world fading until you're shrouded in a soothing darkness.";
 				say "     Awash in such constant, overwhelming pleasure, it's only a matter of hours before your shaken identity shatters, reducing you to nothing more than another source of power for the tainted castle and its lustful inhabitants.";
 				WaitLineBreak;
-				now BodyName of Player is "InflatableOtterSuitSexSlave";
 				now humanity of Player is 0;
+				trigger ending "Inflatable Otter Suit Sex Slave";
 				end the story saying "Trapped by the inflatable otter suit, its endless stimulation has become your whole word.";
 				now Trixieexit is 1;
 			if InflatableOtterSuitBindStage < 4: [Hides content to prevent endings colliding]
@@ -242,8 +242,8 @@ to InflatableOtterSuitBind:
 					say "     Unable to move, much less focus on resistance, your mind eventually snaps from the overwhelming pleasure coursing through you. The suit senses your submission and squeezes tightly around your length, pumping and milking you until you reach a third powerful orgasm. You spray your cum across the supple vinyl, whimpering with desperate need and trembling within the rigid hold of your captor. The suit absorbs your seed, the fluids merging with the tainted plastic and empowering it further. What isn't consumed washes back over your cock and crotch to serve as sticky lubricant for your continued abuse.";
 				say "     Your cyclic milking continues for hours on end, the suit utilizing those brief moments of respite to seal more tightly around you. Its translucent eyes eventually go completely opaque, leaving you shrouded in the soothing miasma of darkness. An anal stimulator is pressed into your rear, spreading your neglected hole and inflating once within. The rounded plug vibrates softly and swells larger whenever you climax to massage your thrumming prostate. As your thoughts drift to the growing pit in your stomach, your gag begins to leak a nourishing aphrodisiac, sustaining you and keeping you perpetually aroused. The suit never permits you a moment's reprieve, keeping your feral mind focused on your blissful new existence.";
 				WaitLineBreak;
-				now BodyName of Player is "InflatableOtterSuitSexSlave";
 				now humanity of Player is 0;
+				trigger ending "Inflatable Otter Suit Sex Slave";
 				end the story saying "Trapped by the inflatable otter suit, its endless stimulation has become your whole word.";
 				now Trixieexit is 1;
 			else: [Section of actions possible during the bind.]
@@ -547,10 +547,15 @@ to say StuffedOtterSuitSexFellatio:
 
 Section 5 - Endings
 
-when play ends: [Bad end to display after complete sanity loss or encasement.]
-	if BodyName of Player is "InflatableOtterSuitSexSlave":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Inflatable Otter Suit Sex Slave"	"BadEnd"	"Sex Slave"	Inflatable Otter Suit Sex Slave rule	20	false
+
+This is the Inflatable Otter Suit Sex Slave rule: [Bad end to display after complete sanity loss or encasement.]
+	if ending "Inflatable Otter Suit Sex Slave" is triggered:
 		say "     You have been reduced to a living power source for the inflatable otter suit. The sensory overload of its slick vinyl brushing and squeezing against your from all sides has erased the final remnants of your sanity. Alone in its dark confines, you think and dream of nothing but the desperate need to cum over and over again, each orgasm only briefly slaking your corrupted libido. Whenever the denizens of the castle come up to play with you, you find yourself squealing with joy as they stroke, suck, and ride the suit's tapered length, deriving immense pleasure from the added stimulation.";
 		say "     From outside, your relentless abuse appears far more subtle. Your muffled moans of rapture and a faint bulge in the malleable plastic are the only tells that the suit is even occupied. Anyone could mistake you for an innocuous toy, and the passing fantasy of being used as one only excites you further. The thought is pushed aside when you're brought to another squealing climax, bathing your form in waves of numbing pleasure as you feed your lustful host. Nothing could compare to the bliss of the suit's embrace, and you allow it to use you as it sees fit for the rest of your simple existence.";
+		the Player is enslaved;
 
 
 Inflatable Otter Suit ends here.

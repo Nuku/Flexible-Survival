@@ -234,11 +234,17 @@ When Play begins:
 ]
 
 
+Section 4 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Mammoth Infection"	"Infection"	""	Mammoth Infection rule	1000	false
+
 [A sample structure for succumbing/surviving messages at the end of the game.]
 [Numerous other examples can be found in existing creature files.]
-
-when play ends:
-	if BodyName of Player is "Mammoth":
+This is the Mammoth Infection rule:
+	if Player has a body of "Mammoth":
+		trigger ending "Mammoth Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is pure:
 				project the figure of Mammoth_CVF_icon;

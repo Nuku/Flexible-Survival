@@ -364,9 +364,16 @@ this is the waspparasite rule:
 	if "Cold Fish" is listed in feats of Player, decrease Libido of Player by 1;
 
 
-when play ends:
+Section 4 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Insect Larva Aftermath"	"Special"	""	Insect Larva Aftermath rule	980	false
+
+This is the Insect Larva Aftermath rule:
 	if insectlarva is true:
-		if BodyName of Player is "Black Wasp":
+		trigger ending "Insect Larva Aftermath"; [Here it states, that the ending has been played.]
+		if Player has a non-shifting body of "Black Wasp":
 			if humanity of Player < 10:
 				say "     Driven mad by the effects of the infection and the parasite inside you, you lose yourself to the lustful urges it is imposing upon you. You wander your way back to the hive, rejoining the wasps there. Pleased to see the return of another of their parasitic breeders, they welcome you lustfully by running their proboscis tongues over you and fucking you repeatedly. During this orgy of welcome, your hands and feet are encased in the gray material, making you a part of the hive like the other breeders. Your infected mind is pleased by this prospect and you happily let yourself be [one of]fixed into position on all fours[or]suspended spread eagle[or]trapped as part of a wall[at random] and be bred full of gooey eggs over and over again.";
 				say "     It is a pleasant, mindless life that fills you with a drug-filled joy from the wonderful symbiosis you have with the hive's larva inside you. The queen is generous as well, sometimes releasing those with fertilized eggs already in them to enjoy a mindless, lustful orgy together while the insects watch their breeders amuse themselves before being reattached to the hive in new positions.";

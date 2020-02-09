@@ -192,8 +192,15 @@ When Play begins:
 ]
 
 
-when play ends:
-	if BodyName of Player is "Badger":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Badger Infection"	"Infection"	""	Badger Infection rule	1000	false
+
+This is the Badger Infection rule:
+	if Player has a body of "Badger":
+		trigger ending "Badger Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is female:
 				say "     You surrender yourself to the animal instincts that rule your mind at last. Your cunt is on fire with the memory of a scent, of a masculine musk that belongs to only one male. The badger stud that lives in the earth has left his mark on you and it is like a shackle in your heart. Desperate to feel his thick cock spreading you open again, you travel back to his hunting grounds. You burrow into the earth after him, and almost end your journey when you find his tunnels. The thick scent of his is concentrated in the corridors and burrows he has dug, so strong that your cunt gushes reflexively. By the time you finally reach him your legs are a mess, your mind completely overwhelmed with a powerful lust and need. His touch sends you to your knees, bowed in submission to your subterranean master.";

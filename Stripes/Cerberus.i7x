@@ -430,8 +430,13 @@ this is the cerberus rule:
 
 Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "Cerberus":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Cerberus Infection"	"Infection"	""	Cerberus Infection rule	1000	false
+
+This is the Cerberus Infection rule:
+	if Player has a body of "Cerberus":
+		trigger ending "Cerberus Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     As your mind unravels, you start to give in to your body's instinctual urges and wander off into the city as your humanity fades away into the background of your mind.";
 			if FaceName of Player is "Cerberus":
@@ -464,7 +469,7 @@ when play ends:
 				say "     Your large, powerful body and its trifold chest cavity draw some interest from the scientists, who run several physical tests on you. These go on for a time, but are stopped abruptly when the military pulls the scientists onto other, more pressing projects. While your powerful body is of some interest, there are more dangerous and hyper-infectious strains to be analyzed. After your eventual release, a few scientists keep in touch with you for a little while, but their interest is soon caught up by other projects.";
 				say "     You get work as a manual laborer, with your strong body suitable for the work. Your heavy-duty lungs and hearts are able to push you longer and harder any of the other workers, allowing you to do the work of two men easily. Recognized for your physical ability, your boss quietly starts paying you more than the others and you are smart enough not to let them know. And it really helps, as your big body comes with a big appetite.";
 				say "     Your large, canine body draws the interest of several infected canines and lupines and soon you have a collection of lovers and mates[if Player is herm]. You sire and give birth of several large, canine pups over the years from various lovers and breeds[else if Player is male]. You sire a variety of large, canine pups with various lovers and breeds[else]. You give birth to several large, canine pups over the yours for various lovers and breeds[end if]. And while you sometimes feel as if something is missing, your large family and numerous lovers help fill that longing for companionship.";
-	else if FaceName of Player is "Cerberus" and BodyName of Player is not "Hydra Beast":
+	else if FaceName of Player is "Cerberus" and Player has no body of "Hydra Beast":
 		if humanity of Player < 10:
 			say "     As you succumb to the infection, your two silent heads start taking over more. But they have succumb as well to your changing instincts and seek to follow their lustful urges as well. You still remain the primary leader, but the others take control more often, usually when an idea for sex crosses their minds. Not that you really mind, as you share the enjoyment of their plans with them, often pleasantly surprised by the varied, kinky desires of the left one and by the wild, lustful urges of the right one. Thanks to them, your existence is a much more varied and pleasurable one than it may have else been.";
 		else:

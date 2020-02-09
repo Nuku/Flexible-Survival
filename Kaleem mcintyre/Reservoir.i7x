@@ -432,6 +432,7 @@ Instead of resolving a A Fight to remember:
 					now bodydesc of Player is "gleatinous";
 					now bodytype of Player is "ooze";
 					now SleepRhythm of Player is 0;
+					trigger ending "Reservoir Oozing";
 					end the story saying "You have been absorbed by the blob creature.";
 					now battleground is "void";
 					wait for any key;
@@ -468,6 +469,7 @@ Instead of resolving a A Fight to remember:
 						now bodydesc of Player is "gleatinous";
 						now bodytype of Player is "ooze";
 						now SleepRhythm of Player is 0;
+						trigger ending "Reservoir Oozing";
 						end the story saying "You have been absorbed by the blob creature.";
 						now battleground is "void";
 						wait for any key;
@@ -499,6 +501,7 @@ Instead of resolving a A Fight to remember:
 						now bodydesc of Player is "gleatinous";
 						now bodytype of Player is "ooze";
 						now SleepRhythm of Player is 0;
+						trigger ending "Reservoir Oozing";
 						end the story saying "You have been absorbed by the blob creature.";
 						now battleground is "void";
 						wait for any key;
@@ -557,16 +560,22 @@ It has a weapon "[one of]frozen blades of cold[or]whispering twins of water and 
 Instead of sniffing icicle knives:
 	say "These frozen blades both breathe and smell of a perpetual frost made of the forgotten thoughts and chilled promises left abandoned in a watery reservoir.";
 
+Section 7 - Endings
 
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Reservoir Oozing"	"BadEnd"	""	Reservoir Oozing rule	20	false
+"Reservoir Epilogue"	"Story"	""	Reservoir Epilogue rule	950	false
 
-when play ends:
-	if oozing is 1:
+This is the Reservoir Oozing rule:
+	if ending "Reservoir Oozing" is triggered:
 		say "Having lost to the blob monster you are no longer aware of yourself as an individual but as one who is part of a greater whole. Sloshing and moving throughout the reservoir many other mutants have found their way here to your home. Those unable to get away from your tentacles have been dragged underneath the murky waters to become one with you. However, those able to get away have moved on and long since become but a distant memory. Yet when the [italic type]new ones[roman type] come along you feel a sudden fear as a burning heat begins to churn your waters. Memories of long ago surface and instantly you feel threatened beyond measure.";
 		say "Rising up from out of your watery home you find attacking the newcomers without thought. The sheer need to survive makes you try to either engulf the newcomers or disembowel them with your tentacles. There's much shouting and noise coming from all around but when the [italic type]new ones[roman type] begin to retreat you feel a sense of nervousness that makes you hesitant to return back into the reservoir. Perhaps it's time to move into deeper waters outsider. The faint memory of the ocean has you warbling in glee and quickly you sink down into the waters to try and plan your escape.";
-		stop the action;
+		the Player is lost;
 
-when play ends:
+This is the Reservoir Epilogue rule:
 	if waterworks is 1:
+		trigger ending "Reservoir Epilogue";
 		say "Because of your efforts in restoring the water to flowing properly within the city the military is able to speed up restoring the lives of those who haven't succumbed to the infection back to something close to normalcy. Even better though, at least for those who have to walk the streets during the sweltering days and stifling nights, is that because of the water running as it should now the military is able to call the local firefighters in to help clean up the sludge covering both the buildings and the streets. Having someone finally do something about that [italic type]smell[roman type] lingering in the air is much a boon to those citizens who have to still fight off certain crazy mutants as anything else they could hope to wish for.";
 
 ]

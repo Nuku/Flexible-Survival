@@ -205,9 +205,12 @@ to say UrikSex5: [player fucks Urik]
 	NPCSexAftermath Urik receives "AssFuck" from Player;
 
 instead of conversing Urik:
+	say "[UrikTalkMenu]";
+
+to say UrikTalkMenu:
 	LineBreak;
 	project the figure of Urik_naked_icon;
-	say "What do you want to talk with Urik about?";
+	say "     [bold type]What do you want to talk with Urik about?[roman type]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -234,6 +237,12 @@ instead of conversing Urik:
 		now sortorder entry is 4;
 		now description entry is "Chat with your orc slave about Eric";
 	[]
+	if Stamina of Spike > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Talk about Spike";
+		now sortorder entry is 5;
+		now description entry is "Chat with your orc slave about Spike";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -248,17 +257,23 @@ instead of conversing Urik:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
+				let DoneTalking be false;
 				now sextablerun is 1;
 				if nam is "Just chat":
 					say "[UrikTalk1]";
-				if nam is "Send him to the library":
+				else if nam is "Send him to the library":
 					say "[UrikTalk2]";
-				if nam is "Send him to the orc lair":
+					now DoneTalking is true;
+				else if nam is "Send him to the orc lair":
 					say "[UrikTalk3]";
-				if nam is "Talk about Eric":
+					now DoneTalking is true;
+				else if nam is "Talk about Eric":
 					say "[UrikTalk4]";
+				else if nam is "Talk about Eric":
+					say "[UrikTalk5]";
+				if DoneTalking is false: [looping around for more talk options]
+					say "[UrikTalkMenu]";
 				wait for any key;
-				now lastfuck of Urik is turns;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the orc warrior, shaking your head slightly as he gives a questioning look.";
@@ -294,6 +309,78 @@ to say UrikTalk4: [talk about Eric]
 	else if UrikEricInteraction > 5: [Urik pounded Eric's pussy and bred him]
 		say "     'Eric's my li'l buddy,' the orc warrior says, then shows you a beaming grin as he adds, '...and he's a fucking hot lay too! Never thought pussy could be as good as a sweet ass, but... man the kid feels nice. Tight as hell and with that thingy inside - you know, like a pucker to push through when you're already balls-deep in him. Fucked his womb so hard and pumped it full of cum!' Urik gives a low grunt and slides one hand under his loincloth to stroke himself, getting hard from just thinking about the sex he had with Eric.";
 		say "     After being lost in his thoughts for a few seconds, Urik focuses back on you a moment later, then says, 'Oh, and there's another funny thing... I kinda end up hanging out with Eric quite often, even without having sex. Weird, eh? It's really fun, even if he just wants to read books together or... do some other shit together.'";
+
+to say UrikTalk5: [talk about Spike]
+	if Stamina of Spike is 1: [Urik goaded Spike intro training]
+		say "     As you bring up Spike, Urik chuckles under his breath. 'Your little slut-puppy? What about him?' Looking at him with a raised eyebrow prompts the orc to roll his eyes and waves a large hand, then adds, 'I mean your 'companion'. Don't you worry, I won't just grab him and bend him over to show him his inner bitch. Wouldn't do to have a breeder pound your pet, yadda yadda.' With a shrug of his broad, muscular shoulders, Urik lets that part of the topic drop, moving on to saying, 'If you're serious about using the boy for something more than a bedwarmer, I'll have to train him a bit though. You don't wanna be embarrassed by a weak-ass puppy following you around, do you? What is he supposed to do? Yap at people to distract them?'";
+		LineBreak;
+		say "     [bold type]What do you reply to the orc?[roman type][line break]";
+		LineBreak;
+		say "     [link](1)[as]1[end link] - You like having Spike as your companion, though he could use some more training. Urik should go ahead with the workouts.";
+		say "     [link](2)[as]2[end link] - Not everyone needs massive muscles to be a good fighter. Spike's quick, that's something too. Urik should stop prodding him to be something he's not.";
+		say "     [link](3)[as]3[end link] - Order Urik to leave the young man in peace. The orc's here as your fucktoy and should act like it.";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 3:
+			say "Choice? (1-3)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to encourage training, [link]2[end link] to discourage training or [link]3[end link] to put the orc in his place.";
+		if calcnumber is 1:
+			LineBreak;
+			say "     As you tell Urik that he may proceed with working out together with Spike, the big male grins bradly and replies, 'Knew you'd see it my way, boss! Just you wait, I'll help the little bitch reach his full potential!'";
+		else if calcnumber is 2:
+			LineBreak;
+			say "     Urik snorts at your mention of other combat tactics. 'You mean dodging and shit? Yeah, that'll last right until he's smacked aside by the one hit he can't dodge? And where will you be then, huh?' Clearing your throat to remind him that you're the master and Urik himself now has the role of pleasing you, the orc makes a throwing-away gesture and replies, 'Bah, fine. I'll tell the little bitch that training's cancelled next time I see him. Would probably have been too weak in the end anyways.'";
+			now Stamina of Spike is 100; [training stopped - and Urik won't be nice about giving the news ]
+		else if calcnumber is 3:
+			LineBreak;
+			say "     Stepping up to the big orc, you take his jaw in your hand and keep his head in a firm grip as you look him into the eyes. Doing your best to project dominance, you then ask the orc who and what he is. After a little grumble, Urik replies, 'I'm an orc breeder. Your breeder, boss. But still, the - umnph!' The further words he wanted to say after his admission are cut short as you push two fingers into his mouth and tell him to suck on them, like a good little cumslut. He obeys immediately, with the usual built-in sexual submissiveness to authority figures that is typical of an orc breeder. Planting your other hand on his crotch and giving the orc's balls a tight squeeze, you tell him in no uncertain terms that he should keep his hands off Spike and not bother him again. When you let go of Urik eventually, he blows out his breath and finally says, 'I'll tell the little bitch that training's cancelled next time I see him. Would probably have been too weak in the end anyways.'";
+			now Stamina of Spike is 100; [training stopped - and Urik won't be nice about giving the news ]
+	else if Stamina of Spike is 2 or Stamina of Spike is 3: [Spike got a 'protein shake']
+		say "     As you bring up Spike, Urik chuckles under his breath. 'Your little slut-puppy? What about him?' Looking at him with a raised eyebrow prompts the orc to roll his eyes and waves a large hand, then adds, 'I mean your 'companion'. Don't you worry, I won't just grab him and bend him over to show him his inner bitch. Wouldn't do to have a breeder pound your pet, yadda yadda.' With a shrug of his broad, muscular shoulders, Urik lets that part of the topic drop, moving on to saying, 'At least the boy's trying in our training sessions. He's still far too weak, maybe as strong as a half-grown orcling, but there's some determination in that puppy. I think given time, we can make something out of him!'";
+		LineBreak;
+		say "     [bold type]What do you reply to the orc?[roman type][line break]";
+		LineBreak;
+		say "     [link](1)[as]1[end link] - Commend him about his service in training Spike.";
+		say "     [link](2)[as]2[end link] - Ask about what exactly is in that 'protein shake' he gave Spike.";
+		say "     [link](3)[as]3[end link] - Order Urik to leave the young man in peace. The orc's here as your fucktoy and should act like it.";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 3:
+			say "Choice? (1-3)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to encourage training, [link]2[end link] to ask about the shake or [link]3[end link] to put the orc in his place.";
+		if calcnumber is 1:
+			LineBreak;
+			say "     As you tell Urik that he may proceed with working out together with Spike, the big male grins bradly and replies, 'Knew you'd see it my way, boss! Just you wait, I'll help the little bitch reach his full potential!'";
+		else if calcnumber is 2:
+			LineBreak;
+			say "     As you pose a question about what exactly he did feed Spike, Urik clears his throat and says, 'It's all good stuff in there, just what the boy needs. Protein powder, clean water and so on, you know.' Raising an eyebrow and giving him a pointed look, you wait for him to continue, at which point Urik rubs the back of his neck. '...and maybe just, er, half a load of my cum. Thereabouts,' he adds in a casual tone of voice. 'Hey, why are you looking at me like that?! It's good for him, you know. What do you think makes orclings strong and grow so much right away once they're 'out of the pouch'?' As a reminder that his all-male species has a perculiar way of reproduction, the orc gives his own buttock a slap, drawing your attention to it. 'It didn't look like he's turning green or getting tusks, so you don't have to worry about Spike becoming an orc. It'll just make him build some mass quicker, alright? And maybe become a little bit horny.'";
+			say "     The last sentence Urik said fairly quietly, and you read between the lines to realize that being dosed with Urik's cum will make Spike grow muscle mass, but also push the doberman's arousal, with the possibility of making him quite plyable and hungry for more. Enough of it will likely put him in a blissed-out state of drunken lust. [bold type]Given this realization, what do you want to do about the matter?[roman type][line break]";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - Let Urik continue to hand out his special shakes.";
+			say "     ([link]N[as]n[end link]) - Enough of this. Forbid the orc to dose Spike!";
+			if Player consents:
+				LineBreak;
+				say "     Seeing that you're cool about what he's been doing with Spike, Urik puts on a rather relieves smile. 'I looted the powder from a top fitness studio not to far away. With that stuff and a little orc oomph, your puppyboy will be a tough guy for sure! I'll make something out of him.";
+			else:
+				LineBreak;
+				say "     As you categorically forbid the orc to feed Spike any more of those 'special' shakes, the orc grumbles and sullenly looks to the side. 'Well, that'll shoot the progress for training him in the foot for sure, boss. I can keep training him, but without the support, that'll take ages! You really don't wanna have a puppy-boy that's worth something in a fight? Your call, I guess.'";
+				now Stamina of Spike is 51;
+	else if Stamina of Spike is 4 or Stamina of Spike is 5 or Stamina of Spike is 6:
+		say "     As you bring up Spike, Urik chuckles under his breath. 'Your little slut-puppy? What about him?' Looking at him with a raised eyebrow prompts the orc to roll his eyes and waves a large hand, then adds, 'I mean your 'companion'. Don't you worry, I won't just grab him and bend him over to show him his inner bitch. Wouldn't do to have a breeder pound your pet, yadda yadda.' With a shrug of his broad, muscular shoulders, Urik lets that part of the topic drop, moving on to saying, 'At least the boy's trying in our training sessions. He's still far too weak, maybe as strong as a half-grown orcling, but there's some determination in that puppy. I think given time, we can make something out of him! You should see him chug down the protein shakes, they'll help a bunch too.'";
+	else if Stamina of Spike is 50: [Spike won't accept any more drinks]
+		say "     As you bring up Spike, Urik chuckles under his breath. 'Your little slut-puppy? What about him?' Looking at him with a raised eyebrow prompts the orc to roll his eyes and waves a large hand, then adds, 'I mean your 'companion'. Don't you worry, I won't just grab him and bend him over to show him his inner bitch. Wouldn't do to have a breeder pound your pet, yadda yadda.' With a shrug of his broad, muscular shoulders, Urik lets that part of the topic drop, moving on to saying, 'At least the boy's trying in our training sessions. He's still far too weak, maybe as strong as a half-grown orcling, but there's some determination in that puppy. I think given time, we can make something out of him!'";
+		say "     Informing the orc that you've told Spike about the possibility of there being cum in his shakes, the orc looks at you somewhat sullenly. 'Aw, what did you do that for? He needs his things, err - nutrients! So what if I put half a load of my cum into it? What do you think makes orclings strong and grow so much right away once they're 'out of the pouch'?' As a reminder that his all-male species has a perculiar way of reproduction, the orc gives his own buttock a slap, drawing your attention to it. 'The squeamish little bitch won't take no shakes no more, I bet! I can keep training him, but without the support, that'll take ages! You really don't wanna have a puppy-boy that's worth something in a fight? Your call, I guess.'";
+		now Stamina of Spike is 51;
+	else if Stamina of Spike > 50 and Stamina of Spike < 100: [Urik won't offer any more shakes]
+		say "     As you bring up Spike, Urik sighs. 'I'm still training your little slut-puppy, but the progress is really slow. Should have let me keep giving him shakes. They were good for him!' With an annoyed grunt, he waves off the topic, not wanting to say any more about it.";
+	else if Stamina of Spike is 100: [training ended]
+		say "     As you bring up Spike, Urik looks at you sullenly and grumbles. 'I won't do anything with your little slut-puppy, fine?! Leave me alone about him.'";
 
 Section 3 - Events
 

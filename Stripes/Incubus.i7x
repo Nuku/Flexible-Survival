@@ -298,11 +298,17 @@ When Play begins:
 ]
 
 
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Incubus Infection"	"Infection"	""	Incubus Infection rule	1000	false
+
 [A sample structure for succumbing/surviving messages at the end of the game.]
 [Numerous other examples can be found in existing creature files.]
-
-when play ends:
-	if BodyName of Player is "Incubus":
+This is the Incubus Infection rule:
+	if Player has a body of "Incubus":
+		trigger ending "Incubus Infection"; [Here it states, that the ending has been played.]
 		if Player is pure and graphics is true, project the figure of Incubus_clothed_icon;
 		if humanity of Player < 10:
 			if Player is herm:

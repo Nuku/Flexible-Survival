@@ -13,7 +13,6 @@ lustatt is a number that varies. lustatt is usually 0.
 struggleatt is a number that varies. struggleatt is usually 0.
 bsextimer is a number that varies. bsextimer is usually 0.
 boundstate is a truth state that varies. boundstate is usually false.
-voreloss is a truth state that varies. voreloss is usually false.
 psycheadjust is a number that varies. psycheadjust is usually 0.
 lustadjust is a number that varies. lustadjust is usually 0.
 
@@ -121,23 +120,8 @@ to sierrabind:
 		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break][run paragraph on]";
 		say "Sanity: [humanity of Player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of Player]	Thirst: [thirst of Player]	Struggle: [bracket]-[if struggleatt > 1][bold type]X[roman type][else]-[end if][if struggleatt > 0][bold type]X[roman type][else]-[end if][close bracket][line break][run paragraph on]";
 		if humanity of Player < 1:
-			repeat with y running from 1 to number of filled rows in Table of Random Critters:
-				choose row y in Table of Random Critters;
-				if Name entry is "Sierrasaur":
-					now MonsterID is y;
-					break;
-			now BodyName of Player is "Sierrasaur";
-			now FaceName of Player is "Sierrasaur";
-			now TailName of Player is "Sierrasaur";
-			now SkinName of Player is "Sierrasaur";
-			now CockName of Player is "Sierrasaur";
-			now tail of Player is tail entry;
-			now Face of Player is face entry;
-			now Skin of Player is skin entry;
-			now Body of Player is body entry;
-			now Cock of Player is cock entry;
-			now voreloss is true;
 			now Trixieexit is 1;
+			trigger ending "Sierrasaur's Sex Toy";
 			end the story saying "You lost your mind while bound!";
 		else:
 			let k be 0;
@@ -603,36 +587,44 @@ to say usesierraseed:		[only alters sizes, not gender]
 
 Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "Sierrasaur":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Sierrasaur's Sex Toy"	"BadEnd"	"Sex Slave"	Sierrasaur's Sex Toy rule	20	false
+"Sierrasaur Infection"	"Infection"	""	Sierrasaur Infection rule	1000	false
+
+this is the Sierrasaur's Sex Toy rule:
+	if ending "Sierrasaur's Sex Toy" is triggered:
+		say "     Succumbing from inside the reptile, you eventually grow obsessively fond of these twisted confines. Though you never grow to full size, you nonetheless remain ever tended to by your parental kin, leaving your new home only to be fed ";
+		if (player is female or player is mpreg_ok) and "Sterile" is not listed in feats of Player:
+			say "and give birth to the beast's offspring";
+		else if Player is male and sierramale is false:
+			say "and sire the beast's offspring";
+		say ".";
+		say "     Over time, the creature's pack grows in size, leaving you with others to deal with";
+		if Player is submissive:
+			say ". So innately inclined to this role, you eventually find yourself being tossed from beast to beast, like some manner of toy. You find yourself particularly useful as a tool for training the newer and less experienced of your kin";
+		else:
+			say ". You prove to be a little bit of a nuisance, as you're rather ill-inclined to share your adoptive parent's fleshy abode with new prospects. Your caretaker doesn't seem to mind all that much, even if it proves a bit inconvenient at times";
+		say ". In time, all your memory is a blur of the reptiles['] taut, unyielding flesh flooding and enveloping you day in and day out...";
+		the Player is enslaved;
+
+This is the Sierrasaur Infection rule:
+	if Player has a body of "Sierrasaur":
+		trigger ending "Sierrasaur Infection";
 		if humanity of Player < 10:
-			if voreloss is true:
-				say "     Succumbing from inside the reptile, you eventually grow obsessively fond of these twisted confines. Though you never grow to full size, you nonetheless remain ever tended to by your parental kin, leaving your new home only to be fed ";
-				if (player is female or player is mpreg_ok) and "Sterile" is not listed in feats of Player:
-					say "and give birth to the beast's offspring";
-				else if Player is male and sierramale is false:
-					say "and sire the beast's offspring";
-				say ".";
-				say "     Over time, the creature's pack grows in size, leaving you with others to deal with";
-				if Player is submissive:
-					say ". So innately inclined to this role, you eventually find yourself being tossed from beast to beast, like some manner of toy. You find yourself particularly useful as a tool for training the newer and less experienced of your kin";
-				else:
-					say ". You prove to be a little bit of a nuisance, as you're rather ill-inclined to share your adoptive parent's fleshy abode with new prospects. Your caretaker doesn't seem to mind all that much, even if it proves a bit inconvenient at times";
-				say ". In time, all your memory is a blur of the reptiles['] taut, unyielding flesh flooding and enveloping you day in and day out...";
+			say "     Overwhelmed by your infection, you eventually lose all self-control, made to wander the land a ponderous, twisted beast. Your strain eventually progresses until you fully assume the form of your kin, now a mere animal in the eyes of those unwise enough to enter your reach.";
+			say "     Encountering one such individual, no doubt searching for survivors, you instinctively subdue them before they are drawn within your slick confines, your new child soon made to be consort. It takes only a few hours of its beloved occupancy, intermittently broken up by your wanton rituals of feeding, until your new companion succumbs as you had, eventually offering itself ";
+			if Player is male and ((player is female or player is mpreg_ok) and "Sterile" is not listed in feats of Player) and sierramale is false:
+				say "to sire your children";
+				if sierramale is true:
+					say " and you to sire its";
+			else if Player is male and sierramale is false:
+				say "for you to sire its children";
+			else if (player is female or player is mpreg_ok) and "Sterile" is not listed in feats of Player:
+				say "to sire your children";
 			else:
-				say "     Overwhelmed by your infection, you eventually lose all self-control, made to wander the land a ponderous, twisted beast. Your strain eventually progresses until you fully assume the form of your kin, now a mere animal in the eyes of those unwise enough to enter your reach.";
-				say "     Encountering one such individual, no doubt searching for survivors, you instinctively subdue them before they are drawn within your slick confines, your new child soon made to be consort. It takes only a few hours of its beloved occupancy, intermittently broken up by your wanton rituals of feeding, until your new companion succumbs as you had, eventually offering itself ";
-				if Player is male and ((player is female or player is mpreg_ok) and "Sterile" is not listed in feats of Player) and sierramale is false:
-					say "to sire your children";
-					if sierramale is true:
-						say " and you to sire its";
-				else if Player is male and sierramale is false:
-					say "for you to sire its children";
-				else if (player is female or player is mpreg_ok) and "Sterile" is not listed in feats of Player:
-					say "to sire your children";
-				else:
-					say "to satisfy you on a whim and help you find more to be brought into the fold";
-				say ". Over time, you make a great family of beasts, their slow pace belying a bottomless hunger...";
+				say "to satisfy you on a whim and help you find more to be brought into the fold";
+			say ". Over time, you make a great family of beasts, their slow pace belying a bottomless hunger...";
 		else:
 			say "     You're soon found by the military and gradually reintroduced to normal society. Even though you're assessed to not be infectious, this doesn't stop the strain from eventually progressing to the point where you assume the full scale and stature of your feral kin - though you thankfully retain your mental articulation.";
 			say "     The way you are, there's little you can find for conventional work, and you ultimately find yourself following the same line of work of many infected";

@@ -385,8 +385,13 @@ to say centheat:
 
 Section 7 - Endings
 
-when play ends:
-	if BodyName of Player is "Mutant Centaur":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Mutant Centaur Infection"	"Infection"	""	Mutant Centaur Infection rule	1000	false
+
+This is the Mutant Centaur Infection rule:
+	if Player has a body of "Mutant Centaur":
+		trigger ending "Mutant Centaur Infection";
 		if humanity of Player < 10:
 			say "     As your new, tainted instincts take over, you are drawn back to the plains to join the growing herd of corrupted centaurs in their fight to spread their infection to the others";
 			if centaurmate is 1 and player is female:

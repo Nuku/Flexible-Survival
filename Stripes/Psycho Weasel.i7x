@@ -257,11 +257,17 @@ When Play begins:
 ]
 
 
+Section 4 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Psycho Weasel Infection"	"Infection"	""	Psycho Weasel Infection rule	1000	false
+
 [A sample structure for succumbing/surviving messages at the end of the game.]
 [Numerous other examples can be found in existing creature files.]
-
-when play ends:
-	if BodyName of Player is "Psycho Weasel":
+This is the Psycho Weasel Infection rule:
+	if Player has a body of "Psycho Weasel":
+		trigger ending "Psycho Weasel Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     As your experiences in this strange city gone mad overwhelm you, you do the only sane thing... you go insane as well. Released from the bonds of sanity, you feel so much better and run wild through the city. Overflowing with the strangeness you've witnessed, you start to babble wildly about it all, letting it loose in an incoherent stream of consciousness tirade. As you do this, you wander the city as if aimlessly, though somehow you find yourself at the city hospital. Inside, you are soon met by a friendly nurse and some strong orderlies who fit you in your very own snug straightjacket. Held in the psychiatric ward, you are tended to by several of the vixens and watched over by the big jaguars. They are nice to you, keeping bound up tight for your own good, but often willing to play with you when you'd been a good boy. Occasionally you get the urge to go wander the halls for fun and sneak out to play for a while before being brought back.";
 		else:

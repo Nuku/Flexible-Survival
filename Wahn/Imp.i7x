@@ -420,18 +420,19 @@ An everyturn rule: [hellhound bad end progress every turn]
 			WaitLineBreak;
 			say "     The three of them pounce upon you like wild beasts, leaving you not a chance to recover or even fight back. Pushing you down and growling in savage amusement, they rip your clothes and gear to shreds... mostly without giving you more than just a few nips with their teeth. Finally, the lead hellhound steps over your body and grabs your neck between his powerful jaws to hold you tight and lines himself up with your body. With a savage thrust, the beast fills you with its knotted cock, then fucks you mercilessly until breeding your hole with a heavy load of demon cum. One after another, they all take turns using you, going again and again until you're nothing but a cummy mess. Only after that are you dragged over the back of the lead hound by one of his pack-mates, then carried to the portal they entered your world through.";
 			say "     A succubus and incubus pair of demons welcome you to your new home - their demon prince's lair, which is decorated in a lewd medieval style. After a thorough scrubbing you're brought before Skarnoth, a handsome horned demon around whom a noticeable aura of power ripples in the air. The demon lord makes sure to show you his... displeasure, at being cheated out of an angelic slave, and after a hard fucking you're added to the pool of his mortal pets - to be played with, abused and used.";
-			now TailName of Player is "Demon Slave";
-			now FaceName of Player is "Demon Slave";
-			now SkinName of Player is "Demon Slave";
-			now BodyName of Player is "Demon Slave";
-			now CockName of Player is "Demon Slave";
+			trigger ending "Demon Slave";
 			end the story saying "You're stuck in hell - there's no coming back from that!";
 
 
 Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "Imp Male":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Imp Male Infection"	"Infection"	""	Imp Male Infection rule	1000	false
+
+This is the Imp Male Infection rule:
+	if Player has a body of "Imp Male":
+		trigger ending "Imp Male Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10: [succumbed]
 			say "     Finally giving in to your base desires, you take off and fly over the city on the search for someone to fuck. Small as you may be, from high up everyone looks tiny and weak - which makes you feel powerful and strong. They're just insects to you, mortal mayflies to be played with. Before long, your search bears fruit - there is a small group of people holed up on top of a building, uninfected humans that have the stairwell barricaded and cower from the monsters below in a shack on the roof. Of course, this doesn't protect them from you as you, with your wings and demonic powers. With little more than a few fireballs thrown around, you frighten them into obedience and gain a flock of fucktoys to serve your every whim. This even goes so far that they never even dare to try calling out to the soldiers as they sweep the city, instead hiding according to your commands and being left behind - all yours, forever.";
 		else:[sane]

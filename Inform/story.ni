@@ -12,7 +12,7 @@ Use MAX_PROP_TABLE_SIZE of 51000000.
 use MAX_STATIC_DATA of 12500000.
 Use MAX_OBJ_PROP_COUNT of 1280.
 use MAX_SYMBOLS of 13000000. ["Compiler finished with code 10"]
-use MAX_NUM_STATIC_STRINGS of 270000. [ Code 10 ]
+use MAX_NUM_STATIC_STRINGS of 370000. [ Code 10 ]
 use SYMBOLS_CHUNK_SIZE of 250000. [ Code 10 ]
 use ALLOC_CHUNK_SIZE of 1450000.
 use MAX_OBJECTS of 4000.
@@ -303,6 +303,7 @@ A person has a truth state called PenileVirgin. PenileVirgin is usually true. [n
 A person has a truth state called SexuallyExperienced. SexuallyExperienced is usually false. [not saved till new infection system update]
 A person has a truth state called TwistedCapacity. TwistedCapacity is usually false. [not saved till new infection system update]
 A person has a truth state called Sterile. Sterile is usually false. [not saved till new infection system update]
+A person has a truth state called Sleeping. Sleeping is usually false. [should not be saved? unless someone wants to make sleeping beauty]
 A person has a text called Originalgender. Originalgender is usually "Undefined". [original gender of the pre-transform person]
 A person has a text called PlayerOriginalgender. PlayerOriginalGender is usually "Undefined". [first meeting gender with the player]
 A person has a text called PlayerLastGender. PlayerLastGender is usually "Undefined". [gender of the player during the last meeting]
@@ -543,6 +544,12 @@ Definition: A grab object (called x) is wielded:
 Definition: A grab object (called x) is unwieldy:		[applies to armaments only]
 	if grab object is journal, no;
 	if the absolute value of ( scalevalue of Player - objsize of x ) > 1, yes;
+	no;
+
+A person can be asleep. A person is usually not asleep.
+
+Definition: A person (called x) is asleep:
+	if Sleeping of x is true, yes;
 	no;
 
 A person can be defaultnamed. A person is usually defaultnamed.
@@ -1089,6 +1096,12 @@ Definition: A person (called x) is barechest:
 
 Definition: A person (called x) is naked:
 	if x is barecrotch and x is barechest and x is barefoot:
+		yes;
+	else:
+		no;
+
+Definition: A person (called x) is gimpy:
+	if gimp mask is equipped:
 		yes;
 	else:
 		no;
@@ -2095,7 +2108,7 @@ when play begins:
 	add { "Anthro Shaft Beast", "Dragon", "Anthro Dragoness", "Drone Wasp", "Ebonflame drake", "Ebonflame Dragator", "Ebonflame Whelp", "Dolphin Herm", "Feral Sea Dragon", "Feral Sea Dragoness", "Feral Shaft Beast", "Killer Whale", "Lizard Girl", "Naga", "Shark Herm", "Red Kangaroo", "Gator Herm", "Skunk", "Spidergirl", "Wyvern", "Yamato Dragon", "Yamato Dragoness" } to infections of TailweaponList;
 
 when play begins:
-	add { "Cheetah Woman", "Cougar", "Feline", "Felinoid", "Feral Cheetah", "Jaguar Male", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Panther Herm", "Panther Taur", "Plush lion", "Rubber Puma", "Rubber tigress", "Sabretooth", "Siamese Cat", "Snow Bat", "Snow Leopard", "Sphinx", "Tiger", "Tigertaur", "Malayan Tiger Herm", "Wildcat" } to infections of FelineList;
+	add { "Cheetah Woman", "Cougar", "Feline", "Felinoid", "Feral Cheetah", "Jaguar Male", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Panther Herm", "Panther Taur", "Plush lion", "Rubber Puma", "Rubber Tigress", "Sabretooth", "Siamese Cat", "Snow Bat", "Snow Leopard", "Sphinx", "Tiger", "Tigertaur", "Malayan Tiger Herm", "Wildcat" } to infections of FelineList;
 
 when play begins:
 	add { "Husky Alpha", "Alpha Wolf", "Ember Breeder", "Cerberus", "Chocolate Lab", "Coyote", "Dalmatian", "Doberman Bitch", "Doberman Male", "Husky Bitch", "Feral Wolf", "German Shepherd Male", "German Shepherd Bitch", "Jackalboy", "Jackalman", "Latex Wolf", "Painted Wolf Herm", "Pit bull", "Retriever Female", "Smooth Collie Shemale", "Werewolf Costume", "Wolftaur", "Wrestling Wolf" } to infections of CanineList;
@@ -2125,7 +2138,7 @@ when play begins:
 	add { "Beaver", "Hyper Squirrel", "Slut Rat" } to infections of RodentList;
 
 when play begins:
-	add { "Bottlenose Toy", "Latex Vixen Herm", "Latex Fox", "Latex Mistress", "Latex Wolf", "Rubber Puma", "Rubber tigress" } to infections of LatexList;
+	add { "Bottlenose Toy", "Latex Vixen Herm", "Latex Fox", "Latex Mistress", "Latex Wolf", "Rubber Puma", "Rubber Tigress" } to infections of LatexList;
 
 when play begins:
 	add { "Liquidshifter" } to infections of SlimeList;
@@ -2153,7 +2166,7 @@ when play begins:
 	add { "Feral Sea Dragon", "Feral Sea Dragoness", "Dolphin Herm", "Hydra Beast", "Naga", "Shark Herm", "Sierrasaur", "Snake", "Yamato Dragon", "Yamato Dragoness", "Wyvern", "Spidertaur Male" } to infections of InternalCockList;
 
 when play begins:
-	add { "Anthro Shaft Beast", "Ember Breeder", "Catgirl", "Cheetah Woman", "Corota", "Cougar", "Ebonflame Dragator", "Ebonflame drake", "Ebonflame Whelp", "Feline Gymnast", "Felinoid", "Feral Cheetah", "Feral Gryphon", "Feral Shaft Beast", "Fire Elemental", "Jaguar Warrior", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Panther Herm", "Panther Taur", "Plush lion", "Rubber tigress", "Sabretooth", "Shadow Beast Male", "Sphinx", "Snow Bat", "Tiger", "Malayan Tiger Male", "Tigertaur", "Malayan Tiger Herm", "Wildcat", "Rubber Puma" } to infections of BarbedCockList;
+	add { "Anthro Shaft Beast", "Ember Breeder", "Catgirl", "Cheetah Woman", "Corota", "Cougar", "Ebonflame Dragator", "Ebonflame drake", "Ebonflame Whelp", "Feline Gymnast", "Felinoid", "Feral Cheetah", "Feral Gryphon", "Feral Shaft Beast", "Fire Elemental", "Jaguar Warrior", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Panther Herm", "Panther Taur", "Plush lion", "Rubber Tigress", "Sabretooth", "Shadow Beast Male", "Sphinx", "Snow Bat", "Tiger", "Malayan Tiger Male", "Tigertaur", "Malayan Tiger Herm", "Wildcat", "Rubber Puma" } to infections of BarbedCockList;
 
 when play begins:
 	add { "Dragontaur", "Dracovixentaur", "Ebonflame Dragator", "Ebonflame drake", "Ebonflame Whelp", "Feral Sea Dragoness", "Feral Sea Dragon", "Fire Sprite", "Fire Elemental", "Flaming Lynx", "Yamato Dragoness", "Yamato Dragon", "Wyvern" } to infections of FirebreathList;
@@ -2720,6 +2733,7 @@ To Extend game by (x - a number):
 
 
 To process (x - a grab object):
+	let tan be hunger of player;
 	if x is temporary and x is owned:
 		say "You eagerly use the [x]!";
 		let found be 0;
@@ -2999,6 +3013,10 @@ To process (x - a grab object):
 			now HP of Player is maxHP of Player;
 		say "Using your healing booster, you inject the mix into your body, giving a quick boost to your infected body's healing rate. You regain [special-style-1][healed][roman type] HP.";
 		delete healing booster;
+	if tan > hunger of player and "Tanuki Salts" is listed in feats of player:
+		say "Dashing a little tanuki salts helped things along. Mmm, divinely tasty.";
+		playerEat 5;
+		increase the morale of the player by 5;
 
 
 understand "talk [person]" as conversing.
@@ -6612,6 +6630,7 @@ Include Gator by Nuku Valente.
 Include Gazelle by Sarokcat.
 Include Gels by Darthan.
 Include German shepherd by Stripes.[replaces 'Random German shepherd']
+Include German Shepherd Bitch by Kirov.
 Include Giant by Stripes.
 Include Giraffe by Stripes.
 Include Goat Janitor by McRabid.
@@ -6627,6 +6646,7 @@ Include Gryphons Plot by Shay.
 Include Gunbunny by Stripes.
 Include Harpy by Nuku Valente.
 Include Hawkman by Sarokcat.
+Include Hellfire Demon by Gherod.
 Include Helot by Wahn.
 Include Hentai Fan by Stripes.
 Include Herm Dolphin by Hellerhound.
@@ -6816,6 +6836,7 @@ Include Adam by Wahn.
 Include Alex by Stripes.
 Include Arcanologist by Taelyn.
 Include Bad Alexandra by Wahn.
+Include Allen by Wahn.
 Include Alexandra Breeding by Wahn.
 Include Alexandra Cuckolding by Wahn.
 Include Alpha Fang Scenes by Nuku Valente.
@@ -6857,6 +6878,7 @@ Include Daisy by Sarokcat n Verath.
 Include Danny by Wahn.
 Include Darius by Wahn.
 Include David by Wahn.
+Include Davies by Wahn.
 Include Deer by Stripes.
 Include Denise by Wahn.
 Include Demonologist by Gherod.
@@ -6920,6 +6942,7 @@ Include Julian by Prometheus.
 Include Kai by WhiteRabbit.
 Include Kara by Sarokcat.
 Include Karen by AGentlemanCalledB.
+Include Katherine by Kirov.
 Include Krampus by Wahn.
 Include Kristen by Stripes.
 Include Kurt by Rikaeus.
@@ -6946,6 +6969,7 @@ Include Meredith by Stripes.
 Include Micaela by Stripes.
 Include Midnight by Sarokcat.
 Include Milo by CrimsonAsh.
+Include Mogdraz by Gherod.
 Include Monty by Wahn.
 Include Mouse Taur by Nuku Valente.
 Include Pet Mutt by CrimsonAsh.
@@ -7015,6 +7039,7 @@ Include Val by Wahn.
 Include Vanessa by Stripes.
 Include Velos by Blue Bishop.
 Include Vent Fox by Dys.
+Include Voria by Kurainyx.
 Include Wally by Rikaeus.
 Include Wendy by Wahn.
 Include Wild Mustang by Wahn.
@@ -7036,13 +7061,6 @@ Include Honey by Luneth.
 Include Korvin by Stripes.
 Include Rachel Mouse by Stripes.
 Include Ryousei by Wahn.
-
-When play ends:
-	say "----------[line break]";
-	say "I hope you enjoyed playing that as much as we enjoyed coding/writing it! It doesn't have to end here though! Come join other mutants and play in the Multiplayer Flexible Survival universe with us!";
-	say "https://flexiblesurvival.com/[line break]";
-	say "Once you have a character, click [']direct control['], and we'll be there, waiting to give a hand!";
-	say "Already have a MUD/MUCK/MUSH client? We're at flexiblesurvival.com port 2222";
 
 
 Book - Start the Game
@@ -7245,8 +7263,7 @@ To startFeatget: [alternate featget used for start] [Checkpoint-]
 			if calcnumber > 0 and calcnumber <= the number of filled rows in table of gainable feats:
 				now current menu selection is calcnumber;
 				choose row current menu selection from the table of gainable feats;
-				say "[title entry]: [description entry][line break]";
-				say "Is this what you want?";
+				say "[title entry]: [description entry]?";
 				if Player consents:
 					now freefeatgeneral is the title in row calcnumber of table of gainable feats; [important change from regular featget]
 					now featqualified is 0;
@@ -7277,8 +7294,7 @@ To startFunFeatget: [alternate funfeatget used for start]
 			if calcnumber > 0 and calcnumber <= the number of filled rows in table of gainable feats:
 				now current menu selection is calcnumber;
 				choose row current menu selection from the table of gainable feats;
-				say "[title entry]: [description entry][line break]";
-				say "Is this what you want?";
+				say "[title entry]: [description entry]?";
 				if Player consents:
 					now freefeatfun is the title in row calcnumber of table of gainable feats; [important change from regular featget]
 					now featqualified is 0;
@@ -8647,9 +8663,9 @@ to say menuwardlist:
 			say "Mindcontrol ";
 		if VoreList is warded:
 			say "Vore ";
-		say "[close bracket][roman type]";
+		say "[close bracket][roman type][line break]";
 	else:
-		say "[bold type]None Warded[roman type]";
+		say "[bold type]None Warded[roman type][line break]";
 
 to say menubanlist:
 	if CockVoreList is banned or FurryList is banned or MaleList is banned or FemaleList is banned or HumorousList is banned or DemonList is banned or HermList is banned or IncestList is banned or TransList is banned or MindcontrolList is banned or NonconList is banned or VoreList is banned:
@@ -8680,9 +8696,9 @@ to say menubanlist:
 			say "Mindcontrol ";
 		if VoreList is banned:
 			say "Vore ";
-		say "[close bracket][roman type]";
+		say "[close bracket][roman type][line break]";
 	else:
-		say "[bold type]None Banned[roman type]";
+		say "[bold type]None Banned[roman type][line break]";
 
 to say gsopt_1:
 	now calcnumber is -1;

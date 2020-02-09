@@ -1281,9 +1281,16 @@ instead of going down from Grey Abbey Library while (XP of Erica > 0 and XP of E
 		now XP of Erica is 99;
 ]
 
-Section 5 - Endings
+
 [
-when play ends:
+Section 5 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Erica's Epilogue"	"NPC"	""	Erica's Epilogue rule	900	false
+
+This is the Erica's Epilogue rule:
+	[trigger ending "Erica's Epilogue"; [Here it states, that the ending has been played.]]
 	if (HP of Erica is 0):
 		say "     A";
 	else:

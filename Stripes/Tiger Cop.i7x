@@ -906,7 +906,11 @@ When Play begins:
 
 Section 10 - Endings
 
-when play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Tiger Cop Endings"	"Special"	"Mixed"	Tiger Cop Endings rule	970	false
+
+This is the Tiger Cop Endings rule: [TODO: Reorganize this mess later on (@Stadler#3007)]
 	[force auto-change of name. Prevents problems with dirty water, etc... with endings]
 	[Does not resolve issues with children/use of descriptive names during the game, but better than nothing]
 	if BodyName of Player is "Malayan Tiger Male":
@@ -920,7 +924,7 @@ when play ends:
 	if CockName of Player is "Malayan Tiger Male":
 		now CockName of Player is "Malayan Tiger Herm";
 	if mqstatus is 0 or mqstatus is 1:				[no motel quest / incomplete]
-		if BodyName of Player is "Malayan Tiger Herm":
+		if Player has a non-shifting body of "Malayan Tiger Herm":
 			if humanity of Player < 10:
 				say "[THendingC]";
 			else:
@@ -928,7 +932,7 @@ when play ends:
 	if mqstatus is 99:						[refused the motel key hunt]
 		if humanity of Player > 9:				[all survivors get a standard add-on]
 			say "[THending_refusal][line break]";
-		if BodyName of Player is "Malayan Tiger Herm":
+		if Player has a non-shifting body of "Malayan Tiger Herm":
 			if humanity of Player < 10:
 				say "[THendingD]";
 			else:
@@ -936,7 +940,7 @@ when play ends:
 	if mqstatus is 2:							[gave keys, did not accompany]
 		if humanity of Player > 9:				[all survivors get a standard add-on]
 			say "[THending_helper][line break]";
-		if BodyName of Player is "Malayan Tiger Herm":
+		if Player has a non-shifting body of "Malayan Tiger Herm":
 			if humanity of Player < 10:
 				say "[THendingE]";
 			else if TailName of Player is "Malayan Tiger Herm" and FaceName of Player is "Malayan Tiger Herm" and SkinName of Player is "Malayan Tiger Herm":			[visibly fully tigress]
@@ -944,7 +948,7 @@ when play ends:
 			else:
 				say "[THendingA]";
 	if mqstatus is 4:							[fled from motel hunt]
-		if BodyName of Player is "Malayan Tiger Herm":
+		if Player has a non-shifting body of "Malayan Tiger Herm":
 			if humanity of Player < 10:
 				say "[THendingF]";
 			else if TailName of Player is "Malayan Tiger Herm" and FaceName of Player is "Malayan Tiger Herm" and SkinName of Player is "Malayan Tiger Herm":			[visibly fully tigress]

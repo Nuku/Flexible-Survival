@@ -218,9 +218,15 @@ When Play begins:
 ]
 
 
+Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Junkman":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Junkman Infection"	"Infection"	""	Junkman Infection rule	1000	false
+
+This is the Junkman Infection rule:
+	if Player has a body of "Junkman":
+		trigger ending "Junkman Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     Drawn back to the scrapyard by your corrupted instincts, you join the other junkmen in wandering around the piles of junk, satisfying your lusts on each other and others you find. Your people have little ambition or organization, only existing in the moment, enjoying short lives corrupting a handful of creatures and siring a few offspring before eventually breaking down and rejoining their scrapyard home.";
 		else:

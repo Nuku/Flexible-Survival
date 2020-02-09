@@ -491,7 +491,7 @@ to HellRealmBadEnd1: [player is fucked by a single demon and wakes up later hook
 	WaitLineBreak;
 	say "     There's no way for you to calculate how much time has passed since you were taken by the demon brute, but you don't really care anymore. When you wake up, you barely have any will to open your eyes given the pleasure you're receiving. You're stuck on some kind of machine that's milking your oversized parts ceaselessly, and there's tubes injecting a strange white liquid inside you that makes you feel completely mindless. There's no way out of this, you're condemned to be forever milked in Hell for the pleasure of the demons... But at least, they make you enjoy it.";
 	now battleground is "Void";
-	now bodyname of player is "Hell Prisoner";
+	trigger ending "Hell Prisoner";
 	end the story saying "You're stuck in Hell - there's no coming back from that!";
 
 to HellRealmBadEnd2: [player is gangbanged by the remaining 3 demons and wakes up later hooked up in a milking machine for eternity as a demon slave]
@@ -500,7 +500,7 @@ to HellRealmBadEnd2: [player is gangbanged by the remaining 3 demons and wakes u
 	WaitLineBreak;
 	say "     There's no way for you to calculate how much time has passed since you were taken by the demon brutes, but you don't really care anymore. When you wake up, you barely have any will to open your eyes given the pleasure you're receiving. You're stuck on some kind of machine that's milking your oversized parts ceaselessly, and there's tubes injecting a strange white liquid inside you that makes you feel completely mindless. There's no way out of this, you're condemned to be forever milked in Hell for the pleasure of the demons... But at least, they make you enjoy it.";
 	now battleground is "Void";
-	now bodyname of player is "Hell Prisoner";
+	trigger ending "Hell Prisoner";
 	end the story saying "You're stuck in Hell - there's no coming back from that!";
 
 to HellRealmBadEnd3: [player hooks themselves up on the tentacle machine, losing themselves forever to the sinful pleasures of being milked for eternity as a demon slave]
@@ -509,7 +509,7 @@ to HellRealmBadEnd3: [player hooks themselves up on the tentacle machine, losing
 	WaitLineBreak;
 	say "     Time becomes irrelevant, and you're changed beyond recognition. Your body adapted to the constant milking made by the tentacles, with oversized tits, balls and cock constantly guzzling as much milk and cum as possible. You're not even stationed in the same place as before, though you could barely notice given your current state. Nothing else matters but how good it feels to keep orgasming endlessly, without any care for the world outside, and the white mixture keeps you well drugged and addicted to it. There's no way out of this, you're condemned to be forever milked in Hell for the pleasure of the demons... But at least, you found a way to enjoy it.";
 	now battleground is "Void";
-	now bodyname of player is "Hell Prisoner";
+	trigger ending "Hell Prisoner";
 	end the story saying "You're stuck in Hell - and you deserved it.";
 
 to HellRealmBadEnd4: [player is fucked by the incubus and the succubus, then turned into their personal pet slave]
@@ -521,7 +521,7 @@ to HellRealmBadEnd4: [player is fucked by the incubus and the succubus, then tur
 	WaitLineBreak;
 	say "     You don't even notice time passing by you with your new days serving the Masters. As their lair prospers, you spend your feeble existence pleasing your almighty Lord and Mistress, doing everything they say, making sure they praise you in the end with a little sexual relief. You get plenty of use when they're especially happy with your efforts, and eventually, they even let you roam freely knowing you'll always be back for your duties! The problems of the past are long gone, and at each day, the demons get closer to world domination... Soon, everyone will have the pleasure to serve them as you do, knowing they'll be working for someone greater than themselves...";
 	now battleground is "Void";
-	now bodyname of player is "Hell Prisoner";
+	trigger ending "Hell Prisoner";
 	end the story saying "You're stuck in Hell - there's no coming back from that!";
 
 to HellRealmBadEnd5: [player is dragged by the tentacle traps and eaten alive]
@@ -531,7 +531,8 @@ to HellRealmBadEnd5: [player is dragged by the tentacle traps and eaten alive]
 	say "     Though this luxurious treatment doesn't come without a consequence. As you're stripped off your freedom of action and thoughts, reduced to a plaything for a demonic tentacle beast, there's no way to escape your inevitable fate. While you're being pulled deeper into the darkness of Hell, your begin losing your senses. Its members are much wider here, enough for you to fit in. It doesn't take too long as you feel something viscous and slimy sliding by your head over to your neck, as you're feeling yourself being pulled deeper into one enormous pulsing fleshy tunnel. You struggle to realize what's happening to you as your entire body is taken by the beast, having slurped you down to your torso, then to your legs, until only your feet remained outside.";
 	say "     Making one hungry last throb, the giant tentacle sucks you in to the last inch, sending you into its bowels, where you're left sinking in the inner juices of the demonic creature. You fall into an eternal slumber as you feel yourself melting away, and the most disturbing part is that it's the best thing you ever felt in your now ending life.";
 	now battleground is "Void";
-	now bodyname of player is "dead";
+	the Player was ended by "Hell's meal";
+	trigger ending "Player has died";
 	end the story saying "Your body and soul have been devoured by an hellish beast.";
 
 [***********************************************************]
@@ -1553,6 +1554,25 @@ when play begins:
 	[ Resolution stages                          ]
 	[   0: The ritual remains unknown            ]
 	[   1: Ritual is now known in Ancient Tome   ]
+
+
+[***********************************************************]
+[***********************************************************]
+[***********************************************************]
+Section 8 - Endings
+[***********************************************************]
+[***********************************************************]
+[***********************************************************]
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Hell Prisoner"	"BadEnd"	"Prisoner"	Hell Prisoner rule	20	false
+
+This is the Hell Prisoner rule:
+	if ending "Hell Prisoner" is triggered:
+		say "     You have delved in far too deep into the demonic realm. Hell has taken you and imprisoned your soul for all eternity. Now you serve only to satisfy the demons['] every whim of any kind, your will broken facing an inevitable fate. There's no hope... nor salvation.";
+		the Player is imprisoned;
+
 
 
 [***********************************************************]

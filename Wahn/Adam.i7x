@@ -842,8 +842,13 @@ Section 6 - Ending
 [***********************************************************]
 
 [
-when play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Adam's Epilogue"	"NPC"	""	Adam's Epilogue rule	900	false
+
+This is the Adam's Epilogue rule:
 	if (HP of Adam > 4): [Adam was born]
+		trigger ending "Adam's Epilogue"; [Here it states, that the ending has been played.]
 		if Adam is in Quartermaster's Tent: [never left the camp]
 			if humanity of Player < 10:
 				increase score by 0; [do nothing, player succumbed and unaware of Adam's fate.]

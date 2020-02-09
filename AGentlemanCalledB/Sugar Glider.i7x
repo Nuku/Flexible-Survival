@@ -335,8 +335,13 @@ the scent of crushed candies is "The crumbled candy smells unsurprisingly sweet.
 Section 4 - Endings [Awaiting sugar ferret tie ins]
 
 [
-when play ends:
-	if BodyName of Player is "Sugar Glider":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Sugar Glider Infection"	"Infection"	""	Sugar Glider Infection rule	1000	false
+
+This is the Sugar Glider Infection rule:
+	if Player has a body of "Sugar Glider":
+		trigger ending "Sugar Glider Infection";
 		if humanity of Player < 10:
 			say "     Succumbing to your sugary infection, you are soon drawn back to the sights and sounds of the midway...";
 		else:

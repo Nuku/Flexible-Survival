@@ -57,7 +57,7 @@ to VariableSave:
 	repeat with x running from 1 to the number of filled rows in the Table of GameVariableIDs:
 		choose row x in the Table of GameVariableIDs;
 		now CurrentVariableName is Name entry;
-		if debug is at level 6:
+		if debug is at level 10:
 			say "Stashing variable [CurrentVariableName].";
 		if Type Entry is "text":
 			TextVariableSave;
@@ -72,27 +72,27 @@ to VariableSave:
 		else if Type Entry is "list of numbers":
 			NumberListVariableSave;
 	write File of TextSave from the Table of GameTexts; [freshly made table gets saved to file]
-	if debug is at level 6:
+	if debug is at level 10:
 		say "TextSave File Written.";
 	blank out the whole of Table of GameTexts; [empty out all old data]
 	write File of NumberSave from the Table of GameNumbers; [freshly made table gets saved to file]
-	if debug is at level 6:
+	if debug is at level 10:
 		say "NumberSave File Written.";
 	blank out the whole of Table of GameNumbers; [empty out all old data]
 	write File of TruthSave from the Table of GameTruths; [freshly made table gets saved to file]
-	if debug is at level 6:
+	if debug is at level 10:
 		say "TruthSave File Written.";
 	blank out the whole of Table of GameTruths; [empty out all old data]
 	write File of IndexedTextSave from the Table of GameIndexedTexts; [freshly made table gets saved to file]
-	if debug is at level 6:
+	if debug is at level 10:
 		say "IndexedTextSave File Written.";
 	blank out the whole of Table of GameIndexedTexts; [empty out all old data]
 	write File of TextListSave from the Table of GameTextLists; [freshly made table gets saved to file]
-	if debug is at level 6:
+	if debug is at level 10:
 		say "TextListSave File Written.";
 	blank out the whole of Table of GameTextLists; [empty out all old data]
 	write File of NumberListSave from the Table of GameNumberLists; [freshly made table gets saved to file]
-	if debug is at level 6:
+	if debug is at level 10:
 		say "NumberListSave File Written.";
 	blank out the whole of Table of GameNumberLists; [empty out all old data]
 
@@ -485,8 +485,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is BastetSexBattleCount;
 		-- "battleitem":
 			now NumberVarValue entry is battleitem;
-		-- "bcending":
-			now NumberVarValue entry is bcending;
 		-- "bclatearrival":
 			now NumberVarValue entry is bclatearrival;
 		-- "bcuntethered":
@@ -773,8 +771,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is damageout;
 		-- "DariusLostItems":
 			now NumberVarValue entry is DariusLostItems;
-		-- "darkdays":
-			now NumberVarValue entry is darkdays;
 		-- "DavidBrutusMarcVar":
 			now NumberVarValue entry is DavidBrutusMarcVar;
 		-- "DavidBunkerEntry":
@@ -1497,8 +1493,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is KoballoonLossCounter;
 		-- "KoballoonMet":
 			now NumberVarValue entry is KoballoonMet;
-		-- "KoballoonSexBadEnd":
-			now NumberVarValue entry is KoballoonSexBadEnd;
 		-- "koboldgangmet":
 			now NumberVarValue entry is koboldgangmet;
 		-- "koboldgangsubs":
@@ -2139,8 +2133,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is OfficeGirlsDominance;
 		-- "OfficeGirlsFriendship":
 			now NumberVarValue entry is OfficeGirlsFriendship;
-		-- "OgreMeetings":
-			now NumberVarValue entry is OgreMeetings;
 		-- "OliverRelationship":
 			now NumberVarValue entry is OliverRelationship;
 		-- "Onyxboislut":
@@ -2545,8 +2537,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is SonnyRelationship;
 		-- "SpidertaurRelationship":
 			now NumberVarValue entry is SpidertaurRelationship;
-		-- "spiritlove":
-			now NumberVarValue entry is spiritlove;
 		-- "Spriteconsent":
 			now NumberVarValue entry is Spriteconsent;
 		-- "Spritedefeat":
@@ -2809,8 +2799,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is VikingUltimatum;
 		-- "VikingWar":
 			now NumberVarValue entry is VikingWar;
-		-- "Vinetrapped":
-			now NumberVarValue entry is Vinetrapped;
 		-- "violinfound":
 			now NumberVarValue entry is violinfound;
 		-- "vixcountdown":
@@ -3614,8 +3602,6 @@ to TruthVariableSave:
 			now TruthVarValue entry is vgeckoboost;
 		-- "violinspritefight":
 			now TruthVarValue entry is violinspritefight;
-		-- "voreloss":
-			now TruthVarValue entry is voreloss;
 		-- "vorespecial1":
 			now TruthVarValue entry is vorespecial1;
 		-- "weakwilled":
@@ -3773,7 +3759,7 @@ to VariableTextLoad:
 				debug at level 4 say "Skipping empty text [TextVarName in row x of the Table of GameTexts].[line break]";
 				next;
 			choose row x in the Table of GameTexts;
-			if debug is at level 6:
+			if debug is at level 10:
 				say "Restoring text [TextVarName entry].";
 			if TextVarName entry is:
 				-- "PronounChoice":
@@ -4002,7 +3988,7 @@ to VariableTextLoad:
 					now wrtail is TextVarValue entry;
 				-- "wrTailName":
 					now wrTailName is TextVarValue entry;
-			if debug is at level 6:
+			if debug is at level 10:
 				say "DEBUG -> VarName '[TextVarName entry]' restored to '[TextVarValue entry]'.";
 	else:
 		say "No Text Save File Found!";
@@ -4016,7 +4002,7 @@ to VariableNumberLoad:
 				debug at level 4 say "Skipping empty Number [NumberVarName in row x of the Table of GameNumbers].[line break]";
 				next;
 			choose row x in the Table of GameNumbers;
-			if debug is at level 6:
+			if debug is at level 10:
 				say "Restoring Number [NumberVarName entry].";
 			if NumberVarName entry is:
 				-- "featgained":
@@ -4173,8 +4159,6 @@ to VariableNumberLoad:
 					now BastetSexBattleCount is numberVarValue entry;
 				-- "battleitem":
 					now battleitem is numberVarValue entry;
-				-- "bcending":
-					now bcending is numberVarValue entry;
 				-- "bclatearrival":
 					now bclatearrival is numberVarValue entry;
 				-- "bcuntethered":
@@ -4461,8 +4445,6 @@ to VariableNumberLoad:
 					now damageout is numberVarValue entry;
 				-- "DariusLostItems":
 					now DariusLostItems is numberVarValue entry;
-				-- "darkdays":
-					now darkdays is numberVarValue entry;
 				-- "DavidBrutusMarcVar":
 					now DavidBrutusMarcVar is numberVarValue entry;
 				-- "DavidBunkerEntry":
@@ -5187,8 +5169,6 @@ to VariableNumberLoad:
 					now KoballoonLossCounter is numberVarValue entry;
 				-- "KoballoonMet":
 					now KoballoonMet is numberVarValue entry;
-				-- "KoballoonSexBadEnd":
-					now KoballoonSexBadEnd is numberVarValue entry;
 				-- "koboldgangmet":
 					now koboldgangmet is numberVarValue entry;
 				-- "koboldgangsubs":
@@ -5829,8 +5809,6 @@ to VariableNumberLoad:
 					now OfficeGirlsDominance is numberVarValue entry;
 				-- "OfficeGirlsFriendship":
 					now OfficeGirlsFriendship is numberVarValue entry;
-				-- "OgreMeetings":
-					now OgreMeetings is numberVarValue entry;
 				-- "OliverRelationship":
 					now OliverRelationship is numberVarValue entry;
 				-- "Onyxboislut":
@@ -6237,8 +6215,6 @@ to VariableNumberLoad:
 					now SonnyRelationship is numberVarValue entry;
 				-- "SpidertaurRelationship":
 					now SpidertaurRelationship is numberVarValue entry;
-				-- "spiritlove":
-					now spiritlove is numberVarValue entry;
 				-- "Spriteconsent":
 					now Spriteconsent is numberVarValue entry;
 				-- "Spritedefeat":
@@ -6501,8 +6477,6 @@ to VariableNumberLoad:
 					now VikingUltimatum is numberVarValue entry;
 				-- "VikingWar":
 					now VikingWar is numberVarValue entry;
-				-- "Vinetrapped":
-					now Vinetrapped is numberVarValue entry;
 				-- "violinfound":
 					now violinfound is numberVarValue entry;
 				-- "vixcountdown":
@@ -6671,7 +6645,7 @@ to VariableNumberLoad:
 					now zigseat is numberVarValue entry;
 				-- "zpc_Zc":
 					now zpc_Zc is numberVarValue entry;
-			if debug is at level 6:
+			if debug is at level 10:
 				say "DEBUG -> VarName '[NumberVarName entry]' restored to '[NumberVarValue entry]'.";
 	else:
 		say "No Number Save File Found!";
@@ -6682,7 +6656,7 @@ to VariableTruthLoad:
 		read File of TruthSave into the Table of GameTruths;
 		repeat with x running from 1 to the number of filled rows in the Table of GameTruths:
 			choose row x in the Table of GameTruths;
-			if debug is at level 6:
+			if debug is at level 10:
 				say "Restoring Truth [TruthVarName entry].";
 			if TruthVarName entry is:
 				-- "A_Candy":
@@ -7313,8 +7287,6 @@ to VariableTruthLoad:
 					now vgeckoboost is TruthVarValue entry;
 				-- "violinspritefight":
 					now violinspritefight is TruthVarValue entry;
-				-- "voreloss":
-					now voreloss is TruthVarValue entry;
 				-- "vorespecial1":
 					now vorespecial1 is TruthVarValue entry;
 				-- "weakwilled":
@@ -7341,7 +7313,7 @@ to VariableTruthLoad:
 					now zigorhadiyaquest is TruthVarValue entry;
 				-- "zpc_inzone":
 					now zpc_inzone is TruthVarValue entry;
-			if debug is at level 6:
+			if debug is at level 10:
 				say "DEBUG -> VarName '[TruthVarName entry]' restored to '[TruthVarValue entry]'.";
 	else:
 		say "No Truth Save File Found!";
@@ -7352,7 +7324,7 @@ to VariableIndexedTextLoad:
 		read File of IndexedTextSave into the Table of GameIndexedTexts;
 		repeat with x running from 1 to the number of filled rows in the Table of GameIndexedTexts:
 			choose row x in the Table of GameIndexedTexts;
-			if debug is at level 6:
+			if debug is at level 10:
 				say "Restoring IndexedText [IndexedTextVarName entry].";
 			if IndexedTextVarName entry is:
 				-- "bcupsize":
@@ -7361,7 +7333,7 @@ to VariableIndexedTextLoad:
 					now bmagic is IndexedTextVarValue entry;
 				-- "cupsize":
 					now cupsize is IndexedTextVarValue entry;
-			if debug is at level 6:
+			if debug is at level 10:
 				say "DEBUG -> VarName '[IndexedTextVarName entry]' restored to '[IndexedTextVarValue entry]'.";
 	else:
 		say "No IndexedText Save File Found!";
@@ -7392,7 +7364,7 @@ to VariableTextListLoad:
 					add TextListVarValue entry to lbcompList;
 				-- "ndmlist":
 					add TextListVarValue entry to ndmList;
-			if debug is at level 6:
+			if debug is at level 10:
 				say "DEBUG -> [x]: Added '[TextListVarValue entry]' to TextList [TextListName].";
 	else:
 		say "No TextList Save File Found!";
@@ -7435,7 +7407,7 @@ to VariableNumberListLoad:
 					add NumberListVarValue entry to pfpcList;
 				-- "velospostmusings":
 					add NumberListVarValue entry to velospostmusings;
-			if debug is at level 6:
+			if debug is at level 10:
 				say "DEBUG -> [x]: Added '[NumberListVarValue entry]' to NumberList [NumberListName].";
 	else:
 		say "No NumberList Save File Found!";

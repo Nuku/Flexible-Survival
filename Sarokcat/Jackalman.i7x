@@ -206,8 +206,15 @@ to jackalmanify:
 	now non-infectious entry is true;  [...then close to prevent random infection]
 
 
-when play ends:
-	if BodyName of Player is "Jackalman":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Jackalman Infection"	"Infection"	""	Jackalman Infection rule	1000	false
+
+This is the Jackalman Infection rule:
+	if Player has a body of "Jackalman":
+		trigger ending "Jackalman Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is male:
 				say "Finally giving in to the dark primal urges within, you swiftly return to the shop in the mall, Nermine welcoming you back eagerly as you pin her to the counter, and fuck her again and again. She eagerly submits to your needs, your strong jackal-like body and male musk making you irresistible to the strange shopkeeper, as with every strong thrust of your canine cock you make her even more subservient to your will. Eventually sated, you enjoy looking around your new shop with amusement, while your new little jackal fucktoy licks your paws eagerly. An evil grin stretches across your jackal muzzle as you ponder all the amusement this store full of unusual treasures could bring you. You and Nermine quickly pack up her shop as the military close in, and she shows you how to change the location of the store, soon you are setting up in a lovely and unsuspecting college town. The foolish students are soon flocking to your store to buy all sorts of strange and unusual transformative trinkets, and you are more than happy to have your pet shopkeep sell them to them. The amusing sights of the people who fail to use the items carefully make you and Nermine laugh heartily, as you both begin to enjoy the game of seeing how badly your customers can misuse the items, enjoying their new forms immensely. Some few manage to 'win' by being careful and using their purchases responsibly, and those few you often give even nicer toys to as a reward, some of them you even reward personally by making them into your own personal pets. When the military comes to investigate the strange outbreak of infection in the town, they find your shop already gone, moved on to a new town already, and looking forward to a long and enjoyable existence with your lovely pet jackalwoman...";

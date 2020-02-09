@@ -254,8 +254,13 @@ When Play begins:
 ]
 
 
-when play ends:
-	if BodyName is "Chinchilla":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Chinchilla Infection"	"Infection"	""	Chinchilla Infection rule	1000	false
+
+This is the Chinchilla Infection rule:
+	if Player has a body of "Chinchilla":
+		trigger ending "Chinchilla Infection";
 		if humanity of Player < 10:
 			say "     Overtaken by your infection's influence you retreat to the plains, where your kin reside. Warmly greeted by them, you find yourself fitting in quite well, your days soon filled with constant sex, only occasionally interrupted by other predators or hunters, of which you either evade or add to your numbers. Your population eventually reach a point where you start spilling into more civilized areas, your disarming appearance proving very effective and quickly bringing them into the fold as well...";
 		else:

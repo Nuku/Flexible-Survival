@@ -268,8 +268,13 @@ When Play begins:
 
 
 
-when play ends:
-	if BodyName of Player is "Spidergirl":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Spidergirl Infection"	"Infection"	""	Spidergirl Infection rule	1000	false
+
+This is the Spidergirl Infection rule:
+	if Player has a body of "Spidergirl":
+		trigger ending "Spidergirl Infection";
 		if humanity of Player < 10:
 			say "     Your predatory instincts take over and you scurry off into the ruins of the city, drinking the blood of other outcasts and forcing them to bear your eggs. It is a rough existence, but eventually you acquire a sort of 'harem' of lovers who enjoy the rough imprisonment you offer...";
 		else:

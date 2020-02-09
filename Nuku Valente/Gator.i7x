@@ -264,28 +264,6 @@ When Play begins:
 ]
 
 
-when play ends:
-	if BodyName of Player is "Gator Herm":
-		if voreloss is true:
-			if gator den is known:
-				say "     Having spent too long in the predator's stomach, you become too tired to do anything. The gator snorts in amusement when she feels your struggles come to an end. 'Oops, looks like I forgot about you being in there,' she says mockingly while she pats her stomach. 'Sucks that I'm down a lover now, but I guess that if you couldn't survive my stomach, you weren't going to be much of a mate down the line.' With you becoming no more than a layer of pudge for the predator, the scaly herm goes off to search for her next victim to fuck and likely also devour. Rubbing her stomach, which was less full than it was hours ago, she says, 'Don't worry, I'm sure that you'll make my future lovers happy, with where you settled.' She eyes her breasts, a good cup bigger than they were before.";
-			else:
-				say "     Bested by the predator's overwhelming strength, you are too tired to struggle anymore, let alone escape the twisted confines. Your body goes limp as your consciousness fades. The gator chuckles when she feels your struggles come to an end. Patting her stomach, she taunts, 'You might not have been good enough to be my fuckbuddy, but at least you were good for a snack.' With you becoming no more than a layer of pudge for the reptile, the scaly herm goes off to search for her next victim to fuck and likely also devour. Rubbing her stomach, which was less full than it was hours ago, she says, 'Don't worry, I'm sure that you'll make my future lovers happy, with where you settled.' She eyes her breasts, a good cup bigger than they were before.";
-		else if humanity of Player < 10:
-			if gatorconsent is 1:
-				say "     You settle down with that gator, your mind ensnared by her enchanting voice. She welcomes you with open arms and conditions you with love and affection, soon making you a perfectly obedient little pet for her.";
-				if Player is male:
-					say "     She sates her female urges on your cock, riding it whenever she gets in the proper mood. Her frequent dalliances result in children, but they are feral at birth, and usually flee off to parts unknown. It does not seem to bother her greatly.";
-				if Player is female:
-					say "     When her hunting goes poorly, you prove to be a very skilled outlet for her frustration. She rides you in every position over the rest of your life, filling your belly with child after child, squealing snapping beasts that stay only long enough to get a rough meal from your chest before fleeing into the wilds.";
-			else:
-				say "     Your fragile mind snaps, and you growl, seeking a nice dark place to hide. You prey on mutants and humans foolish enough to come too close, grabbing them in your great jaws and hauling them to your den to violate[if vorelevel > 1]. If your hunger is too great, they never leave. Fortunately, this is only about one in five, and the others are left[else] and leave[end if] dizzy with pleasure, but unharmed. Humans are mutated, but most leave, except for one. Even snapping at the odd person doesn't get them to budge. Eventually, you give up and gain a partner.";
-		else:
-			if gatorconsent is 1:
-				say "     As the military mobilizes into the city, you hurry back to your sweet gator's arms. You embrace as equals, and you begin telling her your plan. She looks doubtful at first, but eventually you talk her out of her sewer home. You are both rescued and whisked away back to civilization. She quickly appreciates to having so many warm bodies around, and she settles in to get a formal education, with you at her side for encouragement, support, and great sex. She becomes a therapist. Her hypnotic voice and her eagerness to meet new people drives her success, and she never leaves your side either. It is a good life, spent together, successful.";
-			else:
-				say "     Life as a gator is somewhat interesting. Most expect you to be rough and cold blooded, and everyone is surprised when they touch you to find soft, almost silky skin that's warm to the touch. You secure a deal with a cosmetics firm, becoming a spokesperson for their [']beat the gator['] campaign that proves wildly successful.";
-
 to gatorfy:
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
@@ -512,23 +490,9 @@ to GatorBind:
 		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break]";
 		say "Sanity: [humanity of Player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of Player]	Thirst: [thirst of Player]	Struggle: [GatorStruggle]";
 		if humanity of Player < 1:
-			repeat with y running from 1 to number of filled rows in Table of Random Critters:
-				choose row y in Table of Random Critters;
-				if Name entry is "Gator Herm":
-					now MonsterID is y;
-					break;
-			now voreloss is true;
-			now BodyName of Player is "Gator Herm";
-			now FaceName of Player is "Gator Herm";
-			now TailName of Player is "Gator Herm";
-			now SkinName of Player is "Gator Herm";
-			now CockName of Player is "Gator Herm";
-			now tail of Player is tail entry;
-			now Face of Player is face entry;
-			now Skin of Player is skin entry;
-			now Body of Player is body entry;
-			now Cock of Player is cock entry;
 			now Trixieexit is 1;
+			trigger ending "Gator Herm Vore";
+			the Player was ended by "Vore by Gator Herm";
 			end the story saying "You got eaten by a gator";
 		else:
 			let k be 0;
@@ -589,5 +553,38 @@ to GatorBind:
 
 to say GatorStruggle:
 	say "[bracket]-[if struggleatt > 2][bold type]X[roman type][else]-[end if][if struggleatt > 1][bold type]X[roman type][else]-[end if][if struggleatt > 0][bold type]X[roman type][else]-[end if][close bracket][line break][run paragraph on]";
+
+Section 5 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Gator Herm Vore"	"Voreloss"	""	Gator Herm Vore rule	10	false
+"Gator Herm Infection"	"Infection"	""	Gator Herm Infection rule	1000	false
+
+This is the Gator Herm Vore rule:
+	if ending "Gator Herm Vore" is triggered:
+		if gator den is known:
+			say "     Having spent too long in the predator's stomach, you become too tired to do anything. The gator snorts in amusement when she feels your struggles come to an end. 'Oops, looks like I forgot about you being in there,' she says mockingly while she pats her stomach. 'Sucks that I'm down a lover now, but I guess that if you couldn't survive my stomach, you weren't going to be much of a mate down the line.' With you becoming no more than a layer of pudge for the predator, the scaly herm goes off to search for her next victim to fuck and likely also devour. Rubbing her stomach, which was less full than it was hours ago, she says, 'Don't worry, I'm sure that you'll make my future lovers happy, with where you settled.' She eyes her breasts, a good cup bigger than they were before.";
+		else:
+			say "     Bested by the predator's overwhelming strength, you are too tired to struggle anymore, let alone escape the twisted confines. Your body goes limp as your consciousness fades. The gator chuckles when she feels your struggles come to an end. Patting her stomach, she taunts, 'You might not have been good enough to be my fuckbuddy, but at least you were good for a snack.' With you becoming no more than a layer of pudge for the reptile, the scaly herm goes off to search for her next victim to fuck and likely also devour. Rubbing her stomach, which was less full than it was hours ago, she says, 'Don't worry, I'm sure that you'll make my future lovers happy, with where you settled.' She eyes her breasts, a good cup bigger than they were before.";
+		the Player is vored;
+
+This is the Gator Herm Infection rule:
+	if Player has a body of "Gator Herm":
+		trigger ending "Gator Herm Infection";
+		if humanity of Player < 10:
+			if gatorconsent is 1:
+				say "     You settle down with that gator, your mind ensnared by her enchanting voice. She welcomes you with open arms and conditions you with love and affection, soon making you a perfectly obedient little pet for her.";
+				if Player is male:
+					say "     She sates her female urges on your cock, riding it whenever she gets in the proper mood. Her frequent dalliances result in children, but they are feral at birth, and usually flee off to parts unknown. It does not seem to bother her greatly.";
+				if Player is female:
+					say "     When her hunting goes poorly, you prove to be a very skilled outlet for her frustration. She rides you in every position over the rest of your life, filling your belly with child after child, squealing snapping beasts that stay only long enough to get a rough meal from your chest before fleeing into the wilds.";
+			else:
+				say "     Your fragile mind snaps, and you growl, seeking a nice dark place to hide. You prey on mutants and humans foolish enough to come too close, grabbing them in your great jaws and hauling them to your den to violate[if vorelevel > 1]. If your hunger is too great, they never leave. Fortunately, this is only about one in five, and the others are left[else] and leave[end if] dizzy with pleasure, but unharmed. Humans are mutated, but most leave, except for one. Even snapping at the odd person doesn't get them to budge. Eventually, you give up and gain a partner.";
+		else:
+			if gatorconsent is 1:
+				say "     As the military mobilizes into the city, you hurry back to your sweet gator's arms. You embrace as equals, and you begin telling her your plan. She looks doubtful at first, but eventually you talk her out of her sewer home. You are both rescued and whisked away back to civilization. She quickly appreciates to having so many warm bodies around, and she settles in to get a formal education, with you at her side for encouragement, support, and great sex. She becomes a therapist. Her hypnotic voice and her eagerness to meet new people drives her success, and she never leaves your side either. It is a good life, spent together, successful.";
+			else:
+				say "     Life as a gator is somewhat interesting. Most expect you to be rough and cold blooded, and everyone is surprised when they touch you to find soft, almost silky skin that's warm to the touch. You secure a deal with a cosmetics firm, becoming a spokesperson for their [']beat the gator['] campaign that proves wildly successful.";
 
 Gator ends here.

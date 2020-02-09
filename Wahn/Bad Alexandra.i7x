@@ -621,7 +621,7 @@ Section 2 - Bad Girl Sexxxings
 Part 1 - Bad Alexandra Sex Selection
 
 to say sexwithAlexandra_bg:
-	if "Horny Bastard" is listed in Traits of Alexandra and lastfuck of Alexandra - turns < 4:
+	if "Horny Bastard" is listed in Traits of Alexandra and lastfuck of Alexandra - turns < 3:
 		say "     'Not that I don't want to boss, but you gotta let me have a little while to rest. Just can't keep up with your libido, you nymphomaniac.'";
 	else if "Horny Bastard" is not listed in Traits of Alexandra and lastfuck of Alexandra - turns < 6:
 		say "     'As fun as this has been, I do need at least a short break before we go again[if HP of Alexandra < 50], boss[end if].'";
@@ -1535,8 +1535,13 @@ to say A_IcarusComment:
 
 Section 13 - Endings
 
-when play ends:
-	if alexandra is booked and HP of Alexandra < 50:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Alexandra's Epilogue"	"NPC"	""	Alexandra's Epilogue rule	900	false
+
+This is the Alexandra's Epilogue rule:
+	if Alexandra is booked and HP of Alexandra < 50:
+		trigger ending "Alexandra's Epilogue"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     When the doberwoman realizes that you're not going to be returning, she strikes out into the city[if Libido of alexandra > 0] with her offspring[end if]. After beating up several other canines and a few lightly infected survivors she manages to track down, [if Libido of alexandra > 0]they form[else]she forms[end if] a gang of rough canine thugs. With herself as the alpha and gang leader, her pack - formed mostly newly infected Dobermans and her offspring - fight for a claim a chunk of the city as their own. They have little concern for boundaries or rules and happily take whatever they want, be it goods or sex, from any they happen to accost.";
 		else:

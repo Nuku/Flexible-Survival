@@ -246,8 +246,16 @@ instead of sniffing Spotted fur:
 
 The usedesc of Spotted fur is "You take out the strangely attractive small tuft of fur you acquired earlier, rolling the soft fur between your fingers, you find the feel of the fur to be strongly sensual. Enjoying the pleasant feel of the fur, you begin to slowly rub the small bundle of fur over your skin, the silken soft fur tuft tickling your cheeks and chest as you trail it lightly over them several times, making you smile happily. After several passes however you go to trail it along your cheek again, only to realize the fur tuft is no longer there, looking down, you see where bits of the leopardlike fur have anchored themselves into your skin, giving you a small patch of sensual fur of your own to stroke, and you can almost feel the leopardlike changes moving throughout the rest of your body...";
 
-when play ends:
-	if BodyName of Player is "Leopardman":
+
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Leopardman Infection"	"Infection"	""	Leopardman Infection rule	1000	false
+
+This is the Leopardman Infection rule:
+	if Player has a body of "Leopardman":
+		trigger ending "Leopardman Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is male:
 				if Player is female:

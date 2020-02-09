@@ -403,8 +403,16 @@ healing booster is a grab object. It is a part of the player. It is fast. It is 
 
 the scent of the healing booster is "The healing booster smells of chemicals and medicine.".
 
-when play ends:
-	if BodyName of Player is "Vixen Nurse":
+
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Vixen Nurse Infection"	"Infection"	""	Vixen Nurse Infection rule	1000	false
+
+This is the Vixen Nurse Infection rule:
+	if Player has a body of "Vixen Nurse":
+		trigger ending "Vixen Nurse Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     Falling to the instincts and reprogramming of the infection, you drift off into the city and eventual come to the city hospital. There you are taken in by the silvery vixen nurses of the hospital staff, feeling the urge to work alongside them. They welcome you happily, and lustfully, as do the other denizens of the large medical facility.";
 			if hospquest < 2:

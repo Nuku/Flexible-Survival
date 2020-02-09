@@ -368,8 +368,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Panther Taur":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Panther Taur Infection"	"Infection"	""	Panther Taur Infection rule	1000	false
+
+This is the Panther Taur Infection rule:
+	if Player has a body of "Panther Taur":
+		trigger ending "Panther Taur Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You get the sudden urge to prowl, and begin seeking an ideal mate. Something within you does not allow you to accept any but the strongest[if Cock Count of Player > 1]. Oddly enough, exposed and vulnerable females seem to always be acceptable. Just the thought of pinning a female down and shoving your [cock size desc of Player] [Cock of Player] rod into their depths is enough to give you a raging hard on[end if].";
 		else:

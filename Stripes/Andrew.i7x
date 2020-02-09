@@ -280,6 +280,7 @@ to say andrewdemonshow: [evil Brutus + Andrew]
 			now demon brute is not tamed;
 			now lust of Andrew is 100;
 			if Libido of Player < 90, now Libido of Player is 90;
+			trigger ending "Demon Orgy";
 			end the story saying "You lose your mind to the infernal orgy you foolishly instigated.";
 
 to say AndrewBrutusShow: [cleansed Brutus + Andrew]
@@ -395,8 +396,13 @@ carry out andrewtesting:
 
 Section 9 - Endings
 
-when play ends:
-	if lust of Andrew is 100:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Demon Orgy"	"BadEnd"	""	Demon Orgy rule	20	false
+
+This is the Demon Orgy rule:
+	if ending "Demon Orgy" is triggered:
 		say "     The wild debauchery at the Palomino goes on and on, the safe haven falling into a den for the demonic orgy. It becomes a nexus of infection that spreads out and corrupts the surrounding area. During the wild sex, the demon takes the amulet from you and drapes it around Andrew's neck with a sinister grin. Your last order to the demon had been to obey Andrew, to fuck him hard and to not harm him, all of which he's done, in a dark and twisted way. Having screwed the wolf into a wild lust, Andrew is no more than a puppet for the demon, his only desire now is for the demon to keep fucking him. And remaining unharmed by the harsh pounding, the demon can screw the wolf for hours on end before he passes out. Whenever the wolf is unconscious, the demon simply switches to fucking a few of the horny supplicants in the crowd to keep the scent of infernal lust heavy in the air so the orgy never ends. The Palomino Club, briefly a safe haven from the menace of feral mutants, has become a source of them that cannot be stopped.";
+		the Player is lost;
 
 Andrew ends here.

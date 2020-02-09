@@ -370,8 +370,15 @@ to say reindeerbreastheat:
 
 Section 5 - Endings
 
-when play ends:
-	if BodyName of Player is "Reindeer":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Reindeer Infection"	"Infection"	""	Reindeer Infection rule	1000	false
+
+This is the Reindeer Infection rule:
+	if ending "Susan's Epilogue" is triggered:
+		make no decision;
+	if Player has a body of "Reindeer":
+		trigger ending "Reindeer Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     As your mind fails, it empties of most things, filled instead with Christmas songs, holiday specials and festive recipes. You prance outside, feeling light on your feet even as the temperature starts to drop around you. Pulling the heat out of your environment, you use this energy to fly, taking to the air with natural ease. You trot merrily through the air, starting to laugh and cheer as the spirit of the season fills you. For it is the holiday season. It is always the holiday season now, in your mind.";
 			say "     You fly around the city, soon spotting the reindeer from before and moving to join him. He is very pleased to see you joining him in the holiday spirit. He fits you with a festive harness festooned with bells. He then mounts you in mid-air, taking you as his mate and filling you with a large, thick load of caribou cum.";

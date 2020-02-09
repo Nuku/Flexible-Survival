@@ -565,8 +565,13 @@ When Play begins:
 
 Section 5 - Endings
 
-when play ends:
-	if BodyName of Player is "Feline":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Feline Infection"	"Infection"	"Mixed"	Feline Infection rule	1000	false
+
+This is the Feline Infection rule:
+	if Player has a body of "Feline":
+		trigger ending "Feline Infection";
 		if humanity of Player < 10:
 			if HP of Leonard < 3:			[not w/Leonard]
 				say "     Your feline instincts start to come to the fore as your human mind falls to pieces. You make your way back to the park, drawn by the scent of the other felines like yourself there, feeling a growing need within your loins";

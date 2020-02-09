@@ -281,8 +281,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Sand Man":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Sand Man Infection"	"Infection"	""	Sand Man Infection rule	1000	false
+
+This is the Sand Man Infection rule:
+	if Player has a body of "Sand Man":
+		trigger ending "Sand Man Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "As you succumb to the infection, you move to the beach and spend all your time there from then on, propositioning any person creature you find - and even mostly getting what you want given your good lucks and charming single-mindedness. When the military moves in a while later, you have some intimate contacts with a female soldier scouting the beach and later two of her friends, a man and a women, whom she brings to see you. Together, they decide to smuggle you out of the city to enjoy your company once they're back at their home base. So soon, after being given a shot to make you non-infectious, you find yourself in a shipping crate on a truck.";
 			say "Thankfully, your new form doesn't really need to breathe, otherwise this would be pretty uncomfortable. After arriving at your destination, they release you on a small beach, where you spend your time getting regular visits from your soldier friends and also have fun with anyone else who comes along.";

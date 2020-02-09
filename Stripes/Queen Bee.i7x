@@ -216,8 +216,13 @@ Definition: a person is queenbeecocked:
 
 Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "Queen Bee":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Queen Bee Infection"	"Infection"	""	Queen Bee Infection rule	1000	false
+
+This is the Queen Bee Infection rule:
+	if Player has a body of "Queen Bee":
+		trigger ending "Queen Bee Infection"; [Here it states, that the ending has been played.]
 		if Player is pure:
 			project the figure of QueenBee_icon;
 		if humanity of Player < 10:

@@ -366,8 +366,13 @@ to say eatstickysushi:
 
 Section 5 - Endings
 
-when play ends:
-	if BodyName of Player is "Anime Babe":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Anime Babe Infection"	"Infection"	""	Anime Babe Infection rule	1000	false
+
+This is the Anime Babe Infection rule:
+	if Player has a body of "Anime Babe":
+		trigger ending "Anime Babe Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is pure:
 				if Player is female:

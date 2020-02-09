@@ -253,8 +253,15 @@ When Play begins:
 ]
 
 
-when play ends:
-	if BodyName of Player is "Tenrec":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Tenrec Infection"	"Infection"	""	Tenrec Infection rule	1000	false
+
+This is the Tenrec Infection rule:
+	if Player has a body of "Tenrec":
+		trigger ending "Tenrec Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is female:
 				say "     You surrender yourself to the animal instincts that rule your mind at last. Your cunt is on fire with the memory of a scent, of salt and fish and the magnificent male that granted you so dear an infection. The aquatic stud that lives by the bounty of the sea calls to you like a siren would. Unable to resist it, you make your way to the coast, nose searching for the right ship. Pussy glowing like a lighthouse, you shimmy yourself on board and throw yourself into the nets of his lust. Pawed over by the crew of the slime-slick fishing vessel, you are eventually taken down into the hold. For the hardworking crew of a fishing vessel, your dripping cunt is a welcome respite from the cold wet of the ocean.";

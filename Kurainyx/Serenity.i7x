@@ -507,9 +507,8 @@ to SerenityBind:
 			say "     'I think someone has enjoyed their stay a little too much,' Serenity jokes as she drops you onto some cushion and then swathes you in a bundle of towels. 'While I was tempted to keep you even longer, you've been inside of me for more than a day. I've had my meal, but I think that you're overdue for your own, not to mention some rest.' You deny that you need any of those things and ask her to eat you again instead. At first, your reptilian friend is amused by your antics, but as you refuse to leave her and even start begging her to consume you, a worried frown crosses her face. Placing her hands on your cheeks to hold your head steady, she stares directly into your eyes, her brow furrowed with concern.";
 			say "     'You're serious... And you're not hypnotized either...' Serenity sighs heavily and drops her gaze. 'I... I honestly didn't know that this could happen, but it really does look like you've somehow become addicted to being eaten by me.' Serenity looks back up at you with regret, but after a moment of thought, determination appears in her eyes. 'I want you to listen to me. I really am sorry that I did this to you, and I will do everything in my power to help you. To be honest, I've grown very fond of you, and I was wondering if we could somehow stay together if we ever get out of here, but not like this. Still, while I do hope that this condition of yours is temporary, if you end up not being able to resist being away from me, I promise to take good care of you.' Whether it's because of your own free will or just a desire to comply with the one that provides you with the intimate space that you've grown fond of, you accept Serenity's offer.";
 			wait for any key;
-			now voreloss is true;
-			now BodyName of Player is "Naga Hybrid";
 			now Trixieexit is 1;
+			trigger ending "Serenity's Servant";
 			end the story saying "You spent too much time inside of a snake";
 		else:
 			let k be 0;
@@ -748,11 +747,15 @@ When Play begins:
 
 Section 7 - Endings
 
-when play ends:
-	if BodyName of Player is "Naga Hybrid":
-		if voreloss is true:
-			say "     Serenity spends the following days trying to curb your addiction to her. She has some success as you eventually stop begging for her to eat you, but you still are more than happy to feel the warm embrace of her stomach whenever the opportunity pops up. When you are not filling your scaly mistress, you rarely leave her side, having grown very fond of the naga herself, although it is hard to say how much of that is due to her stomach's influence. When the military arrives, you and Serenity refuse to leave each other and are processed together. It takes some time, mostly due to the officials being wary of Serenity's imposing form, but eventually, the two of you are deemed safe and are allowed to rejoin society.";
-			say "     You end up moving in with Serenity as she resumes her ophiologist work. Thanks to her snake infection, she quickly becomes one of the leading researchers in her field, and you do your best to help her every need, whether it be by being her personal assistant or by being her tasty snack.";
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Serenity's Servant"	"BadEnd"	"Servant"	Serenity's Servant rule	20	false
+
+This is the Serenity's Servant rule:
+	if ending "Serenity's Servant" is triggered:
+		say "     Serenity spends the following days trying to curb your addiction to her. She has some success as you eventually stop begging for her to eat you, but you still are more than happy to feel the warm embrace of her stomach whenever the opportunity pops up. When you are not filling your scaly mistress, you rarely leave her side, having grown very fond of the naga herself, although it is hard to say how much of that is due to her stomach's influence. When the military arrives, you and Serenity refuse to leave each other and are processed together. It takes some time, mostly due to the officials being wary of Serenity's imposing form, but eventually, the two of you are deemed safe and are allowed to rejoin society.";
+		say "     You end up moving in with Serenity as she resumes her ophiologist work. Thanks to her snake infection, she quickly becomes one of the leading researchers in her field, and you do your best to help her every need, whether it be by being her personal assistant or by being her tasty snack.";
+		the Player is enslaved;
 
 
 Serenity ends here.

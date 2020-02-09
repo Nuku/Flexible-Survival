@@ -4,8 +4,13 @@ Version 1 of Endings by Darthan begins here.
 
 Section 1 Human Ending
 
-when play ends:
-	if BodyName of Player is "Human":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Human Ending"	"Story"	""	Human Ending rule	800	false
+
+This is the Human Ending rule:
+	if Player has a non-shifting body of "Human":
+		trigger ending "Human Ending";
 		if the player is pure:
 			say "[purehumanend]";
 		else if the player is facially human and the player is skintone human and the tail of the player is "" and Breast Size of Player <= 6 and Cock Length of Player <= 18 and Ball Size of Player <= 4 and Nipple Count of Player <= 2: [The player appears human to casual scrutiny and does not have hugely oversized junk that cannot be hidden.]

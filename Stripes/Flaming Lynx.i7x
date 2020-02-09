@@ -313,8 +313,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Flaming Lynx":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Flaming Lynx Infection"	"Infection"	""	Flaming Lynx Infection rule	1000	false
+
+This is the Flaming Lynx Infection rule:
+	if Player has a body of "Flaming Lynx":
+		trigger ending "Flaming Lynx Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is male:
 				say "     As your mind falls into a constant cycle of depravity, you find yourself eagerly returning to the sewers where you faintly recall another flaming kitty waiting for you. Happily pouncing on the other fiery feline, once you find the beacon of his shimmering form glowing hot within the darkness of the underground passageways, you spend the next several hours reacquainting yourself with the flaming feline - nuzzling, licking, grooming and passionately fucking the other, allowing yourself to be mounted in turn once your low hanging orbs have become empty, before settling down to take a pleasant catnap next to your new companion[if Player is female]. In the days to come you find yourself ignoring your feline twat, as your new companion seems to almost completely disregard that part of you[end if].";

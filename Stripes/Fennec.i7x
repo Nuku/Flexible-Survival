@@ -330,9 +330,17 @@ to say drinkfennecsemen:
 	else:
 		now sex entry is "Male";
 
+
 [
-when play ends:
-	if BodyName of Player is "Fennec":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Fennec Infection"	"Infection"	""	Fennec Infection rule	1000	false
+
+This is the Fennec Infection rule:
+	if Player has a body of "Fennec":
+		trigger ending "Fennec Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You succumb to your template infection.";
 		else:

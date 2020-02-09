@@ -277,8 +277,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Siren":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Siren Infection"	"Infection"	""	Siren Infection rule	1000	false
+
+This is the Siren Infection rule:
+	if Player has a body of "Siren":
+		trigger ending "Siren Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     As your infection takes over, your new instincts draw you to the seaside. You soon join the hidden aerie of the sirens among the sharp rocks.";
 			if Player is male:

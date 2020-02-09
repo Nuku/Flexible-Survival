@@ -227,8 +227,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Rodeo Clown":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Rodeo Clown Infection"	"Infection"	""	Rodeo Clown Infection rule	1000	false
+
+This is the Rodeo Clown Infection rule:
+	if Player has a body of "Rodeo Clown":
+		trigger ending "Rodeo Clown Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     As if having taken one too many blows to the head, your mind falls apart in a haze and you pass out. After dreams of rodeos, bulls and bucking broncos (which you are under as often as you are riding them), you awaken lost in your new instincts. You travel across the city, taunting the much stronger creatures to attack you, your sturdy, flexible body able to take the punishment of their blows with a chuckle until it is all too much and you collapse to let them have their way with you. You take particular delight in drawing the attention of powerful beasts away from much weaker prey and letting yourself bear the brunt of their lusts instead. You spend quite a bit of time in the park, taunting those well-hung bulls and big-teated cows and nearly as much time at the growing stables of the equine creatures. The latter always try to keep you there, but you always manage to squirm out once you're satisfied and bored of horseflesh.";
 			say "     The soldiers, when they come, aren't as much fun and won't play with you when you tire of dodging their bullets or letting them bounce off of you. So you take to rounding up stragglers instead, lassoing and roping them like a calf or jumping them and riding them like a bucking bronco before you have your way with them. With a few more rodeo clowns on your team, you are able to put on better shows and take turns taunting your prey before giving in or riding them when they tire out.";

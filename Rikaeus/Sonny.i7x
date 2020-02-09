@@ -402,11 +402,17 @@ instead of going to Half-Renovated Room while (SonnyRelationship is 7 and SonnyQ
 	now SonnyRelationship is 8;
 	now PlayerRomanced of Sonny is true;
 
-[]
+
 [
 Section 5 - Endings
-when play ends:
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Sonny's Epilogue"	"NPC"	""	Sonny's Epilogue rule	900	false
+
+This is the Sonny's Epilogue rule:
 	if (HP of Sonny > 0): [player met him and got as far as seeing him as an NPC]
+		trigger ending "Sonny's Epilogue"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10: [player went feral]
 			if HP of Sonny is 1: [Sonny is at the mall when the game ends]
 				if SonnyRelationship < XXX: [non romance ending]

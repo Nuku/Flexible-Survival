@@ -499,9 +499,13 @@ Definition: a person is hydrafaced:
 
 Section 4 - Endings
 
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Hydra Beast Infection"	"Infection"	""	Hydra Beast Infection rule	1000	false
 
-when play ends:
-	if BodyName of Player is "Hydra Beast":
+This is the Hydra Beast Infection rule:
+	if Player has a body of "Hydra Beast":
+		trigger ending "Hydra Beast Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     As your grip on your mind fades, the instinctual urges and impulses coming from your extra hydra heads become clearer and the edges blur in your mind. The thoughts grow louder and more insistent still as three additional heads form over the next few hours. Similar thoughts grow in your mind until you're left thinking like them, overcome with bestial impulses.";
 			if FaceName of Player is "Hydra Beast":

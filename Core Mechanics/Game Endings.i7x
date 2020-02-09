@@ -1,5 +1,117 @@
 Version 1 of Game Endings by Core Mechanics begins here.
 
+EndingID is a number that varies.[@Tag:NotSaved] EndingID is usually 1.
+
+a Game Ending is a kind of object.
+TheEnd is a Game Ending.[@Tag:NotSaved]
+TheEnd has a truth state called Player died. Player died is usually false. [The player died. Includes starvation, dehydration, eaten alive and so on.]
+TheEnd has a truth state called Player imprisoned. Player imprisoned is usually false. [The player got imprisoned, enslaved and so on. Always involuntarily.]
+TheEnd has a truth state called Player leaving. Player leaving is usually false. [The player left 'everything' behind. Always voluntarily.]
+TheEnd has a text called Ending Reason. Ending Reason is usually "". [The cause of the ending. Extra info, like "Vore by Wyvern" (in case of vore death for example) and so on.]
+TheEnd has a list of texts called Ending Flags. [Additional ending flags, like "Taur Player" for example.]
+TheEnd has a list of texts called Excluded Types. [Ending types to be excluded.]
+
+to the/-- Player is dead/killed/murdered/vored:
+	now Player died of TheEnd is true;
+
+to decide if the/-- Player/Player's dead/killed/murdered/vored:
+	if Player died of TheEnd is true, decide yes;
+	decide no;
+
+to the/-- Player is gone/imprisoned/enslaved/lost:
+	now Player imprisoned of TheEnd is true;
+
+to decide if the/-- Player/Player's gone/imprisoned/enslaved/lost:
+	if Player imprisoned of TheEnd is true, decide yes;
+	decide no;
+
+to the/-- Player has left:
+	now Player leaving of TheEnd is true;
+
+to decide if the/-- Player left:
+	if Player leaving of TheEnd is true, decide yes;
+	decide no;
+
+to the/-- Player was/-- ended by ( R - a text ):
+	now Ending Reason of TheEnd is R;
+
+to decide if the/-- Player/Player's ended by ( R - a text ):
+	if Ending Reason of TheEnd is R, decide yes;
+	decide no;
+
+to add the/-- ending flag ( F - a text ):
+	add F to Ending Flags of TheEnd;
+
+to decide if the/-- ending flag ( F - a text ) is set:
+	if F is listed in Ending Flags of TheEnd:
+		decide yes;
+	decide no;
+
+to exclude ( Type - a text ) endings:
+	add Type to Excluded Types of TheEnd;
+
+to decide if ( Type - a text ) endings are excluded:
+	if Type is listed in Excluded Types of TheEnd, decide yes;
+	decide no;
+
+[setending is internally used for trigger ending and related functions. Not designed to be useful outside of that.]
+to setending ( Ending - text ):
+	setending ending silence state is 0;
+
+to setending ( Ending - text ) silently: [suppresses the debug output]
+	setending ending silence state is 1;
+
+to setending ( Ending - text ) silence state is ( Silence - a number ): [sets the ending ID by its name entry for later use]
+	let found be 0;
+	repeat with y running from 1 to number of filled rows in Table of GameEndings:
+		choose row y in Table of GameEndings;
+		if priority entry <= 0:
+			next;
+		if Name entry exactly matches the text Ending, case insensitively:
+			now found is 1;
+			now EndingID is y;
+			break;
+	if found is 0:
+		say "ERROR - Ending '[Ending]' not found. (setending)[line break]";
+	else if debug is at level 6 and Silence is 0:
+		say "DEBUG: Current [']ending['] set to: [EndingID] = [name entry][line break]";
+
+to trigger the/-- ending ( Ending - a text ):
+	setending Ending;
+	let found be 0;
+	choose row EndingID in the Table of GameEndings;
+	if Priority entry >= 0: [Make sure, that the ending was found and EndingID is set correctly]
+		if Name entry exactly matches the text Ending, case insensitively:
+			now found is 1;
+	if found is 1:
+		now Triggered entry is true;
+
+to decide if the/-- ending ( Ending - a text ) is triggered:
+	setending Ending silently;
+	let found be 0;
+	choose row EndingID in the Table of GameEndings;
+	if Priority entry >= 0:
+		if Name entry exactly matches the text Ending, case insensitively:
+			now found is 1;
+	if found is 1:
+		if Triggered entry is true:
+			decide yes;
+	decide no;
+
+to decide if one of the/-- endings in ( Endings - a list of texts ) is triggered:
+	repeat with N running from 1 to the number of entries in Endings:
+		if ending "[entry N of Endings]" is triggered:
+			decide yes;
+	decide no;
+
+[
+to decide if all of the/-- endings in ( Endings - a list of texts ) are triggered:
+	repeat with N running from 1 to the number of entries in Endings:
+		if not ending "[entry N of Endings]" is triggered:
+			decide no;
+	decide yes;
+]
+
 vetcheat is an action applying to nothing.
 understand "i am a pro" as vetcheat.
 
@@ -25,15 +137,43 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "nanowrimo" as supersponsor.
+understand "newstart" as supersponsor.
 
-When play ends:
+when play ends:
 	clear the screen;
 	say "[bold type]Game Over![roman type][line break]";
 	ratetheplayer;
 	say "----------";
 	follow the self examine rule;
 	LineBreak;
+	[Go through the Table of GameEndings]
+	sort the Table of GameEndings in Priority order;
+	repeat with N running from 1 to the number of rows in the Table of GameEndings:
+		if there is no Priority in row N of the Table of GameEndings:
+			next; [Failsafe. Should never happen.]
+		choose row N in the Table of GameEndings;
+		if Priority entry is 0:
+			next; [Skip the initial row.]
+		if debug is at level 9:
+			let SubtypeString be "";
+			if Subtype entry is not "":
+				now SubtypeString is " ([Subtype entry])";
+			say "DEBUG: Handling ending ['][Name entry]['], Type: [Type entry][SubtypeString], Priority: [Priority entry], Triggered: [if Triggered entry is true]yes[else]no[end if].[no line break]";
+		if Type entry endings are excluded:
+			if debug is at level 9:
+				say " (EXCLUDED)[line break]";
+			next;
+		follow the Ending entry;
+		if Player dead or Player imprisoned:
+			if debug is at level 1:
+				say "DEBUG: The Player is either dead or imprisoned, enslaved and so on. Finishing here![line break]";
+			break;
+	[FS Multiplayer AD here]
+	say "----------[line break]";
+	say "I hope you enjoyed playing that as much as we enjoyed coding/writing it! It doesn't have to end here though! Come join other mutants and play in the Multiplayer Flexible Survival universe with us!";
+	say "https://flexiblesurvival.com/[line break]";
+	say "Once you have a character, click [']direct control['], and we'll be there, waiting to give a hand!";
+	say "Already have a MUD/MUCK/MUSH client? We're at flexiblesurvival.com port 2222";
 
 to ratetheplayer:
 	if gsgl is 1 and score > 0:
@@ -85,47 +225,29 @@ to ratetheplayer:
 		say ".";
 	LineBreak;
 
-when play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Player Starvation"	"Death"	"Starvation"	Player Starvation rule	10	false
+"Player has died"	"Death"	""	Player has died rule	10	false
+"Epilogue Intro"	"Epilogue"	""	Epilogue Intro rule	50	false
+
+This is the Player Starvation rule:
 	if thirst of Player >= 100 or hunger of Player >= 100:	[blocking regular endings]
-		now BodyName of Player is "starvation";
-		now FaceName of Player is "starvation";
-		now SkinName of Player is "starvation";
-		now TailName of Player is "starvation";
-		now CockName of Player is "starvation";
+		trigger ending "Player Starvation";
 		say "     You have perished from [if hunger of Player >= 100 and thirst of Player >= 100]starvation and thirst[else if hunger of Player >= 100]starvation[else]thirst[end if] and are no more. Your body becomes a meal for another of the more predatory creatures roaming the city.";
-	else if BodyName of Player is "Tigertaur Sex Toy":
-		say "     Even though you try a few times, you never manage to escape the clutches of your tigertaur masters, and servicing them eventually becomes the only reason for your existence, supplanting all other thoughts you might once have had.";
-		stop the action;
-	else if BodyName of Player is "Broken Husky Slut":
-		say "     The alpha husky that captured you, continued to break down both your mind and body. Eventually, he was able to build you into his perfect submissive partner and the fact that you ended up turning into one of the few precious deltas, well that certainly made his bid to rule the husky packs much more assured..";
-		stop the action;
-	else if BodyName of Player is "DBrute Slave":
-		say "     Your new reality in hell focuses on satisfying the relentless lusts of your demon brute masters, as well as being shared around for any other hellspawn he feels like allowing a ride...";
-		stop the action;
-	else if BodyName of Player is "Hunter's Bitch":
-		if Player is female:
-			say "     Having succumbed to the alpha husky's indoctrination, your next few days are spent being fucked again and again, until you are nothing but another husky bitch in Hunter's pack. Still, you only ever play second fiddle to Garnet, whom he is absolutely obsessed by, having gone so far as to search out the movie starlet to take for himself and make her a bitch. Therefore, most of your alpha's time is spent having sex with her. You're drawn into his play with the transformed movie star too, often being ordered to lick cum from her pussy or make out with the woman, with Hunter watching or fucking you as you do so.";
-		else: [male & neuter]
-			if "Male Preferred" is not listed in feats of Player: [can transform to female]
-				say "     Having succumbed to the alpha husky's indoctrination, your next few days are spent being fucked again and again, with the dominant canine gleefully commenting about[if Player is male] your cock shrinking more and more, until [end if]the moment when the flesh of your crotch forms the first folds of a new and virgin pussy. Not that you keep your cherry more than a few minutes, as he takes great pleasure to [']claim['] you fully by humping a heavy load into the virginal womb of yours. Still, you only ever play second fiddle to Garnet, whom he is absolutely obsessed by, spending most of the day having sex with her. You're drawn into his play with the transformed movie star too, often being ordered to lick cum from her pussy or make out with the woman, with Hunter watching or fucking you as you do so.";
-			else: [player can't become female]
-				say "     Having succumbed to the alpha husky's indoctrination, your next few days are spent being fucked again and again, with the dominant canine growling a little about the fact that your gender doesn't seem to want to change at all. Still, he breaks you in good as his bitch-boy, used to taking that thick shaft all the time and serving as his guard for when the dominant male goes all out fucking Garnet. Having gone so far as to search out the movie starlet in the middle of the nanite apocalypse, just to take her for himself and make her a bitch, the man is absolutely obsessed with her. You're drawn into his play with the transformed movie star too, often being ordered to lick his cum from her pussy, with Hunter watching or fucking your ass as you do so.";
-		stop the action;
-	else if BodyName of Player is "Demon Slave":
-		say "     Your new reality in hell focuses on satisfying Skarnoth's every desire - of which there are many, mostly carnal ones. As the overlord of his own little demonic realm, your master has the power to play with your body shape too, transforming you as he wishes to better enjoy breaking you to his will...";
-		stop the action;
-	else if BodyName of Player is "Lucifer's Mare":
-		say "     Being used as Lucifer's mare is finally enough to push you over the edge. You can't help but lie on the grass, dripping his cum and feeling it dry on your skin, until the feral mustang eventually returns to fuck you again, and again. Eventually, your form shifts to that of a true feral mare and you join the harem of the powerful stallion, well-bred and well-protected from any challenger to Lucifer's might.";
-		stop the action;
-	else if BodyName of Player is "Hell Prisoner":
-		say "     You have delved in far too deep into the demonic realm. Hell has taken you and imprisoned your soul for all eternity. Now you serve only to satisfy the demons['] every whim of any kind, your will broken facing an inevitable fate. There's no hope... nor salvation.";
-		stop the action;
-	else if BodyName of Player is "dead":
-		stop the action;
-	else if humanity of Player < 10 and HP of the player > 0:
+		the Player is dead;
+
+This is the Player has died rule:
+	if ending "Player has died" is triggered:
+		the Player is dead;
+
+This is the Epilogue Intro rule: [The player didn't die or bad ended]
+	if humanity of Player < 10 and HP of the player > 0:
 		if BodyName of Player is "Anthro Dragoness" and HP of Doctor Matt <= 100:
+			trigger ending "Epilogue Intro";
 			say "Following some unknown instinct, you seek out another of your own, and home in on Orthas, the dragon that was guarding the lab. She pets you gently along your neck and makes soothing sounds that has you almost purring. She proves to be a loving and kind mistress and you protect her fiercely for the remainder of your long life.";
 	else:
+		trigger ending "Epilogue Intro";
 		say "You emerge from your harrowing experience with your mind intact, with your [BodyName of Player] form and [FaceName of Player] face.";
 		if BodyName is "Human":
 			say "Despite the traumas set on you, you do your best to fit back in with humanity after the rescue arrives.";

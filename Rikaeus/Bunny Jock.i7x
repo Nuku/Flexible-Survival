@@ -296,8 +296,16 @@ this is the powerplay rule:
 	follow the player injury rule;
 	say "You are [descr].";
 
-when play ends:
-	if BodyName of Player is "Bunny Jock":
+
+Section 4 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Bunny Jock Infection"	"Infection"	""	Bunny Jock Infection rule	1000	false
+
+This is the Bunny Jock Infection rule:
+	if Player has a body of "Bunny Jock":
+		trigger ending "Bunny Jock Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     As your mind fails, you find yourself wandering back to the college campus. You don't know why you came back, but you do see a familiar face. The cheery jock beams when he sees you and puts an arm around you. 'Hey, dude! Great to see you again!' You don't give him an immediate reaction as you are struggling to remember him. 'You wanna join me for practice?' You cannot help but gleam back, walking along with arms locked behind each other's necks.";
 			say "     As you arrive for his practice you see a whole team assembled, most of which are bunny jocks with a few other mutants intermingled. You take seat on a bench first, not feeling confident enough to join. But as you are watching them play, you can see that they are mostly having fun, cheering each other on - even their opponents. Sometimes one would feel devious enough to slip in a grope or even tackle somebody during the game. But it's well received as you could see the engaging couples exchanging tender touches.";

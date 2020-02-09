@@ -313,8 +313,13 @@ Definition: a person is redroobodied:
 
 Section 5 - Endings
 
-when play ends:
-	if BodyName of Player is "Red Kangaroo":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Red Kangaroo Infection"	"Infection"	""	Red Kangaroo Infection rule	1000	false
+
+This is the Red Kangaroo Infection rule:
+	if Player has a body of "Red Kangaroo":
+		trigger ending "Red Kangaroo Infection";
 		if humanity of Player < 10:
 			say "Your mind slips away going into a more peaceful mode, wandering the city for fresh vegetation to eat quickly bounding away from startling events. You quickly find a place among other kangaroos, becoming a flyer to the dominant male around.";
 		else:

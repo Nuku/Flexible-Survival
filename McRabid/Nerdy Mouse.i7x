@@ -7,26 +7,34 @@ Section 1 - Creature Responses
 
 to say nerdymousedesc:
 	setmongender 3; [creature is male]
-	say "     As you're exploring the Campus Quad you almost literally collide with a short brown mouse [one of]with his nose buried in a book[or]absorbed with a handheld game system[or]reading a comic book[at random]. He's wearing thick circular glasses, a t-shirt [one of]reading 'I get +8 on all of my intelligence rolls'[or]reading 'l337'[or]with a picture of a blue police box[or]with a picture of a wizard casting a spell[at random], a pair of blue jeans and carries a large messenger bag.";
-	say "     The mouse stares at you from behind his large glasses for a moment before letting out a startled squeak and jumping away from you. He adopts an almost comical boxing stance before speaking. 'I... I'm not afraid of you stupid bullies anymore! [one of]Allons-y[or]Engage[or]Excelsior[or]Let's get dangerous[or]Roll for initiative[at random]!' he cries, charging in with his arms flailing and his eyes tightly closed.";
-
+	if inasituation is true:
+		say ""; [dealt with at the source of the event]
+	else:
+		say "     As you're exploring the Campus Quad you almost literally collide with a short brown mouse [one of]with his nose buried in a book[or]absorbed with a handheld game system[or]reading a comic book[at random]. He's wearing thick circular glasses, a t-shirt [one of]reading 'I get +8 on all of my intelligence rolls'[or]reading 'l337'[or]with a picture of a blue police box[or]with a picture of a wizard casting a spell[at random], a pair of blue jeans and carries a large messenger bag.";
+		say "     The mouse stares at you from behind his large glasses for a moment before letting out a startled squeak and jumping away from you. He adopts an almost comical boxing stance before speaking. 'I... I'm not afraid of you stupid bullies anymore! [one of]Allons-y[or]Engage[or]Excelsior[or]Let's get dangerous[or]Roll for initiative[at random]!' he cries, charging in with his arms flailing and his eyes tightly closed.";
 
 to say losetonerdymouse:
-	say "     The mouse grins at you and sticks his tongue out mockingly 'Brains over brawn ftw! Ha ha ha! Ha ha ha ha ha!' he arches his back and looks up to the sky as he gives his oddly familiar laugh. After laughing in this manner for an excessively long time, he turns his attention back to you and, empowered by his victory over you, flips you off while grinning.";
-	if Player is not male and Breast Size of Player > 0: [no cock and at least an A-cup]
-		say "     The rodent freezes as he stares at you. 'Oh crap, oh crap... I... I am so... soooo sorry. I... I was just so caught up in defending myself... Are you okay Miss?' As he talks, he's hurrying to your side to help you up, only to trip over his own feet. The nerd ends up face first between your breasts. Almost immediately you feel a dampness in your cleavage, the little nerd undoubtedly drooling at having a close up with breasts. He pulls back quickly, his face beet red. 'I didn't mean it! I would never do... er... not that you aren't pretty. I just.. prefer girls that have an IQ higher than their bust size.' The mouse's embarrassment had been so cute right up until that point. As if sensing your rising anger, he gives a startled squeak before scampering away as fast as he can.";
-	else if Breast Size of Player > 0: [cock + at least an A-cup]
-		say "     The rodent freezes as he stares at you. 'Oh crap, oh crap... I... I am so... soooo sorry. I.. I was just so caught up in defending myself... Are you okay Miss?' As he talks, he's hurrying to your side to help you up, only to trip over his own feet. The nerd ends up face first between your breasts. Almost immediately you feel a dampness in your cleavage, the little nerd undoubtedly drooling at having a close up with breasts. The mouse places his paws down to push himself up, one landing right on your crotch. The mouse bolts upright, his face covered in a blush. 'You... have a...' He clears his throat, blushing. 'I didn't mean to grab... I... uh...' He stands quickly, an obvious bulge in his pants, and without another word, bolts as quickly as he can.";
-	else if scalevalue of Player < 3: [smaller than average player body]
-		say "     He stares at you for a moment before smiling and holding out a paw to help you up. 'Sorry, us little guys really shouldn't be fighting each other. AH CHOO.' His ears flatten back as he looks at you sheepishly. 'I... s-sorry - allergies.' He hands you a tissue so you can wipe your face off. 'I think I'm still allergic to pet dander. At least I'm not a cat or a dog. Then I'd be allergic to myself.' He laughs some before starting to walk away. 'Watch yourself out there.'";
+	if inasituation is true:
+		say ""; [dealt with at the source of the event]
 	else:
-		say "     'You're the loser now. Jerk!' The mouse, empowered with his victory over you, grows bold and spits on you. Having had enough of this smarmy little bastard you stagger to your feet with fists balled. He gives a terrified squeak before darting off as fast as he can run.";
+		say "     The mouse grins at you and sticks his tongue out mockingly 'Brains over brawn ftw! Ha ha ha! Ha ha ha ha ha!' he arches his back and looks up to the sky as he gives his oddly familiar laugh. After laughing in this manner for an excessively long time, he turns his attention back to you and, empowered by his victory over you, flips you off while grinning.";
+		if Player is not male and Breast Size of Player > 0: [no cock and at least an A-cup]
+			say "     The rodent freezes as he stares at you. 'Oh crap, oh crap... I... I am so... soooo sorry. I... I was just so caught up in defending myself... Are you okay Miss?' As he talks, he's hurrying to your side to help you up, only to trip over his own feet. The nerd ends up face first between your breasts. Almost immediately you feel a dampness in your cleavage, the little nerd undoubtedly drooling at having a close up with breasts. He pulls back quickly, his face beet red. 'I didn't mean it! I would never do... er... not that you aren't pretty. I just.. prefer girls that have an IQ higher than their bust size.' The mouse's embarrassment had been so cute right up until that point. As if sensing your rising anger, he gives a startled squeak before scampering away as fast as he can.";
+		else if Breast Size of Player > 0: [cock + at least an A-cup]
+			say "     The rodent freezes as he stares at you. 'Oh crap, oh crap... I... I am so... soooo sorry. I.. I was just so caught up in defending myself... Are you okay Miss?' As he talks, he's hurrying to your side to help you up, only to trip over his own feet. The nerd ends up face first between your breasts. Almost immediately you feel a dampness in your cleavage, the little nerd undoubtedly drooling at having a close up with breasts. The mouse places his paws down to push himself up, one landing right on your crotch. The mouse bolts upright, his face covered in a blush. 'You... have a...' He clears his throat, blushing. 'I didn't mean to grab... I... uh...' He stands quickly, an obvious bulge in his pants, and without another word, bolts as quickly as he can.";
+		else if scalevalue of Player < 3: [smaller than average player body]
+			say "     He stares at you for a moment before smiling and holding out a paw to help you up. 'Sorry, us little guys really shouldn't be fighting each other. AH CHOO.' His ears flatten back as he looks at you sheepishly. 'I... s-sorry - allergies.' He hands you a tissue so you can wipe your face off. 'I think I'm still allergic to pet dander. At least I'm not a cat or a dog. Then I'd be allergic to myself.' He laughs some before starting to walk away. 'Watch yourself out there.'";
+		else:
+			say "     'You're the loser now. Jerk!' The mouse, empowered with his victory over you, grows bold and spits on you. Having had enough of this smarmy little bastard you stagger to your feet with fists balled. He gives a terrified squeak before darting off as fast as he can run.";
 
 to say beatthenerdymouse:
-	say "     You smirk at the defeated nerd as he slumps to the ground with a whimper. 'You... you're just jealous that I'm smarter than you,' the nerd sniffles as he pushes his glasses back up his maw. You stare at him for some time, giving the nerd enough time to stand back up, but a warning look from you makes him think better of running away. You feel a growing urge to get some payback on the little upstart";
-	[This section to be replaced with the lower portion once sex is added]
-	say ".";
-	say "     [one of]You grin widely as you wrap the nerd up in a headlock and give him a brutal noogie. 'Stoppiiiiiiit noooo!' the puny mouse squeaks[or]You wrap your arm over the little guy's shoulders and noisily slurp your finger before jabbing it into one of his big, round ears. 'Aaaah noooo! Wet willie!' the puny mouse squeaks[or]Acting like you're leaving, you walk past him before quickly grabbing the waistband of his underwear and yanking it upwards. 'AAGH!' The mouse gives a high-pitched squeak before falling over from your wedgie[at random]. Satisfied with adding insult to injury you wander away from the humiliated nerd.";
+	if inasituation is true:
+		say ""; [dealt with at the source of the event]
+	else:
+		say "     You smirk at the defeated nerd as he slumps to the ground with a whimper. 'You... you're just jealous that I'm smarter than you,' the nerd sniffles as he pushes his glasses back up his maw. You stare at him for some time, giving the nerd enough time to stand back up, but a warning look from you makes him think better of running away. You feel a growing urge to get some payback on the little upstart";
+		[This section to be replaced with the lower portion once sex is added]
+		say ".";
+		say "     [one of]You grin widely as you wrap the nerd up in a headlock and give him a brutal noogie. 'Stoppiiiiiiit noooo!' the puny mouse squeaks[or]You wrap your arm over the little guy's shoulders and noisily slurp your finger before jabbing it into one of his big, round ears. 'Aaaah noooo! Wet willie!' the puny mouse squeaks[or]Acting like you're leaving, you walk past him before quickly grabbing the waistband of his underwear and yanking it upwards. 'AAGH!' The mouse gives a high-pitched squeak before falling over from your wedgie[at random]. Satisfied with adding insult to injury you wander away from the humiliated nerd.";
 
 [
 	if Player is neuter:
@@ -235,11 +243,51 @@ to say mnfacequote:
 	say "[one of]Don't break my glasses[or]Not in the face! Not in the face[or]Larp rules! Larp Rules! Aiming for the head is cheating[at random]";
 
 
+[
+Table of Game Objects (continued)
+name	desc	weight	object
+"husky alpha fur"	"A tuft of grey and white fur that looks like it has been pulled out of the coat of a husky. It's nicely soft."	0	husky alpha fur
+
+husky alpha fur is a grab object.
+the usedesc of husky alpha fur is "[HuskyAlphaFurUse]".
+it is part of the player.
+It is temporary.
+
+to say HuskyAlphaFurUse:
+	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	infect "Husky Alpha";
+
+instead of sniffing husky alpha fur:
+	say "The fur has a pleasing, not too strong, animal-like scent.";
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"husky alpha cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Husky Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	husky alpha cum
+
+husky alpha cum is a grab object. husky alpha cum is cum.
+the usedesc of husky alpha cum is "[husky alpha cum use]";
+
+to say husky alpha cum use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy fluid cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 5;
+	SanLoss 5;
+	if "Iron Stomach" is not listed in feats of player:
+		infect "Husky Bitch";
+
+instead of sniffing husky alpha cum:
+	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
+]
+
 Section 3 - Endings
 
 [
-when play ends:
-	if BodyName of Player is "Nerdy Mouse":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Nerdy Mouse Infection"	"Infection"	""	Nerdy Mouse Infection rule	1000	false
+
+This is the Nerdy Mouse Infection rule:
+	if Player has a body of "Nerdy Mouse":
+		trigger ending "Nerdy Mouse Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You give in to the vast nerdiness inside your head. After pouring over all of the books you can find in the library you grow bored and desire a more structured path of learning. Wandering around, you eventually find yourself at the College Campus and are overjoyed at the thought of getting a higher education. Almost immediately you find yourself on the receiving end of a wedgie to shouts of 'NERD!'. Ah, sweet academia.";
 		else:

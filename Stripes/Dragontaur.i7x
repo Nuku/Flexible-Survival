@@ -77,7 +77,7 @@ When Play begins:
 	now Name entry is "Dragontaur"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The dragontaur slams its tail into you, bashing you aside![or]The dragontaur rears up and slashes you with its foreclaws![or]It snaps and tears at you with its fangorious maw![or]The dragontaur punches you soundly in the jaw![or]The dragon creature grabs you with its clawed hands and slams its bony head into yours. The head butt leaves you seeing stars for a moment.[at random]";
 	now defeated entry is "[beatthedragontaur]"; [ Text when monster loses. ]
 	now victory entry is "[losetodragontaur]"; [ Text when monster wins. ]
@@ -258,8 +258,12 @@ this is the drtaurpounce rule:		[double-damage pouncing]
 
 Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "Dragontaur":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Dragontaur Infection"	"Infection"	""	Dragontaur Infection rule	1000	false
+
+This is the Dragontaur Infection rule:
+	if Player has a body of "Dragontaur":
 		if humanity of Player < 10:
 			if HP of Sam >= 10 and HP of Sam <= 29:
 				if Player is herm:

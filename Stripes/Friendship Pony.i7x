@@ -814,8 +814,13 @@ Definition: a person is fponytailed:
 
 Section 7 - Endings
 
-when play ends:
-	if BodyName of Player is "Friendship Pony":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Friendship Pony Infection"	"Infection"	""	Friendship Pony Infection rule	1000	false
+
+This is the Friendship Pony Infection rule:
+	if Player has a body of "Friendship Pony":
+		trigger ending "Friendship Pony Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     Having your old identity slip away from you, the new instincts of your infection take over. Your mind is rewritten, filled with thoughts of friendship, kindness and simplistic moral lessons[if pfptype is 4 and the player is fponyfaced]. You also figure out what you were doing wrong and are able to unlock your horn's magic. After taking a few minutes to enjoy it on yourself, you remember how fun it is to share with friends and trot off to make some[else if pfptype is 3]. Realizing you have wings, you flap them and fly with ease now. Taking to the air, you go off in search of some friends to play with[else]. Excited at the prospect of making some new friends, you head off to find some[end if].";
 			say "     Over the course of your wandering, you inexorably make your way to the fairgrounds. There you meet up with five other pretty ponies, representing a diverse set of character archetypes who all want to be your friend. Life with your new friends is wonderful, magical even, because there's nothing better than friends, especially when it's friends with benefits.";

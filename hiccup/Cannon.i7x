@@ -336,8 +336,15 @@ this is the cockcannon rule:
 	rule succeeds;
 
 
-when play ends:
-	if BodyName of Player is "Cock Cannon":
+Section 4 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Cock Cannon Infection"	"Infection"	""	Cock Cannon Infection rule	1000	false
+
+This is the Cock Cannon Infection rule:
+	if Player has a body of "Cock Cannon":
+		trigger ending "Cock Cannon Infection";
 		if humanity of Player < 10:
 			say "Lost to your new instincts, you spend the next several days looking for victims to transform. Then the military arrives. Following a compulsion, you climb onto the roof of the nearest building and start stroking your penis-shaped body as fast as you can. The military soldiers don't notice the blobs of cum falling out of the sky from you and the rest of the penile artillery until it is too late.";
 		else:

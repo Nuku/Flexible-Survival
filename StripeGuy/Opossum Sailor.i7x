@@ -198,8 +198,15 @@ When Play begins:
 ]
 
 
-when play ends:
-	if BodyName of Player is "Opossum Herm":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Opossum Herm Infection"	"Infection"	""	Opossum Herm Infection rule	1000	false
+
+This is the Opossum Herm Infection rule:
+	if Player has a body of "Opossum Herm":
+		trigger ending "Opossum Herm Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     Giving in fully to your marsupial instincts, you are driven to find the one that gifted you such an adaptable lust. You find her at the docks, and no words are needed between the two of you. You wear nothing but a blue coat, your life serving her ship in sail and her body in sex. You are one among many in her crew of opossum sailors, seeking new lands and new people to explore. You walk on burning sands and ice, your tongue tastes the cum of all creatures the ship can find. In time the turning of scenery erasing all long term memories that you have, your life and humanity fading away forever. Nothing stays in your mind for long, except for your love and submissive service to the saucy swashbuckling lady you call captain.";
 		else:

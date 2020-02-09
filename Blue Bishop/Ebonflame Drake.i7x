@@ -255,8 +255,13 @@ When Play begins:
 
 Section 3 - Miscellaneous
 
-when play ends:
-	if BodyName of Player is "Ebonflame Drake":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Ebonflame Drake Infection"	"Infection"	""	Ebonflame Drake Infection rule	1000	false
+
+This is the Ebonflame Drake Infection rule:
+	if Player has a body of "Ebonflame Drake":
+		trigger ending "Ebonflame Drake Infection";
 		if humanity of Player < 10:
 			say "     Overcome by your powerful, draconic infection, you're pulled inexorably towards your kin, informed by your dark, fiery strain on how you must act";
 			if Player is submissive:

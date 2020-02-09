@@ -260,8 +260,13 @@ to say broodmother call:
 		else if BodyName of Player is "Feral Shaft Beast":
 			sharethelust;
 
-when play ends:
-	if BodyName of Player is "Anthro Shaft Beast":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Anthro Shaft Beast Infection"	"Infection"	""	Anthro Shaft Beast Infection rule	1000	false
+
+This is the Anthro Shaft Beast Infection rule:
+	if Player has a body of "Anthro Shaft Beast":
+		trigger ending "Anthro Shaft Beast Infection";
 		if humanity of Player < 10:
 			say "     Day by day, the Broodmother's voice grows stronger, her tempting, enthralling voice soothing your troubled mind, making you forget your worries and your old self. You eventually give in, the Broodmother's joy at your willful submission manifesting itself as the most beautiful song you had ever heard. The neural network lights up, every node calling and pulling on you, the song driving you into the underground and towards the Shaft Beast Hive. There, you meet a new, blissful fate, serving under the beautiful and terrible Broodmother. Eventually, she makes of you her favorite child, her second in command as you take care of your Mother's constantly growing family at her side...";
 		else:

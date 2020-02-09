@@ -300,8 +300,15 @@ to say estosterogen pill use:
 
 
 [
-when play ends:
-	if BodyName of Player is "Amazonian":
+Section 4 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Amazonian Infection"	"Infection"	""	Amazonian Infection rule	1000	false
+
+This is the Amazonian Infection rule:
+	if Player has a body of "Amazonian":
+		trigger ending "Amazonian Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You succumb to your template infection.";
 		else:

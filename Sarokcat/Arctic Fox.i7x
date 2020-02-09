@@ -194,11 +194,15 @@ When Play begins:
 ]
 
 
+Section 3 - Endings
 
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Arctic fox Infection"	"Infection"	""	Arctic fox Infection rule	1000	false
 
-
-when play ends:
-	if BodyName of Player is "Arctic fox":
+This is the Arctic fox Infection rule:
+	if Player has a body of "Arctic fox":
+		trigger ending "Arctic fox Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is male:
 				say "Giving in to your more feral instincts, you return to the Palomino and your sexy vixen mate. Janice seems rather surprised at first by your intensity, but soon is moaning just as wantonly as you sheathe yourself in her body again and again until she is as lost to the pleasure of her new body as you are. After you have recovered, you find that you enjoy spending time at the club, the two of you occasionally teasing other club goers to give in and join you as slutty arctic foxes. When the military arrives, you find that you have even more opportunity for fun as they prove particularly susceptible to your sexy mate's teasing looks, although you are always the one to mate them and make them proper vixens. Before long, there are several vixens on stage at any time, though you settle in and make one of the private rooms into your fox den. The other club goers seem only slightly interested in your actions, perhaps because many of them have started adapting similar habits. Eventually though, the club comes under attack from the military, and you and your mates are forced out into the streets to help deal with the problem, the hunt proving surprisingly fun as you, Janice, and your other vulpine converts enjoy tricking and trapping the military. Before long, you have broken out of the military containment area as a large group, and you only pause for a minute to get your bearings, before you all split up and begin to head north. You grin ferally as you imagine the military trying to chase all of your nice, pregnant vixen mates down, and you snicker, knowing that there is no way that they can catch even a quarter of your clever foxy mates before you all escape to the north. Though, you certainly hope that they come looking for you and your fellow arctic foxes up in the snowy north once you get there... you could always use some new converts after all...";

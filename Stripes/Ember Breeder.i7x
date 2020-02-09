@@ -254,8 +254,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Ember Breeder":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Ember Breeder Infection"	"Infection"	""	Ember Breeder Infection rule	1000	false
+
+This is the Ember Breeder Infection rule:
+	if Player has a body of "Ember Breeder":
+		trigger ending "Ember Breeder Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     Unable to hold out any longer, the infection affects your mind enough that you succumb to your new instincts and head off into the city in search of sexual satisfaction. You wander directionless through the wild city until you are found by ";
 			let T be a random number between 1 and 3;

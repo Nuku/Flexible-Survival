@@ -285,8 +285,13 @@ Definition: a person is mushroomtailed:
 
 Section 5 - Endings
 
-when play ends:
-	if BodyName of Player is "Mushroom Men":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Mushroom Men Infection"	"Infection"	""	Mushroom Men Infection rule	1000	false
+
+This is the Mushroom Men Infection rule:
+	if Player has a body of "Mushroom Men":
+		trigger ending "Mushroom Men Infection";
 		if humanity of Player < 10:
 			say "     As the fungal infection begins to take root in your mind, you find yourself drawn back to the park. You wander to forested paths aimlessly for some time before coming across a small, clear glade with a single large tree at its center. Attracted to the unusual peace of this place, you settle down at the base of the tree, eventually drifting off to a deep sleep as your body begins to change further.";
 			say "     When you finally awaken, you find yourself rooted to the ground just below the knees and your limbs fused to your body, making you look much more like a simple giant mushroom at a glance. However, with the exception of your missing limbs, you still have a rather shapely body, and the wandering groups of mushroom men that happen upon you are more than happy to help you enjoy it. Several groups frequently make return trips to your glade, ensuring your sexual desires are always satisfied. Often after these visits you find your body reacting to the spores left behind by your company, both inside your body and out, causing you to release fertile spores of your own into the nearby soil where more groups of mushroom men quickly grow.";

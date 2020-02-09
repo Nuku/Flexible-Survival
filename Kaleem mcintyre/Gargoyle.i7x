@@ -231,9 +231,15 @@ When Play begins:
 ]
 
 
+Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Gargoyle":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Gargoyle Infection"	"Infection"	""	Gargoyle Infection rule	1000	false
+
+This is the Gargoyle Infection rule:
+	if Player has a body of "Gargoyle":
+		trigger ending "Gargoyle Infection";
 		if humanity of Player < 10:
 			if Player is female:
 				say "     Having been infected by the strain of gargoyle mutation, you find that day by day your weeping cunt is shrinking itself down inch by inch. Not understanding this at first, you panic and roar to the sky as you fly over the country without thought or destination. Soon though your mournful cries are lost to you, the same as your cunt, as your pussy closes up and then seals tight leaving nothing but a fine, smooth skinned line behind for you to remember it by. Moaning and grunting as your mind tries to understand what's going on you are soon given your answers when another gargoyle finds his way over to you and then moves to claim you as a mate. On your knees under the impressive male you find that any feminine traits you may have had slowly change over to masculine ones as your body hardens further into becoming a perfect gargoyle. In the dim part of your foggy brain that can recall much of what it means to be human you come to realize that gargoyle must be inherently male and that any female coming into sexual contact with them will slowly lose their femininity until they fully become male. This means little to you though as when your mate finishes seeding you, for you are already forgetting you ever were partially female.";

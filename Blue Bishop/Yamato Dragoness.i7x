@@ -264,7 +264,7 @@ to say Yamato Dragoness vic:
 				else:
 					say ", forcing you to abide her wanton fury as you're beleaguered frame is doused by her bestial honey";
 				say ". It takes but a moment of recovery before she finally pulls you free of her, setting off into the sky once more and leaving you to clean yourself and, once more, gather your thoughts from the ordeal.";
-	if voreloss is false:
+	if the story has not ended:
 		now tempnum is 0;
 		yamatbiasshift;
 
@@ -782,14 +782,10 @@ to YamatFvore:
 		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break][run paragraph on]";
 		say "Sanity: [humanity of Player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of Player]	Thirst: [thirst of Player]	Struggle: [yamatstrugglebar][line break][run paragraph on]";
 		if humanity of Player < 1:
-			now BodyName of Player is "Yamato Dragon";
-			now FaceName of Player is "Yamato Dragon";
-			now TailName of Player is "Yamato Dragon";
-			now SkinName of Player is "Yamato Dragon";
-			now CockName of Player is "Yamato Dragon";
-			now tempnum is 0;
-			now voreloss is true;
 			now Trixieexit is 1;
+			trigger ending "Yamato Dragon Vore";
+			the Player was ended by "Vore by Yamato Dragoness";
+			end the story saying "You became a Yamato Dragoness's meal!";
 		else:
 			let k be 0;
 			now keychar is "INVALID";

@@ -281,8 +281,12 @@ this is the vixentaurscent rule:
 
 Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "Vixentaur":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Vixentaur Infection"	"Infection"	""	Vixentaur Infection rule	1000	false
+
+This is the Vixentaur Infection rule:
+	if Player has a body of "Vixentaur":
 		if humanity of Player < 10:
 			if HP of Sam >= 10 and HP of Sam <= 29:
 				say "***Succumb w/Sam as Dragontaur. Should not be possible.";

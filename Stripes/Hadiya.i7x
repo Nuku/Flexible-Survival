@@ -452,8 +452,13 @@ to hadiyahyenaify:
 
 Section 9 - Endings
 
-when play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Hadiya's Epilogue"	"NPC"	""	Hadiya's Epilogue rule	900	false
+
+This is the Hadiya's Epilogue rule:
 	if ( ( HP of Hadiya >= 13 and HP of Hadiya < 50 ) or ( HP of Hadiya >= 63 and HP of Hadiya < 100 ) ) and humanity of Player >= 10:
+		trigger ending "Hadiya's Epilogue"; [Here it states, that the ending has been played.]
 		say "     When Hadiya and Gobby are taken by the military, she insists that they stay together. During the waiting period, they are both given a quick screening. While the hyena passes, the goblin does not fare as well. While he's fairly stable, his previous identity - if he ever had one - has been lost. In the end, he is given a conditional release under Hadiya's care.";
 		say "     After her release, Hadiya becomes a Zephyr operative, doing field work for them. On the occasions you do get to see her, she doesn't talk about it much[if Player is male]. She much prefers to use those opportunities to enjoy the company of her slutty sub[end if]. Gobby remains with her, acting as servant and housekeeper while she's on mission... or so you're told. There's the occasional slip that leads you to suspect the goblin thief and his nimble fingers accompany her on some missions.";
 		say "     A couple of years after the events in the city, you're surprised to find out that Hadiya's become pregnant. Her kids turn out to be a mix of red-skinned and -furred goblins, some with hyena-like heads. And while their relationship as harsh mistress and loyal servant remains unchanged, you can tell there is a bond of love there as well. Hadiya's certainly quite proud of her tough little brood of hybrid scrappers, but carrying, birthing and raising them gets added to her reasons to [']punish['] her sextoy servant. Despite her complaints on these matters, she's pregnant again soon enough with another hybrid litter.";

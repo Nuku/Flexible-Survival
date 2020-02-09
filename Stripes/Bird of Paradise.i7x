@@ -304,11 +304,17 @@ Definition: a person is boptailed:
 	if TailName of Player is "Bird of Paradise", yes;
 	no;
 
-Section 5 - Endings
 
 [
-when play ends:
-	if BodyName of Player is "Template":
+Section 5 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Bird of Paradise Infection"	"Infection"	""	Bird of Paradise Infection rule	1000	false
+
+This is the Bird of Paradise Infection rule:
+	if Player has a body of "Bird of Paradise":
+		trigger ending "Bird of Paradise Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You succumb to your template infection.";
 		else:

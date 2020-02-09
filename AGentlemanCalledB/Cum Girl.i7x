@@ -257,8 +257,13 @@ Section 3 - Endings
 
 [N/A - Non-Infectious!]
 [
-when play ends:
-	if BodyName of Player is "Cum Girl":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Cum Girl Infection"	"Infection"	""	Cum Girl Infection rule	1000	false
+
+This is the Cum Girl Infection rule:
+	if Player has a body of "Cum Girl":
+		trigger ending "Cum Girl Infection";
 		if humanity of Player < 10:
 			say "     You succumb to your Cum Girl infection.";
 		else:

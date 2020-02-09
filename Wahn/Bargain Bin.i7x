@@ -329,7 +329,7 @@ carry out bargainhunting:
 					increase carried of jackal romance novels by 1;
 					now RomanceBooksFound is 2; [player took them]
 		else if Z is 20: [creature]
-			say "     Rummaging through the bargain bin you find yourself feeling rather strange as you do so, almost as if something in the bin itself is affecting you. Feeling vaguely worried, you begin to pull your hand out of it, only to find it seems stuck on something, or more like [bold type]something or someone is holding onto you[roman type] and trying to drag you into the bin! The feeling is both strange and disturbing as you fight to free your hand, and Nermine seems to notice your distress. As you struggle, the jackal-woman comes over to investigate the problem. Just before she reaches you though, something seems to give in the bin, and you stagger backwards, almost knocking the shopkeeper over as you do so, with the jackal-woman just barely managing to catch you before you drag both of you down to the ground. Unfortunately something else staggers out of the bin as well, and you find yourself face to face with a [one of]Rubber tigress[or]Horseman[or]Leopardman[or]Plush Lion[or]Tigress hooker[or]Satyr[at random] staggering unsteadily into the room.";
+			say "     Rummaging through the bargain bin you find yourself feeling rather strange as you do so, almost as if something in the bin itself is affecting you. Feeling vaguely worried, you begin to pull your hand out of it, only to find it seems stuck on something, or more like [bold type]something or someone is holding onto you[roman type] and trying to drag you into the bin! The feeling is both strange and disturbing as you fight to free your hand, and Nermine seems to notice your distress. As you struggle, the jackal-woman comes over to investigate the problem. Just before she reaches you though, something seems to give in the bin, and you stagger backwards, almost knocking the shopkeeper over as you do so, with the jackal-woman just barely managing to catch you before you drag both of you down to the ground. Unfortunately something else staggers out of the bin as well, and you find yourself face to face with a [one of]Rubber Tigress[or]Horseman[or]Leopardman[or]Plush Lion[or]Tigress hooker[or]Satyr[at random] staggering unsteadily into the room.";
 			say "     The surprise visitor doesn't take long to catch their bearing, and fixes lust-filled eyes on your body. You gape in surprise for a second, idly wondering just how the hell the creature fit into the bargain bin in the first place, before quickly preparing to fight as it steps towards you eagerly. The moment is broken by a sharp growl from over your shoulder, and the beast stops in its tracks and begins to back up in fear. Glancing over your shoulder, you see Nermine fixing the creature with a deadly glare and a scowl on her muzzle. 'There is to be no fighting in Nermine's shop. This she will not tolerate!' she says with a sharp bark. With the wave of a slender paw-hand, the door that you could have sworn leads into a storage room is thrown open, showing a trash-filled alleyway instead. The beast quickly turns tail and runs out through the door, leaving you both impressed and a little worried as the surprisingly intimidating jackal-woman turns her gaze on you.";
 			WaitLineBreak;
 			say "     Tension abates as Nermine smiles, walking over to give you a small peck on the cheek together with a smile before wandering back to her side of the counter. 'Nermine must say, she is not sure how that got in the bin, but she would advise her handsome customer to be more careful about the things they pick out of the bargain bin from now on,' she says with a teasing wink, and you curse slightly as you realize that technically you just purchased the creature that immediately ran off... maybe next time you should try looking for a collar and leash beforehand? Or maybe you should just hope there isn't a next time...";
@@ -521,7 +521,7 @@ to say plrtcl:
 	else:
 		let Q be a list of numbers;
 		if MaleList is not banned, add 1 to Q;  [Plush Lion]
-		if FemaleList is not banned, add 2 to Q;  [Rubber tigress]
+		if FemaleList is not banned, add 2 to Q;  [Rubber Tigress]
 		if HermList is not banned, add 3 to Q;  [Chocolate Lab]
 		sort Q in random order;
 		now tempnum is entry 1 of Q;
@@ -535,8 +535,8 @@ to say plrtcl:
 			say "     Sorting through the unusual and strange items in the bargain bin, you blink as you come across an [bold type]inflatable tiger[roman type]. Pulling out the small rubber toy, you grin in bemusement at what a silly little thing like this is doing in such a strange place. Looking it over quickly, it seems to have surprisingly survived its time in the bargain bin unpunctured. You give it a light squeeze between your hands and it pops with an odd, meow-like bang, causing you to jump back in surprise. The popped balloon toy hangs limply in your hands... which start to tingle. Looking down, you realize that the toy's rubber skin is melting into your own and spreading all over your body! Panicking slightly, you try to shake the stuff off of you - to no avail. As your head shifts an inflates into a more feline form, you blink your plasticky eyes as you realize that having such lovely, smooth skin could be a good thing.";
 			LineBreak;
 			say "     Now, if only you could find another rubber kitty to play with you...";
-			setmonster "Rubber tigress";
-			turn the Player into a "Rubber tigress";
+			setmonster "Rubber Tigress";
+			turn the Player into a "Rubber Tigress";
 		else:
 			say "     Sorting through the unusual and strange items in the bargain bin, you blink as you come across a strange chocolate treat. Held in a rather plain box, this two-pound [bold type]chocolate hound[roman type] is small, but solid. You presume it must be a leftover from Easter and pop the top to take a better look. Certainly, you feel, this would make a tastier treat than some of your recent meals. Your mouth waters as the scent of delicious, quality milk chocolate fills the air. You pull it out and look it over, telling yourself you'll just take a nibble and save the rest for the next time you're hungry. The canine confectionary seems well molded, with considerable attention to detail, further instilling the idea that it's a quality product in your mind. But then, you start to notice flaws and few details being slightly off... and more and more after that.";
 			say "     Turning the chocolate figure around to look at its front end again, you realize that it isn't actually a lack of detail - the chocolate itself is rapidly growing soft! More so than the warmth of your hands could realistically make it... and soon, it is actually flowing down over your hands as if it had a life of its own! You can't help yourself and start gobbling down the chocolate, licking off the tasty treat from your fingers and moaning in pleasure as its smooth sweetness flows down your throat even as your hands get stickier and the brown starts to spread up your arms. As you lick up the last of the flowing chocolate, you realize that your hands underneath have become chocolate paws! Panicking slightly, you try to shake the stuff off of you - to no avail. Soon you are blinking your dark chocolate eyes as the chocolate sinks deeper and you become solid chocolate like the dog you found.";
@@ -589,10 +589,18 @@ dollfound is a number that varies.
 
 the scent of strange doll is "The strange doll smells strangely like you.".
 
-when play ends:
+
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Strange Doll's Epilogue"	"Companion"	"Pet"	Strange Doll's Epilogue rule	750	false
+
+This is the Strange Doll's Epilogue rule:
 	if strange doll is tamed:
+		trigger ending "Strange Doll's Epilogue"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
-			if BodyName of Player is "Plush Lion":
+			if Player has a non-shifting body of "Plush Lion":
 				say "     The little plush doll you got at the shop seems as happy to be a plush lion creature as you are now, and you find your muzzle pulling back in a grin full of amusement as you look down at your little companion, an idea striking you. Soon with a little work and some extra stuffing your plush doll is of a much more appropriate size to be a proper companion to you, and you can't help but admire your handiwork as you stare at the newest lovely plush little lioness for the pride. Your former doll seems to approve of her newly altered body, purring and rubbing herself up against you, eager and happy to be a proper little member of your plush pride.";
 			else:
 				say "     The strange doll from the shop stays with you, even as you surrender fully to the infection, following you around through the city and mimicking your actions as you settle into your new life. Eventually your lust clouded mind will begin to recognize that the strange doll you found is becoming more and just like you, as it grows in size daily, and seems to take on a more realistic appearance. You aren't able to figure out just when the little toy finishes changing, but before you know it, instead of being kept company by an animate toy, you have a perfect twin of your new self keeping you company instead. The two of you sharing your new life and fate together eagerly.";

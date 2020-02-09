@@ -284,11 +284,16 @@ When Play begins:
 	now mpregtrigger entry is "     There is a sudden, pulsing heat inside you centered at your lower belly. This heat builds, growing to an inferno of lust and desire. As this fire burns away at you, your rectum grow heated as well, aching for something to fill it and to stoke its fires. You are in heat with a primal, elemental need.";
 
 
+[
 Section 4 - Endings
 
-[
-when play ends:
-	if BodyName of Player is "Template":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Fire Elemental Infection"	"Infection"	""	Fire Elemental Infection rule	1000	false
+
+This is the Fire Elemental Infection rule:
+	if Player has a body of "Fire Elemental":
+		trigger ending "Fire Elemental Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You succumb to your template infection.";
 		else:
