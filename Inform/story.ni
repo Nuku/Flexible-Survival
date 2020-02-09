@@ -6630,6 +6630,7 @@ Include Gator by Nuku Valente.
 Include Gazelle by Sarokcat.
 Include Gels by Darthan.
 Include German shepherd by Stripes.[replaces 'Random German shepherd']
+Include German Shepherd Bitch by Kirov.
 Include Giant by Stripes.
 Include Giraffe by Stripes.
 Include Goat Janitor by McRabid.
@@ -6941,6 +6942,7 @@ Include Julian by Prometheus.
 Include Kai by WhiteRabbit.
 Include Kara by Sarokcat.
 Include Karen by AGentlemanCalledB.
+Include Katherine by Kirov.
 Include Krampus by Wahn.
 Include Kristen by Stripes.
 Include Kurt by Rikaeus.
