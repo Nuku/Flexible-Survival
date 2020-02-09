@@ -2,6 +2,7 @@ Version 1 of Equipment by Core Mechanics begins here.
 [ Written by Wahn ]
 [ Version 1 - New File ]
 [ Version 2 - Added a lot of new clothes and reorganized clothing lists. Added new stats to all clothing and gear (traits and gender appearance) by Luneth]
+[ Version 2.1 - Added a few new TF equipment pieces by Luneth]
 
 "Adds new equipment for the player."
 
@@ -48,8 +49,8 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "black motorcycle helmet"	"A black motorcycle helmet with a clear visor. Heavy, but protective. Judging by the helmets appearance, it's [']unisex['] and pretty [']cool[']."	3	black motorcycle helmet
 "flaming motorcycle helmet"	"A black motorcycle helmet with a clear visor and painted flames rising along the sides. Heavy, but protective. Judging by the helmets appearance, it's [']unisex['] and pretty [']rebellious[']."	3	flaming motorcycle helmet
-"succubus motorcycle helmet"	"A black motorcycle helmet with a clear visor and a picture of a sexy succubus with her legs spread over your face. Heavy, but protective. Judging by the helmets appearance, it's [']unisex['] and pretty [']sexy[']."	3	succubus motorcycle helmet
-"incubus motorcycle helmet"	"A black motorcycle helmet with a clear visor and a picture of a sexy incubus jerking off over your face. Heavy, but protective. Judging by the helmets appearance, it's [']unisex['] and pretty [']sexy[']."	3	incubus motorcycle helmet
+"succubus motorcycle helmet"	"A black motorcycle helmet with a clear visor and a picture of a sexy succubus with her legs spread over your face. Heavy, but protective. Judging by the helmets appearance, it's [']feminine['] and pretty [']sexy[']."	3	succubus motorcycle helmet
+"incubus motorcycle helmet"	"A black motorcycle helmet with a clear visor and a picture of a sexy incubus jerking off over your face. Heavy, but protective. Judging by the helmets appearance, it's [']masculine['] and pretty [']sexy[']."	3	incubus motorcycle helmet
 
 black motorcycle helmet is a grab object.
 black motorcycle helmet is equipment.
@@ -89,12 +90,16 @@ The taur-compatible of succubus motorcycle helmet is true.
 The size of succubus motorcycle helmet is 3.
 The AC of succubus motorcycle helmet is 60.
 The effectiveness of succubus motorcycle helmet is 80.
-The GA of succubus motorcycle helmet is 0.
+The GA of succubus motorcycle helmet is -1.
 The Traits of succubus motorcycle helmet is {"sexy"}.
 The placement of succubus motorcycle helmet is "head".
 The descmod of succubus motorcycle helmet is "Your head is encased in the thick shell of a black motorcycle helmet, complete with a sexy succubus riding your face.".
 The slot of succubus motorcycle helmet is "head".
 the scent of succubus motorcycle helmet is "The helmet smells of plastic and fabric.".
+
+An everyturn rule:
+	if succubus motorcycle helmet is equipped:
+		infect "Succubus";
 
 incubus motorcycle helmet is a grab object.
 incubus motorcycle helmet is equipment.
@@ -104,12 +109,16 @@ The taur-compatible of incubus motorcycle helmet is true.
 The size of incubus motorcycle helmet is 3.
 The AC of incubus motorcycle helmet is 60.
 The effectiveness of incubus motorcycle helmet is 80.
-The GA of incubus motorcycle helmet is 0.
+The GA of incubus motorcycle helmet is 1.
 The Traits of incubus motorcycle helmet is {"sexy"}.
 The placement of incubus motorcycle helmet is "head".
 The descmod of incubus motorcycle helmet is "Your head is encased in the thick shell of a black motorcycle helmet, complete with a sexy incubus riding your face.".
 The slot of incubus motorcycle helmet is "head".
 the scent of incubus motorcycle helmet is "The helmet smells of plastic and fabric.".
+
+An everyturn rule:
+	if incubus motorcycle helmet is equipped:
+		infect "Incubus";
 
 
 Part 2 - Bike Helmets
@@ -208,6 +217,8 @@ Part 4 - Football Helmets
 Table of Game Objects (continued)
 name	desc	weight	object
 "tenvale gorillas football helmet"	"A black football helmet with the logo of the Tenvale Gorillas on both sides in silver. Heavy, but protective. Judging by the helmets appearance, it's [']masculine['] and pretty [']sporty[']."	3	tenvale gorillas football helmet
+"Roman's gifted football helmet"	"Roman's black football helmet with the logo of the Tenvale Gorillas on both sides in silver. Heavy, but protective. Judging by the helmets appearance, it's [']masculine['] and pretty [']sporty[']. Holding this helmet brings back memories of helping Roman come to terms with his new gender and showing him that his team still supports him."	3	Roman's gifted football helmet
+"Roman's stolen football helmet"	"Roman's black football helmet with the logo of the Tenvale Gorillas on both sides in silver. Heavy, but protective. Judging by the helmets appearance, it's [']masculine['] and pretty [']sporty[']. Holding this helmet brings back memories of betraying Roman's trust and then watching as he became a mindless cocksleeve for his former teammates."	3	Roman's stolen football helmet
 
 tenvale gorillas football helmet is a grab object.
 tenvale gorillas football helmet is equipment.
@@ -223,6 +234,44 @@ The placement of tenvale gorillas football helmet is "head".
 The descmod of tenvale gorillas football helmet is "Your head is encased in the thick shell of a black and silver tenvale gorillas football helmet.".
 The slot of tenvale gorillas football helmet is "head".
 the scent of tenvale gorillas football helmet is "The helmet smells of plastic and fabric.".
+
+Roman's gifted football helmet is a grab object.
+Roman's gifted football helmet is equipment.
+It is not temporary.
+The plural of Roman's gifted football helmet is false.
+The taur-compatible of Roman's gifted football helmet is true.
+The size of Roman's gifted football helmet is 3.
+The AC of Roman's gifted football helmet is 40.
+The effectiveness of Roman's gifted football helmet is 80.
+The GA of Roman's gifted football helmet is 1.
+The Traits of Roman's gifted football helmet is {"sporty"}.
+The placement of Roman's gifted football helmet is "head".
+The descmod of Roman's gifted football helmet is "Your head is encased in the thick shell of Roman's black and silver football helmet.".
+The slot of Roman's gifted football helmet is "head".
+the scent of Roman's gifted football helmet is "The helmet smells of plastic and fabric, however there is also a hint of something kinda feminine about its smell.".
+
+An everyturn rule:
+	if Roman's gifted football helmet is equipped:
+		infect "Cuntboi Football Gorilla";
+
+Roman's stolen football helmet is a grab object.
+Roman's stolen football helmet is equipment.
+It is not temporary.
+The plural of Roman's stolen football helmet is false.
+The taur-compatible of Roman's stolen football helmet is true.
+The size of Roman's stolen football helmet is 3.
+The AC of Roman's stolen football helmet is 40.
+The effectiveness of Roman's stolen football helmet is 80.
+The GA of Roman's stolen football helmet is 1.
+The Traits of Roman's stolen football helmet is {"sporty"}.
+The placement of Roman's stolen football helmet is "head".
+The descmod of Roman's stolen football helmet is "Your head is encased in the thick shell of Roman's black and silver football helmet.".
+The slot of Roman's stolen football helmet is "head".
+the scent of Roman's stolen football helmet is "The helmet smells of plastic and fabric, however there is also a hint of something that kinda reminds you of a lockeroom and sex.".
+
+An everyturn rule:
+	if Roman's stolen football helmet is equipped:
+		infect "Male Football Gorilla";
 
 Part 5 - Urban Explorer Helmets
 
@@ -282,7 +331,30 @@ The descmod of zephyr riot helmet is "A jet black helmet with the zephyr logo on
 The slot of zephyr riot helmet is "head".
 the scent of zephyr riot helmet is "The riot gear smells of metal and plastic.".
 
+Part 7 - Cowboy Hats
 
+Table of Game Objects (continued)
+name	desc	weight	object
+"cow-print cowboy hat"	"A cowboy hat that is covered in cow hide, the top has two small bull horns sticking out of the side. They are sure to make you look like a real fancy cowpoke. Judging by the appearance of the boots, it's [']masculine['] and pretty [']sporty['] yet [']cool['] looking."	1	cow-print cowboy hat
+
+cow-print cowboy hat is a grab object.
+cow-print cowboy hat is equipment.
+It is not temporary.
+The plural of cow-print cowboy hat is true.
+The taur-compatible of cow-print cowboy hat is false.
+The size of cow-print cowboy hat is 3.
+The AC of cow-print cowboy hat is 5.
+The effectiveness of cow-print cowboy hat is 10.
+The GA of cow-print cowboy hat is 0.
+The Traits of cow-print cowboy hat is {"sporty", "cool"}.
+The placement of cow-print cowboy hat is "head".
+The descmod of cow-print cowboy hat is "You are wearing a cow-print cowboy hat. The two small protruding horns on the side making you feel like a true stud bull.".
+The slot of cow-print cowboy hat is "head".
+the scent of cow-print cowboy hat is "The cowboy hat smell like leather and felt.".
+
+An everyturn rule:
+	if cow-print cowboy hat is equipped:
+		infect "Male Cow-boi";
 
 Section 2 - Hair Accessories
 
@@ -390,8 +462,8 @@ Part 2 - Greatcoat
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"black greatcoat"	"A full-body black coat made from thick wool. It will certainly protect you from bad weather, but the sturdy material should also be some help in a close-combat fight. Judging by the coats appearance, it's [']masculine['] and pretty [']smart['] looking."	5	black greatcoat
-"gray greatcoat"	"A full-body gray coat made from thick wool. It will certainly protect you from bad weather, but the sturdy material should also be some help in a close-combat fight. Judging by the coats appearance, it's [']masculine['] and pretty [']smart['] looking."	5	gray greatcoat
+"black greatcoat"	"A full-body black coat made from thick wool. It will certainly protect you from bad weather, but the sturdy material should also be some help in a close-combat fight. Judging by the coats appearance, it's [']masculine['] and pretty [']smart['] looking."	4	black greatcoat
+"gray greatcoat"	"A full-body gray coat made from thick wool. It will certainly protect you from bad weather, but the sturdy material should also be some help in a close-combat fight. Judging by the coats appearance, it's [']masculine['] and pretty [']smart['] looking."	4	gray greatcoat
 
 black greatcoat is a grab object.
 black greatcoat is equipment.
@@ -644,6 +716,7 @@ Part 1 - Cowboy Boots
 Table of Game Objects (continued)
 name	desc	weight	object
 "dark-brown cowboy boots"	"A pair of cowboy boots made from dark-brown leather, complete with high heels and a relatively narrow toe. They are sure to make using stirrups easier, and can protect against rattlesnake bites. Judging by the appearance of the boots, it's [']unisex['] and pretty [']sporty['] looking."	1	dark-brown cowboy boots
+"cow-print cowgirl boots"	"A pair of cowgirl boots that are covered in cow hide, the tops of each boot are covered in fringe and bedazzled in rhinestones. They are sure to make using stirrups easier, and can protect against rattlesnake bites. Judging by the appearance of the boots, it's [']feminine['] and pretty [']sporty['] yet [']sexy['] looking."	1	cow-print cowgirl boots
 
 dark-brown cowboy boots is a grab object.
 dark-brown cowboy boots is equipment.
@@ -660,11 +733,30 @@ The descmod of dark-brown cowboy boots is "You are wearing a pair of dark-brown 
 The slot of dark-brown cowboy boots is "feet".
 the scent of dark-brown cowboy boots is "The boots smell like leather.".
 
+cow-print cowgirl boots is a grab object.
+cow-print cowgirl boots is equipment.
+It is not temporary.
+The plural of cow-print cowgirl boots is true.
+The taur-compatible of cow-print cowgirl boots is false.
+The size of cow-print cowgirl boots is 3.
+The AC of cow-print cowgirl boots is 5.
+The effectiveness of cow-print cowgirl boots is 10.
+The GA of cow-print cowgirl boots is 0.
+The Traits of cow-print cowgirl boots is {"sporty", "sexy"}.
+The placement of cow-print cowgirl boots is "body".
+The descmod of cow-print cowgirl boots is "You are wearing a pair of cow-print cowgirl boots. You won't have to fear brambles and rattlesnakes with these on, that's for sure.".
+The slot of cow-print cowgirl boots is "feet".
+the scent of cow-print cowgirl boots is "The boots smell like leather.".
+
+An everyturn rule:
+	if cow-print cowgirl boots is equipped:
+		infect "Female Cow-babe";
+
 Part 2 - Combat Boots
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"black combat boots"	"A pair of black combat boots. They are quite sturdy and fairly heavy because of the steel caps in them. Judging by the appearance of the boots, it's [']unisex['] and pretty [']rebellious['] looking."	2	black combat boots
+"black combat boots"	"A pair of black combat boots. They are quite sturdy and fairly heavy because of the steel caps in them. Judging by the appearance of the boots, it's [']masculine['] and pretty [']rebellious['] looking."	2	black combat boots
 
 black combat boots is a grab object.
 black combat boots is equipment.
@@ -674,7 +766,7 @@ The taur-compatible of black combat boots is false.
 The size of black combat boots is 3.
 The AC of black combat boots is 5.
 The effectiveness of black combat boots is 10.
-The GA of black combat boots is 0.
+The GA of black combat boots is 1.
 The Traits of black combat boots is {"rebellious"}.
 The placement of black combat boots is "body".
 The descmod of black combat boots is "You are wearing sturdy black combat boots. They even have steel caps that protect your toes.".
@@ -1172,6 +1264,25 @@ The slot of rose-tinted glasses is "eyes".
 the scent of rose-tinted glasses is "The glasses don't smell like anything really.".
 
 Section 4 - Masks
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"latex mouse mask"	"A dark-purple mask in the shape of an innocent and cute lil['] mouse, however in contradiction to its sweet appearance it has words like [']Squeak-Slut['] and [']Cheese-Whore[']. The mask is skin-tight with a buckle in back to hold it in place. Judging by the masks appearance, it's [']unisex['] and look like it would be fitting for a sex [']Slave[']."	0	latex mouse mask
+
+latex mouse mask is a grab object.
+latex mouse mask is equipment.
+It is not temporary.
+The plural of latex mouse mask is true.
+The taur-compatible of latex mouse mask is true.
+The size of latex mouse mask is 0.
+The AC of latex mouse mask is 0.
+The effectiveness of latex mouse mask is 0.
+The GA of latex mouse mask is 0.
+The Traits of latex mouse mask is {"slave"}.
+The placement of latex mouse mask is "head".
+The descmod of latex mouse mask is "A latex mouse mask on your face that makes you look both sweet as cheesecake and as slutty as a back alley squeak-toy.".
+The slot of latex mouse mask is "face".
+the scent of latex mouse mask is "The mask smells of latex and bodily fluids.".
 
 Section 5 - Neckwear
 
@@ -1707,6 +1818,25 @@ the scent of mesh shirt is "The fabric has the typical faintly musky scent cloth
 
 Section 9 - Bras
 
+Table of Game Objects (continued)
+name	desc	weight	object
+"simple black bra"	"A simple black bra made of a firm and glossy material. As far as bras go this one is fairly comfortable to move around in. Judging by the bras appearance, it's [']feminine['] and pretty [']basic['] looking."	1	simple black bra
+
+simple black bra is a grab object.
+simple black bra is equipment.
+It is not temporary.
+The plural of simple black bra is false.
+The taur-compatible of simple black bra is true.
+The size of simple black bra is 3.
+The AC of simple black bra is 0.
+The effectiveness of simple black bra is 0.
+The GA of simple black bra is -1.
+The Traits of simple black bra is {"basic"}.
+The placement of simple black bra is "body".
+The descmod of simple black bra is "Your breasts are covered by a simple black bra. The soft and glossy material hugging your chest.".
+The slot of simple black bra is "breast".
+the scent of simple black bra is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+
 Section 10 - Stomach Trainers
 
 Section 11 - Gloves
@@ -1961,7 +2091,7 @@ Part 7 - Jogging Pants
 Table of Game Objects (continued)
 name	desc	weight	object
 "black jogging pants"	"A pair of black jogging pants made from fairly soft and stretchy fabric. Judging by the pants appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	black jogging pants
-"pink jogging pants"	"A pair of pink jogging pants made from fairly soft and stretchy fabric, it also has swirling hearts across the material. Judging by the pants appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	pink jogging pants
+"pink jogging pants"	"A pair of pink jogging pants made from fairly soft and stretchy fabric, it also has swirling hearts across the material. Judging by the pants appearance, it's [']feminine['] and pretty [']sporty['] looking."	1	pink jogging pants
 
 black jogging pants is a grab object.
 black jogging pants is equipment.
@@ -2195,7 +2325,7 @@ Part 7 - Loinclothes
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"orc loincloth"	"A ragged piece of brown fabric that belonged to one of the traveling orcs of the city. Judging by the appearance of the loincloth, it's [']masculine['] and pretty [']sexy['] looking."	0	orc loincloth
+"orc loincloth"	"A ragged piece of brown fabric that belonged to one of the traveling orcs of the city. Judging by the appearance of the loincloth, it's [']masculine['] and pretty [']sexy['] and [']violent[']looking."	0	orc loincloth
 "ragged brown loincloth"	"A ragged piece of brown fabric that one can tie around their hips to cover the bare essentials. Judging by the appearance of the loincloth, it's [']masculine['] and pretty [']sexy['] looking."	0	ragged brown loincloth
 "simple white loincloth"	"A simple white cotton loincloth. One can tie it around their hips to cover the bare essentials. Judging by the appearance of the loincloth, it's [']masculine['] and pretty [']sexy['] looking."	0	simple white loincloth
 
@@ -2208,11 +2338,22 @@ The size of orc loincloth is 3.
 The AC of orc loincloth is 0.
 The effectiveness of orc loincloth is 0.
 The GA of orc loincloth is 1.
-The Traits of orc loincloth is {"sexy"}.
+The Traits of orc loincloth is {"violent", "sexy"}.
 The placement of orc loincloth is "body".
 The descmod of orc loincloth is "An orc loincloth barely covers your crotch. It is fairly easy to expose yourself with the wrong (or right?) move.".
 The slot of orc loincloth is "crotch".
 the scent of orc loincloth is "The cloth has the scent of manly musk clinging to it. Just breathing in with it under your nose makes you think of orcs.".
+
+An everyturn rule:
+	if orc loincloth is equipped:
+		if player is male and cock length of player < 14 and a random chance of 1 in 3 succeeds:
+			say "     You feel yourself getting slightly hard under the short loincloth, showing a semi-erect bulge to the world. Seems like it's bigger than before too.";
+			increase cock length of player by 1;
+		if player is male and ball size of player < 4 and a random chance of 1 in 5 succeeds:
+			say "     Your balls throb and seem to grow a little.";
+			increase ball size of player by 1;
+			increase cock length of player by 1;
+		infect "Orc Warrior";
 
 ragged brown loincloth is a grab object.
 ragged brown loincloth is equipment.
@@ -2248,7 +2389,7 @@ Part 8 - Jockstraps
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"orange jockstrap"	"A jockstrap in bright orange, clearly made for people who do not mind showing off quite a bit. Judging by the appearance of the jockstrap, it's [']masculine['] and pretty [']sexy['] and [']sexy['] looking."	0	orange jockstrap
+"orange jockstrap"	"A jockstrap in bright orange, clearly made for people who do not mind showing off quite a bit. Judging by the appearance of the jockstrap, it's [']masculine['] and pretty [']sexy['] while [']sporty['] looking."	0	orange jockstrap
 
 orange jockstrap is a grab object.
 orange jockstrap is equipment.
@@ -2269,7 +2410,7 @@ Part 9 - Mesh Briefs
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"black mesh briefs"	"briefs made of sheer black mesh. You can literally see right through it. Judging by the appearance of the briefs, it's [']masculine['] and pretty [']sexy['] looking."	0	black mesh briefs
+"black mesh briefs"	"Briefs made of sheer black mesh. You can literally see right through it. Judging by the appearance of the briefs, it's [']masculine['] and pretty [']sexy['] looking."	0	black mesh briefs
 
 black mesh briefs is a grab object.
 black mesh briefs is equipment.

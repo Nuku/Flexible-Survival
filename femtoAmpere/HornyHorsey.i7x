@@ -33,14 +33,14 @@ AmmyLastEvent usually is 666.
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"black bra"	"The fine black lacy bra you received from Ammy. It's made of silk and feels soft to the touch, looking rather expensive. However, the fact that the sexy equine dancer wore it makes it even more valuable to you. You can almost smell her scent emanating from the bra."	1	black bra
+"ammy's black bra"	"The fine black lacy bra you received from Ammy. It's made of silk and feels soft to the touch, looking rather expensive. However, the fact that the sexy equine dancer wore it makes it even more valuable to you. You can almost smell her scent emanating from the bra."	1	ammy's black bra
 
-black bra is a grab object. It is part of the player. It is not temporary. [it is infectious.]
+ammy's black bra is a grab object. It is part of the player. It is not temporary. [it is infectious.]
 
-Instead of using black bra:
+Instead of using ammy's black bra:
 	say "     You look over the Ammy's bra. The faint scent of her on it is enticing.";
 
-the scent of black bra is "[blackbrascent]".
+the scent of ammy's black bra is "[blackbrascent]".
 
 to say blackbrascent:
 	say "     As you smell the black lacy bra, a sweet female scent with a hint of musk invades your mind, reminding you of the equine dancer from the club...";
@@ -219,7 +219,7 @@ Instead of asking Ammy about "take/taking off bra":
 		say "     'Oh I think I know what you want...' she asks teasingly, then turns her back to you and fondles around the snaps of her bra with her soft hands. You can hear a faint click as you start watching black silky bra sliding off her body, falling to the ground as she turns around again slowly.";
 		say "     With huge eyes you look at her ample bosom slowly drifting into view as she turns to you again. The view of her soft breasts moving while the equine turns around towards you is just delightful! Pink nipples on top of white boobs staring at you, it just makes such a perfect sight! - Still gazing in awe you catch a glimpse of her smile as she leans forward now, poking at your shoulder with one finger. 'I'm glad you enjoy the sight, but you forgot one thing,' she says in a soft voice, 'you're also still wearing something up there!' Not being able to compete to that logic you grinningly take off your upper clothes, exposing your [ammy_playerchestdesc]. It looks like Ammy's also pleased by what she sees... 'You're quite a saucy one, aren't you?' Nyehee, here - take my bra as a gift,' she laughs, putting it on the table next to you before walking off again, leaving you standing with your literal drooling mouth open.";
 		say "     Obeying the rules of the club, you drop your upper clothes every time you enter the lounge now as well.";
-		add "black bra" to invent of topless lounge;
+		add "ammy's black bra" to invent of topless lounge;
 		now AmmyAffection is 3;
 		now AmmyLastEvent is turns;
 	else if AmmyAffection < 2:

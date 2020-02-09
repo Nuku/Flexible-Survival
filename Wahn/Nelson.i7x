@@ -27,7 +27,7 @@ after going to Worker Barracks while (Alexandra is in Worker Barracks and Player
 			break;
 		else:
 			say "Invalid choice. Type [link]1[end link] to watch, [link]2[end link] to join in or [link]3[end link] to turn to other things.";
-	if calcnumber is 1:
+	if calcnumber is 1: [watch Nelson and Alexandra]
 		LineBreak;
 		say "     Giving Nelson a smile and a thumbs up, you step back a little to take in the whole picture all at once: He's one very large and muscular zebra stud, standing bare-ass naked in the worker barracks and with his more than a foot-long black cock in the muzzle of your dobie bitch. You can see her throat bulging from the long shaft inside it. The ex-cop uses her muzzle and long floppy tongue to service him expertly, slurping on the fat shaft and licking its sides by curling her tongue up along it. She cups the full orbs of his balls, massaging and lightly squeezing them. Seeing his cum-factories fill both her hands, you have little doubt of his virility, and you can't help but wonder just how much the guy puts out when he does come. While you're still contemplating this, Alexandra pulls off her equine lollypop, grinning up at you with her tail wagging behind her back.";
 		say "     'Told you he was a beast!' she says proudly, holding up the long black shaft glistening with her spit and his pre-cum welling up at the tip of his flared head. Then she bends her head down a little, opening her muzzle wide to engulf one of his balls. Nelson tenses a bit as he feels her canines lightly pressing into his flesh, but then the canine bitch starts lapping with eager abandon, tracing her tongue-tip over the sensitive skin again and again. 'Man, this is amazing!' the zebra groans, meeting your eyes for a second before turning his whole attention down to Alexandra as she switches balls and goes down on the other one. More and more pre-cum starts to leak from Nelson's blunt dickhead, brought up through his long shaft in little pulses and throbs to then trickle down along his length and finally soak the fur on the top and sides of Alexandra's muzzle.";
@@ -37,7 +37,7 @@ after going to Worker Barracks while (Alexandra is in Worker Barracks and Player
 		WaitLineBreak;
 		say "     'I think I'll need to lie down for a bit,' the zebra says in a well-pleased, but somewhat embarrassed tone once he catches his breath, looking back and forth between you and Alexandra as she stands up before him. 'Kiss me, stud!' she tells him in a firm tone and Nelson immediately obeys, their muzzles meeting and Alexandra pushing her tongue into his mouth. You can't be sure, but you guess that it must still be covered in his cum, which your bitch is sharing back to him. If she does, the big man accepts this without complaint, making out eagerly with the doberwoman and groping her breasts as he does so. When they eventually pull apart, Alexandra smiles at him and adds, 'Good boy! Now get your rest.' She swats his firm, striped ass as the man bends down to grab his towel, then walks over to one of the beds to lay down on it.";
 		say "     'Got some prime stallions on this farm, boss! Nice idea of you to send me here!' Alexandra tells you with a broad smile on her muzzle, one hand wiping up a bit more of the goo making her chest fur sticky and playfully waving it your way as if to smear you too with Nelson's seed. Chuckling, she licks it off instead a moment later, nodding her head towards the showers. 'I need to go clean up now. But while I do, I want you to think of that bad boy and his big shaft. Imagine how it feels to have that go into you...' With that said, the former cop saunters off, waving her hips and wagging her tail as she goes.";
-	else if calcnumber is 2:
+	else if calcnumber is 2: [Join in with Alexandra to service Nelson]
 		LineBreak;
 		say "     Giving Nelson a smile and a thumbs up, you step forward yourself and sink down to the same height as Alexandra, eye-level to the big black shaft of a very horny zebra stallion. Glancing upwards, you let your gaze wander over his towering and muscle-packed body, stroking and feeling it as you can't help but think what nice breeding material this guy is. Kids he puts into Alexandra surely would have exceptional genetics indeed - and not just because they'd be zebra doberman mixtures! A slurping sound shakes you out of your daydreaming, drawing your attention back to what's just in front of you - a foot-long black cock in the muzzle of your dobie bitch. The ex-cop uses her muzzle and long floppy tongue to service Nelson expertly, sucking on the fat shaft and licking its sides by curling her tongue up along it. She cups the full orbs of his balls, massaging and lightly squeezing them.";
 		say "     Seeing his cum-factories fill both her hands, you have little doubt of his virility, and you wonder how it'll feel to run your tongue over them. Leaning foward and stretching your neck, you find out a moment later, nose buried against the short hairs of his white front and huffing his clean, animalistic scent while you lick his balls. They feel firm and fairly smooth against your tongue, his black skin not so much wrinkled but rather stretched over the shape of his cum-factories, as if straining to contain the virile load of the stallion. You start to wonder just how much the guy puts out when he does come. While you switch back and forth between the zebra's balls, Alexandra pulls off her equine lollypop at some point, as you can feel her tongue licking your cheek, then ear, followed by the proudly spoken words, 'Told you he was a beast! Why don't you try out the cock for a bit and I'll keep going on his balls?'";
@@ -204,10 +204,10 @@ to say NelsonTalkMenu:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
 
-to say NelsonTalk1:
+to say NelsonTalk1: [short chat]
 	say "     You chat a little with Nelson, exchanging tales of what you've seen out in the city and him recounting meetings with the beasts that roam the dry plains. Overall, you've got a nice time talking with the friendly man, before eventually running out of immediate topics and saying your goodbyes.";
 
-to say NelsonTalk2:
+to say NelsonTalk2: [backstory]
 	say "     As you ask Nelson how he got to the farm, the anthro zebra snorts and strokes a hand over his striped arm. 'Guess it's obvious that I haven't been here since the beginning of this thing, eh? What with all of the other dudes being mostly the same kind of stallion and me sticking out like a sore thumb, hah!' Glancing around, he points at a Clydesdale with a prominent golden nose ring. 'Just so you know, that's my cousin Carlos over there. Not that anyone'd guess that if you just looked at us side by side.' His words are true enough, as the two of them only really have their large size and general muscular build in common, deviating a lot in all other regards. Black and white stripes and a fairly short coat on Nelson for example, while Carlos is a rich, smooth brown all over his body, and his arms and legs are white-blond starting at the elbows and knees, ending in fluffy fetlocks.";
 	say "     'Well, we're originally from a podunk moutain village out a fair bit east. Not much opportunities there, I can tell you that, so I left when the going was good. Found a decent job here on the coast, and I bet you can guess where!' He grins at you expectantly, tracing a hand over the short mane of hair standing up like a short mohawk on his head. 'It was the zoo of yourse, yup. Spent years watching my family's critters, so taking care of zoo animals was a good fit. Meanwhile, Carlos hired on here, under old Mr. McDermott. The gramps of our current boss, Anthony. We stopped by each other's places every so often - it's good to have someone who understands your hick jokes, ya'know?' Chuckling to himself as he thinks back, Nelson smiles, then shakes off the memory.";
 	WaitLineBreak;
@@ -244,7 +244,7 @@ instead of fucking the Nelson:
 to say NelsonSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
-	[]
+	[
 	if Player is male and Lust of Nelson is 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask him to blow your cock";
@@ -261,12 +261,12 @@ to say NelsonSexMenu:
 	now title entry is "Offer to blow him";
 	now sortorder entry is 3;
 	now description entry is "Get sucking on that thick zebra cock";
-	[]
+	]
 	choose a blank row in table of fucking options;
 	now title entry is "Ask to milk some cum out of Nelson's dick";
 	now sortorder entry is 4;
 	now description entry is "Get a bottle of prime zebra stud milk";
-	[]
+	[
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Offer your pussy to him";
@@ -284,7 +284,7 @@ to say NelsonSexMenu:
 		now title entry is "Ask to fuck him";
 		now sortorder entry is 7;
 		now description entry is "Take the zebra's ass";
-	[]
+	]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -339,7 +339,16 @@ to say NelsonSex3: [player sucks Nelson]
 	NPCSexAftermath Player receives "OralCock" from Nelson;
 
 to say NelsonSex4: [player milks Nelson]
-	say "     ";
+	say "     As you lay a hand on the zebra farmhand's crotch and casually ask if he needs to let off some steam, you feel a throb under your fingers. 'I do, you got that right [sir]! These equine balls pretty much always are ready to deliver! Which is great, but a bit difficult if you live together with only dudes. Your dobie bitch really has been a godsend! Too bad there's only one of her for all of us.' He chuckles and gives you a thankful smile, while you continue to lightly grope his bulge. Nelson's breath quickens a little as your attention inevitably arouses him, further filling out his manhood and making it strain against the fabric of his pants. The large male's face takes on a lusty, but somewhat pinched expression before long, and you grin at the power you have over the man by just touching him, continuing for a little while before popping the button of the jeans and drawing his zipper down.";
+	say "     Nelson groans as you free his cock from its confinement, his thick black shaft of equine maleness almost bursting out of his pants, hitting the side of your arm and leaving a wet smear of pre-cum on it. 'Nnngh! Thank you, it was getting a bit tight in there!' You continue pulling on his pants, shimmying them down on his thighs until the towering male's heavy pair of balls is finally dangling freely. Cupping the twinned proof of his virility, you lightly squeeze and fondle the zebra's balls and wrap your other hand around his shaft. Stroking along the hard length quickly makes it go fully erect, almost a foot and a half in length. The blunt head of his equine erection is wet with pre-cum as it leaks from the cum-slit, which you spread along his shaft while jerking your hand up and down, filling the air with the aroma of his masculinity.";
+	WaitLineBreak;
+	say "     You continue to caress and stroke Nelson for a little while, winding the large man up and getting him closer and closer to orgasming. You know you almost went too far when he lets out a grunt and a genuine spurt of pre pulses from his dickhead, landing on the floor with an audible splat. The zebra breathlessly pants, 'Keep going! Fuck, I'm close!' and moves his hand to take over as you pause too long for his taste, but you catch his wrist and shake your head. Holding up your finger in a gesture for him to wait a second, you quickly dig an empty plastic bottle from your gear and uncap it, then press its wide-open end over the cum-slit of your stallion. Nelson is far beyond caring what you might be planning to do with a bottle of his cum, instead just thrusting his hips reflexively as your fingers wrap around his erection once more. This doesn't exactly make it easy to keep your collection bottle lined up, but it is kinda fun to wrestle his cock and stroke it at the same time.";
+	say "     As close as you had already gotten him before, it's only a matter of a minute or two before the whole body of your muscle hunk zebra stiffens and he lets out an aroused grunt. A heartbeat later, his whole cock pulses as it gushes forth a heavy blast of creamy whiteness, hitting the end of your bottle with a loud thud. More spurts follow in a rapid tempo, each filling your container further with the zebra's seed. As he effortlessly passes the halfway mark, you can't help but wonder what you'll do if he fills the whole bottle up in one go. Thoughts of trying to snatch up another bottle, letting the overflow splat on the floor or doing some... other things are shooting through your mind in quick succession, and you're still trying to decide which you want to go for when you realize that the volume of Nelson's spurts is actually ebbing off slowly. It's still a respectable amount that spurts out, but not coming with the same urgent force now.";
+	WaitLineBreak;
+	say "     You continue to jerk Nelson's dick all the way until his orgasm has run its course, milking everything his balls have to give out to fill your bottle almost to the very top. As he finally raises a hand to gently push yours off his by now quite sensitive member, you hear the zebra say, 'Phew, I needed that!' He smiles at you, then begins to pull up his pants and stashes away his shrinking cock. Meanwhile, you put the lid on the bottle and quickly grab a pen, giving it the unambiguous label of 'zebra cum' before packing the bottle away in your backpack. The towering, equine sperm donor looks at you doing so a bit bemusedly, then opens his mouth to say or ask something, only to stop himself and shake his head. Having set his clothes back in order, he pats your arm and says, 'Thanks for giving me a nice time!' and then excuses himself, walking off to chat with some of his buddies.";
+	LineBreak;
+	say "[bold type]You gain a bottle of zebra cum![roman type][line break]";
+	increase carried of zebra cum by 1;
 
 to say NelsonSex5: [player pussy fucked by Nelson]
 	say "     ";

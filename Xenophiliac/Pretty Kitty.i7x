@@ -1,5 +1,12 @@
 Pretty Kitty by Xenophiliac begins here.
 [Version 1.1 - Obtain leather jacket for Hadiya's quest]
+[Version 2.0 - New store function makes sense with current content by Luneth ]
+
+[HP of Andromeda - Variable for player-triggered talking scenes]
+[XP of Andromeda - variable used to work the sex menu]
+[Libido of Andromeda - Variable for sex count, used to trigger some scenes]
+[lust of Andromeda - Variable for talk scene regarding collars]
+[thirst of Andromeda - Used for store description]
 
 "Adds Andromeda with her clothing shop to Flexible Survival to provide for the player's aesthetic garment choices."
 
@@ -60,7 +67,7 @@ instead of conversing Andromeda:
 		say "     You smile nervously, unsure what she's waiting for. '...Yes?' you answer nervously, hoping that was the right answer.";
 		say "     Andromeda claps her hands together excitedly and beams a smile at you, bounding around the counter and taking your hand in record time. 'Well come on then, I'll show you around my store,' she says as she pulls you forward, surprisingly strong for her size.";
 		say "     You spend the next half-hour being shown around the girl's clothing store, roaming through aisles of different clothes and being shown any piece that sparks your interest. Throughout the tour, Andromeda bounces happily, continuing to bombard you with every question imaginable, and some even unimaginable. You do your best to answer as many of them as you can, but the onslaught is relentless, and a few of them go unanswered. Not that that seems to bother her. In between questions, the bubbly catgirl makes small talk, talking about the weather or what your opinions on fish are. You can't seem to figure out how someone so cheerful still lives here.";
-		say "     You're almost sad when the tour ends, and you both find yourself back at the checkout counter. Andromeda takes her place behind the counter, smiling happily at you. 'Thanks for coming along, it's been a while since I've had someone new to talk to! If you find anything you like, bring it up here and we'll get you ready to go!' Thinking to herself for a moment, she lets out an audible [']Oops['], as if she'd just remembered something important. 'As much as I'd like to, I can't give away this stuff for free. Limited supply right now, as I'm sure you know. It'll be some food. I hate finding that stuff myself; the people outside the mall are mean now!' She lets out an audible [']Humph['] at the thought. 'Or if you happen across some milk, I'll gladly take that for these! The milk from those gryphons is soo good,' Andromeda tells you as her tail trembles at the thought of it.";
+		say "     You're almost sad when the tour ends, and you both find yourself back at the checkout counter. Andromeda takes her place behind the counter, smiling happily at you. 'Thanks for coming along, it's been a while since I've had someone new to talk to! If you find anything you like, bring it up here and we'll get you ready to go!' Thinking to herself for a moment, she lets out an audible [']Oops['], as if she'd just remembered something important. 'As much as I'd like to, I can't give away this stuff for free. Limited supply right now, as I'm sure you know. Thankfully, I have an friend that introduced me to new sort of currency. She works for Zephyr and they have been helping out with some of the supplies in exchange for these [']freecreds[']. If your ever in the area ask around for Larissa, she's super fun, but a word of warning, she's a pretty weird girl, hehe. I do also have a bargain counter though an that costs some food. I hate finding that stuff myself; the people outside the mall are mean now!' She lets out an audible [']Humph['] at the thought. 'Or if you happen across some milk, I'll gladly take that for these! The milk from those gryphons is soo good,' Andromeda tells you as her tail trembles at the thought of it.";
 		say "     You wave goodbye to Andromeda, having to go for now. She beams another happy smile at you and yells 'Come again soon [if Player is female]miss[else if Player is male]mister[else]you hear[end if]!'";
 		increase HP of Andromeda by 1;
 	else if HP of Hadiya is 9 or HP of Hadiya is 59:		[Leather jacket for Hadiya's quest]
@@ -616,13 +623,7 @@ the scent of girl's jacket is "The jacket smells of leather.".
 instead of using the girl's jacket:
 	say "[if scalevalue of Player > 2]Aside from being too small for you, you[else]You[end if] don't want to risk it getting damaged before giving it to Gobby. You instead stow it away safely.";
 
-Section 6 - Comments and Variables
-
-[HP of Andromeda - Variable for player-triggered talking scenes]
-[XP of Andromeda - variable used to work the sex menu]
-[Libido of Andromeda - Variable for sex count, used to trigger some scenes]
-[lust of Andromeda - Variable for talk scene regarding collars]
-[thirst of Andromeda - Used for store description]
+Section 6 - Comments
 
 
 Pretty Kitty ends here.

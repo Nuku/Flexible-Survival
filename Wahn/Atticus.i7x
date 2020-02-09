@@ -474,7 +474,8 @@ The scent of Atticus is "     Atticus smells nicely masculine, with just the sma
 to say AtticusDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP of Atticus: [HP of Atticus] <- DEBUG[line break]";
-	say "     Atticus has the looks of an eighteen-year old young man with a toned swimmer's build. He has absolutely no hangups about showing it off either, strolling around naked or even hard with casual ease. A pair of small, sharp horns curve up from his forehead and behind his back you can see muscular bat-like wings half-unfolded, as if ready to be laid around you or another partner to draw you in against him. The long and thin tail with a spaded tip completes the image of an attractive incubus. As Atticus notices your interest in him, he gives you an enticing smile, followed by a wink that promises anything you might want or desire.";
+	say "     Atticus has the looks of an eighteen-year old young man with a toned swimmer's build. He has absolutely no hang-ups about showing it off either, strolling around naked or even hard with casual ease. His handsome face is farmed in unruly brunette hair, with a pair of small, sharp horns curving up from his forehead. Behind his back you can see muscular bat-like wings half-unfolded, as if ready to be laid around you or another partner to draw you in against him. The long and thin tail with a spaded tip completes the image of an attractive incubus.";
+	say "     As he notices your interest in him, the young incubus gives you an enticing smile and meets your gaze with his blue eyes, followed by a wink with that promises anything you might want or desire.";
 
 an everyturn rule:
 	if PlayerMet of Atticus is true and Loyalty of Atticus < 101:
