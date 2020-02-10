@@ -19,7 +19,7 @@ panther milk is a grab object. It is a part of the player. Understand "milk" as 
 chocolate milk is a grab object. It is a part of the player. Understand "milk" as chocolate milk. chocolate milk is infectious. The strain of chocolate milk is "Chocolate Lab". The purified of chocolate milk is "distilled milk". chocolate milk is milky.
 vixen milk is a grab object. It is a part of the player. Understand "milk" as vixen milk. vixen milk is infectious. The strain of vixen milk is "Vixen Nurse". The purified of vixen milk is "distilled milk". vixen milk is milky.
 sweet milk is a grab object. It is a part of the player. Understand "milk" as sweet milk. sweet milk is infectious. The strain of sweet milk is "Female Cow-babe". The purified of sweet milk is "distilled milk". sweet milk is milky.
-macho milk is a grab object. It is a part of the player. Understand "milk" as macho milk. macho milk is infectious. The strain of sweet milk is "Male Cow-boi". The purified of macho milk is "distilled milk". macho milk is milky.
+macho milk is a grab object. It is a part of the player. Understand "milk" as macho milk. macho milk is infectious. The strain of macho milk is "Male Cow-boi". The purified of macho milk is "distilled milk". macho milk is milky.
 
 check milking:
 	if Nipple Count of Player is 0:
@@ -114,13 +114,13 @@ Carry out milking:
 			increase carried of sweet milk by 1;
 		if Breast Size of Player > 6:
 			repeat with T running from one to ( ( Nipple Count of Player ) / 2 ):
-				increase carried of sweet milk by 2;
+				increase carried of sweet milk by 1;
 		if Breast Size of Player > 12:
 			repeat with T running from one to ( ( Nipple Count of Player ) / 2 ):
-				increase carried of sweet milk by 3;
+				increase carried of sweet milk by 1;
 		if Breast Size of Player > 18:
 			repeat with T running from one to ( ( Nipple Count of Player ) / 2 ):
-				increase carried of sweet milk by 4;
+				increase carried of sweet milk by 1;
 		now lastmilking is turns;
 	else if BodyName of Player is "Male Cow-boi":
 		say "Squeezing your [if Nipple Count of Player is 2]two[else][Nipple Count of Player][end if] firm, meaty pecs, provokes a moan followed by a needy [']Mooooooo['] which emerges from your throat as a heavy stream of creamy, spicy milk is coaxed out of your nipples. Continuing to rub and knead the sensitive flesh, you can't help it as your mind swims with thoughts of the enjoyment that you would feel having an industrial milking machine attached to your chest, forces you to release all of the creamy goodness sealed within, you quickly grab an empty water bottle from your pack, catching squirt after squirt of milk in it until the bottle is full, then start on another...";
