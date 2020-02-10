@@ -609,7 +609,7 @@ to say AtticusTalkMenu:
 					say "[AtticusTalk1]";
 				if (nam is "Coming to live with you"):
 					say "[AtticusTalk2]";
-				if (nam is "Coming to live with you"):
+				if (nam is "Spending some time apart for now"):
 					say "[AtticusTalk3]";
 				wait for any key;
 		else if calcnumber is 0:
