@@ -114,6 +114,6 @@ to say astroslideShowerResult:
 	PlayerHealed 20;
 	LibidoLoss 40;
 	PlayerDrink 25;
-	infect "Football Gorilla";
+	infect "Football Gorilla Male";
 
 Astroslide Field Showers ends here.

@@ -50,7 +50,6 @@ Figure of FeralShaftBeast_icon is the file "FeralSB_ig.jpg".
 Figure of FireSpriteMale_icon is the file "FireSprite_male.jpg".
 Figure of FluffyOwl_icon is the file "FluffyOwl.png".
 Figure of FrPony_icon is the file "fs_afriendshippony.jpg".
-Figure of Giraffe_icon is the file "Giraffe_ig.jpg".
 Figure of GooGirl_icon is the file "GooGirl.jpg".
 Figure of BlueGryphon_icon is the file "BlueGryphon.jpg".
 Figure of BlueGryphon_face_icon is the file "BlueGryphon_face.jpg".
@@ -60,6 +59,8 @@ Figure of Gazelle_hard_icon is the file "Gazelle_hard.jpg".
 Figure of Gazelle_soft_icon is the file "Gazelle_soft.jpg".
 Figure of GermanShepherd_hard_icon is the file "GermanShepherd_hard.jpg".
 Figure of GermanShepherd_naked_icon is the file "GermanShepherd_naked.jpg".
+Figure of GiraffeHerm_hard_icon is the file "Giraffe Herm_hard.jpg".
+Figure of GiraffeHerm_soft_icon is the file "Giraffe Herm_soft.jpg".
 Figure of Gunbunny_icon is the file "Gunbunny_ig.jpg".
 Figure of Ebonflame_Drake_icon is the file "Ebonflame_Drake.jpg".
 Figure of Hawkman_naked_icon is the file "Hawkman_naked.jpg".
@@ -769,7 +770,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "German Shepherd naked"	Figure of GermanShepherd_naked_icon	"Vashaa"	g-White	"normal"
 "Gillian"	Figure of Gillian_icon	"Eevachu"	g-white	"normal"
 "Gina_face"	Figure of Gina_face_icon	"Vashaa"	g-black	"normal"
-"Giraffe"	Figure of Giraffe_icon	"Sharei"	g-white	"normal"
+"Giraffe Herm hard"	Figure of GiraffeHerm_hard_icon	"Vashaa"	g-white	"normal"
+"Giraffe Herm soft"	Figure of GiraffeHerm_soft_icon	"Vashaa"	g-white	"normal"
 "Gobby"	Figure of Gobby_icon	"lionsilverwolf"	g-white	"normal"
 "Grant_face"	Figure of Grant_face_icon	"Vashaa"	g-black	"normal"
 "Grant"	Figure of Grant_icon	"uniformvixen"	g-white	"normal"
@@ -1133,7 +1135,7 @@ carry out artistcredits:
 	say "     Friendship Pony by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Gazelle by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     German Shepherd by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Giraffe by Sharei @ furaffinity.net[line break]";
+	say "     Giraffe Herm by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Goo Girl by Rastear @ y-gallery.net[line break]";
 	say "     Gunbunny by HBruton @ furaffinity.net[line break]";
 	say "     Hawkman by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";

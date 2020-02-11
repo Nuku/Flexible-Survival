@@ -15,7 +15,7 @@ porn collection is a grab object. It is part of the player. It is not temporary.
 the scent of the porn collection is "The bundle of pornographic magazines have a lingering scent of sex to them.".
 
 when play begins:
-	add "porn collection" to invent of Porn Store;
+	add "porn collection" to invent of Restrained Desire;
 
 [
 before taking the porn collection for the first time:

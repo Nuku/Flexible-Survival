@@ -84,7 +84,6 @@ carry out pillgiving someone (called x):
 
 
 when play begins:
-	add { "libido pill", "libido pill" } to invent of Porn Store;
 	add { "libido pill" } to invent of Entrance to the Red Light District;
 	add { "libido pill" } to invent of Stables Hotel;
 	add { "libido pill" } to invent of Master's Office;

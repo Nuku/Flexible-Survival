@@ -130,9 +130,13 @@ Section 2 - Restrained Desire and Lisa
 Table of GameRoomIDs (continued)
 Object	Name
 Restrained Desire	"Restrained Desire"
+Restrained Desire	"Porn Store"
+[^^ mapping the old name of the room to the new room object]
 
 Restrained Desire is a room. It is fasttravel. It is sleepsafe. It is private.
 The description of Restrained Desire is "[pornstoredesc]".
+
+Restrained Desire is northwest of Boundary Street West.
 
 Table of GameCharacterIDs (continued)
 object	name
