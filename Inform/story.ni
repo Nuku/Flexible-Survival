@@ -429,7 +429,7 @@ Equipment has a text called descmod. The descmod of equipment is usually "".
 Equipment has a text called placement. The placement of equipment is usually "end".
 Equipment has a text called slot. The slot of equipment is usually "".
 Equipment has a truth state called taur-compatible. The taur-compatible of equipment is usually false.
-Equipment has a number called GenderAppearance. The GenderAppearance of equipment is usually 0. [neutral]
+Equipment has a number called GA. The GA of equipment is usually 0. [neutral]
 Equipment has a list of text called Traits.
 Equipment has a number called size. The size of equipment is usually 3.
 Equipment has a number called AC. The AC of equipment is usually 0.
@@ -2299,6 +2299,21 @@ Carry out vialalldropping:
 	else:
 		say "You chuck all your [target] vials away.";
 
+understand "vialeverythingdrop" as VialEverythingDropping.
+
+VialEverythingDropping is an action applying to nothing.
+
+Check VialEverythingDropping:
+	if Vials of Player is empty, say "     You don't even have any vials!" instead;
+
+Carry out VialEverythingDropping:
+	say "     [bold type]Do you really want to destroy all vials you have?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Yes, out with this junk!";
+	say "     ([link]N[as]n[end link]) - Err, on second thought...";
+	if Player consents:
+		LineBreak;
+		truncate Vials of Player to 0 entries; [cleaning out everything]
 
 [understand the command "set inventory columns" and "inventory columns" and "set inventory" and "set columns" as something new.]
 
@@ -2486,7 +2501,7 @@ carry out VialInventorying:
 	if the number of entries in vials of Player is 0:
 		say "Your collection of infection vials is empty.";
 	if the number of entries in vials of Player > 0:
-		say "Type [bold type]vial <name>[roman type] to [bold type][bracket]U[close bracket][roman type]se a vial, [bold type]vialdrop <name>[roman type] to [bold type][bracket]D[close bracket][roman type]estroy a vial, [bold type]vialalldrop <name>[roman type] to [bold type][bracket]D[close bracket][roman type]estroy [bracket]A[close bracket]ll of a vial";
+		say "Type [bold type]vial <name>[roman type] to [bold type][bracket]U[close bracket][roman type]se a vial, [bold type]vialdrop <name>[roman type] to [bold type][bracket]D[close bracket][roman type]estroy a vial, [bold type]vialalldrop <name>[roman type] to [bold type][bracket]D[close bracket][roman type]estroy [bracket]A[close bracket]ll of a vial, [bold type]vialeverythingdrop[roman type] to [link][bracket][bold type]C[roman type][close bracket][as]vialeverythingdrop[end link][roman type]lean out every last vial you have";
 		if ( scenario is "Researcher" or nanitemeter > 0) and Larissa is visible:
 			say " or [bold type]vialsell[roman type] to [bold type][bracket]S[close bracket][roman type]ell a vial";
 		say ".";
@@ -6299,7 +6314,6 @@ Include Alt Combat by Core Mechanics.
 Include Alt Vore by Core Mechanics.
 Include Assorted Items by Stripes.
 Include Banning by Core Mechanics.
-Include Basic Clothing Items by Core Mechanics.
 Include Basic Functions by Core Mechanics.
 Include Basic Locations by Core Mechanics.
 Include Basic Shops by Core Mechanics.
@@ -6307,6 +6321,8 @@ Include BFandI by Core Mechanics.
 Include Bound State Universals by Core Mechanics.
 Include Debugging Tools by Core Mechanics.
 Include Definitions by Core Mechanics.
+Include Expanded Clothing Mechanics by Core Mechanics.
+Include Equipment by Core Mechanics.
 Include Feats by Core Mechanics.
 include FS Graphics by Core Mechanics.
 Include Fighting by Core Mechanics.
@@ -6329,6 +6345,7 @@ Include Presets by Core Mechanics.
 Include Quest Log by Core Mechanics.
 Include Sex and Infection Functions by Core Mechanics.
 Include Status View by Core Mechanics.
+Include Store Mechanics by Core Mechanics.
 Include Sleeptimer by Core Mechanics.
 Include Tape Inventory by Core Mechanics.
 Include Text Capture by Eric Eve.
@@ -6531,6 +6548,7 @@ Include Amazonian by Stripes.
 Include Ancient Tentacles by Dys.
 Include Anime Babe by Stripes.
 Include Anthro Shaft Beast by Guest Writers.
+Include Anthro Cow Infections by Luneth.
 Include Anthro Rabbit by Rikaeus.
 Include Arctic Fox by Sarokcat.
 Include Army Ant by Glitch.
@@ -6586,6 +6604,7 @@ Include Doberman Cop by Stripes.
 Include Doberman Male by Wahn.
 Include Donkeyman by Sarokcat n Verath.
 Include Donkeywoman by Sarokcat n Verath.
+Include Draco-Mantis Infections by Prometheus.
 Include Dracovixentaur by Stripes.
 Include Dragontaur by Stripes.
 Include Dragon Pool Toy by Hina Vache.
@@ -6976,6 +6995,7 @@ Include Pet Mutt by CrimsonAsh.
 Include Nadia by Wahn.
 Include Nakoma by Song.
 Include Nala by CrimsonAsh.
+Include Nelson by Wahn.
 Include Nermine by Wahn.
 Include Nermine Quests by Wahn.
 Include Newt by Stripes.
@@ -8768,7 +8788,7 @@ to say gsopt_3:
 		say "(2) [link]Caught Outside[as]2[end link]: You were forced to survive outside. You have already been mutated a bit, though your practice has hardened you (Gain Spartan Diet, slowing gain of hunger and thirst).[bold type][if gsgt is 2]-Set[end if][roman type][line break]";
 		say "(3) [link]Rescuer Stranded[as]3[end link]: You arrived late, looking for survivors, when you got cut off from your teammates. Now you just want to survive! (Start with no supplies)[bold type][if gsgt is 3]-Set[end if][roman type][line break]";
 		say "(4) [link]Forgotten[as]4[end link]: You stayed in hiding too long. Your supplies have run dry, and the rescue already came and left. It will be a long time before any more arrive![bold type][if gsgt is 4]-Set[end if][roman type][line break]";
-		say "(5) [link]Researcher[as]5[end link]: You are not stranded at all. You came to explore, catalog, and interact with this absolutely fascinating outbreak. You've been given immunizations to casual infection (you won't transform from losing battles) and have specialized equipment that allows you to collect the infection vials of those you defeat.[bold type][if gsgt is 5]-Set[end if][roman type][line break]";
+		say "(5) [link]Researcher[as]5[end link]: You are not stranded at all. You came to explore, catalog, and interact with this absolutely fascinating outbreak. You've been given immunizations to casual infection (you won't transform from losing battles) and have specialized  that allows you to collect the infection vials of those you defeat.[bold type][if gsgt is 5]-Set[end if][roman type][line break]";
 		say "[line break]";
 		say "(0) [link]Return to main menu[as]0[end link][line break]";
 		while 1 is 1:
@@ -8901,8 +8921,8 @@ to say gsopt_start:
 	if scenario is "Bunker":
 		increase carried of black t-shirt by 1;
 		now black t-shirt is equipped;
-		increase carried of sturdy jeans by 1;
-		now sturdy jeans are equipped;
+		increase carried of dark-blue jeans by 1;
+		now dark-blue jeans are equipped;
 		increase carried of white briefs by 1;
 		now white briefs is equipped;
 		increase carried of brown loafers by 1;
@@ -8915,17 +8935,17 @@ to say gsopt_start:
 	else if scenario is "Rescuer Stranded":
 		increase carried of camo shirt by 1;
 		now camo shirt is equipped;
-		increase carried of camo pants by 1;
-		now camo pants are equipped;
-		increase carried of boxer briefs by 1;
-		now boxer briefs are equipped;
-		increase carried of combat boots by 1;
-		now combat boots is equipped;
+		increase carried of green camo pants by 1;
+		now green camo pants are equipped;
+		increase carried of black boxer briefs by 1;
+		now black boxer briefs are equipped;
+		increase carried of black combat boots by 1;
+		now black combat boots is equipped;
 	else if scenario is "Forgotten":
-		increase carried of sleeveless shirt by 1;
-		now sleeveless shirt is equipped;
-		increase carried of ripped jeans by 1;
-		now ripped jeans are equipped;
+		increase carried of blue sleeveless shirt by 1;
+		now blue sleeveless shirt is equipped;
+		increase carried of ripped black jeans by 1;
+		now ripped black jeans are equipped;
 		increase carried of white briefs by 1;
 		now white briefs is equipped;
 		increase carried of brown loafers by 1;
@@ -8933,12 +8953,12 @@ to say gsopt_start:
 	else if scenario is "Researcher":
 		increase carried of white t-shirt by 1;
 		now white t-shirt is equipped;
-		increase carried of sturdy jeans by 1;
-		now sturdy jeans are equipped;
-		increase carried of boxer briefs by 1;
-		now boxer briefs are equipped;
-		increase carried of combat boots by 1;
-		now combat boots is equipped;
+		increase carried of dark-blue jeans by 1;
+		now dark-blue jeans are equipped;
+		increase carried of black boxer briefs by 1;
+		now black boxer briefs are equipped;
+		increase carried of black combat boots by 1;
+		now black combat boots is equipped;
 	if scenario is not "Bunker":
 		if scenario is "Caught Outside":
 			add "Spartan Diet" to feats of Player;
@@ -9084,30 +9104,46 @@ to say silent_start:
 	say "	Just a moment. There are a few more things to prepare...";
 	WaitLineBreak;
 	if scenario is "Bunker":
-		increase carried of sturdy jeans by 1;
-		now sturdy jeans are equipped;
 		increase carried of black t-shirt by 1;
 		now black t-shirt is equipped;
+		increase carried of dark-blue jeans by 1;
+		now dark-blue jeans are equipped;
+		increase carried of white briefs by 1;
+		now white briefs is equipped;
+		increase carried of brown loafers by 1;
+		now brown loafers is equipped;
 	else if scenario is "Caught Outside":
-		increase carried of black jeans by 1;
-		now black jeans are equipped;
 		increase carried of white t-shirt by 1;
 		now white t-shirt is equipped;
+		increase carried of black jeans by 1;
+		now black jeans are equipped;
 	else if scenario is "Rescuer Stranded":
-		increase carried of camo pants by 1;
-		now camo pants are equipped;
 		increase carried of camo shirt by 1;
 		now camo shirt is equipped;
+		increase carried of green camo pants by 1;
+		now green camo pants are equipped;
+		increase carried of black boxer briefs by 1;
+		now black boxer briefs are equipped;
+		increase carried of black combat boots by 1;
+		now black combat boots is equipped;
 	else if scenario is "Forgotten":
-		increase carried of ripped jeans by 1;
-		now ripped jeans are equipped;
-		increase carried of sleeveless shirt by 1;
-		now sleeveless shirt is equipped;
+		increase carried of blue sleeveless shirt by 1;
+		now blue sleeveless shirt is equipped;
+		increase carried of ripped black jeans by 1;
+		now ripped black jeans are equipped;
+		increase carried of white briefs by 1;
+		now white briefs is equipped;
+		increase carried of brown loafers by 1;
+		now brown loafers is equipped;
 	else if scenario is "Researcher":
-		increase carried of camo pants by 1;
-		now camo pants are equipped;
-		increase carried of camo shirt by 1;
-		now camo shirt is equipped;
+		increase carried of white t-shirt by 1;
+		now white t-shirt is equipped;
+		increase carried of dark-blue jeans by 1;
+		now dark-blue jeans are equipped;
+		increase carried of black boxer briefs by 1;
+		now black boxer briefs are equipped;
+		increase carried of black combat boots by 1;
+		now black combat boots is equipped;
 	if scenario is not "Bunker":
 		if scenario is "Caught Outside":
 			add "Spartan Diet" to feats of Player;

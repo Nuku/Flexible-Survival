@@ -1,4 +1,5 @@
 Astroslide Field Locker-room by Kernog begins here.
+[Some minor edits and the inclusion of the new TF helmet - Luneth]
 
 "Adds the Astroslide Field Locker-room, where players can have sex with gorilla footballmen, become part of the team, and conduct business related to them."
 
@@ -77,13 +78,13 @@ to say RomanHumiliation:
 	say "     'Looks tight. Haven't used it much, bitch?' The primates press around Roman. Another one slips in a finger, then another. They are quickly half a dozen, prodding his holes, stretching him.";
 	say "     'Unf... Get off me!' Roman says, suddenly putting a desperate resistance. The group wrestles for a moment until Roman is pinned again, this time back on a wooden bench. 'Tie her up!' Roman punches and kicks, but he is alone. His former teammates pick what they can find, which is jerseys and shirts resting on the ground. Roman's arms are pulled under him and trapped under the bench. In the meantime, his legs are pulled against his chest and tied to the feet of the bench to keep them in this position. 'There we go,' one of the players says. 'Now, let's see how many fingers this pussy can hold.' And the sadistic team resumes its collective fingering.";
 	WaitLineBreak;
-	say "     The rest of the room watches the scene unfold, some shocked, some aroused, all unwilling to help, as it often happens in these situations. Roman's howling is quickly muffled as one of the players slams his cock down the former captain's throat. 'If I you bite it, we'll take one of the footballs and stretch your cunt with it,' the ape threatens. Roman whimpers and does not bite. On the other side, another gorilla lines up his cock with Roman's hole. 'Bitch is ready to be [']initiated['].' Under the encouragements of the others, he pushes his member into Roman, who howls around the rod in his throat.";
+	say "     The rest of the room watches the scene unfold, some shocked, some aroused, all unwilling to help, as it often happens in these situations. Roman's howling is quickly muffled as one of the players slams his cock down the former captain's throat. 'If you bite it, we'll take one of the footballs and stretch your cunt with it,' the ape threatens. Roman whimpers and does not bite. On the other side, another gorilla lines up his cock with Roman's hole. 'Bitch is ready to be [']initiated['].' Under the encouragements of the others, he pushes his member into Roman, who howls around the rod in his throat.";
 	say "     'Rmmmf!'";
 	say "     'Oh, fuck! He - no - she's extra tight!'";
 	say "     Minutes pass. The gorillas all take their turn into their former captain, and as the others arrive, see the scene, and learn of the captain's dirty secret, Roman's torment is prolonged for the whole part of an hour, then two. At first, Roman is struggling, but by his third penetration and fourth forced blowjob, a powerful, forced orgasm shakes his body under the cheers of the crowd. After some time, the gorillas all decide to [']get some rest['], though not before defacing Roman's body with a red marker. Now that the gorillas are not around him anymore, Roman's cum-covered body appears in all his glory. His belly is inflated with all the gorilla semen he was forced to intake, and some drips out from his pussy and mouth. Roman pants, tears drying on his face. Your eyes and his meet, but there is nothing but broken lust in his expression. He's broken.";
-	say "     As you start to make your way out, you notice that the door to Roman's room is ajar. You take a look inside and see a blue football helmet lying on a small bench. With a shrug, you opportunistically snag the helmet and add it to your possessions.";
+	say "     As you start to make your way out, you notice that the door to Roman's room is ajar. You take a look inside and see a black football helmet lying on a small bench. With a shrug, you opportunistically snag the helmet and add it to your possessions.";
 	say "[bold type]You gain a football helmet![roman type][line break]";
-	increase carried of football helmet by 1;
+	increase carried of Roman's stolen football helmet by 1;
 
 [General Sex menu]
 instead of fucking the Gorilla Team-Members:

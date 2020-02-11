@@ -325,8 +325,8 @@ instead of resolving a Lost Explorer:
 		say "     The helmet actually isn't all that easy to get to, dangling from the end of a two foot protrusion of steel rebar, so you have to lean out over the drop to reach it. As you try to reach it, the strap snagged on the rod slips a little away from you, threatening to make the whole thing fall down onto the ground below. Snatching at it desperately, you barely manage to catch one of the straps and avoid your prize smashing on the concrete, then pull back to sit down for a second at the edge of the platform. The helmet you rescued from its precarious position is indeed fairly new, with a tag on the inside declaring its owner to be 'Mason Reed'. It looks nice and sturdy and should be useful as head protection. As for the camera at its front end, that doesn't seem to react to any of the buttons on it you push, except for the spring-loaded eject of its tape. Hm, must have run out of power.";
 		LineBreak;
 		say "     Pocketing the tape for good measure and with the helmet under one arm, you leave the abandoned factory after a little while longer, during which you find numerous additional tracks of paws crisscrossing the interior of the building. Clearly, this is the territory of some sort of predator, so you deem it best not to stay too long. As you go, you can't help but wonder who the owner of this helmet was and when it was left there. Might have been since before the infection, since clearly not many people come here who could have found it. The contents of the tape might reveal some information about that, if you find a way to play it.";
-		say "[bold type]You gain an urban explorer helmet![roman type][line break]";
-		increase carried of urban explorer helmet by 1;
+		say "[bold type]You gain an crimson urban explorer helmet![roman type][line break]";
+		increase carried of crimson urban explorer helmet by 1;
 		say "[bold type]'Urban Explorer Helmet Cam Vid #1' has been added to your tape inventory![roman type][line break]";
 		add "Urban Explorer Helmet Cam Vid #1" to tapes of Player;
 		now Resolution of Lost Explorer is 1; [found the vid]

@@ -7,6 +7,7 @@ Version 2 of Wolftaur by Sarokcat begins here.
 Section 1 - Creature Responses
 
 to say Wolftaur victory:
+	project the Figure of Wolftaur_hard_icon;
 	if level of Lindsey > 3:
 		say "     The large beast knocks you to the ground, before moving around you to claim its prize, you shudder as your body responds eagerly to the presence of another strong male wolftaur, as the more dominant beast steps behind you, before stopping and sniffing your submissive body. 'It seems you have already been claimed by a pack,' the beast says sadly, his rough voice making you shudder as your body squirms with desire. 'Far be it from me to poach on an alpha's territory,' the wolftaur says as he runs one of his clawed hands over your body, making you squirm. 'But let your alpha know that if he doesn't keep track of his bitches... well, anything can happen if I find you out here again,' the beast concludes with a smug growl deep in his throat, the dominant posture and musk making you whine in need even as he leaves you lying there on the path unsatisfied. You can't help but wonder if maybe you should chase after him and beg him to take you like a bitch, or if you should go see if your alpha wants to use you like a proper bitch instead...";
 		decrease level of Lindsey by 1;
@@ -24,7 +25,8 @@ to say Wolftaur victory:
 
 
 To say Wolftaur loss:
-	say "     The large [one of]gray furred[or]white furred[or]auburn furred[at random] wolftaur staggers back, surprise evident on the beast's muzzle as you manage to gain the advantage. Shooting you one last incredulous glance, he turns tail and runs, moving swiftly on all four legs while his arms knock branches and bushes out of the way.";
+	project the Figure of Wolftaur_hard_icon;
+	say "     The large gray-furred wolftaur staggers back, surprise evident on the beast's muzzle as you manage to gain the advantage. Shooting you one last incredulous glance, he turns tail and runs, moving swiftly on all four legs while his arms knock branches and bushes out of the way.";
 	LineBreak;
 	let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
@@ -91,6 +93,10 @@ to say WolftaurRidingAss:
 	WaitLineBreak;
 	say "     You lie there panting on his chest for a while, your hands instinctively stroking his soft fur as you both try to regain your wits. Eventually his knot shrinks enough that you are able to pull yourself off him, his cock slipping out and leaving you feeling sadly empty as you stand up on shaky legs. While you're collecting your stuff, the wolftaur says, 'That was... something else. Can't remember when I last came that much. But... I'm not really into that ass stuff. That's for gay sissies - and I'm a real man!', looking up at you with a weak grin, then lets his head sink back on the floor. 'Since you like to fuck anyways, how about if next time, you just submit and I show you a good time on my terms?' You just give him a meaningful grin, then walk off, leaving him to pick himself up later.";
 
+to say WolftaurDesc:
+	project the Figure of Wolftaur_soft_icon;
+	setmongender 3;
+	say "     Wandering through the zoo pathways, you begin to get the feeling that something is following you, looking around you in panic, you spot a large gray-furred Wolftaur following you down the path. The large beast is making little effort to hide, his wolfish lower body moving swiftly down the trail after you, while his fur covered upper body is flexing its clawed hands in anticipation of getting them on you, and there is a rather lusty look on the beasts canine face as it eyes you. [one of]'I don't suppose you are on the way to your grandma's house now, because I see the treat I want...' [or]'Heh heh heh, now the question is, will you submit quietly or struggle? Either way, you will be mine,' [or]'I can't wait to see you on all fours underneath me,' [or]'How about I show you what a large cock I have? It's all the better to stick into you, my dear...' [or]'You look like you would make a fine bitch...' [or]'Why don't you come join my pack?' [at random]he says, a lusty canine musk filling the air as he abandons any pretense of stealth and pads forward eagerly, his canine cock bouncing underneath his lower body eagerly.";
 
 Section 2 - Creature Insertion
 
@@ -118,7 +124,7 @@ When Play begins:
 	now attack entry is "[one of]He snaps at you with his sharp teeth, leaving marks on your skin[or]He whips his clawed fore-paw out, slapping you down like a submissive wolf.[or]His large erect member catches your eye for a minute, noticing he pauses to spray his musk in the area, the scent making you pant with need.[or]He grabs your arm in his teeth, and wrestles you to the ground.[or]charging forward, the wolftaur snaps and claws at you viciously[or]The masculine wolftaur's strong dominant scent makes you pause for a second, and he takes advantage of that to try to wrestle you down to the ground.[or]He lashes out at you with his clawed hands, leaving small marks on your skin.[or]The large taur charges right at you, knocking you to the ground.[or]The wolf like beast lowers his head and nuzzles you, while his hands play over your body, making you feel aroused and submissive.[at random]";
 	now defeated entry is "[Wolftaur loss]";
 	now victory entry is "[Wolftaur victory]";
-	now desc entry is "[mongendernum 3]     Wandering through the zoo pathways, you begin to get the feeling that something is following you, looking around you in panic, you spot a large Wolftaur following you down the path. The large beast is making little effort to hide, his wolfish lower body moving swiftly down the trail after you, while his fur covered upper body is flexing its clawed hands in anticipation of getting them on you, and there is a rather lusty look on the beasts canine face as it eyes you. [one of]'I don't suppose you are on the way to your grandma's house now, because I see the treat I want...' [or]'Heh heh heh, now the question is, will you submit quietly or struggle? Either way, you will be mine,' [or]'I can't wait to see you on all fours underneath me,' [or]'How about I show you what a large cock I have? It's all the better to stick into you, my dear...' [or]'You look like you would make a fine bitch...' [or]'Why don't you come join my pack?' [at random]he says, a lusty canine musk filling the air as he abandons any pretense of stealth and pads forward eagerly, his canine cock bouncing underneath his lower body eagerly.";
+	now desc entry is "[WolftaurDesc]";
 	now face entry is "a long, wolf-like muzzle, your new yellow eyes gleaming out of your lupine face, while your changed canine ears swivel to pick up the slightest new sounds. At this point, it would be hard to tell the difference between your face and a wolftaur's"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "lean and rather well built. Your lower body is that of a fully canine beast and is standing easily on its four lupine paws, while your rather humanoid torso extends upwards from where a normal wolf would have its head, your claw-tipped hands and lean form giving you a rather lean and sexy appearance"; [ Body Description, format as "Your Body is (your text)."]
 	now skin entry is "[one of]gray furred[or]rough furred[or]thick furred[or]Wolf furred[at random]"; [ skin Description, format as "You have (your text) skin"]

@@ -337,6 +337,13 @@ to say Medeaadjustments:
 			now title entry is "Parasite";
 			now sortorder entry is 10;
 			now description entry is "See if Medea can do anything about the parasite inside of you";
+		[]
+		if resolution of Spreading Flowers is 9:
+			choose a blank row in table of fucking options;
+			now title entry is "Joanna's custom strain";
+			now sortorder entry is 3;
+			now description entry is "Request the doctor that she takes a look at the vial containing Joanna's strain";
+		[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -664,6 +671,8 @@ to say Medeaadjustments:
 						wait for any key;
 				else if nam is "Doctor Matt's request" or nam is "Doctor Mouse's demand":
 					say "[Medeaassistance_plot]";
+				else if nam is "Joanna's custom strain":
+					say "[SFMedea]"; [on Joanna's file]
 
 to say Medeaassistance_plot:
 	if Medeaget >= 3 and HP of Doctor Medea >= 5 and lust of Doctor Medea >= 3:

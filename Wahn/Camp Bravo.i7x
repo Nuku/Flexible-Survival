@@ -640,12 +640,12 @@ to say ElaineUniform:
 to UniformHandout:
 	say "[bold type]You gain a camo shirt![roman type][line break]";
 	increase carried of camo shirt by 1;
-	say "[bold type]You gain camo pants![roman type][line break]";
-	increase carried of camo pants by 1;
-	say "[bold type]You gain boxer briefs![roman type][line break]";
-	increase carried of boxer briefs by 1;
-	say "[bold type]You gain combat boots![roman type][line break]";
-	increase carried of combat boots by 1;
+	say "[bold type]You gain green camo pants![roman type][line break]";
+	increase carried of green camo pants by 1;
+	say "[bold type]You gain black boxer briefs![roman type][line break]";
+	increase carried of black boxer briefs by 1;
+	say "[bold type]You gain black combat boots![roman type][line break]";
+	increase carried of black combat boots by 1;
 	now XP of Elaine is 2;
 
 to say CampBravoElaineAdamTalk:

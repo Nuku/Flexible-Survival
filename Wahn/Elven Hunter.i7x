@@ -8,9 +8,9 @@ Section 1 - Creature Responses
 to say Hunter wins:
 	if inasituation is true:
 		stop the action; [text taken care of at the source]
-	if HP of Player > 0:
+	if HP of Player > 0: [player surrendered]
 		say "     'Pathetic,' he sneers and shoves you to the ground. 'We had hoped this world would have finally brought forth something worthy of The Hunt again. A true warrior never surrenders.' He leaves you lying there, saying, 'You're not even worth sullying my blade. Do something useful with yourself - like serving as food for more worthy creatures.' He then silently vanishes into the shadows between the trees.";
-	else:
+	else: [player was beaten in a fight]
 		if BodyName of Player is "Woof Elf" or BodyName of Player is "Elven Hunter":
 			say "     'And you want to call yourself an elf? Any novice hunter would have lasted longer in his first summer,' he scoffs at you. Pulling off your clothes, the hunter looks you over and touches your naked body, then remarks 'The tiny machines of this realm made you look the part, enough to fool pixies and lower fey. But believe me - you'll never be a true elf unless you get accepted for The Hunt.'";
 		else if ( BodyName of Player is listed in infections of Reptilelist and SkinName of Player is listed in infections of Reptilelist ):

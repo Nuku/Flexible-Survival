@@ -1,5 +1,6 @@
 Version 6 of Stag by Wahn begins here.
 [Version 6.1 - Ares moved to his own file]
+[Version 6.2 - Added support for Joanna's questline with Xerxes or Helen - Gherod]
 
 "Adds a Male Stag to Flexible Survival's Wandering Monsters table, with impreg chance"
 
@@ -805,6 +806,8 @@ instead of conversing Xerxes:
 	if LastXerxesTalk - turns > 8:
 		SanBoost 5;
 		now LastXerxesTalk is turns;
+	if Resolution of Spreading Flowers is 4:
+		say "[XerxesSFHarvest]"; [On Joanna's File]
 
 instead of sniffing Xerxes:
 	say "     Xerxes has a nice smell, fresh and masculine.";
@@ -893,6 +896,12 @@ Instead of fucking Xerxes:
 			now sortorder entry is 12;
 			now description entry is "Go pick up Ares from Mike's kennel and take him and Xerxes for a walk.";
 		[]
+		if Resolution of Spreading Flowers > 4:
+			choose a blank row in table of fucking options;
+			now title entry is "Take Xerxes to Joanna for some cum harvest";
+			now sortorder entry is 12;
+			now description entry is "Bring him along for some fun with the plant-girl.";
+		[]
 		sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
@@ -932,6 +941,8 @@ Instead of fucking Xerxes:
 						say "[AwesomeXerxesSex2]";
 					else if (nam is "Take Xerxes and Ares for a walk"):
 						say "[AresXerxesWalk]";
+					else if (nam is "Take Xerxes to Joanna for some cum harvest"):
+						say "[XerxesHarvest]"; [On Joanna's file]
 					if lust of Xerxes is 0:
 						now lust of Xerxes is 1;
 					else if lust of Xerxes is 1:
@@ -1471,6 +1482,8 @@ instead of conversing Helen:
 	if LastHelenTalk - turns > 8:
 		SanBoost 5;
 		now LastHelenTalk is turns;
+	if Resolution of Spreading Flowers is 4:
+		say "[HelenSFHarvest]"; [On Joanna's file]
 
 instead of sniffing Helen:
 	say "     Helen has a nice smell, fresh and feminine[if thirst of Helen > 0]. There's a slight undertone to it, hinting at her being pregnant[end if].";
@@ -1554,6 +1567,12 @@ Instead of fucking Helen:
 		now sortorder entry is 12;
 		now description entry is "Go for a walk to the beach with Helen.";
 		[]
+		if Resolution of Spreading Flowers > 4:
+			choose a blank row in table of fucking options;
+			now title entry is "Take Helen to Joanna for some fun";
+			now sortorder entry is 12;
+			now description entry is "Bring her along for some fun with the plant-girl.";
+		[]
 		sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
@@ -1591,6 +1610,8 @@ Instead of fucking Helen:
 						say "[AresHelenWalk]";
 					else if (nam is "Take Helen for a walk to the beach"):
 						say "[HelenBeachWalk]";
+					else if (nam is "Take Helen to Joanna for some fun"):
+						say "[HelenHarvest]"; [On Joanna's file]
 					if lust of Helen is 0:
 						now lust of Helen is 1;
 					else if lust of Helen is 1:

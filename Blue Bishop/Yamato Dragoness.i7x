@@ -11,7 +11,26 @@ YDSF is a number that varies. [Yamato Dragon Succumb Fate]
 FYDTBMM is a number that varies. [Female Yamato Dragon TBM Memory]
 FYDM is a number that varies. [Female Yamato Dragon Memory]
 
+to ProjectYamatoDragoness_SFW:
+	if YDEnemyColor is:
+		-- 0:
+			project the Figure of YamatoDragoness_red_SFW_icon;
+		-- 1:
+			project the Figure of YamatoDragoness_blue_SFW_icon;
+		-- 2:
+			project the Figure of YamatoDragoness_green_SFW_icon;
+
+to ProjectYamatoDragoness_NSFW:
+	if YDEnemyColor is:
+		-- 0:
+			project the Figure of YamatoDragoness_red_NSFW_icon;
+		-- 1:
+			project the Figure of YamatoDragoness_blue_NSFW_icon;
+		-- 2:
+			project the Figure of YamatoDragoness_green_NSFW_icon;
+
 to say Yamato Dragoness vic:
+	ProjectYamatoDragoness_NSFW;
 	if HP of Player > 0:
 		say "     You ultimately choose to surrender yourself to the serpentine dragoness's mercy, dropping what you were carrying and offering yourself freely. When it's clear that this isn't some trick she pulls closer, a mouthless voice flooding your hearing.";
 	else:
@@ -269,6 +288,8 @@ to say Yamato Dragoness vic:
 		yamatbiasshift;
 
 to say yamato dragoness desc:
+	now YDEnemyColor is a random number between 0 and 2;
+	ProjectYamatoDragoness_SFW;
 	setmongender 4; [creature is female]
 	choose row MonsterID from Table of Random Critters;
 	if "Male Preferred" is listed in feats of Player:
@@ -287,7 +308,7 @@ to say yamato dragoness desc:
 		now sex entry is "nochange";
 	now firebreathcount is 0;
 	now firebreathready is false;
-	say "     [if showlocale is true]Traveling through the park[else]Suddenly[end if], you find yourself beset by a dragoness of eastern myth. Massive and serpentine in frame, airborne in spite of being wingless, her [one of]red[or]blue[or]green[at random] scales and yellow underbelly shimmering in the [if daytimer is night]starlight[else]sunlight[end if]. You instinctively attempt to find cover, but this only encourages her to pursue you on ground, a lascivious hunger agleam in her eyes.";
+	say "     [if showlocale is true]Traveling through the park[else]Suddenly[end if], you find yourself beset by a dragoness of eastern myth. Massive and serpentine in frame, airborne in spite of being wingless, her [if YDEnemyColor is 0]red[else if YDEnemyColor is 1]blue[else]green[end if] scales and yellow underbelly shimmering in the [if daytimer is night]starlight[else]sunlight[end if]. You instinctively attempt to find cover, but this only encourages her to pursue you on ground, a lascivious hunger agleam in her eyes.";
 
 to say ydskinchange:
 	let tempnum be ydcolor;
@@ -298,6 +319,7 @@ to say ydskinchange:
 
 
 to say Yamato Dragoness Loss:
+	ProjectYamatoDragoness_NSFW;
 	say "     You successfully manage to fend off the massive dragoness... Or, at least, she seems to yield to you, [one of]perhaps figuring that this fight is going nowhere for her[or]no doubt satisfied with you[stopping]. Pulling back, she glares down at you.";
 	say "     '[one of]Alright[or]Very well[or]I see now[at random], ";
 	if BodyName of Player is "Yamato Dragon" or BodyName of Player is "Yamato Dragoness":

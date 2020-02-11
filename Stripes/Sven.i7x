@@ -1,5 +1,6 @@
 Version 6 of Sven by Stripes begins here.
 [Version 6 - Alternate 'Confident Sven' path]
+[Version 6.1 - Corrected svetlana's location to restrained desire by Luneth]
 "Adds an NPC named Sven/Svetlana to the Flexible Survival game"
 
 [	HP of Sven				]
@@ -147,7 +148,7 @@ to say SvenDesc:
 	else if HP of Sven >= 30 and HP of Sven < 50:	[self-confident Sven]
 		project the Figure of Sven_naked_icon;
 		say "     Sven is fully covered in a soft pelt of snow leopard fur. Unlike the other snow leopards around, he's kept the height from his Nordic heritage, making him appear quite impressive. And while his head is fully feline, he's also still has his long, blond hair and baby blue eyes. Despite his feline muzzle, the snowmeow still speaks in a soft voice with a Scandinavian accent, though his earlier timidity is largely gone. Now an impressive and sexy feline with a fluffy coat of fur, all he wears are some shorts he's brought with him after abandoning his basement apartment. He grooms his sensually soft fur often, keeping it soft and beautiful. He seems particularly pleased with his long, fluffy tail and pets it often and playfully uses it to teasingly hide his crotch.";
-	[Sven at Porn Store]
+	[Sven at Restrained Desire]
 	else if HP of Sven is 50:
 		say "     Sven is tall and well-built, looking roughly 20 years old. He has long, blond hair, blue eyes and Nordic features. Poking from his golden hair are a pair of feline ears. These, along with his tail, are his only visible signs of infection. He blushes quite a bit at everything around him in the store, trying his best to hide the bulge in his shorts behind his tail while trying not to seem like he's looking it all over. He clutches the fluffy snow leopard tail nervously, petting and wringing it in his hands. He speaks in a soft, shy voice with a Scandinavian accent. He has a light t-shirt and shorts on and seems a little overheated in the store, but that could be the surrounds as well. It does seem that Lisa has quite a bit for him to drink, so he's coping well regardless.";
 	else if HP of Sven is 51:
@@ -303,7 +304,7 @@ instead of conversing the Sven:
 		now SvenStory1 is true;
 	else if HP of Sven >= 31 and HP of Sven < 50:		[Self-confident Sven]
 		say "     [one of]The large snowmeow strokes his fluffy tail with one paw while the other fondles his heavy balls.[or]'I am very grateful for your help, my friend. I thank you for helping me become stronger.'[or]'I appreciate all that you've done for me and I hope you'll let me [']repay['] you [if HP of Sven > 31]again [end if]soon,' he adds with a coy grin and a swish of his thick tail across his bulging crotch.[or]'I never thought it would be so hot in this country when I accepted the scholarship.'[or]'How long do you think it will be before someone comes to rescue us?'[or]'I can't wait to show everyone what a hot kitty I've become,' he purrs, stroking a paw over his firm chest while the other lightly caresses his half-hard cock.[or]Sven lickgrooms his tail while listening attentively while you speak to him.[or]Sven sits back, lounging comfortably while the two of you chat for a bit.[or]Sven licks his lips and slips in something about being thirsty while eying your crotch. He grins and brushes his fluffy tail across your side.[or]The studly snow leopard stretches himself out on his bunk, lightly fingering his tailhole with one paw while the other fondles his cock and balls. His tail is only loosely draped over his shorts, doing little to hide his unashamed self-exploration.[or]The big feline runs a paw along his side. 'If they find a way to do it, I don't want to be changed back. I like this new me.' He runs his paw more slowly and sensually over his body. 'Don't you?' he purrs with a smile.[in random order]";
-	[Sven at Porn Store]
+	[Sven at Restrained Desire]
 	else if HP of Sven is 50:
 		say "     [one of]The partially feline fellow strokes his new tail, purring softly.[or]'I am very grateful for your help. I do not know what would have happened if you had not come along. You're so brave, strong and sexy.' He blushes and hides behind his tail after admitting that aloud.[or]'I really appreciate all you've done for me.'[or]'I want to thank you for bringing me here. It's... a little overwhelming, but at least I'll be safe.' He fidgets nervously and presses his tail into his lap as turns his eyes to floor, trying to avoid staring at the wares again.[or]'I never thought it would be so hot in this country when I accepted the scholarship.'[or]'How long do you think we will be waiting before someone comes to rescue us?'[or]'I am worried what my parents will say when they see me like this. They were finally so proud of me when I got my scholarship.'[or]'Do you think they will let me keep my tail? It is so pretty.'[or]Sven fidgets with his new tail while you speak to him. He doesn't seem to pay much attention, his eyes having fallen on a large dildo on display. You spot a hand drift into his shorts while his tail half-blocks the motion.[or]Sven looks at you with admiration and longing as you chat with him for a bit.[or]Sven licks his lips and mumbles something about being thirsty while eying your crotch. He then notices what he's said and blushes behind his fluffy tail before rushing to the back to get another drink from Lisa's supplies.[or]Sven tries sweeping the floor to help out, but has a hard time as he attempts to keep his tail hiding his crotch bulge as well as his eyes wander over the wares.[in random order]";
 	else if HP of Sven is 51:
@@ -317,7 +318,7 @@ to say SvenRescueFight:
 	now inasituation is false;
 	if fightoutcome >= 10 and fightoutcome <= 19:
 		say "     After your victory against the intruder, you look around quickly to make sure there aren't any infected coming, then head back to the house to check on Sven. You find him huddled in the stairwell with his head just poking over edge, clearly having crept out to watch the fight from there. He has one hand nervously playing with his tail while the other has slipped into his shorts. He does not appear to be aware he's doing the latter, looking up at you with admiration at your defeat of the beast. As he starts to get up, he notices where his hand has gotten and quickly whips it out, blushing behind his tail.";
-		if Porn Store is known:
+		if Restrained Desire is known:
 			say "     You grin inside, but remember that you have more pressing things to deal with now. Pulling Sven down the stairs, you go through the broken doorway and tell him that he needs to get ready to leave. He wrings his tail and releases a few nervous mewls as he tries to cope with the idea of leaving his home away from home. But you do recall another friend he could stay with who is much closer. It would be faster and easier to move the nervous kitty there than going across the city to the bunker.";
 			say "     [bold type]Do you suggest taking him to stay with Lisa the Mouse instead?[roman type][line break]";
 			LineBreak;
@@ -328,8 +329,8 @@ to say SvenRescueFight:
 				say "     You make the suggestion to him, saying you have a friend who's hiding in a store much closer to here. 'A store near here? That doesn't sound too bad. And I'll be safe there?' You tell him that your mouse friend hasn't had any trouble. 'A... mouse? I... I think I could cope with a mouse. That wouldn't be too scary.' With that decided and a little prompting from you, Sven gathers up a few things and the last of his supplies in his backpack. As you head out with him, he stays at your side, clutching your arm tightly to his chest. He glances nervously over your shoulder, when he's not nuzzling against it, that is. The trek is short and thankfully uneventful.";
 				now HP of Sven is 50;
 				now lastSvendrink is turns;
-				move Sven to Porn Store;
-				move player to Porn Store;
+				move Sven to Restrained Desire;
+				move player to Restrained Desire;
 				increase score by 20;
 				say "     Upon arriving at the Lisa's, Sven is a little unnerved by the type of store you've brought him to. He blushes behind his tail as he tries not to appear like he's staring at the items on display. When Lisa comes out, Sven fidgets a little and moves behind you. She smiles to you and starts asking about your pointy-eared friend. You explain the situation to her and she seems a little reluctant at first, but eyes the blushing guy while you talk. Eventually, she replies, 'Well, maybe a little game of cat and mouse would be fun. Don't you think, kitty?' she asks Sven, he blushes brighter and hides behind his plush tail, mumbling a soft, 'May I please stay, ma'am?' She smiles and laughs, 'Oh! He's so sweet! And what a lovely accent. I think I will keep him. I'm sure he'll fit right in soon enough,' she chuckles and sidles up to him. The mousetaur runs a paw along his side, then scritches his ear, making him purr a little even as he squirms and reddens further, much to her delight. It seems everything's settled.";
 			else:
@@ -379,7 +380,7 @@ An everyturn rule:
 			increase score by 10;
 	if HP of Sven is 50 and lastSvendrink - turns >= 12:
 		now HP of Sven is 51;
-		if Player is in Porn Store:
+		if Player is in Restrained Desire:
 			say "     Waiting around at the porn store while you debate your next move, you notice Lisa come up to Sven. She puts her arms around him and nibbles at his ear. As she does, she whispers something to him and lets a paw wander down to his shorts. You grin as she pulls him gently towards the back room. Having seen this coming and knowing how bashful the kitty is, you pretend to be watching out the window while watching their faint reflections in it. He wrings his tail nervously and fidgets for a bit as she keeps scritching him, but follows her along. From inside, you can half-hear some moan, mewls and squeaks coming from the pair.";
 			say "     When Sven emerges some time later, he blushes considerably as he runs his paws over his new coat of snow leopard fur. He's taken off his shirt now, probably too hot with his plush fur, and adjusts his shorts. His hands are more paw-like and his face has a distinctly feline muzzle. Noticing you looking, he grins shyly before turning away to act busy. When Lisa comes out a few minutes later, she gives his rump a squeeze before taking her usual spot.";
 			increase score by 10;
@@ -387,14 +388,14 @@ An everyturn rule:
 	if HP of Sven is 51 and lastSvendrink - turns >= 12:
 		now HP of Sven is 52;
 		now lust of Sven is 3;
-		if Player is in Porn Store:
+		if Player is in Restrained Desire:
 			say "     As you ponder what you need to do next, you spot Lisa cuddling up to Sven again. She wraps her arms around him and dips a paw into his shorts. Again using the reflection from the window to watch, you spot her fondling the kitty quite a bit. Which is a little surprising, given her tastes. She nibbles the kitty's ear and steers him off to the back with much more ease than the first time. From the back, you again catch the sounds of the two in the back. It seems to be louder and more energetic than the other time.";
 			say "     It is some time before they emerge even after the noises stopped. You are quite surprised by the changes Sven, who emerges in a red bathing suit with the female body to fill it. The snowmeow hides her face behind her tail, now covered in pink leopard markings. But it can't cover her ample rack or the four smaller breasts below the main pair. Her crotch is smooth, with a perceptible camel toe showing in the tight swimwear. Around her neck is a pink collar with a round, silver bell on it. Lisa wraps her arms around her bashful pet and runs her paws over the kitty's new body, making her shiver and mewl. 'Allow me to introduce the new and improved Svetlana,' the mousetaur says with a grin.";
 			say "     Sven, or Svetlana now, smiles shyly at you, opening her mouth to say something. Lisa's paw dips down between the kitty's legs to tease over her covered pussy, rubbing and teasing her until there's a growing wet patch in her swimsuit. 'She's so much more fun now that my pet kitty's got a nice, wet pussy. You should give her a try sometime.' She teases the snowmeow like this for a little while before eventually tiring of the game for now to tend to the store.";
 			increase score by 10;
 			now HP of Sven is 53;
 		now Sven is nowhere;
-		move Svetlana to Porn Store;
+		move Svetlana to Restrained Desire;
 
 after going to Bunker while HP of Sven is 9:
 	now HP of Sven is 10;
@@ -534,7 +535,7 @@ to say SexWithSven:
 		say "     The snow leopard smiles and stretches out on his sex-scented bunk, letting his tail only partially hide the plump bulge in his crotch. 'While I'm really looking forward to that, I need to rest up a little more first. This is all so new and wonderful to me, but I do not want to spoil it by not being to perform my best,' he purrs softly in his Nordic accent as he traces along his side.";
 	else if HP of Sven >= 32 and HP of Sven < 50:
 		say "[ConfidentSvenSex]";
-	[Sven at Porn Store:]
+	[Sven at Restrained Desire:]
 	else if HP of Sven is 50:
 		say "     Sven squirms a little in his seat and blushes as you start to bring up the subject of sex. He looks away, but ends up looking at the wares again, and he reddens and hides his face behind his snow leopard tail. He mumbles something about how he doesn't think that'd be a good idea. You do spot that telltale bulge in his shorts though, which makes you hopeful you can coax him into some fun once he settles into his new home.";
 	else if HP of Sven is 51:

@@ -50,7 +50,7 @@ with 1 blank row
 
 Table of PlayerLists
 ListName(text)	EntryText(text)
-with 8000 blank rows
+with 50000 blank rows
 
 Table of GameBeasts
 Name(text)	Area(text)	non-infectious(truth state)	sex(text)

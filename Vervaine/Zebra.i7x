@@ -675,4 +675,21 @@ to say zebra fur use:
 
 zebra fur is infectious. The strain of zebra fur is "Zebra Stallion".
 
+Table of Game Objects (continued)
+name	desc	weight	object
+"zebra cum"	"A plastic water bottle almost completely filled with a milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Zebra Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	zebra cum
+
+zebra cum is a grab object. zebra cum is cum.
+the usedesc of zebra cum is "[zebra cum use]";
+
+to say zebra cum use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy fluid cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 5;
+	SanLoss 5;
+	if "Iron Stomach" is not listed in feats of player:
+		infect "Zebra Stallion";
+
+instead of sniffing zebra cum:
+	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
+
 Zebra ends here.

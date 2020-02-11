@@ -96,19 +96,7 @@ catwalk door is west of Control Room.
 The description of catwalk door is "A door in the west wall allows access to the catwalks in the main power plant hall. It's made from metal and looks pretty solid and thick, most likely to stop the uncomfortably loud noise of a whole powerplant's worth of huge generators from damaging the hearing of the operators in here. Several hooks on the wall besides the door hold ear protectors - though you won't need one of those, with most generators destroyed now.".
 
 when play begins:
-	add { "yellow helmet" } to invent of control room;
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"yellow helmet"	"A yellow helmet with the word 'Supervisor' printed on the front. It should provide some minor protection while worn."	1	yellow helmet
-
-yellow helmet is equipment.
-It is not temporary.
-The AC of yellow helmet is 20.
-The effectiveness of yellow helmet is 55.
-The placement of yellow helmet is "face".
-The descmod of yellow helmet is "A yellow protective helmet rests atop them, bearing the word 'Supervisor' on the front.".
-The slot of yellow helmet is "head".
+	add { "yellow construction helmet" } to invent of control room;
 
 Table of GameRoomIDs (continued)
 Object	Name

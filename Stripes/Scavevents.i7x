@@ -838,7 +838,7 @@ Instead of resolving a Scattered Clothing:
 			say "[GiveRandomFeetItem]";
 
 WaistItemsList is a list of objects that varies.[@Tag:NotSaved]
-the WaistItemsList is {ripped jeans, black jeans, sturdy jeans, skinny jeans, hot pants, gray pants, camo pants, jogging pants, bermuda shorts, black miniskirt, pencil skirt, floral skirt}.
+the WaistItemsList is {ripped black jeans, black jeans, black skinny jeans, scarlet hot pants, gray slacks, green camo pants, black jogging pants, beige bermuda shorts, black miniskirt, light-blue pencil skirt, gypsy floral skirt}.
 
 to say GiveRandomWaistItem:
 	now RandomItemPick is a random number from 1 to the number of entries in WaistItemsList;
@@ -846,7 +846,7 @@ to say GiveRandomWaistItem:
 	say "[bold type]You gain [if plural of entry RandomItemPick of WaistItemsList is true][entry RandomItemPick of WaistItemsList][else]a [entry RandomItemPick of WaistItemsList][end if]![roman type][line break]";
 
 ChestItemsList is a list of objects that varies.[@Tag:NotSaved]
-the ChestItemsList is {black t-shirt, white t-shirt, maroon pullover, zephyr shirt, camo shirt, sleeveless shirt, mesh shirt}.
+the ChestItemsList is {black t-shirt, white t-shirt, maroon pullover, camo shirt, black sleeveless shirt, mesh shirt}.
 
 to say GiveRandomChestItem:
 	now RandomItemPick is a random number from 1 to the number of entries in ChestItemsList;
@@ -854,7 +854,7 @@ to say GiveRandomChestItem:
 	say "[bold type]You gain [if plural of entry RandomItemPick of ChestItemsList is true][entry RandomItemPick of ChestItemsList][else]a [entry RandomItemPick of ChestItemsList][end if]![roman type][line break]";
 
 FeetItemsList is a list of objects that varies.[@Tag:NotSaved]
-the FeetItemsList is {combat boots, brown loafers, leather sandals, high heels, stiletto heels, jogging shoes, cowboy boots}.
+the FeetItemsList is {black combat boots, brown loafers, brown leather sandals, bright-red pumps, black stiletto heels, blue running shoes, dark-brown cowboy boots}.
 
 to say GiveRandomFeetItem:
 	now RandomItemPick is a random number from 1 to the number of entries in FeetItemsList;
@@ -862,7 +862,7 @@ to say GiveRandomFeetItem:
 	say "[bold type]You gain [if plural of entry RandomItemPick of FeetItemsList is true][entry RandomItemPick of FeetItemsList][else]a [entry RandomItemPick of FeetItemsList][end if]![roman type][line break]";
 
 CrotchItemsList is a list of objects that varies.[@Tag:NotSaved]
-the CrotchItemsList is {ragged loincloth, simple loincloth, boxer briefs, white briefs, orange jockstrap, mesh undies, pink panties}.
+the CrotchItemsList is {ragged brown loincloth, simple white loincloth, black boxer briefs, white briefs, orange jockstrap, mesh briefs, pink panties}.
 
 to say GiveRandomCrotchItem:
 	now RandomItemPick is a random number from 1 to the number of entries in CrotchItemsList;

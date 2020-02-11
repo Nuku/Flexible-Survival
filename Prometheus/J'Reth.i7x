@@ -1,24 +1,52 @@
-Version 3 of J'Reth by Prometheus begins here.
+Version 4 of J'Reth by Prometheus begins here.
 [ Commission for Heth Drakiel ]
 [ Version 1 - Initial Release ]
 [ Version 2 - Talk Menu Added ]
 [ Version 3 - Sex Menu Added  ]
+[ Version 4 - Gendershifting Added ]
 
 
-[ hp of J'Reth                         ]
-[ 0 - Unmet                            ]
-[ 1 - Met in Storeroom                 ]
-[ 2 - Asked for Peaches                ]
-[ 3 - Given peaches, Available for sex ]
+[ hp of J'Reth                          ]
+[ 0 - Unmet                             ]
+[ 1 - Met in Storeroom                  ]
+[ 2 - Asked for Peaches                 ]
+[ 3 - Given peaches, Available for sex  ]
+[ 4 - Talked to J'Reth about the Draco-Mantis Infection ]
+[ 5 - Agreed to gender-shifting ]
 
+[ hunger of J'Reth                      ]
+[ 0 - Not discussed gender shifting     ]
+[ 1 - Agreed to gendershift using pills ]
+[ 2 - Agreed to gendershift using bodily fluids ]
 
-J'RethRoomConnection is a number that varies.[@Tag:NotSaved]
+[ thirst of J'Reth                      ]
+[ 0 - Done no gendershifting            ]
+[ 1 - J'Reth is Male ]
+[ 2 - J'Reth is Herm ]
+[ 3 - J'Reth is Female ]
 
-an everyturn rule:
-	if Invitation to Storeroom is resolved and J'RethRoomConnection is 0:
+J'Reth_MVialsOwned is a number that varies.[@Tag:NotSaved]
+J'Reth_FVialsOwned is a number that varies.[@Tag:NotSaved]
+J'Reth_HVialsOwned is a number that varies.[@Tag:NotSaved]
+J'Reth_VialName is a text that varies.[@Tag:NotSaved]
+J'Reth_VialName is usually "Draco-Mantis Male".
+
+a postimport rule: [bugfixing rules for players that import savegames]
+	if Invitation to Storeroom is resolved:
 		change the Northwest exit of Mall West Wing to J'Reth's Room; [connecting the location to the travel room]
 		change the Southeast exit of J'Reth's Room to Mall West Wing; [connecting the location to the travel room]
-		now J'RethRoomConnection is 1; [room connected]
+
+to Count_J'RethVials:
+	now J'Reth_MVialsOwned is 0;
+	now J'Reth_HVialsOwned is 0;
+	now J'Reth_FVialsOwned is 0;
+	repeat with z running through vials of Player:
+		if z is "Draco-Mantis Male":
+			increase J'Reth_MVialsOwned by 1;
+		else if z is "Draco-Mantis Herm":
+			increase J'Reth_HVialsOwned by 1;
+		else if z is "Draco-Mantis Female":
+			increase J'Reth_FVialsOwned by 1;
 
 Section 1 - Room Declaration
 
@@ -30,7 +58,7 @@ J'Reth's Room is a room.
 The description of J'Reth's Room is "[J'RethsRoomDesc]".
 
 to say J'RethsRoomDesc:
-	say "     While J'Reth seems to be living in a storage closet at the back of a gaming store that is now filled with sleeping bags and mattresses, it is large enough for a bed, a desk, and several rows of shelves. The shelves are covered in tabletop models such as trolls, dragons, and wolves, rulebooks for assorted games, and small pots of paint. Considering what you know about J'Reth, the room seems to suit him very well. On the desk pushed into the corner against the wall is a computer but it doesn't appear to be plugged in so you doubt that the draco-mantis has used it recently. The walls are covered in promotional posters for various movies and games, colorful pins holding them in place.";
+	say "     While J'Reth seems to be living in a storage closet at the back of a gaming store that is now filled with sleeping bags and mattresses, it is large enough for a bed, a desk, and several rows of shelves. The shelves are covered in tabletop models such as trolls, dragons, and wolves, rulebooks for assorted games, and small pots of paint. Considering what you know about J'Reth, the room seems to suit [ObjectPro of J'Reth] very well. On the desk pushed into the corner against the wall is a computer but it doesn't appear to be plugged in so you doubt that the draco-mantis has used it recently. The walls are covered in promotional posters for various movies and games, colorful pins holding them in place.";
 
 Section 2 - NPC
 
@@ -71,17 +99,20 @@ The scent of J'Reth is "     J'Reth smells of Mantis-Dragons and fairies in the 
 to say J'RethDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP of J'Reth: [HP of J'Reth] <- DEBUG[line break]";
-	say "     J'Reth is somewhat feminine but with some slight musculature to his frame. His body is covered in pale green scales all around with chitinous plates of a darker green around his chest, forearms, thighs, and shins. Currently he is wearing a t-shirt with the words '[One of]Roll for Initiative[or]Just Because I Play a Bard, Does Not Make Me Spoony[or]I Seduce the Dragon. Critical Success[or]Kastles and Kobolds[or]Backpackemon. Befriend Them All[or]This [italic type]Is [roman type ]My Clean Shirt. My Other One Has Soup On It[at random]' emblazoned across the front, and trousers.";
+	say "     J'Reth is somewhat feminine but with some slight musculature to [PosPro of J'Reth] frame. [PosProCap of J'Reth] body is covered in pale green scales all around with chitinous plates of a darker green around [PosPro of J'Reth] chest, forearms, thighs, and shins. [SubjectProCap of J'Reth] has a pair of mantis wings folded against [PosPro of J'Reth] back. Currently [SubjectPro of J'Reth] is wearing a t-shirt with the words '[One of]Roll for Initiative[or]Just Because I Play a Bard, Does Not Make Me Spoony[or]I Seduce the Dragon. Critical Success[or]Kastles and Kobolds[or]Backpackemon. Befriend Them All[or]This [italic type]Is [roman type ]My Clean Shirt. My Other One Has Soup On It[at random]' emblazoned across the front, and trousers.";
 
+when play begins:
+	SetMalePronouns for J'Reth;
 
 Section 3 - Talking with J'Reth
 
 Instead of conversing the J'Reth:
-	say "     You indicate to J'Reth that you would like to talk to him and he puts down the [one of]poster [or]model [or]comic [at random]that he was examining at devotes his attention to you.";
+	say "     You indicate to J'Reth that you would like to talk to [ObjectPro of J'Reth] and [SubjectPro of J'Reth] puts down the [one of]poster [or]model [or]comic [at random]that [SubjectPro of J'Reth] was examining and devotes [PosAdj of J'Reth] attention to you.";
 	WaitLineBreak;
 	say "[J'RethTalkMenu]";
 
 to say J'RethTalkMenu:
+	Count_J'RethVials;
 	say "[line break]";
 	say "What do you wish to discuss with J'Reth?";
 	now sextablerun is 0;
@@ -95,12 +126,72 @@ to say J'RethTalkMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "Before the Outbreak";
 	now sortorder entry is 2;
-	now description entry is "Ask what he did before the nanite outbreak";
+	now description entry is "Ask what [SubjectPro of J'Reth] did before the nanite outbreak";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Small Talk";
 	now sortorder entry is 3;
 	now description entry is "Make general small talk";
+	[]
+	if hp of J'Reth is 3:
+		choose a blank row in table of fucking options;
+		now title entry is "Discuss His Form";
+		now sortorder entry is 4;
+		now description entry is "Enquire about his draco-mantis form";
+	[]
+	if hp of J'Reth is 4 and (scenario is "Researcher" or nanite collector is equipped):
+		choose a blank row in table of fucking options;
+		now title entry is "Prepare for Gender Shifting";
+		now sortorder entry is 5;
+		now description entry is "Further discuss and prepare for gender shifting the draco-mantis";
+	[]
+	if hp of J'Reth > 4 and (scenario is "Researcher" or nanite collector is equipped) and ((thirst of J'Reth < 2 and J'Reth_MVialsOwned < 14) or (thirst of J'Reth is 2 and J'Reth_HVialsOwned < 14) or (thirst of J'Reth is 3 and J'Reth_FVialsOwned < 14)):
+		choose a blank row in table of fucking options;
+		now title entry is "Extract Vial of Draco-mantis Nanites";
+		now sortorder entry is 6;
+		now description entry is "Get a vial of draco-mantis nanites for personal use or as a backup in case gendershifting doesn't go as planned";
+	[]
+	if hunger of J'Reth is 1 and thirst of J'Reth < 3 and carried of Estrogen Pill > 0 and (scenario is "Researcher" or nanite collector is equipped) and ("Draco-Mantis Male" is listed in vials of player or "Draco-Mantis Female" is listed in vials of player or "Draco-Mantis Herm" is listed in feats of player):
+		choose a blank row in table of fucking options;
+		now title entry is "Give Estrogen Pill";
+		now sortorder entry is 7;
+		now description entry is "Give J'Reth an estrogen pill to gender-shift them towards being female";
+	[]
+	if hunger of J'Reth is 2 and thirst of J'Reth < 3 and carried of Glob of Goo > 0 and (scenario is "Researcher" or nanite collector is equipped) and ("Draco-Mantis Male" is listed in vials of player or "Draco-Mantis Female" is listed in vials of player or "Draco-Mantis Herm" is listed in feats of player):
+		choose a blank row in table of fucking options;
+		now title entry is "Give Glob of Goo";
+		now sortorder entry is 8;
+		now description entry is "Give J'Reth a glob of goo to gender-shift them  towards being female";
+	[]
+	if hunger of J'Reth is 1 and thirst of J'Reth > 1 and carried of Testosterone pill > 0 and (scenario is "Researcher" or nanite collector is equipped) and ("Draco-Mantis Male" is listed in vials of player or "Draco-Mantis Female" is listed in vials of player or "Draco-Mantis Herm" is listed in feats of player):
+		choose a blank row in table of fucking options;
+		now title entry is "Give Testosterone Pill";
+		now sortorder entry is 9;
+		now description entry is "Give J'Reth a testosterone pill to gender-shift them towards being male";
+	[]
+	if hunger of J'Reth is 2 and thirst of J'Reth > 1 and carried of Fennec Semen > 0 and (scenario is "Researcher" or nanite collector is equipped) and ("Draco-Mantis Male" is listed in vials of player or "Draco-Mantis Female" is listed in vials of player or "Draco-Mantis Herm" is listed in feats of player):
+		choose a blank row in table of fucking options;
+		now title entry is "Give Fennec Semen";
+		now sortorder entry is 10;
+		now description entry is "Give J'Reth some Fennec Semen to gender-shift them towards being male";
+	[]
+	if hunger of J'Reth is 1 and thirst of J'Reth is 1 or thirst of J'Reth is 3 and carried of Estosterogen pill > 0 and (scenario is "Researcher" or nanite collector is equipped) and ("Draco-Mantis Male" is listed in vials of player or "Draco-Mantis Female" is listed in vials of player or "Draco-Mantis Herm" is listed in feats of player):
+		choose a blank row in table of fucking options;
+		now title entry is "Give Estosterogen Pill";
+		now sortorder entry is 11;
+		now description entry is "Give J'Reth a Estosterogen pill to gender-shift them towards being a hermaphrodite";
+	[]
+	if hunger of J'Reth is 2 and thirst of J'Reth > 1 and carried of Gryphon Milk > 0 and (scenario is "Researcher" or nanite collector is equipped) and ("Draco-Mantis Male" is listed in vials of player or "Draco-Mantis Female" is listed in vials of player or "Draco-Mantis Herm" is listed in feats of player):
+		choose a blank row in table of fucking options;
+		now title entry is "Give Gryphon Milk";
+		now sortorder entry is 12;
+		now description entry is "Give J'Reth some Gryphon Milk to gender-shift them towards being a hermaphrodite";
+	[]
+	[if hunger of J'Reth is 1:
+		choose a blank row in table of fucking options;
+		now title entry is "Try to convince J'Reth to use transformatives";
+		now sortorder entry is 13;
+		now description entry is "Attempt to get J'Reth to reconsider not using creature transformatives to gendershift";]
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -123,31 +214,353 @@ to say J'RethTalkMenu:
 					say "[J'RethTalk2]";
 				if (nam is "Small Talk"):
 					say "[J'RethTalk3]";
+				if (nam is "Discuss His Form"):
+					say "[J'RethTalk4]";
+				if (nam is "Prepare for Gender Shifting"):
+					say "[J'RethTalk5]";
+				if (nam is "Extract Vial of Draco-mantis Nanites"):
+					say "[J'RethTalk6]";
+				if (nam is "Give Estrogen Pill"):
+					say "[J'RethTalk7]";
+				if (nam is "Give Glob of Goo"):
+					say "[J'RethTalk8]";
+				if (nam is "Give Testosterone Pill"):
+					say "[J'RethTalk9]";
+				if (nam is "Give Fennec Semen"):
+					say "[J'RethTalk10]";
+				if (nam is "Give Estosterogen Pill"):
+					say "[J'RethTalk11]";
+				if (nam is "Give Gryphon Milk"):
+					say "[J'RethTalk12]";
+				[if (nam is "Try to convince J'Reth to use transformatives"):
+					say "[J'RethTalk13]";]
 				WaitLineBreak;
 		else if calcnumber is 0:
 			now sextablerun is 1;
-			say "     You shake your head, stating that you simply wanted to make sure he was alright. He gives you a brief smile of appreciation before returning to what he was doing.";
+			say "     You shake your head, stating that you simply wanted to make sure that [SubjectPro of J'Reth] was alright. [SubjectProCap of J'Reth] gives you a brief smile of appreciation before returning to what [SubjectPro of J'Reth] was doing.";
 			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say J'RethTalk1: [Hobbies]
-	say "     You enquire about what J'Reth's hobbies are, earning a pleased smile in return. 'I'm glad that you asked. If you look around, you'll see all the miniatures from assorted tabletop role-playing games as well as my collection of rulebooks, bestiaries, tomes of lore, dice, pens, pencils... I'm going overboard, aren't I?' He gives a sheepish grin, but you wave your hand dismissively. You did ask, and his enthusiasm is admirable. 'I've been playing Kastles & Kobolds for a few years, so each time they release an expansion, I sort of feel like I need to get it. And I know what you're thinking, but it isn't just kobolds. There are lots of different races that you can be. Elves of various alignments, dwarves, elementals, beastfolk... there are lots. Sorry if I'm a little defensive. I was teased about it when I was younger.' You nod in understanding as you pick up a model of what looks like a troll from the shelf, angling it in the limited light to have a look at the finer details.";
-	say "     'If you're looking to see if it is anatomically correct then I'm sorry that I must disappoint you. They aren't. I checked when I first got them,' J'Reth informs you, and you grin at him as, realizing what he has said, a blush spreads across his features. You hear him mumble, 'I really need to learn to keep my mouth shut sometimes.' In an effort to shift the conversation from the disgraceful lack of genitals on his troll, the draco-mantis continues explaining his other hobbies. 'While the shortage of electricity in the city currently prevents it, I also liked playing video games. I wouldn't say that I was particularly amazing, but I got to the point that the people that I regularly played things with over the internet weren't always complaining and I even got a few compliments. I'm not sure whether to hope that the rest of the world is aware what is happening in the city or that the military has managed to keep it secret. On the one hand, I don't want my friends to think that I am avoiding them, but equally, I don't want them to be worried about me.'";
+	say "     You enquire about what J'Reth's hobbies are, earning a pleased smile in return. 'I'm glad that you asked. If you look around, you'll see all the miniatures from assorted tabletop role-playing games as well as my collection of rulebooks, bestiaries, tomes of lore, dice, pens, pencils... I'm going overboard, aren't I?' [SubjectProCap of J'Reth] gives a sheepish grin, but you wave your hand dismissively. You did ask, and [PosPro of J'Reth] enthusiasm is admirable. 'I've been playing Kastles & Kobolds for a few years, so each time they release an expansion, I sort of feel like I need to get it. And I know what you're thinking, but it isn't just kobolds. There are lots of different races that you can be. Elves of various alignments, dwarves, elementals, beastfolk... there are lots. Sorry if I'm a little defensive. I was teased about it when I was younger.' You nod in understanding as you pick up a model of what looks like a troll from the shelf, angling it in the limited light to have a look at the finer details.";
+	say "     'If you're looking to see if it is anatomically correct then I'm sorry that I must disappoint you. They aren't. I checked when I first got them,' J'Reth informs you, and you grin at [ObjectPro of J'Reth] as, realizing what [SubjectPro of J'Reth] has said, a blush spreads across [PosPro of J'Reth] features. You hear [ObjectPro of J'Reth] mumble, 'I really need to learn to keep my mouth shut sometimes.' In an effort to shift the conversation from the disgraceful lack of genitals on [PosPro of J'Reth] troll, the draco-mantis continues explaining [PosPro of J'Reth] other hobbies. 'While the shortage of electricity in the city currently prevents it, I also liked playing video games. I wouldn't say that I was particularly amazing, but I got to the point that the people that I regularly played things with over the internet weren't always complaining and I even got a few compliments. I'm not sure whether to hope that the rest of the world is aware what is happening in the city or that the military has managed to keep it secret. On the one hand, I don't want my friends to think that I am avoiding them, but equally, I don't want them to be worried about me.'";
 	WaitLineBreak;
-	say "     'I doubt that the world is ignorant of what is happening here. There was a lot of time for people to call for help or warn people on the internet before we were cut off...' J'Reth falls silent for a moment, seemingly musing on his words. ' Sorry, we were talking about video games, weren't we? There were only a few multiplayer-focused games that I played. I mostly did single player RPGs like the Ancient Tomes series. The older ones were good, but the character customization in the later ones really allowed me to immerse myself. Not looking like I had a box for a head was definitely a bonus. Unfortunately, with the current power problem, I haven't been able to play since the outbreak as, you know, computers need electricity. At least I still have Kastles and Kobolds, but that is more fun with friends. I don't suppose you have any other friends that might be interested. I'd be happy to GM.' While you can't think of anyone at the moment, you agree to mention it to some of the people that you know just in case.";
-	say "     'Thanks, that means a lot. Ummm what else... Oh! I don't know how I forgot, but I'm also a huge fan of Backpackemon, the creature collecting game. I know that you're meant to battle, but I found the collecting and spending time with them to be much more fulfilling. Why would anyone want to hurt such adorable little monsters? I sort of look like my favorite one of them now, my favorite to be honest, so whatever it is that has caused this does have some benefits despite all the destruction that it has wrought. I suppose that you could say that I like watching movies too, but it isn't in the same league as KnK or gaming. Why is it when someone asks you what you enjoy doing you always sound boring or like a geek?' Considering that he has shared quite a bit about his hobbies, you reassure him that it is enough for now and thank him for telling you a bit about himself.";
+	say "     'I doubt that the world is ignorant of what is happening here. There was a lot of time for people to call for help or warn people on the internet before we were cut off...' J'Reth falls silent for a moment, seemingly musing on [PosPro of J'Reth] words. ' Sorry, we were talking about video games, weren't we? There were only a few multiplayer-focused games that I played. I mostly did single player RPGs like the Ancient Tomes series. The older ones were good, but the character customization in the later ones really allowed me to immerse myself. Not looking like I had a box for a head was definitely a bonus. Unfortunately, with the current power problem, I haven't been able to play since the outbreak as, you know, computers need electricity. At least I still have Kastles and Kobolds, but that is more fun with friends. I don't suppose you have any other friends that might be interested. I'd be happy to GM.' While you can't think of anyone at the moment, you agree to mention it to some of the people that you know just in case.";
+	say "     'Thanks, that means a lot. Ummm what else... Oh! I don't know how I forgot, but I'm also a huge fan of Backpackemon, the creature collecting game. I know that you're meant to battle, but I found the collecting and spending time with them to be much more fulfilling. Why would anyone want to hurt such adorable little monsters? I sort of look like one of them now, my favorite to be honest, so whatever it is that has caused this does have some benefits despite all the destruction that it has wrought. I suppose that you could say that I like watching movies too, but it isn't in the same league as KnK or gaming. Why is it when someone asks you what you enjoy doing you always sound boring or like a geek?' Considering that [SubjectPro of J'Reth] has shared quite a bit about [PosPro of J'Reth] hobbies, you reassure [ObjectPro of J'Reth] that it is enough for now and thank [ObjectPro of J'Reth] for telling you a bit about [ReflexPro of J'Reth].";
 
 to say J'RethTalk2: [Before the Outbreak]
-	say "     Curious as to what J'Reth did before the nanite apocalypse, you ask him to tell you. 'Hmmm, yes I suppose life then was quite different to what it is now,' the draco-mantis muses. 'As you can see around you, I'm rather into video games, Kastles & Kobolds, and those sorts of geeky things, so I was going to study game design at the college here. I'd heard that the course at Tenvale was particularly good and that having a degree in it was respected by the majority of game companies so I would have better employment prospects. Unfortunately, I left the paperwork for applying perhaps a little later than I should have, and the outbreak of creatures and transformations happened before I finished it. I wouldn't be able to get it now. I was living with my parents outside the city, so beyond the military containment zone. At least they are probably alright, but they are likely concerned about me.'";
+	say "     Curious as to what J'Reth did before the nanite apocalypse, you ask [ObjectPro of J'Reth] to tell you. 'Hmmm, yes I suppose life then was quite different to what it is now,' the draco-mantis muses. 'As you can see around you, I'm rather into video games, Kastles & Kobolds, and those sorts of geeky things, so I was going to study game design at the college here. I'd heard that the course at Tenvale was particularly good and that having a degree in it was respected by the majority of game companies so I would have better employment prospects. Unfortunately, I left the paperwork for applying perhaps a little later than I should have, and the outbreak of creatures and transformations happened before I finished it. I wouldn't be able to get it now. I was living with my parents outside the city, so beyond the military containment zone. At least they are probably alright, but they are likely concerned about me.'";
 	say "     'I know that there is a stigma attached to living with your parents as you get older, but it saved costs, they genuinely cared about me, and it was convenient for being able to come into the city but avoid some of the other aspects of city life such as crowding and dark alleys from which muggers might get you. I had enough problems with bullies extorting me for money at school. I didn't want to have to deal with that any more as an adult. Though with the blades that I now have on my arms, I don't think that would be a problem anymore, not that I would be able to bring myself to hurt somebody with them. I mainly like them because they look cool. But returning to discussing my living arrangements, as long as I helped around the house by mowing the lawn, occasionally assisting Dad at weekends, and generally earning my place, I wasn't expected to pay rent. My parents weren't too demanding, primarily focused on making sure that I understood responsibility rather than expecting money from me which they knew I would want for college.'";
 	WaitLineBreak;
 	say "     'Which brings me to the reason I was in the city when everything went wrong. As I'm sure you are aware, college is expensive, and I needed to have money to pay for the various fees. I'd managed to get work at an automotive factory so that I could start to save up and reduce the eventual student debt that I knew I would end up with. Five days a week from nine in the morning until five in the afternoon I would take a bus from near home into the city and slave away in the factory. I suppose that it could have been worse, but when it was more of a means for me to study game design, it did feel demoralizing at times. I'm unlikely to even get into college now so all that hard work was for nothing more than the harsh life lesson of [']life isn't fair[']. Maybe I'm being pessimistic, the infected may yet be allowed to reintegrate into society and I'll be able to follow my dreams.'";
-	say "     'Anyway, I was on my way to work when the driver shouted about something in the road and crashed the bus into some parked cars. I was more shocked than hurt but some of the other passengers were injured, and it didn't take long for them to start transforming. It was rather terrifying, as I'm sure you can imagine, and as I escaped from the bus, I must have cut myself on some metal or something because I started turning green. I admit that I panicked and ran, roars and growls echoing from the streets around us. For the first few days, I hid a lot of the time, but eventually I found myself outside the mall and was invited to take shelter here as long as I behaved myself. I don't seem to have become as feral as many around the city so this has been an agreeable arrangement. That's the brief explanation of me before and at the outbreak, any more questions?' Despite this offer, you get the impression that talking about this has been harder on him than he is likely to admit, and you shake your head, thanking him for sharing his story with you.";
+	say "     'Anyway, I was on my way to work when the driver shouted about something in the road and crashed the bus into some parked cars. I was more shocked than hurt but some of the other passengers were injured, and it didn't take long for them to start transforming. It was rather terrifying, as I'm sure you can imagine, and as I escaped from the bus, I must have cut myself on some metal or something because I started turning green. I admit that I panicked and ran, roars and growls echoing from the streets around us. For the first few days, I hid a lot of the time, but eventually I found myself outside the mall and was invited to take shelter here as long as I behaved myself. I don't seem to have become as feral as many around the city so this has been an agreeable arrangement. That's the brief explanation of me before and at the outbreak, any more questions?' Despite this offer, you get the impression that talking about this has been harder on [ObjectPro of J'Reth] than [SubjectPro of J'Reth] is likely to admit, and you shake your head, thanking [ObjectPro of J'Reth] for sharing [PosPro of J'Reth] story with you.";
 
 to say J'RethTalk3: [Small Talk]
-	say "     [One of]'I considered being an adventurer like you, but I didn't want to take an arrow to the knee. Or, for that matter, to have some mindless beast bend me over a park bench and have their way with me[or]'I'm sorry, but your princess is in another castle. Or prince, whichever you prefer. I don't judge, especially with the current state of the city. Sexual discrimination seems diminished from what it used to be[or]'I'm surprised at how little caution people seem to have for food since the outbreak of whatever this is. Food that has been lying around for weeks could be infectious or at least spoiled and poisonous. I've even heard of infections that turn people into food-based creatures. You can never trust the cake-people. They always lie[or]'This city is inhabited by creatures of many different types. For some people, these creatures are pets. Others fight them. Myself... I try to stay where it is safe. Now tell me, are you a boy or a girl? I already know the answer, but I didn't want to miss a chance at making another game reference[at random].' He seems enthusiastic about what he is talking about, even if you don't understand some of what he is talking about. You both relax into idle discussions about the weather, shops that you used to like, and some of the creatures that you think are impressive. After a few minutes, your conversation comes to a comfortable end, and you decide what to do next while J'Reth futilely attempts to brush some magazines into a tidier pile.";
+	say "     [One of]'I considered being an adventurer like you, but I didn't want to take an arrow to the knee. Or, for that matter, to have some mindless beast bend me over a park bench and have their way with me[or]'I'm sorry, but your princess is in another castle. Or prince, whichever you prefer. I don't judge, especially with the current state of the city. Sexual discrimination seems diminished from what it used to be[or]'I'm surprised at how little caution people seem to have for food since the outbreak of whatever this is. Food that has been lying around for weeks could be infectious or at least spoiled and poisonous. I've even heard of infections that turn people into food-based creatures. You can never trust the cake-people. They always lie[or]'This city is inhabited by creatures of many different types. For some people, these creatures are pets. Others fight them. Myself... I try to stay where it is safe. Now tell me, are you a boy or a girl? I already know the answer, but I didn't want to miss a chance at making another game reference[at random].' [SubjectProCap of J'Reth] seems enthusiastic about what [SubjectPro of J'Reth] is talking about, even if you don't understand some of what [SubjectPro of J'Reth] is talking about. You both relax into idle discussions about the weather, shops that you used to like, and some of the creatures that you think are impressive. After a few minutes, your conversation comes to a comfortable end, and you decide what to do next while J'Reth futilely attempts to brush some magazines into a tidier pile.";
+
+to say J'RethTalk4: [Discuss his form]
+	say "     Curious about the uniqueness of J'Reth's form, you politely ask him whether he would mind telling you a bit more about it. Why haven't you seen anyone else like him? Where did he get it from? How can you get a hot body like him? He holds up a hand, an amused look on his face at the number of questions that you are asking. 'Give me some time to answer you, I wouldn't want to interrupt,' he replies before taking a breath. 'I can't remember whether I have told you before, but I'm a huge fan of Backpackemon. I collected games, cards, figurines, you name it. When the city went weird and I ended up here, I had already changed to look like this; green, armored, and with scythe-like blades sticking from my arms just like my favorite backpackemon.' He shows you one of the models from the shelf next to him and you have to admit that there is an uncanny similarity. 'I can only assume that when I was hurt at the outbreak that some part of my mind guided the nanites to change me into this form, if such a thing is possible, and I haven't changed since.'";
+	say "     J'Reth pauses and takes another breath, gathering his thoughts in order to continue. 'I haven't met anyone else like me, but considering my hobbies and obsession with them, I doubt that there was anyone else in the city as enthusiastic about this backpackemon as me so that isn't too much of a surprise. I don't seem to be infectious ot susceptible to casual exposure to others either. You've seen how packed the mall can be at times and I eat in the food court surrounded by so many others that if I was going to change or be changed by others that it would have happened already. As for how you can look like me, I may be able to help you with that. I've heard that some of the scientists that managed to gain entry to the city or were here from the beginning have been studying the nanites and their effects, Zephyr especially. If you impress them enough, they might give you a nanite extractor and I could give you a sample of blood for you to use to look like me. It would also give me chance of returning to this form if some infection does manage to shift me.'";
+	WaitLineBreak;
+	say "     'This brings me to my next topic. I've always had a curiosity about what it would have been like to be female, but due to the difficulty of gender reassignment surgery before the nanites and not actually being uncomfortable with being male, I didn't give it much thought beyond a passing wonder. Now though, people seem to be able to swap back and forth seemingly at a whim and my curiosity has an easy way of being assuaged. I want to stay looking the way I do now, but if you find a way that can safely give me a chance to experience being female I would be grateful.' He looks at you almost pleadingly and you automatically reassure him that you will keep it in mind but that he should be patient as you have your own safety to look out for as well. Nodding it acceptance he sits down on the edge of his bed and gives you a smile, hugging his knees gleefully as he revels in his chance to sate his curiosity even if he has to wait a while. Now you just have to come up with an idea of how to fulfil his wish.";
+	now hp of J'Reth is 4;
+
+to say J'RethTalk5: [Prepare for Gender Shifting]
+	say "     J'Reth's face lights up when you tell him that you have had a few thoughts about how he might be able to become female, or even hermaphroditic if he wants. 'I realize that you agreed to help me, but I wasn't sure whether you would be able to get the nanite extractor or have time to give it some thought with the number of other things happening in the city. What did you come up with?' he asks. You begin to tell him that there are effectively two options available to you, one easier than the other. He could take purposely designed pills that can change him into a man, woman, or herm, which will likely be difficult to obtain from creatures around the city, or if by some slim chance you did manage to find someone who would sell them to you, they would likely cost a fair few free-creds. The other option is to use some of the transformatives that you extract, claim, or otherwise pillage from creatures around the city, which while an easier option has a higher chance of having some side-effects on the draco-mantis.";
+	say "     Giving J'Reth a few minutes to think his options over, you examine some of his figurines and books, admiring some of the handiwork that it must have taken to assemble and paint them. When you turn back to the draco-mantis, some of his enthusiasm has diminished from what it was when you revealed that his desire to be able to gendershift was possible, a conflicted look across his face. Upon seeing your questioning look, he begins to explain. 'Don't get me wrong, I'm thrilled at what you've done and that you are still willing to help. Obviously I would prefer to use pills to transition, but equally I realize that that will make it more difficult for you. On top of the risk that will come with using substances infected with other creature transformations, I would likely be drinking the milk, semen, or goop of some stranger and I'm not sure that I am comfortable with that. What do think that I should do?'";
+	say "     [bold type]Do you want to try to convince J'Reth to use creature transformatives or accept that he is more comfortable with pills?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Attempt to convince J'Reth to be adventurous and use transformatives from creaures.";
+	say "     ([link]N[as]n[end link]) - Reassure J'Reth that you don't mind putting in the effort to get pills.";
+	if Player consents: [Attempt to convince J'Reth]
+		LineBreak;
+		let bonus be (( charisma of Player minus 10 ) divided by 2);
+		let dice be a random number from 1 to 20;
+		say "You roll 1d20([dice])+[bonus]=[dice + bonus] vs 20: ";
+		if dice + bonus >= 20: [Success]
+			say "     Gently grasping his hand, you explain that as long as you take a sample from him of the draco-mantis nanites before he uses any transformative that you bring him, that there shouldn't be anything to worry about. Currently you are considering [bold type]Gryphon Milk, Fennec Semen,[roman type] and [bold type]Globs of Goo[roman type] to help change him. He hasn't been transformed by anyone else, so it is highly unlikely that there will be any lasting effects besides a sex change. You feel the tension in his muscles lessen and he begins to softly nod as his mouth forms into a small smile. 'When you put it that way, I don't feel that I can really refuse. You're being pragmatic but cautious and I can at least give it a try. You may come across some pills anyway and this discussion will be moo anyway. Alright. I'm willing to trust you on this and drink of the wild beasts that roam the city,' J'Reth declares, earning a smirk from you at how dramatically he phrased it. 'Even if you don't have much success, just ask if you want to look like me. Consider it an advance reward for your help.' It sounds like J'Reth is now willing to share his draco-mantis infection with you.";
+			now hunger of J'Reth is 2;
+		else: [Failure]
+			say "     You begin to extol the merits of drinking semen, milk, and strange goo that you can find lying about, gesturing and being overly enthusiastic. As you do so, you doubt that you are being very convincing and worry that J'Reth may not be happy with you pushing him like this. To your surprise, J'Reth starts laughing, his entire body shaking mirthfully. 'Oh my goodness. For a moment I thought you were being serious, but that is the most outlandish and awful way of trying to convince me that you're obviously making a joke of it to make me feel better. I really needed that, thank you,' he struggles to say between giggles as he holds his sides. Accepting his misunderstanding as for the best, you give him a smile and agree to keep an eye out for testosterone, estrogen, and estosterogen pills. Calming his amusement, J'Reth pats you on the shoulder. 'Even if you don't have much success, just ask if you want to look like me. Consider it an advance reward for your help.' It sounds like J'Reth is now willing to share his draco-mantis infection with you.";
+			now hunger of J'Reth is 1;
+	else: [Pills are fine]
+		say "     Seeing the discomfort that the idea of using creature transformatives is causing J'Reth, you quickly reassure him that you don't mind keeping an eye out for pills, you just wanted to explain the choices to him. A look of relief floods across the draco-mantis['] face and he gives you a brief hug. 'Thank you. I apologize for being difficult, but I really would be happier waiting for you to get the pills than drinking cum from who-knows-what. I can be patient, I've waited this long in my life after all, so don't take any undue risks to get them or bankrupt yourself. Becoming a woman will be more difficult if you become the property of some pimp or packmaster,' he teases you, looking at you with palpable gratitude. Smiling back, you agree to keep an eye out for testosterone, estrogen, and estosterogen pills. J'Reth pats you on the shoulder. 'Even if you don't have much success, just ask if you want to look like me. Consider it an advance reward for your help.' It sounds like J'Reth is now willing to share his draco-mantis infection with you.";
+		now hunger of J'Reth is 1;
+	now hp of J'Reth is 5;
+
+to say J'RethTalk6: [Take nanites for personal use or as a backup]
+	say "     Bringing up the offer that J'Reth had made to you about allowing you to take a sample of [PosPro of J'Reth] nanites, you ask the draco-mantis whether you would be able to extract some now. 'I don't see why not,' [SubjectPro of J'Reth] replies, 'I'm not exactly busy these days, and if I want to change my sex I'll want the vials as a backup anyway.' [SubjectProCap of J'Reth] sits on the edge of [PosPro of J'Reth] bed and exposes [PosPro of J'Reth] arm as you remove the nanite extractor from your backpack, wiping the needle with one of the seemingly limitless alcohol swabs that came with it. 'I don't know why I'm so calm about this, I'm not particularly fond of needles and I can't believe that it will be particularly easy to get through the chitin. Perhaps aim for a join so that you don't need to use as much force,' J'Reth suggests, eyeing the needle carefully as you approach. You sit down beside [ObjectPro of J'Reth]  and briefly stroke [PosPro of J'Reth] arm comfortingly before aligning the tip of the needle with a gap in [PosPro of J'Reth] protective plates that cover [PosPro of J'Reth] upper arm. Giving you a nod to continue, the draco-mantis closes [PosPro of J'Reth] eyes and waits to feel the prick of the metal going into [PosPro of J'Reth] arm.";
+	say "     The needle goes in with very little effort and you're not sure that J'Reth even felt it. Nanites is one thing, but if medical science has progressed to the point where injections can be done painlessly, then you really are impressed. You squeeze the trigger of the nanite extractor and watch as a vial begins to fill up with blood that is no doubt swimming in transformative nanomachines. You whisper to J'Reth that if [SubjectPro of J'Reth] is a good boy you might reward [PosPro of J'Reth] later, earning a smirk in response. 'Needles aren't my fetish, but I wouldn't mind that another time, that is if that is what you are offering.' The vial now completely filled, you withdraw the needle again, a single bead of blood remaining behind to show where you stabbed the draco-mantis. J'Reth opens [PosPro of J'Reth] eyes again and watches as you remove the vial from the extractor and load another one in, putting the full one in your case for later use. 'Is that it? Are you sure that I couldn't persuade you to stay and talk to me for a bit longer?' [SubjectPro of J'Reth] asks as you pack away your equipment and ready yourself to continue with your day.";
+	let VialName be "";
+	if thirst of J'Reth < 2: [male]
+		now VialName is "Draco-Mantis Male";
+	else if thirst of J'Reth is 2: [herm]
+		now VialName is "Draco-Mantis Male";
+	else if thirst of J'Reth is 3: [female]
+		now VialName is "Draco-Mantis Female";
+	say "     [bold type]You gain a vial of [special-style-1][VialName][roman type] nanites.[roman type][line break]";
+	add Vialname to vials of Player;
+
+to say J'RethTalk7: [Use Estrogen Pill]
+	if thirst of J'Reth is 0:
+		say "     Having obtained an Estrogen Pill, you inform J'Reth that should he want to become female, now he can. His eyes light up upon hearing this and he leaps off his bed and embraces you. 'Thank you,' he whispers in your ear before releasing you again, dancing from one foot to the other in anticipation as he waits for you to find the pill in your backpack. 'So, I just swallow it and wait for the changes to happen?' J'Reth asks as you finally hand him the small tablet, looking at it in wonder. You nod your head, that should be all there is to it, but suggest that perhaps he should disrobe and sit on his bed in case it makes him dizzy. Agreeing with you, the draco-mantis strips before seating himself atop his duvet before calling to you, 'Oh, you do have a vial of my blood, don't you?' You quickly check before affirming it to him. J'Reth gives one last look at the pill before opening his mouth and tossing it onto his tongue decisively, leaving no more room for second thoughts. As it dissolves and he swallows it, you both wait for the changes to begin...";
+		say "     You see him gasp as a shiver runs down his spine, the initial sign that the transformation is starting. While already fairly androgynous, J'Reth's body begins to slim at the waist while widening at the hips, giving him a much more feminine silhouette. Surprisingly, his chest remains much the same, female draco-mantises seemingly as flat-chested in J'Reth's mind as the males, though his torso does become fractionally more slender, curving elegantly upwards from his waist to his shoulders. His arms and legs weren't particularly bulky before anyway, so were you not witnessing the slight thickening of his thighs and slimming of his hands, you may not have noticed at all. His erect cock emerges from his genital slit, perhaps due to all the stirring from shifting into being female, before beginning to shrink until finally shrivelling completely away. Were you to examine her genital slit, you imagine that you would find a newly developed vagina.";
+		WaitLineBreak;
+		say "     As J'Reth's body ceases to shift and shudder, she collapses forward, the transition having exhausted her, and you barely manage to catch her before she hits the floor. Finding her surprisingly light, you lie her on her bed again, earning a small, grateful smile. 'Thanks. That might have hurt. Maybe next time I'll listen and we can avoid me reacting to the ground's siren song,' she mutters as she recovers from the wave of fatigue with the aid of the nanites. She looks over her body, her smile widening and eyes sparkling with delight. 'I look so pretty, and there doesn't appear to have been any unintentional side effects!' she exclaims, running her fingers across her scales and chitin, feeling every dip and change more easily than your eyes seem to manage. 'Thank you. Though being female may take some getting used to.' You decide to leave her for the moment as she returns to being entirely engrossed by her changed form. Maybe you can return later.";
+	else if thirst of J'reth is 1:
+		say "     Having obtained an Estrogen Pill, you inform J'Reth that should he want to become female again, now he can. His eyes light up upon hearing this and he leaps off his bed and embraces you. 'Thank you,' he whispers in your ear before releasing you again, dancing from one foot to the other in anticipation as he waits for you to find the pill in your backpack. 'I hope that it feels as good as last time,' J'Reth says as you finally hand him the small tablet, looking at it with a wide grin. You smile at his enthusiasm, but remind him that perhaps he should sit on his bed so that he doesn't fall over when his body shifts. Agreeing with you, the draco-mantis seats himself atop his duvet before calling to you, 'Oh, you do have a vial of my blood, don't you?' You quickly check before affirming it to him. J'Reth gives one last look at the pill before opening his mouth and tossing it onto his tongue decisively, having no need for second thoughts. As it dissolves and he swallows it, you both wait for the changes to begin...";
+		say "     Once again, you see him gasp as a shiver runs down his spine, the initial sign that the transformation is starting. While already fairly androgynous, J'Reth's body begins to slim at the waist while widening at the hips, giving him a much more feminine silhouette. Like last time, his chest remains much the same, female draco-mantises just as flat-chested in J'Reth's mind as the males, though his torso does become fractionally more slender, curving elegantly upwards from his waist to his shoulders. His arms and legs weren't particularly bulky before anyway, so were you not witnessing the slight thickening of his thighs and slimming of his hands, you may not have noticed at all. His erect cock emerges from his genital slit, perhaps due to all the stirring from shifting into being female, before beginning to shrink until finally shrivelling completely away. Were you to examine her genital slit, you imagine that you would find a newly developed vagina.";
+		WaitLineBreak;
+		say "     As J'Reth's body ceases to shift and shudder, she collapses forward, the transition having exhausted her once again, but this time you are prepared and manage to catch her before she hits the floor. Finding her surprisingly light, you lie her on her bed again, earning a small, grateful smile. 'Thanks. That might have hurt. I know I said it last time, but maybe next time I won't try to kiss the concrete,' she mutters as she recovers from the wave of fatigue with the aid of the nanites. She looks over her body as excitedly as last time she was gendershifted, her smile widening and eyes sparkling with delight. 'I look so pretty, and there doesn't appear to have been any unintentional side effects!' she exclaims, running her fingers across her scales and chitin, feeling every dip and change more easily than your eyes seem to manage. 'Thank you. Though being female may take some getting used to.' You decide to leave her for the moment as she returns to being entirely engrossed by her changed form. Maybe you can return later.";
+	else if thirst of J'Reth is 2:
+		say "     Having obtained an Estrogen Pill, you inform J'Reth that should they want to become female again, now they can. Their eyes light up upon hearing this and they leap off their bed and embrace you. 'Thank you,' they whisper in your ear before releasing you again, dancing from one foot to the other in anticipation as they waits for you to find the pill in your backpack. 'I hope that it feels as good as last time,' J'Reth says as you finally hand them the small tablet, looking at it with a wide grin. You smile at their enthusiasm, but remind them that perhaps they should sit on their bed so that they don't fall over when their body shifts. Agreeing with you, the draco-mantis seats themself atop their duvet before calling to you, 'Oh, you do have a vial of my blood, don't you?' You quickly check before affirming it to them. J'Reth gives one last look at the pill before opening their mouth and tossing it onto their tongue decisively, having no need for second thoughts. As it dissolves and they swallow it, you both wait for the changes to begin...";
+		say "     Once again, you see them gasp as a shiver runs down their spine, the initial sign that the transformation is starting. Already distinctly androgynous, J'Reth's body begins to slim at the waist while widening at the hips, giving them a much more feminine silhouette. Like last time, their chest remains much the same, female draco-mantises just as flat-chested in J'Reth's mind as the herms, though their torso does become fractionally more slender, curving elegantly upwards from their waist to their shoulders. Their arms and legs weren't particularly bulky before anyway, so were you not witnessing the slight thickening of their thighs and slimming of their hands, you may not have noticed at all. Their erect cock emerges from his genital slit, perhaps due to all the stirring from shifting into being female, before beginning to shrink until finally shrivelling completely away. Were you to examine her genital slit, you imagine that you would find a only a vagina.";
+		WaitLineBreak;
+		say "     As J'Reth's body ceases to shift and shudder, she collapses forward, the transition having exhausted her once again, but this time you are prepared and manage to catch her before she hits the floor. Finding her surprisingly light, you lie her on her bed again, earning a small, grateful smile. 'Thanks. That might have hurt. I know I said it last time, but maybe next time I won't try to kiss the concrete,' she mutters as she recovers from the wave of fatigue with the aid of the nanites. She looks over her body as excitedly as last time she was gendershifted, her smile widening and eyes sparkling with delight. 'I look so pretty, and there doesn't appear to have been any unintentional side effects!' she exclaims, running her fingers across her scales and chitin, feeling every dip and change more easily than your eyes seem to manage. 'Thank you. Though being female may take some getting used to.' You decide to leave her for the moment as she returns to being entirely engrossed by her changed form. Maybe you can return later.";
+	now thirst of J'Reth is 3;
+	SetFemalePronouns for J'Reth;
+
+to say J'RethTalk8: [Use Glob of Goo]
+	if thirst of J'Reth is 0:
+		say "     Having obtained a Glob of Goo, you inform J'Reth that should he want to become female, now he can. His eyes light up upon hearing this and he leaps off his bed and embraces you. 'Thank you,' he whispers in your ear before releasing you again, dancing from one foot to the other in anticipation as he waits for you to find the goo in your backpack. 'So, I just swallow it and wait for the changes to happen?' J'Reth asks as you finally hand him the small blob of slime, looking at it in wonder and apprehension. You nod your head, that should be all there is to it, but suggest that perhaps he should sit on his bed in case it makes him dizzy. Agreeing with you, the draco-mantis strips before seating himself atop his duvet before calling to you, 'Oh, you do have a vial of my blood, don't you?' You quickly check before affirming it to him. J'Reth gives one last look at the slime before opening his mouth and tossing it in decisively, leaving no more room for second thoughts. As it dissolves and he swallows it, you both wait for the changes to begin...";
+		say "     You see him gasp as a shiver runs down his spine, the initial sign that the transformation is starting. While already fairly androgynous, J'Reth's body begins to slim at the waist while widening at the hips, giving him a much more feminine silhouette. Surprisingly, his chest remains much the same, though his torso does become fractionally more slender, curving elegantly upwards from his waist to his shoulders. His arms and legs weren't particularly bulky before anyway, so were you not witnessing the slight thickening of his thighs and slimming of his hands, you may not have noticed at all. The chitin that covers his arms and chest becomes tranlucent and bright green, resembling the goo that J'Reth recently consumed. It would appear that there has been an unintended side-effect. His erect cock emerges from his genital slit, perhaps due to all the stirring from shifting into being female, before beginning to shrink until finally shrivelling completely away. Were you to examine her genital slit, you imagine that you would find a newly developed vagina.";
+		WaitLineBreak;
+		say "     As J'Reth's body ceases to shift and shudder, she collapses forward, the transition having exhausted her, and you barely manage to catch her before she hits the floor. Finding her surprisingly light, you lie her on her bed again, earning a small, grateful smile. 'Thanks. That might have hurt. Maybe next time I'll listen and we can avoid me reacting to the ground's siren song,' she mutters as she recovers from the wave of fatigue with the aid of the nanites. She looks over her body, her smile faltering as she notices the gelified chitin. 'Huh. Isn't that interesting? You can sort of see through my plating to the scales beneath,' she exclaims, running her fingers across her form, feeling every dip and change more easily than your eyes seem to manage. 'A shame to lose it, but I just wanted to be female, not have lime-jello for armor. Could you inject me with the vial of my blood please?' J'Reth asks you. Complying, you watch the chitin harden again and return to the same shade of green as before. 'Thanks. I'm glad that we planned ahead and that that didn't change me back into being male.' You decide to leave her for the moment as she returns to being entirely engrossed by her changed form. Maybe you can return later.";
+	else if thirst of J'reth is 1:
+		say "     Having obtained a Glob of Goo, you inform J'Reth that should he want to become female again, now he can. His eyes light up upon hearing this and he leaps off his bed and embraces you. 'Thank you,' he whispers in your ear before releasing you again, dancing from one foot to the other in anticipation as he waits for you to find the goo in your backpack. 'I hope that it feels as good as last time,' J'Reth says as you finally hand him the small blob of slime, looking at it with trepidation. You smile encouragingly, but remind him that perhaps he should sit on his bed so that he doesn't fall over when his body shifts. Agreeing with you, the draco-mantis seats himself atop his duvet before calling to you, 'Oh, you do have a vial of my blood, don't you?' You quickly check before affirming it to him. J'Reth gives one last look at the slime before opening his mouth and tossing it in decisively, having no need for second thoughts. As it dissolves and he swallows it, you both wait for the changes to begin...";
+		say "     Once again, you see him gasp as a shiver runs down his spine, the initial sign that the transformation is starting. While already fairly androgynous, J'Reth's body begins to slim at the waist while widening at the hips, giving him a much more feminine silhouette. Like last time, his chest remains much the same, though his torso does become fractionally more slender, curving elegantly upwards from his waist to his shoulders. His arms and legs weren't particularly bulky before anyway, so were you not witnessing the slight thickening of his thighs and slimming of his hands, you may not have noticed at all. The chitin that covers his arms and chest becomes tranlucent and bright green, resembling the goo that J'Reth recently consumed. It would appear that there has been an unintended side-effect. His erect cock emerges from his genital slit, perhaps due to all the stirring from shifting into being female, before beginning to shrink until finally shrivelling completely away. Were you to examine her genital slit, you imagine that you would find a newly developed vagina.";
+		WaitLineBreak;
+		say "     As J'Reth's body ceases to shift and shudder, she collapses forward, the transition having exhausted her once again, but this time you are prepared and manage to catch her before she hits the floor. Finding her surprisingly light, you lie her on her bed again, earning a small, grateful smile. 'Thanks. That might have hurt. I know I said it last time, but maybe next time I won't try to kiss the concrete,' she mutters as she recovers from the wave of fatigue with the aid of the nanites. She looks over her body, her smile faltering as she notices the gelified chitin. 'Huh. Isn't that interesting? You can sort of see through my plating to the scales beneath,' she exclaims, running her fingers across her form, feeling every dip and change more easily than your eyes seem to manage. 'A shame to lose it, but I just wanted to be female, not have lime-jello for armor. Could you inject me with the vial of my blood please?' J'Reth asks you. Complying, you watch the chitin harden again and return to the same shade of green as before. 'Thanks. I'm glad that we planned ahead and that that didn't change me back into being male.' You decide to leave her for the moment as she returns to being entirely engrossed by her changed form. Maybe you can return later.";
+	else if thirst of J'Reth is 2:
+		say "     Having obtained a Glob of Goo, you inform J'Reth that should they want to become female again, now they can. Their eyes light up upon hearing this and they leap off their bed and embrace you. 'Thank you,' they whisper in your ear before releasing you again, dancing from one foot to the other in anticipation as they wait for you to find the goo in your backpack. 'I hope that it feels as good as last time,' J'Reth says as you finally hand them the small blob of slime, looking at it with trepidation. You smile encouragingly, but remind them that perhaps they should sit on their bed so that they don't fall over when their body shifts. Agreeing with you, the draco-mantis seats themself atop their duvet before calling to you, 'Oh, you do have a vial of my blood, don't you?' You quickly check before affirming it to them. J'Reth gives one last look at the slime before opening their mouth and tossing it in decisively, having no need for second thoughts. As it dissolves and they swallow it, you both wait for the changes to begin...";
+		say "     Once again, you see them gasp as a shiver runs down their spine, the initial sign that the transformation is starting. Already distinctly androgynous, J'Reth's body begins to slim at the waist while widening at the hips, giving them a much more feminine silhouette. Like last time, their chest remains much the same, though their torso does become fractionally more slender, curving elegantly upwards from their waist to their shoulders. Their arms and legs weren't particularly bulky before anyway, so were you not witnessing the slight thickening of their thighs and slimming of their hands, you may not have noticed at all. The chitin that covers their arms and chest becomes tranlucent and bright green, resembling the goo that J'Reth recently consumed. It would appear that there has been an unintended side-effect. Their erect cock emerges from his genital slit, perhaps due to all the stirring from shifting into being female, before beginning to shrink until finally shrivelling completely away. Were you to examine her genital slit, you imagine that you would find a only a vagina.";
+		WaitLineBreak;
+		say "     As J'Reth's body ceases to shift and shudder, she collapses forward, the transition having exhausted her once again, but this time you are prepared and manage to catch her before she hits the floor. Finding her surprisingly light, you lie her on her bed again, earning a small, grateful smile. 'Thanks. That might have hurt. I know I said it last time, but maybe next time I won't try to kiss the concrete,' she mutters as she recovers from the wave of fatigue with the aid of the nanites. She looks over her body, her smile faltering as she notices the gelified chitin. 'Huh. Isn't that interesting? You can sort of see through my plating to the scales beneath,' she exclaims, running her fingers across her form, feeling every dip and change more easily than your eyes seem to manage. 'A shame to lose it, but I just wanted to be female, not have lime-jello for armor. Could you inject me with the vial of my blood please?' J'Reth asks you.";
+		say "[bold type]Which Draco-Mantis vial do you wish to use?[roman type]";
+		LineBreak;
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		if "Draco-Mantis Male" is listed in vials of player:
+			choose a blank row in table of fucking options;
+			now title entry is "Male";
+			now sortorder entry is 1;
+			now description entry is "The vial with the male version of the Draco-Mantis infection";
+		[]
+		if "Draco-Mantis Herm" is listed in vials of player:
+			choose a blank row in table of fucking options;
+			now title entry is "Herm";
+			now sortorder entry is 2;
+			now description entry is "The vial with the herm version of the Draco-Mantis infection";
+		[]
+		if "Draco-Mantis Female" is listed in vials of player:
+			choose a blank row in table of fucking options;
+			now title entry is "Female";
+			now sortorder entry is 3;
+			now description entry is "The vial with the female version of the Draco-Mantis infection";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					let nam be title entry;
+					now sextablerun is 1;
+					if (nam is "Male"):
+						remove "Draco-Mantis Male" from vials of player;
+					if (nam is "Herm"):
+						remove "Draco-Mantis Herm" from vials of player;
+					if (nam is "Female"):
+						remove "Draco-Mantis Female" from vials of player;
+					WaitLineBreak;
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+		clear the screen and hyperlink list;
+		say "     Complying, you watch the chitin harden again and return to the same shade of green as before. 'Thanks. I'm glad that we planned ahead and that that didn't change me back into being male.' You decide to leave her for the moment as she returns to being entirely engrossed by her changed form. Maybe you can return later.";
+	now thirst of J'Reth is 3;
+	SetFemalePronouns for J'Reth;
+
+to say J'RethTalk9: [Use Testosterone Pill]
+	if thirst of J'reth is 2:
+		say "     Having obtained a Testosterone Pill, you inform J'Reth that should they want to become male again, now they can. Their eyes light up upon hearing this and they leap off their bed and embrace you. 'Thank you,' they whisper in your ear before releasing you again, dancing from one foot to the other in anticipation as they wait for you to find the pill in your backpack. 'I hope that it feels as good as last time,' J'Reth says as you finally hand them the small tablet, looking at it with a wide grin. You smile at their enthusiasm, but remind them that perhaps they should sit on their bed so that they don't fall over when their body shifts. Agreeing with you, the draco-mantis seats themself atop their duvet before calling to you, 'Oh, you do have a vial of my blood, don't you?' You quickly check before affirming it to them. J'Reth gives one last look at the pill before opening their mouth and tossing it onto their tongue decisively, having no need for second thoughts. As it dissolves and they swallow it, you both wait for the changes to begin...";
+		say "     Once again, you see them gasp as a shiver runs down their spine, the initial sign that the transformation is starting. Already distinctly androgynous, J'Reth's body begins to slim at the hips while the waist remains unchanged, giving them a slightly more masculine silhouette, though still androgynous. Like last time, their chest remains much the same, male draco-mantises just as flat-chested in J'Reth's mind as the herms, though their torso does become fractionally broader, the curve from their waist to their shoulders lessening. Their arms and legs weren't particularly bulky before anyway, so were you not witnessing the slight slimming of their thighs, you may not have noticed at all. Their erect cock emerges from his genital slit, perhaps due to all the stirring from shifting into being male, spurting cum and seeming to expand slightly before retreating again. Were you to examine his genital slit, you imagine that you would find only a penis.";
+		WaitLineBreak;
+		say "     As J'Reth's body ceases to shift and shudder, he collapses forward, the transition having exhausted him once again, but this time you are prepared and manage to catch him before he hits the floor. Finding him surprisingly light, you lie him on his bed again, earning a small, grateful smile. 'Thanks. That might have hurt. I know I said it last time, but maybe next time I won't try to kiss the concrete,' he mutters as he recovers from the wave of fatigue with the aid of the nanites. He looks over his body as excitedly as last time he was gendershifted, his smile widening and eyes sparkling with delight. 'I look so dashing, and there doesn't appear to have been any unintentional side effects!' he exclaims, running his fingers across his scales and chitin, feeling every dip and change more easily than your eyes seem to manage. 'Thank you. I doubt that being male again will be too disconcerting, we'll wait and see.' You decide to leave him for the moment as he returns to being entirely engrossed by his changed form. Maybe you can return later.";
+	else if thirst of J'reth is 3:
+		say "     Having obtained a Testosterone Pill, you inform J'Reth that should she want to become male again, now she can. Her eyes light up upon hearing this and she leaps off her bed and embraces you. 'Thank you,' she whispers in your ear before releasing you again, dancing from one foot to the other in anticipation as she waits for you to find the pill in your backpack. 'I hope that it feels as good as last time,' J'Reth says as you finally hand her the small tablet, looking at it with a wide grin. You smile at her enthusiasm, but remind her that perhaps she should sit on her bed so that she doesn't fall over when her body shifts. Agreeing with you, the draco-mantis seats himself atop her duvet before calling to you, 'Oh, you do have a vial of my blood, don't you?' You quickly check before affirming it to her. J'Reth gives one last look at the pill before opening her mouth and tossing it onto her tongue decisively, having no need for second thoughts. As it dissolves and she swallows it, you both wait for the changes to begin...";
+		say "     Once again, you see her gasp as a shiver runs down her spine, the initial sign that the transformation is starting. Her body quite feminine, it begins to widen at the waist and slim at the hips, giving her a slightly more masculine silhouette, though still androgynous. Like last time, her chest remains much the same, male draco-mantises seemingly as flat-chested in J'Reth's mind as the females, though her torso does become fractionally wider, the curve from her waist to her shoulders lessening. Her arms and legs weren't particularly bulky before anyway, so were you not witnessing the slight slimming of her thighs and widening of her hands, you may not have noticed at all. Fluid begins to leak from her genital slit as a tapered cock emerges, scarlet and long, before it retreats again. Were you to examine his genital slit, you imagine that you would find only a penis.";
+		WaitLineBreak;
+		say "     As J'Reth's body ceases to shift and shudder, he collapses forward, the transition having exhausted him once again, but this time you are prepared and manage to catch him before he hits the floor. Finding him surprisingly light, you lie him on his bed again, earning a small, grateful smile. 'Thanks. That might have hurt. I know I said it last time, but maybe next time I won't try to kiss the concrete,' he mutters as he recovers from the wave of fatigue with the aid of the nanites. He looks over his body as excitedly as last time he was gendershifted, his smile widening and eyes sparkling with delight. 'I look so dashing, and there doesn't appear to have been any unintentional side effects!' he exclaims, running his fingers across his scales and chitin, feeling every dip and change more easily than your eyes seem to manage. 'Thank you. I doubt that being male again will be too disconcerting, we'll wait and see.' You decide to leave him for the moment as he returns to being entirely engrossed by his changed form. Maybe you can return later.";
+	now thirst of J'Reth is 1;
+	SetMalePronouns for J'Reth;
+
+to say J'RethTalk10: [Use Fennec Semen]
+	if thirst of J'reth is 2:
+		say "     Having obtained a bottle of Fennec Semen, you inform J'Reth that should they want to become male again, now they can. Their eyes light up upon hearing this and they leap off their bed and embrace you. 'Thank you,' they whisper in your ear before releasing you again, dancing from one foot to the other in anticipation as they wait for you to find the bottle in your backpack. 'I hope that it feels as good as last time,' J'Reth says as you finally hand them the small container of semen, looking at it with trepidation. You smile encouragingly, but remind them that perhaps they should sit on their bed so that they don't fall over when their body shifts. Agreeing with you, the draco-mantis seats themself atop their duvet before calling to you, 'Oh, you do have a vial of my blood, don't you?' You quickly check before affirming it to them. J'Reth gives one last look at the cum before opening their mouth and tossing it in decisively, having no need for second thoughts. As it sloshes around and they swallow it, you both wait for the changes to begin...";
+		say "     Once again, you see them gasp as a shiver runs down their spine, the initial sign that the transformation is starting. Already distinctly androgynous, J'Reth's body begins to slim at the hips while the waist remains unchanged, giving them a slightly more masculine silhouette, though still androgynous. Like last time, their chest remains much the same, male draco-mantises just as flat-chested in J'Reth's mind as the herms, though their torso does become fractionally broader, the curve from their waist to their shoulders lessening. Their arms and legs weren't particularly bulky before anyway, so were you not witnessing the slight slimming of their thighs, you may not have noticed at all. Shockingly, two large, furry ears sprout from the top of their head, rotating around at the slightest sound. It would appear that there has been an unintended side-effect from drinking the fox's semen. Their erect cock emerges from his genital slit, perhaps due to all the stirring from shifting into being male, spurting cum and seeming to expand slightly before retreating again. Were you to examine his genital slit, you imagine that you would find only a penis.";
+		WaitLineBreak;
+		say "     As J'Reth's body ceases to shift and shudder, he collapses forward, the transition having exhausted him once again, but this time you are prepared and manage to catch him before he hits the floor. Finding him surprisingly light, you lie him on his bed again, earning a small, grateful smile. 'Thanks. That might have hurt. I know I said it last time, but maybe next time I won't try to kiss the concrete,' he mutters as he recovers from the wave of fatigue with the aid of the nanites. He looks over his body, his smile faltering as he notices the furry appendages atop his head. 'Huh. Isn't that interesting? I can hear a lot more than usual, but I'm not sure that I want to,' he exclaims, running her fingers across her form, feeling every dip and change more easily than your eyes seem to manage. 'A shame to lose it, but I just wanted to be male again, not have radars for ears. Could you inject me with the vial of my blood please?' J'Reth asks you. Complying, you watch the feenec ears recede until his head is a smooth as before. 'Thanks. I'm glad that we planned ahead and that I was able to deal with the side effects.' You decide to leave him for the moment as he returns to being entirely engrossed by his changed form. Maybe you can return later.";
+	else if thirst of J'reth is 3:
+		say "     Having obtained a bottle of Fennec Semen, you inform J'Reth that should she want to become male again, now she can. Her eyes light up upon hearing this and she leaps off her bed and embraces you. 'Thank you,' she whispers in your ear before releasing you again, dancing from one foot to the other in anticipation as she waits for you to find the bottle in your backpack. 'I hope that it feels as good as last time,' J'Reth says as you finally hand her the small container of semen, looking at it with trepidation. You smile encouragingly, but remind her that perhaps she should sit on her bed so that she doesn't fall over when her body shifts. Agreeing with you, the draco-mantis seats himself atop her duvet before calling to you, 'Oh, you do have a vial of my blood, don't you?' You quickly check before affirming it to her. J'Reth gives one last look at the cum before opening her mouth and tossing it in decisively, having no need for second thoughts. As it sloshes around and she swallows it, you both wait for the changes to begin...";
+		say "     Once again, you see her gasp as a shiver runs down her spine, the initial sign that the transformation is starting. Her body quite feminine, it begins to widen at the waist and slim at the hips, giving her a slightly more masculine silhouette, though still androgynous. Like last time, her chest remains much the same, male draco-mantises seemingly as flat-chested in J'Reth's mind as the females, though her torso does become fractionally wider, the curve from her waist to her shoulders lessening. Her arms and legs weren't particularly bulky before anyway, so were you not witnessing the slight slimming of her thighs and widening of her hands, you may not have noticed at all. Shockingly, two large, furry ears sprout from the top of their head, rotating around at the slightest sound. It would appear that there has been an unintended side-effect from drinking the fox's semen. Fluid begins to leak from her genital slit as a tapered cock emerges, scarlet and long, before it retreats again. Were you to examine his genital slit, you imagine that you would find only a penis.";
+		WaitLineBreak;
+		say "     As J'Reth's body ceases to shift and shudder, he collapses forward, the transition having exhausted him once again, but this time you are prepared and manage to catch him before he hits the floor. Finding him surprisingly light, you lie him on his bed again, earning a small, grateful smile. 'Thanks. That might have hurt. I know I said it last time, but maybe next time I won't try to kiss the concrete,' he mutters as he recovers from the wave of fatigue with the aid of the nanites. He looks over his body, his smile faltering as he notices the furry appendages atop his head. 'Huh. Isn't that interesting? I can hear a lot more than usual, but I'm not sure that I want to,' he exclaims, running her fingers across her form, feeling every dip and change more easily than your eyes seem to manage. 'A shame to lose it, but I just wanted to be male again, not have radars for ears. Could you inject me with the vial of my blood please?' J'Reth asks you.";
+		say "[bold type]Which Draco-Mantis vial do you wish to use?[roman type]";
+		LineBreak;
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		if "Draco-Mantis Male" is listed in vials of player:
+			choose a blank row in table of fucking options;
+			now title entry is "Male";
+			now sortorder entry is 1;
+			now description entry is "The vial with the male version of the Draco-Mantis infection";
+		[]
+		if "Draco-Mantis Herm" is listed in vials of player:
+			choose a blank row in table of fucking options;
+			now title entry is "Herm";
+			now sortorder entry is 2;
+			now description entry is "The vial with the herm version of the Draco-Mantis infection";
+		[]
+		if "Draco-Mantis Female" is listed in vials of player:
+			choose a blank row in table of fucking options;
+			now title entry is "Female";
+			now sortorder entry is 1;
+			now description entry is "The vial with the female version of the Draco-Mantis infection";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					let nam be title entry;
+					now sextablerun is 1;
+					if (nam is "Male"):
+						remove "Draco-Mantis Male" from vials of player;
+					if (nam is "Herm"):
+						remove "Draco-Mantis Herm" from vials of player;
+					if (nam is "Female"):
+						remove "Draco-Mantis Female" from vials of player;
+					WaitLineBreak;
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+		clear the screen and hyperlink list;
+		say "     Complying, you watch the feenec ears recede until his head is a smooth as before. 'Thanks. I'm glad that we planned ahead and that I was able to deal with the side effects.' You decide to leave him for the moment as he returns to being entirely engrossed by his changed form. Maybe you can return later.";
+	now thirst of J'Reth is 1;
+	SetMalePronouns for J'Reth;
+
+to say J'RethTalk11: [Use Estosterogen Pill]
+	if thirst of J'Reth is 0:
+		say "     Having obtained an Estosterogen Pill, you inform J'Reth that should he want to become hermaphroditic, now he can. His eyes light up upon hearing this and he leaps off his bed and embraces you. 'Thank you,' he whispers in your ear before releasing you again, dancing from one foot to the other in anticipation as he waits for you to find the pill in your backpack. 'So, I just swallow it and wait for the changes to happen?' J'Reth asks as you finally hand him the small tablet, looking at it in wonder. You nod your head, that should be all there is to it, but suggest that perhaps he should sit on his bed in case it makes him dizzy. Agreeing with you, the draco-mantis seats himself atop his duvet before calling to you, 'Oh, you do have a vial of my blood, don't you?' You quickly check before affirming it to him. J'Reth gives one last look at the pill before opening his mouth and tossing it onto his tongue decisively, leaving no more room for second thoughts. As it dissolves and he swallows it, you both wait for the changes to begin...";
+		say "     You see him gasp as a shiver runs down his spine, the initial sign that the transformation is starting. Already fairly androgynous, J'Reth's body begins to widen at the hips, though his waist remains unchanged, giving him a silhouette with aspects of both the male and female form. Surprisingly, his chest remains much the same, herm draco-mantises seemingly as flat-chested in J'Reth's mind as the males, though his torso does become fractionally more slender, curving elegantly upwards from his waist to his shoulders. His arms and legs weren't particularly bulky before anyway, so were you not witnessing the slight thickening of his thighs, you may not have noticed at all. His erect cock emerges from his genital slit, perhaps due to all the stirring from shifting into being hermaphroditic, spurting cum while fluid begins to leak from below it. Were you to examine their genital slit, you imagine that you would find a newly developed vagina in addition to the already present penis.";
+		WaitLineBreak;
+		say "     As J'Reth's body ceases to shift and shudder, they collapses forward, the transition having exhausted them, and you barely manage to catch them before they hit the floor. Finding them surprisingly light, you lie them on their bed again, earning a small, grateful smile. 'Thanks. That might have hurt. Maybe next time I'll listen and we can avoid me reacting to the ground's siren song,' they mutter as they recover from the wave of fatigue with the aid of the nanites. They look over their body, their smile widening and eyes sparkling with delight. 'I look so attractive, and there doesn't appear to have been any unintentional side effects!' they exclaim, running their fingers across their scales and chitin, feeling every dip and change more easily than your eyes seem to manage. 'Thank you. Though being a herm may take some getting used to.' You decide to leave them for the moment as they return to being entirely engrossed by their changed form. Maybe you can return later.";
+	else if thirst of J'reth is 1:
+		say "     Having obtained an Estosterogen Pill, you inform J'Reth that should he want to become hermaphroditic again, now he can. His eyes light up upon hearing this and he leaps off his bed and embraces you. 'Thank you,' he whispers in your ear before releasing you again, dancing from one foot to the other in anticipation as he waits for you to find the pill in your backpack. 'I hope that it feels as good as last time,' J'Reth says as you finally hand him the small tablet, looking at it with a wide grin. You smile at his enthusiasm, but remind him that perhaps he should sit on his bed so that he doesn't fall over when his body shifts. Agreeing with you, the draco-mantis seats himself atop his duvet before calling to you, 'Oh, you do have a vial of my blood, don't you?' You quickly check before affirming it to him. J'Reth gives one last look at the pill before opening his mouth and tossing it onto his tongue decisively, having no need for second thoughts. As it dissolves and he swallows it, you both wait for the changes to begin...";
+		say "     Once again, you see him gasp as a shiver runs down his spine, the initial sign that the transformation is starting. Already fairly androgynous, J'Reth's body begins to widen at the hips, though his waist remains unchanged, giving him a silhouette with aspects of both the male and female form. Like last time, his chest remains much the same, herm draco-mantises seemingly as flat-chested in J'Reth's mind as the males, though his torso does become fractionally more slender, curving elegantly upwards from his waist to his shoulders. His arms and legs weren't particularly bulky before anyway, so were you not witnessing the slight thickening of his thighs, you may not have noticed at all. His erect cock emerges from his genital slit, perhaps due to all the stirring from shifting into being hermaphroditic, spurting cum while fluid begins to leak from below it. Were you to examine their genital slit, you imagine that you would find a newly developed vagina in addition to the already present penis.";
+		WaitLineBreak;
+		say "     As J'Reth's body ceases to shift and shudder, they collapses forward, the transition having exhausted them once again, but this time you are prepared and manage to catch them before they hit the floor. Finding them surprisingly light, you lie them on their bed again, earning a small, grateful smile. 'Thanks. That might have hurt. I know I said it last time, but maybe next time I won't try to kiss the concrete,' they mutter as they recover from the wave of fatigue with the aid of the nanites. They look over their body as excitedly as last time they were gendershifted, their smile widening and eyes sparkling with delight. 'I look so attractive, and there doesn't appear to have been any unintentional side effects!' they exclaim, running their fingers across their scales and chitin, feeling every dip and change more easily than your eyes seem to manage. 'Thank you. Though being a herm may take some getting used to.' You decide to leave them for the moment as they return to being entirely engrossed by their changed form. Maybe you can return later.";
+	else if thirst of J'reth is 3:
+		say "     Having obtained an Estosterogen Pill, you inform J'Reth that should she want to become hermaphroditic again, now she can. Her eyes light up upon hearing this and she leaps off her bed and embraces you. 'Thank you,' she whispers in your ear before releasing you again, dancing from one foot to the other in anticipation as she waits for you to find the pill in your backpack. 'I hope that it feels as good as last time,' J'Reth says as you finally hand her the small tablet, looking at it with a wide grin. You smile at her enthusiasm, but remind her that perhaps she should sit on her bed so that she doesn't fall over when her body shifts. Agreeing with you, the draco-mantis seats himself atop her duvet before calling to you, 'Oh, you do have a vial of my blood, don't you?' You quickly check before affirming it to her. J'Reth gives one last look at the pill before opening her mouth and tossing it onto her tongue decisively, having no need for second thoughts. As it dissolves and she swallows it, you both wait for the changes to begin...";
+		say "     Once again, you see her gasp as a shiver runs down her spine, the initial sign that the transformation is starting. Her body quite feminine, it begins to widen at the waist, though her hips remains unchanged, giving her a silhouette with aspects of both the male and female form. Like last time, her chest remains much the same, herm draco-mantises seemingly as flat-chested in J'Reth's mind as the females, though her torso does become fractionally wider, but still curving elegantly upwards from her waist to her shoulders. Her arms and legs weren't particularly bulky before anyway, so were you not witnessing the slight slimming of her thighs, you may not have noticed at all. Fluid begins to leak from her genital slit as a tapered cock emerges, scarlet and long, before it retreats again. Were you to examine their genital slit, you imagine that you would find both a penis and a vagina.";
+		WaitLineBreak;
+		say "     As J'Reth's body ceases to shift and shudder, they collapses forward, the transition having exhausted them once again, but this time you are prepared and manage to catch them before they hit the floor. Finding them surprisingly light, you lie them on their bed again, earning a small, grateful smile. 'Thanks. That might have hurt. I know I said it last time, but maybe next time I won't try to kiss the concrete,' they mutter as they recover from the wave of fatigue with the aid of the nanites. They look over their body as excitedly as last time they were gendershifted, their smile widening and eyes sparkling with delight. 'I look so attractive, and there doesn't appear to have been any unintentional side effects!' they exclaim, running their fingers across their scales and chitin, feeling every dip and change more easily than your eyes seem to manage. 'Thank you. Though being a herm may take some getting used to.' You decide to leave them for the moment as they return to being entirely engrossed by their changed form. Maybe you can return later.";
+	now thirst of J'Reth is 2;
+	SetMalePronouns for J'Reth;
+
+to say J'RethTalk12: [Use Gryphon Milk]
+	if thirst of J'Reth is 0:
+		say "     Having obtained a Bottle of Gryphon Milk, you inform J'Reth that should he want to become hermaphroditic, now he can. His eyes light up upon hearing this and he leaps off his bed and embraces you. 'Thank you,' he whispers in your ear before releasing you again, dancing from one foot to the other in anticipation as he waits for you to find the bottle in your backpack. 'So, I just swallow it and wait for the changes to happen?' J'Reth asks as you finally hand him the small container of milk, looking at it in wonder and apprehension. You nod your head, that should be all there is to it, but suggest that perhaps he should sit on his bed in case it makes him dizzy. Agreeing with you, the draco-mantis seats himself atop his duvet giving one last look at the milk before opening his mouth and tossing it in decisively, leaving no more room for second thoughts. As it sloshes around and he swallows it, you both wait for the changes to begin...";
+		say "     You see him gasp as a shiver runs down his spine, the initial sign that the transformation is starting. Already fairly androgynous, J'Reth's body begins to widen at the hips, though his waist remains unchanged, giving him a silhouette with aspects of both the male and female form. Surprisingly, his chest remains much the same, herm draco-mantises seemingly as flat-chested in J'Reth's mind as the males, though his torso does become fractionally more slender, curving elegantly upwards from his waist to his shoulders. His arms and legs weren't particularly bulky before anyway, so were you not witnessing the slight thickening of his thighs, you may not have noticed at all. His wings become feathery and a fine down spreads across his back, likely an unforseen side effect of the Gryphon Milk. His erect cock emerges from his genital slit, perhaps due to all the stirring from shifting into being hermaphroditic, spurting cum while fluid begins to leak from below it. Were you to examine their genital slit, you imagine that you would find a newly developed vagina in addition to the already present penis.";
+		WaitLineBreak;
+		say "     As J'Reth's body ceases to shift and shudder, they collapses forward, the transition having exhausted them, and you barely manage to catch them before they hit the floor. Finding them surprisingly light, you lie them on their bed again, earning a small, grateful smile. 'Thanks. That might have hurt. Maybe next time I'll listen and we can avoid me reacting to the ground's siren song,' they mutter as they recover from the wave of fatigue with the aid of the nanites. They look over her body, her smile faltering as they feel the feathery wings and down on their back. 'Huh. Isn't that interesting? I appear to be partially turned into a bird,' they exclaim, running their fingers across their form, feeling every dip and change more easily than your eyes seem to manage. 'A shame to lose it, but I just wanted to be a herm, not have a ready supply of quills growing from my back without any parchment. Could you inject me with the vial of my blood please?' J'Reth asks you. Complying, you watch their wings become thin and membranous again and their back return to being smooth and chitinous. 'Thanks. I'm glad that we planned ahead and that that didn't change me back into being male.' You decide to leave them for the moment as they return to being entirely engrossed by their changed form. Maybe you can return later.";
+	else if thirst of J'reth is 1:
+		say "     Having obtained a Bottle of Gryphon Milk, you inform J'Reth that should he want to become hermaphroditic again, now he can. His eyes light up upon hearing this and he leaps off his bed and embraces you. 'Thank you,' he whispers in your ear before releasing you again, dancing from one foot to the other in anticipation as he waits for you to find the bottle in your backpack. 'I hope that it feels as good as last time,' J'Reth says as you finally hand him the small container of milk, looking at it with trepidation. You smile encouragingly, but remind him that perhaps he should sit on his bed so that he doesn't fall over when his body shifts. Agreeing with you, the draco-mantis seats himself atop his duvet before calling to you, 'Oh, you do have a vial of my blood, don't you?' You quickly check before affirming it to him. J'Reth gives one last look at the milk before opening his mouth and tossing it in decisively, having no need for second thoughts. As it sloshes around and he swallows it, you both wait for the changes to begin...";
+		say "     Once again, you see him gasp as a shiver runs down his spine, the initial sign that the transformation is starting. Already fairly androgynous, J'Reth's body begins to widen at the hips, though his waist remains unchanged, giving him a silhouette with aspects of both the male and female form. Like last time, his chest remains much the same, herm draco-mantises seemingly as flat-chested in J'Reth's mind as the males, though his torso does become fractionally more slender, curving elegantly upwards from his waist to his shoulders. His arms and legs weren't particularly bulky before anyway, so were you not witnessing the slight thickening of his thighs, you may not have noticed at all. His wings become feathery and a fine down spreads across his back, likely an unforseen side effect of the Gryphon Milk. His erect cock emerges from his genital slit, perhaps due to all the stirring from shifting into being hermaphroditic, spurting cum while fluid begins to leak from below it. Were you to examine their genital slit, you imagine that you would find a newly developed vagina in addition to the already present penis.";
+		WaitLineBreak;
+		say "     As J'Reth's body ceases to shift and shudder, they collapses forward, the transition having exhausted them, but this time you are prepared and manage to catch them before they hit the floor. Finding them surprisingly light, you lie them on their bed again, earning a small, grateful smile. 'Thanks. That might have hurt. I know I said it last time, but maybe next time I won't try to kiss the concrete,' they mutter as they recover from the wave of fatigue with the aid of the nanites. They look over her body, her smile faltering as they feel the feathery wings and down on their back. 'Huh. Isn't that interesting? I appear to be partially turned into a bird,' they exclaim, running their fingers across their form, feeling every dip and change more easily than your eyes seem to manage. 'A shame to lose it, but I just wanted to be a herm, not have a ready supply of quills growing from my back without any parchment. Could you inject me with the vial of my blood please?' J'Reth asks you. Complying, you watch their wings become thin and membranous again and their back return to being smooth and chitinous. 'Thanks. I'm glad that we planned ahead and that that didn't change me back into being male.' You decide to leave them for the moment as they return to being entirely engrossed by their changed form. Maybe you can return later.";
+	else if thirst of J'reth is 3:
+		say "     Having obtained a Bottle of Gryphon Milk, you inform J'Reth that should she want to become hermaphroditic again, now she can. Her eyes light up upon hearing this and she leaps off her bed and embraces you. 'Thank you,' she whispers in your ear before releasing you again, dancing from one foot to the other in anticipation as she waits for you to find the bottle in your backpack. 'I hope that it feels as good as last time,' J'Reth says as you finally hand her the small container of milk, looking at it with trepidation. You smile encouragingly, but remind her that perhaps she should sit on her bed so that she doesn't fall over when her body shifts. Agreeing with you, the draco-mantis seats himself atop her duvet before calling to you, 'Oh, you do have a vial of my blood, don't you?' You quickly check before affirming it to her. J'Reth gives one last look at the milk before opening her mouth and tossing it in decisively, having no need for second thoughts. As it sloshes around and she swallows it, you both wait for the changes to begin...";
+		say "     Once again, you see her gasp as a shiver runs down her spine, the initial sign that the transformation is starting. Her body quite feminine, it begins to widen at the waist, though her hips remains unchanged, giving her a silhouette with aspects of both the male and female form. Like last time, her chest remains much the same, herm draco-mantises seemingly as flat-chested in J'Reth's mind as the females, though her torso does become fractionally wider, but still curving elegantly upwards from her waist to her shoulders. Her arms and legs weren't particularly bulky before anyway, so were you not witnessing the slight slimming of her thighs, you may not have noticed at all. Her wings become feathery and a fine down spreads across her back, likely an unforseen side effect of the Gryphon Milk. Her erect cock emerges from his genital slit, perhaps due to all the stirring from shifting into being hermaphroditic, spurting cum while fluid begins to leak from below it. Were you to examine their genital slit, you imagine that you would find both a penis and a vagina.";
+		WaitLineBreak;
+		say "     As J'Reth's body ceases to shift and shudder, they collapses forward, the transition having exhausted them, but this time you are prepared and manage to catch them before they hit the floor. Finding them surprisingly light, you lie them on their bed again, earning a small, grateful smile. 'Thanks. That might have hurt. I know I said it last time, but maybe next time I won't try to kiss the concrete,' they mutter as they recover from the wave of fatigue with the aid of the nanites. They look over her body, her smile faltering as they feel the feathery wings and down on their back. 'Huh. Isn't that interesting? I appear to be partially turned into a bird,' they exclaim, running their fingers across their form, feeling every dip and change more easily than your eyes seem to manage. 'A shame to lose it, but I just wanted to be a herm, not have a ready supply of quills growing from my back without any parchment. Could you inject me with the vial of my blood please?' J'Reth asks you.";
+		say "[bold type]Which Draco-Mantis vial do you wish to use?[roman type]";
+		LineBreak;
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		if "Draco-Mantis Male" is listed in vials of player:
+			choose a blank row in table of fucking options;
+			now title entry is "Male";
+			now sortorder entry is 1;
+			now description entry is "The vial with the male version of the Draco-Mantis infection";
+		[]
+		if "Draco-Mantis Herm" is listed in vials of player:
+			choose a blank row in table of fucking options;
+			now title entry is "Herm";
+			now sortorder entry is 2;
+			now description entry is "The vial with the herm version of the Draco-Mantis infection";
+		[]
+		if "Draco-Mantis Female" is listed in vials of player:
+			choose a blank row in table of fucking options;
+			now title entry is "Female";
+			now sortorder entry is 1;
+			now description entry is "The vial with the female version of the Draco-Mantis infection";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					let nam be title entry;
+					now sextablerun is 1;
+					if (nam is "Male"):
+						remove "Draco-Mantis Male" from vials of player;
+					if (nam is "Herm"):
+						remove "Draco-Mantis Herm" from vials of player;
+					if (nam is "Female"):
+						remove "Draco-Mantis Female" from vials of player;
+					WaitLineBreak;
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+		clear the screen and hyperlink list;
+		say "     Complying, you watch their wings become thin and membranous again and their back return to being smooth and chitinous. 'Thanks. I'm glad that we planned ahead and that that didn't change me back into being male.' You decide to leave them for the moment as they return to being entirely engrossed by their changed form. Maybe you can return later.";
+	now thirst of J'Reth is 2;
+	SetMalePronouns for J'Reth;
+
+[to say J'RethTalk13: [Convince J'Reth to use Transformatives]
+	say "     ";
+	let bonus be (( charisma of Player minus 10 ) divided by 2);
+	let dice be a random number from 1 to 20;
+	say "You roll 1d20([dice])+[bonus]=[dice + bonus] vs 18: ";
+	if dice + bonus >= 18:
+		say "     ";]
 
 Section 4 - Section 4 - Sex
 
@@ -170,40 +583,42 @@ to say J'RethSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if player is not neuter:
+	if player is not neuter and thirst of J'Reth < 2:
 		choose a blank row in table of fucking options;
 		now title entry is "Mutual Oral";
 		now sortorder entry is 1;
-		now description entry is "Suck him off while he tends to you at the same time.";
+		now description entry is "Suck him off while he tends to you at the same time";
 	[]
-	if Player is female:
+	if Player is female and thirst of J'Reth < 2:
 		choose a blank row in table of fucking options;
 		now title entry is "Vaginal";
 		now sortorder entry is 2;
-		now description entry is "Sit on J'Reth's lap and ride him.";
+		now description entry is "Sit on J'Reth's lap and ride him";
 	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Catch Anal";
-	now sortorder entry is 3;
-	now description entry is "Bend over the edge of the bed and let J'Reth pound your ass.";
+	if thirst of J'Reth < 2:
+		choose a blank row in table of fucking options;
+		now title entry is "Catch Anal";
+		now sortorder entry is 3;
+		now description entry is "Bend over the edge of the bed and let J'Reth pound your ass";
 	[]
-	if Player is male:
+	if Player is male and thirst of J'Reth < 2:
 		choose a blank row in table of fucking options;
 		now title entry is "Pitch Anal";
-		now sortorder entry is 5;
-		now description entry is "Push J'Reth facedown on the bed and penetrate him anally.";
+		now sortorder entry is 4;
+		now description entry is "Push J'Reth facedown on the bed and penetrate him anally";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
-		say "Pick the corresponding number> ";
+		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]";
+			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
@@ -215,9 +630,13 @@ to say J'RethSexMenu:
 					say "[J'RethSex3]";
 				else if nam is "Pitch Anal":
 					say "[J'RethSex4]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the draco-mantis, shaking your head slightly as [SubjectPro of J'Reth] gives a questioning look.";
+			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-	wait for any key;
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say J'RethSex1:		[Mutual Oral]
