@@ -70,7 +70,7 @@ to new ban menu:
 			banchange entry calcnumber of FlagList;
 		else:
 			banchange entry (calcnumber - number of entries in FlagList) of TagList;
-		now countnumber is 1; [Must reset to 1 or it wont print the list again]
+		now countnumber is 1; [Must reset to 1 or it won't print the list again]
 
 to bancheck (name - text):
 	if name is listed in BanList of Player:
