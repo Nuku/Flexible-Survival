@@ -101,23 +101,7 @@ to say mouseapts:
 		wait for any key;
 
 to say fullmousification:
-	[puts Mental Mouse as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in Table of Random Critters:
-		choose row y in Table of Random Critters;
-		if Name entry is "Mental Mouse":
-			now MonsterID is y;
-			break;
-	now TailName of Player is "Mental Mouse";
-	now FaceName of Player is "Mental Mouse";
-	now SkinName of Player is "Mental Mouse";
-	now BodyName of Player is "Mental Mouse";
-	now CockName of Player is "Mental Mouse";
-	attributeinfect;
-	now tail of Player is tail entry;
-	now Face of Player is face entry;
-	now Skin of Player is skin entry;
-	now Body of Player is body entry;
-	now Cock of Player is cock entry;
+	turn the Player into a "Mental Mouse";
 
 
 Section 2 - Mouse Girl Pet
@@ -350,11 +334,20 @@ to say racheloral:
 
 Section 4 - Endings
 
-when play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Rachel's Epilogue"	"Companion"	"Pet"	Rachel's Epilogue rule	750	false
+
+This is the Rachel's Epilogue rule:
+	if humanity of Player < 10:
+		if Player is shifter:
+			make no decision;
+		if Player has no body of "Albino Mouse" and Player has no body of "Mental Mouse":
+			make no decision;
 	if mouse girl is tamed:
+		trigger ending "Rachel's Epilogue"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
-			if BodyName of Player is "Albino Mouse" or BodyName of Player is "Mental Mouse":
-				say "     Giving into your murine urges, you fully accept Rachel, and the whole of the mouse collective, into your mind. Becoming one with them, your own mind recedes away to make room for the united minds of the mice. You love them all, but love Rachel the most of all. The mouse girl who was willing to accompany you into the city, to risk losing you to let you come to this point on your own, is your special mate among the group, though all those in the collective are your lovers. From your frequent matings, there comes several lovely children who are exceptionally powerful from your chosen union, helping the making the mouse collective even stronger. Several of them move to help be part of new nests, forming an interconnected web of hive-minds that cannot be resisted, growing slowly, secretly, around the world.";
+			say "     Giving into your murine urges, you fully accept Rachel, and the whole of the mouse collective, into your mind. Becoming one with them, your own mind recedes away to make room for the united minds of the mice. You love them all, but love Rachel the most of all. The mouse girl who was willing to accompany you into the city, to risk losing you to let you come to this point on your own, is your special mate among the group, though all those in the collective are your lovers. From your frequent matings, there comes several lovely children who are exceptionally powerful from your chosen union, helping the making the mouse collective even stronger. Several of them move to help be part of new nests, forming an interconnected web of hive-minds that cannot be resisted, growing slowly, secretly, around the world.";
 		else:
 			say "     When the military comes to rescue you and the other survivors they can find, Rachel seems very nervous and fretful. You don't have to ask, knowing she's aware you'll be leaving the city without becoming a member of the mouse collective - without joining her. With tears in the corner of her eyes, the mouse girl hugs herself to you tightly. You can sense that she longs to overpower your will or to summon the others, to force you to come. From what you've sensed of her power and from the strength of your bond to her, she might even be able to do it, but she loves you too much to bring herself to do so. Hugging the small mouse girl, you give her a parting kiss before she runs off into the city. Your sense of her mind fades as she runs off, filled with a mix of sadness at her loss as well as joy for your success";
 			if rachelfuck > 3:

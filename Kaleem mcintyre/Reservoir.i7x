@@ -202,7 +202,7 @@ to say resevfight1:
 	if T is 2:
 		challenge "Demon Brute";
 	if T is 3:
-		challenge "spidergirl";
+		challenge "Spidergirl";
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -236,7 +236,7 @@ To say resevfight2:
 	if T is 3:
 		challenge "Demon Brute";
 	if T is 4:
-		challenge "spidergirl";
+		challenge "Spidergirl";
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -381,7 +381,7 @@ Instead of Resolving a The beast of the tainted waters:
 		else:
 			say "Deciding that you've come too far to quit now, even though any other sane person might have already tucked tail and fled, you realize that spending your time here has either made you insanely brave... or just insane. Shaking your head you watch as the tentacles of the fleshy BLOB strikes at the window again and then you curl your legs underneath you so that you can raise up onto your feet.";
 			say "Doing so, albeit somewhat unsteadily, you breathe out a heavy gust of air which is visible to the naked eye. Blinking you breathe in and out again and then realize that the room is rapidly drooping in temperature. Walking over to the main terminal you find that - just as you had thought - the facility is entering into flash freeze mode. Seeing your window of opportunity coming closer to opening fully you look around the room for something to use to help you ward off the creature and then you smile victoriously as you spot several lockers that you had failed to notice when coming into the room standing idle, as though in wait for you.";
-			say "Rushing over to the metal containers you jar each of the doors open and then look inside to see if you can find something of meaningful use. Seeing what you need you take enough provisions for the fight ahead. Once that's done you decide that now it's time to the beast. [bold type]It might do well for you to make sure you're equipped and fully healthy before going out to battle. This fight will be... difficult...[roman type]";
+			say "Rushing over to the metal containers you jar each of the doors open and then look inside to see if you can find something of meaningful use. Seeing what you need you take enough provisions for the fight ahead. Once that's done you decide that now it's time to the beast. [bold type]It might do well for you to make sure you're equipped and fully healthy before going out to battle. This fight will be... difficult...[roman type][line break]";
 			increase carried of medkit by 1;
 			increase carried of healing booster by 1;
 			now resevquest is 6;
@@ -423,7 +423,7 @@ Instead of resolving a A Fight to remember:
 					now A Fight to remember is resolved;
 					now oozing is 1;
 					now humanity of Player is 0;
-					now TailName of Player is "Blob";
+					now TailName of Player is "Blob"; [NOTE: I guess, this could be removed without issues when the GameEndings table is finished (@Stadler#3007)]
 					now FaceName of Player is "Blob";
 					now SkinName of Player is "Blob";
 					now BodyName of Player is "Blob";
@@ -432,13 +432,14 @@ Instead of resolving a A Fight to remember:
 					now bodydesc of Player is "gleatinous";
 					now bodytype of Player is "ooze";
 					now SleepRhythm of Player is 0;
+					trigger ending "Reservoir Oozing";
 					end the story saying "You have been absorbed by the blob creature.";
 					now battleground is "void";
 					wait for any key;
 					follow the turnpass rule;
 					stop the action;
 				else:
-					say "Turning tail to run you realize that you're going to have to rethink this battle entire battle! [bold type]Remember you only have so long before the blob breaks the window![roman type]";
+					say "Turning tail to run you realize that you're going to have to rethink this battle entire battle! [bold type]Remember you only have so long before the blob breaks the window![roman type][line break]";
 					now lastResevoirfix is turns;
 			else:
 				say "You feel a throng of nervousness come over you as you watch the monster [italic type]burble[roman type] and then turn your way, as if sensing that you were the cause of its current distress. Not feeling the courage that you know you possess your body locks up just as your eyes see massive tentacles surge their way towards you.";
@@ -468,13 +469,14 @@ Instead of resolving a A Fight to remember:
 						now bodydesc of Player is "gleatinous";
 						now bodytype of Player is "ooze";
 						now SleepRhythm of Player is 0;
+						trigger ending "Reservoir Oozing";
 						end the story saying "You have been absorbed by the blob creature.";
 						now battleground is "void";
 						wait for any key;
 						follow the turnpass rule;
 						stop the action;
 					else:
-						say "Turning tail to run you realize that you're going to have to rethink this battle entire battle! [bold type]Remember you only have so long before the blob breaks the window![roman type]";
+						say "Turning tail to run you realize that you're going to have to rethink this battle entire battle! [bold type]Remember you only have so long before the blob breaks the window![roman type][line break]";
 						now lastResevoirfix is turns;
 				else:
 					say "You find yourself meeting the wall and losing some of your health as the lashing tentacle knocks you back into the concrete. Your breath wisps out from your mouth at an alarming speed because of this. So much so in fact that you can actually see much of it very clearly as it forms into a cloud of diamond dust in front of your face. Coughing to try and absorb some of the cold air into your lungs in order to ease the growing ache building up within you shakily get back up onto your feet and then growl fiercely at the monster. Oh there's no way you're going to take that lying down! A savage battle cry rips free from your lips a second later and soon you are charging right at the BLOB!";
@@ -499,13 +501,14 @@ Instead of resolving a A Fight to remember:
 						now bodydesc of Player is "gleatinous";
 						now bodytype of Player is "ooze";
 						now SleepRhythm of Player is 0;
+						trigger ending "Reservoir Oozing";
 						end the story saying "You have been absorbed by the blob creature.";
 						now battleground is "void";
 						wait for any key;
 						follow the turnpass rule;
 						stop the action;
 					else:
-						say "Turning tail to run you realize that you're going to have to rethink this battle entire battle! [bold type]Remember you only have so long before the blob breaks the window![roman type]";
+						say "Turning tail to run you realize that you're going to have to rethink this battle entire battle! [bold type]Remember you only have so long before the blob breaks the window![roman type][line break]";
 						now lastResevoirfix is turns;
 
 Section 5 - Water At Last
@@ -541,7 +544,7 @@ Sanctuary is a situation.
 
 Instead of resolving a Sanctuary:
 	if waterworks is 1:
-		say "Because of your efforts the military is able to work at speeding up the process of trying to restore some form of order to the city, now that they have an infinite supply of water on their hands. Though they're not too sure how to act around you, given your [FaceName of Player] face and [BodyName of Player] form, despite you being the one to help make the improbable here possible, they do give you a few nods and words of congratulations. Speaking with some of them you come to find out that the military men and women aren't as bad as you would have first believed, and though they don't offer you any provisions and the likes, you do end up chatting many of them up and learning about their thoughts and feelings about dealing with the [italic type]problems[roman type] here in the metropolis. Maybe you can offer to help them out sometime? [bold type](There's nothing left to do here, but if you come back to talk to the military you will get a chance to work with them to speed up their efforts to help out in the city via time loss... wait... is that a good thing or no? This event is repeatable.)[roman type]";
+		say "Because of your efforts the military is able to work at speeding up the process of trying to restore some form of order to the city, now that they have an infinite supply of water on their hands. Though they're not too sure how to act around you, given your [FaceName of Player] face and [BodyName of Player] form, despite you being the one to help make the improbable here possible, they do give you a few nods and words of congratulations. Speaking with some of them you come to find out that the military men and women aren't as bad as you would have first believed, and though they don't offer you any provisions and the likes, you do end up chatting many of them up and learning about their thoughts and feelings about dealing with the [italic type]problems[roman type] here in the metropolis. Maybe you can offer to help them out sometime? [bold type](There's nothing left to do here, but if you come back to talk to the military you will get a chance to work with them to speed up their efforts to help out in the city via time loss... wait... is that a good thing or no? This event is repeatable.)[roman type][line break]";
 		Extend game by -16;
 
 
@@ -557,16 +560,22 @@ It has a weapon "[one of]frozen blades of cold[or]whispering twins of water and 
 Instead of sniffing icicle knives:
 	say "These frozen blades both breathe and smell of a perpetual frost made of the forgotten thoughts and chilled promises left abandoned in a watery reservoir.";
 
+Section 7 - Endings
 
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Reservoir Oozing"	"BadEnd"	""	Reservoir Oozing rule	20	false
+"Reservoir Epilogue"	"Story"	""	Reservoir Epilogue rule	950	false
 
-when play ends:
-	if oozing is 1:
+This is the Reservoir Oozing rule:
+	if ending "Reservoir Oozing" is triggered:
 		say "Having lost to the blob monster you are no longer aware of yourself as an individual but as one who is part of a greater whole. Sloshing and moving throughout the reservoir many other mutants have found their way here to your home. Those unable to get away from your tentacles have been dragged underneath the murky waters to become one with you. However, those able to get away have moved on and long since become but a distant memory. Yet when the [italic type]new ones[roman type] come along you feel a sudden fear as a burning heat begins to churn your waters. Memories of long ago surface and instantly you feel threatened beyond measure.";
 		say "Rising up from out of your watery home you find attacking the newcomers without thought. The sheer need to survive makes you try to either engulf the newcomers or disembowel them with your tentacles. There's much shouting and noise coming from all around but when the [italic type]new ones[roman type] begin to retreat you feel a sense of nervousness that makes you hesitant to return back into the reservoir. Perhaps it's time to move into deeper waters outsider. The faint memory of the ocean has you warbling in glee and quickly you sink down into the waters to try and plan your escape.";
-		stop the action;
+		the Player is lost;
 
-when play ends:
+This is the Reservoir Epilogue rule:
 	if waterworks is 1:
+		trigger ending "Reservoir Epilogue";
 		say "Because of your efforts in restoring the water to flowing properly within the city the military is able to speed up restoring the lives of those who haven't succumbed to the infection back to something close to normalcy. Even better though, at least for those who have to walk the streets during the sweltering days and stifling nights, is that because of the water running as it should now the military is able to call the local firefighters in to help clean up the sludge covering both the buildings and the streets. Having someone finally do something about that [italic type]smell[roman type] lingering in the air is much a boon to those citizens who have to still fight off certain crazy mutants as anything else they could hope to wish for.";
 
 ]

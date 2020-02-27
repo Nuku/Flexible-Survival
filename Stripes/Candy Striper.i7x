@@ -743,27 +743,16 @@ instead of navigating Grey Abbey Library while (Candy is in the Bunker and HP of
 Section 7 - Total Coonification
 
 to say totalcoonification:		[version 1 - direct shift, no gender controls]
-	repeat with y running from 1 to number of filled rows in Table of Random Critters:	[puts Raccoon as lead monster...]
-		choose row y in Table of Random Critters;
-		if Name entry is "Raccoon":
-			now MonsterID is y;
-			break;
-	now TailName of Player is "Raccoon";
-	now FaceName of Player is "Raccoon";
-	now SkinName of Player is "Raccoon";
-	now BodyName of Player is "Raccoon";
-	now CockName of Player is "Raccoon";
-	attributeinfect "Raccoon";
-	now tail of Player is tail entry; [...to make for quicker and accurate copying of Raccoon appearance.]
-	now Face of Player is face entry;
-	now Skin of Player is skin entry;
-	now Body of Player is body entry;
-	now Cock of Player is cock entry;
+	turn the Player into a "Raccoon";
 
 Section 8 - Endings
 
-when play ends:
-	if BodyName of Player is "Raccoon":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Candy's Epilogue"	"NPC"	""	Candy's Epilogue rule	900	false
+
+This is the Candy's Epilogue rule:
+	if Player has a non-shifting body of "Raccoon":
 		if humanity of Player < 10:
 			if coonstatus < 100:				[Coon player - Coon non-pet]
 				if coonstatus is 0:			[Coon still in hospital]
@@ -820,7 +809,7 @@ when play ends:
 				else if coonstatus > 0 and HP of Candy > 2 and HP of Candy < 100: [w/Sane Candy]
 					say "     When the military arrives to rescue survivors, you and Candy are both taken to one of the military's many camps. Candy and you search for any sign of his brother, but according to everyone you ask, Johnathan seems to have simply... disappeared, just before the rescue efforts began. Candy is distraught, but resolves to continue his new, saner life, if only to honor his brother's memory.";
 					say "     The two of you remain [if Player is male]vigorous lovers[else]good friends[end if], but you can't help but notice that the raccoon's self-control is almost legendary in comparison to his past behaviors, refusing to so much as touch a soldier even if they express interest. When you question him about it, he claims that 'It'd be... wrong. I'd rather not risk infecting anyone if I can help it. Johnathan wouldn't have wanted that.'[if Player is male] This doesn't stop him from playing with you every night, of course...[end if]";
-	else if BodyName of Player is "Trash Coon":	[Trash-coon player variations]
+	else if Player has a non-shifting body of "Trash Coon":	[Trash-coon player variations]
 		if humanity of Player < 10:
 			if Candy is in the bunker:
 				if Player is male:
@@ -890,7 +879,7 @@ when play ends:
 			if BodyName of Player is "Siren":
 				say "     Candy is probably your band's number one fan, running and moderating the band's web forums in his off hours. Being bright pink, you easily spot him dancing happily with your groupies whenever you have a show in town. You aren't at all surprised when you start spotting a few fans with colorful raccoon tails in the audience.";
 			else if XP of Timothy < 3 and Gryphoness is tamed:	[coon pet + gryphon pet]
-				if BodyName of Player is "Blue Gryphon Herm":
+				if Player has a non-shifting body of "Blue Gryphon Herm":
 					say "     Candy is probably your band's number one fan, running and moderating the band's web forums in his off hours. Being bright pink, you easily spot him dancing happily with your groupies whenever you have a show in town. You aren't at all surprised when you start spotting a few fans with colorful raccoon tails in the audience.";
 				else:
 					say "     Denise and Candy seem to get along well, and one day you return home to be greeted with beautiful singing and amazing dancing by your two friends. You are so impressed, you urge them to continue working on music and choreography, and privately wonder if you should take this show on the road, and how to do so without breaking certain decency laws.";
@@ -914,12 +903,12 @@ when play ends:
 				say "     Your little pink pet remains a loyal slut under your care after your release from the military. He serves and services you with absolute devotion and keeps a variety of cute dresses and frilly outfits to tease and excite you. He seems to show a preference for a French maid dress, and dutifully keeps house whenever you are out.";
 			else:
 				say "     Your little pink pet remains a loyal slut under your care after your release from the military. He serves and services you with absolute devotion and keeps a variety of cute dresses and frilly outfits to tease and excite you. He seems to show a preference for a French maid's dress, and dutifully keeps house whenever you are out. You make sure to pass him off to your male and herm friends from time to time, to appease his lust for cock.";
-			if BodyName of Player is "Ferret":
+			if Player has a non-shifting body of "Ferret":
 				say "     Lorenda and Lee take particular enjoyment out of their fellow [']maid's['] companionship and are often found playing with him in their outfits.";
-			if BodyName of Player is "Siren":
+			if Player has a non-shifting body of "Siren":
 				say "     Your pet raccoon loyally accompanies you on your band's tours and is there to give you his obedient and lustful affection whenever wanted. He seems to legitimately love your band's music as well, dancing happily to it with your groupies whenever he can sneak away from his handlers during your shows. You aren't at all surprised when you start spotting a few fans with colorful raccoon tails in the audience.";
 			else if XP of Timothy < 3 and Gryphoness is tamed:	[coon pet + gryphon pet]
-				if BodyName of Player is "Blue Gryphon Herm":
+				if Player has a non-shifting body of "Blue Gryphon Herm":
 					say "     Your pet raccoon loyally accompanies you on your band's tours and is there to give you his obedient and lustful affection whenever wanted. He seems to legitimately love your band's music as well, dancing happily to it with your groupies whenever he can sneak away from his handlers during your shows. You aren't at all surprised when you start spotting a few fans with colorful raccoon tails in the audience.";
 				else:
 					say "     Denise and your raccoon pet seem to get along well, and one day you return home to be greeted with beautiful singing and amazing dancing by your two loving pets. You are so impressed, you urge them to continue working on music and choreography, and privately wonder if you should take this show on the road, and how to do so without breaking certain decency laws.";
@@ -927,12 +916,12 @@ when play ends:
 				say "     Your raccoon pet seems jealous of the affection you give Philip. He mopes quietly if he sees you being affectionate with him or notices the boar's strong scent on you after you've had sex with him. He steadfastly refuses to play with the pig, though will happily enjoy any other lover you share with him. ";
 				if ( Cock Count of Player is 0 and player is female ) or ( ( BodyName of Player is "Messy Pig" or BodyName of Player is "Piggy" ) and player is female ):	[Female at farm OR F/H Piggy at farm]
 					say "     When the coon gets even more sullen after the move to the pig farm and your oncoming litter, Philip has had enough. The next time the coon hisses at him when he strokes your pregnant belly, he grabs the little boitoy and takes him right then and there, with much squealing from the boar and moans from the coon. From that point on, he's much more affectionate with the boar and seems to like it best when the pig is rough and dirty with him. The raccoon does pick up some bad habits though. When once he was always well-groomed and clean, he becomes a scruffy and dirty raccoon, often rummaging around in the garbage or even taunting the pig to fuck him in the dumpster. You've lost your slutty housekeeper, but gained a much happier, if messier, home for it.";
-				else if BodyName of Player is "Messy Pig" or BodyName of Player is "Piggy" and pigfucked > 0:
+				else if Player has a non-shifting body of "Messy Pig" or Player has a non-shifting body of "Piggy" and pigfucked > 0:
 					if pigfucked > 2:						[M Piggy sub]
 						say "     When the coon gets even more sullen after the move to the pig farm and your repeated rutting with the boar, Philip has had enough. The next time the coon hisses at him when he squeezes your subby, cum-filled bottom, he grabs the little boitoy and takes him right then and there, with much squealing from the boar and moans from the coon. From that point on, he's much more affectionate with the boar and seems to like it best when the pig is rough and dirty with him. The raccoon does pick up some bad habits though. When once he was always well-groomed and clean, he becomes a scruffy and dirty raccoon, often rummaging around in the garbage or even taunting the pig to fuck him in the dumpster. You've lost your slutty housekeeper, but gained a much happier, if messier, home for it.";
 					else:					[M Piggy lover]
 						say "     When the coon gets even more sullen after the move to the pig farm and your repeated rutting of the sows, Philip has had enough. The next time the coon hisses at him while watching you in the pen, siring more hogs, he grabs the little boitoy and takes him right then and there, with much squealing from the boar and moans from the coon. From that point on, he's much more affectionate with the boar and seems to like it best when the pig is rough and dirty with him. The raccoon does pick up some bad habits though. When once he was always well-groomed and clean, he becomes a scruffy and dirty raccoon, often rummaging around in the garbage or even taunting the pig to fuck him in the dumpster. You've lost your slutty housekeeper, but gained a much happier, if messier, home for it.";
-			else if ( BodyName of Player is "Messy Pig" or BodyName of Player is "Piggy" ) and pigfucked is 0 and Philip is in the Large Shed:
+			else if ( Player has a non-shifting body of "Messy Pig" or Player has a non-shifting body of "Piggy" ) and pigfucked is 0 and Philip is in the Large Shed:
 				say "     Your raccoon pet seems jealous of the friendship you have with Philip. He mopes quietly if he sees you with him or notices the boar's strong scent on you after you've hung out. He steadfastly refuses to play with the pig, though will happily enjoy any other lover you offer him."; [M Piggy friend]
 
 Candy Striper ends here.

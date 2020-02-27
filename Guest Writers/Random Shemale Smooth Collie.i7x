@@ -493,8 +493,13 @@ to say collieinheat:
 
 Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "Smooth Collie Shemale":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Smooth Collie Shemale Infection"	"Infection"	""	Smooth Collie Shemale Infection rule	1000	false
+
+This is the Smooth Collie Shemale Infection rule:
+	if Player has a body of "Smooth Collie Shemale":
+		trigger ending "Smooth Collie Shemale Infection";
 		if humanity of Player < 10:
 			say "     As your collie instincts take over, you find yourself with increasingly strong urges to mate and make more strong, beautiful collie pups. Leaving all else behind, you strike out into the city to satisfy your new instincts. Your search comes to an end when you encounter a large and powerfully built shemale collie, drawn towards each other's scent";
 			if Player is female:

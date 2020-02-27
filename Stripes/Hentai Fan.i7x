@@ -189,11 +189,16 @@ When Play begins:
 ]
 
 
+[
 Section 3 - Endings
 
-[
-when play ends:
-	if BodyName of Player is "Hentai Fan":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Hentai Fan Infection"	"Infection"	""	Hentai Fan Infection rule	1000	false
+
+This is the Hentai Fan Infection rule:
+	if Player has a body of "Hentai Fan":
+		trigger ending "Hentai Fan Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You succumb to your hentaifan infection.";
 		else:

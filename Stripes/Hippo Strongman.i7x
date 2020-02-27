@@ -207,8 +207,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Hippo":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Hippo Infection"	"Infection"	""	Hippo Infection rule	1000	false
+
+This is the Hippo Infection rule:
+	if Player has a body of "Hippo":
+		trigger ending "Hippo Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     Unable to resist your new instincts any longer, your humanity leaves you as your new body's urges take over. You make your way back to the State Fair and come across another hippo strongman. You team up with him, proving your might together in your successful two-man show. That is, if you measure success by how often you manage to beat the other creatures you encounter and sate your lusts on them. When the soldiers come in, their guns are a problem, but a sly coyote pops up and gives you an idea on how to deal with them. Laying out one of the safety nets from the acrobatic show and covering it with dirt, you make a huge trap for them. A couple of fast fairground creatures zip around, luring in the separate teams to reach the central square together. With the combined strength of two mighty hippos (and maybe a little help from others at the fairgrounds... but just a little), you manage to catch yourselves a whole squad of soldiers in your net. You and the other creatures divvy up your prize, taking several soldiers to fuck and convert each.";
 		else:

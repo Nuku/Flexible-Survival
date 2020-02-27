@@ -552,8 +552,15 @@ this is the balltit rule:
 	say "You are [descr].";
 
 
-when play ends:
-	if BodyName of Player is "Pit bull":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Pit Bull Infection"	"Infection"	""	Pit Bull Infection rule	1000	false
+
+This is the Pit Bull Infection rule:
+	if Player has a body of "Pit Bull":
+		trigger ending "Pit Bull Infection";
 		if humanity of Player < 10:
 			if Player is purefemale:	[Succumb - F]
 				say "     Losing your mind to the infection, you wander off into the city and are drawn to a run-down neighborhood. There, you find one of the female pit bulls you've seen around guarding a junkyard. She approaches cautiously, but as you get on all fours and offer your wet pussy to her, she relaxes and moves in to welcome you properly. Her tongue dives deep into your pussy until you cum before she gets you to return the favor. You settle down with her. When the military move through, you both take hide together among the junk, but do venture out at night to drag away a few more female soldiers to make into horny pit bulls to pleasure your alpha.";

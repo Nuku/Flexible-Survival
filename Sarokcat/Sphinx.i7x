@@ -22,6 +22,7 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Sphinx"; [name of the overall species of the infection, used for children, ...]
+	add "Sphinx" to infections of FelineList;
 	add "Sphinx" to infections of HybridList;
 	add "Sphinx" to infections of FurryList;
 	add "Sphinx" to infections of MythologicalList;
@@ -185,8 +186,15 @@ When Play begins:
 ]
 
 
-when play ends:
-	if BodyName of Player is "Sphinx":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Sphinx Infection"	"Infection"	""	Sphinx Infection rule	1000	false
+
+This is the Sphinx Infection rule:
+	if Player has a body of "Sphinx":
+		trigger ending "Sphinx Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is male:
 				if riddlewin > 6:

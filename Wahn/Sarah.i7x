@@ -3,6 +3,7 @@ Sarah by Wahn begins here.
 [ Expanded by Stripes                              ]
 [ Re-write and expansion by Wahn                   ]
 [ Expansion by Glitch                              ]
+[ Added Evil DB support - Gherod]
 
 [ SarahCured                                                                         ]
 [ 8: player told Sarah he wants to fuck, she doesn't want to be knocked up, anal OK  ]
@@ -457,6 +458,12 @@ to say SarahTalkMenu:
 		now sortorder entry is 4;
 		now description entry is "Talk about what she thinks caused the infection";
 	[]
+	if resolution of Demonic Redemption is 2 and companion of player is demon brute:
+		choose a blank row in table of fucking options;
+		now title entry is "Ask her for help regarding your Demon Brute";
+		now sortorder entry is 5;
+		now description entry is "Ask Sarah if she can do something for the Demon Brute.";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -480,6 +487,8 @@ to say SarahTalkMenu:
 					say "[SarahTalk3]";
 				if (nam is "Theories on the outbreak"):
 					say "[SarahTalk4]";
+				if (nam is "Ask her for help regarding your Demon Brute"):
+					say "[SarahTalk_DB]";
 				wait for any key;
 				say "[SarahTalkMenu]";
 		else if calcnumber is 0:
@@ -566,7 +575,7 @@ to say SarahTalk3:
 				say "     Sarah's eyes go wide and she can't help but give a happy little bark as you explain that you do have a stash of libido suppressant to give her. Trembling in excitement as she stands before you on her slender paws, the husky hybrid's tail wags up a storm as you pull five syringes out of your pack, handing the handful of them to her. 'I - I don't even know what to say,' she replies, tears of joy in her eyes. Leaning in to plant a peck on your cheek, she then hurries away to her bed to pack away the medicine you so laboriously gathered for her. Moments later, she is back by your side, a huge happy grin on her face. 'I want to give you something,' she tells you, then raises her hands to her neck and undoes the red collar there. 'Don't even know why I kept this thing on so long, but... here, take it as a reminder of what you saved me from and everything you did for me.' Handing you the narrow band of red leather with trembling fingers, she smiles and walks back to her bed, murmuring about trying out a new dosage next.";
 				now SarahCured is 4; [the player gave her enough for a full treatment]
 				say "     For your efforts in saving Sarah from her progressing husky infection, you have earned the [']Dog Whisperer['] feat. Having proved your dedication in doing the right thing, your [bold type]charisma[roman type] has gone up by two, allowing you to empathize with others even more.";
-				add "Dog Whisperer" to feats of Player;
+				FeatGain "Dog Whisperer";
 				StatChange "Charisma" by 2;
 				decrease carried of libido suppressant by 5;
 			else: [don't give it to her]
@@ -584,7 +593,7 @@ to say SarahTalk3:
 				say "     Sarah's eyes go wide and she can't help but give a happy little bark as you explain that you do have a stash of libido suppressant to give her. Trembling in excitement as she stands before you on her slender paws, the husky hybrid's tail wags up a storm as you pull five syringes out of your pack, handing the handful of them to her. 'I - I don't even know what to say,' she replies, tears of joy in her eyes. Leaning in to plant a peck on your cheek, she then hurries away to her bed to pack away the medicine you so laboriously gathered for her. Moments later, she is back by your side, a huge happy grin on her face. 'I want to give you something,' she tells you, then raises her hands to her neck and undoes the red collar there. 'Don't even know why I kept this thing on so long, but... here, take it as a reminder of what you saved me from and everything you did for me.' Handing you the narrow band of red leather with trembling fingers, she smiles and walks back to her bed, murmuring about trying out a new dosage next.";
 				now SarahCured is 4; [the player gave her enough for a full treatment]
 				say "     For your efforts in saving Sarah from her progressing husky infection, you have earned the [']Dog Whisperer['] feat. Having proved your dedication in doing the right thing, your [bold type]charisma[roman type] has gone up by two, allowing you to empathize with others even more.";
-				add "Dog Whisperer" to feats of Player;
+				FeatGain "Dog Whisperer";
 				StatChange "Charisma" by 2;
 				decrease carried of libido suppressant by 5;
 			else: [don't give it to her]
@@ -1128,7 +1137,7 @@ An everyturn rule:
 		else if SarahPups > 11:
 			say "Having sired so many puppies, you feel buoyed with happiness and a greater urge to get through this ordeal to protect them.";
 			say "You and Sarah have earned the [']Proud Parent['] feat, making her more fertile and you more eager to protect your growing kennel.";
-			add "Proud Parent" to feats of Player;
+			FeatGain "Proud Parent";
 			increase morale of the player by 5;
 			increase score by 12;
 		now SarahPregnant is 0;
@@ -1532,8 +1541,17 @@ to say SarahDavidScene3:
 	now DavidSarahInteraction is 2;
 	now lastDavidSarahInteraction is turns;
 
-when play ends:
+Section 2 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Sarah's Epilogue"	"NPC"	""	Sarah's Epilogue rule	900	false
+
+This is the Sarah's Epilogue rule:
+	if humanity of Player < 10 and the Player left:
+		make no decision; [Skip this, if the player succumbed to the infection and has left (everything behind).]
 	if Sarah is in the bunker:
+		trigger ending "Sarah's Epilogue";
 		if SarahCured > 3: [fully cured]
 			if humanity of Player < 10: [player succumbed]
 				say "     Returning to the bunker, you waste no time in pouncing on the little husky you left there earlier - but Sarah actually manages to slip from your grasp. Distraught at seeing her hero and friend in such a state, she runs towards the exit out of the bunker, slamming the door in front of your nose with only a second to spare. Bouncing off the heavy steel door in your haste, Sarah is gone by the time you've picked yourself up from the ground again. You soon give up searching for her, shrugging off any further thought of the young woman as your body's lusts push other priorities aside...";

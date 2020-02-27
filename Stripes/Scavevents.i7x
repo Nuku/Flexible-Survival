@@ -457,7 +457,7 @@ Instead of resolving a Plains Scavenging:
 					now y is "water bottle";
 				if scavengetarget is "soda":
 					now y is "soda";
-	say "Roaming across the endless field of grass that makes up the plains you find your brushing a hand across your face as a strong and stray breeze passes along your [one of][bodytype of Player][or][bodydesc of Player][at random] body. Striding across one giant grassy knoll you happen to notice [y] not too far off in the distance. Looking around to be sure that you're not seeing a mirage, you quickly run over to [y] to capture it before something else can.";
+	say "Roaming across the endless field of grass that makes up the plains you find yourself brushing a hand across your face as a strong and stray breeze passes along your [one of][bodytype of Player][or][bodydesc of Player][at random] body. Striding across one giant grassy knoll you happen to notice [y] not too far off in the distance. Looking around to be sure that you're not seeing a mirage, you quickly run over to [y] to capture it before something else can.";
 	now x is a random number from 1 to 3;
 	if x is 1:
 		say "The item in question waits silently for you [one of]on the ground among some tall grass[or]with small bugs crawling over it[or]on top of a large cropping of bushes[or]within the branches of a lonesome tree[or]down in a large hole[or]resting in a dry puddle[or]underneath a pile of straw[or]down the side of a hill[or]right next to a wooden fence[at random].";
@@ -838,7 +838,7 @@ Instead of resolving a Scattered Clothing:
 			say "[GiveRandomFeetItem]";
 
 WaistItemsList is a list of objects that varies.[@Tag:NotSaved]
-the WaistItemsList is {ripped jeans, black jeans, sturdy jeans, skinny jeans, hot pants, gray pants, camo pants, jogging pants, bermuda shorts, black miniskirt, pencil skirt, floral skirt}.
+the WaistItemsList is {ripped black jeans, black jeans, black skinny jeans, scarlet hot pants, gray slacks, green camo pants, black jogging pants, beige bermuda shorts, black miniskirt, light-blue pencil skirt, gypsy floral skirt}.
 
 to say GiveRandomWaistItem:
 	now RandomItemPick is a random number from 1 to the number of entries in WaistItemsList;
@@ -846,7 +846,7 @@ to say GiveRandomWaistItem:
 	say "[bold type]You gain [if plural of entry RandomItemPick of WaistItemsList is true][entry RandomItemPick of WaistItemsList][else]a [entry RandomItemPick of WaistItemsList][end if]![roman type][line break]";
 
 ChestItemsList is a list of objects that varies.[@Tag:NotSaved]
-the ChestItemsList is {black t-shirt, white t-shirt, maroon pullover, zephyr shirt, camo shirt, sleeveless shirt, mesh shirt}.
+the ChestItemsList is {black t-shirt, white t-shirt, maroon pullover, camo shirt, black sleeveless shirt, mesh shirt}.
 
 to say GiveRandomChestItem:
 	now RandomItemPick is a random number from 1 to the number of entries in ChestItemsList;
@@ -854,7 +854,7 @@ to say GiveRandomChestItem:
 	say "[bold type]You gain [if plural of entry RandomItemPick of ChestItemsList is true][entry RandomItemPick of ChestItemsList][else]a [entry RandomItemPick of ChestItemsList][end if]![roman type][line break]";
 
 FeetItemsList is a list of objects that varies.[@Tag:NotSaved]
-the FeetItemsList is {combat boots, brown loafers, leather sandals, high heels, stiletto heels, jogging shoes, cowboy boots}.
+the FeetItemsList is {black combat boots, brown loafers, brown leather sandals, bright-red pumps, black stiletto heels, blue running shoes, dark-brown cowboy boots}.
 
 to say GiveRandomFeetItem:
 	now RandomItemPick is a random number from 1 to the number of entries in FeetItemsList;
@@ -862,7 +862,7 @@ to say GiveRandomFeetItem:
 	say "[bold type]You gain [if plural of entry RandomItemPick of FeetItemsList is true][entry RandomItemPick of FeetItemsList][else]a [entry RandomItemPick of FeetItemsList][end if]![roman type][line break]";
 
 CrotchItemsList is a list of objects that varies.[@Tag:NotSaved]
-the CrotchItemsList is {ragged loincloth, simple loincloth, boxer briefs, white briefs, orange jockstrap, mesh undies, pink panties}.
+the CrotchItemsList is {ragged brown loincloth, simple white loincloth, black boxer briefs, white briefs, orange jockstrap, mesh briefs, pink panties}.
 
 to say GiveRandomCrotchItem:
 	now RandomItemPick is a random number from 1 to the number of entries in CrotchItemsList;

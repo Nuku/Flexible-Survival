@@ -77,8 +77,8 @@ When Play begins:
 	now tail entry is "From the end of your spine there dangles an electrical cord ending in a standard plug, but somehow it is able to move on its own at times, twitching and swaying when your emotions run high.";
 	now cock entry is "[one of]human[or]pink[or]human-like[at random]";
 	now face change entry is "your ears ring with the sounds of clangs and bashes. Your head echoes with the whirring of power tools as it reshapes into a mostly human form. You can feel an off cool sensation as a stainless steel plate forms at your cheek and under your chin, an approximate fit at best. The whirring only gets worse as you can feel several hard protuberances growing out from the top of your head";
-	now body change entry is "the sounds of banging on metal and plastic comes from it. These even feel like dull thumps across your body as your changes come sporadically. Your body becomes human in form, at its basic level, but several parts are replaced with assorted junk. Stray wires grow out from your skin, only to curl around and sink back in elsewhere. One of your feet grow hard and heavy, reforming into the lower half of an iron. It is difficult to focus on all the changes happening to you as your body becomes a strange cyborg made of junk[if Player is male]. Brass tubes form against your skin near your groin, attached at one end to your balls[end if][if Player is female]. Pink plastic tubes form against your skin near your groin, running to your cunt. You can feel your pussy grow wet as the clear, oily lubricant keeps you slick and ready for mating[end if]";
-	now skin change entry is "your skin becomes smooth and human, lightly tanned. But before you can appreciate this change towards normalcy, the sensation of change intensifies in random locations as a mish-mash of metal and plastic plates start to appear. Many of these are old and dented and don't quite fit the spots they're replacing. Some protrude out too far while others flex and shift as you bend. Other small chunks of junk and scrap protrude almost at random from your";
+	now body change entry is "the sounds of banging on metal and plastic come from it. These even feel like dull thumps across your body as your changes come sporadically. Your body becomes human in form, at its basic level, but several parts are replaced with assorted junk. Stray wires grow out from your skin, only to curl around and sink back in elsewhere. One of your feet grow hard and heavy, reforming into the lower half of an iron. It is difficult to focus on all the changes happening to you as your body becomes a strange cyborg made of junk[if Player is male]. Brass tubes form against your skin near your groin, attached at one end to your balls[end if][if Player is female]. Pink plastic tubes form against your skin near your groin, running to your cunt. You can feel your pussy grow wet as the clear, oily lubricant keeps you slick and ready for mating[end if]";
+	now skin change entry is "it becomes smooth and human, lightly tanned. But before you can appreciate this change towards normalcy, the sensation of change intensifies in random locations as a mish-mash of metal and plastic plates start to appear. Many of these are old and dented and don't quite fit the spots they're replacing. Some protrude out too far while others flex and shift as you bend. Other small chunks of junk and scrap protrude almost at random from your skin";
 	now ass change entry is "the base of your tailbone opens a small panel and an electrical cord snakes out";
 	now cock change entry is "it throbs and pulses, reshaping into a thankfully human form. As the pleasure of transformation is coming to an end, you cum, spraying out a spurt of thick seed that is a little oily to the touch";
 	now str entry is 14;
@@ -218,9 +218,15 @@ When Play begins:
 ]
 
 
+Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Junkman":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Junkman Infection"	"Infection"	""	Junkman Infection rule	1000	false
+
+This is the Junkman Infection rule:
+	if Player has a body of "Junkman":
+		trigger ending "Junkman Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     Drawn back to the scrapyard by your corrupted instincts, you join the other junkmen in wandering around the piles of junk, satisfying your lusts on each other and others you find. Your people have little ambition or organization, only existing in the moment, enjoying short lives corrupting a handful of creatures and siring a few offspring before eventually breaking down and rejoining their scrapyard home.";
 		else:

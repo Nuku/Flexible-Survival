@@ -407,8 +407,13 @@ to say hdoctorheat:
 
 Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "Horny Doctor":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Horny Doctor Infection"	"Infection"	""	Horny Doctor Infection rule	1000	false
+
+This is the Horny Doctor Infection rule:
+	if Player has a body of "Horny Doctor":
+		trigger ending "Horny Doctor Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     As you lose your grip on your mind, a new set of instincts and thoughts replace your old memories. A lot of it is a jumble of medical knowledge that occupies your thoughts, drawing you to come to the city hospital. There you feel a need to work alongside the other canine doctors wandering the halls. They welcome you happily, and lustfully, as do the other denizens of the medical facility.";
 			if hospquest < 2:

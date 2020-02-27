@@ -206,9 +206,14 @@ When Play begins:
 
 Section 3 - Endings
 
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Human Mutant Infection"	"Infection"	""	Human Mutant Infection rule	1000	false
+
 [ Player becomes either a crazed or a reveling cock-voring monstrosity ]
-when play ends:
-	if BodyName of Player is "Human Mutant":
+This is the Human Mutant Infection rule:
+	if Player has a body of "Human Mutant":
+		trigger ending "Human Mutant Infection";
 		if humanity of Player < 10:
 			say "     Having lost your mind, the mutated islander's infection takes over your body in dramatic fashion. [if Cock Length of Player < 20]Your cock grows to inhuman proportions and it[else]your already inhumanly-sized cock[end if] begins to fill empty, desperately empty despite the humongous testicles hanging below. Before the military eventually put you down, you scour the island's forest, ambushing any unfortunate passerby investigating the island's secret, and push them down inside your scrotum.";
 		else:

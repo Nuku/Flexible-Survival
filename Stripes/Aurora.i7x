@@ -237,8 +237,13 @@ to say SexWithAurora:
 
 Section 4 - Endings
 
-when play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Aurora's Epilogue"	"Companion"	"Pet"	Aurora's Epilogue rule	750	false
+
+This is the Aurora's Epilogue rule:
 	if frost giantess is tamed:
+		trigger ending "Aurora's Epilogue"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     With you losing it to the infection, Aurora is reluctantly forced to leave you. She strikes out on her own into the city, hoping for rescue before she too loses her remaining humanity.";
 		else:

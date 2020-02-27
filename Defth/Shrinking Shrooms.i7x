@@ -1,4 +1,5 @@
-Version 1 of Shrinking Shrooms by Defth begins here.
+Version 2 of Shrinking Shrooms by Defth begins here.
+[Version 2: Gargoyle Sentry outside event - Gherod]
 
 Section 1 - Event
 
@@ -77,7 +78,7 @@ Instead of resolving a Hungry dog:
 		say "     While exploring the nanite-infested city you hear some noises coming from an alley beside you. You turn around, trying your best to peek stealthily into the alley. Inside, you find what appears to be a giant, anthro German shepherd gorging himself with... some kind of food. By his side, you see a pile of clothes tossed carelessly aside. Most of them look like ordinary clothes, but there are some camo pattern uniforms in the mix, and they are all stained with what appears to be blood. This is weird - none of the German shepherds you found hunting in the city were wearing anything. Why would this one have clothes, or even take them off while he eats?";
 		say "     Oh god! Your legs tremble with the sudden realization, and you almost lose your breath. It can't be! He is eating someone!? Almost as if sniffing your fear, the beast puts his muzzle to the air and starts to turn around...";
 		LineBreak;
-		say "     [bold type]Extreme content warning! (The further scene contain hard-vore with a possible shrinking scene and a game over!)";
+		say "     [bold type]Extreme content warning! (The further scene contain hard-vore with a possible shrinking scene and a game over!)[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Face the beast.";
 		say "     ([link]N[as]n[end link]) - RUN!";
@@ -102,7 +103,8 @@ Instead of resolving a Hungry dog:
 					say "     The foul odors of the monster's last meal assault your nose, and you almost puke. Holding yourself, you take a look at your surroundings. It is almost pitch-black, but somehow, you can see some of what is happening in here. You somehow landed on a safe place, everywhere else being filled with acid. There are some bones and even flesh still intact floating in the caustic sea. But your luck is only finite. With rising dread, you hear the gurgle noises of the digestion starting. Your safe place shifts, making you lose your footing and land in the acid. That is how you die. As someone's meal.";
 					WaitLineBreak;
 					now battleground is "void";
-					now BodyName of Player is "dead";
+					the Player was ended by "Shrinking Shrooms eaten alive";
+					trigger ending "Player has died";
 					end the story saying "You were eaten alive!";
 				else:
 					say "     You try your hardest to escape his grip, but the beast was already stronger than you with your normal size. Now that you are miniaturized, it doesn't look like there is much you can do. As he brings you near his teeth, you can only see the void of his throat, waiting to swallow you down. It convulses and closes from time to time, as if expecting a nice meal, which in this case, is you. The monster's throat looks almost sexual. With all of the saliva trickling and running inside, it seems like a huge sex organ that is soon to be your passage. The white teeth secure you in place, preventing any escape. Then you are tossed around inside of his mouth as he tries to chew your body. As he catches your leg and arm between his teeth, you feel your bones almost breaking. Despite your skin managing to miraculously keep together, you scream with agony. It wasn't supposed to end like this.";
@@ -111,7 +113,8 @@ Instead of resolving a Hungry dog:
 						say "     The foul odor of his last meal still lingers in the air, if you can even call it air. You hold your nose in a vain chance to stop the smell, but it only opens your mouth to the taste of the air around you. There is a little more room in the beast's stomach, although not much, and you are still held in place. Left without much to do but wait, your own thoughts betray you. The grim reality is that there is only one way out now, and you won't be alive at the end. He moves slightly, and you feel the tremor in his stomach. The gurgle noises are a sign of what is to come, a clamor for food that only those who hunt in this land have, or to someone like in your situation, a herald to their final moments. You take a look around and see the surrounding liquid coming to you like a death tide. You silently weep, once again mourning how it wasn't supposed to end like this...'";
 						WaitLineBreak;
 						now battleground is "void";
-						now BodyName of Player is "dead";
+						the Player was ended by "Shrinking Shrooms eaten alive";
+						trigger ending "Player has died";
 						end the story saying "You were eaten alive!";
 					else:
 						say "     You can see his uvula while he is trying to swallow you, giving you a final idea to escape. You hold on to the dog's uvula, making him choke and gag. Soon enough, you feel yourself being pushed up and out his mouth. You run as much as you can while the beast is dizzy with your method of escape. You eventually lose sight of the monster, and it isn't much longer before you return to your normal size. Cleaning yourself as much as you can, you guess that you still probably will need a bath.";
@@ -130,7 +133,8 @@ Instead of resolving a Hungry dog:
 					say "     Your captor finally bites down, holding you against the tight and lubed place. Twitching, tugging, and pulling you deeper towards the belly of the beast, the pain of being penetrated by his teeth destroy any sense of pleasure in this act. You can't see much, except for some snippets of light that shines into his mouth. Your [FaceName of Player] head is chewed while his tongue holds you in place. The slippery sensation keeps pulling you deeper inside the beast jaws, as it keeps squeezing you with his tightness. The pressure keeps building until your neck snaps, giving you a quick death. But you already knew what was going to happen after that.";
 					WaitLineBreak;
 					now battleground is "Void";
-					now BodyName of Player is "dead";
+					the Player was ended by "Shrinking Shrooms eaten alive";
+					trigger ending "Player has died";
 					end the story saying "You were eaten alive!";
 				else:
 					say "     Thrashing around in his grip, you end up punching his muzzle with enough force to daze the dog, giving you an opening to escape with your life intact.";
@@ -390,11 +394,8 @@ to say ChineseTrouble:
 				now sextablerun is 1;
 				say "     Giving up on the idea of leaving this, you wait for your death, which comes in due time.";
 				now battleground is "void";
-				now TailName of Player is "dead";
-				now FaceName of Player is "dead";
-				now SkinName of Player is "dead";
-				now BodyName of Player is "dead";
-				now CockName of Player is "dead";
+				the Player was ended by "Shrinking Shrooms eaten alive";
+				trigger ending "Player has died";
 				end the story saying "You were eaten alive!";
 				wait for any key;
 			else:
@@ -442,11 +443,8 @@ to say ChineseTrouble:
 				now sextablerun is 1;
 				say "     Giving up on any hope of survival, you sit down, breathing the polluted air and being squished by her muscles from the inside of her stomach. The end will take just a few more moments...";
 				now battleground is "void";
-				now TailName of Player is "dead";
-				now FaceName of Player is "dead";
-				now SkinName of Player is "dead";
-				now BodyName of Player is "dead";
-				now CockName of Player is "dead";
+				the Player was ended by "Shrinking Shrooms eaten alive";
+				trigger ending "Player has died";
 				end the story saying "You were eaten alive!";
 				wait for any key;
 			else:
@@ -458,11 +456,8 @@ to say AlphaKick:
 		say "     With a huge windup, you kick him with all the strength you have left, making your surroundings shake a bit. But before you can follow up, a more powerful quake goes through the husky's insides, with the wall of his stomach bulging out suddenly to throw you to the other side of the chamber and land in a puddle of stomach acid. Flinching in pain, you realize that he must have punched his own stomach. You smile at the thought and drag yourself to your feet again, then pummel his insides some more. This won't save you, but at least the bastard is gonna have indigestion.";
 		WaitLineBreak;
 		now battleground is "void";
-		now TailName of Player is "dead";
-		now FaceName of Player is "dead";
-		now SkinName of Player is "dead";
-		now BodyName of Player is "dead";
-		now CockName of Player is "dead";
+		the Player was ended by "Shrinking Shrooms eaten alive";
+		trigger ending "Player has died";
 		end the story saying "You were eaten alive!";
 	else:
 		say "     With a huge windup, you kick him with all the strength you have left, making your surroundings shake a bit, then a lot! Suddenly, everything shifts on its side, and you are thrown about, then violently ejected back the way you came in. After another voyage through the gullet of the husky, you fall onto the ground in a wash of vomit. Looks like your well-aimed hit made him throw up! With the predator on all fours, retching violently, you have just enough time to get your own bearings and run into the other room.";
@@ -476,11 +471,8 @@ to say AlphaClimb:
 		say "     The walls of his gullet are slick and often twitch, several times feeling as if he is trying to gulp you down again. But you persevere, holding onto anything you can get a grip on. Finally, you're back in his muzzle and run down the squishy length of his tongue to jump out through his parted teeth, only to land in the husky's raised paw. 'So, my prey wants to be properly chewed before being my meal,' he says and gives a sadistic laugh. 'Don't worry, now you will be a proper meal.' You are tossed back in his mouth, but this time, you are chewed down before being swallowed.";
 		WaitLineBreak;
 		now battleground is "void";
-		now TailName of Player is "dead";
-		now FaceName of Player is "dead";
-		now SkinName of Player is "dead";
-		now BodyName of Player is "dead";
-		now CockName of Player is "dead";
+		the Player was ended by "Shrinking Shrooms eaten alive";
+		trigger ending "Player has died";
 		end the story saying "You were eaten alive!";
 	else:
 		say "     Well, it's worth a try at least. You try your best to hang onto something, anything. The dog's stomach starts compressing, heralding the beginning of digestion. You scream in desperation, and you finally manage to hold on to something and pull yourself a bit further up. With newfound determination after that first success, you work at pulling yourself up, just in time before the rising level of acid burns the soles of your feet. It is hard work, but you are getting out of here! Feeling something crawling up his gullet can't be comfortable for the husky either, and before long, the tickling sensation in his insides makes him throw up! Being violently ejected on a tide of rising vomit, you fall onto the ground in a foul-smelling wash of his stomach contents. With the predator on all fours, retching violently, you have just enough time to get your own bearings and run into the other room.";
@@ -493,11 +485,8 @@ to say AlphaDive:
 		say "     You jump in the acid, ignoring all of the pain. It makes your flesh burn as it is eaten away while you try to find any opening deeper into his digestive tract. But it's all in vain. Soon, you pass out from the pain, and are quickly digested without a trace.";
 		WaitLineBreak;
 		now battleground is "void";
-		now TailName of Player is "dead";
-		now FaceName of Player is "dead";
-		now SkinName of Player is "dead";
-		now BodyName of Player is "dead";
-		now CockName of Player is "dead";
+		the Player was ended by "Shrinking Shrooms eaten alive";
+		trigger ending "Player has died";
 		end the story saying "You were eaten alive!";
 	else:
 		say "     You jump in the acid, ignoring all the warnings in your brain saying otherwise. It burns a lot, but you continue doing your best to speed up your passage through his digestive system until you are finally 'birthed' through his tight asshole. When you fall down, you have a small window to escape your 'parent' before he realizes what is going on. Luckily, he is busy fucking his bitch again, and so, you are able to reach your point of entrance before being caught once more. With the beastly husky still shouting angrily to his bitches to find his escaped snack, you lean against the outer wall in exhaustion and wait for the shrinking mushroom to wear off. Soon, you're back to your original size and get dressed again, then get out of the area at a run.";
@@ -510,11 +499,8 @@ to say BitchClimb:
 		say "     Pushing aside her flesh to make your way proves harder than any place you climbed combined with any hole you crawled inside. Your body is still slippery with the cum and the fluids from the bitch, causing you to slide. But still, you make your way to her muzzle, finally seeing the outside world again. Hope comes back to your heart... and are quickly shattered, as the alpha is waiting for you. 'Look at that little rascal,' he says looking directly at you inside her mouth. 'Thought you'd make it, but no. You're still going down!' As the husky laughs, the bitch clamps her teeth shut, closing the last sliver of light you are ever going to see, then throws her head back and swallows you again. This time, you don't have the energy to even struggle anymore...";
 		WaitLineBreak;
 		now battleground is "void";
-		now TailName of Player is "dead";
-		now FaceName of Player is "dead";
-		now SkinName of Player is "dead";
-		now BodyName of Player is "dead";
-		now CockName of Player is "dead";
+		the Player was ended by "Shrinking Shrooms eaten alive";
+		trigger ending "Player has died";
 		end the story saying "You were eaten alive!";
 	else:
 		say "     Looking at the hole you just went through, the realization strikes your mind. There are only two places connected to where you are now, up and down. And you don't think you will survive the rest of the way down anyway, so your only option is trying to go back from where you came. Getting back on your feet, you throw your hands up, trying you best to grab at anything at all. Your first attempt is met with failure, but on the second try, you manage to hold onto something. No time to figure out how you are climbing. If you want to survive this you have to continue. Pushing aside her flesh to make your way proves harder than any place you climbed combined with any hole you crawled inside.";
@@ -527,15 +513,96 @@ to say BitchDive:
 		say "     You jump in the acid, ignoring all of the pain. It makes your flesh burn as it is eaten away while you try to find any opening deeper into his digestive tract. But it's all in vain. Soon, you pass out from the pain, and are quickly digested without a trace.";
 		WaitLineBreak;
 		now battleground is "void";
-		now TailName of Player is "dead";
-		now FaceName of Player is "dead";
-		now SkinName of Player is "dead";
-		now BodyName of Player is "dead";
-		now CockName of Player is "dead";
+		the Player was ended by "Shrinking Shrooms eaten alive";
+		trigger ending "Player has died";
 		end the story saying "You were eaten alive!";
 	else:
 		say "     You jump in the acid, ignoring all of the warnings in your brain saying otherwise. It burns a lot, but you continue doing your best to speed up your passage through her digestive system until you are finally 'birthed' through her tight asshole. When you fall down, you have a small window to escape your 'parent' before she realizes what is going on. Luckily, she is busy being pounded by her master, and so, you are able to reach your point of entrance before being caught once more. With the beastly husky still shouting angrily to his bitches to find the escaped snack, you lean against the outer wall in exhaustion and wait for the shrinking mushroom to wear off. Soon, you're back to your original size and get dressed again, then get out of the area at a run.";
 		now Resolution of Little Trouble is 10; [shrunk, eaten by bitch, anal way out]
 		now little trouble is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Gargoyle Sentry	"Gargoyle Sentry"
+
+Gargoyle Sentry is a situation.
+The sarea of Gargoyle Sentry is "Outside".
+When play begins:
+	add Gargoyle Sentry to BadSpots of MaleList;
+
+instead of resolving a Gargoyle Sentry:
+	if resolution of Gargoyle Sentry is 0: [never looked into the chest]
+		say "     Amidst your exploration, with no destiny specified, you stumble across a small rubble of stone in the far distance, as the shape of what seems to be a statue of some sort is standing right in the middle of it. Upon closer inspection, you realize the silhouette isn't quite human, and the more you approach, the more you conclude what kind of construct it is. A gargoyle, no less, and a fairly large one, complete with its privates dandling between the thick and muscular legs. Clearly a he, is immobilized at the moment, not breathing nor moving an inch, though by the looks of the area surrounding him, you guess that could immediately change if you got too close. The constructions seem to follow a safety perimeter, all man-built - so probably built by the gargoyle himself - and he must be resting still. Currently, he's sitting on a small stone pedestal, legs curled and back leaning forward, with each hand holding one knee of their respective size, and his eyes, albeit lifeless looking, are open, featuring on an face that looks like a mix between a dragon and a bat, with a pair of small horns on the top of the head. His wings are resting on each side of his body, also hanging still as a statue.";
+		say "     Before you consider taking the risk, you attempt to scout around for anything of interest. It seems he keeps a few treasures in a chest, probably things he values a lot, but some of them could probably be useful to you. However, the pattern these stones seem to make concerns you, as they don't look exactly like randomly placed rubble. There's an ominous sensation coming from them, and knowing how some stuff can unexplainably come to life around here, you think your presence would be able to disturb the surrounding area, and looking at how big he is, you know it'd be a very bad idea to go in carelessly. Maybe if you were small or light enough, you could cross this perimeter without alerting the gargoyle... ";
+		if glowing mushroom is owned:
+			say "But you do remember that you've collected a few strange looking mushrooms in the past that might be able to do the job.";
+			WaitLineBreak;
+			say "     Looking at one you pulled out of your inventory, you consider your options... [bold type]Would it be worth trying to ingest one of these and walk over the large gargoyle's territory?[roman type]";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - Sure, there's no reward without taking risks.";
+			say "     ([link]N[as]n[end link]) - You could, but not now.";
+			if Player consents:
+				LineBreak;
+				SGargoyleExplore;
+			else:
+				LineBreak;
+				say "     Better not take any chances with this, at least for now. Though it seems he won't really go anywhere, so there's no rush in coming back again seeking this [bold type]gargoyle sentry[roman type]... Unless something unlikely happened.";
+		else:
+			say "Is there any way you can achieve that? Maybe a consumable of some sort that could shrink you...?";
+			WaitLineBreak;
+			say "     You figure you should look around for something with a [bold type]shrinking effect[roman type] before you return here and attempt to do anything. And your survival instincts tell you to NOT try your luck in going there normally. It would end badly for you, as this gargoyle seems bigger and stronger than any other you've seen if it was able to come to life.";
+	else if resolution of Gargoyle Sentry > 0:
+		say "     Amidst your exploration, with no destiny specified, you stumble across a small rubble of stone in the far distance. Upon closer inspection, you realize it's all very familiar to you. It's the place where you found that gargoyle sentry [if resolution of Gargoyle Sentry is 3]who almost crushed you to death after having covered you in his beastly cum [end if]the other day, and you were unable to retrieve anything of value out of it. Unfortunately, it looks like it will remain as such. The gargoyle is nowhere to be found, but neither is his treasures. Without anything else of interest to be done here, with the spot looking clearly abandoned, you erase this place off your notes and proceed further ahead, ignoring this area from now on.";
+		now Gargoyle Sentry is resolved;
+
+to SGargoyleExplore:
+	decrease carried of glowing mushroom by 1;
+	say "     Down the hatch goes a shroom, and you start feeling the effects almost immediately. The world around you shifts before your eyes as you feel yourself shrinking to only a few inches tall, [if player is not naked]having even shrunk through your gear and getting completely naked[else]your already naked body remaining as such, even more exposed to danger[end if]. Adrenaline rushes with the anticipation of attempting your dangerous plan before you dare to take a tiny step towards the stone perimeter. Relief arrives down your shoulders as your tiny feet makes it forward without anything out of the ordinary happening, so you start walking around slowly and, effectively, everything goes according to plan. Now that you're inside the safety perimeter, it's time to explore!";
+	say "     The muscular gargoyle sleeps soundly and still, looking menacingly huge from your perspective of view. You don't even want to imagine what he could do to you being of that size if he suddenly came to life and saw an intruder so small and vulnerable, meaning you shouldn't linger for long. Making your way through the rudimentary stone pavement, you head directly towards the place where you've seen the goods, a much longer way than what it would be if you were normal sized... But you manage, after about a few minutes of walking. Then, you climb up through some stones, a task surprisingly easier to accomplish while you're tiny and light, and walk over the edge of some sort of chest. Luckily, it's not closed, as there are a few objects holding the top up in place. The bottom shines, as there must be a few valuables in here!";
+	WaitLineBreak;
+	say "     Carefully, you slide down through what seems to be a large copper ingot, and land on a solid surface. More ingots of many kinds cover the bottom of the chest, shining in various colors and sizes, but all in the same shapes, as expected. Seems like the gargoyle has a knack for collecting these kinds of stuff, but now another problem arises... You're too small to carry any of this! Ingots are heavy and long, you'd be lucky if you could manage to shove even a small one out of the chest, and even then, these things would hit hard once they fell to the ground, and it would be noisy to drag them across the stones. But you're not ready to give up, yet! There must be something you can bring with you... right?";
+	say "     You search the inside of the chest thoroughly, but unfortunately... no luck. Seems like your idea to shrink and pass by unnoticed was brilliant in only one way, because you're not able to take anything with you. You could sell these ingots for some creds to anyone interested, only if you could transport them out. A misfortune, but at least you know it's not anything too valuable or worth running the risk of being smashed to death by a big bad manly gargoyle if he ever awakened and saw you as a menace. With disappointment, you figure it's time to leave the inside of the chest, so you make your way back by climbing up through the ingots and onto the edge of the treasure container.";
+	WaitLineBreak;
+	say "     Breathing outside air once more, you take a careful look around you, and towards the gargoyle. He's still dormant, and nothing strange happened while you were here. Pointless as this trip might have been, at least you have the opportunity to admire the work of art this beautiful statue is. Each muscle is flawlessly sculpted, almost as if it was a real organic being, and something about the creature strikes you with sheer power. Then, since you're leaving with your hands empty, an idea comes to mind... Realizing you're able to climb through stuff with ease, and never having seen such a gorgeous sculpture so up close while being as small as you currently are, how about you [bold type]go on a little adventure and explore this gargoyle's body?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Of course! Purely out of curiosity.";
+	say "     ([link]N[as]n[end link]) - Wouldn't that be reckless and dangerous? Better just leave and note the location for future reference.";
+	if Player consents:
+		SGargoyleScene;
+	else:
+		say "     What nonsense were you just thinking? That would increase your odds of getting killed, for sure! What if it comes to life and doesn't like having a tiny person climbing around him? You'd be turned into powder, for sure... So it's better to just take your leave through the same path you took when you first arrived, then wait out the effects of the shrooms to subside. It takes a while, but soon you feel yourself regaining your normal size, able to proceed with your usual affairs and re-equip yourself. You also take note of this place, in case you come across it in a near future with the new knowledge you have just acquired.";
+		now resolution of Sentry Gargoyle is 1; [explored chest, left]
+
+to SGargoyleScene:
+	say "     If you're careful enough, it won't even notice you're here. So you carefully bypass the chest and head towards the stone pedestal where the gargoyle is sitting on, and readying yourself to climb it up, you stretch your arms once more and give enough balance to jump over, grabbing the edge with both hands and bringing your body onto the top. From here, you can have a very clear view of his large clawed feet, holding against the pedestal firmly. They're not connected to the ground, which confirms your suspicions of this being one of those [']magic['] gargoyles. But looking between the thick thighs has you meeting an enormous manhood, long and smooth, hanging soft between his legs. Its tremendous size is only scarier when you're this small, but you're sure it would still be massive at your normal size! Beneath it, an equally sizable pair of testes hang heavily below, only overshadowed by the legs and the shaft, but they seem rather swollen.";
+	say "     This visage gives you the chills... but you're able to take a good gaze at the masculine gargoyle's virile details, and the rest of his beautiful body, incredibly huge compared to you, from a delicious angle. [bold type]There's even an unexplainable musk coming from his parts, as if it were alive...[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - This arouses you, so you want to get closer...";
+	say "     ([link]N[as]n[end link]) - Alive... you think?! Something will most definitely happen if you don't leave right now.";
+	if player consents:
+		LineBreak;
+		say "     This naughty idea doesn't leave your mind. How hot it is to face an exposed penis that can be as big as you're tall while soft, looking so smooth and appealing to the eye, and being just a few centimeters away from it, without any obstacle between it and you to keeping you from getting closer? How can you pass this opportunity? And surely, as light as you are, maybe you can just... have your fun without waking him up? A risky idea, but one that you can't miss. With the decision made, you bolster up the courage to step towards the gargoyle's considerable cock, the musk indeed becoming stronger, almost as if you were approaching an alive being's parts... It fills you with adrenaline, but it also makes you horny, and between the two, you know which you want to satisfy.";
+		say "     When you get close enough to touch it, you extend your hands and softly brush both the palms against the tip all around. To your surprise, it feels warm and oddly smooth, as if the stone was polished to the very point of it being so soft and... even slightly squishy, like a real dick. But the thought doesn't set you off, much the contrary, as you continue to rub down through the solid shaft, completely lost in the sensation. You're even able to bounce it around realistically, and the more you do, the warmer it gets... and then it shakes slightly within your grasp. Your eyes widen as the sculpture's dong hardens slowly, growing further beyond, getting erect as you massage the entire thing.";
+		WaitLineBreak;
+		say "     This dick in its fully erect state is clearly much bigger than you, and so heavy it could probably crush you beneath if it ever fell on top of you. Since it becomes so hard, it lifts off the ground, and you're either forced to give up or attempt to climb to the top of it. You choose the second option, making your way through the base, bringing yourself up onto the top of the throbbing rod. Then, relocating towards about half of the cock, you put your arms and legs around his thickness to feel it all over beneath you...";
+		WaitLineBreak;
+		say "     ...Then suddenly, you hear a breath. A heavy one, inhuman, deep and very audible, almost monstrous, sound surging through the entirety of the gargoyle's body. Your heart starts beating at double the speed, your body immobilized and frozen in sudden fear, as you see both of the massive creature's arms moving slowly towards you. However, he does not hurt you... Instead, he seems to sit back comfortably, stretching his powerful legs forward, and bringing his full erection to poing up, with you still tugged on it. A powerful hand envelops you from the back, carefully rubbing you across the pulsing shaft, surprisingly gently. You look up at his face, his eyes now giving a dimming faint light through the black coal sclera, pointed towards you. He looks real, alive, and feels so much as such, that you could forget that he's made of stone...";
+		say "     He does not direct any word towards you, instead continuing to jerk off his cock with you tugged around it. Your body around the throbbing shaft feels just too hot to not get turned on by the whole thing, your own existence smothered between it and the gargoyle's hand, bringing you up and down through the entirety of his length. He breathes of life, deeper in both intensity and sound, as he starts to slow down his stroking only to bring you closer to the glans. You can't almost believe your eyes when you see that he can actually leak precum, and not just a tiny bit of it, but copious amounts of it, enough to drown you in a single drop...! Feeling his ridiculously massive meat pulsing in arousal, you know he's about to do something naughty for his own enjoyment, and that follows up with having your face shoved against the oozing slit.";
+		WaitLineBreak;
+		say "     Serves you right for being so attracted to his musk, that now you're being forced to swallow any of the statuesque creature's juices as long as he wants, and the more he presses you against it, the harder he becomes and the more he leaks out. Each drop is enough to fill your mouth, and you can barely find a second to breath with his heavy finger pressed against the back of your head, holding you in place. Then, out of the sudden, the gargoyle huffs and pushes himself forward, landing on the ground on fours with a massive earthquake almost able to shake you off our own existence, his hand holding you against his cock and keeping you from suffering a very bad fall. Now the beast's prick is on top of you, drooling its liquids freely on top of you for a moment, its heavy weight almost crushing you underneath...";
+		say "     But he's just getting started. You get a feeling he might be punishing you from intruding, but since you got him horny, he's probably doing it in a way that takes care of both problems... Or at least you'd like to think that. His ever throbbing erection only craves for more friction, and soon you find yourself getting brushed and rubbed against the massive shaft, over and over, up and down the long pole that's eager to explode. He's so turned on that you can even see his hips jerking back and forth, sometimes his hand standing still as he lets his body do all the movement. It gets almost unbearably hot between you and his dick, only worsening as he comes closer to the edge...";
+		WaitLineBreak;
+		say "     Then with an abrupt movement, he brings you down to the ground, a little too harshly for comfort, then gets his trunk thighs down to his knees as his rock hard cock is pointed directly at you. With a wicked grin on the beast's expression as he strokes faster and faster, the tip being only mere inches away from you, it's only a few seconds before your vision blacks out. An enormous and thick splat of cum hits you right on your face, covering it completely and throwing you back to the floor, as more and more of it falls directly on you, coating you under numerous and seemingly endless layers of his generous load, completely immobilizing you and keeping you to drown underneath, almost as if you were trapped in amber! By the waves you keep feeling, the gargoyle doesn't stop cumming for a very good while, enough to cause you start feeling lightheaded for the lack of air...";
+		say "     However, you suddenly feel something heavy pressing against you, more and more, squishing all the cum against you, forcing some of it to slip to the side, then you feel yourself getting dragged around in a rather slippery pool, until the ground feels hard and harsh once more. Fortunately you're able to catch a breathe and shove some of the suffocating load off your face, but you can't say the same for the rest of your body, trampled under the monstrous beast's clawed foot. He pressed on downwards one time, then another, each harder than the last, and you almost feel your bones cracking from the force... Then, he keeps you there, on the verge of breaking, for a long minute... Until he lets go, his heavy foot landing just a few inches to your side with tremendous strength, causing the earth to shake around you!";
+		WaitLineBreak;
+		say "     The gargoyle doesn't speak, but eyes you intimidatingly, the message being clear in your head. Then, he streches his wings, his overshadowing and statuesque dimension enough to truly make you shit your pants - if you had them on - as he takes a step back, only to kick you away of his territory. You're sent flying across a few meters, ending up just outside of the stone perimeter, now covered in both dirt and cum as the gargoyle takes his spot above the stone pedestal, his manhood still giving signs of arousal even as it [']tries['] to return to its soft state. There's a satisfied smirk on his face as he turns into an immobile statue once more.";
+		say "     Meanwhile you... Well, you've learned your lesson. Your body hurts all over and you're still dizzy from everything. Just do not mess with a gargoyle sentry ever again.";
+		WaitLineBreak;
+		say "     Taking a deep breath, all that you have left now is waiting for the shroom effect to disappear, so you're able to return to your usual affairs and re-equip yourself. Fortunately, you have an easier time cleaning yourself once you return to your normal size. You also take note of this place, in case you come across it in a near future with the new knowledge you have just acquired... Or at least to know better than to risk your life for a wicked curiosity.";
+		now resolution of Gargoyle Sentry is 3; [explored chest, was kicked by the gargoyle]
+	else:
+		LineBreak;
+		say "     Okay, you've had enough sightseeing for a lifetime, almost literally. Knowing you might have gotten a bit too close to the gargoyle, you simply decide to come down off the pedestal, turn towards the exit then slowly and carefully make your way out of the danger perimeter. You breath of relief once you made in one piece, succesfully not waking up the gargoyle even with the risk you just took. Taking a deep breath, all that you have left now is waiting for the shroom effect to disappear, so you're able to return to your usual affairs and re-equip yourself. You also take note of this place, in case you come across it in a near future with the new knowledge you have just acquired.";
+		now resolution of Sentry Gargoyle is 2; [explored chest, got close to the gargoyle, left]
 
 Shrinking Shrooms ends here.

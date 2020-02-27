@@ -724,16 +724,24 @@ to deerfy:
 
 Section 7 - Endings
 
-when play ends:
-	if BodyName of Player is "Deer":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Susan's Epilogue"	"NPCSharedInfection"	""	Susan's Epilogue rule	900	false
+"Deer Infection"	"Infection"	""	Deer Infection rule	1000	false
+
+This is the Susan's Epilogue rule:
+	if Susan is not in primary lab and Susan is not in hidden lab:
+		make no decision;
+	if Player has no body of "Deer" and Player has no body of "Reindeer":
+		make no decision;
+	[If we got this far, her epilogue will play]
+	trigger ending "Susan's Epilogue"; [Here it states, that the ending has been played.]
+	if Player has a body of "Deer":
 		if humanity of Player < 10:
 			if Susan is in primary lab:
 				say "     Fear grips your heart and you take off running like the wind until you reach Susan's arms, leaping into them and curling up against her a moment. She calms you and pets you. Despite your loss of humanity, she remains clear, and cares for you as a mother, even if she likes playing with you like a lover. When rescue does come, she escorts you to society and continues to care for you to the end of your days, never leaving you wanting for company, or anything else.";
 			else if Susan is in hidden lab:
 				say "     Fear grips your heart and you take off running like the wind until you reach Susan's arms, leaping into them and curling up against her a moment. She calms you and pets you. Despite your loss of humanity, she remains clear, and cares for you as a mother, even if she likes playing with you like a lover. When Dr Mouse leaves the city, she goes with him and takes you into hiding with them. As the doctor continues his work in the shadows, the deer continues to care for you to the end of your days, never leaving you wanting for company, or anything else.";
-			else:
-				say "     You can feel your humanity drifting away from you and flee to where your instincts urge you. You find the herd of deer, led by that magnificent stag. On seeing you, Susan steps forward and welcomes you into her arms, holding your shivering form tight to herself, 'Now you see?' she whispers, then lays you down, rutting you to the cheers of the others, many of whom stroke their black cocks over your coupling bodies, spraying you and her with hot strings of seed even as she fills your belly and officially claims you as her own.";
-				say "     When she is done, she rises from you, and one of your pack sisters takes her place, rutting you just as eagerly. She rolls over, putting you on top [if Player is female]and leaving the way open for another sister to come up and claim your ass, sandwiching you between as you're fucked by[else]fucking you wildly before passing you along to[end if] each sister in turn, passed around twice through the entire circle of adoring deer. By the time it is done, you are sore but satisfied, and begin your life as a member of the herd.";
 		else:
 			if Susan is in primary lab:
 				if Player is male and "Sterile" is not listed in feats of Player:
@@ -750,9 +758,7 @@ when play ends:
 					say "     When the rescue comes, you return to Susan and leave the city hand in hand, using your false identities as cover. Despite any other loves or friends you pick up, she remains your favored. Her belly is swollen round often with the fruit of your couplings, and she accompanies you almost everywhere, tending to your every whim. You are both happy with the arrangement, and remain together, loving, for the rest of your long lives, eventually tended to by the children you sired and raised so well.";
 				else:
 					say "     When the rescue comes, you return to Susan and leave the city hand in hand, using your false identities as cover. Despite any other loves or friends you pick up, she remains your favored. She accompanies you almost everywhere, tending to your every whim. You are both happy with the arrangement, and remain together, loving, for the rest of your long lives.";
-			else:
-				say "     Your sleek lines attract many. You easily secure a job as a secretary, but live for the weekends, when you'd hit the clubs and dance the night away to the gawkings of others. Though some humans remain fearful on basis of your being mutated at all, more than a few approach you openly, seeing your attention and affection. You show them a good time, on the dance floor, or the bedroom floor, depending on how much you like them. Man, woman, you find yourself not caring as much between the two.";
-	if BodyName of Player is "Reindeer":
+	if Player has a body of "Reindeer":
 		if humanity of Player < 10:
 			if Susan is in primary lab:
 				say "     Drawn to it by some fading memory, you fly to Trevor Labs, spreading holiday cheer in your wake. A rather angry looking dragon comes out, shaking its fist at you and yelling about having to shovel snow now. You start to laugh, but a fiery blast sends you banking off. But then there is a joyous yell as a doe runs out and pushes the dragon aside, right into a snowbank. Feeling a connection to this lovely creature, that fading memory, you zip down and scoop her up into your arms. You fly off with her as the scaly Scrooge yells 'Good riddance, you pests.' The doe clutches you tightly, kissing you again and again, saying how she knew you'd come back and how you have a lovely body. Soon you are mating in the air and she's becoming more and more a holiday-infused reindeer like yourself, joining the herd. When she start to fly on her own, your lovemaking gets even more acrobatic and the snowfall increases, spreading more holiday cheer over the infected city.";
@@ -779,5 +785,17 @@ when play ends:
 				else:
 					say "You rut her often and she ends up giving you a new fawn every year for Christmas.";
 				say "     As the holiday season starts to come around, she begins to get more and more into the spirit of things, helping you decorate and even adding to your collection. Subtly at first, but more quickly as that special day gets nearer and nearer, she grows more beautiful and caribou-like. Soon enough, she's helping you 'make' the egg nog for the office Christmas party with a sexy Mrs. Claus outfit on her fully reindeer body[if Player is male] while you rut her from behind[end if].";
+
+This is the Deer Infection rule:
+	if ending "Susan's Epilogue" is triggered:
+		make no decision;
+	if Player has a body of "Deer":
+		trigger ending "Deer Infection"; [Here it states, that the ending has been played.]
+		if humanity of Player < 10:
+			say "     You can feel your humanity drifting away from you and flee to where your instincts urge you. You find the herd of deer, led by that magnificent stag. On seeing you, Susan steps forward and welcomes you into her arms, holding your shivering form tight to herself, 'Now you see?' she whispers, then lays you down, rutting you to the cheers of the others, many of whom stroke their black cocks over your coupling bodies, spraying you and her with hot strings of seed even as she fills your belly and officially claims you as her own.";
+			say "     When she is done, she rises from you, and one of your pack sisters takes her place, rutting you just as eagerly. She rolls over, putting you on top [if Player is female]and leaving the way open for another sister to come up and claim your ass, sandwiching you between as you're fucked by[else]fucking you wildly before passing you along to[end if] each sister in turn, passed around twice through the entire circle of adoring deer. By the time it is done, you are sore but satisfied, and begin your life as a member of the herd.";
+		else:
+			say "     Your sleek lines attract many. You easily secure a job as a secretary, but live for the weekends, when you'd hit the clubs and dance the night away to the gawkings of others. Though some humans remain fearful on basis of your being mutated at all, more than a few approach you openly, seeing your attention and affection. You show them a good time, on the dance floor, or the bedroom floor, depending on how much you like them. Man, woman, you find yourself not caring as much between the two.";
+
 
 Deer ends here.

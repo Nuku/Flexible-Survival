@@ -159,6 +159,8 @@ When Play begins:
 	add "Sea Otter" to infections of MustelidList;
 	add "Sea Otter" to infections of FurryList;
 	add "Sea Otter" to infections of NatureList;
+	add "Sea Otter" to infections of FemaleList;
+	add "Sea Otter" to infections of HermList;
 	add "Sea Otter" to infections of MaleList;
 	add "Sea Otter" to infections of TaperedCockList;
 	add "Sea Otter" to infections of SheathedCockList;
@@ -339,8 +341,15 @@ instead of sniffing Tasty Fish:
 	say "It smells like a fish, somehow still fresh if a little odd... strangely reminding you of otters.";
 
 
-when play ends:
-	if BodyName of Player is "Sea Otter":
+Section 4 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Sea Otter Infection"	"Infection"	""	Sea Otter Infection rule	1000	false
+
+This is the Sea Otter Infection rule:
+	if Player has a body of "Sea Otter":
+		trigger ending "Sea Otter Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Otterconsent is 1:
 				say "     You return to the raft of otters that dominates your thoughts, throwing yourself into the water and swimming out into their eager grasps. Without further worry for the world, you live with them, fucking, being fucked, hunting for tasty fishes and clams. You find you have little complaint over your new, simple life.";

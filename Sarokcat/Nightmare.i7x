@@ -192,8 +192,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Nightmare":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Nightmare Infection"	"Infection"	""	Nightmare Infection rule	1000	false
+
+This is the Nightmare Infection rule:
+	if Player has a body of "Nightmare":
+		trigger ending "Nightmare Infection"; [Here it states, that the ending has been played.]
 		if nightmareslavery is 1:
 			say "     You easily settle into your new life as your master's pet and slut in the stables, happy to tell him anything he wants to know and serve your amazing master in any way he wishes. Best of all though, you aren't alone as his pet for very long, as soon enough Fancy joins you in his office with a lovely new collar all her own! She seems a little confused at first, but soon comes around after you explain what an honor it is to be the slave of such a handsome and powerful stallion. Your stallion seems to find this to be amusing and pleasing as well, and he often has you tell him what a wonderful and sexy stallion he is, and how lucky you are to be his pet, and how your body constantly burns for his touch. Happily enough, he is more than willing to touch you quite often, breeding both you and your fellow pet often, until both your bellies are full of his seed and his foals. Though sometimes he does share you out as a special reward for some of the other horsemen, which is always lovely and filling, but just not the same as having your powerful stallion bury himself in you. Eventually as his favored pet you help him expand his territory in the city, your strength now serving your master as you fight beside him on the few times his authority is challenged, often surprising his opponents with your capability and might. And when it finally comes time for the stables to be relocated elsewhere, you are proud to follow your master to a new city where you can start up another stables, and breed him many strong and powerful foals... You are just so glad to have managed to find such a wonderful and fulfilling life as a slave of such a handsome stallion!";
 		if Nightmaremastery is 1:

@@ -279,8 +279,15 @@ When Play begins:
 ]
 
 
-when play ends:
-	if BodyName is "Brown Bear Female":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Brown Bear Female Infection"	"Infection"	""	Brown Bear Female Infection rule	1000	false
+
+This is the Brown Bear Female Infection rule:
+	if Player has a body of "Brown Bear Female":
+		trigger ending "Brown Bear Female Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You amble off into the parkland, only occasionally reappearing to scare the hell out of anyone still foolish enough to try camping. Occasionally you leave signs of your passing in the form of rifles twisted into pretzels and tales from horrified hunters that have been both attacked and abused. Seeing you are no threat unless threatened, you are left to your own devices.";
 		else:

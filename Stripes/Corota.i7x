@@ -268,11 +268,16 @@ to say corotavenomuse:
 the scent of corota venom is "The snake venom has a strong, stinging scent that reminds you slightly of the creature's dusty powder.".
 
 
+[
 Section 5 - Endings
 
-[
-when play ends:
-	if BodyName of Player is "Template":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Corota Infection"	"Infection"	""	Corota Infection rule	1000	false
+
+This is the Corota Infection rule:
+	if Player has a body of "Corota":
+		trigger ending "Corota Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You succumb to your corota infection.";
 		else:

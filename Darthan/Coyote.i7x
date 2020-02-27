@@ -226,12 +226,17 @@ to coyotify: [Used for infection purposes.]
 
 
 [
-when play ends:
-	if BodyName of Player is "Template":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Coyote Infection"	"Infection"	""	Coyote Infection rule	1000	false
+
+This is the Coyote Infection rule:
+	if Player has a body of "Coyote":
+		trigger ending "Coyote Infection";
 		if humanity of Player < 10:
-			say "     You succumb to your template infection.";
+			say "     You succumb to your coyote infection.";
 		else:
-			say "     You survive, but were infected by the template.";
+			say "     You survive, but were infected by the coyote.";
 			if Player is male:							[MALE/HERM]
 				say "     Additional text for a male/herm survivor.";
 			else if "Sterile" is not listed in feats of Player:	[F-BREEDABLE]

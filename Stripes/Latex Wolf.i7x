@@ -137,6 +137,7 @@ When Play begins:
 	now Species Name entry is "Latex Wolf"; [name of the overall species of the infection, used for children, ...]
 	add "Latex Wolf" to infections of CanineList;
 	add "Latex Wolf" to infections of FurryList;
+	add "Latex Wolf" to infections of FeralList;
 	add "Latex Wolf" to infections of LatexList;
 	add "Latex Wolf" to infections of MaleList;
 	add "Latex Wolf" to infections of TaperedCockList;
@@ -339,74 +340,73 @@ to say lwmast2:
 
 Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "Latex Wolf":
-		if humanity of Player < 10:
-			say "     As the infection runs its course, it spreads through your body, changing you more and more into a non-anthro, latex wolf. When the rescue begins, you can hear a strange, ultrasonic siren off in the distance with your improved hearing and are drawn to it. Fire trucks arrive, sirens blaring with teams of soldiers around them. They are spraying down several other latex wolves and foxes who have arrived. You run up to one, yipping and wagging your tail in the hopes of a cure. As you move closer to the truck, you are pointed out and sprayed with a strange chemical.";
-			if intelligence of Player < 16 or dexterity of Player < 24:
-				if a random chance of 2 in 3 succeeds:
-					say "     You turn your head back and watch as the latex melts off of your body leaving fur underneath. You fall down and whimper as you realize that you are no longer a latex wolf, but instead trapped as a real one even as you feel what remains of your mind fading. The soldiers exclaim in surprise at your incomplete destruction and startling transformation, but you dash off into the city before they can prevent your escape. Under the cover of night, you slink off into the wilderness, mind that of a semi-intelligent wolf.";
-				else:
-					say "     You gurgle wetly as you feel yourself starting the melt. You struggle to escape, but another truck turns its hose on you and you melt away into another messy stain of latex goo in the wake of the deadly trucks.";
-					stop the action;
-			else:
-				say "     You gurgle wetly as you feel yourself starting to melt, turning into a fluid goo. You struggle over to a nearby drain and dive into it, flowing through the grate. You can faintly hear some commotion above concerning your escape, but can hardly understand it. You do manage to congeal enough to pull yourself onto a ledge and down a side passage before a large rush of the strange solvent is sprayed down after you. You are quite weakened for a time, but do learn to pull yourself partially back together, now a liquid latex wolf.";
-				say "     Now immune to the call of the siren, you follow the fire trucks['] path back to their base, consuming the melted wolves and foxes left in their wake, growing larger and larger. By the time you get to their depot, you are twice the size of their fire trucks and attack them. You flow across their lines, easily overpowering them while they're busy trying to refill the trucks. Immune to their weapons, you encircle the soldiers and amuse yourself with them, eating some and stuffing others into any orifice you care to create. Finally, with your overfull balls churning with liquid latex cum, you spray your semen over those still remaining. As they start to change into latex wolves, you chuckle maliciously and turn the hose on them, subjecting them to the same deadly fate as they tried to impose on you. As they howl and squirm, unable to get away, you slurp down all the tasty goo with a vicious grin.";
-				say "     You spend the next day collecting more playtoys as well as another latex wolf. You cum over the soldiers and then melt them, letting the latex wolf enjoy the tasty treat and grow into another giant, fluid wolf like yourself. You and your enormous mate track down any of your previous allies in the city you can still find and enjoy playing with them before consuming them. Unstoppable, you both run rampant across the city from time to time, transforming and eating the other, lesser infected when not squirming together in fluidic sex in a large basin.";
-				repeat with y running from 1 to number of filled rows in Table of Random Critters:
-					choose row y in Table of Random Critters;
-					if Name entry is "Latex Wolf":
-						now MonsterID is y;
-						break;
-				now TailName of Player is "Latex Wolf";
-				now FaceName of Player is "Latex Wolf";
-				now SkinName of Player is "Latex Wolf";
-				now BodyName of Player is "Latex Wolf";
-				now CockName of Player is "Latex Wolf";
-				now tail of Player is tail entry;
-				now Face of Player is face entry;
-				now Skin of Player is skin entry;
-				now Body of Player is body entry;
-				now Cock of Player is cock entry;
-				attributeinfect "Latex Wolf";
-				now Cock Length of Player is Cock Length of Player * 10;
-				now Ball Size of Player is Ball Size of Player * 10;
-				now Cunt Depth of Player is Cunt Depth of Player * 10;
-				now Cunt Tightness of Player is Cunt Tightness of Player * 10;
-				now Breast Size of Player is Breast Size of Player * 10;
-				if Breast Size of Player > 26, now Breast Size of Player is 26;
-				stop the action;
+to Latex Wolf Succumbed Intro:
+	say "     As the infection runs its course, it spreads through your body, changing you more and more into a non-anthro, latex wolf. When the rescue begins, you can hear a strange, ultrasonic siren off in the distance with your improved hearing and are drawn to it. Fire trucks arrive, sirens blaring with teams of soldiers around them. They are spraying down several other latex wolves and foxes who have arrived. You run up to one, yipping and wagging your tail in the hopes of a cure. As you move closer to the truck, you are pointed out and sprayed with a strange chemical.";
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Latex Wolf Succumbed"	"BadEnd"	""	Latex Wolf Succumbed rule	20	false
+"Latex Wolf back to Nature"	"Special"	""	Latex Wolf back to Nature rule	990	false
+"Latex Wolf Infection"	"Infection"	""	Latex Wolf Infection rule	1000	false
+
+This is the Latex Wolf Succumbed rule:
+	if Player is shifter:
+		make no decision;
+	if humanity of Player >= 10 or the Player has no body of "Latex Wolf":
+		make no decision; [Survival ending handled below]
+	trigger ending "Latex Wolf Succumbed"; [Here it states, that the ending has been played.]
+	if intelligence of Player < 16 or dexterity of Player < 24:
+		if a random chance of 2 in 3 succeeds:
+			add the ending flag "LW back to Nature";
+			make no decision;
 		else:
-			say "     As the rescue rolls in, you can hear an ultrasonic siren calling to you. You head out to investigate and can see a series of fire trucks passing through the city with soldiers around them. They are spraying down any latex wolves and foxes that are drawn in by the sound. You signal the soldiers as you step out. They turn to spray you, but hold off as you are still sane enough to speak. Determining that you've not succumb, they have you wait back in the bunker, calling for an extraction team immediately.";
-			say "     You are brought back to the base and subjected to some frantic testing. Confirming that you've not fully succumbed, they give you a treatment to protect you from continued, uncontrolled change, saving you from succumbing entirely to your infection. Still trapped in a quadruped body, you have difficulty establishing a normal life. Fortunately, your body hungers less for actual food and is often content with plastic, rubber and latex products for sustenance. You eventually get a job doing quality control for a large toy factory, having a keen eye (and nose) for defective products. And since they partially pay you with any tasty rejects that can't be recycled, you are quite happy with the work.";
-			if intelligence of Player > 15 and perception of Player > 15:
-				say "     Your intelligence and keen senses for synthetics allows you to catch the occasional quality issue before the molten plastic is even poured. A supervisor notices you doing this and recommends you move to working at that stage all the time. Your affinity for the material prompts you to start proposing small, cost-effective improvements that are met with increasing support. As costs go down and quality rises, you are promoted to devote part of your time to further innovation. At your own suggestion, you are given a desk with a paw-accessible computer next to the vats so you can taste test each one without breaking from your research.";
-				if humanity of Player < 25:
-					say "     As if driven, you throw yourself into your work more and more. You study the science of polymers, reading books and journals. Research made by studying the latex creatures like yourself which have arisen from the infection has been very fruitful and leads you to more success. Over the years, your company has patented many of your formulas and earned loads of money from them, but you don't stop. You publish papers on your own and attend scientific symposiums, but you happily continue working for the toy manufacturer.";
-					say "     One day, you get your team working on a special batch, filling one of the large vats. The complicated mixture is prepared, mixed and melted. As you step up to give it your usual taste test, you fall into it. With a wet moan, you melt into the latex compound while people start yelling and run up to help you. One brave assistant, unconcerned for [if Player is male]herself[else]himself[end if], leans over the mess to grab your hand.";
-					say "     But instead of just grabbing your hand, you end up flowing over [if Player is male]hers[else]his[end if] and across [if Player is male]her body. She[else]his body. He[end if] screams in surprise as you envelop [if Player is male]her[else]him[end if] and start to rise out of the vat as a huge blob of latex. The rest of the people gathered there flee as you start to reform into a huge latex wolf, just as you had hoped would happen. You release your transforming assistant and coat them in your [if Player is male]cum[else]pussy juices[end if] and more of the new formula, making them into a large latex wolf like yourself to be your mate.";
-					say "     Together, you both feast upon the contents of the factory, becoming huge, unstoppable, lustful, latex giants. You have fun attacking the nearby factories, using the little humans as food or playtoys in every perverted way you desire. You transform some into small latex wolves to help keep your human toys penned into your city, but most are absorbed or consumed after your fun is done. All your special friends and lovers get extra-special treatment before being made into large wolves to move on to other cities of their own.";
-					repeat with y running from 1 to number of filled rows in Table of Random Critters:
-						choose row y in Table of Random Critters;
-						if Name entry is "Latex Wolf":
-							now MonsterID is y;
-							break;
-					now TailName of Player is "Latex Wolf";
-					now FaceName of Player is "Latex Wolf";
-					now SkinName of Player is "Latex Wolf";
-					now BodyName of Player is "Latex Wolf";
-					now CockName of Player is "Latex Wolf";
-					now tail of Player is tail entry;
-					now Face of Player is face entry;
-					now Skin of Player is skin entry;
-					now Body of Player is body entry;
-					now Cock of Player is cock entry;
-					attributeinfect "Latex Wolf";
-					now Cock Length of Player is Cock Length of Player * 10;
-					now Ball Size of Player is Ball Size of Player * 10;
-					now Cunt Depth of Player is Cunt Depth of Player * 10;
-					now Cunt Tightness of Player is Cunt Tightness of Player * 10;
-					now Breast Size of Player is Breast Size of Player * 10;
-					if Breast Size of Player > 26, now Breast Size of Player is 26;
+			Latex Wolf Succumbed Intro;
+			say "     You gurgle wetly as you feel yourself starting the melt. You struggle to escape, but another truck turns its hose on you and you melt away into another messy stain of latex goo in the wake of the deadly trucks.";
+			the Player is dead;
+	else:
+		Latex Wolf Succumbed Intro;
+		say "     You gurgle wetly as you feel yourself starting to melt, turning into a fluid goo. You struggle over to a nearby drain and dive into it, flowing through the grate. You can faintly hear some commotion above concerning your escape, but can hardly understand it. You do manage to congeal enough to pull yourself onto a ledge and down a side passage before a large rush of the strange solvent is sprayed down after you. You are quite weakened for a time, but do learn to pull yourself partially back together, now a liquid latex wolf.";
+		say "     Now immune to the call of the siren, you follow the fire trucks['] path back to their base, consuming the melted wolves and foxes left in their wake, growing larger and larger. By the time you get to their depot, you are twice the size of their fire trucks and attack them. You flow across their lines, easily overpowering them while they're busy trying to refill the trucks. Immune to their weapons, you encircle the soldiers and amuse yourself with them, eating some and stuffing others into any orifice you care to create. Finally, with your overfull balls churning with liquid latex cum, you spray your semen over those still remaining. As they start to change into latex wolves, you chuckle maliciously and turn the hose on them, subjecting them to the same deadly fate as they tried to impose on you. As they howl and squirm, unable to get away, you slurp down all the tasty goo with a vicious grin.";
+		say "     You spend the next day collecting more playtoys as well as another latex wolf. You cum over the soldiers and then melt them, letting the latex wolf enjoy the tasty treat and grow into another giant, fluid wolf like yourself. You and your enormous mate track down any of your previous allies in the city you can still find and enjoy playing with them before consuming them. Unstoppable, you both run rampant across the city from time to time, transforming and eating the other, lesser infected when not squirming together in fluidic sex in a large basin.";
+		setmonster "Latex Wolf" silently;
+		turn the Player into a "Latex Wolf" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
+		now Cock Length of Player is Cock Length of Player * 10;
+		now Ball Size of Player is Ball Size of Player * 10;
+		now Cunt Depth of Player is Cunt Depth of Player * 10;
+		now Cunt Tightness of Player is Cunt Tightness of Player * 10;
+		now Breast Size of Player is Breast Size of Player * 10;
+		if Breast Size of Player > 26, now Breast Size of Player is 26;
+		the Player is gone;
+
+This is the Latex Wolf back to Nature rule:
+	if the ending flag "LW back to Nature" is set:
+		trigger ending "Latex Wolf back to Nature"; [Here it states, that the ending has been played.]
+		Latex Wolf Succumbed Intro;
+		say "     You turn your head back and watch as the latex melts off of your body leaving fur underneath. You fall down and whimper as you realize that you are no longer a latex wolf, but instead trapped as a real one even as you feel what remains of your mind fading. The soldiers exclaim in surprise at your incomplete destruction and startling transformation, but you dash off into the city before they can prevent your escape. Under the cover of night, you slink off into the wilderness, mind that of a semi-intelligent wolf.";
+
+This is the Latex Wolf Infection rule:
+	if ending "Latex Wolf back to Nature" is triggered:
+		make no decision;
+	if humanity of Player < 10 or the Player has no body of "Latex Wolf":
+		make no decision; [Succumb ending handled above]
+	trigger ending "Latex Wolf Infection"; [Here it states, that the ending has been played.]
+	say "     As the rescue rolls in, you can hear an ultrasonic siren calling to you. You head out to investigate and can see a series of fire trucks passing through the city with soldiers around them. They are spraying down any latex wolves and foxes that are drawn in by the sound. You signal the soldiers as you step out. They turn to spray you, but hold off as you are still sane enough to speak. Determining that you've not succumb, they have you wait back in the bunker, calling for an extraction team immediately.";
+	say "     You are brought back to the base and subjected to some frantic testing. Confirming that you've not fully succumbed, they give you a treatment to protect you from continued, uncontrolled change, saving you from succumbing entirely to your infection. Still trapped in a quadruped body, you have difficulty establishing a normal life. Fortunately, your body hungers less for actual food and is often content with plastic, rubber and latex products for sustenance. You eventually get a job doing quality control for a large toy factory, having a keen eye (and nose) for defective products. And since they partially pay you with any tasty rejects that can't be recycled, you are quite happy with the work.";
+	if intelligence of Player > 15 and perception of Player > 15:
+		say "     Your intelligence and keen senses for synthetics allows you to catch the occasional quality issue before the molten plastic is even poured. A supervisor notices you doing this and recommends you move to working at that stage all the time. Your affinity for the material prompts you to start proposing small, cost-effective improvements that are met with increasing support. As costs go down and quality rises, you are promoted to devote part of your time to further innovation. At your own suggestion, you are given a desk with a paw-accessible computer next to the vats so you can taste test each one without breaking from your research.";
+		if humanity of Player < 25:
+			say "     As if driven, you throw yourself into your work more and more. You study the science of polymers, reading books and journals. Research made by studying the latex creatures like yourself which have arisen from the infection has been very fruitful and leads you to more success. Over the years, your company has patented many of your formulas and earned loads of money from them, but you don't stop. You publish papers on your own and attend scientific symposiums, but you happily continue working for the toy manufacturer.";
+			say "     One day, you get your team working on a special batch, filling one of the large vats. The complicated mixture is prepared, mixed and melted. As you step up to give it your usual taste test, you fall into it. With a wet moan, you melt into the latex compound while people start yelling and run up to help you. One brave assistant, unconcerned for [if Player is male]herself[else]himself[end if], leans over the mess to grab your hand.";
+			say "     But instead of just grabbing your hand, you end up flowing over [if Player is male]hers[else]his[end if] and across [if Player is male]her body. She[else]his body. He[end if] screams in surprise as you envelop [if Player is male]her[else]him[end if] and start to rise out of the vat as a huge blob of latex. The rest of the people gathered there flee as you start to reform into a huge latex wolf, just as you had hoped would happen. You release your transforming assistant and coat them in your [if Player is male]cum[else]pussy juices[end if] and more of the new formula, making them into a large latex wolf like yourself to be your mate.";
+			say "     Together, you both feast upon the contents of the factory, becoming huge, unstoppable, lustful, latex giants. You have fun attacking the nearby factories, using the little humans as food or playtoys in every perverted way you desire. You transform some into small latex wolves to help keep your human toys penned into your city, but most are absorbed or consumed after your fun is done. All your special friends and lovers get extra-special treatment before being made into large wolves to move on to other cities of their own.";
+			setmonster "Latex Wolf" silently;
+			turn the Player into a "Latex Wolf" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
+			now Cock Length of Player is Cock Length of Player * 10;
+			now Ball Size of Player is Ball Size of Player * 10;
+			now Cunt Depth of Player is Cunt Depth of Player * 10;
+			now Cunt Tightness of Player is Cunt Tightness of Player * 10;
+			now Breast Size of Player is Breast Size of Player * 10;
+			if Breast Size of Player > 26, now Breast Size of Player is 26;
+
 
 Latex Wolf ends here.

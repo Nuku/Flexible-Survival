@@ -51,11 +51,8 @@ Instead of resolving a Small Cave:
 						say "     It doesn't matter now. You just travel down her digestive system until you finally fall into her stomach. The place is deserted, as you would expect. There are no signs of any other meal, so it looks like you have the place all to yourself. Her stomach grumbles and presses against you. Looks like this is the end. There is now only one way out, and you won't experience it alive...";
 						WaitLineBreak;
 						now battleground is "void";
-						now TailName of Player is "dead";
-						now FaceName of Player is "dead";
-						now SkinName of Player is "dead";
-						now BodyName of Player is "dead";
-						now CockName of Player is "dead";
+						the Player was ended by "Shrinking Shrooms eaten alive";
+						trigger ending "Player has died";
 						end the story saying "You were eaten alive!";
 						now Small cave is resolved;
 				else:
@@ -76,11 +73,8 @@ Instead of resolving a Small Cave:
 						say "     You keep traveling down to her balls, your curious mind pushing you to know what is going to happen. Her flesh tightens around you with the pleasure coming from her prostate, and even some semen stain your body, but it's not enough to push you out. You keep traveling inwards until you are in her balls, swimming in her cum. The taste of cum is everything you can discern right now. You push against the flesh, but it doesn't look like it will do anything anymore. Right now, the only thing you can do is wait for the end as you're turned into cum inside some feline's ball...";
 						WaitLineBreak;
 						now battleground is "void";
-						now TailName of Player is "dead";
-						now FaceName of Player is "dead";
-						now SkinName of Player is "dead";
-						now BodyName of Player is "dead";
-						now CockName of Player is "dead";
+						the Player was ended by "Shrinking Shrooms eaten alive";
+						trigger ending "Player has died";
 						end the story saying "You were eaten alive!";
 						now Small cave is resolved;
 		else:

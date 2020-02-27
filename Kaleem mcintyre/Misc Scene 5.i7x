@@ -86,6 +86,7 @@ Instead of resolving a The Dorms Part Three:
 	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
 		LineBreak;
+		project the Figure of HuskyAlpha_hard_icon;
 		say "     Deciding that being a bit of a letch won't be the worst thing you've ever done, you tentatively step inside of the bathing/bathroom room to see what's going on.";
 		let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
@@ -153,8 +154,8 @@ Instead of resolving a Training Room:
 			say "     When you finally get done, on your fiftieth set of twenty-five reps, you find that your arms are sore, but in a pleasant sort of way as you get up from your seat. When you do however, you nearly bump face first into someone standing behind you. Blinking owlishly and then turning your head up you find that several of the assembled students are cheering at you in praise of your efforts. Blushing and then smiling nervously you nod to thank them and then proceed to leave out of the room. Sadly you don't manage to do so without several slaps across the ass and a few offers to [']meet up later['] being tossed you way. The wolverine guard growls out loud when he sees that things are about to get out of control and immediately everyone scatters to go back to what they doing. The big male glares at you as you pass and you suddenly get the feeling that coming back might not be a good option. It's fine though as suddenly you feel very hungry and thirsty for some reason. Maybe it'd be a good time to get something to eat now?";
 			StatChange "Strength" by 1;
 			now Resolution of Training Room is 2; [Stacks / Str Training]
-		PlayerEat 15;
-		PlayerDrink 10;
+		PlayerHunger 15;
+		PlayerThirst 10;
 		LibidoBoost 12;
 	else:
 		LineBreak;

@@ -617,9 +617,21 @@ to say sexwithphilip:
 
 Section 6 - Ending the Piggy
 
-When play ends:
-	if BodyName of Player is not "Messy Pig" and BodyName of Player is not "Piggy":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Pig Vore"	"Voreloss"	""	Pig Vore rule	10	false
+"Philip's Epilogue"	"NPC"	""	Philip's Epilogue rule	900	false
+"Pig Infection"	"Infection"	""	Pig Infection rule	1000	false
+
+This is the Pig Vore rule:
+	if ending "Pig Vore" is triggered:
+		say "     The piggy rumbles happily, your last bit of resistance having fade away some time ago, as you add to her ample amounts of fat. Thanks to your contribution, her stomach bulges out even more, as well as her rear, allowing her to subdue her prey more easily. Despite giving her a bountiful meal, it doesn't take long for the female swine to get hungry again. Trundling off with her increased girth, the gluttonous pig goes off to sate her hunger and her lust.";
+		the Player is vored;
+
+This is the Philip's Epilogue rule:
+	if Player has no non-shifting body of "Messy Pig" and Player has no non-shifting body of "Piggy":
 		if Philip is in the Large Shed:
+			trigger ending "Philip's Epilogue";
 			if humanity of Player < 10:
 				say "     Despite your loss of humanity, Philip vows to care for you. But one day, he gets hungry and wanders off. Leaving you free to rape any unfortunate human that crosses your path.";
 			else if pigfucked > 0:
@@ -641,11 +653,12 @@ When play ends:
 					say "     Philip remains a loyal... if somewhat gluttonous, friend and lover for the rest of your days.";
 			else:
 				say "     Philip remains a loyal... if somewhat gluttonous, friend for the rest of your days.";
-	else if BodyName of Player is "Messy Pig" or BodyName of Player is "Piggy":
+
+This is the Pig Infection rule:
+	if Player has a body of "Messy Pig" or Player has a body of "Piggy":
+		trigger ending "Pig Infection";
 		if humanity of Player < 10:
-			if voreloss is true:
-				say "     The piggy rumbles happily, your last bit of resistance having fade away some time ago, as you add to her ample amounts of fat. Thanks to your contribution, her stomach bulges out even more, as well as her rear, allowing her to subdue her prey more easily. Despite giving her a bountiful meal, it doesn't take long for the female swine to get hungry again. Trundling off with her increased girth, the gluttonous pig goes off to sate her hunger and her lust.";
-			else if pigfucked > 0:
+			if pigfucked > 0:
 				if Player is female:
 					say "     As time wears on, you can't hold back against your growing urges. Your identity falls apart, leaving only your base needs for food and sex. Heading back to the shed, you join Philip in a long and messy romp on the dirty floor, letting the sweat and the juices of your combined fluids add to the muck you both roll around in. The boar gets dirtier, smellier and all the more attractive to you. And more lustful as he joins you in succumbing to the infection. Together, happily filled with his seed, you head back to the [if restaurantpig is 1]posh restaurant[else]sewers below the mall[end if] to seek out the lovely sow there. Philip charges over and mounts you both in turn, rutting you over and over again in a marathon of sex. Together, the three of you set up a messy sty filled with the sounds of sows, sex and piglets. He adds several other sows to his sty as well, filling them with piglets as he ruts them in the muck.";
 				else if pigfucked > 2:

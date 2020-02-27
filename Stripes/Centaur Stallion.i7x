@@ -11,10 +11,15 @@ Section 1 - Creature Responses
 
 to say centaurstalliondesc:
 	setmongender 3; [creature is male]
-	say "     A centaur approaches you, galloping across the plains and unslinging his bow. His body is covered in tan, human flesh from the waist up. From the waist down, everything is covered in the short, brown hairs of a horse. His head is mostly that of a human male at first glance, but with a broad flaring nose and pointed ears. His upper body is human and strongly built, with hard muscles and broad shoulders on that tanned, male body. His arms are human in appearance and quite muscular. Being a centaur, his legs are replaced in their entirety from the waist down by the body of a horse. His muscled, equine body has slender legs leading to a set of four shiny black hooves. A long flowing tail trails behind. Below that equine body is a massive sheath, bloated and full, as are the watermelon-sized balls behind it.";
+	project the Figure of CentaurStallion_soft_icon;
+	if inasituation is true:
+		say ""; [taken care of at the event source]
+	else:
+		say "     A centaur approaches you, galloping across the plains and unslinging his bow. His body is covered in tan, human flesh from the waist up. From the waist down, everything is covered in the short, brown hairs of a horse. His head is mostly that of a human male at first glance, but with a broad flaring nose and pointed ears. His upper body is human and strongly built, with hard muscles and broad shoulders on that tanned, male body. His arms are human in appearance and quite muscular. Being a centaur, his legs are replaced in their entirety from the waist down by the body of a horse. His muscled, equine body has slender legs leading to a set of four shiny black hooves. A long flowing tail trails behind. Below that equine body is a massive sheath, bloated and full, as are the watermelon-sized balls behind it.";
 
 to say losetocentaurstallion:
 	if inasituation is false:
+		project the Figure of CentaurStallion_hard_icon;
 		if wslevel is 3 and ( ( Cunt Count of Player is 0 and a random chance of 1 in 5 succeeds ) or a random chance of 1 in 4 succeeds ):
 			say "     You are bowled over by the powerful centaur, landing in a heap in the dirt. He chuckles darkly at you as he straddles you, slapping his hefty cock across your [bodytype of Player] body a few times. He then gives a soft, exaggerated sigh as he starts to piss on you, his equine urine covering you with its impressive flow. You end up with a mouthful of it as the stream splashes across your face before finally coming to a halt with a few last squirts.";
 			say "     Humiliated at being so used, his abuse of you does not end as his wet horsecock slaps against you a few more times. 'Start licking, you messy mare,' he orders. When you don't comply immediately, he stomps his hooves around you threateningly. Given no other option, you take his equine rod in your hands and guide it to your mouth. You lick and suck at it while your hands play along it, stroking along its impressive length. Still tasting his piss on it as the last drops of it leak out, that is soon replaced by drops of precum instead. You keep it up, forcing yourself to take more and more of his two feet of stallion meat into your mouth and throat. When he cums, he ends up pumping the bulk of his heavy load right into your belly, leaving you feeling full from his semen.";
@@ -51,6 +56,7 @@ to say losetocentaurstallion:
 
 to say beatthecentaurstallion:
 	if inasituation is false:
+		project the Figure of CentaurStallion_hard_icon;
 		if Libido of Player > 24:
 			say "     Your eyes are drawn back to the centaur's huge cock and throbbing ballsack. The large, flared glans is poking from his sheath and you can see his black cock is quite large to go with it. A lustful yearning makes you want to lick and suck that throbbing meat and drain those bloated balls for all they'll give.";
 			say "     [bold type]Shall you give in to your urges?[roman type][line break]";
@@ -89,6 +95,7 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Centaur"; [name of the overall species of the infection, used for children, ...]
+	add "Centaur Stallion" to infections of EquineList;
 	add "Centaur Stallion" to infections of HybridList;
 	add "Centaur Stallion" to infections of FurryList;
 	add "Centaur Stallion" to infections of MythologicalList;
@@ -322,8 +329,13 @@ the scent of centaur hair is "The hairs smell of women and horses, and the dry p
 
 Section 5 - Endings
 
-when play ends:
-	if BodyName of Player is "Centaur Stallion" or BodyName of Player is "Centaur Mare":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Centaur Stallion Infection"	"Infection"	""	Centaur Stallion Infection rule	1000	false
+
+This is the Centaur Stallion Infection rule:
+	if Player has a body of "Centaur Stallion" or Player has a body of "Centaur Mare":
+		trigger ending "Centaur Stallion Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     As your infection spreads within you, you find yourself drawn back to the open plains at the edge of the city. There, you seek out the other centaurs and join their herd";
 			if Player is herm:

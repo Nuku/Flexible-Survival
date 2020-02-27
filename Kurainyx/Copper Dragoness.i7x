@@ -155,6 +155,7 @@ When Play begins:
 	add "Copper Dragoness" to infections of InternalCockList;
 	add "Copper Dragoness" to infections of BipedalList;
 	add "Copper Dragoness" to infections of TailList;
+	add "Copper Dragoness" to infections of OviImpregnatorList;
 	add "Copper Dragoness" to infections of TailweaponList;
 	now Name entry is "Copper Dragoness"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]

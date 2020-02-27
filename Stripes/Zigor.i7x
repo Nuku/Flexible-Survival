@@ -2,6 +2,43 @@ Version 2 of Zigor by Stripes begins here.
 [Version 2.3.1 - Finale repeat variation]
 "Adds a Leather Wolf NPC named Zigor to the Flexible Survival game."
 
+[      HP of Zigor      ]
+[ 0 = not been to store ]
+[ 1 = seen store        ]
+[ 2 = talked to Zigor   ]
+[ 3 = session 1         ]
+[ 4 = session 2         ]
+[ 4 = session 3+        ]
+[ 12 = had orgy session - leather gear next ]
+[ 13 = game over as leather pet ]
+
+[      XP of Zigor      ]
+[ 0 = no anal training  ]
+[ 1 = anal training 1   ]
+[ 2 = anal training 2   ]
+[ 3 = training done     ]
+[ 4 = Twisted Capacity  ]
+
+
+[options:
+doggy style locking spreader
+sex swing
+spreaders
+chains/bracelets/anklets
+rack
+bit gag
+...
+]
+
+
+[ carino - sweetheart
+mascota - pet
+cachorro - pup/cub
+bobo (boba) - fool ]
+[
+length of delay check
+]
+
 Section 0 - Event	[Transposed from Red Events]
 
 Table of GameEventIDs (continued)
@@ -163,8 +200,7 @@ to say zigor_S1_analtraining:
 		increase XP of Zigor by 1;
 		if XP of Zigor is 3:
 			say "     'It pleases me to see you coming along so well, cachorro. That should help with your ordeals in the city as well as let us move on to some more intense pleasures,' he says with a toothy smile in that sensual accent of his. He gives your ass a firm squeeze with his claws digging in, causing your ass to clench and squeeze down around that extremely large buttplug it is holding with ease. As he leaves you there to enjoy the sensation of fullness and being delightfully stretched inside, you eye his collection with a hunger for the various huge toys.";
-			say "     [bracket]You have gained the [bold type]Twisted Capacity[roman type] feat.[close bracket]";
-			add "Twisted Capacity" to feats of Player;
+			FeatGain "Twisted Capacity";
 			increase score by 20;
 		else:
 			say "     After several lashings across the ass with the switch, he relents. 'You did well enough, I suppose,' the wolf says in his sensual, Iberian accent. 'Perhaps we'll have you try something [if XP of Zigor is 1]a little bigger[else]with real girth to it[end if] next time.' Feeling the sore ache from your ass despite the nanite infection, you are filled with both trepidation and anticipation for more. He leaves you tied up and stuffed for quite some time, your ass gradually becoming used to the added extension. During this time, your eyes drawn to his collection and those even larger toys awaiting you.";
@@ -307,7 +343,7 @@ to say zigor_S2_04_MM:		[ stage 4 - offer of finale - MM ]
 		say "     When his knot finally goes down and he pulls out, hot lupine seed drains from your abused hole and pools beneath you. You're left suspended like that, your master leaving you tied up in the dark basement while he returns to his atelier. He eventually returns much later with the other dominant wolves to show them his newest creation and sex pet, each of them quite enjoying the opportunity to examine the artisan's newest work. Together they put you through your paces, fucking you multiple times while praising Zigor's craftsmanship even while punishing you for every minor flaw or imperfect attempt to satisfy them. You prove to be quite responsive to this treatment and are a great hit with the wolves, if the strength and volume of their orgasms are to be any true judge[if zigseat is 1]. They seem quite excited at having a tauric leather wolf to join their pack's sex slaves[end if]. You are left aching and satisfied by the end of it, additionally pleased that you are deemed ready to be brought upstairs and put to work with the others in the leatherwork shop.";
 		say "     You are his sex slave and his property now - and nothing could please you more than that.";
 		now humanity of Player is 0;
-		now BodyName of Player is "Leather Wolf";
+		now BodyName of Player is "Leather Wolf"; [TODO: Add a Table of Random Critters entry for "Leather Wolf" (@Stadler#3007)]
 		now FaceName of Player is "Leather Wolf";
 		now SkinName of Player is "Leather Wolf";
 		now TailName of Player is "Leather Wolf";
@@ -326,6 +362,7 @@ to say zigor_S2_04_MM:		[ stage 4 - offer of finale - MM ]
 		now bodytype of Player is "lupine";
 		now SleepRhythm of Player is 0;
 		wait for any key;
+		trigger ending "Zigor's Leather Wolf Plaything";
 		end the story saying "You have been turned into Zigor's latest leather wolf plaything.";
 		now battleground is "void";
 		wait for any key;
@@ -344,49 +381,18 @@ to say randomwolfgimp:
 	say "[one of]Miguel[or]Emilio[or]Fernando[or]Javier[in random order]";
 
 
-when play ends:
-	if BodyName of Player is "Leather Wolf":
+Section 5 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Zigor's Leather Wolf Plaything"	"BadEnd"	""	Zigor's Leather Wolf Plaything rule	20	false
+
+This is the Zigor's Leather Wolf Plaything rule:
+	if ending "Zigor's Leather Wolf Plaything" is triggered:
 		say "     You join Zigor's personal collection of sex slaves as his new favorite. You and the others labor silently in his atelier, making new kinky leather creations for his customers and the other dominant wolves. Being Zigor's favorite is a mixed blessing, with him giving more of his particular brand of rough love to you than the others[if zigseat is 1]. You are also particularly popular with the other doms, your master receiving frequent requests from them to play with his special taur plaything[end if]. And should your master's other subs be jealous of your status, nothing is ever said by the other muzzled subs.";
 		say "     At first, you're only vaguely aware of the military incursion into the city as an increase in the workload imposed on all of you. Your master becomes quite focused on his workshop and quite strict about every precious scrap from the dwindling supplies being used. The [']grand re-opening['] coincides with the army entering the area and your suave master is able to coax some soldiers into sampling his wares. As well, the other doms are [']aggressively forward['] in their insistence that the soldiers they run into be brought to the shop as well. From there, it is easy for one of the lupine doms to entice them into becoming another sub for them. With this surge in numbers, the leather wolves spread out, many of them forming franchise outlets for Zigor's particular brand of lupine apparel or setting up supply chains to ensure a fresh supply of tanned hide for your master's atelier.";
 		if zigseat is 1:
 			say "     As these new locations open, your true purpose is revealed. Your strong, tauric body is lashed to a wooden cart and you are made to pull supplies and complete product runs to and from the main store. It is a tough task, but one your well-disciplined mind and body accept as your proper place. It also comes with the added perks of the lashings of the driver and their lustful thanks during and after the long hauls. At those rare times that the other creatures of the city threaten the wolves['] territory and the leatherworking den, you are ridden out by your master as his epic steed as he leads the pack into battle like a noble Spanish general.";
-
-
-[      HP of Zigor      ]
-[ 0 = not been to store ]
-[ 1 = seen store        ]
-[ 2 = talked to Zigor   ]
-[ 3 = session 1         ]
-[ 4 = session 2         ]
-[ 4 = session 3+        ]
-[ 12 = had orgy session - leather gear next ]
-[ 13 = game over as leather pet ]
-
-[      XP of Zigor      ]
-[ 0 = no anal training  ]
-[ 1 = anal training 1   ]
-[ 2 = anal training 2   ]
-[ 3 = training done     ]
-[ 4 = Twisted Capacity  ]
-
-
-[options:
-doggy style locking spreader
-sex swing
-spreaders
-chains/bracelets/anklets
-rack
-bit gag
-...
-]
-
-
-[ carino - sweetheart
-mascota - pet
-cachorro - pup/cub
-bobo (boba) - fool ]
-[
-length of delay check
-]
+		the Player is lost;
 
 Zigor ends here.

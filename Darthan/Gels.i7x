@@ -238,6 +238,7 @@ When Play begins:
 	add "Pink Gel" to infections of SlimeList;
 	add "Pink Gel" to infections of FemaleList;
 	add "Pink Gel" to infections of TentacleCockList;
+	add "Pink Gel" to infections of NoLegList;
 	add "Pink Gel" to infections of SlidingList;
 	now Name entry is "Pink Gel"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
@@ -406,6 +407,7 @@ When Play begins:
 	add "Blue Gel" to infections of SlimeList;
 	add "Blue Gel" to infections of MaleList;
 	add "Blue Gel" to infections of TentacleCockList;
+	add "Blue Gel" to infections of NoLegList;
 	add "Blue Gel" to infections of SlidingList;
 	now Name entry is "Blue Gel"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
@@ -574,6 +576,7 @@ When Play begins:
 	add "Purple Gel" to infections of SlimeList;
 	add "Purple Gel" to infections of HermList;
 	add "Purple Gel" to infections of TentacleCockList;
+	add "Purple Gel" to infections of NoLegList;
 	add "Purple Gel" to infections of SlidingList;
 	now Name entry is "Purple Gel"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
@@ -733,8 +736,16 @@ When Play begins:
 
 Section 3 - Endings
 
-[when play ends:
-	if BodyName of Player is "Pink Gel":
+[
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Pink Gel Infection"	"Infection"	""	Pink Gel Infection rule	1000	false
+"Blue Gel Infection"	"Infection"	""	Blue Gel Infection rule	1000	false
+"Purple Gel Infection"	"Infection"	""	Purple Gel Infection rule	1000	false
+
+This is the Pink Gel Infection rule:
+	if Player has a body of "Pink Gel":
+		trigger ending "Pink Gel Infection";
 		if humanity of Player < 10:
 			say "     ";
 		else:
@@ -748,8 +759,9 @@ Section 3 - Endings
 			else: [Neuter Version]
 				say "     ";
 
-when play ends:
-	if BodyName of Player is "Blue Gel":
+This is the Blue Gel Infection rule:
+	if Player has a body of "Blue Gel":
+		trigger ending "Blue Gel Infection";
 		if humanity of Player < 10:
 			say "     ";
 		else:
@@ -763,8 +775,9 @@ when play ends:
 			else: [Neuter Version]
 				say "     ";
 
-when play ends:
-	if BodyName of Player is "Purple Gel":
+This is the Purple Gel Infection rule:
+	if Player has a body of "Purple Gel":
+		trigger ending "Purple Gel Infection";
 		if humanity of Player < 10:
 			say "     ";
 		else:

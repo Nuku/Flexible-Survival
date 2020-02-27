@@ -190,8 +190,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Prairie Dog":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Prairie Dog Infection"	"Infection"	""	Prairie Dog Infection rule	1000	false
+
+This is the Prairie Dog Infection rule:
+	if Player has a body of "Prairie Dog":
+		trigger ending "Prairie Dog Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     As your new instincts take over, your body shrinks down further, becoming smaller and end up about three feet tall, though your sexual organs remain unchanged in size. You head back to the dry plains and wander them. As you go, you can see the dry grasses continuing to slowly spread over the ruined buildings, making it much more beautiful, you feel. Coming to what appears to be a grassy spot like all others, you can read the subtle signs now and start to dig. You burrow through the soft earth with ease, enjoying the feel of it against your paws as you tunnel down. You only have to go a few feet to find the underground tunnels of the other prairie dogs and scurry through along them to find the warren.";
 			say "     Joining the others, you have a wonderful romp to welcome you among them before its back to work. You and the others continue your tunnels and the demolition of the last few buildings. As some soldiers are sent to investigate the plains, they are quickly surrounded by burrowing rodents emerging all around them. They are pounced and mated by the coterie until they are prairie dogs themselves and pulled down into the tunnels.";

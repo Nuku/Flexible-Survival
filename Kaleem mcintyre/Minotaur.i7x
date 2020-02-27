@@ -8,10 +8,12 @@ Version 2 of Minotaur by Kaleem mcintyre begins here.
 "Adds Minotaur to Flexible Survival."
 
 to say minodesc:
+	project Figure of Minotaur_naked_icon;
 	setmongender 3; [creature is male]
 	say "     Looking over the burly beast in front of you, you look over the eight foot, muscular frame of what can only be a Minotaur. With an unkempt brown furred hide, a head like that of a bull, and two huge ivory white horns jutting out above its brow, the bullman snorts loudly in your direction in an obvious sign of challenge. With arms wide enough to circle you in an unforgiving bear hug you see that the Minotaur's upper body sits atop two Adonis-like legs which are oddly jointed and covered in fur. Body packed with a dense padding of heavy muscles on a human-like frame, the bull kicks a hoof up back behind it as it lowers its head down in readiness to charge. A private peek would reveal that the bullman has a titanic, throbbing, precum-leaking bullcock and two fat, bowling ball-sized balls swaying underneath the skimpy loincloth the other has futilely wrapped around its thick waist.";
 
 to say losetomino:
+	project Figure of Minotaur_hard_icon;
 	if Player is female:
 		if a random chance of 2 in 5 succeeds:
 			say "     Having defeated you the Minotaur wastes no time in stalking over to where you lay prone before his sweat soaked and battle charged form. Reaching down the bullman rips your clothes free from your [BodyName of Player] form and then lowers itself down to slid its pulsating manhood along your moist vagina, quickly coating its hard length in a mixture of your arousal and his pre cum. With little fanfare the bullman spears you with his massive girth in a single rough thrust of his meaty hips. Slowly, but forcefully the Minotaur slides his throbbing length into your nethers, the stimulation of the many throbbing veins along the bullman's cock sends you spiraling over the edge of painful rapture as the Minotaur treats you to a forceful style of fucking that's made everything beforehand seem like a joke. The heavy bulge of his cock rippling through your midsection makes a moan shoot free from your lips as your pulsing cunt wraps around the bullman's throbbing cock like a vice. Humping and thrusting like the stud bull he is while mooing and grunting with concentrated effort to fill you full of his calfs, the Minotaur uses you like a cheap sex toy as he grinds and humps his massive cock into your aching twat hard enough that you end up seeing stars ever time his groin presses flush against your own.";
@@ -39,6 +41,7 @@ to say losetomino:
 
 
 to say beatthemino:
+	project Figure of Minotaur_hard_icon;
 	say "Having defeated the monstrous Minotaur you look at the other with lustful eyes as you think about all the fun you could have will the bullman.";
 	say "     [bold type]Maybe it would be good time to let out some frustration?[roman type][line break]";
 	LineBreak;
@@ -249,10 +252,15 @@ When Play begins:
 ]
 
 
+Section 3 - Endings
 
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Minotaur Infection"	"Infection"	"Mixed"	Minotaur Infection rule	1000	false
 
-when play ends:
-	if BodyName of Player is "Minotaur":
+This is the Minotaur Infection rule:
+	if Player has a body of "Minotaur":
+		trigger ending "Minotaur Infection";
 		if humanity of Player < 10:
 			say "     As your mind slowly begins to fill with much simpler thoughts of fucking and fighting and protecting your territory, which becomes a certain spot in the plains after you kick out the previous residents, you find yourself caring very little about anything else other than satisfying your basic needs. Grunting one day when you catch the scent of a few horses to close to your patch you quickly charge over to where the scent of the centaurs is emanating most heavily from only to find a small herd congregating together as if planning something. Not sure what's going on, and not really being interested any way, you bellow out a loud moo and then charge over to the assembled herd. Being startled by your outcry has both the stallions and mares scrambling around in confusion which works to your favor as you quickly crush the males beneath your hooves and force the females down to service you one by one. Having beaten the herd and clearly shown your power over them the stallions and mares are quick to pick themselves up to leave you be. However, days to weeks later find many of the females coming back to submit themselves underneath your powerful body once again.";
 			WaitLineBreak;
@@ -275,7 +283,7 @@ when play ends:
 				say "     By the time you're through with the small band military personnel you find yourself lording over a small herd of bullmen who come look to you as their leader after your infection robs the others of their humanity. Taking your group out of the city to some unnamed place where there is plenty of space to roam around somewhat freely you think that this place will be a perfect new home for you...that is, right up until a roving band of horsemen and centaurs who look to have had the same idea as you tries to challenge you and your herd for the land. A mini war breaks out between your herd and the horse-like mutants for succession of your new home, but in the end, two days afterwards, you manage to win the conflict with a combination of sheer physical strength and well planned tactics that the former soldiers come up with. Of course, to the winner go the spoils, as someone once said, and you and the rest of your minotaur troupe end up filling the bellies of the horsemen and centaurs alike with your potent cum. Least to say, days later your small band almost triples in size.";
 				WaitLineBreak;
 				say "     Having gained succession over your new home you settle down with those who had followed you from the city and become something of a king to the lands you have taken as your own. Strangely enough that ends up working out just fine for you as you never run out of space to roam across of bodies to lay with as those with you quickly and dutifully submit themselves to you.";
-				stop the action;
+				[stop the action; [A bit late for a bad end IMHO (@Stadler#3007)]]
 			else if Player is female:
 				say "     Having the military screen you for their invasive tests, and then being released subsequently afterwards as not being infectious, despite being an anomaly, you find yourself wandering around the new world without direction. Being a Minotaur with a cunt, something strange in and of itself, you don't know what to do as you feel the masculine urge to dominate and the feminine desire to breed and be bred combat inside of your head and body day in and day out. It's only when you find yourself stumbling over a large farm and scenting the musky odor of several strong bulls that you find some purpose in life once again. The farmer who lives there, a sweet Border Collie with a funny accent, readily agrees to let you stay on her farm, provided that you pull your share of the weight around here.";
 				WaitLineBreak;

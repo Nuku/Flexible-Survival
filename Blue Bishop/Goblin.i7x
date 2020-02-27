@@ -591,6 +591,7 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Goblin"; [name of the overall species of the infection, used for children, ...]
+	add "Goblin" to infections of MagicalList;
 	add "Goblin" to infections of MythologicalList;
 	add "Goblin" to infections of MaleList;
 	add "Goblin" to infections of BipedalList;
@@ -749,9 +750,15 @@ When Play begins:
 ]
 
 
+Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Goblin":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Goblin Infection"	"Infection"	""	Goblin Infection rule	1000	false
+
+This is the Goblin Infection rule:
+	if Player has a body of "Goblin":
+		trigger ending "Goblin Infection";
 		if humanity of Player < 10:
 			say "     As your goblin body's instincts take over, you cackle to yourself and scamper off through the city. You are drawn back to the large junkyard at the edge of town. After some scurrying away from the bigger creatures there, you run into a goblin patrol. They welcome you before leading you through the junkpiles to their hidden warren. There are several warrens built into mounds across the junkyard. Inside, the goblins tinker with trash or scuffle with one another before sating their lusts. Joining the workers, you set to making traps from the trash. When the soldiers enter the city, your people are ready with traps scattered around the junkyard to help deal with those who manage to get past its larger defenders. Those caught in goblin snares are dragged back to the warrens to be raped and converted into more goblins.";
 		else:

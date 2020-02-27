@@ -238,8 +238,13 @@ after going to Computer Lab while ((HP of Fang is 3 or HP of Fang is 4 ) and Das
 
 Section 1.5 - Fox Kit Ending
 
-when play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Dash's Epilogue"	"Companion"	"Pet"	Dash's Epilogue rule	750	false
+
+This is the Dash's Epilogue rule:
 	if little fox is tamed:
+		trigger ending "Dash's Epilogue"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     When you give in to your feral instincts, the little fox you rescued stays with you, traveling with you and helping as best he can, trying to help you hunt and teasing at you to play with him. Finally though he grows large enough that one day he leaves on his own, fully able to forage for himself now, and leaving you to your fate. You miss the little creature occasionally... when you can remember him anyways.";
 		else:
@@ -447,7 +452,7 @@ Instead of resolving Lost skunk kit:
 						sblinfect;
 					else:
 						infect "Skunk";
-					say "[bold type](The skunk kit is now tamed! You can make it your active pet by typing pet skunk kit. You can see all the pets you have tamed with the pet command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use pet dismiss, or just dismiss)[roman type]";
+					say "[bold type](The skunk kit is now tamed! You can make it your active pet by typing pet skunk kit. You can see all the pets you have tamed with the pet command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use pet dismiss, or just dismiss)[roman type][line break]";
 					now Resolution of Lost skunk kit is 1; [adopted the skunk]
 					now Lost skunk kit is resolved;
 				else:
@@ -476,7 +481,7 @@ Instead of resolving Lost skunk kit:
 					sblinfect;
 				else:
 					infect "Skunk";
-				say "[bold type](The skunk kit is now tamed! You can make it your active pet by typing pet skunk kit. You can see all the pets you have tamed with the pet command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use pet dismiss, or just dismiss)[roman type]";
+				say "[bold type](The skunk kit is now tamed! You can make it your active pet by typing pet skunk kit. You can see all the pets you have tamed with the pet command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use pet dismiss, or just dismiss)[roman type][line break]";
 				now Lost skunk kit is resolved;
 			else:
 				say "     Deciding that the whole situation is not really your problem, even if it is a fellow skunk creature, you leave the little skunk to its hiding spot, and continue on your way.";
@@ -496,7 +501,7 @@ Instead of resolving Lost skunk kit:
 					sblinfect;
 				else:
 					infect "Skunk";
-				say "[bold type](The skunk kit is now tamed! You can make it your active pet by typing pet skunk kit. You can see all the pets you have tamed with the pet command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use pet dismiss, or just dismiss)[roman type]";
+				say "[bold type](The skunk kit is now tamed! You can make it your active pet by typing pet skunk kit. You can see all the pets you have tamed with the pet command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use pet dismiss, or just dismiss)[roman type][line break]";
 				now Lost skunk kit is resolved;
 			else:
 				say "     Deciding helping the little skunk isn't worth the chance of getting infected by the goo yourself, you leave the area so nature can take its course.";

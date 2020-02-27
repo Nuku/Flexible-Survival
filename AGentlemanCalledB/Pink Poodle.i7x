@@ -414,8 +414,13 @@ to say PoodleHeatSuccumb:
 
 Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "Pink Poodle":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Pink Poodle Infection"	"Infection"	""	Pink Poodle Infection rule	1000	false
+
+This is the Pink Poodle Infection rule:
+	if Player has a body of "Pink Poodle":
+		trigger ending "Pink Poodle Infection";
 		if humanity of Player < 10:
 			say "     As you begin to lose yourself to the pink poodle infection, you find yourself drawn back to the high rise district and all its high class stores - and denizens. Soon you are working the district's streets as another high class call girl, servicing only the highest class of creatures roaming the district.";
 		else:

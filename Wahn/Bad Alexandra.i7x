@@ -60,6 +60,9 @@ Version 1 of Bad Alexandra by Wahn begins here.
 [ 5 = licked her                                    ]
 [ 6 = tits                                          ]
 [ 7 = 69                                            ]
+[ 82 = Farmhand Horsemen oral                       ]
+[ 83 = Farmhand Horsemen cunn                       ]
+[ 84 = Farmhand Horsemen                            ]
 [ 85 = Friesians oral                               ]
 [ 86 = Friesians cunn                               ]
 [ 87 = Friesians                                    ]
@@ -85,6 +88,7 @@ Version 1 of Bad Alexandra by Wahn begins here.
 [ 5 = Brutus                                        ]
 [ 6 = Karel                                         ]
 [ 7 = Isaac                                         ]
+[ 8 = One of the farmhand horsemen                  ]
 
 "Adds Alexandra the doberwoman as an NPC to the Flexible Survival game"
 
@@ -141,6 +145,9 @@ AlexandraFangPups is a number that varies.
 AlexandraKorvinPups is a number that varies.
 AlexandraCarlPups is a number that varies.
 AlexandraBrutusPups is a number that varies.
+AlexandraKarelPups is a number that varies.
+AlexandraIsaacPups is a number that varies.
+AlexandraFarmhandPups is a number that varies.
 
 to say AlexandraPupDaddyName: [to use in text]
 	if AlexandraPupDaddy is 1:
@@ -157,6 +164,8 @@ to say AlexandraPupDaddyName: [to use in text]
 		say "Karel has ";
 	else if AlexandraPupDaddy is 7:
 		say "Isaac has ";
+	else if AlexandraPupDaddy is 8:
+		say "one of the many farmhand horsemen has ";
 
 [See Doberman file for collecting Alexandra.]
 
@@ -208,6 +217,8 @@ to say alexandradesc_bg:
 			say "You're curious if they will show any of their equine heritage or be all doberman. ";
 		else if AlexandraPupDaddy is 7: [Isaac]
 			say "You're curious if they will show any of their equine heritage or be all doberman. ";
+		else if AlexandraPupDaddy is 8: [random farmhand horseman]
+			say "You're curious if they will show any of their equine heritage (and if so, which of the many farmhand horsemen could have knocked her up) or be all doberman. ";
 		[jeans status]
 		if lust of Alexandra < 13: [slightly pregnant]
 			say "She's been needing to leave her jeans unbuttoned lately, to allow her growing belly enough space. ";
@@ -270,8 +281,11 @@ to say alexandradesc_bg:
 	if level of Alexandra is 1:
 		say "She's found herself a black choker to wear in imitation of a dog collar to further show herself to be your fucktoy pet bitch. ";
 	LineBreak;
-	say "     Speaking of her duty, she's stationed herself by the library entrance, acting as your rough and tough guard to the safe haven inside[if HP of Alexandra is 3 or HP of Alexandra is 5], not letting her current state hold her back[end if][if Fang is booked]. She shares this duty with Fang, alternating with the wolf[end if]. Having kept her nightstick, it hangs at the ready for those who would disturb the safety of your hideout.";
-	if HP of Alexandra > 3:
+	if Alexandra is in Grey Abbey Library:
+		say "     Speaking of her duty, she's stationed herself by the library entrance, acting as your rough and tough guard to the safe haven inside[if HP of Alexandra is 3 or HP of Alexandra is 5], not letting her current state hold her back[end if][if Fang is booked]. She shares this duty with Fang, alternating with the wolf[end if]. Having kept her nightstick, it hangs at the ready for those who would disturb the safety of your hideout.";
+	else if Alexandra is in Worker Barracks:
+		say "     Speaking of her duty, she's mostly hanging around in the back of the main barracks room, leaning against a wall as she ogles the many horseman studs living in the building. She seems happy with her current task of serving as a breeding bitch, most of the time even leaving the top button of her pants undone and all too often sliding a hand inside to play with herself a litte. Still, that doesn't mean she isn't a tough bitch either, as she still keeps her nightstick fairly close, ready to be picked up in case the Farm is attacked or something like that.";
+	if HP of Alexandra > 3 and Alexandra is in Grey Abbey Library:
 		say "     Alexandra's [Libido of Alexandra] pups are younger Dobermans, having matured quickly to be roughly in their teens[if Libido of Alexandra > 4]. They are a mix of boys and girls among the litters[end if]. They are a rough and rambunctious lot who hang out in one of the side rooms most of the time. They do go outside on occasion to find some trouble to get into. They do seem fairly self-sufficient though.";
 
 to say alexandratalk_bg:
@@ -279,23 +293,43 @@ to say alexandratalk_bg:
 		say "[badAlexandra_debug]";
 	if graphics is true:
 		project the figure of Alexandra_face_icon;
-	if HP of Alexandra is 1: [first talk]
-		say "     The Doberman female has obtained a leather jacket and some torn jeans for herself and swapped them for her uniform. She looks around the library and pokes her head into the bunker. 'This is a pretty nice setup you've got for yourself here, boss,' she says. 'I can see that following you was definitely the right choice. Soon there ain't going to be any law except what we make for ourselves and it's about time I figured that out. So no more Officer Friedrich. It's just Alexandra the bad dog. Mmm... it feels so good to be a bad dog,' she says with a moan, having stuffed a paw into her jeans. She rubs herself up against you. 'As promised, I'll be your slutty doggy bitch, boss. I'm looking forward to it,' she says with a slow lick across your cheek as she fingers herself all the more.";
-		now HP of Alexandra is 2; [first talk done]
-	else if HP of Alexandra is 2:
-		say "     As you approach, Alexandra gives you a provocative smile and [one of]asks, 'Are you going to use your slutty bitch again soon?'[or]says, 'I've been having beating up the strays who wander by. It's much more fun dealing with them now that I'm willing to play with them afterwards.'[or]says, 'Thanks again for knocking some sense into me, boss. Otherwise I'd probably still be out there, being a stuffy goody-two-shoes instead of getting the best (and only) sex of my life.'[or]gives you a report on recent activity around the library while playing with her pussy.[or]growls, 'I hope something wanders by soon. I'm in the mood to bust some heads.' Her paws wander up and down over her nightstick as she does so.[at random]";
-	else if HP of Alexandra is 3: [pregnant]
-		if lust of Alexandra > 12: [visibly pregnant]
-			say "     As you approach, Alexandra gives you a provocative smile and [one of]says, 'It seems your naughty bitch has gotten herself knocked up, boss.'[or]says, 'Thanks again for knocking some sense into me, boss. Otherwise I'd probably still be out there, being a stuffy goody-two-shoes instead of getting the best (and only) sex of my life.'[or]gives you a report on recent activity around the library while rubbing her swollen breasts, milk leaking from her nipples.[or]moans, 'I like feeling full like this,' running her paws over her enlarged, pregnant belly.[or]says, 'It looks like I'm going to have some pups,' running her paws over her rounded belly with a shiver of excitement at the prospect.[or]says, 'It's a little strange getting so pregnant so fast, but I guess that's what makes me a breeder bitch, isn't it?'[at random]";
-		else: [slightly pregnant]
-			say "     As you approach, Alexandra gives you a provocative smile and [one of]asks, 'Are you going to use your slutty bitch again soon?'[or]says, 'I've been having beating up the strays who wander by. It's much more fun dealing with them now that I'm no longer a stupid do-gooder and play with them afterwards.'[or]comments, 'Thanks again for knocking some sense into me, boss. Otherwise I'd probably still be out there, being a stuffy goody-two-shoes instead of getting the best (and only) sex of my life.'[or]gives you a report on recent activity around the library while rubbing her breasts.[or]growls, 'I hope something wanders by soon. I'm in the mood to bust some heads.' Her paws wander up and down over her nightstick as she does so.[at random]";
-	else if HP of Alexandra is 4: [between pregnancies]
-		say "     As you approach, Alexandra gives you a provocative smile and [one of]asks, 'Are you going to use your slutty bitch again soon?'[or]says, 'I've been having beating up the strays who wander by. It's much more fun dealing with them now that I'm no longer a stupid do-gooder and play with them afterwards.'[or]says, 'It was pretty fun getting knocked up and having some pups.'[or]says, 'It was really exciting getting used like a breeder bitch. I'm looking forward to doing it again and again.'[or]comments, 'Thanks again for knocking some sense into me, boss. Otherwise I'd probably still be out there, being a stuffy goody-two-shoes instead of getting the best (and only) sex of my life.'[or]gives you a report on recent activity around the library while playing with her pussy.[or]boasts, 'My pups are a bunch of rough hounds like their bitch mother.'[or]growls, 'I hope something wanders by soon. I'm in the mood to bust some heads.' Her paws wander up and down over her nightstick as she does so.[or]says, 'My pups can be a bit of a handful, but it's nothing a good knock on the head doesn't fix.'[or]says, 'I hope you'll breed another litter in your bad doggy bitch soon.'[at random]";
-	else if HP of Alexandra is 5:
-		if lust of Alexandra > 12: [visibly pregnant]
-			say "     As you approach, Alexandra gives you a provocative smile and [one of]says, 'It seems your naughty bitch has gotten herself knocked up, boss.'[or]comments, 'Thanks again for knocking some sense into me, boss. Otherwise I'd probably still be out there, being a stuffy goody-two-shoes instead of getting the best (and only) sex of my life.'[or]gives you a report on recent activity around the library while rubbing her swollen breasts, milk leaking from her nipples.[or]moans, 'I like feeling full like this,' running her paws over her enlarged, pregnant belly.[or]says, 'It looks like I'm going to have some more pups,' running her paws over her rounded belly with a shiver of excitement at the prospect.[or]says, 'My pups are a bunch of rough hounds like their bitch mother.'[or]says, 'It was a little strange at first, but I'm really looking forward to giving birth to more pups.'[or]says, 'My pups can be a bit of a handful, but it's nothing a good knock on the head doesn't fix.'[or]says, 'I'm really enjoying being bred like the naughty bitch I am.' Moaning, she rubs her rounded belly as best as she can.[at random]";
-		else: [slightly pregnant]
-			say "     As you approach, Alexandra gives you a provocative smile and [one of]asks, 'Are you going to use your slutty bitch again soon?'[or]says, 'I've been having beating up the strays who wander by. It's much more fun dealing with them now that I'm no longer a stupid do-gooder and play with them afterwards.'[or]says, 'It was pretty fun getting knocked up and having some pups.'[or]says, 'It was really exciting getting used like a breeder bitch. I'm looking forward to doing it again and again.'[or]says, 'Thanks again for knocking some sense into me, boss. Otherwise I'd probably still be out there, being a stuffy goody-two-shoes instead of getting the best (and only) sex of my life.'[or]gives you a report on recent activity around the library while rubbing her breasts.[or]says, 'My pups are a bunch of rough hounds like their bitch mother.'[or]comments, 'My pups can be a bit of a handful, but it's nothing a good knock on the head doesn't fix.'[or]growls, 'I hope something wanders by soon. I'm in the mood to bust some heads.' Her paws wander up and down over her nightstick as she does so.[or]rubs her somewhat rounded belly. 'Mmm... got another litter on the way, boss,' she says with a smile.[at random]";
+	if Alexandra is in Grey Abbey Library:
+		if HP of Alexandra is 1: [first talk]
+			say "     The Doberman female has obtained a leather jacket and some torn jeans for herself and swapped them for her uniform. She looks around the library and pokes her head into the bunker. 'This is a pretty nice setup you've got for yourself here, boss,' she says. 'I can see that following you was definitely the right choice. Soon there ain't going to be any law except what we make for ourselves and it's about time I figured that out. So no more Officer Friedrich. It's just Alexandra the bad dog. Mmm... it feels so good to be a bad dog,' she says with a moan, having stuffed a paw into her jeans. She rubs herself up against you. 'As promised, I'll be your slutty doggy bitch, boss. I'm looking forward to it,' she says with a slow lick across your cheek as she fingers herself all the more.";
+			now HP of Alexandra is 2; [first talk done]
+		else if HP of Alexandra is 2:
+			say "     As you approach, Alexandra gives you a provocative smile and [one of]asks, 'Are you going to use your slutty bitch again soon?'[or]says, 'I've been beating up the strays who wander by. It's much more fun dealing with them now that I'm willing to play with them afterwards.'[or]says, 'Thanks again for knocking some sense into me, boss. Otherwise I'd probably still be out there, being a stuffy goody-two-shoes instead of getting the best (and only) sex of my life.'[or]gives you a report on recent activity around the library while playing with her pussy.[or]growls, 'I hope something wanders by soon. I'm in the mood to bust some heads.' Her paws wander up and down over her nightstick as she does so.[at random]";
+		else if HP of Alexandra is 3: [pregnant]
+			if lust of Alexandra > 12: [visibly pregnant]
+				say "     As you approach, Alexandra gives you a provocative smile and [one of]says, 'It seems your naughty bitch has gotten herself knocked up, boss.'[or]says, 'Thanks again for knocking some sense into me, boss. Otherwise I'd probably still be out there, being a stuffy goody-two-shoes instead of getting the best (and only) sex of my life.'[or]gives you a report on recent activity around the library while rubbing her swollen breasts, milk leaking from her nipples.[or]moans, 'I like feeling full like this,' running her paws over her enlarged, pregnant belly.[or]says, 'It looks like I'm going to have some pups,' running her paws over her rounded belly with a shiver of excitement at the prospect.[or]says, 'It's a little strange getting so pregnant so fast, but I guess that's what makes me a breeder bitch, isn't it?'[at random]";
+			else: [slightly pregnant]
+				say "     As you approach, Alexandra gives you a provocative smile and [one of]asks, 'Are you going to use your slutty bitch again soon?'[or]says, 'I've been beating up the strays who wander by. It's much more fun dealing with them now that I'm no longer a stupid do-gooder and play with them afterwards.'[or]comments, 'Thanks again for knocking some sense into me, boss. Otherwise I'd probably still be out there, being a stuffy goody-two-shoes instead of getting the best (and only) sex of my life.'[or]gives you a report on recent activity around the library while rubbing her breasts.[or]growls, 'I hope something wanders by soon. I'm in the mood to bust some heads.' Her paws wander up and down over her nightstick as she does so.[at random]";
+		else if HP of Alexandra is 4: [between pregnancies]
+			say "     As you approach, Alexandra gives you a provocative smile and [one of]asks, 'Are you going to use your slutty bitch again soon?'[or]says, 'I've been having beating up the strays who wander by. It's much more fun dealing with them now that I'm no longer a stupid do-gooder and play with them afterwards.'[or]says, 'It was pretty fun getting knocked up and having some pups.'[or]says, 'It was really exciting getting used like a breeder bitch. I'm looking forward to doing it again and again.'[or]comments, 'Thanks again for knocking some sense into me, boss. Otherwise I'd probably still be out there, being a stuffy goody-two-shoes instead of getting the best (and only) sex of my life.'[or]gives you a report on recent activity around the library while playing with her pussy.[or]boasts, 'My pups are a bunch of rough hounds like their bitch mother.'[or]growls, 'I hope something wanders by soon. I'm in the mood to bust some heads.' Her paws wander up and down over her nightstick as she does so.[or]says, 'My pups can be a bit of a handful, but it's nothing a good knock on the head doesn't fix.'[or]says, 'I hope you'll breed another litter in your bad doggy bitch soon.'[at random]";
+		else if HP of Alexandra is 5:
+			if lust of Alexandra > 12: [visibly pregnant]
+				say "     As you approach, Alexandra gives you a provocative smile and [one of]says, 'It seems your naughty bitch has gotten herself knocked up, boss.'[or]comments, 'Thanks again for knocking some sense into me, boss. Otherwise I'd probably still be out there, being a stuffy goody-two-shoes instead of getting the best (and only) sex of my life.'[or]gives you a report on recent activity around the library while rubbing her swollen breasts, milk leaking from her nipples.[or]moans, 'I like feeling full like this,' running her paws over her enlarged, pregnant belly.[or]says, 'It looks like I'm going to have some more pups,' running her paws over her rounded belly with a shiver of excitement at the prospect.[or]says, 'My pups are a bunch of rough hounds like their bitch mother.'[or]says, 'It was a little strange at first, but I'm really looking forward to giving birth to more pups.'[or]says, 'My pups can be a bit of a handful, but it's nothing a good knock on the head doesn't fix.'[or]says, 'I'm really enjoying being bred like the naughty bitch I am.' Moaning, she rubs her rounded belly as best as she can.[at random]";
+			else: [slightly pregnant]
+				say "     As you approach, Alexandra gives you a provocative smile and [one of]asks, 'Are you going to use your slutty bitch again soon?'[or]says, 'I've been having beating up the strays who wander by. It's much more fun dealing with them now that I'm no longer a stupid do-gooder and play with them afterwards.'[or]says, 'It was pretty fun getting knocked up and having some pups.'[or]says, 'It was really exciting getting used like a breeder bitch. I'm looking forward to doing it again and again.'[or]says, 'Thanks again for knocking some sense into me, boss. Otherwise I'd probably still be out there, being a stuffy goody-two-shoes instead of getting the best (and only) sex of my life.'[or]gives you a report on recent activity around the library while rubbing her breasts.[or]says, 'My pups are a bunch of rough hounds like their bitch mother.'[or]comments, 'My pups can be a bit of a handful, but it's nothing a good knock on the head doesn't fix.'[or]growls, 'I hope something wanders by soon. I'm in the mood to bust some heads.' Her paws wander up and down over her nightstick as she does so.[or]rubs her somewhat rounded belly. 'Mmm... got another litter on the way, boss,' she says with a smile.[at random]";
+	else if Alexandra is in Worker Barracks:
+		if HP of Alexandra is 1: [first talk]
+			say "     ERROR - For the first talk with Alexandra, she should not be in this room! Please report how she ended up there on the FS Discord.";
+		else if HP of Alexandra is 2:
+			say "     As you approach, Alexandra gives you a provocative smile and [one of]asks, 'Are you going to use your slutty bitch again soon?'[or]says, 'I've been hanging out with all of these horny studs as you hold me to boss. It's a lot of fun, they're good guys and quite virile.'[or]says, 'Thanks again for knocking some sense into me, boss. Otherwise I'd probably still be out there, being a stuffy goody-two-shoes instead of getting the best (and only) sex of my life.'[or]gives you a report on recent activity around the farm while playing with her pussy.[or]growls, 'I hope something wanders by to make trouble soon. I'm in the mood to bust some heads.' Her gaze wanders over to her nightstick as she does so.[at random]";
+		else if HP of Alexandra is 3: [pregnant]
+			if lust of Alexandra > 12: [visibly pregnant]
+				say "     As you approach, Alexandra gives you a provocative smile and [one of]says, 'It seems your naughty bitch has gotten herself knocked up, boss.'[or]says, 'Thanks again for knocking some sense into me, boss. Otherwise I'd probably still be out there, being a stuffy goody-two-shoes instead of getting the best sex of my life.'[or]gives you a report on recent activity around the farm while rubbing her swollen breasts, milk leaking from her nipples.[or]moans, 'I like feeling full like this,' running her paws over her enlarged, pregnant belly.[or]says, 'It looks like I'm going to have some pups,' running her paws over her rounded belly with a shiver of excitement at the prospect.[or]says, 'It's a little strange getting so pregnant so fast, but I guess that's what makes me a breeder bitch, isn't it?'[at random]";
+			else: [slightly pregnant]
+				say "     As you approach, Alexandra gives you a provocative smile and [one of]asks, 'Are you going to use your slutty bitch again soon?'[or]says, 'I've been hanging out with all of these horny studs as you hold me to boss. It's a lot of fun, they're good guys and quite virile.'[or]comments, 'Thanks again for knocking some sense into me, boss. Otherwise I'd probably still be out there, being a stuffy goody-two-shoes instead of getting the best (and only) sex of my life.'[or]gives you a report on recent activity around the farm while rubbing her breasts.[or]growls, 'I hope something wanders by soon. I'm in the mood to bust some heads.' Her paws wander up and down over her nightstick as she does so.[at random]";
+		else if HP of Alexandra is 4: [between pregnancies]
+			say "     As you approach, Alexandra gives you a provocative smile and [one of]asks, 'Are you going to use your slutty bitch again soon?'[or]says, 'I've been hanging out with all of these horny studs as you hold me to boss. It's a lot of fun, they're good guys and quite virile. Won't be long before this belly swells up again I bet!'[or]says, 'It was pretty fun getting knocked up and having some pups.'[or]says, 'It was really exciting getting used like a breeder bitch. I'm looking forward to doing it again and again.'[or]comments, 'Thanks again for knocking some sense into me, boss. Otherwise I'd probably still be out there, being a stuffy goody-two-shoes instead of getting the best (and only) sex of my life.'[or]gives you a report on recent activity around the farn while playing with her pussy.[or]boasts, 'My pups are a bunch of rough hounds like their bitch mother.'[or]growls, 'I hope something wanders by soon. I'm in the mood to bust some heads.' Her gaze wanders over to where her nightstick lies as she does so.[or]says, 'My pups can be a bit of a handful, but it's nothing a good knock on the head doesn't fix.'[or]says, 'I hope I'll have another litter soon.'[at random]";
+		else if HP of Alexandra is 5:
+			if lust of Alexandra > 12: [visibly pregnant]
+				say "     As you approach, Alexandra gives you a provocative smile and [one of]says, 'It seems your naughty bitch has gotten herself knocked up, boss.'[or]comments, 'Thanks again for knocking some sense into me, boss. Otherwise I'd probably still be out there, being a stuffy goody-two-shoes instead of getting the best (and only) sex of my life.'[or]gives you a report on recent activity around the farm while rubbing her swollen breasts, milk leaking from her nipples.[or]moans, 'I like feeling full like this,' running her paws over her enlarged, pregnant belly.[or]says, 'It looks like I'm going to have some more pups,' running her paws over her rounded belly with a shiver of excitement at the prospect.[or]says, 'My pups are a bunch of rough hounds like their bitch mother.'[or]says, 'It was a little strange at first, but I'm really looking forward to giving birth to more pups.'[or]says, 'My pups can be a bit of a handful, but it's nothing a good knock on the head doesn't fix.'[or]says, 'I'm really enjoying being bred like the naughty bitch I am.' Moaning, she rubs her rounded belly as best as she can.[at random]";
+			else: [slightly pregnant]
+				say "     As you approach, Alexandra gives you a provocative smile and [one of]asks, 'Are you going to use your slutty bitch again soon?'[or]says, 'I've been hanging out with all of these horny studs as you hold me to boss. It's a lot of fun, they're good guys and quite virile.'[or]says, 'It was pretty fun getting knocked up and having some pups.'[or]says, 'It was really exciting getting used like a breeder bitch. I'm looking forward to doing it again and again.'[or]says, 'Thanks again for knocking some sense into me, boss. Otherwise I'd probably still be out there, being a stuffy goody-two-shoes instead of getting the best (and only) sex of my life.'[or]gives you a report on recent activity around the farm while rubbing her breasts.[or]says, 'My pups are a bunch of rough hounds like their bitch mother.'[or]comments, 'My pups can be a bit of a handful, but it's nothing a good knock on the head doesn't fix.'[or]growls, 'I hope something wanders by and makes trouble for the farm soon. I'm in the mood to bust some heads.' Her gaze wanders over to where her nightstick lies as she does so.[or]rubs her somewhat rounded belly. 'Mmm... got another litter on the way, boss,' she says with a smile.[at random]";
+	else:
+		say "     ERROR - Alexandra is not where she should be. Please report her location and how she ended up there on the Flexible Survival Discord.";
 	say "[BadAlexandraTalkMenu]";
 
 to say BadAlexandraTalkMenu:
@@ -317,11 +351,17 @@ to say BadAlexandraTalkMenu:
 		now sortorder entry is 2;
 		now description entry is "Bring up that you want to go to the pediatrics clinic with her";
 	[]
-	if HP of Alexandra is 2 or HP of Alexandra is 4 and ((demon brute is tamed and DBCaptureQuestVar is 5) or PlayerMet of Farmhand Horsemen is true): [  or ("Feral Mutt" is listed in EncounteredEnemies of Player or "Feral Mutt Pack" is listed in EncounteredEnemies of Player)):] [not pregnant right now; possible candidates available]
+	if (HP of Alexandra is 2 or HP of Alexandra is 4 or HP of Alexandra is 5) and ((demon brute is tamed and DBCaptureQuestVar is 5) or PlayerMet of Farmhand Horsemen is true): [  or ("Feral Mutt" is listed in EncounteredEnemies of Player or "Feral Mutt Pack" is listed in EncounteredEnemies of Player)):] [not pregnant right now; possible candidates available]
 		choose a blank row in table of fucking options;
 		now title entry is "Breeding her (with others)";
 		now sortorder entry is 3;
 		now description entry is "Tell Alexandra that you want to get her knocked up by partners you choose";
+	[]
+	if Alexandra is in Worker Barracks:
+		choose a blank row in table of fucking options;
+		now title entry is "Taking her back to the library";
+		now sortorder entry is 4;
+		now description entry is "Bring your bitch back to the Grey Abbey Library";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Her family";
@@ -334,7 +374,7 @@ to say BadAlexandraTalkMenu:
 		now sortorder entry is 11;
 		now description entry is "Ask about Alexandra's life";
 	[]
-	if AlexandraNPC is not empty:
+	if AlexandraNPC is not empty and Alexandra is in Grey Abbey Library: [she does need to have something left to say and needs to actually be in the library]
 		choose a blank row in table of fucking options;
 		now title entry is "Others in the library";
 		now sortorder entry is 20;
@@ -367,6 +407,8 @@ to say BadAlexandraTalkMenu:
 					say "[AlexandraFertilityTrip]";
 				else if (nam is "Breeding her (with others)"):
 					say "[AlexandraBreedingMenu]"; [See file Alexandra Breeding.i7x in Wahn's folder]
+				else if (nam is "Taking her back to the library"):
+					say "[AlexandraBreeding_LibraryReturn]"; [See file Alexandra Breeding.i7x in Wahn's folder]
 				else if (nam is "Her family"):
 					say "[AlexandraBackstory1]";
 				else if (nam is "Growing up and her adult life"):
@@ -389,7 +431,7 @@ to say AlexandraContraceptionTalk:
 		say "     'Changed your mind, boss? Fine by me, and Medea will be oh so happy to set me right again. That girl is just a little baby-crazy, I tell ya,' Alexandra says in a happy tone and saunters up close to you, giving you a wet doggy kiss. After that, she slips out of the building right away, to return about an hour later with an eager expression on her face. She looks at you happily and licks the sides of her muzzle, apparently eager to get started on a litter of puppies soon.'";
 		now Sterile of Alexandra is false;
 	else if Libido of Alexandra > 20: [more than 20 puppies]
-		say "     As you bring up the fact that you want her to take some precautions against further pregnancies, Alexandra crosses her arms in front of her bare chest and gives you a hard stare. Her lips peel back from the impressive set of teeth in her muzzle, with the doberwoman growling out, 'Are you trying to be funny? Fuck no, you bastard! I like having puppies! And if you wanna stop me from having more, I might just need to go find some other place for me and my pack.' The steely gaze of her eyes tells you that she is completely serious about this, so you back off and tell her to forget you said anything. Watching the former cop walk away from you, checking on her offspring before she gets back to her usual guard post, you remind yourself that you shouldn't try to get between this bitch and her current (and future) puppies.";
+		say "     As you bring up the fact that you want her to take some precautions against further pregnancies, Alexandra crosses her arms in front of her bare chest and gives you a hard stare. Her lips peel back from the impressive set of teeth in her muzzle, with the doberwoman growling out, 'Are you trying to be funny? Fuck no, you bastard! I like having puppies! And if you wanna stop me from having more, I might just need to go find some other place for me and my pack.' The steely gaze of her eyes tells you that she is completely serious about this, so you back off and tell her to forget you said anything. Watching the former cop walk away from you, checking on her offspring before she gets back to [if Alexandra is in Grey Abbey Library]her usual guard post[else if Alexandra is in Worker Barracks]where she usually hangs out[else]ERROR, LOCATION NOT SET[end if], you remind yourself that you shouldn't try to get between this bitch and her current (and future) puppies.";
 	else:
 		say "     As you bring up the fact that you want her to take some precautions against [if AlexandraPregCount > 0]further[else]possible[end if] pregnancies, Alexandra lets out a taunting bark. ";
 		if Libido of Alexandra > 0: [Alexandra has offspring]
@@ -409,7 +451,7 @@ to say AlexandraContraceptionTalk:
 			say "     ([link]N[as]n[end link]) - Nah, you've changed your mind.";
 			if Player consents:
 				LineBreak;
-				say "     Telling Alexandra that you have made up your mind, you order her to get herself squared away properly. 'Fine, I'll get it done, boss,' she barks back at you, somewhat of a sharp undertone in her voice. With that said, she strides over to the library entrance and slips out of the building. It's not hard to guess that she was actually looking forward to further puppies growing in her, but she gave in to your will as her master. About an hour later, the dobie comes back and somewhat sullenly takes her usual spot of guarding the entrance.";
+				say "     Telling Alexandra that you have made up your mind, you order her to get herself squared away properly. 'Fine, I'll get it done, boss,' she barks back at you, somewhat of a sharp undertone in her voice. With that said, she strides over to the [if Alexandra is in Grey Abbey Library]library[else if Alexandra is in Worker Barracks]worker barracks[else]ERROR, LOCATION NOT SET[end if] entrance and slips out of the building. It's not hard to guess that she was actually looking forward to further puppies growing in her, but she gave in to your will as her master. About an hour later, the dobie comes back and somewhat sullenly takes her usual spot of guarding the entrance.";
 				now Sterile of Alexandra is true;
 			else:
 				LineBreak;
@@ -434,7 +476,7 @@ to say AlexandraContraceptionTalk:
 			say "     ([link]N[as]n[end link]) - Nah, you've changed your mind.";
 			if Player consents:
 				LineBreak;
-				say "     Telling Alexandra that you have made up your mind, you order her to get herself squared away properly. 'Fine, I'll get it done, boss,' she barks back at you, somewhat of a sharp undertone in her voice. With that said, she strides over to the library entrance and slips out of the building. It's not hard to guess that she was actually looking forward to further puppies growing in her, but she gave in to your will as her master. About an hour later, the dobie comes back and somewhat sullenly takes her usual spot of guarding the entrance.";
+				say "     Telling Alexandra that you have made up your mind, you order her to get herself squared away properly. 'Fine, I'll get it done, boss,' she barks back at you, somewhat of a sharp undertone in her voice. With that said, she strides over to the [if Alexandra is in Grey Abbey Library]library[else if Alexandra is in Worker Barracks]worker barracks[else]ERROR, LOCATION NOT SET[end if] entrance and slips out of the building. It's not hard to guess that she was actually looking forward to further puppies growing in her, but she gave in to your will as her master. About an hour later, the dobie comes back and somewhat sullenly takes her usual spot of guarding the entrance.";
 				now Sterile of Alexandra is true;
 			else:
 				LineBreak;
@@ -452,7 +494,7 @@ to say AlexandraCCounteroffer:
 		say "[badAlexandraSex]";
 	else:
 		LineBreak;
-		say "     Telling Alexandra that you have made up your mind, the bitch crosses her arms in a sulky fashion. 'I hope you realize that the usual stuff isn't gonna work on someone like me, and condoms aren't really my thing, even if we could find [']em. But hey, I know someone who can fix me up. A doctor, holed up in the pediatrics clinic not too far from here. Her name's Medea and she'll surely be able to cook something up. I'll find my own way there and back, no need for you to come along,' she says with a somewhat sharp undertone to her voice, then strides over to the library entrance and slips out of the building. It's not hard to guess that she was actually looking forward to [if Libido of Alexandra > 0]further [end if]puppies growing in her, but she gave in to your will as her master. About an hour later, the dobie comes back and somewhat sullenly takes her usual spot of guarding the entrance.";
+		say "     Telling Alexandra that you have made up your mind, the bitch crosses her arms in a sulky fashion. 'I hope you realize that the usual stuff isn't gonna work on someone like me, and condoms aren't really my thing, even if we could find [']em. But hey, I know someone who can fix me up. A doctor, holed up in the pediatrics clinic not too far from here. Her name's Medea and she'll surely be able to cook something up. I'll find my own way there and back, no need for you to come along,' she says with a somewhat sharp undertone to her voice, then strides over to the [if Alexandra is in Grey Abbey Library]library[else if Alexandra is in Worker Barracks]worker barracks[else]ERROR, LOCATION NOT SET[end if] entrance and slips out of the building. It's not hard to guess that she was actually looking forward to [if Libido of Alexandra > 0]further [end if]puppies growing in her, but she gave in to your will as her master. About an hour later, the dobie comes back and somewhat sullenly takes her usual spot of guarding the entrance.";
 		now Sterile of Alexandra is true;
 
 to say AlexandraFertilityTrip: [taking her to Medea for fertility treatments]
@@ -473,7 +515,7 @@ to say AlexandraFertilityTrip: [taking her to Medea for fertility treatments]
 			say "     As you tell her to forget about it, the anthro dobie lets out an annoyed grunt. 'Make up your mind, will ya? You know where to find me if you ever do.' With that said, Alexandra stalks off, taking position at her usual guard-post.";
 	else:
 		say "     As you bring up the topic of getting Alexandra treatments to increase her fertility, the doberwoman gives an amused bark and shakes her head in disbelief. 'So you're really gonna make me do it? Damn boss, you really like your girls always pregnant and ready to please, eh? Fine by me, as long as I'm the top bitch!' You give her a grin and nod, then draw the former cop closer and give her a forceful kiss that escalates into a little make-out session. For a little while, you're perfectly happy to just let your hands roam over the body of the woman you claimed as yours and tongue-wrestling with her, until Alexandra eventually pulls back far enough to catch her breath and say, 'Didn't you want me to get a shot before you bend me over for another round? Not that I mind...'";
-		say "     Reminded of the intended trip to the pediatrics clinic, you grin at your horny bitch and reach out to give her breasts a little grope, then nod towards the door and tell her to get moving. With Alexandra by your side, the two of you step through the large entrance doors of the Grey Abbey Library, setting out towards the south. Mounds of trash, scattered articles of clothing and countless vandalized cars dominate the scenery along the road as you wander along, thankfully not encountering all that many creatures along the way. Those that do come into sight are quickly chased away by Alexandra, who steps forward and meets them head on, as if daring anyone to challenge her. Seems like she's got somewhat of a reputation in the streets close to the library by now.";
+		say "     Reminded of the intended trip to the pediatrics clinic, you grin at your horny bitch and reach out to give her breasts a little grope, then nod towards the door and tell her to get moving. With Alexandra by your side, the two of you step through the [if Alexandra is in Grey Abbey Library]large entrance doors of the Grey Abbey Library, setting out towards the south. Mounds of trash, scattered articles of clothing and countless vandalized cars dominate the scenery along the road as you wander along, thankfully not encountering all that many creatures along the way. Those that do come into sight are quickly chased away by Alexandra, who steps forward and meets them head on, as if daring anyone to challenge her. Seems like she's got somewhat of a reputation in the streets close to the library by now[else if Alexandra is in Worker Barracks]broad entrance of the worker barracks, setting out towards the south. The sprawling expanse of the creeping grass as well as scattered mounds of rubble from destroyed buildings dominate the scenery as you wander along, thankfully not encountering all that many creatures on the way. Those that do come into sight are quickly chased away by Alexandra, who steps forward and meets them head on, as if daring anyone to challenge her. Seems like she's got somewhat of a reputation in the dry plains by now[else]ERROR, LOCATION NOT SET[end if].";
 		WaitLineBreak;
 		if HP of Doctor Medea is 0: [player doesn't know Medea]
 			say "     A little while later, you arrive at the pediatrics clinic and enter through the smashed front door to enter the chaos of the lobby beyond. Someone did a number on the place, smashing everything in sight and even clawing the walls and ground, with patches of dried cum left everywhere too. 'Watch your step, boss,' Alexandra says in a casual tone, looking where she sets her paws and making her way towards a set of metal doors further in the back. 'I found this place a while ago when I was still doing patrols like a good little police bitch. Before you showed me what a waste of time that was. But I guess knowing my way around pays off no matter what.' Arriving at the doors, she gives them a solid rap with her knuckles and shouts, 'Oi Medea! It's me, open up!'";
@@ -482,7 +524,7 @@ to say AlexandraFertilityTrip: [taking her to Medea for fertility treatments]
 			say "     'Well, I... I could do something for your pregnancy needs, I think. With the nanites in everyone these days, there are various medical options possible that weren't before,' Medea says, her tone being thoughtful as she thinks up a treatment for Alexandra. Then she catches herself and gives you a sidelong glance, followed by leaning closer to the doberwoman and asking in a quiet tone, 'Is this really what you want?' Alexandra lets out a rough chuckle and replies, 'Told ya, I'm the boss's bitch now. What [SubjectPro of Player] says goes. It's not like I haven't popped out plenty of litters before.' Medea nods to her, apparently still somewhat shell-shocked from the situation. 'Okay then, I'll do it. You're a friend, so for you, I'll use my last dwindling supplies. If anyone else wants additional treatments,' the lizardwoman glances your way, 'they'll have to help me restock first.'";
 			say "     With that said, the doctor leads your canine bitch into the back of the room, then pulls a curtain between them and you. Idly standing around and reading some posters about avoiding influenza out of sheer boredom, you hear some quiet talking, the clatter of drawers being opened and instruments being handled. A little while later, Doctor Medea steps out from behind the curtain and comes up to you. 'The procedure seems to have been a success, you can expect increased fertility as well as the chance of larger litters from your, er... bitch. Best wishes for the little ones, may they bring you much happiness.' She looks somewhat lost for further words, no doubt still finding it hard to line up her [']family doctor['] mindset with Alexandra's crude recounting of what you are doing with her. After a few moments of silence, Alexandra pulls the curtain fully aside, fully dressed in her jeans and leather jacket once more.";
 			WaitLineBreak;
-			say "     Thanking Medea for her help, Alexandra and you leave the clinic and step out on the street. While making your way back to the library, the dobie bitch gleefully drops comments like, 'So, what's the new production goal in this puppy factory?' or 'When do you wanna start a new litter?' or 'The expression on Medea's face was just too good.' When you soon arrive, Alexandra pulls you close for a kiss, then strolls off to her usual guard post with the words, 'I'll be waiting for you.'";
+			say "     Thanking Medea for her help, Alexandra and you leave the clinic and step out on the street. While making your way back to the [if Alexandra is in Grey Abbey Library]library[else if Alexandra is in Worker Barracks]farm[else]ERROR, LOCATION NOT SET[end if], the dobie bitch gleefully drops comments like, 'So, what's the new production goal in this puppy factory?' or 'When do you wanna start a new litter?' or 'The expression on Medea's face was just too good.' When you soon arrive, Alexandra pulls you close for a kiss, then strolls off to her usual [if Alexandra is in Grey Abbey Library]guard post[else if Alexandra is in Worker Barracks]spot[else]ERROR, LOCATION NOT SET[end if] guard post with the words, 'I'll be waiting for you.'";
 			now HP of Doctor Medea is 1; [player knows Medea]
 		else: [player knows Medea]
 			say "     A little while later, you arrive at the pediatrics clinic and enter through the smashed front door to enter the chaos of the lobby beyond. Knowing what to expect from your previous visit, you let your gaze sweep over the smashed furniture, clawing the walls and ground, as well as the numerous patches of dried cum left everywhere. Not too bad as camouflage for Medea; after all, who would think that anyone wanted to live in the back room to such devastation. Arriving at the doors, you knock and call out to the lizard doctor inside. You can hear keys jingling, then the door is unlocked from within. A green-scaled hand pushes it open towards you, and Medea says, 'Welcome back[if Player is not defaultnamed] [name of Player][end if], and you too, er - wait! Is that you, Officer Friedrich?' The humanoid lizard standing behind the door falls quiet as she sees Alexandra's new getup, from the ripped jeans to her open leather jacket and the dobie's openly presented breasts.";
@@ -494,11 +536,10 @@ to say AlexandraFertilityTrip: [taking her to Medea for fertility treatments]
 				say "'Okay then, I'll do it. It's the least I can do after you helped me get those supplies'";
 			say "     With that said, the doctor leads your canine bitch into the back of the room, then pulls a curtain between them and you. Idly standing around and reading some posters about avoiding influenza out of sheer boredom, you hear some quiet talking, the clatter of drawers being opened and instruments being handled. A little while later, Doctor Medea steps out from behind the curtain and comes up to you. 'The procedure seems to have been a success, you can expect increased fertility as well as the chance of larger litters from your, er... bitch. Best wishes for the little ones, may they bring you much happiness.' She engages you in a little casual talk about the city outside of her refuge, until eventually the curtain is pulled aside by Alexandra, fully dressed in her jeans and leather jacket once more.";
 			WaitLineBreak;
-			say "     Thanking Medea for her help, Alexandra and you leave the clinic and step out on the street. While making your way back to the library, the dobie bitch gleefully drops comments like, 'So, what's the new production goal in this puppy factory?' or 'When do you wanna start a new litter?' or 'The expression on Medea's face was just too good.' When you soon arrive, Alexandra pulls you close for a kiss, then strolls off to her usual guard post with the words, 'I'll be waiting for you.'";
+			say "     Thanking Medea for her help, Alexandra and you leave the clinic and step out on the street. While making your way back to the [if Alexandra is in Grey Abbey Library]library[else if Alexandra is in Worker Barracks]farm[else]ERROR, LOCATION NOT SET[end if], the dobie bitch gleefully drops comments like, 'So, what's the new production goal in this puppy factory?' or 'When do you wanna start a new litter?' or 'The expression on Medea's face was just too good.' When you soon arrive, Alexandra pulls you close for a kiss, then strolls off to her usual[if Alexandra is in Grey Abbey Library]guard post[else if Alexandra is in Worker Barracks]spot[else]ERROR, LOCATION NOT SET[end if] with the words, 'I'll be waiting for you.'";
 		remove "Fertility Treatment Option" from Traits of Alexandra;
 		add "Fertility Treatments" to Traits of Alexandra;
 		now Pediatrics Lobby is known; [navpoint unlock]
-
 
 to say AlexandraBackstory1: [family]
 	say "     Alexandra takes a seat in one of the chairs, rocking on its back legs and lighting up a smoke. 'My folks were crooks. Did drugs and petty crimes to pay for the habit. It was a pretty shitty home to grow up in, so I was taken away by Child Services when they finally got caught. Not that that was much better, but I tried to convince myself I was better than them. I decided to become a cop and tried my best to be [']a moral and upright person['],' she says with obvious scorn for her previous self.";
@@ -531,7 +572,9 @@ to say AlexandraBackstory2: [her life after being taken from her family]
 	say "[BadAlexandraTalkMenu]"; [looping back for more talk]
 
 to say A_SarahTalk:	[Sarah]
-	if SarahSlut is 0 or SarahCured is 1: [base state Sarah]
+	if Alexandra is in Worker Barracks:
+		say "     Alexandra shrugs as you bring up Sarah. 'Who cares about the dumb slut? Since you brought me to be the barracks fuckmeat here, I don't have to see her stupid face and I'm fine with that. Now, if we were at the library things would be different. Might have to rough her up a little to remind her who's the top bitch, you know?'";
+	else if SarahSlut is 0 or SarahCured is 1: [base state Sarah]
 		say "     As you bring up Sarah, a grin spreads over Alexandra's muzzle and she lets out a chuckle. 'Couldn't help noticing the stray doggie girl you brought in and stashed away down in the bunker. You should see the adoring looks she throws when you're not looking. What did you do to get her to follow you - dash in and make a show of being a hero? Naive bitch,' Alexandra says in a rough tone that carries some amusement with it. 'I've got personal experience with the shit you're into, so what's the plan, boss? Gonna train her as a sex-pet? Or do you wanna keep her on as a clueless fan-girl to boost your rep if we ever get out of this? Better watch out if you do - huskies appear to be especially prone to fucking out their brains, so she might just succumb to those urges no matter what.'";
 		say "     Giving a shrug that speaks of her indifference to the possible loss of Sarah's humanity, Alexandra looks at you with a smirk, then adds casually, 'Oh, and I'll hold off on teaching her who the top bitch in this place is till you make your move, but once you do, she'd better be prepared to submit to me as well.'";
 	else if SarahSlut is 1: [fucked Sarah once, she's naked from this point on]
@@ -573,99 +616,12 @@ to say A_SarahTalk:	[Sarah]
 	wait for any key;
 	say "[BadAlexandraTalkMenu]"; [looping back for more talk]
 
-
-to say BadAlexandraTalkMenu:
-	UpdateAlexandraNPCChat;
-	LineBreak;
-	say "     What do you want to talk with Alexandra about?";
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	if HP of Alexandra is 2 or HP of Alexandra is 4: [not pregnant right now]
-		choose a blank row in table of fucking options;
-		now title entry is "Contraception";
-		now sortorder entry is 1;
-		now description entry is "Precautions against pregnancy";
-	[]
-	if "Fertility Treatment Option" is listed in Traits of Alexandra:
-		choose a blank row in table of fucking options;
-		now title entry is "Fertility Treatments";
-		now sortorder entry is 2;
-		now description entry is "Bring up that you want to go to the pediatrics clinic with her";
-	[]
-	if HP of Alexandra is 2 or HP of Alexandra is 4 and (demon brute is tamed or PlayerMet of Farmhand Horsemen is true): [not pregnant right now; possible candidates available]
-		choose a blank row in table of fucking options;
-		now title entry is "Breeding her (with others)";
-		now sortorder entry is 3;
-		now description entry is "Tell Alexandra that you want to get her knocked up by partners you choose";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Her family";
-	now sortorder entry is 10;
-	now description entry is "Ask about Alexandra's family";
-	[]
-	if AlexandraBackstory > 0:
-		choose a blank row in table of fucking options;
-		now title entry is "Growing up and her adult life";
-		now sortorder entry is 11;
-		now description entry is "Ask about Alexandra's life";
-	[]
-	if AlexandraNPC is not empty:
-		choose a blank row in table of fucking options;
-		now title entry is "Others in the library";
-		now sortorder entry is 20;
-		now description entry is "Ask what Alexandra thinks of other inhabitants of the Grey Abbey Library";
-	[]
-	if Sarah is bunkered:
-		choose a blank row in table of fucking options;
-		now title entry is "Sarah the husky";
-		now sortorder entry is 21;
-		now description entry is "Chat about the other anthro canine";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
-				now sextablerun is 1;
-				if (nam is "Contraception"):
-					say "[AlexandraContraceptionTalk]";
-				else if (nam is "Fertility Treatments"):
-					say "[AlexandraFertilityTrip]";
-				else if (nam is "Breeding her (with others)"):
-					say "[AlexandraBreedingMenu]";
-				else if (nam is "Her family"):
-					say "[AlexandraBackstory1]";
-				else if (nam is "Growing up and her adult life"):
-					say "[AlexandraBackstory2]";
-				else if (nam is "Others in the library"):
-					say "[AlexandraNPCChat]";
-				else if (nam is "Sarah the husky"):
-					say "[A_SarahTalk]";
-				wait for any key;
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You step back from the doberwoman bitch and tell her that you'll have to continue your conversation at another time. She nods and turns her attention back to guarding the entrance.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
-
 Section 2 - Bad Girl Sexxxings
 
 Part 1 - Bad Alexandra Sex Selection
 
 to say sexwithAlexandra_bg:
-	if "Horny Bastard" is listed in Traits of Alexandra and lastfuck of Alexandra - turns < 4:
+	if "Horny Bastard" is listed in Traits of Alexandra and lastfuck of Alexandra - turns < 3:
 		say "     'Not that I don't want to boss, but you gotta let me have a little while to rest. Just can't keep up with your libido, you nymphomaniac.'";
 	else if "Horny Bastard" is not listed in Traits of Alexandra and lastfuck of Alexandra - turns < 6:
 		say "     'As fun as this has been, I do need at least a short break before we go again[if HP of Alexandra < 50], boss[end if].'";
@@ -1018,7 +974,7 @@ to say badAlexandraFang1: [let Fang fuck her]
 		StatChange "Charisma" by -1;
 	else:
 		say "     You and Alexandra have earned the [']Cuckold['] feat, making her more fertile. Your [bold type]perception[roman type] has also gone up by one.";
-	add "Cuckold" to feats of Player;
+	FeatGain "Cuckold";
 	StatChange "Perception" by 1;
 	now level of Alexandra is 2; [shared bitch]
 	now A_Fang is false; [new dialog for new status]
@@ -1039,7 +995,7 @@ to say badAlexandraFang2: [male player stops Fang and establishes dominance]
 	say "     When you're done cumming in her[if Ball Size of Player > 6] and she's left so stuffed she struggles to move with all your virile semen in her[else if Ball Size of Player > 5] and she's left with a bulge in her belly from all your virile semen in her[end if], you pull out and wipe your cock off across her panting muzzle. She looks up at you with increased submission and loyalty from the rough and public claiming of her. Feeling satisfied, you march back to the library doors and pull them open. Turning to her, you whistle and tell her to come back inside, calling her like a dog. She responds obediently, staggering to her feet and walking back in - naked, leaking cum and wagging her tail as she goes. Once she's in, you step back out, grab Fang by the scruff of the neck and drag him back in as well. You're quite confident that they both now know she belongs to you exclusively.";
 	LineBreak;
 	say "     You and Alexandra have earned the [']Top Dog['] feat, making her more fertile. Your [bold type]charisma[roman type] has also gone up by one.";
-	add "Top Dog" to feats of Player;
+	FeatGain "Top Dog";
 	add "Player's Bitch" to Traits of Alexandra;
 	now AlexandraPlayersBitch is active;
 	StatChange "Perception" by 1;
@@ -1172,9 +1128,13 @@ To impregAlexandraChance with (x - text):
 				now AlexandraPupDaddy	is 6;
 			-- "Isaac":
 				now AlexandraPupDaddy	is 7;
+			-- "Farmhand Horsemen":
+				now AlexandraPupDaddy	is 8;
 	else:
 		if debugactive is 1:
 			say "     Impregnation fail! A chance of [AlexandraPregChance] in 10 didn't succeed.";
+			if Sterile of Alexandra is true:
+				say "     Note: She's on contraceptives, so no matter how high the chance is, it can't succeed.";
 
 an everyturn rule:
 	if Alexandra is booked and HP of Alexandra < 50:
@@ -1218,21 +1178,30 @@ an everyturn rule:
 						else:
 							say "Given that she only has two breasts, there is a bit of competition and whining between her offspring, but the anthro canine does her best to switch off between the pups, giving each an equal share of the milk they crave. ";
 					say "As the little dogs greedily gulp down what they can drink from their mother, they grow noticeably larger with each passing second. Tiny as the puppies may have been, they seem in a rush to catch up now, growing so fast that they seem to skip right past the size of a human baby or toddler and reach the stage of a young child in moments. Then the burst of development stops and they stabilize in the shape of quite active and rambunctious little dobermen.";
-					if AlexandraPupDaddy is 1: [player pups]
+					if AlexandraPupDaddy is 1: [player's pups]
 						say "     Now that the little dogs have grown a little, you do recognize a bit of yourself in them. They are definitely still dobermen through and through, but there's just something about the way they look and act that makes it more than clear in your mind that they're yours. Soon having finished with their drinking from Alexandra, first one, then another of the little ones decides to investigate the person who greeted them into the world. You find yourself beset by curious canines, sticking their noses and licking you everywhere they can reach. They seem to recognize something in your scent, making them feel perfectly safe and happy to be with you.";
 						increase AlexandraPlayerPups by AlexandraGrowingPups;
-					else if AlexandraPupDaddy is 2: [Fang pups]
+					else if AlexandraPupDaddy is 2: [Fang's pups]
 						say "     Now that the little dogs have grown a little, you do recognize a bit of Fang in them. They are definitely still dobermen through and through, but there's just something about the way they look and act that makes it more than clear in your mind that the wolf fathered them. Maybe it's something about the shape of their ears and muzzles, or maybe it's the markings of their fur - it's hard to say. Soon having finished with their drinking from Alexandra, first one, then another of the little ones decides to investigate the person who greeted them into the world. You find yourself beset by curious canines, sticking their noses and licking you everywhere they can reach. Even though they are not yours, they seem to have inherited some of the wild spirit of their father, making them happily pad your way without fear.";
 						increase AlexandraFangPups by AlexandraGrowingPups;
-					else if AlexandraPupDaddy is 3: [Korvin pups]
+					else if AlexandraPupDaddy is 3: [Korvin's pups]
 						say "     Now that the little dogs have grown a little, you do recognize a bit of Korvin in them. They are definitely still dobermen through and through, but there's just something about the way they look and act that makes it more than clear in your mind that the German shepherd fathered them. Maybe it's something about the shape of their ears and muzzles, or maybe it's the markings of their fur - it's hard to say. Soon having finished with their drinking from Alexandra, first one, then another of the little ones decides to investigate the person who greeted them into the world. You find yourself beset by curious canines, sticking their noses and licking you everywhere they can reach. Even though they are not yours, they seem to have inherited some of the cocky spirit of their father, making them happily pad your way without fear.";
 						increase AlexandraKorvinPups by AlexandraGrowingPups;
-					else if AlexandraPupDaddy is 4: [Carl pups]
+					else if AlexandraPupDaddy is 4: [Carl's pups]
 						say "     Now that the little dogs have grown a little, you do recognize a bit of Carl in them. They are definitely still dobermen through and through, but there's just something about the way they look and act that makes it more than clear in your mind that the husky fathered them. Maybe it's something about the shape of their ears and muzzles, or maybe it's the markings of their fur - it's hard to say. Soon having finished with their drinking from Alexandra, first one, then another of the little ones decides to investigate the person who greeted them into the world. You find yourself beset by curious canines, sticking their noses and licking you everywhere they can reach. Even though they are not yours, they seem to have inherited some of the bravery of their father, making them happily pad your way without fear.";
 						increase AlexandraCarlPups by AlexandraGrowingPups;
-					else if AlexandraPupDaddy is 5: [Brutus pups]
+					else if AlexandraPupDaddy is 5: [Brutus's pups]
 						say "     Now that the little dogs have grown a little, you do recognize a bit of Brutus in them. They are definitely still dobermen through and through, but there's just something about the way they look and act that makes it more than clear in your mind that the demon brute fathered them. You could swear one of the puppies['] eyes glowed purple for a moment, and their teeth and claws do seem oddly sharp. Soon having finished with their drinking from Alexandra, first one, then another of the little ones decides to investigate the person who greeted them into the world. You find yourself beset by curious canines, sticking their noses and licking you everywhere they can reach. Even though they are not yours, they seem to have inherited part of the bond between their father and yourself, making them happily pad your way without fear.";
 						increase AlexandraBrutusPups by AlexandraGrowingPups;
+					else if AlexandraPupDaddy is 6: [Karel's pups]
+						say "     Now that the little dogs have grown a little, you do recognize a bit of Karel in them. They are definitely still dobermen through and through, but there's just something about the way they look and act that makes it more than clear in your mind that the Friesian stud fathered them. Maybe it's something about the shape of their ears and muzzles, or maybe it's the very intense and shiny black of their fur - it's hard to say. Soon having finished with their drinking from Alexandra, first one, then another of the little ones decides to investigate the person who greeted them into the world. You find yourself beset by curious canines, sticking their noses and licking you everywhere they can reach. Even though they are not yours, they seem to have inherited some of the herd instinct of their father, not so much shoving each other out of the way as puppies might normally do, but rather coming at you in a cooperating group.";
+						increase AlexandraKarelPups by AlexandraGrowingPups;
+					else if AlexandraPupDaddy is 7: [Karel's pups]
+						say "     Now that the little dogs have grown a little, you do recognize a bit of Isaac in them. They are definitely still dobermen through and through, but there's just something about the way they look and act that makes it more than clear in your mind that the Friesian stud fathered them. Maybe it's something about the shape of their ears and muzzles, or maybe it's the very intense and shiny black of their fur - it's hard to say. Soon having finished with their drinking from Alexandra, first one, then another of the little ones decides to investigate the person who greeted them into the world. You find yourself beset by curious canines, sticking their noses and licking you everywhere they can reach. Even though they are not yours, they seem to have inherited some of the competetiveness of their father, with one or another pushing to the front to sniff you before he is supplanted by another.";
+						increase AlexandraIsaacPups by AlexandraGrowingPups;
+					else if AlexandraPupDaddy is 8: [random farmhand horseman]
+						say "     Now that the little dogs have grown a little, you do recognize a bit of the farmhand horsemen in them. They are definitely still dobermen through and through, but there's just something about the way they look and act that makes it more than clear in your mind that the one of the towering and muscle-packed studs fathered them. Maybe it's something about their slightly broader build or the surprisingly strong leg muscles of the little ones - it's hard to say. Soon having finished with their drinking from Alexandra, first one, then another of the little ones decides to investigate the person who greeted them into the world. You find yourself beset by curious canines, sticking their noses and licking you everywhere they can reach. Even though they are not yours, they seem to have inherited a bold outlook from whoever turned out to be the father, with one or another bravely pushing to the front to sniff you before he is supplanted by another.";
+						increase AlexandraFarmhandPups by AlexandraGrowingPups;
 				if Libido of Alexandra is 0: [Spike's dad]
 					if AlexandraPupDaddy is:
 						-- 1:
@@ -1249,6 +1218,8 @@ an everyturn rule:
 							now MaxHP of Spike is 6; [Karel Spike]
 						-- 7:
 							now MaxHP of Spike is 7; [Isaac Spike]
+						-- 8:
+							now MaxHP of Spike is 8; [Random Farmhand Horseman]
 				increase Libido of Alexandra by AlexandraGrowingPups;
 				increase AlexandraPregCount by 1; [number of previous pregnancies]
 				now AlexandraGrowingPups is 0; [no pups in her now]
@@ -1564,8 +1535,13 @@ to say A_IcarusComment:
 
 Section 13 - Endings
 
-when play ends:
-	if alexandra is booked and HP of Alexandra < 50:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Alexandra's Epilogue"	"NPC"	""	Alexandra's Epilogue rule	900	false
+
+This is the Alexandra's Epilogue rule:
+	if Alexandra is booked and HP of Alexandra < 50:
+		trigger ending "Alexandra's Epilogue"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     When the doberwoman realizes that you're not going to be returning, she strikes out into the city[if Libido of alexandra > 0] with her offspring[end if]. After beating up several other canines and a few lightly infected survivors she manages to track down, [if Libido of alexandra > 0]they form[else]she forms[end if] a gang of rough canine thugs. With herself as the alpha and gang leader, her pack - formed mostly newly infected Dobermans and her offspring - fight for a claim a chunk of the city as their own. They have little concern for boundaries or rules and happily take whatever they want, be it goods or sex, from any they happen to accost.";
 		else:

@@ -863,7 +863,7 @@ to say hospquestpt9:
 			now lastCandyfucked is turns + 6;
 			if HP of Sven is 8, now lastSvendrink is turns - 4; [***Adjust as needed for confident Sven]
 			LineBreak;
-			say "     Dr Mouse shrugs as you decide to pass on the injection and passes it to one of the orderlies to put away. 'I still do not want him in my hospital any longer. You will have to take him away from here and keep him out of trouble. Use him for your own enjoyment.' He leans in and jabs the coonboi with a finger. 'You don't want to know what I'll do to you if you ever come back here,' he little mouse whispers harshly in his ear. 'Do you understand?' The girly boi can only whimper louder and nod vigorously. 'Good.'";
+			say "     Dr Mouse shrugs as you decide to pass on the injection and passes it to one of the orderlies to put away. 'I still do not want him in my hospital any longer. You will have to take him away from here and keep him out of trouble. Use him for your own enjoyment.' He leans in and jabs the coonboi with a finger. 'You don't want to know what I'll do to you if you ever come back here,' the little mouse whispers harshly in his ear. 'Do you understand?' The girly boi can only whimper louder and nod vigorously. 'Good.'";
 		Waitlinebreak;
 		say "[hospquestpt10]";
 
@@ -1281,8 +1281,8 @@ to say tlloss:
 	LineBreak;
 	wait for any key;
 	now HP of Doctor Matt is 101;
-	move Doctor Matt to dark basement;
-	move Orthas to dark basement;
+	now Doctor Matt is nowhere;
+	now Orthas is nowhere;
 	if Susan is visible:
 		move susan to Hidden Lab;
 	now the door west of Outside Trevor Labs is locked; [not sure how to do this]
@@ -1764,17 +1764,7 @@ to say ec_activation:
 		say "     Having a tougher time focusing this time around, you keep your attention on your hands. Holding them up in front of your face, you watch as they go through a succession of transformations. They start out turning into hoof-like hands, but they don't stay like this for long. The hard hoof portion starts to recede the moment it's finished forming, reshaping itself into dark claws that eventually sink into sheathes like a cat's. As this is happening, your hands are also getting larger and stronger, with both a strong grip and fine control. Your fingers become plated across the top and over the back of your hand. You ball your hand into an impressive armored fist, confident it'll pack quite the wallop.";
 	else:
 		say "     Focusing your attention on your body, your watch as it shifts, becoming strong and well-toned even as brownish fur spreads across it. Even as the fur continues to spread outwards, that change is overwritten in places as armored plates form to cover the front of your torso. Feeling them, you find these tough, but with enough flex for movement[if Nipple Count of Player > 0 and Breast Size of Player > 0]. They cup your breasts like an armored bodice, both supporting and emphasizing your cleavage while also leaving your nipples exposed for fun[else if Breast Size of Player > 0]. They cup your breasts like an armored bodice, both supporting and emphasizing your cleavage[else]. They are placed on your chest such to emphasize your strong pecs and firm abs[end if]. Meanwhile, your arms and legs have become strong, growing to match your large, buff body. More toughened plates are added to your outer thighs and forearms as further protection.";
-	now TailName of Player is "Enhanced Chimera";
-	now FaceName of Player is "Enhanced Chimera";
-	now SkinName of Player is "Enhanced Chimera";
-	now BodyName of Player is "Enhanced Chimera";
-	now CockName of Player is "Enhanced Chimera";
-	attributeinfect;
-	now tail of Player is tail entry;
-	now Face of Player is face entry;
-	now Skin of Player is skin entry;
-	now Body of Player is body entry;
-	now Cock of Player is cock entry;
+	turn the Player into an "Enhanced Chimera";
 	if Player is male:
 		if Cock Length of Player < 16:
 			increase Cock Length of Player by 3;
@@ -1824,14 +1814,20 @@ to say hospquestpt14:
 
 Section 9 - Endings
 
-when play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Hospital Quest Epilogue"	"Story"	""	Hospital Quest Epilogue rule	950	false
+
+This is the Hospital Quest Epilogue rule:
 	if hospquest is 13 and humanity of Player > 9:			[helped Dr Matt]
+		trigger ending "Hospital Quest Epilogue";
 		if HP of Doctor Mouse is 1:					[Dr Mouse not defeated]
 			say "When the military comes into the city, they are helped by Dr Matt's findings. This research keeps more of the soldiers safe and helps them rescue and treat more borderline infection cases, saving many more lives from succumbing to instinctual changes. Over the years, you do hear rumors of a bizarre mouse scientist working in distant countries, selling nanite-based technology and weapons to foreign governments or guerrilla factions of the infected.";
 		if HP of Doctor Mouse is 2:					[Dr Mouse defeated]
 			say "When the military comes into the city, they are helped by Dr Matt's findings. This research keeps more of the soldiers safe and helps them rescue and treat more borderline infection cases, saving many more lives from succumbing to instinctual changes. You are quietly awarded a medal at a small ceremony for your services. Over the years, the doctor's research helps many, stemming the tide of anarchy across the nation, and even the world.";
 	else if hospquest > 13 and humanity of Player > 9:	[helped Dr Mouse]
-		if BodyName of Player is not "Wolverine Guard":
+		if Player has no non-shifting body of "Wolverine Guard":
+			trigger ending "Hospital Quest Epilogue";
 			if HP of Doctor Matt is 101:				[Dr Matt not defeated]
 				say "When the military comes through, you are taken in by the army. In the chaos of trying to deal with so many infected, you receive little scrutiny and your false identity is not questioned. You discreetly ask a few questions and hear that the military's chief scientist is little help to them, with most of her developments having [']sexual side-effects['] that make a lot of the men worried to use them. After you are cleared, you start to settle into your new life, occasionally hearing from Dr Mouse and helping the underground scientist with [']samples['] when needed. He continues his research, selling his enhancements and customized strains to the highest bidder. Occasionally, he has a new one for you. It is always something subtle that will go unnoticed, but helps you in your new life[if Susan is in Hidden Lab]. Susan continues to accompany him as an assistant and a lover for you[end if].";
 			else if HP of Doctor Matt is 102 or HP of Doctor Matt is 104:		[Dr Matt defeated]

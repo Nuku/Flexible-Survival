@@ -144,7 +144,7 @@ Instead of resolving a Rundown Boutique:
 	increase carried of chips by 1;
 	increase carried of soda by 1;
 	increase carried of water bottle by 1;
-	say "[bold type]You gained a bag of chips, one soda, and a bottle of water[roman type]";
+	say "[bold type]You gained a bag of chips, one soda, and a bottle of water.[roman type][line break]";
 	WaitLineBreak;
 	say "     With your pack filled with new supplies, you go on to inspect the dress that's still hanging in the locker. Carefully pulling it out, you find that it is a sleek one piece dress, and most importantly, there's not even a scratch on it. Unfortunately, a dress such as this would not be practical for you[if scalevalue of Player < 3], given how you're too small for it[else if scalevalue of Player > 3], given how you're too large for it[end if]. However, you recall how Ranae has been looking for some new clothes, and this dress seems to be the perfect size for her. Safely stowing the garment away, you exit the boutique and make a note to visit the frog woman soon with your gift.";
 	now hunger of Ranae is 5;		[Found black dress]
@@ -156,7 +156,7 @@ Instead of resolving a Boarded-up Building:		[Figurine]
 	WaitLineBreak;
 	say "     However, not wanting to give up so quickly, you make your way to the opposite side of the building and find a sleeping bag and a small pack tucked away in the corner. You quickly check to make sure that there's nothing else in the rest of the building before you search through the makeshift camp. Judging by the layer of dust on the items, it looks like the owner of the meager belongings will not be returning. Searching through the pack, you find a tin of food, which you happily pocket, as well as an odd object wrapped up with newspaper. Peeling away the paper, you find a small figurine of a woman attached to a dome-like wooden base.";
 	say "     The tiny female is wearing a green dress that completely covers her legs, and she has one arm raised up high with another stretched out in a dancing pose. Turning the object around, you find a wind-up key at the back of the base. You give the key a few turns, which makes the figurine start to slowly spin around as the soft sounds of a music box begins playing. Although the song and dance is short, it is charming enough to make you smile a little. As you look over the figurine, wondering what you're going to do with it, the dancer's green dress grabs your attention, the color almost the same shade as Ranae's skin. Perhaps the frog girl will appreciate a gift like this. After covering the gift back up with newspaper and safely tucking the gift away in your pack, you exit the building through the same window you crawled in through, making a note to bring your find to Ranae when you have the time.";
-	say "     [bold type]You found a can of food[roman type]";
+	say "     [bold type]You found a can of food.[roman type][line break]";
 	increase carried of food by 1;
 	now perception of Ranae is 1;		[Found figurine]
 	now Boarded-up Building is resolved;
@@ -165,7 +165,7 @@ Instead of resolving a Ransacked Shop:		[Drapes]
 	say "     Walking through a street, the sight of a small shop catches your eye. Though the door remains intact, the display window in the front of the building has been completely shattered, glass shards littering the nearby sidewalk. It's obvious the place was ransacked, but you briefly wonder why this particular shop was robbed, given how the adjacent stores seemed to be untouched, but your question is soon answered when you glance up at the place's storefront sign, or rather, what used to be it. You're unable to read the shop's name because the sign is completely covered with graffiti drawings of dicks and other crude images, along with spray-painted words such as [']cheap bastard,['] [']lying asshole,['] and other spiteful titles. It looks like that the owner of the shop wasn't popular, and you guess that someone took advantage of the city's chaos to take action against the supposed swindler.";
 	say "     Taking a look through the broken window, you see that although the shop has been looted, there still seems to be various items lying around. Figuring that it's at least worth a quick look, you climb in through the window, careful to avoid the broken glass. Searching around, you find an assortment of items, all with handmade price tags attached to them, and you guess that this place used to be a sort of pawn shop. Unfortunately, anything worthwhile seems to already be gone, and all of the things that have been left behind are either of little use or too bulky to safely carry out of here. It doesn't take long for you to finish searching the small storefront, and you head through a doorway in the back, only to find a room barely bigger than a closet. With a small desk and a filing cabinet with three drawers in one corner and several small boxes in another, this tiny space doubled as an office and a storage room.";
 	say "     Searching through the filing cabinet first, you find receipts and business-related papers in the top two drawers that pretty much confirms that the shop had been cheating their customers out of a fair deal. When you open the bottom drawer, you find some books, but more importantly, a bottle of water. With the current state of the place and the reputation of the former store owner, you have no qualms taking the precious supply for yourself. You then move on to the boxes, opening them one by one as you search their contents. At first, all you find are various odd knick-knacks or low-quality items that don't look like they would have sold, but you pause when you eventually come upon a bundle of green fabric, its color reminding you of Ranae. Unfolding your find, you see that the fabric is actually a set of drapes with an embroidered pattern of swirls decorating its front. Thinking that the frog staying in the library might like these drapes to help decorate her living space, you stow them into your bag. Finding nothing else of interest in the shop, you climb back through the broken window and resume your exploration.";
-	say "     [bold type]You found a bottle of water[roman type]";
+	say "     [bold type]You found a bottle of water[roman type][line break]";
 	increase carried of water bottle by 1;
 	now intelligence of Ranae is 1;		[Found drapes]
 	now Ransacked Shop is resolved;
@@ -269,7 +269,6 @@ Instead of conversing the Ranae:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if nam is "Check up on her":
 					say "[RanaeCheckUp]";
@@ -428,7 +427,6 @@ instead of fucking the Ranae:
 				say "[title entry]: [description entry]?";
 				if Player consents:
 					let nam be title entry;
-					clear the screen and hyperlink list;
 					now sextablerun is 1;
 					if nam is "Ass Worship":
 						say "[RanaeAss]";
@@ -531,15 +529,14 @@ to RanaeBind:
 					say "     You awaken some time later, only to find yourself still within Ranae's stomach. You're unsure how long you've been trapped inside of the frog, and by all means, you should be worried if she intends to digest you, but instead, you feel calm and relaxed. The pliant flesh of her churning stomach caresses every inch of your weary body, all while the soft, rhythmic beating of her heart echoes in the background, the dulcet sounds acting almost like a lullaby, further pacifying you. There's nothing but warmth, comfort, and safety within Ranae, and you eventually fall asleep again. Every time you come to, you find that you are still within the amphibian's embrace, and sometimes, you either feel Ranae cradle her filled belly or hear her words of how you're such a good servant to her before you are lulled back into restful slumber. Thoughts of time and your responsibilities disappear, replaced by nothing more than adoration and submission for your amphibian mistress, and you are more than willing to remain inside of her, even if it means that you will eventually fade away, your final act of servitude as her servant.";
 					say "     However, ending up as food for her doesn't seem to be on the menu just yet as after some more time had passed, you feel your surroundings churn violently before pushing you up and out of Ranae's stomach, and after a short trip through the constricting tunnel of her throat, you are spat out of the frog and onto the floor. Shivering from the cold and the hard ground, you already long to be returned to the warm, soft embrace of your mistress. You can see that you are back in Ranae's space in the library, and the domineering frog herself is smiling at you with both smugness and pride. 'Aww, what's the matter? Already missing being eaten by me?' she teases. 'I'll have to admit, you're absolutely delicious, and I was tempted to actually make you into my dinner. But that would be such a waste of a good servant. You've done nothing but obediently follow my orders and shower me with gifts. I'm not going to get rid all of that just for a quick meal. Don't worry though. I know how much that you loved being inside of me, and you're lucky that I like having you fill my belly, so here's how things are going to go. From now on, you're mine. You're going to be at my beck and call, twenty-four seven, which includes being my belly filler. Got it?'";
 					say "     You agree to Ranae's terms without hesitation, binding yourself to a lifetime of servitude to the domineering frog.";
-					now voreloss is true;
-					now BodyName of player is "Froggy Servant";
 					now Trixieexit is 1;
+					trigger ending "Ranae's Servant";
 					end the story saying "You became a fulltime servant for a frog.";
 				else:
 					say "     'That's a good [if player is male]boy[else]girl[end if]. No more struggling. Just give yourself to me,' Ranae says, even though your movements had ceased some time ago. The frog woman hugs her bulging belly and giggles softly. 'You know, I'm actually going to miss you. With how you kept on spoiling me, I would've loved to keep you around as my servant. Unfortunately, this city has all sorts of crazy stuff going on, and I'm not going to let some freaks take you away from me. At least this way, I get to keep you forever, not to mention having you as a tasty treat.' Ranae pauses for a moment when her stomach gurgles, and she smiles as she uses her hands to rub gentle circles over her belly. 'Rest well, my servant. You're mine now... All mine...'";
-					now voreloss is true;
-					now BodyName of player is "Frog Food";
 					now Trixieexit is 1;
+					trigger ending "Ranae Vore";
+					the Player was ended by "Vore by Ranae";
 					end the story saying "You let a frog have her way with you.";
 		else:
 			let k be 0;
@@ -601,10 +598,19 @@ say "< [bracket]-[if struggleatt > 0]X[else]-[end if][close bracket]";
 
 Section 5 - Endings
 
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Ranae Vore"	"Voreloss"	""	Ranae Vore rule	10	false
+"Ranae's Servant"	"BadEnd"	"Servant"	Ranae's Servant rule	20	false
 
-when play ends:
-	if BodyName of player is "Froggy Servant":
+This is the Ranae Vore rule:
+	if ending "Ranae Vore" is triggered:
+		the Player is vored;
+
+This is the Ranae's Servant rule:
+	if ending "Ranae's Servant" is triggered:
 		say "     When the military comes, you and Ranae are processed together. Though your subservient attitude to your froggy mistress raises a few eyebrows, the both of you are eventually deemed safe and released back into the outside world. With you in tow, Ranae is quick to make contact with her parents. The reunion is met with all sorts of surprise on the parents' side when they find that not only is their daughter now an anthropomorphic frog, but she has a much more confident and domineering attitude, especially when she introduces you as her servant. Nonetheless, they are more than happy to welcome you and their froggy daughter. With Ranae's parents both being influential business people, the frog gets a managerial position in a small company, with you as her personal assistant. While you tend to your mistress's every need, Ranae finds great success in her new role, thanks to the assertiveness that she gained. With the money Ranae rakes in from her work, you have the opportunity to live close to the lap of luxury, but instead, you find more comfort in the stomach of your mistress whenever she has you fulfil your role as her belly filler.";
+		the Player is enslaved;
 
 
 Ranae ends here.

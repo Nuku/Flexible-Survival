@@ -548,19 +548,8 @@ to say salamanderraid:
 	if fightoutcome >= 20 and fightoutcome <= 29:
 		say "     Beaten and abused by the victorious salamanders, you're dragged off by them as another prize as they escape the furious phoenix. In her desire to protect her nest, she must not notice you gone until it's far too late. You end up dragged back to the ruins where this group is nesting. There, you're fucked and molested until there's nothing left of you but another horny salamander.";
 		now humanity of Player is 0;
-		setmonster "Salamander";
-		choose row MonsterID from the Table of Random Critters;
-		now TailName of Player is "Salamander";
-		now FaceName of Player is "Salamander";
-		now SkinName of Player is "Salamander";
-		now BodyName of Player is "Salamander";
-		now CockName of Player is "Salamander";
-		attributeinfect;
-		now tail of Player is tail entry;
-		now Face of Player is face entry;
-		now Skin of Player is skin entry;
-		now Body of Player is body entry;
-		now Cock of Player is cock entry;
+		setmonster "Salamander" silently;
+		turn the Player into a "Salamander" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
 		if hellHoundLevel is 0:
 			follow the sex change rule;
 			follow the sex change rule;
@@ -604,8 +593,13 @@ to Anastasiasexchange:
 
 Section 8 - Endings
 
-when play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Anastasia's Epilogue"	"NPC"	""	Anastasia's Epilogue rule	900	false
+
+This is the Anastasia's Epilogue rule:
 	if HP of Anastasia >= 7:
+		trigger ending "Anastasia's Epilogue"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     Not long after your mind falls and you are lost to the infection, there is a fiery column which rises into the air. There is a triumphant ring to it, though also a hint of sadness. You do not notice this event, too caught up in your new, lustful existence.";
 		else:

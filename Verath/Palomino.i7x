@@ -213,8 +213,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Palomino Stallion":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Palomino Stallion Infection"	"Infection"	""	Palomino Stallion Infection rule	1000	false
+
+This is the Palomino Stallion Infection rule:
+	if Player has a body of "Palomino Stallion":
+		trigger ending "Palomino Stallion Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     Surrendering to the infection, you finally realize that you want nothing more than to be a lovely little slutty pony for your handsome male stallion. Wasting no time, you run on your new equine feet back to the club where your new master is waiting. Arriving at the club, you are happy to be welcomed into Tristian's waiting arms, and even happier when your new master lets you know what you will be doing for him from now on. You love your stallion taking you back to the dressing room and helping you into your new stage clothes, and the crowd outside goes wild when he announces your first night as the Palomino's newest stripper! You love the feeling of showing off your handsome [if Player is herm]herm[else if Player is male]male[else if Player is female]female[else]genderless[end if] body on the stage, as you dance and tease the other clubgoers using what you learned here in the club from Tristian and the other dancers.";
 			if Player is male:
@@ -231,6 +236,5 @@ when play ends:
 			say "     When the rescue finally comes, the military and civilian authorities put you and Tristian through a battery of tests and interviews before finally allowing the two of you to rejoin normal society. You both suspect that you were released so quickly not so much because they thought that you were safe and sane, but because the authorities had bigger problems to deal with, both in the fight for the city and with some of the other infected being brought in, especially given the large numbers of hyenas.";
 			say "     You and Tristian settle down in a smaller city outside Seattle and eventually open up another club catering to the goth, emo, rave, and alternative crowd. Your sexy gothy forms attract many of the more curious clubgoers. No one seems to complain when their sons, daughters, or significant others visit your club and leave with permanent changes as a reminder of their visit. The club's success and large number of repeat customers soon allows you to open a second even larger club in downtown Seattle, and soon after that the two of you are opening clubs in several other major cities.";
 			say "     The two of you soon branch out into the sex industry with [']Palomino Magazine['] and the cleaning up of an abandoned film studio to make [']Palomino Videos[']. People are soon flocking to get the monthly releases of your newest issues and videos, eager to see the photo stories of the models being converted into sexy, lusty beasts and your porn movies of the same nature. Both are hot sellers, even in a world with rampant sex, your content letting them enjoy witnessing the process and to take in every well-framed detail[if HP of Tristian > 10 and HP of Tristian < 99]. The issue and movie where Lance and his lover are converted into a slinky goth unicorn boi and a gothy Doberman boi respectively is a particularly hot item[end if]. Within ten years, the Palomino Publishing empire is the biggest name in porn, aimed directly at the lustful needs of this new world.";
-
 
 Palomino ends here.

@@ -121,20 +121,9 @@ Instead of resolving a Smashed Hive:
 						say "     The queen is dead. Long live the queen.";
 						now HP of bee girl is 5;
 						increase score by 25;
-						setmonster "Queen Bee";
+						setmonster "Queen Bee" silently;
 						choose row MonsterID from the Table of Random Critters;
-						now non-infectious entry is false;
-						now TailName of Player is "Queen Bee";
-						now FaceName of Player is "Queen Bee";
-						now SkinName of Player is "Queen Bee";
-						now BodyName of Player is "Queen Bee";
-						now CockName of Player is "Queen Bee";
-						attributeinfect;
-						now tail of Player is tail entry;
-						now Face of Player is face entry;
-						now Skin of Player is skin entry;
-						now Body of Player is body entry;
-						now Cock of Player is cock entry;
+						turn the Player into a "Queen Bee" silently;
 						if Libido of Player < libido entry, now Libido of Player is libido entry;
 						PlayerEat 25;
 						increase thirst of Player by 4;
@@ -502,14 +491,20 @@ to say beesexqueen:
 
 Section 4 - Endings
 
-when play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Honey's Epilogue"	"Companion"	"Pet"	Honey's Epilogue rule	750	false
+
+This is the Honey's Epilogue rule:
+	if Player has a non-shifting body of "Queen Bee":
+		make no decision; [content in Queen Bee]
 	if bee girl is tamed:
-		if BodyName of Player is "Queen Bee":
-			now tempnum is 0; [content in Queen Bee]
-		else if humanity of Player < 10 and BodyName of Player is "Black Equinoid":
-			now tempnum is 0; [succumb content in black equinoid]
-		else if humanity of Player < 10 and BodyName of Player is "Drone Wasp":
-			now tempnum is 0; [succumb content in Drone Wasp]
+		trigger ending "Honey's Epilogue"; [Here it states, that the ending has been played.]
+		if humanity of Player < 10 and Player has a non-shifting body of "Black Equinoid":
+			say "     Following a compulsion, you seek out other horses in the park and are soon welcomed into the herd proper. Together, you defend the park against interlopers, be they mutant or human. The exception are the bees; they're tolerated for their benefit to the local flora and their delicious honey. Because of this, Honey - who accompanied you back to the park - is welcomed by the black equinoids of the herd and lavished with attention. They show her a lovely tree surrounded by flowers, and she soon sets up her home there, becoming a new queen bee and raising a new hive. Because of your bond with her, there is a peaceful alliance between the herd and the hive. The bears are kept away, the hive thrives, and the equinoids are allowed to harvest honey in peace.";
+			say "     There are some city horses as well that come by from time to time. They seem friendly enough at first, but the bees overhear them secretly whispering about making your people into slaves and whores. Warriors at heart, the herd attacks and drives off these foul, urban horses before they can enact their unsavory schemes. With the herd's numbers and the bees on watch from the air, these interlopers are kept from raiding, and some are even captured and made to accept the proper ways of a natural, equine warrior.";
+		else if humanity of Player < 10 and Player has a non-shifting body of "Drone Wasp":
+			say "     Hearing a faint buzzing in your mind, you are drawn back to the park, followed at a distance by a worried Honey. There you meet up with several others from the wasp nest and join them. When Honey is spotted in the bushes nearby, the other drones charge in to attack to kill the rival insect, but you stop them. Still sensing a faint connection in your failing mind, you are able to coax the scared bee girl into your arms and, with the help of the others, help her to become a lovely wasp like yourselves. She moans in ecstasy, climaxing repeatedly as a new, permanent stinger grows in to replace her lost one, becomes a strong and beautiful member of the wasp nest and a lifelong companion to you.";
 		else if humanity of Player < 10:
 			say "     When you succumb and end up giving in to your instincts, Honey ends up leaving you. She buzzes off sadly into the city to find a new hive[if HP of bee girl >= 5] on her own[end if].";
 		else:

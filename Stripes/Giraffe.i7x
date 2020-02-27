@@ -7,13 +7,23 @@ Version 1 of Giraffe by Stripes begins here.
 
 nogiraffesex is a number that varies.
 
+a postimport rule: [bugfixing rules for players that import savegames]
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
+		if Name entry is "Giraffe":
+			now MonsterID is y;
+			now area entry is "Stable";
+			break;
+
 to say giraffedesc:
+	project the Figure of GiraffeHerm_soft_icon;
 	setmongender 5; [creature is herm]
-	say "     You find yourself facing off against a tall, slender giraffe humanoid. Measuring over eight feet to the top of her head, much of that height comes from her extra-long neck. Her body is covered in short bristly fur, irregular shapes of dark brown separated by a random pattern of cream, though lighter on the chest and stomach. Her head is sitting atop a thick, long neck. Her narrow face is dominated by a tapered muzzle, containing a long blue-black tongue. A pair of leaf-shaped ears constantly flick about on either side of the head and have two short, boney horns between them. Her body is slender, but toned with shapely limbs and a curvy waist that shows off her plump breasts. Her arms are elongated and slender, the joints thick and solid. Her hands are broad, ending in two fingers and a thumb each with a thick dark nail. Her legs are long, but sturdy to support her sexy body. The solid joints bent in a digitigrade stance, ending in black cloven hooves. She has a ropey, knee-length tail, ending in a tuft of black fur. Hanging between those legs, she has a massive thick, pink, flat-headed maleness tucked into a sheath that has trouble holding the hefty monster cock. Below that hangs a pair of lap-filling balls.";
+	say "     You find yourself facing off against a tall, slender giraffe humanoid. Measuring over eight feet to the top of her head, much of that height comes from her extra-long neck. Her body is covered in short bristly fur, irregular shapes of dark brown separated by a random pattern of cream, though lighter on the chest and stomach. Her head is sitting atop a thick, long neck. Her narrow face is dominated by a tapered muzzle, containing a long blue-black tongue. A pair of leaf-shaped ears constantly flick about on either side of the head and have two short, boney horns between them. Her body is slender, but toned with shapely limbs and a curvy waist that shows off her plump breasts. Her arms are elongated and slender, the joints thick and solid. Her hands are broad, ending in three fingers and a thumb each with a thick dark nail. Her legs are long, but sturdy to support her sexy body. The solid joints bent in a digitigrade stance, ending in black cloven hooves. She has a ropey, knee-length tail, ending in a tuft of black fur. Hanging between those legs, she has a massive thick, pink, flat-headed maleness tucked into a sheath that has trouble holding the hefty monster cock. Below that hangs a pair of lap-filling balls.";
 	say "     Eyeing you, the herm slides her long tongue in a disturbingly sensual display across her muzzle. 'Mmm... [one of]how about a kiss, sweetie[or]can I get a kiss, hot stuff[or]gimme some sugar, baby[or]you look like you need a kiss, am I right[or]how about some tonsil tennis, hon[at random]?' she says, leaning in uncomfortably close. From the way her cock throbs and slips a little further from her sheath, it seems that's not all she's got in mind for you.";
 
 
 to say losetogiraffe:
+	project the Figure of GiraffeHerm_hard_icon;
 	now nogiraffesex is 0;
 	if HP of Player > 0:
 		say "     Unwilling to continue to resist the giraffe's advances, you are pulled into a French kiss that dives her long, blue tongue down your throat. ";
@@ -40,6 +50,7 @@ to say losetogiraffe:
 
 
 to say beatthegiraffe:
+	project the Figure of GiraffeHerm_hard_icon;
 	say "     Having beaten the giraffe, you knock the herm to the ground. She moans softly, blue tongue hanging out as she pants for breath. ";
 	if nogiraffesex > 2:
 		say "You resist taking advantage of the fallen herm like the others before her and instead send her packing with a boot to her rear. She whimpers and rubs her sore ass as she goes off looking for someone to kiss it and make it better.";
@@ -230,8 +241,15 @@ When Play begins:
 
 
 [
-when play ends:
-	if BodyName of Player is "Template":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Giraffe Infection"	"Infection"	""	Giraffe Infection rule	1000	false
+
+This is the Giraffe Infection rule:
+	if Player has a body of "Giraffe":
+		trigger ending "Giraffe Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You succumb to your template infection.";
 		else:

@@ -49,7 +49,7 @@ to say ebwhelpvic:
 		say ".";
 		say "     Completely spent, the whelp chirps weakly and eventually flops off of you and onto the ground, the audibly wet sound of its oversized cock pulling free of your hole filling the air. After a few seconds, crawling away from it, it slowly pulls itself up and flies off into the distance. Apparently satisfied[if birthedwhelp is true] with fucking its own parent[end if], he leaves you to recover from being so thoroughly filled.";
 		if ebneuterswitch is false:
-			say "     [italic type]Forced to feel your bloated[if scalevalue of Player < 3], practically pregnant-looking[end if] belly, the effect of the creature's cum [one of]seems to linger[or]lingers[stopping] longer than it normally should. [one of]You have a bad feeling about what just happened[or][if HP of Player > 0]Here we go[else]Not[end if] again[stopping]...[roman type]";
+			say "     [italic type]Forced to feel your bloated[if scalevalue of Player < 3], practically pregnant-looking[end if] belly, the effect of the creature's cum [one of]seems to linger[or]lingers[stopping] longer than it normally should. [one of]You have a bad feeling about what just happened[or][if HP of Player > 0]Here we go[else]Not[end if] again[stopping]...[roman type][line break]";
 			now mpreghijack is true;
 			now ebwhelphijack is 2;
 			now hijackgestation is 8;
@@ -62,7 +62,7 @@ to say ebwhelpvic:
 		say ".";
 		say "     Completely spent, the whelp chirps weakly and eventually flops off of you and onto the ground, the audibly wet sound of its oversized cock pulling free of your hole filling the air. After a few seconds, crawling away from it, it slowly pulls itself up and flies off into the distance. Apparently satisfied[if birthedwhelp is true] with fucking its own parent[end if], he leaves you to recover from being so thoroughly filled.";
 		if ebneuterswitch is false:
-			say "     [italic type]Forced to feel your bloated[if scalevalue of Player < 3], practically pregnant-looking[end if] belly, the effect of the creature's cum [one of]seems to linger[or]lingers[stopping] longer than it normally should. [one of]You have a bad feeling about what just happened[or][if HP of Player > 0]Here we go[else]Not[end if] again[stopping]...[roman type]";
+			say "     [italic type]Forced to feel your bloated[if scalevalue of Player < 3], practically pregnant-looking[end if] belly, the effect of the creature's cum [one of]seems to linger[or]lingers[stopping] longer than it normally should. [one of]You have a bad feeling about what just happened[or][if HP of Player > 0]Here we go[else]Not[end if] again[stopping]...[roman type][line break]";
 			now preghijack is true;
 			now ebwhelphijack is 1;
 			now hijackgestation is 8;
@@ -73,7 +73,7 @@ to say ebwhelpvic:
 		say "     Your[if HP of Player < 1] forced[end if] attendance is eventually rewarded when the whelp cries out, searing rod bulging significantly and your insides are doused with successive barrages of the monsters oversized load. It seems likely so much that you're not rightly sure how the little thing could even carry it all, stomach [if scalevalue of Player < 3]visibly bulging[else]aching painfully[end if] with the glowing precum.";
 		say "     So exhausted and spent, the whelp chittering feebly as he catches his breath, he doesn't seem to notice or care that you're still being forced to deepthroat his entire organ, only choosing to finally pull free when he flies off into the distance. Finally left to recover and gasp for air, you groan and writhe from the excessive amount of cum you were forced to swallow. Eventually, you climb to your feet finally free to go about your business once more.";
 		if ebwhelphijack > 0:
-			say "     [italic type]Still bloated from the original whelp's violation, consuming all this burning fluid seems to have worsened your situation by accelerating your twisted offspring's growth...[roman type]";
+			say "     [italic type]Still bloated from the original whelp's violation, consuming all this burning fluid seems to have worsened your situation by accelerating your twisted offspring's growth...[roman type][line break]";
 			decrease hijackgestation by 1;
 
 to say ebwhelpdef:
@@ -106,13 +106,17 @@ When Play begins:
 	now Species Name entry is "Ebonflame Dragon"; [name of the overall species of the infection, used for children, ...]
 	add "Ebonflame Whelp" to infections of ReptileList;
 	add "Ebonflame Whelp" to infections of FurryList;
+	add "Ebonflame Whelp" to infections of FeralList;
 	add "Ebonflame Whelp" to infections of MythologicalList;
 	add "Ebonflame Whelp" to infections of MaleList;
+	add "Ebonflame Whelp" to infections of BarbedCockList;
 	add "Ebonflame Whelp" to infections of TaperedCockList;
 	add "Ebonflame Whelp" to infections of InternalCockList;
 	add "Ebonflame Whelp" to infections of BipedalList;
 	add "Ebonflame Whelp" to infections of FlightList;
 	add "Ebonflame Whelp" to infections of TailList;
+	add "Ebonflame Whelp" to infections of OviImpregnatorList;
+	add "Ebonflame Whelp" to infections of FirebreathList;
 	add "Ebonflame Whelp" to infections of TailweaponList;
 	now Name entry is "Ebonflame Whelp";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
@@ -271,9 +275,16 @@ When Play begins:
 
 Section 3 - Miscellaneous
 
-when play ends:
-	if BodyName of Player is "Ebonflame Whelp" and humanity of Player < 10:
+[
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Ebonflame Whelp Infection"	"Infection"	""	Ebonflame Whelp Infection rule	1000	false
+
+This is the Ebonflame Whelp Infection rule:
+	if Player has a body of "Ebonflame Whelp" and humanity of Player < 10:
+		trigger ending "Ebonflame Whelp Infection";
 		say "NA." [placeholder for bound state loss]
+]
 
 to ebwhelphijackroutine:
 	LineBreak;

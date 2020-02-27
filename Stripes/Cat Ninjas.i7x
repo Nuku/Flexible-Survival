@@ -283,8 +283,16 @@ this is the ninjastar rule:
 		else:
 			say "The [one of]feline ninja[or]cat ninja[or]ninja[as decreasingly likely outcomes] [one of]flicks a shuriken at you that narrowly misses[or]pulls a ninja star from his dark robes, but you manage to evade it[or]tries to hit you with a surprise shuriken strike, but you catch the motion of his hand and are ready to dodge[or]throws a ninja star he pulls from his robes, but misses[purely at random]!";
 
-when play ends:
-	if BodyName of Player is "Ninja Cat":
+
+Section 4 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Ninja Cat Infection"	"Infection"	""	Ninja Cat Infection rule	1000	false
+
+This is the Ninja Cat Infection rule:
+	if Player has a body of "Ninja Cat":
+		trigger ending "Ninja Cat Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is pure:
 				if Breast Size of Player > 0:

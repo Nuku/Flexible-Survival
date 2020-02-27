@@ -151,11 +151,11 @@ to say velosdesc:
 	say "     A pure, pearl white in color, his form seems scaled, though you're not sure if the scales are false, as you've never seen him shed them, to say nothing of the difficulty in determining its proper texture, given his perpetually slick frame. Thankfully, the odorless lubricant is not overly abundant, and only becomes a slight mess around where it accumulates - particularly, your anal ring.";
 	say "     He generally doesn't like being touched all that much, but your occasional prodding does seem to offer a reciprocal sensation onto you, inferring that your senses are tied - at least at the base level. This would also infer that any harm done to him would be received in kind, and it's unclear if it works both ways; that he feels what you feel.";
 	if level of velos is 1:
-		say "[italic type]Demeanor-wise, he doesn't seem to regard you all that well, and is otherwise a little belligerent towards you.[roman type]";
+		say "[italic type]Demeanor-wise, he doesn't seem to regard you all that well, and is otherwise a little belligerent towards you.[roman type][line break]";
 	if level of velos is 2:
-		say "[italic type]Demeanor-wise, he seems to regard you fairly well, and is a bit less perturbed by having himself be summoned before you.[roman type]";
+		say "[italic type]Demeanor-wise, he seems to regard you fairly well, and is a bit less perturbed by having himself be summoned before you.[roman type][line break]";
 	if level of velos is 3:
-		say "[italic type]Demeanor-wise, he seems to put you in high regard, more than happy to be on the receiving end of your attention.[roman type]";
+		say "[italic type]Demeanor-wise, he seems to put you in high regard, more than happy to be on the receiving end of your attention.[roman type][line break]";
 
 
 Instead of conversing the Velos:

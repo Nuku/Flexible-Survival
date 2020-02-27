@@ -243,8 +243,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Flesh Blob":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Flesh Blob Infection"	"Infection"	""	Flesh Blob Infection rule	1000	false
+
+This is the Flesh Blob Infection rule:
+	if Player has a body of "Flesh Blob":
+		trigger ending "Flesh Blob Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if level of Player > 10:
 				say "     As your mind becomes increasingly lost in the strange new instincts taking over, you wander off into the city. After assaulting and taking sexual pleasure from some of the creatures you find, you can't quite seem to find complete satisfaction. After a few attempts, you catch a fresh victim, but don't let them go this time, keeping it up while pressing your malleable body against theirs. As you keep going at it, your body loses more of its consistency, turning into an undulating, rippling blob of flesh and lust that engulfs your prey whole.";

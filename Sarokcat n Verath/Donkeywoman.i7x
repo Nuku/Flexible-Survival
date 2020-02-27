@@ -249,9 +249,15 @@ When Play begins:
 ]
 
 
+Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Donkeywoman":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Donkeywoman Infection"	"Infection"	""	Donkeywoman Infection rule	1000	false
+
+This is the Donkeywoman Infection rule:
+	if Player has a body of "Donkeywoman":
+		trigger ending "Donkeywoman Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     Finally unable to deny your body's desires any longer, you return to the stables and the comfort and company of your fellow donkeys, sure that they will understand your growing desire to dominate and be dominated. Once back at the Stables and with the scent of leather and equine sex filling your head, you feel even more aroused than ever as you head out into the hallways looking for some fun. Almost immediately you run into an extremely sexy looking jenny, her finely tooled leather a cut above the rest, and the glint in her eye as she looks you up and down makes you shudder with anticipation. The sexy beast wastes no time in leading you to her own personal tack room, where several sexy looking donkeys are already bound and waiting to be played with. The sight of all that bound equine flesh makes you quiver with excitement and arousal. Seeing your reaction, the sexy donkey mistress grins, seemingly pleased at how you are adapting, and soon she is showing you just how to be a proper little top for all the other donkeys, by topping you herself like a proper mistress.";
 			say "     Soon you find your place with your new mistress as her assistant. She shows you how to be a proper dom and teaches you that most people are so much happier once they learn to embrace their own submissive natures, something you can certainly understand from personal experience as your mistress's favorite fucktoy and assistant! After a while you show a positive talent for the work, and she lets you start topping some of her pets while she watches, eventually even helping you start training your own little pets to be properly submissive to your needs. Soon after she helps you set up your own little playroom. Although it seems rather empty of lovely moaning donkey pets for a little while, it soon turns out you got yourself set up just in time, as a large influx of soldiers finds the red light district, and some of them even make their way into the Stables. Before long, you have a lovely room full of bound and helpless soldiers, naked and waiting for you to teach them to embrace their submissive natures and serve your every whim... and you just can't wait to get started!";

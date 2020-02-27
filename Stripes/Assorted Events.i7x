@@ -700,7 +700,7 @@ Instead of resolving a Concession Stand:
 				wait for any key;
 				now humanity of Player is 9;
 				increase foodvendor by 1;
-				now TailName of Player is "Shifting Pet";
+				now TailName of Player is "Shifting Pet"; [NOTE: I guess, this could be removed without issues when the GameEndings table is finished (@Stadler#3007)]
 				now FaceName of Player is "Shifting Pet";
 				now SkinName of Player is "Shifting Pet";
 				now BodyName of Player is "Shifting Pet";
@@ -709,6 +709,7 @@ Instead of resolving a Concession Stand:
 				now bodydesc of Player is "malleable";
 				now bodytype of Player is "ever-changing";
 				now SleepRhythm of Player is 0;
+				trigger ending "Ever-Shifting Pet";
 				end the story saying "You submitted to the shifting man at the fair, becoming his slutty pet.";
 				now battleground is "void";
 				wait for any key;
@@ -720,8 +721,13 @@ Instead of resolving a Concession Stand:
 			now Resolution of Concession Stand is 99;	[Refused salesman's offer]
 			now Concession Stand is resolved;
 
-when play ends:
-	if foodvendor is 4:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Ever-Shifting Pet"	"BadEnd"	"Pet"	Ever-Shifting Pet rule	20	false
+"Fun-Loving Beach Toy"	"BadEnd"	""	Fun-Loving Beach Toy rule	20	false
+
+This is the Ever-Shifting Pet rule:
+	if ending "Ever-Shifting Pet" is triggered:
 		if "Male Preferred" is listed in feats of Player:
 			say "     Your shapeshifting master is true to his word and keeps you as a lustful pet, fucking you in a myriad of ways and in an infinite combination of bodies. He changes you again and again, spending days or weeks as canines, felines, equines and every other creature. Almost fully human at times to completely animal at others. Any form his mind desires and always changing you to another before either of you can become bored of it. You smile happily as he ensnares others to add to his harem over time, giving you playmates to enjoy. He alters them to suit his whims as well, creating even greater variety in the pleasures for you to experience.";
 		else if "Female Preferred" is listed in feats of Player:
@@ -744,7 +750,11 @@ when play ends:
 				say ". Some of the fel beasts allow you to breed the hellhound bitches, but only when they are mounting you at the same time. Regardless of your form, you always sire pure hellspawn in these hellhounds. When they eventually grow strong, they join the others in slaking their sexual urges upon your mutable body until the ends of time.";
 			else:
 				say ". The fel beasts breed you incessantly, filling your womb with litters of their spawn. Regardless of your form, they are always pure hellspawn like their brethren. They nurse from your breasts and grow strong, eventually joining the others in mating you until the ends of time.";
-		stop the action;
+		the Player is lost;
+
+This is the Fun-Loving Beach Toy rule:
+	if ending "Fun-Loving Beach Toy" is triggered:
+		the Player is gone;
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -844,22 +854,8 @@ Instead of resolving a Beach Party:
 		SanLoss 20;
 		increase morale of Player by 5;
 		[puts Bottlenose Toy as lead monster for infection and impregnation]
-		repeat with y running from 1 to number of filled rows in Table of Random Critters:
-			choose row y in Table of Random Critters;
-			if Name entry is "Bottlenose Toy":
-				now MonsterID is y;
-				break;
-		now TailName of Player is "Bottlenose Toy";
-		now FaceName of Player is "Bottlenose Toy";
-		now SkinName of Player is "Bottlenose Toy";
-		now BodyName of Player is "Bottlenose Toy";
-		now CockName of Player is "Bottlenose Toy";
-		attributeinfect;
-		now tail of Player is tail entry;
-		now Face of Player is face entry;
-		now Skin of Player is skin entry;
-		now Body of Player is body entry;
-		now Cock of Player is cock entry;
+		setmonster "Bottlenose Toy" silently;
+		turn the Player into a "Bottlenose Toy";
 		if hellHoundLevel is 0:
 			follow the sex change rule;
 			follow the sex change rule;
@@ -867,6 +863,7 @@ Instead of resolving a Beach Party:
 		if humanity of Player < 10:
 			say ". With your mind fading away, you giggle happily and bound off into the water to play with your new friends as you forget yourself entirely and become a fun-loving beach toy.";
 			wait for any key;
+			trigger ending "Fun-Loving Beach Toy";
 			end the story saying "There are no thoughts left in your air-filled head but that of playing at the beach.";
 			now battleground is "void";
 			wait for any key;

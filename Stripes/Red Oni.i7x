@@ -227,14 +227,23 @@ Definition: a person is redonibodied:
 
 Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "Red Oni" and HP of Hayato is 96:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Red Oni with Hayato"	"NPCSharedInfection"	""	Red Oni with Hayato rule	900	false
+["Red Oni Infection"	"Infection"	""	Red Oni Infection rule	1000	false]
+
+This is the Red Oni with Hayato rule:
+	if Player has a body of "Red Oni" and HP of Hayato is 96:
+		trigger ending "Red Oni with Hayato"; [Here it states, that the ending has been played.]
 		say "     You and Hayato are added to the ranks of the Great Oni's clan. Your lusts for sex, destruction and flesh are almost all-encompassing. Like your brethren, you revel in performing any evil that amuses you. The oni of the clan often fight with one another, the victor claiming the other's body for sex. There is little animosity to this, it is all done for the fun of battle and of sex. As most of the clan aren't allowed to roam freely while the Great Oni marshals his forces, this allows you all to vent some steam and become stronger fighters. The Great Oni watches many of these matches from atop his throne of bones and hides while the latest slave prize his minions have brought him services the fearsome red giant.";
 		say "     After much waiting, the Great Oni unleashes you all when the chaos in the city reaches its peak with the military cordon starting to collapse. The surprise onslaught of a horde of battle-eager, sex-hungry oni pouring out all at once causes huge devastation. Caught unawares, your clan rips through military and mutant forces alike, infecting many, but often just crushing your foes and moving on. When the oni rampage finally stops several days later, much of the city has become the domain of the Great Oni. Those defeated are either transformed, enslaved, killed or consumed. Others of your kind have spread out of the city to either become solitary oni or form clans of their own.";
 
 [
-when play ends:
-	if BodyName of Player is "Red Oni":
+This is the Red Oni Infection rule:
+	if ending "Red Oni with Hayato" is triggered:
+		make no decision;
+	if Player has a body of "Red Oni":
+		trigger ending "Red Oni Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You succumb to your template infection.";
 		else:

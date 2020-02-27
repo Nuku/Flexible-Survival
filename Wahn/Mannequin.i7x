@@ -193,8 +193,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Mannequin":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Mannequin Infection"	"Infection"	""	Mannequin Infection rule	1000	false
+
+This is the Mannequin Infection rule:
+	if Player has a body of "Mannequin":
+		trigger ending "Mannequin Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     As you succumb to the infection, you drift aimlessly through the city and go for anyone crossing your path, overpowering them and absorbing how they look. Being in the form for an unfortunate soldier whose shape you stole earlier almost gets you out of the city when the military finally moves in, but following your unrestrained urges you try assimilating a medic who wants to check you out. Tasered till you collapse, you end up in a small cell and later get shipped to a research lab, where scientists study how you constantly shift and change. As a quite valuable asset for espionage developments, you never leave that facility again...";
 			stop the action; [no other endings - player removed from the city]

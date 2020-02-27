@@ -92,9 +92,11 @@ When Play begins:
 	now Species Name entry is "Latex Fox"; [name of the overall species of the infection, used for children, ...]
 	add "Latex Fox" to infections of VulpineList;
 	add "Latex Fox" to infections of FurryList;
+	add "Latex Fox" to infections of FeralList;
 	add "Latex Fox" to infections of LatexList;
 	add "Latex Fox" to infections of MaleList;
 	add "Latex Fox" to infections of TaperedCockList;
+	add "Latex Fox" to infections of KnottedCockList;
 	add "Latex Fox" to infections of SheathedCockList;
 	add "Latex Fox" to infections of BipedalList;
 	add "Latex Fox" to infections of TailList;
@@ -255,8 +257,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Latex Fox":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Latex Fox Infection"	"Infection"	""	Latex Fox Infection rule	1000	false
+
+This is the Latex Fox Infection rule:
+	if Player has a body of "Latex Fox":
+		trigger ending "Latex Fox Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     Driven mad with your new, rubbery instincts, you leave the bunker and wander the city, looking for further victims";
 			if Player is male:

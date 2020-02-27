@@ -71,7 +71,7 @@ Instead of using the rubber sneakers:
 			say "     ([link]N[as]n[end link]) - Better listen to your instinct.";
 			if Player consents:
 				say "     You put the rubber sneakers on. [one of]The shoes are surprisingly comfortable. Your feet feel warm, comfortable and, most of all, so light. Your mind fill with confidence. As you take a few steps, you feel small tingles going up your legs. Is it because you need to get used to them? At least it does not feel uncomfortable or painful. Actually, it feels quite pleasurable.[or]The pleasurable tingles come back as soon as you take a few steps in your rubbery footwear.[stopping]";
-				say "     [bold type]With these rubber sneakers on, you feel like you can outrun anything.[roman type]";
+				say "     [bold type]With these rubber sneakers on, you feel like you can outrun anything.[roman type][line break]";
 				now the rubber sneakers are equipped;
 
 Section 3 - Everyturn rule
@@ -105,7 +105,7 @@ an everyturn rule:
 			now FaceName of Player is "Rubber Puma";
 			now Face of Player is "feline, and in the distinctive shape of a puma";
 		else:
-			say "     The rubber puma infection, having spread to your entire body, now starts to affect your mind, and sexually stimulates you. [bold type]Your libido increases.[roman type]";
+			say "     The rubber puma infection, having spread to your entire body, now starts to affect your mind, and sexually stimulates you. [bold type]Your libido increases.[roman type][line break]";
 			LibidoBoost 20;
 			if Libido of Player > 100:
 				say "     The arousal becomes too strong for you to resist. Abiding to the stimulation of the sneakers, you keep walking, hoping to orgasm quickly. But this is not enough stimulation for the shoes, which keep you tantalizingly in the edge. Groaning, you cede and begin to jog at a brisk pace. The tingles raise in intensity, until it feels like your [if Player is male]cock[smn] [ismv][else]cunt[sfn] [isfv][end if] covered with electrodes, shocking you each time one of your feet hits the ground. You unconsciously run faster and faster, until a final stride manages to make you go. You arch your back and roar in orgasmic joy as you cum hard, splashing the floor under and in front of you with your sexual fluids. You eventually stop to feel the need to run, and stop your jogging. While you get your breath back, you look back, and can only admire the long trail you made during your climax.";
@@ -114,8 +114,13 @@ an everyturn rule:
 
 Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "Rubber Puma":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Rubber Puma Infection"	"Infection"	""	Rubber Puma Infection rule	1000	false
+
+This is the Rubber Puma Infection rule:
+	if Player has a body of "Rubber Puma":
+		trigger ending "Rubber Puma Infection";
 		if humanity of Player < 10:
 			say "     Having never found a way to remove the infected sneakers (or tried to), you succumb, body and mind, to the Rubber Puma infection. You elude the military countless times, thanks to your extraordinary athletic abilities, until your very existence becomes an urban legend. Soon, every jogger and sportsman of the area know of the Rubber Puma. They say that, if you run or exercise alone, during the night, the Puma chases you. [subjpro_cap of Player] outruns you; [subjpro of Player] always do. Then, [subjpro of Player] molests you all night, before leaving by your body a pair of rubber sport shoes. They say that those who choose to wear these shoes never come back.";
 		else:

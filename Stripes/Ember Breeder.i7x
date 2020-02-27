@@ -85,14 +85,17 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	add "Ember Breeder" to infections of CanineList;
 	add "Ember Breeder" to infections of ReptileList;
 	add "Ember Breeder" to infections of FurryList;
 	add "Ember Breeder" to infections of MagicalList;
 	add "Ember Breeder" to infections of HermList;
 	add "Ember Breeder" to infections of BarbedCockList;
+	add "Ember Breeder" to infections of KnottedCockList;
 	add "Ember Breeder" to infections of SheathedCockList;
 	add "Ember Breeder" to infections of BipedalList;
 	add "Ember Breeder" to infections of TailList;
+	add "Ember Breeder" to infections of OviImpregnatorList;
 	now Name entry is "Ember Breeder"; [Name of your new Monster]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
@@ -251,8 +254,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Ember Breeder":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Ember Breeder Infection"	"Infection"	""	Ember Breeder Infection rule	1000	false
+
+This is the Ember Breeder Infection rule:
+	if Player has a body of "Ember Breeder":
+		trigger ending "Ember Breeder Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     Unable to hold out any longer, the infection affects your mind enough that you succumb to your new instincts and head off into the city in search of sexual satisfaction. You wander directionless through the wild city until you are found by ";
 			let T be a random number between 1 and 3;

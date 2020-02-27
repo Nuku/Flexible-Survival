@@ -398,10 +398,15 @@ to say garrettinfect:
 
 Section 6 - Endings
 
-when play ends:
-	if BodyName of Player is "Blue Gryphon Herm" or BodyName of Player is "Feral Gryphon":
-		now lasthgryphon_TG is lasthgryphon_TG; [do nothing - see those forms for endings]
-	else if HP of Garrett >= 7 and humanity of Player >= 10:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Garrett's Epilogue"	"NPC"	""	Garrett's Epilogue rule	900	false
+
+This is the Garrett's Epilogue rule:
+	if Player has a non-shifting body of "Blue Gryphon Herm" or Player has a non-shifting body of "Feral Gryphon":
+		make no decision; [do nothing - see those forms for endings]
+	if HP of Garrett >= 7 and humanity of Player >= 10:
+		trigger ending "Garrett's Epilogue"; [Here it states, that the ending has been played.]
 		say "     Some time after you settle into your new life, you notice a new product on the market - he-gryphon milk. The musky, milky fluid (now microwaved to be non-infectious) is marketed as an exotic drink that temporarily stimulates and enhances male-on-male pleasure in the consumer. It pleases you to see that Garrett's product has become somewhat of a success, especially among the gay community and with guys looking for that little boost to help them try how things are on the fabulous side of the fence[if Player is puremale]. You pick some up on the rare occasion you want to inject a little extra oomph into some hot gay fun you're planning[end if].";
 
 

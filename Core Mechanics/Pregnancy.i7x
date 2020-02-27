@@ -98,6 +98,20 @@ callovi is a truth state that varies. callovi is usually false; [true = ovi preg
 
 Chapter 2 - Pregnancy/Birth Detailing and Protocols
 
+to decide which text is random child gender:
+	let GenderList be { "male", "male", "male", "female", "female", "female" };
+	if HermList is not warded and HermList is not banned:
+		add { "herm", "herm" } to GenderList;
+	if TransList is not warded and TransList is not banned:
+		add { "trans male", "trans female" } to GenderList;
+	let ChildGenderRoll be a random number from 1 to the number of entries in GenderList;
+	decide on "[entry ChildGenderRoll of GenderList]";
+
+to decide which text is random child personality:
+	let PersonalityList be { "friendly", "playful", "mean", "curious", "stubborn", "independent", "sassy", "assertive", "meek", "extroverted", "introverted", "mischievious" };
+	let ChildPersonalityRoll be a random number from 1 to the number of entries in PersonalityList;
+	decide on "[entry ChildPersonalityRoll of PersonalityList]";
+
 to pregprotocol:
 	if ebgatorhijack > 0 or ebwhelphijack > 0:
 		decrease hijackgestation by 1;
@@ -240,7 +254,7 @@ to detailbirth:
 		if Player is female and pregtype < 2:
 			if "All-Mother's Blessing" is listed in feats of Player:
 				say "     A radiant glow starts to spread over your belly, settling into the shape of a five-pointed star. Any sense of discomfort brought on by the impending birth vanishes without a trace as pleasant warmth suffuses your whole being. All on their own, your arms come up in a holding pose, and as they do, the [if ovipregnant is true]large egg that has[else]two wolf pups that have[end if] been growing inside of you suddenly appear in your grasp. After such an effortless birth, you joyfully hug your offspring in a caring embrace.";
-			else if Playercanub is true:
+			else if Player can UB:
 				say "     The powerful muscles in your altered, stretchable cunt have little difficulty with the birth, an act that becomes quite pleasurable for you. You simply recline and relax, letting your instincts take over as you easily push out the [if ovipregnant is true]large egg[else]two slimy wolf pups[end if] from your [bodytype of Player] body. They slip out almost effortlessly along your well-lubricated tunnel, ready to be welcomed in your caring embrace.";
 			else if Cunt Tightness of Player > 10:
 				say "     Your [descr] sex almost laughs at the idea of birth. You recline and concentrate, and your mutated [bodytype of Player] body pushes the [if ovipregnant is true]large egg[else]two slimy wolf pups[end if] almost effortlessly out of your well-lubricated tunnel, ready to be welcomed in your caring embrace.";
@@ -276,11 +290,11 @@ to detailbirth:
 			say "     There is a shifting in your lower belly as your special incubation chamber opens, releasing something large and heavy into your bowels. With the completion of your unusual pregnancy fast approaching, you settle without much choice, breathing quickly as your body spasms in readiness.";
 		follow cunt descr rule;
 		if Player is female and pregtype < 2:
-			if Playercanub is true and ubpreg is not "false":
+			if Player can UB and ubpreg is not "false":
 				say "     Your altered, stretchable cunt with its powerful muscles quiver in echo to the pleasure you felt when it earlier consumed the [ubpreg] now leaving your womb[if ovipregnant is true] as a large egg[end if]. You recline and concentrate, feeling your mutated [bodytype of Player] body easily slipping your new child from it. Again, there is some effort, but it is far easier as they slip along your well-lubricated tunnel to enter your caring embrace.";
 			else if "All-Mother's Blessing" is listed in feats of Player:
 				say "     A radiant glow starts to spread over your belly, settling into the shape of a five-pointed star. Any sense of discomfort brought on by the impending birth vanishes without a trace as pleasant warmth suffuses your whole being. All of their own, your arms come up in a holding pose, and as they do, the [if ovipregnant is true]large egg[else]child[end if] that has been growing inside you suddenly appears in your grasp. After such an effortless birth, you joyfully hug your offspring in a caring embrace.";
-			else if Playercanub is true:
+			else if Player can UB:
 				say "     Your altered, stretchable cunt with its powerful muscles have little difficulty with the birth, an act that becomes quite pleasurable for you. You simply recline and relax, letting your instincts take over, slipping the [if ovipregnant is true]large egg[else]child[end if] easily free from your [bodytype of Player] body. They slip almost effortlessly along your well lubricated tunnel to reach your caring embrace.";
 			else if Cunt Tightness of Player > 10:
 				say "     Your [descr] sex almost laughs at the idea of birth. You recline and concentrate and can feel your mutated [bodytype of Player] body easily slipping the [if ovipregnant is true]large egg[else]child[end if] free of you, slipping almost effortlessly along your well lubricated tunnel to reach your caring embrace.";
@@ -294,7 +308,7 @@ to detailbirth:
 				decrease morale of Player by 10;
 		else:
 			let ubpreggers be 0;
-			if Playercanub is true and ubpreg is not "false", now ubpreggers is 1;
+			if Player can UB and ubpreg is not "false", now ubpreggers is 1;
 			if "All-Mother's Blessing" is listed in feats of Player:
 				say "     A radiant glow starts to spread over your belly, settling into the shape of a five-pointed star. Any sense of discomfort brought on by the impending birth vanishes without a trace as pleasant warmth suffuses your whole being. All of their own, your arms come up in a holding pose, and as they do, the large egg[if ubpreggers is 1] now encapsulating the engulfed [ubpreg][end if] that had been inside you suddenly appears in your grasp. After such an effortless birth, you joyfully hug your offspring in a caring embrace.";
 				increase mpregcount by 1;
@@ -329,33 +343,7 @@ To Birth:
 						if HeadSpeciesName of Child is TailSpeciesName of Child:
 							now IsPureblood is true;
 	[gender]
-	let ChildGender be "male";
-	let ChildGenderRoll be a random number from 1 to 10;
-	if HermList is warded or HermList is banned and (ChildGenderRoll is 7 or ChildGenderRoll is 8):
-		now ChildGenderRoll is a random number from 1 to 6;
-	if TransList is warded or TransList is banned and (ChildGenderRoll is 9 or ChildGenderRoll is 10):
-		now ChildGenderRoll is a random number from 1 to 6;
-	if ChildGenderRoll is:
-		-- 1:
-			now ChildGender is "male";
-		-- 2:
-			now ChildGender is "male";
-		-- 3:
-			now ChildGender is "male";
-		-- 4:
-			now ChildGender is "female";
-		-- 5:
-			now ChildGender is "female";
-		-- 6:
-			now ChildGender is "female";
-		-- 7:
-			now ChildGender is "herm";
-		-- 8:
-			now ChildGender is "herm";
-		-- 9:
-			now ChildGender is "trans male";
-		-- 10:
-			now ChildGender is "trans female";
+	let ChildGender be random child gender;
 	[override for special species with gender bias - expand HERE for new species]
 	if Child has a body of "Platypus" and a random chance of 9 in 10 succeeds:
 		now ChildGender is "male";
@@ -381,33 +369,7 @@ To Birth:
 	let IsFeral be false;
 	if "Wild Womb" is listed in feats of Player:
 		now IsFeral is true;
-	let ChildPersonality be "";
-	let ChildPersonalityRoll be a random number from 1 to 12;
-	if ChildPersonalityRoll is:
-		-- 1:
-			now ChildPersonality is "friendly";
-		-- 2:
-			now ChildPersonality is "playful";
-		-- 3:
-			now ChildPersonality is "mean";
-		-- 4:
-			now ChildPersonality is "curious";
-		-- 5:
-			now ChildPersonality is "stubborn";
-		-- 6:
-			now ChildPersonality is "independent";
-		-- 7:
-			now ChildPersonality is "sassy";
-		-- 8:
-			now ChildPersonality is "assertive";
-		-- 9:
-			now ChildPersonality is "meek";
-		-- 10:
-			now ChildPersonality is "extroverted";
-		-- 11:
-			now ChildPersonality is "introverted";
-		-- 12:
-			now ChildPersonality is "mischievious";
+	let ChildPersonality be random child personality;
 	let PlayerRelationship be "indifferent";
 	if IsFeral is true:
 		if a random chance of 1 in 2 succeeds:
@@ -428,7 +390,7 @@ To Birth:
 		now HasMelanism is true;
 	[On to the birthing]
 	LineBreak;
-	if (playercanub is true and ubpreg is not "false") or snakehijack > 0: [Unbirth and Snake Hijack]
+	if (Player can UB and ubpreg is not "false") or snakehijack > 0: [Unbirth and Snake Hijack]
 		if Player is female and pregtype < 2:
 			if Nipple Count of Player > 0:
 				say "     Your child [if ovipregnant is true]pushes free of the flexible shell enclosing it and you gather it into your arms so it may suckle[else]suckles[end if] at your [breast size desc of Player] breast. Strange sensations sweep over your [bodytype of Player] body as it drinks down its new mother's milk. Having regressed partially during their time in your womb, they grow back to maturity while suckling[if IsFeral is true], giving you a dark sense of fulfillment[else], further strengthening their bond to you[end if]. They have not been left unchanged by their incubation within you";
@@ -627,7 +589,7 @@ To Birth:
 		say "[bold type]Please name your ([ChildPersonality], [ChildGender]) child: [roman type]";
 		get typed command as playerinput;
 		now Name of Child is playerinput;
-		if (playercanub is true and ubpreg is not "false") or snakehijack > 0: [Unbirth and Snake Hijack]
+		if (Player can UB and ubpreg is not "false") or snakehijack > 0: [Unbirth and Snake Hijack]
 			if IsFeral is true:
 				if snakehijack > 0:
 					say "     Retaining its feral nature, it departs to stalk the city once more, leaving you to recover from the ordeal of childbirth. At the very least, its regression doesn't necessarily raise the number of creatures in the city, but you worry over who might end up a victim to that creature next";
@@ -743,98 +705,14 @@ To impregnate with (x - text):
 				stop the action;
 		now gestation of Child is a random number from 24 to 48;
 		[making sure all body parts are available]
-		let Impregnator be a person;
-		SetInfectionsOf Impregnator to infections of Player;
+		SetInfectionsOf Impregnatee to infections of Player;
+		SetInfectionsOf Impregnator to x;
 		if "Breeding True" is listed in feats of Player: [child will always look like the father]
-			now HeadName of Child is x;
-			now TorsoName of Child is x;
-			now BackName of Child is x;
-			now ArmsName of Child is x;
-			now LegsName of Child is x;
-			now AssName of Child is x;
-			now TailName of Child is x;
-			if Species Name entry is not "":
-				now HeadSpeciesName of Child is Species Name entry;
-				now TorsoSpeciesName of Child is Species Name entry;
-				now BackSpeciesName of Child is Species Name entry;
-				now ArmsSpeciesName of Child is Species Name entry;
-				now LegsSpeciesName of Child is Species Name entry;
-				now AssSpeciesName of Child is Species Name entry;
-				now TailSpeciesName of Child is Species Name entry;
-			else:
-				now HeadSpeciesName of Child is Name entry;
-				now TorsoSpeciesName of Child is Name entry;
-				now BackSpeciesName of Child is Name entry;
-				now ArmsSpeciesName of Child is Name entry;
-				now LegsSpeciesName of Child is Name entry;
-				now AssSpeciesName of Child is Name entry;
-				now TailSpeciesName of Child is Name entry;
-		else if "They Have Your Eyes" is listed in feats of Player: [child will always look like the player]
 			SetInfectionsOf Child to infections of Impregnator;
+		else if "They Have Your Eyes" is listed in feats of Player: [child will always look like the player]
+			SetInfectionsOf Child to infections of Impregnatee;
 		else: [random choosing]
-			if a random chance of 1 in 2 succeeds:
-				now HeadName of Child is Name entry;
-				if Species Name entry is not "":
-					now HeadSpeciesName of Child is Species Name entry;
-				else:
-					now HeadSpeciesName of Child is Name entry;
-			else:
-				now HeadName of Child is HeadName of Impregnator;
-				now HeadSpeciesName of Child is HeadSpeciesName of Impregnator;
-			if a random chance of 1 in 2 succeeds:
-				now TorsoName of Child is Name entry;
-				if Species Name entry is not "":
-					now TorsoSpeciesName of Child is Species Name entry;
-				else:
-					now TorsoSpeciesName of Child is Name entry;
-			else:
-				now TorsoName of Child is TorsoName of Impregnator;
-				now TorsoSpeciesName of Child is TorsoSpeciesName of Impregnator;
-			if a random chance of 1 in 2 succeeds:
-				now BackName of Child is Name entry;
-				if Species Name entry is not "":
-					now BackSpeciesName of Child is Species Name entry;
-				else:
-					now BackSpeciesName of Child is Name entry;
-			else:
-				now BackName of Child is BackName of Impregnator;
-				now BackSpeciesName of Child is BackSpeciesName of Impregnator;
-			if a random chance of 1 in 2 succeeds:
-				now ArmsName of Child is Name entry;
-				if Species Name entry is not "":
-					now ArmsSpeciesName of Child is Species Name entry;
-				else:
-					now ArmsSpeciesName of Child is Name entry;
-			else:
-				now ArmsName of Child is ArmsName of Impregnator;
-				now ArmsSpeciesName of Child is ArmsSpeciesName of Impregnator;
-			if a random chance of 1 in 2 succeeds:
-				now LegsName of Child is Name entry;
-				if Species Name entry is not "":
-					now LegsSpeciesName of Child is Species Name entry;
-				else:
-					now LegsSpeciesName of Child is Name entry;
-			else:
-				now LegsName of Child is LegsName of Impregnator;
-				now LegsSpeciesName of Child is LegsSpeciesName of Impregnator;
-			if a random chance of 1 in 2 succeeds:
-				now AssName of Child is Name entry;
-				if Species Name entry is not "":
-					now AssSpeciesName of Child is Species Name entry;
-				else:
-					now AssSpeciesName of Child is Name entry;
-			else:
-				now AssName of Child is AssName of Impregnator;
-				now AssSpeciesName of Child is AssSpeciesName of Impregnator;
-			if a random chance of 1 in 2 succeeds:
-				now TailName of Child is Name entry;
-				if Species Name entry is not "":
-					now TailSpeciesName of Child is Species Name entry;
-				else:
-					now TailSpeciesName of Child is Name entry;
-			else:
-				now TailName of Child is TailName of Impregnator;
-				now TailSpeciesName of Child is TailSpeciesName of Impregnator;
+			SetInfectionsOf Child randomized between Impregnator and Impregnatee;
 	if Player is not female:
 		say "[line break]     There is a pleasant sense of warmth from your lower belly, filling an emptiness you did not know was there.";
 		if pregtype is 0, now pregtype is 2; [mpreg]
@@ -869,7 +747,7 @@ to fimpregchance:		[Female-particular Pregnancy Roll]
 		if "Fang's Mate" is listed in feats of Player, decrease target by 10;
 		if inheat is true, decrease target by 3;
 		if inheat is true and heatlevel is 3, decrease target by 1;
-		if Playercanub is true, increase target by 1;
+		if Player can UB, increase target by 1;
 		choose row MonsterID from the Table of Random Critters;
 		if a random chance of 2 in target succeeds:
 			if callovi is true or ovipreglevel is 3:
@@ -896,7 +774,7 @@ to mimpregchance:		[MPreg-particular Pregnancy Roll]
 		if "Fang's Mate" is listed in feats of Player, decrease target by 10;
 		if inheat is true, decrease target by 3;
 		if inheat is true and heatlevel is 3, decrease target by 1;
-		if Playercanub is true, increase target by 1;
+		if Player can UB, increase target by 1;
 		choose row MonsterID from the Table of Random Critters;
 		if a random chance of 2 in target succeeds:
 			if callovi is true or ovipreglevel is 3:
@@ -922,7 +800,7 @@ to selfimpregchance:
 		if "Fertile" is listed in feats of Player, decrease target by 3;
 		if inheat is true, decrease target by 3;
 		if inheat is true and heatlevel is 3, decrease target by 1;
-		if Playercanub is true, increase target by 1;
+		if Player can UB, increase target by 1;
 		choose row MonsterID from the Table of Random Critters;
 		if a random chance of 2 in target succeeds:
 			if callovi is true or ovipreglevel is 3:
@@ -948,13 +826,14 @@ to selfimpregnate:
 			increase score by 0;
 		else:
 			say "You choose not to accept the seed.";
-			if "Fang's Mate" is listed in feats of Player:
-				remove "Fang's Mate" from feats of Player;
-				now hp of Fang is 0;
 			stop the action;
 	now gestation of Child is a random number from 24 to 48;
 	SetInfectionsOf Child to infections of Player;
 	say "[line break]     There is an odd sensation of warmth inside you and you get a pleasantly perverse feeling.";
+	if Player is not female:
+		if pregtype is 0, now pregtype is 2; [mpreg]
+	else:
+		if pregtype is 0, now pregtype is 1; [fpreg]
 
 to say ovichance:		[to be used when either female or MPreg would work]
 	ovichance;

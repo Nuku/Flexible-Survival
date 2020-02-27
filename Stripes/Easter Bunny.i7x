@@ -39,6 +39,7 @@ When Play begins:
 	add "Easter Bunny" to infections of HermList;
 	add "Easter Bunny" to infections of BipedalList;
 	add "Easter Bunny" to infections of TailList;
+	add "Easter Bunny" to infections of OviImpregnatorList;
 	now Name entry is "Easter Bunny";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
@@ -291,11 +292,17 @@ to say ebheat:
 		now ebheat_egg is 0;
 		now Libido of Player is ( 75 + ( Libido of Player * 3 ) ) / 4;
 
-Section 5 - Endings
 
 [
-when play ends:
-	if BodyName of Player is "Template":
+Section 5 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Easter Bunny Infection"	"Infection"	""	Easter Bunny Infection rule	1000	false
+
+This is the Easter Bunny Infection rule:
+	if Player has a body of "Easter Bunny":
+		trigger ending "Easter Bunny Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You succumb to your template infection.";
 		else:

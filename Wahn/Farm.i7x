@@ -202,12 +202,17 @@ instead of going north from Central Farm Square while (HP of Lucifer is 1 and De
 	move player to Mustang Paddock;
 	now Dexterity of Lucifer is 1;
 
+
 [
 Section 4 - Endings
 
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Cowboy Infection"	"Infection"	""	Cowboy Infection rule	1000	false
 
-when play ends:
-	if BodyName of Player is "Cowboy":
+This is the Cowboy Infection rule:
+	if Player has a body of "Cowboy":
+		trigger ending "Cowboy Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if level of Player > 10:
 				say "     A";

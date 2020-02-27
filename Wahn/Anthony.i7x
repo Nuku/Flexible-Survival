@@ -107,53 +107,107 @@ to say AnthonyDesc:
 
 instead of conversing the Anthony:
 	project the figure of Anthony_face_icon;
-	say "     What do you want to talk to him about? [bold type]You could chat with him a bit [link](1)[as]1[end link], ask if there are any problems you could help with [link](2)[as]2[end link], or just change your mind and not say anything [link](3)[as]3[end link]?[roman type][line break]";
-	now calcnumber is 0;
-	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
+	say "     [bold type]What do you want to talk to him about?[roman type][line break]";
+	LineBreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Just chat a bit";
+	now sortorder entry is 1;
+	now description entry is "Exchange a few words with the anteater";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Offer your help";
+	now sortorder entry is 2;
+	now description entry is "Ask if there's anything he needs help with";
+	[]
+	if PlayerMet of Farmhand Horsemen is true and FriesianRelationship is 2 and Energy of Alexandra > 0: [knows the twins, Alexandra was fucked by horsecock already]
+		choose a blank row in table of fucking options;
+		now title entry is "Talk about Alexandra";
+		now sortorder entry is 3;
+		now description entry is "Discuss your dobie bitch with him";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-			break;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Just chat a bit"):
+					say "[AnthonyTalk1]";
+				if (nam is "Offer your help"):
+					say "[AnthonyTalk2]";
+				if (nam is "Talk about Alexandra"):
+					say "[AnthonyTalk3]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the tall anteater, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
-			say "Invalid choice. Type [link]1[end link] to chat with him, [link]2[end link] to offer your help, or [link]3[end link] to break off the conversation.";
-	if calcnumber is 1: [chat]
-		say "     Chatting a bit about this and that, you finally come to the topic of [one of]Anthony's kilt. He laughs as you bring up the unconventional piece of clothing, running a hand over its fabric. 'Yeah, I know - it feels strange to be wearing a skirt - OK, kilt - all the time. Not that I have any choice - imagine trying to pull a pair of pants over those...' He nods down to the long curved claws on his feet. 'I ripped three pairs of jeans after I transformed until I remembered this thing. Thank god grandmother insisted on all of us men wearing 'traditional' outfits when my older sister married a few years back.'[or]the farm itself. Anthony explains 'This land has been in my family for generations. I spent quite a few summer holidays out here as a kid. Just a few months before all this...' *he raises one of his furred arms and clicks the claws against each other* 'happened, my grandfather died, leaving all of it to me and I moved here for good. I was just getting the hang of making everything work all right when the world got crazy. Since then, all us humans have become something else and various animals started acting strange. And then there's that strange grass, growing fast and actively trying to destroy things...'[or]the plains. Anthony says 'Crazy stuff, the grass out there. I mean, the farm was on the far edge of the city, pretty thinly built up with farmland and a few wooded areas around - now it's all just that endless sea of grass, with all the other buildings already collapsed and gone.'[at random]";
-	else if calcnumber is 2: [help]
-		say "     Anthony smiles as you offer your help, putting his hand on your shoulder - carefully, because of his claws. 'Thanks a lot, we really can use the help.' His eyes get a faraway expression as he thinks for a moment, trying to find the right job for you to do.";
-		if HP of Anthony < 4:
-			say "     'You've been around in the area and further into the city, so could you please have a look out for a cow - a regular, untransformed one. Some of our cows ran off when a critter broke through the fence and frightened them, and we still haven't found one of our best producers. Really hope she's all right. Her name is Wendy and she's very docile and peaceful. If you do find her, just calm her down, talk to her a bit and she'll follow you so you can bring her back here.'";
-			say "     He looks to you with a hopeful expression, then continues with 'There's a reward too. If you bring Wendy back, I can give you a bag of food - farm-fresh and guaranteed infection free.'";
-		else if HP of Anthony is 4:
-			if HP of Duke < 10: [not helped yet]
-				say "     'You're pretty resourceful and often out in the city, aren't you? Maybe you could find a way to help Shawn and Duke - they're shepherds, really nice guys and hard workers. Just go out to the meadow after dark and you'll see what's going on, OK?'";
-			else: [helped the shepherds]
-				say "     'I was gonna ask you to help out Shawn and Duke, but you already did that, didn't you? I'm glad you could help them. It'd have been terrible if Duke lost his boyfriend forever to these damned nanites. Let me give you a reward for your help.' With that, the anthro anteater starts turning to go into the kitchen and grab another tasty treat for you.";
-				LineBreak;
-				say "     [bold type]Do you wait patiently for him to get you some food, or would you rather pull him against yourself for a kiss and a more 'personal' reward?[roman type]";
-				LineBreak;
-				say "     ([link]Y[as]y[end link]) - Wait.";
-				say "     ([link]N[as]n[end link]) - Pull him in.";
-				if Player consents:
-					LineBreak;
-					say "     Calmly waiting for him, you accept a carrying bag of fresh fruit and thank Anthony.";
-					increase carried of food by 4;
-				else:
-					LineBreak;
-					say "     [AnthonyRewardSex]";
-				now HP of Anthony is 5;
-		else if HP of Anthony is 5:
-			say "     'One of the farmhands has gone missing and I could really use someone experienced with the dangers of the city to go looking for him. You see, my guys regularly patrol the outskirts of the farm and fields, always on the lookout for roving beasts or a new growth burst of the creeping grass - but early this morning, Finn didn't come back. Being a horseman like the others he's pretty strong and fast too, so I - I didn't think something like this could happen. Not here, so close to my family farm. Something terrible must have gotten to him.'";
-			say "     Anthony scrapes his claws against each other in a move that betrays his anxiousness, then adds, 'Just the thought of one of my workers, out there all alone with a slobbering beast wanting to gnaw his bones, or something...' Falling silent, he stops the hand-movements a second later, then gives a sigh. 'Everyone here is my responsibility as the owner of this farm. I'm half-minded to go out with you, but then I would be abandoning the rest to look for one man. Who knows what might happen if I'm not here to lead them. I don't think the farm would last long without coordination. Just days ago, we had a behemoth deciding he wanted to move in...'";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
+
+to say AnthonyTalk1:
+	say "     Chatting a bit about this and that, you finally come to the topic of [one of]Anthony's kilt. He laughs as you bring up the unconventional piece of clothing, running a hand over its fabric. 'Yeah, I know - it feels strange to be wearing a skirt - OK, kilt - all the time. Not that I have any choice - imagine trying to pull a pair of pants over those...' He nods down to the long curved claws on his feet. 'I ripped three pairs of jeans after I transformed until I remembered this thing. Thank god grandmother insisted on all of us men wearing 'traditional' outfits when my older sister married a few years back.'[or]the farm itself. Anthony explains 'This land has been in my family for generations. I spent quite a few summer holidays out here as a kid. Just a few months before all this...' *he raises one of his furred arms and clicks the claws against each other* 'happened, my grandfather died, leaving all of it to me and I moved here for good. I was just getting the hang of making everything work all right when the world got crazy. Since then, all us humans have become something else and various animals started acting strange. And then there's that strange grass, growing fast and actively trying to destroy things...'[or]the plains. Anthony says 'Crazy stuff, the grass out there. I mean, the farm was on the far edge of the city, pretty thinly built up with farmland and a few wooded areas around - now it's all just that endless sea of grass, with all the other buildings already collapsed and gone.'[at random]";
+
+to say AnthonyTalk2: [helping]
+	say "     Anthony smiles as you offer your help, putting his hand on your shoulder - carefully, because of his claws. 'Thanks a lot, we really can use the help.' His eyes get a faraway expression as he thinks for a moment, trying to find the right job for you to do.";
+	if HP of Anthony < 4:
+		say "     'You've been around in the area and further into the city, so could you please have a look out for a cow - a regular, untransformed one. Some of our cows ran off when a critter broke through the fence and frightened them, and we still haven't found one of our best producers. Really hope she's all right. Her name is Wendy and she's very docile and peaceful. If you do find her, just calm her down, talk to her a bit and she'll follow you so you can bring her back here.'";
+		say "     He looks to you with a hopeful expression, then continues with 'There's a reward too. If you bring Wendy back, I can give you a bag of food - farm-fresh and guaranteed infection free.'";
+	else if HP of Anthony is 4:
+		if HP of Duke < 10: [not helped yet]
+			say "     'You're pretty resourceful and often out in the city, aren't you? Maybe you could find a way to help Shawn and Duke - they're shepherds, really nice guys and hard workers. Just go out to the meadow after dark and you'll see what's going on, OK?'";
+		else: [helped the shepherds]
+			say "     'I was gonna ask you to help out Shawn and Duke, but you already did that, didn't you? I'm glad you could help them. It'd have been terrible if Duke lost his boyfriend forever to these damned nanites. Let me give you a reward for your help.' With that, the anthro anteater starts turning to go into the kitchen and grab another tasty treat for you.";
 			LineBreak;
-			say "     He looks to you with a hopeful expression, then continues with 'There's a reward too. If you bring Finn back, I can give you a bag of food - farm-fresh and guaranteed infection free[if Libido of Anthony > 0] - or... something more intimate, if you prefer[end if]. Just find our [bold type]missing farm hand[roman type] quickly please!'";
-			now Missing Farm Hand is active;
-			now HP of Anthony is 6; [player got told about Finn]
-		else if HP of Anthony is 6:
-			say "     Anthony scrapes his claws against each other in a move that betrays his anxiousness, then asks, 'Thanks again for the offer. Have you found a trace of Finn yet? Please, you have to find our [bold type]missing farm hand[roman type]!'";
+			say "     [bold type]Do you wait patiently for him to get you some food, or would you rather pull him against yourself for a kiss and a more 'personal' reward?[roman type][line break]";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - Wait.";
+			say "     ([link]N[as]n[end link]) - Pull him in.";
+			if Player consents:
+				LineBreak;
+				say "     Calmly waiting for him, you accept a carrying bag of fresh fruit and thank Anthony.";
+				increase carried of food by 4;
+			else:
+				LineBreak;
+				say "     [AnthonyRewardSex]";
+			now HP of Anthony is 5;
+	else if HP of Anthony is 5:
+		say "     'One of the farmhands has gone missing and I could really use someone experienced with the dangers of the city to go looking for him. You see, my guys regularly patrol the outskirts of the farm and fields, always on the lookout for roving beasts or a new growth burst of the creeping grass - but early this morning, Finn didn't come back. Being a horseman like the others he's pretty strong and fast too, so I - I didn't think something like this could happen. Not here, so close to my family farm. Something terrible must have gotten to him.'";
+		say "     Anthony scrapes his claws against each other in a move that betrays his anxiousness, then adds, 'Just the thought of one of my workers, out there all alone with a slobbering beast wanting to gnaw his bones, or something...' Falling silent, he stops the hand-movements a second later, then gives a sigh. 'Everyone here is my responsibility as the owner of this farm. I'm half-minded to go out with you, but then I would be abandoning the rest to look for one man. Who knows what might happen if I'm not here to lead them. I don't think the farm would last long without coordination. Just days ago, we had a behemoth deciding he wanted to move in...'";
+		LineBreak;
+		say "     He looks to you with a hopeful expression, then continues with 'There's a reward too. If you bring Finn back, I can give you a bag of food - farm-fresh and guaranteed infection free[if Libido of Anthony > 0] - or... something more intimate, if you prefer[end if]. Just find our [bold type]missing farm hand[roman type] quickly please!'";
+		now Missing Farm Hand is active;
+		now HP of Anthony is 6; [player got told about Finn]
+	else if HP of Anthony is 6:
+		say "     Anthony scrapes his claws against each other in a move that betrays his anxiousness, then asks, 'Thanks again for the offer. Have you found a trace of Finn yet? Please, you have to find our [bold type]missing farm hand[roman type]!'";
+	else:
+		say "     Clicking his claws together thoughtfully, he finally says 'I'll have to get back to you on that later, not sure what would be right for your skill-set at the moment. Just sending you to milk cows would be a waste of your time...' (further quests remain to be written - please have patience)";
+
+to say AnthonyTalk3:
+	if Intelligence of Alexandra is 0:
+		say "     Clearing your throat, you bring up that your doberwoman companion Alexandra spent some time in the worker barracks, really enjoying her visit there and getting to know the horsemen quite closely. 'Oh, she did?' Anthony replies, correctly interpreting the tone in which you said it and nodding slowly as his imagination paints a picture of what happened in the barracks. 'Well, that's good then. Isn't it? If she enjoyed herself and the men got a little bit of relief. I'd been worrying something fierce about them becoming too pent-up.' Chuckling and smoothing over the anteater's worries, you pat his arm and tell him that you were wondering if Alexandra actually might stay for a longer while.";
+		say "     He thinks about it for a moment and says, 'I'm fine with that in general terms, but there need to be some ground rules. I mean, the men do have to do their work or this whole place will be swallowed up by the plains. And the same applies to your friend. If she eats our food, she'll have to take a turn with the chores. Wouldn't be fair to the guys otherwise.' For a moment, you think about asking if being bred by a dozen equine studs counts as a needed chore, but then just nod instead, replying that it won't be a problem and that Alexandra's strong and resourceful, being able to take anyon- err, anything that she'll have to do.";
+		now Intelligence of Alexandra is 1; [talked with Anthony about letting her stay at the farm]
+	else if Intelligence of Alexandra is 1: [may come to the farm, in theory]
+		say "     As you bring up Alexandra again, Anthony nods to you. 'As I said - I'm fine with you bringing her in general terms, but there need to be some ground rules. I mean, the men do have to do their work or this whole place will be swallowed up by the plains. And the same applies to your friend. If she eats our food, she'll have to take a turn with the chores. Wouldn't be fair to the guys otherwise.' For a moment, you think about asking if being bred by a dozen equine studs counts as a needed chore, but then just nod instead, replying that it won't be a problem and that Alexandra's strong and resourceful, being able to take anyon- err, anything that she'll have to do.";
+	else if Intelligence of Alexandra is 2: [has been at the farm at least once]
+		if Alexandra is in Worker Barracks:
+			say "     As you bring up Alexandra, Anthony nods and says, 'I went to have a talk with your friend. She's got quite a mouth on her, for a lady, that's for sure. Still, she seems well-liked enough among the men, and tough-skinned enough to not be pushed around by them. Heard good things about her when it comes to chores too - all the farmhands were singing her praises, if you can believe that.' You smile to yourself as you imagine what Alexandra might have done to earn such endorsements, and you're fairly sure that she never did any housework to earn their affections.";
 		else:
-			say "     Clicking his claws together thoughtfully, he finally says 'I'll have to get back to you on that later, not sure what would be right for your skill-set at the moment. Just sending you to milk cows would be a waste of your time...' (further quests remain to be written - please have patience)";
-	else if calcnumber is 3: [break off talking]
-		say "     You wave Anthony off and excuse yourself.";
+			say "     As you bring up Alexandra, Anthony nods and says, 'I've actually had some of the men asking if she'd visit us again. Your canine companion sure has made a lot of friends in the time she was here. Only heard good things about her when it came to chores too - so I wouldn't mind at all if you brought her back.' You smile to yourself as you imagine what Alexandra might have done to earn such endorsements, and you're fairly sure that she never did any housework to earn their affections.";
 
 instead of fucking the Anthony:
 	project the figure of Anthony_face_icon;

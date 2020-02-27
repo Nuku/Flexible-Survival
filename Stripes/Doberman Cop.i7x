@@ -310,15 +310,9 @@ to say weaponconf:
 				say "She takes your whip and sword away, making sure to grab them using an evidence bag. 'Just think about the damage you could have caused with these. You're too much of a loose cannon to be trusted with them. I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster!'";
 			else:							[lost the fight]
 				say "She takes your whip and sword away, making sure to grab them using an evidence bag. 'I can't let a half-crazed fool like you run around with something like this. You cannot be trusted with something this dangerous and I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster!'";
-			if weapon object of Player is dirty whip:
-				now weapon damage of Player is 4;
-				now weapon type of Player is "Melee";
-				now weapon object of Player is journal;
-			if weapon object of Player is infected sword:
-				now weapon damage of Player is 4;
-				now weapon type of Player is "Melee";
-				now weapon object of Player is journal;
+			unwield dirty whip silently;
 			delete dirty whip;
+			unwield infected sword silently;
 			delete infected sword;
 		else if dirty whip is owned:
 			if dobielibido >= 100 and inasituation is false:
@@ -331,10 +325,7 @@ to say weaponconf:
 				say "She takes your whip away, making sure to grab it using an evidence bag. 'Just think about the damage you could have caused with this. You're too much of a loose cannon to be trusted with it. I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster!'";
 			else:							[lost the fight]
 				say "She takes your whip away, making sure to grab it using an evidence bag. 'I can't let a half-crazed fool like you run around with something like this. You cannot be trusted with something this dangerous and I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster!'";
-			if weapon object of Player is dirty whip:
-				now weapon damage of Player is 4;
-				now weapon type of Player is "Melee";
-				now weapon object of Player is journal;
+			unwield dirty whip silently;
 			delete dirty whip;
 		else if infected sword is owned:
 			if dobielibido >= 100 and inasituation is false:
@@ -347,10 +338,7 @@ to say weaponconf:
 				say "She takes your sword away, making sure to grab it using an evidence bag. 'Just think about the damage you could have caused with this. You're too much of a loose cannon to be trusted with it. I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster!'";
 			else:							[lost the fight]
 				say "She takes your sword away, making sure to grab it using an evidence bag. 'I can't let a half-crazed fool like you run around with something like this. You cannot be trusted with something this dangerous and I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster!'";
-			if weapon object of Player is infected sword:
-				now weapon damage of Player is 4;
-				now weapon type of Player is "Melee";
-				now weapon object of Player is journal;
+			unwield infected sword silently;
 			delete infected sword;
 
 
@@ -690,7 +678,11 @@ It is temporary.
 
 to say DobermanBitchFurUse:
 	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	setmonster "Doberman Bitch";
+	choose row MonsterID from the Table of Random Critters;
+	now non-infectious entry is false;
 	infect "Doberman Bitch";
+	now non-infectious entry is true;
 
 instead of sniffing doberman bitch fur:
 	say "The fur has a pleasing, not too strong, animal-like scent.";
@@ -718,9 +710,14 @@ this is the dobercoppost rule:		[postattack rule]
 
 Section 4 - Endings	[This portion deals with the Doberman infection for Kaleem's Firehouse content]
 
-when play ends:
-	if BodyName of Player is "Doberman Bitch":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Doberman Bitch Infection"	"Infection"	""	Doberman Bitch Infection rule	1000	false
+
+This is the Doberman Bitch Infection rule:
+	if Player has a body of "Doberman Bitch":
 		if Stamina of Tyr > 3: [Player had sex with him more than 3 times]
+			trigger ending "Doberman Bitch Infection"; [Here it states, that the ending has been played.]
 			if humanity of Player < 10:
 				if Player is female and Cock Count of Player < 0:
 					say "     Falling prey to your feral instincts you find yourself sniffing around town to find Tyr to thank him for the sexy body he helped to give you. Your mind may have succumb to the madness that is the feral need to fuck and breed, but the face of that sexy and charming Doberman stands out like the sun against lustful fog covering your thoughts. Locating the other back at his pad you throw yourself at the Doberman to lavish him in warm and tender licks across the face just as soon as he opens his door to let you in. Seeing you the way you are now Tyr doesn't waste time in trying to regret what's happened to you as the buff and commanding canine tosses you down onto his floor, strips himself out of his jeans, and then proceeds to work his fat piece of Doberman meat into the depths of your leaking snatch.";

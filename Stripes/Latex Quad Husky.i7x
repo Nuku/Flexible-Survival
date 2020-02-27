@@ -68,34 +68,16 @@ Instead of resolving a Shipping Container:
 				now monm is MonsterID;
 			if ( "Female Preferred" is listed in feats of Player and FemaleList is not banned ) or MaleList is banned:
 				choose row monf from Table of Random Critters;
-				now TailName of Player is "Husky Bitch";
-				now FaceName of Player is "Husky Bitch";
-				now SkinName of Player is "Husky Bitch";
-				now BodyName of Player is "Husky Bitch";
-				now CockName of Player is "Husky Bitch";
-				attributeinfect;
-				now tail of Player is tail entry;
-				now Face of Player is face entry;
-				now Skin of Player is skin entry;
-				now Body of Player is body entry;
-				now Cock of Player is cock entry;
+				setmonster "Husky Bitch" silently;
+				turn the Player into a "Husky Bitch";
 				if hellHoundLevel is 0:
 					follow the sex change rule;
 					follow the sex change rule;
 					follow the sex change rule;
 			else:
 				choose row monm from Table of Random Critters;
-				now TailName of Player is "Husky Alpha";
-				now FaceName of Player is "Husky Alpha";
-				now SkinName of Player is "Husky Alpha";
-				now BodyName of Player is "Husky Alpha";
-				now CockName of Player is "Husky Alpha";
-				attributeinfect;
-				now tail of Player is tail entry;
-				now Face of Player is face entry;
-				now Skin of Player is skin entry;
-				now Body of Player is body entry;
-				now Cock of Player is cock entry;
+				setmonster "Husky Alpha" silently;
+				turn the Player into a "Husky Alpha";
 				if hellHoundLevel is 0:
 					follow the sex change rule;
 					follow the sex change rule;

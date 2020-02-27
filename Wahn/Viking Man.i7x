@@ -384,11 +384,16 @@ to VikingManInfect:
 
 Section 4 - NPC
 
+[
 Section 5 - Endings
 
-[
-when play ends:
-	if BodyName of Player is "Viking Man":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Viking Man Infection"	"Infection"	""	Viking Man Infection rule	1000	false
+
+This is the Viking Man Infection rule:
+	if Player has a body of "Viking Man":
+		trigger ending "Viking Man Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is male:
 				say "...";

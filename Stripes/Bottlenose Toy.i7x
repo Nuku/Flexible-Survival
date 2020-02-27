@@ -185,7 +185,7 @@ to say losetodolphinflatable:
 				now XP of Player is 0; [prevents accidental level up]
 				if the player is not lonely, now XP of companion of Player is 0;
 				now non-infectious entry is true; [prevents regular dolphin girl infection from occurring]
-				now TailName of Player is "Bottlenose Toy";
+				now TailName of Player is "Bottlenose Toy"; [TODO: Seems outdated. Remove this? (@Stadler#3007)]
 				now FaceName of Player is "Bottlenose Toy";
 				now SkinName of Player is "Bottlenose Toy";
 				now BodyName of Player is "Bottlenose Toy";
@@ -209,6 +209,7 @@ to say losetodolphinflatable:
 				now battleground is "void";
 				now combat abort is 1;
 				WaitLineBreak;
+				trigger ending "Dolphin Suit Trapped";
 				end the story saying "Trapped in the inflatable dolphin suit, your mind slowly fades away until there are no thoughts left in your air-filled head but that of playing at the beach.";
 				stop the action;
 ]
@@ -329,7 +330,7 @@ to bottleboundstate:
 			now dolinfloss is -100;
 			now XP of Player is 0;
 			now non-infectious entry is true; [prevents regular dolphin girl infection from occurring]
-			now TailName of Player is "Bottlenose Toy";
+			now TailName of Player is "Bottlenose Toy"; [NOTE: No `turn the Player into` here, because variations of the standard desc are used for the game over (@Stadler#3007)]
 			now FaceName of Player is "Bottlenose Toy";
 			now SkinName of Player is "Bottlenose Toy";
 			now BodyName of Player is "Bottlenose Toy";
@@ -354,6 +355,7 @@ to bottleboundstate:
 			now combat abort is 1;
 			WaitLineBreak;
 			now Trixieexit is 1;
+			trigger ending "Dolphin Suit Trapped";
 			end the story saying "Trapped in the inflatable dolphin suit, your mind slowly fades away until there are no thoughts left in your air-filled head but that of playing at the beach.";
 		else:
 			let k be 0;
@@ -482,7 +484,9 @@ When Play begins:
 	now NewTypeInfection entry is false;
 	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	add "Bottlenose Toy" to infections of AquaticList;
+	add "Bottlenose Toy" to infections of LatexList;
 	add "Bottlenose Toy" to infections of FurryList;
+	add "Bottlenose Toy" to infections of HumorousList;
 	add "Bottlenose Toy" to infections of ToyList;
 	add "Bottlenose Toy" to infections of FemaleList;
 	add "Bottlenose Toy" to infections of BipedalList;
@@ -645,19 +649,29 @@ When Play begins:
 ]
 
 
+Section 4 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Dolphin Suit Trapped"	"BadEnd"	""	Dolphin Suit Trapped rule	20	false
+"Bottlenose Toy Infection"	"Infection"	""	Bottlenose Toy Infection rule	1000	false
+
+This is the Dolphin Suit Trapped rule:
+	if ending "Dolphin Suit Trapped" is triggered:
+		say "     Safely stored away in the [if dolphinmode is 3]floating bouncy castle[else]small storage building[end if], you are continuously pleasured by the dolphin suit wrapped around you. What little remains of your fading mind is vaguely aware that you're being changed by the slick inner walls rubbing against you. You are unclear on what's happening and don't really care, your thoughts evaporating away as you become as empty and airheaded as those cute girls on the beach. After some time has passed (probably a few days, though you were unable to count them as you were only dimly aware of the growing and fading light outside), several of the girls return to the [if dolphinmode is 3]colorful castle[else]building[end if] and remove you and the inflatable dolphin suit.";
+		say "     Snuggling and kissing it, they slowly open it up and release you. Their fin-hands run over your new, smooth skin and inflatable body, having been transformed a new feral dolphin toy. You are happy to be released and merrily play with several of the girls in the water while one of them licks the inside of the suit clean and bundles it up for the next happy victim they can find to put into it.";
+		if Player is male:
+			say "     Having a cock to play with as well, the girls have a lot of fun rubbing their squeaky bodies against yours. Fucking is nothing more than another of the many games you play, mindlessly whiling away the time without a care in the world or a thought in your empty head past your eternal playtime. You play happily with the girls and the other dolphin toys, happy to share your cock with them as well.";
+		else:
+			say "     You and the other dolphin toys have plenty of fun together rubbing your squeaky bodies together or licking at the pleasant slit between your legs. But when a blue male toy joins your group, having him fuck you with his cock is a whole new game to play. You and the others mindlessly while away the time without a care in the world or a thought in your empty heads past your eternal playtime.";
+		the Player is lost;
+
 [A sample structure for succumbing/surviving messages at the end of the game.]
 [Numerous other examples can be found in existing creature files.]
-
-when play ends:
-	if BodyName of Player is "Bottlenose Toy":
-		if dolinfloss is -100:
-			say "     Safely stored away in the [if dolphinmode is 3]floating bouncy castle[else]small storage building[end if], you are continuously pleasured by the dolphin suit wrapped around you. What little remains of your fading mind is vaguely aware that you're being changed by the slick inner walls rubbing against you. You are unclear on what's happening and don't really care, your thoughts evaporating away as you become as empty and airheaded as those cute girls on the beach. After some time has passed (probably a few days, though you were unable to count them as you were only dimly aware of the growing and fading light outside), several of the girls return to the [if dolphinmode is 3]colorful castle[else]building[end if] and remove you and the inflatable dolphin suit.";
-			say "     Snuggling and kissing it, they slowly open it up and release you. Their fin-hands run over your new, smooth skin and inflatable body, having been transformed a new feral dolphin toy. You are happy to be released and merrily play with several of the girls in the water while one of them licks the inside of the suit clean and bundles it up for the next happy victim they can find to put into it.";
-			if Player is male:
-				say "     Having a cock to play with as well, the girls have a lot of fun rubbing their squeaky bodies against yours. Fucking is nothing more than another of the many games you play, mindlessly whiling away the time without a care in the world or a thought in your empty head past your eternal playtime. You play happily with the girls and the other dolphin toys, happy to share your cock with them as well.";
-			else:
-				say "     You and the other dolphin toys have plenty of fun together rubbing your squeaky bodies together or licking at the pleasant slit between your legs. But when a blue male toy joins your group, having him fuck you with his cock is a whole new game to play. You and the others mindlessly while away the time without a care in the world or a thought in your empty heads past your eternal playtime.";
-		else if humanity of Player < 10:
+This is the Bottlenose Toy Infection rule:
+	if Player has a body of "Bottlenose Toy":
+		trigger ending "Bottlenose Toy Infection"; [Here it states, that the ending has been played.]
+		if humanity of Player < 10:
 			say "     As your infection progresses, you become nothing but an inflatable creature, inside and out. With nothing more than thoughts of playing in the water, you bounce your way back to the waterfront. There you join several other inflatable dolphins and frolic in the water and play on the beach. While most are dolphin girls, there are a few shaped like regular dolphins as well to play with the pink girls. ";
 			if Player is male:
 				say "Having a cock to play with as well, the girls have a lot of fun rubbing their squeaky bodies against yours. Fucking is nothing more than another of the many games you play, mindlessly whiling away the time without a care in the world or a thought in your empty head past your eternal playtime.";

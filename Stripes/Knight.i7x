@@ -388,11 +388,16 @@ instead of sniffing stray links:
 	say "The small links of metal have no particular scent to them.";
 
 
+[
 Section 4 - Endings
 
-[
-when play ends:
-	if BodyName of Player is "Knight":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Knight Infection"	"Infection"	""	Knight Infection rule	1000	false
+
+This is the Knight Infection rule:
+	if Player has a body of "Knight":
+		trigger ending "Knight Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You succumb to your template infection.";
 		else:

@@ -27,7 +27,6 @@ dolphinlist is a list of text that varies. [Creates a quasi-random pool of dolph
 dolcastlefight is a number that varies. [Determines Bottlenose Toy scenes. 1 = win, 2 = loss (normal), 3 = loss (in castle)]
 bclatearrival is a number that varies. [Normally 0, set to 1 when visiting the castle after vixcountdown ends while away. Hides initial prompt after agreeing]
 bcuntethered is a number that varies. [Determines whether or not the Bouncy Castle is still tethered]
-bcending is a number that varies. [Determines bad ends]
 [Previously included dolcastleturn, which elapses 1 hour (turn/3) per empty dolphin suit checked. Since this was unrealistically long for something that would take a minute to do at most, I've removed the stat entirely]
 
 Table of GameEventIDs (continued)
@@ -672,14 +671,9 @@ to say bckingchair:
 				say "     Your final attempt to break free seems to require the last of your strength and you sag back into the seat. As the chair continues to bond with you, your thoughts fade away until they're peaceful and placid, like the chair, like your own[if compnumber > 1]. With one of your last conscious thoughts, you glance over at your companions, seeing them getting pressed up against the wall by the knights. There they are flattened out, turning into more knight decals to decorate the castle. You can't help but smile at this, feeling that it's somehow right[else if compnumber is 1]. With one of your last conscious thoughts, you glance over at your companion being pressed up against the wall by the knights. As they are flattened out, they turn into another knight decal to decorate the castle. You can't help but smile at this, feeling that it's somehow right[else]. Happiness grows and swells inside you and you smile[end if]. Your smile stretches and becomes transfixed on your face as your head becomes inflatable. You are left with a smile and big, happy eyes as permanent designs on your face.";
 				say "     As you and the chair continue to merge, your [bodytype of Player] body becomes one with it, reshaping it as you and it become one happy whole. You're now a yellow inflatable chair version of a [BodyName of Player] with a matching head. There's even cute matching prints at the end of the chair's arms to complete the look.";
 				Waitlinebreak;
-				now bcending is 3;
 				now bcfinalchairform is BodyName of Player;
-				now BodyName of Player is "Captured";
-				now FaceName of Player is "Captured";
-				now SkinName of Player is "Captured";
-				now TailName of Player is "Captured";
-				now CockName of Player is "Captured";
 				now humanity of Player is 0;
+				trigger ending "Bouncy Castle New Chair";
 				end the story saying "You are transformed into an inflatable [bcfinalchairform] chair.";
 	if chairescape is true:
 		say "     Managing to get some leverage by shifting your weight, you throw all your effort into pulling one of your arms free. The yellow material stretches upwards at first, reluctant to release you, but eventually gives way and is pulled back down into its normal shape. With an arm free, it becomes easier to pull the other free as well. You take care not to leave your hands on the chair in any one spot too long, but are eventually able to pull the rest of your body free of it in the end.";
@@ -715,14 +709,9 @@ to say bckingchair_accept:
 	say "     As your mind fades away further, you notice that your skin is turning the same yellow as the plastic at the edges nearest its touch. Lost in the relaxing pleasure of the chair, you can't help but smile. Sitting in this wonderful chair feels so good, so being this wonderful chair must be even better. As the chair continues to bond with you, your thoughts fade away until they're peaceful and placid, like the chair, like your own[if compnumber > 1]. With one of your last conscious thoughts, you glance over at your companions, seeing them getting pressed up against the wall by the knights. Seeing you giving in, they give in as well, letting themselves be groped and fondled while they are flattened out, turning into more knight decals to decorate the castle. You can't help but smile at this, feeling that it's somehow right[else if compnumber is 1]. With one of your last conscious thoughts, you glance over at your companion being pressed up against the wall by the knights. Seeing you giving in, they give in as well, letting themselves be groped and fondled while they are flattened out, turning into another knight decal to decorate the castle. You can't help but smile at this, feeling that it's somehow right[else]. Happiness grows and swells inside you and you smile[end if]. Your smile stretches and becomes transfixed on your face as your head becomes inflatable. You are left with a smile and big, happy eyes as permanent designs on your face.";
 	say "     As you and the chair continue to merge, your [bodytype of Player] body becomes one with it, reshaping it as you and it become one happy whole. You're now a yellow inflatable chair version of a [BodyName of Player] with a matching head. There's even cute matching prints at the end of the chair's arms to complete the look.";
 	WaitLineBreak;
-	now bcending is 3;
 	now bcfinalchairform is BodyName of Player;
-	now BodyName of Player is "Captured";
-	now FaceName of Player is "Captured";
-	now SkinName of Player is "Captured";
-	now TailName of Player is "Captured";
-	now CockName of Player is "Captured";
 	now humanity of Player is 0;
+	trigger ending "Bouncy Castle New Chair";
 	end the story saying "You are transformed into an inflatable [bcfinalchairform] chair.";
 
 
@@ -835,14 +824,9 @@ to say bcpptendril:
 				say "     You pull as hard as you can, but just as you're starting to make back some ground, the tendrils latch onto your wrists and pull your arms up. Lacking any means of pulling away, you are drawn inexorably towards the pillar as you feel your arousal growing out of control again. The tendrils flowing up your arms squeeze and pulse, their tips pointing towards your face before unleashing blasts of sticky white latex that clings to you. Your vision blocked and your mouth being invaded by the cum-like goo, you can do nothing but give in and accept the situation, another fresh orgasm rocking through you. You feel the weight of it getting heavier around you, enclosing you more and more as you're pulled wholly into the now-bulging pillar.";
 				say "     Inside, you experience orgasm after orgasm as the [ppcolor] latex flows further and further inside you, filling up your insides and slowly replacing them with more latex, your whole body melting away and being absorbed into the pillar until you're nothing more than flowing rubber filled with pleasure and lust.";
 				WaitLineBreak;
-				now bcending is 5;
 				now bcfinalpillarform is BodyName of Player;
-				now BodyName of Player is "Captured";
-				now FaceName of Player is "Captured";
-				now SkinName of Player is "Captured";
-				now TailName of Player is "Captured";
-				now CockName of Player is "Captured";
 				now humanity of Player is 0;
+				trigger ending "Bouncy Castle New Pillar";
 				end the story saying "You are transformed into another [ppcolor] pillar.";
 	if tendrilescape is true:
 		say "     Focusing on your escape, you pull free of the liquid latex attempting to engulf you with a wet, slurping sound. The pillar makes a few more weak attempts to grab you, but it seems your escape has worn it out too much for the moment[if compnumber is 1]. You rush over to your companion and assist them in getting free, having gotten themselves mostly engulfed by the pillar which caught them[else if compnumber > 1]. You rush over to your companions, well on their way to being engulfed by pillars themselves, and help them break free[end if]. You don't have time to take a break though, as the other pillars around you are also making grabs for you now that you're unclaimed. You have two options for exit from this room.";
@@ -881,14 +865,9 @@ to say bcpptendril_accept:
 	say "     You are drawn inexorably towards the pillar as you feel your arousal building again. The tendrils flowing up your arms squeeze and pulse, their tips pointing towards your face before unleashing blasts of sticky white latex that clings to you. Your vision blocked and your mouth being invaded by the cum-like goo, you can do nothing but gulp the thick white stuff down as a fresh orgasm rocks through you. You feel the weight of it getting heavier around you, enclosing you more and more as you're pulled wholly into the now-bulging pillar.";
 	say "     Inside, you experience orgasm after orgasm as the [ppcolor] latex flows further and further inside you, filling up your insides and slowly replacing them with more latex, your whole body melting away and being absorbed into the pillar until you're nothing more than flowing rubber filled with pleasure and lust.";
 	WaitLineBreak;
-	now bcending is 5;
 	now bcfinalpillarform is BodyName of Player;
-	now BodyName of Player is "Captured";
-	now FaceName of Player is "Captured";
-	now SkinName of Player is "Captured";
-	now TailName of Player is "Captured";
-	now CockName of Player is "Captured";
 	now humanity of Player is 0;
+	trigger ending "Bouncy Castle New Pillar";
 	end the story saying "You are transformed into another [ppcolor] pillar.";
 
 
@@ -1100,13 +1079,8 @@ to chairboundstate:
 			say "     You push yourself to further heights, your sex-crazed mind only seeking another release, your thoughts of escape momentarily forgotten. When your climax finally comes[if Player is male] and you pump your hot seed into the sex chair[end if], your cries are muffled by the thick rod stuffed into your mouth[if Cunt Count of Player > 1]. Your cunts clamp down around the throbbing dildos inside you as you release another flow of your hot juices over them, soaking yourself and the seat[else if Cunt Count of Player is 1]. Your cunt clamps down around the throbbing dildo inside you as you release another flow of your hot juices over it, soaking yourself and the seat[end if]. Once spent, you collapse onto the seat, basking in the powerful afterglow and breathing in more of that arousing gas as you pant for breath.";
 			say "     By the time the haze lifts, you realize that the chair has recovered and is resuming to engulf you. The tubes have continued to climb up your arms and legs. They join up with the other material from the seat itself, starting to seal you in seamlessly. The vinyl flows up across your back and melds with the hood, encapsulating you fully. While it is hard to tell from within your latex prison, you get the feeling that you're sinking. Even as your mind sinks away, fading away beneath the gas that keeps you constantly aroused, so does the pod encapsulating you fade back into the floor. Slick liquid flows in around you and your gear is either dissolved or expelled from the pod, leaving you naked and able to enjoy smooth stimulation over every square inch of your body. You give in to the pleasure, succumbing as a mindless prisoner of lust as you enjoy orgasm after orgasm in the hidden safety of your new home.";
 			WaitLineBreak;
-			now bcending is 1;
-			now BodyName of Player is "Captured";
-			now FaceName of Player is "Captured";
-			now SkinName of Player is "Captured";
-			now TailName of Player is "Captured";
-			now CockName of Player is "Captured";
 			now humanity of Player is 0;
+			trigger ending "Bouncy Castle Prisoner";
 			end the story saying "You are imprisoned by the Bouncy Castle.";
 			now Trixieexit is 1;
 		else:
@@ -1346,13 +1320,8 @@ to chairpassivelosses:
 					say "     You struggle to figure a way out of your predicament, but your mind is too foggy from the gas and your powerful afterglow, making thought too difficult now. You try to pull, push and squeeze, but with the pod fully formed around you and your limbs all tightly held, there seems to be no way out of it. Even as the chair continues to sink, the gas gets you aroused again and the chair starts up again, preparing you for another go right away.";
 				say "     Even as your mind sinks away, fading away beneath the gas that keeps you constantly aroused, so does the pod encapsulating you fade back into the floor. Slick liquid flows in around you and your gear is either dissolved or expelled from the pod, leaving you naked and able to enjoy smooth stimulation over every square inch of your body. You give in to the pleasure, succumbing as a mindless prisoner of lust as you enjoy orgasm after orgasm in the hidden safety of your new home.";
 				WaitLineBreak;
-				now bcending is 1;
-				now BodyName of Player is "Captured";
-				now FaceName of Player is "Captured";
-				now SkinName of Player is "Captured";
-				now TailName of Player is "Captured";
-				now CockName of Player is "Captured";
 				now humanity of Player is 0;
+				trigger ending "Bouncy Castle Prisoner";
 				end the story saying "You are imprisoned by the Bouncy Castle.";
 		else:
 			say ". As you continue fighting, you can feel the sex chair's grip on you loosen and you pull hard to get free.";
@@ -1387,13 +1356,8 @@ to say bcchairsubmit:
 	WaitLineBreak;
 	say "     You push yourself to further heights, your sex-crazed mind only seeking another release and more pleasure. When your climax finally comes[if Player is male] and you pump your hot seed into the sex chair[end if], your cries are muffled by the thick rod stuffed into your mouth[if Cunt Count of Player > 1]. Your cunts clamp down around the throbbing dildos inside you as you release another flow of your hot juices over them, soaking yourself and the seat[else if Cunt Count of Player is 1]. Your cunt clamps down around the throbbing dildo inside you as you release another flow of your hot juices over it, soaking yourself and the seat[end if]. Once spent, you collapse onto the seat, basking in the powerful afterglow and breathing in more of that arousing gas as you pant for breath. Even as your mind sinks away, fading away beneath the gas that keeps you constantly aroused, so does the pod encapsulating you fade back into the floor. Slick liquid flows in around you and your gear is either dissolved or expelled from the pod, leaving you naked and able to enjoy smooth stimulation over every square inch of your body. You give in to the pleasure, giving yourself over to become a part of this wonderful castle and to the wonderful delights your new home can give.";
 	WaitLineBreak;
-	now bcending is 2;
-	now BodyName of Player is "Captured";
-	now FaceName of Player is "Captured";
-	now SkinName of Player is "Captured";
-	now TailName of Player is "Captured";
-	now CockName of Player is "Captured";
 	now humanity of Player is 0;
+	trigger ending "Bouncy Castle Exhibit";
 	end the story saying "You become part of the Bouncy Castle.";]
 
 
@@ -1522,34 +1486,36 @@ dolchecking is an action applying to one number.
 
 check dolchecking:
 	if location of Player is not Castle Throne Room, say "You don't see those here." instead;
+	let x be the number understood;
+	let status be "";
+	if x > 12:
+		say "There are only a dozen to search." instead;
+	if x < 1:
+		say "Which one did you want to search?" instead;
 
 carry out dolchecking: [Picks events from dolphinlist, defined earlier in the document]
 	let x be the number understood;
 	let status be "";
-	if x > 12:
-		say "There are only a dozen to search.";
-	else:
-		let status be entry x of dolphinList;
-		if status is "A":
+	let status be entry x of dolphinList;
+	if status is "A":
+		say "[dolcheckA]";
+	else if status is "B":
+		now entry x of dolphinlist is "A";
+		say "[dolcheckB]";
+	else if status is "C": [Does not generate another empty suit since the victim isn't removed]
+		say "[dolcheckC]";
+	else if status is "D":
+		now entry x of dolphinlist is "A";
+		say "[dolcheckD]";
+	else if status is "E":
+		if HP of Bubble is 2: [No need to check for 1, since navigating to the castle inherently sets this to 2]
+			say "[dolcheckE]";
+		else if HP of Bubble > 2 and HP of Bubble < 99: [Adjusts event after Bubble is saved]
 			say "[dolcheckA]";
-		else if status is "B":
-			now entry x of dolphinlist is "A";
-			say "[dolcheckB]";
-		else if status is "C": [Does not generate another empty suit since the victim isn't removed]
-			say "[dolcheckC]";
-		else if status is "D":
-			now entry x of dolphinlist is "A";
+		else: [Adjusts event after Bubble is lost]
 			say "[dolcheckD]";
-		else if status is "E":
-			if HP of Bubble is 2: [No need to check for 1, since navigating to the castle inherently sets this to 2]
-				say "[dolcheckE]";
-			else if HP of Bubble > 2 and HP of Bubble < 99: [Adjusts event after Bubble is saved]
-				say "[dolcheckA]";
-			else: [Adjusts event after Bubble is lost]
-				say "[dolcheckD]";
-		else:
-			say "Error - unknown variation.";
-
+	else:
+		say "Error - unknown variation.";
 
 to dolboundstate:
 	let partialengulf be 0;
@@ -1605,7 +1571,7 @@ to dolboundstate:
 				say "     With the pleasure of each movement rolling through your body and the sounds of their trills and laughter echoing through you mind, you're soon able to focus on nothing but the excitement around you. Finally the girls seem to tire of their play, several of them pick you up and hang you alongside the other inflatable dolphin suits lining the walls of the castle before jumping back into the sea and heading for the shore. With the breathing tube in your mouth, all you can do is moan softly as the strange suit continues to pleasure you over and over again, seeming to draw strength from it.";
 				now dolinfloss is -100;
 				now non-infectious entry is true; [prevents regular dolphin girl infection from occurring]
-				now TailName of Player is "Bottlenose Toy";
+				now TailName of Player is "Bottlenose Toy"; [NOTE: No `turn the Player into` here, because variations of the standard desc are used for the game over (@Stadler#3007)]
 				now FaceName of Player is "Bottlenose Toy";
 				now SkinName of Player is "Bottlenose Toy";
 				now BodyName of Player is "Bottlenose Toy";
@@ -1630,6 +1596,7 @@ to dolboundstate:
 				now combat abort is 1;
 				WaitLineBreak;
 				now Trixieexit is 1;
+				trigger ending "Dolphin Suit Trapped";
 				end the story saying "Trapped in the inflatable dolphin suit, your mind slowly fades away until there are no thoughts left in your air-filled head but that of playing at the beach.";
 			else:
 				let k be 0;
@@ -1847,7 +1814,7 @@ to say dolcheckA:		[empty]
 		say "     After playing in the water for a while, the girls decide to frolic in the bouncy castle and you're pulled back inside[if Player is not neuter]. You cum several more times as the girls push, pull and squeeze the inflatable suit, dragging you out of the ocean into their floating castle[end if]. With you safely aboard, the excited girls resume their giggling playtime with you as their new toy. The dolphin girls bounce around the castle happily, occasionally stopping to squeeze each other's inflatable bodies, or lick at the slits between their legs, but there are always several girls focusing on you, lavishing attention on the inflatable suit. With the pleasure of each movement rolling through your body and the sounds of their trills and laughter echoing through you mind, you're soon able to focus on nothing but the excitement around you. Finally the girls seem to tire of their play, several of them pick you up and hang you alongside the other inflatable dolphin suits lining the walls of the castle before jumping back into the sea and heading for the shore. With the breathing tube in your mouth, all you can do is moan softly as the strange suit continues to pleasure you over and over again, seeming to draw strength from it.";
 		now dolinfloss is -100;
 		now non-infectious entry is true; [prevents regular dolphin girl infection from occurring]
-		now TailName of Player is "Bottlenose Toy";
+		now TailName of Player is "Bottlenose Toy"; [NOTE: No `turn the Player into` here, because variations of the standard desc are used for the game over (@Stadler#3007)]
 		now FaceName of Player is "Bottlenose Toy";
 		now SkinName of Player is "Bottlenose Toy";
 		now BodyName of Player is "Bottlenose Toy";
@@ -1871,6 +1838,7 @@ to say dolcheckA:		[empty]
 		now battleground is "void";
 		now combat abort is 1;
 		WaitLineBreak;
+		trigger ending "Dolphin Suit Trapped";
 		end the story saying "Trapped in the inflatable dolphin suit, your mind slowly fades away until there are no thoughts left in your air-filled head but that of playing at the beach.";]
 
 
@@ -2101,13 +2069,8 @@ to say bcchairfinal1: [FLOT - Check?]
 						say "     You struggle to figure a way out of your predicament, but your mind is too foggy from the gas and your powerful afterglow, making thought too difficult now. You try to pull, push and squeeze, but with the pod fully formed around you and your limbs all tightly held, there seems to be no way out of it. Even as the chair continues to sink, the gas gets you aroused again and the chair starts up again, preparing you for another go right away.";
 					say "     Even as your mind sinks away, fading away beneath the gas that keeps you constantly aroused, so does the pod encapsulating you fade back into the floor. Slick liquid flows in around you and your gear is either dissolved or expelled from the pod, leaving you naked and able to enjoy smooth stimulation over every square inch of your body. You give in to the pleasure, succumbing as a mindless prisoner of lust as you enjoy orgasm after orgasm in the hidden safety of your new home.";
 					WaitLineBreak;
-					now bcending is 1;
-					now BodyName of Player is "Captured";
-					now FaceName of Player is "Captured";
-					now SkinName of Player is "Captured";
-					now TailName of Player is "Captured";
-					now CockName of Player is "Captured";
 					now humanity of Player is 0;
+					trigger ending "Bouncy Castle Prisoner";
 					end the story saying "You are imprisoned by the Bouncy Castle.";
 			else:
 				say "     As you continue fighting, you can feel the sex chair's grip on you loosen and you pull hard to get free.";
@@ -2157,13 +2120,8 @@ to say bcchairfinal2:
 	WaitLineBreak;
 	say "     You push yourself to further heights, your sex-crazed mind only seeking another release and more pleasure. When your climax finally comes[if Player is male] and you pump your hot seed into the sex chair[end if], your cries are muffled by the thick rod stuffed into your mouth[if Cunt Count of Player > 1]. Your cunts clamp down around the throbbing dildos inside you as you release another flow of your hot juices over them, soaking yourself and the seat[else if Cunt Count of Player is 1]. Your cunt clamps down around the throbbing dildo inside you as you release another flow of your hot juices over it, soaking yourself and the seat[end if]. Once spent, you collapse onto the seat, basking in the powerful afterglow and breathing in more of that arousing gas as you pant for breath. Even as your mind sinks away, fading away beneath the gas that keeps you constantly aroused, so does the pod encapsulating you fade back into the floor. Slick liquid flows in around you and your gear is either dissolved or expelled from the pod, leaving you naked and able to enjoy smooth stimulation over every square inch of your body. You give in to the pleasure, giving yourself over to become a part of this wonderful castle and to the wonderful delights your new home can give.";
 	WaitLineBreak;
-	now bcending is 2;
-	now BodyName of Player is "Captured";
-	now FaceName of Player is "Captured";
-	now SkinName of Player is "Captured";
-	now TailName of Player is "Captured";
-	now CockName of Player is "Captured";
 	now humanity of Player is 0;
+	trigger ending "Bouncy Castle Exhibit";
 	end the story saying "You become part of the Bouncy Castle.";
 
 
@@ -2193,13 +2151,8 @@ to say bcfinal2:		[Fail - caught w/vixen]
 	say "     You nuzzle and lick at those widening folds even as they start to spread open to let you work your tongue deeper. As you lap up her flowing juices, the stroking flippers and paws start to push at you, pressing you forward all the more. The orca's slick cunt opens wider, taking your head in, and soon after, your shoulder and upper body follow as rippling walls and pushing playmates send you into her. As your upper body's moving into a larger chamber prepared for you, you feel a pair of hands around your ankles while follow you in, the vixen being sent in behind you. Soon enough, you're bundled up together in the large orca's rubbery womb, covered in a slick coating of latex and playing lustfully with one another in the orca's snug womb.";
 	say "     As you [if Player is male]fuck her[else]grope and fondle her[end if], the big orca around you sways and rocks, her well-stuffed body most likely being fucked by the horny sea lion. This is confirmed soon enough with a rush of his hot seed and mind-numbing gas spraying into her uterus, filling it up and coating you both in the gooey semen. This is enough to have you both cum hard before conscious thought fades and you eventually pass out in one another's arms.";
 	WaitLineBreak;
-	now bcending is 4;
-	now BodyName of Player is "Captured";
-	now FaceName of Player is "Captured";
-	now SkinName of Player is "Captured";
-	now TailName of Player is "Captured";
-	now CockName of Player is "Captured";
 	now humanity of Player is 0;
+	trigger ending "Bouncy Castle New Pool Toys";
 	end the story saying "You and the vixen failed to escape your latex fate.";
 
 
@@ -2331,31 +2284,53 @@ carry out dolphincastletesting:
 	move player to Bouncy Castle;
 
 
-Section 7 - Captured Endings
+Section 7 - Endings
 
-when play ends:
-	if BodyName of Player is "Captured" and bcending is 1:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Bouncy Castle Prisoner"	"BadEnd"	""	Bouncy Castle Prisoner rule	20	false
+"Bouncy Castle Exhibit"	"BadEnd"	""	Bouncy Castle Exhibit rule	20	false
+"Bouncy Castle New Chair"	"BadEnd"	""	Bouncy Castle New Chair rule	20	false
+"Bouncy Castle New Pool Toys"	"BadEnd"	""	Bouncy Castle New Pool Toys rule	20	false
+"Bouncy Castle New Pillar"	"BadEnd"	""	Bouncy Castle New Pillar rule	20	false
+
+This is the Bouncy Castle Prisoner rule:
+	if ending "Bouncy Castle Prisoner" is triggered:
 		say "     Your pod ends up hidden beneath the bouncy castle, attached to the underside. There, your life becomes one of unending pleasure as the sex chair that's become your whole world stimulates you. You have orgasm after unending orgasm, as somehow your pleasure satisfies some need of the giant inflatable play area. You consciousness largely fades away under the constant treatment of the aphrodisiacs pumped into you as it sustains you with a sweet, nourishing liquid and air heavily laced with the mind-altering gasses. You become its eternal prisoner, but somehow that doesn't matter, as long as it continues to let you [if Player is not neuter]cum[else]climax[end if].";
 		if Player is female or player is mpreg_ok:
 			say "     You are vaguely aware that there are other pods down there as well despite being fully enclosed and unable to see or sense anything but the pleasures provided. Your womb is periodically pumped full of semen from these other prisoners, impregnating you with their offspring, providing your broken mind with another delight to enjoy. Your children are born as inflatable versions of their sires. They are removed from your pod as they are pushed from your [if Player is female]vagina[else]ass as latex eggs[end if] and released as more servants for the bouncy castle[if Player is male]. Also being male, you take added pleasure in knowing your seed is similarly being used to impregnate females in other pods[end if].";
 		else if Player is male:
 			say "     You are vaguely aware that there are other pods down there as well despite being fully enclosed and unable to see or sense anything but the pleasures provided. Your semen is pumped out of you and periodically provided to the others, used to breed the female prisoners to sire inflatable young inside them to be more servants for the bouncy castle.";
-	else if BodyName of Player is "Captured" and bcending is 2:
+		the Player is imprisoned;
+
+This is the Bouncy Castle Exhibit rule:
+	if ending "Bouncy Castle Exhibit" is triggered:
 		say "     Your pod ends up hidden beneath the bouncy castle, attached to the underside. But you don't remain entirely there, either. A section of your mind, having so willingly accepted the pleasures of the castle, is drawn away from your body and starts to meld into the consciousness that is the bouncy castle. You can share in some of its senses and feel it drawing energy from the pleasure of others, both your body and the other prisoners in pods beneath the castle. It has a small collection of them to sustain itself and this constant feeding brings a pleasure of its own to you as part of the inflatable castle.";
 		say "     Those converted by the floating play area and its creatures are its servants, providing additional energy and pleasure to it. The others, more prisoners of their pods rather than fully part of the castle like you are, live in constant ecstasy and orgasm, as your body does. These creatures are bred with one another as well, semen pumped from the males into the females so they may birth inflatable creatures like their parents to act as fresh servants for the castle. Still sharing some connection with your body, you get to enjoy [if Player is not neuter or player is mpreg_ok]this as well as all the other[else]all the[end if] physical pleasures the castle provides, more directly sharing them with your united consciousness.";
-	else if BodyName of Player is "Captured" and bcending is 3:
+		the Player is imprisoned;
+
+This is the Bouncy Castle New Chair rule:
+	if ending "Bouncy Castle New Chair" is triggered:
 		say "     Having little mind of your own past a vague sense of happiness as an inflatable chair, you spend some time in the lonely room with only the knights to watch as they'll occasionally take a break from their stoic vigil to play with one another on the walls. Eventually though, one of the inflatable dolphin girls finds you. Having been lonely, you do your best to look inviting and comfy and yellow. Drawn in, she takes a seat in you. When you inflate a cock in your seat for her to ride, she's very happy and bounces around to ride it. Being sat in and being able to please (and pleasure) someone feels very good. She rides herself to several orgasms in you, leaving your seat pleasantly wet and sticky.";
 		say "     When she's finally satisfied and a new thought enters her bubbleheaded mind, you're pleased that she takes you out with her, showing you off to her friends. They all take turns in you and you have a wonderful time pleasing them. You're eventually left in the toy room where they keep all their beach toys and inflatables, but they're in there much more often than the out of the way room where you were, so you get much more use now. You have a happy life pleasing the dolphin girls and distracting the occasional intruder until they can be found and made them into another cute dolphin playmate.";
-	else if BodyName of Player is "Captured" and bcending is 4:
+		the Player is gone;
+
+This is the Bouncy Castle New Pool Toys rule:
+	if ending "Bouncy Castle New Pool Toys" is triggered:
 		say "     You are awoken to a shifting of the soft chamber around you both, and with an outpouring of sticky latex fluids, you and your womb-sibling are pushed back out into the world.";
 		if Player is male:
 			say "     You emerge as a [if Player is female]cherry red[else]purple[end if] sea lion and she as an orange orca. Having forgotten your past lives now that you've been reborn as another pair of inflatable pool toys, you snuggle up to her happily. After licking the tasty fluids from each other, you mount her, rocking your pinniped body atop her until you cum and fill her with your sticky seed. From that day forth, you work as a team, helping to guard the castle, playing with the numerous dolphin girls and the infrequent intruders who stumble across you. Most you simply fuck into a stupor and leave for the dolphin suits, but occasionally you bring them to your orca mother and make them into new siblings.";
 		else:
 			say "     You emerge as a [if Player is female]magenta[else]dusty red[end if] orca and she as an orange one. Having forgotten your past lives now that you've been reborn as another pair of inflatable pool toys, you snuggle up to her happily. After licking the tasty fluids from each other, you turn your attention to each other's pussy and eating it out until you've shared several sticky climaxes. From that day forth, you work as a team, helping to guard the castle, playing with the numerous dolphin girls and the infrequent intruders who stumble across you. Most you simply fuck into a stupor and leave for the dolphin suits, but occasionally you bring them to your orca mother and make them into new siblings.";
-	else if BodyName of Player is "Captured" and bcending is 5:
+		the Player is gone;
+
+This is the Bouncy Castle New Pillar rule:
+	if ending "Bouncy Castle New Pillar" is triggered:
 		let compnumber be (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces);
 		if companion of Player is not nullpet, increase compnumber by 1;
 		say "     An uncertain amount of time later, you flow out from the pillar which engulfed you as a mass of [ppcolor] latex. Moving across the inflated floor, your simple mind chooses an open spot for yourself and you form yourself into another pillar. Soon enough, you're rooted in place among the others of your kind in the room. On your front, you have the design of an aggressive [bcfinalpillarform] on your padded [ppcolor] surface[if compnumber is 1]. Your companion, similarly transformed, has become a green pillar with a design suiting their previous form[else if compnumber > 1]. Your companions, similarly transformed, have become colorful pillars with designs suiting their previous forms[end if].";
 		say "     Your existence is a simple one, your previous mind erased and left empty save for thoughts of lust and transforming others into joining with the bouncy castle as you have. Pleasure mostly comes in the form of dolphin girls who wander into the room to be sexually assaulted by your tendrils until you're both satiated. On other occasions, you send out tendrils to some of the other pillars and pleasure one another, forming phalli and orifices for them, spraying your latex cum onto and into each other. But sometimes, your greatest delight will come when some wanderer makes their way into your room. When this happens, you grapple them with tentacles of [ppcolor] goo, sexually pleasuring yourself and them as you draw them inexorably into you to be consumed and transformed into another punching pillar, as was done to you on that fateful day.";
+		the Player is gone;
+
 
 Bouncy Castle ends here.

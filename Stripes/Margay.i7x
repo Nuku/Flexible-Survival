@@ -345,8 +345,13 @@ to say drinkmargaymilk:
 
 Section 5 - Endings
 
-when play ends:
-	if BodyName of Player is "Margay":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Margay Infection"	"Infection"	""	Margay Infection rule	1000	false
+
+This is the Margay Infection rule:
+	if Player has a body of "Margay":
+		trigger ending "Margay Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is female:							[FEMALE/HERM]
 				say "     As your mind collapses, you succumb to the strange, feline urges that fill you. Or more accurately, that demand that you be filled. You strike out into the city. As you travel, you can feel your infection spreading and reaching completion, growing something deep inside you. Coupled with your new instincts, you make your way to the park, drawn by the scent of felines there. You are soon confronted by one of the many small feline girls that inhabit this territory. She seeks to latch onto your bosom and nurse from you as if you were her mother, but your instincts urge you to make her your child in a different manner. One much more fulfilling. Wrapping your motherly arms around the youthful kitty, you hug her tenderly before pressing her muzzle to your wet, gaping pussy. You give the struggling feline a little push and your cunt stretches with ease to take her in, drawing her head into your vagina. Your inner muscles, designed for just such an act, stroke and pull at the cute kitty, pulling her further and further into your large body, drawing her up into your [if Cunt Count of Player > 1]second[else]special[end if] womb. You can feel her curling up inside you and drifting into a soft slumber.";

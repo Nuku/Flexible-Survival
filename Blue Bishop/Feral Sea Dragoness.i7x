@@ -521,12 +521,16 @@ When Play begins:
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Feral Sea Dragon"; [name of the overall species of the infection, used for children, ...]
 	add "Feral Sea Dragoness" to infections of ReptileList;
+	add "Feral Sea Dragoness" to infections of FeralList;
 	add "Feral Sea Dragoness" to infections of MythologicalList;
 	add "Feral Sea Dragoness" to infections of FemaleList;
 	add "Feral Sea Dragoness" to infections of BarbedCockList;
 	add "Feral Sea Dragoness" to infections of InternalCockList;
 	add "Feral Sea Dragoness" to infections of QuadrupedalList;
+	add "Feral Sea Dragoness" to infections of SwimList;
 	add "Feral Sea Dragoness" to infections of TailList;
+	add "Feral Sea Dragoness" to infections of OviImpregnatorList;
+	add "Feral Sea Dragoness" to infections of FirebreathList;
 	add "Feral Sea Dragoness" to infections of TailweaponList;
 	now Name entry is "Feral Sea Dragoness";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
@@ -725,23 +729,11 @@ to fsdfvore:
 		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break][run paragraph on]";
 		say "Sanity: [humanity of Player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of Player]	Thirst: [thirst of Player]	Struggle: [fsdstrugglebar][line break][run paragraph on]";
 		if humanity of Player < 1:
-			repeat with y running from 1 to number of filled rows in Table of Random Critters:
-				choose row y in Table of Random Critters;
-				if Name entry is "Feral Sea Dragon":
-					now MonsterID is y;
-					break;
-			now BodyName of Player is "Feral Sea Dragon";
-			now FaceName of Player is "Feral Sea Dragon";
-			now TailName of Player is "Feral Sea Dragon";
-			now SkinName of Player is "Feral Sea Dragon";
-			now CockName of Player is "Feral Sea Dragon";
-			now tail of Player is tail entry;
-			now Face of Player is face entry;
-			now Skin of Player is skin entry;
-			now Body of Player is body entry;
-			now Cock of Player is cock entry;
-			now voreloss is true;
+			setmonster "Feral Sea Dragon" silently;
+			turn the Player into a "Feral Sea Dragon" silently;
 			now Trixieexit is 1;
+			trigger ending "Feral Sea Dragon Vore";
+			the Player was ended by "Vore by Feral Sea Dragoness";
 			end the story saying "You became a Feral Sea Dragoness's meal!";
 		else:
 			let k be 0;

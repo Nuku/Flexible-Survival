@@ -154,7 +154,7 @@ to say suck panthertaur:
 	say "     Once you're in position and ready you lean in, brushing your tongue over the tip of that member and making the taur shiver with a delight, a bead of warm pre instantly on your tongue. You lick it up, savoring the warm and pleasant taste of the herm for a moment before you move in for more, wrapping your lips around that thick tip and starting to suck. Your hands keep themselves busy as well, one wrapping around (or at least gripping) the lower part of that shaft and pumping it while the other moves lower, beneath the taur's balls to get at her cunt and busily fingering and pleasuring it as well.";
 	WaitLineBreak;
 	say "     At this point her whole body is trembling a bit and her hands are clutching at the ground, though she seems to be doing you the favor of restraining her instinct to thrust and shove her cock down your throat, letting you take it at your own pace. Which you do quite eagerly, stuffing as much of that softly-barbed feline cock into your mouth and doing your best to wedge it into your throat. ";
-	if "Vore Predator" is listed in feats of Player:
+	if Player can vore:
 		say "With the unnatural stretchiness of your altered body this happens with little difficulty at all, as you manage to get that thick cock to slide down your throat... and take it in all the way to the base as well. This quite surprises the panthertaur and sends a massive shudder through her body. No longer needing one hand on her cock, you're free to use both of your hands to work her cunt while you bob quickly on her length, swallowing around it in powerful motions...";
 		say "     Your dual stimulations of her body soon cause her to roar out in bliss as you bring her to a powerful dual climax. Her heavy cock twitching in your throat as seed floods directly down and into your belly, quickly bloating and filling it with shot after shot of her plentiful seed. Her cunt isn't left out either, and your hands are left completely soaked and likely to smell of her feminine juices for a while. With your pleasurable task complete you pop off of her cock, allowing some of her remaining juices to pool between her many breasts as you stand up and clean yourself off a bit, leaving the now passed-out panthertaur lying there as you return to your adventure.";
 		PlayerEat 15;
@@ -368,8 +368,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Panther Taur":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Panther Taur Infection"	"Infection"	""	Panther Taur Infection rule	1000	false
+
+This is the Panther Taur Infection rule:
+	if Player has a body of "Panther Taur":
+		trigger ending "Panther Taur Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You get the sudden urge to prowl, and begin seeking an ideal mate. Something within you does not allow you to accept any but the strongest[if Cock Count of Player > 1]. Oddly enough, exposed and vulnerable females seem to always be acceptable. Just the thought of pinning a female down and shoving your [cock size desc of Player] [Cock of Player] rod into their depths is enough to give you a raging hard on[end if].";
 		else:

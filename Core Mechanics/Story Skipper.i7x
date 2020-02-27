@@ -21,7 +21,7 @@ The File of BeastSave (owned by another project) is called "FSBeastSave".
 The File of NoteSave (owned by another project) is called "FSNoteSave".
 
 PetList is a list of text that varies.[@Tag:NotSaved] [for stashing the pet objects in the Character Nexus]
-PetList is { "Nullpet", "Latex Vixen", "strange doll", "pink raccoon", "demon brute", "wukong", "human dog", "Retriever Girl", "rubber tigress", "frost giantess", "Little fox", "skunk kit", "equinoid warrior", "Felinoid Companion", "Cute Crab", "house cat", "Exotic Bird", "helper dog", "Gryphoness", "bee girl", "gshep", "mouse girl", "royal tiger", "doberman companion", "demonologist" };
+PetList is { "Nullpet", "Latex Vixen", "strange doll", "pink raccoon", "demon brute", "wukong", "human dog", "Retriever Girl", "rubber tigress", "frost giantess", "Little fox", "skunk kit", "equinoid warrior", "Felinoid Companion", "Cute Crab", "house cat", "Exotic Bird", "helper dog", "Gryphoness", "bee girl", "gshep", "mouse girl", "royal tiger", "doberman companion", "demonologist", "Carnivorous Plant" };
 
 an everyturn rule:
 	if Player is in NPC Nexus:
@@ -147,7 +147,7 @@ to EventSave:
 		now SituationArea entry is sarea of x;
 	write File of EventSave from the Table of GameEvents; [freshly made table gets saved to file]
 	blank out the whole of Table of GameEvents; [empty it after saving]
-	if debugactive is 1:
+	if debug is at level 10:
 		say "DEBUG -> File of EventSave written.[line break]";
 
 to EventRestore:
@@ -172,10 +172,10 @@ to EventRestore:
 				[bugfix code after re-naming Midway to Fair]
 				if sarea of EventObject is "Midway":
 					now sarea of EventObject is "Fair";
-				if debugactive is 1:
+				if debug is at level 10:
 					say "DEBUG -> [x]: EventIdName: [EventIdName] found and set to: [ResolveState entry], [ActiveState entry], Resolution: [Resolution entry]";
 			else:
-				if debugactive is 1:
+				if debug is at level 10:
 					say "DEBUG -> [x]: EventIdName: [EventIdName] not found in Table of GameEventIDs!";
 	else:
 		say "No Event Save File Found!";
@@ -211,7 +211,7 @@ to RoomSave:
 	write File of RoomInventorySave from the Table of GameRoomInventories; [freshly made table gets saved to file]
 	blank out the whole of Table of GameRooms; [empty after saving]
 	blank out the whole of Table of GameRoomInventories; [empty after saving]
-	if debugactive is 1:
+	if debug is at level 10:
 		say "DEBUG -> File of RoomSave written.[line break]";
 
 to RoomRestore:
@@ -235,10 +235,10 @@ to RoomRestore:
 					now RoomObject is sleepsafe;
 				else:
 					now RoomObject is not sleepsafe;
-				if debugactive is 1:
+				if debug is at level 10:
 					say "DEBUG -> [x]: RoomIdName: [RoomIdName] found and set to: [Reachability entry]; [ExplorationStatus entry]; [RestSafety entry]";
 			else:
-				if debugactive is 1:
+				if debug is at level 10:
 					say "DEBUG -> [x]: RoomIdName: [RoomIdName] not found in Table of GameRoomIDs!";
 	if the File of RoomInventorySave exists:
 		repeat with x running through rooms:
@@ -252,7 +252,7 @@ to RoomRestore:
 				let RoomObject be the object corresponding to a name of RoomIdName in the Table of GameRoomIDs;
 				add ItemName entry to Invent of RoomObject;
 			else:
-				if debugactive is 1:
+				if debug is at level 10:
 					say "DEBUG -> [x]: RoomIdName: [RoomIdName] not found in Table of GameRoomIDs!";
 	else:
 		say "No Room Save File Found!";
@@ -287,7 +287,7 @@ to PossessionSave:
 			now CurseStatus entry is PossesssionCursed;
 	write File of PossessionSave from the Table of GamePossessions; [freshly made table gets saved to file]
 	blank out the whole of Table of GamePossessions; [empty after saving to file]
-	if debugactive is 1:
+	if debug is at level 10:
 		say "DEBUG -> File of PossessionSave written.[line break]";
 
 to PossessionRestore:
@@ -310,10 +310,10 @@ to PossessionRestore:
 						now PossessionObject is cursed;
 					else:
 						now PossessionObject is not cursed;
-				if debugactive is 1:
+				if debug is at level 10:
 					say "DEBUG -> [x]: PossessionIdName: [PossessionIdName] found and set to: [carried of PossessionObject] carried and [stashed of PossessionObject] stored.";
 			else:
-				if debugactive is 1:
+				if debug is at level 10:
 					say "DEBUG -> [x]: PossessionIdName: [PossessionIdName] not found in Table of Game Objects!";
 	else:
 		say "No Possession Save File Found!";
@@ -417,7 +417,7 @@ to CharacterSave:
 	blank out the whole of Table of GameCharacters; [empty after saving]
 	blank out the whole of Table of GameCharacterVariables; [empty after saving]
 	blank out the whole of Table of GameTraits; [empty after saving]
-	if debugactive is 1:
+	if debug is at level 10:
 		say "DEBUG -> File of CharacterVariableSave written.[line break]";
 		say "DEBUG -> File of TraitSave written.[line break]";
 
@@ -431,11 +431,11 @@ to CharacterRestore:
 			if there is a name of CharacterIdName in the Table of GameCharacterIDs:
 				let CharacterObject be the object corresponding to a name of CharacterIdName in the Table of GameCharacterIDs;
 				if CharacterIdName is listed in PetList:
-					if debugactive is 1:
+					if debug is at level 10:
 						say "DEBUG -> Pets are part of the player, thus they don't get moved.[line break]";
 				[
 				else if CharacterIdName is "yourself":
-					if debugactive is 1:
+					if debug is at level 10:
 						say "DEBUG -> The player doesn't get moved.[line break]";
 				]
 				else if there is a name of LocationName entry in the Table of GameRoomIDs:
@@ -488,7 +488,7 @@ to CharacterRestore:
 				now scalevalue of CharacterObject is The scalevalue entry;
 				now PlayerLastSize of CharacterObject is PlayerLastSize entry;
 				[Texts]
-				now MainInfection of CharacterObject is MainInfection entry;
+				[now MainInfection of CharacterObject is MainInfection entry;]
 				now FirstAnalPartner of CharacterObject is FirstAnalPartner entry;
 				now FirstVaginalPartner of CharacterObject is FirstVaginalPartner entry;
 				now FirstOralPartner of CharacterObject is FirstOralPartner entry;
@@ -514,10 +514,10 @@ to CharacterRestore:
 				now SexuallyExperienced of CharacterObject is SexuallyExperienced entry;
 				now TwistedCapacity of CharacterObject is TwistedCapacity entry;
 				now Sterile of CharacterObject is Sterile entry;
-				if debugactive is 1:
+				if debug is at level 10:
 					say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] found and values restored.";
 			else:
-				if debugactive is 1:
+				if debug is at level 10:
 					say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] not found in Table of GameCharacterIDs!";
 	else if the File of CharacterSave exists:
 		say "Restoring Characters...";
@@ -528,11 +528,11 @@ to CharacterRestore:
 			if there is a name of CharacterIdName in the Table of GameCharacterIDs:
 				let CharacterObject be the object corresponding to a name of CharacterIdName in the Table of GameCharacterIDs;
 				if CharacterIdName is listed in PetList:
-					if debugactive is 1:
+					if debug is at level 10:
 						say "DEBUG -> Pets are part of the player, thus they don't get moved.[line break]";
 				[
 				else if CharacterIdName is "yourself":
-					if debugactive is 1:
+					if debug is at level 10:
 						say "DEBUG -> The player doesn't get moved.[line break]";
 				]
 				else if there is a name of LocationName entry in the Table of GameRoomIDs:
@@ -579,10 +579,10 @@ to CharacterRestore:
 				now OralVirgin of CharacterObject is OralVirgin entry;
 				now Virgin of CharacterObject is Virgin entry;
 				now AnalVirgin of CharacterObject is AnalVirgin entry;
-				if debugactive is 1:
+				if debug is at level 10:
 					say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] found and values restored.";
 			else:
-				if debugactive is 1:
+				if debug is at level 10:
 					say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] not found in Table of GameCharacterIDs!";
 	else:
 		say "No Character Save File Found!";
@@ -608,7 +608,7 @@ to TraitRestore:
 					add TraitText entry to Traits of CharacterObject;
 					if TraitText entry is "Tamed": [pets]
 						now CharacterObject is tamed;
-					if debugactive is 1:
+					if debug is at level 10:
 						say "DEBUG -> [x]: Added Trait: '[TraitText entry]' to [TraitOwner].";
 	else:
 		say "No Trait Save File Found!";
@@ -686,10 +686,10 @@ to PlayerSave:
 			now ListName entry is "BlockList";
 			now EntryText entry is entry y of BlockList of Player;
 	write File of PlayerSave from the Table of PlayerData; [freshly made table gets saved to file]
-	if debugactive is 1:
+	if debug is at level 10:
 		say "DEBUG -> File of PlayerSave written.[line break]";
 	write File of PlayerListsSave from the Table of PlayerLists; [freshly made table gets saved to file]
-	if debugactive is 1:
+	if debug is at level 10:
 		say "DEBUG -> File of PlayerListsSave written.[line break]";
 	blank out the whole of Table of PlayerData; [empty after saving]
 	blank out the whole of Table of PlayerLists; [empty after saving]
@@ -774,7 +774,7 @@ to PlayerSave:
 		now HermInterest entry is HermInterest of Player;
 		write File of NewPlayerSave from the Table of NewPlayerData; [freshly made table gets saved to file]
 		blank out the whole of Table of NewPlayerData; [empty after saving]
-		if debugactive is 1:
+		if debug is at level 10:
 			say "DEBUG -> File of NewPlayerSave written.[line break]";
 
 
@@ -805,7 +805,7 @@ to PlayerRestore:
 		now Short Breast Size Desc of Player is Short Breast Size Desc entry;
 		now bodydesc of Player is bodydesc entry;
 		now bodytype of Player is bodytype entry;
-		if debugactive is 1:
+		if debug is at level 10:
 			say "DEBUG -> Player Data restored.";
 	else:
 		say "No Player Save File Found!";
@@ -925,7 +925,7 @@ to PlayerRestore:
 		now FemaleInterest of Player is FemaleInterest entry;
 		now TransFemaleInterest of Player is TransFemaleInterest entry;
 		now HermInterest of Player is HermInterest entry;
-		if debugactive is 1:
+		if debug is at level 10:
 			say "DEBUG -> New Player Data restored.";
 	else if NewTypeInfectionActive is true:
 		say "No Additional Player Data Save File Found!";
@@ -955,13 +955,13 @@ to ChildrenSave:
 	now AssSpeciesName entry is AssSpeciesName of Child;
 	now TailSpeciesName entry is TailSpeciesName of Child;
 	write File of UnbornChildSave from the Table of ChildData;
-	if debugactive is 1:
+	if debug is at level 10:
 		say "DEBUG -> File of UnbornChildrenSave written.[line break]";
 	say "Saving born children...";
 	write File of ChildrenSave from the Table of PlayerChildren;
 	write File of ChildrenBunkerSave from the Table of PlayerBunkerChildren;
 	write File of ChildrenRoamingSave from the Table of PlayerRoamingChildren;
-	if debugactive is 1:
+	if debug is at level 10:
 		say "DEBUG -> File of ChildrenSave written.[line break]";
 		say "DEBUG -> File of ChildrenBunkerSave written.[line break]";
 		say "DEBUG -> File of ChildrenRoamingSave written.[line break]";
@@ -970,7 +970,7 @@ to ChildrenRestore:
 	if the File of UnbornChildSave exists:
 		say "Restoring unborn children...";
 		read File of UnbornChildSave into the Table of ChildData;
-		if debugactive is 1:
+		if debug is at level 10:
 			say "DEBUG -> Unborn children restored from FSUnbornChildSave.[line break]";
 		choose row 1 in the Table of ChildData;
 		now Gestation of Child is Gestation entry;
@@ -998,21 +998,21 @@ to ChildrenRestore:
 	if the File of ChildrenSave exists:
 		say "Restoring born children...";
 		read File of ChildrenSave into the Table of PlayerChildren;
-		if debugactive is 1:
+		if debug is at level 10:
 			say "DEBUG -> Children restored from FSPlayerChildrenSave.[line break]";
 	else:
 		say "No Children Save File Found!";
 	if the File of ChildrenBunkerSave exists:
 		say "Restoring Children (Bunker)...";
 		read File of ChildrenBunkerSave into the Table of PlayerBunkerChildren;
-		if debugactive is 1:
+		if debug is at level 10:
 			say "DEBUG -> Children restored from FSPlayerChildrenBunkerSave.[line break]";
 	else:
 		say "No Children (Bunker) Save File Found!";
 	if the File of ChildrenRoamingSave exists:
 		say "Restoring Children (Roaming)...";
 		read File of ChildrenRoamingSave into the Table of PlayerRoamingChildren;
-		if debugactive is 1:
+		if debug is at level 10:
 			say "DEBUG -> Children restored from FSPlayerChildrenRoamingSave.[line break]";
 	else:
 		say "No Children (Roaming) Save File Found!";
@@ -1035,7 +1035,7 @@ to BeastSave:
 		now sex entry is BeastSex;
 	write File of BeastSave from the Table of GameBeasts; [freshly made table gets saved to file]
 	blank out the whole of Table of GameBeasts; [empty after saving]
-	if debugactive is 1:
+	if debug is at level 10:
 		say "DEBUG -> File of BeastSave written.[line break]";
 
 to BeastRestore:
@@ -1055,10 +1055,10 @@ to BeastRestore:
 					now Area entry is "Fair";
 				now non-infectious entry is BeastNonInfect;
 				now sex entry is BeastSex;
-				if debugactive is 1:
+				if debug is at level 10:
 					say "DEBUG -> [x]: BeastName: [BeastName] Area entry set to [BeastArea]!";
 			else:
-				if debugactive is 1:
+				if debug is at level 10:
 					say "DEBUG -> BeastName: [BeastName] not found in Table of Random Critters!";
 	else:
 		say "No Beast Save File Found!";
@@ -1067,14 +1067,14 @@ to BeastRestore:
 to NoteSave:
 	say "Saving Notes...";
 	write File of NoteSave from the Table of JournalNotes;
-	if debugactive is 1:
+	if debug is at level 10:
 		say "DEBUG -> File of NoteSave written.[line break]";
 
 to NoteRestore:
 	if the File of NoteSave exists:
 		say "Restoring Notes...";
 		read File of NoteSave into the Table of JournalNotes;
-		if debugactive is 1:
+		if debug is at level 10:
 			say "DEBUG -> Notes restored from FSNoteSave.[line break]";
 	else:
 		say "No Note Save File Found!";
@@ -1092,13 +1092,22 @@ Carry out ProgressExport:
 	say "[ProgressionExport]";
 
 To say ProgressionExport:
-	if wrcursestatus is 5:
-		wrcurserecede; [puts player back to normal form and restores proper stats for saving]
+	say "     [bold type]Do you really want to start the export process?[roman type][line break]";
 	LineBreak;
-	say "     Writing save files.";
-	SaveEverything;
-	if wrcursestatus is 5:
-		wrcursesave; [puts player back to complete wereraptor form]
+	say "     ([link]Y[as]y[end link]) - Sure, I'll wait a minute (or five) to write files containing my progress!";
+	say "     ([link]N[as]n[end link]) - Erh, not right now.";
+	if Player consents:
+		LineBreak;
+		if Player is not lonely:
+			say "     Preparing to travel to an alternate reality, you send your current companion away to await this in a safe place.";
+			try Dismissing;
+		if wrcursestatus is 5:
+			wrcurserecede; [puts player back to normal form and restores proper stats for saving]
+		LineBreak;
+		say "     Writing save files.";
+		SaveEverything;
+		if wrcursestatus is 5:
+			wrcursesave; [puts player back to complete wereraptor form]
 
 To SaveEverything:
 	EventSave;

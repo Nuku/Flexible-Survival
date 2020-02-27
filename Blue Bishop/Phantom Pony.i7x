@@ -192,10 +192,10 @@ to blotbind:
 				say "     Losing yourself to your overwhelming need, trapped within this vinyl prison, the inflatable pony shows no relent in perpetually milking you.";
 			say "     Eventually, you completely lose track of time. From your limited vision through the toy's eyes, it's very apparent that nobody is aware of your ultimate fate, doomed to constant abuse by this tainted suit...";
 			WaitLineBreak;
-			now BodyName of Player is "Blotted";
 			now humanity of Player is 0;
-			end the story saying "You are milked perpetually by the toy.";
 			now Trixieexit is 1;
+			trigger ending "Blotted by Inflatable Pony";
+			end the story saying "You are milked perpetually by the toy.";
 		else:
 			let k be 0;
 			now keychar is "INVALID";
@@ -449,12 +449,17 @@ to say blotstrugglebar:
 		say "[if struggleatt > 1]X[else]-[end if]";
 	say "[if struggleatt > 0]X[else]-[end if][bracket]";
 
-when play ends:
-	if BodyName of Player is "Blotted":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Blotted by Inflatable Pony"	"BadEnd"	"Sex Slave"	Blotted by Inflatable Pony rule	20	false
+
+This is the Blotted by Inflatable Pony rule:
+	if ending "Blotted by Inflatable Pony" is triggered:
 		say "     You're eventually discovered by a rescue team and - albeit reluctantly - brought back for study. Between the distracting sounds of your moans and panting, you gather from the scientists that the toy itself is once again completely harmless, though it's now connected to you in such a way that removing it will most certainly kill you.";
 		say "     When it's clear there's nothing that can be done for you, you're eventually shipped from place to place, until the sting of your fate subsides in the consciousness of those who have been caring for you. Eventually, some seedy types manage to buy you off and cart you to a brothel that specializes in your 'Type'.";
 		say "     Apparently, the pony is still 'Rideable'[if Player is male and anallevel < 3 and Cunt Count of Player is 0], especially with your cock[smn] exposed, like they are[end if]. Customers from far and wide come to make use of you, now subject to the whims of the pony and these complete strangers, who you can only barely glimpse at through your prison's eyes.";
 		say "     It's clear the pony has some sort of intelligence to it, as it does eventually ease up to make the task of being perpetually milked not completely banal over time, and it does seems to shake things up with you on the occasion by varying the stimulation or coming up with different implements or just doing something peculiar. Ultimately, though, it seems content subjecting you to this eternal fate, and over time it manages to convert you to its way of thinking...";
+		the Player is imprisoned;
 
 
 Phantom Pony ends here.

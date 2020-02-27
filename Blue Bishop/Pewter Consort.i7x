@@ -162,22 +162,9 @@ to pewterbind:
 		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break][run paragraph on]";
 		say "Sanity: [humanity of Player]/ 100	Lust: [lustatt]/100	Struggle: [bracket]-[if struggleatt > 1][bold type]X[roman type][else]-[end if][if struggleatt > 0][bold type]X[roman type][else]-[end if][close bracket][line break][run paragraph on]";
 		if humanity of Player < 1:
-			repeat with y running from 1 to number of filled rows in Table of Random Critters:
-				choose row y in Table of Random Critters;
-				if Name entry is "Pewter Consort":
-					now MonsterID is y;
-					break;
-			now BodyName of Player is "Pewter Consort";
-			now FaceName of Player is "Pewter Consort";
-			now TailName of Player is "Pewter Consort";
-			now SkinName of Player is "Pewter Consort";
-			now CockName of Player is "Pewter Consort";
-			now tail of Player is tail entry;
-			now Face of Player is face entry;
-			now Skin of Player is skin entry;
-			now Body of Player is body entry;
-			now Cock of Player is cock entry;
+			turn the Player into a "Pewter Consort";
 			now Trixieexit is 1;
+			trigger ending "Pewter Consort Orgy";
 			end the story saying "You lost your mind while bound!";
 		else:
 			let k be 0;
@@ -908,14 +895,24 @@ to say pewterseeddesc:
 
 Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "Pewter Consort":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Pewter Consort Orgy"	"Boundstate"	""	Pewter Consort Orgy rule	100	false
+"Pewter Consort Infection"	"Infection"	""	Pewter Consort Infection rule	1000	false
+
+This is the Pewter Consort Orgy rule:
+	if ending "Pewter Consort Orgy" is triggered:
+		say "     Unable to retain your humanity after being subjected to this perpetual orgy, it eventually becomes all you know, subjected to a seemingly endless cascade of colors and sensation in an almost hypnotic fashion, seemingly sustained by their collective radiance and their sexual fluids. You never manage to leave and observe the fate of the world outside, but at this point it seems of little issue to you...";
+		the Player has left;
+
+This is the Pewter Consort Infection rule:
+	if ending "Pewter Consort Orgy" is triggered:
+		make no decision;
+	if Player has a body of "Pewter Consort":
+		trigger ending "Pewter Consort Infection";
 		if humanity of Player < 10:
-			if boundstate is true:
-				say "     Unable to retain your humanity after being subjected to this perpetual orgy, it eventually becomes all you know, subjected to a seemingly endless cascade of colors and sensation in an almost hypnotic fashion, seemingly sustained by their collective radiance and their sexual fluids. You never manage to leave and observe the fate of the world outside, but at this point it seems of little issue to you...";
-			else:
-				say "     Overtaken by your infection's control, you lose track of all prior thought, relegating yourself to aimlessly wandering the streets in search of company. Eventually, you find someone to revel with in their warmth. They seem to really enjoy playing hide and seek, but when you finally catch them, it's naught but a few moments of roughhousing before you can make them moan and writhe until they wholly radiate bliss.";
-				say "     After playing this game with them a number of times, they grow inclined to join you on your little adventure, eager to find others to play with as much as you...";
+			say "     Overtaken by your infection's control, you lose track of all prior thought, relegating yourself to aimlessly wandering the streets in search of company. Eventually, you find someone to revel with in their warmth. They seem to really enjoy playing hide and seek, but when you finally catch them, it's naught but a few moments of roughhousing before you can make them moan and writhe until they wholly radiate bliss.";
+			say "     After playing this game with them a number of times, they grow inclined to join you on your little adventure, eager to find others to play with as much as you...";
 		else:
 			say "     Your feral, slender body doesn't seem to be regarded very highly by the uninfected, once the military finds and processes you. Once you're inevitably let free back into civilized society, it's a bit hard to maneuver in a world that only ever looks down upon you - both figuratively and literally - but you eventually manage to get by.";
 			if FaceName of Player is "Pewter Consort":

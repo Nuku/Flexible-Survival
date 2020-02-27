@@ -732,11 +732,8 @@ Instead of resolving Concert Hall:
 			say "you gain more cocks, more pussies, more breasts, more arms and legs as well? Even more heads? Things grow hazy as your mind struggles to understand what it happening to you, your body splitting and forming new, independent copies of itself. At first, it is all very confusing, the last shreds of your old mind trying to believe that you are still one united whole with several additional limbs and genitalia, but eventually clarity sets in as you understand you are simply many, each body singularly either male or female.";
 		say "     You become like the other rabbits living here, several who are one. In truth, there are only a few individuals living here, but each having several bodies all with one same mind. You are welcomed into the group, joining their orchestra as you and your several bodies learn to play from the others. And outside of practice comes the pleasure of lustful sex shared with so many bodies, so many lovers, all at once.";
 		now humanity of Player is 0;
-		now TailName of Player is "Anthro Rabbit";
-		now FaceName of Player is "Anthro Rabbit";
-		now SkinName of Player is "Anthro Rabbit";
-		now BodyName of Player is "Anthro Rabbit";
-		now CockName of Player is "Anthro Rabbit";
+		setmonster "Anthro Rabbit" silently;
+		turn the Player into a "Anthro Rabbit" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
 		end the story saying "Your mind has been subsumed by that of an anthro rabbit, to go off for a life of music and lust in your new warren.";
 		wait for any key;
 		follow the turnpass rule;
@@ -838,22 +835,8 @@ Instead of resolving Hunting Prides:
 		now humanity of Player is 0;
 		now feline_pride_defeat is true;
 		[puts Feline as lead monster for infection and impregnation]
-		repeat with y running from 1 to number of filled rows in Table of Random Critters:
-			choose row y in Table of Random Critters;
-			if Name entry is "Feline":
-				now MonsterID is y;
-				break;
-		now TailName of Player is "Feline";
-		now FaceName of Player is "Feline";
-		now SkinName of Player is "Feline";
-		now BodyName of Player is "Feline";
-		now CockName of Player is "Feline";
-		attributeinfect;
-		now tail of Player is tail entry;
-		now Face of Player is face entry;
-		now Skin of Player is skin entry;
-		now Body of Player is body entry;
-		now Cock of Player is cock entry;
+		setmonster "Feline" silently;
+		turn the Player into a "Feline" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
 		if "Male Preferred" is listed in feats of Player:
 			now Cock Count of Player is 1;
 			if Cock Length of Player < 9, now Cock Length of Player is 9;
@@ -920,23 +903,9 @@ to say Leonardrivalfight:
 		say "     You and Leonard have a delightful time making increasingly subservient kitties out of the once strong and virile males. This orgy and training session doesn't end until you and they have all been filled until bloated with the handsome lion's semen and he's fully spent in a way he hasn't been since the recital. The nine of you, your trio of girls and their new dark-haired member having joined you at some point later on, curl up to rest together on and beside the large bed in a warm bundle of feline happiness and briefly sated lust.[impregchance][impregchance]";
 		SanLoss 25;
 		[puts Feline as lead monster for infection and impregnation]
-		repeat with y running from 1 to number of filled rows in Table of Random Critters:
-			choose row y in Table of Random Critters;
-			if Name entry is "Feline":
-				now MonsterID is y;
-				break;
-		now scale entry is 3;
-		now TailName of Player is "Feline";
-		now FaceName of Player is "Feline";
-		now SkinName of Player is "Feline";
-		now BodyName of Player is "Feline";
-		now CockName of Player is "Feline";
-		attributeinfect;
-		now tail of Player is tail entry;
-		now Face of Player is face entry;
-		now Skin of Player is skin entry;
-		now Body of Player is body entry;
-		now Cock of Player is cock entry;
+		setmonster "Feline" silently;
+		choose row MonsterID in Table of Random Critters;
+		turn the Player into a "Feline";
 		now Cunt Count of Player is 1;
 		if Cunt Depth of Player < 9, now Cunt Depth of Player is 9;
 		if Cunt Tightness of Player < 3, now Cunt Tightness of Player is 3;
@@ -980,22 +949,8 @@ to say Leonardrivalfight:
 		now humanity of Player is 0;
 		now HP of Leonard is 100;
 		[puts Feline as lead monster for infection and impregnation]
-		repeat with y running from 1 to number of filled rows in Table of Random Critters:
-			choose row y in Table of Random Critters;
-			if Name entry is "Feline":
-				now MonsterID is y;
-				break;
-		now TailName of Player is "Feline";
-		now FaceName of Player is "Feline";
-		now SkinName of Player is "Feline";
-		now BodyName of Player is "Feline";
-		now CockName of Player is "Feline";
-		attributeinfect;
-		now tail of Player is tail entry;
-		now Face of Player is face entry;
-		now Skin of Player is skin entry;
-		now Body of Player is body entry;
-		now Cock of Player is cock entry;
+		setmonster "Feline" silently;
+		turn the Player into a "Feline" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
 		if "Male Preferred" is listed in feats of Player:
 			now Cock Count of Player is 1;
 			if Cock Length of Player < 9, now Cock Length of Player is 9;

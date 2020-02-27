@@ -41,8 +41,7 @@ to say losetoplatypus:
 	if BodyName of Player is "Platypus" and player is pure and player is not mpreg_ok and player is puremale:
 		LineBreak;
 		say "     You feel something tingling in your belly as it grows warm and put your hands on it in concern. Then a thought clicks suddenly into your head: You can now become pregnant through anal sex, much like the platypus who did this to you.";
-		say "     [']MPreg['] has been added to your list of feats.";
-		add "MPreg" to feats of Player;
+		FeatGain "MPreg";
 		say "[ovichance]";
 
 to say beattheplatypus:
@@ -91,6 +90,7 @@ When Play begins:
 	add "Platypus" to infections of BarbedCockList;
 	add "Platypus" to infections of SheathedCockList;
 	add "Platypus" to infections of BipedalList;
+	add "Platypus" to infections of SwimList;
 	add "Platypus" to infections of TailList;
 	add "Platypus" to infections of MpregList;
 	now Name entry is "Platypus";
@@ -250,8 +250,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Platypus":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Platypus Infection"	"Infection"	""	Platypus Infection rule	1000	false
+
+This is the Platypus Infection rule:
+	if Player has a body of "Platypus":
+		trigger ending "Platypus Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You hear a call in your mind, the call of other platypus like yourself. Following the call through the ruined city, you pass many infected creatures, but they don't seem to bother you, much less matter right now. The closer the call gets, the more platypuses you see following the same road. Soon the city is left behind and you find yourself at the beach.";
 			say "     One by one, all the platypuses around you start diving into the water, swimming away to leave the dry world behind. The call pulls you towards the water, and though you try to fight it, you find yourself wading in, looking for a good mate, ready to start your own family with. As you search the shallow waters, another platypus finds you, and something sparks between you, knowing that this is the one that you'll spend your life with.";

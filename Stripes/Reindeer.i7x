@@ -88,6 +88,7 @@ When Play begins:
 	add "Reindeer" to infections of BluntCockList;
 	add "Reindeer" to infections of SheathedCockList;
 	add "Reindeer" to infections of BipedalList;
+	add "Reindeer" to infections of FlightList;
 	add "Reindeer" to infections of TailList;
 	now Name entry is "Reindeer"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
@@ -275,22 +276,7 @@ to say nogging:
 	if Libido of Player > 100, now Libido of Player is 100;
 	if humanity of Player < 1:
 		say "     Drunk on the egg nog, you drink all of it you have down, losing yourself in the holiday spirit as your mind unravels.";
-		repeat with y running from 1 to number of filled rows in Table of Random Critters:
-			choose row y in Table of Random Critters;
-			if Name entry is "Reindeer":
-				now MonsterID is y;
-				break;
-		now TailName of Player is "Reindeer";
-		now FaceName of Player is "Reindeer";
-		now SkinName of Player is "Reindeer";
-		now BodyName of Player is "Reindeer";
-		now CockName of Player is "Reindeer";
-		attributeinfect;
-		now tail of Player is tail entry;
-		now Face of Player is face entry;
-		now Skin of Player is skin entry;
-		now Body of Player is body entry;
-		now Cock of Player is cock entry;
+		turn the Player into a "Reindeer" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
 		end the story saying "You gave in to the holiday spirit.";
 		now battleground is "void";
 
@@ -384,8 +370,15 @@ to say reindeerbreastheat:
 
 Section 5 - Endings
 
-when play ends:
-	if BodyName of Player is "Reindeer":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Reindeer Infection"	"Infection"	""	Reindeer Infection rule	1000	false
+
+This is the Reindeer Infection rule:
+	if ending "Susan's Epilogue" is triggered:
+		make no decision;
+	if Player has a body of "Reindeer":
+		trigger ending "Reindeer Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     As your mind fails, it empties of most things, filled instead with Christmas songs, holiday specials and festive recipes. You prance outside, feeling light on your feet even as the temperature starts to drop around you. Pulling the heat out of your environment, you use this energy to fly, taking to the air with natural ease. You trot merrily through the air, starting to laugh and cheer as the spirit of the season fills you. For it is the holiday season. It is always the holiday season now, in your mind.";
 			say "     You fly around the city, soon spotting the reindeer from before and moving to join him. He is very pleased to see you joining him in the holiday spirit. He fits you with a festive harness festooned with bells. He then mounts you in mid-air, taking you as his mate and filling you with a large, thick load of caribou cum.";

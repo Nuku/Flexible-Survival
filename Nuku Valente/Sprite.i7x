@@ -256,8 +256,13 @@ the scent of fairy dust is "Taking a careful sniff of the powder, you catch a fa
 
 Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "City Sprite":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"City Sprite Infection"	"Infection"	""	City Sprite Infection rule	1000	false
+
+This is the City Sprite Infection rule:
+	if Player has a body of "City Sprite":
+		trigger ending "City Sprite Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Spriteconsent is 1:
 				say "You feel everything getting smaller around you as you lose mass rapidly. The extra flesh is burned away in bright rainbow lights. Perhaps it is this light that guides the swarm of sprites to find you so quickly. They hug and kiss at you, welcoming you into their swarm. You follow them away from the city. The forest where you all eventually settle earns a reputation for being haunted, but, oddly, hikers still come regularly to visit you and the swarm.";

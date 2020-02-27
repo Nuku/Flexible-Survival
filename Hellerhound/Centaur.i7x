@@ -206,14 +206,14 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Centaur"; [name of the overall species of the infection, used for children, ...]
-	add "Centaur" to infections of EquineList;
-	add "Centaur" to infections of FurryList;
-	add "Centaur" to infections of MythologicalList;
-	add "Centaur" to infections of MaleList;
-	add "Centaur" to infections of BluntCockList;
-	add "Centaur" to infections of SheathedCockList;
-	add "Centaur" to infections of TaurList;
-	add "Centaur" to infections of TailList;
+	add "Mutant Centaur" to infections of EquineList;
+	add "Mutant Centaur" to infections of FurryList;
+	add "Mutant Centaur" to infections of MythologicalList;
+	add "Mutant Centaur" to infections of MaleList;
+	add "Mutant Centaur" to infections of BluntCockList;
+	add "Mutant Centaur" to infections of SheathedCockList;
+	add "Mutant Centaur" to infections of TaurList;
+	add "Mutant Centaur" to infections of TailList;
 	now Name entry is "Mutant Centaur"; [Name of your new Monster]
 	now enemy title entry is "Mutant Centaur"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
@@ -385,8 +385,13 @@ to say centheat:
 
 Section 7 - Endings
 
-when play ends:
-	if BodyName of Player is "Mutant Centaur":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Mutant Centaur Infection"	"Infection"	""	Mutant Centaur Infection rule	1000	false
+
+This is the Mutant Centaur Infection rule:
+	if Player has a body of "Mutant Centaur":
+		trigger ending "Mutant Centaur Infection";
 		if humanity of Player < 10:
 			say "     As your new, tainted instincts take over, you are drawn back to the plains to join the growing herd of corrupted centaurs in their fight to spread their infection to the others";
 			if centaurmate is 1 and player is female:

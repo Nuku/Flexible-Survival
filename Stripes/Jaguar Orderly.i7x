@@ -77,7 +77,7 @@ to say beatthejaguar:
 			else:
 				say "     Deciding you should focus on more important stuff right now, you turn away from the defeated orderly and return to the matter at hand.";
 		else:
-			say "     [bold type]Should you take a ride on that cock of his or just let him go?[roman type]";
+			say "     [bold type]Should you take a ride on that cock of his or just let him go?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Ride that cock.";
 			say "     ([link]N[as]n[end link]) - Let him go.";
@@ -300,8 +300,13 @@ to say libsupp:
 
 Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "Jaguar Male":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Jaguar Male Infection"	"Infection"	""	Jaguar Male Infection rule	1000	false
+
+This is the Jaguar Male Infection rule:
+	if Player has a body of "Jaguar Male":
+		trigger ending "Jaguar Male Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     As your human mind and experiences fade away, you give in to the instinctual urges of your body. You are drawn to the city hospital, feeling the need to work alongside your feline brethren in the corrupted medical facility. You are welcomed by the other jaguars as well as the other denizens.";
 			if hospquest < 2:

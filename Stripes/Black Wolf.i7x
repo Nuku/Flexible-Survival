@@ -204,12 +204,16 @@ When Play begins:
 ]
 
 
-
+[
 Section 3 - Endings
 
-[
-when play ends:
-	if BodyName of Player is "Black Wolf":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Black Wolf Infection"	"Infection"	""	Black Wolf Infection rule	1000	false
+
+This is the Black Wolf Infection rule:
+	if Player has a body of "Black Wolf":
+		trigger ending "Black Wolf Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You succumb to your template infection.";
 		else:

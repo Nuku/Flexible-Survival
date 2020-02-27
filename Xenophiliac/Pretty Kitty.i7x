@@ -1,5 +1,12 @@
 Pretty Kitty by Xenophiliac begins here.
 [Version 1.1 - Obtain leather jacket for Hadiya's quest]
+[Version 2.0 - New store function makes sense with current content by Luneth ]
+
+[HP of Andromeda - Variable for player-triggered talking scenes]
+[XP of Andromeda - variable used to work the sex menu]
+[Libido of Andromeda - Variable for sex count, used to trigger some scenes]
+[lust of Andromeda - Variable for talk scene regarding collars]
+[thirst of Andromeda - Used for store description]
 
 "Adds Andromeda with her clothing shop to Flexible Survival to provide for the player's aesthetic garment choices."
 
@@ -10,13 +17,15 @@ Section 1 - The Pretty Kitty
 Table of GameRoomIDs (continued)
 Object	Name
 Pretty Kitty	"Pretty Kitty"
+Pretty Kitty	"The Pretty Kitty"
 
-The Pretty Kitty is a room. The Pretty Kitty entrance is a door. It is south of Mall West Wing and north of The Pretty Kitty. The The Pretty Kitty entrance is open.
-Instead of examining the The Pretty Kitty entrance:
-	say "Through the multiple clothing displays and stoic mannequins, the lights of [the other side of the The Pretty Kitty entrance] are [if findwires is 2 and fixedgens > 2]on, displaying bright light throughout the store[else]off, not surprising considering that there is no power. Candles and the occasional lantern are providing some light in the store[end if].";
+Pretty Kitty is a room. Pretty Kitty entrance is a door. It is south of Mall West Wing and north of Pretty Kitty. The Pretty Kitty entrance is open.
+Instead of examining the Pretty Kitty entrance:
+	say "Through the multiple clothing displays and stoic mannequins, the lights of [the other side of the Pretty Kitty entrance] are [if findwires is 2 and fixedgens > 2]on, displaying bright light throughout the store[else]off, not surprising considering that there is no power. Candles and the occasional lantern are providing some light in the store[end if].";
 
 [Describing the store & NPC beginning descriptions]
-The description of The Pretty Kitty is "[PKDesc]".
+The description of Pretty Kitty is "[PKDesc]".
+
 to say PKDesc:
 	if thirst of Andromeda is 0:
 		say "     Walking through the double-glass doors, you walk into what seems to be a small clothing boutique. Racks of many different clothes line the walls of this store, with some expensive-looking pieces displayed proudly on mannequins. Clothing for any season and situation sit neatly-folded on wooden shelves, price tags hanging off each piece. Pleasant music plays quietly over the store speakers, giving a relaxing feel to your stay here. [if findwires is 2 and fixedgens > 2]Digital bells ring as you walk through the door[else]A metal bell, currently tied to the door with string, rings as you enter[end if], signaling your entrance into the store. The few people browsing the remaining wares look up at you, but quickly go back to perusing the different selections of clothes. You hear a loud [']EEEP['] from behind the checkout counter beside you as a figure pops out from behind it. A catgirl, apparently the caretaker of this store, smiles happily at you.";
@@ -24,7 +33,7 @@ to say PKDesc:
 		say "     'Hi there! Welcome to my shop, The Pretty Kitty, named after little ol['] me! Feel free to take a look around, we've got prime merchandise available here!' the perky catgirl yells at you as she pops up from behind the counter, bouncing happily up and down. She stops bouncing for a moment, looking deep in thought, before realizing something important. 'Oh! I forgot to introduce myself. I'm Andromeda! If you need anything, don't be shy!'";
 		now thirst of Andromeda is 1;
 	else:
-		say "     You walk back into The Pretty Kitty, the familiar ringing of [if findwires is 2 and fixedgens > 2]digital bells [else]a metal bell [end if]blaring throughout the store. Andromeda waves happily at you, obviously happy to see you've come back.";
+		say "     You walk back into the Pretty Kitty, the familiar ringing of [if findwires is 2 and fixedgens > 2]digital bells [else]a metal bell [end if]blaring throughout the store. Andromeda waves happily at you, obviously happy to see you've come back.";
 		if Libido of Andromeda >= 2:
 			say "     Giving a throaty purr when she sees who walked into her establishment, Andromeda winks slyly at you, with, you could swear, a lustful look in her eyes.";
 			LineBreak;
@@ -35,9 +44,9 @@ to say PKDesc:
 the scent of The Pretty Kitty is "Inhaling deeply, the smell of clean clothes rushes into your nose, reminding you of clean laundry.".
 
 [Objects inside the store]
-Andromeda is in The Pretty Kitty.
-Clothing Shelf is in The Pretty Kitty.
-Collar Rack is in The Pretty Kitty.
+Andromeda is in Pretty Kitty.
+Clothing Shelf is in Pretty Kitty.
+Collar Rack is in Pretty Kitty.
 
 Section 2 - Andromeda
 
@@ -60,7 +69,7 @@ instead of conversing Andromeda:
 		say "     You smile nervously, unsure what she's waiting for. '...Yes?' you answer nervously, hoping that was the right answer.";
 		say "     Andromeda claps her hands together excitedly and beams a smile at you, bounding around the counter and taking your hand in record time. 'Well come on then, I'll show you around my store,' she says as she pulls you forward, surprisingly strong for her size.";
 		say "     You spend the next half-hour being shown around the girl's clothing store, roaming through aisles of different clothes and being shown any piece that sparks your interest. Throughout the tour, Andromeda bounces happily, continuing to bombard you with every question imaginable, and some even unimaginable. You do your best to answer as many of them as you can, but the onslaught is relentless, and a few of them go unanswered. Not that that seems to bother her. In between questions, the bubbly catgirl makes small talk, talking about the weather or what your opinions on fish are. You can't seem to figure out how someone so cheerful still lives here.";
-		say "     You're almost sad when the tour ends, and you both find yourself back at the checkout counter. Andromeda takes her place behind the counter, smiling happily at you. 'Thanks for coming along, it's been a while since I've had someone new to talk to! If you find anything you like, bring it up here and we'll get you ready to go!' Thinking to herself for a moment, she lets out an audible [']Oops['], as if she'd just remembered something important. 'As much as I'd like to, I can't give away this stuff for free. Limited supply right now, as I'm sure you know. It'll be some food. I hate finding that stuff myself; the people outside the mall are mean now!' She lets out an audible [']Humph['] at the thought. 'Or if you happen across some milk, I'll gladly take that for these! The milk from those gryphons is soo good,' Andromeda tells you as her tail trembles at the thought of it.";
+		say "     You're almost sad when the tour ends, and you both find yourself back at the checkout counter. Andromeda takes her place behind the counter, smiling happily at you. 'Thanks for coming along, it's been a while since I've had someone new to talk to! If you find anything you like, bring it up here and we'll get you ready to go!' Thinking to herself for a moment, she lets out an audible [']Oops['], as if she'd just remembered something important. 'As much as I'd like to, I can't give away this stuff for free. Limited supply right now, as I'm sure you know. Thankfully, I have an friend that introduced me to new sort of currency. She works for Zephyr and they have been helping out with some of the supplies in exchange for these [']freecreds[']. If your ever in the area ask around for Larissa, she's super fun, but a word of warning, she's a pretty weird girl, hehe. I do also have a bargain counter though an that costs some food. I hate finding that stuff myself; the people outside the mall are mean now!' She lets out an audible [']Humph['] at the thought. 'Or if you happen across some milk, I'll gladly take that for these! The milk from those gryphons is soo good,' Andromeda tells you as her tail trembles at the thought of it.";
 		say "     You wave goodbye to Andromeda, having to go for now. She beams another happy smile at you and yells 'Come again soon [if Player is female]miss[else if Player is male]mister[else]you hear[end if]!'";
 		increase HP of Andromeda by 1;
 	else if HP of Hadiya is 9 or HP of Hadiya is 59:		[Leather jacket for Hadiya's quest]
@@ -616,13 +625,7 @@ the scent of girl's jacket is "The jacket smells of leather.".
 instead of using the girl's jacket:
 	say "[if scalevalue of Player > 2]Aside from being too small for you, you[else]You[end if] don't want to risk it getting damaged before giving it to Gobby. You instead stow it away safely.";
 
-Section 6 - Comments and Variables
-
-[HP of Andromeda - Variable for player-triggered talking scenes]
-[XP of Andromeda - variable used to work the sex menu]
-[Libido of Andromeda - Variable for sex count, used to trigger some scenes]
-[lust of Andromeda - Variable for talk scene regarding collars]
-[thirst of Andromeda - Used for store description]
+Section 6 - Comments
 
 
 Pretty Kitty ends here.

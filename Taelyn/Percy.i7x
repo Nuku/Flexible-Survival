@@ -289,7 +289,7 @@ instead of going east from Urban Forest while (HP of Percy < 1):
 	if player consents:[Follow]
 		LineBreak;
 		say "     Having piqued your interest, you come out from your hiding place and begin your pursuit, following the panicked little guy into what you now assume is his burrow. To your surprise, the tunnel is dimly lit by small yellowish crystals embedded in the earthen walls. Not that there is much to see. Most of the tunnel is the same; a rounded passage carved out by claws and large enough for even larger creatures to pass through relatively unhindered. Just as you begin to wonder just how long this tunnel is, a wooden wall comes into view. It is built out of whole logs and solid enough that it would take a massive force to break through. Luckily, there is also a door, which means that you haven't reached a dead-end. There is even a sign hanging above it with a hammer and anvil crudely drawn on it. You reach for the ironwork handle and pull tentatively. Unfortunately, the door seems to be barred from the other side and no amount of pulling is going to change that.";
-		say "     [bold type]Knock on the door?[roman type]";
+		say "     [bold type]Knock on the door?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes, knock on the door.";
 		say "     ([link]N[as]n[end link]) - No, you don't know what's behind that door.";
@@ -325,7 +325,7 @@ Part 2 - Pangolin Reencounter
 
 instead of going east from Forest Burrow Entrance while (HP of Percy < 2):
 	say "     You head down into the burrow where you had seen the strange creature from before roll down. The tunnel is dimly lit by small yellowish crystals embedded in the earthen walls. Not that there is much to see. Most of the tunnel is the same; a rounded passage carved out by claws and large enough for even larger creatures to pass through relatively unhindered. Just as you begin to wonder just how long this tunnel is, a wooden wall comes into view. It is built out of whole logs and solid enough that it would take a massive force to break through. Luckily, there is also a door, which means that you haven't reached a dead-end. There is even a sign hanging above it with a hammer and anvil crudely drawn on it. You reach for the ironwork handle and pull tentatively. Unfortunately, the door seems to be barred from the other side and no amount of pulling is going to change that.";
-	say "     [bold type]Knock on the door?[roman type]";
+	say "     [bold type]Knock on the door?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes, knock on the door";
 	say "     ([link]N[as]n[end link]) - No, you don't know what's behind that door";
@@ -467,12 +467,12 @@ to say PercyCrafting1: [Con 1]
 			LineBreak;
 			say "     You hand Percy the materials who looks them over with experienced eye. 'Hmmm. This knife is old but well made, Likely military. Cold War maybe?' The Pangolin puts the two materials off the side before returning his focus to you. 'Anyways, this shouldn't take too long. I'll have to remove the blade and fasten it to the haft, then secure it with some binding. I should have it done in a [bold type]few hours[roman type].'";
 			LineBreak;
-			unwield pocketknife;
+			unwield pocketknife silently;
 			delete pocketknife;
-			say "Pocketknife removed.";
-			unwield Broke-Ass Hoe;
+			say "[bold type]Pocketknife removed.[roman type][line break]";
+			unwield Broke-Ass Hoe silently;
 			delete Broke-Ass Hoe;
-			say "Broke-Ass Hoe removed.";
+			say "[bold type]Broke-Ass Hoe removed.[roman type][line break]";
 			now Strength of Percy is a random number from 2 to 3; [sets the needed time to a random value]
 			now Stamina of Percy is 1;
 			CreditLoss 50;

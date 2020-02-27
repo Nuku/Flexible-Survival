@@ -93,7 +93,6 @@ Spiritual Love	"Spiritual Love"
 
 Spiritual Love is a situation.
 The sarea of Spiritual Love is "Park".
-spiritlove is a number that varies.
 
 when play begins:
 	add Girl Time to BadSpots of FurryList;
@@ -129,8 +128,7 @@ Instead of resolving Spiritual Love:
 			LineBreak;
 			now Spiritual love is resolved;
 			now humanity of Player is 0;
-			now spiritlove is 1;
-			now TailName of Player is "Spirit Wolf";
+			now TailName of Player is "Spirit Wolf"; [TODO: Add a Table of Random Critters entry for "Spirit Wolf" (@Stadler#3007)]
 			now FaceName of Player is "Spirit Wolf";
 			now SkinName of Player is "Spirit Wolf";
 			now BodyName of Player is "Spirit Wolf";
@@ -139,6 +137,7 @@ Instead of resolving Spiritual Love:
 			now bodydesc of Player is "animalistic";
 			now bodytype of Player is "lupine";
 			now SleepRhythm of Player is 0;
+			trigger ending "Spritiual Love Ending"; [Appended 'Ending' here to avoid conflicts the the event]
 			end the story saying "You submitted to the spiritual wolf, becoming his loving mate.";
 			now battleground is "void";
 			wait for any key;
@@ -155,9 +154,14 @@ Instead of resolving Spiritual Love:
 		now Resolution of Spiritual Love is 2; [avoided it]
 	now Spiritual Love is resolved;
 
+Section 6 - Endings
 
-when play ends:
-	if spiritlove is 1:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Spritiual Love Ending"	"BadEnd"	""	Spritiual Love Ending rule	20	false
+
+This is the Spritiual Love Ending rule:
+	if ending "Spritiual Love Ending" is triggered:
 		say "     Years pass... You don't quite remember much about your former life as a human these days, but you do have the faintest recollection of it from time to time as you walk across the vast sunlit plains of the astral world while nuzzling your snout into the warm fur of your mate's shoulder. The other male is more than happy to have you do so, especially when you are eager for his attentions in a more... carnal ways. The slightly bulkier male is everything you could want in a mate, plus more, and every day you wake up thankful that he chose you out of the three and a half dozen others who don't have mates as of yet. Rape is a term that has no meaning here as your lupine lover never takes from you what is yours to give. Instead when he is in the mood to romp and you might not be he always manages to find a method to make you surrender to him, in very inventive ways no less, when the two of you are away from the rest of the pack. A playful yap leaves your throat as you look to the slightly bigger canid before nudging your muzzle into his side in an open invitation to come play.";
 		WaitLineBreak;
 		say "     You find yourself darting off to make him chase you before you even have to think about him not wanting to follow after your tail. A booming howl is the other's answer to your little challenge and soon your lover is right on your heels, following after you across the eternal plains of the spiritual realm. Having come to discard the worthless daily existence that is day to day human life you now find yourself forever captivated by the fields that spread out endlessly in front of you with brilliant green flowing grass and towering oaks and pine tree dotting the lines that separate this world from the others out there. Time has no meaning here, save for when a disturbance causes the pack to come together in order to work together to solve the conflict, but usually that happens only once in a very long while. Actually as you think about, it hasn't happened in a very, very long time since after you came into the fold of the pack's embrace.";
@@ -165,6 +169,6 @@ when play ends:
 		say "     You would shake your head in sadness, right before your mate plows into you and then wrestles you down onto the ground to get you to submit. Growling and barking at him playfully you shove and push and twist and turn until finally you can get yourself up onto all fours to try and make another run. This proves to be exactly what your lover wanted because just as soon as you curl your legs to spring yourself forward the larger male in on you. Hard and thick the other white canid's cock finds its target with a single shot as he spears you deep and then spreads you more fully than before as he drives home his claim and commandership over your metaphysical form. Whining and panting as your body is given the kind of workout only another male could usher unto you, you find yourself spreading your legs and then howling up to the sky as you relax yourself for this hour's breeding. Having given up your human form had come at the price of being eternally male, there were no females of these creature's species as they only [italic type]reproduced[roman type] by giving pieces of themselves to worthy mortals in order to create a new pack member, you find absolute pleasure as your twin prostates are slammed into hard and fast by the tapered tip of your mate's hard red rocket.";
 		WaitLineBreak;
 		say "     Had you not been currently drooling and panting underneath the heavy form of your mate, who is slamming himself wildly on top of you as he grows ready to knot you, you might have felt bad for all those that are still out there who are currently wondering if their lives have any meaning. Yet by your own being here right now you are proving that there are some mortals worthy enough to accept the wondrousness of this gift. Maybe in the future to come there will be more like you who will show up, or else call out to you and your pack, in order to act this divine pleasure. However, that is neither here nor there at the moment as you are currently being fucked the way you like it. Throwing your head back to howl you first of several climaxes of the day you find that your concerns about the future are meaningless to you right now. All you need at the moment is the warmth of your mate's furry hide on your back, his thick cock embedded firmly inside of your too tight channel and the loving licks of his tongue slathering themselves across your snout. Nothing else really matters in paradise after, now does it?";
-		stop the action;
+		the Player is gone;
 
 Misc 4 ends here.

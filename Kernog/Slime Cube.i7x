@@ -231,9 +231,9 @@ to slimeCubeVore:
 		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break][run paragraph on]";
 		say "Sanity: [humanity of Player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of Player]	Thirst: [thirst of Player]	Struggle: [maneatingPlantStruggleBar][line break][run paragraph on]";
 		if humanity of Player < 1:
-			now voreloss is true;
 			now Trixieexit is 1;
-			now BodyName of Player is "Slime Cube";
+			trigger ending "Slime Cube Vore";
+			the Player was ended by "Vore by Slime Cube";
 			end the story saying "Digested by a slime.";
 		else:
 			let k be 0;
@@ -295,11 +295,16 @@ to say maneatingPlantStruggleBar:
 	say "< [bracket][if struggleatt is 0]-----[else if struggleatt is 1]----[bold type]X[roman type][else if struggleatt is 2]---[bold type]XX[roman type][else if struggleatt is 3]--[bold type]XXX[roman type][else]-[bold type]XXXX[roman type][end if][close bracket]";
 
 
-Section 4 - Endings
+Section 5 - Endings
 
-when play ends:
-	if BodyName of Player is "Slime Cube":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Slime Cube Vore"	"Voreloss"	""	Slime Cube Vore rule	10	false
+
+This is the Slime Cube Vore rule:
+	if ending "Slime Cube Vore" is triggered:
 		say "     The last of your consciousness fades away. You are already comatose when the hotness upon your skin turns into a burning sensation and your body dissolves piece by piece, until only your bones remain, to be digested for the weeks to come.";
+		the Player is vored;
 
 
 Slime Cube ends here.

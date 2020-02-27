@@ -2,6 +2,19 @@ Version 1 of Skunkbeast Lord by Stripes begins here.
 [Version 1 - ]
 "Adds a quest to defeat the Skunkbeast Lord in the hopes of dealing with the skunkbeasts."
 
+[ Skunkbeast Lord  ]
+[ skunkbeaststatus ]
+[ 0 = inactive     ]
+[ 1 = victorious - now Skunkbeast Lord ]
+[ 2 = lost - turned into skunk plaything ]
+[ 3 = fled - encounter over ]
+
+[ Double-Skunk / Skunk-Taur ]
+[ skrp ]
+[ -1 = not encountered ]
+[ 0 = warning accepted ]
+[ 1 = double-skunked   ]
+
 Section 1 - Event
 
 Table of GameEventIDs (continued)
@@ -36,22 +49,8 @@ Instead of resolving a Skunkbeast Battle:
 			say "     You are knocked down by the skunkbeast lord. Pinning you down with one of his massive paws, he slams the other down onto the gun repeatedly, shattering and grinding the hated thing into the ground. With you trapped and defeated, several of the female skunks rush up, laving attention upon the victory, nuzzling and caressing him all over. Special attention is paid to his large, throbbing cock, which they stroke and rub with lustful moans and playful grins at you. That's when you realize that they're keeping the dripping, pulsing meat pointed straight at you and you are awash in a torrent of skunk semen as the giant growls loudly and proudly in triumphant climax.";
 			now humanity of Player is 0;
 			[puts Skunk as lead monster for infection and impregnation]
-			repeat with y running from 1 to number of filled rows in Table of Random Critters:
-				choose row y in Table of Random Critters;
-				if Name entry is "Skunk":
-					now MonsterID is y;
-					break;
-			now TailName of Player is "Skunk";
-			now FaceName of Player is "Skunk";
-			now SkinName of Player is "Skunk";
-			now BodyName of Player is "Skunk";
-			now CockName of Player is "Skunk";
-			attributeinfect;
-			now tail of Player is tail entry;
-			now Face of Player is face entry;
-			now Skin of Player is skin entry;
-			now Body of Player is body entry;
-			now Cock of Player is cock entry;
+			setmonster "Skunk" silently;
+			turn the Player into a "Skunk" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
 			if hellHoundLevel is 0:
 				follow the sex change rule;
 				follow the sex change rule;
@@ -62,6 +61,7 @@ Instead of resolving a Skunkbeast Battle:
 			if skunk kit is tamed:
 				say "     You briefly take notice of Peppy running around. He is soon taken into the arms of several of the skunk girls, who nurse him and lavish attention on him. When you look over again later, he has grown considerably, well on his way to becoming a skunkbeast as he fucks one of the buxom skunks. After you're bred several times by your new lord, he pushes you over to the new skunkbeast, allowing you to suck its cock for a tasty load of skunk cum while your lord mounts another of the new girls.";
 			wait for any key;
+			trigger ending "Skunkbeast Lord Fucktoy";
 			end the story saying "Having become a fucktoy for the Skunkbeast Lord, you lose yourself to the infection.";
 			now Resolution of Skunkbeast Battle is 3; [lost]
 			wait for any key;
@@ -91,17 +91,7 @@ Instead of resolving a Skunkbeast Battle:
 			SanLoss 25;
 			if "Strong Psyche" is listed in feats of Player, SanBoost 5;
 			if "Weak Psyche" is listed in feats of Player, SanLoss 5;
-			now TailName of Player is "Skunkbeast Lord";
-			now FaceName of Player is "Skunkbeast Lord";
-			now SkinName of Player is "Skunkbeast Lord";
-			now BodyName of Player is "Skunkbeast Lord";
-			now CockName of Player is "Skunkbeast Lord";
-			attributeinfect;
-			now tail of Player is tail entry;
-			now Face of Player is face entry;
-			now Skin of Player is skin entry;
-			now Body of Player is body entry;
-			now Cock of Player is cock entry;
+			turn the Player into a "Skunkbeast Lord";
 			if "Herm Preferred" is listed in feats of Player or "Female Preferred" is listed in feats of Player or "Always A Pussy" is listed in feats of Player or (isHellhound is true and maleHound is false):	[Forced female]
 				if Player is not female, now Cunt Count of Player is 1;
 				if Cunt Depth of Player < Cunt Depth entry, now Cunt Depth of Player is Cunt Depth entry;
@@ -376,14 +366,59 @@ to sblinfect:
 
 Section 6 - Endings for all Skunks
 
-when play ends:
-	if skunkbeaststatus is 2:		[defeated by skunkbeast lord and made into slut slave]
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Skunkbeast Lord Fucktoy"	"BadEnd"	"Sex Slave"	Skunkbeast Lord Fucktoy rule	20	false
+"Skunk with Frank"	"NPCSharedInfection"	""	Skunk with Frank rule	500	false
+"Peppy's Epilogue"	"Companion"	"Pet"	Peppy's Epilogue rule	750	false
+"Skunkbeast Lord Infection"	"Infection"	""	Skunkbeast Lord Infection rule	1000	false
+"Skunk Infection"	"Infection"	""	Skunk Infection rule	1000	false
+
+This is the Skunk with Frank rule:
+	if Player has no body of "Skunk" or Player has no body of "Skunk Taur":
+		make no decision;
+	if Player is female and ( franksex > 2 or frankmalesex > 2 ):
+		trigger ending "Skunk with Frank"; [Here it states, that the ending has been played.]
+		let skunknumber be 1; [Skunk]
+		if Player has a body of "Skunk Taur", now skunknumber is 2;
+		if humanity of Player < 10:
+			say "     Surrendering to your infection, your skunk instincts lead you back to that talkative skunk you met in the city. Drawn back to his comic shop, you are let in when you call up. Noticing the change in you, he cuddles you close and strokes your skunk body, chirring happily that you've still come back to him. Soon, you grow excited and are soon frolicking with the large male. You moan and giggle underneath him as he mates with you. You move in with him, having become an affectionate and lusty [if skunknumber is 1]skunk girl[else if skunknumber is 2]skunktaur[end if][if skunk kit is tamed]. He cares for you and Peppy. As your little kit matures, he grows and changes, gradually becoming a hefty anthro skunk like his adoptive father[end if].";
+			say "     As a [if skunknumber is 1]lusty skunk girl, you tantalize your big lover often into pouncing and mating you, soon filling you with a litter of kits[end if][if skunknumber is 2]skunk taur, your conjoined partner is a wonderful font of kinky ideas, which you always agree to, as they are so much fun. You spend a lot of time under your big lover and are soon rewarded with a litter of kits. Some are anthro skunks like their father and others are conjoined skunk taurs like their mother[end if]. The girls are sexy and beautiful like their mother while the boys are strong and hefty like their father. Frank is very proud of them and reads to them constantly, making sure they are properly versed in all the classics - from the Golden Age to modern works, from Superman to Fables and everything in between.";
+			say "     As they grow up, he leads them on searches through the city, scavenging stores and homes for more comics to add to the store's collection. Mostly passed over by the hordes of lustful creatures, there are plenty to find and the young ones seem to have a talent for sniffing them out. Particular effort is made to find more adult comics, increasing the stock of those shelves greatly, as they are in high demand by the city's new inhabitants. A few, brave explorers of the city act as couriers, bringing outside comics and new releases in trade for the other goods found during these searches.";
+		else:
+			say "     When the military comes through to rescue you, you provide them with information on Frank's hideout in the comic store. He is reluctant to leave his comic store behind, but comes along to be with you. He is not kept with your group at the military facility, so you don't get to see much of him until your release. Once out, you both meet up and celebrate your reunion long into the night.";
+			If Player has a body of "Skunk Taur":
+				say "     At the military base, there was much interest in you and your conjoined partner among the military scientists. Your lower half was quite playful with them, often making teasing remarks or lewd suggestions. You found yourself always having to act cool and stay collected to try and keep them from thinking you'd succumb and were a threat somehow. Your unusual body prompted them to keep you longer than usual, but eventually they had to release you to deal with more pressing problems. After all that, it is refreshing to be back together with Frank, who lovingly cares for you and your special body-partner. Your conjoined partner is a wonderful font of kinky ideas, often adding to the excitement of your lovemaking with your sexy lover.";
+			say "     You move into a place together with the hefty skunk and enjoy a lustful relationship with the talkative skunk. His passions for comics and roleplaying grow on you over time and you learn enough to join into his conversations and give opinions of your own. When he starts to make forays back into the city to retrieve the contents of his store, you support his decision, knowing the depths of his passion. While sometimes it is hard waiting and worrying for him, he always manages to make it back home safely with another load of backpacks full of books. The celebratory sex after having built up his arousal in the lustful city is always the best: rambunctious, loud and oh so satisfying. These trips also provide the big male with lots of exercise, and while he never loses his cute, pudgy body, he becomes much stronger and a more vigorous lover.";
+			say "     [if skunk kit is tamed]Peppy grows and matures as you care for him, changing as he grows until he becomes a young anthro skunk like his adopted father. [end if]Frank sires several litters of skunk kits with you[if skunknumber is 2]. Some are anthro skunks like their father and others are conjoined skunk taurs like yourself[end if]. The girls are sexy and beautiful like their mother while the boys are strong and hefty like their father. Growing up on comics, they all become avid comic and sci-fi fans, many of them taking their passion into their adulthood and having successful careers in the comic, movie and television industries.";
+	else if Player is not female and frankmalesex > 2:
+		trigger ending "Skunk with Frank"; [Here it states, that the ending has been played.]
+		let skunknumber be 1; [Skunk]
+		if Player has a body of "Skunk Taur", now skunknumber is 2;
+		if humanity of Player < 10:
+			say "     Surrendering to your infection, your skunk instincts lead you back to that talkative skunk you met in the city. Drawn back to his comic shop, you are let in when you call up. Noticing the change in you, he cuddles you close and strokes your skunk body, chirring happily that you've still come back to him. Soon, you grow excited and are soon frolicking with the large male. You moan and giggle underneath him as he mates with you. You move in with him, having become an affectionate and lusty [if skunknumber is 1]skunk boytoy[else if skunknumber is 2]skunktaur lover[end if][if skunk kit is tamed]. He cares for you and Peppy. As your little kit matures, he grows and changes, gradually becoming a hefty anthro skunk like his adoptive father and they both take turns pounding you[end if].";
+			say "     As a [if skunknumber is 1]girly skunk boytoy, you tantalize your big lover often into pouncing and mating you, soon filling you with creamy seed often[end if][if skunknumber is 2]submissive skunk taur, your conjoined partner is a wonderful font of kinky ideas, which you always agree to, as they are so much fun. You spend a lot of time under your big lover and are filled with his creamy seed often[end if]. His initial reluctance long gone, he'll have a gay, wild romp with you whenever you desire it, even managing to pull his nose from his precious comics some times for a good, hard fuck.";
+			say "     When a wayward skunkgirl is found unconscious in the city and brought back, she's taken in and becomes another lover and mate for Frank. You are a little jealous at first, but as he makes love to you as wonderfully and as often as before, you soon get over it. Soon enough, she's filled with kits and your home becomes much more lively. The girls are sexy and beautiful like their mother while the boys are strong and hefty like their father. Frank is very proud of them and reads to them constantly, making sure they are properly versed in all the classics - from the Golden Age to modern works, from Superman to Fables and everything in between.";
+			say "     As they grow up, he leads them on searches through the city, scavenging stores and homes for more comics to add to the store's collection. Mostly passed over by the hordes of lustful creatures, there are plenty to find and the young ones seem to have a talent for sniffing them out. Particular effort is made to find more adult comics, increasing the stock of those shelves greatly, as they are in high demand by the city's new inhabitants. A few, brave explorers of the city act as couriers, bringing outside comics and new releases in trade for the other goods found during these searches.";
+		else:
+			say "     When the military comes through to rescue you, you provide them with information on Frank's hideout in the comic store. He is reluctant to leave his comic store behind, but comes along to be with you. He is not kept with your group at the military facility, so you don't get to see much of him until your release. Once out, you both meet up and celebrate your reunion long into the night.";
+			If Player has a body of "Skunk Taur":
+				say "     At the military base, there was much interest in you and your conjoined partner among the military scientists. Your lower half was quite playful with them, often making teasing remarks or lewd suggestions. You found yourself always having to act cool and stay collected to try and keep them from thinking you'd succumb and were a threat somehow. Your unusual body prompted them to keep you longer than usual, but eventually they had to release you to deal with more pressing problems. After all that, it is refreshing to be back together with Frank, who lovingly cares for you and your special body-partner. Your conjoined partner is a wonderful font of kinky ideas, often adding to the excitement of your lovemaking with your sexy lover.";
+			say "     You move into a place together with the hefty skunk and enjoy a lustful relationship with the talkative skunk. His passions for comics and roleplaying grow on you over time and you learn enough to join into his conversations and give opinions of your own. When he starts to make forays back into the city to retrieve the contents of his store, you support his decision, knowing the depths of his passion. While sometimes it is hard waiting and worrying for him, he always manages to make it back home safely with another load of backpacks full of books. The celebratory sex after having built up his arousal in the lustful city is always the best: rambunctious, loud and oh so satisfying. These trips also provide the big male with lots of exercise, and while he never loses his cute, pudgy body, he becomes much stronger and a more vigorous lover.";
+			If skunk kit is tamed:
+				say "     Peppy grows and matures as you care for him, changing as he grows until he becomes a young anthro skunk like his adopted father. Taking after Frank, he'll happily pound your sexy ass while your mate is off on his collection runs. He keeps you filled and satisfied until then, making the time apart more bearable for you. But the times they share you back and forth are the best, taking turns fucking and filling you over and over again until you're so sore and stuffed that you can hardly move for hours, lost in a haze of blissful afterglow.";
+
+This is the Skunkbeast Lord Fucktoy rule:
+	if ending "Skunkbeast Lord Fucktoy" is triggered: [defeated by skunkbeast lord and made into slut slave]
 		say "     Having lost your battle of dominance with the skunkbeast lord, you are reduced to a near-mindless skunk fucktoy[if Player is female]. You are a buxom skunk babe like the others, but part of the lord's special harem (along with several of the other mercs from that fight). You are all fucked often, keeping you subdued and pregnant with more skunk girls to populate the forest[else]. You are a slender, feminine boytoy and hold a special place in your lord's harem (along with several of the other mercs from that fight). And while you don't have a cunt for him to breed, you are fucked as often as the others, keeping you subdued and stuffed with skunk cum[end if]. On occasion, your master will even share you with some of the other skunkbeasts as a special reward[if skunk kit is tamed and player is female]. Among them, there's one in particular who seems to particularly enjoy mounting and filling you with his kits[else if skunk kit is tamed]. Among them, there's one in particular who seems to particularly enjoy mounting and filling you with his seed[end if]. With your mind reduced to that of a horny slut, it is never an outcome you ever regret.";
 		if hellhoundlevel > 0:
 			say "     Lost in the lustful decadence of being the skunkbeast lord's mindless fucktoy, you forget about your deal with the hellhound, troubled only be the occasional, unremembered dream. But he does not forget. Having given in to a life of debauchery and sin, your foul contract was only delayed to better prepare you for your coming, unending fate.";
 			say "     When that times comes, you are pulled into the pits of Hades and given a life of eternal servitude as a sexual slave skunk to the countless foul hellhounds who guard the gates of Hell. Your experience as a fucktoy has served you well in preparing you for this unending task as the lustful slave to the demonic hounds. Your body is used in every foul, deviant act imaginable and responds lustfully to their every dark need or twisted whim[if Player is female]. The fel beasts breed you incessantly, filling your womb with litters of their spawn. Your pups are skunk-striped and capable of blasting noxious, sulfurous clouds, but otherwise pure hellspawn like their brethren in Hell's dark forces. They nurse from your breasts and grow strong, eventually joining the others in mating you until the ends of time[else if Player is male]. You are made to breed with many of the females, filling them with litters of tainted pups. These are skunk-striped and capable of blasting noxious, sulfurous clouds, but are otherwise pure hellspawn like their brethren in Hell's dark forces[end if].";
-		stop the action;
-	else if skunkbeaststatus is 1 and BodyName of Player is "Skunkbeast Lord":
+		the Player is enslaved;
+
+This is the Skunkbeast Lord Infection rule:
+	if Player has a body of "Skunkbeast Lord" and skunkbeaststatus is 1: [skunkbeaststatus might as well be ditched at some point later. (@Stadler#3007)]
+		trigger ending "Skunkbeast Lord Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:		[SUCCUMB]
 			say "     As your identity fades away as your skunkbeast instincts start to take over, you start to become the new lord over the skunks of the forest. As their powerful master, attention is lavished upon you by the numerous skunk girls and the other, subservient skunkbeasts. Over time you grow larger, eventually becoming even bigger than the one you deposed. You hardly remember such times, simply envisioning your new self in a bestial battle with it.";
 			if skrp is 1:
@@ -440,36 +475,13 @@ when play ends:
 						say "     Over the course of the next few days of breeding, Frank gains a more feral skunk form. While not fully a skunkbeast, he does pick up several of their traits and becomes a rather pudgy skunkbeast man. Being a genderless skunkbeast lord, you have Frank breed the next wave of skunkbeasts in them. Frank stays by your side, becoming a much desired lover for the skunk girls who come visit. These girls soon learn to bring gifts of comics for the plump skunkbeast to earn his affections and Frank's new comic collect swells.";
 					if skunk kit is tamed:
 						say "     As Peppy matures into a skunkbeast, you make sure it has plenty of girls to mount and fill with kits. The skunk girls adore it as well and he is among the most desirable of the skunkbeasts to be had.";
-	else if Player is female and ( franksex > 2 or frankmalesex > 2 ) and ( BodyName of Player is "Skunk" or BodyName of Player is "Skunk Taur" ):
-		let skunknumber be 1; [Skunk]
-		if BodyName of Player is "Skunk Taur", now skunknumber is 2;
-		if humanity of Player < 10:
-			say "     Surrendering to your infection, your skunk instincts lead you back to that talkative skunk you met in the city. Drawn back to his comic shop, you are let in when you call up. Noticing the change in you, he cuddles you close and strokes your skunk body, chirring happily that you've still come back to him. Soon, you grow excited and are soon frolicking with the large male. You moan and giggle underneath him as he mates with you. You move in with him, having become an affectionate and lusty [if skunknumber is 1]skunk girl[else if skunknumber is 2]skunktaur[end if][if skunk kit is tamed]. He cares for you and Peppy. As your little kit matures, he grows and changes, gradually becoming a hefty anthro skunk like his adoptive father[end if].";
-			say "     As a [if skunknumber is 1]lusty skunk girl, you tantalize your big lover often into pouncing and mating you, soon filling you with a litter of kits[end if][if skunknumber is 2]skunk taur, your conjoined partner is a wonderful font of kinky ideas, which you always agree to, as they are so much fun. You spend a lot of time under your big lover and are soon rewarded with a litter of kits. Some are anthro skunks like their father and others are conjoined skunk taurs like their mother[end if]. The girls are sexy and beautiful like their mother while the boys are strong and hefty like their father. Frank is very proud of them and reads to them constantly, making sure they are properly versed in all the classics - from the Golden Age to modern works, from Superman to Fables and everything in between.";
-			say "     As they grow up, he leads them on searches through the city, scavenging stores and homes for more comics to add to the store's collection. Mostly passed over by the hordes of lustful creatures, there are plenty to find and the young ones seem to have a talent for sniffing them out. Particular effort is made to find more adult comics, increasing the stock of those shelves greatly, as they are in high demand by the city's new inhabitants. A few, brave explorers of the city act as couriers, bringing outside comics and new releases in trade for the other goods found during these searches.";
-		else:
-			say "     When the military comes through to rescue you, you provide them with information on Frank's hideout in the comic store. He is reluctant to leave his comic store behind, but comes along to be with you. He is not kept with your group at the military facility, so you don't get to see much of him until your release. Once out, you both meet up and celebrate your reunion long into the night.";
-			If BodyName of Player is "Skunk Taur":
-				say "     At the military base, there was much interest in you and your conjoined partner among the military scientists. Your lower half was quite playful with them, often making teasing remarks or lewd suggestions. You found yourself always having to act cool and stay collected to try and keep them from thinking you'd succumb and were a threat somehow. Your unusual body prompted them to keep you longer than usual, but eventually they had to release you to deal with more pressing problems. After all that, it is refreshing to be back together with Frank, who lovingly cares for you and your special body-partner. Your conjoined partner is a wonderful font of kinky ideas, often adding to the excitement of your lovemaking with your sexy lover.";
-			say "     You move into a place together with the hefty skunk and enjoy a lustful relationship with the talkative skunk. His passions for comics and roleplaying grow on you over time and you learn enough to join into his conversations and give opinions of your own. When he starts to make forays back into the city to retrieve the contents of his store, you support his decision, knowing the depths of his passion. While sometimes it is hard waiting and worrying for him, he always manages to make it back home safely with another load of backpacks full of books. The celebratory sex after having built up his arousal in the lustful city is always the best: rambunctious, loud and oh so satisfying. These trips also provide the big male with lots of exercise, and while he never loses his cute, pudgy body, he becomes much stronger and a more vigorous lover.";
-			say "     [if skunk kit is tamed]Peppy grows and matures as you care for him, changing as he grows until he becomes a young anthro skunk like his adopted father. [end if]Frank sires several litters of skunk kits with you[if skunknumber is 2]. Some are anthro skunks like their father and others are conjoined skunk taurs like yourself[end if]. The girls are sexy and beautiful like their mother while the boys are strong and hefty like their father. Growing up on comics, they all become avid comic and sci-fi fans, many of them taking their passion into their adulthood and having successful careers in the comic, movie and television industries.";
-	else if Player is not female and frankmalesex > 2 and ( BodyName of Player is "Skunk" or BodyName of Player is "Skunk Taur" ):
-		let skunknumber be 1; [Skunk]
-		if BodyName of Player is "Skunk Taur", now skunknumber is 2;
-		if humanity of Player < 10:
-			say "     Surrendering to your infection, your skunk instincts lead you back to that talkative skunk you met in the city. Drawn back to his comic shop, you are let in when you call up. Noticing the change in you, he cuddles you close and strokes your skunk body, chirring happily that you've still come back to him. Soon, you grow excited and are soon frolicking with the large male. You moan and giggle underneath him as he mates with you. You move in with him, having become an affectionate and lusty [if skunknumber is 1]skunk boytoy[else if skunknumber is 2]skunktaur lover[end if][if skunk kit is tamed]. He cares for you and Peppy. As your little kit matures, he grows and changes, gradually becoming a hefty anthro skunk like his adoptive father and they both take turns pounding you[end if].";
-			say "     As a [if skunknumber is 1]girly skunk boytoy, you tantalize your big lover often into pouncing and mating you, soon filling you with creamy seed often[end if][if skunknumber is 2]submissive skunk taur, your conjoined partner is a wonderful font of kinky ideas, which you always agree to, as they are so much fun. You spend a lot of time under your big lover and are filled with his creamy seed often[end if]. His initial reluctance long gone, he'll have a gay, wild romp with you whenever you desire it, even managing to pull his nose from his precious comics some times for a good, hard fuck.";
-			say "     When a wayward skunkgirl is found unconscious in the city and brought back, she's taken in and becomes another lover and mate for Frank. You are a little jealous at first, but as he makes love to you as wonderfully and as often as before, you soon get over it. Soon enough, she's filled with kits and your home becomes much more lively. The girls are sexy and beautiful like their mother while the boys are strong and hefty like their father. Frank is very proud of them and reads to them constantly, making sure they are properly versed in all the classics - from the Golden Age to modern works, from Superman to Fables and everything in between.";
-			say "     As they grow up, he leads them on searches through the city, scavenging stores and homes for more comics to add to the store's collection. Mostly passed over by the hordes of lustful creatures, there are plenty to find and the young ones seem to have a talent for sniffing them out. Particular effort is made to find more adult comics, increasing the stock of those shelves greatly, as they are in high demand by the city's new inhabitants. A few, brave explorers of the city act as couriers, bringing outside comics and new releases in trade for the other goods found during these searches.";
-		else:
-			say "     When the military comes through to rescue you, you provide them with information on Frank's hideout in the comic store. He is reluctant to leave his comic store behind, but comes along to be with you. He is not kept with your group at the military facility, so you don't get to see much of him until your release. Once out, you both meet up and celebrate your reunion long into the night.";
-			If BodyName of Player is "Skunk Taur":
-				say "     At the military base, there was much interest in you and your conjoined partner among the military scientists. Your lower half was quite playful with them, often making teasing remarks or lewd suggestions. You found yourself always having to act cool and stay collected to try and keep them from thinking you'd succumb and were a threat somehow. Your unusual body prompted them to keep you longer than usual, but eventually they had to release you to deal with more pressing problems. After all that, it is refreshing to be back together with Frank, who lovingly cares for you and your special body-partner. Your conjoined partner is a wonderful font of kinky ideas, often adding to the excitement of your lovemaking with your sexy lover.";
-			say "     You move into a place together with the hefty skunk and enjoy a lustful relationship with the talkative skunk. His passions for comics and roleplaying grow on you over time and you learn enough to join into his conversations and give opinions of your own. When he starts to make forays back into the city to retrieve the contents of his store, you support his decision, knowing the depths of his passion. While sometimes it is hard waiting and worrying for him, he always manages to make it back home safely with another load of backpacks full of books. The celebratory sex after having built up his arousal in the lustful city is always the best: rambunctious, loud and oh so satisfying. These trips also provide the big male with lots of exercise, and while he never loses his cute, pudgy body, he becomes much stronger and a more vigorous lover.";
-			If skunk kit is tamed:
-				say "     Peppy grows and matures as you care for him, changing as he grows until he becomes a young anthro skunk like his adopted father. Taking after Frank, he'll happily pound your sexy ass while your mate is off on his collection runs. He keeps you filled and satisfied until then, making the time apart more bearable for you. But the times they share you back and forth are the best, taking turns fucking and filling you over and over again until you're so sore and stuffed that you can hardly move for hours, lost in a haze of blissful afterglow.";
-	else if skunk kit is tamed:
-		if BodyName of Player is "Skunk":
+
+This is the Peppy's Epilogue rule:
+	if ending "Skunk with Frank" is triggered:
+		make no decision;
+	if skunk kit is tamed:
+		trigger ending "Peppy's Epilogue rule";
+		if Player has a non-shifting body of "Skunk":
 			if humanity of Player < 10:
 				if Player is female:
 					say "     Surrendering to the infection, you make an even better mother to Peppy, as you soon give your first little skunk child several siblings to play with. Still, the first little skunk you rescued always has a special place in your skunky heart. And once he has grown up enough, he also proves to be a fine skunk mate for you in your new life, and you bear him even more wonderful skunk kits for you to raise.";
@@ -480,7 +492,7 @@ when play ends:
 					say "     After your rescue, you manage to smuggle Peppy out of the city with you. His presence a constant comfort to you as you settle into your new life outside the city. Eventually though like all kits will, he grows larger and stronger, and you have to work harder to hide it as you try to live life in the outside world. Eventually though, when his size is close to that of the skunk beasts in the city, you realize his presence seems to be triggering something within you. Where before his presence triggered strong protective impulses, now his presence only serves to excite your body, a fact that seems to interest him more and more, until one day you find yourself panting in need when you catch his scent, and realize his presence has triggered your body to go into heat. Seeing the skunk you raised in an entirely new manner, you crawl before him, and he sates himself on your eager body, instinct guiding him in how best to dominate you. As you moan underneath the new skunkbeast, you know the roles have changed in your life for good now, and you are now the pet, while he is the master. While at first no one can tell the difference, you soon buy yourself a proper collar to show your new status, and begin to plan ways to help your new master acquire more pets. You just know they will love bearing skunk kittens just like you will...";
 				else:
 					say "     After your rescue, you manage to smuggle Peppy out of the city with you. His presence a constant comfort to you as you settle into your new life outside the city. Eventually though like all kits will, he grows larger and stronger, and you have to work harder to hide it as you try to live life in the outside world. Eventually though, when his size is close to that of the skunk beasts in the city, you realize his presence seems to be triggering something within you. Where before his presence triggered strong protective impulses, now his presence serves to excite your body with dark urges. This is a fact that seems to interest him more and more, until one day you find yourself panting in need when you catch his scent and you get onto your knees beneath him, licking and sucking his impressive cock. Seeing the skunk you raised in an entirely new manner, you crawl before him and he sates himself on your eager body, instinct guiding him in how best to dominate you. As you moan underneath the new skunkbeast, you know the roles have changed in your life for good now, and you are now the pet, while he is the master. You are his special male skunk bitch. While at first no one can tell the difference, you soon buy yourself a proper collar to show your new status and begin to plan ways to help your new master acquire more pets. Your strangely enticing scent lures in others who you bring home for him to mount and change into sexy skunk femmes to breed. He occasionally even rewards your success by letting you mount one of them.";
-		else if BodyName of Player is "Skunk Taur":
+		else if Player has a non-shifting body of "Skunk Taur":
 			if humanity of Player < 10:
 				if Player is female:
 					say "     Surrendering to the infection, your conjoined partner urges you to nurse feed Peppy and you give in to her suggestion. You do whatever she wants actually, as she always has such wonderfully kinky ideas. Feeding your little one, he grows and matures quickly, becoming a skunkbeast like those in the forest. You are soon raising your tail and letting your beastly new master mount your skunktaur body and mate you, filling you with new kits.";
@@ -500,7 +512,14 @@ when play ends:
 				say "     Peppy whines at you pathetically as you surrender to the infection fully, still obviously attached to you even now. You manage to bring yourself to care for it for a bit longer, but as it grows larger and stronger and more like a regular skunkbeast, you find yourself less and less able to tolerate his presence. Eventually you drive the skunkbeast out into the wild on its own, the beast more than able to take care of itself now, and let you get back to your own cares.";
 			else:
 				say "     After your rescue, you manage to smuggle Peppy out of the city with you. Its presence a constant comfort to you as you settle into your new life outside the city. Eventually though like all kits will, it grows larger and stronger, and you have to work harder to hide it as you try to live life in the outside world. Soon the skunk kit has grown almost as large as those you fought in the city, this doesn't cause any problems until at one point he tries to mount you in your sleep. While you wake up in time to stop the action, his scent filling the room makes you almost want to let him continue. Unable to ignore the problem you try to make the skunk understand it has to be careful, only to have the now instinct driven beast set out on its own to find mates to fill in this new area. You try to find him for quite a while, and turn up no clues at all, although you hear later about a new explosion of skunkmorphs in the region...";
-	else if BodyName of Player is "Skunk":		[Skunk player w/o kit]
+
+This is the Skunk Infection rule:
+	if one of the endings in { "Skunk with Frank", "Peppy's Epilogue" } is triggered:
+		make no decision;
+	if Player has no body of "Skunk" and Player has no body of "Skunk Taur":
+		make no decision; [Use exclusion rather than changing indentation]
+	trigger ending "Skunk Infection"; [Here it states, that the ending has been played.]
+	if Player has a body of "Skunk":
 		if humanity of Player < 10:
 			if Player is female:
 				say "     Surrendering to the infection, you are drawn back to the forest by the alluring scent of the skunkbeasts on the wind. Finding one, you are rutted repeatedly and made into one of his many mates, bred full of beautiful skunk kits[if Player is male]. You do occasionally sneak off to grab one of the busty females and slake your male needs on them, siring a few kits of your own behind your master's back[end if].";
@@ -516,7 +535,7 @@ when play ends:
 			else:
 				say "     You are rescued from the infected city by the military forces as they move through. At the base, you are subject to a series of tests. Your nature as a male skunk arouses some scientific interest, but you are a skunk like so many others they've rescued and there are much higher priorities than an anomaly like you. Eventually they must be satisfied that you haven't given into your infection, for you are released. You live a quiet life for a while, needing a break after the excitement of the city. But you wake up one morning with an erection that won't go away. You feel the urge, no, the need to mate.";
 				say "     Drawn by a strange impulse, you go to a couple of clubs and bars until you find one with a skunk girl among the clientele. You buy the lovely femme some drinks before inviting her back to your place. There you pounce her and rut her like an animal, much to her delight. You satisfy her instinctual needs as well as your own as you breed her while becoming more and more like the feral skunkbeasts of the woods. She becomes the first of your new mates and lures in others for you to fuck and transform.";
-	else if BodyName of Player is "Skunk Taur":
+	if Player has a body of "Skunk Taur":
 		if humanity of Player < 10:
 			if Player is female:
 				say "     Surrendering to the infection, you are drawn back to the forest by the alluring scent of the skunkbeasts on the wind. Your lower half urges you on incessantly as you find yourself in a lustful heat. Finding one of the big males, you are rutted repeatedly and made into one of his many mates, bred full of beautiful skunk kits. Being such a large mate, you are his favorite, best able to take his massive cock and bear him large litters[if Player is male]. Your skunk partner coaxes you often to sneak off to grab one of the busty females and slake your male needs on them, siring a few kits of your own behind your master's back[end if].";
@@ -534,18 +553,5 @@ when play ends:
 				say "     While the doctor is pounding away at her, releasing his pent-up desires for the lusty creature and she yowls with delight beneath him, Slut whispers for you to do it, to give in to your urges, that you know what to do. Acting on instinct, you move your taur body atop them and grind your dripping pussy over their body. As you cum, you spray sticky fluid onto them, like the skunk goo you encountered long ago in the city. They moan and writhe, thrusting into one another hard as they start to meld and become a skunktaur like yourself, but male, a perfect mate for you both. You present yourself to the new taur and moan in delight as you receive the most satisfying fuck you've had since leaving the city as the new pair breed you, much to their mutual delight.";
 			else:
 				say "     While the doctor is pounding away at her, releasing his pent-up desires for the lusty creature and she yowls with delight beneath him, Slut whispers for you to do it, to give in to your urges, that you know what to do. Acting on instinct, you move your taur body atop them and grind your throbbing cock over their body. As you cum, you spray sticky fluid onto them, like the skunk goo you encountered long ago in the city. They moan and writhe, thrusting into one another hard as they start to meld and become a skunktaur like yourself, but female, a perfect mate for you both. The scientist is briefly concerned about the loss of his cock, but as you thrust into her new pussy, all objections disappear as you breed her hard and fast, much to their mutual delight.";
-
-[ Skunkbeast Lord  ]
-[ skunkbeaststatus ]
-[ 0 = inactive     ]
-[ 1 = victorious - now Skunkbeast Lord ]
-[ 2 = lost - turned into skunk plaything ]
-[ 3 = fled - encounter over ]
-
-[ Double-Skunk / Skunk-Taur ]
-[ skrp ]
-[ -1 = not encountered ]
-[ 0 = warning accepted ]
-[ 1 = double-skunked   ]
 
 Skunkbeast Lord ends here.

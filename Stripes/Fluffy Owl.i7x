@@ -73,6 +73,7 @@ When Play begins:
 	add "Fluffy Owl" to infections of BipedalList;
 	add "Fluffy Owl" to infections of FlightList;
 	add "Fluffy Owl" to infections of TailList;
+	add "Fluffy Owl" to infections of OviImpregnatorList;
 	now Name entry is "Fluffy Owl"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
@@ -230,8 +231,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Fluffy Owl":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Fluffy Owl Infection"	"Infection"	""	Fluffy Owl Infection rule	1000	false
+
+This is the Fluffy Owl Infection rule:
+	if Player has a body of "Fluffy Owl":
+		trigger ending "Fluffy Owl Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     Losing yourself to your new instincts and a renewed wave of changes because of it, you head out into the city. You make your way to the roof of a small office building and with only a little trepidation, leap off into the air. You glide clumsily at first, but somehow manage to fly soon enough. You soar through the night air, drawn back to the hospital. There, you join the other fluffy owls in the nest that they have set up in one wing, ";
 			if Player is herm:

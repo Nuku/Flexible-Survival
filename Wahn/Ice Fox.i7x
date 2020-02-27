@@ -481,10 +481,10 @@ to say ArcticEnclosureEntry:
 		change the northwest exit of Snow Fox Enclosure to Ice Fox's Den;
 	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "     Brought down by the father-daughter team of tigertaurs, you collapse on the ground from sheer exhaustion and are quickly dragged into the middle of the room. Locking away the freshly bred foxtaur, the two tigertaurs focus on you instead, taking you from both ends, with the male humping you while his offspring fucks your face. You're shared between those two for hours, with them changing positions again and again, until each orifice you have has been filled by both their cum multiple times. At the end of this ordeal, you're added to the cage of their sex toy captives, to be used and bred at the tigertaur's leisure.";
-		now BodyName of Player is "Tigertaur Sex Toy";
+		trigger ending "Tigertaur Sex Toy";
 		end the story saying "You certainly won't be getting out from that situation!";
 	else if fightoutcome is 30: [fled]
-		say "     Managing to flee from the building, you shake the angry tigertaurs off with some difficulty. Sadly this means that they're now forewarned about you wanting to move in on their territory. They'll surely be ready for you next time, and might very well set traps. Somehow you don't think going back would be such a good idea, so you resolve not to. [bold type]You've failed this task for Miyuki.[roman type]";
+		say "     Managing to flee from the building, you shake the angry tigertaurs off with some difficulty. Sadly this means that they're now forewarned about you wanting to move in on their territory. They'll surely be ready for you next time, and might very well set traps. Somehow you don't think going back would be such a good idea, so you resolve not to. [bold type]You've failed this task for Miyuki.[roman type][line break]";
 		now Resolution of Arctic Enclosure is 3; [fled, quest failed]
 		now HP of Miyuki is 100; [failed]
 	now Arctic Enclosure is resolved;
@@ -640,12 +640,8 @@ to say MiyukiTalk3: [talk about becoming an ice fox]
 to say MiyukiTalk4: [be blessed]
 	say "     As you make your request, Miyuki answers, 'Of course[if Player is not defaultnamed] [name of Player][end if]. It's the least I can do for your help. Come lay down, and please bare your stomach.' The ice fox sorceress leads you to her comfortable nest so that you can get comfortable, then retrieves one of the carambola fruit preserved in ice. Kneeling down next to you, she holds up one hand and concentrates until a bowl of clear ice forms in it. She then slowly squeezes the yellow fruit in her surprisingly strong hand, cracking its ice shell and pressing quite a bit of juice out to drip into the bowl. Miyuki dips two fingers into the juice and starts to paint on your belly, going back several times as she draws a five-pointed star on your skin. As she finishes it, the sorceress intones, 'Hear me, All-Mother! I beseech you to bless this being of your creation. Guide [ObjectPro of Player] through bringing a new generation into this world, so that life may flourish.'";
 	say "     When Miyuki falls silent after the last words are spoken, you feel a pleasant warmth radiating out from the star painted on your belly, suffusing all of your form and making you feel very well and rested, more so than at any point since this whole mess started.";
-	LineBreak;
-	say "[bold type]Your stamina has increased by 2![roman type][line break]";
-	increase stamina of Player by 2;
-	LineBreak;
-	say "[bold type]'All-Mother's Blessing' has been added to your feats![roman type][line break]";
-	add "All-Mother's Blessing" to feats of Player;
+	StatChange "Stamina" by 2;
+	FeatGain "All-Mother's Blessing";
 	now lust of Miyuki is 4; [player blessed]
 
 to say MiyukiTalk5: [helper quest]
@@ -788,11 +784,22 @@ to say MiyukiSex3: [Miyuki fucks player pussy - doggy style and ovi]
 	if MiyukiRelationship < 10:
 		now MiyukiRelationship is 10; [player got fucked]
 
-[
 Section 7 - Endings
 
-when play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Tigertaur Sex Toy"	"BadEnd"	"Sex Slave"	Tigertaur Sex Toy rule	20	false
+["Miyuki's Epilogue"	"NPC"	""	Miyuki's Epilogue rule	900	false]
+
+This is the Tigertaur Sex Toy rule:
+	if ending "Tigertaur Sex Toy" is triggered:
+		say "     Even though you try a few times, you never manage to escape the clutches of your tigertaur masters, and servicing them eventually becomes the only reason for your existence, supplanting all other thoughts you might once have had.";
+		the Player is enslaved;
+
+[
+This is the Miyuki's Epilogue rule:
 	if (MiyukiRelationship > 0 and MiyukiRelationship < 100): [player met her and had friendly relations]
+		trigger ending "Miyuki's Epilogue"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10: [player went feral]
 			say "     ...";
 		else:

@@ -303,11 +303,16 @@ When Play begins:
 ]
 
 
+[
 Section 3 - Endings
 
-[
-when play ends:
-	if BodyName of Player is "Corrupted Spawner":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Corrupted Spawner Infection"	"Infection"	""	Corrupted Spawner Infection rule	1000	false
+
+This is the Corrupted Spawner Infection rule:
+	if Player has a body of "Corrupted Spawner":
+		trigger ending "Corrupted Spawner Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You succumb to your template infection.";
 		else:

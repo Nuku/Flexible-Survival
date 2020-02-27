@@ -348,12 +348,16 @@ When Play begins:
 ]
 
 
-
+[
 Section 3 - Endings
 
-[
-when play ends:
-	if BodyName of Player is "Enhanced Chimera":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Enhanced Chimera Infection"	"Infection"	""	Enhanced Chimera Infection rule	1000	false
+
+This is the Enhanced Chimera Infection rule:
+	if Player has a body of "Enhanced Chimera":
+		trigger ending "Enhanced Chimera Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You succumb to your template infection.";
 		else:

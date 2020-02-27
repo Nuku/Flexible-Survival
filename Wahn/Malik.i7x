@@ -161,7 +161,6 @@ to say MalikTalkMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if nam is "Himself":
 					say "[MalikTalk1]";
@@ -263,7 +262,6 @@ Instead of fucking the Malik:
 				say "[title entry]: [description entry]?";
 				if Player consents:
 					let nam be title entry;
-					clear the screen and hyperlink list;
 					now sextablerun is 1;
 					if nam is "Get a blowjob from Malik":
 						say "[MalikSex1]";
@@ -584,7 +582,6 @@ to say MalikRunningCaptiveSexMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if nam is "Face-fuck the ram as he is fucked" or nam is "Face-fuck the German shepherd as he is fucked" or nam is "Face-fuck the husky as he is fucked":
 					say "[MalikRunSex1]";

@@ -328,9 +328,9 @@ to say TehuantlandSven:
 			say "     [if Player is not neuter]As you watch the show, you can't help but let your own hands drift down towards your excited groin and begin playing with yourself as you watch the feline intercourse. [end if]Before long Tehuantl's rough fucking has her approaching a powerful climax and with a yowl of ecstasy she drives herself down Sven's length, soaking his fur with her juices as she orgasms. Meanwhile, Tehuantl's wild orgasm is enough to push Sven over the edge as well, and you watch as his entire body tenses up, knowing his seed is being unloaded deep inside Tehuantl's body.";
 			say "     As the two begin to come down from their respective climaxes, Tehuantl stares down at the exhausted snowmeow beneath her, licking her lips as she releases a shoulder to scratch his chin gently. Then, without another word, she begins her motion again, clearly intent on riding the submissive snow leopard to another orgasm before she'll be satisfied. Sven is a far less active participant in this second fucking, struggling to keep in time with Tehuantl's eager bouncing. By the time Tehuantl reaches her second climax, Sven can do little more than moan beneath her. With another yowl Tehuantl soaks both their crotches in a fresh wave of her feminine juices, shivering in delight as orgasm rolls through her.";
 			say "     Finally sated, the lustful jaguar rolls off the exhausted snowmeow, licking and nuzzling his face as she lays beside him for a short time before getting to her feet and strutting back towards her favorite seat by the balcony, their combined juices dripping from her swollen cunt the entire way. As Sven begins stumbling to his unsteady feet, you decide it best to [if Player is not neuter]clean up your own mess and [end if]slip back downstairs before you're seen.";
-			NPCSexAftermath Tehuantl receives "PussyFuck" from Sven;
 		else:
 			say "     Deciding to leave your feline pets be, you try to put the thought out of your mind as Sven disappears upstairs. Soon after you hear the jingling of Tehuantl's belled collar and some hushed conversation upstairs before you turn your attention to other things.";
+		NPCSexAftermath Tehuantl receives "PussyFuck" from Sven;
 [
 	else:
 		say "***Alternate Sven scene w/Tehuantl."; ]
@@ -658,7 +658,7 @@ instead of going up from Grey Abbey Library while (LastTehuantlKorvinScene - tur
 				say "     'Fuuuckkk!!' Korvin groans out, taken by surprise by the jaguar warrior's slow withdrawal. Nonetheless, judging by his expression, it is clear that, in the resulting mixture of discomfort and arousal which wrecks his body, the pleasure is winning out. He keeps panting like a bitch in heat, and you notice that his canine cock is erect, and bobbing underneath him. Tehuantl stretches forward to lick the side of your attack dog's muzzle, 'I'm being gentle, to show you we can be true brothers,' he claims, as he thrusts once more into Korvin. The German shepherd adapts to the mixture of pleasure and light pain fairly quickly. This allows Tehuantl to speed up his thrusts little by little. With each new penetration, the opposite sensations seem to blend more and more into each other until Korvin reaches a state of constant arousal, from the continuous movements in and out his tight hole.";
 				say "     Before long, the jaguar warrior thrusts into Korvin a final time, and roars triumphantly, as he forces his entire length into the exhausted canine. A visible twitch runs through his entire body, and the first of several heavy throbs of feline seed is unleashed into the mutt's body, marking him as Tehuantl's brother in your stable of sexpets. The German shepherd wheezes loudly with each additional splash of cum and spasm against his prostate. He eventually humps the ground on his own, and creams the floor and his tummy fur with his cum. The both of them have cum hard, and now, they ride out their respective orgasms together, Tehuantl clutching Korvin's furry body the whole time, and occasionally lapping at his fur. Once their climax began to subside, the jaguarman rolls the two of them over on their sides, and wraps his arms around Korvin from behind. Then, he purrs loudly. You fight as to not laugh at the expression of dismay painting your attack dog's face. His plan of domination have backfired, and led him to be fucked, and lie in his own cum, cuddled possessively by the male jaguar.";
 				LineBreak;
-				say "     [italic type]Oh well, it will do him some good to spend more time with Tehuantl,[roman type] you consider. [italic type]It will temper this unruly dog's unruly edges.[roman type]";
+				say "     [italic type]Oh well, it will do him some good to spend more time with Tehuantl,[roman type] you consider. [italic type]It will temper this unruly dog's unruly edges.[roman type][line break]";
 				NPCSexAftermath Korvin receives "AssFuck" from Tehuantl;
 				now TehuantlKorvinRelationship is 10; [Korvin got Jaguar-fucked]
 			else:
@@ -675,9 +675,17 @@ instead of going up from Grey Abbey Library while (LastTehuantlKorvinScene - tur
 to say TehuantlSex_FuckKorvin:
 	say "     As you come up to your jaguarman pet Tehuantl, he immediately rises and comes to attention, proudly standing in front of you in all of his naked glory. Something in your demeanor or expression must have betrayed your lusty intent, as he smiles eagerly and lets out a pleased rumble from the depth of his throat, then says, 'How may I serve my tlacahua?'";
 
-[Section 7 - Endings
-when play ends:
-	if BodyName of Player is "Jaguar Male":
+
+[
+Section 7 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Jaguar Male Infection"	"Infection"	""	Jaguar Male Infection rule	1000	false
+
+This is the Jaguar Male Infection rule:
+	if Player has a body of "Jaguar Male":
+		trigger ending "Jaguar Male Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You succumb to your Jaguar infection.";
 		else:
@@ -687,7 +695,8 @@ when play ends:
 			else if "Sterile" is not listed in feats of Player:	[F-BREEDABLE]
 				say "     Additional text for a female survivor who can become preggers.";
 			else:									[F-STERILE]
-				say "     Additional text for a female survivor who cannot become preggers.";]
+				say "     Additional text for a female survivor who cannot become preggers.";
+]
 
 [
 TehuantlCheating is an action applying to one topic.

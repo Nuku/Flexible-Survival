@@ -190,9 +190,15 @@ When Play begins:
 ]
 
 
+Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Stallionboi":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Stallionboi Infection"	"Infection"	""	Stallionboi Infection rule	1000	false
+
+This is the Stallionboi Infection rule:
+	if Player has a body of "Stallionboi":
+		trigger ending "Stallionboi Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is male:
 				say "     Unable to deny your body the sexual pleasure and stimulation it craves, you quickly run back to the wonderful stables, and all the sexy stallionbois you just know are waiting for you there. The guards smirk with amusement as you rush by, their eyes drawn to your sexy little part equine body, causing you to shudder happily at the thought of the more powerful horsemen using you like a good little pet again and again. Once inside, you quickly charge off down the halls, finding yourself nearly squealing with joy as your lust fogged mind follows the scent of equine sex through the halls. It isn't long before another of those sexy stallionbois finds you, and he grins happily and squeals with pleasure as you practically throw yourself onto him, leading you through the corridors quickly to where the rest of the stallionbois are waiting for you eagerly with arms wide open, and cocks already erect. It isn't long before they fuck any last remaining doubts about being a sexy slutty stallionboi out of you, teaching you all about how to be a proper little stallionslut and how to service any client or mare (or stallion!) that wants to use your slutty little body. And you find yourself smiling happily as you learn to be a proper little submissive femboi, finding yourself strangely happy with your new feminine like part horse form, as the more horselike mares and stallions go about the business of the place, you find yourself eagerly looking forward to your new life of sex and pleasure serving their every whim...";

@@ -6,9 +6,10 @@ Doran by Blue Bishop begins here.
 Section 1.0 - Doran Coding Miscellany
 
 when play begins:
-	add { "Peculiar Dragon" } to infections of MaleList;
-	add { "Peculiar Dragon" } to infections of FurryList;
-	add { "Peculiar Dragon" } to infections of FeralList;
+	add "Peculiar Dragon" to infections of MaleList;
+	add "Peculiar Dragon" to infections of FurryList;
+	add "Peculiar Dragon" to infections of FeralList;
+	add "Peculiar Dragon" to infections of OviImpregnatorList;
 
 [ DoranPlayerRegard - raw string, determines what Doran calls the player.    ]
 [   Varies between "Master" and "Mistress", or "Pet", "Slave", "Bitch"       ]
@@ -626,7 +627,7 @@ to say DoranLook:
 		if DoranBallModStatus > 0:
 			say ". The thing is prone to leaking, even when left completely alone";
 		say ".";
-		say "     [italic type]Doran presently regards you as [if DoranPlayerGenderRegard is true]female[else]male[end if][if DoranSelfGender is true] and themself as female[end if]. [gchis] sexual demeanor remains [if DoranRole <= 0]domineering[else if DoranRole is 2]submissive[else]reasonable[end if] towards you, as you've commanded[if DoranRoleIntensity is 0 and DoranRole is 0], the severity of which being intense[else if DoranRoleIntensity is 4 and DoranRole is 2], the severity of which being intense[else if DoranRole is not 1], the severity of which being fairly restrained[end if].[roman type]";
+		say "     [italic type]Doran presently regards you as [if DoranPlayerGenderRegard is true]female[else]male[end if][if DoranSelfGender is true] and themself as female[end if]. [gchis] sexual demeanor remains [if DoranRole <= 0]domineering[else if DoranRole is 2]submissive[else]reasonable[end if] towards you, as you've commanded[if DoranRoleIntensity is 0 and DoranRole is 0], the severity of which being intense[else if DoranRoleIntensity is 4 and DoranRole is 2], the severity of which being intense[else if DoranRole is not 1], the severity of which being fairly restrained[end if].[roman type][line break]";
 
 Instead of conversing the Doran:
 	if graphics is true:
@@ -3466,8 +3467,8 @@ to say DoranDiscuss_1: [Of One's Past]
 	now calcnumber is -1;
 	let Trixieexit be 0;
 	while Trixieexit is 0:
-		say "[bold type][link]1) 'You don't trust me?'[as]1[end link][roman type]";
-		say "[bold type][link]2) 'Why does this matter?'[as]2[end link][roman type]";
+		say "[bold type][link]1) 'You don't trust me?'[as]1[end link][roman type][line break]";
+		say "[bold type][link]2) 'Why does this matter?'[as]2[end link][roman type][line break]";
 		say "[bold type][link]3) 'As your [DoranPlayerRegard] I could order you to tell me.'[as]3[end link][roman type][line break]";
 		if DoranDiscussion_var1 is 0:
 			say "[bold type][link]4) 'Very well, I'll honor your insistence on this subject.' (Exit)[as]4[end link][roman type][line break]";
@@ -3521,7 +3522,7 @@ to say DoranDiscuss_1: [Of One's Past]
 			now calcnumber is -1;
 			let DoranDiscussionExit be 0;
 			while DoranDiscussionExit is 0:
-				say "[bold type][link]1) 'Perhaps I wish for our relationship to be deeper?'[as]1[end link][roman type]";
+				say "[bold type][link]1) 'Perhaps I wish for our relationship to be deeper?'[as]1[end link][roman type][line break]";
 				say "[bold type][link]2) (Return to the main topic)[as]2[end link][roman type][line break]";
 				while 1 is 1:
 					say "Choice? (1-2)>[run paragraph on]";
@@ -3535,7 +3536,7 @@ to say DoranDiscuss_1: [Of One's Past]
 					now calcnumber is -1;
 					let DoranDiscussionExit2 be 0;
 					while DoranDiscussionExit2 is 0:
-						say "[bold type][link]1) 'Then don't call me [DoranPlayerRegard].'[as]1[end link][roman type]";
+						say "[bold type][link]1) 'Then don't call me [DoranPlayerRegard].'[as]1[end link][roman type][line break]";
 						say "[bold type][link]2) (Return to the main topic)[as]2[end link][roman type][line break]";
 						while 1 is 1:
 							say "Choice? (1-2)>[run paragraph on]";
@@ -3557,7 +3558,7 @@ to say DoranDiscuss_1: [Of One's Past]
 			now calcnumber is -1;
 			let DoranDiscussionExit be 0;
 			while DoranDiscussionExit is 0:
-				say "[bold type][link]1) 'I'm getting the impression you don't take my role seriously.'[as]1[end link][roman type]";
+				say "[bold type][link]1) 'I'm getting the impression you don't take my role seriously.'[as]1[end link][roman type][line break]";
 				say "[bold type][link]2) (Return to the main topic)[as]2[end link][roman type][line break]";
 				while 1 is 1:
 					say "Choice? (1-2)>[run paragraph on]";
@@ -3572,7 +3573,7 @@ to say DoranDiscuss_1: [Of One's Past]
 					let DoranDiscussionExit2 be 0;
 					while DoranDiscussionExit2 is 0:
 						if intelligence of Player > 14:
-							say "[bold type][link]1) (Intelligence: [intelligence of Player]/15) 'A toaster's limitation is intrinsic, this is self-imposed.'[as]1[end link][roman type]";
+							say "[bold type][link]1) (Intelligence: [intelligence of Player]/15) 'A toaster's limitation is intrinsic, this is self-imposed.'[as]1[end link][roman type][line break]";
 						else:
 							say "1) (Intelligence: [intelligence of Player]/15) (Insufficient intelligence!)[line break]";
 						say "[bold type][link]2) (Return to the main topic)[as]2[end link][roman type][line break]";
@@ -3657,10 +3658,10 @@ to say DoranDiscuss_2: [Of Hobbies and Imagination]
 						let DoranDiscussionExit2 be 0;
 						while DoranDiscussionExit2 is 0:
 							if perception of Player > 15:
-								say "[bold type][link]1) (Perception: [perception of Player]/16) 'I got the impression you were holding back by a fair amount when we fought.'[as]1[end link][roman type]";
+								say "[bold type][link]1) (Perception: [perception of Player]/16) 'I got the impression you were holding back by a fair amount when we fought.'[as]1[end link][roman type][line break]";
 							else:
 								say "1) (Perception: [perception of Player]/16) (Insufficient perception!)[line break]";
-							say "[bold type][link]2) 'That doesn't really explain your immunity.'[as]2[end link][roman type]";
+							say "[bold type][link]2) 'That doesn't really explain your immunity.'[as]2[end link][roman type][line break]";
 							say "[bold type][link]3) (Return to the main topic)[as]3[end link][roman type][line break]";
 							while 1 is 1:
 								say "Choice? (1-3)>[run paragraph on]";
@@ -3763,7 +3764,7 @@ to say DoranDiscuss_2: [Of Hobbies and Imagination]
 				now DoranRPRevealRegard is 1;
 			else:
 				say "     'Yeah... Please forgive me, I never intended to harm your impression of me. I would ask that you try to overlook this irregularity.' [gche] lets you off, quickly scurrying back to stow away [ghis] toys.";
-			say "[line break][bold type][bracket]Interaction Unlocked: Request Roleplay[close bracket][roman type]";
+			say "[line break][bold type][bracket]Interaction Unlocked: Request Roleplay[close bracket][roman type][line break]";
 			now Trixieexit is 1;
 
 to say DoranDiscuss_3: [Of Masters and Pets]
@@ -3810,7 +3811,7 @@ to say DoranRPMenu:
 			say "(2) [link]Dragons and Similar Fantasy Fare[as]2[end link][line break]";
 			say "(3) [link]Miscellaneous[as]3[end link][line break]";
 			say "[line break]";
-			say "(4) [link]Suspend Current Session[as]4[end link] -[bold type][if DoranRoleplayInSession is 0] No[end if] RP in Session[line break][roman type]";
+			say "(4) [link]Suspend Current Session[as]4[end link] -[bold type][if DoranRoleplayInSession is 0] No[end if] RP in Session[line break][roman type][line break]";
 			say "(0) [link]Return to Main Menu[as]0[end link][line break]";
 			while 1 is 1:
 				say "Choice? (0-4)>[run paragraph on]";
@@ -4040,7 +4041,7 @@ to say DoranRP_KnightMenu: [Doran RP: The Knight Query]
 			say "     'My mistake, I'm certain I have something else they'd prefer.'";
 
 to say DoranRP_DragonsPetMenu: [Doran RP: A Dragon's Pet Menu]
-	say "[bold type]This scene is not yet implemented! Sorry about that.[roman type]";
+	say "[bold type]This scene is not yet implemented! Sorry about that.[roman type][line break]";
 	[if DoranRole is -1 and (DoranPlayerRegard is not "Master" or DoranPlayerRegard is not "Mistress"):
 		say "     You explain your desires for Doran to treat you like his pet and your desires for [ghim] to be [italic type]your[roman type] master for a while. [gche] gives a contemplative hum, lost in thought for a moment, before nodding his large head. 'I do believe I can try that for my [DoranPlayerRegard]. However, I will make no assurances to your enjoyment, as I have little experience in such a role.'";
 		say "     'Now,' [ghe] says, 'there are some details we should discuss before we begin. Do you wish for me to ravage your behind, or would you rather service your Master's [']equipment[']? Yes for ravaging, no for servicing.'";
@@ -4304,8 +4305,15 @@ to say doranmusing: [Requires first talking to Doran]
 	say "     '[DoranPlayerRegard], I beg of them, if they have other friends, don't bring them to me.' Instinctively, you ask why, to which [ghe] reels back slightly, 'I beg once more, [DoranPlayerRegard], what we share must between us only.' [gche] won't budge any further on the subject, and you're ultimately forced to leave it at that.";
 	add 24 to velospostmusings;
 
-when play ends:
+Section 6 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Doran's Epilogue"	"NPC"	""	Doran's Epilogue rule	900	false
+
+This is the Doran's Epilogue rule:
 	if DoranFirstTalk is true and humanity of Player > 10:
+		trigger ending "Doran's Epilogue";
 		say "     Oddly enough, after you were rescued, the [gdragon] named Doran was nowhere to be found; none of the soldiers who were a part of the rescue operation saw such a creature or heard of anyone with that particular name. To this day, you wonder if [ghe] was ever even real to begin with...";
 
 Doran ends here.

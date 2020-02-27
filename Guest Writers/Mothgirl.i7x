@@ -79,8 +79,10 @@ When Play begins:
 	add "Mothgirl" to infections of FurryList;
 	add "Mothgirl" to infections of NatureList;
 	add "Mothgirl" to infections of FemaleList;
+	add "Mothgirl" to infections of TransList;
 	add "Mothgirl" to infections of BipedalList;
 	add "Mothgirl" to infections of FlightList;
+	add "Mothgirl" to infections of OviImpregnatorList;
 	now Name entry is "Mothgirl"; [Name of your new Monster]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
@@ -236,8 +238,13 @@ When Play begins:
 ]
 
 
-when play ends:
-	if BodyName is "Mothgirl":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Mothgirl Infection"	"Infection"	""	Mothgirl Infection rule	1000	false
+
+This is the Mothgirl Infection rule:
+	if Player has a body of "Mothgirl":
+		trigger ending "Mothgirl Infection";
 		if humanity of Player < 10:
 			say "You do not have any prejudice to any particular infected creature, except spidergirls whose nature invites trouble. You flit around acting on the instincts of wanting sex or having sex with numerable partners.";
 		else:

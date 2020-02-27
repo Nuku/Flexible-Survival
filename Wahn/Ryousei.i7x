@@ -928,10 +928,16 @@ to say RyoSpoonsRane:
 		say "     In response, Rane just gives the tiger a companionable slap on the shoulder, then says, 'Aw, don't worry about it buddy. I totally went with it too because I wanted to see what you'd do. No harm no foul, eh? I'll gladly have you as a drinking buddy.' The two of them smile at each other for a moment, with a bit of embarrassment on Ryousei's face while Rane nonchalantly checks out his body. Then the oni reaches out and runs his hand down tiger's muscled flank. 'Just so you know... sake or no sake, I'd be interested in getting together with you again. One thing this oni definitively isn't is monk-ish and celibate, if you get my drift.' With a wink at Ryousei, Rane then gets up and bends over to grab his loincloth - not at all accidentally flashing the tiger his dick and firmly muscled blue butt. He adds, 'It's a standing offer for such a sexy cat as yourself. But now, I am off to re-stock on sake. Something tells me I need more in the future.' Then the blue oni casually vaults over the railing and light-footedly bounces off the tops of one, two, three sturdy bookshelves before jumping onto the floor of the library. With a grin over his shoulder, he puts his loincloth back on, then vanishes through the main doors soon after.";
 		say "     After sorting out his appearance and donning his kimono again, Ryousei comes back over to your side a moment later. The tiger looks over to Rane's camp with a raised eyebrow, his tail twitching a bit through the air in an unruly fashion. 'Quite an unusual being,' he remarks, to which you smile and nod while he continues, '...but definitely interesting to know. I never knew a blue oni could be like that. I suppose everything truly is different in this realm...' There is a thoughtful shimmer in his eyes as Ryousei says this, and you notice that he casually tugs the front of his kimono a bit, having to adjust his crotch. Looks like he wouldn't be opposed to some action with the blue demon.";
 
+
 Section 6 - Endings
 
-when play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Ryousei's Epilogue"	"Companion"	"Pet"	Ryousei's Epilogue rule	750	false
+
+This is the Ryousei's Epilogue rule:
 	if royal tiger is tamed: [player became companion of Ryo]
+		trigger ending "Ryousei's Epilogue"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10: [succumb ending]
 			say "     Ryousei is sad to see his favorite companion in this world succumb to the mental effects of the nanite infection, but there is little he can do to bring you back to the old self he learned to know and like. The proud tiger stays close to you for a while afterwards, but your quickly building lust soon makes you look at him in a lewd and hungry way. Rather than taking the chance of hurting you if he has to fight off forceful advances, your friend chooses to go instead - leaving you behind with a sigh.";
 		else: [sane]

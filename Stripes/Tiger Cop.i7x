@@ -227,7 +227,7 @@ An everyturn rule:
 		increase mqcountdown by 1;
 		if mqcountdown is 9:
 			now Sgt Marks is nowhere;
-			say "[line break]     [bold type]Your 24 hours are up. Sgt Marks has left without you.[roman type]";
+			say "[line break]     [bold type]Your 24 hours are up. Sgt Marks has left without you.[roman type][line break]";
 			now mqcountdown is 10;
 
 the fuckscene of Sgt Marks is "     'Smarten up and save it for those fine pussies. They'll be all ours once this is over.'";
@@ -343,22 +343,7 @@ to say mqlostfight:
 to say totalTH:
 	if Libido of Player < 70:
 		now Libido of Player is 70;
-	repeat with y running from 1 to number of filled rows in Table of Random Critters:	[puts Tigress Hooker as lead monster...]
-		choose row y in Table of Random Critters;
-		if Name entry is "Malayan Tiger Herm":
-			now MonsterID is y;
-			break;
-	now TailName of Player is "Malayan Tiger Herm";
-	now FaceName of Player is "Malayan Tiger Herm";
-	now SkinName of Player is "Malayan Tiger Herm";
-	now BodyName of Player is "Malayan Tiger Herm";
-	now CockName of Player is "Malayan Tiger Herm";
-	attributeinfect;
-	now tail of Player is tail entry; [...to make for quicker and accurate copying of TH appearance.]
-	now Face of Player is face entry;
-	now Skin of Player is skin entry;
-	now Body of Player is body entry;
-	now Cock of Player is cock entry;
+	turn the Player into a "Malayan Tiger Herm";
 	if "Male Preferred" is listed in feats of Player:
 [		say "(Male Preferred, locked results)";]
 		if Player is not male:			[Minimum of TH standard or greater]
@@ -498,7 +483,7 @@ to say BTchangeover:
 			now Nipple Count of Player is 0;
 			now Breast Size of Player is 0;
 	if Player is female:
-		now TailName of Player is "Big Tigress";
+		now TailName of Player is "Big Tigress"; [TODO: Add a Table of Random Critters entry for "Big Tigress" (@Stadler#3007)]
 		now FaceName of Player is "Big Tigress";
 		now SkinName of Player is "Big Tigress";
 		now BodyName of Player is "Big Tigress";
@@ -513,7 +498,7 @@ to say BTchangeover:
 		now Body of Player is "powerfully built with a feminine flair and feline fluidity of motion. Your body moves sensually with every step, but with hidden power. Your hands are human in shape, but with feline claws, pawpads and fur";
 		now Cock of Player is "ebon feline";
 	else:
-		now TailName of Player is "Big Tiger";
+		now TailName of Player is "Big Tiger"; [TODO: Add a Table of Random Critters entry for "Big Tiger" (@Stadler#3007)]
 		now FaceName of Player is "Big Tiger";
 		now SkinName of Player is "Big Tiger";
 		now BodyName of Player is "Big Tiger";
@@ -921,7 +906,11 @@ When Play begins:
 
 Section 10 - Endings
 
-when play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Tiger Cop Endings"	"Special"	"Mixed"	Tiger Cop Endings rule	970	false
+
+This is the Tiger Cop Endings rule: [TODO: Reorganize this mess later on (@Stadler#3007)]
 	[force auto-change of name. Prevents problems with dirty water, etc... with endings]
 	[Does not resolve issues with children/use of descriptive names during the game, but better than nothing]
 	if BodyName of Player is "Malayan Tiger Male":
@@ -935,7 +924,7 @@ when play ends:
 	if CockName of Player is "Malayan Tiger Male":
 		now CockName of Player is "Malayan Tiger Herm";
 	if mqstatus is 0 or mqstatus is 1:				[no motel quest / incomplete]
-		if BodyName of Player is "Malayan Tiger Herm":
+		if Player has a non-shifting body of "Malayan Tiger Herm":
 			if humanity of Player < 10:
 				say "[THendingC]";
 			else:
@@ -943,7 +932,7 @@ when play ends:
 	if mqstatus is 99:						[refused the motel key hunt]
 		if humanity of Player > 9:				[all survivors get a standard add-on]
 			say "[THending_refusal][line break]";
-		if BodyName of Player is "Malayan Tiger Herm":
+		if Player has a non-shifting body of "Malayan Tiger Herm":
 			if humanity of Player < 10:
 				say "[THendingD]";
 			else:
@@ -951,7 +940,7 @@ when play ends:
 	if mqstatus is 2:							[gave keys, did not accompany]
 		if humanity of Player > 9:				[all survivors get a standard add-on]
 			say "[THending_helper][line break]";
-		if BodyName of Player is "Malayan Tiger Herm":
+		if Player has a non-shifting body of "Malayan Tiger Herm":
 			if humanity of Player < 10:
 				say "[THendingE]";
 			else if TailName of Player is "Malayan Tiger Herm" and FaceName of Player is "Malayan Tiger Herm" and SkinName of Player is "Malayan Tiger Herm":			[visibly fully tigress]
@@ -959,7 +948,7 @@ when play ends:
 			else:
 				say "[THendingA]";
 	if mqstatus is 4:							[fled from motel hunt]
-		if BodyName of Player is "Malayan Tiger Herm":
+		if Player has a non-shifting body of "Malayan Tiger Herm":
 			if humanity of Player < 10:
 				say "[THendingF]";
 			else if TailName of Player is "Malayan Tiger Herm" and FaceName of Player is "Malayan Tiger Herm" and SkinName of Player is "Malayan Tiger Herm":			[visibly fully tigress]

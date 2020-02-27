@@ -981,7 +981,7 @@ to say artemissf_sex:
 	now artemisstatefairrt is true;
 
 to artemisinfect:
-	setmonster "Rubber tigress";
+	setmonster "Rubber Tigress";
 	choose row MonsterID from Table of Random Critters;
 	let holdertext be "";
 	now holdertext is sex entry;
@@ -1613,12 +1613,17 @@ to say artemisengulf_nap_mod_03:
 	say "***nap engulf scene - modded version 3";
 
 
+[
 Section 10 - Endings
 
-[
-when play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Artemis['] Epilogue"	"Companion"	"Pet"	Artemis' Epilogue rule	750	false
+
+This is the Artemis' Epilogue rule:
 	if rubber tigress is tamed:
-...
+		trigger ending "Artemis['] Epilogue"; [Here it states, that the ending has been played.]
+		[...]
 ]
 
 Artemis ends here.

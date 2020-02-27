@@ -315,11 +315,17 @@ When Play begins:
 ]
 
 
+[
 Section 3 - Endings
 
-[
-when play ends:
-	say "     ";
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Horse-Hung Nerd Infection"	"Infection"	""	Horse-Hung Nerd Infection rule	1000	false
+
+This is the Horse-Hung Nerd Infection rule:
+	if Player has a body of "Horse-Hung Nerd":
+		trigger ending "Horse-Hung Nerd Infection"; [Here it states, that the ending has been played.]
+		say "     ";
 ]
 
 Horse-Hung Nerd ends here.

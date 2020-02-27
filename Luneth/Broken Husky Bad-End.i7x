@@ -307,7 +307,7 @@ to say BrokenHuskySlutBadend:
 			say "     With the enhanced hearing of your ears, you can make out movement on the other side of the door. Your head quickly whips up and you catch sight of something in the mirror in the dark room: your eyes... they are glowing! Luminescent violet orbs look back at you from your reflection, that is before the door flies open, blinding you with light. 'Well, well, what do ya know? It looks like I was right to choose ya for my plan after all, my li'l pet!'";
 			now Brokenhuskydelta is 3; [bimbo delta husky]
 	say "     <<End of Week 1>>  ";
-	now BodyName of Player is "Broken Husky Slut";
+	trigger ending "Broken Husky Slut";
 	end the story saying "You'll never escape your fate!";
 
 Section 2 - Rough Roadmap
@@ -452,6 +452,17 @@ Part 5 - Potential Delta Futa AKA The Latex Dominatrix
 Part 6 - Potential Delta Male AKA The Muscle Bitch
 
 [Only a couple male delta have been recorded by the alpha summit. It is believed that the formation of this delta is directly tied to the alpha, this breed is brought into being by the alpha desiring both a cock and extreme masculinity in their delta. Of all the delta breeds this one is by far the most feral and while it can walk on two legs it usually will choose to walk on all fours. They are ruled by instinct and tend to also speak in a very simple fashion avoiding large words. One of the perks of this breed is its ability to both knock others up but it also is created with the ability to be knocked up in return. While it may act like a huge muscled puppy it can also just as quickly act like a wild animal.]
+
+Section 5 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Broken Husky Slut"	"BadEnd"	"Sex Slave"	Broken Husky Slut rule	20	false
+
+This is the Broken Husky Slut rule:
+	if ending "Broken Husky Slut" is triggered:
+		say "     The alpha husky that captured you, continued to break down both your mind and body. Eventually, he was able to build you into his perfect submissive partner and the fact that you ended up turning into one of the few precious deltas, well that certainly made his bid to rule the husky packs much more assured..";
+		the Player is enslaved;
 
 
 Broken Husky Bad-End ends here.

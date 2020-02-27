@@ -354,7 +354,6 @@ to say GarthAndySexMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if nam is "Take Garth from behind":
 					say "[GarthAndySex1]";
@@ -555,7 +554,6 @@ to say RazorbackBoarSexMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if nam is "Take him from behind":
 					say "[RazorbackBoarSex1]";
@@ -715,6 +713,9 @@ to say RazorbackBoarDesc:
 		say "[BoarAlphaChoice]";
 	else:
 		say "     Walking through the forest, you run into Garth, the razorback boar. Unheard and unnoticed till he suddenly steps out from behind a thick tree nearby, he proves that he's completely at home in this patch of 'wilderness'. The anthro furry male looks you up and down and gives a grunt, then says, 'So, what makes you think you can just stomp through my forest? Civilization's gone - it's back to survival of the fittest! So I'm your boss here and now - or do you seriously think you can take me, eh?' He leaves you little time to make up your mind, instead charging at you right away.";
+
+
+Section 3 - Creature Insertion
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -886,8 +887,15 @@ When Play begins:
 
 
 [
-when play ends:
-	if BodyName of Player is "Razorback Boar":
+Section 4 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Razorback Boar Infection"	"Infection"	""	Razorback Boar Infection rule	1000	false
+
+This is the Razorback Boar Infection rule:
+	if Player has a body of "Razorback Boar":
+		trigger ending "Razorback Boar Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     ....";
 		else:

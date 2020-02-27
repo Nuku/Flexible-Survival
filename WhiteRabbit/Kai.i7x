@@ -175,7 +175,6 @@ to say KaiTalkMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if nam is "Just chat":
 					say "[KaiTalk1]";
@@ -188,7 +187,6 @@ to say KaiTalkMenu:
 				if nam is "His interest in surfing":
 					say "[KaiTalk5]";
 				wait for any key;
-				now lastfuck of Kai is turns;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the surfer boy, shaking your head slightly as he gives you the usual razor-sharp smile.";

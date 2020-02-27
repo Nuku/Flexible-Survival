@@ -11,6 +11,7 @@ MFSDUBM is a truth state that varies. MFSDUBM is usually false.
 Section 1 - Creature Responses
 
 to say fsdm attack:
+	project the Figure of SeaDragon_hard_icon;
 	if FemaleList is not banned: [change target to male for infection if valid]
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
 			choose row y in Table of Random Critters;
@@ -202,6 +203,7 @@ to say fsdm attack:
 
 
 To say fsdm loss:
+	project the Figure of SeaDragon_hard_icon;
 	if a random chance of fsdsub in 9 succeeds:
 		now boundmod is 1;
 		say "     Before you can land the final blow, the dragon suddenly backs away and concedes to you. His demeanor rather peculiar, you can summize that you've defeated this one before, and has succumbed to newfound, submissive inclinations";
@@ -227,6 +229,7 @@ To say fsdm loss:
 				say "     You turn to depart, having nothing else to gain from this encounter.";
 
 to say fsdm desc:
+	project the Figure of SeaDragon_soft_icon;
 	setmongender 3; [creature is male]
 	psycheeval;
 	libidoeval;
@@ -713,12 +716,17 @@ When Play begins:
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Feral Sea Dragon"; [name of the overall species of the infection, used for children, ...]
 	add "Feral Sea Dragon" to infections of ReptileList;
+	add "Feral Sea Dragon" to infections of FeralList;
 	add "Feral Sea Dragon" to infections of MythologicalList;
 	add "Feral Sea Dragon" to infections of FemaleList;
+	add "Feral Sea Dragon" to infections of MaleList;
 	add "Feral Sea Dragon" to infections of BarbedCockList;
 	add "Feral Sea Dragon" to infections of InternalCockList;
 	add "Feral Sea Dragon" to infections of QuadrupedalList;
+	add "Feral Sea Dragon" to infections of SwimList;
 	add "Feral Sea Dragon" to infections of TailList;
+	add "Feral Sea Dragon" to infections of OviImpregnatorList;
+	add "Feral Sea Dragon" to infections of FirebreathList;
 	add "Feral Sea Dragon" to infections of TailweaponList;
 	now Name entry is "Feral Sea Dragon";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
@@ -919,23 +927,9 @@ to fsdmvore:
 		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break][run paragraph on]";
 		say "Sanity: [humanity of Player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of Player]	Thirst: [thirst of Player]	Struggle: [fsdstrugglebar][line break][run paragraph on]";
 		if humanity of Player < 1:
-			repeat with y running from 1 to number of filled rows in Table of Random Critters:
-				choose row y in Table of Random Critters;
-				if Name entry is "Feral Sea Dragon":
-					now MonsterID is y;
-					break;
-			now BodyName of Player is "Feral Sea Dragon";
-			now FaceName of Player is "Feral Sea Dragon";
-			now TailName of Player is "Feral Sea Dragon";
-			now SkinName of Player is "Feral Sea Dragon";
-			now CockName of Player is "Feral Sea Dragon";
-			now tail of Player is tail entry;
-			now Face of Player is face entry;
-			now Skin of Player is skin entry;
-			now Body of Player is body entry;
-			now Cock of Player is cock entry;
-			now voreloss is true;
 			now Trixieexit is 1;
+			trigger ending "Feral Sea Dragon Vore";
+			the Player was ended by "Vore by Feral Sea Dragon";
 			end the story saying "You became a Feral Sea Dragon's meal!";
 		else:
 			let k be 0;
@@ -1137,134 +1131,142 @@ to say fsdstrugglebar:
 	else:
 		say "[if boundmod2 is 0][italic type]~--~[roman type] < [italic type][bracket]---[close bracket][roman type] [end if][bracket]-[if struggleatt > 1][bold type]X[roman type][else]-[end if][if struggleatt > 0][bold type]X[roman type][else]-[end if][close bracket] [if boundmod2 is 1] > [italic type]~--~[roman type][end if]";
 
-Section 4 - Miscellaneous
+Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "Feral Sea Dragon" or BodyName of Player is "Feral Sea Dragoness":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Feral Sea Dragon Vore"	"Voreloss"	""	Feral Sea Dragon Vore rule	10	false
+"Feral Sea Dragon Infection"	"Infection"	""	Feral Sea Dragon Infection rule	1000	false
+
+This is the Feral Sea Dragon Vore rule:
+	if ending "Feral Sea Dragon Vore" is triggered:
+		say "     Your strength completely sapped, you black out. The sea dragon's meager bulge receding as you're unmade, the beast roars out in utter satisfaction once he's finished, your ultimate fate to be nothing more than a meal for a monster. Sated for now, the creature would no doubt seek other victims to sate his substantial hunger...";
+		the Player is vored;
+
+This is the Feral Sea Dragon Infection rule:
+	if Player has a body of "Feral Sea Dragon" or Player has a body of "Feral Sea Dragoness":
+		trigger ending "Feral Sea Dragon Infection";
 		if humanity of Player < 10:
-			if voreloss is true:
-				say "     Your strength completely sapped, you black out. The sea dragon's meager bulge receding as you're unmade, the beast roars out in utter satisfaction once he's finished, your ultimate fate to be nothing more than a meal for a monster. Sated for now, the creature would no doubt seek other victims to sate his substantial hunger...";
-			else:
-				say "     Losing your mind to your feral compulsions your instincts draw you back to the beach - which is perhaps for the better as the infection reaches its natural conclusion and you lose almost all land-based articulation and mobility. You find yourself [if Player is female]singing[else if Player is male]roaring[else]crying[end if] out into the ocean, in search of a mate.";
-				if fsdbias is 0:
-					if Player is female and (Cock Count of Player is 0 or (player is male and a random chance of 1 in 2 succeeds)):
-						if MaleList is banned or MaleList is warded:
-							now fsdbias is 4;
-						else:
-							now fsdbias is 1;
+			say "     Losing your mind to your feral compulsions your instincts draw you back to the beach - which is perhaps for the better as the infection reaches its natural conclusion and you lose almost all land-based articulation and mobility. You find yourself [if Player is female]singing[else if Player is male]roaring[else]crying[end if] out into the ocean, in search of a mate.";
+			if fsdbias is 0:
+				if Player is female and (Cock Count of Player is 0 or (player is male and a random chance of 1 in 2 succeeds)):
+					if MaleList is banned or MaleList is warded:
+						now fsdbias is 4;
 					else:
-						if FemaleList is banned or FemaleList is warded:
-							now fsdbias is 1;
-						else:
-							now fsdbias is 4;
-				if fsdbias is 4 or fsdbias is 3:
-					say "     Your gesture is inevitably reciprocated with the song of an eager female";
-					if fsddom > 5:
-						say ", followed by another, and another... Before you even have a chance to offer yourself, you're beset by at least half a dozen dragonesses, nipping and teasing their new";
-						if BodyName of Player is "Feral Sea Dragon" and player is male:
-							say ", male-looking";
-						say " toy. You're dragged off and forced to spend the rest of your years forced to remain within the confines of a cave, forced to attend your many mistress's every whim and desire.";
-						if Player is male:
-							say "     Your days and constantly filled with rough sex, passed around by each and every one, frequently exhausted by their insatiable need for offspring. The harem quickly swells in size, but your position at the bottom of the totem pole never changes[if MaleList is not banned and MaleList is not warded]. Even the males - which are generally not regarded highly - are allowed to constantly use you as their little cum dumpster[end if]...";
-						else:
-							say "     Your inability to offer them offspring proves particularly trying on you, as you're forced even harder to attend to their insatiable lust";
-							if MaleList is not banned and MaleList is not warded:
-								say ". They eventually manage to gather some males to feed their need for children, their persistent abuse leading them to take it out on you, your position at the bottom of the totem pole never changing even as the harem swells in size.";
-							else if Player is female and ublevel is not 1:
-								say ". However, a way is quickly learned to attend to their need for children, following when a trespasser was proving insufficient in satisfying one of the dragonesses by their assets alone. Frequently, you watch on as many a hapless victims are captured and turned, though even after they have changed, your position at the bottom of the totem pole doesn't shift, used by them as well...";
-							else:
-								say ". Even as the harem swells in size, you position at the bottom of the totem pole never changes, abused by even the lowliest of dragonesses...";
-					else if fsddom > 0:
-						say ". As she approaches, you shyly offer yourself, a gesture which the dragoness eagerly obliges, apparently having grown fond of such a submissive attitude";
-						if BodyName of Player is "Feral Sea Dragon" and player is male:
-							say ", especially when made by one who appears male";
-						say ". You're relegated to remain within your mistress's cave, your future filled with eagerly servicing her every whim and desire.";
-						if Player is male:
-							say "     You're roughly forced to breed with her often, happily obliging her insatiable need for offspring. The dragoness eventually gathering up a harem, you're frequently used by the other females, who have also grown increasingly dominant.";
-						else:
-							say "     Your inability to breed with her proves somewhat inconvenient to her overwhelming need for offspring, but she has you attend to her insatiable lust regardless. In need of more, the dragoness eventually builds up a harem";
-							if MaleList is not banned and MaleList is not warded:
-								say ". She eventually manages to gather some males to feed her need for children, their persistent abuse leading them to take it out on you, though they can never satisfy you quite as well as she does...";
-							else if ublevel is not 1:
-								say " of similarly dominant females. However, in a bit of fun with one of your occasional trespassers going overboard, a way to attend her need for children is quickly found, and the lot of you soon find yourself seeking out new victims, filling your dragoness and her consort's wombs by forcing hapless strangers up her needy cunt...";
-							else:
-								say " of similarly dominant females. It's especially fun when unsuspecting trespassers stumble on the lot of you...";
-					else if Player is submissive:
-						say ". As she approaches, you shyly offer yourself, a gesture which seems to confuse the dragoness, clearly not used to such a submissive gesture";
-						if BodyName of Player is "Feral Sea Dragon" and player is male:
-							say ", especially by one who appears male";
-						say ". Eventually, however, the beast grows comfortable in a position of being your mistress, your future filled with eagerly servicing her every whim and desire.";
-						if Player is male:
-							say "     You're made to breed with her often, happily obliging her need for offspring, [if MaleList is banned or MaleList is warded]and while often tempted to offer yourself to your female kin[else]and though your more dominant male kin often try to take your place,[end if] it's by the dragoness's insistence that you remain her only mate.";
-						else:
-							say "     Your inability to breed with her proves somewhat inconvenient to her overwhelming need for offspring, but she has you sate her lust regardless";
-							if ublevel is not 1:
-								say ". However, in a bit of fun with one of your occasion trespassers going overboard, the two of you quickly learn a way to fix that, and the two of you soon find yourself seeking out new victims, filling your dragoness's womb by forcing hapless strangers up her needy cunt...";
-							else:
-								say ". It's especially fun when unsuspecting trespassers stumble on the two of you...";
-					else:
-						if Player is male:
-							say ". Compelled to swim into the water's depths you meet up with your new mate; though, as you approach, the sea dragoness would tease you by swimming off, eliciting your chase. It's made apparent of her intent when she leads you to a hidden cavern, offering herself before you as you approach. Such an offer the creature shows great pleasure in it's acceptance when you're compelled by your feral lust to mount her. Rutting her fast and hard, you claim her and this territory as your own.";
-							say "     As she bears your offspring you gather other dragonesses in the area for your personal harem, and it's not long before you possess a great number of them[if MaleList is not banned and MaleList is not warded and player is female], occasionally subduing a male to use for yourself[end if]. As time would pass, your children would spread to the far corners of the world, until all who fare the sea do so with an ever-present fear of your kin.";
-						else:
-							say ". Compelled to swim into the water's depths you meet up with your new mate; though, as you approach, the sea dragoness would tease you by swimming off, eliciting your chase. It's made apparent of her intent when she leads you to a hidden cavern, offering herself before you as you approach. Such an offer the creature shows great pleasure in it's acceptance when you're compelled by your feral lust to attend her.";
-							say "     Though neither of you can bear offspring for the other, ";
-							if ublevel is not 1:
-								say "the two of you soon learn a way around when a bout of fun with a trespasser leads to them getting stuffed up [if Player is not female]your mate's cunt[else]one of your cunts[end if], only to be born again as one of your kin. As time would pass, your children would spread to the far corners of the world, until all who fare the sea do so with an ever-present fear of your kin...";
-							else:
-								say "the two of you nonetheless remain fond of each other's company, and occasionally having fun with those who trespass on your land...";
+						now fsdbias is 1;
 				else:
-					if fsdsub > 5:
-						say "     Your call is met with a distant roar, followed by another, and another... Soon, the beach is flooded with sea dragons, twisted by your will into submission, all of them want nothing more than to be your consort.";
-						if Player is male:
-							say "     Happy to oblige their need, you immediately lunge towards one such offering, plunging your dick down his eager hole, the beast roaring out meekly as you fuck him right then and there";
-						else:
-							say "     Happy to oblige their need, you immediately lunge towards one such offering, climbing atop him and forcibly riding him then and there, beast rumbling lowly as he's revels in being nothing more than a toy for your pleasure";
-						say ". The other closing in to attend you as you pleasure yourself, they all get their own turn in time...";
-						say "     You eventually claim one of their homes as your own, no doubt the most impressive of which, since ambitions of its original owner having melted away to instead be replaced by his need for you. Your days are soon filled with the constant abuse of your new servants, all eagerly attending your every need and whim.";
-						say "     As time passes, your harem grows even larger, ";
-						if Player is male:
-							say "[if FemaleList is not banned and FemaleList is not warded]bestial need requiring you to sate a desire for offspring by collecting some females just for you[else]offering you barely a moment of free time[end if]";
-						else:
-							say "offering you barely a moment of free time";
-						say ". You quickly build a reputation and a legend surrounding your ferocity, though by this point you are so fat and attended to that they're clearly over-embellished, not that you seem to really care...";
-					else if fsdsub > 0:
-						say "     Your call is met with a distant roar, the male slowly rising from the water before bowing its head at you. No doubt this is one of the sea dragons you subdued, mind now twisted into submission, and your feral instincts show no restraint in claiming him as your consort.";
-						if Player is male:
-							say "     Forced onto his back, you immediately plunge your dick down his abused hole, the beast roaring out meekly as you fuck him right then and there";
-						else:
-							say "     Forced onto his back you climb atop him and forcibly ride him then and there, beast rumbling lowly as he's relegated to nothing more than a toy for your pleasure";
-						say ". After you assert your dominance, you make him lead you to his cave and claim it as your own.";
-						say "     Your days are filled with the constant abuse of your new servant, forcing him to attend to your every whim and desire. Over time ";
-						if Player is male:
-							say "[if FemaleList is not banned and FemaleList is not warded]your harem slowly grows in size, your overwhelming, bestial need requiring you to sate a desire for offspring by collecting some females just for you[else]you subjugate more of them under your will[end if], and though you have plenty a subjects to sate your lust";
-						else:
-							say "you subjugate more of them under your will, and though your bestial need[if Player is female] for offspring[end if] is plenty sated by your subjects";
-						say " you remain particularly fond of abusing your first...";
-					else if "Dominant" is listed in feats of Player:
-						say "     Your call is met with a distant roar, the male quickly approaching and attempting to subdue you into becoming one of his consorts... However, empowered by your strain, you'll have none of this, and you turn the tables on the sea dragon, forcing him to become yours instead!";
-						if Player is male:
-							say "     Just as he rolls over in submission, you plunge your dick down his virgin hole, causing the beast to cry out as you fuck him right then and there";
-						else:
-							say "     Just as he rolls onto his back in submission, you climb atop him and forcibly ride him then and there, humiliating him as you relegate him to nothing more than a toy for your pleasure";
-						say ". After you assert your dominance, you make him lead you to his cave and claim it as your own.";
-						say "     Your days are filled with the constant abuse of your new toy, forcing him to attend to your every whim and desire. As time passes, the monster grows fond of sating your eternal, bestial need, eager to be used.";
-					else if Player is male:
-						say "     You're met with the distant roar of a male, and though you find yourself hesitating in regards to this turn of event your input on the matter becomes irrelevant when the dragon suddenly rises up from the waters to meet you. He sees your hesitation and responds immediately by forcing you onto your side, his already-emergent cock plunged firmly into your unsuspecting hole. You cry out, ";
-						if BodyName of Player is "Feral Sea Dragoness":
-							say "the monster frequently mocking your protests, often citing your dragoness appearance as reason for why you should enjoy being the property of such a fertile male until you concede and hide yourself under his dominant form, pumped full of his seed.";
-						else:
-							say "your protests only pleasuring the monster further as he ravages you, until you concede and hide yourself under his dominant form while he pumps you full of his seed.";
-						say "     Eventually, you're pulled back into the depths with him. The craven beast keeps you in his home as his own personal fucktoy, [if FemaleList is banned or FemaleList is warded]ravaging you daily without relent until you look forward to his abuse, feeding you in half-eaten fish and his own, thick seed[else]and though he must gather females to satisfy his need for offspring, he's never one to neglect you of his harsh affections. He refuses to share any of said females with you; not that you mind, however, as by now you've grown to love his abuse[end if]";
-						if Player is mpreg_ok:
-							say ". You can imagine his surprise when he finds out that you're actually getting pregnant from being fucked silly by him. He, of course, attributes this to his exceptional virility, though he's now at least a bit more kind to you";
-						say ".";
+					if FemaleList is banned or FemaleList is warded:
+						now fsdbias is 1;
 					else:
-						say "     Your call is met with a distant roar, and you're soon drawn to meet each other within the water's depths. Offering yourself to him, he regards you with a rumble of immediate approval, an approval he is quick to illustrate when he promptly crawls over your form and drives his hardening cock into your needy cunt. He mates you with a clear and immediate fervor; the first of a great many times";
-						if "Sterile" is listed in feats of Player:
-							say ". Very much in spite your inability to bear children for him, he keeps you along for his own personal pleasure. Of course, this means he has to gather additional females to bear his offspring, and you find yourself taking great joy in helping to rear these children before they're sent out into the world.";
+						now fsdbias is 4;
+			if fsdbias is 4 or fsdbias is 3:
+				say "     Your gesture is inevitably reciprocated with the song of an eager female";
+				if fsddom > 5:
+					say ", followed by another, and another... Before you even have a chance to offer yourself, you're beset by at least half a dozen dragonesses, nipping and teasing their new";
+					if BodyName of Player is "Feral Sea Dragon" and player is male:
+						say ", male-looking";
+					say " toy. You're dragged off and forced to spend the rest of your years forced to remain within the confines of a cave, forced to attend your many mistress's every whim and desire.";
+					if Player is male:
+						say "     Your days and constantly filled with rough sex, passed around by each and every one, frequently exhausted by their insatiable need for offspring. The harem quickly swells in size, but your position at the bottom of the totem pole never changes[if MaleList is not banned and MaleList is not warded]. Even the males - which are generally not regarded highly - are allowed to constantly use you as their little cum dumpster[end if]...";
+					else:
+						say "     Your inability to offer them offspring proves particularly trying on you, as you're forced even harder to attend to their insatiable lust";
+						if MaleList is not banned and MaleList is not warded:
+							say ". They eventually manage to gather some males to feed their need for children, their persistent abuse leading them to take it out on you, your position at the bottom of the totem pole never changing even as the harem swells in size.";
+						else if Player is female and ublevel is not 1:
+							say ". However, a way is quickly learned to attend to their need for children, following when a trespasser was proving insufficient in satisfying one of the dragonesses by their assets alone. Frequently, you watch on as many a hapless victims are captured and turned, though even after they have changed, your position at the bottom of the totem pole doesn't shift, used by them as well...";
 						else:
-							say ". You constantly bear your mate's children for him, giving birth and attending to your offspring briefly before they are sent off to fend for themselves in the wild, only to be filled again with his seed. Soon your mate gathers more females for his harem, but as his first he regards you with the most reverence[if Player is male]. On occasion he even lets you mate with a number of his other consorts yourself, when he so allows it[end if].";
+							say ". Even as the harem swells in size, you position at the bottom of the totem pole never changes, abused by even the lowliest of dragonesses...";
+				else if fsddom > 0:
+					say ". As she approaches, you shyly offer yourself, a gesture which the dragoness eagerly obliges, apparently having grown fond of such a submissive attitude";
+					if BodyName of Player is "Feral Sea Dragon" and player is male:
+						say ", especially when made by one who appears male";
+					say ". You're relegated to remain within your mistress's cave, your future filled with eagerly servicing her every whim and desire.";
+					if Player is male:
+						say "     You're roughly forced to breed with her often, happily obliging her insatiable need for offspring. The dragoness eventually gathering up a harem, you're frequently used by the other females, who have also grown increasingly dominant.";
+					else:
+						say "     Your inability to breed with her proves somewhat inconvenient to her overwhelming need for offspring, but she has you attend to her insatiable lust regardless. In need of more, the dragoness eventually builds up a harem";
+						if MaleList is not banned and MaleList is not warded:
+							say ". She eventually manages to gather some males to feed her need for children, their persistent abuse leading them to take it out on you, though they can never satisfy you quite as well as she does...";
+						else if ublevel is not 1:
+							say " of similarly dominant females. However, in a bit of fun with one of your occasional trespassers going overboard, a way to attend her need for children is quickly found, and the lot of you soon find yourself seeking out new victims, filling your dragoness and her consort's wombs by forcing hapless strangers up her needy cunt...";
+						else:
+							say " of similarly dominant females. It's especially fun when unsuspecting trespassers stumble on the lot of you...";
+				else if Player is submissive:
+					say ". As she approaches, you shyly offer yourself, a gesture which seems to confuse the dragoness, clearly not used to such a submissive gesture";
+					if BodyName of Player is "Feral Sea Dragon" and player is male:
+						say ", especially by one who appears male";
+					say ". Eventually, however, the beast grows comfortable in a position of being your mistress, your future filled with eagerly servicing her every whim and desire.";
+					if Player is male:
+						say "     You're made to breed with her often, happily obliging her need for offspring, [if MaleList is banned or MaleList is warded]and while often tempted to offer yourself to your female kin[else]and though your more dominant male kin often try to take your place,[end if] it's by the dragoness's insistence that you remain her only mate.";
+					else:
+						say "     Your inability to breed with her proves somewhat inconvenient to her overwhelming need for offspring, but she has you sate her lust regardless";
+						if ublevel is not 1:
+							say ". However, in a bit of fun with one of your occasion trespassers going overboard, the two of you quickly learn a way to fix that, and the two of you soon find yourself seeking out new victims, filling your dragoness's womb by forcing hapless strangers up her needy cunt...";
+						else:
+							say ". It's especially fun when unsuspecting trespassers stumble on the two of you...";
+				else:
+					if Player is male:
+						say ". Compelled to swim into the water's depths you meet up with your new mate; though, as you approach, the sea dragoness would tease you by swimming off, eliciting your chase. It's made apparent of her intent when she leads you to a hidden cavern, offering herself before you as you approach. Such an offer the creature shows great pleasure in it's acceptance when you're compelled by your feral lust to mount her. Rutting her fast and hard, you claim her and this territory as your own.";
+						say "     As she bears your offspring you gather other dragonesses in the area for your personal harem, and it's not long before you possess a great number of them[if MaleList is not banned and MaleList is not warded and player is female], occasionally subduing a male to use for yourself[end if]. As time would pass, your children would spread to the far corners of the world, until all who fare the sea do so with an ever-present fear of your kin.";
+					else:
+						say ". Compelled to swim into the water's depths you meet up with your new mate; though, as you approach, the sea dragoness would tease you by swimming off, eliciting your chase. It's made apparent of her intent when she leads you to a hidden cavern, offering herself before you as you approach. Such an offer the creature shows great pleasure in it's acceptance when you're compelled by your feral lust to attend her.";
+						say "     Though neither of you can bear offspring for the other, ";
+						if ublevel is not 1:
+							say "the two of you soon learn a way around when a bout of fun with a trespasser leads to them getting stuffed up [if Player is not female]your mate's cunt[else]one of your cunts[end if], only to be born again as one of your kin. As time would pass, your children would spread to the far corners of the world, until all who fare the sea do so with an ever-present fear of your kin...";
+						else:
+							say "the two of you nonetheless remain fond of each other's company, and occasionally having fun with those who trespass on your land...";
+			else:
+				if fsdsub > 5:
+					say "     Your call is met with a distant roar, followed by another, and another... Soon, the beach is flooded with sea dragons, twisted by your will into submission, all of them want nothing more than to be your consort.";
+					if Player is male:
+						say "     Happy to oblige their need, you immediately lunge towards one such offering, plunging your dick down his eager hole, the beast roaring out meekly as you fuck him right then and there";
+					else:
+						say "     Happy to oblige their need, you immediately lunge towards one such offering, climbing atop him and forcibly riding him then and there, beast rumbling lowly as he's revels in being nothing more than a toy for your pleasure";
+					say ". The other closing in to attend you as you pleasure yourself, they all get their own turn in time...";
+					say "     You eventually claim one of their homes as your own, no doubt the most impressive of which, since ambitions of its original owner having melted away to instead be replaced by his need for you. Your days are soon filled with the constant abuse of your new servants, all eagerly attending your every need and whim.";
+					say "     As time passes, your harem grows even larger, ";
+					if Player is male:
+						say "[if FemaleList is not banned and FemaleList is not warded]bestial need requiring you to sate a desire for offspring by collecting some females just for you[else]offering you barely a moment of free time[end if]";
+					else:
+						say "offering you barely a moment of free time";
+					say ". You quickly build a reputation and a legend surrounding your ferocity, though by this point you are so fat and attended to that they're clearly over-embellished, not that you seem to really care...";
+				else if fsdsub > 0:
+					say "     Your call is met with a distant roar, the male slowly rising from the water before bowing its head at you. No doubt this is one of the sea dragons you subdued, mind now twisted into submission, and your feral instincts show no restraint in claiming him as your consort.";
+					if Player is male:
+						say "     Forced onto his back, you immediately plunge your dick down his abused hole, the beast roaring out meekly as you fuck him right then and there";
+					else:
+						say "     Forced onto his back you climb atop him and forcibly ride him then and there, beast rumbling lowly as he's relegated to nothing more than a toy for your pleasure";
+					say ". After you assert your dominance, you make him lead you to his cave and claim it as your own.";
+					say "     Your days are filled with the constant abuse of your new servant, forcing him to attend to your every whim and desire. Over time ";
+					if Player is male:
+						say "[if FemaleList is not banned and FemaleList is not warded]your harem slowly grows in size, your overwhelming, bestial need requiring you to sate a desire for offspring by collecting some females just for you[else]you subjugate more of them under your will[end if], and though you have plenty a subjects to sate your lust";
+					else:
+						say "you subjugate more of them under your will, and though your bestial need[if Player is female] for offspring[end if] is plenty sated by your subjects";
+					say " you remain particularly fond of abusing your first...";
+				else if "Dominant" is listed in feats of Player:
+					say "     Your call is met with a distant roar, the male quickly approaching and attempting to subdue you into becoming one of his consorts... However, empowered by your strain, you'll have none of this, and you turn the tables on the sea dragon, forcing him to become yours instead!";
+					if Player is male:
+						say "     Just as he rolls over in submission, you plunge your dick down his virgin hole, causing the beast to cry out as you fuck him right then and there";
+					else:
+						say "     Just as he rolls onto his back in submission, you climb atop him and forcibly ride him then and there, humiliating him as you relegate him to nothing more than a toy for your pleasure";
+					say ". After you assert your dominance, you make him lead you to his cave and claim it as your own.";
+					say "     Your days are filled with the constant abuse of your new toy, forcing him to attend to your every whim and desire. As time passes, the monster grows fond of sating your eternal, bestial need, eager to be used.";
+				else if Player is male:
+					say "     You're met with the distant roar of a male, and though you find yourself hesitating in regards to this turn of event your input on the matter becomes irrelevant when the dragon suddenly rises up from the waters to meet you. He sees your hesitation and responds immediately by forcing you onto your side, his already-emergent cock plunged firmly into your unsuspecting hole. You cry out, ";
+					if BodyName of Player is "Feral Sea Dragoness":
+						say "the monster frequently mocking your protests, often citing your dragoness appearance as reason for why you should enjoy being the property of such a fertile male until you concede and hide yourself under his dominant form, pumped full of his seed.";
+					else:
+						say "your protests only pleasuring the monster further as he ravages you, until you concede and hide yourself under his dominant form while he pumps you full of his seed.";
+					say "     Eventually, you're pulled back into the depths with him. The craven beast keeps you in his home as his own personal fucktoy, [if FemaleList is banned or FemaleList is warded]ravaging you daily without relent until you look forward to his abuse, feeding you in half-eaten fish and his own, thick seed[else]and though he must gather females to satisfy his need for offspring, he's never one to neglect you of his harsh affections. He refuses to share any of said females with you; not that you mind, however, as by now you've grown to love his abuse[end if]";
+					if Player is mpreg_ok:
+						say ". You can imagine his surprise when he finds out that you're actually getting pregnant from being fucked silly by him. He, of course, attributes this to his exceptional virility, though he's now at least a bit more kind to you";
+					say ".";
+				else:
+					say "     Your call is met with a distant roar, and you're soon drawn to meet each other within the water's depths. Offering yourself to him, he regards you with a rumble of immediate approval, an approval he is quick to illustrate when he promptly crawls over your form and drives his hardening cock into your needy cunt. He mates you with a clear and immediate fervor; the first of a great many times";
+					if "Sterile" is listed in feats of Player:
+						say ". Very much in spite your inability to bear children for him, he keeps you along for his own personal pleasure. Of course, this means he has to gather additional females to bear his offspring, and you find yourself taking great joy in helping to rear these children before they're sent out into the world.";
+					else:
+						say ". You constantly bear your mate's children for him, giving birth and attending to your offspring briefly before they are sent off to fend for themselves in the wild, only to be filled again with his seed. Soon your mate gathers more females for his harem, but as his first he regards you with the most reverence[if Player is male]. On occasion he even lets you mate with a number of his other consorts yourself, when he so allows it[end if].";
 		else:
 			say "     No doubt the soldiers are a bit reluctant to process you, given your sea dragon appearance, but once it's clear that you're posing no threat, you get through with little issue.";
 			say "     The uninfected - as a whole - are a little ill-at-ease towards any infected, and you are no different, especially once the infection eventually advances to the point where your form becomes fully feral. You find yourself in need of aid for dealing with more articulated tasks as a result, but you grow to appreciate your form for its own sort of elegance.";

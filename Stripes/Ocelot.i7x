@@ -568,11 +568,16 @@ Definition: a person is ocelotbodied:
 	no;
 
 
+[
 Section 4 - Endings
 
-[
-when play ends:
-	if BodyName of Player is "Ocelot":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Ocelot Infection"	"Infection"	""	Ocelot Infection rule	1000	false
+
+This is the Ocelot Infection rule:
+	if Player has a body of "Ocelot":
+		trigger ending "Ocelot Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You succumb to your ocelot infection.";
 		else:

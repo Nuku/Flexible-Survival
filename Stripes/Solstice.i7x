@@ -305,9 +305,14 @@ Definition: a person is fullyvg:
 
 Section 6 - Endings
 
-when play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Solstice's Epilogue"	"NPC"	""	Solstice's Epilogue rule	900	false
+
+This is the Solstice's Epilogue rule:
 	if HP of Solstice >= 5:
-		if BodyName of Player is "Vulpogryph":
+		trigger ending "Solstice's Epilogue"; [Here it states, that the ending has been played.]
+		if Player has a non-shifting body of "Vulpogryph":
 			if humanity of Player < 10:
 				if Player is male:
 					say "     As you give in to your new, vulpogryph instincts, Solstice is there for you. She runs her paws over your body and leads you off with her in search of adventure in the wild, changing world. It all soon becomes clear to you. She is your special mate, the one you were meant to be with. Using her knowledge of ancient ruins, you travel to a Mayan temple and make it your new home, intent on nesting there.";

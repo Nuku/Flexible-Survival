@@ -10,7 +10,7 @@ with 1000 blank rows
 
 Table of GameEvents
 Name(text)	ResolveState (text)	ActiveState(text)	Resolution(number)	SituationArea(text)
-with 1000 blank rows
+with 2000 blank rows
 
 Table of GameRooms
 Name(text)	Reachability(text)	ExplorationStatus(text)	RestSafety(text)
@@ -23,6 +23,10 @@ with 1000 blank rows
 Table of GamePossessions
 Name(text)	CarriedNumber(number)	StoredNumber(number)	EquippedStatus(truth state)	CurseStatus(truth state)
 with 1000 blank rows
+
+Table of GameEndings
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+--	--	--	--	0	false
 
 Table of GameCharacters
 Name(text)	LocationName(text)	Energy(number)	HP(number)	MaxHP(number)	XP(number)	Level(number)	Armor(number)	Weapon Damage(number)	Capacity(number)	ScaleValue(number)	Strength(number)	Dexterity(number)	Stamina(number)	Charisma(number)	Intelligence(number)	Perception(number)	Hunger(number)	Thirst(number)	SleepRhythm(number)	Morale(number)	Lust(number)	Libido(number)	Loyalty(number)	Humanity(number)	Cocks(number)	Cock Length(number)	Cock Width(number)	Testes(number)	Cunts(number)	Cunt Depth(number)	Cunt Width(number)	Breasts(number)	Breast Size(number)	PlayerMet(truth state)	PlayerRomanced(truth state)	PlayerFucked(truth state)	OralVirgin(truth state)	Virgin(truth state)	AnalVirgin(truth state)
@@ -46,7 +50,7 @@ with 1 blank row
 
 Table of PlayerLists
 ListName(text)	EntryText(text)
-with 8000 blank rows
+with 50000 blank rows
 
 Table of GameBeasts
 Name(text)	Area(text)	non-infectious(truth state)	sex(text)
@@ -109,7 +113,6 @@ Name(text)	Type(text)
 "Dolphinlist"	"list of text"
 "lbcomplist"	"list of text"
 "ndmlist"	"list of text"
-"AbandonedRoomStatus"	"number"
 "absorb"	"number"
 "addedlibido"	"number"
 "afsmread"	"number"
@@ -119,6 +122,9 @@ Name(text)	Type(text)
 "AlexandraBackstory"	"number"
 "AlexandraBrutusInteraction"	"number"
 "AlexandraBrutusPups"	"number"
+"AlexandraKarelPups"	"number"
+"AlexandraIsaacPups"	"number"
+"AlexandraFarmhandPups"	"number"
 "AlexandraCarlInteraction"	"number"
 "AlexandraCarlPups"	"number"
 "AlexandraCreampieCount"	"number"
@@ -160,7 +166,6 @@ Name(text)	Type(text)
 "AresDannyEncounters"	"number"
 "artattempt"	"number"
 "artleopardfight"	"number"
-"AtticusCounter"	"number"
 "auto2entry"	"number"
 "autoattackmode"	"number"
 "autogender"	"number"
@@ -184,8 +189,6 @@ Name(text)	Type(text)
 "BastetApproval"	"number"
 "BastetSexBattleCount"	"number"
 "battleitem"	"number"
-"bcending"	"number"
-"Bch"	"number"
 "bclatearrival"	"number"
 "bcuntethered"	"number"
 "beatgrnymph"	"number"
@@ -331,7 +334,6 @@ Name(text)	Type(text)
 "damagein"	"number"
 "damageout"	"number"
 "DariusLostItems"	"number"
-"darkdays"	"number"
 "DavidBrutusMarcVar"	"number"
 "DavidBunkerEntry"	"number"
 "DavidSarahInteraction"	"number"
@@ -342,7 +344,6 @@ Name(text)	Type(text)
 "DemonBruteStatus"	"number"
 "DemonFoxInteractions"	"number"
 "DemonFoxStatus"	"number"
-"demonseedfound"	"number"
 "dentedbikecount"	"number"
 "DianaRelationship"	"number"
 "DianaTransformationProgress"	"number"
@@ -361,7 +362,6 @@ Name(text)	Type(text)
 "dogfoodcount"	"number"
 "doggyboned"	"number"
 "doggyness"	"number"
-"dogmilkfound"	"number"
 "dolcastlefight"	"number"
 "dolinfloss"	"number"
 "dollfound"	"number"
@@ -522,11 +522,6 @@ Name(text)	Type(text)
 "gardenveg"	"number"
 "GarthRelationship"	"number"
 "gascloud"	"number"
-"gatherdemonseed"	"number"
-"gatherdogmilk"	"number"
-"gatherspottedfur"	"number"
-"gathertaintedwool"	"number"
-"gatherwolfcum"	"number"
 "gatorconsent"	"number"
 "gatordefeat"	"number"
 "gazellesbeaten"	"number"
@@ -613,7 +608,6 @@ Name(text)	Type(text)
 "hermlvmeet"	"number"
 "hfgbread"	"number"
 "HG_Flashback_Turns"	"number"
-"HG_Stage"	"number"
 "hgryphon_TGcount"	"number"
 "hgryphonwin"	"number"
 "hgsqc"	"number"
@@ -704,7 +698,6 @@ Name(text)	Type(text)
 "knightcrestnum"	"number"
 "KoballoonLossCounter"	"number"
 "KoballoonMet"	"number"
-"KoballoonSexBadEnd"	"number"
 "koboldgangmet"	"number"
 "koboldgangsubs"	"number"
 "KoboldScaleColor"	"number"
@@ -712,7 +705,6 @@ Name(text)	Type(text)
 "KorvinSubmitCounter"	"number"
 "kpstatus"	"number"
 "KTO"	"number"
-"KTP"	"number"
 "KitsuneEventStage"	"number"
 "ktspeciesbonus"	"number"
 "KurtEvent"	"number"
@@ -805,7 +797,6 @@ Name(text)	Type(text)
 "LastMoreauPartSale"	"number"
 "lastNadiaSpotted"	"number"
 "lastoctofight"	"number"
-"LastOmioteatime"	"number"
 "lastorcabeat"	"number"
 "lastPaulahealing"	"number"
 "Lastpigfed"	"number"
@@ -960,7 +951,6 @@ Name(text)	Type(text)
 "PetMuttName"	"text"
 "PetMuttColor"	"text"
 "PetMuttDetailedlook"	"text"
-"Pet MuttFurColorNumber"	"number"
 "MYDAM"	"number"
 "MYDGM"	"number"
 "MYDTBMM"	"number"
@@ -977,7 +967,6 @@ Name(text)	Type(text)
 "NatalieFucked"	"number"
 "ndmhigh"	"number"
 "NerdMeetings"	"number"
-"NereidRelationship"	"number"
 "NermineAroused"	"number"
 "NermineBukkakeTurn"	"number"
 "NermineFeat"	"number"
@@ -1034,11 +1023,7 @@ Name(text)	Type(text)
 "ocelotsize"	"number"
 "OfficeGirlsDominance"	"number"
 "OfficeGirlsFriendship"	"number"
-"OgreMeetings"	"number"
-"Ointerrogate"	"number"
 "OliverRelationship"	"number"
-"Omiotalk"	"number"
-"omq"	"number"
 "Onyxboislut"	"number"
 "onyxdma"	"number"
 "onyxdmc"	"number"
@@ -1046,7 +1031,6 @@ Name(text)	Type(text)
 "onyxfinale"	"number"
 "onyxlapdance"	"number"
 "Onyxmareslut"	"number"
-"opcl"	"number"
 "orcadom"	"number"
 "orcafdom"	"number"
 "orcaintense"	"number"
@@ -1128,8 +1112,6 @@ Name(text)	Type(text)
 "psycheadjust"	"number"
 "pubvisit"	"number"
 "purfeat"	"number"
-"purpol"	"number"
-"purpolu"	"number"
 "quitter"	"number"
 "rabbitfucked"	"number"
 "rabbitmulticock"	"number"
@@ -1241,8 +1223,6 @@ Name(text)	Type(text)
 "SonnyQuest"	"number"
 "SonnyRelationship"	"number"
 "SpidertaurRelationship"	"number"
-"spiritlove"	"number"
-"spottedfurfound"	"number"
 "Spriteconsent"	"number"
 "Spritedefeat"	"number"
 "SquadEncounters"	"number"
@@ -1279,7 +1259,6 @@ Name(text)	Type(text)
 "SylviaConv"	"number"
 "SylviaTrapVar"	"number"
 "SylviaVirginCheck"	"number"
-"taintedwoolfound"	"number"
 "TaniClassMemory"	"number"
 "TaniRecommendation"	"number"
 "Targetturns"	"number"
@@ -1322,7 +1301,6 @@ Name(text)	Type(text)
 "TomeInfluenceTimer"	"number"
 "TomeInteractions"	"number"
 "TomeTimer"	"number"
-"Tpfs"	"number"
 "Treasurefound"	"number"
 "treasurehunt"	"number"
 "triclamped"	"number"
@@ -1376,7 +1354,6 @@ Name(text)	Type(text)
 "VikingSpartanWar"	"number"
 "VikingUltimatum"	"number"
 "VikingWar"	"number"
-"Vinetrapped"	"number"
 "violinfound"	"number"
 "vixcountdown"	"number"
 "vixentaurcatch"	"number"
@@ -1406,7 +1383,6 @@ Name(text)	Type(text)
 "WhiptailLossCount"	"number"
 "WhoringExperience"	"number"
 "WineFound"	"number"
-"wolfcumfound"	"number"
 "wolffight"	"number"
 "wolfhermdefeat"	"number"
 "wolfhermvictory"	"number"
@@ -1811,8 +1787,6 @@ Name(text)	Type(text)
 "ovipregmedeatalk"	"truth state"
 "ovipregnant"	"truth state"
 "pewtertorsosuppress"	"truth state"
-"playercanub"	"truth state"
-"playercanvore"	"truth state"
 "PlayerPigBodied"	"truth state"
 "ppatt"	"truth state"
 "pr_task01"	"truth state"
@@ -1885,7 +1859,6 @@ Name(text)	Type(text)
 "velossavedyes"	"truth state"
 "vgeckoboost"	"truth state"
 "violinspritefight"	"truth state"
-"voreloss"	"truth state"
 "vorespecial1"	"truth state"
 "weakwilled"	"truth state"
 "WerewolfWatching"	"truth state"

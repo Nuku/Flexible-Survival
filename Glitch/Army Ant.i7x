@@ -55,6 +55,7 @@ When Play begins:
 	add "Army Ant" to infections of InternalCockList;
 	add "Army Ant" to infections of HexapedalList;
 	add "Army Ant" to infections of TailList;
+	add "Army Ant" to infections of OviImpregnatorList;
 	now Name entry is "Army Ant"; [The creature's name as displayed and used in naming descriptions]
 	now enemy title entry is "Ant Warrior";
 	now enemy Name entry is ""; [specific name of unique enemy]
@@ -212,8 +213,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Army Ant":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Army Ant Infection"	"Infection"	""	Army Ant Infection rule	1000	false
+
+This is the Army Ant Infection rule:
+	if Player has a body of "Army Ant":
+		trigger ending "Army Ant Infection";
 		if humanity of Player < 10:
 			say "     You succumb to your army ant infection. Life is far easier when the decisions are made by others. It was easy enough to find other Army Ants by the scent your kind leaves, instinctively drawn to the rest of the Hive. It's quite nice, not worrying about nervous, stressful things like what tomorrow brings because the Hive is what takes priority, what all is done to maintain, and you are but one cog in that living machine. You live for the Hive, and the Hive provides, whether it be sustenance or pleasures, companions or security.";
 		else:

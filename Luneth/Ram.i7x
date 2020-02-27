@@ -447,8 +447,15 @@ instead of sniffing Tainted wool:
 	say "The wool smells of ram musk.";
 
 
-when play ends:
-	if BodyName of Player is "Ram":
+Section 4 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Ram Infection"	"Infection"	"Mixed"	Ram Infection rule	1000	false
+
+This is the Ram Infection rule:
+	if Player has a body of "Ram":
+		trigger ending "Ram Infection"; [Here it states, that the ending has been played.]
 		let ram be "Ram";
 		let ewe be "Ewe";
 		if Libido of Mary > 0:

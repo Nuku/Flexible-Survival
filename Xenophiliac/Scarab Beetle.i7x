@@ -182,10 +182,17 @@ to say BeetleBodyChanges:
 	say "all of a sudden, your figure begins to reshape itself, bones and tissues changing and elongating as time goes by. Your arms and legs slim down and extend, reshaping into five individual segments, insectoid in nature. Your feet quickly change into an insectile foot, the bottom of it covered in tiny, sensitive hairs and the entire thing terminating in a large set of spiky claws. Soon to follow are your hands, which change in almost the exact same way as your legs; the palm of your hands now covered in tiny hairs, while your fingers have merged into three large digits, ending in a bug-like claw.";
 	say "Soon after your limbs change, your body follows suit. Your back cracks and extends out quickly; you feel a thick set of protective coverings form from your shoulders, growing down to cover your new, translucent beetle wings. Small nubs form below your arms; these soon grow out into a smaller, but nonetheless deadly, pair of arms. Finally, your body ceases changing, leaving you with the form of a beetle";
 
+
+[ [Will implement soon, hopefully]
 Section 3 - Endings
-[Will implement soon, hopefully]
-[when play ends:
-	if BodyName of Player is "Scarab Beetle":
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Scarab Beetle Infection"	"Infection"	""	Scarab Beetle Infection rule	1000	false
+
+This is the Scarab Beetle Infection rule:
+	if Player has a body of "Scarab Beetle":
+		trigger ending "Scarab Beetle Infection"; [Here it states, that the ending has been played.]
 		say "";]
 
 Scarab Beetle ends here.

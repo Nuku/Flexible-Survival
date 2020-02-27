@@ -210,7 +210,7 @@ The description of Avalon-Crossroads is "[AvCrossroads desc]".
 
 to say AvCrossroads desc:
 	say "     You find yourself in a clearing at the center of the forest where the North-South, and East-West roads meet. The area is clearly used for more than passing though as there are clear evidence of burned out campfires, broken wagon wheels, and other useless junk here and there, suggesting that the Crossroads is used as a place to camp, trade, and meet up. At one corner, a wooden sign shows where each road leads.";
-	say "[bold type](Note: South, West, and Eastern Paths are all a work in progress and will become available once finished)[roman type]";[Remove once areas are available]
+	say "[bold type](Note: South, West, and Eastern Paths are all a work in progress and will become available once finished)[roman type][line break]";[Remove once areas are available]
 	LineBreak;
 	LineBreak;
 	say "[bold type]-[roman type]Down the [bold type]South[roman type] road lead to the Castle.";

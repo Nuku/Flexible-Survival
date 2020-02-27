@@ -228,14 +228,19 @@ When Play begins:
 ]
 
 
-when play ends:
-	if BodyName is "Black Equinoid":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Black Equinoid Infection"	"Infection"	""	Black Equinoid Infection rule	1000	false
+
+This is the Black Equinoid Infection rule:
+	if Player has a body of "Black Equinoid":
+		trigger ending "Black Equinoid Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
-			if bee girl is tamed:
-				say "     Following a compulsion, you seek out other horses in the park and are soon welcomed into the herd proper. Together, you defend the park against interlopers, be they mutant or human. The exception are the bees; they're tolerated for their benefit to the local flora and their delicious honey. Because of this, Honey - who accompanied you back to the park - is welcomed by the black equinoids of the herd and lavished with attention. They show her a lovely tree surrounded by flowers, and she soon sets up her home there, becoming a new queen bee and raising a new hive. Because of your bond with her, there is a peaceful alliance between the herd and the hive. The bears are kept away, the hive thrives, and the equinoids are allowed to harvest honey in peace.";
-				say "     There are some city horses as well that come by from time to time. They seem friendly enough at first, but the bees overhear them secretly whispering about making your people into slaves and whores. Warriors at heart, the herd attacks and drives off these foul, urban horses before they can enact their unsavory schemes. With the herd's numbers and the bees on watch from the air, these interlopers are kept from raiding, and some are even captured and made to accept the proper ways of a natural, equine warrior.";
-			else:
-				say "     Following a compulsion, you seek out other horses in the park and are soon welcomed into the herd proper. Together, you defend the park against interlopers, be they mutant or human. The exception are the bees; they're tolerated for their benefit to the local flora and their delicious honey. There are some city horses as well that come by from time to time. They seem friendly enough at first, but when the herd members who go with them don't return - or have been reduced to horny sluts who will no longer fight - the interlopers are no longer permitted to come. They send raids from time to time, but the herd knows the park forests well and survives with only a few losses.";
+			if ending "Honey's Epilogue" is triggered:
+				make no decision;
+			say "     Following a compulsion, you seek out other horses in the park and are soon welcomed into the herd proper. Together, you defend the park against interlopers, be they mutant or human. The exception are the bees; they're tolerated for their benefit to the local flora and their delicious honey. There are some city horses as well that come by from time to time. They seem friendly enough at first, but when the herd members who go with them don't return - or have been reduced to horny sluts who will no longer fight - the interlopers are no longer permitted to come. They send raids from time to time, but the herd knows the park forests well and survives with only a few losses.";
 		else:
 			say "     There is some confusion at first when your equinoid body is brought in, for there are several strains of equines and proper classification is slow. It seems ones like you are rare, few leaving the park where they're established. Once that's resolved, it goes much more smoothly, as you're not considered a dangerous strain. A movie producer spots you on TV as you are released and hires you immediately to play a minotaur-like creature in his upcoming movie. It turns out to be a [one of]big blockbuster, providing more than enough money[or]lukewarm summer movie and provides some cash[or]big flop, but it provides just enough cash[at random] to start a new, peaceful life. Eventually becoming a naturalist, you study nature, and using your movie experience as a hoofhold, you get your own nature show [if intelligence of Player > 14 and charisma of Player > 14]that lasts several seasons. It does rather well, being insightful and intelligent while also well presented and entertaining[else]for a brief time[end if].";
 

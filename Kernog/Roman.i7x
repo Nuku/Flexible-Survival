@@ -1,4 +1,5 @@
 Roman by Kernog begins here.
+[Some minor edits and the inclusion of the new TF helmet - Luneth]
 
 "Adds the Team Captain Roman NPC, who hangs around Astroslide Football Field and is tied to the Tenvale Gorillas Football Team Quest."
 
@@ -68,7 +69,7 @@ Virgin of Team Captain Roman is false.
 AnalVirgin of Team Captain Roman is false.
 PenileVirgin of Team Captain Roman is false.
 SexuallyExperienced of Team Captain Roman is false.
-MainInfection of Team Captain Roman is "Football Gorilla".
+MainInfection of Team Captain Roman is "Football Gorilla Male".
 The description of Team Captain Roman is "[RomanDesc]".
 
 to say RomanDesc:
@@ -168,7 +169,6 @@ instead of conversing the Team Captain Roman:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if nam is "Chat":
 					if GorillasMember < 3:
@@ -285,9 +285,10 @@ to say RomanConvince:
 	if diceroll > 16:
 		say "     Roman sighs. 'Okay. Just... Come here a minute.' The gorilla leads you to the same, isolated place than last time.";
 		say "     'It happened at the start of this whole mess. I had been already turned into an ape by then. I was strolling the city, curious about how it looked like outside and, and I got ambushed. Some crazy husky male ambushed me. Then, he knocked me out, and had me raped by his pack of bitches again, and again, for fun. It was not enough to turn me into a dog, but it was well enough to make my bits shrink, and eventually be replaced by this.' Roman gestures at his padded shorts. 'They mocked me all the way until I turned into a woman down there. It was not pleasant, to say the least. And I just can't confront the guys about it. I... You see them. [if Player is female]You see the lewd looks they give you because of your lady parts. [end if]If they learn, they will throw me out; or worse.'";
-		say "     The large primate wipes a tear which was beginning to form in the corner of his left eye. 'So, now you're on the page. You know, it feels kinda good to let it out, to someone you can trust.' Roman gives you a warm smile. 'And, who knows. When there will be enough women and herms in the team, their look will change, and I'll be able to loose the shorts. But for now, I trust you with this. Don't let me down, buddy.'";
+		say "     The large primate wipes a tear which was beginning to form in the corner of his left eye. 'So, now we're on the same page. You know, it feels kinda good to let it out, to someone you can trust.' Roman gives you a warm smile. 'And, who knows. When there is enough women and herms on the team, their looks may change, and I'll be able to loose the shorts. But for now, I trust you with this. Don't let me down, buddy.'";
 		say "     Roman parts from you, and you feel that you are at a crossroad. You could try to talk more to Roman, and [bold type]encourage him to come out[roman type] on his own terms, helping him find closure. You could let your inner sadist loose, go to the locker-room, [bold type]divulge the captain's secret with the team[roman type], and enjoy the ensuing torment. The choice is yours.";
 		now HP of Roman is 3;
+		add "tenvale gorillas football helmet" to invent of Astroslide Field Locker-Room;
 	else:
 		say "     'We already talked about it: I don't trust you enough to tell you about it. Please let it go,' Roman replies to your query.";
 
@@ -311,7 +312,7 @@ to say RomanEncourage:
 		say "     Everyone goes back to their business, and once Roman finishes to say goodbye to the last group, he traps you in a very, very tight hug. '[if Player is not defaultnamed][name of Player], [end if]I cannot find the words to thank you,' he says. 'It's like a weight just lifted from my shoulders. If I can do anything... [italic type]anything[roman type] to repay you, tell me. I consider you one of my closest friends. Actually...'";
 		say "     Roman runs to the locker-room, and comes back a couple of minutes later, a football helmet in his hands. 'I want you to take this. First one I received when joining the team, and still good,' the Gorilla explains as he lobs the helmet in your arms. 'You're going back into the city, right? You'll need it.' Thanking profusely Roman, you strap the helmet to your backpack.";
 		say "[bold type]You gain a football helmet![roman type][line break]";
-		increase carried of football helmet by 1;
+		increase carried of Roman's gifted football helmet by 1;
 		now HP of Roman is 5;
 	else:
 		say "     You give your best arguments to Roman. 'Thank you for your concern, but I don't think I am ready yet,' he replies. Nonetheless, your words had some effect on him.";
@@ -321,7 +322,7 @@ to say RomanEncourage:
 [SEX SCENES]
 
 instead of fucking Team Captain Roman:
-	setmonster "Football Gorilla";
+	setmonster "Football Gorilla Male";
 	if HP of Roman is 4:
 		if (lastFuck of Roman - turns > 4):
 			say "[RomanFuck1]";
@@ -383,7 +384,6 @@ to say RomanFuck1:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if nam is "Vaginal fuck":
 					say "[RomanFuck1Vag]";
@@ -500,7 +500,6 @@ to say RomanFuck2:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if nam is "Vaginal fuck":
 					say "[RomanFuck2Vag]";
@@ -609,9 +608,11 @@ instead of resolving Grocery Store Security Camera:
 	now Grocery Store Security Camera is resolved;
 
 to say RomanTransformationFootage:
+	project the Figure of HuskyAlpha_soft_icon;
 	say "     When you press the play button, the screen displays the black-and-white, soundless feed of a security camera. It seems that the camera only filmed when there was motion in the field of vision of the recording device. The recording starts the day following the infection. You see the shopkeeper enter his shop from the back-room with wooden planks, about to barricade himself. Unfortunately, he is ambushed by a hyena. The pair leaves the field of the camera during the scuffle but, when it records again, it shows two hyena herms rushing out of the shop. The following recordings show several looters visit the store. [if BrennanRelationship >= 2]You even recognize Brennan at one point. [end if]With each passing day, the visitors are less and less human. The date of recording suddenly jumps forward several weeks when a large gorilla rushes into the store. He is quickly followed by a pack of husky girls, accompanied by an alpha husky. They surround the gorilla, then pile on him. The ape puts a tough resistance, but is eventually taken down.";
 	say "     The alpha has the gorilla brought up to his knees and held fast by his bitches, before pushing his cock inside the primate's mouth. Long minutes of mouth-rape pass. The alpha husky keeps talking. You cannot hear what he says, but the gorilla seems to not like what he hears. The dog cums eventually, and force the ape to drink his cum by pushing his knot past his victim's lips. The husky seems unsatisfied by something, and gives the gorilla a small kick to his package. He gives his girls an order, and the female huskies begin to force themselves on the gorilla's cock. Each time one of the huskies pull out, you notice that the gorilla's cock becomes smaller and smaller. Eventually, the penis completely recedes into the dark-furred body, and in its place is a vagina.";
 	WaitLineBreak;
+	project the Figure of HuskyAlpha_hard_icon;
 	if HP of Roman > 2:
 		say "     You suddenly realize that the gorilla on the footage matches Roman's story about his transformation. You cannot help but feel a little sorry for him. In the meantime, the alpha husky used the show to make himself hard again. Pulling Roman by the fur of his head, he throws the football trainer on the cash counter and takes Roman's new and ephemeral virginity. He humps the ape hard and fast. Despite his teary eyes, Roman seems to take more and more pleasure in the pounding, until the dog pushes all the way in. Roman's eyes open wide, and you are actually thankful that the footage does not have sound, considering the scream that he just pushed. More pounding ensued until the alpha husky reached his climax. After a dozen more minutes where the husky slaps Roman's butt to spend time, he eventually pulls out from the gorilla and, with a final butt slap, takes his leave.";
 		say "     Roman slowly slides down from the counter and forces himself to stand up. He explores his body, a look of despair on his face. He frantically looks around, and eventually rushes to the backroom. He gets out a couple of minutes later, wearing the pants of the shopkeeper in order to cover his new sex. As he meekly walks out from the store, the footage stops for the final time.";
@@ -662,6 +663,7 @@ Husky Gang is a situation.
 The sarea of Husky Gang is "Outside".
 
 Instead of resolving a Husky Gang:
+	project the Figure of HuskyAlpha_soft_icon;
 	say "     Sounds from an animated discussion echoes through the street, coming from just around the corner. Deciding to act cautiously, you hide behind the rusting remains of a car and wait for the group to pass. Soon, a large pack of Huskies turn the corner. You count at least ten females, escorted by a muscular Alpha Husky.";
 	if HP of Roman is not 10:
 		say "     You have no business with them. So you let the horde pass. The mutants do not notice you, chattering to each other as they travel to their next destination. Once they are gone, you walk away from your hiding place, and after some more exploration decide to return to your starting point.";

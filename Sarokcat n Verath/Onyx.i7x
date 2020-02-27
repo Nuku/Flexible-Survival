@@ -1,5 +1,6 @@
-Version 4 of Onyx by Sarokcat n Verath begins here.
+Version 5 of Onyx by Sarokcat n Verath begins here.
 [ Version 4.0.1 - Fix for submissive male Onyx at Bunker ]
+[ Version 5 - Two new sub male onyx scenes at Bunker - Gherod]
 
 "Adds an NPC to Flexible Survival with a variety of responses and goals..."
 
@@ -605,32 +606,49 @@ to say onyxbsubtable:
 		now title entry is "Fuck him";
 		now sortorder entry is 1;
 		now description entry is "bend him over a table and fuck the stallion";
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Receive fellatio";
 		now sortorder entry is 7;
 		now description entry is "have him suck you off";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Rough Facefuck";
+		now sortorder entry is 10;
+		now description entry is "get rougher and facefuck him";
+		[]
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Vaginal sex";
 		now sortorder entry is 3;
 		now description entry is "treat yourself to a horsey ride";
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Receive cunnilingus";
 		now sortorder entry is 8;
 		now description entry is "treat yourself to a horsey ride";
+		[]
 	if ( ( player is female and onyxsmrv is true ) or ( Cunt Count of Player is 0 and onyxsmra is true ) ) and onyxsmro is true:
 		choose a blank row in table of fucking options;
 		now title entry is "Onyx takes charge";
 		now sortorder entry is 6;
 		now description entry is "reward Onyx by letting him do as he pleases";
+		[]
 	choose a blank row in table of fucking options;
 	now title entry is "Anal ride";
 	now sortorder entry is 5;
 	now description entry is "ride the horsey with your ass";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Give fellatio";
 	now sortorder entry is 9;
 	now description entry is "suck that horsey cock";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Bondage Edging";
+	now sortorder entry is 11;
+	now description entry is "tie him up and edge the stallion";
+	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -640,8 +658,7 @@ to say onyxbsubtable:
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry][line break]";
-			say "Is this what you want?";
+			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
@@ -659,9 +676,13 @@ to say onyxbsubtable:
 					say "[onyxbsubcocksuck1]";
 				else if nam is "Onyx takes charge":
 					say "[onyxbsubincharge1]";
+				else if nam is "Rough Facefuck":
+					say "[onyxbsubfacefuck1]";
+				else if nam is "Bondage Edging":
+					say "[onyxbsubedging1]";
+			now lastfuck of Onyx is turns;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-	now lastfuck of Alexandra is turns;
 	wait for any key;
 	clear the screen and hyperlink list;
 
@@ -983,6 +1004,58 @@ to say onyxbsubincharge1:
 		say "     Having cum recently, Onyx has much more endurance, allowing him to pound you long and hard. The feel of that equine rod of his sinking into you over and over again is wonderful. The sensations are particularly delightful from his broad equine glans pushing its way in and out of you and the ridge of his medial ring shifting along inside you. The way it throbs inside you is very satisfying, exciting you more and more until you cry out in orgasmic release.";
 		say "     Feeling your asshole clamping down around him during your climax is enough to push him over the edge in short order. Soon his hot seed is blasting deep inside you, flooding your bowels with stallioncum. This second orgasm leaves the stallion's balls fully drained and he pulls out with a wet, sticky slurp. Fully sated, the submissive stallion kneels down behind you and presses his muzzle between your cheeks, working to lick your messy ass clean like the subservient lover he was trained to be.[mimpregchance]";
 
+to say onyxbsubfacefuck1:
+	say "     Deciding that you want to get into some rougher kind of play with your stallion stud, you feel it's better to start with kissing him, planting your lips on his as you give his ears a gentle stroke. Your hand makes its way to the back of his head as you pull our mouth away, and looking into his eyes, you direct him to fall on his knees in front of you. Ordering him to put his mouth to work, with your [cock of player] dick already throbbing in antecipation, you rub against his tongue, which he's sticking out eagerly to reach for your shaft. Of course, as expected from the horsey, he does his best at coating your meat with his saliva, licking every inch of it with utmost dedication. No matter how good of a job he does with your cock, you didn't come here for a simple blowjob this time.";
+	say "     Slipping your fingers around his long jaw, with your palm under his chin, you encourage your equine sub to open wide as you press your rod against his lips, slowly sliding it deeper. As he's got a long muzzle, [if Cock Length of Player > 12]it's not difficult for him to take most of your length[else]he takes your length fairly easily at first[end if], allowing you to go rough on him without trouble[if Cock Length of Player > 16], though you're sure you can make him seriously choke on your [cock size desc of Player] dick, the thought alone making you throb even harder[end if]. You don't stop pushing your cock deeper in his mouth as much as you're possibly able to, and placing your hands on both sides of his head, you get ready to handle the horsey properly for an intense facefucking.";
+	WaitLineBreak;
+	say "     Eyeing you from below, Onyx's gaze is of a good boy who wants to please, and you're not careless enough to go all in at once. Instead, you push in slowly, feeling your cock rubbing against his tongue and the insides of his mouth, and steadily out, the feeling being enough to make your meat pulse with desire. Such thing cannot be ignored, and inevitably, you thrust back in, faster this time. Letting your horsey stud get used to your length is important, although you can feel you won't be gentle for long, as your lust grows impatient. Holding his head in place, you pound back and forth once more, again and again, progressively harder and deeper. His hands find their place holding against your thighs, though without offering resistance.";
+	say "     Understanding this as a green light to go wild with your cravings, you tighten your grasp on the equine boy's head and release your chains. Treating his mouth and throat as a fuckhole, you're now facefucking the young stud mercilessly. Given the";
+	if cock length of player > 12:
+		say "considerable size of your manhood, his long equine muzzle doesn't save him from having to hold his breath in order to take you ballsdeep, [if cock length of player > 16]and you can even see your meat bulging from within his neck, [end if]as you notice some apparent struggle on his face. But this wouldn't be nearly as hot if he could take you so easily, and seeing your big boy trying hard to keep you happy is something that gets your gears grinding. You don't let go, instead increasing your efforts at fucking his mouth with increased momentum, and you start hearing the choking as he tries not to make it so apparent.";
+		WaitLineBreak;
+		onyxbsubfacefuck2;
+	else:
+		say "not so considerable size of your manhood, his long equine muzzle lets him take you ballsdeep without any issue, but he doesn't just wait still as you fuck his mouth. Instead, his tongue works all over your shaft as you reach in as deep as you can in the insides of his mouth. His efforts don't end here, as he reaches for your balls with his hands at the same time he's tilting his head to provide you with more friction, giving them a soft and loving squeeze, and you can't help but want to thrust harder against his lips.";
+		WaitLineBreak;
+		say "     Feeling your own climax bulding up in your loins, you slow down, giving yourself enough time to delay it. The sensations provided by the equine stud's warm mouth all over your glans and shaft, rubbing against its length with increased intensity, have turned you on so much that you feel your cock throbbing each time you give it a slow stroke before shoving it back in. Your moves are much slower and deeper now, as you want to enjoy this as much as you can, keeping the horsey boy busy for several minutes more until you feel like you can't hold back any longer. With you so close to blast your entire load on Onyx, you stop completely, with your manhood buried inside his mouth, cum practically on the verge of surging through, with a choice to make. [bold type]Do you want to make him swallow it, or just cover his face with your jizz?[roman type][line break]";
+		Linebreak;
+		onyxbsubfacefuckclimax;
+
+to onyxbsubfacefuck2: [Player's dick is bigger than 1 ft]
+	say "     Such display of power on your behalf is like a fiery burst surging through your body, and before you know it, as if on their own, your hands are holding his equine mane with a tight grip, and you're practically curled on top of him, making the stud swallow your dick as deep as possible. With his hand giving a slight push against your legs, Onyx lets go an unintelligible 'Mmmph!' as probably a sign that you should let him catch a whiff of fresh air, though you only do so after a couple more thrusts. He takes a few breaths in loud gasps, and you're soon shoving your meat back in, holding the back of his head and pulling it against your pelvis, his lips around the base of your cock as you hold it in.";
+	say "     Pulling out, then back in, repeatedly after some time quickly builds up your climax, and you can see your sub stud's eyes red and teary from the ordeal you're making him go through, though he seems to be liking it, at least from what you can see down there, his equine shaft out and fully erect as he strokes it. Trails of drool are seen covering part of his muzzle and stretching from his mouth to the tip of your manhood when you pull out, throbbing harder than ever, between pauses to let Onyx catch his breath - or cough -, and when he's not breathing, you're ramming it against his throat as hard as you can, lust-driven and unshackled of any limits, using his mouth as your personal fuckhole.";
+	WaitLineBreak;
+	say "     These many sensations are enough to feel your own orgasm approaching, so you slow down, giving yourself enough time to delay it. Though slower doesn't mean it any easier for the equine boy, as you're still shoving your entire length deep inside his mouth, and slowly back out. You want to enjoy this as much as you can, keeping the horsey boy busy for several minutes more, until you feel like you can't hold back any longer. With you so close to blast your entire load on Onyx, you stop completely, with your manhood buried inside his mouth, cum practically on the verge of surging through, with a choice to make. [bold type]Do you want to make him swallow it, or just cover his face with your jizz?[roman type][line break]";
+	onyxbsubfacefuckclimax;
+
+to onyxbsubfacefuckclimax:
+	say "     ([link]Y[as]y[end link]) - Cum down his throat.";
+	say "     ([link]N[as]n[end link]) - Give him a facial.";
+	if player consents:
+		Linebreak;
+		say "     Having decided to feed Onyx your entire load, you don't even pull out. A couple thrusts, with the friction from his tongue and the warm insides of his mouth, your balls tighten to release the seed stored within, blasting through your cock and down the stud's throat. While this happens, you feel the vibrations of his moans through your own prick as he too cums, stroking his equine shaft with so much intensity that you feel his powerful shots hitting part of your legs. When the last spurt oozes out, you pull your manhood out and squeeze it of any traces, which Onyx promptly licks and swallows. Looking up at you with a smile on his face, breathing heavily from the effort, you smile down at your subby lover and rub his ears affectionately, but you don't let him go until he licks the mess he made clean down your legs.";
+	else:
+		Linebreak;
+		say "     Having decided to give Onyx a face wash of cum, you quickly pull out. A couple strokings are enough to set you off, your balls tightening to release the seed stored within, blasting through your cock and all over the stud's face, torrents of cum landing straight on top of his muzzle. With his mouth open and moaning, he too cums, stroking his equine shaft with so much intensity that you feel his powerful shots hitting part of your legs. When the last spurt oozes out, you pull your manhood out and squeeze it of any traces, which Onyx promptly licks and swallows. Looking up at you with a smile on his face, covered in cum, breathing heavily from the effort, you smile down at your subby lover and rub his ears affectionately, but you don't let him go until you have shoved what you can from your load in his face back in his mouth, and also until he licks the mess he made clean down your legs.";
+
+to say onyxbsubedging1:
+	say "     Deciding that you want to get into some rougher kind of play with your stallion stud, you feel it's better to start with kissing him, planting your lips on his as you give his ears a gentle stroke. You pause, sliding your hands down his arms as he looks at you in the eyes for a moment. 'So... What do you have in mind?' he asks before you start pushing him gently against a nearby obstacle, and with creative use of what it's at your disposal, you initiate some sort of bondage session by tying Onyx's hands up. 'You're not going to tell me? You'll just do it...? O-oh...' he lets out a moan as soon as your hands rub down his body, reaching for the stallion's junk as he stands in front of you, helpless and unable to stop you, even if he wanted.";
+	say "     'Feels... good... You didn't have to tie me up for this, though, I would never r-resist, aah...' Causing your horsey boy to practically melt in pleasure, you're giving his lengthy shaft a good stroke as it hardens to its fullest, and of course, you don't leave his balls alone, giving both the cock and its duo companions a complete treatment for starters. A big horse cock like his needs long and deep strokings so you can bring him good amounts of satisfaction, and you do oblige for some time. 'This is amazing... I'm not sure I deserve such p-pleasure... You're so good with your hands...' he keeps complimenting your hard work on his stallion cock, but little he knows what you still have in store for him.";
+	WaitLineBreak;
+	say "     As you turn him on nicely and fill him full of lust, that's when you start teasing him. You slow down on your strokes and focus on his most sensitive spots, namely the tip of his equine prick, and ocasionally give him the release he's craving, but only for a time. His moans continue, and soon his body squirms a little, often in frustration when he realizes he can't break free from his restraints to touch himself. 'I'm... starting to understand what was the tie up thing for...' he comments, still helplessly though, under your care and touch with a throbbing erection already oozing precum all over. Conveniently, it serves as natural lubrication for the ample strokes you're about to give him with only a single intention.";
+	say "     'Fuck, I'm gonna... cum...!' he warns you as you're stroking his cock, faster than before, and just as he starts jerking his hips, you stop your hand by the base of his shaft, denying him of any friction around his penis. 'Gah! I was so close... Why did you stop? Did I do anything wrong?' he asks you, worried, and also panting heavily, though you just give him a smile - well, more like a grin - and let him know you're just having your fun. He realizes what you mean, and his expression changes from a self-conscious worry to seriously concerned one. 'Y-you're what? Oh, come on, that's... torture...!' he adds, and before he can continue, you start stroking him once more. He can't help but maintain a powerful, rock solid erection at your hands, and you can take a guess that knowing of his fate only makes him more aroused.";
+	WaitLineBreak;
+	say "     You do your best at keeping him on the edge, picking up the pace at times, followed by a slow down, and sometimes you almost make him cum, but not just yet. 'Please... I can't hold it much longer, I need to cum... I beg you...!' with the impossibility of breaking free, he's fully under your control, a feeling that empowers you even more when he begs you to let him orgasm. Though you're not satified yet, and you continue this sexual torture for several more minutes, including some body caressing in between the jerking off to fully stimulate the stud. He's moaning, breathing deeply, and even starting to sweat as his cock pulsates so hard that you can feel it even as your hands remain still, wrapped around the equine shaft with a tight grip. He comes to a point that one wrong rub could set his load off to hit you right on the face.";
+	if a random chance of 1 in 2 succeeds: [Onyx cums and gets punished]
+		say "     Though the poor horsey stud can't endure it any longer. You don't even have to move your hands as you feel his moanings intensifying, the equine shaft throbbing like mad as plentiful of horse cum blasts right through towards your face and body, hard and powerfully as he squirms and thrusts his hips forward lost in arousal. His climax lasts for a long time until he recovers his awareness, looks at you and sees that he has covered you in his load without warning. 'Ah... aah... S-sorry, I...' words escape him to even apologize properly, so you just decide to continue stroking his horse dong. An expression of discomfort surges at first. 'O-ok, I said I'm sorry, please... T-there isn't anything left... Please! That feels...! Aah!'";
+		say "     A proper punishment for the disrespect is given by mercilessly stroking his equine shaft as hard as you can, really making sure he feels every single move of yours around his cock, especially the tip, which you decide to polish. Now he's seriously squirming around in what seems to be a confused pain and laughter. Though he begs you many times to stop, you let him know that this is his punishment for being a bad boy. 'Please! I'll do anything you want! Anything! Now please! Mercy!' To this, you ask him to repeat that, especially the [']anything you want['] part. 'Anything! Yes! Fuck... please!' he screams, and a few seconds after overstimulating your poor stud, you cease the real torture at once, letting his meat rest in peace.";
+		WaitLineBreak;
+		say "     'Fuck... T-that was...' again, he has no words, though now it's time for a clean up, so he won't need them. After undoing his bonds, you pull his head over your cum-soaked body and order him to lick every single bit of mess he made. You tell him that your body must look pristine clean once he's done cleaning you with his tongue, and it takes a really long time until he can achieve that. Though there isn't anything to not enjoy about it, as it feels great feeling his tongue all over the corners of your body and seeing your stallion sub eating his own cum off you. With a pat on the top of his muzzle, you dismiss him, saying that you'll be back to claim what he promised a while ago. He can't help but give an eager smile back at your grinning face.";
+	else: [Onyx holds off his climax successfully and player rewards him with a good orgasm]
+		say "     Standing still as much as he can, Onyx successfully holds back his climax, allowing you to tease him further. 'Pleeeease... I need it so bad... Let me cum, oh please...' He continues, though the more he begs, the more you like to hear it. You're careful enough not to make him explode just yet, avoiding the tip and working on the shaft and balls for the time being, and only when you see a tear of frustration escape his eyes, you ask him how badly he wants to cum. 'So bad... A lot...' his mind is clouded right now, unable to form coherent sentences, he only moans and wiggles about with his horsey dick in your hands. Without any further ado, you position yourself next to his equine erection and get ready to stroke it hard.";
+		say "     As your hands rub his tip and shaft up and down, he helps by thrusting his hips through your hold, and within seconds, you see him blasting his load with so much force and quantity that you think it could cover anyone from head to feet in just a few spurts. He moans loudly as you allow him to have his release, and give him a generous amount of stroking so that he can really feel his own cum pumping out. 'Fuck... Fuck! Feel so good!' he lustily comments, and it's a good long orgasm until he finally subsides. Looking at the floor beneath you, there's nearly a pool of horse cum with a few lines below and beyond indicating how far he really could shoot.";
+		WaitLineBreak;
+		say "     'Fuck me... That was... Amazing... Can we do it again, please?' You laugh, but tell him that it'll have to be later, and because he was such a good boy, you'll make him cum even harder next time. He's eager to hear about it, but for now, you smile down at your subby lover and rub his ears affectionately before untying him, then you kiss him goodbye, promising him some nasty things when you come back to have another go with him.";
 
 Part 2 - Female Onyx @ Palomino
 
@@ -1186,10 +1259,16 @@ to femonyxsex5:
 
 Section 5 - Endings
 
-when play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Onyx['] Epilogue"	"NPC"	""	Onyx' Epilogue rule	900	false
+
+This is the Onyx' Epilogue rule:
 	if Onyxmareslut is 3:
+		trigger ending "Onyx['] Epilogue";
 		say "     Your time at the Stables has been surprisingly pleasant, once you stopped fighting your purpose and your captivity, you came to really enjoy being bound and helpless for all the stallions to use. And use you they did! You had many visitors at first from among the stallions, though your favorite was the big black stallion who captured you in the first place. It wasn't long before you begin responding to your new name, 'Obsidian', and loving your equally sexy new black furred mares body, and once the training was over and you are finally released from the training stall, you make sure to thank Onyx very personally for his help in making you such a sexy little mare. So much so that he had trouble walking for several days afterwards, much to the amusement of his fellow stallions. Eventually though you settle down to your new life as a rather powerful and sexy mareslut, and with your enhanced submissiveness you find you have a real strong client base among those who like to dominate their partners and tie them up. Of course eventually you are shifted over to work with some of the breeding mares more often, and you look back on that time fondly as you sit with your many black foals gathered around you and grin at just how many of them look like that handsome young stallion that still visits you often... and recall how glad you are that you convinced him to stay in the Stables like a good horsey, and how glad you are that he did the same to you as well!";
 	else if Onyxboislut is 3:
+		trigger ending "Onyx['] Epilogue";
 		say "     Your time at the Stables has been surprisingly pleasant, once you stopped fighting your purpose and your captivity, you came to really enjoy being bound and helpless for all the stallions to use. And use you they did! You had many visitors at first from among the stallions, though your favorite was the big black stallion who captured you in the first place. It wasn't long before you begin responding to your new name, 'Obsidian', and loving your equally sexy new black furred stallionboi body. And once the training was over and you are finally released from the training stall, you make sure to thank Onyx very personally for his help in making you such a sexy little manwhorse. So much so that you have trouble walking for several days afterwards, much to the amusement of his fellow stallions. Eventually though, you settle down to your new life as a rather girly and sex-hungry stallionboi. And with your enhanced submissiveness, you find you have a real strong client base among those who like to dominate their male partners and tie them up. Of course, eventually you are shifted over to work with many of the other stallionbois and eagerly take your position as one of the most sub among them, letting them play at being studs by fucking you until you pass out, overflowing with the cum from all your loving friends. Your big, handsome young stallion still visits you often to remind you that you still belong to him. At these times more than any other, you recall how glad you are that you convinced him to stay in the Stables like a good horsey, and how glad you are that he did the same to you as well!";
 
 

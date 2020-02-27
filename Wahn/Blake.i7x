@@ -131,11 +131,12 @@ instead of going east from Smith Haven Mall Lot East while (HP of Blake < 50):
 				LineBreak;
 				say "     You stumble away, leaving the dark alley behind. It is a bit of a relief to go out into the open area of the parking lot, but somehow you can't shake the feeling of something oily having touched your mind.";
 				[Note: No actual compulsion, just freaking the player out a bit]
-				now HP of Blake is 1; [rejected by Blake or refused him]
+				now HP of Blake is 99; [rejected by Blake]
 				move player to Smith Haven Mall Lot East; [player is thrown out after each scene]
 			else if calcnumber is 2:
 				LineBreak;
 				say "     Reaching up to grab your head, you concentrate hard on who and what you are, trying to shake off what Blake did to you. As you stumble out into the open space of the parking lot, it feels like his influence is lifting bit by bit and you feel more like yourself again.";
+				now HP of Blake is 99; [rejected by Blake]
 				move player to Smith Haven Mall Lot East; [player is thrown out after each scene]
 			else:
 				LineBreak;
@@ -183,7 +184,7 @@ instead of going east from Smith Haven Mall Lot East while (HP of Blake < 50):
 			else:
 				LineBreak;
 				say "[BlakeCounterstrike]";
-	else if HP of Blake is 1 or (HP of Blake is 99 and player is male): [refused him before /sent away as non-male before]
+	else if (HP of Blake is 1 or HP of Blake is 99): [refused him before /sent away as non-male before]
 		if Player is not male:
 			say "     As you walk up to him, Blake grins broadly and gets up, then comes up to you and moves uncomfortably close. The musk that clings to him like a shroud wafts thickly in your nose, making it harder and harder to concentrate. 'Hmm... you want to expose yourself to me. Urgently,' he states in his deep, resonating voice, grinning at you with that ever-present mischief. Your body reacts immediately, completely bypassing your sluggish mind as it does what Blake told you to do. Despite this, he's less than pleased when he sees that you're not the least bit male, snapping out the harsh words, 'Ah, fuck off! You can come back when you're a dude.'";
 			now HP of Blake is 99;
@@ -235,8 +236,7 @@ instead of going east from Smith Haven Mall Lot East while (HP of Blake < 50):
 					say "     Every breath you take is a lungful of the rodent's alluring musk, and his balls continue to churn and cover every inch of you with the potent cum, quashing the last of your thoughts until you can think of nothing more than having the honor of worshiping Blake from within him. With one last cry of ecstasy, everything you know and feel melts away into unending bliss as you sink into the sticky seed. 'You were really fun, slut,' Blake says as he feels your wriggling die down. One of his hands starts jacking off his now-massive cock while the other rubs his giant, overfilled balls. 'You liked my cock so much and now you're going to make it bigger and better.'";
 					say "     The horny rodent continues to pleasure himself until with a lustful groan, he experiences his biggest climax ever. His orgasm lasts for a while, torrents of white spunk spraying all over the ground and the nearby walls, and when it finally ends, Blake collapses onto the ground with a tired but satisfied smirk. Although his dick and balls had shrunken back down after expelling your cummy remains, they're clearly bigger now, thanks to your [italic type]contribution[roman type], making them all the more enticing for the alluring rat to lure in more people for him to exploit.";
 					WaitLineBreak;
-					now voreloss is true;
-					now BodyName of Player is "dead";
+					trigger ending "Blake's Cock Vore";
 					end the story saying "You got turned into rat cum";
 				else:
 					say "     Exhausted from the overwhelming pleasure and the twisted ordeal, you soon pass out. It's unknown how much time you spend in Blake's balls, but when you do wake up, you find that you are back in the dirty alley that the rat calls his home. Although you are able to breathe fresh air again, you are still covered in the trash rat's seed, making you feel lightheaded from the heady scent. 'You're a really good cock filler, slut,' Blake says, leering at you with a lascivious grin as he watches you stagger back onto your feet. 'Come back again. Maybe next time I'll make you part of my load instead of shooting you out.' As you clean up and leave, your thoughts are still clouded by Blake's words and scent, tempting you to return and service the domineering rat again.";
@@ -253,8 +253,7 @@ instead of going east from Smith Haven Mall Lot East while (HP of Blake < 50):
 				if humanity of player < 10:		[Anal vore bad end]
 					say "     The stomach walls press into you, squishing you from every side with slick, supple flesh. Though a part of you understands the perilous situation that you are in, the linger hypnotic scent of Blake's stench continues to permeate the air, dulling your senses into submissive pleasure. 'Just relax in there, slut,' echoes Blake's dominant voice from all around you. 'Forget about everything else because you're all mine now.' You do as the rat says and yield to his stomach as it kneads and rolls you around, the churning motions oddly soothing and enjoyable. The pleasurable sensations of the rat's innards make your consciousness slowly ebb away until, with one final groan of delight, you pass out, melting away in a sea of bliss to feed Blake's insatiable appetite and his dominating endeavors.";
 					WaitLineBreak;
-					now voreloss is true;
-					now BodyName of Player is "dead";
+					trigger ending "Blake's Anal Vore";
 					end the story saying "You got up and close with a rat's dirty ass";
 				else:
 					say "     Exhausted from the overwhelming pleasure and the twisted ordeal, you soon pass out. It's unknown how much time you spend in Blake's stomach, but when you do wake up, you find that you are back in the dirty alley that the rat calls his home. Although you are able to breathe fresh air again, the trash rat's intoxicating musk clings to your body, making you feel lightheaded from the heady scent. 'You make for a good toy, slut,' Blake says, leering at you with a lascivious grin as he watches you stagger back onto your feet. 'Come back again. Maybe next time that I stick you in my ass, I'll leave you in there for good.' As you clean up and leave, your thoughts are still clouded by Blake's words and scent, tempting you to return and service the domineering rat again.";
@@ -402,7 +401,7 @@ to say BlakeCounterstrike:
 to say BlakeWhoreSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
-	say "     [bold type]What do you want to do to Blake?[roman type]";
+	say "     [bold type]What do you want to do to Blake?[roman type][line break]";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Jerk him, but deny orgasm";
@@ -456,7 +455,6 @@ to say BlakeWhoreSexMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if nam is "Jerk him, but deny orgasm":
 					say "[BlakeSex1]";
@@ -534,5 +532,18 @@ to say BlakeSex7:
 	WaitLineBreak;
 	say "     Looking back as you grab your gear, you see Blake limply lying on the improvised bedding, somewhat sweaty and wet from his cum and your juices. He appears to almost smile a little around his ball gag, indicating that for once, he's pleased despite his captivity.";
 	NPCSexAftermath Player receives "AssFuck" from Blake;
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Blake's Anal Vore"	"Voreloss"	""	Blake's Anal Vore rule	10	false
+"Blake's Cock Vore"	"Voreloss"	""	Blake's Cock Vore rule	10	false
+
+This is the Blake's Anal Vore rule:
+	if ending "Blake's Anal Vore" is triggered:
+		the Player is vored;
+
+This is the Blake's Cock Vore rule:
+	if ending "Blake's Cock Vore" is triggered:
+		the Player is vored;
 
 Blake ends here.

@@ -15,8 +15,9 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Spidertaur";
+	add "Spidertaur Female" to infections of InsectList;
 	add "Spidertaur Female" to infections of HybridList;
-	add "Spidertaur Female" to infections of TaurList;
+	add "Spidertaur Female" to infections of OctapedalList;
 	add "Spidertaur Female" to infections of MythologicalList;
 	add "Spidertaur Female" to infections of FemaleList;
 	add "Spidertaur Female" to infections of InternalCockList;
@@ -180,11 +181,16 @@ Section 3 - Items
 
 Section 4 - NPC
 
+[
 Section 5 - Endings
 
-[
-when play ends:
-	if BodyName of Player is "Spidertaur Female":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Spidertaur Female Infection"	"Infection"	""	Spidertaur Female Infection rule	1000	false
+
+This is the Spidertaur Female Infection rule:
+	if Player has a body of "Spidertaur Female":
+		trigger ending "Spidertaur Female Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is male:
 				say "...";

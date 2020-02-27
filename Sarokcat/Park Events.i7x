@@ -57,9 +57,9 @@ Instead of Resolving a fallen tree:
 	say "While traveling along one of the hiking paths in the park, you note a tree seems to have fallen across the path, it isn't in the best location for just going around either, as the thick undergrowth could conceal just about anything. You can continue onwards if you choose, but something seems slightly suspicious about this, maybe it would be safer to head back... Do you go on?";
 	if Player consents:
 		say "Moving through the thick underbrush, you find you have played right into someone's hands, or paws as the case may be, as no sooner are you entangled than the beasts attack!";
-		challenge "Cute Chinchilla Woman";
-		challenge "Cute Chinchilla Woman";
-		challenge "Cute Chinchilla Woman";
+		challenge "Chinchilla";
+		challenge "Chinchilla";
+		challenge "Chinchilla";
 		say "After recovering from the sudden onslaught, you manage to stumble back onto the path to continue on your way, resolving not to underestimate the dangers of the park, however cute and cuddly they might be.";
 	else:
 		say "Deciding the whole situation is far too suspicious for your liking, you heft your pack and head back down the way you came.";

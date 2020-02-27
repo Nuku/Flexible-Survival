@@ -438,7 +438,7 @@ to say Orthasfuck:
 				WaitLineBreak;
 				say "     You scamper aboard and climb atop her 'cock', moaning as it penetrates you deeply. Her pleasure is already at a peak, but it is you now who gets to enjoy this pleasure for a long time. You can feel her ovipositor releasing its lube into you with numerous small orgasms. It writes and twists inside you, driving itself into your deepest depths. With how active it is, it doesn't take long for you to yowl out in pleasure and climax over it, letting out a pleasured moan, and a particularly strong burst of the lube shows that Orthas enjoyed it too.";
 			else:
-				say "     'Mm, let's get down to business then.' She strips nude, and lays back deeply on the carpet, lifting her hips up. She empties the demon seed into her sex, and reaches down to massage and aid it deeper and deeper. In only a matter of moments, the seed takes hold and she lets out a pleasured moan - her belly beginning to swell, her breasts swelling a bit with milk, as her ovipositor comes out, a bit of the purple seed still on it. She giggles, and rolls forward, her large belly pushing her [']member['] down as you get into a feral, doggy style position.";
+				say "     'Mm, let's get down to business then.' She strips nude, and lays back deeply on the carpet, lifting her hips up. She empties the container of semen into her sex, and reaches down to massage and aid it deeper and deeper. In only a matter of moments, the seed takes hold and she lets out a pleasured moan - her belly beginning to swell, her breasts swelling a bit with milk, as her ovipositor comes out, a bit of the purple seed still on it. She giggles, and rolls forward, her large belly pushing her [']member['] down as you get into a feral, doggy style position.";
 				say "     Her [']cock['] stabs its way into you, and she begins to fuck you earnestly, her [']cock['] straining as she pushes it deeper, deeper, still deeper. As you can feel it tapping at your cervix, you endure a rough orgasm, and then you feel one of the eggs pushing at your slit. Deeper the egg pushes, and eventually you can feel it stretching your walls['] deepest depths. It pops through into your cervix, and a rush of pleasure signifies that this session is temporarily over.";
 				WaitLineBreak;
 				if the gestation of the child > 0:
@@ -548,6 +548,7 @@ When Play begins:
 	add "Dragon" to infections of InternalCockList;
 	add "Dragon" to infections of BipedalList;
 	add "Dragon" to infections of TailList;
+	add "Dragon" to infections of OviImpregnatorList;
 	add "Dragon" to infections of TailweaponList;
 	now Name entry is "Dragon"; [Name of your new Monster]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
@@ -707,18 +708,24 @@ When Play begins:
 
 Section 7 - Endings
 
-When play ends:
-	if ( HP of Orthas is 4 or HP of Orthas is 5 or HP of Orthas is 6) and humanity of Player > 10 and HP of Doctor Matt <= 100:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Orthas['] Epilogue"	"NPC"	""	Orthas' Epilogue rule	900	false
+
+This is the Orthas' Epilogue rule:
+	if HP of Orthas is listed in { 4, 5, 6 } and humanity of Player > 10 and HP of Doctor Matt <= 100:
+		trigger ending "Orthas['] Epilogue"; [Here it states, that the ending has been played.]
 		project the Figure of Orthas_face_icon;
 		say "     Once rescue comes, taking everyone with a sane mind out of the city, Orthas comes with you. She's grateful to you for continuing to help with the doctor, and so she stays fairly nearby you in your lives outside. You spend a lot of time together, and many eggs are laid, both into you and elsewhere. During this time, Orthas also learns that she can have a more conventional pregnancy if she holds the eggs inside of herself long enough, and finds that they grow significantly larger if she does so.";
 		if Snow is in Grey Abbey Library and Sandra is in the Bunker and susan is in primary lab:
 			say "     At one point in your lives outside, Orthas stands with a silly grin on her face when you arrive at home. Susan, Snow, and Sandra are all sitting on the living room couch, also smiling, and this is the first time you notice that her ovipositor is extended. You suddenly realize you got home about 15 minutes too late.";
-		wait for any key;
+		WaitLineBreak;
 	else if HP of Orthas is 7 and humanity of Player > 10 and HP of Doctor Matt <= 100:
+		trigger ending "Orthas['] Epilogue"; [Here it states, that the ending has been played.]
 		project the Figure of Orthas_face_icon;
 		say "     Once rescue comes, taking everyone with a sane mind out of the city, Orthas comes with you. True to her word, she stays a part of your life, visiting often to check up on you and her eggs when her duties permit. You spend a lot of time together, and many eggs are laid, both into you and elsewhere, the dragoness quite proud of her expanding clutch. During this time, Orthas also learns that she can have a more conventional pregnancy if she holds the eggs inside of herself long enough, and finds that they grow significantly larger if she does so. She proves to be a fine parent and certainly makes up for her absences with considerable [']enthusiasm['].";
 		if Snow is in Grey Abbey Library and Sandra is in the Bunker and susan is in primary lab:
 			say "     At one point in your lives outside, Orthas stands with a silly grin on her face when you arrive at home. Susan, Snow, and Sandra are all sitting on the living room couch, also smiling, and this is the first time you notice that her ovipositor is extended. You suddenly realize you got home about 15 minutes too late.";
-		wait for any key;
+		WaitLineBreak;
 
 Orthas ends here.

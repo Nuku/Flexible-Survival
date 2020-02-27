@@ -278,8 +278,13 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Grizzly Bear":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Grizzly Bear Infection"	"Infection"	""	Grizzly Bear Infection rule	1000	false
+
+This is the Grizzly Bear Infection rule:
+	if Player has a body of "Grizzly Bear":
+		trigger ending "Grizzly Bear Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You succumb to your bear instincts, going completely feral. When the military finds you, you're almost entirely unable to communicate with them. You manage to defeat each squad that discovers you, using your unnatural strength and stamina to take them out one by one. You enjoy leaving the last one conscious so you can fuck them into big, strong bears like yourself. Your luck finally runs out one day when searching for your next victim. You feel a pinch at your neck; swatting your paw at the sensation you notice the tranquilizer dart. Already beginning to feel the effects, you turn to see two squads of soldiers descending upon you. You fight fiercely, but a second prick signals the end of the fight as your body becomes too heavy to lift. Before you slip into unconsciousness you hear one of the soldiers mention that the dose was practically enough to down an elephant...";
 			say "     You wake up in a government holding facility, where you are poked and prodded (under heavy restraint and anesthesia) for what feels like a month. The scientists must not have been optimistic about your prospects in the post-infection world, because after another elephant dose of tranquilizer you wake up somewhere heavily wooded and remote. You find a salmon-rich stream nearby and settle into a decidedly ursine lifestyle of mostly eating and sleeping.";

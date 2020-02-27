@@ -36,11 +36,11 @@ to say losetoamazonian:
 to say beattheamazonian:
 	say "     Having beaten the powerful woman, you look down at her. Beneath her loincloth you can see both her juicy cunt and her thick cock. It's clear she's gotten quite excited from the fight and is quite aroused in her defeat.";
 	if noamazoniansex > 2:
-		say "     [bold type]As with the others of her kind, you send her on her way with a firm swat on her rear to remind her of her defeat.[roman type]";
+		say "     [bold type]As with the others of her kind, you send her on her way with a firm swat on her rear to remind her of her defeat.[roman type][line break]";
 	if Player is male:
-		say "     [bold type]Shall you claim your prize and fuck her?[roman type]";
+		say "     [bold type]Shall you claim your prize and fuck her?[roman type][line break]";
 	else:
-		say "     [bold type]Shall you claim your prize and use that cock of hers as you'd please?[roman type]";
+		say "     [bold type]Shall you claim your prize and use that cock of hers as you'd please?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
@@ -300,8 +300,15 @@ to say estosterogen pill use:
 
 
 [
-when play ends:
-	if BodyName of Player is "Amazonian":
+Section 4 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Amazonian Infection"	"Infection"	""	Amazonian Infection rule	1000	false
+
+This is the Amazonian Infection rule:
+	if Player has a body of "Amazonian":
+		trigger ending "Amazonian Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You succumb to your template infection.";
 		else:

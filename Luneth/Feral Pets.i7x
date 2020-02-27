@@ -207,7 +207,7 @@ Instead of resolving Lost Crab:
 			now cute crab is tamed;
 			add "Tamed" to Traits of cute crab;
 			move Snips to Computer Lab;
-			say "[bold type](The cute crab is now tamed! You can make it your active pet by typing [link]pet cute crab[as]pet cute crab[end link]. You can see all of the pets that you have tamed with the [link]pet[as]pet[end link] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [link]pet dismiss[as]pet dismiss[end link], or just [link]dismiss[as]dismiss[end link])[roman type]";
+			say "[bold type](The cute crab is now tamed! You can make it your active pet by typing [link]pet cute crab[as]pet cute crab[end link]. You can see all of the pets that you have tamed with the [link]pet[as]pet[end link] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [link]pet dismiss[as]pet dismiss[end link], or just [link]dismiss[as]dismiss[end link])[roman type][line break]";
 			now Resolution of Lost Crab is 1; [fed the crab]
 		else:
 			say "     The crab scuttles away sadly.";
@@ -426,8 +426,13 @@ Instead of resolving Lost house cat:
 
 Section 2.4 - House Cat Ending
 
-when play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Dinah's Epilogue"	"Companion"	"Pet"	Dinah's Epilogue rule	750	false
+
+This is the Dinah's Epilogue rule:
 	if house cat is tamed:
+		trigger ending "Dinah's Epilogue"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     Dinah stays with you even after you surrender fully to the infection, her body seeming almost to become slightly more human-like as yours becomes more feral. While life near you is definitely still dangerous and rough, the little cat almost seems to thrive on the challenge and excitement this presents her. And even though she still teases and mocks you occasionally as cats tend to do, you retain enough of your old fondness for the little creature that you allow Dinah her liberties.";
 		else:
@@ -611,8 +616,13 @@ Instead of resolving Scared Bird:
 
 Section 3.4 - Exotic Bird Ending
 
-when play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Chirpy's Epilogue"	"Companion"	"Pet"	Chirpy's Epilogue rule	750	false
+
+This is the Chirpy's Epilogue rule:
 	if Exotic Bird is tamed:
+		trigger ending "Chirpy's Epilogue"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     When you give in to your feral instincts, the exotic bird that you rescued seems to sense your new state of mind, and keeps at a safe distance, though she never strays too far, often helping you out of trouble or calling out to warn you of danger. In thanks, you often leave her little offerings of whatever is handy. It makes for a strange sort of partnership, but a happy enough one.";
 		else:
@@ -917,8 +927,13 @@ an everyturn rule:
 
 Section 4.4 - Helper Dog Ending
 
-when play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Hobo's Epilogue"	"Companion"	"Pet"	Hobo's Epilogue rule	750	false
+
+This is the Hobo's Epilogue rule:
 	if helper dog is tamed:
+		trigger ending "Hobo's Epilogue"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     As you give in to your feral instincts, Hobo looks at you mournfully. He then turns and wanders off to find another poor, needy soul to help. Perhaps he will be more successful next time.";
 		else:

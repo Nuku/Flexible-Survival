@@ -288,23 +288,9 @@ to HyenaMatBind:
 		if humanity of Player < 1:
 			say "     The churning flesh pressing down on you from all around, combined with the taunting laughter of the hyena leader, wears you down until you are no longer able to resist the influence of the matriarch's stomach anymore.";
 			wait for any key;
-			repeat with y running from 1 to number of filled rows in Table of Random Critters:
-				choose row y in Table of Random Critters;
-				if Name entry is "Hyena Herm":
-					now MonsterID is y;
-					break;
-			now voreloss is true;
-			now BodyName of Player is "Hyena Herm";
-			now FaceName of Player is "Hyena Herm";
-			now TailName of Player is "Hyena Herm";
-			now SkinName of Player is "Hyena Herm";
-			now CockName of Player is "Hyena Herm";
-			now tail of Player is tail entry;
-			now Face of Player is face entry;
-			now Skin of Player is skin entry;
-			now Body of Player is body entry;
-			now Cock of Player is cock entry;
 			now Trixieexit is 1;
+			trigger ending "Hyena Matriarch Vore";
+			the Player was ended by "Vore by Hyena Matriarch";
 			end the story saying "You were demoted to hyena food";
 		else:
 			let k be 0;

@@ -473,7 +473,7 @@ to say nohmaskninja:
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			say "     With the second feline dealt with, you press onwards. The last of them is forced to release the anime hottie. When he turns to face you and slips a paw into his robes, you expect another volley of shuriken to come, but what comes out instead is a smoke bomb. Smashing it at the tabby's tabbied feet, he is enveloped in a cloud of smoke and then is gone. You spin around, making sure he isn't going to jump you from behind, but it's soon clear that you've driven them off. You relax and move to the desk to help the poor woman.";
 			WaitLineBreak;
-			say "     [bold type]SMACK![roman type]";
+			say "     [bold type]SMACK![roman type][line break]";
 			say "     You tumble comically into a corner of the room, sent for a loop by the woman you just [']rescued['] with a big paper fan. 'Baka! You ruined my big scene. Being raped by ninjas is really big this season. And just when it was getting good too... though maybe we've got enough budget left for you and I to have some fun climax.' And with that said, she rushes at you with giggling glee.";
 			say "[nohmaskanimebabe]";
 	if fightoutcome >= 20 and fightoutcome <= 29:
@@ -612,19 +612,9 @@ to say onilairassault:
 
 to say onilairlost1:
 	now HP of Hayato is 96;
-	setmonster "Red Oni";
+	setmonster "Red Oni" silently;
 	choose row MonsterID in Table of Random Critters;
-	now TailName of Player is "Red Oni";
-	now FaceName of Player is "Red Oni";
-	now SkinName of Player is "Red Oni";
-	now BodyName of Player is "Red Oni";
-	now CockName of Player is "Red Oni";
-	attributeinfect;
-	now tail of Player is tail entry;
-	now Face of Player is face entry;
-	now Skin of Player is skin entry;
-	now Body of Player is body entry;
-	now Cock of Player is cock entry;
+	turn the Player into a "Red Oni" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
 	if hellHoundLevel is 0:
 		follow the sex change rule;
 		follow the sex change rule;

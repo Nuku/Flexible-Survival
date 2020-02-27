@@ -212,8 +212,13 @@ the scent of rhino cum is "The contents of the jar of rhino cum smell strong and
 
 Section 3 - Endings
 
-when play ends:
-	if BodyName of Player is "Rhino":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Rhino Infection"	"Infection"	""	Rhino Infection rule	1000	false
+
+This is the Rhino Infection rule:
+	if Player has a body of "Rhino":
+		trigger ending "Rhino Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     As your mind gives in to your infection, you wander aimlessly and end up at the city zoo. There you come across a large rhino vehemently ramming his horn against the wall again and again, trying to break through. After a short conversation with him punctuated by hard cracks of him hitting the concrete barrier, you cannot find fault with his logic and soon join him in his efforts to crack through the wall.";
 			say "     When you eventually manage to break through it together, it is as if all the zoo was waiting for that moment. There air is filled with successful shouting and cheering from creatures who had gathered to watch you both at work, many of whom run off to inform the rest of their pack or herd. The cries spread out across the zoo, getting louder and louder. As you and Brian struggle to your feet with pounding headaches, you can hear the sounds of the infected hordes of the zoo coming. You and Brian hurry through the gap, leading the charge against the few soldiers posted around what seemed until moments ago a closed section of military cordon. As you both are finally unleashing your pent up lust on some soldiers, hordes of felines, wolves and other creatures come spilling out, spreading out unchecked past the military's lines to spread before they can be contained. Mixed in with them are many smaller, weaker creatures who spent their time in hiding from the zoo's top predators, but are now free to roam and find places to spread their infection safely. You bellow out in climax as you watch this surge of lustful freedom and smile, knowing all your hard work and pain has paid off.";

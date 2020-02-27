@@ -191,7 +191,7 @@ to say BullsBurgerSale:
 			if Player consents:
 				say "     Taking out the two fish you hand them over, causing the dragon to take them and put them in the bucket. He then begins to start cooking, putting a patty on the grill and flipping it repeatedly, the scent of meat filling the air. A few minutes later Astor pulls out a plate, puts on a bun, and starts layering it bit by bit. When he's done it's a mouthwatering masterpiece that you want to bite into right away. Thankfully the dragon serves it right in front of you soon after and tells you to dig in to which you eagerly do. The burger is nice and juicy, filling your mouth with a rich taste. The condiments and toppings compliment with a nice perfection that makes you moan in delight. If you were to look at Astor you would see him smirking. It's no surprise that about a minute later the burger is gone and your plate is empty, leaving you rather sad. The dragon grabs your plate and puts it in the sink and thanks you for your patronage.";
 				decrease carried of tasty fish by 2;
-				add "Strength of the Bull" to feats of player;
+				FeatGain "Strength of the Bull";
 				StatChange "Strength" by 10;
 				StatChange "Stamina" by 10;
 				say "     Your stamina and strength have gone up by 10 temporarily for the next twenty-four hours!";
@@ -213,7 +213,7 @@ to say KitsuneStirfrySale:
 			if Player consents:
 				say "     Digging out the fish and passing it over, you watch him toss it into the bucket. He then begins to get out all the ingredients for the stirfry, tossing it into the pan one by one as he slowly makes it. As the sizzling of the cooking utensil grows, so does the smell of the food, which makes you drool. The scent of the vegetables and the chicken, everything altogether just makes you want to devour it right now. Thankfully though Astor is finished rather soon. He quickly scoops it onto your plate and slides it in front of you and tells you to dig in, to which you do. The stir fry tastes absolutely amazing, lighting up your tastebuds in pleasure as soon as the first bite hits your tongue, causing you to moan out loud. You hear Astor chuckling at you from behind the grill, but you ignore him in favor of the food. Soon and sadly enough the stir fry is gone, leaving you an empty plate which Astor promptly grabs and puts in the sink, thanking you for your patronage.";
 				decrease carried of tasty fish by 2;
-				add "Dexterity of the Kitsune" to feats of player;
+				FeatGain "Dexterity of the Kitsune";
 				StatChange "Dexterity" by 10;
 				StatChange "Charisma" by 10;
 				say "     Your dexterity and charisma have been temporarily increased by 10 for the next twenty-four hours!";
@@ -235,7 +235,7 @@ to say MonkeyStewSale:
 			if Player consents:
 				say "     Pulling out the fish you toss it to him, of which he catches easily. The dragon puts it in the bucket and sets that down before getting to work by setting a pot down. Astor skillfully chops various vegetables and meats one by one before tossing them all into the pot which starts bubbling and boiling, causing a delicious aroma to fill the air as the broth starts to form. Once he's done with all the ingredients he begins to stir it which causes shivers to go down your spine as you're hit with a faceful of the wonderful scent that is the food. Thankfully though he quickly manages to finish cooking surprisingly enough. He takes out a bowl and scoops the stew into it before plopping it right in front of you. The first bite you take is heavenly and literally causes you to groan and moan, making Astor smirk in your direction. It's not a surprise that you finish it rather quickly. When you're done you let out a sad sound as he collects the bowl and thanks you for your patronage.";
 				decrease carried of tasty fish by 2;
-				add "Intelligence of the Monkey" to feats of player;
+				FeatGain "Intelligence of the Monkey";
 				StatChange "Intelligence" by 10;
 				StatChange "Perception" by 10;
 				say "     Your Intelligence and Perception have temporarily increased by 10 for the next twenty-four hours!";
@@ -250,21 +250,21 @@ Section 3 - Buff Timers
 
 An everyturn rule:
 	if "Strength of the Bull" is listed in feats of player and (BullStrengthTimer - turns > 7):
-		remove "Strength of the Bull" from feats of player;
+		FeatLoss "Strength of the Bull";
 		StatChange "Strength" by -10;
 		StatChange "Stamina" by -10;
 		say "     Your Bull's Burger has worn off! You might want to go back to Astor's Restauraunt for more food.";
 
 An everyturn rule:
 	if "Dexterity of the Kitsune" is listed in feats of player and (KitsuneDexterityTimer - turns > 7):
-		remove "Dexterity of the Kitsune" from feats of player;
+		FeatLoss "Dexterity of the Kitsune";
 		StatChange "Dexterity" by -10;
 		StatChange "Charisma" by -10;
 		say "     Your Kitsune Stirfry has worn off! You may want to go back to Astor's Restaurant to get some more food!";
 
 An everyturn rule:
 	if "Intelligence of the Monkey" is listed in feats of player and (MonkeyIntelligenceTimer - turns > 7):
-		remove "Intelligence of the Monkey" from feats of player;
+		FeatLoss "Intelligence of the Monkey";
 		StatChange "Intelligence" by -10;
 		StatChange "Perception" by -10;
 		say "     Your Monkey's Stew has worn off! You may want to go back to Astor's Restaurant to get some more food!";

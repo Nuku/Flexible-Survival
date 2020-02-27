@@ -303,8 +303,15 @@ to say estrogen pill use:
 			say ". With a feeling of tightness and a flush of warmth at your chest, you see your breasts inflating, giving you a set of [descr] tits.";
 
 
-when play ends:
-	if BodyName of Player is "Human Hybrid":
+Section 4 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Human Hybrid Infection"	"Infection"	""	Human Hybrid Infection rule	1000	false
+
+This is the Human Hybrid Infection rule:
+	if Player has a body of "Human Hybrid":
+		trigger ending "Human Hybrid Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is female:
 				say "     Succumbing to your bodies needs, your mind fills with images of the lovely pimp, and all his lusty little whores, and you smile happily as you finally realize your true purpose in life. 'I'm a whore...' you mutter with a happy smile on your face, before giggling in amusement, wondering how you could have not realized such a simple truth sooner. Your thoughts turning towards the strange pimp again, you moan in pleasure as you realize just how good an owner the obviously experienced pimp would make, after all, every slutty little whore like yourself needs an owner to take care of them right? Giggling rather ditzily again, you quickly begin to saunter back towards the red light district, where you are sure to find a proper owner who will find lots of handsome beasts to rent you out to so they can fill your empty pussy up again and again.";

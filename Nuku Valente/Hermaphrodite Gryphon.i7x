@@ -14,6 +14,7 @@ To say losetohgryphon:
 	if inasituation is true:
 		say ""; [taken care of at the event source]
 	else:
+		project Figure of BlueGryphon_hard_icon;
 		now nohgryphonsex is 0;
 		let analchance be 5;
 		if Player is submissive, increase analchance by 2;
@@ -99,6 +100,7 @@ To say beatthehgryphon:
 	if inasituation is true:
 		say ""; [taken care of at the event source]
 	else:
+		project Figure of BlueGryphon_hard_icon;
 		increase hgryphonwin by 1;
 		if Player is neuter:
 			say "[one of]The once proud beast is knocked to the ground, her wings drawn protectively. Victorious, you move on.[or]Succumbing to her wounds, the gryphon collapses at your feet, posing no further threat.[at random]";
@@ -166,8 +168,7 @@ To say beatthehgryphon:
 				if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 					now current menu selection is calcnumber;
 					choose row calcnumber in table of fucking options;
-					say "[title entry]: [description entry][line break]";
-					say "Is this what you want?";
+					say "[title entry]: [description entry]?";
 					if Player consents:
 						let nam be title entry;
 						now sextablerun is 1;
@@ -196,7 +197,7 @@ To say beatthehgryphon:
 
 to say hgryphon_pw_00: [milking]
 	say "     Approaching the defeated gryphon with confidence, you reach out and place your hands on her full breasts, giving them a squeeze. 'Mmmh! That feels nice,' she murrs in pleasure, leaning into your touch. Several small drops of milk already start leaking from her nipples just from the first caress, and you can see that she's obviously more than ready to give some milk. The gryphoness gives a surprised chuckle as you dig an empty plastic bottle from your pack, then press its open neck against one of her nipples, squeezing the boob around it with your other hand. A first squirt of rich gryphon milk shoots into the bottle followed by another and another. The air fills with the strangely arousing scent of the hybrid creature's milk while you switch back and forth between her breasts, milking both of them equally. Your former opponent clearly doesn't mind at all that you're taking what you want from her, letting out sighs of pleasure and arousal throughout the process.";
-	say "     By the time you've filled up your bottle, the gryphoness is putty in your hands, plyable and oh so very horny. If you hadn't already proven that you can take her in a fight, you think she'd just jump you right away and want have sex. As things stand, the blue-feathered avian just lies back as you take your hands off her, stroking her own breasts, as well as the erect shaft between her legs. Packing away your fresh milk, you step back from the gryphoness as she begins to masturbate, leaving her behind to take care of herself.";
+	say "     By the time you've filled up your bottle, the gryphoness is putty in your hands, plyable and oh so very horny. If you hadn't already proven that you can take her in a fight, you think she'd just jump you right away and want to have sex. As things stand, the blue-feathered avian just lies back as you take your hands off her, stroking her own breasts, as well as the erect shaft between her legs. Packing away your fresh milk, you step back from the gryphoness as she begins to masturbate, leaving her behind to take care of herself.";
 	LineBreak;
 	say "[bold type]You gain a bottle of gryphon milk![roman type][line break]";
 	increase carried of gryphon milk by 1;
@@ -261,6 +262,7 @@ to say hgryphon_TG:
 	if HP of Garrett < 6, now HP of Garrett is 6;
 
 to say HermGryphonDesc:
+	project Figure of BlueGryphon_soft_icon;
 	setmongender 5;
 	if inasituation is true:
 		say ""; [taken care of at the event source]
@@ -277,6 +279,7 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Blue Gryphon";
+	add "Blue Gryphon Herm" to infections of AvianList;
 	add "Blue Gryphon Herm" to infections of AvianpredList;
 	add "Blue Gryphon Herm" to infections of HybridList;
 	add "Blue Gryphon Herm" to infections of FurryList;
@@ -288,6 +291,7 @@ When Play begins:
 	add "Blue Gryphon Herm" to infections of BipedalList;
 	add "Blue Gryphon Herm" to infections of FlightList;
 	add "Blue Gryphon Herm" to infections of TailList;
+	add "Blue Gryphon Herm" to infections of OviImpregnatorList;
 	now Name entry is "Blue Gryphon Herm"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]

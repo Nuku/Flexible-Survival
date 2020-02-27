@@ -401,23 +401,28 @@ to say alexbrunchtime:
 to say brunchtimechange:
 	if alexbrunch is 1:
 		now TailName of Player is "Ferret";
-		now tail of Player is "Emerging from the base of your spine is a slender tail covered in ivory fur.";
+		now TailSpeciesName of Player is "Ferret";
+		now Tail of Player is "Emerging from the base of your spine is a slender tail covered in ivory fur.";
 	if alexbrunch is 2:
 		now SkinName of Player is "Ferret";
+		now SkinSpeciesName of Player is "Ferret";
 		now Skin of Player is "soft, white fur that covers your";
 [
 		StatChange "charisma" by 1;
 ]
 	if alexbrunch is 3:
 		now FaceName of Player is "Ferret";
+		now FaceSpeciesName of Player is "Ferret";
 		now Face of Player is "that of an adorable mustelid with darting eyes that search for shinies. You have a cute, pink nose with plentiful whiskers on your ferrety muzzle";
 [
 		StatChange "intelligence" by 2;
 ]
 	if alexbrunch is 4:
 		now BodyName of Player is "Ferret";
+		now BodySpeciesName of Player is "Ferret";
 		now Body of Player is "the slender and flexible form of a ferret. You constantly have the urge to weave and bob about playfully as you move";
 		now CockName of Player is "Ferret";
+		now CockSpeciesName of Player is "Ferret";
 		now Cock of Player is "ferret";
 		now scalevalue of Player is 3;
 		now bodydesc of Player is "[one of]flexible[or]slinky[or]slender[or]bouncy[at random]";
@@ -433,18 +438,22 @@ to say alexbodyreset:
 	if alexbrunch > 0 and TailName of Player is not "Ferret":
 		say ". Seeing your changed tail, his hands move down to your rear, stroking and squeezing it until your ferret tail is restored";
 		now TailName of Player is "Ferret";
-		now tail of Player is "Emerging from the base of your spine is a slender tail covered in ivory fur.";
+		now TailSpeciesName of Player is "Ferret";
+		now Tail of Player is "Emerging from the base of your spine is a slender tail covered in ivory fur.";
 	if alexbrunch > 1 and SkinName of Player is not "Ferret":
 		say ". His playful hands caress all over you, dooking happily as your soft, white fur is restored";
 		now SkinName of Player is "Ferret";
+		now SkinSpeciesName of Player is "Ferret";
 		now Skin of Player is "soft, white fur that covers your";
 	if alexbrunch > 2 and FaceName of Player is not "Ferret":
 		say ". He kisses and nuzzles at your face all over, nibbling your ears. You can feel your head changing, returning to its once-mustelid shape";
 		now FaceName of Player is "Ferret";
+		now FaceSpeciesName of Player is "Ferret";
 		now Face of Player is "that of an adorable mustelid with darting eyes that search for shinies. You have a cute, pink nose with plentiful whiskers on your ferrety muzzle.";
 	if alexbrunch > 3 and BodyName of Player is not "Ferret":
 		say ". Alex rubs his slinky body against yours, chirring as your body becomes slender and ferret-like once more";
 		now BodyName of Player is "Ferret";
+		now BodySpeciesName of Player is "Ferret";
 		now Body of Player is "the slender and flexible form of a ferret. You constantly have the urge to weave and bob about playfully as you move";
 		now scalevalue of Player is 3;
 		now bodydesc of Player is "[one of]flexible[or]slinky[or]slender[or]bouncy[at random]";
@@ -453,6 +462,7 @@ to say alexbodyreset:
 	if alexbrunch > 3 and CockName of Player is not "Ferret":
 		say ". Rubbing his stiff cock against your loins, his precum leaks onto you. You can feel pleasant tingles as they are restored to their mustelid nature";
 		now CockName of Player is "Ferret";
+		now CockSpeciesName of Player is "Ferret";
 		now Cock of Player is "ferret";
 
 
@@ -485,8 +495,13 @@ to say pillowtalk:
 
 Section 6 - Endings
 
-when play ends:
-	if BodyName of Player is "Ferret":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Ferret Infection"	"Infection"	""	Ferret Infection rule	1000	false
+
+This is the Ferret Infection rule:
+	if Player has a body of "Ferret":
+		trigger ending "Ferret Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     After your mind gives out to the infection, you are eventually drawn back to Alex's condo. After happily greeting you, he quickly realizes something is wrong and that you've lost yourself to the infection. He is briefly saddened by this, but rebounds quickly as you playfully coax him into another romp on the bed. You can't speak much any more, save for requests for sex or the occasional loving phrase for your sexy, ferret guardian during brief moments of clarity.";
 			say "     When the military comes through to rescue everyone, Alex takes care of you and makes sure you are safely taken with him and his clients. There is some argument about what to do with you, but Alex puts his legal prowess to the test and eventually gets you entrusted to his care after you're deemed non-infectious. He even shows you the press tape of his impassioned plea for the brave soul who rescued and protected his clients at the eventual loss of their own mind. You have trouble following the words, but it warms your heart to hear him talk about you with so much love.";

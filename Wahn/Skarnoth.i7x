@@ -236,6 +236,7 @@ to say SkarnothSex1: [player sucks him]
 	WaitLineBreak;
 	say "     Skarnoth makes use of you for his own enjoyment, humping your mouth hard and almost without pause, which keeps you just a bit delirious but also somehow wanting for him to do it more. You don't know how long your breathtaking session takes, but at some point, the throbs of more pre come faster and faster while Skarnoth's grunts raise in urgency. Preparing yourself for his orgasm, you gulp down as he pulls out most of the way to cover your tongue with his load. The demon's cum is thick and creamy, even spicier than his pre and really quite hot, filling you with an inner warmth as you swallow it. More and more blasts of cum are blasted into your mouth and you do your best to eat it all, but after a little while, its hotness becomes a little bit of an issue - both in taste and temperature, as you start sweating and getting a red head, your eyes tearing up just a little.";
 	say "     At that point, Skarnoth pulls his manhood out and blasts your face with the next spurt of cum, leaving a hot line of sticky whiteness across one cheek. 'Hope you like jalapeno peppers,' he says with a chuckle, 'And if not... you'll surely get used to it soon. Trust me, they all do.' He keeps a hand on your head to hold you close while aiming his cock with the other one, doing his very best to cover as much as possible of your face and upper body with his load. Only when his orgasm finally ebbs off does the demon let go, loosening his tail from around your hips too as he leans back in satisfaction. 'That was fun,' he says loudly, smiling as you get to your feet and start wiping up his cum to lick it off your fingers. 'Be sure to come back for more... master,' the demon adds after that, with the last word being an almost amused afterthought.";
+	NPCSexAftermath Player receives "OralCock" from Skarnoth;
 	if Loyalty of Skarnoth < 10:
 		increase Loyalty of Skarnoth by 1;
 
@@ -260,6 +261,7 @@ to say SkarnothSex2: [facefuck Skarnoth]
 		say "     As you start picking up your gear and pants to get dressed, Skarnoth stands up straight and enjoys the sight of your naked body, even going so far as lightly slapping your ass as you bend over. 'That was fun,' he says with a chuckle, then wipes his face with a slow swipe of his clawed hand. Looking at the white cum sticking to his fingers, he gives you a wink and then sucks it off finger by finger before sauntering over to throw himself on his red leather chair.";
 		if Loyalty of Skarnoth < 10:
 			increase Loyalty of Skarnoth by 1;
+		NPCSexAftermath Player receives "AssDildoFuck" from Skarnoth;
 	else:
 		LineBreak;
 		say "     As turned on as you are by the demon hunk, you still decide to stop him before things get out of hand. After all, you're the boss here and he should better remember that! Catching the long tail in an iron grip, you pull it away from your ass and tell Skarnoth that he's been a bad boy, underlining it by yanking his horns back, forcing him to look up at you. Grinning, he licks his sloppy lips and replies in a challenging tone, 'And what are you gonna do about it?' In reaction to that, you crouch down with his tail in hand, ignoring Skarnoth's tries to free the long appendage with sharp tugs. Looking at the glistening fleshy spade at the end, lubed with his own pre to allow for easier fucking, the choice is clear. Slapping Skarnoth's buttocks with your other hand and pulling one cheek to the side a little, you shove his tail-tip at the demon prince's own pucker, burying it all the way to where your fist is closed around the tail.";
@@ -269,15 +271,21 @@ to say SkarnothSex2: [facefuck Skarnoth]
 		say "     As you start picking up your gear and pants to get dressed, Skarnoth stands up straight and enjoys the sight of your naked body, even going so far as lightly slapping your ass as you bend over. 'That was fun,' he says with a chuckle, then wipes his face with a slow swipe of his clawed hand. Looking at the white cum sticking to his fingers, he gives you a wink and then sucks it off finger by finger before sauntering over to throw himself on his red leather chair.";
 		if Loyalty of Skarnoth > 1 and Loyalty of Skarnoth < 10:
 			decrease Loyalty of Skarnoth by 1;
+		NPCSexAftermath Skarnoth receives "AssDildoFuck" from Player;
+	NPCSexAftermath Skarnoth receives "OralCock" from Player;
 
 to say SkarnothSex3: [69 with Skarnoth]
 	say "     A";
+	NPCSexAftermath Player receives "OralCock" from Skarnoth;
+	NPCSexAftermath Skarnoth receives "OralCock" from Player;
 
 to say SkarnothSex4: [player pussy fucked]
 	say "     A";
+	NPCSexAftermath Player receives "PussyFuck" from Skarnoth;
 
 to say SkarnothSex5: [player ass fucked]
 	say "     A";
+	NPCSexAftermath Player receives "AssFuck" from Skarnoth;
 
 to say SkarnothSex6: [Skarnoth's ass fucked]
 	say "     Hooking a hand behind Skarnoth's head, you pull the sexy demon up from his seat, right into a demanding kiss. Chuckling under his breath, he proceeds to tongue-wrestle with you and slides those strong arms of his around your body, clawed hands kneading the cheeks of your butt. As you pull back from the bout of making out a moment later, the demon says in a teasing tone, 'You need it bad, don't you. How about you - umphH!' That's how far he gets before you push two fingers into his mouth and grunt commandingly for him to suck on your invading digits. The inner glow of the demon prince's eyes flares up a little as he realizes that you're planning to dominate him in this sexual encounter, and you can feel his muscles start to tense - right until you run a finger along his neck, reminding him of the collar you put on him.";
@@ -298,6 +306,7 @@ to say SkarnothSex6: [Skarnoth's ass fucked]
 		say "     Feeling Skarnoth's insides almost milk your dick, you're not too far behind joining your partner in orgasm and slam hard against his ass. Almost as soon as your swinging balls hit his warm skin in one last satisfying slap, you start blasting away with spurt after spurt of thick and creamy cum, filling Skarnoth's asshole with your load. The two of you stay tightly pressed together for a while, bent over and with him bracing against the chair, you against his strong back. Only after your respective orgasms have tapered off and you've caught your breaths do you take hold of his tail and slowly pull it out of your ass, then withdraw your dick from between his cheeks.";
 		WaitLineBreak;
 		say "     As you start picking up your gear and pants to get dressed, Skarnoth stands up straight and enjoys the sight of your naked body, even going so far as lightly slapping your ass as you bend over. 'That was fun,' he says with a chuckle, then glances over at his high-backed chair. 'Made quite a mess though,' the demon adds and nods to the white, slightly glowing splashes of his cum on the red leather. With a wink, he then swipes off the creamy goop and brings the hand used for that to his face, slurping his cum off finger by finger.";
+		NPCSexAftermath Player receives "AssDildoFuck" from Skarnoth;
 		if Loyalty of Skarnoth < 10:
 			increase Loyalty of Skarnoth by 1;
 	else:
@@ -306,8 +315,10 @@ to say SkarnothSex6: [Skarnoth's ass fucked]
 		say "     Being taken like that quickly pushes the demon closer and closer to his limits, and before much longer he groans, 'Yeah! Just like... nnnnghhHHHH! FUCK!' With that, the bent-over shape of the demon prince starts trembling and twitching, as do his inner muscles around your prick, tensing up with every new spurt of cum he is blasting all over the leather upholstery of his high-backed chair. Feeling Skarnoth's insides almost milking your dick, you're not too far behind joining your partner in orgasm and slam hard against his ass. Almost as soon as your swinging balls hit his warm skin in one last satisfying slap, you start blasting away with spurt after spurt of thick and creamy cum, filling Skarnoth's asshole with your load. The two of you stay tightly pressed together for a while, bent over and with him bracing against the chair, you against his strong back. Only after your respective orgasms have tapered off and you've caught your breaths do you slowly withdraw your dick from between his cheeks.";
 		WaitLineBreak;
 		say "     As you start picking up your gear and pants to get dressed, Skarnoth stands up straight and enjoys the sight of your naked body, even going so far as lightly slapping your ass as you bend over. 'That was fun,' he says with a chuckle, then glances over at his high-backed chair. 'Made quite a mess though,' the demon adds and nods to the white, slightly glowing splashes of his cum on the red leather. With a wink, he then swipes off the creamy goop and brings the hand used for that to his face, slurping his cum off finger by finger.";
+		NPCSexAftermath Skarnoth receives "AssDildoFuck" from Player;
 		if Loyalty of Skarnoth > 1 and Loyalty of Skarnoth < 10:
 			decrease Loyalty of Skarnoth by 1;
+	NPCSexAftermath Skarnoth receives "AssFuck" from Player;
 
 to say SkarnothSex7: [Spank Skarnoth's ass]
 	say "     Note: Once Skarnoth's Master/Slave chain is completed this sex option will be added to sub slave Skarnoth's sex menu instead of default slave Skarnoth.";
@@ -508,10 +519,15 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
+Section 6 - Endings
 
-when play ends:
-	if BodyName of Player is "Demon Slave":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Demon Slave"	"BadEnd"	"Slave"	Demon Slave rule	20	false
+
+This is the Demon Slave rule:
+	if ending "Demon Slave" is triggered:
 		say "     Your new reality in hell focuses on satisfying Skarnoth's every desire - of which there are many, mostly carnal ones. As the overlord of his own little demonic realm, your master has the power to play with your body shape too, transforming you as he wishes to better enjoy breaking you to his will...";
-		stop the action;
+		the Player is enslaved;
 
 Skarnoth ends here.

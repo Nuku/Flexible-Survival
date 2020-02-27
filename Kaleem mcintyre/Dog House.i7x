@@ -11,7 +11,6 @@ DogHouse is inactive.
 Fin is a number that varies.
 Tyraffection is a number that varies.
 Homarusearch is a number that varies.
-darkdays is a number that varies.
 
 The sarea of DogHouse is "Warehouse".
 when play begins:
@@ -177,38 +176,16 @@ Instead of resolving DogHouse:
 					now DogHouse is resolved;
 				else:
 					now DogHouse is resolved;
-					now humanity of Player is 0;
-					now darkdays is 1;
-					now TailName of Player is "Nameless Bitch ";
-					now FaceName of Player is "Nameless Bitch ";
-					now SkinName of Player is "Nameless Bitch";
-					now BodyName of Player is "Nameless Bitch ";
-					now CockName of Player is "Nameless Bitch ";
-					now scalevalue of Player is 3;
-					now bodydesc of Player is "animalistic";
-					now bodytype of Player is "canine";
-					now SleepRhythm of Player is 0;
+					trigger ending "Dog House New Bitch";
 					wait for any key;
 					end the story saying "Having lost, you are injected with whatever they gave to Tyr and then thrown into the cage with the other males. A serious round of fucking later, you wind up [if Player is male]losing any masculinity you might have had[else]succumbing to your feminine lusts[end if] as you become another nameless bitch along with the Doberman.";
-					wait for any key;
 					follow the turnpass rule;
 					stop the action;
 			else:
 				now DogHouse is resolved;
-				now humanity of Player is 0;
-				now darkdays is 1;
-				now TailName of Player is "Nameless Bitch ";
-				now FaceName of Player is "Nameless Bitch ";
-				now SkinName of Player is "Nameless Bitch";
-				now BodyName of Player is "Nameless Bitch ";
-				now CockName of Player is "Nameless Bitch ";
-				now scalevalue of Player is 3;
-				now bodydesc of Player is "animalistic";
-				now bodytype of Player is "canine";
-				now SleepRhythm of Player is 0;
+				trigger ending "Dog House New Bitch";
 				wait for any key;
 				end the story saying "Having lost, you are injected with whatever they gave to Tyr and then thrown into the cage with the other males. A serious round of fucking later, you wind up [if Player is male]losing any masculinity you might have had[else]succumbing to your feminine lusts[end if] as you become another nameless bitch along with the Doberman.";
-				wait for any key;
 				follow the turnpass rule;
 				stop the action;
 		else:
@@ -305,10 +282,17 @@ to say fightlost:
 	now DogHouse is resolved;
 	now Resolution of DogHouse is 2; [player lost while helping Tyr]
 
-when play ends:
-	if darkdays is 1:
+Section 2 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Dog House New Bitch"	"BadEnd"	"Sex Slave"	Dog House New Bitch rule	20	false
+
+This is the Dog House New Bitch rule:
+	if ending "Dog House New Bitch" is triggered:
 		say "     Having lost yourself and your will to the same drug that the wolftaurs had given to Tyr, you are now just another bitch in the cells with all the others. Without a sense of self or purpose, the remainder of your days are spent getting stuffed full of cock for the viewing pleasure of the crowd upstairs, while your nights are spent yowling alongside your Dobie friend as you both press your gaping and leaking bitchcunts through the bars of the cells for the males to yowl over. Save for the comfort of the other bitches around you, and one special Doberman female in particular, you have little to help fill the growing ache inside of you as the drug you had been given made you sterile. No one comes to help save you, and when the military does arrive to clean up the town, you and all of the other canines, both bitch and male alike, are herded into two large and separate vans and then smuggled out of the city.";
 		say "     The last thing of importance that you can recall, many, many years later, is the face of the Doberman who you've come to somewhat cherish, being ripped away from you, never to be seen again. You don't know why that's so important, especially after you're sold to an influential owner that fills you up night after night, but it does stick out in the lustful haze that has become your mind.";
+		the Player is enslaved;
 
 
 Dog House ends here.

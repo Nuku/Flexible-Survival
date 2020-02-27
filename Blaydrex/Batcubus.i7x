@@ -232,8 +232,13 @@ to say batcubus milk use:
 
 Section 4 - Endings
 
-When play ends:
-	if BodyName of Player is "Batcubus" and matriarchdefeated is 0 and matriarchowned is 0:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Batcubus Infection"	"Infection"	""	Batcubus Infection rule	1000	false
+
+This is the Batcubus Infection rule:
+	if Player has a body of "Batcubus" and matriarchdefeated is 0 and matriarchowned is 0:
+		trigger ending "Batcubus Infection";
 		if humanity of Player < 10:
 			say "You search the city looking for males to impregnate you and anybody to kiss, your cunt always dripping, ready to be fucked at any time. Sometimes thoughts of your past return, but a single lick of your lips quickly sends your lust soaring and you can't help but forget again and go look for relief you so desperately need.";
 		else:

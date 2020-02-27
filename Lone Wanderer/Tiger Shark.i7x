@@ -318,6 +318,7 @@ When Play begins:
 	add "Tiger Shark Male" to infections of BipedalList;
 	add "Tiger Shark Male" to infections of SwimList;
 	add "Tiger Shark Male" to infections of TailList;
+	add "Tiger Shark Male" to infections of OviImpregnatorList;
 	add "Tiger Shark Male" to infections of TailweaponList;
 	now Name entry is "Tiger Shark Male";
 	now enemy title entry is "Tiger Shark"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
@@ -474,14 +475,23 @@ When Play begins:
 ]
 
 
-when play ends:
-	if BodyName of Player is "Tiger Shark Male":
+Section 5 - Endings
+
+[
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Tiger Shark Male Infection"	"Infection"	""	Tiger Shark Male Infection rule	1000	false
+
+This is the Tiger Shark Male Infection rule:
+	if Player has a body of "Tiger Shark Male":
+		trigger ending "Tiger Shark Male Infection";
 		if humanity of Player < 10:
 			say "     REMOVE ME";
 		else:
 			say "     REMOVE ME";
+]
 
-Section 5 - Items
+Section 6 - Items
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -511,7 +521,7 @@ The damagebonus of Teeth Necklace is 0.
 The dodgebonus of Teeth Necklace is 0.
 
 
-Section 6 - NPC
+Section 7 - NPC
 [He is going to walk around the beach areas.]
 
 Tiger Shark ends here.

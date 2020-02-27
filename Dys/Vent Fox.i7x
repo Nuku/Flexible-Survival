@@ -102,7 +102,7 @@ instead of going east from Mall Atrium while (VentFoxEncounterCount < 2 and a ra
 			say "     Deciding it's probably best to just move along, you continue making your way to the East Wing.";
 	else if VentFoxEncounterCount is 1: [second time]
 		say "     As you head to the East Wing, you hear squeaking coming from the same shop you'd found [']Vent['] in. Sighing, you decide to make your way to the store to help the silly latex vulpine. Stepping inside, you don't even bother looking around before you go to the vent. You unfasten the cover again, pulling it, and the fox towards you. This time, he doesn't seem startled or scared. As a matter of fact, he almost looks relieved. You gently free him from the grate, but this time, he doesn't dash back into the ductwork immediately. Instead, the little creature leans down to pick up the bike wheel tubing that is still laying there with his teeth, dragging it along. He turns to look at you before running back into the vents.";
-		say "     Not bothering to put the cover back in place, you continue heading to the East Wing, a small smile on your [FaceSpeciesName of Player in lower case] face. [bold type]Perhaps you could search around the mall to find how the fox got inside in the first place...[roman type]";
+		say "     Not bothering to put the cover back in place, you continue heading to the East Wing, a small smile on your [FaceSpeciesName of Player in lower case] face. [bold type]Perhaps you could search around the mall to find how the fox got inside in the first place...[roman type][line break]";
 		now VentFoxEncounterCount is 2; [did the event twice]
 		now VentFoxRelationship is 2;
 
@@ -337,7 +337,7 @@ to say VentFoxScavengeFood:[Player helps the fox find some rubber to eat.]
 			say "     Vent lets out a happy sound at your suggestion before bounding off ahead of you for once. It seems he's very eager to find something to eat today. Shaking your head in amusement, you follow a few feet behind him watching him prance through the parking lot. He dashes around the deserted cars, every so often disappearing from your eyesight. He hops around an SUV, once more disappearing from view before you hear him let out a yelp. You quickly run to him, skidding around the corner, your eyes falling on Logan, the wolverine guard you've seen around holding the fox up by his rubber tail.";
 			say "     'What have we got here?' he asks rhetorically. 'Looks like a little chew toy found his way past our security...' The guard is facing away from you, and he doesn't seem to have noticed your presence yet. Perhaps you could take him by surprise and help your friend?";
 			LineBreak;
-			say "     [bold type]Do you help Vent?[roman type]";
+			say "     [bold type]Do you help Vent?[roman type][line break]";
 			LineBreak;
 			say "     [link](1)[as]1[end link] - Yes, sneak attack Logan!";
 			if LoganCommand is 2:
@@ -502,7 +502,7 @@ to say VentFoxPrefsMenu:[Menu for setting preferences.]
 
 to say VentUnavailable:
 	clear the screen and hyperlink list;
-	say "     [bold type]Vent shakes his head at your request. It seems he can't change this yet...[roman type]";
+	say "     [bold type]Vent shakes his head at your request. It seems he can't change this yet...[roman type][line break]";
 
 Chapter 2 - Sub Menus
 
@@ -602,13 +602,13 @@ to say WSLevelMenu:[Menu for setting WS amount of Vent.]
 			say "     Vent gives you an affirmative yip to show he'll only mark you if you specifically request it.";
 			now VentWSAmount is 1;
 		else if calcnumber is 2:
-			say "     Vent nods at your request. He'll now mark you at any time, sometimes during sex. [bold type]He may even mark you while penetrating you...[roman type]";
+			say "     Vent nods at your request. He'll now mark you at any time, sometimes during sex. [bold type]He may even mark you while penetrating you...[roman type][line break]";
 			now VentWSAmount is 2;
 		else:
-			say "     Vent nods at you. He'll now mark you at any time, [italic type]especially[roman type] during sex. He'll make sure that he produces excessive urine as well. [bold type]He'll mark you while penetrating you, as well...[roman type]";
+			say "     Vent nods at you. He'll now mark you at any time, [italic type]especially[roman type] during sex. He'll make sure that he produces excessive urine as well. [bold type]He'll mark you while penetrating you, as well...[roman type][line break]";
 			now VentWSAmount is 3;
 	else:
-		say "     You ask Vent to change how he marks you, but even he seems to know you aren't a fan of watersports... [italic type]To gain access to this, you need to change your watersports level to Full.[roman type]";
+		say "     You ask Vent to change how he marks you, but even he seems to know you aren't a fan of watersports... [italic type]To gain access to this, you need to change your watersports level to Full.[roman type][line break]";
 
 to say OviLevelMenu:[Menu for setting Oviposition amount of Vent.]
 	clear the screen and hyperlink list;
@@ -636,10 +636,10 @@ to say OviLevelMenu:[Menu for setting Oviposition amount of Vent.]
 			say "     Vent nods at your request. He may now decide to perform oviposition during some scenes.";
 			now VentOviAmount is 2;
 		else:
-			say "     Vent nods at you. He will now perform oviposition during some scenes. [bold type]He also produces an excessive amount of eggs now.[roman type]";
+			say "     Vent nods at you. He will now perform oviposition during some scenes. [bold type]He also produces an excessive amount of eggs now.[roman type][line break]";
 			now VentOviAmount is 3;
 	else:
-		say "     Even as you make the suggestion to Vent, you realize that you're honestly not kinky enough for that. [italic type]You need the 'Kinky' fun feat for this option.[roman type]";
+		say "     Even as you make the suggestion to Vent, you realize that you're honestly not kinky enough for that. [italic type]You need the 'Kinky' fun feat for this option.[roman type][line break]";
 
 Section 5 - Scenes
 
@@ -687,7 +687,7 @@ to say VentFoxScavengeFood:[Player helps the fox find some rubber to eat.]
 			say "     Vent lets out a happy sound at your suggestion before bounding off ahead of you for once. It seems he's very eager to find something to eat today. Shaking your head in amusement, you follow a few feet behind him watching him prance through the parking lot. He dashes around the deserted cars, every so often disappearing from your eyesight. He hops around an SUV, once more disappearing from view before you hear him let out a yelp. You quickly run to him, skidding around the corner, your eyes falling on Logan, the wolverine guard you've seen around holding the fox up by his rubber tail.";
 			say "     'What have we got here?' he asks rhetorically. 'Looks like a little chew toy found his way past our security...' The guard is facing away from you, and he doesn't seem to have noticed your presence yet. Perhaps you could take him by surprise and help your friend?";
 			LineBreak;
-			say "     [bold type]Do you help Vent?[roman type]";
+			say "     [bold type]Do you help Vent?[roman type][line break]";
 			say "     [link](1)[as]1[end link] - Yes, sneak attack Logan!";
 			if LoganCommand is 2:
 				say "     [link](2)[as]2[end link] - Yes, use the command on him!";
@@ -777,7 +777,7 @@ to say FuckVentFoxAss:[Player fucks the fox's ass.]
 				say "As you push more of your length into the vulpine's hole, you notice his stomach bulging outwards. Concerned for his safety, you stop and look at him. He looks back at you, a hungry look in his eyes and whines, begging you to push the rest into him. Obliging, you begin moving again, and soon enough, your hips are brushing against him, his stomach forming to the shape of your [Cock of Player] cock, showing just how elastic he actually is.";
 		say "     With your shaft fully inside him[if Player is knotted], excluding the knot[end if], you begin to draw back, his latex hole squeezing and rippling around your shaft in the most amazing of ways. Eventually, only your tip remains inside him, and you pause for just a second before pressing back into him, faster this time. On your next withdrawal, Vent lets out a pleasured growl. He's clearly enjoying this, and you've barely started. You begin to build a rhythm, and you notice Vent's own throbbing cock, fully out of its sheath and dripping pre.";
 		WaitLineBreak;
-		say "     [bold type]Do you lend him a helping hand?[roman type]";
+		say "     [bold type]Do you lend him a helping hand?[roman type][line break]";
 		LineBreak;
 		say "     [link]Y[as]y[end link] - Jack the fox off as you take him.";
 		say "     [link]N[as]n[end link] - Leave his cock unattended.";
@@ -820,7 +820,7 @@ to say FuckVentFoxAss:[Player fucks the fox's ass.]
 				say "As you push more of your length into the vulpine's hole, you notice his stomach bulging outwards. Concerned for his safety, you stop and look at him. He looks back at you, a hungry look in his eyes and whines, begging you to push the rest into him. Obliging, you begin moving again, and soon enough, your hips are brushing against him, his stomach forming to the shape of your [Cock of Player] cock, showing just how elastic he actually is.";
 		say "     With your shaft fully inside him[if Player is knotted], excluding the knot[end if], you begin to draw back, his latex hole squeezing and rippling around your shaft in the most amazing of ways. Eventually, only your tip remains inside him, and you pause for just a second before pressing back into him, faster this time. On your next withdrawal, Vent lets out a pleasured growl. He's clearly enjoying this, and you've barely started. You begin to build a rhythm, and you notice Vent's own throbbing cock, fully out of its sheath and dripping pre.";
 		WaitLineBreak;
-		say "     [bold type]Do you lend him a helping hand?[roman type]";
+		say "     [bold type]Do you lend him a helping hand?[roman type][line break]";
 		LineBreak;
 		say "     [link]Y[as]y[end link] - Jack the fox off as you take him.";
 		say "     [link]N[as]n[end link] - Leave his cock unattended.";

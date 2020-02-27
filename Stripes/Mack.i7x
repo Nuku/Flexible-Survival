@@ -290,14 +290,19 @@ to say eatroastednuts:
 
 Section 7 - Endings
 
-when play ends:
-	[for Gray Squirrel endings, see that file.]
-	if HP of Macadamia >= 13 and BodyName of Player is not "Gray Squirrel":
-		if humanity of Player < 10:
-			say "     With you having succumbed, Macadamia decides that the bunker's not quite as safe as he'd hoped and moves out, searching for a new place to hide his nuts and hole up for the winter.";
-		else:
-			say "     When the soldiers come through the city to rescue people, Macadamia has no intention of leaving his precious caches of nuts and bids you a fond farewell before they arrive. He tells you that he's had a couple of backup hiding spots and he'll move into one of them rather than risk the soldiers deciding he has to leave or stealing his precious stash.";
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Macadamia's Epilogue"	"NPC"	""	Macadamia's Epilogue rule	900	false
 
-[See Gray Squirrel file for ]
+This is the Macadamia's Epilogue rule:
+	if Player has a non-shifting body of "Gray Squirrel":
+		make no decision; [for Gray Squirrel endings, see that file.]
+	if HP of Macadamia < 13:
+		make no decision;
+	trigger ending "Macadamia's Epilogue"; [Here it states, that the ending has been played.]
+	if humanity of Player < 10:
+		say "     With you having succumbed, Macadamia decides that the bunker's not quite as safe as he'd hoped and moves out, searching for a new place to hide his nuts and hole up for the winter.";
+	else:
+		say "     When the soldiers come through the city to rescue people, Macadamia has no intention of leaving his precious caches of nuts and bids you a fond farewell before they arrive. He tells you that he's had a couple of backup hiding spots and he'll move into one of them rather than risk the soldiers deciding he has to leave or stealing his precious stash.";
 
 Mack ends here.

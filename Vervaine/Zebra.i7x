@@ -17,12 +17,12 @@ to say Zebra wins:
 		stop the action;
 	else: [regular combat victory over the player]
 		if ((player is male) and (player is submissive) and (LostToZebra is 3)):
-			say "     'What? You again?!' The zebra man looks at your panting form with a puzzled look on his face. His expression changes to a leering grin. 'You must be one of those beta males I've heard the [one of]huskies[or]wolves[or]German Shepherds[at random] talking about.' [if Player is mpreg_ok]The stallion bends down and sniffs you. 'Or even one of those omega males!' he says with a grin. [end if]He taps the side of his muzzle thoughtfully. 'Well, I was always told never to look a gift horse in the mouth, and I'm not going to start now.' He steps up to you, bumping your face with his huge dick. [bold type]What will your stud do next?[roman type]";
+			say "     'What? You again?!' The zebra man looks at your panting form with a puzzled look on his face. His expression changes to a leering grin. 'You must be one of those beta males I've heard the [one of]huskies[or]wolves[or]German Shepherds[at random] talking about.' [if Player is mpreg_ok]The stallion bends down and sniffs you. 'Or even one of those omega males!' he says with a grin. [end if]He taps the side of his muzzle thoughtfully. 'Well, I was always told never to look a gift horse in the mouth, and I'm not going to start now.' He steps up to you, bumping your face with his huge dick. [bold type]What will your stud do next?[roman type][line break]";
 			increase LostToZebra by 1;
 			wait for any key;
 			say "[ZebraDommingPlayerSexMenu]";
 		else if ((player is male) and (player is submissive) and (LostToZebra > 3)):
-			say "     The stallion knocks you over with a little kick. 'Back again, eh? Can't say I blame you, my little boy mare. After all, who could resist all of this?' The zebra man strikes a few poses, his muscled body rippling as he showcases his arms and chest. He finishes the routine by slapping your face with his massive prick. [bold type]'Now, what to do with my new favorite mare?'[roman type]";
+			say "     The stallion knocks you over with a little kick. 'Back again, eh? Can't say I blame you, my little boy mare. After all, who could resist all of this?' The zebra man strikes a few poses, his muscled body rippling as he showcases his arms and chest. He finishes the routine by slapping your face with his massive prick. [bold type]'Now, what to do with my new favorite mare?'[roman type][line break]";
 			wait for any key;
 			say "[ZebraDommingPlayerSexMenu]";
 		else if Player is female:
@@ -609,8 +609,15 @@ When Play begins:
 ]
 
 
-when play ends:
-	if BodyName of Player is "Zebra Stallion":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Zebra Stallion Infection"	"Infection"	""	Zebra Stallion Infection rule	1000	false
+
+This is the Zebra Stallion Infection rule:
+	if Player has a body of "Zebra Stallion":
+		trigger ending "Zebra Stallion Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is female and player is dominant and (ZebraLossCount > 4):
 				say "     Finally free of the last vestiges of your humanity, you make your way to the zoo, eager to assert your rightful place in the new world order. It's not long before you find what you're looking for; your servile stallion, the key to your plan. He yields his harem to you, and you assess the strengths and weaknesses of your sizable herd. It's obvious that your pet zebra wanted more of a harem than a real fighting force as even the few boy-mares you have are more suited to breeding than battle. You institute drills for all herd members not currently foaling, and between raiding and special sessions with some willing fillies, you even out the gender imbalance in your herd. It takes a few weeks, but thankfully, the nanites make it easy to achieve your goal of a strong gang.";
@@ -650,6 +657,9 @@ when play ends:
 		else:
 			say "     Rescued finally by the military, you find yourself standing out in life afterwards due to your strange new zebra-like form. Eventually, you manage to find yourself a job that pays well enough, and though your promotion opportunities seem slim, it at least pays the bills. You find yourself feeling terribly isolated and alone at times as a changed creature in a world surrounded by humans, these feelings usually leading you to one of the local bars to drink until you feel better. On one of these trips, however, you run into another changed, a [one of]horse[or]lion[or]tiger[or]deer[or]gator[or]wolf[or]hyena[at random]-morph of all things, and while not quite of the same species, you certainly do find plenty in common in a world full of humans. Eventually, you end up back at your place, and a few nights later, you end up over at theirs. Almost before you know it, you are spending all of your free time together, and eventually, just end up getting a larger place for the both of you. You both find yourselves trying to make life better for the changed, or at least lower the level of discrimination. The two of you eventually attract several other misfit changed in the area, those without any others of their species around for support, and soon, you move into an even larger place, which is often full of many different species, working and living together in harmony (for the most part). It may be a very strange collection of individuals, but it looks like you managed to find a herd of your own to belong to after all...";
 
+
+Section 4 - Zebra Fur
+
 Table of Game Objects (continued)
 name	desc	weight	object
 "zebra fur"	"A tuft of black zebra mane fur."	1	zebra fur
@@ -664,5 +674,22 @@ to say zebra fur use:
 	say "Playing a bit with the coarse strands of hair, you stroke them over your arm. A moment later, they suddenly disintegrate into a fine powder which just seems to melt into your skin...";
 
 zebra fur is infectious. The strain of zebra fur is "Zebra Stallion".
-g
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"zebra cum"	"A plastic water bottle almost completely filled with a milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Zebra Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	zebra cum
+
+zebra cum is a grab object. zebra cum is cum.
+the usedesc of zebra cum is "[zebra cum use]";
+
+to say zebra cum use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy fluid cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 5;
+	SanLoss 5;
+	if "Iron Stomach" is not listed in feats of player:
+		infect "Zebra Stallion";
+
+instead of sniffing zebra cum:
+	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
+
 Zebra ends here.

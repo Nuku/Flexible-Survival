@@ -25,7 +25,7 @@ to say flotlook:
 		say "     This odd thing raises a lot of questions. Why is it just floating there? Shouldn't it be the same as all the other infected here? Without having to touch it, you can see that the thing clearly has a hole for 'use', so it's clearly the product of this blight's influence. If you're so daring as to 'play' with it, you imagine the end result may be equally unpredictable...";
 		say "     [italic type][if flotintense < 2]The thing looks completely inanimate. You're fairly certain there'll be little to no consequence in using it right now[else if flotintense < 4]The thing appears to be mostly in a mundane state right now, but it seems to subtly become excited as you approach. You could probably get away with using it[else if flotintense < 6]The thing seems tinged with a streak of wanton menace. You could probably get away with using it, but not for long[else if flotintense < 8]You feel ill at ease near the thing, as though you're being drawn to the tainted object. You don't think it'd be particularly wise to use it right now[else]The thing seems to undulate from the corners of your eyes, as though thrumming with an otherworldly need. You feel overwhelmingly drawn to the thing, but you'd have to be insane to use it now[end if]...[roman type][line break]";
 		if flotmarked is true:
-			say "     [italic type]You feel as though you've been marked by this object.[roman type]";
+			say "     [italic type]You feel as though you've been marked by this object.[roman type][line break]";
 	LineBreak;
 
 flotmarked is a truth state that varies.
@@ -165,10 +165,10 @@ to flotbind:
 				say "     Losing yourself to your overwhelming need, trapped within this vinyl prison, the inflatable dolphin shows no relent in perpetually milking you.";
 			say "     Eventually, you completely lose track of time. From your limited vision through the toy's eyes, you watch on as it finally wrenches itself free of the castle, doomed to constant abuse by this tainted suit as it carries you into the dark depths...";
 			WaitLineBreak;
-			now BodyName of Player is "Flotted";
 			now humanity of Player is 0;
-			end the story saying "You are milked perpetually by the toy.";
 			now Trixieexit is 1;
+			trigger ending "Flotted by Discarded Dolphin";
+			end the story saying "You are milked perpetually by the toy.";
 		else:
 			let k be 0;
 			now keychar is "INVALID";
@@ -435,11 +435,16 @@ to say flotstrugglebar:
 		say "[if struggleatt > 1]X[else]-[end if]";
 	say "[if struggleatt > 0]X[else]-[end if][bracket]";
 
-when play ends:
-	if BodyName of Player is "Flotted":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Flotted by Discarded Dolphin"	"BadEnd"	"Sex Slave"	Flotted by Discarded Dolphin rule	20	false
+
+This is the Flotted by Discarded Dolphin rule:
+	if ending "Flotted by Discarded Dolphin" is triggered:
 		say "     Cool ocean water the only balm against the intense heat of your perpetual enslavement, you're barely able to discern what the dolphin is actually doing, seemingly content to swim around playfully, meeting various creatures and peoples - all of whom appear wholly unaware of your ultimate fate, even as you moan out loudly with each thrust of the vinyl toy's tendrils.";
 		say "     On occasion, the creature even seems inclined to have fun with some of those it encounters, often [if Player is puremale and anallevel < 3]used to ride[else]made to be ridden by[end if] them. You're unsure if inflatable toy particularly enjoys this, or if it likes to surprise you from time to time.";
 		say "     No doubt content to milk you until the end of days, your memories blur into a haze of constant orgasms. Writhing against your tight, slippery prison with each motion against the waters, it's eventually all you can think of...";
+		the Player is imprisoned;
 
 
 Phantom Dolphin ends here.

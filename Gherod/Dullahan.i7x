@@ -364,14 +364,16 @@ to DullahanSummon1Choice1:
 		say "     Your bravery, however, is not rewarded. As soon as you come in reach of the horserider, you're presented with the cold, sharp feeling of his heavy blade across your neck. An intense pain takes over as the world around you spins before your eyes, until you stop feeling anything at all.";
 		WaitLineBreak;
 		now battleground is "Void";
-		now bodyname of player is "dead";
+		the Player was ended by "Decapitated by Dullahan";
+		trigger ending "Player has died";
 		end the story saying "Your body lies decapitated on the floor in a bloody mess.";
 	else if calcnumber is 4:
 		Linebreak;
 		say "     There is no way you can face a foe like this in battle! You must run away and find a way to escape this realm before it's too late. With this in mind, you turn your tail and start running, only hearing a deep, earth-shaking shout from behind in the form of a single word 'COWARD!'. Soon the horse trot catches up to you, and his intimidating presence is made obvious, right next to you. It's not long before you're presented with the cold, sharp feeling of his heavy blade across your neck. An intense pain takes over as the world around you spins before your eyes, until you stop feeling anything at all.";
 		WaitLineBreak;
 		now battleground is "Void";
-		now bodyname of player is "dead";
+		the Player was ended by "Decapitated by Dullahan";
+		trigger ending "Player has died";
 		end the story saying "Your body lies decapitated on the floor in a bloody mess.";
 
 to DullahanSummon1a:
@@ -400,13 +402,15 @@ to DullahanSummon1a:
 				say "     But unfortunately, you weren't strong enough. Without managing to connect a good attack with your initiative, you remain vulnerable, an easy prey for the Dullahan. A ghastly voice surges in your mind... '...YOU HAVE FAILED...!' It's not long before you're presented with the cold, sharp feeling of his heavy blade across your neck. An intense pain takes over as the world around you spins before your eyes, until you stop feeling anything at all.";
 				WaitLineBreak;
 				now battleground is "Void";
-				now bodyname of player is "dead";
+				the Player was ended by "Decapitated by Dullahan";
+				trigger ending "Player has died";
 				end the story saying "Your body lies decapitated on the floor in a bloody mess.";
 		else:
 			say "     Unfortunately, you're not fast enough. Without a quick reaction and support, you're vulnerable, and easy prey for the Dullahan. A ghastly voice surges in your mind... '...INTRUDERS WON'T BE SPARED...!' It's not long before you're presented with the cold, sharp feeling of his heavy blade across your neck. An intense pain takes over as the world around you spins before your eyes, until you stop feeling anything at all.";
 			WaitLineBreak;
 			now battleground is "Void";
-			now bodyname of player is "dead";
+			the Player was ended by "Decapitated by Dullahan";
+			trigger ending "Player has died";
 			end the story saying "Your body lies decapitated on the floor in a bloody mess.";
 
 to DullahanSummon1Fight:
@@ -555,7 +559,8 @@ to DullahanBadEnd:
 	say "     His words strike you [if player is submissive]as a tremendous disappointment, just when your body was craving to be used by him all the time[else]as commanding and compelling, and you outright understand why[end if]... 'We'll have an entire eternity for that.' The Dullahan just pulls you from the ground and makes you walk in front of him, his erection dandling between his legs as you both approach a shadowy shaped wagon. A look over your shoulder has your eyes meeting with the visage of your previous human shell. A body your soul no longer inhabits lies on the floor several meters behind you, one that you won't need nor miss anymore. Not for now, at least, as an eternity of servitude next to your new Master awaits you...";
 	WaitLineBreak;
 	now battleground is "Void";
-	now bodyname of player is "dead";
+	the Player was ended by "Soul taken away by Dullahan";
+	trigger ending "Player has died";
 	end the story saying "Your soul has been taken away by the Dullahan";
 
 Dullahan ends here.

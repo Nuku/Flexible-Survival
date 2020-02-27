@@ -89,11 +89,14 @@ When Play begins:
 	add "Ebonflame Drake" to infections of FurryList;
 	add "Ebonflame Drake" to infections of MythologicalList;
 	add "Ebonflame Drake" to infections of HermList;
+	add "Ebonflame Drake" to infections of BarbedCockList;
 	add "Ebonflame Drake" to infections of TaperedCockList;
 	add "Ebonflame Drake" to infections of InternalCockList;
 	add "Ebonflame Drake" to infections of BipedalList;
 	add "Ebonflame Drake" to infections of FlightList;
 	add "Ebonflame Drake" to infections of TailList;
+	add "Ebonflame Drake" to infections of OviImpregnatorList;
+	add "Ebonflame Drake" to infections of FirebreathList;
 	add "Ebonflame Drake" to infections of TailweaponList;
 	now Name entry is "Ebonflame Drake";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
@@ -252,8 +255,13 @@ When Play begins:
 
 Section 3 - Miscellaneous
 
-when play ends:
-	if BodyName of Player is "Ebonflame Drake":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Ebonflame Drake Infection"	"Infection"	""	Ebonflame Drake Infection rule	1000	false
+
+This is the Ebonflame Drake Infection rule:
+	if Player has a body of "Ebonflame Drake":
+		trigger ending "Ebonflame Drake Infection";
 		if humanity of Player < 10:
 			say "     Overcome by your powerful, draconic infection, you're pulled inexorably towards your kin, informed by your dark, fiery strain on how you must act";
 			if Player is submissive:

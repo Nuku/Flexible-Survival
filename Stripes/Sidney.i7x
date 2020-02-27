@@ -538,16 +538,21 @@ an everyturn rule:
 			now lust of Sidney is 0;
 
 
+[
 Section 8 - Endings
 
-[
-when play ends:
-	if humanity of Player >= 10:
-		if HP of Sidney >= 3 and Sidney < 99:
-			say "***";
-		else if HP of Sidney is 99:
-			say "***";
-]
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Sidney's Epilogue"	"NPC"	""	Sidney's Epilogue rule	900	false
 
+This is the Sidney's Epilogue rule:
+	if humanity of Player < 10 or if HP of Sidney < 3:
+		make no decision;
+	trigger ending "Sidney's Epilogue"; [Here it states, that the ending has been played.]
+	if HP of Sidney < 99:
+		say "***";
+	else if HP of Sidney is 99:
+		say "***";
+]
 
 Sidney ends here.

@@ -27,7 +27,7 @@ to say losetosnowmeow:
 		if Ball Size of Player > 9:
 			infect "Snow Leopard"; [additional infection from large load]
 			decrease hunger of Player by a random number between 2 and 5;
-	else if ( BodyName of Player is "Snow Leopard" or BodyName of Player is "Panther Taur" ):
+	else if ( Player has a body of "Snow Leopard" or Player has a body of "Panther Taur" ):
 		if Breast Size of Player > 2 and lastmilking - turns > 7:
 			say "     Taking in your desirable, feline form, the sexy snowmeow licks his lips as he gazes upon your lovely bosom. When a few playful pinches to your nipples brings forth some milk, his eyes widen with lustful thirst at them and has his lips around them almost instantly. You moan and start to purr softly as his fingers run over your body and move to tease your pussy. He strokes your wet folds and spreads them before plunging his cock into you, making your body tremble at the sudden but pleasurable intrusion.";
 			say "     He pounds away at your pussy as he nurses from your bosom, drinking down your rich, feline milk to slake his thirst while exciting his lusts further. His raspy tongue and sharp teeth are used, but skillfully, to tease and excite you further. You are lost in a lustful haze of feeding this impressive male all you can give.";
@@ -326,14 +326,21 @@ When Play begins:
 
 
 An everyturn rule:
-	if BodyName of Player is "Snow Leopard":
+	if Player has a body of "Snow Leopard":
 		increase thirst of Player by a random number between 0 and 1;
 	if SkinName of Player is "Snow Leopard":
 		increase thirst of Player by 1;
 
 
-when play ends:
-	if BodyName of Player is "Snow Leopard":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Snow Leopard Infection"	"Infection"	""	Snow Leopard Infection rule	1000	false
+
+This is the Snow Leopard Infection rule:
+	if Player has a body of "Snow Leopard":
+		trigger ending "Snow Leopard Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10 and HP of Sven is 54:		[Special: Snow Leopard + Svetlana]
 			say "     As the city's oppressive heat beats down on you, you feel the last of your humanity boiling away. You moan in a mix of lust and thirst as you set off into the city, roaming in search of something to wet your throat and slake your lusts. After ravaging a few of those panthers for their milk, you remember another sexy snow leopard and stumble your way to Lisa's Porn Shop. When you come in, Svetlana greets you happily, moaning lustfully under your playful groping all the way to the back room. After a long, wild rut with her pet, Lisa makes sure you get a satisfying drink of her mouse-milk. You become another snowmeow pet for her[if Player is female] for her to enjoy with her first feline pet[else], using you to mount her first pet, as she has no interest in your fully male body[end if]. Becoming a pet after succumbing leaves you with a rather simple mind, so you have trouble following exactly what your mistress does with her new group of friends, though it is clear that she is someone important. You and Svetlana are always well taken care of and protected. Lisa always makes sure to care for your needs, treating you with loving kindness[if Player is male]. Svetlana, despite having several other playmates, will only mate with you, letting you breed her exclusively when her heats come[end if].";
 		else if humanity of Player < 10:

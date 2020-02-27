@@ -213,6 +213,7 @@ When Play begins:
 	now Species Name entry is "Cheetah"; [name of the overall species of the infection, used for children, ...]
 	add "Feral Cheetah" to infections of FelineList;
 	add "Feral Cheetah" to infections of FurryList;
+	add "Feral Cheetah" to infections of FeralList;
 	add "Feral Cheetah" to infections of NatureList;
 	add "Feral Cheetah" to infections of MaleList;
 	add "Feral Cheetah" to infections of BarbedCockList;
@@ -415,8 +416,13 @@ to say cheetahheat:
 
 Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "Feral Cheetah":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Feral Cheetah Infection"	"Infection"	""	Feral Cheetah Infection rule	1000	false
+
+This is the Feral Cheetah Infection rule:
+	if Player has a body of "Feral Cheetah":
+		trigger ending "Feral Cheetah Infection"; [Here it states, that the ending has been played.]
 		if cheetahmate is 0:
 			if the humanity of Player < 10:
 				if Player is female:

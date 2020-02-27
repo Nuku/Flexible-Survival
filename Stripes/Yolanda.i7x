@@ -689,13 +689,22 @@ pyrite (Museum)
 light-up toy/ball (State Fair)
 ]
 
-when play ends:
+Section 6 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Jewelry box ending add-on"	"Quest"	""	Jewelry box ending add-on rule	850	false
+["Yolanda's Epilogue"	"NPC"	""	Yolanda's Epilogue rule	900	false]
+
+This is the Jewelry box ending add-on rule:
 	if jbfound is 2 and humanity of Player >= 10:		[Jewelry box ending add-on]
+		trigger ending "Jewelry box ending add-on";
 		say "     When you leave the city, you hang onto the jewelry box and its contents. Suspected of having looted it, you concoct a tale about how it was originally your great-grandmother's and eventually your mother's. She'd taken it with her when escaping her house, but ended up succumbing to the infection, taken down by some of those huskies. You fake a few tears and choke out that it's the only memento of your family you've got left. And while not everyone buys it, there is no real proof else and they've got much more important things to deal with than some jewelry. You do have to grease the occasional palm with something from the box, but you manage to keep most of it by the time you're released. It makes for a good source of starting cash as you try to get your new life started[if Player is female]. You even keep a few of the nicest pieces for yourself to wear[end if].";
 
 [
-when play ends:
+This is the Yolanda's Epilogue rule:
 	if HP of Yolanda > 1:
+		trigger ending "Yolanda's Epilogue";
 		say "***";
 ]
 

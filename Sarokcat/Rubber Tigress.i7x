@@ -2,23 +2,27 @@ Version 2 of Rubber Tigress by Sarokcat begins here.
 [ Version 2.1 - Added M/F oral player loss ]
 
 
-"Adds a Rubber tigress to Flexible Survival's Wandering Monsters table."
+"Adds a Rubber Tigress to Flexible Survival's Wandering Monsters table."
 
 
 Section 1 - Creature Responses
 
-to say Rubber tigress attack:
+to say Rubber Tigress attack:
 	if Player is male and a random chance of 2 in 3 succeeds:
 		say "     [if HP of Player > 0]Despite your surrender, the tigress doesn't let up, bowling you over with a final charge[else]With one last charge, the tigress bowls you over[end if], landing on top of you as you fall to the ground. As you lie there, stunned, she takes advantage of the situation to reach down and spread your legs wide. You swear you see a feline grin cross her rubber muzzle as she lowers one of her hands down to stroke your erect cock. The feel of her soft and smooth paw rubbing up against your cock makes you moan and give up any pretense at fighting as you thrust upwards helplessly into her paw. With a squeaky giggle the tigress positions herself over you, before carefully guiding you into her with her paw.";
 		say "     The feeling of her soft, rubbery folds surrounding your cock is amazing; you thought her paw was nice, but this is somehow a hundred times better. You moan out loud as her folds almost seem to meld themselves around your cock, adjusting their contours to grip it and massage it perfectly. The tigress lies herself down on top of you, even as you thrust into her wonderfully tight and slick passage, she takes advantage of your open mouth, covering it with her muzzle in a rough and slick kiss. You almost gag for a second as the strong taste of warm rubber fills your mouth as her tongue darts inside, only to find after a second that your body seems to have adapted, finding the taste almost exotic and arousing as she teases your tongue into tangling with hers. Her body begins vibrating as she rubs it against yours, the strange purring sound filling your ears, and making your cock twitch and jump as her body vibrates and grips it tightly. Finally the sensations are too much for your overwhelmed mind, and you cry out into her eager muzzle as you explode into the tigress, shooting your seed into her eager body. Your hands grip her soft rubber body to yours tightly as she purrs and writhes above you. Exhausted and drained, you collapse onto the ground underneath her, even as she continues to rub her soft rubber all over you, your eyes drift closed for a minute. When you open them later, you find yourself exhausted and alone in the carnival, and slowly start to pull yourself back together, the memory of your exciting time with the tigress still running through your head as you leave.";
+		CreatureSexAftermath "Rubber tigress" receives "PussyFuck" from "Player";
 	else if Player is male:
 		say "     [if HP of Player > 0]Despite your surrender, the tigress doesn't let up, bowling you over with a final charge[else]With one last charge, the tigress bowls you over[end if]. The rubber creature manages to stay upright and looks you over, licking her chops as she does. Climbing atop you, she presses her juicy puss to your face, giving you a strong whiff of the rubbery scent of her arousal. Burying her muzzle in your crotch, she starts licking and kissing at your cock even as she grinds her dripping cunt to your lips. You are momentarily struck by the taste of warm rubber before your body seems to adapt and the taste becomes exotic and arousing for you. You dive your tongue into her snatch as she licks and sucks at your [cock size desc of Player] manhood.";
 		say "     You can feel her slick, rubbery tongue gliding across your [Cock of Player] flesh, licking up and down it[if Cock Length of Player > 18]. She takes your full length with relative ease, her flexible flesh stretching around it as she takes it all in[end if]. The horny feline licks and sucks at your manhood while your increasingly sex-addled mind drives you to return the favor by eating her out with increasing skill and vigor. Eventually the two of you have a sticky release that leaves you both smelling of sex and rubbery cat lust.";
+		CreatureSexAftermath "Rubber tigress" receives "OralCock" from "Player";
+		CreatureSexAftermath "Player" receives "OralPussy" from "Rubber tigress";
 	else:
 		say "     [if HP of Player > 0]Despite your surrender, the tigress doesn't let up, bowling you over with one last charge, the two of you tumbling[else]With one last charge, the two of you tumble[end if] to the ground of the carnival. As you lie there, stunned, the squeaky tigress moves her way down your body, until you find her spreading your legs wide as she examines your crotch with her rubber head. Seemingly somewhat disappointed at your lack of rubbery toys for her to play with down below, she lets out a squeaky sigh, before lowering her soft, rubbery head to your gaping cunt. You gasp as her long feline tongue works its way inside you, its smooth texture feeling wonderful as it parts your feminine folds. Soon the rubbery beast is rubbing her soft paws along the inside of your legs, while her rubbery whiskers tickle at your thighs as she laps up your juices like the most delicious cream. Your hands run along the back of her smooth rubbery head as you look for something to hold onto as she brings you to orgasm again and again, until you pass out, helpless under her expert ministrations. Eventually you wake up in the carnival to find yourself alone, and start to pull yourself back together.";
+		CreatureSexAftermath "Rubber tigress" receives "OralPussy" from "Player";
 	rubtigify;
 
-To say Rubber tigress loss:
+To say Rubber Tigress loss:
 	say "     With a strange squeaking noise, the large rubber tigress seems to deflate slightly, her body seeming to shrink in on itself as she staggers away, looking desperately for a rubber patch kit. She gives you one last longing look over her shoulder as she flicks her tail to the side, giving you a glimpse of what you might have had before she disappears into the midway.";
 
 
@@ -32,21 +36,21 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
-	add "Rubber tigress" to infections of FelineList;
-	add "Rubber tigress" to infections of FurryList;
-	add "Rubber tigress" to infections of LatexList;
-	add "Rubber tigress" to infections of FemaleList;
-	add "Rubber tigress" to infections of BarbedCockList;
-	add "Rubber tigress" to infections of SheathedCockList;
-	add "Rubber tigress" to infections of BipedalList;
-	add "Rubber tigress" to infections of TailList;
-	now Name entry is "Rubber tigress";
+	add "Rubber Tigress" to infections of FelineList;
+	add "Rubber Tigress" to infections of FurryList;
+	add "Rubber Tigress" to infections of LatexList;
+	add "Rubber Tigress" to infections of FemaleList;
+	add "Rubber Tigress" to infections of BarbedCockList;
+	add "Rubber Tigress" to infections of SheathedCockList;
+	add "Rubber Tigress" to infections of BipedalList;
+	add "Rubber Tigress" to infections of TailList;
+	now Name entry is "Rubber Tigress";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]She swipes at you with her surprisingly sharp claws.[or]The rubber beast rubs itself on you, leaving a patch of orange and black rubber attached to your skin.[or]The beast draws back for a second, and then springs forward in a rush, knocking you to the ground.[or]Crouching low for a second, the tigress explodes into motion as she lashes you again and again with her rubber paws.[or]She opens her muzzle wide, revealing the inside of her pink rubber mouth, and her soft rubber teeth, before clamping her jaws down on your arm, strangely for being bitten by the squeaky rubber beast, it actually feels kind of good.[or]The tigress grabs some nearby fair prizes, and starts throwing them at you![or]Panting as she shows off her body, she turns to wiggle her ass at you, it isn't until you feel something on your leg that you realize she has rubbed her tail up the inside of your thighs, leaving a trail of rubber behind.[or]She slams herself into you recklessly, her hands moving to do all she can to spread her orange rubber-like coating to your body as well.[at random]";
-	now defeated entry is "[Rubber tigress loss]";
-	now victory entry is "[Rubber tigress attack]";
+	now defeated entry is "[Rubber Tigress loss]";
+	now victory entry is "[Rubber Tigress attack]";
 	now desc entry is "[mongendernum 4]     A large shiny tigress appears in front of you, stalking forward with an evil grin on her sleek rubber muzzle, her stripes sleek and her rubbery nipples standing out brightly in the colored fair lighting.";
 	now face entry is "bright and shiny orange and black striped face, its tiger-like appearance somehow conveying both sexiness and cuteness at the same time. With an overlarge muzzle and soft rubber whiskers, your rubber tiger ears cocked forward while your overlarge cat-like eyes stare out of your tiger"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "sleek and smooth, your body is built for stalking and hunting, with large exaggerated muscles and your hands and feet converted into overlarge tiger paws"; [ Body Description, format as "Your Body is (your text)"]
@@ -194,12 +198,17 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
+to rubtigify:
+	infect "Rubber Tigress";
+
+
+Section 3 - Tiger Patch
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "Tiger patch"	"A strange swatch of sticky rubber that looks somewhat like a bandage or clothing patch, it looks like it could be useful to seal up wounds or for patching things, interestingly enough, it seems to have orange and black tiger stripes on it."	1	Tiger patch
 
-Tiger patch is a grab object. It is part of the player. Understand "patch" as Tiger patch. Tiger patch is infectious. The strain of Tiger patch is "Rubber tigress".
+Tiger patch is a grab object. It is part of the player. Understand "patch" as Tiger patch. Tiger patch is infectious. The strain of Tiger patch is "Rubber Tigress".
 
 The usedesc of Tiger patch is "Taking out the small piece of tiger-striped material, you note it could be useful as either a patch or a stylish accessory or even a bandage. Holding it up to your skin for a minute you smile at how natural it seems to look, almost like part of your body. You blink as you try to pull it away only to realize that it has actually become part of you! You tug futilely on the soft striped rubber, even as you can feel the infection spreading through your body.";
 
@@ -207,9 +216,15 @@ instead of sniffing Tiger patch:
 	say "The stuff smells of rubber and felines.";
 
 
+Section 4 - Endings
 
-when play ends:
-	if BodyName of Player is "Rubber tigress":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Rubber Tigress Infection"	"Infection"	""	Rubber Tigress Infection rule	1000	false
+
+This is the Rubber Tigress Infection rule:
+	if Player has a body of "Rubber Tigress":
+		trigger ending "Rubber Tigress Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Sven is in the bunker:
 				say "     Finally giving in to your new instincts, you return to the bunker and set yourself upon Sven. The snow leopard fellow is drawn in by your exotic, feline body and is soon enjoying a lustful, sexy romp with your rubbery body. As you mate with him, he changes, becoming a sexy male snowmeow made of [if lust of Sven is 0]gray[else if lust of Sven is 1]blue[else if lust of Sven is 2]yellow[end if] rubber and submits to his infection and his lustful needs fully. You and your newly inflatable kitty companion make it off across the city together, drawn to the midway and the felines who started this delightful transformation. There you begin the hunt for them, soon smelling the enticing rubbery scent through your changed nose. You find several nearly identical tigresses gathered in one of the maintenance sheds working on something.";
@@ -227,10 +242,6 @@ when play ends:
 				say "     Soon your smugness is vindicated as you are picked up and moved out of the city, and eventually shipped on your way after a postal hold, the look on your friends face when he receives you is absolutely priceless. However the look on your friends new rubbery muzzle after you finish wrapping your lithe form around his is even better, soon you and your new rubber tigress friend begin converting the rest of the building, passing your forms off as fetishwear until your prey are too close to know better. Eventually there is a response to your rubbery spread, but once more you all gather yourself up and mail yourself out to new locations, leaving the military response to shake their heads over the empty buildings with the strange rubbery smell, while you begin again in a new location...";
 		else:
 			say "     When the military arrives they seem surprised at your strange form, but you manage to convince them to take you with them anyways. After several experiments to see how you can survive with most of your body made out of rubber, eventually they give up and have to let you go. You wander around trying to find a job, but your strange looks make it hard for you to fit in with normal society, and your lustful appetites make it hard for others to trust you. Eventually though you do manage to find a job, strangely enough in the porn industry, where your amusing features and ability to go for hours on end seems to be a major benefit in the newly found market of infected porn. Eventually you manage to come to an arrangement with a few of your other co stars, and end up moving in together and forming your own little company, Living Toys inc. The future seems bright for you and your fellow sex toy beasts, even if you always keep looking for that wonderful tigress who transformed you...";
-
-
-to rubtigify:
-	infect "Rubber tigress";
 
 
 Rubber Tigress ends here.

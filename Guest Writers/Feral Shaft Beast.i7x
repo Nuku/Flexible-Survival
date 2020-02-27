@@ -48,9 +48,12 @@ When Play begins:
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Feral Shaft Beast"; [name of the overall species of the infection, used for children, ...]
 	add "Feral Shaft Beast" to infections of BodyHorrorList;
+	add "Feral Shaft Beast" to infections of FeralList;
 	add "Feral Shaft Beast" to infections of HermList;
+	add "Feral Shaft Beast" to infections of BarbedCockList;
 	add "Feral Shaft Beast" to infections of QuadrupedalList;
 	add "Feral Shaft Beast" to infections of TailList;
+	add "Feral Shaft Beast" to infections of TailweaponList;
 	now Name entry is "Feral Shaft Beast"; [Name of your new Monster]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
@@ -217,8 +220,13 @@ to sharethelust:
 
 [everyturn rule consolidated with Anthro Shaft Beast]
 
-when play ends:
-	if BodyName of Player is "Feral Shaft Beast":
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Feral Shaft Beast Infection"	"Infection"	""	Feral Shaft Beast Infection rule	1000	false
+
+This is the Feral Shaft Beast Infection rule:
+	if Player has a body of "Feral Shaft Beast":
+		trigger ending "Feral Shaft Beast Infection";
 		if humanity of Player < 10:
 			say "     After taking a long nap one day, you no longer remember your name or who you were. You feel bliss like no other coursing through your every cell, and you follow a beautiful song that leads you underground toward the wonderful shaft beast hive. Settling in with your new siblings, the Broodmother replaces your old, pointless life with one of bliss and eternal lust, your mind now connected to a telepathic neural network, and you serve eagerly as a pet to other anthro shaft beasts and the Broodmother herself. It didn't take long for you to become her favorite - her little lustful monster.";
 			say "     Eventually the Broodmother takes her love for you to another stage. It starts like any other worship session, pushing your gigantic head into the Broodmother's cunt... but then you can't pull away. Your head begins to merge with the Broodmother's main spire, your front legs with hers, and her tail with your spine. Soon enough, you both emerge as a single being - a Shaft Beast Taur. The Broodmother grins widely and lets bliss spread across the hive. It'll soon be time to take over the surface...";

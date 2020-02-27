@@ -58,6 +58,7 @@ when play begins:
 	add Centaur Gangbang to BadSpots of MaleList;                [male centaurs]
 
 Instead of resolving a Centaur Gangbang:
+	project the Figure of CentaurStallion_hard_icon;
 	say "     Moving between the large piles of rubble left by several buildings, you hear some noise from further ahead and decide to investigate. You make your way forward carefully, ducking behind the remains of walls and anything else available, and pretty soon a small group of centaurs comes into sight. There are three stallions and a mare, with one of the males on her back, his long cock plunging in and out of her dripping pussy. The other two stand next to them, cheering their buddy on and fondling the mare's body and breasts.";
 	say "     You watch the centaurs mating for a while, unnoticed in your hiding place. Then it becomes obvious that there is someone else observing them - the clatter of rocks pulls your attention to the side, where you spot a lone human halfway up a pile of rubble. It's a black man with blond dreadlocks, clothed in little more than a pair of ragged jeans. Seems like he's been through a lot already. Looking back at the centaurs, the two bystander stallions are already galloping towards this interloper, intent expressions on their faces. The man curses and dashes off, running down the pile's incline and trying to get away. Sadly for him, centaurs on their four legs are a lot faster and they quickly catch up. After a short struggle, they carry the now dazed man back to the other centaurs between them.";
 	WaitLineBreak;
@@ -831,8 +832,13 @@ to say ThomasSex9: [player's ass fucked by Thomas]
 
 Section 4 - Endings
 
-when play ends:
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Thomas['] Epilogue"	"NPC"	""	Thomas' Epilogue rule	900	false
+
+This is the Thomas' Epilogue rule:
 	if (HP of Thomas > 0 and HP of Thomas < 100) and Dry Plains is known and humanity of Player > 10: [player met him and is sane]
+		trigger ending "Thomas['] Epilogue";
 		say "     After getting out of the city, you see Thomas again a while later and he invites you out to a farming community in the countryside where many non-humanoid infectees settled. Many of the buildings look rather strange, from a human perspective, being very open for large forms or arching high without any stairs since the inhabitants have wings. The black centaur is one of the leaders of the settlement, standing at the head of the herd of centaurs making up about a third of the population. [if HP of Thomas is 51 or HP of Thomas is 52]Most of them are females, their equine bellies bulging with proof of the potency of the black stallion's seed. They seem quite happy, talking and laughing with each other - kinda like a large polygamous family[else]They're more or less evenly split between males and females, with several recognizable couples and the rest enamored with the black centaur herm. Seems like a happy and content group, talking and laughing with each other - kinda like a large polygamous family[end if].";
 		if HP of Thomas is 4 or HP of Thomas is 5:[player knocked him up]
 			say "     Calling a young filly out to meet you, Thomas introduces her to you as Ellen, and you to her as her father. The product of your coupling in the city, the little girl is very nice and chipper, happily chatting to get to know you and showing you around in the herd. Later, after she's gone off to play with other foals, Thomas invites you to his hut to rekindle your relationship and you end up fucking like sex-starved bunnies all night. You come back to visit him quite often after that, both to get it on as well as to see your growing brood of kids that result from your couplings.";

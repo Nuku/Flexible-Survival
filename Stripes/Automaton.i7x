@@ -92,7 +92,6 @@ When Play begins:
 	add "Automaton" to infections of MachineList;
 	add "Automaton" to infections of MaleList;
 	add "Automaton" to infections of BipedalList;
-	add "Automaton" to infections of TailList;
 	now Name entry is "Automaton"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
@@ -280,8 +279,15 @@ to say silversemenuse:
 the scent of silver semen is "The contents of the jar has a metallic smell to accompany the musky scent of semen.".
 
 [
-when play ends:
-	if BodyName of Player is "Automaton":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Automaton Infection"	"Infection"	""	Automaton Infection rule	1000	false
+
+This is the Automaton Infection rule:
+	if Player has a body of "Automaton":
+		trigger ending "Automaton Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You succumb to your automaton infection.";
 		else:

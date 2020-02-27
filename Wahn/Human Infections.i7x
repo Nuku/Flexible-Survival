@@ -344,8 +344,15 @@ When Play begins:
 ]
 
 
-when play ends:
-	if BodyName of Player is "Herm Human":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Herm Human Infection"	"Infection"	""	Herm Human Infection rule	1000	false
+
+This is the Herm Human Infection rule:
+	if Player has a body of "Herm Human":
+		trigger ending "Herm Human Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10: [succumbed]
 			say "     Succumbing to the inner voice that tells you to return to your master, you make your way back to the dark tunnels under the Trevor Labs. Walking through the shadowy hallways filled with tentacled aberrations without fear, you soon find the thought eater again, joining his growing throng of obedient slaves.";
 			if Player is female and "Sterile" is not listed in feats of Player: [has a vag, not sterile]

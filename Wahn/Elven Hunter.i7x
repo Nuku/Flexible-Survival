@@ -8,9 +8,9 @@ Section 1 - Creature Responses
 to say Hunter wins:
 	if inasituation is true:
 		stop the action; [text taken care of at the source]
-	if HP of Player > 0:
+	if HP of Player > 0: [player surrendered]
 		say "     'Pathetic,' he sneers and shoves you to the ground. 'We had hoped this world would have finally brought forth something worthy of The Hunt again. A true warrior never surrenders.' He leaves you lying there, saying, 'You're not even worth sullying my blade. Do something useful with yourself - like serving as food for more worthy creatures.' He then silently vanishes into the shadows between the trees.";
-	else:
+	else: [player was beaten in a fight]
 		if BodyName of Player is "Woof Elf" or BodyName of Player is "Elven Hunter":
 			say "     'And you want to call yourself an elf? Any novice hunter would have lasted longer in his first summer,' he scoffs at you. Pulling off your clothes, the hunter looks you over and touches your naked body, then remarks 'The tiny machines of this realm made you look the part, enough to fool pixies and lower fey. But believe me - you'll never be a true elf unless you get accepted for The Hunt.'";
 		else if ( BodyName of Player is listed in infections of Reptilelist and SkinName of Player is listed in infections of Reptilelist ):
@@ -290,8 +290,15 @@ When Play begins:
 ]
 
 
-when play ends:
-	if BodyName of Player is "Elven Hunter":
+Section 3 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Elven Hunter Infection"	"Infection"	""	Elven Hunter Infection rule	1000	false
+
+This is the Elven Hunter Infection rule:
+	if Player has a body of "Elven Hunter":
+		trigger ending "Elven Hunter Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     Feeling all attachments to humanity and this world fading, you make your way to the park and go looking for the elves. Soon you hear one, at first, then many hunting horns in the distance, but drawing closer and closer. A large party of elves on horses and other, less easily recognizable beasts, breaks through the underbrush and surrounds you. The elf you met before is among them, and invites you to accompany the hunt through this and other worlds. You accept, swinging yourself on top of a black stallion that gets brought forward for you, then ride with them into the magical mist of a large portal, leaving this world - for now.";
 		else:

@@ -280,9 +280,13 @@ When Play begins:
 
 Section 3 - Endings
 
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Latex Ermine Infection"	"Infection"	""	Latex Ermine Infection rule	1000	false
 
-when play ends:
-	if BodyName of Player is "Latex Ermine":
+This is the Latex Ermine Infection rule:
+	if Player has a body of "Latex Ermine":
+		trigger ending "Latex Ermine Infection"; [Here it states, that the ending has been played.]
 		if Player is pure and Breast Size of Player > 0:
 			project the figure of LatexErmineIndigo_icon;
 		if humanity of Player < 10:

@@ -17,6 +17,7 @@ when play begins:
 	add Guard Gryphon to BadSpots of FurryList;
 
 Instead of resolving a Guard Gryphon:
+	project Figure of BlueGryphon_soft_icon;
 	say "     You come across a hermaphrodite gryphon, this one with a red banner with an 8-pointed silver star in the center. She is watching the sky from a rooftop, as if watching for others of her kind in the air. The guard seems to notice your nearing presence as you approach her position.";
 	WaitLineBreak;
 	If resolution of Guard Gryphon is 0:

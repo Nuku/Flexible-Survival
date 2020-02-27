@@ -17,11 +17,9 @@ The sarea of Egyptian Wing is "Museum".
 Instead of Resolving a Egyptian Wing:
 	say "     Exploring the halls of the city's museum, you're amazed at the sheer amount of archaic objects on display; artifacts and relics from across the globe are here, objects from different times in humanity's lifetime proudly presented throughout the hallways of the Museum. Haphazardly choosing a corridor to follow, you continue to be astounded by the insane amount of history and knowledge present, learning so much in your brief jaunts through the labyrinthine passages. So enraptured by the exhibits within, you almost barge straight into an information sigh standing in the middle of the corridor, barely preventing yourself from bashing yourself against it. Glaring irritatedly at the offending signpost, you take a second to read the notice, wondering what's so important that someone left it in the middle of the hallway. Displayed in bold lettering across the paper tacked to the signpost is:";
 	LineBreak;
-	say "     [bold type]   The Egyptian Wing[roman type]";
-	LineBreak;
-	say "     [bold type]Come see the wonders[roman type]";
-	LineBreak;
-	say "     [bold type]    of Ancient Egypt![roman type]";
+	say "     [bold type]   The Egyptian Wing[roman type][line break]";
+	say "     [bold type]Come see the wonders[roman type][line break]";
+	say "     [bold type]    of Ancient Egypt![roman type][line break]";
 	LineBreak;
 	WaitLineBreak;
 	say "     You recall that this is where Valerie said that she was in when the nanite outbreak began; you can only begin to imagine what wonders await you in the exhibits ahead. Grabbing your map, you mark down the location of the Egyptian Wing; you don't want to forget how to get here.";
@@ -420,7 +418,7 @@ instead of conversing Amuran:
 		say "     Unsurprisingly, you see that Amuran has (probably) not moved from his sitting position since you've last seen him; he's still sitting in front of the glimmering pool of water, meditating peacefully. Quietly approaching him, you quickly figure out that he still does not notice you. Once again tapping his shoulder, he soon turns to look at you, letting you talk first. Searching around in your pack for his emblem, you pull out the winged sun and hand it to him, giving him back one of his godly conduits.";
 		say "     Rapidly closing his chitinous hands over his sigil, beams of light begin to emanate from the emblem, shining out brilliantly in the warm air surrounding you. In a few seconds, a blast of orange light shoots out from the shining emblem; as the light fades, it seems that the sigil is gone. Standing in front of you is a contented-looking Amuran, stretching out happily in the shining rays of the sun.";
 		say "     'I extend my thanks to you, mortal, for bringing back that which belongs to me. There is nothing physical that I can give you in return, but I hope that power should do.' Rapidly putting an insectoid hand to your head, you feel bolts of divine energy shoot through you, soon overpowering your senses. Only seconds later, the bursts of energy end; Amuran removes his hand, and you take a few moments to gather your thoughts. Looking over yourself, you feel stronger, faster; it seems as if you were given a small blessing!";
-		say "[bold type]     Your strength, dexterity, and stamina have all increased by 1![roman type]";
+		say "[bold type]     Your strength, dexterity, and stamina have all increased by 1![roman type][line break]";
 		StatChange "Strength" by 1;
 		StatChange "Dexterity" by 1;
 		StatChange "Stamina" by 1;

@@ -525,6 +525,8 @@ Instead of resolving a contract hyenegotiation:
 
 to say HyenegotiationHyenaAbuse:
 	say "their hands teasing and stroking your [Skin of Player] skin. Before long, you are dragged into the crowd, where tons of spotted forms rub up against you, and soon their thick, knotted cocks are rubbing up against you as every orifice on your body is stuffed full of their thick hyena meat. You lose track of time and the number of cocks that use your weakened body through the evening, your body responding with increasing eagerness to their assault as they pass you around like a party favor as the celebration continues. You hear the sounds of several other fights going on in the background, but find it hard to care about anything other than the next lovely black cock that is about to be stuffed into you. Eventually your mind is unable to take any more stimulation, and you pass out even as they continue to use your all to pliant and sexy form to slake their perverse desires. When you finally wake up much later, you are relieved to discover that while you are almost completely covered in the hyenas sticky cum, they appear to have left you lying there on the street where the party was rather than taking you with them. Shifting your aching body slightly, you hear something crinkle, and you look down to see that someone has tossed a note and the paper from fancy down next to you. Picking up the note first, you begin to read the hyenas message. 'Well that was certainly a fun night, almost worth the concessions you asked for, so hey we signed your little paper. Not that we really think a weakling like you has a chance to take over the Stables, but at least if you do we know it won't be hard to renegotiate if we really need to. Besides, the thought of such an eager hyena slut in charge of the Stables is pretty amusing you have to admit,' it says, and you sigh as you check and see that yes they did indeed sign the new agreement, though somehow you really don't think you will be telling Fancy about just how you got the hyena gang to agree as you pick yourself up and head back to the library to clean up.";
+	CreatureSexAftermath "Player" receives "AssFuck" from "Hyena Herm";
+	CreatureSexAftermath "Player" receives "OralCock" from "Hyena Herm";
 	infect "Hyena Herm";
 	infect "Hyena Herm";
 	infect "Hyena Herm";
@@ -560,22 +562,30 @@ instead of resolving a Horsepitfight:
 				now Resolution of Horsepitfight is 1; [won the pit fighting]
 				now Horsepitfight is resolved;
 			else if fightoutcome > 19 and fightoutcome < 30: [lost]
-				say "You lie there helplessly on the floor, your body well-used by the large stallions already, only to groan helplessly as you hear the laughter of the other stallions as they close in around you. [HorsePitFightAbuse]";
+				say "You lie there helplessly on the floor, your body well-used by the large stallions already, only to groan helplessly as you hear the laughter of the other stallions as they close in around you.";
+				HorsePitFightAbuse;
 				now Resolution of Horsepitfight is 2; [lost the pit fighting]
 			else if fightoutcome is 30: [fled]
-				say "You manage to get away from your attackers only for a second before the watching horsemen pile onto you and drag you into their midst. [HorsePitFightAbuse]";
+				say "You manage to get away from your attackers only for a second before the watching horsemen pile onto you and drag you into their midst.";
+				HorsePitFightAbuse;
 				now Resolution of Horsepitfight is 3; [tried to flee the pit fighting]
 		else:
 			say "The brutish horsemen snort derisively at you, but let you leave for now, though one of them comments snidely that you can prepare all you want, but if you aren't ready to handle them, you certainly aren't ready to handle a powerful stallion like the Stablemaster. Striding back down the halls of the Stables as the horsemen laugh in amusement, you resolve to return sometime soon to wipe the smirks off of their equine muzzles.";
 	else:
 		say "Wandering through the halls of the Stables, you hear a strange cheering sound coming from nearby, somewhat curious you look down the hall towards what appears to be the door to one of the convention rooms, which has a sign hanging on the door. Moving closer you read the rather crudely lettered sign, which merely says 'Fight club' with a small scrawl underneath it which reads 'losers will be sluttified.' You jump slightly as you hear another cheer from behind the closed doors, and underneath the cheer, the unmistakable moans of sex. Shuddering slightly, you back off down the corridor and continue along your way.";
 
-when play ends:
-	if provingstallionhood is 4:
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Horse Pit Fight Abuse"	"BadEnd"	"Sex Slave"	Horse Pit Fight Abuse rule	20	false
+
+This is the Horse Pit Fight Abuse rule:
+	if ending "Horse Pit Fight Abuse" is triggered:
 		say "You quickly settle into your new life as a Stables pet, your mind constantly clouded with desire, and your body aroused and needy all the time. The leather straps of your halter and harness rub over you softly with every step, and you have found it increasingly hard to even feed yourself with the bit in your mouth constantly and your lack of hands now that the boots they put on you have finished giving you proper hooves. Still you find it hard to mind much, considering your many masters are always eager to whip out their lovely large cocks and feed you your favorite liquid treat, and your needy excited pussy never goes unattended for very long as well. And if you don't really understand why sometimes the horsemen smirk at you oddly or make comments regarding you... well at least you know your masters are all happy with you, and that is all a slutty little bondage pet like you needs now isn't it!";
+		the Player is enslaved;
 
 
-to say HorsePitFightAbuse:
+to HorsePitFightAbuse:
 	say "     You moan and try to struggle limply as they slip your new harness on, though the straps of leather feel increasingly comfortable as they slip into place on your changing body, the leather straps pushing your increasingly large female breasts out and making them incredibly sensitive. The tail ring holds your tail up, exposing your increasingly sexy, pert little ass and fresh and dripping mare sex, and the boots locking on your hands and feet make it impossible for you to even handle the simplest of things like doors and feeding yourself. Though perhaps the last and most intense embarrassment is when they slip your new halter over your head, the bit fitting nicely in your new equine muzzle and preventing any attempt at speech you might make.";
 	say "     Fully outfitted like a slutty little mare, you can only moan helplessly as their hands rove over your new sleek and sexy body, and you find yourself finding it hard to concentrate on anything except the touch of all the powerful male stallions surrounding you. You completely give up trying to think about things when one of them slides their thick stallionhood into your damp, needy pussy, making you cry out with pleasure around the bit, much to their amusement. As the first of the many stallions surrounding you begins to use your newly bound body, you find yourself trying to recall what you were doing here, something about a quest? No, that's silly. What kind of quest would a slutty mare like you have? Unless it was to see just how many of these sexy stallions surrounding you you can get to blow their load in your cunt, that is...";
 	now provingstallionhood is 4;
@@ -586,6 +596,8 @@ to say HorsePitFightAbuse:
 	now bodydesc of Player is "sultry";
 	now bodytype of Player is "[one of]equine[or]horse-like[at random]";
 	now SleepRhythm of Player is 0;
+	trigger ending "Horse Pit Fight Abuse";
+	end the story saying "You became another mare bitch for the numerous stallions in the stable!";
 	follow the turnpass rule;
 
 

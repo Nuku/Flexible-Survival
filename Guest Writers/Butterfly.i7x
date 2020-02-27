@@ -412,6 +412,42 @@ To say butterfly attack:
 			say "You suddenly feel a strange feeling of achievement in your [Ball Size Adjective of Player] [Balls].";
 		follow the ButterflyTummyDesc rule;
 
+to ButterFlyChildBirth:
+	say "[bold type]Please name your child: [roman type]";
+	get typed command as playerinput;
+	now Name of ButterflyBaby is playerinput;
+	choose a blank row in the Table of PlayerChildren;
+	now Name entry is Name of ButterflyBaby;
+	now BirthTurn entry is turns;
+	now Gender entry is random child gender;
+	now Head entry is HeadName of ButterflyBaby;
+	now Torso entry is TorsoName of ButterflyBaby;
+	now Back entry is BackName of ButterflyBaby;
+	now Arms entry is ArmsName of ButterflyBaby;
+	now Legs entry is LegsName of ButterflyBaby;
+	now Ass entry is AssName of ButterflyBaby;
+	now Tail entry is TailName of ButterflyBaby;
+	now ShowTail entry is false;
+	now ShowLegs entry is true;
+	now Pureblood entry is false;
+	if HeadName of ButterflyBaby is TorsoName of ButterflyBaby:
+		if HeadName of ButterflyBaby is BackName of ButterflyBaby:
+			if HeadName of ButterflyBaby is ArmsName of ButterflyBaby:
+				if HeadName of ButterflyBaby is LegsName of ButterflyBaby:
+					if HeadName of ButterflyBaby is AssName of ButterflyBaby:
+						if HeadName of ButterflyBaby is TailName of ButterflyBaby:
+							now Pureblood entry is true;
+	now Albino entry is false;
+	now Melanism entry is false;
+	now Personality entry is random child personality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	now ButterflyBabyGestation is 0;
+	now ButterflyPregnant is False;
+	follow the ButterflyTummyDesc rule;
+	increase perception of Player by 2;
+	WaitLineBreak;
+
 Section 4 - Monster Definition
 
 When Play begins:
@@ -583,32 +619,39 @@ When Play begins:
 
 Section 5 - Monster Endings
 
-when play ends:
-	if BodyName of Player is "Butterfly":
-		let player_sterile be False;
-		if "Sterile" is listed in feats of Player:
-			now player_sterile is True;
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Butterfly Girl Epilogue"	"NPCSharedInfection"	""	Butterfly Girl Epilogue rule	900	false
+"Butterfly Infection"	"Infection"	""	Butterfly Infection rule	1000	false
+
+This is the Butterfly Girl Epilogue rule:
+	if Player has a body of "Butterfly" and ButterflyLove is true:
+		trigger ending "Butterfly Girl Epilogue";
 		if humanity of Player < 10:
-			if ButterflyLove is True:
-				say "You settle down with that Butterfly, your mind under the spell of her pheromones and bewitched by the colorful patterns on her wings. She welcomes you with open arms and cherishes your every moment together. ";
-				if Player is male:
-					say "You have a very passionate and active sex life[if Player_sterile is true], but are unable to have children[else] resulting in regular pregnancies, but your children no longer show any signs of sentience and rapidly fly off following their instincts[end if].";
-				else if Player is female:
-					say "You are unable to have children, but the two of you are inseparable all the same living as a happy lesbian couple with a very passionate and active sex life.";
-			else:
-				say "As you lose the last fragment of your humanity you fall back on your instincts resorting to extracting nectar from plants. You generally keep away from humans and other creatures. They always seem to be out to catch you. For some reason you have visions of being pinned in a display cabinet and want to avoid that at all costs. There was one human though so enchanted by the colorful patterns on your wings who slowly gained your trust. In due time you became inseparable.";
+			say "You settle down with that Butterfly, your mind under the spell of her pheromones and bewitched by the colorful patterns on her wings. She welcomes you with open arms and cherishes your every moment together. ";
+			if Player is male:
+				say "You have a very passionate and active sex life[if Player is sterile], but are unable to have children[else] resulting in regular pregnancies, but your children no longer show any signs of sentience and rapidly fly off following their instincts[end if].";
+			else if Player is female:
+				say "You are unable to have children, but the two of you are inseparable all the same living as a happy lesbian couple with a very passionate and active sex life.";
 		else:
-			if ButterflyLove is True:
-				say "You rush back to your lover's welcoming arms. She worries about re-entering human society, but your confidence eases her fears. Together you are rescued and rejoin society.";
-				say "A media frenzy erupts as you rapidly become the poster couple for the infection. ";
-				if Player is male:
-					say "Finding she enjoys being in front of the camera your lover takes up fashion modeling, but she's only really comfortable as long as it's you taking the pictures. Together you make a successful team as fashion houses and cosmetics firms worldwide keep you in work and help fund your comfortable lifestyle. You have a very passionate and active sex life, [if Player_sterile is true]but are unable to have children[else]resulting in a handful of children. They all follow their own path just like normal human children, although their exotic looks make them a magnet for many[end if].";
-				else if Player is female:
-					say "You are unable to have children, but the two of you are inseparable all the same living as a happy lesbian couple with a very active and passionate sex life. Finding you both enjoy being in front of the camera you take up fashion modeling together. You make a successful team as fashion houses and cosmetics firms worldwide keep you in work, and help fund your comfortable lifestyle. ";
-				say "Even in your later years you look back fondly on the infection as a blessing. Every morning as you wake and see your lover's familiar face you're reminded of how even if you had to do it all again you wouldn't change a thing.";
-			else:
-				say "You are rescued and rejoin society.";
-				say "A media frenzy erupts as you become the poster child for the infection. Finding you enjoy being in front of the camera you take up fashion modeling, but retire quickly finding the life lonely. At that time you find yourself inspired by your memories of Doctor Matt and finish your education. After graduation you enter the scientific community studying the infection. Your first-hand insight proves invaluable, and you rapidly rise through the ranks as your discoveries mount. One day while on the job you meet an intern who catches your fancy. A short time later you're living together as lovers. It's a happy life, [if ButterflyRaped is 0]leaving you with no regrets[else]but no matter how it seems on the surface, you still find yourself uncomfortable over your treatment of the butterfly back during the infection. As a way to atone, you donate large sums of money to charities looking after the infected[end if].";
+			say "You rush back to your lover's welcoming arms. She worries about re-entering human society, but your confidence eases her fears. Together you are rescued and rejoin society.";
+			say "A media frenzy erupts as you rapidly become the poster couple for the infection. ";
+			if Player is male:
+				say "Finding she enjoys being in front of the camera your lover takes up fashion modeling, but she's only really comfortable as long as it's you taking the pictures. Together you make a successful team as fashion houses and cosmetics firms worldwide keep you in work and help fund your comfortable lifestyle. You have a very passionate and active sex life, [if Player is sterile]but are unable to have children[else]resulting in a handful of children. They all follow their own path just like normal human children, although their exotic looks make them a magnet for many[end if].";
+			else if Player is female:
+				say "You are unable to have children, but the two of you are inseparable all the same living as a happy lesbian couple with a very active and passionate sex life. Finding you both enjoy being in front of the camera you take up fashion modeling together. You make a successful team as fashion houses and cosmetics firms worldwide keep you in work, and help fund your comfortable lifestyle. ";
+			say "Even in your later years you look back fondly on the infection as a blessing. Every morning as you wake and see your lover's familiar face you're reminded of how even if you had to do it all again you wouldn't change a thing.";
+
+This is the Butterfly Infection rule:
+	if ending "Butterfly Girl Epilogue" is triggered:
+		make no decision;
+	if Player has a body of "Butterfly":
+		trigger ending "Butterfly Infection"; [Here it states, that the ending has been played.]
+		if humanity of Player < 10:
+			say "As you lose the last fragment of your humanity you fall back on your instincts resorting to extracting nectar from plants. You generally keep away from humans and other creatures. They always seem to be out to catch you. For some reason you have visions of being pinned in a display cabinet and want to avoid that at all costs. There was one human though so enchanted by the colorful patterns on your wings who slowly gained your trust. In due time you became inseparable.";
+		else:
+			say "You are rescued and rejoin society.";
+			say "A media frenzy erupts as you become the poster child for the infection. Finding you enjoy being in front of the camera you take up fashion modeling, but retire quickly finding the life lonely. At that time you find yourself inspired by your memories of Doctor Matt and finish your education. After graduation you enter the scientific community studying the infection. Your first-hand insight proves invaluable, and you rapidly rise through the ranks as your discoveries mount. One day while on the job you meet an intern who catches your fancy. A short time later you're living together as lovers. It's a happy life, [if ButterflyRaped is 0]leaving you with no regrets[else]but no matter how it seems on the surface, you still find yourself uncomfortable over your treatment of the butterfly back during the infection. As a way to atone, you donate large sums of money to charities looking after the infected[end if].";
 
 Section 6 - Monster Rules
 
@@ -616,72 +659,19 @@ Table of GameCharacterIDs (continued)
 object	name
 ButterflyBaby	"ButterflyBaby"
 
-ButterflyBaby is a person.
+ButterflyBaby is a creature.
 ButterflyBaby is in NPC Nexus. [and there it will stay, as it is just a coding tool]
-ButterflyBaby has text called name. The name of ButterflyBaby is usually "".
-ButterflyBaby has a text called HeadName. HeadName is usually "Human".
-ButterflyBaby has a text called TorsoName. TorsoName is usually "Human".
-ButterflyBaby has a text called BackName. BackName is usually "Human".
-ButterflyBaby has a text called ArmsName. ArmsName is usually "Human".
-ButterflyBaby has a text called LegsName. LegsName is usually "Human".
-ButterflyBaby has a text called AssName. AssName is usually "Human".
-ButterflyBaby has a text called TailName. TailName is usually "Human".
+The printed name of ButterflyBaby is "butterfly baby".
 
 To impregnatebutterfly:
-	let Impregnator be a person;
-	if Player is not FullyNewTypeInfected: [player doesn't have all new type parts]
-		now HeadName of Impregnator is FaceName of Player;
-		now TorsoName of Impregnator is BodyName of Player;
-		now BackName of Impregnator is BodyName of Player;
-		now ArmsName of Impregnator is BodyName of Player;
-		now LegsName of Impregnator is BodyName of Player;
-		now AssName of Impregnator is TailName of Player;
-		now TailName of Impregnator is TailName of Player;
-	else: [player has all the parts]
-		now HeadName of Impregnator is HeadName of Player;
-		now TorsoName of Impregnator is TorsoName of Player;
-		now BackName of Impregnator is BackName of Player;
-		now ArmsName of Impregnator is ArmsName of Player;
-		now LegsName of Impregnator is LegsName of Player;
-		now AssName of Impregnator is AssName of Player;
-		now TailName of Impregnator is TailName of Player;
-	if "They Have Your Eyes" is listed in feats of Player: [ButterflyBaby will always look like the player]
-		now HeadName of ButterflyBaby is HeadName of Impregnator;
-		now TorsoName of ButterflyBaby is TorsoName of Impregnator;
-		now BackName of ButterflyBaby is BackName of Impregnator;
-		now ArmsName of ButterflyBaby is ArmsName of Impregnator;
-		now LegsName of ButterflyBaby is LegsName of Impregnator;
-		now AssName of ButterflyBaby is AssName of Impregnator;
-		now TailName of ButterflyBaby is TailName of Impregnator;
+	SetInfectionsOf Impregnator to infections of Player;
+	SetInfectionsOf Impregnatee to "Butterfly";
+	if "Breeding True" is listed in feats of Player: [child will always look like the mother]
+		SetInfectionsOf ButterflyBaby to infections of Impregnatee;
+	else if "They Have Your Eyes" is listed in feats of Player: [child will always look like the player]
+		SetInfectionsOf ButterflyBaby to infections of Impregnator;
 	else: [random choosing]
-		if a random chance of 1 in 2 succeeds:
-			now HeadName of ButterflyBaby is "Butterfly";
-		else:
-			now HeadName of ButterflyBaby is HeadName of Impregnator;
-		if a random chance of 1 in 2 succeeds:
-			now TorsoName of ButterflyBaby is "Butterfly";
-		else:
-			now TorsoName of ButterflyBaby is TorsoName of Impregnator;
-		if a random chance of 1 in 2 succeeds:
-			now BackName of ButterflyBaby is "Butterfly";
-		else:
-			now BackName of ButterflyBaby is BackName of Impregnator;
-		if a random chance of 1 in 2 succeeds:
-			now ArmsName of ButterflyBaby is "Butterfly";
-		else:
-			now ArmsName of ButterflyBaby is ArmsName of Impregnator;
-		if a random chance of 1 in 2 succeeds:
-			now LegsName of ButterflyBaby is "Butterfly";
-		else:
-			now LegsName of ButterflyBaby is LegsName of Impregnator;
-		if a random chance of 1 in 2 succeeds:
-			now AssName of ButterflyBaby is "Butterfly";
-		else:
-			now AssName of ButterflyBaby is AssName of Impregnator;
-		if a random chance of 1 in 2 succeeds:
-			now TailName of ButterflyBaby is "Butterfly";
-		else:
-			now TailName of ButterflyBaby is TailName of Impregnator;
+		SetInfectionsOf ButterflyBaby randomized between Impregnator and Impregnatee;
 	now ButterflyBabyGestation is 0; [1;]
 	follow the ButterflyTummyDesc rule;
 	now ButterflyPregnant is True;
@@ -890,34 +880,9 @@ to say butterfly grove scene:
 		say "[bold type]You gain 1 testosterone pill![roman type][line break]";
 		now carried of testosterone pill is 1;
 	else if ButterflyRaped > 1 and ButterflyPregnant is True and ButterflyBabyGestation is 3:
-		say "You stumble upon the butterfly who appears to have recently given birth and is nursing a child on her breast. At first she's unsure how you'll react, but as you show interest in the in the child she develops a cautious trust. The nanites rapidly transfer personality and knowledge from you and your partner's genes to the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [HeadName of ButterflyBaby] head, their [TorsoName of ButterflyBaby] front and [BackName of ButterflyBaby] back. Your ButterflyBaby has [ArmsName of ButterflyBaby] arms, [LegsName of ButterflyBaby] legs and a [AssName of ButterflyBaby] behind. Your child, hungry for knowledge and experience of the world decides to stay with you.";
-		say "[bold type]Please name your child: [roman type]";
-		get typed command as playerinput;
-		now Name of ButterflyBaby is playerinput;
-		choose a blank row in the Table of PlayerChildren;
-		now Name entry is Name of ButterflyBaby;
-		now BirthTurn entry is turns;
-		now Head entry is HeadName of ButterflyBaby;
-		now Torso entry is TorsoName of ButterflyBaby;
-		now Back entry is BackName of ButterflyBaby;
-		now Arms entry is ArmsName of ButterflyBaby;
-		now Legs entry is LegsName of ButterflyBaby;
-		now Ass entry is AssName of ButterflyBaby;
-		now Tail entry is TailName of ButterflyBaby;
-		now Showtail entry is false;
-		if HeadName of ButterflyBaby is TorsoName of ButterflyBaby:
-			if HeadName of ButterflyBaby is BackName of ButterflyBaby:
-				if HeadName of ButterflyBaby is ArmsName of ButterflyBaby:
-					if HeadName of ButterflyBaby is LegsName of ButterflyBaby:
-						if HeadName of ButterflyBaby is AssName of ButterflyBaby:
-							if HeadName of ButterflyBaby is TailName of ButterflyBaby:
-								now Pureblood entry is true;
+		say "You stumble upon the butterfly who appears to have recently given birth and is nursing a child on her breast. At first she's unsure how you'll react, but as you show interest in the in the child she develops a cautious trust. The nanites rapidly transfer personality and knowledge from you and your partner's genes to the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [HeadName of ButterflyBaby] head, their [TorsoName of ButterflyBaby] front and [BackName of ButterflyBaby] back. Your butterfly baby has [ArmsName of ButterflyBaby] arms, [LegsName of ButterflyBaby] legs and a [AssName of ButterflyBaby] behind. Your child, hungry for knowledge and experience of the world decides to stay with you.";
+		ButterFlyChildBirth;
 		[now ButterflyProcreated is True;]
-		now ButterflyBabyGestation is 0;
-		now ButterflyPregnant is False;
-		follow the ButterflyTummyDesc rule;
-		increase perception of Player by 2;
-		WaitLineBreak;
 		say "You decide to head back to the library.";
 		move player to Grey Abbey library;
 		follow the turnpass rule;
@@ -1039,34 +1004,9 @@ to say butterfly grove scene:
 	else if ButterflyLove is True and ButterflyBabyGestation is 3 and ButterflyRaped is 0:
 		say "The butterfly girl is hovering before you. [ButterflyAttire][ButterflyTummy]";
 		WaitLineBreak;
-		say "Your butterfly lover embraces you clearly in discomfort. 'I-it's time,' she moans as fluids vacate beneath her bulging tummy. You sit her down on the cleanest spot you can find and spread her knees as her breathing becomes erratic. As she begins to exert and sweat you do what you can to ease the process even if it's only offering her your hand, the hand of her mate, to squeeze. Slowly the top of the baby's head emerges from her birthing canal. You offer encouragement as she heaves and slowly the head emerges, and once past the shoulders the child slips free. Moments later the infant is suckling at one of its mother's [ButterflyBreastDesc] breasts enjoying its first proper meal. You comfort your lover as she tends to the newborn's needs. The nanites rapidly transfer personality and knowledge from you and your partner's genes to the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [HeadName of ButterflyBaby] head, their [TorsoName of ButterflyBaby] front and [BackName of ButterflyBaby] back. Your ButterflyBaby has [ArmsName of ButterflyBaby] arms, [LegsName of ButterflyBaby] legs and a [AssName of ButterflyBaby] behind. You and your lover decide together that your child needs knowledge of the world and will stay with you.";
-		say "[bold type]Please name your child: [roman type]";
-		get typed command as playerinput;
-		now Name of ButterflyBaby is playerinput;
-		choose a blank row in the Table of PlayerChildren;
-		now Name entry is Name of ButterflyBaby;
-		now BirthTurn entry is turns;
-		now Head entry is HeadName of ButterflyBaby;
-		now Torso entry is TorsoName of ButterflyBaby;
-		now Back entry is BackName of ButterflyBaby;
-		now Arms entry is ArmsName of ButterflyBaby;
-		now Legs entry is LegsName of ButterflyBaby;
-		now Ass entry is AssName of ButterflyBaby;
-		now Tail entry is TailName of ButterflyBaby;
-		now Showtail entry is false;
-		if HeadName of ButterflyBaby is TorsoName of ButterflyBaby:
-			if HeadName of ButterflyBaby is BackName of ButterflyBaby:
-				if HeadName of ButterflyBaby is ArmsName of ButterflyBaby:
-					if HeadName of ButterflyBaby is LegsName of ButterflyBaby:
-						if HeadName of ButterflyBaby is AssName of ButterflyBaby:
-							if HeadName of ButterflyBaby is TailName of ButterflyBaby:
-								now Pureblood entry is true;
+		say "Your butterfly lover embraces you clearly in discomfort. 'I-it's time,' she moans as fluids vacate beneath her bulging tummy. You sit her down on the cleanest spot you can find and spread her knees as her breathing becomes erratic. As she begins to exert and sweat you do what you can to ease the process even if it's only offering her your hand, the hand of her mate, to squeeze. Slowly the top of the baby's head emerges from her birthing canal. You offer encouragement as she heaves and slowly the head emerges, and once past the shoulders the child slips free. Moments later the infant is suckling at one of its mother's [ButterflyBreastDesc] breasts enjoying its first proper meal. You comfort your lover as she tends to the newborn's needs. The nanites rapidly transfer personality and knowledge from you and your partner's genes to the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [HeadName of ButterflyBaby] head, their [TorsoName of ButterflyBaby] front and [BackName of ButterflyBaby] back. Your butterfly baby has [ArmsName of ButterflyBaby] arms, [LegsName of ButterflyBaby] legs and a [AssName of ButterflyBaby] behind. You and your lover decide together that your child needs knowledge of the world and will stay with you.";
+		ButterFlyChildBirth;
 		now ButterflyProcreated is True;
-		now ButterflyBabyGestation is 0;
-		now ButterflyPregnant is False;
-		follow the ButterflyTummyDesc rule;
-		increase perception of Player by 2;
-		wait for any key;
 	else if ButterflyProcreated is True and ButterflyLove is True and ButterflyRaped is 0 and player is male:
 		say "The butterfly girl is hovering before you. [ButterflyAttire][ButterflyTummy]";
 		WaitLineBreak;
