@@ -285,7 +285,7 @@ AnalVirgin(truth state)
 And can be used like so:
 ```
 if Virgin of Amy is true:
-	say "     'Please be gentle, it's my first time,' the husky sighs out shily as she spreads her legs. [...]'";
+	say "     'Please be gentle, it's my first time,' the husky sighs out shyly as she spreads her legs. [...]'";
 	now Virgin of Amy is false;
 else: [regular repeat sex]
 	say "...";
