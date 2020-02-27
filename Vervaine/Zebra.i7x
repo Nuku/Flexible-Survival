@@ -664,5 +664,5 @@ to say zebra fur use:
 	say "Playing a bit with the coarse strands of hair, you stroke them over your arm. A moment later, they suddenly disintegrate into a fine powder which just seems to melt into your skin...";
 
 zebra fur is infectious. The strain of zebra fur is "Zebra Stallion".
-
+g
 Zebra ends here.
