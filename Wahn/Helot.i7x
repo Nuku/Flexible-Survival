@@ -480,7 +480,7 @@ to WanderingHelot1:
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]10[roman type] (Charisma Check):[line break]";
 		if diceroll + bonus >= 10: [convinces him]
-			say "     Your words were successful at calming him down, but not to fully convince him that you're not here to have something from him. Despite your attempts at making peace, he makes you an offer. 'Very well, if you want something from me, you gotta give me a blowjob. I'm horny and you look hot. Do that and I'll give you some food or water.' With the proposal made, the Helot shows off his rather large endowment by pushing his loincloth to the side, already rising to attention with the antecipation of feeling your lips wrapped around it.";
+			say "     Your words were successful at calming him down, but not to fully convince him that you're not here to have something from him. Despite your attempts at making peace, he makes you an offer. 'Very well, if you want something from me, you gotta give me a blowjob. I'm horny and you look hot. Do that and I'll give you some food or water.' With the proposal made, the Helot shows off his rather large endowment by pushing his loincloth to the side, already rising to attention with the anticipation of feeling your lips wrapped around it.";
 			say "     'How's it gonna be?' he asks, starting to get impatient.";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Accept and give him a blowjob in exchange for loot.";
@@ -506,13 +506,13 @@ to WanderingHelot1:
 						say "[bold type]pack of chips.[roman type][line break]";
 						increase carried of chips by 1;
 				CreatureSexAftermath "Player" receives "OralCock" from "Helot Manservant";
-				say "     With the deal sorted, you say goodbye to eachother, each of you carrying on their own ways around the High Rise District.";
+				say "     With the deal sorted, you say goodbye to each other, each of you carrying on their own ways around the High Rise District.";
 				now WanderingHelotTimer is turns;
 			else:
 				say "     Well, one thing is certain... He won't be expecting a surprise tackle!";
 				WanderingHelotTackle;
 		else: [fails]
-			say "     But your words fall into deaf ears. He refuses to listen to anything you say, and before you know it, he brings his arms between both of you in order to proceed into pushinig your away. He surely mnages to hit you good! You have no way to keep balance and avoid falling hard on the ground with the might of a former slave warrior. He uses this opportunity to run away with the loot, leaving you behind knocked down and in pain. All you can do is see him run into one of the many streets, not giving you enough time to chase him after you manage to get up on your feet. That was unfortunate, but you may be able to catch him wandering around in this area again tomorrow or so, hopefully...";
+			say "     But your words fall into deaf ears. He refuses to listen to anything you say, and before you know it, he brings his arms between both of you in order to proceed into pushing your away. He surely manages to hit you good! You have no way to keep balance and avoid falling hard on the ground with the might of a former slave warrior. He uses this opportunity to run away with the loot, leaving you behind knocked down and in pain. All you can do is see him run into one of the many streets, not giving you enough time to chase him after you manage to get up on your feet. That was unfortunate, but you may be able to catch him wandering around in this area again tomorrow or so, hopefully...";
 		now WanderingHelotTimer is turns;
 	else if calcnumber is 3: [let him pass]
 		say "     Right now, you have other things in mind, so you just remain hidden and let the helot pass by, resuming your journey right afterwards.";
