@@ -36,7 +36,7 @@ Instead of resolving Curious Pearl:
 Section 1 - Item definition and usage
 
 Table of Game Objects (continued)
-name	desc	weight	object	sortname (indexed text)
+name	desc	weight	object
 "Black Pearl"	"It's a sphere with a smooth, reflective surface lacking in any color. It's slightly smaller than a soccer ball, which leaves you wondering how large the oyster containing this must have been, yet you have a feeling that the origin of this pearl is something different"	3	Black Pearl
 
 Black Pearl is a grab object.

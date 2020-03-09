@@ -1,5 +1,6 @@
-Version 1 of Mogdraz by Gherod begins here.
+Version 2 of Mogdraz by Gherod begins here.
 [Version 1 - File created, Mogdraz and his Hellfire Club at Red Light + a few sub scenes - Gherod]
+[Version 2 - Updated Mogdraz with scenes, Toron added to the club roster]
 
 "Adds Mogdraz and the Hellfire Club to the game."
 
@@ -97,8 +98,8 @@ instead of going north from Crimson Street while (resolution of An Hellish Intro
 	MogdrazXaedihr;
 
 to MogdrazXaedihr:
-	say "     'So this is where they take the so called slaves. Thank you for showing me.' he says, as the club goes into an uproar about an intruder having made it through. Mogdraz storms out of his corner with several demons accompanying him towards you both as he shouts 'What is the meaning of this?!' inquisitively. You urge to tell him Xaedihr is your friend and that he means no harm, looking back at the mage with a pleading look to not cause any trouble here. Although you're surprised by the sorcerer's reaction... His eyes widen and he's speechless for a moment, Mogdraz's expression also changing abruptly once they see eachother. You have no idea what is going on, but surely this must be something important, so you do not interfere.";
-	say "     'Mogdraz?! Is that really you?!' asks the half-demon, taking a step towards the towering hellfire master. 'Xaedihr...! What a surprise, I wasn't expecting to see you...! What are you doing here, didn't you have business back in the...?' Mogdraz doesn't finish the sentence, being instead hushed by the sorcerer's gestures, seemingly asking for silence. 'Not... Here. I... I'd prefer to talk in private.' Xaedihr gestures to you meanwhile 'You can come too. Since I have already dragged you into this...' It looks like they know eachother already, which is intriguing, to say the least. Mogdraz signals both of you to follow him into a private room not far deep into the back corridors, taking a turn left into some sort of... Fancy office? Just what in the name of Hell is going on?! Looks like you'll have your answers soon enough, however they both remain silent as the club owner indicates two seats, for you and Xaedihr, and takes his own on a grand velvet red chair on the other side of the desk.";
+	say "     'So this is where they take the so called slaves. Thank you for showing me.' he says, as the club goes into an uproar about an intruder having made it through. Mogdraz storms out of his corner with several demons accompanying him towards you both as he shouts 'What is the meaning of this?!' inquisitively. You urge to tell him Xaedihr is your friend and that he means no harm, looking back at the mage with a pleading look to not cause any trouble here. Although you're surprised by the sorcerer's reaction... His eyes widen and he's speechless for a moment, Mogdraz's expression also changing abruptly once they see each other. You have no idea what is going on, but surely this must be something important, so you do not interfere.";
+	say "     'Mogdraz?! Is that really you?!' asks the half-demon, taking a step towards the towering hellfire master. 'Xaedihr...! What a surprise, I wasn't expecting to see you...! What are you doing here, didn't you have business back in the...?' Mogdraz doesn't finish the sentence, being instead hushed by the sorcerer's gestures, seemingly asking for silence. 'Not... Here. I... I'd prefer to talk in private.' Xaedihr gestures to you meanwhile 'You can come too. Since I have already dragged you into this...' It looks like they know each other already, which is intriguing, to say the least. Mogdraz signals both of you to follow him into a private room not far deep into the back corridors, taking a turn left into some sort of... Fancy office? Just what in the name of Hell is going on?! Looks like you'll have your answers soon enough, however they both remain silent as the club owner indicates two seats, for you and Xaedihr, and takes his own on a grand velvet red chair on the other side of the desk.";
 	WaitLineBreak;
 	say "     Finally, the silence is broken. Xaedihr speaks first. 'So... Mogdraz was...' - he pauses, his words coming difficult - '... My father's personal assistant. He... He's the reason I managed to cross over from my realm to yours.' You don't quite know what that means, but it is surely an indication that Mogdraz is more than what he seems. The hellfire master explains himself shortly after. 'Yeah, well... Master Viel was a bit of a nutjob. I couldn't stand him. Then I discovered his son was plotting against him, and had to take a side. I chose Xaed's, and sent him to this realm to start anew. To save him from the horrid life he would have under that maniac's influence.' He turns to the sorcerer afterwards. 'But I wouldn't know he'd be HERE, in the middle of the nanites' outbreak! And with a crimson ruby, no less!' he adds, making a rather inquisitive tone as his piercing fiery gaze is fixated on Xaedihr. 'You know I had to try! There's no way I could just let him win... Not like this. One day I will make justice. I will stop that fiend.'";
 	say "     Xaedihr's voice shows anger and revolt for the man who put him in the universe, and you see him clenching his fists. 'I will make sure he's turned into nothing but ash.' Mogdraz leans back on his chair, tilting his head while looking at the sorcerer with an intrigued look. 'Well, it seems like you're finding it a bit difficult to just move on, huh... I guess all I can do is offer my help, if you need. Although I don't intend to return to that doomed place, I can send scouts and provide information, if that helps. The calm life I lead here is everything I could ask for.' Facing Mogdraz's generosity, Xaedihr nods politely. 'Thank you. That would mean a lot to me. Though... Please stop trying to enslave people...' Mogdraz quickly rushes to defend himself 'It's not enslavement if they consent! Besides... I do have a sane talk with them first! Whatever comes after, it's on them!' Xaedihr responds with a sigh, rolling his eyes 'I suppose. Only the weak-willed fully submit, either way. Just as long as you don't force them.'";
@@ -268,7 +269,7 @@ to say MogdrazTalkSexPref:
 		say "     After the explanation you gave him, Mogdraz nods and understands your words. Seeing that you've got the dominant trait, he makes a comment. 'So you ended with a dominant strain running through your veins, huh? Can't help yourself when you see some begging eyes, bitches drooling over your physique, wanting some of your attention, craving to become your slaves? I feel you... Sometimes it's hard to resist. Though don't go on a rampage for slave hunting, alright? I mean... My minions don't count, okay? They're just too naive and innocent... Uh, innocent isn't the right word. Well, fuck that, you get what I'm saying!' It's rather cute to see Mogdraz worry about you, but it actually doesn't sound as bad, does it?";
 		now HP of Mogdraz is 10;
 	else:
-		say "     After the explanation you gave him, Mogdraz nods and understands your words. 'Still exploring, heh? Sometimes not taking either side of the dominant and submissive part is the best way to go for maximum enjoyment. I wish I could submit sometimes, but I just don't like it that much unless it's with someone I trust and who actually deserves that. That person never arrived, and honestly I do enjoy dominating others better. With their consent, always!' he explains, giving a personal example to enrich your discussion. 'Hope you have fun trying new stuff, but be careful out there!' he adds before you're ready to move on to another subject.";
+		say "     After the explanation you gave him, Mogdraz nods and understands your words. 'Still exploring, heh? Sometimes not taking either side of the dominant and submissive part is the best way to go for maximum enjoyment. I wish I could submit sometimes, but I just don't like it that much unless it's with someone I trust and who actually deserves that. That person never arrived, and honestly I do enjoy dominating others better. With their consent, always!' he explains, giving a personal example to enrich your discussion. 'Hope you have fun trying new stuff, but be careful out there! There are all types of people who'd use your curiosity in wicked ways...' he adds before you're ready to move on to another subject.";
 		now HP of Mogdraz is 30;
 
 to say MogdrazTalkXaedihr:
@@ -291,14 +292,13 @@ to say SexWithMogdraz:
 	else if libido of Mogdraz > 0 and libido of Mogdraz < 4:
 		say "[MogdrazDate]";
 	else if libido of Mogdraz > 3 and libido of Mogdraz < 99:
-		say "     You remember your last encounter with Mogdraz the other day being really hot, and his invitation was rather suggestive. Though you really shouldn't be bothering him right now, as he seems pretty busy looking after his people around the club. Maybe in the near future?";
-		say "< To be added soon >";
-		[say "[MogdrazSexMenu]";]
+		say "     You remember your last encounter with Mogdraz the other day being really hot, and his invitation was rather suggestive. Perhaps you could get in some fun with the big demon boss? Making the proposal to him directly, he shows you a welcoming smile while spreading his legs just a little, right in front of you, his bulge even further exposed before your eyes. 'How generous of you to think of me! Ahh, how could I say no to that cute face?' he replies charmingly, and you can swear he's already getting a boner from the anticipation alone.";
+		say "[MogdrazSexMenu]";
 	else if libido of Mogdraz is 99:
 		say "     Given what you said to him the last time you were together, it would be very inappropriate to attempt to engage in a sexual encounter with Mogdraz. You decided to stay as friends, and so that shall be the case. Nonetheless, he's always happy to see and talk to you.";
 
 to say MogdrazDate:
-	say "     With the intention of getting down with the big Master still present in your mind, you make an advance towards it by asking him if he has any plans for tonight. He tilts his head and looks at you in some surprise, but at the same time he makes his bulging crotch evident in your angle of view. 'My plans are to watch over my people, making sure nothing goes astray... But I suppose you have a better suggestion regarding how I should spend my time?' he ironically asks you, albeit the grin on his face is rather suggesting that he's just on about teasing you. Taking your previous conversation into account, you think if this would be a good time to [bold type]invite Mogdraz for a walk[roman type]... You know, to get to know eachother a little better?";
+	say "     With the intention of getting down with the big Master still present in your mind, you make an advance towards it by asking him if he has any plans for tonight. He tilts his head and looks at you in some surprise, but at the same time he makes his bulging crotch evident in your angle of view. 'My plans are to watch over my people, making sure nothing goes astray... But I suppose you have a better suggestion regarding how I should spend my time?' he ironically asks you, albeit the grin on his face is rather suggesting that he's just on about teasing you. Taking your previous conversation into account, you think if this would be a good time to [bold type]invite Mogdraz for a walk[roman type]... You know, to get to know each other a little better?";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Invite him out.";
 	say "     ([link]N[as]n[end link]) - Better not, for now.";
@@ -330,7 +330,7 @@ to say MogdrazDate:
 				say "     'I know you prefer to dominate, and often top... But I'm a big guy with big needs, and you turn me on for your uniqueness... Say, would you like to make me happy, even as a Dom? Besides that, knowing you genuinely like me is a very good score towards gaining my affection, and I just want to show you that";
 			else:
 				say "     'You're curious about the fantasy of either being dominated or submitting to someone, but you're also intrigued about me, are you not? Well... Knowing you genuinely like me is a very good score towards gaining my affection, and I just want to show you that";
-			say "...' His advances leave you with a decision to make. [bold type]Do you want to let this happen, or would you rather keep Mogdraz as your friend only[roman type], refusing any sex with him from now on? [if player is dominant]Note that Mogdraz is a fairly dominant individual, and he might not be easy to reason with him regarding his sexual role...[end if][line break]";
+			say "...' His advances leave you with a decision to make. [bold type]Do you want to let this happen, or would you rather keep Mogdraz as your friend only[roman type], refusing any sex with him from now on? [if player is dominant]Note that Mogdraz is a fairly dominant individual...[end if][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - This is all you've been wanting ever since!";
 			say "     ([link]N[as]n[end link]) - Let's just be friends.";
@@ -356,21 +356,30 @@ to MogdrazFirstSex:
 	say "     Then, just like that, he lets out one final grunt of pleasure, as an enormous spurt of cum hits you right on the face, and more follow to cover the rest of it, as well as your neck, shoulders and chest, running down your entire body, covering part of the wall around you, and he just keeps on shooting seemingly endlessly... You could nearly drown on the stuff if he didn't remember to push down his own dick and let himself finish off below your neck, his almost scorching hot load giving you a steamy bath of demonic cum. Must take him at least a minute to stop cumming! He pants, looking down on you, squeezing the last drops of jizz onto you, then throwing a chuckle at your drenched state. 'That must have been really messy if we did this back at my bedroom... Against this wall, we're merely doing the district a service.' he comments, helping you clean some of his ridiculous load off your face with his hand, although most of it just ends up spread through your skin.";
 	WaitLineBreak;
 	say "     'Yeah, uh... you might need to wait until that dries up or something... Can keep you company if you want.' he proposes, and you gladly accept his offer, not really having any other option. In the meantime, you get to enjoy the sweet smell it gives, and the somewhat... addictive taste. You try not to get too much of it in your mouth, demonic stuff can be rather clingy to deal with in the aftermath. While you wait, Mogdraz cuddles up with you in an affectionate moment... Who would say a demon could be this nice and gentle?";
-	say "     'T'was a great time, I have to say... Anytime you wanna have another go, feel free to hit me up. Maybe we can try my suite at the club the next time we wanna get dirty with eachother... Though he'll use the jacuzzi if need be to avoid this mess, I promise.' he adds before you're ready to get up and walk back to the club. He gives you a pat on the butt with a naughty grin as he walks towards his usual corner, saying goodbye with a wink. What a tease...!";
+	say "     'Twas a great time, I have to say... Anytime you wanna have another go, feel free to hit me up. Maybe we can try my suite at the club the next time we wanna get dirty with each other... Maybe we can use my personal jacuzzi to avoid this mess, though not going to lie... I like seeing my partners covered with my cum.' he adds, smirking, before you're ready to get up and walk back to the club. He gives you a pat on the butt with a naughty grin as he walks towards his usual corner, saying goodbye with a wink. He's such a tease...";
 	NPCSexAftermath Player receives "OralCock" from Mogdraz;
 	now libido of Mogdraz is 4;
 	now lastfuck of Mogdraz is turns;
 
-[to say MogdrazSexMenu:
+to say MogdrazSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
-	say "     Turning to Mogdraz, you ask if he's available for a good time together.";
-	say "     [bold type]Now that you have him in privacy, what exactly do you want to do with Mogdraz?[roman type][line break]";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Give him a handjob";
 	now sortorder entry is 1;
 	now description entry is "Get your hands on his meaty prick";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Offer him a blowjob";
+	now sortorder entry is 1;
+	now description entry is "Wrap your lips around his huge cock";
+	[]
+	if player is male and player is not submissive:
+		choose a blank row in table of fucking options;
+		now title entry is "Propose the mutual use of one of his slaves";
+		now sortorder entry is 1;
+		now description entry is "Have him fetch a sex slave for your enjoyment together";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -389,6 +398,10 @@ to MogdrazFirstSex:
 				now sextablerun is 1;
 				if (nam is "Give him a handjob"):
 					say "[MogdrazHandjob]";
+				if (nam is "Offer him a blowjob"):
+					say "[MogdrazBlowjob]";
+				if (nam is "Propose the mutual use of one of his slaves"):
+					say "[MogdrazSexSlaves]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -397,7 +410,56 @@ to MogdrazFirstSex:
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
-]
+
+to say MogdrazHandjob:
+	say "     It's slightly hard to speak when such a powerful and good looking man like Mogdraz is the one you want to bang, especially when he's looking at you, patiently awaiting your words. But you manage to tell him that you'd like to please him, in some way. Perhaps using your hands. 'Hands, you say? I do have something that could use some tugging...' he says, but before you have time to think that he's talking about his dick - which could be true, nonetheless - he pulls you gently and lets you sit by his right side on the velvet red sofa. Then, you feel his powerful arm embracing you as he reaches over for a kiss. Quite unexpectedly so, you barely have time to process that a big demon guy is making out with you right here, out in the open for everyone to see, the entire scene making your heart beat at an incredible rate.";
+	say "     He pulls his lips from yours for a while, taking a moment to stroke your cheek, bringing his hand to your face from around your shoulder. His muscular leg is bumping against yours, and [if scalevalue of player < 4]as there is a considerable size difference between you and him, you feel completely overtaken by the large devil's heat against your skin[else]you feel his heat against your body[end if], a sign of desire and arousal pulsing through him as much as an obvious erection is forming underneath his dark jockstrap. Taking you for another kiss, your tongues mingle together for brief moments before he lets you take a breath, whispering in a deep and velvety tone 'You can touch me... Don't be shy.' With this said, he actually encourages you by bringing your hand over to his hairy pecs, adorned by a black leather harness, from where you can start moving your touch lower...";
+	WaitLineBreak;
+	say "     You catch Mogdraz breathing deeply as your fingers follow the trail from between his rippling abs to just above the jockstrap's band. 'Might as well take these off...' he says, sliding down the piece of underwear as his monstrous cock is slowly released from underneath its confinements. The fine piece of meat is still hardening before your eyes, getting bigger and thicker by the second. He looks down at you, caressing your ear affectionately, and asks you 'Get a good grip around it... And stroke it for me, will you?' You can't help but feel aroused at this point, looking at his member that is by now fully engorged and ready for action, with your fingers at just a mere few inches from touching. With his request given, you move your hand over his shaft, then wrap your fingers around it, ripping a soft moan out from the sexy devil's mouth. 'Mmh... Fuck... That feels really good...'";
+	say "     He's one who likes to watch, shifting his gaze between your eyes and your hand, observing you working his proud manhood by jerking it up and down, slowly and almost teasingly, providing him with the occasional thumb running by his humid glans, a very sensitive spot that always manages to make him exhale with lust. 'You're a little tease, aren't you...? That's alright... I like it when you take your time...' While he continues to rub the back of his hand across your cheek and the same side of your head and neck, you're rubbing his cock instead, and figure it's probably for the best if you feel up his great sized balls, too. Sliding your index finger underneath his entire sack, you bring the rest of your palm to cup one of his gonads, which is already enough to fill a hand. They're so plump that you can imagine he's holding a massive load...";
+	WaitLineBreak;
+	say "     'I love having my balls played with... Glad you didn't forget them.' Surely playing with his is fun, as huge as they are, and squeezing them gently a little all over makes him want to close his eyes and focus on the sensation alone. His dick throbs really hard as you're doing this, unable to hide the great pleasure he is experiencing from your caressing. Though enough is enough, and soon your hand is back to his throbbing rod, stroking it with ample movements. With such a considerable length, you actually have to work with your arm much more than with an average dick if you want to fully please Mogdraz with a well-made handjob. Eventually, you want to be using both hands - as there is plenty of dick for that - so the big demon leans back and lets you work. Eyeing you with interest, he compliments your dedication. 'As devoted to the task as you are... Mmh... Might have to consider a full-time job... just so you can keep pleasing me like this...'";
+	say "     His sweet words are tempting to drag into reality, but you don't let them bring your focus down. Instead, you're giving his entire manhood enough rubbing and friction to keep pulsing with desire, and precum lubricating the tip and leaking down to his shaft. The stuff ends up in your fingers, though all the better to help your hands slide up and down easier. He's breathing deeper and at a faster rate, patting your head in the meanwhile, making you think for a second that he's pushing it towards his dick, but he's respectful about it. He simply rubs the back of your head as a sign if affection, observing your movements and smiling at you, though not without biting his lower lip. Excited and as horny as you've got him, you stop your hands for a tad bit, only to see him jerking his hips to continue to feel that sweet pleasure. 'Damn... You're getting me...'";
+	WaitLineBreak;
+	say "     He really means that you're starting to make him, the big demon boss, want to beg for more. With this much teasing from your side, and his load building up at an alarming rate inside his balls - you even think they have grown a bit during this time - he has grown desperate for a release. Perhaps you should think about giving it to him, and there's not a better way than sliding one of your hands back to his balls as the other keeps stroking the enormous cock. 'Yess... Oh, that will make me cum, for sure... Fuck...' he moans, his breathing intensifying as you, too, pick up the pace and start stroking him faster. With the combined efforts of both your hands, Mogdraz is soon brought to the edge as he warns 'I'm close...!' You fully commit to your actions, making sure you never stop until he's shooting.";
+	say "     With a couple more strokings, the red devil reaches his climax, and a thick, powerful stream of cum is basically launched from his cock to cover his chest and abs completely, each spurt thicker than the last until half of his orgasm, only beginning to subside after several moments. He's cumming for basically a full minute, coating his muscular body and your hands in his creamy hot seed. His balls surely are competent cum factories, to be able to put out so much each time he comes. 'Hell... this was phenomenal... You're good with your hands! Better than most... I wish I could keep you.' he says, stroking your chin and planting a kiss on your lips. 'Right, I've got to ask Tor'on to clean this up. I'm sure anyone eager enough would lick all this cum off, but he has a way with cleaning that just leaves things absolutely pristine. Great employee.' he tells you, laughing at the mess you made him do.";
+	WaitLineBreak;
+	say "     Now that you're both done with the fun, you say your goodbyes, having left Mogdraz satisfied and with a smile on his face.";
+	now lastfuck of Mogdraz is turns;
+
+to say MogdrazBlowjob:
+	say "     It's slightly hard to speak when such a powerful and good looking man like Mogdraz is the one you want to bang, especially when he's looking at you, patiently awaiting your words. But you manage to tell him that you'd like to please him, in some way. Perhaps using your mouth. 'What was it? You liked its taste?' he asks, jesting, but he gestures at you to come closer, and on your knees. With his large hand, he caress your cheek and nearly takes you for an embrace with his powerful legs, letting you position yourself in front of his growing bulge, still covered by the dark jockstrap he's wearing. 'Feel free to unwrap it whenever you're ready. Or you can just admire the view for a while. I'll allow.' Mogdraz keeps teasing you, but his chuckling reveals no ill intention, and he's actually very gentle, giving you all the time you need.";
+	say "     Now, you're on your knees in front of the boss, and everyone at the club can see you, which is an exhilarating feeling. Once you think you're ready, you bring your hands over that large bump between his legs, as he gazes at you with interest. His monstrous cock enlarges before your eyes and it's not even free yet, as you're still taking a grip of the underwear's elastic band and pulling it down. The big demon helps you, lifting himself just enough for it to slide down his ass and allowing you to finally pull his manhood out, only now able to grow to its hardest state. His musk is at its strongest here, too, hot and intoxicatingly arousing, a strong masculine scent like you very rarely feel. Noticing you involuntarily breathing it in deep, Mogdraz taps the back of your head gently, encouraging you to lean in. 'Come on... give it a kiss. I know you want to...' he says, with a smirk.";
+	WaitLineBreak;
+	say "     Following his invitation, you suppose it's time to bring your lips over his shaft. You don't want to give him everything at once, oh no. For a powerful demon boss such as Mogdraz, you have to show him proper respect, and put a much appreciated additional effort. You must love his cock, worship it, make him feel like he's having the damn best blowjob he ever had, fully devoting yourself to please him with the best of your abilities. This comes with taking your time to feel every inch of the huge beast of a cock that he has, and using your hands to provide him additional warmth and friction. Starting by rubbing along his shaft, your tongue follows the long way that goes from the base of his shaft to the tip, with a bit of teasing around the glans, which leaves the big devil biting his underlip.";
+	say "     Cupping his balls with one hand, you continue the licking for some time, and since you're not quite done with teasing him, you also kiss his nutsack, trying to get one of those massive orbs inside your mouth, an extremely difficult task given their size. You can only maybe suck on them partially, though this is enough to make Mogdraz let out a moan. 'You really made me wait for it, huh... Fuck, that feels so good...' The red devil never dismisses the chance of getting his balls worked on, and as full as they are, you're predicting a very large load once you're done. But for now, you haven't even gotten started on sucking his dick for real. There's still a lot of manhood to enjoy, from his balls to the tip of his cock, before you wrap your lips around his shaft.";
+	WaitLineBreak;
+	say "     After spending a good time tugging on his cum factories, squeezing and feeling them up gently while pulling them softly with your lips, you're ready to lick your way up once more, and give him what he's waiting for. Spreading your lips around the by now glistening wet tip, you allow his crimson rod to enter your mouth. Though it's far from easy, you have to really open wide in order to have a remote chance at sucking him off. He enjoys seeing you struggle with his size, and you can definitely feel his dick throbbing in your grasp as he observes you. 'Reminds me of our first time. You could barely get the tip.' he mocks you, giving out a chuckle, but you don't let this discourage you, and he knows that you won't be. Leaking as he is, the marvelous taste of his precum is the most prominent feeling, one that simply keeps you hooked up.";
+	say "     By rubbing the rest of his shaft, you provide a thorough sensation that doesn't disappoint, while you suck as deep as you're able. Mogdraz is often careful as to not push your limits too much, but you know he really wants to drill your mouth with that beast of a dick, if he could. He grabs your head and often pushes you, just a little more, truly enjoying the feeling of his meat going deeper, even if for just a tiny bit, with just the right amount of force. 'You do so much better than most sluts who... fuckin['] beg to suck my cock... Oh, if I could keep you...' he tells you, which you take as a compliment, and proceed to suck on his dick even more hungrily, a bit of sloppiness inevitable as you attempt to take more in you, all the while you're stroking his shaft for maximum stimulation.";
+	WaitLineBreak;
+	say "     While you're down there worshipping his cock, the demon boss holds your head gently as you work him towards the edge, encouraging your sucking. There's even a hint of movement on his hips as he's getting closer, and to reinforce that, you fondle his sizable gonads while his meat throbs in your mouth. Then, as you're taking a pause, you begin to lick an especially sensitive spot just around the glans of his penis while stroking the rest of his shaft with your free hand. 'Ohh, fuck... that's it... keep going, yess...!' he exclaims, and you just know you'll get an enormous faceful of cum if you have to keep doing this until he gets there, though you can't really help it. The way he's looking at you, so lustful, biting his underlip, eyes struggling to keep open, his powerful hand caressing the back of your head... it's impossible to resist.";
+	say "     'I'm getting close... watch your eyes!' he warns you, and just a few more strokes and licks are enough to set off the beast, making him spew an enormous spurt of jizz on your mouth and face, and he keeps going for a good while. You actually have to hold your breath and close your eyes as your face, neck and chest get completely covered in the stuff, and Mogdraz only stops cumming after it has been like a minute or so, panting deep with his head leaned backwards in absolute bliss. Only then he takes a look at you, as his dick gives some final throbbings. 'I really, really should stop you from leaving. Looking as good as you do with so much of my cum on you... I feel like I can get hard again in just a few.' he says, directing some of his load into your mouth. It's actually one of the best things you've ever tasted...";
+	WaitLineBreak;
+	say "     'That's it, have some, but not too much, or you'll become a demon cum junkie. Not good, unless you want to make this your living.' With a chuckle, he pushes you away gently while he gestures at Tor'on, the bartender, to come over and help clean you up. 'Don't worry, he'll get you all pristine looking in a pinch.' says Mogdraz to you, as a comfort, though those odd tingling sensations around your body whenever he asks you to close your eyes and let him work leaves you somewhat disturbed. But he does his job quickly, and soon you're ready to go, all cleaned up.";
+	NPCSexAftermath Player receives "OralCock" from Mogdraz;
+	now lastfuck of Mogdraz is turns;
+
+to say MogdrazSexSlaves:
+	say "     Bringing the subject of some group action this time, Mogdraz shows great interest, leaning forward in order to hear you attentively. 'Some group fun, you say. What do you have in mind?' he asks, and then you explain that you'd like to share one of his slaves with him, as you're in the mood to dominate someone with the master at that art, him. He throws a flattered chuckle. 'You wish to subdue one of my slaves with me? That can be arranged! In fact, I am very much into that idea right now. May I ask you to follow me, then, if you're so inclined?' he says to you, more in an imperative way than just a simple request, touching your shoulders and having you walk in front of him, towards the back door with the prominent sign saying [']STAFF ONLY[']. Once you get there, he simply pushes the door open and keeps you walking forward, leading you into some dark corridors. Here you can hear grunts and lusty moans coming from the many rooms, some with their doors closed, others not as such.";
+	say "     Still being guided by Mogdraz, you go a level lower, through some stairs, and the big demon has to unlock the door, this time. After you're free to walk inside, he then has you heading towards a specific spot in the room with a red light, where all kinds of sex toys and other fetish tools are either hanging or laying around. 'This is my private dungeon, where I truly dominate all my slaves in peace. Though I must say, I do not abuse them. I only provide them what they need, and in exchange, I feed on their burning desire. So I hope you share my values as my dom partner.' He takes his conduct seriously, and always wants to make sure you follow his ideals before sharing one of his personal favorites. 'So, is there anything in particular I can offer you? What kind of slave should we invite, this time...?' he asks you, though for now, you let him choose.";
+	WaitLineBreak;
+	say "     'I've caught this one incubus once, attempting to assault one of my lackeys. Fortunately for him, they brought him to me, and now he's here, living to please my boys and myself.' he says, leading you to the room that he gave to this slave. Inside, you can see this incubus demon he mentioned, fully naked, perfectly fit and handsome, pleasuring himself with a dildo the size of Mogdraz's cock. 'He can't get enough, as you can see...' he jokes, and his slave doesn't even notice you two coming in until the boss is really close to him. 'M-Master! Oh, apologies... Didn't see you coming... You brought a friend? Does he want to fuck me, too?' asks the incubus, to which Mogdraz laughs, patting him on the head. 'I see you're taking good care of yourself... Though I am in need of you. Care to come along?' he orders, and his slave obeys, leaving the extra large dildo back and following you both back to the spot with the tools.";
+	say "     The incubus is totally eager to get started, and the demon boss doesn't make him wait too long. He ties him down to a rack, with his butt stretching backwards as his head is brought to crotch level, and his hands held within the contraption. You see the large devil slap one of the slave's buttocks, and the latter lets out a loud, lustful moan as his master rubs his already stretched pucker with some of his thick fingers. 'That a good boy, keeping his ass ready to take me anytime...' says Mogdraz, praising his slave while fingering his ass, his own boner soon outgrowing the limited space his dark jockstrap provides. 'You better take his mouth. He's a great cocksucker... And his ass is more used to my dick, anyway.' he tells you, winking mischievously. With this said, you position yourself in front of the incubus['] handsome face, who looks up at you with that suggestive gaze, already opening his mouth and showing off his skillful tongue. 'I'm gonna suck you lots, sexy...!'";
+	WaitLineBreak;
+	say "     Unable to resist such an empowering visage, [if player is not naked]you whip out your cock[else]you grab your cock[end if] and rub it across the demon's face, whose joy is obvious as soon as your shaft comes in contact with his cheek. The boy is already trying to taste your meat, moaning each time Mogdraz shoves an extra finger in his hungry asshole. 'Mm, Master... Thank you for this...' he says, enjoying the feeling of his ass getting played with and your cock throbbing against his mouth. Soon, you figure it's time to start pressing the tip against his incredibly soft lips, and begin to push inside slowly... Naturally, the devil boy gladly takes your [cock of player] dick in, sucking on it with dedication as soon as you're past his lips, hearing and feeling him moan while Mogdraz keeps preparing his hole.";
+	say "     'Looks like he's ready to take it from this side too.' says the red demon, bringing his enormous cock between the incubus['] asscheeks, rubbing its length across the hell boy's hungry anus. With your own member throbbing and pulsing inside his mouth, you hold his head and begin to pound him, slowly at first, while his nimble tongue is caressing your penis in all the right ways. This is one skillful demon, able to make you feel so good with the slightest of efforts, all making you want to facefuck him harder once you get the chance. For now, you're merely warming up, as Mogdraz has yet to shove his monstrous dong inside him. Though, once he begins to press just the tip against his pucker, the incubus only moans with your dick in his mouth, his voice vibrating through your shaft as he attempts to relax his ass for the demon boss.";
+	WaitLineBreak;
+	say "     While feeling up one of his glutes, Mogdraz slowly pushes in, making the hell boy nearly collapse in lust, numb with pleasure. 'He really likes a good filling... make sure you fuck him as hard from that side.' he tells you, and you're so ready to grab his head and start pounding his throat like there's no tomorrow. Following this, you begin to jerk your hips back and forth, feeling your length sliding past the incubus['] soft lips repeatedly as his tongue attempts to curl around your shaft, while he takes a huge cock in his ass, balls-deep. Having been messing with a dildo the size of Mogdraz's cock surely helped him taking the real thing, all the while he's getting facefucked by you, your own nutsack swinging against his chin as you keep pounding his face. He takes it all, without a problem, his throat feeling like just what it is, a tight and welcoming flesh tunnel clenching around your dick.";
+	say "     You both keep pounding the incubus from both sides for a good while, the sounds of flesh on flesh clashing rhythmically audible throughout the room. 'Fuck yes... look at who's gonna get a huge load from Master and his friend for being such a good boy...' says the red devil to his slave, who responds with a lustful moan. All this time you've spent double tagging the demon has driven both of you close to the edge, so you start to slow down as you see yourself almost cumming. Panting, Mogdraz looks at you, also having slowed down his intense thrusting, with those fiery eyes of his as you both catch each other's pacing. He grins, taking the initiative to speed up, as you do the same. The incubus['] throat just feels so good on your dick, and his tongue is so eagerly wiggling around your shaft that you can't help but to give in to the urge...";
+	WaitLineBreak;
+	say "     'Hell yeah... Enjoy the filling, my boy... You deserve it!' The big, crimson devil lets out a grunt of pleasure as he, at the same time as you, reaches his climax. Burying his entire length on his slave's ass, he cums when you do, both cocks shooting all the cum that has been begging to leave right inside the incubus. On your end, the boy slurps all your seed to the last drop, while he takes Mogdraz's in his insides, and looking underneath, you see that this whole thing also made the sub demon orgasm, having coated the rack's support structure and the floor with his own hellish jizz. The red devil's load lasts for about a minute, until he pulls out of his boy's abused hole, with a thick stream of creamy sperm following and leaking down his taint. Your dick is still getting licked off any traces of your load, all before you pull away.";
+	say "     'What a fucking good release... Hope you enjoyed.' he says to you, as you help him free the incubus from the contraption. 'We can totally repeat this if you're in the mood! Let me know.' with a nod, you thank Mogdraz for having shared one of his slaves with you, and while he gives some post-sex caretake to his boy, you take your leave upstairs. He will soon return to his usual spot by the lounge.";
+	now lastfuck of Mogdraz is turns;
 
 [***********************************************************]
 Section 5 - Hellfire Club
@@ -412,7 +474,7 @@ The earea of Hellfire Club is "Red".
 The description of Hellfire Club is "[HellfireClubDesc]".
 
 to say HellfireClubDesc:
-	say "     You're standing outside of the Hellfire Club, a place hidden from the common eyes, owned by the infamous Master Mogdraz so referred by the demons which the club is named after. They seem to have acquired their own source of energy, which you do not care to get an explanation from, since it's probably demonic stuff. Inside, the party seems to be ongoing, a barely audible sound of lounge music playing. It's a very fetish and BDSM themed club, great for the kinky and for the curious. Guarding the entrance are two burly hellfire demons, eyeing you with a smirk, but they do not stop you thanks to the order given by Mogdraz himself to allow you free entry. You could head further inside the club, or head back south into the ominous and oddly clean Crimson Street.";
+	say "     You're standing outside of the Hellfire Club, a place hidden from the common eyes, owned by the infamous Master Mogdraz so referred by the demons which the club is named after. They seem to have acquired their own source of energy, which you do not care to get an explanation from, since it's probably demonic stuff. Inside, [if daytimer is night]the party seems to be ongoing, a barely audible sound of lounge music playing[else]things seem pretty calm, not an audible sound coming from there[end if]. It's a very fetish and BDSM themed club, great for the kinky and for the curious. Guarding the entrance are two burly hellfire demons, eyeing you with a smirk, but they do not stop you thanks to the order given by Mogdraz himself to allow you free entry. You could head further inside the club, or head back south into the ominous and oddly clean Crimson Street.";
 
 to connect Hellfire Club:
 	change the south exit of Hellfire Club to Crimson Street;
@@ -435,11 +497,301 @@ The earea of Hellfire Lounge is "Red".
 The description of Hellfire Lounge is "[HellfireLoungeDesc]".
 
 to say HellfireLoungeDesc:
-	say "     The lounge of the Hellfire Club is a spatious environment, with a bar counter on one side and many chairs and seats scattered around, screaming lush and delight wherever you look. The noise isn't unbearable, you're even able to have a normal conversation with anyone without having to raise your voice too much. At one corner with peripheral vision for the entire lounge is a large and luxurious red velvet sofa, where the owner of the club, Mogdraz, usually takes his seat, often accompanied by a couple of servants. Behind the bar counter, to the west, there's a door to the back rooms with a signal prominently saying [']STAFF ONLY[']. It doesn't look like you can go in there for the moment. To the south is the entrance, with two burly hellfire demons keeping watch all the time.";
+	say "     The lounge of the Hellfire Club is a spatious environment, with a bar counter on one side and many chairs and seats scattered around, screaming lush and delight wherever you look. Here, [if daytimer is night]the noise isn't unbearable, you're even able to have a normal conversation with anyone without having to raise your voice too much, and the bartender is serving drinks as usual[else]some demon lackeys are cleaning up the seats, tables and corners from the previous night, while the bartender is polishing the drinking glasses[end if]. At one corner with peripheral vision for the entire lounge is a large and luxurious red velvet sofa, where the owner of the club, Mogdraz, usually takes his seat, sometimes accompanied by a couple of servants, who he dismisses whenever you approach him. Behind the bar counter, to the west, there's a door to the back rooms with a signal prominently saying [']STAFF ONLY[']. It doesn't look like you can go in there for the moment. To the south is the entrance, with two burly hellfire demons keeping watch all the time.";
 
 instead of smelling Hellfire Club:
 	say "     It must be the hellfire demons musk, but everything smells so delightfully devilish in here that just makes you want to stay. The sweet and masculine musk of attractive demonic creatures is enough to send you into a brief lightheaded state, taking you some time to shake it off. There are also other creatures' scents getting mixed together, but you can barely notice them.";
 
+[***********************************************************]
+Section 5-1 - Toron the Bartender
+[***********************************************************]
+
+ToronDoneTalking is a truth state that varies.[@Tag:NotSaved]
+
+Table of GameCharacterIDs (continued)
+object	name
+Toron	"Toron"
+
+Toron is a man. Toron is in Hellfire Lounge.
+ScaleValue of Toron is 3. [human sized]
+Cock Count of Toron is 1.
+Cock Length of Toron is 9.
+Ball Size of Toron is 4.
+Ball Count of Toron is 2.
+Cunt Count of Toron is 0.
+Cunt Depth of Toron is 0.
+Cunt Tightness of Toron is 0.
+Nipple Count of Toron is 2. [2 nipples]
+Breast Size of Toron is 0.
+[Basic Interaction states as of game start]
+PlayerMet of Toron is false.
+PlayerRomanced of Toron is false.
+PlayerFriended of Toron is false.
+PlayerControlled of Toron is false.
+PlayerFucked of Toron is false.
+OralVirgin of Toron is false.
+Virgin of Toron is false.
+AnalVirgin of Toron is false.
+PenileVirgin of Toron is false.
+SexuallyExperienced of Toron is true.
+MainInfection of Toron is "".
+The description of Toron is "[ToronDesc]".
+The conversation of Toron is { "<This is nothing but a placeholder!>" }.
+The scent of Toron is "     Toron smells... like nothing. He's completely odorless. You can't help but think there's something quite odd about this fellow.".
+
+to say ToronDesc:
+	say "     You perceive Toron as a purple skin colored human with unnaturally bright pink eyes, although the lighting in the lounge give his bare torso a slight red tone at night... It's confusing, and truth be told, you're not really sure about his real colors, only that he is far from being a human. He's tall within the average scale, and very muscular, with incredibly handsome features. However, he gives you this feeling of... uncertainty, like he's not what he really looks like, and the occasional scaly tentacle appearing right behind him to grab drinks and bottles out of his arms['] reach may help explain why you feel this way. He stands behind a counter all the time, though he's usually wearing some tight black jeans.";
+	if perception of player >= 19:
+		say "     [italic type]His shape dims like a very thick liquid when you look at him attentively for a long time. You try not to do that often, however, as his counter gaze almost seems to petrify you.[roman type][line break]";
+
+instead of conversing Toron:
+	say "     You come close to the bar counter, as Toron immediately turns his attention to you. 'Drinks on the house, by Mogdraz's order. How lucky, not many gain his respect like that.' he says, his voice clear and low as if caressing your ears. He surely is charming. 'So, what can I get you?'";
+	say "[ToronTalkMenu]";
+
+to say ToronTalkMenu:
+	now ToronDoneTalking is false;
+	say "     [bold type]Is there something you want from the Hellfire Club's bartender?[roman type][line break]";
+	LineBreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Order a drink";
+	now sortorder entry is 1;
+	now description entry is "Order a drink at the bar";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Recent events";
+	now sortorder entry is 2;
+	now description entry is "Request an update on what's going on";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Himself";
+	now sortorder entry is 3;
+	now description entry is "Ask Toron to tell you more about himself";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "His work";
+	now sortorder entry is 4;
+	now description entry is "Inquire him about his work";
+	[]
+	if Energy of Toron > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Sex";
+		now sortorder entry is 5;
+		now description entry is "Bring up the obvious subject";
+		[]
+	if Energy of Toron > 1:
+		choose a blank row in table of fucking options;
+		now title entry is "History with Mogdraz";
+		now sortorder entry is 6;
+		now description entry is "Ask him about his relationship with Mogdraz";
+	[]
+	if resolution of An Hellish Introduction > 1:
+		choose a blank row in table of fucking options;
+		now title entry is "About Xaedihr";
+		now sortorder entry is 7;
+		now description entry is "Ask if he knows Xaedihr";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Order a drink"):
+					say "[ToronTalkDrinks]";
+					now ToronDoneTalking is true;
+				if (nam is "Recent events"):
+					say "[ToronTalkNews]";
+					now ToronDoneTalking is true;
+				if (nam is "Himself"):
+					say "[ToronTalkHimself]";
+				if (nam is "His work"):
+					say "[ToronTalkWork]";
+				if (nam is "Sex"):
+					say "[ToronTalkSex]";
+				if (nam is "History with Mogdraz"):
+					say "[ToronTalkMogdraz]";
+				if (nam is "About Xaedihr"):
+					say "[ToronTalkXaedihr]";
+				wait for any key;
+				if ToronDoneTalking is false:
+					say "[ToronTalkMenu]"; [looping back to keep talking with him]
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You excuse yourself as the bartender continues his tasks.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
+
+to say ToronTalkDrinks:
+	if HellfireDrinkTimer > 0:
+		say "     You can't have another drink while the effects of the previous one persist. Try again later.";
+		say "[ToronTalkMenu]";
+	else:
+		say "     Since drinks are on the house, you might as well get one. 'Very well, though I must remind you that only the special selection is available for you, exclusively. Its effects last [bold type]24 hours[roman type] and you cannot consume any other until it leaves your system. In return, you get a physical or mental boost, depending on which drink you order. Sounds useful, doesn't it?'";
+		say "[HellfireClubDrinksMenu]";
+
+to say ToronTalkNews:
+	say "     You ask Toron to share some gossip, and also update you on recent events happening around the area. He leans over the counter and speaks low.";
+	say "     [one of]'All kinds of people come and go from here, but they can't help themselves when they see the boss getting serviced. Some stare and jerk off, it's pretty hilarious.'[or]'You wouldn't believe if I told you I've been asked to tentacle rape an anthro wolf, would you?'[or]'Mogdraz just had a special client, and he made a generous pay. What he wanted in exchange? To feel his navel. That was it.'[or]'Incubi and succubi are such a drag, sometimes. Flirting, flirting, and... oh, more flirting. And their thoughts? Literally useless.'[or]'Demon Brutes seem to be a problem around the mall's sewers. Have you been there?'[or]'There's this mega beast called Behemoth wandering around the Dry Plains who seems to be able to... slurp people in with their dicks and pussies? Very... odd. But... intriguing.'[or]'I've heard of an imp dumping hell trash somewhere in the Warehouse District. What an odd place to do it, honestly.'[or]'Why are the Incubi swarming the College Campus? I'm wondering, since their original base is the Red Light District. Curious, is it not?'[or]'Alpha huskies, alpha german shepherds, alpha this and that, all over the place preying on new additions to their packs... then they often come here to get dominated by an experienced demon. Oops.'[or]'Those orcs at the Warehouse District, looking for new breeders... They have this really nice brew.'[or]'Have you met an Oni? Those are interesting demons... and pretty big ones, too. They quite often get me weak on the knees... it's what you call this leg bone thingie, right?'[at random]";
+	if HellfireOrcBrewTimer - turns < 4:
+		say "     'Also, I've got a new drink, thanks to your previous offerings. The [bold type]Orcish Bomber[roman type] has been added to the menu. Give it a try!'";
+		now HellfireOrcBrewTimer is 20000;
+
+to say ToronTalkHimself:
+	say "     Looking forward to know more about this strange demon, you ask him to tell you about himself. He looks flattered by your interest, but not entirely surprised. 'I get that question many times, in fact.' he replies, looking at you in the eye for a longer time than you're comfortable with. Then, you're somehow feeling relaxed... and safe... your thoughts suddenly vanishing from your mind and... Wait, what just happened? You return to your senses and find yourself confused, frantically looking around as Toron laughs. 'It is a dangerous question, too. Gives me enough time to pluck a secret from you.' Your eyes widen, as you understand that this was some kind of hypnosis he just performed on you. 'Ah, don't worry... It was nothing special. Maybe. That depends on how important it is for you.'";
+	say "     He almost speaks in riddles, but he's still evading your question, so you redirect the conversation to that point. 'I am simply the bartender of the Hellfire Club, a loyal friend to Mogdraz... And someone whose bad side you don't want to be in. So... behave.' And those are the only things he says. Then, he's just staring at you with a sly smile, and his eyes are simply too irresistible to not stare back at... But remembering what happened just a while ago, it's probably for the best to not give in, else you want to accidentally let him know everything that is to know about you. 'They say the eyes are the soul's mirrors... careful.' Oh, and apparently he can read your thoughts.";
+
+to say ToronTalkWork:
+	say "     Knowing that the Hellfire Club is... not so simply just a club, the same should apply to its bartender. So you ask Toron a little more about it. 'My work here? Serving drinks... cleaning up and polishing glasses... Keeping everything as clean as possible... You have no idea how wild our clients get sometimes. There's cum, girl juices, even milk sometimes - yes, tit milk, I'm not even kidding! - covering the floor at the corners they take for a quick fuck, and then it stinks! Imagine those dogs, cats, foxes, bulls, wolfs, bears, horses, gorillas, all fucking around for an entire night, and you can imagine the stench. Why is the demon kink so popular...? I don't get it. Are we that alluring?! And the sexual proposals I get...! And not just to suck me off or eat my ass, no, they are attracted to my tentacles! MY TENTACLES!' As he says this, he plops a big fat one on top of the counter. 'Who would want this in their beavers and tacos? Or slurp on this? It's just a scaly tentacle with suckers, like the ones octopuses have! Is this kinky?!'";
+	say "     Sounds like you've triggered Toron's frustrations about his work and clientele. 'I apologize, I must have gotten a little worked up. This ain't so bad, though I often wonder why Mogdraz has brought me here. I am a simple demon, who feeds on secrets. I may be able to provide you with some... gossip or actually useful information. Just ask, as long as you remain in the good guys['] list.' He seems to be some sort of informant, besides being a bartender.";
+	say "     [bold type]He might be very useful if you want to know things.[roman type][line break]";
+	if Energy of Toron is 0:
+		now Energy of Toron is 1;
+
+to say ToronTalkSex:
+	say "     Given Toron's take on sexual proposals he gets, you're not quite sure if you should be asking this question, but you lose nothing in doing so. Still, you choose to ask the question softly, maybe starting with if he ever has any sex at all, given where he is working at. 'Sometimes I do... with people I like. Not just anyone. There aren't many I fancy... I like strong hands and beautiful eyes. Like Mogdraz's... yes, he's a good reference. We have our fun, sometimes, with his minions. Group sex is fun, but only during the day. At night, I'm stuck here, pouring drinks, serving them, and sweet talking customers into providing me knowledge.' Seems like the purple demon prefers being submissive, and is only available for more engaging fun during the day.";
+	say "     [bold type]You can try your luck, if you fit his preferences.[roman type][line break]";
+	if Libido of Toron is 0:
+		now Libido of Toron is 1;
+	if Energy of Toron is 1:
+		now Energy of Toron is 2;
+
+to say ToronTalkMogdraz:
+	say "     Toron and Mogdraz work together, and he has mentioned the demon boss a lot of times throughout your conversations. So your curiosity brings you to this question, specifically, what kind of relationship they maintain. Asking the bartender about it, he looks to the side and leans over the counter, speaking in a lower tone. 'I was our former Lord's informant. Right after his heir betrayed him and ran off, Mogdraz basically kidnapped me and made me work for him. I think I kind of let myself... uh... get fascinated by such a virile and powerful demon such as the Demon Lord of our world... and Mogdraz reminded me of him a lot without the bad parts, which was simply perfect. Mogdraz is one wholesome individual. He's not evil... nor corrupted... nor under the influence of Hell... unlike most of our kind. In a way, he freed me. And I am very thankful of that.'";
+	say "     The informant of a Demon Lord?! Just how powerful are these demons... 'Very powerful, but in this world we are sort of limited, as the same laws do not apply. That might come to protect us in the end, who knows.' He replied to your... thought. Right, he can read your thoughts. 'Sorry about that. It's a bad habit.' he apologizes, 'But answering your initial question, my relationship with Mogdraz is... let's say we're close friends with benefits. And I'll let you know a little secret... He likes plushies. Says they're cuddly. It's kind of funny...' You thank him for what he shared, especially the last part, which is quite interesting, to say the least.";
+
+to say ToronTalkXaedihr:
+	say "     Now that Xaedihr is known around the club, you figure you could ask Toron if he knows him, too. 'Xaedihr... Yes, I know him well. Too well. I'm not sure if he's told you that, but he is the heir of the Demon Lord in our world. His only son, who saw his father falling into a deeper greed for power, and actually becoming powerful enough to defy Hell itself. Poor kid has seen things... He's not even fully demon, his mother was a human who died giving him birth, as his father is quite an unimaginably strong entity. Never shed a tear for his lover, he was more interested in training Xaedihr to become his successor, and even fused him with an aspect of darkness, leaving him with permanent marks. The tattoo on his shoulder and arm... That's it. And this aspect can be summoned at will, as he has mastered it. Otherwise, the aspect would have taken control of his mind, and possibly to become the Lord's underling. Quite sad if that were to happen.'";
+	say "     Seems like Toron knows a lot more about Xaedihr than even the half-demon himself. 'You saw how he brought down two of Mogdraz's best hellfire demons so easily? You've got a powerful companion on your side... and with a very delicate heart. His tough shell is merely for self-protection. Gain his trust, and you'll have a friend for life, but hurt him, and you'll... be having a bad time.' You thank Toron for sharing this information with you, to which he nods. 'Just keep it discrete.'";
+
+HellfireDrinkTimer is a number that varies. HellfireDrinkTimer is usually 0. [@Tag:NotSaved]
+HellfireOrcBrewTimer is a number that varies. HellfireOrcBrewTimer is usually 20000. [@Tag:NotSaved]
+
+to say HellfireClubDrinksMenu:
+	say "     [bold type]Toron hands you a list with the drinks he has on stock[roman type]. 'This is what I have right now.'";
+	LineBreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Order a Hellfire Swizzle";
+	now sortorder entry is 1;
+	now description entry is "A drink that increases your might (+1 strength)";
+	[]
+	if "Created Orcish Bomber" is listed in traits of Toron:
+		choose a blank row in table of fucking options;
+		now title entry is "Order an Orcish Bomber";
+		now sortorder entry is 1;
+		now description entry is "A drink that substantially increases your might, at the cost of accuracy (+2 strength, -1 dexterity)";
+	[]
+	if orc brew is owned and "Created Orcish Bomber" is not listed in traits of Toron and HellfireOrcBrewTimer is 20000:
+		choose a blank row in table of fucking options;
+		now title entry is "Show him the orc brew";
+		now sortorder entry is 1;
+		now description entry is "He might be interested in the orc brew";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Order a Hellfire Swizzle"):
+					say "[DrinkHellfireSwizzle]";
+				if (nam is "Order an Orcish Bomber"):
+					say "[DrinkOrcishBomber]";
+				if (nam is "Show him the orc brew"):
+					say "[GiveToronOrcBrew]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You excuse yourself as the bartender continues his tasks.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
+
+to say DrinkHellfireSwizzle:
+	say "     You make a request for a Hellfire Swizzle, a spicy drink served at ambient temperature, with ingredients containing something that probably comes from hellfire demons, though it's perfectly safe... allegedly. 'Right on.' says Toron, as he prepares the mix. Adding all the components of the drink into a mixer, he shakes its contents until it attains a pretty crimson red color, then pours it onto a flat, tall and narrow glass, decorated with a grapefruit and a cherry on top. 'Here you go' he says, sliding the glass towards you. The drink smells strong, kind of tingling your nose. Well, time to have a taste.";
+	say "     The sensation is fiery, as expected, with a hint of sweetness to it, and a sensation similar to a hot variant of peppermint, making your mouth much hotter than before. Still, it's easily drinkable, and absolutely tasty, so you finish it off in a fairly short time. After you've had the whole thing, you feel invigorated with newfound strength.";
+	FeatGain "Hellfire Swizzle";
+	say "     Your [bold type]Strength has increased by 1[roman type] for the next [bold type]24 hours.[roman type][line break]";
+	statchange "Strength" by 1 silently;
+	now HellfireDrinkTimer is 8;
+	decrease thirst of player by 10;
+
+to say DrinkOrcishBomber:
+	say "     You make a request for an Orcish Bomber, a powerful drink served at ambient temperature, made as an improved orc brew using components from orc cum, though it's perfectly safe... allegedly. 'Right on.' says Toron, as he prepares the mix. Adding all the elements of the drink into a mixer, he shakes its contents until it attains a very transparent white color, then pours it onto a flat, very short and narrow glass, served simply like a shot. 'Here you go. This one's strong.' he says, sliding the glass towards you. The drink smells faintly of orc, though nothing unbearable at all, being quite pleasing and soft to the nose... until you take a deeper whiff, and you nearly feel lightheaded. Well, time to ahve a taste.";
+	say "     The flavor is very intense, a mix between sweet and salty, its texture slightly thick, just like a liquor. You drink it all it one go, and feel it burning down your throat, a sensation only increasing with time, before it starts subsiding. It leaves a bitter aftertaste on the back of your mouth. This is one very strange drink, but you can already feel its effects pumping your muscles a bit, as your movements get slightly harder.";
+	FeatGain "OrcishBomber";
+	say "     Your [bold type]Strength has increased by 2, while your Dexterity has decreased by 1,[roman type] for the next 24 hours.";
+	statchange "Strength" by 2 silently;
+	statchange "Dexterity" by -1 silently;
+	now HellfireDrinkTimer is 8;
+	decrease thirst of player by 3;
+
+an everyturn rule:
+	if "Hellfire Swizzle" is listed in feats of Player:
+		if HellfireDrinkTimer <= 0:
+			FeatLoss "Hellfire Swizzle";
+			say "     It has been at least a full day since you've had that drink at the Hellfire Club, and the effect has been flushed out of the system by now. As a result, you've lost the boost from the drink, but are able to have another one.";
+			statchange "Strength" by -1 silently;
+		else:
+			decrease HellfireDrinkTimer by 1;
+	if "Orcish Bomber" is listed in feats of Player:
+		if HellfireDrinkTimer <= 0:
+			FeatLoss "Orcish Bomber";
+			say "     It has been at least a full day since you've had that drink at the Hellfire Club, and the effect has been flushed out of the system by now. As a result, you've lost the boost from the drink, but are able to have another one.";
+			statchange "Strength" by -2 silently;
+			statchange "Dexterity" by 1 silently;
+		else:
+			decrease HellfireDrinkTimer by 1;
+	if "Created Orcish Bomber" is not listed in traits of Toron:
+		if HellfireOrcBrewTimer - turns < 4:
+			add "Created Orcish Bomber" to traits of Toron;
+
+to say GiveToronOrcBrew:
+	say "     Since you're carrying a special drink that you've got from the orcs, you suppose Toron would be interested in its special characteristics, so you show him the stuff. 'You've got an orc brew? Splendid! I've been wanting to get one, but I just hadn't had any luck! Let me see.' he says, extending his hand towards you. Plucking the bottle out of your inventory, you give it to the bartender, who starts examining it immediately. 'The color, and texture...' he comments, as he opens the bottle to take a whiff. 'Even the smell... Do they... Do they put their cum in here? That's why it's such a wonder, huh... Orc cum is pretty much addictive, people drink this stuff and get hooked up. Sorry for the question but... Do you happen to have some raw [bold type]orc cum[roman type] with you?";
+	WaitLineBreak;
+	if orc cum is owned:
+		say "     Knowing that you have at least one bottle of Orc Cum in your inventory...";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Hand him some.";
+		say "     ([link]N[as]n[end link]) - Better not, for now.";
+		if player consents:
+			say "     Might as well give this a try. You take the bottle of Orc Cum out and hand it to Toron, who gladly accepts your offer. 'Good! I needed this. Very well, I'll be able to create something new with this. If it's a success, I'll just... send someone to harvest the ingredients. Oh, don't look at me like that, I bet they would enjoy having some eager demons milking them for their cum... since this land is as strange as it is. Anyway, I'll bring these in, though I'll need some time until I can get something done. Come back later, perhaps I'll have news.' Taking both ingredients you have just provided him with, Toron takes them inside, returning to his duties shortly after.";
+			decrease carried of orc cum by 1;
+			decrease carried of orc brew by 1;
+			now HellfireOrcBrewTimer is turns;
+			say "[HellfireClubDrinksMenu]";
+		else:
+			say "     You shake your head, telling him that you don't have one available at the moment. 'Ah, I see... Then have the brew back, I can't do anything with it without this specific ingredient. Though feel free to come back to me with it whenever you get some orc cum. I might just be able to improve this brew...'";
+			say "[HellfireClubDrinksMenu]";
+	else:
+		say "     You shake your head, telling him that you don't have one available at the moment. 'Ah, I see... Then have the brew back, I can't do anything with it without this specific ingredient. Though feel free to come back to me with it whenever you get some orc cum. I might just be able to improve this brew...'";
+		say "[HellfireClubDrinksMenu]";
 
 [***********************************************************]
 [***********************************************************]

@@ -128,8 +128,6 @@ to say RedLightBoundaryWestDesc:
 instead of smelling Boundary Street West:
 	say "     This place smells very strongly of sex, with a musky scent of arousal hanging thick in the air. This neighborhood was clearly struck hard by the infection, being particularly vulnerable. The scents of several lustful creatures waft by your nose, so strong that their origins can't be far off. You catch the scent of what you guess to be [one of]a hyper-masculine creature[or]some kind of feline creature[or]a strong latex source[or]a dark and powerful female[or]arousing pollen[or]a large marsupial[or]an arousing perfume[or]a herm and cheap sex[at random], making your head swim a bit before you shake the sensation off.";
 
-Porn Store is northwest of Boundary Street West.
-
 Table of GameRoomIDs (continued)
 Object	Name
 Northern Street 1	"Northern Street 1"

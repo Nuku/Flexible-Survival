@@ -50,7 +50,6 @@ Figure of FeralShaftBeast_icon is the file "FeralSB_ig.jpg".
 Figure of FireSpriteMale_icon is the file "FireSprite_male.jpg".
 Figure of FluffyOwl_icon is the file "FluffyOwl.png".
 Figure of FrPony_icon is the file "fs_afriendshippony.jpg".
-Figure of Giraffe_icon is the file "Giraffe_ig.jpg".
 Figure of GooGirl_icon is the file "GooGirl.jpg".
 Figure of BlueGryphon_icon is the file "BlueGryphon.jpg".
 Figure of BlueGryphon_face_icon is the file "BlueGryphon_face.jpg".
@@ -60,6 +59,8 @@ Figure of Gazelle_hard_icon is the file "Gazelle_hard.jpg".
 Figure of Gazelle_soft_icon is the file "Gazelle_soft.jpg".
 Figure of GermanShepherd_hard_icon is the file "GermanShepherd_hard.jpg".
 Figure of GermanShepherd_naked_icon is the file "GermanShepherd_naked.jpg".
+Figure of GiraffeHerm_hard_icon is the file "Giraffe Herm_hard.jpg".
+Figure of GiraffeHerm_soft_icon is the file "Giraffe Herm_soft.jpg".
 Figure of Gunbunny_icon is the file "Gunbunny_ig.jpg".
 Figure of Ebonflame_Drake_icon is the file "Ebonflame_Drake.jpg".
 Figure of Hawkman_naked_icon is the file "Hawkman_naked.jpg".
@@ -131,6 +132,8 @@ Figure of TigressHooker_icon is the file "tigresshooker_ig.jpg".
 Figure of Triceratops_icon is the file "triceratops_ig.jpg".
 Figure of VixenNurse_icon is the file "VixenNurse_ig.jpg".
 Figure of Vixentaur_icon is the file "vixentaur_ig.jpg".
+Figure of Wolftaur_hard_icon is the file "Wolftaur_hard.jpg".
+Figure of Wolftaur_soft_icon is the file "Wolftaur_soft.jpg".
 Figure of Werewolf_female_icon is the file "Werewolf.jpg".
 Figure of Wildcat_icon is the file "wildcat_ig.jpg".
 Figure of Wood_Elf_icon is the file "Wood Elf.jpg".
@@ -141,6 +144,12 @@ Figure of YamatoDragon_green_hard_icon is the file "YamatoDragon_green_hard.jpg"
 Figure of YamatoDragon_green_soft_icon is the file "YamatoDragon_green_soft.jpg".
 Figure of YamatoDragon_blue_hard_icon is the file "YamatoDragon_blue_hard.jpg".
 Figure of YamatoDragon_blue_soft_icon is the file "YamatoDragon_blue_soft.jpg".
+Figure of YamatoDragoness_red_SFW_icon is the file "YamatoDragoness_red_SFW.jpg".
+Figure of YamatoDragoness_red_NSFW_icon is the file "YamatoDragoness_red_NSFW.jpg".
+Figure of YamatoDragoness_green_SFW_icon is the file "YamatoDragoness_green_SFW.jpg".
+Figure of YamatoDragoness_green_NSFW_icon is the file "YamatoDragoness_green_NSFW.jpg".
+Figure of YamatoDragoness_blue_SFW_icon is the file "YamatoDragoness_blue_SFW.jpg".
+Figure of YamatoDragoness_blue_NSFW_icon is the file "YamatoDragoness_blue_NSFW.jpg".
 Figure of YuppieMink_icon is the file "FSTF_YuppieMink_ig.jpg".
 Figure of Zebra_icon is the file "Zebra.jpg".
 Figure of Zebra_face_icon is the file "Zebra_face.jpg".
@@ -293,7 +302,8 @@ Figure of Lilith_clothed_icon is the file "Succubus_clothed.jpg".
 Figure of Lilith_naked_icon is the file "Succubus_naked.jpg".
 Figure of Lilith_face_icon is the file "Succubus_face.jpg".
 Figure of Lilith_boobs_icon is the file "Succubus_boobs.jpg".
-Figure of Lindsey_icon is the file "Lindsey_ig.jpg".
+Figure of Lindsey_hard_icon is the file "Lindsey_hard.jpg".
+Figure of Lindsey_soft_icon is the file "Lindsey_soft.jpg".
 Figure of Malakhi_icon is the file "Malakhi.jpg".
 Figure of MasterMind_icon is the file "MasterMind_ig.jpg".
 Figure of MarcOrwell_icon is the file "MarcOrwell.jpg".
@@ -760,7 +770,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "German Shepherd naked"	Figure of GermanShepherd_naked_icon	"Vashaa"	g-White	"normal"
 "Gillian"	Figure of Gillian_icon	"Eevachu"	g-white	"normal"
 "Gina_face"	Figure of Gina_face_icon	"Vashaa"	g-black	"normal"
-"Giraffe"	Figure of Giraffe_icon	"Sharei"	g-white	"normal"
+"Giraffe Herm hard"	Figure of GiraffeHerm_hard_icon	"Vashaa"	g-white	"normal"
+"Giraffe Herm soft"	Figure of GiraffeHerm_soft_icon	"Vashaa"	g-white	"normal"
 "Gobby"	Figure of Gobby_icon	"lionsilverwolf"	g-white	"normal"
 "Grant_face"	Figure of Grant_face_icon	"Vashaa"	g-black	"normal"
 "Grant"	Figure of Grant_icon	"uniformvixen"	g-white	"normal"
@@ -833,7 +844,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Lilith_clothed"	Figure of Lilith_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Lilith_face"	Figure of Lilith_face_icon	"Kupo Klein"	g-black	"normal"
 "Lilith_naked"	Figure of Lilith_naked_icon	"Kupo Klein"	g-white	"normal"
-"Lindsey"	Figure of Lindsey_icon	"Anymouse1968"	g-white	"normal"
+"Lindsey_hard"	Figure of Lindsey_hard_icon	"Vashaa"	g-white	"normal"
+"Lindsey_soft"	Figure of Lindsey_soft_icon	"Vashaa"	g-white	"normal"
 "Magic Drake"	Figure of MagicDrake_icon	"Anymouse1968"	g-white	"normal"
 "Malakhi"	Figure of Malakhi_icon	"Jahi"	g-black	"normal"
 "Malakhi & Barnabas"	Figure of Malakhi_Barnabas_icon	"Jahi"	g-black	"normal"
@@ -1000,6 +1012,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Warrior Chris_naked"	Figure of Warrior Chris_naked_icon	"Kupo Klein"	g-white	"normal"
 "Werewolf (female)"	Figure of Werewolf_female_icon	"Watsup"	g-white	"normal"
 "Wildcat"	Figure of Wildcat_icon	"Strype"	g-white	"normal"
+"Wolftaur_hard"	Figure of Wolftaur_hard_icon	"Vashaa"	g-white	"normal"
+"Wolftaur_soft"	Figure of Wolftaur_soft_icon	"Vashaa"	g-white	"normal"
 "Wood Elf"	Figure of Wood_Elf_icon	"Vashaa"	g-White	"normal"
 "Wyvern_female"	Figure of Wyvern_female_icon	"Anonymous"	g-white	"normal"
 "Yatur_clothed"	Figure of Yatur_clothed_icon	"Kupo Klein"	g-white	"normal"
@@ -1011,6 +1025,12 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Yamato Dragon Blue Soft"	Figure of YamatoDragon_blue_soft_icon	"Vashaa"	g-white	"normal"
 "Yamato Dragon Green Hard"	Figure of YamatoDragon_green_hard_icon	"Vashaa"	g-white	"normal"
 "Yamato Dragon Green Soft"	Figure of YamatoDragon_green_soft_icon	"Vashaa"	g-white	"normal"
+"Yamato Dragoness Red SFW"	Figure of YamatoDragoness_red_SFW_icon	"Vashaa"	g-white	"normal"
+"Yamato Dragoness Red NSFW"	Figure of YamatoDragoness_red_NSFW_icon	"Vashaa"	g-white	"normal"
+"Yamato Dragoness Blue SFW"	Figure of YamatoDragoness_blue_SFW_icon	"Vashaa"	g-white	"normal"
+"Yamato Dragoness Blue NSFW"	Figure of YamatoDragoness_blue_NSFW_icon	"Vashaa"	g-white	"normal"
+"Yamato Dragoness Green SFW"	Figure of YamatoDragoness_green_SFW_icon	"Vashaa"	g-white	"normal"
+"Yamato Dragoness Green NSFW"	Figure of YamatoDragoness_green_NSFW_icon	"Vashaa"	g-white	"normal"
 "Yuppie Mink_F"	Figure of YuppieMink_icon	"Anymouse1968"	g-white	"normal"	[only shown for female version]
 "Zebra Stallion"	Figure of Zebra_icon	"Purplepardus"	g-black	"normal"
 "Zigor"	Figure of Zigor_icon	"AugurMew"	g-black	"normal"
@@ -1115,7 +1135,7 @@ carry out artistcredits:
 	say "     Friendship Pony by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Gazelle by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     German Shepherd by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Giraffe by Sharei @ furaffinity.net[line break]";
+	say "     Giraffe Herm by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Goo Girl by Rastear @ y-gallery.net[line break]";
 	say "     Gunbunny by HBruton @ furaffinity.net[line break]";
 	say "     Hawkman by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
@@ -1177,9 +1197,11 @@ carry out artistcredits:
 	say "     Voodoo Gecko by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Werewolf (female) by Watsup @ https://www.furaffinity.net/user/watsup/[line break]";
 	say "     Wildcat by Strype @ furaffinity.net[line break]";
+	say "     Wolftaur by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Wood Elf by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Wyvern Female by Anonymous[line break]";
 	say "     Yamato Dragon by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
+	say "     Yamato Dragoness by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Yuppie Mink by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Zebra by Purplepardus @ furaffinity.net[line break]";
 	LineBreak;
@@ -1271,7 +1293,7 @@ carry out artistcredits:
 	say "     Krampus by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
 	say "     Leonard by SandySchreiber @ furaffinity.net[line break]";
 	say "     Lilith by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
-	say "     Lindsey by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Lindsey by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	[say "     Logan by Rik @ https://www.furaffinity.net/user/almee/[line break]";] [WIP]
 	say "     Malakhi by Jahi @ https://www.furaffinity.net/user/jahi/[line break]";
 	say "     Master Mind by HBruton @ furaffinity.net[line break]";

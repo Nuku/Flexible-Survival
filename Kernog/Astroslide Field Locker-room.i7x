@@ -1,4 +1,5 @@
 Astroslide Field Locker-room by Kernog begins here.
+[Some minor edits and the inclusion of the new TF helmet - Luneth]
 
 "Adds the Astroslide Field Locker-room, where players can have sex with gorilla footballmen, become part of the team, and conduct business related to them."
 
@@ -77,17 +78,17 @@ to say RomanHumiliation:
 	say "     'Looks tight. Haven't used it much, bitch?' The primates press around Roman. Another one slips in a finger, then another. They are quickly half a dozen, prodding his holes, stretching him.";
 	say "     'Unf... Get off me!' Roman says, suddenly putting a desperate resistance. The group wrestles for a moment until Roman is pinned again, this time back on a wooden bench. 'Tie her up!' Roman punches and kicks, but he is alone. His former teammates pick what they can find, which is jerseys and shirts resting on the ground. Roman's arms are pulled under him and trapped under the bench. In the meantime, his legs are pulled against his chest and tied to the feet of the bench to keep them in this position. 'There we go,' one of the players says. 'Now, let's see how many fingers this pussy can hold.' And the sadistic team resumes its collective fingering.";
 	WaitLineBreak;
-	say "     The rest of the room watches the scene unfold, some shocked, some aroused, all unwilling to help, as it often happens in these situations. Roman's howling is quickly muffled as one of the players slams his cock down the former captain's throat. 'If I you bite it, we'll take one of the footballs and stretch your cunt with it,' the ape threatens. Roman whimpers and does not bite. On the other side, another gorilla lines up his cock with Roman's hole. 'Bitch is ready to be [']initiated['].' Under the encouragements of the others, he pushes his member into Roman, who howls around the rod in his throat.";
+	say "     The rest of the room watches the scene unfold, some shocked, some aroused, all unwilling to help, as it often happens in these situations. Roman's howling is quickly muffled as one of the players slams his cock down the former captain's throat. 'If you bite it, we'll take one of the footballs and stretch your cunt with it,' the ape threatens. Roman whimpers and does not bite. On the other side, another gorilla lines up his cock with Roman's hole. 'Bitch is ready to be [']initiated['].' Under the encouragements of the others, he pushes his member into Roman, who howls around the rod in his throat.";
 	say "     'Rmmmf!'";
 	say "     'Oh, fuck! He - no - she's extra tight!'";
 	say "     Minutes pass. The gorillas all take their turn into their former captain, and as the others arrive, see the scene, and learn of the captain's dirty secret, Roman's torment is prolonged for the whole part of an hour, then two. At first, Roman is struggling, but by his third penetration and fourth forced blowjob, a powerful, forced orgasm shakes his body under the cheers of the crowd. After some time, the gorillas all decide to [']get some rest['], though not before defacing Roman's body with a red marker. Now that the gorillas are not around him anymore, Roman's cum-covered body appears in all his glory. His belly is inflated with all the gorilla semen he was forced to intake, and some drips out from his pussy and mouth. Roman pants, tears drying on his face. Your eyes and his meet, but there is nothing but broken lust in his expression. He's broken.";
-	say "     As you start to make your way out, you notice that the door to Roman's room is ajar. You take a look inside and see a blue football helmet lying on a small bench. With a shrug, you opportunistically snag the helmet and add it to your possessions.";
+	say "     As you start to make your way out, you notice that the door to Roman's room is ajar. You take a look inside and see a black football helmet lying on a small bench. With a shrug, you opportunistically snag the helmet and add it to your possessions.";
 	say "[bold type]You gain a football helmet![roman type][line break]";
-	increase carried of football helmet by 1;
+	increase carried of Roman's stolen football helmet by 1;
 
 [General Sex menu]
 instead of fucking the Gorilla Team-Members:
-	setmonster "Football Gorilla";
+	setmonster "Football Gorilla Male";
 	if FurryList is banned:
 		say "     Too much fur for your taste.";
 	else:
@@ -235,7 +236,7 @@ to say GorillaTeamSex2: [bukkake (receiving)]
 	say "     Just moment later, the first of all the other guys jerking off on you joins him in orgasm, blasting your body with his white, creamy cum. Another follows before that guy's third shot, then another three at the same time, then more or less all the rest. From the corner of your eye, you see the horseman stud clasp his neighboring gorilla's shoulder tightly as a breathtaking climax rocks his body - turning his proudly flared shaft into almost a garden-hose of cum, drenching your whole front in his mighty load. You don't think there is any part of you that is not drenched in someone's seed - an amazing feeling that sends your own libido into overdrive. Now that they're no longer busy handling one cock after another, your hands fly to your own crotch, [if Player is male]grasping your own manhood and wanking it in a frenzied pace. As wound up as you are, it's only a matter of moments before you reach the point of no return, adding some splashes of your own cum to the large puddle all around you[else if Player is female]sinking your fingers into your pussy and rubbing the little nub of your clit in a frenzy. As wound up as you are, it's only a matter of moments before you reach the point of no return, adding some splashes of your own femcum to the large puddle all around you[else]rubbing your genderless, but quite sensitive crotch in a frenzied pace. As wound up as you are, it's only a matter of moments before you reach the point of no return, trembling all over as an orgasm rocks through your body[end if].";
 	WaitLineBreak;
 	say "     'Nice job,' a familiar voice tells you, then you feel the soft touch of a towel wiping at your face. Your original gorilla stud uses it to clean you up - but soon the towel is totally drenched and he gives a resigned chuckle before dropping it. 'Let's get you clean in the showers,' he says a moment later, giving you a hand to help you stand up in the slippery state you are in. You are guided into the shower room next and soon find yourself under a warm spray of water, with your gorilla and two others washing you down, all the while giving you some lusty gropes. The warm and wet fun in the shower continues for a while, without going any further than just touching and rubbing, until you eventually leave the gorillas behind, walking out to dry yourself off and put your clothes back on.";
-	infect "Football Gorilla";
+	infect "Football Gorilla Male";
 
 to say GorillaTeamSex3: [chain fuck]
 	let randomnumber be a random number from 1 to 5;
@@ -279,7 +280,7 @@ to say GorillaTeamSex3: [chain fuck]
 	else:
 		say "     Looking back at the guy and giving a slow shake of your head, you make clear to him that you don't want to get fucked - which he accepts, if a bit sullenly. As the gorilla moves off to find someone else to have fun with, you concentrate on your partner more fully, thrusting into him with new energy and changing up the angle of your movements to keep him on his toes. Moans and grunts from all three of you fill the locker-room, intermixed with the slaps of horny men's balls against their willing bottom's butts. It's great fun and you'd have loved to keep going for a long time, but eventually, [tempGorillaName2] reaches the point of no return and blasts his load, hitting the wall with audible splats. That first orgasm then leads to a kind of chain reaction, as the trembling and twitching hunk's inner muscles squeeze [tempGorillaName1]'s cock and make him cum too, followed moments later by yourself as his chute tightens to a vice-like grip around your erection.";
 		say "     When your worn-out trio has caught their breaths, some helpful team-members hand out towels, allowing you to clean up by wiping down the part of your cum that leaks from [tempGorillaName1]'s freshly bred hole. Though as you move on to dab at your own cock, you notice that the two gorillas didn't do so - they just used the towel to wipe away sweat and now [tempGorillaName2] is having his ass eaten out. It'll most likely result in another round of fucking very soon...";
-	infect "Football Gorilla";
+	infect "Football Gorilla Male";
 
 
 [Tenvale Gorillas Quest is in its own extension (Kernog folder)]

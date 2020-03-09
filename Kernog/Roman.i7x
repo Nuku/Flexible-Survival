@@ -1,4 +1,5 @@
 Roman by Kernog begins here.
+[Some minor edits and the inclusion of the new TF helmet - Luneth]
 
 "Adds the Team Captain Roman NPC, who hangs around Astroslide Football Field and is tied to the Tenvale Gorillas Football Team Quest."
 
@@ -68,7 +69,7 @@ Virgin of Team Captain Roman is false.
 AnalVirgin of Team Captain Roman is false.
 PenileVirgin of Team Captain Roman is false.
 SexuallyExperienced of Team Captain Roman is false.
-MainInfection of Team Captain Roman is "Football Gorilla".
+MainInfection of Team Captain Roman is "Football Gorilla Male".
 The description of Team Captain Roman is "[RomanDesc]".
 
 to say RomanDesc:
@@ -284,9 +285,10 @@ to say RomanConvince:
 	if diceroll > 16:
 		say "     Roman sighs. 'Okay. Just... Come here a minute.' The gorilla leads you to the same, isolated place than last time.";
 		say "     'It happened at the start of this whole mess. I had been already turned into an ape by then. I was strolling the city, curious about how it looked like outside and, and I got ambushed. Some crazy husky male ambushed me. Then, he knocked me out, and had me raped by his pack of bitches again, and again, for fun. It was not enough to turn me into a dog, but it was well enough to make my bits shrink, and eventually be replaced by this.' Roman gestures at his padded shorts. 'They mocked me all the way until I turned into a woman down there. It was not pleasant, to say the least. And I just can't confront the guys about it. I... You see them. [if Player is female]You see the lewd looks they give you because of your lady parts. [end if]If they learn, they will throw me out; or worse.'";
-		say "     The large primate wipes a tear which was beginning to form in the corner of his left eye. 'So, now you're on the page. You know, it feels kinda good to let it out, to someone you can trust.' Roman gives you a warm smile. 'And, who knows. When there will be enough women and herms in the team, their look will change, and I'll be able to loose the shorts. But for now, I trust you with this. Don't let me down, buddy.'";
+		say "     The large primate wipes a tear which was beginning to form in the corner of his left eye. 'So, now we're on the same page. You know, it feels kinda good to let it out, to someone you can trust.' Roman gives you a warm smile. 'And, who knows. When there is enough women and herms on the team, their looks may change, and I'll be able to loose the shorts. But for now, I trust you with this. Don't let me down, buddy.'";
 		say "     Roman parts from you, and you feel that you are at a crossroad. You could try to talk more to Roman, and [bold type]encourage him to come out[roman type] on his own terms, helping him find closure. You could let your inner sadist loose, go to the locker-room, [bold type]divulge the captain's secret with the team[roman type], and enjoy the ensuing torment. The choice is yours.";
 		now HP of Roman is 3;
+		add "tenvale gorillas football helmet" to invent of Astroslide Field Locker-Room;
 	else:
 		say "     'We already talked about it: I don't trust you enough to tell you about it. Please let it go,' Roman replies to your query.";
 
@@ -310,7 +312,7 @@ to say RomanEncourage:
 		say "     Everyone goes back to their business, and once Roman finishes to say goodbye to the last group, he traps you in a very, very tight hug. '[if Player is not defaultnamed][name of Player], [end if]I cannot find the words to thank you,' he says. 'It's like a weight just lifted from my shoulders. If I can do anything... [italic type]anything[roman type] to repay you, tell me. I consider you one of my closest friends. Actually...'";
 		say "     Roman runs to the locker-room, and comes back a couple of minutes later, a football helmet in his hands. 'I want you to take this. First one I received when joining the team, and still good,' the Gorilla explains as he lobs the helmet in your arms. 'You're going back into the city, right? You'll need it.' Thanking profusely Roman, you strap the helmet to your backpack.";
 		say "[bold type]You gain a football helmet![roman type][line break]";
-		increase carried of football helmet by 1;
+		increase carried of Roman's gifted football helmet by 1;
 		now HP of Roman is 5;
 	else:
 		say "     You give your best arguments to Roman. 'Thank you for your concern, but I don't think I am ready yet,' he replies. Nonetheless, your words had some effect on him.";
@@ -320,7 +322,7 @@ to say RomanEncourage:
 [SEX SCENES]
 
 instead of fucking Team Captain Roman:
-	setmonster "Football Gorilla";
+	setmonster "Football Gorilla Male";
 	if HP of Roman is 4:
 		if (lastFuck of Roman - turns > 4):
 			say "[RomanFuck1]";

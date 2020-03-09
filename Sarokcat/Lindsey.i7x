@@ -57,24 +57,30 @@ AnalVirgin of Lindsey is true.
 PenileVirgin of Lindsey is false.
 SexuallyExperienced of Lindsey is true.
 MainInfection of Lindsey is "Wolftaur".
-The description of Lindsey is "There is a large wolftaur examining itself in the mirror. Its large, canine lower body stretches behind it, and its tail is wagging slightly as it obviously approves of what it sees. The upper body of the beast is covered in soft gray fur, and the face is definitely more lupine than human. The sharp claws on its human hands look capable of doing a great deal of damage. As the wolftaur shifts its body around and turns its yellow canine gaze to you, you are given a good look between its legs, the large canine organ hanging half-erect there leaving no doubt as to the beast's maleness.".
+The description of Lindsey is "[LindseyDesc]".
 The conversation of Lindsey is { "Suck it!" }.
 Lindsey is in Zoo Restrooms.
+
+to say LindseyDesc:
+	project the Figure of Lindsey_soft_icon;
+	say "     There is a large wolftaur examining itself in the mirror. Its large, canine lower body stretches behind it, and its tail is wagging slightly as it obviously approves of what it sees. The body of the beast is covered in soft black fur, and the face is definitely more lupine than human. The sharp claws on its human hands look capable of doing a great deal of damage. As the wolftaur shifts its body around and turns its greem canine gaze to you, you are given a good look between its legs, the large canine organ hanging half-erect there leaving no doubt as to the beast's maleness.";
 
 the scent of Lindsey is "Lindsey has a strong, masculine scent. It is powerful and arousing, making you long to submit to this beast[if level of Lindsey > 5]. As you should, for you are his bitch to use[end if].".
 
 instead of conversing the Lindsey:
+	project the Figure of Lindsey_soft_icon;
 	if HP of Lindsey is 0:[first time you encounter the NPC text]
 		say "     'Well, hey there,' the large beast says with a small smile tugging at his muzzle. 'Fancy seeing someone like you here in the zoo. Must just be my good luck, I guess,' the creature says with a lupine grin as he moves his gaze up and down your body. 'Oh, I suppose I haven't introduced myself yet. The name is Lindsey, a few friends and I decided to have some fun breaking into the zoo when all the crazy stuff started going down,' the male wolf with a female name says, a look of fond remembrance seeming to cross his lupine face as he thinks about the events. 'Let's just say it was a wonderful night to remember.'";
 		say "     He pads towards you slowly, the musky smell in the room seeming to intensify as he draws close to you. 'I actually come by here occasionally just for the lovely memories. I had such a lovely time here that night with the wolftaur that used to be my boyfriend... He makes such a lovely bitch now,' the beast says with a grin. He reaches out and strokes your face with one of his clawed fingers, his strong masculine musk flooding your nose and making you feel slightly weak at the knees. 'Hmmm, I think you could make a fine little bitch too, all you need to do is ask, and I can help you with that...' the beast says with a lupine grin before lowering its face to yours to give your cheek a lick. 'Just say the word, and you could be enjoying yourself as much as I am,' Lindsey says in a teasing tone of voice as he saunters back over to the mirrors, his tail wagging happily for some reason as you stand there and try to recover your wits.";
 		increase HP of Lindsey by 1;
 	else if HP of Lindsey is 1:[Normal short messages the NPC will say each time you talk to them]
-		say "[one of]'So are you ready to be my bitch?'[or]'My former boyfriend is back at the den. I could take you to meet her sometime, if you were a proper bitch...'[or]'I am so glad we came to the zoo that night.'[or]'The whole wolf thing was a bit scary at first, but now it is downright amazing.'[or]'It would be nice to have a pack, don't you think?'[or]'I think you would make a fine addition to my pack.'[or]'I wish I knew who caused whatever this is to happen, so I could thank them!'[or]'Have you seen those Tigertaurs out there? If they weren't so feline they could be fun to fuck...'[or]'I love having a cock. I never realized how much fun they were before.'[or]'Don't you want to pet my soft fur?' Lindsey says with a teasing look in his eyes.[or]The wolftaur just stares at you with his bright yellow eyes as you try to talk to him. Unable to meet that intent gaze, you quickly find yourself lowering your eyes. The wolftaur chuckles, his dominance established.[or]'Wolves have all the fun. I should know.'[or]'Wouldn't you feel better on all four paws?'[or]'It's good to be the alpha.'[at random]";
+		say "[one of]'So are you ready to be my bitch?'[or]'My former boyfriend is back at the den. I could take you to meet her sometime, if you were a proper bitch...'[or]'I am so glad we came to the zoo that night.'[or]'The whole wolf thing was a bit scary at first, but now it is downright amazing.'[or]'It would be nice to have a pack, don't you think?'[or]'I think you would make a fine addition to my pack.'[or]'I wish I knew who caused whatever this is to happen, so I could thank them!'[or]'Have you seen those Tigertaurs out there? If they weren't so feline they could be fun to fuck...'[or]'I love having a cock. I never realized how much fun they were before.'[or]'Don't you want to pet my soft fur?' Lindsey says with a teasing look in his eyes.[or]The wolftaur just stares at you with his bright green eyes as you try to talk to him. Unable to meet that intent gaze, you quickly find yourself lowering your eyes. The wolftaur chuckles, his dominance established.[or]'Wolves have all the fun. I should know.'[or]'Wouldn't you feel better on all four paws?'[or]'It's good to be the alpha.'[at random]";
 
 
 the fuckscene of Lindsey is "[sexwithLindsey]".
 
 to say sexwithLindsey:
+	project the Figure of Lindsey_hard_icon;
 	setmonster "Wolftaur";
 	if lastfuck of Lindsey - turns < 6:
 		say "     'Sorry there my horny little bitch,' Lindsey says with a soft chuckle, 'but I have to check on my other bitch and make sure she is properly taken care of too, so I need to save a bit of energy for that. Why don't you come back in a little bit and I can make you even more into a proper little bitch, just like you want,' the masculine wolftaur says with lupine grin, the mingled musk of male wolftaur and your recent sex filling the air.";

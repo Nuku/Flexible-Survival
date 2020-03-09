@@ -985,7 +985,7 @@ carry out KyrverthItemReturn:
 		say "You don't have anything to return on you.";
 
 Table of Game Objects (continued)
-name	desc	weight	object	sortname (indexed text)
+name	desc	weight	object
 "Racing Horseshoe"	"An aluminum racing horseshoe from the fastest horse in the world, now given to the winner of the races each year. This item would be extremely valuable to some people."	1	Racing Horseshoe
 "Anubis Mask"	"A mask that carries the depiction of Anubis. This item is extremely old and is made of a blue gem. Golden inlays accentuate the features and lines around the eyes. This item would be extremely valuable to some people."	2	Anubis Mask
 "Golden Sculpture"	"A dildo supposedly made out of gold. The shaft is obviously not human - a spade-shaped tapered tip leading to multiple ridges the whole way down and a small knot at the bottom. This item would be extremely valuable to some people."	4	Golden Sculpture

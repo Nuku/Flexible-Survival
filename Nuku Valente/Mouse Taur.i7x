@@ -1,5 +1,6 @@
 Version 2 of Mouse Taur by Nuku Valente begins here.
 [Version 2.1.1 - conversion to 'lastfuck']
+[Version 2.2 - ALtered the name of the building to Restrained Desire and added a proper store to it by Luneth]
 
 "Adds a situation to Flexible Survival with a mouse taur living in a porn store."
 
@@ -33,7 +34,7 @@ Instead of Resolving a Mouse Taur Encounter:
 		say "     You give your name and begin idly chatting about time before everything went bad. You settle with her and Lisa pulls out some snacks, sharing with you as you talk with her. 'I planned to be a teacher,' she explains. 'Grade school, but then this happened. It seems that some mice that lived in my house became infected. They never bit me or anything, but close proximity seems to have been enough. I'm pretty certain their fur got onto a bit of my food. Maybe the indirect contact is why it took several days for me to change, and into an unconventional form too.' But change she did, becoming a curvy mouse taur that wandered the city alone, fending for herself until she recently found a safe place to stay, relatively nearby to where you are right now. 'You're welcome to come by and visit me anytime too. Just look for a porn store in the western boundary street.' Meal time over, you both rise. She gives you a firm parting hug, and turns to walk off down the street, long furry tail swaying behind her.";
 		increase mtrp by 1;
 		PlayerEat 20;
-		now Porn Store is known;
+		now Restrained Desire is known;
 		now Mouse Taur Encounter is resolved;
 		now Find Porn Store is resolved;
 
@@ -82,16 +83,16 @@ to FindPornStore:
 				say "     By the time you have beaten off the overeager tigress hooker and she is swaying on her feet from your last blow, the mouse taur has retrieved what looks like a sturdy quarterstaff and a squirt gun from inside the store. She sprays the tigress with a foul-smelling liquid and chases her off with angry yells about staying away from her store. As she turns around to face your way, you begin profusely apologizing to the mouse taur before you get the same treatment. She listens to you for a little while, then lowers the bottle and shrugs. 'I guess you didn't really mean any harm, and you kept that bitch busy till I got my gear. I'm Lisa. Come in, we can talk more once we're off the street.' With that, she waves you into the store, then closes the door behind you two.";
 				say "[LisaIntroTalk]";
 				now mtrp is 2; [player knows Lisa, was in the store]
-				move player to the Porn Store;
-				now Porn Store is known;
+				move player to the Restrained Desire;
+				now Restrained Desire is known;
 				now Resolution of Find Porn Store is 1; [tried to break in, won/lost]
 				now Mouse Taur Encounter is resolved;
 			else if fightoutcome > 19 and fightoutcome < 30: [lost]
 				say "     Just as you are about to be defeated by the overeager tigress, swaying on your feet from her last blow, the mouse taur reappears from the inside of the store, holding what looks like a sturdy quarterstaff and a squirt gun. She sprays the tigress with a foul-smelling liquid and chases her off with angry yells about staying away. As she turns around to face your way, you begin profusely apologizing to the mouse taur before you get the same treatment. Listening to you for a little while, the woman then lowers the bottle and shrugs. 'I guess you didn't really mean any harm, and you kept that bitch busy till I got my gear. I'm Lisa. Come in, we can talk more once we're off the street.' With that, she waves you into the store, then closes the door behind you two.";
 				say "[LisaIntroTalk]";
 				now mtrp is 2; [player knows Lisa, was in the store]
-				move player to the Porn Store;
-				now Porn Store is known;
+				move player to the Restrained Desire;
+				now Restrained Desire is known;
 				now Resolution of Find Porn Store is 1; [tried to break in, won/lost]
 				now Mouse Taur Encounter is resolved;
 			else if fightoutcome is 30: [fled]
@@ -105,8 +106,8 @@ to FindPornStore:
 			say "     Deciding just to try the simple idea of knocking, you rap the door several times and wait. At first, it seems like no one is home, but then you can hear movement on the inside. After several locks click open one by one, the door is opened a crack to reveal the face of a female mouse taur looking out warily. 'Well, hello there. You don't seem to be one of the usual types that roam the streets these days. They'd be trying to break down the door by now and all that. So, come on in. We can talk, one sane survivor to another.' With that, she waves you into the store, then closes the door behind you two.";
 			say "[LisaIntroTalk]";
 			now mtrp is 2; [player knows Lisa, was in the store]
-			move player to the Porn Store;
-			now Porn Store is known;
+			move player to the Restrained Desire;
+			now Restrained Desire is known;
 			now Mouse Taur Encounter is resolved;
 			now Resolution of Find Porn Store is 3; [knocked, met Lisa]
 			now Find Porn Store is resolved;
@@ -115,29 +116,33 @@ to FindPornStore:
 			say "     You shrug and turn away for now, making a mental note that you should return here sometime and check it out.";
 	else if mtrp is 1:
 		say "     Recognizing the location that Lisa the mousetaur described, you walk up to the door and knock. It doesn't take long before you can hear some movement on the inside. After several locks click open one by one, the door is opened a crack to reveal the woman looking out warily. As she recognizes you, a smile spreads over her face and she waves you inside.";
-		move player to the Porn Store;
+		move player to the Restrained Desire;
 		now mtrp is 2; [player knows Lisa, was in the store]
-		now Porn Store is known;
+		now Restrained Desire is known;
 		now Resolution of Find Porn Store is 4; [already knew Lisa, found the store]
 		now Find Porn Store is resolved;
 
 to say LisaIntroTalk:
 	say "     As you enter the store with your mouse taur host, you give your name and begin idly chatting about time before everything went bad. You settle on an offered chair Lisa pulls out some snacks, sharing with you as you talk with her. 'I planned to be a teacher,' she explains. 'Grade school, but then this happened. It seems that some mice that lived in my house became infected. They never bit me or anything, but close proximity seems to have been enough. I'm pretty certain their fur got onto a bit of my food. Maybe the indirect contact is why it took several days for me to change, and into an unconventional form too.' But change she did, becoming a curvy mouse taur that wandered the city alone, fending for herself until she recently found this porn store and moved in.";
 
-Section 2 - Porn Store and Lisa
+Section 2 - Restrained Desire and Lisa
 
 Table of GameRoomIDs (continued)
 Object	Name
-Porn Store	"Porn Store"
+Restrained Desire	"Restrained Desire"
+Restrained Desire	"Porn Store"
+[^^ mapping the old name of the room to the new room object]
 
-Porn Store is a room. It is fasttravel. It is sleepsafe. It is private.
-The description of Porn Store is "[pornstoredesc]".
+Restrained Desire is a room. It is fasttravel. It is sleepsafe. It is private.
+The description of Restrained Desire is "[pornstoredesc]".
+
+Restrained Desire is northwest of Boundary Street West.
 
 Table of GameCharacterIDs (continued)
 object	name
 Lisa	"Lisa"
 
-Lisa is a person. Lisa is in Porn Store.
+Lisa is a person. Lisa is in Restrained Desire.
 The description of Lisa is "     A mouse taur. Her mouse-like body is six feet long and about three feet tall where it flows into the curvy form of a well-built, mostly human female. Her hands are somewhat pawlike and she has whiskers and grand round ears. Besides that, she is human from the belly up, with enticing breasts that wobble with her motions for your eyes. Her entire form is covered in soft mouse gray fur, except for the end of the faint snout she has, twitching pinkly.".
 The conversation of Lisa is { "Squeak!" }.
 
@@ -149,7 +154,7 @@ lisaartemiscount2 is a number that varies.
 instead of sniffing Lisa:
 	say "     The mousetaur smells very feminine and murine. She wears a soft perfume and scented oils. There is a strong scent of females and sex about her person.";
 
-instead of sniffing Porn Store:
+instead of sniffing Restrained Desire:
 	say "     The porn store smells of scented oils and candles, lube, latex toys, secret desires and backroom sex. There is also the smell of mouse [if HP of Sven > 49 and HP of Sven < 99]and snow leopard from its residents[else]from its resident[end if].";
 
 to say pornstoredesc:
@@ -157,12 +162,12 @@ to say pornstoredesc:
 	say "     It was once a [']den of sin['], now mostly quiet. It smells fresh and clean. A small picture on the counter shows a familiar-looking female, presumably before she became a mouse creature. She is quite recognizable, at least in the face and general build. Most of the pictures show her alone. The porn is still present, stacked in neat piles or arranged on the shelves. Only a few are out of place. Girls on Girls 23, Lesbone 7 and Cunning Linguist Part 4.";
 	if HP of Sven is 52:
 		now T is 1;
-		say "[line break]     Upon your return to the porn store, you find a new feline here. This female snow leopard has pink markings on her white fur and is wearing a red bathing suit that struggles to hold in her ample bosom of six breasts. You smile to her and ask if she's a friend of Sven's. The snowmeow blushes and hides her face behind her fluffy tail. Your brain roughly switches gears as you realize that this buxom kitty IS Sven. Fortunately, Lisa returns from the back, having heard the door and greets you. 'Ah! I see you've been getting reacquainted with my dear Svetlana,' she says, running a paw playfully up the feline's side.";
+		say "[line break]     Upon your return to Restrained Desire, you find a new feline here. This female snow leopard has pink markings on her white fur and is wearing a red bathing suit that struggles to hold in her ample bosom of six breasts. You smile to her and ask if she's a friend of Sven's. The snowmeow blushes and hides her face behind her fluffy tail. Your brain roughly switches gears as you realize that this buxom kitty IS Sven. Fortunately, Lisa returns from the back, having heard the door and greets you. 'Ah! I see you've been getting reacquainted with my dear Svetlana,' she says, running a paw playfully up the feline's side.";
 		say "     Sven, or Svetlana as she is now, mews softly at the pleasant touch and watches you nervously to see your reaction to her change. You smile politely and she relaxes a little, purring as the mouse's paws move over her body. Her swimsuit, being quite tight over her large rack, has a perceptible camel toe showing between her legs, which is where Lisa has let one of her paws wander. She brushes over the snowmeow's covered pussy, rubbing and teasing her until there's a growing wet patch in her swimwear. 'She's so much more fun now that my pet kitty's got a nice, wet pussy. You should give her a try sometime.' She teases the snowmeow like this for a little while before eventually tiring of the game for now to tend to the store.";
 		now HP of Sven is 53;
 	if HP of rubber tigress is 8 and companion of Player is rubber tigress:
 		if T is 1, WaitLineBreak;
-		say "[line break]     [if T is 1]While you're distracted by Svetlana[else if Sven is in Porn Store]As you're greeting Lisa and Sven[else if Svetlana is in Porn Store]As you're greeting Lisa and Svetlana[else]As you're greeting Lisa[end if], Artemis pads around the store in idle feline curiosity. That is, until her attention is caught by the glass display case under the counter. Looking inside it, she mewls plaintively, leaning in closer and closer for a better look until the front of her rubbery face is mooshed up against it and flattened out. Drawn by her unusual behavior, you nudge her aside and look into the cabinet.";
+		say "[line break]     [if T is 1]While you're distracted by Svetlana[else if Sven is in Restrained Desire]As you're greeting Lisa and Sven[else if Svetlana is in Restrained Desire]As you're greeting Lisa and Svetlana[else]As you're greeting Lisa[end if], Artemis pads around the store in idle feline curiosity. That is, until her attention is caught by the glass display case under the counter. Looking inside it, she mewls plaintively, leaning in closer and closer for a better look until the front of her rubbery face is mooshed up against it and flattened out. Drawn by her unusual behavior, you nudge her aside and look into the cabinet.";
 		say "     Behind the glass, among the selection of DVDs and magazines stored there are a pair of sex toys. The first is an exotically shapely dildo, having a definite feline shape and 'rubbery pleasure barbs' as the box calls them. The second is a clear, flexible sleeve and purports itself to be a 'realistic vagina toy' according to its packaging. Artemis nuzzles your face and gives another plaintive mewl before flattening her muzzle against the glass again. Given her proclivity for eating plastics, perhaps she wants to eat them as well.";
 		WaitLineBreak;
 		say "     Given the feline's interest in the toys, you ask Lisa about them. 'Well, I'd set them aside for a potential customer who wanted them, but the kitty's not been back for quite some time. At this point, I suspect he got caught by some critter out there and has gone feral. Poor guy.' She scritches her chin, pondering for a moment.";
@@ -207,7 +212,7 @@ instead of conversing the Lisa:
 	else if HP of Sven is 53 or HP of Sven is 54:
 		say "     [one of]'Why a porn store? Well, no one else cared about it, so why not?'[or]'I used to work here part-time before this all started, so I figured it'd be a fun place to stay.'[or]'I guess I won't be a teacher now, you think?'[or]'Did you do something with your hair?'[or]'Don't mind the porn, unless you want to watch some of it.'[or]'I am glad you brought your cute friend by. He's made a very lovely girl. And don't worry, I'll be keeping good care of her.'[or]'How are you?'[or]While you chat with Lisa, she scritches a paw along Svetlana's back, grinning as she purrs and arches his back into her touch. The shy snowmeow blushes a little at the ears, but nuzzles up against the mousetaur affectionately.[or]Lisa gives Svetlana's ears another scritch, getting the shy girl to purr happily.[or]Lisa puts her arms around Svetlana from behind and runs them along her sides. She smiles bashfully to you when she notices you watching.[or]'Svetlana has become such a fine kitty. She's always so polite and quiet. And so much fun snuggle up to at night,' she adds with a little grin.[or]'I hope you're pleased with my pretty kitty, Svetlana.'[or]Lisa runs a paw along Svetlana's side before cupping her rear. 'Feel free to play with my pet kitty any time you like, sweetie,' she tells you, making the snowmeow hide her face behind her fluffy tail. But you can hear her purring and catch a glimpse of her smiling as well.[at random]";
 	else:
-		say "     [one of]'Why a porn store? Well, no one else cared about it, so why not?'[or]'I used to work here part-time before this all started, so I figured it'd be a fun place to stay.'[or]'I guess I won't be a teacher now, you think?'[or]'Did you do something with your hair?'[or]'Don't mind the porn, unless you want to watch some of it.'[or]'I am glad you visited. I was getting lonely.'[or]'How are you?'[at random]";
+		say "     [one of]'Why a porn store? Well, no one else cared about it, so why not?'[or]'I used to work here part-time before this all started, so I figured it'd be a fun place to stay.'[or]'I guess I won't be a teacher now, you think?'[or]'Did you do something with your hair?'[or]'Don't mind the porn, unless you want to watch some of it.'[or]'I am glad you visited. I was getting lonely.'[or]'How are you?'[or]'My little sister was actually the one to introduce me to these freecred things, she's a pretty lil['] thing. I bet that you would like her, Andromeda actually works at the Smith Haven Mall and no that's not her real name, she got into this [']name yourself become who you want thing[']. Jeez I remember watching her and that sexy friend of hers Larissa playing in the pool, it's enough to make me wish I would have gotten even [']more['] wet that day, haha!'[at random]";
 
 
 Section 3 - Fucking

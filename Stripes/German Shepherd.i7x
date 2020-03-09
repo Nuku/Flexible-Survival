@@ -985,6 +985,38 @@ this is the gsd_pre rule:		[preattack rule - checks if Player fought back]
 	if gsd_special is true and inafight is not 0:	[Triggers for special GSD, but not when he gets first strike]
 		now gsd_attack is true;
 
+Section 3 - Heat Table
+
+to say gsdheatstart:
+	if heatform is 0:
+		increase Cunt Tightness of Player by 1;
+	else:
+		increase Libido of Player by 5;
+
+to say gsdheatend:
+	if heatform is 0:
+		decrease Cunt Tightness of Player by 1;
+		if Cunt Tightness of Player is 0, now Cunt Tightness of Player is 1;
+
+Table of infection heat (continued)
+infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
+--	--	--	--	--	--	--	--	--	--	--
+
+When Play begins:
+	Choose a blank row from Table of infection heat;
+	now infect Name entry is "German Shepherd Bitch";
+	now heat cycle entry is 7;
+	now heat duration entry is 2;
+	now trigger text entry is "A sudden throb between your legs catches you off guard, startling a whimper from your throat as you feel a rush of heat between your legs. Nested between your thighs, your canine spade begins to puff up and swell, engorging and becoming looser, a slow but constant seepage of lubricating fluids starting to run down your thigh, making a mess of your [SkinName of Player] flesh. You are in heat, and your body is making it easy for any male to find and impregnate you.";
+	now description text entry is "swollen and dripping German shepherd twat ";
+	now heat start entry is "[gsdheatstart]"; [Events that trigger at the start of the Heat, in the female-GSD case it increases the cunt width]
+	now heat end entry is "[gsdheatend]"; [Events that trigger at the end of the Heat, in the female-GSD case it reduces cunt width]
+	now inheat entry is "[defaultheat]"; [This happens each heat cycle, Default is to increase libido by 5]
+	now fheat entry is true;
+	now mpregheat entry is true;
+	now mpregtrigger entry is "A sudden throb in your ass catches you off guard, startling a whimper from your throat as you feel a rush of heat surging inside you. You can feel your fecund ass preparing itself to be bred as you go into a tainted heat. Your anal passage quivers and you feel a longing for a nice, canine cock to fill it.";
+
+
 Section 4 - Endings
 
 Table of GameEndings (continued)

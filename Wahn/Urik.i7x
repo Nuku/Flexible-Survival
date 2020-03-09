@@ -269,7 +269,7 @@ to say UrikTalkMenu:
 					now DoneTalking is true;
 				else if nam is "Talk about Eric":
 					say "[UrikTalk4]";
-				else if nam is "Talk about Eric":
+				else if nam is "Talk about Spike":
 					say "[UrikTalk5]";
 				if DoneTalking is false: [looping around for more talk options]
 					say "[UrikTalkMenu]";

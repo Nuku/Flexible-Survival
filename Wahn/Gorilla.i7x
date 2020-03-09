@@ -108,13 +108,13 @@ to say Gorilla Desc:
 		else if GorillasMember is 3 and GorillasRep < 4:
 			say "     'Hey, [if Player is male]boy[else]girl[end if]!' You turn around and see a burly and muscular gorilla rushing towards you. He is dressed in shorts, football shoulder pads and wears a helmet, all of them bearing the local team's colors. 'Too bad you did not land a position in the team. I guess that's what you get for skipping sports at school,' the ape mocks you. 'You know what's expected from [if Player is male]boys[else]girls[end if] like you. So - wanna have some fun right now, or should I show you some moves first?'";
 			say "     It looks like this simian jock is unable to wait for you to get to your post at the football field, and that he can order you around in the rest of the campus. You don't think there's any chance to convince him to wait a little, so you ready yourself for a fight.";
-		else if GorillasRep < 8:
+		else if GorillasRep > 0 and GorillasRep < 8:
 			say "     'Hey, if it isn't our new player!' You turn around and see a burly and muscular gorilla rushing towards you. He is dressed in shorts, football shoulder pads and wears a helmet, all of them bearing the local team's colors. 'I always knew you'd get in the team. I can't wait to see what you can do at our next training. Meanwhile, how 'bout we have some fun right now. A little show-off, loser services the other?'";
 			say "     It looks like this simian jock is unable to wait until training to get in your pants, and that he will not take no for an answer. You don't think there's any chance to convince him to wait a little, so you ready yourself for a fight.";
 		else if GorillasRep > 8:
 			say "     'Omagod it's you!' You turn around and see a burly and muscular gorilla rushing towards you. He is dressed in shorts, football shoulder pads and wears a helmet, all of them bearing the local team's colors. 'It-it's an honor to meet you, sir! Everyone in the team looks up to you, and so do I!' He hits his chest and grunts loudly to honor the team, then gives you another long look - a pretty leering one. 'Say, sir. How 'bout we have some fun right now? A little show-off, loser services the other? Don't worry, I won't tell the others if you let me in this one *wink*'";
 			say "     It looks like this simian jock is unable to wait until training to get in your pants, and that he will not take no for an answer. You don't think there's any chance to convince him to wait a little, so you ready yourself for a fight.";
-		else if BodyName of Player is "Football Gorilla" and player is pure:
+		else if BodyName of Player is "Football Gorilla Male" and player is pure:
 			say "     A burly and muscular gorilla steps into your line of sight. He is dressed in shorts, football shoulder pads and wears a helmet, all of them bearing the local team's colors. As the gorilla spots you, a smile spreads over his face and he drops on all fours, using his long arms as support as he quickly rushes towards you. [if Player is male]'Hey dude, nice to meet'cha. You're from the pledge recruiting team that we have? Looking good, keep working at it and you'll be in the real Tenvale Gorillas soon.' He hits his chest and grunts loudly to honor the team, then gives you another long look - a pretty leering one. 'You know what's expected from pledges. So - wanna have some fun right now, or should I show you some moves first?'[else]'Hey girl, nice to meet'cha. That fur suits you really well. You're from our female companion team? Tenvale Gorillas for the win - in both leagues!' He hits his chest and grunts loudly to honor the team, then gives you another long look - a pretty leering one. 'You know what's expected for the real stars in the main team. So - wanna have some fun right now, or should I show you some moves first?'[end if]";
 			say "     Looks like this simian jock is fully committed to the idea that you're a subordinate teammate, whom he can order around - and that there is little doubt he intends to have sex with you. You don't think there's any chance to convince him of anything else, so you ready yourself for a fight.";
 		else if BodyName of Player is "Football Wolfman" and player is pure:
@@ -126,6 +126,7 @@ to say Gorilla Desc:
 	else: [dealing with this on the event side which called for the fight]
 		say "";
 
+
 Section A - Creature Insertion
 
 Table of Random Critters (continued)
@@ -136,11 +137,11 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Gorilla";
-	add "Football Gorilla" to infections of PrimateList;
-	add "Football Gorilla" to infections of FurryList;
-	add "Football Gorilla" to infections of MaleList;
-	add "Football Gorilla" to infections of BipedalList;
-	now Name entry is "Football Gorilla";
+	add "Football Gorilla Male" to infections of PrimateList;
+	add "Football Gorilla Male" to infections of FurryList;
+	add "Football Gorilla Male" to infections of MaleList;
+	add "Football Gorilla Male" to infections of BipedalList;
+	now Name entry is "Football Gorilla Male";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
@@ -294,22 +295,205 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
+
+
+Section A - Creature Insertion
+
+Table of Random Critters (continued)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of Random Critters;
+	now NewTypeInfection entry is false;
+	now Species Name entry is "Gorilla";
+	add "Football Gorilla Cuntboi" to infections of PrimateList;
+	add "Football Gorilla Cuntboi" to infections of FurryList;
+	add "Football Gorilla Cuntboi" to infections of TransList;
+	add "Football Gorilla Cuntboi" to infections of BipedalList;
+	now Name entry is "Football Gorilla Cuntboi";
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now attack entry is "[one of]The gorilla throws himself on you in a tackle that drives the air out of your lungs.[or]Calling out, 'Come on, let's have some fun,' the gorilla claps his strong hand against your back, with a strength that leaves you somewhat stunned.[or]You get thrown aside and fall down as the gorilla demonstrates one of his moves - by running at you at full steam and striping you with his armored shoulder-pad.[at random]"; [Text used when the monster makes an Attack]
+	now defeated entry is "[Gorilla Loses]";   [ Text or say command used when Monster is defeated.]
+	now victory entry is "[Gorilla Wins]";    [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now desc entry is "[Gorilla Desc]";            [ Description of the creature when you encounter it. ]
+	now face entry is "that of a gorilla, with a very wide, thin-lipped mouth, almost as wide and flat nose and human-like eyes under heavy brows. Short fur covers your whole head with the exception of your inner facial area";
+	now body entry is "relatively wide and burly, with strong muscles that allow you to move and run pretty fast despite the large bulk. The curve of your spine and two elongated arms make it easy to drop to all fours to do so, but you're still capable of upright walking if you chose to do so";
+	now skin entry is "[one of]black furred[or]densely furred[or]furred[at random]";
+	now tail entry is "You have a wide and meaty butt, ideally cushioned to sit down on if you want to rest your bulky shape.";  [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
+	now cock entry is "[one of]human[or]human-like[at random]";
+	now face change entry is "it reshapes itself into a gorilla's simian visage, with a wide and very flat nose, pretty thin-lipped mouth and protruding brows over human-like eyes. Short fur sprouts everywhere but the innermost facial area"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "it morphs into burly shape of a big gorilla, large-boned and with considerable bulk, but also a set of strong muscles to go with all that. Your arms end up being a bit longer than your legs, which allows for easy walking on all fours from, now on, if you so choose"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "dense black fur spreads rapidly over your form"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "it gets meaty and well-cushioned, perfect to rest a heavy body on when you sit down"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "your member grows thicker and gains a dark black skin color and human-like shape"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now str entry is 30;
+	now dex entry is 12;
+	now sta entry is 20;
+	now per entry is 14;
+	now int entry is 8;
+	now cha entry is 12;
+	now sex entry is "Male";            [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now HP entry is 100;                [ The monster's starting HP. ]
+	now lev entry is 12;                [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 16;               [ Monster's average damage when attacking. ]
+	now area entry is "Nowhere";         [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now Cock Count entry is 0;               [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now Cock Length entry is 0;        [ Length infection will make cock grow to if cocks. ]
+	now Ball Size entry is 0;          [ Cock width, more commonly used for ball size. ]
+	now Nipple Count entry is 2;             [ Number of nipples the infection will give a player. ]
+	now Breast Size entry is 0;         [ Size of breasts the infection will try to attain. ]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 1;               [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now Cunt Depth entry is 16;         [ Depth of female sex the infection will attempt to give a player. ]
+	now Cunt Tightness entry is 2; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]          [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 80;             [ Target libido the infection will rise towards. ]
+	now loot entry is "";               [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0;          [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]strong[or]burly[or]powerful[at random]";
+	now type entry is "simian";
+	now magic entry is false;           [ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;       [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now DayCycle entry is 0;      [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
+
+[
+Table of New Infection Parts (continued)
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
+	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Asshole Depth entry is 7; [inches deep for anal fucking]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
+	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Depth entry is 0;
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
+	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
+]
+
+
+
 Section 8 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Football Gorilla Infection"	"Infection"	""	Football Gorilla Infection rule	1000	false
+"Football Gorilla Male Infection"	"Infection"	""	Football Gorilla Male Infection rule	1000	false
+["Football Gorilla Cuntboi Infection"	"Infection"	""	Football Gorilla Cuntboi Infection rule	1000	false]
 
-This is the Football Gorilla Infection rule:
-	if Player has a body of "Football Gorilla":
-		trigger ending "Football Gorilla Infection"; [Here it states, that the ending has been played.]
+This is the Football Gorilla Male Infection rule:
+	if Player has a body of "Football Gorilla Male":
+		trigger ending "Football Gorilla Male Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     As you lose your last shreds of humanity, you feel the need to join your team supplant all other concerns. Roaming the campus until you run into one of the other gorillas, you let him guide you to their club headquarters and join in for almost constant training and practice games - with some sexy fun between the players themselves and any fans coming along being thrown in. When the military finally moves in, soldiers try to evacuate the campus and attempt to interrupt a game - which doesn't go over well. It's only a matter of moments before your organized team has overwhelmed the squad of men and takes an 'ah, it's almost half-time and we got these guys on our hands' break - which involves you [if Player is male]sinking your manhood into a tight soldier's ass[else]riding a soldier's cock while holding him down[end if] in a wild gangbang.";
 			say "     There aren't any attempts to move you from the campus for a while after that, until a smooth-talking businessman comes along one day and tells you about the creation of the 'Shifted American Football League' - totally wrapping all the gorillas around his finger with stories of athletic battle and glory. Soon, the whole team agrees to lets him manage them and follows him readily to the military's medical holding facility for a 'pre-game' checkup. After being prodded and poked, then given injections to make you noninfectious, your manager leads you off to become one of the top teams in the league - with him cashing in almost all the profits. Though at least he has to work hard to keep this exploitation going - keeping under control a whole team of wild and boisterous gorillas who'll want to fuck anyone they encounter...";
-			stop the action;
+			the Player is lost;
 		else:
 			say "     When rescue comes, you're poked and prodded a bit in a medical holding facility outside the city, then declared non-infectious and let go. Looking around among the other released people, you do realize that there are virtually no gorillas among them. Strange - there were quite a few on the college campus. This animates you to go check with a somewhat sympathetic medic - who explains that the football players gang-banged the last rescue team and that they're excluded from the evacuation now. Further questions reveal that the soldiers did try to drag your fellow apes out in the middle of a game - an obvious and fatal mistake, as you well know.";
 			say "     At that point, your involvement with the Tenvale Gorillas might have been over, but the news about the creation of the 'Shifted American Football League' the very next day gives you an idea. With some effort, you manage to convince a football fan among the soldiers to sneak you back into the city - where you seek out the gorillas on the campus. Being as convincing as you can, you present them with the opportunity of joining the new league, drawing them in with stories of athletic battles and glory. And you succeed - before long, you're picked as the new team manager of the Gorillas and lead your new buddies out to the military's medical holding facility for a 'pre-game' checkup. After being prodded and poked, then given injections to make them noninfectious, you lead the unruly bunch off - doing your best to rein in their ideas of showing all the 'fans' they meet a good time.";
 			say "     It's not easy, but with as you really apply yourself, you manage to educate your fellow gorillas on some acceptable and unacceptable things to do and not do. As the team does well in the first few games and quite a few spectators get very enthusiastic about them, establishing an actual fan club is the next step - including a 'VIP fan' level for people who really, really want to meet their heroes. The resulting orgies are a lot of fun, and you do join in yourself whenever you can spare the time. Judging from the resulting string of pregnancies in every city where a game is run, you won't have any trouble recruiting new teammates in the future either. Eventually, the Tenvale Gorillas become one of the top contenders in the league, and you as their manager earn a tidy bonus for all the hard work...";
+
+[
+This is the Football Gorilla Cuntboi Infection rule:
+	if Player has a body of "Football Gorilla Cuntboi":
+		trigger ending "Football Gorilla Cuntboi Infection"; [Here it states, that the ending has been played.]
+		if humanity of Player < 10:
+			say "     ";
+		else
+			say "     ";
+]
 
 Gorilla ends here.

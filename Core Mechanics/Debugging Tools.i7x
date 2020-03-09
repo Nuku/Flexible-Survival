@@ -800,9 +800,9 @@ carry out EndingTableReadout:
 	let TriggeredCol be "";
 	let RowNumberCol be "";
 	say "[fixed letter spacing]";
-	say "row  | Name                              | Type                 | Subtype      | Ending                               | Priority | Triggered[line break]";
-	say "     | (text)                            | (text)               | (text)       | (rule)                               | (number) | (truth state)[line break]";
-	say "-----|-----------------------------------|----------------------|--------------|--------------------------------------|----------|--------------[line break]";
+	say "row  | Name                                 | Type                 | Subtype      | Ending                                  | Priority | Triggered[line break]";
+	say "     | (text)                               | (text)               | (text)       | (rule)                                  | (number) | (truth state)[line break]";
+	say "-----|--------------------------------------|----------------------|--------------|-----------------------------------------|----------|--------------[line break]";
 	sort the Table of GameEndings in Priority order;
 	repeat with N running from 1 to the number of rows in the Table of GameEndings:
 		choose row N in the Table of GameEndings;
@@ -820,7 +820,7 @@ carry out EndingTableReadout:
 		now PriorityCol is "[Priority entry]";
 		now TriggeredCol is "[Triggered entry]";
 		now RowNumberCol is "[N]";
-		say "[RowNumberCol formatted to 4 characters] | [NameCol formatted to 33 characters] | [TypeCol formatted to 20 characters] | [SubTypeCol formatted to 12 characters] | [EndingCol formatted to 36 characters] | [PriorityCol formatted to 8 characters] | [TriggeredCol][line break]";
+		say "[RowNumberCol formatted to 4 characters] | [NameCol formatted to 36 characters] | [TypeCol formatted to 20 characters] | [SubTypeCol formatted to 12 characters] | [EndingCol formatted to 39 characters] | [PriorityCol formatted to 8 characters] | [TriggeredCol][line break]";
 	say "[variable letter spacing]";
 
 

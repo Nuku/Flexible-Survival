@@ -12,10 +12,14 @@ name	desc	weight	object
 "panther milk"	"The thick, luscious milk of one of the panther taurs."	1	panther milk
 "chocolate milk"	"The creamy milk with a white chocolate taste."	1	chocolate milk
 "vixen milk"	"A thin milk with a faintly medicinal taste, like the silvery vixens it is from."	1	vixen milk
+"sweet milk"	"A creamy, sweet milk with a faintly honey-like taste."	1	sweet milk
+"macho milk"	"A creamy, energizing milk with a faintly spicy-like taste."	1	macho milk
 
 panther milk is a grab object. It is a part of the player. Understand "milk" as panther milk. panther milk is infectious. The strain of panther milk is "Panther Taur". The trade of panther milk is "distilled milk". panther milk is milky.
 chocolate milk is a grab object. It is a part of the player. Understand "milk" as chocolate milk. chocolate milk is infectious. The strain of chocolate milk is "Chocolate Lab". The purified of chocolate milk is "distilled milk". chocolate milk is milky.
 vixen milk is a grab object. It is a part of the player. Understand "milk" as vixen milk. vixen milk is infectious. The strain of vixen milk is "Vixen Nurse". The purified of vixen milk is "distilled milk". vixen milk is milky.
+sweet milk is a grab object. It is a part of the player. Understand "milk" as sweet milk. sweet milk is infectious. The strain of sweet milk is "Cow-babe Female". The purified of sweet milk is "distilled milk". sweet milk is milky.
+macho milk is a grab object. It is a part of the player. Understand "milk" as macho milk. macho milk is infectious. The strain of macho milk is "Cow-boi Male". The purified of macho milk is "distilled milk". macho milk is milky.
 
 check milking:
 	if Nipple Count of Player is 0:
@@ -103,6 +107,34 @@ Carry out milking:
 		if Breast Size of Player > 18:
 			repeat with T running from one to ( ( Nipple Count of Player ) / 2 ):
 				increase carried of cow milk by 1;
+		now lastmilking is turns;
+	else if BodyName of Player is "Cow-babe Female":
+		say "Squeezing your [if Nipple Count of Player is 2]two[else][Nipple Count of Player][end if] soft, rounded breasts, provokes a moan followed by a needy [']Mooooooo['] which emerges from your throat as a heavy stream of creamy, sweet milk is coaxed out of your nipples. Continuing to rub and knead the sensitive flesh, you can't help it as your mind swims with thoughts of the enjoyment that you would feel having an industrial milking machine attached to your chest, forces you to release all of the creamy goodness sealed within, you quickly grab an empty water bottle from your pack, catching squirt after squirt of milk in it until the bottle is full, then start on another...";
+		repeat with T running from one to Nipple Count of Player:
+			increase carried of sweet milk by 1;
+		if Breast Size of Player > 6:
+			repeat with T running from one to ( ( Nipple Count of Player ) / 2 ):
+				increase carried of sweet milk by 1;
+		if Breast Size of Player > 12:
+			repeat with T running from one to ( ( Nipple Count of Player ) / 2 ):
+				increase carried of sweet milk by 1;
+		if Breast Size of Player > 18:
+			repeat with T running from one to ( ( Nipple Count of Player ) / 2 ):
+				increase carried of sweet milk by 1;
+		now lastmilking is turns;
+	else if BodyName of Player is "Cow-boi Male":
+		say "Squeezing your [if Nipple Count of Player is 2]two[else][Nipple Count of Player][end if] firm, meaty pecs, provokes a moan followed by a needy [']Mooooooo['] which emerges from your throat as a heavy stream of creamy, spicy milk is coaxed out of your nipples. Continuing to rub and knead the sensitive flesh, you can't help it as your mind swims with thoughts of the enjoyment that you would feel having an industrial milking machine attached to your chest, forces you to release all of the creamy goodness sealed within, you quickly grab an empty water bottle from your pack, catching squirt after squirt of milk in it until the bottle is full, then start on another...";
+		repeat with T running from one to Nipple Count of Player:
+			increase carried of macho milk by 1;
+		if Breast Size of Player > 6:
+			repeat with T running from one to ( ( Nipple Count of Player ) / 2 ):
+				increase carried of macho milk by 1;
+		if Breast Size of Player > 12:
+			repeat with T running from one to ( ( Nipple Count of Player ) / 2 ):
+				increase carried of macho milk by 1;
+		if Breast Size of Player > 18:
+			repeat with T running from one to ( ( Nipple Count of Player ) / 2 ):
+				increase carried of macho milk by 1;
 		now lastmilking is turns;
 	else if BodyName of Player is "Margay":
 		say "You start lactating shortly after you begin playing with your breasts. Besides the pleasurable sensations that wakes inside yourself, you're also rewarded with a slow but steady flow of milk as you pinch your nipples. You gather your milk into bottles and store it away in you pack.";
