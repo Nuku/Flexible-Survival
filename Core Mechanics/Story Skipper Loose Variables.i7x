@@ -1051,8 +1051,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is fgryphon_TFcount;
 		-- "fightoutcome":
 			now NumberVarValue entry is fightoutcome;
-		-- "fightstatus":
-			now NumberVarValue entry is fightstatus;
 		-- "Fin":
 			now NumberVarValue entry is Fin;
 		-- "findablestairs":
@@ -4727,8 +4725,6 @@ to VariableNumberLoad:
 					now fgryphon_TFcount is numberVarValue entry;
 				-- "fightoutcome":
 					now fightoutcome is numberVarValue entry;
-				-- "fightstatus":
-					now fightstatus is numberVarValue entry;
 				-- "Fin":
 					now Fin is numberVarValue entry;
 				-- "findablestairs":

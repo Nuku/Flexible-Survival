@@ -663,19 +663,10 @@ Instead of resolving Music Store:
 		say "     With Leonard's request lingering at the back of your mind as you travel through the city, you stop dead in your tracks when you spot a music store. It seems to have been largely undamaged. You quickly head over to it, failing to notice the signs of activity inside in your eagerness. Pulling the door open, you hear the buzz of little wings from inside the dark store. Suddenly on guard, there's a cry of 'Get [']em, girls!' from a small, high-pitched voice. The volume of the buzzing grows louder and a wave of little, elfin sprites charge out of the doorway, swarming all around you excitedly, forcing you to stumble backwards into the street.";
 	else if violinfound is 2 or violinfound is 3:	[returning]
 		say "     With Leonard's request lingering at the back of your mind, you find yourself back in front of the Music Store you found earlier. Longing to please the handsome lion with a gift, you ready yourself for another fight with the sprites and pull open the door. The buzz inside picks up inside as they notice the intruder. 'Back for more, eh?' one of them giggles playfully before the swarm surges towards you, forcing you back into the street to fight them.";
-	now fightstatus is 3;
 	now violinspritefight is true;
 	challenge "City Sprite";
 	now violinspritefight is false;
-	if fightstatus is 3:
-		say "     Forced to flee by the horde of provocative and precocious pixies, you make a run for it down the street and through some alleys, eventually losing them. Or so you think. As you stop to catch your breath, you hear some giggling above you. 'Don't come back or you'll get more of the same!' 'Yeah!' 'Or wait, do come back and we'll all have fun giving you more of the same!' 'Teehee!' There's then the buzz of wings as the sprites fly off, presumably back to their home in the music store.";
-		if violinfound is 0, now violinfound is 2;
-		if violinfound is 1, now violinfound is 3;
-	else if fightstatus is 2:
-		say "     After the sprites have had their fun, you are left deposited outside their store. 'Oh! You should come back again so we can play some more,' one of them giggles. 'Yeah! I want a turn playing with your [if Player is herm][one of]cock[or]pussy[at random][else if Player is male]cock[else if Player is female]cunt[else]feet[end if] next time,' another pipes in. 'Ooo! Dibs!' another says with a giggle. They playfully squabble as they buzz off, flying back inside and closing the door behind them, leaving you to stumble off.";
-		if violinfound is 0, now violinfound is 2;
-		if violinfound is 1, now violinfound is 3;
-	else:
+	if fightoutcome < 20: [player won]
 		say "     Having driven off the sprites from their home, you head inside and start looking around eagerly for a violin. There are examples of a lot of other instruments around and it seems like the sprites have been playing around with a lot of them. Most of the inventory does seem to be guitars, drums and keyboards. The drums seem to have gotten the worst of the play, with lots of stick footprints on the skins from them bouncing on them. A few of them even have cum angels smeared onto them. From the glistening on the ends of the drumsticks you see scattered about, you decide it'd be best not to handle those either, [if Libido of Player < 50]preferring not to imagine what uses the diminutive females put them to[else]having a good idea how those naughty female sprites have been putting those smooth, polished sticks to use[end if].";
 		say "     Not really interested right now in the more modern rock and roll instruments, you move on. Spotting the section behind one counter. You see they have their smaller selection of classical instruments. There are several brass and woodwind instruments of different quality. Some of these have been knocked around or played with by the flighty sprites, requiring you to step carefully and sift through those on the floor behind the counter to make sure a violin is not beneath one of the others. You are about to give up hope by the time you make it to the far corner, but luckily manage to find one. It is intact and still displayed on the wall, probably because of its placement at the end of the display area.";
 		say "     Not really a judge of quality and just happy to have one at all, you take the violin and search among the cases beneath it, soon finding the one belonging to it. You pack it away, along with some packets of replacement strings, a couple of bows and a packet of wax, knowing at least that much. You also remember to head over to the racks with books of sheet music and grab all those you can find for violins. There aren't that many and they are mostly trainers and for beginners, but a few of them have more advanced pieces as well. With the last minute addition of a music stand, you believe you have everything your handsome lion will need.";
@@ -684,8 +675,14 @@ Instead of resolving Music Store:
 		now violinfound is 10;
 		now Music Store is resolved;
 		now Concert Hall is resolved;
-	now fightstatus is 0;
-
+	else if fightoutcome > 19 and fightoutcome < 30: [lost]
+		say "     After the sprites have had their fun, you are left deposited outside their store. 'Oh! You should come back again so we can play some more,' one of them giggles. 'Yeah! I want a turn playing with your [if Player is herm][one of]cock[or]pussy[at random][else if Player is male]cock[else if Player is female]cunt[else]feet[end if] next time,' another pipes in. 'Ooo! Dibs!' another says with a giggle. They playfully squabble as they buzz off, flying back inside and closing the door behind them, leaving you to stumble off.";
+		if violinfound is 0, now violinfound is 2;
+		if violinfound is 1, now violinfound is 3;
+	else if fightoutcome is 30: [fled]
+		say "     Forced to flee by the horde of provocative and precocious pixies, you make a run for it down the street and through some alleys, eventually losing them. Or so you think. As you stop to catch your breath, you hear some giggling above you. 'Don't come back or you'll get more of the same!' 'Yeah!' 'Or wait, do come back and we'll all have fun giving you more of the same!' 'Teehee!' There's then the buzz of wings as the sprites fly off, presumably back to their home in the music store.";
+		if violinfound is 0, now violinfound is 2;
+		if violinfound is 1, now violinfound is 3;
 
 Part 2 - Concert Hall
 
@@ -698,7 +695,6 @@ The sarea of Concert Hall is "High".
 Concert Hall is inactive.
 
 Instead of resolving Concert Hall:
-	now fightstatus is 0;
 	say "     You come across a large theater and concert hall in this affluent portion of the city. There are crude drawings on the glass covering the posters for the upcoming shows, but you can see that a classical concert was planned during the time period around when the outbreak began. Very hopeful that you'll find a violin in there for Leonard, you try the doors. Locked. Barricaded even. Searching around the perimeter, you eventually find a back door that's been left open and you slip inside without delay or thought of caution, the needs of the handsome lion more important than the potential risk.";
 	if "One Pair" is listed in feats of Player or "Just One" is listed in feats of Player:
 		say "     You make your way through the backstage area to the orchestra pit. As you're about to start searching through it, you notice a cute bunny head poke out from behind the curtain. But even as you're trying to decide how to peacefully introduce yourself, there appears another bunny elsewhere, and then another and another still, more and more bunnies around you. They don't move in to approach, but begin to speak.";
@@ -710,38 +706,34 @@ Instead of resolving Concert Hall:
 		now violinfound is 21;
 	else:
 		say "     You make your way through the backstage area to the orchestra pit. As you're about to start searching through it, you notice a cute bunny head poke out from behind the curtain. But even as you're trying to decide how to peacefully introduce yourself, there appears another bunny elsewhere, and then another and another still, more and more bunnies moving in to surround you despite no alarm having been raised.";
-		now fightstatus is 3;
 		challenge "Anthro Rabbit";
-		if fightstatus is 1:
-			now fightstatus is 3;
-			challenge "Anthro Rabbit";
-			if fightstatus is 1:
-				say "     Having beaten the large group of bizarre bunnies and driven them back, you start searching the orchestra pit for a violin. Thankfully the instruments are actually in the pit and do not appear to have been damaged by the creatures. If anything, it seems like they have been well maintained. Perhaps those teams of bunnies have been playing them? It takes some fumbling around to navigate through the camped space, but you eventually find the string section and locate the violins.";
-				say "     Hopeful that one of these will make a fine instrument for your handsome lion, you look them over. Not really a judge of quality, you take the violin from the stand labelled as '1st violin' in the hopes it will be the best of them all. Putting it in its case, you check the other cases and folders, taking sets of spare strings, bows and wax, as well as as much different sheet music as you can find. Spotting one of the bunnies watching you nervously from behind the curtain, you kindly decide to not just take it all. Certainly several replacements will be enough for Leonard for quite some time.";
-				say "     After storing the case and supplies away in your case, you fold up one of the music stands and start heading back out. The bunny watches you leave the room but doesn't move. There's another watching you from elsewhere before you leave her line of sight, and another safely watching from the distance as you turn the corner. They quietly watch you depart, clearly wary of the intruder who managed to fight them all off.";
-				increase carried of violin by 1;
-				now violinfound is 20;
+		if fightoutcome < 20: [player won]
+			say "     Having beaten the large group of bizarre bunnies and driven them back, you start searching the orchestra pit for a violin. Thankfully the instruments are actually in the pit and do not appear to have been damaged by the creatures. If anything, it seems like they have been well maintained. Perhaps those teams of bunnies have been playing them? It takes some fumbling around to navigate through the camped space, but you eventually find the string section and locate the violins.";
+			say "     Hopeful that one of these will make a fine instrument for your handsome lion, you look them over. Not really a judge of quality, you take the violin from the stand labelled as '1st violin' in the hopes it will be the best of them all. Putting it in its case, you check the other cases and folders, taking sets of spare strings, bows and wax, as well as as much different sheet music as you can find. Spotting one of the bunnies watching you nervously from behind the curtain, you kindly decide to not just take it all. Certainly several replacements will be enough for Leonard for quite some time.";
+			say "     After storing the case and supplies away in your case, you fold up one of the music stands and start heading back out. The bunny watches you leave the room but doesn't move. There's another watching you from elsewhere before you leave her line of sight, and another safely watching from the distance as you turn the corner. They quietly watch you depart, clearly wary of the intruder who managed to fight them all off.";
+			increase carried of violin by 1;
+			now violinfound is 20;
 			now Music Store is resolved;
-	if fightstatus is 2:
-		say "     Unable to hold out against the bunny horde, you find yourself surrounded by the strange group of lustful, longing bunnies. They fuck you repeatedly, with so many of them there to share you that you always have several lovers at a time, drawing you further and further into the lustful needs of your body as it starts to change, gaining bunny ears and a tail. But as the changes continue, ";
-		if "Male Preferred" is listed in feats of Player:
-			say "you gain more cocks, more balls, more arms and legs as well? Even more heads? Things grow hazy as your mind struggles to understand what it happening to you, your body splitting and forming new, independent copies of itself. At first, it is all very confusing, the last shreds of your old mind trying to believe that you are still one united whole with several additional limbs and male genitalia, but eventually clarity sets in as you understand you are simply many, each body singularly male.";
-		else if "Female Preferred" is listed in feats of Player:
-			say "you gain more pussies, more breasts, more arms and legs as well? Even more heads? Things grow hazy as your mind struggles to understand what it happening to you, your body splitting and forming new, independent copies of itself. At first, it is all very confusing, the last shreds of your old mind trying to believe that you are still one united whole with several additional limbs and female genitalia, but eventually clarity sets in as you understand you are simply many, each body singularly female.";
-		else:
-			say "you gain more cocks, more pussies, more breasts, more arms and legs as well? Even more heads? Things grow hazy as your mind struggles to understand what it happening to you, your body splitting and forming new, independent copies of itself. At first, it is all very confusing, the last shreds of your old mind trying to believe that you are still one united whole with several additional limbs and genitalia, but eventually clarity sets in as you understand you are simply many, each body singularly either male or female.";
-		say "     You become like the other rabbits living here, several who are one. In truth, there are only a few individuals living here, but each having several bodies all with one same mind. You are welcomed into the group, joining their orchestra as you and your several bodies learn to play from the others. And outside of practice comes the pleasure of lustful sex shared with so many bodies, so many lovers, all at once.";
-		now humanity of Player is 0;
-		setmonster "Anthro Rabbit" silently;
-		turn the Player into a "Anthro Rabbit" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
-		end the story saying "Your mind has been subsumed by that of an anthro rabbit, to go off for a life of music and lust in your new warren.";
-		wait for any key;
-		follow the turnpass rule;
-		stop the action;
-	if fightstatus is 3:
-		say "     Unwilling or unable to continue to stand up to the bunny horde, you make a break for it, weaving between several of them to head for the exit. They follow you, calling out stuff like 'Stay.' 'Join.' 'Play.' 'Divide.' 'Unity.' 'Remain.' 'Expand.' 'Many.' 'One.' They strangely speak in unison and calmly, but there is a longing to it as well. You manage to get away, running from the concert hall, from which the rabbits choose not to pursue you, instead slamming the back door shut and latching it from the inside. You probably won't be able to get back in there and should try looking elsewhere for a violin for Leonard.";
-		if violinfound is 0, now violinfound is 1;
-		if violinfound is 2, now violinfound is 3;
+		else if fightoutcome > 19 and fightoutcome < 30: [lost]
+			say "     Unable to hold out against the bunny horde, you find yourself surrounded by the strange group of lustful, longing bunnies. They fuck you repeatedly, with so many of them there to share you that you always have several lovers at a time, drawing you further and further into the lustful needs of your body as it starts to change, gaining bunny ears and a tail. But as the changes continue, ";
+			if "Male Preferred" is listed in feats of Player:
+				say "you gain more cocks, more balls, more arms and legs as well? Even more heads? Things grow hazy as your mind struggles to understand what it happening to you, your body splitting and forming new, independent copies of itself. At first, it is all very confusing, the last shreds of your old mind trying to believe that you are still one united whole with several additional limbs and male genitalia, but eventually clarity sets in as you understand you are simply many, each body singularly male.";
+			else if "Female Preferred" is listed in feats of Player:
+				say "you gain more pussies, more breasts, more arms and legs as well? Even more heads? Things grow hazy as your mind struggles to understand what it happening to you, your body splitting and forming new, independent copies of itself. At first, it is all very confusing, the last shreds of your old mind trying to believe that you are still one united whole with several additional limbs and female genitalia, but eventually clarity sets in as you understand you are simply many, each body singularly female.";
+			else:
+				say "you gain more cocks, more pussies, more breasts, more arms and legs as well? Even more heads? Things grow hazy as your mind struggles to understand what it happening to you, your body splitting and forming new, independent copies of itself. At first, it is all very confusing, the last shreds of your old mind trying to believe that you are still one united whole with several additional limbs and genitalia, but eventually clarity sets in as you understand you are simply many, each body singularly either male or female.";
+			say "     You become like the other rabbits living here, several who are one. In truth, there are only a few individuals living here, but each having several bodies all with one same mind. You are welcomed into the group, joining their orchestra as you and your several bodies learn to play from the others. And outside of practice comes the pleasure of lustful sex shared with so many bodies, so many lovers, all at once.";
+			now humanity of Player is 0;
+			setmonster "Anthro Rabbit" silently;
+			turn the Player into a "Anthro Rabbit" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
+			end the story saying "Your mind has been subsumed by that of an anthro rabbit, to go off for a life of music and lust in your new warren.";
+			wait for any key;
+			follow the turnpass rule;
+			stop the action;
+		else if fightoutcome is 30: [fled]
+			say "     Unwilling or unable to continue to stand up to the bunny horde, you make a break for it, weaving between several of them to head for the exit. They follow you, calling out stuff like 'Stay.' 'Join.' 'Play.' 'Divide.' 'Unity.' 'Remain.' 'Expand.' 'Many.' 'One.' They strangely speak in unison and calmly, but there is a longing to it as well. You manage to get away, running from the concert hall, from which the rabbits choose not to pursue you, instead slamming the back door shut and latching it from the inside. You probably won't be able to get back in there and should try looking elsewhere for a violin for Leonard.";
+			if violinfound is 0, now violinfound is 1;
+			if violinfound is 2, now violinfound is 3;
 	now Concert Hall is resolved;
 
 

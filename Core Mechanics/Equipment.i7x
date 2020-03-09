@@ -1656,15 +1656,15 @@ Part 4 - Sleeveless Shirts
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"white sleeveless shirt"	"A white sleeveless shirt, made from and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	white sleeveless shirt
-"black sleeveless shirt"	"A black sleeveless shirt, made from and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	black sleeveless shirt
-"pink sleeveless shirt"	"A pink sleeveless shirt, made from and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	pink sleeveless shirt
-"blue sleeveless shirt"	"A blue sleeveless shirt, made from and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	blue sleeveless shirt
-"green sleeveless shirt"	"A green sleeveless shirt, made from and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	green sleeveless shirt
-"red sleeveless shirt"	"A red sleeveless shirt, made from and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	red sleeveless shirt
-"purple sleeveless shirt"	"A purple sleeveless shirt, made from and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	purple sleeveless shirt
-"yellow sleeveless shirt"	"A yellow sleeveless shirt, made from and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	yellow sleeveless shirt
-"orange sleeveless shirt"	"A orange sleeveless shirt, made from and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	orange sleeveless shirt
+"white sleeveless shirt"	"A white sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	white sleeveless shirt
+"black sleeveless shirt"	"A black sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	black sleeveless shirt
+"pink sleeveless shirt"	"A pink sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	pink sleeveless shirt
+"blue sleeveless shirt"	"A blue sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	blue sleeveless shirt
+"green sleeveless shirt"	"A green sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	green sleeveless shirt
+"red sleeveless shirt"	"A red sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	red sleeveless shirt
+"purple sleeveless shirt"	"A purple sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	purple sleeveless shirt
+"yellow sleeveless shirt"	"A yellow sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	yellow sleeveless shirt
+"orange sleeveless shirt"	"A orange sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	orange sleeveless shirt
 
 white sleeveless shirt is a grab object.
 white sleeveless shirt is equipment.

@@ -19,7 +19,6 @@ to say spritedesc:
 
 
 to say Sprite attack:
-	if fightstatus is 3, now fightstatus is 2;
 	if HP of Player > 0:
 		say "Noticing that you've stopped resisting their efforts, the swarm gives a collective 'YAY!' and dances around you in an ecstatic dance of welcoming before they buzz in all the closer, getting to work.";
 		now Spriteconsent is 1;
@@ -50,7 +49,6 @@ to say Sprite attack:
 [ [Sprite loss] ]
 To say Sprite loss:
 	if zephyrtask is 3, increase zephyrpests by 1;
-	if fightstatus is 3, now fightstatus is 1;
 	say "The sprites disperse in an unhappy cloud of defeated fae kind, taking off in all directions.";
 	if (Libido of Player > 50 or humanity of Player < 30) and player is male:
 		say "The horde of sprites scatters, all trying to flee. Not wanting to waste such an opportunity, you grab some of the slower or more disoriented ones and trap them in your backpack. After finding a nice quiet alley where no one will walk in on you, you crack the zipper on your backpack and peer inside. You managed to catch several of the winged women, and can think of quite a few things to do with them.";

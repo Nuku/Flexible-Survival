@@ -4829,7 +4829,6 @@ postimport rules is a rulebook.
 Everyturn rules is a rulebook.
 
 This is the turnpass rule:
-	now fightstatus is 0;
 	now looknow is 0;
 	now ishunting is false;
 	now showlocale is true;

@@ -246,7 +246,7 @@ name	desc	weight	object
 "maroon pullover"	"A fairly large maroon pullover. It is perfect to keep its wearer warm."	1	maroon pullover
 "zephyr shirt"	"A simple dark gray t-shirt, with a light blue stylized Z covering the middle of its chest. Depending on whom you ask, it either makes the wearer look like a superhero, or a corporate drone of Zephyr."	1	zephyr shirt
 "camo shirt"	"A t-shirt with camo patterns in various shades of green. Clearly, it belongs to the uniform of a soldier of the US army."	1	camo shirt
-"sleeveless shirt"	"A white sleeveless shirt, made from and stretchy fabric. It looks suitable to be working out in it."	1	sleeveless shirt
+"sleeveless shirt"	"A white sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it."	1	sleeveless shirt
 "mesh shirt"	"A tight shirt made of some kind of black, sheer mesh. You can literally see right through it."	1	mesh shirt
 
 black t-shirt is a grab object.
