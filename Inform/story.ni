@@ -2501,7 +2501,7 @@ carry out VialInventorying:
 	if the number of entries in vials of Player is 0:
 		say "Your collection of infection vials is empty.";
 	if the number of entries in vials of Player > 0:
-		say "Type [bold type]vial <name>[roman type] to [bold type][bracket]U[close bracket][roman type]se a vial, [bold type]vialdrop <name>[roman type] to [bold type][bracket]D[close bracket][roman type]estroy a vial, [bold type]vialalldrop <name>[roman type] to [bold type][bracket]D[close bracket][roman type]estroy [bracket]A[close bracket]ll of a vial, [bold type]vialeverythingdrop[roman type] to [bold type][bracket]C[close bracket][roman type]lean out every last vial you have,";
+		say "Type [bold type]vial <name>[roman type] to [bold type][bracket]U[close bracket][roman type]se a vial, [bold type]vialdrop <name>[roman type] to [bold type][bracket]D[close bracket][roman type]estroy a vial, [bold type]vialalldrop <name>[roman type] to [bold type][bracket]D[close bracket][roman type]estroy [bracket]A[close bracket]ll of a vial, [bold type]vialeverythingdrop[roman type] to [link][bracket][bold type]C[roman type][close bracket][as]vialeverythingdrop[end link][roman type]lean out every last vial you have";
 		if ( scenario is "Researcher" or nanitemeter > 0) and Larissa is visible:
 			say " or [bold type]vialsell[roman type] to [bold type][bracket]S[close bracket][roman type]ell a vial";
 		say ".";
@@ -2516,7 +2516,6 @@ carry out VialInventorying:
 			say "[link][bracket][bold type]U[roman type][close bracket][as]vial [x][end link] ";
 			say "[link][bracket][bold type]D[roman type][close bracket][as]vialdrop [x][end link] ";
 			say "[link][bracket][bold type]DA[roman type][close bracket][as]vialalldrop [x][end link] ";
-			say "[link][bracket][bold type]C[roman type][close bracket][as]vialeverythingdrop[end link] ";
 			if ( scenario is "Researcher" or nanitemeter > 0) and Larissa is visible:
 				say "[link][bracket][bold type]S[roman type][close bracket][as]vialsell [x][end link] ";
 			say "[X] x [count][line break]";
@@ -5436,56 +5435,56 @@ This is the self examine rule:
 	LineBreak;
 	LineBreak;
 	repeat with x running through equipped owned equipment:
-		if placement of x is "head":
+		if slot of x is "head":
 			if descmod of x is "":
 				break;
 			else:
 				say "[descmod of x] ";
 	repeat with x running through equipped owned equipment:
-		if placement of x is "eyes":
+		if slot of x is "eyes":
 			if descmod of x is "":
 				break;
 			else:
 				say "[descmod of x] ";
 	repeat with x running through equipped owned equipment:
-		if placement of x is "face":
+		if slot of x is "face":
 			if descmod of x is "":
 				break;
 			else:
 				say "[descmod of x] ";
 	repeat with x running through equipped owned equipment:
-		if placement of x is "body":
+		if slot of x is "body":
 			if descmod of x is "":
 				break;
 			else:
 				say "[descmod of x] ";
 	repeat with x running through equipped owned equipment:
-		if placement of x is "chest":
+		if slot of x is "chest":
 			if descmod of x is "":
 				break;
 			else:
 				say "[descmod of x] ";
 	repeat with x running through equipped owned equipment:
-		if placement of x is "arms":
+		if slot of x is "arms":
 			if descmod of x is "":
 				break;
 			else:
 				say "[descmod of x] ";
 	repeat with x running through equipped owned equipment:
-		if placement of x is "hands":
+		if slot of x is "hands":
 			if descmod of x is "":
 				break;
 			else:
 				say "[descmod of x] ";
 	repeat with x running through equipped owned equipment:
-		if placement of x is "legs":
+		if slot of x is "legs":
 			if descmod of x is "":
 				break;
 			else:
 				say "[descmod of x] ";
 	let CrotchVisible be true;
 	repeat with x running through equipped owned equipment:
-		if placement of x is "waist":
+		if slot of x is "waist":
 			if descmod of x is "":
 				break;
 			else:
@@ -5493,7 +5492,7 @@ This is the self examine rule:
 				now CrotchVisible is false;
 	if CrotchVisible is true: [no pants, so undies might be visible]
 		repeat with x running through equipped owned equipment:
-			if placement of x is "crotch":
+			if slot of x is "crotch":
 				if descmod of x is "":
 					break;
 				else:
@@ -5503,7 +5502,7 @@ This is the self examine rule:
 		say "Your [BodyName of Player in lower case] waist and legs are bare-ass naked, exposing your privates for everyone to see. ";
 	let Barefoot be true;
 	repeat with x running through equipped owned equipment:
-		if placement of x is "feet":
+		if slot of x is "feet":
 			if descmod of x is "":
 				break;
 			else:
@@ -6351,7 +6350,7 @@ Include Tape Inventory by Core Mechanics.
 Include Text Capture by Eric Eve.
 
 [Locations]
-Include Apocalypse Store by DrGryphon.
+Include Apocalypse Store by Omen.
 Include Approaching the Capitol Building by Guest Writers.
 Include Astor by Rikaeus.
 Include Astroslide Field Locker-room by Kernog.
@@ -6638,6 +6637,7 @@ Include Fire Sprite by AGentlemanCalledB.
 Include Flaming Lynx by Stripes.
 Include Flesh Blob by Stripes.
 Include Fluffy Owl by Stripes.
+Include Football Gorilla Infections by Luneth.
 Include Foul Scuttler by Xenophiliac.
 Include Francois Infections by AGentlemanCalledB.
 Include Friendship Pony by Stripes.
@@ -6650,7 +6650,7 @@ Include Gazelle by Sarokcat.
 Include Gels by Darthan.
 Include German shepherd by Stripes.[replaces 'Random German shepherd']
 Include German Shepherd Bitch by Kirov.
-Include Giant by Stripes.
+Include Giant by Gherod.
 Include Giraffe by Stripes.
 Include Goat Janitor by McRabid.
 Include Goblin by Blue Bishop.
@@ -6864,6 +6864,7 @@ Include Amy by Wahn.
 Include Andrew by Stripes.
 Include Angie by Sarokcat.
 Include Anthony by Wahn.
+Include Araquiel by Gherod.
 Include Ares by Wahn.
 Include Arthur by Luneth.
 Include Anastasia by Stripes.
@@ -6925,6 +6926,7 @@ Include Frank by Stripes.
 Include Friesian Twin Isaac by Wahn.
 Include Friesian Twin Karel by Wahn.
 Include G-Shep Squad by Rikaeus.
+Include Genevieve by Prometheus.
 Include Garrett by Stripes.
 Include Gerty by Qazarar.
 Include Glory by Wahn.
