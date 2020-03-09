@@ -1086,7 +1086,7 @@ name	desc	weight	object
 "dragon scale"	"A yellow, slightly shimmering dragon scale."	1	dragon scale
 "dragon hair"	"Some strands of golden hair that shimmer slightly in the light."	1	dragon hair
 
-dragon scale is a grab object. It is a part of the player. dragon scale is infectious. The strain of dragon scale is "Yamato Dragon".
+dragon scale is a grab object. dragon scale is infectious. The strain of dragon scale is "Yamato Dragon".
 the scent of dragon scale is "The yellow scale smells strange and otherworldly.".
 The usedesc of dragon scale is "[usedragonscale]";
 
@@ -1109,7 +1109,7 @@ to say usedragonscale:		[only alters sizes, not gender]
 		now sex entry is "nochange";
 	say "     Following the strange urge you have, press the large scale to your chest. As the spot starts to tingle, the scale slowly sinks into you and those tingles spread out across your body.";
 
-dragon hair is a grab object. It is a part of the player. dragon hair is infectious. The strain of dragon hair is "Yamato Dragoness".
+dragon hair is a grab object. dragon hair is infectious. The strain of dragon hair is "Yamato Dragoness".
 the scent of dragon hair is "The golden hair smells of exotic, otherworldly scents.".
 The usedesc of dragon hair is "[usedragonhair]";
 

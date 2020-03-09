@@ -355,7 +355,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "sticky sushi"	"A small tray of rather suspect sushi."	1	sticky sushi
 
-sticky sushi is a grab object. It is a part of the player. sticky sushi is infectious. The strain of sticky sushi is "Anime Babe".
+sticky sushi is a grab object. sticky sushi is infectious. The strain of sticky sushi is "Anime Babe".
 
 The usedesc of sticky sushi is "[eatstickysushi]";
 

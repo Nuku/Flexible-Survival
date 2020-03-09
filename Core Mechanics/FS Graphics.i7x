@@ -55,6 +55,8 @@ Figure of BlueGryphon_icon is the file "BlueGryphon.jpg".
 Figure of BlueGryphon_face_icon is the file "BlueGryphon_face.jpg".
 Figure of BlueGryphon_hard_icon is the file "Blue Gryphon hard.jpg".
 Figure of BlueGryphon_soft_icon is the file "Blue Gryphon soft.jpg".
+Figure of FeralGryphon_hard_icon is the file "Feral_Gryphon_hard.jpg".
+Figure of FeralGryphon_soft_icon is the file "Feral_Gryphon_soft.jpg".
 Figure of Gazelle_hard_icon is the file "Gazelle_hard.jpg".
 Figure of Gazelle_soft_icon is the file "Gazelle_soft.jpg".
 Figure of GermanShepherd_hard_icon is the file "GermanShepherd_hard.jpg".
@@ -803,6 +805,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Blue Gryphon Herm"	Figure of BlueGryphon_icon	"dbd"	g-black	"normal"
 "Blue Gryphon hard"	Figure of BlueGryphon_hard_icon	"Vashaa"	g-white	"normal"
 "Blue Gryphon soft"	Figure of BlueGryphon_soft_icon	"Vashaa"	g-white	"normal"
+"Feral Gryphon hard"	Figure of FeralGryphon_hard_icon	"Vashaa"	g-white	"normal"
+"Feral Gryphon soft"	Figure of FeralGryphon_soft_icon	"Vashaa"	g-white	"normal"
 "Hermaphrodite Gryphon Face"	Figure of BlueGryphon_face_icon	"dbd"	g-black	"normal"
 "Latex Vixen Herm"	Figure of LatexVixen_icon	"Anymouse1968"	g-white	"normal"
 "Hyena Herm"	Figure of Herm_Hyena_clothed_icon	"Vashaa"	g-White	"normal"
@@ -1141,6 +1145,7 @@ carry out artistcredits:
 	say "     Elven Hunter by Aosuka @ y-gallery.net[line break]";
 	say "     Ewe by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Feline (females) by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Feral Gryphon by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Feral Shaft Beast concept created by TwilightMaster @ furaffinity.net[line break]";
 	say "     Feral Shaft Beast artwork by Demon-Man @ furaffinity.net[line break]";
 	say "     Fiona by Valen[line break]";

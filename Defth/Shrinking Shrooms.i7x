@@ -48,7 +48,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "glowing mushroom"	"A weird mushroom that you found. Faintly glows with a green light (shrinking item)."	0	glowing mushroom
 
-glowing mushroom is a grab object. It is temporary. It is a part of the player.
+glowing mushroom is a grab object. It is temporary.
 
 The usedesc of glowing mushroom is "[glowing mushroom use]".
 

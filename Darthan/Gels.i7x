@@ -800,7 +800,6 @@ name	desc	weight	object
 "pink gel"	"A cup of pink jello, it looks like it is strawberry flavored."	1	pink gel
 
 pink gel is a grab object.
-It is part of the player.
 It is temporary.
 
 The usedesc of pink gel is "[gel1]";
@@ -826,7 +825,6 @@ name	desc	weight	object
 "blue gel"	"A cup of blue jello, it looks like it is blueberry flavored."	1	blue gel
 
 blue gel is a grab object.
-It is part of the player.
 It is temporary.
 
 The usedesc of blue gel is "[gel2]";
@@ -852,7 +850,6 @@ name	desc	weight	object
 "purple gel"	"A cup of purple jello, it looks like it is grape flavored."	1	purple gel
 
 purple gel is a grab object.
-It is part of the player.
 It is temporary.
 
 The usedesc of purple gel is "[gel3]";

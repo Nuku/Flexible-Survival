@@ -241,7 +241,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "fairy dust"	"A sweet smelling powder that glistens in the light."	0	fairy dust
 
-fairy dust is a grab object. It is a part of the player. fairy dust is infectious. The strain of fairy dust is "City Sprite".
+fairy dust is a grab object. fairy dust is infectious. The strain of fairy dust is "City Sprite".
 
 The usedesc of fairy dust is "[tastefairydust]";
 

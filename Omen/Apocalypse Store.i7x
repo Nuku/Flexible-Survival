@@ -54,7 +54,7 @@ name	desc	weight	object
 "Apocalypse Shorts"	"A pair of stretchy running shorts that have been singed and torn by an explosion. They're still wearable and the destroyed look fits in with the current situation."	1	Apocalypse Shorts
 "Apocalypse Hoodie"	"A large zippable hoodie that has been singed and torn by an explosion. It's still wearable and the destroyed look fits in with the current situation."	1	Apocalypse Hoodie
 "Apocalypse Scarf"	"A long scarf that has been torn and burnt from an explosion. It's still wearable and the destroyed look fits in with the current situation."	1	Apocalypse Scarf
-"Metal Baseball Bat" "A slightly dented metal baseball bat, inscribed with a symbol of the local college team. It should make for a useful improvised weapon." 6 Metal Baseball Bat
+"Metal Baseball Bat"	"A slightly dented metal baseball bat, inscribed with a symbol of the local college team. It should make for a useful improvised weapon."	6	Metal Baseball Bat
 
 Apocalypse Skirt is a grab object.
 Apocalypse Skirt is equipment.

@@ -890,7 +890,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "cunt pill"	"It's a small pill in the shape of a pink medicine capsule, and the female symbol had been etched on one side of it."	1	cunt pill
 
-cunt pill is a grab object. It is temporary. It is a part of the player.
+cunt pill is a grab object. It is temporary.
 
 instead of sniffing cunt pill:
 	say "The pill's scent is a faint mix of female arousal and antiseptic.";

@@ -279,7 +279,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "libido suppressant"	"A small syringe filled with a cloudy, orange fluid."	1	libido suppressant
 
-libido suppressant is a grab object. It is a part of the player. It is fast.
+libido suppressant is a grab object. It is fast.
 libsuppcount is a number that varies.
 
 the scent of the libido suppressant is "The libido suppressant smells of chemicals and medicine.".

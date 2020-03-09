@@ -625,7 +625,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "lust potion"	"A special sex potion for getting you (or someone else) horny."	0	lust potion
 
-lust potion is a grab object. It is temporary. It is a part of the player.
+lust potion is a grab object. It is temporary.
 
 the usedesc of lust potion is "[lust potion use]".
 

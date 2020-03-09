@@ -321,7 +321,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "crushed candies"	"A small pile of broken bits of candy."	0	crushed candies
 
-crushed candies is a grab object. It is a part of the player. crushed candies is infectious. The strain of crushed candies is "Sugar Glider".
+crushed candies is a grab object. crushed candies is infectious. The strain of crushed candies is "Sugar Glider".
 
 The usedesc of crushed candies is "[crushedcandiesuse]";
 
