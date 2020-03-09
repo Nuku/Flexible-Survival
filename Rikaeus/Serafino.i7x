@@ -43,8 +43,8 @@ Cock Length of Serafino is 8. [has an 8 inch cock]
 Ball Size of Serafino is 3. [size of balls]
 Ball Count of Serafino is 2. [has a pair of balls]
 Cunt Count of Serafino is 0. [no vagina]
-Cunt Depth of Serafino is 0. [Doesnt have a vagina to get stretched]
-Cunt Tightness of Serafino is 0. [Doesnt have a vagina to get stretched]
+Cunt Depth of Serafino is 0. [Doesn't have a vagina to get stretched]
+Cunt Tightness of Serafino is 0. [Doesn't have a vagina to get stretched]
 Nipple Count of Serafino is 2. [Has two normal nipples]
 Breast Size of Serafino is 0. [Doesn't have breasts really]
 [Basic Interaction states as of game start]
@@ -64,7 +64,7 @@ The scent of Serafino is "     The phoenix gives off a smell that reminds you of
 Serafino is in Phoenix Rebirth Spa Lobby.
 
 to say SerafinoDesc:
-	say "     Looking over at the phoenix the first thing you notice are his vermillion colored feathers which stand out brightly alongside his blue eyes in the spa lobby. Next to that is his outfit, which is rather... mundane for a noble. Serafino is wearing a black tank top that doesn't seem to exactly fit him, as it quite tightly hug his figure. Paired with his shirt is a set of form-fitting cargo pants revealing his legs and ass shape to the world, as if he doesn't care that everyone sees his figure. All you're getting from looking at him, is that you are pretty sure he's an exhibitionist. Though the phoenix does seem to notice you staring and winks in your direction";
+	say "     Looking over at the phoenix the first thing you notice are his vermilion colored feathers which stand out brightly alongside his blue eyes in the spa lobby. Next to that is his outfit, which is rather... mundane for a noble. Serafino is wearing a black tank top that doesn't seem to exactly fit him, as it quite tightly hug his figure. Paired with his shirt is a set of form-fitting cargo pants revealing his legs and ass shape to the world, as if he doesn't care that everyone sees his figure. All you're getting from looking at him, is that you are pretty sure he's an exhibitionist. Though the phoenix does seem to notice you staring and winks in your direction";
 
 instead of conversing the Serafino:
 	say "     Making your way up to where Serafino is writing on papers, you cough, getting his attention. 'Oh? Do you want something my friend?' He asks with a curious tone.";
@@ -119,7 +119,7 @@ to say SerafinoTalk1:
 	say "     'Me and the others?' He asks with a tilt of his head. You nod, curious as to his opinion of them. 'Aaah, So, I don't know if you're aware but us Four Lords are the nobles of Atlantis, basically we're advisors to King Poseidon.' Serafino says. You nod at him, understanding what he says. 'Now, as for my opinions about everyone, well that's a loaded question,' he says with a chuckle. You laugh as well, guessing that they're probably all friends but still each have different opinions about each other. 'But I guess out of all of all of them I get along with the most with Astor,' the phoenix says with a shrug.";
 	say "     He's an azure dragon and pretty nice and quite the amazing cook. As for why I get along with him the best, it has to do with the fact that out of all of them he doesn't have a stick up his ass or acts like a kung fu sensei.' Serafino says with a roll of his eyes. Oh, you sense some tension there, you have to hear this. 'Well, the stick up his ass is Sheng, who's a white tiger. Now don't get me wrong, he's an amazing friend! But, he's the most... [']noble['] acting of us which can grate on my nerves sometimes, ya know?' He asks. You nod, saying that it does make sense that it can aggravate some people.";
 	WaitLineBreak;
-	say "     'But then there's Kuo, a black tortoise, who's always calm and collected, acting like one of those asian kung fu senseis back on television. Granted, he does run a dojo, but he never lets loose or jokes around, it kinda unnerves me sometimes.' Serafino says with a shrug. You kinda are getting the idea that the phoenix is a free spirit and somebody like that would probably turn him off personality wise. 'But I do love them all as my friends despite that some of them irk me, as I have been with them for millenia,' he says with a chuckle. Giving him a shocked look at that last bit he waves that off. 'That's a story for another day my friend, after all that'll take a fair amount of time to discuss.' Serafino says before returning to work.'";
+	say "     'But then there's Kuo, a black tortoise, who's always calm and collected, acting like one of those Asian kung fu senseis back on television. Granted, he does run a dojo, but he never lets loose or jokes around, it kinda unnerves me sometimes.' Serafino says with a shrug. You kinda are getting the idea that the phoenix is a free spirit and somebody like that would probably turn him off personality wise. 'But I do love them all as my friends despite that some of them irk me, as I have been with them for millenia,' he says with a chuckle. Giving him a shocked look at that last bit he waves that off. 'That's a story for another day my friend, after all that'll take a fair amount of time to discuss.' Serafino says before returning to work.'";
 
 Section 4 - Sex
 
