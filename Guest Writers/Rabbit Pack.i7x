@@ -30,7 +30,6 @@ to say rabpackdesc:
 		say "However, the creature is not alone. In an instant, you are surrounded by about ten rabbit-like creatures, some females, other males, all wanting YOU!";
 
 to say rabpackvictory:
-	if fightstatus is 3, now fightstatus is 2;
 	if BodyName of Player is "Rabbit":
 		say "The rabbit creatures take all of you into a nearby abandoned building. They... no, it has plans for you, and it doesn't want unwanted guests.[line break]After laying you to the ground, they step back, sitting or crouching around you. Instinctively, you group together all of your copies, for how your injures can afford. One of them slowly creeps closer, making a noise, an attempt to tranquilize you. [one of]He[or]She[at random] hugs you, kissing tenderly your forehead until you calm down. The other part soon join in...";
 		WaitLineBreak;
@@ -63,7 +62,6 @@ to say rabpackc:
 
 
 to say rabpackbeaten:
-	if fightstatus is 3, now fightstatus is 1;
 	say "You finally manage to incapacitate most of them. You go away while those still conscious are dragging their comrades to safety.";
 
 Section 2 - Creature Insertion

@@ -233,7 +233,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "estosterogen pill"	"This bi-color pill has a pair of interconnected rings marked onto it, one with a cross and the other with a plus quartering them."	1	estosterogen pill
 
-estosterogen pill is a grab object. It is temporary. It is a part of the player.
+estosterogen pill is a grab object. It is temporary.
 
 the usedesc of estosterogen pill is "[estosterogen pill use]";
 

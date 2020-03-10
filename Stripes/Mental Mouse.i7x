@@ -403,7 +403,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "cheese"	"A wedge of tasty cheese stamped with a mouse on the rind."	1	cheese
 
-cheese is a grab object. It is a part of the player. cheese is infectious. The strain of cheese is "Mental Mouse".
+cheese is a grab object. cheese is infectious. The strain of cheese is "Mental Mouse".
 
 The usedesc of cheese is "[eatcheese]";
 

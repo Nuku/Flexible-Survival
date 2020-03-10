@@ -608,7 +608,6 @@ when play begins:
 Instead of resolving Nightmare Mutation:
 	if HP of Horus is 2:
 		now inasituation is true;
-		now fightstatus is 0;
 		say "     Having been a good twenty minutes wandering around the capitol district you wonder if you're ever going to actually run into or find any information about this darkness. Letting out a sigh and kicking a rock that's in your path you continuing to walk around. However, when the piece of stone that you let launch ends up slamming against a knocked down street sign, letting a loud clang ring out. 'Help! Is someone out there!' A scream is uttered seconds later from around the corner of a building. The voice is terrifyingly desperate sounding, exactly as if the person shouting it is fighting for their life rather their body. But... that can't be? The nanites prevent most forms of death other than instantaneous.";
 		say "     Suddenly a cold and dark thought runs through your mind. Could it be the darkness that Horus wanted you to search for? In a quick split second decision you dash forward and around the corner, coming to the most horrific sight ever. At the end of the street is a rapidly shifting creature, changing from one form to another almost every instance. It doesn't even seem to have a set consistency, resembling more of a blob than a solid shape. But that's not what truly shocks you. No, what does is what's happening to the screaming and struggling orc in its grasp. The green humanoid's form starts to shudder and the true terror starts to happen.";
 		WaitLineBreak;
@@ -644,7 +643,6 @@ when play begins:
 Instead of resolving Nightmare Showdown:
 	if HP of Horus is 11:
 		now inasituation is true;
-		now fightstatus is 0;
 		say "     Returning to where you found the creature before, you wonder if it moved elsewhere as you don't spot it. However, that thought doesn't remain for much longer as you see something large out of the corner of your eyes. Turning around quickly you see the rapidly shifting being once more, making its way towards you. The cure is on your person but you don't think you could inject it without getting touched with the intent to be eaten by it. So you more than likely have to fight it and get it weakened to do anything. So, with a deep breath you sink down into a fighting stance and get ready to lunge at it.";
 		challenge "Destabilizing Mutant";
 		if fightoutcome < 20: [won]

@@ -10,7 +10,6 @@ name	desc	weight	object
 
 bliss tablet is a grab object.
 the usedesc of bliss tablet is "[blissUse]".
-it is part of the player.
 It is temporary.
 
 to say blissUse:
@@ -45,7 +44,6 @@ name	desc	weight	object
 
 powerup tablet is a grab object.
 the usedesc of powerup tablet is "[PowerUpUse]".
-it is part of the player.
 It is temporary.
 
 to say PowerUpUse:
@@ -84,7 +82,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "Pixie Dust"	"A little handful of what looks like glitter, but is actually genuine magic pixie dust. It is in a small throwaway plastic container."	0	pixie dust
 
-pixie dust is a grab object. It is temporary. It is a part of the player.
+pixie dust is a grab object. It is temporary.
 
 the usedesc of pixie dust is "[pixie dust use]".
 

@@ -63,7 +63,7 @@ to say CadmeaDesc:
 		say "DEBUG -> HP: [hp of Cadmea] <- DEBUG[line break]";
 	else:
 		say "     Cadmea is a svelte white-furred kitsune with seven fluffy tails, suggesting significant power, should she choose to unleash it. The color of her eyes changes with her mood: red while angry, blue while fearful, and lilac most of the time. Wearing a short tunic-like garb that maintains her decency, it seems to be manifested by willpower as when she is distracted, it seems to disappear. Her C cup breasts are covered in fine, short white fur, similar to the fur on her groin, vulpine face, hands, and feet, while the rest of her body has slightly longer fur.";
-		say "     The female kitsune is a cheerful and mischievous person with a good heart. While she happily carries out good natured trickery, should the need arise, she will fiercely guard those she views as vulnerable using tooth, claw, and magic. That said, combat is not her forte, forcing her to rely on illusions, a skill that she is more adept at. She catches you observing her and levitates, spreading her tails out like a star behind her. Truly a magnificent being.";
+		say "     The female kitsune is a cheerful and mischievous person with a good heart. While she happily carries out good-natured trickery, should the need arise, she will fiercely guard those she views as vulnerable using tooth, claw, and magic. That said, combat is not her forte, forcing her to rely on illusions, a skill that she is more adept at. She catches you observing her and levitates, spreading her tails out like a star behind her. Truly a magnificent being.";
 
 Section 3 - Talking
 
@@ -118,22 +118,5 @@ to DualLeadershipEvent:
 	[change the up exit of Sanctuary Hotel Lobby to Sanctuary Conference Room; [connecting the location to the travel room]
 	change the down exit of Sanctuary Conference Room to Sanctuary Hotel Lobby; [connecting the location to the travel room]]
 	now Dual Leadership is resolved;
-
-[
-Table of GameEventIDs (continued)
-Object	Name
-Foxes of Dark & Light	"Foxes of Dark & Light"
-
-Foxes of Dark & Light is a situation.
-Foxes of Dark & Light is inactive.
-Prereq1 of Foxes of Dark & Light is Dual Leadership.
-The level of Foxes of Dark & Light is 0.
-The sarea of Foxes of Dark & Light is "Outside".
-
-Instead of resolving Foxes of Dark & Light:
-	FoxesofDark&LightEvent;
-
-to FoxesofDark&LightEvent:
-	say "     While taking a shortcut through an alley, a feeling of something being off creeps up your back. The instinct to leave the area overwhelms your mind and you increase your walking speed in your attempt to leave the area. In your haste to escape the ominous feeling, you end up dashing through back alleys, no longer keeping track of where you are relative to the street until eventually you end up behind the Sanctuary Hotel";]
 
 Cadmea ends here.

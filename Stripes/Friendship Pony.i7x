@@ -759,7 +759,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "pony cider"	"A bottle of golden liquid labeled as [']cider[']."	1	pony cider
 
-pony cider is a grab object. It is a part of the player. pony cider is infectious. The strain of pony cider is "Friendship Pony".
+pony cider is a grab object. pony cider is infectious. The strain of pony cider is "Friendship Pony".
 
 The usedesc of pony cider is "[drinkponycider]";
 

@@ -170,12 +170,13 @@ Instead of resolving a Conflict Within the Plains:
 			now HP of Seraphis is 50;
 			now Conflict Within the Plains is resolved;
 
-	
+
 Table of GameEventIDs (continued)
 Object	Name
 Plant Ruins Encounters	"Plant Ruins Encounters"
 
 Plant Ruins Encounters is a situation. The level of Plant Ruins Encounters is 6.
+Plant Ruins Encounters is inactive.
 The sarea of Plant Ruins Encounters is "Plains".
 
 The Prereq1 of Plant Ruins Encounters is Conflict Within the Plains.

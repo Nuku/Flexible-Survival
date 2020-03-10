@@ -13,17 +13,13 @@ to say drmouseattack:
 		say "[one of]The mouse monster punches your head with one of his bony fists, making the room spin for a moment![or]Dr Mouse's vicious claws slash across your body, opening bloody gashes![or]That twisted head manages to snap its fangorious jaws onto your shoulder![or]The transformed mouse jabs your arm with one of its horns as you try to swing at him. It stabs into your bicep and your blood flows down your arm![or]Dr Mouse grabs one of the wooden stools and proceeds to beat you with it, only stopping when it shatters against one of the worktables![or]The monstrous mouse hisses at you and releases a spray of stinging mist into your face, momentarily blinding you. As you try to stumble back while wiping your eyes, you get slammed by a powerful backhand and sent flying back several feet![or]Dr Mouse chuckles madly as he grabs your shoulder with one clawed hand and gets your arm in the other. He pulls and twists your arm, smiling as you scream in pain. Luckily, you manage to break free before he pulls it completely free of its socket, but your shoulder burns with pain![or]The monstrous creature charges, slamming his shoulder into you before sending you flying over one of the worktables![or]The transformed doctor clubs you several times with his powerful fists, laughing in mad delight as he does![at random]";
 
 to say losetodrmouse:
-	now fightstatus is 2;
 	say "     Unable to continue fighting, you collapse to your knees. Dr Mouse chuckles and grabs a bottle from one of the tables. He splashes some of the liquid onto a cloth, then covers your mouth and nose with it. 'Does this smell like chloroform?' he asks with a mad titter. The room goes hazy and you pass out.";
 
-
 to say beatdrmouse:
-	now fightstatus is 1;
 	if hospfight is 1:
 		say "     Your blows leave the weak little mouse bruised and bloodied. He staggers and leans heavily against one of the work tables, panting for breath as he's no longer able to fight you.";
 	if hospfight is 2:
 		say "     Your final blow strikes and causes the monstrous creature to stumble back. He reaches for one of the stools to hurl at you, but you grab one and send it flying into his head first. He staggers back a few more steps, slips in a puddle and collapses at one side of the room.";
-
 
 to say drmousedesc:
 	choose row MonsterID from the Table of Random Critters;

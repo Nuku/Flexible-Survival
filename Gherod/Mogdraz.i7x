@@ -111,7 +111,7 @@ to MogdrazXaedihr:
 [***********************************************************]
 [***********************************************************]
 [***********************************************************]
-Section 2 - NPC
+Section 2 - Mogdraz NPC
 [***********************************************************]
 [***********************************************************]
 [***********************************************************]
@@ -164,7 +164,7 @@ to say MogdrazDesc:
 	say "     Wearing a naughty grin in his face, the owner of the Hellfire Club is the higher breed of the Hellfires, slightly larger and muscular than the rest. Crimson skinned, bigger horns, fuzzier beard and even sporting a hairier chest, Mogdraz leads the entire horde of hellfire demons roaming around Red Light District, while managing a fetish business of his own. He's wearing a leather set, complete with a spiky harness adorning his jacked torso, a leather jockstrap suitable for his enormous size, a pair of crotch revealing leather pants and black boots that would make anyone tremble in his presence due to the tough and rough vibe they emanate. Contrarily to what one would think at first sight, however, Mogdraz is actually pretty friendly, giving you a pat on the back everytime you come talk to him.";
 
 [***********************************************************]
-Section 3 - Talk Menu
+Section 3 - Mogdraz Talk Menu
 [***********************************************************]
 
 instead of conversing Mogdraz:
@@ -209,6 +209,12 @@ to say MogdrazTalkMenu:
 		now sortorder entry is 6;
 		now description entry is "Ask more about their relationship";
 	[]
+	if HP of Araqiel is 3 and Resolution of Ambush The Purifier is 5:
+		choose a blank row in table of fucking options;
+		now title entry is "Ask about the Purifier";
+		now sortorder entry is 99;
+		now description entry is "Try to know more about their most recent capture";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -236,6 +242,8 @@ to say MogdrazTalkMenu:
 					say "[MogdrazTalkSexPref]";
 				if (nam is "His situation with Xaedihr"):
 					say "[MogdrazTalkXaedihr]";
+				if (nam is "Ask about the Purifier"):
+					say "[MogdrazTalkPurifier]"; [in Araqiel file]
 				wait for any key;
 				say "[MogdrazTalkMenu]"; [looping back to keep talking with him]
 		else if calcnumber is 0:
@@ -276,7 +284,7 @@ to say MogdrazTalkXaedihr:
 	say "     You further question Mogdraz about his relationship with Xaedihr. He shrugs, but replies... 'Yeah, I guess you have a few questions... Uh, totally wasn't expecting to see ol' Xaed here. He changed a lot, that's for sure.' He makes a pause, and continues speaking before you have to inquire further. 'Back on the days I was but a humble servant, and as all servants from high places, we know how to relocate ourselves instantly through large distances... Teleportation, dimension traveling...' That makes sense now... But there is still something left to explain, which he does in a bit. 'We are not just minions. My kind was created to serve an ultimate purpose. My minions, however, are... A minor offspring of the true Hellfire. They are intelligent enough, but as you can see, they are very sex-obsessed.' With a nod, you thank Mogdraz for the explanation.";
 
 [***********************************************************]
-Section 4 - Sex Menu
+Section 4 - Mogdraz Sex Menu
 [***********************************************************]
 
 Instead of fucking Mogdraz:
@@ -479,6 +487,7 @@ to say HellfireClubDesc:
 to connect Hellfire Club:
 	change the south exit of Hellfire Club to Crimson Street;
 	change the north exit of Crimson Street to Hellfire Club;
+	now Hellfire Club is known;
 
 a postimport rule: [bugfixing rules for players that import savegames]
 	if resolution of An Hellish Introduction > 0: [event resolved the right way, room not connected yet]
@@ -497,13 +506,50 @@ The earea of Hellfire Lounge is "Red".
 The description of Hellfire Lounge is "[HellfireLoungeDesc]".
 
 to say HellfireLoungeDesc:
-	say "     The lounge of the Hellfire Club is a spatious environment, with a bar counter on one side and many chairs and seats scattered around, screaming lush and delight wherever you look. Here, [if daytimer is night]the noise isn't unbearable, you're even able to have a normal conversation with anyone without having to raise your voice too much, and the bartender is serving drinks as usual[else]some demon lackeys are cleaning up the seats, tables and corners from the previous night, while the bartender is polishing the drinking glasses[end if]. At one corner with peripheral vision for the entire lounge is a large and luxurious red velvet sofa, where the owner of the club, Mogdraz, usually takes his seat, sometimes accompanied by a couple of servants, who he dismisses whenever you approach him. Behind the bar counter, to the west, there's a door to the back rooms with a signal prominently saying [']STAFF ONLY[']. It doesn't look like you can go in there for the moment. To the south is the entrance, with two burly hellfire demons keeping watch all the time.";
+	say "     The lounge of the Hellfire Club is a spatious environment, with a bar counter on one side and many chairs and seats scattered around, screaming lush and delight wherever you look. Here, [if daytimer is night]the noise isn't unbearable, you're even able to have a normal conversation with anyone without having to raise your voice too much, and the bartender is serving drinks as usual[else]some demon lackeys are cleaning up the seats, tables and corners from the previous night, while the bartender is polishing the drinking glasses[end if]. At one corner with peripheral vision for the entire lounge is a large and luxurious red velvet sofa, where the owner of the club, Mogdraz, usually takes his seat, sometimes accompanied by a couple of servants, who he dismisses whenever you approach him. Behind the bar counter, to the west, there's a door to the back rooms with a signal prominently saying [']STAFF ONLY[']. It [if Resolution of Ambush The Purifier < 6]doesn't look like you can go in there for the moment[else]looks like you could go in there, now that you have Mogdraz's permission[end if]. To the south is the entrance, with two burly hellfire demons keeping watch all the time.";
 
-instead of smelling Hellfire Club:
+instead of smelling Hellfire Lounge:
 	say "     It must be the hellfire demons musk, but everything smells so delightfully devilish in here that just makes you want to stay. The sweet and masculine musk of attractive demonic creatures is enough to send you into a brief lightheaded state, taking you some time to shake it off. There are also other creatures' scents getting mixed together, but you can barely notice them.";
 
+Table of GameRoomIDs (continued)
+Object	Name
+Hellfire Corridor	"Hellfire Corridor"
+
+Hellfire Corridor is a room. Hellfire Corridor is private. It is sleepsafe.
+The earea of Hellfire Corridor is "Red".
+The description of Hellfire Corridor is "[HellfireCorridorDesc]".
+
+to say HellfireCorridorDesc:
+	say "     Past the Staff door, there is a long and dark corridor, leading to lots of different rooms. Some have their lights lit from inside, and you can hear a few grunts and moans occasionally coming from behind the walls. Apart from these sounds, there's only silence. Right now, you can only head south, down a stairway that seems to lead to the dungeon where captives are held.";
+
+to connect Hellfire Corridor:
+	change the west exit of Hellfire Lounge to Hellfire Corridor;
+	change the east exit of Hellfire Corridor to Hellfire Lounge;
+
+a postimport rule: [bugfixing rules for players that import savegames]
+	if resolution of Ambush The Purifier > 5 and resolution of Ambush The Purifier < 99: [event resolved this way, room not connected yet]
+		connect Hellfire Corridor;
+
+instead of smelling Hellfire Corridor:
+	say "     It smells strongly of sex, and especially demonic musk. This is a place only the trusted clientele and staff members are allowed, so that is to be expected.";
+
+Table of GameRoomIDs (continued)
+Object	Name
+Hellfire Dungeon	"Hellfire Dungeon"
+
+Hellfire Dungeon is a room.
+Hellfire Dungeon is below Hellfire Corridor. It is sleepsafe.
+The earea of Hellfire Dungeon is "Red".
+The description of Hellfire Dungeon is "[HellfireDungeonDesc]".
+
+to say HellfireDungeonDesc:
+	say "     One of the darkest places in the entire Hellfire Club establishment, the dungeon is where Mogdraz's most valuable slaves are kept, among others that he personally fancies. Though this isn't what you expect from a regular dungeon. The place has little light, but the [']cells['] are actually rooms with good conditions for the captives to inhabit. Over a specific area, however, there are racks and other mechanisms that serve to bind and tie, together with a variety of sex toys and tools for a complete BDSM session. This definitely seems to be the place to enact some very kinky fun, and you can occasionally hear someone moaning from inside the rooms.";
+
+instead of smelling Hellfire Dungeon:
+	say "     It smells strongly of sex, and especially demonic musk. This is a place only the trusted clientele and staff members are allowed, so that is to be expected.";
+
 [***********************************************************]
-Section 5-1 - Toron the Bartender
+Section 5-1 - Toron NPC
 [***********************************************************]
 
 ToronDoneTalking is a truth state that varies.[@Tag:NotSaved]
@@ -543,6 +589,10 @@ to say ToronDesc:
 	say "     You perceive Toron as a purple skin colored human with unnaturally bright pink eyes, although the lighting in the lounge give his bare torso a slight red tone at night... It's confusing, and truth be told, you're not really sure about his real colors, only that he is far from being a human. He's tall within the average scale, and very muscular, with incredibly handsome features. However, he gives you this feeling of... uncertainty, like he's not what he really looks like, and the occasional scaly tentacle appearing right behind him to grab drinks and bottles out of his arms['] reach may help explain why you feel this way. He stands behind a counter all the time, though he's usually wearing some tight black jeans.";
 	if perception of player >= 19:
 		say "     [italic type]His shape dims like a very thick liquid when you look at him attentively for a long time. You try not to do that often, however, as his counter gaze almost seems to petrify you.[roman type][line break]";
+
+[***********************************************************]
+Section 5-2 - Toron Talk Menu
+[***********************************************************]
 
 instead of conversing Toron:
 	say "     You come close to the bar counter, as Toron immediately turns his attention to you. 'Drinks on the house, by Mogdraz's order. How lucky, not many gain his respect like that.' he says, his voice clear and low as if caressing your ears. He surely is charming. 'So, what can I get you?'";
@@ -593,6 +643,12 @@ to say ToronTalkMenu:
 		now sortorder entry is 7;
 		now description entry is "Ask if he knows Xaedihr";
 	[]
+	if resolution of Ambush The Purifier < 99 and HP of Araqiel is 1 or HP of Araqiel is 2:
+		choose a blank row in table of fucking options;
+		now title entry is "About that odd Angel...";
+		now sortorder entry is 8;
+		now description entry is "He might like to know about the angel you've seen fucking demons";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -624,6 +680,8 @@ to say ToronTalkMenu:
 					say "[ToronTalkMogdraz]";
 				if (nam is "About Xaedihr"):
 					say "[ToronTalkXaedihr]";
+				if (nam is "About that odd Angel..."):
+					say "[ToronTalkPurifier]"; [on Araqiel file]
 				wait for any key;
 				if ToronDoneTalking is false:
 					say "[ToronTalkMenu]"; [looping back to keep talking with him]
@@ -697,6 +755,12 @@ to say HellfireClubDrinksMenu:
 		now sortorder entry is 1;
 		now description entry is "A drink that substantially increases your might, at the cost of accuracy (+2 strength, -1 dexterity)";
 	[]
+	if "Created Heaven's Kiss" is listed in traits of Toron:
+		choose a blank row in table of fucking options;
+		now title entry is "Order a Heaven's Kiss";
+		now sortorder entry is 1;
+		now description entry is "A drink that substantially increases your charisma (+2 charisma)";
+	[]
 	if orc brew is owned and "Created Orcish Bomber" is not listed in traits of Toron and HellfireOrcBrewTimer is 20000:
 		choose a blank row in table of fucking options;
 		now title entry is "Show him the orc brew";
@@ -722,6 +786,8 @@ to say HellfireClubDrinksMenu:
 					say "[DrinkHellfireSwizzle]";
 				if (nam is "Order an Orcish Bomber"):
 					say "[DrinkOrcishBomber]";
+				if (nam is "Order a Heaven's Kiss"):
+					say "[DrinkHeavensKiss]";
 				if (nam is "Show him the orc brew"):
 					say "[GiveToronOrcBrew]";
 				wait for any key;
@@ -743,14 +809,23 @@ to say DrinkHellfireSwizzle:
 	decrease thirst of player by 10;
 
 to say DrinkOrcishBomber:
-	say "     You make a request for an Orcish Bomber, a powerful drink served at ambient temperature, made as an improved orc brew using components from orc cum, though it's perfectly safe... allegedly. 'Right on.' says Toron, as he prepares the mix. Adding all the elements of the drink into a mixer, he shakes its contents until it attains a very transparent white color, then pours it onto a flat, very short and narrow glass, served simply like a shot. 'Here you go. This one's strong.' he says, sliding the glass towards you. The drink smells faintly of orc, though nothing unbearable at all, being quite pleasing and soft to the nose... until you take a deeper whiff, and you nearly feel lightheaded. Well, time to ahve a taste.";
+	say "     You make a request for an Orcish Bomber, a powerful drink served at ambient temperature, made as an improved orc brew using components from orc cum, though it's perfectly safe... allegedly. 'Right on.' says Toron, as he prepares the mix. Adding all the elements of the drink into a mixer, he shakes its contents until it attains a very transparent white color, then pours it onto a flat, very short and narrow glass, served simply like a shot. 'Here you go. This one's strong.' he says, sliding the glass towards you. The drink smells faintly of orc, though nothing unbearable at all, being quite pleasing and soft to the nose... until you take a deeper whiff, and you nearly feel lightheaded. Well, time to have a taste.";
 	say "     The flavor is very intense, a mix between sweet and salty, its texture slightly thick, just like a liquor. You drink it all it one go, and feel it burning down your throat, a sensation only increasing with time, before it starts subsiding. It leaves a bitter aftertaste on the back of your mouth. This is one very strange drink, but you can already feel its effects pumping your muscles a bit, as your movements get slightly harder.";
-	FeatGain "OrcishBomber";
+	FeatGain "Orcish Bomber";
 	say "     Your [bold type]Strength has increased by 2, while your Dexterity has decreased by 1,[roman type] for the next 24 hours.";
 	statchange "Strength" by 2 silently;
 	statchange "Dexterity" by -1 silently;
 	now HellfireDrinkTimer is 8;
 	decrease thirst of player by 3;
+
+to say DrinkHeavensKiss:
+	say "     You make a request for a Heaven's Kiss, a suave drink served cold, made with fresh flavored ingredients such as mint, citrines and a hint of something sweet that is considered a [']secret ingredient[']... 'Right on.' says Toron, as he prepares the mix. Adding all the elements of the drink into a mixer, he shakes its contents until it attains a color between cyan and green, very opaque and bright, served in an elegant wide standing glass. 'Here you go. Hope you enjoy this one.' he says, sliding the glass towards you. The drink smells sweet and light, so good that you could just stay here and feel its scent for a good while, so pleasant and soft to your nostrils. Well, time to have a taste.";
+	say "     The flavor is exactly what you expect, [italic type]heavenly[roman type]! It's not too sweet, nor too acid, there's just the right balance within those spectrums, and it gives you such a good time that you insist on slowly sipping through the drink. The aftertaste is fresh, and leaves you with an exceptionally good breath. You feel like you could charm anyone during a conversation.";
+	FeatGain "Heaven's Kiss";
+	say "     Your [bold type]Charisma has increased by 2[roman type] for the next 24 hours.";
+	statchange "Charisma" by 2 silently;
+	now HellfireDrinkTimer is 8;
+	decrease thirst of player by 13;
 
 an everyturn rule:
 	if "Hellfire Swizzle" is listed in feats of Player:
@@ -768,6 +843,13 @@ an everyturn rule:
 			statchange "Dexterity" by 1 silently;
 		else:
 			decrease HellfireDrinkTimer by 1;
+	if "Heaven's Kiss" is listed in feats of player:
+		if HellfireDrinkTimer <= 0:
+			FeatLoss "Heaven's Kiss";
+			say "     It has been at least a full day since you've had that drink at the Hellfire Club, and the effect has been flushed out of the system by now. As a result, you've lost the boost from the drink, but are able to have another one.";
+			statchange "Charisma" by -2 silently;
+		else:
+			decrease HellfireDrinkTimer by 1;
 	if "Created Orcish Bomber" is not listed in traits of Toron:
 		if HellfireOrcBrewTimer - turns < 4:
 			add "Created Orcish Bomber" to traits of Toron;
@@ -781,17 +863,109 @@ to say GiveToronOrcBrew:
 		say "     ([link]Y[as]y[end link]) - Hand him some.";
 		say "     ([link]N[as]n[end link]) - Better not, for now.";
 		if player consents:
+			Linebreak;
 			say "     Might as well give this a try. You take the bottle of Orc Cum out and hand it to Toron, who gladly accepts your offer. 'Good! I needed this. Very well, I'll be able to create something new with this. If it's a success, I'll just... send someone to harvest the ingredients. Oh, don't look at me like that, I bet they would enjoy having some eager demons milking them for their cum... since this land is as strange as it is. Anyway, I'll bring these in, though I'll need some time until I can get something done. Come back later, perhaps I'll have news.' Taking both ingredients you have just provided him with, Toron takes them inside, returning to his duties shortly after.";
 			decrease carried of orc cum by 1;
 			decrease carried of orc brew by 1;
 			now HellfireOrcBrewTimer is turns;
 			say "[HellfireClubDrinksMenu]";
 		else:
+			Linebreak;
 			say "     You shake your head, telling him that you don't have one available at the moment. 'Ah, I see... Then have the brew back, I can't do anything with it without this specific ingredient. Though feel free to come back to me with it whenever you get some orc cum. I might just be able to improve this brew...'";
 			say "[HellfireClubDrinksMenu]";
 	else:
 		say "     You shake your head, telling him that you don't have one available at the moment. 'Ah, I see... Then have the brew back, I can't do anything with it without this specific ingredient. Though feel free to come back to me with it whenever you get some orc cum. I might just be able to improve this brew...'";
 		say "[HellfireClubDrinksMenu]";
+
+[***********************************************************]
+Section 5-3 - Toron Sex Menu
+[***********************************************************]
+
+Instead of fucking Toron:
+	if Libido of Toron is 0:
+		say "     Maybe you should talk to him about sex before you jump right into it...";
+	else if Libido of Toron > 0:
+		if player is submissive:
+			say "     As submissive as you are, you doubt Toron would take any interest in you, or that you would be interested in having sex with him. You have a preference for submitting to others, and so does he.";
+		else if lastfuck of Toron - turns < 6:
+			say "     As much as you want to get in some more fun with Toron, you have to give him a break to recover. Even crazy shapeshifting demons don't have that much stamina.";
+		else:
+			if daytimer is night:
+				say "     You wish to get into some fun with Toron during his night shift, and as soon as you suggest that to the bartender, you can see him blush a little. 'You know I'm working, right...?' He throws a chuckle, but you have a few ideas that won't bother his duties... much.";
+			else:
+				say "     You wish to get into some fun with Toron during the day, when he has some free time. With that in mind, you're about to make a move with a few ideas in mind while he's distracted with polishing the glasses...";
+			now sextablerun is 0;
+			blank out the whole of table of fucking options;
+			[]
+			if daytimer is night:
+				choose a blank row in table of fucking options;
+				now title entry is "Rim and finger his ass";
+				now sortorder entry is 1;
+				now description entry is "Get on the other side of the counter and play with his butt";
+			[]
+			if daytimer is day:
+				if player is male:
+					choose a blank row in table of fucking options;
+					now title entry is "Fuck his ass";
+					now sortorder entry is 1;
+					now description entry is "Grab his ass and give him some hard pounding right here";
+			[]
+			sort the table of fucking options in sortorder order;
+			repeat with y running from 1 to number of filled rows in table of fucking options:
+				choose row y from the table of fucking options;
+				say "[link][y] - [title entry][as][y][end link][line break]";
+			say "[link]0 - Nevermind[as]0[end link][line break]";
+			while sextablerun is 0:
+				say "Pick the corresponding number> [run paragraph on]";
+				get a number;
+				if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+					now current menu selection is calcnumber;
+					choose row calcnumber in table of fucking options;
+					say "[title entry]: [description entry]?";
+					if Player consents:
+						let nam be title entry;
+						now sextablerun is 1;
+						if (nam is "Rim and finger his ass"):
+							say "[ToronNightAssPlay]";
+						if (nam is "Fuck his ass"):
+							say "[ToronDayAssFuck]";
+						wait for any key;
+				else if calcnumber is 0:
+					now sextablerun is 1;
+					say "     You politely excuse yourself as Toron continues on with his duties.";
+					wait for any key;
+				else:
+					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+			clear the screen and hyperlink list;
+
+to say ToronNightAssPlay:
+	say "     You lean towards Toron in order to whisper into his ear, letting him know what you're going to do to him once you discretely go around the counter and get on his side. Telling him to be a good bartender and continue his duties as if nothing was happening also helps him not being able to come up with an answer, and instead, he remains still as you approach him. You duck behind the counter so nobody can see you quietly approaching the bartender, who is actually not wearing anything from his waist down, something that is impossible to realize on the client's side. That must be so that, occasionally, a slimey, octopus-like tentacle can take form from around the beginning of his legs to grab a distant bottle or some other ingredient, though he maintains a pair of completely normal humanoid legs to sustain his weight, and with that, a magnificent bubblebutt waiting to get grabbed by you.";
+	say "     He doesn't stop you, so you position yourself around his legs, sliding your hands over his thighs from the backside, then around his glutes. His purple skin is really soft, and you hear him moan slightly as you feel it, with a little of arousing discomfort, as he struggles to keep his mind on serving drinks. You don't want to rush anything here, so first, you begin to feel up his ass cheeks, teasing his hand-filling ballsack in the process, causing him to get his about nine inch cock to grow into full erection. The bartender archs his back a little, letting you take a better look at his blue-ish pucker. It's shaped like a plump donut hole, twitching along with your touch, giving you the feeling it can take a dick of any size and shape, perfectly fuckable for hours in a row without getting irreversibly stretched.";
+	WaitLineBreak;
+	say "     As you are getting acquainted with his marvelous butt, each plump glute clenching and bouncing with your caressing, you slide in a single finger right between his cheeks to feel that inviting hole, moist and squishy to the touch. He takes a deep breath, moaning 'Fuck...' as he turns his head downwards to have a brief look at you, then back smiling to possibly an approaching client - you can't really see what is going on from your angle - while you have your own fun. It feels amazing just rubbing his anus, it's incredibly warm and welcoming, and a plethora of ideas just pop up in your mind... Only if you could do anything you wanted to his ass right here, right now... Though perhaps you can give it a good lick.";
+	say "     Spreading his asscheeks at last, you lean in to bury your face between his bubbly glutes, your lips touching his pucker as you give it a kiss, before sliding your tongue just around the entrance before you try to press it in a little bit, humming as you feel its incredible taste. 'A[one of] Hellfire Sw-ah... S-swizzle [or] Black Ch-aah...Cherry D-Drink [or]Tequila Sh-ooh... S-shot [or]-aah... S-simple B-beer [or] most refined w-... oh fuck... I-I mean, Red Wine C-[or]Black Lemon Lime V-ooh... Vodka [at random] coming out...!' he says to the client amidst a moan you've caused, and lucky him that his tentacles are able to do the work, though even those are shaking with the pleasure you're providing him. With your wiggling tongue, you lick his hole thorough before you make a bigger effort into pressing further inside, only to find out it just happens to welcome you so easily, yet so tightly, that you can caress all of his fleshy insides with ease. It almost feels like his ass is pulling your tongue, as hungry as he is, and it's not so long until Toron is moving his ass back and forth so he can feel you tonguefucking him deeper.";
+	WaitLineBreak;
+	say "     Putting your hands on each of his glutes, you twist and roll your tongue to the sides, while pushing it in and out as you go. Toron can barely hold his urge to moan, and you're sometimes able to hear a really low one, when nobody's nearby. Though enough is enough, you think, and pulling your tongue out of his hole, leaving it with a kiss, you figure it's time to use your hands, now that his anus has been prepared. Slowly, you press your index finger against his pucker, watching it being buried inside progressively as you keep pushing, causing the shapeshifting demon to let out a silent moan, the only audible part being a huff of desperate breathing, unable to hold his excitement. You're giving him hell during work, torturing him with pleasure, as he so much likes to feel his warm asshole filled up.";
+	say "     Now having your finger fully inside, you add another as soon as you can, opening his blinking orifice even more, and yet it holds your fingers tightly. His moisty insides, however, provide you with some slipperiness that makes it easy for you to push them in and out, then you think that perhaps adding another to the two that are already inside would be what he needs. You're getting him really horny as you do this, and without being able to hold back any longer, he just blatantly grabs his dick and starts jerking off to the sensations that you're giving him, his asshole clenching around your fingers rather hard. Feeling him pushing his ass backwards, you shove in your fourth finger, leaving only your thumb out. He takes everything really eagerly, as deep as until your palm...";
+	WaitLineBreak;
+	say "     He humps his ass against your hand harder and harder, and you begin to feel that maybe your quartet of fingers isn't enough to satisfy his mega hungry butt, so without thinking too much about it, you begin to curl your thumb... then rub its tip across his stretched pucker... and slowly, it slips inside, as your entire hand follows. And he is effortlessly taking it all in, his ass welcoming your fist until past your carpal bones, reaching as far as your wrist... this guy can take it all! Now you're effectively fisting him as he jerks off, moaning intensely - though as low as he can, poor thing - while you bump into his prostate harder and harder. His ass nearly strangles your hand at some point, and as you feel his insides clenching around it, he says by almost whispering 'I'm gonna cum, fuuuck...!'";
+	say "     You're able to feel his lower body work to shoot his load, and looking forward, you see him painting the lower side of the counter white with each powerful spurt of cum that goes increasingly harder, each shot resulting in a single ass clenching, which actually feels amazing around your fist and wrist, for a good while. You make sure you wiggle your hand as much as you can while inside him until his orgasm finally starts to subside, then you pull it out, observing his asshole retracting back to its original size, slowly closing in before your eyes. 'Oh, sweet fuck... Damn! I... hope you're around during the day...' he says, catching his breath and regaining his composure after such an intense climax. Curiously, your hand has no smell, even while being soaked in slimey juice, but it tastes really good.";
+	WaitLineBreak;
+	say "     With discretion, you leave by the side of the counter and back into the lounge area. You are under the impression that Mogdraz saw you sneak out of there, but even if he did, he doesn't seem to disapprove of that.";
+	now lastfuck of Toron is turns;
+
+to say ToronDayAssFuck:
+	say "     Upon having decided what to do with Toron during his freetime, you simply head past the counter and grab him from behind, almost making him drop the glass. 'Whoa, careful...! Mogdraz will have my head if I break his things...' he says, although he doesn't stop you from putting your hands around his naked hips and brushing your growing [if player is not naked]bulge[else]exposed shaft[end if] against his ass cheeks. The bartender responds to your advances by placing down the glass and arching his back, so you can feel him pressing his rear against you, glancing at you over his shoulder while biting his underlip. 'You're gonna bend me over the counter and claim this ass right here? Give the boss a show?' he asks you, and it's hard to resist doing such right now. In fact, you feel the urge to do it as soon as he gives you that idea...";
+	say "     Taking hold of him, you turn him around and push him against the bar counter, pushing his back forward and forcing him to bend over in front of you, his purple, gorgeous bubble butt pointing in your direction. He lets out a moan at the loud ass slap you give him as you get your hands on his glutes, feeling all the plumpness of his bubble cheeks under your palms before you start to spread them. Reaching closer, you [if player is not naked]whip out your [cock of player] dick[else]grab your [cock of player] dick[end if] and bring it over the space between his glutes, rubbing it across his perinium and over his donut hole. It's already feeling amazing against your shaft, and you can't wait to shove your cock inside him when you feel that moist hole winking hungrily at the sight of your manhood. Slowly, you being to press the tip against his orifice, only slightly as his entrance embraces your length as you thrust, burying it inside inch by inch as the slick walls of his insides pulse with desire.";
+	WaitLineBreak;
+	say "     'Fuck... You feel so good in me...' he lets you know, moaning as you invade his ass, pushing more and more of your meat inside. You can't help but wonder if it's really okay to enjoy fucking the bartender with his boss eyeing you both from his corner, though his gaze is of interest, rather than contempt. 'Get it all in me... Please...' he begs you, and you're happy to oblige, pushing in every inch until the last. No matter how large your dick is, he takes it all, and the sensation is truly amazing. You really feel like he could take anything, all while making it feel so good and tight around your shaft. With just a little more pushing, your pelvis finally rests against his glutes, with only your balls remaining outside, and it almost feels like his ass is blowing your dick by how much it's clenching softly around your length. Grabbing Toron's wrists, you pull them and hold them against his lower back with one hand, while leaning yourself over on top of him, resting the other above the back of his head.";
+	say "     The demon lets out a moan, as he begs you 'Ahh... Yes...! Please fuck me... Really hard...' The burst of sexual adrenaline fills you, and with one first long and hard pounding, you begin to fuck Toron with eagerness, following up with more deep thrusts where you can feel your entire length rubbing across his warm flesh tunnel. Building up the rhythm, you use your arms over him to support your weight as he gets pinned down with no other choice other than taking your cock as hard as you decide to fuck him, and you don't go easy on him. With all the action going on, you just feel like thrusting harder and deeper, pounding his ass like a battering ram, over and over like you own him.";
+	WaitLineBreak;
+	say "     Your powerful movements manage to make the wooden counter tremble with each thrust, glasses and bottles threating to fall over as your pounding gets more intense, and the demon can't help himself but to moan and grunt as you go. There's nothing stopping you from keeping on fucking the club's bartender, who's so eager at letting you claim his ass, for as long as your heart desires. Slipping your arm around his neck, you gently bite his ear, which sends Toron in a moaning frenzy, so excited by the way you're completely taking control over him. Things get so intense that, eventually, you feel yourself coming closer to the edge, and you can imagine that your demon bottom is feeling it too. You keep trusting deep, but slower, as you let him know that you're going to fill him up.";
+	say "     He gasps, just enough to be able to say some encouraging words, such as 'Please...' and 'Breed me full of your spunk...!' in a breathy tone, as he's completely overtaken by the intensity of your assfucking. Within seconds, in your entire body surges a wave of pleasure and joy as your manhood begins to harden to his maximum, then throb with each hot shot of jizz being deposited inside the demon's ass. You continue to thrust and pound Toron until the very last spurt happens, coating his insides as he, too, delivers his own load on top of the counter, against which his own dick was rubbing all this time. 'Fuuuck... YES! Oh fuck...' he comes up with few words to describe what he's feeling right now, only trying to catch his breath as you slowly soften while still inside his hole.";
+	WaitLineBreak;
+	say "     When it's time to pull out, only a single drop follows as you remove your shaft from his hole, and it feels like his butt just slurped up everything that you've given him. 'That... that was a good feeding... my ass is pleased, and so am I... W-were we too noisy?' he asks, looking over you, then over to Mogdraz, who's still sitting by his sofa in his usual corner, who looks back at you for a few seconds, with something bulging and rather large between his legs. Then he gives a chuckle and continues on talking to one of his servants. 'Oh... Looks like he really was watching us... Well, me, getting... you know... Fuck, That was hot.' says Toron to you, while he gets set on cleaning the mess that he made all over the counter. 'I'm down to do this again, if you are... When I... uh, have time.'";
+	NPCSexAftermath Toron receives "Assfuck" from Player;
 
 [***********************************************************]
 [***********************************************************]

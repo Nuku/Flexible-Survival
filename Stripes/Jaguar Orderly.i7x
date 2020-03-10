@@ -33,7 +33,6 @@ to say jaguardesc:
 	now monsterHP is HP entry;
 
 to say losetojaguar:
-	now fightstatus is 2; [required for hospital fight]
 	if Player is female:
 		if a random chance of 2 in 5 succeeds:
 			say "     The brutish, feline orderly growls and shoves you down, getting ready to continue wailing on you, but his muzzle twitches as a scent catches his notice. Growling, he climbs atop you, pinning you down with one paw while the other removes any remaining clothes between him and his prize, that female pussy he's scented. You can feel his large shaft as it rubs against your rear. It is quite large, perhaps a rather thick 9 inches of feline meat. His precum leaks onto your ass as he moves to get lined up, then thrusts into you.";
@@ -55,10 +54,7 @@ to say losetojaguar:
 
 
 to say beatthejaguar:
-	if fightstatus is 3:
-		now fightstatus is 1; [required for hospital fight]
-		say "     You manage to knock the muscled jaguar out, at least for the moment.";
-	else if Libido of Player >= 30 or ( ( BodyName of Player is listed in infections of Felinelist or FaceName of Player is listed in infections of Felinelist ) and Libido of Player >= 15 ) or "Dominant" is listed in feats of Player:
+	if Libido of Player >= 30 or ( ( BodyName of Player is listed in infections of Felinelist or FaceName of Player is listed in infections of Felinelist ) and Libido of Player >= 15 ) or "Dominant" is listed in feats of Player:
 		say "     Looking over the powerful feline and the bulge in his crotch, you find yourself considering taking advantage of the situation to have some quick fun.";
 		if Player is male:
 			say "     You could either fuck him [link](1)[as]1[end link], get his cock inside you [link](2)[as]2[end link] or just leave[link](3)[as]3[end link].";
@@ -283,7 +279,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "libido suppressant"	"A small syringe filled with a cloudy, orange fluid."	1	libido suppressant
 
-libido suppressant is a grab object. It is a part of the player. It is fast.
+libido suppressant is a grab object. It is fast.
 libsuppcount is a number that varies.
 
 the scent of the libido suppressant is "The libido suppressant smells of chemicals and medicine.".

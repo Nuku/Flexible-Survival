@@ -336,7 +336,7 @@ Section 3 - Unicorn Horn
 name	desc	weight	object
 "Unicorn Horn"	"A small pill that when consumed, will force a transformation that should remove any male genitalia that you have gained."	0	cock remover
 
-cock remover is a grab object. It is temporary. It is a part of the player.
+cock remover is a grab object. It is temporary.
 
 the usedesc of cock remover is "[unicorn horn use]".
 

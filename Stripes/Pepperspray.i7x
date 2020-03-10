@@ -9,7 +9,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "pepperspray"	"A small canister of pepperspray."	1	pepperspray
 
-pepperspray is a grab object. It is a part of the player. It is fast. It is not temporary.
+pepperspray is a grab object. It is fast. It is not temporary.
 
 the scent of the pepperspray is "Smelling the pepperspray canister makes your eyes water.".
 

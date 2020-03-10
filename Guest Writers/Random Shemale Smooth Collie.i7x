@@ -384,7 +384,6 @@ name	desc	weight	object
 
 smooth collie shemale fur is a grab object.
 the usedesc of smooth collie shemale fur is "[SmoothCollieShemaleFurUse]".
-it is part of the player.
 It is temporary.
 
 to say SmoothCollieShemaleFurUse:

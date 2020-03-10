@@ -1027,7 +1027,6 @@
 |Stripes|Hospital|mattcollection|value|
 |Stripes|Hospital|hospbattlelost|value|
 |Stripes|Hospital|hospfight|value|
-|Stripes|Hospital|fightstatus|value|
 |Stripes|Hospital|altsealedentrance|value|
 |Stripes|Hospital|nesteddino|value|
 |Stripes|Hospital|dinonest|value|
