@@ -260,6 +260,10 @@ after going to Computer Lab while ((HP of Fang is 5 ) and Dash is booked and Fan
 
 Section 1.5 - Fox Kit Ending
 
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Dash's Epilogue"	"Companion"	"Pet"	Dash's Epilogue rule	750	false
+
 This is the Dash's Epilogue rule:
 	if little fox is tamed:
 		trigger ending "Dash's Epilogue"; [Here it states, that the ending has been played.]
