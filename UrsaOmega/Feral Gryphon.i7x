@@ -10,9 +10,11 @@ lastfgryphon_TF is a number that varies. lastfgryphon_TF is usually 255.
 
 to say Gryphondesc:
 	setmongender 3; [creature is male]
+	project the Figure of FeralGryphon_soft_icon;
 	say "     Suddenly, a winged form drops down in front of you. It has the feathered head of an eagle, but the golden-furred body of a lion; a mythical gryphon! It stalks toward you predatorily and you prepare to fight.";
 
 to say losetoGryphon:
+	project the Figure of FeralGryphon_hard_icon;
 	say "     The gryphon knocks you to the floor, pinning you under his feathery weight. With an angry growl-chirp, he begins picking intently at your gear; he's trying to undress you. Not wanting to get sliced by his sharp beak and claws, you put your hands up in a motion you hope he understands as surrender and begin slowly disrobing yourself.";
 	say "     Finally, you're naked before the beast. He clearly enjoyed the show, as his cock is slipping out of his furry sheath as he looks your body over approvingly.";
 	WaitLineBreak;
@@ -39,6 +41,7 @@ to say losetoGryphon:
 		say "     Pleased with your performance, the gryphon spreads his wings and takes off, leaving you to clean yourself up.";
 
 to say beattheGryphon:
+	project the Figure of FeralGryphon_hard_icon;
 	say "     The beaten gryphon gives an angry cry, clearly disappointed you were not easier prey. Feeling that he deserves to have the tables turned on him, there's a brief moment when you might catch the beast before he makes his escape[if carried of gryphon cum > 0 and HP of Garrett >= 5]. You're also reminded that you have a bottle of Garrett's special gryphon cum milk. This might be a fun opportunity to get the creature to drink some[end if]. Shall you take it?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;

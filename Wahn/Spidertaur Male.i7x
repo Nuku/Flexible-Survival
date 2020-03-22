@@ -410,7 +410,7 @@ spidertaur hair is infectious. The strain of spidertaur hair is "Spidertaur Male
 instead of sniffing silk hammock:
 	say "It doesn't have any noticeable smell, really. Just a bit of silken fabric, in the end";
 
-silk hammock is a grab object. It is a part of the player. It is not temporary.
+silk hammock is a grab object. It is not temporary.
 understand "use hammock" as resting.
 
 Section 4 - NPC

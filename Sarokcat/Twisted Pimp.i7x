@@ -234,7 +234,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "estrogen pill"	"This small potent looking object has a heart symbol, subdivided by a plus."	1	estrogen pill
 
-estrogen pill is a grab object. It is temporary. It is a part of the player.
+estrogen pill is a grab object. It is temporary.
 
 the usedesc of estrogen pill is "[estrogen pill use]";
 

@@ -14,7 +14,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "libido pill"	"A sex-enhancement pill for getting you (or someone else) horny."	0	libido pill
 
-libido pill is a grab object. It is temporary. It is a part of the player.
+libido pill is a grab object. It is temporary.
 
 the usedesc of libido pill is "[libido pill use]".
 
@@ -84,7 +84,6 @@ carry out pillgiving someone (called x):
 
 
 when play begins:
-	add { "libido pill", "libido pill" } to invent of Porn Store;
 	add { "libido pill" } to invent of Entrance to the Red Light District;
 	add { "libido pill" } to invent of Stables Hotel;
 	add { "libido pill" } to invent of Master's Office;

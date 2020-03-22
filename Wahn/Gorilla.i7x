@@ -108,13 +108,13 @@ to say Gorilla Desc:
 		else if GorillasMember is 3 and GorillasRep < 4:
 			say "     'Hey, [if Player is male]boy[else]girl[end if]!' You turn around and see a burly and muscular gorilla rushing towards you. He is dressed in shorts, football shoulder pads and wears a helmet, all of them bearing the local team's colors. 'Too bad you did not land a position in the team. I guess that's what you get for skipping sports at school,' the ape mocks you. 'You know what's expected from [if Player is male]boys[else]girls[end if] like you. So - wanna have some fun right now, or should I show you some moves first?'";
 			say "     It looks like this simian jock is unable to wait for you to get to your post at the football field, and that he can order you around in the rest of the campus. You don't think there's any chance to convince him to wait a little, so you ready yourself for a fight.";
-		else if GorillasRep < 8:
+		else if GorillasRep > 0 and GorillasRep < 8:
 			say "     'Hey, if it isn't our new player!' You turn around and see a burly and muscular gorilla rushing towards you. He is dressed in shorts, football shoulder pads and wears a helmet, all of them bearing the local team's colors. 'I always knew you'd get in the team. I can't wait to see what you can do at our next training. Meanwhile, how 'bout we have some fun right now. A little show-off, loser services the other?'";
 			say "     It looks like this simian jock is unable to wait until training to get in your pants, and that he will not take no for an answer. You don't think there's any chance to convince him to wait a little, so you ready yourself for a fight.";
 		else if GorillasRep > 8:
 			say "     'Omagod it's you!' You turn around and see a burly and muscular gorilla rushing towards you. He is dressed in shorts, football shoulder pads and wears a helmet, all of them bearing the local team's colors. 'It-it's an honor to meet you, sir! Everyone in the team looks up to you, and so do I!' He hits his chest and grunts loudly to honor the team, then gives you another long look - a pretty leering one. 'Say, sir. How 'bout we have some fun right now? A little show-off, loser services the other? Don't worry, I won't tell the others if you let me in this one *wink*'";
 			say "     It looks like this simian jock is unable to wait until training to get in your pants, and that he will not take no for an answer. You don't think there's any chance to convince him to wait a little, so you ready yourself for a fight.";
-		else if BodyName of Player is "Male Football Gorilla" and player is pure:
+		else if BodyName of Player is "Football Gorilla Male" and player is pure:
 			say "     A burly and muscular gorilla steps into your line of sight. He is dressed in shorts, football shoulder pads and wears a helmet, all of them bearing the local team's colors. As the gorilla spots you, a smile spreads over his face and he drops on all fours, using his long arms as support as he quickly rushes towards you. [if Player is male]'Hey dude, nice to meet'cha. You're from the pledge recruiting team that we have? Looking good, keep working at it and you'll be in the real Tenvale Gorillas soon.' He hits his chest and grunts loudly to honor the team, then gives you another long look - a pretty leering one. 'You know what's expected from pledges. So - wanna have some fun right now, or should I show you some moves first?'[else]'Hey girl, nice to meet'cha. That fur suits you really well. You're from our female companion team? Tenvale Gorillas for the win - in both leagues!' He hits his chest and grunts loudly to honor the team, then gives you another long look - a pretty leering one. 'You know what's expected for the real stars in the main team. So - wanna have some fun right now, or should I show you some moves first?'[end if]";
 			say "     Looks like this simian jock is fully committed to the idea that you're a subordinate teammate, whom he can order around - and that there is little doubt he intends to have sex with you. You don't think there's any chance to convince him of anything else, so you ready yourself for a fight.";
 		else if BodyName of Player is "Football Wolfman" and player is pure:
@@ -126,21 +126,35 @@ to say Gorilla Desc:
 	else: [dealing with this on the event side which called for the fight]
 		say "";
 
+
+
 Section 8 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Football Gorilla Infection"	"Infection"	""	Football Gorilla Infection rule	1000	false
+"Football Gorilla Male Infection"	"Infection"	""	Football Gorilla Male Infection rule	1000	false
+["Football Gorilla Cuntboi Infection"	"Infection"	""	Football Gorilla Cuntboi Infection rule	1000	false]
 
-This is the Football Gorilla Infection rule:
-	if Player has a body of "Male Football Gorilla":
+This is the Football Gorilla Male Infection rule:
+	if Player has a body of "Football Gorilla Male":
+		trigger ending "Football Gorilla Male Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     As you lose your last shreds of humanity, you feel the need to join your team supplant all other concerns. Roaming the campus until you run into one of the other gorillas, you let him guide you to their club headquarters and join in for almost constant training and practice games - with some sexy fun between the players themselves and any fans coming along being thrown in. When the military finally moves in, soldiers try to evacuate the campus and attempt to interrupt a game - which doesn't go over well. It's only a matter of moments before your organized team has overwhelmed the squad of men and takes an 'ah, it's almost half-time and we got these guys on our hands' break - which involves you [if Player is male]sinking your manhood into a tight soldier's ass[else]riding a soldier's cock while holding him down[end if] in a wild gangbang.";
 			say "     There aren't any attempts to move you from the campus for a while after that, until a smooth-talking businessman comes along one day and tells you about the creation of the 'Shifted American Football League' - totally wrapping all the gorillas around his finger with stories of athletic battle and glory. Soon, the whole team agrees to lets him manage them and follows him readily to the military's medical holding facility for a 'pre-game' checkup. After being prodded and poked, then given injections to make you noninfectious, your manager leads you off to become one of the top teams in the league - with him cashing in almost all the profits. Though at least he has to work hard to keep this exploitation going - keeping under control a whole team of wild and boisterous gorillas who'll want to fuck anyone they encounter...";
-			stop the action;
+			the Player is lost;
 		else:
 			say "     When rescue comes, you're poked and prodded a bit in a medical holding facility outside the city, then declared non-infectious and let go. Looking around among the other released people, you do realize that there are virtually no gorillas among them. Strange - there were quite a few on the college campus. This animates you to go check with a somewhat sympathetic medic - who explains that the football players gang-banged the last rescue team and that they're excluded from the evacuation now. Further questions reveal that the soldiers did try to drag your fellow apes out in the middle of a game - an obvious and fatal mistake, as you well know.";
 			say "     At that point, your involvement with the Tenvale Gorillas might have been over, but the news about the creation of the 'Shifted American Football League' the very next day gives you an idea. With some effort, you manage to convince a football fan among the soldiers to sneak you back into the city - where you seek out the gorillas on the campus. Being as convincing as you can, you present them with the opportunity of joining the new league, drawing them in with stories of athletic battles and glory. And you succeed - before long, you're picked as the new team manager of the Gorillas and lead your new buddies out to the military's medical holding facility for a 'pre-game' checkup. After being prodded and poked, then given injections to make them noninfectious, you lead the unruly bunch off - doing your best to rein in their ideas of showing all the 'fans' they meet a good time.";
 			say "     It's not easy, but with as you really apply yourself, you manage to educate your fellow gorillas on some acceptable and unacceptable things to do and not do. As the team does well in the first few games and quite a few spectators get very enthusiastic about them, establishing an actual fan club is the next step - including a 'VIP fan' level for people who really, really want to meet their heroes. The resulting orgies are a lot of fun, and you do join in yourself whenever you can spare the time. Judging from the resulting string of pregnancies in every city where a game is run, you won't have any trouble recruiting new teammates in the future either. Eventually, the Tenvale Gorillas become one of the top contenders in the league, and you as their manager earn a tidy bonus for all the hard work...";
+
+[
+This is the Football Gorilla Cuntboi Infection rule:
+	if Player has a body of "Football Gorilla Cuntboi":
+		trigger ending "Football Gorilla Cuntboi Infection"; [Here it states, that the ending has been played.]
+		if humanity of Player < 10:
+			say "     ";
+		else
+			say "     ";
+]
 
 Gorilla ends here.

@@ -927,7 +927,7 @@ name	desc	weight	object
 "gingerbread"	"A small gingerbread cookie shaped like a little man."	1	gingerbread
 "cheesecake"	"A wedge of rich strawberry cheesecake."	1	cheesecake
 
-boysenberry blossom is a grab object. It is a part of the player.
+boysenberry blossom is a grab object.
 boysenberry blossom has a usedesc "[boysenberry blossom Use]".
 the scent of boysenberry blossom is "The small pastry has a wonderful fruity smell you can't quite put your finger on.".
 
@@ -948,7 +948,7 @@ to say boysenberry blossom Use:
 	decrease hunger of Player by 5;
 	if hunger of Player < 0, now hunger of Player is 0;
 
-bleuettonne is a grab object. It is a part of the player.
+bleuettonne is a grab object.
 bleuettonne has a usedesc "[bleuettonne Use]".
 the scent of bleuettonne is "The small candy carries the deep, rich scent of chocolate.".
 
@@ -969,7 +969,7 @@ to say bleuettonne Use:
 	decrease hunger of Player by 5;
 	if hunger of Player < 0, now hunger of Player is 0;
 
-crème abondante is a grab object. It is a part of the player.
+crème abondante is a grab object.
 crème abondante has a usedesc "[crème abondante Use]".
 the scent of crème abondante is "The pink pastry smells of fresh strawberry and rich creme.".
 understand "creme abondante" as crème abondante.
@@ -995,7 +995,7 @@ to say crème abondante Use:
 	decrease hunger of Player by 5;
 	if hunger of Player < 0, now hunger of Player is 0;
 
-muffin muffin is a grab object. It is a part of the player.
+muffin muffin is a grab object.
 muffin muffin has a usedesc "[muffin muffin Use]".
 the scent of muffin muffin is "The pink muffin carries a fruity aroma that seems to change with each breath.".
 
@@ -1018,7 +1018,7 @@ to say muffin muffin Use:
 	decrease hunger of Player by 5;
 	if hunger of Player < 0, now hunger of Player is 0;
 
-lollicock is a grab object. It is a part of the player.
+lollicock is a grab object.
 lollicock has a usedesc "[lollicock Use]".
 the scent of lollicock is "The lollicock has a sweet aroma with a hint of male arousal.".
 
@@ -1055,7 +1055,7 @@ to say lollicock Use:
 	decrease hunger of Player by 5;
 	if hunger of Player < 0, now hunger of Player is 0;
 
-dragon moelleux is a grab object. It is a part of the player. It is not temporary. It is fast.
+dragon moelleux is a grab object. It is not temporary. It is fast.
 The usedesc of dragon moelleux is "[dragonmoelleuxuse]".
 the scent of dragon moelleux is "     The small chocolate cake smells rich and sweet, as well as a little spicy.".
 
@@ -1092,7 +1092,7 @@ to say dragonmoelleuxuse:
 	else:
 		say "     That's probably not a good idea right now.";
 
-fizz-aux-pommes is a grab object. It is a part of the player. It is not temporary. It is fast.
+fizz-aux-pommes is a grab object. It is not temporary. It is fast.
 The usedesc of fizz-aux-pommes is "[fizz-aux-pommesuse]".
 the scent of fizz-aux-pommes is "     The bubbling drink smells of overwhelmingly sweet apple.".
 
@@ -1108,7 +1108,7 @@ to say fizz-aux-pommesuse:
 	else:
 		say "That's probably not a good idea right now.";
 
-vin-coeur is a grab object. It is a part of the player. It is not temporary. It is fast.
+vin-coeur is a grab object. It is not temporary. It is fast.
 The usedesc of vin-coeur is "[vin-coeuruse]".
 the scent of vin-coeur is "     rich and heavy (temporary desc!)".
 
@@ -1124,7 +1124,7 @@ to say vin-coeuruse:
 	else:
 		say "That's probably not a good idea right now.";
 
-gingerbread is a grab object. It is a part of the player.
+gingerbread is a grab object.
 gingerbread has a usedesc "[gingerbread Use]".
 the scent of gingerbread is "The gingerbread cookie smells like cinnamon and ginger.".
 
@@ -1145,7 +1145,7 @@ to gingerbreadinfect:
 	infect "Gingerbread";
 	now non-infectious entry is true;
 
-cheesecake is a grab object. It is a part of the player. It is not temporary.
+cheesecake is a grab object. It is not temporary.
 cheesecake has a usedesc "[cheesecake Use]".
 the scent of cheesecake is "The cheesecake has a rich, sweet scent of strawberry.".
 

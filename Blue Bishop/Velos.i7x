@@ -1,5 +1,6 @@
 Version 1 of Velos by Blue Bishop begins here.
 [Writing by Blue Bishop, coding and writing assistance by Stripes]
+[Version 1.1 - Musings on Beta Fang added by Prometheus]
 "Adds an opinionated serpent to the Flexible Survival game"
 
 Section 1 - Event
@@ -501,19 +502,22 @@ the vmusings of Fang is "[fangmusing]".
 fangvelos1 is a truth state that varies. fangvelos1 is usually false.
 
 to say fangmusing:
-	if HP of Fang is 1 or HP of Fang is 2:		[Beta-Fang message]
+	if HP of Fang is 1 or HP of Fang is 2:		[Omega or Vanilla Fang]
 		say "     Calling Velos before your lupine watchdog, Fang can't help but lower his head in apparent bafflement at the scene which transpires before him, exacerbated when your passenger speaks.";
 		say "     'Oh hello, pooch.' The serpent is a bit distant from the wolf, perhaps not sure what sort of discourse he might engage with him. Fang, meanwhile, is actually rather intimidated by the creature and gives quite the sullen look, his form set low and defensive.";
 		say "     'Huh, okay, so you're scared by me? That's... Quite reasonable, to be honest. I'd scratch you behind the ears and tell you to the contrary, but as you can tell I have none for which to do so.' Velos's attempt to put the lupine at ease does seem to work a bit, and when it's clear that the serpent isn't planning anything, he does seem to calm down a bit. 'That's better. I doubt you can offer much in terms of dialogue, I wager?'";
 		say "     Fang howls briefly in response, and the snake concedes that such is about the sum of what he's going to get out of him, saying his farewell and returning from whence he came. The wolf tilts his head at you, no doubt a little confused about what has just transpired here.";
 		now Fangvelos1 is true;
-	else:
-		say "     [if fangvelos1 is true]Once more[else]Reluctantly[end if], you conjure up Velos from his confines, Fang snorting a little at his appearance[if fangvelos1 is false], strange that he would be so fine with his presence, perhaps he already knew the snake was in there, or maybe he's just keeping his composure[end if].";
+	else if hp of Fang is 3  or hp of Fang is 4: [Alpha Fang]
+		say "     [if fangvelos1 is true]Once more[else]Reluctantly[end if], you conjure up Velos from his confines, Fang snorting a little at his appearance[if fangvelos1 is false]. You find it strange that he would be so fine with his presence but decide that perhaps he already knew the snake was in there, or maybe he was just keeping his composure[end if].";
 		say "     'Oh, hello[if fangvelos1 is true] again[end if], little doggie. Who's a cute pooch? You are!' Velos's attempt at condescension is met with a low growl in discontent.";
 		say "     '[if fangvelos1 is true]Oh, what's this? You were frightened by me a while ago. Have you undergone some manner of change when I wasn't looking[else]Oh, you're just scared I might bite you when you're having your fun, is that it[end if]?'";
-		say "     'Talk too much.' Velos is a bit at odds with the wolf's curt response, but ultimately attempt to coax more out of him.";
+		say "     'Talk too much.' Velos is a bit at odds with the wolf's curt response, but ultimately attempts to coax more out of him.";
 		say "     'Oh, that's right rude! Surely you could offer me a more elaborate response? I wouldn't want to make you too uncomfortable, and we're all frie- what is that you're doing? Cut it out!' By this point Fang has chosen to make a whining sort of howl-noise, head bouncing slightly in faux discussion, his tone a clear illustration that he seeks to parody Velos's voice in a rather juvenile fashion. When the lupine is done, Velos looks a bit cross.";
 		say "     '...You won't get the luxury of knowing when I'll strike.' Fang makes a sound akin to what you assume is a chuckle as Velos retreats. You're not rightly sure if Velos is actually offended by your lupine companion's mocking or if he's just playing the part, though the wolf seems plenty happy with himself, letting you go off to your own matters.";
+	else: [Beta Fang]
+		say "     [if fangvelos1 is true]Once more[else]Reluctantly[end if], you conjure up Velos from his confines, Fang raising an eyebrow at his appearance[if fangvelos1 is false]. You find it strange that he would be so fine with his presence but decide that perhaps he already knew the snake was in there, or maybe he was just keeping his composure[end if]. 'Oh, hello[if fangvelos1 is true] again[end if], little doggie. Who's a cute pooch? You are!' Velos's attempt at condescension is met with a disinterested glance. [if fangvelos1 is true]Oh, what's this? You were frightened by me a while ago. Have you undergone some manner of change when I wasn't looking[else]Oh, you're a lot braver than I thought you would be, or perhaps you lack the cognitive capacity to understand what I could do to you while you're having your [']fun['][end if]?";
+		say "     'You talk a lot but say little.' Velos is a bit at odds with the wolf's curt response, but ultimately attempts to coax more out of him. 'Oh, that's right rude! Surely you could offer me a more elaborate response? I wouldn't want to make you too uncomfortable, and we're all friends here' The wolf looks skeptical at this. 'At best you just take up space, at worst a parasite. Nor do you seem to remember how vulnerable you are outside like this. Especially when you are using someone I care about as a host.' Fang emphasizes this last comment with a brief glimpse of his teeth before walking away. Velos remains silent for a moment before speaking again. 'He seemed nice. I'll try not to give him any more reason to dislike me. As well as try to prove him wrong about my usefulness.'";
 
 
 Part 10 - Harold

@@ -7,8 +7,8 @@ name	desc	weight	object
 
 
 
-birth control pill is a grab object. It is a part of the player. The usedesc of birth control pill is "You pop the pill into your mouth, and swallow.[controlpilluse]".
-fertile pill is a grab object. It is a part of the player. The usedesc of fertile pill is "You pop the odd pill into your mouth, and swallow.[fertilepilluse]".
+birth control pill is a grab object. The usedesc of birth control pill is "You pop the pill into your mouth, and swallow.[controlpilluse]".
+fertile pill is a grab object. The usedesc of fertile pill is "You pop the odd pill into your mouth, and swallow.[fertilepilluse]".
 
 [
 the scent of birth control pill is "".
@@ -94,9 +94,6 @@ an everyturn rule:
 			if wasfertile is 0:
 				remove "Fertile" from the feats of Player;
 
-
-
-the invent of Porn Store is {"birth control pill", "fertile pill"}.
 
 
 Control Pills ends here.

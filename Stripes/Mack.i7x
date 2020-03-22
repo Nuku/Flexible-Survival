@@ -268,7 +268,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "roasted nuts"	"A jar of Macadamia's special salted and roasted nuts. It has a label with a cartoonish drawing of the grinning squirrel with one paw on his heavy sac holding up a large unshelled walnut."	1	roasted nuts
 
-roasted nuts is a grab object. It is a part of the player. roasted nuts is infectious. The strain of roasted nuts is "Gray Squirrel".
+roasted nuts is a grab object. roasted nuts is infectious. The strain of roasted nuts is "Gray Squirrel".
 
 The usedesc of roasted nuts is "[eatroastednuts]";
 

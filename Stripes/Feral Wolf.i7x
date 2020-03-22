@@ -78,23 +78,49 @@ to say beatferalwolf:
 				LineBreak;
 				say "     Against your better judgment, you take pity on this battered wolf and decide to take him as your own. You decide it best to show this wolf creature who's in charge right away and grab his nape roughly, holding him down while ";
 				if Player is herm:
-					say "you decide what to do with him. You are getting quite aroused by the prospect of sexually dominating this wild beast and making it yours. But being both male and female, there are options open to you.";
-					say "     [bold type]Would you prefer to fuck the wolf or ride his lupine cock?[roman type][line break]";
-					LineBreak;
-					say "     ([link]Y[as]y[end link]) - Fuck the wolf.";
-					say "     ([link]N[as]n[end link]) - Ride his cock.";
-					if Player consents:
+					say "you decide what to do with him. You are getting quite excited by the idea of making this wild beast yours. But being both male and female, there are options open to you if you wish to sexually dominate him.";
+					Linebreak;
+					say "     [bold type]Would you prefer to fuck the wolf, ride his lupine cock, or tame him non-sexually?[roman type][line break]";
+					say "     [link](1)[as]1[end link] - Fuck the wolf.";
+					say "     [link](2)[as]2[end link] - Ride his cock.";
+					say "     [link](3)[as]3[end link] - Tame him without sex.";
+					now calcnumber is 0;
+					while calcnumber < 1 or calcnumber > 3:
+						say "Choice? (1-3)>[run paragraph on]";
+						get a number;
+						if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+							break;
+						else:
+							say "Invalid choice. Type [link]1[end link] to follow, [link]2[end link] to leave it or [link]3[end link] to avoid this area.";
+					if calcnumber is 1:
 						LineBreak;
 						say "[feralwolfmalesex]";
-					else:
+					else if calcnumber is 2:
 						LineBreak;
 						say "[feralwolffemalesex]";
+					else:
+						LineBreak;
+						say "[FeralWolfNonSexTame]";
 				else if Player is male:
-					say "you stroke your swelling cock. You are getting quite aroused by the prospect of sexually dominating this wild beast and making it yours.";
-					say "[feralwolfmalesex]";
+					say "you decide what to do with him. You are getting quite excited by the idea of making this wild beast yours. You could sexually dominate him or just make him yours without fucking him.";
+					say "     [bold type]Would you prefer to fuck the wolf or tame him non-sexually?[roman type][line break]";
+					LineBreak;
+					say "     ([link]Y[as]y[end link]) - Fuck the wolf.";
+					say "     ([link]N[as]n[end link]) - Tame him without sex.";
+					if Player consents:
+						say "[feralwolfmalesex]";
+					else:
+						say "[FeralWolfNonSexTame]";
 				else:
-					say "you rub your fingers over your damp pussy. You are getting quite aroused by the prospect of sexually dominating this wild beast and making it yours.";
-					say "[feralwolffemalesex]";
+					say "you decide what to do with him. You are getting quite excited by the idea of making this wild beast yours. You could sexually dominate him or just make him yours without fucking him.";
+					say "     [bold type]Would you prefer to ride his lupine cock or tame him non-sexually?[roman type][line break]";
+					LineBreak;
+					say "     ([link]Y[as]y[end link]) - Ride his cock.";
+					say "     ([link]N[as]n[end link]) - Tame him without sex.";
+					if Player consents:
+						say "[feralwolffemalesex]";
+					else:
+						say "[FeralWolfNonSexTame]";
 				now HP of Fang is 1;
 				move Fang to the Grey Abbey Library;
 				move player to the Grey Abbey Library;
@@ -119,6 +145,10 @@ to say feralwolffemalesex:
 	say "     'Mmmm... alpha,' he moans, a rarely spoken word coming from the animalistic wolf, showing the completion of his submission to you. Pleased by this, you press yourself down onto him firmly and push his swelling knot into you, tying your new wolf to you. You lean in to kiss his lupine muzzle, sliding your tongue into his long muzzle even as you cum hard. Breaking the kiss, he pants and howls in pleasure beneath his new alpha as you claim him as your own.";
 	say "     With his new role firmly cemented, you get up once his knot goes down and lead him back to the Library, pausing on the way to grab some rope. You leash up Fang (as you decide to uncreatively call him) just inside the Library to act as a door guard, protecting your bunker and its contents while you're away.";
 	NPCSexAftermath Player receives "PussyFuck" from Fang;
+
+to say FeralWolfNonSexTame:
+	say "     Moving your hand to his throat, you roll him over onto his back and hold him down, looking firmly into his eyes. He whimpers softly, but tilts his head back, baring his throat submissively, accepting his fate as subservient to you readily enough. You smile at his willing submission and whisper what a good beta he will make. This both elevates him above his previous station and helps cement his place beneath you as his alpha. In a display of power over him, you ignore his arousal and instead focus on grooming twigs, dust, and debris form his fur. If he is going to belong to you, then he is going to look presentable while keeping on guard. He whines for a moment, but a stern glare silences him and the wolf accepts that he won't be getting off at the moment. Seeing his acceptance, you lean up next to his ear and whisper that he's your wolf now and what a good boy he is. He pants excitedly at your praise and the prospect of being a beta in your pack.";
+	say "     'Alpha,' he replies, a rarely spoken word coming from the animalistic wolf, showing the completion of his submission to you. Pleased by this, you ruffle the fur on his head, showing yourself to be a superior who will care for him and consider his welfare as part of your pack. You decide that this is sufficient affection and dominance that he should be bonded with you sufficiently to listen to your commands and guard your current home vigilantly so, with his new role firmly cemented, you get up and lead him back to the Library, pausing on the way to grab some rope. You leash up Fang (as you decide to uncreatively call him) just inside the Library to act as a door guard, protecting your bunker and its contents while you're away.";
 
 to say FeralWolfVictorySex:
 	if inasituation is true and FeralWolfSpecialFightNumber < 1: [dealt with in the event]

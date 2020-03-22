@@ -464,9 +464,9 @@ This is the player attack rule:
 		if a random chance of specattchance in 20 succeeds and "Cock Slap" is listed in feats of Player and Cock Length of Player >= 12 and bonusattacks < 2:
 			increase bonusattack by 1;
 			let dammy be 0;
-			let z be Cock Length of Player + ( 2 * Cock Count of Player ) - 12;
-			now dammy is ( square root of ( 2 * z ) ) + 1;
-			if dammy > 8, now dammy is 8;
+			let z be Cock Length of Player * Cock Count of Player;
+			now dammy is ( square root of z ) + a random number between 1 and 3;
+			if dammy > 10, now dammy is 10;
 			increase dammy by a random number between 0 and 1;
 			if Cock Count of Player >= 3, increase dammy by a random number between 0 and 1;
 			if TailName of Player is "Cerberus":
@@ -478,17 +478,17 @@ This is the player attack rule:
 		if a random chance of specattchance in 20 succeeds and "Ball Crush" is listed in feats of Player and Ball Size of Player >= 5 and bonusattacks < 2 and player is not internal:
 			increase bonusattack by 1;
 			let dammy be 0;
-			now dammy is ( square root of ( 2 * ( Ball Size of Player - 13 ) ) ) + 1;
-			if dammy > 8, now dammy is 8;
+			now dammy is ( Ball Size of Player + a random number between 1 and 3);
+			if dammy > 10, now dammy is 10;
 			increase dammy by a random number between 0 and 1;
 			say "[line break]You tackle your opponent, slamming your [Ball Size Adjective of Player] [Balls] onto their [one of]head[or]body[or]face[or]crotch[in random order] for [special-style-2][dammy][roman type] additional damage!";
 			increase dam by dammy;
 		if a random chance of specattchance in 20 succeeds and "Boob Smother" is listed in feats of Player and Breast Size of Player > 2 and ( Breast Size of Player + ( Nipple Count of Player / 2 ) ) >= 7 and bonusattacks < 2:
 			increase bonusattack by 1;
 			let dammy be 0;
-			let z be Breast Size of Player + Nipple Count of Player;
-			now dammy is square root of ( z - 1 ) + 1;
-			if dammy > 7, now dammy is 7;
+			let z be Breast Size of Player * Nipple Count of Player;
+			now dammy is square root of ( z ) + 1;
+			if dammy > 10, now dammy is 10;
 			increase dammy by a random number between 0 and 1;
 			if Nipple Count of Player > 4, increase dammy by a random number between 0 and 1;
 			say "[line break]Grabbing your opponent, you smoosh them into your ample bosom, smothering and crushing them with your tits for [special-style-2][dammy][roman type] additional damage!";

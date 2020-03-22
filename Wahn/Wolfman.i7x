@@ -373,6 +373,7 @@ instead of sniffing Wolfman Lair:
 instead of navigating Wolfman Lair while (Jenniferfucked > 0 and HP of Jennifer is 0 and a random chance of 1 in 3 succeeds):
 	say "[NavCheck Wolfman Lair]";
 	if NavCheckReturn is false, stop the action;
+	project Figure of Jennifer_icon;
 	say "     You turn the last corner and spot the warehouse occupied by the wolfmen a little distance away, with its large wolf's head painted on the facade. The two muscular males guarding the entrance are at their usual spots and give you a little wave, but your eyes are immediately drawn to the movement of a petite human form further to the left - it is Jennifer, the head cheerleader of the football team, strolling along the building exterior with a tall male with leopard spots and a black wolf's tail by her side. The beautiful young woman is completely naked, as usual for members of this little tribe of post-humanity, quite comfortable without a stitch of clothing on her. Watching her move along, with sunlight shining on her pale-skinned beauty, until she and the guy she's talking vanish behind the building, you can't help but wonder what exactly is going on over there.";
 	LineBreak;
 	say "     [bold type]Do you want to go after Jennifer and that other guy?[roman type][line break]";
@@ -464,6 +465,7 @@ instead of sniffing Jennifer:
 	say "Jennifer has a pretty nice female smell.";
 
 to say Jenniferdesc:
+	project Figure of Jennifer_icon;
 	if debugactive is 1:
 		say "DEBUG -> THIRST: [thirst of Jennifer], LUST: [lust of Jennifer], JENNIFERFUCKED: [Jenniferfucked], PREG TIMER: [Jenniferpregnant], OFFSPRING: [Jenniferwolves]<- DEBUG[line break]";
 	if (thirst of Jennifer is 0 or thirst of Jennifer is 1): [starting state]
@@ -475,6 +477,7 @@ instead of conversing the Jennifer:
 	say "[JenniferTalkMenu]";
 
 to say JenniferTalkMenu:
+	project Figure of Jennifer_icon;
 	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -685,6 +688,7 @@ Instead of fucking the Jennifer:
 			say "[JenniferSexMenu]";
 
 to say JenniferSexMenu:
+	project Figure of Jennifer_icon;
 	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;

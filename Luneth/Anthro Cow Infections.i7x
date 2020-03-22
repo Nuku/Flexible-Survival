@@ -2,7 +2,7 @@ Version 1 of Anthro Cow Infections by Luneth begins here.
 
 Book 1 - Cowbois
 
-Section 1 - Male Cow-boi
+Section 1 - Cow-boi Male
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -12,11 +12,11 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Anthro Cow";
-	add "Male Cow-boi" to infections of BovineList;
-	add "Male Cow-boi" to infections of FurryList;
-	add "Male Cow-boi" to infections of MaleList;
-	add "Male Cow-boi" to infections of BipedalList;
-	now Name entry is "Male Cow-boi";
+	add "Cow-boi Male" to infections of BovineList;
+	add "Cow-boi Male" to infections of FurryList;
+	add "Cow-boi Male" to infections of MaleList;
+	add "Cow-boi Male" to infections of BipedalList;
+	now Name entry is "Cow-boi Male";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
@@ -172,7 +172,7 @@ When Play begins:
 
 Book 2 - Cow-babes
 
-Section 2 - Female Cow-babes
+Section 2 - Cow-babe Females
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -182,11 +182,11 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Anthro Cow";
-	add "Female Cow-babe" to infections of BovineList;
-	add "Female Cow-babe" to infections of FurryList;
-	add "Female Cow-babe" to infections of MaleList;
-	add "Female Cow-babe" to infections of BipedalList;
-	now Name entry is "Female Cow-babe";
+	add "Cow-babe Female" to infections of BovineList;
+	add "Cow-babe Female" to infections of FurryList;
+	add "Cow-babe Female" to infections of MaleList;
+	add "Cow-babe Female" to infections of BipedalList;
+	now Name entry is "Cow-babe Female";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]

@@ -54,8 +54,8 @@ Cock Length of Sheng is 10. [has an 10 inch cock]
 Ball Size of Sheng is 4. [size of balls]
 Ball Count of Sheng is 2. [has a pair of balls]
 Cunt Count of Sheng is 0. [no vagina]
-Cunt Depth of Sheng is 0. [Doesnt have a vagina to get stretched]
-Cunt Tightness of Sheng is 0. [Doesnt have a vagina to get stretched]
+Cunt Depth of Sheng is 0. [Doesn't have a vagina to get stretched]
+Cunt Tightness of Sheng is 0. [Doesn't have a vagina to get stretched]
 Nipple Count of Sheng is 2. [Has two normal nipples]
 Breast Size of Sheng is 0. [Doesn't have breasts really]
 [Basic Interaction states as of game start]
@@ -625,7 +625,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "lust potion"	"A special sex potion for getting you (or someone else) horny."	0	lust potion
 
-lust potion is a grab object. It is temporary. It is a part of the player.
+lust potion is a grab object. It is temporary.
 
 the usedesc of lust potion is "[lust potion use]".
 

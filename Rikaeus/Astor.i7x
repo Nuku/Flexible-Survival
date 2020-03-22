@@ -50,8 +50,8 @@ Cock Length of Astor is 10. [has an 10 inch cock]
 Ball Size of Astor is 4. [size of balls]
 Ball Count of Astor is 2. [has a pair of balls]
 Cunt Count of Astor is 0. [no vagina]
-Cunt Depth of Astor is 0. [Doesnt have a vagina to get stretched]
-Cunt Tightness of Astor is 0. [Doesnt have a vagina to get stretched]
+Cunt Depth of Astor is 0. [Doesn't have a vagina to get stretched]
+Cunt Tightness of Astor is 0. [Doesn't have a vagina to get stretched]
 Nipple Count of Astor is 2. [Has two normal nipples]
 Breast Size of Astor is 0. [Doesn't have breasts really]
 [Basic Interaction states as of game start]
@@ -173,7 +173,7 @@ to say AstorPurchase:
 				WaitLineBreak;
 		else if calcnumber is 0:
 			now sextablerun is 1;
-			say "     You shake your head at the list of food and say you dont find anything interesting today. Astor nods and takes the menu away.";
+			say "     You shake your head at the list of food and say you don't find anything interesting today. Astor nods and takes the menu away.";
 			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
@@ -221,7 +221,7 @@ to say KitsuneStirfrySale:
 			else:
 				say "     You shake your head saying you're not interested in stirfry actually at the moment. Astor nods and says that's alright before returning to his cooking.";
 		else:
-			say "     You apologize profusely as you realize you dont have the required amount of fish. Astor chuckles and says it's alright, just return with the correct amount and he'll serve you up some food.";
+			say "     You apologize profusely as you realize you don't have the required amount of fish. Astor chuckles and says it's alright, just return with the correct amount and he'll serve you up some food.";
 
 to say MonkeyStewSale:
 	if "Strength of the Bull" is listed in feats of player or "Dexterity of the Kitsune" is listed in feats of player or "Intelligence of the Monkey" is listed in feats of player:

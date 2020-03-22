@@ -70,6 +70,7 @@ The level of Missing Cow is 5.
 The sarea of Missing Cow is "Plains".
 
 Instead of resolving a Missing Cow:
+	project the Figure of FeralGryphon_hard_icon;
 	say "     Roaming through the plains, you suddenly hear loud mooing coming from somewhere and as you look around, you spot an... interesting scene a moderate distance away. Looks like a cow - a regular, non-transformed one - who's just being fucked by a pretty large gryphon. The winged predator is holding the bovine only lightly with his taloned paws as he ruts her from behind and it doesn't look like she minds getting fucked by him - in fact, the sounds she makes seem rather pleased.";
 	say "     This must be Wendy, the missing cow Corbin told you about. There's that reward waiting for you if you manage to bring her back to the McDermott Farm. What do you want to do about her now? You could just... wait, hoping the gryphon might fly off after he got his rocks off - on the other hand, there's no guarantee that the feral beast won't just want a quick snack after sex and could eat her.";
 	LineBreak;

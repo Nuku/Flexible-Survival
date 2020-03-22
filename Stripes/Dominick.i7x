@@ -1027,6 +1027,8 @@ to say ForcedSubToDomSex4:			[Step by step Beta TF sequence]
 			now Face of Player is "that of a cute doggy with a mid-length muzzle, pointed ears and a happy if vapid expression";
 			now Cock Count of Player is 0;
 			now Cunt Count of Player is 1;
+			now Cunt Depth of Player is 16;
+			now Cunt Tightness of Player is 12;
 			now ForcedBreederslutTF is 1;
 	else if HP of Dominick is 32 or HP of Dominick is 42:
 		say "     Dom takes your fuzzy face in his hands, giving you a long lick along your muzzle. 'You're coming along nicely, slut. But there's obviously still room for improvement. Kneel and we'll get started.' You sink to your knees like a stone, and Dom pulls you between his legs, until your face is buried in his crotch. His massive cock radiates heat in front of you but it's his balls and furry sheath that fill your senses. His strong, masculine scent fills your nose and you instinctively open your mouth to suckle on his ballsack. Your master groans as you pay special attention to his pupmakers, giving your head an appreciative pat. You spend a little more time working your mouth over his sack, but you can't resist Dom's dick for very long. You pull back a bit and take it into your hands, directing its length towards your ready lips.";

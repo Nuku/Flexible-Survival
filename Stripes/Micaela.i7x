@@ -314,7 +314,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "Easter egg"	"A candy-coated chocolate egg the size of an ordinary egg."	1	Easter egg
 
-Easter egg is a grab object. It is a part of the player. Easter egg is infectious. Easter egg is temporary. The strain of Easter egg is "Easter Bunny".
+Easter egg is a grab object. Easter egg is infectious. Easter egg is temporary. The strain of Easter egg is "Easter Bunny".
 
 The usedesc of Easter egg is "[eatEasteregg]";
 

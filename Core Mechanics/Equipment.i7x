@@ -98,7 +98,8 @@ The slot of succubus motorcycle helmet is "head".
 the scent of succubus motorcycle helmet is "The helmet smells of plastic and fabric.".
 
 An everyturn rule:
-	if succubus motorcycle helmet is equipped:
+	if succubus motorcycle helmet is equipped and a random chance of 1 in 2 succeeds:
+		say "     [bold type]Your scalp tingles a little where it touches the succubus motorcycle helmet.[roman type][line break]";
 		infect "Succubus";
 
 incubus motorcycle helmet is a grab object.
@@ -117,7 +118,8 @@ The slot of incubus motorcycle helmet is "head".
 the scent of incubus motorcycle helmet is "The helmet smells of plastic and fabric.".
 
 An everyturn rule:
-	if incubus motorcycle helmet is equipped:
+	if incubus motorcycle helmet is equipped and a random chance of 1 in 2 succeeds:
+		say "     [bold type]Your scalp tingles a little where it touches the incubus motorcycle helmet.[roman type][line break]";
 		infect "Incubus";
 
 
@@ -251,8 +253,9 @@ The slot of Roman's gifted football helmet is "head".
 the scent of Roman's gifted football helmet is "The helmet smells of plastic and fabric, however there is also a hint of something kinda feminine about its smell.".
 
 An everyturn rule:
-	if Roman's gifted football helmet is equipped:
-		infect "Cuntboi Football Gorilla";
+	if Roman's gifted football helmet is equipped and a random chance of 1 in 2 succeeds:
+		say "     [bold type]Your scalp tingles a little where it touches Roman's gifted football helmet.[roman type][line break]";
+		infect "Football Gorilla Cuntboi";
 
 Roman's stolen football helmet is a grab object.
 Roman's stolen football helmet is equipment.
@@ -270,8 +273,9 @@ The slot of Roman's stolen football helmet is "head".
 the scent of Roman's stolen football helmet is "The helmet smells of plastic and fabric, however there is also a hint of something that kinda reminds you of a lockeroom and sex.".
 
 An everyturn rule:
-	if Roman's stolen football helmet is equipped:
-		infect "Male Football Gorilla";
+	if Roman's stolen football helmet is equipped and a random chance of 1 in 2 succeeds:
+		say "     [bold type]Your scalp tingles a little where it touches Roman's stolen football helmet.[roman type][line break]";
+		infect "Football Gorilla Male";
 
 Part 5 - Urban Explorer Helmets
 
@@ -353,8 +357,9 @@ The slot of cow-print cowboy hat is "head".
 the scent of cow-print cowboy hat is "The cowboy hat smell like leather and felt.".
 
 An everyturn rule:
-	if cow-print cowboy hat is equipped:
-		infect "Male Cow-boi";
+	if cow-print cowboy hat is equipped and a random chance of 1 in 2 succeeds:
+		say "     [bold type]Your scalp tingles a little bit where it touches the cowboy hat.[roman type][line break]";
+		infect "Cow-boi Male";
 
 Section 2 - Hair Accessories
 
@@ -749,8 +754,9 @@ The slot of cow-print cowgirl boots is "feet".
 the scent of cow-print cowgirl boots is "The boots smell like leather.".
 
 An everyturn rule:
-	if cow-print cowgirl boots is equipped:
-		infect "Female Cow-babe";
+	if cow-print cowgirl boots is equipped and a random chance of 1 in 2 succeeds:
+		say "     [bold type]Your scalp tingles a little bit where it touches the cowgirl boots.[roman type][line break]";
+		infect "Cow-babe Female";
 
 Part 2 - Combat Boots
 
@@ -1650,15 +1656,15 @@ Part 4 - Sleeveless Shirts
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"white sleeveless shirt"	"A white sleeveless shirt, made from and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	white sleeveless shirt
-"black sleeveless shirt"	"A black sleeveless shirt, made from and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	black sleeveless shirt
-"pink sleeveless shirt"	"A pink sleeveless shirt, made from and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	pink sleeveless shirt
-"blue sleeveless shirt"	"A blue sleeveless shirt, made from and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	blue sleeveless shirt
-"green sleeveless shirt"	"A green sleeveless shirt, made from and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	green sleeveless shirt
-"red sleeveless shirt"	"A red sleeveless shirt, made from and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	red sleeveless shirt
-"purple sleeveless shirt"	"A purple sleeveless shirt, made from and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	purple sleeveless shirt
-"yellow sleeveless shirt"	"A yellow sleeveless shirt, made from and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	yellow sleeveless shirt
-"orange sleeveless shirt"	"A orange sleeveless shirt, made from and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	orange sleeveless shirt
+"white sleeveless shirt"	"A white sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	white sleeveless shirt
+"black sleeveless shirt"	"A black sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	black sleeveless shirt
+"pink sleeveless shirt"	"A pink sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	pink sleeveless shirt
+"blue sleeveless shirt"	"A blue sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	blue sleeveless shirt
+"green sleeveless shirt"	"A green sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	green sleeveless shirt
+"red sleeveless shirt"	"A red sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	red sleeveless shirt
+"purple sleeveless shirt"	"A purple sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	purple sleeveless shirt
+"yellow sleeveless shirt"	"A yellow sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	yellow sleeveless shirt
+"orange sleeveless shirt"	"A orange sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	orange sleeveless shirt
 
 white sleeveless shirt is a grab object.
 white sleeveless shirt is equipment.
@@ -2353,7 +2359,9 @@ An everyturn rule:
 			say "     Your balls throb and seem to grow a little.";
 			increase ball size of player by 1;
 			increase cock length of player by 1;
-		infect "Orc Warrior";
+		if a random chance of 1 in 2 succeeds:
+			say "     [bold type]Your skin tingles a little bit where it touches the orc loincloth.[roman type][line break]";
+			infect "Orc Warrior";
 
 ragged brown loincloth is a grab object.
 ragged brown loincloth is equipment.

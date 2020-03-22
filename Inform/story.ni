@@ -1867,32 +1867,32 @@ name	desc	weight	object	sortname (indexed text)
 "infection scanner"	"Upgraded Infection Monitor. Or it would have been, it's clearly not finished. It's missing any sort of display to show what it finds. Perhaps you could use it's scanner parts elsewhere?"	7	infection scanner
 ]
 
-face mask is equipment. It is a part of the player. It is not temporary.
+face mask is equipment. It is not temporary.
 The descmod of face mask is "A filtered mask covers nose and mouth in a vain attempt to help. ".
 The placement of face mask is "face".
 journal is a grab object. It is a part of the player. It is not temporary. The carried of journal is 1.
 journal has a number called hitbonus. hitbonus of journal is usually 0.
-cot is a grab object. It is a part of the player. It is not temporary.
+cot is a grab object. It is not temporary.
 understand "Bed" as cot.
 Understand "book" as journal.
-medkit is a grab object. It is a part of the player. It is fast. It is not temporary.
-dirty water is a grab object. It is a part of the player. The trade of dirty water is "chips".
+medkit is a grab object. It is fast. It is not temporary.
+dirty water is a grab object. The trade of dirty water is "chips".
 understand "water" as dirty water.
-water bottle is a grab object. It is a part of the player. The trade of water bottle is "chips".
+water bottle is a grab object. The trade of water bottle is "chips".
 Does the player mean using the dirty water: it is unlikely.
 Does the player mean stashing the dirty water: it is unlikely.
 Does the player mean retrieving the dirty water: it is unlikely.
-dog milk is a grab object. It is a part of the player. It is milky.
-soda is a grab object. It is a part of the player.
-chips is a grab object. It is a part of the player.
-glob of goo is a grab object. It is a part of the player. glob of Goo is infectious. The strain of glob of goo is "Goo Girl".
-food is a grab object. It is a part of the player. The trade of food is "soda".
+dog milk is a grab object. It is milky.
+soda is a grab object.
+chips is a grab object.
+glob of goo is a grab object. glob of Goo is infectious. The strain of glob of goo is "Goo Girl".
+food is a grab object. The trade of food is "soda".
 pocketknife is a armament. It is a part of the player. It has a weapon "[one of]your large knife[or]your blade[or]your trusty pocket knife[or]flashing steel[at random]". The weapon damage of pocketknife is 5. The weapon type of pocketknife is "Melee". It is not temporary. the objsize of pocketknife is 2.
 understand "knife" as pocketknife.
 chair is a armament. It is a part of the player. It has a weapon "[one of]a folding chair[or]your improvised weapon[or]that move you saw on WWE[or]a metal chair to the eyes[at random]". The weapon damage of chair is 5. The weapon type of chair is "Melee". It is not temporary. the objsize of chair is 4.
 understand "seat" as chair.
-gryphon milk is a grab object. It is a part of the player. Understand "milk" as gryphon milk. Gryphon milk is infectious. The strain of gryphon milk is "Blue Gryphon Herm". The trade of Gryphon Milk is "distilled milk". gryphon milk is milky.
-distilled milk is a grab object. It is a part of the player. It is not milky.
+gryphon milk is a grab object. Understand "milk" as gryphon milk. Gryphon milk is infectious. The strain of gryphon milk is "Blue Gryphon Herm". The trade of Gryphon Milk is "distilled milk". gryphon milk is milky.
+distilled milk is a grab object. It is not milky.
 
 
 The invent of the player is { "journal" }.
@@ -3404,7 +3404,7 @@ carry out littering something (called x):
 				say "You're using that right now. Stop using it before you drop it.";
 				continue the action;
 	repeat through table of game objects:
-		if printed name of x matches the text Name entry:
+		if printed name of x in lower case matches the text Name entry in lower case:
 			add Name entry to the invent of the location of the player;
 			break;
 	delete x;
@@ -4828,7 +4828,6 @@ postimport rules is a rulebook.
 Everyturn rules is a rulebook.
 
 This is the turnpass rule:
-	now fightstatus is 0;
 	now looknow is 0;
 	now ishunting is false;
 	now showlocale is true;
@@ -5436,56 +5435,62 @@ This is the self examine rule:
 	LineBreak;
 	LineBreak;
 	repeat with x running through equipped owned equipment:
-		if placement of x is "head":
+		if slot of x is "head":
 			if descmod of x is "":
 				break;
 			else:
 				say "[descmod of x] ";
 	repeat with x running through equipped owned equipment:
-		if placement of x is "eyes":
+		if slot of x is "eyes":
 			if descmod of x is "":
 				break;
 			else:
 				say "[descmod of x] ";
 	repeat with x running through equipped owned equipment:
-		if placement of x is "face":
+		if slot of x is "face":
 			if descmod of x is "":
 				break;
 			else:
 				say "[descmod of x] ";
 	repeat with x running through equipped owned equipment:
-		if placement of x is "body":
+		if slot of x is "neck":
 			if descmod of x is "":
 				break;
 			else:
 				say "[descmod of x] ";
 	repeat with x running through equipped owned equipment:
-		if placement of x is "chest":
+		if slot of x is "body":
 			if descmod of x is "":
 				break;
 			else:
 				say "[descmod of x] ";
 	repeat with x running through equipped owned equipment:
-		if placement of x is "arms":
+		if slot of x is "chest":
 			if descmod of x is "":
 				break;
 			else:
 				say "[descmod of x] ";
 	repeat with x running through equipped owned equipment:
-		if placement of x is "hands":
+		if slot of x is "arms":
 			if descmod of x is "":
 				break;
 			else:
 				say "[descmod of x] ";
 	repeat with x running through equipped owned equipment:
-		if placement of x is "legs":
+		if slot of x is "hands":
+			if descmod of x is "":
+				break;
+			else:
+				say "[descmod of x] ";
+	repeat with x running through equipped owned equipment:
+		if slot of x is "legs":
 			if descmod of x is "":
 				break;
 			else:
 				say "[descmod of x] ";
 	let CrotchVisible be true;
 	repeat with x running through equipped owned equipment:
-		if placement of x is "waist":
+		if slot of x is "waist":
 			if descmod of x is "":
 				break;
 			else:
@@ -5493,7 +5498,7 @@ This is the self examine rule:
 				now CrotchVisible is false;
 	if CrotchVisible is true: [no pants, so undies might be visible]
 		repeat with x running through equipped owned equipment:
-			if placement of x is "crotch":
+			if slot of x is "crotch":
 				if descmod of x is "":
 					break;
 				else:
@@ -5503,7 +5508,7 @@ This is the self examine rule:
 		say "Your [BodyName of Player in lower case] waist and legs are bare-ass naked, exposing your privates for everyone to see. ";
 	let Barefoot be true;
 	repeat with x running through equipped owned equipment:
-		if placement of x is "feet":
+		if slot of x is "feet":
 			if descmod of x is "":
 				break;
 			else:
@@ -6351,7 +6356,7 @@ Include Tape Inventory by Core Mechanics.
 Include Text Capture by Eric Eve.
 
 [Locations]
-Include Apocalypse Store by DrGryphon.
+Include Apocalypse Store by Omen.
 Include Approaching the Capitol Building by Guest Writers.
 Include Astor by Rikaeus.
 Include Astroslide Field Locker-room by Kernog.
@@ -6369,7 +6374,6 @@ Include Branson & Partner by Wahn.
 Include Bunker Communal Shower Events by Luneth.
 Include Camp Bravo by Wahn.
 Include Tenvale College Campus by Rikaeus.
-[Include Church Of The Maternal Beast by Guest Writers.]
 Include Dog House by Kaleem mcintyre.
 Include Down Under Pub by Stripes.
 Include Equinoid Camp by Song.
@@ -6638,6 +6642,7 @@ Include Fire Sprite by AGentlemanCalledB.
 Include Flaming Lynx by Stripes.
 Include Flesh Blob by Stripes.
 Include Fluffy Owl by Stripes.
+Include Football Gorilla Infections by Luneth.
 Include Foul Scuttler by Xenophiliac.
 Include Francois Infections by AGentlemanCalledB.
 Include Friendship Pony by Stripes.
@@ -6650,7 +6655,7 @@ Include Gazelle by Sarokcat.
 Include Gels by Darthan.
 Include German shepherd by Stripes.[replaces 'Random German shepherd']
 Include German Shepherd Bitch by Kirov.
-Include Giant by Stripes.
+Include Giant by Gherod.
 Include Giraffe by Stripes.
 Include Goat Janitor by McRabid.
 Include Goblin by Blue Bishop.
@@ -6864,6 +6869,7 @@ Include Amy by Wahn.
 Include Andrew by Stripes.
 Include Angie by Sarokcat.
 Include Anthony by Wahn.
+Include Araqiel by Gherod.
 Include Ares by Wahn.
 Include Arthur by Luneth.
 Include Anastasia by Stripes.
@@ -6925,6 +6931,7 @@ Include Frank by Stripes.
 Include Friesian Twin Isaac by Wahn.
 Include Friesian Twin Karel by Wahn.
 Include G-Shep Squad by Rikaeus.
+Include Genevieve by Prometheus.
 Include Garrett by Stripes.
 Include Gerty by Qazarar.
 Include Glory by Wahn.

@@ -103,15 +103,22 @@ to SylviaQuestLog:
 
 SylviaRoomConnection is a number that varies.[@Tag:NotSaved]
 
-an everyturn rule:
+a postimport rule: [bugfixing rules for players that import savegames]
 	if Despairing Biologist is resolved and (Resolution of Despairing Biologist is 1 or Resolution of Despairing Biologist is 2 or Resolution of Despairing Biologist is 3) and SylviaRoomConnection is 0:
 		change the northeast exit of Tenvale College Female Dorms to Sylvia's Room; [connecting the location to the travel room]
 		change the southeast exit of Sylvia's Room to Tenvale College Female Dorms; [connecting the location to the travel room]
 		now SylviaRoomConnection is 1; [room connected]
+
+an everyturn rule:
 	if a random chance of 1 in 2 succeeds: [present]
 		move Sylvia to Sylvia's Room;
 	else: [Away exploring]
 		now Sylvia is nowhere;
+	if (hp of Sylvia > 5) or (hpM of Sylvia > 4) or (hpF of Sylvia > 4):
+		if SylviaSampleCounter > 0:
+			decrease SylviaSampleCounter by 1;
+
+SylviaSampleCounter is a number that varies. SylviaSampleCounter is usually 0.
 
 Section 1 - Room Declaration
 
@@ -227,7 +234,7 @@ to say SylviaTalkMenu:
 		now sortorder entry is 5;
 		now description entry is "Find out about where her interest in biology came from";
 	[]
-	If (hp of Sylvia > 5) or (hpM of Sylvia > 4) or (hpF of Sylvia > 4):
+	If (hp of Sylvia > 5) or (hpM of Sylvia > 4) or (hpF of Sylvia > 4) and SylviaSampleCounter is 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Help with research";
 		now sortorder entry is 6;
@@ -400,6 +407,7 @@ to say AngieSample: [Sylvia X Angie]
 	say "[bold type]You gain a water bottle![roman type][line break]";
 	increase carried of water bottle by 1;
 	NPCSexAftermath Sylvia receives "OralCock" from Angie;
+	now SylviaSampleCounter is 8;
 
 [to say BlancheSample: [Julian X Blanche]
 	say "     You remember the mature white wolf that you saved in the Capitol District and are about to suggest her as a potential sample donor when Julian enters the room behind you. 'Fancy seeing you here[if Player is not defaultnamed] [name of Player][end if]. Helping Sylvia with her research?' he asks as the collie walks over and gives him a loving hug. 'They're indispensable, I don't know what I would do without either of you. But I believe [if Player is herm]they [else if Player is male]he [else]she [end if]was about to say something before you came in,' Sylvia says, and expectant look directed at you. You tell them about Blanche and how you saved her from Drakes and helped her back to her den. 'She sounds nice. I think I'll come along too,' the dark-furred wolf responds. 'Nice, Julian. Expressing interest in another woman in front of your girlfriend,' the collie dryly replies. 'I didn't mean it exactly like that, and anyway, I thought we were polyamorous?' the lupine says, ears flat against his head in embarrassment.";
@@ -416,11 +424,13 @@ to say BubbleSample: [Take sample from Bubble. Sylvia X Latex Vixen]
 	say "[bold type]You gain a water bottle![roman type][line break]";
 	increase carried of water bottle by 1;
 	NPCSexAftermath Bubble receives "OralPussy" from Sylvia;
+	now SylviaSampleCounter is 8;
 
 to say CrabSample: [Take sample from crab. Non-sexual.]
 	say "     Hoping that the crab can be of help to the collie, you lift her onto the bed. Sylvia instantly squeaks in surprise and falls to her knees next to it. 'She's so adorable! What's her name? Please say that you have named for her. She's so cute.' You are slightly taken aback by how enthusiastic she is being about the crab, but you have to admit, the crab is rather sweet. The student pulls a tin of fish food out of a bag and sprinkles some on her palm, before offering it to the crab. If her eyes could go out on stalks even more, then you are sure that the crustacean would do so as she quickly scuttles onto the canine's paw. While she feeds, Sylvia brushes her back with a cotton swab, collecting any detritus that may have collected there. Once the food is finished, the collie returns your companion to you, along with a bottle of clean water in thanks.";
 	say "[bold type]You gain a water bottle![roman type][line break]";
 	increase carried of water bottle by 1;
+	now SylviaSampleCounter is 8;
 
 to say DashSample: [Sylvia, Julian and fox. Non-sexual]
 	project Figure of Dash_icon;
@@ -428,6 +438,7 @@ to say DashSample: [Sylvia, Julian and fox. Non-sexual]
 	say "     As you tell the tale, Sylvia sits on the other side of the kit who is basking in being the center of attention. 'I'd consider kidnapping him from you and keeping him for myself, but I haven't checked the college's rules on pets since the outbreak,' the collie teases you while scritching under his chin. Judging from his current behavior you might wonder whether the fox would accept this, but you know him better than that and you imagine it would take a greater bribe than mere attention to separate him from you. Giving the cute fur donor a kiss on his snout, Sylvia stands up again and brushes the fur that has collected in her palm into a clear plastic bag and labels it. 'Julian, let the puppy go. He has important business in the city that we are keeping him from. He and his sidekick are going to save the world,' she mock scolds the wolf. With a sigh he too stands up. 'Fine. I came to tell you that Dr. Vayne wanted to discuss some of your research. Bye[if Player is not defaultnamed] [name of Player][end if].' 'Another successful sample taken but I should go and talk to Dr. Vayne. Here. Have a water bottle in payment. Make sure you share it with Dash,' the collie says as she brushes any loose fur from her clothes.";
 	say "[bold type]You gain a water bottle![roman type][line break]";
 	increase carried of water bottle by 1;
+	now SylviaSampleCounter is 8;
 
 to say DeniseSample: [Take sample from Denise. Sylvia X Gryphoness]
 	say "     You gesture to the hermaphrodite gryphon following you and introduce her to the collie. 'You have such pretty feathers,' Sylvia croons, stroking a paw over the vibrant, blue plumage. Denise leans towards the attention, enjoying the affection. 'Would you mind if I took two feathers? One can be molted, but I would like a fresh one for comparison,' the student requests, her hand getting closer to the gryphon's back end. While initially hesitant, your companion agrees when Sylvia's hand reaches her genitals, a thumb rubbing over her pussy while her palm cups her balls. Pleased at such easy consent, Sylvia stoops and picks a feather off of the floor before grasping one on the gryphoness's neck. With a sharp pull, a feather comes away in her hand, though not without a pained squawk from Denise. The collie quickly stores her samples in two vials before turning back to you both. 'Now that that's out of the way, perhaps I can reward such a pretty bird for her bravery.'";
@@ -435,6 +446,7 @@ to say DeniseSample: [Take sample from Denise. Sylvia X Gryphoness]
 	say "[bold type]You gain a water bottle![roman type][line break]";
 	increase carried of water bottle by 1;
 	NPCSexAftermath Sylvia receives "OralCock" from Denise;
+	now SylviaSampleCounter is 8;
 
 
 to say SylviaTalk7: [Traps]

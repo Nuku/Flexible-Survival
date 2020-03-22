@@ -17,13 +17,15 @@ Section 1 - The Pretty Kitty
 Table of GameRoomIDs (continued)
 Object	Name
 Pretty Kitty	"Pretty Kitty"
+Pretty Kitty	"The Pretty Kitty"
 
-The Pretty Kitty is a room. The Pretty Kitty entrance is a door. It is south of Mall West Wing and north of The Pretty Kitty. The The Pretty Kitty entrance is open.
-Instead of examining the The Pretty Kitty entrance:
-	say "Through the multiple clothing displays and stoic mannequins, the lights of [the other side of the The Pretty Kitty entrance] are [if findwires is 2 and fixedgens > 2]on, displaying bright light throughout the store[else]off, not surprising considering that there is no power. Candles and the occasional lantern are providing some light in the store[end if].";
+Pretty Kitty is a room. Pretty Kitty entrance is a door. It is south of Mall West Wing and north of Pretty Kitty. The Pretty Kitty entrance is open.
+Instead of examining the Pretty Kitty entrance:
+	say "Through the multiple clothing displays and stoic mannequins, the lights of [the other side of the Pretty Kitty entrance] are [if findwires is 2 and fixedgens > 2]on, displaying bright light throughout the store[else]off, not surprising considering that there is no power. Candles and the occasional lantern are providing some light in the store[end if].";
 
 [Describing the store & NPC beginning descriptions]
-The description of The Pretty Kitty is "[PKDesc]".
+The description of Pretty Kitty is "[PKDesc]".
+
 to say PKDesc:
 	if thirst of Andromeda is 0:
 		say "     Walking through the double-glass doors, you walk into what seems to be a small clothing boutique. Racks of many different clothes line the walls of this store, with some expensive-looking pieces displayed proudly on mannequins. Clothing for any season and situation sit neatly-folded on wooden shelves, price tags hanging off each piece. Pleasant music plays quietly over the store speakers, giving a relaxing feel to your stay here. [if findwires is 2 and fixedgens > 2]Digital bells ring as you walk through the door[else]A metal bell, currently tied to the door with string, rings as you enter[end if], signaling your entrance into the store. The few people browsing the remaining wares look up at you, but quickly go back to perusing the different selections of clothes. You hear a loud [']EEEP['] from behind the checkout counter beside you as a figure pops out from behind it. A catgirl, apparently the caretaker of this store, smiles happily at you.";
@@ -31,7 +33,7 @@ to say PKDesc:
 		say "     'Hi there! Welcome to my shop, The Pretty Kitty, named after little ol['] me! Feel free to take a look around, we've got prime merchandise available here!' the perky catgirl yells at you as she pops up from behind the counter, bouncing happily up and down. She stops bouncing for a moment, looking deep in thought, before realizing something important. 'Oh! I forgot to introduce myself. I'm Andromeda! If you need anything, don't be shy!'";
 		now thirst of Andromeda is 1;
 	else:
-		say "     You walk back into The Pretty Kitty, the familiar ringing of [if findwires is 2 and fixedgens > 2]digital bells [else]a metal bell [end if]blaring throughout the store. Andromeda waves happily at you, obviously happy to see you've come back.";
+		say "     You walk back into the Pretty Kitty, the familiar ringing of [if findwires is 2 and fixedgens > 2]digital bells [else]a metal bell [end if]blaring throughout the store. Andromeda waves happily at you, obviously happy to see you've come back.";
 		if Libido of Andromeda >= 2:
 			say "     Giving a throaty purr when she sees who walked into her establishment, Andromeda winks slyly at you, with, you could swear, a lustful look in her eyes.";
 			LineBreak;
@@ -42,9 +44,9 @@ to say PKDesc:
 the scent of The Pretty Kitty is "Inhaling deeply, the smell of clean clothes rushes into your nose, reminding you of clean laundry.".
 
 [Objects inside the store]
-Andromeda is in The Pretty Kitty.
-Clothing Shelf is in The Pretty Kitty.
-Collar Rack is in The Pretty Kitty.
+Andromeda is in Pretty Kitty.
+Clothing Shelf is in Pretty Kitty.
+Collar Rack is in Pretty Kitty.
 
 Section 2 - Andromeda
 

@@ -69,7 +69,7 @@ Virgin of Team Captain Roman is false.
 AnalVirgin of Team Captain Roman is false.
 PenileVirgin of Team Captain Roman is false.
 SexuallyExperienced of Team Captain Roman is false.
-MainInfection of Team Captain Roman is "Football Gorilla".
+MainInfection of Team Captain Roman is "Football Gorilla Male".
 The description of Team Captain Roman is "[RomanDesc]".
 
 to say RomanDesc:
@@ -322,7 +322,7 @@ to say RomanEncourage:
 [SEX SCENES]
 
 instead of fucking Team Captain Roman:
-	setmonster "Football Gorilla";
+	setmonster "Football Gorilla Male";
 	if HP of Roman is 4:
 		if (lastFuck of Roman - turns > 4):
 			say "[RomanFuck1]";

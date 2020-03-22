@@ -476,7 +476,6 @@ Name(text)	Type(text)
 "ffrivalry"	"number"
 "fgryphon_TFcount"	"number"
 "fightoutcome"	"number"
-"fightstatus"	"number"
 "Fin"	"number"
 "findablestairs"	"number"
 "Findfirefighter"	"number"

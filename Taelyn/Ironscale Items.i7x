@@ -89,7 +89,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "cloth scrap"	"A scrap of cloth that you picked up. Its ragged, but at least clean from cum and other stains... You might be able to find a use for it at some point."	0	cloth scrap
 
-cloth scrap is a grab object. It is not temporary. It is a part of the player.
+cloth scrap is a grab object. It is not temporary.
 
 the usedesc of cloth scrap is "[cloth scrap use]".
 
@@ -102,7 +102,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "leather scrap"	"A scrap of Leather that you picked up. It's ragged, but at least clean from cum and other stains... You might be able to find a use for it at some point."	0	leather scrap
 
-leather scrap is a grab object. It is not temporary. It is a part of the player.
+leather scrap is a grab object. It is not temporary.
 
 the usedesc of leather scrap is "[leather scrap use]".
 

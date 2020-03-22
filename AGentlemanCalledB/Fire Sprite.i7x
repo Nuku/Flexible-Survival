@@ -477,7 +477,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "glowing ember"	"A small glowing ember, which seems to stay warm regardless of how you store it."	0	glowing ember
 
-glowing ember is a grab object. It is a part of the player. glowing ember is infectious. The strain of glowing ember is "Fire Sprite".
+glowing ember is a grab object. glowing ember is infectious. The strain of glowing ember is "Fire Sprite".
 
 The usedesc of glowing ember is "[glowingemberuse]";
 
