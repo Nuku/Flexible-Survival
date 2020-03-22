@@ -162,7 +162,7 @@ to say gsbDom:
 	[ 0 - Encounter with GSB in the wild ]
 	[ 1 - Katherine after recruiting ]
 	if gsbBuffer is 1:
-		say "<WIP>";
+		say "     Sensing you want her to take charge, Katherine saunters over to you with a wicked smile, and grabs you rather possesively. 'I can tell my Alpha likes a girl who's willing to take what she wants from time to time,' she says as she pulls you in close and gives you a seductive lick across the lips. The feeling of her wet canine tongue tickles, and the strong grip of her paws around your hips leaves you shuddering and at her mercy. She growls assertively before guiding you down onto your back, where she eagerly stips you and prepares to mount your quickly hardening [Cock of Player] cock.";
 	else if HP of Player > 0: [Player submitted]
 		say "     Happy with your submission, the German shepherd bitch roughly pushes you to the ground, a little over-eager to have her way with you. She begins divesting you of your gear and clothes, and at first, you're afraid she's going to take them and leave you bare to fend for yourself. 'Don't worry, babe,' she says calmly. '[one of]I'm not gonna hurt you. Too much[or]You won't be needing these for what I have planned[at random].' She climbs on top of you, straddling you with her powerful legs and leaving you helpless to do anything but go along for the ride.";
 	else: [Player defeated]
@@ -170,9 +170,9 @@ to say gsbDom:
 	say "     Now that she has you exactly where she wants you, the bitch begins to slowly and sensually gyrate her hips against your crotch, raising her arms up in the air and shaking her bust to give you a little show. The sight of her well-toned body on display before you quickly brings you to full mast. Smiling at you all the while, she gives a possessive growl as she feels your [Cock of Player] member harden between her legs. You're tempted to reach up and play with her body, but before you can, she leans down and grabs you by the wrists, pinning you down in place. You moan helplessly in pleasure as she rubs her now-dripping pussy against your shaft, teasing you with the promise of being inside her. She keeps you locked in place for some time, eagerly grinding against you for her own pleasure.";
 	WaitLineBreak;
 	say "     The dominant hound coats your [Cock of Player] member in her feminine juices, clearly turned on by watching you squirm and writhe beneath her. But her patience begins to wear thin, as she reaches down and grabs you by the base, guiding you inside her pussy. You both gasp in pleasure as you finally slip into her depths. Her nethers are warm and slick, and you're astonished at how sinfully tight she is. She slowly sinks down onto your [cock size desc of player] cock, taking you all the way to the hilt. She pauses for a moment to adjust to the sensation, her doggy tongue dangling from her mouth as she pants in pleasure. Then, without loosing her grip on you, she raises herself from your crotch until just the tip of your penis remains inside her. The coldness of the air bites at your skin as you are removed from her warm embrace, but only for a split second. She slams her hips down again, returning you to the warmth of her canine muff. The female shepherd repeats the process several more times, slowly building up to a pace that soon has the both of you reeling in ecstasy.";
-	say "     Lost in the throes of passion, her grip on your wrists begins to loosen. With the excitment of your romp with the lustful doggy, you barely even notice, but your hands, now free from their prison, naturally drift to her hips on their own. Her own paws begin to wander over your [bodytype of player] body, exploring every curve and stroking gently against her mate. She howls to the sky as you start meeting her thrusts with your own, doubling the intensity of your shared bliss. She may have put on a tough-dog attitude for your fight, but she's clearly a wanton slut for cock. Eventually, you can hold out no longer. Your member throbs as you orgasm, releasing your seed inside her. The feeling of your [cum load size of player] load being pumped inside her is enough to send the bitch over the edge, and she orgasms along side you. Her pussy clenches tight around you, milkig you for everything you have.";
+	say "     Lost in the throes of passion, her grip on your wrists begins to loosen. With the excitment of your romp with the lustful doggy, you barely even notice, but your hands, now free from their prison, naturally drift to her hips on their own. Her own paws begin to wander over your [bodytype of player] body, exploring every curve and stroking gently against her mate. She howls to the sky as you start meeting her thrusts with your own, doubling the intensity of your shared bliss. She may have put on a tough-dog attitude for your fight, but she's clearly a wanton slut for cock. Eventually, you can hold out no longer. Your member throbs as you orgasm, releasing your seed inside her. The feeling of your [cum load size of player] load being pumped inside her is enough to send the bitch over the edge, and she orgasms along side you. Her pussy clenches tight around you, milking you for everything you have.";
 	WaitLineBreak;
-	say "     The German shepherd collapses on top of you as her orgasm comes to an end. She nuzzles into the crook of your neck, and you reach up to embrace her, enjoying the feel of her soft fur between your fingers. Her tail wags at your touch, and the two of you rest in each others arms as you come down from your highs. She gives a contented sigh as you soften and slip out with a splash of cum. She sits up and gives you a slobbery doggy kiss on the cheek. 'Thanks for the amazing fuck, handsome. Maybe we can make an Alpha out of you someday yet,' she says with a suggestive wink before leaping up and leaving you to your own devices.";
+	say "     The German shepherd collapses on top of you as her orgasm comes to an end. She nuzzles into the crook of your neck, and you reach up to embrace her, enjoying the feel of her soft fur between your fingers. Her tail wags at your touch, and the two of you rest in each others arms as you come down from your highs. She gives a contented sigh as you soften and slip out with a splash of cum. She sits up and gives you a slobbery doggy kiss on the cheek. 'Thanks for the amazing fuck, handsome. [if gsbBuffer is 1]I'm glad to have you as my Alpha[else]Maybe we can make an Alpha out of you someday yet[end if],' she says with a suggestive wink before leaping up and leaving you to your own devices.";
 
 to say gsbFuck:
 	[ requires gsbBuffer parameter to be set ]
@@ -230,13 +230,16 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
+	say "[gsbInsert]";
+
+to say gsbInsert:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "German Shepherd";
 	add "German Shepherd Bitch" to infections of CanineList;
 	add "German Shepherd Bitch" to infections of FurryList;
 	add "German Shepherd Bitch" to infections of NatureList;
-	add "German Shepherd Bitch" to infections of MaleList;
+	add "German Shepherd Bitch" to infections of FemaleList;
 	add "German Shepherd Bitch" to infections of TaperedCockList;
 	add "German Shepherd Bitch" to infections of KnottedCockList;
 	add "German Shepherd Bitch" to infections of SheathedCockList;
@@ -440,5 +443,11 @@ When Play begins:
 	now fheat entry is true;
 	now mpregheat entry is true;
 	now mpregtrigger entry is "A sudden throb in your ass catches you off guard, startling a whimper from your throat as you feel a rush of heat surging inside you. You can feel your fecund ass preparing itself to be bred as you go into a tainted heat. Your anal passage quivers and you feel a longing for a nice, canine cock to fill it.";
+
+a postimport rule: [bugfixing rules for players that import savegames]
+	if there is a Name of "German Shepherd Bitch" in the Table of Random Critters:
+		say "";
+	else:
+		say "[gsbInsert]";
 
 German Shepherd Bitch ends here.
