@@ -143,7 +143,7 @@ to say KatherineChitchat:
 			add "[KatherineCC4]" to cclist;
 		add "[KatherineCC5]" to cclist;
 		[]
-		if HP of Katherine > 8:
+		if HP of Katherine > 9:
 			[ Lover Katherine ]
 			say "     ";
 	else:
@@ -205,9 +205,19 @@ to say KatherineSelf:
 			now Armor of Katherine is 1;
 	else if HP of Katherine is 4:	[ Stage 2 of quest complete, get info before proceeding to stage 3 ]
 		if XP of Katherine < 8:		[ Trust not high enough ]
-			say "     You approach";
+			say "     Katherine smiles at you, happy that her Alpha is interested in her, but you can already tell from the way her body tenses that she's not ready to share more with you just yet. 'Sorry Alpha,' she says. 'I'm still trying to process some of these memories. There's some particularly unpleasant ones regarding Reese, and I don't think I'm comfortable confiding until I can figure them out myself.' You say nothing more and place a hand on her should, letting her know that as her Alpha, you're there for her if she needs you.";
+			if XP of Katherine < 7:
+				increase XP of Katherine by 1;
 		else:						[ Trust high enough to get a little info from Kat ]
-			say "";
+			say "     Katherine gives a heavy sigh. 'I guess there's no getting around it. You're gonna need to know if we want to find Lauren.' She finds a place to sit down, and you follow her, grabbing her hand to comfort her. This is clearly important to her. 'If I remember correctly, Lauren is my best friend. At the very least, we've known each other since we were very young. I cared for her.' This is nothing unusual so far, but you let her continue. 'Reese, on the other hand.' Her expression turns angry, and she bares her teeth at the name. 'I don't know what she saw in him. But I knew he was trouble.'";
+			say "     You ask her what she means. 'She stopped hanging out as often shortly after they started dating. When she did show her face, it'd be caked in make-up, but it wasn't enough to hide the bruises.' The shepherd clenshes her fists painfully tight. 'This was all before the nanites, mind you,' she says. 'She kept insisting that she loved him, and could change him. But I couldn't stand by and do nothing.' She growls quite aggressivly, and you let her vent.";
+			[ 'we' is? or 'we' are? ]
+			WaitLineBreak;
+			say "     'We were all together at a bar one night. I don't remember who 'we' is, but there was a lot of people.' Katherine gets up and starts pacing back and forth as she recounts her story. 'I confronted Reece, maybe a little too aggressively in retrospect, and obviously he wasn't happy about it. The fucking cunt took a swing at me. I was so livid, I returned the favor, no holding back.' She bares her pointed teeth again. 'You should have seen the look on his face as he fell to the floor,' she says with a smirk. 'I lost it, and I pounced him while he was down.";
+			say "     'Everyone had my back, but they had to pull me off him before it got too bad. The police got involved, and I was arrested. At least I made sure that bastard would never forget me.' She makes an open palm with her left hand and punches it with a resounding smack. 'Of course, that only made things worse for Lauren afterwards. She wasn't gonna come forward to the cops, and we didn't have any evidence.'";
+			WaitLineBreak;
+			say "     Katherine sits back down beside you, taking a deep breath to calm herself down. 'This is why I'm so keen to find Lauren,' she sighs. You wrap your arms around her, rubbing her shoulder supportively. She leans into your embrace, nuzzling against you. You promise her you'll do your best to help find her, and she thanks you with a lick on the cheek. This Reece sounds like a real piece of work. You privately resolve to find him yourself and teach him a lesson for laying a hand on your bitch.";
+			say "     {To be continued...}";
 
 to say KatherineQuest1:
 	say "     Katherine's eyes brighten, and she nearly shouts 'Fantastic!' before catching herself with an embarrased smile. 'I mean... I'm glad your willing help.' She takes you by the hand and eagerly guides you out of the library, explaining along the way. 'There's one item in particular that I think you might be able to help with.' You follow the canine out the door and into the perils of the nanite-infested city, happy to embark on a journey to aid your loyal friend.";
@@ -254,7 +264,13 @@ to say KatherineQuest2:
 		[else:]		[ alternate to shower scene for victory? ]
 	else if fightoutcome > 19 and fightoutcome < 30:	[ defeated by wyvern ]
 		if WYVGEN is 0:		[ Male wyvern ]
-			say "     The wyvern delivers a final blow that knocks you to the ground. It looms over you, quite intimidating with it's size. ";
+			say "     The wyvern delivers a final blow that knocks you to the ground. It looms over you, quite intimidating with it's size. Grabbing you in it's jaw, it carries you over to where Katherine is still struggling to free herself from her gooey cage. Then it drops you onto the hard ground, knocking the breath out of you as you land on your back. You wonder what exactly it's doing, but the answer starts to become clear when you see it's red shaft starting to grow from it's genital slit.";
+			say "     The wyvern then grabs Katherine in its mouth, forcibly removing her from the goop as she's powerless to stop it. It drops her on top of you. The two of you are barely given a moment to recover before it slams one of its winged hands down on the German shepherd's back, pinning you both in place. Katherine looks you in the eyes, not that she has much choice given the current predicament, and she yelps as she feels something wet and throbbing creep between both your legs.";
+			WaitLineBreak;
+			say "     The wyvern keeps you both pinned as it slides its massive cock between your bodies. It's intent on using you both as a makeshift onahole! The pressure builds as it presses its cock forward, until you're no longer able to see Katherine's face over the tip of the saurian shaft. As it withdraws, your canine companion gives an involuntary moan, the wyvern's ridges stimulating her nethers. You feel your own privates similarly stimulated. But the wyvern cares not for you or your bitch's comfort, and it begins eargerly thrusting away.";
+			say "     The fucking is rough and rapid, and the pair of you are left gasping for air as the winged creature keeps you pinned down against its cock with its large claw. Katherine nearly passes out, whether from pleasure or pain, you can't tell. Just when it feels like you can take no more, the wyvern cums, a massive wave of white liquid rushing forth from its member. The rythmic throbbing of its cock against your body feels decadently lewd. Most of its cum lands harmlessly on the street, but both your face and Katherine's are spattered by stray splashes. Content for the moment, the wyvern's dick retreats back into its slit before it releases you and jumps into the air.";
+			WaitLineBreak;
+			say "     Your bitch is left lying atop you, panting from the experience. She uncounsciously licks your face clean before coming to her senses. 'Ah, what happened?' she asks. You recount the past hour back to her, and a wave of emotion washes over her face as you mention Lauren and Reese. You're still preplexed by the encounter between the former aqcuaintences, but when you ask her about it, she hesitates. 'It's not a pleasant memory. At least not what I can remember.' She fidgets atop you. 'Maybe we can talk about it later, when we find Lauren again.' You drop the subject and help Katherine back up.";
 		else if WYVGEN is 1:	[ Female wyvern ]
 			say "     The wyvern delivers a final blow that knocks you to the ground. It looms over you, and you glance over to Katherine. A moment of panic and confusion washes over you when you see she's no longer there, but you catch a glimpse of her tail as she dashes into her old house. At least she's safe inside. You scramble backwards a bit as the wyvern approaches, intent on having it's way with you. But just as it's about to grab you in it's maw, a shout from Katherine catches its attention. She's returned, and grasped in her hand is a Molotov cocktail rapidly scavenged from her old possesions. 'Leave my Alpha alone!' she shouts as she hurls the flaming bottle.";
 			say "     The makeshift weapon crashes against the hardened scales of the massive beast, washing them with flames. It does no damage to the winged lizard, but its feral mind panics nonetheless. Overcome with fright, it quickly takes to the skies, leaving its prey behind. Katherine gives a sigh of relief as she walks over to you, helping you up from the ground. 'Not sure what I would have done if that hadn't worked,' she comments. She looks you over, then gives you a quick nuzzle and a lick on the cheek after determining you're okay.";
@@ -380,33 +396,41 @@ to say KatherineSexMenu:
 
 to say KatherineFuck1:
 	say "[gsbFuckKatherine]";
+	NPCSexAftermath Katherine receives "PussyFuck" from Player;
 
 to say KatherineCowgirl1:
 	now gsbBuffer is 1;
 	say "[gsbDom]";
+	NPCSexAftermath Katherine receives "PussyFuck" from Player;
 
 to say KatherineDoggy1:
 	[ doggystyle, then she falls asleep on crotch, wakes you up with blowjob ]
 	say "     ";
+	NPCSexAftermath Katherine receives "PussyFuck" from Player;
+	NPCSexAftermath Katherine receives "OralCock" from Player;
 
 to say KatherineBlowjob1:
 	[ blowjob on all fours ]
 	say "     ";
+	NPCSexAftermath Katherine receives "OralCock" from Player;
 
 to say KatherineBlowjob2:
 	[ use mindless Katherine's mouth ]
 	say "     ";
+	NPCSexAftermath Katherine receives "OralCock" from Player;
 
 to say KatherineOral1:
 	now MaxHP of Katherine is Energy of Katherine;
 	now Energy of Katherine is 7;
 	say "[gsbOralKatherine]";
 	now Energy of Katherine is MaxHP of Katherine;
+	NPCSexAftermath Katherine receives "OralPussy" from Player;
 
 to say KatherinePleasure1:
 	now MaxHP of Katherine is Energy of Katherine;
 	now Energy of Katherine is 7;
 	say "[gsbPleasureKatherine]";
 	now Energy of Katherine is MaxHP of Katherine;
+	NPCSexAftermath Player receives "OralPussy" from Katherine;
 
 Katherine ends here.

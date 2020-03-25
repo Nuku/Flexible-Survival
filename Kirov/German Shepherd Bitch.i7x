@@ -89,6 +89,12 @@ to say gsbDefeat:           [Scene for when the player defeats the GSB]
 			now sortorder entry is 1;
 			now description entry is "Show the bitch a good time by fucking her pussy";
 			[]
+			if gsbKatherine is true and Energy of Katherine > 6:
+				choose a blank row in table of fucking options;
+				now title entry is "Recruit Her";
+				now sortorder entry is 2;
+				now description entry is "Make her YOUR bitch";
+				[]
 		if Player is female:
 			choose a blank row in table of fucking options;
 			now title entry is "Receive Oral";
@@ -117,6 +123,8 @@ to say gsbDefeat:           [Scene for when the player defeats the GSB]
 					now sextablerun is 1;
 					if nam is "Fuck Her":
 						say "[gsbDefeatSex1]";
+					else if nam is "Recruit Her":
+						say "[gsbRecruitSex1]";
 					else if nam is "Receive Oral":
 						say "[gsbDefeatSex2]";
 					else if nam is "Eat Her Out":
@@ -221,7 +229,20 @@ to say gsbPleasureKatherine:
 	say "     The scent of her pussy becomes overwhelming as you bury your face into the fluff surrounding her nethers. You struggle at first to find her lips among the tangle of fur, to which the recovering canine gives a small chuckle. That chuckle turns to a gasp as you finally find your mark, and you begin eagerly licking away. You tighten your grip around her thighs as you set to work, lapping at the bitch's pussy with enthusiasm. As the horny canine's arousal grows, she becomes more bold, and she reaches her paws down to stroke over your head.";
 	WaitLineBreak;
 	say "     Encouraging you with her touch, she keeps you pressed up against her crotch. You rather enjoy the feeling of her fingers trailing through your hair as you eat her out, and you return your attention to the juicy muff before you. You take things up a notch and begin probing between her lips with your tongue. She growls appreciatively at your ministrations, enjoying the attention. You withdraw to bring your tongue to her clit, which elicits a moan and a tightening grip on your head. You play with her like this for some time, swapping between tongue-fucking her and swirling around her sensative nub.";
-	say "     Eventually, the stimulation proves to much for her, and you feel the walls of her pussy clamp down rythmically around your tongue. You pick up the pace as she climaxes, and her femcum splurts across your face. Left panting from your oral skills, the shepherd releases your head and relaxes back into the ground. Licking your lips clean of her juices, you stand back up  to see her totally passed out in bliss. You smile, knowing she's come to love being your bitch, then quickly redress before leaving her to recover.";
+	say "     Eventually, the stimulation proves to much for her, and you feel the walls of her pussy clamp down rythmically around your tongue. You pick up the pace as she climaxes, and her femcum splurts across your face. Left panting from your oral skills, the shepherd releases your head and relaxes back into the ground. Licking your lips clean of her juices, you stand back up to see her totally passed out in bliss. You smile, knowing she's come to love being your bitch, then quickly redress before leaving her to recover.";
+
+to say gsbRecruitSex1:
+	say "     Seeing the dog down on her hands and knees fills you with the desire to take her like the bitch she is. You walk around behind her to get a better view of her ass. The horny slut obliges you, lifting her tail to show off her dripping pussy and looking back at you with a needy whine. You quickly strip naked before kneeling down behind her, allowing your hardening [cock of player] shaft to rest against her slit. You grope her toned butt, enjoying the feel of her soft fur and warm flesh in your hands. Then you reach up and stroke her back, petting her like a dog. 'Are you gonna be a good bitch for me?' you ask.";
+	say "     The German shepherd gives you another needy whine before thrusting backwards, trying to spear herself against you. You quickly grab the scruff of her neck to hold her in place, teasing her entrance, but not yet slipping inside. 'Well?' you ask again.";
+	say "     'Yes!' she barks. 'Yes! I'll be a good bitch. I'll be [italic type]your[roman type] good bitch.' That's what you wanted to hear. You let go of her neck, and she almost knocks you backwards as she eagerly pushes herself onto your cock. You bring your hands to her hips and start to meet her thrusts with your own. Soon you're rutting away at the sexy canine like nothing else matters.";
+	WaitLineBreak;
+	say "     You lean over the bitch's back to get a better angle on her snatch, groping her breasts. You bring your head level with her own, where you can hear her pant and moan with every thrust. 'You know,' you whisper into her hear . 'I could fuck you like this everyday if you come home with me.' You tweak one of her nipples, elicting a sharp yip. 'So what do you say? Wanna come back to my place?'";
+	say "     She doesn't even hesitate to give you her response. 'Yes!' she barks at you again. 'I wanna go home with you. I want you to fuck me and fill me with cum every chance you get. I want to be your bitch, for you to use whenver you want!' The thought of being yours, combined with your enthusiastic thrusting, makes her cum on the spot. You smile at yourself in victory. You've managed to take this strong, powerful canine and tame her. You don't let up, continuing to pound her quivering love-hole.";
+	say "     You finally reach your own climax, moaning as you pump your [cum load size of player] load into her. You slump down on top her, then roll over, bringing her with you. The two of you lay there, recovering from your ordeal. 'I'm Katherine, by the way,' she says to. It catches you off guard, but you suddenly realize you never even knew her name, despite your past encounters. You introduce yourself, and the two of you chitchat for a bit as you cuddle. When you finally get up and redress, you feel like you know Katherine a little better, which is good, since she's decided to move into the ";
+	now Energy of Katherine is 0;
+	NPCSexAftermath Katherine recieves "PussyFuck" from Player;
+	move Katherine to Makeshift Rec Room;
+	now HP of Katherine is 2;
 
 Section 5 - Monster Insertion
 
