@@ -240,7 +240,7 @@ to say gsbRecruitSex1:
 	say "     She doesn't even hesitate to give you her response. 'Yes!' she barks at you again. 'I wanna go home with you. I want you to fuck me and fill me with cum every chance you get. I want to be your bitch, for you to use whenver you want!' The thought of being yours, combined with your enthusiastic thrusting, makes her cum on the spot. You smile at yourself in victory. You've managed to take this strong, powerful canine and tame her. You don't let up, continuing to pound her quivering love-hole.";
 	say "     You finally reach your own climax, moaning as you pump your [cum load size of player] load into her. You slump down on top her, then roll over, bringing her with you. The two of you lay there, recovering from your ordeal. 'I'm Katherine, by the way,' she says to. It catches you off guard, but you suddenly realize you never even knew her name, despite your past encounters. You introduce yourself, and the two of you chitchat for a bit as you cuddle. When you finally get up and redress, you feel like you know Katherine a little better, which is good, since she's decided to move into the ";
 	now Energy of Katherine is 0;
-	NPCSexAftermath Katherine recieves "PussyFuck" from Player;
+	NPCSexAftermath Katherine receives "PussyFuck" from Player;
 	move Katherine to Makeshift Rec Room;
 	now HP of Katherine is 2;
 
