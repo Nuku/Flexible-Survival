@@ -39,7 +39,7 @@ After resolving a Unusual Creature, try looking;
 
 Instead of resolving Unusual Creature:
 	say "     Wandering through the wildly overgrown park, your ears pick up a faint sound and you decide to check it out. Carefully bending aside a branch, you peer into the bushes and see a bipedal deer woman not too far away in the underbrush. She doesn't appear to be wearing clothing and has only the fur on her body to protect her from the elements, which allows you to realize that she's not quite completely female, instead having a thick black shaft dangling between her legs. The hermaphrodite is crying quietly, face buried in her palms and her body curled against a tree. She doesn't react as you slip in closer, not even noticing you until you're almost on top of her. She gasps loudly when she does notice you, throwing herself back against the tree with wide eyes.";
-	say "     'Don't look at me! I'm a monster,' the anthro deer cries out, trying futilely to cover her nonhuman form with arms and hands. Clearly, she's retained a much more human self-image than most infected in the city. Tension and stress is visible in everything from her stance to the somewhat shrill tone of her voice. You can see the muscles in her legs tremble, possibly preparing for all out flight from you.";
+	say "     'Don't look at me! I'm a monster,' the anthro deer cries out, trying futilely to cover her nonhuman form with arms and hands. Clearly, she's retained a much more human self-image than most infected in the city. Tension and stress is visible in everything from her stance to the somewhat shrill tone of her voice. You can see the muscles in her legs tremble, possibly preparing for all out flight from you."; [maybe add her reacting to nonhumans/humans]
 	LineBreak;
 	say "     [bold type]Quick! What do you want to do with the deer?[roman type][line break]";
 	now sextablerun is 0;
@@ -85,7 +85,7 @@ Instead of resolving Unusual Creature:
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     Unsure what to do, you just stand and wait. She eventually stops her crying and looks up at you with a confused expression. 'What do you want?' the anthro deer asks, shifting her weight from one hoof to the other. 'I - I'm Susan. But... aren't you horrified by this freaky body of mine? I mean, you don't seem to be one of the rape-y ones, so what's your deal hanging out with the ugly mutant?' Calmly stating that she's far from that, you smile at her and explain that there's actually someone working on understanding and fixing this whole mess. Susan looks around at the overgrown park, then up at the colossal form of a wyvern circling high in the sky. Finally she shrugs her furred shoulders. 'I really doubt that will work, but I guess I don't have anything better to do,' she muses, then nods for you to lead the way.";
-			say "[SusanLabArrival]"; [this is found in the file Main Storyline.i7x]
+			DrMattSusanLabArrival; [this is found in the file Main Storyline.i7x]
 			now Unusual Creature is resolved;
 			now Resolution of Unusual Creature is 1; [Told Susan to follow you]
 		else:
@@ -96,16 +96,16 @@ Instead of resolving Unusual Creature:
 to say Unusualgrab:
 	say "     With a quick lunge forward, you grab hold of one arm of the long-limbed doe. Her brown fur is soft to the touch under your fingers and pleasantly warm, creating a counterpoint to the woman's shrill squeal of terror and her trying to pull away from you. 'NoNoNoNo! Let me go!' she whimpers while struggling to escape, her whole attention on simply getting away. Not making any aggressive move even in a situation like this, you don't have too hard a time curtailing all attempts of escape and soon pin her against the tree, arms held down against her sides. She seems to resign herself to being your prisoner after another moment or two, then finally says, 'I - I give up. P-please be gentle, alright? I'm Susan.' Clearing your throat, you explain that you're not actually here for any sort of sex and instead just want to bring her to someone who's working on understanding and fixing this whole mess.";
 	say "     Susan looks left and right at the overgrown park, then up at the colossal form of a wyvern circling high in the sky. Finally she shrugs her furred shoulders. 'I really doubt that will work. Or maybe it will work, if the guy has his own goon squad.' The last sentence is said sullenly, with her gaze resting straight on yourself, prompting you to soften your grasp a little and apologizing for being a little rough. But of course, who knows what trouble she may have run into if you had let her go. This argument mollifies the anthro doe a little, until she finally says, 'Fine. Okay. Maybe you are right. I'll meet your scientist buddy.' Then she nods for you to lead the way.";
-	say "[SusanLabArrival]"; [this is found in the file Main Storyline.i7x]
+	DrMattSusanLabArrival; [this is found in the file Main Storyline.i7x]
 	now Unusual Creature is resolved;
 	now Resolution of Unusual Creature is 2; [Grabbed Susan]
 
 to say Unusualconsole:
 	project the Figure of Susan_face_icon;
-	say "     Raising your hands in a consoling gesture and smiling at her, you tell the anthro doe that she has nothing to fear from you and is far from being a monster. There is a slight pause in her sobbing and she looks doubtfully past her hands, really focusing on you for the first time. Slowly reaching out, you hold an open hand for her to take, which she does with some hesitation. Rubbing your thumb gently over the soft fur of her hand, you tell her that she's not ugly at all. 'B-but I'm a freak. A creature just like all of those... those feral beasts!' she sniffs. Giving her further encouraging words, she slowly warms up to you, then leans in against your chest, prompting you to put a hand on her shoulder. This must have been some sort of signal to her, as she suddenly pulls you even closer and kisses your mouth firmly, her slender snout up against your face for a long moment. 'I'm Susan,' the young woman says with a hopeful tone, for the first time daring to believe that someone could want her even as she is now.";
+	say "     Raising your hands in a consoling gesture and smiling at her, you tell the anthro doe that she has nothing to fear from you and is far from being a monster. There is a slight pause in her sobbing and she looks doubtfully past her hands, really focusing on you for the first time. Slowly reaching out, you hold an open hand for her to take, which she does with some hesitation. Rubbing your thumb gently over the soft fur of her hand, you tell her that she's not ugly at all. 'B-but I'm a freak. A creature just like all of those... those feral beasts!' she sniffs. Giving her further encouraging words, she slowly warms up to you, then leans in against your chest, prompting you to put a hand on her shoulder. This must have been some sort of signal to her, as she suddenly pulls you even closer and kisses your mouth firmly, her slender snout up against your face for a long moment. 'I'm Susan,' the young woman says with a hopeful tone, for the first time daring to believe that someone could accept her even as she is now.";
 	say "     As you explain that there's actually someone working on understanding and fixing this whole mess, Susan looks around at the overgrown park, then up at the colossal form of a wyvern circling high in the sky. Finally she shrugs her furred shoulders. 'I really doubt that will work, but I guess I'll come. For you. I hope it'll help,' she says quietly, then nods for you to lead the way.";
-	say "[SusanLabArrival]"; [this is found in the file Main Storyline.i7x]
-	now deerconsent is 1;
+	DrMattSusanLabArrival; [this is found in the file Main Storyline.i7x]
+	now Loyalty of Susan is 1; [consoled or fucked]
 	now Unusual Creature is resolved;
 	now Resolution of Unusual Creature is 3; [Consoled Susan]
 
@@ -113,14 +113,13 @@ to say Unusualfuck:
 	project the Figure of Susan_face_icon;
 	say "     Just going ahead and pulling your [Cock of Player] cock out, you lunge forward and grab hold of the long-limbed doe. She doesn't have time to do much more than let out a frightened squeal before she is pushed down to the ground, falling onto the leaves with her belly up. It doesn't look like there is any aggressive bone at all in her body, as she doesn't try to defend herself even in this situation, allowing you to spread her legs wide with ease. 'No, wait! I- oooohhhhHH!' she starts to say, then gasps out loud as you hammer into her wet, receptive pussy. The hermaphrodite doe feels amazing around your cock, both her nether lips as well as her furry balls stroking the sides of your shaft as it slides in and out. The shocked squeals of your first entry into her soon give way to sounds of pleasure as she adapts, raising her hips to meet your powerful thrusts before much longer. Your bodies dance together, her own cock grinding against your belly each time you plunge deep into her.";
 	say "     As the climax of a quick, wild romp on the forest floor, the doe's cunt suddenly tightens like a vice around you. With a bleat of delight, she writhes under you, hands digging grooves into the ground left and right as her cock fountains thick spurts of cum to splatter all over her chest and breasts. You can feel your balls clenching in response, with the muscle contractions of her twitching pussy driving you over the edge right along with the anthro herm. Grunting out loud, you fill her belly with hot gushes of seed while grinding against her crotch. As the pleasure of your shared orgasms eventually ebbs off, you smile down at the sexy woman you've claimed for yourself by right of breeding. 'I guess I'm your woman now. I'm Susan, by the way,' she says in a somewhat star-struck tone. Postponing any reply about that, you clear your throat and explain that you didn't originally come here just to fuck her and say that someone important wants to meet her. 'Oh, okay then. I'll come, just lead the way,' she says with a nod, and indeed does so after you pull out and guide her from the park.";
-	say "[SusanLabArrival]"; [this is found in the file Main Storyline.i7x]
-	now deerconsent is 1;
+	DrMattSusanLabArrival; [this is found in the file Main Storyline.i7x]
+	now Loyalty of Susan is 1; [consoled or fucked]
 	now Unusual Creature is resolved;
 	now Resolution of Unusual Creature is 4; [Fucked Susan]
 
 Section 2 - NPC Basics
 
-deerconsent is a number that varies.
 Susanoversize is a truth state that varies. Susanoversize is usually false.
 Susanfirsttime is a number that varies. Susanfirsttime is usually 0
 
@@ -135,22 +134,31 @@ The fuckscene of Susan is "[sexwithSusan]".
 to say Susandesc:
 	project the Figure of Susan_face_icon;
 	if debugactive is 1:
-		say "DEBUG ->  HP: [HP of Susan], deerconsent: [deerconsent], Susanoversize: [if Susanoversize is true]True[else]False[end if]  <- DEBUG[line break]";
+		say "DEBUG ->  HP: [HP of Susan], Loyalty of Susan: [Loyalty of Susan], Susanoversize: [if Susanoversize is true]True[else]False[end if]  <- DEBUG[line break]";
 	if HP of Susan is 52 and hospcountdown - turns >= 16 and hospquest >= 18 and lastfuck of Susan - turns < 4:
 		say "[Susanlabcoatscene]";
 	else if HP of Susan is 3:
 		say "     Susan is a bipedal deer with soft brown fur and creamy off-white belly and undertail standing a little over six feet tall. Her nose, ear-tips and hands are darker in hue, creating an interesting pattern of fur overall. She's grown in size since you first found her, her body a mix of masculine strength and feminine sensuality. She has broadened shoulders and chest, but a slender waist and girly hips. Her arms and legs are still slender and effeminate, but have gained increased strength to match her enlarged form.";
 		say "     Her head is now crowned by an impressive rack of antlers and Susan's face is somewhere between that of a strong buck and a delicate doe. Her male genitals have grown as part of her transformation, giving her a foot-long cock and balls the size of juicy lemons. She has a hungry, lustful look in her eyes, one hand usually straying to her cock, stroking it almost absent-mindedly. Despite her animalistic appearances, she has hair like a human, running down to a little past her shoulders, a little darker than the brown fur of the majority of her form.";
 	else if HP of Susan < 52:
-		say "     Susan is a bipedal deer with soft brown fur and creamy off-white belly and undertail standing about 5['] 6'. Her nose, ear-tips and hands are darker in hue, creating an interesting pattern of fur overall. She has large cream covered breasts capped with thick black teats. She has a hungry, lustful look in her eyes, one hand usually straying to her cock, stroking it almost absentmindedly. It is disturbingly human in appearance, ebon-black fleshed with a cream sheath at the base. She has large, plum-sized balls contained in a creamy colored, softly furred sac. Despite her animalistic appearances, she has hair like a human, running down to a little past her shoulders, a little darker than the brown fur of the majority of her form.";
+		say "     Susan is a bipedal deer with soft brown fur and creamy off-white belly and undertail standing about 5['] 6['][']. Her nose, ear-tips and hands are darker in hue, creating an interesting pattern of fur overall. She has large cream covered breasts capped with thick black teats. She has a hungry, lustful look in her eyes, one hand usually straying to her cock, stroking it almost absentmindedly. It is disturbingly human in appearance, ebon-black fleshed with a cream sheath at the base. She has large, plum-sized balls contained in a creamy colored, softly furred sac. Despite her animalistic appearances, she has hair like a human, running down to a little past her shoulders, a little darker than the brown fur of the majority of her form.";
 	else if HP of Susan < 73:
 		say "     Susan is a bipedal deer with soft brown fur and creamy off-white belly and undertail standing a little over six feet tall. Her nose, eartips and hands are dark hues. She's grown in size since you first found her, her body a mix of masculine strength and feminine sensuality. She has broadened shoulders and chest, but a slender waist and girly hips. Her arms and legs are still slender and effeminate, but have gained increased strength to match her enlarged form. Atop her head is now an impressive rack of antlers and her face is somewhere between that of a strong buck and a delicate doe.";
 		say "     She's been provided a lab coat while working with Dr. Mouse. She's hemmed it slightly so better fit her altered body. It covers those large, black teated breasts of hers as well as her plump, ebon-black fleshed cock and creamy furred sheath and balls. Her male genitals have grown as part of her transformation, giving her a foot-long cock and balls the size of juicy lemons. She frequently slips a hooved hand into her coat to absentmindedly fondle her manhood. She looks at you with increased confidence, though she still has that hungry, lustful look in her eyes. Despite her animalistic appearances, she has hair like a human, running down to a little past her shoulders, a little darker than the brown fur of the majority of her form.";
 	else:
-		say "     Susan is a bipedal deer with soft brown fur and creamy off-white belly and undertail standing about 5['] 6'. Her nose, ear-tips and hands are darker in hue, creating an interesting pattern of fur overall. She's been provided a lab coat while working with Dr. Mouse. She's hemmed it slightly so it better shows her effeminate body. It covers those large, black teated breasts of hers as well as her ebon-black fleshed cock and creamy furred sheath and balls. She frequently slips a hoofed hand into her coat to absentmindedly fondle it. She has a hungry, lustful look in her eyes, her infected body keeping her quite aroused. Despite her animalistic appearances, she has hair like a human, running down to a little past her shoulders, a little darker than the brown fur of the majority of her form.";
+		say "     Susan is a bipedal deer with soft brown fur and creamy off-white belly and undertail standing about 5['] 6['][']. Her nose, ear-tips and hands are darker in hue, creating an interesting pattern of fur overall. She's been provided a lab coat while working with Dr. Mouse. She's hemmed it slightly so it better shows her effeminate body. It covers those large, black teated breasts of hers as well as her ebon-black fleshed cock and creamy furred sheath and balls. She frequently slips a hoofed hand into her coat to absentmindedly fondle it. She has a hungry, lustful look in her eyes, her infected body keeping her quite aroused. Despite her animalistic appearances, she has hair like a human, running down to a little past her shoulders, a little darker than the brown fur of the majority of her form.";
 
 instead of sniffing Susan:
 	say "The herm deer has a mix of doe and buck scents, heavy with arousal and longing.";
+
+to FeralizeSusan:
+	now HP of Susan is 1;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
+		if Name entry is "Deer":
+			now MonsterID is y;
+			break;
+	now area entry is "Park";
 
 instead of conversing the Susan:
 	project the Figure of Susan_face_icon;
@@ -161,34 +169,54 @@ instead of conversing the Susan:
 	else if hospquest >= 19:
 		if BodyName of Player is "Enhanced Chimera":
 			now ec_check is true;
-	if HP of Susan < 2:
-		if deerconsent is 0:
-			say "     Rather than talk to you, she avoids you entirely. Eventually you give up in trying to approach her at all as she storms off to another part of the building.";
+	if HP of Doctor Matt < 7:
+		say "     Maybe you should talk to Dr. Matt first and learn about the results of his examination.";
+	else if HP of Susan < 2:
+		if Resolution of Unusual Creature < 3: [not consoled/fucked]
+			say "     As you approach, Susan gives you an annoyed look, 'What, you drag me over here to be prodded and poked, then want to chat like nothing has happened? Hope your boss got all he needed, because I've had my fill of this place!' With that, she starts a light-footed dash to a side door leading to another part of the building. You do your best to catch up and bring her back, to no great avail as the deer demonstrates her speed and dexterity, always escaping you no matter what you do. She must have memorized the floorplan of the building you think you remember from a wall in the lab, and leads you for a merry chase before eventually reaching an emergency exit far away from the lobby and Orthas, running off into the city through it. As you return to Dr. Matt alone some time later, he gives you a deflated look, shaking his head and murmuring, 'Such a pity, to lose out on an opportunity like this.'";
 			now Susan is nowhere;
-			now deerconsent is 2;
-		else if deerconsent is 1:
-			say "     She smiles as you approach her, and reaches to take one of your hands. 'Ignore the creep in the hazmat,' she says. 'This is just about us. I want a mate, a partner. Will you be it?' she asks as she leans in and licks your hand once. Her eyes roam hopefully over your [bodydesc of Player] form with perked ears and a twitching tail.";
-			say "     [bold type]Will you agree to be her mate?[roman type][line break]";
-			LineBreak;
-			say "     ([link]Y[as]y[end link]) - You do agree to be the little herm's mate.";
-			say "     ([link]N[as]n[end link]) - You think the doe and you should see other people.";
-			if Player consents:
-				if "Female Preferred" is listed in feats of Player:
-					say "     She sniffs you with some concern, 'Oh dear, uh, pun not intended. You simply cannot be my stag. I can smell it. So I will be the stag.' She playfully slaps your ass and gives you an impish smile. Warm tingles sweep over your form as change is felt building. 'Go talk to the doctor. I will wait for you.'";
+			now Loyalty of Susan is 99; [she ran off]
+			FeralizeSusan; [making her an enemy in the park]
+			now HP of Doctor Matt is 8; [post-Susan]
+		else if Resolution of Unusual Creature > 2: [player consoled or fucked her]
+			[todo: address her feelings about being a herm]
+			if Loyalty of Susan is 1: [player intends to go the medical route]
+				say "     Susan smiles as you approach, her long ears flicking a little before she says, 'I overheard what you two discussed. About wanting to get a sample of what made me like this and seeing if it affects you. I - um, I'm not saying I don't want to do that, but... [if Resolution of Unusual Creature is 3]I thought there may be more, between the two of us. You've been the first who showed me any compassion since all of this happened, and I think I'd prefer a more intimate option.' [else]with the way you just took control over me before. Held me down to take me like a proper stag, that makes me think there's more between the two of us. [end if]Biting her lip, she looks at you shily, and she surely would be blushing if she didn't have fur all over. 'What I mean to say is this: [bold type]Will you be my mate and we can do it together? And you'll stay with me if we both end up as deer?[roman type]'";
+				LineBreak;
+				say "     ([link]Y[as]y[end link]) - Yes, agree to be the little herm's mate.";
+				say "     ([link]N[as]n[end link]) - You'd still prefer if it was simply a medical study between you.";
+				if Player consents:
+					if "Female Preferred" is listed in feats of Player:
+						say "     She lets out a happy little shout and throws her arms around you, plastering herself against your body as she kisses you on the mouth. A moment later though, she pulls back a little bit, sniffing you with some concern, 'Oh dear, uh, pun not intended. You simply cannot be my stag. I can smell it. So I will be the stag.' She playfully slaps your ass and gives you an impish smile. Warm tingles sweep over your form, and it almost feels like an electric charge is building between the two of you. 'I'm so eager for us to do it, even if Dr. Matt has to be there to watch us! Go tell him we're ready!'";
+					else:
+						say "     She lets out a happy little shout and throws her arms around you, plastering herself against your body as she kisses you on the mouth. 'Fantastic! I will be your doe, and you will be my stag,' she says with a dreamy sigh. Warm tingles sweep over your form, and it almost feels like an electric charge is building between the two of you. 'I'm so eager for us to do it, even if Dr. Matt has to be there to watch us! Go tell him we're ready!'";
 					deerfy;
-					now deerconsent is 2;
+					now Loyalty of Susan is 4; [Player became Susan's mate]
 				else:
-					say "     'Really! Fantastic. I will be your doe. You will be my stag,' she says with a dreamy sigh. She wraps her arms around you in a firm hug, pressing needfully against you. Warm tingles sweep over your form as change is felt building. 'Go talk to the doctor. I will wait for you.'";
+					say "     'Oh,' Susan says quietly, looking crushed at your refusal. 'I - I guess I was mistaken then.' She turns away so you don't see her wipe a tear from her eye, not looking at you as she adds, 'Go talk to the doctor, I'll be along in a little while then.'";
+					now Loyalty of Susan is 3; [player refused to be her mate, Susan's sad but not crushed, will go stay with Orthas later]
+			else if Loyalty of Susan is 2: [player wants to lay her]
+				say "     Susan smiles as you approach, her long ears flicking a little before she says, 'I overheard what you two discussed. About you wanting to have sex with me! [if Resolution of Unusual Creature is 3]Ever since we met, I thought there may be more, between the two of us. You've been the first who showed me any compassion since all of this happened, and I'd be happy to spend some intimate time with you.' [else]Given the way you just took control over me before, I knew we were made for each other. You held me down to take me like a proper stag, I want to feel that way again!' [end if]Biting her lip, she looks at you shily, and she surely would be blushing if she didn't have fur all over. 'So, [bold type]will you be my mate and we can do it together? And you'll stay with me if we both end up as deer?[roman type]'";
+				LineBreak;
+				say "     ([link]Y[as]y[end link]) - Yes, agree to be the little herm's mate.";
+				say "     ([link]N[as]n[end link]) - On second thought, she seems pretty clingy. Maybe you'd be best advised not to start something with Susan...";
+				if Player consents:
+					if "Female Preferred" is listed in feats of Player:
+						say "     She lets out a happy little shout and throws her arms around you, plastering herself against your body as she kisses you on the mouth. A moment later though, she pulls back a little bit, sniffing you with some concern, 'Oh dear, uh, pun not intended. You simply cannot be my stag. I can smell it. So I will be the stag.' She playfully slaps your ass and gives you an impish smile. Warm tingles sweep over your form, and it almost feels like an electric charge is building between the two of you. 'I'm so eager for us to do it, even if Dr. Matt has to be there to watch us! Go tell him we're ready!'";
+					else:
+						say "     She lets out a happy little shout and throws her arms around you, plastering herself against your body as she kisses you on the mouth. 'Fantastic! I will be your doe, and you will be my stag,' she says with a dreamy sigh. Warm tingles sweep over your form, and it almost feels like an electric charge is building between the two of you. 'I'm so eager for us to do it, even if Dr. Matt has to be there to watch us! Go tell him we're ready!'";
 					deerfy;
-					now deerconsent is 2;
-			else:
-				say "     She looked crushed at your refusal, but instead of arguing the case further, just sulks and wanders off.";
-				now Susan is nowhere;
-				now deerconsent is 2;
-		else if deerconsent is 2:
+					now Loyalty of Susan is 4; [Player became Susan's mate]
+				else:
+					say "     'Oh,' Susan says quietly, looking crushed at your sudden change of mind. 'But, but - I thought you wanted me! Guess I'm too much of a freak after all!' Before you can even begin to say or to anything, the sobbing young woman already has dashed to a side door leading to another part of the building and is through it. You do your best to catch up and bring her back, to no great avail as the deer demonstrates her speed and dexterity, always escaping you no matter what you do. She must have memorized the floorplan of the building you think you remember from a wall in the lab, and leads you for a merry chase before eventually reaching an emergency exit far away from the lobby and Orthas, running off into the city through it. As you return to Dr. Matt alone some time later, he gives you a deflated look, shaking his head and murmuring, 'Such a pity, to lose out on an opportunity like this.'";
+					now Susan is nowhere;
+					now Loyalty of Susan is 99; [player refused to be her mate, Susan ran off]
+					FeralizeSusan; [making her an enemy in the park]
+					now HP of Doctor Matt is 8; [post-Susan]
+		else if Loyalty of Susan > 0:
 			say "     'You should go talk to the doctor first. I will wait for you.'";
 	else if HP of Susan is 2:
-		try fucking the Susan;
+		say "     Susan smiles and lays her arms around you, giving you a peck on the cheek and nodding to the bed. 'So, time to go for it then, my mate!' The eagerness to spend some intimate moments with you is audible in her voice, and the lithe herm is half-hard already from her excitement.";
 	else if HP of Susan is 3:
 		say "     '[one of]I guess it's alright living here. I mean, the doctor's nice enough... though he does look at me oddly at times.'[or][if doecheck is true]I'm so glad you decided to be my mate,' she says happily[else]Please don't forget about me when all of this is over,' she says with concern[end if].[or][if lastfuck of Susan - turns >= 4]We should have some more fun again soon,' she says eagerly[else]This transformation's made me so excitable. With the way I'm feeling, I think I'll be ready for another round of fun soon,' she says, stretching and thus inadvertently putting her sexy doe-buck body on display[end if].[or]You're such a brave doe to keep going out there. I was so, so scared and confused that I almost broke down completely. Thank you for finding and helping me,' she says affectionately.[or]There's not too much to do around here when you're not around. Dr. Matt doesn't want me touching stuff and I don't think that scary dragon downstairs likes me very much.'[or][if HP of Orthas > 3]I don't like how that dragon downstairs looks at you, my deer[else]I don't think that scary dragon downstairs likes me very much[end if].'[at random]";
 	else if HP of Susan >= 4 and HP of Susan < 50:
@@ -257,9 +285,6 @@ to say sexwithSusan:
 		say "     She blushes and nudges you, 'You should talk to the Doctor first.'";
 	else if HP of Susan is 52 and hospcountdown - turns >= 16 and hospquest >= 18:
 		say "[Susanlabcoatscene]";
-	else if Libido of Player < 50:
-		say "     She rubs up against you gently and runs her hands across your [Skin of Player] chest. 'It is good to see you,' she whispers as she snuggles close to your [bodytype of Player] body, but makes no attempt to push it further than soft chatter and close hugs.";
-		deerfy;
 	else:
 		say "[SusanSexMenu]";
 
@@ -341,6 +366,7 @@ to say SusanSexMenu:
 					say "[SusanSex6]";
 				else if nam is "Let Susan fuck your ass":
 					say "[SusanSex7]";
+				now lastfuck of Susan is turns;
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -352,21 +378,16 @@ to say SusanSexMenu:
 
 to say SusanSex1: [fuck Susan]
 	say "     She grabs directly for your [cock size desc of Player] [Cock of Player] cock and grins up at you as she strokes it, 'It is just right,' she declares as she pushes you back to the ground, guiding you to lay down and slipping up on top of you. Her warm frame presses softly as it goes and she lines herself up, one hand holding the thick tip of your member, the other parting her nethers. She sinks down along your member, shuddering as it fills her grasping tunnel perfectly. Her wet labia sink down to your groin as she settles on you, breathing hard and just enjoying the feelings for the moment as she gazes into your eyes with a burning affection.";
-	WaitLineBreak;
 	say "     You reach for her sides, trailing upwards and caressing her chest. Fingers catch thick black teats and her back arches towards you as you flick and tease at them. Her hips raise and fall a few inches at a time, wetly sliding across your excited member, wedged deep inside of her. Her own member stands stiff and proud, twitching with her pleasure and dripping thick bits of clear precum along its length and onto your [bodytype of Player] body even as she rides against you, taking your cock deeper with every drop of her curvy form against you. Your hips are soon moving faster, driving up, bouncing her in firm shuddering motions. Her breasts heave against your grasping hands are you hold her, drawing her down against your increasingly frantic ruts.";
 	WaitLineBreak;
 	say "     She leans back away from your hands, her hands settling on the ground as she bends almost backwards, rutting in a bent position. Your hands find her belly and sides, rubbing and caressing her, hungry eyes taking in the bulge that your own cock creates along her belly, stretched taut in her new position. She moans softly as her shaft tenses and begins to fire, splattering herself with her seed as it arcs through the air in powerful streams. A small part of yourself wonders what it would feel like to be filled with that same seed, but that part is quieted for the moment as your own shaft tenses and lurches, filling the willing doe with your fertile offering.";
-	WaitLineBreak;
 	say "     She straightens, then flops on top of you, squirming as you round her with your cum. Her messy front presses stickily to your [bodydesc of Player] body as she hugs tightly to you, heedless of the sticky warmth she shares with you. When your shaft has calmed and lays half firm within her, she leans up to kiss you on either cheek. 'I love you,' she whispers. You smile, grabbing her at the bottom and squeezing her close to snuggle for a moment, enjoying the peace before you are forced to return to other tasks.";
-	now lastfuck of Susan is turns;
 	deerfy;
 	if HP of Susan is 2:
 		now HP of Susan is 4;
 
-
 to say SusanSex2: [small penis fuck]
 	say "     She kneels down in front of you and cups your [cock size desc of Player] [Cock of Player] tool gently, stroking along it with the bare tips of her furry fingers. She firmly strokes along your swiftly hardening shaft as she gazes up into your eyes, 'My great buck, you need to be as large on the outside, as you are on the inside.' You aren't entirely sure what part of you is big on the inside, but cease to care as her snout descends over your cock and begins to suckle noisily at you. Her skilled fingers dip lower to caress your [Ball Size Adjective of Player] orbs in slow teasing as she bobs against you, working you to greater heights as the tingle of change sweeps through you, intensifying with every passing moment.";
-	WaitLineBreak;
 	say "     The pleasure haze ebbs just slightly as she pulls free of you and returns to slow stroking, 'Still not quite large enough to sate me, my virile buck. We will just wait a little longer.' Her tail wags behind her excitedly as she leans in to lap over the head of your shaft, insufficiently sized or not, and her strokes become firm and fast. Your groans mix with her own as if she could feel your pleasure as if it were within her own body. She squeezes at your entire member with her softly furred paws and your balls clench. Your seed sprays in great milky shots across her long snout, drawing a soft bleat of approval from her. Her long tongue darts to collect the treasure as she raises to her feet, 'Come back later, we can try again.'";
 	deerfy;
 	if HP of Susan is 2:
@@ -374,7 +395,6 @@ to say SusanSex2: [small penis fuck]
 
 to say SusanSex3: [Hyper Fuck]
 	say "     Susan eyeballs your [cock size desc of Player] shaft a moment before she shakes her head vigorously. 'That's got to be too large for me,' she exclaims, then leans in. 'Isn't it?' The sexy doe takes in the scent of your manhood with a soft, needy sigh and then lets her warm tongue bathe across it. She strokes your [Cock of Player] pole with her soft palms and gives you another moaning lick. Pleasant tingles run through your loins as she continues to lather your cock with her tongue until it's glistening with her saliva.";
-	WaitLineBreak;
 	say "     The two of you kiss and snuggle for a while after sex. You run your hands over her [if Ball Size of Player > 6]cum-swollen belly[else if Ball Size of Player > 5]visibly rounded tummy[else]soft tummy[end if] while she caresses your sides. 'Ooo! That was... wow! It's hard to believe I managed to fit that huge cock of yours. Guess it's another crazy thing about that crazy world. Ohhh... though I think I'm going to need a bit of a break before going again after that,' she says, brushing her fingertips across her stretched, swollen and leaking pussy.";
 	now Susanoversize is true;
 	deerfy;
@@ -383,20 +403,16 @@ to say SusanSex3: [Hyper Fuck]
 
 to say SusanSex4: [Hyper Fun]
 	say "     Susan eyeballs your [cock size desc of Player] shaft with wide-eyed amazement. 'I was so surprised you could take me with that big cock of yours before. Let's go for it again. Just... just go slow,' she adds, your impressive size still quite daunting. The sexy doe leans in and takes in the scent of your manhood with a soft, needy sigh. Her soft warm tongue bathes over your [Cock of Player] pole as she strokes it with her soft palms. Pleasant tingles run through your loins as she continues to lather your cock with her tongue until it's glistening with her saliva.";
-	WaitLineBreak;
 	say "     You guide the pretty doe to lay on her back and spread her legs. Now longing for the [cock size desc of Player] cock she's been worshiping so ardently, she puts her arms around you as you get into position atop her. Lining up your cock to her juicy pussy, you lock your lips to hers and ease forward[if Cock Length of Player > 24]. You go extra slow for your delicate doe, letting her cervine cunt adjust and stretch to accept your massive meat[else]. You go slow for your loving doe, letting her cervine cunt adjust and stretch to fit your oversized meat[end if]. Susan moans into the kiss and hugs you all the tighter, her body quivering in delight as she's penetrated to fully.";
 	WaitLineBreak;
 	say "     As you break the kiss and lean up, you're treated to the lovely sight of your cervine lover panting in pleasure as you fuck her. Her cream-furred breasts jiggle and nicely with every large thrust of your pulsing rod into her[if Cock Length of Player >= 36]. Her chest is stretched visibly by your titanic member's phallic shape[else if Cock Length of Player >= 24]. Her tummy is stretched by your mighty member to raise a phallic bulge that moves with every thrust[else]. Her tummy shows a notable bulge from having your large member stuffed inside her[end if]. She rubs a paw over her plumped tummy in blissful awe.";
-	WaitLineBreak;
 	say "     'Do it. Do it, my big buck. Give it to me and fill your needy doe-oh-oh-oooooh!' she calls out in orgasmic delight. The feeling of having her hot tunnel squeeze and quiver around you as her femcum soaks your crotch is wonderful. It's so good, you can't hold back for long before you two are crying out in climactic release. You pump your [Cum Load Size of Player] load into the moaning doe, painting her uterus with your semen.";
 	deerfy;
 	if HP of Susan is 2:
 		now HP of Susan is 4;
 
 to say SusanSex5: [Susan Sucks the player]
-	say "     Kneeling before you Susan holds you [Cock of Player] rod. The doe starts caressing it with her hands and tongue to full hardness and taking it into her snout. You feel her tongue on the back of your cock while she moves it doing her best to keep your arousal growing. With this talent, it's hard to keep yourself from cumming right then and there, but with some strength of mind, you keep yourself in check. Sometimes she goes slow and tastes your [Cock of Player] cock, especially all the pre you keep feeding her.";
-	WaitLineBreak;
-	say "     Your horny lover finally lets your rod free. Looking at her to look for an answer on why she would suddenly stop, you can see only a smile and those breasts being pressed against your cock. The deer presses your cock, now fully lubed with her saliva, between her orbs. Her eyes keep staring at you amusedly as those breasts are massaging you.";
+	say "     Kneeling before you Susan holds you [Cock of Player] rod. The doe starts caressing it with her hands and tongue to full hardness and taking it into her snout. You feel her tongue on the back of your cock while she moves it doing her best to keep your arousal growing. With this talent, it's hard to keep yourself from cumming right then and there, but with some strength of mind, you keep yourself in check. Sometimes she goes slow and tastes your [Cock of Player] cock, especially all the pre you keep feeding her. Your horny lover finally lets your rod free. Looking at her to look for an answer on why she would suddenly stop, you can see only a smile and those breasts being pressed against your cock. The deer presses your cock, now fully lubed with her saliva, between her orbs. Her eyes keep staring at you amusedly as those breasts are massaging you.";
 	say "     When she is satisfied with your face, she goes back to sucking you. The feeling of both her mouth and the slick press of her breasts around your [Cock of Player] length get you so close to cumming that you close your eyes for a moment. Feeling some vibrations running in your cock, you know that she is amused with this	occurrence. You feel her saliva pooling between her breasts and your cock, exciting you to a point of only pleasure. The doe hungers more and more for your seed, and you intend to give it her.";
 	WaitLineBreak;
 	say "     You push her head against your groin, penetrating her throat fully. She struggles with the sudden push and invasion but is quick to get used to it. You wait no time and feed her a huge dose of your semen. Rope after long, thick rope of seed you fill her tummy with gusto. When you finally release her head she pulls back with a string of semen still connected to your penis which she cleans quickly. 'Thanks for the meal,' you hear her say with a wink before you get ready for your adventures.";
@@ -406,10 +422,9 @@ to say SusanSex5: [Susan Sucks the player]
 
 to say SusanSex6: [Susan fucks Pussy]
 	say "     You kiss the little doe lips, putting your hand on that ebony cock and pulling your lover to her cot. You keep pulling the doe by her cock until you start lining it up with your pussy. [if Susanfirsttime is 0]First you feel the head of her cock, pushing your lips open, and right after she penetrates you completely without warming. You wince from the pain of the sudden invasion, but she doesn't stop. Susan keeps fucking you with eagerness and without experience. As she does so, her body suddenly shifts a little, bulking up - especially at the chest and shoulders. She transitions into a strong and sexy doe-buck that is an attractive mix of the feminine and the masculine. [end if]With ease, she slides that dark cock in your tight pussy. Now used to you and to your body, she keeps pushing while hitting all the right spots, making you almost cum time and time again. Her thrusts get faster as she lets you get more used to her new size, stretching your inner walls until her cock is all the way in and hitting the entrance of your womb.";
-	WaitLineBreak;
 	say "     Trying to hold on something to keep yourself stable you end up hugging her neck - and hear her long breaths in your ear. Hearing her grunts and sexy noises makes you feel happy and connected with your deer lover. You feeling your [Skin of Player] skin against her fur and smell her now strong musk. You let yourself get lost in her body. Feeling the doe cock slamming into you making you almost jump from her arms. Her balls are heavy with a need to be emptied inside you. Now all you can do is let her do what she wants to do with you.";
-	say "     The horny deer keeps trusting into your needy pussy. You can feel her whole cock, all her veins pulsating and sending her heartbeat to your body. You feel yourself orgasming first, your mind goes blank and your body holds her closer. Her balls move and compact as her climax comes to her - your own orgasm grips the black rod that is inside you, begging to be bred by that delicious cock. Your pussy's calls are answered as she finally penetrates your womb, filling it with her potent seed and painting everything inside your womb her color, doing her best to make you pregnant.[impregchance]";
 	WaitLineBreak;
+	say "     The horny deer keeps trusting into your needy pussy. You can feel her whole cock, all her veins pulsating and sending her heartbeat to your body. You feel yourself orgasming first, your mind goes blank and your body holds her closer. Her balls move and compact as her climax comes to her - your own orgasm grips the black rod that is inside you, begging to be bred by that delicious cock. Your pussy's calls are answered as she finally penetrates your womb, filling it with her potent seed and painting everything inside your womb her color, doing her best to make you pregnant.[impregchance]";
 	say "     When both of you come back from ecstasy you two find each other hugging and heavily breathing. She kisses you and lets you go back to your adventures.";
 	deerfy;
 	if Susanfirsttime is 0:
@@ -438,10 +453,9 @@ to say Susanlabcoatscene:
 		else:
 			now x is 0; [refuse]
 	if x is 1:
-		say "     Smiling up at your lover, you willingly spread your legs and raise your hips, welcoming her into you. She thrusts her ebon rod into you, sinking it [if Player is female]sensually into your needy cunny[else]slowly into your tight asshole[end if]. She gives a long, moaning bleat of happiness as she penetrates you, fucking someone for the first time.";
-		say "     'Mmmm yeah! That's so nice. I should do this more often,' she pants between thrusts. Growing more excited, she leans over you with her hands on your shoulders as she pounds into you. 'You feel so good, baby. Why didn't I do this before? Being the buck's great.'";
-		WaitLineBreak;
+		say "     Smiling up at your lover, you willingly spread your legs and raise your hips, welcoming her into you. She thrusts her ebon rod into you, sinking it [if Player is female]sensually into your needy cunny[else]slowly into your tight asshole[end if]. She gives a long, moaning bleat of happiness as she penetrates you, fucking someone for the first time. 'Mmmm yeah! That's so nice. I should do this more often,' she pants between thrusts. Growing more excited, she leans over you with her hands on your shoulders as she pounds into you. 'You feel so good, baby. Why didn't I do this before? Being the buck's great.'";
 		say "     Susan fucks you hard and rough, though more from inexperience and over-eagerness than callousness. If anything, her cervine face smiles down at you with even greater affection and you can't help but feel your bond with her growing as well. So focused are you on looking into her doey eyes that you miss at first how your pretty doe is changing. She bulks up, especially at the chest and shoulders, as her body gets stronger. She transitions into a strong and sexy doe-buck that is an attractive mix of the feminine and the masculine.";
+		WaitLineBreak;
 		say "     If the wonderful sensations from your [if Player is female]vagina[else]ass[end if] are to be believed, her body is not the only thing to have changed. Her cock has definitely added a couple more inches inside you as well, adding to your pleasure. As antlers start to sprout from the top of her head, she releases a long pent-up cry of lustful release as she climaxes. Throughout her climax, they rapidly grow up and outwards until she has an impressive rack and Susan has fully become a strong and sexy doe-buck. You feel an orgasmic rush of delight as her potent semen flows into you, spreading her altered doe-buck infection to you as well.[impregchance]";
 		now Libido of Susan is 1;
 		now HP of Susan is 73;
@@ -451,11 +465,8 @@ to say Susanlabcoatscene:
 			now Cunt Depth entry is 12;
 			now Cunt Tightness entry is 8;
 	else:
-		say "     Taking the doe by the shoulders, you roll the both of you over on the cot. She gives a playful giggle. 'Oh, I think someone's also feeling randy.' With one hand guiding your cock into her, you grab her black penis with the other. She moans as you slide into her wet cunny and start stroking her throbbing manhood. It twitches and pulses in your grip, leaking precum steadily.";
-		say "     She moves her hands up to her breasts and arches her back as she starts playing with her thick black nipples. She makes a lewd display of it, smiling up at you as she pushes one tit upwards so she can lick across her nipple with her broad tongue. This wanton display arouses you all the more and you thrust into her harder, eager to show her what a powerful buck you can be for your sweet little doe.";
-		WaitLineBreak;
-		say "     You rut the herm doe with strong, deep thrusts, confident in your position as the buck. And she loves every moment of it, smiling blissfully up at you as your [cock size desc of Player] cock pushes into her over and over again, claiming her as your doe. She pushes her hips into your thrusts and wriggles them upon your manhood, moaning about what a big, strong buck you are.";
-		say "     Her wet pussy squeezes and tugs at your manhood with increasing need as her panting breathing grows heavier with her rapidly approaching orgasm. You don't let up, smiling back down at her with loving affection, eager to see your precious deer cum. And when she does, it is a strong, messy release in excess of her usual production. As she cums, her swollen cock and balls shrink back down to their usual size, freeing her from the need to rut. Seeing her paint her beautiful body with streaks of white semen gets to be too much for you and you bury your pulsing rod fully inside her, unloading your [Cum Load Size of Player] load into her.";
+		say "     Taking the doe by the shoulders, you roll the both of you over on the cot. She gives a playful giggle. 'Oh, I think someone's also feeling randy.' With one hand guiding your cock into her, you grab her black penis with the other. She moans as you slide into her wet cunny and start stroking her throbbing manhood. It twitches and pulses in your grip, leaking precum steadily. She moves her hands up to her breasts and arches her back as she starts playing with her thick black nipples. She makes a lewd display of it, smiling up at you as she pushes one tit upwards so she can lick across her nipple with her broad tongue. This wanton display arouses you all the more and you thrust into her harder, eager to show her what a powerful buck you can be for your sweet little doe.";
+		say "     You rut the herm doe with strong, deep thrusts, confident in your position as the buck. And she loves every moment of it, smiling blissfully up at you as your [cock size desc of Player] cock pushes into her over and over again, claiming her as your doe. She pushes her hips into your thrusts and wriggles them upon your manhood, moaning about what a big, strong buck you are. Her wet pussy squeezes and tugs at your manhood with increasing need as her panting breathing grows heavier with her rapidly approaching orgasm. You don't let up, smiling back down at her with loving affection, eager to see your precious deer cum. And when she does, it is a strong, messy release in excess of her usual production. As she cums, her swollen cock and balls shrink back down to their usual size, freeing her from the need to rut. Seeing her paint her beautiful body with streaks of white semen gets to be too much for you and you bury your pulsing rod fully inside her, unloading your [Cum Load Size of Player] load into her.";
 		WaitLineBreak;
 		say "     Susan flops back onto her bunk, panting heavily and seeming thoroughly satisfied as she smiles up at you. 'Oh, you are such a wonderful buck, my deer. Thanks for helping me get that out of my system. I love being your doe and I don't want to ever change that.' You smile down at her and lean in, giving her a tender kiss before pulling out, leaving her to rest and recover from the rutting romp that's left her exhausted and sated.";
 		now HP of Susan is 53;

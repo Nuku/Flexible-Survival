@@ -9,6 +9,7 @@ Version 2 of Ewe by Luneth begins here.
 Section 1 - Creature Responses
 
 to say ewe attack:
+	project Figure of Ewe_icon;
 	if Player is male:
 		say "     The ewe barrels into you one last time, knocking you to the ground. The lust-crazed sheep grins happily as she looks down at your prone body, her thick tongue licking across her sheep-like muzzle as she gazes down at your already erect [Cock of Player] cock. Before you can do anything else, the ewe throws herself onto you, making you grunt In surprise as her weight lands on top of you, knocking the wind out of you as she pins you to the ground eagerly. Struggling to catch your breath, you find your head filled with the female sheep's powerful scent, the ewe rubbing her soft, silken-fleeced body against your chest. Her scent only makes your arousal worse with every gasping breath, your mind fogging over with pleasure as she lowers herself onto your stiff member. Soon your gasping becomes eager panting, the female sheep lifting herself up and beginning to ride your shaft, the intense sensation of her warm body gripping your cock so tightly overwhelming any potential objections you might have. Soon you are bucking your hips up eagerly as the sheep moans and bleats happily above you, your hands wandering over her soft woolen body even as her own hoof-like hands rub up against your [Skin of Player] chest. Finally the sensations are obviously too much for the ewe, and with one last bleating cry, you can feel her juices coating your shaft as she shudders in orgasm above you. The feel of her body orgasming around your cock triggers your own intense explosion of pleasure, and you grip her thighs tightly as you shoot your seed into her body, making her moan happily even as you twitch underneath her. Once your orgasm is finally over, the ewe pulls herself off your exhausted body, a silly smile on her face as she proceeds to rub herself up against your body again. 'You'll make a wonderful Ram,' she moans as she lifts her soft muzzle up to your ear, her lips rubbing across your ear teasingly as you try to regain your scattered wits. 'A nice big strong Ram for me, won't that be nice?' the ewe says teasingly, stroking your chest with her hoof-like hand again a few times. Without further words, she pulls herself to her feet and staggers off into the city, leaving you lying there and panting from your recent exertions, wondering if you really would object to being a ram if you got that kind of treatment every day...";
 	else:
@@ -19,6 +20,7 @@ to say ewe attack:
 	infect;
 
 To say ewe loss:
+	project Figure of Ewe_icon;
 	if Player is male:
 		say "     Bleating sadly, the ewe collapses onto all fours in front of you, the defeated ewe looks up at you pleadingly as she stands there helplessly. Her lonely, lustful eyes filled with need as she crouches down on the ground submissively. As you turn to leave, you hear her soft voice beg from behind you. 'Please, I've been so lonely... don't you want me either?' she asks plaintively, making you pause as you look back to see her obviously needy rear raised towards you. Do you take the sheep up on her offer?";
 		if Player consents:
@@ -31,6 +33,11 @@ To say ewe loss:
 			say "     Deciding it would be best to leave while you can, you leave the lonely little sheep behind you as you venture back out into the city";
 	else:
 		say "     Defeated, the slightly crazed ewe blinks for a minute before looking at you and blushing slightly. She stammers an apology, something about how being alone without a flock for so long must have affected her mind, then runs off into the city in embarrassment. Shrugging at yet another example of the craziness sweeping the city, you continue along your way, feeling somewhat proud of having knocked some sense into the strange sheep.";
+
+to say Ewe_desc:
+	setmongender 4;
+	project Figure of Ewe_icon;
+	say "     Traveling through the streets of the city, you come across a strange sheep-like person wandering around without aim, absently running her hands over her soft, fleece-covered body as she looks around. Before you can do more than wonder what an ewe is doing out here all alone, the female sheep spots you and bleats eagerly before charging right at you, her slightly-crazed eyes full of lust.";
 
 
 Section 2 - Creature Insertion
@@ -58,7 +65,7 @@ When Play begins:
 	now attack entry is "[one of]She moves forward and rubs her soft wool over your body.[or]She lowers her head down and charges, knocking you back.[or]The ewe eyes you carefully before striking at your weak spots![or]The naked ewe pauses and strokes her soft wool teasingly, distracting you from the fight![or]The ewe windmills her arms as she charges forward, somehow managing to land a lucky blow.[at random]";
 	now defeated entry is "[ewe loss]";
 	now victory entry is "[ewe attack]";
-	now desc entry is "[mongendernum 4]     Traveling through the streets of the city, you come across a strange sheep-like person wandering around without aim, absently running her hands over her soft, fleece-covered body as she looks around. Before you can do more than wonder what an ewe is doing out here all alone, the female sheep spots you and bleats eagerly before charging right at you, her slightly-crazed eyes full of lust.";
+	now desc entry is "";
 	now face entry is "short black muzzle"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "stocky, but feminine, with lovely curves to your body. Your arms are thinner, ending in dainty, hoof-like hands which struggle to handle items at times. Your legs have strong thighs for leaping and crossing rough terrain and slender calves ending in dark hooves";
 	now skin entry is "[one of]woolly[or]soft wool[or]white fleeced[at random]";
