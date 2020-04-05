@@ -440,10 +440,11 @@ Instead of fucking Monty:
 	else if Libido of Monty < 3:
 		say "     The black man raises an eyebrow as you make your offer, then shakes his head in a friendly but firm way. 'No thanks, I'm good right now. We're not here to get our rocks off, but to fulfill a mission.' By sheer coincidence, you hear a full-voiced, lustful bellow from the center of the camp just as Monty says this. Sounds like another man [if HP of Adam > 3](or woman)[end if] got a creamy filling of minotaur cum. The soldier glances in that direction, his eyes filled with a far-away look for a second, as he seems drawn back into his own close encounter with the breeding bull of Camp Bravo. Shaking himself out of it, Monty sees you looking at him, which causes an embarrassed flush to spread over face, barely visible under his dark pigmentation. 'Err... you know what I mean. Containing this mess, saving people, helping find the cure.' Waving a hand in the air as if the dispel his own mental image of what's going on in the parade ground, he wanders away a little, busying himself with one task or other.";
 	else:
+	[
 		say "     The black man chuckles as you make him an offer, glancing left and right as if to see if anyone might have overheard. Clearing his throat, he runs a hand over his shaved head, then says under his breath, 'Man, I really wish I could. It's not like I'm not as horny as any red-blooded guy here in the camp. Ya['] barely can turn a corner without stumbling over someone jerking off. Though with me going out on that 'scouting mission' with you, I think it might be too noticeable if I steal away too soon after. Gotta wait a while, alright?'";
 		LineBreak;
 		say "     (Writer's Note: Monty's further sex scenes are not quite done yet. Please have some patience.)";
-	[
+	]
 		say "     The black man chuckles as you make him an offer, glancing left and right as if to see if anyone might have overheard. Clearing his throat, he runs a hand over his shaved head, then says under his breath, 'Yeah, sure. Not like I'm not as horny as any red-blooded guy here in the camp. Ya['] barely can turn a corner without stumbling over someone jerking off. Not here, though. Got a rep to maintain.' Giving your arm a light slap, the black man suddenly adds in a loud voice, 'Come on, I'll show you where you have to be for debriefing.' With that said, he walks off in one direction and as you turn to follow him, you see that a whole group of other soldiers was coming up from behind where you were standing a moment ago. Not that they seem to have any interest in you, but they might have overheard any further discussion of lewd fun.";
 		say "     Monty leads the way to the out of the way corner of the camp you know well by now, checks that no one else is in sight, then climbs onto the wooden crate and through the shattered window of the city bus. You follow him, passing through the wrecked vehicle and exiting through the wide door at its front end, into the abandoned office building next to the military camp. 'So, here we are,' the muscular soldier says with a grin on his face, letting his gaze wander up and down over your form. He pulls his shirt off in a smooth movement, throwing it onto a nearby desk, then starts to undo his pants. You watch him strip down with interest, exchanging lusty looks with your soldier fuck-buddy.";
 		now sextablerun is 0;
@@ -461,7 +462,7 @@ Instead of fucking Monty:
 			now title entry is "Have him suck your cock";
 			now sortorder entry is 2;
 			now description entry is "Get a blow-job";
-		]
+		[]
 		if Player is female:
 			choose a blank row in table of fucking options;
 			now title entry is "Let Monty fuck your pussy";
@@ -472,7 +473,7 @@ Instead of fucking Monty:
 		now title entry is "Let Monty fuck your ass";
 		now sortorder entry is 4;
 		now description entry is "Let the black soldier fill your ass with his seed";
-		[
+		[]
 		if Player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Take Monty's ass";
@@ -512,7 +513,6 @@ Instead of fucking Monty:
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
-]
 
 to say MontySex1: [blowjob/facefuck]
 	say "     Smiling as you approach the naked form of Monty, you run a hand over the mocha-brown skin of his muscled torso, feeling his firm pecs and defined abs on the way further down to his crotch. Soon wrapping your fingers around the base of his long cock and giving the 10-inch shaft an eager stroke, you lean in to kiss him on the mouth. Monty replies in kind, his tongue snaking out to wrestle with yours and hands stroking over your body. The mutual make-out session continues for a pleasant little while until the soldier has to pull back to catch his breath. 'Man, I never thought being deployed right here in the country to deal with this messy situation could ever have any sort of upside, but spending time with you like this sure is fun.' You just grin in reply, give him one more peck on the lips, then sink to your knees before the African-American man.";
