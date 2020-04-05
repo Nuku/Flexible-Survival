@@ -490,11 +490,11 @@ instead of conversing the Tanuki Dad:
 	now title entry is "Survival";
 	now sortorder entry is 1;
 	now description entry is "Get some tricks about surviving these harsh times";
-	[
 	choose a blank row in table of fucking options;
 	now title entry is "Romance";
 	now sortorder entry is 2;
 	now description entry is "Ask for advice on finding that special someone";
+	[
 	[]
 	if "Tanuki Balls" is listed in TanukiTopics:
 		choose a blank row in table of fucking options;
@@ -681,8 +681,10 @@ To say TanukiSurvivalTalk:
 			say "He cranes his head back a little to look up at you. 'I've never had such a large child before. It's kind of exciting, to tell you the truth. Don't worry about it though. A good father is a good father, no matter how big or small he might be.' He wags a finger as he talks, nodding to himself. 'Now as for advice...'";
 
 to say TanukiRomanceTalk:
-	say "     ";
-	say "     ";
+	if tanukigender is 1:
+		say "'It[']s a strange world out there.' She sighs wistfully, twirling a few whiskers. 'I don[']t need to remind you of that. Still...' She crouches facing you. 'Love is still there, but just as fleeting. Cheap love, that[']s easier than ever, but real love? Just as far away.";
+	else:
+		say "Tanuki Dad looks like someone forgot to tell him what to say. He makes unsure noises and worries his fingers for a few moments. 'And that[']s how it[']s done!' he suddenly exclaims as if he had provided any wisdom.";
 
 to say TanukiPerfumeTalk:
 	say "     ";
