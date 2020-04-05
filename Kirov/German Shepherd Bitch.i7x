@@ -89,7 +89,7 @@ to say gsbDefeat:           [Scene for when the player defeats the GSB]
 			now sortorder entry is 1;
 			now description entry is "Show the bitch a good time by fucking her pussy";
 			[]
-			if gsbKatherine is true and Energy of Katherine > 6:
+			if gsbKatherine is true and Energy of Katherine > 6 and HP of Katherine < 2:
 				choose a blank row in table of fucking options;
 				now title entry is "Recruit Her";
 				now sortorder entry is 2;
