@@ -289,6 +289,10 @@ The description of Quartermaster's Tent is "     You're in the large tent of Cam
 Instead of sniffing Quartermaster's Tent:
 	say "     Even in here, the minotaur cum smell is still pretty strong. No wonder, since the big hunk has been rutting people in the area right before the tent. The lingering aroma seems to have an effect on everyone here too, as everyone seems a fair bit more randy than you'd have expected from professional soldiers.";
 
+Table of GameRoomIDs (continued)
+Object	Name
+Soldier Tents	"Soldier Tents"
+
 Soldier Tents is a room.
 East of the Parade Ground is the Soldier Tents.
 The description of Soldier Tents is "[SoldierTentDesc]".

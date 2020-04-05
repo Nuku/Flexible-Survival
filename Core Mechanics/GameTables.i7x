@@ -338,7 +338,6 @@ Name(text)	Type(text)
 "DavidBunkerEntry"	"number"
 "DavidSarahInteraction"	"number"
 "DBCaptureQuestVar"	"number"
-"deerconsent"	"number"
 "Delaymilcount"	"number"
 "demandIndex"	"number"
 "DemonBruteStatus"	"number"

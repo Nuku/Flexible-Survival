@@ -22,6 +22,15 @@ Version 1 of Lilith by Wahn begins here.
 [ LilithKidCounter - number of children with the player              ]
 [ LilithPregCounter - timer for the next birth (48h from start)      ]
 
+[ Character Details:                                                 ]
+[ - actual demon that came to earth to make use of the situation     ]
+[ - manipulative, loves power over others                            ]
+[ - prefers to use sex & words to control others, but does have magic]
+[ - anything goes for her sexually - the forbidden stuff is best to  ]
+[   entice and entrap with (incest, for one)                         ]
+[ - everything comes with a price, and she loves to push people to   ]
+[   their extremes                                                   ]
+
 Section 1 - Lilith, the succubus
 
 Table of GameCharacterIDs (continued)

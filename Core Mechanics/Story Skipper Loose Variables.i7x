@@ -779,8 +779,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is DavidSarahInteraction;
 		-- "DBCaptureQuestVar":
 			now NumberVarValue entry is DBCaptureQuestVar;
-		-- "deerconsent":
-			now NumberVarValue entry is deerconsent;
 		-- "Delaymilcount":
 			now NumberVarValue entry is Delaymilcount;
 		-- "demandIndex":
@@ -4451,8 +4449,6 @@ to VariableNumberLoad:
 					now DavidSarahInteraction is numberVarValue entry;
 				-- "DBCaptureQuestVar":
 					now DBCaptureQuestVar is numberVarValue entry;
-				-- "deerconsent":
-					now deerconsent is numberVarValue entry;
 				-- "Delaymilcount":
 					now Delaymilcount is numberVarValue entry;
 				-- "demandIndex":

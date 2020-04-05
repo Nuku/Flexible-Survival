@@ -98,6 +98,8 @@ Figure of LatexErminePink_icon is the file "FSTF_LatexErminePink_ig.jpg".
 Figure of LatexErmineRed_icon is the file "FSTF_LatexErmineRed_ig.jpg".
 Figure of LatexErmineTeal_icon is the file "FSTF_LatexErmineTeal_ig.jpg".
 Figure of LatexVixen_icon is the file "FS_LatexVixen.jpg".
+Figure of Leopardman_hard_icon is the file "Leopardman_hard.jpg".
+Figure of Leopardman_soft_icon is the file "Leopardman_soft.jpg".
 Figure of Mammoth_icon is the file "Mammoth.jpg".
 Figure of Mareslut_icon is the file "Mareslut_naked.jpg".
 Figure of Mannequin_icon is the file "Mannequin.jpg".
@@ -352,6 +354,7 @@ Figure of Penny_icon is the file "Penny.jpg".
 Figure of Rachel_icon is the file "Rachel_ig.jpg".
 Figure of Rane_clothed_icon is the file "Rane_clothed.jpg".
 Figure of Rane_face_icon is the file "Rane_face.jpg".
+Figure of Ronda_icon is the file "Ronda.jpg".
 Figure of Rod_icon is the file "Rod.jpg".
 Figure of RondaSR_icon is the file "ronda_ig.jpg".
 Figure of Ruby_naked_icon is the file "Ruby_naked.jpg".
@@ -759,7 +762,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Eric_sofa"	Figure of Eric_sofa_icon	"Bludwing"	g-white	"normal"
 "Eric & Urik Naked"	Figure of Eric_Urik_naked_icon	"Kupo Klein"	g-black	"normal"
 "Erin_face"	Figure of Erin_face_icon	"SineAlas"	g-black	"normal"
-"Ewe"	Figure of Ewe_icon	"Anymouse1968"	g-white	"normal"
+"Ewe"	Figure of Ewe_icon	"Vashaa"	g-white	"normal"
 "Fancy"	Figure of Fancy_icon	"Anymouse1968"	g-white	"normal"
 "Fang_face"	Figure of Fang_face_icon	"SineAlas"	g-black	"normal"
 "Feline_F1"	Figure of Feline_F1_icon	"Anymouse1968"	g-white	"normal"	[shows one of these two for female Feline]
@@ -858,6 +861,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Latex Ermine_Red"	Figure of LatexErmineRed_icon	"Anymouse1968"	g-white	"normal"
 "Latex Ermine_Teal"	Figure of LatexErmineTeal_icon	"Anymouse1968"	g-white	"normal"
 "LeonardViolin"	Figure of LeonardViolin_icon	"SandySchreiber"	g-white	"normal"
+"Leopardman hard"	Figure of Leopardman_hard_icon	"Vashaa"	g-white	"normal"
+"Leopardman soft"	Figure of Leopardman_soft_icon	"Vashaa"	g-white	"normal"
 "Lilith_boobs_icon"	Figure of Lilith_boobs_icon	"Kupo Klein"	g-black	"normal"
 "Lilith_clothed"	Figure of Lilith_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Lilith_face"	Figure of Lilith_face_icon	"Kupo Klein"	g-black	"normal"
@@ -937,6 +942,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Rane_face"	Figure of Rane_face_icon	"SineAlas"	g-black	"normal"
 "Reindeer"	Figure of Reindeer_icon	"MoT"	g-black	"normal"
 "Rod"	Figure of Rod_icon	"Ticl"	g-white	"normal"
+"Ronda"	Figure of Ronda_icon	"Ticl"	g-white	"normal"
 "RondaSR"	Figure of RondaSR_icon	"uniformvixen"	g-black	"normal"
 "Ruby_naked"	Figure of Ruby_naked_icon	"Watsup"	g-white	"normal"
 "Ryousei_face"	Figure of Ryousei_face_icon	"ValdericBlackstag"	g-black	"normal"
@@ -1143,7 +1149,7 @@ carry out artistcredits:
 	say "     Dracovixentaur by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Ebonflame Drake by Anonymous[line break]";
 	say "     Elven Hunter by Aosuka @ y-gallery.net[line break]";
-	say "     Ewe by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Ewe by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Feline (females) by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Feral Gryphon by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Feral Shaft Beast concept created by TwilightMaster @ furaffinity.net[line break]";
@@ -1175,6 +1181,7 @@ carry out artistcredits:
 	say "     Lamia by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Latex Ermine (color variants) by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Latex Ermine (creature loss) by Halcy0n @ furaffinity.net[line break]";
+	say "     Leopardman by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Magic Drake by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Mammoth by Boo3 @ furaffinity.net[line break]";
 	say "     Mammoth Pure Succumb by Boo3 @ furaffinity.net[line break]";
@@ -1341,6 +1348,7 @@ carry out artistcredits:
 	say "     Rane Headshot by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Rane by Inkydemon @ https://www.furaffinity.net/user/inkydemon/[line break]";
 	say "     Rod by Ticl @ https://www.furaffinity.net/user/ticl/[line break]";
+	say "     Ronda by Ticl @ https://www.furaffinity.net/user/ticl/[line break]";
 	say "     Ronda (Slut Rat) by uniformvixen @ furaffinity.net[line break]";
 	say "     Ruby by Watsup @ https://www.furaffinity.net/user/watsup/[line break]";
 	say "     Ryousei by ValdericBlackstag @ https://www.furaffinity.net/user/valdericblackstag/[line break]";

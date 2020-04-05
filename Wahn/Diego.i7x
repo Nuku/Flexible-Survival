@@ -106,31 +106,31 @@ to say DiegoTalkMenu:
 	[]
 	if carried of water bottle > 0 and CoyoteTricks > 4:
 		choose a blank row in table of fucking options;
-		now title entry is "Offer [ObjectPro of Diego] a bottle of water to drink";
+		now title entry is "Offer Diego a bottle of water to drink";
 		now sortorder entry is 3;
 		now description entry is "Hand a bottle of clean water to Diego";
 	[]
 	if carried of dog milk > 0 and CoyoteTricks > 4 and DiegoButtSlut is 0 and DiegoChanged < 2: [Diego hasn't been opened for anal play and isn't fully feminine]
 		choose a blank row in table of fucking options;
-		now title entry is "Trick [ObjectPro of Diego] into drinking dog milk";
+		now title entry is "Trick Diego into drinking dog milk";
 		now sortorder entry is 4;
 		now description entry is "Arrange for Diego to chug your bottle of transforming canine milk";
 	[]
 	if carried of orc cum > 0 and CoyoteTricks > 4 and DiegoChanged is 0 and DiegoButtSlut < 3: [Diego hasn't been transformed towards being female and isn't fully mpreg-able]
 		choose a blank row in table of fucking options;
-		now title entry is "Trick [ObjectPro of Diego] into drinking orc cum";
+		now title entry is "Trick Diego into drinking orc cum";
 		now sortorder entry is 5;
 		now description entry is "Arrange for Diego to chug your bottle of orc cum";
 	[]
 	if XP of Diego is 99:
 		choose a blank row in table of fucking options;
-		now title entry is "Taking part in [PosAdj of Diego] secret plans after all";
+		now title entry is "Taking part in Diego's secret plans after all";
 		now sortorder entry is 6;
 		now description entry is "Tell the coyote you want to join [ObjectPro of Diego] in a closer partnership";
 	[]
 	if XP of Diego is 1 or XP of Diego is 2: [got the quest, didn't finish getting the collar yet]
 		choose a blank row in table of fucking options;
-		now title entry is "Cancelling your involvement in [PosAdj of Diego] special plan";
+		now title entry is "Cancelling your involvement in Diego's special plan";
 		now sortorder entry is 7;
 		now description entry is "Tell the coyote you don't want to participate after all";
 	[]
@@ -153,15 +153,15 @@ to say DiegoTalkMenu:
 					say "[DiegoTalk1]";
 				if (nam is "Share some ideas about tricks to play on people with him"):
 					say "[DiegoTalk2]";
-				if (nam is "Offer [ObjectPro of Diego] a bottle of water to drink"):
+				if (nam is "Offer Diego a bottle of water to drink"):
 					say "[DiegoTalk3]";
-				if (nam is "Trick [ObjectPro of Diego] into drinking dog milk"):
+				if (nam is "Trick Diego into drinking dog milk"):
 					say "[DiegoTalk4]";
-				if (nam is "Trick [ObjectPro of Diego] into drinking orc cum"):
+				if (nam is "Trick Diego into drinking orc cum"):
 					say "[DiegoTalk5]";
-				if (nam is "Taking part in [PosAdj of Diego] secret plans after all"):
+				if (nam is "Taking part in Diego secret plans after all"):
 					say "[DiegoCollarQuest1]";
-				if (nam is "Cancelling your involvement in [PosAdj of Diego] special plan"):
+				if (nam is "Cancelling your involvement in Diego special plan"):
 					say "[DiegoCollarQuestRefuse]";
 				wait for any key;
 		else if calcnumber is 0:
