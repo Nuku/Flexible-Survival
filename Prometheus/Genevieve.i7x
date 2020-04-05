@@ -13,6 +13,10 @@ an everyturn rule:
 
 Section 1 - NPC Declaration
 
+Table of GameCharacterIDs (continued)
+object	name
+Genevieve	"Genevieve"
+
 Genevieve is a woman. The hp of Genevieve is usually 0.
 The description of Genevieve is "[GenevieveDesc]".
 The conversation of Genevieve is { "Interesting" }.
