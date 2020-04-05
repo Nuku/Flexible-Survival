@@ -43,7 +43,7 @@ Figure of Donkeyman_hard_icon is the file "Donkeyman_hard.jpg".
 Figure of Dracovixentaur_icon is the file "dracovixentaur_ig.jpg".
 Figure of MagicDrake_icon is the file "FS_Dragoness.jpg".
 Figure of ElvenHunter_icon is the file "ElvenHunter.jpg".
-Figure of Ewe_icon is the file "FS_Ewe.jpg".
+Figure of Ewe_icon is the file "Ewe.jpg".
 Figure of Feline_F1_icon is the file "FS_SmallLioness_01.jpg".
 Figure of Feline_F2_icon is the file "FS_SmallLioness_02.jpg".
 Figure of FeralShaftBeast_icon is the file "FeralSB_ig.jpg".
