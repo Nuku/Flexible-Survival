@@ -20,6 +20,14 @@ gsbKatherine is usually false.
 [ 0 - not yet met 		]
 [ 1 - met				]
 
+a postimport rule: [bugfixing rules for players that import savegames]
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
+		if Name entry is "German Shepherd Bitch":
+			now MonsterID is y;
+			now area entry is "Outside";
+			break;
+
 Section 1 - Monster Description
 
 to say gsbDescription:
