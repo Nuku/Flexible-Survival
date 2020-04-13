@@ -54,6 +54,7 @@ lastfightround is a number that varies.	[ Used to track the last round during wh
 [ 11    - v. (submit to player master) ]
 [ 13    - v. (player vores foe)        ]
 [ 14    - v. (player ub's foe)         ]
+[ 15    - v. (Voria vore foe)          ]
 [ 18    - v. (monster flee)            ]
 [ 19    - neutral peace                ]
 [                                      ]
@@ -1182,7 +1183,11 @@ to win:
 		if a random chance of vorechance in 300 succeeds:					[chance for ub]
 			if Name entry is not listed in infections of VoreExclusion and enemy type entry is 0: [not on the exclude list and non-unique infection]
 				now ubprompted is true; [player will be prompted for ub]
-	if voreprompted is true and ubprompted is true:				[both vore and ub are possible]
+	if companion of Player is Carnivorous Plant and hunger of Voria > 7 and Name entry is not listed in infections of VoreExclusion and enemy type entry is 0:
+		now ok is 0;
+		VoriaPostCombat;	[Carnivorous Plant vore scene. Scenes in Voria file]
+		now fightoutcome is 15;	[Voria vored foe]
+	else if voreprompted is true and ubprompted is true:				[both vore and ub are possible]
 		if vorechoice is 0 and ubchoice is 0:					[player has full choice]
 			say "     As your battle is coming to a close, you feel a primal rumbling in your belly and in your womb, your twin hungers welling up inside you. Looking down at your fallen foe, you lick your lips and finger yourself, tempted to fill that emptiness you're feeling inside with the [EnemyNameOrTitle]. Shall you give in to your desire to [link]consume (1)[as]1[end link] them, [link]unbirth (2)[as]2[end link] them or [link]suppress (0)[as]0[end link] the urge?";
 			now calcnumber is -1;
