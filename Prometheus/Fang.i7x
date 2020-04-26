@@ -122,29 +122,23 @@ to say sexwithFang:
 		say "     Fang got off fairly recently, so you'd probably have a better time with him if you give him a little longer to recover.";
 	else if hp of Fang is 2:
 		say "[FangOmegaSexMenu]";
-		now lastfuck of Fang is turns;
-	else if HP of Fang is 3 or hp of Fang is 4:
+	else if HP of Fang is 3:
 		say "[FangAlphaSex1]";
 		infect "Feral Wolf";
-		now lastfuck of Fang is turns;
 	else if hp of Fang is 4:
 		say "[FangAlphaSex2]";
 		infect "Feral Wolf";
-		now lastfuck of Fang is turns;
 	else if hp of Fang is 5:
 		say "[FangBetaSexMenu]";
 		infect "Feral Wolf";
-		now lastfuck of Fang is turns;
 	else if Player is not neuter:
 		say "     What kind of fun were you looking to have with your big, bad wolf?";
 		wait for any key;
 		say "[FangSexMenu]";
-		now lastfuck of Fang is turns;
 	else:
 		say "     Lacking any sexual organs of your own, you content yourself with snuggling the wolf and scritching his ears. He nuzzles you in return and licks your face.";
 		if HP of Fang is 3 or HP of Fang is 4:
 			infect "Feral Wolf";
-			now lastfuck of Fang is turns;
 
 Section 2.1 - Omega Fang Sexxxings [Sort of Placeholders]
 
@@ -190,13 +184,14 @@ to say FangOmegaSexMenu:
 	if Libido of fang > 2 and lastfuck of Sandra - turns >= ( 9 - HP of Fang ) and Sandra is in the Bunker:
 		choose a blank row in table of fucking options;
 		now title entry is "Fang and Sandra";
-		now sortorder entry is 5;
+		now sortorder entry is 7;
 		now description entry is "See if Sandra wants to play with the big, bad wolf again.";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> ";
 		get a number;
@@ -217,10 +212,13 @@ to say FangOmegaSexMenu:
 					say "[FangOmegaSex4]";
 				else if nam is "Mount Fang":
 					say "[FangOmegaSex5]";
-				else if nam is "Fang and Sandra":
-					say "[FangSandraSex]";
 				else if nam is "SBL fuck":
 					say "[FangOmegaSex6]";
+				else if nam is "Fang and Sandra":
+					say "[FangSandraSex]";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the wolf, shaking your head slightly as he gives a questioning look.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	wait for any key;
@@ -440,13 +438,14 @@ to say FangBetaSexMenu:
 	if Libido of fang > 2 and lastfuck of Sandra - turns >= ( 9 - HP of Fang ) and Sandra is in the Bunker:
 		choose a blank row in table of fucking options;
 		now title entry is "Fang and Sandra";
-		now sortorder entry is 5;
+		now sortorder entry is 6;
 		now description entry is "See if Sandra wants to play with the big, bad wolf again.";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> ";
 		get a number;
@@ -469,6 +468,9 @@ to say FangBetaSexMenu:
 					say "[FangBetaSex5]";
 				else if nam is "Fang and Sandra":
 					say "[FangSandraSex]";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the wolf, shaking your head slightly as he gives a questioning look.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	wait for any key;
@@ -556,13 +558,14 @@ to say FangSexMenu:
 	if Libido of fang > 2 and lastfuck of Sandra - turns >= ( 9 - HP of Fang ) and Sandra is in the Bunker:
 		choose a blank row in table of fucking options;
 		now title entry is "Fang and Sandra";
-		now sortorder entry is 5;
+		now sortorder entry is 7;
 		now description entry is "See if Sandra wants to play with the big, bad wolf again.";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> ";
 		get a number;
@@ -583,10 +586,13 @@ to say FangSexMenu:
 					say "[FangSex4]";
 				else if nam is "Mount Fang":
 					say "[FangSex5]";
-				else if nam is "Fang and Sandra":
-					say "[FangSandraSex]";
 				else if nam is "SBL fuck":
 					say "[FangSex6]";
+				else if nam is "Fang and Sandra":
+					say "[FangSandraSex]";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the wolf, shaking your head slightly as he gives a questioning look.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	wait for any key;
@@ -653,8 +659,6 @@ Section 3 - Fang and Sandra
 [Currently most are for Omega Fang, but some are for Vanilla Fang.]
 
 instead of going up from Bunker while ( lastfuck of Sandra - turns > 15 and Sandra is in the Bunker and Fang is in the Grey Abbey Library and lastfuck of Fang - turns > 7 and Libido of Fang < 2 and ( hp of Fang is 1) ):
-	now lastfuck of Sandra is turns;
-	now lastfuck of Fang is turns;
 	move player to Grey Abbey Library;
 	project the Figure of Fang_face_icon;
 	say "     As you're preparing to head back out, you catch sight of Sandra slipping through the door to the Library[if Libido of Fang is 1] again. Once again, there's[else]. There's[end if] something furtive about her actions and so you remain quiet and follow out shortly after her. Outside in the library, you stay hidden among the stacks, watching her move towards the big wolf on guard[if the number of booked people > 1]. They are alone in here right now, or at least so they think[end if][if Libido of Fang is 1]. With a few quiet whispers,[else]. It becomes clear what she's after when[end if] she puts her arms around him and starts stroking his cock, getting the big, feral wolf hard. After a little teasing and some slobbery kisses from the lupine's tongue, she moves onto all fours and waves her rump for him.";
@@ -718,8 +722,6 @@ to say FangSandraTongue:
 	NPCSexAftermath Fang receives "OralPussy" from Player;
 
 to say FangSandraSex:
-	now lastfuck of Sandra is turns;
-	now lastfuck of Fang is turns;
 	increase lust of Fang by 1;
 	say "     Recalling that you haven't spent time with Sandra in a while, you lead Fang over to one of the side rooms before poking your head in the bunker long enough to call the bunny girl over[if ( number of booked people + number of bunkered people ) > 4 and Libido of Fang > 5]. The others smile, having picked up on what's going on, but saying nothing as she heads out to join you[else if ( number of bunkered people + number of booked people ) > 4]. The others inside glance over for a moment, but largely ignore the brief intrusion and the bunny girl's exit[else]. The bunny girl exits the bunker to come join you[end if]. Once in the side room, the bunny girl [if Libido of Fang > 5]grins playfully and[else]blushes a little to find Fang there, but[end if] rushes over to hug the big wolf around the neck. You slip off your pack and clothes, smiling to see that Sandra's already got her paw at the wolf's hard cock. Clearly she's been looking forward to this as much as your guard wolf has.";
 	WaitLineBreak;
@@ -941,7 +943,6 @@ to say FangDomRide:
 Section 4.2 - Alpha/Omega without Sandra
 
 instead of going up from Bunker while (( lastfuck of Fang - turns >= 24 and HP of Fang is 1) and (FangBetaCounter < 10) and (player is not neuter)):	[ignored for 3+ days]
-	now lastfuck of Fang is turns;
 	project the Figure of Fang_face_icon;
 	say "     After stepping from the bunker and closing the heavy door, you are pounced upon by something. As you start to struggle, you are surprised to find that it's Fang atop you. From his growls and the hard cock rubbing against you, you surmise that the wolf's not playing around. It's been some time since you've given the beast some attention and it looks like he's intent on satisfying his lusts with you whether you like it or not. As his throbbing shaft grinds against you while he tries to get a better grip on you, the scent from the powerful beast is quite enticing. It could be fun to just give in and let the big wolf have his way with you.";
 	say "     [bold type]Shall you let him or reassert your dominance?[roman type][line break]";
@@ -1032,7 +1033,6 @@ to say FangDomRide2:
 Section 4.3 - Beta Fang
 
 instead of going to Grey Abbey Library while (( lastfuck of Fang - turns >= 16 and HP of Fang is 1) and (FangBetaCounter > 9) and (player is not neuter)):	[ignored for 2+ days]
-	now lastfuck of Fang is turns;
 	project the Figure of Fang_face_icon;
 	say "     As you enter the library, you feel the familiar warmth of Fang up against your thigh. With a smile, you ruffle the fur on his back in a show of affection before attempting to continue on your way. To your surprise, the wolf continues to impede you before lightly grasping your hand in his mouth and guiding you to a secluded corner. Expecting to have to reprimand him for overstepping his place, you clear your throat only to be shocked when he does the same. 'I am sorry. I wanted to talk. Away from others,' Fang apologizes, his voice soft, raspy, and a little stilted from disuse. You decide to let him continue, especially when you consider how seldom he speaks. 'You have shown concern for me. I am grateful. You treat me as person. Not mindless beast. When we met, you called me your beta but I have not earned this place. Allow me to do so now. As long as you treat me as a person, I will be your beta. Protect you. Love you. Please you. But I will be your beta, not your bitch. I have own desires too. I may not always agree with you, but I will still respect you as Alpha.'";
 	say "     [bold type]Do you wish to allow him to properly assume his position as your [']Beta['], your second in command, even though it will grant him a little more freedom?[roman type][line break]";
@@ -1310,8 +1310,6 @@ Section 6.1 - Candy
 an everyturn rule:
 	if ( HP of Fang is 3 or HP of Fang is 4 ) and Fang is booked and Fang is visible and lastCandyfucked - turns >= 12 and Candy is bunkered and ( Libido of Fang is 7 or Libido of Fang is 6 or ( lust of Fang >= 2 and FemaleList is banned ) ) and lust of Candy is 0 and coonstatus is 2:
 		now lust of Candy is 1;
-		now lastCandyfucked is turns;
-		now lastfuck of Fang is turns;
 		say "     As you're adjusting your gear, you hear the door to the bunker open. Glancing over, you spot Candy sashaying out. He smiles and waves at you, giving his tail a playful flick. 'I'm going to borrow your big, bad wolf, sweetie[if HP of Fang is 3]. Sandra spilled the beans to me about how much fun she's been having, so I thought I'd give the big boy a test drive[else]. You mentioned how much fun you'd been having with him, so I thought I'd give the big boy a test drive[end if]. I hope you don't mind.' And with that said, he continues over to Fang. He seems hesitant to approach the big wolf for only a moment before moving up to offer himself to the wolf.";
 		say "     [bold type]It seems like things are about to get started here. Do you want to stick around?[roman type][line break]";
 		LineBreak;
@@ -1338,7 +1336,6 @@ an everyturn rule:
 			say "     'Aieee! My dress!' Candy shrieks, spotting the torn shoulder. He immediately slides it off, pausing only a moment to tease his nipples and straighten his fur. He runs over to grab his little sewing kit and gets to work repairing his outfit, clearly making a show of grumbling about [']such brutish behavior['] and the like between commenting about how the wolf was [']at least a good fuck['] and [']quite the beast in the sack[']. As this goes on, Candy recounts his romp in increasingly graphic detail and you slip back into the library.";
 	else if ( HP of Fang is 3 or HP of Fang is 4 ) and Fang is booked and Fang is visible and lastCandyfucked - turns >= 12 and Candy is bunkered and ( Libido of Fang is 7 or Libido of Fang is 6 or ( lust of Fang >= 2 and FemaleList is banned ) ) and lust of Candy is 2 and coonstatus is 2:
 		now lust of Candy is 3;
-		now lastfuck of Fang is turns;
 		project the Figure of Fang_face_icon;
 		say "     As you're taking a break, you hear the door to the bunker open. Glancing over, you spot Candy sashaying out again. He smiles and waves to you, giving his tail a big swish. 'I'll be borrowing your big, bad wolf again, hon. I've decided the best way he can repay me for nearly ruining my outfit is with another fucking. I hope you don't mind.' And with that said, he continues over to Fang. This time, he pulls off his dress and tosses it across the librarian's desk.";
 		say "     With growing interest, you decide to stick around again and watch as he hesitates for a moment, but plunges on ahead as he eyes the wolf's large package with obvious lust. Fang, with growing interest and growing erection, watches him draw near before getting up and padding towards him, intent on mounting the coon again, but Candy stops him.";
