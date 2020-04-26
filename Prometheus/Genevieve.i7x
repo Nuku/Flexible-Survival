@@ -25,8 +25,7 @@ The scent of Genevieve is "     Genevieve smells of a floral perfume, though the
 to say GenevieveDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [hp of Genevieve] <- DEBUG[line break]";
-	else:
-		say "     The petite anthro fox might be considered pretty if it weren't for the horrible scarring up one side of her face. Despite this blemish, she seems to have a cheerful disposition, joking about her scar to show that you no one needs to be awkward about it. She is covered in black fur that appears to be well groomed and cared for. Two forest-green eyes twinkle as you study her, gazing leisurely around the room. She is dressed in a navy-blue skirt and a white short-sleeved shirt with a red cross above her left breast. You note that her claws are well maintained as she folds her arms, unintentionally accentuating her bust. From a cursory look, you would say they are B maybe C cup, but a raised eyebrow from her interrupts your judgment.";
+	say "     The petite anthro fox might be considered pretty if it weren't for the horrible scarring up one side of her face. Despite this blemish, she seems to have a cheerful disposition, joking about her scar to show that you no one needs to be awkward about it. She is covered in black fur that appears to be well groomed and cared for. Two forest-green eyes twinkle as you study her, gazing leisurely around the room. She is dressed in a navy-blue skirt and a white short-sleeved shirt with a red cross above her left breast. You note that her claws are well maintained as she folds her arms, unintentionally accentuating her bust. From a cursory look, you would say they are B maybe C cup, but a raised eyebrow from her interrupts your judgment.";
 
 Section 2 - Talking
 
