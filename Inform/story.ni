@@ -6405,6 +6405,7 @@ Include Tiger Den by Sarokcat.
 Include Tyr's Club by Kaleem mcintyre.
 Include Underwater Zone by Hellerhound.
 Include Urban Forest by Stripes.
+Include Void Realm by Gherod.
 Include Vohr Island by Kernog.
 Include Zephyr Inc by Nuku Valente.
 Include Zoo by Wahn.
@@ -7063,6 +7064,7 @@ Include Thomas by Wahn.
 Include Thunderbolt by CrimsonAsh.
 Include Timothy by Sarokcat.
 Include Tobias by Wahn.
+Include Toron by Gherod.
 Include Tristian by Verath.
 Include Urik by Wahn.
 Include Val by Wahn.

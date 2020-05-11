@@ -453,7 +453,7 @@ to say DrMattQuestTalk:
 			say "calculating look. 'During my examination, she mentioned the rather direct way by which you brought her in. Sadly, this hasn't helped much with her social anxiety about her transformation and, in her words, 'being a freak'. Frowning and raising his gloved hands to do air quotes to accompany the last words, the doctor's gaze sways over towards Susan again and he clears his throat. 'Maybe talk to her and see if you can salvage something of a relationship? I was hoping you'd be willing to participate in a further experiment. Having two subjects that I've been able to examine in detail, this would be a perfect opportunity to study the transmission of nanites. A controlled situation, you understand?'";
 		WaitLineBreak;
 		say "     [bold type]Realizing that the doctor's plan would either involve some rather clinical steps, or alternatively intimate contact between yourself and Susan, it's left to you to decide if and how you want to participate.[roman type][line break]";
-		say "     [link](1)[as]1[end link] - Agree to play his guinea pig and let Dr. Matt inject you.";
+		say "     [link](1)[as]1[end link] - Agree to play his guinea pig and let Dr. Matt experiment on you.";
 		say "     [link](2)[as]2[end link] - Agree to have sex with Susan. For Science!";
 		say "     [link](3)[as]3[end link] - You're not up for that. Just no.";
 		now calcnumber is 0;

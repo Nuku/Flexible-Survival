@@ -755,7 +755,7 @@ the scent of cow-print cowgirl boots is "The boots smell like leather.".
 
 An everyturn rule:
 	if cow-print cowgirl boots is equipped and a random chance of 1 in 2 succeeds:
-		say "     [bold type]Your scalp tingles a little bit where it touches the cowgirl boots.[roman type][line break]";
+		say "     [bold type]Your skin tingles a little bit where it touches the cowgirl boots.[roman type][line break]";
 		infect "Cow-babe Female";
 
 Part 2 - Combat Boots

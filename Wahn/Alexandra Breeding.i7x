@@ -263,7 +263,7 @@ to say AlexandraBreeding_EvilBrutus:
 		say "     The large balls of your demon slave churn and twitch as he pumps a deluge of cum into his play-toy, making her belly swell visibly as it fills up more and more. Before long, it looks like she's already pregnant and ready to pop out a whole litter of pups, and further demon seed starts to squelch out around the purple shaft stretching open her pussy. Brutus keeps holding, pawing and almost biting Alexandra while he rides out his orgasm, but as soon as he's shot his last spurt, he unceremoniously pulls her off his erection. As his thick purple shaft slips out of the stretched hole, a gush of cum accompanies it, splattering onto the floor and starting to trickle down the insides of her legs. Looking at the canine in his hand, hanging limply as he fucked her into a semi-conscious state, Brutus chuckles and then swings her over to you, letting go so she crumples at your feet. 'More pussy! This one is used up,' the demon then demands in a challenging tone.";
 		now lastdobiemess is 89; [Brutus creamed her pussy]
 		impregAlexandraChance with "Brutus"; [chance to knock her up]
-		NPCSexAftermath Alexandra receives "PussyFuck" from Demon Brute; [Brutus's pet object is called Demon Brute]
+		NPCSexAftermath Alexandra receives "PussyFuck" from Brutus;
 		if Player is female:
 			say "     [bold type]What's your reply?[roman type][line break]";
 			LineBreak;
@@ -282,7 +282,7 @@ to say AlexandraBreeding_EvilBrutus:
 					say "     Satisfied, you sink to the floor and tell your captive demon to resume guarding you.";
 				else: [back into the amulet]
 					say "     Satisfied, you sink to the floor and moan the magic words to banish the demon again. Your well-hung fucker turns into a cloud of purple mist and vanishes into the amulet.";
-				NPCSexAftermath Player receives "PussyFuck" from Demon Brute; [Brutus's pet object is called Demon Brute]
+				NPCSexAftermath Player receives "PussyFuck" from Brutus;
 			else: [chosen to banish him]
 				say "     Giving Brutus an unimpressed look, you raise the demontooth amulet with one hand, then intone the magic words that Nermine taught you. He scowls and makes one step forward as if to attack you even as he already is turning into purple smoke that swirls towards the amulet in the air. Letting out a final aggressive roar that speaks of his desire for unrestrained rampage, the demon fully dematerializes a second or two later, then vanishes as he is drawn in by the magic.";
 		else: [just banish him]
@@ -387,7 +387,7 @@ to say AlexandraBrutusBreedingWarmup:
 	now lastdobiemess is 89; [Brutus creamed her pussy]
 	now AlexandraBrutusInteraction is 50; [last fuck for her was a rough one]
 	impregAlexandraChance with "Brutus"; [chance to knock her up]
-	NPCSexAftermath Alexandra receives "PussyFuck" from Demon Brute; [Brutus's pet object is called Demon Brute]
+	NPCSexAftermath Alexandra receives "PussyFuck" from Brutus;
 
 to say AlexandraBrutusBreedingThreesome:
 	project the figure of Alexandra_clothed_icon;
@@ -439,8 +439,8 @@ to say AlexandraBrutusBreedingThreesome:
 	now lastdobiemess is 89; [Brutus creamed her pussy]
 	now AlexandraBrutusInteraction is 51; [last fuck for her was a shared, if rough one]
 	impregAlexandraChance with "Brutus"; [chance to knock her up]
-	NPCSexAftermath Alexandra receives "PussyFuck" from Demon Brute; [Brutus's pet object is called Demon Brute]
-	NPCSexAftermath Player receives "PussyFuck" from Demon Brute; [Brutus's pet object is called Demon Brute]
+	NPCSexAftermath Alexandra receives "PussyFuck" from Brutus;
+	NPCSexAftermath Player receives "PussyFuck" from Brutus;
 
 to say AlexandraBrutus_UnchainedBreeding_Intro:
 	if companion of Player is demon brute: [already summoned]
@@ -472,7 +472,7 @@ to say AlexandraBrutus_UnchainedBreeding:
 	say "     Laughing, Alexandra leans her body forward and makes sure that the first big gush of fluid splashes Brutus's chest, after which she pushes her crotch right into his face. 'Look at it!' the bitch demands from her fucker as his load starts to leak out of her sex and trickle over the tip of his nose. He crosses his eyes to do so and Alexandra uses a finger to trace the slick and goopy folds of her nether lips. 'This look destroyed to you, asshole? Told ya, good as before. Your times of gaping poor victims are over. But I guess it's not in your nature to stop trying, eh? Some stupid is just too fix.' Smirking, she dips a finger into the cum and draws the letter 'D' onto Brutus's forehead. 'I look forward to next time with ya, doofus. Your rage-fucks are a blast,' she adds in a mocking tone, then climbs down on top of him. Alexandra saunters over while swaying her hips and making sure to show off her cum-stained and sweat-matted fur to you. 'Liked the show, boss? I sure had fun giving it!'";
 	now lastdobiemess is 89; [Brutus creamed her pussy]
 	impregAlexandraChance with "Brutus"; [chance to knock her up]
-	NPCSexAftermath Alexandra receives "PussyFuck" from Demon Brute; [Brutus's pet object is called Demon Brute]
+	NPCSexAftermath Alexandra receives "PussyFuck" from Brutus;
 
 to say AlexandraBrutus_UnchainedBreedingThreesome:
 	project the figure of Alexandra_clothed_icon;
@@ -518,8 +518,8 @@ to say AlexandraBrutus_UnchainedBreedingThreesome:
 	say "     You stay entwined with Alexandra long enough for Brutus to actually recover his stamina for another go, and the demon starts to fuck into you again before you command him to stop and just go away for now. With a hostile grunt, he does just that, leaving you alone on the sofa with your dobie bitch. 'Well, that was fun. Being right in your arms while he knocks me up. Little bit sore down below, but it's worth the pain. That dick is something else!' Alexandra remarks, then lightly pushes against your chest to make you rise a bit as she looks down. 'And look at that mess! He creamed us good, hah!' Reaching down to tough her stretched hole with a ginger touch, she jokingly adds, 'Man, it'll be a few hours till that's back to normal, even with the nanite thingies. Let's hope his brood takes, eh? Otherwise we'll have to have another go!' The kiss that follows tells you that she wouldn't be too opposed to doing so, not if you'll keep her company that time too.";
 	now lastdobiemess is 89; [Brutus creamed her pussy]
 	impregAlexandraChance with "Brutus"; [chance to knock her up]
-	NPCSexAftermath Alexandra receives "PussyFuck" from Demon Brute; [Brutus's pet object is called Demon Brute]
-	NPCSexAftermath Player receives "PussyFuck" from Demon Brute; [Brutus's pet object is called Demon Brute]
+	NPCSexAftermath Alexandra receives "PussyFuck" from Brutus;
+	NPCSexAftermath Player receives "PussyFuck" from Brutus;
 
 Section 2 - Farmhands
 

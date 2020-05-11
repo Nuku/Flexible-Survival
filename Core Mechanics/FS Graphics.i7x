@@ -139,6 +139,8 @@ Figure of Spartan_icon is the file "Spartan.jpg".
 Figure of Succubus_clothed_icon is the file "Succubus_clothed.jpg".
 Figure of SugarGlider_icon is the file "Sugar_Glider.jpg".
 Figure of ThoughtEater_icon is the file "ThoughtEater.jpg".
+Figure of Tigertaur_hard_icon is the file "Tigertaur_hard.jpg".
+Figure of Tigertaur_soft_icon is the file "Tigertaur_soft.jpg".
 Figure of TigressHooker_icon is the file "tigresshooker_ig.jpg".
 Figure of Triceratops_icon is the file "triceratops_ig.jpg".
 Figure of VixenNurse_icon is the file "VixenNurse_ig.jpg".
@@ -191,6 +193,18 @@ Figure of Anthony_naked_icon is the file "Anthony_naked.jpg".
 Figure of Anthony_clothed_icon is the file "Anthony_clothed.jpg".
 Figure of Anthony_face_icon is the file "Anthony_face.jpg".
 Figure of Artemis_icon is the file "artemisengulf_ig.jpg".
+Figure of Atticus_hard_smile_arms_lowered_icon is the file "Atticus_hard_smile_arms lowered.jpg".
+Figure of Atticus_hard_smile_arm_raised_icon is the file "Atticus_hard_smile_arm raised.jpg".
+Figure of Atticus_hard_neutral_arm_raised_icon is the file "Atticus_hard_neutral_arm raised.jpg".
+Figure of Atticus_soft_neutral_arm_raised_icon is the file "Atticus_soft_neutral_arm raised.jpg".
+Figure of Atticus_soft_smile_arms_lowered_icon is the file "Atticus_soft_smile_arms lowered.jpg".
+Figure of Atticus_soft_neutral_arms_lowered_icon is the file "Atticus_soft_neutral_arms lowered.jpg".
+Figure of Atticus_soft_frown_arms_crossed_icon is the file "Atticus_soft_frown_arms crossed.jpg".
+Figure of Atticus_jeans_neutral_arms_lowered_icon is the file "Atticus_jeans_neutral_arms lowered.jpg".
+Figure of Atticus_jeans_neutral_arms_crossed_icon is the file "Atticus_jeans_neutral_arms crossed.jpg".
+Figure of Atticus_jeans_smile_arms_lowered_icon is the file "Atticus_jeans_smile_arms lowered.jpg".
+Figure of Atticus_jeans_smile_arm_raised_icon is the file "Atticus_jeans_smile_arm raised.jpg".
+Figure of Atticus_jeans_frown_arms_crossed_icon is the file "Atticus_jeans_frown_arms crossed.jpg".
 Figure of Aurora_clothed_icon is the file "Aurora.png".
 Figure of Blanche1_icon is the file "blanche_ig1.jpg".
 Figure of Blanche2_icon is the file "Blanche_ig2.jpg".

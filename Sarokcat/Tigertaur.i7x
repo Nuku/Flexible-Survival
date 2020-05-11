@@ -9,6 +9,7 @@ to say Tigertaur Wins:
 	if inasituation is true:
 		say ""; [dealt with in the situation]
 	else:
+		project Figure of Tigertaur_hard_icon;
 		if Player is female:
 			say "     Unable to resist the strong advances of the tiger-like beast, you swiftly find yourself knocked to the ground. Rubbing herself against you, her touch causes your body to tingle in pleasure, as the scent of her musky tiger-like arousal causes your pussy to dampen with arousal. Seeming to scent your reaction to her, the tigertaur rumbles in approval, as she moves herself over your body, the feline herm's cock rubbing against your nether regions as her soft breasts rub up against your body. Her front paws grip your body tight, as she lowers her hips and begins to thrust them against you, causing you to moan at the feel of her soft belly fur and even softer breasts rubbing up against your body, as her pointed cock tries to find its way inside you. Soon you both cry out in ecstasy, as her hard cock manages to gain entrance to your increasingly willing body, the tigertaur's front paws run themselves along your sides as she grips you tightly, pulling you to meet her with every one of her short quick thrusts. You find yourself trapped in a sensualistic paradise as her silken fur runs over your body, and her hot thick tiger-like cock fills your passage with its amazing presences, its soft barbs tugging at your insides with every movement and making you writhe and beg underneath the beast like a cat in heat.";
 			say "     Soon you find yourself moaning underneath the tigertaur as she shoots her hot feline seed into your body, causing you to cry out in your own orgasm at the feel of her fertile cream filling your insides, causing you to shudder and grip her bestial body against you tightly. Even as you begin to relax and come down from the heights of pleasure, you can feel her cock stiffening within your body again, causing your eyes to widen as the tiger-like beast begins to move her hips against you again. You moan as you recall that tigers can mate for hours or even days without much rest, as she begins to move her magnificent cock into your sensitive body again, you find yourself eagerly submitting to the pleasure all over again. Her thick musk and bestial cock arousing you even faster than before as she continues to thrust herself into you again and again, causing you to orgasm underneath her as she fills you with her seed time after time, each rough coupling sending your mind spiraling ever higher with pleasure. Eventually you lose track of anything but the feel of the tiger-like body above you, and the joy of your body being penetrated again and again, your mind a haze of lust and hormones as the tigertaur reduces you to little more than a pleasure crazed beast underneath her. Finally though, the tiger taur seems to be satisfied as it lifts its strong body off your addled form.";
@@ -40,6 +41,7 @@ to say Tigertaur Loses:
 	if inasituation is true:
 		say ""; [dealt with in the situation]
 	else:
+		project Figure of Tigertaur_hard_icon;
 		If thirst of Player > 30:
 			say "     Defeated, the tigertaur growls in disbelief before turning tail to flee. Feeling your thirst start to overcome you, you think about how the tigertaur's rich and thick milk would satisfy you and you wonder if maybe you could try and stop the creature from leaving so you can get a quick drink. Is it worth the chance of infection though?";
 			if Player consents:
@@ -58,6 +60,7 @@ to say Tigertaur Loses:
 
 to say TigertaurDesc:
 	setmongender 5;
+	project Figure of Tigertaur_soft_icon;
 	if inasituation is true:
 		say ""; [dealt with in the situation]
 	else:

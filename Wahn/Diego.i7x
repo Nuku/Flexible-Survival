@@ -1,4 +1,4 @@
- [ObjectPro of Diego] Version 2 of Diego by Wahn begins here.
+Version 2 of Diego by Wahn begins here.
 [ Original File by Sarokcat ]
 [ Version 1 - Breakup of Zoo People file ]
 [ Version 2.0 - Complete rewrite by Wahn - Talk Menu, Sex Menu, Gay Options, Expanded Endings]
@@ -36,6 +36,41 @@ object	name
 Diego	"Diego"
 
 Diego is a man.
+ScaleValue of Diego is 3. [human sized]
+Body Weight of Diego is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Diego is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Diego is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Diego is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Diego is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Diego is 5. [length in inches]
+Breast Size of Diego is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Diego is 2. [count of nipples]
+Asshole Depth of Diego is 8. [inches deep for anal fucking]
+Asshole Tightness of Diego is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Diego is 1. [number of cocks]
+Cock Girth of Diego is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Diego is 7. [length in inches]
+Ball Count of Diego is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Diego is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Diego is 0. [number of cunts]
+Cunt Depth of Diego is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Diego is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Diego is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Diego is false.
+PlayerRomanced of Diego is false.
+PlayerFriended of Diego is false.
+PlayerControlled of Diego is false.
+PlayerFucked of Diego is false.
+OralVirgin of Diego is true.
+Virgin of Diego is true.
+AnalVirgin of Diego is true.
+PenileVirgin of Diego is false.
+SexuallyExperienced of Diego is true.
+TwistedCapacity of Diego is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Diego is false. [steriles can't knock people up]
+MainInfection of Diego is "Coyote".
 The description of Diego is "[DiegoDesc]".
 The conversation of Diego is { "Fooled you!" }.
 Diego is in Park Entrance.
@@ -502,7 +537,7 @@ to say DiegoSex1: [face-fuck Diego]
 			now DiegoButtSlut is 4; [Diego mpregged]
 	else:
 		say "     ";
-	now lastfuck of Diego is turns;
+	NPCSexAftermath Diego receives "OralCock" from Player;
 	coyotify;
 
 to say DiegoSex2: [BJ for Diego]
@@ -512,6 +547,7 @@ to say DiegoSex2: [BJ for Diego]
 			now DiegoBitched is 1;
 	else: [male Diego]
 		say "     <WIP SCENE>";
+	NPCSexAftermath Player receives "OralCock" from Diego;
 
 to say DiegoSex3: [player pussy fucked by Diego's dick]
 	if DiegoChanged is 1: [herm]
@@ -529,7 +565,7 @@ to say DiegoSex3: [player pussy fucked by Diego's dick]
 		WaitLineBreak;
 		say "     Soon you feel the base of [PosAdj of Diego] cock swelling up inside you, making you moan as [SubjectPro of Diego] continues to pound you against the park wall. The rough texture of the wall against your back, combined with your sexy coyote's soft fur against your [Skin of Player] skin, creates an interesting sensation that melds together in the sexual haze you're in. Diego's breath comes out in harsh panting as [PosAdj of Diego] thrusts speed up, [PosAdj of Diego] knot reaching its full extent and locking the two of you together. Then suddenly, [SubjectPro of Diego] grunts deeply and starts filling your body with [PosAdj of Diego] thick, rich seed.[fimpregchance]";
 		say "     Feeling the coyote's cum erupting into you, with the throb of [PosAdj of Diego] cock sending little tingles of pleasure up your spine, your own powerful orgasm is triggered just moments later. You find yourself throwing your head back and panting as your body shakes with pleasure. 'Oh yeah, now that was a sweet treat,' Diego mutters as the two of you stay there, your bodies still locked together against the wall by [PosAdj of Diego] knot. You find yourself enjoying some moments of silence with him, just holding and stroking each other while Diego's knot slowly deflates until eventually, [SubjectPro of Diego] is able to pull out with a soft pop. Planting a kiss on your lips, the coyote then sets you back down on your own feet. 'Come back again anytime,' the canine stud says as [SubjectPro of Diego] leans up against the wall again, seeming to need its support to keep himself stable after all the exertion.";
-	now lastfuck of Diego is turns;
+	NPCSexAftermath Player receives "PussyFuck" from Diego;
 	coyotify;
 
 to say DiegoSex4: [player ass fucked]
@@ -553,7 +589,7 @@ to say DiegoSex4: [player ass fucked]
 		else:
 			say "     Your whole body feels really hot and tingly from the sheer intensity of the coyote still humping against your rear. It almost seems like your orgasms are linked up, as each spurt of Diego's cock inside you is immediately answered by a spike of arousal from your own body. Pressed closely together as you ride out your shared orgasms, the two of you lean against the wall, with Diego soon sliding [PosAdj of Diego] arms around you from behind, embracing your chest in a gesture of affection. Even when new spurts of cum eventually taper off, [PosAdj of Diego] cock is still buried deep in your body and tied to it, giving both of you the time to enjoy some shared moments of silence with the other.[mimpregchance]";
 		say "     After a little while of just holding and stroking each other, Diego's knot slowly deflates until eventually, [SubjectPro of Diego] is able to pull out with a soft pop. Turning you around and planting a kiss on your lips, the coyote then gives you a broad grin and wags [PosAdj of Diego] tail wildly. 'Come back again anytime,' the canine stud says as [SubjectPro of Diego] leans up against the wall again, seeming to need its support to keep himself stable after all the exertion.";
-	now lastfuck of Diego is turns;
+	NPCSexAftermath Player receives "AssFuck" from Diego;
 	coyotify;
 
 to say DiegoSex5: [Diego's pussy fucked - lift her and fuck against the wall]
@@ -581,7 +617,7 @@ to say DiegoSex5: [Diego's pussy fucked - lift her and fuck against the wall]
 		say "     Meanwhile, Diego's inner muscles tremble and twitch around your erection, creating very pleasurable sensations that trigger your own orgasm mere moments later. You eagerly spill your seed into [PosAdj of Diego] waiting body, spurt after spurt of your cum filling the coyote herm. After your spurts of cum eventually taper off, you relax your grip on [PosAdj of Diego] neck, slowly drawing your rod out of [PosAdj of Diego] dripping pussy, even as [PosAdj of Diego] body trembles with the aftershocks of [PosAdj of Diego] intense submissive experience. You can feel a grin tugging at your face, as without your support, Diego slowly drops to [PosAdj of Diego] knees, leaning heavily against the wall to brace herself. You have a feeling that the lovely little coyote won't be forgetting this particular trick anytime soon...";
 		if DiegoBitched < 1:
 			now DiegoBitched is 1;
-	now lastfuck of Diego is turns;
+	NPCSexAftermath Diego receives "PussyFuck" from Player;
 	coyotify;
 
 to say DiegoSex6: [Diego's pussy fucked - doggy style]
@@ -608,10 +644,10 @@ to say DiegoSex6: [Diego's pussy fucked - doggy style]
 		say "     Eventually, you relax your grip on [PosAdj of Diego] neck, slowly drawing your rod out of [PosAdj of Diego] dripping pussy, even as [PosAdj of Diego] body trembles with the aftershocks of [PosAdj of Diego] intense submissive experience. You can feel a grin tugging at your face, as without your support, Diego collapses on the ground, lying in the sticky patch [PosAdj of Diego] cock sprayed a heavy load over. You have a feeling that the lovely little coyote won't be forgetting this particular trick anytime soon...";
 		if DiegoBitched < 1:
 			now DiegoBitched is 1;
-	now lastfuck of Diego is turns;
+	NPCSexAftermath Diego receives "PussyFuck" from Player;
 	coyotify;
 
-to say DiegoSex7: [Diego's pussy fucked - take [PosAdj of Diego] against the wall]
+to say DiegoSex7: [Diego's pussy fucked - take him/her against the wall]
 	if DiegoChanged is 2: [full FemDiego]
 		say "     'I thought you would never ask!' the coyote female says with a grin on [PosAdj of Diego] muzzle. 'It seems this trickster's been caught and it's time to punish her,' [SubjectPro of Diego] says in a playful tone as [SubjectPro of Diego] runs [PosAdj of Diego] paws up and down [PosAdj of Diego] changed body. She's obviously becoming more and more excited by the second as [SubjectPro of Diego] turns to face the wall and arches up [PosAdj of Diego] tail to show off [PosAdj of Diego] damp pussy. [SubjectProCap of Diego] rests [PosAdj of Diego] paws against the wall and spreads [PosAdj of Diego] legs as if she's getting arrested. 'You'd best check to make sure I'm not hiding any more tricks,' [SubjectPro of Diego] says with a teasing sway of [PosAdj of Diego] hips. Grinning at [PosAdj of Diego] eager invitation, you waste no time in moving your [bodydesc of Player] body up against hers, pressing [PosAdj of Diego] forward to lean harder against the wall as [SubjectPro of Diego] moans eagerly in need.";
 		say "     Grabbing [PosAdj of Diego] between the legs, you rub at [PosAdj of Diego] juicy muff and slip a pair of fingers into her, frigging [PosAdj of Diego] hot cunt quickly. 'God yes, please fuck me, fuck me like a bitch in heat...' Diego moans, panting in lust as [PosAdj of Diego] rear grinds back against you. Already highly aroused by the feeling of [PosAdj of Diego] soft-furred body pressing up against yours and the strong scent of a bitch in heat, you need no further encouragement as you rub your [Cock of Player] rod up against [PosAdj of Diego] crotch. Diego pants eagerly as your tip begins to probe [PosAdj of Diego] soft folds, [PosAdj of Diego] body eagerly spreading itself open before you as you shift your hips forward and push your cock into her.";
@@ -633,7 +669,7 @@ to say DiegoSex7: [Diego's pussy fucked - take [PosAdj of Diego] against the wal
 		say "     Eventually, you relax your grip on [PosAdj of Diego] neck, slowly drawing your rod out of [PosAdj of Diego] dripping pussy, even as [PosAdj of Diego] body trembles with the aftershocks of [PosAdj of Diego] intense submissive experience. You can feel a grin tugging at your face, as without your support, Diego slowly drops to [PosAdj of Diego] knees, leaning heavily against the wall to brace herself. In doing so, [SubjectPro of Diego] is leaning right against the splatters of [PosAdj of Diego] own cum on the wall, leaving your freshly-fucked bitch a bit of a mess. You have a feeling that the lovely little coyote won't be forgetting this particular trick anytime soon...";
 		if DiegoBitched < 1:
 			now DiegoBitched is 1;
-	now lastfuck of Diego is turns;
+	NPCSexAftermath Diego receives "PussyFuck" from Player;
 	coyotify;
 
 to say DiegoSex8: [Diego's ass fucked - lift him and fuck against the wall]
@@ -663,7 +699,7 @@ to say DiegoSex8: [Diego's ass fucked - lift him and fuck against the wall]
 		if DiegoButtSlut is 1: [anal OK Diego]
 			add "ButtSlut" to Traits of Diego;
 			now DiegoButtSlut is 2; [Diego fucked anally by the player]
-	now lastfuck of Diego is turns;
+	NPCSexAftermath Diego receives "AssFuck" from Player;
 	coyotify;
 
 to say DiegoSex9: [Diego's ass fucked - Doggy style]
@@ -697,7 +733,7 @@ to say DiegoSex9: [Diego's ass fucked - Doggy style]
 		if DiegoButtSlut is 1: [anal OK Diego]
 			add "ButtSlut" to Traits of Diego;
 			now DiegoButtSlut is 2; [Diego fucked anally by the player]
-	now lastfuck of Diego is turns;
+	NPCSexAftermath Diego receives "AssFuck" from Player;
 	coyotify;
 
 to say DiegoSex10: [Diego's ass fucked - against the wall, police style]
@@ -723,7 +759,7 @@ to say DiegoSex10: [Diego's ass fucked - against the wall, police style]
 		if DiegoButtSlut is 1: [anal OK Diego]
 			add "ButtSlut" to Traits of Diego;
 			now DiegoButtSlut is 2; [Diego fucked anally by the player]
-	now lastfuck of Diego is turns;
+	NPCSexAftermath Diego receives "AssFuck" from Player;
 	coyotify;
 
 Table of GameEndings (continued)
@@ -993,7 +1029,7 @@ to say VillaFightVsHunter:
 			WaitLineBreak;
 			say "     Horny as this whole ordeal made you, the hard fucking drives you over the edge before much longer, and you thrash under the wildly thrusting man as you climax. Your pussy starts to literally drip with femcum, soaking Hunter's furry balls as the slap against your crotch again and again. [if Player is male]At the same time, your own cock goes almost painfully erect, sticking straight up as it begins to throb, then shoot out long strings of creamy cum. Splatters of it land all over your chest, as well as likely Garnet's naked body too, making the strangely funny thought that you just came on a movie starlet bubble up in your mind. [end if]Focused on your own orgasm as you are, the fact that Hunter's grunts are getting more intense and urgent is completely lost on you, right until the point where he lets out a satisfied bark and grinds his crotch against yours. The bulgy knot at the base of the alpha husky swells up within just a few seconds, locking your bodies together as a deluge of cum begins to blast into you.";
 			say "     It almost feels like the husky wants to claim every last part of your insides, his cock going on and on to flood you with more canine seed. The knot keeps it all safely contained within you, preventing any leakage out of your pussy, so by the time his orgasm eventually ebbs, you're quite well-stuffed with cum. Yet despite the fact that you're serving as a receptive cum-dump for the canine male, Hunter doesn't really pay you much attention at all, his focus still being on Garnet, whom he makes out all throughout his orgasm. Even afterwards, when the high of completion has long run out and you're basically just waiting for his knot to go down, the man pays you no mind. Instead, you are a quiet witness of Hunter continuing to work on the transformed actress he claimed as his own, kissing, stroking and touching her, intermixed with repetitive, almost entrancing orders and commands to pay him total obedience.";
-			fimpregchance;
+			CreatureSexAftermath "Player" receives "PussyFuck" from "Husky Alpha";
 			WaitLineBreak;
 			if Humanity of Player > 30: [player is sane enough]
 				say "     Despite your exhaustion, you are of ready enough mind to tune out the alpha husky's brainwashing commands. Thinking of everything and anything you can instead, you have to wait through quite a while of him indoctrinating Garnet, up to the point at which his shaft eventually softens enough to slip out of your pussy. Not long after that, both of them get off you and Hunter throws your equipment unceremoniously onto your stretched-out, sticky form. 'You weren't a half bad lay, but I got a really high class bitch to finish training. I'd rather fuck her all day and breed some pups than waste my time with you. Get up, and out!' With that said, the alpha husky rushes you out of the house, towards the ladder you left standing at the boundary wall. He gruffly tells you to climb over the wall, grumbling as you're not quite fast enough to comply.";
@@ -1013,7 +1049,7 @@ to say VillaFightVsHunter:
 			WaitLineBreak;
 			say "     Horny as this whole ordeal made you, the hard fucking drives you over the edge before much longer, and you thrash under the wildly thrusting man as you climax. [if Player is male]Your own cock goes almost painfully erect, sticking straight up as it begins to throb, then shoot out long strings of creamy cum. Splatters of it land all over your chest, as well as likely Garnet's naked body too, making the strangely funny thought that you just came on a movie starlet bubble up in your mind. [else]Your body tingles with pleasure that has no real outlet, simply coursing along your nerves and making you twitch and tremble helplessly in your genderless state. [end if]Focused on your own orgasm as you are, the fact that Hunter's grunts are getting more intense and urgent is completely lost on you, right until the point where he lets out a satisfied bark and grinds his crotch against your ass. The bulgy knot at the base of the alpha husky swells up within just a few seconds, locking your bodies together as a deluge of cum begins to blast into you.";
 			say "     It almost feels like the husky wants to claim every last part of your insides, his cock going on and on to flood you with more canine seed. The knot keeps it all safely contained within you, preventing any leakage out of your asshole, so by the time his orgasm eventually ebbs, you're quite well-stuffed with cum. Yet despite the fact that you're serving as a receptive cum-dump for the canine male, Hunter doesn't really pay you much attention at all, his focus still being on Garnet, whom he makes out all throughout his orgasm. Even afterwards, when the high of completion has long run out and you're basically just waiting for his knot to go down, the man pays you no mind. Instead, you are a quiet witness of Hunter continuing to work on the transformed actress he claimed as his own, kissing, stroking and touching her, intermixed with repetitive, almost entrancing orders and commands to pay him total obedience.";
-			mimpregchance;
+			CreatureSexAftermath "Player" receives "AssFuck" from "Husky Alpha";
 			WaitLineBreak;
 			if Humanity of Player > 30: [player is sane enough]
 				say "     Despite your exhaustion, you are of ready enough mind to tune out the alpha husky's brainwashing commands. Thinking of everything and anything you can instead, you have to wait through quite a while of him indoctrinating Garnet, up to the point at which his shaft eventually softens enough to slip out of your well-bred asshole. Not long after that, both of them get off you and Hunter throws your equipment unceremoniously onto your stretched-out, sticky form. 'I'm half minded to keep working on you till you're a nice and subby bitch, but then... why go through the trouble if I have the most beautiful husky of all here already. I'd rather fuck her all day and breed some pups than waste my time with you. Get up, and out!' With that said, the alpha husky rushes you out of the house, towards the ladder you left standing at the boundary wall. He gruffly tells you to climb over the wall, grumbling as you're not quite fast enough to comply.";
@@ -1085,7 +1121,7 @@ to say VillaFightVsHunter2:
 			WaitLineBreak;
 			say "     Horny as this whole ordeal made you, the hard fucking drives you over the edge before much longer, and you thrash under the wildly thrusting man as you climax. Your pussy starts to literally drip with femcum, soaking Hunter's furry balls as the slap against your crotch again and again. [if Player is male]At the same time, your own cock goes almost painfully erect, sticking straight up as it begins to throb, then shoot out long strings of creamy cum. Splatters of it land all over your chest, as well as likely Garnet's naked body too, making the strangely funny thought that you just came on a movie starlet bubble up in your mind. [end if]Focused on your own orgasm as you are, the fact that Hunter's grunts are getting more intense and urgent is completely lost on you, right until the point where he lets out a satisfied bark and grinds his crotch against yours. The bulgy knot at the base of the alpha husky swells up within just a few seconds, locking your bodies together as a deluge of cum begins to blast into you.";
 			say "     It almost feels like the husky wants to claim every last part of your insides, his cock going on and on to flood you with more canine seed. The knot keeps it all safely contained within you, preventing any leakage out of your pussy, so by the time his orgasm eventually ebbs, you're quite well-stuffed with cum. Yet despite the fact that you're serving as a receptive cum-dump for the canine male, Hunter doesn't really pay you much attention at all, his focus still being on Garnet, whom he makes out all throughout his orgasm. Even afterwards, when the high of completion has long run out and you're basically just waiting for his knot to go down, the man pays you no mind. Instead, you are a quiet witness of Hunter continuing to work on the transformed actress he claimed as his own, kissing, stroking and touching her, intermixed with repetitive, almost entrancing orders and commands to pay him total obedience.";
-			fimpregchance;
+			CreatureSexAftermath "Player" receives "PussyFuck" from "Husky Alpha";
 			WaitLineBreak;
 			if Humanity of Player > 30: [player is sane enough]
 				say "     Despite your exhaustion, you are of ready enough mind to tune out the alpha husky's brainwashing commands. Thinking of everything and anything you can instead, you have to wait through quite a while of him indoctrinating Garnet, up to the point at which his shaft eventually softens enough to slip out of your pussy. Not long after that, both of them get off you and Hunter throws your equipment unceremoniously onto your stretched-out, sticky form. 'You weren't a half bad lay, but I got a really high class bitch to finish training. I'd rather fuck her all day and breed some pups than waste my time with you. Get up, and out!' With that said, the alpha husky laughs as you get up and start to stumble to the door, aching all over. He's not done with his cruel sport after all though, as the next thing you feel his foot-paw on your rump, giving you a kick that sends you sprawling on the floor!";
@@ -1118,7 +1154,7 @@ to say VillaFightVsHunter2:
 			WaitLineBreak;
 			say "     Horny as this whole ordeal made you, the hard fucking drives you over the edge before much longer, and you thrash under the wildly thrusting man as you climax. [if Player is male]Your own cock goes almost painfully erect, sticking straight up as it begins to throb, then shoot out long strings of creamy cum. Splatters of it land all over your chest, as well as likely Garnet's naked body too, making the strangely funny thought that you just came on a movie starlet bubble up in your mind. [else]Your body tingles with pleasure that has no real outlet, simply coursing along your nerves and making you twitch and tremble helplessly in your genderless state. [end if]Focused on your own orgasm as you are, the fact that Hunter's grunts are getting more intense and urgent is completely lost on you, right until the point where he lets out a satisfied bark and grinds his crotch against your ass. The bulgy knot at the base of the alpha husky swells up within just a few seconds, locking your bodies together as a deluge of cum begins to blast into you.";
 			say "     It almost feels like the husky wants to claim every last part of your insides, his cock going on and on to flood you with more canine seed. The knot keeps it all safely contained within you, preventing any leakage out of your asshole, so by the time his orgasm eventually ebbs, you're quite well-stuffed with cum. Yet despite the fact that you're serving as a receptive cum-dump for the canine male, Hunter doesn't really pay you much attention at all, his focus still being on Garnet, whom he makes out all throughout his orgasm. Even afterwards, when the high of completion has long run out and you're basically just waiting for his knot to go down, the man pays you no mind. Instead, you are a quiet witness of Hunter continuing to work on the transformed actress he claimed as his own, kissing, stroking and touching her, intermixed with repetitive, almost entrancing orders and commands to pay him total obedience.";
-			mimpregchance;
+			CreatureSexAftermath "Player" receives "AssFuck" from "Husky Alpha";
 			WaitLineBreak;
 			if Humanity of Player > 30: [player is sane enough]
 				say "     Despite your exhaustion, you are of ready enough mind to tune out the alpha husky's brainwashing commands. TThinking of everything and anything you can instead, you have to wait through quite a while of him indoctrinating Garnet, up to the point at which his shaft eventually softens enough to slip out of your well-bred asshole. Not long after that, both of them get off you and Hunter throws your equipment unceremoniously onto your stretched-out, sticky form. 'I'm half minded to keep working on you till you're a nice and subby bitch, but then... why go through the trouble if I have the most beautiful husky of all here already. I'd rather fuck her all day and breed some pups than waste my time with you. Get up, and out!' With that said, the alpha husky laughs as you get up and start to stumble to the door, aching all over. He's not done with his cruel sport after all though, as the next thing you feel his foot-paw on your rump, giving you a kick that sends you sprawling on the floor!";
@@ -1315,6 +1351,7 @@ to say DiegoCollarWearingAftermath:
 			FeatLoss "Herm Preferred";
 		FeatGain "Female Preferred";
 		FeatGain "Always A Pussy";
+	CreatureSexAftermath "Player" receives "PussyFuck" from "Husky Alpha";
 	now XP of Diego is 7; [player has the collar on, got fucked]
 
 to say DiegoCollarDeliveryAftermath:

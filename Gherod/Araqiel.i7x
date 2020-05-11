@@ -1,4 +1,8 @@
-Version 1 of Araqiel by Gherod begins here.
+Version 2 of Araqiel by Gherod begins here.
+
+"Adds Araqiel, a powerful angel, to the game."
+
+[Version 2 - Added an eavesdropping opportunity for Corrupted path]
 
 [ STAT CHANGES                                            ]
 [  - - - - - - - - - - - - - - - - - - - - - - - - - - -  ]
@@ -7,6 +11,7 @@ Version 1 of Araqiel by Gherod begins here.
 [ 1: Has seen this strange Angel                          ]
 [ 2: Actively hunting for Araqiel                         ]
 [ 3: Corrupted                                            ]
+[ 49: Corrupted Path Resolved                             ]
 [ 50: Pure                                                ]
 
 [ NOTES                                                   ]
@@ -49,7 +54,9 @@ AraqielTrackerRedLight is a number that varies. AraqielTrackerRedLight is usuall
 AraqielTrackerMall is a number that varies. AraqielTrackerMall is usually 0. [@Tag:NotSaved]
 AraqielCaptureTimer is a number that varies. AraqielCaptureTimer is usually 20000. [@Tag:NotSaved]
 
-Section 1-0 - Toron talks
+Section 1-0 - Toron Talks
+
+Section 1-0-1 - Toron During Pre-Events
 
 to say ToronTalkPurifier:
 	if Resolution of Ambush The Purifier is 0:
@@ -144,6 +151,37 @@ to say ToronTalkPurifier:
 				now HP of Araqiel is 50; [Pure Araqiel]
 				now Resolution of Ambush The Purifier is 99; [Ambush failed]
 				now AraqielTrackerCollege is 1; [events restored]
+
+Section 1-0-2 - Toron During Corrupted Path
+
+to say ToronTalkMogdrazAraqiel:
+	if Resolution of Ambush The Purifier is 8:
+		say "     Out of hope that he will shed some light into this matter, you discretely ask Toron what he knows about the big demon boss and the perverted angel's relationship with one another. He hesitates before speaking, but as you have heard their conversation before, he probably decides that there is no purpose in hiding anything else from you. 'I am sorry for deceiving you, but trust must go for both ways. We couldn't just let you know about everything and risk our own safety for being too careless. I hope you understand.' he says to you with an apologetic bow and tone.";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Reassure him. They must certainly have had their reasons.";
+		say "     ([link]N[as]n[end link]) - Tell him that, honestly, you don't understand. You'd rather have known the truth from the beginning.";
+		if player consents:
+			LineBreak;
+			say "     With a nod, you show empathy for him, and let him know that everything is good on your end. You understand their reasons and why they had done things the way they did. 'Much appreciated. I may have misjudged you at the beginning, as well, so apologies for that, too.' He shows a genuine smile, one that you've never seen him making before.";
+		else:
+			LineBreak;
+			say "     He lowers his head, and takes a moment of silence before he resumes speaking. 'You could have also not given me that feather. It was the key component that allowed us to liberate him from Heaven's influence. Yet you did... You knew what that meant, didn't you? You must have had your own reasons to act the way you did, yet you never revealed them to me. You simply continued to do so. Perhaps out of good will, or simply a selfish goal... I guess I would never know.' Despite what he just said, he extends his reply to say one more thing. 'I understand your frustration, regardless, but I must ask you to not misjudge our caution as lack of faith in you. We simply did what had to be done.' With that, he finishes explaining himself.";
+	else:
+		say "     Curious about the big demon boss and the perverted angel's relationship with one another, you ask Toron to remind you of the story that he told you when you first asked him about this matter. He agrees to do it, once he finds the chance to sit down with you.";
+	WaitLineBreak;
+	say "     'Regarding Master Mogdraz and Lord Araqiel...' Wait, did he just call Araqiel [']Lord[']? 'They... were old rivals. While Mogdraz was the great Demon Lord's personal manservant, Araqiel served an Archangel. As you may already know, the purifier was called as such because he could subdue most demons with his much superior might. By mixing elements from the demons into a newborn seraphim, Lord Araqiel was born, with free will and the equipment to engage in sex, two things most, if not all, pure angels lack.' You already had the feeling Araqiel was not a pure angel from the beginning, judging by what Mogdraz said in the dungeon. 'As such, Araqiel earned his title as one of the most powerful angels ever created, a power that could compete with Mogdraz's, and commanding a force of his own. One day, their ways clashed.'";
+	say "     You take a seat by the stool as you listen to Toron. 'Araqiel wasn't always so given to carnal pleasure. There was once a time his convictions resided exclusively in Heaven's best interests of supremacy over our world. The Demon Lord Mogdraz served was the main beacon of Hell's position, who claimed to be growing day by day. It was only natural that, eventually, Araqiel would attempt to strike down the Demon Lord, and that is when Mogdraz met the purifier. It was a harsh battle, and I witnessed it all, offering Mogdraz all the backup support I could, but indeed, the angel was incredibly powerful. They fought until both of them were forcingly disarmed and had to wrestle, using their entire bodies in an attempt to emerge victorious. By then, the battlefield was filled with flames and steam, with both taking hits so powerful that even the ground shaked beneath us.'";
+	WaitLineBreak;
+	say "     'I do not know what happened, but eventually they stopped. Both were panting hard, bruised and exhausted, lying down naked as what remained of their clothes was shredded to many pieces, hugging eachother. No, no in that way, they simply had their arms wrapped eachother's bodies, but so exhausted they couldn't move an inch. In all my life, I have never seen such a ferocious battle. Then... something happened, as they looked into eachother's eyes. Once they managed to get up, they simply parted ways. No words spoken. Mogdraz remained silent through the entire way back home.' You blink and nod, as if encouraging Toron to continue. 'That is when Mogdraz began questioning his own Lord's ideals, and the way he treated his son. We thought he was simply a demanding man, but the poor boy was forced to train and study hard, without the chance to make any choices by himself. Mogdraz told me that he had the boy crying in his arms, one day. And that was the day everything changed.'";
+	say "     When Mogdraz rebelled against the Demon Lord, he took his son with him, and some of the demons that were loyal to Mogdraz followed, including myself. And amidst our journey, we were amazed to find Araqiel asking Mogdraz to join the resistance force. Apparently, Araqiel felt Mogdraz's determination in defending what he believed in, and that made the angel think... Was any of the sides worthy of being followed? Two sides of the same coin fighting endlessly over completely opposite reasons, that's what it was. We didn't want anything to do with that, so we stood our ground.'";
+	WaitLineBreak;
+	say "     'Eventually, the Demons gained influence over our world, and we were forced into exile. Recently, Heaven also went through an augmentation in power, and that is reason of what happened to Araqiel. They managed to reach him and threw an attempt at converting him back to their side, but they did not succeed completely. This was just before we managed to escape, so Mogdraz felt he was in a pinch. Between having Araqiel betray him inevitably and leaving him back, our big boss decided to keep the angel in a chamber, hidden within the void, where they could not reach. However, he seemingly escaped on his own and followed us through the void, even in his conflicted state, and by the time he arrived, he was fully converted.'";
+	say "     'What you did for us was the only way we had to bring him back, and I'm glad you helped. You were the only one who could get close enough to him in order to obtain something that carried his essence.' He finishes the tale with a long pause before resuming his duties.";
+	if Resolution of Ambush The Purifier is 8:
+		now Resolution of Ambush The Purifier is 9;
+	WaitLineBreak;
+
+Section 1-0-3 - Toron During Pure Path
 
 Section 1-1 - Purifier One
 
@@ -622,8 +660,37 @@ to say CAraqielSuckDick:
 
 [to say CAraqielLickPussy:]
 
-Section 4-1 - PURE Araqiel Talk
+Section 4 - CORRUPTED Events
 
-Section 4-2 - PURE Araqiel Sex
+instead of going down from Hellfire Corridor while (Resolution of Ambush The Purifier is 7 and Energy of Araqiel > 1): [Will only trigger after player has spoken with Araqiel about most subjects]
+	say "     As you were on your way down the dungeons and go for the door's handle, you notice that it won't budge. It seems to have been locked for some reason, and since you don't have the keys, your best bet is to ask Toron what is going on... But before you decide to walk up the stairs, you heard some voices, very muffled and hard to understand from where you're standing. You manage to recognize one of them, an unmistakable deep and solid tone, a little graspy and tough, yet noble vocabulary... Undoubtedly, it is Mogdraz, and he has locked himself in with Araqiel. Now, one could ask what would they be doing which is so important that the door must be locked for that effect... Perhaps you could lean closer to have a listen of what they are saying? Or what they are actually [italic type]doing[roman type]... providing that it is some sort of activity, someone could wonder...";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Eavesdrop on them.";
+	say "     ([link]N[as]n[end link]) - Some things are better left alone.";
+	if player consents:
+		Linebreak;
+		say "     If you lean your head over the door, perhaps you could hear them more clearly... Though this seems wrong, somehow. You feel like you're wronging Mogdraz by doing this, but... There is certainly more than meets the eye between these two. Carefully, you approach the door, place your hands over the wooden surface, then your ears, and very quietly, you listen...";
+		WaitLineBreak;
+		say "     '... You have risked too much in following me here, you know that.' That's Mogdraz speaking. Fortunately, you can hear them well. 'Aw... Must we talk about this again? Here? What if your special guest decides to come visit me...?' It is Araqiel now, his voice is lighter and clearer than Mogdraz's, so it can be distinguished well. 'Don't worry about [ObjectPro], [SubjectPro] is merely someone I met thanks to the limited mental function of my hellfire minions. Provided our good relationship, [SubjectPro] won't be a problem at all. It is safe here, for the time being.' Mogdraz confirmed they were talking about [italic type]you[roman type]... But why are they, in such manner?";
+		say "     'It may be so, but have you seen [PosAdj] determination in trying to catch me? You may not have noticed, but I did. That [guygal] chased me through all the places I was hunting demons because of that pathetic attempt at purging the evil in me.' Wait, what is Araqiel talking about? Purging evil from him? What does he mean...? You helped the demons corrupt him, right? Right...? '[SubjectPro] may have been acting out of good will to help you, or maybe [SubjectPro] is just perving on me... Not that I would mind that, though. But [SubjectPro] is a capable person. I mean... Having resisted this apocalyptic place means a lot by itself.' The angel continued to speak, explaining that he finds you capable. In other words, he finds you a threat if you ever had a reason to act on your own, and he also doesn't mind you [italic type]perving[roman type] on him... That last bit was probably important.";
+		WaitLineBreak;
+		say "     Mogdraz replies after a while, the source of his voice having seemingly changed. He seems to be walking while talking. 'That is all true, but believe me when I say it. Even if [SubjectPro] knew about our case, I very much doubt [SubjectPro] would give us away to them. And with that subject out of the way, we must think about what we will do with you.' Them... Who is [']them[']? And what does Mogdraz mean with that, even...? 'Well, I guess you have already restored my sanity. But I must disapprove of these new colors! I much preferred my white wings and silver hair, mind you. And the red gaze makes me look like a vampire. I hate it.' What Araqiel said just further confuses you more. After all, what happened here?";
+		say "     'The change in your looks was necessary. Not everyone here knows you were already a perverted angel by the time you were born.' explains the demon to the angel, who then replies with a groan. 'Do you reaaally have to say it like that? You make me sound like a sexual predator or something... I just like having fun! It's not my fault that whatever wicked experiment those heaven dudes were making turned out to be a [']purifier['] with a big dick.' says Araqiel with a joking tone. 'I am going to ask you to keep the disguise for a while longer. Once we find a way to stabilize these void rifts and make sure they won't find us, then I can allow you to change your features back to their original ways.' So Mogdraz calls his current state a [']disguise[']... If there were any doubts, they are gone now. You haven't corrupted Araqiel, no... [bold type]You actually saved him[roman type] from some [']heaven dudes['], using the angel's words.";
+		WaitLineBreak;
+		say "     The fallen seraphim sighs. 'Fine... We will do this your way, for now. But before you go...' There's a pause, only broken by Mogdraz's 'Hmm?' before the angel continues to speak. 'Can I get an imp? They're so tiny and so fun to squish and fuck...!' You can totally feel Mogdraz's eyes rolling at that request, but he finishes the conversation with a simple 'Yes... Sure...' as he walks towards the door. Oh, he [italic type]is[roman type] walking towards the door, indeed. Time to scramble out of here...";
+		WaitLineBreak;
+		say "     You make your way quietly up through the stairs before he can see you, and then return to the lounge, passing by the bar counter. However, a voice startles you as you are trying to catch your breath in relief of making it back undetected. 'Heard anything you shouldn't?' asked Toron as he was cleaning a glass. You made the mistake of looking at him in the eyes, and now he totally knows what you've done. You have a feeling you shouldn't lie to him... not that you were given a chance to do it. 'Don't worry, I won't let Mogdraz know. But I hope you understand what is at stake. We don't like this situation, either, but it's how it is.' With that, he nods as he dismisses you, allowing you to go without any further explanations.";
+		say "     Now, those... were some revelations. There is definitely a lot more to know about the relationship between Mogdraz and Araqiel. Maybe Toron will know more, if he's willing to share?";
+		now Resolution of Ambush the Purifier is 8;
+	else:
+		Linebreak;
+		say "     Maybe you shouldn't. They have their own affairs, and you have meddled in them way too much, already. You'd rather just enjoy the hospitality Mogdraz provided you, and whatever problems they may have, it should be their responsibility, not yours. At least, that is what you could be thinking right now, though you cannot shake away the feeling of uncertainty. What if there is more than meets the eye between these two...? Well, you guess you will never know, but maybe you shouldn't even care.";
+		say "     You head back to the lounge and wait. The dungeons should be free for now.";
+		now Resolution of Ambush the Purifier is 49;
+	move Player to Hellfire Lounge;
+
+Section 5-1 - PURE Araqiel Talk
+
+Section 5-2 - PURE Araqiel Sex
 
 Araqiel ends here.

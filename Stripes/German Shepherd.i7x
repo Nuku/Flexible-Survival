@@ -545,31 +545,36 @@ to say gsd_special_vsex_00:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Dominate him (nonsexually)";
+	now sortorder entry is 1;
+	now description entry is "Grab the bad dog and teach him a lesson";
+	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck him";
-		now sortorder entry is 1;
+		now sortorder entry is 2;
 		now description entry is "Screw the dog to put him in his place";
-	[]
-		choose a blank row in table of fucking options;
-		now title entry is "Fellatio";
-		now sortorder entry is 3;
-		now description entry is "make the defeated cur suck you off";
 	[]
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Ride him";
-		now sortorder entry is 2;
+		now sortorder entry is 3;
 		now description entry is "Pin him down and use his pole as your toy";
 	[]
 		choose a blank row in table of fucking options;
-		now title entry is "Cunnilingus";
+		now title entry is "Fellatio";
 		now sortorder entry is 4;
+		now description entry is "make the defeated cur suck you off";
+	[]
+		choose a blank row in table of fucking options;
+		now title entry is "Cunnilingus";
+		now sortorder entry is 5;
 		now description entry is "Make the defeated cur eat you out";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Hand job";
-	now sortorder entry is 5;
+	now sortorder entry is 6;
 	now description entry is "Jerk him off to burn off some of his excess libido";
 	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -587,7 +592,9 @@ to say gsd_special_vsex_00:
 			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-				if nam is "Fuck him":
+				if nam is "Dominate him (nonsexually)":
+					say "[gsd_special_vdom_01]";
+				else if nam is "Fuck him":
 					say "[gsd_special_vsex_01]";
 				else if nam is "Ride him":
 					say "[gsd_special_vsex_02]";
@@ -602,6 +609,9 @@ to say gsd_special_vsex_00:
 			if Player consents:
 				say "     Grabbing the defeated canine by the scruff of his neck, you pull him this way. You call him a 'Bad dog' and otherwise berate him for daring to oppose you. In the end, you push him to the ground hard with your foot and tell him to get out of your sight. He whimpers and slinks away, only daring a few angry barks at you once he's gotten a few dozen meters away.";
 				now sextablerun is 1;
+
+to say gsd_special_vdom_01:
+	say "     At the sight of the submissively cowering German shepherd, you growl and grab him by the scruff of his neck. Standing over the canine, you give him a harsh shake, wrapping your free hand around his muzzle to force him to look into your eyes instead of down at the ground. In a domineering voice, you berate him for acting like a big and powerful man while he really is only a street dog who couldn't even last through a fight against you. He whimpers and tries to shrink back, but you keep your grip on him, never breaking the stare to hammer your words home. After a long, and for him quite uncomfortable moment, you then let go suddenly, with him falling to the ground. Telling the dog that this should be a lesson for him, you walk off after that, never looking back.";
 
 to say gsd_special_vsex_01:
 	say "     The sight of the submissively cowering German shepherd makes your shaft thicken[if gsd_male is true], and following the instincts he inflicted upon you[end if], you move to show that [if gsd_pet > 1]it is now you who is the Alpha[else]you're the one in charge[end if]. Sensing your intent, the dog gives a low growl and tries to back away, but you grab him by the scruff and keep him in place. Holding him on all fours soon gets him to respond, his tail lifting and flagging as he raises his ass in offering. Eager to taste the fruits of your victory, you [SelfStripCrotch]. He looks back over his shoulder and whines a little, feeling a need to submit to the stronger male.";
@@ -655,39 +665,52 @@ to say gsd_special_final_00:
 	say "     As the scarred German shepherd lets out a pained and injured whine, he sinks to the ground with his ears folding down, beaten. You can see that a lot of the fight has gone of out his eyes and he hangs his head in shame when you look into them. It seems like you've finally proven yourself his better. And now you need to decide what you want to do with him.";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Humiliate and recruit";
+	now sortorder entry is 1;
+	now description entry is "Reinforce that he's just a mutt and can't even look after himself";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Humiliate and banish";
+	now sortorder entry is 2;
+	now description entry is "Reinforce that he's been bested before driving him off for good";
+	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck him and recruit";
-		now sortorder entry is 1;
+		now sortorder entry is 3;
 		now description entry is "Fuck him to secure your dominance over him";
+	[]
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck him and banish";
-		now sortorder entry is 1;
+		now sortorder entry is 4;
 		now description entry is "Fuck him before driving him off for good";
+	[]
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Ride him and recruit";
-		now sortorder entry is 1;
+		now sortorder entry is 5;
 		now description entry is "Ride him to secure your dominance over him";
+	[]
+	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Ride him and banish";
-		now sortorder entry is 1;
+		now sortorder entry is 6;
 		now description entry is "Ride him before driving him off for good";
-	choose a blank row in table of fucking options;
-	now title entry is "Humiliate and banish";
-	now sortorder entry is 5;
-	now description entry is "Reinforce that he's been bested before driving him off for good";
+	[]
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	now calcnumber is 0;
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			say "[title entry]: Shall you [description entry]?";
+			say "[title entry]: [description entry]?";
 			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
@@ -701,7 +724,11 @@ to say gsd_special_final_00:
 					say "[gsd_special_final_04]";
 				else if nam is "Humiliate and banish":
 					say "[gsd_special_final_05]";
-
+				else if nam is "Humiliate and recruit":
+					say "[gsd_special_final_06]";
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
 
 to say gsd_special_final_01:
 	say "     In the mood to fuck the Shepherd, you grab him and push him onto all fours. He does not resist and only gives a soft growl at what he knows is coming. Wrapping a hand around his scarred muzzle, you silence him even as you move overtop of him. 'I think I've made it abundantly clear by now that I'm the alpha here. So you're going to raise that tail of yours and like it, pup,' you growl right back at him. His ears dip and he nods, raising his tail and boosting his rear, accepting his fate. You grind your cock against his furred ass for several strokes, enjoying the soft fur and toned flesh pressing against your meat. Getting your cock lined up with his dark pucker, you tease against it while drooling precum onto the fleshy ring. The dog beneath you releases a soft whimper, one of need this time rather than reluctance, and presses his hips back. You grin and whisper 'Good boy' to him and push your ";
@@ -753,6 +780,13 @@ to say gsd_special_final_05:
 	say "     Tired of dealing with this arrogant dog, you grab him roughly by the back of the neck and push him to the ground. Grinding him face against the ground, you snarl down at him. 'I've had enough of you, you mangy cur. I've proven time and tune again your better.' And seeing just the thing for it, you smile. 'It looks like I'm going to have to beat some sense into you.'";
 	say "     Grabbing the yellowed newspaper you spotted, you roll it up and give him several smacks on the muzzle with it. 'Bad dog! Bad! Dog!' He whimpers and drops low to the ground, trying to slink away, but you won't have it. Grabbing him by the tail he's tucked between his legs, you pull his ass up into the air and give it several hard swats with the paper roll as well. 'Bad! Dog!' you repeat, giving him a final hard swat on his balls, drawing a satisfying yelp and whimper from him. Releasing his tail, you knock him to the ground with your foot and chase him off with a few more wild swings of the newspaper. 'Go on! Get out of here. I never want to see you again, you flea-bitten mutt.' He scampers away on all fours with his tail tight between his legs and the head he once held so arrogantly high now barely above the ground. You don't expect he'll dare bother you ever again.";
 	now gsd_pet is 100;
+
+to say gsd_special_final_06:
+	say "     Tired of dealing with this arrogant dog, you grab him roughly by the back of the neck and push him to the ground. Grinding him face against the ground, you snarl down at him, throwing harsh words that detail him being too weak and pathetic to make it on his own. Grabbing a yellowed newspaper you spotted, you roll it up and give him several smacks on the muzzle with it, berating him for being a bad dog. He whimpers and drops low to the ground, trying to slink away, but you won't have it. Grabbing him by the tail he's tucked between his legs, you pull his ass up into the air and give it several hard swats with the paper roll as well. Throwing the newspaper on the ground in front of his face, you look down upon the whimpering mess you've reduced the dog to.";
+	say "     He seems about ready to just lie there in the filthy street and wait for it to be over, with you walking off like before. But not this time, as you have other plans. Waiting a short moment to let his situation sink in, you then crouch down next to him and reach out to pet his head. Clearing your throat and striking a far different tone to before, you tell him that he could still make something of himself, or rather let you make something worthwhile of him if he accepts you as a [Master] and Alpha from now on. His defiance worn down after having been put in his place this one final time, he nods and ascents. 'Yes, you're the Alpha now,' he pants. Giving his head a last stroke, then holding out your hand to be licked submissively, you stand up and whistle for him to follow, which he does with a slow but hopeful wag of his tail.";
+	WaitLineBreak;
+	say "[gsd_recruited]";
+	now gsd_pet is 12;
 
 to say gsd_recruited:
 	increase score by 20;

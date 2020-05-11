@@ -631,8 +631,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is CassandraFucked;
 		-- "catdogstate":
 			now NumberVarValue entry is catdogstate;
-		-- "CatgirlFucked":
-			now NumberVarValue entry is CatgirlFucked;
 		-- "catnum":
 			now NumberVarValue entry is catnum;
 		-- "CatsVSDogsCounter":
@@ -791,10 +789,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is DemonFoxStatus;
 		-- "dentedbikecount":
 			now NumberVarValue entry is dentedbikecount;
-		-- "DianaRelationship":
-			now NumberVarValue entry is DianaRelationship;
-		-- "DianaTransformationProgress":
-			now NumberVarValue entry is DianaTransformationProgress;
 		-- "didsubmit":
 			now NumberVarValue entry is didsubmit;
 		-- "DiegoBitched":
@@ -1059,10 +1053,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is findwires;
 		-- "FinnTrackingProgress":
 			now NumberVarValue entry is FinnTrackingProgress;
-		-- "FionaCarlStatus":
-			now NumberVarValue entry is FionaCarlStatus;
-		-- "FionaFangStatus":
-			now NumberVarValue entry is FionaFangStatus;
 		-- "firebreathcount":
 			now NumberVarValue entry is firebreathcount;
 		-- "FireSpritemode":
@@ -1591,8 +1581,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is lastCarlKorvinInteraction;
 		-- "lastCarlSarahInteraction":
 			now NumberVarValue entry is lastCarlSarahInteraction;
-		-- "LastCatgirlFuck":
-			now NumberVarValue entry is LastCatgirlFuck;
 		-- "lastcheetahturns":
 			now NumberVarValue entry is lastcheetahturns;
 		-- "lastChristyfucked":
@@ -2631,8 +2619,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is TehuantlSnowStatus;
 		-- "TehuantlStatus":
 			now NumberVarValue entry is TehuantlStatus;
-		-- "TehuantlTimer":
-			now NumberVarValue entry is TehuantlTimer;
 		-- "TempClearBypass":
 			now NumberVarValue entry is TempClearBypass;
 		-- "templust":
@@ -4301,8 +4287,6 @@ to VariableNumberLoad:
 					now CassandraFucked is numberVarValue entry;
 				-- "catdogstate":
 					now catdogstate is numberVarValue entry;
-				-- "CatgirlFucked":
-					now CatgirlFucked is numberVarValue entry;
 				-- "catnum":
 					now catnum is numberVarValue entry;
 				-- "CatsVSDogsCounter":
@@ -4461,10 +4445,6 @@ to VariableNumberLoad:
 					now DemonFoxStatus is numberVarValue entry;
 				-- "dentedbikecount":
 					now dentedbikecount is numberVarValue entry;
-				-- "DianaRelationship":
-					now DianaRelationship is numberVarValue entry;
-				-- "DianaTransformationProgress":
-					now DianaTransformationProgress is numberVarValue entry;
 				-- "didsubmit":
 					now didsubmit is numberVarValue entry;
 				-- "DiegoBitched":
@@ -4731,10 +4711,6 @@ to VariableNumberLoad:
 					now findwires is numberVarValue entry;
 				-- "FinnTrackingProgress":
 					now FinnTrackingProgress is numberVarValue entry;
-				-- "FionaCarlStatus":
-					now FionaCarlStatus is numberVarValue entry;
-				-- "FionaFangStatus":
-					now FionaFangStatus is numberVarValue entry;
 				-- "firebreathcount":
 					now firebreathcount is numberVarValue entry;
 				-- "FireSpritemode":
@@ -5263,8 +5239,6 @@ to VariableNumberLoad:
 					now lastCarlKorvinInteraction is numberVarValue entry;
 				-- "lastCarlSarahInteraction":
 					now lastCarlSarahInteraction is numberVarValue entry;
-				-- "LastCatgirlFuck":
-					now LastCatgirlFuck is numberVarValue entry;
 				-- "lastcheetahturns":
 					now lastcheetahturns is numberVarValue entry;
 				-- "lastChristyfucked":
@@ -6305,8 +6279,6 @@ to VariableNumberLoad:
 					now TehuantlSnowStatus is numberVarValue entry;
 				-- "TehuantlStatus":
 					now TehuantlStatus is numberVarValue entry;
-				-- "TehuantlTimer":
-					now TehuantlTimer is numberVarValue entry;
 				-- "TempClearBypass":
 					now TempClearBypass is numberVarValue entry;
 				-- "templust":

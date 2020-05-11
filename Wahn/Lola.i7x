@@ -1,6 +1,10 @@
 Version 1 of Lola by Wahn begins here.
 [ Version 1.0 - New NPC - by Wahn  ]
 
+Table of GameCharacterIDs (continued)
+object	name
+Lola	"Lola"
+
 Lola is a woman.
 ScaleValue of Lola is 3. [human sized]
 Body Weight of Lola is 2. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
@@ -10,7 +14,7 @@ Androginity of Lola is 8. [Gender Adjective is generated out of androginity 1-9:
 Mouth Length of Lola is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 Mouth Circumference of Lola is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
 Tongue Length of Lola is 5. [length in inches]
-Breast Size of Lola is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Breast Size of Lola is 5. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 Nipple Count of Lola is 2. [count of nipples]
 Asshole Depth of Lola is 8. [inches deep for anal fucking]
 Asshole Tightness of Lola is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]

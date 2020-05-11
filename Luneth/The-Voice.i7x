@@ -120,7 +120,7 @@ Book 3 - Choices and Effects
 
 Section 1 - Dark Sanctum Gender Appearance
 
-to PlayerDarkSanctumSetting:
+to say PlayerDarkSanctumSetting:
 	now calcnumber is -1;
 	let menuexit be 0;
 	while menuexit is 0:

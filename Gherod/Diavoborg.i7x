@@ -1,5 +1,7 @@
 Version 1 of Diavoborg by Gherod begins here.
 
+"Adds Diavoborg, a Behemoth NPC, to the game."
+
 Section 1 - Pre-Events
 
 Table of GameEventIDs (continued)

@@ -78,7 +78,7 @@ after going to Maintenance Storeroom while (Dark_Presence_Start is active and Da
 		say "     The demon slumps to the floor and ragged breaths start to escape his chest. Remembering what happened with Brutus and how whatever gift that was passed onto him must have reverted somehow, you quickly leap into action and reach out to help the formal royal to his feet. Doing your best, you attempt to get the demon up the stairs of the bunker and back to his chair as fast as possible. Once he's seated, his breathing finally begins to return to normal, although he still appears slightly out of it. Not knowing what else to do, you start to explain to Skarnoth what had happened with Brutus and then to himself. 'Wait, Brutus? You mean that drooling beast that you enslaved?' You gape slightly and then proceed to ask why he would say that about someone that he apparently was able to form a bond of brotherhood with. 'A bond of brotherhood? You must be joking, [master]. I've never even talked with that animal.' It's almost as if the submissive demon somehow forgot everything that took place after you began to place those bite marks the hellspawn in your possession.";
 		WaitLineBreak;
 		say "     While processing what all of this could mean, a voice calls out from behind you, 'Is everything alright?' It's Elijah, his expression warm while meeting your gaze, but quickly turns cold as he takes in Skarnoth. 'You had best be staying out of trouble, demon, because if I find out otherwise, I will put you down before you can do any further damage.' The exhausted incubus merely mocks the angel and waves him off. Just as it looks as if Elijah's about to retaliate, you step in and explain to the angel that everything is fine and that you were simply checking in on him. With a shake of his head, the divine being's only response is, 'Don't pay these demons any mind. Remember that they are nothing but monsters, incapable of actually feeling anything other than the desire to destroy everything that they can.' With that, the angel gives you a slight smile and exits the room, leaving you to wonder if what Elijah said is true. A darker thought is quick to follow. If that's true then what does that make you, someone who gave them hope and a possible reason to feel, only to somehow rip it all away and erase those moments...";
-		remove "Master's Bite" from Traits of demon brute; [there is no NPC object for Brutus - using the pet object instead]
+		remove "Master's Bite" from Traits of Brutus;
 		remove "Master's Bite" from Traits of Skarnoth;
 		now HP of The-Voice is 99;
 		move player to Half-Renovated Room;
@@ -111,7 +111,7 @@ after going to Maintenance Storeroom while (Dark_Presence_Start is active and Da
 		say "     The shade either doesn't notice, or simply doesn't care about the effect that it is having on you. 'Now, what could I offer you?' The way that the shadow talks makes it sound as if it already knows [']exactly['] what it plans on saying. 'This place is my own personal creation, somewhere that has a pull all of its own. You see, when mortals close their eyes, enter dreamland, and are full of intense emotions, their essence can find its way here.' Looking around at the vacant area, you aren't sure that you're able to hide how unimpressed you are by the place's appearance. 'Well what do you think of this space? I'm sure that it's a little bland by mortal standards, but maybe something could be done about that. If you could have a domain of your very own, what sort of residents would you enjoy watching?";
 		say "     Silence fills the air between the two of you, as you're not really sure what they mean or how you should answer them. 'What I mean is that if I were to simply give you this realm, purely as an example mind you, what sort of dreamers would you want to see visit?' The condescending tone of the shade's voice causes your hackles to raise. 'I mean in simple terms, would someone like you prefer a world filled with beautiful females? Perhaps a paradise of manliness and testosterone? Or maybe you're someone that can find the pleasure in a little bit of everything, hmm?' A shudder goes through you before all of what the creature said sinks in. A world of your own choosing?";
 		WaitLineBreak;
-		PlayerDarkSanctumSetting; [The-Voice file]
+		say "[PlayerDarkSanctumSetting]"; [The-Voice file]
 		say "     'I see, so that's the sort of thing that you're into? What a naughty little [master] you must be, hehe. Truth be told, I suppose I could see how adding a bit of [']flavor['] could help this place be less boring for a mortal.' A feeling of embarrassment washes over you at the idea that you actually played into this thing's game, but the shadow doesn't seem to be judging your choices, instead finding the whole situation more amusing than anything. Growing tired of the games that this creature is playing, you quickly shout at the shade to get to the point, demanding to know exactly why you're here! 'Tut-tut, that's a rather rude way to ask a question, don't you think? Besides, why should I tell you... when I can simply show you!' With lightning speed, the creature rushes at you, however rather than the impact that you're expecting, it fades into your body instead.";
 		WaitLineBreak;
 		say "     A shrieking laugh fills your head until it is the only thing that you can focus on, causing you to become dizzy, and you drop to your knees with nausea. Shaking your head and taking a few deep breaths, you stand up and brace yourself for whatever trick that shadow has planned. A light behind you catches your attention. Spinning around, you are met with a very familiar sight, although you have never seen it quite from [']this['] perspective. Looking forward, you can see a battlefield frozen in time. Both you and Skarnoth are in the heat of battle, grimaced mouths shouting out in silent rage. From inside your head, a voice vibrates through your skull 'I see that you remember this battle. The moment that you chose to get involved in things that were not your concern, and in doing so, decided the fate of this city... and perhaps much more.' Glancing at Skarnoth, it's almost like looking at someone totally different than the demon you've become used too. 'The demon prince was well on his way to claiming your realm. He had amassed his entire army in preparation.'";
@@ -149,7 +149,7 @@ to First_DarkSanctum_Theme_Confirmed:
 		say "     The demon slumps to the floor and ragged breaths start to escape his chest. Remembering what happened with Brutus and how whatever gift that was passed onto him must have reverted somehow, you quickly leap into action and reach out to help the formal royal to his feet. Doing your best, you attempt to get the demon up the stairs of the bunker and back to his chair as fast as possible. Once he's seated, his breathing finally begins to return to normal, although he still appears slightly out of it. Not knowing what else to do, you start to explain to Skarnoth what had happened with Brutus and then to himself. 'Wait, Brutus? You mean that drooling beast that you enslaved?' You gape slightly and then proceed to ask why he would say that about someone that he apparently was able to form a bond of brotherhood with. 'A bond of brotherhood? You must be joking, [master]. I've never even talked with that animal.' It's almost as if the submissive demon somehow forgot everything that took place after you began to place those bite marks the hellspawn in your possession.";
 		WaitLineBreak;
 		say "     While processing what all of this could mean, a voice calls out from behind you, 'Is everything alright?' It's Elijah, his expression warm while meeting your gaze, but quickly turns cold as he takes in Skarnoth. 'You had best be staying out of trouble, demon, because if I find out otherwise, I will put you down before you can do any further damage.' The exhausted incubus merely mocks the angel and waves him off. Just as it looks as if Elijah's about to retaliate, you step in and explain to the angel that everything is fine and that you were simply checking in on him. With a shake of his head, the divine being's only response is, 'Don't pay these demons any mind. Remember that they are nothing but monsters, incapable of actually feeling anything other than the desire to destroy everything that they can.' With that, the angel gives you a slight smile and exits the room, leaving you to wonder if what Elijah said is true. A darker thought is quick to follow. If that's true then what does that make you, someone who gave them hope and a possible reason to feel, only to somehow rip it all away and erase those moments...";
-		remove "Master's Bite" from traits of demon brute; [there is no NPC object for Brutus - using the pet object instead]
+		remove "Master's Bite" from traits of Brutus;
 		remove "Master's Bite" from traits of Skarnoth;
 		now HP of The-Voice is 99;
 		move player to half-renovated room;
@@ -182,42 +182,218 @@ Part 3 - MoH Type
 
 [Section 2 - Second Event
 
-Variables:
+Variables;
 	say "     Right before you walk into the half-renovated room, you hear the familiar voices of both Skarnoth and Brutus, apparently in the middle of some sort of disagreement. 'I'm not going Brutus and that's the end of it! If I leave these walls, you know exactly what will happen to me. With my powers gone, I will be viewed as prey for the other hellspawn that are still left in the city!' The royal incubus's voice has an edge of desperation to it, as if at that exact moment he is imagining everything that those demons would do to him in his weakened state, however the demon brute is quick to silence him. 'You think me and the [master] are not strong enough to protect you?' Part of you wants to rush into the room to put this matter to rest, but there is another part of you, a part that wants to know if Skarnoth trusts you as completely as he claims.";
 	if morale of The-Voice is 1: [Royal MoH: spying]
-		say "     Quelling the part of you that wants nothing more than to strut through the open doorway, you instead listen further in the hopes of finding out exactly what Skarnoth has to say. 'I know that the two of you could protect me Brutus, but the point is that I shouldn't need to be defended. I should be able to stand on my own two feet, I mean I was a master of hell for fucks sake! Demons would scramble away just from my mere presence, and now, now they will look at me as nothing more than an easy mark.' The idea of having all of the power that the royal incubus had and then losing it, you can understand his frustration with the current situation. A part of you regrets his current predicament, however a larger part of you is happy with how things turned out, since you have come to enjoy having the former master of hell as your own personal toy. Slowly you walk through the doorway and raise both demons awareness to your presence.";
-		say "     ";
+		say "     [SkarnothSpy01]";
+		LineBreak;
+		say "     [bold type]How should you handle Skarnoth's emotions?[roman type][line break]";
+		say "     [link](1)[as]1[end link] - Treat him as an ally.";
+		say "     [link](2)[as]2[end link] - Treat him as a lover.";
+		say "     [link](3)[as]3[end link] - Treat him as a slut.";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 3:
+			say "Choice? (1-3)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to ally, [link]2[end link] to lover or [link]3[end link] to slut.";
+		if calcnumber is 1: [ally]
+			LineBreak;
+			say "     [SkarnothAlly01]";
+		else if calcnumber is 2: [lover]
+			LineBreak;
+			say "     [SkarnothLover01]";
+		else if calcnumber is 3: [slut]
+			LineBreak;
+			say "     [SkarnothSlut01]";
 	else if morale of The-Voice is 2: [Commander MoH: choice of either]
 		LineBreak;
 		say "     [bold type]Do you want to listen in on the conversation?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes, some things can only be learned when no one knows you're there.";
 		say "     ([link]N[as]n[end link]) - No, you have no need to hide your presence.";
 		if Player consents: [Commander MoH version of Royal scene]
+			say "     [SkarnothSpy01]";
 			LineBreak;
-			say "     ";
+			say "     [bold type]How should you handle Skarnoth's emotions?[roman type][line break]";
+			say "     [link](1)[as]1[end link] - Treat him as an ally.";
+			say "     [link](2)[as]2[end link] - Treat him as a lover.";
+			say "     [link](3)[as]3[end link] - Treat him as a slut.";
+			now calcnumber is 0;
+			while calcnumber < 1 or calcnumber > 3:
+				say "Choice? (1-3)>[run paragraph on]";
+				get a number;
+				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+					break;
+				else:
+					say "Invalid choice. Type [link]1[end link] to ally, [link]2[end link] to lover or [link]3[end link] to slut.";
+			if calcnumber is 1: [ally]
+				LineBreak;
+				say "     [SkarnothAlly01]";
+			else if calcnumber is 2: [lover]
+				LineBreak;
+				say "     [SkarnothLover01]";
+			else if calcnumber is 3: [slut]
+				LineBreak;
+				say "     [SkarnothSlut01]";
 		else: [Commander MoH version of Tyrant scene]
 			LineBreak;
-			say "     ";
+			say "     [SkarnothBurstIn01]";
+			LineBreak;
+			say "     [bold type]How should you handle Skarnoth's emotions?[roman type][line break]";
+			say "     [link](1)[as]1[end link] - Treat him as an ally.";
+			say "     [link](2)[as]2[end link] - Treat him as a lover.";
+			say "     [link](3)[as]3[end link] - Treat him as a slut.";
+			now calcnumber is 0;
+			while calcnumber < 1 or calcnumber > 3:
+				say "Choice? (1-3)>[run paragraph on]";
+				get a number;
+				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+					break;
+				else:
+					say "Invalid choice. Type [link]1[end link] to ally, [link]2[end link] to lover or [link]3[end link] to slut.";
+			if calcnumber is 1: [ally]
+				LineBreak;
+				say "     [SkarnothAlly01]";
+			else if calcnumber is 2: [lover]
+				LineBreak;
+				say "     [SkarnothLover01]";
+			else if calcnumber is 3: [slut]
+				LineBreak;
+				say "     [SkarnothSlut01]";
 	else if morale of The-Voice is 3: [Tyrant MoH: Burst in]
-		say "     ";
-	say "     ";]
+		say "     [SkarnothBurstIn01]";
+		LineBreak;
+		say "     [bold type]How should you handle Skarnoth's emotions?[roman type][line break]";
+		say "     [link](1)[as]1[end link] - Treat him as an ally.";
+		say "     [link](2)[as]2[end link] - Treat him as a lover.";
+		say "     [link](3)[as]3[end link] - Treat him as a slut.";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 3:
+			say "Choice? (1-3)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to ally, [link]2[end link] to lover or [link]3[end link] to slut.";
+		if calcnumber is 1: [ally]
+			LineBreak;
+			say "     [SkarnothAlly01]";
+		else if calcnumber is 2: [lover]
+			LineBreak;
+			say "     [SkarnothLover01]";
+		else if calcnumber is 3: [slut]
+			LineBreak;
+			say "     [SkarnothSlut01]";
+	say "     Returning back up to the demons, you're pleased to see that they appear ready to head out. Deciding that it would be best to have your companions know what to expect, you begin to explain your mission out to the desecrated church. Starting off, you attempt to tell the two of them about the shade that you encountered, only to find that the words have somehow become stuck in your throat. Each time you attempt to the creature all that you can produce is random sounds that have no meaning, this of course leads to both Skarnoth and Brutus staring at you as if you had grown a second head. Taking a deep breath and clearing your throat, you choose to ignore that for the moment and instead move on to the next topic, 'A relic has apparently risen from hell and our goal will be to claim it for ourselves, however before we attempt that, we will heading out to an old church that has seen better days. The reason we're going there is to gain some more help, a succubus named Lilith has taken up residence there [if PlayerMet of Atticus is true]as well as my son Atticus and we will need their help to get the relic[else]and we will need her help to get the relic[end if].";
+	say "     At Lilith's name you notice that Skarnoth's back goes rigid and an uneasy look forms on his face. After what you saw in the dreamscape you can't really blame the former royal, this is someone that he used to hold power over and now in his weakened state who knows what will happen.[if PlayerMet of Atticus is true] Brutus's voice filters through your mind, [italic type]'An heir to the throne has already been born?'[roman type] The words are said barely above a whisper, but a look of pride crosses over Brutus's face at the mention of your son.[end if] Looking both demons in the eyes, you explain to them that this shouldn't be a complicated mission and that you will be the one to deal with Lilith. Skarnoth speaks up at those words, '[Master], if you plan on being the one to deal with her, then why do you need us to go with you?' An honest question, but after you becoming tongue tied while attempting to mention the shade, you decide it would be best to avoid risking embarrassing yourself again and simply say, 'You will see.'";
+	WaitLineBreak;
+	say "     As the three of you are about to finally make your exit, a familiar voice echoes through the library, '[if Player is not defaultnamed][name of Player][else]Hello[end if]!? anyone in here?!' The voice is unmistakably that of Elijah, a quick glance to Brutus sees his body instantly become translucent as he reverts to his smoke form and takes refuge inside the pendant that once served as his prison. Skarnoth makes no move to hide his movements, instead he simply crosses his arms in annoyed fashion and rolls his eyes at the idea of being interrupted by the angel. As Elijah enters the room you are met with his normally cheerful smile, that is until his gaze falls on the former Master of Hell, 'I was just checking to see if you were around, I didn't expect to find you spending time with that... thing.' The look of disdain of the heavenborn's face couldn't be more evident if he tried. From within your mind Brutus comments on the current situation, [italic type]'[Master], shouldn't we be making our way to the church now? Wasting time dealing with the angel will get us nothing but a headache.'[roman type]";
+	LineBreak;
+	say "     [bold type]How should you deal with Elijah?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Act friendly.";
+	say "     [link](2)[as]2[end link] - Act amorous.";
+	say "     [link](3)[as]3[end link] - Act dismissive.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 3:
+		say "Choice? (1-3)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to friendly, [link]2[end link] to amorous or [link]3[end link] to dismissive.";
+	if calcnumber is 1: [friendly]
+		LineBreak;
+		say "     Walking up to the winged man, you place a hand on the side of his arm with a warm smile on your lips, 'Come on Elijah, you and me both know that no one is above being saved.' The angel's face scrunches up confusion, with just a hint of a pout. Not wanting to let him get the upper hand in the conversation you quickly continue speaking, 'I thought it might do Skarnoth some good to see the destruction of the city, to see what the path of evil leads to. Maybe this could be a turning point, a moment to finally have to see the repercussions of carnage.' Elijah's azure eyes soften at your explanation, 'I see, well I think it's wonderful that you want to help him see the light, just... if this doesn't work, promise me that you wont take it too personally, alright?' With that both you and Skarnoth make to leave the room, with a brand new type of smile forming on your face while your back is to the angel.";
+	else if calcnumber is 2: [amorous]
+		LineBreak;
+		say "     Walking up to the winged man, you reach out and grab him by the back of his head and pull him into passionate kiss. The startled angel's eyes go wide and his wings spread out in a surprised manner, however both his eyes and wings quickly begin to tremble under your ministrations, finally his azure eyes close and he submits to your passions. Enjoying the brief moment of control over the heavenborn, you eventually pull back and look at his face, eyes still closed and lips still poised for the kiss. 'I thought it might do Skarnoth some good to see the destruction of the city, to see what the path of evil leads to. Maybe this could be a turning point, a moment to finally have to see the repercussions of carnage.' While Elijah quickly nods his head in the affirmative, you can tell that the meeting of your mouths is really the only thing that has filtered through his mind. With that both you and Skarnoth make to leave the room, with a brand new type of smile forming on your face while your back is to the angel.";
+	else if calcnumber is 3: [dismissive]
+		LineBreak;
+		say "     Walking up to the winged man, you attempt to simply walk past him, but he instead side steps to block your path, 'Umm haha, you can see me can't you? I haven't somehow become invisible have I?' Elijah's attempt at a joke and the warm look in his gaze do nothing to change your mind, looking him directly in his azure eyes you open your mouth and the venom is palpable, 'Get out of my way! Incase you hadn't noticed, I'm the one in charge and I don't answer to you, do you understand?' The look on the angel's face would be comical if you weren't already annoyed by his presence. 'I'm sorry, I wasn't trying to make you upset, I was just worried about you is all...' You continue on your path with Skarnoth following quickly behind you, the feeling that it is important to make sure that the heavenborn understand his place in the pecking order sated.";
+	say "     As soon as the two of you are outside of the library, a deep sigh of relief floods through your body with the knowledge that you doubt Elijah suspects anything. Brutus emerges from within the pendant, the large demon giving his whole body a violent shake as soon as he is once again fully formed. With the demon brute's back to you, it's hard not to notice the way his huge purple ass shakes and jiggles. Glancing over at Skarnoth from the corner of your eye, you notice that his gaze is transfixed on what could be confused with an impromptu twerking moment. When Brutus finally turns around to face the two of you a strange look of confusion passes over his face at the expressions on your faces, 'What's wrong [master]?' Looking over at the former royal you can see the mirth in his lava eyes and the two of you burst into a fit of laughter that has you holding your sides. The demon Brute still has no idea what is so funny and actually looks to be becoming slightly annoyed, 'Hmph, well you two seem way too amused for some reason, anyway we should start heading out and stop wasting time.'";
+	WaitLineBreak;
+	say "     With that Brutus turns to lead the way, which in turn puts his bare ass back on display, which only serves to bring the laughter back with a vengeance. Turning his head sidewise slightly to look at what must appear to be two nut-jobs, the brute rolls his eyes and walks back over, before simply scooping the two of you up and throwing each of you over a shoulder. However, this is not the smartest choice as you and Skarnoth are embracing the moment of immaturity. With your heads hanging over his back you are presented with the source of your amusement and eventually start a mini competition of reaching down and forcing each cheek to jiggle every time the demon takes a step. Brutus hardly seems to understand what is so funny about your antics, well at least going by his growls... and the fact that his tail will randomly whip around smacking each of your hands. Sadly this devolves into a new game, the name being: make the brute spank himself.";
+	say "     After about ten minutes of walking, Brutus finally sets the two of you down, the laughing fit that you both experienced finally dying down a bit. 'Alright [master], now that you have calmed down, what caused all that laughter? I don't remember seeing you drink any liquor and I didn't hear anything said that was amusing enough to cause that reaction.' While Brutus is definitely a being of darkness, it's refreshing to see that even [']he['] still has a small amount of innocence... at least in this particular situation. The demon brute's crimson eyes look at you expectantly, you doubt that simply brushing him off will help the situation. The question is how best to approach this, in the past you've learned that Brutus is at least somewhat self conscious of his appearance.";
+	say "     [bold type]How do you wanna let Brutus know what was so funny? [roman type]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Simply explain the situation and go from there.";
+	say "     ([link]N[as]n[end link]) - Embrace your inner pervert and [']showcase['] what exactly was so funny.";
+	if Player consents:
+		LineBreak;
+		say "     With a smile creeping up on your face, you decide the best way to handle this is to simply be honest and explain the joke. 'Brutus, when you emerged from the pendant and appeared in front of us, what was the first thing that you did?' The demon brute thinks on this for a moment, opening and closing his mouth a few times, he finally answers you, 'I came out and shook off the remaining miasma, other than that, I didn't do anything strange.' Obviously noticing that your eyebrows raised at that information, he continues talking, 'The magic used on the pendant was made to lower my strength, at first the miasma was in the air constantly surrounding me, but after you marked me, it started to become a light powder that could easily be shaken off.' Well that's definitely something that you should have known about sooner, but there will be time to get into that later. Calmly you tell the demon that after stressing about having to deal with Elijah, your adrenaline was a little higher than usual and when he appeared in front of the two of you, he did a short impromptu twerking show.";
+		say "     'Twerking? [Master], what is that?' Now it's your turn to open and close your mouth like a fish, glancing to the side and Skarnoth, you see a similar look of confusion on his face as well. This of course leads to explaining the finer aspects of twerking to both demons, Skarnoth seems to find the whole idea incredibly humorous and begins to chuckle at how silly mortals can be. Brutus however doesn't seem to be enjoying the new information, 'So you both were laughing at me? At the fact that you think my butt is too big?' The look on his face his hard to read, but it definitely doesn't look please. You attempt to calm your dark knight down and explain that it was just a silly moment, however Brutus brushes your assurances aside and comments on the fact that your group really should be heading to the church instead of just standing around. This conversation didn't go quite how you planned, but he's right and besides you can always talk to him later in private to attempt a better explanation.";
+	else:
+		LineBreak;
+		say "     [BrutusTwerkPervert01]";
+	WaitLineBreak;
+	say "     As the three of you finally get close to the burned out church, you realize that the city around you is silent, almost eerily so. Skarnoth is the one that finally breaks the silence, '[Master], I don't like this, I mean... doesn't everything about this silence seem like a trap?' Wanting to keep all of your senses on the matter at hand, you simply nod your head in acknowledgement. A scream fills the air around your group, causing the three of you to turn in the same direction, that of the church itself. Brutus eventually speak up, '[Master], didn't you say that the succubus was needed to claim the relic? If so, then I recommend we hurry, that scream didn't sound like a good sign.' The three of you start running for the church, however now it all makes sense, the silence of the area is more than likely due to whatever is taking place within those charred walls.";
+	say "     As your team enters the courtyard and make a beeline for the stairs leading up into the building, a shadow falls across the ground in front of you causing you to stop dead in your tracks. Looking up, you see a graceful and lithe demon jump from the roof of the church, his leathery wings spreading out and begins to glide through the air. When his form finally connects with the ground he instantly attempts to intimidate you, 'Who the hell do you think are to interrupt mo-, wait... DADDY?!' Before you can open your mouth to respond, you're immediately grappled with a tight bear hug, 'Daddy, I'm so glad you came to visit me! You have no idea how boring it is to have to guard the door while [']she's['] busy in there and doesn't wanna be disturbed.' The fact that your son is actually using air quotes as he speaks brings a smile to your lips and return the embrace as you decide to ask him what Lilith is doing that she would want that sort of privacy for.";
+	WaitLineBreak;
+	say "     'Wellll, see this guy showed up, and at first he looked pretty harmless. Actually he kinda reminded me of one of the guys from a magazine I saw awhile ago.' Knowing Atticus, it was more than likely a porn mag, still holding him close, you ask him if the guy looked like one of the [']stars['] in his magazines, however this causes him to pull back with a dirty look on his face. 'Of course not! This guy wishes that he could be like one of those studs haha. No, he looked like one of the guys in those machine magazines, ya'know where they build stuff? He even had those really big glasses and suspenders! Although the cape he was wearing was kinda strange.' You're still stuck on the thought of Atticus looking at any type of science magazine, 'Hey now, I know that look and I can have more than just sex on the brain, in fact I have [']many['] interests.' A pointed finger collides with your chest as he attempts to defend himself.";
+	say "     'Anyway, so I went up to him and tried being nice, and you know what he said? [']Out of my way fag, I have come to claim your slut as my concubine![']' You can't help but chuckle at your sons attempt of doing an imposing and threatening voice, this of course leads to Atticus rolling his eyes, but the smile on his face betrays him. You ask him why exactly was he trying to be nice to this guy in the first place? 'Oh, cuz if he can build stuff, then he could prolly build me a super sweet fuck machine!' You don't have the heart to tell him that it still sounds like he has sex on the brain, 'Can I finish my story now without all the questions?' Making a motion of zipping your lips, you nod for him to continue, 'So yeah, he was an asshole, he went in, there was a lot of screaming and then [']she['] came out and told me to keep people from bothering her... mphtch' While it's muffled and you can't quite make out the last word that was said, it sounded an awful lot like bitch. At that moment Atticus seems to realize that you aren't alone and looks over your shoulder at both Skarnoth and Brutus with a curious look on his face, 'Who are those guys dad?'";
+	say "     [bold type]How should you respond to Atticus? [roman type]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Refer to them as your underlings.";
+	say "     ([link]N[as]n[end link]) - Refer to them as your brother-in-arms.";
+	if Player consents:
+		LineBreak;
+		say "     A smile forms on Atticus's lips, 'So like, you own them? That's kinda hot.' Your incubus son then saunters over to inspect the demons that you have claimed as your property. Looking at your servants, you can see that neither of them seem all that affected by your words, although Brutus's brow does furrow for a moment in dissapointment before quickly returning to normal. Atticus begins to poke and prod the other two hellspawn, which the demon brute doesn't seem to mind to much, however the former Master of Hell is less than happy about all the touching. 'Hey daddy? Since you like, own them and everything, is it alright if I use them?' A laugh erupts from your chest at how truly insatiable your offspring is, 'Tell ya what, how about I go deal with your mother, and I'll think on it?' The incubus pouts at your response, but nods his head in acknowledgment, well at least until he notices the marks on the other demons jugulars.";
+		say "     'Hey, what are these wierd marks on their necks?' You explain to him that those are your bite marks and that they symbolize your ownership over the two hellspawn. 'Wait... so your bite can do that? You wouldn't bite me like that would you?' The look on your son's face is an odd mix of excitement and fear, you pull the young man close to you and whisper in his ear, 'Maybe I would, I bet that you'd be pretty tasty!' With that, you joking begin to make biting sounds into the soft part of the incubus's throat, 'No daddy, don't make me into a slave, haha!' The two of you share a familial hug as you both finsh laughing, 'Alright son, you stay out here with Skarnoth and Brutus, they will keep you safe alright?' Atticus responds with a roll of his eyes, 'Dad, you know I'm an adult right? I can take care of myself!' With a chuckle you send out a mental message to your demons, [italic type]'You two keep him safe, and one wrong move in touching him... will not go unpunished.'[roman type] Brutus nods firmly while Skarnoth scoffs, but you can tell that he knows that you're not joking.";
+	else:
+		LineBreak;
+		say "     A smile forms on Atticus's lips, 'So their sorta like my uncles then? That's kinda cool.' Your incubus son then saunters over to inspect the demons that you have claimed as part of the family. Looking at your allies, you can see that both of them were affected by your words. Skarnoth has an annoyed look on his face, but the reddening of his cheecks betrays his true feelings about being seen as family. Brutus though, you can't remember ever seeing such a look of pride on his demonic visage, while most would probably assume that he was furious, you know better, this is the look of one truly ecstatic demon. Atticus begins to poke and prod the other two hellspawn, which the demon brute doesn't seem to mind, even going so far as to awkwardly pat the much smaller incubus on the head, which is rewarded with a beaming smile from your son. The demon brute's fanged mouth opens in a smile and his voice comes out as a soft growl, '[Master], your offspring is certainly a curious one isn't he?'";
+		say "     The former Master of Hell is less than happy about all the touching, everytime Atticus attempts to poke him, Skarnoth is quick to lightly slap his hand away, however this simply ends up amusing the incubus and brings his more mischievous side to the forefront and the younger demons seems to enjoy annoying the elder. A vein begins to pulse on the formal royal's forhead, '[Master], there is no way that this annoying little creature could share your bloodline!' This however causes Atticus's smile to disappear and become replaced with a vicious snarl, 'Oh yeah?! Well at least I don't have some huge set of horns that make me look like some big dumb cow slut!' Placing a finger to each of his temples Skarnoth attempts to to repond to Atticus in a frustrated voice, 'These horns are a symbol of my power and showcase my demonic pedigree, not that a tiny brat like you would understand.'";
+		WaitLineBreak;
+		say "     You can see Brutus off to the side rolling his eyes and you're fully prepared for the incubus to retaliate, but he simply rubs his much smaller horns, 'Well I'm still growing so that's why my horns are smaller, just you wait, my horns will make yours look like little pegs!' You can tell that the topic got under your sons skin, Atticus then walks back over to you and without thinking much on it you wrap him up in your arms. Glancing back at Skarnoth you see an almost pained smile form on his lips and through the mental link ask him if he's alright, [italic type]'Of course [master], he just... reminds me of someone is all.'[roman type] Once the incubus finally begins to calm down, he looks up into your face, 'Hey daddy? Since their part of the family, is it alright if I play with them?' Looking up at the other two demons a laugh erupts from your chest at the look of curious confusion on Brutus's face and the look of complete horror that graces Skarnoths, 'Tell ya what sport, how about I go deal with your mother, and while I'm taking care of that you can spend some time bonding with Brutus and Skarnoth.'";
+		say "     With a huge smile on his face the incubus quickly runs off, to where, you have no idea. But it gives you a chance to talk with the other demons, 'Alright guys, I'm gonna go deal with Lilith, you guys keep an eye on Atticus for me. And not a hair on his head had better be out of place when I come back out. Also keep your dicks to yourselves got it?' Brutus looks mortified that you would even feel the need to mention that last part, but Skarnoth simply inspects his claws and comments that he has higher standards. Before you can reprimand the former royal for his response, Atticus comes running back with a large box... filled with an ungodly amount porn. Once the incubus is closer he finally sets the box down, he rushes over to his [']uncles['] and begins to pull them closer. This just so happens to be the moment that he notices the marks on the other demons jugulars.";
+		WaitLineBreak;
+		say "     'Hey, what are these weird marks on their necks?' You explain to him that those are your bite marks and that they symbolize the bond that the three of you share. 'Wait... so your bite can do that? Can you bite me too? I wanna be part of the team!' The look on your son's face is one of pure excitement, you pull the young man close to you and whisper in his ear, 'Maybe I would, I bet that you'd be pretty tasty!' With that, you joking begin to make biting sounds into the soft part of the incubus's throat, 'No daddy, don't nibble me, make me into a member of your super team, haha!' The two of you share a familial hug as you both finsh laughing, 'Alright son, you stay out here with Skarnoth and Brutus, they will keep you safe alright?' Atticus responds with a roll of his eyes, 'Dad, you know I'm an adult right? I can take care of myself!' With a chuckle you look over where your unorthadox family sits on the ground surrounded... by porn.";
+		say "     Atticus then proceeds to explain the game that they will be playing, 'Alright the game is called [']Nut or Not['], you just go through and place these stickers on the ones you would fuck!' The stickers are obviously old and covered in dust, some are hearts and others are stars, you can't stop yourself from asking if their is a difference, which leads to the incubus's face gaping like a fish 'Of course theres a difference daddy! Stars are for people that would be decent cumdumps and hearts are for ones with harem potential.' With that your son peels a heart sticker off and with a smile places it against Brutus's pec, 'See like that?' Brutus's expression is priceless, the normally dangerous and clawed hand gently feels the pathetic sticker on his skin, but treats it like it's something precious. While the moment does tug at your dark heartstrings, that quickly dissipates as Atticus peels two star stickers off and slams them down on both of Skarnoth's nipples.";
+		WaitLineBreak;
+		say "     The former royal is not amused, 'What the hell are these for?' The incubus shoots him an impish grin, 'Oh those weren't so say you would be a decent cumdump, I've just heard that cow sluts leak a lot, so I thought that I would help you out by putting a stopper there.' Skarnoth looks ready to spit bullets, but Brutus nods his head in a sage like way, either because he is humoring your son, or because now he is actually starting to wonder if Atticus is right about Skarnoth being some sort of demonic cow. Shaking your head at the image they all make, you can't keep the smile off of your face and tell them, 'You boys be good while I take care of business alright?' Brutus and Atticus nod their heads as they inspect the porn mags, while Skarnoth finally snaps and stand up instantly, 'I was a Master of Hell goddamit, I refuse to play babysitter to this... thing!' His explosion is halted though by Atticus flashing a favorite of his, which derails the former royal, causing him to sit back down and to further [']inspect['] the piece.";
+	say "     ";
 
 
+Part 1 - Spying
 
+to say SkarnothSpy01:
+	say "     [if Morale of The-Voice is 1]Placing your body flush against the wall, you listen in on the two demon's conversation in the hopes of learning something that could prove useful[else if Morale of The-Voice is 2]Quelling the part of you that wants nothing more than to strut through the open doorway, you instead listen further in the hopes of finding out exactly what Skarnoth has to say[end if]. 'I know that the two of you could protect me Brutus, but the point is that I shouldn't need to be defended! I should be able to stand on my own two feet, I mean I was a master of hell for fucks sake! Demons would scramble away just from my mere presence, and now, now they will look at me as nothing more than an easy mark.' [if Morale of The-Voice is 1]The idea of having all of the power that the royal incubus had at one point and then losing it, you can understand his frustration with the current situation. A part of you regrets his current predicament, however a larger part of you is happy with how things turned out, since you have come to enjoy having the former Master of Hell in a subservient role beneath you. Besides, part of being a noble is to properly understand ones place after all. Slowly you walk through the doorway and raise both demons awareness to your presence[if Morale of The-Voice is 2]The idea of being a powerful warrior and a leader among the demons, then only to lose everything does stir emotions of camaraderie in you. A part of you regrets his current predicament, however a larger part of you knows that the strong will always overcome the weak, you bested the demon in battle and claimed your rightful place above him in the pecking order. Besides, he should be happy that now you're in charge since that means you will be able to properly keep him safe, the fact that he makes a perfect sub for you doesn't hurt matters either. Confidently you walk through the doorway and raise both demons awareness to your presence[end if].";
+	say "     Skarnoth seems shocked by your sudden entrance, Brutus however doesn't show any sign of surprise. A gravely purr reverberates the word [italic type]'[Master]'[roman type] through your mind as the demon brute acknowledges you, he must have felt you through the master bond, however that begs the question of why the former royal seems so startled to see you, seeing as he also bears your mark. '[Master], I didn't expect to see you so soon... did... did you hear anything before you came in?' Looking into the lava colored eyes of you slave, you calmly walk forward and nod your head in the affirmative. 'I wasn't trying to go against your orders [master], but please understand where I'm coming from. Without my powers I'll be marked as an easy target... I have accepted my place under your ownership, but there are things out there that you have never encountered, things that...' Seeing the conflict on the demon's handsome tan face, you feel the need to reassure him from his fears, but the question is how to go about it.";
 
+Part 2 - Burst In
 
+to say SkarnothBurstIn01:
+	say "     Pushing the thoughts of needing to spy on the demons within away, you walk with a confident [if Morale of The-Voice is 2]stride [if Morale of The-Voice is 3]strut [end if]into the half-renovated room, your gaze instantly landing on both Skarnoth and Brutus. The former royal seems shocked by your sudden entrance, but the demon brute doesn't show any sign of surprise. A gravely purr reverberates the word [master] through your mind as the Brutus acknowledges you, he must have felt you through the master bond, however that begs the question of why the Skarnoth seems so startled to see you, seeing as he bears your mark as well. Looking around, you notice that neither of the demons have readied anything for your trip out to the burned out church, [if Morale of The-Voice is 2]'Are you two almost ready? We move out as soon as possible.' [if Morale of The-Voice is 3]'Come on boys and move your asses, we've got places to be' [end if]Turning around to leave, intending to finish your own preparations, you come to a halt as neither demon makes any move to follow your orders.";
+	say "     Turning back, you ask them if something is wrong with a [if Morale of The-Voice is 2]commanding tone to your voice, [if Morale of The-Voice is 3]annoyed growl in your voice, [end if]Skarnoth is the one that finally speaks up, '[Master], would it be alright if I sat this one out?' Raising a single eyebrow, you proceed to ask the demon why he shouldn't [if Morale of The-Voice is 2]have to follow orders. [if Morale of The-Voice is 3]have to do as you command. [end if]'It isn't that I'm trying to go against your orders [master], but please understand where I'm coming from. Without my powers I'll be marked as a easy target... I have accepted my place under your ownership, but there are things out there that you have never encountered, things that...' Finally understanding what has Skarnoth acting so skittish, you think for a moment on the best way to handle the situation. Seeing the conflict on the demon's handsome tan face, you feel the need to reassure [if Morale of The-Voice is 2]him from his fears, [if Morale of The-Voice is 3]your property of his fears, [end if]but the question is how to go about it.";
 
+[if Morale of The-Voice is 1] [else if Morale of The-Voice is 2] [else id Morale of The-Voice is 3]
+[[italic type]yards[roman type]]
+[Stamina of Skarnoth = whether they had a threesome or not]
 
+Part 3 - Skarnoth Ally Scene
 
+to say SkarnothAlly01:
+	say "     Walking up to Skarnoth with a friendly smile on your lips, you place a firm hand on his shoulder, the act startling the former master of hell. Even though the demon attempts to shrink away from your touch, you don't release the grip on him, '[Master]?' The look of fear in his eyes spurs you to speak, 'Skarnoth, you need to trust in both me and Brutus. I know that there are things in this world that we have yet to see firsthand, but we shall face them head-on, together.' Glancing over at the demon brute, he acknowledges your words with a firm nod of approval before his voice fills your mind, [italic type]'Wise words [master].'[roman type] Skarnoth seems to calm down slightly at your declaration and brings his own hand up to cover your own in an act of camaraderie. 'Alright [master], you're right. We can handle this, I just wish I knew how to be of use now that I'm so much weaker than I used to be.'";
+	say "     Surprisingly, you are able to hear something very faint in the back of your mind, but it steadily grows louder. ''";
 
+Part 4 - Skarnoth Lover Scene
+[expanded sex scene that will require knowledge of potential sex between Skarnoth and Brutus]
 
+to say SkarnothLover01:
+	say "     Walking up to Skarnoth with a smoldering look in your eyes, you quickly pull him flush against your body and lay a searing kiss against his full lips. As the former master of hell finally leans in and begins to respond with an almost hungry desperation, your tongue quickly dominates the meeting of your two mouths. While this moment is about the intimacy between the two of you, it is also about showing the demon that it's alright to rely on you and trust in your judgement. Pulling back, you look deep into his lava colored eyes, within them you can see both devotion, but also a question. '[Master], what was that for?' Raising your hand up, you cup the side of his tan face and allow your fingertips to caress his crimson hair, 'Skarnoth this is my way of showing you that I care, and that I would never allow anything to happen to you. You're special to me and I will always keep my things safe.'";
 
+Part 5 - Skarnoth Slut Scene
+[expanded sex scene that will require knowledge of potential sex between Skarnoth and Brutus]
 
+to say SkarnothSlut01:
+	say "     Walking up to Skarnoth with a look indignation on your face, with a single hand you grab one of his horns and push the former master of hell down to a kneeling position. Looking down into the demon's fearful eyes you allow a cruel smile to form on your lips, 'Listen up slut, I keep you around because you're a decent [if player is male]cocksleeve, [else]dildo, [end if] it's past the time that you have learned your place. Let's be honest here, I beat you, the master of hell and then enslaved you as my bitch, so whatever is out there I think I can handle.' From behind you a snicker can be heard from Brutus. Tears start to form in Skarnoth's lava colored eyes, 'Yes [master], I understand and your right. Just... please don't hurt me.'";
 
+Part 6 - Brutus Pervy Twerk Scene
+[expanded sex scene that will require knowledge of potential sex between Skarnoth and Brutus]
 
-
-
-
-
+to say BrutusTwerkPervert01
+	say "     ...";]
 
 Master-of-Hell-Quest ends here.

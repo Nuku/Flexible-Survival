@@ -1,9 +1,10 @@
 Version 3 of Dwarves by Gherod begins here.
+
+"Adds an entire new race, the dwarves, in form of a new infection and a new roaming creature past an introductory event."
+
 [Version 1 - File created - Gherod]
 [Version 2 - 1 Submit Scene, Collapsed Tunnel event, Golden Greathammer weapon - Gherod]
 [Version 3 - Wedding Wreckers event, Dwarf Knights - Gherod]
-
-"Adds an entire new race, the dwarves, in form of a new infection and a new roaming creature past an introductory event."
 
 Section 1 - Events
 

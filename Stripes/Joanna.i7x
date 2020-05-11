@@ -199,6 +199,7 @@ to SFquestion1:
 					LineBreak;
 					say "     With a nod, you happen to accept her request, telling her you'll do what you can, which makes the kinkajou girl almost burst out of happiness. 'Really?! Oh, I can't thank you enough! I mean, I can let you rest in my garden, fondle and stuff you for hours and hours if that's what you want as reward, I think...' she adds, laughing with joy. 'Though do be careful! I've heard horrible things from that place... Strange things happen, and there are multiple dangerous creatures in there, things that went very very wrong... Just be careful, okay?' she warns you, concerned about your well being. You thank her for her kindness and promise you'll be back with something worth your time. 'Thank you so much, really! I promise I'll reward you with lots and lots of love, my hero!' Nodding, you prepare yourself to leave. However, you wonder how she would have known any of this...";
 					say "     Now, [bold type]you have to get in the Trevor Labs and seek some clues in the sealed area[roman type]. It won't be easy, though. As Joanna said, many dangers roam that area, so you have to be prepared for especially strange and disturbing results of previous [bold type]hybrid experimentations.[roman type][line break]";
+					now Hybrid Experimentations is active;
 					now resolution of Spreading Flowers is 2; [to the Trevor Labs]
 				else:
 					LineBreak;
@@ -224,7 +225,7 @@ Table of GameEventIDs (continued)
 Object	Name
 Hybrid Experimentations	"Hybrid Experimentations"
 
-Hybrid Experimentations is a situation.
+Hybrid Experimentations is a situation. Hybrid Experimentations is inactive.
 The sarea of Hybrid Experimentations is "Sealed".
 
 instead of resolving a Hybrid Experimentations:

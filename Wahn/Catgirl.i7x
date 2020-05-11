@@ -5,7 +5,7 @@ Version 2 of Catgirl by Wahn begins here.
 
 Section 1 - Creature Responses
 
-[ CatgirlFucked                                            ]
+[ HP of Fiona                                              ]
 [  0 - never                                               ]
 [  1 - once                                                ]
 [  2 - twice                                               ]
@@ -13,18 +13,59 @@ Section 1 - Creature Responses
 [  4 - met her in the library                              ]
 [  5 - told her her new name                               ]
 
-[ FionaCarlStatus                                          ]
+[ Strength of Fiona                                        ]
 [   0 - never met                                          ]
 [   1 - they fucked, player didn't watch                   ]
 [   1 - they fucked, player did watch and Carl knows it    ]
 [ 100 - player stepped in to break up Carl and Fiona       ]
 
 
-CatgirlFucked is a number that varies.
-LastCatgirlFuck is a number that varies.
-LastCatgirlFuck is usually 555.
-FionaFangStatus is a number that varies.
-FionaCarlStatus is a number that varies.
+Table of GameCharacterIDs (continued)
+object	name
+Fiona	"Fiona"
+
+Fiona is a woman.
+ScaleValue of Fiona is 3. [human sized]
+Body Weight of Fiona is 2. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Fiona is 7. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Fiona is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Fiona is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Fiona is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Fiona is 5. [length in inches]
+Breast Size of Fiona is 2. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Fiona is 2. [count of nipples]
+Asshole Depth of Fiona is 8. [inches deep for anal fucking]
+Asshole Tightness of Fiona is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Fiona is 0. [number of cocks]
+Cock Girth of Fiona is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Fiona is 0. [length in inches]
+Ball Count of Fiona is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Fiona is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Fiona is 1. [number of cunts]
+Cunt Depth of Fiona is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Fiona is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Fiona is 3. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Fiona is false.
+PlayerRomanced of Fiona is false.
+PlayerFriended of Fiona is false.
+PlayerControlled of Fiona is false.
+PlayerFucked of Fiona is false.
+OralVirgin of Fiona is false.
+Virgin of Fiona is false.
+AnalVirgin of Fiona is true.
+PenileVirgin of Fiona is true.
+SexuallyExperienced of Fiona is true.
+TwistedCapacity of Fiona is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Fiona is false. [steriles can't knock people up]
+MainInfection of Fiona is "Catgirl". [currently no infection available]
+The description of Fiona is "[FionaDesc]".
+The conversation of Fiona is { "<This is nothing but a placeholder!>" }.
+The scent of Fiona is "     Fiona has a light, floral scent with an underlying note of clean fur.".
+
+to say FionaDesc:
+	say "     Placeholder description until the catgirl is actually placed somewhere.";
 
 to say Catgirl_Wins:
 	say "     The catgirl looks at you a bit disdainfully, then walks away with a flirt of her tail, on the lookout for a more worthy mating partner.";
@@ -41,17 +82,17 @@ to say Catgirl_Loses:
 		if Player is female and Cock Count of Player < 1: [female]
 			say "     Not having a cock to fulfill the catgirl's needs, you nevertheless step up and stroke her soft fur, softly pushing her over to sprawl on her back. Sitting down beside her, you run your hands over her breasts and then start to fondle her pussy. As she purrs and mrowls lustfully under your massaging fingers, your own libido awakens. You quickly remove your clothes and play with your own female parts in tandem with the catgirl's.";
 			say "     Her yowls and moans get louder and louder, and before too much longer, the catgirl orgasms from your stimulating fingers. With her in the throes of lust, female juices running down into her fur, you focus more on your own pussy, rubbing your fingers over its sensitive lips. Then you get another idea and softly take hold of the feline's tail, rubbing it against your pussy. With its soft length rubbing your private parts, you soon join the catgirl in her bliss.";
-			say "     Breathing deeply, you hold on to the catgirl for a while, stroking her fur as you come down from your high. She proves her amazing flexibility by not only licking up any female juices that had flowed out of her pussy, but cleaning up the rest of her fur as well. Watching her bend and stretch has an invigorating effect on you, and you're almost ready for another go when the catgirl finishes and dashes off. Pretty flighty, these hot felines - [if CatgirlFucked > 3]though you don't have any cause to complain, really - you already have Fiona hanging out near the library to have fun with, so having another street-cat run off on you isn't so bad[else]too bad, since having one all to yourself would be awesome. For now, it looks like you'll have to hunt down either her or another one of the street-cats if you want another round[end if].";
+			say "     Breathing deeply, you hold on to the catgirl for a while, stroking her fur as you come down from your high. She proves her amazing flexibility by not only licking up any female juices that had flowed out of her pussy, but cleaning up the rest of her fur as well. Watching her bend and stretch has an invigorating effect on you, and you're almost ready for another go when the catgirl finishes and dashes off. Pretty flighty, these hot felines - [if HP of Fiona > 3]though you don't have any cause to complain, really - you already have Fiona hanging out near the library to have fun with, so having another street-cat run off on you isn't so bad[else]too bad, since having one all to yourself would be awesome. For now, it looks like you'll have to hunt down either her or another one of the street-cats if you want another round[end if].";
 		else if Player is male: [male + herm]
 			say "     Who could resist such a nice invitation? Quickly throwing off your clothes, you take hold of your already half-hard cock and kneel behind the catgirl. Her fur feels amazingly soft against your shaft as you rub it over the inside of her legs, before bringing it to her moist opening. The feline girl gives a lust-filled yowl as you plunge in deep, burying your manhood into her in one quick thrust.";
 			say "     It feels great to reap the pleasure you earned by defeating her, the now willing catgirl gripping your cock tightly with her inner muscles as you fuck her. The sexy little feline is deep in the grip of heat, using her flexible body in any way she can to get you to cum inside her. Before long, her efforts bear fruit as the urgent need to spend your load rises in your balls. With one last deep thrust, you bottom out within her, shooting spurt after spurt of seed directly into her womb.";
-			say "     Breathing deeply, you hold on to the catgirl for a while, stroking her soft fur until your shaft softens and slips from her body. She proves her amazing flexibility by not only licking up any cum that had flowed out of her pussy, but cleaning up the rest of her fur as well. Watching her bend and stretch has an invigorating effect on your maleness, and you're almost ready for another go when the catgirl finishes her cleaning and dashes off. Pretty flighty, these hot felines - [if CatgirlFucked > 3]though you don't have any cause to complain, really - you already have Fiona hanging out near the library to have fun with, so having another street-cat run off on you isn't so bad[else]too bad, since having one all to yourself would be awesome. For now, it looks like you'll have to hunt down either her or another one of the street-cats if you want another round[end if].";
+			say "     Breathing deeply, you hold on to the catgirl for a while, stroking her soft fur until your shaft softens and slips from her body. She proves her amazing flexibility by not only licking up any cum that had flowed out of her pussy, but cleaning up the rest of her fur as well. Watching her bend and stretch has an invigorating effect on your maleness, and you're almost ready for another go when the catgirl finishes her cleaning and dashes off. Pretty flighty, these hot felines - [if HP of Fiona > 3]though you don't have any cause to complain, really - you already have Fiona hanging out near the library to have fun with, so having another street-cat run off on you isn't so bad[else]too bad, since having one all to yourself would be awesome. For now, it looks like you'll have to hunt down either her or another one of the street-cats if you want another round[end if].";
 		else: [neuter]
 			say "     Not having a cock to fulfill the catgirl's needs, you nevertheless step up and stroke her soft fur, softly pushing her over to sprawl on her back. Sitting down beside her, you run your hands over her breasts and then start to fondle her pussy. As she purrs and mrowls lustfully under your massaging fingers, your genderless body attunes with hers, letting you feel part of the pleasure you're giving her.";
 			say "     The catgirl's yowls and moans get louder and louder, and before too much longer, she orgasms from your stimulating fingers. With her in the throes of lust, female juices running down into her fur, you become a bit lightheaded yourself. The fringe of orgasm you're picking up makes you think about becoming a female yourself.";
-			say "     She proves her amazing flexibility by cleaning herself up afterwards, licking her own female juices out of the fur between her legs. Watching her bend and stretch has an invigorating effect on you, waking a deep aching inside for a cock to fuck her with. All too soon, she finishes her cleaning and dashes off. Pretty flighty, these hot felines - [if CatgirlFucked > 3]though you don't have any cause to complain, really - you already have Fiona hanging out near the library to have fun with, so having another street-cat run off on you isn't so bad[else]too bad, since having one all to yourself would be awesome. For now, it looks like you'll have to hunt down either her or another one of the street-cats if you want another round[end if].";
-		if CatgirlFucked < 3:
-			increase CatgirlFucked by 1;
+			say "     She proves her amazing flexibility by cleaning herself up afterwards, licking her own female juices out of the fur between her legs. Watching her bend and stretch has an invigorating effect on you, waking a deep aching inside for a cock to fuck her with. All too soon, she finishes her cleaning and dashes off. Pretty flighty, these hot felines - [if HP of Fiona > 3]though you don't have any cause to complain, really - you already have Fiona hanging out near the library to have fun with, so having another street-cat run off on you isn't so bad[else]too bad, since having one all to yourself would be awesome. For now, it looks like you'll have to hunt down either her or another one of the street-cats if you want another round[end if].";
+		if HP of Fiona < 3:
+			increase HP of Fiona by 1;
 	else:
 		say "     Shaking your head at the crazy 'come-hither... but I'm gonna attack you when you try' mating behavior of this feline woman, you quickly run away, dashing down the street before the catgirl can realize that you're not actually gonna have sex with her.";
 
@@ -232,9 +273,9 @@ When Play begins:
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
-   [ Row used to designate any special combat features, "default" for standard combat. ]
+[ Row used to designate any special combat features, "default" for standard combat. ]
 
-instead of navigating Grey Abbey Library while (CatgirlFucked is 3):
+instead of navigating Grey Abbey Library while (HP of Fiona is 3):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -242,7 +283,7 @@ instead of navigating Grey Abbey Library while (CatgirlFucked is 3):
 		say "     DEBUG: FIONA FIRST WALKIN [line break]";
 	say "[FionaFirstMeeting]";
 
-instead of navigating Grey Abbey Library while (CatgirlFucked > 3 and a random chance of 1 in 4 succeeds and (LastCatgirlFuck - Turns) > 10):
+instead of navigating Grey Abbey Library while (HP of Fiona > 3 and a random chance of 1 in 4 succeeds and (LastFuck of Fiona - Turns) > 10):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -250,13 +291,13 @@ instead of navigating Grey Abbey Library while (CatgirlFucked > 3 and a random c
 		say "     DEBUG: FIONA REPEAT WALKIN [line break]";
 	say "[FionaRepeatMeeting]";
 
-instead of going up from Bunker while (CatgirlFucked is 3):
+instead of going up from Bunker while (HP of Fiona is 3):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: FIONA FIRST WALKIN [line break]";
 	say "[FionaFirstMeeting]";
 
-instead of going up from Bunker while (CatgirlFucked > 3 and a random chance of 1 in 4 succeeds and (LastCatgirlFuck - Turns) > 10):
+instead of going up from Bunker while (HP of Fiona > 3 and a random chance of 1 in 4 succeeds and (LastFuck of Fiona - Turns) > 10):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: FIONA REPEAT WALKIN [line break]";
@@ -277,21 +318,25 @@ to say FionaFirstMeeting:
 			say "     Not having a cock to fulfill the catgirl's needs, you nevertheless step up and stroke her soft fur, softly pushing her over to sprawl on her back. Sitting down beside her, you run your hands over her breasts and then start to fondle her pussy. As she purrs and mrowls under your massaging fingers, your own libido awakens, leading you to play with your own female parts in tandem with the catgirl's. Her yowls and moans get louder and louder, and before too much longer, the catgirl orgasms from your stimulating fingers. With her in the throes of lust, female juices running down into her fur, you focus more on your own pussy, rubbing your fingers over its sensitive lips. Then you get another idea and softly take hold of the feline's tail, rubbing it against your pussy. With its soft length rubbing your private parts, you soon join the catgirl in her bliss.";
 			WaitLineBreak;
 			say "     Breathing deeply, you hold on to the catgirl for a while, stroking her fur as you come down from your orgasmic high. She stays with you like that some time, enjoying your close touch, then glides out of your grasp in a fluid move and starts to clean herself up. Proving her amazing flexibility, she manages to bend far enough to even lick up the female juices that had flowed out of her pussy, and cleaning the every other part of her fur as well. Watching the sexy kitty bend and stretch has an invigorating effect on you, and you're almost ready for another go when the catgirl finishes and dashes off, streaking away between the bookshelves to vanish through whatever door or window she used to sneak in.";
+			NPCSexAftermath Fiona receives "PussyDildoFuck" from Player;
 		else if Player is male: [male + herm]
 			say "     Who could resist such a nice invitation? Taking hold of your already half-hard cock, you kneel behind the catgirl. Her fur feels amazingly soft against your shaft as you rub it over the inside of her legs, before bringing it to her moist opening. The feline girl gives a lust-filled yowl as you plunge in deep, burying your manhood into her in one quick thrust. It feels great to reap the pleasures you earned by proving a worthy mate, the eager and willing catgirl now gripping your cock tightly with her inner muscles as you fuck her. Your sexy little feline is deep in the grip of heat, using her flexible body in any way she can to get you to cum inside her. Before long, her efforts bear fruit as the urgent need to spend your load rises in your balls. With one last deep thrust, you bottom out within her, shooting spurt after spurt of seed directly into her womb.";
 			WaitLineBreak;
 			say "     Breathing deeply, you hold on to the catgirl for a while, stroking her fur as you come down from your orgasmic high. She stays with you like that some time, enjoying your close touch, then glides out of your grasp in a fluid move and starts to clean herself up. Proving her amazing flexibility, she manages to bend far enough to even lick up the cum that had flowed out of her pussy, and cleaning the every other part of her fur as well. Watching the sexy kitty bend and stretch has an invigorating effect on you, and you're almost ready for another go when the catgirl finishes and dashes off, streaking away between the bookshelves to vanish through whatever door or window she used to sneak in.";
+			NPCSexAftermath Fiona receives "PussyFuck" from Player;
 		else: [neuter]
 			say "     Not having a cock to fulfill the catgirl's needs, you nevertheless step up and stroke her soft fur, softly pushing her over to sprawl on her back. Sitting down beside her, you run your hands over her breasts and then start to fondle her pussy. As she purrs and mrowls lustfully under your massaging fingers, your genderless body attunes with hers, letting you feel part of the pleasure you're giving her. The catgirl's yowls and moans get louder and louder, and before too much longer, she orgasms from your stimulating fingers. With her in the throes of lust, female juices running down into her fur, you become a bit lightheaded yourself. The fringe of orgasm you're picking up makes you think about becoming a female yourself.";
 			WaitLineBreak;
 			say "     Breathing deeply, you hold on to the catgirl for a while, stroking her fur as you come down from your orgasmic high. She stays with you like that some time, enjoying your close touch, then glides out of your grasp in a fluid move and starts to clean herself up. Proving her amazing flexibility, she manages to bend far enough to even lick up the female juices that had flowed out of her pussy, and cleaning the every other part of her fur as well. Watching the sexy kitty bend and stretch has an invigorating effect on you, and you're almost ready for another go when the catgirl finishes and dashes off, streaking away between the bookshelves to vanish through whatever door or window she used to sneak in.";
+			NPCSexAftermath Fiona receives "PussyDildoFuck" from Player;
+		NPCSexAftermath Fiona receives "OralPussy" from Fiona;
 	else:
 		LineBreak;
 		say "     Coming up to the sofa, you pet the catgirl, resulting in her rubbing her head against you and purring. Though as you then tell her that you're not quite in the mood right now for your usual play, the sound stops and a bit of a sullen expression spreads over her hybrid face. Her hand-paws move to draw your hand to her breasts, trying to entice you with the feel of those firm and round, soft-furred bulges. As that fails to sway your resolve, the catgirl almost flows off the sofa in a fluid move and starts stalking away towards the back of the building and the door or window she sneaked in through. She gives you a last look over her shoulder that has the typical mix of disdain and arrogance of a cat not getting her way, then vanishes behind a bookshelf. Most likely, this will result in some scratched-up wallpaper and carpets, as well as books just pushed off their shelves in petty feline vandalism...";
 	WaitLineBreak;
 	say "     You do have a feeling that this catgirl will be back, having decided to take you as her on and off mate, allowing you to please her when it fits her mood. As such, the idea comes up that you should have something to call her, and after a short deliberation you decide that [bold type]Fiona[roman type] would be a good name.";
-	now CatgirlFucked is 4;
-	now LastCatgirlFuck is turns;
+	now HP of Fiona is 4;
+	now LastFuck of Fiona is turns;
 
 to say FionaRepeatMeeting:
 	if graphics is true:
@@ -303,33 +348,36 @@ to say FionaRepeatMeeting:
 	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
 		LineBreak;
-		say "     Coming up to the sofa, you pet the catgirl, resulting in her rubbing her head against you and purring. [if CatgirlFucked is 4]Then you tell her that you've decided to call her Fiona, to which she turns her head a bit as if in thought, then gives an accepting meow and resumes her purring. [end if]As your hands move to set down your gear on the floor and start undoing the fastenings of your clothing, that purr intensifies even more and finally leads over into a lust-filled mrowl. While you strip, Fiona drops on all fours and flirts her tail at you. She lowers her chest and spreads her legs a bit, presenting you with a pussy just ready to be mounted.";
+		say "     Coming up to the sofa, you pet the catgirl, resulting in her rubbing her head against you and purring. [if HP of Fiona is 4]Then you tell her that you've decided to call her Fiona, to which she turns her head a bit as if in thought, then gives an accepting meow and resumes her purring. [end if]As your hands move to set down your gear on the floor and start undoing the fastenings of your clothing, that purr intensifies even more and finally leads over into a lust-filled mrowl. While you strip, Fiona drops on all fours and flirts her tail at you. She lowers her chest and spreads her legs a bit, presenting you with a pussy just ready to be mounted.";
 		if Player is female and Cock Count of Player < 1: [female]
 			say "     Not having a cock to fulfill the catgirl's needs, you nevertheless step up and stroke her soft fur, softly pushing her over to sprawl on her back. Sitting down beside her, you run your hands over her breasts and then start to fondle her pussy. As she purrs and mrowls under your massaging fingers, your own libido awakens, leading you to play with your own female parts in tandem with the catgirl's. Her yowls and moans get louder and louder, and before too much longer, the catgirl orgasms from your stimulating fingers. With her in the throes of lust, female juices running down into her fur, you focus more on your own pussy, rubbing your fingers over its sensitive lips. Then you get another idea and softly take hold of the feline's tail, rubbing it against your pussy. With its soft length rubbing your private parts, you soon join the catgirl in her bliss.";
 			WaitLineBreak;
 			say "     Breathing deeply, you hold on to Fiona for a while, stroking her fur as you come down from your orgasmic high. She stays with you like that some time, enjoying your close touch, then glides out of your grasp in a fluid move and starts to clean herself up. Proving her amazing flexibility, she manages to bend far enough to even lick up the female juices dripping out of her pussy, as well as being able to clean every other part of her fur as well. Watching the sexy kitty bend and stretch has an invigorating effect on you, and you're almost ready for another go when the catgirl finishes and dashes off, streaking away between the bookshelves to vanish through whatever door or window she used to sneak in.";
+			NPCSexAftermath Fiona receives "PussyDildoFuck" from Player;
 		else if Player is male: [male + herm]
 			say "     Who could resist such a nice invitation? Taking hold of your already half-hard cock, you kneel behind the catgirl. Her fur feels amazingly soft against your shaft as you rub it over the inside of her legs, before bringing it to her moist opening. The feline girl gives a lust-filled yowl as you plunge in deep, burying your manhood into her in one quick thrust. It feels great to reap the pleasures you earned by proving a worthy mate, the eager and willing catgirl now gripping your cock tightly with her inner muscles as you fuck her. Your sexy little feline is deep in the grip of heat, using her flexible body in any way she can to get you to cum inside her. Before long, her efforts bear fruit as the urgent need to spend your load rises in your balls. With one last deep thrust, you bottom out within her, shooting spurt after spurt of seed directly into her womb.";
 			WaitLineBreak;
 			say "     Breathing deeply, you hold on to Fiona for a while, stroking her fur as you come down from your orgasmic high. She stays with you like that some time, enjoying your close touch, then glides out of your grasp in a fluid move and starts to clean herself up. Proving her amazing flexibility, she manages to bend far enough to even lick up the cum dripping out of her pussy, as well as being able to clean every other part of her fur as well. Watching the sexy kitty bend and stretch has an invigorating effect on you, and you're almost ready for another go when the catgirl finishes and dashes off, streaking away between the bookshelves to vanish through whatever door or window she used to sneak in.";
+			NPCSexAftermath Fiona receives "PussyFuck" from Player;
 		else: [neuter]
 			say "     Not having a cock to fulfill the catgirl's needs, you nevertheless step up and stroke her soft fur, softly pushing her over to sprawl on her back. Sitting down beside her, you run your hands over her breasts and then start to fondle her pussy. As she purrs and mrowls lustfully under your massaging fingers, your genderless body attunes with hers, letting you feel part of the pleasure you're giving her. The catgirl's yowls and moans get louder and louder, and before too much longer, she orgasms from your stimulating fingers. With her in the throes of lust, female juices running down into her fur, you become a bit lightheaded yourself. The fringe of orgasm you're picking up makes you think about becoming a female yourself.";
 			WaitLineBreak;
 			say "     Breathing deeply, you hold on to Fiona for a while, stroking her fur as you come down from your orgasmic high. She stays with you like that some time, enjoying your close touch, then glides out of your grasp in a fluid move and starts to clean herself up. Proving her amazing flexibility, she manages to bend far enough to even lick up the female juices dripping out of her pussy, as well as being able to clean every other part of her fur as well. Watching the sexy kitty bend and stretch has an invigorating effect on you, and you're almost ready for another go when the catgirl finishes and dashes off, streaking away between the bookshelves to vanish through whatever door or window she used to sneak in.";
-		now LastCatgirlFuck is turns;
+			NPCSexAftermath Fiona receives "PussyDildoFuck" from Player;
+		NPCSexAftermath Fiona receives "OralPussy" from Fiona;
 	else:
 		LineBreak;
-		say "     Coming up to the sofa, you pet the catgirl, resulting in her rubbing her head against you and purring. [if CatgirlFucked is 4]Then you tell her that you've decided to call her Fiona, to which she turns her head a bit as if in thought, then gives an accepting meow and resumes her purring. [end if]Though as you then tell her that you're not quite in the mood right now for your usual play, the sound stops and a bit of a sullen expression spreads over her hybrid face. Her hand-paws move to draw your hand to her breasts, trying to entice you with the feel of those firm and round, soft-furred bulges. As that fails to sway your resolve, the catgirl almost flows off the sofa in a fluid move and starts stalking away towards the back of the building and the door or window she sneaked in through. She gives you a last look over her shoulder that has the typical mix of disdain and arrogance of a cat not getting her way, then vanishes behind a bookshelf. Most likely, this will result in some scratched-up wallpaper and carpets, as well as books just pushed off their shelves in petty feline vandalism...";
-	if CatgirlFucked is 4:
-		now CatgirlFucked is 5;
+		say "     Coming up to the sofa, you pet the catgirl, resulting in her rubbing her head against you and purring. [if HP of Fiona is 4]Then you tell her that you've decided to call her Fiona, to which she turns her head a bit as if in thought, then gives an accepting meow and resumes her purring. [end if]Though as you then tell her that you're not quite in the mood right now for your usual play, the sound stops and a bit of a sullen expression spreads over her hybrid face. Her hand-paws move to draw your hand to her breasts, trying to entice you with the feel of those firm and round, soft-furred bulges. As that fails to sway your resolve, the catgirl almost flows off the sofa in a fluid move and starts stalking away towards the back of the building and the door or window she sneaked in through. She gives you a last look over her shoulder that has the typical mix of disdain and arrogance of a cat not getting her way, then vanishes behind a bookshelf. Most likely, this will result in some scratched-up wallpaper and carpets, as well as books just pushed off their shelves in petty feline vandalism...";
+	if HP of Fiona is 4:
+		now HP of Fiona is 5;
 
-instead of going up from Bunker while (CatgirlFucked > 3 and Fang is in Grey Abbey Library and a random chance of 1 in 4 succeeds and (LastCatgirlFuck - Turns) > 10):
+instead of going up from Bunker while (HP of Fiona > 3 and Fang is in Grey Abbey Library and a random chance of 1 in 4 succeeds and (LastFuck of Fiona - Turns) > 10):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: FIONA FANG WALKIN [line break]";
 	say "[FionaFangSex]";
 
-instead of navigating Grey Abbey Library while (CatgirlFucked > 3 and Fang is in Grey Abbey Library and a random chance of 1 in 4 succeeds and (LastCatgirlFuck - Turns) > 10):
+instead of navigating Grey Abbey Library while (HP of Fiona > 3 and Fang is in Grey Abbey Library and a random chance of 1 in 4 succeeds and (LastFuck of Fiona - Turns) > 10):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -338,13 +386,13 @@ instead of navigating Grey Abbey Library while (CatgirlFucked > 3 and Fang is in
 	say "[FionaFangSex]";
 
 to say FionaFangSex:
-	if FionaFangStatus is 0:
+	if Dexterity of Fiona is 0:
 		say "     The library is filled with yowls, growls and the scratching or claws on the ground as you enter - and just a moment later, your catgirl Fiona streaks into view from behind a row of bookshelves, a hunted look on her face and her tail all thick and bushy. Her eyes go wide as she turns her head to look at you, and that small moment of distraction is enough to make her step on a book someone left lying on the floor, lose her balance and take a tumble. Only a second behind her is Fang, panting excitedly from the hunt after this intruder into his domain. The wolf is on top of the catgirl in a flash, standing over her and setting his jaws to lightly nip at the fur of her neck while he gives a warning growl.";
 		say "     Fiona stiffens under the feral wolf and you can see the claws on her hand-paws slowly sliding out of their sheaths as she prepares to claw her way out of this situation - only to pull back again as she feels something poke the side of her hips. Looks like Fang got excited in more way than one from the little chase, as his canine cock is dangling fully erect between his legs. Well, if the catgirl came to seek you out again, she's likely at the height of her heat, something the wolf will undoubtedly have smelled immediately. So even though she came for you, the look on Fiona's face as she glances back and sees Fang's shaft speaks volumes.";
 		WaitLineBreak;
 		say "     With a lust-filled mrowl, the catgirl fully retracts her claws, then lowers her chest and spreads her legs a bit. Her sinuous tail moves to curl around the wolf's hips, as if to pull him onto her back. Being presented with a pussy just ready to be mounted, it's no big wonder what Fang does next - he thrusts into her with all his strength, driving the knotted canine cock between his legs deep into her feline depths. The mating that follows is wild and untamed, filling the library with the pants and yowls of animalistic rutting. It's quite a show and you can't help but be aroused a bit by it yourself, eyes drawn to the wolf's thrusting hips as they grind against your feline bed-mate.";
 		say "     Finally, the act culminates with a howl from Fang, throwing his head back as he knots with Fiona and floods her womb with his canine seed. He keeps humping her for some moments more, then grows still, only stretching a bit to lick at her muzzle. The unlikely pair of breeding partners stays together like that for some more time, tied together by the wolf's knot, then they eventually separate, causing a small gush of white cum from Fiona's stuffed pussy. Fang just throws himself on the floor, basking in the feeling of having made a conquest and fucked her hard, while Fiona stalks off between the bookshelves. She's got a satisfied expression on her face, but from the fact that she doesn't stop to clean herself, you can see she's nevertheless a bit unnerved by having the wolf catching her.";
-		now FionaFangStatus is 1;
+		now Dexterity of Fiona is 1;
 	else:
 		say "     The library is filled with yowls, growls and the scratching or claws on the ground as you enter - sounds like Fiona and Fang are at it again...";
 		say "     [bold type]do you want to watch, or would you rather leave what will happen to happen and turn your attention elsewhere?[roman type][line break]";
@@ -360,15 +408,15 @@ to say FionaFangSex:
 			say "     Finally, the act culminates with a howl from Fang, throwing his head back as he knots with Fiona and floods her womb with his canine seed. He keeps humping her for some moments more, then grows still, only stretching a bit to lick at her muzzle. The unlikely pair of breeding partners stays together like that for some more time, tied together by the wolf's knot, then they eventually separate, causing a small gush of white cum from Fiona's stuffed pussy. Fang just throws himself on the floor, basking in the feeling of having made a conquest and fucked her hard, while Fiona stalks off between the bookshelves. She's got a satisfied expression on her face, but from the fact that she doesn't stop to clean herself, you can see she's nevertheless a bit unnerved by having the wolf catching her.";
 		else:
 			say "     Keeping your distance from the area the sounds are coming from, you see Fiona streak out from between the bookshelves a moment later, tail all bushy and thick. She dashes down between two other rows of shelves, closely followed by Fang. A moment later, you fan hear the chase come to a sudden end, followed by a low growl and then a lust-filled mrowl. You do your best to filter out the sounds of their animalistic mating after that...";
-		now LastCatgirlFuck is turns;
+		NPCSexAftermath Fiona receives "PussyFuck" from Fang;
 
-instead of going up from Bunker while (CatgirlFucked > 3 and FionaCarlStatus is 0 and Carl is in Grey Abbey 2F and (LastCatgirlFuck - Turns) > 10 and HP of Carl is 10):
+instead of going up from Bunker while (HP of Fiona > 3 and Strength of Fiona is 0 and Carl is in Grey Abbey 2F and (LastFuck of Fiona - Turns) > 10 and HP of Carl is 10):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: FIONA CARL WALKIN [line break]";
 	say "[FionaCarlMeet]";
 
-instead of navigating Grey Abbey Library while (CatgirlFucked > 3 and FionaCarlStatus is 0 and Carl is in Grey Abbey 2F and (LastCatgirlFuck - Turns) > 10 and HP of Carl is 10):
+instead of navigating Grey Abbey Library while (HP of Fiona > 3 and Strength of Fiona is 0 and Carl is in Grey Abbey 2F and (LastFuck of Fiona - Turns) > 10 and HP of Carl is 10):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -386,7 +434,7 @@ to say FionaCarlMeet:
 	if Player consents:
 		LineBreak;
 		say "     Deciding you don't want the two of them mating with each other, you quickly walk over before it gets any further. As you clear your throat to attract their attention, Carl lets go of Fiona and the catgirl dashes off to vanish through the way she sneaked in, wanting to put some ground between her and the fight she believes you and the husky will have now. But contrary to her expectation, Carl simply raises his hands in a placatory manner, then says 'So - that's... your cat, I assume? Sorry, didn't mean to move in on anyone's territory. It's just that she's a mighty fine piece of tail and did make eyes at me...' With a shrug at the missed opportunity, he walks over to the stairs and gets back to where he usually holds lookout.";
-		now FionaCarlStatus is 100; [stopped them hooking up]
+		now Strength of Fiona is 100; [stopped them hooking up]
 	else:
 		LineBreak;
 		say "     [bold type]Do you want to watch as they go at it?[roman type][line break]";
@@ -402,22 +450,22 @@ to say FionaCarlMeet:
 			say "     Breathing deeply, Carl holds on to Fiona for a while, stroking her fur as both of them come down from their orgasmic high. She's content to stay with him like that some time, enjoying the closeness of their bodies and being touched. When his knot eventually goes down, Fiona glides out of the husky soldier's grasp in a fluid move and starts to clean herself up. Proving her amazing flexibility, she manages to bend far enough to even lick up the cum dripping out of her pussy, as well as being able to clean every other part of her fur as well. Watching the sexy kitty bend and stretch has an invigorating effect on Carl, and he quickly gets hard again. But as he reaches out to pull the catgirl in for another round, Fiona just dashes off, streaking away between the bookshelves to vanish through whatever door or window she used to sneak in.";
 			WaitLineBreak;
 			say "     Letting himself fall back on the sofa, Carl watches her go, blowing out his breath and then chuckling at the flighty female. He stays sitting for a few moments more to catch his breath, then starts to clean himself. He sees you standing nearby as he does so, recognizing that you watched him fuck the catgirl, which he calmly accepts. 'What a sexy little beast, hm?' he says to you, then starts smiling widely as you give him a knowing nod. Unconcerned with his nakedness, he just grabs his shirt and pants and then walks back up the stairs to where he usually keeps lookout.";
-			if FionaCarlStatus is 0:
-				now FionaCarlStatus is 10; [they fucked, player did watch and Carl knows it]
+			if Strength of Fiona is 0:
+				now Strength of Fiona is 10; [they fucked, player did watch and Carl knows it]
 		else:
 			LineBreak;
 			say "     You leave the two of them to have some fun in private and turn away, starting to walk to the other end of the large building to busy yourself with something. Before you've made more than a few steps, there is a masculine grunt and lust-filled mrowl from behind you, followed by thrusting sounds and exultant pants and moans. They're definitively having a good time together...";
-			if FionaCarlStatus is 0:
-				now FionaCarlStatus is 1; [they fucked, player didn't watch]
-		now LastCatgirlFuck is turns;
+			if Strength of Fiona is 0:
+				now Strength of Fiona is 1; [they fucked, player didn't watch]
+		NPCSexAftermath Fiona receives "PussyFuck" from Carl;
 
-instead of going up from Bunker while (CatgirlFucked > 3 and FionaCarlStatus > 0 and FionaCarlStatus < 100 and Carl is in Grey Abbey 2F and (LastCatgirlFuck - Turns) > 10 and HP of Carl is 10 and a random chance of 1 in 4 succeeds):
+instead of going up from Bunker while (HP of Fiona > 3 and Strength of Fiona > 0 and Strength of Fiona < 100 and Carl is in Grey Abbey 2F and (LastFuck of Fiona - Turns) > 10 and HP of Carl is 10 and a random chance of 1 in 4 succeeds):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: FIONA CARL REPEAT WALKIN [line break]";
 	say "[FionaCarlRepeatFuck]";
 
-instead of navigating Grey Abbey Library while (CatgirlFucked > 3 and FionaCarlStatus > 0 and FionaCarlStatus < 100 and Carl is in Grey Abbey 2F and (LastCatgirlFuck - Turns) > 10 and HP of Carl is 10 and a random chance of 1 in 4 succeeds):
+instead of navigating Grey Abbey Library while (HP of Fiona > 3 and Strength of Fiona > 0 and Strength of Fiona < 100 and Carl is in Grey Abbey 2F and (LastFuck of Fiona - Turns) > 10 and HP of Carl is 10 and a random chance of 1 in 4 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -438,13 +486,12 @@ to say FionaCarlRepeatFuck:
 		WaitLineBreak;
 		say "     Breathing deeply, Carl holds on to Fiona for a while, stroking her fur as both of them come down from their orgasmic high. She's content to stay with him like that some time, enjoying the closeness of their bodies and being touched. When his knot eventually goes down, Fiona glides out of the husky soldier's grasp in a fluid move and starts to clean herself up. Proving her amazing flexibility, she manages to bend far enough to even lick up the cum dripping out of her pussy, as well as being able to clean every other part of her fur as well. Watching the sexy kitty bend and stretch has an invigorating effect on Carl, and he quickly gets hard again. But as he reaches out to pull the catgirl in for another round, Fiona just dashes off, streaking away between the bookshelves to vanish through whatever door or window she used to sneak in.";
 		say "     Letting himself fall back on the sofa, Carl watches her go, blowing out his breath and then chuckling at the flighty female. He stays sitting for a few moments more to catch his breath, then starts to clean himself. He sees you standing nearby as he does so, recognizing that you watched him fuck the catgirl, which he calmly accepts. 'What a sexy little beast, hm?' he says to you, then starts smiling widely as you give him a knowing nod. Unconcerned with his nakedness, he just grabs his shirt and pants and then walks back up the stairs to where he usually keeps lookout.";
-		if FionaCarlStatus is 1: [didn't watch before]
-			now FionaCarlStatus is 10; [they fucked, player did watch and Carl knows it]
+		if Strength of Fiona is 1: [didn't watch before]
+			now Strength of Fiona is 10; [they fucked, player did watch and Carl knows it]
 	else:
 		LineBreak;
 		say "     You leave the two of them to have some fun in private and turn away, starting to walk to the other end of the large building to busy yourself with something. Before you've made more than a few steps, you hear thrusting sounds in a rapid pace, mixed with exultant pants and moans. They're definitively having a good time together...";
-	now LastCatgirlFuck is turns;
-
+	NPCSexAftermath Fiona receives "PussyFuck" from Carl;
 
 Section 4 - Endings
 

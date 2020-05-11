@@ -1,8 +1,12 @@
-Version 4 of Demonologist by Gherod begins here.
+Version 5 of Demonologist by Gherod begins here.
+
+"Adds Xaedihr, the demonologist, as a NPC and Companion to the game."
+
 [Version 1 - File created, Imp event and tape - Gherod]
 [Version 2 - Hell Realm Event and Xaedihr - Gherod]
 [Version 3 - Demonic Summoning Support, Library Interactions and NPC scenes (Rane, Atticus) - Gherod]
 [Version 4 - Added Dominant Xaedihr route w/ 1st scene - Gherod]
+[Version 5 - Added hints at end of tape and Hell Realm. Additionally, added enchantment and spell system to complement the Void Realm addition]
 
 [***********************************************************]
 [***********************************************************]
@@ -172,6 +176,8 @@ to say DemonicRitualTape:
 	say "     Without any warning, one of the demons grabs the summoner's head, forcing his jaw open to take the massive erection deep down to his throat, while the others circle around him, rubbing their own lengths with eager lust. With his hole now more than ready, another of the brutes easily manages to grab the human's ass and shove his hellish cock deep inside. The demons spitroast the young man for quite some time, keeping him suspended between themselves and taking turns on both his ends, fucking and filling his insides with even more thick cum. Every plead of mercy is muffled by the unforgiving facefucking the ritualist is being given, and he's pounded hard and deep until nearly the end of the tape. That is, until they finally pause, only to drag the absolutely cum-coated human along with them through the portal.";
 	WaitLineBreak;
 	say "     When they're about to disappear, one of the demons turns to the camera. With a curious grunt, he approaches it, tilting his head as he grabs the device with only one of his massive hands. Clearly he doesn't know what it is, but he simply decides to take it with him. This could explain how you were able to find the tape in such an odd manner. However, to your disappointment, the image cuts as soon as he crosses the veil, leaving you only with static noise. With nothing left on the tape to watch, whatever happened to the young man remains a mystery. You haven't seen him turning into one of them as it usually happens, and no ordinary human could flip a tome's pages without touching them. Now, if only you could find this grimoire...";
+	if carried of ancient tome is 0:
+		say "     From what you have seen, this tome looks very [bold type]ancient[roman type]... perhaps there is someone who could help you find it? It is a magical object, might have a will of its own, even, so it should be tricky to search for it yourself, although it seems to have remained at the [bold type]Library[roman type]... Who could you bring here? Someone curious... maybe a [bold type]college student[roman type]... Those never seem to know when to stop reading about something that intrigues them. It is possible that the [bold type]College Campus[roman type] may have someone you could bring to your shelter in order to acquire this grimoire.";
 	if resolution of Hellish Trashpile < 3:
 		now Resolution of Hellish Trashpile is 3;
 
@@ -480,6 +486,7 @@ to HellRealmRubyChamber:
 
 to HellRealmEnd:
 	say "     Your head feels heavy and torn apart, as your body refuses to respond to your commands. However, what seems to be a brief paralysis is soon interrupted as you recollect your senses. You're back at the library, safe and sound! The tome is lying next to you, as well as the candles and the pentagram. However, there's no sign of Xaedihr. In fact, it really looks like something hit your head and you had a very bad dream after attempting to replicate the ritual. Was that what happened? You check your inventory, and find that the ritual items are gone. Well, the pain in your head surely is real, and you're also a little bruised. You take some time to be able to stand on your feet, but you eventually manage, grabbing yourself onto the nearby bookshelves. Clean up time awaits you before you can return to your business, so once you're feeling better, you get started.";
+	say "     [bold type]You have a nagging feeling in the back of your head that this isn't over yet[roman type], however... The air inside the Library dims a strange energy. You may want to continue exploring outside, something is certainly ought to happen when you return.";
 	if Resolution of Hell Realm is 2 or Resolution of Hell Realm is 3:
 		now resolution of Hell Realm is 4; [player destroyed the Grid]
 	else:
@@ -550,7 +557,7 @@ Strange Sorcerer	"Strange Sorcerer"
 Strange Sorcerer is a situation.
 The sarea of Strange Sorcerer is "Nowhere".
 
-instead of navigating Grey Abbey Library while (Strange Sorcerer is active and Strange Sorcerer is not resolved and Resolution of Hell Realm > 3 and a random chance of 1 in 2 succeeds):
+instead of navigating Grey Abbey Library while (Strange Sorcerer is active and Strange Sorcerer is not resolved and Resolution of Hell Realm > 3):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action; [can't nav from the player's location, or already there - so we stop this cold]
 	move player to Grey Abbey Library;
@@ -732,44 +739,55 @@ to say XaedihrTalkMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
+	if Intelligence of Xaedihr > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "SPELLS";
+		now sortorder entry is 1;
+		now description entry is "Check Xaedihr's spells";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "ENCHANTING";
+		now sortorder entry is 1;
+		now description entry is "Ask Xaedihr to enchant something for you";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Himself";
-	now sortorder entry is 1;
+	now sortorder entry is 2;
 	now description entry is "Ask Xaedihr to tell you more about himself";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "How did he get here";
-	now sortorder entry is 2;
+	now sortorder entry is 3;
 	now description entry is "Inquire him about how he ended up in this world";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "His affinity with magic";
-	now sortorder entry is 3;
+	now sortorder entry is 4;
 	now description entry is "Question about his familiarity with magic";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "His goals";
-	now sortorder entry is 4;
+	now sortorder entry is 5;
 	now description entry is "Let him know that you'd like to hear about his goals";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "The Crimson Ruby";
-	now sortorder entry is 5;
+	now sortorder entry is 6;
 	now description entry is "Tell him you'd like to know more about the Demonic Ruby";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "The Ancient Tome";
-	now sortorder entry is 6;
+	now sortorder entry is 7;
 	now description entry is "Ask him more about the Ancient Tome";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Sex Talk";
-	now sortorder entry is 7;
+	now sortorder entry is 8;
 	now description entry is "Bring up the subject of sex";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "His opinion on you";
-	now sortorder entry is 8;
+	now sortorder entry is 9;
 	now description entry is "Request that he tells what he thinks of you";
 	[
 	If loyalty of Xaedihr > 29;
@@ -793,6 +811,10 @@ to say XaedihrTalkMenu:
 			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
+				if (nam is "SPELLS"):
+					say "[XaedihrTalkSpells]";
+				if (nam is "ENCHANTING"):
+					say "[XaedihrTalkEnchanting]";
 				if (nam is "Himself"):
 					say "[XaedihrTalkHimself]";
 				if (nam is "How did he get here"):
@@ -818,6 +840,23 @@ to say XaedihrTalkMenu:
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
+
+to say XaedihrTalkSpells:
+	if Intelligence of Xaedihr > 1:
+		say "     Now that your half-demon companion has already learned at least one spell, you can ask him to perform one for you. When you think he would roll his eyes, he actually faces you with interest. 'Is that so? Well, then pick one and we will proceed immediately. Keep in mind this is based of a hypnosis technique, so I would recommend doing this in a safe place. I won't judge your choices, though... do whatever floats your boat.' With that said, he gives you a list of possibilities";
+		WaitLineBreak;
+		say "[XaedihrSpellsMenu]";
+	else:
+		say "     Xaedihr hasn't learned any spell, yet. Continue to explore with him and perhaps he will learn some along the way.";
+		say "     << Currently he can only learn one spell in the Void Realm, this will be expanded in future updates. Having the 'Kinky' feat is strongly recommended >>";
+
+to say XaedihrTalkEnchanting:
+	if carried of Null Essence is 0:
+		say "     You own nothing that can be enchanted or used to enchant anything at the moment.";
+	else:
+		say "     You turn to Xaedihr and mention his ability to enchant things, so you ask him if he can do something with anything that you have. 'Sure, I can do a few things. Tell me what you would like.' he says, before giving you a list of possibilities.";
+		WaitLineBreak;
+		say "[XaedihrEnchantMenu]";
 
 to say XaedihrTalkHimself: [Himself]
 	if loyalty of Xaedihr < 10: [NOT a good impression of player-neutral]
@@ -878,6 +917,10 @@ to say XaedihrTalkMagic: [His affinity with magic]
 		say "     'Since long ago I've been like a prodigy, naturally learning my ways through magic. Helps being an half-demon, it's true. Now, what really makes me this powerful is the amount of work and effort I put into understanding every spell to its deepest origins. I even tapped into a form of ancient magic shared amongst incubi warlocks which is the form of the Tendrils of Darkness. It's just a fancy name, but you saw what it can do. And I can invoke them at will!' he explains as he rises a hand, and not shortly after, you feel something slippery rubbing around your thigh. To your shock, you notice one of these so called tendrils feeling your leg around, leaving a trail of some sort of sticky fluid where it passes. Then, it quickly retracts back to the floor where it was coming from. When you look back at Xaedihr, he's laughing with a grin on his face.";
 		WaitLineBreak;
 		say "     'Don't worry, that doesn't leave a stain and it's actually good for the skin. You know how they can get to be used to go in places...' he laughs a bit more, clearly enjoying teasing you. 'The tendrils are also connected to the neural sensors in the brain related to sexual pleasure. So yes, I feel everything they touch as if they were... an extension of myself.' You have a feeling of exactly what he means by that. 'But that's, of course, not all I can do. I'm a natural expert of demonology and know my way around dark magic. All those shadowy spheres of energy or fiery purple flames are all part of a dark conjuring process. On collision with the enemy, they pretty much hurt. Anyway, I think I've bored you for long enough. Did you need anything else?' he asks as he returns to his book.";
+		if Intelligence of Xaedihr is 0:
+			WaitLineBreak;
+			say "     'Oh, I probably forgot to mention something.' he says, returning his gaze at you. 'Well, I did forget to mention this. Anyway, uh... Since you are so keen in getting into trouble, I may be able to provide you with [bold type]Invoke Dream[roman type] spells.' Invoke Dream spells? What are those? Better ask him. He's not happy that you had to ask what it was. 'Dear Lords, isn't the name itself suggestive enough?! It invokes dreams! That's all it does. And since you can experience them as if they were real, perhaps that would keep you away from, you know, sticky situations with big bad monsters? ... No? Well it's something to consider.' he sighs in some visible annoyance, but continues to speak 'I can't really say when or how will I learn how to acquire them, but it can happen in some situations where I am also present, so be sure to bring me around over dangerous areas if that's what you want.";
+			now Intelligence of Xaedihr is 1;
 
 to say XaedihrTalkGoals:
 	if loyalty of Xaedihr < 10: [NOT a good impression of player-neutral]
@@ -977,6 +1020,125 @@ to say XaedihrTalkOpinion:
 	else if loyalty of Xaedihr > 49: [earned his true loyalty]
 		say "     Wondering what the sorcerer thinks of you in general, you decide to ask him directly about it. He immediately puts his book down when he hears your question, walking towards you and placing his arm around your shoulders. 'I couldn't ask for a better partner. You and I are unstoppable, but that's not what really makes me enjoy your company. Besides all the sex, you're great to talk to, and you've done more for me that anyone in your world and mine together. I think you're an amazing person to be with, and I'd go as far to giving my life for you, if it came to that. Let's hope it won't, or I'll actually have to do it now!' he laughs as he finishes speaking. 'Thank you, sincerely. For everything.'";
 		say "     It seems you've learned Xaedihr's total loyalty, and he's not afraid of letting you know it. In fact, he's more than happy to tell you that.";
+
+[***********************************************************]
+Section 5-2-1 - Spells Menu
+[***********************************************************]
+
+to say XaedihrSpellsMenu:
+	say "     [bold type]What spell do you want?[roman type][line break]";
+	LineBreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	if "Invoke Dream - Void Serpent I" is listed in traits of Xaedihr:
+		choose a blank row in table of fucking options;
+		now title entry is "Invoke Dream - Void Serpent I";
+		now sortorder entry is 1;
+		now description entry is "Reproduce the first Oral Vore Loss Scene against the Void Serpent";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Invoke Dream - Void Serpent I"):
+					say "[XaedihrSpellsIDVoidSerpentI]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the sorcerer, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
+
+to say XaedihrSpellsIDVoidSerpentI:
+	say "     You request the sorcerer to provide you with a lucid dream of being oral vored by the Void Serpent from the Void Realm. He lets out a laughter once you request such a thing. 'Oh my, that really turned you on, didn't it? Ah, I said I wouldn't judge you... But that's kind of cute.' he comments, as he leads you to a comfortable place where you can lie down and let him perform the hypnosis. 'Very well, then, this won't take long. Lie down over here and just hear my voice...' he tells you, sitting by where you are supposed to be.";
+	say "     Closing your eyes, you pay attention to his words. His tone is calm and soothing, enough to make you want to fall asleep. His gentle embrace helps, too, and soon, your senses begin to fade away as your body lies dormant.";
+	WaitLineBreak;
+	VoidSerpentVore1;
+	WaitLineBreak;
+	say "     With a snap of fingers, Xaedihr wakes you up and you open your eyes. 'Welcome back. I hope you enjoyed it... If not, I don't accept complaints, either.' he says as you thank him for the effort.";
+
+[***********************************************************]
+Section 5-2-2 - Enchantments Menu
+[***********************************************************]
+
+to say XaedihrEnchantMenu:
+	say "     [bold type]What enchantment do you want?[roman type][line break]";
+	LineBreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Enchant Xaedihr's Tome";
+	now sortorder entry is 1;
+	now description entry is "Increase damage caused by Xaedihr's attacks by 1 (Costs 10 Null Essences)";
+	[]
+	if abyssal edge is owned:
+		choose a blank row in table of fucking options;
+		now title entry is "Enchant Abyssal Edge";
+		now sortorder entry is 2;
+		now description entry is "Increase damage made by the Abyssal Edge weapon by 1 (Costs 10 Null Essences)";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Enchant Xaedihr's Tome"):
+					say "[XaedihrEnchantTome]";
+				if (nam is "Enchant Abyssal Edge"):
+					say "[XaedihrEnchantAE]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the sorcerer, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
+
+to say XaedihrEnchantTome:
+	if carried of null essence < 10:
+		say "     Xaedihr frowns at your request, shaking his head. 'Well, I would gladly use them to upgrade my own arsenal, but, you see... you need at least [bold type]ten[roman type] of these null essence things for an enchantment like this. When you have them, then we can do something about it.' With that, you are forced to give up on the idea.";
+	else:
+		say "     'Certainly doable. I shall get onto that. Thank you, by the way, I always appreciate gaining some power for myself.' he tells you, as you hand him the ten null essences...";
+		say "     The sorcerer takes the materials to over his corner and proceeds to perform some magical spells that you don't really understand. After a few flashes, ominous sounds and strange flashes of light, the job is complete.";
+		say "     [bold type]Xaedihr has gotten stronger![roman type][line break]";
+		increase weapon damage of demonologist by 1;
+
+to say XaedihrEnchantAE:
+	if carried of null essence < 10:
+		say "     Xaedihr frowns at your request, shaking his head. 'Well, I could use these items to further augment the Abyssal Edge's damage, but, you see... you need at least [bold type]ten[roman type] of these null essence things for an enchantment like this. When you have them, then we can do something about it.' With that, you are forced to give up on the idea.";
+	else:
+		say "     'Certainly doable. I shall get onto that.' he tells you, as you hand him the ten null essences...";
+		WaitLineBreak;
+		say "     The sorcerer takes the materials to over his corner and proceeds to perform some magical spells that you don't really understand. After a few flashes, ominous sounds and strange flashes of light, the job is complete.";
+		increase weapon damage of abyssal edge by 1;
+		increase Resolution of AbyssEdgeEnchantLevel by 1;
+		say "     [bold type]Your Abyssal Edge's weapon damage has been increased by 1! It is now at [weapon damage of abyssal edge] damage.[roman type][line break]";
 
 [***********************************************************]
 Section 5-3 - Sex Menu

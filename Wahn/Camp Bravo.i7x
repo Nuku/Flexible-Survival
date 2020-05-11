@@ -199,13 +199,49 @@ object	name
 Private Marc Orwell	"Private Marc Orwell"
 
 Private Marc Orwell is a man. Private Marc Orwell is in Camp Bravo Entrance.
+ScaleValue of Private Marc Orwell is 3. [human sized]
+Body Weight of Private Marc Orwell is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Private Marc Orwell is 8. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Private Marc Orwell is 3. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Private Marc Orwell is 4. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Private Marc Orwell is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Private Marc Orwell is 4. [length in inches]
+Breast Size of Private Marc Orwell is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Private Marc Orwell is 2. [count of nipples]
+Asshole Depth of Private Marc Orwell is 10. [inches deep for anal fucking]
+Asshole Tightness of Private Marc Orwell is 3. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Private Marc Orwell is 1. [number of cocks]
+Cock Girth of Private Marc Orwell is 2. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Private Marc Orwell is 7. [length in inches]
+Ball Count of Private Marc Orwell is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Private Marc Orwell is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Private Marc Orwell is 0. [number of cunts]
+Cunt Depth of Private Marc Orwell is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Private Marc Orwell is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Private Marc Orwell is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Private Marc Orwell is false.
+PlayerRomanced of Private Marc Orwell is false.
+PlayerFriended of Private Marc Orwell is false.
+PlayerControlled of Private Marc Orwell is false.
+PlayerFucked of Private Marc Orwell is false.
+OralVirgin of Private Marc Orwell is false.
+Virgin of Private Marc Orwell is true.
+AnalVirgin of Private Marc Orwell is false.
+PenileVirgin of Private Marc Orwell is false.
+SexuallyExperienced of Private Marc Orwell is true.
+TwistedCapacity of Private Marc Orwell is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Private Marc Orwell is false. [steriles can't knock people up]
+MainInfection of Private Marc Orwell is "Human".
 understand "Marc" as Private Marc Orwell.
 understand "Orwell" as Private Marc Orwell.
-The description of Private Marc Orwell is " [OrwellDesc]".
+The description of Private Marc Orwell is "[OrwellDesc]".
 The conversation of Private Marc Orwell is { "Meep!" }.
 The icon of Private Marc Orwell is Figure of MarcOrwell_icon.
 
 to say OrwellDesc:
+	project the figure of MarcOrwell_icon;
 	if MovingOrwell < 2:
 		say "     Private Marc Orwell is an attractive and fit male, bearing the tattoo of a merman on his left shoulder. He's leaning comfortably against one of the wrecked cars, but still has his rifle at hand.";
 	else:
@@ -241,6 +277,7 @@ instead of fucking Private Marc Orwell:
 				WaitLineBreak;
 				say "     Whispering an apology, you start up fucking him again, though with a bit less intense strokes. Even though you ache to just take him hard against the hood of the car, this slower rhythm still feels amazing. You almost have to laugh out loud as you see Marc nod over to the other soldier, giving the 'no enemy in sight' hand-sign nonchalantly as if he wasn't being fucked right at that very moment. Your semi-public coupling gives having sex with this handsome and athletic man a delicious extra thrill, and it doesn't take much longer until your raging libido demands its due. With a satisfied grunt, you grind your hips against Private Marc Orwell's butt, holding him tight as your balls start unloading their fertile load. Feeling the first spurt of your cum splash against his inner walls, Marc gives a satisfied moan, his hand moving down to stroke his own cock. After just a few jerks, he joins you in orgasm, long strings of his sperm spurting all over the front wheel and side of the car.";
 				say "     After finishing with the last spurts inside the young soldier, you stay in him a while longer while moving your hands under his shirt, stroking and caressing his back and chest. As your cock starts getting soft, you slowly pull out of him, then move to collect your clothes and gear. While you do so, Marc gives you a pretty nice and distracting view - bent over the hood of the car, all business to an observer from the front with his rifle and uniform cap and shirt... while at the same time showing off his bare ass to you, pants pooled around his legs and combat boots, with a small trickle of cum dripping from his freshly fucked hole.";
+				NPCSexAftermath Private Marc Orwell receives "AssFuck" from Player;
 			else:
 				LineBreak;
 				say "     [OrwellBJ]";
@@ -248,13 +285,13 @@ instead of fucking Private Marc Orwell:
 			say "     [OrwellBJ]";
 		if MovingOrwell is 2:
 			now MovingOrwell is 3;
-		now lastfuck of Private Marc Orwell is turns;
 
 to say OrwellBJ:
 	say "     You reach around Marc and undo the button and zipper of his pants, then pull them down to reveal his well-muscled butt. Stroking his buttocks, firm under deliciously soft and hairless skin, you then kneel down and crawl between his legs. After a bit of maneuvering, you come to sit between him and the car, your face just inches away from the young soldier's cock. It twitches in anticipation as Marc feels your breath against his skin. Not wanting to leave him waiting, you softly take it in your hand, stroking it, then hold it and slide your lips over the tip and further down his shaft. A stifled moan escaping your sexual partner's lips makes you stop for a moment to allow him to find his composure again. 'Go on, that feels great,' he whispers down to you.";
 	say "     Eager to give Marc pleasure, you pull back a bit, then start bobbing your head up and down on his cock and bring your hands up to fondle his balls. After weeks of constant guard duty with such a dour partner who made sure he never had time on his own to get off, they're heavy with pent-up cum. With him aching for release, it doesn't take too much longer until your efforts drive the young man over the edge and a not quite suppressed gasp heralds a flood of a load gushing into your mouth. Spurt after spurt coat your tongue and tonsils, and you swallow it all, not spilling anything.";
 	WaitLineBreak;
 	say "     As you stand back up Private Marc Orwell looks over his shoulder and says, 'Thanks, I really, really needed that!' 'Anytime,' you tell him, licking your lips. As you swallow the last drops of his cum, Marc gives you a pretty nice and distracting view - bent over the hood of the car, all business to an observer from the front with his rifle and uniform cap and shirt... while at the same time showing off his bare ass to you, pants pooled around his legs and combat boots, his now softening cock dangling between his legs.";
+	NPCSexAftermath Player receives "OralCock" from Private Marc Orwell;
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -491,8 +528,8 @@ to say CampBravoRadioTalk:
 [   1: had sex with the player                                       ]
 
 [ XP of Elaine                                                       ]
-[   0: player hasn't gotten a uniform yet                           ]
-[   1: player already got a uniform                                 ]
+[   0: player hasn't gotten a uniform yet                            ]
+[   1: player already got a uniform                                  ]
 
 [ ElainePregnant - timer for the birth (48h from start)              ]
 
@@ -501,6 +538,41 @@ object	name
 Elaine	"Elaine"
 
 Elaine is a woman. Elaine is in Quartermaster's Tent.
+ScaleValue of Elaine is 3. [human sized]
+Body Weight of Elaine is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Elaine is 8. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Elaine is 7. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Elaine is 4. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Elaine is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Elaine is 4. [length in inches]
+Breast Size of Elaine is 3. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Elaine is 2. [count of nipples]
+Asshole Depth of Elaine is 6. [inches deep for anal fucking]
+Asshole Tightness of Elaine is 3. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Elaine is 0. [number of cocks]
+Cock Girth of Elaine is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Elaine is 0. [length in inches]
+Ball Count of Elaine is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Elaine is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Elaine is 1. [number of cunts]
+Cunt Depth of Elaine is 9. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Elaine is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Elaine is 3. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Elaine is false.
+PlayerRomanced of Elaine is false.
+PlayerFriended of Elaine is false.
+PlayerControlled of Elaine is false.
+PlayerFucked of Elaine is false.
+OralVirgin of Elaine is false.
+Virgin of Elaine is false.
+AnalVirgin of Elaine is true.
+PenileVirgin of Elaine is true.
+SexuallyExperienced of Elaine is true.
+TwistedCapacity of Elaine is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Elaine is false. [steriles can't knock people up]
+MainInfection of Elaine is "Human".
 The description of Elaine is "     Elaine Scott is the quartermaster of this camp, responsible for the regular and... more unusual supplies the soldiers need. She's an attractive woman in her thirties, about 4'9' or so in height, with short-cut black hair. [if thirst of Elaine is 1]She has a healthy glow to her[else if thirst of Elaine is 2]Her belly bulges outward in obvious pregnancy[else if thirst of Elaine is 3]She keeps a watchful eye over her son Adam, who's just learning how to manage the inventory here[end if].".
 The conversation of Elaine is { "Huh?" }.
 ElainePregnant is a number that varies.
@@ -714,6 +786,7 @@ to say CampBravoMenPrepping:
 				say "     Pulling your redhead soldier's lips to yours, you give him a quick kiss, then slowly pull out of his ass and present the ready and slightly gaping opening to the other soldier. 'Your turn,' you say, and the man eagerly takes the spot behind his mate, then sinks himself in him with a satisfied groan. You give him a minute to get really into fucking his teammate, their moans and the slapping noises of one man's hips against the other's ass filling the tent.";
 				say "     And then it's time to take another man's virginity for you. Your eager cock rock-hard, lubed and ready, you step up behind the muscular soldier and thrust forward, penetrating his tight ass in one quick move. He gives a gasp, more in surprise than pain, and looks back at you. Being balls deep in another soldier's ass himself, he can't very well complain, so he just shrugs and starts moving in and out again. Each time he pulls back from his partner's hole, he pushes your shaft deeper in his own ass, giving him quite a bit of extra stimulation that soon has him moaning louder than before.";
 				say "     Your little threesome goes on for a while, until the muscled soldier suddenly shouts 'Aaah - I'm coming!', filling up his buddy's ass with pulse after pulse of his seed. The man's anal muscles spasming around your own shaft push you over the edge right with him, claiming his no longer virgin asshole as yours with a huge load shot deep inside. You pull out of his hole and tell the man to lie down on his back on the crate, then give the red-headed soldier a nudge. As hot and ready as he is, he instantly sinks himself into the larger man's cum-dripping hole, pumping away urgently until his own orgasm approaches. With a last loud moan, he pulls out just in time to cum all over his mate, spraying quite a bit of cum all over his muscled chest.";
+				CreatureSexAftermath "Human" receives "AssFuck" from "Player";
 		else: [females and neuter just hand over the dildo]
 			say "     You hand the man the dildo, then walk him through inserting it, going slow so his buddy's relaxed asshole doesn't tighten up again. Soon he's shafting the redhead deeply with the sex toy, encouraged by the man's lustful moans at having his prostate stimulated. Before too much longer, the slender soldier shoots a big load all over the side of the crate he's leaning against. After getting his breath back, he says 'That was amazing - come on, your turn... you'll like it.' After the bigger soldier takes his place, the redhead pulls the dildo out of his own ass and starts to push the slippery tip against his partner's opening...";
 	LineBreak;
@@ -740,13 +813,48 @@ to say ElaineFucking:
 				say "     The two of you spend a long while on the bed, fucking each other and making out, until you feel an urgent feeling rise in your balls. You thrust in all the way one last time and orgasm, with spurt after spurt of fertile seed filling your condom to the brink.";
 				WaitLineBreak;
 				say "     Pulling your lips to hers, Elaine gives you a deep kiss, moaning 'Thanks, stud. I really needed that...' After a short rest, she slides out from under you and goes to put her clothes back on.";
-			now lastfuck of Elaine is turns;
+			NPCSexAftermath Elaine receives "PussyDildoFuck" from Player;
 
 Table of GameCharacterIDs (continued)
 object	name
 Sergeant Alexander	"Sergeant Alexander"
 
 Sergeant Alexander is a man. Sergeant Alexander is in Parade Ground.
+ScaleValue of Sergeant Alexander is 3. [human sized]
+Body Weight of Sergeant Alexander is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Sergeant Alexander is 8. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Sergeant Alexander is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Sergeant Alexander is 4. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Sergeant Alexander is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Sergeant Alexander is 4. [length in inches]
+Breast Size of Sergeant Alexander is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Sergeant Alexander is 2. [count of nipples]
+Asshole Depth of Sergeant Alexander is 6. [inches deep for anal fucking]
+Asshole Tightness of Sergeant Alexander is 3. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Sergeant Alexander is 1. [number of cocks]
+Cock Girth of Sergeant Alexander is 4. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Sergeant Alexander is 9. [length in inches]
+Ball Count of Sergeant Alexander is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Sergeant Alexander is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Sergeant Alexander is 0. [number of cunts]
+Cunt Depth of Sergeant Alexander is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Sergeant Alexander is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Sergeant Alexander is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Sergeant Alexander is false.
+PlayerRomanced of Sergeant Alexander is false.
+PlayerFriended of Sergeant Alexander is false.
+PlayerControlled of Sergeant Alexander is false.
+PlayerFucked of Sergeant Alexander is false.
+OralVirgin of Sergeant Alexander is false.
+Virgin of Sergeant Alexander is true.
+AnalVirgin of Sergeant Alexander is true.
+PenileVirgin of Sergeant Alexander is false.
+SexuallyExperienced of Sergeant Alexander is true.
+TwistedCapacity of Sergeant Alexander is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Sergeant Alexander is false. [steriles can't knock people up]
+MainInfection of Sergeant Alexander is "Human".
 The description of Sergeant Alexander is "     Sergeant Alexander is a tough-looking soldier, who's seen a lot in his time. He's about 5'11' and pretty buff and muscular. Looks like he's responsible for caring for the minotaur, as he carries box after box of vegetables and other foodstuffs to the creature from behind one of the nearby tents."
 The conversation of Sergeant Alexander is { "Ick!" }.
 
@@ -892,7 +1000,7 @@ to say CampBravoGetFucked:
 			say "     Thoroughly satisfied, the minotaur gives your sweaty chest one last lick, running his broad tongue over your nipples, then lowers your body back to the field bed. Almost reluctantly, he pulls his large cock out of the warm, cum-filled cave of your vagina and sits down on the ground to rest. Sergeant Alexander comes over to you with a towel in hand, helping you clean up a bit and wipe off the cum running out of your body before you put on your clothes and gear again.";
 			infect "Minotaur";
 			increase Libido of Tiny Tim by 1;
-			now lastfuck of Tiny Tim is turns;
+			NPCSexAftermath Player receives "PussyFuck" from Tiny Tim;
 		else:
 			say "     As you start to disrobe, Sergeant Alexander interrupts you, saying 'Sorry, no women allowed. Major's orders. You'll have to take that up with him before I can let you do that.'";
 	else:
@@ -900,11 +1008,11 @@ to say CampBravoGetFucked:
 		say "     You quickly undress, piling your clothes and equipment on the field bed standing close to the minotaur's fucking post. Then you lube your asshole with a generous amount of slippery gel, walk over to the hitching post and take position with your hands on the smooth wooden crossbar. Wiggling your ass invitingly brings the large minotaur to stand behind you almost instantly. He sniffs you, gives a lustful grumble and then runs his wide tongue up from your ass over your bare back. Grabbing his long shaft in a hand, he slaps it softly against your butt-cheeks before bringing it to your waiting hole. You give a short gasp as the minotaur pushes forward, popping the head of his thick cock inside, then starts to slide deeper. Inch after inch of rock-hard shaft slides through your tight opening until the minotaur is finally fully inside your body, his large balls rubbing up against your ass.";
 		LineBreak;
 		say "     He holds still for a moment, his breach blowing warm against your neck, giving your ass time to get used to his massive girth. Then the pause is over, and the minotaur pulls almost all the way out and slams back inside with a bellow, gripping your hips tightly with his large hands as he humps you with deep thrusts. His animal nature becomes obvious now, as he tirelessly ruts your body without holding back, each thrust accompanied by the meaty slap of his balls against the your ass. You're quite thankful now for the lube, as it allows that massive cock to slide in and out of your body a lot easier than it otherwise would. The hard shaft rubbing sensitive spots deep inside you quickly has you moaning lustfully. [if Player is male]Your own cock hardens without ever being touched and looking down, you see drops of precum glisten at its tip[else]Even though you have no genitalia yourself, a deep pleasant feeling suffuses your body[end if].";
-		say "     The hot any heavy coupling with the large beast continues for about twenty minutes, until the feelings of getting fucked drive you over the edge, your body shaking as orgasm grips it. [if Player is male]Your cock jerks as thick ropes of cum spray from its tip, splattering over the cum-drenched ground. [end if]As you writhe in the throes of lust, your anal muscles flex and spasm around the minotaur's long thrusting cock, giving your beastly fucker the last push to arrive at his own fulfillment. With a last deep shove he buries his cock fully in you as his balls contract with each blast of cum shooting up his shaft. Breathing heavily, he steadies himself with one hand on the wooden post while the other holds your body close until his orgasm subsides.[mimpregchance]";
+		say "     The hot any heavy coupling with the large beast continues for about twenty minutes, until the feelings of getting fucked drive you over the edge, your body shaking as orgasm grips it. [if Player is male]Your cock jerks as thick ropes of cum spray from its tip, splattering over the cum-drenched ground. [end if]As you writhe in the throes of lust, your anal muscles flex and spasm around the minotaur's long thrusting cock, giving your beastly fucker the last push to arrive at his own fulfillment. With a last deep shove he buries his cock fully in you as his balls contract with each blast of cum shooting up his shaft. Breathing heavily, he steadies himself with one hand on the wooden post while the other holds your body close until his orgasm subsides.";
 		say "     Thoroughly satisfied, the minotaur gives your sweaty back one last lick, then pulls is large cock out, leaving your stretches asshole gaping and with cum running out of it. Sergeant Alexander comes over to you and helps you to the field bed nearby to sit down and rest a bit before you put on your clothes and gear again.";
 		infect "Minotaur";
 		increase Libido of Tiny Tim by 1;
-		now lastfuck of Tiny Tim is turns;
+		NPCSexAftermath Player receives "AssFuck" from Tiny Tim;
 
 to say CampBravoFuckTTMale:
 	if lust of Tiny Tim is 0:
@@ -937,6 +1045,8 @@ to say CampBravoFuckTTMale:
 		say "     Eventually, the last soldier in line is under the minotaur and you finally allow yourself to cum. Your balls are achingly overfull from the constant edging, but that only makes your release all the sweeter. Your load is a huge one, sending blast after blast of your seed into the bull stud's ass. The feel of this hot spunk pouring into his bowels is enough to set Tiny Tim off one last time. He gives a long, moaning bellow as his worn shaft pumps the last dregs of semen from his overworked testicles. But that doesn't mean the soldier gets any less than the others, if anything he ends up even more full as the minotaur won't let him go until your extended orgasm is fully complete, thus ensuring that every last drop he still has goes into him.";
 		say "     Thoroughly exhausted, Tiny Tim slumps back against the crumpled, crushed and very sticky jeep. Marc cuddles up to him as the sergeant checks on his charge. The minotaur is tired, dazed, but also thoroughly pleased. 'Sore... but feel good... tired now,' the big guy mumbles, patting your face roughly with one of his big, meaty hands. Marc pats the minotaur's head and shares a final kiss with him before getting up. 'Great job, big guy. Enjoy your rest. You earned it.'";
 		say "     You and Marc are given an opportunity to clean yourselves up with some damp rags inside Sgt Alexander's tent. You and the private take the opportunity to cuddle for a bit in there, but you're both too spent for any more fun. Still, it's nice to have a chance to be affectionate with one another. After quite a few kisses, the soldier gets himself dressed and, after rubbing some dirt onto his fatigues for added effect, heads back to his post as if he's just undergone a dirty and tiring task. Which it very much was, but just not in that sense.";
+		NPCSexAftermath Private Marc Orwell receives "AssFuck" from Tiny Tim;
+		NPCSexAftermath Tiny Tim receives "AssFuck" from Player;
 	else:
 		say "     Suggesting another go at topping Tiny Tim, Alexander nods and checks his queue roster. 'Yeah, the big guy's got several more pairs line up. I'm sure he'd appreciate a little help getting through them.' He goes off to prep things on his end while you go get your partner.";
 		say "     Taking Private Marc Orwell from guard duty for another [']special, dangerous mission,['] the two of you head to the hitching post. Tiny Tim is happy to see you both, giving big, crushing hugs and asking if you're here to fuck again. 'That we are, big guy - if you're up for it,' the soldier responds while rubbing his hands over the minotaur's stiffening erection.";
@@ -961,6 +1071,7 @@ to say CampBravoFuckTTMale:
 		say "     Eventually, the last soldier in line is under the minotaur and you finally allow yourself to cum. Your balls are achingly overfull from the constant edging, but that only makes your release all the sweeter. Your load is a huge one, sending blast after blast of your seed into the bull stud's ass. The feel of this hot spunk pouring into his bowels is enough to set Tiny Tim off one last time. He gives a long, moaning bellow as his worn shaft pumps the last dregs of semen from his overworked testicles. But that doesn't mean the soldier gets any less than the others, if anything he ends up even more full as the minotaur won't let him go until your extended orgasm is fully complete, thus ensuring that every last drop he still has goes into him.";
 		say "     Thoroughly exhausted, Tiny Tim slumps back against the crumpled, crushed and very sticky jeep. Marc cuddles up to him as the sergeant checks on his charge. The minotaur is tired, dazed, but also thoroughly pleased. '[one of]That fun... Me tired now... happy[or]Ass sticky... Is nice... Friends nice too[or]Mmm... ass warm with cum... like full soldiers[at random]...' the big guy mumbles, patting your face roughly with one of his big, meaty hands. Marc pats the minotaur's head and shares a final kiss with him before getting up. 'Great job, big guy. Enjoy your rest. You earned it.'";
 		say "     You and Marc are given an opportunity to clean yourselves up with some damp rags inside Sgt Alexander's tent. You and the private take the opportunity to cuddle for a bit in there, but you're both too spent for any more fun. Still, it's nice to have a chance to be affectionate with one another. After quite a few kisses, the soldier gets himself dressed and, after rubbing some dirt onto his fatigues for added effect, heads back to his post as if he's just undergone a dirty and tiring task. Which it very much was, but just not in that sense.";
+		NPCSexAftermath Tiny Tim receives "AssFuck" from Player;
 	increase lust of Tiny Tim by 1;
 	now lastfuck of Tiny Tim is turns - 4;
 	now lastfuck of Private Marc Orwell is turns - 4;
@@ -1022,6 +1133,8 @@ to say CampBravoFuckTTFemale:
 		WaitLineBreak;
 		say "     Thoroughly exhausted, Tiny Tim slumps back against the crumpled, crushed and very sticky jeep. The remaining females who haven't gone back to their duties already come up to cuddle with him. The minotaur is tired, dazed, but also thoroughly pleased with himself. 'Girls happy? Females bred good?' he mumbles sleepily, nuzzling and kissing them. He manhandles their tits as he gently holds his many mates. They accept the fondling from his big, meaty hands and assure him he's done a great job, telling him there'll be plenty of new minotaur calves thanks to him. He drifts off with a happy smile on his bovine face.";
 		say "     You retreat back to the sergeant's tent with Elaine to get cleaned up and recover. The two of you take the opportunity to cuddle for a bit in there, but you're both too spent for any more fun than that. Still, it's nice for her to get a break from the near-constant work of her other duties, so she enjoys it while she can. After quite a few kisses and lots of playing with her tits, she finally disentangles herself from you so she can get back to work. At least Tiny Tim'll be worn out for a while, giving her a bit of peace before having to deal with coaching more squeamish guys through their prep before their turn with him.";
+	NPCSexAftermath Elaine receives "PussyFuck" from Tiny Tim;
+	NPCSexAftermath Tiny Tim receives "AssFuck" from Player;
 	increase lust of Tiny Tim by 1;
 	now lastfuck of Tiny Tim is turns - 4;
 	now lastfuck of Elaine is turns - 4;
@@ -1034,17 +1147,12 @@ to say AlexanderFucking:
 	if Player is male or Cunt Count of Player is 0:
 		say "     He shakes his head as you proposition him. 'Sorry, sonny - this man's only here for the ladies. Why don't you do a round at the post, if you're into that stuff...'";
 	else:
-		if (lastfuck of Alexander - turns < 12):
+		if (lastfuck of Sergeant Alexander - turns < 12):
 			say "     As you approach Alexander, he immediately sees the lust-filled twinkle in your eyes. He gives you an apologetic shrug, saying 'Sorry, I got duties to perform. Can't fuck around all day, even though I'd like to...' He gives you a quick kiss, then goes to grab some more food for the minotaur.";
 		else:
-			setmonster "Human";
-			choose row MonsterID from the Table of Random Critters;
-			say "     'How could I say no to such an offer?' he replies huskily, then leads you to the side and around a tent, out of sight from the minotaur. He says 'Wouldn't want Tiny Tim over there to get any ideas.' with a nod back towards the parade ground. Then he pulls you close to himself, running large hands over your body and giving you a hot and heavy kiss.";
-			say "     Accompanied by lustful groping at your curves, Sergeant Alexander peels you out of your clothing, then lifts you up on a stack of crates roughly hip-height for him. Pulling off his shirt and throwing it aside, he then opens his zipper, freeing a nicely thick piece of hard man-meat.";
-			say "     After moistening its shaft a bit with his spit he steps up spreads your legs wide. As he rubs your sensitive folds softly with the tip of his cock, you moan lustfully, then gasp as he pushes forward, plunging his shaft into your body. The girth of his member rubbing against your inner walls just feels amazing and the man really knows what he's doing, giving you a deep and very satisfying shafting.";
-			say "     He's got good stamina, so your intense coupling takes quite a while before the man's grunts and moans rise to a lust-filled crescendo and he buries his cock all the way in your cunt with one last deep thrust. You can feel his member pulsing as blast after blast of cum paint your insides, giving you a delightfully full feeling. The large man leans over you to make out some more with his shaft still inside your body, depositing spurts of fertile seed as he wrangles your tongue with his.[fimpregchance]";
-			say "     After depositing his full load inside you, he raises his upper body again and gives your naked form an appreciative look, accompanied by a slight twitch of his cock in your pussy. 'You're an awesome fuck, baby. Let's go for round two.' He starts to pump his cock in and out of you again, but before he can get really into it, a deep-voiced bellow of 'I'm hungry.' sounds from the parade ground. With a sigh, Sergeant Alexander pulls out of your pussy and packs his manhood away with some difficulty because of its erect state. 'Sorry to cut this short, but duty calls...' he says, giving you a quick kiss and then hurries back to the minotaur with a crate full of food.";
-			now lastfuck of Alexander is turns;
+			say "     'How could I say no to such an offer?' he replies huskily, then leads you to the side and around a tent, out of sight from the minotaur. He says 'Wouldn't want Tiny Tim over there to get any ideas.' with a nod back towards the parade ground. Then he pulls you close to himself, running large hands over your body and giving you a hot and heavy kiss. Accompanied by lustful groping at your curves, Sergeant Alexander peels you out of your clothing, then lifts you up on a stack of crates roughly hip-height for him. Pulling off his shirt and throwing it aside, he then opens his zipper, freeing a nicely thick piece of hard man-meat. After moistening its shaft a bit with his spit he steps up spreads your legs wide. As he rubs your sensitive folds softly with the tip of his cock, you moan lustfully, then gasp as he pushes forward, plunging his shaft into your body. The girth of his member rubbing against your inner walls just feels amazing and the man really knows what he's doing, giving you a deep and very satisfying shafting.";
+			say "     He's got good stamina, so your intense coupling takes quite a while before the man's grunts and moans rise to a lust-filled crescendo and he buries his cock all the way in your cunt with one last deep thrust. You can feel his member pulsing as blast after blast of cum paint your insides, giving you a delightfully full feeling. The large man leans over you to make out some more with his shaft still inside your body, depositing spurts of fertile seed as he wrangles your tongue with his. After depositing his full load inside you, he raises his upper body again and gives your naked form an appreciative look, accompanied by a slight twitch of his cock in your pussy. 'You're an awesome fuck, baby. Let's go for round two.' He starts to pump his cock in and out of you again, but before he can get really into it, a deep-voiced bellow of 'I'm hungry.' sounds from the parade ground. With a sigh, Sergeant Alexander pulls out of your pussy and packs his manhood away with some difficulty because of its erect state. 'Sorry to cut this short, but duty calls...' he says, giving you a quick kiss and then hurries back to the minotaur with a crate full of food.";
+			NPCSexAftermath Player receives "PussyFuck" from Sergeant Alexander;
 
 Table of GameCharacterIDs (continued)
 object	name
