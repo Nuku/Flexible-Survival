@@ -90,7 +90,8 @@ after going to Burned-Out Chapel while (Incubus Offspring Meeting is not resolve
 	move Atticus to Burned-Out Chapel;
 	if player is not male:
 		say "     (Note: Even though you might not have a dick right now, you're still the person who fathered Atticus. That's why he'll continue to call you dad throughout all content.)";
-	project Figure of Atticus_hard_neutral_arm_raised_icon;
+	project the Figure of YamatoDragoness_red_NSFW_icon;
+	project the Figure of Atticus_hard_neutral_arm_raised_icon;
 	say "     As you enter the nave of the ruined chapel, with its soot-blackened walls and columns rising high above you, you become aware that someone else is already inside the room. A series of candles has been set up in the apse behind the altar, their flickering glow playing over the naked skin of a handsome young man standing against the wall there. Casually naked and clearly quite comfortable in his skin, he is pinching his nipples one by one while jerking his meaty shaft in fluid movements. Two small horns bend upwards from his forehead, dark red in color just like the bat-like wings on his back and the spaded tail swinging through the air behind his back. Clearly, this is an incubus - but there's more to him than just that... something about his features and the sexual energy lying thick in the air around him reminds you of Lilith, and it isn't too hard to guess that this is a son of the powerful succubus. You can't help but feel that you've seen someone looking kinda like him before, but you can't put your finger on it right away.";
 	say "     Amber eyes flicker towards you as the incubus registers your presence, and with a grin, he speeds his masturbation into a rapid flurry of movement, accompanied by lewd moans spilling easily past his lips. You can do little more than stare as he quickly pushes himself past the point of no return, letting out a satisfied grunt as his body stiffens and a thick spurt of cum erupts from his manhood, followed by another and another. Second by second, the glow of the candles around the naked man seem to diminish and it takes you a second to figure out why: He's literally shooting out the candles with his cum! One, two, three, then four flames are extinguished as their wicks are engulfed by the demon's seed but he aimed a little high for the fifth, so it is only grazed, spreading the scent of burning and cum in the air instead.";
 	WaitLineBreak;
@@ -118,6 +119,7 @@ after going to Burned-Out Chapel while (Incubus Offspring Meeting is not resolve
 		now Loyalty of Atticus is 99; [missed the window]
 	if calcnumber is 2:
 		LineBreak;
+		project the Figure of Atticus_hard_smile_arm_raised_icon;
 		say "     Moving closer to the attractive young demon, you're the one who draws him into a fatherly embrace. Taking care to just lay your arms around his chest and not touching him in a sexual way, you hold him tight and tell Atticus that you're very glad to meet him and hope to spend some time together. Surprised at your approach to his sexual offers, the young incubus is almost stunned for a second or two, his hands hesitating in the positions where he started to grope at you. 'I - um, thanks daddy,' Atticus haltingly says a moment later, lifting his arms to just squeeze you back. The two of you stay like that for you don't know how long, just holding each other, until your son gets a little unruly and slips out of your grasp. He steps back, looking at you wide-eyed and bites his lip, as if not knowing how to go on from here. What must be incubus instinct has him taking a quite sexy pose, showing off his naked form in the candlelight, but the voice in which he says, 'I'd like to hang out with you some more. I'll be here when you come visit,' is far from the cocky tone it was before.";
 		if Loyalty of Atticus < 1:
 			now Loyalty of Atticus is 1; [cracked his shell]
@@ -129,7 +131,7 @@ after going to Burned-Out Chapel while (Incubus Offspring Meeting is not resolve
 	now Incubus Offspring Meeting is resolved;
 
 after going to Burned-Out Chapel while (Atticus is in Burned-Out Chapel and PlayerMet of Atticus is true and Lust of Atticus is 0 and HP of Elijah is 99 and Cock Count of Player > 0 and a random chance of 1 in 3 succeeds): [Atticus in the room, has met the player, first Atticus/Elijah meeting, Evil Eli exists, male player, 33% chance on entry]
-	project Figure of Atticus_hard_neutral_arm_raised_icon;
+	project the Figure of Atticus_hard_neutral_arm_raised_icon;
 	say "     As you enter the nave of the ruined chapel, with its soot-blackened walls and columns rising high above you, you become aware that someone else is already inside the room. A series of candles has been set up in the apse behind the altar, their flickering glow playing over the naked forms of two entwined bodies. Both men, from the sounds of their grunts. Clothing is scattered on the floor around them, some of it hanging off the remnants of church pews, clearly thrown aside in the throes of lust. Despite seeing only the back of the larger of the two, you have a good guess who it is, recognizing Elijah by his black hair and black wings. His partner has both arms wrapped around the fallen Adonis, groping his ass and feeling his broad back as the two of them make out.";
 	say "     A few heartbeats later, the second male reveals himself to be an incubus by bending his head to the side and nibbling on Elijah's earlobe. As he does so, the sex demon's gaze falls upon you, instantly followed by an impish smile on the lips of whom you recognize as your son Atticus. The young man gives you a little wave with the hand not squeezing Elijah's buttocks, then beckons you closer to them. Seems he's interested in some fun between the three of you.";
 	LineBreak;
@@ -178,7 +180,7 @@ after going to Burned-Out Chapel while (Atticus is in Burned-Out Chapel and Play
 		now Lust of Atticus is 100; [squashed his Elijah interactions]
 
 after going to Burned-Out Chapel while (Atticus is in Burned-Out Chapel and PlayerMet of Atticus is true and Loyalty of Atticus is 1): [Atticus in the room, has met the player, player showed that he cares about him (at least a little bit)]
-	project Figure of Atticus_soft_smile_arms_lowered_icon;
+	project the Figure of Atticus_soft_smile_arms_lowered_icon;
 	say "     As you enter the nave of the ruined chapel, with its soot-blackened walls and columns rising high above you, you become aware that someone else is already inside the room. Lounging on a mattress dragged up next to the defiled altar, Atticus is casually paging through a porn mag lying next to him, one hand wrapped around the erection sticking out long and proud from his open zipper. You can't help but take in the half-naked form of your offspring with the succubus Lilith, his lithe body and handsome face drawing your gaze unerringly. Sex demons are made to appeal to humans, and Atticus is no exception to that rule. Small pieces of rubble crunch under your feet as you slowly move closer, drawing the attention of the young man and he looks up a heartbeat later. 'You're back daddy!' he calls out in an eager tone, jumping to his feet and coming up to you with quick strides. Before you know it, the incubus has thrown his arms around your chest and is giving you an embrace.";
 	say "     'So, what brings you back into this ruin? Anything here that draws you in maybe?' he asks after a second or two, pulling back so he can look into your eyes while at the same time lightly grinding his crotch forward. Still hard and erect from jerking when you entered, his manhood rubs against your body. The usual naughty smirk is on his face, promising arousal and lust, but at the same time you think you see a flicker of something else in his gaze. He is focusing on your face with an intense expression, almost as if hoping for one specific reply before all else. [bold type]You can't help but feel that he'll take what you say to heart, so maybe it'd be a good idea to choose your words wisely.[roman type][line break]";
 	LineBreak;
@@ -196,7 +198,7 @@ after going to Burned-Out Chapel while (Atticus is in Burned-Out Chapel and Play
 			say "Invalid choice. Type [link]1[end link] to sex him up, [link]2[end link] to hang out with your son, [link]3[end link] to shrug his question off or [link]4[end link] to say you want Lilith.";
 	if calcnumber is 1:
 		LineBreak;
-		project Figure of Atticus_soft_neutral_arm_raised_icon;
+		project the Figure of Atticus_soft_neutral_arm_raised_icon;
 		say "     As the words leave your mouth, there seems to be a second in which the young incubus's expression falls a little. Or maybe you just imagined that, as he lets out a chuckle right away, with his typical smirk beaming at you afterwards as he says, 'Knew you couldn't resist this killer bod! No one can, you know?!' Reaching out, he takes hold of your hand and pulls it to his abs, guiding you to feel him up. Leaning in for a quick peck on your mouth, he proceeds to slip out of your grasp and wanders over to the altar, beckoning you to join him.";
 		now Loyalty of Atticus is 100; [just sex from now on, he's not expecting the player to do anything more]
 		say "[AtticusSexMenu]";
@@ -210,12 +212,12 @@ after going to Burned-Out Chapel while (Atticus is in Burned-Out Chapel and Play
 		now Loyalty of Atticus is 2; [he feels that he might like his daddy as more than just a fuck]
 	else if calcnumber is 3:
 		LineBreak;
-		project Figure of Atticus_soft_neutral_arm_raised_icon;
+		project the Figure of Atticus_soft_neutral_arm_raised_icon;
 		say "     As the words leave your mouth, there seems to be a second in which the young incubus's expression falls a little. Or maybe you just imagined that, as he lets out a chuckle right away, with his typical smirk beaming at you afterwards as he says, 'Keep telling yourself that. I still think you're here to plunder some other booty.' Wiggling his eyebrows, Atticus slaps his own ass and grinds against you a little more, before you extract yourself from his reach and gently hold him back as he wants to follow you.";
 		now Loyalty of Atticus is 100; [just sex from now on, he's not expecting the player to do anything more]
 	else if calcnumber is 4:
 		LineBreak;
-		project Figure of Atticus_soft_frown_arms_crossed_icon;
+		project the Figure of Atticus_soft_frown_arms_crossed_icon;
 		say "     As the words leave your mouth, the incubus's eyebrows twitch, drawing together a second. Or maybe you just imagined that, as he lets out a chuckle right away, with his typical smirk beaming at you afterwards as he says, 'Can't get the queen slut out of your mind? I could use some brothers to hang out with, it's true. Just imagine the things we could do together!' Wiggling his eyebrows, Atticus slaps his own ass and grinds against you a little more, before you extract yourself from his reach and gently hold him back as he wants to follow you. 'Could make it a threesome sometime, too. Wouldn't you want me to churn up your seed inside her a bit? We could go back and forth a few times.'";
 		now Loyalty of Atticus is 100; [just sex from now on, he's not expecting the player to do anything more]
 	now AtticusEventCooldown is turns;
@@ -232,7 +234,7 @@ when play begins:
 	add Atticus_Payback to badspots of IncestList;
 
 after going to Burned-Out Chapel while (Atticus_Payback is not resolved and Atticus is in Burned-Out Chapel and PlayerMet of Atticus is true and Loyalty of Atticus is 2 and AtticusEventCooldown - turns > 6): [Atticus in the room, has met the player, player showed that he cares about him]
-	project Figure of Atticus_jeans_neutral_arms_crossed_icon;
+	project the Figure of Atticus_jeans_neutral_arms_crossed_icon;
 	say "     As you're about to enter the nave of the ruined chapel, you hear the crunching sound of breaking glass and sounds of splinters raining down after. Curious but also wary, you glance around the corner and see Atticus, standing beside one of the pews which has been pushed to stand lengthwise near the side wall of the building. On it, several empty beer bottles have been lined up and the handsome incubus is holding a baseball bat. His face is a picture of grumpy aggression as he swings back the bat once more, winding up to smash another bottle and send its remains to impact the soot-blackened wall. After he destroys his newest target, you step into the room and call out to him, at which point the young incubus turns around to look at you. His sullen glare smoothes out a bit as he recognizes you, greeting you with a wave of his hand and the words, 'Hey dad.'";
 	say "     Walking over to your incubus son, you ask him what's got him in such a funk, and he grumbles under his breath. For a second, it looks like he'll just continue with his vandalism and not answer, but then he seems to change his mind and throws the bat at the wall instead, uncaring where it falls after bouncing off. Crossing his arms in front of his chest, the young man looks at you and grimaces. 'It's this dude I ran into. 'Corpegh the Devourer'. Bleh! The guy's a damned bastard. All he cares about is impressing his master Mogdraz, and fuck on everyone else. I was out looking for something new to wear yesterday, something sexy,' the young incubus says, winking at you before he continues, 'and there he was, just strolling out of the kicked-open door of a sex shop with a huge sack of stuff. He just looted [italic type]everything[roman type]. I approached the dude and asked if I could just have a thing or two too, and you know what he said? 'Suck my dick and I might think about it.'";
 	WaitLineBreak;
@@ -252,7 +254,7 @@ after going to Burned-Out Chapel while (Atticus_Payback is not resolved and Atti
 			say "Invalid choice. Type [link]1[end link] to go beat up Corpegh, [link]2[end link] to console Atticus, or [link]3[end link] to tell him that he shouldn't bitch about it and accept what happened.";
 	if calcnumber is 1:
 		LineBreak;
-		project Figure of Atticus_jeans_smile_arm_raised_icon;
+		project the Figure of Atticus_jeans_smile_arm_raised_icon;
 		say "     Reaching out and placing a hand on your son's shoulder, you give Atticus a little squeeze and tell him that you'll get even with Corpegh. He can't just do shit like this to you and yours. The incubus face shows a mixture of surprise and shock, eyes widening as he stares at you, quickly followed by the words, 'You really mean that?! Wow, I - I wasn't really expecting anyone to ever... stand by me. Guess you're genuine about the family thing!' Throwing his arms around you in an enthusiastic embrace, the Atticus squeezes you tightly, then gives a little chuckle. 'We're gonna fuck that asshole over so bad. Just you and me against him, it'll be epic!' Nodding to him and saying that he should get ready, you receive a peck on the cheek and the words, 'Thanks daddy!' from Atticus, who then strolls over to collect his baseball bat.' Armed with that, he gives it a few practice swings, miming combat, then comes up to your side to set out through the streets.";
 		say "     The trip through the red light district isn't actually that far and fairly uneventful, as the various pimps, hookers, demons and assorted sex monsters whom you meet take one look at the two of you and step aside, letting Atticus and yourself pass unmolested. Seems like no one wants to mess with two people out on a mission of revenge. Soon, you're standing in front of one of those grimy motels that charged by the hour and your demonic companion points at one of the doors. 'Corpegh fucked the pimp who was running the place into submission and now he's got both the guy and his girls turning tricks for him.' Glancing around, you see a few half-undressed beings of various species hanging out along the street, trying to entice people to join them inside. Taking a few steps towards a hooker, Atticus calls out, 'Hey girl, where's your boss?' '2A. But better be ready to put out or let him sample your friend if you're gonna disturb him.' After a quick thanks to the woman, Atticus leads the way to the right door and knocks on it.";
 		WaitLineBreak;
@@ -283,7 +285,7 @@ after going to Burned-Out Chapel while (Atticus_Payback is not resolved and Atti
 					say "Invalid choice. Type [link]1[end link] to go double-team Corpegh, [link]2[end link] to let Atticus fuck him, [link]3[end link] to caress and touch Atticus while he fucks, or [link]4[end link] to claim Corpegh yourself, without Atticus.";
 			if calcnumber is 1:
 				LineBreak;
-				project Figure of Atticus_hard_smile_arm_raised_icon;
+				project the Figure of Atticus_hard_smile_arm_raised_icon;
 				say "     Smiling at Atticus, you proclaim that messing with any member of your family carries the danger of having to deal with all of you afterwards. In a harsh tone, you tell the hellfire demon that he'll just have to service both of you. 'Is that the way it is? A little demon punk and his daddy to double-team me? Bring it on!' the demon replies, a fair bit of amusement in his voice even though he just lost a fight. But then, given that he's already fully healed up, you guess that there really isn't that much to violent confrontations these days. Just a little bit of unpleasantness, usually followed by hot and sweaty sex. Atticus is more than ready to do just that, and he goes to lean his bat against the wall, then drops an article of clothing with every stride back towards Corpegh. By the time he's standing in front of the male demon again, your son is bare-ass naked and sporting a full-on erection that proudly leads the way.";
 				say "     Leaning forward to slap the defeated demon lightly in the face with his erection, Atticus chuckles as the red-skinned man cranes his neck to catch his manhood between his lips. He pumps his hips a few times to grind Corpegh's nose into his pubes and feel the demon's tongue on his shaft, but then pulls back all of a sudden. 'I want your ass!' comes the demand of the young incubus, and he tugs on Corpegh's large horns to get him to move. 'Bossy little bitch, aren't you?!' the larger male grunts, then obeys and assumes a position on all fours. With a meaty smack, Atticus lays his shaft between the demon's buttocks, the fingers of his other hand playing around with the straps of Corpegh's leather jockstrap. 'You're the bitch apparently - wearing those free access undies. Or is that how you please your boss, eh?' 'Careful, boy! I'm nnnghhhHHH! Fuck, you little shit!' the demon's reply is interrupted by Atticus ramming into his ass all the way in one deep thrust, followed by grinding against the buttocks of the moaning male.";
 				WaitLineBreak;
@@ -320,7 +322,7 @@ after going to Burned-Out Chapel while (Atticus_Payback is not resolved and Atti
 				now Resolution of Atticus_Payback is 1; [Atticus and player shared Corpegh]
 			else if calcnumber is 2:
 				LineBreak;
-				project Figure of Atticus_hard_smile_arm_raised_icon;
+				project the Figure of Atticus_hard_smile_arm_raised_icon;
 				say "     Smiling at Atticus, you proclaim that you're just here to help him make right a deal that wasn't paid up. It's only proper that he takes a little bit of resitution and that Corpegh is all his to enjoy. In a harsh tone, you inform the hellfire demon that he can expect something like this any time he messes with a member of your family. 'Is that the way it is? A little demon punk needing daddy to get them a fuck? Fine then! Bring it on!' the demon replies, a fair bit of amusement in his voice even though he just lost a fight. But then, given that he's already fully healed up, you guess that there really isn't that much to violent confrontations these days. Just a little bit of unpleasantness, usually followed by hot and sweaty sex. Atticus is more than ready to do just that, and he goes to lean his bat against the wall, then drops an article of clothing with every stride back towards Corpegh. By the time he's standing in front of the male demon again, your son is bare-ass naked and sporting a full-on erection that proudly leads the way.";
 				say "     Counting on it that Atticus will need some time to savor his victory, you decide to turn your attention to the pile of looted gear that is filling one corner of the room and start sorting through it. You do your best to ignore the gasps, moans and slapping noises of Atticus balls against Corpegh's ass with each of his thrusts, instead contemplating how each article of clothing will look on your boy and if he'll like it. In the end, you arrive at having a few piles on the ground - rejects, maybies and stuff Atticus definitively should want. By the time you're mostly through, you hear orgasmic gasps from behind you and glance over your shoulder to see what's going on. Corpegh is lying on the ground now, panting in exhaustion and with a big tent in his leather jockstrap, which is dripping with cum. Meanwhile, Atticus is standing over him in all of his naked glory, looking very well satisfied with himself. He must just have pulled out a second ago.";
 				CreatureSexAftermath "Hellfire Demon" receives "AnalFuck" from "Atticus";
@@ -333,7 +335,7 @@ after going to Burned-Out Chapel while (Atticus_Payback is not resolved and Atti
 				now Resolution of Atticus_Payback is 2; [Atticus was given Corpegh to fuck, player didn't watch]
 			else if calcnumber is 3:
 				LineBreak;
-				project Figure of Atticus_hard_smile_arm_raised_icon;
+				project the Figure of Atticus_hard_smile_arm_raised_icon;
 				say "     Smiling at Atticus, you proclaim that you're just here to help him make right a deal that wasn't paid up. Stepping towards your son, you put your hand on the bulge in his pants and say that it's only proper that he takes a little bit of resitution and that Corpegh is all his to enjoy, but you'll be there with him if he wants to. He smiles in reply, throwing an arm around you to hug you close and planting a peck on your cheek. 'Thanks daddy, of course I want you with me!' Corpegh snorts at your exchange and says, 'Is that the way it is? A little demon punk needing daddy to get them a fuck? Fine then! Bring it on!' In a harsh tone, you reply to the hellfire demon that he can expect something like this any time he messes with a member of your family. The demon nods, a fair bit of amusement in his expression even though he just lost a fight. But then, given that he's already fully healed up, you guess that there really isn't that much to violent confrontations these days. Just a little bit of unpleasantness, usually followed by hot and sweaty sex.";
 				say "     Atticus is more than ready to do just that, especially with you there and by his side. He hands you his bat to lean against the while, stripping his clothes off in a little show for you while you do so. Soon, he's fully naked and comes to take your hand, and together you walk up to the male demon. Stepping behind Atticus, you slide your arms around his body and caress him a little, planting a kiss on the back of his neck and nibbling on his earlobe. The young man seems happy to just continue having you take care of him, but while you're certainly tempted to do so, you don't lose sight of the payback to be extracted from the third person in the room. Taking hold of his erection, you slap Corpegh in the face with Atticus's cock, prompting the red-skinned man to catch his manhood between his lips and start sucking. While you stroke over his chest and lightly pinch the incubus's nipples, he pumps his hips back and forth a few times to grind Corpegh's nose into his pubes and feel the demon's tongue on his shaft.";
 				WaitLineBreak;
@@ -352,7 +354,7 @@ after going to Burned-Out Chapel while (Atticus_Payback is not resolved and Atti
 				now Resolution of Atticus_Payback is 3; [Atticus was given Corpegh to fuck, player encouraged him and 'guided him in']
 			else if calcnumber is 4:
 				LineBreak;
-				project Figure of Atticus_jeans_frown_arms_crossed_icon;
+				project the Figure of Atticus_jeans_frown_arms_crossed_icon;
 				say "     Focusing on Atticus and giving him a serious look, you proclaim that you did most of the fighting, so you'll get to enjoy the hellfire demon, while he can go grab the stuff he wanted. Atticus looks at you as if you slapped him in the face, his joy at your victory evaporating in a second. He starts to open his mouth to reply, but Corpegh gets there first and comments in a snarky tone, 'Hah! Is your daddy not letting you have any, little demon punk? You wanna cry now?' Atticus snaps his lips shut after that, simply turning around to go look at the pile of loot filling one corner of the room. You're left standing over the defeated demon, who gives you an evil grin. Shrugging off the possibility that this may not have been the best of decisions, you ";
 				if player is male:
 					say "pull out your cock and slap Corpegh's face with it, then ram it into the demon's mouth as he tries to say something. He starts sucking on your schlong readily enough, feeling quite nice and tight around your erection and teasing its shaft with his tongue.";
@@ -371,7 +373,7 @@ after going to Burned-Out Chapel while (Atticus_Payback is not resolved and Atti
 			now Loyalty of Atticus is 4; [successfully gained new outfits for Atticus]
 			add "Well Dressed" to Traits of Atticus;
 		else if fightoutcome > 19 and fightoutcome < 30: [lost]
-			project Figure of Atticus_hard_neutral_arm_raised_icon;
+			project the Figure of Atticus_hard_neutral_arm_raised_icon;
 			say "     Stumbling back after his last blow, the only reason you don't collapse is that you catch yourself on the wall of the room, bracing against it to stand on your weak legs. You don't stay there long though, as the next thing you feel is Corpegh's clawed hand on your body, wrenching you forward and giving you a push to face-plant on the nearby motel bed. Groaning as you lie on a sheet that's slightly damp in one spot with not yet dried cum, you hear the hellfire demon walk after you, giving a mocking laugh. 'Not so tough after all, eh? Let's see how well you can scream when I spit you on my cock! [if player is not naked]Are you going to strip yourself, or do I have to cut that stuff off you, whore?!' Knowing it'll only get worse if you don't submit, you obey and strip down somewhat awkwardly thanks to your bruises. [else]Nice of you to come here naked and ready for a fuck! How convenient!' You just lay there and take his mocking, knowing it'll only get worse if you don't submit. [end if]";
 			say "     Chuckling darkly, the large demon takes hold of your leg and drags you to the edge of the bed, hefting his monstrous seventeen-inch cock in the hand of his now-healed other arm. 'Let's tear you a new one. Bitches like you don't deserve any lube!' he proclaims roughly as he looks down at you with a teeth-baring grin. A sudden shout of 'No! Wait, please!' draws both of your attention to the side, where a somewhat singed Atticus is standing, garbed in the remains of his clothing. He's got a pleading expression on his face, staring at you and the other demon with wide eyes. 'Don't hurt my dad, please!' 'Oh? That's a new one I haven't heard before from an incubus,' Corpegh replies amusedly, then grabs you by the neck and draws you up from the bed. Looking back and forth from your face to Atticus's, he laughs out loud. 'Yeah, you even look similar. So, what did you do? Knock up some demoness and instead of going for seconds or thirds, you adopt your sin-baby? Typical human overemotional crap!'";
 			WaitLineBreak;
@@ -381,7 +383,7 @@ after going to Burned-Out Chapel while (Atticus_Payback is not resolved and Atti
 			say "     You can't help but watch impotently as your demon son is fucked long and hard, with the hellfire demon railing him not holding back at all. His massive shaft stretches Atticus back door wide around its girth and half of the time the young man looks three months pregnant, with his stomach bulging outwards from the sheer size of the invader inside him. Thankfully, none of this seems to hurt the incubus all that much, and he even seems to be getting off from it, if the rock-hard and precum-dripping erection between his legs is any indication. Some time later, after you'd almost thought he forgot about you sitting between his legs, one of Corpegh's clawed hands reaches down to grab you by the back of your head, pressing you face-first against his large, swinging balls. They're warm and musky against your skin, another indignity that he can rub in your face - but there's another level to it beyond that, as you hear the demon's grunts of lust become more urgent by the moment, culminating in a victorious roar.";
 			say "     The wrinkled flesh of his balls twitches against your face as Corpegh's balls contract rhythmically, and you can hear him call out, 'Feel that? It's my infernal seed flooding this little bitch's hole. Lick my balls while I breed your son!' Obeying without delay, you lap at his heavy balls, feeling them twitch and pulse as blast after blast of his spunk fills Atticus's hole. You remain like that for several minutes, forced to serve the male that just violated your son until his orgasm has run its course. Then suddenly, the weight of his balls is lifted from your head as the large demon steps backwards, one arm around Atticus waist to keep him impaled on his cock and drag him along. With a broad grin on his face, Corpegh wraps his fingers around the incubus's shaft and jerks him, aiming right at your face as he pushes the young man over the edge. A thick splat of his seed hits you right between the eyes and you have to clench them closed as not to get any acutally in your eyes.";
 			WaitLineBreak;
-			project Figure of Atticus_jeans_smile_arm_raised_icon;
+			project the Figure of Atticus_jeans_smile_arm_raised_icon;
 			say "     Feeling more spurts of warm wetness cover your face, coupled with Atticus's moans, you're blind and helpless in the motel room reeking of sex by now. As the cumshots seem to ebb off eventually, the large demon drops Atticus right on top of you, followed by flinging your gear and equipment onto the bruised tangle of two people that creates. 'Well, that was fun - but now take your shit and leave. I'm a busy man and can't fuck around all day with the slut princess and his daddy!' Atticus helps out by wiping your face with the first piece of cloth that comes to hand, then the two of you snatch up all of your gear and clothes before you stumble outside of the motel room, both still naked, sweaty and somewhat sticky. The door's thrown shut behind you as soon as you're over the doorstep. You make the walk of shame past all of the whores and customers in front of the motel, finally stopping in a nearby side alley to put yourselves back in order as good as you can.";
 			say "     'Well, that was a bust,' Atticus says and blows out his breath after wiping off the cum running down the insides of his legs. He's barely said the words though before he gasps audibly, looking at you with concern in his eyes. 'Wait! I don't want you to misunderstand - I meant that he just was too strong for us, not that it's your fault or anything! I really like what you wanted to do daddy! Be there for me and help out. Even if we got our asses kicked!' The last sentence is said as a bit of a joke after he sees that you're not cross with him. 'So - how about we go to my place to rest, eh?' He doesn't really wait for a reply, instead just leading you back towards the chapel, only stopping when you're on the Boundary Street, but still a little bit distant. 'That's where I live,' Atticus says, pointing to the apartment building next door.";
 			WaitLineBreak;
@@ -396,13 +398,13 @@ after going to Burned-Out Chapel while (Atticus_Payback is not resolved and Atti
 			now Atticus is nowhere; [stashed in another dimension - not to return]
 	else if calcnumber is 2:
 		LineBreak;
-		project Figure of Atticus_jeans_neutral_arms_lowered_icon;
+		project the Figure of Atticus_jeans_neutral_arms_lowered_icon;
 		say "     Reaching out and placing a hand on the sex demon's shoulder, you give Atticus a little squeeze and tell him not to stay angry about this. After all, he's a handsome guy and doesn't need flashy clothing to impress. If he just wandered into the middle of a group of people without a stitch of clothing on him, they'd be speechless, and not just because of his shamelessness. 'You think so? Thanks daddy!' your son replies, his spirit lifting visibly at the encouraging words. And just because he is what he is, the next thing you hear is the sound of his zipper being undone, followed by Atticus kicking off is pants and flinging all other articles of clothing aside in short order. Standing in front of you completely naked, hands on his hips and proudly presenting his long schlong, he adds, 'Wanna show me you mean it?'";
 		say "     A pregnant silence stretches out between you for a few seconds, then he lets out a happy laugh and steps forward to hug you in a friendly way. 'You should have seen your face! Thanks dad, for being there for me.' He holds you in a tight embrace for a moment, his naked form plastered against your front, then traces the tip of his tongue along your earlobe before whispering, 'If you actually wanna do something, I'm game.' With that said, he draws back from you and collects his clothes, not without shaking his ass at you when he bends down to do so.";
 		now Loyalty of Atticus is 3; [player consoled him]
 	else if calcnumber is 3:
 		LineBreak;
-		project Figure of Atticus_jeans_frown_arms_crossed_icon;
+		project the Figure of Atticus_jeans_frown_arms_crossed_icon;
 		say "     Clearing your throat and shaking your head at his behavior, you tell Atticus that he shouldn't be such a baby about what happened. He got fucked over, so what?! Such things happen. The young demon's reaction reels back at your sharp words, almost as if you had struck him in the face. 'But I- he- HEY, you're supposed to be on MY side in this! Why are you being an asshole?' His frown from before is back in a flash, this time directed at you, quickly followed by him saying, 'I need some fresh air. Don't come after me.' And with that, he rushes outside, taking off into the air with a running start. You shrug as you see him go. He'll cool down eventually, though something tells you that you just lost a major amount of trust he had in you.";
 		now Atticus is nowhere; [stashed in another dimension - he'll be back later]
 		now Loyalty of Atticus is 100; [player scolded him - Atticus doesn't respect them anymore]
@@ -516,7 +518,7 @@ The scent of Atticus is "     Atticus smells nicely masculine, with just the sma
 to say AtticusDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP of Atticus: [HP of Atticus] <- DEBUG[line break]";
-	project Figure of Atticus_jeans_neutral_arms_lowered_icon;
+	project the Figure of Atticus_jeans_neutral_arms_lowered_icon;
 	say "     Atticus has the looks of an eighteen-year old young man with a toned swimmer's build. He has absolutely no hang-ups about showing it off either, strolling around naked or even hard with casual ease. His handsome face is farmed in unruly brunette hair, with a pair of small, sharp horns curving up from his forehead. Behind his back you can see muscular bat-like wings half-unfolded, as if ready to be laid around you or another partner to draw you in against him. The long and thin tail with a spaded tip completes the image of an attractive incubus.";
 	say "     As he notices your interest in him, the young incubus gives you an enticing smile and meets your gaze with his blue eyes, followed by a wink with that promises anything you might want or desire.";
 
@@ -525,18 +527,18 @@ an everyturn rule:
 		if Energy of Atticus is 0: [he's at the chapel/his place]
 			if TimekeepingVar is 1 or TimekeepingVar is -7: [midnight - leaves the chapel to scavenge]
 				if Player is in Burned-Out Chapel and Atticus is in Burned-Out Chapel:
-					project Figure of Atticus_jeans_neutral_arms_lowered_icon;
+					project the Figure of Atticus_jeans_neutral_arms_lowered_icon;
 					say "     After a quick wave and with the words, 'See you tomorrow,' Atticus leaves the building and takes off into the air with a running start and beats of his large wings.";
 				else if Player is in Boundary Street East and Atticus is in Burned-Out Chapel:
-					project Figure of Atticus_jeans_neutral_arms_lowered_icon;
+					project the Figure of Atticus_jeans_neutral_arms_lowered_icon;
 					say "     Coming out of the chapel, Atticus gives you a quick wave and says the words, 'See you tomorrow.' Then he takes off into the air with a running start and beats of his large wings.";
 				now Atticus is nowhere; [stashed in another dimension]
 			else if TimekeepingVar is 0 or TimekeepingVar is -8: [pre dawn - Atticus comes home]
 				if Player is in Atticus's Bedroom and Atticus is nowhere:
 					if Loyalty of Atticus < 99:
-						project Figure of Atticus_jeans_smile_arms_lowered_icon;
+						project the Figure of Atticus_jeans_smile_arms_lowered_icon;
 					else:
-						project Figure of Atticus_jeans_neutral_arms_lowered_icon;
+						project the Figure of Atticus_jeans_neutral_arms_lowered_icon;
 					say "     You hear the beating of large wings from outside, followed by Atticus landing on the fire escape. He enters the room through its window, [if Loyalty of Atticus < 99]smiling at you as he sees you're here. 'Hey dad!' he greets you, then sets down the bag of items he was carrying next to the bed and gives you a quick hug. [else]giving a nod of recognition as he sees you there. 'Oh hey, did you want anything?' he asks, half-listening to what you might reply as he puts down the bags he was carrying and stops to grab a snack. [end if][line break]";
 				else if Player is in Boundary Street East and Atticus is nowhere:
 					say "     You hear the beating of large wings above you and see Atticus landing on the top of the fire escape attached to the apartment building to the southeast. He quickly climbs through a window, vanishing inside.";
@@ -544,22 +546,22 @@ an everyturn rule:
 			else if TimekeepingVar is 7 or TimekeepingVar is -1: [early morning - Atticus goes to sleep]
 				if Player is in Atticus's Bedroom and Atticus is in Atticus's Bedroom:
 					if Loyalty of Atticus > 2 and Loyalty of Atticus < 99:
-						project Figure of Atticus_soft_smile_arms_lowered_icon;
+						project the Figure of Atticus_soft_smile_arms_lowered_icon;
 						say "     With a yawn, Atticus walks over to his bed, dropping items of clothing along the way. Soon, he's standing beside the double bed in all of his bare-assed glory, looking down at the black silk sheets, his tail waving in a lazy sway behind his back.";
 						say "[AtticusSleepChoices]";
 					else:
-						project Figure of Atticus_soft_neutral_arms_lowered_icon;
+						project the Figure of Atticus_soft_neutral_arms_lowered_icon;
 						say "     With a yawn, Atticus walks over to his bed, dropping items of clothing along the way. Soon, he's standing beside the double bed in all of his bare-assed glory, looking down at the black silk sheets, his tail waving in a lazy sway behind his back. Glancing over his shoulder, he says, 'See you tomorrow or so. You'll find your own way out, right?' Not waiting for a reply, the incubus lies down on the bed and curls up to sleep, dozing off in a few moments.";
 				now Sleeping of Atticus is true;
 			[else if TimekeepingVar is 6 or TimekeepingVar is -2:] [mid-morning - unused, Atticus sleeps in]
 			else if TimekeepingVar is 5 or TimekeepingVar is -3: [noon]
 				if Player is in Atticus's Bedroom and Atticus is in Atticus's Bedroom:
-					project Figure of Atticus_jeans_neutral_arms_lowered_icon;
+					project the Figure of Atticus_jeans_neutral_arms_lowered_icon;
 					say "     Waking up from his rest, Atticus cleans himself up a bit and gets dressed, then says, 'I'll be in the chapel to hang out. Wanna join me down there?' With a smile, he climbs out the window, then jumps off the fire escape, landing on the street by using his wings to soften the fall.";
 				else if Player is in Boundary Street East and Atticus is in Atticus's Bedroom:
 					say "     Atticus climbs through a window of the top floor of the apartment building to the southeast, then jumps off the fire escape. He lands on the street by using his wings to soften the fall, then strolls into the chapel at the end of the road.";
 				else if Player is in Burned-Out Chapel and Atticus is in Atticus's Bedroom:
-					project Figure of Atticus_jeans_neutral_arms_lowered_icon;
+					project the Figure of Atticus_jeans_neutral_arms_lowered_icon;
 					say "     Atticus comes strolling in, giving you a wave and the greeting of, 'Hey dad!'";
 				move Atticus to Burned-Out Chapel;
 				now Sleeping of Atticus is false;
@@ -674,11 +676,11 @@ to say AtticusTalkMenu:
 	clear the screen and hyperlink list;
 
 to say AtticusTalk1:
-	project Figure of Atticus_jeans_neutral_arms_lowered_icon;
+	project the Figure of Atticus_jeans_neutral_arms_lowered_icon;
 	say "     Atticus chuckles as you ask him about himself and he starts to casually play with his nipples as he thinks for a second, then replies, 'Oh, it's just the usual story. You bone mom in a bout of amazing sex, knock her up and a few hours later - boom, here I am. The world's my oyster, and I wanna fuck all of it! [one of]That includes actual oysters actually, you see, there were those freaky girls out in the surf at the coast, and I gave it to them good! Might have some grand-kids out there too now, if you know what I mean.' [or]Women, men, other things - where's the difference? I can tell you, there was this one pretty boy orc who just had the most amazing ass that I just couldn't get enough of. He had a proper little bump in his stomach by the time his leather daddy came back to check on him and I had to beat a hasty retreat out a window.' [or]Women, men, other things - where's the difference? I mean, canine bitches clearly have that nice big tail as a handhold to hold on to while you fuck [']em, right? So, so convenient...' [at random]He regales you with a shockingly detailed account of his latest conquests, clearly enjoying himself quite a bit as he lays it out for you.";
 
 to say AtticusTalk2: [inviting him to the bunker]
-	project Figure of Atticus_jeans_smile_arms_lowered_icon;
+	project the Figure of Atticus_jeans_smile_arms_lowered_icon;
 	say "     Clearing your throat and stepping up to the young incubus, you pull Atticus into a hug. As he lays his arms around you in turn and lightly grinds his crotch against forward, you ask him if he wants to join you in the bunker beneath the library. You've got a warm bed there that really is big enough for two and he could share it. Pulling back to look into your eyes, Atticus shows a beaming smile, followed by planting a kiss on your cheek. 'Yes, yes, yes! I wanna stay with you daddy!' he replies happily and embraces you once more, hands wandering all over your body. You enjoy a few moments of closeness with the sexy incubus, before he says, 'I gotta pack for the move!' and hurries off.";
 	now Energy of Atticus is 1;
 	now Atticus is in Maintenance Storeroom;
@@ -701,24 +703,24 @@ to say AtticusTalk3: [sending him back to his own place]
 			say "Invalid choice. Type [link]1[end link] to go gently send Atticus back, [link]2[end link] to let him stay, [link]3[end link] to tell him you don't need him anymore, or [link]4[end link] to just throw him out.";
 	if calcnumber is 1:
 		LineBreak;
-		project Figure of Atticus_jeans_neutral_arms_lowered_icon;
+		project the Figure of Atticus_jeans_neutral_arms_lowered_icon;
 		say "     Stroking over Atticus's hair and then running your hand down to caress his cheek, you explain in a gentle tone that this isn't anyone's fault, least of all his. You don't want to get rid of him, and this doesn't mean that he's not still your son and close to your heart. Still, it would be better for everyone if he stayed at his own place for right now. Pulling him into an embrace, you just hold Atticus while he sobs a little, until he eventually cools down again. With your arm around his shoulders, you walk the incubus over to where most of his things are and help him pack. 'I - I hope you'll let me come back soon, daddy!' he says in a sad tone, then leaves hesitantly, looking back at you and giving a wave before he steps through the door and is gone.";
 		now Energy of Atticus is 0; [in the chapel and moving around there]
 		now Atticus is in Burned-Out Chapel;
 	else if calcnumber is 2:
 		LineBreak;
-		project Figure of Atticus_jeans_neutral_arms_lowered_icon;
+		project the Figure of Atticus_jeans_neutral_arms_lowered_icon;
 		say "     Stroking over Atticus's hair and then running your hand down to caress his cheek, you explain that it just was a stupid idea you had. Seeing how much it means to him to be here with you and realizing that you don't want to see him go after all, you just changed your mind. 'T-thanks daddy!' Atticus says, smiling again even though he's still sniffling. Then he gives you a very tight hug, almost as if to make sure that you're actually there. You stay like that for a little while, just holding him tight, giving Atticus the time he needs to calm down.";
 	else if calcnumber is 3:
 		LineBreak;
-		project Figure of Atticus_jeans_neutral_arms_crossed_icon;
+		project the Figure of Atticus_jeans_neutral_arms_crossed_icon;
 		say "     Shrugging, you tell him that you had enough of him in the time that he did stay over. You don't really need him right now, so he should get back to his own place for mow. He pulls back from you, eyes searching yours for any indication that you're joking or anything else to explain this. Then he sniffs, forcing his expression into a stoic mask. 'I... see. So this was all just about getting a bedwarmer for you?! I'll go back to the chapel then. You know where to find me if you want a fuck.' With that said, he goes to methodically pack everything he owns, his expression never wavering. He's thorough about it, as if he expects never to return. Soon after, the young man leaves, laden with his stuff.";
 		now Loyalty of Atticus is 100; [he sees the player as nothing but a sex partner now]
 		now Energy of Atticus is 0; [in the chapel and moving around there]
 		now Atticus is in Burned-Out Chapel;
 	else if calcnumber is 4:
 		LineBreak;
-		project Figure of Atticus_jeans_frown_arms_crossed_icon;
+		project the Figure of Atticus_jeans_frown_arms_crossed_icon;
 		say "     Not seeing the need to give any explanation at all, you just harshly tell the young man that he needs to get out. He reels back from you, reacting almost as if you had struck him in the face. 'But, but - this isn't how it's supposed to go! You asshole! I - I HATE YOU!' With tears now openly streaming down your son's face, he runs out of the room, barely even stopping to gather his things before he is gone. [bold type]You don't think you'll see him again.[roman type][line break]";
 		now Loyalty of Atticus is 101; [he left, never to return]
 		now Energy of Atticus is 100; [he left]
@@ -756,9 +758,9 @@ instead of fucking the Atticus:
 
 to say AtticusSexMenu:
 	if Loyalty of Atticus < 100:
-		project Figure of Atticus_hard_smile_arms_lowered_icon;
+		project the Figure of Atticus_hard_smile_arms_lowered_icon;
 	else:
-		project Figure of Atticus_hard_neutral_arm_raised_icon;
+		project the Figure of Atticus_hard_neutral_arm_raised_icon;
 	say "     [bold type]What exactly do you plan on doing with Atticus?[roman type][line break]";
 	LineBreak;
 	now sextablerun is 0;

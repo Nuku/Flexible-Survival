@@ -91,6 +91,10 @@ An everyturn rule:
 			say "     A satisfied grin on her face, Lilith takes the child and sets him against her breast, feeding him. Before your eyes, the little incubus grows in leaps and bounds, rapidly passing the stages of toddler and little child, soon sitting on Lilith's lap instead of being held by her. Getting to his early teens moments later, your son starts putting both hands on his demon mother's breasts, caressing them as he switches off between them, licking over her nipples and drinking more milk.";
 			say "     The boy goes through puberty rapidly, his body continuing to grow until he becomes a stunningly handsome eighteen year old, which is where the progress stabilizes and ebbs out. Now no longer drinking from her, he just nuzzles and strokes Lilith's breasts, his cock rock-hard. Then the succubus reaches down and puts a hand on his manhood, taking hold of it and starts jerking him off. Your son gives you a broad grin as his mother continues to stroke him, and soon blows an impressive load all over himself, her and the bed. Scooping up a bit of cum with her fingers, Lilith licks it off them and tells him 'Leave us, for now.' Your handsome and bare-ass naked offspring saunters out of the room, not without giving you a suggestive wink.";
 			now LilithPregnancy is 0;
+			if LilithKidCounter is 1:
+				project the Figure of Atticus_soft_neutral_arms_lowered_icon;
+			else:
+				project the Figure of Incubus_naked_icon;
 		else:
 			say "You have a strange feeling in your body, as if you somehow just know that one of your offspring has entered this world. Maybe you should back to the Burned-Out Chapel and check with Lilith.";
 			now LilithPregnancy is 4;     [so she can tell the player about their kid in the next meeting]
@@ -548,7 +552,7 @@ instead of going northeast from Burned-Out Chapel while HP of Lilith > 0: [not t
 	]
 	else if LilithKidCounter > 0 and a random chance of 1 in 3 succeeds:[Lilith is out when the player comes, though her firstborn Incubus son is there...]
 		setmonster "Incubus";
-		project the Figure of Incubus_naked_icon;
+		project the Figure of Atticus_hard_neutral_arm_raised_icon;
 		say "     As you walk into the sacristy, you're treated with the sight of a young and handsome incubus waiting for you on the bed. He's lying half on his side, propping up his upper body with an elbow on the bed, grinning as he gives you a suggestive wink. Posing like that, he's showing off all of his naked glory, and you can't stop your eyes from wandering over his slender but beautifully muscled body. Bathed in the light of the many candles, his tan skin shines, dark and perfect. Your gaze catches on his shapely and erect manhood, only moving on after a moment of reluctance, then comes to rest on his face - his very familiar looking face, with a close resemblance to your own.";
 		say "     'Welcome,' he says, in a honeyed voice that makes you all tingly inside. '[if PlayerMet of Atticus is false]I'm Atticus. [end if]Mother isn't here right now, as you can see.' His free arm moves to sensuously stroke his chest. 'It'll be a while till she's back. How about we... have some fun in the meantime?'";
 		LineBreak;

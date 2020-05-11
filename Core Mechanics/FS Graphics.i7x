@@ -639,7 +639,6 @@ to project (x - a figure name):
 				break;]
 
 
-
 Table of game art
 title	icon(figure name)	artist	backgroundcolor	formatrule
 "Abcdefghij"	Figure of pixel	""	g-black	"normal" [blocker for first position]
@@ -663,6 +662,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Amazonian"	Figure of Amazon_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Amy"	Figure of Amy_icon	"Sususmiles"	g-white	"normal"
 "Amy_face"	Figure of Amy_face_icon	"Sususmiles"	g-white	"normal"
+"Anastasia"	Figure of Anastasia_icon	"SandySchreiber"	g-white	"normal"
 "Andre"	Figure of Andre_icon	"Wemd"	g-black	"normal"
 "Andre_face"	Figure of Andre_face_icon	"Wemd"	g-white	"normal"
 "Andrew"	Figure of Andrew_icon	"Rukis"	g-black	"normal"
@@ -672,7 +672,18 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Anthony_face"	Figure of Anthony_face_icon	"Laylo"	g-black	"normal"
 "Anthro Shaft Beast"	Figure of AnthroShaftBeast_icon	"TwilightMaster"	g-white	"normal"
 "Artemis"	Figure of Artemis_icon	"FaroreNightclaw"	g-white	"normal"
-"Anastasia"	Figure of Anastasia_icon	"SandySchreiber"	g-white	"normal"
+"Atticus_hard_smile_arms_lowered"	Figure of Atticus_hard_smile_arms_lowered_icon	"Lyttathebug"	g-black	"normal"
+"Atticus_hard_smile_arm_raised"	Figure of Atticus_hard_smile_arm_raised_icon	"Lyttathebug"	g-black	"normal"
+"Atticus_hard_neutral_arm_raised"	Figure of Atticus_hard_neutral_arm_raised_icon	"Lyttathebug"	g-black	"normal"
+"Atticus_soft_neutral_arm_raised"	Figure of Atticus_soft_neutral_arm_raised_icon	"Lyttathebug"	g-black	"normal"
+"Atticus_soft_smile_arms_lowered"	Figure of Atticus_soft_smile_arms_lowered_icon	"Lyttathebug"	g-black	"normal"
+"Atticus_soft_neutral_arms_lowered"	Figure of Atticus_soft_neutral_arms_lowered_icon	"Lyttathebug"	g-black	"normal"
+"Atticus_soft_frown_arms_crossed"	Figure of Atticus_soft_frown_arms_crossed_icon	"Lyttathebug"	g-black	"normal"
+"Atticus_jeans_neutral_arms_lowered"	Figure of Atticus_jeans_neutral_arms_lowered_icon	"Lyttathebug"	g-black	"normal"
+"Atticus_jeans_neutral_arms_crossed"	Figure of Atticus_jeans_neutral_arms_crossed_icon	"Lyttathebug"	g-black	"normal"
+"Atticus_jeans_smile_arms_lowered"	Figure of Atticus_jeans_smile_arms_lowered_icon	"Lyttathebug"	g-black	"normal"
+"Atticus_jeans_smile_arm_raised"	Figure of Atticus_jeans_smile_arm_raised_icon	"Lyttathebug"	g-black	"normal"
+"Atticus_jeans_frown_arms_crossed"	Figure of Atticus_jeans_frown_arms_crossed_icon	"Lyttathebug"	g-black	"normal"
 "Aurora_clothed"	Figure of Aurora_clothed_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Beach Overlook"	Figure of Beach_Overlook_icon	"Nokturnalkittie"	g-black	"inline_only"
 "Brown Bear Female"	Figure of Bear_icon	"Anymouse1968"	g-white	"normal"
@@ -1024,6 +1035,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Thought Eater"	Figure of ThoughtEater_icon	"Rastear"	g-black	"normal"
 "Malayan Tiger Male"	Figure of SgtMarks_icon	"Anyare"	g-white	"normal"
 "Tiger Shark Male"	Figure of TSW_icon	"Zealot"	g-white	"normal"
+"Tigertaur Hard"	Figure of Tigertaur_hard_icon	"Vashaa"	g-white	"normal"
+"Tigertaur Soft"	Figure of Tigertaur_soft_icon	"Vashaa"	g-white	"normal"
 "Timothy"	Figure of Timothy_icon	"Waxraven/WXRVN"	g-white	"normal"
 "TSW_headshot"	Figure of TSW_headshot_icon	"Zealot"	g-black	"normal"
 "TSW_naked"	Figure of TSW_naked_icon	"Zealot"	g-white	"normal"
@@ -1259,6 +1272,7 @@ carry out artistcredits:
 	say "     Anthony (design, naked) by FsMaverick @ http://www.furaffinity.net/user/fsmaverick/[line break]";
 	say "     Artemis by FaroreNightclaw @ furaffinity.net[line break]";
 	say "     Anastasia by SandySchreiber @ furaffinity.net[line break]";
+	say "     Atticus by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
 	say "     Aurora by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Blanche (color) by The_Negative @ furaffinity.net[line break]";
 	say "     Blanche (lineart) by Xenotropos @ furaffinity.net[line break]";
