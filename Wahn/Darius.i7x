@@ -531,7 +531,7 @@ to say DariusStreetBJ:
 			-- 7: [street animal]
 				say "Darius letting out a bark and a chuckle before he goes back to dick-slapping your face again. 'Just a street [one of]dog[or]cat[at random]. A regular one, so no need to get your panties in a twist,' the dalmatian explains. You stay in your submissive position for a while, giving Darius all the time he wants to savor you being covered by his cum, until the drug dealer eventually puts his schlong away and leaves you to you clean yourself up.";
 	infect "Dalmatian Bitch";
-	now lastfuck of Darius is turns;
+	NPCSexAftermath Player receives "OralCock" from Darius;
 
 to say DariusSex1: [oral]
 	if Player is female: [female + herm]
@@ -555,7 +555,7 @@ to say DariusSex1: [oral]
 		say "     Your own choking noises around the thick shaft as it throbs with more blasts of cum, as well as your hands that grip his thighs in painful intensity, are barely enough to reach the horny canine in the grip of his orgasm. Looking up with pleading eyes as you struggle, you see Darius turn his head down and look at you, his expression of annoyance quickly giving way to one of shocked urgency as he barks out, 'Oh, fuck!' With that, he shoves your head away from his crotch with both hands, and after a second of feeling your lips stretch painfully wide, you're off his prick and sucking in big gulps of air while Darius's erection whips up to smack his abs, spurting out more streaks of cum to shower him, you and the immediate surroundings in white splatters.";
 		say "     Blinking away the strobing stars that lack of oxygen was beginning to give you as you limply hang in the Dalmatian's grasp, the next thing you consciously hear is his amused chuckling. As you manage focus on the drug dealer, he is looking at you with a wide grin, then says, 'Dayum! That was one great load! Got a nice fuckhole, faggot! So much that I got a bit carried away, hah. Whoops, I guess.' Seems like that's the only hint of apology for being almost choked by his prick you'll get, as the next thing that Darius does is wipe off what cum landed on him and feeding it to you, pushing his goop-covered fingers into your mouth so you can suck it all off.";
 	infect "Dalmatian Bitch";
-	now lastfuck of Darius is turns;
+	NPCSexAftermath Player receives "OralCock" from Darius;
 
 to say DariusSex2: [ask to be fucked]
 	SetMonsterRandomDalOffspring;
@@ -574,7 +574,7 @@ to say DariusSex2: [ask to be fucked]
 			say "'Too bad you already have some buns in the oven, babe. I'd really love to add a few pups to the count. Be sure to come back to me when it's time to start a new litter!' You nod distractedly at him, more focused right now on the fact that you yourself haven't yet gotten off yet. Tied to the large canine as you are, with the knot and all, Darius doesn't really have a choice of wandering off now that he's done, but it still takes some pointed hints to remind him that you want to orgasm too.";
 		else:
 			say "'Let's hope it takes, babe. I wanna see you swollen with my pups! To be really sure, you'll just have to come back fore more! Gonna put a litter in you for sure!' You nod distractedly at him, more focused right now on the fact that you yourself haven't yet gotten off yet. Tied to the large canine as you are, with the knot and all, Darius doesn't really have a choice of wandering off now that he's done, but it still takes some pointed hints to remind him that you want to orgasm too.";
-		say "[fimpregchance]";
+		NPCSexAftermath Player receives "PussyFuck" from Darius;
 		if Player is male: [herms]
 			say "     'Oh. Yeah...' he murmurs somewhat sheepishly, then moves his hands to begin stimulating your clit, switching up between it and pinching your nipples but completely ignoring the erect cock of your own shaft. The amazing time you had while getting fucked, and bred, means that he doesn't have all that much work to push you the final distance to where you want to go, and soon you can feel yourself getting quite close. 'I don't mind a girl with some extra, but you better not get any cock-snot on me!' the dalmatian warns you and waits for you to grasp your cock and aim it to the side before he goes on to rub your pleasure-button with his thumb. Moments later, you feel the wave of your own climax braking over you and call out in pleasure, squirting femcum to trickle down into his crotch-fur and splattering the couch next to Darius with your own cum.";
 		else:
@@ -598,8 +598,8 @@ to say DariusSex2: [ask to be fucked]
 			WaitLineBreak;
 			say "     Your cock throbs hard as it erupts with cum without even being touched. With your seed pulsing onto the carpet and soaking into it, you can't help but wonder about the other stains on what you've had your face pushed against this whole time. Then the thought is washed away by a fresh throb of Darius's cock against your prostate, making you all tingly as you ride out your own orgasm together with his. The grunting canine grips your shoulder tightly as he falls forward in the grasp of his orgasm, panting with each further shot of creamy seed that paints your innards white. When Darius's orgasm eventually winds down, the dalmatian looks down at you and comments, 'Damn, what a mess you made fag. Also, I feel as straight as ever, told you that you couldn't get to me.'";
 			say "     With a grunt, he pulls his shaft out of your freshly bred ass, accompanied by a slurping noise and a small gush of cum oozing out to trickle down your crack. Chuckling at the sight of your sweaty, cum-splattered body, Darius stands up and takes a few steps to the side to pick up his jeans. As he shakes them out and prepares to get dressed, he throws you a short glance and adds, 'Hey, you should wipe yourself off, or rub it in, or whatever you freaks do. Can't have a filthy man-slut stretched out in the middle of my place. Got a rep to maintain, ya see?' With that said, he looks away, not really interested in your naked form now that he's gotten his rocks off.";
+			NPCSexAftermath Player receives "AssFuck" from Darius;
 	infect "Dalmatian Bitch";
-	now lastfuck of Darius is turns;
 
 to say DariusButtJobIntro:
 	say "     As you step up to the large canine and ask him to grind against your ass again, Darius lets out a hearty chuckle. 'Liked it before, eh fag? Wanting a big, strong man to use you as a toy. What a fucking man-whore you are!' The tone of his voice makes it clear to you that the large dalmatian is winding himself up, smugly reveling in his dominance, and you can see the bulge of his jeans grow as the canine's cock starts to push out of its sheath. Playing into his power-fantasy, you act suitably deferential, agreeing with his insults and begging to be taken by Darius. You even turn around and wiggle your rear at him, offering the crack of your ass and stressing that it'll be kinda similar to a titjob. Raising one eyebrow and giving you an amused look, Darius replies, 'Yo fuckhole, you really are desperate to feel a real man against your body, ain't that right? Fine, I'll fuck your whiny ass! You better be clean down there, or we'll have some words.' Eager to get it on with the dominant dog, you [SelfStripCrotch], then demonstratively spread your cheeks for Darius.";
@@ -701,6 +701,7 @@ to say BlissedDariusSex1:
 	WaitLineBreak;
 	say "     Pulling off the slowly softening canine cock, you smack your lips and lick off any last dribs of cum from his dickhead, then gently lay his dick onto his abs. Tugging the jeans back into position, you raise their zipper at least as far as it was before, then stand up, leaving the dalmatian passed out on his couch and none the wiser. In all likelihood, he'll not remember a thing about what just happened here.";
 	PlayerEat 15;
+	NPCSexAftermath Player receives "OralCock" from Darius;
 
 to say BlissedDariusSex2:
 	say "...";
@@ -744,6 +745,6 @@ to say BlissedDariusSex5:
 		say "     Looking down at it, you see his pucker squeeze tight, looking pretty much as it did before you started, except for the fact that a dollop of cum is pushed out by the contraction. Sighing at the guaranteed explosion of outrage should Darius ever realize what you did today, you stroll over towards the kitchen and snatch a roll of paper towels up, then return to your unconscious play-toy to clean him up. Wiping over his crack with a few of the absorbent sheets, you dab the cum off him, then slip a finger inside his hole. Going knuckle-deep several times and wiping off only small dabs of cum, you start thinking that there just might be something to the theory you thought up before. Maybe it is true that you shot so deep in his amazingly tight hole that it won't leak out. Or Darius is just a born'n bred cumdump of course.";
 		WaitLineBreak;
 		say "     With a grin at the easy cleanup, you bunch up all the paper towels to discard them well away from Darius's apartment, then get to tugging and sliding his jeans back into place. It's fairly exhausting, especially after just having orgasmed, but you manage to get him mostly dressed again and stretched out on the sofa, lying on his back. All of your cleanup tasks now dealt with, you get dressed and take up your gear once more.";
-
+	NPCSexAftermath Darius receives "AssFuck" from Player;
 
 Darius ends here.

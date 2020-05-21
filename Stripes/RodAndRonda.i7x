@@ -15,6 +15,7 @@ Rod Mallrat is in Mall FoodCourt.
 The conversation of Rod Mallrat is { "empty" };
 
 to say roddesc:
+	project Figure of Rod_icon;
 	if Rod is in Mall FoodCourt:
 		say "     Rod is a tall handsome figure of a man, if you ignore the fact that he's half rat[if Ronda is not in Mall Atrium]. He's looking a little disheveled of late[end if]. A long narrow snout has a twitching wet nose, and a long naked pink tail flickers behind him. He wears clothes that look like they belong in a Hot Topic, and he is usually just chilling out, propped up against something and looking to be in no great hurry at all.";
 	else:
@@ -23,6 +24,7 @@ to say roddesc:
 the scent of Rod is "[if HP of Ronda is not 100]Rod smells of rats and his mall home[else]Rod smells of slutty rats and sex. Lots of sex[end if].".
 
 instead of conversing Rod Mallrat:
+	project Figure of Rod_icon;
 	if tmapfound is 1:		[***needs Slut Rat version?]
 		say "'Oh hey that scratching looks kinda familiar!' Rod says when you show him the map, snatching it out of your hands he looks at it from several angles, before heading off to the north. 'I'll be right back, dude. I wanna show this to the others!' The well-dressed mall rat calls back over his shoulder. You spend some time wandering around the food court poking into places for a bit before Rod returns, your original message and map with him, and another piece of paper as well. 'Hey sorry about the delay, took a bunch of us to puzzle this stuff out,' he says as he hands you the two pieces of paper. 'Turns out that's some kinda map as ya figured, found a map store here in the mall and managed to match it up to the coast here for ya, leads to some island that ain't too far away actually. No clue what's on the island though, but the scratchings on the front part are definitely a warning about pirates[if level of Player < 7]! You'd best toughen yourself up before trying to find a way over there[else]! Best be careful[end if].' Rod says with a shrug, then grins. 'Turns out one of our guys left and ran into some sea rats out there somewhere, too. Some of the other mall rats are thinking about hitting the beach sometime to find [']em. Not me though, but hey whatever you're doing, it sounds kinda exciting. Let us know how it all turns out, OK? And if ya see any sea rats, say hi for us,' Rod finishes, before he goes back to his being cool and hanging around the food court. You look down at your original map, and the translated map with a small speck of land not far off the coast circled - with this you might be able to find the pirates! And maybe some treasure too!";
 		increase tmapfound by 1;
@@ -127,10 +129,13 @@ a postimport rule: [bugfixing rules for players that import savegames]
 
 to say rondadesc:
 	if HP of Ronda is 0:
+		project Figure of Ronda_icon;
 		say "You have no idea if she was shapely before her infection, but she is now, with wide hips, narrow waist, and the latest of mall rat fashions. She wears a bright button that declares, 'I am a taken girl.' Aww. Her naked pink tail flickers with an unending energy as she looks about with active interest. Her lips are stained a deep red and her claws are all manicured and covered in sparkling motes. She takes care of herself, clearly. Even her white and spotted fur is glossy and healthy looking.";
 	else if HP of Ronda is 10:
+		project Figure of Ronda_icon;
 		say "Ronda is mostly back to her old self, outwardly looking much the same, if perhaps a few inches taller. She has wide hips, a narrow waist and a good-sized bust, all covered in the latest of mall rat fashions. She wears a bright button that says 'Large and in charge!' Hmmm. Her naked, pink tail flickers with an unending energy as she looks about with active interest. Her lips are stained a deep red and her claws are all manicured and covered in sparkling motes. She takes care of herself, clearly. Even her white and spotted fur is glossy and healthy looking. If anything, she seems even sexier than before her disappearance. She certainly seems more popular, with a gaggle of giggling girls around her at all times as she [one of]talks about fashion[or]talks about boys[or]talks about her exciting adventure under the mall[or]talks about music[or]gossips with them[at random].";
 	else if HP of Ronda is 100:
+		project Figure of RondaSR_icon;
 		say "Ronda is a slut rat now, with a sexy body, dark fur and a horny disposition. She wears a black leather outfit like the other slut rats and carries herself with confidence, being one of the earliest and most dominant rats in the group. And her new fucktoy, Rod, has made her even more popular, with her other slut rat sisters lavishing attention upon her to be allowed an opportunity to stuff her one-time boyfriend. Knowing to look for it, you can spot her heart-shaped marking on her thigh, though it's changed from red to a deep black, even darker than the fur around it. She may retain a few traces of her old personality thanks to having Rod there, but she is thoroughly a horny slut rat now.";
 	else:
 		say "ERROR-Ronda-[HP of Ronda]L: You should not be able to converse with Ronda at this point.";
@@ -139,16 +144,20 @@ the scent of Ronda is "[if HP of Ronda is not 100]Ronda smells of cheap perfume,
 
 instead of conversing Ronda Mallrat:
 	if HP of Ronda is not 100 and hospquest is 8 and nerminepackage > 0 and rondahosp is 0:
+		project Figure of Ronda_icon;
 		say "     'You asking about those macho hairball rejects from Shock Therapy? Suzie and Anna were talking to them after they rolled in here like they owned the place. Just a little playful flirting to tease their boys. No harm in it. But the kitties started getting fresh. They offered them a ride in their swanky helicopter, which was tempting, but that'd mean leaving the mall, so the girls said [']No way['].'";
 		say "     'Well, those kitty-litter heads didn't like that and started to get pushy about it. By that point, their boyfriends had had enough and rallied the troops to deal with them. That slutty vixen came running out of the store and the dude on her radio was squawking to know what was happening. We kicked the lot of them out. They came poking back once or twice, but they're not allowed to shop here anymore. We told Bruno, he's security, on them and that crazy wolverine and a few of the boys sent them packing.'";
 		now rondahosp is 1;
 	else if HP of Ronda is 0:
+		project Figure of Ronda_icon;
 		say "[one of]'Hey there, sugar, you just call me Ronda.'[or]'You meet Rod? He's my boy. You be nice to him, or I will be very... upset.'[or]'Those clothes are out of date, hon. You should update your wardrobe.'[or]'Being a mall rat is way better than being a human, no offense or anything to humans.'[or]'We can find anything we need here in the mall; it is our Eden.'[at random]";
 	else if HP of Ronda > 0 and HP of Ronda < 10:
 		say "ERROR-Ronda-[HP of Ronda]T: You should not be able to converse with Ronda at this point.";
 	else if HP of Ronda is 10:
+		project Figure of Ronda_icon;
 		say "[one of]'Those clothes are out of date, hon. You should update your wardrobe.'[or]'Being a mall rat is way better than being a human, no offense or anything to humans.'[or]'We can find anything we need here in the mall; it is our Eden.'[or]'Thanks again for the assist,' she says.[or]'Me and the girls are getting along really well since I got back. [']Really['] well,' she says with a wink and a grin.[or][if HP of Lucy is 0]'Have you met Lucy?' she asks, hugging one of the rat girls nearby. 'We've become good friends since I got back.' Lucy smiles and discreetly runs her paw over Ronda's lap[else]'I hope you and Lucy are getting along well. And don't worry, I'll keep an eye on her while you're away,' she says with a wink[end if].[or]'Rod's such a good boy. Knows his place.'[at random]";
 	else if HP of Ronda is 100:
+		project Figure of RondaSR_icon;
 		say "[one of]'I feel so much better now that I have my sweet Rod to play with.'[or]'Feel free to play with Rod whenever I'm not using her.'[or]'I love living here with my slutty Rob and all my sexy friends. This is paradise.'[or]'Thanks again for your help with Rod. Having her here makes everything so much better.'[or]'Rod's such a good slut. Knows her place.'[at random]";
 
 the fuckscene of Ronda Mallrat is "[sexwithRonda]".
@@ -156,10 +165,13 @@ the fuckscene of Ronda Mallrat is "[sexwithRonda]".
 to say sexwithRonda:
 	setmonster "Slut Rat";
 	if HP of Ronda is 0:
+		project Figure of Ronda_icon;
 		say "'Hey now, I ain't no floozy rat like some. I've already got me a sexy guy wrapped around my finger. Why would I need you?' she says, making the other girls nearby giggle.";
 	else if HP of Ronda is 10:
+		project Figure of Ronda_icon;
 		say "'Mmmm... that sounds pretty nice, but I get plenty of action. Don't I girls?' she says, eliciting giggles from the other nearby rat girls.";
 	else if HP of Ronda is 100:
+		project Figure of RondaSR_icon;
 		if lastfuck of Ronda - turns < 6:
 			say "'I was thinking of having another go at my sexy little fucktoy soon,' she purrs as she looks over at Rod flashing her ass at her. 'Maybe a little later.'";
 		else:

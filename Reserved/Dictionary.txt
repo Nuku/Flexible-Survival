@@ -1027,7 +1027,6 @@
 |Stripes|Hospital|mattcollection|value|
 |Stripes|Hospital|hospbattlelost|value|
 |Stripes|Hospital|hospfight|value|
-|Stripes|Hospital|fightstatus|value|
 |Stripes|Hospital|altsealedentrance|value|
 |Stripes|Hospital|nesteddino|value|
 |Stripes|Hospital|dinonest|value|
@@ -2246,13 +2245,13 @@
 |Agentlemancalledb|Jaguar Warrior|Feline Relief|situation|
 |Agentlemancalledb|Jaguar Warrior|hoodequipped|value|
 |Agentlemancalledb|Jaguar Warrior|TehuantlStatus|value|
-|Agentlemancalledb|Jaguar Warrior|TehuantlTimer|value|
+|Agentlemancalledb|Jaguar Warrior|Energy of Tehuantl|value|
 |Agentlemancalledb|Jaguar Warrior|TehuantlSnowStatus|value|
 |Wahn|Catgirl|20140908213124/8967:Mon 8 September 2014 21:31|indexing|
-|Wahn|Catgirl|CatgirlFucked|value|
-|Wahn|Catgirl|LastCatgirlFuck|value|
-|Wahn|Catgirl|FionaFangStatus|value|
-|Wahn|Catgirl|FionaCarlStatus|value|
+|Wahn|Catgirl|HP of Fiona|value|
+|Wahn|Catgirl|LastFuck of Fiona|value|
+|Wahn|Catgirl|Dexterity of Fiona|value|
+|Wahn|Catgirl|Strength of Fiona|value|
 |Lago Moro|Male Peacock|20140908213124/2500:Mon 8 September 2014 21:31|indexing|
 |Lago Moro|Male Peacock|peacock feather|Grab Object|
 |Lago Moro|Male Peacock|peacockcontrol|value|

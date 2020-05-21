@@ -14,7 +14,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "libido pill"	"A sex-enhancement pill for getting you (or someone else) horny."	0	libido pill
 
-libido pill is a grab object. It is temporary. It is a part of the player.
+libido pill is a grab object. It is temporary.
 
 the usedesc of libido pill is "[libido pill use]".
 

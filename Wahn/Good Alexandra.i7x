@@ -678,6 +678,7 @@ to say goodalexandrasex00:
 			WaitLineBreak;
 			say "     You continue thrusting through your orgasm, barely pausing after your climax as she continues to urge you on. Pulling back momentarily, you adjust positions so she's on her side with a leg raised and you're standing upright. This gives you a fine view of her lovely, canine-influenced body. Her coat is glossy with sweat and she's panting from her doggy muzzle. She looks beautiful to you; her lovely figure, her perky breasts and dark nipples poking through her fur, her toned legs and ass. Before you know it, you're fucking her for a second time, the two of you needing more of one another.";
 			say "     She grips the edge of the desk and rolls her hips, barking your name and panting for more. As your passion builds anew, you thrust so hard that the desk slowly gets pushed back against the wall. Having just cum shortly before, your thrusts are stronger in your attempt to achieve orgasm, not that the lustful doberwoman seems to mind, your zeal mirrors her own need for you. And by the time the desk thumps back against the wall, you're almost ready to blow again. Gripping her hips harder, you drive into the panting dog-woman a few more times while she runs her paws over her brown-furred body in a sensual display. She cries out your name again in orgasmic delight, her quivering cunny rippling across your throbbing member. The desk bumps against the wall again and again as you drive into your lover, moaning in aching release as you add fresh spurts of your semen to the sticky load already coating her vaginal walls. You lay overtop her again, letting yourself thrust a little deeper into her. Your excess overflows from her canine cunny, adding to the wet mess on the desktop pad.";
+		NPCSexAftermath Alexandra receives "PussyFuck" from Player;
 	else if Player is female:
 		if graphics is true:
 			project the figure of Alexandra_naked_smile_icon;
@@ -689,6 +690,8 @@ to say goodalexandrasex00:
 			WaitLineBreak;
 			say "     You continue teasing her cunt and clit through your orgasm, barely pausing after your climax as she continues to urge you on. Pulling back momentarily, you adjust positions so she's splayed lengthwise across the large desk. This gives you a fine view of her lovely, canine-influenced body. Her coat is glossy with sweat and she's panting from her doggy muzzle. She looks beautiful to you; her lovely figure, her perky breasts and dark nipples poking through her fur, her toned legs and ass.";
 			say "     Before you know it, you're atop her a second time, now in the opposite direction and face to crotch to one another. Pressing your lips to her sticky muff, you run your tongue across her folds. Already wet from her climax, her pussy quivers and she arches her hips up for more. There is no pause as the doberwoman's canine tongue lashes you in return, lapping across and very soon into your pussy. Despite your recent release, the two of you are eager for more of one another and your tongues work hard at pleasuring your lover. While lacking previous experience, Alexandra's canine tongue proves to be an advantage. It laps across your folds and clit in long licks and readily delves deep inside you. Between the taste of you and your own tonguework, she's driven to a whining, whimpering climax that has a fresh rush of canine juices flowing over your tongue. This and the grip of her rippling passage over your probing tongue puts you over the top and you're soon orgasming as well, providing your lapping lover with a fresh taste of your femme cum.";
+		NPCSexAftermath Alexandra receives "OralPussy" from Player;
+		NPCSexAftermath Player receives "OralPussy" from Alexandra;
 	else:
 		if graphics is true:
 			project the figure of Alexandra_naked_smile_icon;
@@ -700,6 +703,7 @@ to say goodalexandrasex00:
 			WaitLineBreak;
 			say "     You continue teasing her cunt and clit through her orgasm, barely pausing during its ebb as she continues to urge you on. Pulling back momentarily, you adjust positions so she's splayed lengthwise across the large desk. This gives you a fine view of her lovely, canine-influenced body. Her coat is glossy with sweat and she's panting from her doggy muzzle. She looks beautiful to you; her lovely figure, her perky breasts and dark nipples poking through her fur, her toned legs and ass.";
 			say "     Before you know it, you're atop her a second time, now in the opposite direction and face to crotch to one another. Pressing your lips to her sticky muff, you run your tongue across her folds. Already wet from her climax, her pussy quivers and she arches her hips up for more. There is no pause as the doberwoman's canine tongue lashes you in return, lapping across your genderless crotch. Despite her recent release, the two of you are eager for more of one another and your tongues work hard at pleasuring your lover. While lacking loins for her to lick, the doggy's tongue still feels quite good, sending warm shivers through you. Subject to your eager tonguework, she's driven to a whining, whimpering climax that has a fresh rush of canine juices flowing over your tongue. Her rippling passage grips at your probing tongue as you work it in, out and across her inner walls until she's fully sated.";
+		NPCSexAftermath Player receives "OralPussy" from Alexandra;
 
 to say goodAlexandrasex_lead-in:
 	if graphics is true:
@@ -722,6 +726,7 @@ to say goodAlexandrasex2:
 	WaitLineBreak;
 	say "     As your mutual excitement grows, you can feel your arousal building towards its peak. Moving your hands to her thighs, you raise her legs to your hips and pound into her harder and faster. Sweet moans and whimpers of delight leave her muzzle as she grips the desk tightly, panting for you to cum in her. Not one to deny the canine beauty her desires, especially when that's just what you want to do, you drive your [cock size desc of Player] cock into her and cum hard. Shot after shot of your [Cum Load Size of Player] load is pumped into her until [if Ball Size of Player > 6]her belly is bloated overfull with your semen[else if Ball Size of Player > 5]her belly is visibly rounded with your semen[else]you have no more to give, for now[end if]. Her orgasming pussy milks as much as it can [if Ball Size of Player > 6]hold[else]get[end if] out of you.";
 	say "     Having satisfied one another, the two of you snuggle together, sharing a few more kisses while caressing one another. Eventually though, this private moment must come to a close. Getting dressed, the two of you exit the office and return to your duties.";
+	NPCSexAftermath Alexandra receives "PussyFuck" from Player;
 
 to say goodAlexandrasex3:
 	say "[goodAlexandrasex_lead-in]";
@@ -735,6 +740,8 @@ to say goodAlexandrasex3:
 		else:
 			say "     Soon licking is not enough for the horny hound and she wriggles that long tongue of hers into your cunny. She works her tongue in and out of you eagerly, delving into your depths with obvious relish. She gets your moaning and panting with how she works that tongue and her furry muzzle across and into your pussy and clit. Between her tonguework and your built-up arousal from eating her out, it isn't much longer before it is your turn to cum. Alexandra laps up your flowing juices, drinking down every drop she can get as you orgasm, happy to please her partner.";
 		say "     Having satisfied one another, the two of you snuggle together, sharing a few more kisses (and thereby sharing the lingering traces of each other's flavor with your partner). Eventually though, this private moment must come to a close. Getting dressed, the two of you exit the office and return to your duties.";
+		NPCSexAftermath Alexandra receives "OralPussy" from Player;
+		NPCSexAftermath Player receives "OralPussy" from Alexandra;
 	else:
 		say "     Still panting from her orgasm, Alexandra welcomes her loving partner into her arms for more kisses and snuggling. She strokes and caresses your [bodytype of Player] body, soothing your unfocused arousal. Eventually though, this private moment must come to a close. Getting dressed, the two of you exit the office and return to your duties.";
 

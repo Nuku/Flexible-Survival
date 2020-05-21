@@ -199,7 +199,7 @@ carry out gameplay:
 			let prizegift be a random number from 1 to number of filled rows in the Table of Random Critters;
 			choose row prizegift from the Table of Random Critters;
 			if there is a loot entry:
-				if loot entry is not " ":
+				if loot entry is not "":
 					add loot entry to invent of Player;
 					say "You acquired 1 [loot entry].";
 					increase carried of dirty water by 1;

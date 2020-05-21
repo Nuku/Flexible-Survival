@@ -1,8 +1,10 @@
-Version 2 of Mogdraz by Gherod begins here.
-[Version 1 - File created, Mogdraz and his Hellfire Club at Red Light + a few sub scenes - Gherod]
-[Version 2 - Updated Mogdraz with scenes, Toron added to the club roster]
+Version 3 of Mogdraz by Gherod begins here.
 
 "Adds Mogdraz and the Hellfire Club to the game."
+
+[Version 1 - File created, Mogdraz and his Hellfire Club at Red Light + a few sub scenes - Gherod]
+[Version 2 - Updated Mogdraz with scenes, Toron added to the club roster]
+[Version 3 - New Drinks, Abyssal Edge Enchantment, New Talk option to know more about Mogdraz and Araqiel. Toron moved to his own file]
 
 [                  Stats                     ]
 
@@ -111,7 +113,7 @@ to MogdrazXaedihr:
 [***********************************************************]
 [***********************************************************]
 [***********************************************************]
-Section 2 - NPC
+Section 2 - Mogdraz NPC
 [***********************************************************]
 [***********************************************************]
 [***********************************************************]
@@ -164,7 +166,7 @@ to say MogdrazDesc:
 	say "     Wearing a naughty grin in his face, the owner of the Hellfire Club is the higher breed of the Hellfires, slightly larger and muscular than the rest. Crimson skinned, bigger horns, fuzzier beard and even sporting a hairier chest, Mogdraz leads the entire horde of hellfire demons roaming around Red Light District, while managing a fetish business of his own. He's wearing a leather set, complete with a spiky harness adorning his jacked torso, a leather jockstrap suitable for his enormous size, a pair of crotch revealing leather pants and black boots that would make anyone tremble in his presence due to the tough and rough vibe they emanate. Contrarily to what one would think at first sight, however, Mogdraz is actually pretty friendly, giving you a pat on the back everytime you come talk to him.";
 
 [***********************************************************]
-Section 3 - Talk Menu
+Section 3 - Mogdraz Talk Menu
 [***********************************************************]
 
 instead of conversing Mogdraz:
@@ -209,6 +211,12 @@ to say MogdrazTalkMenu:
 		now sortorder entry is 6;
 		now description entry is "Ask more about their relationship";
 	[]
+	if HP of Araqiel is 3 and Resolution of Ambush The Purifier is 5:
+		choose a blank row in table of fucking options;
+		now title entry is "Ask about the Purifier";
+		now sortorder entry is 99;
+		now description entry is "Try to know more about their most recent capture";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -236,6 +244,8 @@ to say MogdrazTalkMenu:
 					say "[MogdrazTalkSexPref]";
 				if (nam is "His situation with Xaedihr"):
 					say "[MogdrazTalkXaedihr]";
+				if (nam is "Ask about the Purifier"):
+					say "[MogdrazTalkPurifier]"; [in Araqiel file]
 				wait for any key;
 				say "[MogdrazTalkMenu]"; [looping back to keep talking with him]
 		else if calcnumber is 0:
@@ -276,7 +286,7 @@ to say MogdrazTalkXaedihr:
 	say "     You further question Mogdraz about his relationship with Xaedihr. He shrugs, but replies... 'Yeah, I guess you have a few questions... Uh, totally wasn't expecting to see ol' Xaed here. He changed a lot, that's for sure.' He makes a pause, and continues speaking before you have to inquire further. 'Back on the days I was but a humble servant, and as all servants from high places, we know how to relocate ourselves instantly through large distances... Teleportation, dimension traveling...' That makes sense now... But there is still something left to explain, which he does in a bit. 'We are not just minions. My kind was created to serve an ultimate purpose. My minions, however, are... A minor offspring of the true Hellfire. They are intelligent enough, but as you can see, they are very sex-obsessed.' With a nod, you thank Mogdraz for the explanation.";
 
 [***********************************************************]
-Section 4 - Sex Menu
+Section 4 - Mogdraz Sex Menu
 [***********************************************************]
 
 Instead of fucking Mogdraz:
@@ -479,6 +489,7 @@ to say HellfireClubDesc:
 to connect Hellfire Club:
 	change the south exit of Hellfire Club to Crimson Street;
 	change the north exit of Crimson Street to Hellfire Club;
+	now Hellfire Club is known;
 
 a postimport rule: [bugfixing rules for players that import savegames]
 	if resolution of An Hellish Introduction > 0: [event resolved the right way, room not connected yet]
@@ -497,301 +508,47 @@ The earea of Hellfire Lounge is "Red".
 The description of Hellfire Lounge is "[HellfireLoungeDesc]".
 
 to say HellfireLoungeDesc:
-	say "     The lounge of the Hellfire Club is a spatious environment, with a bar counter on one side and many chairs and seats scattered around, screaming lush and delight wherever you look. Here, [if daytimer is night]the noise isn't unbearable, you're even able to have a normal conversation with anyone without having to raise your voice too much, and the bartender is serving drinks as usual[else]some demon lackeys are cleaning up the seats, tables and corners from the previous night, while the bartender is polishing the drinking glasses[end if]. At one corner with peripheral vision for the entire lounge is a large and luxurious red velvet sofa, where the owner of the club, Mogdraz, usually takes his seat, sometimes accompanied by a couple of servants, who he dismisses whenever you approach him. Behind the bar counter, to the west, there's a door to the back rooms with a signal prominently saying [']STAFF ONLY[']. It doesn't look like you can go in there for the moment. To the south is the entrance, with two burly hellfire demons keeping watch all the time.";
+	say "     The lounge of the Hellfire Club is a spatious environment, with a bar counter on one side and many chairs and seats scattered around, screaming lush and delight wherever you look. Here, [if daytimer is night]the noise isn't unbearable, you're even able to have a normal conversation with anyone without having to raise your voice too much, and the bartender is serving drinks as usual[else]some demon lackeys are cleaning up the seats, tables and corners from the previous night, while the bartender is polishing the drinking glasses[end if]. At one corner with peripheral vision for the entire lounge is a large and luxurious red velvet sofa, where the owner of the club, Mogdraz, usually takes his seat, sometimes accompanied by a couple of servants, who he dismisses whenever you approach him. Behind the bar counter, to the west, there's a door to the back rooms with a signal prominently saying [']STAFF ONLY[']. It [if Resolution of Ambush The Purifier < 6]doesn't look like you can go in there for the moment[else]looks like you could go in there, now that you have Mogdraz's permission[end if]. To the south is the entrance, with two burly hellfire demons keeping watch all the time.";
 
-instead of smelling Hellfire Club:
+instead of smelling Hellfire Lounge:
 	say "     It must be the hellfire demons musk, but everything smells so delightfully devilish in here that just makes you want to stay. The sweet and masculine musk of attractive demonic creatures is enough to send you into a brief lightheaded state, taking you some time to shake it off. There are also other creatures' scents getting mixed together, but you can barely notice them.";
 
-[***********************************************************]
-Section 5-1 - Toron the Bartender
-[***********************************************************]
+Table of GameRoomIDs (continued)
+Object	Name
+Hellfire Corridor	"Hellfire Corridor"
 
-ToronDoneTalking is a truth state that varies.[@Tag:NotSaved]
+Hellfire Corridor is a room. Hellfire Corridor is private. It is sleepsafe.
+The earea of Hellfire Corridor is "Red".
+The description of Hellfire Corridor is "[HellfireCorridorDesc]".
 
-Table of GameCharacterIDs (continued)
-object	name
-Toron	"Toron"
+to say HellfireCorridorDesc:
+	say "     Past the Staff door, there is a long and dark corridor, leading to lots of different rooms. Some have their lights lit from inside, and you can hear a few grunts and moans occasionally coming from behind the walls. Apart from these sounds, there's only silence. Right now, you can only head south, down a stairway that seems to lead to the dungeon where captives are held.";
 
-Toron is a man. Toron is in Hellfire Lounge.
-ScaleValue of Toron is 3. [human sized]
-Cock Count of Toron is 1.
-Cock Length of Toron is 9.
-Ball Size of Toron is 4.
-Ball Count of Toron is 2.
-Cunt Count of Toron is 0.
-Cunt Depth of Toron is 0.
-Cunt Tightness of Toron is 0.
-Nipple Count of Toron is 2. [2 nipples]
-Breast Size of Toron is 0.
-[Basic Interaction states as of game start]
-PlayerMet of Toron is false.
-PlayerRomanced of Toron is false.
-PlayerFriended of Toron is false.
-PlayerControlled of Toron is false.
-PlayerFucked of Toron is false.
-OralVirgin of Toron is false.
-Virgin of Toron is false.
-AnalVirgin of Toron is false.
-PenileVirgin of Toron is false.
-SexuallyExperienced of Toron is true.
-MainInfection of Toron is "".
-The description of Toron is "[ToronDesc]".
-The conversation of Toron is { "<This is nothing but a placeholder!>" }.
-The scent of Toron is "     Toron smells... like nothing. He's completely odorless. You can't help but think there's something quite odd about this fellow.".
+to connect Hellfire Corridor:
+	change the west exit of Hellfire Lounge to Hellfire Corridor;
+	change the east exit of Hellfire Corridor to Hellfire Lounge;
 
-to say ToronDesc:
-	say "     You perceive Toron as a purple skin colored human with unnaturally bright pink eyes, although the lighting in the lounge give his bare torso a slight red tone at night... It's confusing, and truth be told, you're not really sure about his real colors, only that he is far from being a human. He's tall within the average scale, and very muscular, with incredibly handsome features. However, he gives you this feeling of... uncertainty, like he's not what he really looks like, and the occasional scaly tentacle appearing right behind him to grab drinks and bottles out of his arms['] reach may help explain why you feel this way. He stands behind a counter all the time, though he's usually wearing some tight black jeans.";
-	if perception of player >= 19:
-		say "     [italic type]His shape dims like a very thick liquid when you look at him attentively for a long time. You try not to do that often, however, as his counter gaze almost seems to petrify you.[roman type][line break]";
+a postimport rule: [bugfixing rules for players that import savegames]
+	if resolution of Ambush The Purifier > 5 and resolution of Ambush The Purifier < 99: [event resolved this way, room not connected yet]
+		connect Hellfire Corridor;
 
-instead of conversing Toron:
-	say "     You come close to the bar counter, as Toron immediately turns his attention to you. 'Drinks on the house, by Mogdraz's order. How lucky, not many gain his respect like that.' he says, his voice clear and low as if caressing your ears. He surely is charming. 'So, what can I get you?'";
-	say "[ToronTalkMenu]";
+instead of smelling Hellfire Corridor:
+	say "     It smells strongly of sex, and especially demonic musk. This is a place only the trusted clientele and staff members are allowed, so that is to be expected.";
 
-to say ToronTalkMenu:
-	now ToronDoneTalking is false;
-	say "     [bold type]Is there something you want from the Hellfire Club's bartender?[roman type][line break]";
-	LineBreak;
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Order a drink";
-	now sortorder entry is 1;
-	now description entry is "Order a drink at the bar";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Recent events";
-	now sortorder entry is 2;
-	now description entry is "Request an update on what's going on";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Himself";
-	now sortorder entry is 3;
-	now description entry is "Ask Toron to tell you more about himself";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "His work";
-	now sortorder entry is 4;
-	now description entry is "Inquire him about his work";
-	[]
-	if Energy of Toron > 0:
-		choose a blank row in table of fucking options;
-		now title entry is "Sex";
-		now sortorder entry is 5;
-		now description entry is "Bring up the obvious subject";
-		[]
-	if Energy of Toron > 1:
-		choose a blank row in table of fucking options;
-		now title entry is "History with Mogdraz";
-		now sortorder entry is 6;
-		now description entry is "Ask him about his relationship with Mogdraz";
-	[]
-	if resolution of An Hellish Introduction > 1:
-		choose a blank row in table of fucking options;
-		now title entry is "About Xaedihr";
-		now sortorder entry is 7;
-		now description entry is "Ask if he knows Xaedihr";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
-				now sextablerun is 1;
-				if (nam is "Order a drink"):
-					say "[ToronTalkDrinks]";
-					now ToronDoneTalking is true;
-				if (nam is "Recent events"):
-					say "[ToronTalkNews]";
-					now ToronDoneTalking is true;
-				if (nam is "Himself"):
-					say "[ToronTalkHimself]";
-				if (nam is "His work"):
-					say "[ToronTalkWork]";
-				if (nam is "Sex"):
-					say "[ToronTalkSex]";
-				if (nam is "History with Mogdraz"):
-					say "[ToronTalkMogdraz]";
-				if (nam is "About Xaedihr"):
-					say "[ToronTalkXaedihr]";
-				wait for any key;
-				if ToronDoneTalking is false:
-					say "[ToronTalkMenu]"; [looping back to keep talking with him]
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You excuse yourself as the bartender continues his tasks.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
+Table of GameRoomIDs (continued)
+Object	Name
+Hellfire Dungeon	"Hellfire Dungeon"
 
-to say ToronTalkDrinks:
-	if HellfireDrinkTimer > 0:
-		say "     You can't have another drink while the effects of the previous one persist. Try again later.";
-		say "[ToronTalkMenu]";
-	else:
-		say "     Since drinks are on the house, you might as well get one. 'Very well, though I must remind you that only the special selection is available for you, exclusively. Its effects last [bold type]24 hours[roman type] and you cannot consume any other until it leaves your system. In return, you get a physical or mental boost, depending on which drink you order. Sounds useful, doesn't it?'";
-		say "[HellfireClubDrinksMenu]";
+Hellfire Dungeon is a room.
+Hellfire Dungeon is below Hellfire Corridor. It is sleepsafe.
+The earea of Hellfire Dungeon is "Red".
+The description of Hellfire Dungeon is "[HellfireDungeonDesc]".
 
-to say ToronTalkNews:
-	say "     You ask Toron to share some gossip, and also update you on recent events happening around the area. He leans over the counter and speaks low.";
-	say "     [one of]'All kinds of people come and go from here, but they can't help themselves when they see the boss getting serviced. Some stare and jerk off, it's pretty hilarious.'[or]'You wouldn't believe if I told you I've been asked to tentacle rape an anthro wolf, would you?'[or]'Mogdraz just had a special client, and he made a generous pay. What he wanted in exchange? To feel his navel. That was it.'[or]'Incubi and succubi are such a drag, sometimes. Flirting, flirting, and... oh, more flirting. And their thoughts? Literally useless.'[or]'Demon Brutes seem to be a problem around the mall's sewers. Have you been there?'[or]'There's this mega beast called Behemoth wandering around the Dry Plains who seems to be able to... slurp people in with their dicks and pussies? Very... odd. But... intriguing.'[or]'I've heard of an imp dumping hell trash somewhere in the Warehouse District. What an odd place to do it, honestly.'[or]'Why are the Incubi swarming the College Campus? I'm wondering, since their original base is the Red Light District. Curious, is it not?'[or]'Alpha huskies, alpha german shepherds, alpha this and that, all over the place preying on new additions to their packs... then they often come here to get dominated by an experienced demon. Oops.'[or]'Those orcs at the Warehouse District, looking for new breeders... They have this really nice brew.'[or]'Have you met an Oni? Those are interesting demons... and pretty big ones, too. They quite often get me weak on the knees... it's what you call this leg bone thingie, right?'[at random]";
-	if HellfireOrcBrewTimer - turns < 4:
-		say "     'Also, I've got a new drink, thanks to your previous offerings. The [bold type]Orcish Bomber[roman type] has been added to the menu. Give it a try!'";
-		now HellfireOrcBrewTimer is 20000;
+to say HellfireDungeonDesc:
+	say "     One of the darkest places in the entire Hellfire Club establishment, the dungeon is where Mogdraz's most valuable slaves are kept, among others that he personally fancies. Though this isn't what you expect from a regular dungeon. The place has little light, but the [']cells['] are actually rooms with good conditions for the captives to inhabit. Over a specific area, however, there are racks and other mechanisms that serve to bind and tie, together with a variety of sex toys and tools for a complete BDSM session. This definitely seems to be the place to enact some very kinky fun, and you can occasionally hear someone moaning from inside the rooms.";
 
-to say ToronTalkHimself:
-	say "     Looking forward to know more about this strange demon, you ask him to tell you about himself. He looks flattered by your interest, but not entirely surprised. 'I get that question many times, in fact.' he replies, looking at you in the eye for a longer time than you're comfortable with. Then, you're somehow feeling relaxed... and safe... your thoughts suddenly vanishing from your mind and... Wait, what just happened? You return to your senses and find yourself confused, frantically looking around as Toron laughs. 'It is a dangerous question, too. Gives me enough time to pluck a secret from you.' Your eyes widen, as you understand that this was some kind of hypnosis he just performed on you. 'Ah, don't worry... It was nothing special. Maybe. That depends on how important it is for you.'";
-	say "     He almost speaks in riddles, but he's still evading your question, so you redirect the conversation to that point. 'I am simply the bartender of the Hellfire Club, a loyal friend to Mogdraz... And someone whose bad side you don't want to be in. So... behave.' And those are the only things he says. Then, he's just staring at you with a sly smile, and his eyes are simply too irresistible to not stare back at... But remembering what happened just a while ago, it's probably for the best to not give in, else you want to accidentally let him know everything that is to know about you. 'They say the eyes are the soul's mirrors... careful.' Oh, and apparently he can read your thoughts.";
-
-to say ToronTalkWork:
-	say "     Knowing that the Hellfire Club is... not so simply just a club, the same should apply to its bartender. So you ask Toron a little more about it. 'My work here? Serving drinks... cleaning up and polishing glasses... Keeping everything as clean as possible... You have no idea how wild our clients get sometimes. There's cum, girl juices, even milk sometimes - yes, tit milk, I'm not even kidding! - covering the floor at the corners they take for a quick fuck, and then it stinks! Imagine those dogs, cats, foxes, bulls, wolfs, bears, horses, gorillas, all fucking around for an entire night, and you can imagine the stench. Why is the demon kink so popular...? I don't get it. Are we that alluring?! And the sexual proposals I get...! And not just to suck me off or eat my ass, no, they are attracted to my tentacles! MY TENTACLES!' As he says this, he plops a big fat one on top of the counter. 'Who would want this in their beavers and tacos? Or slurp on this? It's just a scaly tentacle with suckers, like the ones octopuses have! Is this kinky?!'";
-	say "     Sounds like you've triggered Toron's frustrations about his work and clientele. 'I apologize, I must have gotten a little worked up. This ain't so bad, though I often wonder why Mogdraz has brought me here. I am a simple demon, who feeds on secrets. I may be able to provide you with some... gossip or actually useful information. Just ask, as long as you remain in the good guys['] list.' He seems to be some sort of informant, besides being a bartender.";
-	say "     [bold type]He might be very useful if you want to know things.[roman type][line break]";
-	if Energy of Toron is 0:
-		now Energy of Toron is 1;
-
-to say ToronTalkSex:
-	say "     Given Toron's take on sexual proposals he gets, you're not quite sure if you should be asking this question, but you lose nothing in doing so. Still, you choose to ask the question softly, maybe starting with if he ever has any sex at all, given where he is working at. 'Sometimes I do... with people I like. Not just anyone. There aren't many I fancy... I like strong hands and beautiful eyes. Like Mogdraz's... yes, he's a good reference. We have our fun, sometimes, with his minions. Group sex is fun, but only during the day. At night, I'm stuck here, pouring drinks, serving them, and sweet talking customers into providing me knowledge.' Seems like the purple demon prefers being submissive, and is only available for more engaging fun during the day.";
-	say "     [bold type]You can try your luck, if you fit his preferences.[roman type][line break]";
-	if Libido of Toron is 0:
-		now Libido of Toron is 1;
-	if Energy of Toron is 1:
-		now Energy of Toron is 2;
-
-to say ToronTalkMogdraz:
-	say "     Toron and Mogdraz work together, and he has mentioned the demon boss a lot of times throughout your conversations. So your curiosity brings you to this question, specifically, what kind of relationship they maintain. Asking the bartender about it, he looks to the side and leans over the counter, speaking in a lower tone. 'I was our former Lord's informant. Right after his heir betrayed him and ran off, Mogdraz basically kidnapped me and made me work for him. I think I kind of let myself... uh... get fascinated by such a virile and powerful demon such as the Demon Lord of our world... and Mogdraz reminded me of him a lot without the bad parts, which was simply perfect. Mogdraz is one wholesome individual. He's not evil... nor corrupted... nor under the influence of Hell... unlike most of our kind. In a way, he freed me. And I am very thankful of that.'";
-	say "     The informant of a Demon Lord?! Just how powerful are these demons... 'Very powerful, but in this world we are sort of limited, as the same laws do not apply. That might come to protect us in the end, who knows.' He replied to your... thought. Right, he can read your thoughts. 'Sorry about that. It's a bad habit.' he apologizes, 'But answering your initial question, my relationship with Mogdraz is... let's say we're close friends with benefits. And I'll let you know a little secret... He likes plushies. Says they're cuddly. It's kind of funny...' You thank him for what he shared, especially the last part, which is quite interesting, to say the least.";
-
-to say ToronTalkXaedihr:
-	say "     Now that Xaedihr is known around the club, you figure you could ask Toron if he knows him, too. 'Xaedihr... Yes, I know him well. Too well. I'm not sure if he's told you that, but he is the heir of the Demon Lord in our world. His only son, who saw his father falling into a deeper greed for power, and actually becoming powerful enough to defy Hell itself. Poor kid has seen things... He's not even fully demon, his mother was a human who died giving him birth, as his father is quite an unimaginably strong entity. Never shed a tear for his lover, he was more interested in training Xaedihr to become his successor, and even fused him with an aspect of darkness, leaving him with permanent marks. The tattoo on his shoulder and arm... That's it. And this aspect can be summoned at will, as he has mastered it. Otherwise, the aspect would have taken control of his mind, and possibly to become the Lord's underling. Quite sad if that were to happen.'";
-	say "     Seems like Toron knows a lot more about Xaedihr than even the half-demon himself. 'You saw how he brought down two of Mogdraz's best hellfire demons so easily? You've got a powerful companion on your side... and with a very delicate heart. His tough shell is merely for self-protection. Gain his trust, and you'll have a friend for life, but hurt him, and you'll... be having a bad time.' You thank Toron for sharing this information with you, to which he nods. 'Just keep it discrete.'";
-
-HellfireDrinkTimer is a number that varies. HellfireDrinkTimer is usually 0. [@Tag:NotSaved]
-HellfireOrcBrewTimer is a number that varies. HellfireOrcBrewTimer is usually 20000. [@Tag:NotSaved]
-
-to say HellfireClubDrinksMenu:
-	say "     [bold type]Toron hands you a list with the drinks he has on stock[roman type]. 'This is what I have right now.'";
-	LineBreak;
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Order a Hellfire Swizzle";
-	now sortorder entry is 1;
-	now description entry is "A drink that increases your might (+1 strength)";
-	[]
-	if "Created Orcish Bomber" is listed in traits of Toron:
-		choose a blank row in table of fucking options;
-		now title entry is "Order an Orcish Bomber";
-		now sortorder entry is 1;
-		now description entry is "A drink that substantially increases your might, at the cost of accuracy (+2 strength, -1 dexterity)";
-	[]
-	if orc brew is owned and "Created Orcish Bomber" is not listed in traits of Toron and HellfireOrcBrewTimer is 20000:
-		choose a blank row in table of fucking options;
-		now title entry is "Show him the orc brew";
-		now sortorder entry is 1;
-		now description entry is "He might be interested in the orc brew";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
-				now sextablerun is 1;
-				if (nam is "Order a Hellfire Swizzle"):
-					say "[DrinkHellfireSwizzle]";
-				if (nam is "Order an Orcish Bomber"):
-					say "[DrinkOrcishBomber]";
-				if (nam is "Show him the orc brew"):
-					say "[GiveToronOrcBrew]";
-				wait for any key;
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You excuse yourself as the bartender continues his tasks.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
-
-to say DrinkHellfireSwizzle:
-	say "     You make a request for a Hellfire Swizzle, a spicy drink served at ambient temperature, with ingredients containing something that probably comes from hellfire demons, though it's perfectly safe... allegedly. 'Right on.' says Toron, as he prepares the mix. Adding all the components of the drink into a mixer, he shakes its contents until it attains a pretty crimson red color, then pours it onto a flat, tall and narrow glass, decorated with a grapefruit and a cherry on top. 'Here you go' he says, sliding the glass towards you. The drink smells strong, kind of tingling your nose. Well, time to have a taste.";
-	say "     The sensation is fiery, as expected, with a hint of sweetness to it, and a sensation similar to a hot variant of peppermint, making your mouth much hotter than before. Still, it's easily drinkable, and absolutely tasty, so you finish it off in a fairly short time. After you've had the whole thing, you feel invigorated with newfound strength.";
-	FeatGain "Hellfire Swizzle";
-	say "     Your [bold type]Strength has increased by 1[roman type] for the next [bold type]24 hours.[roman type][line break]";
-	statchange "Strength" by 1 silently;
-	now HellfireDrinkTimer is 8;
-	decrease thirst of player by 10;
-
-to say DrinkOrcishBomber:
-	say "     You make a request for an Orcish Bomber, a powerful drink served at ambient temperature, made as an improved orc brew using components from orc cum, though it's perfectly safe... allegedly. 'Right on.' says Toron, as he prepares the mix. Adding all the elements of the drink into a mixer, he shakes its contents until it attains a very transparent white color, then pours it onto a flat, very short and narrow glass, served simply like a shot. 'Here you go. This one's strong.' he says, sliding the glass towards you. The drink smells faintly of orc, though nothing unbearable at all, being quite pleasing and soft to the nose... until you take a deeper whiff, and you nearly feel lightheaded. Well, time to ahve a taste.";
-	say "     The flavor is very intense, a mix between sweet and salty, its texture slightly thick, just like a liquor. You drink it all it one go, and feel it burning down your throat, a sensation only increasing with time, before it starts subsiding. It leaves a bitter aftertaste on the back of your mouth. This is one very strange drink, but you can already feel its effects pumping your muscles a bit, as your movements get slightly harder.";
-	FeatGain "OrcishBomber";
-	say "     Your [bold type]Strength has increased by 2, while your Dexterity has decreased by 1,[roman type] for the next 24 hours.";
-	statchange "Strength" by 2 silently;
-	statchange "Dexterity" by -1 silently;
-	now HellfireDrinkTimer is 8;
-	decrease thirst of player by 3;
-
-an everyturn rule:
-	if "Hellfire Swizzle" is listed in feats of Player:
-		if HellfireDrinkTimer <= 0:
-			FeatLoss "Hellfire Swizzle";
-			say "     It has been at least a full day since you've had that drink at the Hellfire Club, and the effect has been flushed out of the system by now. As a result, you've lost the boost from the drink, but are able to have another one.";
-			statchange "Strength" by -1 silently;
-		else:
-			decrease HellfireDrinkTimer by 1;
-	if "Orcish Bomber" is listed in feats of Player:
-		if HellfireDrinkTimer <= 0:
-			FeatLoss "Orcish Bomber";
-			say "     It has been at least a full day since you've had that drink at the Hellfire Club, and the effect has been flushed out of the system by now. As a result, you've lost the boost from the drink, but are able to have another one.";
-			statchange "Strength" by -2 silently;
-			statchange "Dexterity" by 1 silently;
-		else:
-			decrease HellfireDrinkTimer by 1;
-	if "Created Orcish Bomber" is not listed in traits of Toron:
-		if HellfireOrcBrewTimer - turns < 4:
-			add "Created Orcish Bomber" to traits of Toron;
-
-to say GiveToronOrcBrew:
-	say "     Since you're carrying a special drink that you've got from the orcs, you suppose Toron would be interested in its special characteristics, so you show him the stuff. 'You've got an orc brew? Splendid! I've been wanting to get one, but I just hadn't had any luck! Let me see.' he says, extending his hand towards you. Plucking the bottle out of your inventory, you give it to the bartender, who starts examining it immediately. 'The color, and texture...' he comments, as he opens the bottle to take a whiff. 'Even the smell... Do they... Do they put their cum in here? That's why it's such a wonder, huh... Orc cum is pretty much addictive, people drink this stuff and get hooked up. Sorry for the question but... Do you happen to have some raw [bold type]orc cum[roman type] with you?";
-	WaitLineBreak;
-	if orc cum is owned:
-		say "     Knowing that you have at least one bottle of Orc Cum in your inventory...";
-		LineBreak;
-		say "     ([link]Y[as]y[end link]) - Hand him some.";
-		say "     ([link]N[as]n[end link]) - Better not, for now.";
-		if player consents:
-			say "     Might as well give this a try. You take the bottle of Orc Cum out and hand it to Toron, who gladly accepts your offer. 'Good! I needed this. Very well, I'll be able to create something new with this. If it's a success, I'll just... send someone to harvest the ingredients. Oh, don't look at me like that, I bet they would enjoy having some eager demons milking them for their cum... since this land is as strange as it is. Anyway, I'll bring these in, though I'll need some time until I can get something done. Come back later, perhaps I'll have news.' Taking both ingredients you have just provided him with, Toron takes them inside, returning to his duties shortly after.";
-			decrease carried of orc cum by 1;
-			decrease carried of orc brew by 1;
-			now HellfireOrcBrewTimer is turns;
-			say "[HellfireClubDrinksMenu]";
-		else:
-			say "     You shake your head, telling him that you don't have one available at the moment. 'Ah, I see... Then have the brew back, I can't do anything with it without this specific ingredient. Though feel free to come back to me with it whenever you get some orc cum. I might just be able to improve this brew...'";
-			say "[HellfireClubDrinksMenu]";
-	else:
-		say "     You shake your head, telling him that you don't have one available at the moment. 'Ah, I see... Then have the brew back, I can't do anything with it without this specific ingredient. Though feel free to come back to me with it whenever you get some orc cum. I might just be able to improve this brew...'";
-		say "[HellfireClubDrinksMenu]";
+instead of smelling Hellfire Dungeon:
+	say "     It smells strongly of sex, and especially demonic musk. This is a place only the trusted clientele and staff members are allowed, so that is to be expected.";
 
 [***********************************************************]
 [***********************************************************]

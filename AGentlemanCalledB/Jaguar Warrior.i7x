@@ -96,77 +96,149 @@ to say JagWarVic_Oral:
 	NPCSexAftermath Player receives "OralCock" from Tehuantl;
 
 to say JaguarWarriorCaptured:
-	say "     The jaguar's weapon and shield clatter to the floor as your last blow sends him reeling. He stumbles backwards, barely managing to catch himself on a nearby display case. Trembling slightly, the large feline looks you in the eyes for a moment before his head drops in submission. You feel a surge of energy rush through you as the jaguar warrior finally acknowledges you as his better and you step forward to claim your hard earned prize.";
-	if Player is male:
-		say "     You knock the jaguar's arm away from the display case he's supporting himself with and watch with satisfaction as he falls to one knee. With a low rumble emanating from somewhere inside you, you step around the beaten feline and press your foot against the middle of his back, pushing him to his hands and knees. Taking hold of his spotted tail, you pull it towards his hip, exposing his tight ass to you. Even as you release it to grip his body, his tail stays cocked to the side, and you relish in the submissive gesture.";
-		LineBreak;
-		say "     Feeling like you should do... something to cement your mastery over this muscled feline, show him what to expect as your pet, you let your thoughts wander through all the possibilities. Eventually, you decide to:[line break]";
-		say "     ([link]Y[as]y[end link]) Cup his balls and give them a gentle rub.";
-		say "     ([link]N[as]n[end link]) Tease and lightly pinch his nipples.";
-		if Player consents:
-			LineBreak;
-			say "     Stroking a hand over the jaguar warrior's firm and muscled buttocks, you dip in a finger between their furry curves and brush it over his back door, drawing a little mewl as he tenses up. Quite sensitive, this feline - a clear sign of a virgin at anal sex. You almost stay right there, as the idea of playing with his ass a little springs up in your mind, but eventually decide to shift your hand deeper, on top of the tin globes of his balls. Cupping the jaguar's family jewels, you weigh them in your hand and comment that he's quite the virile kitty - and that he shouldn't worry too much about his fate. Sure, he's yours now, as are his balls, cock and ass - but there's no reason this shouldn't be enjoyable for the both of you. And with that, you start to gently caress him with your hand, drawing a little surprised mewl as you do so. As you proceed to fondle him, there even is a little purr that can be heard from your former opponent. Clearly, he is starting to realize that becoming your kitty will have its own rewards.";
-			say "     The jaguar makes no attempt to resist as you position your [cock size desc of Player] [Cock of Player] cock at his rear, merely releasing a whimpering mewl as you tease his outer ring with the tip of your member. You groan in pleasure as you begin pushing into his tight opening, slowly driving your entire length into the whimpering kitty beneath you. As your hips meet his ass you lean forward over your plaything, reaching around his body to grasp his cock, hard and ready despite his current situation. As you gently stroke his cock you feel the feline barbs adorning it, finding them strangely soft and pliant. After teasing the beaten kitty for a short while you begin giving him a proper fucking, gripping his hips tightly as you pound into his tight bottom relentlessly[if Player is barbed], delighting in his yowls of pleasure and pain as your barbed shaft pistons in and out of his tight hole[end if]. You roar in pleasure as you rapidly push yourself to climax, holding the jaguar's ass tightly to your body as you unleash your [Cum Load Size of Player] load into his bowels while his own seed splatters onto the museum floor beneath him. As your climax begins to subside [if Player is barbed]the jaguar releases one last weak whimper as you pull yourself from his tight ass, your barbs scraping along his inner walls one last time before you[else]you pull yourself from the jaguar's tight ass and[end if] allow him to fall to the floor.";
-			NPCSexAftermath Tehuantl receives "AssFuck" from Player;
-			WaitLineBreak;
-			say "     After remaining on his belly for a few moments as he pants in exhaustion, the jaguar eventually twists around, flopping down to lay on his back. What an inviting sight - so very docile now that you've broken him in, looking up at you in adoration. His belly-fur is wet and matted with the load of cum you fucked out of him and a slight trickle of your seed oozes out of his well-bred ass. Crouching down over the jaguar warrior, you wipe up the cum with two fingers and bring them to his muzzle - and your pet laps up the creamy treat without any hesitation. You can't help but smile as you tell him that he's been a very good boy, then hold out a hand for him to take and pull him up along as you stand up. Your new pet leans in and nuzzles against your chest as you make your way back to the Grey Abbey Library with him.";
-			say "[TameTehuantl]";
-			now HP of Tehuantl is 50; [male jaguar pet]
-			now Cock Count of Tehuantl is 1;
-			now Cock Length of Tehuantl is 12;
-			now Ball Size of Tehuantl is 5;
-			now Ball Count of Tehuantl is 2;
-			now Cunt Count of Tehuantl is 0;
-			now Cunt Depth of Tehuantl is 0;
-			now Cunt Tightness of Tehuantl is 0;
-			now Nipple Count of Tehuantl is 2; [2 nipples]
-			now Breast Size of Tehuantl is 0;
+	say "     The jaguar's weapon and shield clatter to the floor as your last blow sends him reeling. He stumbles backwards, barely managing to catch himself on a nearby display case. Trembling slightly, the large feline looks you in the eyes for a moment before his head drops in submission. You feel a surge of energy rush through you as the jaguar warrior finally acknowledges you as his better and you step forward to claim your hard-earned prize. You knock the jaguar's arm away from the display case he's supporting himself with and watch with satisfaction as he falls to one knee. With a low rumble emanating from somewhere inside you, you step around the beaten feline and press your foot against the middle of his back, pushing him to his hands and knees. Seeing himself be put in this position, Tehuantl himself actually pulls his spotted tail aside, exposing his tight ass to you in a submissive gesture.";
+	now sextablerun is 0;
+	say "     [bold type]Feeling like you could do... something to cement your mastery over this muscled feline, you let your thoughts wander through all the possibilities.[roman type][line break]";
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Dominate him (nonsexually)"; [-> male T]
+	now sortorder entry is 1;
+	now description entry is "Grab him by the scruff of the neck and make him acknowledge you as his [master]";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Dominate him and emasculate him (nonsexually)"; [-> female T]
+	now sortorder entry is 1;
+	now description entry is "Grab him by the scruff of the neck and make him acknowledge you as his [master]";
+	[]
+	if player is male:
+		choose a blank row in table of fucking options;
+		now title entry is "Rub his balls and then fuck his ass"; [-> male T]
+		now sortorder entry is 2;
+		now description entry is "Get the kitty hot and ready, then pound him";
+	[]
+	if Player is female:
+		choose a blank row in table of fucking options;
+		now title entry is "Rub his balls and then ride his cock"; [-> male T]
+		now sortorder entry is 3;
+		now description entry is "Get the kitty hot and ready, then ride him";
+	[]
+	if player is male:
+		choose a blank row in table of fucking options;
+		now title entry is "Tease his nipples and then fuck his ass"; [-> female T]
+		now sortorder entry is 4;
+		now description entry is "Get the kitty hot and ready, then pound him";
+	[]
+	if Player is female:
+		choose a blank row in table of fucking options;
+		now title entry is "Tease his nipples and then ride his cock"; [-> female T]
+		now sortorder entry is 5;
+		now description entry is "Get the kitty hot and ready, then ride him";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if nam is "Dominate him (nonsexually)":
+					say "[TehuantlTameNonSexM]";
+				else if nam is "Dominate him and emasculate him (nonsexually)":
+					say "[TehuantlTameNonSexF]";
+				else if (nam is "Rub his balls and then fuck his ass"):
+					say "[TehuantlTameSex1]";
+				else if (nam is "Rub his balls and then ride his cock"):
+					say "[TehuantlTameSex2]";
+				else if (nam is "Tease his nipples and then fuck his ass"):
+					say "[TehuantlTameSex3]";
+				else if (nam is "Tease his nipples and then ride his cock"):
+					say "[TehuantlTameSex4]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You change your mind, just pushing him over to sprawl confusedly on the ground as you walk off without a word. The sudden rejection makes the feline hiss after you as he slowly gets to his feet afterwards.";
+			wait for any key;
 		else:
-			LineBreak;
-			say "     Stroking both hands over the jaguar warrior's back, you let them slide around his sides, searching out the little nubs of his nipples on the feline's chest. He gives a little surprised mewl as you brush over them, then lightly pinch both at the same time. Bent over the spotted feline, you comment that he's quite the sexy pussycat - and that he shouldn't worry too much about his fate. Sure, he's yours now, and you reserve the right to pet him and play with his nipples whenever you want - but there's no reason this shouldn't be enjoyable for the both of you. As you proceed to rub him in circling motions, there even is a little purr that can be heard from your former opponent. Clearly, he is starting to realize that becoming your kitty will have its own rewards.";
-			say "     The jaguar makes no attempt to resist as you position your [cock size desc of Player] [Cock of Player] cock at his rear, merely releasing a whimpering mewl as you tease his outer ring with the tip of your member. You groan in pleasure as you begin pushing into his tight opening, slowly driving your entire length into the whimpering kitty beneath you. As your hips meet his ass you lean forward over your plaything, reaching around his body to grasp his cock, hard and ready despite his current situation. As you gently stroke his cock you feel the feline barbs adorning it, finding them strangely soft and pliant. After teasing the beaten kitty for a short while you begin giving him a proper fucking, gripping his hips tightly as you pound into his tight bottom relentlessly[if Player is barbed], delighting in his yowls of pleasure and pain as your barbed shaft pistons in and out of his tight hole[end if]. You roar in pleasure as you rapidly push yourself to climax, holding the jaguar's ass tightly to your body as you unleash your [Cum Load Size of Player] load into his bowels while his own seed splatters onto the museum floor beneath him. As your climax begins to subside [if Player is barbed]the jaguar releases one last weak whimper as you pull yourself from his tight ass, your barbs scraping along his inner walls one last time before you[else]you pull yourself from the jaguar's tight ass and[end if] allow him to fall to the floor.";
-			NPCSexAftermath Tehuantl receives "AssFuck" from Player;
-			WaitLineBreak;
-			say "     You watch with curious interest as the shivering feline rolls to his back, his thick white seed still spilling from his spasming shaft. His cock is now noticeably smaller than it was when you held it in your hand. As the final spurts of his male cum drip from its tip, you watch his once-virile balls pull tightly against his body before slipping inside him with an unsettling slurp, leaving behind a dripping feline cunt. The jaguar moans in pleasure as you slip a finger into the wet new opening, almost effortlessly pushing her to her first female climax as what remains of her cock shrinks away to a tiny nub at the top of her pussy.";
-			say "     Eager to make use of this inviting new opening you lower yourself over the whimpering kitty, aligning your shaft with her new cunt and driving into her before her last orgasm has even subsided. You rumble happily as you pound into the newly-minted female feline, taking it slowly this time as you watch the changes ripple outwards from her crotch. Her hips and ass plump out to an attractive new shape, clearly built for childbirth. Her form becomes slim and delicate as the masculine features seem to melt away, extra mass rolling up and across her body to gather at her chest. You tweak and tease her swollen puffy nipples as they swell outward, into large sumptuous breasts. The jaguar mewls up at you plaintively as the changes shift to her face, the once-strong masculine features becoming gentle and feminine while long locks of dark hair flow from her head. As the changes come to their end the jaguar yowls out in ecstasy beneath you, her cunt clamping around you tightly as she reaches orgasm once again, driving you to mark her new womb with another powerful climax.";
-			NPCSexAftermath Tehuantl receives "PussyFuck" from Player;
-			WaitLineBreak;
-			say "     As you roll off her exhausted form, the rumbling kitty snuggles up against you, staring up at you with a look of adoration as she slips out of consciousness. Clearly very little of the once dominant feline remains in this docile new creature and without a second thought you pull her into your arms as you rise to your feet. Your new pet nuzzles against your chest as you make your way back to the bunker.";
-			say "[TameTehuantl]";
-			now HP of Tehuantl is 10; [female jaguar pet]
-	else if Player is female:
-		say "     You knock the jaguar's arm away from the display case he's supporting himself with and watch with satisfaction as he falls to one knee. With a low rumble emanating from somewhere inside you, you grip his shoulders tightly and push him to the ground, lowering yourself down on top of him in the process. Even with you nearly sitting on his chest and pinning his shoulders to the ground the jaguar looks away, unable to make eye contact, and you relish in the submissive gesture.";
-		LineBreak;
-		say "     Feeling like you should do... something to cement your mastery over this muscled feline, show him what to expect as your pet, you let your thoughts wander through all the possibilities. Eventually, you decide to:[line break]";
-		say "     ([link]Y[as]y[end link]) Cup his balls and give them a gentle rub.";
-		say "     ([link]N[as]n[end link]) Tease and lightly pinch his nipples.";
-		if Player consents:
-			LineBreak;
-			say "     Twisting your upper body and leaning back a little, you reach out and cup the jaguar's family jewels. His furry balls are warm and delightfully soft against your skin - at the same time as they are nicely full and weighty. You just have to comment that he's quite the virile kitty - then add that he shouldn't worry too much about his fate. Sure, he's yours now, as are his balls and cock - but there's no reason this shouldn't be enjoyable for the both of you. And with that, you start to gently caress him with your hand, drawing a little surprised mewl as you do so. As you proceed to fondle him, there even is a little purr that can be heard from your former opponent. Clearly, he is starting to realize that becoming your kitty will have its own rewards.";
-			say "     When you let go of him and rise to reposition yourself, the jaguar makes no attempt to escape, merely releasing a whimpering mewl as you take hold of his feline shaft, hard and ready despite his current situation. As you gently stroke his cock, you feel the feline barbs adorning it, strangely soft and pliant despite their sharp appearance. Satisfied that your plaything is ready for some fun, you position his cock just outside your [cunt size desc of Player] cunt and slowly lower yourself down onto it with another rumble of delight, the feeling of his soft barbs gently teasing your inner walls only adding to the pleasant sensation. As the jaguar's entire length is hilted inside you, you lean forward once again, gripping his shoulders tightly as you begin to ride his shaft roughly.";
-			WaitLineBreak;
-			say "     You moan and gasp in pleasure as you rise and fall along the stimulating barbed shaft while the jaguar groans and mewls beneath you. Oh yeah - winning this fight really was worth it! You ride the muscled feline with great pleasure, playing your hands over his strong arms and ribbed abs. Quite a hunk - and he's all yours! A roar in pleasure rises in your throat you rapidly push yourself to a breathtaking climax, your pussy clamping down tight around the feline member as your orgasm strikes, pushing the jaguar to climax as well. His entire form shudders beneath you as his warm load pulses into your body. Even as your climax begins to subside and you begin rocking your body against the shivering jaguar once again, his pulsing member continues to fire spurt after spurt of feline cum into you.";
-			say "     The jaguar's orgasm lasts a long while, with more and more of his potent seed gushing into your depths. The constant throb inside your body and twitching of his nubby barbs against your inner walls keeps the high from your own climax going - reducing you to the strength of a kitten from all the pleasure. Yet despite this, your sexual partner still does nothing to gain the upper hand. Clearly, he has learned his lesson - and is feeling far too good right now to care that he's gonna be your pet. In fact, the exhausted feline starts rumbling in a pleasant purr and looks up at you with adoration. Very nice - and you immediately get another idea what he can do for you next. Raising your hips a little, you slide off the barbed shaft in your pussy and move up to his head on your knees, leaving a trail of dripping cum all over his belly fur. Coming to kneel over his face, there is no hesitation at all for your boy-toy to start licking, eating his load out of your pussy.";
-			WaitLineBreak;
-			say "     After a very pleasurable time having your female bits licked and teased, you can't help but smile as you tell the jaguar that he's been a very good boy, then you hold out a hand for him to take and pull him up along as you stand up. Your new pet leans in and nuzzles against your chest as you make your way back to the Grey Abbey Library with him.";
-			NPCSexAftermath Player receives "PussyFuck" from Tehuantl;
-			NPCSexAftermath Tehuantl receives "OralPussy" from Player;
-			say "[TameTehuantl]";
-			now HP of Tehuantl is 50; [male jaguar pet]
-		else:
-			LineBreak;
-			say "     Stroking both hands over the jaguar warrior's firm pecs, you feel his muscles and then search out the little nubs of his nipples. He gives a little surprised mewl as you brush over them, then lightly pinch both at the same time. Bent over the spotted feline, you comment that he's quite the sexy pussycat - and that he shouldn't worry too much about his fate. Sure, he's yours now, and you reserve the right to pet him and play with his nipples whenever you want - but there's no reason this shouldn't be enjoyable for the both of you. As you proceed to rub him in circling motions, there even is a little purr that can be heard from your former opponent. Clearly, he is starting to realize that becoming your kitty will have its own rewards.";
-			say "     When you let go of him and rise to reposition yourself, the jaguar makes no attempt to escape, merely releasing a whimpering mewl as you take hold of his feline shaft, hard and ready despite his current situation. As you gently stroke his cock, you feel the feline barbs adorning it, strangely soft and pliant despite their sharp appearance. Satisfied that your plaything is ready for some fun, you position his cock just outside your [cunt size desc of Player] cunt and slowly lower yourself down onto it with another rumble of delight, the feeling of his soft barbs gently teasing your inner walls only adding to the pleasant sensation. As the jaguar's entire length is hilted inside you, you lean forward once again, gripping his shoulders tightly as you begin to ride his shaft roughly.";
-			WaitLineBreak;
-			say "     You moan and gasp in pleasure as you rise and fall along the stimulating barbed shaft while the jaguar groans and mewls beneath you. You roar in pleasure as you rapidly push yourself to your first climax, your pussy clamping down tight around the feline member as your orgasm strikes, pushing the jaguar to climax as well. His entire form shudders beneath you as his warm load pulses into your body and you feel a strange shifting of his shaft within you. Even as your climax begins to subside and you begin rocking your body against the shivering jaguar once again, his pulsing member continues to fire spurt after spurt of his feline cum into you. Intent on riding him to a second climax, you continue driving his length into your body, but with each thrust you feel less and less of that intense stimulation. Fearing your plaything may be going soft on you, you slow to a stop and growl down at him, but you notice something very different about the once-large feline beneath you. His broad, powerful torso has slimmed to a shapely female form, as your eyes follow his body down to where your crotch meets his, you are shocked by the wide birthing hips the feline now possesses. Releasing his shoulders, you trace a finger down his slim, delicate chest to the swollen, puffy nipples, cupping them gently as they swell into large, sumptuous breasts before your eyes.";
-			say "     The jaguar mewls up at you plaintively as the changes shift to his face, the once-strong masculine features becoming gentle and feminine while long locks of dark hair flow from his head. Realizing there is only one sign of the jaguar warrior's previous male self left, you slowly lift yourself from his cock, now noticeably smaller as you once again hold it in your hand. As the final spurts of his male cum drip from it tip, you watch his once-virile balls pull tightly against his body before slipping inside him with an unsettling slurp, leaving behind a dripping feline cunt. The jaguar moans in pleasure as you slip a finger into the wet new opening, almost effortlessly pushing her to her first female climax as what remains of her cock shrinks away to a tiny nub at the top of her pussy.";
-			WaitLineBreak;
-			say "     The exhausted kitty rumbles at she stares up at your with adoration, clearly very little of the once dominant feline remains in this docile new creature and without a second thought your reach down for her. Your new pet nuzzles against your chest as you lift her into your arms, cradling her gently against you as you make your way back to the bunker.";
-			NPCSexAftermath Player receives "PussyFuck" from Tehuantl;
-			say "[TameTehuantl]";
-			now HP of Tehuantl is 10; [female jaguar pet]
-	else:
-		say "     Were you better equipped, you could probably catch the beaten feline with ease this time, but since you lack a gender of your own you allow the jaguar to collect his scattered gear and retreat back into the museum halls.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
+
+to say TehuantlTameNonSexM:
+	say "     You swat the muscled feline's ass lightly, telling him that there's enough of that for now, you're not going to rape him. No, you just pull him up by the scruff of his neck, meeting his eyes and giving him a good long stare to show your dominance. Then you lay out how things are going to be - he's proven to be weaker than you more than once, and you're claiming him as yours now. As such, he'll follow you and obey, or else. The proud warrior actually starts to nod and relax even before you add the last part, accepting the new status you're putting him in readily. 'Yes, tlacahua. I'm your warslave and will serve,' he says, almost purring. Curiosity has you ask what that word he used was, and he explains that it means 'master' in his original Nahuatl language. You can't help but smile at this and tell him that he's starting to behave like a very good little kitty, then hold out a hand for him to take and pull him up along as you stand up. Your new pet leans in and nuzzles against your chest as you make your way back to the Grey Abbey Library with him.";
+	say "[TehuantlMaleShift]";
+	say "[TameTehuantl]";
+
+to say TehuantlTameNonSexF:
+	say "     You swat the muscled feline's ass lightly, telling him that there's enough of that for now, you're not going to rape him. No, you just pull him up by the scruff of his neck, meeting his eyes and giving him a good long stare to show your dominance. Then you lay out how things are going to be - he's proven to be weaker than you more than once, and you're claiming him as yours now. In fact, he's so weak and pathetic that you're doubting that he even should be a male warrior. Acting like he did, getting his ass beat and then submitting to you seems more appropriate of a mewling pussy. To underline these words, you reach under him and squeeze his chest, to 'check if he's actually a girl', and somewhat surprisingly, your hand starts to fill with a furred curve as you do so, his chest bulging outwards and taking on more female curves in just a few seconds.";
+	say "     The formerly proud warrior lets out a moan and collapses to the ground, writhing before you. Stepping back a little, you watch the transformation you inadvertently kicked off, seeing the man change all over, with some subtle and other quite obvious adjustments to his forms. His cock shrinks back into his body, for one, leaving behind feminine folds, and the shape of his face and head softens a bit. When his new form stabilizes after a few moments, the now female jaguar pushes herself up to kneel before you, looking at you worshipfully. 'Yes, tlacahua. I'm your warslave and will serve,' she says, almost purring. Curiosity has you ask what that word she used was, and she explains that it means 'master' in her original Nahuatl language. You can't help but smile at this and tell her that she's starting to behave like a very good little kitty, then hold out a hand for her to take and pull her up along as you stand up. Your new pet leans in and nuzzles against your chest as you make your way back to the Grey Abbey Library with her.";
+	say "[TameTehuantl]";
+
+to say TehuantlTameSex1: [player rubs balls, then fucks his ass -> male T]
+	say "     Stroking a hand over the jaguar warrior's firm and muscled buttocks, you dip in a finger between their furry curves and brush it over his back door, drawing a little mewl as he tenses up. Quite sensitive, this feline - a clear sign of a virgin at anal sex. You almost stay right there, as the idea of playing with his ass a little springs up in your mind, but eventually decide to shift your hand deeper, on top of the tin globes of his balls. Cupping the jaguar's family jewels, you weigh them in your hand and comment that he's quite the virile kitty - and that he shouldn't worry too much about his fate. Sure, he's yours now, as are his balls, cock and ass - but there's no reason this shouldn't be enjoyable for the both of you. And with that, you start to gently caress him with your hand, drawing a little surprised mewl as you do so. As you proceed to fondle him, there even is a little purr that can be heard from your former opponent. Clearly, he is starting to realize that becoming your kitty will have its own rewards.";
+	say "     The jaguar makes no attempt to resist as you position your [cock size desc of Player] [Cock of Player] cock at his rear, merely releasing a whimpering mewl as you tease his outer ring with the tip of your member. You groan in pleasure as you begin pushing into his tight opening, slowly driving your entire length into the whimpering kitty beneath you. As your hips meet his ass you lean forward over your plaything, reaching around his body to grasp his cock, hard and ready despite his current situation. As you gently stroke his cock you feel the feline barbs adorning it, finding them strangely soft and pliant. After teasing the beaten kitty for a short while you begin giving him a proper fucking, gripping his hips tightly as you pound into his tight bottom relentlessly[if Player is barbed], delighting in his yowls of pleasure and pain as your barbed shaft pistons in and out of his tight hole[end if]. You roar in pleasure as you rapidly push yourself to climax, holding the jaguar's ass tightly to your body as you unleash your [Cum Load Size of Player] load into his bowels while his own seed splatters onto the museum floor beneath him. As your climax begins to subside [if Player is barbed]the jaguar releases one last weak whimper as you pull yourself from his tight ass, your barbs scraping along his inner walls one last time before you[else]you pull yourself from the jaguar's tight ass and[end if] allow him to fall to the floor.";
+	NPCSexAftermath Tehuantl receives "AssFuck" from Player;
+	WaitLineBreak;
+	say "     After remaining on his belly for a few moments as he pants in exhaustion, the jaguar eventually twists around, flopping down to lay on his back. What an inviting sight - so very docile now that you've broken him in, looking up at you in adoration. His belly-fur is wet and matted with the load of cum you fucked out of him and a slight trickle of your seed oozes out of his well-bred ass. Crouching down over the jaguar warrior, you wipe up the cum with two fingers and bring them to his muzzle - and your pet laps up the creamy treat without any hesitation. You can't help but smile as you tell him that he's been a very good boy, then hold out a hand for him to take and pull him up along as you stand up. Your new pet leans in and nuzzles against your chest as you make your way back to the Grey Abbey Library with him.";
+	say "[TehuantlMaleShift]";
+	say "[TameTehuantl]";
+
+to say TehuantlTameSex2: [player rubs balls, then rides his dick -> male T]
+		say "     Twisting your upper body and leaning back a little, you reach out and cup the jaguar's family jewels. His furry balls are warm and delightfully soft against your skin - at the same time as they are nicely full and weighty. You just have to comment that he's quite the virile kitty - then add that he shouldn't worry too much about his fate. Sure, he's yours now, as are his balls and cock - but there's no reason this shouldn't be enjoyable for the both of you. And with that, you start to gently caress him with your hand, drawing a little surprised mewl as you do so. As you proceed to fondle him, there even is a little purr that can be heard from your former opponent. Clearly, he is starting to realize that becoming your kitty will have its own rewards.";
+		say "     When you let go of him and rise to reposition yourself, the jaguar makes no attempt to escape, merely releasing a whimpering mewl as you take hold of his feline shaft, hard and ready despite his current situation. As you gently stroke his cock, you feel the feline barbs adorning it, strangely soft and pliant despite their sharp appearance. Satisfied that your plaything is ready for some fun, you position his cock just outside your [cunt size desc of Player] cunt and slowly lower yourself down onto it with another rumble of delight, the feeling of his soft barbs gently teasing your inner walls only adding to the pleasant sensation. As the jaguar's entire length is hilted inside you, you lean forward once again, gripping his shoulders tightly as you begin to ride his shaft roughly.";
+		WaitLineBreak;
+		say "     You moan and gasp in pleasure as you rise and fall along the stimulating barbed shaft while the jaguar groans and mewls beneath you. Oh yeah - winning this fight really was worth it! You ride the muscled feline with great pleasure, playing your hands over his strong arms and ribbed abs. Quite a hunk - and he's all yours! A roar in pleasure rises in your throat you rapidly push yourself to a breathtaking climax, your pussy clamping down tight around the feline member as your orgasm strikes, pushing the jaguar to climax as well. His entire form shudders beneath you as his warm load pulses into your body. Even as your climax begins to subside and you begin rocking your body against the shivering jaguar once again, his pulsing member continues to fire spurt after spurt of feline cum into you.";
+		say "     The jaguar's orgasm lasts a long while, with more and more of his potent seed gushing into your depths. The constant throb inside your body and twitching of his nubby barbs against your inner walls keeps the high from your own climax going - reducing you to the strength of a kitten from all the pleasure. Yet despite this, your sexual partner still does nothing to gain the upper hand. Clearly, he has learned his lesson - and is feeling far too good right now to care that he's gonna be your pet. In fact, the exhausted feline starts rumbling in a pleasant purr and looks up at you with adoration. Very nice - and you immediately get another idea what he can do for you next. Raising your hips a little, you slide off the barbed shaft in your pussy and move up to his head on your knees, leaving a trail of dripping cum all over his belly fur. Coming to kneel over his face, there is no hesitation at all for your boy-toy to start licking, eating his load out of your pussy.";
+		WaitLineBreak;
+		say "     After a very pleasurable time having your female bits licked and teased, you can't help but smile as you tell the jaguar that he's been a very good boy, then you hold out a hand for him to take and pull him up along as you stand up. Your new pet leans in and nuzzles against your chest as you make your way back to the Grey Abbey Library with him.";
+		NPCSexAftermath Player receives "PussyFuck" from Tehuantl;
+		NPCSexAftermath Tehuantl receives "OralPussy" from Player;
+		say "[TameTehuantl]";
+		now HP of Tehuantl is 50; [male jaguar pet]
+
+to say TehuantlTameSex3: [player rubs nipples, then fucks his ass and pussy -> female T]
+	say "     Stroking both hands over the jaguar warrior's back, you let them slide around his sides, searching out the little nubs of his nipples on the feline's chest. He gives a little surprised mewl as you brush over them, then lightly pinch both at the same time. Bent over the spotted feline, you comment that he's quite the sexy pussycat - and that he shouldn't worry too much about his fate. Sure, he's yours now, and you reserve the right to pet him and play with his nipples whenever you want - but there's no reason this shouldn't be enjoyable for the both of you. As you proceed to rub him in circling motions, there even is a little purr that can be heard from your former opponent. Clearly, he is starting to realize that becoming your kitty will have its own rewards.";
+	say "     The jaguar makes no attempt to resist as you position your [cock size desc of Player] [Cock of Player] cock at his rear, merely releasing a whimpering mewl as you tease his outer ring with the tip of your member. You groan in pleasure as you begin pushing into his tight opening, slowly driving your entire length into the whimpering kitty beneath you. As your hips meet his ass you lean forward over your plaything, reaching around his body to grasp his cock, hard and ready despite his current situation. As you gently stroke his cock you feel the feline barbs adorning it, finding them strangely soft and pliant. After teasing the beaten kitty for a short while you begin giving him a proper fucking, gripping his hips tightly as you pound into his tight bottom relentlessly[if Player is barbed], delighting in his yowls of pleasure and pain as your barbed shaft pistons in and out of his tight hole[end if]. You roar in pleasure as you rapidly push yourself to climax, holding the jaguar's ass tightly to your body as you unleash your [Cum Load Size of Player] load into his bowels while his own seed splatters onto the museum floor beneath him. As your climax begins to subside [if Player is barbed]the jaguar releases one last weak whimper as you pull yourself from his tight ass, your barbs scraping along his inner walls one last time before you[else]you pull yourself from the jaguar's tight ass and[end if] allow him to fall to the floor.";
+	NPCSexAftermath Tehuantl receives "AssFuck" from Player;
+	WaitLineBreak;
+	say "     You watch with curious interest as the shivering feline rolls to his back, his thick white seed still spilling from his spasming shaft. His cock is now noticeably smaller than it was when you held it in your hand. As the final spurts of his male cum drip from its tip, you watch his once-virile balls pull tightly against his body before slipping inside him with an unsettling slurp, leaving behind a dripping feline cunt. The jaguar moans in pleasure as you slip a finger into the wet new opening, almost effortlessly pushing her to her first female climax as what remains of her cock shrinks away to a tiny nub at the top of her pussy.";
+	say "     Eager to make use of this inviting new opening you lower yourself over the whimpering kitty, aligning your shaft with her new cunt and driving into her before her last orgasm has even subsided. You rumble happily as you pound into the newly-minted female feline, taking it slowly this time as you watch the changes ripple outwards from her crotch. Her hips and ass plump out to an attractive new shape, clearly built for childbirth. Her form becomes slim and delicate as the masculine features seem to melt away, extra mass rolling up and across her body to gather at her chest. You tweak and tease her swollen puffy nipples as they swell outward, into large sumptuous breasts. The jaguar mewls up at you plaintively as the changes shift to her face, the once-strong masculine features becoming gentle and feminine while long locks of dark hair flow from her head. As the changes come to their end the jaguar yowls out in ecstasy beneath you, her cunt clamping around you tightly as she reaches orgasm once again, driving you to mark her new womb with another powerful climax.";
+	NPCSexAftermath Tehuantl receives "PussyFuck" from Player;
+	WaitLineBreak;
+	say "     As you roll off her exhausted form, the rumbling kitty snuggles up against you, staring up at you with a look of adoration as she slips out of consciousness. Clearly very little of the once dominant feline remains in this docile new creature and without a second thought you pull her into your arms as you rise to your feet. Your new pet nuzzles against your chest as you make your way back to the bunker.";
+	say "[TameTehuantl]";
+	now HP of Tehuantl is 10; [female jaguar pet]
+
+to say TehuantlTameSex4: [player rubs nipples, then rides his dick -> female T]
+	say "     Stroking both hands over the jaguar warrior's firm pecs, you feel his muscles and then search out the little nubs of his nipples. He gives a little surprised mewl as you brush over them, then lightly pinch both at the same time. Bent over the spotted feline, you comment that he's quite the sexy pussycat - and that he shouldn't worry too much about his fate. Sure, he's yours now, and you reserve the right to pet him and play with his nipples whenever you want - but there's no reason this shouldn't be enjoyable for the both of you. As you proceed to rub him in circling motions, there even is a little purr that can be heard from your former opponent. Clearly, he is starting to realize that becoming your kitty will have its own rewards.";
+	say "     When you let go of him and rise to reposition yourself, the jaguar makes no attempt to escape, merely releasing a whimpering mewl as you take hold of his feline shaft, hard and ready despite his current situation. As you gently stroke his cock, you feel the feline barbs adorning it, strangely soft and pliant despite their sharp appearance. Satisfied that your plaything is ready for some fun, you position his cock just outside your [cunt size desc of Player] cunt and slowly lower yourself down onto it with another rumble of delight, the feeling of his soft barbs gently teasing your inner walls only adding to the pleasant sensation. As the jaguar's entire length is hilted inside you, you lean forward once again, gripping his shoulders tightly as you begin to ride his shaft roughly.";
+	WaitLineBreak;
+	say "     You moan and gasp in pleasure as you rise and fall along the stimulating barbed shaft while the jaguar groans and mewls beneath you. You roar in pleasure as you rapidly push yourself to your first climax, your pussy clamping down tight around the feline member as your orgasm strikes, pushing the jaguar to climax as well. His entire form shudders beneath you as his warm load pulses into your body and you feel a strange shifting of his shaft within you. Even as your climax begins to subside and you begin rocking your body against the shivering jaguar once again, his pulsing member continues to fire spurt after spurt of his feline cum into you. Intent on riding him to a second climax, you continue driving his length into your body, but with each thrust you feel less and less of that intense stimulation. Fearing your plaything may be going soft on you, you slow to a stop and growl down at him, but you notice something very different about the once-large feline beneath you. His broad, powerful torso has slimmed to a shapely female form, as your eyes follow his body down to where your crotch meets his, you are shocked by the wide birthing hips the feline now possesses. Releasing his shoulders, you trace a finger down his slim, delicate chest to the swollen, puffy nipples, cupping them gently as they swell into large, sumptuous breasts before your eyes.";
+	say "     The jaguar mewls up at you plaintively as the changes shift to his face, the once-strong masculine features becoming gentle and feminine while long locks of dark hair flow from his head. Realizing there is only one sign of the jaguar warrior's previous male self left, you slowly lift yourself from his cock, now noticeably smaller as you once again hold it in your hand. As the final spurts of his male cum drip from it tip, you watch his once-virile balls pull tightly against his body before slipping inside him with an unsettling slurp, leaving behind a dripping feline cunt. The jaguar moans in pleasure as you slip a finger into the wet new opening, almost effortlessly pushing her to her first female climax as what remains of her cock shrinks away to a tiny nub at the top of her pussy.";
+	WaitLineBreak;
+	say "     The exhausted kitty rumbles at she stares up at your with adoration, clearly very little of the once dominant feline remains in this docile new creature and without a second thought your reach down for her. Your new pet nuzzles against your chest as you lift her into your arms, cradling her gently against you as you make your way back to the bunker.";
+	NPCSexAftermath Player receives "PussyFuck" from Tehuantl;
+	say "[TameTehuantl]";
+	now HP of Tehuantl is 10; [female jaguar pet]
+
+to say TehuantlMaleShift:
+	now HP of Tehuantl is 50; [male jaguar pet]
+	now Cock Count of Tehuantl is 1;
+	now Cock Length of Tehuantl is 12;
+	now Ball Size of Tehuantl is 5;
+	now Ball Count of Tehuantl is 2;
+	now Cunt Count of Tehuantl is 0;
+	now Cunt Depth of Tehuantl is 0;
+	now Cunt Tightness of Tehuantl is 0;
+	now Nipple Count of Tehuantl is 2; [2 nipples]
+	now Breast Size of Tehuantl is 0;
 
 to say TameTehuantl:
 	now battleground is "void";
@@ -176,7 +248,7 @@ to say TameTehuantl:
 	setmonster "Jaguar Warrior";
 	choose row MonsterID from the Table of Random Critters;
 	now area entry is "Nowhere";
-	now TehuantlTimer is turns;
+	now Energy of Tehuantl is turns;
 
 Section 2 - Creature Insertion
 

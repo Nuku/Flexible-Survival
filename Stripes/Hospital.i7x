@@ -1231,9 +1231,6 @@ to say hospvictory:
 	if HP of Doctor Matt is not 100:
 		now player is in Primary Lab;
 
-
-fightstatus is a number that varies.
-
 to say tlabsbigfight:
 	say "     You silently step up behind Dr Matt and stab the needle into him. He cries out for Orthas and jabs a finger into an emergency button, sounding an alarm as well. Trying to free himself from your grip, he struggles to reach the anti-infection microwave device he has on his desk. As you fight to hold him, his now useless environment suit starts to come off.";
 	WaitLineBreak;

@@ -6,6 +6,7 @@ Version 2 of Leopardman by Sarokcat begins here.
 Section 1 - Creature Responses
 
 to say leopardman desc:
+	project Figure of Leopardman_soft_icon;
 	setmongender 3;  [creature is male]
 	if artleopardfight is 3:	[Description for Art Collector event]
 		say "     As the leopardman growls again and stalks towards you, you get a good look at the powerful feline male. His strong body is covered with leopard-like fur, and as he rises up to two feet and flexes his claw-tipped hands, you get a very good look at his rather erect feline cock. Looking around quickly, you realize the leopardman has moved to block your exit. As you prepare to fight, you can see a playful grin cross the muzzle of the obviously aroused feline. '[one of]You'll pay for this interruption[or]I don't have time, you wretched thief[or]Let's get this over with quick. I have more important matters to deal with[or]I'm going to turn you in a scratching post[in random order],' he says as he leaps forward after his prey. Already weakened from your long climb, you hope you're still up for a fight.";
@@ -15,6 +16,7 @@ to say leopardman desc:
 		say "     As you wander the deserted streets of the city, all of a sudden a large form jumps down into the street in front of you. As it stalks towards you, you get a good look at the powerful feline man. His strong body is covered with leopard-like fur, and as he rises up to two feet and flexes his claw-tipped hands, you get a very good look at his rather erect feline cock. Looking around quickly, you realize the leopardman waited until it was far too late for you to run before he leaped down from his hiding spot. As you prepare to fight, you can see a playful grin cross the muzzle of the obviously aroused feline. [one of]'This should be fun,' [or]'Let's play leopard and mouse, shall we?' [or]'I like it when they struggle a bit,' [or]'You look like you will make a fine Leopardess...' [or]'Let's see how long you can resist me, little prey...' [at random]he says as he leaps forward after his prey.";
 
 to say Leopardman attack:
+	project Figure of Leopardman_hard_icon;
 	if artleopardfight is 3:
 		now artleopardfight is 2;
 		if HP of Player > 0:
@@ -52,6 +54,7 @@ to say Leopardman attack:
 
 
 To say Leopardman loss:
+	project Figure of Leopardman_hard_icon;
 	if artleopardfight is 3:
 		now artleopardfight is 1;
 		say "     The leopardman staggers back, his feline muzzle scrunched up in pain as he clutches at his wounds and glares at you for a minute. As you step forward to continue the fight, the feline glances to the side and dashes off into the office on the opposite side of the room, slamming the door and locking it.";

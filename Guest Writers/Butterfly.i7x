@@ -764,11 +764,11 @@ to say damaged negligee desc:
 	if lingerie store is unknown:
 		now lingerie store is known;
 
-testosterone pill is a grab object. It is temporary. It is a part of the player.
-pristine negligee is a grab object. It is not temporary. It is a part of the player.
-damaged negligee is a grab object. It is not temporary. It is a part of the player.
-cute panties is a grab object. It is not temporary. It is a part of the player.
-sexy nightie is a grab object. It is part of the player. It is not temporary.
+testosterone pill is a grab object. It is temporary.
+pristine negligee is a grab object. It is not temporary.
+damaged negligee is a grab object. It is not temporary.
+cute panties is a grab object. It is not temporary.
+sexy nightie is a grab object. It is not temporary.
 
 the scent of testosterone pill is "The testosterone pill is largely odorless, but a very faint scent conjures images of motor-oil, sawdust and duct tape.".
 the scent of pristine negligee is "The pristine negligee smells fresh airy just like the day it was made.".

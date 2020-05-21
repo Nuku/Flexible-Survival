@@ -39,7 +39,7 @@ the sarea of Snared Vixen is "Beach".
 when play begins:
 	add Snared Vixen to BadSpots of FemaleList; [We may want to add an event later to allow people with 'girl' banned access to the Bouncy Castle]
 	add Snared Vixen to BadSpots of FurryList;
-	now Dolphinlist is { "C", "A", "X", "B", "X", "C", "A", "D", "X", "C", "X", "A" }; [Creates a list of letters that are pulled for later events]
+	now dolphinlist is { "C", "A", "X", "B", "X", "C", "A", "D", "X", "C", "X", "A" }; [Creates a list of letters that are pulled for later events]
 	let templist be { "A", "C", "D", "E"}; [Prepares additional events to add to dolphinlist]
 	sort templist in random order; [Sets these extra events to slots 3, 5, 9, and 11 for a quasi-random search]
 	now entry 3 of dolphinlist is entry 1 of tempList;

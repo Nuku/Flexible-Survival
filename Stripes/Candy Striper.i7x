@@ -695,7 +695,7 @@ after going to Grey Abbey 2F while (Candy is in the Bunker and CandyUrikInteract
 	say "     Coming up the stairs to the second floor of the library, you immediately discover Urik snoozing on his sofa... and Candy, almost fucked senseless and lying on the green brute's broad chest. He breathes like he just ran a marathon, visibly exhausted from the orc's vigorous fucking. 'Let [if HP of Candy > 2 and HP of Candy < 100]John[else]everyone[end if] know I died doing what I love,' the raccoon announces theatrically. You try not to roll your eyes too hard at his dramatics and inform him he's probably going to live, eliciting a huff from your flamboyant friend. 'You're no fun at all. Here I am having a moment and you have to rain on my parade.' You chuckle at the raccoon's behavior and head off to let him catch his breath.";
 	now LastCandyWalkin is turns;
 
-instead of navigating Grey Abbey Library while (Candy is in the Bunker and HP of Fang is 3 or HP of Fang is 4 and HP of Candy > 0 and LastCandyWalkin - turns > 8 and a random chance of 1 in 3 succeeds):
+instead of navigating Grey Abbey Library while (Candy is in the Bunker and (HP of Fang > 1) and HP of Candy > 0 and LastCandyWalkin - turns > 8 and a random chance of 1 in 3 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;

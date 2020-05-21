@@ -332,27 +332,45 @@ to say LoganSex3: [ass-fucking by Logan]
 
 to say LoganSex4: [spitroast Blake]
 	say "     Stepping up to the improvised bedding on which Blake is stretched out, you smile down at the rat, already starting to get hard as you imagine what you can do to him. Then you look over your shoulder and [if Androginity of Player < 3]call out to Logan, asking if he wants to share the whore[else if Androginity of Player < 8]ask Logan if he wants to share your plaything[else]invite Logan to join you in enjoying the rat's body[end if]. The wolverine raises an eyebrow in a little bit of a surprised expression, since it is kinda 'your turn' to pound Blake and he didn't quite expect you to be generous about inviting anyone else in. '[if Loyalty of Logan > 0]Sure thing, who wouldn't want to take that slut,' [else]Why? You want me to show you how it's really done?' [end if]he finally says, grinning as he approaches and steps up next to you. Looking down at the tied-up captive, Logan grabs his bulge and gives you a nod. 'I'm gonna take the tighter end.' With that said, the muscular anthro pulls down the zipper of his uniform jacket and shrugs it off, quickly followed by his pants. Proudly showing off his girthy shaft as he lets it swing freely, the wolverine gets on the bedding with Blake, pulling him into a kneeling position with his ass raised high.";
-	if Loyalty of Logan > 4: [DP route]
-		say "     With the fingers of his large paw-hand curled around the base of his shaft, Logan smacks it down into the crack of Blake's ass, rubbing against his pucker. He starts to push into the rat, then suddenly pauses in motion and looks up at you. 'You know what? Wanna share this hole? Little whore has gotten so much big dick, I think he can take us both at the same time by now!' He grins broadly as he ";
-	else:
-		say "     normal route";
-	say "     ...";
-	if Loyalty of Logan is 0: [no Loyalty yet]
-		say "     Offers Fist bump over the back of Blake, both your dicks inside the rat";
+	if Loyalty of Logan is 5 and "DP Bitch" is not listed in Traits of Blake: [first DP]
+		say "     With the fingers of his large paw-hand curled around the base of his shaft, Logan smacks it down into the crack of Blake's ass, rubbing against his pucker. He starts to push into the rat, then suddenly pauses in motion and looks up at you. 'You know what? Wanna share this hole? Little whore has gotten so much big dick, I think he can take us both at the same time by now!' He grins broadly as he shuffles back on his knees and waves you over to take his place. Blake squirms a little, his back door glistening with Logan's pre-cum as it irises open and shut in nervousness about what's to come.";
 		say "     [bold type]How do you react?[roman type][line break]";
 		LineBreak;
-		say "     ([link]Y[as]y[end link]) - Meet him in the fist bump. You're bro's sharing a slut after all.";
-		say "     ([link]N[as]n[end link]) - Just focus on your ratty slut and pound Blake harder.";
+		say "     ([link]Y[as]y[end link]) - Ravage Blake's ass with Logan.";
+		say "     ([link]N[as]n[end link]) - Pass on his offer.";
 		if Player consents:
 			LineBreak;
 			say "     ...";
-			if Loyalty of Logan < 10:
-				increase Loyalty of Logan by 1;
+			increase Loyalty of Logan by 1;
+			add "DP Bitch" to Traits of Blake;
 		else:
 			LineBreak;
-			say "     ...";
-			if Loyalty of Logan > 0:
-				decrease Loyalty of Logan by 1;
+			say "     As you decline the double-penetration, Logan lets out a grunt, then shrugs his broad shoulders. 'Your loss,' he adds as he thrusts himself harshly back into the street rat, his thick shaft penetrating all the way up to the base in one fell swoop that draws a ball-gag muffled shout from Blake. The wolverine jumps straight into power-fucking your captive, filling the air with the slapping sounds of his balls hitting Blake's ass. Meanwhile, you get into position at the rodent anthro's front and start to undo one of the straps holding his ball-gag in place. As you pull it out of the rat's muzzle, he keeps it wide open for a few seconds longer, out of habit at being gagged so long. Then his pointy muzzle snaps shut, lips drawing tight and his jaw moving a little to stretch in ways that have been denied to him for a while now. 'Stop this and free m-' Blake starts to hoarsely demand, only to be interrupted as Logan slams himself home once again and forces a loud moan from the tied-up slave.";
+			say "     'God, it's so fucking thick!' the street rat groans out, at which point you bring your own [Cock of Player] shaft forward and plug his muzzle a different way. Hands moving to the sides of the anthro rodent's blindfolded head, you dig your fingers into his shaggy hair and clamp your thumbs over his protruding ears, then proceed to face-fuck Blake like the slut you've made him. As your manhood slides against his tongue and into the back of his throat, Blake's lips draw tight around your girth and his inner muscles clench nice and tight. You can't quite tell if this is him still trying to speak, attempts to pleasure you or something else - but then, who cares in the end? You've got a nice and readily available hole to fuck, and that's what you're gonna do.";
+			WaitLineBreak;
+			say "     Spit-roasting the rat from both ends, the three of you fill the grimy side alley with loud sounds of sex, prompting more than a few passersby to stop on their way to the Shag Shack and watch for a little while before moving on. You definetly hear some aroused cheers and laughter coming from the entrance of the alley, and there might have been some comments about trying your whore sometime. ";
+			decrease Loyalty of Logan by 1;
+	else:
+		say "     normal route";
+		say "     ...";
+		if Loyalty of Logan is 0: [no Loyalty yet]
+			say "     Offers Fist bump over the back of Blake, both your dicks inside the rat";
+			say "     [bold type]How do you react?[roman type][line break]";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - Meet him in the fist bump. You're bro's sharing a slut after all.";
+			say "     ([link]N[as]n[end link]) - Just focus on your ratty slut and pound Blake harder.";
+			if Player consents:
+				LineBreak;
+				say "     ...";
+				if Loyalty of Logan < 5:
+					increase Loyalty of Logan by 1;
+				else if Loyalty of Logan < 10 and "DP Bitch" is listed in Traits of Blake: [deeper friendship unlocked]
+					increase Loyalty of Logan by 1;
+			else:
+				LineBreak;
+				say "     ...";
+				if Loyalty of Logan > 1:
+					decrease Loyalty of Logan by 1;
 
 
 after going to Dirty Alley while Logan is in Dirty Alley:

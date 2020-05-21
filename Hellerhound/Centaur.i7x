@@ -61,7 +61,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "fresh apple"	"A rosy red apple."	1	fresh apple
 
-fresh apple is a grab object. It is a part of the player. Understand "apple" and "fresh" as fresh apple. fresh apple is infectious. The strain of fresh apple is "Mutant Centaur". The purified of fresh apple is "food".
+fresh apple is a grab object. Understand "apple" and "fresh" as fresh apple. fresh apple is infectious. The strain of fresh apple is "Mutant Centaur". The purified of fresh apple is "food".
 
 the scent of fresh apple is "The apple smells fresh and juicy at first, though you notice a strange, rotten smell hidden beneath that.".
 

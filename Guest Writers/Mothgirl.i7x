@@ -254,7 +254,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "cock pill"	"This small pea like object is blue in color and seems to have a phallic symbol of a penis on it"	1	cock pill
 
-cock pill is a grab object. It is temporary. It is a part of the player.
+cock pill is a grab object. It is temporary.
 
 instead of sniffing cock pill:
 	say "The small pill smells faintly of male pheromones and arousal.";

@@ -61,8 +61,8 @@ name	desc	weight	object
 
 the scent of blood pill is "The strange pill has a harsh, metallic scent."
 
-blood pill is a grab object. It is a part of the player. It is temporary. Understand "pill" as blood pill.
-the usedesc of blood pill is "[bloodpilluse]". blood pill is addictive. It is a part of the player.
+blood pill is a grab object. It is temporary. Understand "pill" as blood pill.
+the usedesc of blood pill is "[bloodpilluse]". blood pill is addictive.
 
 onbloodpill is a number that varies.[@Tag:NotSaved]
 bloodpillturns is a number that varies.[@Tag:NotSaved]

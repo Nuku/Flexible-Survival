@@ -55,7 +55,6 @@ to say Dobermandesc:
 		increase monsterHP by lev entry;
 		increase wdam entry by ( wdam entry / 7 );
 
-
 to say dobermanattack:
 	if dobielibido < 50:
 		say "[one of]The Doberman cop fakes with her nightstick and clubs you in the jaw with her off hand![or]The canine cop jabs her nightstick into your gut, making you double over![or]The nightstick strikes your arm with a painful blow![or]The Doberwoman hooks her nightstick behind your knee and causes you to fall![or]The policewoman snaps at you with her vicious, canine muzzle![or]The police dog gives you a firm knock on the head with her nightstick![or]Knocking your arm aside with her nightstick, she steps in and rams her knee into your gut![at random]";
@@ -63,7 +62,6 @@ to say dobermanattack:
 		say "[one of]The Doberman cop fakes with her nightstick and clubs you in the jaw with her off hand![or]The canine cop jabs her nightstick into your gut, making you double over![or]The nightstick strikes your arm with a painful blow![or]The Doberwoman hooks her nightstick behind your knee and causes you to fall![or]The policewoman snaps at you with her vicious, canine muzzle![or]The police dog gives you a firm knock on the head with her nightstick![or]Knocking your arm aside with her nightstick, she steps in and rams her knee into your gut![or]The Doberman cop knocks your arm aside before groping you roughly![or]The sexually excited policewoman grinds her body against yours before realizing what she's doing and pushing you away![or]Getting behind you momentarily, the Doberwoman gives your ass a squeeze before jabbing her nightstick into your side![at random]";
 	else:
 		say "[one of]The Doberman cop fakes with her nightstick and clubs you in the jaw with her off hand![or]The canine cop jabs her nightstick into your gut, making you double over![or]The nightstick strikes your arm with a painful blow![or]The Doberwoman bashes her nightstick into your knee painfully![or]The policewoman bites you with her vicious, canine muzzle![or]The police dog gives you a hard blow to the head with her nightstick![or]Knocking your arm aside with her nightstick, she steps in and rams her knee into your gut![or]The Doberman cop knocks your arm aside before groping you roughly![or]The sexually excited policewoman grinds her body against yours while twisting your arm painfully![or]Getting behind you momentarily, the Doberwoman gives your ass a squeeze before bashing her nightstick against your ribs![or]The lustful cop pulls your face into her bosom, holding you there while she knees you in the gut![or]After hooking your leg with her nightstick to trip you, the Doberman grabs your head and presses it against her juicy cunt, forcing you to take in her arousing scent![at random]";
-
 
 to say losetoDoberman:
 	if dobielibido < 50:
@@ -168,7 +166,6 @@ to say losetodobie1:		[low-lust player loss]
 		decrease dobielibido by 5;
 		if dobielibido < 1, now dobielibido is 1;
 
-
 to say losttodobie2:		[mid-lust player loss]
 	choose row MonsterID from the Table of Random Critters;
 	let fine be 0;
@@ -207,7 +204,6 @@ to say losttodobie2:		[mid-lust player loss]
 	extend game by ( 0 - timepenalty );
 	decrease dobielibido by 5;
 	if dobielibido < 1, now dobielibido is 1;
-
 
 to say losetodobie3:		[high-lust player loss]
 	project the figure of Alexandra_naked_frown_icon;
@@ -252,18 +248,15 @@ to say losetodobie3:		[high-lust player loss]
 	extend game by ( 0 - timepenalty );
 	if dobielibido < 1, now dobielibido is 1;
 
-
 to say dobieride:
 	say "     The female Doberman keeps you pinned down on your back and grinds her hips down on your lap, quickly getting a rise out of your [cock size desc of Player] [Cock of Player] cock. After removing the intervening clothes, she takes a hold of your erection and lowers her juicy pussy to rub across it, quickly soaking your shaft in her scent. As the motion across your loins and that scent fill your senses, you pull at the cuffs, wanting to grab her and force her down onto you but unable. She grins down at you, teasing you a little longer before finally taking what she wants just as badly as you now, releasing a bark of pleasure as your throbbing maleness slides into her.";
 	say "     She rides you hard and fast in her search for some relief from her excessive lust. Her small claws dig into your shoulders as she roughly uses you. Despite your trapped situation, you cannot help but feel darkly proud at how you've turned the restrained cop into a lust-crazy hound. The sight of her panting and drooling like a bitch in heat while her lovely brown breasts sway openly as she rides you is a lovely sight to behold. As she starts to howl in ecstasy, you can feel her cunt clamp down around you, milking you into orgasming as well. You blast your hot load into the canine bitch, filling her with your seed until it overflows around your shaft and runs down her thighs as she pulls off you.";
 	say "     The female cop stands back up and looks you over, fingers buried in her well-seeded muff. 'Mmm... that's much better. Now, while I'm tempted to just leave you there for the other creatures to use,' she says with a dark grin on her muzzle, 'I do need those cuffs back for my next vi... ah... perp. Besides, that only means I might get to track you down again if you need another reminder to stay off the streets,' she adds, giving you a hard kick to the ribs to punctuate her threat. 'You piece of trash!'";
 
-
 to say dobiensvag:
 	say "     The female Doberman keeps you pinned to the ground with your ass in the air and gropes your crotch, getting a moan from you as she rubs over your pussy. She drives a couple of fingers into you, getting your cunt to quiver and drip with juices. 'How does a little payback sound, you little slut?' she growls, fingering you harder until you moan again. As she's thrusting [if Cunt Tightness of Player < 5]a pair of fingers[else if Cunt Tightness of Player < 9]three fingers[else]her whole fist[end if] into your [cunt size desc of Player] cunt, she grinds her canine muff against her nightstick. You can see and smell her hot juices running down that hard, black rod.";
 	say "     Noticing where you're looking, she grins and moves to slide the end of the nightstick slowly between your ass cheeks[if anallevel is 3], grinding it against your pucker[end if]. 'Looking for something long and hard to fill you, aren't you?' she teases before trailing it lower and sinking it into your cunt to replace her fingers. You groan as the cool length is pushed into you and she starts fucking you with it. You moan and start pushing back onto it despite yourself. While the nightstick is hard and you can feel the end sliding in and out, the length is too smooth and slick to provide proper stimulation and it is too hard to make it a fully enjoyable fit. Overall, it provides some satisfaction but also longing for more, making you ride it harder, much to the canine cop's enjoyment. She is more than happy to pound it into you hard and to call you a slut while doing it. Eventually, it all becomes too much and you cum hard, adding a rush of your own juices across the slick rod and sending them running down your thighs and her gripping paw[if Player is male] and you spray your hot seed across the dirty ground[end if].";
 	say "     She pulls the nightstick slowly from you and gives it a fast swing, splattering the juices from it across your back. Her own thighs, you notice, as also soaked, having fingered herself to orgasm while abusing your now aching pussy. 'Mmm... now that's much better. Now, while I'm tempted to just leave you there for the other creatures to use,' she says with a dark grin on her muzzle, 'I do need those cuffs back for my next vi... ah... perp. Besides, that only means I might get to track you down again if you need another reminder to stay off the streets,' she adds, giving you a hard kick to the ribs to punctuate her threat. 'You piece of trash!'";
-
 
 to say dobiensanal:
 	if Player is herm:		[herm version]
@@ -279,7 +272,6 @@ to say dobiensanal:
 		say "     The female Doberman keeps you pinned to the ground with your ass in the air and gropes your crotch, but growls in frustration as she finds nothing there at all. She gives your ass a hard slap and starts to laugh. 'You do all that work to get me worked up and then you end up like this. Leaving me with nothing to play with at all,' she growls angrily, pushing you down hard. 'Well, not quite nothing, it seems,' she adds, nipping at your neck as she grinds her pussy against the grip of her nightstick, shuddering in pleasure as the handle is pushed into her. Given her ease at taking it, it seems she's done this a few times recently in an attempt to relieve her aching loins and now you'll get to enjoy the show.";
 		say "     She rides the short handle, letting its rippled surface stimulate her. Noticing where you're looking, she makes a show of slowly pulling back off of it with a wet pop. She then turns the nightstick around, bringing the slick handle to your asshole. 'That's right. There's still one thing left for me to play with,' she chuckles, pushing the weapon's grip into your anus. You groan at the sudden intrusion and pull at the cuffs securing you, her juices only slightly easing the passage of the cool, hard handle into you. With one paw on the short section of the rod, she brings her pussy into position to grind against the lower length, causing the handle inside you to shift with her every motion. She grins sadistically and grinds herself along the smooth, slick surface of the nightstick and sliding the handle around inside your stuffed anus, causing you to groan in both pain and pleasure as her arousing scent fills the air. She gives your ass more slaps, each which makes your hips jerk, grinding the nightstick against her in response. She keeps this treatment up until she finally cums hard, sending her juices running down the nightstick to pool on the ground beneath it.";
 	say "     She pulls the nightstick slowly from you and wipes it off across your back. Her own thighs, you notice, are soaked with the canine's juices from her own orgasm while abusing your now aching anus. 'Mmm... now that's much better. Now, while I'm tempted to just leave you there for the other creatures to use,' she says with a dark grin on her muzzle, 'I do need those cuffs back for my next vi... ah... perp. Besides, that only means I might get to track you down again if you need another reminder to stay off the streets,' she adds, giving you a hard kick to the ribs to punctuate her threat. 'You piece of trash!'";
-
 
 to say weaponconf:
 	if dirty whip is owned or infected sword is owned:
@@ -341,7 +333,6 @@ to say weaponconf:
 			unwield infected sword silently;
 			delete infected sword;
 
-
 to say beattheDoberman:
 	project the figure of Alexandra_naked_frown_icon;
 	if dobielibido < 1, now dobielibido is 1;
@@ -356,12 +347,20 @@ to say beattheDoberman:
 
 to say beatthedobie1:			[low-lust cop player victory]
 	if Player is not neuter:
-		say "     Looking her over, you can't help but find the canine woman's body more than a little sexy, especially in that cop uniform.";
-		say "     [bold type]Shall you take advantage of his opportunity to have some fun with the hot policewoman?[roman type][line break]";
-		LineBreak;
-		say "     ([link]Y[as]y[end link]) - Sex her up.";
-		say "     ([link]N[as]n[end link]) - No, just leave.";
-		if Player consents:
+		say "     Looking her over, you wonder what you shall do with the canine woman now.";
+		say "     [link](1)[as]1[end link] - Sex her up.";
+		say "     [link](2)[as]2[end link] - Dominate her (nonsexually).";
+		say "     [link](3)[as]3[end link] - Nothing, just leave.";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 3:
+			say "Choice? (1-3)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to fuck, [link]2[end link] to dominate or [link]3[end link] to flee.";
+		if calcnumber is 1:
+			LineBreak;
 			say "     Grabbing her firmly, you pin her down with one arm while the other roams over her body, groping her ass and breasts before sliding down her pants and panties. She bites her lip, but soon starts to moan despite herself as her canine body starts to respond as you pump a pair of fingers into her increasingly wet pussy. Soon she's panting lustfully and unable to resist your further advances.";
 			say "     [bold type]Now that you've got her worked up, shall you [if Player is male]fuck her[else]keep fingering her[end if] or get that muzzle and long tongue of hers to work pleasing you?[roman type][line break]";
 			LineBreak;
@@ -371,22 +370,25 @@ to say beatthedobie1:			[low-lust cop player victory]
 				if Player is male:
 					say "     You grab the dog-woman's hip and pull her ass up as you move atop her. A small part of her seems to still want to resist for a moment before giving in and she grinds her sexy bottom against your throbbing cock, her tail wagging excitedly. She moans and yips as you thrust into her, pounding away at her doggy cunt. Having been resisting her sexual instincts for so long, she can't help but respond powerfully once they're released. You fuck the policewoman bitch, making her cum repeatedly before you blast your hot load deep inside her. As her final, powerful orgasm washes through her, she collapses to the ground, passing out after her much-needed release.";
 					increase AlexandraCreampieCount by 1;
-					increase dobielibido by 20;
 					NPCSexAftermath Alexandra receives "PussyFuck" from Player;
 				else:
 					say "     You grab the dog-woman's hip and pump your fingers into her faster. As a small part of her seems to want to resist for a moment before giving in and she presses her sexy bottom back against your stroking digits, her tail wagging excitedly. She moans and yips as you alternate between pumping your fingers into her doggy cunt and teasing her clit. Having been resisting her sexual instincts for so long, she can't help but respond powerfully once they're released. You finger-fuck the policewoman bitch, making her cum repeatedly while working a few fingers into yourself with your free hand. As her final, powerful orgasm washes through her, she collapses to the ground, passing out after her much-needed release.";
-					increase dobielibido by 12;
+					NPCSexAftermath Alexandra receives "PussyDildoFuck" from Player;
 			else:
 				if Player is male:
 					say "     You grab the dog-woman's head and press her muzzle between your legs, forcing her to take in the scent of your arousal. As a small part of her seems to want to resist for a moment before giving in and she slides her mouth over your throbbing cock, her tail wags excitedly. She moans wetly around your penis and slides a paw between her legs, plunging her own fingers into herself to replace yours. You stroke her ears and tell her what a good bitch she is as you make her suck you off. Having been resisting her sexual instincts for so long, she can't help but respond powerfully once they're released. You face-fuck the policewoman bitch, making her cum repeatedly while her long muzzle and doggy tongue slide over your cock. When you finally cum, you pull out and blast your load across her face and open muzzle. As her final, powerful orgasm washes through her, she collapses to the ground, passing out after her much-needed release.";
-					increase dobielibido by 15;
 					NPCSexAftermath Alexandra receives "OralCock" from Player;
 				else:
 					say "     You grab the dog-woman's head and press her muzzle between your legs, forcing her to take in the scent of your arousal. As a small part of her seems to want to resist for a moment before giving in and she slides her long tongue tentatively across your wet pussy before diving in, her tail wags excitedly. She moans wetly and yips between licks, sliding a paw between her legs and plunging her own fingers into herself to replace yours. You stroke her ears and tell her what a good bitch she is as you make her eat you out. Having been resisting her sexual instincts for so long, she can't help but respond powerfully once they're released. You grind your pussy against policewoman bitch's muzzle, making her cum repeatedly while her long, doggy tongue laps up your juices. When you cum in pleasure, you soak her muzzle and spill your hot juices over her tongue, which she laps up lustfully. As her final, powerful orgasm washes through her, she collapses to the ground, passing out after her much-needed release.";
-					increase dobielibido by 12;
 					NPCSexAftermath Alexandra receives "OralPussy" from Player;
-		else:
-			say "     Resisting the temptation to have sex with the canine cop, you give her a final kick to make sure she won't bother you further for the moment before walking away.";
+			increase dobielibido by 20;
+		else if calcnumber is 2: [dominate]
+			LineBreak;
+			say "     Grabbing her firmly, you pin her down against the ground. The canine cop tries for a few moments to shake you off, until the last of her fighting will is used up (for now) and she just sinks down to bide her time. Now that you've literally got her at the bottom, face pushed onto the dirty street, you mock and berate her, saying that she's a shitty cop and isn't strong enough to make it out on the streets. Or maybe she isn't even a cop anymore - just a needy bitch that jumps people because she's hungry for being pounded. You continue to go into that for a while, mocking her and saying that she should just abandon the pretense and be the horny bitch she's trying to hide so badly.";
+			say "     At first she snarls at these harsh words, twitching her head but not even able to shake it properly in her position, and you keep at it until you see the thoughts start to take root in her. With a growl, you let go and stand up, then tell her to think about what you said. Without a look back, you walk off and leave her lying on the filthy ground.";
+			increase dobielibido by 20;
+		else if calcnumber is 3:
+			say "     Pushing thoughts for other actions aside, you give her a final kick to make sure she won't bother you further for the moment before walking away.";
 	else:
 		say "     Satisfied that she won't bother you further for the moment, you give her a final kick before walking away.";
 
@@ -397,16 +399,18 @@ to say beatthedobie2:			[mid-lust cop player victory]
 		say "     [bold type]What do you want to do to your captive bitch?[roman type][line break]";
 		say "     [link](1)[as]1[end link] - [if Player is male]Fuck[else]Finger[end if] that juicy cunt of hers.";
 		say "     [link](2)[as]2[end link] - [if Player is male]Give her a titty-fuck[else]Get the doggy tongue of hers to please you[end if].";
-		say "     [link](3)[as]3[end link] - Nothing, just leave her to her own lusts.";
+		say "     [link](3)[as]3[end link] - Dominate her (nonsexually).";
+		say "     [link](4)[as]4[end link] - Nothing, just leave her to her own lusts.";
 		now calcnumber is 0;
-		while calcnumber < 1 or calcnumber > 3:
-			say "Choice? (1-3)>";
+		while calcnumber < 1 or calcnumber > 4:
+			say "Choice? (1-4)>";
 			get a number;
-			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
 				break;
 			else:
-				say "Invalid choice. Type [link]1[end link] to get some pussy, [link]2[end link] for [if Player is male]a titty-fuck[else]oral[end if] and [link]3[end link] to leave.";
+				say "Invalid choice. Type [link]1[end link] to get some pussy, [link]2[end link] for [if Player is male]a titty-fuck[else]oral[end if], [link]3[end link] to dominate her and mentally break her down, or [link]4[end link] to leave.";
 		if calcnumber is 1:
+			LineBreak;
 			if Player is male:
 				say "     Stroking your stiff cock, you grab the Doberman and pull her up. With her eyes locked hungrily on your hard penis, she obediently lets you push her over to a nearby wall. You get her to spread herself against the wall like a criminal and are pleased as she does so and even offers her ass to you, tail raised and tongue lolling out of her mouth. You take a few moments to tease her, fingering her hot, wet folds and even teasing her dark pucker with a slick finger. She yips and wags her tail, grinding back against your touch. Deciding she's had enough and that you'd rather get on to the main event, you line your cock up with her dripping slit and drive your throbbing cock into her. The canine officer barks and moans as you fuck her, lost in her lust for sex. You take perverse delight in seeing the once upstanding policewoman debase herself in her need for your cock. And you don't disappoint, cumming hard into her, pumping a hot and heavy load into the increasingly slutty bitch. When you're finished, you pull out, leaving her slumped against the wall in a pool of sexual fluids.";
 				increase AlexandraCreampieCount by 1;
@@ -415,35 +419,61 @@ to say beatthedobie2:			[mid-lust cop player victory]
 				say "     Grabbing the Doberman female roughly, you pull her up and over to a nearby well, moaning in need as she lets you manhandle her. You order her up against the wall, spreading her arms and legs and telling her it's time for her cavity search. You are pleased as she lets you spread her like a criminal and even offers her ass to you, tail raised and tongue lolling out of her mouth. You take a few moments to tease her, fingering her hot, wet folds and even teasing her dark pucker with a slick finger. She yips and wags her tail, grinding back against your touch. Deciding she's had enough teasing and that you'd rather get on to the main event, you slide your fingers back down across her taint then dive a pair of them into her dripping snatch. The canine officer barks and moans as you finger-fuck her, lost in her lust for sex. You take perverse delight in seeing the once upstanding policewoman debase herself in response to you, working to make her cum repeatedly while working a few fingers into yourself with your other hand. After a powerful, final orgasm overwhelms her, she slides down to the ground and you leave her slumped against the wall in a pool of sexual fluids.";
 				increase dobielibido by 20;
 		else if calcnumber is 2:
+			LineBreak;
 			if Player is male:
 				say "     In the mood for something a little different, you pull out your cock and move overtop of the Doberman woman. With her eyes locked hungrily on your cock, she does not resist as you grab her shirt and pull it down off her shoulders, uncovering her bosom and pinning her arms in place. You put your legs to either side of her, making sure she can't get away, not that she looks at all like she wants to. With what little movement you've allowed them, she's moved her paws to her crotch so she can continue to finger herself vigorously. She pants and yips lustfully as you press your throbbing cock between her breasts and start sliding them between her lovely, softly furred mounds. You may be mistaken, but they seem a little larger than when you first met her. Between the warm flesh and soft fur, it makes for a very pleasant tittyfuck. You take a twisted pleasure in having this once upstanding policewoman debase herself in response to you as you make her give in to the lustful instincts she's been resisting for so long. The Doberwoman's long tongue licks at your glans each time it slides with reach. Eventually she receives the reward she's eagerly licking for when you climax, blasting your hot load across her face and muzzle, as well as that licking tongue of hers. She drives her fingers hard into her pussy, frigging herself to a loud climax that leaves her almost passed out. You grin and give her ears a scritch, telling her she looks much better with your cum marking her dark fur.";
-				increase dobielibido by 18;
+				increase dobielibido by 20;
 			else:
 				say "     Taking the dog-woman's head in both hands, you press her canine muzzle to your crotch and order her to get licking like a good bitch. She yips happily and slathers her long, doggy tongue over your pussy before diving it into your cunt. As she eats you out eagerly, her fingers continue to pump into her dripping snatch and her tail wags excitedly. She works her tongue inside you with increasing skill, using its long length to added advantage to dive deep into your cunt to lap up your juices. You scritch her ears, telling her all the while what a good, obedient doggy she is as does. You take twisted pleasure in having this once upstanding policewoman debase herself in response to you as you bring out the lustful instincts she's been fighting. You grind your pussy against the Doberwoman's muzzle and spill your hot female cum onto her tongue repeatedly. As her final, powerful orgasm washes through her, she collapses to the ground, passing out after her much-needed release.";
-				increase dobielibido by 15;
+				increase dobielibido by 20;
+		else if calcnumber is 3: [dominate]
+			LineBreak;
+			say "     Grabbing her firmly, you pin her down against the ground. The canine cop tries for a few moments to shake you off, until the last of her fighting will is used up (for now) and she just sinks down to bide her time. Now that you've literally got her at the bottom, face pushed onto the dirty street, you mock and berate her, saying that she's letting her true self show, not acting so much like the shitty cop she was, and being more like the needy bitch you knew she had in her. You continue to go into that for a while, mocking her and saying that she should just discard all of the pretense. Both of you know she's just a horny animal after all!";
+			say "     At first she snarls at these harsh words, twitching her head but not even able to shake it properly in her position, and you keep at it until you see the thoughts bury deeper into her psyche, eating away at her self-image. With a growl, you let go and stand up, then tell her to think about what you said. Without a look back, you walk off and leave her lying on the filthy ground.";
+			increase dobielibido by 20;
 		else:
+			LineBreak;
 			say "     You smile down at the lust-crazed Doberman policewoman, deciding to leave her to her own lusts. A dark corner of you is quite pleased with what's become of her.";
 	else:
-		say "     Having little interest in sex yourself, you watch the formerly strong policewoman moan and pant as she lustfully frigs herself, soaking her paws and groin with her juices.";
-
+		LineBreak;
+		say "     [bold type]What do you want to do to your captive bitch?[roman type][line break]";
+		say "     [link](1)[as]1[end link] - Dominate her (nonsexually).";
+		say "     [link](2)[as]2[end link] - Nothing, just leave her to her own lusts.";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 2:
+			say "Choice? (1-2)>";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to dominate her and mentally break her down, or [link]2[end link] to leave.";
+		if calcnumber is 1: [dominate]
+			LineBreak;
+			say "     Grabbing her firmly, you pin her down against the ground. The canine cop tries for a few moments to shake you off, until the last of her fighting will is used up (for now) and she just sinks down to bide her time. Now that you've literally got her at the bottom, face pushed onto the dirty street, you mock and berate her, saying that she's letting her true self show, not acting so much like the shitty cop she was, and being more like the needy bitch you knew she had in her. You continue to go into that for a while, mocking her and saying that she should just discard all of the pretense. Both of you know she's just a horny animal after all!";
+			say "     At first she snarls at these harsh words, twitching her head but not even able to shake it properly in her position, and you keep at it until you see the thoughts bury deeper into her psyche, eating away at her self-image. With a growl, you let go and stand up, then tell her to think about what you said. Without a look back, you walk off and leave her lying on the filthy ground.";
+			increase dobielibido by 20;
+		else:
+			LineBreak;
+			say "     You smile down at the lust-crazed Doberman policewoman, deciding to leave her to her own lusts. A dark corner of you is quite pleased with what's become of her.";
 
 to say beatthedobie3:			[high-lust cop player victory]
 	choose row MonsterID from the Table of Random Critters;
-	say "     The female Doberman moans and sags to the ground, her increased lust taking hold. She pulls open her pants, revealing her lack of panties as she starts fingering herself. She looks up at you with a pure lust in her eyes as she spreads her legs and parts the dark lips of her canine pussy with fingers. 'Come on, take me! I don't care anymore. Just give it to me and make me yours,' she moans and pants while holding herself in wanton display for you. You can't help but smile at what a fine slut you've made this cop into and try to decide how you'd like to use her";
+	say "     The female Doberman moans and sags to the ground, her increased lust taking hold. She pulls open her pants, revealing her lack of panties as she starts fingering herself. She looks up at you with a pure lust in her eyes as she spreads her legs and parts the dark lips of her canine pussy with fingers. 'Come on, take me! I don't care anymore. Just give it to me and make me yours,' she moans and pants while holding herself in wanton display for you. You can't help but smile at what a fine slut you've made this cop into and try to decide how you'd like to use her.";
 	if Player is not neuter:
-		say ".";
 		LineBreak;
 		say "     [bold type]What do you want to do to your captive bitch?[roman type][line break]";
 		say "     [link](1)[as]1[end link] - [if Player is male]Fuck[else]Finger[end if] that juicy cunt of hers.";
 		say "     [link](2)[as]2[end link] - [if Player is male]Give her a titty-fuck[else]Get the doggy tongue of hers to please you[end if].";
 		say "     [link](3)[as]3[end link] - Enjoy a 69 with the horny canine.";
+		say "     [link](4)[as]4[end link] - Dominate her (nonsexually).";
 		now calcnumber is 0;
-		while calcnumber < 1 or calcnumber > 3:
-			say "Choice? (1-3)>";
+		while calcnumber < 1 or calcnumber > 4:
+			say "Choice? (1-4)>";
 			get a number;
-			if calcnumber < 1 or calcnumber > 3:
-				say "Invalid choice. Type [link]1[end link] to get some pussy, [link]2[end link] for [if Player is male]a titty-fuck[else]oral[end if] and [link]3[end link] for a 69.";
-		if calcnumber is 1:
+			if calcnumber < 1 or calcnumber > 4:
+				say "Invalid choice. Type [link]1[end link] to get some pussy, [link]2[end link] for [if Player is male]a titty-fuck[else]oral[end if], [link]3[end link] for a 69,  or [link]4[end link] to dominate her.";
+		if calcnumber is 1: [fuck/finger her]
+			LineBreak;
 			if Player is male:
 				say "     Stroking your stiff cock, you move overtop of the doggy girl and let it brush against her wet folds. 'Does the bad doggy want her bone?' you ask, drawing a canine whimper and an eager nod from her. 'Then you guide it in,' you tell her, putting her paw on your [cock size desc of Player] [Cock of Player] shaft. She strokes your maleness with her fingers before moving to get it lined up. 'Mmm... that's right. You're a bad dog, aren't you? My. slutty. bad. doggy. bitch.' you tell her, thrusting into her hot and juicy cunt to punctuate each word. She releases a few panting yips of pleasure in response as you fuck her.";
 				say "     You take your time with her, fucking her long and hard to really savor the cop's descent into lust. She moans and pants as you thrust into her, her tongue lapping over your face and even eagerly kissing you, diving her long canine tongue into your mouth. With her legs wrapped around your waist and her arms around your [bodytype of Player] torso, she pulls you into every thrust, making sure you pound her good and hard like her body craves. The very cravings you've spent so long in getting her to release. With the image of how much you've changed this once stuffy cop into a horny slut in your mind, you drive hard into her again and cum. As your hot load shoots into her, she arches her back and orgasms with a howl of release. Her small claws dig into your shoulders and scratch down your back as her much-needed orgasm comes. When you're finished, you pull out and look her over as she's stretched out on the ground in a pool of sweat and sexual fluids.";
@@ -452,29 +482,43 @@ to say beatthedobie3:			[high-lust cop player victory]
 			else:
 				say "     Grabbing the Doberman female's leg, you run your hand along it while the other moves to rub her head and scritch her ears. You brush your fingertips over her wet folds. 'Does the bad doggy's bitch pussy need attention?' you ask, drawing a canine whimper and an eager nod from her. 'Then let me see you lick yourself like a proper bitch,' you order, giving her head a push towards her crotch. She only hesitates briefly before bending around like a normal dog and nuzzling at loins, giving her pussy a slow lick before diving her tongue into herself while you watch the show. 'Mmm... that's right. You're a bad dog, aren't you? My slutty bad doggy bitch,' you add, stroking her ears and petting her side.";
 				say "     You can't help but smile as you kneel down beside her to watch, savoring the cop's descent into lust. She moans, pants and whimpers in canine pleasure as she goes to town on herself like an animal. From the way she's looking at you, you can tell she's getting off on the fact that you're watching as well as on her own tonguework. You stroke her head and rub her ears, smiling down at her as you tell her what a fine, obedient and slutty doggy's she's become. You push a few fingers into your own pussy, getting off on watching the Doberwoman debase herself in such a wanton display for you. As her climax comes, she pulls her muzzle away to howl in release, arching her back and burying both paws between her thighs to finger herself wildly through a powerful orgasm that has her panting and spent when it's finally over. You cum as well from the wild display of animal lust, then let her lick your juices from your fingers. With that finished, you get back up and look her over as she's stretched out on the ground in a pool of sweat and sexual fluids.";
-				increase dobielibido by 1;
-		else if calcnumber is 2:
+		else if calcnumber is 2: [tity-fuck / tongue]
+			LineBreak;
 			if Player is male:
 				say "     Without her shirt in the way, you are treated to a lovely view of the Doberwoman's dark-furred breasts. Deciding to enjoy those lovely globes around you, you pull out your cock and move overtop of the horny canine. She pants with need as you place your hands on her breasts, start rubbing those lovely globes and teasing her nipples. 'Does the bad doggy want her tasty bone?' you ask, sliding your hips a little closer so that your glans is resting just between the bottom of her shapely tits. She gives a canine whimper and nods eagerly, her tongue sliding across her muzzle, hungry for her treat. 'Then push those lovely breasts of yours around it,' you tell her, edging your [cock size desc of Player] [Cock of Player] cock further forward. She grabs her breasts and starts fondling them while holding them pressed around your throbbing maleness, letting you thrust between those warm, furry globes. 'Mmm... that's right. You're a bad dog, aren't you? My. slutty. bad. doggy. bitch.' you tell her, thrusting into her open muzzle to punctuate each word. She releases a few panting yips of pleasure and licks eagerly in response.";
 				say "     You take your time with her, fucking those titties nice and slowly to really savor the cop's descent into lust. She moans and pants as you thrust into her, her tongue lapping over your cock while her fingers pinch her own nipples. With one hand on her shoulder for support, you reach back with the other and bury your fingers into her pussy, telling her what a fine, obedient and slutty doggy's she's become as you do it. She whimpers delightfully and pushes her hips up to get you to fingerfuck her harder like her body craves. The very cravings you've spent so long in getting her to release. With the image of how much you've changed this once stuffy cop into a horny slut in your mind, you thrust your cock into her muzzle one last time and cum. As your hot load shoots into her, she arches her back and orgasms with a howl of release. Her small claws dig into her breasts, pressing them tightly around you as her much-needed orgasm comes, clamping her vagina down around your fingers as she soaks your hand and her crotch. When you're finished, you pull out and look her over as she's stretched out on the ground in a pool of sweat and sexual fluids.";
-				increase dobielibido by 1;
 			else:
 				say "     Moving overtop of the panting Doberman female, sitting across her chest. Reaching back with one hand, you stroke across her thigh and then across her wet folds. 'Does the bad doggy's bitch pussy need attention?' you ask, drawing a canine whimper and an eager nod from her. 'Then you'd best start licking me like a proper bitch,' you order, moving your hips in closer until your pussy's almost touching her canine nose. She presses her muzzle forward right away, slathering her tongue across your [cunt size desc of Player] folds and soaking your crotch in her saliva. 'Mmm... that's right. You're a bad dog, aren't you? Lick me like you're my. slutty. bad. doggy. bitch.' you tell her, punctuating each word by another push of your fingers into her hot, dripping cunt. She releases a few panting yips of pleasure and licks eagerly in response.";
 				say "     You grind your crotch against her nose and rub her ears, smiling down at her as you savor the cop's descent into lust. She moans and pants wetly between licks, lapping up as much of your hot juices as she can get. As she eats you out eagerly, your fingers continue to pump into her dripping snatch and her tail wags excitedly. She grips your ass in her paws and works her tongue inside you with increasing skill, using its long length to added advantage to dive deep into your cunt to lap up your juices. You scritch her ears, telling her all the while what a fine, obedient and slutty doggy she's become as she does. She whimpers delightfully and pushes her hips up to get you to fingerfuck her harder like her body craves. The very cravings you've spent so long in getting her to release. With the image of how much you've changed this once stuffy cop into a horny slut in your mind, you cum hard, your pussy quivering around her hardworking tongue. As your hot juices soak her muzzle, she arches her back and orgasms with a howl of release. Her small claws dig into your ass, digging into your cheeks and scratching across them as she pulls your muff right against her nose. When she's finished licking you clean, you push her away look her over as she's stretched out on the ground in a pool of sweat and sexual fluids.";
-				increase dobielibido by 1;
-		else:
+		else if calcnumber is 3: [69]
+			LineBreak;
 			if Player is male:
 				say "     Stroking your stiff cock, you move overtop of the doggy girl and let it dangle in front of her muzzle. You slowly brush a hand over her wet folds. 'Does the bad doggy's bitch pussy need some attention?' you ask, drawing a canine whimper and an eager nod from her. 'Then you'd best start sucking,' you tell her, giving your hips a little sway, which her muzzle automatically tracks. She grabs your ass eagerly with her paws and pulls you down, pushing your cock into her warm, wet muzzle so he can lick and suck greedily at your [cock size desc of Player] [Cock of Player] manmeat. 'Mmm... that's right. You're a bad dog, aren't you? My. slutty. bad. doggy. bitch.' you tell her, using a slow lick across her wet pussy to punctuate each word. She releases a few panting yips of pleasure in response as you lick her.";
 				say "     You take your time with her, fucking her muzzle nice and slowly to really savor the cop's descent into lust. She moans and pants as you thrust into her, her tongue sliding along your shaft and lapping over your glans as you dribble precum down her throat. You alternate between licking and fingering the horny bitch's pussy to her great satisfaction. You take every time to switch to fingering her as an opportunity to tell her what a fine, obedient and slutty doggy's she's become. She whimpers delightfully and pushes her hips up to get you to fingerfuck her harder like her body craves. The very cravings you've spent so long in getting her to release. With the image of how much you've changed this once stuffy cop into a horny slut in your mind, you cum hard, your hot load shooting across her slathering tongue. As your hot seed fills her muzzle, she arches her back and orgasms with a howl of release. Her small claws dig into your ass, digging into your cheeks and scratching across them as she deep-throats you. When you're finished, you pull out and look her over as she's stretched out on the ground in a pool of sweat and sexual fluids.";
-				increase dobielibido by 1;
 			else:
 				say "     Fingering your wet pussy, you move overtop of the doggy girl a few inches from her. You slowly brush a hand over her wet folds. 'Does the bad doggy's bitch pussy need some attention?' you ask, drawing a canine whimper and an eager nod from her. 'Then you'd best start licking,' you tell her, giving your vaginal muscles a squeeze, causing a few drops of your juices to drip down onto her muzzle. She grabs your ass eagerly with her paws and pulls you down, pulling your juicy muff down as her tongue lashes out to lap greedily at your [cunt size desc of Player] cunt. 'Mmm... that's right. You're a bad dog, aren't you? My. slutty. bad. doggy. bitch.' you tell her, using a slow lick across her wet pussy to punctuate each word. She releases a few panting yips of pleasure in response as you lick her.";
 				say "     You grind your crotch against her nose and rub her ears, smiling down at her as you savor the cop's descent into lust. She moans and pants wetly between licks, lapping up as much of your hot juices as she can get. As she eats you out eagerly, you alternate between licking and fingering the horny bitch's pussy to her great satisfaction. You take every time to switch to fingering her as an opportunity to tell her what a fine, obedient and slutty doggy's she's become. She whimpers delightfully and pushes her hips up to get you to fingerfuck her harder like her body craves. The very cravings you've spent so long in getting her to release. With the image of how much you've changed this once stuffy cop into a horny slut in your mind, you cum hard, your pussy quivering around her hardworking tongue. As your hot juices soak her muzzle, she arches her back and orgasms with a howl of release. Her small claws dig into your ass, digging into your cheeks and scratching across them as she pulls your muff right against her nose. When she's finished licking you clean, you push her away look her over as she's stretched out on the ground in a pool of sweat and sexual fluids.";
-				increase dobielibido by 1;
+		else:
+			LineBreak;
+			say "     Grabbing the Doberman female's leg, you run your hand along it while the other moves to rub her head and scritch her ears. Telling her that she should know that she doesn't stand a chance against you by now, you mockingly add that at least she's no longer pretending to be anything but the needy bitch she is. Giving the scruff of her neck a tug, you look into her eyes and say that bad dogs always show their spots sooner or later. She doesn't even shake her head to deny this anymore now, only whines and looks aside in a gesture of submission.";
+		increase dobielibido by 1;
 	else:
-		say ". Being ill-equipped for sex yourself at the moment, you decide to have some fun with the Doberman cop.";
-		say "     Grabbing the Doberman female's leg, you run your hand along it while the other moves to rub her head and scritch her ears. You brush your fingertips over her wet folds. 'Does the bad doggy's bitch pussy need attention?' you ask, drawing a canine whimper and an eager nod from her. 'Then let me see you lick yourself like a proper bitch,' you order, giving her head a push towards her crotch. She only hesitates briefly before bending around like a normal dog and nuzzling at loins, giving her pussy a slow lick before diving her tongue into herself while you watch the show. 'Mmm... that's right. You're a bad dog, aren't you? My slutty bad doggy bitch,' you add, stroking her ears and petting her side.";
-		say "     You can't help but smile as you kneel down beside her to watch, savoring the cop's descent into lust. She moans, pants and whimpers in canine pleasure as she goes to town on herself like an animal. From the way she's looking at you, you can tell she's getting off on the fact that you're watching as well as on her own tonguework. You stroke her head and rub her ears, smiling down at her as you tell her what a fine, obedient and slutty doggy's she's become. As her climax comes, she pulls her muzzle away to howl in release, arching her back and burying both paws between her thighs to finger herself wildly through a powerful orgasm that has her panting and spent when it's finally over. With that finished, you get back up and look her over as she's stretched out on the ground in a pool of sweat and sexual fluids.";
+		LineBreak;
+		say "     [bold type]What do you want to do to your captive bitch?[roman type][line break]";
+		say "     [link](1)[as]1[end link] - Finger her.";
+		say "     [link](2)[as]2[end link] - Dominate her (nonsexually).";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 2:
+			say "Choice? (1-2)>";
+			get a number;
+			if calcnumber < 1 or calcnumber > 2:
+				say "Invalid choice. Type [link]1[end link] to finger her pussy, or [link]2[end link] to dominate her.";
+		if calcnumber is 1: [finger her]
+			LineBreak;
+			say "     Grabbing the Doberman female's leg, you run your hand along it while the other moves to rub her head and scritch her ears. You brush your fingertips over her wet folds. 'Does the bad doggy's bitch pussy need attention?' you ask, drawing a canine whimper and an eager nod from her. 'Then let me see you lick yourself like a proper bitch,' you order, giving her head a push towards her crotch. She only hesitates briefly before bending around like a normal dog and nuzzling at loins, giving her pussy a slow lick before diving her tongue into herself while you watch the show. 'Mmm... that's right. You're a bad dog, aren't you? My slutty bad doggy bitch,' you add, stroking her ears and petting her side.";
+			say "     You can't help but smile as you kneel down beside her to watch, savoring the cop's descent into lust. She moans, pants and whimpers in canine pleasure as she goes to town on herself like an animal. From the way she's looking at you, you can tell she's getting off on the fact that you're watching as well as on her own tonguework. You stroke her head and rub her ears, smiling down at her as you tell her what a fine, obedient and slutty doggy's she's become. As her climax comes, she pulls her muzzle away to howl in release, arching her back and burying both paws between her thighs to finger herself wildly through a powerful orgasm that has her panting and spent when it's finally over. With that finished, you get back up and look her over as she's stretched out on the ground in a pool of sweat and sexual fluids.";
+		else:
+			say "     Grabbing the Doberman female's leg, you run your hand along it while the other moves to rub her head and scritch her ears. Telling her that she should know that she doesn't stand a chance against you by now, you mockingly add that at least she's no longer pretending to be anything but the needy bitch she is. Giving the scruff of her neck a tug, you look into her eyes and say that bad dogs always show their spots sooner or later. She doesn't even shake her head to deny this anymore now, only whines and looks aside in a gesture of submission.";
 		increase dobielibido by 1;
 	WaitLineBreak;
 	say "     As you're preparing to leave, the Doberman moans softly for you to wait. Curious as to what the slutty cop has to say, you turn back, wondering if you'll need to teach her another lesson. The dog fingers herself lightly, licking cum from her paws. 'I... I... give up,' she says with a resigned sigh. 'There's no law and order left and... there's no point in pretending otherwise. I... want the sex... the raw fucking... the lustful breeding,' she says with a few interspersed moans as her fingering grows more eager. 'And so help me God, I want you. After all of it, I want you so bad. I- I want to be your doggy bitch,' she moans, crawling towards you on all fours.";

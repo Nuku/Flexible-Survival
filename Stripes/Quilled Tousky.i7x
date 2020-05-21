@@ -210,7 +210,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "tousky quill"	"Exactly what it sounds like."	0	tousky quill
 
-tousky quill is a grab object. It is a part of the player. tousky quill is infectious. The strain of tousky quill is "Quilled Tousky".
+tousky quill is a grab object. tousky quill is infectious. The strain of tousky quill is "Quilled Tousky".
 
 The usedesc of tousky quill is "[usetouskyquill]";
 

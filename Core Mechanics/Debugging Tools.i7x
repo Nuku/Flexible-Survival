@@ -13,6 +13,13 @@ debugactive is a number that varies.[@Tag:NotSaved] debugactive is 0.
 debuglevel is a number that varies.[@Tag:NotSaved] debuglevel is 1.
 RandomGenNumber is a number that varies.[@Tag:NotSaved]
 
+Testaction1 is an action applying to nothing.
+understand "Testaction1" as Testaction1.
+
+carry out Testaction1:
+	say "Master Cap: [Master].";
+	say "master noncap: [master]";
+
 [ Todo: write Debug code to display _all_ NPC variables]
 
 debugmode is an action applying to nothing.

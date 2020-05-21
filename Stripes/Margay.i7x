@@ -334,7 +334,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "margay milk"	"Milk from a hefty feline."	1	margay milk
 
-margay milk is a grab object. It is a part of the player. margay milk is infectious. margay milk is milky. The strain of margay milk is "Margay".
+margay milk is a grab object. margay milk is infectious. margay milk is milky. The strain of margay milk is "Margay".
 
 The usedesc of margay milk is "[drinkmargaymilk]";
 

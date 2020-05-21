@@ -35,7 +35,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "ammy's black bra"	"The fine black lacy bra you received from Ammy. It's made of silk and feels soft to the touch, looking rather expensive. However, the fact that the sexy equine dancer wore it makes it even more valuable to you. You can almost smell her scent emanating from the bra."	1	ammy's black bra
 
-ammy's black bra is a grab object. It is part of the player. It is not temporary. [it is infectious.]
+ammy's black bra is a grab object. It is not temporary. [it is infectious.]
 
 Instead of using ammy's black bra:
 	say "     You look over the Ammy's bra. The faint scent of her on it is enticing.";

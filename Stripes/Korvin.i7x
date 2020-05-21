@@ -500,8 +500,8 @@ to say conf_Korvin_sexmenu:
 		now title entry is "Ride that doggy pole (vaginal)";
 		now sortorder entry is 4;
 		now description entry is "Have a round bouncing on his canine cock";
-	[]
-[	choose a blank row in table of fucking options;
+	[
+	choose a blank row in table of fucking options;
 	now title entry is "Ride that doggy pole (anal)";
 	now sortorder entry is 7;
 	now description entry is "Stuff that canine cock of his into your ass";
@@ -509,8 +509,8 @@ to say conf_Korvin_sexmenu:
 	choose a blank row in table of fucking options;
 	now title entry is "Blow job (giving)";
 	now sortorder entry is 9;
-	now description entry is "Reward your loyal dog by sucking his canine cock";]
-	[]
+	now description entry is "Reward your loyal dog by sucking his canine cock";
+	]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";

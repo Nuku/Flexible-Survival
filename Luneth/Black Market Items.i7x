@@ -8,7 +8,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "bitch breaker gel"	"A small bottle of slimy red goo. The label says that it will grow your cock larger. External use only."	0	bitch breaker gel
 
-bitch breaker gel is a grab object. It is temporary. It is a part of the player.
+bitch breaker gel is a grab object. It is temporary.
 
 the usedesc of bitch breaker gel is "[bitch breaker gel use]".
 
@@ -33,7 +33,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "breeder serum"	"A small energy drink with a very masculine and pungent odor. The label says that once consumed, it will increase the size of your balls."	0	breeder serum
 
-breeder serum is a grab object. It is temporary. It is a part of the player.
+breeder serum is a grab object. It is temporary.
 
 the usedesc of breeder serum is "[breeder serum use]".
 
@@ -42,9 +42,12 @@ to say breeder serum use:
 		say "DEBUG -> Pre-Use: Cock Count of Player: [Cock Count of Player]; Ball Size of Player: [Ball Size of Player][line break]";
 	if Player is male:
 		say "     You pop open the lid of the energy style drink and begin to chug it. There's a slight bitter taste to it, but you forget that as it quickly gets to work. Soon, you're feeling hot and aroused, your libido climbing rapidly. ";
-		increase Ball Size of Player by 1;
+		if Ball Size of Player < 7:
+			increase Ball Size of Player by 1;
+			say "You groan as your testicles increase in size, leaving you with [Ball Size Adjective of Player] balls.";
+		else:
+			say "You groan as your testicles pulse and throb, but don't get any bigger. Seems you've reached your maximum.";
 		Follow the cock descr rule;
-		say "You groan as your testicles increase in size, leaving you with [Ball Size Adjective of Player] balls.";
 		LibidoBoost 10;
 		if debugactive is 1:
 			say "DEBUG -> After-Use: Cock Count of Player: [Cock Count of Player]; Ball Size of Player: [Ball Size of Player][line break]";
@@ -58,7 +61,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "cock remover"	"A small pill that when consumed, will force a transformation that should remove any male genitalia that you have gained."	0	cock remover
 
-cock remover is a grab object. It is temporary. It is a part of the player.
+cock remover is a grab object. It is temporary.
 
 the usedesc of cock remover is "[cock remover use]".
 
@@ -82,7 +85,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "sissifier gel"	"A small bottle of slimy pink goo. The label says that it will shrink your cock but will not remove it. External use only."	0	sissifier gel
 
-sissifier gel is a grab object. It is temporary. It is a part of the player.
+sissifier gel is a grab object. It is temporary.
 
 the usedesc of sissifier gel is "[sissifier gel use]".
 
@@ -112,7 +115,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "trap serum"	"A small energy drink with a cotton candy scent. The label says that once consumed, it will decrease the size of your balls, but won't remove them."	0	trap serum
 
-trap serum is a grab object. It is temporary. It is a part of the player.
+trap serum is a grab object. It is temporary.
 
 the usedesc of trap serum is "[trap serum use]".
 
@@ -144,7 +147,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "pussy spreader cream"	"A small jar full of a dark-purple cream. The label says that once applied to your vagina, it will begin to stretch wider."	0	pussy spreader cream
 
-pussy spreader cream is a grab object. It is temporary. It is a part of the player.
+pussy spreader cream is a grab object. It is temporary.
 
 the usedesc of pussy spreader cream is "[pussy spreader cream use]".
 
@@ -169,7 +172,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "cock holster upgrade"	"A small cylinder that is meant to be placed inside of your vagina. The label says that once inserted, the device will release an expanding gel that, after filling your pussy to capacity, will begin to stretch it even deeper."	0	cock holster upgrade
 
-cock holster upgrade is a grab object. It is temporary. It is a part of the player.
+cock holster upgrade is a grab object. It is temporary.
 
 the usedesc of cock holster upgrade is "[cock holster upgrade use]".
 
@@ -194,7 +197,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "cunt remover"	"A small pill that when consumed, will force a transformation that should remove all female genitalia that you have gained."	0	cunt remover
 
-cunt remover is a grab object. It is temporary. It is a part of the player.
+cunt remover is a grab object. It is temporary.
 
 the usedesc of cunt remover is "[cunt remover use]".
 
@@ -218,7 +221,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "rightntight cream"	"A small jar full of a pure-white cream. The label say that once applied to your vagina, it will make it tighten up."	0	rightntight cream
 
-rightntight cream is a grab object. It is temporary. It is a part of the player.
+rightntight cream is a grab object. It is temporary.
 
 the usedesc of rightntight cream is "[rightntight cream use]".
 
@@ -246,7 +249,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "cervix smasher upgrade"	"A small cylinder that is meant to be placed inside of your vagina. The label says that once inserted, the device will release a tightening gel, that after filling your puss[yfn], will begin to make the overall size of your pussy smaller and shallower."	0	cervix smasher upgrade
 
-cervix smasher upgrade is a grab object. It is temporary. It is a part of the player.
+cervix smasher upgrade is a grab object. It is temporary.
 
 the usedesc of cervix smasher upgrade is "[cervix smasher upgrade use]".
 
@@ -274,7 +277,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "tits inflator pump"	"A small canister with large suction cups. The label on the side of the canister says to place the suction cups over your nipples and then press the button on the top to cause breast growth."	0	tits inflator pump
 
-tits inflator pump is a grab object. It is temporary. It is a part of the player.
+tits inflator pump is a grab object. It is temporary.
 
 the usedesc of tits inflator pump is "[tits inflator pump use]".
 
@@ -293,7 +296,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "tits deflator pump"	"A small canister with a two large suction cups. The label on the side of the canister says to place the suction cups over your nipples and then press the button on the top to shrink the size of your breasts."	0	tits deflator pump
 
-tits deflator pump is a grab object. It is temporary. It is a part of the player.
+tits deflator pump is a grab object. It is temporary.
 
 the usedesc of tits deflator pump is "[tits deflator pump use]".
 
@@ -312,7 +315,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "Tits Multiplier Injection"	"A jar of clear liquid with two syringes coming out of the sides. On the jar itself is a huge red plus sign. The label on the back says to place the jar between where you wish for more breasts to grow and then inject the chemical into the area. Once all of the clear fluid is gone, a new pair of breasts will grow in place."	0	tits multiplier injection
 
-tits multiplier injection is a grab object. It is temporary. It is a part of the player.
+tits multiplier injection is a grab object. It is temporary.
 
 the usedesc of tits multiplier injection is "[tits multiplier injection use]".
 
@@ -337,7 +340,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "Tits Divider injection"	"A jar of clear liquid with two syringes coming out of the sides. On the jar itself is a huge blue minus sign. The label on the back says to place the jar between your breasts and then inject the chemical into your tits. Once all of the clear fluid is gone, the row of breasts that you injected will shrink until they disappear."	0	tits divider injection
 
-tits divider injection is a grab object. It is temporary. It is a part of the player.
+tits divider injection is a grab object. It is temporary.
 
 the usedesc of tits divider injection is "[tits divider injection use]".
 
@@ -362,7 +365,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "mama milkshake"	"lactation object"	0	mama milkshake
 
-mama milkshake is a grab object. It is temporary. It is a part of the player.
+mama milkshake is a grab object. It is temporary.
 
 the usedesc of mama milkshake is "[mama milkshake use]".
 
@@ -375,7 +378,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "Wide Receiver"	"increases size of Players ass"	0	wide receiver
 
-wide receiver is a grab object. It is temporary. It is a part of the player.
+wide receiver is a grab object. It is temporary.
 
 the usedesc of wide receiver is "[wide receiver use]".
 
@@ -388,7 +391,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "Tight End"	"decreases size of Players ass"	0	tight end
 
-tight end is a grab object. It is temporary. It is a part of the player.
+tight end is a grab object. It is temporary.
 
 the usedesc of tight end is "[tight end use]".
 

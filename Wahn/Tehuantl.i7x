@@ -73,7 +73,7 @@ Instead of conversing the Tehuantl:
 		say "     Quietly sneaking up behind her as she admires a particularly large pink dildo, you carefully unclasp the collar and move to place it around her neck. Tehuantl gives a curious meow as she hears the bell jingle above her head, looking back to see you holding the collar just above her. She smiles as you reach down to place it around her neck, purring happily as you fasten it snugly around her throat. She bats the bell softly several times, delighting in the cute jingle as you gently pet her for a short while before you get back to what you were doing, leaving her to get back to inspecting the toys you've brought her.";
 		now TehuantlStatus is 1;
 		now HP of Tehuantl is 15;
-		now TehuantlTimer is turns;
+		now Energy of Tehuantl is turns;
 	else if TehuantlStatus is 2: [in heat]
 		say "     [one of]Tehuantl mewls at you plaintively as she stares up from her spot on the floor, furiously working [if HP of Tehuantl > 14]a large dildo[else]several fingers[end if] into her needy cunt.[or]'Oh master, I need you...'[or]Too busy licking and sucking at her own groin as she mewls in pleasure, Tehuantl doesn't even notice you approach.[or]'Please, fill me master.'[at random]";
 	else if HP of Tehuantl > 49 and HP of Tehuantl < 100: [male Tehuantl]
@@ -436,37 +436,36 @@ to say TehuantlandSarah:
 Section 5 - Heat, pregnancy and assorted gimmicks
 
 TehuantlStatus is a number that varies. [1 normal, 2 in heat, 3 pregnant]
-TehuantlTimer is a number that varies. TehuantlTimer is usually 10000.
 TehuantlSnowStatus is a number that varies.
 SarahTehuantl is a truth state that varies. SarahTehuantl is usually false.
 
 an everyturn rule:
 	if HP of Tehuantl > 14:
 		if TehuantlStatus is 1:
-			if TehuantlTimer - turns > 39:
+			if Energy of Tehuantl - turns > 39:
 				now TehuantlStatus is 2;
-				now TehuantlTimer is turns;
+				now Energy of Tehuantl is turns;
 		else if TehuantlStatus is 2:
-			if TehuantlTimer - turns > 39:
+			if Energy of Tehuantl - turns > 39:
 				now TehuantlStatus is 1;
-				now TehuantlTimer is turns;
+				now Energy of Tehuantl is turns;
 [
 		else if TehuantlStatus is 3:
-			decrease TehuantlTimer by 1;
-			if TehuantlTimer is 0:
+			decrease Energy of Tehuantl by 1;
+			if Energy of Tehuantl is 0:
 				if Player is in Bunker or Grey Abbey Library or Grey Abbey 2F
 					say "     You hear Tehuantl moaning and rush to check on her.";
 					say "     Tehuantl gives birth scene!";
 				else:
 					say "     Somehow you know a child has been born.";
 				now TehuantlStatus is 1;
-				now TehuantlTimer is turns;
+				now Energy of Tehuantl is turns;
 				increment Tehuantl children variables
 ]
 
 after navigating Grey Abbey Library:
 	if HP of Tehuantl is 10:
-		if TehuantlTimer - turns > 16:
+		if Energy of Tehuantl - turns > 16:
 			now HP of Tehuantl is 11;
 			say "     As you enter the library, you are hit with an overwhelming scent of feline arousal and you hear mewling and moaning coming from the library's second floor. You can't help but wonder if everything is alright with your pretty pet kitty upstairs.";
 	else if HP of Tehuantl is 11:
@@ -707,7 +706,7 @@ TehuantlStating is an action applying to one topic.
 understand "TehuantlStat" as TehuantlStating.
 carry out TehuantlStating:
 	say "HP of Tehuantl:[HP of Tehuantl][line break]";
-	say "TehuantlTimer:[TehuantlTimer][line break]";
+	say "Energy of Tehuantl:[Energy of Tehuantl][line break]";
 	say "TehuantlStatus:[TehuantlStatus][line break]";
 ]
 

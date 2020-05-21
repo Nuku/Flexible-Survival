@@ -45,6 +45,47 @@ isHellhound is a truth state that Varies. isHellhound is usually false.
 maleHound is a truth state that Varies. maleHound is usually false.
 hellHoundLevel is a number that varies. hellHoundLevel is usually 0.
 
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"hellhound collar"	"[HCollarDesc]"	1	hellhound collar
+
+hellhound collar is a grab object.
+the usedesc of hellhound collar is "[HCollarUse]".
+It is not temporary.
+
+hellhound collar is a grab object.
+hellhound collar is equipment.
+hellhound collar is cursed.
+It is not temporary.
+The plural of hellhound collar is false.
+The taur-compatible of hellhound collar is true.
+The size of hellhound collar is 0.
+The AC of hellhound collar is 0.
+The effectiveness of hellhound collar is 0.
+The placement of hellhound collar is "neck".
+The descmod of hellhound collar is "A sturdy leather collar is fastened tightly around your neck. Reaching up, you can feel the inverted pentagram branded into the material at your throat. You don't think this hellish mark of ownership will ever come off again.".
+The slot of hellhound collar is "neck".
+
+to say HCollarDesc:
+	say "     A sturdy leather collar, complete with very solid buckle and an inverted pentagram branded into the material, right where the throat of the wearer would be.";
+		now hellhound collar is equipped;
+
+instead of sniffing hellhound collar:
+	say "     The collar smells like leather, and a hint of sulfur too.";
+
+to say HCollarUse:
+	if hellhound collar is equipped:
+		say "     You raise your hands and touch the leather collar around your neck, feeling around for its buckle. Yet as your fingers close on the metal, it suddenly flares to sizzling heat, burning your fingertips and neck so you quickly let go.";
+		PlayerWounded 10;
+	else:
+		repeat with z running through equipped equipment:
+			if slot of z is "neck":
+				say "     [bold type]Your [z] is in the way![roman type][line break]";
+				continue the action;
+		say "     Lifting the leather band to your neck, you fasten it, nice and tight.";
+		now hellhound collar is equipped;
+
 to say meetHellhound:
 	say "     Movement in some bushes catches your attention. A sickly green-yellow light seems to emanate from them and some kind of large hound stalks out from amongst them. Bathed in an eerie, sourceless yellow light, the beasts fur is a dirty mix of browns, tufted and mussed all over as if uncared about. It is as big as a Great Dane, but there is no recognizable breed that you can use to name it.";
 	say "     The beast cocks its leg and sends a strong stream of luminescent, yellow urine splashing into the grass before it seems to notice you. The stream falters then stops as it licks its muzzle and then begins to approach. There is something about the strange monster that tells you it isn't the same as the other infected creatures. A whiff of sulfur hits you as it stalks closer.";
@@ -109,12 +150,18 @@ to Hellhound infect female:
 	WaitLineBreak;
 	say "     You wake up several hours later with your clothing torn to ribbons and slimy, yellow-tinged seed forming a puddle between your legs. Feeling your neck, there is a seamless leather collar, engraved with strange infernal characters tightly wrapped around it. Somehow you've been brought back to the bunker, and true to the demon dog's words, you no longer show any signs of the infection. You seem to have been completely restored to a human form... except for one place. Between your legs is a lewd dripping demon bitch twat, swollen and puffy, leaking the hellhound's piss and cum as you hear a chuckle in your mind. 'Such a pretty bitch you are. Please, go out and enjoy yourself. You are now immune to the changes, just as I promised, as one of us. You will easily return to the form you want to hold, with one or two things that can't be hidden. Such are the rules, there must always be SOME kind visible proof or our infernal origins. Return to me once you a properly... ready,' the voice says, fading out and leaving you alone with your thoughts in the bunker.";
 	say "     Your insides clench with a fiery heat, longing to have a litter of hellhound pups gestating inside you.";
+	increase carried of hellhound collar by 1;
+	repeat with z running through equipped equipment:
+		if slot of z is "neck":
+			now z is not equipped;
+			continue the action;
+	now hellhound collar is equipped;
 	if Humanity of Player > 50, now humanity of Player is 50;
 	now Skin of Player is "smooth";
-	now Face of Player is "leather dog collar around your neck, and a charmingly human";
+	now Face of Player is "charmingly human";
 	now tail of Player is "";
 	now Cock of Player is "";
-	now Body of Player is "appears perfectly human at first, but on your belly there are six nipples, and between your legs rests a swollen, permanently in-heat Hellhound twat";
+	now Body of Player is "appears perfectly human at first glance";
 	now BodyName of Player is "Hellhound";
 	now FaceName of Player is "Hellhound";
 	now SkinName of Player is "human";
@@ -143,12 +190,18 @@ to Hellhound infect male:
 	WaitLineBreak;
 	say "     You wake up several hours later, your clothing torn to ribbons. Feeling your neck, there is a seamless leather collar, engraved with strange infernal characters tightly wrapped around it. Somehow you've been brought back to the bunker, and true to the demon-dog's words, you no longer show any signs of the infection. You seem to have been completely restored to a human form... except for one place. Glancing down, you have the dirty and fouled hellhound shaft from the night before, dried up cum peeling from your skin and making the fur clump together. As you try and take this development in, you hear a chuckle in your mind 'Mmmmmmm, that WAS an enjoyable night, puppy. But you're not quite up to the task yet. You are not ready to be a male in my pack. Return to me once you have a little more... experience,' the voice fades away, leaving you alone with your thoughts in the bunker.";
 	say "     An unholy urge fills you as rub at yourself through your pants. Females, bitches - you need to fill them with your seed.";
+	increase carried of hellhound collar by 1;
+	repeat with z running through equipped equipment:
+		if slot of z is "neck":
+			now z is not equipped;
+			continue the action;
+	now hellhound collar is equipped;
 	if Humanity of Player > 50, now humanity of Player is 50;
 	now Skin of Player is "smooth";
-	now Face of Player is "leather dog collar around your neck, and a charmingly human";
+	now Face of Player is "charmingly human";
 	now tail of Player is "";
 	now Cock of Player is "";
-	now Body of Player is "appears perfectly human at first, but sprouting between your legs is sheath and coarse fur that remains dirty no matter how much you attempt to clean yourself";
+	now Body of Player is "appears perfectly human at first glance";
 	now BodyName of Player is "Hellhound";
 	now FaceName of Player is "Hellhound";
 	now SkinName of Player is "human";

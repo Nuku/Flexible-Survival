@@ -279,7 +279,20 @@ to UndieRaceEvent:
 
 Section 2 - Events with Specific NPCs
 
+Table of GameEventIDs (continued)
+Object	Name
+Dog Meets Dog	"Dog Meets Dog"
+
+Dog Meets Dog is a situation.
+The sarea of Dog Meets Dog is "Campus".
+
 after going east from College Campus Entrance while (LastCampusWalkin - turns > 2 and gshep is companion of Player and gsd_pet >= 60 and GibsonRelationship is 0 and a random chance of 1 in 3 succeeds):
+	DogMeetsDogEvent;
+
+instead of resolving Dog Meets Dog:
+	DogMeetsDogEvent;
+
+to DogMeetsDogEvent:
 	if debugactive is 1:
 		say "     DEBUG: Walk-in Event - Korvin runs into a young adult beagle boy - GibsonRelationship: [GibsonRelationship][line break]";
 	say "     Walking over the campus in the direction of the Tenvale college dorms, you notice after a few steps that something - or rather someone - is missing from your side. As you start turning around to see where your attack dog Korvin ended up, you hear the German shepherd bark out, 'What are you looking at, pup? Never seen a [italic type]real[roman type] dog before?' It turns out that Korvin stopped walking about a dozen feet back, where he is standing now, hands on his furry hips and looking down at a young adult anthro standing right in front of him. The other guy is a canine too, though shorter and of a different breed of dog - a beagle, you'd say, judging by the floppy ears and the mixture of white, tan and brown fur. Dressed in shorts and a t-shirt bearing the 'Tenvale College' logo, a backpack slung over one shoulder, the slender young man gapes at Korvin with wide eyes, then gasps out, 'I - I'm sorry sir! It's just... um, you're naked and...'";

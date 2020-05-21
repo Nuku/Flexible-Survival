@@ -18,6 +18,18 @@ Version 1 of Monty by Wahn begins here.
 [   2: mentioned Dr. Matt before                                        ]
 [   3: took him to see Dr. Matt (he knows he's human still)             ]
 
+[ Some notes about Monty's character:                                   ]
+[ Nanite-Enhanced Ass (otherwise uninfected) -> extra sensitive         ]
+[                                                                       ]
+[ Background:                                                           ]
+[ Soldier from Florida, from a military family                          ]
+[ Was part of the scouting party who got contacted by Diego             ]
+[                                                                       ]
+[ Gender Preferences:                                                   ]
+[   Into: Women                                                         ]
+[   Willing to experiment: Men, Cuntboys, Male Herms                    ]
+[   A bit freaked out by: Dickgirls, Female Herms                       ]
+
 Section 1 - events
 
 after going to Parade Ground while (Lone Soldier is resolved and (Resolution of Lone Soldier is 1 or Resolution of Lone Soldier is 2) and Stamina of Monty is 0):
@@ -129,20 +141,25 @@ to say MontyTalkMenu:
 	now description entry is "Learn a bit about him";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Discuss the minotaur";
+	now title entry is "His sexual preferences";
 	now sortorder entry is 3;
+	now description entry is "Ask who he prefers to be with";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Discuss the minotaur";
+	now sortorder entry is 4;
 	now description entry is "Ask his opinion on Tiny Tim";
 	[]
 	if Libido of Monty is 0:
 		choose a blank row in table of fucking options;
 		now title entry is "His 'special transport' mission";
-		now sortorder entry is 4;
+		now sortorder entry is 5;
 		now description entry is "Talk about what he was doing, and the aftermath";
 	[]
 	if Libido of Monty > 1:
 		choose a blank row in table of fucking options;
 		now title entry is "His asshole";
-		now sortorder entry is 5;
+		now sortorder entry is 6;
 		now description entry is "Talk about him being so tight, after being fucked by a minotaur and all";
 	[]
 	sort the table of fucking options in sortorder order;
@@ -164,6 +181,8 @@ to say MontyTalkMenu:
 					say "[MontyTalk1]";
 				if nam is "Ask about his background":
 					say "[MontyTalk2]";
+				if nam is "His sexual preferences":
+					say "[MontyTalk6]";
 				if nam is "Discuss the minotaur":
 					say "[MontyTalk3]";
 				if nam is "His 'special transport' mission":
@@ -200,8 +219,8 @@ to say MontyTalk3: [Tiny]
 	say "     Clearing his throat, Monty goes on to say, 'One thing Tiny sure ain't, and that's hard to read. He loves the steady sex he's getting, but also genuinely enjoys hanging out with people. Should have seen him when I came back into the camp after, well, you know.' He waves a hand behind his ass for a second, referring to the time you pulled out a butt plug and made a load of minotaur cum leak out of his ass. 'So there I was, on my way to the Major to report on my failure, and suddenly I hear hooves stomping on the ground. A second later, I was in a bear-hug by those huge arms, wedged against his broad, muscled chest. 'Friend came back! Came back for Tiny?' he asked, horned head looming over me and with his hot breath washing over my face. Looking into those huge, trusting eyes, I didn't think he'd understand what actually happened even if I told him, so I just said yes. Man, he followed me around an hour after that, and kept wanting to pick me up for another hug.'";
 
 to say MontyTalk4: [Special Transport]
-	say "     Monty becomes a bit flustered and clearly embarrassed as you bring up his earlier mission, which included a load of Tiny's cum up his rear and a butt plug to keep it in. If his skin wasn't so very dark, you bet the young man would be flushed red in the face. 'Well, err, it's for a possible cure of this plague or whatever it is. At least that's what we were told. Sounds crazy, right? But then, what isn't these days? Hell, if I had told anyone about seeing a guy in the street suddenly sprouting wings, boobs and a beak, then trying to have sex with me, I'd have ended up in the brig with a drug test ordered. Now, something like that is just another thing that goes on everywhere.' With a shrug, Monty waves a hand in the air. 'I swore an oath to lay my life on the line for this country. Guess that includes my ass too. So if your superiors tell you to get mino-fucked, you soldier on and bend over, spread em.'";
-	say "     Scratching the back of his neck, the black soldier adds, 'Of course, having to come back here and admit that I 'lost my load' was an after-action report from hell. Thank god I'm not the only one, or even first that happened too. They don't even reprimanded me - not for something I never trained for. And that's the rub of it. I got issued a 'training kit' by the quartermaster and she told me to work out [italic type]those[roman type] muscles so I can get a fresh load delivered without issues.' Pressing his lips together, he is quiet for a moment, then adds, 'I - er, I'm having some trouble making myself do it. It's one thing when you're part of a whole group, and everyone lines up for Tiny because that's what you're ordered to do. Sitting with your fellows in a tent and then pulling out sex toys to work on yourself? That's fricking hard!'";
+	say "     Monty becomes a bit flustered and clearly embarrassed as you bring up his earlier mission, which included a load of Tiny's cum up his rear and a butt plug to keep it in. If his skin wasn't so very dark, you bet the young man would be flushed red in the face. 'Well, err, it's for a possible cure of this plague or whatever it is. At least that's what we were told. Sounds crazy, right? But then, what isn't these days? Hell, if I had told anyone about seeing a guy in the street suddenly sprouting wings, boobs and a beak, then trying to have sex with me, I'd have ended up in the brig with a drug test ordered. Now, something like that is just another thing that goes on everywhere.' With a shrug, Monty waves a hand in the air. 'I swore an oath to lay my life on the line for this country. Guess that includes my behind too. So if your superiors tell you to get mino-fucked, you soldier on and bend over, spread em and take it. Couldn't let my brothers[if CampBravoWomenAllowed is 1] and sisters[end if] in arms do so and not lay my own ass on the line either.'";
+	say "     Scratching the back of his neck, the black soldier adds, 'Of course, having to come back here and admit that I 'lost my load' was an after-action report from hell. Thank god I'm not the only one, or even first that happened too. They don't even reprimanded me - not for something I never trained for. And that's the rub of it. I got issued a 'training kit' by the quartermaster and she told me to work out [italic type]those[roman type] muscles so I can get a fresh load delivered without issues.' Pressing his lips together, he is quiet for a moment, then adds, 'I - er, I'm having some trouble making myself do it. It's one thing when you're part of a whole group, and everyone lines up for Tiny because that's what you're ordered to do. Sitting with your fellows in a tent and then pulling out sex toys to work on yourself? That's frickin['] hard!'";
 	LineBreak;
 	say "     [link](1)[as]1[end link] - Apologize for getting him in trouble.";
 	say "     [link](2)[as]2[end link] - Say you're not sorry. His ass was just too nice not to check out.";
@@ -228,7 +247,7 @@ to say MontyTalk4: [Special Transport]
 	say "     [link](2)[as]2[end link] - Wish him the best of luck.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 2:
-		say "Choice? (1-3)>[run paragraph on]";
+		say "Choice? (1-2)>[run paragraph on]";
 		get a number;
 		if calcnumber is 1 or calcnumber is 2:
 			break;
@@ -370,7 +389,7 @@ to say MontyDoctorMattVisit:
 	say "     Raising one eyebrow inquisitively, Doctor Matt nods. 'Well then, Mister Freeman, go ahead and explain. Leave nothing out, even the smallest detail might be of importance.' After saying this, the doctor moves over to a working table, picking up a clipboard and a pen to take notes. 'Ah, before you start - which serum are you on? Given your human appearance, I assume you're part of the troops that were given the experimental nanite countermeasures? Also, do you have an injector on hand that you might be able to give me? I assure you it will greatly help in my research.' Monty's brows draw together for a second, then he pulls his backpack off and opens a side pocket, pulling a bright red auto-injector with an orange protective cap out of it. 'You mean this thing? It's, XN-02. I guess you can have it, as long as I'm back in the camp within the next five hours. We were given strict orders not to miss a single scheduled injection.'";
 	WaitLineBreak;
 	say "     'Splendid! Please place it next to the sampling rack on that table over there,' Doctor Matt in clearly audible excitement, making notes in between following Monty with his gaze as he walks through the other room. From your position, you can see the paper a little bit, so you crane your neck and see 'XN-02' with the 2 doubly underlined and the words 'No danger of liquification' written underneath. When Monty returns to the window a moment later, Doctor Matt draws an detailed account of what happened from him, asking questions in an uncompromisingly direct way that has the other man pausing in embarrassment more than once, for example at several questions of the exact size of Tiny's erection and how it felt inside him, as well as making Monty guess about the volume of cum that was put into him and the length of time his insides were soaking in the beast-man's seed.";
-	say "     Deep in thought for a long while as he re-reads his notes and taps the side of his pen against the clipboard, Doctor Matt eventually looks up again and says, 'Quite interesting, I must say. I've got a theory about what might be happening, but I'll have to examine you to confirm it. Mister Freeman, would you please strip down and sit over there on that examination table. I will be with you in a little while.' Not waiting for a reply, the doctor moves over to the double airlock and starts the process of putting on his suit, complete with pressure checks and everything before he comes out into the same room as you and Monty. The black man nervously awaits him as instructed, completely naked and with his clothes and gear in a neat stack off on a side table. The next forty minutes or so are filled with a quite thorough examination of the black soldier, with numerous samples being taken: blood, skin from several spots, hair, even a semen sample, as well as Matt asking his patient to 'spread' himself with his fingers since he doesn't have the medical tools available to do so.";
+	say "     Deep in thought for a long while as he re-reads his notes and taps the side of his pen against the clipboard, Doctor Matt eventually looks up again and says, 'Quite interesting, I must say. I've got a theory about what might be happening, but I'll have to examine you to confirm it. Mister Freeman, would you please strip down and sit over there on that examination table. I will be with you in a little while.' Not waiting for a reply, the doctor moves over to the double airlock and starts the process of putting on his suit, complete with pressure checks and everything before he comes out into the same room as you and Monty. The black man nervously awaits him as instructed, completely naked and with his clothes and gear in a neat stack off on a side table. The next forty minutes or so are filled with a quite thorough examination of the black soldier, with numerous samples being taken: blood, skin from several spots, hair, even a semen sample, as well as Matt asking his patient to 'spread' himself with his fingers since he doesn't have the medical tools available to do so. As the black man does so, he lets out a little gasp, and the simple touch causes his cock to throb.";
 	WaitLineBreak;
 	say "     Barely paying Monty any attention after a quick, 'We're done for now. You can get dressed again,' Doctor Matt starts analyzing the samples, speaking quiet notes into a recorder and beginning with the words, 'New patient: Montgomery Freeman, age 22, African-American.' From what you've already seen and heard of the doctor, you decide it might be best to leave him working in peace and not expose Monty to the unfiltered revelations Matt will put in his notes. Waving to Monty to follow, you lead him back downstairs to the lobby. Orthas seems ready to take up her teasing again, but after a quick glance at the soldier's still tense expression, she pushes that aside. No one really seems in the mood to talk too much right now, so everyone stands around a little glumly, until Orthas eventually pulls out a deck of cards from a pants pocket and asks, 'Anyone up for a round of poker?'";
 	say "     The three of you move to sit on some of the less damaged pieces of lobby furniture and play cards for what feels like quite a while, using glass shards of various sizes as ersatz money. Interestingly, Monty ends up with a quite admirable stack of fragments of the front door in front of himself. You can't quite tell if he's good at poker or just lucky today, although there's a little suspicion in you hat Orthas might be letting him win at least some of the time. She certainly does her best to be friendly, that's for sure. Some time later, the sound of creaking rubber makes you look up and see the red-suited form of Doctor Matt up at the railing of the stairs to the upper floor. 'Ah, there you are. I've got some results to show you,' he says, then turns around and goes back into his lab.";
@@ -389,16 +408,44 @@ to say MontyDoctorMattVisit:
 	say "     The dragoness follows up by leaning in and not quite whispering into his ear, 'The offer still stands, by the way. You can have a feel if you want, Monty. To celebrate, or whatever.' The man swallows visibly and licks his lips... but then the moment starting to build between them is interrupted as you also reach the end of the stair and the soldier moves to make room for you. Afterwards, he looks back and forth between the two of you, trying to come up with something fitting to say, but Orthas waves him off with a smile. 'I can see you're on the jump, and don't wanna keep you. Next time then, eh?' This is delivered with a wink and oh so casual shake of her chest, making the breasts of the dragoness wobble enticingly. 'Be safe out there, and don't be strangers you two. It's so hard these days to find anyone to hang out with.' After some friendly pats, Monty and you leave the Trevor Labs buildings and retrace your steps back to the military camp. A little while later, you're greeted by the familiar face of Marc at the Camp Bravo entrance, who lets you in right away.";
 	now Intelligence of Monty is 3; [he knows he's fully human and only has a super stretchy asshole]
 
+to say MontyTalk6: [sexual preferences]
+	say "     As you ask Monty about his sexual preferences, the soldier blows out his breath and looks aside, staring into the distance with a thoughtful expression. 'Oh boy,' you can hear him mumble under his breath, pausing for a few seconds to gather his thoughts. 'I'm straight! Just a regular guy,' he then starts off with, said rather quickly[if player is male], and even though it's hard to see due to his dark skin, you think he's blushing[end if]. Clearing his throat, he adds, 'Not that I think there's anything wrong with people who enjoy... stuff. You know.' Monty adds a vague wave of his hand to what he says, not really explaining anything. Your expression must have told him that you're starting to suspect there's more to this than he's saying, and the soldier looks aside again, scuffing his combat boot on the ground.";
+	say "     Raising an eyebrow, you casually say that you actually wanted to learn about his preferences, not sexual orientation. 'Oh. So you didn't...' Monty replies, looking a little wide-eyed at having misunderstood your question like he did. He quickly tries to deflect by adding, 'Err, so... what brought this on? Asking me things like that all of a sudden!?'";
+	LineBreak;
+	say "     [bold type]What's your reply?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - You're just curious and wanted to get to know him better.";
+	say "     [link](2)[as]2[end link] - You wanted to know how he feels, what with him and the minotaur...";
+	say "     [link](3)[as]3[end link] - Play it down and change the topic.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 3:
+		say "Choice? (1-3)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to beat around the bush, [link]2[end link] to bring up the minotaur or [link]3[end link] to change the topic.";
+	if calcnumber is 1:
+		LineBreak;
+		say "     Monty's eyebrows draw together a little bit and he gives you a sharp look. 'Well, it's a bit of a personal question. Hell, we've only just met and stuff like this isn't what you just bring up willy nilly!' It seems obvious that he's done talking about this question, and silence stretches out for a few seconds before you carefully steer the conversation to some less loaded topics.";
+	else if calcnumber is 2:
+		LineBreak;
+		say "     As you reply in a cautiously curious tone, bringing up the things he's been through with Tiny, and his 'special transport' mission during which you two met, Monty's eyebrows start to draw together a little. Then he stops himself and they rise, followed by him stroking a hand over his shaved head and biting his lower lip. 'I... guess it's good to talk about things, eh? Thing's gone off the rails in this city, and one shouldn't just swallow it all down. Seems funny that I'm even thinking of talking about this, but maybe it's because you're not actually in the army with me, and helped after that mess with the hyena. So...' Taking a deep breath, he meets your eyes, then bursts out, 'Okay, I liked it. The minotaur thing. Just felt good, so now I'm a little bit freaked out by what that means. Never really looked at a guy in 'that way' before, and not sure if I will, but the sex was... pretty nice.'";
+		say "     Monty is quiet for a few more seconds, then coughs in his hand and adds, 'I guess while we're opening up and all that shit, there [italic type]might[roman type] have been a certain drunken night some years ago during which a buddy of mine went down on me. And it was [italic type]good[roman type], god the things he did with that tongue! After that, I never really got over myself again when he offered another round later on with both of us sober. That was just too gay for my younger self, so we did drift apart and didn't hang out that much anymore. Kinda regret that now.' Raising an arm to hook his hand behind his neck and rubbing it, the black man looks at you and smiles somewhat embarrassedly. 'Not saying I'm pining after Tony and he's the lost love of my life, but the way I see it now... why the hell shouldn't you enjoy yourself a bit with a good friend? Feels good, everyone has fun, so who needs a label, eh? Doesn't make a dude less of a man!' Reaching back to rub his ass, Monty's mouth draws into a cheeky smile and he says, 'Guess being shafted by a minotaur in the line of duty does kinda open you up for new experiences - in more ways than one.'";
+	else if calcnumber is 3:
+		LineBreak;
+		say "     As you reply in a casual and noncommittal way, a relieved expression ghosts over Monty's face for a second, followed by him jumping to another topic entirely. The two of you continue to chat for a little while after that, about nothing of much importance.";
+
 Instead of fucking Monty:
 	if (lastfuck of Monty - turns < 5):
 		say "     Monty chuckles and says, 'Man, you want to go at it again? Do you have a battery compartment somewhere? I for one need a bit of a break.'";
 	else if Libido of Monty < 3:
 		say "     The black man raises an eyebrow as you make your offer, then shakes his head in a friendly but firm way. 'No thanks, I'm good right now. We're not here to get our rocks off, but to fulfill a mission.' By sheer coincidence, you hear a full-voiced, lustful bellow from the center of the camp just as Monty says this. Sounds like another man [if HP of Adam > 3](or woman)[end if] got a creamy filling of minotaur cum. The soldier glances in that direction, his eyes filled with a far-away look for a second, as he seems drawn back into his own close encounter with the breeding bull of Camp Bravo. Shaking himself out of it, Monty sees you looking at him, which causes an embarrassed flush to spread over face, barely visible under his dark pigmentation. 'Err... you know what I mean. Containing this mess, saving people, helping find the cure.' Waving a hand in the air as if the dispel his own mental image of what's going on in the parade ground, he wanders away a little, busying himself with one task or other.";
 	else:
+	[
 		say "     The black man chuckles as you make him an offer, glancing left and right as if to see if anyone might have overheard. Clearing his throat, he runs a hand over his shaved head, then says under his breath, 'Man, I really wish I could. It's not like I'm not as horny as any red-blooded guy here in the camp. Ya['] barely can turn a corner without stumbling over someone jerking off. Though with me going out on that 'scouting mission' with you, I think it might be too noticeable if I steal away too soon after. Gotta wait a while, alright?'";
 		LineBreak;
 		say "     (Writer's Note: Monty's further sex scenes are not quite done yet. Please have some patience.)";
-	[
+	]
 		say "     The black man chuckles as you make him an offer, glancing left and right as if to see if anyone might have overheard. Clearing his throat, he runs a hand over his shaved head, then says under his breath, 'Yeah, sure. Not like I'm not as horny as any red-blooded guy here in the camp. Ya['] barely can turn a corner without stumbling over someone jerking off. Not here, though. Got a rep to maintain.' Giving your arm a light slap, the black man suddenly adds in a loud voice, 'Come on, I'll show you where you have to be for debriefing.' With that said, he walks off in one direction and as you turn to follow him, you see that a whole group of other soldiers was coming up from behind where you were standing a moment ago. Not that they seem to have any interest in you, but they might have overheard any further discussion of lewd fun.";
 		say "     Monty leads the way to the out of the way corner of the camp you know well by now, checks that no one else is in sight, then climbs onto the wooden crate and through the shattered window of the city bus. You follow him, passing through the wrecked vehicle and exiting through the wide door at its front end, into the abandoned office building next to the military camp. 'So, here we are,' the muscular soldier says with a grin on his face, letting his gaze wander up and down over your form. He pulls his shirt off in a smooth movement, throwing it onto a nearby desk, then starts to undo his pants. You watch him strip down with interest, exchanging lusty looks with your soldier fuck-buddy.";
 		now sextablerun is 0;
@@ -409,30 +456,35 @@ Instead of fucking Monty:
 		choose a blank row in table of fucking options;
 		now title entry is "Suck Monty's cock";
 		now sortorder entry is 1;
-		now description entry is "Give him a blow-job.";
+		now description entry is "Be face-fucked by the soldier";
 		[
 		if (player is male):
 			choose a blank row in table of fucking options;
 			now title entry is "Have him suck your cock";
 			now sortorder entry is 2;
-			now description entry is "Get a blow-job.";
-		]
+			now description entry is "Get a blow-job";
+		[]
 		if Player is female:
 			choose a blank row in table of fucking options;
 			now title entry is "Let Monty fuck your pussy";
 			now sortorder entry is 3;
-			now description entry is "Let the black soldier breed you.";
+			now description entry is "Let the black soldier breed you";
 		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Let Monty fuck your ass";
 		now sortorder entry is 4;
-		now description entry is "Let the black soldier fill your ass with his seed.";
-		[
+		now description entry is "Let the black soldier fill your ass with his seed";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Rim Monty's ass";
+		now sortorder entry is 5;
+		now description entry is "Get your tongue in there and eat the black soldier's ass";
+		[]
 		if Player is male:
 			choose a blank row in table of fucking options;
-			now title entry is "Take Monty's ass";
-			now sortorder entry is 5;
-			now description entry is "Fill the young soldier's ass with your cock.";
+			now title entry is "Fuck Monty's ass";
+			now sortorder entry is 6;
+			now description entry is "Fill the black soldier's ass with your cock";
 		]
 		sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -467,25 +519,47 @@ Instead of fucking Monty:
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
-]
 
-to say MontySex1:
-	say "...";
+to say MontySex1: [blowjob/facefuck]
+	say "     Smiling as you approach the naked form of Monty, you run a hand over the mocha-brown skin of his muscled torso, feeling his firm pecs and defined abs on the way further down to his crotch. Soon wrapping your fingers around the base of his long cock and giving the 10-inch shaft an eager stroke, you lean in to kiss him on the mouth. Monty replies in kind, his tongue snaking out to wrestle with yours and hands stroking over your body. The mutual make-out session continues for a pleasant little while until the soldier has to pull back to catch his breath. 'Man, I never thought being deployed right here in the country to deal with this messy situation could ever have any sort of upside, but spending time with you like this sure is fun.' You just grin in reply, give him one more peck on the lips, then sink to your knees before the African-American man.";
+	say "     Looking up to meet Monty's eyes, you lick your lips demonstratively. He grins and shifts his hips a little, playfully slapping your face with his big cock and reaching out to rest a hand on top of your head. 'Oh yeah! Go for it!' he pants as you stick your tongue out, then begin to trace it up the underside of his shaft. Your black soldier buddy's fingers stroke over your head, guiding you a little as you lick over his erection and quickly arrive at the head. Parting your lips, you slide them over his cock and feel the firm yet yielding curve of his mushroom head against your tongue, complete with a first little taste of his pre-cum. Monty's flavor on your taste-buds is quite nice actually, waking the desire for more. Healthy living and physical fitness definitvely seems to help with that, and you send mental thanks to the army as you go down on the man-candy they delivered for you here.";
+	WaitLineBreak;
+	say "     'Damn, that feels great!' Monty groans breathlessly as you inhale more of his long prick, his hand pushing a little on the back of your head to keep you going deeper and deeper. Focusing your mind on relaxing your throat as much as you can, you soon are nuzzling the smoothly shaven skin of Monty's crotch, getting a nose-full of his masculine scent and feeling the curve of his balls against your chin. You can feel his erection throbbing against your tongue and throat as you hold your position for a long moment, your muscles squeezing his length every time you swallow and making his grip on your head tighten as he moans out loud. Monty gets a little bit lost in the pleasure of the moment, so much so that you have to tap out against the side of his hip for him to let you pull back and catch your breath. As you do so, strings of spit and pre-cum stretch between his cock and your lips, which he wipes away with his index finger, then pushes it into your mouth for you to suck clean.";
+	say "     Lust fully enflamed now, the soldier only leaves you a little time to gasp for air before both of his hands grasp your head this time, bringing it closer to his crotch again as he pushes his hips forward. You readily open up to take the chocolate rod into your mouth, looking up to see the broad grin on Monty's face as he proceeds to slide himself home into you, followed by starting to face-fuck with smooth, deep strokes. Thankfully he pulls out at least momentarily before each deep plunge, so you manage to gulp down a little air in the second before feeling the soldier's balls slap your chin again. Still, even so you get a little bit light-headed as you're used by the well-muscled male, willingly receiving his cock as your eyes wander over his naked body and take in the sweat now glistening on the firm lines of his chest.";
+	WaitLineBreak;
+	say "     You couldn't say how long your session of orally pleasing Monty lasts, as your worldview shrinks down to him, yourself and the sensation of the thick, warm shaft in your throat, with two strong hands grasping your head. One thing is for certain, it's fun to be with the man, as he uses you with a secure grasp that's never rough, and Monty is a pretty vocal guy, constantly moaning, panting and gasping out your name, compliments about how great you make him feel, or sometimes just wordless sounds of lust. His volume only increases over time, making it a very good thing that your love-nest is somewhat out of the way and not just behind a tent or so, otherwise the whole camp would know about your tight throat by now. The frantic face-fuck comes to an explosive climax some time later, with Monty ramming himself inside all the way and grinding his crotch forward against your face while his erection throbs out the first heavy spurt of cum, right into your stomach.";
+	say "     'Nnnnghhh! YEAH!' the horny soldier shouts as he gushes thick blasts of his seed into you, this time surprisingly remembering that you do actually need to breathe and pulling back after the first few throbs. Now just covering your tongue with his cum and flooding your taste-buds with the rich, nutty taste, Monty's grip on your head slackens a little as the immediate urgency of his orgasm ebbs off. Soon after, the extent of his exaustion from the face-fuck session hits him and he slumps forward a little, moving a hand to brace on your shoulder. 'That. Was. Amazing!' he pants out, a beaming smile on his face. You stand up and lay your arms around his heaving, warm and somewhat sweaty chest, allowing Monty to lean into you until he catches his breath. Feeling good about having made his day, you nibble a little on his earlobe and tell him that you also enjoyed yourself in this little bit of fun-time.";
+	WaitLineBreak;
+	say "     The two of you continue to hold on to each other for a little while longer, just enjoying the closeness to another, before you eventually let go. Monty gives your upper arm a last squeeze, then walks over to where his clothes lie scattered from being pulled off quickly. He glances over his shoulder and smiles, followed by teasingly wiggling his well-rounded bubble butt a little as he bends over to pick up his pants. Then he gets dressed again before leading you back out of the building and between the tents of Camp Bravo.";
 	NPCSexAftermath Player receives "OralCock" from Monty;
 
-to say MontySex2:
-	say "...";
+to say MontySex2: [have Monty blow the player]
+	say "     Smiling as you approach the naked form of Monty, you run a hand over the mocha-brown skin of his muscled torso, feeling his firm pecs and defined abs. You've certainly befriended one sexy hunk of a man, who thankfully is happy enough to experiment sexually. ";
+	say "     ";
 	NPCSexAftermath Monty receives "OralCock" from Player;
 
-to say MontySex3:
+to say MontySex3: [player pussy is fucked by Monty]
 	say "...";
 	NPCSexAftermath Player receives "PussyFuck" from Monty;
 
-to say MontySex4:
+to say MontySex4: [player ass is fucked by Monty]
 	say "...";
 	NPCSexAftermath Player receives "AssFuck" from Monty;
 
-to say MontySex5:
+to say MontySex5: [rimming Monty's ass]
+	say "     Smiling as you approach the naked form of Monty, you run a hand over the mocha-brown skin of his muscled torso, then hook it behind his neck and pull him in for a lusty kiss. His broad lips feel pillowy soft against your own, and the soldier reacts well as you stick out your tongue to explore his mouth, meeting it with his own for a little bit of playful wrestling. Eventually, you pull back from the make-out session and gaze into his eyes as you say that you want him to spread his cheeks for you. 'Wanna check out my [one of]booty[or]nanite-enhanced ass[or]black booty[at random], eh?' he replies with a chuckle, stroking down the side of your arm and giving it a squeeze before nodding. Picking one of the tables free of abandoned office documents, he leans forward and places his hands on the smooth surface, sliding them along until he's fully bent over it. 'Like this?' Monty asks, looking over his shoulder and wiggling his rear at you.";
+	say "     As you walk up behind him the black man watches you from the corner of his eye with a cheeky grin on his face. 'Man, if you had told me at the start of the year that I would be doing something like this, I'd have said you're crazy. Shows how flexible a guy can be if their situation changes.' You reply that he's got something there, all the while placing your hands on the full globes of his buttocks, feeling their smooth and firm roundness under your fingers. Squeezing a little and feeling up your soldier fuck-buddy, you casually mention the fact that he's pretty much hairless over his body. 'Well, yeah. I shave that stuff off. You can blame years of afternoons spent at the beach for that. Hate having sand sticking to wet fuzz. Much better when it's just smooth skin and you can brush it off.' Shrugging his shoulders, Monty then moves both hands down along his sides, sliding under yours and taking hold of his cheeks to spread them.";
+	WaitLineBreak;
+	say "     You sink into a crouch behind Monty, rubbing the sides of his legs while doing so. This puts his well-rounded booty at eye level for you, complete with his crack and the trembling rose-bud waiting at its deepest point. As you lean forward and bring your head right up to it, the adventurous soldier lets out a little laugh. 'God, I can feel your breath on my asshole. Still can't believe just how excited that makes me. I mean, I -' Whatever else he wanted to say is replaced by a breathless moan as you nuzzle against Monty's skin, breathing in his clean, masculine scent and tracing the tip of your tongue over his hole. 'Fuuuckkk! That's nice!' he gasps in a lusty tone and pushes himself back reflexively, almost begging you to go deeper. With a broad grin on your face, you do just that, slipping your appendage inside the readily yielding muscle and wiggling it around playfully.";
+	say "     For a little while, you focus on simply pleasuring the asshole of your soldier fuck-buddy, not even touching anything else. This allows him to revel in the sensations fully, with loud moans, pants and sometimes unintelligible words escaping Monty's mouth. Feeling him trembling around your exploring tongue, you idly wonder if he always was this much of an anal-lover, or if the nanites helped up that sensitivity to what it is now. Doesn't matter which, really. What counts is that the trained hunk of a man is going wild with every lick and tease of your tongue! 'Mmyeah! Damn! Stick that tongue really in there!' you hear Monty moan out loud. Then suddenly, you feel something wet dripping onto your hand between his legs. Drawing back for a second to glance down, it is revealed that he's as hard as a rock, with the ten-inch length of his thick, black shaft dripping pre-cum at a steady pace. Smiling, you bring your hands up to wrap around Monty's cock, feeling its warmth and firmness under your fingers as you start stroking up and down.";
+	WaitLineBreak;
+	say "     'MMmmmore! Please eat my ass more!' the black man moans in a breathy, almost whorish tone, stretching his arm back to grope blindly for your head. You indulge him by bending your neck towards his touch, then let yourself be drawn in by his impatient grip, nose pressing into the depth of his crack. As you open your mouth and slide out your tongue, the warmed-up ring of his muscle welcomes it like a long-lost lover, spreading around and embracing your appendage tightly. If anything, his asshole is even more responsive to your touch than before, as if eager to make up the short time you were apart. Getting back into eating out the horny man, you lap at his inner walls and wiggle your tongue, all the while stroking his erection up and down. Such a double assault at giving him pleasure quickly obliterates any restraint Monty has left inside him, leading to him almost shouting the words, 'I'm fucking close! Gonna nut any second now!'";
+	say "     Gleefully sticking your tongue in as deep as it can go and ramping up the stroking of his throbbing shaft, you send the black hunk barreling past the point of no return at a thousand miles per hour. Accompanied by a surprisingly high-pitched moan, a shudder goes through Monty, muscles trembling and twitching as his ball-sack tightens and sends the first heavy spurt of man-milk shooting up his erection. You feel his girth in your hand as the blast of cum pulses through and paints a wet streak over the side of the desk he is bent over, followed by another, and another. You can feel the pulse of his rapid heartbeat through your fingertips as you hold on to Monty's erect shaft, not letting go of it in a firm grasp. All the while he's riding out the orgasm, you never let up eating his hole either, keeping Monty's lust at a hot burn and prolonging the high of pleasure he feels. Reflexive spasms of his pucker around your wriggling tongue almost makes you feel like he's milking your writhing appendage. Meanwhile, his dick keeps throbbing hard even after the cum available begins to ebb, and at some point you hear the trembling voice of your exhausted stud begging, 'Ngghh, man! My balls are empty! Haha!'";
+	WaitLineBreak;
+	say "     As you pull back from your prolonged ass-eating session, you see what you wrought by pushing Monty this far. The desk isn't likely ever to be the same, with a large part of its side having been drenched in the black soldier's cum, and given the way that the creamy load is dripping and splattering down into a puddle on the carpet, you'd say that that will also forever bear the marks of Monty's load. Now that you're no longer trapped in the heat of the moment, you realize that your own legs are a bit cramped up from the prolonged crouch, so you rise with a groan and stretch them while walking around a few steps. While doing so, you glance back over your shoulder and look at your fuck-buddy. He's still lying on the desk, panting and twitching a little, only starting to push himself up on trembling arms by the time you circle back to the desk. Sliding an arm under his to help the muscled soldier up, you let your gaze wander over his sweaty, naked form as he sits on the edge of the desk.";
+	say "     'Man, that was something else! With your tongue just hitting that one spot in there, I simply couldn't stop cumming!' Monty comments, his slightly hoarse voice full of wonder and lust. 'Guess I was losing out on something amazing all these years! Should have taken up Tony when he offered, and experimented more. Thank you for, well, all of this!' With that said, he reaches out to touch your arm and gives it a squeeze. 'I wish I could say that I'm ready for another round, or something else, but honestly - I'm spent!' After a glance to a nearby wall clock, he adds, 'And I should get back to join the guys in the camp. Can't just vanish for too long before people might start asking questions. So, uhm... looking forward to next time!' With that said, he stands up and walks over to where he left his clothes, wiggling his ass for you on the way once or twice with a smile thrown over his shoulder. Then he gets dressed again before leading you back out of the building and between the tents of Camp Bravo.";
+
+to say MontySex6: [fucking Monty's ass]
 	say "...";
 	NPCSexAftermath Monty receives "AssFuck" from Player;
 

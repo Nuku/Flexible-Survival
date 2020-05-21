@@ -106,6 +106,12 @@ Definition: a person is bodily human:
 	if BodyName of Player is "Squire", yes;
 	no;
 
+Definition: a person is fully human:
+	if person is not facially human, no;
+	if person is not skintone human, no;
+	if person is not bodily human, no;
+	yes;
+
 Instead of entering the Storage Room:
 	try going south;
 

@@ -54,6 +54,7 @@ lastfightround is a number that varies.	[ Used to track the last round during wh
 [ 11    - v. (submit to player master) ]
 [ 13    - v. (player vores foe)        ]
 [ 14    - v. (player ub's foe)         ]
+[ 15    - v. (Voria vore foe)          ]
 [ 18    - v. (monster flee)            ]
 [ 19    - neutral peace                ]
 [                                      ]
@@ -464,9 +465,9 @@ This is the player attack rule:
 		if a random chance of specattchance in 20 succeeds and "Cock Slap" is listed in feats of Player and Cock Length of Player >= 12 and bonusattacks < 2:
 			increase bonusattack by 1;
 			let dammy be 0;
-			let z be Cock Length of Player + ( 2 * Cock Count of Player ) - 12;
-			now dammy is ( square root of ( 2 * z ) ) + 1;
-			if dammy > 8, now dammy is 8;
+			let z be Cock Length of Player * Cock Count of Player;
+			now dammy is ( square root of z ) + a random number between 1 and 3;
+			if dammy > 10, now dammy is 10;
 			increase dammy by a random number between 0 and 1;
 			if Cock Count of Player >= 3, increase dammy by a random number between 0 and 1;
 			if TailName of Player is "Cerberus":
@@ -478,17 +479,17 @@ This is the player attack rule:
 		if a random chance of specattchance in 20 succeeds and "Ball Crush" is listed in feats of Player and Ball Size of Player >= 5 and bonusattacks < 2 and player is not internal:
 			increase bonusattack by 1;
 			let dammy be 0;
-			now dammy is ( square root of ( 2 * ( Ball Size of Player - 13 ) ) ) + 1;
-			if dammy > 8, now dammy is 8;
+			now dammy is ( Ball Size of Player + a random number between 1 and 3);
+			if dammy > 10, now dammy is 10;
 			increase dammy by a random number between 0 and 1;
 			say "[line break]You tackle your opponent, slamming your [Ball Size Adjective of Player] [Balls] onto their [one of]head[or]body[or]face[or]crotch[in random order] for [special-style-2][dammy][roman type] additional damage!";
 			increase dam by dammy;
 		if a random chance of specattchance in 20 succeeds and "Boob Smother" is listed in feats of Player and Breast Size of Player > 2 and ( Breast Size of Player + ( Nipple Count of Player / 2 ) ) >= 7 and bonusattacks < 2:
 			increase bonusattack by 1;
 			let dammy be 0;
-			let z be Breast Size of Player + Nipple Count of Player;
-			now dammy is square root of ( z - 1 ) + 1;
-			if dammy > 7, now dammy is 7;
+			let z be Breast Size of Player * Nipple Count of Player;
+			now dammy is square root of ( z ) + 1;
+			if dammy > 10, now dammy is 10;
 			increase dammy by a random number between 0 and 1;
 			if Nipple Count of Player > 4, increase dammy by a random number between 0 and 1;
 			say "[line break]Grabbing your opponent, you smoosh them into your ample bosom, smothering and crushing them with your tits for [special-style-2][dammy][roman type] additional damage!";
@@ -1182,7 +1183,11 @@ to win:
 		if a random chance of vorechance in 300 succeeds:					[chance for ub]
 			if Name entry is not listed in infections of VoreExclusion and enemy type entry is 0: [not on the exclude list and non-unique infection]
 				now ubprompted is true; [player will be prompted for ub]
-	if voreprompted is true and ubprompted is true:				[both vore and ub are possible]
+	if companion of Player is Carnivorous Plant and hunger of Voria > 7 and Name entry is not listed in infections of VoreExclusion and enemy type entry is 0:
+		now ok is 0;
+		VoriaPostCombat;	[Carnivorous Plant vore scene. Scenes in Voria file]
+		now fightoutcome is 15;	[Voria vored foe]
+	else if voreprompted is true and ubprompted is true:				[both vore and ub are possible]
 		if vorechoice is 0 and ubchoice is 0:					[player has full choice]
 			say "     As your battle is coming to a close, you feel a primal rumbling in your belly and in your womb, your twin hungers welling up inside you. Looking down at your fallen foe, you lick your lips and finger yourself, tempted to fill that emptiness you're feeling inside with the [EnemyNameOrTitle]. Shall you give in to your desire to [link]consume (1)[as]1[end link] them, [link]unbirth (2)[as]2[end link] them or [link]suppress (0)[as]0[end link] the urge?";
 			now calcnumber is -1;

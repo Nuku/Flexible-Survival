@@ -113,7 +113,7 @@ to EvaChoice:	[Choices for subsequent meetings]
 		EvaAnalBind;
 	else if calcnumber is 3:	[Leave]
 		say "     The flirty grin Eva is wearing instantly disappears when you tell her that you're not interested in playing with her, replacing it with a slight frown. However, the shark soon adopts a grin again, although one more subdued than earlier. 'Well, it's your loss. I would've shown you a heck of a time, but, hey, I get it that sometimes you're not in the mood or have things to do. Just make sure to come back when you're ready to have some fun again. I'll be waiting, cutie.'";
-		now resolution of Sunbathing Shark is 98;
+		now resolution of Sunbathing Shark is 97;
 	else:
 		say "Invalid choice. Type [link]1[end link] to have the full shark butt experience again, [link]2[end link] to let Eva eat you for fun, or [link]3[end link] to simply leave.";
 
