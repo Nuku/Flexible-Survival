@@ -1,8 +1,9 @@
-Version 1 of Void Realm by Gherod begins here.
+Version 2 of Void Realm by Gherod begins here.
 
 "Adds the Void Realm to the game."
 
 [Version 1 - Adds the Void Realm virtual hunting ground with 3 encounters (Void Serpent, Dark Tyrant, Peculiar Summoner)]
+[Version 2 - Added Tentacle Abomination Encounter]
 
 [  ENCOUNTERS  ]
 [Note: All losses with encounters in the Void must be bad ends (including fleeing), unless they're part of a quest or any specific context where losing and surviving has a justified reason. They must all be integrated within the Void Realm navigation system using trackers and in conformity with the other encounters, or event-based through the "Go Beyond the Veil" navigation option.]
@@ -11,6 +12,8 @@ Version 1 of Void Realm by Gherod begins here.
 [Void Serpent - A non-unique encounter. Significant threat, weakened by Abyssal Edge, scared away by sharp black tusk]
 [Dark Tyrant - A special encounter. Almost impossible to beat, unless weakened by Abyssal Edge, can become ally (TBA), can be defeated permanently]
 [Peculiar Summoner - an unique encounter. Not the biggest threat, cannot be weakened, easy to avoid and checks are fixed]
+[Tentacle Abomination - a non-unique encounter. Mild threat, weakened by Ancient Tome, easy to avoid]
+[   Tracker for this one goes up to 4 due to the order its tracker is handled through the moves]
 
 [  COMPANIONS  ]
 [Note: All text change provided by the existence of a companion must be in ITALIC, so the player can more easily see what changes. This only applies to singular paragraphs or short sections, and following long scenes (such as Xaedihr's sex scene in Tendril Plants) may be written in ROMAN as per normal.]
@@ -89,6 +92,22 @@ The sarea of Friend Of The Darkness is "Nowhere".
 
 [----------------------------------------]
 
+[Void Fireflies Event]
+
+Table of GameEventIDs (continued)
+Object	Name
+Luminous Harem	"Luminous Harem"
+
+Luminous Harem is a situation.
+The sarea of Luminous Harem is "Nowhere".
+
+[RESOLUTION STAGES]
+[0: Never communicated with the void fireflies]
+[1: Communicated once, they touched the player, but are still shy]
+[2: They're open for a bright gangbang]
+
+[----------------------------------------]
+
 instead of resolving To The Unknown:
 	if Resolution of To The Unknown is 0: [Pre-Event]
 		say "     You go past one of the many buildings in the District and turn to your right. It is another ransacked shop with nothing left, only broken glass scattered around the windows and a complete absence of sound, which worsens the more you proceed forward. There is nothing else around but destruction and abandonment, consequences brought by the apocalypse, but besides this, something seems to be really disturbing you, and you find yourself helplessly unable to explain what it is, exactly. It's just something you feel... A shiver, sudden loss of thoughts, an instant discomfort rapidly growing inside as if a nightmare was chasing after you. The sense of danger, maybe there is a creature approaching...?! Though there is nothing. Paranoia slowly begins to take over your mind, and a cold drop of sweat follows after.";
@@ -137,6 +156,8 @@ VRPlayerMove is a number that varies. VRPlayerMove is usually 0. [@Tag:NotSaved]
 VRPlayerFacing is a number that varies. VRPlayerFacing is usually 0. [@Tag:NotSaved]
 VRVoidSerpentTracker is a number that varies. VRVoidSerpentTracker is usually 0. [@Tag:NotSaved]
 VRPeculiarSummonerTracker is a number that varies. VRPeculiarSummonerTracker is usually 0. [@Tag:NotSaved]
+VRTentacleAbominationTracker is a number that varies. VRTentacleAbominationTracker is usually 0. [@Tag:NotSaved]
+VRTentacleAbominationLinger is a number that varies. VRTentacleAbominationLinger is usually 0. [@Tag:NotSaved]
 VRDarkTyrantTracker is a number that varies. VRDarkTyrantTracker is usually -1. [@Tag:NotSaved]
 
 to say ToTheVoid:
@@ -262,6 +283,11 @@ to say VRMoveOptions:
 			Linebreak;
 			VRNormalSanityLoss;
 			say "     You have decided to stand still for a moment, not moving towards either way.";
+			if VRDarkTyrantTracker is not 3:
+				if VRTentacleAbominationTracker is 3:
+					increase VRTentacleAbominationTracker by 1; [it will happen for sure]
+				else if a random chance of 3 in 5 succeeds and VRTentacleAbominationTracker < 3: [Holding for too long invokes the Tentacle Abomination]
+					increase VRTentacleAbominationTracker by 1;
 			if VRDarkTyrantTracker is 3: [Will always attack first]
 				say "     That was a bad decision. With the Dark Tyrant on your tail, not attempting to move through the dimensional line of this realm only earns you a direct confrontation with his great and menacing shadow. Your immediate surroundings darken as the gigantic abomination of dark slime grows before you, licking his own black gooey face with a hungry toothy grin. Solid liquid drips from each of his extremities, including from the monstrous shape of a cock permanently erect between his massive legs, its slit gaping as the pitch black goo keeps leaking.";
 				if companion of player is demonologist:
@@ -277,6 +303,16 @@ to say VRMoveOptions:
 				now VRVoidSerpentTracker is 1;
 				WaitLineBreak;
 				say "[VRMoveOptions]";
+			else if VRTentacleAbominationTracker is 4: [attempting to ambush the player]
+				say "     That odd, slimey presence above you was already enough of a bad omen, and your decision to stay in the same place only exposed you to the menace of an abomination with a massive cluster of tentacles that is descending upon you!";
+				if carried of ancient tome > 0 and TentacleInteractions > 0:
+					say "     [bold type]However...[roman type][line break]";
+					wait for any key;
+					VRTentacleAbominationATome;
+				else:
+					say "     There is no other option but to try and defeat this monster by your own hand, if you intend to go in further. It's going to be a tough fight...";
+					wait for any key;
+					VRTentacleAbominationFight;
 			else if VRPeculiarSummonerTracker is 3: [Peculiar Summoner will always wait for other monsters to leave]
 				say "     However, you are stopped by a sudden cloaked figure appearing right before you, its dark and tattered robes hanging still as the stillness of the void. It looks like you could not avoid this foe, who has been observing you for a while, now.";
 				WaitLineBreak;
@@ -286,6 +322,11 @@ to say VRMoveOptions:
 				say "[VRMoveOptions]";
 		else if calcnumber is 4: [Explore, sanity loss decided only later on]
 			Linebreak;
+			if VRDarkTyrantTracker is not 3:
+				if VRTentacleAbominationTracker is 3:
+					increase VRTentacleAbominationTracker by 1; [it will happen for sure]
+				else if a random chance of 1 in 4 succeeds and VRTentacleAbominationTracker < 3: [Exploring repeatedly invokes the Tentacle Abomination]
+					increase VRTentacleAbominationTracker by 1;
 			if VRDarkTyrantTracker is 3:
 				say "     That was a bad decision. With the Dark Tyrant on your tail, not attempting to move through the dimensional line of this realm only earns you a direct confrontation with his great and menacing shadow. Your immediate surroundings darken as the gigantic abomination of dark slime grows before you, licking his own black gooey face with a hungry toothy grin. Solid liquid drips from each of his extremities, including from the monstrous shape of a cock permanently erect between his massive legs, its slit gaping as the pitch black goo keeps leaking.";
 				if companion of player is demonologist:
@@ -354,6 +395,18 @@ to VREncounterTrackerCheck:
 			say "     You feel like you are being observed by someone of a great power, and that they are very close. It is impossible to tell from which direction you are sensing this, but it seems to be from within the core line. Perhaps there is a chance you could lose them if you were to not be in their line of sight?";
 			if companion of player is demonologist:
 				say "     [italic type]Whispering, Xaedihr tells you 'Lose them beyond the veil, they won't be able to follow. But if you can't, I doubt they will attack carelessly.'[roman type][line break]";
+		if VRTentacleAbominationLinger is 3:
+			say "     The sluggish, ominous presence that used to threaten you from above seems to be gone, for now.";
+			if companion of player is demonologist:
+				say "     [italic type]'Tentacle Abomination gone. That's a relief.' says Xaedihr as he turns to you.[roman type][line break]";
+			now VRTentacleAbominationTracker is 1;
+			now VRTentacleAbominationLinger is 0;
+		if VRTentacleAbominationTracker is 3:
+			say "     There is an ominous presence hovering above you, with a sort of sluggish and slimey sounds echoing through. Looking up, there seems to be nothing, but there is this imminent sensation that something, or someone, might be about to fall right on top of you.";
+			if companion of player is demonologist:
+				say "     [italic type]Whispering, Xaedihr tells you 'Look out for those tentacle abominations. They are everywhere, so don't linger around in the exact same spot for too long, unless you want one of them to find you. Although I don't think it likes snakes... but even so, it will stay in the veil, too, so beware.'[roman type][line break]";
+			if a random chance of 3 in 4 succeeds:
+				increase VRTentacleAbominationLinger by 1;
 		if a random chance of 1 in 4 succeeds and VRDarkTyrantTracker > -1 and VRDarkTyrantTracker < 3:
 			increase VRDarkTyrantTracker by 1;
 		if VRDarkTyrantTracker is 3:
@@ -394,6 +447,8 @@ to say VRLeave:
 	now VRPeculiarSummonerTracker is 0;
 	if VRDarkTyrantTracker > -1:
 		now VRDarkTyrantTracker is 0;
+	now VRTentacleAbominationTracker is 0;
+	now VRTentacleAbominationLinger is 0;
 	now VRPlayerMove is 0;
 	now VRPlayerFacing is 99;
 	if a random chance of 1 in 4 succeeds:
@@ -415,10 +470,53 @@ to VREvents: [Events that can happen]
 		if a random chance of 3 in 5 succeeds:
 			VREventsRoll;
 		else:
-			say "     [one of]Despite your attempts to leave the core line of this realm to investigate the surrounding area, you find nothing but more darkness and emptiness, at least this time.[or]However, no matter how much you attempt to push through the dimensional barriers, they keep lashing back at you, pushing you away and back within the boundaries of the core line. It looks like you won't get to see anything, at least this time.[or]Unfortunately, your perception happens to betray you, and the core line seems wider than it looks. The veils appear to be too distant for you to reach, forcing you back into your previous position for the time being.[or]Though even with all your might and determination, you simply don't manage to break free from the current of the core line. The dimensional force is too strong for the time being, and you're forced back into its main path.[or]But as you attempt to leave the core line's premises, it just looks like the Void doesn't want you to go. No, it definitely doesn't want you to reach its veils, and you end up with a headache from all the illusionary trickery it plays against your senses. You are forced to give up, for now.[at random]";
-			VRNormalSanityLoss;
-			WaitLineBreak;
-			say "[VRMoveOptions]";
+			if VRTentacleAbominationTracker is 4:
+				say "     Although as you make your way across the veil, you notice a disturbance in the walls when you attempt to proceed, as if something was waiting for you... The air around you stops, and there is no sound but just one comparable to a giant slimey slug crawling over the surface. Then, it's not just one, but many, many of them, and their shapes seem to be appearing in the form of shadows, all while something in the middle starts poking at the wall of darkness from the other side.";
+				if companion of player is demonologist:
+					say "     [italic type]'I would strongly recommend a hasty retreat. Else you want to have a date with an especially... tentacular being.' says Xaedihr, as he urges you to leave.[roman type][line break]";
+				if carried of ancient tome > 0 and TentacleInteractions > 0:
+					say "     [bold type]Something seems to be going terribly wrong with your Ancient Tome... It seems to be pounding at your mind like an angry ram,[roman type] for the lack of a better description, as all it gives you is a throbbing headache.";
+				Linebreak;
+				say "     ([link]Y[as]y[end link]) - Face this abomination.";
+				say "     ([link]N[as]n[end link]) - Back to the Core Line.";
+				if player consents:
+					say "     You ready yourself to face whatever is on the other side, keeping you from getting through. Slowly, you take a few steps forward until your body is making it across the veil, although your eyes are met with the most terrifying monster, with an obscene central mass that shapes itself into human genitalia, as dozens and dozens of tentacles flail around before trying to reach for you.";
+					if carried of ancient tome > 0 and TentacleInteractions > 0:
+						say "     [bold type]However...[roman type][line break]";
+						VRTentacleAbominationATome;
+					else:
+						say "     There is no other option but to try and defeat this monster by your own hand, if you intend to go in further. It's going to be a tough fight...";
+						wait for any key;
+						VRTentacleAbominationFight;
+				else:
+					say "     Thinking twice about it, a prudent decision would be backing off, hoping the abomination leaves on its own...";
+					if a random chance of 1 in 2 succeeds:
+						if VRTentacleAbominationLinger < 3:
+							increase VRTentacleAbominationLinger by 1;
+					WaitLineBreak;
+					say "[VRMoveOptions]";
+			else:
+				say "     [one of]Despite your attempts to leave the core line of this realm to investigate the surrounding area, you find nothing but more darkness and emptiness, at least this time.[or]However, no matter how much you attempt to push through the dimensional barriers, they keep lashing back at you, pushing you away and back within the boundaries of the core line. It looks like you won't get to see anything, at least this time.[or]Unfortunately, your perception happens to betray you, and the core line seems wider than it looks. The veils appear to be too distant for you to reach, forcing you back into your previous position for the time being.[or]Though even with all your might and determination, you simply don't manage to break free from the current of the core line. The dimensional force is too strong for the time being, and you're forced back into its main path.[or]But as you attempt to leave the core line's premises, it just looks like the Void doesn't want you to go. No, it definitely doesn't want you to reach its veils, and you end up with a headache from all the illusionary trickery it plays against your senses. You are forced to give up, for now.[at random]";
+				VRNormalSanityLoss;
+				WaitLineBreak;
+				say "[VRMoveOptions]";
+
+to VRTentacleAbominationATome: [Ancient Tome reacts to the tentacle abomination, triggering a debuff]
+	say "     You feel a compulsion, as your hand starts moving on its own in order to grab the ancient tome that is sitting in your inventory. The book is warm, almost burning to the touch, and opens violently as the pages flip in a frenzy. Within several seconds, the abomination that you are about to face seems to be squirming in agony, its movements getting weaker as time passes. Eventually, the tome closes, and you are left with it cooling down in your hands, as the weakened abomination charges at you with what is left of its strength.";
+	wait for any key;
+	choose a row with name of "Tentacle Abomination" in the Table of Random Critters;
+	now HP entry is 269;
+	now wdam entry is 22;
+	now inasituation is true;
+	challenge "Tentacle Abomination";
+	now HP entry is 469;
+	now wdam entry is 29;
+	VRTentacleAbominationFightConclusion;
+
+to VRTentacleAbominationFight:
+	now inasituation is true;
+	challenge "Tentacle Abomination";
+	VRTentacleAbominationFightConclusion;
 
 to VREventsRoll:
 	let randomnumber be a random number from 1 to 11;
@@ -930,9 +1028,10 @@ to say VRVoidFireflies:
 	say "     ([link]Y[as]y[end link]) - Attempt to communicate with them.";
 	say "     ([link]N[as]n[end link]) - Try to catch them.";
 	if Player consents: [For now, this will only provide a boost in sanity]
-		Linebreak;
 		say "     Attempting to communicate doesn't necessarily mean talking, but you feel like they are some sort of creatures that have a mind of their own. While approaching them and the crystal, you try not to scare them away and let them come closer to you. Eventually, they begin to surround you, and somehow, you begin to feel... a lot better, as they almost seem to be singing for you. Once they had enough, the little fireflies begin to slowly retreat deeper into the cave, and the crystal's light fades away. You are not entirely sure of what just happened, but the spectacle of lights managed to improve your mental status.";
 		say "     Either way, there is nothing left for you here, so you proceed further ahead, eventually following on a path back to the core line.";
+		if Resolution of Luminous Harem is 0:
+			now Resolution of Luminous Harem is 1;
 		SanBoost 15;
 		WaitLineBreak;
 		say "[VRMoveOptions]";
@@ -1226,6 +1325,9 @@ to say DarkTyrantDesc:
 to say PeculiarSummonerDesc:
 	say "     Sometimes it is tendrils, other times it is a cluster of arms, you never know what you should be expecting to come out of this one. A slender, dark robed figure of questionable gender, they seem to be able to reproduce any gender's voice and summon anything they desire. It appears they have learned how to invoke certain creatures - or parts of some - to aid them in a time of peril, including the art of metamorphing. They speak to you how you seem to imagine them, their voice reaching for your ears in a form of a demand 'Submit. I will make sure you enjoy it.' Whether you intend to or not, they will not give up until you conform to their order.";
 
+to say TentacleAbominationDesc:
+	say "     A massive abomination with a multitude of tentacles, this beast always has a central mass resembling one of the human's reproductive organs, which seems to shift between a gigantic penis and an enormous vulva whenever it wants, always covered in numerous fleshy extensions that reach and pull anything towards it in an attempt to feed itself. Hunger is evident in the way these monsters trick and feed on their prey, and it clearly intends on taking you, too. Crawling towards your position, the abomination flaunts its genitalia of titanic proportions and the seemingly endless number of tentacles at you, leaving you unsure as if it is trying to turn you on or to plainly scare you away.";
+
 Section 2-6 - Fight Conclusions and Win/Loss Scenes
 
 to say VoidSerpentWins:
@@ -1316,11 +1418,58 @@ to say PeculiarSummonerLoses: [no text here, it's in fightoutcome]
 	else:
 		say "Nothing written yet.";
 
+to say TentacleAbominationWins:
+	if inasituation is true:
+		say ""; [dealt with at the source]
+	else:
+		say "Nothing written yet.";
+
+to say VRTentacleAbominationWins:
+	TentacleAbominationVore1;
+	WaitLineBreak;
+	now battleground is "Void";
+	the Player was ended by "Tentacle Abomination";
+	trigger ending "Player has died";
+	end the story saying "You have perished in the Void, swallowed by a Tentacle Abomination.";
+
+to TentacleAbominationVore1:
+	say "     As you fall face flat on the ground, the abomination is dragging you by your feet towards its central mass, but before that, amidst your futile resistance, you are brought to the air, suspended upside down for moments as more and more of its extensions find themselves wrapped around your body. With arms and legs immobilized, your existence simply remains as an easy target of abuse for the monster, which takes great interest in touching and harassing all your sensitive areas, each tentacle flicking at around your chest and inner side of your thighs, having quite a lot of fun rubbing themselves against your [if player is male]cock[else if player is female]pussy[else]crotch[end if], as if the beast knew of your most vulnerable areas.";
+	say "     With enough persistence, the abomination manages to bring all your resistances down as you're helplessly stimulated down your parts, with already plenty of tendrils assaulting and completely covering you, to the point that any movement you attempt to make results in nothing but a little push. While taking you closer to it, the monster decides to shove one of its phallic members down your mouth, with another poking at the space between your asscheeks, threatening to violate you in any manner possible. Its powerful shafts spread your legs open with ease, fully exposing your entrance to the abomination. When the whim takes it, you feel one pushing rather violently against your asshole, [if player is female]with another slipping inside your womanhood, [end if]while the one in your mouth just digs itself deeper towards your throat, as they wiggle and squeeze to allocate themselves inside you.";
+	WaitLineBreak;
+	say "     They throb and ram, pull and push, squeeze and rub all they can, in and out of you, all over you, covering you in a juice that seems comparable to a beast's drool, but slick and slippery, with their bulbuous tips engorged as the rest of the tentacles['] shafts thicken and harden, increasingly excited and more than happy to take you over. You find yourself thoroughly assaulted from all ends, being pulled deeper and closer into the tendrils['] embrace. Each and every single one of them is wiggling inside you or all around you, their width stretching your fleshy tunnels while continuously pounding and thrusting into you.";
+	say "     It's when you look down, towards the center of all these tentacles, throbbing and leaking a white, thick liquid from their flared tips, that you can see what awaits you...";
+	WaitLineBreak;
+	if a random chance of 1 in 2 succeeds: [it's a dick!]
+		say "     ... an enormous, massive penis-shaped mass, whose slit gapes and throbs liquid out at your approach the more its surrounding tendrils take a grasp at you, slowly bringing you over to their in-between as you are mercilessly overstimulated all over and pounded deep in your orifices. This molded cock grows bigger, harder and pulses an unbearable warmth that makes you sweat once you're caught in its radius, while the abomination's tentacles flip you around in order to make you fit its terrifying maw, your head shifted towards it. The monster, once you're touching its sensitive body, makes some of its tentacles retreat from your body, except those that are holding you in place, before slowly bringing you over to its slit. As it leaks, a even thicker glob of white juice covers your face, with a chunk of flesh instantly swallowing you over to your neck.";
+		say "     It continues to slurp on your body down to your shoulders, making it around your chest, and keeps on pushing you inside. Its heat is so hot that you nearly feel yourself melting, and no matter how much you would wiggle, struggle, kick and punch around, the creature feels nothing but more pleasure as it feels your body filling its, going down that massive shaft that swells with your shape, leaking more liquid in every moment it manages to push you down a little more, past your waist, leaving only your legs out. Any movements you make only encourage it further, so it grabs you around your legs with more tentacles and, with additional pushing, it inserts you fully inside the penis that wants to swallow you completely, until it finally does.";
+		WaitLineBreak;
+		say "     The last bit of you, which are your feet, is then swallowed by the giant penis as the tendrils let go of you completely, allowing you to sink in its length as you disappear into the mass. You are then pulled deeper, forced to go into a curl, and held inside a gelatinous body that floods itself in more of that strange liquid, oddly warm and making you tingle all over, until you begin to doze off. It is as if the darkness itself was suffocating you, making you lose your will to breathe. What remains is your shell, as it then too merges with the rest of the abomination that consumed your body and soul, a process that lasts for hours and hours with increasing orgasmic pleasure, a wicked way to make you surrender to its greedy hunger.";
+	else: [it's a pussy]
+		say "     ... an enormous, massive vulva-shaped mass, whose plump lips throb and leak liquid out at your approach the more its surrounding tendrils take a grasp at you, slowly bringing you over to their in-between as you are mercilessly overstimulated all over and pounded deep in your orifices. This molded pussy grows bigger, moistening and blinking every so often, and pulses an unbearable warmth that makes you sweat once you're caught in its radius, while the abomination's tentacles flip you around in order to make you fit its terrifying entrance, your head shifted towards it. The monster, once you're touching its sensitive body, makes some of its tentacles retreat from your body, except those that are holding you in place, before slowly bringing you over to the gaping entrance. As it leaks, a even thicker glob of white juice covers your face, with a chunk of flesh instantly swallowing you over to your neck.";
+		say "     It continues to slurp on your body down to your shoulders, making it around your chest, and keeps on pushing you inside. Its heat is so hot that you nearly feel yourself melting, and no matter how much you would wiggle, struggle, kick and punch around, the creature feels nothing but more pleasure as it feels your body filling its, going down that massive cunt that swells with your shape, leaking more liquid in every moment it manages to push you down a little more, past your waist, leaving only your legs out. Any movements you make only encourage it further, so it grabs you around your legs with more tentacles and, with additional pushing, it inserts you fully inside the vulva that wants to unbirth you completely, until it finally does.";
+		WaitLineBreak;
+		say "     The last bit of you, which are your feet, is then swallowed by the giant womanhood as the tendrils let go of you completely, allowing you to sink in its depths as you disappear into the mass. You are then pulled deeper, forced to go into a curl, and held inside a gelatinous body that floods itself in more of that strange liquid, oddly warm and making you tingle all over, until you begin to doze off. It is as if the darkness itself was suffocating you, making you lose your will to breathe. What remains is your shell, as it then too merges with the rest of the abomination that consumed your body and soul, a process that lasts for hours and hours with increasing orgasmic pleasure, a wicked way to make you surrender to its greedy hunger.";
+		WaitLineBreak;
+	if carried of ancient tome > 0 and TentacleInteractions > 0: [Saved from the Bad End]
+		say "     But... suddenly, something seems to shift. A bright, crimson light blinds you within the fadeaway that took you at the brink of your loss of conscience, then rings in your ears like a loud bell that continuously hums without another beat, except its sound is getting higher and higher, as if per something magical attempting to reach you before you are lost forever. You feel an all too familiar touch, similar to the beast that have captured you, except this one is different. An odd embrace of tentacles gets you, much more gentle and soft than the previous, as your body is pulled away from the flooded cocoon that was holding you until your body and soul would finally perish. As you regain your conscience, you almost cannot believe it...";
+		say "     It seems these are the ancient tentacles from the ancient tome, which were summoned at the very last moment in order to save you from the void abomination. At least, you recognize this very sensation of slick and wet tendrils all over your body, not hungrily preying on you, but wanting to actually offer you pleasure as they take every hole and corner of your vulnerable body. You are too weak to offer any resistance, and even if you could, their touch simply feels too good to even gather the willpower to fight it. Within these brief moments, you fade in and out of conscience as you are penetrated from both sides, tentacles wiggling inside you and touching every soft spot in you, filling you with ecstacy from every direction... But your strength only remains for so long, before you black out once more.";
+		WaitLineBreak;
+		say "[VRLeave]";
+		say "     Your surroundings change, from a suffocating emptiness and being submerged in liquid, to breathable air and freedom. You are back in the [bold type]Red Light District[roman type], away from the void, and waking up with a swollen belly. Reaching for a hand down over your ass, you feel the very same odd juice that leaks out of those tentacles, and soon enough, your memory catches up. It seems the ancient tentacles actually saved you, and in return, they bred you with more of their offspring, who seem to have left through your rear by now, judging from how it's stretched and leaking. Why did they do that, though? Are you an asset too valuable for them? Or is it just something to do with the abominations in the void...?";
+		say "     You feel like there is something going on between both these entities, but you cannot point out what, exactly.";
+
+to say TentacleAbominationLoses:
+	if inasituation is true:
+		say ""; [dealt with at the source]
+	else:
+		say "Nothing written yet.";
+
 to VRVoidSerpentFightConclusion:
 	if fightoutcome < 20: [player won]
 		say "     It was a tough fight, but you managed to emerge victorious by dealing the final blow to the Void Serpent, who collapses on the dark floor seemingly lifeless before you. With nothing else to do but to admire your prowess, you look around for some spoils.";
 		say "     There is, at least, [bold type]a pair of null essences[roman type] that you manage to gather from the defeated snake.";
 		increase carried of null essence by 2;
+		now VRVoidSerpentTracker is 0;
 		WaitLineBreak;
 		say "[VRMoveOptions]";
 	else if fightoutcome > 19 and fightoutcome < 30: [lost]
@@ -1333,6 +1482,7 @@ to VRVoidSerpentFightConclusion:
 			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Xaedihr's Weapon Damage Check):[line break]";
 			if diceroll + bonus >= 16:
 				say "     [italic type]But what is this? The serpent cowers as if hit by something incredibly powerful! It seems it was Xaedihr, who managed to charge up a spell strong enough to knock the creature away for a while! 'Quick! Into the veil!' he shouts, as he grabs to you attempt an escape out of the core line. Fortunately, the serpent is not able to follow after taking such a surprising hit.[roman type][line break]";
+				now VRVoidSerpentTracker is 1;
 				WaitLineBreak;
 				VREventsRoll;
 			else:
@@ -1353,13 +1503,13 @@ to VRVoidSerpentFightConclusion:
 			if diceroll + bonus >= 16:
 				say "     [italic type]But what is this? The serpent cowers as if hit by something incredibly powerful! It seems it was Xaedihr, who managed to charge up a spell strong enough to knock the creature away for a while! 'Quick! Into the veil!' he shouts, as he grabs to you attempt an escape out of the core line. Fortunately, the serpent is not able to follow after taking such a surprising hit.[roman type][line break]";
 				WaitLineBreak;
+				now VRVoidSerpentTracker is 1;
 				VREventsRoll;
 			else:
 				say "     [italic type]Not even Xaedihr can save you. He doesn't manage to cast a spell powerful enough to force its hold out of you. He has no other choice but to escape by himself, leaving you to your fate...[roman type][line break]";
 				WaitLineBreak;
 				say "[VRVoidSerpentWins]";
 		else:
-			WaitLineBreak;
 			say "[VRVoidSerpentWins]";
 
 to VRDarkTyrantFightConclusion:
@@ -1400,6 +1550,7 @@ to VRPeculiarSummonerFightConclusion: [The peculiar summoner is one of the few '
 			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]14[roman type] (Xaedihr's Weapon Damage Check):[line break]";
 			if diceroll + bonus >= 14:
 				say "     [italic type]But what is this? The summoner cowers as if hit by something incredibly powerful! It seems it was Xaedihr, who managed to charge up a spell strong enough to knock the cloaked figure away for a while! 'Quick! Into the veil!' he shouts, as he grabs to you attempt an escape out of the core line. Fortunately, the summoner is not able to follow after taking such a surprising hit, but they do shout angrily.[roman type][line break]";
+				now VRPeculiarSummonerTracker is 1;
 				WaitLineBreak;
 				VREventsRoll;
 			else:
@@ -1407,14 +1558,73 @@ to VRPeculiarSummonerFightConclusion: [The peculiar summoner is one of the few '
 				WaitLineBreak;
 				say "[VRPeculiarSummonerWins]";
 		else:
-			WaitLineBreak;
 			say "[VRPeculiarSummonerWins]";
 	else if fightoutcome is 30: [fled]
 		say "     The cloaked figure is the only exception to this rule, as they cannot possibly go after you or attempt to stop you without some sort of extraordinary effort while you were in the middle of fighting. A moment of distraction is all you need to leap out of the core line and leave the peculiar summoner behind, as they shout angrily.";
 		say "     Hopefully you don't find anything menacing [bold type]beyond the veil...[roman type][line break]";
+		now VRPeculiarSummonerTracker is 1;
 		WaitLineBreak;
 		VREventsRoll;
 
+to VRTentacleAbominationFightConclusion:
+	if fightoutcome < 20: [player won]
+		say "     Delivering the final strike against the abomination makes it recoil and draw back in fear, its many tentacles unable to stretch and reach for you. Having taken the upper hand, you take a few steps towards it only to see the monster crawling away, retreating into the darkness. For now, you remain standing victorious, with the spoils of a ferocious battle against one of the hungriest creatures in the void.";
+		say "     Besides, you have also saved yourself from being thoroughly raped and consumed by one of the most hedious beasts of the empty space.";
+		if a random chance of 2 in 3 succeeds:
+			say "     It looks like the Tentacle Abomination dropped a single [bold type]Null Essence[roman type], so you pick it up and stash it in your inventory.";
+			increase carried of null essence by 1;
+	else if fightoutcome > 19 and fightoutcome < 30: [lost]
+		say "     No matter how much you struggle against the massive cluster of tentacles, it only grows stronger by the second you are fighting it, providing you with quite the challenge. Although, a few more strikes are you're barely capable of moving, having the tentacles finally reach you and immobilize you in place. All you see now is yourself being dragged through the floor as more of the abomination's extensions wrap themselves around your body...";
+		WaitLineBreak;
+		if companion of player is demonologist:
+			Linebreak;
+			let bonus be (( weapon damage of demonologist minus 10 ) divided by 2);
+			let diceroll be a random number from 1 to 20;
+			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Xaedihr's Weapon Damage Check):[line break]";
+			if diceroll + bonus >= 15:
+				say "     [italic type]But what is this? The abomination cowers as if hit by something incredibly powerful! It seems it was Xaedihr, who managed to charge up a spell strong enough to knock the creature away for a while! 'Quick! Into the veil!' he shouts, as he grabs to you attempt an escape out of the core line. Fortunately, the monster is not able to follow after taking such a surprising hit.[roman type][line break]";
+				WaitLineBreak;
+				now VRTentacleAbominationTracker is 1;
+				now VRTentacleAbominationLinger is 0;
+				VREventsRoll;
+			else:
+				say "     [italic type]Not even Xaedihr can save you. He doesn't manage to cast a spell powerful enough to force its hold out of you. He has no other choice but to escape by himself, leaving you to your fate...[roman type][line break]";
+				WaitLineBreak;
+				if carried of ancient tome > 0 and TentacleInteractions > 0: [not a bad end]
+					TentacleAbominationVore1;
+				else:
+					say "[VRTentacleAbominationWins]";
+		else:
+			if carried of ancient tome > 0 and TentacleInteractions > 0: [not a bad end]
+				TentacleAbominationVore1;
+			else:
+				say "[VRTentacleAbominationWins]";
+	else if fightoutcome is 30: [fled]
+		say "     Flee? There is no escape from the monsters of the Void once you engage in battle with one of them. All you managed to do was to give the abomination enough time to stretch its tentacles towards your legs, making you trip, then fall... and become a vulnerable target for the rest of them.";
+		WaitLineBreak;
+		if companion of player is demonologist:
+			Linebreak;
+			let bonus be (( weapon damage of demonologist minus 10 ) divided by 2);
+			let diceroll be a random number from 1 to 20;
+			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Xaedihr's Weapon Damage Check):[line break]";
+			if diceroll + bonus >= 15:
+				say "     [italic type]But what is this? The abomination cowers as if hit by something incredibly powerful! It seems it was Xaedihr, who managed to charge up a spell strong enough to knock the creature away for a while! 'Quick! Into the veil!' he shouts, as he grabs to you attempt an escape out of the core line. Fortunately, the monster is not able to follow after taking such a surprising hit.[roman type][line break]";
+				WaitLineBreak;
+				now VRTentacleAbominationTracker is 1;
+				now VRTentacleAbominationLinger is 0;
+				VREventsRoll;
+			else:
+				say "     [italic type]Not even Xaedihr can save you. He doesn't manage to cast a spell powerful enough to force its hold out of you. He has no other choice but to escape by himself, leaving you to your fate...[roman type][line break]";
+				WaitLineBreak;
+				if carried of ancient tome > 0 and TentacleInteractions > 0: [not a bad end]
+					TentacleAbominationVore1;
+				else:
+					say "[VRTentacleAbominationWins]";
+		else:
+			if carried of ancient tome > 0 and TentacleInteractions > 0: [not a bad end]
+				TentacleAbominationVore1;
+			else:
+				say "[VRTentacleAbominationWins]";
 
 Section 3 - Items
 
@@ -1470,6 +1680,22 @@ It is part of the player.
 It has a weapon "[one of]your very sharp tusk[or]your void monster's tusk[or]your sharp black tusk[at random]". The weapon damage of sharp black tusk is 12. The weapon type of sharp black tusk is "Melee". It is not temporary. The objsize of sharp black tusk is 4. The hitbonus of sharp black tusk is -2.
 
 the scent of the sharp black tusk is "The void serpent's tusk actually manages to have a scent, despite coming from the void, and you do not like it. It's undescribably bad, something between rotten and death, even with the apparent good condition of the tusk.".
+
+[]
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"loose tentacle"	"A remnant of one of the Tentacle Abomination's many tendrils, which sometimes starts moving on its own."	1	loose tentacle
+
+loose tentacle is a grab object.
+the usedesc of loose tentacle is "[loose tentacle use]";
+
+to say loose tentacle use:
+	say "     You try to think of a way to use it, but honestly, you really can't figure out any. Perhaps someone else would?";
+	increase carried of loose tentacle by 1;
+
+instead of sniffing loose tentacle:
+	say "This thing suprisingly does not smell like the void, but it's an odd scent. One that you would find only after a massive orgy, reeking of sex and sweat.";
 
 Section 4 - Creatures
 
@@ -1855,6 +2081,170 @@ When Play begins:
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]unknown[or]questionable[or]cloaked[or]robed[at random]";
 	now type entry is "[one of]slender[or]unknown[at random]";
+	now magic entry is true;
+	now resbypass entry is false;
+	now non-infectious entry is true;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
+
+[
+Table of New Infection Parts (continued)
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
+	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Asshole Depth entry is 7; [inches deep for anal fucking]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
+	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
+	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
+]
+
+Section 4-4 - Tentacle Abomination
+
+Table of Random Critters (continued)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of Random Critters;
+	now NewTypeInfection entry is false;
+	now Species Name entry is "Voidling"; [name of the overall species of the infection, used for children, ...]
+	now Name entry is "Tentacle Abomination"; [Name of your new Monster]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now attack entry is "The [one of]massive cluster of tentacles[or]tentacle abomination[or]mass of void tentacles[or]obscene tentacle monster[at random] [one of]smashes you with one of its big extensions[or]jumps at you with suprising agility and smashes against your body[or]shoots a questionable thick substance at you, which drains your strength, then attacks you with a tentacle smash[or]swings a huge tentacle at you, hitting you hard[at random]!";
+	now defeated entry is "[TentacleAbominationLoses]";
+	now victory entry is "[TentacleAbominationWins]";
+	now desc entry is "[TentacleAbominationDesc]";
+	now face entry is "";
+	now body entry is "";
+	now skin entry is "";
+	now tail entry is "";
+	now cock entry is "";
+	now face change entry is "";
+	now body change entry is "";
+	now skin change entry is "";
+	now ass change entry is "";
+	now cock change entry is "";
+	now str entry is 43;
+	now dex entry is 28;
+	now sta entry is 48;
+	now per entry is 12;
+	now int entry is 9;
+	now cha entry is 5;
+	now sex entry is ""; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now HP entry is 469; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 20; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
+	now wdam entry is 29; [Amount of Damage monster Does when attacking. Claws and massive strength]
+	now area entry is ""; [ Current options are 'Outside' and 'Mall'. Case sensitive. If you go down to the woods today, you're in for a big surprise]
+	now Cock Count entry is 99; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now Cock Length entry is 99; [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 99; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
+	now Nipple Count entry is 0; [ Number of nipples infection will give you (males have nipples too) ]
+	now Breast Size entry is 0; [Size of breasts infection will try to attain ]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now Cunt Depth entry is 0;
+	now Cunt Tightness entry is 0;
+	now libido entry is 0; [ Amount player Libido will go up if defeated ]
+	now loot entry is "loose tentacle";
+	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
+	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]abominable[or]monstrous[or]obscene[or]disturbing[at random]";
+	now type entry is "[one of]abominable[at random]";
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;

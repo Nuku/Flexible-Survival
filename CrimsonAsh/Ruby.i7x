@@ -71,6 +71,7 @@ Instead of resolving Urban Cliff:
 					LineBreak;
 					say "[RubyCombatFuck]";
 					now Resolution of Urban Cliff is 10; [won, rape]
+					now Urban Cliff is resolved;
 				else if calcnumber is 2:
 					LineBreak;
 					say "     You turn and walk away, not wanting anything from the dragon creature. A clearly surprised huff can be heard behind you, followed by the woman's voice shouting angrily, 'W-what? You come into my home and beat me up, then just fuck off? Good riddance, bastard! Leave and don't come back, you hear me?!' As you start climbing back up the slope, you wonder if you'll see the furry, scaled woman again, maybe under better circumstances. Surprise visits to her home seem to be out for sure, given her reaction this time, so you make a note not to come here again.";
