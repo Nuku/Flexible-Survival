@@ -6653,6 +6653,7 @@ Include Friendship Pony by Stripes.
 Include Frost Drake by CrimsonAsh.
 Include Fruit Bat by Stripes.
 Include Furling by Wahn.
+Include Gargoyle Sentry by Gherod.
 Include Gargoyle by Kaleem mcintyre.
 Include Gator by Nuku Valente.
 Include Gazelle by Sarokcat.
