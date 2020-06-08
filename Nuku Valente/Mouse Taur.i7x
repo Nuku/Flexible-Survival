@@ -136,6 +136,12 @@ Restrained Desire	"Porn Store"
 Restrained Desire is a room. It is fasttravel. It is sleepsafe. It is private.
 The description of Restrained Desire is "[pornstoredesc]".
 
+after looking while player is in Restrained Desire:
+	if findwires < 2 and fixedgens < 3:
+		project the Figure of Map_RedLight_Nopower_8_icon;
+	else:
+		project the Figure of Map_RedLight_8_icon;
+
 Restrained Desire is northwest of Boundary Street West.
 
 Table of GameCharacterIDs (continued)

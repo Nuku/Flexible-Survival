@@ -7093,7 +7093,7 @@ Include Felinoid Companion by Sarokcat.
 Include Feral Pets by Luneth.
 Include Gryphon Companion by Sarokcat.
 Include Honey by Luneth.
-Include Korvin by Stripes.
+Include Korvin by Wahn.
 Include Rachel Mouse by Stripes.
 Include Ryousei by Wahn.
 

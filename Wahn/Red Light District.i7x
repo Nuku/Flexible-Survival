@@ -12,7 +12,17 @@ Entrance to the Red Light District is a room. It is fasttravel.
 The earea of Entrance to the Red Light District is "Red".
 The description of Entrance to the Red Light District is "[RedLightDesc]".
 
+after looking while player is in Entrance to the Red Light District:
+	if findwires < 2 and fixedgens < 3:
+		project the Figure of Map_RedLight_Nopower_6_icon;
+	else:
+		project the Figure of Map_RedLight_6_icon;
+
 to say RedLightDesc:
+	if findwires < 2 and fixedgens < 3:
+		project the Figure of Map_RedLight_Nopower_6_icon;
+	else:
+		project the Figure of Map_RedLight_6_icon;
 	say "     This street corner marks the beginning of the city's Red Light District. Normal buildings, stores and offices give way to an area that seems old, grimy and somewhat abandoned, given that the colorful neon lights of numerous adult establishments hang dark and powerless on their buildings. Caution seems advised hereabouts, as the area is an obvious hive of perverts and sex addicts, with the infection outbreak just having pushed things to new extremes.";
 	say "     To the south, you could wander back out into the surrounding city and possibly find a safer place to be. Alternatively, the way east and west along the boundary road seems relatively safe - or you could [bold type][link]explore[as]explore[end link][roman type] the twisting streets of this old part of the city that lie north of where you stand, with all the dangers that may hold.";
 
@@ -27,6 +37,12 @@ Boundary Street East is a room.
 Boundary Street East is east of Entrance to the Red Light District.
 The earea of Boundary Street East is "Red".
 The description of Boundary Street East is "[RedLightBoundaryEastDesc]".
+
+after looking while player is in Boundary Street East:
+	if findwires < 2 and fixedgens < 3:
+		project the Figure of Map_RedLight_Nopower_5_icon;
+	else:
+		project the Figure of Map_RedLight_5_icon;
 
 to say RedLightBoundaryEastDesc:
 	say "     You're on a road that runs along the border to the red light district, marked by prominent [']SEX SEX SEX['] neon signs along the facades of a number of buildings on one street side. Though without power to support the alluring shine of all the signage, it just seems kinda dingy. Some piles of uncollected trash litter the street, and towards the east, a modestly sized chapel rises above the surrounding buildings. Sadly, its white walls are marred by the signs of a recent fire within, with the flames having licked out of the shattered windows to blacken areas above and besides them. The large inverted pentagram that someone has clawed into the timbers of the wooden front door tells you that what befell the chapel wasn't an accident either. To the southeast lies an apartment building with a busted front door, which nevertheless looks more lived-in than most of the other buildings all around.";
@@ -43,6 +59,12 @@ Dingy Alley is north of Boundary Street East.
 The earea of Dingy Alley is "Red".
 The description of Dingy Alley is "[DingyAlleyDesc]";
 
+after looking while player is in Dingy Alley:
+	if findwires < 2 and fixedgens < 3:
+		project the Figure of Map_RedLight_Nopower_4_icon;
+	else:
+		project the Figure of Map_RedLight_4_icon;
+
 to say DingyAlleyDesc:
 	say "     You're in a dingy alley between two buildings, ending at a brick wall at the end. There is a sturdy door with a viewslit in it, and you can see barred windows one floor up. A large mattress with telltale stains is laid out on the ground not far from the door, and there is a large cardboard sign that promises 'Freshest Whores in Town!'";
 
@@ -54,6 +76,12 @@ Burned-Out Chapel is a room. It is fasttravel.
 Burned-Out Chapel is east of Boundary Street East.
 The description of Burned-Out Chapel is "[chapelplacedesc]".
 earea of Burned-Out Chapel is "Red".
+
+after looking while player is in Burned-Out Chapel:
+	if findwires < 2 and fixedgens < 3:
+		project the Figure of Map_RedLight_Nopower_2_icon;
+	else:
+		project the Figure of Map_RedLight_2_icon;
 
 instead of sniffing Burned-Out Chapel:
 	say "The heavy scent of burned wood hangs in the room, mixed with a trace of blood and [if HP of Elijah is 100]the all-pervading stench of [end if]demonic cum.";
@@ -74,6 +102,13 @@ Sacristy	"Sacristy"
 
 Sacristy is a room.
 Sacristy is northeast of Burned-Out Chapel.
+
+after looking while player is in Sacristy:
+	if findwires < 2 and fixedgens < 3:
+		project the Figure of Map_RedLight_Nopower_1_icon;
+	else:
+		project the Figure of Map_RedLight_1_icon;
+
 The description of Sacristy is "     This sacristy has been... redecorated recently. You're pretty sure it didn't originally have red silk drapes and a large bed, currently bathed in the light of about a hundred candles. There's a fire going in a brazier with a large stack of bibles beside it to provide additional fuel. In between various dildos and sex toys strewn about on the bed, there's a golden chalice and a few crosses, which got used for the same purpose as the rest, from their sticky state...".
 
 instead of sniffing Sacristy:
@@ -86,6 +121,12 @@ Darius's Crib	"Darius's Crib"
 Darius's Crib is a room.
 Darius's Crib is southeast of Boundary Street East. It is sleepsafe.
 The description of Darius's Crib is "[DariusCribDesc]".
+
+after looking while player is in Darius's Crib:
+	if findwires < 2 and fixedgens < 3:
+		project the Figure of Map_RedLight_Nopower_3_icon;
+	else:
+		project the Figure of Map_RedLight_3_icon;
 
 to say DariusCribDesc:
 	say "     Having passed through a short hallway after entering this building and walking past one door that is literally only held up by crime scene tape gluing it to its frame, you're in one of the other apartments of the building now. Or maybe two, as someone has knocked a large hole through the wall of next apartment. All in all, the place has a dingy and run-down feel to it and seems not particularly well cleaned up. Numerous mattresses lie on the floor, often stained by sexual fluids, and you can hear the barking of dog cubs from somewhere deeper in the other apartment. The kitchen counter seems to be where he lays out his stuff to sell, judging from a sign attached to it.";
@@ -122,6 +163,12 @@ Boundary Street West is west of Entrance to the Red Light District.
 The earea of Boundary Street West is "Red".
 The description of Boundary Street West is "[RedLightBoundaryWestDesc]".
 
+after looking while player is in Boundary Street West:
+	if findwires < 2 and fixedgens < 3:
+		project the Figure of Map_RedLight_Nopower_7_icon;
+	else:
+		project the Figure of Map_RedLight_7_icon;
+
 to say RedLightBoundaryWestDesc:
 	say "     You're on a road that runs along the border to the red light district, marked by prominent [']SEX SEX SEX['] neon signs along the facades of a number of buildings on one street side. Though without power to support the alluring shine of all the signage, it just seems kinda dingy. The area you are in is dominated by a big rig truck lying on its side, wedging its bulky length between the buildings on both sides and creating a formidable barrier that impedes any further progress west. In all likelihood, the driver crashed it sometime during the initial outbreak of the nanite contagion. Towards the northwest, just short of where the cab of the truck has buried itself halfway in a wall, you can see the door of a store that survived the devastation seemingly intact.";
 
@@ -136,6 +183,12 @@ Northern Street 1 is a room.
 Northern Street 1 is north of Entrance to the Red Light District.
 The earea of Northern Street 1 is "Red".
 The description of Northern Street 1 is "[RedLightNorthStreet1Desc]".
+
+after looking while player is in Northern Street 1:
+	if findwires < 2 and fixedgens < 3:
+		project the Figure of Map_RedLight_Nopower_9_icon;
+	else:
+		project the Figure of Map_RedLight_9_icon;
 
 to say RedLightNorthStreet1Desc:
 	say "     You're on a road that runs along the border to the red light district, past the prominent [']SEX SEX SEX['] neon signs along the facades of a number of buildings on the street sides before you. Though without power to support the alluring shine of all the signage, it just seems kinda dingy. Some piles of uncollected trash litter the street, and the way splits into a few thin and shady alleys, though they seem to have nothing of interest. However, the road extends a bit further, onto a building with a neon sign saying [']TOYS['], alongside a pair of handcuffs, and further beyond where an ominous, faint red light shines through a thinner street just around the corner to the right.";
@@ -152,6 +205,12 @@ Northern Street 2 is north of Northern Street 1.
 The earea of Northern Street 2 is "Red".
 The description of Northern Street 2 is "[RedLightNorthStreet2Desc]".
 
+after looking while player is in Northern Street 2:
+	if findwires < 2 and fixedgens < 3:
+		project the Figure of Map_RedLight_Nopower_10_icon;
+	else:
+		project the Figure of Map_RedLight_10_icon;
+
 to say RedLightNorthStreet2Desc:
 	say "     You're in the middle of the northern road, coming across a building with neon signs saying [']TOYS['], alongside a pair of handcuffs, indicating this must have been some kind of store for the kinky fans of sex toys. Besides it, there's still a small pile of uncollected trash. Towards the northeast, there is a thinner street where an ominous, faint red light dims through. Traveling south would lead you towards the crossroad marking the entrance to the Red Light District.";
 
@@ -166,6 +225,12 @@ Crimson Street is a room.
 Crimson Street is northeast of Northern Street 2.
 The earea of Crimson Street is "Red".
 The description of Crimson Street is "[RedLightCrimsonStreetDesc]".
+
+after looking while player is in Crimson Street:
+	if findwires < 2 and fixedgens < 3:
+		project the Figure of Map_RedLight_Nopower_11_icon;
+	else:
+		project the Figure of Map_RedLight_11_icon;
 
 to say RedLightCrimsonStreetDesc:
 	say "     You have arrived at the entrance of the Crimson Street, in which a strange and ominous red light dims through with no logical explanation. It seems pretty empty and oddly silent, without anything of interest at the first glance. All the buildings here look either abandoned or looted, although everything looks mysteriously clean, unlike the other streets. Staying here gives you an offsetting feeling you can't quite specify, but besides that, it seems you cannot proceed any further from here, unless any of these buildings are of any interest to you at some point.";

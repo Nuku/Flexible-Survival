@@ -1,5 +1,6 @@
-Version 3 of Junkyard and Warehouse by Wahn begins here.
+Version 4 of Junkyard and Warehouse by Wahn begins here.
 [ Version 3 - Rework by Wahn]
+[ Version 4 - Old Stallion Friendship event added to Steven - Vinickus (code support by Gherod)]
 [- Originally Authored By: Rimme -]
 
 [ StevenSwayed - Soda for Steven              ]
@@ -166,8 +167,12 @@ Instead of going south from the Abandoned Lot:
 							say "     Shaking your head, you step away from the door. The viewing slat quickly closes.";
 					else:
 						say "You promise you will bring him one, and he shakes his head with embarrassment. 'Don't tell anyone I offered you a bribe, understand?' he speaks up again. 'Now go, before someone sees you!' He closes the slat.";
-	else:
+	else if Resolution of Old Stallion Friendship < 3:
 		say "The slat opens up, and a fierce-looking pair of eyes look upon you. '[one of]Scram[or]Get lost[or]Go away[or]Shoo[or]Get off our land[or]Leave[or]Go fuck your brains out[or]Go screw a farm animal[or]Go suck some horse cocks[or]Go back to your den[at random], you [one of]disgusting[or]sick[or]twisted[or]cock-sucking[or]fucking[or]good-for-nothing[or]degenerate[or]inhuman[at random] [one of]beast[or]mutant[or]pervert[or]animal[or]vermin[or]horse-fucker[or]zoophile[or]traitor[or]savage[at random]!' he shouts, slamming the slat shut.";
+	else if Resolution of Old Stallion Friendship is 3:
+		say "You knock on the door, but no one answers. Maybe Steven is out or busy? <Writer's Note: Further content will be added to continue here in future updates. Please be patient.>";
+	else if Resolution of Old Stallion Friendship is 4:
+		say "You knock on the door, but no one answers. Perhaps given the last events, they are still sorting themselves in there. <Writer's Note: Further content will be added to continue here in future updates. Please be patient.>";
 
 Chapter 2 - Storage Room and Steven
 
@@ -183,6 +188,22 @@ Storage Room is south of the Warehouse Door.
 
 instead of sniffing Storage Room:
 	say "The storage room smells of the human survivors and their supplies. Fear is thick in the air, almost completely masking the faint traces of other non-human scents among the group. It seems a few of them are at least slightly infected and desperately trying to hide it.";
+
+Table of GameRoomIDs (continued)
+Object	Name
+Junkyard Alley	"Junkyard Alley"
+
+Junkyard Alley is a room.
+The earea of Junkyard Alley is "Outside".
+the description of Junkyard Alley is "[JunkAlleyDesc]"
+
+Junkyard Alley is southeast of Abandoned Lot.
+
+to say JunkAlleyDesc:
+	say "     This alley has probably never seen better days, as it's been thoroughly cleaned out and swept up. It looks as though someone regularly comes this way to clear out debris and make the place look presentable. However, this particular spot makes you feel suspicious[if Resolution of Old Stallion Friendship is 0], but you are not entirely sure why[else if Resolution of Old Stallion Friendship < 2] with that hidden door[else if Resolution of Old Stallion Friendship > 2] with that little secret entrance you discovered into the inhabited and, mostly, uninfected warehouse[end if].";
+
+instead of smelling Junkyard Alley:
+	say "     It smells thoroughly clean, missing the lingering scents of sex and musk. It's hard to tell if that's more disappointing than surprising.";
 
 Section 2 - Steven, chat
 
@@ -228,9 +249,24 @@ SexuallyExperienced of Steven is true.
 TwistedCapacity of Steven is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Steven is false. [steriles can't knock people up]
 MainInfection of Steven is "Morgan Horse Stallion".
-The description of Steven is "A man in his thirties, wearing a security outfit. He looks from side to side with a distant look in his eyes. What kind of life did he have before the nanite invasion?".
-The conversation of Steven is {"[Steven flattery]", "What's it like out there? If I only had a gun, I might be able to assist you.", "I don't know how long this infestation has been going on. Long enough, in my opinion.", "None of us knew about the nanites. Just before things went berserk, we grabbed a building and brought in everyone from the streets. You should've seen it.", "Before everything went to hell, I had a house, a son, twenty grand a year. It's all gone now. Those people out there are all I have left.", "Part of me wants to just give in. If civilization is going to hell... but I guess that's why people like me, who don't have anything else, are here for, right?", "You know, if you can find any chips or sodas out there, I can get you a few medkits.", "I miss burger joints. And coffee. And the internet. Hell, even a phone call to my mother would be great.", "Back in college, I played the drums. You think I have time to take it back up?", "I'd offer you a seat, but I don't have a lot around the office. You don't mind standing, right?", "I volunteered to be a guard, just so I wouldn't be wallowing in misery. Plus, you get free health kits.", "I haven't washed this uniform in so long. I could really go for a non-infected shower."}.
+The description of Steven is "[StevenDesc]".
+The conversation of Steven is { "<This is nothing but a placeholder!>" }.
 The fuckscene of Steven is "[sexwithSteven]".
+
+to say StevenDesc:
+	if Steven is not in Steven's Home:
+		say "     A man in his thirties, wearing a security outfit. He looks from side to side with a distant look in his eyes. What kind of life did he have before the nanite invasion?";
+	else:
+		say "     A tall, imposing horse figure, were he not someone you knew. He has muscles up and down his red-haired body, his black hair replaced with a long red mane. He wears a loincloth and a belt, probably from his old uniform. He walks awkwardly, but carefully with his legs that end in hooves.";
+
+instead of conversing Steven:
+	if the player is in Storage Room:
+		say "As you begin to converse with Steven, he waves to another guard. 'Take my place, will ya?' He takes you aside and says, 'We should talk away from everyone else.' He takes you across the floor to a row of storage compartments, now being used as makeshift guard quarters. He opens one up and lets you step inside.";
+		move player to Steven's Office;
+		move Steven to Steven's Office;
+	else:
+		say "     You approach Steven, [one of]while he continues to rearrange the furnishings[or]while he waits on you patiently[or]as he swats away an annoying fly[or]as he straightens his loincloth[or]while he smiles warmly as you look at him[at random].";
+	say "[StevenTalkMenu]";
 
 instead of linkactioning Steven when Steventrust > 0 and the player is in Storage Room:
 	say "Possible Actions: [link]talk[as]talk Steven[end link], [link]smell[as]smell Steven[end link], [link]fuck[as]fuck Steven[end link][if Stevenfood < 5], [link]food[as]ask for food[end link][end if][if Stevenwater < 5], [link]water[as]ask for water[end link][end if][line break]";
@@ -238,14 +274,8 @@ instead of linkactioning Steven when Steventrust > 0 and the player is in Storag
 instead of sniffing Steven:
 	say "Steven smells strong and manly, reminding you of old cowboy movies for some reason.";
 
-Before conversing Steven:
-	if the player is in Storage Room:
-		say "As you begin to converse with Steven, he waves to another guard. 'Take my place, will ya?' He takes you aside and says, 'We should talk away from everyone else.' He takes you across the floor to a row of storage compartments, now being used as makeshift guard quarters. He opens one up and lets you step inside.";
-		move player to Steven's Office;
-		move Steven to Steven's Office;
-
 After going to Storage Room from Steven's Office:
-	move Steven to Storage Room.
+	move Steven to Storage Room;
 
 To say Steven flattery:
 	if the player is bodily human:
@@ -264,6 +294,72 @@ To say Steven flattery:
 			say "That skin of yours makes you look very... alien. A good kind of alien, though.";
 	else:
 		say "I know you still consider yourself human. It's what's on the inside that counts, right?";
+
+to say StevenTalkMenu:
+	say "     [bold type]What do you want to talk to Steven about?[roman type][line break]";
+	LineBreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Just chat a bit";
+	now sortorder entry is 1;
+	now description entry is "Have a chat with Steven";
+	[]
+	if Steven is in Steven's Home:
+		choose a blank row in table of fucking options;
+		now title entry is "His feelings";
+		now sortorder entry is 2;
+		now description entry is "Ask him about his feelings on his old acquaintances";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Just chat a bit"):
+					say "[StevenTalkChat]";
+				if (nam is "His feelings"):
+					say "[StevenTalkFeelings]";
+				wait for any key;
+				say "[StevenTalkMenu]"; [looping back to keep talking with him]
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You give Steven a nod as you make your leave, which he retributes.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
+
+to say StevenTalkChat:
+	if Steven is in Steven's Office:
+		say "     [Steven flattery]";
+		say "     [one of]'What's it like out there? If I only had a gun, I might be able to assist you.'[or]'I don't know how long this infestation has been going on. Long enough, in my opinion.'[or]'None of us knew about the nanites. Just before things went berserk, we grabbed a building and brought in everyone from the streets. You should've seen it.'[or]'Before everything went to hell, I had a house, a son, twenty grand a year. It's all gone now. Those people out there are all I have left.'[or]'Part of me wants to just give in. If civilization is going to hell... but I guess that's why people like me, who don't have anything else, are here for, right?'[or]'You know, if you can find any chips or sodas out there, I can get you a few medkits.'[or]'I miss burger joints. And coffee. And the internet. Hell, even a phone call to my mother would be great.'[or]'Back in college, I played the drums. You think I have time to take it back up?'[or]'I'd offer you a seat, but I don't have a lot around the office. You don't mind standing, right?'[or]'I volunteered to be a guard, just so I wouldn't be wallowing in misery. Plus, you get free health kits.'[or]'I haven't washed this uniform in so long. I could really go for a non-infected shower.'[at random]";
+	else if Steven is in Steven's Home:
+		say "     [one of]'I've seen a few beasts here and there, but I always manage to run away and hide. It's not as infested out here as the guards made it out to be.'[or]'I think a wild animal used to live here, before the infestation. Smells like it hasn't been back for a long time.'[or]'I actually feel pretty good. Even better than as a guard. It feels like I have a purpose, now.'[or]'I might miss my old human body, but if you can't beat them, join them.' He chuckles, 'And no one could beat you, dear.'[or]'You'd think there'd be a lot of disease going around. But I guess the nanites took care of that problem.'[or]'One thing I like about this body is I feel so strong, I could lift a car. I always did wish I had a stronger build.'[or] 'I didn't use to be fond of horses, but now I can't stop thinking about them.'[or]'I wish I had something to offer you, but I don't. There's not a lot of food here anymore.'[or]'There are plenty of coffee tins here. I think I might make a set of bongo drums.'[or]'The smell still gets through, once in a while. Tell me if you find any potpourri or something.'[at random]";
+
+to say StevenTalkFeelings:
+	say "     When you question him on how he feels about those that kicked him out, he gives a snort very befitting his stallion body. 'They're... just ignorant. I don't blame them, really.";
+	if Resolution of Old Stallion Friendship is 1:
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Push the issue.";
+		say "     ([link]N[as]n[end link]) - Better back off, for now.";
+		if player consents:
+			Linebreak;
+			say "     'If there was some way I could get back in and talk to them, then—well I might be able 	to convince them I'm the same as before.' You give him the location of the alley you found, and 	the oddly convenient backdoor. 'Alright. Maybe one of these days I'll see about talking to them. But I don't think I'll want to do it alone. Can you come with me when I'm ready?' You give your assurances to him and step aside, content with where things ended up.";
+			now Resolution of Old Stallion Friendship is 2; [Event now active]
+		else:
+			say "     You think it's better to not push him on this subject, for now.";
 
 Section 3 - Steven, trading
 
@@ -441,7 +537,6 @@ To StevenFuck:
 	move player to Abandoned Lot;
 	increase Libido of Player by 10;
 	now Stevenremoved is 1;
-	newStevenconverse;
 	move Steven to Steven's Home;
 	now MonsterID is 1;
 	say "You slowly pull yourself up, still wheezing from excitement. "; [continues into next line]
@@ -449,11 +544,6 @@ To StevenFuck:
 	infect "Morgan Horse Stallion";
 
 Section 4 - Steven in the Junkyard
-
-To newStevenconverse:
-	now the description of Steven is "A tall, imposing horse figure, were he not someone you knew. He has muscles up and down his red-haired body, his black hair replaced with a long red mane. He wears a loincloth and a belt, probably from his old uniform. He walks awkwardly, but carefully with his legs that end in hooves.";
-	now the conversation of Steven is {"I've seen a few beasts here and there, but I always manage to run away and hide. It's not as infested out here as the guards made it out to be.", "I think a wild animal used to live here, before the infestation. Smells like it hasn't been back for a long time.", "I actually feel pretty good. Even better than as a guard. It feels like I have a purpose, now.", "I might miss my old human body, but if you can't beat them, join them.' He chuckles, 'And no one could beat you, dear.", "You'd think there'd be a lot of disease going around. But I guess the nanites took care of that problem.", "One thing I like about this body is I feel so strong, I could lift a car. I always did wish I had a stronger build.", "I didn't use to be fond of horses, but now I can't stop thinking about them.", "I wish I had something to offer you, but I don't. There's not a lot of food here anymore.", "There are plenty of coffee tins here. I think I might make a set of bongo drums.", "The smell still gets through, once in a while. Tell me if you find any potpourri or something."};
-	now the initial appearance of Steven is "[one of]Steven continues to rearrange the furnishings[or]Steven waits on you patiently[or]Steven swats away an annoying fly[or]Steven straightens his loincloth[or]Steven smiles warmly as you look at him[at random].";
 
 To Stevenjunkfuck:
 	[puts red horse as lead monster in case of impregnation]
@@ -564,6 +654,65 @@ to say Stevenonbottom:
 	else:
 		say "     You try to seduce him into letting you fuck him, but he manages to shake off your advances and pushes you back. 'Hey, I said I'm not in the mood.' He gets up and looks around. 'I'm going to go take a walk.'";
 
+Section 5 - Junkyard Alley Event
+
+Table of GameEventIDs (continued)
+Object	Name
+Old Stallion Friendship	"Old Stallion Friendship"
+
+Old Stallion Friendship is a situation.
+The sarea of Old Stallion Friendship is "Nowhere".
+
+instead of going southeast from Abandoned Lot while (Resolution of Old Stallion Friendship is 0 and Steven is in Steven's Home):
+	say "     Scrounging around you find scratches along the ground nearest a wall, coincidentally it's the wall of the inhabited warehouse. The scratches form a sort of semicircle of chipped granite and whitened pavement. Looking a bit closer you can see a loose bit of aluminum siding, and as you pull at it you can hear the sounds of people on the other side. You even peak around the edge to see the people meandering around inside. [bold type]Maybe this would help Steven get back.[roman type][line break]";
+	now Resolution of Old Stallion Friendship is 1;
+
+instead of going southeast from Abandoned Lot while (Resolution of Old Stallion Friendship is 2 and Steven is in Steven's Home):
+	say "     You see Steven clopping back and forth, a pensive expression draped across his features. When you get his attention his face brightens ever so little. 'Hey, [if Player is not defaultnamed][Name of Player][else]dude[end if]. I still don't know what I'm doing here. They'll never accept me as,' Steven then looks down and waves his arms downwards, 'this!' Looking up and down his form draws your attention to what looks like a somewhat cleaned loincloth with little strings wrapped around it.";
+	say "     Your attention towards his groin draws a light nicker. 'I had to tie my... thing to the cloth. It helps avoid any unpleasant reveals.' You assure him that any such reveals would be quite pleasant indeed. A genuine smile breaks through his tense features, but then the storm clouds return.";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Encourage him to continue.";
+	say "     ([link]N[as]n[end link]) - Perhaps it's better to return another day.";
+	if player consents:
+		say "     With a bit of prodding, you get the stallion to agree to go ahead and get it over with. The man lightly grips the pealed back bits of aluminum, slowly opening the back 'entrance' and squeezing through. Almost immediately, you follow after him. Once inside, you're relieved that his bulging body is able to 				hunch behind the piles of food packet boxes, water bottle crates, soda crates, and everything in between. The pile of supplies easily reaches up to neck height for the average human, making your positioning all the easier, even with the broad slab of pure muscle right next to you";
+		say "     'So what now?' Steven asks with a jittery voice. You simply nudge him with an elbow, looking at his eyes as they show a look of utter 						bewilderment. 'Fine.' The stallion then walks out from behind the pile of supplies, hands raised with a face full of concern. No one seems to notice at first, but as soon as just a single person sees the hulking, mostly nude male heading towards them, they gasp. That gasp then draws more attention, and then more gasps, sounding like a slowly crescendoing chorus of pure hot air. 'Run!' someone you can't identify shouts. 'No! Wait!' Steven tries to yell out over the panic. However, it does little good, everyone stampedes towards the main door. The guards are far more concerned with Steven than keeping the survivors safe.";
+		WaitLineBreak;
+		say "     'Don't move,' one of the guards snaps at the stallion, the man's body covered in thick riot gear. 'I'm not here to hurt anyone,' the equine male protests. 'I just want you to see—' He's then interrupted as a shot rings out, the horse stumbling back. 'Why?!' he yells. 'You're a danger.' Another shot then rings out right afterwards, but it comes too late, the clops of an angry stallion filling the warehouse as wild firing begins. You duck behind your cover, 				staying hidden as the gunshots continue, the pops intermingled with sounds of men grunting and angry neighs. Things grow quiet after several minutes, and 				balling up your fists, you peak over the edge of your hiding spot. Your eyes widen as you look over the tied up men and groaning civilians, many of whom 				caught stray shots. Steven is hunched over one such groaning man, hands stroking over his face.";
+		say "     'If I'd have known you were still you, I wouldn't have stayed here,' the groaning man gasps out. 'I would've come found you. I always knew what you were hiding down there. It was obvious after each time in your office. Your pants can only hide so much.' A chuckle then rings out from the groaning male. 'Thank 			god for these nanites. I would've been dead otherwise.' The man then takes one of Steven's massive hands between his own, rubbing it as he smiles. 'Sorry that I didn't come looking for you. They told us you were lost. Insane. If I'd known—' the stallion shuts the man up with an eager kiss, his muzzle rotating as he kept making out with his friend. You step out from your hiding place, cautiously approaching Steven as he pulls his lips back from the human before him. Once 				you're close enough, you place a hand on his shoulder, questioning what's going to happen with the guards. 'What do you think?'";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Teach them what a wild stallion can do [bold type](Steven will become temporarily unavailable).[roman type][line break]";
+		say "     ([link]N[as]n[end link]) - If they can't be convinced to stay civil, then kick them out.";
+		if player consents: [Wild Stalion]
+			LineBreak;
+			say "     Steven gives a look of shock, but as you rub over his flank and reach towards his cock, his look abates towards one of confusion. His muzzle then twists into a vision of pure lust as you wrap a hand around his loincloth covered dick. The strings keeping the shaft mostly out of view snap as it hardens at a ridiculous pace. A neigh then rings out from him as he shakes his head, lightly pushing you aside as he clops over to the indisposed guards. 'So you think you 	could stop me from taking what I want?! Huh!' The stallion then pumps at his fully hardened dong, pre spewing out across the face of the guard nearest him. Steven then slaps the man across the face with the leaking shaft, neighing out sounds of pure lust as he grips the guards head. The still human man's eyes gloss over as his lips kiss at the stallion's tip. 'So quick to fall to your betters. Let me help you fall faster.' The musk ridden male then slams his cock down the guards 	throat, the human gagging momentarily before miraculously overcoming that limitation.";
+			say "     Steven quickly gets into a rhythm of throatfucking the male before him, neighing and flehmening as his cock gets coated with ever thickening saliva. The man the stallion was previous huddled over is still in the same spot, and as you glance at him, you realize that fine hairs have begun to sprout along his neck. Hunching over, you rip his shirt open, revealing hairs all over his torso, at their thickest along his lower abdomen as they trail down into his pants.";
+			Linebreak;
+			say "     Do you want to fuck the stallion's old friend? Beware, though, as [bold type]Steven may have words with you afterwards if you do.[roman type][line break]";
+			say "     ([link]Y[as]y[end link]) - Yes.";
+			say "     ([link]N[as]n[end link]) - No.";
+			if player consents: [Fucks]
+				Linebreak;
+				say "     You quickly rip off the rest of the man's clothes, revealing an ever lengthening, and ever more equine cock between his legs. Unable to help yourself, you lap at the tip, sucking down all of the seed the man pumps out. His product seems to increase with each passing second, and soon you find your mouth regularly filled to the brim with musky cum. You have to gulp it down just to avoid drowning, but you can't help yourself as you push your mouth further down his shaft, watching as the fur along his body spreads faster as you get further down. Soon he's neighing out of a slender equine muzzle, his newly thickened fingers gripping at your head to force you down to the base. As you gulp around the tip of the shaft, you feel it edging its way deeper inside you. The length slows in its growth, but is still quite eager to get even larger within you. A loud neigh then fills the room, your eyes darting to the side so you can just barely make out the sight of Steven's ass cheeks clenching together, the muscles held tight as the sounds of gulping gets louder.";
+				say "     You refocus on your current task, gulping down around the length deep inside your throat as the changing human begins to thrust his hips, fucking your face. At first you gag, but as you work up to the rhythm of it, you take it like a champ. With the thrusting, your gulping, and the now fully grown cock, your feel new urgency in the thrusts down your throat. Before you can panic, however, the stallion shoves you to the base once more as his cock pulses and his hips still. You feel it before you taste it, the thick globs of seed firing down your gullet and into your stomach. Four, five, eight, twelve, eighteen, and then finally the globs begin to slow, your lungs burning as you desperately claw at the crotch before you, whinnies filling your ears as the hands loosen their grip on you. You yank yourself back hard enough to land on your ass, the rest of the seed from that monolith of masculinity splattering across the once human groin and cock, some even splattering against you.";
+				WaitLineBreak;
+				say "     As you catch your breath, you look over the newly christened equine before you, the male far more lithe, and even feminine, compared to Steven himself. However, before you can look too thoroughly along the new being, you feel a hand yank you up off the ground. 'Since you've had a taste of him, and ruined my own chance to change him, I'm going to use you as my personal little pet from now on. You understand?' Nodding, you look back at the exhausted male on the ground. 'No, look at me!' Steven then forces your head towards his towering figure and wrathful eyes. 'I'm going to brand that sorry body of yours as mine, forever, and his too.' the stallion says as he jabs a thumb to his changed friend. You then feel yourself being carried along before getting tossed through a doorway, landing on all fours on rough pavement. However, before you can get up to check yourself, the door behind you slams shut. Moans and sounds of pure ecstasy come through the walls.";
+				now Resolution of Old Stallion Friendship is 3;
+				now charisma of Steven is 1;
+				now Steven is nowhere;
+			else: [No]
+				Linebreak;
+				say "     You simply go back to watching the great stallion defile the guards, each one falling more and more into depravity as the musk from Steven sinks in. The ones tied up the farthest from the action try and scoot closer, doing anything to get closer to their new object of worship. Before long the stallion gives out a loud neigh as he slams his hips forward, the guard before him gulping louder with each second. Steven's ass even clenches as the muscles between his legs pulse. After what feels like several minutes, the stallion pulls his saliva and cum stricken, drippy cock from the guard, continuing onto the next one. He slams his cock down that man's throat as well, seeming to have adopted a style of creating more sluts for himself. As time passes each guard feels that shaft down their throats, their need evident as they pant and moan from just being near him. Soon he would pump a load down each of their throats, the eager guards soon groaning in pain as you look on with concern.";
+				say "     Your worries are soon assuaged as Steven strips them of their clothing and gear, revealing the tan hairs sprouting all over their bodies. The new sounds from the men is that of lust and excitement. The shifting men then run their hands along their changing bodies, the more muscled ones slimming down as the others merely trim up. Each of them turn into quintessential twinks right before your eyes, only they have fine hairs all over their bodies, and cocks to almost rival Steven himself. It also doesn't take long for the new twinks to start running their hands over each other, the ropes and bindings torn off them when they'd been stripped by their stallion. Moans sound out next as they get more vulgar in their explorations. It takes no time at all for once human, presumably straight, males to descend into a pile of writhing equine desire.";
+				now Resolution of Old Stallion Friendship is 3;
+				now charisma of Steven is 51;
+				now Steven is nowhere;
+		else: [Kick them out]
+			say "     You encourage the man to let them be, since no one was killed. Only a couple of guards were nauseant enough to be forced out. The rest decide they'd accept the new normal, at least for now. However, most of the ones who remain give you the side eye as you leave the warehouse with Steven. The stallion slaps you on the back and gives thanks, grinning ear to ear as you part ways. Moments before you're out of sight, you see a man chase after him from the warehouse, the two embracing each other before falling out of sight.";
+			now Resolution of Old Stallion Friendship is 4;
+			now strength of Steven is 1;
+	else: [discouraged]
+		say "     Deciding that it may be best to simply wait for another day, you back out of the plan altogether, telling Steven to come back here some other time.";
+		stop the action;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

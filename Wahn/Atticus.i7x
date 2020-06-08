@@ -581,6 +581,12 @@ Atticus's Bedroom is a room.
 Atticus's Bedroom is sleepsafe.
 The description of Atticus's Bedroom is "[AtticusRoomDesc]".
 
+after looking while player is in Atticus's Bedroom:
+	if findwires < 2 and fixedgens < 3:
+		project the Figure of Map_RedLight_Nopower_3_icon;
+	else:
+		project the Figure of Map_RedLight_3_icon;
+
 to say AtticusRoomDesc:
 	say "     You're in a mid-sized bedroom on the top floor of an apartment building at the very edge of the red light district. The former owners seem to have done their best to keep the place clean, and it is filled with simple, but sturdy furniture. Since taking over the apartment, Atticus has added in some nice flourishes and creature comforts, as you can see a range of clothes, sex toys and black silk sheets on the bed that surely weren't part of the inventory before. Overall, the place has a fairly nice feel to it, and something tells you that you're one of the few people he's ever taken up here. Being an incubus, the young man has no qualms about fucking his partners wherever, and he keeps is home as a special place.";
 

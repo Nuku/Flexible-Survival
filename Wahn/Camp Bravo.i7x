@@ -124,6 +124,7 @@ Instead of resolving a Back at the Camp:
 	clear the screen and hyperlink list;
 
 to say GuardLie: [lie to get into the camp]
+	[TODO: Add rejection for people with ungodly huge cocks/breasts]
 	let bonus be (( the Charisma of the player minus 10 ) divided by 2);
 	if 2 is listed in bookcollection, increase bonus by 2;
 	let diceroll be a random number from 1 to 20;
