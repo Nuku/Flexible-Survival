@@ -20,7 +20,7 @@ use MAX_ACTIONS of 2000.
 use MAX_VERBS of 2000.
 use MAX_VERBSPACE of 50000.
 use MAX_ARRAYS of 100000.
-Use MAX_ZCODE_SIZE of 1000000.
+[Use MAX_ZCODE_SIZE of 1000000.]
 Use MAX_DICT_ENTRIES OF 5000.
 Use maximum text length of at least 2000.
 Use Scoring.
