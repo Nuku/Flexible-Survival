@@ -251,13 +251,13 @@ to say LoganSexMenu:
 	now title entry is "Take Logan's cock in your ass";
 	now sortorder entry is 3;
 	now description entry is "Get fucked in the ass by the wolverine";
-	[
+	[]
 	if Player is male and Strength of Logan < 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Share a fuck of Blake with Logan";
 		now sortorder entry is 4;
 		now description entry is "Spit-roast the rat between you";
-	]
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
