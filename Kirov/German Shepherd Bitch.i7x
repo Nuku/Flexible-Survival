@@ -39,7 +39,7 @@ to say gsbDescription:
 			now gsbKatherine is true;
 		else:
 			now gsbKatherine is false;
-			if a random chance of 1 in 3 succeeds:
+			if HP of Katherine is 0 and a random chance of 1 in 3 succeeds:
 				now HP of Katherine is 1;
 		if gsbKatherine is true:
 			[ The player is encountering Katherine ]
