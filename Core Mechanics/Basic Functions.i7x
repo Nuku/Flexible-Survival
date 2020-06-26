@@ -36,6 +36,33 @@ To say a/an (T - text):
 		say "a ";
 	say T.
 
+checkresult is a number that varies.
+
+To check (X - text):
+	now X is X in lower case; [just to avoid problems if a writer capitalizes the stat]
+	let stat be 0;
+	if X is "strength":
+		now stat is strength of player;
+	if X is "dexterity":
+		now stat is dexterity of player;
+	if X is "stamina":
+		now stat is stamina of player;
+	if X is "charisma":
+		now stat is charisma of player;
+	if X is "perception":
+		now stat is perception of player;
+	if X is "intelligence":
+		now stat is intelligence of player;
+	now stat is stat - 10;
+	now stat is stat / 2 ;
+	let die be a random number from 1 to 20 ;
+	say "You perform a check of [x] and roll [die], resulting in";
+	increase die by stat;
+	say "  [die]!";
+	now checkresult is die;
+	
+	
+
 Instead of sniffing something (called x):
 	if the scent of x is empty:
 		say "It smells pretty normal for a/an [x].";
