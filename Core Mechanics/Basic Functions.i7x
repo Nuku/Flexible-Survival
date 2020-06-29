@@ -58,10 +58,8 @@ To check (X - text):
 	let die be a random number from 1 to 20 ;
 	say "You perform a check of [x] and roll [die], resulting in";
 	increase die by stat;
-	say "  [die]!";
+	say "     [die]!";
 	now checkresult is die;
-	
-	
 
 Instead of sniffing something (called x):
 	if the scent of x is empty:
@@ -130,6 +128,30 @@ to PlayerThirst (N - number):
 	increase thirst of Player by N;
 	if thirst of Player > 100:
 		now thirst of Player is 100;
+
+to ItemGain (N - number) of (X - a grab object):
+	ItemGain N of X silence state is 0;
+
+to ItemGain (N - number) of (X - a grab object) silently:
+	ItemGain N of X silence state is 1;
+
+to ItemGain (N - number) of (X - a grab object) silence state is (Silence - a number):
+	increase carried of X by N;
+	if Silence is 0:
+		LineBreak;
+		say "[bold type]You gain [N] [printed name of x in lower case]![roman type]";
+
+to ItemLoss (N - number) of (X - a grab object):
+	ItemLoss N of X silence state is 0;
+
+to ItemLoss (N - number) of (X - a grab object) silently:
+	ItemLoss N of X silence state is 1;
+
+to ItemLoss (N - number) of (X - a grab object) silence state is (Silence - a number):
+	decrease carried of X by N;
+	if Silence is 0:
+		LineBreak;
+		say "[bold type]You lost [N] [printed name of x in lower case]![roman type]";
 
 to PlayerMaxHeal:
 	LineBreak;
