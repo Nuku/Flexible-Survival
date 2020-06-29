@@ -6171,6 +6171,16 @@ carry out spawnmonster:
 			challenge;
 			break;
 
+unresolvecheat is an action applying to one topic.
+
+understand "unresolve [text]" as unresolvecheat.
+carry out unresolvecheat:
+	repeat with X running from 1 to number of filled rows in Table of GameEventIDs:
+		choose row X from the Table of GameEventIDs;
+		if Name entry exactly matches the text topic understood, case insensitively:
+			now Object entry is unresolved;
+			break;
+
 levelcheat is an action applying to nothing.
 
 understand "givelevel" as levelcheat.
