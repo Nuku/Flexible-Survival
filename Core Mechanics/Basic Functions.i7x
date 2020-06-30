@@ -132,25 +132,25 @@ to PlayerThirst (N - number):
 	if thirst of Player > 100:
 		now thirst of Player is 100;
 
-to ItemGain (N - number) of (X - a grab object):
-	ItemGain N of X silence state is 0;
+to ItemGain (X - a grab object) by (N - number):
+	ItemGain X by N silence state is 0;
 
-to ItemGain (N - number) of (X - a grab object) silently:
-	ItemGain N of X silence state is 1;
+to ItemGain (X - a grab object) by (N - number) silently:
+	ItemGain X by N silence state is 1;
 
-to ItemGain (N - number) of (X - a grab object) silence state is (Silence - a number):
+to ItemGain (X - a grab object) by (N - number) silence state is (Silence - a number):
 	increase carried of X by N;
 	if Silence is 0:
 		LineBreak;
 		say "[bold type]You gain [N] [printed name of x in lower case]![roman type]";
 
-to ItemLoss (N - number) of (X - a grab object):
-	ItemLoss N of X silence state is 0;
+to ItemLoss (X - a grab object) by (N - number):
+	ItemLoss X by N silence state is 0;
 
-to ItemLoss (N - number) of (X - a grab object) silently:
-	ItemLoss N of X silence state is 1;
+to ItemLoss (X - a grab object) by (N - number) silently:
+	ItemLoss X by N silence state is 1;
 
-to ItemLoss (N - number) of (X - a grab object) silence state is (Silence - a number):
+to ItemLoss (X - a grab object) by (N - number) silence state is (Silence - a number):
 	decrease carried of X by N;
 	if Silence is 0:
 		LineBreak;
