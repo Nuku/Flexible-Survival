@@ -49,7 +49,7 @@ Version 1 of Brennan by Wahn begins here.
 [   4: went to the hospital and got some info about Diego         ]
 [  50: player got banned from the camp and told Brennen so        ]
 
-[ lust of Brennan - wolf interactions                             ]
+[ lust of Brennan - wolf interactions (sexual)                    ]
 [   0: no wolf interactions                                       ]
 [   1: player gave green light for wolf sex                       ]
 [   2: player watched Romulus under the sheet                     ]
@@ -62,6 +62,11 @@ Version 1 of Brennan by Wahn begins here.
 [  21: player revealed that he likes to watch                     ]
 [ 100: played buzz-kill for wolf sex                              ]
 [ 101: warned Brennan for wolf sex                                ]
+
+[ Intelligence of Brennan - Other wolf interactions               ]
+[   0: nothing yet                                                ]
+[   1: player read to them                                        ]
+[ 100: player ignores them                                        ]
 
 [ GooColossusProgress                                             ]
 [   0: not started                                                ]
@@ -546,7 +551,7 @@ instead of resolving Wolf Whisperer:
 		say "     Walking after the wolf out of curiosity, you glance around the corner of the car he vanished behind and find an explanation for what is going on, although it is one that only opens up more questions. Not too far away, your friend Brennan is standing in front of yet another twisted metal wreck, flanked by two feral wolves and holding a crowbar. The large gray and brown beasts look up at him intently as he points at the trunk of the car. 'Here, have a sniff and tell me if there's any food in there. Same thing with the other cars around. Come on guys, I know you can understand a fair bit of what I'm saying. Work with me here.' To your surprise, the wolves react to his request with cheerful barks, then start trotting from car to car, tails wagging.";
 		WaitLineBreak;
 		project the figure of Brennan_face_icon;
-		say "     Following the progress of his two wolves, Brennan spots you after a moment or two and smiles, waving you closer. 'Hey again, nice to see you here. You must be baffled by seeing Romulus and Remus,' the survivor greets you and points to identify the two separate wolves. 'A while after we got back from the convoy, I noticed I was being followed. When I confronted who was tracking me, it turned out to be the two ferals from the... incident in that alley. Color me surprised when they didn't try to attack at that point, but instead ducked their heads before me, whining. And then they rolled over on their backs and totally submitted. I'd have chased them off, but... I still feel bad about how things worked out, and it seems these two actually seem to [italic type]need[roman type] someone to lead them. Better me than another asshole like their last alpha, I thought.'";
+		say "     Following the progress of his two wolves, Brennan spots you after a moment or two and smiles, waving you closer. 'Hey again, nice to see you here. You must be baffled by seeing Romulus and Remus. I named them after the mythical founders of Rome,' the survivor greets you and points to identify the two separate wolves, with Romulus having yellow eyes, while Remus's are amber in color. 'A while after we got back from the convoy, I noticed I was being followed. When I confronted who was tracking me, it turned out to be the two ferals from the... incident in that alley. Color me surprised when they didn't try to attack at that point, but instead ducked their heads before me, whining. And then they rolled over on their backs and totally submitted. I'd have chased them off, but... I still feel bad about how things worked out, and it seems these two actually seem to [italic type]need[roman type] someone to lead them. Better me than another asshole like their last alpha, I thought.'";
 		say "     A bark draws both of your attention to the side, and Brennan quickly walks over to where the wolf Remus is sniffing at one car with special interest. With the help of the crowbar and a strong wrench of his muscular arms, the human man breaks open the trunk and grins as he sees two shopping bags inside. Stroking his wolf's head and saying, 'Good boy Remus, that was very good,' he then starts to stuff those supplies that haven't gone bad into his backpack. 'It's been strange, being with these two. Sometimes, they seem quite clever and clearly understand what I am telling them, but other times, they rely on nothing but instinct. Or maybe they simply pick and choose what exactly they [italic type]want[roman type] to understand and what not...'";
 		WaitLineBreak;
 		say "     Further explanations are interrupted by the second wolf - Romulus, as Brennan calls him - making his way back to the muscular man and rubbing his side against Brennan's arm. Your friend smiles at the shameless dig for some affection and deals out petting and affectionate head-scratching to both of his companions. 'After so long alone, I relish having both of them. I always liked dogs, and these two are quite sweet - now that they've accepted me as their leader.' Congratulating Brennan on how things worked out, you give the wolves a stroke yourself after he tells them that they should treat you like family. Then you bid your farewell to the three of them, leaving them to scavenge the pileup while you wander on through the tunnel and into the section of the city beyond.";
@@ -2149,6 +2154,9 @@ after going to Survivor Refuge while (Soldier Questions is not resolved and XP o
 	now XP of Brennan is 1;
 	now Soldier Questions is resolved; [no repeats]
 
+[TODO: Add event where a wolf is reading a magazine]
+[TODO: Greet the player as they arrive in the apartment]
+
 [***********************************************************]
 [***********************************************************]
 [***********************************************************]
@@ -2156,6 +2164,66 @@ Section 9 - Apartment Wolf Sex Events
 [***********************************************************]
 [***********************************************************]
 [***********************************************************]
+
+an everyturn rule:
+	if (player is in Survivor Refuge and Intelligence of Brennan is 0 and (TimekeepingVar is not 0 and TimekeepingVar is not -8 and TimekeepingVar is not 7 and TimekeepingVar is not -1)): [first wolf relationship event - used to probe the player's opinion, not pre-dawn or early morning (which is when they sleep), 100% chance]
+		RomulusRemusReading1;
+
+after going to Survivor Refuge while (Intelligence of Brennan is 0 and (TimekeepingVar is not 0 and TimekeepingVar is not -8 and TimekeepingVar is not 7 and TimekeepingVar is not -1) and a random chance of 1 in 2 succeeds): [first wolf relationship event - used to probe the player's opinion, not pre-dawn or early morning (which is when they sleep), 50% chance]
+	RomulusRemusReading1;
+
+to RomulusRemusReading1:
+	say "     Standing in the main room of Brennan's apartment, you see Remus, one of the two wolves he has adopted pad through the room, coming up to the sorting boxes of salvage that Brennan has gathered out in the city. Sticking his head inside one of the containers, it soon emerges with a [']Dude's Health['] magazine gently held between his teeth. Curious what'll happen next, you keep watching and see him walk over to a spot in front of the window, dropping the magazine onto the floor and sitting on his haunches looking down at it. Then he slides a paw over it, flipping the thing open to some page halfway through - apparently not the right one, as the wolf tries that the other way, again turning over a bunch of pages all at once. Looks like he wants to read something specific, but with only feral paws to use, even something as simple as hitting the right page is a chore that has the wolf letting out quiet sounds of frustration.";
+	say "     [bold type]Seeing what's happening, you decide to...[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Go grab the magazine and read it together with Remus.";
+	say "     ([link]N[as]n[end link]) - Ignore him and other feral antics in the future.";
+	if Player consents:
+		LineBreak;
+		say "     Walking over to Remus and getting the wolf's attention, you then say that you saw that he's having trouble with the magazine. Huffing through his nose, Remus then dips his head in a quick nod and gives the object of his frustration a shove with his paw. You reach out to give his head a calming pat, then sit down on the ground next to the feral canine. Next, you pick up the magazine and lay it on your lap, asking which article he was interested in. The wolf gives you a curious look, head tilted to the left, then starts to pant happily, licking your face and wagging his tail. He comes to sit right beside you, leaning against your shoulder as he raises a paw and taps on one of the teaser texts on the magazine's front. Smiling and nodding, you reach over to stroke the fur on his chest, then flip open to the right page and angle the mag so the two of you can read it together. It actually turns out to be a fairly interesting read, and you do enjoy your time spent with the wolf quite a bit.";
+		SanBoost 15;
+		now Intelligence of Brennan is 1; [player made nice with the wolves]
+		now lastBrennanWolfScene is turns;
+	else:
+		LineBreak;
+		say "     Shrugging in disinterest at the feral's plight, you turn your attention elsewhere and put him out of your mind. A short while later, you vagely register in the corner of your eye that he returns to the sorting box and drops a now somewhat crumpled magazine into it.";
+		now Intelligence of Brennan is 100; [not interest in feral life]
+
+an everyturn rule:
+	if (player is in Survivor Refuge and Intelligence of Brennan is 1 and (TimekeepingVar is not 0 and TimekeepingVar is not -8 and TimekeepingVar is not 7 and TimekeepingVar is not -1) and a random chance of 1 in 2 succeeds): [second wolf relationship event - used to probe the player's opinion, not pre-dawn or early morning (which is when they sleep), 100% chance]
+		RomulusRemusReading2;
+
+after going to Survivor Refuge while (Intelligence of Brennan is 1 and (TimekeepingVar is not 0 and TimekeepingVar is not -8 and TimekeepingVar is not 7 and TimekeepingVar is not -1) and a random chance of 1 in 2 succeeds): [first wolf sex event - used to probe the player's opinion, not pre-dawn or early morning (which is when they sleep), 50% chance]
+	RomulusRemusReading2;
+
+to RomulusRemusReading2:
+	say "     Standing in the main room of Brennan's apartment, you suddenly find yourself surrounded by the two wolves, Romulus and Remus, who've come up from behind and brush against your legs with their furry sides left and right. Looking at them, you notice that they're both wagging their tails and that Romulus is holding something between his teeth - a hardcover book. With his compatriot having his muzzle full, it's Remus who lets out a meaningful woof and dips his head towards Romulus, with both of them looking at you hopefully.";
+	say "     [bold type]Their request being perfectly clear without the need for any words, your reaction is...[roman type][line break]";
+	LineBreak;
+	say "     [link](1)[as]1[end link] - To accept the book and sit down on the sofa with them for some quiet time together.";
+	say "     [link](2)[as]2[end link] - A friendly refusal. Right now isn't a good time for you.";
+	say "     [link](3)[as]3[end link] - To say that you didn't intend this to become a regular thing. You've better things to do than reading with them.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 3:
+		say "Choice? (1-3)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to read with the wolves, [link]2[end link] to tell them that now isn't a good time or [link]3[end link] to tell them not to bother you.";
+	if calcnumber is 1:
+		LineBreak;
+		say "     Reaching down to pat one wolf, then the other, you take hold of the book and find Romulus releasing it into your grasp. Looking at the cover and finding it to be a thriller from last year's bestseller list, you make a beeline for the sofa, closely followed by two feral companions. When you sit down in the middle of the long and comfy piece of furniture, the wolves are beside you in a blink, cuddling up left and right with their heads angled to see the book on your lap. Starting to read the book from the start, you find yourself drawn in by the exciting story and also feeling quite nice (if a bit warm) with the two wolves leaning against you from both sides. At some point after reaching the second chapter of the book, the three of you rearrange yourselves on the sofa, now with Remus lounging stretched-out and resting his canine head on your thigh and you reading the book aloud, while Remus still follows the text himself.";
+		say "     You continue reading further, until suddenly being surprised by a flash, followed by the *Click, Whirr* of an instant camera. Looking up, you see Brennan standing nearby, holding the camera and plucking the photo emerging from its front. He smiles as you meet his eyes, waving the photograph in the air to make it dry faster. 'Sorry, the three of you together on the sofa were so nice that I had to take a picture. Looked like you're really enjoying that book, eh?' You give him a nod and reply that it is a good read, while Romulus jumps up from beside you and dashes over to Brennan, tail wagging exuberantly. Remus opens his eyes to look at his alpha, tail thumping on the cushions, but he still stays with you, resting his head on your leg and getting some pats a moment later. As Brennan comes over to chat with you about your favorite books, you put a bookmark into the thriller and lay it on the coffee table for now. Overall, between the conversation with Brennan and your earlier reading, it was a nice time to spend with them and you feel markedly more relaxed and comfortable than before.";
+		SanBoost 25;
+		now Intelligence of Brennan is 2;
+	else if calcnumber is 2:
+		LineBreak;
+		say "     Reaching down to pat one wolf, then the other, you tell them that you sadly don't have the time and mood to read with them. Romulus and Remus's wagging tails droop at your words, but the two of them take things well enough, then make a beeline to drop their book on coffee table in front of the sofa before moving over to a spot in front of the window from which they can watch the city below.";
+	else if calcnumber is 3:
+		LineBreak;
+		say "     Clearing your throat, you look down at the two wolves and shake your head, then explain that you don't feel like being their helper for every time they want to read something. Romulus and Remus's wagging tails droop at your words, and the wolf not carrying the book gives a grumpy bark at you before the two of them pad away.";
+		now Intelligence of Brennan is 100; [not interest in feral life]
 
 an everyturn rule:
 	if (player is in Survivor Refuge and lust of Brennan is 0 and (TimekeepingVar is not 0 and TimekeepingVar is not -8 and TimekeepingVar is not 7 and TimekeepingVar is not -1) and a random chance of 1 in 2 succeeds): [first wolf sex event - used to probe the player's opinion, not pre-dawn or early morning (which is when they sleep), 50% chance]
@@ -2168,11 +2236,11 @@ to BrennanRomulusRemusUndieSniff:
 	say "     Standing in the main room of Brennan's apartment, you see one of the two wolves he has adopted come through the open door from the bathroom. The feral canine is carrying a piece of fabric in his muzzle and makes a beeline for his pack-mate, tail wagging left and right as he trots along. As he drops the garment in front of his pack-mate Romulus and gives a bark to draw his attention, you recognize what it is - a plaid pair of boxer shorts. Must be one of Brennan's. The second wolf lets out an intrigued 'Woof!', then lowers his muzzle to sniff it with great interest. Soon, his nose is halfway up one of the leg-holes, and when he lifts his head, the piece of underwear dangles off his muzzle. Both of the wolves['] tails are beating wildly and you can see their canine members push out of the sheaths that hid them. It looks like they are getting quite aroused from huffing their alpha's scent.";
 	say "     [bold type]Seeing the antics of the two wolves, you think...[roman type][line break]";
 	LineBreak;
-	say "     ([link]Y[as]y[end link]) - That the situation could lead to some 'interesting' developments indeed.";
-	say "     ([link]N[as]n[end link]) - That sexual pairings between ferals and humans are really weird and should be avoided.";
+	say "     ([link]Y[as]y[end link]) - Nothing much of it. That's just how canines are, sniffing everything.";
+	say "     ([link]N[as]n[end link]) - That even the potential of sexual attraction between ferals and humans is to be avoided. These aren't just regular animals after all.";
 	if Player consents:
 		LineBreak;
-		say "     After allowing his pack-mate a good long moment of sniffing Brennan's boxers, Remus takes back the underwear. He catches their edge between his teeth and pulls the shorts off Romulus's muzzle. Then the horny wolf carries his pilfered treasure off to hide it under the sofa and throws himself on the floor right after, curling up to lick his own cock. Romulus quickly starts doing the same, and both of them spend a nice little while of self-pleasure. You can't help but wonder how Brennan would react to this - or if he already knows that they have the hots for him...";
+		say "     After allowing his pack-mate a good long moment of sniffing Brennan's boxers, Remus takes back the underwear. He catches their edge between his teeth and pulls the shorts off Romulus's muzzle. Then the horny wolf carries his pilfered treasure off to hide it under the sofa and throws himself on the floor right after, curling up to lick his own cock. Romulus quickly starts doing the same, and both of them spend a nice little while of self-pleasure. You can't help but wonder how Brennan would react to this - or if he already knows that they seem to have the hots for him...";
 		now lust of Brennan is 1; [player gave green light for wolf sex]
 		now lastBrennanWolfScene is turns;
 	else:

@@ -164,7 +164,7 @@ to say beegirlsaved:
 	add "Tamed" to Traits of bee girl;
 	now HP of bee girl is 1;
 	move Honey to Grey Abbey Garden;
-	say "     (The bee girl is now tamed! You can make her your active pet by typing [bold type][link]pet bee girl[as]pet bee girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck bee girl[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";
+	say "     (Honey the bee girl is now a possible companion! You can make her your active companion by typing [bold type][link]companion Honey[end link][roman type] or [bold type][link]companion bee girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Honey[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 
 
 Section 2 - Bee Girl NPC/Pet
@@ -175,6 +175,7 @@ bee girl	"bee girl"
 
 bee girl is a pet. bee girl is a part of the player.
 understand "Honey" as bee girl.
+printed name of bee girl is "Honey".
 The description of bee girl is "[HoneyDesc]".
 The weapon damage of bee girl is 3.
 The level of bee girl is 1.

@@ -172,11 +172,12 @@ to EventRestore:
 				[bugfix code after re-naming Midway to Fair]
 				if sarea of EventObject is "Midway":
 					now sarea of EventObject is "Fair";
+				[
 				if debug is at level 10:
 					say "DEBUG -> [x]: EventIdName: [EventIdName] found and set to: [ResolveState entry], [ActiveState entry], Resolution: [Resolution entry]";
+				]
 			else:
-				if debug is at level 10:
-					say "DEBUG -> [x]: EventIdName: [EventIdName] not found in Table of GameEventIDs!";
+				say "DEBUG -> [x]: EventIdName: [EventIdName] not found in Table of GameEventIDs! Please report this message on the FS Discord!";
 	else:
 		say "No Event Save File Found!";
 	blank out the whole of Table of GameEvents; [empty it after restoring]
@@ -235,11 +236,12 @@ to RoomRestore:
 					now RoomObject is sleepsafe;
 				else:
 					now RoomObject is not sleepsafe;
+				[
 				if debug is at level 10:
 					say "DEBUG -> [x]: RoomIdName: [RoomIdName] found and set to: [Reachability entry]; [ExplorationStatus entry]; [RestSafety entry]";
+				]
 			else:
-				if debug is at level 10:
-					say "DEBUG -> [x]: RoomIdName: [RoomIdName] not found in Table of GameRoomIDs!";
+				say "DEBUG -> [x]: RoomIdName: [RoomIdName] not found in Table of GameRoomIDs! Please this message on the FS Discord!";
 	if the File of RoomInventorySave exists:
 		repeat with x running through rooms:
 			truncate Invent of x to 0 entries; [cleaning out the old data]
@@ -252,8 +254,7 @@ to RoomRestore:
 				let RoomObject be the object corresponding to a name of RoomIdName in the Table of GameRoomIDs;
 				add ItemName entry to Invent of RoomObject;
 			else:
-				if debug is at level 10:
-					say "DEBUG -> [x]: RoomIdName: [RoomIdName] not found in Table of GameRoomIDs!";
+				say "DEBUG -> [x]: RoomIdName: [RoomIdName] not found in Table of GameRoomIDs! Please this message on the FS Discord!";
 	else:
 		say "No Room Save File Found!";
 	blank out the whole of Table of GameRooms; [empty out all old data]
@@ -310,11 +311,12 @@ to PossessionRestore:
 						now PossessionObject is cursed;
 					else:
 						now PossessionObject is not cursed;
+				[
 				if debug is at level 10:
 					say "DEBUG -> [x]: PossessionIdName: [PossessionIdName] found and set to: [carried of PossessionObject] carried and [stashed of PossessionObject] stored.";
+				]
 			else:
-				if debug is at level 10:
-					say "DEBUG -> [x]: PossessionIdName: [PossessionIdName] not found in Table of Game Objects!";
+				say "DEBUG -> [x]: PossessionIdName: [PossessionIdName] not found in Table of Game Objects! Please report this message on the FS Discord!";
 	else:
 		say "No Possession Save File Found!";
 	blank out the whole of Table of GamePossessions; [empty out all old data]
@@ -514,11 +516,12 @@ to CharacterRestore:
 				now SexuallyExperienced of CharacterObject is SexuallyExperienced entry;
 				now TwistedCapacity of CharacterObject is TwistedCapacity entry;
 				now Sterile of CharacterObject is Sterile entry;
+				[
 				if debug is at level 10:
 					say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] found and values restored.";
+				]
 			else:
-				if debug is at level 10:
-					say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] not found in Table of GameCharacterIDs!";
+				say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] not found in Table of GameCharacterIDs! Please report this message on the FS Discord!";
 	else if the File of CharacterSave exists:
 		say "Restoring Characters...";
 		read File of CharacterSave into the Table of GameCharacters;
@@ -579,11 +582,12 @@ to CharacterRestore:
 				now OralVirgin of CharacterObject is OralVirgin entry;
 				now Virgin of CharacterObject is Virgin entry;
 				now AnalVirgin of CharacterObject is AnalVirgin entry;
+				[
 				if debug is at level 10:
 					say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] found and values restored.";
+				]
 			else:
-				if debug is at level 10:
-					say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] not found in Table of GameCharacterIDs!";
+				say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] not found in Table of GameCharacterIDs! Please report this message on the FS Discord!";
 	else:
 		say "No Character Save File Found!";
 	blank out the whole of Table of GameCharacters; [empty out all old data]
@@ -608,8 +612,10 @@ to TraitRestore:
 					add TraitText entry to Traits of CharacterObject;
 					if TraitText entry is "Tamed": [pets]
 						now CharacterObject is tamed;
+					[
 					if debug is at level 10:
 						say "DEBUG -> [x]: Added Trait: '[TraitText entry]' to [TraitOwner].";
+					]
 	else:
 		say "No Trait Save File Found!";
 
@@ -1055,11 +1061,12 @@ to BeastRestore:
 					now Area entry is "Fair";
 				now non-infectious entry is BeastNonInfect;
 				now sex entry is BeastSex;
+				[
 				if debug is at level 10:
 					say "DEBUG -> [x]: BeastName: [BeastName] Area entry set to [BeastArea]!";
+				]
 			else:
-				if debug is at level 10:
-					say "DEBUG -> BeastName: [BeastName] not found in Table of Random Critters!";
+				say "DEBUG -> BeastName: [BeastName] not found in Table of Random Critters! Please report this message on the FS Discord!";
 	else:
 		say "No Beast Save File Found!";
 	blank out the whole of Table of GameBeasts; [empty out all old data]

@@ -40,6 +40,7 @@ Retriever Girl	"Retriever Girl"
 
 Retriever Girl is a pet. Retriever Girl is a part of the player.
 understand "Karen" as Retriever Girl.
+printed name of Retriever Girl is "Karen".
 [Physical details as of game start]
 ScaleValue of Retriever Girl is 3. [human sized]
 Body Weight of Retriever Girl is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]

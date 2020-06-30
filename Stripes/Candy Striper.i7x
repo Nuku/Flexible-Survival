@@ -254,6 +254,8 @@ object	name
 pink raccoon	"pink raccoon"
 
 pink raccoon is a pet. pink raccoon is a part of the player.
+understand "Candy" as pink raccoon.
+printed name of pink raccoon is "Candy".
 The description of pink raccoon is "The pink coonboi has soft, gray fur with pink highlights and pink rings around his tail. He looks at you with mindless adoration, now a loyal and obedient pet and plaything.".
 The weapon damage of pink raccoon is 4.
 The level of pink raccoon is 2.

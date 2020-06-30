@@ -31,6 +31,7 @@ Cute Crab	"Cute Crab"
 
 Cute Crab is a pet. Cute Crab is a part of the player.
 understand "Snips" as Cute Crab.
+printed name of Cute Crab is "Snips".
 The description of Cute Crab is "[SnipsDesc]".
 The weapon damage of Cute Crab is 6.
 The level of Cute Crab is 1.
@@ -207,7 +208,7 @@ Instead of resolving Lost Crab:
 			now cute crab is tamed;
 			add "Tamed" to Traits of cute crab;
 			move Snips to Computer Lab;
-			say "[bold type](The cute crab is now tamed! You can make it your active pet by typing [link]pet cute crab[as]pet cute crab[end link]. You can see all of the pets that you have tamed with the [link]pet[as]pet[end link] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [link]pet dismiss[as]pet dismiss[end link], or just [link]dismiss[as]dismiss[end link])[roman type][line break]";
+			say "     (Snips the cute crab is now a possible companion! You can make him your active companion by typing [bold type][link]companion Snips[end link][roman type] or [bold type][link]companion crab[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 			now Resolution of Lost Crab is 1; [fed the crab]
 		else:
 			say "     The crab scuttles away sadly.";
@@ -225,6 +226,7 @@ house cat	"house cat"
 
 house cat is a pet. house cat is a part of the player.
 understand "Dinah" as house cat.
+printed name of house cat is "Dinah".
 The description of the house cat is "[DinahDesc]".
 The weapon damage of house cat is 5.
 The level of house cat is 1.
@@ -407,7 +409,7 @@ Instead of resolving Lost house cat:
 					now house cat is tamed;
 					add "Tamed" to Traits of house cat;
 					move Dinah to Computer Lab;
-					say "(The house cat is now tamed! You can make it your active pet by typing [bold type][link]pet house cat[end link][roman type]. You can see all of the pets that you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
+					say "     (Dinah the house cat is now a possible companion! You can make her your active companion by typing [bold type][link]companion Dinah[end link][roman type] or [bold type][link]companion house cat[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 					now Resolution of Lost house cat is 1; [fed and adopted the cat]
 					now Lost house cat is resolved;
 				else:
@@ -448,6 +450,7 @@ Exotic Bird	"Exotic Bird"
 
 Exotic Bird is a pet. Exotic Bird is a part of the player.
 understand "Chirpy" as Exotic Bird.
+printed name of Exotic Bird is "Chirpy".
 The description of the exotic bird is "[ChirpyDesc]".
 The weapon damage of Exotic Bird is 2.
 The level of Exotic Bird is 1.
@@ -604,7 +607,7 @@ Instead of resolving Scared Bird:
 				now Exotic Bird is tamed;
 				add "Tamed" to Traits of Exotic Bird;
 				move Chirpy to Computer Lab;
-				say "(The exotic bird is now tamed! You can make it your active pet by typing [bold type][link]pet exotic bird[end link][roman type]. You can see all of the pets that you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
+				say "     (Chirpy the exotic bird is now a possible companion! You can make her your active companion by typing [bold type][link]companion Chirpy[end link][roman type] or [bold type][link]companion exotic bird[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 				now Resolution of Scared Bird is 1; [adopted the bird]
 				now Scared bird is resolved;
 			else:
@@ -637,6 +640,7 @@ helper dog	"helper dog"
 
 helper dog is a pet. helper dog is a part of the player.
 understand "Hobo" as helper dog.
+printed name of helper dog is "Hobo".
 The description of helper dog is "[HoboDesc]".
 The weapon damage of helper dog is 6.
 The level of helper dog is 5.
@@ -802,7 +806,7 @@ Instead of resolving a Mournful Dog:
 					now helper dog is tamed;
 					add "Tamed" to Traits of helper dog;
 					move Hobo to Computer Lab;
-					say "     (The helper dog is now tamed! You can make it your active pet by typing [bold type][link]pet helper dog[as]pet helper dog[end link][roman type]. You can see all of the pets that you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";
+					say "     (Hobo the helper dog is now a possible companion! You can make him your active companion by typing [bold type][link]companion Hobo[end link][roman type] or [bold type][link]companion helper dog[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 					increase score by 10;
 					now Resolution of Mournful Dog is 1; [adopted the dog]
 					now Mournful Dog is resolved;

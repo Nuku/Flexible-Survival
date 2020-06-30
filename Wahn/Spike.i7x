@@ -157,6 +157,7 @@ instead of navigating Grey Abbey Library while (Alexandra is in Grey Abbey Libra
 
 to say SpikeAccepted:
 	say "     As you agree to take Spike along as your companion, his tail starts wagging up a storm and the young man says excitedly, 'Right on! We'll make this city ours! Let's have some fun!' With his hand lowering to rub the crotch of his jeans, you have little doubt what sort of 'fun' he expects to soon have. Taking another drag from his smoke, the anthro canine then flicks it aside and takes position by your side, steeling his expression to be properly tough and just a bit overbearing, as he expects the right-hand man of 'The Boss' would need to be.";
+	say "     (Spike the doberman is now a possible companion! You can make him your active companion by typing [bold type][link]companion Spike[end link][roman type] or [bold type][link]companion doberman[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Spike[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 	now HP of Spike is 1;
 	add "Tamed" to Traits of doberman companion;
 	now doberman companion is tamed;
@@ -171,6 +172,7 @@ doberman companion	"doberman companion"
 doberman companion is a pet. doberman companion is a part of the player.
 understand "Spike" as doberman companion.
 understand "Doberman" as doberman companion.
+printed name of doberman companion is "Spike".
 The description of doberman companion is "[SpikeDesc]".
 The weapon damage of doberman companion is 7.
 The level of doberman companion is 5.

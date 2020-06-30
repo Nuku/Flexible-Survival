@@ -96,7 +96,7 @@ to say mouseapts:
 		add "Tamed" to Traits of mouse girl;
 		move Rachel to Pantry;
 		now the companion of the player is mouse girl;
-		say "     (The mouse girl is now [']tamed['] and has made herself your active pet! Should you dismiss her from your side, you can reactivate her as your pet by typing [bold type][link]pet mouse girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck mouse girl[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. You may still remove her as your active pet using [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type], but then the mouse collective will be tracking you again.)";
+		say "     (Rachel the mouse girl is now a possible companion! You can make her your active companion by typing [bold type][link]companion Rachel[end link][roman type] or [bold type][link]companion mouse girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Rachel[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break], but then the mouse collective will be tracking you again.)";
 		increase score by 20;
 		wait for any key;
 
@@ -117,6 +117,7 @@ mouse girl	"mouse girl"
 
 mouse girl is a pet. mouse girl is a part of the player.
 understand "Rachel" as mouse girl.
+printed name of mouse girl is "Rachel".
 The description of mouse girl is "[RachelDesc]".
 The weapon damage of mouse girl is 5.
 The level of mouse girl is 3.

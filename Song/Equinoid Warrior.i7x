@@ -17,6 +17,7 @@ equinoid warrior	"equinoid warrior"
 
 equinoid warrior is a pet. equinoid warrior is a part of the player.
 understand "Liliana" as equinoid warrior.
+printed name of equinoid warrior is "Liliana".
 The description of equinoid warrior is "[LilianaDesc]".
 The weapon damage of equinoid warrior is 7.
 The level of equinoid warrior is 3.
