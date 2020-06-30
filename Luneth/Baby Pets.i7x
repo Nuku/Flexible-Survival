@@ -30,6 +30,7 @@ Little fox	"Little fox"
 
 Little fox is a pet. little fox is a part of the player.
 understand "Dash" as little fox.
+printed name of little fox is "Dash".
 The description of the little fox is "[DashDesc]".
 The weapon damage of little fox is 4.
 The level of little fox is 1.
@@ -184,7 +185,7 @@ Instead of resolving Abandoned Fox:
 				now little fox is tamed;
 				add "Tamed" to Traits of little fox;
 				move Dash to Computer Lab;
-				say "(The little fox is now tamed! You can make it your active pet by typing [bold type][link]pet little fox[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
+				say "     (Dash the little fox is now a possible companion! You can make him your active companion by typing [bold type][link]companion Dash[end link][roman type] or [bold type][link]companion fox[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 				now Resolution of Abandoned Fox is 1; [fed and adopted the fox]
 				now Abandoned Fox is resolved;
 			else:
@@ -280,6 +281,7 @@ skunk kit	"skunk kit"
 
 skunk kit is a pet. skunk kit is a part of the player.
 understand "Peppy" as skunk kit.
+printed name of skunk kit is "Peppy".
 The description of the skunk kit is "[Peppydesc]".
 The weapon damage of skunk kit is 6.
 The level of skunk kit is 1.
@@ -452,7 +454,7 @@ Instead of resolving Lost skunk kit:
 						sblinfect;
 					else:
 						infect "Skunk";
-					say "(The skunk kit is now tamed! You can make it your active pet by typing [bold type][link]pet skunk kit[as]pet skunk kit[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";
+					say "     (Peppy the skunk kit is now a possible companion! You can make him your active companion by typing [bold type][link]companion Peppy[end link][roman type] or [bold type][link]companion skunk kit[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 					now Resolution of Lost skunk kit is 1; [adopted the skunk]
 					now Lost skunk kit is resolved;
 				else:

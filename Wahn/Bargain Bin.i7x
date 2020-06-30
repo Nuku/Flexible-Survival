@@ -212,6 +212,7 @@ carry out bargainhunting:
 					say "     Turning the unusual thing over in your hands several times and admiring the fine detail, you nearly drop the doll as it begins to shift and move on its own. The little depiction of yourself stretches and turns its head from side to side as it looks around, before focusing its piercing little gaze on you. Blinking, you put the miniature person carefully down on the ground, where it explores its new surroundings for a minute before returning to sit at your feet, obviously happy to stay with you.";
 					now strange doll is tamed;
 					add "Tamed" to Traits of strange doll;
+					say "     (Your doll-twin is now a possible companion! You can make [ObjectPro of Player] your active companion by typing [bold type][link]companion doll[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 					now dollfound is 1;
 				else:
 					LineBreak;
@@ -578,6 +579,10 @@ strange doll	"strange doll"
 
 strange doll is a pet. "The strange-looking doll that you found in the bargain bin of the unusual shop. The small doll seems to always look exactly like you, changes and all. The most unusual part of the whole thing is how it happily follows along behind you loyally wherever you go, its plush body moving on its own through some unknown method. Still, just looking at the little thing manages to bring a smile to your face.".
 strange doll is a part of the player.
+understand "Your Doll-Twin" as strange doll.
+understand "Doll-Twin" as strange doll.
+understand "Doll" as strange doll.
+printed name of strange doll is "your doll-twin".
 The weapon damage of strange doll is 7.
 The level of strange doll is 1.
 The Dexterity of strange doll is 10.

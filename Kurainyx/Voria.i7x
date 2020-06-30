@@ -178,7 +178,7 @@ to say VoriaDesc:
 		say "     You come to a sort of standoff with Voria, and you're sure that if the plant had eyes, you would be in a staring contest with the carnivorous flora. Eventually, Voria slowly extends a thin vine toward you, cautiously creeping it forward until it stops right in front of you. Recognizing the friendly gesture, you reach forward with your hand and allow Voria to wrap the vine around it. A short, gentle tug beckons you toward the plant, and you start moving toward it, albeit with a small bit of trepidation. Thankfully, as you close the distance, Voria keeps its tentacles off you, only letting the same vine guiding you to touch you.";
 		WaitLineBreak;
 		say "     When you finally stand in front of the main part of the plant's body, the vine slips away from your hand, and Voria dips her head to softly rub it against your body. Although it is a bit odd that you're effectively being nuzzled by a giant plant, you're glad to not be next on Voria's menu, and you return the affection by patting it on its large head, eliciting a quiet, but deep purr from it. It seems like you won't have to worry about Voria because it recognizes you as its caretaker and master. You're glad that the abbey now has a new guard to help keep the place safe, and since Voria has the ability to move around, maybe you can even have it follow you around during your exploration.";
-		say "     The carnivorous plant is now tamed! You can make it your active pet by typing [bold type][link]pet carnivorous plant[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type]";
+		say "     (Voria the carnivorous plant is now a possible companion! You can make her your active companion by typing [bold type][link]companion Voria[end link][roman type] or [bold type][link]companion carnivorous plant[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 		now HP of Voria is 23;	[Voria fully grown]
 		now Carnivorous Plant is tamed;
 		add "Tamed" to Traits of Carnivorous Plant;
@@ -205,7 +205,11 @@ Table of GameCharacterIDs (continued)
 object	name
 Carnivorous Plant	"Carnivorous Plant"
 
-Carnivorous Plant is a pet. The description of Carnivorous Plant is "[CarnivorousPlantDesc]". Carnivorous Plant is a part of the player.
+Carnivorous Plant is a pet.
+understand "Voria" as Carnivorous Plant.
+printed name of Carnivorous Plant is "Voria".
+The description of Carnivorous Plant is "[CarnivorousPlantDesc]".
+Carnivorous Plant is a part of the player.
 The weapon damage of Carnivorous Plant is 5.
 The level of Carnivorous Plant is 2.
 The Dexterity of Carnivorous Plant is 10.

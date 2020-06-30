@@ -80,7 +80,7 @@ Instead of resolving a Poor Kitty:
 			now HP of rubber tigress is 3;
 			now Resolution of Poor Kitty is 2;		[Artemis recruited]
 			now Libido of rubber tigress is 30;
-			say "     (The rubber tigress is now tamed! You can make her your active pet by typing [bold type][link]pet rubber tigress[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+			say "     (Artemis the rubber tigress is now a possible companion! You can make her your active companion by typing [bold type][link]companion Artemis[end link][roman type] or [bold type][link]companion rubber tigress[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Artemis[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 			now Poor Kitty is resolved;
 		else:
 			say "     Continuing to walk along, you turn around the next corner, and once out of sight, run around the stand. You move quietly as you sneak back onto the main thoroughfare, finding the strange tigress poking her head around the corner[if weapon object of Player is not journal]. You pull out your weapon and charge at her[else]. You raise your fists and charge at her[end if]. She gives a shrill shriek of surprise and scrambles away. You don't expect that thing will be bothering you again.";
@@ -108,6 +108,7 @@ rubber tigress	"rubber tigress"
 
 rubber tigress is a pet. rubber tigress is a part of the player.
 understand "Artemis" as rubber tigress.
+printed name of rubber tigress is "Artemis".
 The description of rubber tigress is "[ArtemisDesc]".
 The weapon damage of rubber tigress is 5.
 The level of rubber tigress is 3.

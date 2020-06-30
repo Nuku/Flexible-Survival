@@ -261,7 +261,7 @@ instead of conversing the Rex:
 				now Retriever Girl is tamed;
 				add "Tamed" to Traits of Retriever Girl;
 				move Karen to Breakroom;
-				say "     (The Retriever Girl is now tamed! You can make her your active pet by typing [bold type][link]pet Retriever Girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Retriever Girl[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+				say "     (Karen is now a possible companion! You can make her your active companion by typing [bold type][link]companion Karen[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Karen[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 				now carried of Dog Treats is 0;
 				now Libido of Karen is turns;
 				now HP of Rex is 50;

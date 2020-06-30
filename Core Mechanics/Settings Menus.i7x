@@ -320,12 +320,20 @@ carry out voremenuing:
 		if calcnumber is 1:
 			say "You are now set to skip most vore content.";
 			now vorelevel is 1;
+			add "Vore" to BanList of Player;
+			add "Cockvore" to BanList of Player;
 		else if calcnumber is 2:
 			say "You are now set to receive the Standard (low) amount of vore content.";
 			now vorelevel is 2;
+			if "Vore" is listed in BanList of Player:
+				remove "Vore" from BanList of Player;
 		else if calcnumber is 3:
 			say "You are now set to receive full vore content.";
 			now vorelevel is 3;
+			if "Vore" is listed in BanList of Player:
+				remove "Vore" from BanList of Player;
+			if "Cockvore" is listed in BanList of Player:
+				remove "Cockvore" from BanList of Player;
 		else if calcnumber is 4:
 			say "You are now set to skip most unbirthing content.";
 			now UBlevel is 1;

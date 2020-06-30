@@ -14,6 +14,8 @@ object	name
 Gryphoness	"Gryphoness"
 
 Gryphoness is a pet. The description of gryphoness is "[gryphonessdesc]". Gryphoness is a part of the player.
+understand "Denise" as gryphoness.
+printed name of gryphoness is "Denise".
 The weapon damage of Gryphoness is 5.
 The level of Gryphoness is 2.
 The Dexterity of Gryphoness is 10.
@@ -22,8 +24,6 @@ The dismissdesc of Gryphoness is "[dismissgryphoness]".
 The assault of Gryphoness is "[gryphonessassault]".
 the fuckscene of gryphoness is "[sexwithgryphoness]".
 GryphonessKnowpreg is a number that varies.
-
-understand "Denise" as gryphoness.
 
 to say gryphonessdesc:
 	now tempnum is the remainder after dividing Libido of gryphoness by 4;
@@ -401,7 +401,7 @@ Instead of resolving Gryphoness nest:
 						move Denise to Garden View;
 						now gryphoncomforted is 3;
 						infect "Blue Gryphon Herm";
-						say "(The gryphoness is now tamed! You can make it your active pet by typing [bold type][link]pet gryphoness[end link][roman type]and initiate sex with her while active by typing [bold type][link]fuck gryphoness[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
+						say "     (Denise the gryphoness is now a possible companion! You can make her your active companion by typing [bold type][link]companion Denise[end link][roman type] or  [bold type][link]companion gryphoness[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Denise[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 						now Resolution of Gryphoness nest is 6; [male gryphon player with gryphon cock recruited her]
 						now Gryphoness nest is resolved;
 						follow the turnpass rule;
@@ -418,7 +418,7 @@ Instead of resolving Gryphoness nest:
 						move Denise to Garden View;
 						now gryphoncomforted is 3;
 						infect "Blue Gryphon Herm";
-						say "(The gryphoness is now tamed! You can make it your active pet by typing [bold type][link]pet gryphoness[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
+						say "     (Denise the gryphoness is now a possible companion! You can make her your active companion by typing [bold type][link]companion Denise[end link][roman type] or  [bold type][link]companion gryphoness[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Denise[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 						now Resolution of Gryphoness nest is 7; [gryphon player with non gryphon cock recruited her]
 						now Gryphoness nest is resolved;
 				else:
@@ -439,7 +439,7 @@ Instead of resolving Gryphoness nest:
 					move Denise to Garden View;
 					now gryphoncomforted is 3;
 					infect "Blue Gryphon Herm";
-					say "(The gryphoness is now tamed! You can make it your active pet by typing [bold type][link]pet gryphoness[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
+					say "     (Denise the gryphoness is now a possible companion! You can make her your active companion by typing [bold type][link]companion Denise[end link][roman type] or  [bold type][link]companion gryphoness[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Denise[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 					now Resolution of Gryphoness nest is 8; [female gryphon player recruited her]
 					now Gryphoness nest is resolved;
 			else:
@@ -468,7 +468,7 @@ Instead of resolving Gryphoness nest:
 						move Denise to Garden View;
 						now gryphoncomforted is 3;
 						infect "Blue Gryphon Herm";
-						say "(The gryphoness is now tamed! You can make it your active pet by typing [bold type][link]pet gryphoness[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
+						say "     (Denise the gryphoness is now a possible companion! You can make her your active companion by typing [bold type][link]companion Denise[end link][roman type] or  [bold type][link]companion gryphoness[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Denise[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 						now Resolution of Gryphoness nest is 9; [male player recruited her]
 						now Gryphoness nest is resolved;
 					else:
@@ -480,7 +480,7 @@ Instead of resolving Gryphoness nest:
 						move Denise to Garden View;
 						now gryphoncomforted is 3;
 						infect "Blue Gryphon Herm";
-						say "(The gryphoness is now tamed! You can make it your active pet by typing [bold type][link]pet gryphoness[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
+						say "     (Denise the gryphoness is now a possible companion! You can make her your active companion by typing [bold type][link]companion Denise[end link][roman type] or  [bold type][link]companion gryphoness[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Denise[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 						now Resolution of Gryphoness nest is 10; [female player recruited her]
 						now Gryphoness nest is resolved;
 				else:

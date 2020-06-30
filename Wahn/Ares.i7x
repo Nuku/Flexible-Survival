@@ -722,7 +722,8 @@ object	name
 human dog	"human dog"
 
 human dog is a pet. human dog is a part of the player.
-understand "ares" as human dog.
+understand "Ares" as human dog.
+printed name of human dog is "Ares".
 The description of human dog is "[AresPetDesc]".
 The weapon damage of human dog is 8.
 The level of human dog is 10.

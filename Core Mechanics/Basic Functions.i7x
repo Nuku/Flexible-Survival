@@ -91,6 +91,9 @@ to WaitLineBreak: [little bit of often used code]
 to LineBreak:
 	say "[line break]";
 
+to DoubleLineBreak:
+	say "[line break][line break]";
+
 to HungerReset:
 	LineBreak;
 	say "     [bold type]Your hunger is gone![roman type][line break]";
@@ -317,12 +320,12 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				now Virgin of TakingChar is false;
 				say "     [Bold Type]You have taken [TakingChar]'s virginity![roman type][line break]";
 				add printed name of TakingChar to VirginitiesTaken of Player;
-		else if SexAct is "PussyDildoFuck":
+		else if SexAct is "PussyDildoFuck": [used for dildos, fingers, tentacles - anything pussy penetrative that does not impregnate]
 			if Virgin of TakingChar is true:
 				now Virgin of TakingChar is false;
 				say "     [Bold Type]You have taken [TakingChar]'s virginity![roman type][line break]";
 				add printed name of TakingChar to VirginitiesTaken of Player;
-		else if SexAct is "AssDildoFuck":
+		else if SexAct is "AssDildoFuck": [used for dildos, fingers, tentacles - anything ass penetrative that does not impregnate]
 			if AnalVirgin of TakingChar is true:
 				now AnalVirgin of TakingChar is false;
 				say "     [Bold Type]You have taken [TakingChar]'s anal virginity![roman type][line break]";
@@ -333,6 +336,11 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				say "     [Bold Type]You have taken [TakingChar]'s oral virginity![roman type][line break]";
 				add printed name of TakingChar to OralVirginitiesTaken of Player;
 		else if SexAct is "OralPussy":
+			if OralVirgin of TakingChar is true:
+				now OralVirgin of TakingChar is false;
+				say "     [Bold Type]You have taken [TakingChar]'s oral virginity![roman type][line break]";
+				add printed name of TakingChar to OralVirginitiesTaken of Player;
+		else if SexAct is "OralDildo": [used for dildos, fingers, tentacles - anything orally penetrative]
 			if OralVirgin of TakingChar is true:
 				now OralVirgin of TakingChar is false;
 				say "     [Bold Type]You have taken [TakingChar]'s oral virginity![roman type][line break]";
@@ -349,13 +357,17 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				now AnalVirgin of Player is false;
 				say "     [Bold Type]You have lost your anal virginity to [GivingChar]![roman type][line break]";
 				now FirstAnalPartner of Player is printed name of GivingChar;
-			if Sterile of GivingChar is false: [fertile]
+			if Player is mpreg_able: [fertile]
 				if MainInfection of GivingChar is not "" and MainInfection of GivingChar is not "None":
 					setmonster MainInfection of GivingChar;
 					if MainInfection of GivingChar is listed in infections of OviImpregnatorList:
 						movichance;
 					else:
 						mimpregchance;
+					[
+					if Player is mpreg_now: [player has _just_ been impregnated]
+						<set the Givingchar as father somehow>
+					]
 		else if SexAct is "PussyFuck":
 			if debug is at level 1:
 				say "DEBUG -> MainInfection of [GivingChar] is '[MainInfection of GivingChar]'[line break]";
@@ -363,19 +375,23 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				now Virgin of Player is false;
 				say "     [Bold Type]You have lost your virginity to [GivingChar]![roman type][line break]";
 				now FirstVaginalPartner of Player is printed name of GivingChar;
-			if Sterile of GivingChar is false: [fertile]
+			if Player is fpreg_able: [can get pregnant RIGHT NOW]
 				if MainInfection of GivingChar is not "" and MainInfection of GivingChar is not "None":
 					setmonster MainInfection of GivingChar;
 					if MainInfection of GivingChar is listed in infections of OviImpregnatorList:
 						fovichance;
 					else:
 						fimpregchance;
-		else if SexAct is "AssDildoFuck":
+					[
+					if Player is fpreg_now: [player has _just_ been impregnated]
+						<set the Givingchar as father somehow>
+					]
+		else if SexAct is "AssDildoFuck": [used for dildos, fingers, tentacles - anything ass penetrative that does not impregnate]
 			if AnalVirgin of Player is true:
 				now AnalVirgin of Player is false;
 				say "     [Bold Type]You have lost your anal virginity to [GivingChar]![roman type][line break]";
 				now FirstAnalPartner of Player is printed name of GivingChar;
-		else if SexAct is "PussyDildoFuck":
+		else if SexAct is "PussyDildoFuck": [used for dildos, fingers, tentacles - anything pussy penetrative that does not impregnate]
 			if Virgin of Player is true:
 				now Virgin of Player is false;
 				say "     [Bold Type]You have lost your virginity to [GivingChar]![roman type][line break]";
@@ -383,6 +399,11 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 		else if SexAct is "OralCock" or SexAct is "OralPussy":
 			if OralVirgin of Player is true:
 				now OralVirgin of Player is false;
+				say "     [Bold Type]You have lost your oral virginity to [GivingChar]![roman type][line break]";
+				now FirstOralPartner of Player is printed name of GivingChar;
+		else if SexAct is "OralDildo": [used for dildos, fingers, tentacles - anything orally penetrative]
+			if OralVirgin of TakingChar is true:
+				now OralVirgin of TakingChar is false;
 				say "     [Bold Type]You have lost your oral virginity to [GivingChar]![roman type][line break]";
 				now FirstOralPartner of Player is printed name of GivingChar;
 	else:
@@ -406,12 +427,12 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				now Virgin of TakingChar is false;
 				say "     [Bold Type][GivingChar] has taken [TakingChar]'s virginity![roman type][line break]";
 				now FirstVaginalPartner of TakingChar is printed name of GivingChar;
-		else if SexAct is "AssDildoFuck":
+		else if SexAct is "AssDildoFuck": [used for dildos, fingers, tentacles - anything ass penetrative that does not impregnate]
 			if AnalVirgin of TakingChar is true:
 				now AnalVirgin of TakingChar is false;
 				say "     [Bold Type][GivingChar] has taken [TakingChar]'s anal virginity![roman type][line break]";
 				now FirstAnalPartner of TakingChar is printed name of GivingChar;
-		else if SexAct is "PussyDildoFuck":
+		else if SexAct is "PussyDildoFuck": [used for dildos, fingers, tentacles - anything pussy penetrative that does not impregnate]
 			if Virgin of TakingChar is true:
 				now Virgin of TakingChar is false;
 				say "     [Bold Type][GivingChar] has taken [TakingChar]'s virginity![roman type][line break]";
@@ -426,6 +447,11 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				say "     [Bold Type][GivingChar] has taken [TakingChar]'s oral virginity![roman type][line break]";
 				now FirstOralPartner of TakingChar is printed name of GivingChar;
 		else if SexAct is "OralPussy":
+			if OralVirgin of TakingChar is true:
+				now OralVirgin of TakingChar is false;
+				say "     [Bold Type][GivingChar] has taken [TakingChar]'s oral virginity![roman type][line break]";
+				now FirstOralPartner of TakingChar is printed name of GivingChar;
+		else if SexAct is "OralDildo": [used for dildos, fingers, tentacles - anything orally penetrative]
 			if OralVirgin of TakingChar is true:
 				now OralVirgin of TakingChar is false;
 				say "     [Bold Type][GivingChar] has taken [TakingChar]'s oral virginity![roman type][line break]";

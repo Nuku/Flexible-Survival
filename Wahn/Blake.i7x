@@ -102,7 +102,7 @@ instead of going east from Smith Haven Mall Lot East while ((player is not male 
 	if HP of Blake is 100:
 		say "     Wait? Wasn't there an alley somewhere here? Somehow, you can't focus your mind on it anymore, with thoughts kinda just skipping over it. The idea of going that way is quickly discarded, as it doesn't make any sense.";
 
-instead of going east from Smith Haven Mall Lot East while (HP of Blake < 50):
+instead of going east from Smith Haven Mall Lot East while (HP of Blake < 50 or (player is male and HP of Blake is 99)):
 	move player to Dirty Alley; [one step inside so the player sees him and the room - adjust scenes accordingly]
 	if debugactive is 1:
 		say "     DEBUG: Walk-in Event in the mall - find Blake, the punk rocking, trash-loving rat who lives in the mall.[line break]";

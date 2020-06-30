@@ -80,7 +80,7 @@ to say freeing_aurora:
 			now frost giantess is tamed;
 			add "Tamed" to Traits of frost giantess;
 			move Aurora to Breakroom;
-			say "     (The frost giantess is now tamed! You can make her your active pet by typing [bold type][link]pet frost giantess[as]pet frost giantess[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link].[roman type])[line break]";
+			say "     (Aurora the frost giantess is now a possible companion! You can make her your active companion by typing [bold type][link]companion Aurora[end link][roman type] or [bold type][link]companion frost giantess[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Aurora[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 			increase score by 10;
 			now Resolution of Giant's Frozen Yogurt is 1;	[Recruited Aurora]
 			now Giant's Frozen Yogurt is resolved;
@@ -99,6 +99,7 @@ frost giantess	"frost giantess"
 
 frost giantess is a pet. frost giantess is a part of the player.
 understand "Aurora" as frost giantess.
+printed name of frost giantess is "Aurora".
 The description of frost giantess is "[AuroraDesc]".
 The weapon damage of frost giantess is 8.
 The level of frost giantess is 2.
