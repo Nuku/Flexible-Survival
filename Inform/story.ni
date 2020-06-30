@@ -437,6 +437,8 @@ Equipment has a number called effectiveness. The effectiveness of equipment is u
 Equipment has a number called dodgebonus. The dodgebonus of equipment is usually 0.	[Rare, usually magic]
 Equipment has a number called damagebonus. The damagebonus of equipment is usually 0.	[Rare, usually magic]
 Equipment has a number called fleebonus. The fleebonus of equipment is usually 0.		[Usually a penalty]
+Equipment has a text called skillcheck bonus. The skillcheck bonus of equipment is usually "".
+Equipment has a number called skillcheck value. The skillcheck value of equipment is usually 0.
 A grab object can be temporary. A grab object is usually temporary.
 A grab object can be fast. A grab object is usually not fast.
 A grab object can be infectious.
@@ -5608,7 +5610,7 @@ This is the self examine rule:
 	else if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) is 1: [exactly one child]
 		say "They look as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
 	if the player is not lonely:
-		say "Accompanying you, you have a level [level of companion of Player] [link][companion of Player][as]look [companion of Player][end link]. [initial appearance of companion of Player]";
+		say "Accompanying you is [link][companion of Player][as]look [companion of Player][end link], which is level [level of companion of Player].";
 	now looknow is 0;
 	rule succeeds;
 
@@ -6155,29 +6157,7 @@ Section x - Debug Commands - Not for release
 
 [Since 'not for release' is in the heading, these commands will not be included in Release versions! great for debugging & testing commands]
 
-Spawnmonster is an action applying to one topic.
-
-understand "spawn [text]" as spawnmonster.
-
-carry out spawnmonster:
-	repeat with X running from 1 to number of filled rows in Table of Random Critters:
-		choose row X from the Table of Random Critters;
-		if Name entry exactly matches the text topic understood, case insensitively:
-			now MonsterID is X;
-			now monsterHP is HP entry;
-			challenge;
-			break;
-
-levelcheat is an action applying to nothing.
-
-understand "givelevel" as levelcheat.
-
-carry out levelcheat:
-	now XP of the player is (10 + (level of Player times 10));
-	if "Fast Learner" is listed in feats of Player:
-		decrease XP of Player by ( level of Player times 2 );
-	level up;
-	decrease score by level of the player times level of the player;
+[Moved to Core Mechanics/Debugging Tools.i7x]
 
 Section Lists of Tables - Not for release
 
@@ -7467,6 +7447,10 @@ To startcreatureban: [bans creatures, as requested]
 			if n is listed in badspots of q:
 				say "[n] removed due to [q].";
 				now bad is 1;
+		repeat with q running through all banned tags:
+			if n is listed in badspots of q:
+				say "[n] removed due to [q].";
+				now bad is 1;
 		if bad is 1:
 			now n is inactive;
 	say "Sorting creatures...";
@@ -8663,7 +8647,8 @@ to eyecolorsetting: [ Green, Blue, Gray, Brown, Hazel, Amber, Red]
 		now menuexit is 1;
 
 to playernaming:
-	say "[bold type]Please enter new name: [roman type][line break]";
+	say "Note: You can always change your name at a later point with the 'rename xxx' command.";
+	say "[bold type]Please enter your new name: [roman type][line break]";
 	get typed command as playerinput;
 	now name of Player is playerinput;
 
