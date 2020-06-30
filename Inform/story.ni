@@ -6154,34 +6154,6 @@ to setmonster ( x - text ) silence state is (Silence - a number): [puts an infec
 	else if debugactive is 1 and Silence is 0:
 		say "DEBUG: Current [']monster['] set to: [MonsterID] = [Name entry][line break]";
 
-Section x - Debug Commands - Not for release
-
-[Since 'not for release' is in the heading, these commands will not be included in Release versions! great for debugging & testing commands]
-
-Spawnmonster is an action applying to one topic.
-
-understand "spawn [text]" as spawnmonster.
-
-carry out spawnmonster:
-	repeat with X running from 1 to number of filled rows in Table of Random Critters:
-		choose row X from the Table of Random Critters;
-		if Name entry exactly matches the text topic understood, case insensitively:
-			now MonsterID is X;
-			now monsterHP is HP entry;
-			challenge;
-			break;
-
-levelcheat is an action applying to nothing.
-
-understand "givelevel" as levelcheat.
-
-carry out levelcheat:
-	now XP of the player is (10 + (level of Player times 10));
-	if "Fast Learner" is listed in feats of Player:
-		decrease XP of Player by ( level of Player times 2 );
-	level up;
-	decrease score by level of the player times level of the player;
-
 Section Lists of Tables - Not for release
 
 [intends to list stuff for debugging (or any other activity needing a list of what's in the game). output is formatted as CSV to simplify exporting. appears to be working properly.]
