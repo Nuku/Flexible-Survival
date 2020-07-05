@@ -80,7 +80,7 @@ to say Alpha Husky attack:
 			infect "Husky Bitch";
 		if Husky Gathering is inactive and Husky Gathering is not resolved and fertile pill is owned:
 			say "     You notice that one of your pills seems to be missing. A fertile pill. What would the alpha want with one of those? The mystery has no immediate answers, and you proceed back to safer grounds.";
-			delete fertile pill;
+			ItemLoss fertile pill by 1;
 			now Husky Gathering is active;
 
 Table of GameEventIDs (continued)
@@ -114,7 +114,7 @@ to say alpha huskypack lost:
 		say "     Time passes, and the sounds of the others grow quieter. You can't see them either, but you can't see much but the thighs of your rapist. He pulls free of your sore mouth and barks a word of thanks before hopping to his feet and dashing off, leaving you to recover.";
 		CreatureSexAftermath "Player" receives "OralCock" from "Husky Alpha";
 		let z be a random owned grab object;
-		decrease carried of z by 1;
+		ItemLoss z by 1;
 [		sort invent of the player in random order; ]
 [		remove entry 1 from invent of the player; ]
 	else: [ player submitted ]
@@ -311,8 +311,7 @@ to say AlphaHuskyMilking:
 	say "     After pulling an empty bottle out of your pack and setting it down where you can quickly reach it, you decide to take what you want from the defeated canine instead of letting him force it upon you. Slamming his shoulders down firmly, you tell the muscular man to stay, like the dog he is, then reach for his crotch and start rubbing it. As his sheath starts to fill from your touch, the husky's resistance ebbs off and soon his doggy cock emerges, with your opponent beginning to pant. He still struggles a little bit, wanting to be dominant and on top, but you growl at him until his ears dip. Only then do you take the hand that was pressing down on his chest away, using it to caress his balls instead. Soon, you've got his manhood fully hard and standing straight up like a pole, pulsing slightly from the rapid beat of his heart.";
 	say "     You stroke and fondle your defeated canine a bit, grinning as you push the groaning captive closer and closer to orgasm. You tease him by saying that he should just be a good little pet dog and stop his huffing and puffing about being an Alpha, which starts the husky grumbling a bit - right until you begin squeezing tighter and give his dick a long stroke up and down and he pants as needily as a bitch in heat. With a chuckle, you continue to caress his manhood, and when he finally can't hold back any more, you quickly snatch up your prepared bottle and hold it to his cock, successfully catching spurt after spurt of milky white cum in it. He's got a respectable output and fills a little bit less than half the bottle before he sinks back in exhaustion, panting loudly. Looks like you've finished off the cowed dog for now, so you cap the bottle of cum and pack it away and give him a casual wave to slink off. Tail low at having been beaten and milked, the husky trots away, looking for some place to lick his wounds and salve his pride.";
 	LineBreak;
-	say "[bold type]You gain a bottle of husky alpha cum![roman type][line break]";
-	increase carried of husky alpha cum by 1;
+	ItemGain husky alpha cum by 1;
 
 to say AlphaHuskyBeating:
 	say "     Deciding this aggressive dog could use a bit of harsh discipline, you give him a few more smacks. 'Bad dog! Bad dog!' You rain blows down upon him, kicking and punching him until he's cowering in a corner. With a final kick of his ass, you eventually send him running. He slinks off with his tail between his legs to find someplace to lick his wounds and salve his pride.";

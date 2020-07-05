@@ -947,7 +947,7 @@ to Soup&SexualGratificationEvent:
 		say "     Embarrassedly apologizing for intruding on his private time, you scrabble in your backpack for the tin of tomato soup and place it on the ground before hastily opening the door again You hear him quietly say thank you and despite seeming unable to meet your eyes, he still slowly strokes himself. As you shuffle out the small room, he calls after you, 'I'm sorry that I seem to have scared you away. I thought that anyone coming in would at least knock. Please meet me here again when you have the time. I promise I'll be more presentable next time.' Giving little more than a nod, you close the door behind you and weave your way through the beds and sleeping bodies again, returning to the Food Court with a visibly red face. That could have gone better.";
 		now resolution of Soup & Sexual Gratification is 3; [Just left tin on floor]
 	now Soup & Sexual Gratification is resolved;
-	decrease carried of food by 1;
+	ItemLoss food by 1;
 	now hp of J'Reth is 1;
 
 Table of GameEventIDs (continued)

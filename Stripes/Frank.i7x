@@ -84,11 +84,10 @@ Instead of resolving a Mephitness:
 				now Resolution of Mephitness is 4; [Tried to rescue Frank, Lost]
 	else:
 		say "     More enticed by the backpack and its potential contents than the certainty of a fight with the trio of skunk girls, you slip out and grab the backpack before making your escape. You can hear the excited moans of their prey getting louder and more feminine as they transform him into another sultry skunk girl like themselves. Once you have some safe distance between you and them, you open up the pack to find a collection of snack foods and drinks, through there is a tin of ravioli as well. A side pocket has a canister of pepperspray which may be useful.";
-		say "     Food, chips, soda x2 and pepperspray obtained.";
-		increase carried of pepperspray by 1;
-		increase carried of food by 1;
-		increase carried of chips by 1;
-		increase carried of soda by 2;
+		ItemGain pepperspray by 1;
+		ItemGain food by 1;
+		ItemGain chips by 1;
+		ItemGain soda by 2;
 		increase score by 15;
 		now Resolution of Mephitness is 5; [Ignored Frank, Stole bag]
 	now skunkfight is 0;

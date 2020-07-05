@@ -160,7 +160,7 @@ Instead of going south from the Abandoned Lot:
 							LineBreak;
 							say "     You dig into your backpack and hold the 20 oz bottle up for him to see. The man nods happily and accepts the bottle as you hand it through the slit, having to push a bit to make it fit with some scrapes along the sides. 'Thanks,' he says, then abruptly closes the opening. A few moments later, he is back, opening the slat and showing you to another man who looks out suspiciously. The two mumble to each other for a moment before the second man speaks up.";
 							say "     'All right, we will let you in. But if you try anything funny, you'll be out on the streets so fast your head will spin!' You promise you won't be any trouble, and the guards open the door for you, hastily waving you inside. The original guy at the door starts to raise his hand to shake yours, then pauses and puts it back down as he remembers the nanite infection. 'Um. Yeah. So... I'm Steven by the way,' he tells you, then quickly goes to grab a large black raincoat, throwing it over you to conceal your changed body at least a little.";
-							delete soda;
+							ItemLoss soda by 1;
 							move player to Storage Room;
 							now StevenSwayed is 1;
 						else:
@@ -370,11 +370,11 @@ Instead of trading when the second noun is Steven:
 		if the noun is soda:
 			say "Steven's eyes gleam for a moment, before he snatches the can and tucks it away. He pulls out a medkit. 'Don't tell anyone about this.'";
 			increment carried of medkit;
-			delete soda;
+			ItemLoss soda by 1;
 		else if the noun is chips:
 			say "Steven looks hungrily at the chips, and he carefully takes them off you and gives you back a medkit. 'You know, I'm breaking the rules for this,' as he winks at you.";
 			increment carried of medkit;
-			delete chips;
+			ItemLoss chips by 1;
 		else:
 			say "He looks blankly at the [noun]. 'You can keep it.'";
 	else:
@@ -1038,15 +1038,13 @@ Instead of resolving signs of a scuffle:
 	choose row firstbeast from the Table of Random Critters;
 	if there is a loot entry:
 		if loot entry is not "" and loot entry is not " ":
-			add loot entry to invent of Player;
-			say "You found 1 x [loot entry]!";
+			ItemGain loot entry by 1;
 			now opportunity is 1;
 	let secondbeast be a random number from 1 to number of filled rows in the Table of Random Critters;
 	choose row secondbeast from the Table of Random Critters;
 	if there is a loot entry:
 		if loot entry is not "" and loot entry is not " ":
-			add loot entry to invent of Player;
-			say "You found 1 x [loot entry]!";
+			ItemGain loot entry by 1;
 			now opportunity is 1;
 	if opportunity is 0:
 		say "Alas, you found nothing but dirt, dust, and junk.";

@@ -126,7 +126,7 @@ to say ZekeTalk2: [playing games]
 	increase diceroll by bonus;
 	if diceroll > 19:
 		say "     Once you start playing, it feels somewhat familiar, and you find yourself able to apply some skills you'd almost forgotten you had to it, and end up soundly trouncing Zeke at his own game. He is completely speechless at you victory, simply sitting with a shocked look for several moments, before he laughs heartily. 'Impressive stuff! Even I could hardly beat you at that. Play that impressive deserves a reward.' Zeke stands, and walks over to a cupboard, rifling through it for a few moments. Soon after, he tosses you a bag of chips. 'You earned it. Now come back some time, you hear? I need a rematch against that.'";
-		increase carried of chips by 1;
+		ItemGain chips by 1;
 	else if diceroll > 15:
 		say "     Your skills win out, and your general practice at this, along with quickly picking up the moves, means you manage to scrape out a win. As the sight of his defeat on the screen, Zeke is almost speechless. 'Wow, you're not half bad. A little more practice, and you can be as pro as I am. And I'd definitely like to help you practice.'";
 	else:

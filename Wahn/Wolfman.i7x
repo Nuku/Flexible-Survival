@@ -611,9 +611,7 @@ to say JenniferFoodTalk:
 to say JenniferSodaRequestTalk:
 	if LastJenniferSoda - turns > 8: [player hasn't gotten soda that day]
 		say "     Giving you a friendly nod and a smile as a reply, Jennifer calls out, 'Guys, could one of you please get me one of the bottles from the load for the next trade?' Several of the muscular wolfmen immediately jump up from whatever they were doing and literally have a race to something behind the furthest set of shelves, playfully shouldering each other aside to be the first to get to their goal. You hear some scrambling, laughter and the scratch of their claws on the concrete floor, followed by the victorious young man with the number [one of]one[or]two[or]three[or]four[or]six[or]eight[or]fifteen[or]sixteen[at random] on his chest re-emerging with a soda bottle in his hand. The wolfman proudly dashes through the warehouse and hands it over to Jennifer, receiving a kiss to his muzzle as a reward. Standing on tiptoe, Jennifer sucks on his floppy canine tongue for a few seconds, then rubs the anthro wolf's chest-fur and tells him to get back to training and make her proud. As he runs off again, his tail wagging hard, Jennifer hands you the soda bottle.";
-		LineBreak;
-		say "[bold type]You have gained a soda bottle![roman type][line break]";
-		increase carried of soda by 1;
+		ItemGain soda by 1;
 		now LastJenniferSoda is turns; [last soda at the current turn]
 	else:
 		say "     As you ask for another bottle of soda, Jennifer lets out a sigh and shakes her head. 'I'm sorry, but these really are mostly for trading with the Mall and I already gave you one only a little while ago. It's not like we don't have a lot of them, but it actually is a pain to get the stuff down from the shelves. The forklift back there is an electric one and seems to be out of power, so people actually have to climb and pass them down one by one.' Sliding her arm around yours and brushing against your side, she adds, 'You could just stay here with us for good, you know. Be one with the team and not worry about going out into the city anymore...'";

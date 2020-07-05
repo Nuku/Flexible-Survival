@@ -44,7 +44,7 @@ Dirty Hose is an object. It is in the fence path. It is fixed in place. Understa
 the description of dirty hose is "This old hose was once used to water plants or maybe spray the animals. A faint trickle of water still drips from it. You could [']drink['] it, if you trust the water.".
 
 instead of drinking the dirty hose:
-	increase carried of dirty water by 1;
+	ItemGain dirty water by 1;
 	process dirty water;
 	stop the action;
 

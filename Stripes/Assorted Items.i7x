@@ -80,7 +80,7 @@ carry out pillgiving someone (called x):
 		say "     They're as ready as they're going to be by this point.";
 	else if lastfuck of x - turns >= 24:
 		say "     They're as ready as they're going to be by this point.";
-	decrease carried of libido pill by 1;
+	ItemLoss libido pill by 1;
 
 
 when play begins:

@@ -72,7 +72,7 @@ Instead of resolving a Poor Kitty:
 			say "     Continuing to walk along, you take some string you found and an empty water bottle out of your pack. Keeping this out of sight, you tie the string around the neck of the bottle. The next time you go around a corner, you hurry ahead and drop the bottle. As your rubbery stalker comes around the corner, you tug at the string, making the bottle skitter a little. She hunkers down and starts purring, her tail swishing as she shifts her weight before pouncing. You tug the bottle a little further back, making her pursue it with soft swats of her padded paws. Soon enough, you have her rolling on her back beside you, juggling the bottle on her paws as she purrs happily. She plays with her toy for a while like this before biting down on it, eating the plastic in gooey bites.";
 			say "     After swallowing the last of it down, she spits out the loop of string and nuzzles at your leg. She purrs softly, giving a cute, cat-like mew. You reach down and cautiously pet her head, rubbing the rubber tigress's ears. She nuzzles against your touch, purring all the louder.";
 			say "     'You're just a big kitty, aren't you?' you say to her, getting another mew from her. 'You're certainly a strange rubber tigress,' you muse. 'What can I call you?' She can only reply with a mewl. 'Hmm... rubber tigress... RT... Artie? No, Artemis. How about Artemis, kitty? Roman goddess of the hunt, wilderness and... uhhh... virginity.' She seems pleased with this choice, giving a happy, squeaking mew and purring all the louder. Having received a name from you, Artemis purrs and nuzzles at you happily. It seems you've made a friend. With her following, you go back to the concession stand where you first found her, gather up a stack of cups for her and put them in your pack.";
-			increase carried of cup stack by 1;
+			ItemGain cup stack by 1;
 			increase score by 20;
 			now rubber tigress is tamed;
 			add "Tamed" to Traits of rubber tigress;
@@ -89,7 +89,7 @@ Instead of resolving a Poor Kitty:
 			now Poor Kitty is resolved;
 	else:
 		say "ERROR-Artemis-[HP of rubber tigress]PK: HP outside of range for the event!";
-		increase carried of cup stack by 1;
+		ItemGain cup stack by 1;
 		now rubber tigress is tamed;
 		add "Tamed" to Traits of rubber tigress;
 		now Poor Kitty is resolved;

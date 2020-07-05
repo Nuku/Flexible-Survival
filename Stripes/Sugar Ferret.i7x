@@ -20,7 +20,7 @@ to say losetosugarferret:
 		else:
 			say "     As your strength wanes, you are tackled by several of the ferrets at once. They grab onto your arms, legs and body, pulling you down by sheer numbers. Even as you're going down, you're groped and fondled by several of the over-excited ferrets while others pull off your backpack.";
 		if soda is owned:
-			delete soda;
+			ItemLoss soda by 1;
 			decrease lastcaffeine of Sweet Tooth by 2;
 			if BodyName of Player is "Sugar Ferret" and caffeinehigh of Player is 0:
 				say "     The wild ferrets rummage through your pack, pulling out all the soda they can find, cheering happily as they do, passing it around as they lustfully tease you. You quickly grow more excited and long to play with them. When one presses some cola to your lips, you drink it down without thinking, your wild, over-caffeinated excitement returning as your Sugar Ferret body reacts. You can feel the caffeine rushing through your system and you grab the nearest ferret, pulling them into a sweet kiss.";
@@ -36,7 +36,7 @@ to say losetosugarferret:
 			else:
 				say "     The wild ferrets rummage through your pack, pulling out all the soda they can find, cheering happily as they do, passing it around as they lustfully tease you. You quickly grow more excited and long to play with them. All around you, they drink down your supplies of soda while working to get you aroused.";
 			while carried of soda is not 0:
-				delete soda;
+				ItemLoss soda by 1;
 				decrease lastcaffeine of Sweet Tooth by 2;
 				if caffeinehigh of Player > 0 and BodyName of Player is "Sugar Ferret":
 					increase caffeinehigh of Player by 2;

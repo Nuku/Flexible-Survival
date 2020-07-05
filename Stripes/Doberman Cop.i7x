@@ -303,9 +303,9 @@ to say weaponconf:
 			else:							[lost the fight]
 				say "She takes your whip and sword away, making sure to grab them using an evidence bag. 'I can't let a half-crazed fool like you run around with something like this. You cannot be trusted with something this dangerous and I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster!'";
 			unwield dirty whip silently;
-			delete dirty whip;
+			ItemLoss dirty whip by 1;
 			unwield infected sword silently;
-			delete infected sword;
+			ItemLoss infected sword by 1;
 		else if dirty whip is owned:
 			if dobielibido >= 100 and inasituation is false:
 				say "She takes your whip, making sure to use an evidence bag to get it. 'I appreciate your cooperation in this matter,' she says, giving you a final kick. 'Don't get in my way again!'";
@@ -318,7 +318,7 @@ to say weaponconf:
 			else:							[lost the fight]
 				say "She takes your whip away, making sure to grab it using an evidence bag. 'I can't let a half-crazed fool like you run around with something like this. You cannot be trusted with something this dangerous and I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster!'";
 			unwield dirty whip silently;
-			delete dirty whip;
+			ItemLoss dirty whip by 1;
 		else if infected sword is owned:
 			if dobielibido >= 100 and inasituation is false:
 				say "She takes your sword, making sure to use an evidence bag to get them. 'I appreciate your cooperation in this matter,' she says, giving you a final kick. 'Don't get in my way again!'";
@@ -331,7 +331,7 @@ to say weaponconf:
 			else:							[lost the fight]
 				say "She takes your sword away, making sure to grab it using an evidence bag. 'I can't let a half-crazed fool like you run around with something like this. You cannot be trusted with something this dangerous and I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster!'";
 			unwield infected sword silently;
-			delete infected sword;
+			ItemLoss infected sword by 1;
 
 to say beattheDoberman:
 	project the figure of Alexandra_naked_frown_icon;

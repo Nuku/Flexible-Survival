@@ -43,7 +43,7 @@ instead of resolving Lost Gear:
 				say "You roll 1d20([dice])+[bonus] = [dice + bonus]: ";
 				if dice + bonus > 20:
 					say "Hidden under the counter, you find an old army helmet. You snatch it up and tuck it into your backpack before leaving the, otherwise empty, store.";
-					increase carried of combat helmet by 1;
+					ItemGain combat helmet by 1 silently;
 					increase score by 5;
 					now Resolution of Lost Gear is 2; [found helmet]
 					now Lost Gear is resolved;

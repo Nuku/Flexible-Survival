@@ -262,21 +262,13 @@ to DrMattSampleQuestStart:
 
 to DrMattGooDelivery:
 	if carried of glob of goo > 1:
-		LineBreak;
-		say "     [bold type]You lose 2 globs of goo![roman type][line break]";
-		decrease carried of glob of goo by 2;
+		ItemLoss glob of goo by 2;
 	else if carried of blue gel > 1:
-		LineBreak;
-		say "     [bold type]You lose 2 blue gel![roman type][line break]";
-		decrease carried of blue gel by 2;
+		ItemLoss blue gel by 2;
 	else if carried of pink gel > 1:
-		LineBreak;
-		say "     [bold type]You lose 2 pink gel![roman type][line break]";
-		decrease carried of pink gel by 2;
+		ItemLoss pink gel by 2;
 	else if carried of purple gel > 1:
-		LineBreak;
-		say "     [bold type]You lose 2 purple gel![roman type][line break]";
-		decrease carried of purple gel by 2;
+		ItemLoss purple gel by 2;
 
 to DrMattGooExam:
 	say "     Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then pokes and prods your partially liquid body experimentally and makes some notes with observations, one of which is that you do not really feel pain when part of your mass is displaced from its previous location. Finally, he pulls out a sampling cup and labels it, then directs you to scoop a little bit of material from your torso into it and screw on the lid. Raising the plastic cup and looking with interest at the sample that sloshes back and forth on its own inside, the doctor then places it in a laboratory fridge for later examination. 'Thank you for your willingness to advance the effort in understanding the infection,' Dr. Matt adds with a smile, then turns back to the workstation he's doing most of his research on.";
@@ -295,9 +287,7 @@ to DrMattSampleDelivery:
 	if Strength of Doctor Matt is 0: [nothing delivered yet]
 		if carried of gryphon milk > 1 and (carried of glob of goo > 1 or carried of blue gel > 1 or carried of pink gel > 1 or carried of purple gel > 1): [got everything]
 			say "gives a satisfied nod, then starts to sort your samples into a little box and stashes it in a laboratory fridge. 'Splendid. Thank you for the assistance. I will start analyzing the samples and hopefully get a lot of useful data from them.'";
-			LineBreak;
-			say "     [bold type]You lose 2 gryphon milk![roman type][line break]";
-			decrease carried of gryphon milk by 2;
+			ItemLoss gryphon milk by 2;
 			DrMattGooDelivery;
 			now Strength of Doctor Matt is 3; [everything delivered]
 		else if carried of gryphon milk is 1 and (carried of glob of goo > 1 or carried of blue gel > 1 or carried of pink gel > 1 or carried of purple gel > 1): [not enough milk, but enough goo]
@@ -321,16 +311,12 @@ to DrMattSampleDelivery:
 		else if carried of gryphon milk > 1 and (carried of glob of goo < 2 and carried of blue gel < 2 and carried of pink gel < 2 and carried of purple gel < 2): [got milk, not enough goo]
 			if BodyName of Player is "Goo Girl" or BodyName of Player is "Blue Gel" or BodyName of Player is "Pink Gel" or BodyName of Player is "Purple Gel":
 				say "gives a thoughtful nod, then puts some of the samples into a little box and stashes it in a laboratory fridge. 'Sadly, you do not have enough samples of fluidic creatures for a full analysis. But since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.'";
-				LineBreak;
-				say "     [bold type]You lose 2 gryphon milk![roman type][line break]";
-				decrease carried of gryphon milk by 2;
+				ItemLoss gryphon milk by 2;
 				DrMattGooExam;
 				now Strength of Doctor Matt is 3; [all delivered]
 			else:
 				say "gives a thoughtful nod, then puts some of the samples into a little box and stashes it in a laboratory fridge. 'Sadly, you do not have enough samples of fluidic creatures for a full analysis. Please gather some more and bring them to me.'";
-				LineBreak;
-				say "     [bold type]You lose 2 gryphon milk![roman type][line break]";
-				decrease carried of gryphon milk by 2;
+				ItemLoss gryphon milk by 2;
 				now Strength of Doctor Matt is 1; [milk delivered]
 		else if carried of gryphon milk is 1 and (carried of glob of goo < 2 and carried of blue gel < 2 and carried of pink gel < 2 and carried of purple gel < 2): [not enough milk nor goo]
 			if BodyName of Player is "Blue Gryphon Herm":
@@ -372,9 +358,7 @@ to DrMattSampleDelivery:
 	else if Strength of Doctor Matt is 2: [goo delivered]
 		if carried of gryphon milk > 1:
 			say "gives a satisfied nod, then adds your samples to the little box holding the previous batch and puts it back in a laboratory fridge. 'Splendid. Thank you for the assistance. I will start analyzing the samples and hopefully get a lot of useful data from them.'";
-			LineBreak;
-			say "     [bold type]You lose 2 gryphon milk![roman type][line break]";
-			decrease carried of gryphon milk by 2;
+			ItemLoss gryphon milk by 2;
 			now Strength of Doctor Matt is 3; [everything delivered]
 		else if carried of gryphon milk is 1: [not enough milk]
 			if BodyName of Player is "Blue Gryphon Herm":
@@ -543,7 +527,7 @@ to say DrMattQuestTalk:
 				say "     ([link]Y[as]y[end link]) - Yes.";
 				say "     ([link]N[as]n[end link]) - No.";
 				if Player consents:
-					delete Chipped tooth;
+					ItemLoss Chipped tooth by 1;
 					increase score by 10;
 					say "     'It is good to see that you appreciate the importance of my work.' He picks up the large fang in his gloves and places it in a sample dish.";
 					now sabtoothedmatt is 1;
@@ -557,7 +541,7 @@ to say DrMattQuestTalk:
 				say "     'I would like to ask you to obtain a sample from one of these creatures for me as well before Dr Mouse gets too far ahead. I know this means you may need to fight a second one, but my research cannot fall behind.'";
 			if sabertoothfound > 0:
 				say "     'As you have already given Dr Mouse his sample, I should like to keep this sample for myself,' he says as he places the one you have into a sample dish.";
-				delete Chipped tooth;
+				ItemLoss Chipped tooth by 1;
 				increase score by 10;
 				now sabtoothedmatt is 1;
 		if nerminepackage < 5 and nerminepackagematt is 0:
@@ -581,8 +565,8 @@ to say DrMattQuestTalk:
 				say "     From one of the worktables, Dr Matt gathers up a cobbled-together device that looks like it was made from an array of wires and lights on a Velcro wristband connected to a handheld game console. 'I had to make its case from the items I had available, but it is quite functional, if a little slow. It acts as a personalized infection status monitor, or PISM. Should you make contact with an unknown infection source, you can see to what degree and which strain has infected your body. While many strains are obvious, others are harder to diagnose until further secondary features or behaviors arise.'";
 				say "     The strap can be placed around your wrist, ankle or other limb. It could even be used with the contacts pressed to your body, if you were ever changed to such a radical degree. To check yourself, simply connect it to the analysis unit and press these buttons,' he says as he indicates them, 'to show you how the infection has spread through your body. It has a catalog drawn from this terminal, but unfortunately must remain keyed to you to work and so it presently can't be used to check others. I hope my larger model for the military will overcome this issue so they can do a quick scan at the base of the people they rescue to be aware of the strains infecting each individual.'";
 				say "     'As I stated, you may have this prototype, as I am working on an improved model for the military. Perhaps it may be of some use to you. If you can continue to help me, I may be able to upgrade its programming later,' he adds, clearly paying you to act as his double-agent.";
-				say "     Infection monitor obtained. (Quick command: [bold type]pism[roman type])[line break]";
-				increase carried of infection monitor by 1;
+				ItemGain infection monitor by 1;
+				say "     (Quick command: [bold type]pism[roman type])[line break]";
 				now mattcollection is 1;
 				increase score by 10;
 			else:
@@ -709,8 +693,8 @@ to say DrMattQuestTalk:
 				WaitLineBreak;
 				say "     'The strap can be placed around your wrist, ankle or other limb. It could even be used with the contacts pressed to your body, if you were ever changed to such a radical degree. To check yourself, simply connect it to the analysis unit and press these buttons,' he says as he indicates them, 'to show you how the infection has spread through your body. It has a catalog drawn from this terminal, but unfortunately must remain keyed to you to work and so it presently can't be used to check others. I hope my larger model for the military will overcome this issue so they can do a quick scan at the base of the people they rescue to be aware of the strains infecting each individual.";
 				say "     'As I stated, you may have this prototype, as I am working on an improved model for the military. This will be a fine opportunity to field test the technology. After you've had a chance to test it out for a while, I'd like you to report your findings on its functionality,' he adds, clearly his [']gift['] is more a case of you being his beta-tester.";
-				say "     Infection monitor obtained. (Quick command: [bold type]pism[roman type])[line break]";
-				increase carried of infection monitor by 1;
+				ItemGain infection monitor by 1;
+				say "     (Quick command: [bold type]pism[roman type])[line break]";
 				increase score by 10;
 	else if HP of Doctor Matt is 16:
 		say "     'Please proceed to the Zephyr location and make the exchange for the data.'";
@@ -739,7 +723,7 @@ to say DrMattQuestTalk:
 		else:
 			say "     'That is your choice to make,' he says. He seems a little disappointed - not so much in you, but instead that he's not going to get the chance to do science. 'There are a few others who other survivors who have been coming by from time to time. I expect one of them will be eager for the opportunity.' He stores the can away.";
 			say "     'Well, there is something else that was left when the restorative spray was delivered for testing. As I have Orthas here to protect me, I have little need for it. It's not much, but you can take it as thanks for your continued assistance. It should help keep you safe out in the city.' He tosses you a can of pepperspray.";
-			increase carried of pepperspray by 1;
+			ItemGain pepperspray by 1;
 		WaitLineBreak;
 		say "     'Orthas has also received some news from travelers about the state of the city hospital after the incidents there. Some new chimeric creatures have been observed. It seems these are different from the other ones you've earlier observed. They are likely [if HP of Doctor Mouse is 1]released[else]escaped[end if] test subjects that have been left to roam the halls. They have either subsumed or displaced the earlier chimeras. The accounts state that they are more powerful, so I thought it best to advise you of the occurrence. Exercise caution should you go there.'";
 		say "     And with all that done, Dr. Matt turns back to his computer and dives into the new data he's received. 'I have little else for you to do at the moment. Please check back in a day or so. Until then, go keep yourself occupied elsewhere for now,' he says dismissively.";
@@ -925,13 +909,13 @@ Section 3 - Food and Water Hunt Subroutines
 
 to say thefoodening:
 	if foodcount > 0 and foodneed > 0:
-		delete food;
+		ItemLoss food by 1 silently;
 		decrease foodcount by 1;
 		decrease foodneed by 1;
 
 to say thewatering:
 	if watercount > 0 and waterneed > 0:
-		delete water bottle;
+		ItemLoss water bottle by 1 silently;
 		decrease watercount by 1;
 		decrease waterneed by 1;
 

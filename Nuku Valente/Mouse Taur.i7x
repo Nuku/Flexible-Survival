@@ -201,7 +201,7 @@ instead of conversing the Lisa:
 		say "     'This what you looking for?' She displays a distinctly carrot-shaped dildo, and a rather oversized one at that. 'This was clearly meant as a novelty toy, not really intended for use, but these days there's really no such thing.' As you reach for it, she pulls it back. 'Tsk, now then, I can't just give this away on a whim! How about this, for a bottle of clean water, I'll give it to you, deal?'";
 		if Player consents:
 			if water bottle is owned:
-				delete water bottle;
+				ItemLoss water bottle by 1;
 				say "     Handing over the bottled water, Lisa gives you the novelty dildo.";
 				say "     'Have fun!' Turning away to attend to her own matters, you have the large orange thing in your possession now, it's probably best to return to Sandra right away.";
 				now rabbitsibling is 4;

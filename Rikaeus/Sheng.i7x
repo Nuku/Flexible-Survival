@@ -263,7 +263,7 @@ to say ShengOtterPotionSale:
 			infect "Sea Otter";
 			infect "Sea Otter";
 			infect "Sea Otter";
-			decrease carried of demon seed by 2;
+			ItemLoss demon seed by 2;
 		else:
 			say "     Shaking your head you say that you've changed your mind, causing the tiger to scoff. 'Don't waste my time, if you're gonna say you're gonna buy something then do so.' Sheng says with a slight glare. Shrugging your shoulders you just let the male get back to work, leaving you to yourself in the shop.";
 	else:
@@ -296,13 +296,13 @@ to say ShengHuskyPotionSale:
 				infect "Husky Alpha";
 				infect "Husky Alpha";
 				infect "Husky Alpha";
-				decrease carried of demon seed by 2;
+				ItemLoss demon seed by 2;
 			else if calcnumber is 2:
 				say "     You point at the Female Husky vial, causing Sheng to nod and slide it over to you, after which you chug the potion, feeling the effects kick in. As you turn to thank the alchemist he's sadly already back at work, so instead you return to the middle of the store.";
 				infect "Husky Bitch";
 				infect "Husky Bitch";
 				infect "Husky Bitch";
-				decrease carried of demon seed by 2;
+				ItemLoss demon seed by 2;
 		else:
 			say "     Shaking your head you say that you've changed your mind, causing the tiger to scoff. 'Don't waste my time, if you're gonna say you're gonna buy something then do so.' Sheng says with a slight glare. Shrugging your shoulders you just let the male get back to work, leaving you to yourself in the shop.";
 	else:
@@ -335,8 +335,8 @@ to say ShengLustPotionSale:
 		say "     [link]N[as]n[end link] - Nah.";
 		if Player consents:
 			say "     You pass over the vials to your master and he gladly takes them and passes over the potion. You pocket it safely, so that it doesn't break. The white tiger chuckles and gives you a smirk. 'Now pet, I don't mind if you plan to use that on me but remember to take care of the resulting problem.' He says with a look that causes shivers to go up your spine as he returns to work.";
-			decrease carried of demon seed by 2;
-			increase carried of lust potion by 1;
+			ItemLoss demon seed by 2;
+			ItemGain lust potion by 1;
 		else:
 			say "     Shaking your head, you say that you'll possibly get one later but not now. Your master nods and puts away the vial. 'Alright pet, just let me know if you want one, just remember what the cost is.' The white tiger says before returning to work.";
 	else:
@@ -688,6 +688,6 @@ carry out potiongiving someone (called x):
 		say "     They're as ready as they're going to be by this point.";
 	else if lastfuck of x - turns >= 24:
 		say "     They're as ready as they're going to be by this point.";
-	decrease carried of lust potion by 1;
+	ItemLoss lust potion by 1;
 
 Sheng ends here.

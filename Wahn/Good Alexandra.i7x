@@ -405,8 +405,8 @@ to say alexandra_supplies:
 			say "     Having enough of the food and water supplies in your pack, shall you give them over to her?";
 			if Player consents:
 				say "     The doberwoman smiles happily, a canine grin on her face. 'I knew I could count on you. Thanks a lot, hon.' She gives you a quick kiss on the cheek, then realizes what she's done. 'Ah... umm...' She blushes at her ears and scoops up the supplies clumsily, hurrying off toward the storage lock-up. There is a hint of canine arousal in the air after her departure.";
-				decrease carried of food by 6;
-				decrease carried of water bottle by 6;
+				ItemLoss food by 6;
+				ItemLoss water bottle by 6;
 				increase score by 25;
 				now HP of Alexandra is 56;
 			else:
@@ -417,7 +417,7 @@ to say alexandra_supplies:
 			say "     Having the food supplies she needs already in your pack, shall you give them over to her?";
 			if Player consents:
 				say "     The doberwoman smiles happily, a canine grin on her face. 'I knew I could count on you. Thanks a lot, hon. Ah... umm...' She blushes at her ears and takes the supplies, hurrying off towards the storage lock-up.";
-				decrease carried of food by 6;
+				ItemLoss food by 6;
 				increase score by 10;
 				now HP of Alexandra is 54;
 			else:
@@ -428,7 +428,7 @@ to say alexandra_supplies:
 			say "     Having the water supplies she needs already in your pack, shall you give them over to her?";
 			if Player consents:
 				say "     The doberwoman smiles happily, a canine grin on her face. 'I knew I could count on you. Thanks a lot, hon. Ah... umm...' She blushes at her ears and takes the supplies, hurrying off towards the storage lock-up.";
-				decrease carried of water bottle by 6;
+				ItemLoss water bottle by 6;
 				increase score by 10;
 				now HP of Alexandra is 55;
 			else:
@@ -445,8 +445,8 @@ to say alexandra_supplies:
 			say "     Having enough of the food and water supplies in your pack, shall you give them over to her?";
 			if Player consents:
 				say "     The doberwoman smiles happily, a canine grin on her face. 'I knew I could count on you. Thanks a lot, hon.' She gives you a quick kiss on the cheek, then realizes what she's done. 'Ah... umm...' She blushes at her ears and scoops up the supplies clumsily, hurrying off towards the storage lock-up. There is a hint of canine arousal in the air after her departure.";
-				decrease carried of food by 6;
-				decrease carried of water bottle by 6;
+				ItemLoss food by 6;
+				ItemLoss water bottle by 6;
 				increase score by 25;
 				now HP of Alexandra is 56;
 			else:
@@ -456,7 +456,7 @@ to say alexandra_supplies:
 			say "     Having the food supplies she needs in your pack, shall you give them over to her?";
 			if Player consents:
 				say "     The doberwoman smiles happily, a canine grin on her face. 'I knew I could count on you. Thanks a lot, hon. Ah... umm...' She blushes at her ears and takes the supplies, hurrying off towards the storage lock-up.";
-				decrease carried of food by 6;
+				ItemLoss food by 6;
 				increase score by 10;
 				now HP of Alexandra is 54;
 			else:
@@ -466,7 +466,7 @@ to say alexandra_supplies:
 			say "     Having the water supplies she needs in your pack, shall you give them over to her?";
 			if Player consents:
 				say "     The doberwoman smiles happily, a canine grin on her face. 'I knew I could count on you. Thanks a lot, hon. Ah... umm...' She blushes at her ears and takes the supplies, hurrying off towards the storage lock-up.";
-				decrease carried of water bottle by 6;
+				ItemLoss water bottle by 6;
 				increase score by 10;
 				now HP of Alexandra is 55;
 			else:
@@ -481,7 +481,7 @@ to say alexandra_supplies:
 			say "     Having the water supplies she needs in your pack, shall you give them over to her?";
 			if Player consents:
 				say "     The doberwoman smiles happily, a canine grin on her face. 'I knew I could count on you. Thanks a lot, hon. Ah... umm...' She blushes at her ears and takes the supplies, hurrying off towards the storage lock-up. There is a hint of canine arousal in the air after her departure.";
-				decrease carried of water bottle by 6;
+				ItemLoss water bottle by 6;
 				increase score by 10;
 				now HP of Alexandra is 56;
 			else:
@@ -496,7 +496,7 @@ to say alexandra_supplies:
 			say "     Having the food supplies she needs in your pack, shall you give them over to her?";
 			if Player consents:
 				say "     The doberwoman smiles happily, a canine grin on her face. 'I knew I could count on you. Thanks a lot, hon. Ah... umm...' She blushes at her ears and takes the supplies, hurrying off towards the storage lock-up. There is a hint of canine arousal in the air after her departure.";
-				decrease carried of food by 6;
+				ItemLoss food by 6;
 				increase score by 10;
 				now HP of Alexandra is 56;
 			else:
@@ -1043,12 +1043,12 @@ to say alexandra_repairs:
 			if pr_completion is 0:
 				say "     Offering to help Alexandra with further securing the building, the two of you go around barricading the other doors[if PoliceStationTwelvePopulation > 16] with the help of a couple of the stronger residents[else if PoliceStationTwelvePopulation > 8] with one of the other resident survivors[end if]. You have to go around the offices, finding desks and filing cabinets and so forth to move in front of them. You do make it a point to set up one barricade that's fairly easy to tear down from the inside in case of emergency. It's a lot of hard work, but you and Alexandra have some fun laughing at some of the odd trinkets and junk you find on the desks. While it's bittersweet for her to be reminded that her fellow officers are gone, reminiscing about them does help her with the grieving process. As an added bonus, you do find some hidden snacks buried in some of the desks as well, some of which you share with her while taking a break.";
 				PlayerEat 6;
-				increase carried of chips by 1;
+				ItemGain chips by 1;
 				increase policerepair by 2;
 			else:
 				say "     Returning to barricading the other exits from the building, you and Alexandra drag around more heavy furniture to block them[if PoliceStationTwelvePopulation > 16] with the help of a couple of the stronger residents[else if PoliceStationTwelvePopulation > 8] with one of the other resident survivors[end if]. You do make it a point to set up one barricade that's fairly easy to tear down from the inside in case of emergency. It's a lot of hard work, but you and Alexandra have some fun laughing at some of the odd trinkets and junk you find on the desks. While it's bittersweet for her to be reminded that her fellow officers are gone, reminiscing about them does help her with the grieving process. As an added bonus, you do find some hidden snacks buried in some of the desks as well.";
 				PlayerEat 6;
-				increase carried of chips by 1;
+				ItemGain chips by 1;
 				increase policerepair by 1;
 			increase score by 10;
 			now pr_task02 is true;
@@ -1094,8 +1094,8 @@ to say alexandra_repairs:
 		else:
 			say "     The two of you talk while working, enjoying each other's company. You can't help but notice that Alexandra's lightened up quite a bit since you'd first met her. Letting the conversation drift towards how sex has gotten quite prevalent, you try to see how she feels about the matter. She starts to respond, then realizes what you're asking and gives you a narrow look. Trying to look innocent, she harrumphes and gets back to work. Though from the way she gives her ass a wiggle and the increase in the scent of her arousal, you can tell she's not as upset about it as she's letting on. The two of you finish up the work in fine spirits, but are both rather worn out.";
 		say "     As you're putting away the tools, Alexandra comes up to you. 'You've been a big help here. I wouldn't have been able to handle all of this on my own. Here, how about you take this?' she says, offering you one of the carpentry hammers from the tool set. 'This might come in handy and would make for a pretty good weapon in a pinch. I think I can trust you not to kill anyone with this, so you can use it to defend yourself against those mutants. They heal pretty quick, so they should survive as long as you don't go overboard.'";
-		say "     You have gained a [bold type]claw hammer[roman type]. When all you have is a hammer, every mutant looks like a nail.";
-		increase carried of claw hammer by 1;
+		say "     You gain a [bold type]claw hammer[roman type]. When all you have is a hammer, every mutant looks like a nail.";
+		ItemGain claw hammer by 1 silently;
 		increase score by 10;
 		increase policerepair by 1;
 		now pr_task03 is true;

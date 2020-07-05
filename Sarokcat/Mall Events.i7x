@@ -21,7 +21,7 @@ Instead of resolving Tight Space:
 			now Resolution of Tight Space is 1; [found nothing]
 		else if T is 2:
 			say "     You find an unopened bottle of water that must have rolled in here!";
-			increase carried of water bottle by 1;
+			ItemGain water bottle by 1;
 			now Resolution of Tight Space is 2; [found water]
 		else if T is 3:
 			say "     You get stuck in the tight space. Panicking, you struggle and fight to get out, eventually managing to tear your way free, leaving a good portion of skin behind though... damn that hurts!";
@@ -29,8 +29,8 @@ Instead of resolving Tight Space:
 			now Resolution of Tight Space is 3; [stuck]
 		else if T is 4:
 			say "     It looks like someone made a little nest down here. You find some comic books and a few other shiny items, but most importantly you find some chips and soda to snack on!";
-			increase carried of chips by 1;
-			increase carried of soda by 1;
+			ItemGain chips by 1;
+			ItemGain soda by 1;
 			now Resolution of Tight Space is 4; [nest]
 		else:
 			say "     As you wriggle into the tight space, you hear something moving behind in behind you. It was a trap!";
@@ -133,12 +133,12 @@ Instead of resolving a puddle of goo:
 		increase diceroll by bonus;
 		if diceroll > 14:
 			say "You manage to gather up some of the strange goo without incident!";
-			increase carried of glob of goo by 2;
+			ItemGain glob of goo by 2;
 		else:
 			say "While trying to gather up some of the strange substance, you slip and fall in it instead!";
 			infect "Goo Girl";
 			infect "Goo Girl";
-			increase carried of glob of goo by 1;
+			ItemGain glob of goo by 1;
 			now Resolution of Puddle of Goo is 1; [collected]
 	else:
 		say "     Deciding it is always best to leave strange, gooey puddles alone, you give it a wide berth as you continue on your way.";

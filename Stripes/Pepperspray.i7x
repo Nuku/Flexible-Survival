@@ -17,7 +17,7 @@ to say pepperspraydrain:
 	now peppereyes is 3;
 	if a random chance of 3 in 10 succeeds:		[average 3-4 uses]
 		say "Uh oh! That used up the last of that can and you drop it to the ground, empty.[line break]";
-		delete pepperspray;
+		ItemLoss pepperspray by 1;
 
 
 to say usepepperspray:

@@ -58,7 +58,7 @@ instead of resolving Finding Winged Orb:
 		else:
 			say "     Exhausted after your battle, you're still happy that you were able to find one of the sigils that Amuran needs. Hoisting yourself up, you ready yourself to continue, remembering to deliver the emblem to the divine servant.";
 		now Resolution of Finding Winged Orb is 2; [fell out of the tree]
-	increase carried of winged sun by 1;
+	ItemGain winged sun by 1;
 	now Finding Winged Orb is resolved;
 
 Section 2 - Areas and Rooms
@@ -413,7 +413,7 @@ instead of conversing Amuran:
 		StatChange "Intelligence" by 1;
 		StatChange "Perception" by 1;
 		increase lust of Amuran by 1;
-		decrease carried of jade scarab by 1;
+		ItemLoss jade scarab by 1;
 	else if carried of winged sun is 1:
 		say "     Unsurprisingly, you see that Amuran has (probably) not moved from his sitting position since you've last seen him; he's still sitting in front of the glimmering pool of water, meditating peacefully. Quietly approaching him, you quickly figure out that he still does not notice you. Once again tapping his shoulder, he soon turns to look at you, letting you talk first. Searching around in your pack for his emblem, you pull out the winged sun and hand it to him, giving him back one of his godly conduits.";
 		say "     Rapidly closing his chitinous hands over his sigil, beams of light begin to emanate from the emblem, shining out brilliantly in the warm air surrounding you. In a few seconds, a blast of orange light shoots out from the shining emblem; as the light fades, it seems that the sigil is gone. Standing in front of you is a contented-looking Amuran, stretching out happily in the shining rays of the sun.";
@@ -423,7 +423,7 @@ instead of conversing Amuran:
 		StatChange "Dexterity" by 1;
 		StatChange "Stamina" by 1;
 		increase lust of Amuran by 1;
-		decrease carried of winged sun by 1;
+		ItemLoss winged sun by 1;
 	else if lust of Amuran is 2:
 		say "     Approaching the meditating insect-man, you're quite surprised when Amuran turns to notice you first, instead of you having to patiently wait for him. Nonchalantly rising to his chitinous claws and turning to you, he crosses his arms over his chest and bows to you; most likely thanking you for the return of his abilities. Finishing his wordless thanks a few moments later, he rises to his full majesty before speaking.";
 		say "     'I must award my sincerest of thanks, young one, for the assistance you have rendered me. It would have been many a twilight before I could have departed this holy temple, lost so as my power was. Now, however, I return to full strength, and can carry out my task.' Telling him that you were quite happy to help, you ask what he has to do to find this relic.";

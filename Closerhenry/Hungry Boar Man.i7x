@@ -166,7 +166,7 @@ To pigfeed:
 	else if pigfed is 0:
 		now lastpigfed is turns;
 		if food is owned:
-			delete food;
+			ItemLoss food by 1;
 			now pigfed is 1;
 			say "     'Thank you!' he shouts as he snatches the food from you and starts to gobble it down. The boar man goes into a feeding frenzy. He barely chews as he stuffs the food into his mouth and swallows it down. He almost seems to get a little bit fatter before your eyes as he eats. Stray flecks of saliva fly from his mouth and splash on you. Your body immediately begins to feel strange. A loud ripping sound comes from the seat of your pants as a curly pig tail grows out above your butt.";
 			now TailName of Player is "Piggy";
@@ -201,7 +201,7 @@ To pigfeed:
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
 			if food is owned:
-				delete food;
+				ItemLoss food by 1;
 				say "     Thank you,' he shouts as he snatches the food from you and starts to gobble it down.";
 				say "     The boar man goes into a feeding frenzy. He barely chews as he stuffs the food into his mouth and swallows it down. He almost seems to get a little bit fatter before your eyes as he eats. Stray flecks of saliva fly from his mouth and once again splash on you. Your body immediately begins to feel strange. Your body plumps up and your feet ache for a moment as they harden into pig hooves.";
 				say "     When he finishes eating, he eyes you appreciatively, then says, 'You seem to know how to find food. Can I come with you?'";

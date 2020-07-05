@@ -526,7 +526,7 @@ to say SarahTalk2:
 			say "     Sarah happily agrees to check out the huge bag of random medical supplies that you've gathered, her eyes going wide as she takes in the massive amount of stuff you have gathered. 'Where did you get all this?!' she asks in amazement, not really waiting for a reply before she starts inspecting foil packages with a knowing eye. Numerous small pieces are discarded by her right away, then another package or five after a little closer inspection and her holding it up to sniff at. 'I never thought I'd say something like this, but becoming a husky hybrid actually does have an upside. My nose is so sensitive right now that I can smell everything,' the medical student remarks, dropping the last packet on the trash pile. 'I think someone messed with these ones on purpose. Smells [one of]strangely of latex[or]a bit like milk powder[or]sickly sweet[or]a little rancid[or]a bit like cheese[or]like motor oil or something[at random] and I'm fairly sure a few are infected.'";
 			say "     After getting rid of the unusable items, you're left with a big pile of remaining supplies. The young half-husky looks at them one last time, then remarks, 'Okay these here should be fine. Very good job gathering all that stuff.' Then she strolls over to some dusty boxes you never even noticed standing in the corner until now. Digging around a little, she eventually finds several abandoned lunch-boxes in what must be years worth of unclaimed lost and found items. With sure movements, Sarah packs them with full sets of medical supplies, creating brand new medkits.";
 		let madekits be HasParts / 2;
-		increase carried of medkit by madekits;
+		ItemGain medkit by madekits;
 		decrease HasParts by madekits * 2;
 
 to say SarahTalk3:
@@ -543,7 +543,7 @@ to say SarahTalk3:
 				LineBreak;
 				say "     Pulling out the syringe with its cloudy, orange filling from your pack, you hand it to the medical student turned husky hybrid. Sarah turns it over and reads the handwritten scrawl on its plastic casing - 'Libido Suppressant'. She gasps in surprise, tears of joy starting to form in the corners of her eyes. 'You - you already got some?! Oh wow, are you psychic or something? This is just what I need! Thank you so much!' Throwing her arm around you in a quick hug, she then hurries off right afterwards, murmuring to herself about finding the right dosage and having to do careful experiments with the small amount she has.";
 				now SarahCured is 2; [gave her a syringe of libido suppressant]
-				decrease carried of libido suppressant by 1;
+				ItemLoss libido suppressant by 1;
 			else: [don't give it to her]
 				LineBreak;
 				say "     Keeping your stash of libido suppressant a secret, you just give her a friendly pat on the arm and watch as Sarah walks away a little afterwards.";
@@ -558,7 +558,7 @@ to say SarahTalk3:
 				LineBreak;
 				say "     Pulling out the syringe with its cloudy, orange filling from your pack, you hand it to the medical student turned husky hybrid. Sarah turns it over and reads the handwritten scrawl on its plastic casing - 'Libido Suppressant'. She gasps in surprise, tears of joy starting to form in the corners of her eyes. 'This is just what I need! Thank you so much!' Throwing her arm around you in a quick hug, she then hurries off right afterwards, murmuring to herself about finding the right dosage and having to do careful experiments with the small amount she has.";
 				now SarahCured is 2; [gave her a syringe of libido suppressant]
-				decrease carried of libido suppressant by 1;
+				ItemLoss libido suppressant by 1;
 			else: [don't give it to her]
 				LineBreak;
 				say "     Keeping your stash of libido suppressant a secret, you just give her a friendly pat on the arm and watch as Sarah walks away a little afterwards.";
@@ -577,7 +577,7 @@ to say SarahTalk3:
 				say "     For your efforts in saving Sarah from her progressing husky infection, you have earned the [']Dog Whisperer['] feat. Having proved your dedication in doing the right thing, your [bold type]charisma[roman type] has gone up by two, allowing you to empathize with others even more.";
 				FeatGain "Dog Whisperer";
 				StatChange "Charisma" by 2;
-				decrease carried of libido suppressant by 5;
+				ItemLoss libido suppressant by 5;
 			else: [don't give it to her]
 				LineBreak;
 				say "     Keeping your stash of libido suppressant a secret, you just give her a friendly pat on the arm and watch as Sarah walks away a little afterwards.";
@@ -595,7 +595,7 @@ to say SarahTalk3:
 				say "     For your efforts in saving Sarah from her progressing husky infection, you have earned the [']Dog Whisperer['] feat. Having proved your dedication in doing the right thing, your [bold type]charisma[roman type] has gone up by two, allowing you to empathize with others even more.";
 				FeatGain "Dog Whisperer";
 				StatChange "Charisma" by 2;
-				decrease carried of libido suppressant by 5;
+				ItemLoss libido suppressant by 5;
 			else: [don't give it to her]
 				LineBreak;
 				say "     'Ah,' the young woman says with a little bit of a sigh, having gotten her hopes up. Then she catches herself and gives you a friendly smile, 'Here I am - starting to mope because my hero doesn't bring me everything I need right away. Silly, hm? Especially since I have so much to be thankful about already.' Leaning in to plant a peck on your cheek, she wags her tail happily as she adds, 'Still... if you got the time to scavenge in the hospital sometime, I'd be forever in your debt.'";

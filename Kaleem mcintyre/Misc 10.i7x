@@ -19,9 +19,7 @@ Instead of resolving a Mysterious Stranger:
 	say "     'Don't worry. It's not dope or anything like that - though something stronger than a gin and tonic might be a necessity in these strange times. Let's just call these little joys...[italic type]stamina boosters[roman type] and leave it like that.' The man chuckles at you from underneath the shade of the black detective hat that he has draped onto his head before picking up his pack and then slinging it over his shoulder. 'Be seeing you around.' And with that the other is gone. Not sure you blink as you watch the other go off about his way before shaking your head as you realize just where you are at the moment.";
 	WaitLineBreak;
 	say "     Pocketing the capsules, you hurry off on your way before anything can come from out of the shadows to try and accost you.";
-	Add "Capsule" to invent of Player;
-	Add "Capsule" to invent of Player;
-	Add "Capsule" to invent of Player;
+	ItemGain Capsule by 3;
 	now Mysterious Stranger is resolved;
 	Increase score by 1;
 
@@ -63,10 +61,9 @@ Instead of resolving a Air Drop:
 	say "     When the hook the container is attached to the hook is suddenly unclasped, probably by means of remote, you watch as the crate sails down and then crashes onto a cleared out area on the ground. Looking back up and watching as the whirlybird heads off in the direction it just came from you hear the screech of a flock of wyvern just before seeing several flying reptiles honing in on the helicopter. When the sounds of gunfire begin to assault the air you whimsically shake your head before heading over to have a look at what exactly the whirlybird just dropped off.";
 	WaitLineBreak;
 	say "     Upon getting to the container you find yourself flipping open the latch holding the doors of the crate closed on a whim and then gasp in awe as you find yourself looking at a plethora of food and water stacked to the brim before you. As your mind goes to wondering about the who, how and why of the situation you find the sounds of people racing into your general position teasing across the end of your field of hearing. Not wanting to be caught by people who probably wouldn't be too thrilled to see you looting their obvious provision you quickly grab what you can and then haul ass before the others can arrive.";
-	Add "food" to invent of Player;
-	Add "food" to invent of Player;
-	Add "water bottle" to invent of Player;
-	Add "water bottle" to invent of Player;
+	ItemGain food by 1;
+	ItemGain food by 1;
+	ItemGain water bottle by 2;
 	now Abandoned Lot is known;
 	now Air Drop is resolved;
 	Increase score by 1;
@@ -171,7 +168,7 @@ When play begins:
 
 Instead of resolving a Free Catch:
 	say "     'Fresh fish!' The words make you pause even as you think how odd they sound given the limited amount of supplies there are here in the city. Turning you search for the area in which the voice had come from you look to find a black furred otter holding up a fish in one of her webbed hands. Thinking that maybe having a little extra variety in today's meal might be good for your stomach you head over to the otter to ask how much. 'There's no charge dear. I'm giving away what I have to those who don't have much. So here,' the otter hands you two fish, 'take these and take care of yourself.' Nodding to the kind mustelid, you smile as you think about how nice some people can be, despite the craziness going on in the city.";
-	increase carried of Tasty Fish by 2;
+	ItemGain Tasty Fish by 2;
 	now Free Catch is resolved;
 
 

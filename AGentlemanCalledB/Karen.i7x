@@ -242,7 +242,7 @@ Instead of resolving a Forgotten Past:
 		say "     As you leave the row of lockers and head back towards safer grounds, you can't help but notice Karen's head held a little higher and an ever-so-slight spring in her step.";
 		say "     (Note - This quest/character is still a work in progress, this is where it ends for now. Sorry! -The author)";
 		now HP of Karen is 8;
-		increase carried of water bottle by 1;
+		ItemGain water bottle by 1;
 		now Forgotten Past is resolved;
 	else:
 		say "     While wandering a secluded hall of the campus, you recall Karen was hoping you would bring her here to search for clues to her past. Perhaps you should return here later with her.";

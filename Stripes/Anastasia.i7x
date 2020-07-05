@@ -129,9 +129,7 @@ instead of resolving FireAndIce:
 	LineBreak;
 	say "     Her eyes seem to glaze over lightly. She looks around as if trying to find your face, but unable to see it. 'Please... Return me to the flames of the earth... Allow me to rise again.' With these words, the life in her eyes fades. You have little time to mourn though as her body suddenly grows searing hot. You drop her on the ground and step back as everything flammable around her starts to ignite; then, she to burst into flames. The fire is intense; even looking at it hurts your eyes, but it isn't long lived. The blaze dies down as quickly as it started, leaving behind a pile of ash.";
 	say "     Curious, you find a stick and poke at the ashes until you feel something hard within them. It takes a few minutes for you to work it out of the ash, but to your surprise, a golden phoenix egg has been left behind. Carefully you pick it up, the shell hot but not enough to burn. You gently put the egg away in your pack as you wonder what you should do with such a legendary ovid. If you want to do as the phoenix asked, you would need to find somewhere exceedingly hot, but if you got to see her again, it might be worth it.";
-	LineBreak;
-	say "[bold type]You received a Phoenix Egg![roman type][line break]";
-	increase carried of phoenix egg by 1;
+	ItemGain phoenix egg by 1;
 	now FireAndIce is resolved;
 	now HP of Anastasia is 3;
 
@@ -177,9 +175,7 @@ instead of going down from Volcanic Crater:
 		move player to Volcanic Cave;
 		if phoenix egg is owned:
 			say "     You look around the cave and its open magma pools, deciding this place certainly meets the requirements. Short of throwing it into the volcanic crater itself, this is probably the hottest spot you'll find. It should also be quite safe down here. There's no reason anything should venture into this infernal cave to disturb it. Unpacking it, you bring the egg to one of the magma pools and, hoping you're doing the right thing, lower the egg onto the semi-solid crust covering it. The soft layer dips and cracks a little, letting some of the lava flow up and pool around the egg. It seems unharmed by this and even appears to have become even more golden and lustrous. You sigh in relief and step away, reminding yourself to return to check on it later. You feel thirsty and drained after your climb and stay down here.";
-			LineBreak;
-			say "[bold type]Phoenix Egg Removed.[roman type][line break]";
-			delete phoenix egg;
+			ItemLoss phoenix egg by 1;
 			now lastfuck of Anastasia is turns;
 			now HP of Anastasia is 4;
 			increase score by 25;

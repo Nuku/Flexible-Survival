@@ -562,7 +562,7 @@ GimpMaskSkip is an action applying to nothing.
 Understand "GiveGimpMask" as GimpMaskSkip.
 
 Carry out GimpMaskSkip:
-	increase carried of gimp mask by 1;
+	ItemGain gimp mask by 1 silently;
 	say "You have the gimp mask. Go submit to a hellfire demon.";
 
 Mogdraz ends here.

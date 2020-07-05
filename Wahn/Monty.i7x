@@ -273,9 +273,7 @@ to say MontyFoodRequest:
 	say "someone of higher rank steps into view, making Monty go stiff and salute, then receive some orders that take him elsewhere in the camp. With an apologetic, 'See you later,' the black soldier is off to do his duty, leaving you alone to wander the last few steps to where you started.";
 	now Hunger of Player is 0;
 	PlayerDrink 25;
-	LineBreak;
-	say "[bold type]You gain 1 food![roman type][line break]";
-	increase carried of food by 1;
+	ItemGain food by 1;
 	now MontyFoodTimer is turns;
 
 to say MontyDrinkRequest:
@@ -285,9 +283,7 @@ to say MontyDrinkRequest:
 		PlayerDrink 25;
 	else:
 		say "Packing the bottle of water away carefully, you're watched by the black soldier, who shakes his head and comments, 'Man, kinda feels like being in a third world country, doesn't it? Not being able to have access to safe water and all of that.' He grimaces, perturbed by the thought, and leads you back to where you started.";
-		LineBreak;
-		say "[bold type]You gain 1 water bottle![roman type][line break]";
-		increase carried of water bottle by 1;
+		ItemGain water bottle by 1;
 	now MontyDrinkTimer is turns;
 
 to say MontyTalk1: [chatting]

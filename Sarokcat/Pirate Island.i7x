@@ -82,8 +82,7 @@ carry out treasurehunt:
 					stop the action;
 				if T is 2:
 					say "     Walking through the dark and damp caves, you hear a soft trickling noise from one of the nearby alcoves, deciding to investigate you find a small stream trickling up from a crack in the wall. Taking a look at the small spring you find the water is both crisp and clear, and decide to gather some of it up to take with you. You continue exploring through the caves, but eventually find they twist and turn back on each other, and you end up back on the beach.[line break]";
-					say "[bold type]You gain 1 water bottle![roman type][line break]";
-					increase carried of water bottle by 1;
+					ItemGain water bottle by 1;
 					stop the action;
 				if T is 3:
 					say "     Walking through the caves, you find yourself starting to jog a bit, and then a bit more, as you move along the long cave, always following the left passage when it appears in an attempt to solve the maze of passages within. After some time you begin to tire, but there is no end to the cave in sight, as you move in the dim light you realize your surrounding seem increasingly familiar even as you continue to jog along. Finally in frustration you take a right turn instead of a left turn, and almost immediately shoot back out onto the beach from the cave you entered from, with an embarrassed glance behind you, you realize the left part of that cave looped in a large circle, and you have been running around it for hours. You sigh as you plop down on the beach to rest for a minute, still you do feel slightly more dexterous from all that jogging you find yourself thinking, as you let the waves lap at your body.[line break]";
@@ -99,16 +98,12 @@ carry out treasurehunt:
 					choose row minortreasure from the Table of Random Critters;
 					if there is a loot entry:
 						if loot entry is not " " and loot entry is not "journal":
-							say "[bold type]You acquired 1 [loot entry].[roman type][line break]";
-							add loot entry to invent of Player;
-							say "[bold type]You acquired 1 dirty water![roman type][line break]";
-							increase carried of dirty water by 1;
+							ItemGain loot entry by 1;
+							ItemGain dirty water by 1;
 						else:
-							say "[bold type]You acquired 1 pirate bandana![roman type][line break]";
-							increase carried of pirate bandana by 1;
+							ItemGain pirate bandana by 1;
 					else:
-						say "[bold type]You acquired some seafood![roman type][line break]";
-						increase carried of food by 1;
+						ItemGain food by 1;
 					stop the action;
 				if T is 6:
 					say "     Traveling through the caves, you come across a large open cave with light filtering in from above. As you look in the cave, a glint of light catches on something shiny in a small pool towards the rear of the cave. Thinking it might be the treasure, you quickly hurry over to take a look, only to realize your mistake when you hear a roar from behind you. The cave seems to be a Sea Dragon's lair!";
@@ -132,30 +127,22 @@ carry out treasurehunt:
 					choose row minortreasure from the Table of Random Critters;
 					if there is a loot entry:
 						if loot entry is not " " and loot entry is not "journal":
-							add loot entry to invent of Player;
-							say "You acquired 1 [loot entry].";
-							increase carried of dirty water by 1;
-							say "You acquired some dirty water!";
+							ItemGain loot entry by 1;
+							ItemGain dirty water by 1;
 						else:
-							increase carried of pirate bandana by 1;
-							say "You acquired a pirate bandana!";
+							ItemGain pirate bandana by 1;
 					else:
-						increase carried of food by 1;
-						say "You acquired some seafood!";
+						ItemGain food by 1;
 					let minortreasure be a random number from 1 to number of filled rows in the Table of Random Critters;
 					choose row minortreasure from the Table of Random Critters;
 					if there is a loot entry:
 						if loot entry is not " " and loot entry is not "journal":
-							add loot entry to invent of Player;
-							say "You acquired 1 [loot entry].";
-							increase carried of dirty water by 1;
-							say "You acquired some dirty water!";
+							ItemGain loot entry by 1;
+							ItemGain dirty water by 1;
 						else:
-							increase carried of pirate bandana by 1;
-							say "You acquired a pirate bandana!";
+							ItemGain pirate bandana by 1;
 					else:
-						increase carried of food by 1;
-						say "You acquired some seafood!";
+						ItemGain food by 1;
 					stop the action;
 				if T is 8:
 					say "     Hunting through the dark and dreary caves, you begin to wonder if you will ever find the treasure that is supposedly to be hidden in this place, sighing you continue your long journey through the caves, only to come across a cave exit that leads to a secluded pool on the interior of the island. Looking around you realize this place is absolutely beautiful, and seems to speak to something deep down inside you. Deciding not to worry about treasure for a time, you spend some time basking in the beautiful light as you watch it shine off the pool, and drinking your fill of the gloriously clear water. Eventually you get back up to leave, feeling much happier after your visit to the nice pool.";

@@ -504,9 +504,7 @@ instead of resolving Cheetah Trade:
 		else: [not edited yet]
 			say "     Shuffling up to the cat whose ass is raised for fucking, you get on your knees, level with her muscular feline ass. Not having equipment for fucking the cat, you nevertheless step up to the challenge to earn her 'toy'. You run your hands over her soft, furry ass and she lets out a slightly impatient growl, pushing her ass toward you. Her winking cat cunt mushes against your lips, and as you taste the heat of a feline predator, you can't help but simply dive in. You plunge your hungry tongue in as deep as it will go into her soaked sex. She responds lustfully, meowing heavily and gushing fem cum on your face. Seemed like a mini orgasm for her.";
 			say "     Licking your lips of her salty, addicting flavor, you dive back in, running your hands over her ass and caressing it gently as you eat out her dripping, heated sex. You thumb into her asshole and nibble on her outer lips while she mewls at your efforts. When you push your face forward and thumb deeper into her tight ass again, she breaks down. Her limbs go limp and she collapses, spraying feline fem cum all over your face and growling loudly before it comes to a stop. Soon she's just breathing heavily beneath your hands and seemingly dazed from her orgasm. Licking off your lips again and smiling, you give her ass a smack and collect what you had rightfully earned, then head out of the habitat.";
-		LineBreak;
-		say "[bold type]You gain a medkit![roman type][line break]";
-		increase carried of medkit by 1;
+		ItemGain medkit by 1;
 		now Resolution of Cheetah Trade is 1; [sexually satisfied the cheetah and got a medkit]
 	else:
 		LineBreak;

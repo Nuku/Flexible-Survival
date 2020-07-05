@@ -619,7 +619,7 @@ Instead of resolving a Bird Troubles:
 		now NadiaChar-L is "0";
 		now NadiaChar-M is "0";
 		[Testing Fertile Pills]
-		[increase carried of fertile pill by 50;]
+		[ItemGain fertile pill by 50;]
 		now Resolution of Bird Troubles is 1; [recruited Nadia]
 	else:
 		LineBreak;
@@ -694,7 +694,7 @@ instead of trading the fertile pill when the current action involves the Nadia: 
 	if Player consents:
 		LineBreak;
 		say "     Chirping with delight, Nadia grabs the fertile pill out of the air with her talons as you toss it to her. You're worried that she might devour it as-is, but she easily rips apart the foil package and tosses it aside before popping the pill into her beak and swallowing. Crooning softly, the broody bird settles back into her nest to wait for it to work, and work it does.";
-		decrease carried of fertile pill by 1;
+		ItemLoss fertile pill by 1;
 		if NadiaPregCounter1 is 0:[not pregnant yet]
 			say "     Slowly, Nadia begins to moan softly as a gentle warmth gathers in her lower belly and begins to spread out to the rest of her body. Unable to control herself, the bird of paradise rubs her breasts as they grow bigger and firmer, milk glands and ducts within developing to better feed future chicks she will bear. The rest of her body is not forgotten - her hips widen a little, the bone structure shifting to better allow eggs through. Not to be left out, her pussy grows wet as it becomes more prominent, her thickening lips advertising her newfound boost in fertility.";
 			say "     The transformation complete, Nadia sinks back into her nest with a contented sigh with her wings splayed out. She looks happier, her body more motherly and elegant, the myriad colors on her body more vibrant. A good time for her to be bred, in fact, and she looks eager enough.";
@@ -780,7 +780,7 @@ instead of going up from Grey Abbey Library while (Nadia is in Garden View and N
 	say "     Indeed, it's hard to deny that Nadia has changed drastically since coming to the library, both in outlook and body, and she spends the next few moments snuggling her petite form up against you, her warm feathers leaving behind much of her floral scent as they brush against you. She says nothing, closing her eyes and making small, happy noises in the back of her throat, content to just lie about and feel warm. Drawn by their mother's maternal crooning, some of Nadia's younger chicks join in the cuddle as well, and there's space enough for all of them as she takes each and every one into her embrace.";
 	WaitLineBreak;
 	say "     It's a little while later that you wake up and slowly disentangle yourself from the warm cocoon of fluff, careful not to wake any of Nadia's sleeping chicks gathered all around her as you gather up the cloak in your arms. Nadia herself is fast asleep with her youngest chick in her arms, doing what she does best, surrounded by everyone and everything she loves, a warm, happy mother goddess to her enormous brood.";
-	increase carried of feathered cloak by 1;
+	ItemGain feathered cloak by 1 silently;
 	now HP of Nadia is 5;
 
 instead of navigating Grey Abbey Library while (Nadia is in Garden View and NadiaChickCounter > 1 and NadiaChar-J is "0"):
@@ -804,8 +804,7 @@ instead of navigating Grey Abbey Library while (NadiaChar-J is "1" and (GreenTum
 	say "     Gently, you urge Nadia to set down the trowel and gather up her petite form in a warm hug. Nadia cheeps as she snuggles against you, enjoying the warmth and feel of your body, then reluctantly pulls away. 'Mm, that felt nice. It's odd,' Nadia says, fluffing her feathers. 'Ever since becoming a pretty bird, I can't taste anything spicy. Just tried a few of the chili peppers, and they just tasted sweet. Strange, right? But I suppose it's nothing to get too worried about - if I started worrying about that, I'd have to start worrying about this.' She runs her talons over the firm curves of her avian body. 'But enough about me. Let me help you with that...'";
 	WaitLineBreak;
 	say "     That said, Nadia calls over one of her chicks and presses an armful of fresh veggies into your hands. 'I'm not exactly a big fan of raw vegetables, but it's not as if there's a stove in here, is there? In any case, do enjoy the fruits of the harvest. There's more than enough for everyone.' She giggles a little at some private joke, then gives you a wave before turning back to her work.";
-	say "     ([bold type]3 food gained[roman type])";
-	increase carried of food by 3;
+	ItemGain food by 3;
 	now NadiaChar-J is "2";
 
 instead of navigating Grey Abbey Library while (Nadia is in Garden View and NadiaDescription > 3 and NadiaChickCounter > 9 and NadiaChar-J is "2"):

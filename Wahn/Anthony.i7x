@@ -179,7 +179,7 @@ to say AnthonyTalk2: [helping]
 			if Player consents:
 				LineBreak;
 				say "     Calmly waiting for him, you accept a carrying bag of fresh fruit and thank Anthony.";
-				increase carried of food by 4;
+				ItemGain food by 4;
 			else:
 				LineBreak;
 				say "     [AnthonyRewardSex]";
@@ -224,11 +224,11 @@ instead of going northwest from Central Farm Square while (HP of Anthony is 0 or
 		say "     Entering the farmhouse, you find yourself in a large main room that combines the living and dining area. Sitting on a leather couch in the front part of the room, leaning forward to write on a notebook on the coffee table next to it, you see a lean, humanoid anteater. The young man stands up as he notices you, walking over to you and offering you his clawed hand in greeting. After introducing himself as Anthony McDermott, owner of the farm, he smiles and continues with 'Nice to see that not everyone out there has devolved into horny beasts. You're welcome to stay here with us for a while, if you want, though we can't offer any food or water, I hope you understand.'";
 		LineBreak;
 		say "     Nodding, you bring up the cow you found and led back to the farm. A visibly relieved Anthony puts his long arms around you, giving you an exuberant hug. Realizing a moment later that you don't really know him and might not like this, he lets you go, giving you a clap in camaraderie on the shoulder instead. 'Thank you, thank you. I had feared she'd just be lost out there, alone, maybe eaten. That's a big worry of my mind. Here, let me give you a reward for your efforts.' With that, the anthro anteater walks over into the kitchen, packing a carrying bag with fresh fruit for you, then handing it over with a smile.";
-		increase carried of food by 4;
+		ItemGain food by 4;
 		now HP of Anthony is 4;
 	else if HP of Anthony is 3: [met the player before]
 		say "     Entering the main room of the farmhouse, you walk up to Anthony and tell him about the cow you found and led back to the farm. Visibly relieved, he puts his long arms around you, giving you an exuberant hug. Realizing a moment later that you don't really know him all that well and might not like this, he lets you go, giving you a clap in camaraderie on the shoulder instead. 'Thank you, thank you. I had feared she'd just be lost out there, alone, maybe eaten. That's a big worry off my mind. Here, let me give you a reward for your efforts.' With that, the anthro anteater walks over into the kitchen, packing a carrying bag with fresh fruit for you, then handing it over with a smile.";
-		increase carried of food by 4;
+		ItemGain food by 4;
 		now HP of Anthony is 4;
 	else if HP of Anthony is 4 and HP of Duke > 9:
 		say "     Entering the main room of the farmhouse, you walk up to Anthony and tell him about Shawn's transformation from feral sheep to a more human form. Very happy to hear about that, he gives you a beaming smile and claps you on the shoulder in camaraderie. 'Thank you, thank you. I'm glad you could help them. It'd have been terrible if Duke lost his boyfriend forever to these damned nanites. Let me give you a reward for your help.' With that, the anthro anteater starts turning to go into the kitchen and grab another tasty treat for you.";
@@ -240,7 +240,7 @@ instead of going northwest from Central Farm Square while (HP of Anthony is 0 or
 		if Player consents:
 			LineBreak;
 			say "     Calmly waiting for him, you accept a carrying bag of fresh fruit and thank Anthony.";
-			increase carried of food by 4;
+			ItemGain food by 4;
 		else:
 			LineBreak;
 			say "[AnthonyRewardSex]";
@@ -256,7 +256,7 @@ instead of going northwest from Central Farm Square while (HP of Anthony is 0 or
 			if Player consents:
 				LineBreak;
 				say "     Calmly waiting for him, you accept a carrying bag of fresh fruit and thank Anthony.";
-				increase carried of food by 4;
+				ItemGain food by 4;
 			else:
 				LineBreak;
 				say "[AnthonyRewardSex]";
@@ -265,7 +265,7 @@ instead of going northwest from Central Farm Square while (HP of Anthony is 0 or
 			move player to Central Farm Square;
 		else if FinnTrackingProgress is 100: [Finn joined the stables]
 			say "     Entering the main room of the farmhouse, you walk up to Anthony and tell him about Finn's abduction by the horsemen and the fact that he joined their numbers in the end. The friendly anteater is visibly deflated at such news and gives a deep sigh. 'I - um, I hope he'll be happy there. Thank you for at least the knowledge what happened to him. I'll get you some food.' With that, the anthro anteater trots over to the kitchen and soon hands you a small bag with fresh fruit.";
-			increase carried of food by 2;
+			ItemGain food by 2;
 		now HP of Anthony is 7;
 		if "Farm Quests" is listed in OpenQuests of Player:
 			remove "Farm Quests" from OpenQuests of Player;

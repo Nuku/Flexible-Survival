@@ -77,8 +77,8 @@ to say borisquestforcock:
 		say "     Sadly, you again relate to Boris your total lack of success in his quest to be complete, and he gives a sad sigh. 'Knew it couldn't be just that easy, now could it? Well, maybe you will find another stash around out there somewhere, or maybe there is someplace else in town you could find something like that? We only need to find me one, after all. It shouldn't be TOO hard in a city this size. Maybe try exploring in the seedier parts of town?'";
 	else if borisquest is 4:
 		say "     His eyes goes wide as he looks at the size of the toy you brought him. 'Wow!' Boris says as he takes it from you reverentially. 'This is for me? This is great!' he says as he turns it over in his hands. 'Feline style, too! And god I only wish I used to be hung like that!' Boris turns to you with a large grin. 'I have to go try this on right away! It might take a while before it's ready to go, but come back later and we can see how it went!' Boris says as he starts to turn away, then stops. 'Oh, I almost forgot. I got you a couple things for helping me out like this,' he says as he gestures to a small package sitting next to the ticket booth. Before you can thank him, he runs off with his new acquisition into one of the restrooms. Soon you can hear his sharp growls and moans coming from the restroom while he obviously begins fitting his new member, though it's hard to tell whether the sounds are of pain or pleasure.";
-		increase carried of food by 2;
-		increase carried of water bottle by 2;
+		ItemGain food by 2;
+		ItemGain water bottle by 2;
 		increase borisquest by 1;
 		increase boristalk by 1;
 		now lastfuck of Boris is turns;
@@ -200,16 +200,10 @@ carry out gameplay:
 			choose row prizegift from the Table of Random Critters;
 			if there is a loot entry:
 				if loot entry is not "":
-					add loot entry to invent of Player;
-					say "You acquired 1 [loot entry].";
-					increase carried of dirty water by 1;
-					say "You acquired some dirty water!";
-				else:
-					increase carried of dirty water by 1;
-					say "You acquired some dirty water!";
+					ItemGain loot entry by 1;
+				ItemGain dirty water by 1;
 			else:
-				increase carried of food by 1;
-				say "You acquired some carnival food!";
+				ItemGain food by 1;
 		else:
 			say "The game buzzes at you derisively as you lower your plastic weapon in defeat. The evil cardboard and plastic menaces will apparently live to see another day, although you resolve to come back and try again later as you walk away.";
 

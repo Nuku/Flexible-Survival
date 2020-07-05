@@ -202,14 +202,10 @@ to CollectBlakePayout:
 	if debugactive is 1:
 		say "     DEBUG: Hunger of Blake: [Hunger of Blake], Thirst of Blake: [Thirst of Blake][line break]";
 	if Hunger of Blake > 0:
-		LineBreak;
-		say "[bold type]You gain [Hunger of Blake] food![roman type][line break]";
-		increase carried of food by Hunger of Blake;
+		ItemGain food by Hunger of Blake;
 		now Hunger of Blake is 0;
 	if Thirst of Blake > 0:
-		LineBreak;
-		say "[bold type]You gain [Thirst of Blake] water bottles![roman type][line break]";
-		increase carried of water bottle by Thirst of Blake;
+		ItemGain water bottle by Thirst of Blake;
 		now Thirst of Blake is 0;
 
 [***********************************************************]
