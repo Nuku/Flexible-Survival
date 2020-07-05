@@ -357,11 +357,9 @@ to say MoreauSalePaymentOptions:
 	if calcnumber is 1 or calcnumber is 2:
 		LineBreak;
 		if calcnumber is 1:
-			say "     You gain food!";
-			increase carried of food by 1;
+			ItemGain food by 1;
 		else:
-			say "     You gain a water bottle!";
-			increase carried of water bottle by 1;
+			ItemGain water bottle by 1;
 		say "     You accept the [if calcnumber is 1]food[else]water[end if] from Moreau, then allow him to guide you over to the 'changing rooms' - the name now having a whole new dimension, now that you think of it. He calls another mannequin to join you, one still with its 'original' appearance in the part that you want to sell. 'Please step in and bare the needed area please,' the naga tells you in a friendly manner, then adds, 'And do not worry, I control my staff quite closely. It will only take what you sold.' Following his slight shooing motion, you follow the mannequin into the cabin and await what comes next.";
 		LineBreak;
 		now MoreauPaymentAccepted is true;
@@ -1025,15 +1023,15 @@ to say MoreauBuyPaymentOptions:
 			if calcnumber is 1:
 				say "     You pull the backpack off your back and hand over the food to a quickly called-over mannequin. ";
 				if MoreauDiscount is true:
-					decrease carried of food by 4;
+					ItemLoss food by 1;
 				else:
-					decrease carried of food by 5;
+					ItemLoss food by 1;
 			else:
 				say "     You pull the backpack off your back and hand over the water bottles to a quickly called-over mannequin. ";
 				if MoreauDiscount is true:
-					decrease carried of water bottle by 4;
+					ItemLoss water bottle by 1;
 				else:
-					decrease carried of water bottle by 5;
+					ItemLoss water bottle by 1;
 			say "After the living doll has accepted the [if calcnumber is 1]food[else]water[end if] from you, the snake guides you over to the 'changing rooms' - the name now having a whole new dimension, now that you think of it. He calls your chosen mannequin to join you, bearing the body part you were so interested in and showing it off a little more. 'Please step in and bare the needed area please,' the naga tells you in a friendly manner, then adds, 'And do not worry, I control my staff quite closely. It will only exchange the part that you bought.' Following his slight shooing motion, you follow the mannequin into the cabin and await what comes next.";
 			LineBreak;
 			now MoreauPaymentAccepted is true;
@@ -1049,9 +1047,9 @@ to say MoreauBuyPaymentOptions:
 			LineBreak;
 			say "     You pull the backpack off your back and hand over the food to a quickly called-over mannequin. ";
 			if MoreauDiscount is true:
-				decrease carried of food by 4;
+				ItemLoss food by 1;
 			else:
-				decrease carried of food by 5;
+				ItemLoss food by 1;
 			say "After the living doll has accepted the food from you, the snake guides you over to the 'changing rooms' - the name now having a whole new dimension, now that you think of it. He calls your chosen mannequin to join you, bearing the body part you were so interested in and showing it off a little more. 'Please step in and bare the needed area please,' the naga tells you in a friendly manner, then adds, 'And do not worry, I control my staff quite closely. It will only exchange the part that you bought.' Following his slight shooing motion, you follow the mannequin into the cabin and await what comes next.";
 			LineBreak;
 			now MoreauPaymentAccepted is true;
@@ -1067,9 +1065,9 @@ to say MoreauBuyPaymentOptions:
 			LineBreak;
 			say "     You pull the backpack off your back and hand over the water bottle to a quickly called-over mannequin. ";
 			if MoreauDiscount is true:
-				decrease carried of water bottle by 4;
+				ItemLoss water bottle by 1;
 			else:
-				decrease carried of water bottle by 5;
+				ItemLoss water bottle by 1;
 			say "After the living doll has accepted the water from you, the snake guides you over to the 'changing rooms' - the name now having a whole new dimension, now that you think of it. He calls your chosen mannequin to join you, bearing the body part you were so interested in and showing it off a little more. 'Please step in and bare the needed area please,' the naga tells you in a friendly manner, then adds, 'And do not worry, I control my staff quite closely. It will only exchange the part that you bought.' Following his slight shooing motion, you follow the mannequin into the cabin and await what comes next.";
 			LineBreak;
 			now MoreauPaymentAccepted is true;
@@ -1211,8 +1209,7 @@ to BodyChoiceDilemmaEvent:
 		say "     'Well, a satisfied client always makes for a good day!' the reptile declares with an enthusiastic clap of hands. 'And for your help, as well as for making you wait, it is only normal I give you a little something in return,' the naga declares as he reaches the pile of food cans, taking one and passing it to you. 'Everybody should profit from good business', he concludes with a smile. For a moment, he seems pensive, then asks 'I don't actually look like an alligator, do I?' with worried eyes. You assure the shop keeper that he looks like a naga and nothing else, which seems to reassure him enough.";
 		now Resolution of Body Choice Dilemma is 3; [suggested herm]
 	LineBreak;
-	say "[bold type]You gain 1 food![roman type][line break]";
-	increase carried of food by 1;
+	ItemGain food by 1;
 	now lastBodyShopEvent is turns;
 	now Body Choice Dilemma is resolved;
 

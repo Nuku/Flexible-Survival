@@ -143,10 +143,10 @@ to DemonicItemGet:
 	if randomnumber is:
 		-- 1:
 			say "     After some time, you manage to get your hands on a bottle of [bold type]Demon Seed[roman type]. Either they don't see any use for this kind of thing anymore, or the demons are really into storing their own stuff in bottles and release them into the surface world, hoping some rather bizarre creature or person would drink this. It smells really sweet, and it does have an odd color, flowing strangely inside at a very warm temperature. Still, you decide to tuck it away in your inventory and call this search done, as there's little left that you haven't rummaged through already.";
-			increase carried of demon seed by 1;
+			ItemGain demon seed by 1 silently;
 		-- 2:
 			say "     After some time, you manage to get your hands on a strange pill box in the middle of more trash. Sadly, it's mostly empty, with only one [bold type]Libido Pill[roman type] left. You recall this to be some sort of sex enhancement drug, used to significantly boost the recipient's libido. Doesn't take a genius mind to know why the demons would be so interested in such a thing, provided the ways they find to dominate their enemies. Without giving it much though, you tuck it away in your inventory and call this search done, as there's little left that you haven't rummaged through already.";
-			increase carried of libido pill by 1;
+			ItemGain libido pill by 1 silently;
 		-- 3:
 			say "     Sadly, your efforts are in vain. There's nothing of use that you can bring with you. Your only option is to hope for another chance at catching the imp and have another go at the next trash pile he makes.";
 	now LastTrashSearchTurn is turns;
@@ -1757,7 +1757,7 @@ Carry out SkipToXaedihr:
 	say "     He is also a pet.";
 	now resolution of Hellish Trashpile is 3;
 	add "Demonic Ritual Tape" to tapes of Player;
-	increase carried of ancient tome by 1;
+	ItemGain ancient tome by 1 silently;
 	now resolution of Hell Realm is 4;
 	now Strange Sorcerer is resolved;
 	say "     Hell Realm resolved as if player had destroyed the Grid. Ancient Tome is also in your possession now.";

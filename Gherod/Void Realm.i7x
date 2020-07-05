@@ -114,7 +114,7 @@ instead of resolving To The Unknown:
 		say "     Reality seems pointless, the air around you is heavy, your body refuses to move, and then you can't breathe. But at the same time, there you are, alive, your heart beating, your senses in overdrive, but your brain seems incapable of understanding its surroundings. There is a hiss echoing through, and that is when you see a gigantic scaly body of a snake, passing right by you and through the buildings like a slowly moving train, seemingly endless. Your heart stops at that moment, facing the imminent danger, and it is a feeling you cannot control. You feel powerless, disarmed and tiny, as the serpent makes its way unhindered by any obstacles that prove to be nothing for its titanic dimensions.";
 		WaitLineBreak;
 		say "     Suddenly, it all stops. You return to the streets of Red Light District, safe and sound, in the same spot as you were before. Though something comes rolling towards your feet. A very black sort of shiny rock, it seems, though it seems to slightly change its color when you touch it. Possibly a chemical reaction to your skin or from the pressure when you hold it in your hands, however that only makes this object more mysterious.";
-		increase carried of null essence by 1;
+		ItemGain null essence by 1 silently;
 		say "     You have obtained a [bold type]Null Essence[roman type] and placed it in your inventory.";
 		WaitLineBreak;
 		if companion of player is demonologist or Xaedihr is in Grey Abbey Library:
@@ -453,7 +453,7 @@ to say VRLeave:
 	now VRPlayerFacing is 99;
 	if a random chance of 1 in 4 succeeds:
 		say "     A single piece of pitch black rock falls to your feet once you regain control of your senses. You have obtained a [bold type]null essence[roman type] and placed it in your inventory.";
-		increase carried of null essence by 1;
+		ItemGain null essence by 1 silently;
 	now inasituation is false;
 	stop the action;
 
@@ -644,7 +644,7 @@ to say VRGatewayToFreedom:
 		say "     Now as you open your eyes, you find yourself in one of the streets of Red Light District, disoriented for a brief moment before all your senses return. It seems that you're safely back to your homeworld, which despite having been severely punished by the apocalypse, it isn't as desperate and dark as the Void... In fact, this is so relieving that you feel your mental state completely reinvigorated. Could it be the light that bathed you?";
 		if a random chance of 1 in 2 succeeds:
 			say "     And also, it looks like you've got a single [bold type]null essence[roman type] from it. That doesn't seem to happen everytime.";
-			increase carried of null essence by 1;
+			ItemGain null essence by 1 silently;
 		SanBoost 100;
 		WaitLineBreak;
 		say "[VRLeave]";
@@ -700,19 +700,19 @@ to say VREssenceSwarm:
 		if randomnumber is:
 			-- 2:
 				say "     It looks like you were able to gather [bold type]2 null essences[roman type] just now. Given how rare these seem to be, that looks like a good number.";
-				increase carried of null essence by 2;
+				ItemGain null essence by 2 silently;
 			-- 3:
 				say "     It looks like you were able to gather [bold type]3 null essences[roman type] just now. Given how rare these seem to be, that looks like a great number.";
-				increase carried of null essence by 3;
+				ItemGain null essence by 3 silently;
 			-- 4:
 				say "     It looks like you were able to gather a whooping [bold type]4 null essences[roman type] just now. Given how rare these seem to be, that looks like an excellent number.";
-				increase carried of null essence by 3;
+				ItemGain null essence by 3 silently;
 			-- 5:
 				say "     It looks like you were able to gather an enormous cluster of exactly [bold type]5 null essences[roman type] in total, just now! Given how rare these seem to be, finding a bunch of them like this seems too good to be true...";
-				increase carried of null essence by 5;
+				ItemGain null essence by 5 silently;
 	else:
 		say "     It looks like you were able to gather [bold type]1 null essence[roman type] just now. Well, that's one more for the collection, and you're immediately back on your way.";
-		increase carried of null essence by 1;
+		ItemGain null essence by 1 silently;
 	WaitLineBreak;
 	say "[VRMoveOptions]";
 
@@ -1058,13 +1058,13 @@ to say VRVoidFireflies:
 			if randomnumber is:
 				-- 1:
 					say "     With your best efforts, it looks like you were able to grab one of the lights, which immediately stops shining and turns into [bold type]1 null essence[roman type] in your hands.";
-					increase carried of null essence by 1;
+					ItemGain null essence by 1 silently;
 				-- 2:
 					say "     With your best efforts, it looks like you were able to grab one of the lights, which immediately stops shining and turns into [bold type]2 null essences[roman type] in your hands.";
-					increase carried of null essence by 2;
+					ItemGain null essence by 2 silently;
 				-- 3:
 					say "     With your best efforts, it looks like you were able to grab one of the lights, which immediately stops shining and turns into [bold type]3 null essences[roman type] in your hands.";
-					increase carried of null essence by 3;
+					ItemGain null essence by 3 silently;
 		else:
 			say "     Unfortunately, despite your best efforts, the fireflies move too quickly for you to be able to catch any of them. They fly right through your fingers, or are simply out of your reach.";
 		WaitLineBreak;
@@ -1468,7 +1468,7 @@ to VRVoidSerpentFightConclusion:
 	if fightoutcome < 20: [player won]
 		say "     It was a tough fight, but you managed to emerge victorious by dealing the final blow to the Void Serpent, who collapses on the dark floor seemingly lifeless before you. With nothing else to do but to admire your prowess, you look around for some spoils.";
 		say "     There is, at least, [bold type]a pair of null essences[roman type] that you manage to gather from the defeated snake.";
-		increase carried of null essence by 2;
+		ItemGain null essence by 2 silently;
 		now VRVoidSerpentTracker is 0;
 		WaitLineBreak;
 		say "[VRMoveOptions]";
@@ -1520,7 +1520,7 @@ to VRDarkTyrantFightConclusion:
 		say "     You cannot help but stare at it, having your own questions, thoughts and doubts about this striking you momentarily. All that remains of the Dark Tyrant is an absurd quantity of null essence that you could gather. But there is still an odd remorse at the back of your head. Why is that...?";
 		WaitLineBreak;
 		say "     You have obtained [bold type]50 null essences[roman type], stashing them all in your inventory. It's a heavy bunch, you might want to drop these somewhere...";
-		increase carried of null essence by 50;
+		ItemGain null essence by 50 silently;
 		now VRDarkTyrantTracker is -99; [he's gone, for good]
 		WaitLineBreak;
 		say "[VRMoveOptions]";
@@ -1572,7 +1572,7 @@ to VRTentacleAbominationFightConclusion:
 		say "     Besides, you have also saved yourself from being thoroughly raped and consumed by one of the most hedious beasts of the empty space.";
 		if a random chance of 2 in 3 succeeds:
 			say "     It looks like the Tentacle Abomination dropped a single [bold type]Null Essence[roman type], so you pick it up and stash it in your inventory.";
-			increase carried of null essence by 1;
+			ItemGain null essence by 1 silently;
 	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "     No matter how much you struggle against the massive cluster of tentacles, it only grows stronger by the second you are fighting it, providing you with quite the challenge. Although, a few more strikes are you're barely capable of moving, having the tentacles finally reach you and immobilize you in place. All you see now is yourself being dragged through the floor as more of the abomination's extensions wrap themselves around your body...";
 		WaitLineBreak;
@@ -1692,7 +1692,7 @@ the usedesc of loose tentacle is "[loose tentacle use]";
 
 to say loose tentacle use:
 	say "     You try to think of a way to use it, but honestly, you really can't figure out any. Perhaps someone else would?";
-	increase carried of loose tentacle by 1;
+	ItemGain loose tentacle by 1 silently;
 
 instead of sniffing loose tentacle:
 	say "This thing suprisingly does not smell like the void, but it's an odd scent. One that you would find only after a massive orgy, reeking of sex and sweat.";
@@ -2367,8 +2367,8 @@ CreateNullEssences is an action applying to nothing.
 Understand "GetNE" as CreateNullEssences.
 
 Carry out CreateNullEssences:
-	increase carried of null essence by 100;
-	increase carried of sharp black tusk by 1;
+	ItemGain null essence by 100 silently;
+	ItemGain sharp black tusk by 1 silently;
 	say "     100 null essences added to your inventory.";
 	say "     Have a tusk, too.";
 

@@ -124,8 +124,7 @@ Instead of resolving Urban Cliff:
 				WaitLineBreak;
 				say "     She takes a moment to look over your gift before looking back at you, expression slightly softer. '...Thanks, I guess, not too many people would let someone who attacked them walk only to come back with a gift.' She shifts uncomfortably. 'S-still not just gonna bend over for you like half the freakin['] sluts in the city would but... yeah, thanks,' she finishes, starting to back up into her cave. Before she goes you hear her call back 'Ruby by the way. May as well as know my name if you're gonna come by and pester me. Your about to call out and ask her something else but you figure for now it's best to wait, she has something to mull over and think about. You look on into the cave curiously but eventually you turn around, maybe she'll be more amicable next time you talk. You think heading away from the rock face and back to where you came down from.";
 				LineBreak;
-				say "[bold type]You lose 1 food![roman type][line break]";
-				decrease carried of food by 1;
+				ItemLoss food by 1;
 				now Resolution of Urban Cliff is 2; [food delivered]
 			if calcnumber is 2:
 				LineBreak;

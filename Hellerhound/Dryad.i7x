@@ -35,17 +35,17 @@ To say dryad defeat:
 				say "     ([link]N[as]n[end link]) - Don't resist the dryad, letting her dominate you";
 				if Player consents:
 					say "     Straining your muscles against the vines with the use of a tight flex, you are able to break free from their hold. The dryad, sits in shock and fear beneath you, offering little resistance on her part as you place your hands upon her slender hips. Turning her around, so her ass faces towards you, you line your cock up with the syrupy folds of her now leaking snatch. It is obvious, that despite that fact that the dryad is not used to defeat, she seems to be enjoying it. With a pleased smirk, you fully reinstate your dominance over the woman, thrusting your cock balls deep inside of her. Half expecting another vine like assault, your muscles tense in preparation. But another assault doesn't come. Instead, the dryad moans whorishly in pleasure beneath you. 'Oh yes!' she shouts at the top of her lungs. 'Who knew morals could... umph!' You smirk as a soul-crushing orgasm leaves the dryad unable to finish her previous sentence. Her pussy clenching your shaft tightly, her eyes roll to the back of her head, becoming lidded with a powerful, submissive lust. Responding to that lust, you fuck the dryad with an eager, and undeniable but animalistic vigor. Between the tightness of the dryads cunt, and the sheer sexiness that comes from that fact that you have dominated such a powerful woman, it isn't long before you find yourself burying your load deep inside of her. Feeling you shoot powerful spurts of cum into her pussy, the dryad orgasms once more, before falling exhausted to the ground before you. Tired yourself, you make sure all you items are in order, before taking out an empty bottle from your pack, and filling it to the brink with some of the dryad's cum. After all, who knows when something like that may ever come in handy...";
-					increase carried of dryad cum by 1;
+					ItemGain dryad cum by 1;
 					infect "Dryad";
 				else:
 					say "     Deciding to give the dryad the dominance over you she so obviously wants to exercise, you relax your previously tense muscles, falling limp within her grasp. Feeling confident you can regain control of the situation, if anything bad were to occur, you eagerly look forward to taking whatever she has in store for you. The dryad, just as eager as you, sees to it that every inch of your [Cock of Player] cock is played with, and it doesn't take long before you are spraying your load inside of her. When you finish, she places the nipple of one of her large breasts at your mouth, and with a dulled mind, you begin to suckle as she says, 'That's good, have a drink.'";
 					say "     The warm milk soothes some of the pain from the rough session, and you are almost disappointed when the dryad pushes you away. As you collapse onto the ground, the dryad walks away, the tree disguise forming once more. As you clean yourself off, you manage to collect some of the dryad's cum, placing it in an empty water bottle.";
-					increase carried of dryad cum by 1;
+					ItemGain dryad cum by 1;
 					infect "Dryad";
 			else:
 				say "     The dryad's vines rendering you unmovable in their grasp, you are forced to sit and helplessly take whatever she has in store for you. The dryad, eagerly making use of her recently caught 'Prize', sees to it, that every inch of your [Cock of Player] cock is played with, and it doesn't take long before you are spraying your load inside of her. When you finish, she places the nipple of one of her large breasts at your mouth, and with a dulled mind, you begin to suckle as she says, 'That's good, have a drink.'";
 				say "     The warm milk soothes some of the pain from the rough session, and you are almost disappointed when the dryad pushes you away. As you collapse onto the ground, the dryad walks away, the tree disguise forming once more. As you clean yourself off, you manage to collect some of the dryad's cum, placing it in an empty water bottle.";
-				increase carried of dryad cum by 1;
+				ItemGain dryad cum by 1;
 				infect "Dryad";
 		else:
 			say "     Shaking your head to clear your mind, you grab the wood nymph by the shoulders and shove her roughly to the side. She gives an angry hiss like cracking bark and slips away into the trees.";
@@ -61,7 +61,7 @@ To say dryad attack:
 		say "     The vines bend, and your entire body tilts backward, placing your [cunt size desc of Player] cunt right in front of her cock. 'Sweet carryings.' She smirks as she pushes inside, causing you to scream in pain from the rough bark. The dryad pumps in and out of you, and you soon realize that her cock is absorbing the lubrication. Despite that, you eventually get used to the rough treatment, and pleasure starts to mix in with the pain. You are eventually brought to a climax, but as you descend from your orgasm, you quickly notice that the dryad has not slowed down at all. She keeps using your weary body, and soon, the overwhelming sensations make you lose consciousness.";
 		WaitLineBreak;
 		say "     You wake to find thick, steaming cum mixed with blood running from your cunt, and a feeling of weakness all over. It must be the blood loss, you realize, as the size of the puddle under you becomes apparent. As you clean yourself off, you manage to collect some of the dryad's cum, placing it in an empty water bottle.[impregchance]";
-		increase carried of dryad cum by 1;
+		ItemGain dryad cum by 1;
 		infect "Dryad";
 	else if Player is male:
 		say "     You collapse under the pain of your beating, and the dryad approaches. Suddenly, many green tendrils grow out of a hole above her clit that you had missed, twining around your cock and body, immobilizing you. You watch as she strokes her clit, which slowly turns into a 6 inch long wooden cock. Her hands move toward her cock, and you watch with growing lust and horror as it spasms, and white, thick, reeking spunk sprays all over your [bodydesc of Player] body and face. She breathes out in a long sigh, and the tendrils bring you closer as she waits for the changes.";
@@ -70,7 +70,7 @@ To say dryad attack:
 		say "     After you finish, she shoves one of her breasts into your face. 'Still not had a drink, eh?' she quips as one of the green tendrils twining around her body squeezes the tit, milk spraying into your face and down your throat.";
 		infect "Dryad";
 		say "     The dryad unceremoniously drops your cum-and-milk-covered form to the ground and leaves. As you clean yourself off, you collect the cum on you and place it into an empty water bottle. Maybe there is a use for it?";
-		increase carried of dryad cum by 1;
+		ItemGain dryad cum by 1;
 	else:
 		say "     She looks at you with horror. 'Nothing? Nothing for me to play with?' she exclaims. Well, you will just have to fix that and come back later. She turns toward the trees with a huff, leaving you to pick yourself up.";
 		infect "Dryad";

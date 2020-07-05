@@ -146,19 +146,13 @@ to say JeromeTalkMenu:
 				if (nam is "Ask him about the price for entry again"):
 					say "[JeromeTalk2]";
 				if (nam is "Pay for entry with a bottle of clean water"):
-					LineBreak;
-					say "[bold type]You lose 1 water bottle![roman type][line break]";
-					decrease carried of water bottle by 1;
+					ItemLoss water bottle by 1;
 					say "[JeromeTalk3]";
 				if (nam is "Pay for entry with some food"):
-					LineBreak;
-					say "[bold type]You lose 1 food![roman type][line break]";
-					decrease carried of food by 1;
+					ItemLoss food by 1;
 					say "[JeromeTalk3]";
 				if (nam is "Pay for entry with a bottle of orc cum"):
-					LineBreak;
-					say "[bold type]You lose 1 orc cum![roman type][line break]";
-					decrease carried of orc cum by 1;
+					ItemLoss orc cum by 1;
 					say "[JeromeTalk4]";
 				if (nam is "Inquire about getting a lifetime membership"):
 					say "[JeromeTalk5]";
@@ -231,41 +225,33 @@ to say ShagShackWhoringPayment:
 		if randomnumber is:
 			-- 1:
 				say "[one of]two cans of beans[or]a plastic baggie with two hunks of mystery-meat jerky[or]a pair of fresh melons[or]two baseball-sized cherries[or]a weighty Christmas fruit-cake[or]two packets of breakfast cereal[at random].";
-				say "[bold type]You gain 2 food![roman type][line break]";
-				increase carried of food by 2;
+				ItemGain food by 2;
 			-- 2:
 				say "a soda bottle and a slightly stale packet of crackers.";
-				say "[bold type]You gain 1 food and 1 soda![roman type][line break]";
-				increase carried of food by 1;
-				increase carried of soda by 1;
+				ItemGain food by 1;
+				ItemGain soda by 1;
 			-- 3:
 				say "[one of]two bottles of clean water. Carbonated, of a name brand even[or]two bottles of lukewarm water - at least they've got an intact safety seal[or]two bottles of asparagus water. The wilted green plant-piece swimming inside looks not particularly appetizing, but the water itself should still be drinkable[or]two bottles of clean water. It isn't carbonated, of a store brand[at random].";
-				say "[bold type]You gain 2 water bottles![roman type][line break]";
-				increase carried of water bottle by 2;
+				ItemGain water bottle by 2;
 			-- 4:
 				say "[one of]a bag of chips[or]a bag of spicy chips[or]a bag of cheese and onion chips[or]a bag of chips flavored like a popular candy snack. WTF? Some combinations just shouldn't exist[at random].";
-				say "[bold type]You gain 1 chips![roman type][line break]";
-				increase carried of chips by 1;
+				ItemGain chips by 1;
 	else: [better rewards for repeat whoring]
 		let randomnumber be a random number from 1 to 4;
 		if randomnumber is:
 			-- 1:
 				say "[one of]two bottles of clean water that actually look in good shape, and two cans of peaches[or]two cans of canned meat that appear to be in an OK state and two water bottles that look clear enough to reflect light without problem[at random].";
-				say "[bold type]You gain 2 food and 2 water bottles![roman type][line break]";
-				increase carried of food by 2;
-				increase carried of water bottle by 2;
+				ItemGain food by 2;
+				ItemGain water bottle by 2;
 			-- 2:
 				say "an assortment of rations that might help you for days.";
-				say "[bold type]You gain 4 food![roman type][line break]";
-				increase carried of food by 4;
+				ItemGain food by 4;
 			-- 3:
 				say "a small white box with medical supplies, it looks a little bit aged but from a small inspection the contents are still intact.";
-				say "[bold type]You gain 1 medkit![roman type][line break]";
-				increase carried of medkit by 1;
+				ItemGain medkit by 1;
 			-- 4:
 				say "a small container with some pills, from what you know this will raise the Libido of anyone who takes it.";
-				say "[bold type]You gain 1 libido pill![roman type][line break]";
-				increase carried of libido pill by 1;
+				ItemGain libido pill by 1;
 	follow the turnpass rule;
 
 the fuckscene of Jerome is "     As you make an amorous offer to the shark, Jerome laughs and shakes his head. 'Much as I'd love to, I'm busy with business. Can I interest you in having a go with my 'talent' in there instead?'".

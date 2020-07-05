@@ -131,7 +131,7 @@ Instead of resolving a Scattered Trash:
 	say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 	if bonus + dice > 15:
 		say "You manage to spot a sticky mess as you're stepping around through the trash. It's hard to tell over the scent of the surrounding garbage, but it's clearly the sexual fluids from some kind of creature. Finishing picking around the trash, you do manage to find a container of water. The small jug has enough for a drink of water, but it seems to have been filled after the outbreak and is probably not clean.";
-		increase carried of dirty water by 1;
+		ItemGain dirty water by 1;
 		increase score by 1;
 	else:
 		say "As you're trying to maneuver around the scattered trash, you place your foot on something slick just as you're turning to look at something shiny. Your foot comes out from under you and you fall onto your back, landing among the trash in something sticky. Getting up quickly, you notice it is a puddle of sexual fluids from some kind of creature. You try to wipe it off, but it's clearly too late as the tingles and prickles of spreading infection start.";
@@ -195,7 +195,7 @@ Instead of resolving a Stray Cat:
 	now Stray Cat is resolved;
 
 to say dirtysnow:
-	delete dirty water;
+	ItemLoss dirty water by 1;
 	say "     Quickly pulling off your pack, you reach into it and pull out a jug of dirty water. You toss it to the charging feline, who swats at it with his paw before realizing what it is. The container breaks open, sending the water over him. Startled, he comes to a stop and shakes his head before realizing it's water and he starts licking it from his fur. As you start to back away, his body starts to change, altered by the dirty water.";
 	say "     Fascinated, you watch as he starts to mewl softly as the sensations wash over him, causing him to fall to his knees. From the strength of his reactions, you are very grateful that you didn't end up drinking that water yourself. His body grows taller and thinner, but with a strong chest and shoulders. His shoulders and back twitch and bulge before a pair of large, fully-formed bat wings burst from them. The pain (or pleasure?) of this causes him to mrowl loudly. With his head raised to cry out, you can see his face and muzzle changing, growing longer and narrower. His ears enlarge, becoming big and pointed as he turns into some feline-bat hybrid.";
 	say "     His bat-like ears twitch as he mrowls again and they lock on you. Hearing your echo with his heightened senses, he starts to get up. This breaks the spell of watching his transformation and you turn to get away from this new and potentially dangerous creature you've spawned. You run around one mound, then dash down another path in the hopes of evading him. You start to make a third turn when he comes swooping out of the air, already able to fly on his new wings. Cut off, you will have to face him.";
@@ -220,7 +220,7 @@ to say dirtysnow:
 
 
 to say bottlesnow:
-	delete water bottle;
+	ItemLoss water bottle by 1;
 	say "     Quickly pulling off your pack, you reach into it and pull out a bottle of water. You toss it to the charging feline, who bats it aside at first, but then realizes what it is. He drops to all fours, scrambling on the hard ground in an attempt to turn, then runs to chase after the water bottle. Taking the opportunity to head off, you can hear the parched feline gulping it down and a distant [']Thank you['] when he's finished. Wanting to be safe, you keep moving, just in case he decides to come back for more.";
 	increase score by 10;
 	increase morale of Player by 3;

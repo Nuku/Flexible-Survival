@@ -599,9 +599,7 @@ to say GabrielTalk2:
 to say GabrielTalk3:
 	say "     When you pull out the small plastic bottle with its milky white contents and hold it out to Gabriel, the young man accepts it with wide eyes. 'Is this... for me? I thank you, [master]. Presents and personnel possessions are not something done where I come from.' You simply grin at him, playing up your generosity before eventually adding that you want to see him drink it. As Gabriel takes off the cap and sniffs the contents of the bottle, he automatically licks his lips hungrily. 'This is for my training, isn't it [master]? I live to serve and obey.' With that said, he sets the bottle at his lips and starts to chug down the contents, greedily swallowing it in gulp after heavy gulp. As potent as orc cum usually is, you don't have long to wait before Gabriel shows himself to be visibly affected, his eyes going very round and his cheeks reddening. Drunk with natural aphrodisiacs and lust, he giggles a little, then leans in towards you and plants a kiss on your cheek, followed by his arms wrapping around your body.";
 	say "     'You're just the best [master] I ever had, giving me treats and all that.' As he proceeds to nuzzle you, licking and touching, you realize that Gabriel isn't so much embracing you but rather holding onto you, as his knees went weak from the potent effects of the orc cum. Seems like the stuff was a bit too strong for him, and he can barely even stand right now. While the armful of bubbly, lust-drunk Seraphim is fun for a little while, he's a bit too out of it to do anything more right now. Reducing him to a drunk slut takes a little bit away from his willing submission, as anyone would service you in this state. In the end, you take him to one of the unused cots and lower Gabriel down onto it, wanting to let him sleep off his buzz.";
-	LineBreak;
-	say "[bold type]You lose 1 orc cum![roman type][line break]";
-	decrease carried of orc cum by 1;
+	ItemLoss orc cum by 1;
 	now Stamina of Gabriel is turns; [last cum dose]
 	if Libido of Gabriel < 10:
 		increase Libido of Gabriel by 2; [big increase through the overdose]
@@ -614,9 +612,7 @@ to say GabrielTalk4:
 	say "     A second spurt of cum adds on to the puddle of cum, after which Gabriel gets himself under control a bit more and manages to cup his lips over the throbbing shaft again. You can see his cheeks bulge as the next blast of cum fills his mouth, only to be hungrily swallowed to make room for the next, followed by further and further cumshots until his orgasm eventually ebbs off. Finally, your angelic pet raises his head again, giving a manly burp and a broad grin. 'Love the taste of this stuff!' he tells you happily, even as he is milking the last little bits of cum from his slowly softening erection. Yet as Gabriel goes on to slurp up the white goop sticking to his fingers, you realize that his cock isn't so much softening but rather shrinking. It appears that while centaur cum has a quite strong effect on your toy-boy, this is only temporary and wears off with his next orgasm.";
 	WaitLineBreak;
 	say "     Gabriel notices the return to his regular stature a little while later as he sucks the last cum off his fingers. 'Aw, too bad,' he says with a shrug, only slightly disappointed at this turn of events, then turns to you and gives you a happy smile. 'Thank you [master]! I don't think I had a favorite drink before, not even sure if I had to drink and all that, but if I had to choose one - this is it!' And with that said, he goes down on all fours, lowering his head to the ground so he can lick up the rest of his huge load from the floor. As you watch how greedily the Seraphim goes for the creamy cum, you can't help but wonder what further fun might be had with this. Sure, you could just push his training in being a cum-slut by giving him regular doses of centaur cum, but the transformation effect could also be a fun side to explore with Gabriel sexually.";
-	LineBreak;
-	say "[bold type]You lose 1 centaur cum![roman type][line break]";
-	decrease carried of centaur cum by 1;
+	ItemLoss centaur cum by 1;
 	NPCSexAftermath Gabriel receives "OralCock" from Gabriel;
 	now Stamina of Gabriel is turns; [last cum dose]
 	if Libido of Gabriel < 10:
@@ -627,9 +623,7 @@ to say GabrielTalk5:
 	say "     Your angelic pet polishes off the whole bottle of cum in short notice, swallowing its contents in large gulps until only a trickle remains, which he patiently lets drip onto his outstretched tongue. Finally, he puts the bottle cap back on and stands the bottle on the ground, next to one of the cots where it shouldn't be in the way. 'I liked it,' Gabriel tells you with a smile, then suddenly gets a peculiar expression on his face. The angel leans forward and looks at you with eyes that now show speckles of amber in their usual blue irises, then sniffs the air testingly. '[Master], you look a bit funny right now, less colorful, but at the same time... nnngh, that smell around you is really hard to resist. Without waiting to ask, he steps forward a little more and buries his face in the crook of your neck, sniffing your skin with deep breaths, followed by more sniffing and even him licking the side of your neck.";
 	WaitLineBreak;
 	say "     You indulge Gabriel for a little while, letting him experience is newly canine senses since they mostly focus on him getting off to your sweat and pheromones anyways from the looks of it. Stroking the long brown hair on his head, you then pull him into a demanding kiss, making out a little until your toy-boy is breathless and looking at you eagerly. Finally telling him that he can get more tasty cum if he stays an obedient pet, you earn a look of deep devotion. No doubt, if he had a tail, he'd be wagging up a storm by now. Gabriel's more dog-like behavior continues for a little while longer, until finally the effects of the cum seem to wear off, with the color of his eyes being the easiest indicator to spot for it.";
-	LineBreak;
-	say "[bold type]You lose 1 wolf cum![roman type][line break]";
-	decrease carried of wolf cum by 1;
+	ItemLoss wolf cum by 1;
 	now Stamina of Gabriel is turns; [last cum dose]
 	if Libido of Gabriel < 10:
 		increase Libido of Gabriel by 1; [normal increase, regular cum drink]
@@ -645,8 +639,7 @@ to say GabrielTalk6: [demon seed]
 	say "     Slamming in and out of the warm and tight throat of your angelic pet, you sometimes pause for a little while and choke him a little bit more, but you never allow things to go quite as far as during the first time. Gabriel takes everything that you dish out gleefully, and at some point you realize that he's jerking himself off furiously. The fact that the handsome man revels in your sexual punishment ramps your own lust up another few notches and before long, you can feel a familiar tightness rise in your balls. Digging both of your hands into the long hair of your cum-slut, you hold him tightly and when you're just about to reach climax, you pull him off almost all the way, allowing your first splash of cum to cover his tongue, followed by many more as you feed him your load and Gabriel swallows it down greedily. Almost at the same time, he pushes himself over the edge with his jerking, spraying cum over the ground just in front of you.";
 	WaitLineBreak;
 	say "     By the time your orgasm has run its course, it becomes obvious that the demon seed's effect on Gabriel is far more temporary than Elijah's seems to have been, possibly because he fought off its power and didn't internalize it. This leaves you with a somewhat cum-smeared and breathless blue-eyed Seraphim kneeling before you, looking up with wide eyes. 'I'm sorry [master], I don't know what came over me when I drank that stuff. I - I thank you for reminding me of my place.' Wiping off a stray bit of cum from his lip and then pushing your finger into Gabriel's mouth to let him suck it off, you grin and tousle his hair as you remind him that he's yours, now and forever.";
-	say "[bold type]You lose 1 demon seed![roman type][line break]";
-	decrease carried of demon seed by 1;
+	ItemLoss demon seed by 1;
 	now Stamina of Gabriel is turns; [last cum dose]
 	if Libido of Gabriel < 10:
 		increase Libido of Gabriel by 2; [big increase, special cum drink]

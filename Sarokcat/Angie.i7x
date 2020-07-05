@@ -71,7 +71,7 @@ Instead of Resolving a AngieTrapped:
 		say "     Grabbing a nearby branch, you manage to push the small bundle far enough to the front for you to reach and take it, finding the packet surprisingly light. As you take a look at it, you see that it's filled with some kind of dried plant matter. [if FaceName of Player is listed in infections of Felinelist]The smell of the stuff in there is just amazing, waking the desire to sniff it, eat it, roll around in it in you. Only with some willpower do you manage to wrap it up tight again, tucking the packet away for later investigation, then[else]While it seems to exude a nice, pleasantly minty odor, you can't quite tell why the big panther wanted it so badly. Shrugging, you decide to tuck it away for further investigation later and[end if] continue through the zoo.";
 		LineBreak;
 		say "[bold type]You gain a package of catnip![roman type][line break]";
-		increase carried of catnip by 1;
+		ItemGain catnip by 1;
 		now AngieHappy is 2;
 		now Resolution of AngieTrapped is 3; [found catnip]
 		now AngieTrapped is resolved;
@@ -92,7 +92,7 @@ to say catnip use:
 	if FaceName of Player is listed in infections of Felinelist:
 		say "As you're feline yourself, the intoxicating scent of the plant hits you like a sledgehammer. You're so taken with the heavenly stuff that you can't help yourself but rub your nose in the dried leaves, licking some of them up and chewing them. As buzzed and horny as you are from the effects, you barely notice - or care - that you're scattering most of the dried catnip on the ground as you do so.";
 		increase Libido of Player by 100;
-		decrease carried of catnip by 1;
+		ItemLoss catnip by 1;
 	else:
 		say "It smells nice, somewhat like mint, but you don't see how a cat could go crazy over this. Maybe you have to be a feline yourself to understand...";
 
@@ -286,7 +286,7 @@ instead of conversing the Angie:
 			say "     Panting, she leans back against the counter, her tail lashing behind her in satisfaction as she just stands there for a moment, before finally coming back to herself. 'Oh shit,' Angie says as she takes a look down her front, covered in her own sticky panther cum, and then glancing up at you. 'Wow that was... um I had better get cleaned up now I guess,' she says, seeming embarrassed slightly, but also still seeming even more aroused than ever. 'Thanks for finding that catnip though, God, I guess I just didn't know what I was missing there, sex like this, is just so... amazing...' Angie says with a happy grin.";
 			say "     'I almost wish I knew where that panther was so I could go and... Well never mind, I better get cleaned up and put that catnip somewhere safe for now... until next time anyways,' Angie says as she begins to head to the shop bathroom, although you don't think she intended you to hear that last part.";
 			now AngieHappy is 3;
-			decrease carried of catnip by 1;
+			ItemLoss catnip by 1;
 		else:
 			say "     Angie sighs as you cover the small bundle up more securely, 'Maybe, maybe that's for the best,' she says, her feline eyes still fixed on where you put the packet. 'That scent is very... distracting,' she continues, half panting as her nipples press out, spreading her vest open even farther. Still, no matter how relieved at your decision she tries to act, she still seems somewhat disappointed, though you decide not to press her on that, for now at least.";
 			LineBreak;
@@ -389,7 +389,7 @@ to say AngieTalk1: [talking about her past]
 to say AngieTalk2: 		[talking about the zoo]
 	if AngieTalk is 0: [giving the player a reward medkit in here]
 		say "     Looking around in the gift shop, Angie says, 'It's sad to see this place is in such a state. Still, it's no surprise considering what the rest of the zoo is like.' She sighs wistfully as she looks over the devastation before turning her golden eyes back to you. 'Thanks again for your help out there. I really appreciate it,' Angie says, a grateful smile crossing her muzzle. 'I'm still getting used to all the changes, both in me and in the zoo itself, but I'll help you out any way I can to pay you back for earlier. There might still be some useful supplies out in the zoo as well.' She pats her forehead with a paw and says, 'Oh, that reminds me - I recovered a couple med-kits from the employees room. You should take one of them,' she says, then hands you a medkit.";
-		increase carried of medkit by 1;
+		ItemGain medkit by 1;
 		now AngieTalk is 1;
 		say "You received a medkit!";
 	else if AngieTalk is 1: [already gave the player a medkit]

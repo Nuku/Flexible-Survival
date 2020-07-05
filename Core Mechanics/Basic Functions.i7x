@@ -58,10 +58,8 @@ To check (X - text):
 	let die be a random number from 1 to 20 ;
 	say "You perform a check of [x] and roll [die], resulting in";
 	increase die by stat;
-	say "  [die]!";
+	say "     [die]!";
 	now checkresult is die;
-	
-	
 
 Instead of sniffing something (called x):
 	if the scent of x is empty:
@@ -133,6 +131,69 @@ to PlayerThirst (N - number):
 	increase thirst of Player by N;
 	if thirst of Player > 100:
 		now thirst of Player is 100;
+
+to ItemGain (ItemObj - text) by (N - number):
+	ItemGain ItemObj by N silence state is 0;
+
+to ItemGain (ItemObj - text) by (N - number) silently:
+	ItemGain ItemObj by N silence state is 1;
+
+to ItemGain (ItemObj - text) by (N - number) silence state is (Silence - a number):
+	if there is a name of ItemObj in the table of Game Objects:
+		choose a row with name of ItemObj in the Table of Game Objects;
+		if Silence is 0:
+			ItemGain object entry by N;
+		else:
+			ItemGain object entry by N silently;
+	else:
+		say "ERROR! Object [ItemObj] does not exist in the table of Game Objects. Please report this message on the FS Discord!";
+
+to ItemGain (ItemObj - a grab object) by (N - number):
+	ItemGain ItemObj by N silence state is 0;
+
+to ItemGain (ItemObj - a grab object) by (N - number) silently:
+	ItemGain ItemObj by N silence state is 1;
+
+to ItemGain (ItemObj - a grab object) by (N - number) silence state is (Silence - a number):
+	increase carried of ItemObj by N;
+	if Silence is 0:
+		LineBreak;
+		say "[bold type]You gain [N] [printed name of ItemObj in lower case]![roman type]";
+
+to ItemLoss (ItemObj - a grab object) by (N - number):
+	ItemLoss ItemObj by N silence state is 0;
+
+to ItemLoss (ItemObj - a grab object) by (N - number) silently:
+	ItemLoss ItemObj by N silence state is 1;
+
+to ItemLoss all (ItemObj - object):
+	if carried of ItemObj < 1:
+		if debug is at level 10:
+			say "DEBUG -> Trying to re-move [ItemObj] from player who doesn't have any.[line break]";
+		else: [found at least one item]
+			ItemLoss ItemObj by carried of ItemObj
+
+to ItemLoss all (ItemObj - object) silently:
+	if carried of ItemObj < 1:
+		if debug is at level 10:
+			say "DEBUG -> Trying to re-move [ItemObj] from player who doesn't have any.[line break]";
+		else: [found at least one item]
+			ItemLoss ItemObj by carried of ItemObj silently;
+
+to ItemLoss (ItemObj - a grab object) by (N - number) silence state is (Silence - a number):
+	decrease carried of ItemObj by N;
+	if Silence is 0:
+		LineBreak;
+		if N is 1:
+			if carried of ItemObj is 1:
+				say "[bold type]You lose your [printed name of ItemObj in lower case]![roman type]";
+			else:
+				say "[bold type]You lose 1 [printed name of ItemObj in lower case]![roman type]";
+		else:
+			if carried of ItemObj is N:
+				say "[bold type]You lose all your [printed name of ItemObj in lower case]![roman type]";
+			else:
+				say "[bold type]You lose [N] [printed name of ItemObj in lower case]![roman type]";
 
 to PlayerMaxHeal:
 	LineBreak;

@@ -90,8 +90,7 @@ to WispFollow:
 				say "     With the unicorn defeated, the small red lizard jumps up and cheer excitedly. Before you know what is happening, the reptile shoves a bag of chips into your arms, apparently having an extra bag with him. 'That was awesome!' he says in a higher pitched, slightly raspy voice. 'Come join us Kobolds. We're much more fun than those heroes, and I think that our master will like you a lot.' With that, the Kobold runs down the south road. You think to yourself how strange this place is as you look around.";
 				LineBreak;
 				say "     It seems that you have found the magic land of [bold type]Avalon[roman type]. Who knows what you will find in a land of fantasy?";
-				say "[bold type]You gain 1 Chips![roman type][line break]";
-				increase carried of chips by 1;
+				ItemGain chips by 1;
 				wait for any key;
 				move player to Virgin's Pass;
 				now Resolution of Fall-O-the-Wisp is 2; [fought+won]

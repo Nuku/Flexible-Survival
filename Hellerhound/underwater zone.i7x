@@ -14,7 +14,7 @@ Instead of resolving a Gill Fruits Tree:
 	say "You come across an odd tree, half in and half out of the water, with slitted fruits on the branches. This must be the elusive gill fruit tree.";
 	say "Do you wish to pick some?";
 	if Player consents:
-		increase carried of gill fruit by 1;
+		ItemGain gill fruit by 1 silently;
 		say "As you pick some of the fruit, the rest falls off into the water, overripe. Odd.";
 		now Resolution of Gill Fruits Tree is 1; [got a fruit]
 		now gill fruits tree is resolved;

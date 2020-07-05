@@ -219,7 +219,7 @@ to say sexwithVanessa:
 				say "     Vanessa pants and rubs her wet panties, having orgasmed at some point during her transformation. After a few moments to regain her composure, she looks herself over. 'Well, that didn't really help at all with my foal problem,' she says, rubbing her enlarged belly. 'Still, getting closer. And I have such lovely hooves and legs on the way. I should make for a pretty hot mare, don't you think?' she says with a giggle before trotting off to try out her half-equine legs, giving you a nice peek at that sexy round bottom of hers.";
 				now lastfuck of Vanessa is turns;
 				now HP of Vanessa is 3;
-				decrease carried of centaur hair by 1;
+				ItemLoss centaur hair by 1;
 			else:
 				say "     Deciding to hold out for the moment, you fib and tell her that you've not had any luck yet. 'Be sure to keep your eyes out for something from the centaur mares.'";
 		else:
@@ -245,7 +245,7 @@ to say sexwithVanessa:
 				now lastfuck of Vanessa is turns;
 				now HP of Vanessa is 4;
 				now lust of Vanessa is 13; [partway through pregnancy]
-				decrease carried of centaur hair by 1;
+				ItemLoss centaur hair by 1;
 			else:
 				say "     Deciding to hold out for the moment, you fib and tell her that you've already given her all you've been able to find. 'Be sure to keep your eyes out for some more of it.'";
 		else:

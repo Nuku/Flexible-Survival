@@ -43,7 +43,7 @@ Instead of Resolving a Forced Adoption:
 		say "     She glances around nervously as she walks, when suddenly another figure, a large powerful looking male retriever, steps out of a nearby alley into her path, cutting her off. The retriever girl runs into him and stumbles backward, falling to the ground and dropping whatever she was carrying. Without even acknowledging the male's presence, she begins scrambling around on all fours, looking for her prize, until she comes face to face with his erect canine cock. Slowly she looks up over his body until she is staring lustfully into his eyes. The large male then reaches down and picks up the entranced girl, carrying her back down the alley he emerged from as she whimpers needfully.";
 		WaitLineBreak;
 		say "     Once you are certain the pair is gone you get up from your hiding place and walk over to where they were standing. As you glance around you spot the object the retriever girls was so obsessed with, an unusual sex toy shaped like a canine cock on one end with a bone-shaped handle on the other. Against your better judgment, you feel compelled to pick the strange toy up, examining it more closely momentarily before slipping it into your bag and heading on your way, even as faint thoughts of doggie sex begin to creep into your mind.";
-		increase carried of Dog Bone by 1;
+		ItemGain Dog Bone by 1;
 		now HP of Rex is 1;
 	else if HP of Rex is 4:
 		if Dog Bone is owned:
@@ -52,7 +52,7 @@ Instead of Resolving a Forced Adoption:
 			WaitLineBreak;
 			say "     The large male breaks off the kiss and starts to introduce himself. You try to reign in your mind, struggling to control the growing urges of the retriever bitch clawing at your thoughts, but in doing so you barely managed to hear any of what he says, other than his name, Rex. While he looks you over, a smile crosses his muzzle as he spots the doggie dildo clenched in both hands against your chest.";
 			say "     'I see that wonderful bone has brought another lovely bitch right to my doorstep. Why don't you come inside so we can start training you to be a proper pet?' he says, wrenching the bone from your grasp as he finishes. He then turns to a nearby house, motioning you towards the large doggy door as he enters through the front.";
-			delete Dog Bone;
+			ItemLoss Dog Bone by 1;
 			AddNavPoint Rex's Place;
 			now HP of Rex is 5;
 			now Resolution of Forced Adoption is 1; [met Rex]

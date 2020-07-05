@@ -55,7 +55,7 @@ Instead of Resolving a Hyper Squirrel Girl:
 				say "     Give her something?";
 				if Player consents:
 					if the distilled milk is owned:
-						decrease carried of distilled milk by 1;
+						ItemLoss distilled milk by 1;
 						say "     'Awesome! Let's go.' She grabs your distilled milk and swallows it down even as she urges you to lead the way. She rises and follows you back to the bunker with a grin. As she walks, her already large, furry, breasts swell several inches. Her paws rub over them encouraging as she walks, eyes half lid and soft moans echoing the pleasure she feels. When you arrive at the bunker, she sets up shop upstairs, in the library.";
 						now snow is in Grey Abbey Library;
 						move player to Grey Abbey Library;

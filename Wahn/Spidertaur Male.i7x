@@ -157,7 +157,7 @@ to say SpidertaurPostSex:
 			say "     Satisfied, the spidertaur pulls out of you, lowering your legs to dangle over the edge of the silken sling you're lying on and stroking your body. Then he reaches up to loosen the strands holding your arms, freeing them, after which you pull him down on top of you, holding Aelias's muscled body against your chest and stroking his soft skin. You moan that he can tie you up whenever he wants, rubbing yourself against him and the silken fabric under you. 'I'll hold you to that,' he says, then moves back a bit, allowing you to climb out of the soft spidertaur-silk construct. Aelias plucks a towel from high up in the many strands in the room, handing it to you. As he watches your naked body move when you clean up a bit, he gives you an appreciative look. 'You're my absolutely favorite prey, you know. Handsome and amazing.' Moving closer, he pulls you into an embrace, making out with you.";
 			if SpidertaurRelationship is 4:
 				increase SpidertaurRelationship by 1;
-				increase carried of silk hammock by 1;
+				ItemGain silk hammock by 1;
 				LineBreak;
 				say "     Coming up for air after a while, he says 'I've got something for you.' and moves through the web strands to pull a bundle hidden high above you. At first you think he's got something wrapped up in a large sheet of woven silk, then you recognize what it is by the two stabilizing rods at the ends - a hammock, made of real silk. 'Sleep well in this part of my web, my little fly,' he says as he hands it to you. The whole bundle is surprisingly light and you're sure it'll come in handy when you're out in the city.";
 				LineBreak;

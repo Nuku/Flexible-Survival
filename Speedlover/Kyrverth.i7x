@@ -189,14 +189,12 @@ to say KyrverthTalk: [Quest turnin check]
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
 			LineBreak;
-			decrease carried of stray links by 3;
-			increase carried of food by 5;
+			ItemLoss stray links by 3;
 			say "     'You did it!' Kyrverth rushes over and looks at the chainmail you brought back, eyes wide. 'That looks great! Here, let me get you a reward.' He goes to a box and grabs five packets of food. 'My hoard is going to be awesome!' he says as he swaps the chainmail for the food. You almost drop the food as this time he definitely grows as he puts the bits of chainmail in his hoard.";
 			say "     Kyrverth doesn't even seem to notice as his body quickly swells to gain an intimidating [one of]figure[or]size[at random], a little bit taller than you. His wings flap and stretch further and further out from his back, becoming capable of flight. Horns grow through his skin, changing from defensive tools to rather dangerous offensive weapons. While you think about offensive weapons, his claws catch your eye. They twitch and sprout from his hand, now looking like they could rip logs to bits. Kyrverth shivers then gives out a massive roar, revealing a deadly maw.";
 			LineBreak;
 			say "     As the roar echoes in the distance and slowly fades into the eerie silence of the old city, Kyrverth lets out a yawn and curls up in his nest to nap, apparently worn out by his growth. You pick up your things and quietly leave, treading carefully so you don't wake him up.";
-			LineBreak;
-			say "[bold type]You gain 5 food![roman type][line break]";
+			ItemGain food by 5;
 			WaitLineBreak;
 			now KyrverthStage is 2;
 			now KyrverthQuestGiven is 0;
@@ -212,14 +210,13 @@ to say KyrverthTalk: [Quest turnin check]
 		WaitLineBreak;
 		say "     The red dragon stays there for a few seconds, his massive [one of]penis[or]cock[at random] dripping on the floor, panting in exertion, before he finally opens his eyes and carefully [one of]moves[or]walks[or]navigates[at random] his new body over to you. His new voice sends [one of]shivers[or]goosebumps[at random] down your spine, a deep rumble from his [one of]massive[or]muscled[or]expansive[or]huge[at random] chest 'I thank you for your assistance, but I believe I can easily expand my hoard by myself from now on. I owe you a debt of gratitude, just let me know what it is you want and I will do my [one of]best[or]utmost[at random] to [one of]provide[or]give[or]produce[or]procure[at random] it.'";
 		WaitLineBreak;
-		say "[bold type]You gain 10 food![roman type][Line Break]";
-		increase carried of food by 10;
+		ItemGain food by 10;
 		if carried of dragon scale >= 3:
-			decrease carried of dragon scale by 3;
+			ItemLoss dragon scale by 3;
 			increase score by 20;
 		else if carried of dragon hair >= 5:
 			now KyrverthQuestHairGiven is True;
-			decrease carried of dragon hair by 5;
+			ItemLoss dragon hair by 5;
 			increase score by 15;
 		now KyrverthStage is 3;
 		now KyrverthTimer is turns;
@@ -625,7 +622,7 @@ Instead of resolving a Strange Sighting: [Very first meeting with the dragon]
 		LineBreak;
 		say "     As he arrives he hands you a soda, saying 'sorry about that, I'm not exactly the biggest dragon, and I heard some of those savages talking about eating me...'.";
 		say "     [bold type]You head back to the library, maybe you should visit the dragon again in the High Rise District - later when he's calmed down a bit.[roman type][line break]";
-		increase carried of soda by 1;
+		ItemGain soda by 1 silently;
 		WaitLineBreak;
 		now PlayerMet of Kyrverth is true;
 		connect Dragons Den;
@@ -934,15 +931,15 @@ carry out KyrverthStealing:
 		now KyrverthLockoutTimer is turns;
 		now KyrverthStage is 5;
 		if Kyrverthitemget is 1:
-			increase carried of Anubis Mask by 1;
+			ItemGain Anubis Mask by 1 silently;
 		else if Kyrverthitemget is 2:
-			increase carried of Racing Horseshoe by 1;
+			ItemGain Racing Horseshoe by 1 silently;
 		else if Kyrverthitemget is 3:
-			increase carried of Golden Sculpture by 1;
+			ItemGain Golden Sculpture by 1 silently;
 		else if Kyrverthitemget is 4:
-			increase carried of Tiger Suit by 1;
+			ItemGain Tiger Suit by 1 silently;
 		else if Kyrverthitemget is 5:
-			increase carried of Black Pearl by 1;
+			ItemGain Black Pearl by 1 silently;
 		LineBreak;
 		say "     [bold type][KyrverthItemSay] Added to Inventory.[roman type][Line Break]";
 		now KyrverthItemStealable is False;
@@ -969,15 +966,15 @@ carry out KyrverthItemReturn:
 		if Player consents:
 			say "     'YOU TOOK IT? I thought you were my friend!' He goes as if to hit you, but a quick scream of 'WAIT!' gets you a second's reprieve. You explain that you took it because of his huge ego, and you are returning it in the hope he can keep his instincts more under control this time. You reach into your pack and manage to pull the [KyrverthItemSay] out without being interrupted this time. His eyes wide Kyrverth grabs it. 'Come back in 24 hours. I will do my best to forgive.' Incredulous at your luck you quickly turn around and leave, walking quickly along the street. A loud roar from behind catches you by surprise and you are saddened by not being able to see the growth this time, but you keep walking.";
 			if Kyrverthitemget is 1:
-				decrease carried of Anubis Mask by 1;
+				ItemLoss Anubis Mask by 1;
 			else if Kyrverthitemget is 2:
-				decrease carried of Racing Horseshoe by 1;
+				ItemLoss Racing Horseshoe by 1;
 			else if Kyrverthitemget is 3:
-				decrease carried of Golden Sculpture by 1;
+				ItemLoss Golden Sculpture by 1;
 			else if Kyrverthitemget is 4:
-				decrease carried of Tiger Suit by 1;
+				ItemLoss Tiger Suit by 1;
 			else if Kyrverthitemget is 5:
-				decrease carried of Black Pearl by 1;
+				ItemLoss Black Pearl by 1;
 			now KyrverthItemReturned is 1;
 			now KyrverthLockoutTimer is turns;
 			now KyrverthStage is 6;

@@ -162,8 +162,7 @@ to say OttoTalk1: [Small Talk]
 
 to say OttoTalk2: [Ask for medkit]
 	say "     As a doctor, you assume that Otto will be capable of consstructing medkits and should have a ready supply of materials with which to do so, and decide to ask whether he would be able to give you one if he has sufficient for his own needs. Upon hearing your request, he bursts into laughter. 'Medical supplies are quite rare in the city nowadays. Do you assume that I raid the hospital, or perhaps you believe that I break into Zephyr as I definitely won't work for them?' You stand there patiently as he calms his amusement. 'You're in luck, [one of]there was an abandoned supply of military medical equipment that I was given permission to collect some from[or]the Den Mother had some of the wolves bring me a few as payment for my help[or]an anonymous person left me a bag full of them along with a note of gratitude for what I do[at random], so I suppose I can spare you one. Don't use it all at once.' He exits into a side room before returning and handing you a medkit. 'Be careful out there in the city and come back if you need my precious medical supplies again.'";
-	say "[bold type]You gain a medkit![roman type][line break]";
-	increase carried of medkit by 1;
+	ItemGain medkit by 1;
 	now OttoMedkitCounter is 8;
 
 [to say OttoTalk3: [Medical Attention]

@@ -80,7 +80,7 @@ Instead of resolving a Inner Predator:
 		say "     Steeling your nerves, you carefully unscrew the small lid on the vial. Even though you have no idea what you're getting into, things can't get much worse, right? After all, any advantage could help you survive. Sucking in a breath, you quickly down the contents of the vial, the coppery-taste hitting your tongue and making you grimace. Swallowing, you empty the vial down your throat, then wait for something to happen.";
 		say "     For a moment, nothing happens, and you are left slightly worried. Then, a warmth rises in your stomach, gently radiating outward until your entire body feels strangely warm. It's possible that whatever this substance was, it's affecting the nanites inside your body... perhaps even altering them. As the glowing warmth fades, your stomach lets out a soft rumble, a sudden bout of hunger overtaking you. Automatically, you reach for the candy bar you found, but as soon as you place the chocolate to your lips, you suddenly find yourself not desiring the food. The hunger is still present, but its like eating is the last thing you want to do.";
 		say "     Wrapping the candy bar back up, you replace it in your pack and being to gather your things to leave, slightly perturbed by these events. Hopefully whatever you just drank out of that vial does not come back to bite you later... relatively speaking.";
-		increase carried of chips by 1;
+		ItemGain chips by 1;
 		WaitLineBreak;
 		if FemaleList is not banned:
 			say "     As you're turning to leave, a female husky, looking rather worse for wear, spots you and charges in to attack. Already weakened, a quick blow sends her tumbling and a few more put her to the ground for good. It is a quick fight and thankfully one of the easiest you've faced since this mess began.";
@@ -131,7 +131,7 @@ Instead of resolving a Inner Predator:
 		now Resolution of Inner Predator is 1; [player drank the vial]
 	else:
 		say "     Deciding that ingesting anything found in a mysterious briefcase is probably a very bad idea you opt to instead try and figure out what it is that you're holding. After storing the vial safely in your pack and pocketing the candy bar you begin to scan over some of the documents. Most of it is beyond your understanding, mostly medical lingo, some test results and other foreign terms, but a warning in particular caught your eye: 'Warning: Do not test the effects of application to the vaginal region'. It would seem that one of the documents talks about some abnormal effects if applied in such a manner, but much of it refers to a lot of medical language and anatomical terms you do not understand. You decide after pondering for a moment that you should [if PlayerMet of Medea is true]check in with Doctor Medea and see if she[else]go find someone, perhaps a doctor or specialist in gynecology and see if they[end if] might be able to decipher the document.";
-		increase carried of chips by 1;
+		ItemGain chips by 1;
 		increase score by 5;
 		now Resolution of Inner Predator is 2; [player didn't drink the vial]
 	LineBreak;

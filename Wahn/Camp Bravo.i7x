@@ -152,7 +152,7 @@ to say GuardBeg: [mooch some food from a guard]
 		now Resolution of Back at the Camp is 3; [mooched food]
 	else:
 		say "     The first guard just scoffs at you, but the other guy pulls out a ration bar and throws it to you. 'Here. Now please go away and don't tell anyone about this. We can't have a mob of people begging for food right in front of the camp.'";
-		increase carried of food by 1;
+		ItemGain food by 1 silently;
 		now lastGuardBeg is turns;
 
 to say GuardLeave:
@@ -715,14 +715,10 @@ to say ElaineUniform:
 			say "     The female quartermaster takes one look at you and replies, 'You're kidding, right? I pride myself on having a well-stocked inventory, but the US army just isn't in the habit of making giant versions of any uniform.'";
 
 to UniformHandout:
-	say "[bold type]You gain a camo shirt![roman type][line break]";
-	increase carried of camo shirt by 1;
-	say "[bold type]You gain green camo pants![roman type][line break]";
-	increase carried of green camo pants by 1;
-	say "[bold type]You gain black boxer briefs![roman type][line break]";
-	increase carried of black boxer briefs by 1;
-	say "[bold type]You gain black combat boots![roman type][line break]";
-	increase carried of black combat boots by 1;
+	ItemGain camo shirt by 1;
+	ItemGain green camo pants by 1;
+	ItemGain black boxer briefs by 1;
+	ItemGain black combat boots by 1;
 	now XP of Elaine is 2;
 
 to say CampBravoElaineAdamTalk:

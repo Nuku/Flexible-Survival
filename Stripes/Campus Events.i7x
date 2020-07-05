@@ -157,8 +157,8 @@ Instead of resolving a Anime Club:
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "     With the tentacle mutant defeated, you drive the two of them from the room and shut off the video. The captured girl looks up at you, blinking her wide eyes. She seems a little disappointed that the anime has stopped showing, but is also starting to regain some focus. With her already well on her way to being transformed, she's become quite confused by you're able to coax her to her feet and flee the strange room together.";
 				say "     She's very grateful to you for having rescued her and gives you a big hug and a kiss before she realizes what she's doing. After making out together in an empty classroom, she thanks you again for your help while handing you some food and water. After some more playful groping, she heads off in search of a new hiding place. You'd offered to house her in the bunker, but she's still holding out hope of finding some of her friends.";
-				increase carried of food by 1;
-				increase carried of water bottle by 1;
+				ItemGain food by 1;
+				ItemGain water bottle by 1;
 				increase score by 10;
 				SanBoost 5;
 				now Resolution of Anime Club is 1;	[Saved woman from Anime Babe and Hentai Fan]

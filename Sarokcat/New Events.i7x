@@ -45,14 +45,14 @@ Instead of Resolving a Military presence:
 		say "     Traveling through the city, you come across what appears to have been a military style barricade, currently unoccupied. Investigating further, you find that several military tents had been set up past the barricade in a mostly empty store parking lot. Investigating carefully in case there are still any trigger-happy soldiers around, you find that the makeshift camp seems completely empty, though there are several signs of a struggle in some areas.";
 		say "     Gathering up your courage, you start looking in some of the tents, only to be surprised when you find that the large tents are full of empty, movable beds with restraints and scientific equipment. Looking closer, you can see that several of the beds were occupied sometime recently, and from the looks of things, the occupants managed to either free themselves from their restraints or [']convinced['] whoever was with them to free them instead.";
 		say "     However they managed to get free, they definitely managed to turn the tables on their captors, judging by the remnants of sexual fluids evident in several locations and the strong sexual musk lingering inside the tents. Several discarded or torn bio-hazard suits and sets of lab robes are scattered about. You decide that, whatever the military was doing here, it would probably be best for you not to stay too long, and you hurriedly search through the rest of the tents, hoping to find a gun or something else of use left behind. Eventually giving up, you are forced to leave without a weapon, having found several boxes of ammo but no guns to go with them. You do find several small boxes of what the military jokingly calls food and end up taking some with you.";
-		increase carried of food by 2;
+		ItemGain food by 2;
 		LibidoBoost 30;
 		now mtp is 4;
 	else if mtp is 4:
 		say "     Traveling through the city, you come upon a strange sight on one of the roads that eventually leads out of the city. You find a large, flatbed truck overturned on the road, with several jeeps abandoned next to it. Curiosity getting the better of you, you move closer to investigate the strange sight. Arriving at the overturned flatbed, you find that it appears to have been rigged to carry something relatively large, and from the way the straps and tie downs were burst open, alive. Moving around the truck to examine the jeeps, you discover that the jeeps and the area are covered in some kind of hardened goop, and sitting in the middle of the stuff are what appear to be several almost man-sized eggs.";
 		say "     Wondering what happened here, you spy a bit of some military camo worked into the lining of one of the eggs. Closer investigation shows sign of a struggle, with several empty shell casings and even a thoroughly gummed up and useless military sidearm lying around. Recalling some of your earlier encounters and sightings with the wyverns in the city, you realize that it looks like they were trying to transport a couple of the beasts to some other location, probably for study like in that camp you saw earlier. Things obviously didn't go as planned again. As you look around at the numerous eggs that likely hold the transforming soldiers, you can't help but wonder what the military's interest in all of this is and why they aren't already in the city in force to help the survivors.";
 		say "     You are startled out of your thoughts by one of the eggs shaking a bit as you stare at it and a small crack in the shell forming. Realizing that the eggs will probably start hatching soon, and that you are surrounded by quite a number of eggs indeed, you give a shudder as you hurry on your way, though you pause to take a sample of the goop surrounding the area.";
-		increase carried of wyvern goop by 1;
+		ItemGain wyvern goop by 1;
 		extend game by 8;
 		now Military presence is resolved;
 
@@ -160,7 +160,7 @@ Instead of Resolving a Locked utility room:
 	else if Resolution of Locked Utility Room is 1: [second encounter]
 		say "     Exploring the sewers further, you stumble across a large trail of dried cum. Feeling a sense of perverse curiosity, you begin to backtrack to see where the large trail came from. To your surprise, the trail seems to lead you right back to the utility room you came across earlier, only this time the door appears to be open. Carefully peeking around the side of the door, you see that this area hasn't been used as a simple utility room for quite some time. The tool racks are filled with strange and mildly disturbing looking skulls and other items, and the machinery is covered in strange symbols and writing that hurts your eyes to look at it.";
 		say "     In the center of the room is a large black pentagram, surrounded by occult symbols. Part of the pentagram is obscured by what appears to be a large pool of cum. Lying in their own smaller pools of seed are five empty black robes, probably worn by whoever was in here at the time. The intense, musky odor trapped in the room is starting to make your eyes water and your body heat up in response. Deciding it would be a good idea to leave before you end up doing something you might regret, you quickly grab a couple items lying around and duck back outside.";
-		increase carried of demon seed by 2;
+		ItemGain demon seed by 2;
 		now Resolution of Locked Utility Room is 2; [locked utility room done]
 		now Locked utility room is resolved;
 
@@ -219,7 +219,7 @@ The sarea of Broken fountain is "Park".
 
 Instead of Resolving a Broken fountain:
 	say "     You hear a soft trickling noise while wandering through the park trail, like water softly running over stone. Following the noise, you come to a busted water fountain, apparently destroyed by several of the creatures fighting (or doing other things) in the area. Glancing around, you manage to find an empty container to put some of the water in before heading on your way.";
-	increase carried of dirty water by 1;
+	ItemGain dirty water by 1;
 	now Broken fountain is resolved;
 
 
@@ -280,8 +280,8 @@ The sarea of squatters den is "Mall".
 
 Instead of resolving a squatters den:
 	say "     Exploring the sewers underneath the mall, you find signs of a recent struggle. Investigating more closely, you see where something came across what appears to be a recently-inhabited squatter's den. Piles of junk, blankets, and even an old shopping cart have been dragged down here and set up in a small alcove. From the looks of the recent struggle, the den isn't inhabited any longer. Carefully picking through the piles of junk, you look for anything that might be of use. Finding some food and a bottle of water that is none too clean, you leave the den and head about your business.";
-	increase carried of dirty water by 1;
-	increase carried of food by 1;
+	ItemGain dirty water by 1;
+	ItemGain food by 1;
 	now squatters den is resolved;
 
 
@@ -296,7 +296,7 @@ The sarea of leaking pipe is "Mall".
 
 Instead of resolving a leaking pipe:
 	say "     As you travel the sewers and utility corridors under the mall, you hear a steady trickling noise coming from down one of the passageways. The sound grows louder as you move closer, eventually discovering a leaking water pipe. You apparently aren't the only person to have discovered this source of water though, as someone has set up a couple small containers under the steady leak. As the containers are definitely overflowing, whoever set them up obviously hasn't been back in a while. Sensing an opportunity, you quickly gather up a couple of the full containers and place them in your pack, then hurry along before someone comes looking for them.";
-	increase carried of dirty water by 2;
+	ItemGain dirty water by 2;
 	now leaking pipe is resolved;
 
 
@@ -318,7 +318,7 @@ Instead of Resolving a library visitor:
 		say "     Returning to the library in a better mood than normal, your foraging having gone well today, you find that some creature has paid the library a visit in your absence again. The creature seems to have actually tried searching the area around the building this time for other entry points, apparently not able to get in the doors you fortuitously locked behind you. You wonder if this is the same visitor as last time, as it is showing much more reasoning capability now.. Still, it didn't get in, and you came back from the city with some extra food. That's definitely a good sign, isn't it?";
 		now Resolution of Library Visitor is 2; [second encounter]
 		now libvis is 2;
-		increase carried of food by 1;
+		ItemGain food by 1;
 	else if libvis is 2:
 		say "     Returning from your hours of searching the city, you are relieved to see the library up ahead of you and the chance to rest and relax a little from your scavenging. However, as soon as you let your guard down to unlock the door and let yourself in, one of the creatures prowling the city springs out of concealment and attacks!'";
 		fight;
@@ -337,9 +337,9 @@ Instead of Resolving a library visitor:
 		say "     Fending off the attack from the rear, you bravely turn to face the creature still lurking inside the library. Your arms tired and your body tingling from the rush of adrenaline, you step into the library itself. You don't have to wait long for the creature to notice your presence, and with a swift cry it attacks!";
 		fight;
 		say "     Exhausted but victorious, you look around the site of the battle with a sigh, the ambushing beasts having left quite a bit of a mess behind themselves. Consoling yourself with the thought that you doubt they will try anything like that again, you begin the painstaking task of cleaning the area up at least enough that you can move around easily. In the process of cleaning up after the creatures, you find a formerly overlooked supply room with what appears to be an open utility door leading to a small maintenance shed out back that also seems to be open. Having figured out how the creatures found their way inside, you quickly lock both doors up and jam them closed, ensuring that the creatures won't be able to use that entry again.";
-		say "[bold type]You find two cans of food and two water bottles in the supply room![roman type][line break]";
-		increase carried of food by 2;
-		increase carried of water bottle by 2;
+		say "     You end up finding some items in the supply room!";
+		ItemGain food by 2;
+		ItemGain water bottle by 2;
 		increase score by 10;
 		now Resolution of Library Visitor is 5; [fifth encounter]
 		now library visitor is resolved;

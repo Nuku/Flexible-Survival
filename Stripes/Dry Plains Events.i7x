@@ -80,8 +80,7 @@ Instead of resolving a Partial Ruin:
 		now Resolution of Partial Ruin is 1; [Failed to scavenge anything]
 	else:
 		say "     Having beaten them into retreat, you search through the ruins of the store they destroyed. It seems that little of value remained in here even before they tore the place down from below. You do manage to find a couple of cans of food undamaged by the collapse. After storing it away, you dust yourself off you leave the ruined store behind to be reclaimed by the grasslands, as the burrowing prairie dogs would rather have it.";
-		say "     Food x2 obtained.";
-		increase carried of food by 2;
+		ItemGain food by 2;
 		increase score by 5;
 		now Resolution of Partial Ruin is 2; [Successfully scavenged food]
 	now Partial Ruin is resolved;
@@ -125,8 +124,7 @@ Instead of resolving a Hardware Store Ruins:
 					say "     You slink deeper into the shadows and turn to depart in the other direction. You are able to follow the shadow of the crumbling wall for some time, but eventually it ends. With the ceiling having collapsed quite some time ago, you are left to cross a brightly lit gap before you can reach safety. Glancing at the group of centaurs, you wait until they appear to be distracted and then make your move. You cross to the other side of the opening and make it to the edge of the ruins. Hopping over the final pile of rubble, you make a sprint back to the dry plains. Sparing a glance to the rear, you see no signs of pursuit. Looks like you made out, leaving the pack of centaurs none the wiser.";
 		else:
 			say "     Realizing that the 2x2 is holding the surrounding junk together, you proceed more cautiously lest it all come tumbling down on you. You approach from a different angle, and this time, you find you are able to easily slide the plank out of its rubble prison. Although it's a bit longer than you would prefer, you find that it would make for a nice club with some improvements. You grab a pack of nails you found previously and bash them into the board using a rock. You wrap some fabric tape, also scavenged from within the ruins, around the base to give you a better grip and end up with a crude spiked club.";
-			say "     [bold type]Spiked club obtained![roman type][line break]";
-			increase carried of spiked club by 1;
+			ItemGain spiked club by 1;
 			increase score by 5;
 			now Hardware Store Ruins is resolved;
 	else:
@@ -225,17 +223,15 @@ Instead of resolving a Pit Trap:
 	if Player consents:
 		say "     Grabbing the pack, you start to hoof it away before whoever set the trap returns. You chuckle as you hear the soldier screaming at you before his screams of anger turn to those of fear before being silenced. Clearly the pit's creator or some other monster found the noisy human and they are going to be getting better acquainted. You find a spot some distance away, sheltered by a mound of rubble, to examine the bag's contents. Aside from a pocketknife, there a medkit and a ration pack to go along with the rope.";
 		if scenario is "Bunker" or scenario is "Caught Outside":
-			say "Medkit and food obtained.";
-			increase carried of medkit by 1;
-			increase carried of food by 1;
+			ItemGain medkit by 1;
+			ItemGain food by 1;
 			increase score by 5;
 			SanLoss 5;
 			now Resolution of Pit Trap is 1; [Stole bag, Bunker or Caught Outside Scenario]
 		else:
-			say "Pocketknife, medkit and food obtained.";
-			increase carried of pocketknife by 1;
-			increase carried of medkit by 1;
-			increase carried of food by 1;
+			ItemGain pocketknife by 1;
+			ItemGain medkit by 1;
+			ItemGain food by 1;
 			increase score by 10;
 			SanLoss 5;
 			now Resolution of Pit Trap is 2; [Stole bag, Other Scenarios]
@@ -265,7 +261,7 @@ to say prairiedogfight:
 		now Resolution of Pit Trap is 3; [Fought Prairie Dogs, Lost]
 	else:
 		say "     Defeating the prairie dogs, you manage to drive them off. Luckily, you were able to deal with them in time and the soldier still seems to be human. He thanks you profusely for your help and gathers up his gear. He searches through his pack and, needing the medkit for his own injuries, passes you his rations, saying he'll have to head back to base to report in on this new hazard in the area. You wish him well and head your separate ways, feeling much better about yourself.";
-		increase carried of food by 1;
+		ItemGain food by 1 silently;
 		increase score by 25;
 		SanBoost 5;
 		increase morale of Player by 3;
@@ -362,7 +358,7 @@ Instead of resolving a Watering Hole:
 				say "     After defeating the eagle and sending it on its way, you face the pond, trying to decide if you'll take a drink. Shall you lean down and have some water from the pond?";
 				if Player consents:
 					say "     Deciding that you'd rather have the water, regardless of the consequences, you lean in and drink your fill of the tainted waters. You can taste the arousing flavor of their semen mixed into the water, but you're too excited now to stop. As you finish your long drink, you spot a reflection in the water and, looking up, you spot more eagles soaring above you. You decide to hightail it out of there before the others come swooping in to deal with the interloper around their bathing spot, only pausing to grab a couple of the feathers lying around before you go.";
-					increase carried of eagle feather by 2;
+					ItemGain eagle feather by 2 silently;
 					let ponddrinks be ( 1 + ( ( thirst of Player - 1 ) / 25 ) );
 					if "Iron Stomach" is not listed in feats of Player:
 						repeat with y running from 1 to ponddrinks:
@@ -373,7 +369,7 @@ Instead of resolving a Watering Hole:
 					now Resolution of Watering Hole is 3; [Defeated Eagle, Drank]
 				else:
 					say "     Deciding it'd probably be best to avoid the tainted waters, you get up. Spotting more eagles in the air above you, you decide to hightail it out of there before the others come swooping in to deal with the interloper around their bathing spot. You pause only long enough to grab a couple of the feathers scattered around the edge of the pond.";
-					increase carried of eagle feather by 2;
+					ItemGain eagle feather by 2 silently;
 					increase score by 5;
 					now Resolution of Watering Hole is 4; [Defeated eagle, Did not Drink]
 	else:

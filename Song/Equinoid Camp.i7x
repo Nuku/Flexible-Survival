@@ -45,7 +45,7 @@ instead of navigating Equinoid Camp while equinoidstatus is 10:
 	say "     Amaryllis is among them and she runs into your arms, clearly elated at your success, but many of the others still seem skeptical of you. Before she and Amaryllis have a chance to start arguing again, their leader appears and separates the pair. She then turns to you.";
 	if Player is perminfected:
 		say "     Their leader looks you over for a while, but then frowns and motions for several of the warriors. 'This one is tainted and unable to become one of us. To welcome one in such a state into our midst would lead to our destruction. The traveler may take this as reward for their help against the wolves, but that is all.' A basket of fruit is tossed at your feet while the warriors step forward, ushering you to leave after claiming your reward.";
-		increase carried of food by 2;
+		ItemGain food by 2;
 		now equinoidstatus is 100;
 		now Equinoid Camp is unknown;
 		move player to Park Entrance;
@@ -102,7 +102,7 @@ instead of navigating Equinoid Camp while equinoidstatus is 10:
 			LineBreak;
 			say "     Reaction to your rejection of the offer is mixed. Amaryllis is clearly disappointed, but Bryony smiles smugly. Many of the tribe seem offended while others are more ambivalent to this. Their leader nods and motions for one of the herd to approach with a basket. 'We accept your decision. We are an honorable people and will provide you this in thanks for your help with the wolves instead,' she says, passing you the small basket of fruit. She drops her voice while talking to you. 'Do not expect that all of the tribe will be pleased with this slight. It would be wise to expect some of the warriors to come seeking to more forcibly add you to the herd as another of their mares instead.'";
 			say "     She turns back to those gathered. 'The traveler has assisted us against the wolves and so may leave here in peace.' And with that, and a little grumbling from some, the equinoids disperse, Amaryllis walking away sadly while Bryony watches you go.";
-			increase carried of food by 2;
+			ItemGain food by 2;
 			now equinoidstatus is 100;
 			now Equinoid Camp is unknown;
 			move player to Park Entrance;

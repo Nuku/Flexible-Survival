@@ -99,13 +99,13 @@ instead of conversing the Zoe:
 				extend game by 6;
 			else if randomnumber is 2:
 				say "     'While I was doing my things in an alleyway, a mutant crawled out from his hiding place and tried to trade me a couple of water bottles. And by [']trade['], he meant suck his cock. [if HP of Zoe is 1]This asshole reminded me of that guard, but I held myself from obliterating his groin with a kick[else]Because of what almost happened with that security guard, the other day, I knew better than to trust this pervert[end if]. I had a better idea in mind.' I approached from the fucker, and began to kneel. Poor asshole let his guard down, and he did not expect a rabbit's legs to have this much power. I snatched the bottles, and ran ahead while the poor schmuck screamed bloody murder.' Zoe chuckled, and lobbed to you a full bottle. 'Take this one. I would feel bad not giving you a share, since you're the reason I am not desperate enough to debase myself for some supplies.'";
-				increase carried of water bottle by 1;
+				ItemGain water bottle by 1;
 			else if randomnumber is 3:
 				say "     [one of]'I had found the perfect spot for a big painting, and I started going to work. Half-an-hour later, two hyenas were coming out of the building on the other side of the street and go in my direction. I thought I was in big trouble and prepared to run, but they made big signs at me and told me not to be afraid. They were looking for someone to help [']decorate['] their place, and they liked what I was doing. So they hired me for the job, and paid me in food. There was more than enough for me, so here's a little [']rent['] of sorts, for letting me sleep here.'[or]Since I had nothing better to do today, I stopped by the hyenas again. They wanted a fresco in their backroom. They are a super polite bunch actually. They cleaned the place before I went to work, and everyone came to greet me during the day. And once again, they gave me way too much food for a small bunny like me. Here, have some.'[stopping] Zoe hands out a beg of chips to you.";
-				increase carried of chips by 1;
+				ItemGain chips by 1;
 			else:
 				say "     'So, I, huh... I went back to the mall.' You immediately frown at her words, but Zoe is quick to defend herself. 'It's not what you think! I was not there to tag anything. [one of]I just wanted to get some new clothes. I was a little stressed at first; I was afraid that one of the guards remember me. But then one of the rats noticed and brought me to their boss. Ronda was her name. She told me that I was not the first one the guards [if HP of Zoe is 1]abused[else]tried to abuse[end if] and that she was on the case. And she even gave me a free coupon as an apology. And tada...' Zoe takes a T-shirt and a pair of shorts, both new, from her bag and shows them to you proudly.[or] I was there to restock, actually. It almost felt like a normal shopping mall. On a very calm day, and with mutants everywhere.'[stopping] Zoe picks up a can of pepperspray and gives it to you. 'And I did not need this, actually. Since you are almost always out there, I think that you would make a better use of it.'";
-				increase carried of pepperspray by 1;
+				ItemGain pepperspray by 1;
 			now XP of Zoe is 0;
 			if Loyalty of Zoe < 5:
 				increase Loyalty of Zoe by 1;
@@ -611,28 +611,28 @@ instead of trading the food when the current action involves the Wolverine Pimp:
 		say "[wolverineTradeRefuse]";
 	else:
 		say "[wolverineTrade]";
-		decrease carried of food by 1;
+		ItemLoss food by 1;
 
 instead of trading the water bottle when the current action involves the Wolverine Pimp:
 	if "Used" is listed in the traits of Zoe or Player is not male or the Suspicious Van is open:
 		say "[wolverineTradeRefuse]";
 	else:
 		say "[wolverineTrade]";
-		decrease carried of water bottle by 1;
+		ItemLoss water bottle by 1;
 
 instead of trading the chips when the current action involves the Wolverine Pimp:
 	if "Used" is listed in the traits of Zoe or Player is not male or the Suspicious Van is open:
 		say "[wolverineTradeRefuse]";
 	else:
 		say "[wolverineTrade]";
-		decrease carried of chips by 1;
+		ItemLoss chips by 1;
 
 instead of trading the soda when the current action involves the Wolverine Pimp:
 	if "Used" is listed in the traits of Zoe or Player is not male or the Suspicious Van is open:
 		say "[wolverineTradeRefuse]";
 	else:
 		say "[wolverineTrade]";
-		decrease carried of soda by 1;
+		ItemLoss soda by 1;
 
 to say wolverineTrade:
 	say "     The guard grabs your offering and puts it into his bag. 'Thaaank you!' He gets off his seat and unlocks the backdoor of the van with his key. 'Here's the rules: no maiming, no blood, no piss, no shitstuff. You got one hour; if I bang on the door, it doesn't matter if you're [']almost there[']: you pull out and you get out. Are we good? Good.' After this, he opens the van, letting you gaze at Zoe's lying form in the back.";

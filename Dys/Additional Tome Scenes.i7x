@@ -209,6 +209,6 @@ Understand "givetome" as GetTome.
 
 Carry out GetTome:
 	say "     Done.";
-	increase carried of ancient tome by 1;
+	ItemGain ancient tome by 1;
 
 Additional Tome Scenes ends here.

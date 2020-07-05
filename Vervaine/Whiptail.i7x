@@ -22,11 +22,9 @@ to say LoseToWhiptail: [Will she find a vagina? If she doesn't, she's disappoint
 	else if Player is male:
 		say "     She crouches down and runs a hand over your crotch, finding your cock. She removes her hand with a sigh and says, 'Do you have [italic type]anything[roman type] useful for me?' She searches the rest of your belongings, taking what she needs before jogging away.";
 		if carried of food > 2:
-			say "[bold type]You lose 1 food![roman type][line break]";
-			decrease carried of food by 1;
+			ItemLoss food by 1;
 		if carried of water bottle > 2:
-			say "[bold type]You lose 1 water bottle![roman type][line break]";
-			decrease carried of water bottle by 1;
+			ItemLoss water bottle by 1;
 	else if Player is female:
 		say "     She crouches down and runs a hand over your crotch, finding your cleft. She grins and says, 'Looks like it's my lucky day!' She begins undressing you eagerly, tossing your gear and possessions with abandon before stripping down herself.";
 		say "[WhiptailTrib]";
@@ -36,11 +34,9 @@ to say LoseToWhiptail: [Will she find a vagina? If she doesn't, she's disappoint
 	else:
 		say "     She crouches down and runs a hand over your crotch, finding nothing. She gives you a bewildered look before saying, 'Well, I hope you have something in your pack for me.' She searches the rest of your belongings, taking what she needs before jogging away.";
 		if carried of food > 2:
-			say "[bold type]You lose 1 food![roman type][line break]";
-			decrease carried of food by 1;
+			ItemLoss food by 1;
 		if carried of water bottle > 2:
-			say "[bold type]You lose 1 water bottle![roman type][line break]";
-			decrease carried of water bottle by 1;
+			ItemLoss water bottle by 1;
 
 to say BeatTheWhiptail: [Catch her if you can. Beware, she's got no time for penis.]
 	if WhiptailLossCount is 0:

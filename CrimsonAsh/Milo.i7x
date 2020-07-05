@@ -131,8 +131,7 @@ to say SexWithMilo1:
 		say "     Milo stretches, cracking his neck and wiping his messy cock off over your soft asscheeks. He sighs and begins to make his way back to his hole-home. 'You've definitely earned the chow. Don't eat it all at once now.' He laughs, hopping back into his home and disappearing from sight. A little woozy, you slowly stand, feeling the cat cum dribble out of your ass and down your thighs. Before you can decide on what to do next or what direction you're even going in, you hear Milo's voice echo from inside of his hidey hole. 'Oh! And if you need to find me again, look for the little M's I carved into some of the trees. Should lead you back here!' Well that's useful. If you ever need quick food or a quick fuck, you can try to find one of Milo's trees to follow.";
 		now Resolution of Bobcat Encounter is 2; [talked, ass fuck for food]
 	LineBreak;
-	say "[bold type]You gain 1 food![roman type][line break]";
-	increase carried of food by 1;
+	ItemGain food by 1;
 
 to say SexWithMilo2:
 	say "     You drop to your knees before Milo and lean forward, ducking low. Milo coos as he sees your plan in motion and sits back, leaning against a tree while he watches you with delight. You press your face against his groin and drag your tongue along his slowly hardening cat phallus, glad that Milo doesn't wear clothes, as your hands form around his tasty cock, stroking and squeezing him to full mast. Milo moans and groans above you, lightly pushing forward into your face whenever he can. For yourself, you're just enjoying his wild musky taste while Milo's paws brush into your scalp, petting you affectionately as you start to swallow his feline member.";
@@ -144,8 +143,7 @@ to say SexWithMilo2:
 	say "     Jets of tasty cat cum fill your throat and spills out and around your mouth, dribbling down your chin and around his humping member. You obediently suck down every drop of seed he offers up and even then you're still sucking him clean. He mewls at your enthusiasm but has to pull himself away from your heavenly mouth still trying to suck his dry cock clean. 'Whoa, wow, you're pretty damn good at that. You definitely earned your reward, I'd say.' He laughs, wobbling a little on shaky feet. 'Damn, I might have to keep you if you stay this good,' he says, smiling down at you in good humor. Although you can't help but get just a little excited at the prospect of being fully owned by Milo.";
 	say "     You lick your lips clean of his seed and swallow what remains in your mouth, as well as scooping up any lost droplets that had run down your chin and slurping them down too. Milo chirps approvingly at the sight, his member twitching again briefly. Standing up, you thank Milo for both meals, causing him to burst out laughing. 'Hah! Pretty good. I'll definitely be seeing you around, Kit. Stop on by anytime you're feeling up for it.' He finishes by sitting down again and leaning against his tree, both hands behind his head with a blissed out expression on his cute, feline face. Smiling and sighing, you pocket the food you've rightfully earned and turn back around to get back to the nanite apocalypse.";
 	LineBreak;
-	say "[bold type]You gain 1 food![roman type][line break]";
-	increase carried of food by 1;
+	ItemGain food by 1;
 
 to say WonAgainstMilo:
 	if Player is male:
@@ -169,8 +167,7 @@ to say WonAgainstMilo:
 		say "     You gather your things and go to examine the hole the cat had greeted you from. Kneeling down and examining it you reach in and grip something metal. Pulling it out you find it's a can of food! You reach down and retrieve two more before putting all three in your pack. You then quickly leave both the strange, fucked-silly bobcat and his home behind.";
 		now Resolution of Bobcat Encounter is 23; [fought, used his tongue]
 	LineBreak;
-	say "[bold type]You gain 3 food![roman type][line break]";
-	increase carried of food by 3;
+	ItemGain food by 3;
 
 to say LostAgainstMilo:
 	setmonster "Bobcat";

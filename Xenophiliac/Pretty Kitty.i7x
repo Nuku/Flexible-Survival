@@ -235,25 +235,25 @@ carry out TshirtObtain:
 				if food is owned:
 					say "     You slide a packet of food over to the bubbly catgirl, who snaps it off the counter as soon as you put it down. Looking closely over the packet of food, she checks over it for a few moments before smiling happily and letting you pick up the outfit.";
 					say "     'Thanks for the purchase, and come again soon!'";
-					delete food;
-					increase carried of t-shirt & blue jeans by 1;
+					ItemLoss food by 1;
+					ItemGain t-shirt & blue jeans by 1;
 				else:
 					say "     Andromeda looks at you with humorous, but disapproving look. 'You need to ACTUALLY have the food here; I can't accept imaginary things for payment!' Andromeda says to you, flailing her hands out in an obviously fake attempt at seriousness.";
 			else:
 				if gryphon milk is owned:
 					say "     The Catgirl squeals delightedly as you slide a sealed jar of gryphon milk over to her, the jar disappearing as quickly as it was set down. Immediately popping the jar open and lapping at the fresh milk inside, she talks in between laps as you pick up the shirt and jeans.";
 					say "     'Thanks for' -lap- 'the purchase, come' -lap- 'again soon!'";
-					delete gryphon milk;
-					increase carried of t-shirt & blue jeans by 1;
+					ItemLoss gryphon milk by 1;
+					ItemGain t-shirt & blue jeans by 1;
 				else if dolphin milk is owned:
 					say "     Putting the jar of dolphin milk on the counter, Andromeda looks at it curiously. Picking up the jar, she deftly unscrews it and sniffs it curiously, and you figure that she hasn't had dolphin milk before. Taking a tentative lick of the milk, she lets out a squeal and starts to haphazardly drink the dolphin milk. She waves at you absent-mindedly, too wrapped up in drinking. You smile to yourself as you pick up your outfit, figuring that Andromeda is going to be busy for a while.";
-					delete dolphin milk;
-					increase carried of t-shirt & blue jeans by 1;
+					ItemLoss dolphin milk by 1;
+					ItemGain t-shirt & blue jeans by 1;
 				else if distilled milk is owned:
 					say "     Putting out the packet of distilled milk, Andromeda picks up your payment, looking it over intently. Putting the packet next to her ear, she shakes it vigorously, and you hear the powered milk shake within. Satisfied, she slides the packet into a compartment beneath the counter.";
 					say "     'Thanks! I'm gonna save that for a snack later. Enjoy your purchase!'";
-					delete distilled milk;
-					increase carried of t-shirt & blue jeans by 1;
+					ItemLoss distilled milk by 1;
+					ItemGain t-shirt & blue jeans by 1;
 				else:
 					say "     Andromeda huffs disappointedly at you. 'Come on, don't tease me like that!'";
 		else:
@@ -272,25 +272,25 @@ carry out BlouseObtain:
 				if food is owned:
 					say "     You slide a packet of food over to the bubbly catgirl, who snaps it off the counter as soon as you put it down. Looking closely over the packet of food, she checks over it for a few moments before smiling happily and letting you pick up the outfit.";
 					say "     'Thanks for the purchase, and come again soon!'";
-					delete food;
-					increase carried of blouse outfit by 1;
+					ItemLoss food by 1;
+					ItemGain blouse outfit by 1;
 				else:
 					say "     Andromeda looks at you with humorous, but disapproving look. 'You need to ACTUALLY have the food here; I can't accept imaginary things for payment!' Andromeda says to you, flailing her hands out in an obviously fake attempt at seriousness.";
 			else:
 				if gryphon milk is owned:
 					say "     The Catgirl squeals delightedly as you slide a sealed jar of gryphon milk over to her, the jar disappearing as quickly as it was set down. Immediately popping the jar open and lapping at the fresh milk inside, she talks in between laps as you pick up the set.";
 					say "     'Thanks for' -lap- 'the purchase, come' -lap- 'again soon!'";
-					delete gryphon milk;
-					increase carried of blouse outfit by 1;
+					ItemLoss gryphon milk by 1;
+					ItemGain blouse outfit by 1;
 				else if dolphin milk is owned:
 					say "     Putting the jar of dolphin milk on the counter, Andromeda looks at it curiously. Picking up the jar, she deftly unscrews it and sniffs it curiously, and you figure that she hasn't had dolphin milk before. Taking a tentative lick of the milk, she lets out a squeal and starts to haphazardly drink the dolphin milk. She waves at you absent-mindedly, too wrapped up in drinking. You smile to yourself as you pick up your outfit, figuring that Andromeda is going to be busy for a while.";
-					delete dolphin milk;
-					increase carried of blouse outfit by 1;
+					ItemLoss dolphin milk by 1;
+					ItemGain blouse outfit by 1;
 				else if distilled milk is owned:
 					say "     Putting out the packet of distilled milk, Andromeda picks up your payment, looking it over intently. Putting the packet next to her ear, she shakes it vigorously, and you hear the powered milk shake within. Satisfied, she slides the packet into a compartment beneath the counter.";
 					say "     'Thanks! I'm gonna save that for a snack later. Enjoy your purchase!'";
-					delete distilled milk;
-					increase carried of blouse outfit by 1;
+					ItemLoss distilled milk by 1;
+					ItemGain blouse outfit by 1;
 				else:
 					say "     Andromeda huffs disappointedly at you. 'Come on, don't tease me like that!'";
 		else:
@@ -309,25 +309,25 @@ carry out TuxedoObtain:
 				if food is owned:
 					say "     You slide a packet of food over to the bubbly catgirl, who snaps it off the counter as soon as you put it down. Looking closely over the packet of food, she checks over it for a few moments before smiling happily and letting you pick up the outfit.";
 					say "     'Thanks for the purchase, and come again soon!'";
-					delete food;
-					increase carried of tuxedo by 1;
+					ItemLoss food by 1;
+					ItemGain tuxedo by 1;
 				else:
 					say "     Andromeda looks at you with humorous, but disapproving look. 'You need to ACTUALLY have the food here; I can't accept imaginary things for payment!' Andromeda says to you, flailing her hands out in an obviously fake attempt at seriousness.";
 			else:
 				if gryphon milk is owned:
 					say "     The Catgirl squeals delightedly as you slide a sealed jar of gryphon milk over to her, the jar disappearing as quickly as it was set down. Immediately popping the jar open and lapping at the fresh milk inside, she talks in between laps as you pick up the set.";
 					say "     'Thanks for' -lap- 'the purchase, come' -lap- 'again soon!'";
-					delete gryphon milk;
-					increase carried of tuxedo by 1;
+					ItemLoss gryphon milk by 1;
+					ItemGain tuxedo by 1;
 				else if dolphin milk is owned:
 					say "     Putting the jar of dolphin milk on the counter, Andromeda looks at it curiously. Picking up the jar, she deftly unscrews it and sniffs it curiously, and you figure that she hasn't had dolphin milk before. Taking a tentative lick of the milk, she lets out a squeal and starts to haphazardly drink the dolphin milk. She waves at you absent-mindedly, too wrapped up in drinking. You smile to yourself as you pick up your outfit, figuring that Andromeda is going to be busy for a while.";
-					delete dolphin milk;
-					increase carried of tuxedo by 1;
+					ItemLoss dolphin milk by 1;
+					ItemGain tuxedo by 1;
 				else if distilled milk is owned:
 					say "     Putting out the packet of distilled milk, Andromeda picks up your payment, looking it over intently. Putting the packet next to her ear, she shakes it vigorously, and you hear the powered milk shake within. Satisfied, she slides the packet into a compartment beneath the counter.";
 					say "     'Thanks! I'm gonna save that for a snack later. Enjoy your purchase!'";
-					delete distilled milk;
-					increase carried of tuxedo by 1;
+					ItemLoss distilled milk by 1;
+					ItemGain tuxedo by 1;
 				else:
 					say "     Andromeda huffs disappointedly at you. 'Come on, don't tease me like that!'";
 		else:
@@ -346,25 +346,25 @@ carry out SummerObtain:
 				if food is owned:
 					say "     You slide a packet of food over to the bubbly catgirl, who snaps it off the counter as soon as you put it down. Looking closely over the packet of food, she checks over it for a few moments before smiling happily and letting you pick up the outfit.";
 					say "     'Thanks for the purchase, and come again soon!'";
-					delete food;
-					increase carried of summer outfit by 1;
+					ItemLoss food by 1;
+					ItemGain summer outfit by 1;
 				else:
 					say "     Andromeda looks at you with humorous, but disapproving look. 'You need to ACTUALLY have the food here; I can't accept imaginary things for payment!' Andromeda says to you, flailing her hands out in an obviously fake attempt at seriousness.";
 			else:
 				if gryphon milk is owned:
 					say "     The Catgirl squeals delightedly as you slide a sealed jar of gryphon milk over to her, the jar disappearing as 	quickly as it was set down. Immediately popping the jar open and lapping at the fresh milk inside, she talks in between laps as you pick up the set.";
 					say "     'Thanks for' -lap- 'the purchase, come' -lap- 'again soon!'";
-					delete gryphon milk;
-					increase carried of summer outfit by 1;
+					ItemLoss gryphon milk by 1;
+					ItemGain summer outfit by 1;
 				else if dolphin milk is owned:
 					say "     Putting the jar of dolphin milk on the counter, Andromeda looks at it curiously. Picking up the jar, she deftly unscrews it and sniffs it curiously, and you figure that she hasn't had dolphin milk before. Taking a tentative lick of the milk, she lets out a squeal and starts to haphazardly drink the dolphin milk. She waves at you absent-mindedly, too wrapped up in drinking. You smile to yourself as you pick up your outfit, figuring that Andromeda is going to be busy for a while.";
-					delete dolphin milk;
-					increase carried of summer outfit by 1;
+					ItemLoss dolphin milk by 1;
+					ItemGain summer outfit by 1;
 				else if distilled milk is owned:
 					say "     Putting out the packet of distilled milk, Andromeda picks up your payment, looking it over intently. Putting the packet next to her ear, she shakes it vigorously, and you hear the powered milk shake within. Satisfied, she slides the packet into a compartment beneath the counter.";
 					say "     'Thanks! I'm gonna save that for a snack later. Enjoy your purchase!'";
-					delete distilled milk;
-					increase carried of summer outfit by 1;
+					ItemLoss distilled milk by 1;
+					ItemGain summer outfit by 1;
 				else:
 					say "     Andromeda huffs disappointedly at you. 'Come on, don't tease me like that!'";
 		else:
@@ -415,8 +415,8 @@ carry out SpikedCollarObtain:
 				if food is owned:
 					say "     You slide a packet of food over to the bubbly catgirl, who snaps it off the counter as soon as you put it down. Looking closely over the packet of food, she checks over it for a few moments before smiling happily and letting you pick up the collar.";
 					say "     'Thanks for the purchase, and come again soon!'";
-					delete food;
-					increase carried of spiked collar by 1;
+					ItemLoss food by 1;
+					ItemGain spiked collar by 1;
 					if lust of Andromeda < 1, increase lust of Andromeda by 1;
 				else:
 					say "     Andromeda looks at you with humorous, but disapproving look. 'You need to ACTUALLY have the food here; I can't accept imaginary things for payment!' Andromeda says to you, flailing her hands out in an obviously fake attempt at seriousness.";
@@ -424,19 +424,19 @@ carry out SpikedCollarObtain:
 				if gryphon milk is owned:
 					say "     The Catgirl squeals delightedly as you slide a sealed jar of gryphon milk over to her, the jar disappearing as quickly as it was set down. Immediately popping the jar open and lapping at the fresh milk inside, she talks in between laps as you pick up the collar.";
 					say "     'Thanks for' -lap- 'the purchase, come' -lap- 'again soon!'";
-					delete gryphon milk;
-					increase carried of spiked collar by 1;
+					ItemLoss gryphon milk by 1;
+					ItemGain spiked collar by 1;
 					if lust of Andromeda < 1, increase lust of Andromeda by 1;
 				else if dolphin milk is owned:
 					say "     Putting the jar of dolphin milk on the counter, Andromeda looks at it curiously. Picking up the jar, she deftly unscrews it and sniffs it curiously, and you figure that she hasn't had dolphin milk before. Taking a tentative lick of the milk, she lets out a squeal and starts to haphazardly drink the dolphin milk. She waves at you absent-mindedly, too wrapped up in drinking. You smile to yourself as you pick up your collar, figuring that Andromeda is going to be busy for a while.";
-					delete dolphin milk;
-					increase carried of spiked collar by 1;
+					ItemLoss dolphin milk by 1;
+					ItemGain spiked collar by 1;
 					if lust of Andromeda < 1, increase lust of Andromeda by 1;
 				else if distilled milk is owned:
 					say "     Putting out the packet of distilled milk, Andromeda picks up your payment, looking it over intently. Putting the packet next to her ear, she shakes it vigorously, and you hear the powered milk shake within. Satisfied, she slides the packet into a compartment beneath the counter.";
 					say "     'Thanks! I'm gonna save that for a snack later. Enjoy your purchase!'";
-					delete distilled milk;
-					increase carried of spiked collar by 1;
+					ItemLoss distilled milk by 1;
+					ItemGain spiked collar by 1;
 					if lust of Andromeda < 1, increase lust of Andromeda by 1;
 				else:
 					say "     Andromeda huffs disappointedly at you. 'Come on, don't tease me like that!'";
@@ -455,8 +455,8 @@ carry out FuzzyCollarObtain:
 				if food is owned:
 					say "     You slide a packet of food over to the bubbly catgirl, who snaps it off the counter as soon as you put it down. Looking closely over the packet of food, she checks over it for a few moments before smiling happily and letting you pick up the collar.";
 					say "     'Thanks for the purchase, and come again soon!'";
-					delete food;
-					increase carried of silk collar by 1;
+					ItemLoss food by 1;
+					ItemGain silk collar by 1;
 					if lust of Andromeda < 1, increase lust of Andromeda by 1;
 				else:
 					say "     Andromeda looks at you with humorous, but disapproving look. 'You need to ACTUALLY have the food here; I can't accept imaginary things for payment!' Andromeda says to you, flailing her hands out in an obviously fake attempt at seriousness.";
@@ -464,19 +464,19 @@ carry out FuzzyCollarObtain:
 				if gryphon milk is owned:
 					say "     The Catgirl squeals delightedly as you slide a sealed jar of gryphon milk over to her, the jar disappearing as 	quickly as it was set down. Immediately popping the jar open and lapping at the fresh milk inside, she talks in between laps as you pick up the collar.";
 					say "     'Thanks for' -lap- 'the purchase, come' -lap- 'again soon!'";
-					delete gryphon milk;
-					increase carried of silk collar by 1;
+					ItemLoss gryphon milk by 1;
+					ItemGain silk collar by 1;
 					if lust of Andromeda < 1, increase lust of Andromeda by 1;
 				else if dolphin milk is owned:
 					say "     Putting the jar of dolphin milk on the counter, Andromeda looks at it curiously. Picking up the jar, she deftly unscrews it and sniffs it curiously, and you figure that she hasn't had dolphin milk before. Taking a tentative lick of the milk, she lets out a squeal and starts to haphazardly drink the dolphin milk. She waves at you absent-mindedly, too wrapped up in drinking. You smile to yourself as you pick up your collar, figuring that Andromeda is going to be busy for a while.";
-					delete dolphin milk;
-					increase carried of silk collar by 1;
+					ItemLoss dolphin milk by 1;
+					ItemGain silk collar by 1;
 					if lust of Andromeda < 1, increase lust of Andromeda by 1;
 				else if distilled milk is owned:
 					say "     Putting out the packet of distilled milk, Andromeda picks up your payment, looking it over intently. Putting the packet next to her ear, she shakes it vigorously, and you hear the powered milk shake within. Satisfied, she slides the packet into a compartment beneath the counter.";
 					say "     'Thanks! I'm gonna save that for a snack later. Enjoy your purchase!'";
-					delete distilled milk;
-					increase carried of silk collar by 1;
+					ItemLoss distilled milk by 1;
+					ItemGain silk collar by 1;
 					if lust of Andromeda < 1, increase lust of Andromeda by 1;
 				else:
 					say "     Andromeda huffs disappointedly at you. 'Come on, don't tease me like that!'";
@@ -495,8 +495,8 @@ carry out NametagCollarObtain:
 				if food is owned:
 					say "     You slide a packet of food over to the bubbly catgirl, who snaps it off the counter as soon as you put it down. Looking closely over the packet of food, she checks over it for a few moments before smiling happily and letting you pick up the collar.";
 					say "     'Thanks for the purchase, and come again soon!'";
-					delete food;
-					increase carried of nametag collar by 1;
+					ItemLoss food by 1;
+					ItemGain nametag collar by 1;
 					if lust of Andromeda < 1, increase lust of Andromeda by 1;
 				else:
 					say "     Andromeda looks at you with humorous, but disapproving look. 'You need to ACTUALLY have the food here; I can't accept imaginary things for payment!' Andromeda says to you, flailing her hands out in an obviously fake attempt at seriousness.";
@@ -504,19 +504,19 @@ carry out NametagCollarObtain:
 				if gryphon milk is owned:
 					say "     The Catgirl squeals delightedly as you slide a sealed jar of gryphon milk over to her, the jar disappearing as 	quickly as it was set down. Immediately popping the jar open and lapping at the fresh milk inside, she talks in between laps as you pick up the collar.";
 					say "     'Thanks for' -lap- 'the purchase, come' -lap- 'again soon!'";
-					delete gryphon milk;
-					increase carried of nametag collar by 1;
+					ItemLoss gryphon milk by 1;
+					ItemGain nametag collar by 1;
 					if lust of Andromeda < 1, increase lust of Andromeda by 1;
 				else if dolphin milk is owned:
 					say "     Putting the jar of dolphin milk on the counter, Andromeda looks at it curiously. Picking up the jar, she deftly unscrews it and sniffs it curiously, and you figure that she hasn't had dolphin milk before. Taking a tentative lick of the milk, she lets out a squeal and starts to haphazardly drink the dolphin milk. She waves at you absent-mindedly, too wrapped up in drinking. You smile to yourself as you pick up your collar, figuring that Andromeda is going to be busy for a while.";
-					delete dolphin milk;
-					increase carried of nametag collar by 1;
+					ItemLoss dolphin milk by 1;
+					ItemGain nametag collar by 1;
 					if lust of Andromeda < 1, increase lust of Andromeda by 1;
 				else if distilled milk is owned:
 					say "     Putting out the packet of distilled milk, Andromeda picks up your payment, looking it over intently. Putting the packet next to her ear, she shakes it vigorously, and you hear the powered milk shake within. Satisfied, she slides the packet into a compartment beneath the counter.";
 					say "     'Thanks! I'm gonna save that for a snack later. Enjoy your purchase!'";
-					delete distilled milk;
-					increase carried of nametag collar by 1;
+					ItemLoss distilled milk by 1;
+					ItemGain nametag collar by 1;
 					if lust of Andromeda < 1, increase lust of Andromeda by 1;
 				else:
 					say "     Andromeda huffs disappointedly at you. 'Come on, don't tease me like that!'";

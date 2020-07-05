@@ -136,8 +136,8 @@ to say ebonflamegauntlet:
 			break;
 	if fightoutcome >= 10 and fightoutcome <= 19:
 		say "     Finishing yet another off, what couple stragglers remain scatter and flee from you. Eyeing some food and water left in their wake, you grab it before departing, returning to the wrecked city.";
-		increase carried of food by 1;
-		increase carried of water bottle by 1;
+		ItemGain food by 1;
+		ItemGain water bottle by 1;
 		now Resolution of Ebonflame Nest is 1; [fought and won]
 
 

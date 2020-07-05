@@ -554,7 +554,7 @@ To LootLocker:
 	increase diceroll by bonus;
 	if diceroll > 18:
 		say "     Proving your strength, you lift the locker slowly, slowly - then change your grip to grab under it and start pushing against the front side to get it back up. Sweat is running down your brow soon and you start to feel the strain making your muscles tremble, then you finally reach the tipping point and the locker's momentum pulls it to slam against the wall with a loud crash that pops the door open. A [bold type]police vest[roman type] tumbles out of the locker and lands at your feet, making all the effort worth it. You quickly pick it up.";
-		increase carried of police vest by 1;
+		ItemGain police vest by 1;
 		now PLRLooted is 1;
 	else if diceroll > 10:
 		say "     Proving your strength, you lift the locker slowly, slowly - then change your grip to grab under it and start pushing against the front side to get it back up. Sweat is running down your brow soon and you start to feel the strain making your muscles tremble... until you just can't hold out any more. Only a quick jump aside lets you escape the fate of being crushed under the falling piece of furniture, which lands on its face yet again with a loud bang.";
@@ -871,7 +871,7 @@ to say EscapeOption1:
 	say "You roll 1d20([dice])+[bonus] vs 19 and score [dice plus bonus]: (Perception Check)[line break]";
 	if dice + bonus >= 19:
 		say "     ...after some time searching and almost giving up hope multiple times, you do find a key. Judging from the dried cum on it, some orc must have dropped it while busy with entertaining himself. After cleaning it as good as you can with a piece of ripped fabric, you grab the key and let yourself out of the cell. When you close the door behind you, its lock automatically snaps closed again.";
-		increase carried of Cell Key by 1;
+		ItemGain Cell Key by 1;
 		move player to Breeder Lockup A;
 		now OrcSlaverStatus is 2;
 	else:
@@ -1019,7 +1019,7 @@ to say EscapeOption5:
 	LineBreak;
 	say "[OrcGangbang2]";
 	now OrcSlaverStatus is 3;
-	increase carried of Cell Key by 1;
+	ItemGain Cell Key by 1;
 	move player to Breeder Lockup A;
 	move Mul to Slave Cell 2;
 

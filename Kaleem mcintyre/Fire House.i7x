@@ -262,7 +262,7 @@ To say aidKenaz1:
 		say "     'S-so!' You turn to look at Kenaz once again. 'If you could spare the time, would you please head to the [bold type]red light district[roman type] and bring back [bold type]Pertho[roman type] for us?' Kenaz's words make a grunt of annoyance rise from out of the pit of your throat, but at the other man's hopeful look, you simply nod before going about your way. Faintly, you wonder if you have [']Rescue['] printed somewhere on your body? Because seriously...";
 		WaitLineBreak;
 		say "     'Oh, wait a minute!' You turn just in time to see Othala running over to the only table in the room and then grabbing up something before coming up to you and handing you that said something. Amazingly enough, what the Dalmatian gives you just so happens to be a... collar and leash? 'This might help make things easier on you.' The salt and pepper-haired Dalmatian snickers when you look at the items in question with a curious expression as you turn to head out.";
-		decrease carried of food by 10;
+		ItemLoss food by 10;
 		now HelpKenazOut is 2;
 		now Finding Pertho is active;
 	else:
@@ -394,11 +394,9 @@ To say aidKenaz6:
 			WaitLineBreak;
 			say "     Not knowing how long the other is going to stay unconscious for, you grab Kenaz up off of the ground and then haul yourself and his furry black-spotted butt back to the firehouse. 'Thanks a lot for not leaving me.' Kenaz whispers while trying not to laugh as the aftermath of panic begins to set into his mind about what could have just happened to him. At hearing those words, you grip the hand holding onto the Dalmatian's furry paw just a bit tighter as the two of you run down the street together, back into the relative arms of safety.";
 			LineBreak;
-			say "[bold type]You gain 3 food![roman type][line break]";
-			say "[bold type]You gain 3 water bottles![roman type][line break]";
 			now helpKenazout is 10;
-		increase carried of food by 3;
-		increase carried of water bottle by 3;
+		ItemGain food by 3;
+		ItemGain water bottle by 3;
 		increase score by 10;
 		follow the turnpass rule;
 
@@ -874,7 +872,7 @@ Instead of conversing the OtherDals:
 		if diceroll > 16:
 			say "Spending the next hour or so playing round after round with the Dals nets you collecting a vast majority of the chips that the firefighters have scattered out onto the table. Because of your charisma, you wind up winning the game and ultimately netting just a little more respect from the group as they growl playfully at you for beating them.";
 			say "     Astonishingly enough, Pertho comes up to you with a bottle of water in his jaws, offering the bottle to you for your successful win, or so you would guess. Taking the water with good grace, you thank the feral pooch by scratching him behind his ears before stuffing the water bottle into your pack. Thanking the guys for the good time, you get up from the table to let Othala have your seat and then stretch your tired limbs before going about your way.";
-			increase carried of water bottle by 1;
+			ItemGain water bottle by 1 silently;
 			increase score by 1;
 			follow the turnpass rule;
 		else:
@@ -916,7 +914,7 @@ Instead of conversing the DalmatianTroupe:
 		if diceroll > 16:
 			say "Spending the next hour or so playing round after round with the Dals nets you collecting a vast majority of the chips that the firefighters have scattered out onto the table. Because of your charisma, you wind up winning the game and ultimately netting just a little more respect from the group as they growl playfully at you for beating them.";
 			say "     Astonishingly enough, Pertho comes up to you with a bottle of water in his jaws, offering the bottle to you for your successful win, or so you would guess. Taking the water with good grace, you thank the feral pooch by scratching him behind his ears before stuffing the water bottle into your pack. Thanking the guys for the good time, you get up from the table to stretch your tired limbs before going about your way.";
-			increase carried of water bottle by 1;
+			ItemGain water bottle by 1 silently;
 			increase score by 1;
 		else:
 			say "Trying to charm your way through the game nets you a few casual smirks and growls from the others as the surrounding firefighters at the table see through your psychological gameplay. Cursing as you lose your last chip almost an hour later, you find yourself having to bow out of the game with a sigh while looking over the mass of chips [one of]Mannaz[or]Dagaz[or]Kenaz[or]Birch[or]Othalla[at random] has.";

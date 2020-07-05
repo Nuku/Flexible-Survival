@@ -12,11 +12,11 @@ to say losetoHomoSapiens:
 		say "     As you collapse at his feet, the young tribesman gives you a suspicious look, still holding his spear tightly as his eyes wander up and down over you, then look into yours. A moment later, he murmurs something in his own language, followed by the word 'Stay' in English - something he must have picked up, or be remembering from his old life before the nanites. Finally convinced that you're not just trying to trick him, the athletic man leans his spear against a wall where it'll be ready for him to snatch up in a moment's notice, then steps up to inspect you closely.";
 	if carried of food > 0:
 		say "     Patting you down and rifling through your backpack, he's happy to find some food, which is quickly stuffed into his own bag. ";
-		decrease carried of food by 1;
+		ItemLoss food by 1;
 	else:
 		if carried of water bottle > 0:
 			say "     Patting you down and rifling through your backpack, he's happy to find a bottle of clean water, which is quickly stuffed into his own bag. ";
-			decrease carried of water bottle by 1;
+			ItemLoss water bottle by 1;
 		else:
 			say "     He grumbles a little as you neither have clean water or food on you, then drops your backpack on the ground. ";
 	say "After finishing to search for spoils, the primitive tribesman turns his attention to you yourself, and the feeling of being undressed with his eyes quickly leads over to you being undressed by his hands, as the man decides he wants a closer look. Piece by piece, your clothing is pulled off and casually dropped, with his hands feeling you up, stroking your body and curves. Your captor's breathing starts to come a bit quicker as he likes what he sees, until eventually the last covering of your crotch falls away, leaving you completely naked before him.";
@@ -51,7 +51,7 @@ to say beatHomoSapiens:
 	LineBreak;
 	say "     Do you take the (mammoth?) jerky ([link]Y[as]y[end link]), or do you demand a far more physical prize from the defeated young man ([link]N[as]n[end link])?";
 	if Player consents:
-		increase carried of mammoth jerky by 1;
+		ItemGain mammoth jerky by 1 silently;
 		LineBreak;
 		say "     The man nods as you relieve him of his food, then says a sentence or two before picking up his spear and getting up. Before you can say anything or intervene, he jogs off into the depth of the museum.";
 	else:

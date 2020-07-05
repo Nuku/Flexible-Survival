@@ -200,9 +200,9 @@ to say beatthepurplegel: [Victory over Purple Gel.]
 				else: [Neuter Character]
 					say "     Having no sexual organs of your own, you get down and embrace the Purple Gel in a deep, passionate kiss. Pulling away you move down and begin sucking on the girls giant tits. While you stimulate her breasts the gel's hands move down and start stroking her cock. Once you are satisfied with sucking her breasts you move further down to the gel girl's groin. Pulling her hands away, you [if Breast Size of Player > 0]place her member between your breasts as you begin to suck it[else]you engulf her member with your mouth and begin sucking on it[end if]. You continue this until she can't hold back anymore and fills your mouth with her purple seed. Feeling that you cannot hold anymore you pull her out of your mouth as she continues to spray her seed across your face and [if Breast Size of Player > 0]breasts[else]chest[end if]. When she finally finishes, your upper body is covered in her sticky purple goo. [if water bottle is owned]Pulling a water bottle out of your pack, you use it to rinse yourself off[else if dirty water is owned]Pulling out a bottle of dirty water, you use it to rinse yourself off[else]Having nothing to rinse off with, you try to clean as much of the goo as you can but don't have much luck[end if], redress, and continue on your way.";
 					if water bottle is owned: [if you used water bottle to clean yourself]
-						delete water bottle;
+						ItemLoss water bottle by 1;
 					else if dirty water is owned: [if you used dirty water to clean yourself]
-						delete dirty water;
+						ItemLoss dirty water by 1;
 						weakrandominfect;
 					else: [if you had no water the leftover semen makes you really horny]
 						increase Libido of Player by 25;

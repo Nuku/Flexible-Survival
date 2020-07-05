@@ -92,8 +92,7 @@ Instead of resolving Plant Takeover:
 		now hp of Voria is 99;
 		now resolution of Plant Takeover is 99;	[Player left Voria at garden store]
 	now Plant Takeover is resolved;
-	increase carried of dirty water by 2;
-	say "[bold type]You gained 2 bottles of dirty water.[roman type][line break]";
+	ItemGain dirty water by 2;
 
 
 Section 3 - Scenes

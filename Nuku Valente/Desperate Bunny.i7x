@@ -429,7 +429,7 @@ to say sandrasex2: [become bunny siblings]
 		say "     Check to see if you have any?";
 		if Player consents:
 			if glob of goo is owned:
-				decrease carried of glob of goo by 1;
+				ItemLoss glob of goo by 1;
 				now rabbitsibling is 3;
 				say "     'You have just the right thing,' she says in a complimenting tone as she takes your jar of goo and pops it open. She slathers it across her hands, then has you turn around. Her soft hands run across your back, working under clothes. The goo is warm thanks to her own heat, leaving slick trails over your body as she works down and grabs your bottom.";
 				say "     'No one's a rabbit without a tail,' she chastises, starting to rub firmly at the base of your spine, tingling growing. A finger strays - by accident, perhaps, though unlikely - towards your unguarded pucker, slipping in all too easily with its coating of goo. You arch back against her as she starts to explore you without shame, testing your elasticity boldly. Perhaps it is the slick goo helping, but she manages two fingers, then three, pumping against your shuddering form as you rock in place[if Player is herm], your [Cock of Player] length[smn] throbbing and dewy folds growing hot as pleasure builds inside you[else if Player is male], your [Cock of Player] length[smn] throbbing as pleasure builds inside you[else], your dewy folds growing hot as pleasure builds inside you[end if].";

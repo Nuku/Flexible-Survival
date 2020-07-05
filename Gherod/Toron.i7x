@@ -239,13 +239,13 @@ to say ToronTalkAE:
 		if player consents:
 			Linebreak;
 			say "     Having enough of the stuff with you, it is time to restore this useless weapon into its glorious former shape. 'Very well, this shouldn't take long. Would you wait here?' he asks, as he takes the abyssal remnant and the pack of null essences with him to the back room.";
-			decrease carried of abyssal remnant by 1;
+			ItemLoss abyssal remnant by 1;
 			WaitLineBreak;
 			say "     You hear a lot of noise. Hammering, strange flashes, ominous whispers that you think it's just your imagination but never cease to be there, nonetheless, and time goes by... You glance around the lounge, play with your fingers, with a glass that's nearby, all while you anxiously wait for the results...";
 			WaitLineBreak;
 			say "     But soon enough, Toron returns, with a weapon in hand. A pretty normal sized sword, black in color and a very sharp blade, which also looks light enough to be handled well by anyone that doesn't have a lot of training with swords. 'What a formidable weapon... This will surely keep you safe in the Void. Well, everywhere, actually! It is a really, really good sword...' Toron compliments the now restored Abyssal Edge, as he handles it to you. 'Use it responsibly.'";
 			say "     You are now in possession of the legendary [bold type]Abyssal Edge[roman type].";
-			increase carried of abyssal edge by 1;
+			ItemGain abyssal edge by 1 silently;
 		else:
 			Linebreak;
 			say "     You tell Toron that you would like to postpone this, and he doesn't question you. 'Do what you think it is best.' he says, before returning to his duties.";
@@ -465,8 +465,8 @@ to say GiveToronOrcBrew:
 		if player consents:
 			Linebreak;
 			say "     Might as well give this a try. You take the bottle of Orc Cum out and hand it to Toron, who gladly accepts your offer. 'Good! I needed this. Very well, I'll be able to create something new with this. If it's a success, I'll just... send someone to harvest the ingredients. Oh, don't look at me like that, I bet they would enjoy having some eager demons milking them for their cum... since this land is as strange as it is. Anyway, I'll bring these in, though I'll need some time until I can get something done. Come back later, perhaps I'll have news.' Taking both ingredients you have just provided him with, Toron takes them inside, returning to his duties shortly after.";
-			decrease carried of orc cum by 1;
-			decrease carried of orc brew by 1;
+			ItemLoss orc cum by 1;
+			ItemLoss orc brew by 1;
 			now HellfireOrcBrewTimer is turns;
 			wait for any key;
 			say "[HellfireClubDrinksMenu]";
@@ -483,7 +483,7 @@ to say GiveToronOrcBrew:
 to say GiveToronSharpBlackTusk:
 	say "     Given the strange nature of this item, you decide to handle it to Toron in hopes he could have some idea of what to do with it. 'A tusk?! Of a... Void Serpent? Let me see if it still carries some of its venom.' he says, before taking it from your hands. Before you could say anything, he grabs a really sharp knife, and begins to cut through the tusk from the base to the tip. The material is so tough that he has trouble making the blade pierce, but once it does, a very dark liquid begins to leak out of the tusk. 'Interesting... I wonder if I can make a drink using this... I would have to filter all of its strange effects, but it surely does look promising. Come back later, and I will add it to the menu.' he tells you, thanking you for the offering.";
 	say "     This also means that your hard earned tusk got lost forever... But at least you will have a new drink! And hopefully a good one...";
-	decrease carried of sharp black tusk by 1;
+	ItemLoss sharp black tusk by 1;
 	now HellfireBlackAleTimer is turns;
 	wait for any key;
 	say "[HellfireClubDrinksMenu]";
@@ -492,7 +492,7 @@ to say GiveToronNullEssence:
 	say "     Given the strange nature of this item, you decide to handle it to Toron in hopes he could have some idea of what to do with it. 'Now now, what is this? A null essence from the Void Realm? Interesting how you manage to get your hands on one of these... They are not rare per se, but they seem to have a knack for being attracted to biological humans. Yes, even if they are transformed beyond recognition due to the nanites thing, this is something otherworldly we are talking about. Anyway... If I can turn this into a powder...' he speaks, as he takes a mortar and pestle, puts the null essence in, and tries to smash it. 'Hm, no good... It's too tough. I only manage to barely scratch it, like this... Have you tried to eat them?' he asks, looking at you.";
 	say "     There really is no need to think about this, you would rather not put one of those things in your mouth. It really looks like a plain black rock, so why would you even eat it? 'Then I will have to simulate that, hold on just a second...' he tells you, as he goes grab some sort of completely transparent liquid. 'It's just water, in case you are wondering.' No one never can be too sure if a colorless liquid is actually just water around here, so he cannot really judge you for being too careful. With that said, he pours the water into the recipient, and the null essence begins to dissolve. Looks like he managed to turn this into sparkling water...? 'Interesting. I wonder what properties this holds. I will make sure this is safe to drink, then you can come and try it for yourself, alright? Thanks again for the idea. I will handle the supplying myself.' he says, as he takes the drink and all the materials to the back room.";
 	say "     Null essences make Sparkling Water when mixed with water... now that's something...";
-	decrease carried of null essence by 1;
+	ItemLoss null essence by 1;
 	now HellfireSparklingWaterTimer is turns;
 	wait for any key;
 	say "[HellfireClubDrinksMenu]";

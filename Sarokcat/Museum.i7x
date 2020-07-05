@@ -105,11 +105,9 @@ carry out riddlesphinxing:
 		choose row prizegift from the Table of Random Critters;
 		if there is a loot entry:
 			if loot entry is not "" and loot entry is not " ":
-				add loot entry to invent of Player;
-				say "You acquired 1 [loot entry].";
+				ItemGain loot entry by 1;
 			else:
-				increase carried of dirty water by 1;
-				say "You acquired some dirty water!";
+				ItemGain dirty water by 1;
 		infect "Sphinx";
 	else:
 		say "'That's completely wrong!' Valerie says as she shoots you a smug look. 'Maybe you'll have better luck next time, but I'm not impressed so far,' the sphinx says with a derisive swish of her tail as she dismisses you. You feel somewhat humiliated by your loss, and strangely even feel as if you have lost a little bit of your humanity to the sphinx's wiles.";

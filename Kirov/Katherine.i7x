@@ -160,9 +160,9 @@ to say KatherineCC1:
 to say KatherineCC2:
 	say "     'So I was out scavenging yesterday. You'll never believe what I found!' she exclaims. 'I was rummaging through some abandoned vehicles and found some poor sucker's emergency supplies. They must have succumbed before they could use it themselves. Here's a bit of what I found.' She tosses you a pack, and you reach in to grab an item of interest, handing the rest back to her.";
 	if a random chance of 1 in 2 succeeds:
-		increase carried of food by 1;
+		ItemGain food by 1;
 	else:
-		increase carried of water by 1;
+		ItemGain water by 1;
 
 to say KatherineCC3:
 	say "     Katherine stretches her arms up in the air, unintentionally giving you a nice view of her well-toned body. 'Just got back from a jaunt out in town not too long ago,' she explains. 'No luck, unfortunately. Had a run in with a dangerous looking wyvern before I could find any loot.'";

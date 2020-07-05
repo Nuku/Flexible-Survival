@@ -430,9 +430,9 @@ instead of navigating Flower Garden while (Resolution of Spreading Flowers is 7 
 
 to SFAwesomeTree:
 	say "     With all the required items in your inventory, the next time you walk in the Flower Garden is to deliver them as soon as possible, so Joanna can get to work. You approach her spot, and she sees you coming, happy to receive you once more. 'You brought me the items I asked? Good!' She ways, with joy in her voice, before adding 'I guess we finally have everything! Seriously... Thank you!' You hand her the items, and she examines every single one of them to make sure they're undamaged and in pristine conditions. 'Looks like this is it until I have a genetic strain... I hope the method I developed is good enough... I'm getting nervous about it, now.' You figure that it's best to let her work, now. Maybe you have questions that surged through this entire process, but you won't ask them now. Only later, when she comes up with the final product.";
-	decrease carried of awesome fruit by 1;
-	decrease carried of awesomer fruit by 1;
-	decrease carried of awesomest fruit by 1;
+	ItemLoss awesome fruit by 1;
+	ItemLoss awesomer fruit by 1;
+	ItemLoss awesomest fruit by 1;
 	say "     'It will take some time before I'm able to synthesize all of these. Come back tomorrow or so! Or we can just... have some fun while we wait?' She teases you, her naked body on display with her plant-like extensions hovering around you. It seems she's open for sex during the synthesis time, if you want.";
 	now resolution of Spreading Flowers is 8;
 	now JoannaSFTimer is turns;
@@ -505,7 +505,7 @@ instead of navigating Flower Garden while (Resolution of Spreading Flowers is 10
 		LineBreak;
 		say "     Whoever she was before what she is now, is not important. So you drop the subject and after accepting her gift, you cuddle with her for a long, long time... She truly appreciates it.";
 		now resolution of Spreading Flowers is 12; [Doesn't know about Joanna's past]
-	increase carried of Plant-Like Dildo by 1;
+	ItemGain Plant-Like Dildo by 1;
 	now HP of Joanna is 12;
 	now Spreading Flowers is resolved;
 

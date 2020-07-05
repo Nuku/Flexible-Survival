@@ -64,8 +64,8 @@ instead of resolving a loaded catapult:
 				say "You manage to get the resources without touching the ropes.";
 				now Resolution of Loaded Catapult is 2; [got some supplies]
 				repeat with T running from one to three:
-					increase carried of food by 1;
-					increase carried of water bottle by 1;
+					ItemGain food by 1 silently;
+					ItemGain water bottle by 1 silently;
 					now gotcatares is 1;
 		else:
 			say "You look at the resources, tortured by their nearness, but decide to leave them be.";

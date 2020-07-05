@@ -75,7 +75,7 @@ to say haleventfight:
 	say "     When you continue the charge, the muscled demon does something unexpected and turns to face the back of the garage. He bashes his club right through the back wall, knocking a large hole in it. He then slams himself into the broken wall, the cracks running through it breaking entirely as your fearsome foe barrels right through it. Having broken free of the garage, he just keeps running, fleeing rather than fighting you, much to your surprise. You almost rush after him in pursuit before you realize the garage is coming down and move back. The building collapses in a cloud of concrete dust.";
 	WaitLineBreak;
 	say "     As you wait for the dust to clear, you think over what just happened, realizing that the demon's blows were all wide. Either he had very poor aim or he wasn't trying to hit you, but instead just looking to scare you off. Regardless, he certainly fled rather than fight you. You ponder what just happened as you attempt to search the rubble for anything that might have survived, but it is difficult work and only yields a small pack of cookies which is intact.";
-	increase carried of chips by 1;
+	ItemGain chips by 1;
 	now HP of Hayato is 99;
 	unleashredoni;
 	now Resolution of Garage Demon is 3; [Tried to fight Hayato]
@@ -595,7 +595,7 @@ to say onilairassault:
 		WaitLineBreak;
 		say "     When you and Hayato venture inside, you find that the two guards were indeed telling the truth. It seems the rest of the oni aren't here right now. There's the remains of sandwich fixing, open packets of drink mix and the plastic wrapper for a picnic basket. You're strangely disappointed at having missed them, but relieved as well. Certainly Hayato's seeming much more confident for having gone face to face with his infection. You gather up the remaining supplies you can salvage from the mess and head back to the bunker together.";
 		say "     Upon your return, Hayato pulls you into his arms and gives you another forceful kiss. 'Mmm... I'm feeling so much better after all that. That felt so good to take charge like that and take what I wanted.' He gives your ass a firm squeeze and grinds his crotch against your side, throbbing with growing need. 'How about we do things my way on occasion?' he asks with a lustful growl. From the look on your face you clearly have no objection with this train of thought.";
-		increase carried of food by 2;
+		ItemGain food by 2;
 		increase score by 20;
 		now lastfuck of Hayato is turns + 8;
 		now HP of Hayato is 50;

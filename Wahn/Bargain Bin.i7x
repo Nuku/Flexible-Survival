@@ -39,11 +39,8 @@ check bargainhunting:
 carry out bargainhunting:
 	if food is owned and water bottle is owned:
 		say "     Pulling out a small bit of food and a water bottle you set them out on the counter where Nermine quickly makes them disappear. Having paid your fee you eagerly begin to sort through the bargain bin to see what you can find...";
-		LineBreak;
-		say "[bold type]You lose 1 food![roman type][line break]";
-		decrease carried of food by 1;
-		say "[bold type]You lose 1 water bottle![roman type][line break]";
-		decrease carried of water bottle by 1;
+		ItemLoss food by 1;
+		ItemLoss water bottle by 1;
 		LineBreak;
 		increase bargainbinusagetotal by 1;
 		let Z be a random number between 1 and 30;
@@ -61,9 +58,7 @@ carry out bargainhunting:
 				increase strangebottledrink by 1;
 			else if "Spartan Diet" is listed in feats of Player:
 				say "     Finding another of those vials of liquid tucked away within the bin, you decide to take the small vial of liquid with you. As refreshing as the small vial is, it is obviously worth at least two full water bottles when you go to drink it later...";
-				LineBreak;
-				say "[bold type]You gain 2 water bottles![roman type][line break]";
-				increase carried of water bottle by 2;
+				ItemGain water bottle by 2;
 			else:
 				say "     You smile as you once more come across one of those strange and very refreshing vials of liquid. Quickly pulling the small vial out of the bin, you waste no time in taking a small sip of the strangely colored liquid within. To your disappointment the drink seems somewhat less refreshing this time, although you can still feel your body tingling as the liquid obviously does something to you.";
 				FeatGain "Spartan Diet";
@@ -98,11 +93,8 @@ carry out bargainhunting:
 				infect "Felinoid";
 			else:
 				say "     Poking absently through the bin, your eye catches on a [bold type]small cat-like charm[roman type], tucked away in the corner. Pulling the little piece of jewelry out you smile at the stylized image of a pouncing cat as you rub the strange metal charm between your fingers. Then suddenly Nermine snatches the golden charm from your hand with a handkerchief and carefully puts it into a jewelry box. 'Nermine can tell that her customer will not want this item. She is sorry, but the bargain bin can be unpredictable at the best of times. Full of apologies, the jackaless offers her guest the paid items in return, as well as a suggestion. Maybe Nermine's dear customer should be thinking to not be so picky. More fun is to be had that way,' she adds philosophically.";
-				LineBreak;
-				say "[bold type]You gain 1 food![roman type][line break]";
-				increase carried of food by 1;
-				say "[bold type]You gain 1 water bottle![roman type][line break]";
-				increase carried of water bottle by 1;
+				ItemGain food by 1;
+				ItemGain water bottle by 1;
 		else if Z is 7: [magpie jewelry]
 			say "     Sorting through the bin, your eye is caught by a [bold type]sparkly piece of jewelry[roman type] half-hidden under other items. The pretty little thing is making you smile at finding it as you pull it out. Closer inspection reveals that the shiny item is piece of costume jewelry - certainly not worth all that much, but it looks pretty, so you're happy nonetheless at calling it your own.";
 			if "Magpie Eyes" is listed in feats of Player:
@@ -123,10 +115,8 @@ carry out bargainhunting:
 			decrease HP of Player by 25;
 			if HP of Player < 0:
 				now HP of Player is 1;
-			say "[bold type]You gain 2 food![roman type][line break]";
-			increase carried of food by 2;
-			say "[bold type]You gain 2 water bottles![roman type][line break]";
-			increase carried of water bottle by 2;
+			ItemGain food by 2;
+			ItemGain water bottle by 2;
 		else if Z is 10: [pocket watch]
 			say "     Sorting through the bin, you come across an [bold type]old-fashioned pocket watch[roman type]. Your curiosity getting the better of you, you pull the antique out of the bin to examine it closer. The unusual brass watch seems to feel slightly warm in your hands as you wind it up, and you are hit with a sudden dizzy spell as soon as you finish winding the watch, making you stagger slightly. Blinking, you catch yourself and stare around you feeling slightly befuddled, before realizing the watch is no longer in your hands. Sighing at the loss of the interesting looking timepiece, you prepare to move on, though you feel like something has changed, even if you can't quite put your finger on what...";
 			extend game by 16;
@@ -144,11 +134,8 @@ carry out bargainhunting:
 			say "     Hunting through strange bin full of items, you find yourself touching what appears to be some sort of plastic bag. Overcome with curiosity, you quickly pull it out of the bin and take a look inside. You are surprised to see that the bag contains several [bold type]neatly labeled samples taken from creatures inside the city[roman type]. 'Ah Nermine was looking for those!' you can hear the jackal-like shopkeeper say as you inspect the items, making you look up at her instead. 'If the fine-looking customer doesn't want to keep those, Nermine is more than willing to buy them found items,' she says with a grin on her soft, silver-painted muzzle while you try to decide what to do with the items.";
 			if FurryList is banned:
 				say "     Taking another quick glance at the contents, you decide that you have no interest in any of the bestially infected items and return the bag to Nermine while she puts your earlier payment back on the counter. Checking the items she lays out, you find yourself grinning as you realize the sly jackal-woman slipped you an extra package of food as well.";
-				LineBreak;
-				say "[bold type]You gain 2 food![roman type][line break]";
-				increase carried of food by 2;
-				say "[bold type]You gain 1 water bottle![roman type][line break]";
-				increase carried of water bottle by 1;
+				ItemGain food by 2;
+				ItemGain water bottle by 1;
 			else:
 				say "     [bold type]Do you give them back to the jackaless?[roman type][line break]";
 				LineBreak;
@@ -157,49 +144,35 @@ carry out bargainhunting:
 				if Player consents:
 					LineBreak;
 					say "     Deciding you definitely don't need any more of the infectious items from creatures within the city, you quickly hand the bag full of stuff over to Nermine while she puts your earlier payment back on the counter. Checking the items she lays out, you find yourself grinning as you realize the sly jackal-woman slipped you an extra package of food as well.";
-					LineBreak;
-					say "[bold type]You gain 2 food![roman type][line break]";
-					increase carried of food by 2;
-					say "[bold type]You gain 1 water bottle![roman type][line break]";
-					increase carried of water bottle by 1;
+					ItemGain food by 2;
+					ItemGain water bottle by 1;
 				else:
 					LineBreak;
 					say "     Deciding to keep the items yourself, since they could come in handy in this strange city you are stuck in, you stuff the bag into your pack. Nermine sighs slightly at your choice and shakes her head as she goes back to standing at the counter.";
 					LineBreak;
 					if FemaleList is not banned:
-						say "[bold type]You gain 1 tuft of chin fur![roman type][line break]";
-						increase carried of tuft of chin fur by 1;
-						say "[bold type]You gain 1 skunk goo![roman type][line break]";
-						increase carried of skunk goo by 1;
+						ItemGain tuft of chin fur by 1;
+						ItemGain skunk goo by 1;
 					if MaleList is not banned:
-						say "[bold type]You gain 1 chipped tooth![roman type][line break]";
-						increase carried of chipped tooth by 1;
-						say "[bold type]You gain 1 pirate bandana goo![roman type][line break]";
-						increase carried of pirate bandana by 1;
+						ItemGain chipped tooth by 1;
+						ItemGain pirate bandana by 1;
 					if HermList is not banned:
-						say "[bold type]You gain 1 dog milk![roman type][line break]";
-						increase carried of dog milk by 1;
-					say "[bold type]You gain 1 honeycomb![roman type][line break]";
-					increase carried of honeycomb by 1;
-					say "[bold type]You gain 1 tasty fish![roman type][line break]";
-					increase carried of Tasty Fish by 1;
+						ItemGain dog milk by 1;
+					ItemGain honeycomb by 1;
+					ItemGain Tasty Fish by 1;
 		else if Z is 15: [Dr Matt samples]
 			if FemaleList is banned and ( HermList is banned or FurryList is banned ):
 				say "     Searching through the bargain bin, you find a [bold type]small travel pouch[roman type] tucked away in the corner. Curious about what may be inside, you pull the container out and open its zipper. Sadly, when you flip the flap at the top open, all you find is a wad of used bubblegum and a bottle of water. Ugh! Oh well, can't win them all and at least you got some water back...";
 				LineBreak;
-				say "[bold type]You gain 1 water bottle![roman type][line break]";
-				increase carried of water bottle by 1;
+				ItemGain water bottle by 1;
 			else:
 				say "     Searching through the bargain bin, you find a [bold type]small travel pouch[roman type] tucked away in the corner. Curious about what may be inside, you pull the container out and open its zipper. Sadly, when you flip the flap at the top open, you blink in surprise as you note it seems to contain a bottle of water along with [if FemaleList is not banned]two nicely labeled samples of goo[else]a wad of used bubblegum[end if], and [if HermList is not banned and FurryList is not banned]two small vials of gryphon milk[else]a wad of used bubblegum[end if]. Staring at the items for a moment, you realize that you are obviously not the [if HP of Doctor Matt is 0 or HP of Doctor Matt is 100 or HP of Doctor Matt is 103]only person to consider keeping some of the strange things to be found[else]first person the good Doctor Matt sent out in the city to retrieve samples for him[end if]. Emptying the pouch out into your own backpack, you wonder just what happened to the former owner of if, and if they are happier as whatever they are now.";
 				LineBreak;
-				say "[bold type]You gain 1 water bottle![roman type][line break]";
-				increase carried of water bottle by 1;
+				ItemGain water bottle by 1;
 				if HermList is not banned and FurryList is not banned:
-					say "[bold type]You gain 2 gryphon milk![roman type][line break]";
-					increase carried of gryphon milk by 2;
+					ItemGain gryphon milk by 2;
 				if FemaleList is not banned:
-					say "[bold type]You gain 2 glob of goo![roman type][line break]";
-					increase carried of glob of goo by 2;
+					ItemGain glob of goo by 2;
 		else if Z is 16: [strange doll]
 			if dollfound is 0:
 				say "     Reaching into the bin, you find your hand meeting some kind of plush stuffed toy, its soft form almost seeming to jump into your hand as you pull the strange thing out. Looking at what you found, you blink as you find yourself holding a miniature version of yourself, the [bold type]little plush doll appearing to be an exact replica of your current self[roman type], down to the smallest detail. Eyeing the unusual doll carefully, it seems almost alive, which is strangely disconcerting in a way...";
@@ -218,10 +191,8 @@ carry out bargainhunting:
 					LineBreak;
 					say "     Uncomfortable by even touching the thing, you drop the creepy doll back into the bargain bin, shaking your head the wasted opportunity at finding something actually useful that won't murder you in your sleep. As you turn away, you see that Nermine decided to take pity on you, and your payment is sitting back up there on the counter while she busies herself a little ways away. Nodding gratefully and feeling a bit better about the event, you tuck the food and water back away in your pack carefully, not sure if you will try your luck again in the strange bin or not...";
 					LineBreak;
-					say "[bold type]You gain 1 food![roman type][line break]";
-					increase carried of food by 1;
-					say "[bold type]You gain 1 water bottle![roman type][line break]";
-					increase carried of water bottle by 1;
+					ItemGain food by 1;
+					ItemGain water bottle by 1;
 			else:
 				say "     Searching through the bin again, you blink as your hand finds a small doll-sized pack and some accessories. Pulling them out, you stare at the items in puzzlement for a minute, before passing them along to your miniature doll self to play with. It never hurts to accessorize right?";
 				LineBreak;
@@ -247,10 +218,8 @@ carry out bargainhunting:
 			if "Cold Fish" is listed in feats of Player:
 				say "     Sorting through the strange bin, you feel a small shiver after touching one of the items in the bin and reflexively release it, protecting yourself from the influence the [bold type]little piece of jewelry[roman type] might have. You withdraw your hand and clutch it tightly as the shivers run up your arm and then down your body, filling your loins with heat and arousal. Nermine, noticing your odd expression, slides back the water and food. 'Some items in the bargain bin do not agree with some people. Nermine's eager customer may try again or leave matters be.'";
 				LineBreak;
-				say "[bold type]You gain 1 food![roman type][line break]";
-				increase carried of food by 1;
-				say "[bold type]You gain 1 water bottle![roman type][line break]";
-				increase carried of water bottle by 1;
+				ItemGain food by 1;
+				ItemGain water bottle by 1;
 				LibidoBoost 25;
 			else if "Horny Bastard" is listed in feats of Player:
 				say "     Pushing through the strange piles of unusual items stuffed into the overflowing bin, you find a [bold type]small silver charm shaped like a [one of]feline[or]canine[or]demonic[or]equine[or]goat[or]dolphin[or]bestial[or]bear[at random] cock[roman type]. The small piece of jewelry glints in your hand as you pull it out of the bin, the lewd appearance of the finely detailed miniature cock making you grin. Somehow owning it leaves you feeling hornier and perhaps more bestial than ever, and you slip the little thing onto a charm bracelet so you can wear it at all times. Now if only you could go out and find a real cock just like it...";
@@ -273,17 +242,14 @@ carry out bargainhunting:
 					LineBreak;
 					say "     Letting go of the books as she pulls them out of your grasp and tugs them close to her chest, you smile a little at Nermine's obvious embarrassment. The jackaless quickly moves behind her counter again and lets the novels vanish under it, then slides double your payment back over the glass top. Collecting it with a grin, you think to yourself that you must have picked up some tips on getting the most out of your victories from the heroes of the books you skimmed.";
 					LineBreak;
-					say "[bold type]You gain 2 food![roman type][line break]";
-					increase carried of food by 2;
-					say "[bold type]You gain 2 water bottles![roman type][line break]";
-					increase carried of water bottle by 2;
+					ItemGain food by 2;
+					ItemGain water bottle by 2;
 					now RomanceBooksFound is 1; [books found and returned]
 				else:
 					LineBreak;
 					say "     Keeping a tight grip on the books, you shake your head at the jackaless and let her know that you bought them, fair and square. Her gaze narrows and Nermine hesitates for a long moment, before eventually acquiescing to your decision, making an expression as if she had bitten into a rotten fruit. Clearly not happy about the way things turned out, she walks back behind her counter and pointedly does not look at you afterwards.";
 					LineBreak;
-					say "[bold type]You gain jackal romance novels![roman type][line break]";
-					increase carried of jackal romance novels by 1;
+					ItemGain jackal romance novels by 1;
 					now RomanceBooksFound is 2; [player took them]
 			else if RomanceBooksFound is 1: [repeat with the player having given her the books before]
 				say "     Once more feeling a package of books stashed away in the bargain bin, you pull it out, and seeing the jackal-like hero on the cover, wave it at Nermine with a small grin. The jackal shopkeeper blushes in embarrassment as she says, 'How do Nermine's personal items end up in the bin again and again? She is not amused by this!' The sorceress lets her gaze wander around in her store, glancing this way or that from the corner of her eye as if to catch a sneaky prankster in the act. With a hint of a scowl on her muzzle, she turns back to you, carefully smoothing the expression over before she ways, 'Nermine would be very reluctant to let her personal items go and offers her customer to buy them back. Double the price will suffice, will it not?' She looks at you with a hopeful expression.";
@@ -295,17 +261,14 @@ carry out bargainhunting:
 					LineBreak;
 					say "     Letting go of the books as she pulls them out of your grasp and tugs them close to her chest, you smile a little at Nermine's obvious embarrassment. The jackaless quickly moves behind her counter again and lets the novels vanish under it, then slides double your payment back over the glass top. Collecting it with a grin, you think to yourself that you must have picked up some tips on getting the most out of your victories from the heroes of the books you skimmed.";
 					LineBreak;
-					say "[bold type]You gain 2 food![roman type][line break]";
-					increase carried of food by 2;
-					say "[bold type]You gain 2 water bottles![roman type][line break]";
-					increase carried of water bottle by 2;
+					ItemGain food by 2;
+					ItemGain water bottle by 2;
 					now RomanceBooksFound is 1; [books found and returned]
 				else:
 					LineBreak;
 					say "     Keeping a tight grip on the books, you shake your head at the jackaless and let her know that you bought them, fair and square. Her gaze narrows and Nermine hesitates for a long moment, before eventually acquiescing to your decision, making an expression as if she had bitten into a rotten fruit. Clearly not happy about the way things turned out, she walks back behind her counter and pointedly does not look at you afterwards.";
 					LineBreak;
-					say "[bold type]You gain jackal romance novels![roman type][line break]";
-					increase carried of jackal romance novels by 1;
+					ItemGain jackal romance novels by 1;
 					now RomanceBooksFound is 2; [player took them]
 			else if RomanceBooksFound is 2: [player took the books before]
 				say "     Once more feeling a package of books stashed away in the bargain bin, you pull it out, and are acutely surprised to see it being a stack of books with a jackal-like hero on the cover. Didn't you already buy this from her? Weird. Maybe she had more copies, or something else is going on here. Who knows... with magic in the room, it's anyone's guess. With a shrug, you raise the books and wave the bundle at Nermine with a small grin. The jackal shopkeeper blushes in embarrassment as she says, 'How do Nermine's personal items end up in the bin again and again? She is not amused by this!' The sorceress lets her gaze wander around in her store, glancing this way or that from the corner of her eye as if to catch a sneaky prankster in the act. With a hint of a scowl on her muzzle, she turns back to you, carefully smoothing the expression over before she says, 'Nermine would be very reluctant to let her personal items go and offers her customer to buy them back. Double the price will suffice, will it not?' She looks at you with a hopeful expression.";
@@ -317,17 +280,14 @@ carry out bargainhunting:
 					LineBreak;
 					say "     Letting go of the books as she pulls them out of your grasp and tugs them close to her chest, you smile a little at Nermine's obvious embarrassment. The jackaless quickly moves behind her counter again and lets the novels vanish under it, then slides double your payment back over the glass top. Collecting it with a grin, you think to yourself that you must have picked up some tips on getting the most out of your victories from the heroes of the books you skimmed.";
 					LineBreak;
-					say "[bold type]You gain 2 food![roman type][line break]";
-					increase carried of food by 2;
-					say "[bold type]You gain 2 water bottles![roman type][line break]";
-					increase carried of water bottle by 2;
+					ItemGain food by 2;
+					ItemGain water bottle by 2;
 					now RomanceBooksFound is 1; [books found and returned]
 				else:
 					LineBreak;
 					say "     Keeping a tight grip on the books, you shake your head at the jackaless and let her know that you bought them, fair and square. Her gaze narrows and Nermine hesitates for a long moment, before eventually acquiescing to your decision, making an expression as if she had bitten into a rotten fruit. Clearly not happy about the way things turned out, she walks back behind her counter and pointedly does not look at you afterwards.";
 					LineBreak;
-					say "[bold type]You gain jackal romance novels![roman type][line break]";
-					increase carried of jackal romance novels by 1;
+					ItemGain jackal romance novels by 1;
 					now RomanceBooksFound is 2; [player took them]
 		else if Z is 20: [creature]
 			say "     Rummaging through the bargain bin you find yourself feeling rather strange as you do so, almost as if something in the bin itself is affecting you. Feeling vaguely worried, you begin to pull your hand out of it, only to find it seems stuck on something, or more like [bold type]something or someone is holding onto you[roman type] and trying to drag you into the bin! The feeling is both strange and disturbing as you fight to free your hand, and Nermine seems to notice your distress. As you struggle, the jackal-woman comes over to investigate the problem. Just before she reaches you though, something seems to give in the bin, and you stagger backwards, almost knocking the shopkeeper over as you do so, with the jackal-woman just barely managing to catch you before you drag both of you down to the ground. Unfortunately something else staggers out of the bin as well, and you find yourself face to face with a [one of]Rubber Tigress[or]Horseman[or]Leopardman[or]Plush Lion[or]Tigress hooker[or]Satyr[at random] staggering unsteadily into the room.";
@@ -361,8 +321,7 @@ carry out bargainhunting:
 				say "     Reaching into the bargain bin, you almost groan as you feel your bad luck building up, likely going to ruin whatever attempt you make at retrieving an item from the bin. Feeling rather annoyed at the unfair world, you sigh helplessly and decide not to fight fate as you grab whatever comes to hand before pulling it out to look at it, obviously not expecting much given your luck. Imagine your surprise however, when the item you pulled out appears to be a [bold type]custom soda holder[roman type], the kind used at beaches and for parties, and mostly full as well! What a nice surprise you find yourself thinking for a minute... right before the first soda slips out of the holder, and lands right on your foot!";
 				say "     Jumping in pain, you accidentally toss the soda holder up in the air. More cans slip of it as it tumbles end over end, and you groan and cry out as you are pelted with a short heavy rain of soda cans. When the ruckus finally stops you hear a small noise, and glance over to see Nermine valiantly covering her muzzle with one delicate paw as she tries not to laugh too hard at your antics. Sighing you realize your bad luck was obviously still working full force, though as you glance down around you, you at least managed to get some soda out of the deal... just be careful not to open them too soon after all that shaking.";
 				LineBreak;
-				say "[bold type]You have gained 5 soda cans![roman type][line break]";
-				increase carried of soda by 5;
+				ItemGain soda by 5;
 				say "[bold type]You lose 50 HP![roman type][line break]";
 				decrease HP of Player by 50;
 				if HP of Player < 0:
@@ -386,8 +345,7 @@ carry out bargainhunting:
 			if "Expert Medic" is listed in feats of Player:
 				say "     Rummaging through the bargain bin, you feel a rather familiar plastic case in the bin, and smile as you grip it and pull it out. Much to your delight, as you thought, the item was [bold type]a medkit[roman type]! With your practical medical skills, this should be quite useful indeed you think with a smile as you tuck the medkit away in your bag.";
 				LineBreak;
-				say "[bold type]You gain a medkit![roman type][line break]";
-				increase carried of medkit by 1;
+				ItemGain medkit by 1;
 			else:
 				say "     Rummaging through the bin, you feel some sort of cloth band snag in your fingers, and being somewhat interested in what kind of cloth item is in a bin like this, you pull it out for a better look. You blink in surprise to find it is a surprisingly [bold type]functional-looking armband, with the sign of the red cross[roman type] on it. Somewhat on impulse, you slide the armband on and admire it for a minute. Just the feeling of its weight on your arm makes you feel a bit safer and more like a paramedic, and you pose in amusement for a minute like you were about to bandage someone up... only to realize that you actually feel like you know how to bandage someone professionally!";
 				say "     Surprised, you look down at your new armband in wonder, only to discover that it is nowhere to be found! Shaking your head slightly at the weirdness of the situation, you look around for it a little while, before sighing and realizing that despite the disappearance, your strange new medical skills are there to stay...";
@@ -470,40 +428,28 @@ carry out bargainhunting:
 			choose row minorbargain from the Table of Random Critters;
 			if there is a loot entry:
 				if loot entry is not " " and loot entry is not "":
-					say "[bold type]You acquired 1 [loot entry]![roman type][line break]";
-					add loot entry to invent of Player;
-					say "[bold type]You acquired some dirty water![roman type][line break]";
-					increase carried of dirty water by 1;
+					ItemGain loot entry by 1;
+					ItemGain dirty water by 1;
 				else:
 					if MaleList is not banned and FurryList is not banned:
-						say "[bold type]You acquired a Chipped tooth![roman type][line break]";
-						increase carried of Chipped tooth by 1;
+						ItemGain Chipped tooth by 1;
 					else if FemaleList is not banned and FurryList is not banned:
-						say "[bold type]You acquired some Skunk Goo![roman type][line break]";
-						increase carried of Skunk Goo by 1;
+						ItemGain Skunk Goo by 1;
 					else if HermList is not banned and FurryList is not banned:
-						increase carried of panther milk by 1;
-						say "[bold type]You acquired some panther milk![roman type][line break]";
+						ItemGain panther milk by 1;
 					else:
-						say "[bold type]You acquired some dirty water![roman type][line break]";
-						increase carried of dirty water by 1;
-					say "[bold type]You acquired some dirty water![roman type][line break]";
-					increase carried of dirty water by 1;
+						ItemGain dirty water by 1;
+					ItemGain dirty water by 1;
 			else:
 				if MaleList is not banned and FurryList is not banned:
-					say "[bold type]You acquired a Chipped tooth![roman type][line break]";
-					increase carried of Chipped tooth by 1;
+					ItemGain Chipped tooth by 1;
 				else if FemaleList is not banned and FurryList is not banned:
-					say "[bold type]You acquired some Skunk Goo![roman type][line break]";
-					increase carried of Skunk Goo by 1;
+					ItemGain Skunk Goo by 1;
 				else if HermList is not banned and FurryList is not banned:
-					say "[bold type]You acquired some panther milk![roman type][line break]";
-					increase carried of panther milk by 1;
+					ItemGain panther milk by 1;
 				else:
-					say "[bold type]You acquired some dirty water![roman type][line break]";
-					increase carried of dirty water by 1;
-				say "[bold type]You acquired some dirty water![roman type][line break]";
-				increase carried of dirty water by 1;
+					ItemGain dirty water by 1;
+				ItemGain dirty water by 1;
 	else:
 		say "     Sorting through your pack, you are ashamed to realize you can't afford to draw something out of the bargain bin right now. You blush under Nermine's curious gaze, as you casually move off to look through the rest of the store instead.";
 	if bargainbinusagetotal > 41: [i.e. 42 or greater, arbitrary number chosen to limit bin usage. should allow most (possible all) things to be found.]
@@ -514,11 +460,8 @@ carry out bargainhunting:
 to say plrtcl:
 	if HumorousList is banned or FurryList is banned or ( MaleList is banned and FemaleList is banned and HermList is banned):
 		say "     As you start to dig in one corner of the bin, Nermine steps up to you and lays a slender paw-hand on your arm. 'Nermine can tell that her bargain-hunting customer will not be wanting anything from that corner. She is sorry, but the bargain bin is like that some times. As not to leave her hopeful visitor dissatisfied, Nermine will gladly refund the items paid - maybe to be held ready for another go at finding something desirable?' With that, the jackaless gives you back your food and the water bottle. 'But Nermine also has to comment that maybe her dear customer should be thinking to not be so picky. More fun is to be had that way,' she adds philosophically.";
-		LineBreak;
-		say "[bold type]You gain 1 food![roman type][line break]";
-		increase carried of food by 1;
-		say "[bold type]You gain 1 water bottle![roman type][line break]";
-		increase carried of water bottle by 1;
+		ItemGain food by 1;
+		ItemGain water bottle by 1;
 	else:
 		let Q be a list of numbers;
 		if MaleList is not banned, add 1 to Q;  [Plush Lion]
@@ -562,13 +505,9 @@ to say jackal romance novels use:
 
 instead of trading the jackal romance novels when the current action involves the Nermine:
 	say "     As you offer the books to her, Nermine instantly snatches them from your grasp and quickly hides them under her counter. Then she tells you, 'The humble storekeeper is grateful for the return of her private property. As she has offered her visitor before, she will pay twice the buying price.' With a slightly embarrassed expression, she quickly hands you two packets of food and also two water bottles, then acts as if the whole deal didn't happen.";
-	LineBreak;
-	say "[bold type]You gain 2 food![roman type][line break]";
-	increase carried of food by 2;
-	say "[bold type]You gain 2 water bottles![roman type][line break]";
-	increase carried of water bottle by 2;
-	say "[bold type]You lose jackal romance novels![roman type][line break]";
-	decrease carried of jackal romance novels by 1;
+	ItemGain food by 2;
+	ItemGain water bottle by 2;
+	ItemLoss jackal romance novels by 1;
 	now RomanceBooksFound is 1; [gave them back to Nermine]
 
 Section 2 - Strange Doll Companion

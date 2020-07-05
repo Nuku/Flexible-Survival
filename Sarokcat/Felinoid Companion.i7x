@@ -54,7 +54,7 @@ Instead of resolving Injured Felinoid:
 					if Player consents:
 						say "     Sighing, you find you are unable to turn away from injured felinoid in need, especially seeing as you benefited from or were responsible for most of his injuries... Opening the medkit up, you quickly get to work tending to the felinoid, and after almost an hour of hard work, you sit back with a sigh, content that the large cat is no longer in any immediate danger, and relatively sure that almost all of his wounds will heal in time. The beast even seems to feel better as he hauls himself up onto his paws, seeming to stare at you curiously for a minute as if wondering why you helped him, before turning and limping off into the park. Picking up the remains of your medkit, you turn and head off into the park as well, wondering if you will be seeing your felinoid patient again soon, his musk still filling your head teasingly even as you leave the glade behind.";
 						infect "Felinoid";
-						delete medkit;
+						ItemLoss medkit by 1;
 						now Resolution of Injured Felinoid is 1; [Helped him]
 						now felinoidrescued is 3;
 					else:

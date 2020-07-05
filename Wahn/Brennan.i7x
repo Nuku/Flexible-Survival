@@ -113,11 +113,8 @@ Instead of resolving a Lone Survivor:
 		if Player consents:
 			LineBreak;
 			say "     Glancing around one last time and deciding that there really is no creature waiting in ambush, you start out at a sprint and dash to the mess of wreckage in the center of the intersection. Ignoring reddish-brown stains on the inside of the cars as best as you can (while being thankful that you haven't found any actual bodies yet), you glance through cracked windows, stick your head into one car or two that seem most promising and... Strike! There's a grocery shopping bag on the passenger seat of a minivan. Pulling open its door with an alarmingly loud creak, you snatch up the bag. For a second, you're disappointed as you see a wilted and somewhat smelly packet of salad and several apples (shrunken and brown) on the top, but after dumping the rotten food, you grin broadly as two energy bars and several small bottles of name-brand sparkling water come to light below it!";
-			LineBreak;
-			say "[bold type]You gain 2 food![roman type][line break]";
-			increase carried of food by 2;
-			say "[bold type]You gain 4 water bottles![roman type][line break]";
-			increase carried of water bottle by 4;
+			ItemGain food by 2;
+			ItemGain water bottle by 4;
 			WaitLineBreak;
 			say "     Packing away your loot, you get going at checking the next car, and the next, but sadly they're less well stocked than your awesome find. Maybe the bus will be a better opportunity? Walking around a tangled mess of metal in which you can't even see where one car begins and the other ends, you approach the bus - and are shocked to see someone come out of it! Seems like you're not the only one who wanted to check out this scavenging spot. From what you can see, the guy stepping off the stairs of the bus is surprisingly fully human. He is fairly tall and broad-shouldered, dressed in sturdy boots, cargo pants with many pockets, and a sleeveless shirt that clings tightly to a muscular upper body, a bulging backpack slung over one shoulder. He notices you in turn and a wary expression spreads over his fairly attractive bearded face.";
 			say "     Silence stretches out between the two of you, two survivors of the chaos in the city eyeing each other, and you can't help but notice his hand tightening on the grip of the baseball bat he carries, in addition to the well-filled appearance of his backpack...";
@@ -195,8 +192,7 @@ Instead of resolving a Lone Survivor:
 			say "     Curious what might have put one of usually quite horny and (stupidly) audacious beasts in such a state, you walk deeper into the bike shop and see the 'Workshop' sign over the doorway the fox ran out of. Turning the corner, you see a number of other latex foxes - unconscious on the ground and looking somewhat deflated. Cautiously walking into the workshop, stepping over one of the foxes, you soon lay eyes upon the person who gave them such a thrashing. It is a man you know: Brennan. The broad-shouldered guy is standing at a workbench in the back of the room, his baseball bat laid on it while he is filling his backpack. A number of energy drink bottles still wait to be packed away, as well as a slender metal container or two that you can't quite place at the moment. Clearing your throat makes the man whirl around, snatching up his weapon in a smooth move - only to have a smile spread over his bearded face as he recognizes you.";
 			say "     'Hey there, fancy meeting you in this place.' You greet him in turn, then innocently ask what he is doing here, fighting through a dozen latex foxes. He chuckles and raises one of the metal cans, shaking it to create a sloshing sound. 'Actually, I came for this stuff. Industrial lubricant. The stuff makes creatures like our little friends around here go wild... I got some ideas about using that. As for the rest - a happy coincidence. They had a partial crate of these energy drinks under the workbench.' Stuffing the rest of the lube in his backpack, followed by most of the energy drink bottles, the tough survivor goes on to say, 'I'd love to chat with you, but... I think they're starting to come to. So here, have one on me and see ya again another time.' He throws you a bottle and gives a companionable wink, then strides out of the workshop, making sure to retain some distance from yourself and any of the slowly stirring latex creatures.";
 			LineBreak;
-			say "[bold type]You gain 1 soda bottle![roman type][line break]";
-			increase carried of soda by 1;
+			ItemGain soda by 1;
 		else:
 			LineBreak;
 			say "     Leaving whoever is having their disagreement in there to deal with it on their own, you quietly walk away and gain some distance. Better safe than sorry...";
@@ -220,14 +216,10 @@ Instead of resolving a Lone Survivor:
 			challenge "Latex Wolf";
 			if fightoutcome < 20: [player won]
 				say "     Beating off the latex wolf, you quickly rush over to the garden and harvest those carrots before leaving the place.";
-				LineBreak;
-				say "[bold type]You gain 3 food![roman type][line break]";
-				increase carried of food by 3;
+				ItemGain food by 3;
 			else if fightoutcome > 19 and fightoutcome < 30: [lost]
 				say "     After being used by the latex wolf, you lie there for quite a while, then eventually get back to your feet. With a shrug and intending to at least get something out of the ordeal, you stumble over to the garden and harvest the carrots.";
-				LineBreak;
-				say "[bold type]You gain 3 food![roman type][line break]";
-				increase carried of food by 3;
+				ItemGain food by 3;
 			else if fightoutcome is 30: [fled]
 				say "     You flee from the wolf, leaving behind any chance at getting those carrots. Surely, by the time you make your way back there, Brennan will already have harvested them.";
 			now Resolution of Lone Survivor is 92; [got latex wolf'd the second time]
@@ -332,9 +324,7 @@ Instead of resolving a Lone Survivor:
 					else:
 						LineBreak;
 						say "     'Mmmh!' he grunts as you reject his offer, shrugging. 'If that's the way it is...' he adds while rummaging around in his pack, then sets down two bottles of clean water on the ground for you. 'Best wishes,' are the last words you hear from him before he walks off the way he originally came from. Brennan pays the cooling-out anthro no further glance, leaving the knife that ended his life buried in the wolf's fur. Looking after the man until he vanishes from sight, you collect your reward and then also make your exit from the fateful alley.";
-						LineBreak;
-						say "[bold type]You gain 2 water bottles![roman type][line break]";
-						increase carried of water bottle by 2;
+						ItemGain water bottle by 2;
 						now Resolution of Lone Survivor is 100; [player <-> Brennan avoid each other]
 						now BrennanRelationship is 100; [player <-> Brennan avoid each other]
 			else if fightoutcome > 19 and fightoutcome < 30: [lost]
@@ -354,11 +344,8 @@ Instead of resolving a Lone Survivor:
 
 to say Apartment2bLooting:
 	say "     Quelling any feelings of transgression at going through someone's belongings, you do your best not to make too much of a mess as you explore the apartment for anything usable. About half an hour later, you are happy to add a glass of orange jam, several boxes of dry crackers and a soda bottle that rolled under the owner's sofa to your pack. Not a bad haul!";
-	LineBreak;
-	say "[bold type]You gain 4 food![roman type][line break]";
-	increase carried of food by 1;
-	say "[bold type]You gain 1 soda bottle![roman type][line break]";
-	increase carried of soda by 1;
+	ItemGain food by 1;
+	ItemGain soda by 1;
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -406,9 +393,7 @@ to ArmyConvoyEvent:
 		LineBreak;
 		project the figure of Brennan_face_icon;
 		say "     You tell Brennan that this is not really the right time for you to embark for what might be a dangerous trip. He nods thoughtfully, then says, 'Okay. We can postpone a little - but remember that once the eggs hatch, other scavengers will pick over the convoy, and there might nothing left by the time they're through with it. So please, get your preparations in order ASAP.' After that, he sets down his backpack and digs around in it a little, finally pulling a piece of red fabric on a string out. 'I'm gonna go back out into the city. If you're ready to go, just hang this thing up, and when I see it, I'll come pick you up here.' He follows this up with a list of places that he'll check regularly, then gives you a friendly (if somewhat impatient) wave and walks off into the wild streets once more.";
-		LineBreak;
-		say "[bold type]You gain a signal flag![roman type][line break]";
-		increase carried of signal flag by 1;
+		ItemGain signal flag by 1;
 		now BrennanRelationship is 5; [player postponed the convoy trip]
 		now Resolution of Army Convoy is 4; [postponed]
 	else:
@@ -447,7 +432,7 @@ to say SignalFlagUse:
 				say "     Setting out from the library, you move two blocks or so before hanging up the flag at a first floor window of an empty building. After returning home, it only takes about forty minutes before Brennan actually shows up, eager to get going...";
 				project the figure of Brennan_clothed_icon;
 				say "[ArmyConvoyTrip]";
-				decrease carried of signal flag by 1; [used up]
+				ItemLoss signal flag by 1; [used up]
 			else:
 				LineBreak;
 				say "     You shrug and pack away the little flag again.";
@@ -461,11 +446,8 @@ to say ArmyConvoyTrip:
 	project the figure of Brennan_face_icon;
 	say "     'And as the beast takes bullet after bullet without much more than twitching a little, morale breaks and these three,' he gestures to the singleton eggs, 'They start to flee, but are also brought down. Twelve good men and women, taken out by one wyvern. I can halfway understand why they implemented a total blockade of the city. Imagine this stuff getting out and spreading everywhere.' Looking fairly grim at the scene before you, Brennan shakes himself and then adds, 'But we should keep going. Looks like everyone is still incubating in their eggs, and hopefully it'll stay that way while we salvage what we can from the convoy.' Together, you close the gap to the wrecked Humvee, moving past the wyvern eggs in wary silence.";
 	say "     Brennan and yourself split up between the two trucks, with him going to inspect the knocked-over one and the crates and boxes that scattered over the roadway when it did. You pull yourself up to the open back end of the middle truck. As your head clears the edge of the truck-bed, you find total chaos before you inside. Looks like part of the load shifted and fell over on the crashing halt by the wyvern roadblock, and a few of the crates seem to have been ransacked, too. Looks like you are not the first to visit this place after all. Ankle-deep in bullets that have poured from broken crates, you poke around a little and are relieved to find a whole bunch of supplies still left for you to pick up. Water bottles, as well as military rations - enough to fill your backpack with!";
-	LineBreak;
-	say "[bold type]You gain 8 food![roman type][line break]";
-	increase carried of food by 8;
-	say "[bold type]You gain 5 water bottles![roman type][line break]";
-	increase carried of water bottle by 5;
+	ItemGain food by 8;
+	ItemGain water bottle by 5;
 	WaitLineBreak;
 	project the figure of Brennan_clothed_icon;
 	say "     Stuffing the last of it into your pack, you shoulder the heavy load and climb out of the truck after a final longing glance at the boxes farther in the back. Sadly, they're mostly wedged together or blocked by other fallen crates, and you can only realistically carry so much. When you come to stand on the highway again, you see Brennan bent over a mid-sized plastic crate, intently reading a red instruction leaflet. 'I think I know why our friends here haven't hatched yet. Look at this!' he says, picking up a bright red plastic tube he laid out on the crate lid and holding it so you can read the words 'Immunity Booster' printed on its side. A slender syringe rattles around inside it. 'Seems like this is protection against the transformations! For a time, at least. The info said something about daily injections...'";
@@ -522,8 +504,7 @@ to ThanksAndCherriesEvent:
 	PlayerEat 15;
 	say "[bold type]Your sanity has increased by 10![roman type][line break]";
 	SanBoost 10;
-	say "[bold type]You gain 2 food![roman type][line break]";
-	increase carried of food by 2;
+	ItemGain food by 2;
 	now BrennanRelationship is 7; [player got thanks, and cherries]
 	now Thanks & Cherries is resolved;
 	now Wolf Whisperer is active;
@@ -590,13 +571,9 @@ instead of resolving Wolf Whisperer:
 			say "     Stepping into the dark and abandoned basement room, you see a fairly nice bar setup, the tables and chairs covered in rock-dust and some fallen pieces of concrete. A thick crack goes right across the ceiling, waking worry over the structural integrity of the place. This definitively isn't a spot to stay in long. Walking around the counter, glass crunches beneath your boots and Brennan lowers the flashlight to illuminate a mess of shattered bottles - fruit liquor, which explains the smell. Sadly, it looks like the destruction above made just about all of the stock tumble down into a great mess. Yet Brennan isn't too easily frustrated and just keeps going with the search, pushing the shards out of the way to walk past. On the other side of the whole mess, he quickly finds the entrance of a storage room.";
 			WaitLineBreak;
 			say "     'This looks promising,' your friend says as he glances into the room, finding shelves with peanuts, pretzel sticks and various other food items designed to make people more thirsty, as well as some soda and water bottles. Since you helped excavate the place, he is only to happy to share the stash with you.";
-			LineBreak;
-			say "[bold type]You gain 3 food![roman type][line break]";
-			increase carried of food by 3;
-			say "[bold type]You gain 2 water bottles![roman type][line break]";
-			increase carried of water bottle by 2;
-			say "[bold type]You gain 3 soda bottles![roman type][line break]";
-			increase carried of soda by 3;
+			ItemGain food by 3;
+			ItemGain water bottle by 2;
+			ItemGain soda by 3;
 			LineBreak;
 			say "     Emerging from the depths of the damaged basement room with your backpacks bulging, Brennan and yourself climb the stairs and join the two wolves waiting at the surface and keeping watch. The human survivor crouches down between the two of them and hugs the large canines with both strong arms, cheerfully telling them, 'Someone has earned themselves special snacks and quite a few belly rubs. We found a nice load of stuff down there, all thanks two you two.' Romulus and Remus tails beat rapidly at the praise and petting, both of them being very happy to have pleased their leader. Brennan shakes your hand and says thanks once more, then the three of them move out from the ruined neighborhood, as do you yourself.";
 		else:
@@ -1789,39 +1766,21 @@ to say BrennanScavPayout:
 	if randomnumber is:
 		-- 1:
 			say "'We found some useful stuff too. Not a lot, but enough to be worth the effort. Here, have your share of it.' With that said, the bearded man gives you two bottles of water and a medkit.";
-			LineBreak;
-			say "[bold type]You gain 2 water bottles![roman type][line break]";
-			increase carried of water bottle by 2;
-			LineBreak;
-			say "[bold type]You gain 1 medkit![roman type][line break]";
-			increase carried of medkit by 1;
+			ItemGain water bottle by 2;
+			ItemGain medkit by 1;
 		-- 2:
 			say "'We found something useful too. A small box of energy bars, enough to share between us. Here, take these.' With that said, the bearded man gives you a handful of power bars.";
-			LineBreak;
-			say "[bold type]You gain 4 food![roman type][line break]";
-			increase carried of food by 4;
+			ItemGain food by 4;
 		-- 3:
 			say "'We found a really good haul! Lots of useful stuff. Here, have your share of it.' With that said, the bearded man gives you some food, a bottle of water and a medkit.";
-			LineBreak;
-			say "[bold type]You gain 2 food![roman type][line break]";
-			increase carried of food by 2;
-			LineBreak;
-			say "[bold type]You gain 1 water bottle![roman type][line break]";
-			increase carried of water bottle by 1;
-			LineBreak;
-			say "[bold type]You gain 1 medkit![roman type][line break]";
-			increase carried of medkit by 1;
+			ItemGain food by 2;
+			ItemGain water bottle by 1;
+			ItemGain medkit by 1;
 		-- 4:
 			say "'We found some odds and ends that looked interesting. I wonder who may have stashed it in this place. Whoever it was, hope they're not too pissed about me finding it when they come back. Or well, [italic type]if[roman type] they come back. One never knows, with the state of things.'";
-			LineBreak;
-			say "[bold type]You gain 1 healing booster![roman type][line break]";
-			increase carried of healing booster by 1;
-			LineBreak;
-			say "[bold type]You gain 1 sports drink![roman type][line break]";
-			increase carried of sports drink by 1;
-			LineBreak;
-			say "[bold type]You gain 1 pepperspray![roman type][line break]";
-			increase carried of pepperspray by 1;
+			ItemGain healing booster by 1;
+			ItemGain sports drink by 1;
+			ItemGain pepperspray by 1;
 		-- 5:
 			say "'Sadly, there wasn't anything usable to find in here. Everything edible had already gone bad, and it seems someone went through the place already too. Well, I guess you win some days and lose on others. Come on, let's get out of here.'";
 	WaitLineBreak;

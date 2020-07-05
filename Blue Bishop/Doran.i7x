@@ -167,10 +167,10 @@ to say Doran_Lose:
 		if a random chance of 1 in 2 succeeds and DoranFoodTimer - turns >= 16:
 			if a random chance of 1 in 2 succeeds:
 				say ". He even returns a few seconds later, bottle of water in maw, before setting it down in front of you and retreating a second time, extremely peculiar...";
-				add "water bottle" to invent of Player;
+				ItemGain water bottle by 1;
 			else:
 				say ". He even returns a few seconds later, can of food in maw, before setting it down in front of you and retreating a second time, extremely peculiar...";
-				add "food" to invent of Player;
+				ItemGain food by 1;
 			now DoranFoodTimer is turns;
 		else:
 			say ".";
@@ -2745,7 +2745,7 @@ to say DoranBodyModMenu: [NEW! Body Modification]
 							say "     'Ah, [DoranPlayerRegard] has reconsidered, by the looks of it! As I said before, I suppose a particularly virile strain of seed would augment my own. I imagine it'd take a lot longer to clean up the messes afterwards! [if DoranInternal is false]I'm guessing it would also alter the size of certain 'assets', as an additional side effect. [end if]Does this prospect excite [DoranPlayerRegard]?'";
 						if Player consents:
 							say "[DoranModBallsMenu]"; [Modify Balls/Cum]
-							delete tappeditem;
+							ItemLoss tappeditem by 1;
 						else:
 							say "     'Very well, [DoranPlayerRegard]. Don't be afraid to ask me about it again if you change your mind.'";
 						now Trixieexit is 1;
@@ -2810,7 +2810,7 @@ to say DoranBodyModMenu: [NEW! Body Modification]
 							say "     'Hm? ...Oh! This again. Yes, I'm certain these will give me breasts, if that's what [DoranPlayerRegard] wishes.'";
 						if Player consents:
 							say "[DoranModTitsMenu]"; [Modify Tits]
-							delete tappeditem;
+							ItemLoss tappeditem by 1;
 						else:
 							say "     'Very well, [DoranPlayerRegard]. Don't be afraid to ask me about it again if you change your mind.'";
 						now Trixieexit is 1;
@@ -3079,10 +3079,10 @@ to say DoranGetFood: [Food requisition/NEW! Breastfeeding]
 		else:
 			if DoranFoodType is 1:
 				say "     'Ah, yes! I found some water, maybe it will help [DoranPlayerRegard]?' [gche] hands it over to you.";
-				add "water bottle" to invent of Player;
+				ItemGain water bottle by 1;
 			else:
 				say "     'Ah, yes! I found some food, maybe it will help [DoranPlayerRegard]?' [gche] hands it over to you.";
-				add "food" to invent of Player;
+				ItemGain food by 1;
 			now DoranFoodType is a random number between 1 and 2;
 		now DoranFoodTimer is turns;
 	else:

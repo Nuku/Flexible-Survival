@@ -670,17 +670,17 @@ carry out TestMode:
 	now maxHP of Player is 300;
 	now HP of Player is 300;
 	now capacity of Player is 300;
-	increase carried of food by 15;
-	increase carried of water bottle by 15;
-	increase carried of medkit by 5;
-	increase carried of libido suppressant by 10;
-	increase carried of orc cum by 10;
-	increase carried of orc brew by 10;
-	increase carried of gryphon milk by 10;
-	increase carried of glob of goo by 5;
-	increase carried of honeycomb by 5;
-	increase carried of healing booster by 5;
-	increase carried of infection monitor by 1;
+	ItemGain food by 15 silently;
+	ItemGain water bottle by 15 silently;
+	ItemGain medkit by 5 silently;
+	ItemGain libido suppressant by 10 silently;
+	ItemGain orc cum by 10 silently;
+	ItemGain orc brew by 10 silently;
+	ItemGain gryphon milk by 10 silently;
+	ItemGain glob of goo by 5 silently;
+	ItemGain honeycomb by 5 silently;
+	ItemGain healing booster by 5 silently;
+	ItemGain infection monitor by 1 silently;
 	increase freecred by 5000;
 	sort feats of Player;
 	now Terminatorsleep is true;
@@ -894,8 +894,7 @@ check itemcheat:
 carry out itemcheat:
 	repeat with x running through grab objects:
 		if the printed name of x exactly matches the text topic understood, case insensitively:
-			increase carried of x by 1;
-			say "     You gain 1 [printed name of x]!";
+			ItemGain x by 1;
 			break;
 
 allitemcheat is an action applying to nothing.
@@ -907,7 +906,7 @@ check allitemcheat:
 carry out allitemcheat:
 	say "     You gain one of everything!";
 	repeat with x running through grab objects:
-		increase carried of x by 1;
+		ItemGain x by 1 silently;
 
 ListAllItems is an action applying to nothing.
 understand "ListAllItems" as ListAllItems.

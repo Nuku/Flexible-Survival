@@ -177,7 +177,7 @@ to say leodenscene4:
 		say "     You eat her out with zeal, eager to show your appreciation for the gift and to leave her thoroughly satisfied with her personal time with the pride's matron. And she's clearly eager to make the most of it as well, her hips grinding against your face as your tongue laps across her clit. Already aching with need from her earlier fun, her pussy quivers and clenches around your finger with an obvious need when you push it into her. You drive her to several orgasms while your own excitement builds until you both crest with powerful climaxes in quick succession.";
 	say "     After it's over, you snuggle and cuddle for a while. Leonard, satisfied that you've had your private time together, comes to join you and snuggles up to you from behind. Raven is the first to fall asleep, the exhaustion of her multiple releases catches up with her and she drifts off for a catnap. You nuzzle the slumbering kitty and give her a tender kiss on her forehead. Leonard, already having grabbed forty winks, is more alert and purrs softly to you, suggesting once again at that you stay with them. As you start to drift off, your muse over how the pride must feel about you always being away. Would it be so bad to stay with them? What out there can compare to the love you receive from Leonard and his loving lionesses?";
 	say "     When you awaken later, Raven is preparing to leave, needing to rejoin the others. She's given a heavy satchel and a pat on the rear by Leonard. With a parting hug and a whispered wish of 'Be safe, my matron,' she heads out.";
-	increase carried of bulletproof vest by 1;
+	ItemGain bulletproof vest by 1;
 	if Player is felinebodied:
 		infect "Feline";
 	else:
@@ -336,7 +336,7 @@ to say leosupplyscene:
 			say "     As she's being mounted, you can feel a rush of excitement running through your body as the cute girl rubs against you. She mewls in lustful need and grips your strong shoulders tightly as the lion's sizable cock is pushed into her petite body, wrapping her lips around your nipple. Shivers of delight run through you as she nurses for your matronly milk even while getting pounded by the sexy male. You purr softly to her, telling her how pleased you both are with her and how much you appreciate the food she's brought for you and for the pride.";
 		say "     Still with your paws on her ass, you can feel it sway with each increasingly strong thrust by the virile male stuffing her. You lick your lips, longing for your chance to be on the receiving end of him again, but knowing you should wait until the girl's been suitably rewarded. From the amount of her juices dripping down onto your thigh as the lion pounds her, you can tell she's really enjoying getting stuffed after being away on scavenging duty for so long. But she shows her longing for you as well, [if Player is female]sliding a paw between your legs to finger your pussy[else if Player is male]sliding a paw between your legs to stroke your manhood[else]nursing for as much milk as your [breast size desc of Player] breasts will give.";
 		say "     Things grow more heated when the lion leans overtop of her and takes her by the nape of her neck, growling softly as his hips slam hard against her cute bottom. She mewls and moans with each thrust, cumming with a fresh flow of juices from her stuffed cunny. This is soon followed by the lion's climax, the virile scent of his fresh seed being added to the arousing aroma of feline sex in the air. He keeps thrusting and cumming until her womb is full of his hot load and she's left quite satiated. Unlike the other kitties though, once the sex is done, she gives you each several hugs and kisses before climbing out of the bed. She plucks her cap off the coat rack, adjusts her feline ears through it, grabs her empty pack and rushes back out with a quick wave, cum still running down her furry thighs.";
-		increase carried of food by 1;
+		ItemGain food by 1;
 		increase score by 5;
 		now leosupplies is 2;
 	else:		[water]
@@ -356,7 +356,7 @@ to say leosupplyscene:
 			say "Given your [if scalevalue of Player < 3]smaller size[else]present lack of gender[end if], you decide to give the hard-working kitty some added oral attention.";
 			say "[leosupplyoral2]";
 		say "     As you're all basking in the afterglow, the satiated feline gives you both several hugs and kisses, mewing happily about how much she loves you both. After she's had a chance to recover, she pulls herself off Leonard's lap and hops back on the floor. She straightens her cap, grabs her empty pack and rushes back out with a quick wave, cum still running down her furry thighs.";
-		increase carried of water bottle by 1;
+		ItemGain water bottle by 1;
 		increase score by 5;
 		now leosupplies is 1;
 	if Player is felinebodied:
@@ -596,10 +596,10 @@ Instead of resolving PridePark:
 					let medloss be 0;
 					if ( "Expert Medic" is not listed in feats of Player and a random chance of 1 in 10 succeeds ) or ( "Expert Medic" is listed in feats of Player and a random chance of 8 in 100 succeeds ):
 						let medloss be 1;
-						delete medkit;
+						ItemLoss medkit by 1;
 					say "     Your matronly desire to protect your pride girls kicks in and you don't hesitate to help. Remembering your medkit, you pull it out and start to patch her up. She winces and mewls softly as you get her bandaged up and give her some meds from the kit[if medloss is 1]. This uses up the last of that medkit, but you feel no regrets over that at the moment[end if]. She snuggles up to you, giving you several kisses in thanks. You guide her muzzle down to your chest ";
 				else if healing booster is owned:
-					delete healing booster;
+					ItemLoss healing booster by 1;
 					say "     Your matronly desire to protect your pride girls kicks in and you don't hesitate to help. Recalling the healing booster you have, you pull it out and inject it close to her wound. She winces and mewls, but starts to purr as the medicine starts to take effect. She snuggles up to you, giving you several kisses in thanks. You guide her muzzle down to your chest ";
 				if Player is felinebodied:
 					say "so she may nurse for your feline milk to help her recover faster. As she suckles your milk, you [one of]purr to her that you and Leonard will love and protect her[or]purr to her that her pride will take care of her[or]remind her to be more careful[or]purr that the pride will protect her[or]purr to her to continue doing her best for the pride[purely at random]. Once she's had a chance to feed and heal, you release her back into the park with a pat on her bottom. You feel a little better for having helped your pride.";
@@ -674,15 +674,15 @@ Instead of resolving PridePark:
 				let sup be a random number between 1 and 4;
 				if sup is 1 or sup is 2:
 					say "[one of]assorted cans[or]canned meat[or]mixed fruit[or]assorted food[at random] in the bag. She gives you some with a smile, but says they'll need the rest back at the den.";
-					increase carried of food by 1;
+					ItemGain food by 1;
 					increase score by 5;
 				else if sup is 3:
 					say "bottles of fresh water in the bag. She gives you a bottle with a smile, but says they'll need the rest back at the den.";
-					increase carried of water bottle by 1;
+					ItemGain water bottle by 1;
 					increase score by 5;
 				else:
 					say "cans of soda in the bag. She gives you a can with a smile, but says they'll need the rest back at the den.";
-					increase carried of soda by 1;
+					ItemGain soda by 1;
 					increase score by 5;
 				say "     You smile at her and rub her head, giving her ears a scritch, telling her what a good kitty she is to share. You welcome her into your arms with a hug and a kiss. She snuggles up to you and is soon nuzzling at your chest";
 			if Player is felinebodied:
