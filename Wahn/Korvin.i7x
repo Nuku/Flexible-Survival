@@ -39,7 +39,6 @@ gshep	"gshep"
 
 gshep is a pet. gshep is a part of the player.
 understand "Korvin" as gshep.
-printed name of gshep is "Korvin".
 The description of gshep is "[Korvindesc]".
 The conversation of gshep is { "Bark!" }.
 The weapon damage of gshep is 5.
@@ -689,6 +688,8 @@ Section 6 - Events
 [ Korvin sniffs after a female bull terrier -> see file Wahn/Mall Expansion.i7x]
 [ Korvin meets a young adult beagle boy -> see file Speedlover/Extra College Events.i7x]
 [ Korvin antagonizes Tehuantl -> see file Wahn/Tehuantl.i7x]
+[ Korvin put in his place by Alpha Fang -> see file Prometheus/Fang.i7x]
+[ Alpha Fang solidifies his position over Korvin sexually -> see file Prometheus/Fang.i7x]
 
 [ *** notes ]
 [
