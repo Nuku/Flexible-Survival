@@ -20,7 +20,7 @@ use MAX_ACTIONS of 2000.
 use MAX_VERBS of 2000.
 use MAX_VERBSPACE of 50000.
 use MAX_ARRAYS of 100000.
-Use MAX_ZCODE_SIZE of 1000000.
+[Use MAX_ZCODE_SIZE of 1000000.]
 Use MAX_DICT_ENTRIES OF 5000.
 Use maximum text length of at least 2000.
 Use Scoring.
@@ -2781,6 +2781,9 @@ To process (x - a grab object):
 				increase morale of Player by 30;
 				if morale of Player > 0, now morale of Player is 0;
 				say "You feel better having eaten.";
+		if "Tanuki Salts" is listed in feats of player:
+			PlayerEat 4;
+			say "Ah, those secret spices help so much!";
 	else if x is chips:
 		if labhost > 0 and BodyName of Player is "Chocolate Lab" and a random chance of labhost in 4 succeeds:
 			say "[line break]     As you begin unwrapping your snack a powerful rumbling begins in your stomach, you release a low groan as the churning inside your body increases, the [if labhost is 2]labs[else]lab[end if] clearly excited about something. There is a sudden pressure at your chest as your feel the churning begin to focus at a single point, before you have a chance to react, or even realize what's happening, a canine snout pushes out of your chocolaty chest, grabbing the [one of]chocolate bar[or]chocolate[or]M&Ms[at random] from your hand and swallowing it whole. You stand there shocked for a moment as the lab spits up the chewed remains of your treat's wrapper before releasing a happy bark and receding into your body. Dissappointed at the loss of your snack, you release a heavy sigh and continue on your way.";

@@ -137,7 +137,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "marchon" as supersponsor.
+understand "mayflower" as supersponsor.
 
 when play ends:
 	clear the screen;

@@ -686,8 +686,9 @@ to say TanukiRomanceTalk:
 		say "Tanuki Dad looks like someone forgot to tell him what to say. He makes unsure noises and worries his fingers for a few moments. 'And that[']s how it[']s done!' he suddenly exclaims as if he had provided any wisdom.";
 
 to say TanukiPerfumeTalk:
-	say "     ";
-	say "     ";
+	say "'Oh, this?' She holds out an arm for you to get a sniff of. You are drawn away, visions of [one of]fishing in a calm bay[or]roasting meat on a warm summer afternoon[or]sharing a quality drink with friends[or]a world where it isn[']t a struggle to survive[at random] dance in your mind.";
+	increase the morale of the player by 10;
+	say "Your moment of peace is shattered by her tapping you. 'Don[']t get lost in that. Besides, I[']m not going anywhere.'";
 
 to say TanukiCookingTalk:
 	if "Tanuki Salts" is listed in feats of the player:
