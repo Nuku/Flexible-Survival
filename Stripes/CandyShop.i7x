@@ -48,8 +48,7 @@ Instead of resolving a CandyShop:
 			say "     Managing to weave between a pair of the ferrets, you dive out the door and make a run from the CandyShop. The manic ferrets pursue you briefly, but veer off to raid another of the nearby shops.";
 		else if sugarferretfight is 1:
 			say "     Aside from those you've dazed, the other colorful ferrets are lustfully fucking all around you. Feeling you only have a moment before those finishing up take notice of you, you grab your pack and stuff a few handfuls of candy into it before rushing out the door.";
-			say "     Snacks (chips) x 2 added to inventory.";
-			increase carried of chips by 2;
+			ItemGain chips by 2;
 			increase score by 10;
 		else:
 			say "     Pinned down by a swarm of pointy-toothed ferrets overcome by a rush of manic energy, you find yourself being groped and fondled by numerous little paws. As your lust builds, a pair of blue paws grab your head, guiding it to the crimson cock of another ferret. The taste of his pre is very sweet, exciting you further. You can feel hard cocks and wet pussies grinding against you[if Player is male]. Paws grab your erect penis and balls, stroking and fondling them[end if][if Player is female]. Furry fingers are stuffed into your pussy, thankfully careful with those sharp claws of theirs[end if]. You are teased and fondled until you the ferret cock stuffed in your mouth throbs and pulses its sticky load down your throat. You are then pushed over and another of the males mounts you, driving his cock into your [if Player is female]pussy[else]ass[end if], fucking you wildly. After a quick, but frantic romp, his load is sprayed deep inside you as well. After that, things get hazy, being made to lick pussies, suck cocks and have sex with the ferrets, who seem to have unending energy. Eventually, they tire of you and you're tossed out to make room for another big romp on a pile of candy.[impregchance]";
@@ -70,7 +69,7 @@ Instead of resolving a CandyShop:
 			now Libido of Player is ( Libido of Player + 50 ) / 2;
 			SanLoss 5;
 		say "     You can now find your way back to the Sweet Tooth CandyShop, though you'd best wait until the ferrets come off their caffeine buzz before doing so.";
-		now Sweet Tooth is known;
+		AddNavPoint Sweet Tooth;
 		increase ferretvisit by 1;
 		now Resolution of CandyShop is 1; [Went in]
 	else: [Did not go in]
@@ -131,13 +130,13 @@ to say Sweet Tooth scene:
 		attributeinfect;
 		follow the sex change rule;
 		if soda is owned:
-			delete soda;
+			ItemLoss soda by 1;
 			now lastcaffeine of Sweet Tooth is turns;
 			now caffeinehigh of Player is 8;
 			decrease thirst of Player by 6;
 			say "     You hear some rustling in your pack as one of them starts ferreting through it. A pale blue jill pulls out some cola. Popping it open, she says 'Yay! A new friend. Let's celebrate.' She takes a big swig from the can before pressing it to your lips. You momentarily consider resisting, but as that sweet, carbonated ambrosia touches your lips, you can't help but open wide and swallow it down. As the cola flows down your throat and into your body, you can feel a rush of excitement overtake you. You twitch as the caffeine rushes into your bloodstream and make grabby paws to get the can back as another ferret tries to take a drink. 'Oh! That's gooood! Gimme more!' you say excitedly. The blue girl buries her head in your pack, tossing out all the soda she can find while others pull bottles and cans out from hidden stashes.";
 			while carried of soda is not 0:
-				delete soda;
+				ItemLoss soda by 1;
 				increase caffeinehigh of Player by 2;
 				if a random chance of 2 in 5 succeeds, increase caffeinehigh of Player by 1;
 				if a random chance of 2 in 5 succeeds, decrease caffeinehigh of Player by 1;
@@ -202,12 +201,12 @@ to say Sweet Tooth scene:
 			say "     Losing yourself in the lustful fun with the ferrets, you can feel your body changing, becoming more ferret-like. The ferrets around you are clearly pleased by this, snuggling and kissing you as you can feel the tingles of the activated infection.";
 			infect "Sugar Ferret";
 		if soda is owned:
-			delete soda;
+			ItemLoss soda by 1 silently;
 			now lastcaffeine of Sweet Tooth is turns;
 			decrease thirst of Player by 6;
 			say "     Remembering that you have some soda in your pack and too excited to think reasonably, you pull out the cola and start drinking it, then end up sharing around your entire soda collection as you and the other ferrets begin to change. More pop is brought out from hidden stashes. You moan excitedly as a manic energy starts to suffuse you, filling you with a rush that's half lust and half a craving for more[if the player is sugarfaced]. Your eyes turn a bright red like those of the other ferrets around you as the caffeine makes you manic. Your teeth grow sharp and pointed and you gain a wide, toothy grin[end if][if the player is sugarskinned]. Your pastel fur grows richer in color, becoming a vibrant purple[end if]. You can't sit still at this point, filled with so much wild energy.";
 			while carried of soda is not 0:
-				delete soda;
+				ItemLoss soda by 1 silently;
 				increase caffeinehigh of Player by 2;
 				if a random chance of 2 in 5 succeeds, increase caffeinehigh of Player by 1;
 				if a random chance of 2 in 5 succeeds, decrease caffeinehigh of Player by 1;
@@ -215,6 +214,7 @@ to say Sweet Tooth scene:
 				decrease thirst of Player by 3;
 				decrease humanity of Player by 3;
 				increase Libido of Player by 3;
+			say "[bold type]You lose all your soda![roman type]";
 		else:
 			say "     One of the ferrets pulls out a big bottle of cola and starts passing it around. Too excited to think clearly, you grab the bottle as soon as it gets close enough, taking a big swig and enjoying the wild rush the caffeine in it gives you. The others around you bounce around excitedly and more pop is pulled out from hidden stashes. You moan excitedly as a manic energy starts to suffuse you, filling you with a rush that's half lust and half a craving for more[if the player is sugarfaced]. Your eyes turn a bright red like those of the other ferrets around you as the caffeine makes you manic. Your teeth grow sharp and pointed and you gain a wide, toothy grin[end if][if the player is sugarskinned]. Your pastel fur grows richer in color, becoming a vibrant purple[end if]. You can't sit still at this point, filled with so much wild energy.";
 			now lastcaffeine of Sweet Tooth is turns;

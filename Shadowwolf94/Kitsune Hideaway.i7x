@@ -316,7 +316,7 @@ Check kitfoodrequest:
 
 Carry out kitfoodrequest:
 	say "Kitsune smirks at you before going off... somewhere... and then returning with a bit of food for you. 'Please, take this and take care.'";
-	increase carried of food by 1;
+	ItemGain food by 1;
 	now lastfoodrun is turns;
 	increase Kitsunefood by 1;
 
@@ -330,7 +330,7 @@ Check kitwaterrequest:
 
 Carry out kitwaterrequest:
 	say "Kitsune nods to you and then goes about his way to collect some water. It takes a minute but soon the other returns to gracefully hand you a bottle of water. 'May this help you on your journey, little one.'";
-	increase carried of water bottle by 1;
+	ItemGain water bottle by 1;
 	now lastwaterrun is turns;
 	increase Kitsunewater by 1;
 ]

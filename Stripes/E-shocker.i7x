@@ -25,7 +25,7 @@ Instead of Resolving a Electric shockers:
 		now Electricprodstatus is 1;
 	else if Electricprodstatus is 1:
 		say "     Traveling through the zoo, you come across a rather familiar looking zookeeper's shack, and it looks like someone else has been here recently as well. Deciding to be careful you peek around the door to make sure there isn't some kind of strange beast there waiting for you. You are rather surprised to note that not only is the shack empty again, but it looks like whatever was here had a goal, they seem to have made a concerted assault on the case in the corner holding the powerful electric prods. They seem to have had more success then you, because the case now hangs open loosely, and several of the useful tools have spilled out onto the floor, a quick examination shows you that most of the weapons were damaged too severely to work by whoever broke the case open, but you do manage to find one which you think might actually work for a while before it burns out.";
-		increase carried of electric prod by 1;
+		ItemGain electric prod by 1;
 		now eptarget is a random number between 6 and 12;
 		now Electricprodstatus is 2;
 	else if Electricprodstatus is 2:
@@ -98,7 +98,7 @@ to say useelectricprod:
 					say "Your electric prod is now [if eprecharge >= 2]permanently dead and you toss it aside[else]dead until you can repair it[end if].";
 					now Electricprodstatus is 3;
 					now electric prod is not fast;
-					if eprecharge >= 2, delete electric prod;
+					if eprecharge >= 2, ItemLoss electric prod by 1;
 			else if roll + combat bonus > 20:
 				decrease eptarget by 1;
 				say "Hit: You charge up the [one of]stun rod[or]electric prod[or]cattle prod[or]shock stick[or]electric shocker[at random] and thrust at the [Name entry]. Getting a glancing blow, the electricity shocks it and makes it stagger back, taking some of the fight out of it. Ozone hangs in the air and your electric shocker [if eptarget is 0]sputters and sparks, burning out with the smell of magic smoke[else]is overheated. It will be a while before you can use it again[end if]";
@@ -114,7 +114,7 @@ to say useelectricprod:
 					say "Your electric prod is now [if eprecharge >= 2]permanently dead and you toss it aside[else]dead until you can repair it[end if].";
 					now Electricprodstatus is 3;
 					now electric prod is not fast;
-					if eprecharge >= 2, delete electric prod;
+					if eprecharge >= 2, ItemLoss electric prod by 1;
 			else:
 				say "Miss: You charge up the [one of]stun rod[or]electric prod[or]cattle prod[or]shock stick[or]electric shocker[at random] and thrust at the [Name entry], but end up missing.";
 				if a random chance of 1 in 4 succeeds and eptarget is not 1, decrease eptarget by 1;

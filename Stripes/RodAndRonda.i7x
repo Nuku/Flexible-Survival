@@ -186,7 +186,7 @@ instead of trading the demon seed when the current action involves the ronda:
 		project the figure of RondaSR_icon;
 		say "     Ronda looks confused at the gift, 'What the heck is this gunk?' she asks, sniffing at it, then flicking a tongue out to taste it. The moment her tongue caresses the surface, she tenses, then lets out a long, airy groan. Other rats nearby come to investigate the noise, and she is soon sharing with about half a dozen of them, licking and lapping until there's none left.";
 		say "     The six rats are all panting loudly now as their breasts starts to swell up dramatically and their pants bulge with newfound virility. A sudden shout breaks their reverie. The other mall rats have noticed the goings on, and converge to drive off the infected, Ronda included, forcing the changed rats off into the sewers.";
-		delete demon seed;
+		ItemLoss demon seed by 1;
 		now Ronda is nowhere;
 		now HP of ronda is 1;
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
@@ -230,8 +230,8 @@ to say rondaitems:
 	now HP of Ronda is 6;
 	now Art Collector is active;
 	increase score by 10;
-	delete lizard juice;
-	delete awesomest fruit;
+	ItemLoss lizard juice by 1;
+	ItemLoss awesomest fruit by 1;
 
 before conversing the Nermine while HP of Ronda is 7:
 	say "[rondaitems2]" instead;
@@ -484,10 +484,10 @@ to say helpingrod:
 			say "     After withdrawing and Rod and Ronda change positions, Ronda sends you on your way, saying she wants more private time with him. 'We have so much to catch up on,' she says with a grin, stroking her cock as it gets hard again.";
 		if calcnumber is 3:
 			say "     You shake your head and tell them that you'd not want to get in the way of their loving reunion and head out, hearing Rod start moaning again as Ronda turns her full attention back on buggering her boyfriend.";
-		say "     On the way out, you do snag some supplies from the counter, the two rats too occupied to notice you helping yourself to them. Not that you think they'd object, but they're a bit too distracted to see that you're properly rewarded for your efforts. (Food, chips and a can of soda obtained.)[line break]";
-		increase carried of food by 1;
-		increase carried of chips by 1;
-		increase carried of soda by 1;
+		say "     On the way out, you do snag some supplies from the counter, the two rats too occupied to notice you helping yourself to them. Not that you think they'd object, but they're a bit too distracted to see that you're properly rewarded for your efforts.[line break]";
+		ItemGain food by 1;
+		ItemGain chips by 1;
+		ItemGain soda by 1;
 		increase score by 100;
 
 RodAndRonda ends here.

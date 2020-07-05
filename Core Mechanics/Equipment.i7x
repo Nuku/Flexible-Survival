@@ -18,7 +18,7 @@ Version 1 of Equipment by Core Mechanics begins here.
 [Bra: Breast Slot                                                               ]
 [Torso Trainers: Stomach Slot                                                   ]
 [Gloves: Hands Slot                                                             ]
-[Rings: Hands Slot                                                               ]
+[Rings: Hands Slot                                                              ]
 [Belt: Waist Slot                                                               ]
 [Pants: Leg Slot                                                                ]
 [Skirt: Leg Slot                                                                ]

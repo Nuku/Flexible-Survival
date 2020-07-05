@@ -131,12 +131,12 @@ after going to Darius's Crib while (Darius is not in Darius's Crib):
 				LineBreak;
 				say "     Methodically taking the bottles out one by one and slowly pulling the flip-top to the side, you drop a Bliss tablet into each of them. After only a little while, you've spiked the whole stash and returned them into their icy surroundings. Replacing the lid of the cooler, you wander back to the middle of the room.";
 				now Stamina of Darius is 2;
-				decrease carried of Bliss Tablet by 12;
+				ItemLoss Bliss Tablet by 12;
 			else if calcnumber is 2:
 				LineBreak;
 				say "     Snatching up a bottle again, you slowly and carefully pull the flip-top to the side, then drop your Bliss tablet into the opening before closing the beer back up. Settling the bottle back between its siblings, you replace the lid of the cooler, then wander back to the middle of the room.";
 				now Stamina of Darius is 1;
-				decrease carried of Bliss Tablet by 1;
+				ItemLoss Bliss Tablet by 1;
 			else:
 				LineBreak;
 				say "     With a shrug, you put the lid back on the cooler and wander back to the middle of the room.";
@@ -149,7 +149,7 @@ after going to Darius's Crib while (Darius is not in Darius's Crib):
 				LineBreak;
 				say "     Snatching up a bottle again, you slowly and carefully pull the flip-top to the side, then drop your Bliss tablet into the opening before closing the beer back up. Settling the bottle back between its siblings, you replace the lid of the cooler, then wander back to the middle of the room.";
 				now Stamina of Darius is 1;
-				decrease carried of Bliss Tablet by 1;
+				ItemLoss Bliss Tablet by 1;
 			else:
 				LineBreak;
 				say "     With a shrug, you put the lid back on the cooler and wander back to the middle of the room.";

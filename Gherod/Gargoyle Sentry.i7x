@@ -75,7 +75,7 @@ instead of resolving a Gargoyle Sentry:
 		SGargoyleVisit;
 
 to SGargoyleExplore:
-	decrease carried of glowing mushroom by 1;
+	ItemLoss glowing mushroom by 1;
 	say "     Down the hatch goes a shroom, and you start feeling the effects almost immediately. The world around you shifts before your eyes as you feel yourself shrinking to only a few inches tall, [if player is not naked]having even shrunk through your gear and getting completely naked[else]your already naked body remaining as such, even more exposed to danger[end if]. Adrenaline rushes with the anticipation of attempting your dangerous plan before you dare to take a tiny step towards the stone perimeter. Relief arrives down your shoulders as your tiny feet makes it forward without anything out of the ordinary happening, so you start walking around slowly and, effectively, everything goes according to plan. Now that you're inside the safety perimeter, it's time to explore!";
 	say "     The muscular gargoyle sleeps soundly and still, looking menacingly huge from your perspective of view. You don't even want to imagine what he could do to you being of that size if he suddenly came to life and saw an intruder so small and vulnerable, meaning you shouldn't linger for long. Making your way through the rudimentary stone pavement, you head directly towards the place where you've seen the goods, a much longer way than what it would be if you were normal sized... But you manage, after about a few minutes of walking. Then, you climb up through some stones, a task surprisingly easier to accomplish while you're tiny and light, and walk over the edge of some sort of chest. Luckily, it's not closed, as there are a few objects holding the top up in place. The bottom shines, as there must be a few valuables in here!";
 	WaitLineBreak;
@@ -140,19 +140,19 @@ to SGargoyleSearch: [Player searches for gargoyle sentry...]
 			if randomnumber is:
 				-- 1:
 					say "     But not everything is bad. You managed to find a [bold type]bottle of clean water[roman type] during your search, lying abandoned in some random area where it could have possibly been dropped by someone, forgotten or both.";
-					increase carried of water bottle by 1;
+					ItemGain water bottle by 1 silently;
 				-- 2:
 					say "     But not everything is bad. You managed to find a [bold type]soda can[roman type] during your search, lying abandoned in some random area where it could have possibly been dropped by someone, forgotten or both.";
-					increase carried of soda by 1;
+					ItemGain soda by 1 silently;
 				-- 3:
 					say "     But not everything is bad. You managed to find a [bold type]can of food[roman type] during your search, lying abandoned in some random area where it could have possibly been dropped by someone, forgotten or both.";
-					increase carried of food by 1;
+					ItemGain food by 1 silently;
 				-- 4:
 					say "     But not everything is bad. You managed to find a [bold type]pack of chips[roman type] during your search, lying abandoned in some random area where it could have possibly been dropped by someone, forgotten or both.";
-					increase carried of chips by 1;
+					ItemGain chips by 1 silently;
 				-- 5:
 					say "     But not everything is bad. You managed to find a [bold type]bottle of dirty water[roman type] during your search, lying abandoned in some random area where it could have possibly been dropped by someone, forgotten or both.";
-					increase carried of dirty water by 1;
+					ItemGain dirty water by 1 silently;
 			say "     Whenever you are ready to continue your search, simply begin your hunt for the [bold type]Gargoyle Sentry[roman type] until you find him.";
 		else:
 			say "     Whenever you are ready to continue your search, simply begin your hunt for the [bold type]Gargoyle Sentry[roman type] until you find him.";

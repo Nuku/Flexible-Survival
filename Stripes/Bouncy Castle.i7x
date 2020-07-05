@@ -63,7 +63,7 @@ Instead of resolving a Snared Vixen:
 			say "     The boat you've used to travel to the pirate island is more than capable of handling the short jaunt out to the bouncy castle, so you should be able to make it out there.";
 		else if hasgills is 1:
 			say "     It would take a bit of work, but you should be able to swim all the way out to the bouncy castle thanks to your gills.";
-		now Bouncy Castle is known;
+		AddNavPoint Bouncy Castle;
 		now HP of Bubble is 1;
 		[moved generating Dolphinlist to the game start, see above]
 		now vixcountdown is 29;
@@ -2210,7 +2210,7 @@ to say bcfinalsuccess:
 		say "     'Oh... Well, thanks for saving me, I guess,' she says, briefly disappointed, before her mind wanders again. 'Maybe someone else out there would like a little latex lovin[']. I know I do,' she yips merrily. 'Well, time for me to head off, sweetie. Thanks for the rescue,' she says, giving your ass a squeeze before dashing off with a girlish giggle.";
 		now HP of Bubble is 3;
 		move player to Public Beach;
-	increase carried of water bottle by 3;
+	ItemGain water bottle by 3;
 	increase score by 60;
 	if bcuntethered is 1:
 		now Bouncy Castle is unknown;

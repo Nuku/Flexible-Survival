@@ -24,7 +24,7 @@ Instead of Resolving a Egyptian Wing:
 	WaitLineBreak;
 	say "     You recall that this is where Valerie said that she was in when the nanite outbreak began; you can only begin to imagine what wonders await you in the exhibits ahead. Grabbing your map, you mark down the location of the Egyptian Wing; you don't want to forget how to get here.";
 	move player to Egypt Wing Entrance;
-	now Egypt Wing Entrance is known;
+	AddNavPoint Egypt Wing Entrance;
 	now Egyptian Wing is resolved;
 
 [Jade Scarab event located in Sarokcat's Consolidated Museum file]
@@ -58,7 +58,7 @@ instead of resolving Finding Winged Orb:
 		else:
 			say "     Exhausted after your battle, you're still happy that you were able to find one of the sigils that Amuran needs. Hoisting yourself up, you ready yourself to continue, remembering to deliver the emblem to the divine servant.";
 		now Resolution of Finding Winged Orb is 2; [fell out of the tree]
-	increase carried of winged sun by 1;
+	ItemGain winged sun by 1;
 	now Finding Winged Orb is resolved;
 
 Section 2 - Areas and Rooms
@@ -148,7 +148,7 @@ carry out EgyptMuralExamine:
 		say "     On the other side of this mural, under the watchful gaze of Osiris, the people of Egypt bow before their rightful pharaoh. Men, women, and children kneel down in front of his throne, giving themselves over to the rule of Osiris. This mural is obviously depicting the time when Osiris was the ruling pharaoh of Egypt, bringing forward an age of prosperity for the empire of the Nile.";
 		WaitLineBreak;
 		say "     Walking over to the eastern mural, you find this one much less jovial. Two men are displayed on the left side of the mural, one of them Osiris, pharaoh of Egypt. The other man, standing behind Osiris, can only be Set, the god of violence and chaos. Tricking Osiris into getting into a wooden box, Set seals Osiris within it, filling the box with lead and throwing it into the Nile. Set brutally ends the reign of Osiris, Set's jealousy having proven the victor.";
-		say "     Searching throughout Egypt, Isis, the husband of Osiris, hunted for his corpse; she finally founds it embedded within a wooden pillar within a palace along the Phoenician coast. Removing the coffin of her husband, she finds Osiris dead, Set's violent methods having killed the king of Egypt. Reciting a spell of revival, Isis brings Osiris's body to life, with the subsequent intimate relations resulting in Isis's insemination. Her spell soon wears off, and Osiris once again dies.";
+		say "     Searching throughout Egypt, Isis, the wife of Osiris, hunted for his corpse; she finally finds it embedded within a wooden pillar within a palace along the Phoenician coast. Removing the coffin of her husband, she finds Osiris dead, Set's violent methods having killed the king of Egypt. Reciting a spell of revival, Isis brings Osiris's body to life, with the subsequent intimate relations resulting in Isis's insemination. Her spell soon wears off, and Osiris once again dies.";
 		say "     Continuing the story on the right side of this mural, you see Isis hiding Osiris's body somewhere in Egypt, away from the wrathful vengeance of Set. Retreating herself into the desert, she soon births a son; Horus, lord of the sky. Set, having found out what Isis had done, hunts throughout Egypt for her and her son. Stumbling upon the body of Osiris, Set flies into a vengeful rage and tears his body into pieces, scattering them across Egypt.";
 		WaitLineBreak;
 		say "     Wandering over to the final mural, you can tell that the finale is still before you. Already having raised Horus to adulthood, Isis once again travels through Egypt, collecting the dismembered parts of her husband. Reconstructing Osiris's body and mummifying him, Isis prepares Osiris for the traditional burial of the Egyptian people. Watching her dedication to Osiris, the rest of the Egyptian pantheon admires her love of Osiris; together, the pantheon resurrects Osiris, who thusly becomes the undead god of the underworld.";
@@ -413,7 +413,7 @@ instead of conversing Amuran:
 		StatChange "Intelligence" by 1;
 		StatChange "Perception" by 1;
 		increase lust of Amuran by 1;
-		decrease carried of jade scarab by 1;
+		ItemLoss jade scarab by 1;
 	else if carried of winged sun is 1:
 		say "     Unsurprisingly, you see that Amuran has (probably) not moved from his sitting position since you've last seen him; he's still sitting in front of the glimmering pool of water, meditating peacefully. Quietly approaching him, you quickly figure out that he still does not notice you. Once again tapping his shoulder, he soon turns to look at you, letting you talk first. Searching around in your pack for his emblem, you pull out the winged sun and hand it to him, giving him back one of his godly conduits.";
 		say "     Rapidly closing his chitinous hands over his sigil, beams of light begin to emanate from the emblem, shining out brilliantly in the warm air surrounding you. In a few seconds, a blast of orange light shoots out from the shining emblem; as the light fades, it seems that the sigil is gone. Standing in front of you is a contented-looking Amuran, stretching out happily in the shining rays of the sun.";
@@ -423,7 +423,7 @@ instead of conversing Amuran:
 		StatChange "Dexterity" by 1;
 		StatChange "Stamina" by 1;
 		increase lust of Amuran by 1;
-		decrease carried of winged sun by 1;
+		ItemLoss winged sun by 1;
 	else if lust of Amuran is 2:
 		say "     Approaching the meditating insect-man, you're quite surprised when Amuran turns to notice you first, instead of you having to patiently wait for him. Nonchalantly rising to his chitinous claws and turning to you, he crosses his arms over his chest and bows to you; most likely thanking you for the return of his abilities. Finishing his wordless thanks a few moments later, he rises to his full majesty before speaking.";
 		say "     'I must award my sincerest of thanks, young one, for the assistance you have rendered me. It would have been many a twilight before I could have departed this holy temple, lost so as my power was. Now, however, I return to full strength, and can carry out my task.' Telling him that you were quite happy to help, you ask what he has to do to find this relic.";
@@ -452,7 +452,7 @@ instead of conversing Amuran:
 				follow the turnpass rule;
 				say "     Your trek continues onwards for another few hours. During the explorations, you and Amuran talk about your lives and experiences, figuring out more about each other. While your adventures cannot hold a candle to the things Amuran has seen or done, he still seems quite interested in [']normal['] mortal life.";
 				say "     Finally, you come across the area that Amuran must have seen. Smoke and dust fills the air ahead of you, the ruins of buildings burning with everlasting fires. Releasing a heavy sigh, Amuran speaks: 'Yes, this is the place that I saw.' Turning to look at you, he continues: 'We must venture into the burning ruins. As always, be on guard, young one.'";
-				now Approaching the Capitol Building is known;
+				AddNavPoint Approaching the Capitol Building;
 				now lust of Amuran is 0;
 				now HP of Amuran is 6;
 				say "[AmuranFinalQuest]";

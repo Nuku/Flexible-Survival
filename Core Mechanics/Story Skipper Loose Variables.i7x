@@ -298,8 +298,6 @@ to TextVariableSave:
 			now TextVarValue entry is ubpreg;
 		-- "VikingKidShape":
 			now TextVarValue entry is VikingKidShape;
-		-- "weaselcolor":
-			now TextVarValue entry is weaselcolor;
 		-- "wolvloc":
 			now TextVarValue entry is wolvloc;
 		-- "wrbody":
@@ -717,8 +715,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is colliedefeat;
 		-- "combat abort":
 			now NumberVarValue entry is combat abort;
-		-- "compressedcock":
-			now NumberVarValue entry is compressedcock;
 		-- "ConclaveKnowledge":
 			now NumberVarValue entry is ConclaveKnowledge;
 		-- "ConfSvenEricInteraction":
@@ -801,8 +797,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is DiegoFucked;
 		-- "Diegotalk":
 			now NumberVarValue entry is Diegotalk;
-		-- "DiegoTricked":
-			now NumberVarValue entry is DiegoTricked;
 		-- "dinonest":
 			now NumberVarValue entry is dinonest;
 		-- "dnfightresult":
@@ -1189,10 +1183,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is GorillasMemberQuestCounter;
 		-- "GorillasRep":
 			now NumberVarValue entry is GorillasRep;
-		-- "gotsword":
-			now NumberVarValue entry is gotsword;
-		-- "gotwhip":
-			now NumberVarValue entry is gotwhip;
 		-- "grantbitch":
 			now NumberVarValue entry is grantbitch;
 		-- "grantfucked":
@@ -3280,12 +3270,6 @@ to TruthVariableSave:
 			now TruthVarValue entry is houndfromhell;
 		-- "hvoreoffer":
 			now TruthVarValue entry is hvoreoffer;
-		-- "hydraheadcheck1":
-			now TruthVarValue entry is hydraheadcheck1;
-		-- "hydraheadcheck2":
-			now TruthVarValue entry is hydraheadcheck2;
-		-- "hydraheadcheck3":
-			now TruthVarValue entry is hydraheadcheck3;
 		-- "hydraheadregrowth":
 			now TruthVarValue entry is hydraheadregrowth;
 		-- "HyenaMatVore":
@@ -3737,12 +3721,16 @@ to VariableTextLoad:
 		say "Restoring Texts...";
 		read File of TextSave into the Table of GameTexts;
 		repeat with x running from 1 to the number of filled rows in the Table of GameTexts:
+			[
 			if there is no TextVarValue in row x of the Table of GameTexts:
 				debug at level 4 say "Skipping empty text [TextVarName in row x of the Table of GameTexts].[line break]";
 				next;
+			]
 			choose row x in the Table of GameTexts;
+			[
 			if debug is at level 10:
 				say "Restoring text [TextVarName entry].";
+			]
 			if TextVarName entry is:
 				-- "PronounChoice":
 					now PronounChoice of Player is TextVarValue entry;
@@ -3942,8 +3930,6 @@ to VariableTextLoad:
 					now ubpreg is TextVarValue entry;
 				-- "VikingKidShape":
 					now VikingKidShape is TextVarValue entry;
-				-- "weaselcolor":
-					now weaselcolor is TextVarValue entry;
 				-- "wolvloc":
 					now wolvloc is TextVarValue entry;
 				-- "wrbody":
@@ -3970,8 +3956,10 @@ to VariableTextLoad:
 					now wrtail is TextVarValue entry;
 				-- "wrTailName":
 					now wrTailName is TextVarValue entry;
+			[
 			if debug is at level 10:
 				say "DEBUG -> VarName '[TextVarName entry]' restored to '[TextVarValue entry]'.";
+			]
 	else:
 		say "No Text Save File Found!";
 
@@ -3980,12 +3968,16 @@ to VariableNumberLoad:
 		say "Restoring Numbers...";
 		read File of NumberSave into the Table of GameNumbers;
 		repeat with x running from 1 to the number of filled rows in the Table of GameNumbers:
+			[
 			if there is no numberVarValue in row x of the Table of GameNumbers:
 				debug at level 4 say "Skipping empty Number [NumberVarName in row x of the Table of GameNumbers].[line break]";
 				next;
+			]
 			choose row x in the Table of GameNumbers;
+			[
 			if debug is at level 10:
 				say "Restoring Number [NumberVarName entry].";
+			]
 			if NumberVarName entry is:
 				-- "featgained":
 					now featgained of Player is numberVarValue entry;
@@ -4373,8 +4365,6 @@ to VariableNumberLoad:
 					now colliedefeat is numberVarValue entry;
 				-- "combat abort":
 					now combat abort is numberVarValue entry;
-				-- "compressedcock":
-					now compressedcock is numberVarValue entry;
 				-- "ConclaveKnowledge":
 					now ConclaveKnowledge is numberVarValue entry;
 				-- "ConfSvenEricInteraction":
@@ -4457,8 +4447,6 @@ to VariableNumberLoad:
 					now DiegoFucked is numberVarValue entry;
 				-- "Diegotalk":
 					now Diegotalk is numberVarValue entry;
-				-- "DiegoTricked":
-					now DiegoTricked is numberVarValue entry;
 				-- "dinonest":
 					now dinonest is numberVarValue entry;
 				-- "dnfightresult":
@@ -4847,10 +4835,6 @@ to VariableNumberLoad:
 					now GorillasMemberQuestCounter is numberVarValue entry;
 				-- "GorillasRep":
 					now GorillasRep is numberVarValue entry;
-				-- "gotsword":
-					now gotsword is numberVarValue entry;
-				-- "gotwhip":
-					now gotwhip is numberVarValue entry;
 				-- "grantbitch":
 					now grantbitch is numberVarValue entry;
 				-- "grantfucked":
@@ -6609,8 +6593,10 @@ to VariableNumberLoad:
 					now zigseat is numberVarValue entry;
 				-- "zpc_Zc":
 					now zpc_Zc is numberVarValue entry;
+			[
 			if debug is at level 10:
 				say "DEBUG -> VarName '[NumberVarName entry]' restored to '[NumberVarValue entry]'.";
+			]
 	else:
 		say "No Number Save File Found!";
 
@@ -6620,8 +6606,10 @@ to VariableTruthLoad:
 		read File of TruthSave into the Table of GameTruths;
 		repeat with x running from 1 to the number of filled rows in the Table of GameTruths:
 			choose row x in the Table of GameTruths;
+			[
 			if debug is at level 10:
 				say "Restoring Truth [TruthVarName entry].";
+			]
 			if TruthVarName entry is:
 				-- "A_Candy":
 					now A_Candy is TruthVarValue entry;
@@ -6947,12 +6935,6 @@ to VariableTruthLoad:
 					now houndfromhell is TruthVarValue entry;
 				-- "hvoreoffer":
 					now hvoreoffer is TruthVarValue entry;
-				-- "hydraheadcheck1":
-					now hydraheadcheck1 is TruthVarValue entry;
-				-- "hydraheadcheck2":
-					now hydraheadcheck2 is TruthVarValue entry;
-				-- "hydraheadcheck3":
-					now hydraheadcheck3 is TruthVarValue entry;
 				-- "hydraheadregrowth":
 					now hydraheadregrowth is TruthVarValue entry;
 				-- "HyenaMatVore":
@@ -7277,8 +7259,10 @@ to VariableTruthLoad:
 					now zigorhadiyaquest is TruthVarValue entry;
 				-- "zpc_inzone":
 					now zpc_inzone is TruthVarValue entry;
+			[
 			if debug is at level 10:
 				say "DEBUG -> VarName '[TruthVarName entry]' restored to '[TruthVarValue entry]'.";
+			]
 	else:
 		say "No Truth Save File Found!";
 
@@ -7288,8 +7272,10 @@ to VariableIndexedTextLoad:
 		read File of IndexedTextSave into the Table of GameIndexedTexts;
 		repeat with x running from 1 to the number of filled rows in the Table of GameIndexedTexts:
 			choose row x in the Table of GameIndexedTexts;
+			[
 			if debug is at level 10:
 				say "Restoring IndexedText [IndexedTextVarName entry].";
+			]
 			if IndexedTextVarName entry is:
 				-- "bcupsize":
 					now bcupsize is IndexedTextVarValue entry;
@@ -7297,8 +7283,10 @@ to VariableIndexedTextLoad:
 					now bmagic is IndexedTextVarValue entry;
 				-- "cupsize":
 					now cupsize is IndexedTextVarValue entry;
+			[
 			if debug is at level 10:
 				say "DEBUG -> VarName '[IndexedTextVarName entry]' restored to '[IndexedTextVarValue entry]'.";
+			]
 	else:
 		say "No IndexedText Save File Found!";
 
@@ -7328,8 +7316,10 @@ to VariableTextListLoad:
 					add TextListVarValue entry to lbcompList;
 				-- "ndmlist":
 					add TextListVarValue entry to ndmList;
+			[
 			if debug is at level 10:
 				say "DEBUG -> [x]: Added '[TextListVarValue entry]' to TextList [TextListName].";
+			]
 	else:
 		say "No TextList Save File Found!";
 
@@ -7371,8 +7361,10 @@ to VariableNumberListLoad:
 					add NumberListVarValue entry to pfpcList;
 				-- "velospostmusings":
 					add NumberListVarValue entry to velospostmusings;
+			[
 			if debug is at level 10:
 				say "DEBUG -> [x]: Added '[NumberListVarValue entry]' to NumberList [NumberListName].";
+			]
 	else:
 		say "No NumberList Save File Found!";
 

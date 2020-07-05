@@ -27,8 +27,7 @@ instead of resolving a Hyena cages:
 	if Player consents:
 		LineBreak;
 		say "     You carefully root through the soggy pile of rags, discovering a badly damaged camera and, in what used to be a pocket, a granola bar still in its package. The camera unfortunately no longer works, but you manage to eject a tape from it.";
-		say "[bold type]You gain 1 food![roman type][line break]";
-		increase carried of food by 1;
+		ItemGain food by 1;
 		LineBreak;
 		say "[bold type]Hyena Breakout Video has been added to your tape inventory![roman type][line break]";
 		add "Hyena Breakout Video" to tapes of Player;
@@ -180,8 +179,8 @@ The sarea of Petting zoo is "Zoo".
 
 Instead of Resolving a Petting zoo:
 	say "     Traveling along the empty zoo paths, you come across the petting zoo area. Thinking surely there can't be much threat there, you decide to stop by and investigate for a minute. Entering the petting zoo, you are only slightly surprised to find the area empty. More surprising is the large amount of children's clothing and a number of backpacks scattered around on the ground. Obviously, there was a school bus visiting the area at some point recently. You sigh as you look around, then give a halfhearted search of the backpacks lying around. You find several items of food and water and decide to take them with you. It doesn't count as taking candy from kids if they aren't around, does it?";
-		increase carried of food by 1;
-		increase carried of water bottle by 2;
+		ItemGain food by 1;
+		ItemGain water bottle by 2;
 	now Petting zoo is resolved;
 
 
@@ -321,8 +320,8 @@ Instead of Resolving a Feeding time:
 		challenge "Tigertaur";
 		if lost is 0:
 			say "     Grinning at the silly beast that thought it could beat you, you quickly pocket the food and water it so graciously left here for you, and whistling continue on your way, keeping your eye out for other traps like this one... after all you could use the supplies.";
-			increase carried of food by 2;
-			increase carried of water bottle by 1;
+			ItemGain food by 2;
+			ItemGain water bottle by 1;
 			now Resolution of Feeding time is 1; [beat the ambush]
 			now Feeding time is resolved;
 		else:

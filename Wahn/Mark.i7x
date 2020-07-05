@@ -327,9 +327,7 @@ to say MarkScavengingTarget1: [pumpkin patch]
 
 to say MarkPumpkinpayout:
 	say "     Making a beeline for the food court, the large polar bear puts down his colossal orange load on the counter of a mall rat run restaurant. Some moments of negotiation follow, ending with Mark being told that his food credits just went way up, and a friendly rat with long blond hair bringing a large bag with fresh food from the kitchen, handing it to you. As you start packing the items into your pack, the white-furred bear grins broadly and gives you a friendly slap on the back. 'Nice working with ya. Could use a wing-man for some more trips out into the city. Feel free to join me anytime, but for now, I'm off to spend some time with Jay. My li'l man must be hungry for a good dicking by now.'";
-	LineBreak;
-	say "[bold type]You gain 4 food![roman type][line break]";
-	increase carried of food by 4;
+	ItemGain food by 4 silently;
 
 to say MarkScavengingTarget2: [hawkman nest]
 	say "     [one of]'See that parking deck over there? There's a hawkman nest on top of it. [or]'Let's make another uninvited visit to the hawkman nest. [stopping]I've seen those bastards hunt down people they spotted from the air, robbing and fucking them. So how about we pay the guys a visit in turn, eh?' the polar bear says in an eager tone, cracking his knuckles and striding ahead. You have little choice but to follow after him, not wanting to stay in the open street alone as you now know that there are avian predators around. After a quick sprint up the stairwell of the structure, the two of you arrive at the uppermost deck. Glancing through the little window in the door, you spot a large and untidy nest of mattresses and all sorts of stolen goods has been piled together. Two hawkmen seem to be squabbling over something right now.";
@@ -341,15 +339,9 @@ to say MarkScavengingTarget2: [hawkman nest]
 	if fightoutcome < 20: [player won]
 		say "     Knocking down the hawkman that attacked you personally, you glance over at your companion and see him snatch his own opponent out of the air by a clawed foot, then swing him in an arc to smash into the ground with a thud and the crunch of breaking bones. With a last shriek, Mark's hawkman falls unconscious, breathing shallow as his body starts to mend. 'Don't waste a second thinking about this asshole. He'll be up again before you know it,' the polar bear tells you in a gruff tone, then starts to dig around in the piles of loot, stuffing choice pieces that he finds into his backpack. Quickly doing the same, you manage to snag a medkit, some food and two bottles of pure water before a furious screech makes you look up. Four more hawkmen are approaching quickly, gliding through the air on spread wings.";
 		say "     'Time to go. Let's move it!' Mark calls out in a loud voice, shouldering the backpack and waving you to the stairwell. He makes sure to let you go through the door first, even though that exposes him to attack from the first of the hawkmen landing on the roof. He kicks the angry avian back from the door, then slams it shut and runs downstairs after you. Soon arriving on the ground floor, you run out of the building and across the street, vanishing into a side alleyway before the circling hawkmen can spot you. As you are making your way back to the Mall, Mark grins at you and gives a thumbs up. 'Nice working with ya. Could use a wing-man for some more trips out into the city in the future. Feel free to join me anytime. But for now, when we get back I'm off to spend some time with Jay. My li'l man must be hungry for a good dicking by now.'";
-		LineBreak;
-		say "[bold type]You gain 1 medkit![roman type][line break]";
-		increase carried of medkit by 1;
-		LineBreak;
-		say "[bold type]You gain 1 food![roman type][line break]";
-		increase carried of food by 1;
-		LineBreak;
-		say "[bold type]You gain 2 water bottles![roman type][line break]";
-		increase carried of water bottle by 2;
+		ItemGain medkit by 1;
+		ItemGain food by 1;
+		ItemGain water bottle by 2;
 	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "     Scratched and beaten by the ferocious hawkman, you collapse on the ground. Yet before you fully realize what is happening to you after that, the world seems to spin and you can feel warm fur against one side of your body. Mark is carrying you! Looks like the polar bear snatched you up and ran, shaking the hawkmen before long. He carries you back towards the Mall for long enough so that your wounds can heal, then eventually sets you back on your feet. 'Well, that situation got a bit out of hand,' he tells you with a grunt, scratching the back of his neck. 'Maybe train a bit or something before you ask me to come along next, eh?'";
 	else if fightoutcome is 30: [fled]
@@ -371,23 +363,13 @@ to say MarkScavengingTarget3:
 			say "     Mark lets you have the lion's share of the offered items, happy to just finish his own trade with the lizardman and then get moving back to the Mall afterwards. After you set out a little while later, he comments about the whole affair, 'Someone usually comes to make trouble at the swap meets. All too often it is orcs, they just seem to be in a 'what's yours is mine' mindset. The sad thing is that some of the guys who took 'care' of our green thugs might become the next ones who fill that role. I saw one guy chugging an orc brew he found in one of the sacks. That's the way of the world now I guess. With a limitless supply of dumb brutes who think with their dicks.' When you arrive back at the Mall a little while later, he gives your arm a companionable squeeze, then says goodbye, murmuring something about having gotten a present for Jay in his trade.";
 			LineBreak;
 			if a random chance of 1 in 2 succeeds:
-				say "[bold type]You gain 1 healing booster![roman type][line break]";
-				increase carried of healing booster by 1;
-				LineBreak;
-				say "[bold type]You gain 1 pita bread![roman type][line break]";
-				increase carried of pita bread by 1;
-				LineBreak;
-				say "[bold type]You gain 1 pepperspray![roman type][line break]";
-				increase carried of pepperspray by 1;
+				ItemGain healing booster by 1;
+				ItemGain pita bread by 1;
+				ItemGain pepperspray by 1;
 			else:
-				say "[bold type]You gain 1 orc cum![roman type][line break]";
-				increase carried of orc cum by 1;
-				LineBreak;
-				say "[bold type]You gain 1 sports drink![roman type][line break]";
-				increase carried of sports drink by 1;
-				LineBreak;
-				say "[bold type]You gain 1 libido suppressant![roman type][line break]";
-				increase carried of libido suppressant by 1;
+				ItemGain orc cum by 1;
+				ItemGain sports drink by 1;
+				ItemGain libido suppressant by 1;
 		else if fightoutcome > 19 and fightoutcome < 30: [lost]
 			say "     Being beaten down by the orc, you collapse to the ground and see the big green brute step over you. He chuckles darkly, then pulls his loincloth aside to show you the thick and weighty shaft underneath. It is already more than half-hard - seems like fighting is like foreplay to this guy. 'I'm gonna enjoy breaking you,' the muscled thug says, stroking himself as he looks at you like a piece of meat. Then suddenly, the orc is grabbed from behind, with two white-furred arms wrapping around his midriff to pull him back. With a wrestling-throw, Mark flings the big brute several feet through the air, to land head-first against a wall and collapse to the ground unconscious. 'Phew, that was a close one,' Mark tells you, breathing a bit heavy after having had to take out two orcs by himself.";
 			say "     The other people around mostly look away when you get back up, as if to forget that they didn't do a thing to help when you almost got raped by an orc. More or less the only reaction that coalesces is that after a little while, several of them congregate around the two orc thugs, taking hold of them by the arms and legs to half-drag, half-carry them away. Maybe just to get them out of here before they wake up, or possibly to have some 'fun' with the weakened hunks in a more private setting. You can't really bring yourself to care too much, not after the beating you just got at the hands of one of them. While you rub your bruises and wait for them to heal, Mark quickly wraps up his trade with the lizardman.";
@@ -405,15 +387,9 @@ to say MarkScavengingTarget3:
 		if fightoutcome < 20: [player won]
 			say "     Stumbling back after another blow, the thieving coyote growls at you, then barks out, 'Fine, you can have the stupid stuff!' And with that, he pulls several items out of his pockets, throwing them at you with full force. Having to catch or dodge the projectiles provides enough distraction for the canine to make a getaway. For a second you are tempted to go after him, but given that you got back what he stole, you end up just shrugging and collecting it all. Then you go back to find Mark again. The polar bear welcomes you and seems curious about where you went - until he sees what you hold in your hands that is. Eyes going wide, he takes what is his. Lifting another item that you have, Mark inspects it with interest and then glances at Halvar the lizardman. As it turns out, the thief made off with a number of precious things from his collection too.";
 			say "     Both of the men are well-pleased for your quick intervention and reclaiming the stolen goods. As a reward, they hand you some food, water and a healing booster. While you are packing away the goods, Mark and Halvar wrap up their trade, actually exchanging two of the items you brought back with one another. Then the polar bear takes you back to the Mall, shaking your hand after you arrive and saying, 'Thanks for your company on the trip. Nice to have someone reliable along. We should do this again sometime.' With that said, he goes off to find his boyfriend Jay.";
-			LineBreak;
-			say "[bold type]You gain 1 healing booster![roman type][line break]";
-			increase carried of healing booster by 1;
-			LineBreak;
-			say "[bold type]You gain 1 food![roman type][line break]";
-			increase carried of food by 1;
-			LineBreak;
-			say "[bold type]You gain 1 water bottle![roman type][line break]";
-			increase carried of water bottle by 1;
+			ItemGain healing booster by 1;
+			ItemGain food by 1;
+			ItemGain water bottle by 1;
 		else if fightoutcome > 19 and fightoutcome < 30: [lost]
 			say "     As you are sent stumbling back after another of the coyote's blows, the canine uses the chance to dash off through a side passage, knocking over a number of boards leaning against a wall from what seems to have been a stillborn renovation. As they fall down in a loud clatter, you are left behind worn out and alone. You wait for a little while to clear your head, then make your way back to the swap meet to find Mark again. As you do so, the polar bear welcomes you and seems curious about where you went, so you explain about the thief. His eyes go wide and he checks his backpack, silently cursing that he allowed the coyote to lift valuable trade goods from him. The lizardman trader similarly goes over his collection of barter items, also finding several of them missing.";
 			say "     Both of the men are a little bit grumpy about being stolen from, but thankful that you at least tried to catch the thief. A little while later, Mark and Halvar wrap up their trade and your companion packs away what he bartered for with the lizardman. Then the polar bear takes you back to the Mall, shaking your hand after you arrive and saying, 'Thanks for your company on the trip. A pity about that thief getting away, but at least, you prevented him from stealing more.' With that said, he goes off to find his boyfriend Jay.";
@@ -443,12 +419,8 @@ to say MarkScavengingTarget4:
 	if fightoutcome < 20: [player won]
 		say "     You beating back another of the numerous attackers gives Mark the chance to snatch up the bag of bait. 'Let's get out of here!' he calls out in an urgent tone, kicking back the first of many gooey reinforcements arriving from the back of the store. Running from the building, the two of you manage to elude a real horde of squishy humanoids, countless victims of the supermarket trap. The goo people follow for half a block, then seem to give up on you and return to their home, no doubt preparing for others who are more gullible and less formidable in a fight. Mark and you split the contents of the bait bag evenly between yourselves, and the large man says, 'Good thing that those goo creatures aren't too dangerous individually. Since they seem to bait their trap with parts of the huge supplies in that market, I'm half-tempted to go back there some time and snatch more supplies.'";
 		say "     Packing away your share of the loot, you think to yourself that it really might be worthwhile to join him for another such trip. The two of you make your way back to the Mall, and after giving you a companionable squeeze of the shoulder, Mark goes off to go find his lover Jay.";
-		LineBreak;
-		say "[bold type]You gain 2 food![roman type][line break]";
-		increase carried of food by 2;
-		LineBreak;
-		say "[bold type]You gain 2 water bottles![roman type][line break]";
-		increase carried of water bottle by 2;
+		ItemGain food by 2;
+		ItemGain water bottle by 2;
 	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "     Wavering and exhausted, you collapse on the ground and instantly find yourself covered by multiple colorful gel people, putting the world in a confusing jumble of multicolored shades as you see it through their transparent flesh. Your lungs start burning from the lack of air after a few moments, and the urge of just trying to breath, even through it would just mean inhaling a bunch of goop, rises more and more. But all is not lost, as an apparently pink and blue bear suddenly steps into your line of sight, plunging his clawed hand through the gel to wrench you out of the pile-up. Finding yourself shaken around (to free you of splatters of goo) and then thrown over Mark's shoulder, you see a whole horde of previous victims of the supermarket trap ooze forward from the back of the store. Your polar bear companion doesn't wait for them to arrive, or even your own opponents to re-form and attack, instead just running out of the place, carrying you to safety.";
 		say "     The gel people follow for half a block, then seem to give up on you and return to their home, no doubt preparing for others who are more gullible and less formidable in a fight. Putting you down on your own feet and stopping to catch his breath, Mark says, 'Well, that went sideways quickly. Still, it is tempting to go back there sometime and maybe snatch the bait out from under them. The original ambush group wasn't that big. If you train up a bit maybe, I bet that we could fight [']em off and get out before the others arrive.' The two of you make your way back to the Mall, and after giving you a companionable squeeze of the shoulder, the big bear goes off to go find his lover Jay.";

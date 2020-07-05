@@ -729,8 +729,7 @@ to say EricTalk7:
 		if Player consents:
 			LineBreak;
 			say "     Doing your best to be as convincing as you can be, you talk Eric into letting you have the book. He goes over to grab it, then holds it out for you... although he only lets go several seconds after you already have your hands on it. As soon as it leaves his grasp and you pack the book away, the young guy blinks a few times and shakes his head as if to clear away some mental cobwebs, then is his usual friendly self again and proceeds to chat a little while longer with you.";
-			increase carried of ancient tome by 1;
-			say "(You gain an ancient tome.)";
+			ItemGain ancient tome by 1;
 			now TomeFound is 100; [player took the book right at the start]
 			now lastTomeInteraction is turns;
 		else:
@@ -745,8 +744,7 @@ to say EricTalk7:
 		if Player consents:
 			LineBreak;
 			say "     Clearing your throat, you ask Eric if you can have the book - and he doesn't react to that at all, almost as if he hadn't heard a word you said. After waiting a moment or two, you finally decide to just take it. Walking over to his bed, you pull the book out from under Eric's pillow and tugging the tome under your arm. 'Hey!' Eric reacts with a slight delay, coming after you. 'I was reading that, give it back!' the red-headed college student complains, but you tell him in a friendly, but firm, tone that you'll have to check this thing out for yourself first. He reaches out in a bid to snatch the book back, but you keep it out of his reach. Finally he crosses his arms and sighs, then adds, 'Fine. I'll get something else to read then.' With a somewhat sullen expression on his face, Eric walks off towards the stairwell.";
-			increase carried of ancient tome by 1;
-			say "(You gain an ancient tome.)";
+			ItemGain ancient tome by 1;
 			now TomeFound is 99; [player took the book after Eric had a read]
 			now lastTomeInteraction is turns;
 		else:
@@ -761,8 +759,7 @@ to say EricTalk7:
 		if Player consents:
 			LineBreak;
 			say "     Clearing your throat, you ask Eric if you can have the book - and he doesn't react to that at all, almost as if he hadn't heard a word you said. After waiting a moment or two, you finally decide to just take it. Walking over to his bed, you pull the book out from under Eric's pillow and tugging the tome under your arm. 'Hey!' Eric reacts with a slight delay, coming after you. 'I was reading that, give it back!' the red-headed college student complains with determination, but you tell him in a friendly, but firm, tone that you'll have to check this thing out for yourself first. He reaches out in a bid to snatch the book back, but you keep it out of his hands even as he tries to wrestle it from your grasp. Finally he crosses his arms and sighs, then adds, 'Fine. I'll get something else to read then.' With a somewhat sullen expression on his face, Eric walks off towards the stairwell.";
-			increase carried of ancient tome by 1;
-			say "(You gain an ancient tome.)";
+			ItemGain ancient tome by 1;
 			now TomeFound is 98; [player took the book after Eric was tentacle-fucked (without the player knowing about it)]
 			now lastTomeInteraction is turns;
 		else:
@@ -814,7 +811,7 @@ to say EricTalk7:
 			if Player consents:
 				LineBreak;
 				say "     Pulling your backpack off, you dig around in it and find the thick tome. As you pull it out, Eric's eyes seem to have an inner glow for a heartbeat or two and he steps up close to you, holding out his hands with a hungry expression. Snatching the book from your grasp, he pulls it tightly to his chest and thanks you, then walks off with a thoughtful expression on his face.";
-				decrease carried of ancient tome by 1;
+				ItemLoss ancient tome by 1;
 				now TomeFound is 97; [player gave Eric the book back after he got almost tentacle-fucked]
 			else:
 				LineBreak;
@@ -829,7 +826,7 @@ to say EricTalk7:
 			if Player consents:
 				LineBreak;
 				say "     Pulling your backpack off, you dig around in it and find the thick tome. As you pull it out, Eric's eyes seem to have an inner glow for a heartbeat or two and he steps up close to you, holding out his hands with a hungry expression. Snatching the book from your grasp, he pulls it tightly to his chest and thanks you, then walks off with a thoughtful expression on his face.";
-				decrease carried of ancient tome by 1;
+				ItemLoss ancient tome by 1;
 				now TomeFound is 96; [player gave Eric the book back after he got tentacle-fucked]
 			else:
 				LineBreak;
@@ -856,8 +853,7 @@ to say EricTalk7:
 		if Player consents:
 			LineBreak;
 			say "     Clearing your throat, you ask Eric if you can have the book - and he doesn't react to that at all, almost as if he hadn't heard a word you said. After waiting a moment or two, you finally decide to just take it. Walking over to his bed, you pull the book out from under Eric's pillow and tugging the tome under your arm. 'Hey!' Eric reacts with a slight delay, coming after you. 'I was reading that, give it back!' the red-headed college student complains, but you tell him in a friendly, but firm, tone that you'll have to check this thing out for yourself first. He reaches out in a bid to snatch the book back, but you keep it out of his reach. Finally he crosses his arms and sighs, then adds, 'Fine. I'll get something else to read then.' With a somewhat sullen expression on his face, Eric walks off towards the stairwell.";
-			increase carried of ancient tome by 1;
-			say "(You gain an ancient tome.)";
+			ItemGain ancient tome by 1;
 			now TomeFound is 99; [player took the book after Eric had a read]
 			now lastTomeInteraction is turns;
 		else:
@@ -873,7 +869,7 @@ to say EricTalk7:
 			if Player consents:
 				LineBreak;
 				say "     Pulling your backpack off, you dig around in it and find the thick tome. As you pull it out, Eric's eyes seem to have an inner glow for a heartbeat or two and he steps up close to you, holding out his hands with a hungry expression. Snatching the book from your grasp, he pulls it tightly to his chest and thanks you, then walks off with a thoughtful expression on his face.";
-				decrease carried of ancient tome by 1;
+				ItemLoss ancient tome by 1;
 				now TomeFound is 3; [player gave Eric the book back after he got almost tentacle-fucked, so same state as never having taken the book at all]
 			else:
 				LineBreak;
@@ -888,7 +884,7 @@ to say EricTalk7:
 			if Player consents:
 				LineBreak;
 				say "     Pulling your backpack off, you dig around in it and find the thick tome. As you pull it out, Eric's eyes seem to have an inner glow for a heartbeat or two and he steps up close to you, holding out his hands with a hungry expression. Snatching the book from your grasp, he pulls it tightly to his chest and thanks you, then walks off with a thoughtful expression on his face.";
-				decrease carried of ancient tome by 1;
+				ItemLoss ancient tome by 1;
 				now TomeFound is 2; [Eric is back to reading the tome]
 			else:
 				LineBreak;
@@ -903,7 +899,7 @@ to say EricTalk7:
 			if Player consents:
 				LineBreak;
 				say "     Pulling your backpack off, you dig around in it and find the thick tome. As you pull it out, Eric steps up and thanks you as he accepts the book. He exchanges some more words in friendly conversation with you, then walks off with the book held tightly to his chest.";
-				decrease carried of ancient tome by 1;
+				ItemLoss ancient tome by 1;
 				now TomeFound is 1; [Eric got the book now]
 			else:
 				LineBreak;
@@ -930,7 +926,7 @@ to say EricTalk7:
 to say centaurcum_Eric:
 	say "     You hand your bottle of centaur stallion cum to Eric, who puts it to his lips after a nod of encouragement from you and takes a deep pull. You wait several minutes, during which his hopeful expression slowly begins to wane as nothing happens - until suddenly, he's wracked by a convulsion. You hold Eric tightly so he doesn't fall off his camp bed until he relaxes a short time later. Looking down at the new bulge in his shorts, it's clear at least something happened.";
 	say "     Opening the zipper of his shorts, you pull them down to reveal his crotch - now pussy-less, but with a new blunt-tipped horse's cock and large balls. To help Eric accept being an - almost human - male again, you grab his erect newly grown member with both hands and pump them up and down on it. Encouraged by his lustful moans, you keep jerking him off and play with his balls with one hand. Pretty soon, his thick shaft pulses in your hand, and large globs of white seed blast out of the tip of his horsecock and all over Eric's chest. As he lies back on his bed, you hear him pant 'Thank you.'";
-	delete centaur cum;
+	ItemLoss centaur cum by 1;
 	now HP of Eric is 21;
 	now thirst of Eric is 21;
 	add "Cocked" to Traits of Eric;
@@ -938,7 +934,7 @@ to say centaurcum_Eric:
 to say satyrwine_Eric:
 	say "     You hand your bottle of satyr wine to Eric, who puts it to his lips after a nod of encouragement from you and takes a deep pull. You wait several minutes, during which his hopeful expression slowly begins to wane as nothing happens - until suddenly, he's wracked by a convulsion. You hold Eric tightly so he doesn't fall off his camp bed until he relaxes a short time later. Looking down at the new bulge in his shorts, it's clear at least something happened.";
 	say "     Opening the zipper of his shorts, you pull them down to reveal his crotch - now pussy-less, but with a new capric, goat-like cock and large balls. To help Eric accept being an - almost human - male again, you grab his erect newly grown member with both hands and pump them up and down on it. Encouraged by his lustful moans, you keep jerking him off and play with his balls with one hand. Pretty soon, his thick shaft pulses in your hand, and large globs of white seed blast out of the tip of his satyrcock and all over Eric's chest. As he lies back on his bed, you hear him pant 'Thank you.'";
-	delete Satyr Wine;
+	ItemLoss Satyr Wine by 1;
 	now HP of Eric is 31;
 	now thirst of Eric is 31;
 	add "Cocked" to Traits of Eric;
@@ -946,7 +942,7 @@ to say satyrwine_Eric:
 to say OrcBrew_Eric:
 	say "     You hand your beer stein of orc brew to Eric, who puts it to his lips after a nod of encouragement from you and takes a deep pull. You wait several minutes, during which his hopeful expression slowly begins to wane as nothing happens - until suddenly, he's wracked by a convulsion. You hold Eric tightly so he doesn't fall off his camp bed until he relaxes a short time later. Looking down at the new bulge in his shorts, it's clear at least something happened.";
 	say "     Opening the zipper of his shorts, you pull them down to reveal his crotch - now pussy-less, but with a new uncut cock and large balls. Of note is that the young man's erect shaft doesn't conform to his skin color, but rather has a vibrant green shade. At its base is a thick bush of black pubic hair. To help Eric accept being an - almost human - male again, you grab his erect newly grown member with both hands and pump them up and down on it. Encouraged by his lustful moans, you keep jerking him off and play with his balls. Pretty soon, his thick shaft pulses in your hand, and large globs of white seed blast out of the tip of his orc cock and all over Eric's chest. As he lies back on his bed, you hear him pant 'Thank you.' When he grabs a used shirt from under the sheets to wipe himself clean, there is one other thing of note: his chest is now sprouting some additional chest hair that wasn't there before, and you think he's a bit more toned too. Seems like the orc brew made Eric more manly overall.";
-	delete Orc Brew;
+	ItemLoss Orc Brew by 1;
 	now HP of Eric is 41;
 	now thirst of Eric is 41;
 	add "Cocked" to Traits of Eric;
@@ -959,7 +955,7 @@ instead of trading the pomegranate seed when the current action involves the Eri
 		say "     It begins at the face, which softens a bit and takes on feminine features with oh so kissable lips, and suddenly is framed in shoulder-length red curls. The wave of change then runs down over his body, making the black t-shirt Eric is wearing fill out at the front, with the curve of perky B-cup breasts making you eager for a chance to see them laid bare. What follows next are many more big and small changes - the proportions of arms and legs, hands and feet, a slight widening of the hips to ease future pregnancies, his skin smoothing out and becoming naturally hairless. Even simple things like the way he stands or holds his upper body. When the transformation finishes a moment later, you're almost stunned by the sight of this beautiful woman you helped bring into the world. Your friend is no longer Eric, no he - now she - is Erica.";
 		WaitLineBreak;
 		say "     After Erica looks down over herself and gives a delighted little giggle at her new body, she rushes forward to embrace you tightly - which brings her perky breasts into contact with your chest, pressing softly against you. 'Wow, this feels even better than I...' This is as far as she gets, before noticing the sensations of brushing her nipples against someone with only a thin shirt in between. 'Oh - ooh,' she sighs softly, pulling back slightly, then continues, 'That feels amazing. I - thank you so much, but... I think I've got to experiment a bit with this. Though if you want me to give you a reward for all your hard work... I'd be more than willing to have some fun later, you know.'";
-		decrease carried of pomegranate seed by 1;
+		ItemLoss pomegranate seed by 1;
 		now Dexterity of Erica is 5;
 		now HP of Eric is 200;
 		move Erica to Bunker;

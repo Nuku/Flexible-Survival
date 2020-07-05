@@ -115,7 +115,7 @@ to itemmenue: [This template is used to create a dynamic menu that goes through 
 			say "     Are you sure?";
 			if Player consents:
 				say "     You use the item.";
-				delete tappeditem;
+				ItemLoss tappeditem by 1;
 
 
 Helpful Routine Templates ends here.

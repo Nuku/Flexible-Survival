@@ -126,7 +126,7 @@ Check stashing a grab object (called x):
 	if x is equipped, say "You're using that right now." instead;
 
 Carry out stashing a grab object (called x):
-	decrease carried of x by 1;
+	ItemLoss x by 1 silently;
 	increase stashed of x by 1;
 	say "You put a [x] into the locker for storage.";
 
@@ -136,7 +136,7 @@ Check retrieving a grab object (called x):
 
 Carry out retrieving a grab object (called x):
 	decrease stashed of x by 1;
-	increase carried of x by 1;
+	ItemGain x by 1 silently;
 	say "You take a [x] from the storage locker.";
 
 
@@ -159,7 +159,7 @@ Check allretrieving a grab object (called x):
 
 Carry out allretrieving a grab object (called x):
 	let num be stashed of x;
-	increase carried of x by num;
+	ItemGain x by num silently;
 	now stashed of x is 0;
 	say "You take [num] of [x] from the storage locker.";
 

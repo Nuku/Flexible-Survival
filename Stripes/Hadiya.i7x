@@ -53,14 +53,10 @@ when play begins:
 	add Annoyed Hyena to BadSpots of FurryList;
 
 Instead of Resolving a Annoyed Hyena:
-	say "     While exploring, you accidentally run face first into what at first seems a warm, furry wall. Upon recovering and taking a second look, you realize that it's actually a hyena. A tall, obviously intimidating hyena. Her sharp predatory teeth as well as the oversized tongue hanging out of her muzzle doesn't exactly give her the most pleasant looks, but her distinctive spotted red fur helps her stand out from the other hyenas that you've met in the past. She doesn't seem to be hostile to you, or at least not just yet to say the least... as she just seems to be more amused by your presence than anything else.";
-	WaitLineBreak;
-	say "     Her slacks seem to conceal an obvious bulge. Seems she's pretty much the same as the rest of the hyenas around here by the looks of it... though she at least covers it up!";
-	WaitLineBreak;
+	say "     While exploring, you accidentally run face first into what at first seems a warm, furry wall. Upon recovering and taking a second look, you realize that it's actually a hyena. A tall, obviously intimidating hyena. Her sharp predatory teeth as well as the oversized tongue hanging out of her muzzle doesn't exactly give her the most pleasant looks, but her distinctive spotted red fur helps her stand out from the other hyenas that you've met in the past. She doesn't seem to be hostile to you, or at least not just yet to say the least... as she just seems to be more amused by your presence than anything else. Her slacks seem to conceal an obvious bulge. Seems she's pretty much the same as the rest of the hyenas around here by the looks of it... though she at least covers it up!";
 	say "     'Well now, just what do we have here? Someone new around to have fun with... suppose I might be up for you visiting me. I definitely need more company. And by company, I mean a warm squealing bitch underneath me, giving me exactly what I want. Come on over and I promise I'll make you regret it later,' she growls with a big wink at you. 'I have a little shack set up nearby. Just come over anytime you want to get treated like the fucktoy that you are[if the player is submissive]. You seem like the type that needs a good, rough mistress[end if].' And with that, she just turns and disappears, leaving you slightly baffled and curious... but also very much wanting to see just what she has in store for you!";
-	say "     Hyena Shack is now known.";
 	now HP of Hadiya is 1;
-	now Hyena Shack is known;
+	AddNavPoint Hyena Shack;
 	now Annoyed Hyena is resolved;
 
 

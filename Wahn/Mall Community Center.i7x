@@ -183,20 +183,16 @@ to say FlorenceTalk_CondomVolunteer:
 		say "     Florence thanks you with a smile as you volunteer to help out. 'Thank you, I'm sure you'll be a great help.' Joining the three antelope women behind the desk, you help ensure that people get the right size of cock-sheath, and you restock the tubs more than once with additional condoms from a storage room back in the former travel agency. During this work, you chat with all three of the antelopes, which means that you actually have a fairly nice and interesting time. By the time that the sisters call it quits for the day and the crowd slowly disperses, you are filled with the knowledge that you did a good thing today. This strengthens the connection to your own humanity, and also is rewarded by Olivia, who hands you a chocolate bar and a bottle of water as thanks for your efforts.";
 		LineBreak;
 		SanBoost 15;
-		say "[bold type]You gain 1 food![roman type][line break]";
-		increase carried of food by 1;
-		say "[bold type]You gain 1 water bottle![roman type][line break]";
-		increase carried of water bottle by 1;
+		ItemGain food by 1;
+		ItemGain water bottle by 1;
 		follow the turnpass rule;
 		follow the turnpass rule;
 	else if TimekeepingVar is 5 or TimekeepingVar is -3: [noon]
 		say "     Florence thanks you with a smile as you volunteer to help out. 'Thank you, I'm sure you'll be a great help. Come on, you can help me set up.' Joining the three antelope women behind the desk as a line of people starts to form, you help ensure that people get the right size of cock-sheath, and you restock the tubs more than once with additional condoms from a storage room back in the travel agency. During this work, you chat with all three of the antelopes, which means that you actually have a fairly nice and interesting time. By the time that the sisters call it quits for the day and the crowd slowly disperses, you are filled with the knowledge that you did a good thing today. This strengthens the connection to your own humanity, and also is rewarded by Olivia, who hands you a chocolate bar and a bottle of water as thanks for your efforts.";
 		LineBreak;
 		SanBoost 15;
-		say "[bold type]You gain 1 food![roman type][line break]";
-		increase carried of food by 1;
-		say "[bold type]You gain 1 water bottle![roman type][line break]";
-		increase carried of water bottle by 1;
+		ItemGain food by 1;
+		ItemGain water bottle by 1;
 		follow the turnpass rule;
 		follow the turnpass rule;
 	else:

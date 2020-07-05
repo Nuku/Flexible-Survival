@@ -32,7 +32,7 @@ Instead of resolving a Cow Hunting:
 	if calcnumber is 1: [no]
 		LineBreak;
 		say "     He nods as you tell him you haven't seen any standard non-infected cows around since before the outbreak. 'Well, thanks anyways. But if you do find her after all please come and tell me over at the farm. It's the [bold type]McDermott family farm[roman type] a few miles that way. Or if you could just bring Wendy along... then there'd be a reward in it for you. No worries, she's pretty tame and tractable as long as there isn't a slavering beast running after her.' With that, the cowboy makes his goodbye and walks off to keep searching.";
-		now McDermott Farm Entrance is known;
+		AddNavPoint McDermott Farm Entrance;
 		move Duke to Sheep Meadow SW; [putting him in his starting position]
 		now thirst of Duke is 1; [starting the day/night movement of Duke]
 		now thirst of Corbin is 1; [starting the day/night movement of Corbin]
@@ -52,7 +52,7 @@ Instead of resolving a Cow Hunting:
 	else if calcnumber is 3: [seriously?]
 		LineBreak;
 		say "     He shrugs 'Why the hell not? Even if I now look like this, it's my job. And a farm isn't the worst place to wait out these strange times - plenty of food, you know. So what about the cow? Have you seen her? No? Well, time to keep searching for me then. If you see her by any chance later - bring the old gal to the [bold type]McDermott farm[roman type] - a few miles that way. There's a reward.' With that, the horsey cowboy walks off to keep searching for the missing cow.";
-		now McDermott Farm Entrance is known;
+		AddNavPoint McDermott Farm Entrance;
 		move Duke to Sheep Meadow SW; [putting him in his starting position]
 		now thirst of Duke is 1; [starting the day/night movement of Duke]
 		now thirst of Corbin is 1; [starting the day/night movement of Corbin]

@@ -94,7 +94,7 @@ carry out HuntAction:
 					say "You manage to find your way towards [Name entry]!";
 					huntingfightchance;
 					move player to object entry;
-					now object entry is known;
+					AddNavPoint object entry;
 					now Found is 20; [room found]
 				else:
 					say "But despite searching for quite a while, you fail to find it.[line break]";
@@ -104,7 +104,7 @@ carry out HuntAction:
 				say "You manage to find your way towards [Name entry]!";
 				huntingfightchance;
 				move player to object entry;
-				now object entry is known;
+				AddNavPoint object entry;
 				now Found is 20; [room found]
 	else if there is a name of HuntId in the Table of GameEventIDs: [exact situation name match]
 		choose a row with name of HuntId in the Table of GameEventIDs;
@@ -222,7 +222,7 @@ carry out HuntAction:
 						say "You manage to find your way towards [z]!";
 						huntingfightchance;
 						move player to z;
-						now z is known;
+						AddNavPoint z;
 						now Found is 20; [room found]
 					else:
 						say "But despite searching for quite a while, you fail to find it.[line break]";
@@ -232,7 +232,7 @@ carry out HuntAction:
 					say "You manage to find your way towards [z]!";
 					huntingfightchance;
 					move player to z;
-					now z is known;
+					AddNavPoint z;
 					now Found is 20; [room found]
 				break;
 		if Found is 0 or Found is 10 or (Found > 30 and Found < 40): [last ditch effort to find the target, also fills the random encounter list]

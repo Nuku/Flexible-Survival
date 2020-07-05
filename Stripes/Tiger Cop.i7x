@@ -141,25 +141,20 @@ to say motelkeycheck:
 
 
 to say givekeys:
-	delete motel key;
-	delete motel key;
-	delete motel key;
-	delete motel key;
-	delete motel key;
+	ItemLoss motel key by 5;
 	say "     You dig into your bag, fishing out the motel keys from where they've settled at the bottom. He flips through them, checking the room numbers. He stuffs them into one of his pockets and smiles to you. 'Good goin['], deputy,' he jokes with a firm punch on your shoulder. 'That covers all the rooms now. They can't keep us out anymore.'";
 	say "     'Us?' you ask as the big tiger motions for you to follow him. 'Yeah, now come along. I've got somethin['] for ya,' he says as he heads down a side street. He talks with you as you both weave through the city for several blocks. 'Like I was sayin['], you've been right helpful on this and I'm willing to cut you in on a little of the action if you're up for one last tussle with those pussies. I want to go in and deal with [']em, teach [']em who's boss around here. And cleaning that place up'd be a lot easier with some extra muscle.'";
 	say "     'Now we've got a little time to get ready for this, so I want to listen up,' he says sternly, pausing for a moment to give you a hard poke in the chest to emphasize his point. 'You've got to be smarter about your supply huntin['] and watch what you say if you run into any of those soldiers out there. Soldiers'll shoot looters. Them military guys'll be nosin['] into your gear, but they'll be on the lookout for weapons or stuff that could spread the infection. With everyone they'll find, they won't have much time for twenty questions unless you say somethin['] stupid. You keep quiet and keep it light and you'll do alright, I think.'";
 	say "     The rest of the walk is conducted in silence. His words have left you much to think about for the future. He leads you to an intersection with a cluster of cars. One of them, a police car, is hemmed in by crashed cars on either side.";
 	now mqstatus is 2;
-	now Police Car is known;
+	AddNavPoint Police Car;
 	now the player is in Police Car;
 	now mqcountdown is 0;
 	now Policeman is resolved;
 	increase score by 40;
 	increase XP of Player by 10;
 	say "     The feline policeman opens the car and digs around in what appears to be the torn remains of a cop's uniform in the passenger's seat. 'Here, take this. You're gonna need it,' he says meaningfully as he passes you a nightstick. 'If you've got any last minute stuff to take care of or an equipment stash wherever you're holed up, you go get your gear and be back here pronto. I want you to come along on this, but I'm only willin['] to wait 24 hours before I move out. And if somethin['] holds you up, there'll be a key in the lip of the bumper. I should be able to leave somethin['] for ya in the trunk and I'll get in touch after the heat dies down.'";
-	say "     Nightstick obtained.";
-	increase carried of nightstick by 1;
+	ItemGain nightstick by 1;
 	now Resolution of Policeman is 2; [Gave Sgt Marks the keys]
 
 
@@ -181,8 +176,7 @@ to say policecardesc:
 		say "     This intersection seems to be the sight of a major crash, which must have happened as the chaos was reaching its peak. There are several cars smashed into a cluster, many with doors open and messy stains in their interiors. There are scattered clothes and more of these old stains littering the intersection and the cars. In one of the streets leading to this mess is a cop car sideways in the street with streaks marks from its sudden stop. More cars are blocking the street behind it, penning it in. Like most of the streets, this spot is impassable by vehicle now. The tiger cop who was once here is gone, presumably to deal with the motel he spoke of, wherever that is.";
 		if mqpickup is 0:
 			say "[line break]     Taking the key from its hiding place, you unlock the car's trunk. Inside is a note that simply says 'Catch you later' with two cans of police pepperspray on top of it. Those should come in quite handy.";
-			say "     Two cans of pepperspray obtained.";
-			increase carried of pepperspray by 2;
+			ItemGain pepperspray by 2;
 			increase score by 10;
 			now mqpickup is 1;
 
@@ -718,14 +712,12 @@ To say beattigercop:
 		say "     Your last blow sends the cop stumbling back. He pants to catch his breath, as if readying to make another charge at you. You prepare to face him, but he pulls out a canister of tear gas from out of his jacket and tosses it to the ground at your feet. The stinging gas burns your eyes and throat, forcing you to back off, giving him time to escape.";
 		if a random chance of 1 in 3 succeeds and nsgained is 0:
 			say "     When the gas clears, you see that the tiger had dropped his nightstick at the end of the fight. You pick it up and add it to your arsenal.";
-			say "     Nightstick obtained.";
-			increase carried of nightstick by 1;
+			ItemGain nightstick by 1;
 			now nsgained is 1;
 			increase score by 5;
 		else if a random chance of 1 in 5 succeeds and nsgained is 1:
 			say "     When the gas clears, you see that the tiger had dropped a can of pepperspray during the course of the fight. You pick it up and add it to your arsenal.";
-			say "     Pepperspray obtained.";
-			increase carried of pepperspray by 1;
+			ItemGain pepperspray by 1;
 			increase score by 5;
 		if tcopfight < 4:
 			increase tcopfight by 1;

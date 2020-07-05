@@ -153,7 +153,7 @@ instead of conversing the Fancy:
 		if provingstallionhood is 3:
 			say "'Excellent work!' Fancy says as you return once again to the now familiar mares quarters. 'I heard back from several of the stallions about your smashing victory, and now everyone is behind you pretty solidly, or at least willing to wait and see what happens,' she says with a sexy smile as she pulls out another of those vials filled with the increasingly familiar multicolored liquid. 'And best of all, I managed to get the ingredients together to mix up another batch of the Stablemaster's special drink for you. Which should really help toughen you up a bit more, and best of all, should sexy you right up as well.' The mare smirks slightly with amusement as she passes over the full vial, obviously anticipating the changes to your body almost as much as you are beginning to.";
 			now fancyquest is 12;
-			increase carried of Nightmare Vial by 1;
+			ItemGain Nightmare Vial by 1;
 		else:
 			say "'Did you need some help working out what to do?' Fancy asks as you return to talk with her again. 'Go hunt around outside until you find a hyena rep, and have them take you to their negotiator, you won't talk to the matriarch most likely, but one of her lackeys, and they will probably make you put on a show or test you somehow before agreeing. After that, go explore in the Stables proper until you find a horseman who can guide you to where the worst doubters of your ability are, at which point you can pummel some sense into them!' she says with increasing excitement as she grins up at you.";
 	else if fancyquest is 10:
@@ -167,7 +167,7 @@ instead of conversing the Fancy:
 		if generatorfixing is 4:
 			say "'Welcome back!' Fancy greets you exuberantly as you approach, 'No need to tell me about it, everyone noticed when some of the lights came back on and the refrigerators started working again. This is going to make life around here so much better for everyone!' she says with a happy smile, and you can see several of the other nearby mares nodding in agreement and eyeing you speculatively. 'Here you definitely earned this,' Fancy says as she passes you another vial full of that strange yet powerful liquid, 'Several of the mares helped me acquire the ingredients this time, call it a thank you for all the work you have done for us so far, plus we can't wait to see how our new 'master' turns out!' she says with a fond wink as she grins up at you.";
 			now fancyquest is 9;
-			increase carried of Nightmare Vial by 1;
+			ItemGain Nightmare Vial by 1;
 		else:
 			say "'Still having trouble finding the information you need? Remember once you find a good reference guide head out back of the Stables to help them hook it up!' Fancy says with a broad smile and a happy tone, 'I just can't wait to have power again! Even if we will have to ration it!'";
 	else if fancyquest is 7:
@@ -182,7 +182,7 @@ instead of conversing the Fancy:
 		if Player consents:
 			say "'That's wonderful! Of course you aren't powerful enough to take him on yet, and I am not sure everyone would accept you as the new Stablemaster yet either,' Fancy says in a low voice as she rubs the side of her muzzle thoughtfully 'Well first you need a much more powerful equine form than anyone else has, fortunately I can actually help you with that after having been here so long and watched the Stablemaster whenever I could...' she says with a rather mischievous smile as she glances around quickly before continuing, 'I even managed to acquire an item of his, which should let you start to acquire a similar form once you use it.... though it will take a bit more time and possibly some help from some of the others here to acquire more items,' she says with a sigh as she slips you a small wrapped package which seems to hold some form of glass inside, 'So if you keep helping me fix things around here, and get to know more people, we should be able to make you strong enough to replace the Stablemaster, and get you the support of the stablehands as well,' she says with a smile as she leans back and relaxes, while you take the item she gave you and examine it more closely, finding it to be a small glass container filled with some murky white and black liquid....";
 			now fancyquest is 6;
-			increase carried of Nightmare Vial by 1;
+			ItemGain Nightmare Vial by 1;
 		else:
 			say "'That's... really too bad,' Fancy says with a soft sigh, 'Well I suppose it was good of you to help us out a little bit at least, though I probably won't ask you for any more help in the future,' the white mare says with a sigh as she goes back to what she was doing.";
 			now fancyquest is 0;
@@ -205,8 +205,8 @@ instead of conversing the Fancy:
 				say "     'And you have some rubber patches here, too! Though that is a very odd patterned rubber,' she says with an intrigued tone as she looks at the striped patches of rubber before shrugging absently. 'Still, they should work great for patching some of the wiring and covering smaller holes. And since it looks like it might be still infectious, I wonder if we could find a [']volunteer['] to try a patch or two on so we could get more whenever we needed... Though maybe that's a thought for later,' Fancy says in an extremely cheerful tone as she takes the items from you and sets them aside.";
 				say "     'I'll have several of the mares work on the repairs in their spare time. And I have to thank you for your help as well. It's really nice to have someone actually follow through on getting us some help around here,' she says with an equine grin as she leans back and stretches slightly. 'I wish the Stablemaster would take more of an interest in the running of the place instead of just enjoying the place... but still...' Fancy sighs slightly on the last note, before shrugging helplessly.";
 				say "     'Still what can we get you for your help.... I know!' she says with a smile as she stands up and stretches slightly. 'Wait right here,' she says as she wanders off, her tail swaying teasingly behind her as she vanishes into one of the nearby rooms. She returns shortly with a rather interesting looking large black leather duster. 'This should help, and look pretty sexy as well,' Fancy says with a wink as she slips the soft leather coat onto you. You note that the leather appears to be not only rather sexy looking, but is also discreetly reinforced in key places. Having this on would help protect you quite well out there as well!";
-				decrease carried of wyvern goop by 5;
-				decrease carried of tiger patch by 5;
+				ItemLoss wyvern goop by 5;
+				ItemLoss tiger patch by 5;
 				now carried of leather duster is 1;
 				now fancyquest is 3;
 			else:

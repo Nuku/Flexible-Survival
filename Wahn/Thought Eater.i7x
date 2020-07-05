@@ -9,7 +9,7 @@ to say Thought_Eater_Wins:
 	if mindshield helmet is equipped:
 		say "     Your will to resist worn away, you fall to your knees in front of the creature. 'Enough of this,' the thought eater hisses, reaching out to rip the mindshield helmet off your head with his long-fingered hands. Then he smashes the piece of equipment against the nearest wall, multiple times, before letting the bent and broken helmet drop on the ground. 'No one can resist my power, not even with your toys!' He grips your head tightly with one hand, his sharp fingernails starting to dig into your skin for a second, then he pulls it back before doing serious damage. 'Stand!' he commands, which you do - after which you're pulled close against him, his clawed fingers gripping your shoulders as the four tentacles on the thought eater's face start reaching for your head, his beak visible between them. As the suckered lengths of tentacle wrap around your head, it almost feels as if they sink into it, digging through your mind and memories.";
 		now mindshield helmet is not equipped;
-		decrease carried of mindshield helmet by 1;
+		ItemLoss mindshield helmet by 1;
 	else:
 		say "     Your will to resist worn away, you fall to your knees in front of the creature. 'Excellent,' the thought eater hisses, reaching out to cup your head with his long-fingered hand. 'Stand!' he commands, which you do - after which you're pulled close against him, his clawed fingers gripping your shoulders as the four tentacles on the thought eater's face start reaching for your head, his beak visible between them. As the suckered lengths of tentacle wrap around your head, it almost feels as if they sink into it, digging through your mind and memories.";
 	WaitLineBreak;

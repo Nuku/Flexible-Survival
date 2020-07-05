@@ -91,22 +91,22 @@ to say EricOfferingMenu:
 
 to say EricOfferingTalk1:
 	say "     Pulling a water bottle out of your pack, you hand it to Eric. The young athlete takes it with a thankful smile on his lips, and he quickly chugs the refreshing drink down, showing just how thirsty he is. Eric lets out a happy sigh after finishing the beverage. 'Thanks[if Player is not defaultnamed], [name of Player][end if], I really needed that.'";
-	delete water bottle;
+	ItemLoss water bottle by 1;
 	increase Loyalty of Eric by 1;
 
 to say EricOfferingTalk2:
 	say "     Pulling a soda out of your pack you hand it to Eric. The young athlete takes it with a thankful smile on his lips, and he quickly chugs the fizzy drink down, showing just how thirsty he is. Eric lets out a happy sigh after finishing the beverage. 'Thanks[if Player is not defaultnamed], [name of Player][end if], I really needed that.'";
-	delete soda;
+	ItemLoss soda by 1;
 	increase Loyalty of Eric by 1;
 
 to say EricOfferingTalk3:
 	say "     Pulling some food out of your pack you hand it to Eric. The young athlete takes it with a thankful smile on his lips, and he quickly digs into the tasty morsel, showing just how hungry he is. Eric lets out a happy sigh after finishing the small meal. 'Thanks[if Player is not defaultnamed], [name of Player][end if], I really needed that.'";
-	delete food;
+	ItemLoss food by 1;
 	increase Loyalty of Eric by 1;
 
 to say EricOfferingTalk4:
 	say "     Pulling a bag of chips out of your pack, you hand it to Eric. The young athlete takes it with a thankful smile on his lips, and he quickly reaches a hand in and shovels the chips into his mouth, showing just how hungry he is. Eric lets out a happy sigh after finishing the snack. 'Thanks[if Player is not defaultnamed], [name of Player][end if], I really needed that.'";
-	delete chips;
+	ItemLoss chips by 1;
 	increase Loyalty of Eric by 1;
 
 Section 2 - Eric Orc Pill Content

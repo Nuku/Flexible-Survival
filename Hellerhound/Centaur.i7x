@@ -70,14 +70,14 @@ Section 4 - Creature Responses
 To say centaur defeat:
 	if Libido of Player < 50:
 		say "The centaur groans, falling onto its face as you strike the final blow. An apple spills out of the pack on its back.";
-		increase carried of fresh apple by 1;
+		ItemGain fresh apple by 1;
 	if Libido of Player > 50 and player is male:
 		say "The centaur is lying on the ground with its tail skewed off to the side, is the perfect target for your [Cock of Player] maleness. You sidle up behind the centaur, ignored by it in the pain and embarrassment of loss, and slowly insert your cock.";
 		WaitLineBreak;
 		say "The centaur starts as it realizes what you are doing, and two green tentacles, covered with bumps, raise out from under the body of the centaur.";
 		if the humanity of Player > 90:
 			say "You instantly pull out, looking at the tentacles like the abomination they are. You kick dirt over the centaur as you leave, stealing an apple from its pack.";
-			increase carried of fresh apple by 1;
+			ItemGain fresh apple by 1;
 			increase Libido of Player by 20;
 		else:
 			say "The appearance of the helping tentacles is a welcome development, and you begin thrusting with vigor, the lubrication of the creature's waste keeping you from ripping the walls.";
@@ -93,7 +93,7 @@ To say centaur defeat:
 		say "The centaur groans and falls to the ground, his legs crumpling and shoving him onto his side. You get a good view of a massive, green cock with vine-like bumps on the shaft. Its sheath is a darker green, and a matching ball sack hangs down half a foot from the powerful member, two giant round forms stretching the skin. What really gets to you is the two tentacles, like growths, that sprout from stump-like protrusions of the base of its sheath.";
 		if the humanity of Player < 40:
 			say "The sight of those tentacles drives you insane with lust. You grab them and stuff them into your mouth, working your throat to get them down. They then come alive, wriggling down your stomach, into your small intestine, and then out of your hole, causing pain that when mixed with your lust turns to pleasure. The tentacles then enter your pussy, and begin to stimulate it with their wriggling. You are immobilized by the feeling of those long tendrils pumping in and out of more holes in your body than any cock could fuck, and it doesn't take long to come to climax. You cum hard, juices running out of your cunt and pushing the tendrils out with it. Then you hear a moan, and the centaur climaxes, spraying thick green seed all over the dusty ground and its underside. The tendrils retract from your body, and you leave the centaur, accepting an apple that it offers you.";
-			increase carried of fresh apple by 1;
+			ItemGain fresh apple by 1;
 			now Libido of Player is 0;
 		else if the humanity of Player < 90:
 			say "The sight of the tentacles doesn't bother your fuzzy mind in the least as you leap onto the centaur's furry belly and rub yourself forward and back, arousing yourself and trying to raise yourself to orgasm. Your dripping pussy leaves streaks of wetness on the centaur's fur, and after a short while, something wet and large pokes at your back, breaking your concentration. You stop and turn back in surprise to see the huge green cock starkly erect, its precum-dripping tip a few inches from your face. A trail of precum leads along your body to your back. It isn't done growing, and pushes you forwards a few inches before it is fully ready.";
@@ -103,7 +103,7 @@ To say centaur defeat:
 				say "You open your mouth wide and fit as much of it in as you can, which means only the soft head. You start to lick it and suck at the hole, drinking in the juices, until it climaxes.";
 				say "The spray of fluid begins slowly, but increases in flow rapidly until you cannot swallow it all, and it shoves your face back, and sprays of hot green cum soak your whole body in a few seconds.";
 				say "After cleaning up the centaur as well as yourself, you go on your way, with an apple as payment.";
-				increase carried of fresh apple by 1;
+				ItemGain fresh apple by 1;
 				now Libido of Player is 0;
 			else: [cock will fit]
 				say "After pulling at it for a moment, the head goes in. Your walls contract, bringing more of it inside you, and you closer to the monstrous testicles. All of a sudden, the two tentacles that had been lying limp on the ground dart into your ass, causing you to gasp from addictive pleasure.";
@@ -111,13 +111,14 @@ To say centaur defeat:
 				say "You drift off into a haze of pleasure, filled with slapping noises of the centaur's balls. You come out of the haze into your orgasm, pleasure flooding your senses and hot cum flooding your insides, filling them until you look overdue for triplets. When your belly can stretch no more, cum sprays out of the tight seal between your lips and its shaft, covering what is in the way with green seed.[impregchance][impregchance]";
 				say "The centaur pulls out of you with a splotchy noise, green cum running like a small stream from your abused lips, and walks off, leaving you to clean up and be on your way, an apple or two in your bag.";
 				if a random chance of one in two succeeds:
-					increase carried of fresh apple by 1;
-				increase carried of fresh apple by 1;
+					ItemGain fresh apple by 2;
+				else:
+					ItemGain fresh apple by 1;
 		else if Player is kinky:
 			say "The tentacles put your lust back where it came from, and you leave the stricken centaur where it is.";
 			say "You find an apple in its discarded backpack.";
 			decrease Libido of Player by 10;
-			increase carried of fresh apple by 1;
+			ItemGain fresh apple by 1;
 		else:
 			say "The sight of the tentacles puts you off your lunch, and you lose it a short time later, heaving your guts all over the ground.";
 			increase hunger of Player by 10;
@@ -134,8 +135,9 @@ to say centaur rape female:
 	say "[impregchance][impregchance]";
 	say "The centaur pulls out of you with a splotchy noise, green cum running like a small stream from your abused lips, and walks off, leaving you to clean up and be on your way, an apple or two in your bag.";
 	if a random chance of one in two succeeds:
-		increase carried of fresh apple by 1;
-	increase carried of fresh apple by 1;
+		ItemGain fresh apple by 2;
+	else:
+		ItemGain fresh apple by 1;
 	if centaurmate is 1:			[Extra infection for mate]
 		infect "Mutant Centaur";
 	if Apple Tree is not resolved:	[Extra infection for event]

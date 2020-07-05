@@ -44,7 +44,7 @@ to say losetovoodoogecko:
 		if "Magpie Eyes" is listed in feats of Player, now yy is 20;
 		if a random chance of yy in 100 succeeds:
 			say "     You manage to collect some of the mystical gecko cum in a container before it evaporates away.";
-			increase carried of gecko cum by 1;
+			ItemGain gecko cum by 1 silently;
 	else if vgeckoloss > 4 and player is male and ( ( vgeckoanal > 3 and anallevel > 1 ) or ( Player is female and Cunt Depth of Player >= ( Cock Length of Player / 3 ) ) ) and Cock Length of Player < 25 and a random chance of 2 in 7 succeeds:
 		let analorvag be 0; [0 = anal, 1 = vag - controls scene delivery and selfimpreg]
 		if Player is female and Cunt Depth of Player >= ( Cock Length of Player / 3 ), now analorvag is 1;
@@ -85,7 +85,7 @@ to say losetovoodoogecko:
 		if "Magpie Eyes" is listed in feats of Player, now yy is 20;
 		if a random chance of yy in 100 succeeds:
 			say "     You manage to collect some of the mystical gecko cum in a container before it evaporates away.";
-			increase carried of gecko cum by 1;
+			ItemGain gecko cum by 1 silently;
 	increase vgeckoloss by 1;
 	if vgeckoloss is 3, increase wdam entry by 1;
 

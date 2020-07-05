@@ -228,14 +228,14 @@ to say Orthas_task2_start:
 	project the Figure of Orthas_face_icon;
 	say "     'Look, I was wondering if you could give me a hand again. It shouldn't be as much trouble as my last favor turned out to be - how was I to know those beasts were waiting for me to leave my post? It's lucky I wasn't just going go to the washroom or something and had actually gotten a replacement guard,' she says with a grin.";
 	say "     From your glare at her for having to be that replacement to be attacked, she coughs and gets back to the original matter. 'Well, as I was saying, this means I can't really be leaving my post to go running around in the city. Now as I've said, I'm not too attached to my old life, but there are a few things I'd like to hold onto. I'd really appreciate it if you could go to my old place and pick up a few of my things for me,' she says, putting added emphasis on her appreciation with a rumbling purr and a teasing talon stroke. Her tail winds around you, pulling you in close to her. 'You'll do that for me, won't you?' she says, licking your cheek and nibbling your ear. You moan and nod, hardly thinking about it and just wanting to get the dragon's favor.";
-	say "     Orthas smiles and gives you a quick kiss. 'Thanks, hon. Now, my place is off near the red light district of town. Hey - don't give me that look! It wasn't that kind of neighborhood when I first moved there and... well, there wasn't much point in moving away after- Look, nevermind that! Here's the address";
-	if Entrance to the Red Light District is unknown:
-		say ". From the info I've gathered from some of the others scavengers who've been in through here, this route should at least get you into the area";
-		now Entrance to the Red Light District is known;
-	say ".'";
+	say "     Orthas smiles and gives you a quick kiss. 'Thanks, hon. Now, my place is off near the red light district of town. Hey - don't give me that look! It wasn't that kind of neighborhood when I first moved there and... well, there wasn't much point in moving away after- Look, nevermind that! Here's the address. From the info I've gathered from some of the others scavengers who've been in through here, this route should at least get you into the area.'";
 	say "     Having given you the address on a slip of paper, the dragoness stomps back to her post. Well, it sounds like a trip to find [bold type]Orthas's house[roman type] is in your future.";
+	AddNavPoint Entrance to the Red Light District;
 	now Orthas's House is active;
 
+Table of GameEventIDs (continued)
+Object	Name
+Orthas's House	"Orthas's House"
 
 Orthas's House is a situation. The level of Orthas's House is 5. It is inactive.
 The sarea of Orthas's House is "Red".
@@ -404,7 +404,7 @@ to say Orthasfuck:
 					if Player consents:
 						LineBreak;
 						now seed is 1;
-						decrease carried of tappeditem by 1;
+						ItemLoss tappeditem by 1;
 					else:
 						LineBreak;
 						say "'Awww!' She pouts. 'Well, we can still have fun!'";
@@ -429,7 +429,7 @@ to say Orthasfuck:
 							now tappeditem is journal;
 				if tappeditem is not journal:
 					now seed is 1;
-					decrease carried of tappeditem by 1;
+					ItemLoss tappeditem by 1;
 				else:
 					say "'Awww!' She pouts. 'Well, we can still have fun!'";
 			if seed is 0:

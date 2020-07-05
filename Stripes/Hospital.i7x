@@ -72,38 +72,30 @@ Instead of resolving a Pharmaceutical Storage:
 to say drugsearch:
 	let T be a random number between 1 and 13;
 	if T is 1:
-		say "     You find a medkit.";
-		increase carried of medkit by 1;
+		ItemGain medkit by 1;
 	if T is 2 or T is 3:
-		say "     You find some parts for a medkit among the scattered mess. Maybe someone could put them together?";
+		say "     You gain some parts for a medkit among the scattered mess. Maybe someone could put them together?";
 		increase hasparts by 1;
 	if T is 4:
-		say "     You find a testosterone pill still in the sample pack.";
-		increase carried of testosterone pill by 1;
+		ItemGain testosterone pill by 1;
 	if T is 5:
-		say "     You find an estrogen pill still in the sample pack.";
-		increase carried of estrogen pill by 1;
+		ItemGain estrogen pill by 1;
 	if T is 6:
-		say "     You find an odd pill labelled as being [']estosterogen['] still in its sample pack.";
-		increase carried of estosterogen pill by 1;
+		ItemGain estosterogen pill by 1;
 	if T is 7:
-		say "     You find a cock pill still in the sample pack.";
-		increase carried of cock pill by 1;
+		ItemGain cock pill by 1;
 	if T is 8:
-		say "     You find a birth control pill still in the sample pack.";
-		increase carried of birth control pill by 1;
+		ItemGain birth control pill by 1;
 	if T is 9:
-		say "     You find a fertility enhancement pill still in the sample pack.";
-		increase carried of fertile pill by 1;
+		ItemGain fertile pill by 1;
 	if T is 10:
-		say "     You find a novelty sex-aid pill.";
-		increase carried of libido pill by 1;
+		ItemGain libido pill by 1;
 	if T is 11 or T is 12:
-		say "     You find a small syringe with clear, blue fluid in it and labelled as a [']healing booster['].";
-		increase carried of healing booster by 1;
+		say "     [bold type]You gain a healing booster![roman type] It's a small syringe with clear, blue fluid in it.";
+		ItemGain healing booster by 1 silently;
 	if T is 13:
-		say "     You find a small syringe with cloudy, orange fluid in it and labelled as a [']libido suppressant['].";
-		increase carried of libido suppressant by 1;
+		say "     [bold type]You gain a libido suppressant![roman type] It's a small syringe with cloudy, orange fluid in it.";
+		ItemGain libido suppressant by 1 silently;
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -148,8 +140,8 @@ Instead of resolving a Operating Room:
 	say "     As you are about to turn a corner, you spot a team of several jaguar orderlies marching down the hall towards you. You duck back quickly before they spot you and dive quietly into the nearest room. As you wait quietly around the edge of the door, you can see that this is one of the hospital's operating rooms. Once you hear the group head past and continue on, you let out a sigh of relief and decide to search the room while you're here.";
 	say "     It's clear there was some chaos in here, with overturned tables and surgical tools scattered across the floor. Along with this are several sets of surgical scrubs and piles of clothing, much of it messy with stick fluids. You steer clear of them and check the patient's chart, finding notes about exploratory surgery on an unusual and rapidly forming growth. Clearly another case of a transforming patient gone amuck on the unprepared medical staff.";
 	say "     You do have some good fortune though and spot a bonesaw on the floor. You pick it up and add it to your arsenal. As you slip out the back into the doctor's prep room, you find an exit that leads around one of the barricades, enabling you to get around more of the hospital.";
-	say "     Bonesaw obtained. Time to operate!";
-	increase carried of bonesaw by 1;
+	say "     [bold type]You gain a bonesaw![roman type] Time to operate!";
+	ItemGain bonesaw by 1 silently;
 	increase hospnav by 1;
 	say "[hospprogress]";
 	increase score by 5;
@@ -175,8 +167,7 @@ when play begins:
 
 Instead of resolving a Staff Lounge:
 	say "     In one corner of the hospital, you come across a lounge for the staff. Taking a glance inside, you find it unoccupied and go in to search. There are a few chairs and couches, but it seems like some of the staff have used them for [']recreation['] recently. Not wanting to run into a couple of them sneaking in here for more fun, you confine yourself to a quick search of the room. Without power, the food in the fridge has gone bad, but you do manage to find an unopened bottle of water.";
-	say "     Bottle of water obtained.";
-	increase carried of water bottle by 1;
+	ItemGain water bottle by 1;
 	say "     As you are about to head out, you bump into a girlish raccoon in a pink dress, carrying a large dildo in one paw. It seems someone did come for a little fun in the break room.";
 	challenge "Raccoon";
 	say "     Your encounter with the boytoy raccoon over, you leave the lounge to continue your search.";
@@ -365,7 +356,7 @@ The sarea of Chaplaincy is "Hospital".
 
 instead of resolving Chaplaincy:
 	say "     You find yourself in front of the hospital's Chaplaincy, there for the spiritual well-being of patients and family members. Glancing around, you decide to slip inside and have a look around, briefly hoping things will be a little better in here. Sadly, that is not the case and there are signs of several lustful outbursts in here just as everywhere else. You even spot the torn remains of the clergyman's suit and clerical collar, as messy as the other piles of cum-laden clothes. You spot several small vials nearby labelled [']libido suppressant['], most of them empty, though one still remains unused. In the end, he must have decided to give in to his urges rather than keep denying them. You pick it up and store it away. Perhaps it will be useful for you in a moment of need.";
-	increase carried of libido suppressant by 1;
+	ItemGain libido suppressant by 1;
 	increase score by 5;
 	now Chaplaincy is resolved;
 
@@ -388,7 +379,7 @@ instead of resolving Records Room:
 	else:
 		say "[hospfight3]";
 	say "     After your encounter with the creature, you turn to leave the records room before any others come to check on the noise. As you make your way to the door, you spot a syringe of orange liquid on a desk. It is labeled as [']libido suppressant['], possibly left behind by whoever was trying to focus on their records work.";
-	increase carried of libido suppressant by 1;
+	ItemGain libido suppressant by 1;
 	increase score by 5;
 	now Records Room is resolved;
 
@@ -432,7 +423,7 @@ instead of resolving Missing Powder:
 	say "     You manage to find a small, currently unoccupied patient room. It's unremarkable, save for a small bag with a note laying near it. Picking up the item, you read the note.";
 	say "     [italic type]'Bring this shipment we got from the Warehouse District to the doctor. We figure he'll find it useful. If you screw this up again the only packages you'll be handling will be on the far end of some nameless horror's dick!'[roman type] The note appears to be slightly ruined, partially covered in the dry stain of some dubious fluid...";
 	say "     Checking the bag, it appears to have a couple smaller bags containing a strange, white powder. Very carefully inspecting the contents, it doesn't appear to be anything illicit or infectious, though it does tingle slightly against your touch. You decide to take the bags along with you, for now.";
-	increase carried of nullifying powder by 2;
+	ItemGain nullifying powder by 2;
 	now Missing Powder is resolved;
 
 Section 3 - Helper Dog Event & Pet
@@ -679,7 +670,7 @@ instead of going to Primary Lab while hospquest is 2:			[Searching the main lab]
 		else:
 			LineBreak;
 			say "     You tell him you are working on something and would like to scavenge parts from it, since he doesn't need it anymore. He doesn't have any objections, as he won't be taking any of the equipment once they are extracted by the military. You carefully unhook the device and carry it off with you. It is somewhat heavy though. Better be worth it.";
-	increase carried of scientific device by 1;
+	ItemGain scientific device by 1;
 	now hospquest is 3;
 	increase score by 5;
 
@@ -702,10 +693,10 @@ to say hospquestpt2:
 	say "     'I have a lot of samples and tests I would like to run. Many of my projects and analyzes have been unable to progress without proper instrumentation. I will need some time to run more tests before I can gain more information. I'm all abuzz with excitement; I want to tackle it all right away. No sleep for me tonight,' he adds with a chuckle.";
 	say "     'But as I promised, I do have a few things for you.' He heads over to one of the cabinets under the work bench and digs around, pushing some of the items aside as he digs around. 'I set this aside for you if you were successful. I know it's not much, but I expect to deliver better once my results start reaching fruition.' From the back, he pulls out a large beaker with a bottle of water and two syringes sitting in it.";
 	say "     'These are healing boosters and a libido suppressant that I created some time ago. The healing booster provides important nutrients and stimulate the nanites to bring about a surge in their healing rate for a brief time, resulting in rapid repair of injuries. The other contains a cocktail of anaphrodisiacs meant to help curb your arousal, for at time at least. They should both be most helpful for you out there, I expect. And a bottle of water as well, as you're probably thirsty after lugging that thing across the city.";
-	delete scientific device;
-	increase carried of healing booster by 1;
-	increase carried of libido suppressant by 1;
-	increase carried of water bottle by 1;
+	ItemLoss scientific device by 1;
+	ItemGain healing booster by 1;
+	ItemGain libido suppressant by 1;
+	ItemGain water bottle by 1;
 	now DoctorMouseProgress is turns;
 	extend game by 6;
 	LineBreak;
@@ -721,7 +712,7 @@ to say hospquestpt3:
 		increase score by 5;
 	if dog milk is owned:
 		say "     'What is this?' he exclaims as you pull out the bottle of dog milk. 'You already have some? Astonishing! I knew you would make a fine assistant, but this is most impressive. There are numerous possibilities for why that dog creature is unique and some of them could affect the results of my other experiments. Ascertaining or removing certain variables will greatly increase the likelihood of gaining meaningful results.'";
-		delete dog milk;
+		ItemLoss dog milk by 1;
 		now DoctorMouseProgress is turns;
 		extend game by 6;
 		increase score by 25;
@@ -732,7 +723,7 @@ to say hospquestpt4:
 		say "     'I need you to get a sample, preferably its milk, from that large canine. Its shemale attributes are unusual and I wish to determine what factor or factors may have made it different and unique.'";
 	if dog milk is owned:
 		say "     'You have it? Excellent work. I knew when you showed up that you'd make a fine assistant. There was just something about you.' He takes the jar of dog milk and starts drawing samples from it, putting them into beakers for testing. 'It will take some time to complete my tests, but I expect I'll have something for you once the results are in.'";
-		delete dog milk;
+		ItemLoss dog milk by 1;
 		now DoctorMouseProgress is turns;
 		extend game by 6;
 		increase score by 20;
@@ -756,7 +747,7 @@ to say hospquestpt6:
 	if carried of Tiger patch < 3:
 		say "     Please remember, I need you to obtain three samples from those rubbery felines, so I can be certain to have enough to obtain results. Please make your way to the State Fair and try to collect some.";
 	if carried of Tiger patch >= 3:
-		decrease carried of Tiger patch by 3;
+		ItemLoss Tiger patch by 3;
 		say "     Good work! I shall set to work on these right away. And while I work on that, I do have another project for you. I have a pair of situations where my orderlies have upset the locals too much to complete their task and I need someone independent of the hospital to go in and complete the job.";
 		say "     I have just obtained word that the museum contains a pair of prehistoric creatures. Aside from representing an unprecedented opportunity to analyze ancient life, it may be important to examine their nanites and see how they affected such changes. The reports from the hospital creatures are somewhat unspecific, but there appears to be an armored, dinosaur-like creature and several smilodons. I would have the others deal with this, but on their original foray into the museum, they must have caused a disruption and now the guardian will not let them re-enter. I need you to obtain samples from both of these.";
 		say "     'The last thing I need for you is to perform a simple pick-up while you are out. There is a jackal shopkeeper who has set herself up in the mall. She has a package for me. The rats who live there will not allow the hospital staff to approach, having been set off by the appearance of one of the jaguars when the order was first placed.";
@@ -770,14 +761,14 @@ to say hospquestpt7:
 		if lava lamp is not owned:
 			say "     If you are not able to obtain a usable sample from this dinosaur creature, be sure to go to its nest and search there. There may be eggs or something else with enough nanites to act as a proper sample. They were very clear that it was female.";
 		if lava lamp is owned:
-			delete lava lamp;
+			ItemLoss lava lamp by 1;
 			say "     The mouse dubiously looks at the lava lamp you've pulled out, but goes to take it. As you explain what you suspect it's been used for, he pulls his hands back quickly and puts on a pair of ill-fitting gloves over his mouse-paw hands. Only then does he handle it, setting it on the lab table. 'I... this is a rather ingenious way to obtain a sample. I... uhh... commend you. Please continue,' he says.";
 			now triclamped is 1;
 	if sabtoothed is 0:
 		if Chipped tooth is not owned:
 			say "     There appear to be several of these smilodons in the museum. Take care, smilodons, popularly known as sabretooth tigers, were the apex predators in their time and are larger than any current feline. Any creatures based on them with nanite enhancement would be... quite powerful.";
 		if Chipped tooth is owned:
-			delete Chipped tooth;
+			ItemLoss Chipped tooth by 1;
 			say "     The mouse looks at the large fang with a mix of awe and delight. He takes it carefully from you and places on a sample tray. Another successful mission completed.";
 			now sabtoothed is 1;
 	if nerminepackage < 5:
@@ -785,7 +776,7 @@ to say hospquestpt7:
 			say "     'The shopkeeper at the mall has a collection of... ahh... [']occult and mystical items['],' he says with a bit of disdain, 'but she does have some historically significant items, and I wanted to obtain something from her. She may want something of similar value in return,' he adds.";
 		if package is owned:
 			say "     The mouse takes the package from you with a smile and puts it on his sample table quietly.";
-			delete package;
+			ItemLoss package by 1;
 			now nerminepackage is 5;
 	if nerminepackage is 5 and sabtoothed is 1 and triclamped is 1:
 		say "     'Excellent work, my assistant. Now I have much to do. I hope you will understand if I ask you to leave me to my investigations for a time. But as a reward, you may have this for the moment,' the small mouse says as he passes you a medkit.";
@@ -855,7 +846,7 @@ to say hospquestpt9:
 				say "     Seeing the raccoon boy becoming such a willing plaything is quite arousing and soon you can hold back no longer. Your cock throbs and your hot seed shoots into his waiting muzzle. He swallows it all down and licks you clean like a good little pet, churring happily.";
 			now pink raccoon is tamed;
 			add "Tamed" to Traits of pink raccoon;
-			say "     (The pink raccoon is now tamed! You can make it your active pet by typing [bold type][link]pet pink raccoon[as]pet pink raccoon[end link][roman type]and initiate sex with him while active by typing [bold type][link]fuck pink raccoon[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";
+			say "     (Candy the pink raccoon is now a possible companion! You can make him your active companion by typing [bold type][link]companion Candy[end link][roman type] or [bold type][link]companion pink raccoon[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck pink raccoon[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 		else:
 			increase score by 20;
 			now coonstatus is 1;
@@ -1516,7 +1507,7 @@ Instead of resolving a Dinosaur Nest:
 	if dnfightresult is 1:		[win]
 		say "     Having bested the triceratops woman, you can finish searching her nest in the hopes of finding something to satisfy the mouse doctor. You dig around in her collection of old stuff, but don't see anything for some time. Eventually, you instead smell something and soon track the scent to a lava lamp. Unplugged, the glass lamp is off its stand and is coated in a wet sheen of fluids. Guessing the strange creature has been using it for some improvised fun, you wrap it in a paisley shirt and pack it away.";
 		say "     Lava lamp collected.";
-		increase carried of lava lamp by 1;
+		ItemGain lava lamp by 1;
 		increase score by 10;
 		now Dinosaur Nest is resolved;
 
@@ -1626,8 +1617,7 @@ Instead of resolving a Viking Longboat:
 		say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 		if bonus + dice > 18:
 			say "Nimbly dashing across the collapsing ship, you manage to make it to the ladder and slide down it, barely touching the rungs at all. You drop the last five feet onto all fours as more ancient lumber rains down and the ladder sways. You scramble back quickly away from the devastated relic until the dust settles. You pull out the two green gems from your pack and look at them before tucking them away again. You look over the heap and decide to grab a souvenir for yourself, swiping one of the spears from the ruined display to add to your arsenal.";
-			say "     Spear added to inventory. Stabby-stabby!";
-			increase carried of spear by 1;
+			ItemGain spear by 1;
 			increase score by 20;
 			now Resolution of Viking Longboat is 1; [stole the spear]
 		else:
@@ -1647,10 +1637,10 @@ spear is an armament. It is part of the player. It has a weapon "[one of]your sp
 the scent of the spear is "The Viking spear smells of ancient battles. The scent gets your blood pumping for battle.".
 
 Instead of conversing the Nermine while nerminepackage is 3:
-	increase carried of package by 1;
 	say "     'Have you been finding the dragon's eyes for Nermine?' she asks. 'Wonderful. Most beautiful,' she says as she holds them up to the light and gazes through them. 'Even older than I thought, long before put on that ship. Long history. Nermine is very pleased to have these. So much so I will give you some advice.'";
 	say "     'White mousey doctor is wanting something from Nermine's shop. People who want things from my store often get exactly what they were looking for. Be careful with mousey doctor, not get hurt,' the jackal woman says. 'The item in the box is quite old, much of its strength has faded, but it still came from a powerful creature long ago.'";
-	say "     The package for Dr Mouse has been obtained.";
+	say "     [bold type]You gain a package for Dr Mouse![roman type]";
+	ItemGain package by 1;
 	if spear is owned:
 		say "     'And you appear to be most lucky, little helper,' she adds, taking note of the spear you have. 'That is spear of great Viking chief who commanded the boat. A rare find, such a thing,' she says with a little greed in her eye, as if trying to come up with a suitable trade to tempt it away from you.";
 	increase score by 10;
@@ -1702,8 +1692,8 @@ to say hospquestpt11:
 				say "     He hands the device over to you to examine. 'Should you make contact with an unknown infection source, you can use the device to check to what degree and which strain has infected your body. Being out in the field, I suspect such a device will be of some use to you as some strains may be difficult to diagnose until further secondary features or behaviors arise.'";
 				WaitLineBreak;
 				say "     'The strap can be placed around your wrist, ankle or other limb. It could even be used with the contacts pressed to your body, if you were ever changed to such a radical degree. To check yourself, simply connect it to the analysis unit and press these buttons,' he says as he indicates them, 'to show you how the infection has spread through your body. It has a catalog drawn from this terminal, but unfortunately must remain keyed to you to work and so it presently can't be used to check others.'";
-				say "     Infection monitor obtained. (Quick command: [bold type]pism[roman type])[line break]";
-				increase carried of infection monitor by 1;
+				ItemGain infection monitor by 1;
+				say "     (Quick command: [bold type]pism[roman type])[line break]";
 				increase score by 10;
 
 to say hospquestpt12:

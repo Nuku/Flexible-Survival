@@ -67,7 +67,7 @@ Instead of resolving a Milking Facility Keycard:
 		say "     You stumble upon an abandoned office. A metallic plaque is nailed next to the door, and reads [italic type]Emergency Supplies Production Project[roman type]. The only object remaining in the room is a heavy, metallic desk. Inside the drawer, you find a keycard labelled [italic type]Facility 14 -  Dairy Products[roman type]. You take it, in case you find said facility in the city.";
 	else:
 		say "     You stumble upon an abandoned office. A metallic plaque is nailed next to the door, and reads [italic type]Emergency Supplies Production Project[roman type]. Remembering the bunker you have found earlier, you search the room. The only object remaining in the room is a heavy, metallic desk, so it is quickly done. Inside the drawer, you find a keycard labelled [italic type]Facility 14 -  Dairy Products[roman type]. You take it, and make a mental note of returning to the bunker whenever you can.";
-	increase carried of ESPP bunker keycard by 1;
+	ItemGain ESPP bunker keycard by 1;
 	now Milking Facility Keycard is resolved;
 
 
@@ -211,8 +211,8 @@ carry out milkingFactoryManagement:
 				if nam is "Dispense dairy product":
 					say "     [italic type]Dispensing dairy products. Thank you in advance for your feedback[roman type], the computer prints on the screen, before displaying the mentioned feedback survey. [one of]What you thought was a coffee dispenser suddenly hums to life in the room[or]The dispenser turns on and hums softly[stopping]. After some rumbling, [if milkingFactoryProductivityUp is 0]a sealed bottle of milk falls down[else]two sealed bottles of milk fall one after the other[end if] where the coffee cup would be.";
 					now milkingFacilityLastProduction is turns;
-					add "manufactured milk" to the invent of Player;
-					if milkingFactoryProductivityUp is 1, add "manufactured milk" to the invent of Player;
+					ItemGain manufactured milk by 1;
+					if milkingFactoryProductivityUp is 1, ItemGain manufactured milk by 1;
 				if nam is "Approve suit upgrades":
 					say "     A pop-up appears on the screen: [italic type]Suit upgrades will allow addition of purification functionalities, providing the consumer with 100% safe dairy. Approval cannot be rescinded. Do you confirm?[roman type][line break]";
 					LineBreak;

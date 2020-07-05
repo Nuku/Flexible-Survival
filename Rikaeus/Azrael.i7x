@@ -185,11 +185,11 @@ to say ClassPaymentOptions:
 			LineBreak;
 			if calcnumber is 1:
 				say "     You pull out a pile of food and hand it to the Dean who smiles and accepts it.";
-				decrease carried of food by 5;
+				ItemLoss food by 5;
 				now ClassPaymentAccepted is true;
 			else if calcnumber is 2:
 				say "     You pull out five bottles of water and hand them over to the Dean who gracefully accepts it.";
-				decrease carried of water bottle by 5;
+				ItemLoss water bottle by 5;
 				now ClassPaymentAccepted is true;
 		else:
 			say "     You decide against it and shake your head.";
@@ -199,7 +199,7 @@ to say ClassPaymentOptions:
 		say "     [link]N[as]n[end link] - Nah.";
 		if Player consents:
 			say "     You pull out the pile of food from your backpack and hand them over to the Dean who gladly accepts it.";
-			decrease carried of food by 5;
+			ItemLoss food by 5;
 			now ClassPaymentAccepted is true;
 		else:
 			say "     You shake your head, deciding against it.";
@@ -209,7 +209,7 @@ to say ClassPaymentOptions:
 		say "     [link]N[as]n[end link] - Nah.";
 		if Player consents:
 			say "     You pull out the water bottles from your backpack and hand them over to the Dean who gladly accepts it.";
-			decrease carried of water bottle by 5;
+			ItemLoss water bottle by 5;
 			now ClassPaymentAccepted is true;
 		else:
 			say "     You shake your head, deciding against it.";

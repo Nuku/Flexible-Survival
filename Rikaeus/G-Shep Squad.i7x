@@ -68,10 +68,9 @@ Instead of resolving a Canine Patrol:
 		WaitLineBreak;
 		say "     You hadn't noticed at first, but now you can see that the two cops who'd caught the hyenas are humping them vigorously, pounding them hard against the wall. The other cops are lining up, getting ready for their turn at [']punishing['] the criminals. Your exclamation causes the cop near you to look back and notice the scene unfolding. 'Oh dammit. They're starting already. Look, you're free to go but I want to talk to you some more,' he barks quickly and pointing back down the alley from which you came, his attention clearly focused on the sex as his cock pokes from his sheath in anticipation. He hurriedly gives you an intersection and tells you to go there [if catdogstate is 2]if you want to see him[else if catdogstate is 1]to continue this[else]for further questions[end if], telling you to ask for [']Buster[']. And with that, Buster dashes off towards the others. 'Hey! Don't leave your commander out of this,' he calls out to his fellow officers. 'Save me a spot, you mangy horndogs. I want to teach these gang delinquents a good, hard lesson.'";
 		say "     With the canines busy dishing out some sexy justice, you can only shake your head at how this city's clearly gone to the dogs.";
-		say "     [bracket]Now [bold type]K9 Vans[roman type] location is known.[close bracket][line break]";
 		now Resolution of Canine Patrol is 3; [invite to the Vans]
 		now gshepsquad is 4;
-		now K9 Vans is known;
+		AddNavPoint K9 Vans;
 		increase score by 5;
 		now Canine Patrol is resolved; [for now]
 

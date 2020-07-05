@@ -143,10 +143,10 @@ to DemonicItemGet:
 	if randomnumber is:
 		-- 1:
 			say "     After some time, you manage to get your hands on a bottle of [bold type]Demon Seed[roman type]. Either they don't see any use for this kind of thing anymore, or the demons are really into storing their own stuff in bottles and release them into the surface world, hoping some rather bizarre creature or person would drink this. It smells really sweet, and it does have an odd color, flowing strangely inside at a very warm temperature. Still, you decide to tuck it away in your inventory and call this search done, as there's little left that you haven't rummaged through already.";
-			increase carried of demon seed by 1;
+			ItemGain demon seed by 1 silently;
 		-- 2:
 			say "     After some time, you manage to get your hands on a strange pill box in the middle of more trash. Sadly, it's mostly empty, with only one [bold type]Libido Pill[roman type] left. You recall this to be some sort of sex enhancement drug, used to significantly boost the recipient's libido. Doesn't take a genius mind to know why the demons would be so interested in such a thing, provided the ways they find to dominate their enemies. Without giving it much though, you tuck it away in your inventory and call this search done, as there's little left that you haven't rummaged through already.";
-			increase carried of libido pill by 1;
+			ItemGain libido pill by 1 silently;
 		-- 3:
 			say "     Sadly, your efforts are in vain. There's nothing of use that you can bring with you. Your only option is to hope for another chance at catching the imp and have another go at the next trash pile he makes.";
 	now LastTrashSearchTurn is turns;
@@ -600,7 +600,7 @@ instead of navigating Grey Abbey Library while (Strange Sorcerer is active and S
 						say "     Given his dizzy state, which you clearly observe in his lack of balance, you decide to offer him a free stay in the bunker for as long as he needs. 'Thank you. I might have to accept that, I don't know enough about this world to walk around freely, and the library was always a good base.' Carefully, you help Xaedihr walk through and introduce him to his new bed. He gladly takes the time to rest for a while. 'Hey, I know you had no obligation in letting me stay, but I should thank you again for everything. Here, have this, in case we get separated again.' He hands you some sort of trinket, a small pin with a tiny red gem in the middle. He tells you a couple of strange words which make it glow. 'Works like a summon call. When I get better, I'll be able to aid you outside. Just let me know.'";
 						say "     The sorcerer needs some rest, so you leave him be for the moment. Eventually, he'll able to get up and occupy himself with some books in the library.";
 						LineBreak;
-						say "     (You've gained the [bold type]demonologist[roman type] as your partner! You can make him your active companion by typing [bold type][link]pet demonologist[end link][roman type] anywhere, and initiate sex with him while active by typing [bold type][link]fuck demonologist[end link][roman type]. You can see all the pets and followers you have with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to leave a companion home for a while and go out alone? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type]. When dismissed, Xaedihr can be found at the Grey Abbey Library.)";
+						say "     (Xaedihr the demonologist is now a possible companion! You can make him your active companion by typing [bold type][link]companion Xaedihr[end link][roman type] or [bold type][link]companion demonologist[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Xaedihr[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 						Move Xaedihr to Grey Abbey Library;
 						add "Tamed" to Traits of demonologist;
 						Now demonologist is tamed;
@@ -621,7 +621,7 @@ instead of navigating Grey Abbey Library while (Strange Sorcerer is active and S
 		say "     Given his dizzy state, which you clearly observe in his lack of balance, you decide to offer him a free stay in the bunker for as long as he needs. 'Thank you. I might have to accept that, I don't know enough about this world to walk around freely, and the library was always a good base.' Carefully, you help Xaedihr walk through and introduce him to his new bed. He gladly takes the time to rest for a while. 'Hey, I know you had no obligation in letting me stay, but I should thank you again for everything. Here, have this, in case we get separated again.' He hands you some sort of trinket, a small pin with a tiny red gem in the middle. He tells you a couple of strange words which make it glow. 'Works like a summon call. When I get better, I'll be able to aid you outside. Just let me know.'";
 		say "     The sorcerer needs some rest, so you leave him be for the moment. Eventually, he'll able to get up and occupy himself with some books in the library.";
 		LineBreak;
-		say "     (You've gained the [bold type]demonologist[roman type] as your partner! You can make him your active companion by typing [bold type][link]pet demonologist[end link][roman type] anywhere, and initiate sex with him while active by typing [bold type][link]fuck demonologist[end link][roman type]. You can see all the pets and followers you have with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to leave a companion home for a while and go out alone? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type]. When dismissed, Xaedihr can be found at the Grey Abbey Library.)";
+		say "     (Xaedihr the demonologist is now a possible companion! You can make him your active companion by typing [bold type][link]companion Xaedihr[end link][roman type] or [bold type][link]companion demonologist[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Xaedihr[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 		Move Xaedihr to Grey Abbey Library;
 		add "Tamed" to Traits of demonologist;
 		Now demonologist is tamed;
@@ -631,7 +631,7 @@ to SSOutOfQuestions:
 	say "     You have no more questions to ask Xaedihr right now, so you proceed to invite him to stay at the bunker, given his dizzy state, which you clearly observe in his lack of balance. 'Thank you. I might have to accept that, I don't know enough about this world to walk around freely, and the library was always a good base.' Carefully, you help Xaedihr walk through and introduce him to his new bed. He gladly takes the time to rest for a while. 'Hey, I know you had no obligation in letting me stay, but I should thank you again for everything. Here, have this, in case we get separated again.' He hands you some sort of trinket, a small pin with a tiny red gem in the middle. He tells you a couple of strange words which make it glow. 'Works like a summon call. When I get better, I'll be able to aid you outside. Just let me know.'";
 	say "     The sorcerer needs some rest, so you leave him be for the moment. Eventually, he'll able to get up and occupy himself with some books in the library.";
 	LineBreak;
-	say "     (You've gained the [bold type]demonologist[roman type] as your partner! You can make him your active companion by typing [bold type][link]pet demonologist[end link][roman type] anywhere, and initiate sex with him while active by typing [bold type][link]fuck demonologist[end link][roman type]. You can see all the pets and followers you have with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to leave a companion home for a while and go out alone? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type]. When dismissed, Xaedihr can be found at the Grey Abbey Library.)";
+	say "     (Xaedihr the demonologist is now a possible companion! You can make him your active companion by typing [bold type][link]companion Xaedihr[end link][roman type] or [bold type][link]companion demonologist[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Xaedihr[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 	Move Xaedihr to Grey Abbey Library;
 	add "Tamed" to Traits of demonologist;
 	Now demonologist is tamed;
@@ -702,6 +702,7 @@ demonologist	"demonologist"
 
 demonologist is a pet. demonologist is a part of the player.
 understand "Xaedihr" as demonologist.
+printed name of demonologist is "Xaedihr".
 The description of demonologist is "[XaedihrDesc]".
 The weapon damage of demonologist is 12.
 The level of demonologist is 12.
@@ -1126,6 +1127,7 @@ to say XaedihrEnchantTome:
 	else:
 		say "     'Certainly doable. I shall get onto that. Thank you, by the way, I always appreciate gaining some power for myself.' he tells you, as you hand him the ten null essences...";
 		say "     The sorcerer takes the materials to over his corner and proceeds to perform some magical spells that you don't really understand. After a few flashes, ominous sounds and strange flashes of light, the job is complete.";
+		ItemLoss null essence by 10;
 		say "     [bold type]Xaedihr has gotten stronger![roman type][line break]";
 		increase weapon damage of demonologist by 1;
 
@@ -1136,9 +1138,10 @@ to say XaedihrEnchantAE:
 		say "     'Certainly doable. I shall get onto that.' he tells you, as you hand him the ten null essences...";
 		WaitLineBreak;
 		say "     The sorcerer takes the materials to over his corner and proceeds to perform some magical spells that you don't really understand. After a few flashes, ominous sounds and strange flashes of light, the job is complete.";
+		ItemLoss null essence by 10;
+		say "     [bold type]Your Abyssal Edge's weapon damage has been increased by 1! It is now at [weapon damage of abyssal edge] damage.[roman type][line break]";
 		increase weapon damage of abyssal edge by 1;
 		increase Resolution of AbyssEdgeEnchantLevel by 1;
-		say "     [bold type]Your Abyssal Edge's weapon damage has been increased by 1! It is now at [weapon damage of abyssal edge] damage.[roman type][line break]";
 
 [***********************************************************]
 Section 5-3 - Sex Menu
@@ -1637,7 +1640,7 @@ after going to Burned-Out Chapel while (resolution of XaedihrAtticus is 0 and pl
 Section 6-2-R - Xaedihr & Rane
 [***********************************************************]
 
-instead of going up from Grey Abbey Library while ((companion of Player is demonologist or Xaedihr is in Grey Abbey Library) and loyalty of Xaedihr > 9 and Rane is in Grey Abbey 2F and resolution of XaedihrRane is 0):
+instead of going up from Grey Abbey Library while ((companion of Player is demonologist or Xaedihr is in Grey Abbey Library) and loyalty of Xaedihr > 9 and Rane is in Sitting Area and Resolution of XaedihrRane is 0):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: XAEDIHR / RANE MEETING[line break]";
@@ -1756,7 +1759,7 @@ Carry out SkipToXaedihr:
 	say "     He is also a pet.";
 	now resolution of Hellish Trashpile is 3;
 	add "Demonic Ritual Tape" to tapes of Player;
-	increase carried of ancient tome by 1;
+	ItemGain ancient tome by 1 silently;
 	now resolution of Hell Realm is 4;
 	now Strange Sorcerer is resolved;
 	say "     Hell Realm resolved as if player had destroyed the Grid. Ancient Tome is also in your possession now.";

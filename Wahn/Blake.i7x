@@ -102,7 +102,7 @@ instead of going east from Smith Haven Mall Lot East while ((player is not male 
 	if HP of Blake is 100:
 		say "     Wait? Wasn't there an alley somewhere here? Somehow, you can't focus your mind on it anymore, with thoughts kinda just skipping over it. The idea of going that way is quickly discarded, as it doesn't make any sense.";
 
-instead of going east from Smith Haven Mall Lot East while (HP of Blake < 50):
+instead of going east from Smith Haven Mall Lot East while (HP of Blake < 50 or (player is male and HP of Blake is 99)):
 	move player to Dirty Alley; [one step inside so the player sees him and the room - adjust scenes accordingly]
 	if debugactive is 1:
 		say "     DEBUG: Walk-in Event in the mall - find Blake, the punk rocking, trash-loving rat who lives in the mall.[line break]";
@@ -391,9 +391,7 @@ to say BlakeCounterstrike:
 		WaitLineBreak;
 		say "     Hobbled and blindfolded as he is, there's little wonder that Blake stumbles and falls before he gets very far, which simply draws a dark chuckle from the wolverine now responsible for him. You look over your shoulder and see that Jenna is still in discussion with her companion and that they've walked away a bit, gesturing at the mall, so she didn't see the casual mistreatment Logan dished out. As the wolverine pulls the bound rat up from the ground again, he bends his head to say something into Blake's round ear. It's just loud enough for you to make out, 'Wait till you're in the lockup, little piggy. I'm usually all alone during the night shift, so be ready for keeping me good company then.' While Blake trembles in his grasp, Logan turns his attention towards you and puts a broad grin on his face that exposes a multitude of sharp teeth in an evil grin. Giving you a wink, he then pushes his captive along, this time keeping a firm grip on his shoulder with one hand, while the other rests right on Blake's buttocks.";
 		say "     Before long, Juergen and yourself are the only ones left behind in the alley. 'Good riddance!' the moose huffs loudly, spitting on the ground after the rat that put him through hell. Then he turns to you and gives you an acknowledging nod. 'Thanks again for ending that pissant's scheme. I can't help but wonder how many others he had ensnared. Guess I'll have to keep an eye out for people hanging out at the corner of this alley with a confused expression on their face.' Shrugging, he walks over to the large trailer he brought with him, opening it up and digging around a bit. 'There, take this as a thank you from all those that got mind-fucked!' he says, handing an armful of mixed food cans to you. 'I'm out of here for now. Gotta clear my head a bit, but maybe we'll see each other from time to time. I'm moving around a lot as a trader, but I usually set up at new locations around noon or so.";
-		LineBreak;
-		say "[bold type]You gain 4 food![roman type][line break]";
-		increase carried of food by 4;
+		ItemGain food by 4;
 		now HP of Blake is 97; [Blake handed over to Logan]
 		move Blake to NPC Nexus; [stashing him away]
 		move Player to Dirty Alley;
@@ -489,8 +487,7 @@ to say BlakeSex2: [cum milking]
 	say "     After pulling an empty bottle out of your pack and setting it down where you can quickly reach it, you kneel down on the ragged bedding that Blake is stretched out on. After telling him with a smile on your face that it's you who'll make use of him this time, you reach out and cup his furry balls, giving them a relatively gentle squeeze. Blake squirms a bit, mumbling into his ball-gag, but doesn't struggle any more than that as you take hold of his still soft uncut cock. Fingers wrapping around the fairly well-sized member, you start jerking it, with some squeezing and rubbing putting your rodent whore into an aroused state before much longer. Soon, you've got his manhood fully hard and standing straight up like a pole, pulsing slightly from the beat of his heart as it sends blood to this priority.";
 	say "     Setting down your other hand on the furry globes of his balls, you stroke and fondle your helpless rat a bit, grinning as you push the unwilling captive closer and closer to orgasm and tell him to be a good little pet and give you a lot of nut milk. When he finally can't hold back any more, you quickly snatch up your prepared bottle and hold it to his cock, successfully catching spurt after spurt of his milky white cum in it. This still leaves a fair bit of the bottle empty though, so you tell Blake that he really has to do better than that and just keep going. Over the next thirty minutes or so, you tease another orgasm out of the tied-up rat, giving the bottle another good load before you cap it. After giving the rat's balls a last quick fondle, you stand up and walk away.";
 	LineBreak;
-	say "     You gain a bottle of brown rat cum!";
-	increase carried of brown rat cum by 1;
+	ItemGain brown rat cum by 1;
 
 to say BlakeSex3: [jerking Blake]
 	say "     You kneel down on the ragged bedding that Blake is stretched out on. After telling him with a smile on your face that it's you who'll make use of him this time, you reach out and cup his furry balls, giving them a relatively gentle squeeze. Blake squirms a bit, mumbling into his ball-gag, but doesn't struggle any more than that as you take hold of his still soft uncut cock. Fingers wrapping around the fairly well-sized member, you start jerking it, with some squeezing and rubbing putting your rodent whore into an aroused state before much longer. Soon, you've got his manhood fully hard and standing straight up like a pole, pulsing slightly from the beat of his heart as it sends blood to this priority. Setting down your other hand on the furry globes of his balls, you stroke and fondle your helpless rat a bit, grinning as you push the unwilling captive closer and closer to orgasm.";

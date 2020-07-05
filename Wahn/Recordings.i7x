@@ -36,9 +36,7 @@ Instead of resolving a Demon Chase:
 			if Player consents:
 				LineBreak;
 				say "     With a small nod to yourself, you transfer the intact items to your own pack, sliding the photograph into a pocket, together with the wallet, keys, and the tapes. Who knows, maybe it'd be interesting to find out what is on them. You just need a working camera to play them. For now, you're happy with the free bottle of clean water - that should serve as payment for saving Luther's stuff, if you run into him again.";
-				LineBreak;
-				say "[bold type]You gain 1 water bottle![roman type][line break]";
-				increase carried of water bottle by 1;
+				ItemGain water bottle by 1;
 				LineBreak;
 				say "[bold type]Wayne's Tape 1 has been added to your tape inventory![roman type][line break]";
 				add "Wayne's Tape 1" to tapes of Player;
@@ -49,9 +47,7 @@ Instead of resolving a Demon Chase:
 			else:
 				LineBreak;
 				say "     With a shrug, you drop the wallet, keys, and the tape on the ripped bag and start walking down the street. Hey, at least you got a free bottle of clean water out of it...";
-				LineBreak;
-				say "[bold type]You gain 1 water bottle![roman type][line break]";
-				increase carried of water bottle by 1;
+				ItemGain water bottle by 1;
 				now Resolution of Demon Chase is 2; [discarded Wayne's stuff]
 		else if fightoutcome > 19 and fightoutcome < 30: [lost]
 			say "     The demon chuckles loudly and kicks your legs out from under you, then licks drops of blood from his claws. 'Pathetic mortal, you're not even worth my cum. No, I'll save it all up for when I catch that mutt. He might just burst after a fuck or two, hahaha.' With that said, the demon brute kicks you in the stomach, smiling with evil glee as you curl up in a ball of pain. Then he snatches up the backpack again, pulling items from it and smashing them on the ground. Eventually, just the shredded fabric of the backpack itself is left, which the demon raises to his face and sniffs again. 'You can run, but you can't escape me forever!' the demon shouts, then sets out to chase his intended victim down.";
@@ -114,12 +110,8 @@ when play begins:
 
 instead of resolving a Intercepted Bike Courier:
 	say "     As you wander the streets of the inner city, avoiding all sorts of roaming creatures and skirting around piles of trash and some burned-out cars, you come upon a dented bicycle. The front wheel is twisted into more or less a figure-eight shape, and ripped articles of clothing are scattered in front and on top of it. All of that isn't really extraordinary, but a feeling draws you in nonetheless, so you have a closer look: pulling aside a t-shirt crusty with dried cum reveals a bright red backpack lying on the bike, with the logo of the 'Flash Delivery' bike courier company emblazoned on its front. Looks like whatever creature got the courier was too busy fucking him to care one bit about his delivery pouch. With rising curiosity, you undo the zipper and rifle through the pack, finding an energy bar, a bottle of energy drink and a manila envelope inside.";
-	LineBreak;
-	say "[bold type]You gain 1 food![roman type][line break]";
-	increase carried of food by 1;
-	LineBreak;
-	say "[bold type]You gain 1 soda bottle![roman type][line break]";
-	increase carried of soda by 1;
+	ItemGain food by 1;
+	ItemGain soda by 1;
 	say "     The food and drink are quickly stuffed into your own pack, leaving the envelope. It is addressed to Olivia Koenig, at Liberty Avenue 69, with the clear instruction of 'Personal Delivery ONLY' penned in neat handwriting on it. From the feel of it, there is something more than paper inside the envelope. Might be a video cassette?";
 	say "     [bold type]Do you want to open it and find out what might be inside?[roman type][line break]";
 	LineBreak;
@@ -325,8 +317,7 @@ instead of resolving a Lost Explorer:
 		say "     The helmet actually isn't all that easy to get to, dangling from the end of a two foot protrusion of steel rebar, so you have to lean out over the drop to reach it. As you try to reach it, the strap snagged on the rod slips a little away from you, threatening to make the whole thing fall down onto the ground below. Snatching at it desperately, you barely manage to catch one of the straps and avoid your prize smashing on the concrete, then pull back to sit down for a second at the edge of the platform. The helmet you rescued from its precarious position is indeed fairly new, with a tag on the inside declaring its owner to be 'Mason Reed'. It looks nice and sturdy and should be useful as head protection. As for the camera at its front end, that doesn't seem to react to any of the buttons on it you push, except for the spring-loaded eject of its tape. Hm, must have run out of power.";
 		LineBreak;
 		say "     Pocketing the tape for good measure and with the helmet under one arm, you leave the abandoned factory after a little while longer, during which you find numerous additional tracks of paws crisscrossing the interior of the building. Clearly, this is the territory of some sort of predator, so you deem it best not to stay too long. As you go, you can't help but wonder who the owner of this helmet was and when it was left there. Might have been since before the infection, since clearly not many people come here who could have found it. The contents of the tape might reveal some information about that, if you find a way to play it.";
-		say "[bold type]You gain an crimson urban explorer helmet![roman type][line break]";
-		increase carried of crimson urban explorer helmet by 1;
+		ItemGain crimson urban explorer helmet by 1;
 		say "[bold type]'Urban Explorer Helmet Cam Vid #1' has been added to your tape inventory![roman type][line break]";
 		add "Urban Explorer Helmet Cam Vid #1" to tapes of Player;
 		now Resolution of Lost Explorer is 1; [found the vid]

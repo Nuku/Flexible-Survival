@@ -405,8 +405,8 @@ to say alexandra_supplies:
 			say "     Having enough of the food and water supplies in your pack, shall you give them over to her?";
 			if Player consents:
 				say "     The doberwoman smiles happily, a canine grin on her face. 'I knew I could count on you. Thanks a lot, hon.' She gives you a quick kiss on the cheek, then realizes what she's done. 'Ah... umm...' She blushes at her ears and scoops up the supplies clumsily, hurrying off toward the storage lock-up. There is a hint of canine arousal in the air after her departure.";
-				decrease carried of food by 6;
-				decrease carried of water bottle by 6;
+				ItemLoss food by 6;
+				ItemLoss water bottle by 6;
 				increase score by 25;
 				now HP of Alexandra is 56;
 			else:
@@ -417,7 +417,7 @@ to say alexandra_supplies:
 			say "     Having the food supplies she needs already in your pack, shall you give them over to her?";
 			if Player consents:
 				say "     The doberwoman smiles happily, a canine grin on her face. 'I knew I could count on you. Thanks a lot, hon. Ah... umm...' She blushes at her ears and takes the supplies, hurrying off towards the storage lock-up.";
-				decrease carried of food by 6;
+				ItemLoss food by 6;
 				increase score by 10;
 				now HP of Alexandra is 54;
 			else:
@@ -428,7 +428,7 @@ to say alexandra_supplies:
 			say "     Having the water supplies she needs already in your pack, shall you give them over to her?";
 			if Player consents:
 				say "     The doberwoman smiles happily, a canine grin on her face. 'I knew I could count on you. Thanks a lot, hon. Ah... umm...' She blushes at her ears and takes the supplies, hurrying off towards the storage lock-up.";
-				decrease carried of water bottle by 6;
+				ItemLoss water bottle by 6;
 				increase score by 10;
 				now HP of Alexandra is 55;
 			else:
@@ -445,8 +445,8 @@ to say alexandra_supplies:
 			say "     Having enough of the food and water supplies in your pack, shall you give them over to her?";
 			if Player consents:
 				say "     The doberwoman smiles happily, a canine grin on her face. 'I knew I could count on you. Thanks a lot, hon.' She gives you a quick kiss on the cheek, then realizes what she's done. 'Ah... umm...' She blushes at her ears and scoops up the supplies clumsily, hurrying off towards the storage lock-up. There is a hint of canine arousal in the air after her departure.";
-				decrease carried of food by 6;
-				decrease carried of water bottle by 6;
+				ItemLoss food by 6;
+				ItemLoss water bottle by 6;
 				increase score by 25;
 				now HP of Alexandra is 56;
 			else:
@@ -456,7 +456,7 @@ to say alexandra_supplies:
 			say "     Having the food supplies she needs in your pack, shall you give them over to her?";
 			if Player consents:
 				say "     The doberwoman smiles happily, a canine grin on her face. 'I knew I could count on you. Thanks a lot, hon. Ah... umm...' She blushes at her ears and takes the supplies, hurrying off towards the storage lock-up.";
-				decrease carried of food by 6;
+				ItemLoss food by 6;
 				increase score by 10;
 				now HP of Alexandra is 54;
 			else:
@@ -466,7 +466,7 @@ to say alexandra_supplies:
 			say "     Having the water supplies she needs in your pack, shall you give them over to her?";
 			if Player consents:
 				say "     The doberwoman smiles happily, a canine grin on her face. 'I knew I could count on you. Thanks a lot, hon. Ah... umm...' She blushes at her ears and takes the supplies, hurrying off towards the storage lock-up.";
-				decrease carried of water bottle by 6;
+				ItemLoss water bottle by 6;
 				increase score by 10;
 				now HP of Alexandra is 55;
 			else:
@@ -481,7 +481,7 @@ to say alexandra_supplies:
 			say "     Having the water supplies she needs in your pack, shall you give them over to her?";
 			if Player consents:
 				say "     The doberwoman smiles happily, a canine grin on her face. 'I knew I could count on you. Thanks a lot, hon. Ah... umm...' She blushes at her ears and takes the supplies, hurrying off towards the storage lock-up. There is a hint of canine arousal in the air after her departure.";
-				decrease carried of water bottle by 6;
+				ItemLoss water bottle by 6;
 				increase score by 10;
 				now HP of Alexandra is 56;
 			else:
@@ -496,7 +496,7 @@ to say alexandra_supplies:
 			say "     Having the food supplies she needs in your pack, shall you give them over to her?";
 			if Player consents:
 				say "     The doberwoman smiles happily, a canine grin on her face. 'I knew I could count on you. Thanks a lot, hon. Ah... umm...' She blushes at her ears and takes the supplies, hurrying off towards the storage lock-up. There is a hint of canine arousal in the air after her departure.";
-				decrease carried of food by 6;
+				ItemLoss food by 6;
 				increase score by 10;
 				now HP of Alexandra is 56;
 			else:
@@ -846,10 +846,8 @@ Part 1 - Hints (<50)
 to say A_Task01:
 	if debugactive is 1:
 		say "DEBUG (Activated Task) -> Dr. Matt - AT_Matt <- DEBUG[line break]";
-	say "     'There's a lab in the city that seems to still be active. They seem to know a fair bit about what's going on in the city, but they were really tight-lipped because I'm a cop. You might have better luck finding out what's going on. I'd like you to go there and check it out. Whatever they're doing, they probably need some help. You might be able to get some info if you go along with it.'";
-	if Outside Trevor Labs is unknown:
-		say "     She gives you some directions to the place, called Trevor Labs. You vaguely remember hearing about the place before the outbreak, but they didn't seem to be very public with the type of work they were doing. You'll have to remember to go check it out sometime.";
-		now Outside Trevor Labs is known;
+	say "     'There's a lab in the city that seems to still be active. They seem to know a fair bit about what's going on in the city, but they were really tight-lipped because I'm a cop. You might have better luck finding out what's going on. I'd like you to go there and check it out. Whatever they're doing, they probably need some help. You might be able to get some info if you go along with it.' She gives you some directions to the place, called Trevor Labs. You vaguely remember hearing about the company before the outbreak, but they didn't seem to be very public with the type of work they were doing.";
+	AddNavPoint Outside Trevor Labs;
 	now AT_Matt is true;
 	now sextablerun is 0; [continued talking allowed]
 
@@ -857,7 +855,7 @@ to say A_Task02:
 	if debugactive is 1:
 		say "DEBUG (Activated Task) -> Dr. Mouse - AT_Mouse <- DEBUG[line break]";
 	say "     'I spotted some activity on the upper level of the city hospital. Something's definitely going on there, though I can't really get in to find out what. I'd hoped my being a police officer would be able to convince them to let me in, but the orderlies just attacked. You might want to go check it out, but be careful of the creatures roaming the halls[if City Hospital is unknown]. Getting to the hospital can be a little tricky, but this path is fairly clear. I'd recommend you take the following route to get there[end if].'";
-	now City Hospital is known;
+	AddNavPoint City Hospital;
 	now AT_Mouse is true;
 	now sextablerun is 0; [continued talking allowed]
 
@@ -886,9 +884,7 @@ to say A_Task06:
 	if debugactive is 1:
 		say "DEBUG (Activated Task) -> RLD - AT_RLD <- DEBUG[line break]";
 	say "     'There's some really over-sexualized creatures out there, many of them concentrated in the seedier part of town. Cock creatures, horny succubi, hookers, pimps and more. If you approach [if Entrance to the Red Light District is unknown]the area around the strip clubs and sex shops around these streets,' she says, outlining the area she's talking about, '[else]there, [end if]you need to be really careful or you could end up joining them as another sex slut roaming the red light district of town.' There's the faint scent of canine arousal as Alexandra talks to you about what she saw out there.";
-	if Entrance to the Red Light District is unknown:
-		say "You now know how to locate the Entrance to the Red Light District.";
-		now Entrance to the Red Light District is known;
+	AddNavPoint Entrance to the Red Light District;
 	now AT_RLD is true;
 	now sextablerun is 0; [continued talking allowed]
 
@@ -931,7 +927,7 @@ to say A_Task12:
 	if debugactive is 1:
 		say "DEBUG (Activated Task) -> Zoo <- DEBUG[line break]";
 	say "     'The zoo's become... well, a zoo. With all the wild animals that were there, we've got a lot of exotic and dangerous infections running around. I saw cheetahs, rhinos, tiger and wolf taurs, and even a giant zookeeper roaming around there, just to name a few. I expect our city's hyena problem started there as well. Be careful if you go poking around there, or you might become just another wild animal person stalking the grounds.'";
-	now Zoo Entrance is known;
+	AddNavPoint Zoo Entrance;
 	now sextablerun is 0; [continued talking allowed]
 
 to say A_Task13:
@@ -959,7 +955,7 @@ to say A_Task50:	[See Jimmy.i7x for event and NPC content]
 	if HP of Jimmy is 0:
 		say "     'Earlier, I'd tried tracking down some help from the government, but the area around the capitol building has been destroyed. We'd gotten a sketchy report that night of a volcanic eruption near the State Capitol Building, but we could hardly believe it. But when I went there looking for help after the outbreak, it turned out to be true. Thankfully, it wasn't a large eruption, but it was enough to burn down much of the immediate area. Strangely, the soot and ash in the air still lingers around that part of the city, but hasn't drifted elsewhere.' [if Approaching the Capitol Building is unknown]She informs you of a fairly safe route you can take to get into the area[else]She pauses for a moment, thinking about the odd behavior of the ash cloud there[end if].";
 		say "     'Much of the remaining population in the area has been turned into automatons, metal-skinned people without minds or emotions past their programmed lusts. I wasn't able to discover much more before leaving the area, but I'd like you to go check it out and see if you can look into the [bold type]automaton activity[roman type] there. They seem to be up to something, but I wasn't able to figure it out. But be careful, the creatures in that part of the city are particularly strange and dangerous.'";
-		now Approaching the Capitol Building is known;
+		AddNavPoint Approaching the Capitol Building;
 		now Government Assistance is resolved;
 		now Automaton Activity is active;
 		now HP of Jimmy is 1;
@@ -1043,12 +1039,12 @@ to say alexandra_repairs:
 			if pr_completion is 0:
 				say "     Offering to help Alexandra with further securing the building, the two of you go around barricading the other doors[if PoliceStationTwelvePopulation > 16] with the help of a couple of the stronger residents[else if PoliceStationTwelvePopulation > 8] with one of the other resident survivors[end if]. You have to go around the offices, finding desks and filing cabinets and so forth to move in front of them. You do make it a point to set up one barricade that's fairly easy to tear down from the inside in case of emergency. It's a lot of hard work, but you and Alexandra have some fun laughing at some of the odd trinkets and junk you find on the desks. While it's bittersweet for her to be reminded that her fellow officers are gone, reminiscing about them does help her with the grieving process. As an added bonus, you do find some hidden snacks buried in some of the desks as well, some of which you share with her while taking a break.";
 				PlayerEat 6;
-				increase carried of chips by 1;
+				ItemGain chips by 1;
 				increase policerepair by 2;
 			else:
 				say "     Returning to barricading the other exits from the building, you and Alexandra drag around more heavy furniture to block them[if PoliceStationTwelvePopulation > 16] with the help of a couple of the stronger residents[else if PoliceStationTwelvePopulation > 8] with one of the other resident survivors[end if]. You do make it a point to set up one barricade that's fairly easy to tear down from the inside in case of emergency. It's a lot of hard work, but you and Alexandra have some fun laughing at some of the odd trinkets and junk you find on the desks. While it's bittersweet for her to be reminded that her fellow officers are gone, reminiscing about them does help her with the grieving process. As an added bonus, you do find some hidden snacks buried in some of the desks as well.";
 				PlayerEat 6;
-				increase carried of chips by 1;
+				ItemGain chips by 1;
 				increase policerepair by 1;
 			increase score by 10;
 			now pr_task02 is true;
@@ -1094,8 +1090,8 @@ to say alexandra_repairs:
 		else:
 			say "     The two of you talk while working, enjoying each other's company. You can't help but notice that Alexandra's lightened up quite a bit since you'd first met her. Letting the conversation drift towards how sex has gotten quite prevalent, you try to see how she feels about the matter. She starts to respond, then realizes what you're asking and gives you a narrow look. Trying to look innocent, she harrumphes and gets back to work. Though from the way she gives her ass a wiggle and the increase in the scent of her arousal, you can tell she's not as upset about it as she's letting on. The two of you finish up the work in fine spirits, but are both rather worn out.";
 		say "     As you're putting away the tools, Alexandra comes up to you. 'You've been a big help here. I wouldn't have been able to handle all of this on my own. Here, how about you take this?' she says, offering you one of the carpentry hammers from the tool set. 'This might come in handy and would make for a pretty good weapon in a pinch. I think I can trust you not to kill anyone with this, so you can use it to defend yourself against those mutants. They heal pretty quick, so they should survive as long as you don't go overboard.'";
-		say "     You have gained a [bold type]claw hammer[roman type]. When all you have is a hammer, every mutant looks like a nail.";
-		increase carried of claw hammer by 1;
+		say "     You gain a [bold type]claw hammer[roman type]. When all you have is a hammer, every mutant looks like a nail.";
+		ItemGain claw hammer by 1 silently;
 		increase score by 10;
 		increase policerepair by 1;
 		now pr_task03 is true;
@@ -1226,7 +1222,7 @@ to say A_Task54:	[Group Rescue]
 		say "DEBUG (Activated Task) -> Survivor Group Rescue <- DEBUG[line break]";
 	if HP of Alexandra < 61:
 		say "     'A neighborhood of the city's been overrun by woodlands that's suddenly sprung up. Lots of trees have sprung up, many growing through the pavement or buildings. And if that wasn't bad enough, some of those trees seem to be moving around. Since there was still a lot of the city to patrol in search of survivors, I didn't explore inside it. I'd like you to try checking it out though. There could still be a [bold type]survivor[roman type] hiding out in that creepy [bold type]urban forest[roman type][if Urban Forest is unknown].' Alexandra describes where she came across this forest and the rough outline of the blocks its spread across. You'll be able to make your way to its edge now easily enough[else].' You tell Alexandra that you've encountered this forest before and reassure her that you'll go check it out when you get the opportunity[end if].";
-		now Urban Forest is known;
+		AddNavPoint Urban Forest;
 		now HP of Alexandra is 61;
 		now Survivor Group is active;
 	else:
@@ -1698,8 +1694,7 @@ to OvermindsRetaliationEvent:
 			WaitLineBreak;
 			say "     Jenna immediately agrees upon hearing how serious the problem is. 'I'm so sorry, that sounds awful. Of course they can stay here. There should be enough room somewhere, and I'm sure that the other residents will make them feel right at home. As long as they have some method of paying, whether it is goods or services, the food court should be able to consistently supply food and water. Most of the wolverines you see around act as security, and once you're here, we'll fight tooth and claw to keep you safe. As long as you behave, they shouldn't be a problem, though be careful of some of the parking lot guards as I use that as punishment for if they get too violent, usually it's only one in particular...' Her comments are directed at both the civilians to inform them of what their life will be like, and Alexandra to assuage her concerns about their safety. Many of the survivors begin nodding their heads, eager to have somewhere that they can feel safe again, and compared to the outside, the mall is a paradise.";
 			say "     'Well they seem content with the offer. How about you [if hp of Paula > 2]three?' Jenna asks Alexandra, Jimmy, and Paula[else]two?' Cadmea asks Alexandra and Jimmy[end if]. 'I have some unfinished business that will be easier to complete if I stay with [if Player is not defaultnamed][name of Player][else if Player is male]him[else]her[end if], so I shall decline for now,' Alexandra replies. Jimmy doesn't take long to decide either, responding, 'I'll stay with Alexandra and [if Player is not defaultnamed][name of Player][else]our other dashing hero[end if] too. They might need their cuddly sidekick.' [if hp of Paula > 2]'I may as well stay with them too then,' Paula says rolling her eyes and feigning indifference, but you know how close she is to you all. [end if]'As you wish, though there always be a place here if you want it, Officer Friedrich. You've done a lot for the city, and a lot of people should be thankful,' the wolverine leader replies. 'We should probably get going though. Thank you for your kindness,' the doberman says sincerely, if a bit gruffly. Jenna waves as you leave, her subordinates escorting the civilians inside to relative safety.";
-			if Smith Haven Mall Lot South is not known:
-				now Smith Haven Mall Lot South is known;
+			AddNavPoint Smith Haven Mall Lot South;
 			if Resolution of Overmind's Retaliation is:
 				-- 11:
 					now Resolution of Overmind's Retaliation is 21;
@@ -1725,8 +1720,7 @@ to OvermindsRetaliationEvent:
 		WaitLineBreak;
 		say "     Jenna immediately agrees upon hearing how serious the problem is. 'I'm so sorry, that sounds awful. Of course they can stay here. There should be enough room somewhere, and I'm sure that the other residents will make them feel right at home. As long as they have some method of paying, whether it is goods or services, the food court should be able to consistently supply food and water. Most of the wolverines you see around act as security, and once you're here, we'll fight tooth and claw to keep you safe. As long as you behave, they shouldn't be a problem, though be careful of some of the parking lot guards as I use that as punishment for if they get too violent, usually it's only one in particular...' Her comments are directed at both the civilians to inform them of what their life will be like, and Alexandra to assuage her concerns about their safety. Many of the survivors begin nodding their heads, eager to have somewhere that they can feel safe again, and compared to the outside, the mall is a paradise.";
 		say "     'Well they seem content with the offer. How about you [if hp of Paula > 2]three?' Jenna asks Alexandra, Jimmy, and Paula[else]two?' Cadmea asks Alexandra and Jimmy[end if]. 'I have some unfinished business that will be easier to complete if I stay with [if Player is not defaultnamed][name of Player][else if Player is male]him[else]her[end if], so I shall decline for now,' Alexandra replies. Jimmy doesn't take long to decide either, responding, 'I'll stay with Alexandra and [if Player is not defaultnamed][name of Player][else]our other dashing hero[end if] too. They might need their cuddly sidekick.' [if hp of Paula > 2]'I may as well stay with them too then,' Paula says rolling her eyes and feigning indifference, but you know how close she is to you all. [end if]'As you wish, though there always be a place here if you want it, Officer Friedrich. You've done a lot for the city, and a lot of people should be thankful,' the wolverine leader replies. 'We should probably get going though. Thank you for your kindness,' the doberman says sincerely, if a bit gruffly. Jenna waves as you leave, her subordinates escorting the civilians inside to relative safety.";
-		if Smith Haven Mall Lot South is not known:
-			now Smith Haven Mall Lot South is known;
+		AddNavPoint Smith Haven Mall Lot South;
 		if Resolution of Overmind's Retaliation is:
 			-- 11:
 				now Resolution of Overmind's Retaliation is 21;
@@ -1792,7 +1786,7 @@ Understand "gaskip" as GoodAlexandra_Skipping.
 carry out GoodAlexandra_Skipping:	[***note: imperfect skip]
 	now HP of Alexandra is 65;
 	move Alexandra to the Police Station Twelve;
-	now Police Station Twelve is known;
+	AddNavPoint Police Station Twelve;
 	move player to Police Station Twelve;
 	say "Now HP of Alexandra is [HP of Alexandra] and placed in the Police Station.";
 

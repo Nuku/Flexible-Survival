@@ -186,10 +186,10 @@ Instead of resolving a Trashed Refuge:
 			say "     Digging through the possessions of the refugees that were holed up here, you find several identity cards - looks like they were employees of the Trevor Labs... from the looks of it though, mostly administrative personnel. Most likely they didn't even know what was being cooked up down here.";
 			if a random chance of 1 in 2 succeeds:
 				say "     Your search also reveals a bottle of water, with its seal still intact. Score!";
-				increase carried of water bottle by 1;
+				ItemGain water bottle by 1 silently;
 			else:
 				say "     Your search also reveals an energy bar. Hmm - honey and nut flavored - in an unbroken package. Score!";
-				increase carried of food by 1;
+				ItemGain food by 1 silently;
 			if a random chance of 6 in 8 succeeds:
 				infect "Tentacle Horror";
 			now Resolution of Trashed Refuge is 1; [1st visit done]
@@ -209,10 +209,10 @@ Instead of resolving a Trashed Refuge:
 			say "     Digging through the possessions of the refugees that were holed up here, you find several identity cards - looks like they were employees of the Trevor Labs... from the looks of it though, mostly administrative personnel. Most likely they didn't even know what was being cooked up down here.";
 			if a random chance of 1 in 2 succeeds:
 				say "     Your search also reveals a bottle of water, with its seal still intact. Score!";
-				increase carried of water bottle by 1;
+				ItemGain water bottle by 1 silently;
 			else:
 				say "     Your search also reveals an energy bar. Hmm - honey and nut flavored, in an unbroken package. Score!";
-				increase carried of food by 1;
+				ItemGain food by 1 silently;
 			if a random chance of 6 in 8 succeeds:
 				infect "Tentacle Horror";
 			now Resolution of Trashed Refuge is 2; [2nd visit]
@@ -230,10 +230,10 @@ Instead of resolving a Trashed Refuge:
 			LineBreak;
 			if a random chance of 1 in 2 succeeds:
 				say "     Your search brings to light a can of soda, hidden under the stained folds of a sleeping bag. Score!";
-				increase carried of soda by 1;
+				ItemGain soda by 1 silently;
 			else:
 				say "     A rustling sound as you poke a pile of ragged clothes makes you look closer, digging out a bag of chips from its depths. Score!";
-				increase carried of chips by 1;
+				ItemGain chips by 1 silently;
 			if a random chance of 6 in 8 succeeds:
 				infect "Tentacle Horror";
 			now Resolution of Trashed Refuge is 3; [3rd visit]
@@ -293,7 +293,7 @@ Instead of resolving a Mindshield Storage:
 		if Player consents:
 			LineBreak;
 			say "     Adding the shiny helmet to your pack, you make your way back to the surface.";
-			increase carried of mindshield helmet by 1;
+			ItemGain mindshield helmet by 1 silently;
 		else:
 			LineBreak;
 			say "     You can't just carry everything you find with you, so you put the helmet back in its box. After all, you could always come back here if you ever need one.";
@@ -302,13 +302,13 @@ Instead of resolving a Mindshield Storage:
 		say "     In the depths of the hidden section in this underground complex, you find your way back to the mindshield storage room. As before, rows of shelves hold many boxes of extra helmets. Opening one up, you have a look at the helmet in there, smooth and shiny on the outside, but with a mesh of hexagonal discs covering the inside. Do you want to take one of them with you?";
 		if Player consents:
 			say "     Adding the shiny helmet to your pack, you make your way back to the surface.";
-			increase carried of mindshield helmet by 1;
+			ItemGain mindshield helmet by 1 silently;
 		else:
 			say "     You can't just carry everything you find with you, so you put the helmet back in its box. After all, you could always come back here if you ever need one.";
 		increase MSStorageVisited by 1;
 	else if MSStorageVisited is 2:
 		say "     In the depths of the hidden section in this underground complex, you find your way back to the mindshield storage room. But this time - it's a chaotic mess. All around you, there are fallen shelves and cracked, splintered helmets, out of their packages. Seems like something else found this room, which didn't like the protective mindshields lying around. Digging through the chaos, you find a helmet that seems undamaged. This'll be the last one you get, though, with all the others destroyed.";
-		increase carried of mindshield helmet by 1;
+		ItemGain mindshield helmet by 1 silently;
 		now Mindshield Storage is resolved;
 
 Table of Game Objects (continued)

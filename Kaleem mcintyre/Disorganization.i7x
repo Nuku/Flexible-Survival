@@ -31,8 +31,8 @@ Instead of resolving Disorganization:
 		say "     You're not sure what to do, but maybe it wouldn't be so bad to do this for the other man. Considering the friend he lost and all it might be good for you to see if you can wheedle some way to escape from out of this place before everything goes completely to hell. A positive response from you has the man sighing and then laughing slightly in relief. 'Thanks. I appreciate this. Also, please take those dog tags and this transceiver with you. The recon team, if they're still alive and sane, will want them as proof of validity to who you say you are.' You nod, even though the other can't see you. 'Thanks again. Hey, this might be seen as in bad taste, but one has to get paid for their work and all so take whatever you find useful from my buddy and use it to stay alive.'";
 		WaitLineBreak;
 		say "     At that the person on the opposite end of the communication line drops the call. You wonder if this is really happening. Is the world really going so crazy right now or are you having a nightmare that you can't seem to wake up from? Looking into the dead soldier's half open eyes you calmly reassure yourself that this could never be a bad dream, it's just too horrible to be anything out of even your most twisted of fantasies. You close the canid-man's eyes before searching through his gear.";
-		increase carried of water bottle by 1;
-		increase carried of food by 1;
+		ItemGain water bottle by 1;
+		ItemGain food by 1;
 		decrease Libido of Player by 30;
 		if Libido of Player < 0, now Libido of Player is 0;
 		now drs is 1;
@@ -143,11 +143,11 @@ Instead of resolving Disorganization:
 		StatChange "perception" by 1;
 		StatChange "intelligence" by 1;
 		decrease morale of Player by 15;
-		increase carried of food by 2;
-		increase carried of water bottle by 2;
-		increase carried of chips by 1;
-		increase carried of medkit by 1;
-		increase carried of pepperspray by 1;
+		ItemGain food by 2;
+		ItemGain water bottle by 2;
+		ItemGain chips by 1;
+		ItemGain medkit by 1;
+		ItemGain pepperspray by 1;
 		increase score by 50;
 		extend game by 8;
 		now Disorganization is resolved;

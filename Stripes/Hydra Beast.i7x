@@ -6,9 +6,9 @@ Version 2 of Hydra Beast by Stripes begins here.
 Section 1 - Creature Responses
 
 hydraheadcount is a number that varies. hydraheadcount is usually 6.
-hydraheadcheck1 is a truth state that varies. hydraheadcheck1 is usually false.
-hydraheadcheck2 is a truth state that varies. hydraheadcheck2 is usually false.
-hydraheadcheck3 is a truth state that varies. hydraheadcheck3 is usually false.
+hydraheadcheck1 is a truth state that varies. [@Tag:NotSaved] hydraheadcheck1 is usually false.
+hydraheadcheck2 is a truth state that varies. [@Tag:NotSaved] hydraheadcheck2 is usually false.
+hydraheadcheck3 is a truth state that varies. [@Tag:NotSaved] hydraheadcheck3 is usually false.
 hydraheadregrowth is a truth state that varies. hydraheadregrowth is usually true.
 hydramaulcount is a number that varies.
 

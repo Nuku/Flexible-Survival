@@ -21,9 +21,9 @@ Carry out Purifying:
 		say "You don't think that can get any more pure, at least not this way.";
 		stop the action;
 	let num be 0;
-	delete noun;
+	ItemLoss noun by 1;
 	say "After microwaving the [noun] on a low setting, you are left with [purified of the noun].";
-	add purified of the noun to the invent of the player;
+	ItemGain purified of the noun by 1;
 
 Section 2 - New Items
 
