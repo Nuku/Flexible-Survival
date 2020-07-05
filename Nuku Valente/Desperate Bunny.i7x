@@ -61,10 +61,9 @@ Instead of Resolving a Needy Rabbit Girl:
 			if Player consents:
 				say "     As if she could detect the decision being made in your eyes, she reaches for your groin, rubbing slowly as a smile forms on her muzzle. 'Well, since you asked,' which you had not yet, 'Yes.' She grabs at a hand and guides you into a basement. 'My home,' she explains before turning to you.";
 				say "     [sexwithSandra]";
-				say "[bold type]You now know how to navigate to the rabbit den[roman type].";
 			else:
 				say "     She looks clearly disappointed and crosses her arms. 'I thought you were the kind of man to help me, but I guess I was wrong. Or maybe you're shy? Look, you're nice. Here's my address, OK? Come visit any time.";
-			now Rabbit den is known;
+			AddNavPoint Rabbit Den;
 			increase score by 1;
 			now Needy Rabbit Girl is resolved;
 			now Resolution of Needy Rabbit Girl is 1; [male/herm player got invite to Sandra's den]
@@ -78,7 +77,7 @@ Instead of Resolving a Needy Rabbit Girl:
 				if Player consents:
 					say "     She slowly lies you down with a smile, looking quite relieved at your consent. She has you take off your clothes, then puts her hands on her hips, looking you over. 'What?' she asks, flashing a grin. 'You thought we were going to make out in the middle of the street? Get real. Come on!' She waves excitedly and barely waits for you to stand back up again before she leads you hurriedly through the devastated city to a small basement door. She fishes out a key and has the door open quickly, leading you inside.";
 					move player to Rabbit Den;
-					now Rabbit Den is known;
+					AddNavPoint Rabbit Den;
 					now rabbitsibling is 1;
 					increase the score by 1;
 					now Resolution of Needy Rabbit Girl is 2; [player sisterified]

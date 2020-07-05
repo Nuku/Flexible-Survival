@@ -105,7 +105,7 @@ Instead of resolving a Angel vs Demons:
 		LineBreak;
 		say "     When you finally manage to get free a bit later, you're alone between the burning buildings. The flaming sword still sizzling in the flesh of the dead hellhound sadly isn't something you could use - it's all flame, even the grip. Looking down the street where the demons went, you see the [bold type]Burned-Out Chapel[roman type] they went into. You could follow them, if you think you're strong enough. But don't wait too long... who knows what they'll do to him.";
 		wait for any key;
-		now Burned-Out Chapel is known;
+		AddNavPoint Burned-Out Chapel;
 		move Elijah to Burned-Out Chapel;
 		now lastfuck of Elijah is turns; [to clarify: only using this for timing purposes here - he's still a virgin, they only hurt him and cum on him before the player gets to the chapel]
 		now NPCintCounter is turns;

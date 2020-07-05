@@ -298,8 +298,6 @@ to TextVariableSave:
 			now TextVarValue entry is ubpreg;
 		-- "VikingKidShape":
 			now TextVarValue entry is VikingKidShape;
-		-- "weaselcolor":
-			now TextVarValue entry is weaselcolor;
 		-- "wolvloc":
 			now TextVarValue entry is wolvloc;
 		-- "wrbody":
@@ -1189,10 +1187,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is GorillasMemberQuestCounter;
 		-- "GorillasRep":
 			now NumberVarValue entry is GorillasRep;
-		-- "gotsword":
-			now NumberVarValue entry is gotsword;
-		-- "gotwhip":
-			now NumberVarValue entry is gotwhip;
 		-- "grantbitch":
 			now NumberVarValue entry is grantbitch;
 		-- "grantfucked":
@@ -3280,12 +3274,6 @@ to TruthVariableSave:
 			now TruthVarValue entry is houndfromhell;
 		-- "hvoreoffer":
 			now TruthVarValue entry is hvoreoffer;
-		-- "hydraheadcheck1":
-			now TruthVarValue entry is hydraheadcheck1;
-		-- "hydraheadcheck2":
-			now TruthVarValue entry is hydraheadcheck2;
-		-- "hydraheadcheck3":
-			now TruthVarValue entry is hydraheadcheck3;
 		-- "hydraheadregrowth":
 			now TruthVarValue entry is hydraheadregrowth;
 		-- "HyenaMatVore":
@@ -3946,8 +3934,6 @@ to VariableTextLoad:
 					now ubpreg is TextVarValue entry;
 				-- "VikingKidShape":
 					now VikingKidShape is TextVarValue entry;
-				-- "weaselcolor":
-					now weaselcolor is TextVarValue entry;
 				-- "wolvloc":
 					now wolvloc is TextVarValue entry;
 				-- "wrbody":
@@ -4857,10 +4843,6 @@ to VariableNumberLoad:
 					now GorillasMemberQuestCounter is numberVarValue entry;
 				-- "GorillasRep":
 					now GorillasRep is numberVarValue entry;
-				-- "gotsword":
-					now gotsword is numberVarValue entry;
-				-- "gotwhip":
-					now gotwhip is numberVarValue entry;
 				-- "grantbitch":
 					now grantbitch is numberVarValue entry;
 				-- "grantfucked":
@@ -6961,12 +6943,6 @@ to VariableTruthLoad:
 					now houndfromhell is TruthVarValue entry;
 				-- "hvoreoffer":
 					now hvoreoffer is TruthVarValue entry;
-				-- "hydraheadcheck1":
-					now hydraheadcheck1 is TruthVarValue entry;
-				-- "hydraheadcheck2":
-					now hydraheadcheck2 is TruthVarValue entry;
-				-- "hydraheadcheck3":
-					now hydraheadcheck3 is TruthVarValue entry;
 				-- "hydraheadregrowth":
 					now hydraheadregrowth is TruthVarValue entry;
 				-- "HyenaMatVore":

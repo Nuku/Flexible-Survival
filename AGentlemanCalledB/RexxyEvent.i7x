@@ -53,9 +53,8 @@ Instead of Resolving a Forced Adoption:
 			say "     The large male breaks off the kiss and starts to introduce himself. You try to reign in your mind, struggling to control the growing urges of the retriever bitch clawing at your thoughts, but in doing so you barely managed to hear any of what he says, other than his name, Rex. While he looks you over, a smile crosses his muzzle as he spots the doggie dildo clenched in both hands against your chest.";
 			say "     'I see that wonderful bone has brought another lovely bitch right to my doorstep. Why don't you come inside so we can start training you to be a proper pet?' he says, wrenching the bone from your grasp as he finishes. He then turns to a nearby house, motioning you towards the large doggy door as he enters through the front.";
 			ItemLoss Dog Bone by 1;
-			now Rex's Place is known;
+			AddNavPoint Rex's Place;
 			now HP of Rex is 5;
-			say "[bold type]Rex's Place is now known.[roman type][line break]";
 			now Resolution of Forced Adoption is 1; [met Rex]
 			now Forced Adoption is resolved;
 		else:

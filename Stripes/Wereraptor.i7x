@@ -1029,7 +1029,7 @@ to say wrcurseaccept:
 		say "     When the process is done, she pushes your head back and you both stumble apart and fall to the ground. You feel weak and tired. But you know that will pass, for you are a wereraptor now and the blood in you is strong now. You rise and look yourself over and while you see no differences, you know the power within you has grown and it cannot be taken from you now by foolish concoctions or a wretched kn-. You stop and look around, but can find no trace of the silver knife, leading you to conclude that it has somehow made its way back to Nermine.";
 		say "     Dr. Utah rises and snarls triumphantly, a cry that you return. 'There is much to do before our kind can spread and rule the wretched mammals. I shall return to my office and begin the preparations. There are others I have infected who show promise and may soon accept the gift as you have,' she hisses softly, licking your muzzle. 'Those who accept it shall rise as we have and those who don't shall fall,' she concludes, running her hands over your body before turning and charging away.";
 		say "     As the rush of your acceptance of the curse starts to fade, you wonder about the choice you've made, but do not feel that it is a mistake. The wereraptor is a part of you now and its instincts are a part of your mind. Its hunger is yours, but you are now in control. There is no point in denying these desires for you have made them your own.";
-		now Paleontology Office is known;
+		AddNavPoint Paleontology Office;
 [		say "***raptor sex goes here?";]
 	else:
 		say "     Looking down at the bottle of poisonous aconite and the silver knife that makes your skin crawl just to look at it, you reject them. Your wereraptor body knows they are cursed and seek to kill you, not save you. You hurl the bottle fast and far, sending over the balcony to the floor far below. Dr. Utah gives a triumphant, hissing laugh and strides forward, running his taloned hands over your body.";
@@ -1044,7 +1044,7 @@ to say wrcurseaccept:
 		say "     Dr. Utah rises and snarls triumphantly, a cry that you return. 'There is much to do before our kind can spread and rule the wretched mammals. I shall return to my office and begin the preparations. There are others I have infected who show promise and may soon accept the gift as you have,' he hisses softly, licking your muzzle. 'Those who accept it shall rise as we have and those who don't shall fall,' he concludes, running his hands over your body before turning and charging away.";
 		say "     As the rush of your acceptance of the curse starts to fade, you wonder about the choice you've made, but do not feel that it is a mistake. The wereraptor is a part of you now and its instincts are a part of your mind. Its hunger is yours, but you are now in control. There is no point in denying these desires for you have made them your own.";
 		wrcurserestore;
-		now Paleontology Office is known;
+		AddNavPoint Paleontology Office;
 [		say "***raptor sex goes here?";]
 	now wrcursestatus is 7;
 	now wrcurseactivity is true;

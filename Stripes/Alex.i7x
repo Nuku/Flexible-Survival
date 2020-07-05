@@ -71,7 +71,7 @@ Instead of conversing the Alex:
 		say "     'Please continue looking for Lorenda. She's in the red light district. Given what's happening in the city, I think she needs your help first,' he says meaningfully. You nod in understanding, as that part of town would be particularly vulnerable to this outbreak.";
 	else if AlexProgress is 2 and a random chance of 3 in 5 succeeds:
 		say "     'I need you to track down Darrell,' the weaselly lawyer says. 'Being a pro sports star, his case could be worth a lot to me. He should be at the Smith Haven Mall.' He points out his window, indicating the large shopping center in the distance and the main route leading to it.";
-		now Smith Haven Mall Lot is known;
+		AddNavPoint Smith Haven Mall Lot;
 	else if AlexProgress is 4 and a random chance of 3 in 5 succeeds:
 		say "     The mustelid fiddles with a shiny ball as he looks over his papers. 'Have you found Lee? He should be at the park or the beach.'";
 	else:
@@ -100,7 +100,7 @@ Instead of resolving Meet Alex:
 	[WaitLineBreak]
 	say "     'Look, it's hard to find friends in this city after the incident. And so since you seem to be somewhat sane still... [if Player is not purehuman]despite your changes... [end if]I figure you might be able to help me. If you're out exploring the city, it means you can handle the monsters out there.' His nose twitches, as do his whiskers, as he seems to be pondering something. 'Before the incident, I was a high-priced lawyer, and once rescue comes, I plan on returning to that job. But I have three wealthy clients that won't be able to pay me if they get turned into creatures without a thought in their heads but sex.'";
 	say "     You feel like you're starting to get the gist of what the shorter man is leading up to. He speaks very quickly, probably having something to do with his profession. 'Here's my proposition,' he says. 'I have access to a pretty solid stockpile of food and water. For each of my clients you manage to bring back to me, to my condo in the high-rise over there,' he points, 'I'll give you one of each. How's that sound?'";
-	now Alex's Condo is known;
+	AddNavPoint Alex's Condo;
 	say "     [bold type]'I'll give you one of each. How's that sound?'[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";

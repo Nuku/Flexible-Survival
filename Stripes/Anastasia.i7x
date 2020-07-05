@@ -75,7 +75,7 @@ Instead of resolving a Captured Bird:
 					say "     The bird moves through the air with an unearthly grace, especially for a bird this large. It banks back towards you, and for a moment you prepare yourself for it to attack you as well, but instead it passes over you as it examines its rescuer closely. You can swear that you can see some sort of intelligence behind the bird's eyes as it nods to you lightly before flying off into the sky.";
 					increase score by 15;
 					now HP of Anastasia is 1;
-					if MaleList is not banned, now A Familiar Feather is active;
+					if MaleList is not banned, now Familiar Feather is active;
 					now Resolution of Captured Bird is 1;	[Saved phoenix]
 		if fightoutcome >= 20 and fightoutcome <= 29:			[lost]
 			say "     Keeping you pinned down, the feline enjoys having some fun with you as the others from her group return. They come with buckets of water, tossing them onto the flaming bird until her fires go out and she's left ashen and shivering in the remains of the net. The panther taurs give some celebratory yells, kisses and gropes before, as a team, dragging off their captured prey in the damaged net. The soaked bird shivers, but does not struggle as it's taken away to meet its fate.";
@@ -90,18 +90,18 @@ Instead of resolving a Captured Bird:
 
 Table of GameEventIDs (continued)
 Object	Name
-A Familiar Feather	"A Familiar Feather"
+Familiar Feather	"Familiar Feather"
 
-A Familiar Feather is a situation.
+Familiar Feather is a situation.
 It is inactive.
-The level of A Familiar Feather is 4.
+The level of Familiar Feather is 4.
 
-instead of resolving A Familiar Feather:
+instead of resolving Familiar Feather:
 	say "     As you wander, something catches your eye. A single, scarlet feather with a yellow trimmed edge lays on the ground before you. It seems familiar, bringing up memories of the firebird you rescued some time ago. Picking it up, you turn the feather over a few times between your fingers before a hauntingly beautiful and feminine voice shakes you from your memories.";
 	say "     'Our paths cross again,' you hear before turning to see the massive bird from before, but this time you get a good look at it. Roughly as tall as a human, the red and gold, hawk-like avian is perching a few paces from you. Her tail feathers were long, trailing behind her, their edges wreathed in a soft glowing flame as she looks towards you with piercing, golden eyes.";
 	WaitLineBreak;
 	say "     'Ever since I came to this world, I have been met with nothing but hostility, yet you...' The bird looks you over, examining your form with a curious gaze and a tilt of her head. 'I know not why, but you risked your life, and I would assume, your only life to save me.' She tilts her head the other way, her crest of head feathers flaring for a moment as she seemed to ponder you. 'A curious creature you are. I think I will keep an eye on you.' Without giving you even a moment to question her, the bird launches herself into the air with a single powerful flap of her wings, and just as suddenly as she came, the bird soars into the distance, blazing like a shooting-star across the sky.";
-	now A Familiar Feather is resolved;
+	now Familiar Feather is resolved;
 	now HP of Anastasia is 2;
 	if MaleList is not banned, now FireAndIce is active;
 

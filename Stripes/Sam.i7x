@@ -92,7 +92,7 @@ Instead of resolving Another Researcher:
 	now HP of Sam is 1;
 	increase score by 10;
 	move player to Mini-Lab;
-	now Mini-Lab is known;
+	AddNavPoint Mini-Lab;
 	now battleground is "void";
 	now Another Researcher is resolved;
 
@@ -240,7 +240,7 @@ to say SamTalk:
 		say "     'I've really got a lot on my plate here with trying to deal with all the tests they need me to take care of now that I'm on my own. Rick and I used to take shifts, but now I've got to do it all. So I was hoping I could get you to give me a hand. There's some tests that they want me to run on some samples from the City Zoo. Rick was working that area when he decided it'd be more fun to just join the fun full-time. I'd lose too much time traveling back and forth out there to be able to keep up with the rest of the work. They want samples of cheetah milk and rhino cum, though I'll make some vials out of it when I'm done.";
 		if Zoo Entrance is unknown:
 			say "     'I haven't made a trip out there yet myself, but he did tell me the route he found to get there. It should be fairly safe and let you avoid the really unsafe or blocked sections.'";
-			now Zoo Entrance is known;
+			AddNavPoint Zoo Entrance;
 		say "     'I've got some extra supplies. I can give you some if you'll gather two samples of both cheetah milk and rhino cum. I'd really appreciate it. Here, you can even take this bottle of water as a down payment.' Deciding it might be a good way to get some extra supplies, you agree to give it a shot. In addition, helping Sam finish up might be your ticket out of this whole mess if you can tag along with him.";
 		ItemGain water bottle by 1;
 		now HP of Sam is 2;
@@ -256,7 +256,7 @@ to say SamTalk:
 			say "     Sam takes the samples you've brought and sets them on the table. 'Wonderful, [if Player is female]babe[else]man[end if]. This is a big help. I'm going to get started on these tests right away. Next stuff I'm going to need is some gel from those jelly-people in the red light district of town. There's three different kinds of them - pink, blue and purple - and I'll need a sample from each of them. Got to analyze what makes them different. And here, take this stuff as a reward for helping me out,' he adds, handing you some dried food and another bottle of water.";
 			if Entrance to the Red Light District is unknown:
 				say "     'Since you haven't been there before - let me tell you - that place is really wild. I mean, I had lots of fun there and all gathering nanite samples, but the creatures there can be extra intense. I was really tempted to go back and visit that tigress in the alley again. She was quite the ride and well worth the milk I gave her.' He then proceeds to show you a route into the city's red light district.";
-				now Entrance to the Red Light District is known;
+				AddNavPoint Entrance to the Red Light District;
 			ItemGain food by 1;
 			ItemGain water bottle by 1;
 			increase score by 20;
@@ -266,10 +266,8 @@ to say SamTalk:
 			ItemLoss pink gel by 1;
 			ItemLoss blue gel by 1;
 			ItemLoss purple gel by 1;
-			say "     You set down the samples of gel you'd collected on the work table. 'Awesome! That's another one of the tests on the list I can finish off. Let's see, how about you grab me some eagle feathers next? I'll need at least two of them, I think. Those eagles are flying out over the Dry Plains to the east of the city.'";
-			if Dry Plains is unknown:
-				say "     'Things are pretty open out there with few buildings still left standing. It used to be mostly suburbs and small ranches, but something's making them all collapse really quickly. Don't expect to find as much going on out there, but it's pretty open so you shouldn't have too much trouble finding some of those eagles.'";
-				now Dry Plains is known;
+			say "     You set down the samples of gel you'd collected on the work table. 'Awesome! That's another one of the tests on the list I can finish off. Let's see, how about you grab me some eagle feathers next? I'll need at least two of them, I think. Those eagles are flying out over the Dry Plains to the east of the city. Things are pretty open out there with few buildings still left standing. It used to be mostly suburbs and small ranches, but something's making them all collapse really quickly. Don't expect to find as much going on out there, but it's pretty open so you shouldn't have too much trouble finding some of those eagles.'";
+			AddNavPoint Dry Plains;
 			say "     He digs around in his supplies and pulls some stuff out for you. 'Here, how about some snacks this time? Some sugar'll keep you going.'";
 			ItemGain soda by 1;
 			ItemGain chips by 1;

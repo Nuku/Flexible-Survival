@@ -40,14 +40,14 @@ Instead of Resolving a Gourmet Treats:
 		say "     'Do not worry, mon ami[if Player is purefemale]e[end if]. They left after having their fun; you're safe here now,' says a voice with a thick French accent. You turn towards the voice, seeing a figure step out of a nearby doorway. He appears to have the features of several species and breeds of domestic animals, a short, stocky canine body and face, covered with a thick coat of fur in many different colors and patterns. There even appear to be feathers poking out from his pelt in several places. Finally, feline ears and tail complete the rather unusual appearance of the hybrid before you.";
 		say "     'I appreciate your attempts to save me from those canine ruffians, and I'm sorry it ended the way it did,' he continues. 'I am Francois, master chef, at your service.'";
 		now Gourmet Treats is resolved;
-		now Bone-Appetit is known;
+		AddNavPoint Bone-Appetit;
 		now Resolution of Gourmet Treats is 2; [fought, lost]
 		move player to Bone-Appetit;
 	else if fightoutcome >= 10 and fightoutcome <= 19:
 		say "     Having finally dealt with the [if T is 1]huskies[else if T is 2]German Shepherds[else if T is 3]Chocolate Labs[else if T is 4]Retrievers[end if], you chase the last stragglers out the door and block it up behind them, propping up a table and a few chairs against it to keep any others out. Satisfied with the security of the building, you approach the canines['] captive, looking him over before kneeling down to help him to a sitting position. He appears to have the features of several species and breeds of domestic animals, a short, stocky canine body and face, covered with a thick coat of fur in many different colors and patterns. There even appear to be feathers poking out from his pelt in several places. Finally, feline ears and tail complete the rather unusual appearance of the hybrid before you.";
 		say "     'Thank you, mon ami[if Player is purefemale]e[end if],' the man says with a strong French accent. 'I shudder to imagine where I'd be had you not come along. I am Francois, master chef, at your service.'";
 		now Gourmet Treats is resolved;
-		now Bone-Appetit is known;
+		AddNavPoint Bone-Appetit;
 		now Resolution of Gourmet Treats is 1; [fought, won]
 		move player to Bone-Appetit;
 	else:

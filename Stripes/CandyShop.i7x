@@ -69,7 +69,7 @@ Instead of resolving a CandyShop:
 			now Libido of Player is ( Libido of Player + 50 ) / 2;
 			SanLoss 5;
 		say "     You can now find your way back to the Sweet Tooth CandyShop, though you'd best wait until the ferrets come off their caffeine buzz before doing so.";
-		now Sweet Tooth is known;
+		AddNavPoint Sweet Tooth;
 		increase ferretvisit by 1;
 		now Resolution of CandyShop is 1; [Went in]
 	else: [Did not go in]

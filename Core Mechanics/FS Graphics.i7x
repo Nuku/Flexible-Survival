@@ -923,7 +923,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Malakhi"	Figure of Malakhi_icon	"Jahi"	g-black	"normal"
 "Malakhi & Barnabas"	Figure of Malakhi_Barnabas_icon	"Jahi"	g-black	"normal"
 "Malakhi & Kano"	Figure of Malakhi_Kano_icon	"Jahi"	g-black	"normal"
-"Mall Map"	Figure of Map_Smith_Haven_Mall_icon	"Anonymous"	g-black	"inline_only"
+"Mall Map"	Figure of Map_Smith_Haven_Mall_icon	"Anonymous"	g-black	"normal"
 "Mammoth"	Figure of Mammoth_icon	"Boo3"	g-white	"normal"
 "Mammoth_CV1"	Figure of Mammoth_CV1_icon	"Boo3"	g-white	"normal"
 "Mammoth_CV2"	Figure of Mammoth_CV2_icon	"Boo3"	g-white	"normal"

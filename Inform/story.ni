@@ -6096,15 +6096,6 @@ to setmonster ( x - text ) silence state is (Silence - a number): [puts an infec
 	else if debugactive is 1 and Silence is 0:
 		say "DEBUG: Current [']monster['] set to: [MonsterID] = [Name entry][line break]";
 
-<<<<<<< HEAD
-=======
-Section x - Debug Commands - Not for release
-
-[Since 'not for release' is in the heading, these commands will not be included in Release versions! great for debugging & testing commands]
-
-[Moved to Core Mechanics/Debugging Tools.i7x]
-
->>>>>>> wahn
 Section Lists of Tables - Not for release
 
 [intends to list stuff for debugging (or any other activity needing a list of what's in the game). output is formatted as CSV to simplify exporting. appears to be working properly.]
@@ -9120,7 +9111,7 @@ to say silent_start:
 	if gsbm is true: [Blind mode alteration]
 		increase score by 100;
 		now blindmode is true;
-	now Zephyr Lobby is known;
+	AddNavPoint Zephyr Lobby;
 	WaitLineBreak;
 
 to say set_invcolumns:

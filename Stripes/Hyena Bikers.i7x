@@ -139,7 +139,7 @@ This is the bikeride rule:
 		else:
 			now ridemessage is "     You decide you'd like to ride back with the gang as they return to the hideout. The leader nods, saying he's looking forward to getting back as well. [line break]";
 		Move player to Hyena Hideout, without printing a room description;
-		now Hyena Hideout is known;
+		AddNavPoint Hyena Hideout;
 		now Hyena Bikers is resolved;
 	else if title entry is "Abbey":
 		if bikedest is 0:
@@ -154,7 +154,7 @@ This is the bikeride rule:
 		else:
 			now ridemessage is "     You decide to get dropped off at the Smith Haven Mall. He gives a rough, hyena laugh. 'Planning on doing some shopping? Be sure to take advantage of the five-finger discount sale going on.' [line break]";
 		Move player to Smith Haven Mall Lot South, without printing a room description;
-		now Smith Haven Mall Lot South is known;
+		AddNavPoint Smith Haven Mall Lot South;
 		now Hyena Bikers is resolved;
 	else if title entry is "Park":
 		if bikedest is 0:
@@ -162,7 +162,7 @@ This is the bikeride rule:
 		else:
 			now ridemessage is "     You decide to get dropped off at the city park. 'Sure, I can drop you there if you'd like. Just be careful, there's a lot of weird stuff in there and don't take your eyes off the plants.' [line break][postridesex]";
 		Move player to Park Entrance, without printing a room description;
-		now Park Entrance is known;
+		AddNavPoint Park Entrance;
 		now Hyena Bikers is resolved;
 	else if title entry is "Beach":
 		if bikedest is 0:
@@ -170,7 +170,7 @@ This is the bikeride rule:
 		else:
 			now ridemessage is "     You decide to get dropped off at the beach plaza. He gives a rough, hyena laugh. 'Planning on getting a tan? Just be careful, I've heard there's some spooky stuff going on there in the evening.' [line break]";
 		Move player to Beach Plaza, without printing a room description;
-		now Beach Plaza is known;
+		AddNavPoint Beach Plaza;
 		now Hyena Bikers is resolved;
 		[now Beach Area is resolved;] [removes the random event for discovering the beach]
 	else if title entry is "Hospital":
@@ -179,7 +179,7 @@ This is the bikeride rule:
 		else:
 			now ridemessage is "     You decide to get dropped off at the City Hospital. He seems a little nervous at that. 'Just be careful in there, I've heard tales of strange monsters and the ex-staff capturing people and dragging them back for experiments. We should be safe enough in the parking lot together, but you'll be on your own after I drop you off.' [line break]";
 		Move player to City Hospital, without printing a room description;
-		now City Hospital is known;
+		AddNavPoint City Hospital;
 		now Hyena Bikers is resolved;
 	else if title entry is "State Fair":
 		if bikedest is 0:
@@ -187,12 +187,12 @@ This is the bikeride rule:
 		else:
 			now ridemessage is "     You decide to get dropped off at the State Fair. He gives a rough, hyena laugh. 'Looking for a little fun at the carnival? I've got a fun ride for you right here,' he jokes, giving his ample package a squeeze. [line break]";
 		Move player to State fair, without printing a room description;
-		now State fair is known;
+		AddNavPoint State Fair;
 		now Hyena Bikers is resolved;
 	else if title entry is "High Rise District":
 		now ridemessage is "     You decide to get dropped off in the High Rise District. He gives a rough, hyena laugh. 'Looking to head back where we first met? Didn't know you were so sentimental,' he jokes, though he has a tender smile as he helps you mount up. [line break][postridesex]";
 		Move player to Entrance to the High Rise District, without printing a room description;
-		now Entrance to the High Rise District is known;
+		AddNavPoint Entrance to the High Rise District;
 		now Hyena Bikers is resolved;
 	else if title entry is "Red Light District":
 		if bikedest is 0:
@@ -200,7 +200,7 @@ This is the bikeride rule:
 		else:
 			now ridemessage is "     You decide to get dropped off in the red light district. He seems a little nervous at that. 'Just be careful in there. With the whole city gone sex-crazy, that place has got to be the worst of all. Watch your ass or something'll be humping it.' He's willing to drop you off at the entrance, but won't risk his riders by venturing any further in. [line break]";
 		Move player to Entrance to the Red Light District, without printing a room description;
-		now Entrance to the Red Light District is known;
+		AddNavPoint Entrance to the Red Light District;
 		now Hyena Bikers is resolved;
 	else if title entry is "The Stables":
 		if bikedest is 0:
@@ -215,7 +215,7 @@ This is the bikeride rule:
 		else:
 			now ridemessage is "     You decide to get dropped off at the Capitol Building. He gives a rough, hyena laugh. 'Are you looking for some help from the governor? Ain't gonna happen. That place is all torn up. Some kinda volcano or meteor strike or something has made a mess of it. I'll drop you off as close as I can, but don't expect to find much.'[line break]";
 		Move player to Approaching the Capitol Building, without printing a room description;
-		now Approaching the Capitol Building is known;
+		AddNavPoint Approaching the Capitol Building;
 		now Government Assistance is resolved; [removes the random event for discovering the Capitol Bldg]
 		now Hyena Bikers is resolved;
 	else if title entry is "Power Plant":
@@ -224,7 +224,7 @@ This is the bikeride rule:
 		else:
 			now ridemessage is "     You decide to get dropped off at the city's power plant. If he wonders why you want to go there, he holds his tongue. [line break]";
 		Move player to Plant Overview, without printing a room description;
-		now Plant Overview is known;
+		AddNavPoint Plant Overview;
 		now Ravaged Power Plant is resolved; [removes the random event for discovering the power plant]
 		now Hyena Bikers is resolved;
 	else if title entry is "College Campus":
@@ -233,7 +233,7 @@ This is the bikeride rule:
 		else:
 			now ridemessage is "     You decide to get dropped off at the city's college campus. 'We kept our distance from that spot. It doesn't look like those jocks and their steroids reacted well to this whole mess. You be careful.' [line break]";
 		Move player to College Campus, without printing a room description;
-		now College Campus is known;
+		AddNavPoint College Campus;
 		now Reaching the College is resolved; [removes the random event for discovering the College Campus]
 		now Hyena Bikers is resolved;
 	else if title entry is "Warehouse District":
@@ -242,7 +242,7 @@ This is the bikeride rule:
 		else:
 			now ridemessage is "     You decide to get dropped off at the warehouse district along the waterfront. 'Good thinking, casing out those warehouses for stuff for the gang.' [line break]";
 		Move player to Warehouse District, without printing a room description;
-		now Warehouse District is known;
+		AddNavPoint Warehouse District;
 		now Hyena Bikers is resolved;
 	else if title entry is "Stay":
 		now ridemessage is "     You decide to decline the ride, telling him that you still have some searching to do around here. He nods and wishes you well, adding that he hopes to see you back at the gang hideout soon.";

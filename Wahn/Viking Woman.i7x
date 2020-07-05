@@ -1052,7 +1052,7 @@ to say VikingDuelVictory:
 		say "     You smile at Sonya, but shake your head, telling her it'd be too cruel to show all those men and women a perfect body - her perfect body - that they can never have. Not that you aren't tempted, you say with a grin, goosing Sonya's ass playfully. 'As you wish, [if Player is purefemale]my wife[else]my husband[end if],' she says, then gives you another quick kiss before going to fill your mead-horns again. Stories of battles and raids told by the other Vikings follow, although with another mead cask soon empty, the tales get more and more incomprehensible.";
 		say "     Nevertheless, the party is great fun - at least what you remember of it when you wake up several hours later, lying in a pile of furs next to Sonya on her bed. Seems like the two of you wanted to get some action going at some point, but drunkenly fell asleep before you got more than halfway undressed. With a wince at the hangover almost splitting your skill, you stand up quietly, leaving your wife to sleep hers off in peace. Going back on deck, you find one man who isn't quite as bad off as yourself, then let him row you back to shore. As you leave the boat, he tells you how you can signal for a pickup when you want to return to the [bold type]Viking Ship[roman type].";
 	ItemGain viking sword by 1;
-	now Viking Ship is known;
+	AddNavPoint Viking Ship;
 	now VikingRelationship is 20;
 
 to say VikingPublicSex:
@@ -1067,7 +1067,7 @@ to say VikingPublicSex:
 		WaitLineBreak;
 		say "     ...and that is where you fell asleep too, only awakening several hours later beside Sonya, on a ship full of still-dozing or already awake and hung-over Vikings. Having to get back to your efforts of surviving in this new world, you find one man who isn't quite as bad off, then let him row you back to shore. As you leave the boat, he tells you how you can signal for a pickup when you want to return to the [bold type]Viking Ship[roman type].";
 		NPCSexAftermath Sonya receives "PussyFuck" from Player;
-		now Viking Ship is known;
+		AddNavPoint Viking Ship;
 		if VikingPregnancy is 0: [not already preggers]
 			let VikingPregChance be a random number from 1 to 20;
 			if VikingPregChance > 10: [50% chance]

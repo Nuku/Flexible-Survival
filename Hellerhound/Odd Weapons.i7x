@@ -59,7 +59,6 @@ Object	Name
 Sword Nest	"Sword Nest"
 
 Sword Nest is a situation.
-gotsword is a number that varies.
 washerenest is a number that varies.
 fellforward is a number that varies.
 
@@ -193,7 +192,6 @@ Destroyed Bushes	"Destroyed Bushes"
 Destroyed Bushes is a situation.
 the sarea of Destroyed Bushes is "Park".
 numwater is a number that varies.
-gotwhip is a number that varies.
 
 instead of resolving Destroyed Bushes:
 	say "     You come across a circle of bushes crushed flat against the ground, large pools of cum and juices in the revealed space. Horse hoof prints over the ground as well, and the imprint of a human body in one spot testifies to the fact that someone was overtaken by one of the equines.";
@@ -220,10 +218,9 @@ instead of resolving Destroyed Bushes:
 					ItemGain horse whip by 1;
 					now Resolution of Destroyed Bushes is 1; [cleaned the whip]
 					now Destroyed Bushes is resolved;
-					now gotwhip is 1;
 				else:
 					say "     You don't have enough water. Maybe you could come back when you find more?";
-			if gotwhip is 0:
+			if Resolution of Destroyed Bushes is 0:
 				say "     Do you wish to pick it up anyway?";
 				if Player consents:
 					say "     You pick up the dirty, cum soaked whip with difficulty as it slips about in your hand, the cum getting all over. You finally manage to get it into your backpack.";
@@ -231,7 +228,6 @@ instead of resolving Destroyed Bushes:
 					infect "Black Equinoid";
 					infect "Black Equinoid";
 					ItemGain dirty whip by 1;
-					now gotwhip is 2;
 					now Resolution of Destroyed Bushes is 2; [grabbed the dirty whip]
 					now the Destroyed Bushes is resolved;
 				else:

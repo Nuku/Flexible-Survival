@@ -61,10 +61,9 @@ Instead of resolving a Air Drop:
 	say "     When the hook the container is attached to the hook is suddenly unclasped, probably by means of remote, you watch as the crate sails down and then crashes onto a cleared out area on the ground. Looking back up and watching as the whirlybird heads off in the direction it just came from you hear the screech of a flock of wyvern just before seeing several flying reptiles honing in on the helicopter. When the sounds of gunfire begin to assault the air you whimsically shake your head before heading over to have a look at what exactly the whirlybird just dropped off.";
 	WaitLineBreak;
 	say "     Upon getting to the container you find yourself flipping open the latch holding the doors of the crate closed on a whim and then gasp in awe as you find yourself looking at a plethora of food and water stacked to the brim before you. As your mind goes to wondering about the who, how and why of the situation you find the sounds of people racing into your general position teasing across the end of your field of hearing. Not wanting to be caught by people who probably wouldn't be too thrilled to see you looting their obvious provision you quickly grab what you can and then haul ass before the others can arrive.";
-	ItemGain food by 1;
-	ItemGain food by 1;
+	ItemGain food by 2
 	ItemGain water bottle by 2;
-	now Abandoned Lot is known;
+	AddNavPoint Abandoned Lot;
 	now Air Drop is resolved;
 	Increase score by 1;
 ]

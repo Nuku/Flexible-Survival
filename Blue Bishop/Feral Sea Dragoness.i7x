@@ -998,7 +998,7 @@ to say fsdinheat:
 			if location of Player is fasttravel and location of Player is not Beach Plaza and location of Player is not Bouncy Castle:
 				say "Your heat-filled mind calls you towards the waterfront, wanting to swim in the ocean and find a sexy aquatic lover to satisfy your heat. Before you can regain your senses, you head back to the beach.";
 				move player to Beach Plaza;
-				now Beach Plaza is known;
+				AddNavPoint Beach Plaza;
 				now heatturnskipper is true;
 				follow the turnpass rule;
 			else if location of Player is Beach Plaza or location of Player is Church Hall or location of Player is Dirty Sheds or location of Player is Overgrown Area:

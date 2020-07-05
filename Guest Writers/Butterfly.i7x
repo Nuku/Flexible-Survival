@@ -89,7 +89,7 @@ To say butterfly defeat:
 				now ButterflyHasNegligee is False;
 				if butterfly grove is unknown:
 					say "You find a note she left behind with a rough map leading to her home.";
-					now butterfly grove is known;
+					AddNavPoint Butterfly Grove;
 				repeat with y running from 1 to number of filled rows in Table of Random Critters:
 					choose row y in Table of Random Critters;
 					if Name entry is "Butterfly":
@@ -127,7 +127,7 @@ To say butterfly defeat:
 					now ButterflyHasNegligee is False;
 					if butterfly grove is unknown:
 						say "You find a note tucked into the negligee consisting of a rough map that you assume leads to her home.";
-						now butterfly grove is known;
+						AddNavPoint Butterfly Grove;
 					repeat with y running from 1 to number of filled rows in Table of Random Critters:
 						choose row y in Table of Random Critters;
 						if Name entry is "Butterfly":
@@ -165,7 +165,7 @@ To say butterfly defeat:
 					now ButterflyHasNegligee is False;
 					if butterfly grove is unknown:
 						say "You find a note she left behind with a rough map leading to her home.";
-						now butterfly grove is known;
+						AddNavPoint Butterfly Grove;
 					repeat with y running from 1 to number of filled rows in Table of Random Critters:
 						choose row y in Table of Random Critters;
 						if Name entry is "Butterfly":
@@ -196,7 +196,7 @@ To say butterfly defeat:
 					now ButterflyHasNegligee is False;
 					if butterfly grove is unknown:
 						say "You find a note tucked into the negligee consisting of a rough map that you assume leads to her home.";
-						now butterfly grove is known;
+						AddNavPoint Butterfly Grove;
 					repeat with y running from 1 to number of filled rows in Table of Random Critters:
 						choose row y in Table of Random Critters;
 						if Name entry is "Butterfly":
@@ -233,7 +233,7 @@ To say butterfly defeat:
 					now ButterflyHasNegligee is False;
 					if butterfly grove is unknown:
 						say "You find a note tucked into the negligee consisting of a rough map that you assume leads to her home.";
-						now butterfly grove is known;
+						AddNavPoint Butterfly Grove;
 					repeat with y running from 1 to number of filled rows in Table of Random Critters:
 						choose row y in Table of Random Critters;
 						if Name entry is "Butterfly":
@@ -362,7 +362,7 @@ To say butterfly attack:
 				impregnatebutterfly;
 				if butterfly grove is unknown:
 					say "You find a note she left behind with a rough map leading to her home.";
-					now butterfly grove is known;
+					AddNavPoint Butterfly Grove;
 				repeat with y running from 1 to number of filled rows in Table of Random Critters:
 					choose row y in Table of Random Critters;
 					if Name entry is "Butterfly":
@@ -389,7 +389,7 @@ To say butterfly attack:
 					now ButterflyHasNegligee is False;
 				if butterfly grove is unknown:
 					say "You find a note tucked into the negligee consisting of a rough map that you assume leads to her home.";
-					now butterfly grove is known;
+					AddNavPoint Butterfly Grove;
 				repeat with y running from 1 to number of filled rows in Table of Random Critters:
 					choose row y in Table of Random Critters;
 					if Name entry is "Butterfly":
@@ -755,13 +755,11 @@ the scent of racy lingerie is "While always smelling clean and fresh at first, s
 
 to say pristine negligee desc:
 	say "A long and silky garment made of sheer and semi-translucent fabric.[if lingerie store is unknown] Upon closer inspection you recognize a logo printed on the label to be that of a store you've passed on your travels. You wonder if you should pay the store a visit sometime?[end if]";
-	if lingerie store is unknown:
-		now lingerie store is known;
+	AddNavPoint Lingerie Store;
 
 to say damaged negligee desc:
 	say "A long and silky garment made of sheer and semi-translucent fabric. This one is damaged.[if lingerie store is unknown] Upon closer inspection you recognize a logo printed on the label to be that of a store you've passed on your travels. You wonder if you should pay the store a visit sometime?[end if]";
-	if lingerie store is unknown:
-		now lingerie store is known;
+	AddNavPoint Lingerie Store;
 
 testosterone pill is a grab object. It is temporary.
 pristine negligee is a grab object. It is not temporary.
@@ -1152,12 +1150,12 @@ To recite butterflymagic (x - text):
 	now lingerie store is not known;
 	if character number 1 in bmagic is "1":
 		now ButterflyLove is True;
-		now butterfly grove is known;
+		AddNavPoint Butterfly Grove;
 	if character number 2 in bmagic is "1":
 		now ButterflyRevenge is True;
 	if character number 3 in bmagic is "1":
 		now ButterflyProcreated is True;
-		now butterfly grove is known;
+		AddNavPoint Butterfly Grove;
 	if character number 4 in bmagic is "1":
 		now ButterflyAttire is "She is wearing a white negligee, but you can't help but notice the lack of undergarments through its sheer semi-translucency. [if ButterflyNegligeeTorn is True]The negligee is [one of]ripped[or]torn[at random] open at the chest exposing her [ButterflyBreastDesc] breasts and the protruding [one of]ruby[or]scarlet[at random] red nipples that adorn them. Her chest jiggles as her wings flap[else]The negligee is held together at the bust with a white ribbon. Her build is slight and punctuated with a pair of [ButterflyBreastDesc] breasts jiggling slightly as her wings flap[end if].";
 		now ButterflyHasNegligee is True;
@@ -1165,12 +1163,12 @@ To recite butterflymagic (x - text):
 		now ButterflyAttire is "She is wearing a long-sleeved, strapless, skin-tight black leather top with a split down the middle reaching to her navel. The split is pulled together by a zig-zag of lacing as the inner-side of each [ButterflyBreastDesc] breast bulges out around the strands. Her rigid nipples deform the otherwise smooth surface of the leather. Colorful wings extend through sizable openings at the back allowing them complete freedom. A tie around her waist dangles dozens of strips of black leather down below her crotch in the style of a grass skirt, but the gaps in coverage let you see she's completely bare underneath. Her stripy yellow and black abdomen pokes out through the strands at the back. She sports a pair of shiny black PVC stockings up to her thighs and a svelte pair of black high-heeled leather boots on her feet.";
 		now ButterflyHasNegligee is False;
 		now carried of damaged negligee is 1;
-		now lingerie store is known;
+		AddNavPoint Lingerie Store;
 	else if character number 4 in bmagic is "3":
 		now ButterflyAttire is "She is completely naked and makes no attempt to hide any part of her body from the golden tuft of hair above her pubes to the stiff [one of]ruby[or]scarlet[at random] red nipples decorating her jiggling [ButterflyBreastDesc] breasts like small cherries.";
 		now ButterflyHasNegligee is False;
 		now carried of pristine negligee is 1;
-		now lingerie store is known;
+		AddNavPoint Lingerie Store;
 	change the text of the player's command to character number 5 in bmagic;
 	if the player's command matches "[number]":
 		now ButterflyRaped is the number understood;
@@ -1179,7 +1177,7 @@ To recite butterflymagic (x - text):
 		now ButterflyBabyGestation is the number understood;
 		if ButterflyBabyGestation > 0:
 			now ButterflyPregnant is True;
-			now butterfly grove is known;
+			AddNavPoint Butterfly Grove;
 	if character number 7 in bmagic is "C":
 		now ButterflyBreastDesc is "full and firm C-cup";
 	else if character number 7 in bmagic is "D":
@@ -1241,8 +1239,8 @@ carry out butterflyprocreated:
 	now ButterflyPregnant is False;
 	follow the ButterflyTummyDesc rule;
 	increase perception of Player by 2;
-	now butterfly grove is known;
-	now lingerie store is known;
+	AddNavPoint Butterfly Grove;
+	AddNavPoint Lingerie Store;
 
 spawnbutterfly is an action applying to one topic.
 understand "bspawn" as spawnbutterfly.
@@ -1270,7 +1268,7 @@ carry out impregbutterfly:
 	now carried of pristine negligee is 1;
 	now ButterflyHasNegligee is False;
 	say "You find a note she left behind with a rough map leading to her home.";
-	now butterfly grove is known;
+	AddNavPoint Butterfly Grove;
 	now ButterflyBabyGestation is 1;
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
@@ -1282,8 +1280,8 @@ movetobstore is an action applying to nothing.
 understand "bstore" as movetobstore;
 
 carry out movetobstore:
-	now lingerie store is known;
-	move player to lingerie store;
+	AddNavPoint Lingerie Store;
+	move player to Lingerie Store;
 
 resetbutterfly is an action applying to one topic.
 understand "breset" as resetbutterfly.

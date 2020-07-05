@@ -75,7 +75,7 @@ Instead of Resolving a Find Building:
 	say "While exploring the sewer, you spot a ladder leading up to a manhole. You climb the ladder and push up on the manhole cover. After a bit of effort, you shift the manhole cover to the side and climb the rest of the way up the ladder. You look around and see that you're back on the city streets, in front of an old building. You don't know if you'll find anything of interest inside, but it could be worth exploring. The nearby streets are completely blocked by debris and wrecked cars so you wouldn't have been able to find this place if you hadn't gone through the sewers.";
 	increase the score by 5;
 	move player to Isolated Street;
-	now the Isolated Street is known;
+	AddNavPoint Isolated Street;
 	now Find Building is Resolved;
 
 Table of GameRoomIDs (continued)
@@ -271,7 +271,7 @@ Instead of Resolving a Another Ladder:
 		say "     You look around and see that you're back on the city streets, in an alley behind an old building. It's the same old building that you found earlier. There is a side entrance to the old building here. It looks like you've found the way around the blocked doorway. The nearby streets are completely blocked by debris and wrecked cars so you wouldn't have been able to find this place if you hadn't gone through the sewers.";
 		increase the score by 5;
 		move player to Back Alley;
-		now the Back Alley is known;
+		AddNavPoint Back Alley;
 		now Another Ladder is Resolved;
 
 Table of GameRoomIDs (continued)

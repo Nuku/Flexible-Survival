@@ -9,7 +9,7 @@ This is the zephyrad rule:
 	if Zephyr Lobby is not known:
 		say "     Playing around with your radio in an attempt to gain some information about what is going on, you find a channel that seems to have a cycling message. 'Good day to anyone listening. This is Zephyr Incorporated. We wanted to you know that even during this current crisis, our branch office in this fine city remains open. Coordinates follow.' After making a mental note of the description, you listen on to the rest of their recording. 'We here are Zephyr Inc are dedicated to the betterment of mankind through science. And of course we also want to help people outlast what is currently going on. Therefore we are going to award company credit - also known as freecred - to those who contribute to keeping the more aggressive infected in check. A number of ways of observation are in effect in the city, and you will be credited for every hostile you pacify. Swing on by and spend your freecred on useful survival gear. We look forward to meeting you shortly.'";
 		say "     The radio continues, 'Please be advised that your Zephyr local branch now stocks our newest technological advancement - the Zephyr Personal Communicator, featuring satellite navigation in a device that fits in your pockets! Never get lost again, with the ZPC. Available now at a limited time offer of only 350 freecred. Visit your Zephyr branch now for more information!'";
-		now Zephyr Lobby is known;
+		AddNavPoint Zephyr Lobby;
 
 Table of GameRoomIDs (continued)
 Object	Name

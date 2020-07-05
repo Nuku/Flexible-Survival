@@ -24,7 +24,7 @@ Instead of Resolving a Egyptian Wing:
 	WaitLineBreak;
 	say "     You recall that this is where Valerie said that she was in when the nanite outbreak began; you can only begin to imagine what wonders await you in the exhibits ahead. Grabbing your map, you mark down the location of the Egyptian Wing; you don't want to forget how to get here.";
 	move player to Egypt Wing Entrance;
-	now Egypt Wing Entrance is known;
+	AddNavPoint Egypt Wing Entrance;
 	now Egyptian Wing is resolved;
 
 [Jade Scarab event located in Sarokcat's Consolidated Museum file]
@@ -452,7 +452,7 @@ instead of conversing Amuran:
 				follow the turnpass rule;
 				say "     Your trek continues onwards for another few hours. During the explorations, you and Amuran talk about your lives and experiences, figuring out more about each other. While your adventures cannot hold a candle to the things Amuran has seen or done, he still seems quite interested in [']normal['] mortal life.";
 				say "     Finally, you come across the area that Amuran must have seen. Smoke and dust fills the air ahead of you, the ruins of buildings burning with everlasting fires. Releasing a heavy sigh, Amuran speaks: 'Yes, this is the place that I saw.' Turning to look at you, he continues: 'We must venture into the burning ruins. As always, be on guard, young one.'";
-				now Approaching the Capitol Building is known;
+				AddNavPoint Approaching the Capitol Building;
 				now lust of Amuran is 0;
 				now HP of Amuran is 6;
 				say "[AmuranFinalQuest]";

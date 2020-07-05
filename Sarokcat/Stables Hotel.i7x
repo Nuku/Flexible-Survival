@@ -36,7 +36,7 @@ Instead of Resolving Stabled Situation:
 				ItemLoss soda by 1;
 				Move player to The Stables Hotel;
 				now battleground is "void";
-				now The Stables Hotel is known;
+				AddNavPoint The Stables Hotel;
 				now Resolution of Stabled Situation is 1; [bribed your way in]
 				now Stabled Situation is resolved;
 			else:
@@ -63,7 +63,7 @@ Instead of Resolving Stabled Situation:
 				ItemLoss soda by 1;
 				Move player to The Stables Hotel;
 				now battleground is "void";
-				now The Stables Hotel is known;
+				AddNavPoint The Stables Hotel;
 				now Resolution of Stabled Situation is 1; [bribed your way in]
 				now Stabled Situation is resolved;
 			else:

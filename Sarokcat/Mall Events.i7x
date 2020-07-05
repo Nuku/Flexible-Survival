@@ -6,7 +6,7 @@ Section 1 - Tight space
 
 Table of GameEventIDs (continued)
 Object	Name
-Tight space	"Tight space"
+Tight Space	"Tight Space"
 
 Tight Space is a scavevent.
 The sarea of Tight Space is "Mall".

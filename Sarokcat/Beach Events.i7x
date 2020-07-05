@@ -6,7 +6,7 @@ Section 1 - Beach bum
 
 Table of GameEventIDs (continued)
 Object	Name
-Beach bum	"Beach bum"
+Beach Bum	"Beach Bum"
 
 Beach Bum is a situation.
 The sarea of Beach Bum is "Beach".

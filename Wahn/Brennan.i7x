@@ -261,7 +261,7 @@ Instead of resolving a Lone Survivor:
 			WaitLineBreak;
 			say "     The rest of Olivia's story is all too common these days, sadly. Thrown into the chaos of the wild streets, she tried to make her way back to the college, hoping that at least her friends were still alright. Of course, the city streets are far from safe, and even though she got out of a few hairy situations on her own, her luck ran out with that husky pack. Thankfully Brennan and yourself came along to save her. The human survivor even can tell her that the college area is still fairly safe and protected and offers to take her the rest of the way. Since your scavenging trip got postponed anyways, you accompany the two of them as well, until the college entrance comes into sight.";
 			say "     'Thank you so much!' Olivia says with a beaming smile and tries to embrace Brennan, but he draws back before she can touch him. 'Sorry. I do prefer to stay human, you know,' he tells her in an apologetic tone, leaving her to say she's the one who should have thought of that. 'Now then - I wish I could bring you in the rest of the way, but I can't risk such a highly populated area. Even if it is a more or less 'safe' one like the campus.' Giving both of you her heart-felt thanks again, Olivia then walks towards the college, eager to see that her friends are okay and to catch up with them. Brennan watches her go and gives you a sidelong glance, smiling as he shrugs. 'Guess today didn't work out quite as either of us intended. Sorry for our little scavenging trip falling flat, but at least we did some good for her, hm? So - rain check till next time?' You nod at him and the two of you split up again. Then you make your way back to the place you came from.";
-			now College Campus Entrance is known;
+			AddNavPoint College Campus Entrance;
 		else:
 			LineBreak;
 			say "     You give some excuses about having to... be somewhere soon, without going into any details. He raises his eyebrows at the fact that you're refusing a share of what could be valuable loot, but at the same time you notice him relax a bit. Freed from any obligation towards a fellow survivor, Brennan bids you goodbye and wishes you the best at your 'meeting' before he walks off down the street.";
@@ -606,7 +606,7 @@ instead of resolving Wolf Whisperer:
 			say "     While the wolves are still refilling their stomachs, Brennan limps into the bedroom, where you help him take off his backpack, setting it down on the ground. The man grabs a healing booster from his desk and injects himself, then grasps your shoulder and gives it a squeeze. 'Thanks again, I more than appreciate what you did. In fact... I would like to offer this to you.' With that said, he pulls out a bunch of keys from his pocket and removes one of them, handing it over to you. 'Here, it fits the elevator and front door. Hope to see you over here sometime again. But for now... I definitely need some rest. This stuff works best when you sleep, you know.' Limping over to the bed, he climbs onto it and pulls the sheet over himself, then dozes off in exhaustion. You simply nod at your friend and wish him well, then leave. One elevator ride later, you're back in the lobby and leave the building. As you walk away, you resolve to definitely remember the [bold type]Green Apartment Building[roman type] and visit Brennan again sometime.";
 			now BrennanRelationship is 11; [player got the key to Brennan's place now]
 			move Brennan to Brennan's Bedroom;
-			now Green Apartment Building is known;
+			AddNavPoint Green Apartment Building;
 			now Wolf Whisperer is resolved; [for now]
 			now Resolution of Wolf Whisperer is 1; [helped Brennan]
 		else:
@@ -1377,7 +1377,7 @@ to say BrennanCampBravoTrip1:
 	else: [first encounter with Marc]
 		say "a tall but slender soldier with blond hair and a merman tattoo on his left arm. As Brennan steps forward to introduce himself, the guard lets his gaze wander all over the man's impressive physique, then replies, 'Just two concerned citizens then, eh? Welcome you two, I'm Private Marc Orwell. You seem to be decent people, so let me give you a tip: The sorry excuse of a human being who usually mans this post with me is a total shithead, so you'd do well to have a bit more of a reason why we should let you through.' The blond man looks thoughtful for a second, then grins and adds, 'Okay, how about this. You are a secret agent and a confidential informant. Cooper can't say something against that. Now go on in.'";
 		now Back at the Camp is resolved;
-		now Camp Bravo Entrance is known;
+		AddNavPoint Camp Bravo Entrance;
 		now HP of Adam is 3; [player got access to the camp]
 	WaitLineBreak;
 	follow the ngraphics_blank rule;
@@ -1434,7 +1434,7 @@ to say BrennanDiegoTracking:
 		say "     After the chilling encounter on the fourth floor, Brennan, the wolves and yourself hurry down the stairway again with urgent steps. You jump the gunk on the next landing and do not even stop to see if the weasel is still there, being fucked by his captor, instead making your way straight to the ground floor. Brennan literally kicks the door open and runs out, surprising the hell out of the reception vixen that is now sitting at her desk, with her playmate sleeping off his exhaustion on a nearby gurney. The woman stands up so suddenly that her chair falls over and crashes to the ground after seeing the wolves and yourself follow Brennan. 'Hey, you shouldn't be out of bed! Get back to your rooms till a doctor has time to see you!' she calls out in an admonishing tone, starting to move around the desk to intercept you.";
 		WaitLineBreak;
 		say "     Not waiting for the nurse to reach you or any other hospital inhabitants to pop out of the woodwork, all four of your little party run like hell, fleeing through the quickly opening entrance doors and out onto the streets. This gives you just the head-start that you need to shake her successfully, moving back into the dangerous, but somehow less freaky streets of the fallen city. Some time later, you reach Brennan's apartment building again and ride the elevator to get back into his safe haven.";
-		now City Hospital is known;
+		AddNavPoint City Hospital;
 		now XP of Brennan is 4;
 	else:
 		LineBreak;
@@ -2529,6 +2529,6 @@ carry out TestBrennan:
 	say "DEBUG: Brennan moved to the Survivor Refuge, BrennanRelationship set to 11";
 	now BrennanRelationship is 11;
 	move Brennan to Brennan's Bedroom;
-	now Green Apartment Building is known;
+	AddNavPoint Green Apartment Building;
 
 Brennan ends here.

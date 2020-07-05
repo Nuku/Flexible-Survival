@@ -147,7 +147,7 @@ to say givekeys:
 	say "     'Now we've got a little time to get ready for this, so I want to listen up,' he says sternly, pausing for a moment to give you a hard poke in the chest to emphasize his point. 'You've got to be smarter about your supply huntin['] and watch what you say if you run into any of those soldiers out there. Soldiers'll shoot looters. Them military guys'll be nosin['] into your gear, but they'll be on the lookout for weapons or stuff that could spread the infection. With everyone they'll find, they won't have much time for twenty questions unless you say somethin['] stupid. You keep quiet and keep it light and you'll do alright, I think.'";
 	say "     The rest of the walk is conducted in silence. His words have left you much to think about for the future. He leads you to an intersection with a cluster of cars. One of them, a police car, is hemmed in by crashed cars on either side.";
 	now mqstatus is 2;
-	now Police Car is known;
+	AddNavPoint Police Car;
 	now the player is in Police Car;
 	now mqcountdown is 0;
 	now Policeman is resolved;

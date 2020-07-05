@@ -58,7 +58,7 @@ Section 3 - Scavenging Dalmatian (by Kaleem)
 
 Table of GameEventIDs (continued)
 Object	Name
-Scavenging Dalmatian	"Scavenging Dalmation"
+Scavenging Dalmatian	"Scavenging Dalmatian"
 
 Scavenging Dalmatian is a situation.
 The sarea of Scavenging Dalmatian is "Outside".

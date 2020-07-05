@@ -37,7 +37,6 @@ Instead of Resolving a Reaching the College:
 		LineBreak;
 		say "[bold type]Your score decreases by 10![roman type][line break]";
 		decrease score by 10;
-		say "[bold type]Your sanity decreases by 5![roman type][line break]";
 		SanLoss 5;
 		say "[bold type]You are reduced to 1 HP![roman type][line break]";
 		now HP of Player is 1;
@@ -49,7 +48,7 @@ Instead of Resolving a Reaching the College:
 	now PlayerMet of Marcus is true;
 	move player to the College Campus Entrance;
 	now battleground is "void";
-	now College Campus Entrance is known;
+	AddNavPoint College Campus Entrance;
 	now Reaching the College is resolved;
 
 

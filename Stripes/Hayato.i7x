@@ -88,7 +88,7 @@ to say halhistory:
 	say "     He pauses again, looking down on his strong, meaty hands with their clawed nails and bright red skin. He balls them up into fists before taking a deep breath and relaxing. 'I was thankfully overlooked by the monster. I would not want my first to have been that horrible creature. The others it had attacked were gone, their clothes torn to shreds and demon cum everywhere. I realize now they have probably become more like it, but unable to contend with the dark urges and lusts which took them over.' He shifts uncomfortably on the floor and presses a hand to his tiger-skin loincloth. 'Thankfully, I am menacing enough in appearance that most of them give me a wide berth and do not trouble me.'";
 	say "     Despite his fearsome face and gruff voice, there's a sadness to them as well. As you grow used to his appearance and his voice, it becomes a little easier to read the true emotions beneath them. 'You should perhaps go now. I thank you for the company; it is good to speak to someone again. But now I need to meditate.' You consider trying to talk to him longer, but decide to leave as he's requested. Perhaps he'll be feeling more sociable if you return to this [bold type]disused garage[roman type] later.";
 	PlayerEat 6;
-	now Disused Garage is known;
+	AddNavPoint Disused Garage;
 
 
 Section 2 - Location

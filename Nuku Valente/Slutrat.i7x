@@ -287,9 +287,7 @@ to say slut rat victory:
 			say "     The rat [if location of Player is Slut Rat Den]beat you[else]brought you in[end if] leans you forward and presses her massive tool to your back door, easing up into your body with strange ease despite the size of the tool. As she rocks against you, new sensations explode and echo through your body. She pets over your [bodydesc of Player] form and coos in your ear, pistoning against your ass with increasingly eager thumps, eventually filling your ass with her thick seed.[mimpregchance]";
 		say "     A rat grabs your head and pulls you off towards a waiting nipple. The milk flows thick and sweet across your tongue as your groin throbs and tingles with new delights. [slut rat growth]";
 		say "     All at once, everyone is climaxing. In you, around you, shuddering squeals of rodent delight before you feel your own body shudder in powerful release. As darkness claims you, you can see the den getting smaller, the original rat dragging you away.";
-		if a random chance of 1 in 2 succeeds and Slut Rat Den is unknown:
-			say "You remember the way back!";
-			now the Slut Rat Den is known;
+		AddNavPoint Slut Rat Den;
 
 
 To say slut rat growth:

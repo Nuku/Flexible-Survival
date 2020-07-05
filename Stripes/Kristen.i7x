@@ -48,7 +48,7 @@ Instead of resolving FindingKristen:
 					say "     She's leading you along the rear of a stretch of two-story shops. Several of them have been damaged by the rampage of some creature. She slips into the lower floor of a half-ruined travel agency and grabs the extension ladder stashed inside. Carrying it a few buildings over, she uses it to climb up to the second story of one of them and go through an open window. After you follow her up, the pulls the ladder inside, cutting off the means of entry.";
 					now HP of Kristen is 2;
 					move player to Kristen's Hideout;
-					now Kristen's Hideout is known;
+					AddNavPoint Kristen's Hideout;
 					now Resolution of FindingKristen is 1; [Kristen saved]
 					increase score by 20;
 			if fightoutcome >= 20 and fightoutcome <= 29:
@@ -471,7 +471,7 @@ to say kristentf_phase4_3:		[seductive]
 				ItemGain pepperspray by 1;
 				increase score by 10;
 			now loversbench is 2;
-		now Park Entrance is known;
+		AddNavPoint Park Entrance;
 		PlayerEat 12;
 		PlayerDrink 12;
 	else:		[nighttime - Ferris wheel]

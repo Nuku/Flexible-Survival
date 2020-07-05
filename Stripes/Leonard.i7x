@@ -21,7 +21,7 @@ Instead of resolving a Feline Friend:
 	say "     Move through the trees after being forced off the path by a pack of wolves you spotted, you try your best to remain quiet while moving quickly. As you hear the pack howl, you push aside some branches, hoping to find another section of path, but instead find yourself at a small clearing before a rocky hillside. There is the mouth to a cave in the cliff's face at this edge of the park. Worried about what may lurk there, you start to step back when you hear a voice call out.";
 	say "     'No, you need not go. Do not worry. I shall not attack you unless provoked,' says the deep, male voice, rich with refinement. 'Come inside, let us talk. I would enjoy some company.'";
 	say "     Uncertain, you are about to leave when you hear the howl of those wolves, closer than before, you hesitate again. A leonine figure steps from the cave, motioning quickly for you to come inside. He does not seem aggressive and still has a suit coat on, though his lower body is unclothed. 'Quick! They'll not be able to notice your scent over mine and they don't dare come here.' Deciding to risk it, you enter the cave.";
-	now Lion's Den is known;
+	AddNavPoint Lion's Den;
 	move player to Lion's Den;
 	now Feline Friend is resolved;
 	now battleground is "void";

@@ -290,7 +290,7 @@ to FeatGain (Featname - text):
 		add Featname to feats of Player;
 		sort feats of Player;
 		if Featname is "City Map":
-			say "[bestowcitymapfeat]";
+			say "[BestowCityMapFeat]";
 	else if debugactive is 1:
 		say "ERROR: Trying to add '[Featname]', which the player already has.";
 
@@ -305,6 +305,24 @@ to MoraleBoost (N - number):
 	increase morale of Player by N;
 	if morale of Player > 100:
 		now morale of Player is 100;
+
+to AddNavPoint (RoomObj - room):
+	AddNavPoint RoomObj silence state is 0;
+
+to AddNavPoint (RoomObj - room) silently:
+	AddNavPoint RoomObj silence state is 1;
+
+to AddNavPoint (RoomObj - room) silence state is (Silence - a number):
+	if RoomObj is not fasttravel: [programming error, to be reported]
+		say "DEBUG: Trying to add [RoomObj] as a nav point, but it is not a fasttravel point. Please report this message on the FS Discord!";
+	else: [the room is at least a valid nav point]
+		if RoomObj is known:
+			if debug is at level 10:
+				say "DEBUG: Trying to add [RoomObj] as a nav point, but the player knows it already.";
+		else: [player doesn't know the room]
+			now RoomObj is known;
+			if Silence is 0:
+				say "[bold type]['][RoomObj]['][roman type] has been added to your list of available navpoints. You will now be able to [bold type]nav[roman type]igate there from any of the fasttravel locations in the city by using the command [bold type]nav [RoomObj][roman type].";
 
 understand "testNPCSexAftermath" as NPCSexAftermathAction.
 

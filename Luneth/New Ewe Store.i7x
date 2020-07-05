@@ -90,7 +90,7 @@ Instead of Resolving a New Ewe Store:
 		now NESProgress is 4;
 		now Resolution of New Ewe Store is 9; [saved mary and she went home]
 		now New Ewe Store is resolved;
-		now New Ewe Storeroom is known;
+		AddNavPoint New Ewe Storeroom;
 		move player to New Ewe Storeroom;
 
 Table of GameEventIDs (continued)
