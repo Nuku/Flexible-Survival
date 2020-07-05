@@ -6501,7 +6501,6 @@ Include Cannon by Hiccup.
 Include Cat Ninjas by Stripes.
 Include Catgirl by Wahn.
 Include Caveman by TheRecipe.
-Include Centaur by Hellerhound.
 Include Centaur Mare by Stripes.
 Include Centaur Stallion by Stripes.
 Include Cerberus by Stripes.
@@ -6611,6 +6610,8 @@ Include Imp by Wahn.
 Include Impala by UrsaOmega.
 Include Incubus by Stripes.
 Include Inflatable Vulpine by Stripes.
+Include Jackal Alpha by Gherod.
+Include Jackal Femboy by Gherod.
 Include Jackal Guard by Xenophiliac.
 Include Jackalboy by Sarokcat.
 Include Jackalman by Sarokcat.
@@ -6652,6 +6653,7 @@ Include MothGirl by Guest Writers.
 Include Mpreg Platypus by Sapphire.
 Include Mul by Wahn.
 Include Mushroom Men by AGentlemanCalledB.
+Include Mutant Centaur by Hellerhound.
 Include Mutated Islanders by Kernog.
 Include Naga by Nuku Valente.
 Include Naiad by Wahn.

@@ -715,8 +715,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is colliedefeat;
 		-- "combat abort":
 			now NumberVarValue entry is combat abort;
-		-- "compressedcock":
-			now NumberVarValue entry is compressedcock;
 		-- "ConclaveKnowledge":
 			now NumberVarValue entry is ConclaveKnowledge;
 		-- "ConfSvenEricInteraction":
@@ -4369,8 +4367,6 @@ to VariableNumberLoad:
 					now colliedefeat is numberVarValue entry;
 				-- "combat abort":
 					now combat abort is numberVarValue entry;
-				-- "compressedcock":
-					now compressedcock is numberVarValue entry;
 				-- "ConclaveKnowledge":
 					now ConclaveKnowledge is numberVarValue entry;
 				-- "ConfSvenEricInteraction":
