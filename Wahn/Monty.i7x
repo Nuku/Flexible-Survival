@@ -660,22 +660,22 @@ Instead of fucking Monty:
 		now title entry is "Finger Monty's ass";
 		now sortorder entry is 5;
 		now description entry is "Explore the black soldier's ass with your digits, seeing how much you can put in the man while jerking him off";
-		[]
+		[
 		choose a blank row in table of fucking options;
 		now title entry is "Make use of the buttplugs";
-		now sortorder entry is 8;
+		now sortorder entry is 6;
 		now description entry is "Give Monty a workout with the 'training' toys";
-		[]
+		]
 		if "Rimming_Banned1" is not listed in Traits of Monty and "Rimming_Banned2" is not listed in Traits of Monty: [player doesn't like to rim, talked or not talked about it with Monty]
 			choose a blank row in table of fucking options;
 			now title entry is "Rim Monty's ass";
-			now sortorder entry is 6;
+			now sortorder entry is 7;
 			now description entry is "Get your tongue in there and eat the black soldier's ass";
 		[]
 		if "Fingering_Done1" is listed in Traits of Monty:
 			choose a blank row in table of fucking options;
 			now title entry is "Fist Monty's ass";
-			now sortorder entry is 7;
+			now sortorder entry is 8;
 			now description entry is "Sink your fist and forearm into the black soldier's ass";
 		[
 		if Player is male:

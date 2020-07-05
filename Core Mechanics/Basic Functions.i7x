@@ -158,7 +158,7 @@ to ItemGain (ItemObj - a grab object) by (N - number) silence state is (Silence 
 	increase carried of ItemObj by N;
 	if Silence is 0:
 		LineBreak;
-		say "[bold type]You gain [N] [printed name of ItemObj in lower case]![roman type]";
+		say "[bold type]You gain [N] [printed name of ItemObj in lower case]![roman type][line break]";
 
 to ItemLoss (ItemObj - a grab object) by (N - number):
 	ItemLoss ItemObj by N silence state is 0;
@@ -186,14 +186,14 @@ to ItemLoss (ItemObj - a grab object) by (N - number) silence state is (Silence 
 		LineBreak;
 		if N is 1:
 			if carried of ItemObj is 1:
-				say "[bold type]You lose your [printed name of ItemObj in lower case]![roman type]";
+				say "[bold type]You lose your [printed name of ItemObj in lower case]![roman type][line break]";
 			else:
-				say "[bold type]You lose 1 [printed name of ItemObj in lower case]![roman type]";
+				say "[bold type]You lose 1 [printed name of ItemObj in lower case]![roman type][line break]";
 		else:
 			if carried of ItemObj is N:
-				say "[bold type]You lose all your [printed name of ItemObj in lower case]![roman type]";
+				say "[bold type]You lose all your [printed name of ItemObj in lower case]![roman type][line break]";
 			else:
-				say "[bold type]You lose [N] [printed name of ItemObj in lower case]![roman type]";
+				say "[bold type]You lose [N] [printed name of ItemObj in lower case]![roman type][line break]";
 
 to PlayerMaxHeal:
 	LineBreak;
@@ -532,7 +532,7 @@ carry out CreatureSexAftermathAction:
 	[Options for SexAct are: AssFuck, PussyFuck, AssDildoFuck, PussyDildoFuck, OralCock, OralPussy]
 
 to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) from (GivingCharName - a text):
-	if GivingCharName is "Player":
+	if GivingCharName is "Player" or GivingCharName is "player":
 		if debugactive is 1:
 			say "DEBUG -> Player is the giving partner for '[SexAct]'[line break]";
 		if SexAct is "AssFuck":
@@ -543,7 +543,7 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 			if PenileVirgin of Player is true:
 				now PenileVirgin of Player is false;
 				say "     [Bold Type]You have lost your penile virginity fucking the [TakingCharName in lower case]![roman type][line break]";
-	else if TakingCharName is "Player":
+	else if TakingCharName is "Player" or TakingCharName is "player":
 		if debugactive is 1:
 			say "DEBUG -> Player is the receiving partner for '[SexAct]'[line break]";
 		if SexAct is "AssFuck":

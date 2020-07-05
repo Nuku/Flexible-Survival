@@ -60,6 +60,7 @@ to say OrcVictorious:
 				say "[MulAnalRide]";
 			else:
 				say "[MulFuck2]";
+			move Player to Slave Cell 2;
 		else if OrcSpecialFightNumber is 2:
 			say "     Feeling faint and with stars dancing in front of your eyes, you can only uncoordinately flail about as the big orc grabs you by the throat and lifts you off your feet. The last thing you see of this fight is his brutish face, combat-lust flaring in its yellow eyes, then the warrior gives you a resounding headbutt that sends you into unconsciousness.";
 			LineBreak;

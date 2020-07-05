@@ -1127,6 +1127,7 @@ to say XaedihrEnchantTome:
 	else:
 		say "     'Certainly doable. I shall get onto that. Thank you, by the way, I always appreciate gaining some power for myself.' he tells you, as you hand him the ten null essences...";
 		say "     The sorcerer takes the materials to over his corner and proceeds to perform some magical spells that you don't really understand. After a few flashes, ominous sounds and strange flashes of light, the job is complete.";
+		ItemLoss null essence by 10;
 		say "     [bold type]Xaedihr has gotten stronger![roman type][line break]";
 		increase weapon damage of demonologist by 1;
 
@@ -1137,9 +1138,10 @@ to say XaedihrEnchantAE:
 		say "     'Certainly doable. I shall get onto that.' he tells you, as you hand him the ten null essences...";
 		WaitLineBreak;
 		say "     The sorcerer takes the materials to over his corner and proceeds to perform some magical spells that you don't really understand. After a few flashes, ominous sounds and strange flashes of light, the job is complete.";
+		ItemLoss null essence by 10;
+		say "     [bold type]Your Abyssal Edge's weapon damage has been increased by 1! It is now at [weapon damage of abyssal edge] damage.[roman type][line break]";
 		increase weapon damage of abyssal edge by 1;
 		increase Resolution of AbyssEdgeEnchantLevel by 1;
-		say "     [bold type]Your Abyssal Edge's weapon damage has been increased by 1! It is now at [weapon damage of abyssal edge] damage.[roman type][line break]";
 
 [***********************************************************]
 Section 5-3 - Sex Menu

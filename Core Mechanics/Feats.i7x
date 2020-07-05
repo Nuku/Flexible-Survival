@@ -110,7 +110,8 @@ To FunFeatget:
 			if calcnumber > 0 and calcnumber <= the number of filled rows in table of gainable feats:
 				now current menu selection is calcnumber;
 				follow the gainfeat rule;
-				decrease featgained of Player by 1; [fun feats are not counted]
+				if featqualified is 0: [player had a right to a feat and got it]
+					decrease featgained of Player by 1; [fun feats are not counted]
 				if featqualified is 0, break;
 			else if Playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
 				say "Selection aborted.";
@@ -309,6 +310,7 @@ This is the gainfeat rule:
 	if autofeatloading is true or player consents:
 		add nam to feats of Player;
 		say "You have gained '[nam]'!";
+		now Featqualified is 0;
 [		decrease menu depth by 1; ]
 		increase featgained of Player by 1;
 		if nam is "Automatic Survival":
@@ -317,7 +319,6 @@ This is the gainfeat rule:
 			say "[bold type]This ability is now controlled by Trixie. Your feat slot has been returned to you.[roman type][line break]";
 			wait for any key;
 		if nam is "More Time", extend game by 24;
-		now Featqualified is 0;
 		if nam is "Hardy":
 			increase maxHP of Player by 8;
 			increase HP of Player by 8;

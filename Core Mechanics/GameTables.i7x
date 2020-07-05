@@ -359,7 +359,6 @@ Name(text)	Type(text)
 "DiegoChanged"	"number"
 "DiegoFucked"	"number"
 "Diegotalk"	"number"
-"DiegoTricked"	"number"
 "dinonest"	"number"
 "dnfightresult"	"number"
 "dobielibido"	"number"

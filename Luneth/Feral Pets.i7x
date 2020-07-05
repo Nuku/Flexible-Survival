@@ -652,6 +652,7 @@ the fuckscene of helper dog is "You make the offer to your canine companion, but
 
 to say SummonHobo:
 	now Hobo is nowhere;
+	project Figure of Hobo_icon;
 	if Player is in Computer Lab and Hobo is in Computer Lab: [summoning while standing next to him]
 		say "     Leaning down, you ruffle one of Hobo's ears, telling him that it's time to get back out into the city. He happily wags his tail as he begins to trail you.[hoboreset]";
 	else: [regular summoning]
@@ -708,6 +709,7 @@ to say HoboScent:
 	say "     Your Hobo smells like a normal dog, surprisingly given the circumstances.";
 
 to say Hobodesc:
+	project Figure of Hobo_icon;
 	say "     Hobo is a black and white shepherd with soulful and intelligent brown eyes. He will follow you and loyally assist you with your troubles.";
 
 instead of conversing the Hobo:

@@ -4492,7 +4492,7 @@ to Pet level up:
 		decrease XP of companion of Player by ( level of companion of Player minus 1 ) times 10;
 		if "Good Teacher" is listed in feats of Player:
 			increase XP of companion of Player by ( level of companion of Player minus 1 ) times 4;
-		say "Your [companion of Player] has gained level [level of companion of Player]! Congratulations!";
+		say "[companion of Player] has gained level [level of companion of Player]! Congratulations!";
 		if remainder after dividing level of companion of Player by 3 is 0:
 			increase weapon damage of companion of Player by 1;
 		if remainder after dividing level of companion of Player by 5 is 0:

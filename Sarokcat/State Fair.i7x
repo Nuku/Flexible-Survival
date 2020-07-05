@@ -196,12 +196,12 @@ carry out gameplay:
 		increase diceroll by bonus;
 		if diceroll > 14:
 			say "Your swift reflexes are the death of all little cardboard targets! They will learn to fear your awesome might! Oh hey, you won a prize, too![line break]";
-			let prizegift be a random number from 1 to number of filled rows in the Table of Random Critters;
-			choose row prizegift from the Table of Random Critters;
+			choose a random row from the Table of Random Critters;
 			if there is a loot entry:
-				if loot entry is not "":
+				if loot entry is not "" and loot entry is not " ":
 					ItemGain loot entry by 1;
-				ItemGain dirty water by 1;
+				else:
+					ItemGain dirty water by 1;
 			else:
 				ItemGain food by 1;
 		else:

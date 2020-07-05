@@ -152,6 +152,8 @@ Figure of Wolftaur_soft_icon is the file "Wolftaur_soft.jpg".
 Figure of Werewolf_female_icon is the file "Werewolf.jpg".
 Figure of Wildcat_icon is the file "wildcat_ig.jpg".
 Figure of Wood_Elf_icon is the file "Wood Elf.jpg".
+Figure of WrestlingWolf_hard_icon is the file "Wrestling Wolf_hard.jpg".
+Figure of WrestlingWolf_clothed_icon is the file "Wrestling Wolf_clothed.jpg".
 Figure of Wyvern_female_icon is the file "Wyvern_female.jpg".
 Figure of YamatoDragon_red_hard_icon is the file "YamatoDragon_red_hard.jpg".
 Figure of YamatoDragon_red_soft_icon is the file "YamatoDragon_red_soft.jpg".
@@ -300,6 +302,7 @@ Figure of Hayato_icon is the file "Hayato_reading.jpg".
 Figure of Harold_icon is the file "Harold.jpg".
 Figure of Harold_naked_icon is the file "Harold_naked.jpg".
 Figure of Helen_naked_icon is the file "Helen.png".
+Figure of Hobo_icon is the file "Hobo.jpg".
 Figure of Honey_icon is the file "Honey_ig.jpg".
 Figure of James_icon is the file "james_ig.jpg".
 Figure of Janice_icon is the file "FS_Janice_ig.jpg".
@@ -855,6 +858,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Hellfire Demon No Harness"	Figure of HellfireDemon_noharness_icon	"Gherod"	g-white	"normal"
 "Hellfire Demon Soft No Harness"	Figure of HellfireDemon_softnoharness_icon	"Gherod"	g-white	"normal"
 "Hellfire Demon Hard No Harness"	Figure of HellfireDemon_hardnoharness_icon	"Gherod"	g-white	"normal"
+"Hobo"	Figure of Hobo_icon	"Conchi"	g-white	"normal"
 "Blue Gryphon Herm"	Figure of BlueGryphon_icon	"dbd"	g-black	"normal"
 "Blue Gryphon hard"	Figure of BlueGryphon_hard_icon	"Vashaa"	g-white	"normal"
 "Blue Gryphon soft"	Figure of BlueGryphon_soft_icon	"Vashaa"	g-white	"normal"
@@ -1091,6 +1095,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Wolftaur_hard"	Figure of Wolftaur_hard_icon	"Vashaa"	g-white	"normal"
 "Wolftaur_soft"	Figure of Wolftaur_soft_icon	"Vashaa"	g-white	"normal"
 "Wood Elf"	Figure of Wood_Elf_icon	"Vashaa"	g-White	"normal"
+"Wrestling Wolf hard"	Figure of WrestlingWolf_hard_icon	"Vashaa"	g-White	"normal"
+"Wrestling Wolf clothed"	Figure of WrestlingWolf_clothed_icon	"Vashaa"	g-White	"normal"
 "Wyvern_female"	Figure of Wyvern_female_icon	"Anonymous"	g-white	"normal"
 "Yatur_clothed"	Figure of Yatur_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Yatur_naked"	Figure of Yatur_naked_icon	"Kupo Klein"	g-white	"normal"
@@ -1303,6 +1309,7 @@ carry out artistcredits:
 	say "     Wildcat by Strype @ furaffinity.net[line break]";
 	say "     Wolftaur by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Wood Elf by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
+	say "     Wrestling Wolf by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Wyvern Female by Anonymous[line break]";
 	say "     Yamato Dragon by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Yamato Dragoness by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
@@ -1384,6 +1391,7 @@ carry out artistcredits:
 	say "     Helen by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Hayato by Darian821 @ y-gallery.net[line break]";
 	say "     Harold by Hufnaar @ furaffinity.net[line break]";
+	say "     Hobo by Conchi @ https://artisticconch.tumblr.com/[line break]";
 	say "     Honey by SandySchreiber @ furaffinity.net[line break]";
 	say "     James by Anyare @ furaffinity.net[line break]";
 	say "     Janice by Anymouse1968 @ furaffinity.net[line break]";

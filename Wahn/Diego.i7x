@@ -29,7 +29,6 @@ DiegoBitched is a number that varies.
 DiegoFucked is a number that varies.
 DiegoButtSlut is a number that varies.
 LastDiegoTricked is a number that varies. LastDiegoTricked is usually 250.
-DiegoTricked is a number that varies. DiegoTricked is usually 0.
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -101,7 +100,7 @@ the scent of Diego is "Diego smells like a [if DiegoChanged is 0]male[else if Di
 
 To say DiegoDesc:
 	if debugactive is 1:
-		say "DEBUG -> Diegotalk: [Diegotalk], CoyoteTricks: [CoyoteTricks], DiegoTricked: [DiegoTricked], LastDiegoTricked: [LastDiegoTricked], DiegoChanged: [DiegoChanged], DiegoBitched: [DiegoBitched], DiegoFucked: [DiegoFucked], DiegoButtSlut: [DiegoButtSlut] <- DEBUG[line break]";
+		say "DEBUG -> Diegotalk: [Diegotalk], CoyoteTricks: [CoyoteTricks], LastDiegoTricked: [LastDiegoTricked], DiegoChanged: [DiegoChanged], DiegoBitched: [DiegoBitched], DiegoFucked: [DiegoFucked], DiegoButtSlut: [DiegoButtSlut] <- DEBUG[line break]";
 		say "DEBUG -> (Traits of Diego) [traits of Diego][line break]";
 	if DiegoChanged is 2:
 		say "     The former coyote man is now a pretty tan furred coyote bitch instead, and is eyeing you eagerly as [SubjectPro of Diego] leans up against the wall dividing the park from the rest of the city. You can see one of her paws slowly straying down to her furred pussy as you approach, a smile playing across her muzzle as [SubjectPro of Diego] rubs herself teasingly.";
@@ -1347,7 +1346,7 @@ to say DiegoCollarWearingAftermath:
 			FeatLoss "Herm Preferred";
 		FeatGain "Female Preferred";
 		FeatGain "Always A Pussy";
-	CreatureSexAftermath "Player" receives "PussyFuck" from "Husky Alpha";
+	CreatureSexAftermath "Player" receives "PussyFuck" from "Coyote";
 	now XP of Diego is 7; [player has the collar on, got fucked]
 
 to say DiegoCollarDeliveryAftermath:

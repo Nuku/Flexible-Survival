@@ -94,7 +94,7 @@ to say ToronTalkMenu:
 		now sortorder entry is 6;
 		now description entry is "Ask him about his relationship with Mogdraz";
 	[]
-	if resolution of An Hellish Introduction > 1:
+	if resolution of Hellish Introduction > 1:
 		choose a blank row in table of fucking options;
 		now title entry is "About Xaedihr";
 		now sortorder entry is 7;
@@ -240,6 +240,7 @@ to say ToronTalkAE:
 		if player consents:
 			Linebreak;
 			say "     Having enough of the stuff with you, it is time to restore this useless weapon into its glorious former shape. 'Very well, this shouldn't take long. Would you wait here?' he asks, as he takes the abyssal remnant and the pack of null essences with him to the back room.";
+			ItemLoss null essence by 25;
 			ItemLoss abyssal remnant by 1;
 			WaitLineBreak;
 			say "     You hear a lot of noise. Hammering, strange flashes, ominous whispers that you think it's just your imagination but never cease to be there, nonetheless, and time goes by... You glance around the lounge, play with your fingers, with a glass that's nearby, all while you anxiously wait for the results...";

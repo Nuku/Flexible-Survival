@@ -797,8 +797,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is DiegoFucked;
 		-- "Diegotalk":
 			now NumberVarValue entry is Diegotalk;
-		-- "DiegoTricked":
-			now NumberVarValue entry is DiegoTricked;
 		-- "dinonest":
 			now NumberVarValue entry is dinonest;
 		-- "dnfightresult":
@@ -4449,8 +4447,6 @@ to VariableNumberLoad:
 					now DiegoFucked is numberVarValue entry;
 				-- "Diegotalk":
 					now Diegotalk is numberVarValue entry;
-				-- "DiegoTricked":
-					now DiegoTricked is numberVarValue entry;
 				-- "dinonest":
 					now dinonest is numberVarValue entry;
 				-- "dnfightresult":

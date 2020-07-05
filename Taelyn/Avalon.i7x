@@ -31,7 +31,7 @@ Part 2 - Avalon Entrance
 
 Table of GameEventIDs (continued)
 Object	Name
-Fall-O-the-Wisp	"fallothewisp"
+Fall-O-the-Wisp	"Fall-O-the-Wisp"
 
 Fall-O-the-Wisp is a situation.
 The sarea of Fall-O-the-Wisp is "Nowhere".
