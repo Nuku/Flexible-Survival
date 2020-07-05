@@ -139,7 +139,7 @@ to say GuardLie: [lie to get into the camp]
 		say "     'Please feel free to check out the camp and talk with everyone. And when you go back to report, please pass on that I need more people here to be able to send more people out with samples.'";
 		move player to Major's Tent;
 		now HP of Adam is 3; [player got access to the camp]
-		now Camp Bravo Entrance is known;
+		AddNavPoint Camp Bravo Entrance;
 		now Back at the Camp is resolved;
 		now Resolution of Back at the Camp is 1; [lied your way in]
 	else:

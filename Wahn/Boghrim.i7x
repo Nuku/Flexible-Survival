@@ -273,7 +273,7 @@ to say BoghrimTalk3: [go hunting]
 		say "     You stop and listen for a second, indeed hearing a silent squeak - which rapidly escalates to the wrenching screech of tortured metal as the wall of cars on your right starts to topple. As reality seems to fall into slow-motion, you frozenly stand where you are while your mind somehow has the time to register the wall isn't just collapse on its own - something is pushing it over... something huge and green, barely seen through the gaps of the car stack. While you make interesting, but momentarily rather useless observations - as you're about to be crushed by a car or three - Boghrim instead just reacts, snatching you up and flinging you to safety with a mighty throw, before...";
 		say "     Time resumes its regular pace with the deafening crash of a number of car wrecks impacting on the ground, just steps behind where you landed. You jump to your feet as quick as you can and look around - hm, where did Boghrim end up at? Thankfully, your fear that he might have been crushed under that whole pile of wreckage proves unnecessary, as you hear him growl, 'Now what the fuck did that? Give me a moment to pull myself out of here...' Seems like he's right against the wall on the other side, where a falling car only came to lean against it, not flat on the ground. Though your relief doesn't last long, as your eyes fall on the massive creature responsible for all this - it's a hydra, stepping over the twisted metal in the wall-opening it created and snapping at you with multiple heads.";
 		WaitLineBreak;
-		now Abandoned Lot is known;
+		AddNavPoint Abandoned Lot;
 		now BoghrimHuntingTrip is 1;
 		now inasituation is true;
 		challenge "Hydra Beast";

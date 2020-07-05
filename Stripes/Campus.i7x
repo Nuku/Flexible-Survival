@@ -39,7 +39,7 @@ Instead of Resolving a Reaching the College:
 	say "     Your travels have lead you to the city's college campus. Built beside a major sporting arena, the college's main focus is its sports program, though there are other programs and classes available, you recall. While you never attended college here, you know they have several teams, including football, baseball, track and field and many others. And if those big gorillas are any indication, it looks like there'll be plenty of powerful creatures running around here.";
 	move player to the College Campus Entrance;
 	now battleground is "void";
-	now College Campus Entrance is known;
+	AddNavPoint College Campus Entrance;
 	now Reaching the College is resolved;
 
 

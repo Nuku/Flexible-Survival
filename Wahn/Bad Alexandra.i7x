@@ -540,7 +540,7 @@ to say AlexandraFertilityTrip: [taking her to Medea for fertility treatments]
 			say "     Thanking Medea for her help, Alexandra and you leave the clinic and step out on the street. While making your way back to the [if Alexandra is in Grey Abbey Library]library[else if Alexandra is in Worker Barracks]farm[else]ERROR, LOCATION NOT SET[end if], the dobie bitch gleefully drops comments like, 'So, what's the new production goal in this puppy factory?' or 'When do you wanna start a new litter?' or 'The expression on Medea's face was just too good.' When you soon arrive, Alexandra pulls you close for a kiss, then strolls off to her usual[if Alexandra is in Grey Abbey Library]guard post[else if Alexandra is in Worker Barracks]spot[else]ERROR, LOCATION NOT SET[end if] with the words, 'I'll be waiting for you.'";
 		remove "Fertility Treatment Option" from Traits of Alexandra;
 		add "Fertility Treatments" to Traits of Alexandra;
-		now Pediatrics Lobby is known; [navpoint unlock]
+		AddNavPoint Pediatrics Lobby; [navpoint unlock]
 
 to say AlexandraBackstory1: [family]
 	say "     Alexandra takes a seat in one of the chairs, rocking on its back legs and lighting up a smoke. 'My folks were crooks. Did drugs and petty crimes to pay for the habit. It was a pretty shitty home to grow up in, so I was taken away by Child Services when they finally got caught. Not that that was much better, but I tried to convince myself I was better than them. I decided to become a cop and tried my best to be [']a moral and upright person['],' she says with obvious scorn for her previous self.";

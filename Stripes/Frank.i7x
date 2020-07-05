@@ -52,7 +52,7 @@ Instead of resolving a Mephitness:
 			wait for any key;
 			now battleground is "void";
 			move player to Comic Shop;
-			now Comic Shop is known;
+			AddNavPoint Comic Shop;
 			increase score by 20;
 			now Resolution of Mephitness is 1; [Player is Skunklord, Rescued Frank]
 		else:
@@ -73,7 +73,7 @@ Instead of resolving a Mephitness:
 						wait for any key;
 						now battleground is "void";
 						move player to Comic Shop;
-						now Comic Shop is known;
+						AddNavPoint Comic Shop;
 						increase score by 20;
 						now Resolution of Mephitness is 2; [Rescued Frank]
 			if skunkfight is 3:

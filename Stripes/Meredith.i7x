@@ -104,7 +104,7 @@ to say Meredith_rescue:
 			else:
 				say "[Meredithrescue_flee]";
 		follow the turnpass rule;
-		now Entrance to the Red Light District is known;
+		AddNavPoint Entrance to the Red Light District;
 	else:
 		say "     Deciding you don't want to get involved in what seems to you like a wild goose chase, you tell her you've got other matters to deal with. She seems rather disappointed that you won't be coming along, but nods and quickly finishes getting ready. She hugs her [if XP of Vanessa is 2]child[else]children[end if] and heads on her way";
 		if Colleen is bunkered:

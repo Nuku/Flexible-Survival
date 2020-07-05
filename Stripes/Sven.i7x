@@ -51,7 +51,7 @@ Instead of resolving a Hidden Kitty:
 	wait for any key;
 	LineBreak;
 	move player to Sven's Place;
-	now Sven's Place is known;
+	AddNavPoint Sven's Place;
 	now battleground is "void";
 	increase score by 5;
 	now Hidden Kitty is resolved;

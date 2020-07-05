@@ -134,7 +134,7 @@ Instead of resolving a Starving Frog:
 		now hunger of Ranae is 1;		[Met Ranae but did not give her food and water]
 		now Resolution of Starving Frog is 1;	[Did not give supplies to Ranae]
 	now Starving Frog is resolved;
-	now Froggy Hideout is known;
+	AddNavPoint Froggy Hideout;
 	move Ranae to Froggy Hideout;
 	move player to Froggy Hideout;
 

@@ -248,7 +248,7 @@ Instead of resolving Findingboat:
 				challenge "Shark Herm";
 				if lost is 0:
 					say "     Victorious over the pirates who seem intent on stopping you from reaching the island, you continue along your way, and soon the small island is in sight, the island doesn't seem much different from many other small islands in these waters, but you are sure it is the right one, and even better yet, you can see a much easier path back to the shore from here and a cove to store your boat. It should be much easier to visit and leave the island now that you have been here once!";
-					now Pirate Island is known;
+					AddNavPoint Pirate Island;
 					Move player to Pirate Island;
 					now Findingboat is resolved;
 					now tmapfound is 3;
@@ -262,8 +262,7 @@ Instead of resolving Findingboat:
 		now boatfound is 2;
 	else if boatfound is 4:
 		say "     You find a small rowboat that's been dragged up into the short strip of woods along this section of beach. It seems to have been here for a while, but still looks serviceable. You certainly wouldn't be able to take any long trips with it, but it should be capable of the trip out to Vohr Island.";
-		say "[bold type]You can now navigate to Vohr Island[roman type][line break]";
-		now Island Pier is known;
+		AddNavPoint Island Pier;
 		now boatfound is 2;
 	else:
 		say "     Traveling along the beach, you come across a large, jumbled mess made up of several different abandoned boats from the marina that have all washed up ashore here. Glancing through the tangle of boats shows you that one or two of them might still work, but they probably wouldn't be able to take you very far, so you end up continuing on your way, forced to look for another method of getting out of the city.";

@@ -112,13 +112,13 @@ to attackingnutsofactory:
 			now HP of Macadamia is 10;
 			infect "Gray Squirrel";
 			now Resolution of Finding Mack is 4; [won and celebrated with him]
-			now Nutso Factory is known;
+			AddNavPoint Nutso Factory;
 		else:
 			say "     You give the squirrel a hug and step back. He seems a little disappointed, but gets over it quickly as he surveys the remaining nuts on the ground. 'Thanks for all your help. Look, I'm going to want to take inventory,' the squirrel chitters. 'But I'll give you some more after that. Just come by later and I should have some more for you. But for now,' he says, gently pushing you towards the door. 'I think I want to be alone with my nuts for a while.' And with that, the squirrel sends you on your way, your pack somewhat heavier with your haul from the factory.";
 			increase carried of food by 2;
 			now HP of Macadamia is 3;
 			now Resolution of Finding Mack is 5; [won and didn't celebrate with him]
-			now Nutso Factory is known;
+			AddNavPoint Nutso Factory;
 	else:
 		say "     Unwilling or unable to keep fighting the powerful felines, you make a break for it out the door you came in. You'll have to hope Mack can take care of himself.";
 		now Resolution of Finding Mack is 6; [fled and left Mack behind]

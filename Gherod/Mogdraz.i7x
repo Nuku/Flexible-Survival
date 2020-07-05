@@ -86,7 +86,7 @@ to say MogdrazIntro:
 	say "     As he finishes explaining things, he proceeds to show the space around. It is a fairly normal nightclub, with a pervert or two around the corner every now and then. Sounds like you could give it a try, now that you know its location in the Red Light District.";
 	now resolution of An Hellish Introduction is 1;
 	move player to Hellfire Club;
-	now Hellfire Club is known;
+	AddNavPoint Hellfire Club;
 	connect Hellfire Club;
 	WaitLineBreak;
 	if companion of player is demonologist:
@@ -489,7 +489,7 @@ to say HellfireClubDesc:
 to connect Hellfire Club:
 	change the south exit of Hellfire Club to Crimson Street;
 	change the north exit of Crimson Street to Hellfire Club;
-	now Hellfire Club is known;
+	AddNavPoint Hellfire Club;
 
 a postimport rule: [bugfixing rules for players that import savegames]
 	if resolution of An Hellish Introduction > 0: [event resolved the right way, room not connected yet]

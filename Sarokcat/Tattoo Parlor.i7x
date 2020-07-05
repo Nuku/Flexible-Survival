@@ -38,7 +38,7 @@ Instead of resolving tattoonpiercing:
 	else if tattoohunter is 1:
 		say "     Hunting through the red light district for the location Harold gave you, you wander the nearby streets, growing increasingly frustrated as you realize that it must be near here somewhere. Finally, on your third trip around the area, you find yourself looking at the remains of a small, makeshift barricade covering a small alley, and you decide to take a closer look. The barricade itself looks fine on close inspection, and it's actually remarkably well constructed considering the mixture of materials used to make it. However, it is obvious that someone on the inside moved key pieces aside and opened the barricade up so they could leave. Moving past the open barricade, you spot a sign not far along in the alley, apparently advertising the entrance to the Painted Dragon Tattoo and Piercing parlor.";
 		say "     You grin at your successful find for a minute before glancing back at the opened barricade and getting something of a bad feeling about the situation. Moving forward carefully, you try the door to the parlor, only to find it unlocked. Going inside, you find the place to be eerily quiet, though it was obviously occupied recently enough. After spending several hours searching the place for any clue as to where Harold's friend vanished, you sigh and realize that you will have to return to the Palomino and let the unicorn bartender know that his friend isn't home, hasn't been for several days, and that they are probably infected by now, though you make note of the location in case you have to come back later.";
-		now Tattoo Parlor is known;
+		AddNavPoint Tattoo Parlor;
 		now tattoohunter is 2;
 		now tattoonpiercing is resolved;
 

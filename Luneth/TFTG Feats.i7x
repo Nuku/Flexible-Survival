@@ -3,6 +3,10 @@ Version 1 of TFTG Feats by Luneth begins here.
 Section 1 - Artemis's Disciple/Apollo's Disciple
 [These two feats main focus is creating both good and bad game ends focused on males becoming permanent females and vice versa with no chance of going back. This will also be paired up with the Brutalist/Worthless feats eventually. Side note: once the appearance content is added to descriptions this will also effect that.]
 
+Table of GameEventIDs (continued)
+Object	Name
+Divine Twins	"Divine Twins"
+
 Divine Twins is a situation.
 the sarea of Divine Twins is "Museum".
 

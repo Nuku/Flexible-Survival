@@ -23,7 +23,7 @@ Instead of resolving a Old Plaza:
 	if player consents:
 		say "     Steeling yourself, you grab a torch and head down into the abyss. Minutes pass as you walk down these stairs, the air temperature drops preciptously to the point that you can start seeing your own breath. [if player is naked]You shiver, wrapping your arms together and lamenting that you decided to wander around the seedy streets of the red light distrcit in the nude.[else]You pull your clothing up tightly, keeping in what warmth you can.[end if] Finally, after what seems like forever you reach the bottom of this stair case. You shudder at the thought walking all the way back up those stairs. Poking your head out from the stairwell, you see a large hallway carved out of the bedrock itself. However, your vision is cut short by a thick fog which obscures anything more than 20 or 30 feet away. This place is giving you the creeps, but you didn't come down here for nothing. Gathering what resolve you have, you enter the ancient catacombs.";
 		move player to Ancient Catacomb Entrance;
-		now Ancient Catacomb Entrance is known;
+		AddNavPoint Ancient Catacomb Entrance;
 		now Old Plaza is resolved;
 	else:
 		say "     This place is too spooky for you, maybe you'll come back later. You begin the treacherous journey back up to the surface.";

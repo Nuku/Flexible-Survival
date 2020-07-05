@@ -508,6 +508,10 @@ Ruby's Cave is a room.
 Ruby's Cave is down from Ashen Cliff.
 The description of Ruby's Cave is "Ruby's humble abode consists of a short tunnel that leads into a natural cave, about sixty by thirty feet in its farthest extent. It is dimly lit by glowing volcanic rock formations and holds some scavenged furniture brought in by the dragoness.".
 
+Table of GameRoomIDs (continued)
+Object	Name
+Ashen Cliff	"Ashen Cliff"
+
 Ashen Cliff is a room.
 The description of Ashen Cliff is "You stand at the upper end of creating a sloping cliff that's about 300 feet wide. Some titanic force sundered the very ground here, with either your half rising, the lower end being shoved down, or both, afterwards. This has torn apart countless buildings and streets, creating the new cliff whose steep slope consists of bare rock, debris and volcanic ash. A little distance from where you are is the opening that leads to Ruby's cave. You could go into that if you want to visit her.".
 

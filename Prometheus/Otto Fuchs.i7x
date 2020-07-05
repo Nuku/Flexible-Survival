@@ -276,8 +276,8 @@ to DoctorThroughtheCityEvent: [Otto relocates to the Green Apartments]
 	WaitLineBreak;
 	say "     It doesn't take you more than ten minutes to reach your destination at the Green Apartments, even with the injured woman. 'Would you like us to carry your bags to your room, doctor?' one of the wolves asks, receiving a nod and a thank you from the middle-aged human. 'If you don't mind me leaving you here, I'll take Emma inside and have a better look at her foot,' Fuchs addresses you and the wolves. 'Your help was invaluable, and once again I am in your debt.' He gives a small bow before aiding the panda through the front door. Genevieve instead opts to give everyone a hug, Argos being given a wink in addition. She turns to face you, 'Dr. Fuchs will be here, should you need him or just want to shelter from the city for a bit. But really, thank you. I wouldn't mind seeing more of you either,' the vulpine says, softly biting her bottom lip. With that, she follows her superior, leaving you with the pack.";
 	say "     'We'll probably be seeing you again in future, I'm sure,' Argos says readying to return to wherever he resides. One of the wolves gives you a salute, much to the amusement of some of his friends. 'I would appreciate it if you had the time to check on Otto every now and again. He's a good man, but he has a tendency to help anyone who needs help. Something to do with the importance of his principles. But as you saw from the outcasts of the hyena gang, some victims have enemies that don't want them saved.' He pats you on the shoulder before dropping to all fours and loping away, followed by his pack-mates. Giving a smile and waving as they leave, you now have to decide what to do next.";
-	move player to green apartment building;
-	now green apartment building is known;
+	move player to Green Apartment Building;
+	AddNavPoint Green Apartment Building;
 	now hp of Otto is 3;
 	now Doctor Through the City is resolved;
 

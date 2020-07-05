@@ -134,8 +134,8 @@ Instead of Resolving a Hyena Gang:
 		hyenaify;
 		now hyg is 4;
 		LibidoBoost 30;
-		move player to Hyena hideout;
-		now Hyena hideout is known;
+		move player to Hyena Hideout;
+		AddNavPoint Hyena Hideout;
 		now Resolution of Hyena Gang is 6; [hyena hideout known]
 		now hyena gang is resolved;
 		now battleground is "void";

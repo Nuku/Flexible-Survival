@@ -1666,11 +1666,9 @@
 |Hellerhound|Odd Weapons|Smelly garbage|scavevent|
 |Hellerhound|Odd Weapons|Sword Nest|situation|
 |Hellerhound|Odd Weapons|Destroyed Bushes|situation|
-|Hellerhound|Odd Weapons|gotsword|value|
 |Hellerhound|Odd Weapons|washerenest|value|
 |Hellerhound|Odd Weapons|fellforward|value|
 |Hellerhound|Odd Weapons|numwater|value|
-|Hellerhound|Odd Weapons|gotwhip|value|
 |Hellerhound|Control Pills|20140908213124/628:Mon 8 September 2014 21:31|indexing|
 |Hellerhound|Control Pills|birth control pill|Grab Object|
 |Hellerhound|Control Pills|fertile pill|Grab Object|

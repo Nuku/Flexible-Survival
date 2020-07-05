@@ -27,7 +27,7 @@ Instead of resolving a Informant:
 		say "     Stopping the other man before he can turn to run off, you ask Homaru if he knows anything about the firemen from Station 86. 'Why would you ask me about them?' Homaru seems honestly curious and so you explain to him the situation with Kenaz. 'Ahhh, okay. Well, I thought that I had heard a rumor like that. Heh, nice to know that even shady information can sometimes be trusted.' The laughter that comes from the other man makes your [Skin of Player] crawl as you feel something foreboding about the outburst.";
 		say "     'Sorry about that. Anyway, if you'll come with me to my shop underneath the bakery, I'll be happy to trade some information with you.' Not seeing anything else you can do at the moment, you nod to your new cohort and then begin to follow him back to his abode.";
 		now Informant is resolved;
-		now Agency is known;
+		AddNavPoint Agency;
 		Move player to Agency;
 		increase score by 15;
 
@@ -111,7 +111,7 @@ instead of conversing the Homaru:
 			now Homarusearch is 1;
 			now DogHouse is active;
 			now fin is 1;
-			now Warehouse District is known;
+			AddNavPoint Warehouse District;
 			increase score by 10;
 	if Homarutalk is 1:
 		if homarusearch < 6 and a random chance of 2 in 5 succeeds:

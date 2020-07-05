@@ -110,7 +110,7 @@ Instead of Resolving a Strange Fox:
 		delete star bell;
 		now KitsuneEventStage is 8;
 		now Strange Fox is resolved;
-		now Foxy Hideaway is known;
+		AddNavPoint Foxy Hideaway;
 	else if KitsuneEventStage is 7:
 		say "     As you're traveling along, you catch the flash of silver out of the corner of your eye and have the feeling you've forgotten something. You wonder where that bell you'd found has gotten to.";
 

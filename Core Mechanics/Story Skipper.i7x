@@ -18,6 +18,7 @@ The File of PlayerSave (owned by another project) is called "FSPlayerSave".
 The File of NewPlayerSave (owned by another project) is called "FSNewPlayerSave".
 The File of PlayerListsSave (owned by another project) is called "FSPlayerListsSave".
 The File of BeastSave (owned by another project) is called "FSBeastSave".
+The File of BeastVariableSave (owned by another project) is called "FSBeastVariableSave".
 The File of NoteSave (owned by another project) is called "FSNoteSave".
 
 PetList is a list of text that varies.[@Tag:NotSaved] [for stashing the pet objects in the Character Nexus]
@@ -424,7 +425,7 @@ to CharacterSave:
 		say "DEBUG -> File of TraitSave written.[line break]";
 
 to CharacterRestore:
-	if the File of CharacterVariableSave exists:
+	if the File of CharacterVariableSave exists: [new, expanded character variable file]
 		say "Restoring Characters...";
 		read File of CharacterVariableSave into the Table of GameCharacterVariables;
 		repeat with x running from 1 to the number of filled rows in the Table of GameCharacterVariables:
@@ -522,7 +523,7 @@ to CharacterRestore:
 				]
 			else:
 				say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] not found in Table of GameCharacterIDs! Please report this message on the FS Discord!";
-	else if the File of CharacterSave exists:
+	else if the File of CharacterSave exists: [old file for backwards compatibility, only used if the new file does not exist]
 		say "Restoring Characters...";
 		read File of CharacterSave into the Table of GameCharacters;
 		repeat with x running from 1 to the number of filled rows in the Table of GameCharacters:
@@ -1025,27 +1026,53 @@ to ChildrenRestore:
 
 to BeastSave:
 	say "Saving Beasts...";
-	blank out the whole of Table of GameBeasts; [empty out all old data]
-	if number of rows in Table of Random Critters > number of rows in the Table of GameBeasts: [making sure we got enough room for all situations]
-		say "Error! Not enough rows to save all Beasts in the Table of GameBeasts. Please report this on the FS Discord.";
-	repeat with x running from 1 to the number of filled rows in the Table of Random Critters: [rebuilds the table of GameBeasts with current data]
+	blank out the whole of Table of GameBeastVariables; [empty out all old data]
+	if number of rows in Table of Random Critters > number of rows in the Table of GameBeastVariables: [making sure we got enough room for all situations]
+		say "Error! Not enough rows to save all Beasts in the Table of GameBeastVariables. Please report this on the FS Discord.";
+	repeat with x running from 1 to the number of filled rows in the Table of Random Critters: [rebuilds the table of GameBeastVariables with current data]
 		choose row x in the Table of Random Critters;
 		let BeastName be Name entry;
 		let BeastArea be Area entry;
 		let BeastNonInfect be non-infectious entry;
 		let BeastSex be sex entry;
-		choose a blank row in the table of GameBeasts;
+		let BeastType be enemy type entry;
+		choose a blank row in the table of GameBeastVariables;
 		now Name entry is BeastName;
 		now Area entry is BeastArea;
 		now non-infectious entry is BeastNonInfect;
 		now sex entry is BeastSex;
-	write File of BeastSave from the Table of GameBeasts; [freshly made table gets saved to file]
-	blank out the whole of Table of GameBeasts; [empty after saving]
+		now enemy type entry is BeastType;
+	write File of BeastVariableSave from the Table of GameBeastVariables; [freshly made table gets saved to file]
+	blank out the whole of Table of GameBeastVariables; [empty after saving]
 	if debug is at level 10:
-		say "DEBUG -> File of BeastSave written.[line break]";
+		say "DEBUG -> File of BeastVariableSave written.[line break]";
 
 to BeastRestore:
-	if the File of BeastSave exists:
+	if the File of BeastVariableSave exists:
+		read File of BeastVariableSave into the Table of GameBeastVariables;
+		repeat with x running from 1 to the number of filled rows in the Table of GameBeastVariables:
+			choose row x in the Table of GameBeastVariables;
+			let BeastName be Name entry;
+			let BeastArea be Area entry;
+			let BeastNonInfect be non-infectious entry;
+			let BeastSex be sex entry;
+			let BeastType be enemy type entry;
+			if there is a Name of BeastName in the Table of Random Critters:
+				choose row with Name of BeastName in Table of Random Critters;
+				now Area entry is BeastArea;
+				[bugfix code after re-naming Midway to Fair]
+				if Area entry is "Midway":
+					now Area entry is "Fair";
+				now non-infectious entry is BeastNonInfect;
+				now sex entry is BeastSex;
+				now enemy type entry is BeastType;
+				[
+				if debug is at level 10:
+					say "DEBUG -> [x]: BeastName: [BeastName] Area entry set to [BeastArea]!";
+				]
+			else:
+				say "DEBUG -> BeastName: [BeastName] not found in Table of Random Critters! Please report this message on the FS Discord!";
+	else if the File of BeastSave exists:
 		read File of BeastSave into the Table of GameBeasts;
 		repeat with x running from 1 to the number of filled rows in the Table of GameBeasts:
 			choose row x in the Table of GameBeasts;

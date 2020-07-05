@@ -322,7 +322,7 @@ This is the gainfeat rule:
 			increase maxHP of Player by 8;
 			increase HP of Player by 8;
 		if nam is "City Map":
-			say "[bestowcitymapfeat]";
+			say "[BestowCityMapFeat]";
 		if nam is "Instinctive Combat":
 			say "     Having gained the [']Instinctive Combat['] feat, you now have access to the 'Auto Attack' command. These are the same as picking the same option over and over again during combat. No different results, just less typing for faster gameplay.[line break]Type [bold type][link]auto attack normal[end link][roman type] for the default method of combat (choose each action).[line break]Type [bold type][link]auto attack berserk[end link][roman type] to always attack in combat.[line break]Type [bold type][link]auto attack pass[end link][roman type] to always pass in combat.[line break]Type [bold type][link]auto attack coward[end link][roman type] to always flee in combat.[line break]Type [bold type][link]auto attack submit[end link][roman type] to always submit in combat.[line break]You may review these commands at any time by using the [link]help[end link] command.";
 		if nam is "Vore Predator":
@@ -336,26 +336,27 @@ This is the gainfeat rule:
 	if autofeatloading is false, clear the screen and hyperlink list;
 	sort feats of Player;
 
-to say bestowcitymapfeat:
-	now Beach Plaza is known;
-	now Outside Trevor Labs is known;
-	now Smith Haven Mall Lot South is known;
-	now Park Entrance is known;
-	now City Hospital is known;
-	now State fair is known;
-	now Approaching the Capitol Building is known;
+to say BestowCityMapFeat:
+	say "[bold type][']Approaching the Capitol Building['], [']Beach Plaza['], [']City Hospital['], [']College Campus['], [']Dry Plains['], [']Entrance to the High Rise District['], [']Entrance to the Red Light District['], [']Museum Foyer['], [']Outside Trevor Labs['], [']Park Entrance['], [']Plant Overview['], [']Smith Haven Mall Lot South['], [']State Fair['], [']Urban Forest['], [']Warehouse District['] and [']Zoo entrance['][roman type] have been added to your list of available navpoints. You will now be able to [bold type]nav[roman type]igate there from any of the fasttravel locations in the city.";
+	AddNavPoint Approaching the Capitol Building silently;
+	AddNavPoint Beach Plaza silently;
+	AddNavPoint City Hospital silently;
+	AddNavPoint College Campus silently;
+	AddNavPoint Dry Plains silently;
+	AddNavPoint Entrance to the High Rise District silently;
+	AddNavPoint Entrance to the Red Light District silently;
+	AddNavPoint Museum Foyer silently;
+	AddNavPoint Outside Trevor Labs silently;
+	AddNavPoint Park Entrance silently;
+	AddNavPoint Plant Overview silently;
+	AddNavPoint Smith Haven Mall Lot South silently;
+	AddNavPoint State Fair silently;
+	AddNavPoint Urban Forest silently;
+	AddNavPoint Warehouse District silently;
+	AddNavPoint Zoo entrance silently;
 	now Government Assistance is resolved; [removes the random event for discovering the Capitol Bldg]
-	now Plant Overview is known;
 	now Ravaged Power Plant is resolved; [removes the random event for discovering the power plant]
-	now College Campus is known;
 	now Reaching the College is resolved; [removes the random event for discovering the College Campus]
-	now Entrance to the Red Light District is known;
-	now Entrance to the High Rise District is known;
-	now Zoo entrance is known;
-	now Dry Plains is known;
-	now Museum Foyer is known;
-	now Warehouse District is known;
-	now Urban Forest is known;
 
 muggering is an action applying to nothing.
 understand "mugger" as muggering.

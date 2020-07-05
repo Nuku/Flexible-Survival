@@ -108,7 +108,7 @@ to WispFollow:
 				LineBreak;
 				say "     It seems that you have found the magic land of [bold type]Avalon[roman type]. Who knows what you will find in a land of fantasy?";
 				wait for any key;
-				now Avalon-Crossroads is known;
+				AddNavPoint Avalon-Crossroads;
 				move player to Avalon-Crossroads;
 				now Resolution of Fall-O-the-Wisp is 4;
 		move Runestone to NPC Nexus;

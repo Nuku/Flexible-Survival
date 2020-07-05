@@ -181,6 +181,8 @@ to EncounteredEnemiesList:
 	say "Thinking back to your misadventures in the city so far, you call into memory all the creatures you have encountered and fought:[line break]";
 	say "[EncounteredEnemies of Player]";
 
+[TODO: write Infection overview for single infection]
+
 InfectionOverview is an action applying to nothing.
 
 understand "infectionoverview" as InfectionOverview.
@@ -614,7 +616,7 @@ carry out TestMode:
 	add "Black Belt" to feats of Player;
 	add "Breeding True" to feats of Player;
 	add "City Map" to feats of Player;
-	say "[bestowcitymapfeat]";
+	say "[BestowCityMapFeat]";
 	add "Curious" to feats of Player;
 	add "Dazzle" to feats of Player;
 	add "Dominant" to feats of Player;

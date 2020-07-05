@@ -230,6 +230,10 @@ Instead of resolving a Boar Encounter:
 	if Resolution of Boar Encounter is 0:
 		now Resolution of Boar Encounter is 1;
 
+Table of GameEventIDs (continued)
+Object	Name
+Woodcutting Boar	"Woodcutting Boar"
+
 Woodcutting Boar is a situation.
 The Prereq1 of Woodcutting Boar is Canine Indecision.
 Prereq1Resolution of Woodcutting Boar is { 4 }. [must have sent Andy to Garth]

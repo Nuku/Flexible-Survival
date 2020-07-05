@@ -98,6 +98,10 @@ KyrverthQuestHairGiven is a truth state that varies. KyrverthQuestHairGiven is u
 KyrverthUsedArtifact is a truth state that varies. KyrverthUsedArtifact is usually false.
 
 [Room Declaration]
+Table of GameRoomIDs (continued)
+Object	Name
+Overgrown Street	"Overgrown Street"
+
 West of Entrance to the High Rise District is Overgrown Street.
 The description of Overgrown Street is "[OvergrownStreetDesc]".
 

@@ -62,7 +62,7 @@ Instead of resolving a Another Doctor:
 		WaitLineBreak;
 		say "     Having given you the limited pass card and some directions, the hyperskunk woman gives you another grin before heading out, her tail giving a broad swish as she sways her ample hips. 'Please don't keep me waiting too long, my dear. I could just about burst with excitement,' she says teasingly as she looks back at you over her shoulder. Still a little stunned by voluptuous skunk woman, it takes you a few moments to recover, grab your stuff and head out. As you debate going to visit her to see what she has in mind, you look over the pass card. At least this will make it a little easier to get around the hospital.";
 		now Resolution of Another Doctor is 3; [Wereraptor infection]
-	now Psych Department is known;
+	AddNavPoint Psych Department;
 	now HP of Doctor Moffatt is 1;
 	increase hospnav by 1;
 	say "[hospprogress]";

@@ -43,7 +43,7 @@ Instead of resolving Easter Eggs:
 		else:
 			say "[micaelaintro_pass]";
 			now HP of Micaela is 1;
-	now Bunny House is known;
+	AddNavPoint Bunny House;
 	now Easter Eggs is resolved;
 
 to say micaelaintro_01:
@@ -119,7 +119,7 @@ Instead of conversing the Micaela:
 		say "***Unknown error. Adjusting.";
 		now HP of Micaela is 1;
 		now Easter Eggs is resolved;
-		now Bunny House is known;
+		AddNavPoint Bunny House;
 	if HP of Micaela is 1 or HP of Micaela is 2:
 		say "     Micaela smiles as you come over. 'Hey there. I'm glad you decided to stop by. [if HP of Micaela is 1]Did you change your mind about having some fun[else]Are you in the mood for more fun[end if]?' she asks, spreading her legs and showing off her dual-gendered loins.";
 		say "     'I've run into some other nasty folks out there in the woods, especially those mean wolves. That's why I've been hiding stashes of my eggs in the forest. That way there's always some around to help me get back to my cute bunny self when one of those meanies catch me and fuck me,' she says, lightly running her fingers across her damp folds. 'I love the sex, but if I stop being my pretty bunny self, who'll spread Easter cheer around here?";

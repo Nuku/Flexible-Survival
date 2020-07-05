@@ -131,6 +131,8 @@ The description of Smith Haven Mall Lot South is "[mallsouthlot]".
 earea of Smith Haven Mall Lot South is "Outside".
 
 To say mallsouthlot:
+	if emap is 0:
+		project the Figure of Map_Smith_Haven_Mall_icon;
 	If daytimer is day:
 		say "     Walking into Smith Haven Mall's vast southern parking lot, you see the devastating results of the infection having run rampant. Dotted about the lot are not only parked vehicles with either open doors, broken windows, or both, but also several wrecked vehicles, either smashed into other vehicles or hung up in planters. Scraps of ripped clothing caked in dried fluids litter the ground around the vehicles and about the lot. To the north you can see the entrance to the mall's food court. Just inside the glass doors you are able to see some activity on the other side of them. Looking to the east and to the west just shows more of the same destruction, though off in the distance of the mall's west lot you spot a gas station.";
 	else if findwires is 2 and fixedgens > 2:

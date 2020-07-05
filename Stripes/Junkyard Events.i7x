@@ -76,7 +76,7 @@ Instead of resolving a Raiding Party:
 						say "[losetotigress]";
 						now junknum is 0;
 						say "     Your romp with the feline over, shi gives you one last kiss before telling you shi needs to get back to work. Shi points off towards the seedier part of town and tells you of a route leading you there, should you want to find hir and hir sisters for more fun.";
-						now Entrance to the Red Light District is known;
+						AddNavPoint Entrance to the Red Light District;
 						increase score by 10;
 						now Resolution of Raiding Party is 1; [won, fucked Tigress Hooker]
 					else:

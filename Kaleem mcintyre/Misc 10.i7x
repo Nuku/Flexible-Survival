@@ -67,7 +67,7 @@ Instead of resolving a Air Drop:
 	Add "food" to invent of Player;
 	Add "water bottle" to invent of Player;
 	Add "water bottle" to invent of Player;
-	now Abandoned Lot is known;
+	AddNavPoint Abandoned Lot;
 	now Air Drop is resolved;
 	Increase score by 1;
 ]

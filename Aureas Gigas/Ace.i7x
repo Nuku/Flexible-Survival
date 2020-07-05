@@ -4,6 +4,10 @@ Version 1 of Ace by Aureas Gigas begins here.
 VanessaAceInteraction is a number that varies. VanessaAceInteraction is usually 0.
 SnowAceInteraction is a number that varies. SnowAceInteraction is usually 0.
 
+Table of GameEventIDs (continued)
+Object	Name
+Refueling	"Refueling"
+
 Refueling is a situation.
 The Prereq1 of Refueling is Avian Tent.
 The Prereq1Resolution of Refueling is { 1, 2 }.
@@ -73,7 +77,7 @@ Instead of resolving a Jetlagged:
 	say "     Deciding that some lighthearted conversation is needed, Ace shares a story of his youth in the Pacific northwest. And how one when he was fishing at lake with his family he was reeling in a whopper of a trout when an osprey snatched the fish out of the water breaking the line and leaving a feather in its wake. Taking the feather out of one of his pockets, the fighter pilot surmises, 'Maybe this good luck charm is what shaped my current form. Not that I'm complaining, I think my body works well for me.' You begin to feel restless, which can be sensed by stud. 'You seem like you're itching to get back on the trail. I'll see you out.' Exiting the tent, the former pilot states, 'I have to travel to work out some deals with some seagulls at the beach trading supplies for food. I might see you out and about.' He then moves close and whispers, 'And if you ever in the mood for the type of fun that Gray and Izzy have, I offer my services.' He then gives you happy parting words.";
 	WaitLineBreak;
 	move player to Staghorn;
-	now Staghorn is known;
+	AddNavPoint Staghorn;
 	now battleground is "void";
 	now HP of Ace is 2;
 	now Jetlagged is resolved;

@@ -305,8 +305,7 @@ instead of going east from Urban Forest while (HP of Percy < 1):
 			say "[bold type]You gain 1 water bottle![roman type][line break]";
 			increase carried of water bottle by 1;
 			LineBreak;
-			say "[bold type]You've discovered Ironscale Hollow![roman type][line break]";
-			now Ironscale Hollow is known;
+			AddNavPoint Ironscale Hollow;
 			now HP of Percy is 2;
 			wait for any key;
 			move player to Ironscale Hollow;
@@ -341,8 +340,7 @@ instead of going east from Forest Burrow Entrance while (HP of Percy < 2):
 		say "[bold type]You gain 1 water bottle![roman type][line break]";
 		increase carried of water bottle by 1;
 		LineBreak;
-		say "[bold type]You've discovered Ironscale Hollow![roman type][line break]";
-		now Ironscale Hollow is known;
+		AddNavPoint Ironscale Hollow;
 		now HP of Percy is 2;
 		wait for any key;
 		move player to Ironscale Hollow;
@@ -354,6 +352,10 @@ instead of going east from Forest Burrow Entrance while (HP of Percy < 2):
 Section 6 - Rooms
 
 Part 1 - Forest Entrance
+
+Table of GameRoomIDs (continued)
+Object	Name
+Forest Burrow Entrance	"Forest Burrow Entrance"
 
 Forest Burrow Entrance is a room. Forest Burrow Entrance is east of Urban Forest.
 The description of Forest Burrow Entrance is "[ForestBurrow desc]".

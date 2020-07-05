@@ -1143,6 +1143,10 @@ to BadmintonOneEvent: [Game of badminton]
 	now Badminton One is resolved;
 	now LastCampusWalkin is turns;
 
+Table of GameEventIDs (continued)
+Object	Name
+College Canine Lovers	"College Canine Lovers"
+
 College Canine Lovers is a situation.
 Prereq1 of College Canine Lovers is Unnatural Heat.
 Prereq1Resolution of College Canine Lovers is { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 }.

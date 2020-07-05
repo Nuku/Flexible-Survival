@@ -614,8 +614,7 @@ to say strangeIsland:
 	else if boatfound is 2 or boatfound is 3:
 		say "     You mention your boat to the twins. 'Yay, you got us a boat! Awesome!' the sister says loudly, before hugging you tight against her furry body. 'Okay. Now that step 1 is a-go, we can start collecting some supplies for the trip. A tent, some food... You know, the essentials.'";
 		say "     'For now, could you just make a short trip there and see if there's a safe place we could stay? I don't mind if you want to explore further, but don't go into the military base without us, yet. 'Remember to [bold type]save your position[roman type] on your phone. Just in case,' Erin warns.";
-		say "[bold type]You can now navigate to Vohr Island[roman type][line break]";
-		now Island Pier is known;
+		AddNavPoint Island Pier;
 		now Strange Island is resolved;
 	now level of Erin is 1;
 

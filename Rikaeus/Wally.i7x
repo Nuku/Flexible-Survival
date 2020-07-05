@@ -124,7 +124,7 @@ instead of resolving Otter Escort Mission while HP of Wally is 1:
 			now PlayerMet of Hailey is true;
 			now PlayerMet of Marcus is true;
 			move player to College Campus Entrance;
-			now College Campus Entrance is known;
+			AddNavPoint College Campus Entrance;
 			now Reaching the College is resolved;
 		infect "Orc Breeder";
 		if WallyOrcFled is 1:
@@ -152,7 +152,7 @@ instead of resolving Otter Escort Mission while HP of Wally is 1:
 			now PlayerMet of Hailey is true;
 			now PlayerMet of Marcus is true;
 			move player to College Campus Entrance;
-			now College Campus Entrance is known;
+			AddNavPoint College Campus Entrance;
 			now Reaching the College is resolved;
 		if WallyOrcFled is 1:
 			now WallyOrcFled is 2;

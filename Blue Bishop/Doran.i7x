@@ -257,7 +257,7 @@ to say Doran_Beat:
 		say "     You point out that you lack the proper equipment, and thusly have little to gain from such an interaction. This revelation seems to confuse him a fair bit, but he otherwise concedes.";
 		say "     'Very well; however, if things change for my victor, I'm always available.' He goes on to explain where he resides. Apparently there's a cave within a not-too-distant [bold type]Rocky Outcropping[roman type], and his instructions are clear enough that you should have no issue getting there, 'Doran's the name, by the way.'";
 		say "     Once he's done, he makes to leave in that direction, scaled and well-toned ass waving at you in his departure, as though to entice you to follow.";
-	now the rocky outcropping is known;
+	AddNavPoint Rocky Outcropping;
 	choose row MonsterID from the Table of Random Critters;
 	now area entry is "Nowhere";
 
@@ -4297,7 +4297,7 @@ blued is an action applying to nothing. [Developer Cheat]
 understand "blue dawn" as blued.
 carry out blued:
 	say "It is done.";
-	now Rocky Outcropping is known;
+	AddNavPoint Rocky Outcropping;
 
 to say doranmusing: [Requires first talking to Doran]
 	say "     You decide to summon Velos before a slightly confused Doran. It takes a moment for the serpent to oblige this request, and when [ghe] pulls out and sees the [gdragon], [ghe] immediately cries out in abject terror. Doran [ghim]self looks equally terrified at the sight of the serpent.";

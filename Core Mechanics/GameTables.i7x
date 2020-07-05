@@ -52,8 +52,14 @@ Table of PlayerLists
 ListName(text)	EntryText(text)
 with 50000 blank rows
 
+[old table, missing enemy type]
 Table of GameBeasts
 Name(text)	Area(text)	non-infectious(truth state)	sex(text)
+with 1000 blank rows
+
+[new table that includes an extra variable]
+Table of GameBeastVariables
+Name(text)	Area(text)	non-infectious(truth state)	sex(text)	enemy type(number)
 with 1000 blank rows
 
 Table of GameTraits
@@ -87,6 +93,10 @@ with 500 blank rows
 Table of GameEventIDs
 Object	Name
 with 1 blank row
+
+Table of GameEventIDs (continued)
+Object	Name
+PlaceholderSituation	"PlaceholderSituation"
 
 Table of GameRoomIDs
 Object	Name
@@ -546,8 +556,6 @@ Name(text)	Type(text)
 "GorillasMemberQuestCounter"	"number"
 "GorillasRep"	"number"
 "gotcatares"	"number"
-"gotsword"	"number"
-"gotwhip"	"number"
 "grantbitch"	"number"
 "grantfucked"	"number"
 "grantsex"	"number"
@@ -1522,7 +1530,6 @@ Name(text)	Type(text)
 "StellaNPCInt"	"text"
 "ubpreg"	"text"
 "VikingKidShape"	"text"
-"weaselcolor"	"text"
 "wolvloc"	"text"
 "wrbody"	"text"
 "wrbodydesc"	"text"
@@ -1698,9 +1705,6 @@ Name(text)	Type(text)
 "honeygiven"	"truth state"
 "houndfromhell"	"truth state"
 "hvoreoffer"	"truth state"
-"hydraheadcheck1"	"truth state"
-"hydraheadcheck2"	"truth state"
-"hydraheadcheck3"	"truth state"
 "hydraheadregrowth"	"truth state"
 "HyenaMatVore"	"truth state"
 "icarusrim"	"truth state"

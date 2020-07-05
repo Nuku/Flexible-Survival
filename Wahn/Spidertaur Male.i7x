@@ -165,8 +165,7 @@ to say SpidertaurPostSex:
 				LineBreak;
 			else if SpidertaurRelationship is 5:
 				say "     Coming up for air after a while, he says 'I... miss you, when you're not here, and always hope to find you in the streets when I go out.' Looking around for a moment, eyes wandering over the long strands of silk everywhere, he continues, 'My web feels empty without you - so, why don't you... stay? Playing predator and prey out in the city is fun, but I'd just as much - no, more even - like to just spend some time together here with you.'";
-				say "     You're now free to come and go to the [bold type]Spider's Web[roman type] at any time. The location has been added to your nav list.";
-				now Spider's Web is known;
+				AddNavPoint Spider's Web;
 				increase SpidertaurRelationship by 1;
 			LineBreak;
 			say "     Some time later, with you fully dressed again, the spidertaur leads you back to one of the main roads in this part of the city. 'Until next time', you tell him, giving him a goodbye kiss, then watch as he climbs a wall and vanishes over the edge of a roof.";

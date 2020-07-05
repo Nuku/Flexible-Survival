@@ -91,7 +91,7 @@ to say losetodobie1:		[low-lust player loss]
 					say "     She gives you some quick directions to the [bold type]Police Station Twelve[roman type] and tells you to stop by when you get a chance.";
 					now dobielibido is -100;
 					now fightoutcome is 19;
-					now Police Station Twelve is known;
+					AddNavPoint Police Station Twelve;
 					move Alexandra to Police Station Twelve;
 					now HP of Alexandra is 50;
 					now area entry is "Nowhere";
@@ -114,7 +114,7 @@ to say losetodobie1:		[low-lust player loss]
 				say "     She pours some water from a thermos into the lid and passes it to you. 'Don't worry, it's safe,' she says, drinking down the rest. 'Look, you're the first stable person I've seen in days. You try to keep it together, please. When this is done, I want to know that I've gotten at least one person out of this mess. I'm holed up in what's left of my station. You should come by sometime. I'd really appreciate the company.'";
 				say "     She gives you some quick directions to the [bold type]Police Station[roman type] and tells you to stop by when you get a chance.";
 				now dobielibido is -100;
-				now Police Station Twelve is known;
+				AddNavPoint Police Station Twelve;
 				now HP of Alexandra is 50;
 				now area entry is "Nowhere";
 				increase score by 20;

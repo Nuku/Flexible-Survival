@@ -5267,7 +5267,7 @@ carry out linkactioning:
 	linkaction noun;
 
 linkcheck is a person that varies.[@Tag:NotSaved]
-The linkaction of a person is usually "Possible Actions: [if number of entries of conversation of linkcheck > 0][link]talk[as]talk [linkcheck][end link], [end if][link]smell[as]smell [linkcheck][end link][if linkcheck is companion of Player], [link]dismiss[as]dismiss[end link][else], [link]fuck[as]fuck [linkcheck][end link][end if][line break]";
+The linkaction of a person is usually "Possible Actions: [if number of entries of conversation of linkcheck > 0][link]talk[as]talk [linkcheck][end link], [end if][link]smell[as]smell [linkcheck][end link][if linkcheck is companion of Player], [link]dismiss[as]dismiss[end link][end if], [link]fuck[as]fuck [linkcheck][end link][line break]";
 
 to linkaction (x - Person):
 	now linkcheck is x;
@@ -9177,7 +9177,7 @@ to say silent_start:
 	if gsbm is true: [Blind mode alteration]
 		increase score by 100;
 		now blindmode is true;
-	now Zephyr Lobby is known;
+	AddNavPoint Zephyr Lobby;
 	WaitLineBreak;
 
 to say set_invcolumns:

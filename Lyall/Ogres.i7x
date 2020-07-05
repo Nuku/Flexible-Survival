@@ -195,8 +195,7 @@ Instead of resolving a Ogre Encounter:
 			WaitLineBreak;
 			say "     You just nod in agreement as he rambles on. You ask him about the Ogre leader, and he gives a brief and vague explanation that really doesn't explain anything, and leaves you with more questions and no answers. In unison, the ogres yawn and hiccup. Clearly tired, probably from drinking so much. You ask them if they'd like you to leave. 'You're more than welcome to stay here,' Gurke says cheerfully, 'But we're just going straight to sleep, so if you stay, you can't have any fun with us.' He runs a finger across the outline of his meaty cock while talking, 'But feel free to stop on by some time I'm sure we can make time for more stories and fun.' With that, he gives his bulge a nice squeeze and wiggles it the best he can through his underwear. You wave goodbye to them as you stand up and begin to walk away.";
 			now Resolution of Ogre Encounter is 8; [encountered them in their camp]
-			now Ogre's Camp is known;
-			say "     [bold type]You can now navigate back to the 'Ogre's Camp'";
+			AddNavPoint Ogre's Camp;
 		else:
 			LineBreak;
 			say "     Deciding that it's not worth your time, you choose to ignore whatever is going on over there and walk away. You'll make sure to avoid them in the future too.";
