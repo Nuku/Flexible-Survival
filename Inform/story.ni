@@ -6601,6 +6601,7 @@ Include Homo Sapiens by Wahn.
 Include Horny Doctor by Stripes.
 Include Horse-Hung Nerd by Wahn.
 Include Horseman by Sarokcat n Verath.
+Include Horsemazon by Kirov.
 Include Hulking Cheerleader by Wahn.
 Include Human Infections by Wahn.
 Include Hydra Beast by Stripes.
