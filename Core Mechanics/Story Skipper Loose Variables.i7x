@@ -59,6 +59,8 @@ to VariableSave:
 		now CurrentVariableName is Name entry;
 		if debug is at level 10:
 			say "Stashing variable [CurrentVariableName].";
+		[if debug is at level 10:
+			say "Stashing variable [CurrentVariableName].";]
 		if Type Entry is "text":
 			TextVariableSave;
 		else if Type Entry is "number":
@@ -1501,6 +1503,26 @@ to NumberVariableSave:
 			now NumberVarValue entry is KyrverthStage;
 		-- "KyrverthTimer":
 			now NumberVarValue entry is KyrverthTimer;
+		-- "Kyrverthitemget":
+			now NumberVarValue entry is KyrverthItemGet;
+		-- "KyrverthItemReturned":
+			now NumberVarValue entry is KyrverthItemReturned;
+		-- "KyrverthNutGrowth":
+			now NumberVarValue entry is KyrverthNutGrowth;
+		-- "KyrverthSpikeGrowth":
+			now NumberVarValue entry is KyrverthSpikeGrowth;
+		-- "KyrverthWingType":
+			now NumberVarValue entry is KyrverthWingType;
+		-- "KyrverthCockType":
+			now NumberVarValue entry is KyrverthCockType;
+		-- "KyrverthLockoutTimer":
+			now NumberVarValue entry is KyrverthLockoutTimer;
+		-- "KyrverthEndingTimer":
+			now NumberVarValue entry is KyrverthEndingTimer;
+		-- "KyrverthBodyChanged":
+			now NumberVarValue entry is KyrverthBodyChanged;
+		-- "KyrverthPanicWitnessed":
+			now NumberVarValue entry is KyrverthPanicWitnessed;
 		-- "labhost":
 			now NumberVarValue entry is labhost;
 		-- "labtimerA":
@@ -3312,6 +3334,14 @@ to TruthVariableSave:
 			now TruthVarValue entry is kristentf3fuck;
 		-- "ktcockmatch":
 			now TruthVarValue entry is ktcockmatch;
+		-- "KyrverthItemStealable":
+			now TruthVarValue entry is KyrverthItemStealable;
+		-- "KyrverthItemTaken":
+			now TruthVarValue entry is KyrverthItemTaken;
+		-- "KyrverthQuestHairGiven":
+			now TruthVarValue entry is KyrverthQuestHairGiven;
+		-- "KyrverthUsedArtifact":
+			now TruthVarValue entry is KyrverthUsedArtifact;
 		-- "LarissaTailed":
 			now TruthVarValue entry is LarissaTailed;
 		-- "LarissaWinged":
@@ -5153,6 +5183,26 @@ to VariableNumberLoad:
 					now KyrverthStage is numberVarValue entry;
 				-- "KyrverthTimer":
 					now KyrverthTimer is numberVarValue entry;
+				-- "Kyrverthitemget":
+					now KyrverthItemGet is NumberVarValue entry;
+				-- "KyrverthItemReturned":
+					now KyrverthItemReturned is NumberVarValue entry;
+				-- "KyrverthNutGrowth":
+					now KyrverthNutGrowth is NumberVarValue entry;
+				-- "KyrverthSpikeGrowth":
+					now KyrverthSpikeGrowth is NumberVarValue entry;
+				-- "KyrverthWingType":
+					now KyrverthWingType is NumberVarValue entry;
+				-- "KyrverthCockType":
+					now KyrverthCockType is NumberVarValue entry;
+				-- "KyrverthLockoutTimer":
+					now KyrverthLockoutTimer is NumberVarValue entry;
+				-- "KyrverthEndingTimer":
+					now KyrverthEndingTimer is NumberVarValue entry;
+				-- "KyrverthBodyChanged":
+					now KyrverthBodyChanged is NumberVarValue entry;
+				-- "KyrverthPanicWitnessed":
+					now KyrverthPanicWitnessed is NumberVarValue entry;
 				-- "labhost":
 					now labhost is numberVarValue entry;
 				-- "labtimerA":
@@ -6977,6 +7027,14 @@ to VariableTruthLoad:
 					now kristentf3fuck is TruthVarValue entry;
 				-- "ktcockmatch":
 					now ktcockmatch is TruthVarValue entry;
+				-- "KyrverthItemStealable":
+					now KyrverthItemStealable is TruthVarValue entry;
+				-- "KyrverthItemTaken":
+					now KyrverthItemTaken is TruthVarValue entry;
+				-- "KyrverthQuestHairGiven":
+					now KyrverthQuestHairGiven is TruthVarValue entry;
+				-- "KyrverthUsedArtifact":
+					now KyrverthUsedArtifact is TruthVarValue entry;
 				-- "LarissaTailed":
 					now LarissaTailed is TruthVarValue entry;
 				-- "LarissaWinged":
