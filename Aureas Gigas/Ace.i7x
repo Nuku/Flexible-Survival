@@ -4,6 +4,10 @@ Version 1 of Ace by Aureas Gigas begins here.
 VanessaAceInteraction is a number that varies. VanessaAceInteraction is usually 0.
 SnowAceInteraction is a number that varies. SnowAceInteraction is usually 0.
 
+Table of GameEventIDs (continued)
+Object	Name
+Refueling	"Refueling"
+
 Refueling is a situation.
 The Prereq1 of Refueling is Avian Tent.
 The Prereq1Resolution of Refueling is { 1, 2 }.
@@ -73,7 +77,7 @@ Instead of resolving a Jetlagged:
 	say "     Deciding that some lighthearted conversation is needed, Ace shares a story of his youth in the Pacific northwest. And how one when he was fishing at lake with his family he was reeling in a whopper of a trout when an osprey snatched the fish out of the water breaking the line and leaving a feather in its wake. Taking the feather out of one of his pockets, the fighter pilot surmises, 'Maybe this good luck charm is what shaped my current form. Not that I'm complaining, I think my body works well for me.' You begin to feel restless, which can be sensed by stud. 'You seem like you're itching to get back on the trail. I'll see you out.' Exiting the tent, the former pilot states, 'I have to travel to work out some deals with some seagulls at the beach trading supplies for food. I might see you out and about.' He then moves close and whispers, 'And if you ever in the mood for the type of fun that Gray and Izzy have, I offer my services.' He then gives you happy parting words.";
 	WaitLineBreak;
 	move player to Staghorn;
-	now Staghorn is known;
+	AddNavPoint Staghorn;
 	now battleground is "void";
 	now HP of Ace is 2;
 	now Jetlagged is resolved;
@@ -94,6 +98,41 @@ object	name
 Ace	"Ace"
 
 Ace is a person. Ace is in Staghorn.
+ScaleValue of Ace is 3. [human sized]
+Body Weight of Ace is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Ace is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Ace is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Ace is 3. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Ace is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Ace is 3. [length in inches]
+Breast Size of Ace is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Ace is 2. [count of nipples]
+Asshole Depth of Ace is 8. [inches deep for anal fucking]
+Asshole Tightness of Ace is 1. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Ace is 1. [number of cocks]
+Cock Girth of Ace is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Ace is 8. [length in inches]
+Ball Count of Ace is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Ace is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Ace is 0. [number of cunts]
+Cunt Depth of Ace is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Ace is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Ace is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Ace is false.
+PlayerRomanced of Ace is false.
+PlayerFriended of Ace is false.
+PlayerControlled of Ace is false.
+PlayerFucked of Ace is false.
+OralVirgin of Ace is false.
+Virgin of Ace is true.
+AnalVirgin of Ace is true.
+PenileVirgin of Ace is false.
+SexuallyExperienced of Ace is true.
+TwistedCapacity of Ace is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Ace is true. [steriles can't knock people up]
+MainInfection of Ace is "Human". [since there is no fitting infection for him, he's sterile for now]
 The description of Ace is "[acedesc]".
 The conversation of Ace is { "Skypilot!" }.
 the scent of the Ace is "The avian has a strangely masculine scent that reminds you of the sea.".

@@ -92,7 +92,7 @@ Instead of resolving Another Researcher:
 	now HP of Sam is 1;
 	increase score by 10;
 	move player to Mini-Lab;
-	now Mini-Lab is known;
+	AddNavPoint Mini-Lab;
 	now battleground is "void";
 	now Another Researcher is resolved;
 
@@ -240,9 +240,9 @@ to say SamTalk:
 		say "     'I've really got a lot on my plate here with trying to deal with all the tests they need me to take care of now that I'm on my own. Rick and I used to take shifts, but now I've got to do it all. So I was hoping I could get you to give me a hand. There's some tests that they want me to run on some samples from the City Zoo. Rick was working that area when he decided it'd be more fun to just join the fun full-time. I'd lose too much time traveling back and forth out there to be able to keep up with the rest of the work. They want samples of cheetah milk and rhino cum, though I'll make some vials out of it when I'm done.";
 		if Zoo Entrance is unknown:
 			say "     'I haven't made a trip out there yet myself, but he did tell me the route he found to get there. It should be fairly safe and let you avoid the really unsafe or blocked sections.'";
-			now Zoo Entrance is known;
+			AddNavPoint Zoo Entrance;
 		say "     'I've got some extra supplies. I can give you some if you'll gather two samples of both cheetah milk and rhino cum. I'd really appreciate it. Here, you can even take this bottle of water as a down payment.' Deciding it might be a good way to get some extra supplies, you agree to give it a shot. In addition, helping Sam finish up might be your ticket out of this whole mess if you can tag along with him.";
-		increase carried of water bottle by 1;
+		ItemGain water bottle by 1;
 		now HP of Sam is 2;
 	else if HP of Sam is 2:
 		if carried of cheetah milk < 2 or carried of rhino cum < 2:
@@ -251,30 +251,26 @@ to say SamTalk:
 			else:
 				say "     [one of]'I want to thank you for giving me a hand with this. I don't think I could finish on my own.'[or]'I've got some other tests to run, but then I've got to go right back out and find a few more critters to fill out my quota.'[or]'I wouldn't have considered messing around with a guy before this, but I must say some of those males out there can be a lot of fun.'[or]'Some of those mutants out there are actually pretty sexy. Once you learn to overlook stuff like fur or scales, you can see that there's some really hot ladies (and dudes) out there.'[or]'There's such a wild mix of creatures out there. It's getting kind of fun finding them and just having some wild sex. You should try letting a few of them win more often.'[or]'This resistance treatment's been a big help since I don't have to fight off all the creatures. Though I do have to shoo away those I've already gotten samples from or I don't have the time and energy left to have fun when I finally track down a new one I need.'[or]'I think I'm in the mood to find a [if a random chance of 1 in 3 succeeds]herm[else if a random chance of 1 in 2 succeeds]female[else]male[end if] next time. Hopefully there's one around that I haven't already got.'[or]'It's getting harder to track down creatures I haven't already gotten enough samples from,' he says, motioning to wide array of small vials on the racks.[at random]";
 		else:
-			delete cheetah milk;
-			delete cheetah milk;
-			delete rhino cum;
-			delete rhino cum;
+			ItemLoss cheetah milk by 2;
+			ItemLoss rhino cum by 2;
 			say "     Sam takes the samples you've brought and sets them on the table. 'Wonderful, [if Player is female]babe[else]man[end if]. This is a big help. I'm going to get started on these tests right away. Next stuff I'm going to need is some gel from those jelly-people in the red light district of town. There's three different kinds of them - pink, blue and purple - and I'll need a sample from each of them. Got to analyze what makes them different. And here, take this stuff as a reward for helping me out,' he adds, handing you some dried food and another bottle of water.";
 			if Entrance to the Red Light District is unknown:
 				say "     'Since you haven't been there before - let me tell you - that place is really wild. I mean, I had lots of fun there and all gathering nanite samples, but the creatures there can be extra intense. I was really tempted to go back and visit that tigress in the alley again. She was quite the ride and well worth the milk I gave her.' He then proceeds to show you a route into the city's red light district.";
-				now Entrance to the Red Light District is known;
-			increase carried of food by 1;
-			increase carried of water bottle by 1;
+				AddNavPoint Entrance to the Red Light District;
+			ItemGain food by 1;
+			ItemGain water bottle by 1;
 			increase score by 20;
 			now HP of Sam is 3;
 	else if HP of Sam is 3:
 		if pink gel is owned and blue gel is owned and purple gel is owned:
-			delete pink gel;
-			delete blue gel;
-			delete purple gel;
-			say "     You set down the samples of gel you'd collected on the work table. 'Awesome! That's another one of the tests on the list I can finish off. Let's see, how about you grab me some eagle feathers next? I'll need at least two of them, I think. Those eagles are flying out over the Dry Plains to the east of the city.'";
-			if Dry Plains is unknown:
-				say "     'Things are pretty open out there with few buildings still left standing. It used to be mostly suburbs and small ranches, but something's making them all collapse really quickly. Don't expect to find as much going on out there, but it's pretty open so you shouldn't have too much trouble finding some of those eagles.'";
-				now Dry Plains is known;
+			ItemLoss pink gel by 1;
+			ItemLoss blue gel by 1;
+			ItemLoss purple gel by 1;
+			say "     You set down the samples of gel you'd collected on the work table. 'Awesome! That's another one of the tests on the list I can finish off. Let's see, how about you grab me some eagle feathers next? I'll need at least two of them, I think. Those eagles are flying out over the Dry Plains to the east of the city. Things are pretty open out there with few buildings still left standing. It used to be mostly suburbs and small ranches, but something's making them all collapse really quickly. Don't expect to find as much going on out there, but it's pretty open so you shouldn't have too much trouble finding some of those eagles.'";
+			AddNavPoint Dry Plains;
 			say "     He digs around in his supplies and pulls some stuff out for you. 'Here, how about some snacks this time? Some sugar'll keep you going.'";
-			increase carried of soda by 1;
-			increase carried of chips by 1;
+			ItemGain soda by 1;
+			ItemGain chips by 1;
 			increase score by 20;
 			now HP of Sam is 4;
 		else:
@@ -446,12 +442,12 @@ SamTest is an action applying to nothing.
 understand "Sam Test" as SamTest.
 
 carry out SamTest:
-	increase carried of cheetah milk by 2;
-	increase carried of rhino cum by 2;
-	increase carried of pink gel by 1;
-	increase carried of blue gel by 1;
-	increase carried of purple gel by 1;
-	increase carried of eagle feather by 2;
+	ItemGain cheetah milk by 2 silently;
+	ItemGain rhino cum by 2 silently;
+	ItemGain pink gel by 1 silently;
+	ItemGain blue gel by 1 silently;
+	ItemGain purple gel by 1 silently;
+	ItemGain eagle feather by 2 silently;
 
 
 Section 4 - Confrontation at the Mini-Lab
@@ -588,10 +584,10 @@ to assaultonminilab:
 	else if calcnumber is 3:
 		say "     Deciding it's every [if Player is female]woman for herself[else]man for himself[end if], you rush over to Sam's supplies and grab a quick armload and make a run for it. As you do this, Sam calls out with a mix of pleas for help and curses for leaving him, but you turn a deaf ear, rushing up the steps and out of the basement. Leaving Sam to his feline fate, you head back to the library to consider your next course of action.";
 		WaitLineBreak;
-		increase carried of food by 1;
-		increase carried of water bottle by 1;
-		increase carried of chips by 1;
-		increase carried of soda by 1;
+		ItemGain food by 1;
+		ItemGain water bottle by 1;
+		ItemGain chips by 1;
+		ItemGain soda by 1;
 		SanLoss 12;
 		now HP of Sam is 100;
 		now Sam is nowhere;
@@ -1117,7 +1113,7 @@ to say SamShroom:
 					LineBreak;
 					say "     You pull out a mushroom that you harvested from the site in question and give it to the scientist. 'Interesting... Very interesting...' Sam says as they take the shroom and slowly turn it around to examine the glowing green fungus. 'I would love to have some more of these to run tests on, but I imagine that it would be a major hassle to constantly run back and forth just to sate my curiosity. Hmm... I wonder...' Sam looks over to one of the vial stashes lying around and sifts through it, extracting one vial filled with a murky-white liquid before going outside. Curious, you follow the taur to the back of the shed where there are several large planter boxes filled with soil. Sam puts the mushroom into one of the boxes, completely covering it with dirt, and then pours the vial's contents where the fungus was planted.";
 					say "     You and Sam stare at the planter box for several minutes, and to your surprise, several tiny green mushrooms eventually pop up from the soil. Sam chuckles at your amazement and explains, 'I used extracted nutrients from some of the rapidly growing plant life that have been popping up in some parts of the city.' Sam looks back to the mushrooms, which seemed to have stopped growing once they were about half the size of the original. 'I'm glad to see that my little gardening project works, and although it will take a bit longer before this batch fully matures, it looks like I'll be able to grow my own mushrooms here to fuel my research. Thank you for bringing this incredible find to me. Give me a moment to study them, and I'll share whatever information that I can get.'";
-					decrease carried of glowing mushroom by 1;
+					ItemLoss glowing mushroom by 1;
 					now hunger of Sam is 10;
 				else:	[Sam goes searching for their own shrinking shrooms]
 					say "[SamShroomSearch]";
@@ -1135,7 +1131,7 @@ to say SamShroom:
 	else if hunger of Sam is 20:	[Sam gives player a shrinking shroom]
 		say "     You ask if Sam can give you a shrinking shroom. 'Sure thing. Here you go.' Sam takes out a shrinking shroom from a covered storage container and then hands it to you with a smile.";
 		now hunger of Sam is 11;
-		increase carried of glowing mushroom by 1;
+		ItemGain glowing mushroom by 1;
 	else:	[Sam doesn't have a shrinking shroom to give to player]
 		say "     You ask if Sam can give you a shrinking shroom. 'Sorry, but I've used all of the shrinking shrooms on experiments and tests,' Sam apologizes. 'I'll try to save you one from the next batch.'";
 

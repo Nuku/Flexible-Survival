@@ -433,8 +433,8 @@ carry out riotshieldProtectMode:
 		say "     You lower your shield and look at it, contemplating how you can defend yourself instead of using it as a blunt weapon.";
 	else:
 		say "     You look at your shield, contemplating how you can defend yourself instead of using it as a blunt weapon.";
-	decrease carried of zephyr bashing riot shield by 1;
-	increase carried of zephyr protective riot shield by 1;
+	ItemLoss zephyr bashing riot shield by 1;
+	ItemGain zephyr protective riot shield by 1;
 
 
 Part 2 - zephyr protective riot shield
@@ -486,8 +486,8 @@ carry out riotshieldAttackMode:
 		say "     You lower your shield and look at it, contemplating how you can use it to bash people out of the way, making it a blunt weapon.";
 	else:
 		say "     You look at your shield, contemplating how you can use it to bash people out of the way, making it a blunt weapon.";
-	decrease carried of zephyr protective riot shield by 1;
-	increase carried of zephyr bashing riot shield by 1;
+	ItemLoss zephyr protective riot shield by 1;
+	ItemGain zephyr bashing riot shield by 1;
 
 
 

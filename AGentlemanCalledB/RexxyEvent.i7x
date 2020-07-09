@@ -43,7 +43,7 @@ Instead of Resolving a Forced Adoption:
 		say "     She glances around nervously as she walks, when suddenly another figure, a large powerful looking male retriever, steps out of a nearby alley into her path, cutting her off. The retriever girl runs into him and stumbles backward, falling to the ground and dropping whatever she was carrying. Without even acknowledging the male's presence, she begins scrambling around on all fours, looking for her prize, until she comes face to face with his erect canine cock. Slowly she looks up over his body until she is staring lustfully into his eyes. The large male then reaches down and picks up the entranced girl, carrying her back down the alley he emerged from as she whimpers needfully.";
 		WaitLineBreak;
 		say "     Once you are certain the pair is gone you get up from your hiding place and walk over to where they were standing. As you glance around you spot the object the retriever girls was so obsessed with, an unusual sex toy shaped like a canine cock on one end with a bone-shaped handle on the other. Against your better judgment, you feel compelled to pick the strange toy up, examining it more closely momentarily before slipping it into your bag and heading on your way, even as faint thoughts of doggie sex begin to creep into your mind.";
-		increase carried of Dog Bone by 1;
+		ItemGain Dog Bone by 1;
 		now HP of Rex is 1;
 	else if HP of Rex is 4:
 		if Dog Bone is owned:
@@ -52,10 +52,9 @@ Instead of Resolving a Forced Adoption:
 			WaitLineBreak;
 			say "     The large male breaks off the kiss and starts to introduce himself. You try to reign in your mind, struggling to control the growing urges of the retriever bitch clawing at your thoughts, but in doing so you barely managed to hear any of what he says, other than his name, Rex. While he looks you over, a smile crosses his muzzle as he spots the doggie dildo clenched in both hands against your chest.";
 			say "     'I see that wonderful bone has brought another lovely bitch right to my doorstep. Why don't you come inside so we can start training you to be a proper pet?' he says, wrenching the bone from your grasp as he finishes. He then turns to a nearby house, motioning you towards the large doggy door as he enters through the front.";
-			delete Dog Bone;
-			now Rex's Place is known;
+			ItemLoss Dog Bone by 1;
+			AddNavPoint Rex's Place;
 			now HP of Rex is 5;
-			say "[bold type]Rex's Place is now known.[roman type][line break]";
 			now Resolution of Forced Adoption is 1; [met Rex]
 			now Forced Adoption is resolved;
 		else:
@@ -261,7 +260,7 @@ instead of conversing the Rex:
 				now Retriever Girl is tamed;
 				add "Tamed" to Traits of Retriever Girl;
 				move Karen to Breakroom;
-				say "     (The Retriever Girl is now tamed! You can make her your active pet by typing [bold type][link]pet Retriever Girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Retriever Girl[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+				say "     (Karen is now a possible companion! You can make her your active companion by typing [bold type][link]companion Karen[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Karen[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 				now carried of Dog Treats is 0;
 				now Libido of Karen is turns;
 				now HP of Rex is 50;

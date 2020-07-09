@@ -42,7 +42,9 @@ Figure of Donkeyman_soft_icon is the file "Donkeyman_soft.jpg".
 Figure of Donkeyman_hard_icon is the file "Donkeyman_hard.jpg".
 Figure of Dracovixentaur_icon is the file "dracovixentaur_ig.jpg".
 Figure of MagicDrake_icon is the file "FS_Dragoness.jpg".
+Figure of ElvenHunter_Encounter_icon is the file "ElvenHunter_Encounter.jpg".
 Figure of ElvenHunter_icon is the file "ElvenHunter.jpg".
+Figure of ElvenHunter_hard_icon is the file "ElvenHunter_hard.jpg".
 Figure of Ewe_icon is the file "Ewe.jpg".
 Figure of Feline_F1_icon is the file "FS_SmallLioness_01.jpg".
 Figure of Feline_F2_icon is the file "FS_SmallLioness_02.jpg".
@@ -150,6 +152,8 @@ Figure of Wolftaur_soft_icon is the file "Wolftaur_soft.jpg".
 Figure of Werewolf_female_icon is the file "Werewolf.jpg".
 Figure of Wildcat_icon is the file "wildcat_ig.jpg".
 Figure of Wood_Elf_icon is the file "Wood Elf.jpg".
+Figure of WrestlingWolf_hard_icon is the file "Wrestling Wolf_hard.jpg".
+Figure of WrestlingWolf_clothed_icon is the file "Wrestling Wolf_clothed.jpg".
 Figure of Wyvern_female_icon is the file "Wyvern_female.jpg".
 Figure of YamatoDragon_red_hard_icon is the file "YamatoDragon_red_hard.jpg".
 Figure of YamatoDragon_red_soft_icon is the file "YamatoDragon_red_soft.jpg".
@@ -298,6 +302,7 @@ Figure of Hayato_icon is the file "Hayato_reading.jpg".
 Figure of Harold_icon is the file "Harold.jpg".
 Figure of Harold_naked_icon is the file "Harold_naked.jpg".
 Figure of Helen_naked_icon is the file "Helen.png".
+Figure of Hobo_icon is the file "Hobo.jpg".
 Figure of Honey_icon is the file "Honey_ig.jpg".
 Figure of James_icon is the file "james_ig.jpg".
 Figure of Janice_icon is the file "FS_Janice_ig.jpg".
@@ -501,7 +506,28 @@ Figure of Map_Library_2F_West_icon is the file "Map_Library_2F_West.jpg".
 Figure of Map_Library_2F_North_icon is the file "Map_Library_2F_North.jpg".
 Figure of Map_Library_2F_East_icon is the file "Map_Library_2F_East.jpg".
 Figure of Map_Library_2F_South_icon is the file "Map_Library_2F_South.jpg".
-
+Figure of Map_RedLight_Nopower_1_icon is the file "Map_RedLight_Nopower_1.jpg".
+Figure of Map_RedLight_Nopower_2_icon is the file "Map_RedLight_Nopower_2.jpg".
+Figure of Map_RedLight_Nopower_3_icon is the file "Map_RedLight_Nopower_3.jpg".
+Figure of Map_RedLight_Nopower_4_icon is the file "Map_RedLight_Nopower_4.jpg".
+Figure of Map_RedLight_Nopower_5_icon is the file "Map_RedLight_Nopower_5.jpg".
+Figure of Map_RedLight_Nopower_6_icon is the file "Map_RedLight_Nopower_6.jpg".
+Figure of Map_RedLight_Nopower_7_icon is the file "Map_RedLight_Nopower_7.jpg".
+Figure of Map_RedLight_Nopower_8_icon is the file "Map_RedLight_Nopower_8.jpg".
+Figure of Map_RedLight_Nopower_9_icon is the file "Map_RedLight_Nopower_9.jpg".
+Figure of Map_RedLight_Nopower_10_icon is the file "Map_RedLight_Nopower_10.jpg".
+Figure of Map_RedLight_Nopower_11_icon is the file "Map_RedLight_Nopower_11.jpg".
+Figure of Map_RedLight_1_icon is the file "Map_RedLight_1.jpg".
+Figure of Map_RedLight_2_icon is the file "Map_RedLight_2.jpg".
+Figure of Map_RedLight_3_icon is the file "Map_RedLight_3.jpg".
+Figure of Map_RedLight_4_icon is the file "Map_RedLight_4.jpg".
+Figure of Map_RedLight_5_icon is the file "Map_RedLight_5.jpg".
+Figure of Map_RedLight_6_icon is the file "Map_RedLight_6.jpg".
+Figure of Map_RedLight_7_icon is the file "Map_RedLight_7.jpg".
+Figure of Map_RedLight_8_icon is the file "Map_RedLight_8.jpg".
+Figure of Map_RedLight_9_icon is the file "Map_RedLight_9.jpg".
+Figure of Map_RedLight_10_icon is the file "Map_RedLight_10.jpg".
+Figure of Map_RedLight_11_icon is the file "Map_RedLight_11.jpg".
 
 [emap - special]
 Figure of emap_special_signalnotfound_icon is the file "emap_special_signalnotfound.png".
@@ -779,7 +805,9 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Elijah_good_face"	Figure of Elijah_good_face_icon	"Banni"	g-black	"normal"
 "Elijah_virgin"	Figure of Elijah_virgin_icon	"Banni"	g-black	"normal"
 "Elijah_good_naked"	Figure of Elijah_good_naked_icon	"Banni"	g-black	"normal"
-"Elven Hunter"	Figure of ElvenHunter_icon	"Aosuka"	g-black	"normal"
+"Elven Hunter Encounter"	Figure of ElvenHunter_Encounter_icon	"Aosuka"	g-black	"normal"
+"Elven Hunter"	Figure of ElvenHunter_icon	"Vashaa"	g-black	"normal"
+"Elven Hunter hard"	Figure of ElvenHunter_hard_icon	"Vashaa"	g-black	"normal"
 "Eric_down"	Figure of Eric_down_icon	"Lytta"	g-black	"normal"
 "Eric_clothed"	Figure of Eric_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Eric_face"	Figure of Eric_face_icon	"SineAlas"	g-black	"normal"
@@ -830,6 +858,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Hellfire Demon No Harness"	Figure of HellfireDemon_noharness_icon	"Gherod"	g-white	"normal"
 "Hellfire Demon Soft No Harness"	Figure of HellfireDemon_softnoharness_icon	"Gherod"	g-white	"normal"
 "Hellfire Demon Hard No Harness"	Figure of HellfireDemon_hardnoharness_icon	"Gherod"	g-white	"normal"
+"Hobo"	Figure of Hobo_icon	"Conchi"	g-white	"normal"
 "Blue Gryphon Herm"	Figure of BlueGryphon_icon	"dbd"	g-black	"normal"
 "Blue Gryphon hard"	Figure of BlueGryphon_hard_icon	"Vashaa"	g-white	"normal"
 "Blue Gryphon soft"	Figure of BlueGryphon_soft_icon	"Vashaa"	g-white	"normal"
@@ -898,7 +927,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Malakhi"	Figure of Malakhi_icon	"Jahi"	g-black	"normal"
 "Malakhi & Barnabas"	Figure of Malakhi_Barnabas_icon	"Jahi"	g-black	"normal"
 "Malakhi & Kano"	Figure of Malakhi_Kano_icon	"Jahi"	g-black	"normal"
-"Mall Map"	Figure of Map_Smith_Haven_Mall_icon	"Anonymous"	g-black	"inline_only"
+"Mall Map"	Figure of Map_Smith_Haven_Mall_icon	"Anonymous"	g-black	"normal"
 "Mammoth"	Figure of Mammoth_icon	"Boo3"	g-white	"normal"
 "Mammoth_CV1"	Figure of Mammoth_CV1_icon	"Boo3"	g-white	"normal"
 "Mammoth_CV2"	Figure of Mammoth_CV2_icon	"Boo3"	g-white	"normal"
@@ -1066,6 +1095,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Wolftaur_hard"	Figure of Wolftaur_hard_icon	"Vashaa"	g-white	"normal"
 "Wolftaur_soft"	Figure of Wolftaur_soft_icon	"Vashaa"	g-white	"normal"
 "Wood Elf"	Figure of Wood_Elf_icon	"Vashaa"	g-White	"normal"
+"Wrestling Wolf hard"	Figure of WrestlingWolf_hard_icon	"Vashaa"	g-White	"normal"
+"Wrestling Wolf clothed"	Figure of WrestlingWolf_clothed_icon	"Vashaa"	g-White	"normal"
 "Wyvern_female"	Figure of Wyvern_female_icon	"Anonymous"	g-white	"normal"
 "Yatur_clothed"	Figure of Yatur_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Yatur_naked"	Figure of Yatur_naked_icon	"Kupo Klein"	g-white	"normal"
@@ -1135,6 +1166,29 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Map Library_2F_North"	Figure of Map_Library_2F_North_icon	"Goncalo"	g-black	"normal"
 "Map Library_2F_South"	Figure of Map_Library_2F_South_icon	"Goncalo"	g-black	"normal"
 "Map Library_2F_East"	Figure of Map_Library_2F_East_icon	"Goncalo"	g-black	"normal"
+"Map Redlight Nopower 1"	Figure of Map_RedLight_Nopower_1_icon	"Goncalo"	g-black	"normal"
+"Map Redlight Nopower 2"	Figure of Map_RedLight_Nopower_2_icon	"Goncalo"	g-black	"normal"
+"Map Redlight Nopower 3"	Figure of Map_RedLight_Nopower_3_icon	"Goncalo"	g-black	"normal"
+"Map Redlight Nopower 4"	Figure of Map_RedLight_Nopower_4_icon	"Goncalo"	g-black	"normal"
+"Map Redlight Nopower 5"	Figure of Map_RedLight_Nopower_5_icon	"Goncalo"	g-black	"normal"
+"Map Redlight Nopower 6"	Figure of Map_RedLight_Nopower_6_icon	"Goncalo"	g-black	"normal"
+"Map Redlight Nopower 7"	Figure of Map_RedLight_Nopower_7_icon	"Goncalo"	g-black	"normal"
+"Map Redlight Nopower 8"	Figure of Map_RedLight_Nopower_8_icon	"Goncalo"	g-black	"normal"
+"Map Redlight Nopower 9"	Figure of Map_RedLight_Nopower_9_icon	"Goncalo"	g-black	"normal"
+"Map Redlight Nopower 10"	Figure of Map_RedLight_Nopower_10_icon	"Goncalo"	g-black	"normal"
+"Map Redlight Nopower 11"	Figure of Map_RedLight_Nopower_11_icon	"Goncalo"	g-black	"normal"
+"Map Redlight 1"	Figure of Map_RedLight_1_icon	"Goncalo"	g-black	"normal"
+"Map Redlight 2"	Figure of Map_RedLight_2_icon	"Goncalo"	g-black	"normal"
+"Map Redlight 3"	Figure of Map_RedLight_3_icon	"Goncalo"	g-black	"normal"
+"Map Redlight 4"	Figure of Map_RedLight_4_icon	"Goncalo"	g-black	"normal"
+"Map Redlight 5"	Figure of Map_RedLight_5_icon	"Goncalo"	g-black	"normal"
+"Map Redlight 6"	Figure of Map_RedLight_6_icon	"Goncalo"	g-black	"normal"
+"Map Redlight 7"	Figure of Map_RedLight_7_icon	"Goncalo"	g-black	"normal"
+"Map Redlight 8"	Figure of Map_RedLight_8_icon	"Goncalo"	g-black	"normal"
+"Map Redlight 9"	Figure of Map_RedLight_9_icon	"Goncalo"	g-black	"normal"
+"Map Redlight 10"	Figure of Map_RedLight_10_icon	"Goncalo"	g-black	"normal"
+"Map Redlight 11"	Figure of Map_RedLight_11_icon	"Goncalo"	g-black	"normal"
+
 
 artistcredits is an action applying to nothing.
 
@@ -1175,7 +1229,8 @@ carry out artistcredits:
 	say "     Donkeyman by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Dracovixentaur by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Ebonflame Drake by Anonymous[line break]";
-	say "     Elven Hunter by Aosuka @ y-gallery.net[line break]";
+	say "     Elven Hunter Encounter by Aosuka @ y-gallery.net[line break]";
+	say "     Elven Hunter by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Ewe by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Feline (females) by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Feral Gryphon by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
@@ -1254,6 +1309,7 @@ carry out artistcredits:
 	say "     Wildcat by Strype @ furaffinity.net[line break]";
 	say "     Wolftaur by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Wood Elf by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
+	say "     Wrestling Wolf by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Wyvern Female by Anonymous[line break]";
 	say "     Yamato Dragon by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Yamato Dragoness by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
@@ -1335,6 +1391,7 @@ carry out artistcredits:
 	say "     Helen by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Hayato by Darian821 @ y-gallery.net[line break]";
 	say "     Harold by Hufnaar @ furaffinity.net[line break]";
+	say "     Hobo by Conchi @ https://artisticconch.tumblr.com/[line break]";
 	say "     Honey by SandySchreiber @ furaffinity.net[line break]";
 	say "     James by Anyare @ furaffinity.net[line break]";
 	say "     Janice by Anymouse1968 @ furaffinity.net[line break]";
@@ -1438,6 +1495,7 @@ carry out artistcredits:
 	say "     Mall Map by Anonymous @ -[line break]";
 	say "     City Map by Goncalo @ https://www.artstation.com/beepe/[line break]";
 	say "     Library Maps by Goncalo @ https://www.artstation.com/beepe/[line break]";
+	say "     Red Light District Maps by Goncalo @ https://www.artstation.com/beepe/[line break]";
 
 ArtistBanning is an action applying to nothing.
 

@@ -118,7 +118,11 @@ to DenofthePackEvent:
 	now hp of Cadmea is 1;
 	now resolution of Den of the Pack is 1;
 	now Den of the Pack is resolved;
-	now Sanctuary Alleyway is known;
+	AddNavPoint Sanctuary Alleyway;
+
+Table of GameEventIDs (continued)
+Object	Name
+ArcheTech Warehouse	"ArcheTech Warehouse"
 
 ArcheTech Warehouse is a situation.
 ArcheTech Warehouse is inactive.

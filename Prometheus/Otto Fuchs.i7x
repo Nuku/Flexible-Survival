@@ -162,8 +162,7 @@ to say OttoTalk1: [Small Talk]
 
 to say OttoTalk2: [Ask for medkit]
 	say "     As a doctor, you assume that Otto will be capable of consstructing medkits and should have a ready supply of materials with which to do so, and decide to ask whether he would be able to give you one if he has sufficient for his own needs. Upon hearing your request, he bursts into laughter. 'Medical supplies are quite rare in the city nowadays. Do you assume that I raid the hospital, or perhaps you believe that I break into Zephyr as I definitely won't work for them?' You stand there patiently as he calms his amusement. 'You're in luck, [one of]there was an abandoned supply of military medical equipment that I was given permission to collect some from[or]the Den Mother had some of the wolves bring me a few as payment for my help[or]an anonymous person left me a bag full of them along with a note of gratitude for what I do[at random], so I suppose I can spare you one. Don't use it all at once.' He exits into a side room before returning and handing you a medkit. 'Be careful out there in the city and come back if you need my precious medical supplies again.'";
-	say "[bold type]You gain a medkit![roman type][line break]";
-	increase carried of medkit by 1;
+	ItemGain medkit by 1;
 	now OttoMedkitCounter is 8;
 
 [to say OttoTalk3: [Medical Attention]
@@ -276,8 +275,8 @@ to DoctorThroughtheCityEvent: [Otto relocates to the Green Apartments]
 	WaitLineBreak;
 	say "     It doesn't take you more than ten minutes to reach your destination at the Green Apartments, even with the injured woman. 'Would you like us to carry your bags to your room, doctor?' one of the wolves asks, receiving a nod and a thank you from the middle-aged human. 'If you don't mind me leaving you here, I'll take Emma inside and have a better look at her foot,' Fuchs addresses you and the wolves. 'Your help was invaluable, and once again I am in your debt.' He gives a small bow before aiding the panda through the front door. Genevieve instead opts to give everyone a hug, Argos being given a wink in addition. She turns to face you, 'Dr. Fuchs will be here, should you need him or just want to shelter from the city for a bit. But really, thank you. I wouldn't mind seeing more of you either,' the vulpine says, softly biting her bottom lip. With that, she follows her superior, leaving you with the pack.";
 	say "     'We'll probably be seeing you again in future, I'm sure,' Argos says readying to return to wherever he resides. One of the wolves gives you a salute, much to the amusement of some of his friends. 'I would appreciate it if you had the time to check on Otto every now and again. He's a good man, but he has a tendency to help anyone who needs help. Something to do with the importance of his principles. But as you saw from the outcasts of the hyena gang, some victims have enemies that don't want them saved.' He pats you on the shoulder before dropping to all fours and loping away, followed by his pack-mates. Giving a smile and waving as they leave, you now have to decide what to do next.";
-	move player to green apartment building;
-	now green apartment building is known;
+	move player to Green Apartment Building;
+	AddNavPoint Green Apartment Building;
 	now hp of Otto is 3;
 	now Doctor Through the City is resolved;
 

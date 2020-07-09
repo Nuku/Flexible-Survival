@@ -23,7 +23,7 @@ Instead of resolving a Old Plaza:
 	if player consents:
 		say "     Steeling yourself, you grab a torch and head down into the abyss. Minutes pass as you walk down these stairs, the air temperature drops preciptously to the point that you can start seeing your own breath. [if player is naked]You shiver, wrapping your arms together and lamenting that you decided to wander around the seedy streets of the red light distrcit in the nude.[else]You pull your clothing up tightly, keeping in what warmth you can.[end if] Finally, after what seems like forever you reach the bottom of this stair case. You shudder at the thought walking all the way back up those stairs. Poking your head out from the stairwell, you see a large hallway carved out of the bedrock itself. However, your vision is cut short by a thick fog which obscures anything more than 20 or 30 feet away. This place is giving you the creeps, but you didn't come down here for nothing. Gathering what resolve you have, you enter the ancient catacombs.";
 		move player to Ancient Catacomb Entrance;
-		now Ancient Catacomb Entrance is known;
+		AddNavPoint Ancient Catacomb Entrance;
 		now Old Plaza is resolved;
 	else:
 		say "     This place is too spooky for you, maybe you'll come back later. You begin the treacherous journey back up to the surface.";
@@ -43,13 +43,9 @@ instead of navigating Ritualist Supply Room while (FirstTimeRitualistSupplyRoom 
 	say "     His massive frame intimidates you, you always thought yourself a strong man and most people would agree with you. However, you six foot tall, musucular, yet lithe frame just doesn't compare to the man before you. Your awe inspiried gaze shifts up to his handsome face once again, and you stare into his ocean blue smoldering eyes that glow with magical power as you relish in the feeling that this powerful man wants you. Sinking to your knees begin to polish his mighty 'sword,' the strong taste of his seed soothing you, bringing your signature cocky grin back to the surface. [if WSlevel is 3]Without warning, a strong stream of piss hits you in the face. You sit still in shock breifly before coming back to your senses, dutifully opening your mouth and allowing him to spray you down. A minute passes as he uses you as his personal toilet, leaving your stomach full and covered in his stentch. [end if]The man spins around giving you an eyeful of his shapely ass as he grabs his cloak and tome off one of the nearby shelves. 'Come boy, let's go get you equipment fitting for your new station.' Excitedly, you chase after him eventually walking by his side down the corridor with his spooge dripping down your thighs [if WSlevel is 3]and body glistening with his piss[end if]. Neither of you pay any heed to the unmoving whore on the table, who appears to have passed out from the brutal fuck long ago.";
 	WaitLineBreak;
 	say "     You wake up with a gasp, heart racing as you experienced the rough fucking in what appears to be only a few seconds. Walking become a bit more difficult, your bum feels quite sore but you find it oddly satisfying. [if WSlevel is 3]Interestingly, the cold doesn't bother that much right now as a pleasent warmth emanates from your stomach as if you drank something warm and refreshing.[end if] During your vision, you recall a cross dropping down to the floor near the table. Looking down, you find the cross sitting there covered in dust. You pick up the cross, and find that is it emblazened with a strange black symbol that you are not familiar with. Tucking this into your bag, you feel that it might be useful in the future. You turn your attension to the rest of the stuff in this room and are drawn to the candles in the back of the room. Smelling the candles to find the ones that you fancy, you take a few and put them into your bag. Having collected everything useful, you stop and think of what to do next. You recall the two men left the room and headed to the west, maybe you could explore a bit and find out some more.";
-	LineBreak;
-	say "[bold type]You gain 1 ritual cross![roman type][line break]";
-	LineBreak;
-	say "[bold type]You gain 1 ritual candles![roman type][line break]";
 	increase libido of player by 30.
-	increase carried of Ritual Cross by 1;
-	increase carried of Ritual Candles by 1;
+	ItemGain Ritual Cross by 1;
+	ItemGain Ritual Candles by 1;
 	now FirstTimeRitualistSupplyRoom is false;
 
 [new items added in the Archives]

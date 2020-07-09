@@ -42,9 +42,7 @@ instead of navigating Grey Abbey Library while (Eric is in Bunker and HP of Eric
 	if Player consents: [take it]
 		LineBreak;
 		say "     Clearing your throat, you ask Eric to hand you the book - twice actually, as he doesn't react the first time and just keeps staring at the cover. Only when you repeat yourself does he look up, blinking a few times before focusing on you. With a shrug, he holds out the book and you quickly pack it away into your backpack.";
-		LineBreak;
-		say "[bold type]You gain an ancient tome![roman type][line break]";
-		increase carried of ancient tome by 1;
+		ItemGain ancient tome by 1;
 		if carried of ancient tome > 1:
 			say "     You feel movement in your backpack and pull it off, checking over what might have happened. Strange, didn't you have more than one of these books? Oh well, one is plenty anyways...";
 			now carried of ancient tome is 1;
@@ -68,9 +66,7 @@ after going down from Grey Abbey Library while (Eric is in Bunker and HP of Eric
 	if Player consents: [take the book]
 		LineBreak;
 		say "     Clearing your throat, you ask Eric to hand you the book - and he doesn't react to that at all, almost as if he hadn't heard a word you said. After waiting a moment or two, you finally decide to just take it. Reaching down, you pull the book out from under Eric's nose, closing the cover with a thud and tugging the tome under your arm. 'Hey!' Eric reacts with a slight delay, almost as if he had been in a trance. 'I was reading that, give it back!' the red-headed college student complains, but you tell him in a friendly, but firm, tone that you'll have to check this thing out for yourself first. He reaches out in a bid to snatch the book back, but you keep it out of his reach. Finally, he sits up and gives a sigh, then adds, 'Fine. I'll get something else to read then.' With a somewhat sullen expression on his face, Eric walks off towards the stairwell.";
-		LineBreak;
-		say "[bold type]You gain an ancient tome![roman type][line break]";
-		increase carried of ancient tome by 1;
+		ItemGain ancient tome by 1;
 		if carried of ancient tome > 1:
 			say "     You feel movement in your backpack and pull it off, checking over what might have happened. Strange, didn't you have more than one of these books? Oh well, one is plenty anyways...";
 			now carried of ancient tome is 1;
@@ -113,9 +109,7 @@ after going down from Grey Abbey Library while (Eric is in Bunker and HP of Eric
 			if HP of Eric is 10: [virgin cboy]
 				now HP of Eric is 14; [tentacles took his virginity]
 				now EricVirginityTaken is 7; [impregnated with tentacle spawn]
-			LineBreak;
-			say "[bold type]You gain an ancient tome![roman type][line break]";
-			increase carried of ancient tome by 1;
+			ItemGain ancient tome by 1;
 			if carried of ancient tome > 1:
 				say "     You feel movement in your backpack and pull it off, checking over what might have happened. Strange, didn't you have more than one of these books? Oh well, one is plenty anyways...";
 				now carried of ancient tome is 1;
@@ -142,9 +136,7 @@ after going down from Grey Abbey Library while (Eric is in Bunker and HP of Eric
 				LineBreak;
 				say "     You throw yourself on the ground and look under Eric's bed, coming face to... black mass with an azure blue slitted eye. The creature hisses and seems to recoil from actually being observed, then quickly disintegrates into a cloud of black dust that vanishes into nothingness in a few seconds. Phew, good thing that monsters under people's beds do not like to be looked at! You make doubly sure that it really is gone, halfway crawling under the bed yourself and groping around, then even checking under the bunched up blanket you wrenched off the bed. Relieved that you seem to be alone for the moment, you then stand up again and check on Eric.";
 				say "     He still is in a state of oddly deep sleep, not having woken up from anything that happened so far. You just hope that this will pass given enough time. As there is nothing much else you can do right now, you grab the t-shirt Eric took off before going to sleep and gently dab it at his crotch, wiping away the goop that the creature squirted on him. It could be the reason he is in that sleep-trance after all, and Eric would surely be freaked out if he woke up all slimed up. With a concerned look at his now peaceful face, you cover him with a blanket again and go pick up the tome. It clearly has something to do with all this and you should keep it out of Eric's hands for now.";
-			LineBreak;
-			say "[bold type]You gain an ancient tome![roman type][line break]";
-			increase carried of ancient tome by 1;
+			ItemGain ancient tome by 1;
 			if carried of ancient tome > 1:
 				say "     You feel movement in your backpack and pull it off, checking over what might have happened. Strange, didn't you have more than one of these books? Oh well, one is plenty anyways...";
 				now carried of ancient tome is 1;
@@ -173,7 +165,7 @@ to say TomeUse:
 instead of trading the ancient tome when the current action involves the Eric:
 	if TomeFound is 100: [Eric never looked into it]
 		say "     Pulling your backpack off, you dig around in it and find the thick tome. As you pull it out, Eric steps up and thanks you as he accepts the book. He exchanges some more words in friendly conversation with you, then walks off with the book held tightly to his chest.";
-		decrease carried of ancient tome by 1;
+		ItemLoss ancient tome by 1;
 		now TomeFound is 1; [Eric got the book now]
 	else if TomeFound is 4 or TomeFound is 20: [player took the book after watching Eric be tentacle-fucked or almost tentacle fucked]
 		say "     Just handing the book back to Eric after what you observed might not be such a good idea. You really should talk to him about it first.";
@@ -182,23 +174,23 @@ instead of trading the ancient tome when the current action involves the Eric:
 		now TomeFound is 101; [Eric refuses any further contact with the book]
 	else if TomeFound is 22: [player told Eric he doesn't have the book]
 		say "     Pulling your backpack off, you dig around in it and find the thick tome. As you pull it out, Eric's eyes seem to have an inner glow for a heartbeat or two and he steps up close to you, holding out his hands with a hungry expression. Snatching the book from your grasp, he pulls it tightly to his chest and thanks you, then walks off with a thoughtful expression on his face.";
-		decrease carried of ancient tome by 1;
+		ItemLoss ancient tome by 1;
 		now TomeFound is 97; [player gave Eric the book back after he got almost tentacle-fucked]
 	else if TomeFound is 24: [player told Eric he doesn't have the book (after tentacle sex)]
 		say "     Pulling your backpack off, you dig around in it and find the thick tome. As you pull it out, Eric's eyes seem to have an inner glow for a heartbeat or two and he steps up close to you, holding out his hands with a hungry expression. Snatching the book from your grasp, he pulls it tightly to his chest and thanks you, then walks off with a thoughtful expression on his face.";
-		decrease carried of ancient tome by 1;
+		ItemLoss ancient tome by 1;
 		now TomeFound is 96; [player gave Eric the book back after he got tentacle-fucked]
 	else if TomeFound is 98: [player took the book after Eric was tentacle fucked (unknown to the player) ]
 		say "     Pulling your backpack off, you dig around in it and find the thick tome. As you pull it out, Eric's eyes seem to have an inner glow for a heartbeat or two and he steps up close to you, holding out his hands with a hungry expression. Snatching the book from your grasp, he pulls it tightly to his chest and thanks you, then walks off with a thoughtful expression on his face.";
-		decrease carried of ancient tome by 1;
+		ItemLoss ancient tome by 1;
 		now TomeFound is 3; [player gave Eric the book back after he got almost tentacle-fucked, so same state as never having taken the book at all]
 	else if TomeFound is 99: [player took the book after Eric started reading               ]
 		say "     Pulling your backpack off, you dig around in it and find the thick tome. As you pull it out, Eric's eyes seem to have an inner glow for a heartbeat or two and he steps up close to you, holding out his hands with a hungry expression. Snatching the book from your grasp, he pulls it tightly to his chest and thanks you, then walks off with a thoughtful expression on his face.";
-		decrease carried of ancient tome by 1;
+		ItemLoss ancient tome by 1;
 		now TomeFound is 2; [Eric is back to reading the tome]
 	else if TomeFound is 100: [Eric never opened the book before]
 		say "     Pulling your backpack off, you dig around in it and find the thick tome. As you pull it out, Eric steps up and thanks you as he accepts the book. He exchanges some more words in friendly conversation with you, then walks off with the book held tightly to his chest.";
-		decrease carried of ancient tome by 1;
+		ItemLoss ancient tome by 1;
 		now TomeFound is 1; [Eric got the book now]
 	else if TomeFound is 101: [Eric is afraid of the book and was offered it back before]
 		say "     You shouldn't tease Eric with the tome any further. He was genuinely afraid the last time. Confronting him with the book would just be cruel after that.";

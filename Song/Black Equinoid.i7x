@@ -265,7 +265,7 @@ to say lucky horseshoe use:
 			if lootchance entry is 0, next;
 			let z be loot entry;
 			say "Wow, a [z]! It really was lucky!";
-			add z to invent of Player;
+			ItemGain z by 1;
 			break;
 	else:
 		say "You walk onwards, but nothing happens. Aw...";

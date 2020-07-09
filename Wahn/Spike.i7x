@@ -157,6 +157,7 @@ instead of navigating Grey Abbey Library while (Alexandra is in Grey Abbey Libra
 
 to say SpikeAccepted:
 	say "     As you agree to take Spike along as your companion, his tail starts wagging up a storm and the young man says excitedly, 'Right on! We'll make this city ours! Let's have some fun!' With his hand lowering to rub the crotch of his jeans, you have little doubt what sort of 'fun' he expects to soon have. Taking another drag from his smoke, the anthro canine then flicks it aside and takes position by your side, steeling his expression to be properly tough and just a bit overbearing, as he expects the right-hand man of 'The Boss' would need to be.";
+	say "     (Spike the doberman is now a possible companion! You can make him your active companion by typing [bold type][link]companion Spike[end link][roman type] or [bold type][link]companion doberman[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Spike[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 	now HP of Spike is 1;
 	add "Tamed" to Traits of doberman companion;
 	now doberman companion is tamed;
@@ -171,6 +172,7 @@ doberman companion	"doberman companion"
 doberman companion is a pet. doberman companion is a part of the player.
 understand "Spike" as doberman companion.
 understand "Doberman" as doberman companion.
+printed name of doberman companion is "Spike".
 The description of doberman companion is "[SpikeDesc]".
 The weapon damage of doberman companion is 7.
 The level of doberman companion is 5.
@@ -458,9 +460,7 @@ to say SpikeTalk7: [transformation]
 to say SpikeTalk8: [fur request]
 	if Energy of Spike - turns > 4:
 		say "     As you ask Spike if he could give you some of his hair, the young doberman nods happily enough and raises one hand, feeling around a bit at the back of his neck before pinching his thumb and forefinger around a tuft of hair and giving a sharp tug. 'Ouch, that stings!' he exclaims and rubs the spot with his other hand, then moves to pull a rubber band out of his pocket. 'I thought you might want something like this, so I grabbed some supplies,' your companion explains, as always seeming quite eager to please and gain your approval. Within moments, he holds out his tied-together tuft for you to take.";
-		LineBreak;
-		say "     You gain some doberman male fur!";
-		increase carried of doberman male fur by 1;
+		ItemGain doberman male fur by 1;
 		now Energy of Spike is turns;
 	else:
 		say "     As you ask Spike for more fur, he winces a little and rubs the back of his head. 'I'll give you more, but how about giving it some time to re-grow first? Wanna make sure it does, and I won't have a bald spot or something!' Blowing out your breath, you shrug and nod to him. You'll just have to chat him up another time.";
@@ -495,9 +495,7 @@ to say SpikeTalk9: [cum request]
 		else if Libido of Spike < 60: [forced into subby sex]
 			say "     As you step up and command that Spike give you some cum, milked into a plastic bottle, you notice his Adam's Apple bounce a little as he swallows. 'Er, of course [SpikePlayerAddress]. Just give me a moment alone, alright?' As he reaches out for the bottle, you smack his muzzle with it and in a harsh tone demand to know if you ordered him to go into a corner to do his business. 'No, I - I thought...' the young man starts, but seeing the unimpressed sneer that this brings to your face, he falls silent again. Without another word, he quietly undoes the button and zipper of his pants, pushing them down to start rubbing his sheath and tease out the length of his manhood. Nervously glancing up at you from having his head lowered, he gets himself fully hard before much longer.";
 			say "     You step up to the slender, toned body of your dobie companion and bump his hand aside to stroke he red shaft of his canine cock a few times, then grab bim by the balls and nod for him to proceed. Rolling the furry cum-factories between your fingers and giving them firm, but not actually painful squeezes, you keep Spike literally well in hand while he jerks himself off, holding the empty bottle ready. You can't help but smile at the control you have over the young man, revelling in your power while he milks himself dutifully. The strokes along his knotted length come faster and faster before long, and he lets out a grunt, then starts to blast his seed into the bottle. Throb after throb of rich canine spunk lands in the plastic container, filling about the lower third of the small bottle before his orgasm ebbs off. Pulling it from his grasp with a casual command to clean himself up, you turn your back on Spike and label the bottle, then add it to your pack.";
-		LineBreak;
-		say "     You gain some doberman male cum!";
-		increase carried of doberman male cum by 1;
+		ItemGain doberman male cum by 1;
 		now lastfuck of Spike is turns;
 
 to say SpikeTalk10: [Tehuantl Talk]

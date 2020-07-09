@@ -6,7 +6,7 @@ Version 1 of Psycho Weasel by Stripes begins here.
 Section 1 - Creature Responses
 
 weaselcount is a number that varies.
-weaselcolor is a text that varies. weaselcolor is usually "tan".
+weaselcolor is a text that varies.[@Tag:NotSaved] weaselcolor is usually "tan".
 
 to say psychoweaseldesc:
 	setmongender 3; [creature is male]

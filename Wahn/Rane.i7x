@@ -54,7 +54,7 @@ Instead of resolving a Rooftop Rumble:
 				WaitLineBreak;
 				say "     A part of you can only help but wonder if there is a way to find out more about what you witnessed. Maybe returning to this location at another time could yield some information. The inhabitants of the area no doubt fled when things started to get hairy, but they're likely be back at some point.";
 				now HP of Rane is 2;
-				increase carried of water bottle by 1;
+				ItemGain water bottle by 1;
 		else:
 			LineBreak;
 			say "     Yes, caution seems to be a good idea here. Who knows what did all that to those guys. You quickly make your way down the stairs and straight out of the door, not paying any mind to the groaning leopardman still laying on the sidewalk. After rounding a few blocks you stop and take several deep breaths, relieved that the no one seems to have seen or followed you. You mentally mark that area as one to avoid in the future.";

@@ -325,6 +325,7 @@ to say HuskyAlphaWin:
 	else:
 		say "     With a snarl, the male husky looks to his pack, anger teeming from his every motion, and a livid erection throbs against his toned abdomen. The furious eyes glare over you, and he spits, 'You ruined our fun, you ass. You're not worth my time.' Turning his back to you, he kicks at the dirt, digging it back to spatter across your form before he collects his pack and leaves.";
 
+Section 2 - Medkit Parts
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -340,6 +341,8 @@ instead of resolving Medkit Parts:
 	else if Sarah is in the bunker and SarahCured > 0: [Sarah in the bunker and sane]
 		say "     [bold type]Sarah[roman type] should be able to help you sort the good from the bad and put together a usable medkit if you got enough of this stuff.";
 	increase HasParts by 1;
+
+Section 3 - Sarah
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -526,7 +529,7 @@ to say SarahTalk2:
 			say "     Sarah happily agrees to check out the huge bag of random medical supplies that you've gathered, her eyes going wide as she takes in the massive amount of stuff you have gathered. 'Where did you get all this?!' she asks in amazement, not really waiting for a reply before she starts inspecting foil packages with a knowing eye. Numerous small pieces are discarded by her right away, then another package or five after a little closer inspection and her holding it up to sniff at. 'I never thought I'd say something like this, but becoming a husky hybrid actually does have an upside. My nose is so sensitive right now that I can smell everything,' the medical student remarks, dropping the last packet on the trash pile. 'I think someone messed with these ones on purpose. Smells [one of]strangely of latex[or]a bit like milk powder[or]sickly sweet[or]a little rancid[or]a bit like cheese[or]like motor oil or something[at random] and I'm fairly sure a few are infected.'";
 			say "     After getting rid of the unusable items, you're left with a big pile of remaining supplies. The young half-husky looks at them one last time, then remarks, 'Okay these here should be fine. Very good job gathering all that stuff.' Then she strolls over to some dusty boxes you never even noticed standing in the corner until now. Digging around a little, she eventually finds several abandoned lunch-boxes in what must be years worth of unclaimed lost and found items. With sure movements, Sarah packs them with full sets of medical supplies, creating brand new medkits.";
 		let madekits be HasParts / 2;
-		increase carried of medkit by madekits;
+		ItemGain medkit by madekits;
 		decrease HasParts by madekits * 2;
 
 to say SarahTalk3:
@@ -543,7 +546,7 @@ to say SarahTalk3:
 				LineBreak;
 				say "     Pulling out the syringe with its cloudy, orange filling from your pack, you hand it to the medical student turned husky hybrid. Sarah turns it over and reads the handwritten scrawl on its plastic casing - 'Libido Suppressant'. She gasps in surprise, tears of joy starting to form in the corners of her eyes. 'You - you already got some?! Oh wow, are you psychic or something? This is just what I need! Thank you so much!' Throwing her arm around you in a quick hug, she then hurries off right afterwards, murmuring to herself about finding the right dosage and having to do careful experiments with the small amount she has.";
 				now SarahCured is 2; [gave her a syringe of libido suppressant]
-				decrease carried of libido suppressant by 1;
+				ItemLoss libido suppressant by 1;
 			else: [don't give it to her]
 				LineBreak;
 				say "     Keeping your stash of libido suppressant a secret, you just give her a friendly pat on the arm and watch as Sarah walks away a little afterwards.";
@@ -558,7 +561,7 @@ to say SarahTalk3:
 				LineBreak;
 				say "     Pulling out the syringe with its cloudy, orange filling from your pack, you hand it to the medical student turned husky hybrid. Sarah turns it over and reads the handwritten scrawl on its plastic casing - 'Libido Suppressant'. She gasps in surprise, tears of joy starting to form in the corners of her eyes. 'This is just what I need! Thank you so much!' Throwing her arm around you in a quick hug, she then hurries off right afterwards, murmuring to herself about finding the right dosage and having to do careful experiments with the small amount she has.";
 				now SarahCured is 2; [gave her a syringe of libido suppressant]
-				decrease carried of libido suppressant by 1;
+				ItemLoss libido suppressant by 1;
 			else: [don't give it to her]
 				LineBreak;
 				say "     Keeping your stash of libido suppressant a secret, you just give her a friendly pat on the arm and watch as Sarah walks away a little afterwards.";
@@ -577,7 +580,7 @@ to say SarahTalk3:
 				say "     For your efforts in saving Sarah from her progressing husky infection, you have earned the [']Dog Whisperer['] feat. Having proved your dedication in doing the right thing, your [bold type]charisma[roman type] has gone up by two, allowing you to empathize with others even more.";
 				FeatGain "Dog Whisperer";
 				StatChange "Charisma" by 2;
-				decrease carried of libido suppressant by 5;
+				ItemLoss libido suppressant by 5;
 			else: [don't give it to her]
 				LineBreak;
 				say "     Keeping your stash of libido suppressant a secret, you just give her a friendly pat on the arm and watch as Sarah walks away a little afterwards.";
@@ -595,7 +598,7 @@ to say SarahTalk3:
 				say "     For your efforts in saving Sarah from her progressing husky infection, you have earned the [']Dog Whisperer['] feat. Having proved your dedication in doing the right thing, your [bold type]charisma[roman type] has gone up by two, allowing you to empathize with others even more.";
 				FeatGain "Dog Whisperer";
 				StatChange "Charisma" by 2;
-				decrease carried of libido suppressant by 5;
+				ItemLoss libido suppressant by 5;
 			else: [don't give it to her]
 				LineBreak;
 				say "     'Ah,' the young woman says with a little bit of a sigh, having gotten her hopes up. Then she catches herself and gives you a friendly smile, 'Here I am - starting to mope because my hero doesn't bring me everything I need right away. Silly, hm? Especially since I have so much to be thankful about already.' Leaning in to plant a peck on your cheek, she wags her tail happily as she adds, 'Still... if you got the time to scavenge in the hospital sometime, I'd be forever in your debt.'";
@@ -1158,7 +1161,9 @@ to say SarahOffersAnal:
 	say "     Taking your hands in hers, she pulls them down behind her and places them on her perky behind. As her by now more quickly wagging tail brushes against your fingers, she says, 'I think you get my drift, don't you? Just... putting it out there that we can still do stuff. No need to treat me like a wallflower just because of certain hangups.' And with that, the young woman slips out of your grasp and walks back over to her bunk - all the while wiggling her ass at you a few times and demonstratively bending over to pick something up from the ground at the end.";
 	now SarahCured is 8;
 
-[ Shower Scenes]
+Section 4 - Library Encounter Events
+
+Section 4.1 - Shower Events
 
 after going down from Grey Abbey Library while (Sarah is in Bunker and SarahCured > 3 and SarahShower is 0 and library computer is powered):
 	if debugactive is 1:
@@ -1183,7 +1188,7 @@ instead of going north from Bunker while (Sarah is in Bunker and SarahCured > 3 
 		LineBreak;
 		say "     Shrugging off the temptation to throw a glance into the shower room itself, you wander out into the bunker again. A little while later, Sarah emerges from the shower section, fully dressed and with her head-fur still somewhat wet. She looks fairly relaxed and happy - it's amazing how simple pleasures like feeling clean and fresh can affect someone's mood.";
 
-[ Carl Interaction]
+Section 4.2 - Carl
 
 instead of navigating Grey Abbey Library while (Sarah is in Bunker and Carl is in Grey Abbey 2F and CarlSarahInteraction is 0 and SarahCured > 3):
 	say "[NavCheck Grey Abbey Library]";
@@ -1314,6 +1319,8 @@ instead of going up from Grey Abbey Library while (Sarah is in Bunker and Carl i
 	if CarlSarahSex is 2:
 		say "[SarahCarlOral2F]";
 
+Section 4.3 - Colleen
+
 after going down from Grey Abbey Library while (Sarah is in Bunker and Colleen is in Bunker and ColleenSarahInteraction < 2 and SarahCured > 1 and (lastColleenSarahInteraction - turns > 6)):
 	move player to Bunker;
 	if ColleenSarahInteraction is 0:
@@ -1335,7 +1342,9 @@ to say SarahColleenScene2:
 	now ColleenSarahInteraction is 2;
 	now lastColleenSarahInteraction is turns;
 
-after going down from Grey Abbey Library while (Sarah is in Bunker and Alexandra is in library and AlexandraSarahInteraction is 0 and SarahCured > 1): [initial Alexandra / Sarah meet]
+Section 4.4 - Alexandra
+
+after going down from Grey Abbey Library while (Sarah is in Bunker and Alexandra is in library and (hp of Alexandra > 0 and hp of Alexandra < 50) and AlexandraSarahInteraction is 0 and SarahCured > 1): [initial Alexandra / Sarah meet]
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG -> Alexandra & SARAH MEET - AlexandraSarahInteraction: [AlexandraSarahInteraction] <- DEBUG[line break]";
@@ -1353,6 +1362,8 @@ after going down from Grey Abbey Library while (Sarah is in Bunker and Alexandra
 	say "     'Oh, hey boss,' Alexandra calls out, her tail giving a little wag as she looks over to you. 'Just about done telling this slut what's what. Did you come down to pound her like the whore she is? I'll leave you to it then.' With that said, the doberwoman strolls up to you and leans in to lap your cheek in a show of devotion, then goes upstairs again. Sarah watches her leave and blows out her breath as the door closes behind Alexandra. 'Good god, that was intense. These damn nanites sure can mess with people. She's really internalized the whole dog thing - pack behavior and all. I - um, guess I should have tried more to de-escalate, but something about her behavior really raised my hackles...'";
 	say "     'So - you're Alexandra's... boss?' the young husky woman asks you, still rather disturbed about the confrontation. Clearing your throat, you do explain how you took in Alexandra after she succumbed to her infection (wisely leaving out that you were the one who pushed her that far). She pretty much declared herself the top bitch of your pack after that. Nodding thoughtfully, Sarah says, 'I'll do my best to keep my distance and not to trigger her. Thank god that you helped me before I was as far gone as that!' After giving you a hug, the young woman walks over to her bed and pulls out a notebook, adding more observations to her ongoing report about what the nanite infection can do.";
 	now AlexandraSarahInteraction is 1;
+
+Section 4.5 - Eric
 
 after going down from Grey Abbey Library while (Sarah is in Bunker and Eric is in Bunker and HP of Eric < 90 and EricSarahInteraction < 3 and SarahCured > 1 and (lastEricSarahInteraction - turns > 6)):
 	if EricSarahInteraction is 0:
@@ -1474,14 +1485,16 @@ Idea: Interaction with Alexandra and/or Korvin - the bad girl/boy dogs
 One of them could be all "Yo bitch!" to Sarah, with her getting miffed at Alexandra or being all "What do you want asshole? Can't be anything with sex - in my experience losers with big mouths have the smallest dicks. Or do you need help opening a can of dog food that you're too stupid to get the hang of?"
 ]
 
-instead of navigating Grey Abbey Library while (Sarah is in Bunker and Fang is in Grey Abbey Library and FangSarahInteraction is 0 and SarahCured > 3):
+Section 4.6 - Fang
+
+instead of navigating Grey Abbey Library while (Sarah is in Bunker and Fang is in Grey Abbey Library and (hp of Fang < 5 and hp of Fang > 1) and FangSarahInteraction is 0 and SarahCured > 3):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	project the figure of Sarah_clothed_icon;
 	if debugactive is 1:
 		say "     DEBUG -> SARAH & FANG MEET - FangSarahInteraction: [FangSarahInteraction], HP of Fang: [HP of Fang] <- DEBUG[line break]";
-	if HP of Fang < 3: [Beta Fang]
+	if HP of Fang < 3: [Omega Fang]
 		say "     Entering the library, you see your pet wolf Fang moving towards the back of the ground floor shelves in a moderately fast trot, his long rope leash trailing behind him on the ground. While that in and of itself isn't too surprising (he is clever enough to loosen and tie the leash from its anchoring point with his at least part-anthro paws) you get curious what he's on about right now. The straight-up way he is holding his tail does show that the gray wolf is at attention because of something and he is moving with some determination in his strides. Walking after the feral beast, you soon spot the target of his interest - the husky girl Sarah is back there, currently crouched down before a bookshelf and checking out some new stuff to read.";
 		say "     Fang is upon her before you can do much more to register the situation, pushing his muzzle against the back of her jeans and sniffing excitedly. Letting out a bark of surprise at the sudden touch, Sarah turns around to look at Fang. Her first reaction is a smile and the tail behind her back starts to wag in a slow beat as the medical student says, 'Oh, hey boy. What are you doing here? Did your leash come undone?' She reaches out to pet Fang's head, earning her a lick as she strokes over the thick fur over his neck. 'Such a strong and good doggie,' she coos as she pets him some more and Fang leans into her touch. 'It is good to know that you're protecting us here. Keeping the beasts out and... hey!'";
 		WaitLineBreak;
@@ -1501,6 +1514,33 @@ instead of navigating Grey Abbey Library while (Sarah is in Bunker and Fang is i
 		say "     The stalemate continues for a few moments longer, then eventually Fang gives a frustrated growl and starts to back away a little from Sarah. 'That's right. Go away you furry bastard!' Sarah snarls at him, in reply to which Fang makes a beeline to the spot the young woman was originally browsing books at - to raise his leg and pee all over the lowest two shelves of medical books. After doing his business, he gives a last aggressive growl, then trots away.";
 	now FangSarahInteraction is 1;
 	now lastFangSarahInteraction is turns;
+
+instead of going to Courtyard while (hp of Fang is 3 or hp of Fang is 4) and FangSarahInteraction is 1 and MaleList is not warded and MaleList is not banned and FemaleList is not warded and FemaleList is not banned and a random chance of 1 in 2 succeeds: [Alpha Fang gets his own back against Sane Sarah]
+	project the figure of Sarah_clothed_icon;
+	say " 	As you enter the courtyard, you catch sight of Sarah sitting on the edge of the fountain with her back to you, softly humming to herself. Figuring that you might go and have a conversation with her, you begin to approach but someone barges past you as you take a step forward. Annoyed that someone would be so rude, you turn to give them a piece of your mind but stifle any retort as you discover that is Fang and he looks intent on sneaking up the husky, giving you a firm look to communicate that you should remain quiet. Despite the knowledge that this is unlikely to end well, and any desire that you have to warn Sarah of his approach, you submit to your Alpha's will and step back silently to allow him to proceed unhindered. With a grateful nod, the wolf resumes stalking forward, the female canine oblivious to his presence. You only hope that she'll understand and forgive you, or even better not know that you stood by and did nothing.";
+	say " 	Maybe she caught his scent, heard his claws on the path, or merely sensed that something was wrong, but as Fang gets within a couple of meters of her, Sarah turns her head and sees the advancing wolf. Her eyes widen as she hurriedly begins to rise, but as she turns her foot-paws get tangled and she sprawls face-first onto the ground, leaving her exposed as the wolf closes the gap. Before she can recover, Fang is atop her, pressing a paw against her back while remaining clear of her fiercely kicking legs, learning from the last time the force that she can put behind them. 'Be still,' the Alpha snarls, putting more pressure on his paw to hold her down. 'Fuck you. Get off me you flea-ridden mutt. I will never submit to you,' Sarah spits back, wriggling desperately in a futile attempt to get free.";
+	WaitLineBreak;
+	say " 	Given Fang's larger size and the position of strength over her, no matter how she struggles, Sarah is unable to escape Fang's hold on her. Tiring of her wriggling and cursing, your Alpha crouches down and grasps the back of her neck hard enough to draw blood, but not enough to cause any further harm, marking her as his own. The husky falls silent and goes stiff, making you unsure as to whether this is due to shock, instinct, or fear. It would seem to be the latter as the medical student begins to cry, taking deep, terrified gulps of air as tears stream over her muzzle and trickle onto the ground. 'P-p-please let me go. I d-don't want to get p-p-p-pregnant. I don't want to be just another breeding bitch in the city, just a fast-cooking incubator for more and more babies. I don't w-w-want to lose who I am. PLEASE?' Sarah begs between sobs, almost shouting at the end before tears overwhelm her again.";
+	say " 	To your surprise, Fang releases his grip on the scruff of her neck, briefly licking the few spots of blood from her fur before circling around in front of her and licking at her face to, salty tears being washed away by his tongue as she raises her head and looking at him with a little more humility than during their encounter in the library. 'I'm sorry.' You are shocked to hear an apology from your Alpha, and Sarah seems to be too, but before she can speak, Fang continues. 'I will not rape you. You are scared. Reason behind refusing me. I shall respect this.' While the husky seems unsure how to process this, her sniffling subsides and she relaxes a little against the larger wolf, likely due to a mixture of exhaustion and relief. The two of them lie together like this for several minutes before, considering Sarah to have recovered enough, Fang stands up and begins to leave.";
+	WaitLineBreak;
+	say " 	Strangely, the husky reaches out and attempts to grab Fang's waist as he departs, making him pause and turn back to her. 'Thank you. Despite your forcefulness and how you scared me, you seemed to care in your own way, and for that I am grateful. You may be less feral-minded than I had thought. While I am unlikely to ever willingly have sex with you, getting to know you so that you can earn my trust isn't beyond the realm of impossibility,' she hesitantly says as she stiffly rolls over and sits up. Fang lets out an acknowledging snort and returns back inside to the library. It may be a while before Sarah recovers from this, but considering your Alpha didn't forcefully violate her, there may yet be hope for the two of them to become something like friends, if Fang is willing to accept her wilfulness and she, his more animalistic nature. With that, you sneak away.";
+	now FangSarahInteraction is 2;
+	now lastFangSarahInteraction is turns;
+
+instead of going to Grey Abbey Library while (hp of Fang is 3 or hp of Fang is 4) and Fang is in Grey Abbey Library and Sarah is in Bunker and SarahSlut is 4 and MaleList is not warded and MaleList is not banned and FemaleList is not warded and FemaleList is not banned and a random chance of 1 in 2 succeeds: [Alpha Fang and Slutty Sarah]
+	project the figure of Sarah_naked_icon;
+	say " 	Entering the library, you are comforted to see your Alpha in his usual position by the front door, protecting his pack and their home from any creature roaming the city that might take an interest in claiming the library for its own. You also notice Sarah peering around the corner of a bookshelf, the slutty husky outside of the bunker for once and gazing lustfully at the wolf stud by the entrance. You would smirk at her infatuation, but you understand the attraction that she has towards the majestic, dark-furred guardian as you too feel that way. While you consider whether or not to encourage her to make herself available to him, you realize that he will be fully aware of her living in the library and should he be interested in her, that he will take her as is his prerogative as Alpha. It is up to the two of them to make this happen.";
+	say " 	Seemingly coming to a similar conclusion, or more likely having had her caution overwhelmed by horniness, Sarah creeps out from behind the shelf and approaches the wolf, copious fluids leaking from her canine spade, the engorged lips almost throbbing with need and splattering her scent onto the floor behind her. She barely spares you a glance as she passes by you, only halting when she is beside Fang where she rolls on to her back and nuzzles up against his side. With a final glance out the door to ensure that nothing is approaching, the Alpha turns his attention to the display of submission before him, leaning down to sniff at her throat and puffy vulva, his tongue slipping from his mouth to lick at it for a moment before continues to inhale the husky's scent. You can see his crimson shaft beginning to emerge beneath him, the soft skin of his shaft stretching as finally his knot slips free, already partially inflated despite the wolf not having yet begun mating. The effect that this has on Sarah is obvious, the excitement of having such an effect on the pack leader visible on her face as well as her body language.";
+	WaitLineBreak;
+	say " 	As she attempts to roll over again to assume a more typical position, Fang firmly places a paw on her chest and halts her, the husky's eyes widening in worry that she has displeased her Alpha. This fear is soon dispelled when the larger wolf circles around until he is standing over her with his cock hovering just in front of her swollen spade, the tip dribbling precum over the lips and adding to the already copious lubrication around the entrance. Instead, she looks up at him and whines needily, keeping her hindquarters still so as not to hinder penetration but tossing her head around impatiently. She doesn't have to wait long before Fang thrusts down forcefully, her vulva spreading with ease around his girthy shaft as he spears into her. Neither of them in the mood for foreplay or going slow, the two canines engage in a very vigorous and lust-driven mating, Sarah yipping and moaning, the volume of which increases each time the wolf's knot slaps against her entrance with a very wet sounding smack.";
+	say " 	Unsure whether it is due to the thick scent of sex that is filling the room or just the carnal sight in front of you, you are momentarily tempted to pleasure yourself as you watch but decide against it so as not to miss any of the passion of their coupling as well as wishing to avoid distracting either of the lusty canines, instead settling for watching hungrily as your Alpha claims another willing bitch for his pack. While Fang's thrusts may have been forceful before, his movements are becoming rougher and rougher, short snarls and growls bursting from his throat as he exerts himself, and you can only assume that he is approaching climax and determinedly trying to ram his swollen knot into the warmth of the husky's cunt. Sarah reacts to the extra vigor with unconstrained enthusiasm, a continuous euphoric whine issuing from her open mouth until, at last, her Alpha slams his groin flush with hers and releases a howl as he ejaculates into her womb.";
+	WaitLineBreak;
+	say " 	Given the size of the wolf's cock, the tip must be tightly pressed against the slutty husky's cervix, the nanites playing their part to convert pain to additional nerve-tingling pleasure as jet after jet of hot, virile sperm is shot into her and causing her to orgasm too, the walls of her vagina aiding and encouraging an increasingly sizeable load of cum to fill her womb. Fang slowly settles atop his newest pack-mate, body pressing Sarah against the floor and smothering her in the potent scent of his thick fur, the scent of an Alpha, even as he marks her as his with his seed. From the way that her tongue lolls from the side of her mouth and the shine in her eyes, she is very pleased with herself for enticing such a virile male and being claimed as his, though you wouldn't put it past her to find other males too, but for now she directs her gratitude and affection towards the wolf atop her, licking at his muzzle and throat while the two of them wait for his knot to deflate and the inevitable flood of cum that will follow it. With a contented smile you leave them to savor this moment together and continue with your day.";
+	NPCSexAftermath Sarah receives "PussyFuck" from Fang;
+	now FangSarahInteraction is 1;
+	now lastFangSarahInteraction is turns;
+
+Section 4.7 - David
 
 after going down from Grey Abbey Library while (Sarah is in Bunker and David is in Bunker and DavidSarahInteraction < 1 and SarahCured > 1 and (lastDavidSarahInteraction - turns > 6)):
 	if DavidSarahInteraction is 0:
@@ -1541,7 +1581,7 @@ to say SarahDavidScene3:
 	now DavidSarahInteraction is 2;
 	now lastDavidSarahInteraction is turns;
 
-Section 2 - Endings
+Section 5 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)

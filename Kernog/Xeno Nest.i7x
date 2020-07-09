@@ -17,7 +17,7 @@ If the player is molested:
 	End scene: player ends up in a bound state
 Else:
 	Player discovers a cache, and can choose either food or pure water.
-	First choice, add selected item to the invent of Player
+	First choice, ItemGain selected item by 1
 	if Player is cautious, they decide to get out, otherwise, they can choose another item
 	End scene: player walks away, his backpack filled
 
@@ -170,12 +170,10 @@ to xenoLoot:
 	say "     ([link]N[as]n[end link]) - Water.";
 	if Player consents:
 		LineBreak;
-		say "[bold type]You gain 1 food![roman type][line break]";
-		increase carried of food by 1;
+		ItemGain food by 1;
 	else:
 		LineBreak;
-		say "[bold type]You gain 1 water bottle![roman type][line break]";
-		increase carried of water bottle by 1;
+		ItemGain water bottle by 1;
 
 Section 3 - Bound State
 

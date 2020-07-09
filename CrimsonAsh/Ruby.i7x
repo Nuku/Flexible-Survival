@@ -71,6 +71,7 @@ Instead of resolving Urban Cliff:
 					LineBreak;
 					say "[RubyCombatFuck]";
 					now Resolution of Urban Cliff is 10; [won, rape]
+					now Urban Cliff is resolved;
 				else if calcnumber is 2:
 					LineBreak;
 					say "     You turn and walk away, not wanting anything from the dragon creature. A clearly surprised huff can be heard behind you, followed by the woman's voice shouting angrily, 'W-what? You come into my home and beat me up, then just fuck off? Good riddance, bastard! Leave and don't come back, you hear me?!' As you start climbing back up the slope, you wonder if you'll see the furry, scaled woman again, maybe under better circumstances. Surprise visits to her home seem to be out for sure, given her reaction this time, so you make a note not to come here again.";
@@ -123,8 +124,7 @@ Instead of resolving Urban Cliff:
 				WaitLineBreak;
 				say "     She takes a moment to look over your gift before looking back at you, expression slightly softer. '...Thanks, I guess, not too many people would let someone who attacked them walk only to come back with a gift.' She shifts uncomfortably. 'S-still not just gonna bend over for you like half the freakin['] sluts in the city would but... yeah, thanks,' she finishes, starting to back up into her cave. Before she goes you hear her call back 'Ruby by the way. May as well as know my name if you're gonna come by and pester me. Your about to call out and ask her something else but you figure for now it's best to wait, she has something to mull over and think about. You look on into the cave curiously but eventually you turn around, maybe she'll be more amicable next time you talk. You think heading away from the rock face and back to where you came down from.";
 				LineBreak;
-				say "[bold type]You lose 1 food![roman type][line break]";
-				decrease carried of food by 1;
+				ItemLoss food by 1;
 				now Resolution of Urban Cliff is 2; [food delivered]
 			if calcnumber is 2:
 				LineBreak;
@@ -506,6 +506,10 @@ Ruby's Cave	"Ruby's Cave"
 Ruby's Cave is a room.
 Ruby's Cave is down from Ashen Cliff.
 The description of Ruby's Cave is "Ruby's humble abode consists of a short tunnel that leads into a natural cave, about sixty by thirty feet in its farthest extent. It is dimly lit by glowing volcanic rock formations and holds some scavenged furniture brought in by the dragoness.".
+
+Table of GameRoomIDs (continued)
+Object	Name
+Ashen Cliff	"Ashen Cliff"
 
 Ashen Cliff is a room.
 The description of Ashen Cliff is "You stand at the upper end of creating a sloping cliff that's about 300 feet wide. Some titanic force sundered the very ground here, with either your half rising, the lower end being shoved down, or both, afterwards. This has torn apart countless buildings and streets, creating the new cliff whose steep slope consists of bare rock, debris and volcanic ash. A little distance from where you are is the opening that leads to Ruby's cave. You could go into that if you want to visit her.".

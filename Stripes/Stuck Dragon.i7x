@@ -75,7 +75,7 @@ Instead of Resolving a Find Building:
 	say "While exploring the sewer, you spot a ladder leading up to a manhole. You climb the ladder and push up on the manhole cover. After a bit of effort, you shift the manhole cover to the side and climb the rest of the way up the ladder. You look around and see that you're back on the city streets, in front of an old building. You don't know if you'll find anything of interest inside, but it could be worth exploring. The nearby streets are completely blocked by debris and wrecked cars so you wouldn't have been able to find this place if you hadn't gone through the sewers.";
 	increase the score by 5;
 	move player to Isolated Street;
-	now the Isolated Street is known;
+	AddNavPoint Isolated Street;
 	now Find Building is Resolved;
 
 Table of GameRoomIDs (continued)
@@ -271,7 +271,7 @@ Instead of Resolving a Another Ladder:
 		say "     You look around and see that you're back on the city streets, in an alley behind an old building. It's the same old building that you found earlier. There is a side entrance to the old building here. It looks like you've found the way around the blocked doorway. The nearby streets are completely blocked by debris and wrecked cars so you wouldn't have been able to find this place if you hadn't gone through the sewers.";
 		increase the score by 5;
 		move player to Back Alley;
-		now the Back Alley is known;
+		AddNavPoint Back Alley;
 		now Another Ladder is Resolved;
 
 Table of GameRoomIDs (continued)
@@ -394,7 +394,7 @@ check dragonfreeing:
 Carry out dragonfreeing:
 	now tempnum is 0;
 	if glob of goo is owned:
-		delete glob of goo;
+		ItemLoss glob of goo by 1;
 		say "     You give the goo to Christy. She smears the goo in the places where her body is jammed against the doorframe, greasing herself up. 'Oh yeah, that feels nice!' Christy moans as she rubs the goo on herself. 'If only I could reach my pussy, then I could... Ah! Bad thoughts! Bad thoughts!'";
 		say "     When she finishes, she braces her front legs on the walls on both sides of the doorframe and starts pushing against it. As she struggles, you drop your pack and head over to help her, grabbing one shoulder and pulling. At first nothing happens, but then her body violently pops free from the doorway like a cork from a bottle of champagne. The cracks in the concrete around the doorframe break further and parts of the wall around the door collapse, blocking the passageway as it caves in. Christy, unable to control her forward momentum, accidentally bowls you over and you end up pinned beneath her.";
 		say "     'My hero! Huh, where did you go?' Christy asks, unaware that you're pinned beneath her. She shifts her bulk around as she tries to find you and then accidentally rubs her pussy against your face, sending waves of pleasure through her body. Overcome by all her pent up lust, Christy starts to grind her pussy back and forth against your head. 'Oh, God yes! No! I must control these urges... I must... oh, screw it! It feels too damn good!'";

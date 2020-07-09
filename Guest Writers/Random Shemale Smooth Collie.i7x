@@ -132,8 +132,7 @@ to say CollieMilking:
 	say "     With a reward for besting this gigantic canine in mind, you dig up an empty plastic bottle from your pack, then crouch over her panting form. The large ears upon the dog's head twitch when your hand brushes over her chest, a soft whimper escaping the massive canine's lips when she notices that you are not done with her yet. Moving your hands to touch and caress her large furred breasts, you wake deep maternal urges in the shemale's body. She closes her eyes and sighs happily as she imagines her own puppies nuzzling around and searching for teats to drink from. It doesn't take long till small beads of milk form at the nipples as her breasts get ready to feed her imaginary brood. Hands on the swelling boobs of your defeated opponent, you indulge her pleasurable dream while filling the bottle with spurt after spurt of creamy milk.";
 	say "     When you soon have your container topped off, you put the cap back on it and write on the lid whose milk you filled it with, then pack the bottle away. The collie barely registers any of this, having taken over pinching her own nipples as you pulled away. You leave her to revel for a little while longer in her fantasy, giving her breasts a last caress before walking away.";
 	LineBreak;
-	say "[bold type]You gain a bottle of Dog Milk![roman type][line break]";
-	increase carried of dog milk by 1;
+	ItemGain dog milk by 1;
 
 to say CollieSucking:
 	LineBreak;

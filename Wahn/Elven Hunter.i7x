@@ -8,6 +8,7 @@ Section 1 - Creature Responses
 to say Hunter wins:
 	if inasituation is true:
 		stop the action; [text taken care of at the source]
+	project the Figure of ElvenHunter_icon;
 	if HP of Player > 0: [player surrendered]
 		say "     'Pathetic,' he sneers and shoves you to the ground. 'We had hoped this world would have finally brought forth something worthy of The Hunt again. A true warrior never surrenders.' He leaves you lying there, saying, 'You're not even worth sullying my blade. Do something useful with yourself - like serving as food for more worthy creatures.' He then silently vanishes into the shadows between the trees.";
 	else: [player was beaten in a fight]
@@ -29,6 +30,7 @@ to say Hunter wins:
 To say Hunter loses:
 	if inasituation is true:
 		stop the action; [text taken care of at the source]
+	project the Figure of ElvenHunter_icon;
 	if BodyName of Player is "Incubus" or BodyName of Player is "Succubus" or BodyName of Player is "Demon Brute" or BodyName of Player is "Hellhound":
 		say "     Stepping back, the elf gives you a hateful stare. Even after all your blows, he still looks more than ready to continue the fight, with only a light sheen of sweat on his brow. 'You're stronger than expected, demon. Did you find some way to taint this world's essence with your infernal power?' Wrinkling his nose, he spits at your feet and continues 'I'll allow you to live - for now, so you can spread the word to leave this world. Flee while you can - once our king is informed of your presence, I've no doubt all hunting parties will have orders to exterminate any of you filthy beasts they encounter.' With that, the elf silently vanishes into the forest.";
 	else:
@@ -56,6 +58,7 @@ To say Hunter loses:
 			say "     You shake your head and tell the elf that it was reward enough to face such a worthy adversary. He seems a little disappointed, but smiles readily enough and performs a flourished bow before vanishing back into the trees.";
 
 to say ElvenHunterSex:
+	project the Figure of ElvenHunter_hard_icon;
 	if Player is herm: [herms may choose]
 		say "     Smiling at the prospect of claiming your reward from this handsome creature, you nod to him. Without further delay, he slips out of his vest and pushes the leather pants off his bubble butt and his legs. For a second, you are spell-struck at seeing his pale, perfect body in all its naked glory, your cock instantly springing to attention.";
 		say "     He smiles at you, then says 'I sense this realm's tiny machines have blessed you with both genders. Which would you prefer to claim me with?' (Y for cock, N for pussy)[line break]";
@@ -108,6 +111,7 @@ to say ElvenHunterSex:
 
 to say elfdesc:
 	setmongender 3;
+	project the Figure of ElvenHunter_Encounter_icon;
 	say "     A tall, slender man steps silently out of the shadow a bit ahead of you. He is a very handsome man dressed in dark green leather pants and an open fur-trimmed vest on first impression. But looking closer, you realize he's too beautiful to be a human - supernaturally so. With the clearly defined muscles under his pale, flawless skin and a face bearing sharp, beautiful features he'd make any human standing beside him look like a crudely assembled puppet. The sharp points of his ears poking out from under shoulder-length black hair and the bow in his hand remove any doubts - he's an elf. While you were busy staring at him, he studied you in turn with his jade green slit-pupiled eyes... and wasn't too impressed to judge from his expression.";
 	if BodyName of Player is "Incubus" or BodyName of Player is "Succubus" or BodyName of Player is "Demon Brute" or BodyName of Player is "Hellhound":
 		say "     He snarls 'Go back to the stinking pit you call home - demon', before gracefully pulling an arrow from the quiver on his back. With the comment 'I'll show you why you shouldn't try to spread your infestation on elven hunting grounds.' he lets it fly, purposefully missing your head by less an inch.";

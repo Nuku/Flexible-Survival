@@ -194,13 +194,13 @@ to say PercyTalk18:
 to say PercyTalk19:
 	if Stamina of Percy is 1: [Spear]
 		say "     Percy hands you a spear that feels fairly good in your hands. You can't even tell that the shaft used to be a hoe, but the blade at the end was still recognizable as your old pocket knife. 'I hope this helps. It's not my best work, but it should be reliable.'";
-		increase carried of Makeshift-Spear by 1;
+		ItemGain Makeshift-Spear by 1 silently;
 	else if Stamina of Percy is 2: [Vambrace]
 		say "     Percy hands you a pair of leather vambraces. The design engraved into it's surface is elegant and makes Percy's skill as an armorer clear. 'The materials took some working with, but I think they turned out well.'";
-		increase carried of leather vambraces by 1;
+		ItemGain leather vambraces by 1 silently;
 	else if Stamina of Percy is 3: [Gambeson]
 		say "     Percy hands you what looks like a coat made out if a quilt. Despite its poofy appearance, the gambeson is surprisingly heavy for cloth armor. 'It takes a while to stitch together that many layers of cloth. You would be surprised how effective it can be though.'";
-		increase carried of Gambeson by 1;
+		ItemGain Gambeson by 1 silently;
 	now Strength of Percy is 0;
 	now Stamina of Percy is 0; [reset]
 	wait for any key;
@@ -301,12 +301,9 @@ instead of going east from Urban Forest while (HP of Percy < 1):
 			say "     'Oh, uh... It's you again!' he says, then starts fidgeting with his claws. 'I'm sorry about what happened back there. I got a little spooked and... You don't seem dangerous, so why don't you come in for a little bit so that I can make up for being rude earlier,' he says before stepping aside and gesturing for you to enter. 'My name is Perceval, by the way. Most seem to just call me Percy the Pangolin. Not the most creative but it's the one thing people seem to remember about me.' You introduce yourself[if player is not defaultnamed] as [name of player][end if] before looking around.";
 			say "     The pangolin's home is very cozy despite being underground. It is temperate, decently lit, and fairly spacious. But in addition to the homely touches, there is an entire room in the back that looks like a workshop, complete with anvil, forge (currently unlit), and various tools, some of which you have no idea what they are used for. Percy wobbles over to a storage cabinet and begins rifling through his supplies before offering you a bottle of water, which you happily put away for later. 'It's the least I can do,' he says before stepping behind a counter and giving you a small smile. 'So um... Yeah. I also run a little blacksmith shop if you hadn't noticed already. I'm pretty good too! I service the entire Urban Forest area, so if you... You know, need something made, just stop by, and I'll see what I can do, alright?'";
 			say "     However you feel about the little guy, he at least seems like he could be useful. After all, it's not always easy to come across good equipment, and from the sound of it, he might know the area fairly well. Either way, this pangolin seems like a good ally to have.";
+			ItemGain water bottle by 1;
 			LineBreak;
-			say "[bold type]You gain 1 water bottle![roman type][line break]";
-			increase carried of water bottle by 1;
-			LineBreak;
-			say "[bold type]You've discovered Ironscale Hollow![roman type][line break]";
-			now Ironscale Hollow is known;
+			AddNavPoint Ironscale Hollow;
 			now HP of Percy is 2;
 			wait for any key;
 			move player to Ironscale Hollow;
@@ -337,12 +334,9 @@ instead of going east from Forest Burrow Entrance while (HP of Percy < 2):
 		say "     'Oh, uh... It's you again!' he says, then starts fidgeting with his claws. 'I'm sorry about what happened back there. I got a little spooked and... You don't seem dangerous, so why don't you come in for a little bit so that I can make up for being rude earlier,' he says before stepping aside and gesturing for you to enter. 'My name is Perceval, by the way. Most seem to just call me Percy the Pangolin. Not the most creative but it's the one thing people seem to remember about me.' You introduce yourself[if player is not defaultnamed] as [name of player][end if] before looking around.";
 		say "     The pangolin's home is very cozy despite being underground. It is temperate, decently lit, and fairly spacious. But in addition to the homely touches, there is an entire room in the back that looks like a workshop, complete with anvil, forge (currently unlit), and various tools, some of which you have no idea what they are used for. Percy wobbles over to a storage cabinet and begins rifling through his supplies before offering you a bottle of water, which you happily put away for later. 'It's the least I can do,' he says before stepping behind a counter and giving you a small smile. 'So um... Yeah. I also run a little blacksmith shop if you hadn't noticed already. I'm pretty good too! I service the entire Urban Forest area, so if you... You know, need something made, just stop by, and I'll see what I can do, alright?'";
 		say "     However you feel about the little guy, he at least seems like he could be useful. After all, it's not always easy to come across good equipment, and from the sound of it, he might know the area fairly well. Either way, this pangolin seems like a good ally to have.";
+		ItemGain water bottle by 1;
 		LineBreak;
-		say "[bold type]You gain 1 water bottle![roman type][line break]";
-		increase carried of water bottle by 1;
-		LineBreak;
-		say "[bold type]You've discovered Ironscale Hollow![roman type][line break]";
-		now Ironscale Hollow is known;
+		AddNavPoint Ironscale Hollow;
 		now HP of Percy is 2;
 		wait for any key;
 		move player to Ironscale Hollow;
@@ -354,6 +348,10 @@ instead of going east from Forest Burrow Entrance while (HP of Percy < 2):
 Section 6 - Rooms
 
 Part 1 - Forest Entrance
+
+Table of GameRoomIDs (continued)
+Object	Name
+Forest Burrow Entrance	"Forest Burrow Entrance"
 
 Forest Burrow Entrance is a room. Forest Burrow Entrance is east of Urban Forest.
 The description of Forest Burrow Entrance is "[ForestBurrow desc]".
@@ -468,11 +466,9 @@ to say PercyCrafting1: [Con 1]
 			say "     You hand Percy the materials who looks them over with experienced eye. 'Hmmm. This knife is old but well made, Likely military. Cold War maybe?' The Pangolin puts the two materials off the side before returning his focus to you. 'Anyways, this shouldn't take too long. I'll have to remove the blade and fasten it to the haft, then secure it with some binding. I should have it done in a [bold type]few hours[roman type].'";
 			LineBreak;
 			unwield pocketknife silently;
-			delete pocketknife;
-			say "[bold type]Pocketknife removed.[roman type][line break]";
+			ItemLoss pocketknife by 1;
 			unwield Broke-Ass Hoe silently;
-			delete Broke-Ass Hoe;
-			say "[bold type]Broke-Ass Hoe removed.[roman type][line break]";
+			ItemLoss Broke-Ass Hoe by 1;
 			now Strength of Percy is a random number from 2 to 3; [sets the needed time to a random value]
 			now Stamina of Percy is 1;
 			CreditLoss 50;
@@ -496,10 +492,9 @@ to say PercyCrafting2: [Con 2]
 		say "     ([link]N[as]n[end link]) - No, keep the materials.";
 		if player consents:
 			say "     'Alright, this shouldn't take too long. I should have it done in a [bold type]few hours[roman type].'";
-			say "[bold type]Leather Scraps x5 Removed[roman type][line break]";
 			now Strength of Percy is a random number from 3 to 5; [sets the needed time to a random value]
 			now Stamina of Percy is 2;
-			decrease carried of leather scrap by 5;
+			ItemLoss leather scrap by 5;
 			CreditLoss 50;
 		else:
 			say "     You decide to keep your items for now.";
@@ -520,10 +515,9 @@ to say PercyCrafting3: [Con 2]
 		say "     ([link]N[as]n[end link]) - No, keep the materials.";
 		if player consents:
 			say "     'Alright, this shouldn't take too long. I should have it done in a [bold type]day or so[roman type].'";
-			say "[bold type]Cloth Scraps x10 removed.[roman type][line break]";
 			now Strength of Percy is a random number from 7 to 9; [sets the needed time to a random value]
 			now Stamina of Percy is 3;
-			decrease carried of cloth scrap by 10;
+			ItemLoss cloth scrap by 10;
 			CreditLoss 75;
 		else:
 			say "     You decide to keep your items for now.";

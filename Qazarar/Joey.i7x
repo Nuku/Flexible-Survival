@@ -191,12 +191,15 @@ to say JoeySexMenu:
 
 to say JoeySex1: [oral on the player]
 	say "     Text";
+	NPCSexAftermath Joey receives "OralCock" from Player;
 
 to say JoeySex2: [oral on Joey]
 	say "     Text";
+	NPCSexAftermath Player receives "OralCock" from Joey;
 
 to say JoeySex3: [Joey fucked]
 	say "     Text";
+	NPCSexAftermath Joey receives "AssFuck" from Player;
 
 Section 4 - Events
 

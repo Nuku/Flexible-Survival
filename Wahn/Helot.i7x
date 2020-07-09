@@ -89,7 +89,7 @@ to say Helot fucks:
 		say "     The Helot rests his hard cock inside you for a moment after he stops cumming, then pulls out and moves to look through your gear.";
 	if carried of food >= 1:
 		say "     Pulling some food from your pack, the Helot hungrily takes a bite and nods to you. 'Ah - I really needed that. Sorry for taking your stuff, but I'm really hungry.' With that, he walks off and leaves you to pick up the rest of your belongings.";
-		decrease carried of food by 1;
+		ItemLoss food by 1;
 	else:
 		say "     Digging in your pack, the Helot looks up after a while, a disappointed expression on his face. 'You don't have any food either? Damn. Looks like this'll be another hungry day for me then.' He shrugs and walks off, and you can hear him murmur 'At least my balls don't ache as much now...'";
 
@@ -494,17 +494,13 @@ to WanderingHelot1:
 				let randomnumber be a random number from 1 to 4;
 				if randomnumber is:
 					-- 1:
-						say "[bold type]bottle of clean water.[roman type][line break]";
-						increase carried of water bottle by 1;
+						ItemGain water bottle by 1;
 					-- 2:
-						say "[bold type]soda can.[roman type][line break]";
-						increase carried of soda by 1;
+						ItemGain soda by 1;
 					-- 3:
-						say "[bold type]can of food.[roman type][line break]";
-						increase carried of food by 1;
+						ItemGain food by 1;
 					-- 4:
-						say "[bold type]pack of chips.[roman type][line break]";
-						increase carried of chips by 1;
+						ItemGain chips by 1;
 				CreatureSexAftermath "Player" receives "OralCock" from "Helot Manservant";
 				say "     With the deal sorted, you say goodbye to each other, each of you carrying on their own ways around the High Rise District.";
 				now WanderingHelotTimer is turns;
@@ -538,20 +534,15 @@ to WanderingHelotTackle:
 			let randomnumber be a random number from 1 to 5;
 			if randomnumber is:
 				-- 1:
-					say "[bold type]bottle of dirty water.[roman type][line break]";
-					increase carried of dirty water by 1;
+					ItemGain dirty water by 1;
 				-- 2:
-					say "[bold type]bottle of clean water.[roman type][line break]";
-					increase carried of water bottle by 1;
+					ItemGain water bottle by 1;
 				-- 3:
-					say "[bold type]soda can.[roman type][line break]";
-					increase carried of soda by 1;
+					ItemGain soda by 1;
 				-- 4:
-					say "[bold type]can of food.[roman type][line break]";
-					increase carried of food by 1;
+					ItemGain food by 1;
 				-- 5:
-					say "[bold type]pack of chips.[roman type][line break]";
-					increase carried of chips by 1;
+					ItemGain chips by 1;
 			say "     Now it's time for you to get up and run away as fast as you can, less you want an enraged helot chasing you. With a quick leg play, you push yourself up and evade his muscular arms, achieving a perfect escape as you hear him shouting behind you 'Coward! Thief!' with his rather and surprising long reaching voice.";
 			say "     With a successful assault, you walk away proudly with your reward, at the cost of the poor helot's hard work...";
 			now WanderingHelotTimer is turns;
@@ -567,19 +558,19 @@ to WanderingHelotTackle:
 			if randomnumber is:
 				-- 1:
 					say "     ... But not before you had snatched [bold type]a bottle of dirty water[roman type] out of his backpack while he was distracted.";
-					increase carried of dirty water by 1;
+					ItemGain dirty water by 1 silently;
 				-- 2:
 					say "     ... But not before you had snatched [bold type]a bottle of clean water[roman type] out of his backpack while he was distracted.";
-					increase carried of water bottle by 1;
+					ItemGain water bottle by 1 silently;
 				-- 3:
 					say "     ... But not before you had snatched [bold type]a soda can[roman type] out of his backpack while he was distracted.";
-					increase carried of soda by 1;
+					ItemGain soda by 1 silently;
 				-- 4:
 					say "     ... But not before you had snatched [bold type]a can of food[roman type] out of his backpack while he was distracted.";
-					increase carried of food by 1;
+					ItemGain food by 1 silently;
 				-- 5:
 					say "     ... But not before you had snatched [bold type]a pack of chips[roman type] out of his backpack while he was distracted.";
-					increase carried of chips by 1;
+					ItemGain chips by 1 silently;
 			now WanderingHelotTimer is turns;
 			CreatureSexAftermath "Player" receives "AssFuck" from "Helot Manservant";
 	else: [gets knocked down badly, Helot runs away]
@@ -668,7 +659,7 @@ Instead of resolving a Generous Helot:
 		say "     ([link]N[as]n[end link]) - Refuse and let him keep it.";
 		if player consents:
 			say "     You nod, extending your hand to grab the [bold type]canned food[roman type], and he lets you have it. There's a smile on his face as he takes his leave, not even looking behind. How odd...";
-			increase carried of food by 1;
+			ItemGain food by 1 silently;
 			now GenerousHelotTimer is turns;
 		else:
 			say "     You shake your head, refusing his offering and arguing that he, instead, could use extra food. He lowers his arm, looking at you in disappointment. 'Master doesn't let me have it. If I bring this back, he won't share it with me, and I can't eat it...' Even so, you encourage him to have the food for himself, and after a few attempts, he finally decides to pull the can open and start eating hungrily. 'Thanks. You're good.' he says, with few more than those words before he takes his leave. You feel like you did the right thing.";

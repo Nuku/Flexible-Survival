@@ -36,7 +36,7 @@ Instead of resolving Bounty Hunter:
 	say "     Crossing the street, he enters another storefront and leads up into what was formerly a second floor accounting office. While straining to look professional, the former businessplace is clearly cheap and trashy. The office furniture is old and mismatched, and the walls are covered in ad posters to have your taxes done and claims about big returns. Given the neighborhood, that's unsurprising.";
 	WaitLineBreak;
 	move player to Bradford's Camp;
-	now Bradford's Camp is known;
+	AddNavPoint Bradford's Camp;
 	now battleground is "void";
 	now HP of Bradford is 1;
 	now Bounty Hunter is resolved;
@@ -98,7 +98,7 @@ Instead of conversing the Bradford:
 		say "***Unknown error. Adjusting.";
 		now HP of Bradford is 1;
 		now Bounty Hunter is resolved;
-		now Bradford's Camp is known;
+		AddNavPoint Bradford's Camp;
 	else if HP of Bradford is 1:
 		say "     'The name's Bradford,' he says, holding out his hand to shake. 'I didn't mean to start us off on the wrong foot. Like I said - kinda tough to tell who's who out there these days. Makes my job as a bounty hunter all the harder. Which is what I wanted to talk about.' He takes a breath and uses the moment to peek through the blinds, scanning up and down the street.";
 		say "     'Now, as you can prob'bly guess, I'm lookin['] for someone who should be comin['] by here sooner or later. But it's takin['] longer'n expected. With all them monsters about, there's plenty of bounty contracts for a guy like me, but I don't want to miss my chance with this guy. Whole reason I came to this God-forsaken city in the first place. Ended up bullified for my troubles. Ain't no way I'm leavin['] without him. But that ain't why I called you up here.'";

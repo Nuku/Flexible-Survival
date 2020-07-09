@@ -78,7 +78,7 @@ Instead of resolving a Dog Walking:
 			now HP of Mike is 3;
 			say "     Nodding over at you, Mike says 'Thanks a lot for the help' as he kneels next to Lea to check on her. The transformed dog has a long claw-slash on her side and starts to whimper loudly now that the adrenaline of the fight wears off. 'This doesn't look good - might get infected too. I have to get her home.' He picks Lea up in his arms, and you walk down the street together, with you acting as a lookout for more trouble. Soon you arrive at Mike's house, where he leads you to the large dog kennel in the back and sets Lea down on a bed.";
 			move player to Mike's Office;
-			now Mike's Home is known;
+			AddNavPoint Mike's Home;
 		else:
 			LineBreak;
 			say "     You quickly turn around and flee before you get drawn into the fight too and don't stop running until you're well away. With odds of five against two, you don't think you'll see either Mike or Lea again. Who knows what the leopardmen will do with them...";
@@ -153,7 +153,7 @@ to say Stag loses:
 					say "     The stag's eyes get big and he replies 'What the fuck? You think I'm one of those creeps that makes people forget their humanity? Hell no - Lea and the others are actual dogs, man. I'm a professional animal trainer - or was, before this chaos. But then one morning I started sprouting fur. And when I checked on my dogs, they were becoming human. Soon I had a kennel full of humans with the minds of my dogs in them. They may look different, but they're still animals inside and need a master to care for them - and their new form is permanent as it turns out. They won't change again...'";
 					say "     'So you thought I had enslaved Lea, and I thought you were just a feral looking for something to fuck. Two of the few sane people in the town beating each other up - Hah. How about we forget this silly fighting ever happened?' He offers you his hand and you accept and shake it. Saying 'I'm Mike, by the way. See you later, under friendlier circumstances I hope.' he walks away.";
 					now HP of Mike is 98;
-					now Dog Walking is active;
+					now Dog Walking is unresolved;
 				else if (nam is "Suck him off"):
 					say "[MikeSex1]";
 				else if (nam is "Have him suck you off"):
@@ -618,7 +618,7 @@ instead of conversing Mike:
 			if Player consents:
 				say "     You pull the medkit out and start to patch Lea up while Mike holds her tight as she struggles, whining pitifully as you do the painful but necessary steps of cleaning and disinfecting her wound. It's not an easy task, but soon she's well taken care of, with a fresh white bandage around her upper torso.";
 				say "     Overjoyed at Lea being better now, Mike says 'Thank you, my friend. I don't know what I would have done without you. I'm in your debt.'";
-				delete medkit;
+				ItemLoss medkit by 1;
 				now HP of Mike is 5;
 			else:
 				say "     You just silently shake your head.";
@@ -1476,9 +1476,7 @@ to say AwesomeXerxesSex2:
 	WaitLineBreak;
 	say "     'Now, I am quite busy and I'm not really sure if I've got the time to do a tattoo,' she says with a grin. Xerxes, not picking up on her teasing, whines softly and his shoulders sag in disappointment. '...but for such a good doggy, I'm sure I can make the time.' This perks your pet right back up and he bounds around on all fours before jumping up and kissing her with several quick licks before diving his tongue into her muzzle. She moans and pats him until he settles down enough to drop back down. He then hops eagerly into the tattooing chair, his enthusiasm barely contained. She turns to you and asks if either of you had anything particular in mind and you shake your head, telling her to do whatever your pet wants as long as it's nothing too crazy. Grinning happily, Kara pulls out a book of samples and flips through it, showing one to your pet. 'Do you like this one? I think it's just right for a good boy like you,' she says, scritching his ear. Xerxes barks happily and nuzzles into the scritches, clearly pleased with her choice.";
 	say "     As she's getting her equipment ready, she starts looking through some inks and sets them aside. Seeing that it's mostly browns and blacks she's examining, Xerxes barks up with a call of 'color!' She arches her brow and asks him what color he'd like, at which point he seems struck with indecision, pointing at colors at random, regardless of how poorly they'd go together. You pat his side, tell him to settle down and add that perhaps the professional should pick a few nice colors. He seems happy with this and settles back down. You stick around long enough to make sure that he's settled once the tattooing starts. He whimpers a little at the pain of it, but sits still like the good boy he is, letting the hyena do her work. Having told you it'd take a while, you give your pet a kiss before heading off to scout around a bit. You even manage to find a bit of food while you're out. You leave some of it for Kara as payment for her work and tuck the rest away in your pack.";
-	LineBreak;
-	say "[bold type]You gain 1 food![roman type][line break]";
-	increase carried of food by 1;
+	ItemGain food by 1;
 	WaitLineBreak;
 	say "     When you get back, she's got him lying down on a table and is finishing up something on his left butt-cheek. Taking your seat, you watch the hyena's rear sway as she works. With such a view, you can't help but notice the cum leaking from her pussy. It seems the two took a break to have some more fun while you were out. Finishing up, she sets aside the needle and smears some lotion across his back and bottom. 'All done, doggy,' she says, running a paw through his lush hair. 'Now be a good boy and show your master your nice tattoo.'";
 	NPCSexAftermath Kara receives "PussyFuck" from Xerxes;
@@ -2314,9 +2312,7 @@ to say AwesomerHelenSex2:
 	WaitLineBreak;
 	say "     'Now, I am quite busy and I'm not really sure if I've got the time to do a tattoo,' Kara says with a grin. Helen, not picking up on her teasing, whines softly and her shoulders sag in disappointment. '...but for such a good doggy, I'm sure I can make the time.' This perks your pet right back up and she bounds around on all fours before jumping up and kissing the hyena with several quick licks before diving her tongue into her muzzle. She moans and pats her until she settles down enough to drop back down. She then hops eagerly into the tattooing chair, her enthusiasm barely contained. The hyena turns to you and asks if either of you had anything particular in mind and you shake your head, telling her to do whatever your pet wants as long as it's nothing too crazy. Grinning happily, Kara pulls out a book of samples and flips through it, showing one to your pet. 'Do you like this one? I think it's just right for a good girl like you,' she says, scritching her ear. Helen barks happily and nuzzles into the scritches, clearly pleased with her choice.";
 	say "     As the hyena is getting her equipment ready, she starts looking through some inks and sets them aside. Seeing that it's mostly browns and blacks she's examining, Helen barks up with a call of 'color!' Kara arches her brow and asks what color she'd like, at which point she seems struck with indecision, pointing at colors at random, regardless of how poorly they'd go together. You pat her side, tell her to settle down and add that perhaps the professional should pick a few nice colors. She seems happy with this and settles back down. You stick around long enough to make sure that she's settled once the tattooing starts. She whimpers a little at the pain of it, but sits still like the good girl she is, letting the hyena do her work. Having told you it'd take a while, you give your pet a kiss before head off to scout around a bit. You even manage to find a bit of food while out. You leave some of it for Kara as payment for her work and tuck the rest away in your pack.";
-	LineBreak;
-	say "[bold type]You gain 1 food![roman type][line break]";
-	increase carried of food by 1;
+	ItemGain food by 1;
 	WaitLineBreak;
 	say "     When you get back, Kara's got her lying back on a table and is finishing up something on her left thigh. Taking your seat, you watch the hyena's rear sway as she works. With such a view, you can't help but notice the damp folds of her pussy. When Kara shifts position briefly, you're gives you a good view of Helen's cunny as well with some cum leaking out of it. It seems the two took a break to have some more fun while you were out. Finishing up, she sets aside the needle and smears some lotion across the young woman's side. 'All done, doggy,' she says, running a paw through her lush hair. 'Now be a good girl and show your master your nice tattoo.'";
 	NPCSexAftermath Helen receives "PussyFuck" from Kara;

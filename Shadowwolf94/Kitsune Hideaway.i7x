@@ -254,6 +254,8 @@ to say KitsuneSpeciesComment: [Comments on player's species]
 		say "     'Aren't you just the cutest kitten? Sharp claws, adorable tail, and yes... there's the pent-up rage dancing behind your eyes, or maybe that's lust. The two do have some similarities, and felines are renowned for both, especially in the tales. I imagine that this transformation has helped your hand-eye coordination and agility, but who knows? Perhaps you were ungainly and clumsy beforehand. Either way, you ooze a sense of reserved superiority, though perhaps that isn't the only thing you ooze, nor do I believe that it is always your dominant feeling. You wouldn't want people to think you predictable after all. I shall avoid giving you a tummy rub just in case. ";
 	else if BodyName of Player is listed in infections of InsectList:
 		say "     'You seem to be more adventurous with your form than many in the city. Well, those who have a choice anyway. There are rather a few ants, bees, and wasps hidden from the view of the military. The segmented body really accentuates your waist and your color really suits you. I wonder, do you feel an overwhelming urge to be part of a hive, or is your will stronger than that? Just think of all those drones rushing around at your beck and call, feeding, fucking, and comforting you. On the other hand, independence is one of your most attractive traits. That and your insightful conversations. ";
+	else if BodyName of Player is listed in infections of LeporineList:
+		say "     'You look like prey and that may not play into your advantage. Or maybe you use it to lure your enemies into a false sense of security and you take advantage of others instincts. I'm sure that many find you adorable either way with you cute wiggly nose, long soft ears, and penchant for nibbling upon vegetables. Just be sure that none of them decide to try and take you for their own and your speed doesn't save you. I know of at least a few wolves in the city with a fetish for predator/prey roleplaying and you look like you might fit the part. Hopefully you would be able to [']fit their part['] too, if you know what I mean. ";
 	else if BodyName of Player is listed in infections of MarsupialList:
 		say "     'Do boomerangs or venomous creatures evoke intense feelings of lust from you? Weirdly, I've only seen your sort hopping about the Red Light District, but I'm sure that's just a coincidence. You have admirably strong legs, and I'm sure that some people would salivate at the thought of having them wrapped around their heads while they serviced you. The pouch may even allow you to transport your children around to help you defend yourself from aggressors, because there couldn't possibly be anything wrong with using your young as living weapons. ";
 	else if BodyName of Player is listed in infections of MustelidList:
@@ -314,7 +316,7 @@ Check kitfoodrequest:
 
 Carry out kitfoodrequest:
 	say "Kitsune smirks at you before going off... somewhere... and then returning with a bit of food for you. 'Please, take this and take care.'";
-	increase carried of food by 1;
+	ItemGain food by 1;
 	now lastfoodrun is turns;
 	increase Kitsunefood by 1;
 
@@ -328,7 +330,7 @@ Check kitwaterrequest:
 
 Carry out kitwaterrequest:
 	say "Kitsune nods to you and then goes about his way to collect some water. It takes a minute but soon the other returns to gracefully hand you a bottle of water. 'May this help you on your journey, little one.'";
-	increase carried of water bottle by 1;
+	ItemGain water bottle by 1;
 	now lastwaterrun is turns;
 	increase Kitsunewater by 1;
 ]

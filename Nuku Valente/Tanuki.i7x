@@ -65,7 +65,6 @@ Instead of resolving tanukibell:
 			now Tanuki Dad is in shinto shrine;
 		else if Playerinput matches "m" or playerinput matches "2":
 			say "'He affects a falsetto even as [']she['] clears her throat. 'There we are.' Bending over and wrapping his arms around his great balls, he lifts them up, obscuring his form for just a moment, but it[']s long enough to reveal a new Tanuki, with large round breasts that entirely ignore such trivial things as gravity, wide hips and narrow waist. With a little sway of her hips, she flutters her lashes at you. 'Momma Tanuki is here to help you, dear.' It doesn't help that she still faintly sounds like a man playing the part, though she appears ready to do her best.";
-			stop the action;
 			now tanukigender is 2;
 			now Tanuki Mom is in shinto shrine;
 		else:
@@ -107,7 +106,7 @@ check sacrificing:
 
 carry out sacrificing:
 	say "You bring out the [noun] and place it on the donation box. It vanishes in a bright poof of smoke that fades into brown leaves, whirling away and leaving nothing behind.";
-	delete noun;
+	ItemLoss noun by 1;
 	decrease SatisfiedTanuki by 1;
 	increase score by 10;
 	if SatisfiedTanuki is 0:
@@ -687,16 +686,16 @@ to say TanukiRomanceTalk:
 		say "Tanuki Dad looks like someone forgot to tell him what to say. He makes unsure noises and worries his fingers for a few moments. 'And that[']s how it[']s done!' he suddenly exclaims as if he had provided any wisdom.";
 
 to say TanukiPerfumeTalk:
-	say "     ";
-	say "     ";
+	say "'Oh, this?' She holds out an arm for you to get a sniff of. You are drawn away, visions of [one of]fishing in a calm bay[or]roasting meat on a warm summer afternoon[or]sharing a quality drink with friends[or]a world where it isn[']t a struggle to survive[at random] dance in your mind.";
+	increase the morale of the player by 10;
+	say "Your moment of peace is shattered by her tapping you. 'Don[']t get lost in that. Besides, I[']m not going anywhere.'";
 
 to say TanukiCookingTalk:
 	if "Tanuki Salts" is listed in feats of the player:
 		say "'You already have my salts. I'm Tanuki, not a cooking spirit.' She shakes her ladel at you lightly, flecks of fluid littering the area. 'I don[']t have other cooking tips for you.'";
 	else:
 		say "     'Cooking?' Her face lights up in a great jovial smile. 'Eating is one of my favorite things, and cooking leads to eating, so it makes sense that I happen to enjoy that too.' She waves her ladel at you lightly. 'Now, I prefer when someone else cooks for me, but sometimes you just have to do it yourself, and doing it with someone you like is almost as good. Fortunately, you're here.'";
-		say "     She turns away, her 'coon tail swaying behind her. 'Now, this is where you expect me to say something about [']cooking with love['], but you can forget that.' She produces a small paper packet from her apron and shakes it towards you, producing a rattle that implies it's filled with some small particles, like salt perhaps? 'This has run in the
-	 family... Mmm...' She taps her chin with a single finger, her voice dipping a moment. 'When did I steal these...? Oh, nevermind. I[']ve had them for ages!'";
+		say "     She turns away, her 'coon tail swaying behind her. 'Now, this is where you expect me to say something about [']cooking with love['], but you can forget that.' She produces a small paper packet from her apron and shakes it towards you, producing a rattle that implies it's filled with some small particles, like salt perhaps? 'This has run in the family... Mmm...' She taps her chin with a single finger, her voice dipping a moment. 'When did I steal these...? Oh, nevermind. I[']ve had them for ages!'";
 		wait for any key;
 		say "     She flings the packet at you suddenly. 'And now, I entrust them to you. Don[']t worry, I have a spare.' She jiggles a packet that hadn't been in her hand a moment before. 'But what use is a spice you don[']t know how to use? Let[']s get to cooking.' She whistles cheerrfully as she pulls out a massive wok and slams it down on a fire that sprouts into being just in time and she begins tossing in all manner of vegetables and fish, frying it all up as she sprinkles the seasoning in time with the song she sings. 'The song is not optional,' she reminds before continuing the ballad to the food, rocking left and right as she works. 'Get that for me.' She points to a shelf just behind you that surely hadn[']t been there.";
 		wait for any key;

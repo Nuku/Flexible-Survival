@@ -852,7 +852,7 @@ Instead of resolving Greenhouse:
 				WaitLineBreak;
 				say "     Relaxing a little, you tell her that you just want the plant and that she should let you have it in return for freeing her. 'I appreciate your assistance and I've been very tolerant, but you can't take that plant. It's very toxic and is quite dangerous. Just put the wolfsbane down and get out of here before you attract some unwanted trouble. I'm willing to be a little tolerant with you given the circumstances, but it won't last long.'";
 				say "     She tries to sound intimidating, but is clearly nervous and keeps several yards away from you. Figuring she's scared of a battle-hardened survivalist such as yourself, you [if weapon object of Player is not journal]wave your [weapon object of Player] in her direction[else]shake your fist menacingly at her[end if]. You growl that the college has already gone to hell and that you need this monkswood, wolfsbane or whatever it's called. You then slam the pot to the ground, shattering it beside the other one. You grab several of the plants by their stalks, shake the dirt from their roots and leave, leaving the professor to cautiously advance once you move to leave.";
-		increase carried of wolfsbane by 1;
+		ItemGain wolfsbane by 1;
 		now wrcurseNermine is 3;
 		now Greenhouse is resolved;
 		increase score by 20;
@@ -904,14 +904,14 @@ Instead of resolving Getting the Knife:
 to say wrgetknife:
 	say "     Checking around the building, you find a half-open window along one side of the warehouse. It is quite high up, but you thankfully there are some old crates you can stack to get up to it. After managing to get inside, you start looking around. Thankfully, there's not much being stored in here right now, so it doesn't take you very long to find the shipping crate with the silver knife in it.";
 	say "     The knife seems a little unusual when compared to the other items you've seen around Nermine's store. The handle is rather plain and made of wood, with only a few swirls carved into it. The blade is about ten inches long and has a slight curve to it. The silver blade shows some tarnish, but appears to still have a keen edge to it. Uncertain why Nermine would care for such a thing when compared to the more ornate items in the lot, you shrug and put it away.";
-	increase carried of silver knife by 1;
+	ItemGain silver knife by 1;
 	let bonus be ( intelligence of Player + perception of Player - 20 ) divided by 2;
 	let dice be a random number from 1 to 20;
 	if bonus + dice > 18:
 		say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 		say "You are about to head out when you realize that you're about to walk away from this collection of antiquities without even checking out any of the others. Just because Nermine doesn't want any of them doesn't mean they can't be of use to you. You flip through the auction list. It appears the items come from an estate sale and while most of them are nothing of interest to you, one of the photos catches your eye. Finding the crate, you break into it and pull out the torso mannequin with a chainmail vest on it. Now that might come in handy, you muse as you head out, feeling a little closer to being rid of your cursed affliction.";
 		increase score by 20;
-		increase carried of chainmail vest by 1;
+		ItemGain chainmail vest by 1;
 	else:
 		say "     Having gotten what you came for, you make a hasty exit from the warehouse. You feel a little closer to being rid of your cursed affliction.";
 	now wrcurseNermine is 6;
@@ -1029,7 +1029,7 @@ to say wrcurseaccept:
 		say "     When the process is done, she pushes your head back and you both stumble apart and fall to the ground. You feel weak and tired. But you know that will pass, for you are a wereraptor now and the blood in you is strong now. You rise and look yourself over and while you see no differences, you know the power within you has grown and it cannot be taken from you now by foolish concoctions or a wretched kn-. You stop and look around, but can find no trace of the silver knife, leading you to conclude that it has somehow made its way back to Nermine.";
 		say "     Dr. Utah rises and snarls triumphantly, a cry that you return. 'There is much to do before our kind can spread and rule the wretched mammals. I shall return to my office and begin the preparations. There are others I have infected who show promise and may soon accept the gift as you have,' she hisses softly, licking your muzzle. 'Those who accept it shall rise as we have and those who don't shall fall,' she concludes, running her hands over your body before turning and charging away.";
 		say "     As the rush of your acceptance of the curse starts to fade, you wonder about the choice you've made, but do not feel that it is a mistake. The wereraptor is a part of you now and its instincts are a part of your mind. Its hunger is yours, but you are now in control. There is no point in denying these desires for you have made them your own.";
-		now Paleontology Office is known;
+		AddNavPoint Paleontology Office;
 [		say "***raptor sex goes here?";]
 	else:
 		say "     Looking down at the bottle of poisonous aconite and the silver knife that makes your skin crawl just to look at it, you reject them. Your wereraptor body knows they are cursed and seek to kill you, not save you. You hurl the bottle fast and far, sending over the balcony to the floor far below. Dr. Utah gives a triumphant, hissing laugh and strides forward, running his taloned hands over your body.";
@@ -1044,7 +1044,7 @@ to say wrcurseaccept:
 		say "     Dr. Utah rises and snarls triumphantly, a cry that you return. 'There is much to do before our kind can spread and rule the wretched mammals. I shall return to my office and begin the preparations. There are others I have infected who show promise and may soon accept the gift as you have,' he hisses softly, licking your muzzle. 'Those who accept it shall rise as we have and those who don't shall fall,' he concludes, running his hands over your body before turning and charging away.";
 		say "     As the rush of your acceptance of the curse starts to fade, you wonder about the choice you've made, but do not feel that it is a mistake. The wereraptor is a part of you now and its instincts are a part of your mind. Its hunger is yours, but you are now in control. There is no point in denying these desires for you have made them your own.";
 		wrcurserestore;
-		now Paleontology Office is known;
+		AddNavPoint Paleontology Office;
 [		say "***raptor sex goes here?";]
 	now wrcursestatus is 7;
 	now wrcurseactivity is true;

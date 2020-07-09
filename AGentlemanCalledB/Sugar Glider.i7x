@@ -18,10 +18,10 @@ to say losetoSugarGlider:
 			say "     Despite yourself, you can't help but squirm and laugh at the frantic tickling. In the throes of laughter, you can't resist as she paws through your stuff with one paw while the other and her tail keep you giggling";
 			if carried of chips > 0:
 				say ". Finding your stash of snacks, she swipes some with an exaggerated 'Ah-ha!' and stashes it away. Having claimed her prize, she turns her attention to you now, eager to celebrate her find.[run paragraph on]";
-				decrease carried of chips by 1;
+				ItemLoss chips by 1;
 			else if carried of soda > 0:
 				say ". Finding your stash of snacks empty, she instead turns her attention to your pop and swipes one. 'Well, since you've not got any candy for me, I guess I'll take this instead.' She gives your cheek another lick. 'Oh, don't worry, hon. I'll stop by later and trade it back for some sweet, sweet candy.' That said, she turns her attention to you now, eager to celebrate her find.[run paragraph on]";
-				decrease carried of soda by 1;
+				ItemLoss soda by 1;
 			else:
 				say ". Finding your stash of snacks empty, she mock-pouts and grinds her twin cunts against your leg. 'Nothing for me at all? How about some sweet sex then, you [one of]soda jerk[or]fizz head[or]carbonated tube rat[or]candy hoarder[or]pop guzzler[at random]?' she says with a giggle as she turns her attention back to your body.[run paragraph on]";
 	else:
@@ -58,10 +58,10 @@ to say losetoSugarGlider:
 	if ( BodyName of Player is "Sugar Ferret" or FaceName of Player is "Sugar Ferret" ) and HP of Player > 0:	[steal after]
 		if carried of chips > 0:
 			say "     It is then that you notice that your pack has been rifled through by the sneaky sugar glider while you were having sweet, syrupy sex together. Looking towards her departing figure, you see her turn back and wave tauntingly with the snacks she's stolen tucked into her pouch. She giggles and gives her tail a teasing flick as she rushes away, making her escape.";
-			decrease carried of chips by 1;
+			ItemLoss chips by 1;
 		else if carried of soda > 0:
 			say "     It is then that you notice that your pack has been rifled through by the sneaky sugar glider while you were having sweet, syrupy sex together. Looking towards her departing figure, you see her turn back and wave tauntingly with the soda she's stolen tucked into her pouch. She giggles and gives her tail a teasing flick as she rushes away, making her escape.";
-			decrease carried of soda by 1;
+			ItemLoss soda by 1;
 		else if a random chance of 1 in 3 succeeds and sugarglidernote is false:
 			say "     It is then that you notice that your pack has been rifled through by the sneaky sugar glider while you were having sweet, syrupy sex together. It doesn't seem that anything's been taken, but there is a note left there. 'Next time, make sure there's something for me to swipe, you stupid [one of]ferret[or]tube rat[or]fizz head[or]soda jerk[at random]. XOXOXO.' It's even got a pink, sugary imprint of her lips on it. Looking towards her departing figure, you see her turn back and wave with a giggle before making her escape.";
 			now sugarglidernote is true;

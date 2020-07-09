@@ -165,7 +165,7 @@ Instead of resolving a Sandwich Shop:
 	if Player consents:
 		say "     You walk into the back area of the store. The stainless steel sink basin used for washing dishes has been bent and pushed aside by a four foot tall sapling that is piercing the floorboards. Interestingly, only the words '12 inches that'll make your mouth water' and 'try our savory... balls' remain readable on the menu board right beside the little tree, with everything else scratched beyond recognition - what an odd coincidence. Or maybe not - you make out some scraps of paint on the gently swaying branches. Wait, there's not even any wind in here! It is definitively moving on its own.";
 		say "     Who knows who or what that plant might once have been and if it retains some memories of its former self... so you decide to keep your distance as you explore further. All of the refrigerators in the back have already ransacked, their doors standing wide open. Still, you then look inside them one by one just to be sure, and your persistence is rewarded - there is a small brown paper bag behind a couple of shredded boxes in one of them! You look inside and find a brownie that has been wrapped in plastic with a small note saying, 'Here's a treat for your break, love M'. A small shiver runs down your spine as you imagine what might have happened to the owner of that brownie, or their partner. But hey, waste not want not, so you nevertheless take the food and slide it into your backpack.";
-		increase carried of food by 1;
+		ItemGain food by 1;
 		now Resolution of Sandwich Shop is 1;
 	else:
 		say "     Seems a little too risky, with likely no reward, so you exit the store and walk in the opposite direction of where the wolves went.";

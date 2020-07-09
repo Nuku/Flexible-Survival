@@ -421,6 +421,6 @@ to say nullpowderuse:
 		else:
 			say "     You decide against using the item right now and stow it away.";
 			now Trixieexit is 1;
-			increase carried of nullifying powder by 1;
+			ItemGain nullifying powder by 1;
 
 Mannequin ends here.

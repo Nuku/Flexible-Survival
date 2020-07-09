@@ -1,8 +1,10 @@
-Version 1 of Void Realm by Gherod begins here.
+Version 3 of Void Realm by Gherod begins here.
 
 "Adds the Void Realm to the game."
 
 [Version 1 - Adds the Void Realm virtual hunting ground with 3 encounters (Void Serpent, Dark Tyrant, Peculiar Summoner)]
+[Version 2 - Added the Tentacle Abomination encounter]
+[Version 3 - Extended Void Fireflies event. Added Odd Treasure and Mirrors event. Peculiar Summoner now drops a drink ingredient on defeat.]
 
 [  ENCOUNTERS  ]
 [Note: All losses with encounters in the Void must be bad ends (including fleeing), unless they're part of a quest or any specific context where losing and surviving has a justified reason. They must all be integrated within the Void Realm navigation system using trackers and in conformity with the other encounters, or event-based through the "Go Beyond the Veil" navigation option.]
@@ -11,6 +13,8 @@ Version 1 of Void Realm by Gherod begins here.
 [Void Serpent - A non-unique encounter. Significant threat, weakened by Abyssal Edge, scared away by sharp black tusk]
 [Dark Tyrant - A special encounter. Almost impossible to beat, unless weakened by Abyssal Edge, can become ally (TBA), can be defeated permanently]
 [Peculiar Summoner - an unique encounter. Not the biggest threat, cannot be weakened, easy to avoid and checks are fixed]
+[Tentacle Abomination - a non-unique encounter. Mild threat, weakened by Ancient Tome, easy to avoid]
+[   Tracker for this one goes up to 4 due to the order its tracker is handled through the moves]
 
 [  COMPANIONS  ]
 [Note: All text change provided by the existence of a companion must be in ITALIC, so the player can more easily see what changes. This only applies to singular paragraphs or short sections, and following long scenes (such as Xaedihr's sex scene in Tendril Plants) may be written in ROMAN as per normal.]
@@ -27,6 +31,7 @@ Version 1 of Void Realm by Gherod begins here.
 [      - Can create drinks with the following items:]
 [        . Null Essence;                            ]
 [        . sharp black tusk;                        ]
+[        . loose tentacle;                          ]
 
 Section 1 - Pre-Event
 
@@ -89,13 +94,71 @@ The sarea of Friend Of The Darkness is "Nowhere".
 
 [----------------------------------------]
 
+[Void Fireflies Event]
+
+Table of GameEventIDs (continued)
+Object	Name
+Luminous Harem	"Luminous Harem"
+
+Luminous Harem is a situation.
+The sarea of Luminous Harem is "Nowhere".
+
+[RESOLUTION STAGES]
+[0: Never communicated with the void fireflies]
+[1: Communicated once, they touched the player, but are still shy]
+[2: Communicated twice, they start revealing their shapes]
+[3: Communicated thrice, they are now openly offering sex to the player]
+
+[----------------------------------------]
+
+Table of GameEventIDs (continued)
+Object	Name
+Odd Treasure	"Odd Treasure"
+
+Odd Treasure is a situation.
+The sarea of Odd Treasure is "Nowhere".
+
+[RESOLUTION STAGES]
+[0: Nothing happened so far]
+[1: Encountered the Elk Head Reaper's dungeon]
+
+[----------------------------------------]
+
+Table of GameEventIDs (continued)
+Object	Name
+ElkHeadReaperGender	"ElkHeadReaperGender"
+
+ElkHeadReaperGender is a situation.
+The sarea of ElkHeadReaperGender is "Nowhere".
+
+[RESOLUTION STAGES]
+[0: Gender undecided]
+[10: Male]
+[20: Female]
+
+[----------------------------------------]
+
+Table of GameEventIDs (continued)
+Object	Name
+MirrorsKey	"MirrorsKey"
+
+MirrorsKey is a situation.
+The sarea of MirrorsKey is "Nowhere".
+
+[RESOLUTION STAGES]
+[0: Nothing happened so far]
+[1: Encountered a key by destroying the mirror]
+[2: Opened the door on the left path of "Odd Treasure"]
+
+[----------------------------------------]
+
 instead of resolving To The Unknown:
 	if Resolution of To The Unknown is 0: [Pre-Event]
 		say "     You go past one of the many buildings in the District and turn to your right. It is another ransacked shop with nothing left, only broken glass scattered around the windows and a complete absence of sound, which worsens the more you proceed forward. There is nothing else around but destruction and abandonment, consequences brought by the apocalypse, but besides this, something seems to be really disturbing you, and you find yourself helplessly unable to explain what it is, exactly. It's just something you feel... A shiver, sudden loss of thoughts, an instant discomfort rapidly growing inside as if a nightmare was chasing after you. The sense of danger, maybe there is a creature approaching...?! Though there is nothing. Paranoia slowly begins to take over your mind, and a cold drop of sweat follows after.";
 		say "     Reality seems pointless, the air around you is heavy, your body refuses to move, and then you can't breathe. But at the same time, there you are, alive, your heart beating, your senses in overdrive, but your brain seems incapable of understanding its surroundings. There is a hiss echoing through, and that is when you see a gigantic scaly body of a snake, passing right by you and through the buildings like a slowly moving train, seemingly endless. Your heart stops at that moment, facing the imminent danger, and it is a feeling you cannot control. You feel powerless, disarmed and tiny, as the serpent makes its way unhindered by any obstacles that prove to be nothing for its titanic dimensions.";
 		WaitLineBreak;
 		say "     Suddenly, it all stops. You return to the streets of Red Light District, safe and sound, in the same spot as you were before. Though something comes rolling towards your feet. A very black sort of shiny rock, it seems, though it seems to slightly change its color when you touch it. Possibly a chemical reaction to your skin or from the pressure when you hold it in your hands, however that only makes this object more mysterious.";
-		increase carried of null essence by 1;
+		ItemGain null essence by 1 silently;
 		say "     You have obtained a [bold type]Null Essence[roman type] and placed it in your inventory.";
 		WaitLineBreak;
 		if companion of player is demonologist or Xaedihr is in Grey Abbey Library:
@@ -137,6 +200,8 @@ VRPlayerMove is a number that varies. VRPlayerMove is usually 0. [@Tag:NotSaved]
 VRPlayerFacing is a number that varies. VRPlayerFacing is usually 0. [@Tag:NotSaved]
 VRVoidSerpentTracker is a number that varies. VRVoidSerpentTracker is usually 0. [@Tag:NotSaved]
 VRPeculiarSummonerTracker is a number that varies. VRPeculiarSummonerTracker is usually 0. [@Tag:NotSaved]
+VRTentacleAbominationTracker is a number that varies. VRTentacleAbominationTracker is usually 0. [@Tag:NotSaved]
+VRTentacleAbominationLinger is a number that varies. VRTentacleAbominationLinger is usually 0. [@Tag:NotSaved]
 VRDarkTyrantTracker is a number that varies. VRDarkTyrantTracker is usually -1. [@Tag:NotSaved]
 
 to say ToTheVoid:
@@ -262,6 +327,11 @@ to say VRMoveOptions:
 			Linebreak;
 			VRNormalSanityLoss;
 			say "     You have decided to stand still for a moment, not moving towards either way.";
+			if VRDarkTyrantTracker is not 3:
+				if VRTentacleAbominationTracker is 3:
+					increase VRTentacleAbominationTracker by 1; [it will happen for sure]
+				else if a random chance of 3 in 5 succeeds and VRTentacleAbominationTracker < 3: [Holding for too long invokes the Tentacle Abomination]
+					increase VRTentacleAbominationTracker by 1;
 			if VRDarkTyrantTracker is 3: [Will always attack first]
 				say "     That was a bad decision. With the Dark Tyrant on your tail, not attempting to move through the dimensional line of this realm only earns you a direct confrontation with his great and menacing shadow. Your immediate surroundings darken as the gigantic abomination of dark slime grows before you, licking his own black gooey face with a hungry toothy grin. Solid liquid drips from each of his extremities, including from the monstrous shape of a cock permanently erect between his massive legs, its slit gaping as the pitch black goo keeps leaking.";
 				if companion of player is demonologist:
@@ -277,6 +347,16 @@ to say VRMoveOptions:
 				now VRVoidSerpentTracker is 1;
 				WaitLineBreak;
 				say "[VRMoveOptions]";
+			else if VRTentacleAbominationTracker is 4: [attempting to ambush the player]
+				say "     That odd, slimey presence above you was already enough of a bad omen, and your decision to stay in the same place only exposed you to the menace of an abomination with a massive cluster of tentacles that is descending upon you!";
+				if carried of ancient tome > 0 and TentacleInteractions > 0:
+					say "     [bold type]However...[roman type][line break]";
+					wait for any key;
+					VRTentacleAbominationATome;
+				else:
+					say "     There is no other option but to try and defeat this monster by your own hand, if you intend to go in further. It's going to be a tough fight...";
+					wait for any key;
+					VRTentacleAbominationFight;
 			else if VRPeculiarSummonerTracker is 3: [Peculiar Summoner will always wait for other monsters to leave]
 				say "     However, you are stopped by a sudden cloaked figure appearing right before you, its dark and tattered robes hanging still as the stillness of the void. It looks like you could not avoid this foe, who has been observing you for a while, now.";
 				WaitLineBreak;
@@ -286,6 +366,11 @@ to say VRMoveOptions:
 				say "[VRMoveOptions]";
 		else if calcnumber is 4: [Explore, sanity loss decided only later on]
 			Linebreak;
+			if VRDarkTyrantTracker is not 3:
+				if VRTentacleAbominationTracker is 3:
+					increase VRTentacleAbominationTracker by 1; [it will happen for sure]
+				else if a random chance of 1 in 4 succeeds and VRTentacleAbominationTracker < 3: [Exploring repeatedly invokes the Tentacle Abomination]
+					increase VRTentacleAbominationTracker by 1;
 			if VRDarkTyrantTracker is 3:
 				say "     That was a bad decision. With the Dark Tyrant on your tail, not attempting to move through the dimensional line of this realm only earns you a direct confrontation with his great and menacing shadow. Your immediate surroundings darken as the gigantic abomination of dark slime grows before you, licking his own black gooey face with a hungry toothy grin. Solid liquid drips from each of his extremities, including from the monstrous shape of a cock permanently erect between his massive legs, its slit gaping as the pitch black goo keeps leaking.";
 				if companion of player is demonologist:
@@ -354,6 +439,18 @@ to VREncounterTrackerCheck:
 			say "     You feel like you are being observed by someone of a great power, and that they are very close. It is impossible to tell from which direction you are sensing this, but it seems to be from within the core line. Perhaps there is a chance you could lose them if you were to not be in their line of sight?";
 			if companion of player is demonologist:
 				say "     [italic type]Whispering, Xaedihr tells you 'Lose them beyond the veil, they won't be able to follow. But if you can't, I doubt they will attack carelessly.'[roman type][line break]";
+		if VRTentacleAbominationLinger is 3:
+			say "     The sluggish, ominous presence that used to threaten you from above seems to be gone, for now.";
+			if companion of player is demonologist:
+				say "     [italic type]'Tentacle Abomination gone. That's a relief.' says Xaedihr as he turns to you.[roman type][line break]";
+			now VRTentacleAbominationTracker is 1;
+			now VRTentacleAbominationLinger is 0;
+		if VRTentacleAbominationTracker is 3:
+			say "     There is an ominous presence hovering above you, with a sort of sluggish and slimey sounds echoing through. Looking up, there seems to be nothing, but there is this imminent sensation that something, or someone, might be about to fall right on top of you.";
+			if companion of player is demonologist:
+				say "     [italic type]Whispering, Xaedihr tells you 'Look out for those tentacle abominations. They are everywhere, so don't linger around in the exact same spot for too long, unless you want one of them to find you. Although I don't think it likes snakes... but even so, it will stay in the veil, too, so beware.'[roman type][line break]";
+			if a random chance of 3 in 4 succeeds:
+				increase VRTentacleAbominationLinger by 1;
 		if a random chance of 1 in 4 succeeds and VRDarkTyrantTracker > -1 and VRDarkTyrantTracker < 3:
 			increase VRDarkTyrantTracker by 1;
 		if VRDarkTyrantTracker is 3:
@@ -394,11 +491,13 @@ to say VRLeave:
 	now VRPeculiarSummonerTracker is 0;
 	if VRDarkTyrantTracker > -1:
 		now VRDarkTyrantTracker is 0;
+	now VRTentacleAbominationTracker is 0;
+	now VRTentacleAbominationLinger is 0;
 	now VRPlayerMove is 0;
 	now VRPlayerFacing is 99;
 	if a random chance of 1 in 4 succeeds:
 		say "     A single piece of pitch black rock falls to your feet once you regain control of your senses. You have obtained a [bold type]null essence[roman type] and placed it in your inventory.";
-		increase carried of null essence by 1;
+		ItemGain null essence by 1 silently;
 	now inasituation is false;
 	stop the action;
 
@@ -415,13 +514,56 @@ to VREvents: [Events that can happen]
 		if a random chance of 3 in 5 succeeds:
 			VREventsRoll;
 		else:
-			say "     [one of]Despite your attempts to leave the core line of this realm to investigate the surrounding area, you find nothing but more darkness and emptiness, at least this time.[or]However, no matter how much you attempt to push through the dimensional barriers, they keep lashing back at you, pushing you away and back within the boundaries of the core line. It looks like you won't get to see anything, at least this time.[or]Unfortunately, your perception happens to betray you, and the core line seems wider than it looks. The veils appear to be too distant for you to reach, forcing you back into your previous position for the time being.[or]Though even with all your might and determination, you simply don't manage to break free from the current of the core line. The dimensional force is too strong for the time being, and you're forced back into its main path.[or]But as you attempt to leave the core line's premises, it just looks like the Void doesn't want you to go. No, it definitely doesn't want you to reach its veils, and you end up with a headache from all the illusionary trickery it plays against your senses. You are forced to give up, for now.[at random]";
-			VRNormalSanityLoss;
-			WaitLineBreak;
-			say "[VRMoveOptions]";
+			if VRTentacleAbominationTracker is 4:
+				say "     Although as you make your way across the veil, you notice a disturbance in the walls when you attempt to proceed, as if something was waiting for you... The air around you stops, and there is no sound but just one comparable to a giant slimey slug crawling over the surface. Then, it's not just one, but many, many of them, and their shapes seem to be appearing in the form of shadows, all while something in the middle starts poking at the wall of darkness from the other side.";
+				if companion of player is demonologist:
+					say "     [italic type]'I would strongly recommend a hasty retreat. Else you want to have a date with an especially... tentacular being.' says Xaedihr, as he urges you to leave.[roman type][line break]";
+				if carried of ancient tome > 0 and TentacleInteractions > 0:
+					say "     [bold type]Something seems to be going terribly wrong with your Ancient Tome... It seems to be pounding at your mind like an angry ram,[roman type] for the lack of a better description, as all it gives you is a throbbing headache.";
+				Linebreak;
+				say "     ([link]Y[as]y[end link]) - Face this abomination.";
+				say "     ([link]N[as]n[end link]) - Back to the Core Line.";
+				if player consents:
+					say "     You ready yourself to face whatever is on the other side, keeping you from getting through. Slowly, you take a few steps forward until your body is making it across the veil, although your eyes are met with the most terrifying monster, with an obscene central mass that shapes itself into human genitalia, as dozens and dozens of tentacles flail around before trying to reach for you.";
+					if carried of ancient tome > 0 and TentacleInteractions > 0:
+						say "     [bold type]However...[roman type][line break]";
+						VRTentacleAbominationATome;
+					else:
+						say "     There is no other option but to try and defeat this monster by your own hand, if you intend to go in further. It's going to be a tough fight...";
+						wait for any key;
+						VRTentacleAbominationFight;
+				else:
+					say "     Thinking twice about it, a prudent decision would be backing off, hoping the abomination leaves on its own...";
+					if a random chance of 1 in 2 succeeds:
+						if VRTentacleAbominationLinger < 3:
+							increase VRTentacleAbominationLinger by 1;
+					WaitLineBreak;
+					say "[VRMoveOptions]";
+			else:
+				say "     [one of]Despite your attempts to leave the core line of this realm to investigate the surrounding area, you find nothing but more darkness and emptiness, at least this time.[or]However, no matter how much you attempt to push through the dimensional barriers, they keep lashing back at you, pushing you away and back within the boundaries of the core line. It looks like you won't get to see anything, at least this time.[or]Unfortunately, your perception happens to betray you, and the core line seems wider than it looks. The veils appear to be too distant for you to reach, forcing you back into your previous position for the time being.[or]Though even with all your might and determination, you simply don't manage to break free from the current of the core line. The dimensional force is too strong for the time being, and you're forced back into its main path.[or]But as you attempt to leave the core line's premises, it just looks like the Void doesn't want you to go. No, it definitely doesn't want you to reach its veils, and you end up with a headache from all the illusionary trickery it plays against your senses. You are forced to give up, for now.[at random]";
+				VRNormalSanityLoss;
+				WaitLineBreak;
+				say "[VRMoveOptions]";
+
+to VRTentacleAbominationATome: [Ancient Tome reacts to the tentacle abomination, triggering a debuff]
+	say "     You feel a compulsion, as your hand starts moving on its own in order to grab the ancient tome that is sitting in your inventory. The book is warm, almost burning to the touch, and opens violently as the pages flip in a frenzy. Within several seconds, the abomination that you are about to face seems to be squirming in agony, its movements getting weaker as time passes. Eventually, the tome closes, and you are left with it cooling down in your hands, as the weakened abomination charges at you with what is left of its strength.";
+	wait for any key;
+	choose a row with name of "Tentacle Abomination" in the Table of Random Critters;
+	now HP entry is 269;
+	now wdam entry is 22;
+	now inasituation is true;
+	challenge "Tentacle Abomination";
+	now HP entry is 469;
+	now wdam entry is 29;
+	VRTentacleAbominationFightConclusion;
+
+to VRTentacleAbominationFight:
+	now inasituation is true;
+	challenge "Tentacle Abomination";
+	VRTentacleAbominationFightConclusion;
 
 to VREventsRoll:
-	let randomnumber be a random number from 1 to 11;
+	let randomnumber be a random number from 1 to 13;
 	if randomnumber is:
 		-- 1:
 			say "[VRGatewayToFreedom]";
@@ -445,6 +587,10 @@ to VREventsRoll:
 			say "[VRQuestionableStuff]";
 		-- 11:
 			say "[VRVoidFireflies]";
+		-- 12:
+			say "[VROddTreasure]";
+		-- 13:
+			say "[VRMirrors]";
 
 to say AbyssalEdgeEvent:
 	say "     [bold type]Something unique is happening...[roman type][line break]";
@@ -546,7 +692,7 @@ to say VRGatewayToFreedom:
 		say "     Now as you open your eyes, you find yourself in one of the streets of Red Light District, disoriented for a brief moment before all your senses return. It seems that you're safely back to your homeworld, which despite having been severely punished by the apocalypse, it isn't as desperate and dark as the Void... In fact, this is so relieving that you feel your mental state completely reinvigorated. Could it be the light that bathed you?";
 		if a random chance of 1 in 2 succeeds:
 			say "     And also, it looks like you've got a single [bold type]null essence[roman type] from it. That doesn't seem to happen everytime.";
-			increase carried of null essence by 1;
+			ItemGain null essence by 1 silently;
 		SanBoost 100;
 		WaitLineBreak;
 		say "[VRLeave]";
@@ -602,19 +748,19 @@ to say VREssenceSwarm:
 		if randomnumber is:
 			-- 2:
 				say "     It looks like you were able to gather [bold type]2 null essences[roman type] just now. Given how rare these seem to be, that looks like a good number.";
-				increase carried of null essence by 2;
+				ItemGain null essence by 2 silently;
 			-- 3:
 				say "     It looks like you were able to gather [bold type]3 null essences[roman type] just now. Given how rare these seem to be, that looks like a great number.";
-				increase carried of null essence by 3;
+				ItemGain null essence by 3 silently;
 			-- 4:
 				say "     It looks like you were able to gather a whooping [bold type]4 null essences[roman type] just now. Given how rare these seem to be, that looks like an excellent number.";
-				increase carried of null essence by 3;
+				ItemGain null essence by 3 silently;
 			-- 5:
 				say "     It looks like you were able to gather an enormous cluster of exactly [bold type]5 null essences[roman type] in total, just now! Given how rare these seem to be, finding a bunch of them like this seems too good to be true...";
-				increase carried of null essence by 5;
+				ItemGain null essence by 5 silently;
 	else:
 		say "     It looks like you were able to gather [bold type]1 null essence[roman type] just now. Well, that's one more for the collection, and you're immediately back on your way.";
-		increase carried of null essence by 1;
+		ItemGain null essence by 1 silently;
 	WaitLineBreak;
 	say "[VRMoveOptions]";
 
@@ -926,14 +1072,120 @@ to say VRVoidFireflies:
 	say "     [bold type]Void Fireflies[roman type][line break]";
 	say "     While moving through the darkness of what lies beyond the veil, you find yourself entering some sort of underground area. Obviously, this is the void, so what you are seeing is merely a place that looks like a cavern, albeit a huge one, that only seems to increase in size the more you proceed further ahead, until the point you are standing in the middle of nothing. What saves this place from being absolutely terrifying is that you have a few dimming lights floating around you and a sense of relative peace. It is an odd feeling, but you welcome it as a moment of respite. In fact, you feel surprisingly calm.";
 	say "     The source of all the lights seems to be a crystal in front of you, which is dimming with a very soft light, but seems to welcome you in its vicinity. The floating ones approach you in a circle, and you can hear them whispering.";
+	if Resolution of Luminous Harem is 1:
+		say "     [bold type]They seem to remember you[roman type] from the other time you attempted to talk to them. Something suggests that they are more open for interaction, judging by the way these little lights are flying around you much closer than before.";
+	else if Resolution of Luminous Harem is 2:
+		say "     [bold type]They seem to welcome you[roman type]. The sparklings simply dance around you, reaching very close as most of them stopped fearing your presence at all since your previous interaction with them. There is a strange warmth in the light...";
+	else if Resolution of Luminous Harem > 2:
+		say "     [bold type]Their disposition looks far less shy than before[roman type]. You can actually see their humanoid translucid shapes, nearly invisible to the naked eye, gathering around you, wanting to stretch their reach towards you...";
 	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Attempt to communicate with them.";
 	say "     ([link]N[as]n[end link]) - Try to catch them.";
 	if Player consents: [For now, this will only provide a boost in sanity]
 		Linebreak;
-		say "     Attempting to communicate doesn't necessarily mean talking, but you feel like they are some sort of creatures that have a mind of their own. While approaching them and the crystal, you try not to scare them away and let them come closer to you. Eventually, they begin to surround you, and somehow, you begin to feel... a lot better, as they almost seem to be singing for you. Once they had enough, the little fireflies begin to slowly retreat deeper into the cave, and the crystal's light fades away. You are not entirely sure of what just happened, but the spectacle of lights managed to improve your mental status.";
-		say "     Either way, there is nothing left for you here, so you proceed further ahead, eventually following on a path back to the core line.";
-		SanBoost 15;
+		if Resolution of Luminous Harem is 1:
+			say "     As they perceive you attempting to communicate with them, you hear soft giggles all over you. It startles you at first, but slowly, it begins to give you peace of mind. The little lights dare to approach you even more than before, until they are ever so slightly touching your skin, an odd sensation of tingling surging all around you, like feathers with a dimming warmth brushing against your skin. You could swear you even saw a very translucid hand groping against your tight, rubbing it down teasingly as you feel a heat running up your crotch, followed by a chuckle as you notice this. Somehow, it made you feel hot... and aroused.";
+			say "     But before you could feel anything else, the touching stops as they hastily retreat deeper into the cave, as the crystal's light fades away once more. You are left alone, back to the darkness of this mysterious place. Their nature intrigues you more and more, but their presence has surely boosted your sanity.";
+			say "     Without much else to do, you can only proceed further ahead, eventually following on a path back to the core line.";
+			SanBoost 10;
+			now Resolution of Luminous Harem is 2;
+		else if Resolution of Luminous Harem is 2:
+			say "     Once again, you find yourself in front of the now much less shy little lights, who dance around and giggle at your presence, welcoming you in their sacred hideout. The crystal in the center dims with a powerful luminescence as the small sparklings advance to touch you. That soft, soothing sensation running down your skin gives you slight shivers of pleasure, as a few ethereal hands come to reach for your legs, arms, and eventually, your chest. It is as if there were real people feeling you up with their bare hands, and it is all starting to feel really good. You are actually relaxed, your breathing is more steady and calm as your mind begins to drift away in bliss.";
+			say "     Closing your eyes, you focus on the sensations these fireflies are providing you, warmth all over your body as you continue to feel all the smooth touching, the tender gropes and the pleasure building up in your loins. Then, suddenly, you feel a kiss on your lips from something completely otherworldly, one that you can only perceive once you take a glance at what is in front of you. It is a translucid humanoid shape, glowing green like the crystal in the middle of the cave, softly making out with you, as others of similar characteristics float and dance around you. Lust begins to surge through you, and all you want is to surrender to this place...";
+			WaitLineBreak;
+			say "     However, it all comes to an end once the ground shakes. Someone, or something, seems to have caused a disturbance in the vicinity, which alerted the fireflies, which... you are not so sure they are fireflies anymore. After returning to their initial shapes, as little sparkles flying around, they retreat deeper into the cave, as the crystal stops emanating any light at all. Again, you are left alone, back to the darkness of this mysterious place. Their nature continues to intrigue you, the feeling still soothing to your mind... But it does get harder to think when you imagine all those glowy, translucid hands feeling you up all over...";
+			SanBoost 5;
+			now Resolution of Luminous Harem is 3;
+		else if Resolution of Luminous Harem > 2: [full-fledged sex scenes]
+			say "     You find yourself, once more, surrounded by the warm and nice lights that welcome you in their grounds. This time, however, you feel yourself being pushed towards the depths of the cave, past the crystal that you have seen from the entrance, and over a few turns among the rocky black cavern. Within a few moments, an utopic scenery surges before your senses that, while still in the underground cave setting, manages to look soothing and pleasant. With another crystal in the middle illuminating the surrounding area, the most prominent sound is the water falling into small ponds by the walls and edges of this division, which the fireflies seem to take great comfort with.";
+			say "     As they continue to make sure you feel at home, once they get past the entryway, their fully humanoid forms are revealed. All are mostly glowy, green translucid fit silhouettes that are very similar to humans, of various shapes, sizes and faces. They lead you to a wide stair of rocks and stones, and there, they sit by you, feeling your body all over with their incredibly soft hands.";
+			say "     They look astoundingly beautiful in your eyes...";
+			LineBreak;
+			say "     [link](1)[as]1[end link] - Most of the translucid shapes are manly.";
+			say "     [link](2)[as]2[end link] - A great part of them are female.";
+			say "     [link](3)[as]3[end link] - There is a good mix of males and females.";
+			now calcnumber is 0;
+			while calcnumber < 1 or calcnumber > 3:
+				say "Choice? (1-3)>[run paragraph on]";
+				get a number;
+				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+					break;
+				else:
+					say "Invalid choice. Type [link]1[end link] to choose male interactions, [link]2[end link] for female interactions or [link]3[end link] for both.";
+			if calcnumber is 1: [Male Void Fireflies]
+				Linebreak;
+				say "     And turning your glance over their crotches, you realize most of them are imitating male figures, complete with their appropriate equipment. They make a suggestive approach towards you, knowing about your interest for them, and with tender touches and movements, the formerly tiny sparkles [if player is not naked]remove all of your gear[else]they feel your already naked body all over[end if] before leading your hands to their own smooth, translucid skins. It feels as you expect, very soft, almost as if you were touching a form of consistent solid liquid that holds tightly around the shape of bone and muscle. The luminous men also come closer to you, one of them climbing onto your lap as you feel something poke at your midriff, his about eight inches long boner that keeps throbbing at nearly every second. Actually, it is not just there, as some others follow all around you, jerking their cocks in high arousal as their distance from you grows shorter.";
+				say "     Aware of your ";
+				if player is male:
+					say "own [cock of player] dong raising to attention, the bright green man reaches for it with one of his hands behind his back, then leans forward to kiss you on the lips. At the same time, you feel another two manhoods craving for attention nearing your face from each side, and as the creature on top of you lets go of your mouth, he gently directs it towards one of the glowsticks as the men smile in their earnest. Without a reason not to please the two green figures, you give one of their dicks a kiss as you grab the other, slowly making your way across the shaft towards his goo balls, only to return where you came from and do the same to his mate's. After you are done teasing them, you figure it is time to actually let them enjoy your mouth to its fullest, letting their cocks slip past your lips and give them a blowjob, one at a time, their dicks exchanging places every once in a while.";
+					WaitLineBreak;
+					say "     While you are distracted with the two glowing guys enjoying your best oral skills, the remaining group forms a circle around you all, occasionally wanting to trade places with those in action. They cycle through, except the one on your lap, who decides to grab your by now very hard member and rub it across his bubbly cheeks, then slip it between them, making you shiver in pleasure. The smooth surface of his transparent and incredibly soft gooey skin gives nothing but an increasingly great sensation as it rubs against your glans, and you can't help but want to shove it right in that plump green ass. You don't have to move an inch, however, as the humanoid creature does all the work. He takes a seat on your cock, slowly descending upon it as you feel that slimey tunnel stretching in order to fit it inside, so tight and good that it begins to [italic type]melt[roman type] your mind with ecstacy.";
+					say "     With your mouth still busy with the gleaming cocks that come and go, the former firefly continues to ride you as you lose track of time, making your manhood throb in and out of that sweet caressing ass, each movement visible through his transparent skin from the outside. Their silent moans are only sparks in your ears like scintillating lights, especially from the one taking your manhood in him, stimulating you in all the right spots until you feel a surge of extreme pleasure building up in your gonads. The more he keeps jumping and humping on top of you, the better it feels, all until your breathing intensifies, and while the men who stand around your head bring their cocks into their hands to stroke as fast as they can...";
+					WaitLineBreak;
+					say "     As your climax approaches, theirs do too. A glob of thick, warm glowing cum hits you right across your face as one of them orgasms, and soon, more follow. One after the other, they continue to stroke their cocks as each and every one of them, one at a time, covers you with their full load, which slowly begins to drip into your mouth, around your jaw and onto your neck. Soon, the translucid man riding your cock also brings himself to cover all your torso with an especially hard jet, managing to reach your chest before dropping down to the rest of your midriff and waist. By now, your entire load would have found its way out through your own member and into the voidling's ass, making it throb in pleasure for each single spurt you shoot, ending up visibly floating inside him.";
+					say "     The men find their way of thanking you by continuing to massage your whole body as you try to catch your breath, and with this, they splatter all their cum with their touch along the rest of you. It feels so relaxing that you feel compelled to close your eyes and enjoy the sensation of an entire harem of sexy glowing men feeling every inch of you, with so many hands moving and feeling you from every side and corner, so many lips kissing you in every spot and from every angle... It is impossible to resist just letting your mind go and surrender to all of this...";
+					WaitLineBreak;
+				else: [female or genderless]
+					say "own arousal building in your loins, the bright green man reaches for the area with one of his hands behind his back, then leans forward to kiss you on the lips. At the same time, you feel another two manhoods craving for attention nearing your face from each side, and as the creature on top of you lets go of your mouth, he gently directs it towards one of the glowsticks as the men smile in their earnest. Without a reason not to please the two green figures, you give one of their dicks a kiss as you grab the other, slowly making your way across the shaft towards his goo balls, only to return where you came from and do the same to his mate's. After you are done teasing them, you figure it is time to actually let them enjoy your mouth to its fullest, letting their cocks slip past your lips and give them a blowjob, one at a time, their dicks exchanging places every once in a while.";
+					WaitLineBreak;
+					say "     While you are distracted with the two glowing guys enjoying your best oral skills, the remaining group forms a circle around you all, occasionally wanting to trade places with those in action. They cycle through, except the one previously on your lap, who decides it would be best to step back, crouch behind you, and slightly lift your butt while putting both your legs around his shoulders. It takes you some time to realize what he is about to do, but all doubts vanish once you feel his tongue slipping right [if player is female]between your moist underlips[else]in your pucker[end if], moving and wiggling about in all the right spots, making you squirm with how good it feels. The man is skilled enough to send you to heaven in just a few seconds, all while your mouth is busy with the cocks that are coming and going.";
+					say "     He keeps doing it as you lose the track of time, feeling his nimble mouth playing with your [if player is female]cooch[else]hole[end if] so masterfully, as he is making sure you feel every effort he is giving. But enough is enough, he eventually pulls out, only giving it a few licks before standing up, and before you are able to miss him, his tongue is replaced with a surprisingly hard cock, being shoved right in you with relative ease, as its solid gooey composition serves as a natural lubricant. With a thrust, the former firefly sends you to places, pounding you with persistence and passion as his mates have their go with your mouth. It feels so good, in fact, that the more he fucks you, the better it feels, all until your breathing intensifies, and while the men who stand around your head bring their cocks into their hands to stroke as fast as they can...";
+					WaitLineBreak;
+					say "     As your climax approaches, theirs do too. A glob of thick, warm glowing cum hits you right across your face as one of them orgasms, and soon, more follow. One after the other, they continue to stroke their cocks as each and every one of them, one at a time, covers you with their full load, which slowly begins to drip into your mouth, around your jaw and onto your neck. Soon, the translucid man also brings his own rod out to cum all over your torso with an especially hard jet, managing to reach your chest before dropping down to the rest of your midriff and waist. He does not leave you hanging, though, as his dexterous hands and fingers manage their job quite well at bringing you to a climax, rubbing against your [if player is female]vulva with just the right amount of pressure around the clit[else]sensitive crotch[end if]until a surge of flaming pleasure takes you in form of an orgasm.";
+					say "     The men find their way of thanking you by continuing to massage your whole body as you try to catch your breath, and with this, they splatter all their cum with their touch along the rest of you. It feels so relaxing that you feel compelled to close your eyes and enjoy the sensation of an entire harem of sexy glowing men feeling every inch of you, with so many hands moving and feeling you from every side and corner, so many lips kissing you in every spot and from every angle... It is impossible to resist just letting your mind go and surrender to all of this...";
+					WaitLineBreak;
+			else if calcnumber is 2: [Female Void Fireflies]
+				Linebreak;
+				say "     And turning your glance over their silhouettes and crotches, you realize most of them are imitating female figures, complete with their appropriate equipment. They make a suggestive approach towards you, knowing about your interest for them, and with tender touches and movements, the formerly tiny sparkles [if player is not naked]remove all of your gear[else]they feel your already naked body all over[end if] before leading your hands to their own smooth, translucid skins. It feels as you expect, very soft, almost as if you were touching a form of consistent solid liquid that holds tightly around the shape of bone and muscle. The gorgeous, luminous women surround you with their slender shapes, fondling their breasts for your enjoyment as they approach you tenderly, with one of them climbing on top of you.";
+				say "     Aware of your";
+				if player is male:
+					say "own [cock of player] dong raising to attention, the bright green woman reaches for it with one of her hands behind her back, then leans forward to kiss you on the lips. At the same time, you feel two supple pairs of tits craving for attention nearing your face from each side, and as the womanly creature on top of you lets go of your mouth, she gently directs it towards one of the breasts as the women smile in their earnest. Without a reason not to please the two green figures, you give one of their boobs a kiss as you grab the other, slowly running your tongue around their aureolas, give them a good squeeze before you do the same to her friend's. After you are done teasing them, one of the luminous girls decides it would be phenomenal to climb on top of your head, and slowly descend her womanhood on you, effectively sitting on your face as you are given her pussy to lick for the next moments, a chance you definitely don't let go.";
+					WaitLineBreak;
+					say "     While you are distracted with the glowing woman enjoying your best oral skills, the remaining group forms a circle around you all, occasionally wanting to trade places with those in action. They cycle through, except the one on your lap, who decides to grab your by now very hard member and rub it across her bubbly cheeks, then slip it between them and towards her cooch, making you shiver in pleasure. The smooth surface of her transparent and incredibly soft gooey skin gives nothing but an increasingly great sensation as it rubs against your glans, and you can't help but want to shove it right in her begging cunt. You don't have to move an inch, however, as the humanoid creature does all the work. She takes a seat on your cock, slowly descending upon it as you feel that slimey tunnel stretching in order to fit it inside, so tight and good that it begins to [italic type]melt[roman type] your mind with ecstacy.";
+					say "     With your mouth still busy with the craving pussies that come and go, each taking a comfortable seat on your face as they arrive, the former firefly continues to ride you as you lose track of time, making your manhood throb in and out of that sweet caressing pussy, each movement visible through her transparent skin from the outside. Their silent moans are only sparks in your ears like scintillating lights, especially from the one taking your manhood in her, stimulating you in all the right spots until you feel a surge of extreme pleasure building up in your gonads. The more she keeps jumping and humping on top of you, the better it feels, all until your breathing intensifies, and while the women who stand around your head bring their hands to rub and finger against their womanhoods more intensely than before...";
+					WaitLineBreak;
+					say "     As your climax approaches, theirs do too. They squirm and moan as they hit their climaxes, holding onto you as you provide some help with your nimble hands. The one on top of you feels especially rewarding, as she simply keeps riding your cock, her tits bouncing around visibly with the momentum, until she too orgasms in a long, intense wave of pleasure as you feel your own coming to be delivered inside her. By now, your entire load would have found its way out through your own member and into the voidling's cunt, making it throb in pleasure for each single spurt you shoot, ending up visibly floating inside her.";
+					say "     The women find their way of thanking you by continuing to massage your whole body as you try to catch your breath. It feels so relaxing that you feel compelled to close your eyes and enjoy the sensation of an entire harem of sexy glowing women feeling every inch of you, with so many hands moving and feeling you from every side and corner, so many lips kissing you in every spot and from every angle... It is impossible to resist just letting your mind go and surrender to all of this...";
+					WaitLineBreak;
+				else: [female or genderless]
+					say "own arousal building in your loins, the bright green woman reaches for the area with one of her hands behind her back, then leans forward to kiss you on the lips. At the same time, you feel two supple pairs of tits craving for attention nearing your face from each side, and as the womanly creature on top of you lets go of your mouth, she gently directs it towards one of the breasts as the women smile in their earnest. Without a reason not to please the two green figures, you give one of their boobs a kiss as you grab the other, slowly running your tongue around their aureolas, give them a good squeeze before you do the same to her friend's. After you are done teasing them, one of the luminous girls decides it would be phenomenal to climb on top of your head, and slowly descend her womanhood on you, effectively sitting on your face as you are given her pussy to lick for the next moments, a chance you definitely don't let go.";
+					WaitLineBreak;
+					say "     While you are distracted with the glowing woman enjoying your best oral skills, the remaining group forms a circle around you all, occasionally wanting to trade places with those in action. They cycle through, except the one on your lap, who decides it would be best to step back, crouch behind you, and slightly lift your butt while putting both your legs around her shoulders. It takes you some time to realize what she is about to do, but all doubts vanish once you feel her tongue slipping right [if player is female]between your moist underlips[else]in your pucker[end if], moving and wiggling about in all the right spots, making you squirm with how good it feels. The woman is skilled enough to send you to heaven in just a few seconds, all while your mouth is busy with the pussies that are coming and going.";
+					say "     She keeps doing it as you lose the track of time, feeling her nimble mouth playing with your [if player is female]cooch[else]hole[end if] so masterfully, as she is making sure you feel every effort she is giving. Knowing exactly what the gleaming woman is working with, with her massive display of skill, the way she moves and works her tongue to give you all the bliss... It just seems unreal, how well trained she is in the arts of oral pleasure. You are given a long joyful moment as she eats you out, reaching deep and twirling her tongue in nearly unnatural ways that completely blow your mind. In fact, the more she keeps doing that, the better it feels, all until your breathing intensifies, and while the women who stand around your head bring their hands to rub and finger against their womanhoods more intensely than before...";
+					WaitLineBreak;
+					say "     As your climax approaches, theirs do too. They squirm and moan as they hit their climaxes, holding onto you as you provide some help with your nimble hands. Although yours does not happen much after, further stimulated by the expert tongue of the glowing lady between your legs, causing you to shiver and squirm in so much pleasure that you can help but moan out loud. Lust and desire hit you like a truck as your orgasm takes place, subsiding only after a good while, as the others finish themselves off too.";
+					say "     The women find their way of thanking you by continuing to massage your whole body as you try to catch your breath. It feels so relaxing that you feel compelled to close your eyes and enjoy the sensation of an entire harem of sexy glowing women feeling every inch of you, with so many hands moving and feeling you from every side and corner, so many lips kissing you in every spot and from every angle... It is impossible to resist just letting your mind go and surrender to all of this...";
+					WaitLineBreak;
+			else if calcnumber is 3: [Both VFs]
+				Linebreak;
+				say "     It seems like there are shapes of all genders in here, some with feminine and curvy silhouettes, others with a more manly frame, all of them complete with their appropriate equipment. They make a suggestive approach towards you, knowing about your interest for them, and with tender touches and movements, the formerly tiny sparkles [if player is not naked]remove all of your gear[else]they feel your already naked body all over[end if] before leading your hands to their own smooth, translucid skins. It feels as you expect, very soft, almost as if you were touching a form of consistent solid liquid that holds tightly around the shape of bone and muscle.";
+				if player is male:
+					say "     As one of the women climbs on top of you, with her slender shape as she fondles her breasts for your viewing pleasure, a group of handsome goo men forms a circle around your head, jerking their cocks in high arousal as their distance from you grows shorter. Aware of your own [cock of player] dong raising to attention, the bright green woman reaches for it with one of her hands behind her back, then leans forward to kiss you on the lips. At the same time, you feel another two manhoods craving for attention nearing your face from each side, and as the creature on top of you lets go of your mouth, she gently directs it towards one of the glowsticks as the men smile in their earnest. Without a reason not to please the two green figures, you give one of their dicks a kiss as you grab the other, slowly making your way across the shaft towards his goo balls, only to return where you came from and do the same to his mate's. After you are done teasing them, you figure it is time to actually let them enjoy your mouth to its fullest, letting their cocks slip past your lips and give them a blowjob, one at a time, their dicks exchanging places every once in a while.";
+					WaitLineBreak;
+					say "     While you are distracted with the two glowing guys enjoying your best oral skills, the remaining group forms a circle around you all, occasionally wanting to trade places with those in action. Given the mixed nature of the group, you also get to enjoy the occasional pussy wanting to have a round with your mouth, getting plenty of facesitting between the blowjobs you give, all tasting as good as they promise. They cycle through, except the woman on your lap, who decides to grab your by now very hard member and rub it across her bubbly cheeks, then slip it between them and towards her cooch, making you shiver in pleasure. The smooth surface of her transparent and incredibly soft gooey skin gives nothing but an increasingly great sensation as it rubs against your glans, and you can't help but want to shove it right in her begging cunt. You don't have to move an inch, however, as the humanoid creature does all the work. She takes a seat on your cock, slowly descending upon it as you feel that slimey tunnel stretching in order to fit it inside, so tight and good that it begins to [italic type]melt[roman type] your mind with ecstacy.";
+					say "     With your mouth still busy with the gleaming cocks and cunts that come and go, the former firefly continues to ride you as you lose track of time, making your manhood throb in and out of that sweet caressing pussy, each movement visible through her transparent skin from the outside. Their silent moans are only sparks in your ears like scintillating lights, especially from the one taking your manhood in her, stimulating you in all the right spots until you feel a surge of extreme pleasure building up in your gonads. The more she keeps jumping and humping on top of you, the better it feels, all until your breathing intensifies, and while the men and women who stand around your head bring their cocks and pussies into their own manual efforts...";
+					WaitLineBreak;
+					say "     As your climax approaches, theirs do too. A glob of thick, warm glowing cum hits you right across your face as one of them orgasms, and soon, more follow. One after the other, they continue to stroke their cocks as each and every one of them, one at a time, covers you with their full load, which slowly begins to drip into your mouth, around your jaw and onto your neck. The one on top of you feels especially rewarding, as she simply keeps riding your cock, her tits bouncing around visibly with the momentum, until she too orgasms in a long, intense wave of pleasure as you feel your own coming to be delivered inside her. By now, your entire load would have found its way out through your own member and into the voidling's cunt, making it throb in pleasure for each single spurt you shoot, ending up visibly floating inside her.";
+					say "     The men and women find their way of thanking you by continuing to massage your whole body as you try to catch your breath, and with this, they splatter all their cum with their touch along the rest of you. It feels so relaxing that you feel compelled to close your eyes and enjoy the sensation of an entire harem of sexy glowing people feeling every inch of you, with so many hands moving and feeling you from every side and corner, so many lips kissing you in every spot and from every angle... It is impossible to resist just letting your mind go and surrender to all of this...";
+					WaitLineBreak;
+				else: [female or genderless]
+					say "     As one of the men climbs on top of you, with his fit shape and taking you with an embrace, a groud of handsome goo women forms a circle around your head, fondling their breasts for your viewing pleasure as their distance to you grows shorter. Aware of your own arousal building in your loins, the bright green man reaches for the area with one of his hands behind his back, then leans forward to kiss you on the lips. At the same time, you feel two supple pairs of tits craving for attention nearing your face from each side, and as the creature on top of you lets go of your mouth, he gently directs it towards one of the breasts as the women smile in their earnest. Without a reason not to please the two green figures, you give one of their boobs a kiss as you grab the other, slowly running your tongue around their aureolas, give them a good squeeze before you do the same to her friend's. After you are done teasing them, one of the luminous girls decides it would be phenomenal to climb on top of your head, and slowly descend her womanhood on you, effectively sitting on your face as you are given her pussy to lick for the next moments, a chance you definitely don't let go.";
+					WaitLineBreak;
+					say "     While you are distracted with the glowing woman enjoying your best oral skills, the remaining group forms a circle around you all, occasionally wanting to trade places with those in action. Given the mixed nature of the group, you also get to enjoy the occasional cock wanting to have a round with your mouth, between all the facesitting you get, all tasting as good as they promise. They cycle through, except the one previously on your lap, who decides it would be best to step back, crouch behind you, and slightly lift your butt while putting both your legs around his shoulders. It takes you some time to realize what he is about to do, but all doubts vanish once you feel his tongue slipping right [if player is female]between your moist underlips[else]in your pucker[end if], moving and wiggling about in all the right spots, making you squirm with how good it feels. The man is skilled enough to send you to heaven in just a few seconds, all while your mouth is busy with the cocks and cunts that are coming and going.";
+					say "     He keeps doing it as you lose the track of time, feeling his nimble mouth playing with your [if player is female]cooch[else]hole[end if] so masterfully, as he is making sure you feel every effort he is giving. But enough is enough, he eventually pulls out, only giving it a few licks before standing up, and before you are able to miss him, his tongue is replaced with a surprisingly hard cock, being shoved right in you with relative ease, as its solid gooey composition serves as a natural lubricant. With a thrust, the former firefly sends you to places, pounding you with persistence and passion as his mates have their go with your mouth. It feels so good, in fact, that the more he fucks you, the better it feels, all until your breathing intensifies, and while the men and women who stand around your head bring their cocks and pussies into their own manual efforts...";
+					WaitLineBreak;
+					say "     As your climax approaches, theirs do too. A glob of thick, warm glowing cum hits you right across your face as one of them orgasms, and soon, more follow. One after the other, they continue to stroke their cocks as each and every one of them, one at a time, covers you with their full load, which slowly begins to drip into your mouth, around your jaw and onto your neck. Soon, the translucid man also brings his own rod out to cum all over your torso with an especially hard jet, managing to reach your chest before dropping down to the rest of your midriff and waist. He does not leave you hanging, though, as his dexterous hands and fingers manage their job quite well at bringing you to a climax, rubbing against your [if player is female]vulva with just the right amount of pressure around the clit[else]sensitive crotch[end if]until a surge of flaming pleasure takes you in form of an orgasm.";
+					say "     The men and women find their way of thanking you by continuing to massage your whole body as you try to catch your breath, and with this, they splatter all their cum with their touch along the rest of you. It feels so relaxing that you feel compelled to close your eyes and enjoy the sensation of an entire harem of sexy glowing people feeling every inch of you, with so many hands moving and feeling you from every side and corner, so many lips kissing you in every spot and from every angle... It is impossible to resist just letting your mind go and surrender to all of this...";
+					WaitLineBreak;
+			say "     Much later, you wake up, still in the cave, naked and alone. It is dark, and the crystals are no longer glowing. It seems the fireflies have gone away, and you should too. For sure, you had a great time! But for some reason, you feel a little disoriented... Perhaps you fell asleep and your brain hasn't connected itself, yet, so to speak. Hopefully, it should be nothing.";
+			VRNormalSanityLoss;
+		else:
+			Linebreak;
+			say "     Attempting to communicate doesn't necessarily mean talking, but you feel like they are some sort of creatures that have a mind of their own. While approaching them and the crystal, you try not to scare them away and let them come closer to you. Eventually, they begin to surround you, and somehow, you begin to feel... a lot better, as they almost seem to be singing for you. Once they had enough, the little fireflies begin to slowly retreat deeper into the cave, and the crystal's light fades away. You are not entirely sure of what just happened, but the spectacle of lights managed to improve your mental status.";
+			say "     Either way, there is nothing left for you here, so you proceed further ahead, eventually following on a path back to the core line.";
+			if Resolution of Luminous Harem is 0 and player is kinky:
+				now Resolution of Luminous Harem is 1;
+			SanBoost 15;
 		WaitLineBreak;
 		say "[VRMoveOptions]";
 	else: [Trying to catch them may grant null essences, but will draw an enemy close in the core line due to them becoming agitated]
@@ -959,19 +1211,357 @@ to say VRVoidFireflies:
 			if randomnumber is:
 				-- 1:
 					say "     With your best efforts, it looks like you were able to grab one of the lights, which immediately stops shining and turns into [bold type]1 null essence[roman type] in your hands.";
-					increase carried of null essence by 1;
+					ItemGain null essence by 1 silently;
 				-- 2:
 					say "     With your best efforts, it looks like you were able to grab one of the lights, which immediately stops shining and turns into [bold type]2 null essences[roman type] in your hands.";
-					increase carried of null essence by 2;
+					ItemGain null essence by 2 silently;
 				-- 3:
 					say "     With your best efforts, it looks like you were able to grab one of the lights, which immediately stops shining and turns into [bold type]3 null essences[roman type] in your hands.";
-					increase carried of null essence by 3;
+					ItemGain null essence by 3 silently;
 		else:
 			say "     Unfortunately, despite your best efforts, the fireflies move too quickly for you to be able to catch any of them. They fly right through your fingers, or are simply out of your reach.";
 		WaitLineBreak;
 		say "     The way they flew away, in such agitation, will most likely draw enemies closer, too. Was this a good idea? Either way, there is nothing left for you here, so you proceed further ahead, eventually following on a path back to the core line.";
 		WaitLineBreak;
 		say "[VRMoveOptions]";
+
+to say VROddTreasure:
+	say "     [bold type]Odd Treasure[roman type][line break]";
+	say "     From all things possible, you wouldn't have imagined that crossing the veil would, at some point, bring you over a sort of room - because it definitely doesn't look like any specific division, just an area with some questionable walls and an absence of light - filled with nothing but statues of armored knights. The more you walk, the more it looks like it has been a kind of a tomb, but things quickly become more and more... odd. The walls are filled with coffins, with some empty, others having these already decomposed corpses of whoever was put in them, and the stench of ancient and old assailing your nostrils like crazy as you keep moving towards the depths of this place.";
+	say "     The area around you begins to gain some definition, and you totally see yourself in an underground corridor of some sort of ancient ruins, which seems more like catacombs. Yes, this would explain the coffins, but you find yourself inevitably questioning why would this appear in the void, of all places? Perhaps you are somewhere else, while not being there in reality, a paradox that is only explained by the wicked realm you happened to come across. Still, all the coffins that are open and empty, together with the weak growling and sounds of slow steps that echo through the tunnels, gives you chills that run down your spine at a cold, tortuous slow pace...";
+	WaitLineBreak;
+	say "     Suddenly, there is a hit on the wall... or the ground, or... something else. You are not entirely sure of what you have heard anymore. But it continues, three times, then stops. A growl follows, dead and alive, in the form of a wheeze, actually more dead than anything else. Then, you are faced with a crossway, unsure of the source of this ominous sound.";
+	VROddTreasurePathChoice;
+
+to VROddTreasurePathChoice:
+	say "     There is a path right in [bold type]front of you[roman type] that is prolonged by more walls with rectangular holes in it, probably more coffins, filled with spiderwebs and following deeper down into the depths of these catacombs. Then, to your right, the path follows into a pitch black area, nothing alike the rest of the space. Finally, to your left, there is a large double door with a big, strong lock held by the thickest of chains hugging the structure made of stone, to which, in order to open, you will probably need a key.";
+	LineBreak;
+	say "     [link](1)[as]1[end link] - Go forward.";
+	say "     [link](2)[as]2[end link] - Take the dark path to your right.";
+	say "     [link](3)[as]3[end link] - Walk towards the door on your left.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 3:
+		say "Choice? (1-3)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to go forward, [link]2[end link] to take the right path or [link]3[end link] to take the left path.";
+	if calcnumber is 1: [Forward]
+		if Resolution of Odd Treasure is 0:
+			say "     Taking the path ahead, you start walking forward and down into the corridor leading lower into an extension of the catacombs. Everything still looks the same as before, with nothing new that's worth of notice. The sound from before stopped as well, now leaving a deafening silence in which the only thing you can hear is your own steps on the dirty ground.";
+			WaitLineBreak;
+			say "     You continue down the path, taking a turn around the now all empty coffins and urns, as the scarce light continues to diminish. It is still not pitch dark, but the little illumination you have barely allows you to see what lies ahead. At some point, you have to take a torch from one of the walls, which is easily removable, and thread carefully. By the time you're half-way, you start hearing that sound again... A thud, that happens three times, then stops. Again, after a brief silence, another three hits, stopping altogether for another couple of seconds, before it repeats once again, now ceasing for a long while. Enough time for you to start hearing it again louder, indicating that your proximity to the source is increasing.";
+			say "     There is another sound that you hear, one much more subtle than the thuds, within the intervals of the triple hits. Something metallic and heavy being dragged across the ground, nearing your position from above, but you don't quite see it. Must be at a higher level... but then you hear it from your right. Both directions, forward and backward, are completely dark, and you're remaining there with only your torch in hand, with no other choice but to continue. You do so, walking towards the darkness once more, daring the dangers of the void to come and get you, because nothing else can be done about it. It rings louder in your ears, the thuds, the metal, and suddenly...";
+			WaitLineBreak;
+			say "     Your torch goes off.";
+			if companion of player is demonologist:
+				say "     [italic type]And you find yourself alone, realizing you had lost Xaedihr in the middle of these ruins.[roman type][line break]";
+			say "     Blinded in darkness as you are, you no longer have any control over the situation, if you ever had in the first place, and at the same time, you are sinking in silence. Still, there is no other way but forward, and despite your inability to see, you continue to walk. Step after step, the only thing that begins to change is an ominous light slowly appearing at the end of the tunnel. You cannot help it, your movements quicken as you see yourself approaching the light, like a faint hope that has emerged from within the darkest of times. But... it, too, goes off, sooner than you would have liked. The thuds happen again, and the metallic sound being dragged right towards you.";
+			WaitLineBreak;
+			say "     You feel its breath, its presence... It is right behind you.";
+			Linebreak;
+			say "     ([link]Y[as]y[end link]) - Look behind you.";
+			say "     ([link]N[as]n[end link]) - Keep walking forward.";
+			if Player consents: [Encounter with the Elk Head Reaper]
+				Linebreak;
+				say "     The mistake of many, and for you... that remains to be seen.";
+				say "     As you are about to turn your face to the back, in order to see what was just breathing behind you, suddenly... you are not seeing anything at all. A large arm pulls you from around your neck as you feel your head being covered by some sort of cloth bag, tied tight below your jaw, making it very difficult for you to breathe, as you are dragged through the floor by whatever captured you, along with that metallic object you've heard before. No matter how much you kick around or struggle against this, your captor has a tight grip on you, the ropes around your neck threatening to end your life here. You barely manage to stay awake until the end of this frightening trip...";
+				WaitLineBreak;
+				say "     But indeed, it finally ends, as you're pushed against a wall and left there. You realize that your hands have been tied, and only brief seconds after, the bag is removed. Then, in front of you, there it stands. Your captor reveals itself...";
+				Linebreak;
+				say "     ([link]Y[as]y[end link]) - Clearly male in nature.";
+				say "     ([link]N[as]n[end link]) - With a strong female form.";
+				if player consents: [male]
+					Linebreak;
+					now Resolution of ElkHeadReaperGender is 10;
+					say "     An enormously tall and muscular, statuesque even, and manly looking creature, wearing a large elk's skull, with two moderate sized horns pointing towards each side, made into a helmet, as a dark ragged cloak coming from underneath it extends itself downwards, past his shoulders and reaching the ground right next to his bare feet. On his right hand, he carries a scythe, constantly dripping a black liquid from the tip of its curved blade. While looking like a visage of the grim reaper himself, you can't help but notice an additional feature that further emphasizes him as a male, right on the crotch. A large, thick and uncut human shaft, perpetually hard, throbbing every once in a while, as he looks down on you intimidatingly.";
+				else: [female]
+					Linebreak;
+					now Resolution of ElkHeadReaperGender is 20;
+					say "     An enormously tall and muscular, statuesque even, and womanly looking creature, wearing a large elk's skull, with two moderate sized horns pointing towards each side, made into a helmet, as a dark ragged cloak coming from underneath it extends itself downwards, past her shoulders and reaching the ground right next to her bare feet. On her right hand, she carries a scythe, constantly dripping a black liquid from the tip of its curved blade. While looking like a visage of the grim reaper herself, you can't help but notice a few additional features that further emphasizes her as a female, which are a pair of round and volumptous tits accompanying her powerful body, and a pussy where you would find one, as she looks down on you intimidatingly.";
+				say "     It is only then that you realize where you've been brought to. A room full of the most devious devices and mechanisms, specifically made to enslave and torture those who happen to roam too close. Tied and helpless as you are, and cornered by this towering foe, your chances of escaping are... slim. The Elk Head Reaper, a fitting name for someone with these characteristics, then decides to grab your face and examine you closely, leaning down over you with the odd elk skull's bone surface nearly rubbing against your forehead. 'Too frail. You won't do. How can you even breathe in the void? Such are the mysteries of these mortals...' says your captor, with a voice deeper than you are used to hear for their gender, even nearly demonic in nature...";
+				WaitLineBreak;
+				say "     Unexpectedly so, you find your hands free, as if the ropes that held them simply broke by magic. Maybe that explains how you found yourself tied up so quickly and from such a position, and besides, there are things you cannot understand in this realm, such as the existence of such horrifying creatures like this one, and what they want with you. 'Leave. If I find you again, I will destroy you.' Or sometimes, what they [italic type]don't[roman type] want with you. And with this warning, the Elk Head Reaper, as you will known them by, simply leaves you here, dragging that long scythe across the ground while hitting the rocky walls three times in a row with the pommel. You still don't know why they do that, but at least, you are safe... for the time being.";
+				say "     But before you go, there is something that catches your eye. It is a device with especially wicked perversions, of the kind that seems to effectively restrain and move around freely to adjust to any position. It almost looks like a spherical rack for people to be put in, but for now, you disregard that device. And in fact, you don't even have time to check any of the other morbid structures, as it seems the owner of this dungeon might be coming back soon, while you shouldn't be here. However, you take note of this, and leave through the dark tunnels, towards where the light once was.";
+				say "     This seems to have been the best call, as you are delivered across the veil and back to the core line.";
+				if player is kinky:
+					say "     However... how bad would it be to be the Elk Head Reaper's slave for a day...? Perhaps if you reencountered this creature, there would be a chance you could... volunteer for punishment.";
+				if companion of player is demonologist:
+					say "     [italic type]'Huh, I was getting worried. Where have you been?' asks Xaedihr, as he sees you returning to his side. 'We should be more careful, getting separated like this could be bad.'[roman type][line break]";
+				now Resolution of Odd Treasure is 1;
+				WaitLineBreak;
+				say "[VRMoveOptions]";
+			else: [escapes]
+				Linebreak;
+				say "     You know how this will end, and you want to avoid it. Without hesitation, you simply continue to walk forward. The steps behind you, they keep close... but do nothing other than following you. There is no way of knowing what is in there, right on your tail. In fact, you never find out, even at the end, when the light returns and you cease to hear those cursed steps and dragging sounds. That is when you look behind, and see nothing.";
+				say "     It seems the way has led you out of the catacombs, and into something that is nothing anymore. What is in front of you are hints of a path back to the core line, so it seems there is nothing left for your current run at this place. For sure, you won't be going back through the same place, and even if you wanted, you know better than to trust the void.";
+				VRNormalSanityLoss;
+				WaitLineBreak;
+				say "[VRMoveOptions]";
+		else if Resolution of Odd Treasure is 1: [Knows Elk Head Reaper]
+			say "     You feel a compelling urge to stay where you are. It seems the path ahead is still forming itself. Void is complicated, and things take time to decide the best ways to trick you, or something like that.";
+			say "     <<Author's note: A new encounter, the Elk Head Reaper (who can be male or female), will be added in the future.>>";
+			WaitLineBreak;
+			VROddTreasurePathChoice;
+	else if calcnumber is 2: [Right]
+		say "     Having decided to turn right, you immediately do so, leaving the catacombs behind. The path has you returning to the darkness of the void, and at some point, a fake certainty of solid ground has you walking right into an abyssal fall.";
+		say "     Gravity takes you as you begin to descend at a great speed into nothing but more darkness, until it subsides and has you floating in a steady suspension for several moments. It seems that eventually, gravity disappears, giving you the ability to levitate through this area, completely devoid of light. It takes you a while to realize that you are just about to cross the veil back to the core line...";
+		WaitLineBreak;
+		if a random chance of 1 in 2 succeeds:
+			say "     But something unexpected happens, and an opposing force pushes you back into it! Once more, you are traveling through the area beyond the veil, about to travel to some other place that you won't be able to foresee...";
+			WaitLineBreak;
+			let randomnumber be a random number from 1 to 4;
+			if randomnumber is:
+				-- 1:
+					say "[VRGatewayToFreedom]";
+				-- 2:
+					say "[VRFissuresShifting]";
+				-- 3:
+					say "[VRMomentOfRespite]";
+				-- 4:
+					say "[VRMirrors]";
+		else:
+			say "     A few more inches and you are kicked right back to the relative familiarity of the main void pathway. Now that was some trip...";
+			if a random chance of 1 in 3 succeeds:
+				say "     And it looks like [bold type]a black rock of null essence[roman type] fell just by your feet, rolling several inches towards your position after having fallen from the ceiling. What a strange event, but you suppose this is better than nothing.";
+				increase carried of null essence by 1;
+			WaitLineBreak;
+			say "[VRMoveOptions]";
+	else if calcnumber is 3: [Left]
+		if Resolution of MirrorsKey < 1:
+			say "     Turning to your left and towards the large locked door, you attempt to mess with its lock. It is heavy and impossible to pick, even for an expert at lockpicking with the best of tools. You suppose you have no other choice but to come back here once you have some sort of key, perhaps.";
+			WaitLineBreak;
+			VROddTreasurePathChoice;
+		else if Resolution of MirrorsKey is 1: [Found key in the mirrors]
+			say "     Turning to your left and towards the large locked door, you realize you had picked a key when you destroyed the mirror somewhere in another place within this realm. Perhaps this is it? There is only one way to know the answer to that question, and it is by trying it out. Stepping towards the enormous stone door, you take the key into one hand, grabbing the large lock with the other, and proceed to shove it carefully inside the keyhole. It doesn't quite fit, at first, which makes you think that you are probably having wishful thinking, but eventually, you manage to push it in. Trying each side to see which one would the key rotate towards, you find yourself turning it several degrees to the right until you hear a loud tick. The lock comes open, and it nearly smothers your feet as it falls heavily on the ground.";
+			say "     After you successfully managed to unlock the door, it starts reacting on its own and moving in your direction. Slowly, each stone made structure, with its deep and heavy creaking echoing through, swings open and forces you to take a few steps back. After the passage is finally unobstructed, it reveals an extension of the catacombs, but without any coffins. You can see an urn or two from here, and it gives you a feeling that it might seem like some sort of treasury vault. Who knows, perhaps you might find something useful in there?";
+			say "     [bold type]The door to the left path has now been unlocked.[roman type][line break]";
+			now Resolution of MirrorsKey is 2; [unlocked the door]
+			WaitLineBreak;
+			VROddTreasurePathChoice;
+		else if Resolution of MirrorsKey is 3: [event after door is unlocked]
+			say "     You feel a compelling urge to stay where you are. It seems the path ahead is still forming itself. Void is complicated, and things take time to decide the best ways to trick you, or something like that.";
+			say "     <<Author's note: This is everything, for now. More content will be added to this path. As you have already unlocked it, once it comes out, you may access it immediately. There will be a new encounter related to treasure chests, as a hint for what is about to come.>>";
+
+to say VRMirrors:
+	say "     [bold type]Mirrors[roman type][line break]";
+	say "     Traveling across the darkness that follows the passage past the veil, your steps bring you over an intriguing game of mirrors. You can see your reflection among them, and the more you walk, the closer they come together.";
+	WaitLineBreak;
+	if Resolution of MirrorsKey is 0:
+		say "     After opening a wooden door in front of you - a typically and normally looking one - you find yourself entering a corridor with its walls covered by a continuous long mirror on each side, and ending with another door. They reflect eachother endlessly, and you can see yourself in all of them, at the first glance. With nothing else to take note of, you are simply given the choice of continue forward, or return from where you came from, being a possible action this time.";
+		Linebreak;
+		say "     ([link]Y[as]y[end link]) - Walk through the corridor.";
+		say "     ([link]N[as]n[end link]) - Just return.";
+		if player consents: [forward]
+			Linebreak;
+			say "     Since you are here, you figure there should be no harm in pursuing this curiosity a little further...";
+			say "     By simply starting to walk through the corridor with the mirrors, you make it across in less than a minute, arriving at the door on the other side. Grabbing the handle and turning it to the right, it creaks with an ominous, high pitched sound, followed by the door's movement. You open it, despite the noise, and walk into the next area. Your steps echo through the room...";
+			WaitLineBreak;
+			say "     It is another corridor, with both mirrors lined up in front of each other and attached to the walls on each side, with yet another door by the end of it. You can still see yourself in all the subsequent reflexions at first glance, and you are faced with another choice to make.";
+			Linebreak;
+			say "     ([link]Y[as]y[end link]) - Walk through the corridor.";
+			say "     ([link]N[as]n[end link]) - Just return...";
+			if player consents: [forward]
+				Linebreak;
+				say "     It is obvious that you are not done here, so you decide to continue on your way, going past this corridor all the same...";
+				say "     Once more, by simply starting to walk through this room with the mirrors, you make it across in less than a couple of minutes, arriving at the door on the other side. Grabbing the handle and turning it to the left, it creaks with an ominous, high pitched sound, followed by the door's movement. You open it, despite the noise, and walk into the next area. Your steps echo through the room...";
+				WaitLineBreak;
+				say "     Again, another corridor, with both mirrors lined up in front of each other and attached to the walls on each side, with yet another door by the end of it. You can still see yourself in all the subsequent reflexions at first glance, and you are faced with another choice to make.";
+				Linebreak;
+				say "     ([link]Y[as]y[end link]) - Walk through the corridor.";
+				say "     ([link]N[as]n[end link]) - Just return!";
+				if player consents: [forward]
+					Linebreak;
+					say "     So these just keep going...? There should be something important at the end of it, if there is an end to these things... With this thought in mind, you continue on your way, going past this corridor as you did with the previous ones.";
+					say "     Yet again, by simply starting to walk through this room with the mirrors, you make it across in less than a couple of minutes, arriving at the door on the other side. Grabbing the handle and turning it to the left, it creaks with an ominous, low pitched sound, followed by the door's movement. You open it, despite the noise, and walk into the next area. Your steps echo through the room...";
+					WaitLineBreak;
+					say "     Unsurprisingly, it is another corridor, with another two mirrors lined up in front of each other and attached to the walls on each side, with yet another door by the end of it. You can still see yourself in all the subsequent reflexions at first glance, and you are faced with another choice to make.";
+					LineBreak;
+					VRMirrorsTripleChoice;
+				else:
+					Linebreak;
+					VRMirrorsBack;
+			else:
+				Linebreak;
+				VRMirrorsBack;
+		else:
+			Linebreak;
+			VRMirrorsBack;
+	else:
+		say "     This is the place where you have destroyed the mirrors that haunted you. Looking at it now, shards of mirrors are all over the place, floating in the eternal abyss. Perhaps in the future, this area will change, but for now, it remains only as a reminder of what you have experienced in here. Who know what the void has kept for you...";
+		say "     You have managed to collect a [bold type]single piece of null essence[roman type] that you found lying around.";
+		increase carried of null essence by 1;
+		WaitLineBreak;
+		say "[VRMoveOptions]";
+
+to VRMirrorsTripleChoice:
+	say "     [link](1)[as]1[end link] - Walk through the corridor.";
+	say "     [link](2)[as]2[end link] - Return.";
+	say "     [link](3)[as]3[end link] - Glance over the mirror.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 3:
+		say "Choice? (1-3)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to go forward, [link]2[end link] to return or [link]3[end link] to look at the mirrors.";
+	if calcnumber is 1: [Forward]
+		Linebreak;
+		say "     You guess you really can only keep going forward...";
+		say "     Yet again, by simply starting to walk through this room with the mirrors, you make it across in less than a couple of minutes, arriving at the door on the other side. Grabbing the handle and turning it to the left, it creaks with an ominous, low pitched sound, followed by the door's movement. You open it, despite the noise, and walk into the next area. Your steps echo through the room...";
+		WaitLineBreak;
+		say "     Unsurprisingly, it is another corridor, with another two mirrors lined up in front of each other and attached to the walls on each side, with yet another door by the end of it. You can still see yourself in all the subsequent reflexions at first glance, and you are faced with another choice to make.";
+		LineBreak;
+		VRMirrorsTripleChoice;
+	else if calcnumber is 2: [return]
+		Linebreak;
+		say "     The value of choice is an invaluable one at this point.";
+		WaitLineBreak;
+		VRMirrorsTripleChoice;
+	else if calcnumber is 3: [glance]
+		Linebreak;
+		say "     You see yourself in the mirror. Raising a hand and waving at your reflection, it waves back at you in the same way.";
+		WaitLineBreak;
+		VRMirrorsTripleChoice2;
+
+to VRMirrorsTripleChoice2:
+	say "     [link](1)[as]1[end link] - Walk through the corridor.";
+	say "     [link](2)[as]2[end link] - Return.";
+	say "     [link](3)[as]3[end link] - Glance over the mirror.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 3:
+		say "Choice? (1-3)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to go forward, [link]2[end link] to return or [link]3[end link] to look at the mirrors.";
+	if calcnumber is 1: [Forward]
+		Linebreak;
+		say "     You guess you really can only keep going forward...";
+		say "     Yet again, by simply starting to walk through this room with the mirrors, you make it across in less than a couple of minutes, arriving at the door on the other side. Grabbing the handle and turning it to the left, it creaks with an ominous, low pitched sound, followed by the door's movement. You open it, despite the noise, and walk into the next area. Your steps echo through the room...";
+		WaitLineBreak;
+		say "     Unsurprisingly, it is another corridor, with another two mirrors lined up in front of each other and attached to the walls on each side, with yet another door by the end of it. You can still see yourself in all the subsequent reflexions at first glance, and you are faced with another choice to make.";
+		LineBreak;
+		VRMirrorsTripleChoice2;
+	else if calcnumber is 2:
+		Linebreak;
+		say "     One cannot always choose, but they best do so while they can.";
+		WaitLineBreak;
+		VRMirrorsTripleChoice2;
+	else if calcnumber is 3:
+		Linebreak;
+		say "     Your hand raises and waves at the reflection. It does the same back at you.";
+		WaitLineBreak;
+		VRMirrorsTripleChoice3;
+
+to VRMirrorsTripleChoice3:
+	say "     [link](1)[as]1[end link] - Walk through the corridor.";
+	say "     [link](2)[as]2[end link] - Return.";
+	say "     [link](3)[as]3[end link] - Glance over the mirror.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 3:
+		say "Choice? (1-3)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to go forward, [link]2[end link] to return or [link]3[end link] to look at the mirrors.";
+	if calcnumber is 1: [Forward]
+		Linebreak;
+		say "     You guess you really can only keep going forward...";
+		say "     Yet again, by simply starting to walk through this room with the mirrors, you make it across in less than a couple of minutes, arriving at the door on the other side. Grabbing the handle and turning it to the left, it creaks with an ominous, low pitched sound, followed by the door's movement. You open it, despite the noise, and walk into the next area. Your steps echo through the room...";
+		WaitLineBreak;
+		say "     Unsurprisingly, it is another corridor, with another two mirrors lined up in front of each other and attached to the walls on each side, with yet another door by the end of it. You can still see yourself in all the subsequent reflexions at first glance, and you are faced with another choice to make.";
+		LineBreak;
+		VRMirrorsTripleChoice4;
+	else if calcnumber is 2:
+		Linebreak;
+		say "     The other can always choose, but they are not doing it when they can.";
+		WaitLineBreak;
+		VRMirrorsTripleChoice3;
+	else if calcnumber is 3:
+		Linebreak;
+		say "     Your hand raises with your reflection's. It seems to be waving at you.";
+		WaitLineBreak;
+		VRMirrorsTripleChoice3;
+
+to VRMirrorsTripleChoice4:
+	say "     [link](1)[as]1[end link] - Walk through the corridor.";
+	say "     [link](2)[as]2[end link] - Break the mirror.";
+	say "     [link](3)[as]3[end link] - Glance over the mirror.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 3:
+		say "Choice? (1-3)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to go forward, [link]2[end link] to break the mirrors or [link]3[end link] to look at the mirrors.";
+	if calcnumber is 1:
+		Linebreak;
+		say "     You guess you really can only keep going forward...";
+		say "     Yet again, by simply starting to walk through this room with the mirrors, you make it across in less than a couple of minutes, arriving at the door on the other side. Grabbing the handle and turning it to the left, it creaks with an ominous, low pitched sound, followed by the door's movement. It opens for you, despite the noise, and you walk into the next area. Your steps echo through the room...";
+		WaitLineBreak;
+		say "     Unsurprisingly, it is another corridor, with another two mirrors lined up in front of each other and attached to the walls on each side, with yet another door by the end of it. You can still see yourself in all the subsequent reflexions at first glance, and you are faced with another choice to make.";
+		Linebreak;
+		VRMirrorsDoomedChoice;
+	else if calcnumber is 2:
+		Linebreak;
+		VRMirrorsDestroy;
+	else if calcnumber is 3:
+		Linebreak;
+		say "     You raise your hand with the reflection. It smiles at you. Your cheeks hurt as they are forced to smile back.";
+		WaitLineBreak;
+		VRMirrorsDoomedChoice;
+
+to VRMirrorsDoomedChoice:
+	say "     [link](1)[as]1[end link] - Walk through the corridor.";
+	say "     [link](2)[as]2[end link] - Break the mirror.";
+	say "     [link](3)[as]3[end link] - Glance over the mirror.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 3:
+		say "Choice? (1-3)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to go forward, [link]2[end link] to break the mirrors or [link]3[end link] to look at the mirrors.";
+	if calcnumber is 1:
+		Linebreak;
+		say "     You attempt to move, but instead, you walk towards the mirror. It is not something you chose to do, but you feel compelled to do it, anyway. There is another you in your reflection, waving and smiling at you, something you can do in your daily basis. There is something in your eyes, however... A wicked, demonic stare that gazes into your soul. You find yourself saying 'Now it belongs to me...' with lip movements that are not yours. Yet you were forced to say those words. Someone, or something, seems to be controlling everything you do, even your thoughts...";
+		WaitLineBreak;
+		say "     Not the best of bodies, but it seems functional enough for what you desire to achieve. Now... to find your way out of the void and back to the surface... You guess that the other [']you['] does not need to do the thinking anymore. Mortals should never mess with the unknown if they don't know what they're doing. Sadly, this one found its inevitable fate... Oh, the void is such a great hunting spot. Delicious souls, and now you can make everyone worship you like the slaves they are going to be. But wouldn't it be fun to experience everything the world has to offer...? So many choices, and so little time... By the moment I am done figuring out what to do, I will need another body...";
+		WaitLineBreak;
+		now battleground is "Void";
+		the Player was ended by "Envy Demon";
+		trigger ending "Player has died";
+		end the story saying "Your body has been stolen by an Envy Demon, and your soul... consumed and lost, forever.";
+	else if calcnumber is 2:
+		Linebreak;
+		say "     You can't choose to do that. Not anymore.";
+		WaitLineBreak;
+		VRMirrorsDoomedChoice;
+	else if calcnumber is 3:
+		Linebreak;
+		say "     Your hand is pushed upwards, and shakes involuntarily. You cannot stop it on your own, and have to wait it out.";
+		WaitLineBreak;
+		VRMirrorsDoomedChoice;
+
+to VRMirrorsDestroy:
+	say "     With the last brink of control you managed to hold tightly onto, you build up all the might you still have left, and with a single, powerful blow, you smash against the mirror before it can take you. It cracks, and within moments, it starts to shatter, as the sound of glass falling and breaking, hitting the floor shard by shard, replaces the silence of the room. There is a deep, inhuman scream accompanying the destruction, as you regain all the control you had lost over your body until here. It is a prolonged, agonized shout of frustration and pain, severely deep and demonic, something that assails your mind like a bad nightmare before all the lights turn dark. It is done. With the threat eliminated, you get to keep your soul, while the demon perishes in the emptiness of the void.";
+	say "     Curiously, though, the shattered mirror dropped [bold type]a large key[roman type]... What door does it open? Perhaps you should continue to search the veil, once you manage to walk back to the core line. Carefully, though. The mirror shards are very real, and you don't want to earn yourself any painful cuts.";
+	now Resolution of MirrorsKey is 1;
+	WaitLineBreak;
+	say "[VRMoveOptions]";
+
+to VRMirrorsBack:
+	say "     This place looks terrifying, and the mirrors send an ominous vibe. You better leave before something irreversible happens to you.";
+	VRNormalSanityLoss;
+	WaitLineBreak;
+	say "[VRMoveOptions]";
 
 Section 2-3 - Bad Ends
 
@@ -1226,6 +1816,9 @@ to say DarkTyrantDesc:
 to say PeculiarSummonerDesc:
 	say "     Sometimes it is tendrils, other times it is a cluster of arms, you never know what you should be expecting to come out of this one. A slender, dark robed figure of questionable gender, they seem to be able to reproduce any gender's voice and summon anything they desire. It appears they have learned how to invoke certain creatures - or parts of some - to aid them in a time of peril, including the art of metamorphing. They speak to you how you seem to imagine them, their voice reaching for your ears in a form of a demand 'Submit. I will make sure you enjoy it.' Whether you intend to or not, they will not give up until you conform to their order.";
 
+to say TentacleAbominationDesc:
+	say "     A massive abomination with a multitude of tentacles, this beast always has a central mass resembling one of the human's reproductive organs, which seems to shift between a gigantic penis and an enormous vulva whenever it wants, always covered in numerous fleshy extensions that reach and pull anything towards it in an attempt to feed itself. Hunger is evident in the way these monsters trick and feed on their prey, and it clearly intends on taking you, too. Crawling towards your position, the abomination flaunts its genitalia of titanic proportions and the seemingly endless number of tentacles at you, leaving you unsure as if it is trying to turn you on or to plainly scare you away.";
+
 Section 2-6 - Fight Conclusions and Win/Loss Scenes
 
 to say VoidSerpentWins:
@@ -1269,7 +1862,7 @@ to say VRDarkTyrantWins:
 	if randomnumber is:
 		-- 1: [Oral Vore]
 			say "     With your body now fully coated in slime and sluggish because of this arousal taking over you, the massive brute of black goo brings you close to his mouth, letting his tongue be in charge and covering you in his gooey saliva as he licks around your arms, legs and chest, eventually passing by your crotch, as you are slowly brought closer to his mouth. With his long tongue wrapped around you, he hides his teeth back in the goo and pulls to towards what would be his lips, enveloping you in the black goo as his tongue keeps working all over you. The insides of his mouth are now squishy and gooey, without anything sharp or painful, providing you with an odd comfort as he begins to slightly slurp you deeper past his solid liquid lips.";
-			say "     He takes you feet first, pushing you through your legs, past your crotch as he wiggles his tongue underneath you, then leans his head back and lets you slide in with gravity, sinking to your chest, up to your shoulders and arms, your head disappearing into the darkness of his mouth as you feel his tongue twirling around you, as if savoring you, feeling your taste, or simply just playing with you. It is as if the Dark Tyrant felt some sort of affection for you, so much that he wants to make you feel good before he takes you inside him. He lets out a moan that you can feel once he presses you against the upper side of hi mouth with his tongue, rubbing it all across you as if taking more of your flavor, your surroundings bouncing rhythmically as if he was stroking his male appendage.";
+			say "     He takes you feet first, pushing you through your legs, past your crotch as he wiggles his tongue underneath you, then leans his head back and lets you slide in with gravity, sinking to your chest, up to your shoulders and arms, your head disappearing into the darkness of his mouth as you feel his tongue twirling around you, as if savoring you, feeling your taste, or simply just playing with you. It is as if the Dark Tyrant felt some sort of affection for you, so much that he wants to make you feel good before he takes you inside him. He lets out a moan that you can feel once he presses you against the upper side of his mouth with his tongue, rubbing it all across you as if taking more of your flavor, your surroundings bouncing rhythmically as if he was stroking his male appendage.";
 			WaitLineBreak;
 			say "     As you are brought closer and closer to his gooey throat, pushed in by his tongue, you feel your whole body shaking when a deep grunt bursts from his insides, as if he reached his climax, all the while he decides to finally swallow you. His slimey esophagus slowly pulls you deeper into a black gooey mess, in which you lose yourself, only darkness claiming your body, completely enveloped and stuck in black solid liquid, and deprived of air. You as you know yourself, your body as you controlled it and your mind all start to become irrelevant as you feel all that belongs to you being taken away, absorbed into the goo that you are now part of.";
 		-- 2: [Cock Vore]
@@ -1316,11 +1909,58 @@ to say PeculiarSummonerLoses: [no text here, it's in fightoutcome]
 	else:
 		say "Nothing written yet.";
 
+to say TentacleAbominationWins:
+	if inasituation is true:
+		say ""; [dealt with at the source]
+	else:
+		say "Nothing written yet.";
+
+to say VRTentacleAbominationWins:
+	TentacleAbominationVore1;
+	WaitLineBreak;
+	now battleground is "Void";
+	the Player was ended by "Tentacle Abomination";
+	trigger ending "Player has died";
+	end the story saying "You have perished in the Void, swallowed by a Tentacle Abomination.";
+
+to TentacleAbominationVore1:
+	say "     As you fall face flat on the ground, the abomination is dragging you by your feet towards its central mass, but before that, amidst your futile resistance, you are brought to the air, suspended upside down for moments as more and more of its extensions find themselves wrapped around your body. With arms and legs immobilized, your existence simply remains as an easy target of abuse for the monster, which takes great interest in touching and harassing all your sensitive areas, each tentacle flicking at around your chest and inner side of your thighs, having quite a lot of fun rubbing themselves against your [if player is male]cock[else if player is female]pussy[else]crotch[end if], as if the beast knew of your most vulnerable areas.";
+	say "     With enough persistence, the abomination manages to bring all your resistances down as you're helplessly stimulated down your parts, with already plenty of tendrils assaulting and completely covering you, to the point that any movement you attempt to make results in nothing but a little push. While taking you closer to it, the monster decides to shove one of its phallic members down your mouth, with another poking at the space between your asscheeks, threatening to violate you in any manner possible. Its powerful shafts spread your legs open with ease, fully exposing your entrance to the abomination. When the whim takes it, you feel one pushing rather violently against your asshole, [if player is female]with another slipping inside your womanhood, [end if]while the one in your mouth just digs itself deeper towards your throat, as they wiggle and squeeze to allocate themselves inside you.";
+	WaitLineBreak;
+	say "     They throb and ram, pull and push, squeeze and rub all they can, in and out of you, all over you, covering you in a juice that seems comparable to a beast's drool, but slick and slippery, with their bulbuous tips engorged as the rest of the tentacles['] shafts thicken and harden, increasingly excited and more than happy to take you over. You find yourself thoroughly assaulted from all ends, being pulled deeper and closer into the tendrils['] embrace. Each and every single one of them is wiggling inside you or all around you, their width stretching your fleshy tunnels while continuously pounding and thrusting into you.";
+	say "     It's when you look down, towards the center of all these tentacles, throbbing and leaking a white, thick liquid from their flared tips, that you can see what awaits you...";
+	WaitLineBreak;
+	if a random chance of 1 in 2 succeeds: [it's a dick!]
+		say "     ... an enormous, massive penis-shaped mass, whose slit gapes and throbs liquid out at your approach the more its surrounding tendrils take a grasp at you, slowly bringing you over to their in-between as you are mercilessly overstimulated all over and pounded deep in your orifices. This molded cock grows bigger, harder and pulses an unbearable warmth that makes you sweat once you're caught in its radius, while the abomination's tentacles flip you around in order to make you fit its terrifying maw, your head shifted towards it. The monster, once you're touching its sensitive body, makes some of its tentacles retreat from your body, except those that are holding you in place, before slowly bringing you over to its slit. As it leaks, a even thicker glob of white juice covers your face, with a chunk of flesh instantly swallowing you over to your neck.";
+		say "     It continues to slurp on your body down to your shoulders, making it around your chest, and keeps on pushing you inside. Its heat is so hot that you nearly feel yourself melting, and no matter how much you would wiggle, struggle, kick and punch around, the creature feels nothing but more pleasure as it feels your body filling its, going down that massive shaft that swells with your shape, leaking more liquid in every moment it manages to push you down a little more, past your waist, leaving only your legs out. Any movements you make only encourage it further, so it grabs you around your legs with more tentacles and, with additional pushing, it inserts you fully inside the penis that wants to swallow you completely, until it finally does.";
+		WaitLineBreak;
+		say "     The last bit of you, which are your feet, is then swallowed by the giant penis as the tendrils let go of you completely, allowing you to sink in its length as you disappear into the mass. You are then pulled deeper, forced to go into a curl, and held inside a gelatinous body that floods itself in more of that strange liquid, oddly warm and making you tingle all over, until you begin to doze off. It is as if the darkness itself was suffocating you, making you lose your will to breathe. What remains is your shell, as it then too merges with the rest of the abomination that consumed your body and soul, a process that lasts for hours and hours with increasing orgasmic pleasure, a wicked way to make you surrender to its greedy hunger.";
+	else: [it's a pussy]
+		say "     ... an enormous, massive vulva-shaped mass, whose plump lips throb and leak liquid out at your approach the more its surrounding tendrils take a grasp at you, slowly bringing you over to their in-between as you are mercilessly overstimulated all over and pounded deep in your orifices. This molded pussy grows bigger, moistening and blinking every so often, and pulses an unbearable warmth that makes you sweat once you're caught in its radius, while the abomination's tentacles flip you around in order to make you fit its terrifying entrance, your head shifted towards it. The monster, once you're touching its sensitive body, makes some of its tentacles retreat from your body, except those that are holding you in place, before slowly bringing you over to the gaping entrance. As it leaks, a even thicker glob of white juice covers your face, with a chunk of flesh instantly swallowing you over to your neck.";
+		say "     It continues to slurp on your body down to your shoulders, making it around your chest, and keeps on pushing you inside. Its heat is so hot that you nearly feel yourself melting, and no matter how much you would wiggle, struggle, kick and punch around, the creature feels nothing but more pleasure as it feels your body filling its, going down that massive cunt that swells with your shape, leaking more liquid in every moment it manages to push you down a little more, past your waist, leaving only your legs out. Any movements you make only encourage it further, so it grabs you around your legs with more tentacles and, with additional pushing, it inserts you fully inside the vulva that wants to unbirth you completely, until it finally does.";
+		WaitLineBreak;
+		say "     The last bit of you, which are your feet, is then swallowed by the giant womanhood as the tendrils let go of you completely, allowing you to sink in its depths as you disappear into the mass. You are then pulled deeper, forced to go into a curl, and held inside a gelatinous body that floods itself in more of that strange liquid, oddly warm and making you tingle all over, until you begin to doze off. It is as if the darkness itself was suffocating you, making you lose your will to breathe. What remains is your shell, as it then too merges with the rest of the abomination that consumed your body and soul, a process that lasts for hours and hours with increasing orgasmic pleasure, a wicked way to make you surrender to its greedy hunger.";
+		WaitLineBreak;
+	if carried of ancient tome > 0 and TentacleInteractions > 0: [Saved from the Bad End]
+		say "     But... suddenly, something seems to shift. A bright, crimson light blinds you within the fadeaway that took you at the brink of your loss of conscience, then rings in your ears like a loud bell that continuously hums without another beat, except its sound is getting higher and higher, as if per something magical attempting to reach you before you are lost forever. You feel an all too familiar touch, similar to the beast that have captured you, except this one is different. An odd embrace of tentacles gets you, much more gentle and soft than the previous, as your body is pulled away from the flooded cocoon that was holding you until your body and soul would finally perish. As you regain your conscience, you almost cannot believe it...";
+		say "     It seems these are the ancient tentacles from the ancient tome, which were summoned at the very last moment in order to save you from the void abomination. At least, you recognize this very sensation of slick and wet tendrils all over your body, not hungrily preying on you, but wanting to actually offer you pleasure as they take every hole and corner of your vulnerable body. You are too weak to offer any resistance, and even if you could, their touch simply feels too good to even gather the willpower to fight it. Within these brief moments, you fade in and out of conscience as you are penetrated from both sides, tentacles wiggling inside you and touching every soft spot in you, filling you with ecstacy from every direction... But your strength only remains for so long, before you black out once more.";
+		WaitLineBreak;
+		say "[VRLeave]";
+		say "     Your surroundings change, from a suffocating emptiness and being submerged in liquid, to breathable air and freedom. You are back in the [bold type]Red Light District[roman type], away from the void, and waking up with a swollen belly. Reaching for a hand down over your ass, you feel the very same odd juice that leaks out of those tentacles, and soon enough, your memory catches up. It seems the ancient tentacles actually saved you, and in return, they bred you with more of their offspring, who seem to have left through your rear by now, judging from how it's stretched and leaking. Why did they do that, though? Are you an asset too valuable for them? Or is it just something to do with the abominations in the void...?";
+		say "     You feel like there is something going on between both these entities, but you cannot point out what, exactly.";
+
+to say TentacleAbominationLoses:
+	if inasituation is true:
+		say ""; [dealt with at the source]
+	else:
+		say "Nothing written yet.";
+
 to VRVoidSerpentFightConclusion:
 	if fightoutcome < 20: [player won]
 		say "     It was a tough fight, but you managed to emerge victorious by dealing the final blow to the Void Serpent, who collapses on the dark floor seemingly lifeless before you. With nothing else to do but to admire your prowess, you look around for some spoils.";
 		say "     There is, at least, [bold type]a pair of null essences[roman type] that you manage to gather from the defeated snake.";
-		increase carried of null essence by 2;
+		ItemGain null essence by 2 silently;
+		now VRVoidSerpentTracker is 0;
 		WaitLineBreak;
 		say "[VRMoveOptions]";
 	else if fightoutcome > 19 and fightoutcome < 30: [lost]
@@ -1333,6 +1973,7 @@ to VRVoidSerpentFightConclusion:
 			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Xaedihr's Weapon Damage Check):[line break]";
 			if diceroll + bonus >= 16:
 				say "     [italic type]But what is this? The serpent cowers as if hit by something incredibly powerful! It seems it was Xaedihr, who managed to charge up a spell strong enough to knock the creature away for a while! 'Quick! Into the veil!' he shouts, as he grabs to you attempt an escape out of the core line. Fortunately, the serpent is not able to follow after taking such a surprising hit.[roman type][line break]";
+				now VRVoidSerpentTracker is 1;
 				WaitLineBreak;
 				VREventsRoll;
 			else:
@@ -1353,13 +1994,13 @@ to VRVoidSerpentFightConclusion:
 			if diceroll + bonus >= 16:
 				say "     [italic type]But what is this? The serpent cowers as if hit by something incredibly powerful! It seems it was Xaedihr, who managed to charge up a spell strong enough to knock the creature away for a while! 'Quick! Into the veil!' he shouts, as he grabs to you attempt an escape out of the core line. Fortunately, the serpent is not able to follow after taking such a surprising hit.[roman type][line break]";
 				WaitLineBreak;
+				now VRVoidSerpentTracker is 1;
 				VREventsRoll;
 			else:
 				say "     [italic type]Not even Xaedihr can save you. He doesn't manage to cast a spell powerful enough to force its hold out of you. He has no other choice but to escape by himself, leaving you to your fate...[roman type][line break]";
 				WaitLineBreak;
 				say "[VRVoidSerpentWins]";
 		else:
-			WaitLineBreak;
 			say "[VRVoidSerpentWins]";
 
 to VRDarkTyrantFightConclusion:
@@ -1370,7 +2011,7 @@ to VRDarkTyrantFightConclusion:
 		say "     You cannot help but stare at it, having your own questions, thoughts and doubts about this striking you momentarily. All that remains of the Dark Tyrant is an absurd quantity of null essence that you could gather. But there is still an odd remorse at the back of your head. Why is that...?";
 		WaitLineBreak;
 		say "     You have obtained [bold type]50 null essences[roman type], stashing them all in your inventory. It's a heavy bunch, you might want to drop these somewhere...";
-		increase carried of null essence by 50;
+		ItemGain null essence by 50 silently;
 		now VRDarkTyrantTracker is -99; [he's gone, for good]
 		WaitLineBreak;
 		say "[VRMoveOptions]";
@@ -1400,6 +2041,7 @@ to VRPeculiarSummonerFightConclusion: [The peculiar summoner is one of the few '
 			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]14[roman type] (Xaedihr's Weapon Damage Check):[line break]";
 			if diceroll + bonus >= 14:
 				say "     [italic type]But what is this? The summoner cowers as if hit by something incredibly powerful! It seems it was Xaedihr, who managed to charge up a spell strong enough to knock the cloaked figure away for a while! 'Quick! Into the veil!' he shouts, as he grabs to you attempt an escape out of the core line. Fortunately, the summoner is not able to follow after taking such a surprising hit, but they do shout angrily.[roman type][line break]";
+				now VRPeculiarSummonerTracker is 1;
 				WaitLineBreak;
 				VREventsRoll;
 			else:
@@ -1407,14 +2049,73 @@ to VRPeculiarSummonerFightConclusion: [The peculiar summoner is one of the few '
 				WaitLineBreak;
 				say "[VRPeculiarSummonerWins]";
 		else:
-			WaitLineBreak;
 			say "[VRPeculiarSummonerWins]";
 	else if fightoutcome is 30: [fled]
 		say "     The cloaked figure is the only exception to this rule, as they cannot possibly go after you or attempt to stop you without some sort of extraordinary effort while you were in the middle of fighting. A moment of distraction is all you need to leap out of the core line and leave the peculiar summoner behind, as they shout angrily.";
 		say "     Hopefully you don't find anything menacing [bold type]beyond the veil...[roman type][line break]";
+		now VRPeculiarSummonerTracker is 1;
 		WaitLineBreak;
 		VREventsRoll;
 
+to VRTentacleAbominationFightConclusion:
+	if fightoutcome < 20: [player won]
+		say "     Delivering the final strike against the abomination makes it recoil and draw back in fear, its many tentacles unable to stretch and reach for you. Having taken the upper hand, you take a few steps towards it only to see the monster crawling away, retreating into the darkness. For now, you remain standing victorious, with the spoils of a ferocious battle against one of the hungriest creatures in the void.";
+		say "     Besides, you have also saved yourself from being thoroughly raped and consumed by one of the most hedious beasts of the empty space.";
+		if a random chance of 2 in 3 succeeds:
+			say "     It looks like the Tentacle Abomination dropped a single [bold type]Null Essence[roman type], so you pick it up and stash it in your inventory.";
+			ItemGain null essence by 1 silently;
+	else if fightoutcome > 19 and fightoutcome < 30: [lost]
+		say "     No matter how much you struggle against the massive cluster of tentacles, it only grows stronger by the second you are fighting it, providing you with quite the challenge. Although, a few more strikes are you're barely capable of moving, having the tentacles finally reach you and immobilize you in place. All you see now is yourself being dragged through the floor as more of the abomination's extensions wrap themselves around your body...";
+		WaitLineBreak;
+		if companion of player is demonologist:
+			Linebreak;
+			let bonus be (( weapon damage of demonologist minus 10 ) divided by 2);
+			let diceroll be a random number from 1 to 20;
+			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Xaedihr's Weapon Damage Check):[line break]";
+			if diceroll + bonus >= 15:
+				say "     [italic type]But what is this? The abomination cowers as if hit by something incredibly powerful! It seems it was Xaedihr, who managed to charge up a spell strong enough to knock the creature away for a while! 'Quick! Into the veil!' he shouts, as he grabs to you attempt an escape out of the core line. Fortunately, the monster is not able to follow after taking such a surprising hit.[roman type][line break]";
+				WaitLineBreak;
+				now VRTentacleAbominationTracker is 1;
+				now VRTentacleAbominationLinger is 0;
+				VREventsRoll;
+			else:
+				say "     [italic type]Not even Xaedihr can save you. He doesn't manage to cast a spell powerful enough to force its hold out of you. He has no other choice but to escape by himself, leaving you to your fate...[roman type][line break]";
+				WaitLineBreak;
+				if carried of ancient tome > 0 and TentacleInteractions > 0: [not a bad end]
+					TentacleAbominationVore1;
+				else:
+					say "[VRTentacleAbominationWins]";
+		else:
+			if carried of ancient tome > 0 and TentacleInteractions > 0: [not a bad end]
+				TentacleAbominationVore1;
+			else:
+				say "[VRTentacleAbominationWins]";
+	else if fightoutcome is 30: [fled]
+		say "     Flee? There is no escape from the monsters of the Void once you engage in battle with one of them. All you managed to do was to give the abomination enough time to stretch its tentacles towards your legs, making you trip, then fall... and become a vulnerable target for the rest of them.";
+		WaitLineBreak;
+		if companion of player is demonologist:
+			Linebreak;
+			let bonus be (( weapon damage of demonologist minus 10 ) divided by 2);
+			let diceroll be a random number from 1 to 20;
+			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Xaedihr's Weapon Damage Check):[line break]";
+			if diceroll + bonus >= 15:
+				say "     [italic type]But what is this? The abomination cowers as if hit by something incredibly powerful! It seems it was Xaedihr, who managed to charge up a spell strong enough to knock the creature away for a while! 'Quick! Into the veil!' he shouts, as he grabs to you attempt an escape out of the core line. Fortunately, the monster is not able to follow after taking such a surprising hit.[roman type][line break]";
+				WaitLineBreak;
+				now VRTentacleAbominationTracker is 1;
+				now VRTentacleAbominationLinger is 0;
+				VREventsRoll;
+			else:
+				say "     [italic type]Not even Xaedihr can save you. He doesn't manage to cast a spell powerful enough to force its hold out of you. He has no other choice but to escape by himself, leaving you to your fate...[roman type][line break]";
+				WaitLineBreak;
+				if carried of ancient tome > 0 and TentacleInteractions > 0: [not a bad end]
+					TentacleAbominationVore1;
+				else:
+					say "[VRTentacleAbominationWins]";
+		else:
+			if carried of ancient tome > 0 and TentacleInteractions > 0: [not a bad end]
+				TentacleAbominationVore1;
+			else:
+				say "[VRTentacleAbominationWins]";
 
 Section 3 - Items
 
@@ -1470,6 +2171,38 @@ It is part of the player.
 It has a weapon "[one of]your very sharp tusk[or]your void monster's tusk[or]your sharp black tusk[at random]". The weapon damage of sharp black tusk is 12. The weapon type of sharp black tusk is "Melee". It is not temporary. The objsize of sharp black tusk is 4. The hitbonus of sharp black tusk is -2.
 
 the scent of the sharp black tusk is "The void serpent's tusk actually manages to have a scent, despite coming from the void, and you do not like it. It's undescribably bad, something between rotten and death, even with the apparent good condition of the tusk.".
+
+[]
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"loose tentacle"	"A remnant of one of the Tentacle Abomination's many tendrils, which sometimes starts moving on its own."	1	loose tentacle
+
+loose tentacle is a grab object.
+the usedesc of loose tentacle is "[loose tentacle use]";
+
+to say loose tentacle use:
+	say "     You try to think of a way to use it, but honestly, you really can't figure out any. Perhaps someone else would?";
+	ItemGain loose tentacle by 1 silently;
+
+instead of sniffing loose tentacle:
+	say "This thing suprisingly does not smell like the void, but it's an odd scent. One that you would find only after a massive orgy, reeking of sex and sweat.";
+
+[]
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"strange-colored bean"	"It is a bean with a strange color. The texture is similar to a gum."	1	strange-colored bean
+
+strange-colored bean is a grab object.
+the usedesc of strange-colored bean is "[strange-colored bean use]";
+
+to say strange-colored bean use:
+	say "     It's just a bean, right? And it kind of looks like it tastes good... But you're wrong! Once you push it past your lips and into your mouth, it starts to burn intensely, and tastes like death. You immediately spit it out, and since you lacked the courage to bite it, it still looks intact. Best not do that again.";
+	increase carried of strange-colored bean by 1;
+
+instead of sniffing strange-colored bean:
+	say "The bean is odorless, much like everything else in the void.";
 
 Section 4 - Creatures
 
@@ -1850,11 +2583,175 @@ When Play begins:
 	now Cunt Depth entry is 99;
 	now Cunt Tightness entry is 99;
 	now libido entry is 0; [ Amount player Libido will go up if defeated ]
-	now loot entry is "";
+	now loot entry is "strange-colored bean";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]unknown[or]questionable[or]cloaked[or]robed[at random]";
 	now type entry is "[one of]slender[or]unknown[at random]";
+	now magic entry is true;
+	now resbypass entry is false;
+	now non-infectious entry is true;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
+
+[
+Table of New Infection Parts (continued)
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
+	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Asshole Depth entry is 7; [inches deep for anal fucking]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
+	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
+	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
+]
+
+Section 4-4 - Tentacle Abomination
+
+Table of Random Critters (continued)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of Random Critters;
+	now NewTypeInfection entry is false;
+	now Species Name entry is "Voidling"; [name of the overall species of the infection, used for children, ...]
+	now Name entry is "Tentacle Abomination"; [Name of your new Monster]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now attack entry is "The [one of]massive cluster of tentacles[or]tentacle abomination[or]mass of void tentacles[or]obscene tentacle monster[at random] [one of]smashes you with one of its big extensions[or]jumps at you with suprising agility and smashes against your body[or]shoots a questionable thick substance at you, which drains your strength, then attacks you with a tentacle smash[or]swings a huge tentacle at you, hitting you hard[at random]!";
+	now defeated entry is "[TentacleAbominationLoses]";
+	now victory entry is "[TentacleAbominationWins]";
+	now desc entry is "[TentacleAbominationDesc]";
+	now face entry is "";
+	now body entry is "";
+	now skin entry is "";
+	now tail entry is "";
+	now cock entry is "";
+	now face change entry is "";
+	now body change entry is "";
+	now skin change entry is "";
+	now ass change entry is "";
+	now cock change entry is "";
+	now str entry is 43;
+	now dex entry is 28;
+	now sta entry is 48;
+	now per entry is 12;
+	now int entry is 9;
+	now cha entry is 5;
+	now sex entry is ""; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now HP entry is 469; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 20; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
+	now wdam entry is 29; [Amount of Damage monster Does when attacking. Claws and massive strength]
+	now area entry is ""; [ Current options are 'Outside' and 'Mall'. Case sensitive. If you go down to the woods today, you're in for a big surprise]
+	now Cock Count entry is 99; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now Cock Length entry is 99; [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 99; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
+	now Nipple Count entry is 0; [ Number of nipples infection will give you (males have nipples too) ]
+	now Breast Size entry is 0; [Size of breasts infection will try to attain ]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now Cunt Depth entry is 0;
+	now Cunt Tightness entry is 0;
+	now libido entry is 0; [ Amount player Libido will go up if defeated ]
+	now loot entry is "loose tentacle";
+	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
+	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]abominable[or]monstrous[or]obscene[or]disturbing[at random]";
+	now type entry is "[one of]abominable[at random]";
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
@@ -1977,8 +2874,8 @@ CreateNullEssences is an action applying to nothing.
 Understand "GetNE" as CreateNullEssences.
 
 Carry out CreateNullEssences:
-	increase carried of null essence by 100;
-	increase carried of sharp black tusk by 1;
+	ItemGain null essence by 100 silently;
+	ItemGain sharp black tusk by 1 silently;
 	say "     100 null essences added to your inventory.";
 	say "     Have a tusk, too.";
 

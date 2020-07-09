@@ -17,14 +17,11 @@ to say infect:
 
 to say Give Awesome:
 	if a random number between 1 and 100 > 40:
-		say "[bold type]You gain 1 awesome fruit![roman type][line break]";
-		increase carried of awesome fruit by 1;
+		ItemGain awesome fruit by 1;
 	if a random number between 1 and 100 > 40:
-		say "[bold type]You gain 1 awesomer fruit![roman type][line break]";
-		increase carried of awesomer fruit by 1;
+		ItemGain awesomer fruit by 1;
 	if a random number between 1 and 100 > 85:
-		say "[bold type]You gain 1 awesomest fruit![roman type][line break]";
-		increase carried of awesomest fruit by 1;
+		ItemGain awesomest fruit by 1;
 
 to say awesome attack:
 	if Awesome_boredom is 4:
@@ -48,7 +45,7 @@ to say awesome defeat:
 		if awesome bat is owned:
 			if awesome bat is weapon object of Player:
 				try using awesome bat;
-			delete awesome bat;
+			ItemLoss awesome bat by 1;
 			say "Walking away, you get a sudden urge and dig a hole in some soft ground, pushing your bat in deeply. You can sense, with your most awesome senses, the wood taking root and beginning to grow.";
 		say "With good feelings coursing through you at your good deed, a warmth seems to spread from the core of awesome that the tree's fruit seems to have implanted into your being.";
 		infect;

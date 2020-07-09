@@ -1,8 +1,9 @@
-Version 1 of Toron by Gherod begins here.
+Version 2 of Toron by Gherod begins here.
 
 "Adds Toron, the bartender of the Hellfire Club, to the game."
 
 [Version 1 - Moved Toron to his own file, as it was getting cramped in Mogdraz's file]
+[Version 2 - Added Tentacular Slushie as a drink. Buffed some drink effects, adjusting negatives accordingly.]
 
 [***********************************************************]
 Section 1 - Toron NPC
@@ -93,7 +94,7 @@ to say ToronTalkMenu:
 		now sortorder entry is 6;
 		now description entry is "Ask him about his relationship with Mogdraz";
 	[]
-	if resolution of An Hellish Introduction > 1:
+	if resolution of Hellish Introduction > 1:
 		choose a blank row in table of fucking options;
 		now title entry is "About Xaedihr";
 		now sortorder entry is 7;
@@ -239,13 +240,14 @@ to say ToronTalkAE:
 		if player consents:
 			Linebreak;
 			say "     Having enough of the stuff with you, it is time to restore this useless weapon into its glorious former shape. 'Very well, this shouldn't take long. Would you wait here?' he asks, as he takes the abyssal remnant and the pack of null essences with him to the back room.";
-			decrease carried of abyssal remnant by 1;
+			ItemLoss null essence by 25;
+			ItemLoss abyssal remnant by 1;
 			WaitLineBreak;
 			say "     You hear a lot of noise. Hammering, strange flashes, ominous whispers that you think it's just your imagination but never cease to be there, nonetheless, and time goes by... You glance around the lounge, play with your fingers, with a glass that's nearby, all while you anxiously wait for the results...";
 			WaitLineBreak;
 			say "     But soon enough, Toron returns, with a weapon in hand. A pretty normal sized sword, black in color and a very sharp blade, which also looks light enough to be handled well by anyone that doesn't have a lot of training with swords. 'What a formidable weapon... This will surely keep you safe in the Void. Well, everywhere, actually! It is a really, really good sword...' Toron compliments the now restored Abyssal Edge, as he handles it to you. 'Use it responsibly.'";
 			say "     You are now in possession of the legendary [bold type]Abyssal Edge[roman type].";
-			increase carried of abyssal edge by 1;
+			ItemGain abyssal edge by 1 silently;
 		else:
 			Linebreak;
 			say "     You tell Toron that you would like to postpone this, and he doesn't question you. 'Do what you think it is best.' he says, before returning to his duties.";
@@ -258,6 +260,8 @@ HellfireDrinkTimer is a number that varies. HellfireDrinkTimer is usually 0. [@T
 HellfireOrcBrewTimer is a number that varies. HellfireOrcBrewTimer is usually 20000. [@Tag:NotSaved]
 HellfireBlackAleTimer is a number that varies. HellfireBlackAleTimer is usually 20000. [@Tag:NotSaved]
 HellfireSparklingWaterTimer is a number that varies. HellfireSparklingWaterTimer is usually 20000. [@Tag:NotSaved]
+HellfireTentacularSlushieTimer is a number that varies. HellfireTentacularSlushieTimer is usually 20000. [@Tag:NotSaved]
+HellfirePeculiarLiqueurTimer is a number that varies. HellfirePeculiarLiqueurTimer is usually 20000. [@Tag:NotSaved]
 
 to say HellfireClubDrinksMenu:
 	say "     [bold type]Toron hands you a list with the drinks he has on stock[roman type]. 'This is what I have right now.'";
@@ -268,25 +272,37 @@ to say HellfireClubDrinksMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "Order a Hellfire Swizzle";
 	now sortorder entry is 1;
-	now description entry is "A drink that increases your might (+1 strength)";
+	now description entry is "A drink that increases your might (+2 strength)";
 	[]
 	if "Created Orcish Bomber" is listed in traits of Toron:
 		choose a blank row in table of fucking options;
 		now title entry is "Order an Orcish Bomber";
 		now sortorder entry is 1;
-		now description entry is "A drink that substantially increases your might, at the cost of accuracy (+2 strength, -1 dexterity)";
+		now description entry is "A drink that substantially increases your might, at the cost of accuracy (+3 strength, -1 dexterity)";
 	[]
 	if "Created Heaven's Kiss" is listed in traits of Toron:
 		choose a blank row in table of fucking options;
 		now title entry is "Order a Heaven's Kiss";
 		now sortorder entry is 1;
-		now description entry is "A drink that substantially increases your charisma (+2 charisma)";
+		now description entry is "A drink that substantially increases your charisma (+3 charisma)";
 	[]
 	if "Created Black Ale" is listed in traits of Toron:
 		choose a blank row in table of fucking options;
 		now title entry is "Order a Black Ale";
 		now sortorder entry is 1;
-		now description entry is "A drink that increases your physical stats at the cost of the mental ones (+1 strength, +1 dexterity, +1 stamina, -1 intelligence, -1 charisma, -1 perception)";
+		now description entry is "A drink that increases your physical stats at the cost of the mental ones (+2 strength, +2 dexterity, +2 stamina, -2 intelligence, -2 charisma, -2 perception)";
+	[]
+	if "Created Tentacular Slushie" is listed in traits of Toron:
+		choose a blank row in table of fucking options;
+		now title entry is "Order a Tentacular Slushie";
+		now sortorder entry is 1;
+		now description entry is "A drink that significantly increases your dexterity, but takes a moderate toll on your social skills (+4 dexterity, -2 intelligence, -2 charisma)";
+	[]
+	if "Created Peculiar Liqueur" is listed in traits of Toron:
+		choose a blank row in table of fucking options;
+		now title entry is "Order a Peculiar Liqueur";
+		now sortorder entry is 1;
+		now description entry is "A drink that boosts your intellect significantly, but takes a moderate toll on your physical endurance (+4 intelligence, -2 strength, -2 stamina)";
 	[]
 	if "Created Sparkling Water" is listed in traits of Toron:
 		choose a blank row in table of fucking options;
@@ -312,6 +328,18 @@ to say HellfireClubDrinksMenu:
 		now sortorder entry is 2;
 		now description entry is "He might be interested in the null essence";
 	[]
+	if loose tentacle is owned and "Created Tentacular Slushie" is not listed in traits of Toron and HellfireTentacularSlushieTimer is 20000:
+		choose a blank row in table of fucking options;
+		now title entry is "Show him the loose tentacle";
+		now sortorder entry is 2;
+		now description entry is "He might be interested in the loose tentacle";
+	[]
+	if strange-colored bean is owned and "Created Peculiar Liqueur" is not listed in traits of Toron and HellfirePeculiarLiqueurTimer is 20000:
+		choose a blank row in table of fucking options;
+		now title entry is "Show him the strange-colored bean";
+		now sortorder entry is 2;
+		now description entry is "He might be interested in the odd bean";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -335,6 +363,10 @@ to say HellfireClubDrinksMenu:
 					say "[DrinkHeavensKiss]";
 				if (nam is "Order a Black Ale"):
 					say "[DrinkBlackAle]";
+				if (nam is "Order a Tentacular Slushie"):
+					say "[DrinkTentacularSlushie]";
+				if (nam is "Order a Peculiar Liqueur"):
+					say "[DrinkPeculiarLiqueur]";
 				if (nam is "Order a Sparkling Water"):
 					say "[DrinkSparklingWater]";
 				if (nam is "Show him the orc brew"):
@@ -343,6 +375,10 @@ to say HellfireClubDrinksMenu:
 					say "[GiveToronSharpBlackTusk]";
 				if (nam is "Show him the null essence"):
 					say "[GiveToronNullEssence]";
+				if (nam is "Show him the loose tentacle"):
+					say "[GiveToronLooseTentacle]";
+				if (nam is "Show him the strange-colored bean"):
+					say "[GiveToronStrangeBean]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -356,8 +392,8 @@ to say DrinkHellfireSwizzle:
 	say "     You make a request for a Hellfire Swizzle, a spicy drink served at ambient temperature, with ingredients containing something that probably comes from hellfire demons, though it's perfectly safe... allegedly. 'Right on.' says Toron, as he prepares the mix. Adding all the components of the drink into a mixer, he shakes its contents until it attains a pretty crimson red color, then pours it onto a flat, tall and narrow glass, decorated with a grapefruit and a cherry on top. 'Here you go' he says, sliding the glass towards you. The drink smells strong, kind of tingling your nose. Well, time to have a taste.";
 	say "     The sensation is fiery, as expected, with a hint of sweetness to it, and a sensation similar to a hot variant of peppermint, making your mouth much hotter than before. Still, it's easily drinkable, and absolutely tasty, so you finish it off in a fairly short time. After you've had the whole thing, you feel invigorated with newfound strength.";
 	FeatGain "Hellfire Swizzle";
-	say "     Your [bold type]Strength has increased by 1[roman type] for the next [bold type]24 hours.[roman type][line break]";
-	statchange "Strength" by 1 silently;
+	say "     Your [bold type]Strength has increased by 2[roman type] for the next [bold type]24 hours.[roman type][line break]";
+	statchange "Strength" by 2 silently;
 	now HellfireDrinkTimer is 8;
 	decrease thirst of player by 7;
 
@@ -365,8 +401,8 @@ to say DrinkOrcishBomber:
 	say "     You make a request for an Orcish Bomber, a powerful drink served at ambient temperature, made as an improved orc brew using components from orc cum, though it's perfectly safe... allegedly. 'Right on.' says Toron, as he prepares the mix. Adding all the elements of the drink into a mixer, he shakes its contents until it attains a very transparent white color, then pours it onto a flat, very short and narrow glass, served simply like a shot. 'Here you go. This one's strong.' he says, sliding the glass towards you. The drink smells faintly of orc, though nothing unbearable at all, being quite pleasing and soft to the nose... until you take a deeper whiff, and you nearly feel lightheaded. Well, time to have a taste.";
 	say "     The flavor is very intense, a mix between sweet and salty, its texture slightly thick, just like a liquor. You drink it all it one go, and feel it burning down your throat, a sensation only increasing with time, before it starts subsiding. It leaves a bitter aftertaste on the back of your mouth. This is one very strange drink, but you can already feel its effects pumping your muscles a bit, as your movements get slightly harder.";
 	FeatGain "Orcish Bomber";
-	say "     Your [bold type]Strength has increased by 2, while your Dexterity has decreased by 1,[roman type] for the next 24 hours.";
-	statchange "Strength" by 2 silently;
+	say "     Your [bold type]Strength has increased by 3, while your Dexterity has decreased by 1,[roman type] for the next 24 hours.";
+	statchange "Strength" by 3 silently;
 	statchange "Dexterity" by -1 silently;
 	now HellfireDrinkTimer is 8;
 	decrease thirst of player by 3;
@@ -375,8 +411,8 @@ to say DrinkHeavensKiss:
 	say "     You make a request for a Heaven's Kiss, a suave drink served cold, made with fresh flavored ingredients such as mint, citrines and a hint of something sweet that is considered a [']secret ingredient[']... 'Right on.' says Toron, as he prepares the mix. Adding all the elements of the drink into a mixer, he shakes its contents until it attains a color between cyan and green, very opaque and bright, served in an elegant wide standing glass. 'Here you go. Hope you enjoy this one.' he says, sliding the glass towards you. The drink smells sweet and light, so good that you could just stay here and feel its scent for a good while, so pleasant and soft to your nostrils. Well, time to have a taste.";
 	say "     The flavor is exactly what you expect, [italic type]heavenly[roman type]! It's not too sweet, nor too acid, there's just the right balance within those spectrums, and it gives you such a good time that you insist on slowly sipping through the drink. The aftertaste is fresh, and leaves you with an exceptionally good breath. You feel like you could charm anyone during a conversation.";
 	FeatGain "Heaven's Kiss";
-	say "     Your [bold type]Charisma has increased by 2[roman type] for the next 24 hours.";
-	statchange "Charisma" by 2 silently;
+	say "     Your [bold type]Charisma has increased by 3[roman type] for the next 24 hours.";
+	statchange "Charisma" by 3 silently;
 	now HellfireDrinkTimer is 8;
 	decrease thirst of player by 9;
 
@@ -384,64 +420,93 @@ to say DrinkBlackAle:
 	say "     You make a request for a Black Ale, a strong drink served at ambient temperature, made with the remains of a Void Serpent's tusk and venom, safely distilled to provide a safe drink. 'Right on.' says Toron, as he prepares the mix. Adding all the elements of the drink into a mixer, he shakes its contents until it attains a very pitch black color, very opaque, served in a wide and short glass. 'Here you go. It shouldn't make you feel sick, but in any case... Let me know if it does. It's a tricky one to make.' he says, sliding the glass towards you. The drink smells awfully, you're not going to lie about that... the scent burns through your nostrils and it makes you shed a tear. Maybe the taste isn't so bad?";
 	say "     When you take a sip, you realize it doesn't taste as bad as it smells. It is very bitter, almost like coffee, but leaves a tiny bit of a tingling sensation and a taste of alcohol. Up to you to decide if this is to your liking, but it surely does make your body feel stronger... Your mind, however, feels a little woozy after you are finished with the drink.";
 	FeatGain "Black Ale";
-	say "     Your [bold type]Strength, Dexterity and Stamina has increased by 1, while your Intelligence, Perception and Charisma has decreased by 1[roman type] for the next 24 hours.";
-	statchange "Strength" by 1 silently;
-	statchange "Dexterity" by 1 silently;
-	statchange "Stamina" by 1 silently;
-	statchange "Intelligence" by -1 silently;
-	statchange "Perception" by -1 silently;
-	statchange "Charisma" by -1 silently;
+	say "     Your [bold type]Strength, Dexterity and Stamina has increased by 2, while your Intelligence, Perception and Charisma has decreased by 2[roman type] for the next 24 hours.";
+	statchange "Strength" by 2 silently;
+	statchange "Dexterity" by 2 silently;
+	statchange "Stamina" by 2 silently;
+	statchange "Intelligence" by -2 silently;
+	statchange "Perception" by -2 silently;
+	statchange "Charisma" by -2 silently;
 	now HellfireDrinkTimer is 8;
 	decrease thirst of player by 3;
+
+to say DrinkTentacularSlushie:
+	say "     You make a request for a Tentacular Slushie, an ice drink served cold, made with the remains of a Tentacle Abomination's... questionable parts? Tendrils? Something weird like that, all safely distilled to provide a safe drink. 'Right on.' says Toron, as he prepares the mix. Adding all the elements of teh drink into a mixer, he shakes its contents until it attains a dark purple color, slightly translucid, and serves it in a tall and wide glass. 'Here you go. It shouldn't make you feel sick, but in any case... Let me know if it does. That was a hard one to make it remotely tasty.' he says, sliding the glass towards you. The drink smells pretty neutral, perhaps because it is further dilluted in water and ice. Perhaps you should be trusting Toron's mixing skills by now.";
+	say "     When you take a sip, you realize it's freshness is actually soothing. Something in it tastes salty and somewhat similar to algae, but somehow, it blends perfectly well with the ice, providing you with the sensation of a gentle sea breeze. Up to you to decide if this is to your liking, but it surely makes you feel... more agile, faster to move and react to things. Your fingers even feel more precise as a result, but somehow you lose some of your ability to focus on one thing at a time.";
+	FeatGain "Tentacular Slushie";
+	say "     Your [bold type]Dexterity has increased by 4, while your Intelligence and Charisma has decreased by 2[roman type] for the next 24 hours.";
+	statchange "Dexterity" by 4 silently;
+	statchange "Intelligence" by -2 silently;
+	statchange "Charisma" by -2 silently;
+
+to say DrinkPeculiarLiqueur:
+	say "     You make a request for a Peculiar Liqueur, a strong beverage with condensed extract from one of the strange colored beans you've found among the Peculiar Summoner's stash. Somehow, Toron managed to acquire more of those and build up a mechanism to extract their juice in order to fabricate the drink. 'Right on.' he says, while heading to prepare the mix. He grabs a bottle a pours some of it in a small, short glass, handling it over to you. 'The taste will vary, but the effects should be about the same. It is a strange ingredient, but also very popular around here... And people seem to become suddenly more intelligent. Odd.' explains Toron, waiting for you to accept the drink. It smells [one of]sweet[or]bitter[or]slightly acidic[or]marvelously perfumed[or]like nothing[or]awfully[or]terribly[or]interestingly[or]very sexual, for some odd reason you cannot quite explain[at random], and the color shines differently depending on the light's angle.";
+	say "     When you take a sip, you experience its taste... And you are confused. It's like it tasted like everything and nothing at the same time. Toron notices your intrigued expression. 'Uh... Some people, rather peculiar people, experience all the possible tastes at the same time. It is a rare effect.' Well, it seems you are one of those people, because you had no idea how it tasted like, even after drinking the whole thing. But you have certainly grown smarter as a result. You know that because you find yourself making interesting compositions of very complex theories in your mind for no reason at all.";
+	FeatGain "Peculiar Liqueur";
+	say "     Your [bold type]Intelligence has increased by 4, while your Strength and Stamina has decreased by 2[roman type] for the next 24 hours.";
+	statchange "Intelligence" by 4 silently;
+	statchange "Strength" by -2 silently;
+	statchange "Stamina" by -2 silently;
 
 to say DrinkSparklingWater:
 	say "     You make a request for a Sparkling Water, a very plain drink that consists of water with sparkles. Tasteless, but refreshing and at room temperature, it quenches your thirst and cleanses your body. 'Right on' say Toron, as he prepares the mix. Adding the water to the glass and a single piece of null essence into it, he then shakes the drink just enough so that the bubbles cover the entire liquid, then adds a drop of some essence he has available. 'This is something I developed to counter the sickening effect of the null essences. Hope you enjoy this one.' he says, sliding the glass towards you. The drink has no smell either, and it stings your nose if you breathe it in too close, just like sparkling water. Well, time to drink it.";
 	say "     It is indeed tasteless, apart from the stinging in your tongue, but it is very refreshing.";
-	if "Hellfire Swizzle" is listed in feats of Player:
-		FeatLoss "Hellfire Swizzle";
-	if "Orcish Bomber" is listed in feats of Player:
-		FeatLoss "Orcish Bomber";
-	if "Heaven's Kiss" is listed in feats of player:
-		FeatLoss "Heaven's Kiss";
-	if "Black Ale" is listed in feats of player:
-		FeatLoss "Black Ale";
 	now HellfireDrinkTimer is 0;
 	decrease thirst of player by 15;
+	follow the turnpass rule;
 	say "     Any effects from other drinks at the club have been removed.";
 
 an everyturn rule:
 	if "Hellfire Swizzle" is listed in feats of Player:
 		if HellfireDrinkTimer <= 0:
 			FeatLoss "Hellfire Swizzle";
-			say "     It has been at least a full day since you've had that drink at the Hellfire Club, and the effect has been flushed out of the system by now. As a result, you've lost the boost from the drink, but are able to have another one.";
-			statchange "Strength" by -1 silently;
+			say "     It has been a while since you've had that drink at the Hellfire Club, and the effect has been flushed out of the system by now. As a result, you've lost the boost from the drink, but are able to have another one.";
+			statchange "Strength" by -2 silently;
 		else:
 			decrease HellfireDrinkTimer by 1;
 	if "Orcish Bomber" is listed in feats of Player:
 		if HellfireDrinkTimer <= 0:
 			FeatLoss "Orcish Bomber";
-			say "     It has been at least a full day since you've had that drink at the Hellfire Club, and the effect has been flushed out of the system by now. As a result, you've lost the boost from the drink, but are able to have another one.";
-			statchange "Strength" by -2 silently;
+			say "     It has been a while since you've had that drink at the Hellfire Club, and the effect has been flushed out of the system by now. As a result, you've lost the boost from the drink, but are able to have another one.";
+			statchange "Strength" by -3 silently;
 			statchange "Dexterity" by 1 silently;
 		else:
 			decrease HellfireDrinkTimer by 1;
 	if "Heaven's Kiss" is listed in feats of player:
 		if HellfireDrinkTimer <= 0:
 			FeatLoss "Heaven's Kiss";
-			say "     It has been at least a full day since you've had that drink at the Hellfire Club, and the effect has been flushed out of the system by now. As a result, you've lost the boost from the drink, but are able to have another one.";
-			statchange "Charisma" by -2 silently;
+			say "     It has been a while since you've had that drink at the Hellfire Club, and the effect has been flushed out of the system by now. As a result, you've lost the boost from the drink, but are able to have another one.";
+			statchange "Charisma" by -3 silently;
 		else:
 			decrease HellfireDrinkTimer by 1;
 	if "Black Ale" is listed in feats of player:
 		if HellfireDrinkTimer <= 0:
 			FeatLoss "Black Ale";
-			say "     It has been at least a full day since you've had that drink at the Hellfire Club, and the effect has been flushed out of the system by now. As a result, you've lost the boost from the drink, but are able to have another one.";
-			statchange "Strength" by -1 silently;
-			statchange "Dexterity" by -1 silently;
-			statchange "Stamina" by -1 silently;
-			statchange "Intelligence" by 1 silently;
-			statchange "Perception" by 1 silently;
-			statchange "Charisma" by 1 silently;
+			say "     It has been a while since you've had that drink at the Hellfire Club, and the effect has been flushed out of the system by now. As a result, you've lost the boost from the drink, but are able to have another one.";
+			statchange "Strength" by -2 silently;
+			statchange "Dexterity" by -2 silently;
+			statchange "Stamina" by -2 silently;
+			statchange "Intelligence" by 2 silently;
+			statchange "Perception" by 2 silently;
+			statchange "Charisma" by 2 silently;
+		else:
+			decrease HellfireDrinkTimer by 1;
+	if "Tentacular Slushie" is listed in feats of player:
+		if HellfireDrinkTimer <= 0:
+			FeatLoss "Tentacular Slushie";
+			say "     It has been a while since you've had that drink at the Hellfire Club, and the effect has been flushed out of the system by now. As a result, you've lost the boost from the drink, but are able to have another one.";
+			statchange "Dexterity" by -4 silently;
+			statchange "Intelligence" by 2 silently;
+			statchange "Charisma" by 2 silently;
+		else:
+			decrease HellfireDrinkTimer by 1;
+	if "Peculiar Liqueur" is listed in feats of player:
+		if HellfireDrinkTimer <= 0:
+			FeatLoss "Peculiar Drink";
+			say "     It has been a while since you've had that drink at the Hellfire Club, and the effect has been flushed out of the system by now. As a result, you've lost the boost from the drink, but are able to have another one.";
+			statchange "Intelligence" by -4 silently;
+			statchange "Strength" by 2 silently;
+			statchange "Stamina" by 2 silently;
 		else:
 			decrease HellfireDrinkTimer by 1;
 	if "Created Orcish Bomber" is not listed in traits of Toron:
@@ -450,6 +515,12 @@ an everyturn rule:
 	if "Created Black Ale" is not listed in traits of Toron:
 		if HellfireBlackAleTimer - turns < 4:
 			add "Created Black Ale" to traits of Toron;
+	if "Created Tentacular Slushie" is not listed in traits of Toron:
+		if HellfireTentacularSlushieTimer - turns < 4:
+			add "Created Tentacular Slushie" to traits of Toron;
+	if "Created Peculiar Liqueur" is not listed in traits of Toron:
+		if HellfirePeculiarLiqueurTimer - turns < 4:
+			add "Created Peculiar Liqueur" to traits of Toron;
 	if "Created Sparkling Water" is not listed in traits of Toron:
 		if HellfireSparklingWaterTimer - turns < 4:
 			add "Created Sparkling Water" to traits of Toron;
@@ -465,8 +536,8 @@ to say GiveToronOrcBrew:
 		if player consents:
 			Linebreak;
 			say "     Might as well give this a try. You take the bottle of Orc Cum out and hand it to Toron, who gladly accepts your offer. 'Good! I needed this. Very well, I'll be able to create something new with this. If it's a success, I'll just... send someone to harvest the ingredients. Oh, don't look at me like that, I bet they would enjoy having some eager demons milking them for their cum... since this land is as strange as it is. Anyway, I'll bring these in, though I'll need some time until I can get something done. Come back later, perhaps I'll have news.' Taking both ingredients you have just provided him with, Toron takes them inside, returning to his duties shortly after.";
-			decrease carried of orc cum by 1;
-			decrease carried of orc brew by 1;
+			ItemLoss orc cum by 1;
+			ItemLoss orc brew by 1;
 			now HellfireOrcBrewTimer is turns;
 			wait for any key;
 			say "[HellfireClubDrinksMenu]";
@@ -483,7 +554,7 @@ to say GiveToronOrcBrew:
 to say GiveToronSharpBlackTusk:
 	say "     Given the strange nature of this item, you decide to handle it to Toron in hopes he could have some idea of what to do with it. 'A tusk?! Of a... Void Serpent? Let me see if it still carries some of its venom.' he says, before taking it from your hands. Before you could say anything, he grabs a really sharp knife, and begins to cut through the tusk from the base to the tip. The material is so tough that he has trouble making the blade pierce, but once it does, a very dark liquid begins to leak out of the tusk. 'Interesting... I wonder if I can make a drink using this... I would have to filter all of its strange effects, but it surely does look promising. Come back later, and I will add it to the menu.' he tells you, thanking you for the offering.";
 	say "     This also means that your hard earned tusk got lost forever... But at least you will have a new drink! And hopefully a good one...";
-	decrease carried of sharp black tusk by 1;
+	ItemLoss sharp black tusk by 1;
 	now HellfireBlackAleTimer is turns;
 	wait for any key;
 	say "[HellfireClubDrinksMenu]";
@@ -492,8 +563,24 @@ to say GiveToronNullEssence:
 	say "     Given the strange nature of this item, you decide to handle it to Toron in hopes he could have some idea of what to do with it. 'Now now, what is this? A null essence from the Void Realm? Interesting how you manage to get your hands on one of these... They are not rare per se, but they seem to have a knack for being attracted to biological humans. Yes, even if they are transformed beyond recognition due to the nanites thing, this is something otherworldly we are talking about. Anyway... If I can turn this into a powder...' he speaks, as he takes a mortar and pestle, puts the null essence in, and tries to smash it. 'Hm, no good... It's too tough. I only manage to barely scratch it, like this... Have you tried to eat them?' he asks, looking at you.";
 	say "     There really is no need to think about this, you would rather not put one of those things in your mouth. It really looks like a plain black rock, so why would you even eat it? 'Then I will have to simulate that, hold on just a second...' he tells you, as he goes grab some sort of completely transparent liquid. 'It's just water, in case you are wondering.' No one never can be too sure if a colorless liquid is actually just water around here, so he cannot really judge you for being too careful. With that said, he pours the water into the recipient, and the null essence begins to dissolve. Looks like he managed to turn this into sparkling water...? 'Interesting. I wonder what properties this holds. I will make sure this is safe to drink, then you can come and try it for yourself, alright? Thanks again for the idea. I will handle the supplying myself.' he says, as he takes the drink and all the materials to the back room.";
 	say "     Null essences make Sparkling Water when mixed with water... now that's something...";
-	decrease carried of null essence by 1;
+	ItemLoss null essence by 1;
 	now HellfireSparklingWaterTimer is turns;
+	wait for any key;
+	say "[HellfireClubDrinksMenu]";
+
+to say GiveToronLooseTentacle:
+	say "     Now, you have this quite odd and slippery tentacle, which might be of interest to Toron. You know, he finds use for strange things, so this one particular item must be as good as any. You call him and show him what you have, and his eyes widen. 'A tentacle?! What do you expect me to do with it?! Cook it, cut it and grind it until it becomes powder, then make a drink with it?!' he answers, to which sounds like an absolutely crazy idea... 'I could actually just make that work. Hand it over.' he asks, and without questioning his undeniable reasoning, you give him the loose tentacle.";
+	say "     Immediately after, he tells you to just come back later, as he will have to experiment with the mixture until he can achieve [']just the right tone of taste[']. His words.";
+	decrease carried of loose tentacle by 1;
+	now HellfireTentacularSlushieTimer is turns;
+	wait for any key;
+	say "[HellfireClubDrinksMenu]";
+
+to say GiveToronStrangeBean:
+	say "     You almost feel silly by even suggesting this, but you call Toron to give him an odd colored bean that he could probably use for drinks. He doesn't blink, actually treating it with all the naturality in the world. 'A bean you say? Funny... They look like mystery beans. I think I've seen a stash of these in the void,  somewhere. Perhaps...' He looks at you, at the bean, then retreats to the back room. 'Give me a few moments, I will arrange preparations and order someone to get more for me! Oh, what a great drink this one will make...!'";
+	say "     It appears he is actually happy with this ingredient. How peculiar...";
+	decrease carried of strange-colored bean by 1;
+	now HellfirePeculiarLiqueurTimer is turns;
 	wait for any key;
 	say "[HellfireClubDrinksMenu]";
 

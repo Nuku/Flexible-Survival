@@ -81,7 +81,7 @@ to FetishStoreExploration1:
 	if player consents:
 		Linebreak;
 		say "     You suppose you could at least take what you could find in the middle of this mess. You push the box out of the way and grab the riding crop, holding it firmly by its handle. Swinging it around a little to test its durability, you observe that it is still usable and serves its function. Satisfied, you place it in your inventory.";
-		increase carried of riding crop by 1;
+		ItemGain riding crop by 1;
 		increase score by 5;
 	else:
 		Linebreak;
@@ -169,7 +169,7 @@ to FetishStoreExploration4:
 				say "     Proving your strength, you lift the heavy shelf very slowly. Your motivation increases as you realize you're handling the task quite well. Eventually, you have to change your grip in order to start pushing against the wall to the side, to get it back up. Sweat is running down your brow soon and you start to feel the strain making your muscles tremble, but you don't give up. Soon, you hit the point where the shelf's weight allows you some maneuver, as the way between you and the mask is cleared. However, since the shelf is damaged, you have to reach the mask while keeping the heavy furniture from crashing again.";
 				say "     With the mask in your possession, you only have to head back, as your body begins to give signals of exhaustion. Fortunately, you manage to make it through in one piece, letting the shelf fall with a huge, loud slam on the ground. You doubt you could have survived such a crushing force, being glad that you're in one piece. Now that you have your prize, it's time to leave the store, happy with your search results.";
 				now Resolution of Fetish Store is 5; [got the mask]
-				increase carried of gimp mask by 1;
+				ItemGain gimp mask by 1;
 				now Fetish Store is resolved;
 			else if diceroll + bonus >= 10 and diceroll + bonus < 15:
 				say "     With your hands below the shelf, you attempt to lift the shelf very slowly. During a few seconds, it seems you're handling your task decently, but soon your muscles start trembling and your arms cease to respond, no matter how much effort you put into them. Realizing you can't lift the shelf all the way up, you try to return it safely to the ground before there's any chance you get seriously hurt. With a loud slam, you rest the shelf back to its initial position, being forced to give up for now. Disappointed, you turn back to where you came from, taking note of this particular corner so that you can return later, when you've fully recovered or have brought a worthy companion with you.";
@@ -185,102 +185,102 @@ to FetishStoreExploration4:
 		else if companion of player is demon brute: [Brutus is active pet]
 			say "     Looking at the fallen shelf nd how it blocks the way to the leather mask you saw beyond, you turn to your [if DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7]companion Brutus[else]controlled demonic beast[end if] and order him to help you out with it. With a grunt at the ease of your task, he steps forward and slides one of his large clawed hands under the shelf, lifting it and pushing it back against the wall it fell from. Given that the shelf is damaged, it can't just stand on its own anymore, but with the demon brute to hold it in place you have an easy time to just walk over to the gimp mask and pick it up.";
 			now Resolution of Fetish Store is 5; [got the mask]
-			increase carried of gimp mask by 1;
+			ItemGain gimp mask by 1;
 			now Fetish Store is resolved;
 		else if companion of player is helper dog: [trusty doggy]
 			say "     Looking at the fallen shelf and how it blocks the way to the leather mask you saw beyond, you whistle at your trusty helper dog and stroke his head as the canine approaches with wagging tail. You know that he's smart enough to understand so it's a simple task of explaining what you want before the canine moves forward, ducking under the shelf and crawling through a narrow opening to collect your prize. He soon comes back out of the cramped section beyond with the gimp mask held gently in his teeth, releasing it into your hand as you praise him for his service.";
 			now Resolution of Fetish Store is 5; [got the mask]
-			increase carried of gimp mask by 1;
+			ItemGain gimp mask by 1;
 			now Fetish Store is resolved;
 		else if companion of player is royal tiger: [Ryousei]
 			say "     Looking at the fallen shelf and how it blocks the way to the leather mask you saw beyond, you turn to Ryousei and ask if there is a more effective way to get the headgear. Giving you a confident nod, the tiger tells you to turn around, which you reluctantly do. It is when he's out of your view that he reappears, just to where you turned, with the mask hanging from one finger and a huge grin on his face, solving your problem with utmost efficiency. Seems he just teleported over to the other side!";
 			now Resolution of Fetish Store is 5; [got the mask]
-			increase carried of gimp mask by 1;
+			ItemGain gimp mask by 1;
 			now Fetish Store is resolved;
 		else if companion of player is bee girl: [Honey]
 			say "     Looking at the fallen shelf and how it blocks the way to the leather mask you saw beyond, you ask your bee girl companion if she can do something about it. She kindly nods at your request as she flies over the collapsed furniture with ease, passing just above it. She grabs the mask and returns to you through the same way, handing you the piece of headgear once she lands next to you. With the item in your possession, you thank her for helping, to which she happily smiles in response.";
 			now Resolution of Fetish Store is 5; [got the mask]
-			increase carried of gimp mask by 1;
+			ItemGain gimp mask by 1;
 			now Fetish Store is resolved;
 		else if companion of player is cute crab: [cute crab]
 			say "     Looking at the fallen shelf and how it blocks the way to the leather mask you saw beyond, you turn to your crab pet and order it to to get you the mask. You know that, somehow, it's smart enough to understand so it's a simple task of explaining what you want. With a clacking sound in response, the crab follows your order, easily fitting in through an narrow opening underneath the furniture to the other side. Soon, it comes back out of the cramped section beyond with the gimp mask held gently between its pincers, releasing it into your hand as you praise it for its service.";
 			now Resolution of Fetish Store is 5; [got the mask]
-			increase carried of gimp mask by 1;
+			ItemGain gimp mask by 1;
 			now Fetish Store is resolved;
 		else if companion of player is equinoid warrior: [Liliana]
 			say "     Looking at the fallen shelf and how it blocks the way to the leather mask you saw beyond, you turn to Liliana and ask if she could help you clear the way. With a nod, she moves over to the shelf and attempts to lift it. After some insistence, you begin seeing the furniture gaining some distance from the ground, but she seems to be struggling. You decide to help her, making the task much easier. Given that the shelf is damaged, it can't just stand on its own anymore, but with your equinoid friend holding it in place, you have an easy time to just walk over to the gimp mask and pick it up.";
 			now Resolution of Fetish Store is 5; [got the mask]
-			increase carried of gimp mask by 1;
+			ItemGain gimp mask by 1;
 			now Fetish Store is resolved;
 		else if companion of player is exotic bird: [exotic bird]
 			say "     Looking at the fallen shelf and how it blocks the way to the leather mask you saw beyond, you turn to your bird pet and order it to fetch the piece of headgear for you. You know that he's smart enough to understand so it's a simple task of explaining what you want. With a tweet in response, the bird flies over the shelf with ease. Soon, it comes out from the same way with the gimp mask tucked in its beak, releasing it into your hand as you praise it for its service.";
 			now Resolution of Fetish Store is 5; [got the mask]
-			increase carried of gimp mask by 1;
+			ItemGain gimp mask by 1;
 			now Fetish Store is resolved;
 		else if companion of player is felinoid companion: [Felinoid]
 			say "     Looking at the fallen shelf and how it blocks the way to the leather mask you saw beyond, you turn to your felinoid companion and order him to fetch the piece of headgear for you. You know that he's smart enough to understand so it's a simple task of explaining what you want. Your agile friend eagerly obliges, crawling into a narrow opening just below the collapsed furniture. Some time later, it comes back out of the cramped section beyond with the gimp mask held gently in his teeth, releasing it into your hand as you praise it for its service.";
 			now Resolution of Fetish Store is 5; [got the mask]
-			increase carried of gimp mask by 1;
+			ItemGain gimp mask by 1;
 			now Fetish Store is resolved;
 		else if companion of player is frost giantess: [Aurora]
 			say "     Looking at the fallen shelf and how it blocks the way to the leather mask you saw beyond, you turn to Aurora and ask for her help to deal with the obstacle. With a determined look in her eyes, she eagerly steps forward and slides one of her large blue hands under the shelf, lifting it and pushing it back against the wall it fell from. Given that the shelf is damaged, it can't just stand on its own anymore, but with the giantess to hold it in place you have an easy time to just walk over to the gimp mask and pick it up.";
 			now Resolution of Fetish Store is 5; [got the mask]
-			increase carried of gimp mask by 1;
+			ItemGain gimp mask by 1;
 			now Fetish Store is resolved;
 		else if companion of player is gshep: [Korvin]
 			say "     Looking at the fallen shelf and how it blocks the way to the leather mask you saw beyond, you turn to Korvin and ask if he could help you clear the way. With a nod, he moves over to the shelf and attempts to lift it. After some insistence, you begin seeing the furniture gaining some distance from the ground, but he seems to be struggling. You decide to help him, making the task much easier. Given that the shelf is damaged, it can't just stand on its own anymore, but with your anthro canine friend holding it in place, you have an easy time to just walk over to the gimp mask and pick it up.";
 			now Resolution of Fetish Store is 5; [got the mask]
-			increase carried of gimp mask by 1;
+			ItemGain gimp mask by 1;
 			now Fetish Store is resolved;
 		else if companion of player is gryphoness: [Denise]
 			say "     Looking at the fallen shelf and how it blocks the way to the leather mask you saw beyond, you ask Denise if she can do something about it. She kindly nods at your request as she streches her blue feathered wings, to fly above the collapsed furniture, which she manages to do easily. She grabs the mask and returns to you through the same way, handing you the piece of headgear once she lands next to you. With the item in your possession, you thank her for helping, to which she happily smiles in response.";
 			now Resolution of Fetish Store is 5; [got the mask]
-			increase carried of gimp mask by 1;
+			ItemGain gimp mask by 1;
 			now Fetish Store is resolved;
 		else if companion of player is house cat: [cat]
 			say "     Looking at the fallen shelf and how it blocks the way to the leather mask you saw beyond, you turn to your cat pet and order it to fetch the piece of headgear for you. You know that it's smart enough to understand so it's a simple task of explaining what you want. Your agile feline follows your order, crawling into a narrow opening just below the collapsed furniture. Some time later, it comes back out of the cramped section beyond with the gimp mask held gently in his teeth, releasing it into your hand as you praise it for its service.";
 			now Resolution of Fetish Store is 5; [got the mask]
-			increase carried of gimp mask by 1;
+			ItemGain gimp mask by 1;
 			now Fetish Store is resolved;
 		else if companion of player is little fox: [fox]
 			say "     Looking at the fallen shelf and how it blocks the way to the leather mask you saw beyond, you turn to your fox pet and order it to fetch the piece of headgear for you. You know that it's smart enough to understand so it's a simple task of explaining what you want. Your furred bud follows your order, crawling into a narrow opening just below the collapsed furniture. Some time later, it comes back out of the cramped section beyond with the gimp mask held gently in his teeth, releasing it into your hand as you praise it for its service.";
 			now Resolution of Fetish Store is 5; [got the mask]
-			increase carried of gimp mask by 1;
+			ItemGain gimp mask by 1;
 			now Fetish Store is resolved;
 		else if companion of player is pink raccoon: [Candy]
 			say "     Looking at the fallen shelf and how it blocks the way to the leather mask you saw beyond, you turn to Candy and order him to fetch the piece of headgear for you. This doesn't turn out to be an easy task, as he mindlessly stares at you when you try to explain what to do. After some insistence and very explicit instructions, the pink raccoon finally follows your request, crawling through the narrow opening to collect your prize. He soon comes back out of the cramped section beyond with the gimp mask, releasing it into your hand as you praise him for his service.";
 			now Resolution of Fetish Store is 5; [got the mask]
-			increase carried of gimp mask by 1;
+			ItemGain gimp mask by 1;
 			now Fetish Store is resolved;
 		else if companion of player is mouse girl: [Rachel]
 			say "     Looking at the fallen shelf and how it blocks the way to the leather mask you saw beyond, you turn to Rachel and ask for her help to retrieve the item for you. You don't have to do much explaining, as she seems to sense your request before you can finish your sentences, immediately proceeding to crawl into a narrow opening just below the collapsed furniture. Soon, she comes back out of the cramped section beyond with the gimp mask, releasing it into your hand as you thank her for her service.";
 			now Resolution of Fetish Store is 5; [got the mask]
-			increase carried of gimp mask by 1;
+			ItemGain gimp mask by 1;
 			now Fetish Store is resolved;
 		else if companion of player is retriever girl: [Karen]
 			say "     Looking at the fallen shelf and how it blocks the way to the leather mask you saw beyond, you whistle at your trusty retriever and stroke her head as the canine approaches with wagging tail. You know that she's smart enough to understand so it's a simple task of explaining what you want before the canine moves forward, ducking under the shelf and crawling through a narrow opening to collect your prize. She soon comes back out of the cramped section beyond with the gimp mask held gently in her teeth, releasing it into your hand as you praise her for her service.";
 			now Resolution of Fetish Store is 5; [got the mask]
-			increase carried of gimp mask by 1;
+			ItemGain gimp mask by 1;
 			now Fetish Store is resolved;
 		else if companion of player is rubber tigress: [Artemis]
 			say "     Looking at the fallen shelf and how it blocks the way to the leather mask you saw beyond, you turn to Artemis and order her to fetch the piece of headgear for you. You know that she's smart enough to understand so it's a simple task of explaining what you want before the tigress moves forward. Given her nature, it's easy for her to fit into almost any opening, easily making it to the other side. Soon, she comes back out of the cramped section beyond with the gimp mask held gently in her teeth, releasing it into your hand as you praise her for her service.";
 			now Resolution of Fetish Store is 5; [got the mask]
-			increase carried of gimp mask by 1;
+			ItemGain gimp mask by 1;
 			now Fetish Store is resolved;
 		else if companion of player is skunk kit: [skunk]
 			say "     Looking at the fallen shelf and how it blocks the way to the leather mask you saw beyond, you turn to your skunk pet and order it to fetch the piece of headgear for you. You know that it's smart enough to understand so it's a simple task of explaining what you want. Your young furred bud follows your order, crawling into a narrow opening just below the collapsed furniture. Some time later, it comes back out of the cramped section beyond with the gimp mask held gently in his teeth, releasing it into your hand as you praise it for its service.";
 			now Resolution of Fetish Store is 5; [got the mask]
-			increase carried of gimp mask by 1;
+			ItemGain gimp mask by 1;
 			now Fetish Store is resolved;
 		else if companion of player is strange doll: [doll]
 			say "     Looking at the fallen shelf and how it blocks the way to the leather mask you saw beyond, you turn to your strange doll friend and order it to fetch the piece of headgear for you. It mimicks your gestures as you explain what you want, and once you're done, the cute doll follows your order by crawling into a narrow opening just below the collapsed furniture. Some time later, it comes back out of the cramped section beyond with the gimp mask, releasing it into your hand as you praise it for its service.";
 			now Resolution of Fetish Store is 5; [got the mask]
-			increase carried of gimp mask by 1;
+			ItemGain gimp mask by 1;
 			now Fetish Store is resolved;
 		else if companion of player is demonologist: [Xaedihr]
 			say "     Looking at the fallen shelf and how it blocks the way to the leather mask you saw beyond, you turn to Xaedihr and ask him if he could help you get the mask for you. 'A little needy of strong hands, aren't we? Or perhaps it is lazyness striking you? Could also be just a thought that made you consider other more reliable options...? Nevertheless, such task is simply too easy to achieve with the use of some might and magic.' he replies, with his usual sarcastic tone. He does accept to help you, however, as a purple tendril emerges from the ground, slipping through the narrow passage underneath the fallen shelf and towards the mask. With a finger snap, it quickly retracts with the mask held around its body, handling it to you directly. It is a little... sticky. 'Don't complain. I could have teleported, I could have lifted the shelf... but I didn't feel like sweating. Though there it is, as you requested.' With nothing else to be said, you simply thank him for the favor.";
 			now Resolution of Fetish Store is 5; [got the mask]
-			increase carried of gimp mask by 1;
+			ItemGain gimp mask by 1;
 			now Fetish Store is resolved;
 		else: [catch-all for the rest of companions]
 			say "     Your companion looks at the shelf and doesn't quite know what to do. Possibly because he was created after this event was written. Please report this on the Flexible Survival Discord in the bug report section, quoting what your companion was that you saw this with.";
@@ -342,10 +342,9 @@ Instead of resolving a Raided Corner Store:
 		if hyg is 4:
 			if the BodyName of Player is "Hyena Herm" or FaceName of Player is "Hyena Herm":
 				say "     As one of the pair is about to step forward to deal with you, the other grabs hir shoulder, holding them back. The second steps forward, looking you over more carefully. 'Hey, I think I heard about you from Gina. You certainly smell like you've met her. Could you use some help there?' You nod and the hyenas join you by the door. One has some lockpicks and they soon get the door open. Little of the stores inside are usable, most having been eaten or damaged already. Presumably the owner was holed up in here. Before they succumbed to the infection and presumably left to the wilds of the city, that is. But there is still some the usable loot. You split your find with the hyenas, taking a couple of drinks and snacks each before you and they go your separate ways.";
-				say "     You obtain two snacks and two soft drinks.";
 				increase score by 10;
-				increase carried of soda by 2;
-				increase carried of chips by 2;
+				ItemGain soda by 2;
+				ItemGain chips by 2;
 			else:
 				challenge "Hyena Herm";
 				challenge "Hyena Herm";
@@ -452,13 +451,11 @@ to say stripbarsearch:
 	let T be a random number between one and twelve;
 	if T is 1:
 		say "     Navigating around the tables and the occasional cum puddle, you see that the outbreak struck here as well while the business was running. You are extra cautious and avoid the main public area, instead checking behind the bar for supplies. It seems that much of it was damaged or take already, but you do have some luck and find some soda you can take.";
-		say "     You obtain three soft drink cans.";
 		increase score by 5;
-		increase carried of soda by 3;
+		ItemGain soda by 3;
 	if T is 2:
 		say "     Searching through the strip bar, you have to avoid cum puddles. You head over to check the bar, but find that it was destroyed during the outbreak. It is covered in claw marks all over. You can see a huge puddle of cum behind the bar. You consider leaving, but spot the backstage door and slip in there before you leave. It's also quite messy back here, but you do manage to recover some snacks that one of the girls must have brought.";
-		say "     You obtain a can of soft drink.";
-		increase carried of soda by 1;
+		ItemGain soda by 1;
 		increase score by 1;
 	if T is 3:
 		say "     Searching the strip bar, take care to avoid the cum puddles you find in there. Clearly this place was open when the infection struck and the patrons and staff fell quickly. You look around as best you can, but the extent of the contamination is too great and you have to give up the place for a loss. As you step out, you are spotted by a tigress who emerges from a nearby alleyway. She grins at you and runs a paw along her side. 'Looking for a little fun, are we? I've got just what you need,' she purrs, fondling a sizable bulge under hir skirt.";

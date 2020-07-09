@@ -18,8 +18,8 @@ when play begins:
 Instead of resolving a Fallen Kunoichi:
 	say "     Passing through the halls of the museum, you come across the aftermath of what was an epic battle. Many of the displays here are knocked over or shattered by what must have been powerful blows by a great weapon. You can see gouges cut deep into the walls, many stained with blood. Smaller darts and shuriken are embedded in the wall as well. The floor is marked with several blood stains and cum puddles, as well as soot marks from flash powder or smoke bombs. Clearly many battled a great foe here.";
 	say "     Half-buried in the ruins of one display, you find the grisly remains of a feline ninja cleaved in two at the waist. Drawing off its mask, you see her face feminine locked in an expression of great pain and horror. Something about her death gaze disturbs you deep inside and you are unable to bear the sight of it. You brush her eyes shut and pull the mask back down over her feline face. Beside the fallen kunoichi is her weapon, a bo staff with ornate metal tips. Cautious of any infected blood, you quickly check her [italic type]shinobi shozoko[roman type], but find nothing else of use.";
-	say "     Bo staff obtained.";
-	increase carried of bo staff by 1;
+	say "     You gain Bo's staff!";
+	ItemGain bo staff by 1 silently;
 	increase score by 5;
 	now Fallen Kunoichi is resolved;
 
@@ -93,8 +93,7 @@ Instead of resolving a Losing It:
 	challenge "Snow Leopard";
 	if fightoutcome >= 10 and fightoutcome <= 19:
 		say "     Having dealt with the lustful feline, you get ready to leave, but notice the purse next to the tattered remains of the skirt that was torn off in the fight. You take a moment to examine these last remnants of the woman's feminine identity. You carefully avoid several spots of snowmeow cum, whether his or that of the one who changed her, you cannot say, as you shift the clothes around. You are more successful with her purse, finding a canister of mace. It seems she failed to use it in time and paid the price. You mentally remind yourself to use it before things get out of hand and you end up like her... him.";
-		say "     Pepperspray obtained.";
-		increase carried of pepperspray by 1;
+		ItemGain pepperspray by 1;
 		increase score by 5;
 		now Resolution of Losing It is 1;		[Won against Snow Leopard]
 	else if fightoutcome >= 20 and fightoutcome <= 29:
@@ -172,10 +171,9 @@ instead of resolving a Trickster:
 				if wolffight is 1:
 					say "     Having beaten the pack alpha and sent him packing, the wolves['] assault on the few remaining soldiers wavers. With a howl from their leader, they snatch up the fallen, partially transformed soldiers and drag them off into the city. They'll be taking them back to their den to finish mating them until they're fully members of the pack. Too tired from the fight, you and the other soldiers are in no shape to give pursuit. As the last of the wolves are running off, you hear some distant laughter, probably from the coyote trickster who enjoyed the show while it lasted[if Park Entrance is unknown]. You may be able to track down the coyote if you can find a way to the Park Entrance[end if].";
 					say "     The remaining soldiers thank you for the assistance. Because of the cloud of wolf fur, nearly all of them have picked up ears or tails, but their humanity is mostly intact thanks to your help. They'll have to scrub their recon mission and return to base. You're told they can't take you with them at this time, but they do give over some of their supplies, as they'll re-equip at the base earlier than planned. They keep their guns and ammo, but one of the few who remained fully unchanged passes you his combat knife with a silent nod. After packing the food and water away and strapping on the knife, you're given another round of thanks before they head off.";
-					say "     Food, water bottle and combat knife obtained.";
-					increase carried of food by 1;
-					increase carried of water bottle by 1;
-					increase carried of combat knife by 1;
+					ItemGain food by 1;
+					ItemGain water bottle by 1;
+					ItemGain combat knife by 1;
 					increase score by 20;
 					now Resolution of Trickster is 1;		[Won against wolves]
 		if wolffight is 3:
@@ -272,14 +270,12 @@ Instead of resolving a Lovers Bench:
 		say "     Your meandering through the park brings you back to the lovers['] bench and find them gone, though their scattered clothes remain. This helps confirm your earlier guess that they'd succumbed. The bench has quite a few scratches and claw marks on it, clearly having been used by many others since the outbreak, as well as older, carved graffiti hearts. You suspect this bench has been a make-out spot for quite some time, being in a more secluded area in the park. Certainly there is a strong scent of sex hanging around it, even in the open air of the park. Remembering the lovemaking you witnessed here, you start to get turned on.";
 		if scenario is "Bunker" or scenario is "Caught Outside":
 			say "     You focus on checking out the scattered clothes for anything of use. The clothes, as you saw, are a little torn, perhaps from when they were first infected or in their rush to mate at the bench. Their food has been reduced to scraps and crumbs and their drink bottles are empty. There is a small pocketknife in the wolf's khakis. It is no better than your own, so you toss it aside. The woman's jeans do yield a small canister of mace, which you store somewhere within easy reach. You leave the rest, finding nothing else of use to you.";
-			say "     Pepperspray obtained.";
-			increase carried of pepperspray by 1;
+			ItemGain pepperspray by 1;
 			increase score by 5;
 		else:
 			say "     You focus on checking out the scattered clothes for anything of use. The clothes, as you saw, are a little torn, perhaps from when they were first infected or in their rush to mate at the bench. Their food has been reduced to scraps and crumbs and their drink bottles are empty. There is a small pocketknife in the wolf's khakis. Thinking it may be a useful tool or perhaps a weapon in a pinch, you take it. The woman's jeans do yield a small canister of mace, which you store somewhere within easy reach. You leave the rest, finding nothing else of use to you.";
-			say "     Pocketknife and pepperspray obtained.";
-			increase carried of pocketknife by 1;
-			increase carried of pepperspray by 1;
+			ItemGain pocketknife by 1;
+			ItemGain pepperspray by 1;
 			increase score by 10;
 		increase loversbench by 1;
 		now Resolution of Lovers Bench is 2;	[Watched second scene]
@@ -560,7 +556,7 @@ Instead of resolving a PeachTree:
 			challenge "Parasitic Plant";
 			if lost is 0:
 				say "     Disentangling yourself from the tendrils in the tree and freeing yourself of the vine inside you, you make a quick grab for some of the fruit. You snag a couple of them and then make a run for it as more vines rustle in the canopy. As you move further from the tree, Joanna's seed settles down again. You stroke your belly as if petting it, thankful for the warning it tried to give before its instincts took over.";
-				increase carried of tasty peach by 3;
+				ItemGain tasty peach by 3;
 				increase score by 10;
 				now Resolution of PeachTree is 1;	[Won against plant with Joanna's seed]
 			else:
@@ -583,7 +579,7 @@ Instead of resolving a PeachTree:
 		challenge "Parasitic Plant";
 		if lost is 0:
 			say "     Disentangling yourself from the tendrils in the tree and freed yourself of the vine inside you, you make a quick grab for some of the fruit. You snag a couple of them and then make a run for it as more vines rustle in the canopy.";
-			increase carried of tasty peach by 3;
+			ItemGain tasty peach by 3;
 			increase score by 10;
 			now Resolution of PeachTree is 3;	[Won against plant]
 		else:
@@ -645,8 +641,8 @@ Instead of resolving a Concession Stand:
 			say "     The vendor releases you and flips back behind the counter. With a broad grin that seems momentarily feline, he passes you a tray of snacks and a can of soda. You head off, still in a bit of a daze, licking your lips as you try to figure out the flavor of cum you just guzzled down.";
 			randominfect; [first one picks a valid critter while infecting]
 			infect; [second one gives the same infection]
-			increase carried of chips by 1;
-			increase carried of soda by 1;
+			ItemGain chips by 1;
+			ItemGain soda by 1;
 			decrease humanity of Player by a random number between 8 and 6;
 			if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 2 and 5;
 			if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 1 and 4;
@@ -668,8 +664,8 @@ Instead of resolving a Concession Stand:
 				say "     As you walk up to the stand, the gentleman sets another tray of fried treats and a can of soda on the counter, then leaps over it. You don't say a word as he whips out his cock again. Any thoughts of discussion or dealing with the man fade as you again bury his throbbing meat in your mouth and suck away at it. He chuckles softly and rubs your head, pumping into your mouth. You run your tongue over some feline barbs, then across a pointed, canine glans. It is thick, then long, then almost human, then unnaturally ridged. These changes continue as you try to figure out each new one, loving the ever-changing delight more and more. You put a hand to his ballsack and find it changing as well. The orbs inside always remain quite large and heavy, though their shape shifts subtly. But more apparent is the soft fur, no the hard scales, no the smooth skin, that covered his scrotum. This time your lustful cocksucking is rewarded when you feel a knot briefly locking his cock in your mouth and he sprays thick cum into your mouth. When the knot fades away as if never there, you pull your mouth back and swallow down the semen. You take your purchased wares with a lustfully clouded mind that lingers as you wander back into the flashy fair.";
 				randominfect; [first one picks a valid critter while infecting]
 				infect; [second one gives the same infection]
-				increase carried of chips by 1;
-				increase carried of soda by 1;
+				ItemGain chips by 1;
+				ItemGain soda by 1;
 				decrease humanity of Player by a random number between 10 and 20;
 				if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 3 and 6;
 				if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 2 and 5;
@@ -680,8 +676,8 @@ Instead of resolving a Concession Stand:
 				say "     Rubbing his balls and sucking his cock, you lavish attention upon him, becoming more and more eager to please him. When he finally cums, his thick seed comes blasts from a large, leonine cock and you gulp it all down, rubbing your belly as his semen fills it. You get up and lick your lips, barely remembering to take the food items. You were so focused on getting the cum, you barely remembered the purchase at all this time.";
 				randominfect; [first one picks a valid critter while infecting]
 				infect; [second one gives the same infection]
-				increase carried of chips by 1;
-				increase carried of soda by 1;
+				ItemGain chips by 1;
+				ItemGain soda by 1;
 				decrease humanity of Player by a random number between 12 and 24;
 				if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 4 and 8;
 				if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 3 and 6;
@@ -777,11 +773,11 @@ Instead of resolving a Sweet Exchange:
 	say "     These strange negotiations go on for a while like this, trading insults, offers of sex and rude gestures as they negotiate their trade of candy for cola. One of the sugar gliders even tantalizes the ferrets with a display of her fingering her two juicy cunts to get them to up their price by a few more bags of jelly beans. As you watch them, you can't help but feel that this rivalry's all in good fun for both sides, more some kind of contest or game they play rather than an actual feud.";
 	if BodyName of Player is "Sugar Ferret" and player is pure:
 		say "     As the deal is coming to a close, the ferrets start passing up bags of candy to the sugar gliders as they dole out the pop in exchange. Seeing as you look like the other ferrets, you slip amongst the crowd and try to push your way to the front. With all the other greedy, excited ferrets mobbing to grab some of that delicious soda, it takes some effort to get to the front of the pack, but eventually you manage to snag some. A rush of giggling excitement runs through you at having gotten some more pop and it takes some effort not to drink it down right away. You instead slip away before any of the other ferrets succumb to their thirst or notice you among them.";
-		increase carried of soda by 1;
+		ItemGain soda by 1;
 		now Resolution of Sweet Exchange is 1;	[Got soda as a Sugar Ferret]
 	else if BodyName of Player is "Sugar Glider" and player is pure:
 		say "     As the deal is coming to a close, the sugar gliders start passing down the cans and bottles of pop in exchange for bags of candy. Seeing as you look like the others, you climb onto a nearby stand and make your way over to the roof of the booth with the rest of the sweet marsupials. The giggling girls pass around the collected bags of candy, stuffing them into their pouches. Unnoticed among them, you manage to get passed some of the candy as well, which you stuff into your [if Player is female]pouch[else]backpack[end if] before making your escape before they catch on.";
-		increase carried of chips by 1;
+		ItemGain chips by 1;
 		now Resolution of Sweet Exchange is 2;	[Got chips as a Sugar Glider]
 	else:
 		say "     As the deal is coming to a close, the two sides start the actual exchange, insults and greedy demands for more next time flying between them even as they do. Seeing as things are wrapping up, you decide it best to withdraw before the swap is complete and the two mobs disperse. With that many sugar-crazed mutants around, you're not sure if you'd be able to remained unnoticed without putting some distance between you and them while you can.";
@@ -846,7 +842,7 @@ Instead of resolving a Beach Party:
 				challenge "Bottlenose Toy";
 				if dolphinflatablefight is 1:
 					say "     With the green dolphin sent back into the water, the girls start playing around with it. Some start fingering themselves and each other, rather worked after their amusement with you. With them distracted, you decide to avail yourself of the remaining contents of their cooler, taking the last two cans before heading on your way, the sounds of their playing fading behind you as you go past a pile of rocks.";
-					increase carried of soda by 2;
+					ItemGain soda by 2;
 					increase score by 10;
 					now Resolution of Beach Party is 1;	[Beat Bottlenose Toys and got soda]
 	if dolphinflatablefight is 2:
@@ -935,7 +931,7 @@ Instead of resolving a My Own Zoo Playset:
 		now Resolution of My Own Zoo Playset is 2;	[Hid from Human Giant]
 	else:
 		say "     As the giant starts shoving over trees as he searches through the thicket of trees, you spot the zebra running towards you. Grabbing his wrist as he moves past, you pull him in under the branches of a couple of the fallen trees while the giant's looking at the other end of the copse. Keeping your hand over his muzzle you shush his surprised cry and wait with him until the giant finally either gets distracted by something else or just plain gives up. Hearing him thump back towards his previous spot, you get the zebra to move quietly with you to the other side of the (now mostly uprooted) trees and go as quickly as he can move to get some further distance from the giant. The zebra thanks you for your help, giving you a bottle of water he'd stashed before the two of you head your separate ways.";
-		increase carried of water bottle by 1;
+		ItemGain water bottle by 1;
 		now Resolution of My Own Zoo Playset is 3;	[Saved zebra from Human Giant and given a water bottle]
 	now My Own Zoo Playset is resolved;
 

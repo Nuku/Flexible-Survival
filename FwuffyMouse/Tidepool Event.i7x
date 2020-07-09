@@ -39,13 +39,11 @@ Instead of resolving a Tidepool Treasure:
 				if a random chance of 1 in 2 succeeds:
 					say "     You wrench the prize from its surprisingly strong home, freeing your wrist and bolting for dry land, dodging past the tentacles that lash at your legs. You add the water to your pack and leave the odd tide-pool behind.";
 					LineBreak;
-					say "[bold type]You gain 1 water bottle![roman type][line break]";
-					increase carried of water by 1;
+					ItemGain water by 1;
 				else:
 					say "     You wrench the prize from its surprisingly strong home, freeing your wrist and bolting for dry land, dodging past the tentacles that lash at your legs. You add the soda to your pack and leave the odd tide-pool behind.";
 					LineBreak;
-					say "[bold type]You gain 1 soda![roman type][line break]";
-					increase carried of soda by 1;
+					ItemGain soda by 1;
 			else:
 				say "     You pull the bottle out, freeing your wrist at the same time and getting ready to run for it. As you head for dry land you mistime your steps, and one of your legs is dragged out from under you. Stumbling, you find your hands and knees planted in the silt, and the creatures coil their pinkish tentacles around your limbs. They tear up your clothing and discard the scraps, leaving you bare naked on all fours in the center of the pool.";
 				say "[tidepoolfail]";

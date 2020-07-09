@@ -190,7 +190,7 @@ to hardwarefortphase3:
 				say "     One of the horsemen gives you an approving nod as you finish driving off the last of the beasts attacking your part of the fort. You feel rather proud of yourself as you look behind you at all the work being done at the store, as items are efficiently loaded up onto makeshift carts and the forklifts move some of the cars around so they have better access to the store itself. One of the equines at the wall gestures at you, and you glance over just in time to catch the medkit he tosses at you with an equine grin on his muzzle. Nodding in thanks, you begin to start patching yourself up slightly, only to be interrupted by several large shadows sweeping over the area, it looks like the aerial creatures have decided to bypass the fort and start attacking you and the others directly!";
 				increase HP of Player by 20;
 				if HP of Player > maxHP of Player, now HP of Player is maxHP of Player;
-				increase carried of medkit by 1;
+				ItemGain medkit by 1;
 				hardwarefortphase4;
 	if fightoutcome >= 20 and fightoutcome <= 29:	[lost any fight]
 		say "     One of the horsemen gives you a pat on the shoulder as he helps you up after driving off the rest of the creatures. And while you are certainly embarrassed at the situation, and having needed their help at this point, at least they managed to keep things going while you were being [']entertained['] by your recent partner. Feeling somewhat weak after the exertion, when one of them hands you a draft beer and a medkit, you only nod gratefully as you drain the cool drink. You blink for a moment in surprise though as you feel a surge of power shoot through you, and groan as you realize it was a draft horse beer you just drank, and while it definitely makes you feel a bit better, you can already feel your body changing in response. Though you have little time to comment or react as several shadows blot out the sky, and you realize some of the aerial creatures have arrived and are attacking you and your fellow lookouts directly!";
@@ -198,7 +198,7 @@ to hardwarefortphase3:
 		infect "Horseman";
 		increase HP of Player by 40;
 		if HP of Player > maxHP of Player, now HP of Player is maxHP of Player;
-		increase carried of medkit by 1;
+		ItemGain medkit by 1;
 		hardwarefortphase4;
 	else if fightoutcome >= 30:	[fled any fight]
 		say "     Having fled, you end up leaving the working horsemen to fend for themselves, much to the angry cries of several of them. They are none too pleased with your cowardice. They seem to fare fairly well, able to hold their ground while working. Rather than risk entering the fray again, you escape in the confusion, heading back towards the library to rest and recover.";
@@ -339,12 +339,12 @@ to hardwarefortphase5:
 		say "rather hefty sledgehammer.";
 		say "     'We done found a couple ah deez in dere, and figured we'z could spare yah one. T'ought yah might enjoy knockin['] some heads wid'it. Yah been doin['] a pretty impressive job so far on dis, I has tah admit. I can seez why Fancy likes yah,' he adds with a raucous laugh and a slap on your back before turning back to organizing the rest of the horses. 'Come on, you lugs. Let's get dis stuff movin[']!'";
 		say "     You find yourself smiling and feeling a bit more confident as you take a few test swings of your new weapon. Knowing you'll need speed for the moment, you tuck it securely through some the straps on your pack for now. Wasting no more time, you drop down outside of the fort in an effort to lead the remaining creatures away.";
-		increase carried of medium sledge by 1;
+		ItemGain medium sledge by 1;
 	else:
 		say "medkit.";
 		say "     'We found dis in dere and figured yah might needs it. Yah didn't do too bad. It wuz a lot tah dealz wid,' he adds with a raucous laugh and a slap on your back before turning back to organizing the rest of the horses. 'Come on, you lugs. Let's get dis stuff movin[']!'";
 		say "     You feel a little better about your earlier failure now that things have worked out. Knowing you don't have any time to sit around and patch yourself up, you stuff the medkit somewhere accessible in case of emergency. Wasting no more time, you drop down outside of the fort in an effort to lead the remaining creatures away.";
-		increase carried of medkit by 1;
+		ItemGain medkit by 1;
 	let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";

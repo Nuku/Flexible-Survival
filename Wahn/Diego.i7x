@@ -29,7 +29,6 @@ DiegoBitched is a number that varies.
 DiegoFucked is a number that varies.
 DiegoButtSlut is a number that varies.
 LastDiegoTricked is a number that varies. LastDiegoTricked is usually 250.
-DiegoTricked is a number that varies. DiegoTricked is usually 0.
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -101,7 +100,7 @@ the scent of Diego is "Diego smells like a [if DiegoChanged is 0]male[else if Di
 
 To say DiegoDesc:
 	if debugactive is 1:
-		say "DEBUG -> Diegotalk: [Diegotalk], CoyoteTricks: [CoyoteTricks], DiegoTricked: [DiegoTricked], LastDiegoTricked: [LastDiegoTricked], DiegoChanged: [DiegoChanged], DiegoBitched: [DiegoBitched], DiegoFucked: [DiegoFucked], DiegoButtSlut: [DiegoButtSlut] <- DEBUG[line break]";
+		say "DEBUG -> Diegotalk: [Diegotalk], CoyoteTricks: [CoyoteTricks], LastDiegoTricked: [LastDiegoTricked], DiegoChanged: [DiegoChanged], DiegoBitched: [DiegoBitched], DiegoFucked: [DiegoFucked], DiegoButtSlut: [DiegoButtSlut] <- DEBUG[line break]";
 		say "DEBUG -> (Traits of Diego) [traits of Diego][line break]";
 	if DiegoChanged is 2:
 		say "     The former coyote man is now a pretty tan furred coyote bitch instead, and is eyeing you eagerly as [SubjectPro of Diego] leans up against the wall dividing the park from the rest of the city. You can see one of her paws slowly straying down to her furred pussy as you approach, a smile playing across her muzzle as [SubjectPro of Diego] rubs herself teasingly.";
@@ -228,7 +227,7 @@ to say DiegoTalk3:
 	else:
 		project the figure of Diego_face_icon;
 	say "     Accepting your water bottle with eager paw-hands, Diego gives you a wide grin and says, 'That's downright neighborly of you my friend. Thanks!' With that said, the coyote unscrews the lid, giving an almost imperceptible nod at the fact that it was still properly sealed. Leaning back [PosAdj of Diego] head, the anthro canine pours the water into [PosAdj of Diego] open muzzle, chugging it down thirstily. 'Aaah, now that hit the spot! Makes me feel more ready for playing tricks right away,' [SubjectPro of Diego] says with a grin, tail wagging left to right.";
-	decrease carried of water bottle by 1;
+	ItemLoss water bottle by 1;
 	extend game by 4;
 
 to say DiegoTalk4: [transform Diego towards being female]
@@ -245,7 +244,7 @@ to say DiegoTalk4: [transform Diego towards being female]
 			say "     'Noooo...' Diego pants out as [SubjectPro of Diego] strokes her vanishing cock with her increasingly pawlike hands, the rest of her body seeming to change into a slightly more bestial form as well. 'Oh god,' [SubjectPro of Diego] moans as [SubjectPro of Diego] ceases to be a male completely, her rod vanishing into her body even as her breasts swell larger. 'Feels so good...' Diego moans as the new female's hands begin to rub and stroke herself erotically. The newly formed bitch begins to yip in pleasure as [SubjectPro of Diego] moves her paw-like hand over her new mound, finally letting out a long coyote howl as [SubjectPro of Diego] brings herself to orgasm before leaning up against the wall panting.";
 			WaitLineBreak;
 			say "     Eventually Diego looks back at you with a satisfied grin on her face. 'Guess fool me twice, shame on me eh?' [SubjectPro of Diego] says, seeming not at all displeased as her paws begin to roam her new body again. 'I'd probably be annoyed, if this wasn't the best feeling ever...' the coyote bitch says with a smile on her muzzle as [SubjectPro of Diego] looks at you happily. 'I feel so damn horny and sexy like this, it's amazing. Hell I think I might even be in heat!' [SubjectPro of Diego] says eagerly, panting happily at the prospect while her paws begin to rub over her soft fur again, the trickster obviously forgetting you are there watching as [SubjectPro of Diego] begins to pleasure herself yet again.";
-			decrease carried of dog milk by 1;
+			ItemLoss dog milk by 1;
 			now DiegoChanged is 2;
 			SetFemalePronouns for Diego;
 			now the icon of Diego is Figure of DiegoFem_icon;
@@ -265,7 +264,7 @@ to say DiegoTalk4: [transform Diego towards being female]
 			say "     Handing the transformative drink to the unsuspecting coyote, you watch eagerly as Diego leans [PosAdj of Diego] head back and pours the thick liquid into [PosAdj of Diego] open maw, gulping it down thirstily. 'Damn that hit the spot, thanks bud,' Diego says as [SubjectPro of Diego] hands the empty container back to you, before pausing with a strange look on [PosAdj of Diego] muzzle. 'Oh shit,' the coyote man says as [SubjectPro of Diego] doubles over for a second, [PosAdj of Diego] hands going to [PosAdj of Diego] groin and chest as [SubjectPro of Diego] moans slightly. 'What kind of milk was that?' the changing coyote says as [SubjectPro of Diego] begins to pant with need as [SubjectPro of Diego] rubs himself. 'God it feels so good,' Diego moans, [PosAdj of Diego] chest swelling out with a new pair of soft breasts. The changing coyote straightens up and leans back against the wall, eyes half closed in pleasure as [PosAdj of Diego] hands reach down to stroke at [PosAdj of Diego] crotch.";
 			SetFemalePronouns for Diego;
 			say "     One of his - or maybe rather [PosAdj of Diego] - hands rubbing along [PosAdj of Diego] stiff rod eagerly, while the other reaches underneath [PosAdj of Diego] cock to rub and stroke at her brand new female opening. The sight makes you grin as the lust-filled new coyote herm moans wantonly as [SubjectPro of Diego] plays with herself, your own body growing excited as [SubjectPro of Diego] brings herself to orgasm, her seed coating one hand, even as her wet juices spill out over the other as [SubjectPro of Diego] shudders in ecstasy. Panting from pleasure and exertion, Diego lowers her head and looks at you with a wry grin on her muzzle. 'Well damn, that was a nice trick there,' the coyote herm admits as her hands begin to wander over her changed body again. 'I guess you got me that time then, maybe I should give you a little reward for being such a good trickster?' the new herm says with a lewd wink as [SubjectPro of Diego] eyes your body eagerly.";
-			decrease carried of dog milk by 1;
+			ItemLoss dog milk by 1;
 			now the icon of Diego is Figure of pixel_icon;
 			now DiegoChanged is 1;
 		else:
@@ -296,7 +295,7 @@ to say DiegoTalk5: [transform Diego towards being open for anal]
 			WaitLineBreak;
 			say "     You pull your hand back a little and feel around some more - there's Diego's prostate (making [ObjectPro of Diego] twitch a little as you push against it), and further inside him... is that 'second pucker'? No matter what it is, the canine gasps in pleasure as you push against and through it with your finger, wiggling the fingertip in what seems to be some enclosed space in Diego's insides. As Diego's orgasm winds down eventually, you end your exploration and slip the fingers out of him, wiping them against [PosAdj of Diego] soft fur. After that, [SubjectPro of Diego] sinks down on the floor, sitting down on a clean spot beside the cum puddle [PosAdj of Diego] orgasm left and pants loudly to cool [PosAdj of Diego] overheated body down.";
 			say "     'That was *pant* something else *pant*,' [SubjectPro of Diego] says and looks up at you, a beaming grin spreading over [PosAdj of Diego] muzzle. 'I'm so glad you tricked me into drinking that first bottle. These feelings are just unbelievable!' For now, you decide to keep quiet about what you felt happening up [PosAdj of Diego] butt. Given the source of the trickster's creamy filling and the life-cycle of the all-male orc tribe, you do guess that your canine friend is due for quite a few more unbelievable things. Like a litter of puppies for example... not yet right now would be your guess, as the breeding pouch just formed, but quite likely after another anal adventure for Diego.";
-			decrease carried of orc cum by 1;
+			ItemLoss orc cum by 1;
 			add "Mpreg" to traits of Diego;
 			now DiegoButtSlut is 3;
 		else: [nope, just easing]
@@ -328,7 +327,7 @@ to say DiegoTalk5: [transform Diego towards being open for anal]
 				LineBreak;
 				say "     Stepping up close to Diego, you put your hand on [PosAdj of Diego], causing the coyote to look at you and say, 'Hey, what are you do-oooohhhhHHH!' [PosAdjCap of Diego] question leads over into a drawn-out moan as you nudge [PosAdj of Diego] fingers aside and poke at the canine's tailstar, stroking the all new pleasure spot [SubjectPro of Diego] hasn't gotten used to yet. Then you gather up a bit of spit and pull your hand away from the coyote for a moment, letting the gob drip down on your fingers. Bringing your hand back down to the trickster's buttocks, you rub [PosAdj of Diego] rear entrance teasingly, then push in against it and slowly work your digits inside. Diego can't help but moan loudly at the feeling of [PosAdj of Diego] tight hole being stretched by your fingers.";
 				say "     Enjoying the fact that you're molesting the asshole of a - up till now - quite vehemently straight male coyote, you slowly slide in and out just a little, drawing moans of pleasure from your trickster buddy. Then you decide to push deeper and feel around a little, soon finding the anthro coyote's prostate. For a second, you just rest your fingertips on the little bulge, then give it a rub - which immediately draws an orgasmic howl Diego. With [PosAdj of Diego] inner muscles suddenly clamping tight around your digits, the coyote trembles all over and [PosAdj of Diego] hand squeezes the bulging knot of [PosAdj of Diego] cock tightly. [SubjectProCap of Diego] is no doubt imagining having [PosAdj of Diego] prick buried in a willing bitch as [SubjectPro of Diego] shoots a heavy load all over the ground - but both of you know that it was your stimulation that pushed [ObjectPro of Diego] over the edge.";
-			decrease carried of orc cum by 1;
+			ItemLoss orc cum by 1;
 			now DiegoButtSlut is 1; [anal OK Diego]
 		else: [nope, just easing]
 			LineBreak;
@@ -937,8 +936,7 @@ Instead of resolving a Hunting down Hunter:
 
 to say DiegoCollarQuestGotCollar:
 	say "     After quickly shoving the collar into your backpack to make sure you don't lose it, you make your way back to the wall. With the ladder, it's easy to get up and over it, and you take care to hide it under the branches once more, just in case Diego might need it again somewhere hereabouts. Then you hurry off down the street, making a successful getaway.";
-	increase carried of diego's heirloom collar by 1;
-	say "[bold type]You gain Diego's heirloom collar![roman type][line break]";
+	ItemGain diego's heirloom collar by 1;
 	now XP of Diego is 3; [got the collar sneakily]
 
 to SetHunterHuskyStats:
@@ -1014,8 +1012,7 @@ to say VillaFightVsHunter:
 			say "     With the stakes upped now that you're having to fight Garnet too, and her alpha will soon come back with a firearm, you change plans and just concentrate on your primary goal. After a quick punch that dazes Garnet a little, your hands scramble to grab the collar around the husky female's neck, quickly undoing its fastening. With Diego's prize in hand, you then dash out of the room. As you sprint across the lawn and are just about to reach the wall, you hear the boom of a rifle behind you and see a piece of rock be blasted out of the bricks. Hunter only barely missed you! Rushing up the ladder quickly, you climb on top of the high wall and are just about to pull the ladder up when a fiery line of pain runs up your arm as a follow-up bullet grazes your bicep. Wincing from the pain, you lose your balance and fall off the wall.";
 			WaitLineBreak;
 			say "     As luck would have it, a big clump of bushes breaks your fall, meaning that you're still able to walk (and run), putting as much distance as possible between yourself and the angry alpha husky. You don't stop fleeing until you're halfway back to where you started from, then start to wind down a little and pack away the collar you had been tightly clutching all this time.";
-		increase carried of diego's heirloom collar by 1;
-		say "[bold type]You gain Diego's heirloom collar![roman type][line break]";
+		ItemGain diego's heirloom collar by 1;
 		now Resolution of Hunting down Hunter is 1; [fought, won]
 		now XP of Diego is 4; [got the collar after fight]
 	else if fightoutcome > 19 and fightoutcome < 30: [lost]
@@ -1103,8 +1100,7 @@ to say VillaFightVsHunter2:
 			WaitLineBreak;
 			say "     As luck would have it, a big clump of bushes breaks your fall, meaning that you're still able to walk (and run), putting as much distance as possible between yourself and the angry alpha husky. You don't stop fleeing until you're halfway back to where you started from, then start to wind down a little and pack away the collar you had been tightly clutching all this time.";
 		PlayerWounded 10;
-		increase carried of diego's heirloom collar by 1;
-		say "[bold type]You gain Diego's heirloom collar![roman type][line break]";
+		ItemGain diego's heirloom collar by 1;
 		now Resolution of Hunting down Hunter is 1; [fought, won]
 		now XP of Diego is 4; [got the collar after fight]
 	else if fightoutcome > 19 and fightoutcome < 30: [lost]
@@ -1126,7 +1122,7 @@ to say VillaFightVsHunter2:
 			if Humanity of Player > 30: [player is sane enough]
 				say "     Despite your exhaustion, you are of ready enough mind to tune out the alpha husky's brainwashing commands. Thinking of everything and anything you can instead, you have to wait through quite a while of him indoctrinating Garnet, up to the point at which his shaft eventually softens enough to slip out of your pussy. Not long after that, both of them get off you and Hunter throws your equipment unceremoniously onto your stretched-out, sticky form. 'You weren't a half bad lay, but I got a really high class bitch to finish training. I'd rather fuck her all day and breed some pups than waste my time with you. Get up, and out!' With that said, the alpha husky laughs as you get up and start to stumble to the door, aching all over. He's not done with his cruel sport after all though, as the next thing you feel his foot-paw on your rump, giving you a kick that sends you sprawling on the floor!";
 				say "     Laughing, Hunter follows you and keeps giving you light shoves with his paw, all the while jeering, 'I said get out, you worthless bitch. Too stupid to pot one foot in front of the other, eh?' You're on your knees, collecting your stuff when you realize that among the fallen items is the prize of your mission here - the collar that Diego sent you to get. You grab for it, only to have it wrenched out of your hand. 'You wanted this so badly, so you should wear it! Show the world just how much of a slut you are!' ";
-				increase carried of diego's heirloom collar by 1;
+				ItemGain diego's heirloom collar by 1 silently;
 				let OtherCollarPresent be false;
 				repeat with z running through equipped equipment:
 					if slot of z is "neck":
@@ -1159,7 +1155,7 @@ to say VillaFightVsHunter2:
 			if Humanity of Player > 30: [player is sane enough]
 				say "     Despite your exhaustion, you are of ready enough mind to tune out the alpha husky's brainwashing commands. TThinking of everything and anything you can instead, you have to wait through quite a while of him indoctrinating Garnet, up to the point at which his shaft eventually softens enough to slip out of your well-bred asshole. Not long after that, both of them get off you and Hunter throws your equipment unceremoniously onto your stretched-out, sticky form. 'I'm half minded to keep working on you till you're a nice and subby bitch, but then... why go through the trouble if I have the most beautiful husky of all here already. I'd rather fuck her all day and breed some pups than waste my time with you. Get up, and out!' With that said, the alpha husky laughs as you get up and start to stumble to the door, aching all over. He's not done with his cruel sport after all though, as the next thing you feel his foot-paw on your rump, giving you a kick that sends you sprawling on the floor!";
 				say "     Laughing, Hunter follows you and keeps giving you light shoves with his paw, all the while jeering, 'I said get out, you worthless bitch. Too stupid to pot one foot in front of the other, eh?' You're on your knees, collecting your stuff when you realize that among the fallen items is the prize of your mission here - the collar that Diego sent you to get. You grab for it, only to have it wrenched out of your hand. 'You wanted this so badly, so you should wear it! Show the world just how much of a slut you are!' ";
-				increase carried of diego's heirloom collar by 1;
+				ItemGain diego's heirloom collar by 1 silently;
 				let OtherCollarPresent be false;
 				repeat with z running through equipped equipment:
 					if slot of z is "neck":
@@ -1177,7 +1173,7 @@ to say VillaFightVsHunter2:
 			else:
 				say "     Even though you're not the prime target of Hunter's indoctrination, in your current state of exhaustion, still with the shaft of the alpha husky inside your body and his massive load squishing around in your chute, the husky's words find fertile ground in your mind. You're his bitch and belong to the alpha, that is made clear to you again and again, until it is engraved into your mind. But then, when his shaft eventually softens enough to slip out of your well-bred asshole, all the husky does is grabbing your equipment unceremoniously throwing it onto your stretched-out, sticky form. 'I'm half minded to keep working on you till you're a nice and subby bitch, but then... why go through the trouble if I have the most beautiful husky of all here already. Get up, and out!' Confusion at being shoved away like this by the man you belong to gives way to blind obedience, as it's not your place to think, just to obey.";
 				say "     With that said, the alpha husky laughs as you scramble to obey, getting up and starting to stumble to the door, aching all over. He's not done with his cruel sport though, as the next thing you feel his foot-paw on your rump, giving you a kick that sends you sprawling on the floor! Laughing, Hunter follows you and keeps giving you light shoves with his paw, all the while jeering, 'I said get out, you worthless bitch. Too stupid to pot one foot in front of the other, eh?' You're on your knees, collecting your stuff when you realize that among the fallen items is the prize of your mission here - the collar that Diego sent you to get. You grab for it, only to have it wrenched out of your hand. 'You wanted this so badly, so you should wear it!' ";
-				increase carried of diego's heirloom collar by 1;
+				ItemGain diego's heirloom collar by 1 silently;
 				let OtherCollarPresent be false;
 				repeat with z running through equipped equipment:
 					if slot of z is "neck":
@@ -1204,8 +1200,7 @@ to say VillaFightVsHunter2:
 	else if fightoutcome is 30: [fled]
 		say "     You abandon the fight, taking your legs under your arms as you run from the villa. Hunter is quick to set after you, growling and barking as he chases you over the lawn. He catches up right as you are halfway up the ladder and tries to wrench you off it, but a swift kick to the face sends him reeling so you manage to get on top of the wall. That's where your luck ends though, as the guy grabs hold of the ladder when he gains his bearing again and thrusts it at you, sending you tumbling off the other side. You land on top of some bushes, which is a mixed blessing as they soften your fall, yet have a few branches that come close to impaling you. Wounded and hurting, you get back to your feet and flee from the neighborhood. At least you still have the collar, as you never let go of it even during the fight and flight. Time to return to Diego and hand it over to him.";
 		PlayerWounded 30;
-		increase carried of diego's heirloom collar by 1;
-		say "[bold type]You gain Diego's heirloom collar![roman type][line break]";
+		ItemGain diego's heirloom collar by 1;
 		now Resolution of Hunting down Hunter is 5; [fought, fled]
 		now XP of Diego is 5; [tried to get the collar sneakily, then ran off in the fight]
 
@@ -1351,16 +1346,13 @@ to say DiegoCollarWearingAftermath:
 			FeatLoss "Herm Preferred";
 		FeatGain "Female Preferred";
 		FeatGain "Always A Pussy";
-	CreatureSexAftermath "Player" receives "PussyFuck" from "Husky Alpha";
+	CreatureSexAftermath "Player" receives "PussyFuck" from "Coyote";
 	now XP of Diego is 7; [player has the collar on, got fucked]
 
 to say DiegoCollarDeliveryAftermath:
 	say "     'Thanks a lot, you don't know how much this means to me. Really irked me a lot to know that fucker had my family heirloom. Here, let me reward you for your help!' With that said, [SubjectPro of Diego] strolls over to a somewhat out of the way clump of bushes, reaching inside it and retrieving a bulging plastic shopping bag. [SubjectProCap of Diego] hands the weighty load over and you see that it contains several soda cans as well as bags of chips.";
-	LineBreak;
-	say "[bold type]You have gained 5 soda cans![roman type][line break]";
-	increase carried of soda by 5;
-	say "[bold type]You have gained 3 bags of chips![roman type][line break]";
-	increase carried of chips by 3;
+	ItemGain soda by 5;
+	ItemGain chips by 3;
 	say "     As you pack away your new belongings, Diego steps up to you and gives you a friendly smile. 'You know, I feel like there should be something more I can give you as a reward. In fact, the collar can do things, like make someone stronger, and some other stuff too.' [SubjectProCap of Diego] just waves [PosAdj of Diego] hand airily, quickly skipping past the 'other' effects as [SubjectPro of Diego] explains that with him to show you how to use it properly, the collar could be a very useful tool for a lot of future tricks you can play. 'So what do you say? Wanna try it out?' [SubjectProCap of Diego] holds the leather band out to you.";
 	say "     [bold type]Do you accept Diego's offer of trying the collar on?[roman type][line break]";
 	LineBreak;

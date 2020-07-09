@@ -81,7 +81,7 @@ to say SkarnothOfferingMenu:
 
 to say SkarnothOfferingTalk1:
 	say "     You pull out some of the demon seed that you had collected and hand it to Skarnoth. The demon prince looks down at the container and gently swishes the liquid around. With a quick wink of his eye, he tips his head back and chugs all of it down in one go. 'Ahhh, nothing like some liquid virility with a hint of hellfire. Thanks, [italic type][master][roman type]!";
-	delete demon seed;
+	ItemLoss demon seed by 1;
 	if Loyalty of Skarnoth < 10:
 		increase Loyalty of Skarnoth by 1;
 
@@ -172,10 +172,10 @@ to say FirstPillSkarnothScene:
 	let PillTab be "<Pill or Tablet>";
 	if libido pill is owned:
 		now PillTab is "pill";
-		decrease carried of libido pill by 1;
+		ItemLoss libido pill by 1;
 	else:
 		now PillTab is "tablet";
-		decrease carried of bliss tablet by 1;
+		ItemLoss bliss tablet by 1;
 	say "     Skarnoth slowly snakes his way across your lap, making sure that the others are watching his every move. You slide your hand up and down his body in a relaxed motion, treating him more like a pet rather than a person. 'So is this what you wanted, [italic type][master][roman type]? Making sure that everyone here knows who has the hottest stud around?' In a calm tone, you bring up the things that he was saying earlier, and you feel the muscles in his back tighten under your fingers when you do. 'I was just shootin['] the shit with everyone, y'know trying to have some fun and laughs, that's all.' A dark chuckle reverberates in your throat, and you ask him if that means he thought it would be OK to have fun with everyone else at your expense? The demon's whole body tenses, a tremble going through him as he realizes he's in deeper shit than he had thought. As he begins to give a response, you quickly bring your hand down over his mouth where you had a [if libido pill is owned]libido pill[else]bliss tablet[end if] hidden. Holding your fingers clamped over his nose and mouth, you command him to swallow.";
 	say "     Skarnoth resists for a little while, but eventually, he gives in, either needing air or simply realizing that he doesn't have a choice in the matter. After the demon accepts the [PillTab] into his mouth, you remove your hand, and unsurprisingly, Skarnoth spits it out on the floor. You ask one of the spectators to retrieve it, and once you have it back in your possession, you literally cram it back into your slave's mouth, really shoving it in there. This time, you decide on the safer bet and [italic type]order[roman type] him to swallow it. The collar begins to glow and heats up, but thankfully, it quickly goes back to its normal color, showing that he has given in. 'What the hell did you just give me?' Skarnoth growls, but you simply ignore his question and wait for the [PillTab] to go into effect.";
 	WaitLineBreak;
@@ -283,10 +283,10 @@ to say SecondPillSkarnothScene:
 	let PillTab be "<Pill or Tablet>";
 	if libido pill is owned:
 		now PillTab is "pill";
-		decrease carried of libido pill by 1;
+		ItemLoss libido pill by 1;
 	else:
 		now PillTab is "tablet";
-		decrease carried of bliss tablet by 1;
+		ItemLoss bliss tablet by 1;
 	say "     Truth be told you can't really be bothered by what the demon wants, after all he [']is['] your property now. Your fingers softly rub over the [if libido pill is owned]libido pill[else]bliss tablet[end if] you have, while wondering exactly how best to administer the li'l helper. Looking over Skarnoth's form, you can't help but smile at the fact that destroying his underwear was the best decision you've made so far.";
 	if SkarnothDrugStatus is 1:
 		say "     Your mind wanders back for a moment to the last time you decided to dose the rebellious prince, watching the once proud slave be reduced to a submissive slut that's only concern was his sexual pleasure. Taking the [PillTab] out, you walk over to Skarnoth's face and lower yourself down on one knee showing him what you have in your hand. His eye grow wide and the rest of his body begins to shake slightly in what you can assume is a fight or flight response. 'Please [master], don't make me take one of those again! Last time I lost control of myself, and I started to get these weird shakes after it started wearing off!' A snicker escapes your throat.";

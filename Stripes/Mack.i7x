@@ -108,17 +108,17 @@ to attackingnutsofactory:
 			WaitLineBreak;
 			say "     As the horny rodent fucks you, his paws roam over your [bodytype of Player] body, stroking your [SkinName of Player] skin and eventually settling at your chest to play with your nipples. You give a chitter as he pinches them and push harder back into him. As your mutual lusts build, he pounds into you hard and faster until eventually blasting his hot load into you, draining his nuts to flood your [if Player is female]womb[else]bowels[end if] with his semen. Eventually his large orbs are drained and you find yourself left with a noticeable bulge from his considerable output.[impregchance]";
 			say "     After resting for a while, he helps you up and back into your gear, giving you several kisses and nips. He makes you promise to come back and see him again after he's had time to take inventory. He promises to give you some more nuts if you'll come back and play with him again. 'Thanks again for your help, my lovely hazelnut,' he churrs. 'Come back again soon and we can have some more fun. But for now, I think I want to be alone with my nuts for a while.' And with that, the squirrel sends you on your way, your pack somewhat heavier with your haul from the factory.";
-			increase carried of food by 2;
+			ItemGain food by 2;
 			now HP of Macadamia is 10;
 			infect "Gray Squirrel";
 			now Resolution of Finding Mack is 4; [won and celebrated with him]
-			now Nutso Factory is known;
+			AddNavPoint Nutso Factory;
 		else:
 			say "     You give the squirrel a hug and step back. He seems a little disappointed, but gets over it quickly as he surveys the remaining nuts on the ground. 'Thanks for all your help. Look, I'm going to want to take inventory,' the squirrel chitters. 'But I'll give you some more after that. Just come by later and I should have some more for you. But for now,' he says, gently pushing you towards the door. 'I think I want to be alone with my nuts for a while.' And with that, the squirrel sends you on your way, your pack somewhat heavier with your haul from the factory.";
-			increase carried of food by 2;
+			ItemGain food by 2;
 			now HP of Macadamia is 3;
 			now Resolution of Finding Mack is 5; [won and didn't celebrate with him]
-			now Nutso Factory is known;
+			AddNavPoint Nutso Factory;
 	else:
 		say "     Unwilling or unable to keep fighting the powerful felines, you make a break for it out the door you came in. You'll have to hope Mack can take care of himself.";
 		now Resolution of Finding Mack is 6; [fled and left Mack behind]
@@ -205,7 +205,7 @@ to say sexwithMacadamia:
 			say "     As the horny rodent fucks you, his paws roam over your [bodytype of Player] body, stroking your [SkinName of Player] skin and eventually settling at your chest to play with your nipples. You give a chitter as he pinches them and push harder back into him. As your mutual lusts build, he pounds into you hard and faster until eventually blasting his hot load into you, draining his nuts to flood your [if Player is female]womb[else]bowels[end if] with his semen. Eventually his large orbs are drained and you find yourself left with a noticeable bulge from his considerable output.[impregchance]";
 			say "     After resting for a while, he helps you up and back into your gear, giving you several kisses and nips. He makes you promise to come back and see him again. 'I'll be looking forward to you stopping by so I can take another break from sorting and moving the nuts. Oh, the nuts! Here,' he says, scurrying excitedly over to give you another handful. 'I'd set these ones aside for you. They're particularly tasty ones,' he says, pouring a bowl of assorted, unshelled nuts into your pack. 'I can tell. We squirrels know these things.'";
 			infect "Gray Squirrel";
-			increase carried of food by 2;
+			ItemGain food by 2;
 			now HP of Macadamia is 11;
 		else if HP of Macadamia is 11:
 			say "     Grinning at your offer, Mack runs his paws along your sides and before gently pushing you down to your knees. 'I think you should get a taste of my delicious nuts,' he chitters with a grin. Taking in the heady scent of his nutsack you nuzzle at the large orbs and start running your hands over them. They have an alluring scent, a rich and musky scent with a hint of nuts. You start licking over the soft fur, making the squirrel chitter happily.";
@@ -215,7 +215,7 @@ to say sexwithMacadamia:
 			WaitLineBreak;
 			say "     Mack smiles and strokes your head as you lean back against a crate while licking your lips. 'Here you go, my sweet Hazel[if Player is not female]nut[end if]. A tasty treat to remind you of me while we are apart,' he chitters as he passes you jar of roasted nuts. But instead of the usual Nutso label, he's put a label of his own on it, one depicting a colorful drawing of himself. Leaning in to give your messy face a kiss, he slips the jar from your hands and into your pack for later.";
 			infect "Gray Squirrel";
-			increase carried of roasted nuts by 1;
+			ItemGain roasted nuts by 1;
 			now HP of Macadamia is 12;
 			now lastfuck of Macadamia is turns;
 		else if HP of Macadamia is 12:
@@ -228,7 +228,7 @@ to say sexwithMacadamia:
 			say "     When he's finally finished draining his heavy balls into you, he snuggles with you, nibbling at the back of your neck and running his paws over your body. 'I was thinking, since I'm pretty much done here, that it's time to move on. Now, I'm thinking you've got a nice, safe spot. I could store the last of my nuts there for now and we could have some more fun. Make it our little love nest,' he chirrs as he teases your nipple. 'I could be right there to give you another taste of my hot nuts whenever you'd like[if Player is female]. Breed you full of lots of kits[end if]. Doesn't that sound nice, my needy doe,' he chirrs in your ear. Still lost in the bliss of the afterglow, you agree readily, much to the squirrel's delight.";
 			say "     He gives you several quick kisses before getting up and running around frantically to gather his stuff and the last of his nuts. Once he's got it all, he pushes another bottle of roasted nuts into your hand, calling it a snack for the trip and follows you towards the library. A little unsure about how you got talked into this, but certainly happy at the prospect of having him around for more sex, you lead him back to your safe haven where he sets himself up on one of the cots, before taking his large bags of nuts with him as he attempts to find a proper place to store them. In the end he finally decides on the breakroom, stuffing the large bags into a few cupboards, which he now guards with is life.";
 			WaitLineBreak;
-			increase carried of roasted nuts by 1;
+			ItemGain roasted nuts by 1;
 			now lastfuck of Macadamia is turns;
 			move Macadamia to Breakroom;
 			now HP of Macadamia is 13;

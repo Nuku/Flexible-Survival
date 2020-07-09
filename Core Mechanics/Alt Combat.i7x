@@ -1295,8 +1295,7 @@ to win:
 		now randomdropchance is 0; [no drop = do nothing]
 	else if randomdropchance is 100:
 		now randomdropchance is 100; [always drops = no need to run all the maths]
-		say "[bold type]You gain 1 [loot entry]![roman type][line break]";
-		add loot entry to the invent of the player;
+		ItemGain loot entry by 1;
 	else:
 		if "Magpie Eyes" is listed in feats of Player and randomdropchance > 50:
 			now z is ( 100 - randomdropchance ) divided by 3; [scaled increase above 50, prevents numbers over 100]
@@ -1317,8 +1316,7 @@ to win:
 		if randomdropchance <= 50, now yy is ( yy * randomdropchance ) divided by 100;
 		now randomdropchance is randomdropchance + yy;
 		if a random chance of randomdropchance in 100 succeeds:
-			say "[bold type]You gain 1 [loot entry]![roman type][line break]";
-			add loot entry to the invent of the player;
+			ItemGain loot entry by 1;
 [	let z be 0;
 	if "Magpie Eyes" is listed in feats of Player and lootchance entry > 50:
 		now z is ( 100 - lootchance entry ) divided by 3; [scaled increase above 50, prevents numbers over 100]
@@ -1332,7 +1330,7 @@ to win:
 	if lootchance entry <= 50, now yy is ( yy * lootchance entry ) divided by 100;
 	if a random chance of ( lootchance entry + yy ) in 100 succeeds:
 		say "[bold type]You gain 1 [loot entry]![roman type][line break]";
-		add loot entry to the invent of the player;
+		ItemGain loot entry by 1;
 	if "Magpie Eyes" is listed in feats of Player and lootchance entry > 0:
 		decrease lootchance entry by z; ]
 	if fightoutcome is not 13 and fightoutcome is not 14 and fightoutcome is not 18 and fightoutcome is not 19:

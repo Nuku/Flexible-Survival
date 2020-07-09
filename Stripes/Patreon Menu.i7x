@@ -78,60 +78,60 @@ carry out supersponsor:
 		else if calcnumber is 5:
 			if ssstash > 0:
 				say "     Asking Trixie about some supplies, she nods and tells you about the head librarian's secret stash. Heading there, you open an old filing cabinet and push aside from papers to find a collection of food and drink. 'And since you've been such a nice person, you can use that an extra time for every odd level you reach.'";
-				say "[bold type]1 x water bottle, food, soda and chips obtained.[roman type][line break]";
+				say "[bold type]You gain 1 of water bottle, food, soda and chips![roman type][line break]";
 				decrease ssstash by 1;
-				increase carried of water bottle by 1;
-				increase carried of soda by 1;
-				increase carried of food by 1;
-				increase carried of chips by 1;
+				ItemGain water bottle by 1 silently;
+				ItemGain soda by 1 silently;
+				ItemGain food by 1 silently;
+				ItemGain chips by 1 silently;
 			else:
 				say "     The stash is currently empty, but you'll be able to use it an additional time for every odd level you reach.";
 		else if calcnumber is 6:
 			if ssgbii is false:
 				say "     Mentioning that you'd like some infected items, Trixie nods. 'Yeah, I've got some of those around here somewhere.' Leading the way, she flies into one of the side rooms and points out a small backpack behind a chair. 'While you were hiding out in the bunker, some other survivor ended up camping out in here. It seems they were collecting these things for some reason, so somebody out there probably wants at least some of these. But their last owner got a little too over-excited about testing them and ended up a horny hybrid. You should be careful about that - unless you're into that kind of thing, that is.'";
 				say "     Opening it up, you find an eclectic collection of fluids and goo, all conveniently labelled. Isn't that handy?";
-				say "     You got: ";
+				say "     You gain 1 of: ";
 				if FurryList is not banned:
 					let liststarted be false;
 					if HermList is not banned:
 						now liststarted is true;
-						increase carried of motel key by 1;
-						increase carried of gryphon milk by 1;
+						ItemGain motel key by 1 silently;
+						ItemGain gryphon milk by 1 silently;
 						say "motel key, gryphon milk";
 						if HumorousList is not banned:
-							increase carried of chocolate milk by 1;
+							ItemGain chocolate milk by 1 silently;
 							say ", chocolate milk";
 					if FemaleList is not banned:
-						increase carried of tiger patch by 1;
-						increase carried of cheetah milk by 1;
+						ItemGain tiger patch by 1 silently;
+						ItemGain cheetah milk by 1 silently;
 						if liststarted is true:
 							say ", ";
 						else:
 							now liststarted is true;
 						say "tiger patch, cheetah milk";
 					if MaleList is not banned:
-						increase carried of rhino cum by 1;
-						increase carried of eagle feather by 1;
+						ItemGain rhino cum by 1 silently;
+						ItemGain eagle feather by 1 silently;
 						if liststarted is true:
 							say ", ";
 						else:
 							now liststarted is true;
 						say "rhino cum, eagle feather";
 				else:
-					increase carried of dirty water by 1;
+					ItemGain dirty water by 1 silently;
 					say "dirty water";
 				if FemaleList is not banned:
-					increase carried of glob of goo by 1;
-					increase carried of centaur hair by 1;
+					ItemGain glob of goo by 1 silently;
+					ItemGain centaur hair by 1 silently;
 					say ", glob of goo, centaur hair";
 				if MaleList is not banned:
-					increase carried of centaur cum by 1;
+					ItemGain centaur cum by 1 silently;
 					say ", centaur cum";
 				if DemonList is not banned and MaleList is not banned:
-					increase carried of demon seed by 1;
+					ItemGain demon seed by 1 silently;
 					say ", demon seed";
 				if FeralList is not banned:
-					increase carried of wyvern goop by 1;
+					ItemGain wyvern goop by 1 silently;
 					say ", wyvern goop";
 				say ".";
 				now ssgbii is true;

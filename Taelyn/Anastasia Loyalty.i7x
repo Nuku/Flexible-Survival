@@ -81,7 +81,7 @@ to say AnastasiaOfferingMenu:
 
 to say AnastasiaOfferingTalk1:
 	say "     You pull out some of the demon seed that you had collected and hand it to Anastasia. The demon prince looks down at the container and gently swishes the liquid around. With a quick wink of his eye, he tips his head back and chugs all of it down in one go. 'Ahhh, nothing like some liquid virility with a hint of hellfire. Thanks, [italic type][master][roman type]!";
-	delete demon seed;
+	ItemLoss demon seed by 1;
 	if Loyalty of Anastasia < 10:
 		increase Loyalty of Anastasia by 1;
 

@@ -73,7 +73,7 @@ to say beatpwh:
 	if equinoidstatus is 9:
 		say "     You recall your agreement with the equinoids and have defeated a trio of the painted wolves. They should let you approach their camp now.";
 		now equinoidstatus is 10;
-		now Equinoid Camp is known;
+		AddNavPoint Equinoid Camp;
 
 
 Section 2 - Creature Insertion

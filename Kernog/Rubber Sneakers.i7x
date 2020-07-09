@@ -35,7 +35,7 @@ Instead of taking rubber sneakers:
 		say "     As you are about to pick the shoes, you notice the puma motif on the sides. The sight makes you have second thoughts, and you step away from the footwear.";
 	else:
 		say "     As you bend to pick up the pair of sport shoes, you notice that they are made of rubber. You have never seen footwear such as this. You pick them up and turn around, in order to ask whose shoes it is. The locker-room being in its usual state of chaotic orgy and football chatter, you abandon the idea and stash the shoes in your bag.";
-		increase carried of rubber sneakers by 1;
+		ItemGain rubber sneakers by 1;
 
 Instead of using the rubber sneakers:
 	if the rubber sneakers are equipped:

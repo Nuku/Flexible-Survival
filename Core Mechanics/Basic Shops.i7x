@@ -23,7 +23,7 @@ Carry out BuyingAction:
 			say "You can't afford the [Name entry], it costs [price entry] freecred.";
 			continue the action;
 		say "You purchase [Name entry] for [price entry] creds.";
-		add Name entry to invent of Player;
+		ItemGain Name entry by 1 silently;
 		decrease freecred by price entry;
 	else if price sign is visible: [Zephyr store in Zephyr Lobby; see file Zephyr Inc.i7x]
 		if the noun is an object listed in the table of zephyr goods:
@@ -38,7 +38,7 @@ Carry out BuyingAction:
 		if Name entry is "Zephyr Personal Communicator":
 			now carried of zpc is carried of zpc + 1;
 		else:
-			add Name entry to invent of Player;
+			ItemGain Name entry by 1 silently;
 		if Name entry is "nanite collector", now nanitemeter is 2;
 		if Name entry is "pepperspray", increase pepped by 1;
 		decrease freecred by price entry;
@@ -52,7 +52,7 @@ Carry out BuyingAction:
 			say "You can't afford the [Name entry], it costs [price entry] food.";
 			continue the action;
 		say "You purchase [Name entry] for [price entry] food.";
-		add Name entry to invent of Player;
-		decrease carried of food by price entry;
+		ItemGain Name entry by 1 silently;
+		ItemLoss food by price entry silently;
 
 Basic Shops ends here.

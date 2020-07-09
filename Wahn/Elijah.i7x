@@ -105,7 +105,7 @@ Instead of resolving a Angel vs Demons:
 		LineBreak;
 		say "     When you finally manage to get free a bit later, you're alone between the burning buildings. The flaming sword still sizzling in the flesh of the dead hellhound sadly isn't something you could use - it's all flame, even the grip. Looking down the street where the demons went, you see the [bold type]Burned-Out Chapel[roman type] they went into. You could follow them, if you think you're strong enough. But don't wait too long... who knows what they'll do to him.";
 		wait for any key;
-		now Burned-Out Chapel is known;
+		AddNavPoint Burned-Out Chapel;
 		move Elijah to Burned-Out Chapel;
 		now lastfuck of Elijah is turns; [to clarify: only using this for timing purposes here - he's still a virgin, they only hurt him and cum on him before the player gets to the chapel]
 		now NPCintCounter is turns;
@@ -350,12 +350,12 @@ instead of conversing the Elijah:
 							say "     You sit on the next bunk in line, eagerly watching the angel. And you don't have to wait long - a more healthy color returns to his face pretty quickly and then he opens his azure eyes. Raising his upper body a bit, supported on the bunk by one of his wings, the angel looks around, then smiles brightly at you as he notices you at his side.";
 							say "     'My name is Elijah and I thank you, my friend. I feel much better now. Although rather strange...' he says, his brows knitting as he wiggles his fingers, flexes the muscles in his arms, followed by stretching first one, then the other wing to its fullest extent. Then he lifts the blanket he's under a bit and looks down, his eyes widening suddenly.";
 							say "     'My memories are a bit woozy, but I'm sure THAT wasn't there before. Must have originated with one of the demons, but it doesn't feel evil in of itself. Curious. Oh well, I guess I'll ignore it for now and it'll be taken care of when I get home.'";
-							delete chosenmilk;
+							ItemLoss chosenmilk by 1;
 							if honeycomb is owned:
-								delete honeycomb;
+								ItemLoss honeycomb by 1;
 							else:
 								now honeygiven is true;
-							delete healing booster;
+							ItemLoss healing booster by 1;
 							now HP of Elijah is 3;
 							increase score by 20;
 						else:
@@ -380,7 +380,7 @@ to say elijah_ds_tempt:[temptation for Evil Elijah]
 		say "     You put your hand under your patient's head, raising it a bit and guide the old soda bottle holding the demon cum to his lips. Slowly, you let some of the liquid flow into his mouth until his swallowing reflex kicks in, continuing in that way until he's drunk all of what was in the bottle.";
 		say "     At first nothing happens, but then suddenly the angel's body starts convulsing on the bunk. As you hold him down, you feel waves of heat run through him, accompanying rapid physical changes. Gone is the short brown hair, its color instantly replaced by glossy blackness that extends further and further, until the hair hangs down over his shoulders. His wings react in much the same way, turning black right before your eyes...";
 		say "     And his eyes, which suddenly open and focus on you now glow in a shade of red that reminds you of fresh blood. 'Hell yeah, just what I needed,' this changed version of the angel growls. 'I'm Elijah, by the way - and I'm horny, so how about a quick fuck?'";
-		decrease carried of demon seed by 1;
+		ItemLoss demon seed by 1;
 		now HP of Elijah is 99;
 		now lastfuck of Elijah is turns + 8; [guarantee he's ready for action]
 		now HP of Gabriel is 1;
@@ -595,7 +595,7 @@ The sarea of Sweet Surprise is "Park".
 
 Instead of resolving a Sweet Surprise:
 	say "     As you're searching through the park, you come across the remains of a picnic site that's been quite torn up. There's some shreds of clothes and sticky pools of sexual fluids scattered around the torn blanket. The dishes and cutlery are scattered and all that remains of the food is crumbs. An overturned bottle of wine's left a large stain on the blanket and you spot an empty ring case beside it. It seems things did not go quite as planned for this romantic picnic, but you hope that the couple are still together in whatever new forms they've gained. You're about to leave when you spot their wicker basket knocked into the nearby bushes. Whatever dessert was once in there has spoiled and become a suspicious green mass, but next to it is a sealed container holding a large honeycomb, probably meant to be used to top the dessert with fresh honey[if HP of Elijah is 2]. Remembering that you're looking for some to possibly heal the angel, you pack it away[end if].";
-	increase carried of honeycomb by 1;
+	ItemGain honeycomb by 1;
 	increase score by 5;
 	now Sweet Surprise is resolved;
 
@@ -613,7 +613,7 @@ Instead of resolving a Examination Room:
 	challenge "Jaguar Male";
 	if fightoutcome >= 10 and fightoutcome <= 19:
 		say "     Having beaten the orderly, you give the other rooms a cursory search. As others may be drawn by the noise of the fight, you go as quick as you can. The only item of any use you're able to find is a small syringe labelled as a [']healing booster[']. Concerned that you've already tarried too long, you take it and leave.";
-		increase carried of healing booster by 1;
+		ItemGain healing booster by 1;
 		increase score by 5;
 	else if fightoutcome >= 20 and fightoutcome <= 29:
 		say "     After the jaguar is finished with you, it roughly sends you on your way, driving you off. He then heads back to the examination rooms, probably to gather up the remaining medical supplies. You head back to the entrance to rethink your next move.";
@@ -1064,7 +1064,7 @@ An everyturn rule:
 								break;
 					else if water bottle is owned:
 						say ". He turns and storms off, but not before rummaging through your pack and grabbing one of the spare bottles of water to use to clean himself up.";
-						delete water bottle;
+						ItemLoss water bottle by 1;
 				now ElijahChar-J is "4";
 				now NPCintCounter is turns;
 		if Player is in Grey Abbey Library:
@@ -1295,7 +1295,7 @@ after going inside from the Grey Abbey Library while (HP of Elijah is 99 and NPC
 						break;
 			else if water bottle is owned:
 				say ". He turns and storms off, but not before rummaging through your pack and grabbing one of the spare bottles of water to use to clean himself up.";
-				decrease carried of water bottle by 1;
+				ItemLoss water bottle by 1;
 		now ElijahChar-J is "4";
 	now NPCintCounter is turns;
 

@@ -424,7 +424,7 @@ to say ThomasTalk6:
 			LineBreak;
 			say "     With a surprised look on his face, the black centaur accepts the soda from you. 'Wow, thanks - that was quick. Are you psychic or something and saw this coming?'";
 			now ThomasQuestVar is 2;
-			decrease carried of soda by 5;
+			ItemLoss soda by 5;
 		else:
 			LineBreak;
 			say "     Nodding, Thomas says 'Thanks a lot. I'm counting on you.'";

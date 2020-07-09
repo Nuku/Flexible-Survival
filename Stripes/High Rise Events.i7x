@@ -86,9 +86,8 @@ Instead of resolving a Pigging Out:
 					now Resolution of Pigging Out is 3; [fought the pig for food, lost]
 				else:
 					say "     After defeating the pig and sending it on its way, you pick carefully through the ruined restaurant. The food in the main dining area and kitchen is all clearly tainted, but you do manage to find a little in the back of the walk-in cooler that is clean and undamaged by the gorging pig. You get enough for two meals packed away using some of the kitchenware to pack it up. While doing so, you also find a big kitchen knife that you decide to bring along.";
-					say "     Food x 2 and cleaver added to inventory.";
-					increase carried of food by 2;
-					increase carried of cleaver by 1;
+					ItemGain food by 2;
+					ItemGain cleaver by 1;
 					increase score by 5;
 					now Resolution of Pigging Out is 2; [fought the pig for food, won]
 			else:
@@ -111,9 +110,8 @@ Instead of resolving a Pigging Out:
 				now Resolution of Pigging Out is 3; [fought the pig for food, lost]
 			else:
 				say "     After defeating the pig and sending it on its way, you pick carefully through the ruined restaurant. The food in the main dining area and kitchen is all clearly tainted, but you do manage to find a little in the back of the walk-in cooler that is clean and undamaged by the gorging pig. You get enough for two meals packed away using some of the kitchenware to pack it up. While doing so, you also find a big kitchen knife that you decide to bring along.";
-				say "     Food x 2 and cleaver added to inventory.";
-				increase carried of food by 2;
-				increase carried of cleaver by 1;
+				ItemGain food by 2;
+				ItemGain cleaver by 1;
 				increase score by 5;
 				now Resolution of Pigging Out is 2; [fought the pig for food, won]
 		else:
@@ -176,12 +174,11 @@ to say dogparksearch:
 	let T be a random number between one and twelve;
 	if T is 1:
 		say "     You look around the park and are fortunately not spotted by any monsters. You search around the park, finding many signs of attacked residents. There are torn and cum-stained clothes in several clusters, along with dog leashes and collars. The area is thick with the scent of dog. You get lucky while searching around what appears to be a jogger's outfit, finding an unopened bottle of water that rolled partway under a bush.";
-		say "     Added a water bottle to your supply.";
-		increase carried of water bottle by 1;
+		ItemGain water bottle by 1;
 		increase score by 1;
 	if T is 2:
 		say "     You look around the park and are fortunately not spotted by any monsters. You search around the park, finding many signs of attacked residents. There are torn and cum-stained clothes in several clusters, along with dog leashes and collars. The area is thick with the scent of dog. You get lucky searching one pile of clothes, finding a used can of mace near the torn dress. Quite sure it would be handy, you pick it up and add it to your inventory.";
-		increase carried of pepperspray by 1;
+		ItemGain pepperspray by 1 silently;
 		increase score by 5;
 	if T is 3:
 		say "     You search around the park, finding many signs of attacked residents. There are torn and cum-stained clothes in several clusters, along with dog leashes and collars. The area is thick with the scent of dog. As you are inspecting one pile with a stick for added safety, hear the crack of a branch behind you, seeing one of the canine creatures who probably originated here. Having failed to sneak up on you, the male German shepherd approached swiftly.";
@@ -353,8 +350,7 @@ to say vetsearch:
 	decrease humanity of Player by 3;
 	if T is 1:
 		say "     You cautiously enter the veterinary hospital and look around. As you suspected, it was rather hard hit by the outbreak. You can see the tattered remains of the secretary and the vets['] clothes scattered about, as well as many dried pools of cum. The scent of feline and canine arousal is strong in the air, making the infection inside you tingle. Feeling you shouldn't stay long, you scout around and are fortunate to find a medical supply kit that is suitable for your needs. You tuck it under one arm and quickly head out to get some fresh air.";
-		increase carried of medkit by 1;
-		say "     Medkit obtained.";
+		ItemGain medkit by 1;
 		increase score by 3;
 	if T is 2:
 		say "     You cautiously enter the veterinary hospital and look around. As you suspected, it was rather hard hit by the outbreak. You can see the tattered remains of the secretary and the vets['] clothes scattered about, as well as many dried pools of cum. The scent of feline and canine arousal is strong in the air, making the infection inside you tingle. Feeling you shouldn't stay long, you scout around and come across some sample cans of pet food.";
@@ -362,23 +358,19 @@ to say vetsearch:
 		if doggyness is 1:
 			if kittyness is 1:		[both doggy and kitty]
 				say "     At this moment at least, the warring feline and canine urges within you are in harmony and you feel a hunger for all the sample food items. It seems you have enough feline and canine aspects within you that you find the pet food appetizing and are willing to add it to your supply. As they are sealed and were probably canned months before the outbreak in another city, you feel they are safe to eat. You quickly stuff them all into your bag and head back outside before the scents filling the veterinary hospital get to be too much and you give in to the urges.";
-				say "     You obtain the equivalent of 3 food.";
-				increase carried of food by 3;
+				ItemGain food by 3;
 				increase score by 5;
 			else:						[just doggy]
 				say "     Looking over the cans of dog food, your tummy rumbles. It seems you have enough canine aspects within you that you find the dog food appetizing and are willing to add it to your supply. As they are sealed and were probably canned months before the outbreak in another city, you feel they are safe to eat. You quickly stuff them into your bag and head back outside before the scents filling the veterinary hospital get to be too much and you give in to the urges.";
-				say "     You obtain the equivalent of 2 food.";
-				increase carried of food by 2;
+				ItemGain food by 2;
 				increase score by 3;
 		else if kittyness is 1:				[just kitty]
 			say "     Looking over the cans of cat food, your tummy rumbles. It seems you have enough feline aspects within you that you find the cat food appetizing and are willing to add it to your supply. As they are sealed and were probably canned months before the outbreak in another city, you feel they are safe to eat. You quickly stuff them into your bag and head back outside before the scents filling the veterinary hospital get to be too much and you give in to the urges.";
-			say "     You obtain the equivalent of 2 food.";
-			increase carried of food by 2;
+			ItemGain food by 2;
 			increase score by 3;
 		else if hunger of Player > 49:		[starving]
 			say "     You look at the cans of pet food for a moment and your stomach rumbles. Despite being pet food, you are very hungry and need something to eat. As they are sealed and were probably canned months before the outbreak in another city, you feel they are safe to eat. Resigned to your fate, you take one of the cans and add it to your supply. You then quickly head back outside before the scents filling the veterinary hospital get to be too much and you give in to the urges.";
-			say "     You obtain the equivalent of 1 food.";
-			increase carried of food by 1;
+			ItemGain food by 1;
 			increase score by 1;
 		else:							[not a kitty or doggy, nor starving]
 			say "     You look at the cans of pet food briefly, then turn and continue searching. You haven't sunk that low yet. A quick look around the rest of the room finds nothing else of interest. Unsuccessful, you quickly head back outside before the scents filling the veterinary hospital get to be too much and you give in to the urges.";
@@ -459,8 +451,7 @@ when play begins:
 
 Instead of resolving a Golf Store:
 	say "     While passing down the street, hear a growing sound, like many hard objects striking the pavement again and again. As the sound draws closer, you look around for a place to hide and duck into a small golf store. Peering from behind a display case, you see a small herd of horsemen clomping through the street. They seem in good spirits, but are watchful and some at the edge of the herd are on the lookout. Something in their look tells you to remain hidden, which is later confirmed when you see a few half-changed prisoners at the center of the herd. You continue to watch from the shadow until they're gone. As they march out of earshot, you relax and take a moment to look around the golf store you'd hidden in. You grab a sturdy looking 9-iron from the display, your mind focused on arming yourself after seeing the herd.";
-	say "     Golf club obtained.";
-	increase carried of golf club by 1;
+	ItemGain golf club by 1;
 	increase score by 5;
 	now Golf Store is resolved;
 
@@ -540,7 +531,7 @@ Instead of resolving a Cameo:
 						if morale of Player > 0, now morale of Player is 0;
 						say "You feel much better after having your snack.";
 					increase morale of Player by 1;
-					increase carried of chips by 2;
+					ItemGain chips by 2 silently;
 					increase score by 15;
 				else:
 					say "     Outside, you give in and satisfy your craving for chocolate by stuffing yourself with the small cameo pack. The fine chocolates are quite delicious. You store the rest for later consumption. While not very nutritious, you still have enough chocolates and almond bark to be equivalent to roughly one meal.";
@@ -549,7 +540,7 @@ Instead of resolving a Cameo:
 						increase morale of Player by 15;
 						if morale of Player > 0, now morale of Player is 0;
 						say "You feel better having eaten.";
-					increase carried of food by 1;
+					ItemGain food by 1 silently;
 					increase score by 5;
 	if choclabfight is 0:
 		say "     Managing to outmaneuver the chocolate dogs, you push your way out of the store and into the courtyard around the shops. Looking back, you spot the dogs pressed up against the glass, leaving chocolate streaks on windows before they hop down and return to their lustful consumption of the chocolates. You are quite certain there will be nothing left in the store except for the white chocolate stains from their sexual play as they celebrate their victory at defending their delicious prize.";

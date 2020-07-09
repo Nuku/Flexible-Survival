@@ -178,7 +178,7 @@ to say MelanieTalk3: [ask to meet Mr. B]
 			say "Branson tells you that the data-store device spun up without any problem at all and his girls are already working on making use of it.";
 		else if carried of city datastore is 1:
 			say "Branson is all smiles as you lift the heavy box of hard-drives onto his desk. Soon the data-store device is collected by a cute bunny-girl in a short skirt and you're sharing a glass of whiskey with the satisfied anthro crocodile.";
-			decrease carried of city datastore by 1;
+			ItemLoss city datastore by 1;
 			now HP of Melanie is 3; [delivered the data]
 		else:
 			say "you really should swing by the [bold type]City Hall Offices[roman type] in the [bold type]High Rise District[roman type] sometime soon. The businessman tells you openly that you're not the only interested party in becoming his business partner, and it'd be a shame if someone else snagged the prize before you.";
@@ -232,7 +232,7 @@ Instead of resolving a City Hall Offices:
 	say "     (You gain a city datastore device.)";
 	WaitLineBreak;
 	say "     After packing away what you came for, you spend a little more time ransacking a cubicle or two, but find nothing much of interest. Therefore the next thing to do is climb back out the window and get back to the main street. Easy in, easy out - isn't it great when a plan works out?";
-	increase carried of city datastore by 1;
+	ItemGain city datastore by 1;
 	now City Hall Offices is resolved;
 
 City Datastore is a grab object. City Datastore is not temporary.

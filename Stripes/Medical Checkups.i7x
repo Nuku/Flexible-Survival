@@ -619,15 +619,15 @@ to say Medeaadjustments:
 							if nam is "Trade medkit":
 								if carried of medkit > 0:
 									say "     You take out a medkit from your bag and hand it over to Medea. The lizard doctor takes your offered item and takes it into a nearby room. She comes back to you a moment later and places a pink capsule into your hand. 'A pleasure doing business with you,' Medea says with a smile. 'I'm sure that you'll put that to good use.'";
-									decrease carried of medkit by 1;
-									increase carried of cunt pill by 1;
+									ItemLoss medkit by 1;
+									ItemGain cunt pill by 1;
 								else:
 									say "     You shake your head, stating that you don't have any of them on you. The lizard doctor sighs in disappointment and says, 'I'm sorry then, but I'm afraid that I cannot give you any of my pills then. Perhaps next time.'";
 							if nam is "Trade healing booster":
 								if carried of healing booster > 0:
 									say "     You take out a healing booster from your bag and hand it over to Medea. The lizard doctor takes your offered item and takes it into a nearby room. She comes back to you a moment later and places a pink capsule into your hand. 'A pleasure doing business with you,' Medea says with a smile. 'I'm sure that you'll put that to good use.'";
-									decrease carried of healing booster by 1;
-									increase carried of cunt pill by 1;
+									ItemLoss healing booster by 1;
+									ItemGain cunt pill by 1;
 								else:
 									say "     You shake your head, stating that you don't have any of them on you. The lizard doctor sighs in disappointment and says, 'I'm sorry then, but I'm afraid that I cannot give you any of my pills then. Perhaps next time.'";
 							wait for any key;
@@ -649,7 +649,7 @@ to say Medeaadjustments:
 							LineBreak;
 							say "     Medea quickly takes your offered medkit over to a counter and begins tinkering with it, along with a number of other medical equipment. It only takes a few moments for the lizard doctor to come back with a needle and syringe filled with a green liquid. 'This will kill the parasite, allowing you to expel the nasty bug. I must warn you though: this will hurt,' Medea explains. She gives you a moment to steel yourself before she injects the concoction directly into your stomach. It only takes a moment for the parasite within you to violently react to Medea's treatment, and you keel over from the intense pain in your belly.";
 							say "     Thankfully, the parasite's movements and the pain dies down after a few moments. With Medea's assistance, you manage to push out a puddle of thick goo, followed by the parasite itself. It is a pale creature, looking much like a bloated, insect larva with several tiny legs and a phallic back end from which you suspect it released the [if larvalaid < 2]slimy goo[else]egg slime[end if] into you. 'Good riddance,' Medea says, glaring at the mess with scorn. She then turns to you with a cheerful smile. 'Congratulations, the treatment was a success.'";
-							decrease carried of medkit by 1;
+							ItemLoss medkit by 1;
 							now insectlarva is false;
 							now preghijack is false;
 							now mpreghijack is false;
@@ -819,8 +819,7 @@ instead of resolving an Abandoned Truck:
 			LineBreak;
 			say "You ruffle through the boxes, searching for a medkit and leaving mess in your wake.";
 			if a random chance of 3 in 8 succeeds:
-				say "You found a medkit!";
-				increase carried of medkit by 1;
+				ItemGain medkit by 1;
 			else:
 				say "You find nothing of interest.";
 			now Resolution of Abandoned Truck is 1; [searched the truck]

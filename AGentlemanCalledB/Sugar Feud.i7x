@@ -79,7 +79,7 @@ Instead of resolving a Sugar Shack:
 	else:
 		say "     Deciding not to risk spending anymore time with this giggling sugar glider, you push her hand away and make for the exit. As you're leaving the sugar glider blows a long raspberry just before something strikes you sharply in the back of the head. Turning around you see her still sticking her tongue out at you with a cute scowl, having had enough of her silly antics, you pick up the broken pieces of the lollipop she threw at you and leave the stall.";
 		now Resolution of Sugar Shack is 2; [sugar gliders refused]
-		increase carried of crushed candies by 1;
+		ItemGain crushed candies by 1;
 	now Sugar Shack is resolved;
 
 to say fullSugarGliderTF:

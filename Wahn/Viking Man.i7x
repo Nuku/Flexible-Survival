@@ -51,14 +51,10 @@ to say VikingManWins:
 to say VikingManLooting:
 	if carried of food >= 1:
 		say "     Finding some food in your pack, he puts it in his satchel and then walks away, leaving you lying in the dust without any look back.";
-		LineBreak;
-		say "[bold type]You lose 1 food![roman type][line break]";
-		decrease carried of food by 1;
+		ItemLoss food by 1;
 	else if carried of water bottle >= 1:
 		say "     Finding a bottle of water in your pack, he puts it in his satchel and then walks away, leaving you lying in the dust without a look back.";
-		LineBreak;
-		say "[bold type]You lose 1 water bottle![roman type][line break]";
-		decrease carried of water bottle by 1;
+		ItemLoss water bottle by 1;
 	else:
 		say "     Not finding anything to his liking as he throws one after another of your belongings aside, the Viking man grumbles 'What a waste of time.' Then he turns away from you and walks off, leaving you lying in the dust without any look back.";
 

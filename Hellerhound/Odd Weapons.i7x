@@ -34,8 +34,7 @@ instead of resolving a Fallen Survivor:
 	if Player consents:
 		LineBreak;
 		say "     You gather some scraps of fabric and rub away at the shield, discarding them before they can soak through and any of the gunk touches your skin. Eventually you have the thing fairly clean, enough so to handle it (you hope).";
-		say "[bold type]You gain a garbage can shield![roman type][line break]";
-		increase carried of garbage can shield by 1;
+		ItemGain garbage can shield by 1;
 	else:
 		LineBreak;
 		say "     Deciding with your better judgement, you resolve to leave the garbage can shield behind. However, you do drag it over and prop it up next to its mind-broken owner, as a bit of a warning sign for someone who might stumble over him. Sadly, this is the only tribute you can give this resourceful survivor...";
@@ -60,7 +59,6 @@ Object	Name
 Sword Nest	"Sword Nest"
 
 Sword Nest is a situation.
-gotsword is a number that varies.
 washerenest is a number that varies.
 fellforward is a number that varies.
 
@@ -146,7 +144,7 @@ instead of resolving Sword Nest:
 				randominfect;
 				say "     The infected slime changes you.";
 				wait for any key;
-			increase carried of infected sword by 1;
+			ItemGain infected sword by 1;
 			now Sword Nest is resolved;
 			now Resolution of Sword Nest is 1; [player waded in to get the sword]
 		else:
@@ -194,7 +192,6 @@ Destroyed Bushes	"Destroyed Bushes"
 Destroyed Bushes is a situation.
 the sarea of Destroyed Bushes is "Park".
 numwater is a number that varies.
-gotwhip is a number that varies.
 
 instead of resolving Destroyed Bushes:
 	say "     You come across a circle of bushes crushed flat against the ground, large pools of cum and juices in the revealed space. Horse hoof prints over the ground as well, and the imprint of a human body in one spot testifies to the fact that someone was overtaken by one of the equines.";
@@ -217,22 +214,20 @@ instead of resolving Destroyed Bushes:
 				if carried of water bottle >= 3:
 					say "     You have to use a few bottles to wash off the whip, but you manage to get it clean and safe to use.";
 					say "     You pick up the now clean whip, and place it in your backpack. It looks like a good weapon.";
-					decrease carried of water bottle by 3;
-					increase carried of horse whip by 1;
+					ItemLoss water bottle by 3;
+					ItemGain horse whip by 1;
 					now Resolution of Destroyed Bushes is 1; [cleaned the whip]
 					now Destroyed Bushes is resolved;
-					now gotwhip is 1;
 				else:
 					say "     You don't have enough water. Maybe you could come back when you find more?";
-			if gotwhip is 0:
+			if Resolution of Destroyed Bushes is 0:
 				say "     Do you wish to pick it up anyway?";
 				if Player consents:
 					say "     You pick up the dirty, cum soaked whip with difficulty as it slips about in your hand, the cum getting all over. You finally manage to get it into your backpack.";
 					infect "Black Equinoid";
 					infect "Black Equinoid";
 					infect "Black Equinoid";
-					increase carried of dirty whip by 1;
-					now gotwhip is 2;
+					ItemGain dirty whip by 1;
 					now Resolution of Destroyed Bushes is 2; [grabbed the dirty whip]
 					now the Destroyed Bushes is resolved;
 				else:

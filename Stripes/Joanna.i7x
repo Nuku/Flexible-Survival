@@ -95,7 +95,7 @@ Instead of resolving a Overrun Garden:
 			Waitlinebreak;
 			move Joanna to Flower Garden;
 			move player to Flower Garden;
-			now Flower Garden is known;
+			AddNavPoint Flower Garden;
 			say "     After a short rest, [if HP of Joanna >= 90]Joanna[else]she[end if] rolls over beside you and hugs you tightly, then kisses you softly on the cheek. 'Oh, thanks for coming to save me. I... that plant... plant?' she starts upright, noticing her changes. The plant's assault on her has left her partially a plant, with green fur over her body and her feet growing tendrils and roots. Her large eyes, like her face and the flowers blossoming in her hair, are a vibrant red, beautifully contrasting with her verdant fur. There is a little green around her eyes, much like eye shadow. Her groin, as you saw earlier, has quite dramatically changed, now having a quartet of long cock tendrils with a swollen pair of bulbs for balls. Beneath those, she has a trio of slick pussies shaped like lovely orchids[if daytimer is day]. She stretches her arms wide and sighs in pleasure, taking in the sunlight, turning slowly as her roots automatically dig into the soft soil and have to be pulled out with each step[end if].";
 			Waitlinebreak;
 			say "     'And I was just getting used to being a kinkajou,' she says with a soft giggle, walking slowly around the garden, smelling the large flowers and diving her tongue into them to enjoy their nectar. 'Mmm... this looks like a lovely garden. The perfect place for a lovely flower like me, don't you think?' she asks with a grin. '[if HP of Joanna >= 90]Be sure to tell Harold and the others at the Palomino that I'm okay[else]My name is Joanna[end if]. You're welcome to visit here again whenever you like, my brave hero,' she adds, running a green finger slowly down your chest and smiling as she sensually runs her foot-long tongue across your neck.";
@@ -430,9 +430,9 @@ instead of navigating Flower Garden while (Resolution of Spreading Flowers is 7 
 
 to SFAwesomeTree:
 	say "     With all the required items in your inventory, the next time you walk in the Flower Garden is to deliver them as soon as possible, so Joanna can get to work. You approach her spot, and she sees you coming, happy to receive you once more. 'You brought me the items I asked? Good!' She ways, with joy in her voice, before adding 'I guess we finally have everything! Seriously... Thank you!' You hand her the items, and she examines every single one of them to make sure they're undamaged and in pristine conditions. 'Looks like this is it until I have a genetic strain... I hope the method I developed is good enough... I'm getting nervous about it, now.' You figure that it's best to let her work, now. Maybe you have questions that surged through this entire process, but you won't ask them now. Only later, when she comes up with the final product.";
-	decrease carried of awesome fruit by 1;
-	decrease carried of awesomer fruit by 1;
-	decrease carried of awesomest fruit by 1;
+	ItemLoss awesome fruit by 1;
+	ItemLoss awesomer fruit by 1;
+	ItemLoss awesomest fruit by 1;
 	say "     'It will take some time before I'm able to synthesize all of these. Come back tomorrow or so! Or we can just... have some fun while we wait?' She teases you, her naked body on display with her plant-like extensions hovering around you. It seems she's open for sex during the synthesis time, if you want.";
 	now resolution of Spreading Flowers is 8;
 	now JoannaSFTimer is turns;
@@ -505,7 +505,7 @@ instead of navigating Flower Garden while (Resolution of Spreading Flowers is 10
 		LineBreak;
 		say "     Whoever she was before what she is now, is not important. So you drop the subject and after accepting her gift, you cuddle with her for a long, long time... She truly appreciates it.";
 		now resolution of Spreading Flowers is 12; [Doesn't know about Joanna's past]
-	increase carried of Plant-Like Dildo by 1;
+	ItemGain Plant-Like Dildo by 1;
 	now HP of Joanna is 12;
 	now Spreading Flowers is resolved;
 
@@ -1001,7 +1001,7 @@ Instead of resolving a Dog Chase:
 		say "     As you're traveling along, you hear the repeated call of 'Squirrel! Squirrel!' coming from nearby. Curiously cautious, you approach the sound to find a small dog-man barking the word repeatedly, running around an isolated tree. From time to time, the Jack Russell terrier tries to scramble up, but he's mostly quadrupedal and his hands are mostly paws, preventing him from getting a grip. 'Squirrel!' he barks again, finally eliciting a response from the tree's occupant[if daytimer is day]. 'Shut up, you stupid mutt! I'm trying to sleep,' a female voice yells angrily[else]. 'Shut up, you dumb mutt. I told you, I'm not a squirrel,' a female voice yells angrily[end if]. Looking at the canopy more closely, you spot a slender, feminine creature lying casually among the branches. She has short brown fur, long brown hair and a very long tail. And she still has some clothes on, so she could even be a survivor given her lack of lustful reaction to the dog.";
 		say "     Deciding to risk it, you head closer, yelling at the terrier to get out of here. He turns and growls a little at you, but when the woman leaps from the tree wielding a large branch, the dog backs off, not wanting to fight two opponents. 'Damn it,' the woman grumbles as the dog runs off. 'Guy just wouldn't shut up. Too dumb to know I'm a kinkajou and not a squirrel,' she says, turning to smile at you. 'Thanks for helping out back there. I'm Joanna, by the way.'";
 		say "     Once the introductions are aside, you chat with her a bit[if daytimer is day]. 'I'm normally trying to rest during the day, but that dummy wouldn't let me sleep. Speaking of, I should really be getting some rest. I was up all night dancing at the club[else]. 'I was on my way to club for another night of dancing when I ran into that dummy. Speaking of, I should head on over while there's still a night to dance away[end if]. Yeah, there's still a club open to hang out at, called the Palomino. I'm usually there most nights. I hope to catch you there some time[if PALOMINO is known].' You tell her that you've been there before and that you'll have to swing by to see her some time[else].' She gives you some rough directions to the place, which include stuff like [']turn at this tree['] or [']run three rooftops over['], but you're pretty sure you'll be able to sort it out and find a more conventional route there[end if]. With that, she heads off, going from a car roof to an awning and then to the top of a building before moving out of sight.";
-		now PALOMINO is known;
+		AddNavPoint PALOMINO;
 		now HP of Joanna is 90;
 		now joannadogsaved is true;
 		now Resolution of Dog Chase is 1; [saved Joanna]

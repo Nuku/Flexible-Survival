@@ -203,7 +203,11 @@ to say doberman male cum use:
 	PlayerDrink 5;
 	SanLoss 5;
 	if "Iron Stomach" is not listed in feats of player:
+		setmonster "Doberman Bitch";
+		choose row MonsterID from the Table of Random Critters;
+		now non-infectious entry is false;
 		infect "Doberman Bitch";
+		now non-infectious entry is true;
 
 instead of sniffing doberman male cum:
 	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
