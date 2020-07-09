@@ -3,6 +3,7 @@ Version 3 of Kyrverth by Speedlover begins here.
 [Version 2 of Kyrverth - Massive Overhaul, took goddamn forever to do. Massive improvements, adds stages 4-6 and unique items, reworked chat function(s),
 Add first ending, add cock/wing/horns tf to description (for later inclusion), add Black Pearl by Lone Wanderer	]
 [Version 3 of Kyrverth - Added cock/wings/horns/balls TFs and multiple tweaks for readability and improving the story. Also reduced difficulty to make it a bit less grindy to finish Kyrverths arc.]
+[Todo - Sex scenes, fleshed out backstory and a purpose for the dragon in the city, 															]
 []
 [Kyrverth 'The Firebreather' - NPC.	Sex - Male	Fightable - No	]
 [Orientation - Straight (at first)		Infectious - Not at the moment]
@@ -60,8 +61,8 @@ Kyrverth is a man. The hp of Kyrverth is usually 0.
 ScaleValue of Kyrverth is 2. [4ft tall to start, Starts small and grows with Kyrverthstage, goes from 2->5]
 SleepRhythm of Kyrverth is 0. [0 - awake at all times, 1 - day active, 2 - night active]
 Cock Count of Kyrverth is 1. [One cock]
-[Cock Length of Kyrverth is 0. [Starts small and grows with Kyrverthstage]
-Ball Size of Kyrverth is 0. [Starts small and grows with Kyrverthstage] COMMENTED FOR NOW, CHANGES THROUGH THE FILE]
+Cock Length of Kyrverth is 4. [Starts small and grows with Kyrverthstage]
+Ball Size of Kyrverth is 2. [Starts small and grows with Kyrverthstage]
 Ball Count of Kyrverth is 2. [2 Balls, they change size as you go.]
 Cunt Count of Kyrverth is 0. [No cunt]
 Cunt Depth of Kyrverth is 0. [No cunt]
@@ -159,7 +160,7 @@ to say KyrverthDesc:
 		if KyrverthBodyChanged is 0:
 			say "     The huge dragon [one of]has grown back to his previous size and is[or]is once again[at random] a little bit taller than a Wyvern. Curling around his hoard and the rubble that is all that remains of the building, his gigantic form is immoveable to all but the strongest infections in the city. Huge, thick scales protect his body, and when he moves around the city, he shakes the ground with every step. This paragon of dragonhood would be extremely scary if you didn't know him so well. From the massive talons as big as your leg, to the teeth as big as your arm, to the long spiked tail, you can't help but feel sorry for anything that tries to steal from Kyrverth's hoard.[line break]Once past the powerful offensive and defensive weapons Kyrverth possesses, you see a handsome muzzle, strong neck, wide scaled wings, a long tail, and an incredibly well toned and muscled body. Looking down you see a vent that you know contains a tapered, ribbed and knotted cock that's [if scalevalue of player is 1 or scalevalue of player is 2]larger than[else if scalevalue of player is 3]as big as[else if scalevalue of player is 4]almost as big as[end if][if scalevalue of player is not 5] you, and[end if][if scalevalue of player is 5]size seems to be almost too large to fit even for your massive form.[end if] two humongous cum factories stretch the dragons sack taut behind it.[line break] Kyrverth notices your gaze and turns his head, giving you a [if KyrverthMaleBoning is 0 and Cock Count of Player >= 1]smug grin[else]seductive grin, his hand drawing your gaze as it moves backwards and strokes his bulging vent[end if].";
 		else:
-			say "     The huge dragon [one of]has grown back to his previous size and is[or]is once again[at random] a little bit taller than a Wyvern. Curling around his hoard and the rubble that is all that remains of the building, his gigantic form is immoveable to all but the strongest infections in the city. Huge, thick scales protect his body, and when he moves around the city, he shakes the ground with every step. This paragon of dragonhood would be extremely scary if you didn't know him so well. From the massive talons as big as your leg, to the teeth as big as your arm, to the long spiked tail, [if KyrverthSpikeGrowth is 1]to the large horns on his head,[else if KyrverthSpikeGrowth is 2]to the large horns on his head and sharp defensive spikes that protrude through the skin down his spine and from his elbows, [end if]you can't help but feel sorry for anything that tries to steal from Kyrverth's hoard.[line break]Once past the powerful offensive and defensive weapons Kyrverth possesses, you see a handsome muzzle, strong neck, wide [if KyrverthWingType is not 1]scaled[else][one of]feathered[or]feathery[at random][end if] wings, a long tail, and an incredibly well toned and muscled body. Looking down you see a vent that you know contains a [if KyrverthCockType is 1]tapered, ribbed and knotted cock[else if KyrverthCockType is 2]pair of tapered, ribbed and knotted cocks[else if KyrverthCockType is 3]blunt, flared horsecock[else if KyrverthCockType is 4]tapered, barbed and knotted cock[else if KyrverthCockType is 5]long, tapered, prehensile and knotted cock[end if] [if scalevalue of player is 1 or scalevalue of player is 2]larger than[else if scalevalue of player is 3]as big as[else if scalevalue of player is 4]almost as big as[end if][if scalevalue of player is not 5] you, and[end if][if scalevalue of player is 5]that's size seems to be almost too large to fit even for your massive form.[end if] [if KyrverthNutGrowth is not 1]two humongous cum factories stretch the dragons sack taut behind it.[else]His balls sit behind it. Their ridiculous size looks out of proportion even on the studly dragon and if that cannon ever blew you know you would be covered from head to toe. Dangling halfway to his knees, they swing with every step and the red drake seems extremely proud of them.[end if][line break] Kyrverth notices your gaze and turns his head, giving you a [if KyrverthMaleBoning is 0 and Cock Count of Player >= 1]smug grin[else]seductive grin, his hand drawing your gaze as it moves backwards and strokes his bulging vent[end if].";
+			say "     The huge dragon [one of]has grown back to his previous size and is[or]is once again[at random] a little bit taller than a Wyvern. Curling around his hoard and the rubble that is all that remains of the building, his [one of]gigantic[or]huge[or]monumental[or]massive[at random] form is [one of]immoveable[or]impervious[at random] to all but the strongest infections in the city. Huge, thick scales protect his body, and when he moves around the city, he shakes the ground with every step. This paragon of dragonhood would be extremely scary if you didn't know him so well. From the [one of]massive[or]sharp[or]curved[at random] talons as big as your leg, to the teeth as big as your arm, to the long spiked tail, [if KyrverthSpikeGrowth is 1]to the large horns on his head,[else if KyrverthSpikeGrowth is 2]to the large horns on his head and sharp defensive spikes that protrude through the skin down his spine and from his elbows, [end if]you can't help but feel sorry for anything that tries to steal from Kyrverth's hoard.[line break]Once past the powerful offensive and defensive weapons Kyrverth possesses, you see a handsome muzzle, strong neck, wide [if KyrverthWingType is not 1]scaled[else][one of]feathered[or]feathery[at random][end if] wings, a long tail, and an incredibly well toned and muscled body. Looking down you see a vent that you know contains a [if KyrverthCockType is 1]tapered, ribbed and knotted cock[else if KyrverthCockType is 2]pair of tapered, ribbed and knotted cocks[else if KyrverthCockType is 3]blunt, flared horsecock[else if KyrverthCockType is 4]tapered, barbed and knotted cock[else if KyrverthCockType is 5]long, tapered, prehensile and knotted cock[end if] [if scalevalue of player is 1 or scalevalue of player is 2]larger than[else if scalevalue of player is 3]as big as[else if scalevalue of player is 4]almost as big as[end if][if scalevalue of player is not 5] you, and[end if][if scalevalue of player is 5]that's size seems to be almost too large to fit even for your massive form.[end if] [if KyrverthNutGrowth is not 1]two humongous cum factories stretch the dragons sack taut behind it.[else]His balls sit behind it. Their ridiculous size looks out of proportion even on the studly dragon and if that cannon ever blew you know you would be covered from head to toe. Dangling halfway to his knees, they swing and slosh with every step and the red drake seems extremely proud of them.[end if][line break] Kyrverth notices your gaze and turns his head, giving you a [if KyrverthMaleBoning is 0 and Cock Count of Player >= 1]smug grin[else]seductive [one of]grin[or]smile[at random], his [one of]hand[or]claw[or]arm[at random] drawing your gaze as it moves [one of]backwards[or]rearwards[at random] and [one of]strokes[or]caresses[at random] his bulging [one of]vent[or]nethers[at random][end if].";
 	else:
 		say "     How did you get here? Please report this to the devs on the FS Discord channel.";
 
@@ -173,7 +174,7 @@ to say KyrverthSmellDesc:
 	else if KyrverthStage is 3 or KyrverthStage is 5:
 		say "     The dragon has a [one of]thick[or]pungent[at random] musk that floods the room with a tang that invades your nostrils and causes your [if Player is male][Cock of Player] cock to engorge[else if Player is female][one of]cunt[or]vagina[or]nether regions[at random] to moisten[else]nether regions to tingle[end if].";
 	else if KyrverthStage is 4 or KyrverthStage is 6:
-		say "     The thick smell infiltrates your nose and arouses your loins. If it gets much stronger you aren't sure whether or not Kyrverth might be able to cause an orgasm through smell alone.";
+		say "     The thick smell infiltrates your nose and arouses your loins. If it gets much stronger you [one of]aren't sure whether or not[or]wonder if[at random] Kyrverth might be able to cause [one of]an orgasm[or]orgasms[at random] through smell alone.";
 
 Section 2 - Talk
 
@@ -192,6 +193,8 @@ to say KyrverthTalk: [Quest turnin check]
 		now KyrverthQuestGiven is 0;
 		now SilverToken is 0;
 		increase score by 10;
+		now Cock Length of Kyrverth is 8;
+		now Ball Size of Kyrverth is 3;
 		now KyrverthTimer is turns;
 	else if (carried of stray links >= 3 and KyrverthStage is 1 and KyrverthQuestGiven is 1): [Quest 2 end]
 		say "     [bold type]Aware of the three links of chainmail in your backpack, you [one of]wonder whether to give[or]consider giving[or]think about giving[at random] them to Kyrverth[roman type][line break]";
@@ -210,6 +213,9 @@ to say KyrverthTalk: [Quest turnin check]
 			now KyrverthStage is 2;
 			now KyrverthQuestGiven is 0;
 			increase score by 15;
+			now Cock Length of Kyrverth is 16;
+			now Ball Size of Kyrverth is 4;
+			now ScaleValue of Kyrverth is 3;
 			now KyrverthTimer is turns;
 			move player to High Rise District;
 		else:
@@ -232,6 +238,9 @@ to say KyrverthTalk: [Quest turnin check]
 		now KyrverthStage is 3;
 		now KyrverthTimer is turns;
 		EnableKyrverthItemEvents;
+		now ScaleValue of Kyrverth is 4;
+		now Cock Length of Kyrverth is 28;
+		now Ball Size of Kyrverth is 5;
 		WaitLineBreak;
 	else if Kyrverthitemget is not 0 and KyrverthStage is 3:
 		say "     As you are about to talk to Kyrverth, you are reminded of the [KyrverthItemSay]. [bold type]Should you give it to him?[roman type][line break]";
@@ -248,6 +257,9 @@ to say KyrverthTalk: [Quest turnin check]
 			now KyrverthTimer is turns;
 			now KyrverthStage is 4;
 			increase score by 10;
+			now ScaleValue of Kyrverth is 5;
+			now Cock Length of Kyrverth is 60;
+			now Ball Size of Kyrverth is 7;
 			move player to High Rise District;
 		else:
 			say "[KyrverthNormalChat]";
@@ -546,6 +558,7 @@ to KyrverthCockDoubling:
 	say "     As you pull the pills out of your pack you hold them out to the dragon, telling him to enjoy. They look comically small in his claw but he quickly swallows them and moves to walk away. Two steps is all it takes before he begins to feel something. He stops and you can see from the rear as his sheath begins to enlarge. Your mind immediately goes to his cock and you wonder how much bigger he is going to get – he wasn't exactly small before this. Unexpectedly you see two points emerge from his sheath, and TWO cocks begin to emerge from his sheath and vie for space in the open air. A grumble grabs you attention and you see Kyrverth giving you a perverse look. You know exactly what to do. Walking past his tail you reach forward and place a hand on either one. Amidst his moans of pleasure you squeeze each knot and begin stroking the shafts. Each hand makes its way down to a tip and gathers up a handful of the gushing pre, lubricating each shaft with an eager hand. You push them together and with both hands start jacking him from knot to tip. The red dragon is loving it, he humps a few times and growls in pleasure to let you know you're on the right track. You speed up your jacking, rubbing your chest against his cocks as you go. Spurts of pre fire from each one faster and harder and it isn't long before he's about to blow. As a finisher you place your arms around his two knots and hug them together – Hard. Kyrverth roars loud enough to shake the rooftops while burning hot seed pushes its way up both shafts and burts from the tips, spraying all over you.";
 	say "     Slowly your dragon lies down and draws you in next to him, placing a wing over you. Looks like you are going to take a forced break with him.";
 	ItemLoss Cock Pill by 2;
+	now Cock Count of Kyrverth is 2;
 	WaitLineBreak;
 
 to KyrverthCockPrehensiling:
@@ -1090,7 +1103,7 @@ Instead of resolving a Valuable Stables Artifact:
 			now Resolution of Valuable Stables Artifact is 1; [Did not steal the artifact]
 		ResolveKyrverthItemEvents;
 
-[KyrverthSecretDebugCheat is an action applying to nothing.
+[KyrverthSecretDebugCheat is an action applying to nothing. [Uncomment this when testing, comment for live game.]
 understand "KyrverthSecretDebugCheat" as KyrverthSecretDebugCheat.
 
 check KyrverthSecretDebugCheat:
@@ -1111,7 +1124,7 @@ carry out KyrverthSecretDebugCheat:
 	ItemGain Eagle Feather by 4;
 	ItemGain Demon Seed by 4;
 	ItemGain Bunweiser Beer by 4;
-	say "    Adding Quest Items to Inventory!"]
+	say "     Adding Quest Items to Inventory!"]
 
 KyrverthStealing is an action applying to nothing. [Trying to catch whatever the player puts for stealing the artifact back]
 understand "steal it back" as KyrverthStealing.
@@ -1149,6 +1162,9 @@ carry out KyrverthStealing:
 		LineBreak;
 		say "     [bold type][KyrverthItemSay] Added to Inventory.[roman type][Line Break]";
 		now KyrverthItemStealable is False;
+		now ScaleValue of Kyrverth is 4;
+		now Cock Length of Kyrverth is 28;
+		now Ball Size of Kyrverth is 5;
 		WaitLineBreak;
 		move player to Grey Abbey Library;
 		increase score by 5;
@@ -1199,6 +1215,9 @@ carry out KyrverthItemReturn:
 			now KyrverthItemReturned is 1;
 			now KyrverthLockoutTimer is turns;
 			now KyrverthStage is 6;
+			now ScaleValue of Kyrverth is 5;
+			now Cock Length of Kyrverth is 60;
+			now Ball Size of Kyrverth is 7;
 			increase score by 2;
 			move player to Grey Abbey Library;
 		else:
