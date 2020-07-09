@@ -57,8 +57,8 @@ Kyrverth	"Kyrverth"
 [Compulsory Variables here:														]
 Kyrverth is a man. The hp of Kyrverth is usually 0.
 [Physical details as of game start]
-[ScaleValue of Kyrverth is 2. [4ft tall to start, Starts small and grows with Kyrverthstage, goes from 2->5]]
-[SleepRhythm(0) [0 - awake at all times, 1 - day active, 2 - night active]]
+ScaleValue of Kyrverth is 2. [4ft tall to start, Starts small and grows with Kyrverthstage, goes from 2->5]
+SleepRhythm of Kyrverth is 0. [0 - awake at all times, 1 - day active, 2 - night active]
 Cock Count of Kyrverth is 1. [One cock]
 [Cock Length of Kyrverth is 0. [Starts small and grows with Kyrverthstage]
 Ball Size of Kyrverth is 0. [Starts small and grows with Kyrverthstage] COMMENTED FOR NOW, CHANGES THROUGH THE FILE]
@@ -505,68 +505,68 @@ to BodyModCheck:
 		say "[KyrverthS6Chat]";
 
 to KyrverthBallGrow:
-	decrease carried of Bunweiser Beer by 2;
 	say "     The big dragon doesn't hesitate, he sees beer coming out of your pack and immediately chugs the lot before you have a chance to warn him. Throwing the empty kegs away he burps loudly and the two of you begin to go back to what you were doing. You quickly look back again when you hear a burping sound, but this one is quieter and doesn't stop after a few seconds. You both quickly pinpoint where the sound is coming from and Kyrverth raises his leg as he turns his head to look at his groin. Just behind his slowly emerging cock a bulge begins to grow. His balls used to be proportional to his body but as you both watch in amazement they slowly expand and move down until the body can contain them no longer and the dragons sack suddenly increases in size to match. This isn't the end though and they continue to grow, expanding until the ballsack is stretched taut around the spheres. As the growth finally shows signs of finishing turns into a roar and all the pressure moves from internal to external, Kyrverth spraying thick spurts of cum around the room for a couple of minutes until everything in front of him is covered in his ejaculate. Looking at his newly enlarged balls he rumbles 'This looks like fun' as cum drips and pools on the floor.";
 	now KyrverthNutGrowth is 1;
+	ItemLoss Bunweiser Beer by 2;
 	WaitLineBreak;
 
 to KyrverthHornGrow:
 	if KyrverthSpikeGrowth is 0: [Spikes, either head spikes or head and spine.]
-		decrease carried of Demon Seed by 2;
 		now KyrverthSpikeGrowth is 1;
 		say "     'Demons huh, I wonder what it will do?' the dragon says, gesturing for you to pass the vials over. You slowly uncork each one and slowly hand them to him, watching the seed disappear down his [one of]gullet[or]throat[or]neck[at random]. The last vial disappears as quickly as the first and you both take a seat to watch what follows    ...Seemingly nothing at first. You sit there in companionable silence for a few minutes, stillness broken only by the dragon scratching at his head every 30 seconds or so. 'I can't help it' he complains 'it itches'. Your eyes automatically follow his claw when he scratches, and a white patch catches your attention when his hand finishes scratching. You point it out as it begins to bulge against his skin. 'Whoa, what?' he looks around and spots a nearby reflective surface, staring at it as you watch the point break through his skin together. Slowly a point becomes a stub, a stub becomes a little horn, and a little horn grows into two large curved devil horns. Kyrverth swings his head around, testing the new weight. 'I can see these coming in handy, especially if one of those easterns comes knocking, could really do some damage with these...";
+		ItemLoss Demon Seed by 2;
 		if carried of Demon Seed >= 2:
 			say "     You suddenly remember you have a second set of vials in the pocket of your bag, should you mention them to the horny dragon?";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if player consents:
-				decrease carried of Demon Seed by 2;
 				say "You grab the vials and hand them to the eager dragon who drinks them down as quickly as he can. The effect is quicker this time 'My back!' he shouts. He twists his body half around to look at himself, giving you a good view of his spine as spikes push through the scales at regular intervals. Kyrverth shakes his back a few times to get used to the weight and inspects one of the ones on his tail. 'Now this could be really helpful if I get ambushed again, help keep them off my back'";
 				now KyrverthSpikeGrowth is 2;
+				ItemLoss Demon Seed by 2;
 			else:
 				say "     Deciding against it, you leave the second set of vials in your bag.";
 		WaitLineBreak;
 	else if KyrverthSpikeGrowth is 1:
-		decrease carried of Demon Seed by 2;
 		say "You grab the vials from your pack and hand them to the eager dragon who drinks them down as quickly as he can. The effect is quicker this time 'My back!' he shouts. He twists his body half around to look at himself, giving you a good view of his spine as spikes push through the scales at regular intervals. Kyrverth shakes his back a few times to get used to the weight and inspects one of the ones on his tail. 'Now this could be really helpful if I get ambushed again, help keep them off my back'";
 		now KyrverthSpikeGrowth is 2;
+		ItemLoss Demon Seed by 2;
 		WaitLineBreak;
 
 to KyrverthWingChange:
-	decrease carried of Eagle Feather by 2;
 	say "     You know you don't want to be anywhere nearby when he begins to change so you leave the feathers in a small bag in the doorway to his den and hide nearby. Worryingly the dragon doesn't return for a while. Quite a while. In fact he takes so long that by time he does return you have started to doze off. What wakes you is an almighty 'ACHOO' and as you look up you see the dragon with feathers in his nostrils - the bag on the ground ripped open and mostly empty. As you watch the feathers don't move at all when the dragon sneezes, and go flying up his nostrils each time he breathes in. You are worried about the feathers being a breathing hazard and almost step out of your hidey hole but you spot a feather stick to the side of one nostril and melt into his skin. Hoping that the rest of the feathers have done similar you stay in your hiding spot and continue watching. First the dragons wings gain a little fuzz - not a whole lot, certainly not enough for Kyrverth to notice while he is sneezing and pawing at his nose with a paw, but slowly the fuzz becomes more solid and before you can say 'chicken!' full size feathers are growing into place over his wings.";
 	say "     The dragon doesn't even notice when black highlights grow in next to the red feathers, it's only when he clears his nose and folds them back in to head inside he feels the strange sensation of feather on [one of]skin[or]scale[at random]. 'What the... when did this happen!?' he shouts. He swings them out and stares at them, flaps them around to test them, then walks inside to examine them closer at which point you lose sight of him.";
 	say "     You make a mental note to get up close to the dragon in a little while to see the feathered appendages up close and see the dragons reaction to them.";
 	now KyrverthWingType is 1;
+	ItemLoss Eagle Feather by 2;
 	WaitLineBreak;
 
 to KyrverthCockDoubling:
-	decrease carried of Cock Pill by 2;
 	now KyrverthCockType is 2;
 	say "     As you pull the pills out of your pack you hold them out to the dragon, telling him to enjoy. They look comically small in his claw but he quickly swallows them and moves to walk away. Two steps is all it takes before he begins to feel something. He stops and you can see from the rear as his sheath begins to enlarge. Your mind immediately goes to his cock and you wonder how much bigger he is going to get – he wasn't exactly small before this. Unexpectedly you see two points emerge from his sheath, and TWO cocks begin to emerge from his sheath and vie for space in the open air. A grumble grabs you attention and you see Kyrverth giving you a perverse look. You know exactly what to do. Walking past his tail you reach forward and place a hand on either one. Amidst his moans of pleasure you squeeze each knot and begin stroking the shafts. Each hand makes its way down to a tip and gathers up a handful of the gushing pre, lubricating each shaft with an eager hand. You push them together and with both hands start jacking him from knot to tip. The red dragon is loving it, he humps a few times and growls in pleasure to let you know you're on the right track. You speed up your jacking, rubbing your chest against his cocks as you go. Spurts of pre fire from each one faster and harder and it isn't long before he's about to blow. As a finisher you place your arms around his two knots and hug them together – Hard. Kyrverth roars loud enough to shake the rooftops while burning hot seed pushes its way up both shafts and burts from the tips, spraying all over you.";
 	say "     Slowly your dragon lies down and draws you in next to him, placing a wing over you. Looks like you are going to take a forced break with him.";
+	ItemLoss Cock Pill by 2;
 	WaitLineBreak;
 
 to KyrverthCockPrehensiling:
-	decrease carried of Dolphin Milk by 2;
 	say "     Pulling the vials of milk from your pack and handing them to the dragon, you watch as the Dolphin Milk is instantly sent on its way down his throat. He swallows with a loud 'gulp' and starts walking away but only gets a few steps before he slows to a stop and lets out a loud moan. Quickly his cock extends from his sheath and quickly reaches its full size – and beyond!  The girth of the mighty cock doesn't seem to change, but it lengthens and begins to twitch. 'Wait a minute!' - the cock twitches. 'huh' - the cock twitches again. 'I can control this!' he exclaims.";
 	say "     His dick now acting more like a tentacle than a cock, he makes it twist and turn in the open air with a giddy kind of joy. Watching intently, you sidle up to him and mention that he could move his cock while... [bold type]inside[roman type] someone. Eyes widen. He freezes. Realisation hits.";
 	say "     'I have to try this out!' he shouts, running outside. You give chase but by the time you get outside he is alrady up in the air and disappearing into the distance.";
+	ItemLoss Dolphin Milk by 2;
 	now KyrverthCockType is 5;
 	WaitLineBreak;
 
 to KyrverthCockBarbing:
-	decrease carried of Tiger Patch by 2;
 	say "     Pulling the patches from your pack, you don't even finish telling him he can have them before they are on their way down his throat. He begins to walk away but two steps is all it takes before he begins to feel something. He stops and you can see from behind him as his sheath twitches and pulses. He turns his neck around to watch and his sheath continues to pulse, growing and shrinking rhythmically. 'What was that? It feels weird.' you begin to tell him where you got it from but he stops you halfway through 'It's stopped!'. Both of your attentions are drawn to the end of his sheath where the tip of his cock is beginning to emerge. It seems that while it has been hidden away it has undergone some changes: the ribs that used to be on the underside of the cock have shrunk and moved to either side and where they used to be there is now a group of large barbs. Kyrverth gently moves his claw and strokes his cock, flattening the barbs on the way down and catching them on the way back up.";
 	say "     'I cant wait to try this out!' he shouts, jogging outside. You give chase to try and watch but by the time you get outside he is up in the air and disappearing into the distance.";
+	ItemLoss Tiger Patch by 2;
 	now KyrverthCockType is 4;
 	WaitLineBreak;
 
 to KyrverthCockHorsing:
-	decrease carried of Zebra Fur by 2;
 	say "     You grab the fur and walk towards Kyrverth, walking straight past his questions and under his chest. The fur goes on the ground and both hands migrate to his sheath. A quick rub gets the tip of his cock to emerge and you begin to collect precum. First you get the entire cock lubricated then take a big glob of pre in your hand to grab the zebra fur. It's a bit messy at first but you rub the fur all over and slowly you find yourself holding less and less fur as it seems to sink into the dragons genitals. Soon you run out of fur and you step back and watch the changes happen. Black splotches appear all over the pink shaft in random locations and most of the ribs along the shaft smooth out. Kyrverth is far from oblivious and pants a 'Feels weird' at you as the rib at the center of his shaft bulges out even more than it did before. With a gasp his knot begins to move down his shaft, losing only a tiny bit of size at first as it goes but leaving behind no taper. Fully half of the knot is left when it reaches the end of the shaft at which point it blunts the head and forms a large flare. You take a few steps back as he erupts and large spurts of cum jet forward.";
 	say "     Kyrverth has twisted his neck around to be able to see his cock and has been watching intently as it blows. 'This looks like it will be fun, shall we try it out?'. His head turns and he looks at you with a lecherous grin while his dripping horsecock swings in the open air.";
+	ItemLoss Zebra Fur by 2;
 	now KyrverthCockType is 3;
 	WaitLineBreak;
 
@@ -1101,16 +1101,16 @@ carry out KyrverthSecretDebugCheat:
 	say "     KyrverthQuestGiven: [KyrverthQuestGiven]";
 	say "     KyrverthItemGet: [KyrverthItemget]";
 	say "     KyrverthRandomEncounter: [KyrverthRandomEncounter]";
-	increase carried of Stray Links by 10;
-	increase carried of Dragon Hair by 10;
-	increase carried of Dragon Scale by 10;
-	increase carried of Zebra Fur by 4;
-	increase carried of Tiger Patch by 4;
-	increase carried of Dolphin Milk by 4;
-	increase carried of Cock Pill by 4;
-	increase carried of Eagle Feather by 4;
-	increase carried of Demon Seed by 4;
-	increase carried of Bunweiser Beer by 4;
+	ItemGain Stray Links by 10;
+	ItemGain Dragon Hair by 10;
+	ItemGain Dragon Scale by 10;
+	ItemGain Zebra Fur by 4;
+	ItemGain Tiger Patch by 4;
+	ItemGain Dolphin Milk by 4;
+	ItemGain Cock Pill by 4;
+	ItemGain Eagle Feather by 4;
+	ItemGain Demon Seed by 4;
+	ItemGain Bunweiser Beer by 4;
 	say "    Adding Quest Items to Inventory!"]
 
 KyrverthStealing is an action applying to nothing. [Trying to catch whatever the player puts for stealing the artifact back]
@@ -1178,8 +1178,8 @@ carry out KyrverthItemReturn:
 				LineBreak;
 				say "     [bold type]You decide to return to the Library, giving him some time to rest.[roman type]";
 				WaitLineBreak;
-				increase carried of food by 5;
-				increase carried of water bottle by 5;
+				ItemGain food by 5;
+				ItemGain water bottle by 5;
 				now KyrverthItemReturned is 2;
 			else:
 				say "     [bold type]Rolling [Randomcharvar]/30 + Charisma of [charisma of player] vs 30: Failed[roman type]";
