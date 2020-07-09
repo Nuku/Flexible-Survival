@@ -30,22 +30,29 @@ Table of GameCharacterIDs (continued)
 object	name
 Cynthia	"Cynthia"
 
-Cynthia is a woman. The hp of Cynthia is usually 0.
-[Physical details as of game start]
+Cynthia is a woman.
 ScaleValue of Cynthia is 3. [human sized]
-SleepRhythm of Cynthia is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Cynthia is 0. [no cock]
-Cock Length of Cynthia is 0. [no cock length]
-Ball Size of Cynthia is 0. [no ball size]
-Ball Count of Cynthia is 0. [no balls]
-Cunt Count of Cynthia is 1. [1 pussy]
-Cunt Depth of Cynthia is 8. [gets stretched a bit by an alpha husky]
-Cunt Tightness of Cynthia is 3. [gets stretched a bit by an alpha husky]
-Nipple Count of Cynthia is 2. [2 nipples]
-Breast Size of Cynthia is 2. [B cup at the start]
+Body Weight of Cynthia is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Cynthia is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Cynthia is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Cynthia is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Cynthia is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Cynthia is 5. [length in inches]
+Breast Size of Cynthia is 2. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Cynthia is 2. [count of nipples]
+Asshole Depth of Cynthia is 8. [inches deep for anal fucking]
+Asshole Tightness of Cynthia is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Cynthia is 0. [number of cocks]
+Cock Girth of Cynthia is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Cynthia is 0. [Length in Inches]
+Ball Count of Cynthia is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Cynthia is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Cynthia is 1. [number of cunts]
+Cunt Depth of Cynthia is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Cynthia is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Cynthia is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Cynthia is false. [can not take oversized members without pain]
-Sterile of Cynthia is true.
 PlayerMet of Cynthia is false.
 PlayerRomanced of Cynthia is false.
 PlayerFriended of Cynthia is false.
@@ -56,7 +63,9 @@ Virgin of Cynthia is false.
 AnalVirgin of Cynthia is false.
 PenileVirgin of Cynthia is true.
 SexuallyExperienced of Cynthia is true.
-MainInfection of Cynthia is "Human".
+TwistedCapacity of Cynthia is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Cynthia is true. [steriles can't knock people up]
+MainInfection of Cynthia is "".
 The description of Cynthia is "[CynthiaDesc]".
 The conversation of Cynthia is { "Interesting" }.
 The scent of Cynthia is "     Cynthia smells very strongly of wolves, which is not surprising considering how much time she spends around them".
