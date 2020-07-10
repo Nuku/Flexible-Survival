@@ -22,13 +22,12 @@ Version 2 of Diego by Wahn begins here.
 
 Section 1 - Diego
 
-Diegotalk is a number that varies.
 CoyoteTricks is a number that varies.
 DiegoChanged is a number that varies.
 DiegoBitched is a number that varies.
 DiegoFucked is a number that varies.
 DiegoButtSlut is a number that varies.
-LastDiegoTricked is a number that varies. LastDiegoTricked is usually 250.
+LastDiegoTricked is a number that varies. [@Tag:NotSaved] LastDiegoTricked is usually 250.
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -91,7 +90,7 @@ a postimport rule: [bugfixing rules for players that import savegames]
 		SetMalePronouns for Diego;
 
 to say diegolinkaction:
-	if DiegoTalk is 0:
+	if PlayerMet of Diego is false:
 		say "Possible Actions: [link]talk[as]talk Diego[end link], [link]smell[as]smell Diego[end link], [link]fuck[as]fuck Diego[end link][line break]";
 	else:
 		say "Possible Actions: [link]talk[as]talk Diego[end link], [link]smell[as]smell Diego[end link], [link]fuck[as]fuck Diego[end link], [link]trick[as]trick Diego[end link][line break]";
@@ -100,7 +99,7 @@ the scent of Diego is "Diego smells like a [if DiegoChanged is 0]male[else if Di
 
 To say DiegoDesc:
 	if debugactive is 1:
-		say "DEBUG -> Diegotalk: [Diegotalk], CoyoteTricks: [CoyoteTricks], LastDiegoTricked: [LastDiegoTricked], DiegoChanged: [DiegoChanged], DiegoBitched: [DiegoBitched], DiegoFucked: [DiegoFucked], DiegoButtSlut: [DiegoButtSlut] <- DEBUG[line break]";
+		say "DEBUG -> CoyoteTricks: [CoyoteTricks], LastDiegoTricked: [LastDiegoTricked], DiegoChanged: [DiegoChanged], DiegoBitched: [DiegoBitched], DiegoFucked: [DiegoFucked], DiegoButtSlut: [DiegoButtSlut] <- DEBUG[line break]";
 		say "DEBUG -> (Traits of Diego) [traits of Diego][line break]";
 	if DiegoChanged is 2:
 		say "     The former coyote man is now a pretty tan furred coyote bitch instead, and is eyeing you eagerly as [SubjectPro of Diego] leans up against the wall dividing the park from the rest of the city. You can see one of her paws slowly straying down to her furred pussy as you approach, a smile playing across her muzzle as [SubjectPro of Diego] rubs herself teasingly.";
@@ -114,11 +113,11 @@ To say DiegoDesc:
 Section 2 - Conversation
 
 Instead of conversing the Diego:
-	if Diegotalk is 0:
+	if PlayerMet of Diego is false:
 		project the figure of Diego_face_icon;
 		say "     'Hey there,' the coyote-like man says with a grin. 'The name is Diego, my friend, and I have to say this is an unexpected surprise. Haven't seen too many people in these parts that haven't completely given into the pleasure,' Diego says as [SubjectPro of Diego] readjusts [PosAdj of Diego] position against the wall to get a better look at you. 'Can't say how long that will last, of course. You look like you like to enjoy yourself as much as anyone else around here. And well, I'd be lying if I said this wasn't the most fun I've had in my life,' [SubjectPro of Diego] says with a grin playing across [PosAdj of Diego] muzzle. 'Never been so glad to have a coyote nip me in my backyard. Course, everything seems much more amusing to me now also. Must be that whole trickster thing, eh?' The coyote man chuckles as [SubjectPro of Diego] leans back against the wall happily.";
 		say "     'Guess we will see how long you last here. Course, if ya need any advice about the creatures in the park feel, free to talk to me as much as you want. Of course I can't guarantee it will be GOOD advice - that whole trickster thing and all, ya ken?' [SubjectPro of Diego] adds with a sly wink. 'Course, ya could always just wait here until the military finally gets itself together and comes to visit. Course, if I felt like it, I could always pull out a few more coyote tricks on them. That would be sure to slow them down a bit, if ya know what I mean. I'd only do something like that as a favor to a fellow trickster,' Diego snickers at the thought of the poor, tricked military fools.";
-		increase Diegotalk by 1;
+		now PlayerMet of Diego is true;
 	else:
 		say "[DiegoTalkMenu]";
 
@@ -840,7 +839,7 @@ to say MaleDiegoSuccumbEnding:
 
 Section 5 - Events
 
-instead of navigating Park Entrance while (XP of Diego is 0 and DiegoTalk > 0 and player is not dominant and NonconList is not banned and NonconList is not warded and DiegoChanged is 0 and CoyoteTricks > 4 and a random chance of 1 in 2 succeeds):
+instead of navigating Park Entrance while (XP of Diego is 0 and PlayerMet of Diego is true and player is not dominant and NonconList is not banned and NonconList is not warded and DiegoChanged is 0 and CoyoteTricks > 4 and a random chance of 1 in 2 succeeds):
 	say "[NavCheck Park Entrance]";
 	if NavCheckReturn is false, stop the action;
 	move player to Park Entrance;

@@ -313,7 +313,7 @@ Part 13 - Tits Multiplier Injection
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Tits Multiplier Injection"	"A jar of clear liquid with two syringes coming out of the sides. On the jar itself is a huge red plus sign. The label on the back says to place the jar between where you wish for more breasts to grow and then inject the chemical into the area. Once all of the clear fluid is gone, a new pair of breasts will grow in place."	0	tits multiplier injection
+"tits multiplier injection"	"A jar of clear liquid with two syringes coming out of the sides. On the jar itself is a huge red plus sign. The label on the back says to place the jar between where you wish for more breasts to grow and then inject the chemical into the area. Once all of the clear fluid is gone, a new pair of breasts will grow in place."	0	tits multiplier injection
 
 tits multiplier injection is a grab object. It is temporary.
 
@@ -338,7 +338,7 @@ Part 14 - Tits Divider Injection
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Tits Divider injection"	"A jar of clear liquid with two syringes coming out of the sides. On the jar itself is a huge blue minus sign. The label on the back says to place the jar between your breasts and then inject the chemical into your tits. Once all of the clear fluid is gone, the row of breasts that you injected will shrink until they disappear."	0	tits divider injection
+"tits divider injection"	"A jar of clear liquid with two syringes coming out of the sides. On the jar itself is a huge blue minus sign. The label on the back says to place the jar between your breasts and then inject the chemical into your tits. Once all of the clear fluid is gone, the row of breasts that you injected will shrink until they disappear."	0	tits divider injection
 
 tits divider injection is a grab object. It is temporary.
 
@@ -404,38 +404,7 @@ Section 2 - Outfitters Rack
 
 Part 1 - zephyr bashing riot shield
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"zephyr bashing riot shield"	"[RiotShieldAttackDesc]"	4	zephyr bashing riot shield
-
-zephyr bashing riot shield is an armament. It is not temporary.
-It is part of the player. It has a weapon "[one of]your metal shield[or]your suppressive shield[or]your black shield[at random]".
-The weapon damage of zephyr bashing riot shield is 8.
-The weapon type of zephyr bashing riot shield is "Melee".
-The objsize of zephyr bashing riot shield is 4.
-
-to say RiotShieldAttackDesc:
-	say "     A black shield that zephyr's riot security use to suppress threats. This one is yours, and you've chosen to use it for bashing people out of the way. You might [link]change your mind[as]riotshieldProtectMode[end link] though, and direct your shield to more defensive purposes instead.";
-
-the scent of the zephyr bashing riot shield is "     The zephyr protective riot shield smells faintly of suppressive authority.".
-
-riotshieldProtectMode is an action applying to one topic.
-
-understand "riotshieldProtectMode" as riotshieldProtectMode.
-
-check riotshieldProtectMode:
-	if carried of zephyr bashing riot shield < 1:
-		say "     What shield? You're not holding one right now.";
-
-carry out riotshieldProtectMode:
-	if zephyr bashing riot shield is equipped:
-		now zephyr bashing riot shield is not equipped;
-		say "     You lower your shield and look at it, contemplating how you can defend yourself instead of using it as a blunt weapon.";
-	else:
-		say "     You look at your shield, contemplating how you can defend yourself instead of using it as a blunt weapon.";
-	ItemLoss zephyr bashing riot shield by 1;
-	ItemGain zephyr protective riot shield by 1;
-
+[zephyr bashing riot shield moved to Core Mechanics/Weapons.i7x]
 
 Part 2 - zephyr protective riot shield
 

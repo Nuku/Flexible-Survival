@@ -980,45 +980,23 @@ Section 4 - Finding a tool
 
 Table of GameEventIDs (continued)
 Object	Name
-unused tool	"unused tool"
+Unused Tool	"Unused Tool"
 
-an unused tool is a situation.
-The sarea of an unused tool is "Junkyard".
+Unused Tool is a situation.
+The sarea of Unused Tool is "Junkyard".
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"crowbar"	"A big, heavy crowbar. It's not sharp, but it's heavy enough to strike a good blow."	3	crowbar
-"mallet"	"A heavy mallet. If you swung it hard enough, you could easily crack someone's head open."	5	mallet
-"iron pipe"	"A piece of iron pipe. It might make an adequate blunt weapon."	3	iron pipe
-
-crowbar is a armament. It is a part of the player. It has a weapon "your crowbar". The weapon damage of crowbar is 6. The weapon type of crowbar is "Melee". It is not temporary.
-mallet is a armament. It is a part of the player. It has a weapon "your mallet". The weapon damage of mallet is 7. The weapon type of mallet is "Melee". It is not temporary.
-iron pipe is a armament. It is a part of the player. It has a weapon "your iron pipe". The weapon damage of iron pipe is 5. The weapon type of iron pipe is "Melee". It is not temporary. the objsize of mallet is 2.
-
-instead of sniffing the crowbar:
-	say "The crowbar smells of metal and motor oil.";
-
-instead of sniffing the mallet:
-	say "The mallet smells faintly of the junkyard where you found it.";
-
-instead of sniffing the iron pipe:
-	say "The iron pipe smells like old rust and whatever that hard, dry gunk inside was.";
-
-
-Instead of resolving an unused tool:
+Instead of resolving Unused Tool:
 	say "As you explore the junkyard, you come across a pile of discarded tools. You search through the pile for something interesting.";
 	let result be a random number from 1 to 3;
 	if result is 1:
-		say "Huzzah! You found a crowbar!";
-		increment carried of crowbar;
-	if result is 2:
-		say "Success! You found a mallet!";
-		increment carried of mallet;
-	if result is 3:
-		say "Yay! You found an iron pipe!";
-		increment carried of iron pipe;
-	now an unused tool is resolved;
+		ItemGain crowbar by 1;
+	else if result is 2:
+		ItemGain mallet by 1;
+	else if result is 3:
+		ItemGain iron pipe by 1;
+	now Unused Tool is resolved;
 
+[Weapons moved to Core Mechanics/Weapons.i7x]
 
 Section 5 - Find a random infected object
 

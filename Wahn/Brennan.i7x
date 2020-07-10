@@ -1400,7 +1400,7 @@ to say BrennanTinyTalk:
 	say "     Brennan raises his eyebrows and shrugs, then adds, 'I don't think Tiny even understands why exactly he is in the camp. For him, it will likely be just that he met some extremely friendly and generous people who decided to take care of him and all his needs.' Letting out a deep breath, the human survivor walks over to the nearest window and glances out over the city for a long moment. 'Just what kind of twisted individual would do all this to innocent people? Someone put a major effort into selling the story to the commanding officer of Camp Bravo, and for what? Putting countless straight men to what must be a real ordeal for them and also negating any positive things they might have achieved if they weren't busy getting pounded one after another. So, who is responsible? Could this person also be behind the outbreak itself? Those definitively are questions we should look into!'";
 
 to say BrennanDiegoTracking:
-	if Diegotalk > 0:
+	if PlayerMet of Diego is true:
 		say "     You do have a good guess about a certain coyote having posed as the doctor and wrapped Major Padgett around his furry finger - but even if you are likely right, it would be just hearsay. ";
 	else:
 		say "     Trying to find this one person in the chaos of the nanite-infested inner city is most likely futile. He might by now have changed genders, species and not even remember anything of his former life. ";

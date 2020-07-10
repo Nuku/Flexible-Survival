@@ -187,7 +187,7 @@ When Play begins:
 	now victory entry is "[losetomouse]"; [ Text when monster wins. ]
 	now desc entry is "[mousedesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "now mouse-like, with large, rounded ears, a cute little nose and twitching whiskers. Your hair has grown back in, but is long, flowing and gray. Your ears, you find, are quite sensitive and seem to resonate slightly with the calls from distant mice";
-	now body entry is "quite small, barely three feet tall. Your body has clear, womanly curves to it, with a slender, feminine waist and hips. Your hands are cute, mouse-like paws with nimble digits";
+	now body entry is "quite small in stature. Your body has clear, womanly curves to it, with a slender, feminine waist and hips. Your hands are cute, mouse-like paws with nimble digits";
 	now skin entry is "soft, gray fur over your";
 	now tail entry is "You have a long, thin tail like that of a mouse.";
 	now cock entry is "[one of]pink[or]human-like[at random]";
@@ -219,7 +219,7 @@ When Play begins:
 	now libido entry is 60; [ Target libido the infection will rise towards. ]
 	now loot entry is "cheese"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 24; [ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 1; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]curvy[or]cute[at random]";
 	now type entry is "[one of]murine[or]mouse-like[at random]";
 	now magic entry is false;

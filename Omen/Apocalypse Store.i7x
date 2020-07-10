@@ -44,7 +44,7 @@ name	desc	weight	object
 "Apocalypse Shorts"	"A pair of stretchy running shorts that have been singed and torn by an explosion. They're still wearable and the destroyed look fits in with the current situation."	1	Apocalypse Shorts
 "Apocalypse Hoodie"	"A large zippable hoodie that has been singed and torn by an explosion. It's still wearable and the destroyed look fits in with the current situation."	1	Apocalypse Hoodie
 "Apocalypse Scarf"	"A long scarf that has been torn and burnt from an explosion. It's still wearable and the destroyed look fits in with the current situation."	1	Apocalypse Scarf
-"Metal Baseball Bat"	"A slightly dented metal baseball bat, inscribed with a symbol of the local college team. It should make for a useful improvised weapon."	6	Metal Baseball Bat
+
 
 Apocalypse Skirt is a grab object.
 Apocalypse Skirt is equipment.
@@ -86,10 +86,7 @@ The descmod of Apocalypse Scarf is "A torn and burnt scarf covers your [FaceName
 The slot of Apocalypse Scarf is "face".
 the scent of Apocalypse Scarf is "There is a faint smell of smoke lingering on the item of clothing.".
 
-Metal Baseball Bat is an armament.
-It is part of the player.
-It has a weapon "dull steel". The weapon damage of Metal Baseball Bat is 5. The weapon type of Metal Baseball Bat is "Melee". It is not temporary. The objsize of Metal Baseball Bat is 2.
-Instead of sniffing Metal Baseball Bat:
-	say "The bat smells of metal and traces of smoke.";
+[Metal Baseball Bat moved to Core Mechanics/Weapons.i7x]
+
 
 Apocalypse Store ends here.

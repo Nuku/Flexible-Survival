@@ -910,7 +910,7 @@
 |Hellerhound|Power Plant|Wandering Around|room|
 |Hellerhound|Power Plant|control panels|thing|
 |Hellerhound|Power Plant|catwalk door|door|
-|Hellerhound|Power Plant|yellow helmet|Equipment|
+|Hellerhound|Power Plant|yellow construction helmet|Equipment|
 |Hellerhound|Power Plant|Administration Offices|room|
 |Hellerhound|Power Plant|Cat Key|Grab Object|
 |Hellerhound|Power Plant|Power Lines|room|

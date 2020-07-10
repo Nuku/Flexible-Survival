@@ -190,7 +190,7 @@ instead of entering the Confession Booth while AlexProgress is 4:
 	say "'Oh! Yes, I believe I know something that might help you. A man has barricaded himself inside one of the storage sheds to the north of the beach. There's a chance that he may be the one you're looking for.' You profusely thank the priestess, who waves off the praise. 'Thank the Goddess for your good fortune, not me. Stay safe and explore a newness of yourself through change, my child.'";
 
 
-instead of conversing the Diego while AlexProgress is 4 and alexdiego is 0 and diegotalk is 1:
+instead of conversing the Diego while AlexProgress is 4 and alexdiego is 0 and PlayerMet of Diego is true:
 	say "You ask Diego if he's happened to have seen anyone hiding out in the park that meets Lee's description. He shakes his head, saying he's not seen anyone like that, though you can never be certain if they changed too much.";
 	now alexdiego is 1;
 

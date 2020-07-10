@@ -797,8 +797,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is DiegoChanged;
 		-- "DiegoFucked":
 			now NumberVarValue entry is DiegoFucked;
-		-- "Diegotalk":
-			now NumberVarValue entry is Diegotalk;
 		-- "dinonest":
 			now NumberVarValue entry is dinonest;
 		-- "dnfightresult":
@@ -1611,8 +1609,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is Lastdelaymilitary;
 		-- "lastdenevent":
 			now NumberVarValue entry is lastdenevent;
-		-- "LastDiegoTricked":
-			now NumberVarValue entry is LastDiegoTricked;
 		-- "lastdobiemess":
 			now NumberVarValue entry is lastdobiemess;
 		-- "LastDrinkserved":
@@ -3262,8 +3258,6 @@ to TruthVariableSave:
 			now TruthVarValue entry is gsd_slut;
 		-- "gsd_special":
 			now TruthVarValue entry is gsd_special;
-		-- "gshep_scarscene":
-			now TruthVarValue entry is gshep_scarscene;
 		-- "gshm":
 			now TruthVarValue entry is gshm;
 		-- "gsnhm":
@@ -4475,8 +4469,6 @@ to VariableNumberLoad:
 					now DiegoChanged is numberVarValue entry;
 				-- "DiegoFucked":
 					now DiegoFucked is numberVarValue entry;
-				-- "Diegotalk":
-					now Diegotalk is numberVarValue entry;
 				-- "dinonest":
 					now dinonest is numberVarValue entry;
 				-- "dnfightresult":
@@ -5291,8 +5283,6 @@ to VariableNumberLoad:
 					now Lastdelaymilitary is numberVarValue entry;
 				-- "lastdenevent":
 					now lastdenevent is numberVarValue entry;
-				-- "LastDiegoTricked":
-					now LastDiegoTricked is numberVarValue entry;
 				-- "lastdobiemess":
 					now lastdobiemess is numberVarValue entry;
 				-- "LastDrinkserved":
@@ -6955,8 +6945,6 @@ to VariableTruthLoad:
 					now gsd_slut is TruthVarValue entry;
 				-- "gsd_special":
 					now gsd_special is TruthVarValue entry;
-				-- "gshep_scarscene":
-					now gshep_scarscene is TruthVarValue entry;
 				-- "gshm":
 					now gshm is TruthVarValue entry;
 				-- "gsnhm":

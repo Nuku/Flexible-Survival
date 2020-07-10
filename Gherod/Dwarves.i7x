@@ -1207,14 +1207,7 @@ to say DwarfMaleTF:
 
 Section 4-2 - Weapons
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"golden greathammer"	"A very well preserved, large stonehammer vastly coated in gold, with artistic details carved all over the shaft and its tip's support. It is truly a beautiful piece. It's exceptionally heavy too, making it difficult to handle."	12	golden greathammer
-
-golden greathammer is an armament. It is part of the player. It has a weapon "[one of]your golden greathammer[or]your heavy golden greathammer[or]your heavy weapon[or]your beautiful golden greathammer[at random]". The weapon damage of golden greathammer is 14. The weapon type of golden greathammer is "Melee". It is not temporary. the objsize of golden greathammer is 4. the hitbonus of golden greathammer is -2.
-
-instead of sniffing golden greathammer:
-	say "The beautiful golden greathammer smells of old, due to its age, and has an obvious trace of metallic scent.";
+[golden greathammer moved to Core Mechanics/Weapons.i7x]
 
 Section 5 - Endings
 

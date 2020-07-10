@@ -1705,16 +1705,7 @@ to VikingWomanInfect:
 	infect "Viking Woman";
 	now non-infectious entry is true;
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"viking sword"	"A beautifully crafted sword, about 30 inches long, with a keen edge to its blade. The favorite weapon of your Viking wife, Sonya, it became yours as you married. Better take good care of it - it's a pretty good weapon, well-balanced... and there might be some marital problems ahead if you let it rust or lose it."	5	viking sword
-
-viking sword is an armament.
-It is part of the player.
-It has a weapon "shining steel blade". The weapon damage of viking sword is 8. The weapon type of viking sword is "Melee". It is not temporary. The objsize of viking sword is 2.
-
-Instead of sniffing viking sword:
-	say "The blade smells of nothing but metal. Sonya always kept it clean without fail, and you've done the same since you got it.";
+[Viking Sword moved to Core Mechanics/Weapons.i7x]
 
 
 [

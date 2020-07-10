@@ -2134,43 +2134,15 @@ instead of sniffing null essence:
 
 []
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"abyssal remnant"	"A very underwhelming weapon that used to be a sword, consisting of only its hilt and a broken base of a rusted blade. It is in terrible conditions, and you doubt it has any use in battle."	2	abyssal remnant
-
-abyssal remnant is an armament.
-It is part of the player.
-It has a weapon "[one of]your broken hilt[or]your broken sword[or]your excuse of a weapon[or]your shattered half-blade[at random]". The weapon damage of abyssal remnant is 1. The weapon type of abyssal remnant is "Melee". It is not temporary. The objsize of abyssal remnant is 2.
-
-the scent of the abyssal remnant is "The broken hilt oozes off an overwhelming, and even unthinkable, scent of absolutely... nothing. It is as odorless as the Void, where it came from. It is very similar to the null essences, perhaps they are related?".
+[abyssal remnant moved to Core Mechanics/Weapons.i7x]
 
 []
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"abyssal edge"	"The enhanced version of what used to be a completely useless hilt. The abyssal edge is now a respectable sword with a dark blade, so sharp it can cut through almost anything."	4	abyssal edge
-
-abyssal edge is an armament.
-It is part of the player.
-It has a weapon "[one of]your dark sword[or]your void blade[or]your respectable black sword[or]your Abyssal Edge[at random]". The weapon damage of abyssal edge is 19. The weapon type of abyssal edge is "Melee". It is not temporary. The objsize of abyssal edge is 2.
-
-the scent of the abyssal edge is "This powerful sword still smells like absolutely nothing, but it does give you a sense of power. You have to be careful not to cut your nose trying to sniff it, though. It would be pointless, as well.".
-
-a postimport rule: [bugfixing rules for players that import savegames]
-	if Resolution of AbyssEdgeEnchantLevel > 19:
-		now weapon damage of abyssal edge is Resolution of AbyssEdgeEnchantLevel;
+[abyssal edge moved to Core Mechanics/Weapons.i7x]
 
 []
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"sharp black tusk"	"One of the tusks of the Void Serpent. It is so sharp that can be used as a quite good weapon, but it's very big and easily throws you off balance."	10	sharp black tusk
-
-sharp black tusk is an armament.
-It is part of the player.
-It has a weapon "[one of]your very sharp tusk[or]your void monster's tusk[or]your sharp black tusk[at random]". The weapon damage of sharp black tusk is 12. The weapon type of sharp black tusk is "Melee". It is not temporary. The objsize of sharp black tusk is 4. The hitbonus of sharp black tusk is -2.
-
-the scent of the sharp black tusk is "The void serpent's tusk actually manages to have a scent, despite coming from the void, and you do not like it. It's undescribably bad, something between rotten and death, even with the apparent good condition of the tusk.".
+[sharp black tusk moved to Core Mechanics/Weapons.i7x]
 
 []
 

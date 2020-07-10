@@ -1131,14 +1131,7 @@ to say alexandra_repairs:
 	follow the turnpass rule;
 	now lastpolicerepair is turns;
 
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"claw hammer"	"A carpentry hammer with a strong head and a clawed back."	3	claw hammer
-
-claw hammer is an armament. It is part of the player. It has a weapon "[one of]your hammer[or]your claw hammer[or]your carpenter's hammer[or]the hammer[or]the claw hammer[at random]". The weapon damage of claw hammer is 6. The weapon type of claw hammer is "Melee". It is not temporary.
-
-the scent of the claw hammer is "The sturdy hammer smells of metal and sweat.".
+[claw hammer moved to Core Mechanics/Weapons.i7x]
 
 
 [ ---------- Task 52 - Medical Supplies / Paula ------------ ]

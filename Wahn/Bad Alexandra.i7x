@@ -1192,7 +1192,7 @@ To impregAlexandraChance with (x - text):
 				say "     Note: She's on contraceptives, so no matter how high the chance is, it can't succeed.";
 
 an everyturn rule:
-	if Alexandra is booked and HP of Alexandra < 50:
+	if HP of Alexandra > 0 and HP of Alexandra < 50:
 		if lust of Alexandra > 0: [Alexandra is pregnant]
 			increase lust of Alexandra by 1; [counting up towards 24]
 			if debugactive is 1:

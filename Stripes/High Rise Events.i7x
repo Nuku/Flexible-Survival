@@ -131,13 +131,8 @@ to say piggycheck:	[to check if Player has a pig-like head or body]
 	if the FaceName of Player is "Piggy":
 		now tempnum is 1;
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"cleaver"	"A large kitchen knife, sharp and heavy."	2	cleaver
+[cleaver moved to Core Mechanics/Weapons.i7x]
 
-cleaver is an armament. It is part of the player. It has a weapon "[one of]your cleaver[or]your kitchen knife[or]your cleaver, screaming 'Oneida!' as you swing it[or]your large knife[or]the large blade[or]your cleaver with a heavy chop[at random]". The weapon damage of cleaver is 6. The weapon type of cleaver is "Melee". It is not temporary.
-
-the scent of the cleaver is "The heavy blade smells faintly of blood."
 
 Section 3- Small Park
 
@@ -455,13 +450,7 @@ Instead of resolving a Golf Store:
 	increase score by 5;
 	now Golf Store is resolved;
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"golf club"	"To an overpaid sports star, it is a piece of high-quality equipment meant for a game of style and skill. To you, a blunt instrument."	2	golf club
-
-golf club is an armament. It is part of the player. It has a weapon "[one of]your golf club[or]your 9 Iron[or]your golf club, getting a bit of a slice on that swing[or]your golf club, calling out FORE! and making a hard swing[at random]". The weapon damage of golf club is 5. The weapon type of golf club is "Melee". It is not temporary.
-
-the scent of the golf club is "The golf club smells faintly of grass, bad slices and bashed heads.".
+[golf club moved to Core Mechanics/Weapons.i7x]
 
 
 Section 7- Electronics Store

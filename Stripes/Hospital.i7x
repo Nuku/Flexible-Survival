@@ -147,13 +147,8 @@ Instead of resolving a Operating Room:
 	increase score by 5;
 	now Operating Room is resolved;
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"bonesaw"	"A stainless steel bonesaw used for medical procedures. A little unwieldy, but sharp."	3	bonesaw
+[bonesaw moved to Core Mechanics/Weapons.i7x]
 
-bonesaw is an armament. It is part of the player. It has a weapon "[one of]the bonesaw[or]your bonesaw[or]your medical blade[or]the stainless steel saw[at random]". The weapon damage of bonesaw is 6. The weapon type of bonesaw is "Melee". It is not temporary. The objsize of bonesaw is 2.
-
-the scent of the bonesaw is "The bonesaw smells faintly of antiseptic and blood.".
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -1628,13 +1623,8 @@ Instead of resolving a Viking Longboat:
 		now nerminepackage is 3;
 		now Viking Longboat is resolved;
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"spear"	"A Viking spear retrieved from the museum. It is in very good condition for its age."	4	spear
+[spear moved to Core Mechanics/Weapons.i7x]
 
-spear is an armament. It is part of the player. It has a weapon "[one of]your spear[or]the Viking spear[at random]". The weapon damage of spear is 9. The weapon type of spear is "Melee". It is not temporary.
-
-the scent of the spear is "The Viking spear smells of ancient battles. The scent gets your blood pumping for battle.".
 
 Instead of conversing the Nermine while nerminepackage is 3:
 	say "     'Have you been finding the dragon's eyes for Nermine?' she asks. 'Wonderful. Most beautiful,' she says as she holds them up to the light and gazes through them. 'Even older than I thought, long before put on that ship. Long history. Nermine is very pleased to have these. So much so I will give you some advice.'";

@@ -42,17 +42,8 @@ instead of resolving a Fallen Survivor:
 
 Section 2 - Infected Sword
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"infected sword"	"A sword with cloudy metal found in a sea of slime. It is infectious, and keeps changing you."	10	infected sword
+[infected sword moved to Core Mechanics/Weapons.i7x]
 
-infected sword is a armament. It is a part of the player. It has a weapon "[one of]your cloudy sword[or]your sword[or]your infected sword[or]your glowing sword[at random][hydraharming]". The weapon damage of infected sword is 16. The weapon type of infected sword is "Melee". It is not temporary. The purified of infected sword is "Nothing". The objsize of infected sword is 4.
-
-the scent of infected sword is "The infected sword smells of a myriad of musky scents, all shifting and changing. You can never seem to identify a scent before a new one appears.".
-
-instead of purifying an infected sword:
-	say "That doesn't even fit in the microwave. Also, putting metal in one is a really bad idea.";
-	stop the action;
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -163,11 +154,6 @@ An everyturn rule:
 
 Section 3 - Dirty Whip
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"dirty whip"	"A whip covered with dripping horse cum. It is infectious, and was found abandoned by its owner."	3	dirty whip
-"horse whip"	"A whip you found and cleaned up. It has metal studs on the lash."	2	horse whip
-
 [
 understand "whip" as clean whip.
 Does the player mean using the dirty whip when the dirty whip is owned: it is likely.
@@ -176,14 +162,8 @@ Does the player mean littering the clean whip when the clean whip is owned: it i
 Does the player mean grabbing the dirty whip when the dirty whip is visible: it is likely.
 Does the player mean grabbing the clean whip when the clean whip is visible: it is very likely.
 ]
+[Whip moved to Core Mechanics/Weapons.i7x]
 
-dirty whip is an armament. It is part of the player. It has a weapon "[one of]your whip[or]your cum-soaked whip[or]your messy whip[or]white streak[at random]". The weapon damage of dirty whip is 11. The weapon type of dirty whip is "Melee". It is not temporary.
-
-the scent of dirty whip is "The sticky whip smells of equine cum.".
-
-horse whip is an armament. It is part of the player. It has a weapon "[one of]your whip[or]your studded whip[or]your metallic whip[or]brown streak[at random]". the weapon damage of horse whip is 6. The weapon type of horse whip is "Melee". It is not temporary.
-
-the scent of horse whip is "The horse whip smells of leather and oils.".
 
 Table of GameEventIDs (continued)
 Object	Name
