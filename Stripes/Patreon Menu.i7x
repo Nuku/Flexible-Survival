@@ -230,9 +230,8 @@ name	desc	weight	object
 "hard hat"	"A yellow construction hard hat you've found to help protect your noggin."	2	hard hat
 
 [Dildo Club]
-dildo club is an armament. It is part of the player. It has a weapon "[one of]your phallic club[or]your purple latex club[or]your dildo club with a resounding 'Wubba-Wubba-Wubba-Thwack!' sound[or]the three-foot purple schlong[or]the floppy dildo club[or]your oversized dildo[at random]". The weapon damage of dildo club is 6. The weapon type of dildo club is "Melee". It is not temporary. the objsize of dildo club is 4.
+[dildo club moved to Core Mechanics/Weapons.i7x]
 
-the scent of the dildo club is "The sex toy club smells of latex and your humiliated foes."
 
 [Banana Peel Gun]
 banana peel gun is an armament. It is part of the player. It has a weapon "[one of]your[or]the[purely at random] [one of]strange gun[or]colorful gun[or]plastic gun[or]odd toy gun[or]plantain pistol[or]banana blaster[or]banana peel gun[or]banana peel launcher[at random], [one of]striking your foe in the face[or]tripping up your foe with a messy peel[or]causing your foe to slide into something[or]making your foe stumble and twist themselves painfully[or]causing a comedic pratfall[at random][bananerred]". The weapon damage of banana peel gun is 4. It is not temporary. It is ranged. The objsize of banana peel gun is 3.

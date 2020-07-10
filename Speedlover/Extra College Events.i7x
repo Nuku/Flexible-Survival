@@ -283,6 +283,7 @@ Dog Meets Dog	"Dog Meets Dog"
 
 Dog Meets Dog is a situation.
 The sarea of Dog Meets Dog is "Campus".
+The PrereqCompanion of Dog Meets Dog is gshep.
 
 after going east from College Campus Entrance while (LastCampusWalkin - turns > 2 and gshep is companion of Player and gsd_pet >= 60 and GibsonRelationship is 0 and a random chance of 1 in 3 succeeds):
 	DogMeetsDogEvent;

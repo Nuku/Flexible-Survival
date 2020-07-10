@@ -23,12 +23,7 @@ Instead of resolving a Fallen Kunoichi:
 	increase score by 5;
 	now Fallen Kunoichi is resolved;
 
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"bo staff"	"An ornate fighting staff. A trained martial artist could wield it with greater effectiveness."	2	bo staff
-
-bo staff is an armament. It is part of the player. It has a weapon "[one of]your bo staff[or]your fighting staff[or]your staff[or]your bo staff with a hard whack[or]the long pole[or]your staff with a fast jab[at random]". The weapon damage of bo staff is 4. The weapon type of bo staff is "Melee". It is not temporary.
+[Bo Staff moved to Core Mechanics/Weapons.i7x]
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -142,7 +137,7 @@ when play begins:
 
 instead of resolving a Trickster:
 	setmonster "Feral Wolf";
-	say "     As you are traveling along, you spot some activity in the distance. At first, fearing that it is another band of monsters, you take cover. But a few moments later, you discover it to be a small team of soldiers moving stealthily through the city. They may be doing recon or on some other kind of mission, but you may be able to get assistance, or even be rescued by them. But even as you're walking up and trying to decide how best to approach them, you see a coyote [if Diegochanged is 0]man[else if Diegochanged is 1]herm[else]woman[end if] carrying a large sack dash into their midst[if diegotalk > 0 and Diegochanged is 0]. You recognize Diego, the coyote trickster, and have to wonder what he is up to this time[else if diegotalk > 0]. You recognize Diego, the coyote trickster, and have to wonder what she is up to this time[end if][if Diegochanged is 0]. He[else]. She[end if] passes the bag quickly to a flabbergasted soldier with a quick 'Here, hold this' before continuing on with a happy chuckle.";
+	say "     As you are traveling along, you spot some activity in the distance. At first, fearing that it is another band of monsters, you take cover. But a few moments later, you discover it to be a small team of soldiers moving stealthily through the city. They may be doing recon or on some other kind of mission, but you may be able to get assistance, or even be rescued by them. But even as you're walking up and trying to decide how best to approach them, you see a coyote [if Diegochanged is 0]man[else if Diegochanged is 1]herm[else]woman[end if] carrying a large sack dash into their midst[if PlayerMet of Diego is true and Diegochanged is 0]. You recognize Diego, the coyote trickster, and have to wonder what he is up to this time[else if PlayerMet of Diego is true]. You recognize Diego, the coyote trickster, and have to wonder what she is up to this time[end if][if Diegochanged is 0]. He[else]. She[end if] passes the bag quickly to a flabbergasted soldier with a quick 'Here, hold this' before continuing on with a happy chuckle.";
 	say "     As the stunned soldiers watch the coyote run off in the direction of the city park and look at the mysterious sack, you hear some approaching howls. If you're going to get out of here, you'll have to do it right now.";
 	say "     [bold type]Do you move to join the soldiers or run and hide to watch what happens?[roman type][line break]";
 	LineBreak;
@@ -196,12 +191,7 @@ instead of resolving a Trickster:
 	now wolffight is 0;
 	now Trickster is resolved;
 
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"combat knife"	"A large combat knife in a belt holster."	2	combat knife
-
-combat knife is an armament. It is part of the player. It has a weapon "[one of]your large knife[or]your combat knife[or]the large blade[or]your combat knife with a strong thrust[or]your large blade with a quick slash[at random]". The weapon damage of combat knife is 6. The weapon type of combat knife is "Melee". It is not temporary.
+[combat knife moved to Core Mechanics/Weapons.i7x]
 
 Table of GameEventIDs (continued)
 Object	Name

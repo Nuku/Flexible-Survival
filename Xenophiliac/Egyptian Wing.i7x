@@ -696,17 +696,8 @@ to say AmuranCuntStuffed:
 
 Section X - Items
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"ancient blade"	"An ancient sword of Egyptian make, the blade looks as if it was forged yesterday. Hieroglyphics are carved into the blade, telling stories that are long forgotten."	6	ancient blade
+[Ancient Blade moved to Core Mechanics/Weapons.i7x]
 
-ancient blade is an armament.
-It is part of the player.
-It has a weapon "[one of]the ancient blade[or]the Egyptian blade[or]the warrior's blade[at random]".
-The weapon damage of ancient blade is 15.
-The weapon type of ancient blade is "Melee".
-It is not temporary.
-the scent of ancient blade is "The weapon smells of forged metal, with a hint of dirt and dust.".
 
 Table of Game Objects (continued)
 name	desc	weight	object

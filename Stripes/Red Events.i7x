@@ -294,13 +294,7 @@ to FetishStoreExploration4:
 		now Resolution of Fetish Store is 99; [no interest in the mask]
 		now Fetish Store is resolved;
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"riding crop"	"A leather riding crop used for dealing with recalcitrant steeds and playtoys."	1	riding crop
-
-riding crop is an armament. It is part of the player. It has a weapon "[one of]your riding crop[or]your crop[or]your leather crop[or]your disciplinary tool[at random]". The weapon damage of riding crop is 4. The weapon type of riding crop is "Melee". It is not temporary. the objsize of riding crop is 2.
-
-the scent of the riding crop is "The riding crop smells of leather and discipline.".
+[Riding Crop moved to Core Mechanics/Weapons.i7x]
 
 Table of Game Objects (continued)
 name	desc	weight	object

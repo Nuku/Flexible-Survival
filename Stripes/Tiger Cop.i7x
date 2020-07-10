@@ -521,13 +521,7 @@ to say BTpostchange:						[New BT form]
 
 Section 6 - Nightstick
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"nightstick"	"A policeman's nightstick. An effective weapon."	4	nightstick
-
-nightstick is an armament. It is part of the player. It has a weapon "[one of]your nightstick[or]your t-baton[or]your side-handle baton[or]your police nightstick[or]your black nightstick[at random]". The weapon damage of nightstick is 6. The weapon type of nightstick is "Melee". It is not temporary.
-
-the scent of the nightstick is "     The nightstick smells faintly of violent authority.".
+[Nightstick moved to Core Mechanics/Weapons.i7x]
 
 Section 7 - Prostitution Quest
 

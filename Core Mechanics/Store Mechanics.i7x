@@ -40,8 +40,8 @@ name	price	object	allowed
 "rightntight cream"	50	rightntight cream	true rule
 "cock holster upgrade"	50	cock holster upgrade	true rule
 "cervix smasher upgrade"	50	cervix smasher upgrade	true rule
-"tits inflator"	50	tits inflator	true rule
-"tits deflator"	50	tits deflator	true rule
+"tits inflator pump"	50	tits inflator pump	true rule
+"tits deflator pump"	50	tits deflator pump	true rule
 "tits multiplier injection"	50	tits multiplier injection	true rule
 "tits divider injection"	50	tits divider injection	true rule
 "birth control pill"	50	birth control pill	true rule

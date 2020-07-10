@@ -74,14 +74,7 @@ Instead of Resolving a Hidden Fucknest:
 		now Resolution of Hidden Fucknest is 99; [Player not interested]
 	now Hidden Fucknest is resolved;
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"belaying pin"	"A stout bit of wood nearly two feet long, made for securing rope on sailing vessels. Currently it has been painted with crude plans for converting it into a sex toy."	2	belaying pin
-
-belaying pin is an armament. It is part of the player. It has a weapon "[one of]your belaying pin[or]your stout sailcloth securing system[or]your improvised club[or]your hefty pin[or]your rescued dildo-cum-club[or]your salty beatin['] stick[or]your cock-themed skull-cracker[at random]". The weapon damage of belaying pin is 5. The weapon type of belaying pin is "Melee". It is not temporary.
-
-instead of sniffing the belaying pin:
-	say "The heavy club smells of rum, sodomy, and the lash.";
+[belaying pin moved to Core Mechanics/Weapons.i7x]
 
 
 

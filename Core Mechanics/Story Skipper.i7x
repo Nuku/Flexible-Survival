@@ -251,9 +251,10 @@ to RoomRestore:
 		repeat with x running from 1 to the number of filled rows in the Table of GameRoomInventories:
 			choose row x in the Table of GameRoomInventories;
 			let RoomIdName be RoomName entry;
-			if there is a name of RoomIdName in the Table of GameRoomIDs:
+			if there is a name of RoomIdName in the Table of GameRoomIDs: [room exists]
 				let RoomObject be the object corresponding to a name of RoomIdName in the Table of GameRoomIDs;
-				add ItemName entry to Invent of RoomObject;
+				if there is a name of ItemName entry in the Table of Game Objects: [item exists]
+					add ItemName entry to Invent of RoomObject;
 			else:
 				say "DEBUG -> [x]: RoomIdName: [RoomIdName] not found in Table of GameRoomIDs! Please this message on the FS Discord!";
 	else:
@@ -299,6 +300,8 @@ to PossessionRestore:
 		repeat with x running from 1 to the number of filled rows in the Table of GamePossessions:
 			choose row x in the Table of GamePossessions;
 			let PossessionIdName be Name entry;
+			[some small bugfixes due to items that got renamed]
+			if PossessionIdName is "sturdy jeans", now PossessionIdName is "dark-blue jeans";
 			if there is a name of PossessionIdName in the Table of Game Objects:
 				let PossessionObject be the object corresponding to a name of PossessionIdName in the Table of Game Objects;
 				now carried of PossessionObject is CarriedNumber entry;
@@ -1057,6 +1060,10 @@ to BeastRestore:
 			let BeastNonInfect be non-infectious entry;
 			let BeastSex be sex entry;
 			let BeastType be enemy type entry;
+			[some small bugfixes due to renamed creatures]
+			if Beastname is "Ogre", now Beastname is "Ogre Male";
+			if Beastname is "Rubber tigress", now Beastname is "Rubber Tigress";
+			if Beastname is "Football Gorilla", now Beastname is "Football Gorilla Male";
 			if there is a Name of BeastName in the Table of Random Critters:
 				choose row with Name of BeastName in Table of Random Critters;
 				now Area entry is BeastArea;

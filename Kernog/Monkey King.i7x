@@ -578,11 +578,8 @@ instead of resolving Take My Royal Word For Granite:
 
 Section 5 - Specific Items
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"Wukong's staff"	"An simple yet expertly crafted fighting staff, carved then polished with care to provide maximum efficiency. A golden leaf is riveted to the middle of the staff, ornately decorated with detailed figures of various animals, provides your hands with a good grip."	2	wukongStaff
+[Wukong's staff moved to Core Mechanics/Weapons.i7x]
 
-wukongStaff is an armament. It is part of the player. It has a weapon "[one of]your bo staff[or]your fighting staff[or]your staff[or]your bo staff with a hard whack[or]the long pole[or]your staff with a fast jab[at random]". The weapon damage of wukongStaff is 5. The weapon type of wukongStaff is "Melee". It is not temporary.
 
 Section 6 - NPC/Pet
 

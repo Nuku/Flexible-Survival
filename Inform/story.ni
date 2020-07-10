@@ -1805,8 +1805,6 @@ name	desc	weight	object	sortname (indexed text)
 "dirty water"	"A bottle of contaminated water. Drinker beware."	1	dirty water
 "food"	"Some food. Nothing fancy. Maybe a sandwich, or a husky girl leg, whatever happens to be handy."	2	food
 "journal"	"A small, leather-clad book. Spending some time [link]writing[as]use journal[end link] in it can help clear your thoughts and recenter your troubled mind. Or if you have something especially important that you want to remember, you could just [link]write down a note[as]write a note[end link] at the back end of it. [if number of filled rows in Table of JournalNotes > 0]In fact, you remember noting down some things in it that must have been important somehow. You can [link]browse through your notes[as]browse notes[end link] if you want to. Alternatively, [link]ripping them all out[as]rip notes[end link] is also possible.[end if][line break]"	2	journal
-"pocketknife"	"Mighty big for a pocket knife, nice and solid too. Could be handy."	1	pocketknife
-"chair"	"A metal folding chair that belongs in a food court. It could serve as a weapon in a pinch!"	10	chair
 "gryphon milk"	"A small bottle filled with fluid taken from one of those gryphons. You are fairly certain drinking it would be a poor idea, but maybe there is a use for it?"	2	gryphon milk
 "distilled milk"	"Some creature's milk boiled down to a concentrated, powdery, form? That can't be dangerous!"	1	distilled milk
 "glob of goo"	"A small bottle of strange, neon colored, goop"	1	glob of goo
@@ -1841,9 +1839,10 @@ soda is a grab object.
 chips is a grab object.
 glob of goo is a grab object. glob of Goo is infectious. The strain of glob of goo is "Goo Girl".
 food is a grab object. The trade of food is "soda".
-pocketknife is a armament. It is a part of the player. It has a weapon "[one of]your large knife[or]your blade[or]your trusty pocket knife[or]flashing steel[at random]". The weapon damage of pocketknife is 5. The weapon type of pocketknife is "Melee". It is not temporary. the objsize of pocketknife is 2.
-understand "knife" as pocketknife.
-chair is a armament. It is a part of the player. It has a weapon "[one of]a folding chair[or]your improvised weapon[or]that move you saw on WWE[or]a metal chair to the eyes[at random]". The weapon damage of chair is 5. The weapon type of chair is "Melee". It is not temporary. the objsize of chair is 4.
+
+[Pocketknife moved to Core Mechanics/Weapons.i7x]
+[Chair moved to Core Mechanics/Weapons.i7x]
+
 understand "seat" as chair.
 gryphon milk is a grab object. Understand "milk" as gryphon milk. Gryphon milk is infectious. The strain of gryphon milk is "Blue Gryphon Herm". The trade of Gryphon Milk is "distilled milk". gryphon milk is milky.
 distilled milk is a grab object. It is not milky.
@@ -2886,7 +2885,7 @@ To process (x - a grab object):
 			say "([humanity of Player]/100).";
 			now Lastjournaluse is turns;
 		follow turnpass rule;
-	else if x is a armament:
+	else if x is an armament:
 		if weapon object of Player is x: [unequip]
 			unwield x;
 		else: [equip]
@@ -6271,6 +6270,7 @@ Include Store Mechanics by Core Mechanics.
 Include Sleeptimer by Core Mechanics.
 Include Tape Inventory by Core Mechanics.
 Include Text Capture by Eric Eve.
+Include Weapons by Core Mechanics.
 
 [Locations]
 Include Apocalypse Store by Omen.
