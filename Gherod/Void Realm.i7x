@@ -2064,6 +2064,8 @@ to VRTentacleAbominationFightConclusion:
 		if a random chance of 2 in 3 succeeds:
 			say "     It looks like the Tentacle Abomination dropped a single [bold type]Null Essence[roman type], so you pick it up and stash it in your inventory.";
 			ItemGain null essence by 1 silently;
+		WaitLineBreak;
+		say "[VRMoveOptions]";
 	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "     No matter how much you struggle against the massive cluster of tentacles, it only grows stronger by the second you are fighting it, providing you with quite the challenge. Although, a few more strikes are you're barely capable of moving, having the tentacles finally reach you and immobilize you in place. All you see now is yourself being dragged through the floor as more of the abomination's extensions wrap themselves around your body...";
 		WaitLineBreak;
