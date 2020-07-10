@@ -68,21 +68,28 @@ object	name
 J'Reth	"J'Reth"
 
 J'Reth is a man.
-[Physical details as of game start]
 ScaleValue of J'Reth is 3. [human sized]
-SleepRhythm of J'Reth is 0. [0 = awake at all times, 1 = awake in the day, 2 = awake at night]
-Cock Count of J'Reth is 1. [cock]
-Cock Length of J'Reth is 11. [cock length]
-Ball Size of J'Reth is 5. [ball size]
-Ball Count of J'Reth is 2. [no balls]
-Cunt Count of J'Reth is 0. [no pussy]
-Cunt Depth of J'Reth is 0. []
-Cunt Tightness of J'Reth is 0. []
-Nipple Count of J'Reth is 2. [2 nipples]
-Breast Size of J'Reth is 0. [flat]
+Body Weight of J'Reth is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of J'Reth is 4. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of J'Reth is 4. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of J'Reth is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of J'Reth is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of J'Reth is 12. [length in inches]
+Breast Size of J'Reth is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of J'Reth is 0. [count of nipples]
+Asshole Depth of J'Reth is 8. [inches deep for anal fucking]
+Asshole Tightness of J'Reth is 1. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of J'Reth is 1. [number of cocks]
+Cock Girth of J'Reth is 2. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of J'Reth is 11. [length in inches]
+Ball Count of J'Reth is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of J'Reth is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of J'Reth is 0. [number of cunts]
+Cunt Depth of J'Reth is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of J'Reth is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of J'Reth is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of J'Reth is false. [can not take oversized members without pain]
-Sterile of J'Reth is true.
 PlayerMet of J'Reth is false.
 PlayerRomanced of J'Reth is false.
 PlayerFriended of J'Reth is false.
@@ -91,11 +98,14 @@ PlayerFucked of J'Reth is false.
 OralVirgin of J'Reth is true.
 Virgin of J'Reth is true.
 AnalVirgin of J'Reth is true.
+PenileVirgin of J'Reth is true.
 SexuallyExperienced of J'Reth is false.
-MainInfection of J'Reth is "".
+TwistedCapacity of J'Reth is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of J'Reth is true. [steriles can't knock people up]
+MainInfection of J'Reth is "Draco-Mantis".
 The description of J'Reth is "[J'RethDesc]".
 The conversation of J'Reth is { "Mantis Dragon sounds." }.
-The scent of J'Reth is "     J'Reth smells of Mantis-Dragons and fairies in the woods.".
+The scent of J'Reth is "     J'Reth smells of Mantis-Dragons and fairies in the woods."
 
 to say J'RethDesc:
 	if debugactive is 1:
@@ -321,6 +331,15 @@ to say J'RethTalk7: [Use Estrogen Pill]
 		WaitLineBreak;
 		say "     As J'Reth's body ceases to shift and shudder, she collapses forward, the transition having exhausted her once again, but this time you are prepared and manage to catch her before she hits the floor. Finding her surprisingly light, you lie her on her bed again, earning a small, grateful smile. 'Thanks. That might have hurt. I know I said it last time, but maybe next time I won't try to kiss the concrete,' she mutters as she recovers from the wave of fatigue with the aid of the nanites. She looks over her body as excitedly as last time she was gendershifted, her smile widening and eyes sparkling with delight. 'I look so pretty, and there doesn't appear to have been any unintentional side effects!' she exclaims, running her fingers across her scales and chitin, feeling every dip and change more easily than your eyes seem to manage. 'Thank you. Though being female may take some getting used to.' You decide to leave her for the moment as she returns to being entirely engrossed by her changed form. Maybe you can return later.";
 	now thirst of J'Reth is 3;
+	now Cock Count of J'Reth is 0;
+	now Cock Girth of J'Reth is 0;
+	now Cock Length of J'Reth is 0;
+	now Ball Count of J'Reth is 0;
+	now Ball Size of J'Reth is 0;
+	now Cunt Count of J'Reth is 1;
+	now Cunt Depth of J'Reth is 11;
+	now Cunt Tightness of J'Reth is 1;
+	now Clit Size of J'Reth is 2;
 	SetFemalePronouns for J'Reth;
 
 to say J'RethTalk8: [Use Glob of Goo]
@@ -389,6 +408,15 @@ to say J'RethTalk8: [Use Glob of Goo]
 		clear the screen and hyperlink list;
 		say "     Complying, you watch the chitin harden again and return to the same shade of green as before. 'Thanks. I'm glad that we planned ahead and that that didn't change me back into being male.' You decide to leave her for the moment as she returns to being entirely engrossed by her changed form. Maybe you can return later.";
 	now thirst of J'Reth is 3;
+	now Cock Count of J'Reth is 0;
+	now Cock Girth of J'Reth is 0;
+	now Cock Length of J'Reth is 0;
+	now Ball Count of J'Reth is 0;
+	now Ball Size of J'Reth is 0;
+	now Cunt Count of J'Reth is 1;
+	now Cunt Depth of J'Reth is 11;
+	now Cunt Tightness of J'Reth is 1;
+	now Clit Size of J'Reth is 2;
 	SetFemalePronouns for J'Reth;
 
 to say J'RethTalk9: [Use Testosterone Pill]
@@ -403,6 +431,15 @@ to say J'RethTalk9: [Use Testosterone Pill]
 		WaitLineBreak;
 		say "     As J'Reth's body ceases to shift and shudder, he collapses forward, the transition having exhausted him once again, but this time you are prepared and manage to catch him before he hits the floor. Finding him surprisingly light, you lie him on his bed again, earning a small, grateful smile. 'Thanks. That might have hurt. I know I said it last time, but maybe next time I won't try to kiss the concrete,' he mutters as he recovers from the wave of fatigue with the aid of the nanites. He looks over his body as excitedly as last time he was gendershifted, his smile widening and eyes sparkling with delight. 'I look so dashing, and there doesn't appear to have been any unintentional side effects!' he exclaims, running his fingers across his scales and chitin, feeling every dip and change more easily than your eyes seem to manage. 'Thank you. I doubt that being male again will be too disconcerting, we'll wait and see.' You decide to leave him for the moment as he returns to being entirely engrossed by his changed form. Maybe you can return later.";
 	now thirst of J'Reth is 1;
+	now Cock Count of J'Reth is 1;
+	now Cock Girth of J'Reth is 2;
+	now Cock Length of J'Reth is 11;
+	now Ball Count of J'Reth is 2;
+	now Ball Size of J'Reth is 3;
+	now Cunt Count of J'Reth is 0;
+	now Cunt Depth of J'Reth is 0;
+	now Cunt Tightness of J'Reth is 0;
+	now Clit Size of J'Reth is 0;
 	SetMalePronouns for J'Reth;
 
 to say J'RethTalk10: [Use Fennec Semen]
@@ -466,6 +503,15 @@ to say J'RethTalk10: [Use Fennec Semen]
 		clear the screen and hyperlink list;
 		say "     Complying, you watch the feenec ears recede until his head is a smooth as before. 'Thanks. I'm glad that we planned ahead and that I was able to deal with the side effects.' You decide to leave him for the moment as he returns to being entirely engrossed by his changed form. Maybe you can return later.";
 	now thirst of J'Reth is 1;
+	now Cock Count of J'Reth is 1;
+	now Cock Girth of J'Reth is 2;
+	now Cock Length of J'Reth is 11;
+	now Ball Count of J'Reth is 2;
+	now Ball Size of J'Reth is 3;
+	now Cunt Count of J'Reth is 0;
+	now Cunt Depth of J'Reth is 0;
+	now Cunt Tightness of J'Reth is 0;
+	now Clit Size of J'Reth is 0;
 	SetMalePronouns for J'Reth;
 
 to say J'RethTalk11: [Use Estosterogen Pill]
@@ -485,6 +531,15 @@ to say J'RethTalk11: [Use Estosterogen Pill]
 		WaitLineBreak;
 		say "     As J'Reth's body ceases to shift and shudder, they collapses forward, the transition having exhausted them once again, but this time you are prepared and manage to catch them before they hit the floor. Finding them surprisingly light, you lie them on their bed again, earning a small, grateful smile. 'Thanks. That might have hurt. I know I said it last time, but maybe next time I won't try to kiss the concrete,' they mutter as they recover from the wave of fatigue with the aid of the nanites. They look over their body as excitedly as last time they were gendershifted, their smile widening and eyes sparkling with delight. 'I look so attractive, and there doesn't appear to have been any unintentional side effects!' they exclaim, running their fingers across their scales and chitin, feeling every dip and change more easily than your eyes seem to manage. 'Thank you. Though being a herm may take some getting used to.' You decide to leave them for the moment as they return to being entirely engrossed by their changed form. Maybe you can return later.";
 	now thirst of J'Reth is 2;
+	now Cock Count of J'Reth is 1;
+	now Cock Girth of J'Reth is 2;
+	now Cock Length of J'Reth is 11;
+	now Ball Count of J'Reth is 2;
+	now Ball Size of J'Reth is 3;
+	now Cunt Count of J'Reth is 1;
+	now Cunt Depth of J'Reth is 11;
+	now Cunt Tightness of J'Reth is 1;
+	now Clit Size of J'Reth is 2;
 	SetMalePronouns for J'Reth;
 
 to say J'RethTalk12: [Use Gryphon Milk]
@@ -553,6 +608,15 @@ to say J'RethTalk12: [Use Gryphon Milk]
 		clear the screen and hyperlink list;
 		say "     Complying, you watch their wings become thin and membranous again and their back return to being smooth and chitinous. 'Thanks. I'm glad that we planned ahead and that that didn't change me back into being male.' You decide to leave them for the moment as they return to being entirely engrossed by their changed form. Maybe you can return later.";
 	now thirst of J'Reth is 2;
+	now Cock Count of J'Reth is 1;
+	now Cock Girth of J'Reth is 2;
+	now Cock Length of J'Reth is 11;
+	now Ball Count of J'Reth is 2;
+	now Ball Size of J'Reth is 3;
+	now Cunt Count of J'Reth is 1;
+	now Cunt Depth of J'Reth is 11;
+	now Cunt Tightness of J'Reth is 1;
+	now Clit Size of J'Reth is 2;
 	SetMalePronouns for J'Reth;
 
 [to say J'RethTalk13: [Convince J'Reth to use Transformatives]
