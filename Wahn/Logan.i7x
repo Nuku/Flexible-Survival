@@ -363,28 +363,27 @@ to say LoganSex4: [spitroast Blake]
 		say "     Grinning at you and wiggling his eyebrows, Logan curls his large paw-hand around the base of his shaft, smacking it down into the crack of Blake's ass, rubbing against his pucker. 'Love making worthless little wanna-be-s like you into nothing more than a cum-sleeve!' come a few mocking words for the street rat, with Logan watching with amusement as Blake strains against his restraints a little and shakes his head.";
 		Spitroast_Blake;
 		SpitRoast_Blake_End_Regular;
-		if Loyalty of Logan is 0: [no Loyalty yet]
-			say "     Still grinning, Logan raises a hand from where it was gripping Blake's hips, bunching it up to a fist and holding it out to you.";
-			say "     [bold type]How do you react?[roman type][line break]";
+		say "     Still grinning, Logan raises a hand from where it was gripping Blake's hips, bunching it up to a fist and holding it out to you.";
+		say "     [bold type]How do you react?[roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Meet him in the fist bump. You're bro's sharing a slut after all.";
+		say "     ([link]N[as]n[end link]) - Just focus on your ratty slut and grind your crotch against his muzzle. Just because you're in business together doesn't mean you're Logan's friend.";
+		if Player consents:
 			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Meet him in the fist bump. You're bro's sharing a slut after all.";
-			say "     ([link]N[as]n[end link]) - Just focus on your ratty slut and grind your crotch against his muzzle. Just because you're in business together doesn't mean you're Logan's friend.";
-			if Player consents:
-				LineBreak;
-				say "     Meeting Logan's eyes and smiling at him, you raise your own first and bump knuckles. ";
-				if Loyalty of Logan < 5:
-					say "'Now that's what I call a good time! Sharing a needy slut in good company!' Logan comments, nodding at you and then glancing down to the street rat. ";
-					increase Loyalty of Logan by 1;
-				else if Loyalty of Logan < 10 and "DP Bitch" is listed in Traits of Blake: [deeper friendship unlocked]
-					say "'Yeah bro, we really showed the slut his place!' Logan comments, then grips your forearm and gives it a friendly squeeze. Holding onto you for a moment and giving a nod, the wolverine then glances down to the street rat. ";
-					increase Loyalty of Logan by 1;
-				say "Slowly starting to pull back, he makes Blake writhe and let out a muffled shout as his swollen knot pops past the rat's violated hole. Stopping at the point when just his dickhead is still in Blake, Logan gives his narrow ass a slap. 'Remember what I taught you, slut! If a master breeds your hole, you better be ready to hold it all in! At least then there'll be something worth something inside your mangy fur! Now show me how well you can squeeze that ring of yours!' Pulling his cock out all the way, Logan looks down expectantly, giving a halfway satisfied grunt after a few seconds. 'Looks like even a stupid cunt like you is able to learn eventually. Keep that up, boy!' Some unintelligible mumbling comes from down at your crotch, where you still have your own cock inside Blake's mouth, waiting out the last throbs of cum to send down his gullet. By the time you're done cumming for good, Logan is beside you and reaches down, quickly gagging Blake again as soon as your erection passes his lips.";
-				say "     Standing back up, you go grab your gear[if player is not naked] and clothing[end if], getting ready to turn back towards serious matters like surviving in the city. Meanwhile, Logan stays crouched next to Blake for a while longer, holding the rat by the back of his neck and saying something into his ear in a low tone. Then he shoves Blake, making him flip over on the grimy bedrest and lets out a laugh. 'Look at this - seems our rat-slut came from being fucked!' Baring his many sharp teeth in a wide grin, the wolverine points at a large wet spot right where Blake was before, standing out from the rest of the cum-stains all over his bedding by being fresh.";
-			else:
-				LineBreak;
-				say "     Looking down at Blake, you don't see Logan's expression at you ignoring him, but there is a grunt with an annoyed undertone. Shoving that fact aside, you keep your own cock inside Blake's mouth, waiting out the last throbs of cum to send down his gullet. By the time you're done cumming for good, Logan is beside you and reaches down, quickly gagging Blake again as soon as your erection passes his lips. Standing back up, you go grab your gear[if player is not naked] and clothing[end if], getting ready to turn back towards serious matters like surviving in the city. Meanwhile, Logan stays crouched next to Blake for a while longer, holding the rat by the back of his neck and saying something into his ear in a low tone.";
-				if Loyalty of Logan > 1:
-					decrease Loyalty of Logan by 1;
+			say "     Meeting Logan's eyes and smiling at him, you raise your own first and bump knuckles. ";
+			if Loyalty of Logan < 5:
+				say "'Now that's what I call a good time! Sharing a needy slut in good company!' Logan comments, nodding at you and then glancing down to the street rat. ";
+				increase Loyalty of Logan by 1;
+			else if Loyalty of Logan < 10 and "DP Bitch" is listed in Traits of Blake: [deeper friendship unlocked]
+				say "'Yeah bro, we really showed the slut his place!' Logan comments, then grips your forearm and gives it a friendly squeeze. Holding onto you for a moment and giving a nod, the wolverine then glances down to the street rat. ";
+				increase Loyalty of Logan by 1;
+			say "Slowly starting to pull back, he makes Blake writhe and let out a muffled shout as his swollen knot pops past the rat's violated hole. Stopping at the point when just his dickhead is still in Blake, Logan gives his narrow ass a slap. 'Remember what I taught you, slut! If a master breeds your hole, you better be ready to hold it all in! At least then there'll be something worth something inside your mangy fur! Now show me how well you can squeeze that ring of yours!' Pulling his cock out all the way, Logan looks down expectantly, giving a halfway satisfied grunt after a few seconds. 'Looks like even a stupid cunt like you is able to learn eventually. Keep that up, boy!' Some unintelligible mumbling comes from down at your crotch, where you still have your own cock inside Blake's mouth, waiting out the last throbs of cum to send down his gullet. By the time you're done cumming for good, Logan is beside you and reaches down, quickly gagging Blake again as soon as your erection passes his lips.";
+			say "     Standing back up, you go grab your gear[if player is not naked] and clothing[end if], getting ready to turn back towards serious matters like surviving in the city. Meanwhile, Logan stays crouched next to Blake for a while longer, holding the rat by the back of his neck and saying something into his ear in a low tone. Then he shoves Blake, making him flip over on the grimy bedrest and lets out a laugh. 'Look at this - seems our rat-slut came from being fucked!' Baring his many sharp teeth in a wide grin, the wolverine points at a large wet spot right where Blake was before, standing out from the rest of the cum-stains all over his bedding by being fresh.";
+		else:
+			LineBreak;
+			say "     Looking down at Blake, you don't see Logan's expression at you ignoring him, but there is a grunt with an annoyed undertone. Shoving that fact aside, you keep your own cock inside Blake's mouth, waiting out the last throbs of cum to send down his gullet. By the time you're done cumming for good, Logan is beside you and reaches down, quickly gagging Blake again as soon as your erection passes his lips. Standing back up, you go grab your gear[if player is not naked] and clothing[end if], getting ready to turn back towards serious matters like surviving in the city. Meanwhile, Logan stays crouched next to Blake for a while longer, holding the rat by the back of his neck and saying something into his ear in a low tone.";
+			if Loyalty of Logan > 1:
+				decrease Loyalty of Logan by 1;
 		NPCSexAftermath Blake receives "AssFuck" from Logan;
 		NPCSexAftermath Blake receives "OralCock" from Player;
 
