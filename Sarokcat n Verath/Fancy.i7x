@@ -15,6 +15,16 @@ Fancy by Sarokcat n Verath begins here.
 [ 101 = fled Hardware Fort in front of Horsemen ]
 [ 102 = failed Hardware Fort too often ]
 
+[ Thirst of Fancy:]
+[ 0 = not started / refused ]
+[ 1 = found ledger token ]
+[ 2/3 = agreed to investigate warehouse ]
+[ 4 = return suit to Fancy]
+[ 5 = find Nermine ]
+[ 98 = rejected helping Fancy ]
+[ 99 = got coordinates from Fancy but no further involvement ]
+[ 100 = redeemed token ]
+
 NightmareOfficeRoomConnection is a number that varies.[@Tag:NotSaved]
 
 an everyturn rule:
@@ -82,7 +92,55 @@ instead of conversing the Fancy:
 		say "     'In case you haven't figured it out yet, the Stables is a [']working house['], a pleasure palace, or to put it pretty bluntly, a proper whorehouse. It used to be people would come here on trips or vacation, and the women would come over from the red light district and do some [']room service['] of their own,' Fancy says as she watches your reaction with amusement. 'Now the owner just rents out members of his [']stable['] to anyone who has something to trade. I understand he used to be an avid collector of horses at one point, and now well, he just moved on to collecting a different type of horseflesh,' the mare says with some amusement.";
 		say "     'So that's the basics, though I am sure you had figured most of it out for yourself already. After all, you did come here for a reason, I'm sure,' Fancy says with a smile, before sighing. 'Sad to say though, most of us mares over here are relaxing for now, and while I am sure you could certainly manage to entice several of them to play with you, they really are supposed to be resting and waiting their turn,' she says as she glances around at the few mares hanging around nearby pretending not to be listening. 'So if you are looking for some fun, you should head back and go through the doors to the main building, north of the reception desk. Of course if you just want to hang around with some mares, feel free to hang around here as long as you want,' the mare says with a smile as she shifts her weight forward to give you a nice view of her ample breasts. 'And I'm sure if you hang around here a while we can certainly find ways to help you fit in so to speak, and maybe you could even help me get this place fixed up a bit if you wanted. It would certainly be appreciated after all.'";
 		increase Fancytalk by 1;
-	else if fancyquest is 16:
+	else if fancyquest is 1 and Thirst of Fancy is 1:
+		say "     Do you want to mention the ignored memos to Fancy, or ask her about the token you found in the ledger?";
+		LineBreak;
+		[]
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "The ignored memos";
+		now sortorder entry is 1;
+		now description entry is "Tell Fancy about the ignored memos";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "The token";
+		now sortorder entry is 2;
+		now description entry is "Ask Fancy about the token";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					let nam be title entry;
+					now sextablerun is 1;
+					if (nam is "The ignored memos"):
+						say "[NightmareQuest]";
+					else if (nam is "The token"):
+						say "[PonyQuest]";
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	else if (Thirst of Fancy >= 3 and Thirst of Fancy < 90) or (fancyquest is 0 and Thirst of Fancy is 1) or (fancyquest is 100 and Thirst of Fancy is 1):
+		say "[PonyQuest]";
+	else if fancyquest >= 2 or (fancyquest is 1 and (Thirst of Fancy >= 90 or Thirst of Fancy is 0)):
+		say "[NightmareQuest]";
+	else if fancyaroused is 1:
+		say "     'It was nice of you to help Daisy and Onyx out with their distraction I must admit,' the white mare says with a soft smile as she looks up at you with a teasing wink. 'One would almost think you wanted to stay around and help me keep this place running smoothly,' Fancy says with a soft smile as she looks around the mare's quarters before returning to eying you speculatively.";
+	else if Fancytalk is 1:[Normal short messages the NPC will say each time you talk to them]
+		say "[one of]'Hanging around the mares['] area some more? We are always glad to see a friendly face.'[or]'Back again? Maybe you are interested in a position here at the Stables? Or maybe even several positions?' Fancy says with a suggestive grin.[or]'Those damn horsemen are always breaking things on accident and never fixing them. I swear...'[or]'Try some of the food over there on the table. You might like it.'[or]'So, what do you like in a mare?' Fancy asks you teasingly. 'Breasts, legs, or ass?' she says, her hands rubbing over each part in turn as she watches your reactions.[or]'Were you looking for something here? Or maybe you were looking for someone?' Fancy asks you teasingly.[or]'I wish I could get some help around here sometimes; I only have two hooves after all!'[or]'You know what one of the best parts about this place? When they say hung like a horse around here, they really aren't kidding!' Fancy says with a snicker.[or]'It's good to have a nice safe stall to sleep in here while things go to hell out there. You should try it yourself sometime.'[or]'Enjoying the Stables so far?'[at random]";
+
+Section 2 - Nightmare Quest
+
+to say NightmareQuest:
+	if fancyquest is 16:
 		say "     [one of]'Welcome back, Stablemaster! How can I help you?'[or]'I was right, you do make a fine Stablemaster.'[or]'Have you decided what you are going to call the former Stablemaster? I am partial to Topaz myself.'[or]'Anything I or my mares can do for you now?'[or]'Be careful, there are still a few of the stallions who might try challenging you in the halls for dominance.'[or]'Now that you are in charge, I look forward to actually getting some things done around here!'[or]'Have you decided what to do about those uppity hyenas yet?'[or]'Don't worry about things around here. Now that you are the boss, the other stallions have started listening to me more.'[at random]";
 	else if fancyquest is 15:
 		say "'Ah, you're back. Ready to hear the plan?' Fancy says with a broad smile, before continuing without waiting for you to agree. 'Basically the Stablemaster is in hiding, with some of his most trusted lieutenants nearby and keeping a lookout for him. The real problem is, if you tried to just break in to his office, he would most assuredly slip out one of his escape tunnels. No, you need to surprise him, which is where Daisy comes in,' she says with a smile as she gestures at the demure looking mare standing in the corner and eyeing you lustfully. 'Sometimes when we find a particularly lovely looking mare... we inform the Stablemaster, and when she is ready for her first breeding, we bring her to him and he finishes her transformation,' the white mare says with a smile and a fond sigh as if remembering something, before turning back to look at Daisy again. 'In this case, we have Daisy, who is exactly the type of mare he likes to 'break in' so to speak. So now all we need to do is let him know she is ready, and he will send one of his lieutenants for her.' Fancy turns back to you with a smile as she looks up at you. 'That's where you come in, all you need to do is take the place of the lieutenant and escort her back to the Stablemaster. He won't pay any attention to you once he gets a whiff of a nice virgin mare's heat, or at least he won't until after he lets you both in hopefully. Which is going to be your one shot at this,' the white mare says with a nervous snort and a slight shake of her head. 'If you lose, well we won't have another shot at this, and you and I are certainly not going to be trying again anytime soon. So be sure you are ready before we start,' she says with a soft smile before finally pausing and waiting for your response. Are you ready to take on the Stablemaster?";
@@ -130,7 +188,7 @@ instead of conversing the Fancy:
 			say "'Well OK then, but don't wait too long, we won't have many opportunities at this,' Fancy says nervously as she glances around the Stables, before sighing and settling back down to wait for you to be ready.";
 	else if fancyquest is 14:
 		if hellgatherquest is 6:
-			say "'Your back! Do you have the ingredients we need and the item?' Fancy asks nervously as soon as you approach her, and lets out a large sigh of relief as you pull out the small pouch with the ingredients you gathered, as well as the small box containing the collar Nermine made for you. 'What a relief, I don't think I could have put up with the stress much longer,' she says with a smile as she takes the pouch with you and quickly heads into one of the rooms in the mares quarter to mix up your next drink. You find yourself smiling at the numerous mares in the area as you wait, enjoying their submissive and aroused responses, and realizing that if you succeed at becoming the Stablemaster, all the mares in the Stables will belong to you... and the stallions too actually now that you think about it. It isn't long however before Fancy returns with your final drink, a rather larger one this time than the other smaller vials, and you raise one of your rather expressive new equine eyebrows at her questioningly. 'You will need all the help you can get, so I had the girls gather as much of the ingredients needed as possible... besides this should be your last dose,' the white mare says with a smile as she holds the cup up for you to drink.";
+			say "'You[']re back! Do you have the ingredients we need and the item?' Fancy asks nervously as soon as you approach her, and lets out a large sigh of relief as you pull out the small pouch with the ingredients you gathered, as well as the small box containing the collar Nermine made for you. 'What a relief, I don't think I could have put up with the stress much longer,' she says with a smile as she takes the pouch with you and quickly heads into one of the rooms in the mares quarter to mix up your next drink. You find yourself smiling at the numerous mares in the area as you wait, enjoying their submissive and aroused responses, and realizing that if you succeed at becoming the Stablemaster, all the mares in the Stables will belong to you... and the stallions too actually now that you think about it. It isn't long however before Fancy returns with your final drink, a rather larger one this time than the other smaller vials, and you raise one of your rather expressive new equine eyebrows at her questioningly. 'You will need all the help you can get, so I had the girls gather as much of the ingredients needed as possible... besides this should be your last dose,' the white mare says with a smile as she holds the cup up for you to drink.";
 			say "Feeling rather exposed as she obviously expects you to drink the mixture right here and now, you nervously shrug before putting the cup to your lips and draining the contents. The now familiar burning and tingling sensation rushing through your body and filling you with strange energy, even as you can feel your muscles begin to twist and reshape. You groan slightly as your form shifts, the change spreading through your body faster than ever before as your feet shift and change into powerful flame colored hooves, your legs shifting as well into the proper digitigrade stance of a powerful stallion. The feel of your hands shifting and your arms and body becoming far more muscular and equine is actually increasingly amazing, and you let out a loud low whinny of pleasure as you back shifts and lengthens slightly, before the changes begin to eventually settle down. Even your mane and tail seem to blaze brightly now with an almost fiery energy, and your obsidian black hide seems to shimmer and absorb the light as it shines darkly in the well-lit room. You can tell as you look around that your new form is absolutely the pinnacle of equine power and sexuality from the many admiring and lustful looks all the mares in the area are giving you, and you pause for a minute to stretch and show off your new body before turning back to Fancy.";
 			now fancyquest is 15;
 			say "'Wow, you look... amazingly good,' the obviously aroused mare says rather dreamily, before shaking herself slightly and smiling back up at you. 'This could actually work I think, you just need to beat the Stablemaster now, and get the collar on him, I take it Nermine explained what it does?' she says with a smile, her smile stretching into a rather predatory grin for an equine as you nod in agreement. 'Excellent. Now the only hard part left is actually drawing the Stablemaster out, or getting you in to see him. He has been extremely cautious lately, and with good reason obviously.' Fancy smirks slightly as her eyes linger on your new powerful equine form. 'Now we have a plan for that actually, and we have been keeping her nice and ready just in case things worked out,' she says with a gesture at the almost completely changed mare named Daisy. 'You just me know when you are ready to take him on, and we will get you in to see him! What happens then depends on you... though for my sake at least, I hope you win,' Fancy says with a smile as she looks up at you with a mixture of lust and adoration in her eyes.";
@@ -157,8 +215,8 @@ instead of conversing the Fancy:
 		else:
 			say "'Did you need some help working out what to do?' Fancy asks as you return to talk with her again. 'Go hunt around outside until you find a hyena rep, and have them take you to their negotiator, you won't talk to the matriarch most likely, but one of her lackeys, and they will probably make you put on a show or test you somehow before agreeing. After that, go explore in the Stables proper until you find a horseman who can guide you to where the worst doubters of your ability are, at which point you can pummel some sense into them!' she says with increasing excitement as she grins up at you.";
 	else if fancyquest is 10:
-		say "'Oh I love the new look!' Fancy says with a broad smile as she takes in your newly changed face, her eyes examining your shapely new muzzle and lovely new mane. 'And I really like your mane! You are going to be a big hit around here I can tell already!' she says as she fans herself teasingly with her hand, her honest appreciation making your new equine muzzle stretch in a grin as you glance around at several of the other obviously aroused mares eyeing you speculatively. 'Still we do have a few things left to do, thanks to your efforts, a lot of the mares are on board, but some of the stallions are starting to get nervous, the Stablemaster isn't known for being lenient, and quite frankly most of them don't think you have a chance in hell of actually replacing him. Not to mention several of the deals he has going on around town that certainly benefit the Stables,' Fancy says with a sigh, before shrugging and leaning forward slightly, her bright blue equine eyes fixed on you intently. 'That's why we need a show of force, to keep them quite a bit longer while you get more powerful, and so they can help me get your next drink prepared. So we need to make you seem both competent and powerful, fortunately several of us have come up with a way for you to do both, though it is going to require a bit of effort on your part.' She pauses for a minute and looks at you hopefully, seeming relieved when you nod at her eagerly.";
-		say "'Well first things first, we need you to help 'renegotiate' an agreement we recently made with one of the largest gangs in the city, the hyenas. Honestly the current agreement pretty much favors the hyenas, and several people have been grumbling about it already.' Fancy smiles as she pulls out a sealed piece of paper and passes it over to you. 'This is a somewhat more fair agreement that I think they might go for, it's still somewhat in their favor unfortunately, but well they do outnumber us by a fair bit,' she says with a shrug, and you nod as well as you tuck the paper away safely. 'But if you can get the few concessions on that paper agreed to, I think that would silence a lot of the dissenters, and be a good step towards proving how tough you are. Once you have got the agreement, come back to the Stables, and several of the stallions have agreed to let you prove yourself by taking on several of the Stablemaster's closest supporters. If you can beat them, it will be a big blow to the Stablemaster's reputation, and certainly silence any doubts as to your ability to hold your own,' the sexy white mare says with a nervous grin as she sends you on your way, and you find yourself sighing slightly as you prepare to go 'bargain' with the hyena gang out in the city.";
+		say "'Oh, I love the new look!' Fancy says with a broad smile as she takes in your newly changed face, her eyes examining your shapely new muzzle and lovely new mane. 'And I really like your mane! You are going to be a big hit around here, I can tell already!' she says as she fans herself teasingly with her hand, her honest appreciation making your new equine muzzle stretch in a grin as you glance around at several of the other obviously aroused mares eyeing you speculatively. 'Still we do have a few things left to do, thanks to your efforts, a lot of the mares are on board, but some of the stallions are starting to get nervous, the Stablemaster isn't known for being lenient, and quite frankly most of them don't think you have a chance in hell of actually replacing him. Not to mention several of the deals he has going on around town that certainly benefit the Stables,' Fancy says with a sigh, before shrugging and leaning forward slightly, her bright blue equine eyes fixed on you intently. 'That's why we need a show of force, to keep them quite a bit longer while you get more powerful, and so they can help me get your next drink prepared. So we need to make you seem both competent and powerful, fortunately several of us have come up with a way for you to do both, though it is going to require a bit of effort on your part.' She pauses for a minute and looks at you hopefully, seeming relieved when you nod at her eagerly.";
+		say "'Well first things first, we need you to help 'renegotiate' an agreement we recently made with one of the largest gangs in the city, the hyenas. Honestly the current agreement pretty much favors the hyenas, and several people have been grumbling about it already.' Fancy smiles as she pulls out a sealed piece of paper and passes it over to you. 'This is a somewhat more fair agreement that I think they might go for; it's still somewhat in their favor unfortunately, but well they do outnumber us by a fair bit,' she says with a shrug, and you nod as well as you tuck the paper away safely. 'But if you can get the few concessions on that paper agreed to, I think that would silence a lot of the dissenters, and be a good step towards proving how tough you are. Once you have got the agreement, come back to the Stables, and several of the stallions have agreed to let you prove yourself by taking on several of the Stablemaster's closest supporters. If you can beat them, it will be a big blow to the Stablemaster's reputation, and certainly silence any doubts as to your ability to hold your own,' the sexy white mare says with a nervous grin as she sends you on your way, and you find yourself sighing slightly as you prepare to go 'bargain' with the hyena gang out in the city.";
 		now fancyquest is 11;
 		now provingstallionhood is 1;
 	else if fancyquest is 9:
@@ -178,7 +236,7 @@ instead of conversing the Fancy:
 	else if fancyquest is 6:
 		say "'Not having second thoughts are you?' Fancy asks teasingly as she gestures at the strange vial she handed you. 'If you want to become Stablemaster and continue to help out around here, you are going to need the power that gives you...' she says with a soft smile, before winking slightly, 'Besides I just can't wait to see how you turn out!'";
 	else if fancyquest is 5:
-		say "'Your back! Thanks a ton for all the help so far,' Fancy says with a happy smile as she sees you approach, 'Everyone's starting to take an interest in keeping the place in better shape now, and things are starting to get a bit more comfortable around here, and a bit safer too now that we are fixing some of the underground areas,' the white mare says with a smile as she pats your arm in thanks, her hand lingering a bit longer than necessary as she strokes your arm slightly before continuing. 'In fact, considering all you have done for us, you have made several friends around here, and more than a few mares are hoping you will join us on a more permanent basis at some point, including me,' Fancy says with a soft blush as she winks at you. 'You are actually doing a much better job of paying attention to the needs of the equines around here so far than the Stablemaster is... which actually brings up an interesting question...' Fancy pauses for a minute as if trying to decide exactly what to say, before sighing and leaning forward to address you directly, her equine eyes staring directly into yours as she continues. 'Have you thought about maybe well, challenging the Stablemaster at some point? We could really use someone with your strength and concern for the Stables in that position instead of the current owner,' the white mare asks you in a rather low voice as she looks up at you hopefully. Do you decide to take her up on her offer to replace the Stablemaster?";
+		say "'You're back! Thanks a ton for all the help so far,' Fancy says with a happy smile as she sees you approach, 'Everyone's starting to take an interest in keeping the place in better shape now, and things are starting to get a bit more comfortable around here, and a bit safer too now that we are fixing some of the underground areas,' the white mare says with a smile as she pats your arm in thanks, her hand lingering a bit longer than necessary as she strokes your arm slightly before continuing. 'In fact, considering all you have done for us, you have made several friends around here, and more than a few mares are hoping you will join us on a more permanent basis at some point, including me,' Fancy says with a soft blush as she winks at you. 'You are actually doing a much better job of paying attention to the needs of the equines around here so far than the Stablemaster is... which actually brings up an interesting question...' Fancy pauses for a minute as if trying to decide exactly what to say, before sighing and leaning forward to address you directly, her equine eyes staring directly into yours as she continues. 'Have you thought about maybe well, challenging the Stablemaster at some point? We could really use someone with your strength and concern for the Stables in that position instead of the current owner,' the white mare asks you in a rather low voice as she looks up at you hopefully. Do you decide to take her up on her offer to replace the Stablemaster?";
 		if Player consents:
 			say "'That's wonderful! Of course you aren't powerful enough to take him on yet, and I am not sure everyone would accept you as the new Stablemaster yet either,' Fancy says in a low voice as she rubs the side of her muzzle thoughtfully 'Well first you need a much more powerful equine form than anyone else has, fortunately I can actually help you with that after having been here so long and watched the Stablemaster whenever I could...' she says with a rather mischievous smile as she glances around quickly before continuing, 'I even managed to acquire an item of his, which should let you start to acquire a similar form once you use it.... though it will take a bit more time and possibly some help from some of the others here to acquire more items,' she says with a sigh as she slips you a small wrapped package which seems to hold some form of glass inside, 'So if you keep helping me fix things around here, and get to know more people, we should be able to make you strong enough to replace the Stablemaster, and get you the support of the stablehands as well,' she says with a smile as she leans back and relaxes, while you take the item she gave you and examine it more closely, finding it to be a small glass container filled with some murky white and black liquid....";
 			now fancyquest is 6;
@@ -234,13 +292,56 @@ instead of conversing the Fancy:
 		now fancyquest is 100;
 	else if fancyquest is 100:
 		say "     [one of]'Get whatever it is you're here for over and done with and then shove off,' the mare grumbles[or]'I don't feel like even looking at you right now,' she grumbles before turning and stomping away[or]'You should clear out of here before I call the horsemen on you,' she threatens[or]'I don't want you harassing my mares, you failure,' she snarls[or]'I'd offer you some of the food, but I'm not even sure I want you among my mares,' she snaps at you[or]'I don't see why you think you can keep bothering me like this,' she grumbles[or]'Well, there's no chance you're getting any of this now,' she says tauntingly as she poses sexily and plays with her breasts[or]'Those horsemen you let down aren't too bright, but at least their strong and brave - not like you. And it helps that they're also hung like horses,' she laughs mockingly[or]'You better not be bothering my mares,' she tells you sternly[at random].";
-	else if fancyaroused is 1:
-		say "     'It was nice of you to help Daisy and Onyx out with their distraction I must admit,' the white mare says with a soft smile as she looks up at you with a teasing wink. 'One would almost think you wanted to stay around and help me keep this place running smoothly,' Fancy says with a soft smile as she looks around the mare's quarters before returning to eying you speculatively.";
-	else if Fancytalk is 1:[Normal short messages the NPC will say each time you talk to them]
-		say "[one of]'Hanging around the mares['] area some more? We are always glad to see a friendly face.'[or]'Back again? Maybe you are interested in a position here at the Stables? Or maybe even several positions?' Fancy says with a suggestive grin.[or]'Those damn horsemen are always breaking things on accident and never fixing them. I swear...'[or]'Try some of the food over there on the table. You might like it.'[or]'So, what do you like in a mare?' Fancy asks you teasingly. 'Breasts, legs, or ass?' she says, her hands rubbing over each part in turn as she watches your reactions.[or]'Were you looking for something here? Or maybe you were looking for someone?' Fancy asks you teasingly.[or]'I wish I could get some help around here sometimes; I only have two hooves after all!'[or]'You know what one of the best parts about this place? When they say hung like a horse around here, they really aren't kidding!' Fancy says with a snicker.[or]'It's good to have a nice safe stall to sleep in here while things go to hell out there. You should try it yourself sometime.'[or]'Enjoying the Stables so far?'[at random]";
 
 
-Section 3 - Fucking Fancy
+Section 3 - Pony Quest
+
+to say PonyQuest:
+	if Thirst of Fancy is 1:
+		if fancyquest <= 1:
+			say "     The mare examines the token and scrap of page you had retrieved from the ledger. 'Well, I can tell you what this place is,' she finally says after a long period of silence. 'This is one of the Stables' suppliers of gear, although we hardly buy from them. It's a warehouse in the Red Light District which has fancier stuff - pardon the pun - than what the stallions normally get: latex, silk, that kind of thing. Most of their orders come from the girlier ones, and they don't get nearly as much leeway to spend as the big guys - the Stablemaster likes his henchmen loyal, so in return they get their picks while the rest of us scrounge for scraps.' A hint of resentment creeps into her voice for just a brief moment.";
+			if fancyquest is 0 and Ignored Memos is resolved:
+				say "     Shaking her head, her muzzle creases into a frown. 'So why did our dear Stablemaster order several crates of gear from them? The normal orders barely fill a single box, and we have more than enough of the regular stuff anyway. Plus he's being very discreet about this - if I hadn't checked this code, I don't think anyone would have known about this order. He's up to something.' She turns to you and narrows her eyes. 'I know what I said before, and I wasn't intending to ask anything of you again... but this is important, and I'm far too busy to do this myself. If you happen to be passing by the warehouse, you can try exchanging this token for whatever this is meant to redeem. If it looks interesting, I'll be grateful if you were to bring it back here.' She doesn't sound particularly hopeful, however, clearly still stung from your earlier rejection.";
+				now Thirst of Fancy is 2;
+			else:
+				say "     Shaking her head, her muzzle creases into a frown. 'So why did our dear Stablemaster order several crates of gear from them? The normal orders barely fill a single box, and we have more than enough of the regular stuff anyway. Plus he's being very discreet about this - if I hadn't checked this code, I don't think anyone would have known about this order. He's up to something. Do you mind doing me a favor and checking out what this item is? This paper is good for one redemption - if you get a sample, we can figure out what he's planning.' She gives you a set of directions that you take care to memorize. 'And be careful - if he knows you're onto him, he might have sent someone to meet you there,' she warns.";
+				now Thirst of Fancy is 3;
+		else if fancyquest is 100:
+			say "     It takes a few tries before Fancy even acknowledges you long enough to listen to your explanation. 'I don't know why I'm bothering to help you at all,' she grumbles, 'but this is a token from one of our suppliers in the Red Light District. I'll give you the coordinates if it'll make you remove yourself from my sight.' She scribbles something roughly on a piece of paper and thrusts it in your direction, immediately going back to ignoring you.";
+			now Thirst of Fancy is 99;
+	else if Thirst of Fancy is 3:
+		say "     'Any luck finding the place?' the mare asks eagerly. 'It should be in the Red Light District, you can't miss it. [if Resolution of Transformationledger is 1]You might want to be on your guard, though; the Stablemaster is in a bad mood, so it sounds like he's discovered your sabotage. Keep an eye out for his goons.'[else if Resolution of Transformationledger is 2]The floor supervisor is a friend of mine - just give her the token and say that Fancy sent you if you're having trouble.'[end if]";
+	else if Thirst of Fancy is 4:
+		say "     Fancy breaks into a sly grin as you set the bag down in front of her. 'No luck with opening this?' she comments in amusement. 'I know the feeling. Let me get it for you.' She takes a pair of scissors and slices the bag open, allowing its contents to spill out. It smells very much like new rubber, and you're not sure whether you want to cover your nose or take a deep breath. 'Figures,' Fancy snorts as she holds up the outfit, letting it unfurl into its proper shape. 'He's tired of waiting for the nanites to do their work, so he wants to turn more people into ponies the good old-fashioned way. Can't believe the nerve of him to spend all our funds on this instead of repairing this old place... Well, we know what he's planning now.'";
+		say "     The mare gives you a thoughtful look. 'I have an idea in mind that might take him down for good using his own playthings against him, but I'll probably need your help. The downside is that you'll have to wear one of these things for a while. Interested?'";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Agree to help Fancy.";
+		say "     ([link]N[as]n[end link]) - This is too much for you. No thanks.";
+		if player consents:
+			LineBreak;
+			say "[ContinuePonyQuest]";
+		else:
+			LineBreak;
+			say "[EndPonyQuest]";
+	else if Thirst of Fancy is 5:
+		say "     'Have you gotten Nermine's item yet?' Fancy asks anxiously, then lets out a sigh at the negative answer. 'We're still working on modifying that suit - it's a delicate process, trying to make the changes as unnoticeable as possible. But we need that item if we're going to take the Stablemaster down for good.'";
+
+to say EndPonyQuest:
+	if fancyquest is 0 and Ignored Memos is resolved:
+		say "     She folds her arms and huffs. 'Between you and me, I'm out of options. Maybe it's better that he does whatever he likes, and hopefully he'll eventually get bored of this place and turn it over to someone else.' She lets out a defeated sigh and turns back to her work without a further word."; [Ends the storyline]
+		now Thirst of Fancy is 98;
+	else:
+		say "     She folds her arms and huffs. 'I can't do anything about this on my own, but I'll send him a memo telling him exactly what I think of his little scheme. We really need to find a replacement for that useless lout...'"; [Ends the storyline]
+		now Thirst of Fancy is 98;
+
+to say ContinuePonyQuest:
+		say "     She tosses you the latex garment, the suit landing in your arms with a soft flop. 'What you're holding there is a ponysuit,' she explains to you as she holds up a card that had been hidden within the fabric, showing you a picture of what appears to be a blank-eyed horse. 'It's meant to keep you stuck inside while making you look like a pony on the outside - the perfect slave for our little place, in other words. You won't be able to use a finger when your hands are in the hoof mitts, and without a finger you're not getting out of this by yourself. You'll be stuck inside, no doubt making horsey noises out through your little muzzle while you're getting pounded by a lucky stallion.' She flashes you a grim smile.";
+		say "     'What we're going to do is make sure you're not helpless inside, so you can get close to the Stablemaster,' she continues. 'The suit will need to be modified with wrist zips so you can slip your hands out in a split, and in the meantime I've commissioned something that can deal with the Stablemaster if you can get close enough to use it on him. I'll have your suit sorted if you can go find this shopkeeper called... Nermine, I think... and hopefully her shop hasn't moved - it should be near the mall. Try not to let her turn you into a cow,' she quickly adds.";
+		now Thirst of Fancy is 5;
+
+
+
+Section 4 - Fucking Fancy
 
 Instead of fucking the Fancy:
 	if Player is neuter:
@@ -302,7 +403,7 @@ Instead of fucking the Fancy:
 
 
 
-Section 4 - Nightmare vial
+Section 5 - Nightmare vial
 
 nightmaretf is a number that varies.
 
@@ -420,7 +521,7 @@ to quietrestorenightmareform:
 		turn the Player into a "Nightmare";
 
 
-Section 5 - Leather Duster
+Section 6 - Leather Duster
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -434,6 +535,27 @@ The descmod of leather duster is "You are wearing a really bad-ass duster made o
 The slot of leather duster is "body".
 
 the scent of leather duster is "The leather smells vaguely of saddle oil.".
+
+
+
+Section 7 - Ponysuit
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"Ponysuit"	"A full-body latex catsuit with a pony-shaped hood and hoof-shaped mitts attached, restricting the fingers of the wearer. Comes with a long tail made of synthetic fibre."	10	Ponysuit
+
+Ponysuit is a grab object.
+Ponysuit is equipment.
+It is not temporary.
+The plural of Ponysuit is false.
+The taur-compatible of Ponysuit is false.
+The size of Ponysuit is 3.
+The AC of Ponysuit is 0.
+The effectiveness of Ponysuit is 0.
+The placement of Ponysuit is "body".
+The descmod of Ponysuit is "Your body is encased in a full-body latex catsuit with an integrated ponyhood and hoof mitts, as well as a long tail swishing from your rear. The hidden wrist-zips on the sleeves ensure you can use your fingers when necessary".
+The slot of Ponysuit is "body".
+the scent of Ponysuit is "Smells like rubber, and a hint of horse".
 
 
 
