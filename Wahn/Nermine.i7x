@@ -239,6 +239,12 @@ instead of conversing the Nermine:
 		now sortorder entry is 30;
 		now description entry is "Ask Nermine if she has some way of helping Brennan with his little problem";
 	[]
+	if Thirst of Fancy is 5:
+		choose a blank row in table of fucking options;
+		now title entry is "The Stablemaster";
+		now sortorder entry is 40;
+		now description entry is "Ask Nermine about dealing with the Stablemaster";
+	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -275,6 +281,8 @@ instead of conversing the Nermine:
 					say "[NermineRatRitual]";
 				else if (nam is "Let her turn Cole into a girl again" or nam is "Let her call Coura from the back room"):
 					say "[NermineCouraSpell]";
+				else if (nam is "The Stablemaster"):
+					say "[NermineTalk6]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -479,6 +487,11 @@ to say NermineTalk5:
 			now Libido of David is 62; [payment refused]
 	else:
 		say "     The jackaless gives you a smooth smile as you bring up Brutus and says, 'Nermine hopes you are happy with your pet, yes? She wants to respectfully remind you that there are no refunds, no matter what. All deals are final.' With that, she gives you a friendly smile, though you can see the iron will of an unrelenting salesperson shine out from underneath.";
+
+to say NermineTalk6:
+	say "     As you open your mouth to ask Nermine about the item Fancy had sent you to retrieve, a mysterious gust of wind blows through the mall, momentarily making you forget what you were about to say. And your backpack suddenly feels a little heavier, too.";
+	say "     (This quest will be finished soon, but in the meantime, enjoy playing with the finished ponysuit! And thank you for your patience.)";
+	ItemGain Ponysuit by 1;
 
 to say BrutusCassimFuck:
 	say "     As Brutus steps forward after your command, Cassim's eyes widen and he can't help but stare at the demon's rippling muscles - and even more so at the massive shaft hanging between the purple giant's legs. It is clear that this is the biggest penis he's ever seen - making it kind of admirable that the smaller elf stands his ground, showing no fear - although he does gulp visibly as Brutus quickly gets fully hard and the massive erection twitches in Cassim's direction. Coming to a stance with his clawed feet set apart a bit, your demonic companions sets his hands on his hips and says, 'Come here, elf boy!'";

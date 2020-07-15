@@ -687,7 +687,7 @@ Instead of resolving a Kink Warehouse:
 								else:
 									say "     Tearing open the package reveals the contents to be some curious hybrid of a latex catsuit with hooves instead of gloves and an attached pony-shaped hood. Trying to put it on by yourself would be an exercise in futility without fingers to close (or open!) the zippers, so you'll need to find someone who can modify it for you.";
 									now Thirst of Fancy is 100;
-								increase carried of food by 1;
+								ItemGain food by 1;
 								now Kink Warehouse is resolved;
 							else:
 								say "     Despite looking around for any sort of alternative route, your search proves futile as the walls of the warehouse appear to be solidly built, with all its other entrances firmly locked up tight. With the guard already eyeing you suspiciously, it looks like you're just going to have to come back and try again later.";
