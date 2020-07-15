@@ -322,7 +322,7 @@ to LJockstrapPickup:
 		say "     ([link]N[as]n[end link]) - Just leave it.";
 		if player consents:
 			say "     You crouch down to pick the leather jockstrap and stow it away in your inventory.";
-			increase carried of leather jockstrap by 1;
+			ItemGain leather jockstrap by 1 silently;
 		else:
 			say "     With a shrug, you leave it where it is. Probably won't be there in a few minutes.";
 

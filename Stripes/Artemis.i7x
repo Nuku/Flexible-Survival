@@ -72,7 +72,7 @@ Instead of resolving a Poor Kitty:
 			say "     Continuing to walk along, you take some string you found and an empty water bottle out of your pack. Keeping this out of sight, you tie the string around the neck of the bottle. The next time you go around a corner, you hurry ahead and drop the bottle. As your rubbery stalker comes around the corner, you tug at the string, making the bottle skitter a little. She hunkers down and starts purring, her tail swishing as she shifts her weight before pouncing. You tug the bottle a little further back, making her pursue it with soft swats of her padded paws. Soon enough, you have her rolling on her back beside you, juggling the bottle on her paws as she purrs happily. She plays with her toy for a while like this before biting down on it, eating the plastic in gooey bites.";
 			say "     After swallowing the last of it down, she spits out the loop of string and nuzzles at your leg. She purrs softly, giving a cute, cat-like mew. You reach down and cautiously pet her head, rubbing the rubber tigress's ears. She nuzzles against your touch, purring all the louder.";
 			say "     'You're just a big kitty, aren't you?' you say to her, getting another mew from her. 'You're certainly a strange rubber tigress,' you muse. 'What can I call you?' She can only reply with a mewl. 'Hmm... rubber tigress... RT... Artie? No, Artemis. How about Artemis, kitty? Roman goddess of the hunt, wilderness and... uhhh... virginity.' She seems pleased with this choice, giving a happy, squeaking mew and purring all the louder. Having received a name from you, Artemis purrs and nuzzles at you happily. It seems you've made a friend. With her following, you go back to the concession stand where you first found her, gather up a stack of cups for her and put them in your pack.";
-			increase carried of cup stack by 1;
+			ItemGain cup stack by 1;
 			increase score by 20;
 			now rubber tigress is tamed;
 			add "Tamed" to Traits of rubber tigress;
@@ -80,7 +80,7 @@ Instead of resolving a Poor Kitty:
 			now HP of rubber tigress is 3;
 			now Resolution of Poor Kitty is 2;		[Artemis recruited]
 			now Libido of rubber tigress is 30;
-			say "     (The rubber tigress is now tamed! You can make her your active pet by typing [bold type][link]pet rubber tigress[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+			say "     (Artemis the rubber tigress is now a possible companion! You can make her your active companion by typing [bold type][link]companion Artemis[end link][roman type] or [bold type][link]companion rubber tigress[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Artemis[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 			now Poor Kitty is resolved;
 		else:
 			say "     Continuing to walk along, you turn around the next corner, and once out of sight, run around the stand. You move quietly as you sneak back onto the main thoroughfare, finding the strange tigress poking her head around the corner[if weapon object of Player is not journal]. You pull out your weapon and charge at her[else]. You raise your fists and charge at her[end if]. She gives a shrill shriek of surprise and scrambles away. You don't expect that thing will be bothering you again.";
@@ -89,7 +89,7 @@ Instead of resolving a Poor Kitty:
 			now Poor Kitty is resolved;
 	else:
 		say "ERROR-Artemis-[HP of rubber tigress]PK: HP outside of range for the event!";
-		increase carried of cup stack by 1;
+		ItemGain cup stack by 1;
 		now rubber tigress is tamed;
 		add "Tamed" to Traits of rubber tigress;
 		now Poor Kitty is resolved;
@@ -108,6 +108,7 @@ rubber tigress	"rubber tigress"
 
 rubber tigress is a pet. rubber tigress is a part of the player.
 understand "Artemis" as rubber tigress.
+printed name of rubber tigress is "Artemis".
 The description of rubber tigress is "[ArtemisDesc]".
 The weapon damage of rubber tigress is 5.
 The level of rubber tigress is 3.

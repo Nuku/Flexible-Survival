@@ -271,9 +271,7 @@ to UndieRaceEvent:
 	let diceroll be a random number from 1 to 20;
 	if diceroll > 15:
 		say "     [bold type]Perception check successful[roman type]: As you leave, you notice that a water bottle is still on the table, unopened. This is tap water, probably infected, but it is better than nothing. You snatch it discreetly and put it in your bag.";
-		LineBreak;
-		say "[bold type]You gain 1 (dirty) water bottle![roman type][line break]";
-		increase carried of dirty water by 1;
+		ItemGain dirty water by 1;
 	now Undie Race is resolved;
 	now LastCampusWalkin is turns;
 
@@ -285,6 +283,7 @@ Dog Meets Dog	"Dog Meets Dog"
 
 Dog Meets Dog is a situation.
 The sarea of Dog Meets Dog is "Campus".
+The PrereqCompanion of Dog Meets Dog is gshep.
 
 after going east from College Campus Entrance while (LastCampusWalkin - turns > 2 and gshep is companion of Player and gsd_pet >= 60 and GibsonRelationship is 0 and a random chance of 1 in 3 succeeds):
 	DogMeetsDogEvent;

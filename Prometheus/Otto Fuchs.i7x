@@ -47,22 +47,29 @@ Table of GameCharacterIDs (continued)
 object	name
 Otto	"Otto"
 
-Otto is a man. The hp of Otto is usually 0.
-[Physical details as of game start]
+Otto is a man.
 ScaleValue of Otto is 3. [human sized]
-SleepRhythm of Otto is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Otto is 1. [One cock]
-Cock Length of Otto is 6. [Six Inches]
-Ball Size of Otto is 2.
-Ball Count of Otto is 2. [Two balls]
-Cunt Count of Otto is 0. [No pussy]
-Cunt Depth of Otto is 0. [No Cunt]
-Cunt Tightness of Otto is 0. [No Cunt]
-Nipple Count of Otto is 2. [2 nipples]
-Breast Size of Otto is 0. [Flat at the start]
+Body Weight of Otto is 7. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Otto is 4. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Otto is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Otto is 4. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Otto is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Otto is 4. [length in inches]
+Breast Size of Otto is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Otto is 2. [count of nipples]
+Asshole Depth of Otto is 6. [inches deep for anal fucking]
+Asshole Tightness of Otto is 1. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Otto is 1. [number of cocks]
+Cock Girth of Otto is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Otto is 6. [6 Inches]
+Ball Count of Otto is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Otto is 2. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"] [Increase by 1 for Alpha, decrease by 1 for Omega]
+Cunt Count of Otto is 0. [number of cunts]
+Cunt Depth of Otto is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Otto is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Otto is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Otto is false. [can take oversized members without pain]
-Sterile of Otto is false.
 PlayerMet of Otto is false.
 PlayerRomanced of Otto is false.
 PlayerFriended of Otto is false.
@@ -73,12 +80,14 @@ Virgin of Otto is true.
 AnalVirgin of Otto is true.
 PenileVirgin of Otto is false.
 SexuallyExperienced of Otto is true.
+TwistedCapacity of Otto is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Otto is false. [steriles can't knock people up]
 MainInfection of Otto is "Human".
-[Custom Variables]
-OttoForm is a number that varies. OttoForm is usually 0.
 The description of Otto is "[OttoDesc]".
 The conversation of Otto is { "Interesting" }.
 The scent of Otto is "[OttoScent]".
+[Custom Variables]
+OttoForm is a number that varies. OttoForm is usually 0.
 
 to say OttoDesc:
 	if debugactive is 1:
@@ -162,8 +171,7 @@ to say OttoTalk1: [Small Talk]
 
 to say OttoTalk2: [Ask for medkit]
 	say "     As a doctor, you assume that Otto will be capable of consstructing medkits and should have a ready supply of materials with which to do so, and decide to ask whether he would be able to give you one if he has sufficient for his own needs. Upon hearing your request, he bursts into laughter. 'Medical supplies are quite rare in the city nowadays. Do you assume that I raid the hospital, or perhaps you believe that I break into Zephyr as I definitely won't work for them?' You stand there patiently as he calms his amusement. 'You're in luck, [one of]there was an abandoned supply of military medical equipment that I was given permission to collect some from[or]the Den Mother had some of the wolves bring me a few as payment for my help[or]an anonymous person left me a bag full of them along with a note of gratitude for what I do[at random], so I suppose I can spare you one. Don't use it all at once.' He exits into a side room before returning and handing you a medkit. 'Be careful out there in the city and come back if you need my precious medical supplies again.'";
-	say "[bold type]You gain a medkit![roman type][line break]";
-	increase carried of medkit by 1;
+	ItemGain medkit by 1;
 	now OttoMedkitCounter is 8;
 
 [to say OttoTalk3: [Medical Attention]
@@ -276,8 +284,8 @@ to DoctorThroughtheCityEvent: [Otto relocates to the Green Apartments]
 	WaitLineBreak;
 	say "     It doesn't take you more than ten minutes to reach your destination at the Green Apartments, even with the injured woman. 'Would you like us to carry your bags to your room, doctor?' one of the wolves asks, receiving a nod and a thank you from the middle-aged human. 'If you don't mind me leaving you here, I'll take Emma inside and have a better look at her foot,' Fuchs addresses you and the wolves. 'Your help was invaluable, and once again I am in your debt.' He gives a small bow before aiding the panda through the front door. Genevieve instead opts to give everyone a hug, Argos being given a wink in addition. She turns to face you, 'Dr. Fuchs will be here, should you need him or just want to shelter from the city for a bit. But really, thank you. I wouldn't mind seeing more of you either,' the vulpine says, softly biting her bottom lip. With that, she follows her superior, leaving you with the pack.";
 	say "     'We'll probably be seeing you again in future, I'm sure,' Argos says readying to return to wherever he resides. One of the wolves gives you a salute, much to the amusement of some of his friends. 'I would appreciate it if you had the time to check on Otto every now and again. He's a good man, but he has a tendency to help anyone who needs help. Something to do with the importance of his principles. But as you saw from the outcasts of the hyena gang, some victims have enemies that don't want them saved.' He pats you on the shoulder before dropping to all fours and loping away, followed by his pack-mates. Giving a smile and waving as they leave, you now have to decide what to do next.";
-	move player to green apartment building;
-	now green apartment building is known;
+	move player to Green Apartment Building;
+	AddNavPoint Green Apartment Building;
 	now hp of Otto is 3;
 	now Doctor Through the City is resolved;
 

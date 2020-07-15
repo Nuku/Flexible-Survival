@@ -12,8 +12,7 @@ Ravaged Power Plant is a situation.
 
 instead of resolving a Ravaged Power Plant:
 	say "     On your walk, you pass a building that was the power station for the city. Now it is dark and silent, and a large hole is smashed through one of the generators. Claw marks cover the floor and walls, and liquids of every kind litter the floor. The fence is also damaged, a large chunk flattened by some large creature that passed by.";
-	now Plant Overview is known;
-	say "     The power plant lobby is nearby, maybe you could return?";
+	AddNavPoint Plant Overview;
 	now Ravaged Power Plant is resolved;
 
 foundparts is a number that varies.
@@ -84,9 +83,9 @@ The description of control panels is "[ControlPanelDesc]".
 
 to say ControlPanelDesc:
 	if fixedgens < 2:
-		say "The panels are glowing softly, every light red. A small schematic shows that the intact generator is connected to power lines that supply the city area with the library and mall, but the controls seem to be in emergency shutdown mode. Maybe you can [bold type]reactivate[roman type] them?";
+		say "The panels are glowing softly, every light red. A small schematic shows that the intact generator is connected to power lines that supply the city area with the library and mall, but the controls seem to be in emergency shutdown mode. Maybe you can [link][bold type]reactivate[roman type][as]reactivate control panels[end link] them?";
 	else if fixedgens is 2:
-		say "The panels are glowing softly, all but a small portion of the lights red. A small schematic shows that the generator you repaired is connected to power lines that supply the city area with the library and mall, but the controls seem to be in emergency shutdown mode. Maybe you can [bold type]reactivate[roman type] them?";
+		say "The panels are glowing softly, all but a small portion of the lights red. A small schematic shows that the generator you repaired is connected to power lines that supply the city area with the library and mall, but the controls seem to be in emergency shutdown mode. Maybe you can [link][bold type]reactivate[roman type][as]reactivate control panels[end link] them?";
 	else if fixedgens is 3:
 		say "The panels are glowing softly, all but a small portion of the lights red. A small schematic shows that the generator you repaired is connected to power lines that supply the city area with the library and mall, with at least those few lights now shining green. You doubt you'll have as much luck with getting the rest of the city supplied with power again.";
 
@@ -186,7 +185,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 Power Lines	"Power Lines"
 
-Power Lines is a room. "A large power line tower stands here[if findwires is not 2], but the top is broken off and on the ground. The surrounding fence is melted and charred, like something spat magma at it, and the bottom of the tower is scorched, but it still looks serviceable. Looking down the line of other still standing towers, you see the city's powerplant not too far away in one direction, and a part of the city you know pretty well in the other. The library is over there, and the mall as well. Maybe you could restore power to them if you [bold type]fixed[roman type] this tower[else if fixedgens is 2]. The perimeter fence is melted and the ground is blackened, but thankfully the tower is just as you left it, with the fixed top where it belongs. A red light is glows at its uppermost tip, signaling that there is power and it's flowing towards the closest part of the city - which should include the library as well as the mall[else]. The perimeter fence is melted and the ground is blackened, but thankfully the tower is just as you left it, with the fixed top where it belongs. The now unbroken lines should allow electricity to reach the nearby part of the city again, though you see that the red light at the uppermost tip of the tower is still off, showing that there is no power. Maybe you should check out the power plant again[end if].".
+Power Lines is a room. "A large power line tower stands here[if findwires is not 2], but the top is broken off and on the ground. The surrounding fence is melted and charred, like something spat magma at it, and the bottom of the tower is scorched, but it still looks serviceable. Looking down the line of other still standing towers, you see the city's powerplant not too far away in one direction, and a part of the city you know pretty well in the other. The library is over there, and the mall as well. Maybe you could restore power to them if you [link][bold type]fixed[roman type][as]fix tower[end link] this tower[else if fixedgens is 2]. The perimeter fence is melted and the ground is blackened, but thankfully the tower is just as you left it, with the fixed top where it belongs. A red light is glows at its uppermost tip, signaling that there is power and it's flowing towards the closest part of the city - which should include the library as well as the mall[else]. The perimeter fence is melted and the ground is blackened, but thankfully the tower is just as you left it, with the fixed top where it belongs. The now unbroken lines should allow electricity to reach the nearby part of the city again, though you see that the red light at the uppermost tip of the tower is still off, showing that there is no power. Maybe you should check out the power plant again[end if].".
 Power Lines is fasttravel.
 the earea of Power Lines is "Outside".
 
@@ -220,7 +219,7 @@ carry out towerfixing:
 Section X - Library Computer
 
 library computer is a thing.
-library computer is in Grey Abbey Library. "[if library computer is off]A computer rests nearby, powerless. You can try to [bold type]turn on the computer[roman type][else]One of the nearby computers is on, but unused. Its screen shows a somewhat garbled screen saver[end if].";
+library computer is in Grey Abbey Library. "[if library computer is off]A computer rests nearby, powerless. You can try to [link][bold type]turn on the computer[roman type][as]turn on computer[end link][else]One of the nearby computers is on, but unused. Its screen shows a somewhat garbled screen saver[end if].";
 
 an everyturn rule:
 	if library computer is unpowered and findwires is 2 and fixedgens > 2:

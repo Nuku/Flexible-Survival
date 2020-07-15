@@ -120,10 +120,10 @@ to say Viking wins:
 						say "     'What kind of monster are you, meekly surrendering to me? I was told there are powerful beasts in the world, not... this.' With a scoff, she shoves you to the ground. 'Let's see if you've at least got something worth taking.' With that, she starts poking around in your stuff.";
 						if carried of food >= 1:
 							say "     Finding some food in your pack, she puts it in her satchel and then walks away, leaving you lying in the dust without any look back.";
-							decrease carried of food by 1;
+							ItemLoss food by 1;
 						else if carried of water bottle >= 1:
 							say "     Finding a bottle of water in your pack, she puts it in her satchel and then walks away, leaving you lying in the dust without a look back.";
-							decrease carried of water bottle by 1;
+							ItemLoss water bottle by 1;
 						else:
 							say "     Not finding anything to her liking as she throws one after another of your belongings aside, the Viking woman grumbles 'What a waste of time.' Then she turns away from you and walks off, leaving you lying in the dust without any look back.";
 				else if VikingRelationship is 2: [submit after one victory]
@@ -144,10 +144,10 @@ to say Viking wins:
 						say "     'Hmph - you're just another of those weaklings that run around like frightened chickens when they're raided. I had hoped to find somewhat more impressing people in this new land.' With a scoff, she shoves you to the ground. 'Let's see if you've at least got something worth taking.' With that, she starts poking around in your stuff.";
 						if carried of food >= 1:
 							say "     Finding some food in your pack, she puts it in her satchel and then walks away, leaving you lying in the dust without any look back.";
-							decrease carried of food by 1;
+							ItemLoss food by 1;
 						else if carried of water bottle >= 1:
 							say "     Finding a bottle of water in your pack, she puts it in her satchel and then walks away, leaving you lying in the dust without a look back.";
-							decrease carried of water bottle by 1;
+							ItemLoss water bottle by 1;
 						else:
 							say "     Not finding anything to her liking as she throws one after another of your belongings aside, the Viking woman grumbles 'What a waste of time.' Then she turns away from you and walks off, leaving you lying in the dust without any look back.";
 				else if VikingRelationship is 2: [submit after one victory]
@@ -169,10 +169,10 @@ to say Viking wins:
 						say "     Leaving you dazed with her last blow, she gives you a shove and you fall on your ass. 'A bit weak for a monster, aren't you? Oh well, maybe you're just a stunted one.' Looking down on your prone form, she lets her gaze wander over you appraisingly. 'Let's see if you've at least got something worth taking.' With that, she starts poking around in your stuff.";
 						if carried of food >= 1:
 							say "     Finding some food in your pack, she puts it in her satchel and then walks away, leaving you lying in the dust without any look back.";
-							decrease carried of food by 1;
+							ItemLoss food by 1;
 						else if carried of water bottle >= 1:
 							say "     Finding a bottle of water in your pack, she puts it in her satchel and then walks away, leaving you lying in the dust without a look back.";
-							decrease carried of water bottle by 1;
+							ItemLoss water bottle by 1;
 						else:
 							say "     Not finding anything to her liking as she throws one after another of your belongings aside, the Viking woman grumbles 'What a waste of time.' Then she turns away from you and walks off, leaving you lying in the dust without any look back.";
 				else if VikingRelationship is 2: [loss after one victory]
@@ -193,10 +193,10 @@ to say Viking wins:
 						say "     Leaving you dazed with her last blow, she gives you a shove and you fall on your ass. 'A bit weak for a monster, aren't you? Oh well, maybe you're just a stunted one.' Looking down on your prone form, she lets her gaze wander over you appraisingly. 'Let's see if you've at least got something worth taking.' With that, she starts poking around in your stuff.";
 						if carried of food >= 1:
 							say "     Finding some food in your pack, she puts it in her satchel and then walks away, leaving you lying in the dust without any look back.";
-							decrease carried of food by 1;
+							ItemLoss food by 1;
 						else if carried of water bottle >= 1:
 							say "     Finding a bottle of water in your pack, she puts it in her satchel and then walks away, leaving you lying in the dust without a look back.";
-							decrease carried of water bottle by 1;
+							ItemLoss water bottle by 1;
 						else:
 							say "     Not finding anything to her liking as she throws one after another of your belongings aside, the Viking woman grumbles 'What a waste of time.' Then she turns away from you and walks off, leaving you lying in the dust without any look back.";
 				else if VikingRelationship is 2: [loss after one victory]
@@ -1051,8 +1051,8 @@ to say VikingDuelVictory:
 	else:
 		say "     You smile at Sonya, but shake your head, telling her it'd be too cruel to show all those men and women a perfect body - her perfect body - that they can never have. Not that you aren't tempted, you say with a grin, goosing Sonya's ass playfully. 'As you wish, [if Player is purefemale]my wife[else]my husband[end if],' she says, then gives you another quick kiss before going to fill your mead-horns again. Stories of battles and raids told by the other Vikings follow, although with another mead cask soon empty, the tales get more and more incomprehensible.";
 		say "     Nevertheless, the party is great fun - at least what you remember of it when you wake up several hours later, lying in a pile of furs next to Sonya on her bed. Seems like the two of you wanted to get some action going at some point, but drunkenly fell asleep before you got more than halfway undressed. With a wince at the hangover almost splitting your skill, you stand up quietly, leaving your wife to sleep hers off in peace. Going back on deck, you find one man who isn't quite as bad off as yourself, then let him row you back to shore. As you leave the boat, he tells you how you can signal for a pickup when you want to return to the [bold type]Viking Ship[roman type].";
-	increase carried of viking sword by 1;
-	now Viking Ship is known;
+	ItemGain viking sword by 1;
+	AddNavPoint Viking Ship;
 	now VikingRelationship is 20;
 
 to say VikingPublicSex:
@@ -1067,7 +1067,7 @@ to say VikingPublicSex:
 		WaitLineBreak;
 		say "     ...and that is where you fell asleep too, only awakening several hours later beside Sonya, on a ship full of still-dozing or already awake and hung-over Vikings. Having to get back to your efforts of surviving in this new world, you find one man who isn't quite as bad off, then let him row you back to shore. As you leave the boat, he tells you how you can signal for a pickup when you want to return to the [bold type]Viking Ship[roman type].";
 		NPCSexAftermath Sonya receives "PussyFuck" from Player;
-		now Viking Ship is known;
+		AddNavPoint Viking Ship;
 		if VikingPregnancy is 0: [not already preggers]
 			let VikingPregChance be a random number from 1 to 20;
 			if VikingPregChance > 10: [50% chance]
@@ -1705,16 +1705,7 @@ to VikingWomanInfect:
 	infect "Viking Woman";
 	now non-infectious entry is true;
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"viking sword"	"A beautifully crafted sword, about 30 inches long, with a keen edge to its blade. The favorite weapon of your Viking wife, Sonya, it became yours as you married. Better take good care of it - it's a pretty good weapon, well-balanced... and there might be some marital problems ahead if you let it rust or lose it."	5	viking sword
-
-viking sword is an armament.
-It is part of the player.
-It has a weapon "shining steel blade". The weapon damage of viking sword is 8. The weapon type of viking sword is "Melee". It is not temporary. The objsize of viking sword is 2.
-
-Instead of sniffing viking sword:
-	say "The blade smells of nothing but metal. Sonya always kept it clean without fail, and you've done the same since you got it.";
+[Viking Sword moved to Core Mechanics/Weapons.i7x]
 
 
 [

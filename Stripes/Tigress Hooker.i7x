@@ -404,49 +404,49 @@ to say paymentcheck:
 	now tempnum is 0; [reset payment flag again, jic]
 	if gryphon milk is owned:
 		say "     Finding a container of gryphon milk, she smiles happily. 'Ooo! Cream for the kitty.' she opens it and sniffs. 'Birdy milk at that. That makes for a happy kitty!' Keeping her find as payment, she leans down and gives you a kiss on the cheek for bringing her such a tasty treat.";
-		delete gryphon milk;
+		ItemLoss gryphon milk by 1;
 	else if dolphin milk is owned:
 		say "     Finding a container of dolphin milk, she smiles happily. 'Ooo! Cream for the kitty.' she opens it and sniffs. 'Fishy milk at that. That makes for a happy kitty!' Keeping her find as payment, she leans down and gives you a kiss on the cheek for bringing her such a tasty treat.";
-		delete dolphin milk;
+		ItemLoss dolphin milk by 1;
 	else if panther milk is owned:
 		say "     Finding a container of panther milk, she smiles happily. 'Ooo! Cream for the kitty.' she opens it and sniffs. 'You brought kitty milk for the kitty. That makes for a happy kitty!' Keeping her find as payment, she leans down and gives you a kiss on the cheek for bringing her such a tasty treat.";
-		delete panther milk;
+		ItemLoss panther milk by 1;
 	else if cheetah milk is owned:
 		say "     Finding a container of cheetah milk, she smiles happily. 'Ooo! Cream for the kitty.' she opens it and sniffs. 'You brought kitty milk for the kitty. That makes for a happy kitty!' Keeping her find as payment, she leans down and gives you a kiss on the cheek for bringing her such a tasty treat.";
-		delete cheetah milk;
+		ItemLoss cheetah milk by 1;
 	else if cow milk is owned:
 		say "     Finding a container of cow milk, she smiles happily. 'Ooo! Cream for the kitty.' she opens it and sniffs. 'Good old cow milk, rich and creamy. That makes for a happy kitty!' Keeping her find as payment, she leans down and gives you a kiss on the cheek for bringing her such a tasty treat.";
-		delete cow milk;
+		ItemLoss cow milk by 1;
 	else if chocolate milk is owned:
 		say "     Finding a container of white chocolate milk, she smiles happily. 'Ooo! Cream for the kitty.' she opens it and sniffs. 'Oh my, creamy white chocolate milk! The matron will be so pleased with me!' Keeping her find as payment, she leans down and gives you a kiss on the cheek for bringing her such a tasty treat.";
-		delete chocolate milk;
+		ItemLoss chocolate milk by 1;
 	else if vixen milk is owned:
 		say "     Finding a container of vixen milk, she smiles happily. 'Ooo! Cream for the kitty.' she opens it and sniffs. 'Ugh! It smells like medicine and musky vixens. Maybe we can boil that fox smell out of it,' she muses. Keeping her find as payment, she sets your backpack aside.";
-		delete vixen milk;
+		ItemLoss vixen milk by 1;
 	else if dog milk is owned:
 		say "     Finding a container of dog milk, she smiles happily. 'Ooo! Cream for the kitty.' she opens it and sniffs. 'Ugh, it smells of dog. Well, it's still milk, so I'll take it! Maybe we can boil that dog smell out of it,' she muses. Keeping her find as payment, she sets your backpack aside.";
-		delete dog milk;
+		ItemLoss dog milk by 1;
 	else if Tasty Fish is owned:
 		say "     Finding the fish you've wrapped in old newspaper, she smiles happily. 'Ooo! Tasty feesh! We'll be eating well back at the motel tonight,' she rumbles happily. Keeping her find as payment, she leans down and gives you a kiss on the cheek for bringing her such a tasty treat.";
-		delete Tasty Fish;
+		ItemLoss Tasty Fish by 1;
 	else if soda is owned:
 		say "     Finding a can of soda, she smiles happily. 'Hey! This is my favorite flavor. I haven't been able to find one for days.' Keeping her find as payment, she sets your backpack aside.";
-		delete soda;
+		ItemLoss soda by 1;
 	else if water bottle is owned:
 		say "     Finding a water bottle, she pulls it out. 'Here we go. We always need more fresh water.' Keeping her find as payment, she sets your backpack aside.";
-		delete water bottle;
+		ItemLoss water bottle by 1;
 	else if dirty water is owned:
 		say "     Finding a bottle of dirty water, she pulls it out. 'Here we go. I was getting a little thirsty working out here.' Keeping her find as payment, she sets your backpack aside.";
-		delete dirty water;
+		ItemLoss dirty water by 1;
 	else if chips is owned:
 		say "     Finding a bag of chips, she smiles. 'Hey! This is my favorite flavor. I thought they'd discontinued it, but you found one.' Keeping her find as payment, she leans down and gives you a kiss on the cheek for bringing her such a tasty treat.";
-		delete chips;
+		ItemLoss chips by 1;
 	else if food is owned:
 		say "     Finding some food in your pack, she pulls it out. 'Things have been getting a little lean back at the motel. It'll be good to have a full meal.' Keeping her find as payment, she sets your backpack aside.";
-		delete food;
+		ItemLoss food by 1;
 	else if motel key is owned:
 		say "     Digging all the way to the bottom of your pack in search of something of interest, she finds a motel key down there. 'Oh my! Where did you find this? We were worried it was lost. Thanks for finding and returning it, sweetie,' she purrrs, kissing your cheek and giving you a playful grope.";
-		delete motel key;
+		ItemLoss motel key by 1;
 	else:										[No payment. Smacked around, then raped.]
 		say "     Having gone through your whole bag and having found nothing of interest to her, she growls and slams the bag into your face. As you yell out, she grabs your throat, silencing your cry. 'Trying to get a little fun with the kitty without paying the price? Well, I'll give you all the hot tigress you can take, you little fool.' she growls again, kneeing you in the gut before slamming you up against the brick face of one of the buildings. she seems even stronger in her anger and you are unable to stop her sudden assault.";
 		say "     Before you have a chance to recover, her teeth are at the back of your neck and her throbbing cock grinds against your rear. You look for a means to escape, but those sharp teeth keep you in place. Then suddenly it's too late and the tigress's cock is pushing into your back door, spreading your tailhole open painfully fast. she gives you no time to adjust to the rapid intrusion, pounding you in quick, hard strokes. Despite yourself, you start to grow aroused from the assfuck you're receiving, but she holds your arms tightly to the wall, preventing you from tending to your growing arousal.";

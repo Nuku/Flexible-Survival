@@ -58,7 +58,7 @@ Section 3 - Scavenging Dalmatian (by Kaleem)
 
 Table of GameEventIDs (continued)
 Object	Name
-Scavenging Dalmatian	"Scavenging Dalmation"
+Scavenging Dalmatian	"Scavenging Dalmatian"
 
 Scavenging Dalmatian is a situation.
 The sarea of Scavenging Dalmatian is "Outside".
@@ -76,7 +76,7 @@ Instead of resolving Scavenging Dalmatian:
 			say "     Their whines of hunger are almost heartbreaking to hear. You set the food down in front of the anthro and then take a step back, watching as the spotted creature quickly gobbles up the food as though it hadn't eaten in days. Knowing how rough things are here in this city, the Dal was probably starving. When the dog finishes, it turns its muzzle to look up at you adoringly and then gives you a happy bark before trotting off. Even though you're shorter on provisions now, you feel good about feeding the hungry creature.";
 			increase morale of Player by 5;
 			SanBoost 12;
-			delete food;
+			ItemLoss food by 1;
 			increase score by 10;
 			now Resolution of Scavenging Dalmatian is 1; [shared food]
 		else:
@@ -88,7 +88,7 @@ Instead of resolving Scavenging Dalmatian:
 			say "     Whistling to get the anthro Dalmatian's attention, you watch as it turns and then looks down to see what you put on the ground at your feet. Turning to step away from the cano-mutant, you're already moving off on your way just as your ears pick up the sound of charging footsteps to grasp your left-behind treats. It might not have been much, but it was all that you had on you. A sense of relief washes over you at having helped a starving creature in the midst of all this chaos.";
 			increase morale of Player by 2;
 			SanBoost 6;
-			delete chips;
+			ItemLoss chips by 1;
 			increase score by 5;
 			now Resolution of Scavenging Dalmatian is 3; [shared chips]
 		else:
@@ -124,7 +124,7 @@ Instead of resolving Captured Wyvern:
 			say "     While you're no doctor, you manage to use your medical kit to stitch and patch up whatever wounds you can find on the big beast. A few chirps of pain come from the creature, but you just tell it to grin and bear it, as this is the cost of being taken care of. Once you are done, you take a few steps back to look at your [italic type]patient[roman type] and then nod accordingly when you see the other look over its battered and worn body. Blood quickly stains the bandages that you have wrapped around the wyvern as the mutant tries to get up.";
 			say "     You have to quickly hush the thing to prevent it from ruining all of your hard work, quickly comforting the beast into settling down. You try and tell it not to move and that it needs to rest before it can recover fully. The monster seems somewhat hesitant about doing so, and looking around, you can understand why, as the area you both are in is quite open to possible attack, either from the soldiers or other mutants. Giving a sigh of exasperation, you slowly pad up to the reptilian creature's muzzle and then pat the wyvern on the snout gently before telling it that you will watch over it. The beast slowly relaxes and then settles down to rest. Once the wyvern is snoring in sleep, you prepare yourself to stand guard over the creature in order to keep your promise.";
 			say "     Thankfully, you encounter little trouble, as neither the soldiers or any other mutants come around the vulnerable critter. The size and smell of it probably scare off anything with a shred of common sense. That soon changes, however, when a flock of wyverns come around to see about their missing companion. Noticing the large assortment of flying creatures, you decide that it's time to beat feet out of here. You've done your good deed for the day, after all.";
-			delete medkit;
+			ItemLoss medkit by 1;
 			SanBoost 10;
 			increase score by 10;
 			now Resolution of Captured Wyvern is 1; [Defended Wyvern, Used Medkit to heal]
@@ -331,7 +331,7 @@ Instead of resolving Ice Cream Truck:
 			end the story saying "You spend the rest of your days with your lovely gryphon mate.";
 		else:
 			say "     Carefully digging through the mess returns a few bottles of milk that don't appear to be too tainted for use, although in the process of searching you managed to get some of the sticky cream on you as well. Trying to scrape the stuff off while leaving the truck, you find that the cream seems to be seeping into your skin, and your insides twist as you feel yourself change slightly.";
-			increase carried of gryphon milk by 2;
+			ItemGain gryphon milk by 2;
 			infect "Blue Gryphon Herm";
 			now Resolution of Ice Cream Truck is 1; [Crawled around in Icecream Van]
 	else:

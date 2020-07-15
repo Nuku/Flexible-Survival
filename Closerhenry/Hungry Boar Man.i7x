@@ -30,7 +30,7 @@ Instead of Resolving a Hungry Piggy:
 		say "While exploring the city, you stumble upon an odd sight in the basement of one of the buildings. A water pipe must have burst at some point, because the floor of the entire room is covered in mud. What's even stranger is that it looks like someone is living down here despite all the mud.[line break][line break]You spot a strange boar man rolling in the mud on the floor. He's enjoying himself so much that it takes him awhile to realize that someone is in the room. When he finally does, he stares at you with his beady pig eyes for a moment. Not knowing if he's friendly or not, you mentally brace yourself for a fight.[line break][line break]You relax a little when he smiles and says, 'Hello there! My name is Philip. Don't worry, I'm not like those other creatures that are roaming the streets, humping everything in sight. I am really hungry though, could you please FEED me?'";
 		increase hbmr by 1;
 		move player to Pig Pen;
-		now the pig pen is known;
+		AddNavPoint Pig Pen;
 		increase the score by 1;
 		now Hungry Piggy is Resolved;
 
@@ -166,7 +166,7 @@ To pigfeed:
 	else if pigfed is 0:
 		now lastpigfed is turns;
 		if food is owned:
-			delete food;
+			ItemLoss food by 1;
 			now pigfed is 1;
 			say "     'Thank you!' he shouts as he snatches the food from you and starts to gobble it down. The boar man goes into a feeding frenzy. He barely chews as he stuffs the food into his mouth and swallows it down. He almost seems to get a little bit fatter before your eyes as he eats. Stray flecks of saliva fly from his mouth and splash on you. Your body immediately begins to feel strange. A loud ripping sound comes from the seat of your pants as a curly pig tail grows out above your butt.";
 			now TailName of Player is "Piggy";
@@ -201,7 +201,7 @@ To pigfeed:
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
 			if food is owned:
-				delete food;
+				ItemLoss food by 1;
 				say "     Thank you,' he shouts as he snatches the food from you and starts to gobble it down.";
 				say "     The boar man goes into a feeding frenzy. He barely chews as he stuffs the food into his mouth and swallows it down. He almost seems to get a little bit fatter before your eyes as he eats. Stray flecks of saliva fly from his mouth and once again splash on you. Your body immediately begins to feel strange. Your body plumps up and your feet ache for a moment as they harden into pig hooves.";
 				say "     When he finishes eating, he eyes you appreciatively, then says, 'You seem to know how to find food. Can I come with you?'";

@@ -258,17 +258,17 @@ to say ebheat:
 				say "     But that is only the first. You've already got the second pushing past your cervix and into your vaginal cavity. The second is easier to get out, your passage having already been stretched by the first. And another push of orgasmic effort forces this second colorful egg out.";
 				say "     Left with the third and final, it is more difficult. While your vagina and pussy may be stretched and lubricated with your femme cum, your inner muscles are tired from the effort. You moan, pant and masturbate yourself furiously to another orgasm that gives the chocolate ovoid the final push out it needs. The colorful egg comes to rest beside its predecessors.";
 				say "     You're left panting and thoroughly drained, yet erotically satisfied after the strange experience. Taking the colorful Easter eggs, you stow them away.";
-				increase carried of Easter egg by 3;
+				ItemGain Easter egg by 3;
 				increase hunger of Player by 12;
 			else if ( "Litter Bearer" is listed in feats of Player and a random chance of 2 in 3 succeeds ) or a random chance of 1 in 4 succeeds:
 				say "     That pleasant weight you've been feeling in your lower belly has grown, resting heavily in your womb. Your bunny cunny quivers and warm juices soak your thighs as the hard lumps inside you shift about with a few clicks. You moan and stagger to someplace to sit. Your uterine walls push at the hard lumps inside you, guiding the first down into your vagina, which continues to push it out. Shivers of delight rock through you even as the candy-shelled egg crowns, building to an orgasmic climax as you manage to push it free.";
 				say "     But that is only the first. You've already got the other one pushing past your cervix and into your vaginal cavity. The second is easier to get out, your passage having already been stretched by the first. And another push of orgasmic effort forces this second colorful egg out.";
 				say "     You're left panting and quite drained, yet erotically satisfied after the strange experience. Taking the colorful Easter eggs, you stow them away.";
-				increase carried of Easter egg by 2;
+				ItemGain Easter egg by 2;
 				increase hunger of Player by 8;
 			else:
 				say "     That small weight you've been feeling in your lower belly has grown, resting heavily in your womb. Your bunny cunny quivers and warm juices soak your thighs as it shifts inside you. You moan and stagger to someplace to sit. Your uterine walls push at the hard lump inside you, guiding it down into your vagina, which continues to push it out. Shivers of delight rock through you even as the candy-shelled egg crowns, building to an orgasmic climax as you manage to push it free. You're left panting and drained, yet erotically satisfied after the strange experience. Taking the colorful Easter egg, you stow it away.";
-				increase carried of Easter egg by 1;
+				ItemGain Easter egg by 1;
 				increase hunger of Player by 4;
 		else:
 			if ( "Litter Bearer" is listed in feats of Player and a random chance of 1 in 4 succeeds ) or a random chance of 1 in 8 succeeds:
@@ -276,17 +276,17 @@ to say ebheat:
 				say "     But that is only the first. You've already got the second pushing past your anal cervix and into your lower intestine. The second is easier to get out, your rectum having already been stretched by the first. And another push of orgasmic effort forces this second colorful egg out.";
 				say "     Left with the third and final, it is more difficult. While your rectum and anus may be stretched and lubricated with egg juices, your inner muscles are tired from the effort. You moan, pant and masturbate yourself furiously to another orgasm that gives the chocolate ovoid the final push out it needs. The colorful egg comes to rest beside its predecessors.";
 				say "     You're left panting and thoroughly drained, yet erotically satisfied after the strange experience. Taking the colorful Easter eggs, you stow them away.";
-				increase carried of Easter egg by 3;
+				ItemGain Easter egg by 3;
 				increase hunger of Player by 12;
 			else if ( "Litter Bearer" is listed in feats of Player and a random chance of 2 in 3 succeeds ) or a random chance of 1 in 4 succeeds:
 				say "     That small weight that you've been feeling in your lower belly has grown, resting heavily in your hidden womb. Your bunny womb trembles and your asshole starts to relax as it shifts inside you with a series of clicks and clacks. You moan and stagger to someplace to sit. Your uterine walls push at the hard lumps inside you, guiding the first down into your bowels, which continues to push it out. Shivers of delight rock through you even as the candy-shelled egg crowns from your anus, building to an orgasmic climax as you manage to push it free.";
 				say "     But that is only the first. You've already got the other one pushing past your anal cervix and into your lower intestine. The second is easier to get out, your passage having already been stretched by the first. And another push of orgasmic effort forces this second colorful egg out.";
 				say "     You're left panting and quite drained, yet erotically satisfied after the strange experience. Taking the colorful Easter eggs, you stow them away.";
-				increase carried of Easter egg by 2;
+				ItemGain Easter egg by 2;
 				increase hunger of Player by 8;
 			else:
 				say "     That small weight you've been feeling in your lower belly has grown, resting heavily in your hidden womb. Your bunny womb trembles and your asshole starts to relax as it shifts inside you. You moan and stagger to someplace to sit. Your uterine walls push at the hard lump inside you, guiding it down into your bowels, which continue to push it out. Shivers of delight rock through you even as the candy-shelled egg crowns from your anus, building to an orgasmic climax as you manage to push it free. You're left panting and drained, yet erotically satisfied after the strange experience. Taking the colorful Easter egg, you stow it away.";
-				increase carried of Easter egg by 1;
+				ItemGain Easter egg by 1;
 				increase hunger of Player by 4;
 		now ebheat_msg is false;
 		now ebheat_egg is 0;

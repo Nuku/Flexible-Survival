@@ -101,13 +101,14 @@ to say orcavicsex1:
 	say "     Victorious against the muscular orca, you find your better senses ill-equipped to handle your more feral needs. Too weak to challenge your strength any further, you pull the male into a headlock. Intent on asserting your dominance, you grind your throbbing [CockName of Player] cock against his ass, pushing it under his tail. The beast can only impotently struggle as you tease his tailhole with the tip of your [cock size desc of Player] rod before you ram it into the vulnerable portal, your victim's moans his only reply.";
 	say "     Pumping your organ into him with assertive determination, you sate your lust by making an example of this lesser male and confirm your claim on this territory. Roughly abusing the orca's hole, his own lust betrays him, moaning audibly as the sheer force of your thrusts brings him to cum in the sand. The tight clenching of his abused hole enough to bring you to your own orgasm, [one of]flooding his bowels with your thick seed[or]pulling out just before to spend your seed across his back[at random]. Relinquishing him, you punctuate your violation with a hard swat on the killer whale's abused rump before he takes off. Satisfied after reasserting your territory by humiliating the muscular beast, you depart back from whence you came.";
 	increase orcadom by 1;
-
+	CreatureSexAftermath "Killer Whale" receives "AssFuck" from "Player";
 
 to say orcavicsex2:
 	say "     Victorious against the muscular orca, you find your better senses ill-equipped to handle your more feral needs. Too weak to challenge your strength any further, you pin the male to the ground. Amused by the male's physical inadequacy, you can be sure he'll be useful for at least one thing, stroking the whale's meaty rod until it is sufficiently hard. Only briefly teasing the beleaguered beast with the entrance of your [bodytype of Player] cunt, you skip the foreplay and jump straight to impaling yourself with that cetacean cock, your victim's moans his only reply.";
-	say "     Too weak to contend with your will, you ride the creature's organ with brutal abandon, illustrating to him that the measure of his merit is scaled in these engulfed inches as you assert your dominion over this territory, and it's not long before your abuse finishes him off, moaning weakly as you feel his hot cum erupting within you.[impregchance]";
+	say "     Too weak to contend with your will, you ride the creature's organ with brutal abandon, illustrating to him that the measure of his merit is scaled in these engulfed inches as you assert your dominion over this territory, and it's not long before your abuse finishes him off, moaning weakly as you feel his hot cum erupting within you.";
 	say "     Relinquishing him, you punctuate your violation with a hard swat on the killer whale's abused rump before he hobbles off awkwardly, no doubt sore from such rough treatment. Satisfied after reasserting your territory by humiliating the muscled beast, you depart back from whence you came.";
 	increase orcafdom by 1;
+	CreatureSexAftermath "Player" receives "PussyFuck" from "Killer Whale";
 
 
 Section 2 - Creature Insertion

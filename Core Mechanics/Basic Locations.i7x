@@ -511,14 +511,17 @@ LastTrashSearchTurn is a number that varies. [@Tag:NotSaved]
 Dry Plains is a room. It is fasttravel. "     At this edge of the city, the thinning buildings have collapsed before opening up to the great plain stretching away from you, all the way to the harsh and insurmountable cliff-faces of Mount Shirley, the northern barrier of the wide river valley the city was originally founded in. You don't see any kind of military cordon here, making you suspect those already infected have spread out here before the military was mobilized to close it off. Smoke rising far in the northwest makes you guess that their lines are probably there, at the chokepoint between the mountain and the expansive Pacifica Nature Preserve. Some hoof prints you spot in a sandy patch nearby furthers the assumption that it is no longer human civilization that rules here. As for the open grasslands, it looks like the something leveled just about all of the scattered buildings further out. Now all that is left of them among the dirt and grassland are mounds of rubble. The plains are dry and brown with only a few trees or bushes scattered across the rolling plains before you.".
 The earea of Dry Plains is "Plains".
 Plains Door is a door. The marea of plains door is "Plains". "The plains stretch out before you, with slight rolls in the landscape and dotted with fallen buildings and other rare features.". Plains Door is dangerous. Plains door is east of dry plains.
-Plains door is west of wandering the plains.
+Plains door is west of Wandering the Plains.
+
+the scent of the dry plains is "The dry plains smell lightly of dry grasses and disturbed earth. There is little of man-made origin to smell on the air except the scents coming from the city behind you.".
 
 Table of GameRoomIDs (continued)
 Object	Name
-Wandering the plains	"Wandering the plains"
+Wandering the Plains	"Wandering the Plains"
 
-Wandering the plains is a room.
+Wandering the Plains is a room.
 
-the scent of the dry plains is "The dry plains smell lightly of dry grasses and disturbed earth. There is little of man-made origin to smell on the air except the scents coming from the city behind you.".
+the scent of the Wandering the Plains is "The dry plains smell lightly of dry grasses and disturbed earth. There is little of man-made origin to smell on the air except the scents coming from the city behind you.".
+
 
 Basic Locations ends here.

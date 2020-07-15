@@ -24,9 +24,9 @@ carry out Trixiecheating:
 		say "[bold type]Cheats:[roman type][line break]";
 		say "[link](1) Unerring Hunter[as]1[end link] - [if Unerring Hunter is listed in feats of Player]Active[else]Inactive[end if][line break]";
 		say "[link](2) Automatic Survival[as]2[end link] - [if Automatic Survival is listed in feats of Player]Active[else]Inactive[end if][line break]";
-		say "[if Open World is listed in feats of Player](3) Open World cannot be deactivated[else][link](3) Open World[as]3[end link] - Inactive (Cannot be deactiveated)[end if][line break]";
+		say "[if Open World is listed in feats of Player](3) Open World cannot be deactivated[else][link](3) Open World[as]3[end link] - Inactive (Cannot be deactivated)[end if][line break]";
 		say "[link](4) Lil Better[as]4[end link] - [if Lil Better is listed in feats of Player]Active[else]Inactive[end if][line break]";
-		say "[if boosterfeats > 0](5) Booster Feats cannot be deactivated[else][link](5) Booster Feats[as]5[end link] - Inactive (Cannot be deactiveated)[end if][line break]";
+		say "[if boosterfeats > 0](5) Booster Feats cannot be deactivated[else][link](5) Booster Feats[as]5[end link] - Inactive (Cannot be deactivated)[end if][line break]";
 		say "[link](6) Play On[as]6[end link] - [if playon is 0]Inactive[else]Active[end if] (Score halved to reactivate)[line break]";
 		say "[link](7) Weak-Willed[as]7[end link] - [if weakwilled is true]Active[else]Inactive[end if] (Bonus if activated)[line break]";
 		say "[link](8) Set Humanity[as]8[end link] - Current Humanity: [bold type][humanity of Player][roman type][line break]";
@@ -320,12 +320,20 @@ carry out voremenuing:
 		if calcnumber is 1:
 			say "You are now set to skip most vore content.";
 			now vorelevel is 1;
+			add "Vore" to BanList of Player;
+			add "Cockvore" to BanList of Player;
 		else if calcnumber is 2:
 			say "You are now set to receive the Standard (low) amount of vore content.";
 			now vorelevel is 2;
+			if "Vore" is listed in BanList of Player:
+				remove "Vore" from BanList of Player;
 		else if calcnumber is 3:
 			say "You are now set to receive full vore content.";
 			now vorelevel is 3;
+			if "Vore" is listed in BanList of Player:
+				remove "Vore" from BanList of Player;
+			if "Cockvore" is listed in BanList of Player:
+				remove "Cockvore" from BanList of Player;
 		else if calcnumber is 4:
 			say "You are now set to skip most unbirthing content.";
 			now UBlevel is 1;

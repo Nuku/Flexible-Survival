@@ -271,7 +271,7 @@ Instead of resolving a Harbor Swap Meet:
 		else:
 			say "     Returning to the swap meet, you ring the little bell again and the spidertaur comes down from his nest. Under his arm, he holds a bulging spindle of silk thread. 'You better have my payment, because it was a pain in the ass to keep spinning for hour after hour to make this,' he tells you, an expectant expression on his face. Pulling your backpack off and opening it, you hand him the plastic bottles filled with chocolate milk right away, which he bundles together with a sticky strand of silk, then sticks the packet to the top of his carapace. 'Pleasure doing business with you,' the demi-human says, then hands you his load of silk and starts to pull himself up the strand he slid down on, effortlessly reaching his home away from home above and vanishing inside.";
 			say "[SilkDelivery]";
-			decrease carried of chocolate milk by 5;
+			ItemLoss chocolate milk by 5;
 			now Harbor Swap Meet is resolved;
 			now Resolution of Harbor Swap Meet is 2; [player paid for the silk]
 	else if thirst of Jay is 4: [player who is friends with Aelias can pick up the silk easily]

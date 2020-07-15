@@ -29,7 +29,7 @@ Instead of resolving a Small Cave:
 			else:
 				say "You are eventually captured in her paws, and you become her toy for a while, the feline herm using you to kill her boredom. She hits you sometimes, encouraging you to keep moving to her amusement.";
 				say "     She is a cat, so maybe if you stopped moving, she would get bored of you and continue with what she was doing? However, she could also devour you. Your other choice is running away with all of your might, but if she did catch you again, who knows what she would do to you?";
-				decrease carried of glowing mushroom by 1;
+				ItemLoss glowing mushroom by 1;
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Stop moving and hope the playful cat will get bored.";
 				say "     ([link]N[as]n[end link]) - RUN! It's the best option.";

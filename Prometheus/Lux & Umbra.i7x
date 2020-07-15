@@ -95,20 +95,28 @@ Umbra	"Umbra"
 LuxUmbraMaturityCounter is a number that varies. LuxUmbraMaturityCounter is usually 0.
 
 Lux is a woman.
-[physical details as of game start]
 ScaleValue of Lux is 3. [human sized]
-Cock Count of Lux is 0. [no cock]
-Cock Length of Lux is 0. [no cock length]
-Ball Size of Lux is 0. [no ball size]
-Ball Count of Lux is 0. [no balls]
-Cunt Count of Lux is 1. [1 pussy]
-Cunt Depth of Lux is 8. [gets stretched a bit by an alpha husky]
-Cunt Tightness of Lux is 3. [gets stretched a bit by an alpha husky]
-Nipple Count of Lux is 2. [2 nipples]
-Breast Size of Lux is 2. [B cup at the start]
+Body Weight of Lux is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Lux is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Lux is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Lux is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Lux is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Lux is 5. [length in inches]
+Breast Size of Lux is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Lux is 8. [count of nipples]
+Asshole Depth of Lux is 8. [inches deep for anal fucking]
+Asshole Tightness of Lux is 1. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Lux is 0. [number of cocks]
+Cock Girth of Lux is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Lux is 0. [length in inches]
+Ball Count of Lux is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Lux is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Lux is 1. [number of cunts]
+Cunt Depth of Lux is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Lux is 1. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Lux is 2. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Lux is false. [can take oversized members without pain]
-Sterile of Lux is false.
 PlayerMet of Lux is false.
 PlayerRomanced of Lux is false.
 PlayerFriended of Lux is false.
@@ -119,6 +127,8 @@ Virgin of Lux is true.
 AnalVirgin of Lux is true.
 PenileVirgin of Lux is true.
 SexuallyExperienced of Lux is false.
+TwistedCapacity of Lux is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Lux is false. [steriles can't knock people up]
 MainInfection of Lux is "Feral Wolf".
 The description of Lux is "[Luxdesc]".
 The conversation of Lux is { "Bark! Woof! Woof!" }.
@@ -223,35 +233,44 @@ to say LuxTalk2:
 		say "     'Where should I start on Umbra? My brother isn't as literarily gifted as me, but, like my father, he isn't stupid as his combat capabilities show. He just has difficulty expressing his feelings in words. You may have noticed how affectionate he is to his family, you included. That is him showing how much he cares when your grasp of wolf communication isn't as fluent as our own. I'm so glad that he expresses his emotions so easily compared to some of the men in the books I read. Why is a lack of emotion considered an attractive trait in males so often? I think that Umbra may be more than a little in awe of you, and he is impressed by how capable you are, seeing as how you have survived so well in the current situation between the roaming creatures and the invading army. He may want to learn to be more like you. When you have always been there for us, I share similar admiration towards you.' She seems to be squirming slightly and you raise an eyebrow in question. She flushes deeply and hurriedly responds, 'Please excuse me, I'm getting certain feelings that should be dealt with away from family.' With that, she scurries away, leaving you mildly confused at the abrupt end to the conversation.";
 		add "LuxUmbra Incest Disabled" to feats of Player;
 
-	Umbra is a man.
-	[physical details as of game start]
-	ScaleValue of Umbra is 3. [human sized]
-	Cock Count of Umbra is 1. [One cock]
-	Cock Length of Umbra is 10. [10 inches]
-	Ball Size of Umbra is 8.
-	Ball Count of Umbra is 2. [no balls]
-	Cunt Count of Umbra is 0. [No pussy]
-	Cunt Depth of Umbra is 0. [No pussy]
-	Cunt Tightness of Umbra is 0. [No pussy]
-	Nipple Count of Umbra is 2. [2 nipples]
-	Breast Size of Umbra is 0. [Flat at the start]
-	[Basic Interaction states as of game start]
-	TwistedCapacity of Umbra is false. [can take oversized members without pain]
-	Sterile of Umbra is false.
-	PlayerMet of Umbra is false.
-	PlayerRomanced of Umbra is false.
-	PlayerFriended of Umbra is false.
-	PlayerControlled of Umbra is false.
-	PlayerFucked of Umbra is false.
-	OralVirgin of Umbra is true.
-	Virgin of Umbra is true.
-	AnalVirgin of Umbra is true.
-	PenileVirgin of Umbra is true.
-	SexuallyExperienced of Umbra is false.
-	MainInfection of Umbra is "Feral Wolf".
-	The description of Umbra is "[Umbradesc]".
-	The conversation of Umbra is { "Bark! Bark! Woof!" }.
-
+Umbra is a man.
+ScaleValue of Umbra is 3. [human sized]
+Body Weight of Umbra is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Umbra is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Umbra is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Umbra is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Umbra is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Umbra is 6. [length in inches]
+Breast Size of Umbra is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Umbra is 8. [count of nipples]
+Asshole Depth of Umbra is 8. [inches deep for anal fucking]
+Asshole Tightness of Umbra is 1. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Umbra is 1. [number of cocks]
+Cock Girth of Umbra is 4. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Umbra is 8. [8 Inches]
+Ball Count of Umbra is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Umbra is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"] [Increase by 1 for Alpha, decrease by 1 for Omega]
+Cunt Count of Umbra is 0. [number of cunts]
+Cunt Depth of Umbra is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Umbra is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Umbra is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Umbra is false.
+PlayerRomanced of Umbra is false.
+PlayerFriended of Umbra is false.
+PlayerControlled of Umbra is false.
+PlayerFucked of Umbra is false.
+OralVirgin of Umbra is true.
+Virgin of Umbra is true.
+AnalVirgin of Umbra is true.
+PenileVirgin of Umbra is true.
+SexuallyExperienced of Umbra is false.
+TwistedCapacity of Umbra is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Umbra is false. [steriles can't knock people up]
+MainInfection of Umbra is "Feral Wolf".
+The description of Umbra is "[Umbradesc]".
+The conversation of Umbra is { "Bark! Woof! Woof!" }.
 the scent of the Umbra is "     The dark-furred wolf smells rather masculine and wolfy, his musk obvious to the nose.".
 
 to say Umbradesc:

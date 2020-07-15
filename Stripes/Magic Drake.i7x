@@ -358,23 +358,23 @@ to say beatthemagicdrake:
 					choose a blank row in table of fucking options;
 					now title entry is "Increase size";
 					now sortorder entry is 1;
-					now description entry is "try using the magic staff to round out your ass further";
+					now description entry is "Try using the magic staff to round out your ass further";
 				else if mdasslevel is 6:
 					choose a blank row in table of fucking options;
 					now title entry is "One step beyond";
 					now sortorder entry is 1;
-					now description entry is "see if you can get your ass even bigger still";
+					now description entry is "See if you can get your ass even bigger still";
 				if mdasslevel > 2:
 					choose a blank row in table of fucking options;
 					now title entry is "Decrease size";
 					now sortorder entry is 2;
-					now description entry is "try using the magic staff to reduce your ass";
+					now description entry is "Try using the magic staff to reduce your ass";
 			else:
 				say "     Before you depart, you look over the drake's strange staff. The headpiece is still aglow with eldritch energy that's leaking from its phallic end. You feel an odd urge to use it to restore that [if mdasslevel is 2]bubble-butt[else if mdasslevel is 3]plump[else if mdasslevel is 4]large[else if mdasslevel is 5]huge[else]mega-booty[end if] ass she'd given you";
 				choose a blank row in table of fucking options;
 				now title entry is "Restore it";
 				now sortorder entry is 3;
-				now description entry is "try using the magic staff to get your draconic butt back";
+				now description entry is "Try using the magic staff to get your draconic butt back";
 			if Player is male:
 				say ". Alternatively, you might also try using it to alter your manhood";
 			say ".";
@@ -383,21 +383,21 @@ to say beatthemagicdrake:
 				choose a blank row in table of fucking options;
 				now title entry is "Cock growth";
 				now sortorder entry is 4;
-				now description entry is "attempt some magical male enhancement";
+				now description entry is "Attempt some magical male enhancement";
 				choose a blank row in table of fucking options;
 				now title entry is "Ball growth";
 				now sortorder entry is 6;
-				now description entry is "try plumping up those balls of yours";
+				now description entry is "Try plumping up those balls of yours";
 				if Cock Length of Player > 1:
 					choose a blank row in table of fucking options;
 					now title entry is "Cock reduction";
 					now sortorder entry is 5;
-					now description entry is "attempt to shrink [if Cock Count of Player > 1]those [cock size desc of Player] cocks[else]that [cock size desc of Player] cock[end if] of yours down a little";
+					now description entry is "Attempt to shrink [if Cock Count of Player > 1]those [cock size desc of Player] cocks[else]that [cock size desc of Player] cock[end if] of yours down a little";
 				if Ball Size of Player > 1:
 					choose a blank row in table of fucking options;
 					now title entry is "Ball reduction";
 					now sortorder entry is 7;
-					now description entry is "attempt to shrink your [Ball Size Adjective of Player] [Balls] down a bit";
+					now description entry is "Attempt to shrink your [Ball Size Adjective of Player] [Balls] down a bit";
 [			if Player is female:
 				choose a blank row in table of fucking options;
 				now title entry is "Cunt growth";
@@ -510,6 +510,7 @@ to say beatthemagicdrake:
 									say "This comes with a drop in pressure on your hips as your bottom shrinks down. The angry dragoness growls impotently as it loses several inches in size, dropping down to a [if mdasslevel is 2]cute bubble-butt[else if mdasslevel is 3]plump rear[else if mdasslevel is 4]large ass[else]huge bottom[end if] that feels a little more manageable for you to deal with.";
 								else if mdstaffaction is 3:
 									say "This power makes your ass quiver and your spine throb. Within a few minutes, the reptilian ass and tail you had before have returned, [if mdasslevel is 2]round[else if mdasslevel is 3]plump[else if mdasslevel is 4]large[else if mdasslevel is 5]huge[else]enormous[end if] and beautiful to the whistling dragoness.";
+									now Tail of Player is "[mdtaildesc].";
 								else:
 									say "[mdstaff_overgrown]";
 							else if mdstaffaction <= 10:		[sexual growth/reduction]

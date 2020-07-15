@@ -1,8 +1,10 @@
-Version 1 of Squire by Stripes begins here.
-[ Version 1.0 - Player loss + infection.]
+Version 2 of Squire by Stripes begins here.
 
 "Adds a Squire creature to Flexible Survival's Wandering Monsters table"
 
+[ Version 1.0 - Player loss + infection.]
+[ Version 1.1 - Squire service scenes in section 5 by Omen]
+[ Version 2 - Added 3 Squire x Knight scenes + 1 observable scene - Tom]
 
 Section 0 - Setup
 
@@ -465,5 +467,101 @@ This is the Squire Infection rule:
 			else:									[F-STERILE]
 				say "     Additional text for a female survivor who cannot become preggers.";
 ]
+
+Section 5 - Squire services
+
+Table of GameEventIDs (continued)
+Object	Name
+Serving your knight	"Serving your knight"
+
+Serving your knight is a situation.
+The sarea of Serving your knight is "Forest".
+PCN is a number that varies. PCN is usually -1. [tracks the player crest]
+
+instead of resolving Serving your knight:
+	if BodyName of player is "Squire": [player services]
+		if PCN is -1: [first time being a squire in the event]
+			now PCN is playercrestnum;
+			now Resolution of Serving your knight is 0;
+		else if PCN is not playercrestnum: [player has obtained a new / different crest -> serves a new knight]
+			now PCN is playercrestnum;
+			now Resolution of Serving your knight is 0;
+		if Resolution of Serving your knight is 0 and daytimer is night:
+			say "[SquireServiceScene1]";
+		else if Resolution of Serving your knight is 1:
+			say "[SquireServiceScene2]";
+		else if Resolution of Serving your knight is 2:
+			say "[SquireServiceScene3]";
+	else: [player sees squire service]
+		say "[PlayerObservedSquireServices]";
+
+to say PlayerObservedSquireServices:
+	say "     As you search through the forest, you overhear the voice of a younger man in the distance. Quietly, you sneak towards the direction of the sound and begin to hear a deeper voice with a stern tone. Bracing yourself against a nearby tree, you peer over your shoulder and spot a squire and a knight walking through the forest. They both appear to have the same crest addorned on their tunics, the knight fully garbed while the squire simply carries a wooden sword for his equipment. 'Please! I'll be good I promise, take me with you! The younger man begs while grabbing onto one of the knights arms in an attempt to stop his movement. The knight simply drags the youth along without showing much discomfort.";
+	say "     'Absolutely not. You are far from ready to travel with me on this journey. You must train harder, and only when you have taken down a wolf with ease will I reconsider.' The stern voice leaves no room for argument, squashing whatever retort the squire was about to convey. A defeated look crosses the squires face and he looks down in disappointment. The knight takes notice of the troubled youth and gently ruffles his hair while offering words of encouragement, 'You are still young and I'm sure you can improve quickly, try hard and you'll be traveling with me in no time. I won't be gone long, if you have defeated a single wolf by the time I return, I will personally see to your just reward. The young man perks up at the words and runs off with a goofy smile on his face, giving the knight an eyeful of his cute bubble butt hiding beneath his breeches. The knight carries on his way and you leave a few moments later.";
+
+to say SquireServiceScene1:
+	say "     Walking through the forest, you manage to make your way to a small clearing with a knight setting up camp. Even from this distance, you can tell the tent is large, spacious, and well made. Upon the side of the tent, you can see the crest of a [stateplayercrest]. Looking down on your thinly muscled frame sits a loose tunic bearing the same symbol. A moment of glee rushes over you as you realize that you have found your knight! You are overcome with the urge to aid the handsome man like any good squire should, do you follow the temptation?";
+	Linebreak;
+	say "     ([link]Y[as]y[end link]) - Get acquainted with your knight.";
+	say "     ([link]N[as]n[end link]) - Leave for now.";
+	if player consents:
+		say "     With your heart thumping rapidly in your chest, you slowly approach the man as he pings the last piton into the ground. Noticing a presence, the knight turns with a steady hand placed on his sword. Upon noticing your garb, he lowers his stance to a more comfortable posture and greets you with a smile. 'Ah! Hello boy, what a pleasant surprise! A bit late to set up camp, I know, but fighting evil is worthy of losing a few hours of sleep. Come now, let us go inside, it is getting cold out.' The knight opens the tent and waits patiently outside for you to enter. His calm and commanding presence quashes the anxiety you felt before, and with a goofy grin you eagerly run forward into the charming man's tent.";
+		say "     Inside the tent, you find a few items tossed about and a large bedroll splayed out on the ground. Your mentor closes the tent after he enters and motions you towards the center of the tent. For the next few minutes, you help him set up the rest of the tent interior, including a small fire with a small cooking pot. The time you spend together is simple but pleasing, exchanging soft words as he shows you how to start a fire. He lets you hold his well-polished steel sword, before requesting you help him out of his armor.";
+		WaitLineBreak;
+		say "     You eagerly agree to his request, and hastily run over to fondle his equipment. He instructs you on how to begin your service, showing you where the armor straps are and how to undo them. In a minute or two, you have the last of his plate armor off him as you remove his boots. You can't help but dart your eyes over the fine muscular body poorly concealed under the simple cloth shirt and pants. A slight movement in his pants draws your eyes to a large mound at his crotch, the cotton pants concealing what could only be a thick and hardening cock. 'Come now boy, your service has only just begun,' he says as he places a hand on the back of your head and forces you into his smelly groin.";
+		say "     The strong musk of manly cum graces your nostrils as your nose is pushed into the soft and damp pants. You moan into his stiffening cock, the smell intoxicating you. The larger male releases your head and strips off his shirt, revealing the chiseled abdomen fit for a warrior. His large but firm pectoral muscles are coated with a light dusting of hair and make his chest look huge from your perspective between his legs. His deep cut abs taper down to his waist, as if guiding your eyes to the treasure trove below. He doesn't say a word, a look is all it takes to convince you to venture beyond the simple cloth that divide you and his manhood.";
+		WaitLineBreak;
+		say "     Ambitiously, you reach around and slip your hands into the back of the knight's pants, groping the large, smooth, and firm butt cheeks of your mentor. Squeezing the firm buttocks, you push your nose into the hard cock and pull with your hands to get a satisfyingly deep sniff of the hunks scent.  Without further hesitation, you pull down the knight's pants to his feet in one motion. His large hard cock smacks you in the face as it is freed from its confines. The magnificent tool is coated in slimy cum, clearly from the conquest of a recently vanquished villain.";
+		say "     Darting out your tongue, you clean up the mightily phallus of your favorite warrior. Even his cold and thick semen tastes wonderful on your tongue. You have his cock cleaned of his recent conquest in less than a minute. The knight smiles at you, 'Excellent! A squire that knows his place, you shall go far young man. Now open wide and I shall keep you well-nourished so that one day you may have the body of a knight.'";
+		WaitLineBreak;
+		say "     You look at him in the eyes and place the tip of his fat cockhead onto your tongue. The knight reaches down and places his hands on your head, holding you in place as he thrusts his hard cock into your throat. Your eyes go wide as he burrows his cock in you at a rapid pace, fully seating his foot-long monster into your young throat. Two large balls bounce off your now swollen neck, and he doesn't give you any time to adjust before pulling out and thrusting back in mercilessly. Miraculously, you don't gag on his massive meat as he uses you like a sex toy.";
+		say "     Several minutes pass and your mentor is drawing close to climaxing. A deep hunger for this man's virile seed drives you to get the most out of his balls that you can manage. You begin to hum around the man's cock each time he buries it in your throat. But you want even more, and you boldly reach your hands around to his ass once more and poke a finger into his tight ass. You receive a grunt of approval and decide to add a second finger before searching for the sexy hunk's joy button. Once you find it, you pull out a bit before jamming your fingers into his prostate.";
+		WaitLineBreak;
+		say "     A loud bellow resonates throughout the tent as the man forces you all the way down his cock. His expanding cock pulses in your throat, sending rope after rope of thick semen directly into your hungry stomach. You obediently let the man shoot down your gullet, holding your breath for as long as you can while he pumps in his potent protein. Feeling a bit dizzy, you hardly notice when he starts to withdraw his hard cock until you get a faint salty taste in your mouth. Taking your first breath in quite some time, you get a hold of yourself before dutifully sucking his cock for whatever cum he has left to give.";
+		if WSlevel is 3:
+			say "     'Excellent work boy, I'm going to get used to that throat of yours. Now if you want a body like mine, you're going to have to train like I did. A nutritious meal is important, but you must stay hydrated as well.' You give him a confused look as you suckle his cock absentmindedly, but it all becomes clear as  the first trickle of his acrid piss darts across your tongue. You moan submissively, the strong taste of his urine is as intoxicating as his semen. He slows down the speed of his piss, allowing you to both savor and collect all of his gift without spilling a drop.";
+		say "     With a full belly full of his juices, you begin to feel a bit sleepy. The older man pulls you up and kisses you deeply, 'Ah such an eager lad, you remind me of myself when I was younger. Come let us rest for a while.' He picks you up and holds you tightly against his hard-muscled body as you catch a bit of sleep. You wake up next to the hunk sometime later and decide to leave and continue your journey.";
+		now Resolution of Serving your knight is 1;
+	else:
+		say "     You leave the area for now, maybe you will gather the courage to speak with him next time.";
+
+to say SquireServiceScene2:
+	say "     Walking through the forest, you can hear the muffled sound of moaning coming from beyond the brush. Sneaking through the trees and foliage, you make your way to a small clearing that contains a campsite that looks familiar to you. You can hear the distinct sounds of slurping and the quiet growls of some animal coming from the other side of the tent. You could circle around to get a better idea of what your knight is up to if you want.";
+	Linebreak;
+	say "     ([link]Y[as]y[end link]) - Sneak around the camp to get a better view.";
+	say "     ([link]N[as]n[end link]) - Leave for now.";
+	if player consents:
+		say "     Curiosity getting the better of you, you quietly sneak around the campsite to the other side of the tent. Peering through some of the shrubbery, you find your knight in shining armor fully garbed on his knees. Beneath him is a giant wolf, nearly 10 feet in length, with paws larger than that of men. The beast is currently on its back, exposing its stomach to the knight. You can see some leather wrapped around the wolf's torso to form some kind of a saddle. Looking further down, you see your knight deep throating the beast's cock. Neither appears to have noticed you, but you can't help but be amazed by what is occurring.";
+		say "     Boldly, you walk out of your hiding spot towards your knight. The wolf tenses as you approach, attempting to discern friend from foe. Upon seeing your tabard, the beast goes back to enjoying the attention from your knight. Sitting down next to them, you marvel at the size of the wolf's phallus. The large red member stretches the jaw and throat of your knight each time he sends it down his gullet. Suddenly, the wolf lets out a howl and bucks upwards into the knight's mouth. The large knot presses against the knight's face, burying his nose in the in beast's large endowment. The handsome man chokes on the cock a bit but doesn't back down and swallows the seed eagerly.";
+		WaitLineBreak;
+		say "     A minute or so later, the knight pulls off the cock, which must be a bit over a foot in length, with a content sigh. Licking his lips, he turns to you and says, 'I hope you enjoyed the show. Every knight has a mount and they must take good care of them.' The knight affectionately rubs the wolf's stomach. 'Come and try it for yourself, he won't bite.' Tentatively reaching down, you grab the thick rod and stroke it, earning an encouraging soft growl from the wolf. A soft hand is placed on the back of your head, and you get the message. Wanting to impress your superior, you give the cock a long lick from base to tip before engulfing the head. The wolf moans under your attention and bucks his hips upwards. The large cock forces it's way into your throat, stretching your jaw to the point where it's painful.";
+		say "     Determined to succeed in this endeavor, you endure the pain as you adjust to the size of the creature. After a few minutes of stretching, you feel your muscles relax and become more accustomed to the size. Sighing in relief, you relax for a moment before you attempt to deep throat the beast. You can feel your throat expand to its maximum and find it impossible to breath for short periods of time. A slight panic overtakes you before you steel yourself, you must pass this test to become a knight.";
+		WaitLineBreak;
+		say "     You try your best to coax and climax out of the wolf, deep throating the cock to the best of your ability. You never manage to take the whole length of his shaft like your knight did, but that doesn't appear to matter much to the wolf. The thick cock is rapidly leaking precum to the point where it connects your chin to the beast's crotch in a slimily liquid. It is not long after that the beast explodes inside your throat, dumping his thick load into your stomach. You dutifully swallow it, though some of the thick jizz spills out the corners of your mouth. Once the beast has finally stopped cumming, you pull off with a gasping breath.";
+		say "     Your knight holds you tightly as you regain your composure. He wipes the cum off your chin with his thumb and sucks it off until your face is clean of the salty fluid. 'Well done squire, I'm confident that you can tame a beast if that performance was your first time. Your determination was the most important aspect, as long as you have that you can always adapt to your mounts needs.' The knight helps you up to your feet and pats you on the back, 'You're progressing quickly young man, I'd go so far to say we can begin combat training next we meet.'";
+		say "     You give him a frown, disappointed at the abrupt end to your meeting. He gives you a weak smile, 'I'm sorry boy, I'm afraid I have important matters to attend to.' He walks up to you and pulls you into a hug. A few moments later, you feel him reach a hand down to fondle your ass and whisper into your ear, 'but don't fret, there is much I can show you about sword fighting. Now I really must be on my way, take care now and come back soon.' Your knight gets to work with dismantling the last of his tent while you head off to continue your own journey.";
+		now Resolution of Serving your knight is 2;
+	else:
+		say "     You decide to give your knight some privacy and will try to see him another time.";
+
+to say SquireServiceScene3:
+	say "     Walking around the forest, you stumble upon another clearing with a familiar looking tent with a man sitting near a fire the campfire. He wears nothing more than a simple cotton shirt with a few of the buttons undone revealing a muscular chest alongside a pair of pants that does little to hide his large package. You take a moment to study his face, identifying him as the knight you have recently began squiring for. He appears to be relaxing for the moment, do you want to go see him?";
+	Linebreak;
+	say "     ([link]Y[as]y[end link]) - Join the knight by the campfire.";
+	say "     ([link]N[as]n[end link]) - Leave for now.";
+	if player consents:
+		say "     Walking forward with a goofy grin, you enter the campsite and greet the noble warrior. He smiles as you approach, 'Ah, good to see you again young man.' He beckons you to sit, and you gladly take a seat. You spend a few minutes talking about your recent activities before you start becoming more distracted by the outline of the man's large soft cock beneath his cotton pants. You barely notice when he stands up and walks up next to you, becoming even more mesmerized as you begin to take in the smell of the warrior. It's only after he says your name a few times that you snap out of it and look up towards the knights smirking face. 'I said let's get to your sword training, up and at em boy.'";
+		say "     Despite a little bewilderment, you manage to get up and walk over to the tent to get the wooden training swords. You bring two swords back to your master, one for each of you. He wields his sword confidently in one hand, as if it weighs nothing to him. Gulping, you steady your own sword with your other hand and wait for his signal. The battle begins with a brief 'Engarde,' followed by a series of powerful blows that you barely manage to parry. Your counter attacks are weak and easily knocked aside, you're going to have to try a lot harder if you want to impress him.:";
+		WaitLineBreak;
+		say "     It has only been a few minutes of combat, but you're already breathing heavily and feel like you're on the brink of defeat. Your master has worked up a sweat a bit of a sweat, causing his chest to glisten in the light. Shaking your head as you try to clear your mind and gather your strength for the next attack. With all your might, you swing at your master who block it with his on sword. The resulting clash causes your sword to splinter from the force, filling the air with the distinct sound of wood snapping. With a startled yelp, you drop the sword as the knight chuckles. 'Well done! I think I shall grant a reward for the excellent performance.'";
+		say "     After looking over your knight for a moment, your eyes get stuck on his crotch. Without saying a word, you walk over and fall to your knees. He roughly grabs your head as you pull down his trousers, freeing his large thick cock from its confinement. You barely have time to open your mouth before he starts to shove his cock into it. Your jaw stretches at the sudden intrusion and your eyes go wide as he buries his cock down to the hilt in your throat. With your mouth stuffed with his cock, you watch as he lets go of your skull and begins removing his shirt. Dutifully, you keep his cock rooted in your mouth while you watch more and more of his torso and abs come into view. He works slowly and you are practically choking on his cock by the time he's finished.";
+		WaitLineBreak;
+		say "     Once his shirt falls to the ground, he returns his hands back to your head and pushes your head into his crotch even further. You just start to panic from the lack of oxygen when he finally withdraws his cock from your throat, allowing you to catch your breath. After a few gasps of breath, he roughly shoves his cock back into your throat. Even though your jaw is sore, and you are a bit lightheaded, you can't help but moan beneath this dominate man. He continues the skull fuck for a few minutes, then slowly withdraws his now slimly cock from your mouth.";
+		say "     He walks around you while you catch your breath and pushes you onto the ground. He makes quick work of your clothing, rapidly removing all obstacles to your perk buttocks. He gives your ass a firm slap that echoes throughout the clearing alongside the gasp you released with it. Despite the roughness you find that your jaw is pleasantly sore, and you realize with a bit of fear and excitement that your asshole is about feel the same. You brace yourself as you feel the tip of his cock line up with your pucker. With a sharp thrust of his hips, he buries his cock in one swift motion. You can't help but scream from the sudden intrusion, his large phallus stretching your anus wide.";
+		WaitLineBreak;
+		say "     The clearing is filled with the sound of his hips slamming into your buttocks as he sets up a fast and brutal pace. A slight burning can be felt along your entire love tunnel as he pounds into you. If it were someone else you might even be a bit scared, but this isn't just some lunatic on the streets, he's your master and you trust him. You smile to yourself as he uses you, knowing that this rough treatment is exactly what you wanted. Groaning with every thrust you try to keep yourself from cumming, but it proves far too difficult. A combination of feeling used and the fact that his cock is simply too large to miss your prostate causes you to spew your seed onto the grass beneath you several times over the course of your pounding.";
+		say "     Eventually, you feel his thrusts become more erratic and the distinct feeling of his cock throbbing in your hole. You sigh contently as his warm and sticky cum floods your asshole, voluminous enough to thoroughly coat your walls. The slight burning is gone with the cum lubing up your innards, replaced by another pleasant dull ache. Propping your head up on your arms, you look over your shoulder at the muscular man as he slowly moves in and out of your anus. [if WSlevel is 3]He locks eyes with you and gives you a smirk as he pushes his manhood back inside down to the hilt followed by a slight pressure deep inside you. It takes you a moment before you realize he is pissing in your asshole. Moaning like a slut, you buck into him which just causes him to chuckle. [end if]Once he's finished filling you up, he leans on top of you and whispers into your ear 'Feel free to come back for another training session anytime.' He withdraws his potent weapon and stands, leaving you to gather your senses and belongings before heading on your way.";
+	else:
+		say "     As tempting as it is to hang out with your mentor, you decide that you have better things to do right now.";
 
 Squire ends here.

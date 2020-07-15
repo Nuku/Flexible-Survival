@@ -141,7 +141,7 @@ The sarea of Abandoned Picnic is "Park".
 
 Instead of resolving Abandoned Picnic:
 	say "     While traveling through the park, you come across a series of picnic tables set up for the casual parkgoer. Normally this wouldn't be worthy of note, but it seems like someone tried to set up a large picnic here on one of the tables fairly recently. You look around and try calling out to whoever the other person might be, but all you find are some small signs of a scuffle not far away. Sighing, you look through the remains of the picnic, and while bugs and the outdoors have gotten to much of it, you manage to find some still-sealed chips that you take with you.";
-	increase carried of chips by 1;
+	ItemGain chips by 1;
 	increase the score by 5;
 	now Abandoned Picnic is resolved;
 

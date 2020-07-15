@@ -40,7 +40,7 @@ Instead of resolving Corrupt Kennel:			[Meet Dominick, your friendly Husky dom! 
 		WaitLineBreak;
 		say "     You follow Dominick inside, grateful to have found another safe haven in these troubled times.";
 		now HP of Dominick is 1;
-		now Happy Puppy Kennel is known;
+		AddNavPoint Happy Puppy Kennel;
 		move player to Happy Puppy Kennel;
 		now battleground is "void";
 		now Resolution of Corrupt Kennel is 1; [Entered as Friend]
@@ -54,7 +54,7 @@ Instead of resolving Corrupt Kennel:			[Meet Dominick, your friendly Husky dom! 
 		if diceroll > 22:
 			say "As the door closes behind you, Dominick turns around to face you; just in time to catch your fist in his gut. Completely unprepared for your assault, he staggers backwards breathlessly clutching his stomach, leaving his face vulnerable to your next punch. Your blow knocks him to the ground and he moans in agony. He tries to crawl away from you, but a few swift kicks stops even that feeble attempt to escape. You survey the kennels that now belong to you, whimpering sluts and all, with a grin on your face. You announce that you're in charge now, getting a nod from the two canine girls and a nod from Dominick after you stare him down.";
 			now HP of Dominick is 60;
-			now Happy Puppy Kennel is known;
+			AddNavPoint Happy Puppy Kennel;
 			move player to Happy Puppy Kennel;
 			now battleground is "void";
 			now Resolution of Corrupt Kennel is 2; [Entered Kennel as Foe]
@@ -65,7 +65,7 @@ Instead of resolving Corrupt Kennel:			[Meet Dominick, your friendly Husky dom! 
 		WaitLineBreak;
 		say "     You decide against entering the kennel for now. At least you know another safe location, should you need it.";
 		now HP of Dominick is 1;
-		now Happy Puppy Kennel is known;
+		AddNavPoint Happy Puppy Kennel;
 		now battleground is "void";
 		now Resolution of Corrupt Kennel is 3; [Found Kennel, Did not go in]
 	now Corrupt Kennel is resolved;
@@ -169,7 +169,7 @@ Instead of conversing the Dominick:
 		say "***Unknown error. Adjusting.";
 		now HP of Dominick is 1;
 		now Corrupt Kennel is resolved;
-		now Happy Puppy Kennel is known;
+		AddNavPoint Happy Puppy Kennel;
 	else if HP of Dominick is 1:			[You enter for the first time.]
 		say "     'Well look at you,' he says with a confident smile. 'If you're coming in here, you must be looking for something. And I think it's more than just a safe place to hide...' He cups his balls and his cock twitches meaningfully.";
 		say "     'I'm Dominick, but you can call me Dom. Or Master[if Player is herm]. You might make for a good bitch with a little work.' Moving in close, he runs a paw over your ass[else if Player is female]. You have a makings of a fine bitch in you, I'd say.' He moves in close and runs a paw possessively over your ass and then across your crotch[else]. I don't have much need for males around here. I'm a top-ranked, A-1 breeding stud. Though if you want to stay here and be safe, you can always try [']sucking up['] a little.' He grins lewdly, holding his dick out[end if].";
@@ -594,7 +594,7 @@ to say ForcedSubmissionToDom:
 		else:
 			say "     Cum streaming out of your mouth as you cough and gasp, Dominick surveys his handiwork. You hear him say, 'That's a good look for you, [if Player is male]breeder boy[else]breeding stock[end if]. You should wear it more often.' He chuckles to himself when you begin to nod, catching yourself too late. He walks behind you to untie your hands. After freeing your hands, he grabs you by the neck and drags you to the door. 'Now I've shown you your place, [if Player is male]bitch male, and if I catch you [']round here again, I'll make you MY bitch[else]neuter bitch, and if I catch you [']round here again, I'll make you MY neuter bitch[end if].' He tosses you outside and slams the door behind you. You pick yourself off of the ground and stagger into the woods, fighting the urge to take Dominick up on his offer and return to the kennel.";
 		now HP of Dominick is 50;
-		now Happy Puppy Kennel is known;
+		AddNavPoint Happy Puppy Kennel;
 		SanLoss 5;
 	else if Player is male:			[The path to forced beta bitch, with a side of sissy shaming as a former male.]
 		say "     As you lie on the ground, body throbbing from your defeat, you don't pay attention to what's going on around you. You're just glad no new pain has been introduced in the last few minutes, so you don't struggle at all when Dominick ties your hands behind your back or when he hauls you to your knees. You're not looking for trouble, not anymore. Dominick thrusts his muzzle into your face and says, 'Another worthless male who thought he could be top dog. You thought that I'd be weak after dealing with a pitiful male like that other guy? I barely broke a sweat fighting him, and you were even less of a challenge. You tried to sucker punch me and couldn't even manage that. Worse, the other guy managed to escape with a few broken bones, and here you are in a heap with barely a cracked rib.' Dominick spits on your face before continuing, 'You're not a man, you're a bitch. And I'm going to treat you like one.' He grabs the back of your head with his left hand while lining up his swollen cock with his right. That's all the preparation you get before he thrusts forward, pulling your face toward his dick.";
@@ -605,7 +605,7 @@ to say ForcedSubmissionToDom:
 		else:
 			say "     Cum streaming out of your mouth as you cough and gasp, Dominick surveys his handiwork. You hear him say, 'That's a good look for you, weakling. You should wear it more often.' He chuckles to himself when you begin to nod, catching yourself too late. He walks behind you to untie your hands. After freeing your hands, he grabs you by the neck and drags you to the door. 'Now you're a bitch, and if I catch you [']round here again, I'll make you MY bitch.' He tosses you outside and slams the door behind you. You pick yourself off of the ground and stagger into the woods, fighting the urge to take Dominick up on his offer.";
 		now HP of Dominick is 40;
-		now Happy Puppy Kennel is known;
+		AddNavPoint Happy Puppy Kennel;
 		SanLoss 5;
 	else:			[The path to forced beta bitch.]
 		say "     As you lie on the ground, body throbbing from your defeat, you don't pay attention to what's going on around you. You're just glad no new pain has been introduced in the last few minutes, so you don't struggle at all when Dominick ties your hands behind your back or when he hauls you to your knees. You're not looking for trouble, not anymore. Dominick thrusts his muzzle into your face and says, 'Now even bitches think they've got what it takes to be top dog. You thought that I'd be weak after dealing with a pitiful male like that other guy? I barely broke a sweat fighting him, and you were even less of a challenge. You tried to sucker punch me and couldn't even manage that. Worse, the other guy managed to escape with a few broken bones, and here you are in a heap with barely a cracked rib.' [if Player is female]Dominick spits on your face before continuing, 'You're a bitch, so you know what comes next. Nothing you haven't done before.'[else]Dominick pauses for a moment, his nose flaring, and he continues, 'I've been calling you a bitch, but you're not even that, are you? Guess we'll have to fix that, won't we?'[end if]He grabs the back of your head with his left hand while lining up his swollen cock with his right. That's all the preparation you get before he thrusts forward, pulling your face toward his dick.";
@@ -616,7 +616,7 @@ to say ForcedSubmissionToDom:
 		else:
 			say "     Cum streaming out of your mouth as you cough and gasp, Dominick surveys his handiwork. You hear him say, 'That's a good look for you, bitch. You should wear it more often.' He chuckles to himself when you begin to nod, catching yourself too late. He walks behind you to untie your hands. After freeing your hands, he grabs you by the neck and drags you to the door. 'Now I've shown you your place, bitch, and if I catch you [']round here again, I'll make you MY bitch.' He tosses you outside and slams the door behind you. You pick yourself off of the ground and stagger into the woods, fighting the urge to take Dominick up on his offer and return to the kennel.";
 		now HP of Dominick is 30;
-		now Happy Puppy Kennel is known;
+		AddNavPoint Happy Puppy Kennel;
 		SanLoss 5;
 
 to say ForcedSubToDomSex1:			[Facefuck]

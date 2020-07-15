@@ -48,13 +48,13 @@ Instead of Resolving a Hidden Fucknest:
 			now Resolution of Hidden Fucknest is 1; [Found nothing]
 		else if T < 60:
 			say "     You dig around inside, finding cut-up bits of burlap and ropes that function as bedding. Bits of odd, mismatched clothing and old shoes are tightly wound into a bundle, all useless. A broken compass and dildos carved from driftwood are also stacked up in the corner. Underneath them is an old belaying pin, with dotted lines and schematics for constructing a new dildo sketched on it. You almost discard it due to the lewd iconography, but when held in the hand you realize it would make a decent weapon.";
-			increase carried of belaying pin by 1;
+			ItemGain belaying pin by 1;
 			increase score by 1;
 			now Resolution of Hidden Fucknest is 2; [Found belaying pin]
 		else if T < 85:
 			say "     You dig around inside, finding cut-up bits of burlap and ropes that function as bedding. Bits of odd, mismatched clothing and old shoes are tightly wound into a bundle, all useless. A broken compass and dildos carved from driftwood are also stacked up in the corner. Bits of knick-knacks and obscene doodlings on the walls are all else the crate contains. Disgusted, you spin around to leave, knocking your head on the top of the crate by accident. The flimsy shelter shakes from the blow, dislodging a water bottle that had been stashed in a dark cranny. Score!";
 			increase score by 10;
-			increase carried of water bottle by 1;
+			ItemGain water bottle by 1;
 			now Resolution of Hidden Fucknest is 3; [Found water]
 		else:
 			say "     You dig around inside, finding cut-up bits of burlap and ropes that function as bedding. Bits of odd, mismatched clothing and old shoes are tightly wound into a bundle, all useless. A broken compass and dildos carved from driftwood are also stacked up in the corner. You realize how dire a mistake you've made when you shove the dildos aside to search under them, the whittled sex-toys well coated in infectious secretions from their last use. The tingles running from your fingertips to elbow confirm your fears, a sure sign those fluids were contagious.";
@@ -74,14 +74,7 @@ Instead of Resolving a Hidden Fucknest:
 		now Resolution of Hidden Fucknest is 99; [Player not interested]
 	now Hidden Fucknest is resolved;
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"belaying pin"	"A stout bit of wood nearly two feet long, made for securing rope on sailing vessels. Currently it has been painted with crude plans for converting it into a sex toy."	2	belaying pin
-
-belaying pin is an armament. It is part of the player. It has a weapon "[one of]your belaying pin[or]your stout sailcloth securing system[or]your improvised club[or]your hefty pin[or]your rescued dildo-cum-club[or]your salty beatin['] stick[or]your cock-themed skull-cracker[at random]". The weapon damage of belaying pin is 5. The weapon type of belaying pin is "Melee". It is not temporary.
-
-instead of sniffing the belaying pin:
-	say "The heavy club smells of rum, sodomy, and the lash.";
+[belaying pin moved to Core Mechanics/Weapons.i7x]
 
 
 
@@ -102,7 +95,7 @@ Instead of Resolving a Fresh Fish:
 		if dice + bonus > 12:
 			say "     Sidling up to the ship, you cautiously engage one of the less intimidating fishermen in a bit of light conversation. Carefully trying to diplomatically steer the conversation, you somehow to manage avoid the topic of sex. Directing it toward his other obsession, fishing, works, and soon enough he is boasting of the freshness and flavor of his catch. The trap set, you spring it, and a tense few moments later leave with some very fresh fish you can salt for later.";
 			increase score by 5;
-			increase carried of food by 2;
+			ItemGain food by 2;
 			now Resolution of Fresh Fish is 1; [Got a fish]
 		else:
 			say "     You sidle up to the boat, cautiously engaging one of the less intimidating fishermen in a bit of light conversation. Carefully trying to diplomatically steer the conversation toward food and not sex, you make the classic blunder of cracking a joke at the wrong time. Desperately, you try to backpedal and exit the conversation, but one of the creature's fellow crew has blocked your escape. Fighting seems the only option to escape a thrashing!";
@@ -162,7 +155,7 @@ Instead of Resolving a hot stepping:
 	if dice + bonus > 16:
 		say "     Quick as a whip, you combat roll behind a crate and then skitter around, keeping low to the ground. You avoid crates and old pallets easily, dodging the darker blobs in the poorly lit warehouse. To get by some stacked handcarts you do a triple ninja handspring followed by some back-flips until you are perched on an inactive forklift. From your new viewpoint you look closer at where you saw the secretive motions. Almost immediately you are relieved to see it's just some horny worker creeping off into an alley. There, he meets with some slender spotty cat and gives some small item. Something valuable, obviously, as the feline takes the worker by the hand and leads him deeper into the alley. You are about to sigh in relief when a smattering of applause from behind nearly startles you right off your perch. Face flushing, you look over your shoulder to see a gaggle of workers applauding and whistling at your clownish antics. One of them even tosses you a bottle of water, like you were busking!";
 		increase score by 5;
-		increase carried of water by 1;
+		ItemGain water by 1;
 		now Resolution of Hot Stepping is 1; [Rewarded for success]
 	else:
 		say "     Quickly as you can, you combat roll across the darkened floor of a nearby warehouse, stifling cries of pain as you plant your hands into a pile of discarded nails. In haste to recover, you snap behind some cover, smacking your face right into a [one of]box long abandoned[or]rusty ladder[or]trash can[or]filing cabinet[at random]. That of course makes quite a racket that you must rapidly distance yourself from, or at least that is what your overbearing paranoia is telling you. Using the obstacle as a launching pad, you begin a series of ninja handsprings, only to slam into an abandoned forklift in mid-air. The sound of your pained yelp is loud enough as you tumble to the concrete. When the crate of sleigh bells falls from the forklift's tines and bursts over your back, insult and injury are both piled on. Bells bounce across the floor, announcing to any passerby of your location and vulnerability.";

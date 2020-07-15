@@ -106,7 +106,7 @@ check sacrificing:
 
 carry out sacrificing:
 	say "You bring out the [noun] and place it on the donation box. It vanishes in a bright poof of smoke that fades into brown leaves, whirling away and leaving nothing behind.";
-	delete noun;
+	ItemLoss noun by 1;
 	decrease SatisfiedTanuki by 1;
 	increase score by 10;
 	if SatisfiedTanuki is 0:

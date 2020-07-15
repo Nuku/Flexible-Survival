@@ -39,9 +39,9 @@ to say GatorLoses:
 	if gator den is unknown:
 		say "     Successfully subduing the great green beast, you stand over her as she pants and heaves. 'You put up a good fight,' she says, smiling with her sharp teeth. 'Kind of turns me on... I could use a nice, strong partner.' She slowly gets to her feet, but makes no immediate motion to resume the battle. Her reptilian dick wags under her at half mast as she stretches out. 'We could have so much fun.' She approaches you slowly and leans in, whispering the location of her den, then slipping her arms around you. You can feel the warm, soft curves of her front pressed against you even as her cock nudges against a thigh. [if Player is male]Your own member[smn] stiffen[smv] unconsciously, responding to the obvious signals of readiness this beast is sending. [end if]'We don't have to fight. I can be very accommodating.'";
 		say "     You wrap your hands around her in return in a brief exchange. Your hands find that, despite her thick-looking scales, the gator is soft to the touch, and quite round. If you close your eyes, you can imagine her as nothing but a full-bodied woman, with a few extras. Her fertile form gently squirms from you with a snap of her great jaws. 'Visit, soon. I will be waiting,' she promises, slipping away into the darkness with a sway of her thick tail.";
-		now gator den is known;
-		move Sewer Gator to gator den;
-	else if gator den is known:
+		AddNavPoint Gator Den;
+		move Sewer Gator to Gator Den;
+	else if Gator Den is known:
 		say "     With one final blow, you manage to knock the gator onto her back. The scaly herm soon starts laughing heartily as she lays on the ground. Instead of resuming her attack when she gets back on her feet, she gives you a satisfied grin. 'Now that's what I like!' she bellows. 'Good to see that you haven't gone soft on me.' Her grin turns lascivious as one of her hand reaches down to her cunt and starts fingering it. 'Nothing is hotter than a strong mate, and that battle really got my blood pumping. I won't rail you since you're the winner, but I'm still horny as fuck, so how about you give me a quickie with that tongue of yours instead?'";
 		say "     [bold type]Do you want to service the gator?[roman type][line break]";
 		LineBreak;

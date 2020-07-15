@@ -553,8 +553,8 @@ instead of resolving Take My Royal Word For Granite:
 			say "     You take your sweet time, exploring Wukong's statufied body with your hands, taking fun at noticing that doing certain things like tickling his armpits or pinching his rigid nipples earn you additional drops of precum. Eventually, you decide to take care of Wukong's penis directly. You take it into your hand and stroke it slowly. You are quickly rewarded by cum squirting out from the opening and splashing on your arm. He seems to have cum; however his petrified cock was still at full hardness, and vulnerable to more assaults.";
 			say "     You resume your stroking, trying to keep the monkey on the edge as long as you can. Not an easy endeavor as he is perfectly immobile. His stone-like temporary nature allows you to get naughty, such as giving his ballsack some hearty slaps, which makes his member release even more precum, like a leaked faucet. With more touches and, soon after, some licking, you make Wukong cum for a second time.";
 			say "     Just as you got yourself into the game, someone taps on your shoulder. It is one of the satyrs from earlier. It seems that a small assembly has formed behind you, and they too want to harass the Asian primate. You realize that a lot of time had already passed, and all things considered you have other things to do. You leave your spot to the satyr, and begin to walk away. On the way, you notice Wukong's staff. It looks like a sturdy weapon, and so you decide to take it for yourself.";
-			say "[bold type]You receive Wukong's staff.[roman type][line break]";
-			increase carried of wukongStaff by 1;
+			say "[bold type]You gain Wukong's staff![roman type][line break]";
+			ItemGain wukongStaff by 1 silently;
 			now Resolution of Take My Royal Word For Granite is 1; [fought + won]
 		else if fightoutcome >= 20 and fightoutcome <= 29:
 			say "     'Ha ha ha! I knew it!' the monkey shouts as he dances around your tired body. 'You are no match for me! And... Hm? And what is this?' Wukong approaches from the sack that Valerie had given you earlier. He begins to unwrap it. You realize that the wrong side is facing you, and you muster your last strengths to stand up and run towards the primate. At this moment, the rag falls to the ground, revealing the statufied head of a gorgon. Her eyes flash, blinding you. You suddenly feel a wave of hotness feel your body. You realize that you are becoming strangely aroused, when [if Cock Count of Player is 1]your cock becomes erect in a flash[else if Cock Count of Player > 1]your cocks become erect in a flash[else if Cunt Count of Player is 1]your pussy turns wet in an instant[else]your pussies turn wet in an instant[end if]. At the same time, your movements become more and more sluggish. To your horror, your skin takes a grayish complexion while your muscles become immobile. A scream has barely the time to escape your mouth before your entire body becomes petrified.";
@@ -578,11 +578,8 @@ instead of resolving Take My Royal Word For Granite:
 
 Section 5 - Specific Items
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"Wukong's staff"	"An simple yet expertly crafted fighting staff, carved then polished with care to provide maximum efficiency. A golden leaf is riveted to the middle of the staff, ornately decorated with detailed figures of various animals, provides your hands with a good grip."	2	wukongStaff
+[Wukong's staff moved to Core Mechanics/Weapons.i7x]
 
-wukongStaff is an armament. It is part of the player. It has a weapon "[one of]your bo staff[or]your fighting staff[or]your staff[or]your bo staff with a hard whack[or]the long pole[or]your staff with a fast jab[at random]". The weapon damage of wukongStaff is 5. The weapon type of wukongStaff is "Melee". It is not temporary.
 
 Section 6 - NPC/Pet
 

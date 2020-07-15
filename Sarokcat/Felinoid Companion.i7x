@@ -54,7 +54,7 @@ Instead of resolving Injured Felinoid:
 					if Player consents:
 						say "     Sighing, you find you are unable to turn away from injured felinoid in need, especially seeing as you benefited from or were responsible for most of his injuries... Opening the medkit up, you quickly get to work tending to the felinoid, and after almost an hour of hard work, you sit back with a sigh, content that the large cat is no longer in any immediate danger, and relatively sure that almost all of his wounds will heal in time. The beast even seems to feel better as he hauls himself up onto his paws, seeming to stare at you curiously for a minute as if wondering why you helped him, before turning and limping off into the park. Picking up the remains of your medkit, you turn and head off into the park as well, wondering if you will be seeing your felinoid patient again soon, his musk still filling your head teasingly even as you leave the glade behind.";
 						infect "Felinoid";
-						delete medkit;
+						ItemLoss medkit by 1;
 						now Resolution of Injured Felinoid is 1; [Helped him]
 						now felinoidrescued is 3;
 					else:
@@ -81,7 +81,7 @@ Instead of resolving Injured Felinoid:
 					add "Tamed" to Traits of Felinoid Companion;
 					move Klauz to Back Of The Library;
 					infect "Felinoid";
-					say "(The Felinoid companion is now tamed! You can make it your active pet by typing [bold type][link]pet Felinoid companion[end link][roman type]and initiate sex with him while active by typing [bold type][link]fuck Felinoid companion[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
+					say "     (Klauz the felinoid is now a possible companion! You can make him your active companion by typing [bold type][link]companion Klauz[end link][roman type] or [bold type][link]companion felinoid[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Klauz[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 					now Resolution of Injured Felinoid is 2; [Fought, won, and recruited]
 					now Injured Felinoid is resolved;
 				else:
@@ -104,7 +104,7 @@ Instead of resolving Injured Felinoid:
 			now Felinoid Companion is tamed;
 			add "Tamed" to Traits of Felinoid Companion;
 			infect "Felinoid";
-			say "(The Felinoid companion is now tamed! You can make it your active pet by typing [bold type][link]pet Felinoid companion[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
+			say "     (Klauz the felinoid is now a possible companion! You can make him your active companion by typing [bold type][link]companion Klauz[end link][roman type] or [bold type][link]companion felinoid[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Klauz[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 			now Resolution of Injured Felinoid is 6; [Felinoid's bitch]
 			now Injured Felinoid is resolved;
 	else:
@@ -119,6 +119,7 @@ Felinoid Companion	"Felinoid Companion"
 
 Felinoid Companion is a pet. Felinoid Companion is a part of the player.
 understand "Klauz" as Felinoid Companion.
+printed name of Felinoid Companion is "Klauz".
 The description of Felinoid Companion is "[Klauzdesc]".
 The weapon damage of Felinoid Companion is 9.
 The level of Felinoid Companion is 6.

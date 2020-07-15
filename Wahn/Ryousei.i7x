@@ -58,7 +58,7 @@ to say RTiger loses:
 			say "     Despite still looking like he could keep doing this all day, the muscled tiger suddenly takes a step back from you, interrupting the fight between you two. He puts the palms of his hands together and gives a little bow to you, then says, 'And again you have won our little sparring duel, my friend. I find myself impressed, truly. I knew from the start you would be a better opponent than those mindlessly ravishing beasts your world seems to be populated with - but now you have really proven yourself.' Smiling, he adds, 'The workout has made me hungry, so I am off to find something to eat, but... let us do this again sometime. I will be looking forward to the next time we meet.' With that said, he walks off, leaving you alone on the forest path when he turns a corner just a moment later.";
 		-- 6:
 			say "     Despite still looking like he could keep doing this all day, the muscled tiger suddenly takes a step back from you, interrupting the fight between you two. He puts the palms of his hands together and gives a little bow to you, then says, 'You know what... since I am having so much fun with you - how about we travel together for a while? With the prowess you have proven to me time and again, I am sure you are having grand adventures that I would love to take part in!' Smiling, he adds, 'I will leave you to think about it for a while - but if you accept, you can just use a little magic to reach me. Just focus your mind on my image, then intone 'Watashi wa anata ni yonde, Ryousei'. I will meet you as soon as I am able.' With that said, he walks off, leaving you alone on the forest path when he turns a corner just a moment later.";
-			say "(Ryousei, the royal tiger is now tamed! You can make him your active pet by typing [bold type]pet royal tiger[roman type]. You can see all the pets you have tamed with the [bold type]pet[roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type]pet dismiss[roman type], or just [bold type]dismiss[roman type])[line break]";
+			say "     (Ryousei the royal tiger is now a possible companion! You can make him your active companion by typing [bold type][link]companion Ryousei[end link][roman type] or [bold type][link]companion tiger[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Ryousei[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
 				if Name entry is "Royal Tiger":
@@ -254,6 +254,7 @@ royal tiger	"royal tiger"
 royal tiger is a pet. royal tiger is a part of the player.
 understand "Ryousei" as royal tiger.
 understand "Ryo" as royal tiger.
+printed name of royal tiger is "Ryousei".
 The description of royal tiger is "[RyouseiDesc]".
 The weapon damage of royal tiger is 10.
 The level of royal tiger is 13.
@@ -755,7 +756,7 @@ to say RyouseiMeetsXerxes:
 		say "     Now that his untamed libido has been satisfied, the tiger once more proves his underlying compassion and decency as he just holds on to Xerxes, gently stroking the young man's chest and making both of their bodies vibrate with his purring. Ryousei licks Xerxes sweaty skin playfully at his neck and cheek, then stretches to bring his muzzle to Xerxes mouth as the young man turns his head, sharing a long and eager kiss. The two of them spend some pleasant moments just touching and making out, then Ryousei eventually gently pulls the human dog off his softening erection and lowers him to the ground. Coming to kneel before the anthro tiger, Xerxes gives him a hug around the midriff before scampering off to his bedding, curling up to take a post-coital nap. Meanwhile, Ryousei gives you a gracious smile and a little bow as he says, 'Thank you. Xerxes really is an exceptional pet,' then he starts cleaning himself up and gets dressed.";
 	now RyouseiXerxes is 1;
 
-instead of going up from Grey Abbey Library while (companion of Player is royal tiger and Hayato is in Grey Abbey 2F and RyouseiHayato is 0):
+instead of going up from Grey Abbey Library while (companion of Player is royal tiger and Hayato is in Darkened Alcove and RyouseiHayato is 0):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: RYOUSAI / HAYATO MEETING[line break]";
@@ -768,7 +769,7 @@ instead of going up from Grey Abbey Library while (companion of Player is royal 
 	say "     Smoothing down the ruffled fur over his neck, Ryousei steps up to Hayato and gives him a deep bow. 'My apologies. I clearly let the memories of past encounters of... actual oni... get the better of me. Now then - please do me the honor of telling me your tale. The least I can do is listen to it, no matter how long.' The royal tiger stands calmly in front of the red oni, both hands with their sheathed claws clasped in front of himself. 'Um - eh... yes of course,' Hayato replies a moment later, still a bit flustered. As he waves Ryousei to one of the thin sitting mats he laid out in his camp and the tiger sits down in a cross-legged pose, you leave the two of them to get acquainted.";
 	now RyouseiHayato is 1;
 
-instead of going up from Grey Abbey Library while (companion of Player is royal tiger and Rane is in Grey Abbey 2F and RyouseiRane is 0):
+instead of going up from Grey Abbey Library while (companion of Player is royal tiger and Rane is in Sitting Area and RyouseiRane is 0):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: RYOUSAI / RANE MEETING[line break]";

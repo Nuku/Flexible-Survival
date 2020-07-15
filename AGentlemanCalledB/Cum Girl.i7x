@@ -27,8 +27,8 @@ to say losetoCumGirl:
 			if Cock Length of Player < ( 18 + cumgirlfed ):
 				increase Cock Length of Player by a random number from 1 to 2;
 				now CGFC is 1;
-			if Ball Size of Player < ( 18 + cumgirlfed ):
-				increase Ball Size of Player by 2;
+			if Ball Size of Player < 7:
+				increase Ball Size of Player by 1;
 				now CGFB is 1;
 		Follow the cock descr rule;
 		if CGFC is 1:

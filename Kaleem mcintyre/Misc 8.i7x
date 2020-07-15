@@ -5,9 +5,9 @@ Section 1 - An Old Tale
 
 Table of GameEventIDs (continued)
 Object	Name
-An Old Tale	"An Old Tale"
+Old Tale	"Old Tale"
 
-An Old Tale is a situation.
+Old Tale is a situation.
 The sarea of Old Tale is "High".
 When play begins:
 	Add Old Tale to BadSpots of FurryList;

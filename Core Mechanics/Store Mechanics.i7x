@@ -40,8 +40,8 @@ name	price	object	allowed
 "rightntight cream"	50	rightntight cream	true rule
 "cock holster upgrade"	50	cock holster upgrade	true rule
 "cervix smasher upgrade"	50	cervix smasher upgrade	true rule
-"tits inflator"	50	tits inflator	true rule
-"tits deflator"	50	tits deflator	true rule
+"tits inflator pump"	50	tits inflator pump	true rule
+"tits deflator pump"	50	tits deflator pump	true rule
 "tits multiplier injection"	50	tits multiplier injection	true rule
 "tits divider injection"	50	tits divider injection	true rule
 "birth control pill"	50	birth control pill	true rule
@@ -280,7 +280,7 @@ to say DragonBikeHelmetTalk: [item selection (level 4)]
 		else:
 			decrease freecred by 10;
 			say "     Andromeda thanks you for your purchase and hands you the item.";
-			add "dragon bike helmet" to invent of Player;
+			ItemGain dragon bike helmet by 1;
 			[shopping done, exiting all menus in turn]
 	else:
 		say "     You put the item back and look over the selection again.";
@@ -393,7 +393,7 @@ to say BlackGreatcoatTalk: [item selection (level 4)]
 		else:
 			decrease freecred by 30;
 			say "     Andromeda thanks you for your purchase and hands you the item.";
-			add "black greatcoat" to invent of Player;
+			ItemGain black greatcoat by 1;
 			[shopping done, exiting all menus in turn]
 	else:
 		say "     You put the item back and look over the selection again.";
@@ -414,7 +414,7 @@ to say GrayGreatcoatTalk: [item selection (level 4)]
 		else:
 			decrease freecred by 30;
 			say "     Andromeda thanks you for your purchase and hands you the item.";
-			add "gray greatcoat" to invent of Player;
+			ItemGain gray greatcoat by 1;
 			[shopping done, exiting all menus in turn]
 	else:
 		say "     You put the item back and look over the selection again.";
@@ -520,7 +520,7 @@ to say GreenCamoPantsTalk: [item selection (level 4)]
 		else:
 			decrease freecred by 20;
 			say "     Andromeda thanks you for your purchase and hands you the item.";
-			add "green camo pants" to invent of Player;
+			ItemGain green camo pants by 1;
 			[shopping done, exiting all menus in turn]
 	else:
 		say "     You put the item back and look over the selection again.";
@@ -640,7 +640,7 @@ to say WhiteBriefsTalk: [item selection (level 4)]
 		else:
 			decrease freecred by 10;
 			say "     Andromeda thanks you for your purchase and hands you the item.";
-			add "black greatcoat" to invent of Player;
+			ItemGain black greatcoat by 1;
 			[shopping done, exiting all menus in turn]
 	else:
 		say "     You put the item back and look over the selection again.";
@@ -703,7 +703,7 @@ to say BlackBoxerBriefsTalk: [item selection (level 4)]
 		else:
 			decrease freecred by 10;
 			say "     Andromeda thanks you for your purchase and hands you the item.";
-			add "black boxer briefs" to invent of Player;
+			ItemGain black boxer briefs by 1;
 			[shopping done, exiting all menus in turn]
 	else:
 		say "     You put the item back and look over the selection again.";
@@ -766,7 +766,7 @@ to say OrangeJockstrapTalk: [item selection (level 4)]
 		else:
 			decrease freecred by 20;
 			say "     Andromeda thanks you for your purchase and hands you the item.";
-			add "orange jockstrap" to invent of Player;
+			ItemGain orange jockstrap by 1;
 			[shopping done, exiting all menus in turn]
 	else:
 		say "     You put the item back and look over the selection again.";
@@ -872,7 +872,7 @@ to say BlackCombatBootsTalk: [item selection (level 4)]
 		else:
 			decrease freecred by 30;
 			say "     Andromeda thanks you for your purchase and hands you the item.";
-			add "black combat boots" to invent of Player;
+			ItemGain black combat boots by 1;
 			[shopping done, exiting all menus in turn]
 	else:
 		say "     You put the item back and look over the selection again.";
@@ -1074,7 +1074,7 @@ to say PrincessBikeHelmetTalk: [item selection (level 4)]
 		else:
 			decrease freecred by 10;
 			say "     Andromeda thanks you for your purchase and hands you the item.";
-			add "princess bike helmet" to invent of Player;
+			ItemGain princess bike helmet by 1;
 			[shopping done, exiting all menus in turn]
 	else:
 		say "     You put the item back and look over the selection again.";
@@ -1158,7 +1158,7 @@ to say LargeWhiteBowTalk: [item selection (level 4)]
 		else:
 			decrease freecred by 10;
 			say "     Andromeda thanks you for your purchase and hands you the item.";
-			add "large white bow" to invent of Player;
+			ItemGain large white bow by 1;
 			[shopping done, exiting all menus in turn]
 	else:
 		say "     You put the item back and look over the selection again.";
@@ -1179,7 +1179,7 @@ to say LargeBlackBowTalk: [item selection (level 4)]
 		else:
 			decrease freecred by 10;
 			say "     Andromeda thanks you for your purchase and hands you the item.";
-			add "large black bow" to invent of Player;
+			ItemGain large black bow by 1;
 			[shopping done, exiting all menus in turn]
 	else:
 		say "     You put the item back and look over the selection again.";
@@ -1200,7 +1200,7 @@ to say LargePinkBowTalk: [item selection (level 4)]
 		else:
 			decrease freecred by 10;
 			say "     Andromeda thanks you for your purchase and hands you the item.";
-			add "large pink bow" to invent of Player;
+			ItemGain large pink bow by 1;
 			[shopping done, exiting all menus in turn]
 	else:
 		say "     You put the item back and look over the selection again.";
@@ -1221,7 +1221,7 @@ to say LargePolkaDotBowTalk: [item selection (level 4)]
 		else:
 			decrease freecred by 10;
 			say "     Andromeda thanks you for your purchase and hands you the item.";
-			add "large polka dot bow" to invent of Player;
+			ItemGain large polka dot bow by 1;
 			[shopping done, exiting all menus in turn]
 	else:
 		say "     You put the item back and look over the selection again.";
@@ -1284,7 +1284,7 @@ to say Rose-tintedGlassesTalk: [item selection (level 4)]
 		else:
 			decrease freecred by 10;
 			say "     Andromeda thanks you for your purchase and hands you the item.";
-			add "rose-tinted glasses" to invent of Player;
+			ItemGain rose-tinted glasses by 1;
 			[shopping done, exiting all menus in turn]
 	else:
 		say "     You put the item back and look over the selection again.";
@@ -1404,7 +1404,7 @@ to say PinkJoggingPantsTalk: [item selection (level 4)]
 		else:
 			decrease freecred by 20;
 			say "     Andromeda thanks you for your purchase and hands you the item.";
-			add "pink jogging pants" to invent of Player;
+			ItemGain pink jogging pants by 1;
 			[shopping done, exiting all menus in turn]
 	else:
 		say "     You put the item back and look over the selection again.";
@@ -1467,7 +1467,7 @@ to say FloweredBermudaShortsTalk: [item selection (level 4)]
 		else:
 			decrease freecred by 20;
 			say "     Andromeda thanks you for your purchase and hands you the item.";
-			add "flowered bermuda shorts" to invent of Player;
+			ItemGain flowered bermuda shorts by 1;
 			[shopping done, exiting all menus in turn]
 	else:
 		say "     You put the item back and look over the selection again.";
@@ -1586,7 +1586,7 @@ to say Light-bluePencilSkirtTalk: [item selection (level 5)]
 		else:
 			decrease freecred by 20;
 			say "     Andromeda thanks you for your purchase and hands you the item.";
-			add "light-blue pencil skirt" to invent of Player;
+			ItemGain light-blue pencil skirt by 1;
 			[shopping done, exiting all menus in turn]
 	else:
 		say "     You put the item back and look over the selection again.";
@@ -1656,7 +1656,7 @@ to say BlackMiniSkirtTalk: [item selection (level 5)]
 		else:
 			decrease freecred by 20;
 			say "     Andromeda thanks you for your purchase and hands you the item.";
-			add "black mini skirt" to invent of Player;
+			ItemGain black miniskirt by 1;
 			[shopping done, exiting all menus in turn]
 	else:
 		say "     You put the item back and look over the selection again.";
@@ -1677,7 +1677,7 @@ to say PinkMiniSkirtTalk: [item selection (level 5)]
 		else:
 			decrease freecred by 20;
 			say "     Andromeda thanks you for your purchase and hands you the item.";
-			add "pink mini skirt" to invent of Player;
+			ItemGain pink miniskirt by 1;
 			[shopping done, exiting all menus in turn]
 	else:
 		say "     You put the item back and look over the selection again.";
@@ -1740,7 +1740,7 @@ to say GypsyFloralSkirtTalk: [item selection (level 5)]
 		else:
 			decrease freecred by 20;
 			say "     Andromeda thanks you for your purchase and hands you the item.";
-			add "gypsy floral skirt" to invent of Player;
+			ItemGain gypsy floral skirt by 1;
 			[shopping done, exiting all menus in turn]
 	else:
 		say "     You put the item back and look over the selection again.";
@@ -1853,7 +1853,7 @@ to say SimpleBlackBraTalk: [item selection (level 4)]
 		else:
 			decrease freecred by 10;
 			say "     Andromeda thanks you for your purchase and hands you the item.";
-			add "simple black bra" to invent of Player;
+			ItemGain simple black bra by 1;
 			[shopping done, exiting all menus in turn]
 	else:
 		say "     You put the item back and look over the selection again.";
@@ -1916,7 +1916,7 @@ to say PinkPantiesTalk: [item selection (level 4)]
 		else:
 			decrease freecred by 10;
 			say "     Andromeda thanks you for your purchase and hands you the item.";
-			add "pink panties" to invent of Player;
+			ItemGain pink panties by 1;
 			[shopping done, exiting all menus in turn]
 	else:
 		say "     You put the item back and look over the selection again.";
@@ -2029,7 +2029,7 @@ to say Bright-redPumpsTalk: [item selection (level 4)]
 		else:
 			decrease freecred by 10;
 			say "     Andromeda thanks you for your purchase and hands you the item.";
-			add "bright-red pumps" to invent of Player;
+			ItemGain bright-red pumps by 1;
 			[shopping done, exiting all menus in turn]
 	else:
 		say "     You put the item back and look over the selection again.";
@@ -2092,7 +2092,7 @@ to say BlackStilettoHeelsTalk: [item selection (level 4)]
 		else:
 			decrease freecred by 20;
 			say "     Andromeda thanks you for your purchase and hands you the item.";
-			add "black stiletto heels" to invent of Player;
+			ItemGain black stiletto heels by 1;
 			[shopping done, exiting all menus in turn]
 	else:
 		say "     You put the item back and look over the selection again.";
@@ -2310,7 +2310,7 @@ to say BlackMotorcycleHelmetTalk: [item selection (level 4)]
 		else:
 			decrease freecred by 20;
 			say "     Lisa thanks you for your purchase and hands you the item.";
-			add "black motorcycle helmet" to invent of Player;
+			ItemGain black motorcycle helmet by 1;
 			[shopping done, exiting all menus in turn]
 	else:
 		say "     You put the item back and look over the selection again.";
@@ -2331,7 +2331,7 @@ to say FlamingMotorcycleHelmetTalk: [item selection (level 4)]
 		else:
 			decrease freecred by 20;
 			say "     Lisa thanks you for your purchase and hands you the item.";
-			add "flaming motorcycle helmet" to invent of Player;
+			ItemGain flaming motorcycle helmet by 1;
 			[shopping done, exiting all menus in turn]
 	else:
 		say "     You put the item back and look over the selection again.";
@@ -2352,7 +2352,7 @@ to say SuccubusMotorcycleHelmetTalk: [item selection (level 4)]
 		else:
 			decrease freecred by 30;
 			say "     Lisa thanks you for your purchase and hands you the item.";
-			add "succubus motorcycle helmet" to invent of Player;
+			ItemGain succubus motorcycle helmet by 1;
 			[shopping done, exiting all menus in turn]
 	else:
 		say "     You put the item back and look over the selection again.";
@@ -2373,7 +2373,7 @@ to say IncubusMotorcycleHelmetTalk: [item selection (level 4)]
 		else:
 			decrease freecred by 30;
 			say "     Lisa thanks you for your purchase and hands you the item.";
-			add "incubus motorcycle helmet" to invent of Player;
+			ItemGain incubus motorcycle helmet by 1;
 			[shopping done, exiting all menus in turn]
 	else:
 		say "     You put the item back and look over the selection again.";
@@ -2479,7 +2479,7 @@ to say BlackMeshBriefsTalk: [item selection (level 4)]
 		else:
 			decrease freecred by 10;
 			say "     Lisa thanks you for your purchase and hands you the item.";
-			add "black mesh briefs" to invent of Player;
+			ItemGain black mesh briefs by 1;
 			[shopping done, exiting all menus in turn]
 	else:
 		say "     You put the item back and look over the selection again.";
@@ -2592,7 +2592,7 @@ to say Cow-printCowboyHatTalk: [item selection (level 4)]
 		else:
 			decrease freecred by 30;
 			say "     Lisa thanks you for your purchase and hands you the item.";
-			add "cow-print cowboy hat" to invent of Player;
+			ItemGain cow-print cowboy hat by 1;
 			[shopping done, exiting all menus in turn]
 	else:
 		say "     You put the item back and look over the selection again.";
@@ -2655,7 +2655,7 @@ to say Cow-printCowgirlBootsTalk: [item selection (level 4)]
 		else:
 			decrease freecred by 30;
 			say "     Lisa thanks you for your purchase and hands you the item.";
-			add "cow-print cowgirl boots" to invent of Player;
+			ItemGain cow-print cowgirl boots by 1;
 			[shopping done, exiting all menus in turn]
 	else:
 		say "     You put the item back and look over the selection again.";
@@ -2762,7 +2762,7 @@ to say LatexMouseMaskTalk: [item selection (level 4)]
 		else:
 			decrease freecred by 30;
 			say "     Lisa thanks you for your purchase and hands you the item.";
-			add "latex mouse mask" to invent of Player;
+			ItemGain latex mouse mask by 1;
 			[shopping done, exiting all menus in turn]
 	else:
 		say "     You put the item back and look over the selection again.";

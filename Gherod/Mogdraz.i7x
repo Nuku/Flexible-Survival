@@ -30,13 +30,13 @@ Section 1 - Intro
 
 Table of GameEventIDs (continued)
 Object	Name
-An Hellish Introduction	"An Hellish Introduction"
+Hellish Introduction	"Hellish Introduction"
 
-An Hellish Introduction is a situation.
-The sarea of An Hellish Introduction is "Nowhere".
+Hellish Introduction is a situation.
+The sarea of Hellish Introduction is "Nowhere".
 
 when play begins:
-	add An Hellish Introduction to badspots of DemonList;
+	add Hellish Introduction to badspots of DemonList;
 
 [ Resolution stages                          ]
 [   0: Mogdraz not met                       ]
@@ -84,9 +84,9 @@ to say MogdrazIntro:
 			now HP of Mogdraz is 30;
 	say "     'You see, I do run a business, and there is one thing I am looking for. Two, in fact! Patrons and Escorts! If you fancy demons, you can pay upfront, and I will provide you with a professional one of your choice... Or, if you wish to be on the other side taking your clients, you can do so and I will pay you a percentage of what you get! But I'm afraid you'll have to look like a demon... If your only desire is matching up with other patrons, however, you may do so for free at the lounge! Such a fine deal, is it not?' He accompanies you out of the room and into the lounge he mentioned. 'Anything else you want to discuss, I will be in my usual sofa. I like watching the action happen, and someone has to keep an eye on the clientele, right?'";
 	say "     As he finishes explaining things, he proceeds to show the space around. It is a fairly normal nightclub, with a pervert or two around the corner every now and then. Sounds like you could give it a try, now that you know its location in the Red Light District.";
-	now resolution of An Hellish Introduction is 1;
+	now resolution of Hellish Introduction is 1;
 	move player to Hellfire Club;
-	now Hellfire Club is known;
+	AddNavPoint Hellfire Club;
 	connect Hellfire Club;
 	WaitLineBreak;
 	if companion of player is demonologist:
@@ -94,7 +94,7 @@ to say MogdrazIntro:
 		WaitLineBreak;
 		MogdrazXaedihr;
 
-instead of going north from Crimson Street while (resolution of An Hellish Introduction is 1 and companion of player is demonologist):
+instead of going north from Crimson Street while (resolution of Hellish Introduction is 1 and companion of player is demonologist):
 	say "     Just as you're about to make an entrance, your sorcerer friend immediately bends the will of the hellfire demons standing as guards, forcing them to collapse on the ground with powerful magic. 'I knew something was going on here.' You try to stop him, to no avail, as he charges ahead into the club. There is nothing you can do but to follow after him, hoping he doesn't make any further trouble...";
 	WaitLineBreak;
 	MogdrazXaedihr;
@@ -108,7 +108,7 @@ to MogdrazXaedihr:
 	WaitLineBreak;
 	say "     Mogdraz chuckles, getting up from his chair and talking as he walks over to the door. 'Even the most strong-willed crave for someone in charge, sometimes. To let go for once and feel someone taking control... Sometimes, they need that. I simply provide what the heart truly desires. But I don't keep their souls, so they're free to go anytime...! They simply choose not to.' Both you and Xaedihr follow him to the exit. The sorcerer makes a polite bow as the club master responds in the same manner, a formal greeting between good friends in nobility, perhaps. 'I shall send you what I learn, Xaed. Just be careful and don't do anything you would regret. Oh, and... Good to see you.' says Mogdraz, as you and Xaedihr take your leave, the dark mage showing signs of joy and hope in his face.";
 	say "     The half-demon now turns to you with a sincere smile. 'Thank you, friend. If it wasn't for you I would have never re-encountered the only demon I owe my life to.' Indeed, this is something you don't see everyday, given Xaedihr's innate hate for the hellspawn. And Mogdraz seems to be capable of dimension traveling, surprisingly. There is a lot you still don't know about that demon... Maybe you can know more by talking to him the next time you find yourself at the Hellfire Club.";
-	now resolution of An Hellish Introduction is 2;
+	now resolution of Hellish Introduction is 2;
 
 [***********************************************************]
 [***********************************************************]
@@ -205,7 +205,7 @@ to say MogdrazTalkMenu:
 		now sortorder entry is 5;
 		now description entry is "Let Mogdraz know of any developments regarding your sexuality";
 	[]
-	if resolution of An Hellish Introduction > 1:
+	if resolution of Hellish Introduction > 1:
 		choose a blank row in table of fucking options;
 		now title entry is "His situation with Xaedihr";
 		now sortorder entry is 6;
@@ -489,10 +489,10 @@ to say HellfireClubDesc:
 to connect Hellfire Club:
 	change the south exit of Hellfire Club to Crimson Street;
 	change the north exit of Crimson Street to Hellfire Club;
-	now Hellfire Club is known;
+	AddNavPoint Hellfire Club;
 
 a postimport rule: [bugfixing rules for players that import savegames]
-	if resolution of An Hellish Introduction > 0: [event resolved the right way, room not connected yet]
+	if resolution of Hellish Introduction > 0: [event resolved the right way, room not connected yet]
 		connect Hellfire Club;
 
 instead of smelling Hellfire Club:
@@ -562,7 +562,7 @@ GimpMaskSkip is an action applying to nothing.
 Understand "GiveGimpMask" as GimpMaskSkip.
 
 Carry out GimpMaskSkip:
-	increase carried of gimp mask by 1;
+	ItemGain gimp mask by 1 silently;
 	say "You have the gimp mask. Go submit to a hellfire demon.";
 
 Mogdraz ends here.

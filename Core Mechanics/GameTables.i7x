@@ -52,8 +52,14 @@ Table of PlayerLists
 ListName(text)	EntryText(text)
 with 50000 blank rows
 
+[old table, missing enemy type]
 Table of GameBeasts
 Name(text)	Area(text)	non-infectious(truth state)	sex(text)
+with 1000 blank rows
+
+[new table that includes an extra variable]
+Table of GameBeastVariables
+Name(text)	Area(text)	non-infectious(truth state)	sex(text)	enemy type(number)
 with 1000 blank rows
 
 Table of GameTraits
@@ -87,6 +93,10 @@ with 500 blank rows
 Table of GameEventIDs
 Object	Name
 with 1 blank row
+
+Table of GameEventIDs (continued)
+Object	Name
+PlaceholderSituation	"PlaceholderSituation"
 
 Table of GameRoomIDs
 Object	Name
@@ -348,8 +358,6 @@ Name(text)	Type(text)
 "DiegoButtSlut"	"number"
 "DiegoChanged"	"number"
 "DiegoFucked"	"number"
-"Diegotalk"	"number"
-"DiegoTricked"	"number"
 "dinonest"	"number"
 "dnfightresult"	"number"
 "dobielibido"	"number"
@@ -546,8 +554,6 @@ Name(text)	Type(text)
 "GorillasMemberQuestCounter"	"number"
 "GorillasRep"	"number"
 "gotcatares"	"number"
-"gotsword"	"number"
-"gotwhip"	"number"
 "grantbitch"	"number"
 "grantfucked"	"number"
 "grantsex"	"number"
@@ -707,6 +713,16 @@ Name(text)	Type(text)
 "KyrverthQuestGiven"	"number"
 "KyrverthStage"	"number"
 "KyrverthTimer"	"number"
+"Kyrverthitemget"	"number"
+"KyrverthItemReturned"	"number"
+"KyrverthNutGrowth"	"number"
+"KyrverthSpikeGrowth"	"number"
+"KyrverthWingType"	"number"
+"KyrverthCockType"	"number"
+"KyrverthLockoutTimer"	"number"
+"KyrverthEndingTimer"	"number"
+"KyrverthBodyChanged"	"number"
+"KyrverthPanicWitnessed"	"number"
 "labhost"	"number"
 "labtimerA"	"number"
 "labtimerB"	"number"
@@ -751,7 +767,6 @@ Name(text)	Type(text)
 "lastDavidSarahInteraction"	"number"
 "Lastdelaymilitary"	"number"
 "lastdenevent"	"number"
-"LastDiegoTricked"	"number"
 "lastdobiemess"	"number"
 "LastDrinkserved"	"number"
 "lastDrMousefucked"	"number"
@@ -1522,7 +1537,6 @@ Name(text)	Type(text)
 "StellaNPCInt"	"text"
 "ubpreg"	"text"
 "VikingKidShape"	"text"
-"weaselcolor"	"text"
 "wolvloc"	"text"
 "wrbody"	"text"
 "wrbodydesc"	"text"
@@ -1683,7 +1697,6 @@ Name(text)	Type(text)
 "gsd_male"	"truth state"
 "gsd_slut"	"truth state"
 "gsd_special"	"truth state"
-"gshep_scarscene"	"truth state"
 "gshm"	"truth state"
 "gsnhm"	"truth state"
 "HadGusBackgroundTalk"	"truth state"
@@ -1698,9 +1711,6 @@ Name(text)	Type(text)
 "honeygiven"	"truth state"
 "houndfromhell"	"truth state"
 "hvoreoffer"	"truth state"
-"hydraheadcheck1"	"truth state"
-"hydraheadcheck2"	"truth state"
-"hydraheadcheck3"	"truth state"
 "hydraheadregrowth"	"truth state"
 "HyenaMatVore"	"truth state"
 "icarusrim"	"truth state"
@@ -1722,6 +1732,10 @@ Name(text)	Type(text)
 "kristenmsg5"	"truth state"
 "kristentf3fuck"	"truth state"
 "ktcockmatch"	"truth state"
+"KyrverthItemStealable"	"truth state"
+"KyrverthItemTaken"	"truth state"
+"KyrverthQuestHairGiven"	"truth state"
+"KyrverthUsedArtifact"	"truth state"
 "LarissaTailed"	"truth state"
 "LarissaWinged"	"truth state"
 "LastTurnDay"	"truth state"

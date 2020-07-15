@@ -199,8 +199,7 @@ to say hgryphon_pw_00: [milking]
 	say "     Approaching the defeated gryphon with confidence, you reach out and place your hands on her full breasts, giving them a squeeze. 'Mmmh! That feels nice,' she murrs in pleasure, leaning into your touch. Several small drops of milk already start leaking from her nipples just from the first caress, and you can see that she's obviously more than ready to give some milk. The gryphoness gives a surprised chuckle as you dig an empty plastic bottle from your pack, then press its open neck against one of her nipples, squeezing the boob around it with your other hand. A first squirt of rich gryphon milk shoots into the bottle followed by another and another. The air fills with the strangely arousing scent of the hybrid creature's milk while you switch back and forth between her breasts, milking both of them equally. Your former opponent clearly doesn't mind at all that you're taking what you want from her, letting out sighs of pleasure and arousal throughout the process.";
 	say "     By the time you've filled up your bottle, the gryphoness is putty in your hands, plyable and oh so very horny. If you hadn't already proven that you can take her in a fight, you think she'd just jump you right away and want to have sex. As things stand, the blue-feathered avian just lies back as you take your hands off her, stroking her own breasts, as well as the erect shaft between her legs. Packing away your fresh milk, you step back from the gryphoness as she begins to masturbate, leaving her behind to take care of herself.";
 	LineBreak;
-	say "[bold type]You gain a bottle of gryphon milk![roman type][line break]";
-	increase carried of gryphon milk by 1;
+	ItemGain gryphon milk by 1;
 
 to say hgryphon_pw_01:
 	say "     Approaching the defeated gryphon with confidence, you nudge her legs apart with your feet to get a better look at that moist slit she has tucked under those balls of hers. Seeing your interest, she raises her hips and holds her scrotum out of the way. You move to your knees, positioning your [cock size desc of Player] member at your victim's quivering slit.";
@@ -250,7 +249,7 @@ to say hgryphon_pw_06:
 	say "***blow her";
 
 to say hgryphon_TG:
-	decrease carried of gryphon cum by 1;
+	ItemLoss gryphon cum by 1;
 	increase hgryphon_TGcount by 1;
 	now lasthgryphon_TG is turns;
 	increase XP of Garrett by 1;

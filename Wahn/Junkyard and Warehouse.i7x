@@ -160,7 +160,7 @@ Instead of going south from the Abandoned Lot:
 							LineBreak;
 							say "     You dig into your backpack and hold the 20 oz bottle up for him to see. The man nods happily and accepts the bottle as you hand it through the slit, having to push a bit to make it fit with some scrapes along the sides. 'Thanks,' he says, then abruptly closes the opening. A few moments later, he is back, opening the slat and showing you to another man who looks out suspiciously. The two mumble to each other for a moment before the second man speaks up.";
 							say "     'All right, we will let you in. But if you try anything funny, you'll be out on the streets so fast your head will spin!' You promise you won't be any trouble, and the guards open the door for you, hastily waving you inside. The original guy at the door starts to raise his hand to shake yours, then pauses and puts it back down as he remembers the nanite infection. 'Um. Yeah. So... I'm Steven by the way,' he tells you, then quickly goes to grab a large black raincoat, throwing it over you to conceal your changed body at least a little.";
-							delete soda;
+							ItemLoss soda by 1;
 							move player to Storage Room;
 							now StevenSwayed is 1;
 						else:
@@ -370,11 +370,11 @@ Instead of trading when the second noun is Steven:
 		if the noun is soda:
 			say "Steven's eyes gleam for a moment, before he snatches the can and tucks it away. He pulls out a medkit. 'Don't tell anyone about this.'";
 			increment carried of medkit;
-			delete soda;
+			ItemLoss soda by 1;
 		else if the noun is chips:
 			say "Steven looks hungrily at the chips, and he carefully takes them off you and gives you back a medkit. 'You know, I'm breaking the rules for this,' as he winks at you.";
 			increment carried of medkit;
-			delete chips;
+			ItemLoss chips by 1;
 		else:
 			say "He looks blankly at the [noun]. 'You can keep it.'";
 	else:
@@ -972,7 +972,7 @@ Instead of resolving Junkyard Home:
 		say "'Ah, hello,' Steven says. 'Didn't know if I'd see you again.' He looks down at near-naked equine body, wearing only a belt and a loincloth. 'As you can tell, I was permanently disbarred and exiled. My old clothes don't fit me anymore. This loincloth was part of a curtain. There is a lot of useful stuff out here, but it's not like it was in the shelter. I'm sure we'll make it through, though.'";
 		say "'I want to thank you,' he says. 'I don't know if it was the best decision I've made, but I feel some relief for this body. It feels like, completion, I guess. The grass is tastier on the other side, after all.' He smiles. 'You like the place? I think it's roomy enough. If you want to... you know... move in.' He coughs and goes back to work.";
 		move player to Steven's Home;
-		now Steven's Home is known;
+		AddNavPoint Steven's Home;
 		now junkyard home is resolved;
 
 
@@ -980,45 +980,23 @@ Section 4 - Finding a tool
 
 Table of GameEventIDs (continued)
 Object	Name
-unused tool	"unused tool"
+Unused Tool	"Unused Tool"
 
-an unused tool is a situation.
-The sarea of an unused tool is "Junkyard".
+Unused Tool is a situation.
+The sarea of Unused Tool is "Junkyard".
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"crowbar"	"A big, heavy crowbar. It's not sharp, but it's heavy enough to strike a good blow."	3	crowbar
-"mallet"	"A heavy mallet. If you swung it hard enough, you could easily crack someone's head open."	5	mallet
-"iron pipe"	"A piece of iron pipe. It might make an adequate blunt weapon."	3	iron pipe
-
-crowbar is a armament. It is a part of the player. It has a weapon "your crowbar". The weapon damage of crowbar is 6. The weapon type of crowbar is "Melee". It is not temporary.
-mallet is a armament. It is a part of the player. It has a weapon "your mallet". The weapon damage of mallet is 7. The weapon type of mallet is "Melee". It is not temporary.
-iron pipe is a armament. It is a part of the player. It has a weapon "your iron pipe". The weapon damage of iron pipe is 5. The weapon type of iron pipe is "Melee". It is not temporary. the objsize of mallet is 2.
-
-instead of sniffing the crowbar:
-	say "The crowbar smells of metal and motor oil.";
-
-instead of sniffing the mallet:
-	say "The mallet smells faintly of the junkyard where you found it.";
-
-instead of sniffing the iron pipe:
-	say "The iron pipe smells like old rust and whatever that hard, dry gunk inside was.";
-
-
-Instead of resolving an unused tool:
+Instead of resolving Unused Tool:
 	say "As you explore the junkyard, you come across a pile of discarded tools. You search through the pile for something interesting.";
 	let result be a random number from 1 to 3;
 	if result is 1:
-		say "Huzzah! You found a crowbar!";
-		increment carried of crowbar;
-	if result is 2:
-		say "Success! You found a mallet!";
-		increment carried of mallet;
-	if result is 3:
-		say "Yay! You found an iron pipe!";
-		increment carried of iron pipe;
-	now an unused tool is resolved;
+		ItemGain crowbar by 1;
+	else if result is 2:
+		ItemGain mallet by 1;
+	else if result is 3:
+		ItemGain iron pipe by 1;
+	now Unused Tool is resolved;
 
+[Weapons moved to Core Mechanics/Weapons.i7x]
 
 Section 5 - Find a random infected object
 
@@ -1038,15 +1016,13 @@ Instead of resolving signs of a scuffle:
 	choose row firstbeast from the Table of Random Critters;
 	if there is a loot entry:
 		if loot entry is not "" and loot entry is not " ":
-			add loot entry to invent of Player;
-			say "You found 1 x [loot entry]!";
+			ItemGain loot entry by 1;
 			now opportunity is 1;
 	let secondbeast be a random number from 1 to number of filled rows in the Table of Random Critters;
 	choose row secondbeast from the Table of Random Critters;
 	if there is a loot entry:
 		if loot entry is not "" and loot entry is not " ":
-			add loot entry to invent of Player;
-			say "You found 1 x [loot entry]!";
+			ItemGain loot entry by 1;
 			now opportunity is 1;
 	if opportunity is 0:
 		say "Alas, you found nothing but dirt, dust, and junk.";

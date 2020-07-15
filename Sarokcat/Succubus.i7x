@@ -63,7 +63,7 @@ To say Succubus loss:
 					say "     As the succubus staggers back under your assault, your captured demon brute gives a satisfied grunt and steps forward to throw her down and rape her. With a single command, you freeze him in his steps - you wouldn't want the creature to think it can decide anything on its own, now that you're its master. Finding her balance again, your infernal opponent gives you a surprised look, which gives way to a seductive smile. 'How interesting... how did you get him so - tame?'";
 					say "     She saunters over to your captured demon brute, stroking her hand over his muscled form and grabbing his balls. He snarls, clearly aching to rape her, you, anyone - then starts to whimper as the succubus squeezes tightly. She gives a somewhat cruel chuckle as she turns to you, her eyes searching out the amulet around your neck. 'Magic, hm? That opens some possibilities... I could change your pet a bit, if you're interested. Show this big brute how it is to have a pussy. Look me up in the [bold type]Burned-Out Chapel[roman type] in Flint street, if you're interested. For now, I've got to go - mortals to corrupt, you know...'";
 					say "     The defeated succubus purrs as she slips forward to give you a hug, her lips meeting your own in a surprisingly intimate kiss, your body reacting instinctively as you melt into her kiss. Before you can bring yourself to protest, the tricky succubi has already broken the kiss and flown off into the [if daytimer is day]shadows[else]night[end if], leaving you standing there with the feel of her lips pressed up against your own, as your body tingles with arousal.";
-			now Burned-Out Chapel is known;
+			AddNavPoint Burned-Out Chapel;
 			now HP of Lilith is 2;
 		else:
 			if Player is male:

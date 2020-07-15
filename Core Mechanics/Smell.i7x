@@ -126,10 +126,6 @@ the scent of dirty water is "The dirty water smells a little off, but is still p
 
 the scent of food is "The food smells [one of]good[or]appetizing[or]tasty[or]edible[at random].".
 
-the scent of pocketknife is "The pocketknife smells like metal.".
-
-the scent of chair is "The metal chair smells of metal and aging plastic.".
-
 the scent of journal is "The journal smells of cheap leather, paper and ink.".
 
 the scent of medkit is "The medkit smells like antiseptic.".

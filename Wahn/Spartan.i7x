@@ -395,7 +395,7 @@ to HistoryLectureVisit:
 				LineBreak;
 				if Player is not neuter:[genitals needed]
 					say "     You're still focused on watching the professor getting a blowjob when suddenly someone clears his throat right next to you. It's one of the Helots, offering you a pita bread with tasty-looking and -smelling filling. Accepting it, your gaze falls on the almost naked body of the young slave and your libido rises to the occasion. Would you like to make use of him for your own pleasure?";
-					increase carried of pita bread by 1;
+					ItemGain pita bread by 1;
 					if Player consents:[sex with the slave-servant]
 						say "     Setting aside the food for now, you pull the young man close to you. 'Let's see what we have here...' you say, pulling the loincloth off his hips to reveal the Helot's crotch. Quite well hung, this boy - and he has a nicely perky butt as well.";
 						if Player is male: [males]

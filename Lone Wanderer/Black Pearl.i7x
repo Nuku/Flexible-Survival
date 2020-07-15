@@ -4,6 +4,10 @@ Version 1 of Black Pearl by Lone Wanderer begins here.
 
 Section 0 - Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Curious Pearl	"Curious Pearl"
+
 Curious Pearl is a situation.
 The sarea of Curious Pearl is "Beach".
 The level of Curious Pearl is 5. [minimum level to find the event]

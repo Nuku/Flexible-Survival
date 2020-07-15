@@ -146,7 +146,7 @@ Instead of resolving a Captivating Plumage:
 		say "     After all the rowdy rabbits have left the store, Dmitri takes a seat on a leather chair and exhales loudly, as if a massive weight has just been taken off his chest. With a contented sigh, the peacock says, 'It's finally over, all that time and effort finally paid off.' You take a seat close by, feeling much more relaxed now that your little heist is out of the way. The avian looks deeply into your eyes and says in a tone that echoes through your nerves, 'You did a wonderful job. Feel free to come by anytime, and I'll make sure you feel good.' Somehow, a part of your mind feels like you've gained back a small modicum of control. You are now able to visit Argos Antiques whenever you want.";
 		WaitLineBreak;
 		move player to Argos Antiques;
-		now Argos Antiques is known;
+		AddNavPoint Argos Antiques;
 		now battleground is "void";
 		now peacocked is 8;
 		now Resolution of Captivating Plumage is 8;

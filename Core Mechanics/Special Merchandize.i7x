@@ -6,7 +6,7 @@ BlissDrugTrip is a number that varies.
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"Bliss Tablet"	"A purple tablet pressed into the shape of a heart."	1	bliss tablet
+"bliss tablet"	"A purple tablet pressed into the shape of a heart."	1	bliss tablet
 
 bliss tablet is a grab object.
 the usedesc of bliss tablet is "[blissUse]".
@@ -40,7 +40,7 @@ PowerUpDrugTrip is a number that varies.
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"PowerUp Tablet"	"A bright red tablet pressed into the shape of a flexing arm."	1	powerup tablet
+"powerup tablet"	"A bright red tablet pressed into the shape of a flexing arm."	1	powerup tablet
 
 powerup tablet is a grab object.
 the usedesc of powerup tablet is "[PowerUpUse]".
@@ -80,7 +80,7 @@ Section 3 - Pixie Dust
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Pixie Dust"	"A little handful of what looks like glitter, but is actually genuine magic pixie dust. It is in a small throwaway plastic container."	0	pixie dust
+"pixie dust"	"A little handful of what looks like glitter, but is actually genuine magic pixie dust. It is in a small throwaway plastic container."	0	pixie dust
 
 pixie dust is a grab object. It is temporary.
 

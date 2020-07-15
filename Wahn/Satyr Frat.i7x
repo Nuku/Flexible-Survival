@@ -662,7 +662,7 @@ Instead of resolving a Divine Wine-Cellar:
 				else:
 					say "frigging your sensitive crotch in a rapid pace until you feel the familiar up-welling of an orgasm, trembling all over as you kneel on the stone floor. ";
 				say "Afterwards, you stand up on somewhat shaky knees and put your clothes back in order, then find your new friend standing over you with a satisfied smile on his face. 'That sure was one convincing argument,' he says with a chuckle, then holds out the little bottle to you in a little flourish. 'Here, take it. You earned it. Now get out of here, I got duties to perform, you know...' Giving him your thanks, you pocket the sample bottle of wine, then make your way down the short tunnel and to the stairs. Not long after, you're back in the lobby of the museum.";
-				increase carried of Pan's Special Reserve by 1;
+				ItemGain Pan's Special Reserve by 1;
 				if JaksEncounters < 2: [no BJ before]
 					now JaksEncounters is 2; [gave him a BJ]
 				if Resolution of Divine Wine-Cellar < 1:
@@ -681,7 +681,7 @@ Instead of resolving a Divine Wine-Cellar:
 				else:
 					say "[mimpregchance]";
 				say "     Pushing himself up from the table with both strong arms, Jaks looks down at you with a cheeky grin on his face, then says, 'Pleasure having you here as a visitor. I wouldn't mind if you came along more often.' He pulls his spent cock from your body slowly and gently, wiping off a bit of cum sticking to the cockhead with a finger and then slurping it off with his tongue. The satyr helps you down from the table and waits for you to put your clothes in order, then holds out the little bottle to you in a little flourish. 'Here, take it. You earned it. Now get out of here, I got duties to perform, you know...' Giving him your thanks, you pocket the sample bottle of wine, then make your way down the short tunnel and to the stairs. Not long after, you're back in the lobby of the museum.";
-				increase carried of Pan's Special Reserve by 1;
+				ItemGain Pan's Special Reserve by 1;
 				if JaksEncounters < 3: [not fucked before]
 					now JaksEncounters is 3; [fucked by Jaks]
 				if Resolution of Divine Wine-Cellar < 2:
@@ -727,7 +727,7 @@ Instead of resolving a Divine Wine-Cellar:
 				else:
 					say "frigging your sensitive crotch in a rapid pace until you feel the familiar up-welling of an orgasm, trembling all over as you kneel on the stone floor. ";
 				say "Afterwards, you stand up on somewhat shaky knees and put your clothes back in order, then find your new friend standing over you with a satisfied smile on his face. 'I do look forward to having young bucks and does visiting,' he says with a chuckle, then holds out a little bottle of wine to you in a flourish. 'Here, take this. You earned it. Now get out of here, I got duties to perform, you know...' Giving him your thanks, you pocket the sample bottle of wine, then make your way down the short tunnel and to the stairs. Not long after, you're back in the lobby of the museum.";
-				increase carried of Pan's Special Reserve by 1;
+				ItemGain Pan's Special Reserve by 1;
 				if JaksEncounters < 2: [no BJ before]
 					now JaksEncounters is 2; [gave him a BJ]
 				if Resolution of Divine Wine-Cellar < 1:
@@ -748,7 +748,7 @@ Instead of resolving a Divine Wine-Cellar:
 				say "     Pushing himself up from the table with both strong arms, Jaks looks down at you with a cheeky grin on his face, then says, 'Pleasure having you here as a visitor. I wouldn't mind if you came along more often.' He pulls his spent cock from your body slowly and gently, wiping off a bit of cum sticking to the cockhead with a finger and then slurping it off with his tongue. The satyr helps you down from the table and waits for you to put your clothes in order, then holds out a little bottle of fine wine to you in a flourish. 'Here, take this. You earned it. Now get out of here, I got duties to perform, you know...' Giving him your thanks, you pocket the sample bottle of wine, then make your way down the short tunnel and to the stairs. Not long after, you're back in the lobby of the museum.";
 				if Resolution of Divine Wine-Cellar < 2:
 					now Resolution of Divine Wine-Cellar is 2; [got satyr-fucked]
-				increase carried of Pan's Special Reserve by 1;
+				ItemGain Pan's Special Reserve by 1;
 				if JaksEncounters < 3: [not fucked before]
 					now JaksEncounters is 3; [fucked by Jaks]
 			now LastJaksEncounter is turns;

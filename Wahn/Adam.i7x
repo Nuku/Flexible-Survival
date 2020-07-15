@@ -498,8 +498,6 @@ to say AdamOral_Male_Virgin:
 	WaitLineBreak;
 	say "     Another lesson learned, and you're both satisfied with the time you spent together. 'This was great!' - he happily says - 'I've already... huh... caught a couple of soldiers doing this. Like, one was on his knees sucking the other... And I've been, since then, thinking of doing this with... you... Because I'm too shy to just approach anyone else with this stuff.' he admits. You can't help but tease him a bit about that, as he just half-confessed that he jerks off while thinking about you. His face gets so flushed that you nearly feel bad for pointing it out, but in fact he doesn't disagree with you. 'You're quite the catch! I mean... it's very hard not to think about you...' he continues, and you end up assuring him that you'll be doing much more together, to which he smiles. 'Hope so! You're the best! Maybe we can do this again next time you show up...?'";
 	say "     Eventually, you kiss Adam goodbye, playfully exploring his mouth with your tongue as you give him a gentle tap on his waist. After cleaning yourselves up, you follow on with your own affairs.";
-	now lastfuck of Adam is turns;
-	now OralVirgin of Adam is false;
 	add "Cock Connoisseur" to Traits of Adam;
 	NPCSexAftermath Adam receives "OralCock" from Player;
 
@@ -525,8 +523,6 @@ to say AdamOral_Female_Virgin:
 	WaitLineBreak;
 	say "     Another lesson learned, and you're both satisfied with the time you spent together. 'This was great!' - he happily says - 'I'm too shy to just approach anyone else with this stuff. My dad told me about it, but I never bolstered up any courage to get it going with any of the female soldiers... The only person I thought about asking was you, and I thought about it a lot...' he admits. You can't help but tease him a bit about that, as he just half-confessed that he jerks off while thinking about you. His face gets so flushed that you nearly feel bad for pointing it out, but in fact he doesn't disagree with you. 'You're quite the catch! I mean... it's very hard not to think about you...' he continues, and you end up assuring him that you'll be doing much more together, to which he smiles. 'Hope so! You're the best! Maybe we can do this again next time you show up...?'";
 	say "     Eventually, you kiss Adam goodbye, playfully exploring his mouth with your tongue as you give him a gentle tap on his waist. After cleaning yourselves up, you follow on with your own affairs.";
-	now lastfuck of Adam is turns;
-	now OralVirgin of Adam is false;
 	add "Pussy Connoisseur" to Traits of Adam;
 	NPCSexAftermath Adam receives "OralPussy" from Player;
 
@@ -536,7 +532,6 @@ to say AdamOral_Male: [have Adam suck the player char's cock]
 	WaitLineBreak;
 	say "     Pulling off your cock to get some air, Adam strokes its saliva-coated length some more, then start sucking you off in earnest, pumping his lips up and down on the hard shaft. He keeps going for a while, bringing you to the brink of an orgasm several times, but stopping each time to let you cool down a bit. Then finally he goes all out, sucking on your cock hard and pumping it in and out of his throat. With all the built up arousal, you don't last much longer before a mind-blowing orgasm shakes your body, spurt after spurt of your seed filling Adam's mouth.";
 	say "     Adam sticks out his tongue, showing off your white creamy cum, then demonstratively swallows it all. Then he stands up and gives you a deep kiss, making you taste some of your cum and playfully tongue-wrestling with you. 'Hot as always, [sir]! Can we do this again sometime?'";
-	now lastfuck of Adam is turns;
 	NPCSexAftermath Adam receives "OralCock" from Player;
 
 to say AdamOral_Female:
@@ -545,7 +540,6 @@ to say AdamOral_Female:
 	WaitLineBreak;
 	say "     Pulling out to get some air, Adam caresses and gives your pink pearl some more rubbing, then returns for an even more intense cunnilingus, eating you out in earnest as his energetic tongue finds itself, once more, pressing against your rosebud. He keeps going at it for a while, bringing you to the brink of an orgasm several times, but stopping each time to let you cool down a bit. Then finally he goes all out, wiggling his tongue as well as his face around, giving your clit just enough rubbing to set you loose. With all the built up arousal, you don't last much longer before a mind-blowing orgasm shakes your body, a massive hot wave of pleasure overtaking your senses as your beast-boy licks you vigorously.";
 	say "     With a smile on his face, Adam stands up and gives you a deep kiss, making you have a taste of your own love juices and playfully tongue-wrestling with you. 'Hot as always, [sir]! Can we do this again sometime?'";
-	now lastfuck of Adam is turns;
 	NPCSexAftermath Adam receives "OralPussy" from Player;
 
 to say AdamBJ_Virgin:

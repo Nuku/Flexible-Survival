@@ -84,7 +84,7 @@ Bookshelves	"Bookshelves"
 
 Bookshelves is a man
 
-The description of bookshelves is "     All around the store are bookshelves and tables loaded with old, used, and new books that run the gamut of subjects. Even after having visited the store in the past, you are still amazed by the amount of books the store has to [bold type]browse[roman type] and [bold type]read[roman type] through.".
+The description of bookshelves is "     All around the store are bookshelves and tables loaded with old, used, and new books that run the gamut of subjects. Even after having visited the store in the past, you are still amazed by the amount of books the store has to [link][bold type]browse[roman type][as]browse books[end link] and [link][bold type]read[roman type][as]read books[end link] through.".
 
 the scent of the bookshelves is "The books smell of musty tones mingling with the scent of new papers and the burning candles.".
 
