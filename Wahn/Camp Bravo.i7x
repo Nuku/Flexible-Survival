@@ -46,7 +46,7 @@ Instead of resolving a Trickster's Masterpiece:
 	if graphics is true:
 		project the figure of TinyTim_In_Action_icon;
 		WaitLineBreak;
-	say "     You stay quite a while, watching the soldiers take care of each other and then being bred one after another by the minotaur. In the end a whole squad of them gathers at the edge of the camp, fully clothed and with weapons and equipment, but standing and acting a bit strangely from the feeling of loads of cum and butt plugs inside their asses. Then they move out towards the closest checkpoint of the containment barrier around the city. You wonder what their superiors will say about this plan and the 'cargo' each soldier carries with him, should they even make it at all with all that active minotaur cum wearing down whatever defenses they do have. [if diegotalk is 0]And who might the trickster have been who sold them on this improbable tall tale? It would certainly be interesting to meet him - or her - or it[else if diegochanged is 0]Certainly an awesome trick, to sell them all on this highly improbable story and plan. Recognizing his hand in this, you'd say it's one of the best Diego's done yet[else]Certainly an awesome trick, to sell them all on this highly improbable story and plan. Recognizing her hand in this, you'd say it's one of the best Diego's done yet[end if].";
+	say "     You stay quite a while, watching the soldiers take care of each other and then being bred one after another by the minotaur. In the end a whole squad of them gathers at the edge of the camp, fully clothed and with weapons and equipment, but standing and acting a bit strangely from the feeling of loads of cum and butt plugs inside their asses. Then they move out towards the closest checkpoint of the containment barrier around the city. You wonder what their superiors will say about this plan and the 'cargo' each soldier carries with him, should they even make it at all with all that active minotaur cum wearing down whatever defenses they do have. [if PlayerMet of Diego is true]And who might the trickster have been who sold them on this improbable tall tale? It would certainly be interesting to meet him - or her - or it[else if diegochanged is 0]Certainly an awesome trick, to sell them all on this highly improbable story and plan. Recognizing his hand in this, you'd say it's one of the best Diego's done yet[else]Certainly an awesome trick, to sell them all on this highly improbable story and plan. Recognizing her hand in this, you'd say it's one of the best Diego's done yet[end if].";
 	LineBreak;
 	say "     Certainly worth another visit... you just hope you can find your way back to the [bold type]camp[roman type] with all the chaos on the streets of this city.";
 	WaitLineBreak;
@@ -139,7 +139,7 @@ to say GuardLie: [lie to get into the camp]
 		say "     'Please feel free to check out the camp and talk with everyone. And when you go back to report, please pass on that I need more people here to be able to send more people out with samples.'";
 		move player to Major's Tent;
 		now HP of Adam is 3; [player got access to the camp]
-		now Camp Bravo Entrance is known;
+		AddNavPoint Camp Bravo Entrance;
 		now Back at the Camp is resolved;
 		now Resolution of Back at the Camp is 1; [lied your way in]
 	else:
@@ -152,7 +152,7 @@ to say GuardBeg: [mooch some food from a guard]
 		now Resolution of Back at the Camp is 3; [mooched food]
 	else:
 		say "     The first guard just scoffs at you, but the other guy pulls out a ration bar and throws it to you. 'Here. Now please go away and don't tell anyone about this. We can't have a mob of people begging for food right in front of the camp.'";
-		increase carried of food by 1;
+		ItemGain food by 1 silently;
 		now lastGuardBeg is turns;
 
 to say GuardLeave:
@@ -715,14 +715,10 @@ to say ElaineUniform:
 			say "     The female quartermaster takes one look at you and replies, 'You're kidding, right? I pride myself on having a well-stocked inventory, but the US army just isn't in the habit of making giant versions of any uniform.'";
 
 to UniformHandout:
-	say "[bold type]You gain a camo shirt![roman type][line break]";
-	increase carried of camo shirt by 1;
-	say "[bold type]You gain green camo pants![roman type][line break]";
-	increase carried of green camo pants by 1;
-	say "[bold type]You gain black boxer briefs![roman type][line break]";
-	increase carried of black boxer briefs by 1;
-	say "[bold type]You gain black combat boots![roman type][line break]";
-	increase carried of black combat boots by 1;
+	ItemGain camo shirt by 1;
+	ItemGain green camo pants by 1;
+	ItemGain black boxer briefs by 1;
+	ItemGain black combat boots by 1;
 	now XP of Elaine is 2;
 
 to say CampBravoElaineAdamTalk:

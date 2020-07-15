@@ -341,7 +341,7 @@ to say NermineTalk2:
 		say "     Pulling out the wolfsbane, you set it on the counter. You feel ill just from touching it, but Nermine doesn't seem to have an adverse reaction to its smell. Once she places it in a glass jar you feel a little better, but still suffer from a lingering uneasiness in your stomach. 'Nermine will be preparing the potion while you are to be getting the next thing you are needing.";
 		say "     'There is a shipment of items that were going to be auctioned off. Among them is the silver knife you are wanting. It is looking like this.' She pulls out a published listing from the auction house, pointing out the knife. 'Cure is not needing this specific knife, but knife is special, so should be working better for this. Nermine will be it keeping as her payment, so don't be becoming attached to it,' she adds with a wink. She slips you the listing after circling the lot number in red. She goes on to tell you the location of the warehouse, but cautions you that the Warehouse District was a dangerous part of the city even before the outbreak[if Warehouse District is unknown]. She does provide you with a route she assures you will safely get you to the dockside area[end if].";
 		now carried of wolfsbane is 0;
-		now Warehouse District is known;
+		AddNavPoint Warehouse District;
 		now wrcurseNermine is 5;
 		now Getting the Knife is active;
 	else if wrcurseNermine is 5 and wrcursestatus >= 3 and wrcursestatus < 100 and a random chance of 1 in 3 succeeds:
@@ -518,9 +518,7 @@ to say NermineBrennanTalk:
 	say "     Setting the box on the counter-top with a flourish, Nermine goes on to say, 'This is a very precious item that Nermine herself can guarantee in its functionality.' Undoing a little catch, she opens the box and presents it to you: On a bed of red velvet, a shining golden object rests inside, formed in the characteristic shape of a canine erection. Where the base of a 'normal' dildo would be, it continues on in a fluid curve, finally ending in an elongated oval. This part of it seems to be designed to be slid into a woman's vagina. Stroking along the shimmering shaft's length almost lovingly, the jackaless adds, 'The user of this unique artifact will be able to enjoy [italic type]full[roman type] functionality in all matters like a male. It is quite comfortable to wear, with no limits in the duration - after a while, one can mostly forget it wasn't naturally part of oneself.' Her tone makes you wonder how long Nermine spent as a futanari to experiment. Those comments seem quite specific for anything else to have happened.";
 	WaitLineBreak;
 	say "     Animalistic shape aside, you can't help but think that Brennan would simply love to own Nermine's magic cock. Almost as if she heard you think, the canny female speaks up, 'Of course, with the item being so very rare and a prized personal possession too, Nermine would have to ask for a piece of at least equal worth in trade. The humble storekeeper has something in mind already. She knows of a small group - a cult really - who recently abandoned their previously very secretive manner, in light of the current developments. This provides an opportunity of possibly obtaining the idol they worship. Nermine always was interested in possessing one of those, yet was unable to obtain or even find it. But now, things are clearly different.' With that, she slides a small sheet of folded blue paper over the counter for you to take, then shuts the box once more and stores it away.";
-	LineBreak;
-	say "[bold type]You gain a cult flyer![roman type][line break]";
-	increase carried of cult flyer by 1;
+	ItemGain cult flyer by 1 silently;
 	now Libido of Brennan is 2;
 
 to say RareInfectionMenu:
@@ -572,9 +570,7 @@ to say FemaleSpidertaurTransform:
 			LineBreak;
 			say "     Digging the food out of your pack and handing it over to Nermine, you watch her stash it away behind the counter. Then the jackaless comes up to you and holds out the spindle, allowing you to touch it. Stroking over the rough fibers of black cloth, you let your finger wander to the sharp end, pricking your fingertip on it.";
 			infect "Spidertaur Female";
-			LineBreak;
-			say "[bold type]You lose 1 food![roman type][line break]";
-			decrease carried of food by 1;
+			ItemLoss food by 1;
 		else:
 			say "     Shaking your head, you turn down the sorceress for now. 'A pity. Nermine will keep the item at hand until her dear customer changes their mind,' she tells you, then goes to put the spindle away again.";
 	else:
@@ -727,11 +723,8 @@ to NermineRequestHelp:
 		if carried of peacock feather > 2:
 			say "     'Yes, there they are!' the jackal-woman says as she snatches the large shiny feathers from you. 'Now Nermine can have a pretty new peacock feather necklace to wear!' she adds as she places the glittering feathers in several different positions on her dark neck and glances into a mirror beside the counter as if to see which position she likes best. She notices you watching in amusement and flashes you a soft grin. 'What, not everything is about other customers, sometimes Nermine likes to get pretty things herself too. Still, with her friend being such a good helper,' she says as she reaches out to caress the side of your new muzzle gently. 'So very nice and always so happy to help Nermine out with the shop, maybe [SubjectPro of Player] would like to help her out with her other needs as well?'";
 			say "     Wining, the jackaless runs her hand slowly down your black-furred chest. 'Nermine has one last bit of help to give first though,' the sleek jackal says as she reaches behind the counter and produces another of those familiar-looking jackal totems and hands it to you. 'Just let the totem finish helping become even more attractive, and then maybe Nermine will let her lovely little helper help her out of clothes in back room.' The thought of serving the sultry shopkeeper in a more intimate manner makes your body flush with desire, and you look down at the totem in your hand with anticipation...";
-			LineBreak;
-			say "[bold type]You lose 3 peacock feathers![roman type][line break]";
-			decrease carried of peacock feather by 3;
-			say "[bold type]You gain a jackal totem![roman type][line break]";
-			increase carried of jackal totem by 1;
+			ItemLoss peacock feather by 3;
+			ItemGain jackal totem by 1;
 			say "[bold type]You gain 30 Xp![roman type][line break]";
 			increase XP of Player by 30;
 			stop the action;
@@ -750,9 +743,7 @@ to NermineRequestHelp:
 	else if Nerminehelpstatus is 3:
 		if WineFound is 2:
 			say "     'How wonderful!' Nermine says as you proudly hold out the small vial of dark liquid to her. 'And Nermine's eager visitor got it so nice and fast too! Just the best helper ever!' the jackal-woman exclaims as she reaches over and runs her clawed hand through your fur several times. You find yourself groaning in pleasure under her soft touch, both at the feel of her hand on your fur, but also from the sheer joy of making your lovely jackal mistress so very happy. Before you can examine that thought more closely, Nermine stops petting you and carefully begins to stow the heady wine safely away. 'Nermine has a customer seeking the best party wine ever, who asked her for help. She is sure that with a few drops of this wine in his drink, her customer and his guests will enjoy their best party ever. She just knows he will love being happy drunk Nymph-chasing Satyr,' the jackal-woman says with a grin on her face as she turns back to you, pulling an item out from under the counter as she does so. 'And Nermine has a lovely reward for her wonderful helper as well!' she says happily as she hands you another of those strangely carved jackal totems. 'Just use that to become more like a jackal, and then maybe Nermine and her friend can celebrate helping customers - together in the back room sometime...";
-			LineBreak;
-			say "[bold type]You gain a jackal totem![roman type][line break]";
-			increase carried of jackal totem by 1;
+			ItemGain jackal totem by 1;
 			say "[bold type]You gain 30 Xp![roman type][line break]";
 			increase XP of Player by 20;
 			now Nerminehelpstatus is 4;
@@ -771,11 +762,8 @@ to NermineRequestHelp:
 	else if Nerminehelpstatus is 2:
 		if carried of wyvern goop > 2:
 			say "     'Nermine thanks her visitor for the samples!' the jackaless says with a smile on her muzzle as she takes the goop from you. 'Now Nermine can make several charms to trap one of the beasts for a customer who wants a little pet wyvern. She thinks he will make a handsome mate for the trapped wyvern, as such are things bound to go. Not that her helpful little friend here needs to worry about that,' she says as she reaches over to trace one of her short claws along your cheek in a soft teasing manner. 'Nermine promised to help in return, and she keeps her bargains,' the jackal-woman adds as she reaches underneath the counter again and pulls out another of those polished onyx statues.";
-			LineBreak;
-			say "[bold type]You lose 3 wyvern goop![roman type][line break]";
-			decrease carried of wyvern goop by 3;
-			say "[bold type]You gain a jackal totem![roman type][line break]";
-			increase carried of jackal totem by 1;
+			ItemLoss wyvern goop by 3;
+			ItemGain jackal totem by 1;
 			say "[bold type]You Gain 10 XP![roman type][line break]";
 			increase XP of Player by 10;
 			now Nerminehelpstatus is 6;
@@ -805,9 +793,7 @@ to NermineRequestHelp:
 				say "[bold type](The helping quest requires guy, girl and furry content to be available.)[roman type][line break]";
 			else:
 				say "     'Excellent!' the jackaless says as she claps her hands happily, before reaching underneath the counter. 'Nermine loves to help out her customers!' she says as she brings a small item up from beneath and holds it out to you. Closer inspection reveals the object to be a small black statue of a jackalman with his arms crossed across his chest. Glancing up at Nermine you see the jackal-woman give you a sly wink, then add, 'Nermine thinks this will help her new friend look much better, and get in touch with the power of the jackal. Go on, give it a try!' she says as she hands you the small totem. 'It is no charge for this one. A gift from Nermine to help get started.' The canine shopkeeper says with a grin on her muzzle, as you look down at the little item in your hands with curiosity.";
-				LineBreak;
-				say "[bold type]You gain a jackal totem![roman type][line break]";
-				increase carried of jackal totem by 1;
+				ItemGain jackal totem by 1;
 				now Nerminehelpstatus is 1;
 		else:
 			LineBreak;
@@ -1003,11 +989,8 @@ to say NermineStoreFuck_Jaguar:
 		say "     ([link]Y[as]y[end link]) - Change your mind about sharing Nermine.";
 		say "     ([link]N[as]n[end link]) - Nope, she's yours! But he can watch.";
 		if Player consents:
-			LineBreak;
-			say "[bold type]You gain 1 food![roman type][line break]";
-			increase carried of food by 1;
-			say "[bold type]You gain 1 water bottle![roman type][line break]";
-			increase carried of water bottle by 1;
+			ItemGain food by 1;
+			ItemGain water bottle by 1;
 			say "     Agreeing to take payment for Nermine's services, you let the jaguarman put both items on a small table in the store, then wave him closer.";
 			say "[NermineStorefuck_JaguarSuck]";
 		else:

@@ -353,7 +353,7 @@ Instead of resolving a Entrance to the Lair:
 	say "     Jennifer smiles and nods to you, then says 'Let me tell you a bit about the team. You see, the girls and me were cheerleaders on a way to a game when all the chaos started. The school bus was standing at a red light when suddenly a huge shaggy wolf started clawing open the door. The driver tried to get away in a panic, but in the end crashed the bus. And then the wolf was in and started ripping off her clothes. We couldn't do anything but watch as he mounted her. When he finished inside her, he growled and took another girl, filling us one by one with his seed like a totally insatiable animal.'";
 	say "     'I was so afraid having that huge beast on top of me - but all that changed when he came and filled my womb with his load. I felt the moment his sperm found my egg.' She lowers a hand to her stomach, then lower and strokes her pussy lips. 'From that moment, I knew it was fate that brought a wolf - our team symbol - to us. We were to be the mothers of a new team, one born to play!' She steps over to Septus, running a hand through his warm chest-fur. What a strange new world, with her son standing taller than she is and looking roughly the same age. 'Our handsome boys are born winners. And we need more players...' She fondles the wolfman's balls for a moment, giving an aroused sigh, then turns back to you. 'But don't let it discourage you that you weren't born as one of them. The team is open to anyone who proves he can play like a wolf.'";
 	now HP of Septus is 5;
-	now Wolfman Lair is known;
+	AddNavPoint Wolfman Lair;
 	now Entrance to the Lair is resolved;
 	move player to Wolfman Lair;
 
@@ -611,9 +611,7 @@ to say JenniferFoodTalk:
 to say JenniferSodaRequestTalk:
 	if LastJenniferSoda - turns > 8: [player hasn't gotten soda that day]
 		say "     Giving you a friendly nod and a smile as a reply, Jennifer calls out, 'Guys, could one of you please get me one of the bottles from the load for the next trade?' Several of the muscular wolfmen immediately jump up from whatever they were doing and literally have a race to something behind the furthest set of shelves, playfully shouldering each other aside to be the first to get to their goal. You hear some scrambling, laughter and the scratch of their claws on the concrete floor, followed by the victorious young man with the number [one of]one[or]two[or]three[or]four[or]six[or]eight[or]fifteen[or]sixteen[at random] on his chest re-emerging with a soda bottle in his hand. The wolfman proudly dashes through the warehouse and hands it over to Jennifer, receiving a kiss to his muzzle as a reward. Standing on tiptoe, Jennifer sucks on his floppy canine tongue for a few seconds, then rubs the anthro wolf's chest-fur and tells him to get back to training and make her proud. As he runs off again, his tail wagging hard, Jennifer hands you the soda bottle.";
-		LineBreak;
-		say "[bold type]You have gained a soda bottle![roman type][line break]";
-		increase carried of soda by 1;
+		ItemGain soda by 1;
 		now LastJenniferSoda is turns; [last soda at the current turn]
 	else:
 		say "     As you ask for another bottle of soda, Jennifer lets out a sigh and shakes her head. 'I'm sorry, but these really are mostly for trading with the Mall and I already gave you one only a little while ago. It's not like we don't have a lot of them, but it actually is a pain to get the stuff down from the shelves. The forklift back there is an electric one and seems to be out of power, so people actually have to climb and pass them down one by one.' Sliding her arm around yours and brushing against your side, she adds, 'You could just stay here with us for good, you know. Be one with the team and not worry about going out into the city anymore...'";

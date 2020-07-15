@@ -51,7 +51,7 @@ Instead of resolving a Hidden Kitty:
 	wait for any key;
 	LineBreak;
 	move player to Sven's Place;
-	now Sven's Place is known;
+	AddNavPoint Sven's Place;
 	now battleground is "void";
 	increase score by 5;
 	now Hidden Kitty is resolved;
@@ -170,7 +170,7 @@ instead of conversing the Sven:
 				say "     You pull out a bottle of water and give it to the poor fellow. He tries his best to drink it down slowly, but soon finishes it off. He seems much better having gotten a much-needed drink.";
 				now lastSvendrink is turns;
 				now HP of Sven is 2;
-				decrease carried of water bottle by 1;
+				ItemLoss water bottle by 1;
 				increase score by 5;
 				say "     'I should be okay for a little while now, but please come back and visit again. I do not really want to leave here again.' You start to mention moving him to the bunker, but he fidgets nervously in his seat and shakes his head vigorously. He is clearly not ready for such a trek across the city after his unfortunate first attempt outside.";
 			else:
@@ -190,7 +190,7 @@ instead of conversing the Sven:
 			if Player consents:
 				LineBreak;
 				say "     You pull out a bottle of water and give it to the poor fellow. He is very grateful as he shyly takes it from you. He tries his best to drink it down slowly, but soon finishes it off. He seems much better having gotten a much-needed drink.";
-				decrease carried of water bottle by 1;
+				ItemLoss water bottle by 1;
 				now lastSvendrink is turns;
 				now HP of Sven is 2;
 				increase score by 5;
@@ -207,7 +207,7 @@ instead of conversing the Sven:
 			if Player consents:
 				LineBreak;
 				say "     You pull out a bottle of water and give it to the poor fellow. He is very grateful as he shyly takes it from you. He tries his best to drink it down slowly, but soon finishes it off. He seems much better having gotten a much-needed drink.";
-				decrease carried of water bottle by 1;
+				ItemLoss water bottle by 1;
 				now lastSvendrink is turns;
 				now HP of Sven is 3;
 				increase score by 5;

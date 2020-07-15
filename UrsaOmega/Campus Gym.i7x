@@ -29,7 +29,7 @@ Instead of resolving a Working Out:
 	if Player consents:
 		say "You mark the location of the gym on your map before walking through the entrance into the strange gym.";
 		move player to Campus Gym;
-		now Campus Gym is known;
+		AddNavPoint Campus Gym;
 	else:
 		say "You mark the location on your map - it might be worth checking out later.";
 	connect Campus Gym;

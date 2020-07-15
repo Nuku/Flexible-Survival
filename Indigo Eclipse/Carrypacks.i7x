@@ -43,7 +43,7 @@ instead of resolving a Happy Trails:
 	if Player consents:
 		LineBreak;
 		say "     You carefully pick your way through the broken glass and crouch near the backpack. Grabbing a strap with one hand and lifting the display with the other, you manage to slip it out quietly. Thankfully, the fabric appears to be free of cum stains or the other strange goos that now stain the city. With your new backpack in hand, you retrace your steps and exit the store, pausing for only a moment to exhale in relief before leaving the area.";
-		increase carried of Hiking Backpack by 1;
+		ItemGain Hiking Backpack by 1;
 	else:
 		LineBreak;
 		say "     Since nothing in this city comes without a price, you decide that the reward may not be worth the risk and continue on your way.";

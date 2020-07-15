@@ -437,6 +437,8 @@ Equipment has a number called effectiveness. The effectiveness of equipment is u
 Equipment has a number called dodgebonus. The dodgebonus of equipment is usually 0.	[Rare, usually magic]
 Equipment has a number called damagebonus. The damagebonus of equipment is usually 0.	[Rare, usually magic]
 Equipment has a number called fleebonus. The fleebonus of equipment is usually 0.		[Usually a penalty]
+Equipment has a text called skillcheck bonus. The skillcheck bonus of equipment is usually "".
+Equipment has a number called skillcheck value. The skillcheck value of equipment is usually 0.
 A grab object can be temporary. A grab object is usually temporary.
 A grab object can be fast. A grab object is usually not fast.
 A grab object can be infectious.
@@ -1716,54 +1718,6 @@ The cot is rooted in place. The cot is restful.
 
 Section - Vending Machine
 
-To add (item - a text) to invent of Player:
-	repeat with x running through grab objects:
-		if the printed name of x matches the text item:
-			increase carried of x by 1;
-			break;
-
-To add (item - a text) to the invent of Player:
-	repeat with x running through grab objects:
-		if the printed name of x matches the text item:
-			increase carried of x by 1;
-			break;
-
-To add (item - a text) to the invent of the player:
-	repeat with x running through grab objects:
-		if the printed name of x matches the text item:
-			increase carried of x by 1;
-			break;
-
-To add (item - a text) to invent of the player:
-	repeat with x running through grab objects:
-		if the printed name of x matches the text item:
-			increase carried of x by 1;
-			break;
-
-To remove (item - a text) from invent of Player:
-	repeat with x running through grab objects:
-		if the printed name of x matches the text item:
-			now carried of x is 0;
-			break;
-
-To remove (item - a text) from the invent of Player:
-	repeat with x running through grab objects:
-		if the printed name of x matches the text item:
-			now carried of x is 0;
-			break;
-
-To remove (item - a text) from the invent of the player:
-	repeat with x running through grab objects:
-		if the printed name of x matches the text item:
-			now carried of x is 0;
-			break;
-
-To remove (item - a text) from invent of the player:
-	repeat with x running through grab objects:
-		if the printed name of x matches the text item:
-			now carried of x is 0;
-			break;
-
 To decide which number is numeric/numerical value of (T - indexed text):
 	let S be 1;
 	let L be the number of characters in T;
@@ -1806,7 +1760,7 @@ Instead of attacking the Cola Vending machine:
 	increase dice by bonus;
 	if dice > 15:
 		say "A soda can pops out!";
-		add "soda" to invent of Player;
+		ItemGain soda by 1;
 		increase score by 1;
 		increase dispensed of cola vending machine by 1;
 	else:
@@ -1851,8 +1805,6 @@ name	desc	weight	object	sortname (indexed text)
 "dirty water"	"A bottle of contaminated water. Drinker beware."	1	dirty water
 "food"	"Some food. Nothing fancy. Maybe a sandwich, or a husky girl leg, whatever happens to be handy."	2	food
 "journal"	"A small, leather-clad book. Spending some time [link]writing[as]use journal[end link] in it can help clear your thoughts and recenter your troubled mind. Or if you have something especially important that you want to remember, you could just [link]write down a note[as]write a note[end link] at the back end of it. [if number of filled rows in Table of JournalNotes > 0]In fact, you remember noting down some things in it that must have been important somehow. You can [link]browse through your notes[as]browse notes[end link] if you want to. Alternatively, [link]ripping them all out[as]rip notes[end link] is also possible.[end if][line break]"	2	journal
-"pocketknife"	"Mighty big for a pocket knife, nice and solid too. Could be handy."	1	pocketknife
-"chair"	"A metal folding chair that belongs in a food court. It could serve as a weapon in a pinch!"	10	chair
 "gryphon milk"	"A small bottle filled with fluid taken from one of those gryphons. You are fairly certain drinking it would be a poor idea, but maybe there is a use for it?"	2	gryphon milk
 "distilled milk"	"Some creature's milk boiled down to a concentrated, powdery, form? That can't be dangerous!"	1	distilled milk
 "glob of goo"	"A small bottle of strange, neon colored, goop"	1	glob of goo
@@ -1887,9 +1839,10 @@ soda is a grab object.
 chips is a grab object.
 glob of goo is a grab object. glob of Goo is infectious. The strain of glob of goo is "Goo Girl".
 food is a grab object. The trade of food is "soda".
-pocketknife is a armament. It is a part of the player. It has a weapon "[one of]your large knife[or]your blade[or]your trusty pocket knife[or]flashing steel[at random]". The weapon damage of pocketknife is 5. The weapon type of pocketknife is "Melee". It is not temporary. the objsize of pocketknife is 2.
-understand "knife" as pocketknife.
-chair is a armament. It is a part of the player. It has a weapon "[one of]a folding chair[or]your improvised weapon[or]that move you saw on WWE[or]a metal chair to the eyes[at random]". The weapon damage of chair is 5. The weapon type of chair is "Melee". It is not temporary. the objsize of chair is 4.
+
+[Pocketknife moved to Core Mechanics/Weapons.i7x]
+[Chair moved to Core Mechanics/Weapons.i7x]
+
 understand "seat" as chair.
 gryphon milk is a grab object. Understand "milk" as gryphon milk. Gryphon milk is infectious. The strain of gryphon milk is "Blue Gryphon Herm". The trade of Gryphon Milk is "distilled milk". gryphon milk is milky.
 distilled milk is a grab object. It is not milky.
@@ -2585,12 +2538,6 @@ After resolving a situation:
 	try looking;
 	[follow the ngraphics_blank rule;]
 
-to delete (x - a grab object):
-	decrease the carried of x by 1;
-	if carried of x < 0:
-		now carried of x is 0;
-		say "ERROR: There was no [x] to remove. Please report where this occurred.";
-
 instead of waiting:
 	follow the turnpass rule;
 
@@ -2753,7 +2700,7 @@ To process (x - a grab object):
 		say "You eagerly use the [x]!";
 		let found be 0;
 		let num be 0;
-		delete x;
+		ItemLoss x by 1 silently;
 	else:
 		say "You use the [x].";
 	if usedesc of x is empty:
@@ -2938,7 +2885,7 @@ To process (x - a grab object):
 			say "([humanity of Player]/100).";
 			now Lastjournaluse is turns;
 		follow turnpass rule;
-	else if x is a armament:
+	else if x is an armament:
 		if weapon object of Player is x: [unequip]
 			unwield x;
 		else: [equip]
@@ -3007,7 +2954,7 @@ To process (x - a grab object):
 			if "Expert Medic" is listed in the feats of Player and a random chance of 2 in 10 succeeds:
 				say "You manage to save the medkit with your amazing skills.";
 			else:
-				delete medkit;
+				ItemLoss medkit by 1;
 	else if x is a pepperspray:
 		if inafight is 1:
 			say "[line break][usepepperspray]";
@@ -3030,7 +2977,7 @@ To process (x - a grab object):
 			decrease healed by HP of Player minus maxHP of Player;
 			now HP of Player is maxHP of Player;
 		say "Using your healing booster, you inject the mix into your body, giving a quick boost to your infected body's healing rate. You regain [special-style-1][healed][roman type] HP.";
-		delete healing booster;
+		ItemLoss healing booster by 1;
 	if tan > hunger of player and "Tanuki Salts" is listed in feats of player:
 		say "Dashing a little tanuki salts helped things along. Mmm, divinely tasty.";
 		playerEat 5;
@@ -3301,7 +3248,7 @@ carry out grabbing something (called x):
 		increase num by 1;
 		if q matches the regular expression printed name of x, case insensitively:
 			now found is 1;
-			Add q to invent of Player;
+			ItemGain q by 1;
 			remove entry num from invent of the location of the player;
 			if x is equipment:
 				say "You pick up the [printed name of x] and tuck [if plural of x is true]them[else]it[end if] in your backpack.";
@@ -3337,7 +3284,7 @@ carry out burninating something (called x):
 			if found < 2:
 				say "You're using that right now. Stop using it before you drop it.";
 				continue the action;
-	delete x;
+	ItemLoss x by 1;
 
 
 Understand the command "trashall" as something new.
@@ -3410,7 +3357,7 @@ carry out littering something (called x):
 		if printed name of x in lower case matches the text Name entry in lower case:
 			add Name entry to the invent of the location of the player;
 			break;
-	delete x;
+	ItemLoss x by 1;
 
 Looting is an action applying to nothing.
 
@@ -3426,7 +3373,7 @@ carry out looting:
 	repeat with Q running through invent of the location of the player:
 		increase num by 1;
 		now found is 1;
-		Add q to invent of Player;
+		ItemGain q by 1;
 		say "You pick up the [q] and tuck it in your backpack.";
 	if found is 0:
 		say "You don't see anything around here.";
@@ -3454,12 +3401,12 @@ Check trading:
 
 Carry out trading:
 	say "You offer up [the noun] to [second noun] and they look it over for a moment before nodding and drawing out a [trade of the noun] and handing it to you. A fair trade, right?";
-	Add trade of the noun to invent of Player;
+	ItemGain trade of the noun by 1;
 	if "Haggler" is listed in feats of Player and a random chance of 1 in 3 succeeds:
 		say "You get a second one free with your amazing negotiating skills.";
-		Add trade of the noun to invent of Player;
+		ItemGain trade of the noun by 1;
 	let num be 0;
-	delete noun;
+	ItemLoss noun by 1;
 
 skipcockchange is a truth state that varies. skipcockchange is usually false.
 
@@ -4544,7 +4491,7 @@ to Pet level up:
 		decrease XP of companion of Player by ( level of companion of Player minus 1 ) times 10;
 		if "Good Teacher" is listed in feats of Player:
 			increase XP of companion of Player by ( level of companion of Player minus 1 ) times 4;
-		say "Your [companion of Player] has gained level [level of companion of Player]! Congratulations!";
+		say "[companion of Player] has gained level [level of companion of Player]! Congratulations!";
 		if remainder after dividing level of companion of Player by 3 is 0:
 			increase weapon damage of companion of Player by 1;
 		if remainder after dividing level of companion of Player by 5 is 0:
@@ -5265,7 +5212,7 @@ carry out linkactioning:
 	linkaction noun;
 
 linkcheck is a person that varies.[@Tag:NotSaved]
-The linkaction of a person is usually "Possible Actions: [if number of entries of conversation of linkcheck > 0][link]talk[as]talk [linkcheck][end link], [end if][link]smell[as]smell [linkcheck][end link][if linkcheck is companion of Player], [link]dismiss[as]dismiss[end link][else], [link]fuck[as]fuck [linkcheck][end link][end if][line break]";
+The linkaction of a person is usually "Possible Actions: [if number of entries of conversation of linkcheck > 0][link]talk[as]talk [linkcheck][end link], [end if][link]smell[as]smell [linkcheck][end link][if linkcheck is companion of Player], [link]dismiss[as]dismiss[end link][end if], [link]fuck[as]fuck [linkcheck][end link][line break]";
 
 to linkaction (x - Person):
 	now linkcheck is x;
@@ -5611,7 +5558,7 @@ This is the self examine rule:
 	else if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) is 1: [exactly one child]
 		say "They look as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
 	if the player is not lonely:
-		say "Accompanying you, you have a level [level of companion of Player] [link][companion of Player][as]look [companion of Player][end link]. [initial appearance of companion of Player]";
+		say "Accompanying you is [link][companion of Player][as]look [companion of Player][end link], which is level [level of companion of Player].";
 	now looknow is 0;
 	rule succeeds;
 
@@ -5710,28 +5657,22 @@ to say offspring present use:
 	let RandomChance be a random number from 1 to 15;
 	if RandomChance < 4: [1-3]
 		say "a soda bottle inside!";
-		say "[bold type]You gain 1 soda![roman type][line break]";
-		increase carried of soda by 1;
+		ItemGain soda by 1;
 	else if RandomChance < 8: [4-7]
 		say "a bag of chips inside!";
-		say "[bold type]You gain 1 chips![roman type][line break]";
-		increase carried of chips by 1;
+		ItemGain chips by 1;
 	else if RandomChance < 11: [8-10]
 		say "a water bottle inside!";
-		say "[bold type]You gain 1 water bottle![roman type][line break]";
-		increase carried of water bottle by 1;
+		ItemGain water bottle by 1;
 	else if RandomChance < 14: [11-13]
 		say "a can of food inside!";
-		say "[bold type]You gain 1 food![roman type][line break]";
-		increase carried of food by 1;
+		ItemGain food by 1;
 	else if RandomChance is 14:
 		say "a baseball cap inside!";
-		say "[bold type]You gain 1 baseball cap![roman type][line break]";
-		increase carried of baseball cap by 1;
+		ItemGain baseball cap by 1;
 	else if RandomChance is 15:
 		say "a red herring plushie!";
-		say "[bold type]You gain 1 red herring![roman type][line break]";
-		increase carried of red herring by 1;
+		ItemGain red herring by 1;
 
 This is the location choice rule:
 	choose row current menu selection in the table of starting location;
@@ -6154,34 +6095,6 @@ to setmonster ( x - text ) silence state is (Silence - a number): [puts an infec
 	else if debugactive is 1 and Silence is 0:
 		say "DEBUG: Current [']monster['] set to: [MonsterID] = [Name entry][line break]";
 
-Section x - Debug Commands - Not for release
-
-[Since 'not for release' is in the heading, these commands will not be included in Release versions! great for debugging & testing commands]
-
-Spawnmonster is an action applying to one topic.
-
-understand "spawn [text]" as spawnmonster.
-
-carry out spawnmonster:
-	repeat with X running from 1 to number of filled rows in Table of Random Critters:
-		choose row X from the Table of Random Critters;
-		if Name entry exactly matches the text topic understood, case insensitively:
-			now MonsterID is X;
-			now monsterHP is HP entry;
-			challenge;
-			break;
-
-levelcheat is an action applying to nothing.
-
-understand "givelevel" as levelcheat.
-
-carry out levelcheat:
-	now XP of the player is (10 + (level of Player times 10));
-	if "Fast Learner" is listed in feats of Player:
-		decrease XP of Player by ( level of Player times 2 );
-	level up;
-	decrease score by level of the player times level of the player;
-
 Section Lists of Tables - Not for release
 
 [intends to list stuff for debugging (or any other activity needing a list of what's in the game). output is formatted as CSV to simplify exporting. appears to be working properly.]
@@ -6357,6 +6270,7 @@ Include Store Mechanics by Core Mechanics.
 Include Sleeptimer by Core Mechanics.
 Include Tape Inventory by Core Mechanics.
 Include Text Capture by Eric Eve.
+Include Weapons by Core Mechanics.
 
 [Locations]
 Include Apocalypse Store by Omen.
@@ -6587,7 +6501,6 @@ Include Cannon by Hiccup.
 Include Cat Ninjas by Stripes.
 Include Catgirl by Wahn.
 Include Caveman by TheRecipe.
-Include Centaur by Hellerhound.
 Include Centaur Mare by Stripes.
 Include Centaur Stallion by Stripes.
 Include Cerberus by Stripes.
@@ -6688,6 +6601,7 @@ Include Homo Sapiens by Wahn.
 Include Horny Doctor by Stripes.
 Include Horse-Hung Nerd by Wahn.
 Include Horseman by Sarokcat n Verath.
+Include Horsemazon by Kirov.
 Include Hulking Cheerleader by Wahn.
 Include Human Infections by Wahn.
 Include Hydra Beast by Stripes.
@@ -6697,6 +6611,8 @@ Include Imp by Wahn.
 Include Impala by UrsaOmega.
 Include Incubus by Stripes.
 Include Inflatable Vulpine by Stripes.
+Include Jackal Alpha by Gherod.
+Include Jackal Femboy by Gherod.
 Include Jackal Guard by Xenophiliac.
 Include Jackalboy by Sarokcat.
 Include Jackalman by Sarokcat.
@@ -6738,6 +6654,7 @@ Include MothGirl by Guest Writers.
 Include Mpreg Platypus by Sapphire.
 Include Mul by Wahn.
 Include Mushroom Men by AGentlemanCalledB.
+Include Mutant Centaur by Hellerhound.
 Include Mutated Islanders by Kernog.
 Include Naga by Nuku Valente.
 Include Naiad by Wahn.
@@ -7467,6 +7384,10 @@ To startcreatureban: [bans creatures, as requested]
 	repeat with n running through situations:
 		let bad be 0;
 		repeat with q running through all banned flags:
+			if n is listed in badspots of q:
+				say "[n] removed due to [q].";
+				now bad is 1;
+		repeat with q running through all banned tags:
 			if n is listed in badspots of q:
 				say "[n] removed due to [q].";
 				now bad is 1;
@@ -8666,7 +8587,8 @@ to eyecolorsetting: [ Green, Blue, Gray, Brown, Hazel, Amber, Red]
 		now menuexit is 1;
 
 to playernaming:
-	say "[bold type]Please enter new name: [roman type][line break]";
+	say "Note: You can always change your name at a later point with the 'rename xxx' command.";
+	say "[bold type]Please enter your new name: [roman type][line break]";
 	get typed command as playerinput;
 	now name of Player is playerinput;
 
@@ -8935,45 +8857,45 @@ to say gsopt_start:
 	say "Want more details on the game and updates? ----- [bold type]https://blog.flexiblesurvival.com/[roman type]  ------[line break][line break]";
 	WaitLineBreak;
 	if scenario is "Bunker":
-		increase carried of black t-shirt by 1;
+		ItemGain black t-shirt by 1 silently;
 		now black t-shirt is equipped;
-		increase carried of dark-blue jeans by 1;
+		ItemGain dark-blue jeans by 1 silently;
 		now dark-blue jeans are equipped;
-		increase carried of white briefs by 1;
+		ItemGain white briefs by 1 silently;
 		now white briefs is equipped;
-		increase carried of brown loafers by 1;
+		ItemGain brown loafers by 1 silently;
 		now brown loafers is equipped;
 	else if scenario is "Caught Outside":
-		increase carried of white t-shirt by 1;
+		ItemGain white t-shirt by 1 silently;
 		now white t-shirt is equipped;
-		increase carried of black jeans by 1;
+		ItemGain black jeans by 1 silently;
 		now black jeans are equipped;
 	else if scenario is "Rescuer Stranded":
-		increase carried of camo shirt by 1;
+		ItemGain camo shirt by 1 silently;
 		now camo shirt is equipped;
-		increase carried of green camo pants by 1;
+		ItemGain green camo pants by 1 silently;
 		now green camo pants are equipped;
-		increase carried of black boxer briefs by 1;
+		ItemGain black boxer briefs by 1 silently;
 		now black boxer briefs are equipped;
-		increase carried of black combat boots by 1;
+		ItemGain black combat boots by 1 silently;
 		now black combat boots is equipped;
 	else if scenario is "Forgotten":
-		increase carried of blue sleeveless shirt by 1;
+		ItemGain blue sleeveless shirt by 1 silently;
 		now blue sleeveless shirt is equipped;
-		increase carried of ripped black jeans by 1;
+		ItemGain ripped black jeans by 1 silently;
 		now ripped black jeans are equipped;
-		increase carried of white briefs by 1;
+		ItemGain white briefs by 1 silently;
 		now white briefs is equipped;
-		increase carried of brown loafers by 1;
+		ItemGain brown loafers by 1 silently;
 		now brown loafers is equipped;
 	else if scenario is "Researcher":
-		increase carried of white t-shirt by 1;
+		ItemGain white t-shirt by 1 silently;
 		now white t-shirt is equipped;
-		increase carried of dark-blue jeans by 1;
+		ItemGain dark-blue jeans by 1 silently;
 		now dark-blue jeans are equipped;
-		increase carried of black boxer briefs by 1;
+		ItemGain black boxer briefs by 1 silently;
 		now black boxer briefs are equipped;
-		increase carried of black combat boots by 1;
+		ItemGain black combat boots by 1 silently;
 		now black combat boots is equipped;
 	if scenario is not "Bunker":
 		if scenario is "Caught Outside":
@@ -9120,45 +9042,45 @@ to say silent_start:
 	say "	Just a moment. There are a few more things to prepare...";
 	WaitLineBreak;
 	if scenario is "Bunker":
-		increase carried of black t-shirt by 1;
+		ItemGain black t-shirt by 1 silently;
 		now black t-shirt is equipped;
-		increase carried of dark-blue jeans by 1;
+		ItemGain dark-blue jeans by 1 silently;
 		now dark-blue jeans are equipped;
-		increase carried of white briefs by 1;
+		ItemGain white briefs by 1 silently;
 		now white briefs is equipped;
-		increase carried of brown loafers by 1;
+		ItemGain brown loafers by 1 silently;
 		now brown loafers is equipped;
 	else if scenario is "Caught Outside":
-		increase carried of white t-shirt by 1;
+		ItemGain white t-shirt by 1 silently;
 		now white t-shirt is equipped;
-		increase carried of black jeans by 1;
+		ItemGain black jeans by 1 silently;
 		now black jeans are equipped;
 	else if scenario is "Rescuer Stranded":
-		increase carried of camo shirt by 1;
+		ItemGain camo shirt by 1 silently;
 		now camo shirt is equipped;
-		increase carried of green camo pants by 1;
+		ItemGain green camo pants by 1 silently;
 		now green camo pants are equipped;
-		increase carried of black boxer briefs by 1;
+		ItemGain black boxer briefs by 1 silently;
 		now black boxer briefs are equipped;
-		increase carried of black combat boots by 1;
+		ItemGain black combat boots by 1 silently;
 		now black combat boots is equipped;
 	else if scenario is "Forgotten":
-		increase carried of blue sleeveless shirt by 1;
+		ItemGain blue sleeveless shirt by 1 silently;
 		now blue sleeveless shirt is equipped;
-		increase carried of ripped black jeans by 1;
+		ItemGain ripped black jeans by 1 silently;
 		now ripped black jeans are equipped;
-		increase carried of white briefs by 1;
+		ItemGain white briefs by 1 silently;
 		now white briefs is equipped;
-		increase carried of brown loafers by 1;
+		ItemGain brown loafers by 1 silently;
 		now brown loafers is equipped;
 	else if scenario is "Researcher":
-		increase carried of white t-shirt by 1;
+		ItemGain white t-shirt by 1 silently;
 		now white t-shirt is equipped;
-		increase carried of dark-blue jeans by 1;
+		ItemGain dark-blue jeans by 1 silently;
 		now dark-blue jeans are equipped;
-		increase carried of black boxer briefs by 1;
+		ItemGain black boxer briefs by 1 silently;
 		now black boxer briefs are equipped;
-		increase carried of black combat boots by 1;
+		ItemGain black combat boots by 1 silently;
 		now black combat boots is equipped;
 	if scenario is not "Bunker":
 		if scenario is "Caught Outside":
@@ -9192,7 +9114,7 @@ to say silent_start:
 	if gsbm is true: [Blind mode alteration]
 		increase score by 100;
 		now blindmode is true;
-	now Zephyr Lobby is known;
+	AddNavPoint Zephyr Lobby;
 	WaitLineBreak;
 
 to say set_invcolumns:

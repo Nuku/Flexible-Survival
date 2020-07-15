@@ -91,7 +91,7 @@ to say losetodobie1:		[low-lust player loss]
 					say "     She gives you some quick directions to the [bold type]Police Station Twelve[roman type] and tells you to stop by when you get a chance.";
 					now dobielibido is -100;
 					now fightoutcome is 19;
-					now Police Station Twelve is known;
+					AddNavPoint Police Station Twelve;
 					move Alexandra to Police Station Twelve;
 					now HP of Alexandra is 50;
 					now area entry is "Nowhere";
@@ -114,7 +114,7 @@ to say losetodobie1:		[low-lust player loss]
 				say "     She pours some water from a thermos into the lid and passes it to you. 'Don't worry, it's safe,' she says, drinking down the rest. 'Look, you're the first stable person I've seen in days. You try to keep it together, please. When this is done, I want to know that I've gotten at least one person out of this mess. I'm holed up in what's left of my station. You should come by sometime. I'd really appreciate the company.'";
 				say "     She gives you some quick directions to the [bold type]Police Station[roman type] and tells you to stop by when you get a chance.";
 				now dobielibido is -100;
-				now Police Station Twelve is known;
+				AddNavPoint Police Station Twelve;
 				now HP of Alexandra is 50;
 				now area entry is "Nowhere";
 				increase score by 20;
@@ -303,9 +303,9 @@ to say weaponconf:
 			else:							[lost the fight]
 				say "She takes your whip and sword away, making sure to grab them using an evidence bag. 'I can't let a half-crazed fool like you run around with something like this. You cannot be trusted with something this dangerous and I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster!'";
 			unwield dirty whip silently;
-			delete dirty whip;
+			ItemLoss dirty whip by 1;
 			unwield infected sword silently;
-			delete infected sword;
+			ItemLoss infected sword by 1;
 		else if dirty whip is owned:
 			if dobielibido >= 100 and inasituation is false:
 				say "She takes your whip, making sure to use an evidence bag to get it. 'I appreciate your cooperation in this matter,' she says, giving you a final kick. 'Don't get in my way again!'";
@@ -318,7 +318,7 @@ to say weaponconf:
 			else:							[lost the fight]
 				say "She takes your whip away, making sure to grab it using an evidence bag. 'I can't let a half-crazed fool like you run around with something like this. You cannot be trusted with something this dangerous and I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster!'";
 			unwield dirty whip silently;
-			delete dirty whip;
+			ItemLoss dirty whip by 1;
 		else if infected sword is owned:
 			if dobielibido >= 100 and inasituation is false:
 				say "She takes your sword, making sure to use an evidence bag to get them. 'I appreciate your cooperation in this matter,' she says, giving you a final kick. 'Don't get in my way again!'";
@@ -331,7 +331,7 @@ to say weaponconf:
 			else:							[lost the fight]
 				say "She takes your sword away, making sure to grab it using an evidence bag. 'I can't let a half-crazed fool like you run around with something like this. You cannot be trusted with something this dangerous and I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster!'";
 			unwield infected sword silently;
-			delete infected sword;
+			ItemLoss infected sword by 1;
 
 to say beattheDoberman:
 	project the figure of Alexandra_naked_frown_icon;

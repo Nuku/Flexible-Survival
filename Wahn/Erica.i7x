@@ -181,7 +181,7 @@ to say JoelSaved:
 	say "     'I hereby declare you husband and wife,' Hera says in a regal tone, then watches with a smile as Rebecca pulls Joel with her towards a side door, an eager gleam in her eyes. Calling after the newlyweds, 'May Aphrodite bless you,' the goddess then turns to you. 'You have done your task, mortal. Here is the reward your friend needs from you. Plucking a single pomegranate seed out of the fruit that is one of her divine symbols, Hera throws it towards you, making you jump forward to catch it from the air. It is tiny, but lies heavily in your hand, almost thrumming with the power that it holds. Bowing deeply before the goddess, you leave, arriving back at the museum foyer in short order.";
 	move player to Museum Foyer;
 	now Dexterity of Erica is 4;
-	increase carried of pomegranate seed by 1;
+	ItemGain pomegranate seed by 1;
 
 Table of Game Objects (continued)
 name	desc	weight	object

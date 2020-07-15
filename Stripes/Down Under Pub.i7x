@@ -53,7 +53,7 @@ Instead of resolving a Aussie Pub:
 			increase pubvisit by 1;
 			increase HP of Gillian by 1;
 			now lastpubvisit is turns;
-			now Down Under Pub is known;
+			AddNavPoint Down Under Pub;
 			LineBreak;
 			now Resolution of Aussie Pub is 1; [Entered Pub]
 			now Aussie Pub is resolved;
@@ -160,7 +160,7 @@ to say downunderpubvisit:
 		WaitLineBreak;
 		say "     As you're getting ready to leave, the barmaid comes up to you again. She gives your ass a firm squeeze and kisses you lustfully. 'Mmm... I've been keeping my eye on you, hot stuff. How about you drop by and see me some time after hours? I'm in the flat upstairs. Oh, and the name's Gillian,' she adds as she's turning to go, giving her thick tail and meaty rump an enticing sway.";
 		increase HP of Gillian by 1;
-		now Gillian's Flat is known;
+		AddNavPoint Gillian's Flat;
 
 
 Section 3 - Various sex scenes

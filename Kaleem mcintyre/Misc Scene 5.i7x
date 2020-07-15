@@ -227,19 +227,19 @@ Instead of resolving a Campus Rooftop:
 to say special gift:
 	let T be a random number between 1 and 7;
 	if T is 1:
-		increase carried of food by 1;
+		ItemGain food by 1;
 	if T is 2:
-		increase carried of water bottle by 1;
+		ItemGain water bottle by 1;
 	if T is 3:
-		increase carried of chocolate milk by 1;
+		ItemGain chocolate milk by 1;
 	if T is 4:
-		increase carried of testosterone pill by 1;
+		ItemGain testosterone pill by 1;
 	if T is 5:
-		increase carried of birth control pill by 1;
+		ItemGain birth control pill by 1;
 	if T is 6:
-		increase carried of wolf cum by 1;
+		ItemGain wolf cum by 1;
 	if T is 7:
-		increase carried of healing booster by 1;
+		ItemGain healing booster by 1;
 
 
 Section 10 - Dog and Pony Show

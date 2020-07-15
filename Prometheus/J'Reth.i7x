@@ -68,21 +68,28 @@ object	name
 J'Reth	"J'Reth"
 
 J'Reth is a man.
-[Physical details as of game start]
 ScaleValue of J'Reth is 3. [human sized]
-SleepRhythm of J'Reth is 0. [0 = awake at all times, 1 = awake in the day, 2 = awake at night]
-Cock Count of J'Reth is 1. [cock]
-Cock Length of J'Reth is 11. [cock length]
-Ball Size of J'Reth is 5. [ball size]
-Ball Count of J'Reth is 2. [no balls]
-Cunt Count of J'Reth is 0. [no pussy]
-Cunt Depth of J'Reth is 0. []
-Cunt Tightness of J'Reth is 0. []
-Nipple Count of J'Reth is 2. [2 nipples]
-Breast Size of J'Reth is 0. [flat]
+Body Weight of J'Reth is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of J'Reth is 4. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of J'Reth is 4. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of J'Reth is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of J'Reth is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of J'Reth is 12. [length in inches]
+Breast Size of J'Reth is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of J'Reth is 0. [count of nipples]
+Asshole Depth of J'Reth is 8. [inches deep for anal fucking]
+Asshole Tightness of J'Reth is 1. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of J'Reth is 1. [number of cocks]
+Cock Girth of J'Reth is 2. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of J'Reth is 11. [length in inches]
+Ball Count of J'Reth is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of J'Reth is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of J'Reth is 0. [number of cunts]
+Cunt Depth of J'Reth is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of J'Reth is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of J'Reth is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of J'Reth is false. [can not take oversized members without pain]
-Sterile of J'Reth is true.
 PlayerMet of J'Reth is false.
 PlayerRomanced of J'Reth is false.
 PlayerFriended of J'Reth is false.
@@ -91,11 +98,14 @@ PlayerFucked of J'Reth is false.
 OralVirgin of J'Reth is true.
 Virgin of J'Reth is true.
 AnalVirgin of J'Reth is true.
+PenileVirgin of J'Reth is true.
 SexuallyExperienced of J'Reth is false.
-MainInfection of J'Reth is "".
+TwistedCapacity of J'Reth is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of J'Reth is true. [steriles can't knock people up]
+MainInfection of J'Reth is "Draco-Mantis".
 The description of J'Reth is "[J'RethDesc]".
 The conversation of J'Reth is { "Mantis Dragon sounds." }.
-The scent of J'Reth is "     J'Reth smells of Mantis-Dragons and fairies in the woods.".
+The scent of J'Reth is "     J'Reth smells of Mantis-Dragons and fairies in the woods."
 
 to say J'RethDesc:
 	if debugactive is 1:
@@ -321,6 +331,15 @@ to say J'RethTalk7: [Use Estrogen Pill]
 		WaitLineBreak;
 		say "     As J'Reth's body ceases to shift and shudder, she collapses forward, the transition having exhausted her once again, but this time you are prepared and manage to catch her before she hits the floor. Finding her surprisingly light, you lie her on her bed again, earning a small, grateful smile. 'Thanks. That might have hurt. I know I said it last time, but maybe next time I won't try to kiss the concrete,' she mutters as she recovers from the wave of fatigue with the aid of the nanites. She looks over her body as excitedly as last time she was gendershifted, her smile widening and eyes sparkling with delight. 'I look so pretty, and there doesn't appear to have been any unintentional side effects!' she exclaims, running her fingers across her scales and chitin, feeling every dip and change more easily than your eyes seem to manage. 'Thank you. Though being female may take some getting used to.' You decide to leave her for the moment as she returns to being entirely engrossed by her changed form. Maybe you can return later.";
 	now thirst of J'Reth is 3;
+	now Cock Count of J'Reth is 0;
+	now Cock Girth of J'Reth is 0;
+	now Cock Length of J'Reth is 0;
+	now Ball Count of J'Reth is 0;
+	now Ball Size of J'Reth is 0;
+	now Cunt Count of J'Reth is 1;
+	now Cunt Depth of J'Reth is 11;
+	now Cunt Tightness of J'Reth is 1;
+	now Clit Size of J'Reth is 2;
 	SetFemalePronouns for J'Reth;
 
 to say J'RethTalk8: [Use Glob of Goo]
@@ -389,6 +408,15 @@ to say J'RethTalk8: [Use Glob of Goo]
 		clear the screen and hyperlink list;
 		say "     Complying, you watch the chitin harden again and return to the same shade of green as before. 'Thanks. I'm glad that we planned ahead and that that didn't change me back into being male.' You decide to leave her for the moment as she returns to being entirely engrossed by her changed form. Maybe you can return later.";
 	now thirst of J'Reth is 3;
+	now Cock Count of J'Reth is 0;
+	now Cock Girth of J'Reth is 0;
+	now Cock Length of J'Reth is 0;
+	now Ball Count of J'Reth is 0;
+	now Ball Size of J'Reth is 0;
+	now Cunt Count of J'Reth is 1;
+	now Cunt Depth of J'Reth is 11;
+	now Cunt Tightness of J'Reth is 1;
+	now Clit Size of J'Reth is 2;
 	SetFemalePronouns for J'Reth;
 
 to say J'RethTalk9: [Use Testosterone Pill]
@@ -403,6 +431,15 @@ to say J'RethTalk9: [Use Testosterone Pill]
 		WaitLineBreak;
 		say "     As J'Reth's body ceases to shift and shudder, he collapses forward, the transition having exhausted him once again, but this time you are prepared and manage to catch him before he hits the floor. Finding him surprisingly light, you lie him on his bed again, earning a small, grateful smile. 'Thanks. That might have hurt. I know I said it last time, but maybe next time I won't try to kiss the concrete,' he mutters as he recovers from the wave of fatigue with the aid of the nanites. He looks over his body as excitedly as last time he was gendershifted, his smile widening and eyes sparkling with delight. 'I look so dashing, and there doesn't appear to have been any unintentional side effects!' he exclaims, running his fingers across his scales and chitin, feeling every dip and change more easily than your eyes seem to manage. 'Thank you. I doubt that being male again will be too disconcerting, we'll wait and see.' You decide to leave him for the moment as he returns to being entirely engrossed by his changed form. Maybe you can return later.";
 	now thirst of J'Reth is 1;
+	now Cock Count of J'Reth is 1;
+	now Cock Girth of J'Reth is 2;
+	now Cock Length of J'Reth is 11;
+	now Ball Count of J'Reth is 2;
+	now Ball Size of J'Reth is 3;
+	now Cunt Count of J'Reth is 0;
+	now Cunt Depth of J'Reth is 0;
+	now Cunt Tightness of J'Reth is 0;
+	now Clit Size of J'Reth is 0;
 	SetMalePronouns for J'Reth;
 
 to say J'RethTalk10: [Use Fennec Semen]
@@ -466,6 +503,15 @@ to say J'RethTalk10: [Use Fennec Semen]
 		clear the screen and hyperlink list;
 		say "     Complying, you watch the feenec ears recede until his head is a smooth as before. 'Thanks. I'm glad that we planned ahead and that I was able to deal with the side effects.' You decide to leave him for the moment as he returns to being entirely engrossed by his changed form. Maybe you can return later.";
 	now thirst of J'Reth is 1;
+	now Cock Count of J'Reth is 1;
+	now Cock Girth of J'Reth is 2;
+	now Cock Length of J'Reth is 11;
+	now Ball Count of J'Reth is 2;
+	now Ball Size of J'Reth is 3;
+	now Cunt Count of J'Reth is 0;
+	now Cunt Depth of J'Reth is 0;
+	now Cunt Tightness of J'Reth is 0;
+	now Clit Size of J'Reth is 0;
 	SetMalePronouns for J'Reth;
 
 to say J'RethTalk11: [Use Estosterogen Pill]
@@ -485,6 +531,15 @@ to say J'RethTalk11: [Use Estosterogen Pill]
 		WaitLineBreak;
 		say "     As J'Reth's body ceases to shift and shudder, they collapses forward, the transition having exhausted them once again, but this time you are prepared and manage to catch them before they hit the floor. Finding them surprisingly light, you lie them on their bed again, earning a small, grateful smile. 'Thanks. That might have hurt. I know I said it last time, but maybe next time I won't try to kiss the concrete,' they mutter as they recover from the wave of fatigue with the aid of the nanites. They look over their body as excitedly as last time they were gendershifted, their smile widening and eyes sparkling with delight. 'I look so attractive, and there doesn't appear to have been any unintentional side effects!' they exclaim, running their fingers across their scales and chitin, feeling every dip and change more easily than your eyes seem to manage. 'Thank you. Though being a herm may take some getting used to.' You decide to leave them for the moment as they return to being entirely engrossed by their changed form. Maybe you can return later.";
 	now thirst of J'Reth is 2;
+	now Cock Count of J'Reth is 1;
+	now Cock Girth of J'Reth is 2;
+	now Cock Length of J'Reth is 11;
+	now Ball Count of J'Reth is 2;
+	now Ball Size of J'Reth is 3;
+	now Cunt Count of J'Reth is 1;
+	now Cunt Depth of J'Reth is 11;
+	now Cunt Tightness of J'Reth is 1;
+	now Clit Size of J'Reth is 2;
 	SetMalePronouns for J'Reth;
 
 to say J'RethTalk12: [Use Gryphon Milk]
@@ -553,6 +608,15 @@ to say J'RethTalk12: [Use Gryphon Milk]
 		clear the screen and hyperlink list;
 		say "     Complying, you watch their wings become thin and membranous again and their back return to being smooth and chitinous. 'Thanks. I'm glad that we planned ahead and that that didn't change me back into being male.' You decide to leave them for the moment as they return to being entirely engrossed by their changed form. Maybe you can return later.";
 	now thirst of J'Reth is 2;
+	now Cock Count of J'Reth is 1;
+	now Cock Girth of J'Reth is 2;
+	now Cock Length of J'Reth is 11;
+	now Ball Count of J'Reth is 2;
+	now Ball Size of J'Reth is 3;
+	now Cunt Count of J'Reth is 1;
+	now Cunt Depth of J'Reth is 11;
+	now Cunt Tightness of J'Reth is 1;
+	now Clit Size of J'Reth is 2;
 	SetMalePronouns for J'Reth;
 
 [to say J'RethTalk13: [Convince J'Reth to use Transformatives]
@@ -947,21 +1011,21 @@ to Soup&SexualGratificationEvent:
 		say "     Embarrassedly apologizing for intruding on his private time, you scrabble in your backpack for the tin of tomato soup and place it on the ground before hastily opening the door again You hear him quietly say thank you and despite seeming unable to meet your eyes, he still slowly strokes himself. As you shuffle out the small room, he calls after you, 'I'm sorry that I seem to have scared you away. I thought that anyone coming in would at least knock. Please meet me here again when you have the time. I promise I'll be more presentable next time.' Giving little more than a nod, you close the door behind you and weave your way through the beds and sleeping bodies again, returning to the Food Court with a visibly red face. That could have gone better.";
 		now resolution of Soup & Sexual Gratification is 3; [Just left tin on floor]
 	now Soup & Sexual Gratification is resolved;
-	decrease carried of food by 1;
+	ItemLoss food by 1;
 	now hp of J'Reth is 1;
 
 Table of GameEventIDs (continued)
 Object	Name
-A Reciprocal Thanks	"A Reciprocal Thanks"
+Reciprocal Thanks	"Reciprocal Thanks"
 
-A Reciprocal Thanks is a situation.
-The level of A Reciprocal Thanks is 0.
-The sarea of A Reciprocal Thanks is "Nowhere".
+Reciprocal Thanks is a situation.
+The level of Reciprocal Thanks is 0.
+The sarea of Reciprocal Thanks is "Nowhere".
 
-after going to Mall Foodcourt while (A Reciprocal Thanks is not resolved and Soup & Sexual Gratification is resolved and hp of J'Reth is 1 and a random chance of 1 in 3 succeeds):
+after going to Mall Foodcourt while (Reciprocal Thanks is not resolved and Soup & Sexual Gratification is resolved and hp of J'Reth is 1 and a random chance of 1 in 3 succeeds):
 	AReciprocalThanksEvent;
 
-Instead of resolving A Reciprocal Thanks:
+Instead of resolving Reciprocal Thanks:
 	AReciprocalThanksEvent;
 
 to AReciprocalThanksEvent:
@@ -1025,13 +1089,13 @@ to AReciprocalThanksEvent:
 			say "     As you climax, the sound of frantic slapping increases until you hear liquid splatter onto the floor with surprising force and a relieved sigh from your partner. By the time your shuddering subsides, your muscles feel slack, and an overwhelming feeling of exhaustion envelops you like a warm, soft blanket. J'Reth gives you a moment to rest, equally fatigued from his ministrations and orgasm, before slowly slithering his tongue from your spit-soaked anus. As the tip flicks out and back into his mouth, you roll over and give him a quick, intense kiss, tasting yourself on his breath. Gazing into his eyes, you find him staring back at you with a smoldering expression, saliva smeared around his jaw. You gently stroke the top of J'Reth's head, still recovering from your climax and still wanting to feel him against you. J'reth seems equally sated, a few errant beads of cum still clinging to the tip of his cock as it shrinks back into his crotch.";
 			WaitLineBreak;
 			say "     'That was definitely an experience worth repeating, wouldn't you agree?' the draco-mantis teases, circling his lips with his tongue before giving you a wink. 'Was it to your liking too?' Considering the intensity of the orgasm he gave you, you have to agree, nodding your head at him before slumping back to lie on the bed, staring at the ceiling. 'If you're going to fall asleep, at least scooch over so that I can fit beside you. I don't want to miss my chance at some post-coital cuddling.' You shuffle over and feel the draco-mantis recline beside you and embrace you. 'Mmmmm. Cozy. Just a warning though. If you do nod off, I have an errand that I've been asked to do, so I may not be around when you wake up. Don't hesitate to drop by again in future though. I swear that we'll be able to have a proper conversation next time. Only if you want to though. No pressure.' The two of you lie there until you fall asleep, J'Reth's firm body intimately curved around your own. You wake again to find him pulling his clothes back on and decide that you should probably be leaving too. When the both of you are ready, you leave the toy shop together before reluctantly parting to go about the rest of your day.";
-		now resolution of A Reciprocal Thanks is 1; [Received oral pleasurings from J'Reth]
+		now resolution of Reciprocal Thanks is 1; [Received oral pleasurings from J'Reth]
 	else:
 		LineBreak;
 		say "     Deciding that you would rather just sit and appreciate the amount of effort that must have gone into collecting so many posters, figurines, and other memorabilia, you tell J'Reth that for now you would prefer to just look around at his collection. 'I can understand that,' he laughs. 'It is quite considerable, and the size of the room makes it look all the more impressive. I realize that I'm a bit geeky, but I like what I like. Tabletop figures and scenery, posters from movies I enjoyed, collectibles from video games, and somewhere, I think that I even have some genuine movie props that my friends got me for my birthday a few years ago.' He falls silent for a few minutes, before continuing a little more reserved. 'I haven't seen them since the city fell apart. I just hope that they're alright and weren't one of the people who just dissolved. The sight of that was horrible.' He shudders, and you give him a quick reassuring hug.";
 		say "     J'Reth leans against you and sighs, 'Thank you. If I can get through this, then so can they. There are good people out there as well as the ravening hordes,' he jokes, waving what looks like an orc figurine in his hand. You snort before agreeing. His collection really suits him. Wanting to return the subject to his hobby, the draco-mantis begins to show you some of the posters that he doesn't have up on the wall, instead having them rolled up in tubes. You enjoy this for about half an hour before J'Reth reluctantly comes to a stop. 'I have some errands that I have been asked to do, so I'm sorry that I'm going to have to go. I've really enjoyed being able to show off to you though, so feel free to come and see me again. Who knows, I may be able to convince you to play one of the games with me.' You decide that you should probably be leaving too, exiting the toy shop together before parting to go about the rest of your day.";
-		now resolution of A Reciprocal Thanks is 2; [Did not receive oral pleasurings]
-	now A Reciprocal Thanks is resolved;
+		now resolution of Reciprocal Thanks is 2; [Did not receive oral pleasurings]
+	now Reciprocal Thanks is resolved;
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -1041,7 +1105,7 @@ Invitation to Storeroom is a situation.
 The level of Invitation to Storeroom is 0.
 The sarea of Invitation to Storeroom is "Nowhere".
 
-after going to Mall Foodcourt while (A Reciprocal Thanks is resolved and Invitation to Storeroom is not resolved and hp of J'Reth is 1 and a random chance of 1 in 3 succeeds):
+after going to Mall Foodcourt while (Reciprocal Thanks is resolved and Invitation to Storeroom is not resolved and hp of J'Reth is 1 and a random chance of 1 in 3 succeeds):
 	InvitationtoStoreroomEvent;
 
 Instead of resolving Invitation to Storeroom:

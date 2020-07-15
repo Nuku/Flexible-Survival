@@ -60,6 +60,7 @@ to say OrcVictorious:
 				say "[MulAnalRide]";
 			else:
 				say "[MulFuck2]";
+			move Player to Slave Cell 2;
 		else if OrcSpecialFightNumber is 2:
 			say "     Feeling faint and with stars dancing in front of your eyes, you can only uncoordinately flail about as the big orc grabs you by the throat and lifts you off your feet. The last thing you see of this fight is his brutish face, combat-lust flaring in its yellow eyes, then the warrior gives you a resounding headbutt that sends you into unconsciousness.";
 			LineBreak;
@@ -205,15 +206,11 @@ to say BeatenOrcSexMenu:
 
 to say BeatenOrcSex0:
 	say "     With a smile on your face, you lean over the groaning orc and untie the strands of his loincloth. You have to nudge and lift his legs a bit to slide the back part of the thin material out from under him, but soon you hold up your prize, standing over the fully naked brute now. Packing it away with your other equipment, you leave the orc behind and walk off, internally chuckling about the time when he'll wake up again and find himself exposed and out on the streets.";
-	LineBreak;
-	say "     You gain an orc loincloth!";
-	increase carried of orc loincloth by 1;
+	ItemGain orc loincloth by 1;
 
 to say BeatenOrcSex1:
 	say "     After pulling an empty bottle out of your pack and setting it down where you can quickly reach it, you kneel down beside the downed orc and take hold of his meaty shaft. Fingers around the thick member, you start jerking on it, causing the big brute to switch from pained groans to lust-filled moans in no time at all. Soon, you've got his manhood fully hard and standing straight up like a pole, pulsing slightly from the beat of his heart as it sends blood to this priority. Setting down your other hand on the full, weighty globes of his balls, you stroke and fondle your helpless orc a bit, grinning as you push him closer and closer to orgasm. When he finally can't hold back any more, you quickly snatch up your prepared bottle and hold it to his cock, successfully catching one, two, three big spurts of his milky white cum before the bottle is full. The rest of the muscled brute's load just arcs high into the air as you pull your container out of the way, to splatter messily all over the orc's broad chest. Putting the cap on your bottle and stashing it away, you give the orc's balls a last quick fondle, then walk away and leave the panting brute to pick himself up later.";
-	LineBreak;
-	say "     You gain a bottle of orc cum!";
-	increase carried of orc cum by 1;
+	ItemGain orc cum by 1;
 
 to say BeatenOrcSex2:
 	say "     Kneeling down beside the downed orc, you take hold of his meaty shaft. Fingers around the thick member, you start jerking on it, causing the big brute to switch from pained groans to lust-filled moans in no time at all. Soon, you've got his manhood fully hard and standing straight up like a pole, pulsing slightly from the beat of his heart as it sends blood to this priority organ. Setting down your other hand on the full, weighty globes of his balls, you stroke and fondle your helpless orc a bit, grinning as he gives aroused grunts at your touch. Leaning forward, you lick up the glistening bead of precum forming at the tip of his hard cock, and finding it amazingly tasty, you immediately slide your lips over his cockhead and start blowing him off.";

@@ -58,8 +58,8 @@ Instead of conversing the Alex:
 			say "     His smile falters a little, but he tries to remain positive. 'Please continue to consider my proposal. I think we'll both benefit from it.'";
 	else if AlexProgress is 3:
 		say "     Alex, just coming off a bout of ferretness, puts down the chew toy and looks up at you as you try to tell him you found Darrell. He looks side to side for the missing sports star, then at you in with a mix of confusion and anger on his face. 'Where's Darrell? I thought you were saying that you'd found him.' This is where you have to explain to Alex that Darrell survived the incident, but not in the same way he started it. Upon hearing that Darrell was still sane and relatively secure mentally, Alex is pleased enough, anyway. 'He can still pay me,' says Alex, 'and that's good enough. Here's your next installment.' He hands you another bit of food and water as payment.";
-		increase carried of food by 1;
-		increase carried of water bottle by 1;
+		ItemGain food by 1;
+		ItemGain water bottle by 1;
 		increase score by 20;
 		extend game by 2;
 		say "[line break]     'Alright, there's only one client left, and this one's gonna be a doozy, I'll wager. This last client of mine is an aide to a City Council Member - well, possibly ex-city council at this point. He doesn't have a whole lot of money, but his case'll be pretty big news if I can get a court to listen to him. So as far as publicity, this is a huge case for me. I need you to find him and bring him here.' He sighs a bit, and his nose wiggles, almost cutely, you think to yourself. 'I'm not sure where he is, honestly. He was a bit of an outdoorsman, so you might be able to find him at the park or the beach. Other than that, I can't offer you anything else, besides his name, which is Lee.'";
@@ -71,7 +71,7 @@ Instead of conversing the Alex:
 		say "     'Please continue looking for Lorenda. She's in the red light district. Given what's happening in the city, I think she needs your help first,' he says meaningfully. You nod in understanding, as that part of town would be particularly vulnerable to this outbreak.";
 	else if AlexProgress is 2 and a random chance of 3 in 5 succeeds:
 		say "     'I need you to track down Darrell,' the weaselly lawyer says. 'Being a pro sports star, his case could be worth a lot to me. He should be at the Smith Haven Mall.' He points out his window, indicating the large shopping center in the distance and the main route leading to it.";
-		now Smith Haven Mall Lot is known;
+		AddNavPoint Smith Haven Mall Lot;
 	else if AlexProgress is 4 and a random chance of 3 in 5 succeeds:
 		say "     The mustelid fiddles with a shiny ball as he looks over his papers. 'Have you found Lee? He should be at the park or the beach.'";
 	else:
@@ -100,7 +100,7 @@ Instead of resolving Meet Alex:
 	[WaitLineBreak]
 	say "     'Look, it's hard to find friends in this city after the incident. And so since you seem to be somewhat sane still... [if Player is not purehuman]despite your changes... [end if]I figure you might be able to help me. If you're out exploring the city, it means you can handle the monsters out there.' His nose twitches, as do his whiskers, as he seems to be pondering something. 'Before the incident, I was a high-priced lawyer, and once rescue comes, I plan on returning to that job. But I have three wealthy clients that won't be able to pay me if they get turned into creatures without a thought in their heads but sex.'";
 	say "     You feel like you're starting to get the gist of what the shorter man is leading up to. He speaks very quickly, probably having something to do with his profession. 'Here's my proposition,' he says. 'I have access to a pretty solid stockpile of food and water. For each of my clients you manage to bring back to me, to my condo in the high-rise over there,' he points, 'I'll give you one of each. How's that sound?'";
-	now Alex's Condo is known;
+	AddNavPoint Alex's Condo;
 	say "     [bold type]'I'll give you one of each. How's that sound?'[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
@@ -163,8 +163,8 @@ Instead of resolving Find Lorenda:
 		now the player is in Alex's Condo;
 		say "     Upon arriving, the door is thrown open by the weaselly lawyer who ushers both of you inside. He shuts it behind him, letting out a sigh of relief as he leans back against it. First, he shows her to the living room and sets her down with a cup of coffee, then he returns to you. 'Thanks for bringing her in. You've done me a major favor, so here you go.' He gives you some food and water. He even gives you an extra bottle as a bonus for coming through for him despite the danger.";
 		say "     'My next client is an athlete. He plays for the city's basketball team. His name's Darrell. I don't know where he was when the incident happened, but I believe he may have been at the mall. The team was doing a promotion at the shoe store there some time before the accident.'";
-		increase carried of food by 1;
-		increase carried of water bottle by 2;
+		ItemGain food by 1;
+		ItemGain water bottle by 2;
 		increase score by 50;
 		extend game by 8;
 		now AlexProgress is 2;
@@ -190,7 +190,7 @@ instead of entering the Confession Booth while AlexProgress is 4:
 	say "'Oh! Yes, I believe I know something that might help you. A man has barricaded himself inside one of the storage sheds to the north of the beach. There's a chance that he may be the one you're looking for.' You profusely thank the priestess, who waves off the praise. 'Thank the Goddess for your good fortune, not me. Stay safe and explore a newness of yourself through change, my child.'";
 
 
-instead of conversing the Diego while AlexProgress is 4 and alexdiego is 0 and diegotalk is 1:
+instead of conversing the Diego while AlexProgress is 4 and alexdiego is 0 and PlayerMet of Diego is true:
 	say "You ask Diego if he's happened to have seen anyone hiding out in the park that meets Lee's description. He shakes his head, saying he's not seen anyone like that, though you can never be certain if they changed too much.";
 	now alexdiego is 1;
 
@@ -248,8 +248,8 @@ Instead of going west from dirty sheds:
 			now AlexProgress is 5;
 			move player to Alex's Condo;
 			say "     Arriving back at the High Rise district, Alex is bemused to see that this latest client has made a rather serious reassignment in gender, but he is pleased to see that Lee at least seems to have her faculties in order. 'Alright,' he says. 'Here's your reward for the last bit.' You receive one more food and one more water.";
-			increase carried of food by 1;
-			increase carried of water bottle by 1;
+			ItemGain food by 1;
+			ItemGain water bottle by 1;
 			increase score by 40;
 			extend game by 10;
 			say "[line break]     The weaselly lawyer looks you up and down, sizing you up. 'You know... I have a reputation as a hell of a lover,' he says, leering a little bit but remaining professional. 'What I'm saying is,' he chuckles, 'if you come and visit, I'd be willing to show you a good time.'";

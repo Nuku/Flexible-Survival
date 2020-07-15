@@ -40,7 +40,7 @@ Instead of resolving Fox Adventurer:
 		say "     Managing to find your way through the chaos of the city, you make your way back to the intersection where you first met the vulpine adventurer. True to her word, she steps out from one of the alleyways as you arrive. 'Did you get it?' she asks quickly";
 		if Crow Artifact is owned:
 			say ". Nodding, you slip off your pack and remove the carving. She smiles happily and snatches it out of your hand, looking it over with a critical eye. 'Yes! I've got it all. I've finally struck it big this time!' she says with elation in her voice. She puts a paw over her mouth, suddenly wary that her raised voice will call undo attention. Grabbing your wrist, she leads you between a few buildings. 'You can call me Solstice by the way. I've been in the treasure hunting biz for a while, but this'll be my best find yet, thanks to you.' She slips into a small, vacant shop and shuts the boarded up door behind you. It looks like it was closed down long before the outbreak, making it a fairly safe place to hide out.";
-			delete Crow Artifact;
+			ItemLoss Crow Artifact by 1;
 			WaitLineBreak;
 			say "     Setting the onyx carving onto a table, she slips off her own pack and pulls out two cloth-wrapped bundles. Unwrapping them reveals two more onyx carvings, much like the head, but representing the upper and lower body of a crow. 'Those archaeologists who found this didn't know the first thing about what they were talking about. The head's not part of a staff, it's part of a statuary. I traced some clues and found the Scythian tombs where the other two sections were held. The last had been raided by the ancient Greeks, which is how it ended up in Minos's treasure room. And now, if I... can... just...' she says, focusing on the middle piece, turning some subtle mechanism hidden in the stone. 'There!' she says as short pegs pop from the top and bottom of it so it can be fitted to the others. 'The head alone might be a curiosity, but the whole statue will be worth a whole lot mo-wwwahhhhh!'";
 			WaitLineBreak;
@@ -73,10 +73,11 @@ Instead of resolving Fox Adventurer:
 				increase score by 25;
 			else:
 				say "     Feeling rather uncertain about having sex with the recently-transformed Solstice, you quickly change the subject, pointing out that something has to be done about the statue. She seems a little disappointed, but nods and gets up. Using the cloths she had them bundled in, you gather up each piece and wrap them up again. While the vulpogryph doesn't have plans to put it back together, you both certainly agree that you can't just leave it lying around for someone else to find and reassemble. That done, you remind her about your payment and take the food and water from her. It's not much, but it'll certainly help. She also passes you a small voucher card labelled [']50 credits['], saying it's some kind of new money.";
-				say "     Bottle of water, food and 50 freecred obtained.";
+				say "     [bold type]You gain 500 freecreds![roman type]";
+				LineBreak;
 				increase freecred by 50;
-				increase carried of water bottle by 1;
-				increase carried of food by 1;
+				ItemGain water bottle by 1;
+				ItemGain food by 1;
 				increase score by 25;
 				WaitLineBreak;
 				say "     Before you head out, she gives you a big hug, folding her feathery wings around you. She runs her paws along your back, scritching under your backpack while kissing you. As she lets you go, she gives you a little nip with her beak on your neck. Solstice adds a pat on your behind, saying that she'll see you again soon. Walking off, you go a short distance before you feel a tingle start to spread through you. Feeling the encroaching change, you run your hands over your face and neck, looking for some fluid or break where the nanites might be affecting you, but can't find one. It's not until after the change has run its course that you find it, one of the vulpogryph's feathers having gotten stuck under your backpack.";
@@ -125,7 +126,7 @@ Instead of resolving Onyx Crow:
 			WaitLineBreak;
 			say "     Investigating further, you look over at the museum's description of this piece. It goes on to talk about it being found in a collection of Greek treasures. '...discovered by so-and-so... treasure vault... king of Crete in the year blah-blah-blah...' The only interesting detail comes when it talks about how the Onyx Crow was probably the headpiece to a staff or scepter and likely of ceremonial significance. Examining the carving, you do find that there is a square hole carved into the underside, which the plaque notes historians believe was used to fit it into place on the handle, but all that remains is the headpiece.";
 			say "     While this trip to the museum has been interesting, you'd best just bring your find back to the vixen adventurer to receive your reward. You tuck the artifact into the bottom of your pack and leave the area, not wanting to get caught by Valerie in here with stolen goods.";
-			increase carried of Crow Artifact by 1;
+			ItemGain Crow Artifact by 1;
 			increase score by 10;
 			now HP of Solstice is 2;
 			now Resolution of Onyx Crow is 1; [won and got the artifact]

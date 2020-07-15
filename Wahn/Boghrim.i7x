@@ -26,8 +26,7 @@ to say BoghrimSlaveDeal:
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if Player consents:
-				decrease carried of food by 1;
-				LineBreak;
+				ItemLoss food by 1;
 				say "     Digging a package of food out of your pack, you hold it out to Boghrim, who sets Jason down to stand on shaky feet while his orc master takes your offer and starts to munch on it. The human slave sways a bit and looks groggy, a smear of cum on the chin of his handsome face. It's clear that he has been fed at least one load of potent orc cum in addition to what's still dripping out of his hole, making him an easy to handle slave with the intoxicating and addictive effects of orc sperm.";
 				say "     Having paid good food for his service, you don't waste any time and quickly strip. Then you step up to the athletic man, pulling his head to yours to share a hungry kiss and taste a trace of the nectar-like cum on his lips. Eager to sink your bone into this docile slave-boy, you bodily pick him up, holding Jason against your broad orc chest to lower him on top of your proudly standing erection. Given the amount of cum in him, it's pretty easy to just slide in, pushing past the somewhat puffy-looking pucker with your cockhead, then stretching it as you go deeper. And Boghrim is right - the human man's hole really is delightfully tight and gripping.";
 				WaitLineBreak;
@@ -58,8 +57,7 @@ to say BoghrimSlaveDeal:
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if Player consents:
-				decrease carried of food by 1;
-				LineBreak;
+				ItemLoss food by 1;
 				say "     Digging a package of food out of your pack, you hold it out to Boghrim, who accepts it with a grin and says 'Pleasure doing business with you. Jason, take care of him!' Ready and willing to serve, the muscular slave walks up to you and shows off his body for your pleasure. In no time at all, the awesome little show makes you hard as rock, and Jason starts undoing your pants to free your orcish cock. Pushing them down, he bends over to bring his head to your crotch, then wraps his lips around the tip of your shaft, suckling on it softly. The slave gives you a skillful blowjob, getting you all hot and bothered in just a short while, then suddenly he pulls off and looks up at you with an eager expression. Using a hand to wipe off the copious pre-cum that is leaking from your slit, he brings it to his own ass, then proceeds to lube his own ass with it. Standing up, he meets your eyes with an eager expression and moans 'Fuck me, please.'";
 				say "     Eager to sink your bone into this docile slave-boy, you bodily pick him up, holding Jason against your broad orc chest to lower him on top of your proudly standing erection. Lubed and well-used to this by getting pounded by many an orc, it's pretty easy to just slide in, pushing past the somewhat puffy-looking pucker with your cockhead, then stretching it as you go deeper. Despite all this, the human man's hole still is delightfully tight and gripping. He's learned well how to please his masters...";
 				WaitLineBreak;
@@ -208,8 +206,7 @@ to say BoghrimTalk2: [talk about Jason]
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
-			decrease carried of food by 1;
-			LineBreak;
+			ItemLoss food by 1;
 			say "     Digging a package of food out of your pack, you hold it out to Boghrim, who accepts it with a grin and says 'Pleasure doing business with you.' Handing the food to his orc breeder attendant, Boghrim nods to the free end of the sofa. 'Plant your ass and have fun,' he continues, then pulls his human slave's head up from where he was licking the orc's balls and tells him 'Jason, take care of him!' Ready and willing to serve, the muscular slave stands up and walks to where you flop down on the couch, then gives you a nice lap-dance, showing off a very nice body and wiggling his shapely booty at you. In no time at all, the awesome little show makes you hard as rock, and Jason starts undoing your pants to free your orcish cock. Pushing them down, he bends over to bring his head to your crotch, then wraps his lips around the tip of your shaft, suckling on it softly.";
 			say "     The slave gives you a skillful blowjob, getting you all hot and bothered in just a short while, then suddenly he pulls off and looks up at you with an eager expression. Using a hand to wipe off the copious pre-cum that is leaking from your slit, he brings it to his own ass and proceeds to lube his hole with it. Standing up, he meets your eyes with an eager expression and moans 'Fuck me, please.' Eager to sink your bone into this docile slave-boy, you wave him closer, then direct him to climb on your lap. Quickly moving to straddle your hips, the sexy man's cock pokes you in the abs a moment later as he leans down to meet your lips. You have some fun wrestling the eager sex-pet's tongue with yours, then embrace and lift him a bit, holding Jason against your broad orc chest to lower him on top of your proudly standing erection. Lubed and well-used to this by getting pounded by many an orc, it's pretty easy to just slide in, pushing past the somewhat puffy-looking pucker with your cockhead, then stretching it as you go deeper. Despite all this, the human man's hole still is delightfully tight and gripping. He's learned well how to please his masters...";
 			WaitLineBreak;
@@ -273,7 +270,7 @@ to say BoghrimTalk3: [go hunting]
 		say "     You stop and listen for a second, indeed hearing a silent squeak - which rapidly escalates to the wrenching screech of tortured metal as the wall of cars on your right starts to topple. As reality seems to fall into slow-motion, you frozenly stand where you are while your mind somehow has the time to register the wall isn't just collapse on its own - something is pushing it over... something huge and green, barely seen through the gaps of the car stack. While you make interesting, but momentarily rather useless observations - as you're about to be crushed by a car or three - Boghrim instead just reacts, snatching you up and flinging you to safety with a mighty throw, before...";
 		say "     Time resumes its regular pace with the deafening crash of a number of car wrecks impacting on the ground, just steps behind where you landed. You jump to your feet as quick as you can and look around - hm, where did Boghrim end up at? Thankfully, your fear that he might have been crushed under that whole pile of wreckage proves unnecessary, as you hear him growl, 'Now what the fuck did that? Give me a moment to pull myself out of here...' Seems like he's right against the wall on the other side, where a falling car only came to lean against it, not flat on the ground. Though your relief doesn't last long, as your eyes fall on the massive creature responsible for all this - it's a hydra, stepping over the twisted metal in the wall-opening it created and snapping at you with multiple heads.";
 		WaitLineBreak;
-		now Abandoned Lot is known;
+		AddNavPoint Abandoned Lot;
 		now BoghrimHuntingTrip is 1;
 		now inasituation is true;
 		challenge "Hydra Beast";

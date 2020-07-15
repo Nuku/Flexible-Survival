@@ -32,11 +32,11 @@ Instead of Resolving Stabled Situation:
 			say "     Investigating the area, you realize that the only way in appears to be the one the horses are guarding, and that from the numbers you saw heading into the building, fighting the guards will only get you overwhelmed by more of the horsemen, even if not at first, then on any subsequent visits that you might make. Looking at the large building speculatively, you realize that if you want to get in, you will have to find some way to bribe the guards into looking the other way each time you visit. You begin searching through your pack as you approach the doors to see if you have anything that the guards might be willing to take in trade.";
 			if chips is owned and soda is owned:
 				say "     Searching through your pack, while the two horsemen eye you curiously, you pull out several items to see how they react, only to be disappointed each time as they continue to watch you with suspicion. Finally, your pack is almost empty by the time you pull out some chips and soda, and you notice the horsemen lick their lips and shift on their hoof-like feet as they seem to realize just how hungry guard duty has made them. Grinning, you offer the snack food to the guards, only to pull it back when one of them reaches for it, gesturing at the closed door between the two guards as you give them a questioning look. The horsemen sigh as they glance at each other for a minute, before nodding at you, and one of them waves you on inside as you hand them the junk food to share. As you enter, you hope that they will pass the word to the next group of guards as well, since you would rather not have to go through that every time you come here.";
-				delete chips;
-				delete soda;
+				ItemLoss chips by 1;
+				ItemLoss soda by 1;
 				Move player to The Stables Hotel;
 				now battleground is "void";
-				now The Stables Hotel is known;
+				AddNavPoint The Stables Hotel;
 				now Resolution of Stabled Situation is 1; [bribed your way in]
 				now Stabled Situation is resolved;
 			else:
@@ -59,11 +59,11 @@ Instead of Resolving Stabled Situation:
 			if chips is owned and soda is owned:
 				LineBreak;
 				say "     You begin searching through your pack as you approach the doors, the two horsemen eyeing you curiously, as you pull out several items to see how they react, only to be disappointed each time as they continue to watch you with suspicion. Finally, your pack is almost empty by the time you pull out some chips and soda, and you notice the horsemen lick their lips and shift on their hoof-like feet as they seem to realize just how hungry guard duty has made them. Grinning, you offer the snack food to the guards, only to pull it back when one of them reaches for it, gesturing at the closed door between the two guards as you give them a questioning look. The horsemen sigh as they glance at each other for a minute, before nodding at you, and one of them waves you on inside as you hand them the junk food to share. As you enter, you hope that they will pass the word to the next group of guards as well, since you would rather not have to go through that every time you come here.";
-				delete chips;
-				delete soda;
+				ItemLoss chips by 1;
+				ItemLoss soda by 1;
 				Move player to The Stables Hotel;
 				now battleground is "void";
-				now The Stables Hotel is known;
+				AddNavPoint The Stables Hotel;
 				now Resolution of Stabled Situation is 1; [bribed your way in]
 				now Stabled Situation is resolved;
 			else:

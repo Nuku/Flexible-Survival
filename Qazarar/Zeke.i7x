@@ -126,7 +126,7 @@ to say ZekeTalk2: [playing games]
 	increase diceroll by bonus;
 	if diceroll > 19:
 		say "     Once you start playing, it feels somewhat familiar, and you find yourself able to apply some skills you'd almost forgotten you had to it, and end up soundly trouncing Zeke at his own game. He is completely speechless at you victory, simply sitting with a shocked look for several moments, before he laughs heartily. 'Impressive stuff! Even I could hardly beat you at that. Play that impressive deserves a reward.' Zeke stands, and walks over to a cupboard, rifling through it for a few moments. Soon after, he tosses you a bag of chips. 'You earned it. Now come back some time, you hear? I need a rematch against that.'";
-		increase carried of chips by 1;
+		ItemGain chips by 1;
 	else if diceroll > 15:
 		say "     Your skills win out, and your general practice at this, along with quickly picking up the moves, means you manage to scrape out a win. As the sight of his defeat on the screen, Zeke is almost speechless. 'Wow, you're not half bad. A little more practice, and you can be as pro as I am. And I'd definitely like to help you practice.'";
 	else:
@@ -374,8 +374,7 @@ instead of going south from Mall East Wing while ZekeRelationship is 0:
 	move player to Game Store;
 	say "     As you enter the game shop, you notice that there is someone else browsing the shelves, currently leaning over and unintentionally showing off a fluffy tail poking out through a hole in a pair of jeans. After a few moments of watching it swish around, he stands up, a case in hand, and turns away from the shelf. Now that he is fully visible, you can see that he is clearly a fox, albeit on two legs, and in addition to a pair of jeans is wearing a slightly worn shirt displaying the text <MESSAGE REDACTED>. When he realizes that you're there, he starts briefly, and then speaks. 'Oh, hey. You here for some games too? Wait, that's a silly question. Why else would you be in the game shop, after all?'";
 	say "     The fox takes a momentary pause, and extends his hand. 'I'm Zeke, by the way. And you are?' You shake his hand, and introduce yourself. 'Well, nice to meet you. You might have guessed, but I tend to play a lot of video games. Even with this whole disaster going on, I still have a pretty nice setup. If you ever want to hang out and play some games, you should visit. I haven't had a lot of opportunity for anything multiplayer lately, and it's nice to have a little variety. Plus, I don't know why, but you seem to me like the sort of person who enjoys video games. Actually, hang on a moment.' Zeke takes off a backpack, which you hadn't noticed he was wearing, and puts the game he was carrying into it. Then he digs out a scrap of paper and scribbles something on it, before handing it to you. It seems to contain directions. 'Now you should be able to find my place, when you want. See you around, I hope.' With that the fox picks up his backpack, and leaves the store.";
-	say "     [bold type]You now know the location of Zeke's Gaming Den![roman type][line break]";
-	now Gaming Den is known;
+	AddNavPoint Gaming Den;
 	now ZekeRelationship is 1;
 
 Section 5 - Location

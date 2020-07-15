@@ -85,8 +85,7 @@ after going to Public Beach while (HP of Kai is 0 and a random chance of 1 in 3 
 		WaitLineBreak;
 		say "     His face now turning red, he says, 'I'm sorry, [if player is female]babe [else]mate [end if]that I got you soaking wet. If you'd like, I have a towel that I can give you to dry off with.' You nod your head and continue swimming back to land with him. When the two of you, finally make it back to land, you follow him a ways to where he has a little set-up on the beach. You notice that he has blue tiger-like stripes going down his neck and back and large gill slits on both sides of his throat, which very much remind you of a tiger shark. You think to yourself that the infection must've caused this to happen. He hands you a towel, and with a shaky voice, he says, 'I'm truly sorry again. I'm Kai by the way, and anytime you would like to talk, feel free to come visit. I stay right here on the beach.' You dry yourself off with the towel and then hand it back to Kai, thanking him before continuing on your way.";
 		now HP of Kai is 1;
-		say "[bold type]You now know the way to Kai's Campsite.[roman type][line break]";
-		now Kai's Campsite is known;
+		AddNavPoint Kai's Campsite;
 	else:
 		LineBreak;
 		say "     You decide against helping the surfer, seeing no point in soaking yourself when it's obvious that this isn't the first time he's wiped out before. You stare at the ocean for a little longer and see the man come back up from the water, with his board in hand. He swims back to shore, just fine like you had thought. You chuckle to yourself and continue on your way.";

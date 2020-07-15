@@ -61,10 +61,9 @@ Instead of Resolving a Needy Rabbit Girl:
 			if Player consents:
 				say "     As if she could detect the decision being made in your eyes, she reaches for your groin, rubbing slowly as a smile forms on her muzzle. 'Well, since you asked,' which you had not yet, 'Yes.' She grabs at a hand and guides you into a basement. 'My home,' she explains before turning to you.";
 				say "     [sexwithSandra]";
-				say "[bold type]You now know how to navigate to the rabbit den[roman type].";
 			else:
 				say "     She looks clearly disappointed and crosses her arms. 'I thought you were the kind of man to help me, but I guess I was wrong. Or maybe you're shy? Look, you're nice. Here's my address, OK? Come visit any time.";
-			now Rabbit den is known;
+			AddNavPoint Rabbit Den;
 			increase score by 1;
 			now Needy Rabbit Girl is resolved;
 			now Resolution of Needy Rabbit Girl is 1; [male/herm player got invite to Sandra's den]
@@ -78,7 +77,7 @@ Instead of Resolving a Needy Rabbit Girl:
 				if Player consents:
 					say "     She slowly lies you down with a smile, looking quite relieved at your consent. She has you take off your clothes, then puts her hands on her hips, looking you over. 'What?' she asks, flashing a grin. 'You thought we were going to make out in the middle of the street? Get real. Come on!' She waves excitedly and barely waits for you to stand back up again before she leads you hurriedly through the devastated city to a small basement door. She fishes out a key and has the door open quickly, leading you inside.";
 					move player to Rabbit Den;
-					now Rabbit Den is known;
+					AddNavPoint Rabbit Den;
 					now rabbitsibling is 1;
 					increase the score by 1;
 					now Resolution of Needy Rabbit Girl is 2; [player sisterified]
@@ -430,7 +429,7 @@ to say sandrasex2: [become bunny siblings]
 		say "     Check to see if you have any?";
 		if Player consents:
 			if glob of goo is owned:
-				decrease carried of glob of goo by 1;
+				ItemLoss glob of goo by 1;
 				now rabbitsibling is 3;
 				say "     'You have just the right thing,' she says in a complimenting tone as she takes your jar of goo and pops it open. She slathers it across her hands, then has you turn around. Her soft hands run across your back, working under clothes. The goo is warm thanks to her own heat, leaving slick trails over your body as she works down and grabs your bottom.";
 				say "     'No one's a rabbit without a tail,' she chastises, starting to rub firmly at the base of your spine, tingling growing. A finger strays - by accident, perhaps, though unlikely - towards your unguarded pucker, slipping in all too easily with its coating of goo. You arch back against her as she starts to explore you without shame, testing your elasticity boldly. Perhaps it is the slick goo helping, but she manages two fingers, then three, pumping against your shuddering form as you rock in place[if Player is herm], your [Cock of Player] length[smn] throbbing and dewy folds growing hot as pleasure builds inside you[else if Player is male], your [Cock of Player] length[smn] throbbing as pleasure builds inside you[else], your dewy folds growing hot as pleasure builds inside you[end if].";

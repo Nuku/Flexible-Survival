@@ -63,7 +63,7 @@ Instead of Resolving a TigerVSTaur:
 			now HP of Chase is 1;
 			now PlayerMet of Chase is true;
 			move player to Tiger Den;
-			now Tiger Den is known;
+			AddNavPoint Tiger Den;
 			now Resolution of TigerVSTaur is 2; [helped Chase]
 			now TigerVSTaur is resolved;
 	else:

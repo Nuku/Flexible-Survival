@@ -326,7 +326,7 @@ to say reindeerheat:
 		say "[reindeerbreastheat]";
 	else:					[185 - 200]
 		if egg nog is owned:
-			delete egg nog;
+			ItemLoss egg nog by 1;
 			increase Libido of Player by a random number from 3 to 8;
 			if Libido of Player > 100, now Libido of Player is 100;
 			say "As a wave of holiday merriment washes over you, you bleat lustfully and drive a pair of fingers into your sopping puss[yfn]. Feeling the strength of your heat pulsing through you, you are so thirsty. You look around for something to satisfy your thirst for holiday cheer. Remembering the egg nog, you pull it out from your pack and take a drink.[nogging]";
@@ -336,10 +336,10 @@ to say reindeerheat:
 			repeat with Q running through invent of the location of the player:
 				increase num by 1;
 				if q matches the text "egg nog", case insensitively:
-					add q to the invent of the player;
+					ItemGain q by 1 silently;
 					break;
 			remove entry num from invent of the location of the player;
-			increase carried of egg nog by 1;
+			ItemGain egg nog by 1 silently;
 			process egg nog;
 		else:
 			say "[reindeerbreastheat]";
@@ -359,8 +359,7 @@ to say reindeerbreastheat:
 	else:
 		say "You moan lustfully and fondle your chest, teasing your nipples. Your heat is quite unbearable, with your sweet juices running down your legs and filling the air with the scent of your arousal. As you continue to play with yourself, your nipples start to leak milk, rich and scented like brandy egg nog. Delighted at this, you continue to milk yourself until this surge of lust passes.";
 		[copied entirely from the 'milk me' section]
-		repeat with T running from one to ( ( Nipple Count of Player ) / 2 ):
-			increase carried of egg nog by 1;
+		ItemGain egg nog by ( ( Nipple Count of Player ) / 2 );
 		increase Libido of Player by a random number from 3 to 8;
 		increase Libido of Player by a random number from 3 to 8;
 		if "Horny Bastard" is listed in feats of Player, increase Libido of Player by a random number between 1 and 3;

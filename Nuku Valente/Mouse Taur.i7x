@@ -34,7 +34,7 @@ Instead of Resolving a Mouse Taur Encounter:
 		say "     You give your name and begin idly chatting about time before everything went bad. You settle with her and Lisa pulls out some snacks, sharing with you as you talk with her. 'I planned to be a teacher,' she explains. 'Grade school, but then this happened. It seems that some mice that lived in my house became infected. They never bit me or anything, but close proximity seems to have been enough. I'm pretty certain their fur got onto a bit of my food. Maybe the indirect contact is why it took several days for me to change, and into an unconventional form too.' But change she did, becoming a curvy mouse taur that wandered the city alone, fending for herself until she recently found a safe place to stay, relatively nearby to where you are right now. 'You're welcome to come by and visit me anytime too. Just look for a porn store in the western boundary street.' Meal time over, you both rise. She gives you a firm parting hug, and turns to walk off down the street, long furry tail swaying behind her.";
 		increase mtrp by 1;
 		PlayerEat 20;
-		now Restrained Desire is known;
+		AddNavPoint Restrained Desire;
 		now Mouse Taur Encounter is resolved;
 		now Find Porn Store is resolved;
 
@@ -84,7 +84,7 @@ to FindPornStore:
 				say "[LisaIntroTalk]";
 				now mtrp is 2; [player knows Lisa, was in the store]
 				move player to the Restrained Desire;
-				now Restrained Desire is known;
+				AddNavPoint Restrained Desire;
 				now Resolution of Find Porn Store is 1; [tried to break in, won/lost]
 				now Mouse Taur Encounter is resolved;
 			else if fightoutcome > 19 and fightoutcome < 30: [lost]
@@ -92,7 +92,7 @@ to FindPornStore:
 				say "[LisaIntroTalk]";
 				now mtrp is 2; [player knows Lisa, was in the store]
 				move player to the Restrained Desire;
-				now Restrained Desire is known;
+				AddNavPoint Restrained Desire;
 				now Resolution of Find Porn Store is 1; [tried to break in, won/lost]
 				now Mouse Taur Encounter is resolved;
 			else if fightoutcome is 30: [fled]
@@ -107,7 +107,7 @@ to FindPornStore:
 			say "[LisaIntroTalk]";
 			now mtrp is 2; [player knows Lisa, was in the store]
 			move player to the Restrained Desire;
-			now Restrained Desire is known;
+			AddNavPoint Restrained Desire;
 			now Mouse Taur Encounter is resolved;
 			now Resolution of Find Porn Store is 3; [knocked, met Lisa]
 			now Find Porn Store is resolved;
@@ -118,7 +118,7 @@ to FindPornStore:
 		say "     Recognizing the location that Lisa the mousetaur described, you walk up to the door and knock. It doesn't take long before you can hear some movement on the inside. After several locks click open one by one, the door is opened a crack to reveal the woman looking out warily. As she recognizes you, a smile spreads over her face and she waves you inside.";
 		move player to the Restrained Desire;
 		now mtrp is 2; [player knows Lisa, was in the store]
-		now Restrained Desire is known;
+		AddNavPoint Restrained Desire;
 		now Resolution of Find Porn Store is 4; [already knew Lisa, found the store]
 		now Find Porn Store is resolved;
 
@@ -201,7 +201,7 @@ instead of conversing the Lisa:
 		say "     'This what you looking for?' She displays a distinctly carrot-shaped dildo, and a rather oversized one at that. 'This was clearly meant as a novelty toy, not really intended for use, but these days there's really no such thing.' As you reach for it, she pulls it back. 'Tsk, now then, I can't just give this away on a whim! How about this, for a bottle of clean water, I'll give it to you, deal?'";
 		if Player consents:
 			if water bottle is owned:
-				delete water bottle;
+				ItemLoss water bottle by 1;
 				say "     Handing over the bottled water, Lisa gives you the novelty dildo.";
 				say "     'Have fun!' Turning away to attend to her own matters, you have the large orange thing in your possession now, it's probably best to return to Sandra right away.";
 				now rabbitsibling is 4;

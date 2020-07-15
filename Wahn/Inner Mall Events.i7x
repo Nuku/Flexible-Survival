@@ -254,9 +254,7 @@ to say SizeEnvy_BJ:
 	say "     After catching his breath, Nicholas says, 'Time to pay up.' Rob, Axel and Milton have made themselves presentable again in the meantime, and they each grab a bottle of water from their packs, bringing it back to hand to you. Their mall rat friend stays fully naked from the hips down, unconcerned with his giant dick swinging between his legs as he goes to grab his pants, then pulls out one more water bottle from one of the large side pockets. This leaves you with a nice and even number of pure water bottles. While you pack them away and clean yourself up, the mall rat thanks you and tells his friends, 'Come on guys, let's hang in the atrium.' Just a moment later, they're gone, leaving you behind in the store.";
 	PlayerDrink 20;
 	PlayerEat 20;
-	LineBreak;
-	say "[bold type]You gain 4 water bottles![roman type][line break]";
-	increase carried of water bottle by 4;
+	ItemGain water bottle by 4;
 	if Player is male:
 		now SizeEnvyTracker is 2; [player gave a BJ to the guys - as a man]
 		now AxelRelationship is 4;
@@ -273,33 +271,25 @@ to say SizeEnvy_Compete:
 	if Cock Length of Player > 15: [player wins]
 		say "     With a confident grin on your face, you pull out your own [Cock of Player] manhood, jerking its length before the gathered friends. 'Fucking hell,' Rob groans as he sees what you bring to the competition, and even Nicholas gives you a respectful nod after he measures your erection. '[Cock Length of Player] inches, I'm impressed. Guess we have a winner, guys. Time to pay up.' Rob and Axel quickly shove their dicks back into their pants with startled expressions and walk off to get your payment. Meanwhile, Milton just opens a little pressure valve on his clockwork body, allowing the shaft of his brass cock to shrink to its original size with a soft hiss, then also goes to get a water bottle from his pack. Their mall rat friend stays fully naked from the hips down, stroking himself gently before leaning a bit closer to you and whispering, 'This never was about the water. I don't begrudge you the win. And thanks for showing your piece. It's a good one.'";
 		say "     As the others start to come back, Nicholas winks at you, then grabs his own pants and pulls a bottle from one of the many pockets on it, handing it to you. One by one, the young men do the same, leaving you with a nice and even number of pure water bottles. While you pack them away, the mall rat tells his friends, 'Come on guys, let's hang in the atrium.' Just a moment later, they're gone, leaving you behind in the store.";
-		LineBreak;
-		say "[bold type]You gain 4 water bottles![roman type][line break]";
-		increase carried of water bottle by 4;
+		ItemGain water bottle by 4;
 		now SizeEnvyTracker is 50; [player competed - won]
 		now Resolution of Size Envy is 3; [competed - 1st]
 	else if Cock Length of Player is 15: [evenly matched]
 		say "     With a confident grin on your face, you pull out your own [Cock of Player] manhood, jerking its length before the gathered friends. 'Fucking hell,' Rob groans as he sees what you bring to the competition, and even Nicholas gives you a respectful nod after he measures your erection. '[Cock Length of Player] inches, I'm impressed. Guess we're evenly matched, so let's split. You keep your stake and get one more, I'll take the rest. Okay guys, time to pay up.' Rob and Axel quickly shove their dicks back into their pants with startled expressions, then walk off to get your payment. Meanwhile, Milton just opens a little pressure valve on his clockwork body, allowing the shaft of his brass cock to shrink to its original size with a soft hiss, then also goes to get a water bottle from his pack.";
 		say "     Their mall rat friend stays fully naked from the hips down, stroking himself gently before leaning a bit closer to you and whispering, 'This never was about the water. I don't begrudge you half the pot. And thanks for showing your piece. It's a good one.' As the others start to come back, Nicholas winks at you, then grabs his own pants and pulls a bottle from one of the many pockets on it, handing it to you. One by one, the remaining young men give him their bottles, leaving him with a nice armful of pure water bottles. After stuffing them into his backpack, the mall rat tells his friends, 'Come on guys, let's hang in the atrium.' Just a moment later, they're gone, leaving you behind in the store.";
-		LineBreak;
-		say "[bold type]You gain 1 water bottle![roman type][line break]";
-		increase carried of water bottle by 1;
+		ItemGain water bottle by 1;
 		now SizeEnvyTracker is 51; [player competed - draw]
 		now Resolution of Size Envy is 4; [competed - draw]
 	else if Cock Length of Player > 8: [third place]
 		say "     Putting on a confident expression, you pull out your own [Cock of Player] manhood, jerking its length before the gathered friends. 'Fucking hell,' Rob groans as he sees what you bring to the competition, and even Nicholas gives you a respectful nod after he measures your erection. '[Cock Length of Player] inches, not bad at all, but I still win. Okay guys, time to pay up.' Rob and Axel quickly shove their dicks back into their pants with startled expressions, then walk off to get your payment. Meanwhile, Milton just opens a little pressure valve on his clockwork body, allowing the shaft of his brass cock to shrink to its original size with a soft hiss, then also goes to get a water bottle from his pack.";
 		say "     Their mall rat friend stays fully naked from the hips down, stroking himself gently before leaning a bit closer to you and whispering, 'This never was about the water, to be honest. Thanks for showing your piece. It's a good one.' As the others start to come back, Nicholas winks at you, then accepts the stakes of each of his friends, and finally your own bet, leaving him with a nice armful of pure water bottles. After stuffing them into his backpack, the mall rat tells his friends, 'Come on guys, let's hang in the atrium.' Just a moment later, they're gone, leaving you behind in the store.";
-		LineBreak;
-		say "[bold type]You lose 1 water bottle![roman type][line break]";
-		decrease carried of water bottle by 1;
+		ItemLoss water bottle by 1;
 		now SizeEnvyTracker is 52; [player competed - third place]
 		now Resolution of Size Envy is 5; [competed - 3rd]
 	else:
 		say "     Somewhat nervous about exposing yourself in what turned out to be a group of very big boys indeed, you pull out your own [Cock of Player] manhood, jerking its length before the gathered friends. 'Finally someone smal-' Rob starts to say, then clamps his hand in front of his mouth, getting red-faced. Nicholas simply gives you an encouraging smile and comes closer to measure your erection. '[Cock Length of Player] inches, not bad at all, but that still leaves me the undisputed winner. Okay guys, time to pay up.' Rob and Axel quickly shove their dicks back into their pants with startled expressions, then walk off to get your payment. Meanwhile, Milton just opens a little pressure valve on his clockwork body, allowing the shaft of his brass cock to shrink to its original size with a soft hiss, then also goes to get a water bottle from his pack.";
 		say "     Their mall rat friend stays fully naked from the hips down, stroking himself gently before leaning a bit closer to you and whispering, 'This never was about the water, to be honest. Thanks for showing your piece too. No need to be self-conscious just because we're bigger. It all depends on how you use [']em, right?' As the others start to come back, Nicholas winks at you, then accepts the stakes of each of his friends, and finally your own bet, leaving him with a nice armful of pure water bottles. After stuffing them into his backpack, the mall rat tells his friends, 'Come on guys, let's hang in the atrium.' Just a moment later, they're gone, leaving you behind in the store.";
-		LineBreak;
-		say "[bold type]You lose 1 water bottle![roman type][line break]";
-		decrease carried of water bottle by 1;
+		ItemLoss water bottle by 1;
 		now SizeEnvyTracker is 53; [player competed - third place]
 		now Resolution of Size Envy is 6; [competed - last]
 	now AxelRelationship is 2; [two sided introductions]
@@ -365,9 +355,7 @@ Instead of resolving a Donkey Needs:
 		else if calcnumber is 2:
 			LineBreak;
 			say "     Smiling at the donkey boy, you lower your hand and rub it over his bulge, drawing a needy grunt from him. You then you tell him that if he wants you to get him off, he has to pay for it. Axel looks at you with a disappointed expression, sputtering, 'B-but I thought... Uhm... Okay, fine - I'll get something. Be right back.' With that, the donkey boy hurries off into the crowd, returning a few minutes later with a bottle of fresh water for you. He swallows visibly as you accept the payment, then waits while you stuff it in your pack.";
-			LineBreak;
-			say "[bold type]You gain 1 water bottle![roman type][line break]";
-			increase carried of water bottle by 1;
+			ItemGain water bottle by 1;
 			say "[HallwayBlowAxel]";
 		else if calcnumber is 3:
 			LineBreak;
@@ -641,11 +629,8 @@ The sarea of SailboatPainting is "Smith Haven".
 instead of resolving SailboatPainting:
 	say "     You are scanning around the stores and kiosks of the mall, when your attention stops on a heavy-set black-furred Mallrat standing in front of an art store. A gray knit cap covers his head, and his clothing consists of a blue heavily food-stained dress shirt, dirty khaki pants and a green Army jacket. He clutches a brown paper bag and a can of soda in his left paw. The closer you get to him, the more pungent his musk becomes. The slovenly rat-man stands stock still, not seeming to notice you or even twitching his tail. Between his horrible hygiene and the filthy state of his clothes, you wouldn't be surprised if he'd been standing there for days. Instead, he is intently focused on a framed gray-dot painting set on a display easel.";
 	say "     You are about to ask what he's looking for, when your eyes focus in just the right way to see a hidden picture. 'Oh, a sailboat,' you say out loud. A few seconds pass in silence, before the unkempt rodent bellows out a rage scream loud enough for the entire Mall to hear. He disdainfully throws aside his bag and soda before dejectedly kicking over the easel and storming away. Not quite sure of what you just did to set him off, you shrug, collect the lunch he left behind (waste not want not) and continue on your way.";
-	LineBreak;
-	say "[bold type]You gain 1 soda![roman type][line break]";
-	increase carried of soda by 1;
-	say "[bold type]You gain 1 food![roman type][line break]";
-	increase carried of food by 1;
+	ItemGain soda by 1;
+	ItemGain food by 1;
 	now SailboatPainting is resolved;
 
 Inner Mall Events ends here.

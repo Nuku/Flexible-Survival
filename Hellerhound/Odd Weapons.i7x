@@ -34,8 +34,7 @@ instead of resolving a Fallen Survivor:
 	if Player consents:
 		LineBreak;
 		say "     You gather some scraps of fabric and rub away at the shield, discarding them before they can soak through and any of the gunk touches your skin. Eventually you have the thing fairly clean, enough so to handle it (you hope).";
-		say "[bold type]You gain a garbage can shield![roman type][line break]";
-		increase carried of garbage can shield by 1;
+		ItemGain garbage can shield by 1;
 	else:
 		LineBreak;
 		say "     Deciding with your better judgement, you resolve to leave the garbage can shield behind. However, you do drag it over and prop it up next to its mind-broken owner, as a bit of a warning sign for someone who might stumble over him. Sadly, this is the only tribute you can give this resourceful survivor...";
@@ -43,24 +42,14 @@ instead of resolving a Fallen Survivor:
 
 Section 2 - Infected Sword
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"infected sword"	"A sword with cloudy metal found in a sea of slime. It is infectious, and keeps changing you."	10	infected sword
+[infected sword moved to Core Mechanics/Weapons.i7x]
 
-infected sword is a armament. It is a part of the player. It has a weapon "[one of]your cloudy sword[or]your sword[or]your infected sword[or]your glowing sword[at random][hydraharming]". The weapon damage of infected sword is 16. The weapon type of infected sword is "Melee". It is not temporary. The purified of infected sword is "Nothing". The objsize of infected sword is 4.
-
-the scent of infected sword is "The infected sword smells of a myriad of musky scents, all shifting and changing. You can never seem to identify a scent before a new one appears.".
-
-instead of purifying an infected sword:
-	say "That doesn't even fit in the microwave. Also, putting metal in one is a really bad idea.";
-	stop the action;
 
 Table of GameEventIDs (continued)
 Object	Name
 Sword Nest	"Sword Nest"
 
 Sword Nest is a situation.
-gotsword is a number that varies.
 washerenest is a number that varies.
 fellforward is a number that varies.
 
@@ -146,7 +135,7 @@ instead of resolving Sword Nest:
 				randominfect;
 				say "     The infected slime changes you.";
 				wait for any key;
-			increase carried of infected sword by 1;
+			ItemGain infected sword by 1;
 			now Sword Nest is resolved;
 			now Resolution of Sword Nest is 1; [player waded in to get the sword]
 		else:
@@ -165,11 +154,6 @@ An everyturn rule:
 
 Section 3 - Dirty Whip
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"dirty whip"	"A whip covered with dripping horse cum. It is infectious, and was found abandoned by its owner."	3	dirty whip
-"horse whip"	"A whip you found and cleaned up. It has metal studs on the lash."	2	horse whip
-
 [
 understand "whip" as clean whip.
 Does the player mean using the dirty whip when the dirty whip is owned: it is likely.
@@ -178,14 +162,8 @@ Does the player mean littering the clean whip when the clean whip is owned: it i
 Does the player mean grabbing the dirty whip when the dirty whip is visible: it is likely.
 Does the player mean grabbing the clean whip when the clean whip is visible: it is very likely.
 ]
+[Whip moved to Core Mechanics/Weapons.i7x]
 
-dirty whip is an armament. It is part of the player. It has a weapon "[one of]your whip[or]your cum-soaked whip[or]your messy whip[or]white streak[at random]". The weapon damage of dirty whip is 11. The weapon type of dirty whip is "Melee". It is not temporary.
-
-the scent of dirty whip is "The sticky whip smells of equine cum.".
-
-horse whip is an armament. It is part of the player. It has a weapon "[one of]your whip[or]your studded whip[or]your metallic whip[or]brown streak[at random]". the weapon damage of horse whip is 6. The weapon type of horse whip is "Melee". It is not temporary.
-
-the scent of horse whip is "The horse whip smells of leather and oils.".
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -194,7 +172,6 @@ Destroyed Bushes	"Destroyed Bushes"
 Destroyed Bushes is a situation.
 the sarea of Destroyed Bushes is "Park".
 numwater is a number that varies.
-gotwhip is a number that varies.
 
 instead of resolving Destroyed Bushes:
 	say "     You come across a circle of bushes crushed flat against the ground, large pools of cum and juices in the revealed space. Horse hoof prints over the ground as well, and the imprint of a human body in one spot testifies to the fact that someone was overtaken by one of the equines.";
@@ -217,22 +194,20 @@ instead of resolving Destroyed Bushes:
 				if carried of water bottle >= 3:
 					say "     You have to use a few bottles to wash off the whip, but you manage to get it clean and safe to use.";
 					say "     You pick up the now clean whip, and place it in your backpack. It looks like a good weapon.";
-					decrease carried of water bottle by 3;
-					increase carried of horse whip by 1;
+					ItemLoss water bottle by 3;
+					ItemGain horse whip by 1;
 					now Resolution of Destroyed Bushes is 1; [cleaned the whip]
 					now Destroyed Bushes is resolved;
-					now gotwhip is 1;
 				else:
 					say "     You don't have enough water. Maybe you could come back when you find more?";
-			if gotwhip is 0:
+			if Resolution of Destroyed Bushes is 0:
 				say "     Do you wish to pick it up anyway?";
 				if Player consents:
 					say "     You pick up the dirty, cum soaked whip with difficulty as it slips about in your hand, the cum getting all over. You finally manage to get it into your backpack.";
 					infect "Black Equinoid";
 					infect "Black Equinoid";
 					infect "Black Equinoid";
-					increase carried of dirty whip by 1;
-					now gotwhip is 2;
+					ItemGain dirty whip by 1;
 					now Resolution of Destroyed Bushes is 2; [grabbed the dirty whip]
 					now the Destroyed Bushes is resolved;
 				else:

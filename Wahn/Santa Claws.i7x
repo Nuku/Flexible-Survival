@@ -219,16 +219,13 @@ to say SantaTalk2:
 			if randomnumber is:
 				-- 1:
 					say "a soda bottle, which bears Christmas-y print with snow and smiling polar bears.";
-					say "[bold type]You gain 1 soda![roman type][line break]";
-					increase carried of soda by 1;
+					ItemGain soda by 1;
 				-- 2:
 					say "a large gingerbread star, decorated with lots of almonds and still in its clear plastic wrapping.";
-					say "[bold type]You gain 1 food![roman type][line break]";
-					increase carried of food by 1;
+					ItemGain food by 1;
 				-- 3:
 					say "a hearty-looking Christmas fruitcake, still in its clear plastic wrapping. It looks relatively small, but when you accept it, you realize how heavy it is. There's quite a bit packed into this thing.";
-					say "[bold type]You gain 2 food![roman type][line break]";
-					increase carried of food by 2;
+					ItemGain food by 2;
 		else if calcnumber is 3:[rub him]
 			setmonster "Polar Bear Male";
 			choose row MonsterID from the Table of Random Critters;

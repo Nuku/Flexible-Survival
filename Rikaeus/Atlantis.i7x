@@ -109,14 +109,8 @@ Instead of resolving a Lost Trident:
 
 Section 1a - Trident (Weapon)
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"bronze trident"	"A large, bronze three-pronged spear that is as lightweight as it is deadly."	5	bronze trident
+[bronze trident moved to Core Mechanics/Weapons.i7x]
 
-bronze trident is an armament. It is part of the player. It has a weapon "[one of]your three-pronged spear[or]your deadly trident[or]your bronze spear[or]your majestic weapon of doom[at random]". The weapon damage of bronze trident is 10. The weapon type of bronze trident is "Melee". It is not temporary. the objsize of trident is 4.
-
-instead of sniffing bronze trident:
-	say "The trident smells like the sea, the moon, the stars and... a strong merman? Weird.";
 
 Section 2 - Areas of Atlantis
 

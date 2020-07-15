@@ -17,14 +17,11 @@ to say infect:
 
 to say Give Awesome:
 	if a random number between 1 and 100 > 40:
-		say "[bold type]You gain 1 awesome fruit![roman type][line break]";
-		increase carried of awesome fruit by 1;
+		ItemGain awesome fruit by 1;
 	if a random number between 1 and 100 > 40:
-		say "[bold type]You gain 1 awesomer fruit![roman type][line break]";
-		increase carried of awesomer fruit by 1;
+		ItemGain awesomer fruit by 1;
 	if a random number between 1 and 100 > 85:
-		say "[bold type]You gain 1 awesomest fruit![roman type][line break]";
-		increase carried of awesomest fruit by 1;
+		ItemGain awesomest fruit by 1;
 
 to say awesome attack:
 	if Awesome_boredom is 4:
@@ -48,7 +45,7 @@ to say awesome defeat:
 		if awesome bat is owned:
 			if awesome bat is weapon object of Player:
 				try using awesome bat;
-			delete awesome bat;
+			ItemLoss awesome bat by 1;
 			say "Walking away, you get a sudden urge and dig a hole in some soft ground, pushing your bat in deeply. You can sense, with your most awesome senses, the wood taking root and beginning to grow.";
 		say "With good feelings coursing through you at your good deed, a warmth seems to spread from the core of awesome that the tree's fruit seems to have implanted into your being.";
 		infect;
@@ -255,13 +252,11 @@ When Play begins:
 
 Section 3 - Monster Heat
 
-
 Table of Game Objects (continued)
 name	desc	weight	object
 "awesomest fruit"	"The most awesomest fruit you ever ate!"	1	awesomest fruit
 "awesomer fruit"	"The most awesomer fruit you ever ate, now with a funky pink logo!"	1	awesomer fruit
 "awesome fruit"	"The most awesome fruit you ever ate, now with a funky blue logo!"	1	awesome fruit
-"awesome bat"	"A heavy branch that you are pretty sure you could use to hit... something."	5	awesome bat
 
 the scent of the awesome fruit is "[awesomefrscent]".
 
@@ -287,7 +282,6 @@ to say AwesomestFrScent:
 	else:
 		say "The strange fruit has a rich mix of male and female scents that seems mouth-wateringly sweet.";
 
-the scent of the awesome bat is "The powerful bat smells faintly of wood and the strange fruits that grew on that giant tree.".
 
 to say awesome bat proc:
 	choose row MonsterID from the Table of Random Critters;
@@ -297,9 +291,7 @@ to say awesome bat proc:
 			now monsterHP is 0;
 			increase Awesome_noreward by 1;
 
-awesome bat is a armament. It has a weapon "[one of]awesome bat, a double rainbow appears for a brief second,[awesome bat proc][or]bat of awesomeness[or]indestructible length of awesome-wood[at random]".
-The weapon damage of awesome bat is 7. the objsize of awesome bat is 4.
-The weapon type of awesome bat is "Melee". It is not temporary.
+[awesome bat moved to Core Mechanics/Weapons.i7x]
 
 awesomest fruit is a grab object.
 awesomest fruit has a usedesc "[awesomest fruit use]".

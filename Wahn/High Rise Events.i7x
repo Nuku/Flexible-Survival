@@ -19,7 +19,7 @@ Instead of resolving a Road Fuck Aftermath:
 		LineBreak;
 		say "     It takes some effort not to come into contact with the drying goop on the car seat, but eventually, you manage to pry the shoes out of the windshield and add them to your pack.";
 		LineBreak;
-		increase carried of stiletto heels by 1;
+		ItemGain stiletto heels by 1 silently;
 		now Resolution of Road Fuck Aftermath is 1; [grabbed the shoes]
 	else:
 		LineBreak;

@@ -254,6 +254,8 @@ object	name
 pink raccoon	"pink raccoon"
 
 pink raccoon is a pet. pink raccoon is a part of the player.
+understand "Candy" as pink raccoon.
+printed name of pink raccoon is "Candy".
 The description of pink raccoon is "The pink coonboi has soft, gray fur with pink highlights and pink rings around his tail. He looks at you with mindless adoration, now a loyal and obedient pet and plaything.".
 The weapon damage of pink raccoon is 4.
 The level of pink raccoon is 2.
@@ -440,7 +442,7 @@ after going to Bunker while coonstatus is 1:
 	now coonstatus is 2;
 	say "     As you arrive at the bunker, you can see that the pink coon has arrived there as per your directions. He prances over to you with a grin on his face. 'Thanks for getting me out of there, hon,' he churrs. 'Doc's been going extra-crazy lately. I mean, I think he was a little odd before the whole mouse thing, but since then, he's been doing more and more experiments on everyone at the hospital.' He hugs his arms around himself and shudders a little. 'I think there used to be more doctors... I think... but, well, if there were, there obviously aren't anymore, right?' he asks, looking a bit perturbed by the gap in his memory.'";
 	say "     'I don't really remember who I am anymore. I'm pretty sure I was volunteering at the hospital and that I was gay before the change... which, admittedly, hasn't really changed much... But aside from that, it's all rather hazy. Since I don't remember my name, how about you call me Candy, hon?' He reaches into his pocket and pulls out a small needle, another of the healing boosters. 'I don't really have much to give you to say thanks, but you should probably take this. With the way things are, you might need it out there if you're going to keep running around. Better safe than sorry, right?'";
-	increase carried of healing booster by 1;
+	ItemGain healing booster by 1;
 	if Player is male:
 		say "     'What I'd really like to do is show you how much I appreciate your help,' he says, running a finger up your thigh. 'I doubt I can stop you from keeping up your work out there, but... you don't have to go right away, do you?' he asks, giving you an openly seductive look.";
 		if BodyName of Player is "Raccoon":

@@ -422,8 +422,8 @@ Instead of resolving a Dangerous Load:
 		WaitLineBreak;
 		say "     The young soldier out of whose ass it slipped starts to lean down to take it again, exposing his clearly well-fucked and cum-dripping asshole to both corporal Shaw and yourself. This prompts the other man to clear his throat and say, 'Leave it, kid. I - I don't think the sample you had is still valid now anyways.' Looking back at him and realizing his state of mostly un-dress, Kerry blushes and replies with a, 'Yes sir!' Then he scrambles to improvise at least a loincloth from his jacket, replacing the split pants.";
 		say "     The two soldiers gather their stuff, faces red with embarrassment, then talk with one another in quiet murmurs for a moment. Finally, private Kerry approaches you a bit shyly. 'Um, I gotta thank you for what you did. Helping me stop - you know... transforming. So. Here, take this - I can't wear it anyways now.' With that, he hands you his army helmet, as well as two MREs. The soldiers then march off, clearly not wanting to talk about what happened here.";
-		increase carried of food by 2;
-		increase carried of combat helmet by 1;
+		ItemGain food by 2;
+		ItemGain combat helmet by 1;
 		now Resolution of Dangerous Load is 3; [stopped the transformation]
 	else: [let the transformation happen]
 		LineBreak;
@@ -441,8 +441,8 @@ Instead of resolving a Dangerous Load:
 			WaitLineBreak;
 			say "     As the hard washboard abs of the trained soldier start to vanish from sight when his belly swells with every further spurt of minotaur cum, corporal Shaw's body doesn't stay unchanged either - the man starts sprouting small horns just a short moment afterwards. Seems like he's got a noticeable resistance to the transformation, but with enough fucking by his huge partner, that will no doubt wear away. After finishing himself in the man and taking a short break, Kerry the minotaur wanders off, still with the other soldier impaled on his prick.";
 			say "     You have little doubt that he'll keep fucking him, all the way until they are both minotaurs and beyond. Left behind after the conclusion of their coupling, you check over the scene of broken gear and ripped clothing. Salvaging what you can, you carry off two MREs and an army helmet that might just be useful for protecting you.";
-			increase carried of food by 2;
-			increase carried of combat helmet by 1;
+			ItemGain food by 2;
+			ItemGain combat helmet by 1;
 			now Resolution of Dangerous Load is 1; [kicked the booster away, watched them fuck]
 		else: [nope]
 			LineBreak;
@@ -488,8 +488,8 @@ Instead of resolving a Lone Soldier:
 			LineBreak;
 			say "     He lets out the breath he was holding in a burst and replies, 'Thank god! That's a relief!' With that said, Monty quickly pulls his pants back up and zips up again, ending the quite nice view of his upper buttocks that you had. Then he turns around and gives you a beaming grin, slapping your shoulder in camaraderie. 'Thanks for not being weird about this,' he says, then continues, 'And don't think I go around mooning people - it was an emergency. But yeah... plenty fine of you to help.' The bald-shaven man looks at you and then gives a little snort, pulling the backpack from over his shoulder. 'Guess I should give you a proper thanks, not just a wet handshake, eh? Here, take this.'";
 			say "     Monty holds out a MRE and water bottle for you, nodding in a friendly way as you accept the items from him. Then he pats your shoulder again and says, 'Okay then, I think it's time to get going - make use of that quiet area you mentioned to get as far as I can. You watch out for yourself, alright? Maybe what I'm... er, 'carrying' will help with a cure and all. That's what the furry dude in the lab-coat said at least.' With that, he marches off in the direction you came from, quickly turning around the nearby corner and moving out of sight.";
-			increase carried of food by 1;
-			increase carried of water bottle by 1;
+			ItemGain food by 1;
+			ItemGain water bottle by 1;
 			now Resolution of Lone Soldier is 4; [told Monty the truth]
 		else: [watch him strip]
 			LineBreak;
@@ -514,15 +514,15 @@ Instead of resolving a Lone Soldier:
 				LineBreak;
 				say "     Clearing your throat and then casually asking what he's got between his buttocks, you cause the soldier to stand up straight and turn around quickly, stiff-backed and tense. You actually have to step back a little as his swinging dick almost slaps you. Monty covers his crotch with both hands and quickly replies, 'That's, err... classified. Yeah, that's what it is! But don't leave me hanging please. What's the verdict? Do I need to stock up on flea shampoo soon?' Shaking your head a little to throw off the image of the shiny treasure between his buns, you explain that the fur was only a bit of transfer from the hyenas. Monty lets out a relieved breath and replies, 'Thank god!' With that said, Monty quickly pulls his pants back up and zips up again, ending the show of seeing his trained body.";
 				say "     'Thanks for... checking up on me. Even if you got a bit grope-happy in between.' The bald-shaven man looks at you and then gives a little snort, pulling the backpack from over his shoulder. 'Guess I should give you a proper thanks, not just a wet handshake, eh? Here, take this.' Monty holds out a MRE and water bottle for you, nodding in a friendly way as you accept the items from him. Then he pats your shoulder again and says, 'Okay then, I think it's time to get going - make use of that quiet area you mentioned to get as far as I can. You watch out for yourself, alright?' With that, he marches off in the direction you came from, quickly turning around the nearby corner and moving out of sight.";
-				increase carried of food by 1;
-				increase carried of water bottle by 1;
+				ItemGain food by 1;
+				ItemGain water bottle by 1;
 				now Resolution of Lone Soldier is 4; [asked him about it]
 			else if calcnumber is 2: [touch]
 				LineBreak;
 				say "     Pushing against the decorative gemstone a little, you draw a pleased moan from Monty as the plug presses into his prostate, followed by him clenching his buttocks together. Turning halfway, the man looks down upon you with drawn-together brows and says, 'Hey! Don't. Don't touch that! It's... just for the mission!' He glowers a little, then raises one eyebrow. 'So - what's the verdict? Do I need to stock up on flea shampoo soon?' Shaking your head a little to throw off the image of the shiny treasure between his buns, you explain that the fur was only a bit of transfer from the hyenas. Monty lets out a relieved breath and replies, 'Thank god!' With that said, Monty quickly pulls his pants back up and zips up again, ending the show of seeing his trained body.";
 				say "     'Thanks for... checking up on me. Even if you got a bit grope-happy in between.' The bald-shaven man looks at you and then gives a little snort, pulling the backpack from over his shoulder. 'Guess I should give you a proper thanks, not just a wet handshake, eh? Here, take this.' Monty holds out a MRE and water bottle for you, nodding in a friendly way as you accept the items from him. Then he pats your shoulder again and says, 'Okay then, I think it's time to get going - make use of that quiet area you mentioned to get as far as I can. You watch out for yourself, alright? Maybe what I'm... er, 'carrying' will help with a cure and all. That's what the furry dude in the lab-coat said at least.' With that, he marches off in the direction you came from, quickly turning around the nearby corner and moving out of sight.";
-				increase carried of food by 1;
-				increase carried of water bottle by 1;
+				ItemGain food by 1;
+				ItemGain water bottle by 1;
 				now Resolution of Lone Soldier is 3; [touched Monty's plug]
 			else if calcnumber is 3: [pull]
 				LineBreak;
@@ -555,8 +555,8 @@ Instead of resolving a Lone Soldier:
 				LineBreak;
 				say "     Pretending you didn't see a surprisingly flashy sex toy between the buttocks of the African-American soldier, you look to the side in time for him not to see you staring as he turns around again. 'So - what's the verdict? Do I need to stock up on flea shampoo soon?' Shaking your head, you explain that the fur was only a bit of transfer from the hyenas. Monty lets out a relieved breath and replies, 'Thank god!' With that said, Monty quickly pulls his pants back up and zips up again, ending the show of seeing his trained body. 'Thanks for... checking up on me. Even if you got a bit grope-happy in between.' The bald-shaven man looks at you and then gives a little snort, pulling the backpack from over his shoulder.";
 				say "     'Guess I should give you a proper thanks, not just a wet handshake, eh? Here, take this.' Monty holds out a MRE and water bottle for you, nodding in a friendly way as you accept the items from him. Then he pats your shoulder again and says, 'Okay then, I think it's time to get going - make use of that quiet area you mentioned to get as far as I can. You watch out for yourself, alright?' With that, he marches off in the direction you came from, quickly turning around the nearby corner and moving out of sight.";
-				increase carried of food by 1;
-				increase carried of water bottle by 1;
+				ItemGain food by 1;
+				ItemGain water bottle by 1;
 				now Resolution of Lone Soldier is 5; [ignored the plug]
 	else: [don't warn him]
 		LineBreak;
