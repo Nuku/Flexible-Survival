@@ -30,22 +30,22 @@ Version 2 of Yolanda by Stripes begins here.
 
 Section 1 - Raven Nest
 
-Raven Nest is inside from the Red Apartment.		[see the Qytat a'th Lundrues.i7x file in the Hellerhound folder for this location.]
 
 Table of GameRoomIDs (continued)
 Object	Name
 Raven Nest	"Raven Nest"
 
 Raven Nest is a room. It is sleepsafe.
+Raven Nest is northeast from Red Apartment 2nd Floor.		[see the Qytat a'th Lundrues.i7x file in the Hellerhound folder for this location.]
 The description of Raven Nest is "[ravennestdesc]";
 
 the scent of Raven Nest is "This place smells of birds with a tinge of sexual arousal.";
 
 to say ravennestdesc:
 	if HP of Yolanda < 6:
-		say "     Inside the apartment building are several small units - likely lower income or student tenants, you'd guess from the remains of their contents. While they've been broken into and looted of supplies, one on the second floor is still occupied. While still in disarray, some attempt has been made to organize the apartment for its occupant - a human-sized raven. Much of the furniture's been removed, though the cushions from several couches (pillaged from the neighboring units) along with several blankets form a rather comfy nest for the avian. When you come in, she's [one of]pecking at her food supplies[or]adjusting the blankets of her nest[or]reading a book[or]poking through her collection of shiny gewgaws[cycling].";
+		say "     The apartment is occupied, but in a bit of disarray, as it has been rearranged to meet the needs of a feral occupant - a human-sized raven. Much of the furniture's been removed, instead replaced by two large L-shaped sofas arranged to form a square. The interior of it is filled with a multitude of cushions and pillows, plundered from who knows where, forming a rather comfy nest for the avian. When you come in, she's [one of]pecking at her food supplies[or]adjusting the blankets of her nest[or]reading a book[or]poking through her collection of shiny gewgaws[cycling].";
 	else:
-		say "     The apartment building has several small units inside it, none inhabited now that Yolanda's gone. They've all been rather thoroughly looted by the raven and so there's nothing of import left here any longer.";
+		say "     The apartment is empty, now that Yolanda's gone. She's taken everything of any value with her, so thee's nothing left for you to loot either.";
 
 
 Section 2 - Yolanda

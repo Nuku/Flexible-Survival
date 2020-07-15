@@ -1917,8 +1917,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is MMP;
 		-- "mondodgebonus":
 			now NumberVarValue entry is mondodgebonus;
-		-- "monhitbonus":
-			now NumberVarValue entry is monhitbonus;
 		-- "monmindbonus":
 			now NumberVarValue entry is monmindbonus;
 		-- "monstercom":
@@ -2291,8 +2289,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is pquest;
 		-- "pr_completion":
 			now NumberVarValue entry is pr_completion;
-		-- "prankevent":
-			now NumberVarValue entry is prankevent;
 		-- "pregtype":
 			now NumberVarValue entry is pregtype;
 		-- "provingstallionhood":
@@ -5591,8 +5587,6 @@ to VariableNumberLoad:
 					now MMP is numberVarValue entry;
 				-- "mondodgebonus":
 					now mondodgebonus is numberVarValue entry;
-				-- "monhitbonus":
-					now monhitbonus is numberVarValue entry;
 				-- "monmindbonus":
 					now monmindbonus is numberVarValue entry;
 				-- "monstercom":
@@ -5965,8 +5959,6 @@ to VariableNumberLoad:
 					now pquest is numberVarValue entry;
 				-- "pr_completion":
 					now pr_completion is numberVarValue entry;
-				-- "prankevent":
-					now prankevent is numberVarValue entry;
 				-- "pregtype":
 					now pregtype is numberVarValue entry;
 				-- "provingstallionhood":

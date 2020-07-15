@@ -22,7 +22,7 @@ The File of BeastVariableSave (owned by another project) is called "FSBeastVaria
 The File of NoteSave (owned by another project) is called "FSNoteSave".
 
 PetList is a list of text that varies.[@Tag:NotSaved] [for stashing the pet objects in the Character Nexus]
-PetList is { "Nullpet", "Latex Vixen", "strange doll", "pink raccoon", "demon brute", "wukong", "human dog", "Retriever Girl", "rubber tigress", "frost giantess", "Little fox", "skunk kit", "equinoid warrior", "Felinoid Companion", "Cute Crab", "house cat", "Exotic Bird", "helper dog", "Gryphoness", "bee girl", "gshep", "mouse girl", "royal tiger", "doberman companion", "demonologist", "Carnivorous Plant" };
+PetList is { "Nullpet", "Latex Vixen", "strange doll", "pink raccoon", "demon brute", "wukong", "human dog", "Retriever Girl", "rubber tigress", "frost giantess", "Little fox", "skunk kit", "equinoid warrior", "Felinoid Companion", "Cute Crab", "house cat", "Exotic Bird", "helper dog", "Gryphoness", "bee girl", "gshep", "mouse girl", "royal tiger", "doberman companion", "demonologist", "Carnivorous Plant", "orc warrior" };
 
 an everyturn rule:
 	if Player is in NPC Nexus:
@@ -158,6 +158,9 @@ to EventRestore:
 		repeat with x running from 1 to the number of filled rows in the Table of GameEvents:
 			choose row x in the Table of GameEvents;
 			let EventIdName be Name entry;
+			[bugfixes for renamed events]
+			if EventIdName is "unused tool":
+				now EventIdName is "Unused Tool";
 			if there is a name of EventIdName in the Table of GameEventIDs:
 				let EventObject be the object corresponding to a name of EventIdName in the Table of GameEventIDs;
 				if ResolveState entry is "Resolved":

@@ -2983,7 +2983,7 @@ after going up from Bunker while (Eric is in Bunker and (HP of Eric > 9 and HP o
 	try looking;
 	say "[EricMeetsUrik]";
 
-instead of navigating Grey Abbey Library while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Sitting Area and UrikEricInteraction is 0):
+instead of navigating Grey Abbey Library while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Sitting Area and PlayerFriended of Urik is true and UrikEricInteraction is 0):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;

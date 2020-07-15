@@ -958,7 +958,7 @@
 |Hellerhound|Zoo|lastcheetahturns|value|
 |Hellerhound|Qytat A'th Lundrues|20140908213124/1616:Mon 8 September 2014 21:31|indexing|
 |Hellerhound|Qytat A'th Lundrues|Guard Gryphon|situation|
-|Hellerhound|Qytat A'th Lundrues|Red Apartment|room|
+|Hellerhound|Qytat A'th Lundrues|Red Apartment Building|room|
 |Hellerhound|Qytat A'th Lundrues|Red Apt Exit|door|
 |Hellerhound|Qytat A'th Lundrues|Green Apartment|room|
 |Hellerhound|Qytat A'th Lundrues|Green Apt Exit|door|

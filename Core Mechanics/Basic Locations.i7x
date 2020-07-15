@@ -502,6 +502,65 @@ to say GreenLobbyDesc:
 
 Table of GameRoomIDs (continued)
 Object	Name
+Red Apartment Building	"Red Apartment"
+Red Apartment Building	"Red Apartment Building"
+[Upper entry is a bugfix for a renamed room]
+
+Red Apartment Building is a room. It is fasttravel.
+The description of Red Apartment Building is "[RedAptDesc]".
+The earea of Red Apartment Building is "Outside".
+
+Table of GameRoomIDs (continued)
+Object	Name
+Red Apartment 1st Floor	"Red Apartment 1st Floor"
+Red Apartment 2nd Floor	"Red Apartment 2nd Floor"
+Red Apartment 3rd Floor	"Red Apartment 3rd Floor"
+Red Apartment 4th Floor	"Red Apartment 4th Floor"
+[Upper entry is a bugfix for a renamed room]
+
+Red Apartment 1st Floor is a room.
+Red Apartment 1st Floor is inside of Red Apartment Building.
+The description of Red Apartment Building 1st Floor is "[RedApt1stDesc]".
+
+to say RedApt1stDesc:
+	say "     The interior lobby of the red apartment building is marked by the typical sights of the nanite apocalypse: Scattered clothes and possessions of people who were overtaken by feral infected, combined with crusty patches of dried cum on the floor, walls and sometimes even ceiling. The fact that the building has fairly large glass doors on two sides seems to have worked against the inhabitants, making them easily visible for passing predators. Several of the doors are marked with claw-slashes and half-torn out of their frames, while others show more calculated destruction. There must have been a crowbar at work for those, likely from looters going for a quick smash and grab. A stairway allows access to the next floor up.";
+
+Red Apartment 2nd Floor is a room.
+Red Apartment 2nd Floor is above of Red Apartment 1st Floor.
+The description of Red Apartment Building 2nd Floor is "[RedApt2ndDesc]".
+
+to say RedApt2ndDesc:
+	say "     The middle section of the red apartment buildingseems to have been a sort of communal area, with a seating area of several sofas, as well as a vending machine. Of course, the latter has been broken into and cleaned out down to the last chocolate bar, and one sofa has been pushed to block the end of the stairway coming up from below. Two other pieces of furniture seem to be missing entirely, with scratchmarks on the linoleum floor allowing a guess that they were dragged into one apartment in the northeast. Glancing around, you see less damage than on the floor below, with only one or two doors having experienced a looter's touch. A stairway on the other side of the room leads further up in the building.";
+
+Red Apartment 3rd Floor is a room.
+Red Apartment 3rd Floor is above of Red Apartment 2nd Floor.
+The description of Red Apartment Building 3rd Floor is "[RedApt3rdDesc]".
+
+to say RedApt3rdDesc:
+	say "     The middle section of the red apartment building seems to have been a sort of communal area, with formerly neat rows of chairs lined up before a small podium and whiteboard. The typical chaos of the city shows in the fact that several chairs are knocked over or pushed together in untidy clumps, and someone has scrawled lewd, but surprisingly artistic scenes of varied interspecies sex on the whole board. The doors of apartments all around you appear untouched. A stairway on the other side of the room leads further up in the building.";
+
+Red Apartment 4th Floor is a room.
+Red Apartment 4th Floor is above of Red Apartment 3rd Floor.
+The description of Red Apartment Building 4th Floor is "[RedApt4thDesc]".
+
+to say RedApt4thDesc:
+	say "     The middle section of the red apartment building seems to have been a sort of communal area, which meant a community garden under large skylights. The front section appears to be mostly decorative, while further back, there are a number of fruit-bearing plants, surprisingly still with their rich bounty attached. Yet the temptation to go help yourself to some is quickly suppressed as you notice that at least one large, spindly plant is actually a monstrously large stick insect, standing perfectly motionless among the greenery with raised striking claws. It doesn't react in any way to your presence, or being spoken to. The doors of apartments all around you appear untouched, and a stairway leads down to the next lower floor. Finally, there is a fairly inconspicuous 'roof access' door on the opposite side of the room.";
+
+Table of GameRoomIDs (continued)
+Object	Name
+Red Apartment Rooftop	"Red Apartment Rooftop"
+
+Red Apartment Rooftop is a room.
+Red Apartment is above Red Apartment Building 4th Floor.
+The description of Red Apartment Rooftop is "[RedRoofDesc]";
+
+to say RedRoofDesc:
+	say "     The roof of this apartment building covered in loose gravel, with some lichen and moss growing on it. The center section is made up of large skylights, allowing the sun to reach the community garden inside.";
+	if staircaselocation is 1:
+		say "     There appears to be a ghostly staircase just a step away from the back left corner of the building. You'd have missed it if you hadn't known it was there. Maybe you could go even further by using it up? (Or plunge to your death as you step off the roof... it does look incredibly transparent to the eyes.)";
+
+Table of GameRoomIDs (continued)
+Object	Name
 Dry Plains	"Dry Plains"
 
 understand "plains" as Dry Plains.

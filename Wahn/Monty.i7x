@@ -660,28 +660,34 @@ Instead of fucking Monty:
 		now title entry is "Finger Monty's ass";
 		now sortorder entry is 5;
 		now description entry is "Explore the black soldier's ass with your digits, seeing how much you can put in the man while jerking him off";
-		[
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Make use of the buttplugs";
 		now sortorder entry is 6;
 		now description entry is "Give Monty a workout with the 'training' toys";
-		]
+		[]
+		if "ToyPlay_1" is listed in Traits of Monty:
+			choose a blank row in table of fucking options;
+			now title entry is "Put a buttplug up Monty's rear and take him out for a stroll";
+			now sortorder entry is 7;
+			now description entry is "Make the soldier walk through the camp with a buttplug inside him.";
+		[]
 		if "Rimming_Banned1" is not listed in Traits of Monty and "Rimming_Banned2" is not listed in Traits of Monty: [player doesn't like to rim, talked or not talked about it with Monty]
 			choose a blank row in table of fucking options;
 			now title entry is "Rim Monty's ass";
-			now sortorder entry is 7;
+			now sortorder entry is 8;
 			now description entry is "Get your tongue in there and eat the black soldier's ass";
 		[]
 		if "Fingering_Done1" is listed in Traits of Monty:
 			choose a blank row in table of fucking options;
 			now title entry is "Fist Monty's ass";
-			now sortorder entry is 8;
+			now sortorder entry is 9;
 			now description entry is "Sink your fist and forearm into the black soldier's ass";
 		[
 		if Player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Fuck Monty's ass";
-			now sortorder entry is 9;
+			now sortorder entry is 10;
 			now description entry is "Fill the black soldier's ass with your cock";
 		]
 		sort the table of fucking options in sortorder order;
@@ -715,8 +721,10 @@ Instead of fucking Monty:
 						say "[MontySex7]";
 					else if (nam is "Make use of the buttplugs"):
 						say "[MontySex8]";
-					else if (nam is "Fuck Monty's ass"):
+					else if (nam is "Make use of the buttplugs"):
 						say "[MontySex9]";
+					else if (nam is "Fuck Monty's ass"):
+						say "[MontySex10]";
 					wait for any key;
 			else if calcnumber is 0:
 				now sextablerun is 1;
@@ -922,60 +930,35 @@ to say MontySex8: [toy workout]
 		say "     Shrugging his shoulders, Monty then moves a hand to your arm, stroking along it just like you're doing with his leg. 'Oh yeah, that's nice!' he pants under his breath as you move on to cup his balls, rolling the full orbs gently in your fingers. Then you proceed to pick up one of the butt-plugs, the second smallest this time, lubing it generously and lowering it to stroking over his pucker. Monty tenses up for a second, biting his lip. 'Err... be gentle, okay?' With a smile, you tell him that he's taken much bigger things before and just needs to wrap his head around this. After playfully wiggling the rubber sex toy so he can see how big it is, you wait for him to nods, at which point you brush it over his opening yet again. The black man lets out a full-throated moan and throws back his head, hips reflexively humping a little upwards. Holding your plug still where it is, you meet the soldier's eyes as he opens them again, and a chuckle escapes his lips.";
 		WaitLineBreak;
 		say "     'God, feeling you touch me there... it's... just wow. Still can't believe how excited that makes me!' Glancing down at his erection, you see a thick bead of pre-cum glisten at the cum-slit. Wiping it off with your finger, you bring your hand up to Monty's face and touch his full lips. ";
-		if "Cum_Tasted1" is not listed in Traits of Monty: [never tasted cum]
-			say "Hesitating for a second, he then gives himself a push and opens up, allowing your digit into his mouth. Almost gingerly sucking on it, he appears pleasantly surprised by the taste and starts to slurp on your finger with growing eagerness.";
-			add "Cum_Tasted1" to Traits of Monty;
-		else: [already tasted cum (his/other)]
-			say "After only a very brief moment of hesitation, he opens up and engulfs your digit, sucking on it eagerly and tasting himself. ";
-		if "Fingering_Done1" is not listed in Traits of Monty:
-			add "Fingering_Done1" to Traits of Monty;
 	else: [was rimmed/fingered before]
-		say "     Shrugging his shoulders, Monty then moves a hand to your arm, stroking along it just like you're doing with his leg. 'Oh yeah, that's nice!' he pants under his breath as you move on to cup his balls, rolling the full orbs gently in your fingers. Then you proceed to pick up one of the butt-plugs, the second smallest this time, lubing it generously and lowering it to stroking over his pucker. If you didn't already know that your friend is sensitive there, his reaction would tell you that in an instant, as Monty lets out a full-throated moan and throws back his head, hips reflexively humping a little upwards. Holding your toy still where it is, you meet the soldier's eyes as he opens them again, and a chuckle escapes his lips.";
+		say "     Shrugging his shoulders, Monty then moves a hand to your arm, stroking along it just like you're doing with his leg. 'Oh yeah, that's nice!' he pants under his breath as you move on to cup his balls, rolling the full orbs gently in your fingers. Then you proceed to pick up one of the butt-plugs, the second smallest this time, lubing it generously and lowering it to brush over his pucker. If you didn't already know that your friend is sensitive there, his reaction would tell you that in an instant, as Monty lets out a full-throated moan and throws back his head, hips reflexively humping a little upwards. Holding your toy still where it is, you meet the soldier's eyes as he opens them again, and a chuckle escapes his lips.";
 		WaitLineBreak;
 		say "     'God, I love feeling you touch me there! Don't tease me, go deeper!' Glancing down at his erection, you see a thick bead of pre-cum glisten at the cum-slit. Wiping it off with your finger, you bring your hand up to Monty's face and touch his full lips. ";
-		if "Cum_Tasted1" is not listed in Traits of Monty: [never tasted cum]
-			say "Hesitating for a second, he then gives himself a push and opens up, allowing your digit into his mouth. Almost gingerly sucking on it, he appears pleasantly surprised by the taste and starts to slurp on your finger with growing eagerness.";
-			add "Cum_Tasted1" to Traits of Monty;
-		else: [already tasted cum (his/other)]
-			say "After only a very brief moment of hesitation, he opens up and engulfs your digit, sucking on it eagerly and tasting himself. ";
-		if "Fingering_Done1" is not listed in Traits of Monty:
-			add "Fingering_Done1" to Traits of Monty;
+	if "Cum_Tasted1" is not listed in Traits of Monty: [never tasted cum]
+		say "Hesitating for a second, he then gives himself a push and opens up, allowing your digit into his mouth. Almost gingerly sucking on it, he appears pleasantly surprised by the taste and starts to slurp on your finger with growing eagerness.";
+		add "Cum_Tasted1" to Traits of Monty;
+	else: [already tasted cum (his/other)]
+		say "After only a very brief moment of hesitation, he opens up and engulfs your digit, sucking on it eagerly and tasting himself. ";
+	if "Fingering_Done1" is not listed in Traits of Monty:
+		add "Fingering_Done1" to Traits of Monty;
 	say "With Monty's lips wrapped around your finger and him suckling on it, your other hand is free to push the butt-plug up his rear in a smooth stroke, simply gliding into the distracted man when he doesn't reflexively tense his hole. Pulling your finger out with a pop, you grinningly ask how he likes the plug and feel its base flex in your grasp as Monty flexes his inner muscles right away. 'Damn, that... feels pretty nice, up there. Just kinda full, you know. In a good way.' Continuing with the latex toy, tugging and pushing at it, you draw some pants from the soldier, followed by full-on moans as you pop the thick part of the plug past his pucker, then slam it back home once more. 'Damn, yeah!' Monty says out loud, throwing his head back and closing his eyes.";
 	say "     You play with the muscular soldier's purplish-pink asshole, fucking it with the plug for a little while before taking the toy out fully and watching how long it takes before his iris pulls tight. Then you press against his opening again, spreading him once more. Working the toy in and out, you feel the moment in which he gets used to it fully, relaxing all the way to allow almost effortless entry. Clearly, he's ready for more now. Reaching out blindly for the leather case, not wanting to take your eyes off his face to ensure that he's still got his eyes closed in ecstasy, you grab a larger plug. It is number four in the increasing size scale of the training plugs, but you decide that Monty will surely be able to take it. Shrugging off skipping one full size, you hold it ready in your hand until the smaller plug comes out of your fuck-buddy again, then thrust the new one into him instead suddenly and with no warning.";
 	WaitLineBreak;
-	[-------------------------------------]
-	say "     Now that the black plug is seated quite nicely inside the soldier, its flared base rests against his crack. His anxiety seems to lift now that it is all in and you can hear a sigh of relief from the tense man, followed by his muscles flexing experimentally around the sex toy. 'Doesn't feel half bad, you know. Just kinda full, but in a good way.' One of his hands moves to touch the plug, poking lightly at it, then taking hold of the base and tugging a little. 'Wow, it's stuck in there good, isn't it?' You comment that he shouldn't worry about that, what goes in will come out again without too much trouble. You take in your handiwork with a grin before you move aside a little and lay one hand on Monty's shoulder and pull him up to stand straight. As you do so, the full extent of his pleasure from your play becomes apparent, as his 10-inch cock is hard and erect. He's puzzled momentarily about what you want, but you quickly enlighten him by waving a hand and saying that he should walk a few steps with the plug in him. This extra training is supposed to make sure that his plug won't slip 'again' after all, in any situation.";
+	say "     'Whoah!' Monty grunts breathlessly, his slick hole flexing hard around the bigger girth of your toy as the muscular man writhes in the chair. Panting and throwing back his head, the soldier is more than turned on by your little surprise, with his changed rear entrance taking the new invader almost effortlessly. His nanite-enhanced pucker may look virginal and feels tight as a drum, but it clearly is ready to be used hard and deep. Looking up from Monty's buns, you see his 10-inch cock standing hard and erect, swaying with his movements and leaking a lot of pre-cum, drawing strings from its head to the firm abs of your fuck-buddy. 'Yeah, YEAH! Fuuuckkk!' he moans in a deep voice, gripping the arms of the chair tightly in the throes of lust as you begin to slide the plug in and out of him, plopping it past his pucker again and again.";
+	say "     It is fun to play with such a receptive partner like this, seeing his ecstatic reactions as you slam the rubber shaft home into his ass at varying angles or grip it by the base to push against Monty's inner walls. 'God yes! Fuck me with that thing! Deeper!' You happily comply, shafting the muscular soldier deeply while at the same time taking hold of his girthy erection. It is warm in your grasp, throbbing a little with the each new gush of pre-cum welling up from his cum-slit. Brushing your palm over the mushroom head, you wipe off the slick fluid and proceed to jerk him off, hand flashing up and down along his cock. With a lusty groan as you double up two ways of pleasuring him, Monty goes wild. His ever louder moans moans fill the office as lust makes him forget about any pretense of keeping quiet and he humps against your hand, the small of his back barely even touching the seat of the chair anymore.";
 	WaitLineBreak;
-	say "     Clearing his throat, Monty nods and marches forward, soon reaching the far wall and having to turn around to come back to you. As he does, your gaze is inevitably drawn down towards the rod of his erection, swinging back and forth and showing the wetness of precum at the tip. Following your gaze, the soldier becomes a bit embarrassed at the sign of his own arousal. Grabbing hold of the shaft, he flicks it lightly to the side sending a sting of pre flying to streak on the side of a desk. 'Err, I - um. This is harder than it was before, you know. With nothing else on my body to distract, this thing draws my attention all the time. It shifts a bit when I walk.' His brown skin getting a bit darker still as he blushes, Monty comes closer and takes position bent over the desk again, then says over his shoulder, 'Could you take it out please?'";
-	LineBreak;
-	say "     [bold type]How do you react to his request?[roman type][line break]";
-	say "     [link](1)[as]1[end link] - Work the toy inside him a little and give him a reacharound.";
-	say "     [link](2)[as]2[end link] - Replace the toy with your tongue, stimulating Monty while you jerk him off.";
-	say "     [link](3)[as]3[end link] - Just pull the plug and let him take care of himself.";
-	now calcnumber is 0;
-	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
-		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-			break;
-		else:
-			say "Invalid choice. Type [link]1[end link] to toy-fuck Monty a little, [link]2[end link] to eat him out or [link]3[end link] to just unplug him.";
-	if calcnumber is 1: [toy-fuck]
-		LineBreak;
-		say "     Taking hold of the toy's base, you slowly start to pull on it. There's a certain resistance, as if the man's hole doesn't want to let go, then his pucker expands a little to stretch around the butt plug becoming wider very swiftly just above the neck. His legs tremble a little from the sudden expansion of his inner muscle. Once you're past the thicker bit, it slides out of Monty almost on its own, slick and tapering as it is. Yet before it does so, you grind the toy back into his hole, aiming to rub Monty's prostate with its blunt tip. The black man lets out a surprised, pleasurable grunt, followed by a lusty groan as you reach around him to grasp his erection. Jerking his thick trouser-snake while pushing the plug past the quivering ring of his hole drives Monty wild. His moans fill the office as lust makes him forget about any pretense of keeping quiet and he humps against your hand.";
-		say "     It doesn't take all that long before the double stimulation overloads your 'trainee' and he soon grunts urgently, with the first heavy throb of his cock following right after. Craning your neck to look past his shoulder, you aim the black cock in your hand so the long spurts of his cum streak the flat expanse of the desk, again and again in an eruption of semen. Panting a little after his orgasm slowly ebbs off a little while later, Monty says, 'Man, full service with a happy ending, eh? Thanks, for this and for being here with me. As awkward as this is, I don't know what I'd do if I had to do the 'training' on my own.' After this, you rustle up a box of tissues and clean the used toy while Monty gets dressed. Packing away everything into the carrying case, you then lock it in a nearby drawer, giving Monty the key. Then you leave the office building and soon are back in the camp, with none of the other soldiers having any clue of what their comrade just did.";
-	else if calcnumber is 2: [eat out]
-		LineBreak;
-		say "     Taking hold of the toy's base, you slowly start to pull on it. There's a certain resistance, as if the man's hole doesn't want to let go, then his pucker expands a little to stretch around the butt plug becoming wider very swiftly just above the neck. His legs tremble a little from the sudden expansion of his inner muscle and you crouch behind the man, tracing your tongue over the skin being stretched outwards by your pull. His breath catches for a second at the stimulation while the pucker twitches, unable to contract any further around the sex toy. Then you're past the thicker bit, and it slides out of Monty almost on its own, slick and tapering as it is. Yet before Monty can react in any way to being free of the invader in his back door, you flick your tongue over his hole, worming its way inside an eye-blink later. The black man lets out a surprised, pleasurable grunt, followed by a lusty groan as you reach between his legs to grasp his erection. Jerking his thick trouser-snake while eating out the quivering ring of his hole drives Monty wild. His moans fill the office as lust makes him forget about any pretense of keeping quiet and he humps against your hand.";
-		say "     It doesn't take all that long before the double stimulation overloads your 'trainee' and he soon grunts urgently, with the first heavy throb of his cock following right after. Nose buried in Monty's crack as you continue to wriggle your tongue in his hole, you have no chance of aiming his eruption any which way, only realizing afterwards that he made quite a mess of a pushed-aside keyboard and some documents afterwards. Panting a little after the exertion of an orgasm, Monty says, 'Man, full service with a happy ending, eh? Thanks, for this and for being here with me. As awkward as this is, I don't know what I'd do if I had to do the 'training' on my own.' After this, you rustle up a box of tissues and clean the used toy while Monty gets dressed. Packing away everything into the carrying case, you then lock it in a nearby drawer, giving Monty the key. Then you leave the office building and soon are back in the camp, with none of the other soldiers having any clue of what their comrade just did.";
-	else if calcnumber is 3: [unplug]
-		LineBreak;
-		say "     Taking hold of the toy's base, you slowly start to pull on it. There's a certain resistance, as if the man's hole doesn't want to let go, then his pucker expands a little to stretch around the butt plug becoming wider just above the neck. Once you're past the thicker bit, it slides out of Monty almost on its own, slick and tapering as it is. Freed from the invader in his back door, the soldier stands up and lets out a relieved sigh, followed by the words, 'Man, thank you for being here with me. As awkward as this is, I don't know what I'd do if I had to do the 'training' on my own. I'll just go take care of this, be right back.' With a nod towards his crotch, he grabs his clothing and wanders off into a conference room nearby, pushing its door shut quietly behind himself. While he jerks off in there, you find a box of tissues and clean the used toy, then pack everything away in the case.";
-		say "     Exploring the office a little until Monty eventually returns, you show him a lockable drawer you found nearby that had the key sticking in it, and the two of you lock the toys in there before leaving the building once more. Soon, you're back in the camp, with none of the other soldiers having any clue of what their comrade just did.";
-	now Libido of Monty is 2; [had the talk about the special transport, put the toys to use]
-	now Asshole Tightness of Monty is 2; [expanded his horizons a bit]
+	say "     It doesn't take all that long before Monty lets out an urgent grunt of, 'Gonna cuuummmmMMMM!' just as the first heavy throb goes through his cock, transforming it into a fountain of thick, creamy cum. Aiming his black cock straight up, angled a little towards the panting man's face, you hose him with his own load, splattering abs, pecs and even his cheek with white streaks and splotches. He keeps coming for a long while as you do your best to prolong his breathtaking orgasm by continuing to play with the plug, leaving him drenched in cum in the end. 'God, that was something else! It just feels so nice to have that thing in me!' Hearing his gushing words, you tug a little at the plug, as if planning to pull it out, at which point Monty's eyes widen a little and he quickly adds, 'Leave it in a bit, okay?' Nodding and showing him a grin, you instead run your fingers over Monty's chest and start to scoop up his cum, then hold out your sperm-covered fingers to him.";
+	say "     In the blissed-out mood you've got him in right now, the black man goes ahead with what you want straight away, slurping his own load off your fingers as you feed it to him bit by bit. By the time you've got it more or less all cleaned up and are now just massaging in the remnants while feeling up Monty's muscular chest, he reaches out to touch your arm, patting it and giving you a squeeze. 'I wish I could say that we can go on and have another round, or something else, but honestly - I'm spent!' After a glance to a nearby wall clock, he adds, 'And I should get back to join the guys in the camp. Can't just vanish for too long before people might start asking questions.' Chuckling, you nod to him, then ask if he plans to remove the plug out before he goes. 'The black soldier draws in a shocked breath and replies, 'Oh shit! I - uhm, can you take it out? God, just imagine me accidentally walking out there with that thing in and making funny faces with every step!'";
+	WaitLineBreak;
+	say "     Joining Monty as he laughs a little at the idea, you can't help but think to yourself that it'd kinda be fun to see him trying to hide his excitement from walking around plugged. Then you push the thought out of your mind - for now - and gently withdraw the butt-plug from his rear end, watching in fascination as his stretched opening contracts in a rapid pace, soon looking as tight and unspoiled as before. Tapping the man's pucker lightly with the tip of your finger, you wink at him, then turn away to grab some paper towels and clean up the toys. Meanwhile, Monty gets up and walks over to where he left his clothes, wiggling his ass for you on the way once or twice with a smile thrown over his shoulder. While he gets dressed, you stash the toy set back in its case and put it in a drawer. After that, both of you leave the building through the crashed bus, soon after emerging into the open space between the tents of Camp Bravo where Monty usually hangs out.";
+	if "ToyPlay_1" is not listed in Traits of Monty:
+		add "ToyPlay_1" to Traits of Monty; [Memory for opening up the next toyplay scene]
+	NPCSexAftermath Monty receives "AssDildoFuck" from Player;
 
-to say MontySex9: [fucking Monty's ass]
+to say MontySex9: [toy workout2]
+	say "...";
+
+to say MontySex10: [fucking Monty's ass]
 	say "...";
 	NPCSexAftermath Monty receives "AssFuck" from Player;
 

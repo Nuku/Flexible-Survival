@@ -39,7 +39,7 @@ plnatarmor is a number that varies.	[ Used to hold the player's natural armor va
 plweaknatarmor is a number that varies.	[ Used to hold the player's weakened natural armor value. ]
 pethitbonus is a number that varies.	[ Used to total the player's pet's special hit bonuses. ]
 petchance is a number that varies.		[ Used to hold the player pet's/kids' chance to attack. ]
-monhitbonus is a number that varies.	[ Used to total the enemy's special hit bonuses. ]
+monhitbonus is a number that varies. [@Tag:NotSaved] [ Used to total the enemy's special hit bonuses. ]
 mondodgebonus is a number that varies.	[ Used to total the enemy's special dodge bonuses. ]
 monmindbonus is a number that varies.	[ Used to total the enemy's special mental/will bonuses. ]
 playerpoison is a number that varies.	[ Used to track how poisoned the player may be. ]
