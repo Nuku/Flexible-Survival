@@ -553,7 +553,7 @@ The size of Ponysuit is 3.
 The AC of Ponysuit is 0.
 The effectiveness of Ponysuit is 0.
 The placement of Ponysuit is "body".
-The descmod of Ponysuit is "Your body is encased in a full-body latex catsuit with an integrated ponyhood and hoof mitts, as well as a long tail swishing from your rear. The hidden wrist-zips on the sleeves ensure you can use your fingers when necessary".
+The descmod of Ponysuit is "Your body is encased in a full-body latex catsuit with an integrated ponyhood and hoof mitts, as well as a long tail swishing from your rear. The hidden wrist-zips on the sleeves ensure you can use your fingers when necessary.".
 The slot of Ponysuit is "body".
 the scent of Ponysuit is "Smells like rubber, and a hint of horse".
 
