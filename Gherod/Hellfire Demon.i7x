@@ -12,33 +12,33 @@ to say HellDemon wins:
 		say ""; [dealt with at the source]
 	else:
 		if HP of Player > 0: [player submits]
-			if gimp mask is equipped and Hellfire Club is not known:
+[			if gimp mask is equipped and Hellfire Club is not known:
 				say "     Unable to resist such a powerful presence, you immediately submit to the demon's will, his eyes following your movements with great satisfaction as you kneel down in front of him. 'That easy, huh... Master Mogdraz will indeed love you. Now be a good [boygirl] and stay still.' Following his words, you suddenly feel some kind of clothed bag covering your head before you're lifted from the ground into what seems to be the demon's shoulder. You can't see anything, but you know he's carrying you to some place. Each large step he takes only makes you [if player is submissive]more eager[else]more nervous[end if] to know what your next destination will be. But one thing you're certain, is that you're going to meet this Mogdraz person, whoever they might be.";
 				if companion of player is demonologist:
 					say "     You're also wondering why Xaedihr hasn't done anything to rescue you... Is that why you bring powerful companions with you? To see you being carried around - or worse! - by some random demonic creature?! He better be following you...";
 				say "[MogdrazIntro]";
-			else:
-				say "     Unable to resist such a powerful presence, you immediately submit to the demon's will, his eyes following your movements with great satisfaction, as you kneel down in front of him. 'Finally someone who knows their place. That's a good start, but let's see how much you can handle.' With that said, the hellish creature prepares to use you as he sees fit...";
-				if a random chance of 1 in 2 succeeds:
-					HellDemonBJForced;
-				else if player is male or player is neuter:
-					HellDemonAnalForced;
-				else if player is female:
-					HellDemonPussyForced;
+			else:]
+			say "     Unable to resist such a powerful presence, you immediately submit to the demon's will, his eyes following your movements with great satisfaction, as you kneel down in front of him. 'Finally someone who knows their place. That's a good start, but let's see how much you can handle.' With that said, the hellish creature prepares to use you as he sees fit...";
+			if a random chance of 1 in 2 succeeds:
+				HellDemonBJForced;
+			else if player is male or player is neuter:
+				HellDemonAnalForced;
+			else if player is female:
+				HellDemonPussyForced;
 		else: [player loses]
-			if gimp mask is equipped and Hellfire Club is not known:
+[			if gimp mask is equipped and Hellfire Club is not known:
 				say "     Unable to keep fighting the so mighty and powerful demon, you immediately give in to his will, his eyes following your movements with great satisfaction as you're forced to kneel down in front of him. 'Still putting up a fight, huh... Master Mogdraz will indeed love your spirit. Now be a good [boygirl] and stay still.' Following his words, you suddenly feel some kind of clothed bag covering your head before you're lifted from the ground into what seems to be the demon's shoulder. You can't see anything, but you know he's carrying you to some place. Each large step he takes only makes you [if player is submissive]more eager[else]more nervous[end if] to know what your next destination will be. But one thing you're certain, is that you're going to meet this Mogdraz person, whoever they might be.";
 				if companion of player is demonologist:
 					say "     You're also wondering why Xaedihr hasn't done anything to rescue you... Is that why you bring powerful companions with you? To see you being carried around - or worse! - by some random demonic creature?! He better be following you...";
 				say "[MogdrazIntro]";
-			else:
-				say "     Unable to continue fighting the so mighty and powerful demon, you immediately give in to his will, his eyes following your movements with great satisfaction as you're forced to kneel down in front of him. 'You know how to put up a fight! That left me all boned up... Perfect, I was just thinking about testing your holes.' With that said, the hellish creature prepares to use you as he sees fit...";
-				if a random chance of 1 in 2 succeeds:
-					HellDemonBJForced;
-				else if player is male or player is neuter:
-					HellDemonAnalForced;
-				else if player is female:
-					HellDemonPussyForced;
+			else:]
+			say "     Unable to continue fighting the so mighty and powerful demon, you immediately give in to his will, his eyes following your movements with great satisfaction as you're forced to kneel down in front of him. 'You know how to put up a fight! That left me all boned up... Perfect, I was just thinking about testing your holes.' With that said, the hellish creature prepares to use you as he sees fit...";
+			if a random chance of 1 in 2 succeeds:
+				HellDemonBJForced;
+			else if player is male or player is neuter:
+				HellDemonAnalForced;
+			else if player is female:
+				HellDemonPussyForced;
 
 to HellDemonBJForced:
 	project Figure of HellfireDemon_hard_icon;
@@ -333,9 +333,10 @@ to say HellDemon Desc:
 	else: [standard scene]
 		project Figure of HellfireDemon_clothed_icon;
 		say "     Standing in front of you is yet another intimidating creature of Hell. A deep crimson, tall and powerful demon, with large tauric horns on the top of his head, approaches you from the darkness. Your eyes inevitably land on the massive bulge barely contained by a leather jockstrap, jiggling slightly at each step that he takes. On top of that, his athletic body is covered in muscle, with a simple harness around his hairy pectorals, and while he generally looks more human in appearance than the brutish of demons, his dark sharp claws still prove a threat to you. With a grin on his face, he speaks to you:[line break]";
-		if gimp mask is equipped and Hellfire Club is not known:
-			say "     'A gimp mask? Such depravity... so delicious! [bold type]You'll make a great slave candidate for Master Mogdraz![roman type] Be a good [boygirl] and I'll take you there. Or don't, and I'll drag you with me anyway! He will be very... very pleased to meet you.' With this, the demon lunges himself at you.";
-		else if BodyName of Player is "Hellfire Demon" and FaceName of Player is "Hellfire Demon": [player looks like a Hellfire Demon]
+[		if gimp mask is equipped and Hellfire Club is not known:
+			say "     'A gimp mask? Such depravity... so delicious! [bold type]You'll make a great slave candidate for Master Mogdraz![roman type] Be a good [boygirl] and I'll take you there. Or don't, and I'll drag you with me anyway! He will be very... very pleased to meet you.' With this, the demon lunges himself at you.";]
+		[else ]
+		if BodyName of Player is "Hellfire Demon" and FaceName of Player is "Hellfire Demon": [player looks like a Hellfire Demon]
 			say "     'Fancy meetin' you here! Did you get fucked so much that you became one of us? Should've just asked Master Mogdraz for a joining pass, I'm sure he'd provide you with enough juice... in exchange for your soul. Now be a good lad and do what you're told, or I'll make you.' With this, the demon lunges himself at you.";
 		else:
 			say "     'Oh... Are you lost? Wrong time to be walking this side of the streets... Master needs more slave candidates, I just deliver. Though I'll enjoy testing you first.' With this, the demon lunges himself at you.";

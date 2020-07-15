@@ -261,12 +261,6 @@ Instead of Resolving a Horsegarden:
 
 Section 12 - Transformationledger
 
-[Resolution of Transformationledger:
-0 - Not encountered
-1 - Encountered but not resolved
-2 - Tore out the page
-3 - Cut out the pgae]
-
 Table of GameEventIDs (continued)
 Object	Name
 Transformationledger	"Transformationledger"
@@ -275,76 +269,9 @@ Transformationledger is a situation.
 The sarea of Transformationledger is "Stable".
 
 Instead of Resolving a Transformationledger:
-	if Resolution of Transformationledger is 0:
-		say "     While looking through the Stables['] halls, you find yourself at a room with a large desk and a large leather bound book sitting open atop it. Out of curiosity, you move into the room and start to thumb through the pages of the strange book, only to discover that it's a record of the once human names and their new whorse names of many of the Stables['] occupants, along with the transformations of the whorses working there. The descriptions that stand out are the ones that seem to be special orders, like the horse-hyena hybrid slut ordered by the hyena gang or the hawk-horse hybrid. Shuddering at some of the descriptions and finding yourself aroused at others, you flip to the last page before putting the book away, and you find your name listed in the last entry, and next to it is the name Obsidian. Following that, you see the words 'new fetishes,' followed by leather, rubber, bondage... and an invoice that describes an outfit being made for you.";
-		say "     As you struggle to contemplate the idea of yourself being locked in bondage gear and used as a whorse, you can feel your humanity slipping away as a small, rebellious part of you suggests that it might not be such a bad thing, being transformed and used by all these sexy, lovely stallions. Around you, you can hear the Stables grow quiet, seemingly not a soul nearby. If you're quick, you have the opportunity to tear out the last page from the book, although someone will probably notice the sabotage and come investigate.";
-		SanLoss 15;
-		now Resolution of Transformationledger is 1;
-	else:
-		say "     Coming back across a familiar room, you note that the leather bound book is still lying open on top of the desk, now with additional entries inside. It seems that the management of this place is intent upon vastly expanding its membership, although you note with relief that your own entry has yet to be modified. You find yourself confronted with the same dilemma as before: do you want to risk tearing out the page and the consequences of doing so, or leave the book alone?";
-	LineBreak;
-	[]
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Tear page";
-	now sortorder entry is 1;
-	now description entry is "Tear out the page with your hands";
-	[]
-	if carried of silver knife > 0 or carried of combat knife > 0 or carried of pocketknife > 0:
-		choose a blank row in table of fucking options;
-		now title entry is "Cut page";
-		now sortorder entry is 2;
-		now description entry is "Cut out the page with a sharp edge";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Come back later";
-	now sortorder entry is 3;
-	now description entry is "Leave and come back once you've had more time to think";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Leave permanently";
-	now sortorder entry is 4;
-	now description entry is "Leave and never return";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
-				now sextablerun is 1;
-				if (nam is "Tear page"):
-					say "     Using your bare hands, you rip the page out as cleanly as you can, but a jagged line of paper clearly marks the former location of the missing sheet. No time to do a neater job, for you can hear the sound of hooves clopping on the floorboards! Quickly, you slip out of the room and around the corner, paper stashed in your bag. Hmm... there seems to be a token attached to the page, specifying a location and a code. Perhaps you should find someone who can figure out what this means.";
-					now Thirst of Fancy is 1;
-					now Resolution of Transformationledger is 1;
-					now Transformationledger is resolved;
-				if (nam is "Cut page"):
-					say "     You carefully run the blade neatly along the spine of the book and begin to tear along the line left behind, leaving almost no discernable trace of the missing page. Before you can finish, however, a guard passes by the open door and, stopping, notices you at the desk. 'Hey! You're not supposed to be here,' he growls as he strides into the room. Looks like you're going to have to fight!";
-					challenge "Horseman";
-					if fightoutcome >= 10 and fightoutcome <= 19: [player won]
-						say "     With the distraction taken care of, you resume your prior work, and in no time at all you have that page neatly cut out and stuffed inside your bag. Hmm... there seems to be a token attached to the page, specifying a location and a code. Perhaps you should find someone who can figure out what this means.";
-						now Thirst of Fancy is 1;
-						now Resolution of Transformationledger is 2;
-						now Transformationledger is resolved;
-					else if fightoutcome >= 20 and fightoutcome <= 29:	[player lost]
-						say "     Beaten and humiliated, you find yourself being bodily thrown from the room, crashing onto the floor outside with a painful crunch. You scramble to put distance between yourself and your opponent - you'll have to come back later for another opportunity to erase your name from that ledger.";
-					else if fightoutcome >= 30:	[player fled]
-						say "     Discretion may be the better part of valor, but unfortunately you've lost your opportunity to remove your name from the ledger. You'll have to come back later if you want to try again.";
-				if (nam is "Come back later"):
-					say "     You don't want to risk drawing unwanted attention for the time being, so you slip out of the room again and make a note of its location for later.";
-				if (nam is "Leave permanently"):
-					say "     The thought of being trapped in this place is unsettling enough without seeing what they have planned for you in painful detail! Your legs can't take you out of this accursed room quickly enough.";
-					now Transformationledger is resolved;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	say "     While looking through the Stables['] halls, you find yourself at a room with a large desk and a large leather bound book sitting open atop it. Out of curiosity, you move into the room and start to thumb through the pages of the strange book, only to discover that it's a record of the once human names and their new whorse names of many of the Stables['] occupants, along with the transformations of the whorses working there. The descriptions that stand out are the ones that seem to be special orders, like the horse-hyena hybrid slut ordered by the hyena gang or the hawk-horse hybrid. Shuddering at some of the descriptions and finding yourself aroused at others, you flip to the last page before putting the book away, and you find your name listed in the last entry, and next to it is the name Obsidian. Following that, you see the words 'new fetishes,' followed by leather, rubber, bondage... and an invoice that describes an outfit being made for you. With shaking hands, you put the book down, feeling slightly less human.";
+	SanLoss 15;
+	now Transformationledger is resolved;
 
 
 Stable Related Events ends here.

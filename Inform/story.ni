@@ -1102,12 +1102,12 @@ Definition: A person (called x) is naked:
 	else:
 		no;
 
-Definition: A person (called x) is gimpy:
+[Definition: A person (called x) is gimpy:
 	if gimp mask is equipped:
 		yes;
 	else:
 		no;
-
+]
 Definition: A person (called x) is conformist:
 	if "Conformist" is listed in feats of x:
 		yes;
@@ -6426,7 +6426,7 @@ Include Qytat Shifters by Hellerhound.
 Include Random Events by Hiccup.
 Include Rane Events by KorekaBii.
 Include Recordings by Wahn.
-Include Red Events by Stripes.
+[Include Red Events by Stripes.]
 Include Reservoir by Kaleem Mcintyre.
 Include Rubber Sneakers by Kernog.
 Include Satyr Frat by Wahn.

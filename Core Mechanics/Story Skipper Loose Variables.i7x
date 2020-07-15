@@ -2577,8 +2577,8 @@ to NumberVariableSave:
 			now NumberVarValue entry is stiffedpayment;
 		-- "strangebottledrink":
 			now NumberVarValue entry is strangebottledrink;
-		-- "stripbarcounter":
-			now NumberVarValue entry is stripbarcounter;
+[		-- "stripbarcounter":
+			now NumberVarValue entry is stripbarcounter;]
 		-- "strongbacked":
 			now NumberVarValue entry is strongbacked;
 		-- "struggleatt":
@@ -6253,8 +6253,8 @@ to VariableNumberLoad:
 					now stiffedpayment is numberVarValue entry;
 				-- "strangebottledrink":
 					now strangebottledrink is numberVarValue entry;
-				-- "stripbarcounter":
-					now stripbarcounter is numberVarValue entry;
+[				-- "stripbarcounter":
+					now stripbarcounter is numberVarValue entry;]
 				-- "strongbacked":
 					now strongbacked is numberVarValue entry;
 				-- "struggleatt":
