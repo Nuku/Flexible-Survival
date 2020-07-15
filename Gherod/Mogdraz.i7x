@@ -558,11 +558,11 @@ Section X - Dev Cheats
 [***********************************************************]
 [***********************************************************]
 
-GimpMaskSkip is an action applying to nothing.
+[GimpMaskSkip is an action applying to nothing.
 Understand "GiveGimpMask" as GimpMaskSkip.
 
 Carry out GimpMaskSkip:
 	ItemGain gimp mask by 1 silently;
-	say "You have the gimp mask. Go submit to a hellfire demon.";
+	say "You have the gimp mask. Go submit to a hellfire demon.";]
 
 Mogdraz ends here.

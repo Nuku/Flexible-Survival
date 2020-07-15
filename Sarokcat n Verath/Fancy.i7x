@@ -437,30 +437,6 @@ the scent of leather duster is "The leather smells vaguely of saddle oil.".
 
 
 
-<<<<<<< HEAD
-Section 7 - Ponysuit
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"Ponysuit"	"A full-body latex catsuit with a pony-shaped hood and hoof-shaped mitts attached, restricting the fingers of the wearer. Comes with a long tail made of synthetic fibre."	10	Ponysuit
-
-Ponysuit is a grab object.
-Ponysuit is equipment.
-It is not temporary.
-The plural of Ponysuit is false.
-The taur-compatible of Ponysuit is false.
-The size of Ponysuit is 3.
-The AC of Ponysuit is 0.
-The effectiveness of Ponysuit is 0.
-The placement of Ponysuit is "body".
-The descmod of Ponysuit is "Your body is encased in a full-body latex catsuit with an integrated ponyhood and hoof mitts, as well as a long tail swishing from your rear. The hidden wrist-zips on the sleeves ensure you can use your fingers when necessary.".
-The slot of Ponysuit is "body".
-the scent of Ponysuit is "Smells like rubber, and a hint of horse.".
-
-
-
-=======
->>>>>>> parent of 5b280e2de... Added new quest to Stables
 Section X - Variables
 
 
