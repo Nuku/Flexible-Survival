@@ -602,6 +602,7 @@ Instead of resolving a Business as Usual:
 
 
 
+<<<<<<< HEAD
 Section 9 - Kink Warehouse
 
 Table of GameEventIDs (continued)
@@ -696,4 +697,6 @@ Instead of resolving a Kink Warehouse:
 	else:
 		say "     You happen across a medium-sized warehouse on the outskirts of the Red Light District, bustling with activity as workers carry heavy loads of crates, boxes and other assorted packages in and out through the open doors. Any attempt to investigate is blocked, however, by a pair of burly-looking stallions standing guard to either side of the doors, clearly refusing to let anyone who isn't a worker into the warehouse.";
 
+=======
+>>>>>>> parent of 5b280e2de... Added new quest to Stables
 Red Events ends here.
