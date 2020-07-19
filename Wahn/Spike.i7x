@@ -327,7 +327,7 @@ to say SpikeTalkMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "The name he should address you by";
 	now sortorder entry is 1;
-	now description entry is "Ask about the name or title Spike should use for you";
+	now description entry is "Tell Spike the name or title he should use for you";
 	[]
 	if Spike is visible:
 		choose a blank row in table of fucking options;
@@ -494,7 +494,7 @@ to say SpikeTalk9: [cum request]
 			say "     As you step up and ask Spike straight out to give you some cum, you notice his Adam's Apple bounce a little as he swallows. 'Er, of course [SpikePlayerAddress]. Just give me a moment alone, alright?' With that said, he quietly takes the empty plastic bottle you dig out of your pack and vanishes into a quiet corner, getting busy stroking himself. It doesn't take all that long before he returns, with the bottle capped and containing his 'donation' as per your request. Pulling out a pen, you scribble on the label of the bottle what is in there, then add it to your pack.";
 		else if Libido of Spike < 60: [forced into subby sex]
 			say "     As you step up and command that Spike give you some cum, milked into a plastic bottle, you notice his Adam's Apple bounce a little as he swallows. 'Er, of course [SpikePlayerAddress]. Just give me a moment alone, alright?' As he reaches out for the bottle, you smack his muzzle with it and in a harsh tone demand to know if you ordered him to go into a corner to do his business. 'No, I - I thought...' the young man starts, but seeing the unimpressed sneer that this brings to your face, he falls silent again. Without another word, he quietly undoes the button and zipper of his pants, pushing them down to start rubbing his sheath and tease out the length of his manhood. Nervously glancing up at you from having his head lowered, he gets himself fully hard before much longer.";
-			say "     You step up to the slender, toned body of your dobie companion and bump his hand aside to stroke he red shaft of his canine cock a few times, then grab bim by the balls and nod for him to proceed. Rolling the furry cum-factories between your fingers and giving them firm, but not actually painful squeezes, you keep Spike literally well in hand while he jerks himself off, holding the empty bottle ready. You can't help but smile at the control you have over the young man, revelling in your power while he milks himself dutifully. The strokes along his knotted length come faster and faster before long, and he lets out a grunt, then starts to blast his seed into the bottle. Throb after throb of rich canine spunk lands in the plastic container, filling about the lower third of the small bottle before his orgasm ebbs off. Pulling it from his grasp with a casual command to clean himself up, you turn your back on Spike and label the bottle, then add it to your pack.";
+			say "     You step up to the slender, toned body of your dobie companion and bump his hand aside to stroke he red shaft of his canine cock a few times, then grab him by the balls and nod for him to proceed. Rolling the furry cum-factories between your fingers and giving them firm, but not actually painful squeezes, you keep Spike literally well in hand while he jerks himself off, holding the empty bottle ready. You can't help but smile at the control you have over the young man, revelling in your power while he milks himself dutifully. The strokes along his knotted length come faster and faster before long, and he lets out a grunt, then starts to blast his seed into the bottle. Throb after throb of rich canine spunk lands in the plastic container, filling about the lower third of the small bottle before his orgasm ebbs off. Pulling it from his grasp with a casual command to clean himself up, you turn your back on Spike and label the bottle, then add it to your pack.";
 		ItemGain doberman male cum by 1;
 		now lastfuck of Spike is turns;
 
@@ -841,6 +841,10 @@ to say SpikePlayerAddress:
 			say "Oyabun";
 		-- 6:
 			say "Chief";
+		-- 7:
+			say "Sir";
+		-- 8:
+			say "Hoss";
 		-- 11:
 			say "Daddy";
 		-- 12:

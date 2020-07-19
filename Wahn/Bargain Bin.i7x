@@ -194,6 +194,7 @@ carry out bargainhunting:
 					ItemGain food by 1;
 					ItemGain water bottle by 1;
 			else:
+				[TODO: Declare an upper limit to the Dex Gains]
 				say "     Searching through the bin again, you blink as your hand finds a small doll-sized pack and some accessories. Pulling them out, you stare at the items in puzzlement for a minute, before passing them along to your miniature doll self to play with. It never hurts to accessorize right?";
 				LineBreak;
 				say "[bold type]The dexterity of your strange doll increases by 1![roman type][line break]";
@@ -521,7 +522,7 @@ strange doll is a part of the player.
 understand "Your Doll-Twin" as strange doll.
 understand "Doll-Twin" as strange doll.
 understand "Doll" as strange doll.
-printed name of strange doll is "your doll-twin".
+printed name of strange doll is "Your doll-twin".
 The weapon damage of strange doll is 7.
 The level of strange doll is 1.
 The Dexterity of strange doll is 10.

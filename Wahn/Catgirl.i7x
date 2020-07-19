@@ -275,6 +275,85 @@ When Play begins:
 ]
 [ Row used to designate any special combat features, "default" for standard combat. ]
 
+
+to say Catboy_Loses:
+	say "...";
+
+to say Catboy_Wins:
+	say "...";
+
+to say Catboy_Desc:
+	say "...";
+
+Table of Random Critters (continued)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of Random Critters;
+	now NewTypeInfection entry is false;
+	now Species Name entry is "Catfolk";
+	add "Catboy" to infections of FelineList;
+	add "Catboy" to infections of FurryList;
+	add "Catboy" to infections of NatureList;
+	add "Catboy" to infections of FemaleList;
+	add "Catboy" to infections of BarbedCocklist;
+	add "Catboy" to infections of BipedalList;
+	add "Catboy" to infections of FeralmindList;
+	add "Catboy" to infections of TailList;
+	now Name entry is "Catboy";
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now attack entry is "[one of]He rakes you with his claws, leaving long bloody marks on your body.[or]Sharp fangs pierce your skin as the catboy bites you.[or]With a lightning-quick move, he vaults over you, dragging a clawed hand down your back as he lands.[at random]";
+	now defeated entry is "[Catboy_Loses]";
+	now victory entry is "[Catboy_Wins]";
+	now desc entry is "[Catboy_Desc]";
+	now face entry is "a mixture of cat and human, with rather sharp features and a mouth full of pointy teeth. Vertically slitted eyes and large cats ears relatively high on your head complete the picture";
+	now body entry is "very slender and sleek, built for speed and agility. Your hands are mostly human, although equipped with sharp claws, while your long legs end in more paw-like digitigrade feet";
+	now skin entry is "black, soft-furred";
+	now tail entry is "You have a long, mobile tail over the tight buns of your behind. It's pretty useful for helping you hold your balance in any situation.";
+	now cock entry is "feline, spined";
+	now face change entry is "it reshapes itself, giving you sharp features and a pretty pointy chin. You feel your mouth filling with a predator's sharp teeth as your ears grow and migrate further up your head";
+	now body change entry is "you fall to the ground, your chest and limbs reforming into a slender, sleek new shape. Your hands acquire sharp claws, while your feet take the shape of digitigrade paws";
+	now skin change entry is "short black fur sprouts all over your body";
+	now ass change entry is "it becomes tight and firmly muscled. This is followed by a very strange feeling as a long tail rapidly forms above it, making you stumble around for a moment before you adjust to using it for balance";
+	now cock change entry is "it takes on a more feline shape, turning deep red in color and developing lots of tiny spines";
+	now str entry is 12;
+	now dex entry is 22;
+	now sta entry is 14;
+	now per entry is 20;
+	now int entry is 12;
+	now cha entry is 12;
+	now sex entry is "Female";          [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now HP entry is 60;                 [ How many HP has the monster got? ]
+	now lev entry is 8;                 [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
+	now wdam entry is 8;                [ Amount of Damage monster Does when attacking.]
+	now area entry is "Nowhere";        [ Current options are 'Outside' and 'Mall'. Case sensitive]
+	now Cock Count entry is 1;          [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now Cock Length entry is 7;         [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 2;           [ Size of balls ]
+	now Nipple Count entry is 2;        [ Number of nipples infection will give you (males have nipples too) ]
+	now Breast Size entry is 0;         [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 0;          [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now Cunt Depth entry is 0;          [ Length of female sex infection will attempt to give you. ]
+	now Cunt Tightness entry is 0;      [ Width of female sex infection will try and give you ]
+	now libido entry is 25;             [ Amount player Libido will go up if defeated ]
+	now loot entry is "";               [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
+	now lootchance entry is 0;          [ Chance of loot dropping 0-100 ]
+	now scale entry is 2;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]sleek[or]flexible[or]slender[at random]";
+	now type entry is "feline";
+	now magic entry is false;           [ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;       [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;
+	now Cross-Infection entry is "Catgirl"; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now DayCycle entry is 0;      [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
+
+
 instead of navigating Grey Abbey Library while (HP of Fiona is 3):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;

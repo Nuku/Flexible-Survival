@@ -554,50 +554,6 @@ carry out TagListReadout:
 	say "FirebreathList: [Infections of FirebreathList][line break][line break]";
 	say "TailweaponList: [Infections of TailweaponList][line break][line break]";
 
-
-
-
-The File of PetLevelTest (owned by another project) is called "PetLevelTest".
-
-Table of Pettest
-Name (text)	Starting Level(number)	Starting Damage(number)	Starting Dex(number)	Lvl 20 Damage(number)	Lvl 20 Dex(number)	Lvl 40 Damage(number)	Lvl 40 Dex(number)
---	--	--	--	--	--	--	--
-with 50 blank rows.
-
-PetTest is an action applying to nothing.
-
-understand "PetTest" as PetTest.
-
-check PetTest:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
-
-carry out PetTest:
-	repeat with x running through pets: [rebuilds the table of GameCharacters with current data]
-		choose a blank row of Table of Pettest;
-		let security variable be 0;
-		if x is nullpet:
-			next;
-		now x is companion of Player;
-		now Name Entry is printed name of x;
-		now Starting Level Entry is level of x;
-		now Starting Damage Entry is weapon damage of x;
-		now Starting Dex Entry is Dexterity of x;
-		now x is companion of Player;
-		while (level of x < 19 and security variable < 100):
-			Pet Level Up;
-			increase security variable by 1;
-		now Lvl 20 Damage Entry is weapon damage of x;
-		now Lvl 20 Dex Entry is Dexterity of x;
-		while (level of x < 39 and security variable < 100):
-			Pet Level Up;
-			increase security variable by 1;
-		now Lvl 40 Damage Entry is weapon damage of x;
-		now Lvl 40 Dex Entry is Dexterity of x;
-	sort Table of Pettest;
-	write File of PetLevelTest from the Table of Pettest;
-
 EndingTableReadout is an action applying to nothing.
 
 understand "EndingTableReadout" as EndingTableReadout.
@@ -746,6 +702,21 @@ carry out levelcheat:
 	level up;
 	decrease score by level of the player times level of the player;
 
+[Gives the player all pets]
+PetTest is an action applying to nothing.
+
+understand "AllPetTest" as PetTest.
+
+check PetTest:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out PetTest:
+	repeat with x running through pets: [rebuilds the table of GameCharacters with current data]
+		if x is nullpet:
+			next;
+		now x is tamed;
 
 [Allows the player to change their body size without an infection. Useful for testing some scenes.]
 PlayerSizeChange is an action applying to nothing.

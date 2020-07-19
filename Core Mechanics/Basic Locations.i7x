@@ -127,7 +127,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 Main & 7th Street	"Main & 7th Street"
 
-The description of Main & 7th Street is "[7thMainDesc]".
+The description of Main & 7th Street is "[7thMainDesc]". It is fasttravel.
 The earea of Main & 7th Street is "Outside".
 
 after looking while player is in Main & 7th Street:
@@ -509,6 +509,9 @@ Red Apartment Building	"Red Apartment Building"
 Red Apartment Building is a room. It is fasttravel.
 The description of Red Apartment Building is "[RedAptDesc]".
 The earea of Red Apartment Building is "Outside".
+
+to say RedAptDesc:
+	say "     Standing in a somewhat out of the way neighborhood, a red-tinted apartment building rises before you, four stories tall. A fire escape clings to the outside of its structure, its retracting lowest set of stairs out of reach due to sturdy springs holding it up. In the area around the building, you can see several groups of partially infected people, mooching around and murmuring as they give you looks.";
 
 Table of GameRoomIDs (continued)
 Object	Name

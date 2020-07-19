@@ -200,6 +200,7 @@ object	name
 Honey	"Honey"
 
 Honey is a woman.
+ScaleValue of Honey is 2. [human sized]
 The description of Honey is "[HoneyDesc]".
 
 instead of sniffing Honey:

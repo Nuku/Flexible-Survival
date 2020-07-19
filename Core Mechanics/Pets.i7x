@@ -54,12 +54,16 @@ understand "companion" or "companions" as petcounting.
 
 Carry out petcounting:
 	say "Companions: ";
+	let PetList be a list of texts;
+	repeat with Pet running through tamed pets:
+		add Printed Name of Pet to PetList;
+	sort PetList;
 	if hypernull is 0:
-		repeat with pet running through tamed pets:
-			say "[link][pet][as]companion [pet][end link] ";
+		repeat with Pet running through PetList:
+			say "[link][Pet][as]companion [Pet][end link] ";
 		LineBreak;
 	else:
-		say "[list of tamed pets]";
+		say "[PetList]";
 	if companion of Player is nullpet:
 		say "Active Companion: NONE[line break]";
 	else:
@@ -67,6 +71,7 @@ Carry out petcounting:
 	say "Companion COMMANDS:[line break]";
 	say "[bold type]companion <name>[roman type] - Make the named companion your active one.";
 	say "[bold type]companion dismiss[roman type] - Send away your companion (for now).";
+	say "[link][bold type]companion overview[roman type][end link] - Display a table with the stats of all currently available companions.";
 
 carry out calling a pet (called x):
 	if companion of Player is not x:
@@ -78,6 +83,47 @@ carry out calling a pet (called x):
 	else:
 		say "They are already your current companion.";
 
+Table of PetOverviewList
+Name (text)	Lvl(number)	Dmg(number)	Dex(number)
+--	--	--	--
+with 50 blank rows.
+
+PetOverview is an action applying to nothing.
+
+understand "pet overview" as PetOverview.
+understand "companion overview" as PetOverview.
+
+carry out PetOverview:
+	let PetNumber be 0;
+	blank out the whole of Table of PetOverviewList; [empty out all old data]
+	repeat with Pet running through tamed pets:
+		choose a blank row in the Table of PetOverviewList;
+		now Name Entry is Printed Name of Pet;
+		now Lvl Entry is Level of Pet;
+		now Dmg Entry is Weapon Damage of Pet;
+		now Dex Entry is Dexterity of Pet;
+		increase PetNumber by 1;
+	if PetNumber is 0:
+		say "You have no companions!";
+	else:
+		sort the Table of PetOverviewList in Name order;
+		let PetOverviewName be "";
+		let PetOverviewLvl be "";
+		let PetOverviewDmg be "";
+		let PetOverviewDex be "";
+		say "[fixed letter spacing]";
+		say "Name                 | Lvl | Dmg | Dex |[line break]";
+		say "---------------------|-----|-----|-----|[line break]";
+		repeat with N running from 1 to the number of filled rows in the Table of PetOverviewList:
+			choose row N in the Table of PetOverviewList;
+			now PetOverviewName is "[Name Entry]";
+			now PetOverviewLvl is "[Lvl Entry]";
+			now PetOverviewDmg is "[Dmg Entry]";
+			now PetOverviewDex is "[Dex Entry]";
+			say "[PetOverviewName formatted to 20 characters] | [PetOverviewLvl formatted to 3 characters] | [PetOverviewDmg formatted to 3 characters] | [PetOverviewDex formatted to 3 characters] |[line break]";
+		say "[variable letter spacing]";
+
+[
 Table of GameCharacterIDs (continued)
 object	name
 Latex Vixen	"Latex Vixen"
@@ -97,6 +143,6 @@ instead of sniffing the Latex Vixen:
 
 To say Vixattack:
 	say "Not coded yet.";
-
+]
 
 Pets ends here.

@@ -2135,6 +2135,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "beige bermuda shorts"	"A pair of wide beige shorts. They look fitting to be worn by a tourist or vacationer. Judging by the shorts appearance, it's [']unisex['] and pretty [']basic['] looking."	1	 beige bermuda shorts
 "flowered bermuda shorts"	"A pair of wide shorts covered in patterns of leaves and bright flowers. They look fitting to be worn by a tourist or vacationer. Judging by the shorts appearance, it's [']feminine['] and pretty [']basic['] looking."	1	 flowered bermuda shorts
+"striped board shorts"	"A pair of striped board shorts. They have three broad stripes that are red, white, and beige. Judging by the appearance of the shorts, they're [']masculine['] and pretty [']sporty['] looking."	1	striped board shorts
 
 beige bermuda shorts is a grab object.
 beige bermuda shorts is equipment.
@@ -2165,6 +2166,21 @@ The placement of flowered bermuda shorts is "body".
 The descmod of flowered bermuda shorts is "A pair of colorful flowered bermuda shorts cover your hips and legs. With their bright and colorful patterns, they'll surely draw attention to you.".
 The slot of flowered bermuda shorts is "legs".
 the scent of flowered bermuda shorts is "The shorts have the typical faintly musky scent of clothing that has been worn a few days. But surely they're clean enough to wear another week or two at least...".
+
+striped board shorts is a grab object.
+striped board shorts is equipment.
+It is not temporary.
+The plural of striped board shorts is true.
+The taur-compatible of striped board shorts is false.
+The size of striped board shorts is 3.
+The AC of striped board shorts is 0.
+The effectiveness of striped board shorts is 0.
+The GA of striped board shorts is 0.
+The Traits of striped board shorts is {"sporty"}.
+The placement of striped board shorts is "body".
+The descmod of striped board shorts is "A pair of striped board shorts cover your hips and thighs. They have three broad stripes that are red, white, and beige.".
+The slot of striped board shorts is "legs".
+the scent of striped board shorts is "The shorts smell faintly of the ocean.".
 
 Section 15 - Skirts
 
