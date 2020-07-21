@@ -1829,6 +1829,8 @@ to NumberVariableSave:
 			now NumberVarValue entry is Lost;
 		-- "losttoalphahusky":
 			now NumberVarValue entry is losttoalphahusky;
+		-- "lostToHorseman":
+			now NumberVarValue entry is lostToHorseman;
 		-- "LostToZebra":
 			now NumberVarValue entry is LostToZebra;
 		-- "loversbench":
@@ -5503,6 +5505,8 @@ to VariableNumberLoad:
 					now Lost is numberVarValue entry;
 				-- "losttoalphahusky":
 					now losttoalphahusky is numberVarValue entry;
+				-- "lostToHorseman":
+					now lostToHorseman is numberVarValue entry;
 				-- "LostToZebra":
 					now LostToZebra is numberVarValue entry;
 				-- "loversbench":

@@ -877,6 +877,7 @@ Name(text)	Type(text)
 "looknow"	"number"
 "Lost"	"number"
 "losttoalphahusky"	"number"
+"lostToHorseman"	"number"
 "LostToZebra"	"number"
 "loversbench"	"number"
 "lustadjust"	"number"
