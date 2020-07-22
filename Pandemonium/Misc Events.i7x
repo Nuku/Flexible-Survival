@@ -1,6 +1,6 @@
 Misc Events by Pandemonium begins here.
 
-[ This file is for updating older events. ]
+"Adds or revises miscellaneous events to Flexible Survival."
 
 Section 1 - Museum Events
 
