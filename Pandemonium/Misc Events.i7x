@@ -26,33 +26,76 @@ Instead of Resolving Visceral Painting:
 		say "     As you look at the plaque, something on the wall moves in the corner of your eye. You look up and don't notice anyone. You look around -- at the far wall, the dark corner, even the small bench nearby -- but don't see anyone. You look back to the painting and it seems to have moved. The huntsmen are upon their prey, who has gotten more mud on his legs. They're completely passed the tree. Was the painting like this before? The young man has blood trickling down his face and the master hunstman, the cleanest man in the image before you, presses his heel into the young man's crotch. The other hunters have whipped out their dicks and are clearly about to have their way with the young man. You aren't sure if you even remember what this painting looked like a few seconds ago, but you thought the hunters were chasing someone, as opposed to this image in front of you. Deciding that you must be misremembering, you take your leave, hoping to find something useful in the remnants of the museum.";
 	now Visceral Painting is resolved;
 
+
 Section 2 - Beach Events
 
-[Tide Pool Trouble] [COMPLETED]
+Table of GameEventIDs (continued)
+Object	Name
+Tide Pool Trouble	"Tide Pool Trouble"
+
+Tide Pool Trouble is a situation.
+The sarea of Tide Pool Trouble is "Beach".
+
+Instead of resolving a Tide Pool Trouble:
+	say "     As you meander down the beach, waves crash against rocks not too far ahead of you. The rocks litter this part of the shore. You cannot help but walk on some, but most of these are beter described as boulders. Not much farther ahead, there are various boulders jutting out from the shore, towering above you the size of small buildings. You see the tide pools at your feet as you walk towards these towering boulders. Small fish swim as you move from rock to rock. As you approach the tallest rock, you notice something in one of the tide pools under that great boulder causes the water to splash out vigorously. The water seems to bubble out from the shallow water. Could this be the entrance to some underwater cavern? The water seems to positively come alive as you approach.";
+	say "     [bold type]Do you inspect the roiling tide pool?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Get closer to the strange waters.";
+	say "     ([link]N[as]n[end link]) - Decide to walk back the other way.";
+	if player consents:
+		LineBreak;
+		say "     You slowly move toward the tide pool. The water is white from how vigorously it roils. You are closer now, close enough to see what's in the pool. There's a figure you can just barely make out in the white waters. It looks... it looks like... a slithering ball of tentacles! Or wait, no, that's just a snake coiling around something beneath the surface of the water. It's chasing something under there! Before you have a chance to back away, a rat darts out of the pool, heading right for you! The snake, in turn, slithers out of the water. You tense up, ready to fight, to defend yourself against this reptilian predator. But seeing you, the little rat hesitates, giving the snake all the time it needs to catch its prey. You stand there, almost in shock, as the snake devours the rat.";
+		say "     Once it completely swallows its prey, the snake slithers onto a nearby rock away from the shore to digest the poor rat. Looking back at the tide pool, you see that its waters are calm once more. Strange how the pool returns to normal so quickly. Now that nothing's stirring up the water, you can see some colorful fabric at the bottom of the pool. After checking to make sure nobody's around to pounce on you, you bend down to the tide pool and stick your hand into it. You retrieve what turns out to be striped board shorts and see that they're in remarkably good shape. At least you got something out of all of this, even though it has unsettled you a little to see the animals fight of life and death.";
+		ItemGain striped board shorts by 1;
+		SanLoss 5;
+	else:
+		LineBreak;
+		say "Looking at the intensity of the water, you're certain something is down there that will attack you. You're pretty sure you can even hear the faint squeaks of a monster coming from the water's surface. Rather than dealing with a fight with an unknown foe, though, you decide to walk back. You pick up your pace as you leave the strange tide pools behind you.";
+	now Tide Pool Trouble is resolved;
+
 
 Section 3 - Campus Events
 
-[Lingua Franca] [COMPLETED]
-
-[
 Table of GameEventIDs (continued)
 Object	Name
-Politics	"Politics"
+Lingua Franca	"Lingua Franca"
 
-Politics is a situation.
-the sarea of Politics is "Campus".
+Lingua Franca is a situation. [revising "Languages Department"]
+The sarea of Lingua Franca is "Campus".
 
-Instead of Resolving a Politics:
-	say "     While exploring the campus near the Poli-Sci building, you stumble upon an odd sight. You spot a humanoid donkey and a humanoid elephant arguing and fighting with one another. Not wanting to get dragged into the fight, you sneak away before they notice you.";
-	increase the score by 1;
-	now Politics is Resolved;
-]
+Instead of resolving a Lingua Franca:
+	say "     Passing behind one of the lecture halls, you come across a small group of creatures arguing with one another in multiple languages. Some of these creatures are wearing what you imagine to be their old clothes, the elephant woman wears her old skirt and her top is torn to expose her breasts, but she doesn't seem to notice. You can see a Chinese dragon, not much taller than the rest of them, wearing an open marching band jacket in the colors of Tenvale College. These must all be students. There's also a bear, frog, and a green pheasant. All in different stages of dress.";
+	say "     Each student seems to embody a different cultural stereotype. You probably stumbled upon the languages department, as each student seems to be speaking a different language. Have they lost their ability to speak English?";
+	say "     [bold type]Do you approach the group?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Try speaking to the language department.";
+	say "     ([link]N[as]n[end link]) - Leave them to their bickering.";
+	if player consents:
+		LineBreak;
+		let bonus be (( Intelligence of Player minus 20 ) divided by 2);
+		let dice be a random number from 1 to 20;
+		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]30[roman type] (Intelligence Check):[line break]";
+		if dice + bonus >= 30:
+			LineBreak;
+			say "     You approach the group of bickering language students and get their attention with some shouts. They look at you, each just as angry as the next. Maybe this wasn't such a great idea... But then the frog clears his throat, or merely croaks you can't tell. He's wearing just a pair of boxers. When he speaks, it's clearly French. You stiffle a laugh, but that only enflames him more. Given his intensity and the gestures he's making towards his classmates, he's probably angry that he isn't a more appropriate animal, like a Gallic cock. Even though you don't speak French, you think you understand his point, so you ask him to speak more quietly. While he doesn't seem to understand English, he certainly can understand what you mean when you lower your own voice when talking to him. He then nods with a sigh.";
+			say "     The green pheasant boy chirps up something that sounds Japanese and you motion for everyone to relax. You try to console the frog, putting your hands on his shoulders and telling him, 'Viva la vida.' He laughs and clearly says 'C'est espagnol,' to which you shrug and say 'C'est la vie.' He laughs some more, and the group seems to calm down after that.";
+			say "     This mad world you find yourself in seems to be a little less mad now.";
+			increase score by 1;
+			SanGain 5;
+		else:
+			LineBreak;
+			say "     You approach the group of bickering language students and get their attention with some shouts. They look at you, each just as angry as the next. Maybe this wasn't such a great idea... But then the frog clears his throat, or merely croaks you can't tell. He's wearing just a pair of boxers. When he speaks, it sounds like gibberish. You can't figure out what he's trying to say. He gestures to his classmates and back to himself, but you just cannot understand him.";
+			say "     You apologize and back away. The frog waves you off like he might an annoying fly and the group continues their nonsensical back and forth. You head back where you came.";
+	else:
+		LineBreak;
+		say "     Opting out of dealing with their bickering, you decide to give the group their space and head back where you came.";
+	now Lingua Franca is resolved;
 
 Table of GameEventIDs (continued)
 Object	Name
-PoliSci	PoliSci
+PoliSci	"PoliSci"
 
-PoliSci is a situation. [updating / revising "Politics"]
+PoliSci is a situation. [revising "Politics"]
 the sarea of PoliSci is "Campus".
 
 Instead of Resolving a PoliSci:
