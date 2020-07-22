@@ -89,7 +89,7 @@ Instead of resolving a Lingua Franca:
 	else:
 		LineBreak;
 		say "     Opting out of dealing with their bickering, you decide to give the group their space and head back where you came.";
-	now Lingua Franca is resolved;
+	now Lingua Franca is Resolved;
 
 Table of GameEventIDs (continued)
 Object	Name
