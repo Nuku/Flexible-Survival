@@ -6406,6 +6406,7 @@ Include Misc 6 by Kaleem mcintyre.
 Include Misc 7 by Kaleem mcintyre.
 Include Misc 8 by Kaleem mcintyre.
 Include Misc 9 by Kaleem mcintyre.
+Include Misc Events by Pandemonium.
 Include Misc Scene 5 by Kaleem mcintyre.
 Include More Misc Events by Kaleem mcintyre.
 Include Murder Mystery by Rikaeus.
