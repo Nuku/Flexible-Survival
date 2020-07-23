@@ -20,16 +20,7 @@ Instead of Resolving a Sealed wing:
 
 Section 2- Moving painting
 
-Table of GameEventIDs (continued)
-Object	Name
-Moving painting	"Moving painting"
-
-Moving painting is a situation.
-The sarea of Moving painting is "Museum".
-
-Instead of Resolving a Moving painting:
-	say "     Wandering the museum hallways, you stop for a minute as a painting seems to catch your eye; the characters within the painting are being chased by some sort of wild hunt. After admiring the painting for a minute, you turn to leave, only to catch a glimpse of movement out of the corner of your eye. Looking around, you don't see anything that could have made the movement. As your eyes fall on the painting, however, you swear the huntsmen are closer to catching the runners, and was the master huntsman staring right at you with his glowing red eyes before? Deciding it might be better not to think about that, you continue quickly on your way, feeling like you're being hunted.";
-	now Moving painting is resolved;
+[revised in Misc Events file - Pandemonium]
 
 
 Section 3- Updating artwork

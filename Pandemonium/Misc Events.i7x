@@ -2,6 +2,8 @@ Misc Events by Pandemonium begins here.
 
 "Adds or revises miscellaneous events to Flexible Survival."
 
+[ If there's no attribution, then it isn't a revision of someone else's event. ]
+
 Chapter 1 - Museum Events
 
 Section 1 - Visceral Painting
@@ -10,7 +12,7 @@ Table of GameEventIDs (continued)
 Object	Name
 Visceral Painting	"Visceral Painting"
 
-Visceral Painting is a situation. [updating "Moving painting"]
+Visceral Painting is a situation. [updating "Moving painting" by Sarokcat]
 The sarea of Visceral Painting is "Museum".
 
 Instead of Resolving Visceral Painting:
@@ -51,7 +53,7 @@ Instead of resolving a Tide Pool Trouble:
 		say "     You slowly move toward the tide pool. The water is white from how vigorously it roils. You are closer now, close enough to see what's in the pool. There's a figure you can just barely make out in the white waters. It looks... it looks like... a slithering ball of tentacles! Or wait, no, that's just a snake coiling around something beneath the surface of the water. It's chasing something under there! Before you have a chance to back away, a rat darts out of the pool, heading right for you! The snake, in turn, slithers out of the water. You tense up, ready to fight, to defend yourself against this reptilian predator. But seeing you, the little rat hesitates, giving the snake all the time it needs to catch its prey. You stand there, almost in shock, as the snake devours the rat.";
 		say "     Once it completely swallows its prey, the snake slithers onto a nearby rock away from the shore to digest the poor rat. Looking back at the tide pool, you see that its waters are calm once more. Strange how the pool returns to normal so quickly. Now that nothing's stirring up the water, you can see some colorful fabric at the bottom of the pool. After checking to make sure nobody's around to pounce on you, you bend down to the tide pool and stick your hand into it. You retrieve what turns out to be striped board shorts and see that they're in remarkably good shape. At least you got something out of all of this, even though it has unsettled you a little to see the animals fight of life and death.";
 		ItemGain striped board shorts by 1;
-		SanBoost 5;
+		SanLoss 5;
 	else:
 		LineBreak;
 		say "Looking at the intensity of the water, you're certain something is down there that will attack you. You're pretty sure you can even hear the faint squeaks of a monster coming from the water's surface. Rather than dealing with a fight with an unknown foe, though, you decide to walk back. You pick up your pace as you leave the strange tide pools behind you.";
@@ -66,7 +68,7 @@ Table of GameEventIDs (continued)
 Object	Name
 Lingua Franca	"Lingua Franca"
 
-Lingua Franca is a situation. [revising "Languages Department"]
+Lingua Franca is a situation. [revising "Languages Department" by Wahn]
 The sarea of Lingua Franca is "Campus".
 
 Instead of resolving a Lingua Franca:
@@ -103,7 +105,7 @@ Table of GameEventIDs (continued)
 Object	Name
 PoliSci	"PoliSci"
 
-PoliSci is a situation. [revising "Politics"]
+PoliSci is a situation. [revising "Politics" by hiccup]
 the sarea of PoliSci is "Campus".
 
 Instead of Resolving a PoliSci:
@@ -116,7 +118,7 @@ Instead of Resolving a PoliSci:
 		LineBreak;
 		say "     Deciding to approach the raging ass, you finally hear him right as he says 'He was my friend!' You get closer, now too curious to turn back. 'You fucked my best friend!' You then realize that this is, in fact, not a debate. At all. You're too close to them, walking directly towards them, to just turn around and save face, so you try to redirect yourself towards the poli-sci building's entrance. It's just that the couple is directly in between you and the door! The donkey sees you and glares. 'Can I help you?' he asks. You try to say something, anything, but before you have a chance, the elephant girl says, 'Have you met Mark?' She lets go of her ears, grabs your arm, then pulls you towards her. She glares at the donkey boy. 'I've been fucking Mark, too.' The donkey's eyes widen and he goes silent. 'And Danny,' she says as she gestures to a passing gorilla. 'And a whole slew of other men!' If you could regret coming over here more than you already did, you would probably melt into a puddle of embarrassment.";
 		say "     The donkey takes a step back and knocks into a passing incubus, who slides his hand down the donkey's trousers without missing a beat. 'Hey buddy,' the demonic man says with a grin. The donkey boy tries to get the incubus out of his pants, but in so doing he sticks his butt out towards the other man. The demon clearly enjoys the innocent attempt to free himself from the lust demon's grasp. He gropes the ass's ass and whispers something into his ear as he coaxes the equine's cock out of his trousers. The elephant girl lets go of your arm as her apparently former boyfriend is molested, and she walks over towards the pair, no longer interested in you. Embarrassed enough, you decide to let the three have their fun without you.";
-		increase score by 1;
+		increase score by 1; [TODO: add another choice point for players who want to stay and watch]
 	else:
 		LineBreak;
 		say "     Deciding to leave the raging ass alone, you continue walking passed the couple, giving them plenty of room. You overhear the donkey yell 'He was my friend!' You hurry your step and try to move on before they notice you. When they are pretty far behind you, you hear the donkey yell, practically scream, 'You fucked my best friend!' How has he not noticed that everyone's standards have disappeared is beyond you, but thankfully you missed the bullet and continue exploring the campus.";
@@ -137,6 +139,42 @@ The sarea of Snake knot is "Zoo".
 Instead of Resolving a Snake knot:
 	say "     Traveling past the snake house, you decide to chance a glance inside, only to stare in amazement at a writhing knot of snakes of various sizes filling the room. The smell of snakes and sex fills the area, and their hissing is only broken by the occasional moan or cry of ecstasy, proving that there are a few non-snakes caught up in their mating knot as well, though you are sure they're soon to transform. Carefully, you back away from the door, not desiring to get caught up in their mating frenzy, though it could be fun to try if there were fewer of them...";
 	now Snake knot is resolved;
+]
+Chapter 5 - Mall Events
+
+Section 1 - Ritual Location Rewrite
+[
+Table of GameEventIDs (continued)
+Object	Name
+lksdjf	"lksdjf" [TODO: Change name, lol]
+
+lksdjf is a situation. [revising "Ritual Location" by Kaleem]
+The sarea of lksdjf is "Mall".
+
+Instead of resolving a lksdjf:
+	say "";
+	now lksdjf is resolved;
+
+Section 1 - Ritual Location
+
+Table of GameEventIDs (continued)
+Object	Name
+Ritual Location	"Ritual Location"
+
+Ritual Location is a situation.
+The sarea of Ritual Location is "Mall".
+
+Instead of resolving a Ritual Location:
+	say "     Heading to the underground sanctum of the mall, aka the sewers, and vehemently wishing it was because you getting paid to see about a lost dog, you find yourself stopping dead in your tracks as you notice someone standing a fifteen feet away from where you are while holding a crystal ball into their hands. Blinking just to be sure that you are seeing right you find yourself going over to the other just in time to watch as the foot wide orb rises up into the air between the cloaked creature hands all the way until it is levitating in front of their unknown person's face. Seeing the other a lot clearer, once you've narrowed the distance between you both to a mere five feet, you find that you can't exactly make out what the other persona exactly is as the cloak and crystal ball hides the other's body and face, respectively, almost perfectly.";
+	say "     Opening your mouth to speak you find yourself snapping your jaw shut when a single hand comes up and then waves a single gloved finger at you in admonishment. Not knowing what you did wrong you feel slightly chastised, that is, before the floating orbs comes directly over to hover unswervingly in front of your face.";
+	WaitLineBreak;
+	say "     Curiosity holds you still as you are not sure of what to do because of the oddity of the situation. You do manage to smile nervously into the beautifully polished ball however, as your reflection shows off your nervousness before gasping in trepidation as images of the city begin to pass over the rim of the ball. Like a TV screen flickering between channels you watch everything from mutants horses fucking each other in the park, to wanton and transformed police officers screwing feline prostitutes in the red light district, to doctors and nurses treating howling and transmogrifying patients in the nearby hospital, to wyvern's flapping throughout the sky and getting shot down at by large cannons that the military have set up as a blockade to keep the creatures within the city limits until finally you see yourself again when the images come to a halt.";
+	say "     'This is your world as it is coming to be known by both those here and afar,' someone says, and instantly you find yourself trying to look at the cloaked figure in front of you. The crystal ball blocks off your sights of the other as you lift up and then down and then around to try and have a glance at the unknown person. The speaker, who you guess is the other person continues to talk, despite your humorous antics. 'How do you plan to go about surviving once the present danger has passed, I wonder? You have to know that those in power won't be able to keep this situation under control for too much longer...' A youthful voice asks and immediately you take a step back to have a look at the cloaked figure as the bubbling need to ask them what they mean surges throughout you.";
+	WaitLineBreak;
+	say "     Fear runs throughout your spine when you don't see the person right where they had been just minutes before. Whipping your head from side to side you try and see if you can find any trace of the unnamed individual your blood begins to run cold as you can find none. The only remnant that the other had even been is the crystal ball still floating listlessly in front of your face, but soon that too takes its leave of you. Shining brightly with an aurora of colors the orb blinks and then pops out of existence. Tiny trails of starry lights float down in the wake of the crystal's departure before they too fade out of existence. The sudden feeling of apprehension makes you take several steps back before you turn and then run away from where you had been, your mind frantically trying to reason with you over what just happened.";
+	say "     A playfully jubilant voice chuckles in your ears, the sound being strangely reminiscent of that of the person who had just spoken to you, and quickly you make even faster tracks away from where you had just been. You've totally forgotten why you had even come here in the sewers in the first place.";
+	increase score by 1;
+	now Ritual Location is resolved;
 ]
 
 Misc Events ends here.
