@@ -87,7 +87,7 @@ Instead of resolving a Lingua Franca:
 			say "     The green pheasant boy chirps up something that sounds Japanese and you motion for everyone to relax. You try to console the frog, putting your hands on his shoulders and telling him, 'Viva la vida.' He laughs and clearly says 'C'est espagnol,' to which you shrug and say 'C'est la vie.' He laughs some more, and the group seems to calm down after that.";
 			say "     This mad world you find yourself in seems to be a little less mad now.";
 			increase score by 1;
-			SanGain 5;
+			SanBoost 5;
 		else:
 			LineBreak;
 			say "     You approach the group of bickering language students and get their attention with some shouts. They look at you, each just as angry as the next. Maybe this wasn't such a great idea... But then the frog clears his throat, or merely croaks you can't tell. He's wearing just a pair of boxers. When he speaks, it sounds like gibberish. You can't figure out what he's trying to say. He gestures to his classmates and back to himself, but you just cannot understand him.";
