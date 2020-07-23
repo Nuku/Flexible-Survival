@@ -7,8 +7,8 @@ Chapter 1 - Museum Events
 Section 1 - Visceral Painting
 
 Table of GameEventIDs (continued)
-Object  Name
-Visceral Painting "Visceral Painting"
+Object	Name
+Visceral Painting	"Visceral Painting"
 
 Visceral Painting is a situation. [updating "Moving painting"]
 The sarea of Visceral Painting is "Museum".
