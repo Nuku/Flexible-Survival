@@ -2,7 +2,9 @@ Misc Events by Pandemonium begins here.
 
 "Adds or revises miscellaneous events to Flexible Survival."
 
-Section 1 - Museum Events
+Chapter 1 - Museum Events
+
+Section 1 - Visceral Painting
 
 Table of GameEventIDs (continued)
 Object  Name
@@ -27,7 +29,9 @@ Instead of Resolving Visceral Painting:
 	now Visceral Painting is resolved;
 
 
-Section 2 - Beach Events
+Chapter 2 - Beach Events
+
+Section 1 - Tide Pool Trouble
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -54,7 +58,9 @@ Instead of resolving a Tide Pool Trouble:
 	now Tide Pool Trouble is resolved;
 
 
-Section 3 - Campus Events
+Chapter 3 - Campus Events
+
+Section 1 - Lingua Franca
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -91,6 +97,8 @@ Instead of resolving a Lingua Franca:
 		say "     Opting out of dealing with their bickering, you decide to give the group their space and head back where you came.";
 	now Lingua Franca is Resolved;
 
+Section 2 - PoliSci
+
 Table of GameEventIDs (continued)
 Object	Name
 PoliSci	"PoliSci"
@@ -114,7 +122,7 @@ Instead of Resolving a PoliSci:
 		say "     Deciding to leave the raging ass alone, you continue walking passed the couple, giving them plenty of room. You overhear the donkey yell 'He was my friend!' You hurry your step and try to move on before they notice you. When they are pretty far behind you, you hear the donkey yell, practically scream, 'You fucked my best friend!' How has he not noticed that everyone's standards have disappeared is beyond you, but thankfully you missed the bullet and continue exploring the campus.";
 	now PoliSci is Resolved;
 
-Section 4 - Zoo Events
+Chapter 4 - Zoo Events
 
 [
 Section 4 - Snake knot
