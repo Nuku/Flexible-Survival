@@ -126,20 +126,7 @@ Instead of Resolving a PoliSci:
 
 Chapter 4 - Zoo Events
 
-[
-Section 4 - Snake knot
 
-Table of GameEventIDs (continued)
-Object	Name
-Snake knot	"Snake knot"
-
-Snake knot is a situation.
-The sarea of Snake knot is "Zoo".
-
-Instead of Resolving a Snake knot:
-	say "     Traveling past the snake house, you decide to chance a glance inside, only to stare in amazement at a writhing knot of snakes of various sizes filling the room. The smell of snakes and sex fills the area, and their hissing is only broken by the occasional moan or cry of ecstasy, proving that there are a few non-snakes caught up in their mating knot as well, though you are sure they're soon to transform. Carefully, you back away from the door, not desiring to get caught up in their mating frenzy, though it could be fun to try if there were fewer of them...";
-	now Snake knot is resolved;
-]
 Chapter 5 - Mall Events
 
 Section 1 - Stalker in the Dark
