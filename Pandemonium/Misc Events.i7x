@@ -22,7 +22,7 @@ Instead of Resolving Visceral Painting:
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]12[roman type] (Perception Check):[line break]";
 	if diceroll + bonus >= 12:
-		say "     As you look at the plaque, something on the wall moves in the corner of your eye. You look up and see the characters in the painting look different than a few seconds ago. You blink and shake your head. And now that you blinked, they seem to have moved a third time! The huntsmen are closer to the running young man, who in turn seems to have more mud on his legs. He's gotten passed the tree by now, and the snow seems to have completely melted. You take a step backwards. The master huntsman, the cleanest man in the image before you, now points down to the ground, and although he was looking towards the young man before, he now looks out towards the artist. Wait, no, he now looks right at you. He stares into your eyes and you can see his sexual appetite, even for someone he'll never have, assuming he cannot jump out of the painting.";
+		say "     As you look at the plaque, something on the wall moves in the corner of your eye. You look up and see the characters in the painting look different than a few seconds ago. You blink and shake your head. And now that you blinked, they seem to have moved a third time! The huntsmen are closer to the running young man, who in turn has more mud on his legs. He's gotten passed the tree by now, and the snow has completely melted. You take a step backwards. The master huntsman, the cleanest man in the image before you, now points down to the ground, and although he was looking towards the young man before, he now looks out towards the artist. Wait, no, he now looks right at you. He stares into your eyes and you can see his sexual appetite, even for someone he'll never have, assuming he cannot jump out of the painting.";
 		say "     Though now you can't help but wonder if he could jump out into the real world as you continue to stare into his red eyes. Were you this horny before? Your breathing has turned into panting as you stare at the older huntsman. You start to wonder if he's gotten bigger or if you've gotten closer to him, but then you blink and realize he walked forward in the painting, closer to the painter's perspective. By now, the young man has been caught. Blood trickles down his face from a fresh wound as the hunters pin him down, whipping out their cocks. You look back to their leader, who continues to point downwards and grins at you. You look at where he's pointing, and beyond the frame is a small bench. You hadn't seen it before. Under the bench are broken bottles of water, but you investigate and find a full bottle. You take it and leave, the museum's visceral painting wearing on your uneasy mind.";
 		ItemGain water by 1;
 		SanLoss 5;
@@ -73,7 +73,7 @@ The sarea of Lingua Franca is "Campus".
 
 Instead of resolving a Lingua Franca:
 	say "     Passing behind one of the lecture halls, you come across a small group of creatures arguing with one another in multiple languages. Some of these creatures are wearing what you imagine to be their old clothes, the elephant woman wears her old skirt and her top is torn to expose her breasts, but she doesn't seem to notice. You can see a Chinese dragon, not much taller than the rest of them, wearing an open marching band jacket in the colors of Tenvale College. These must all be students. There's also a bear, frog, and a green pheasant. All in different stages of dress.";
-	say "     Each student seems to embody a different cultural stereotype. You probably stumbled upon the languages department, as each student seems to be speaking a different language. Have they lost their ability to speak English?";
+	say "     Each student seems to embody a different cultural stereotype. You probably stumbled upon the languages department, as each student is speaking a different language. Have they lost their ability to speak English?";
 	say "     [bold type]Do you approach the group?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Try speaking to the language department.";
@@ -142,39 +142,39 @@ Instead of Resolving a Snake knot:
 ]
 Chapter 5 - Mall Events
 
-Section 1 - Ritual Location Rewrite
-[
-Table of GameEventIDs (continued)
-Object	Name
-lksdjf	"lksdjf" [TODO: Change name, lol]
-
-lksdjf is a situation. [revising "Ritual Location" by Kaleem]
-The sarea of lksdjf is "Mall".
-
-Instead of resolving a lksdjf:
-	say "";
-	now lksdjf is resolved;
-
-Section 1 - Ritual Location
+Section 1 - Stalker in the Dark
 
 Table of GameEventIDs (continued)
 Object	Name
-Ritual Location	"Ritual Location"
+Stalker in the Dark	"Stalker in the Dark"
 
-Ritual Location is a situation.
-The sarea of Ritual Location is "Mall".
+Stalker in the Dark is a situation. [revising "Ritual Location" by Kaleem]
+The sarea of Stalker in the Dark is "Mall".
 
-Instead of resolving a Ritual Location:
-	say "     Heading to the underground sanctum of the mall, aka the sewers, and vehemently wishing it was because you getting paid to see about a lost dog, you find yourself stopping dead in your tracks as you notice someone standing a fifteen feet away from where you are while holding a crystal ball into their hands. Blinking just to be sure that you are seeing right you find yourself going over to the other just in time to watch as the foot wide orb rises up into the air between the cloaked creature hands all the way until it is levitating in front of their unknown person's face. Seeing the other a lot clearer, once you've narrowed the distance between you both to a mere five feet, you find that you can't exactly make out what the other persona exactly is as the cloak and crystal ball hides the other's body and face, respectively, almost perfectly.";
-	say "     Opening your mouth to speak you find yourself snapping your jaw shut when a single hand comes up and then waves a single gloved finger at you in admonishment. Not knowing what you did wrong you feel slightly chastised, that is, before the floating orbs comes directly over to hover unswervingly in front of your face.";
-	WaitLineBreak;
-	say "     Curiosity holds you still as you are not sure of what to do because of the oddity of the situation. You do manage to smile nervously into the beautifully polished ball however, as your reflection shows off your nervousness before gasping in trepidation as images of the city begin to pass over the rim of the ball. Like a TV screen flickering between channels you watch everything from mutants horses fucking each other in the park, to wanton and transformed police officers screwing feline prostitutes in the red light district, to doctors and nurses treating howling and transmogrifying patients in the nearby hospital, to wyvern's flapping throughout the sky and getting shot down at by large cannons that the military have set up as a blockade to keep the creatures within the city limits until finally you see yourself again when the images come to a halt.";
-	say "     'This is your world as it is coming to be known by both those here and afar,' someone says, and instantly you find yourself trying to look at the cloaked figure in front of you. The crystal ball blocks off your sights of the other as you lift up and then down and then around to try and have a glance at the unknown person. The speaker, who you guess is the other person continues to talk, despite your humorous antics. 'How do you plan to go about surviving once the present danger has passed, I wonder? You have to know that those in power won't be able to keep this situation under control for too much longer...' A youthful voice asks and immediately you take a step back to have a look at the cloaked figure as the bubbling need to ask them what they mean surges throughout you.";
-	WaitLineBreak;
-	say "     Fear runs throughout your spine when you don't see the person right where they had been just minutes before. Whipping your head from side to side you try and see if you can find any trace of the unnamed individual your blood begins to run cold as you can find none. The only remnant that the other had even been is the crystal ball still floating listlessly in front of your face, but soon that too takes its leave of you. Shining brightly with an aurora of colors the orb blinks and then pops out of existence. Tiny trails of starry lights float down in the wake of the crystal's departure before they too fade out of existence. The sudden feeling of apprehension makes you take several steps back before you turn and then run away from where you had been, your mind frantically trying to reason with you over what just happened.";
-	say "     A playfully jubilant voice chuckles in your ears, the sound being strangely reminiscent of that of the person who had just spoken to you, and quickly you make even faster tracks away from where you had just been. You've totally forgotten why you had even come here in the sewers in the first place.";
-	increase score by 1;
-	now Ritual Location is resolved;
-]
+Instead of resolving Stalker in the Dark:
+	say "     Exploring the sewers of the mall for some time, you don't find anything of note and decide to head back to the surface. However, when you turn around you see a figure not too far away from you. Once they realize you've turned around, they futilely hug the sewer wall opposite the dim lights. It's pretty clear this person was following you. You call out to them and wait a moment, and you see their silhouette in the dim light lackadaisically walk away from the wall, just barely being touched by the light. They're wearing a cloak, and even in the darkness of the sewers, this person has their hood up concealing their face. In the hand closest to the light, and therefore the better lit side, you can see your stalker holds a crystal ball in their hand.";
+	say "     Before you can ask what it is they want, the cloaked figure raises the ball above their head. It flashes with an intense white light. Though you shield your eyes with your arm the first time, the crystal ball flashes a second time and the light hits your eyes, blinding you temporarily. You hear footsteps as your stalker rushes towards you. You try to ready yourself for a fight, but there's no time. Your stalker is closing in. They're right in front of you. They hold the glass ball up to your face. It flashes again. This time, however, you think you see figures moving in the ball. The person tries to tell you something, but you aren't paying attention to them. A sense of vertigo flows over you as the crystal ball is held to your face, but you probably could still get away from this person if you tried. [bold type]Do you try to run away from this stranger or stay around [roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Turn around and run! Find a way out of the sewers.";
+	say "     ([link]N[as]n[end link]) - Stay and continue to stare into the ball.";
+	if player consents:
+		LineBreak;
+		say "     You close your eyes, turn around, and run as fast as you can. You open your eyes when your a few feet away from the cloaked stalker, just in time to see a demon brute start to materialize. You dart past him. You turn a corner. There's another monster lurking in the darkness. Thankfully, it isn't paying attention. From behind you, light flashes and you hear a heavy thud. Did the demon brute just succumb to the light as you did? You continue running, trying to turn the same way each time, making a circle to leave the sewers where you came in. Eventually, you find a familiar path, the where you first met that stalker. With your bearings in place, you head back to the mall, leaving the strange cloaked figure behind.";
+	else:
+		LineBreak;
+		say "     You're too curious to leave. You smile nervously into the beautifully polished ball as your reflection shows off your [FaceSpeciesName of Player in lower case] face. Before you can do anything more than recognize yourself in the glass ball, images of the city begin to flash inside the orb before you, much like a TV screen flickering between channels. Your head feels heavy as you watch, but you can't seem to look away. Among the images, you see ";
+		let randomnumber be a random number from 1 to 3;
+		if randomnumber is:
+			-- 1:
+				say "mutant horses fucking each other in the park, feline prostitutes tag teaming a succubus in the red light district, wyverns flying through the sky being shot at by military men, and ";
+			-- 2:
+				say "an alpha husky dominating a new member of his pack, orc warriors congratulating one another in a mess hall, a Spartan warrior wrestling a wolf in the college campus, and ";
+			-- 3:
+				say "a pink gelatinous woman having sex with a beaver in the red light district, an empty werewolf costume running around in the state fair, a large horned demon shoving a captured man into a large red sack, and ";
+		say "you see yourself standing in front of a strange figure in the sewers with your head canted slightly to the side. The images come to an abrupt halt. You're once again staring at your [FaceSpeciesName of Player in lower case] face in the glass orb.";
+		say "     'This,' says the stalker standing in front of you, 'is your world as it is coming to be known.' The voice is deep, deeper than any other voice you've ever heard. The air vibrates as the figure speaks. 'How do you plan to survive once the present danger has passed?' You blink a few times and the figure lowers the crystal ball. You can see the figure very clearly now. Before you stands a cloaked man with the face of a whale, and his stature suits his face as he [if ScaleValue of player < 4]towers over you [else]fills the sewer [end if]in the darkness. You are sure he had not been so large before. Are you still dazed from whatever the crystal ball did to you? Before you get a chance to ask him, he fades into the black behind him. The crystal ball continues to dimly glow for a moment as it seems to float away from you, but then that fades away too.";
+		say "     After standing in the sewers for who knows how long, the cotton feeling in your head subsides enough for you to realize where you are. You rush back to the mall, though you are too dizzy to walk straight. It feels like with every breath you take, you forget just a little bit more of this recent encounter. Your mind willing yourself to forget the hooded figure and the images you saw in the... was it a mirror? Or was it a silver dish? You pick up your pace when you realize you don't recall what he looked like. By the time you get to the mall, you wonder why you were in such a hurry to get back. After all, you hadn't done or seen anything in the sewers. But then, if you hadn't done anything, why were you in such a hurry to get back?";
+		increase score by 1;
+	now Stalker in the Dark is resolved;
 
 Misc Events ends here.
