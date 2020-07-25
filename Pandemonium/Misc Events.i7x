@@ -15,7 +15,7 @@ Visceral Painting	"Visceral Painting"
 Visceral Painting is a situation. [updating "Moving painting" by Sarokcat]
 The sarea of Visceral Painting is "Museum".
 
-Instead of Resolving Visceral Painting:
+Instead of Resolving a Visceral Painting:
 	say "     Wandering the museum hallways, you stop for a minute [one of]to look at some of the artwork[or]to get your bearings[at random] when one of the paintings near you catches your eye. The frame is nothing special, just four plain dark oak pieces of wood, but the subject of the painting is so visceral that you can't help but look at it for a moment. Painted in oil is a young man, athletic and half naked, running away from four pursuers. The young man runs in front of a large oak tree in what looks like the beginning of spring, given the melting snow in the muddy ditch the young man flees through. He's glancing back towards his pursuers, his back facing you, his legs covered in caked mud, his arms stratched up.";
 	say "     The pursuers wear formal attire, almost like French military uniforms but filthy. They carry rifles but they don't aim for the young man. Instead, the four older men, with grins on their faces, hold their rifles as they might pitchforks. One man, presumeably the leader, has very little grime on his clothes, and he's pointing towards the young man. He's biting his lips and leering at the naked man. You can see every wrinkle on his face and it looks like the artist took the time to paint every strand of hair. Clearly, this painting says a lot more now that this scene plays out every day. You look around the painting for a plaque for the name of the piece. 'The Hunt in Spring' is its name, but there's no attribution for the artist.";
 	let bonus be (( Perception of Player minus 20 ) divided by 2);
@@ -124,10 +124,7 @@ Instead of Resolving a PoliSci:
 		say "     Deciding to leave the raging ass alone, you continue walking passed the couple, giving them plenty of room. You overhear the donkey yell 'He was my friend!' You hurry your step and try to move on before they notice you. When they are pretty far behind you, you hear the donkey yell, practically scream, 'You fucked my best friend!' How has he not noticed that everyone's standards have disappeared is beyond you, but thankfully you missed the bullet and continue exploring the campus.";
 	now PoliSci is Resolved;
 
-Chapter 4 - Zoo Events
-
-
-Chapter 5 - Mall Events
+Chapter 4 - Mall Events
 
 Section 1 - Stalker in the Dark
 
