@@ -16,7 +16,7 @@ Visceral Painting is a situation. [updating "Moving painting" by Sarokcat]
 The sarea of Visceral Painting is "Museum".
 
 Instead of Resolving a Visceral Painting:
-	say "     Wandering the museum hallways, you stop for a minute [one of]to look at some of the artwork[or]to get your bearings[at random] when one of the paintings near you catches your eye. The frame is nothing special, just four plain dark oak pieces of wood, but the subject of the painting is so visceral that you can't help but look at it for a moment. Painted in oil is a young man, athletic and half naked, running away from four pursuers. The young man runs in front of a large oak tree in what looks like the beginning of spring, given the melting snow in the muddy ditch the young man flees through. He's glancing back towards his pursuers, his back facing you, his legs covered in caked mud, his arms stratched up.";
+	say "     Wandering the museum hallways, you stop for a minute [one of]to look at some of the artwork [or]to get your bearings [at random]when one of the paintings near you catches your eye. The frame is nothing special, just four plain dark oak pieces of wood, but the subject of the painting is so visceral that you can't help but look at it for a moment. Painted in oil is a young man, athletic and half naked, running away from four pursuers. The young man runs in front of a large oak tree in what looks like the beginning of spring, given the melting snow in the muddy ditch the young man flees through. He's glancing back towards his pursuers, his back facing you, his legs covered in caked mud, his arms stratched up.";
 	say "     The pursuers wear formal attire, almost like French military uniforms but filthy. They carry rifles but they don't aim for the young man. Instead, the four older men, with grins on their faces, hold their rifles as they might pitchforks. One man, presumeably the leader, has very little grime on his clothes, and he's pointing towards the young man. He's biting his lips and leering at the naked man. You can see every wrinkle on his face and it looks like the artist took the time to paint every strand of hair. Clearly, this painting says a lot more now that this scene plays out every day. You look around the painting for a plaque for the name of the piece. 'The Hunt in Spring' is its name, but there's no attribution for the artist.";
 	let bonus be (( Perception of Player minus 20 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
@@ -126,16 +126,16 @@ Instead of Resolving a PoliSci:
 
 Chapter 4 - Mall Events
 
-Section 1 - Stalker in the Dark
+Section 1 - Sewer Stalker
 
 Table of GameEventIDs (continued)
 Object	Name
-Stalker in the Dark	"Stalker in the Dark"
+Sewer Stalker	"Sewer Stalker"
 
-Stalker in the Dark is a situation. [revising "Ritual Location" by Kaleem]
-The sarea of Stalker in the Dark is "Mall".
+Sewer Stalker is a situation. [revising "Ritual Location" by Kaleem]
+the sarea of Sewer Stalker is "Mall".
 
-Instead of Resolving a Stalker in the Dark:
+Instead of Resolving a Sewer Stalker:
 	say "     Exploring the sewers of the mall for some time, you don't find anything of note and decide to head back to the surface. However, when you turn around you see a figure not too far away from you. Once they realize you've turned around, they futilely hug the sewer wall opposite the dim lights. It's pretty clear this person was following you. You call out to them and wait a moment, and you see their silhouette in the dim light lackadaisically walk away from the wall, just barely being touched by the light. They're wearing a cloak, and even in the darkness of the sewers, this person has their hood up concealing their face. In the hand closest to the light, and therefore the better lit side, you can see your stalker holds a crystal ball in their hand.";
 	say "     Before you can ask what it is they want, the cloaked figure raises the ball above their head. It flashes with an intense white light. Though you shield your eyes with your arm the first time, the crystal ball flashes a second time and the light hits your eyes, blinding you temporarily. You hear footsteps as your stalker rushes towards you. You try to ready yourself for a fight, but there's no time. Your stalker is closing in. They're right in front of you. They hold the glass ball up to your face. It flashes again. This time, however, you think you see figures moving in the ball. The person tries to tell you something, but you aren't paying attention to them. A sense of vertigo flows over you as the crystal ball is held to your face, but you probably could still get away from this person if you tried.";
 	LineBreak;
@@ -152,9 +152,9 @@ Instead of Resolving a Stalker in the Dark:
 		say "[one of]mutant horses fucking each other in the park, feline prostitutes tag teaming a succubus in the red light district, wyverns flying through the sky being shot at by military men, and [or]an alpha husky dominating a new member of his pack, orc warriors congratulating one another in a mess hall, a Spartan warrior wrestling a wolf in the college campus, and [or]a pink gelatinous woman having sex with a beaver in the red light district, an empty werewolf costume running around in the state fair, a large horned demon shoving a captured man into a large red sack, and [at random]";
 		say "you see yourself standing in front of a strange figure in the sewers with your head canted slightly to the side. The images come to an abrupt halt. You're once again staring at your [FaceSpeciesName of Player in lower case] face in the glass orb.";
 		LineBreak;
-		say "     'This,' says the stalker standing in front of you, 'is your world as it is coming to be known.' The voice is deep, deeper than any other voice you've ever heard. The air vibrates as the figure speaks. 'How do you plan to survive once the present danger has passed?' You blink a few times and the figure lowers the crystal ball. You can see the figure very clearly now. Before you stands a cloaked man with the face of a whale, and his stature suits his face as he [if ScaleValue of player < 4]towers over you [else]fills the sewer [end if]in the darkness. You are sure he had not been so large before. Are you still dazed from whatever the crystal ball did to you? Before you get a chance to ask him, he fades into the black behind him. The crystal ball continues to dimly glow for a moment as it seems to float away from you, but then that fades away too.";
+		say "     'This,' says the stalker standing in front of you, 'is your world as it is coming to be known.' The voice is deep, deeper than any other voice you've ever heard. The air vibrates as the figure speaks. 'How do you plan to survive once the present danger has passed?' You blink a few times and the figure lowers the crystal ball. You can see the figure very clearly now. Before you stands a cloaked man with the face of a whale, and his stature suits his face as he [if ScaleValue of Player < 4]towers over you [else]fills the sewer [end if]in the darkness. You are sure he had not been so large before. Are you still dazed from whatever the crystal ball did to you? Before you get a chance to ask him, he fades into the black behind him. The crystal ball continues to dimly glow for a moment as it seems to float away from you, but then that fades away too.";
 		say "     After standing in the sewers for who knows how long, the cotton feeling in your head subsides enough for you to realize where you are. You rush back to the mall, though you are too dizzy to walk straight. It feels like with every breath you take, you forget just a little bit more of this recent encounter. Your mind willing yourself to forget the hooded figure and the images you saw in the... was it a mirror? Or was it a silver dish? You pick up your pace when you realize you don't recall what he looked like. By the time you get to the mall, you wonder why you were in such a hurry to get back. After all, you hadn't done or seen anything in the sewers. But then, if you hadn't done anything, why were you in such a hurry to get back?";
 		increase score by 1;
-	now Stalker in the Dark is Resolved;
+	now Sewer Stalker is Resolved;
 
 Misc Events ends here.
