@@ -177,9 +177,11 @@ Instead of resolving Junkyard Utility:
 			if a random chance of 1 in 3 succeeds:
 				say "a sharp screw! [if scalevalue of player > 2]This may be useful if you could wield it[else]This will make a useful weapon[end if].";
 				ItemGain sharp screw by 1;
-			else if random chance of 1 in 2 succeeds:
+			else if a random chance of 1 in 2 succeeds:
 				say "a rusty nail! [if scalevalue of player > 2]This may be useful if you could wield it[else]This will make a useful weapon[end if].";
 				ItemGain rusty nail by 1;
+			else:
+				say "nothing particularly useful. You should try again.";
 		else:
 			say "nothing particularly useful. You should try again.";
 		if searchesUtSit is 4, now Junkyard Utility is resolved;
