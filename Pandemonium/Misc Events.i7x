@@ -151,10 +151,40 @@ Instead of Resolving a Sewer Stalker:
 		say "     You're too curious to leave. You smile nervously into the beautifully polished ball as your reflection shows off your [FaceSpeciesName of Player in lower case] face. Before you can do anything more than recognize yourself in the glass ball, images of the city begin to flash inside the orb before you, much like a TV screen flickering between channels. Your head feels heavy as you watch, but you can't seem to look away. Among the images, you see ";
 		say "[one of]mutant horses fucking each other in the park, feline prostitutes tag teaming a succubus in the red light district, wyverns flying through the sky being shot at by military men, and [or]an alpha husky dominating a new member of his pack, orc warriors congratulating one another in a mess hall, a Spartan warrior wrestling a wolf in the college campus, and [or]a pink gelatinous woman having sex with a beaver in the red light district, an empty werewolf costume running around in the state fair, a large horned demon shoving a captured man into a large red sack, and [at random]";
 		say "you see yourself standing in front of a strange figure in the sewers with your head canted slightly to the side. The images come to an abrupt halt. You're once again staring at your [FaceSpeciesName of Player in lower case] face in the glass orb.";
-		LineBreak;
+		WaitLineBreak;
 		say "     'This,' says the stalker standing in front of you, 'is your world as it is coming to be known.' The voice is deep, deeper than any other voice you've ever heard. The air vibrates as the figure speaks. 'How do you plan to survive once the present danger has passed?' You blink a few times and the figure lowers the crystal ball. You can see the figure very clearly now. Before you stands a cloaked man with the face of a whale, and his stature suits his face as he [if ScaleValue of Player < 4]towers over you [else]fills the sewer [end if]in the darkness. You are sure he had not been so large before. Are you still dazed from whatever the crystal ball did to you? Before you get a chance to ask him, he fades into the black behind him. The crystal ball continues to dimly glow for a moment as it seems to float away from you, but then that fades away too.";
 		say "     After standing in the sewers for who knows how long, the cotton feeling in your head subsides enough for you to realize where you are. You rush back to the mall, though you are too dizzy to walk straight. It feels like with every breath you take, you forget just a little bit more of this recent encounter. Your mind willing yourself to forget the hooded figure and the images you saw in the... was it a mirror? Or was it a silver dish? You pick up your pace when you realize you don't recall what he looked like. By the time you get to the mall, you wonder why you were in such a hurry to get back. After all, you hadn't done or seen anything in the sewers. But then, if you hadn't done anything, why were you in such a hurry to get back?";
 		increase score by 1;
 	now Sewer Stalker is Resolved;
+
+Chapter 5 - Junkyard and Warehouse events
+
+Section 1 - Searching for Utility
+
+Table of GameEventIDs (continued)
+Object	Name
+Searching for Utility	"Searching for Utility"
+
+Searching for Utility is a situation.
+The sarea of Searching for Utility is "Junkyard".
+searchesUtSit is a number that varies.
+
+Instead of resolving Searching for Utility:
+	say "     As you wander the junkyard, you see a large pile of, well, junk. You search through this heaping mound of other people's garbage and find ";
+	if scaleValue of Player <= 2:
+		increase searchesUtSit by 1;
+		if a random chance of 1 in 4 succeeds:
+			if a random chance of 1 in 3 succeeds:
+				say "a sharp screw! [if scalevalue of player > 2]This may be useful if you could wield it[else]This will make a useful weapon[end if].";
+				ItemGain sharp screw by 1;
+			else if random chance of 1 in 2 succeeds:
+				say "a rusty nail! [if scalevalue of player > 2]This may be useful if you could wield it[else]This will make a useful weapon[end if].";
+				ItemGain rusty nail by 1;
+		else:
+			say "nothing particularly useful. You should try again.";
+		if searchesUtSit is 4, now Searching for Utility is resolved;
+	else:
+		say "nothing particularly useful. This is mostly just small hardware supplies. What could you possibly do with these [one of]screws[or]nails[or]broken pencils[or]broken spray cans[at random]? You get up and continue what you were doing.";
+
 
 Misc Events ends here.

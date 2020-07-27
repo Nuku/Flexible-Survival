@@ -1176,6 +1176,7 @@ Name(text)	Type(text)
 "ScottyRelationship"	"number"
 "scufflecount"	"number"
 "sdbook"	"number"
+"searchesUtSit"	"number"
 "SeraphisContent"	"number"
 "SeraphisNeedy"	"number"
 "SeraphisRelationship"	"number"

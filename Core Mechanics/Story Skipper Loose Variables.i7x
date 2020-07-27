@@ -2417,6 +2417,8 @@ to NumberVariableSave:
 			now NumberVarValue entry is scufflecount;
 		-- "sdbook":
 			now NumberVarValue entry is sdbook;
+		-- "searchesUtSit":
+			now NumberVarValue entry is searchesUtSit;
 		-- "SeraphisContent":
 			now NumberVarValue entry is SeraphisContent;
 		-- "SeraphisNeedy":
@@ -6093,6 +6095,8 @@ to VariableNumberLoad:
 					now scufflecount is numberVarValue entry;
 				-- "sdbook":
 					now sdbook is numberVarValue entry;
+				-- "searchesUtSit":
+					now searchesUtSit is numberVarValue entry;
 				-- "SeraphisContent":
 					now SeraphisContent is numberVarValue entry;
 				-- "SeraphisNeedy":
