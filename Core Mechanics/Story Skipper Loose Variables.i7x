@@ -1829,6 +1829,8 @@ to NumberVariableSave:
 			now NumberVarValue entry is Lost;
 		-- "losttoalphahusky":
 			now NumberVarValue entry is losttoalphahusky;
+		-- "lostToHorseman":
+			now NumberVarValue entry is lostToHorseman;
 		-- "LostToZebra":
 			now NumberVarValue entry is LostToZebra;
 		-- "loversbench":
@@ -2415,6 +2417,8 @@ to NumberVariableSave:
 			now NumberVarValue entry is scufflecount;
 		-- "sdbook":
 			now NumberVarValue entry is sdbook;
+		-- "searchesUtSit":
+			now NumberVarValue entry is searchesUtSit;
 		-- "SeraphisContent":
 			now NumberVarValue entry is SeraphisContent;
 		-- "SeraphisNeedy":
@@ -5503,6 +5507,8 @@ to VariableNumberLoad:
 					now Lost is numberVarValue entry;
 				-- "losttoalphahusky":
 					now losttoalphahusky is numberVarValue entry;
+				-- "lostToHorseman":
+					now lostToHorseman is numberVarValue entry;
 				-- "LostToZebra":
 					now LostToZebra is numberVarValue entry;
 				-- "loversbench":
@@ -6089,6 +6095,8 @@ to VariableNumberLoad:
 					now scufflecount is numberVarValue entry;
 				-- "sdbook":
 					now sdbook is numberVarValue entry;
+				-- "searchesUtSit":
+					now searchesUtSit is numberVarValue entry;
 				-- "SeraphisContent":
 					now SeraphisContent is numberVarValue entry;
 				-- "SeraphisNeedy":

@@ -45,16 +45,7 @@ Section 3 - Phi Iota Gamma
 
 Section 4 - Languages Department
 
-Table of GameEventIDs (continued)
-Object	Name
-Languages Department	"Languages Department"
-
-Languages Department is a situation.
-The sarea of Languages Department is "Campus".
-
-Instead of resolving a Languages Department:
-	say "     Passing behind one building, you almost bump into a small group of creatures arguing loudly and incomprehensibly. Among the group are a French frog, a Chinese dragon, an Indian elephant, a Russian bear and several other walking stereotypes who can no longer understand each other. You suspect they've all somehow become altered by the infection into forms to suit the language course they taught or studied. You decide to give what is probably the Languages Department a wide berth before you start speaking another language as well to further compound your problems in this city gone mad.";
-	now Languages Department is resolved;
+[revised in the Misc Events file - Pandemonium]
 
 
 Section 5 - Wandering the Campus

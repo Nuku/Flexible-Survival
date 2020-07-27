@@ -58,6 +58,18 @@ The objsize of scalpel is 2.
 The hitbonus of scalpel is 0. [nothing special]
 The scent of scalpel is "The scalpel smells like metal.".
 
+Table of Game Objects (continued)
+name	desc	weight	object
+"sharp screw"	"A two-and-a-half inch screw, the thread and tip of which has been sharpened. The shank of the screw is wrapped in cloth as a make-shift hand guard, and the head has been filed away, probably to make gripping easier."	1	sharp screw
+
+sharp screw is an armament. It is not temporary.
+It has a weapon "[one of]the sharp screw[or]the sharpened screw[or]the weaponized screw[at random]".
+The weapon damage of sharp screw is 6.
+The weapon type of sharp screw is "Melee".
+The objsize of sharp screw is 1.
+The hitbonus of sharp screw is -1. [not a weapon]
+The scent of sharp screw is "The screw smells of metal, with a hint of sawdust."
+
 Section 2 - Moderate Blades
 
 Table of Game Objects (continued)
@@ -516,6 +528,17 @@ The objsize of spear is 4.
 The hitbonus of spear is 1. [mastercraft]
 The scent of spear is "The Viking spear smells of ancient battles. The scent gets your blood pumping for battle.".
 
+Table of Game Objects (continued)
+name	desc	weight	object
+"rusty nail"	"This four-inch nail is rusted at the tip. Its length is crooked slightly and it's bent at the head, as though the nail had been used before."	1	rusty nail
+
+rusty nail is an armament. It is not temporary.
+It has a weapon "[one of]your small rusty nail[or]your rusty nail[or]your weaponized nail[at random]".
+The weapon damage of rusty nail is 5.
+The weapon type of rusty nail is "Melee".
+The objsize of rusty nail is 1.
+The hitbonus of rusty nail is -1. [not a weapon]
+The scent of rusty nail is "The rusty nail smells like iron.".
 
 Book 4 - Ranged Weapons
 
