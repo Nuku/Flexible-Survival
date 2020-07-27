@@ -159,17 +159,17 @@ Instead of Resolving a Sewer Stalker:
 
 Chapter 5 - Junkyard and Warehouse events
 
-Section 1 - Searching for Utility
+Section 1 - Junkyard Utility
 
 Table of GameEventIDs (continued)
 Object	Name
-Searching for Utility	"Searching for Utility"
+Junkyard Utility	"Junkyard Utility"
 
-Searching for Utility is a situation.
-The sarea of Searching for Utility is "Junkyard".
+Junkyard Utility is a situation.
+The sarea of Junkyard Utility is "Junkyard".
 searchesUtSit is a number that varies.
 
-Instead of resolving Searching for Utility:
+Instead of resolving Junkyard Utility:
 	say "     As you wander the junkyard, you see a large pile of, well, junk. You search through this heaping mound of other people's garbage and find ";
 	if scaleValue of Player <= 2:
 		increase searchesUtSit by 1;
@@ -182,7 +182,7 @@ Instead of resolving Searching for Utility:
 				ItemGain rusty nail by 1;
 		else:
 			say "nothing particularly useful. You should try again.";
-		if searchesUtSit is 4, now Searching for Utility is resolved;
+		if searchesUtSit is 4, now Junkyard Utility is resolved;
 	else:
 		say "nothing particularly useful. This is mostly just small hardware supplies. What could you possibly do with these [one of]screws[or]nails[or]broken pencils[or]broken spray cans[at random]? You get up and continue what you were doing.";
 
