@@ -530,7 +530,7 @@ The scent of spear is "The Viking spear smells of ancient battles. The scent get
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"rusty nail"	"This four-inch nail is rusted at the tip and would be useful for stabbing if you could wield it."	1	rusty nail
+"rusty nail"	"This four-inch nail is rusted at the tip. Its length is crooked slightly and it's bent at the head, as though the nail had been used before."	1	rusty nail
 
 rusty nail is an armament. It is not temporary.
 It has a weapon "[one of]your small rusty nail[or]your rusty nail[or]your weaponized nail[at random]".
