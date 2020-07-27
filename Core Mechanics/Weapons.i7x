@@ -60,7 +60,7 @@ The scent of scalpel is "The scalpel smells like metal.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"sharp screw"	"A two-and-a-half inch screw, tle thread and tip of which has been sharpened. The shank of the screw is wrapped in cloth and the head has been filed away, probably to make gripping easier."	1	sharp screw
+"sharp screw"	"A two-and-a-half inch screw, the thread and tip of which has been sharpened. The shank of the screw is wrapped in cloth as a make-shift hand guard, and the head has been filed away, probably to make gripping easier."	1	sharp screw
 
 sharp screw is an armament. It is not temporary.
 It has a weapon "[one of]the sharp screw[or]the sharpened screw[or]the weaponized screw[at random]".

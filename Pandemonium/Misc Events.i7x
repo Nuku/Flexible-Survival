@@ -172,18 +172,19 @@ searchesUtSit is a number that varies.
 Instead of resolving Junkyard Utility:
 	say "     As you wander the junkyard, you see a large pile of, well, junk. You search through this heaping mound of other people's garbage and find ";
 	if scaleValue of Player <= 2:
-		increase searchesUtSit by 1;
 		if a random chance of 1 in 4 succeeds:
-			if a random chance of 1 in 3 succeeds:
-				say "a sharp screw! [if scalevalue of player > 2]This may be useful if you could wield it[else]This will make a useful weapon[end if].";
-				ItemGain sharp screw by 1;
-			else if a random chance of 1 in 2 succeeds:
-				say "a rusty nail! [if scalevalue of player > 2]This may be useful if you could wield it[else]This will make a useful weapon[end if].";
+			increase searchesUtSit by 1;
+			if a random chance of 1 in 2 succeeds: [12.5% chance for rusty nail]
+				say "a rusty nail! [if scalevalue of player > 2]This may be useful if you could wield it properly[else]This will make a useful weapon[end if]. ";
 				ItemGain rusty nail by 1;
-			else:
-				say "nothing particularly useful. You should try again.";
-		else:
-			say "nothing particularly useful. You should try again.";
+			else if a random chance of 1 in 2 succeeds: [6.25% chance for sharp screw]
+				say "a sharp screw! [if scalevalue of player > 2]This may be useful if you could wield it properly[else]This will make a useful weapon[end if]. ";
+				ItemGain sharp screw by 1;
+			else: [increments variable]
+				say "nothing particularly useful. ";
+			say "[if searchesUtSit < 4]There are probably useful items still in this pile of junk if you keep looking for them. [else]You doubt you'll find anything more than you already have in this pile of junk. [end if]";
+		else: [75% chance of nothing, does not increment variable]
+			say "nothing particularly useful. There are probably useful items still in this pile of junk if you keep trying.";
 		if searchesUtSit is 4, now Junkyard Utility is resolved;
 	else:
 		say "nothing particularly useful. This is mostly just small hardware supplies. What could you possibly do with these [one of]screws[or]nails[or]broken pencils[or]broken spray cans[at random]? You get up and continue what you were doing.";
