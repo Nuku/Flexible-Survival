@@ -309,9 +309,9 @@ The size of gimp mask is 3.
 The AC of gimp mask is 0.
 The effectiveness of gimp mask is 0.
 The placement of gimp mask is "head".
-The descmod of gimp mask is "A black leather mask covers your head, leaving only your eyes visible".
+The descmod of gimp mask is "A black leather mask covers your head, leaving only your eyes visible.".
 The slot of gimp mask is "head".
-the scent of gimp mask is "The gimp mask smells like leather".
+the scent of gimp mask is "The gimp mask smells like leather.".
 
 Section 3 - Raided Corner Store
 

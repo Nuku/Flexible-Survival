@@ -1102,12 +1102,12 @@ Definition: A person (called x) is naked:
 	else:
 		no;
 
-Definition: A person (called x) is gimpy:
+[Definition: A person (called x) is gimpy:
 	if gimp mask is equipped:
 		yes;
 	else:
 		no;
-
+]
 Definition: A person (called x) is conformist:
 	if "Conformist" is listed in feats of x:
 		yes;
@@ -6406,6 +6406,7 @@ Include Misc 6 by Kaleem mcintyre.
 Include Misc 7 by Kaleem mcintyre.
 Include Misc 8 by Kaleem mcintyre.
 Include Misc 9 by Kaleem mcintyre.
+Include Misc Events by Pandemonium.
 Include Misc Scene 5 by Kaleem mcintyre.
 Include More Misc Events by Kaleem mcintyre.
 Include Murder Mystery by Rikaeus.

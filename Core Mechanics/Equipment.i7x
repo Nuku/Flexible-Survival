@@ -2167,6 +2167,12 @@ The descmod of flowered bermuda shorts is "A pair of colorful flowered bermuda s
 The slot of flowered bermuda shorts is "legs".
 the scent of flowered bermuda shorts is "The shorts have the typical faintly musky scent of clothing that has been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
+Part 9 - Shorts
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"striped board shorts"	"A pair of striped board shorts. They have three broad stripes that are red, white, and beige. Judging by the appearance of the shorts, they're [']masculine['] and pretty [']sporty['] looking."	1	striped board shorts
+
 striped board shorts is a grab object.
 striped board shorts is equipment.
 It is not temporary.

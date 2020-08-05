@@ -1829,6 +1829,8 @@ to NumberVariableSave:
 			now NumberVarValue entry is Lost;
 		-- "losttoalphahusky":
 			now NumberVarValue entry is losttoalphahusky;
+		-- "lostToHorseman":
+			now NumberVarValue entry is lostToHorseman;
 		-- "LostToZebra":
 			now NumberVarValue entry is LostToZebra;
 		-- "loversbench":
@@ -2411,6 +2413,8 @@ to NumberVariableSave:
 			now NumberVarValue entry is scufflecount;
 		-- "sdbook":
 			now NumberVarValue entry is sdbook;
+		-- "searchesUtSit":
+			now NumberVarValue entry is searchesUtSit;
 		-- "SeraphisContent":
 			now NumberVarValue entry is SeraphisContent;
 		-- "SeraphisNeedy":
@@ -2573,8 +2577,8 @@ to NumberVariableSave:
 			now NumberVarValue entry is stiffedpayment;
 		-- "strangebottledrink":
 			now NumberVarValue entry is strangebottledrink;
-		-- "stripbarcounter":
-			now NumberVarValue entry is stripbarcounter;
+[		-- "stripbarcounter":
+			now NumberVarValue entry is stripbarcounter;]
 		-- "strongbacked":
 			now NumberVarValue entry is strongbacked;
 		-- "struggleatt":
@@ -5499,6 +5503,8 @@ to VariableNumberLoad:
 					now Lost is numberVarValue entry;
 				-- "losttoalphahusky":
 					now losttoalphahusky is numberVarValue entry;
+				-- "lostToHorseman":
+					now lostToHorseman is numberVarValue entry;
 				-- "LostToZebra":
 					now LostToZebra is numberVarValue entry;
 				-- "loversbench":
@@ -6081,6 +6087,8 @@ to VariableNumberLoad:
 					now scufflecount is numberVarValue entry;
 				-- "sdbook":
 					now sdbook is numberVarValue entry;
+				-- "searchesUtSit":
+					now searchesUtSit is numberVarValue entry;
 				-- "SeraphisContent":
 					now SeraphisContent is numberVarValue entry;
 				-- "SeraphisNeedy":
@@ -6245,8 +6253,8 @@ to VariableNumberLoad:
 					now stiffedpayment is numberVarValue entry;
 				-- "strangebottledrink":
 					now strangebottledrink is numberVarValue entry;
-				-- "stripbarcounter":
-					now stripbarcounter is numberVarValue entry;
+[				-- "stripbarcounter":
+					now stripbarcounter is numberVarValue entry;]
 				-- "strongbacked":
 					now strongbacked is numberVarValue entry;
 				-- "struggleatt":

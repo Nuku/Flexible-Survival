@@ -17,17 +17,7 @@ Instead of Resolving a Wet Clothes:
 	increase the score by 1;
 	now Wet Clothes is Resolved;
 
-Table of GameEventIDs (continued)
-Object	Name
-Politics	"Politics"
-
-Politics is a situation.
-the sarea of Politics is "Campus".
-
-Instead of Resolving a Politics:
-	say "     While exploring the campus near the Poli-Sci building, you stumble upon an odd sight. You spot a humanoid donkey and a humanoid elephant arguing and fighting with one another. Not wanting to get dragged into the fight, you sneak away before they notice you.";
-	increase the score by 1;
-	now Politics is Resolved;
+["Politics" event revised in Misc Events file - Pandemonium]
 
 Table of GameEventIDs (continued)
 Object	Name

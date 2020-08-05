@@ -276,7 +276,7 @@ to HEtentaclehorrorfight: [victory and loss scenes intended to be the same as a 
 		say "     Though, you'll still need to look around actual data you can use. These empirical documents will help, sure, but the researchers must have kept some kind of journal around, maybe? Whatever the case may be, you search through the room until you can find something that could work to aid Joanna in her purpose. In the shelves you find more documents, but they're mostly gibberish to you, and you can't understand a whole lot of it. It seems like they are drafts of previous theories? But you're not so sure... Well, the advantage here is that you can carry a lot of this with you, so you grab whatever you can find that makes even if just a mild suggestion of what you're seeking. And while you're collecting readable data, you come across a dossier labeled as an updated version of the official theory. You just know this has to be it! It's a heavy and big one, but you have to bring it over, together with the extra documents, [bold type]to your kinkajou friend, back at the Flower Garden[roman type] this immediate instant.";
 		WaitLineBreak;
 		say "     Upon arriving back at the laboratories, you do your best at hiding your loot, so that nobody asks you any questions. Luckily, Orthas seems busy with something, she just nods at you as you walk away, breathing in relief.";
-		now Resolution of Hybrid Experimentations is 3; [successful]
+		now Resolution of Spreading Flowers is 3; [successful]
 		now Hybrid Experimentations is resolved;
 
 Section 2-3 - Delivering the Documents
