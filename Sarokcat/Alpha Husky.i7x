@@ -513,15 +513,16 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "husky alpha cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Husky Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	husky alpha cum
 
-husky alpha cum is a grab object. husky alpha cum is cum.
+husky alpha cum is a grab object.
+husky alpha cum is cum.
+husky alpha cum is infectious.
+The strain of husky alpha cum is "Husky Bitch".
 the usedesc of husky alpha cum is "[husky alpha cum use]";
 
 to say husky alpha cum use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy fluid cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
-	if "Iron Stomach" is not listed in feats of player:
-		infect "Husky Bitch";
 
 instead of sniffing husky alpha cum:
 	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";

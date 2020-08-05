@@ -33,6 +33,8 @@ Version 1 of Chris by Wahn begins here.
 [  22: breeder Chris and Urik got into talking     ]
 [  99: Urik warned away from breeder Chris         ]
 
+[TODO: Add cross-content if the player starts a tribe with Urik ]
+
 Table of GameCharacterIDs (continued)
 object	name
 Chris	"Chris"

@@ -127,6 +127,17 @@ The objsize of ancient blade is 3.
 The hitbonus of ancient blade is 1. [magic]
 the scent of ancient blade is "The weapon smells of forged metal, with a hint of dirt and dust.".
 
+Table of Game Objects (continued)
+name	desc	weight	object
+"cavalry saber"	"A well-crafted saber, about 40 inches long, with steel blade and a handle made from brass and leather. Despite its obvious age, it has clearly been well-taken care of, with the owners keeping it spotlessly polished, and sharpened enough to shave with."	5	cavalry saber
+
+cavalry saber is an armament. It is not temporary.
+It has a weapon "shining steel blade".
+The weapon damage of cavalry saber is 14.
+The weapon type of cavalry saber is "Melee".
+The objsize of cavalry saber is 3.
+The hitbonus of cavalry saber is 0. [nothing special]
+The scent of the cavalry saber is "The blade smells of metal polish. It's an antique, after all.".
 
 Table of Game Objects (continued)
 name	desc	weight	object

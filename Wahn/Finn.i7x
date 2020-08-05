@@ -50,6 +50,7 @@ Instead of resolving a Missing Farm Hand:
 		say "[FinnTracked]";
 
 to say FinnTracked:
+	now inasituation is true;
 	say "     Turning to follow the newer trail, it doesn't take all that long before you hear shouts and cursing coming from somewhere ahead of you. There are fragments of partially collapsed buildings sticking out of the grassland a short distance that way, the largest one rising not quite two stories. With the ruins breaking up the sounds a bit, you hear snippets of laughter, as well as angry and amused shouting from somewhere behind.";
 	WaitLineBreak;
 	project the Figure of CentaurMare_icon;
@@ -158,6 +159,7 @@ to say FinnTracked:
 					move player to McDermott Farm Entrance;
 		now horsefight is 0;
 		increase score by 1;
+	now inasituation is false;
 	now Missing Farm Hand is resolved;
 
 to say FinnCentauressCaring:

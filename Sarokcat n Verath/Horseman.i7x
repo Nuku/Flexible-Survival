@@ -1,52 +1,197 @@
 Horseman by Sarokcat n Verath begins here.
 [ Version 2.0 - scenes partially rewritten & adjusted for Dry Plains & Farm events]
+[ Version 3.0 - Horseman loss scenes, drop item fixed - Pandemonium ]
 
 "Adds a Horseman to Flexible Survival's Wandering Monsters table"
+
+lostToHorseman is a number that varies. [utilize in later updates]
 
 Section 1 - Creature Responses
 
 to say HorsemanDesc:
 	setmongender 3; [creature is male]
 	if horsefight is 0:			[normal]
-		say "     Coming around a corner you slam into what feels like a solid wall - looking up you see you have run into one of the horsemen. He looks down at you with confusion as you take a step back. Standing on digitigrade legs that are covered in a cream colored fur up to his thickly built human torso. On his right bicep is the same intricate interlocking horseshoe tattoo that the guards at the front door have. An impressive equine package bulges his ripped khaki shorts. His heavy three fingered hands are capped with hooflet-like nails. His short tail flicks behind him in annoyance. Still looking at you with confusion written all over his fully equine head and face you begin to wonder if this men were chosen more for their body mass than brains. 'You don't look like you're supposed to be here,' he grumbles. 'I better take you back to processing so they can make a proper horsey fucktoy out of ya.'";
+		say "     Coming around a corner you slam into what feels like a solid wall - looking up you see you have run into one of the horsemen. He looks down at you with confusion as you take a step back. Standing on digitigrade legs that are covered in a cream colored fur up to his thickly built human torso. On his right bicep is the same intricate interlocking horseshoe tattoo that the guards at the front door have. An impressive equine package bulges his ripped khaki shorts. His heavy three fingered hands are capped with hooflet-like nails. His short tail flicks behind him in annoyance. Still looking at you with confusion written all over his fully equine head and face you begin to wonder if these men were chosen more for their body mass than their brains. 'You don't look like you're supposed to be here,' he grumbles. 'I better take you back to processing so they can make a proper horsey fucktoy out of ya.'";
 	else if horsefight is 1:		[fight on Dry Plains]
 		say "     The muscular horseman steps up to you with balled fists. Standing on digitigrade legs that are covered in a cream colored fur up to his thickly built human torso, his right bicep bears an intricate interlocking horseshoe tattoo. An impressive equine package bulges his ripped khaki shorts and behind him, a short tail flicks in annoyance. He grumbles. 'By the time I'm done with you, you're gonna be a proper horsey fucktoy.'";
 	else if horsefight is 2: [fight in the farm worker barracks]
 		say "     'Fuck off,' the farmhand growls and swings a punch at you.";
 
 to say Horseman wins:
-	if horsefight is 0:			[normal]
-		if Player is female:
-			say "     The tall horseman grins happily as you fall down before his might, his equine eyes roving over your body as he steps forward on his powerful hooves. 'Now I should really take you down to the rest of the herd, so we can all make a lovely little filly out of you, but first I think I'm going to have a little fun with that slutty little pussy of yours myself,' he says with a leer on his muzzle while stroking his already erect equine cock in anticipation. You try to raise a protest, but he just stalks over to you, powerful equine legs shifting his weight easily as his hooves clop on the ground, then reaches down and pushes you onto your back on the ground. 'Usually prefer a bed for this, or at least a mounting block, but this should be fun too,' he mutters absently as he positions himself over you. The horseman's strong arms hold you down easily as he brushes his large equine rod against your body, then brings its tip to rest against your crotch. You can feel your pussy getting damp and can't suppress a needful moan as your body begins to warm up under the influence of his powerful sexual musk. 'Now hold on, it's time for this horse to take you for a ride,' your captor says with a rough chuckle, before beginning to push his thick length into your body.";
-			LineBreak;
-			say "     His equine shaft feels like it is nearly splitting you in two as he pushes it into you an inch at a time, though you can't deny that you also shudder with pleasure from lying under this powerful creature and having his flared manhood spreading open your innermost depths. The slight pain of being stuffed full of his thick horsecock soon is fully overwhelmed by the sensations of being filled so very completely by the virile male. Your inner walls grip his cock tightly as he begins to thrust into you, your juices coating his thick length as he moves as much of his wonderful rod as possible into your body with each rocking movement of his powerful hips. You groan and throw your head back while he thrusts into you, your body rocking on the ground with every thrust. His equine member makes your needy body feel so very good, even as the musk of a stallion in rut clouds your mind with lust and images of a whole stable full of the other horny horsemen fill your head enticingly - images of all those massive stallionhoods ready and willing to use your tight body. It's just too much for your mind to take, and you cry out in orgasm as your body shudders underneath the horseman. Your inner walls convulse around his thrusting shaft as you come, giving his cock a massage that drives the male horseman over the edge as well, him letting out a loud whinny of pleasure as he empties his load into your body.";
-			LineBreak;
-			say "     You groan in arousal and lie back as his seed shoots into your womb, filling your body up with blast after massive blast of cum. Before long, it begins spilling out around the sides of his cock as you reach your maximum capacity and he pulls out, coating your front with his still spurting seed, even as more of it his fertile equine treasure leaks out from between your thighs. You can only moan contentedly and lie back on the ground as the powerful male stands up and stretches himself, before grinning down at you with amusement, 'That was fun, I think I'll let you go now this time, provided of course you come back by here again soon, so I can [']catch['] you again,' he says with another soft chuckle, before staggering unsteadily down the halls himself, leaving you lying there covered in his cum. It takes a moment before you can shake off the effects of being mated by him, then are able to gather your things back up and head out again.[impregchance]";
-			infect "Horseman";
-		else:
-			say "     The powerful horseman scoffs as you collapse in front of him helplessly, 'Wasting my time on a puny little male runt like you? Why, you don't even have a proper cunt to fuck,' the horseman says with a crude chuckle as he strokes his thick equine meat speculatively. 'Still maybe with a bit of help you can become sexy little stud like me - though obviously not as handsome,' he says with a neighing chuckle then begins to jerk off and soon groans in pleasure. Looking up at the masturbating horseman, you are hit full in the face with the first blast of his sticky white equine seed as he brings himself to orgasm and shoots all over you. You gasp in surprise and the taste of his equine cum fills your mouth - much to the horseman's amusement. He continues to stroke himself, coaxing more and more seed out of his rod onto you, even as your body begins to shudder and feel strange in response. Your thoughts seem slower and more filled with lust with every second, and you lie there with a silly grin on your face while he finishes coating you with his cum. 'There now, maybe that will help you fit in here better,' he says with an equine grin and starts walking down the passage away from you. 'Or even better yet, maybe you'll soon have a nice slutty little mare cunt for me to fuck instead! Can't wait till I see you next time!' he calls back over his shoulder, leaving you lying there covered in his equine seed.";
-			infect "Horseman";
-	else if horsefight is 1:		[fight on Dry Plains]
-		if Player is female:
-			say "     The tall horseman grins happily as you fall down before his might, his equine eyes roving over your body as he steps forward on his powerful hooves. 'Now I should really take you to the stables, so we can all make a lovely little filly out of you, but first I think I'm going to have a little fun with that slutty little pussy of yours myself,' he says with a leer on his muzzle while stroking his already erect equine cock in anticipation. You try to raise a protest, but he just stalks over to you, powerful equine legs shifting his weight easily as his hooves clop on the ground, then reaches down and pushes you onto your back on the ground. 'Usually prefer a bed for this, or at least a mounting block, but this should be fun too,' he mutters absently as he positions himself over you. The horseman's strong arms hold you down easily as he brushes his large equine rod against your body, then brings its tip to rest against your crotch. You can feel your pussy getting damp and can't suppress a needful moan as your body begins to warm up under the influence of his powerful sexual musk. 'Now hold on, it's time for this horse to take you for a ride,' your captor says with a rough chuckle, before beginning to push his thick length into your body.";
-			LineBreak;
-			say "     His equine shaft feels like it is nearly splitting you in two as he pushes it into you an inch at a time, though you can't deny that you also shudder with pleasure from lying under this powerful creature and having his flared manhood spreading open your innermost depths. The slight pain of being stuffed full of his thick horsecock soon is fully overwhelmed by the sensations of being filled so very completely by the virile male. Your inner walls grip his cock tightly as he begins to thrust into you, your juices coating his thick length as he moves as much of his wonderful rod as possible into your body with each rocking movement of his powerful hips. You groan and throw your head back while he thrusts into you, your body rocking on the ground with every thrust. His equine member makes your needy body feel so very good, even as the musk of a stallion in rut clouds your mind with lust and images of a whole stable full of the other horny horsemen fill your head enticingly - images of all those massive stallionhoods ready and willing to use your tight body. It's just too much for your mind to take, and you cry out in orgasm as your body shudders underneath the horseman. Your inner walls convulse around his thrusting shaft as you come, giving his cock a massage that drives the male horseman over the edge as well, him letting out a loud whinny of pleasure as he empties his load into your body.";
-			LineBreak;
-			say "     You groan in arousal and lie back as his seed shoots into your womb, filling your body up with blast after massive blast of cum. Before long, it begins spilling out around the sides of his cock as you reach your maximum capacity and he pulls out, coating your front with his still spurting seed, even as more of it his fertile equine treasure leaks out from between your thighs. You can only moan contentedly and lie back on the ground as the powerful male stands up and stretches himself, before grinning down at you with amusement, 'That was fun. I think I'll let you go now this time - it'll be nice to know you're still out here, wild and untamed until I can [']catch['] you again,' he says with another soft chuckle and walks away, leaving you lying there covered in his cum. It takes a moment before you can shake off the effects of being mated by him, then are able to gather your things back up and head out again.[impregchance]";
-			infect "Horseman";
-		else:
-			say "     The powerful horseman scoffs as you collapse in front of him helplessly, 'Wasting my time on a puny little male runt like you? Why, you don't even have a proper cunt to fuck,' the horseman says with a crude chuckle as he strokes his thick equine meat speculatively. 'Still maybe with a bit of help you can become sexy little stud like me - though obviously not as handsome,' he says with a neighing chuckle then begins to jerk off and soon groans in pleasure. Looking up at the masturbating horseman, you are hit full in the face with the first blast of his sticky white equine seed as he brings himself to orgasm and shoots all over you. You gasp in surprise and the taste of his equine cum fills your mouth - much to the horseman's amusement. He continues to stroke himself, coaxing more and more seed out of his rod onto you, even as your body begins to shudder and feel strange in response. Your thoughts seem slower and more filled with lust with every second, and you lie there with a silly grin on your face while he finishes coating you with his cum. 'There now, maybe that will help you fit in here better,' he says with an equine grin and starts walking down the passage away from you. 'Or even better yet, maybe you'll soon have a nice slutty little mare cunt for me to fuck instead! Can't wait till I see you next time!' he calls back over his shoulder, leaving you lying there covered in his equine seed.";
-			infect "Horseman";
-	else if horsefight is 2: [fight in the farm worker barracks]
-		say "     The muscled equine farmhand knocks you to the ground with a punch to the stomach, looking down on you in disdain as you cough and try to catch your breath. 'Just stay out of things that don't concern you,' he growls, then turns away from you and joins the crowd around Corbin.";
+	if inasituation is true:
+		say ""; [dealt with in the event]
+	else:
+		if horsefight is 0:			[normal]
+			if Player is female:
+				say "     The tall horseman grins happily as you fall down before his might, his equine eyes roving over your body as he steps forward on his powerful hooves. 'Now I should really take you down to the rest of the herd, so we can all make a lovely little filly out of you, but first I think I'm going to have a little fun with that slutty little pussy of yours myself,' he says with a leer on his muzzle while stroking his already erect equine cock in anticipation. You try to raise a protest, but he just stalks over to you, powerful equine legs shifting his weight easily as his hooves clop on the ground, then reaches down and pushes you onto your back on the ground. 'Usually prefer a bed for this, or at least a mounting block, but this should be fun too,' he mutters absently as he positions himself over you.";
+				say "     The horseman's strong arms hold you down easily as he brushes his large equine rod against your body, then brings its tip to rest against your crotch. You can feel your pussy getting damp and can't suppress a needful moan as your body begins to warm up under the influence of his powerful sexual musk. 'Now hold on, it's time for this horse to take you for a ride,' your captor says with a rough chuckle, before beginning to push his thick length into your body. His equine shaft feels like it is nearly splitting you in two as he pushes it into you an inch at a time, though you can't deny that you also shudder with pleasure from lying under this powerful creature and having his flared manhood spreading open your innermost depths. The slight pain of being stuffed full of his thick horsecock soon is fully overwhelmed by the sensations of being filled so very completely by the virile male.";
+				WaitLineBreak;
+				say "     Your inner walls grip his cock tightly as he begins to thrust into you, your juices coating his thick length as he moves as much of his wonderful rod as possible into your body with each rocking movement of his powerful hips. You groan and throw your head back while he thrusts into you, your body rocking on the ground with every thrust. His equine member makes your needy body feel so very good, even as the musk of a stallion in rut clouds your mind with lust and images of a whole stable full of the other horny horsemen fill your head enticingly - images of all those massive stallionhoods ready and willing to use your tight body. It's just too much for your mind to take, and you cry out in orgasm as your body shudders underneath the horseman. Your inner walls convulse around his thrusting shaft as you come, giving his cock a massage that drives the male horseman over the edge as well, him letting out a loud whinny of pleasure as he empties his load into your body.";
+				say "     You groan in arousal and lie back as his seed shoots into your womb, filling your body up with blast after massive blast of cum. Before long, it begins spilling out around the sides of his cock as you reach your maximum capacity and he pulls out, coating your front with his still spurting seed, even as more of it his fertile equine treasure leaks out from between your thighs. You can only moan contentedly and lie back on the ground as the powerful male stands up and stretches himself, before grinning down at you with amusement, 'That was fun, I think I'll let you go now this time, provided of course you come back by here again soon, so I can [']catch['] you again,' he says with another soft chuckle, before staggering unsteadily down the halls himself, leaving you lying there covered in his cum. It takes a moment before you can shake off the effects of being mated by him, then are able to gather your things back up and head out again.";
+				CreatureSexAftermath "Player" receives "PussyFuck" from "Horseman";
+				infect "Horseman";
+			else:
+				say "     The powerful horseman scoffs as you collapse in front of him helplessly, 'Wasting my time on a puny little male runt like you? Why, you don't even have a proper cunt to fuck,' the horseman says with a crude chuckle as he strokes his thick equine meat speculatively. 'Still maybe with a bit of help you can become sexy little stud like me - though obviously not as handsome,' he says with a neighing chuckle then begins to jerk off and soon groans in pleasure. Looking up at the masturbating horseman, you are hit full in the face with the first blast of his sticky white equine seed as he brings himself to orgasm and shoots all over you. You gasp in surprise and the taste of his equine cum fills your mouth - much to the horseman's amusement. He continues to stroke himself, coaxing more and more seed out of his rod onto you, even as your body begins to shudder and feel strange in response.";
+				say "     Your thoughts seem slower and more filled with lust with every second, and you lie there with a silly grin on your face while he finishes coating you with his cum. 'There now, maybe that will help you fit in here better,' he says with an equine grin and starts walking down the passage away from you. 'Or even better yet, maybe you'll soon have a nice slutty little mare cunt for me to fuck instead! Can't wait till I see you next time!' he calls back over his shoulder, leaving you lying there covered in his equine seed.";
+				infect "Horseman";
+		else if horsefight is 1:		[fight on Dry Plains]
+			if Player is female:
+				say "     The tall horseman grins happily as you fall down before his might, his equine eyes roving over your body as he steps forward on his powerful hooves. 'Now I should really take you to the stables, so we can all make a lovely little filly out of you, but first I think I'm going to have a little fun with that slutty little pussy of yours myself,' he says with a leer on his muzzle while stroking his already erect equine cock in anticipation. You try to raise a protest, but he just stalks over to you, powerful equine legs shifting his weight easily as his hooves clop on the ground, then reaches down and pushes you onto your back on the ground. 'Usually prefer a bed for this, or at least a mounting block, but this should be fun too,' he mutters absently as he positions himself over you. The horseman's strong arms hold you down easily as he brushes his large equine rod against your body, then brings its tip to rest against your crotch.";
+				say "     You can feel your pussy getting damp and can't suppress a needful moan as your body begins to warm up under the influence of his powerful sexual musk. 'Now hold on, it's time for this horse to take you for a ride,' your captor says with a rough chuckle, before beginning to push his thick length into your body. His equine shaft feels like it is nearly splitting you in two as he pushes it into you an inch at a time, though you can't deny that you also shudder with pleasure from lying under this powerful creature and having his flared manhood spreading open your innermost depths. The slight pain of being stuffed full of his thick horsecock soon is fully overwhelmed by the sensations of being filled so very completely by the virile male. Your inner walls grip his cock tightly as he begins to thrust into you, your juices coating his thick length as he moves as much of his wonderful rod as possible into your body with each rocking movement of his powerful hips.";
+				WaitLineBreak;
+				say "     You groan and throw your head back while he thrusts into you, your body rocking on the ground with every thrust. His equine member makes your needy body feel so very good, even as the musk of a stallion in rut clouds your mind with lust and images of a whole stable full of the other horny horsemen fill your head enticingly - images of all those massive stallionhoods ready and willing to use your tight body. It's just too much for your mind to take, and you cry out in orgasm as your body shudders underneath the horseman. Your inner walls convulse around his thrusting shaft as you come, giving his cock a massage that drives the male horseman over the edge as well, him letting out a loud whinny of pleasure as he empties his load into your body.";
+				say "     You groan in arousal and lie back as his seed shoots into your womb, filling your body up with blast after massive blast of cum. Before long, it begins spilling out around the sides of his cock as you reach your maximum capacity and he pulls out, coating your front with his still spurting seed, even as more of it his fertile equine treasure leaks out from between your thighs. You can only moan contentedly and lie back on the ground as the powerful male stands up and stretches himself, before grinning down at you with amusement, 'That was fun. I think I'll let you go now this time - it'll be nice to know you're still out here, wild and untamed until I can [']catch['] you again,' he says with another soft chuckle and walks away, leaving you lying there covered in his cum. It takes a moment before you can shake off the effects of being mated by him, then are able to gather your things back up and head out again.";
+				CreatureSexAftermath "Player" receives "PussyFuck" from "Horseman";
+				infect "Horseman";
+			else:
+				say "     The powerful horseman scoffs as you collapse in front of him helplessly, 'Wasting my time on a puny little male runt like you? Why, you don't even have a proper cunt to fuck,' the horseman says with a crude chuckle as he strokes his thick equine meat speculatively. 'Still maybe with a bit of help you can become sexy little stud like me - though obviously not as handsome,' he says with a neighing chuckle then begins to jerk off and soon groans in pleasure. Looking up at the masturbating horseman, you are hit full in the face with the first blast of his sticky white equine seed as he brings himself to orgasm and shoots all over you. You gasp in surprise and the taste of his equine cum fills your mouth - much to the horseman's amusement. He continues to stroke himself, coaxing more and more seed out of his rod onto you, even as your body begins to shudder and feel strange in response.";
+				say "     Your thoughts seem slower and more filled with lust with every second, and you lie there with a silly grin on your face while he finishes coating you with his cum. 'There now, maybe that will help you fit in here better,' he says with an equine grin and starts walking down the passage away from you. 'Or even better yet, maybe you'll soon have a nice slutty little mare cunt for me to fuck instead! Can't wait till I see you next time!' he calls back over his shoulder, leaving you lying there covered in his equine seed.";
+				infect "Horseman";
+		else if horsefight is 2: [fight in the farm worker barracks]
+			say "     The muscled equine farmhand knocks you to the ground with a punch to the stomach, looking down on you in disdain as you cough and try to catch your breath. 'Just stay out of things that don't concern you,' he growls, then turns away from you and joins the crowd around Corbin.";
 
 To say Horseman loses:
-	if horsefight is 0:			[normal]
-		say "     The powerful horseman shakes his head slightly to clear it, before charging right at you again, obviously not knowing when he is beat. His attack is clumsy and easily avoided, as he is still off balance from the beating you have recently been giving him, and it is easy enough to sidestep and guide him right into a wall. The powerful beast groans and collapses up against the wall, a slightly stupefied look on his face as he stares off into space, obviously stunned. Shaking your head slightly, you continue along your way before he can try to stop you again.";
-	else if horsefight is 1:		[fight on Dry Plains]
-		say "     The powerful horseman shakes his head slightly to clear it, before charging right at you again, obviously not knowing when he is beat. His attack is clumsy and easily avoided, as he is still off balance from the beating you have been giving him, and it is easy enough to sidestep and send him crashing to the ground. The powerful beast groans and collapses, a slightly stupefied look on his face as he stares off into space, obviously stunned as he lays flopped out on the grass.";
-	else if horsefight is 2: [fight in the farm worker barracks]
-		say "     The muscled equine farmhand shakes his head slightly to clear it, before trying to punch you once again, obviously not knowing when he is beat. His attack is clumsy and easily avoided, as he is still off balance from the beating you have been giving him, and it is easy enough to sidestep and send him crashing to the ground. Groaning and holding his head as he is, you don't think he'll get up anytime soon.";
+	if inasituation is true: [the fight was called for from an event]
+		say ""; [dealt with in the event]
+	else: [normal fights]
+		say "     [if horsefight is not 2]The powerful horseman[else]The muscled equine farmhand[end if] shakes his head slightly to clear it before [if horsefight is not 2]trying to punch [else]charging right at [end if]you again, obviously not knowing when he's beat. His attack is clumsy and easily avoided, and it's easy enough to sidestep and [if horsefight is 0]guide him right into a wall[else]send him crashing to the ground[end if]. You hear a solid thud [if horsefight is 0]on impact[else]when his head hits a rock[end if]. The powerful beast groans and collapses [if horsefight is 0]up against the wall. [else if horsefight is 1]in the grass. [else if horsefight is 2]. [end if]When he turns [if horsefight is not 0]himself over[else]to rest his head on the wall[end if], you see the stupefied look on his face. He's clearly stunned.";
+		say "[beatTheHorseman]";
+
+to say beatTheHorseman:
+	say "     [bold type]What do you do with the horseman now?[roman type][line break]";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Beat him up";
+	now sortorder entry is 0;
+	now description entry is "Take your aggression out on him";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Milk him for some horsey cum";
+	now sortorder entry is 1;
+	now description entry is "Collect a bottle of cum from him";
+	[]
+	if player is male:
+		choose a blank row in table of fucking options;
+		now title entry is "Mount him";
+		now sortorder entry is 2;
+		now description entry is "Thrust yourself into the equine's tailhole";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Ride his cock";
+	now sortorder entry is 3;
+	now description entry is "Impale yourself on the horseman's cock";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Take your aggression out on him"):
+					say "[HorsemanBeating]";
+				if (nam is "Milk him for some horsey cum"):
+					say "[HorsemanMilking]";
+				if (nam is "Mount him"):
+					say "[HorsemanFucked]";
+				if (nam is "Ride his cock"):
+					say "[HorsemanRidden]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "[HorsemanRelease]";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
+
+to say HorsemanRelease:
+	say "     You stare at him for a moment and were it not for how strong he is, you'd probably take pity on him. And in a way you do show him pity as you tell him to get lost. At first he doesn't hear you so you lightly smack his cheek. He wakes up at that, and you tell him again -- almost so quietly you're not sure if you said it at all -- to get lost. He watches you for a moment to see if you're seriously letting him go, and when you nod your head for him to leave, he quickly gets up and rushes off, almost looking embarrassed.";
+
+to say HorsemanMilking:
+	say "     After pulling an empty bottle out of your pack and setting it down where you can quickly reach it, you decide to take what you want from the defeated horseman instead of letting him [if lostToHorseman > 0]spray it all over you[else]keep it to himself[end if]. Kneeling down beside the dazed equine, you rub his expanding bulge. You unzip his shorts and coax out his cock. His eyes still glazed over, you pump his long shaft. The horseman begins to stir as you use both hands on his cock, one going up while the other goes down and twists at the base of his shaft. 'Do you like that?' He whinnies and shakes his head. 'No?' you ask teasingly, knowing full well that he shook himself awake. You slow your pace and use your fingertips. As you just barely touch his dick, he takes a deep breath and stares at you lustfully.";
+	say "     He begins thrusting into your hands, so with your dominant hand you grab his shaft tighter, exploring his full length. Still masturbating him slowly, you use your other hand to squeeze his balls. He thrusts faster into your hands, so you let go of his balls and grip the base of his cock tightly. You put all your weight onto him to stop his thrusting. He sighs. You";
+	if Player is dominant:
+		say "r dominant tendencies start to get the better of you. You want your big horsey to nicker, sigh, and moan as much as possible. While you don't want him to stay frustrated, you don't want him to cum just yet. 'Looks like someone needs to be broke in.' With ";
+	else if Player is submissive:
+		say "r submissive tendencies start to get the better of you, but you want this man to enjoy your touch as much as possible. Instead of going down on the man's large cock, you stare into his eyes. They blaze with angry lust. Thankfully the horseman is too exhausted from fighting you already. With ";
+	else:
+		say " want this big horsey to enjoy your touch as much as possible, but you don't want him to cum just yet. You're only getting started. You glance up at his face and he's glaring at you in angry lust. Thankfully the horseman is too exhausted from fighting you already. With ";
+	say "your dominant hand, you pump just the tip of his cock, faster than before. By now, his cock dribbles with pre-cum. Looking him straight in the eye, you twist the tip of his shaft as you tease it, increasing your pace faster and faster. He plants his hooves on the floor behind you and thrusts his cock into your hands, despite your weight on him. Maybe the big horseman isn't as exhausted as you thought.";
+	say "     '[one of]Not yet, [if Player is submissive]sir[else]horsey[end if][or]Don't you want to keep going?[or]Just a little farther[at random],' you say as the horseman grabs your hand at the base of his cock. He starts to squeeze himself harder with your hand, so you pump the length of his shaft with your other one. He nickers and you pick up the pace until you can't go any faster. Finally he lets out a loud neigh and you grab the empty bottle. The first spray of cum flies right past your ear. You try to aim his cock but he's still got a hold of you at his base. Another shot of cum hits him in the face and he licks his lips. Though he continues to cum, it seems that the effects of horseman jizz still affects these muscled men, as [if Player is submissive]your horse stallion[else]your horsey[end if] seems to become more docile after tasting his own cum.";
+	say "     His grip on your hand loosens and you position his still-ejaculating cock towards the bottle. He continues to unload even after you've filled the bottle, and ";
+	if Player is submissive:
+		say "you wipe what remains on your hand on the stallion's shorts. ";
+	else:
+		say "you bring what remains on your hand to your horsey's face and he gobbles it up eagerly. ";
+	say "You then stow the bottle of horseman cum and stand up. The big guy looks at you, exhausted. Satisfied, you leave him sitting there, still too exhausted to get up on his own. Maybe someone will come by and do to him what he wanted to do to you.";
+	ItemGain horseman cum by 1;
+
+to say HorsemanBeating:
+	say "     Seeing this muscled horseman collapse sets something off inside you. You decide this [if Player is not submissive]dominant horsey[else]muscled stallion[end if] could use some of his own medicine. You kick him a few more times and rain blows down upon him, punching and stomping until he's curled into a ball with his arms covering his head. You eventually yell at him to fuck off and deliver a final kick. After a moment of silence, he lifts his head and, seeing that you're seriously letting him go, he slinks off clutching his ribs to find someplace to fix his pride.";
+
+to say HorsemanRidden:
+	say "     You decide to take what you want from the defeated horseman instead of letting him [if lostToHorseman > 0]spray it all over you[else]keep it to himself[end if]. Kneeling down beside the dazed equine, you rub his expanding bulge. You unzip his shorts and coax out his cock. His eyes still glazed over, you pump his long shaft. The horseman begins to stir as you use both hands on his cock, one going up while the other goes down and twists at the base of his shaft. 'Do you like that?' He whinnies and shakes his head. 'No?' you ask teasingly, knowing full well that he shook himself awake. 'Well then, we'll just have to give you something you do like.' You then press his throbbing cock into your [if Player is female]juicy pussy[else]tight anus[end if]. He takes a deep breath and stares at you lustfully as you ride him slowly.";
+	say "     You decide to take your time, pressing into his large cock teasingly. He begins thrusting into your [if Player is female]pussy[else]ass[end if] and you pinch one of his nipples. He nickers and you see him wake from his stupor. You [if Player is submissive]press into his cock as he thrusts upward[else]teasingly start to get off his cock[end if] and he grabs your hips. He neighs and slams your [if Player is female]cunt[else]ass[end if] as far down onto his dick as he can. You moan and play with his nipples harder. 'Want to be a good horsey for me after all?' he says as he continues to plow you above him. It would seem the big horseman isn't quite as exhausted as you thought. The two of you continue fucking for some time, until he's covered in sweat.";
+	say "     The horseman begins to slow down and you decide to take the lead. Maybe your fight did drain him too much. Wanting to [if Player is submissive]be his good horsey[else]get his big load[end if], you fuck yourself on his long shaft as he whinnies underneath you. Once you can't hold back any longer and need release, you pound yourself onto him hard and fast until you both cum loudly as the horseman floods your [if Player is female]womb[else]belly[end if]. [if Player is male]You shoot your own load across the horseman's chest as his semen fills you.[end if]Finished with him, you push yourself off and send the big guy on his way. He clearly has a hard time standing up, still too exhausted to run off by himself. He slinks off grumbling something about what he'll do next time he catches you.";
+	if player is female:
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Horseman";
+	else:
+		CreatureSexAftermath "Player" receives "AssFuck" from "Horseman";
+
+to say HorsemanFucked:
+	say "     You decide to take what you want from the defeated horseman instead of letting him [if lostToHorseman > 0]spray it all over you[else]keep it to himself[end if]. Kneeling down beside the dazed equine, you unzip his shorts and [if horsefight is not 0]turn him over[else]push him over[end if] so that his ass faces you. You then push down his khakis to reveal his muscled ass. He tries to [if horsefight is not 0]turn himself back over[else]push himself up against the wall[end if], but this just causes him to arc his back and show off his glutes more, spurring you on further. As you push your cock into his tight rear end, his hips push back into you, apparently too dazed to realize what you're doing. After a few thrusts, he whinnies. 'I'm not,' he mumbles, 'I'm not a mare,' but you shush him and pump harder into the muscular stallion man.";
+	say "     He begins to moan beneath you. You reach for his cock, which by now is hard and dribbling pre-cum. [if Player is not submissive]'Maybe you're not a mare,' you whisper into his ear, 'but right now you're my bitch.'[end if] He thrusts backwards, trying to get you off his back, but all he really accomplishes is shoving your dick further into him and knocking your hand off his cock. You wrap your arm around his neck to hold on as he tries to buck you off him, and his powerful thrusting drives you over the edge. You erupt into his depths and, for his part, his anal cavity clenches onto your [Cock of Player] manhood from the horseman's own orgasm. The stud calms down after this, lying there with you on top of him, deep inside him.";
+	say "     You tease him for a while, [if Player is not submissive]lightly thrusting into him while he squirms[else]playing with his nipples while he moans[end if]. You eventually pull out and get off him. Defeated and broke in, the horseman tries to put his cock in his shorts, but his erection won't go down. Before you have a chance to fondle him further, he gets up and runs off with surprising speed.";
+	CreatureSexAftermath "Horseman" receives "AssFuck" from "Player";
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"horseman cum"	"A plastic water bottle full of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Horse Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, but who knows what else it might do to you..."	1	horseman cum
+
+instead of sniffing horseman cum:
+say "You open the lid for a moment and take a sniff. Smells much like amaretto, actually, and you're tempted to take a pull from the bottle.";
+
+horseman cum is a grab object. horseman cum is cum.
+the usedesc of horseman cum is "[horseman cum use]";
+
+to say horseman cum use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the nutty horseman cum run over your tongue and down your throat. This tastes so good, you can't stop yourself from continuing to down it. Suddenly, your head feels like it's stuffed with cotton, and the only thing you can think about is drinking more horse cum. You don't even notice when you've drunken the whole bottle, but eventually you realize you licked the bottle clean as best you could. Your mind returns to normal, but you can feel the cotton in your head lingering. You're not sure if you want to feel so... out of focus. But you know you want more horseman cum.";
+	PlayerDrink 6;
+	SanLoss 15;
+	if "Iron Stomach" is not listed in Feats of Player:
+		if FemaleList is not banned and ( "Male Preferred" is not listed in feats of Player or MaleList is banned ): [similar to Onyx]
+			infect "Mareslut";
+			infect "Mareslut";
+		else:
+			infect "Stallionboi";
+			infect "Stallionboi";
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"horse fur"	"A tuft of dappled fur that looks like it has been pulled out of the coat of a horseman. It's nicely soft."	0	horse fur
+
+horse fur is a grab object.
+the usedesc of horse fur is "[HorseFurUse]".
+it is part of the player.
+It is temporary.
+
+to say HorseFurUse:
+	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	infect "Horseman";
+
+instead of sniffing husky alpha fur:
+	say "The fur has a pleasing, not too strong, animal-like scent.";
 
 Section 2 - Creature Insertion
 
@@ -105,15 +250,15 @@ When Play begins:
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]         [ Length of female sex infection will attempt to give you. ]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]          [ Width of female sex infection will try and give you ]
 	now libido entry is 70;             [ Amount player Libido will go up if defeated ]
-	now loot entry is "Spotted fur";    [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
-	now lootchance entry is 0;          [ Chance of loot dropping 0-100 ]
+	now loot entry is "horse fur";    [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
+	now lootchance entry is 10;          [ Chance of loot dropping 0-100 ]
 	now scale entry is 4;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]strong[at random]";
 	now type entry is "[one of]equine[or]horse-like[at random]";
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
+	now Cross-Infection entry is "Mareslut"; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 0;      [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 	now BannedStatus entry is false;

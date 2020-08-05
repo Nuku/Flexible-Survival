@@ -237,8 +237,7 @@ to say K_Boss:
 
 to say conf_Korvin_talkmenu:
 	let TalkDone be false;
-	if graphics is true:
-		project the figure of Korvin_blackcollar_face_icon;
+	project the figure of Korvin_blackcollar_face_icon;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -322,7 +321,7 @@ to say conf_Korvin_talkmenu:
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
-			say "     You step back from the soldier, shaking your head slightly as he gives a questioning look.";
+			say "     You step back from the German shepherd, shaking your head slightly as he gives a questioning look.";
 			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
@@ -352,13 +351,13 @@ to say conf_Korvin_Talk04: [relationship talk]
 	if Resolution of Trucker Bar is 0:
 		say "     As you say that you want to talk about your relationship, Korvin looks at you in a mixture of confusion and wariness. 'Did I do something wrong, [K_Boss]?' he asks, with you telling him to calm down and stressing that you just wanted to get his view on things. There still is caution in his voice as he says, 'O-kay then. Well, I'm your dog all the way, you don't have to worry about that. I mean, yeah you kicked my ass, hard, more than once. But in the end, you didn't just... leave me, instead giving me this. Makes a guy feel appreciated, and all that.' Raising a paw-hand to his neck and running his fingertips over the studs of the collar there, his tail starts up a slow wag.";
 		say "     Seeing the intensity of Korvin's conviction in his eyes, you recognize that he has a deep [italic type]need[roman type] to belong with someone (or maybe to someone?). You guess he must have had a tough time out on the streets, or maybe even before the nanite apocalypse. Taking him in and treating him as more than just a cum-dump has given you a immense status in his mind, and you don't think there's much of anything that he wouldn't do for you. The path you took has earned you an intensely loyal companion, and you can't help but feel good about how things turned out.";
-		SanBoost 3;
 	else if Resolution of Trucker Bar is 2: [player let Korvin make the decision himself]
 		say "     As you say that you want to talk about your relationship, Korvin perks up immediately, a grin spreading over his muzzle. 'I'm your dog all the way, [K_Boss]!' Reaching up to proudly stroke along the studded outside of his collar, he goes on to say,  'Really happy you gave me this. Makes a guy feel appreciated, and all that. Then afterwards, when we went to track down Eddie's story, you were there for me. Let me think it through, make up my own mind. Yeah, really glad I'm with you.' His tail is wagging steadily behind his back, a clear indicator of the positive view the German shepherd holds for you.";
 		if "KorvinPast_Something_More" is listed in Traits of Korvin:
 			say "     Korvin lets his gaze stay focused on you for a little while longer after his last words have been spoken. You think you see his nostrils flare a little as he breathes in your scent, accompanied by an increase of his tail movements. He opens his mouth, as if to say something, then thinks better of it and just licks the sides of his muzzle before giving you a respectful nod. When the German shepherd then turns away, you see from the corner of your eye that he's half-hard, his cock having partly pushed out of his sheath. [bold type]Seems like the things you went through together have given Korvin some ideas beyond just being your trusted guard dog and battle companion. Still, it doesn't seem the right time yet to act on this, one way or another. Better let the matter germinate some more.[roman type][line break]";
 	else if Resolution of Trucker Bar is 3: [player told Korvin to stay with them]
 		say "     As you say that you want to talk about your relationship, Korvin perks up immediately, a grin spreading over his muzzle. 'I'm your dog all the way, [K_Boss]!' Reaching up to proudly stroke along the studded outside of his collar, he goes on to say,  'Really happy you gave me this. Makes a guy feel appreciated, and all that. Then afterwards, when we went to track down Eddie's story, you were there for me. Prevented me from almost making a mistake of trying to be him, instead of myself.' His tail is wagging steadily behind his back, a clear indicator of the positive view the German shepherd holds for you.";
+	SanBoost 3;
 
 to say conf_Korvin_Talk05: [gender preference talk]
 	say "     As you ask Korvin what he prefers sexually, the German shepherd looks at you with a raised eyebrow, then lets out an amused bark? 'Why're you asking, [K_Boss]? Is this for [italic type]personal[roman type] use or are we maybe gonna go out and hunt down some fun?' Exuberant wagging of his tail tells you that he's eager for either option, but he feels a special desire for some one-on-one time with yourself. Reaching out to grip his muscled shoulder and give the anthro a squeeze, you chuckle and tell him that you'll decide what'll go down when the mood strikes you. 'Fair enough,' Korvin replies with a grin. 'Well, I gotta say I love me some boobs. Big, round, and swaying back and forth as I hammer into the bitch's pussy. That's really, really hot!' To underline his point, he grips the base of his cock suggestively. 'And the more bitches the better! God, I wanna pound them all and put puppies inside them!'";
@@ -751,9 +750,11 @@ to say conf_Korvin_sexmenu:
 	now sortorder entry is 8;
 	now description entry is "Reward your loyal dog by allowing him to face-fuck you";
 	[]
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -780,10 +781,12 @@ to say conf_Korvin_sexmenu:
 					say "[conf_Korvin_sex07]";
 				else if nam is "Blow job (giving)":
 					say "[conf_Korvin_sex08]";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the German shepherd, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-	now lastfuck of gshep is turns;
-	wait for any key;
 	clear the screen and hyperlink list;
 
 

@@ -22,7 +22,7 @@ OfficeGirlsFriendship is a number that varies.
 
 BransonRoomConnection is a number that varies.[@Tag:NotSaved]
 
-an everyturn rule:
+a postimport rule:
 	if HP of Melanie > 3 and HP of Melanie < 100 and BransonRoomConnection is 0:
 		change the north exit of Branson & Partner Reception to B&P Company Offices;
 		change the south exit of B&P Company Offices to Branson & Partner Reception;

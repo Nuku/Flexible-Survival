@@ -6779,6 +6779,7 @@ Include Zebra by Vervaine.
 [NPCs]
 Include Ace by Aureas Gigas.
 Include Adam by Wahn.
+Include Aeca by Wahn.
 Include Alex by Stripes.
 Include Arcanologist by Taelyn.
 Include Bad Alexandra by Wahn.
