@@ -137,7 +137,7 @@ Instead of resolving Spiritual Love:
 			now bodydesc of Player is "animalistic";
 			now bodytype of Player is "lupine";
 			now SleepRhythm of Player is 0;
-			trigger ending "Spritiual Love Ending"; [Appended 'Ending' here to avoid conflicts the the event]
+			trigger ending "Spritiual Love Ending"; [Appended 'Ending' here to avoid conflicts the event]
 			end the story saying "You submitted to the spiritual wolf, becoming his loving mate.";
 			now battleground is "void";
 			wait for any key;

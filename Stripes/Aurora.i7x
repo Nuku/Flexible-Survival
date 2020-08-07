@@ -101,9 +101,9 @@ frost giantess is a pet. frost giantess is a part of the player.
 understand "Aurora" as frost giantess.
 printed name of frost giantess is "Aurora".
 The description of frost giantess is "[AuroraDesc]".
-The weapon damage of frost giantess is 8.
-The level of frost giantess is 2.
-The Dexterity of frost giantess is 7.
+The weapon damage of frost giantess is 20.
+The level of frost giantess is 1.
+The Dexterity of frost giantess is 5.
 The summondesc of frost giantess is "[SummonAurora]".
 The dismissdesc of frost giantess is "[DismissAurora]".
 The assault of frost giantess is "[aurora_attack]".

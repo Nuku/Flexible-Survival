@@ -8,7 +8,7 @@ Object	Name
 The Silent One	"The Silent One"
 
 The Silent One is a situation.
-The sarea of The The Silent One is "Nowhere".
+The sarea of The Silent One is "Nowhere".
 
 when play begins:
 	add The Silent One to badspots of OtherworldlyList;

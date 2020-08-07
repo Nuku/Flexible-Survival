@@ -288,19 +288,19 @@ every turn (This is the check Hellhound rule):
 			if FaceName of Player is not "Hellhound":
 				LineBreak;
 				now FaceName of Player is "Hellhound";
-				now Face of Player is "leather dog collar around your neck, and a charmingly human";
+				now Face of Player is "charmingly human, with a leather dog collar around your neck";
 				say "     Your face seems to heat up, and feel like soft putty for a few moments as the Hellhound's [']gift['] returns your face to its original, human configuration.";
 			if BodyName of Player is not "Hellhound":
 				LineBreak;
 				now BodyName of Player is "Hellhound";
 				if maleHound is True:
-					now Body of Player is "appears perfectly human at first. But sprouting between your legs is a sheath and coarse fur that remains dirty no matter how much you attempt to clean yourself";
+					now Body of Player is "perfectly human at first glance, but sprouting between your legs is a sheath and coarse fur that remains dirty no matter how much you attempt to clean yourself";
 					now scalevalue of Player is 3;
 					now bodydesc of Player is "[one of]average[or]normal[or]unchanged[at random]";
 					now bodytype of Player is "human";
 					now SleepRhythm of Player is 0;
 				else:
-					now Body of Player is "appears perfectly human at first. But on your belly there are six nipples, and between your legs rests a swollen, permanently in-heat Hellhound twat";
+					now Body of Player is "perfectly human at first glance, but between your legs rests a swollen, permanently in-heat Hellhound twat";
 					now scalevalue of Player is 3;
 					now bodydesc of Player is "[one of]average[or]normal[or]unchanged[at random]";
 					now bodytype of Player is "human";
@@ -316,7 +316,10 @@ every turn (This is the check Hellhound rule):
 				now the Ball Size of the player is 4;
 				now Cunt Depth of Player is 0;
 				now Cunt Tightness of Player is 0;
-				now Nipple Count of Player is 2;
+				if maleHound is True:
+					now Nipple Count of Player is 2;
+				else:
+					now Nipple Count of Player is 6;
 				now Breast Size of Player is 0;
 			else:
 				if Player is male:

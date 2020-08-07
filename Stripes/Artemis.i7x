@@ -110,9 +110,9 @@ rubber tigress is a pet. rubber tigress is a part of the player.
 understand "Artemis" as rubber tigress.
 printed name of rubber tigress is "Artemis".
 The description of rubber tigress is "[ArtemisDesc]".
-The weapon damage of rubber tigress is 5.
-The level of rubber tigress is 3.
-The Dexterity of rubber tigress is 16.
+The weapon damage of rubber tigress is 10.
+The level of rubber tigress is 1.
+The Dexterity of rubber tigress is 15.
 The summondesc of rubber tigress is "[SummonArtemis]".
 The dismissdesc of rubber tigress is "[DismissArtemis]".
 The assault of rubber tigress is "[ArtemisAttack]".

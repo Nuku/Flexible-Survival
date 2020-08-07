@@ -188,9 +188,9 @@ understand "Spike" as doberman companion.
 understand "Doberman" as doberman companion.
 printed name of doberman companion is "Spike".
 The description of doberman companion is "[SpikeDesc]".
-The weapon damage of doberman companion is 7.
-The level of doberman companion is 5.
-The Dexterity of doberman companion is 16.
+The weapon damage of doberman companion is 15.
+The level of doberman companion is 1.
+The Dexterity of doberman companion is 10.
 The summondesc of doberman companion is "[SummonSpike]".
 The dismissdesc of doberman companion is "[DismissSpike]".
 The assault of doberman companion is "[one of]Spike pounces your opponent, landing some good hits.[or]The anthro doberman by your side lands a kick on the leg of your opponent, hurting and distracting them.[or]An aggressive bark by Spike distracts your enemy a moment - long enough for you to score a quick hit![or]Snarling, Spike snaps for your enemy with his teeth, leaving a gash as he is fought off.[at random]".

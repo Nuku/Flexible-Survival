@@ -32,9 +32,9 @@ Little fox is a pet. little fox is a part of the player.
 understand "Dash" as little fox.
 printed name of little fox is "Dash".
 The description of the little fox is "[DashDesc]".
-The weapon damage of little fox is 4.
+The weapon damage of little fox is 5.
 The level of little fox is 1.
-The Dexterity of little fox is 10.
+The Dexterity of little fox is 20.
 The summondesc of little fox is "[SummonDash]".
 The dismissdesc of little fox is "[DismissDash]".
 The assault of little fox is "[one of]The little fox darts forward quickly and trips your opponent![or]Yipping and harassing your opponent, the little fox allows you to score a glancing blow![or]Growling ferociously, your little fox friend springs forward to attack, only to slip and knock over some junk nearby, luckily pelting your opponent with it.[or]Your opponent jumps and twists around suddenly in pain, allowing you to see your little fox friend hanging onto their rear valiantly by their teeth.[or]Taking advantage of your foe's momentary distraction, your pet fox manages to get in a few solid nips.[at random]".
@@ -283,9 +283,9 @@ skunk kit is a pet. skunk kit is a part of the player.
 understand "Peppy" as skunk kit.
 printed name of skunk kit is "Peppy".
 The description of the skunk kit is "[Peppydesc]".
-The weapon damage of skunk kit is 6.
+The weapon damage of skunk kit is 5.
 The level of skunk kit is 1.
-The Dexterity of skunk kit is 13.
+The Dexterity of skunk kit is 20.
 The summondesc of skunk kit is "[SummonPeppy]".
 The dismissdesc of skunk kit is "[DismissPeppy]".
 The assault of skunk kit is "[one of]The little skunk viciously launches itself at your attacker![or]Turning around, the skunk sprays your attacker in the face![or]Afraid of being left alone again, the little skunk goes into a frenzy of biting![or]All of a sudden the powerful scent of skunk washes over the fight from where your little skunk kit is playing nearby.[or]Taking advantage of your foes['] distraction, the skunk nips and bites at whatever part of your opponent it can reach.[or]Your adversary pauses for a minute as the little skunk growls at it, startling it enough for you to land a hit![or]The little skunk charges in to protect you, and your opponent seems so startled at its sudden appearance it falls backwards.[or]The little skunk tries to threaten your adversary from the sidelines, and spotting the skunk your adversary recoils in fear of its smell.[at random]".

@@ -79,9 +79,9 @@ PenileVirgin of Retriever Girl is true.
 SexuallyExperienced of Retriever Girl is true.
 MainInfection of Retriever Girl is "Retriever Female".
 The description of Retriever Girl is "[KarenDesc]".
-The weapon damage of Retriever Girl is 7.
-The level of Retriever Girl is 5.
-The Dexterity of Retriever Girl is 18.
+The weapon damage of Retriever Girl is 10.
+The level of Retriever Girl is 1.
+The Dexterity of Retriever Girl is 10.
 The summondesc of Retriever Girl is "[SummonKaren]".
 The dismissdesc of Retriever Girl is "[DismissKaren]".
 The assault of Retriever Girl is "[one of]Stepping forward quickly, [or]Circling around behind the enemy, [or]Rushing recklessly towards your foe, [or][at random]Karen [one of]strikes with her short claws[or]attacks with a swift, low kick[or]clips the opponent with a quick strike as she runs past[at random].".

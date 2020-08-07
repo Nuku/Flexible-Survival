@@ -53,9 +53,9 @@ understand "Korvin" as gshep.
 printed name of gshep is "Korvin".
 The description of gshep is "[Korvindesc]".
 The conversation of gshep is { "Bark!" }.
-The weapon damage of gshep is 5.
-The level of gshep is 3.
-The Dexterity of gshep is 13.
+The weapon damage of gshep is 15.
+The level of gshep is 1.
+The Dexterity of gshep is 10.
 The summondesc of gshep is "[SummonKorvin]".
 The dismissdesc of gshep is "[DismissKorvin]".
 The assault of gshep is "[gshep_attack]".

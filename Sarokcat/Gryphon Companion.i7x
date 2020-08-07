@@ -16,9 +16,9 @@ Gryphoness	"Gryphoness"
 Gryphoness is a pet. The description of gryphoness is "[gryphonessdesc]". Gryphoness is a part of the player.
 understand "Denise" as gryphoness.
 printed name of gryphoness is "Denise".
-The weapon damage of Gryphoness is 5.
-The level of Gryphoness is 2.
-The Dexterity of Gryphoness is 10.
+The weapon damage of Gryphoness is 10.
+The level of Gryphoness is 1.
+The Dexterity of Gryphoness is 20.
 The summondesc of Gryphoness is "[summongryphoness]".
 The dismissdesc of Gryphoness is "[dismissgryphoness]".
 The assault of Gryphoness is "[gryphonessassault]".

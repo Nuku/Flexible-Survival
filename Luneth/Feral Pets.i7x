@@ -33,9 +33,9 @@ Cute Crab is a pet. Cute Crab is a part of the player.
 understand "Snips" as Cute Crab.
 printed name of Cute Crab is "Snips".
 The description of Cute Crab is "[SnipsDesc]".
-The weapon damage of Cute Crab is 6.
+The weapon damage of Cute Crab is 5.
 The level of Cute Crab is 1.
-The Dexterity of Cute Crab is 8.
+The Dexterity of Cute Crab is 20.
 The summondesc of Cute Crab is "[SummonSnips]".
 The dismissdesc of Cute Crab is "[DismissSnips]".
 The assault of Cute Crab is "[one of]Your crab snaps with his great pincers![or]Scuttling crazily, you are not even entirely sure when your crab landed a blow.[at random]".
@@ -230,7 +230,7 @@ printed name of house cat is "Dinah".
 The description of the house cat is "[DinahDesc]".
 The weapon damage of house cat is 5.
 The level of house cat is 1.
-The Dexterity of house cat is 9.
+The Dexterity of house cat is 20.
 The summondesc of house cat is "[SummonDinah]".
 The dismissdesc of house cat is "[DismissDinah]".
 The assault of house cat is "[one of]Your opponent moves back from your attack, only to trip over a strategically placed house cat![or]With a loud yowl, Dinah launches herself at your opponents face, biting and scratching like mad![or]The house cat eyes your opponent carefully, before turning her back on them and licking her paws in utter disdain. The shocking display of utter indifference seems to damage your opponents confidence[or]All of a sudden the combat stops for a moment as you and your opponent are startled at a loud yowl. Looking down, you barely have a second to realize that your opponent had managed to step on your cat's tail, before Dinah rips into your opponent in fury.[or]Taking advantage of your foe's distraction, Dinah picks an opportune moment to attack.[or]Spotting something of interest on the other side of the melee, Dinah quickly darts through the combat, somehow managing to claw your opponent as she does so.[at random]".
@@ -452,9 +452,9 @@ Exotic Bird is a pet. Exotic Bird is a part of the player.
 understand "Chirpy" as Exotic Bird.
 printed name of Exotic Bird is "Chirpy".
 The description of the exotic bird is "[ChirpyDesc]".
-The weapon damage of Exotic Bird is 2.
+The weapon damage of Exotic Bird is 5.
 The level of Exotic Bird is 1.
-The Dexterity of Exotic Bird is 15.
+The Dexterity of Exotic Bird is 20.
 The summondesc of Exotic Bird is "[SummonChirpy]".
 The dismissdesc of Exotic Bird is "[SummonChirpy]".
 The assault of Exotic Bird is "[one of]Chirpy dive bombs your opponent![or]Chirpy flaps her wings in your adversary's face, blinding it![or]Diving down to engage, your bird friend scratches at your opponent with her talons![or]Your opponent jumps and twists around in pain with Chirpy pecking at its scalp.[or]Taking advantage of your foe's momentary distraction, Chirpy manages to land a few quick attacks.[or]Your bird friend takes a moment to relieve herself, fortuitously right on your opponent.[at random]".
@@ -642,8 +642,8 @@ helper dog is a pet. helper dog is a part of the player.
 understand "Hobo" as helper dog.
 printed name of helper dog is "Hobo".
 The description of helper dog is "[HoboDesc]".
-The weapon damage of helper dog is 6.
-The level of helper dog is 5.
+The weapon damage of helper dog is 10.
+The level of helper dog is 1.
 The Dexterity of helper dog is 15.
 The summondesc of helper dog is "[SummonHobo]".
 The dismissdesc of helper dog is "[DismissHobo]".

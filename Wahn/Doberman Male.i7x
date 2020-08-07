@@ -3,6 +3,56 @@ Version 1 of Doberman Male by Wahn begins here.
 Section 1 - Creature Insertion [Doberman Male]
 
 
+to say TrophyList_Doberman_Male: [call from the table of random critters entry for the infection, to be executed when the player wins]
+	truncate CombatTrophyList to 0 entries; [cleaning out the global list]
+	if a random chance of 2 in 10 succeeds: [chances for various items]
+		add "Mesh Shirt" to CombatTrophyList;
+	if a random chance of 8 in 10 succeeds:
+		add "doberman male fur" to CombatTrophyList;
+	[...] [might include different item "sets" for infections that have multiple personas]
+	if CombatTrophyList is non-empty: [at least one possible trophy generated]
+		say "[ChooseCombatTrophy]";
+
+to say ChooseCombatTrophy: [player can pick an item (just the one), or none]
+	say "     [bold type]Having won the fight, you could claim a trophy from the battleground or from your opponent themselves. [roman type][line break]";
+	[display the list of trophies somehow, with the player able to choose one]
+	say "     You quickly snatch a X for yourself.";
+
+to say CombatTrophyChoosing:
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	repeat with TrophyItem running from 1 to the number of entries in CombatTrophyList:
+		choose a blank row in table of fucking options;
+		now title entry is "[TrophyItem]";
+		now description entry is "Snatch the [TrophyItem]";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				ItemGain nam by 1;
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You decide not to take anything.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
+
+
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;

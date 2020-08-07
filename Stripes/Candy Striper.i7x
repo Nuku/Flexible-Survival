@@ -257,9 +257,9 @@ pink raccoon is a pet. pink raccoon is a part of the player.
 understand "Candy" as pink raccoon.
 printed name of pink raccoon is "Candy".
 The description of pink raccoon is "The pink coonboi has soft, gray fur with pink highlights and pink rings around his tail. He looks at you with mindless adoration, now a loyal and obedient pet and plaything.".
-The weapon damage of pink raccoon is 4.
-The level of pink raccoon is 2.
-The Dexterity of pink raccoon is 14.
+The weapon damage of pink raccoon is 10.
+The level of pink raccoon is 1.
+The Dexterity of pink raccoon is 15.
 The summondesc of pink raccoon is "Coming happily to your call, the girly raccoon runs up to you and wraps his arms around you, hugging you close. He churrs happily, ready and eager to obey.".
 The assault of pink raccoon is "[one of]The raccoon charges in, regardless of any risk to himself and strikes wildly at your enemy![or]Your raccoon pet leaps at the enemy, trying to tackle them. He gets them off balance long enough for you to score a quick hit before he's tossed off![or]Yipping angrily, he nips at your foe![or]The coon boy hikes up his skirt and starts masturbating, shooting his hot seed onto his dress in a show that distracts your foe long enough to get in a quick strike![or]The raccoon grabs stray trash and rubble, pelting your enemy with it![at random]".
 the fuckscene of pink raccoon is "[sexwithpinkraccoonpet]".

@@ -121,9 +121,9 @@ Felinoid Companion is a pet. Felinoid Companion is a part of the player.
 understand "Klauz" as Felinoid Companion.
 printed name of Felinoid Companion is "Klauz".
 The description of Felinoid Companion is "[Klauzdesc]".
-The weapon damage of Felinoid Companion is 9.
-The level of Felinoid Companion is 6.
-The Dexterity of Felinoid Companion is 15.
+The weapon damage of Felinoid Companion is 15.
+The level of Felinoid Companion is 1.
+The Dexterity of Felinoid Companion is 10.
 The summondesc of Felinoid Companion is "[SummonKlauz]".
 The dismissdesc of Felinoid Companion is "[DismissKlauz]".
 The assault of Felinoid Companion is "[one of]Your felinoid companion rakes your attacker with his claws![or]Klauz rubs up against your opponent, distracting them greatly![or]Klauz's musk distracts your target, allowing you to get in another strike![or]Taking advantage of your foe's distraction, your companion strikes out with his claws.[or]Your ally manages to grab onto your opponent, providing you with an opening![or]Klauz charges into the melee to protect you, and your opponent seems so startled at the ferocious appearance of this new combat, they leave themselves open to attack.[or]Bracing himself against the pain, your injured companion leaps forward into the combat, knocking your opponent flat.[or]The felinoid you helped returns the favor by running in and tripping your opponent up![or]Klauz pounces on your opponent, trying to wrestle them to the ground.[at random]".

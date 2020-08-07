@@ -256,9 +256,9 @@ understand "Ryousei" as royal tiger.
 understand "Ryo" as royal tiger.
 printed name of royal tiger is "Ryousei".
 The description of royal tiger is "[RyouseiDesc]".
-The weapon damage of royal tiger is 10.
-The level of royal tiger is 13.
-The Dexterity of royal tiger is 18.
+The weapon damage of royal tiger is 15.
+The level of royal tiger is 1.
+The Dexterity of royal tiger is 15.
 The summondesc of royal tiger is "[SummonRyousei]".
 The dismissdesc of royal tiger is "[DismissRyousei]".
 The assault of royal tiger is "[one of]Ryousei wades into the fight with sure strides, swiping his claws to hurt your enemy at a critical moment.[or]The royal tiger charges into combat, roaring at your opponent and making them back down a step.[or]A growled roar by Ryousei distracts your enemy a moment - long enough for you to score a quick hit![or]Snarling, your royal tiger companion slashes your enemy with his claws![at random]".

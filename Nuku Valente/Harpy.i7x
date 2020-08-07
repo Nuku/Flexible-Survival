@@ -106,7 +106,7 @@ When Play begins:
 	now defeated entry is "[Harpy loses]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[Harpy wins]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[HarpyDesc]"; [ Description of the creature when you encounter it.]
-	now face entry is "young woman with large, elfin ears and unruly red hair that barely reaches your shoulders. While a little chubby, it could pass as a human"; [ Face description, format as "Your face is (your text)."]
+	now face entry is "that of a young woman with large, elfin ears and unruly red hair that barely reaches your shoulders. While a little chubby, it could pass as a human"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "built slightly, with slender curves that remind of a teenaged female and an exposed belly button on your [Skin of Player] front. Feathers spread over your shoulders and back, light brown in color. Your thighs are covered in downy looking feathers, but shins fade into tough looking bird talons that grip the ground securely. Your arms have wings like fins, with powerful flight feathers ready"; [ Body Description, format as "Your Body is (your text)"]
 	now skin entry is "smooth and flawless"; [ skin Description, format as "You have (your text) skin"]
 	now tail entry is "Above your pert ass is a fan of brown feathers that curve upwards."; [ Tail description, write a whole Sentence or leave blank. ]

@@ -119,8 +119,8 @@ mouse girl is a pet. mouse girl is a part of the player.
 understand "Rachel" as mouse girl.
 printed name of mouse girl is "Rachel".
 The description of mouse girl is "[RachelDesc]".
-The weapon damage of mouse girl is 5.
-The level of mouse girl is 3.
+The weapon damage of mouse girl is 10.
+The level of mouse girl is 1.
 The Dexterity of mouse girl is 15.
 The summondesc of mouse girl is "[SummonRachel]".
 The dismissdesc of mouse girl is "[DismissRachel]".

@@ -704,9 +704,9 @@ demonologist is a pet. demonologist is a part of the player.
 understand "Xaedihr" as demonologist.
 printed name of demonologist is "Xaedihr".
 The description of demonologist is "[XaedihrDesc]".
-The weapon damage of demonologist is 12.
-The level of demonologist is 12.
-The Dexterity of demonologist is 16.
+The weapon damage of demonologist is 15.
+The level of demonologist is 1.
+The Dexterity of demonologist is 15.
 The summondesc of demonologist is "[SummonXaedihr]".
 The dismissdesc of demonologist is "[DismissXaedihr]".
 The assault of demonologist is "[one of]Xaedihr swiftly swings his arm around with a dark aura, striking your foe with a crimson bolt.[or]With an arcane gesture, Xaedihr slashes your foe with an invoked phantom claw, leaving a red trail behind.[or]Your half-demon companion manages to immobilize the enemy with a dark tendril, allowing you to score a quick hit![or]Running to the side, your mage buddy summons a large tendril from the ground, slamming the enemy with great force.[or]Xaedihr gives out a chuckle as he teleports back and forth by the target, quickly stabbing them with a short blade.[or]With a demonic chant, shadow purple flames envelop your foe as Xaedihr snaps his fingers, leaving the target singed with a dark burn.[or]Leaping backwards and spinning around, the sorcerer launches forward a shadow sphere, crashing against the target with considerable power.[at random]".

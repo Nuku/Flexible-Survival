@@ -173,9 +173,9 @@ bee girl is a pet. bee girl is a part of the player.
 understand "Honey" as bee girl.
 printed name of bee girl is "Honey".
 The description of bee girl is "[HoneyDesc]".
-The weapon damage of bee girl is 3.
+The weapon damage of bee girl is 5.
 The level of bee girl is 1.
-The Dexterity of bee girl is 16.
+The Dexterity of bee girl is 20.
 The summondesc of bee girl is "[SummonHoney]".
 The dismissdesc of bee girl is "[DismissHoney]".
 The assault of bee girl is "[one of]The bee girl buzzes around, slapping and punching at your foe from behind![or]The bee girl dive bombs the enemy, jabbing with her stinger-less abdomen repeatedly and bashing her fists on their back, buzzing wildly![or]Buzzing angrily, the bumblebee scratches and claws at your foe with her hard, chitinous fingertips![or]The bee drone tosses globs of sticky honey onto your foe, slowing them down while they get unstuck![or]The buzzing drone drops an armload of small rocks and junk onto your enemy from above![at random]".
