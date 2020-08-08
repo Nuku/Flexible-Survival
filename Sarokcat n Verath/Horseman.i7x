@@ -250,7 +250,7 @@ When Play begins:
 	now loot entry is "horse fur";    [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 10;          [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
-	now CumItem entry is "";
+	now CumItem entry is "horseman cum";
 	now TrophyFunction entry is "";
 	now scale entry is 4;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]strong[at random]";

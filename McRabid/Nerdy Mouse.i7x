@@ -123,10 +123,10 @@ When Play begins:
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity] [ Depth in inches of female sex the infection will attempt to give a player. ]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping] [ Width in inches of female sex the infection will try to give a player. ]
 	now libido entry is 30; [ Target libido the infection will rise towards. ]
-	now loot entry is "soda"; 	[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 20; [ Percentage chance of dropping loot, from 0-100. ]
+	now loot entry is "nerdy mouse fur"; 	[ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 40; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
-	now CumItem entry is "";
+	now CumItem entry is "nerdy mouse cum";
 	now TrophyFunction entry is "";
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]lanky[or]skinny[or]lithe[or]short[at random]";
@@ -246,40 +246,35 @@ to say mnfacequote:
 	say "[one of]Don't break my glasses[or]Not in the face! Not in the face[or]Larp rules! Larp Rules! Aiming for the head is cheating[at random]";
 
 
-[
 Table of Game Objects (continued)
 name	desc	weight	object
-"husky alpha fur"	"A tuft of grey and white fur that looks like it has been pulled out of the coat of a husky. It's nicely soft."	0	husky alpha fur
+"nerdy mouse fur"	"A tuft of grey and white fur that looks like it has been pulled out of the coat of a mouse. It's nicely soft."	0	nerdy mouse fur
 
-husky alpha fur is a grab object.
-the usedesc of husky alpha fur is "[HuskyAlphaFurUse]".
-it is part of the player.
-It is temporary.
+nerdy mouse fur is a grab object. It is temporary.
+the usedesc of nerdy mouse fur is "[NerdyMouseFurUse]".
+nerdy mouse fur is infectious. The strain of nerdy mouse fur is "Nerdy Mouse".
 
-to say HuskyAlphaFurUse:
+to say NerdyMouseFurUse:
 	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
-	infect "Husky Alpha";
 
-instead of sniffing husky alpha fur:
+instead of sniffing nerdy mouse fur:
 	say "The fur has a pleasing, not too strong, animal-like scent.";
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"husky alpha cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Husky Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	husky alpha cum
+"nerdy mouse cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Nerdy Mouse Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	nerdy mouse cum
 
-husky alpha cum is a grab object. husky alpha cum is cum.
-the usedesc of husky alpha cum is "[husky alpha cum use]";
+nerdy mouse cum is a grab object. nerdy mouse cum is cum.
+nerdy mouse cum is infectious. The strain of nerdy mouse cum is "Nerdy Mouse".
+the usedesc of nerdy mouse cum is "[nerdy mouse cum use]";
 
-to say husky alpha cum use:
+to say nerdy mouse cum use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy fluid cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
-	if "Iron Stomach" is not listed in feats of player:
-		infect "Husky Bitch";
 
-instead of sniffing husky alpha cum:
+instead of sniffing nerdy mouse cum:
 	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
-]
 
 Section 3 - Endings
 

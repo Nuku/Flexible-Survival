@@ -133,7 +133,7 @@ When Play begins:
 	now desc entry is "[hawkmandesc]";
 	now face entry is "a narrow, hawk-like head with a sharp, curved beak and piercing eyes"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "lithe and slim, with powerful taloned feet and rather claw-like taloned hands, your avian body sports two large, powerful wings, which catch the air behind you and make you almost feel like you could fly"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]soft feathered[or]brown feathered[or]hawk-like[or]feathered[at random]"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "[one of]soft feathered[or]brown feathered[or]hawk-like[or]feathered[at random]"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a rather large tail made of feathers folded neatly behind you, its patterned feathers seeming to shine and shimmer as it flexes and spreads out with every step you take."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]slim, tapered[or]avian[or]hawk-like[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your nose seems to flatten out, and you fight to breathe for a second as your mouth presses forward, the bones of your jaw cracking as it begins to reshape into a powerful avian beak. Your eyes swim for a minute before sharpening into the razor sharp focus of a hawk, and you gasp for breath as your beak finishes forming, your now thin, birdlike tongue exploring the smooth texture of your hawk-like beak"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -309,7 +309,7 @@ When Play begins:
 	now desc entry is "[NonCombatError]";
 	now face entry is "a narrow, hawk-like head with a sharp, curved beak and piercing eyes"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "lithe and slim, with powerful taloned feet and rather claw-like taloned hands, your avian body sports two large, powerful wings, which catch the air behind you and make you almost feel like you could fly"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]soft feathered[or]brown feathered[or]hawk-like[or]feathered[at random]"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "[one of]soft feathered[or]brown feathered[or]hawk-like[or]feathered[at random]"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a rather large tail made of feathers folded neatly behind you, its patterned feathers seeming to shine and shimmer as it flexes and spreads out with every step you take."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]slim, tapered[or]avian[or]hawk-like[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your nose seems to flatten out, and you fight to breathe for a second as your mouth presses forward, the bones of your jaw cracking as it begins to reshape into a powerful avian beak. Your eyes swim for a minute before sharpening into the razor sharp focus of a hawk, and you gasp for breath as your beak finishes forming, your now thin, birdlike tongue exploring the smooth texture of your hawk-like beak"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -341,7 +341,7 @@ When Play begins:
 	now loot entry is "hawkman female feathers";  [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 50;  [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
-	now CumItem entry is "";
+	now CumItem entry is "hawkman male cum";
 	now TrophyFunction entry is "";
 	now scale entry is 3;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sleek[or]winged[at random]";

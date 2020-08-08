@@ -109,7 +109,7 @@ When Play begins:
 	now desc entry is "[chindesc]";
 	now face entry is "short chinchilla muzzle, small gray mouse-like ears, and cute, little whiskers adorned on it"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "voluptuous and somewhat bestial. You have powerful hindpaws that allow you to move with some speed and grace"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]gray fur[or]downy soft fur[at random] in place of"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "[one of]gray fur[or]downy soft fur[at random] in place of"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is "You fairly long tail which fluffs out quite a bit."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]tapered[or]chinchilla[at random], pinkish"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it draws forward into a chinchilla muzzle, sprouting soft, twitchy whiskers. Your ears migrating to the top of your head twisting into a more round, rodent-like shape"; [ face change text. format as "Your face feels funny as (your text)." ]

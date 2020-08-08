@@ -209,7 +209,7 @@ When Play begins:
 	now desc entry is "     This isn't supposed to be an actual infection, just a stand-in - please report how you saw this.";
 	now face entry is "completely human";  [ Face description, format as "Your face is (your text)."]
 	now body entry is "human-looking";     [ Body Description, format as "Your Body is (your text)."]
-	now skin entry is "human";             [ format as "You have (your text) skin."]
+	now skin entry is "human";             [ format as "Your body is covered in (your text) skin."]
 	now tail entry is "";                  [ write a whole Sentence or leave blank. ]
 	now cock entry is "human";             [ format as "You have a 'size' (your text) cock.]
 	now face change entry is "it seems to tingle, moving slightly, with a start you realize it's human"; [ format as "Your face feels funny as (your text)." ]

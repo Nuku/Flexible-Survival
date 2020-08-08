@@ -220,7 +220,7 @@ When Play begins:
 	now desc entry is "[StagDesc]";
 	now face entry is "covered in short brown fur and has the striking angular features of a proud stag. Crowning your head are two impressive multiple-pointed antlers";
 	now body entry is "that of a humanoid male, trim and fit. You have strong arms and hands, capped with blackened fingertips, like hooves that don't compromise dexterity";
-	now skin entry is "brown furred"; [ format as "You have (your text) skin"]
+	now skin entry is "brown furred"; [ format as "Your body is covered in (your text) skin"]
 	now tail entry is "Your butt has a deer's tail over it, [Skin of Player] on the top, soft cream along the underside. The rest of your ass is quite curvy and [Skin of Player], hiding nothing."; [ write a whole Sentence or leave blank. ]
 	now cock entry is "pitch black human"; [ format as "You have a 'size' (your text) cock ]
 	now face change entry is "it draws out into a snout, slender with a wide nose, new scents teasing your addled senses as your ears grow long and narrow, twitching towards sounds. A tickling sensation accompanies sprouting short fur over your new contours as growths sprout from the top of your head, growing quickly into ornate multi-pointed antlers"; [ format as "Your face feels funny as (your text)." ]

@@ -764,7 +764,7 @@ When Play begins:
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
-	now CumItem entry is "";
+	now CumItem entry is "dalmatian cum";
 	now TrophyFunction entry is "";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]lean[or]wiry[or]dexterous[or]limber[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
@@ -905,6 +905,7 @@ instead of sniffing dalmatian cum:
 	say "You open the lid for a moment and take a sniff. Smells rather tasty actually, kinda nutty. You can't help but be tempted to take a swallow of it.";
 
 dalmatian cum is a grab object. dalmatian cum is cum.
+dalmatian cum is infectious. Strain of dalmatian cum is "Dalmatian Bitch".
 the usedesc of dalmatian cum is "[dalmatian cum use]";
 
 to say dalmatian cum use:
@@ -917,7 +918,6 @@ to say dalmatian cum use:
 			say "'Let's hope the stuff makes something nice out of you. Wouldn't mind giving you more, if you want it that badly - as soon as you grow a juicy pussy!' Grabbing his crotch, the anthro canine gives it a demonstrative squeeze.";
 	PlayerDrink 6;
 	SanLoss 5;
-	infect "Dalmatian Bitch";
 
 Table of Game Objects (continued)
 name	desc	weight	object

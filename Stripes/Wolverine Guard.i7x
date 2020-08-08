@@ -154,7 +154,7 @@ When Play begins:
 	now desc entry is "[wolverinedesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "now wolverine's head, with a strong muzzle. Aside from the lighter patches above your brows, you dark brown fur covers your face"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "stocky and muscled, coiled and itching for a fight"; [ Body Description, format as "Your body is (your text)."]
-	now skin entry is "dark brown fur with lighter patches at your sides, flanks and rear to cover your"; [ skin Description, format as "You have (your text) skin."]
+	now skin entry is "dark brown fur with lighter patches at your sides, flanks and rear to cover your"; [ skin Description, format as "Your body is covered in (your text) skin."]
 	now tail entry is "You have a short, thickly furred tail hanging from your rear."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "brown"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it shifts and changes, forming a short muzzle. Your new nose and muzzle twitch as your whiskers grow in. Coarse, dark fur starts to spread over it, giving you a wolverine's head"; [ face change text. format as "Your face feels funny as (your text)." ]

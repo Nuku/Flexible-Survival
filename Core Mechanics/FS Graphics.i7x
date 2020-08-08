@@ -420,6 +420,7 @@ Figure of Tehuantl_Male_Face_icon is the file "Tehuantl_Male_Face.jpg".
 Figure of Tehuantl_Female_Face_icon is the file "Tehuantl_Female_Face.jpg".
 Figure of Timothy_icon is the file "Timothy.jpg".
 Figure of TinyTim_icon is the file "Tiny_Solo.jpg".
+Figure of TinyTim_face_icon is the file "Tiny_Face.jpg".
 Figure of TinyTim_In_Action_icon is the file "Tiny_In_Action.jpg".
 Figure of Thomas_erect_icon is the file "Thomas_erect.jpg".
 Figure of Thomas_face_icon is the file "Thomas_face.jpg".
@@ -1072,6 +1073,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "TSW_sansNecklace"	Figure of TSW_sansNecklace_icon	"Zealot"	g-white	"normal"
 "Malayan Tiger Herm"	Figure of TigressHooker_icon	"Sharei"	g-black	"normal"
 "TinyTim"	Figure of TinyTim_icon	"Obieblu"	g-black	"normal"
+"TinyTim_face"	Figure of TinyTim_face_icon	"SineAlas"	g-black	"normal"
 "Tiny_In_Action"	Figure of TinyTim_In_Action_icon	"Obieblu"	g-black	"normal"
 "Toven_clothed"	Figure of Toven_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Toven_naked"	Figure of Toven_naked_icon	"Kupo Klein"	g-white	"normal"
@@ -1459,6 +1461,7 @@ carry out artistcredits:
 	say "     Tiger Shark Warrior by Zealot @ https://www.furaffinity.net/user/Drakosacerdos/[line break]";
 	say "     Timothy by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Tiny Tim by Obieblu @ tumblr.com[line break]";
+	say "     Tiny Tim (Face) by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Toven by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Tristian by Enaya-TheWhiteWolfen @ https://www.furaffinity.net/user/enaya-thewhitewolfen/";
 	say "     Tyke by TylerAz @ https://www.furaffinity.net/user/tyleraz[line break]";

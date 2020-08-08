@@ -945,7 +945,7 @@ When Play begins:
 	now desc entry is "[Dwarf Desc]";
 	now face entry is "a weathered middle-aged man's, rugged and long-bearded, with short and shaggy dark brown hair hugging the top of your head";
 	now body entry is "that of a short and burly man, musclebound and covered in hair. Your legs are fairly shorter than an average human's, making you stand half one's height";
-	now skin entry is "peach toned and rough"; [ format as "You have (your text) skin"]
+	now skin entry is "peach toned and rough"; [ format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a hairy, compact muscled butt"; [ write a whole Sentence or leave blank. ]
 	now cock entry is "human"; [ format as "You have a 'size' (your text) cock ]
 	now face change entry is "it shapes itself into a weathered male visage, rugged features and a long full beard growing out of your jaw and chin. Your hair becomes very short and dyed in a dark brown color"; [ format as "Your face feels funny as (your text)." ]
@@ -1138,7 +1138,7 @@ When Play begins:
 	now desc entry is "[DwarfKnight Desc]";
 	now face entry is "a weathered middle-aged man's, rugged and long-bearded, with short and shaggy dark brown hair hugging the top of your head";
 	now body entry is "that of a short and burly man, musclebound and covered in hair. Your legs are fairly shorter than an average human's, making you stand half one's height";
-	now skin entry is "peach toned and rough"; [ format as "You have (your text) skin"]
+	now skin entry is "peach toned and rough"; [ format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a hairy, compact muscled butt"; [ write a whole Sentence or leave blank. ]
 	now cock entry is "human"; [ format as "You have a 'size' (your text) cock ]
 	now face change entry is "it shapes itself into a weathered male visage, rugged features and a long full beard growing out of your jaw and chin. Your hair becomes very short and dyed in a dark brown color"; [ format as "Your face feels funny as (your text)." ]

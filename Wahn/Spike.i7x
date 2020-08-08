@@ -17,6 +17,7 @@ Version 2 of Spike by Wahn begins here.
 [   6: Karel                                                                         ]
 [   7: Isaac                                                                         ]
 [   8: Random farmhand horsemen                                                      ]
+[   9: Nelson                                                                        ]
 
 [ thirst of Spike - what does he call the player?                                    ]
 [  0: <name of Player>                                                               ]

@@ -207,7 +207,7 @@ When Play begins:
 	now desc entry is "[SpartanDesc]";
 	now face entry is "a handsome young man's, still smooth and beardless. A Greek helmet with a large red horse-hair plume covers your short black hair";
 	now body entry is "that of a young man, quite fit and healthy. It is garbed in nothing but a pair of sandals and a long red cloak, held around your shoulders by a brooch";
-	now skin entry is "smooth, sun-bronzed"; [ skin Description, format as "You have (your text) skin."]
+	now skin entry is "smooth, sun-bronzed"; [ skin Description, format as "Your body is covered in (your text) skin."]
 	now tail entry is "You have a tight, firmly muscled butt."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "human";
 	now face change entry is "it shapes itself into a handsome male visage, smooth-faced and beardless. A Greek helmet materializes out of a swirl of silvery dust to cover your head and short-cut black hair";

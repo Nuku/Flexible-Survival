@@ -862,7 +862,7 @@ When Play begins:
 	now loot entry is "german shepherd male fur";
 	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
-	now CumItem entry is "";
+	now CumItem entry is "german shepherd male cum";
 	now TrophyFunction entry is "";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]animalistic[at random]";
@@ -997,14 +997,13 @@ name	desc	weight	object
 "german shepherd male cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'German Shepherd Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	german shepherd male cum
 
 german shepherd male cum is a grab object. german shepherd male cum is cum.
+german shepherd male cum is infectious. Strain of german shepherd male cum is "German Shepherd Bitch".
 the usedesc of german shepherd male cum is "[GermanShepherdMaleCumUse]";
 
 to say GermanShepherdMaleCumUse:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy fluid cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
-	if "Iron Stomach" is not listed in feats of player:
-		infect "German Shepherd Bitch";
 
 instead of sniffing german shepherd male cum:
 	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";

@@ -90,6 +90,7 @@ Version 1 of Bad Alexandra by Wahn begins here.
 [ 6 = Karel                                         ]
 [ 7 = Isaac                                         ]
 [ 8 = One of the farmhand horsemen                  ]
+[ 9 = Nelson                                        ]
 
 "Adds Alexandra the doberwoman as an NPC to the Flexible Survival game"
 
@@ -149,6 +150,7 @@ AlexandraBrutusPups is a number that varies.
 AlexandraKarelPups is a number that varies.
 AlexandraIsaacPups is a number that varies.
 AlexandraFarmhandPups is a number that varies.
+AlexandraNelsonPups is a number that varies.
 
 to say AlexandraPupDaddyName: [to use in text]
 	if AlexandraPupDaddy is 1:
@@ -167,6 +169,8 @@ to say AlexandraPupDaddyName: [to use in text]
 		say "Isaac has ";
 	else if AlexandraPupDaddy is 8:
 		say "one of the many farmhand horsemen has ";
+	else if AlexandraPupDaddy is 9:
+		say "Nelson has ";
 
 [See Doberman file for collecting Alexandra.]
 
@@ -220,6 +224,8 @@ to say alexandradesc_bg:
 			say "You're curious if they will show any of their equine heritage or be all doberman. ";
 		else if AlexandraPupDaddy is 8: [random farmhand horseman]
 			say "You're curious if they will show any of their equine heritage (and if so, which of the many farmhand horsemen could have knocked her up) or be all doberman. ";
+		else if AlexandraPupDaddy is 9: [Nelson]
+			say "You're curious if they will show any of their equine heritage or be all doberman. ";
 		[jeans status]
 		if lust of Alexandra < 13: [slightly pregnant]
 			say "She's been needing to leave her jeans unbuttoned lately, to allow her growing belly enough space. ";
@@ -1185,6 +1191,8 @@ To impregAlexandraChance with (x - text):
 				now AlexandraPupDaddy	is 7;
 			-- "Farmhand Horsemen":
 				now AlexandraPupDaddy	is 8;
+			-- "Nelson":
+				now AlexandraPupDaddy	is 9;
 	else:
 		if debugactive is 1:
 			say "     Impregnation fail! A chance of [AlexandraPregChance] in 10 didn't succeed.";
@@ -1257,6 +1265,9 @@ an everyturn rule:
 					else if AlexandraPupDaddy is 8: [random farmhand horseman]
 						say "     Now that the little dogs have grown a little, you do recognize a bit of the farmhand horsemen in them. They are definitely still dobermen through and through, but there's just something about the way they look and act that makes it more than clear in your mind that the one of the towering and muscle-packed studs fathered them. Maybe it's something about their slightly broader build or the surprisingly strong leg muscles of the little ones - it's hard to say. Soon having finished with their drinking from Alexandra, first one, then another of the little ones decides to investigate the person who greeted them into the world. You find yourself beset by curious canines, sticking their noses and licking you everywhere they can reach. Even though they are not yours, they seem to have inherited a bold outlook from whoever turned out to be the father, with one or another bravely pushing to the front to sniff you before he is supplanted by another.";
 						increase AlexandraFarmhandPups by AlexandraGrowingPups;
+					else if AlexandraPupDaddy is 7: [Karel's pups]
+						say "     Now that the little dogs have grown a little, you do recognize a bit of Nelson in them. They are definitely still dobermen through and through, but there's just something about the way they look and act that makes it more than clear in your mind that the huge zebra stud fathered them. Maybe it's something about the shape of their ears and muzzles, or maybe it's a faint hint of a stripe pattern in their shiny brown coats - it's hard to say. Soon having finished with their drinking from Alexandra, first one, then another of the little ones decides to investigate the person who greeted them into the world. You find yourself beset by curious canines, sticking their noses and licking you everywhere they can reach. Even though they are not yours, they seem to have inherited some of the strength and stoicness of their father, neither of them giving up before they've pushed forward and sniffed you before being is supplanted by another.";
+						increase AlexandraNelsonPups by AlexandraGrowingPups;
 				if Libido of Alexandra is 0: [Spike's dad]
 					if AlexandraPupDaddy is:
 						-- 1:
@@ -1275,6 +1286,8 @@ an everyturn rule:
 							now MaxHP of Spike is 7; [Isaac Spike]
 						-- 8:
 							now MaxHP of Spike is 8; [Random Farmhand Horseman]
+						-- 9:
+							now MaxHP of Spike is 9; [Nelson]
 				increase Libido of Alexandra by AlexandraGrowingPups;
 				increase AlexandraPregCount by 1; [number of previous pregnancies]
 				now AlexandraGrowingPups is 0; [no pups in her now]

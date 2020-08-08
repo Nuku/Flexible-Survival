@@ -46,7 +46,7 @@ When Play begins:
 	now desc entry is "[mannequinDesc]";
 	now face entry is "smooth, with striking angular features like a statue";
 	now body entry is "that of an idealized male, with washboard abs and muscled arms and legs";
-	now skin entry is "pale and flawless"; [ format as "You have (your text) skin"]
+	now skin entry is "pale and flawless"; [ format as "Your body is covered in (your text) skin"]
 	now tail entry is ""; [ write a whole Sentence or leave blank. ]
 	now cock entry is "human"; [ format as "You have a 'size' (your text) cock ]
 	now face change entry is "it shapes itself into a chiseled male visage"; [ format as "Your face feels funny as (your text)." ]

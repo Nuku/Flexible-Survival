@@ -158,7 +158,7 @@ When Play begins:
 	now libido entry is 60; [ Amount player Libido will go up if defeated ]
 	now loot entry is "margay milk";
 	now lootchance entry is 36; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "";
+	now MilkItem entry is "margay milk";
 	now CumItem entry is "";
 	now TrophyFunction entry is "";
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]

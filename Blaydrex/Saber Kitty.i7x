@@ -99,7 +99,7 @@ When Play begins:
 	now loot entry is "smilodon cum"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 75;       [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
-	now CumItem entry is "";
+	now CumItem entry is "smilodon cum";
 	now TrophyFunction entry is "";
 	now scale entry is 3;             [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "slender, yet slightly muscled and sexy";  [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender" Use [one of] to vary ]
@@ -220,14 +220,14 @@ name	desc	weight	object
 "smilodon cum"	"A small amount of smilodon cum you've gathered. You just collect everything, don't you?"	1	smilodon cum
 
 instead of sniffing smilodon cum:
-say "The cum has a strong, somewhat nutty scent.";
+	say "The cum has a strong, somewhat nutty scent.";
 
 smilodon cum is a grab object. smilodon cum is cum.
+smilodon cum is infectious. The strain of smilodon cum is "Saber Kitty".
 the usedesc of smilodon cum is "[smilodon cum use]";
 
 to say smilodon cum use:
 	say "Taking out the small bottle you keep your smilodon cum in, you put it to your lips and chug down the creamy liquid. Tasty, and somehow you feel the need for more of it...";
-	Infect "Saber Kitty";
 
 Section 3 - Endings
 

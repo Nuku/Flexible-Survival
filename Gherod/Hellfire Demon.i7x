@@ -366,7 +366,7 @@ When Play begins:
 	now desc entry is "[HellDemon Desc]";
 	now face entry is "of a fiery demon with bright yellow eyes and dark sclera, featuring an wide and chiseled jawline, covered in a short black beard, and very short dark hair on the topside of your head, with pointy ears on both sides. Two large and thick taurus-like horns emerge from your forehead, getting thinner towards the tip";
 	now body entry is "that of an athletic bodybuilder, musclebound and solid, offering both strength and neat posture. There's also some body hair on you";
-	now skin entry is "deep red"; [ format as "You have (your text) skin"]
+	now skin entry is "deep red"; [ format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have powerful, rock-hard glutes, with a long demonic tail that swings back and forth behind you, ending in a classic spaded tip"; [ write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]demonic[or]demon[or]infernal[or]bump-ridden[at random]"; [ format as "You have a 'size' (your text) cock ]
 	now face change entry is "you begin to feel your skull reshaping under your skin, becoming wider and more masculine. A strange feeling in your mouth heralds your canine teeth sharpening and becoming longer to give you a rather intimidating smile. Finally a pair of large horns grow out of the top of your forehead, tauric in shape. Even your eyes have changed, to bright yellow irises enveloped by a darkened sclera"; [ format as "Your face feels funny as (your text)." ]

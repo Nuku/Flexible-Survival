@@ -251,7 +251,7 @@ When Play begins:
 	now libido entry is 40; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "";
+	now MilkItem entry is "panther milk";
 	now CumItem entry is "";
 	now TrophyFunction entry is "";
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]

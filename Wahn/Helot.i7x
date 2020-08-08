@@ -251,7 +251,7 @@ When Play begins:
 	now desc entry is "[HelotDesc]";
 	now face entry is "a handsome young man's, still smooth and beardless. Shaggy black hair falls down to your shoulders";
 	now body entry is "that of a young man, muscular, but with a lean look that hints at going hungry at least part of the time. Your wear but a pair of sandals and a pretty ragged loincloth of faded cloth";
-	now skin entry is "smooth, sun-bronzed"; [ format as "You have (your text) skin"]
+	now skin entry is "smooth, sun-bronzed"; [ format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a tight, firmly muscled butt."; [ write a whole Sentence or leave blank. ]
 	now cock entry is "human"; [ format as "You have a 'size' (your text) cock ]
 	now face change entry is "it shapes itself into a handsome male visage, smooth-faced and beardless. Shaggy black hair falls down to your shoulders"; [ format as "Your face feels funny as (your text)." ]

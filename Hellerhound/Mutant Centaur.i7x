@@ -215,7 +215,7 @@ When Play begins:
 	now desc entry is "[Mutant Centaur Desc]"; [ Description of the creature when you encounter it.]
 	now face entry is "human, with horse ears"; [ Face description, format as "Your face is (your text)"]
 	now body entry is "that of a centaur, with a muscled, human upper torso. Your body has well-defined muscles, but they seem a little strange and don't quite move right. Your arms are strong and muscular, and roughly human in appearance as well. Your lower body is that of a horse, with a muscular equine form and slender legs leading to a set of bottle green hooves";
-	now skin entry is "human on your upper body and blending smoothly into black horsehair on your bottom half to cover your"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "human on your upper body and blending smoothly into black horsehair on your bottom half to cover your"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a green, flowing tail like a horse coming from just above your behind. It wriggles and squirms unlike a horsetail though, moving more like a tentacle.";
 	now cock entry is "[one of]green and equine[or]equine and tentacled[or]bumped and tentacled[or]bumped and equine[or]green and bump-covered[at random]";
 	now face change entry is "your ears become longer and grow fur, changing shape to become like a horse's"; [ face change text. format as "Your face feels funny as (your text)." ]

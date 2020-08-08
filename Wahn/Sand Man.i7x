@@ -141,7 +141,7 @@ When Play begins:
 	now desc entry is "[sandmanDesc]";
 	now face entry is "smooth, with sculpted angular features. A stylish pair of sunglasses sits over your eyes and flowing locks made of fine sand behaving like it was strands of hair surround your face";
 	now body entry is "that of an idealized male, with washboard abs and muscled arms and legs";
-	now skin entry is "fine white sand, making up your body and"; [ format as "You have (your text) skin"]
+	now skin entry is "fine white sand, making up your body and"; [ format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a round, firm bubble butt. A tight black speedo draws others['] looks to it."; [ write a whole Sentence or leave blank. ]
 	now cock entry is "human"; [ format as "You have a 'size' (your text) cock ]
 	now face change entry is "it shapes itself into a chiseled male visage. A stylish pair of sunglasses coalesces out of a swirl of dust in front of your eyes"; [ format as "Your face feels funny as (your text)." ]

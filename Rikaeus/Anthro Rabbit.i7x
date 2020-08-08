@@ -66,7 +66,7 @@ When Play begins:
 	now desc entry is "[AnthroRabbDesc]";
 	now face entry is "that of a rabbit, with distinctive ears sprouting from the top of your head and flopping downwards";
 	now body entry is "far below average height but agile and your hands are human in quality, fingers and everything though they are lightly padded. The same goes for your feet, though they're a tad bit larger, possibly to help you with jumping.";[ Body Description, format as the text "Your Body is (your text)"]
-	now skin entry is "short fur covering almost every inch of your body";[ skin Description, format as the text "You have (your text) skin"]
+	now skin entry is "short fur covering almost every inch of your body";[ skin Description, format as the text "Your body is covered in (your text) skin"]
 	now tail entry is "You have a [one of]short[or]fluffy[or]twitchy[at random] rabbit tail.";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]sheathed[or]rabbit[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "floppy bunny ears sprout from the top of your head and hang on the sides of your face"; [ face change text. format as "Your face feels funny as (your text)" ]

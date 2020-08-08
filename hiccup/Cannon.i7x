@@ -93,7 +93,7 @@ When Play begins:
 	now desc entry is "[cannon desc]"; [ Description of the creature when you encounter it.]
 	now face entry is "purple colored, mushroom-shaped head with no neck. It is devoid of any features except for a large slit at the top. You're able to see and breathe through the slit despite the lack of a mouth or eyes"; [ Face description, format as "You have a (your text) face."]
 	now body entry is "thick with no curves at all. It looks like the shaft of a penis"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "vein covered"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "vein covered"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is "Your ass has several long and curly hairs on it. The skin on your rear is also very wrinkly. The wrinkles and the hairs make your butt cheeks look like a giant ballsack."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "body length"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it turns purple. Your head swells out until it is shaped like the head of a mushroom. Your eyes, nose, and mouth disappear, leaving you momentarily blind and unable to breathe. A moment later, a large slit opens up on the top of your head and you're able to see and breathe through it"; [ face change text. format as "Your face feels funny as (your text)." ]

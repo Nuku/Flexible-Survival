@@ -342,7 +342,7 @@ When Play begins:
 	now desc entry is "[WildMustangDesc]";
 	now face entry is "equine in appearance, with large brown eyes and rather expressive horse-like ears"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "tall and muscular, shaped like an anthro equine. It has powerful digitigrade legs ending in large hooves with fluffy fetlocks. Your hands seem to be slightly hoof-like as well, bearing little hooflet-like nails at the end of each finger"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]brown-furred[or]softly furred[or]short fur covered[at random]"; [ format as "You have (your text) skin"]
+	now skin entry is "[one of]brown-furred[or]softly furred[or]short fur covered[at random]"; [ format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a long, thick, horse-like tail swaying behind you, almost reaching to the ground. Its long strands of coarse hair cover your ass completely as it flicks this way and that seemingly on its own."; [ write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]equine[or]horse-like[or]blunt[or]powerful[at random]"; [ format as "You have a 'size' (your text) cock ]
 	now face change entry is "its mouth stretches forward, merging with a rapidly flattening nose to form an equine muzzle. A groan escapes your widening lips as your forehead flattens and both eyes shift their position to the sides of your head, creating a strange new perspective to see the world in. Meanwhile, your ears lengthen into larger and pointed horse-like ears, which come to rest atop your now extremely equine face"; [ format as "Your face feels funny as (your text)." ]
@@ -515,7 +515,7 @@ When Play begins:
 	now desc entry is "[NonCombatError]";
 	now face entry is "equine in appearance, with large brown eyes and rather expressive horse-like ears"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "tall and muscular, shaped like an anthro equine. It has powerful digitigrade legs ending in large hooves with fluffy fetlocks. Your hands seem to be slightly hoof-like as well, bearing little hooflet-like nails at the end of each finger"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]brown-furred[or]softly furred[or]short fur covered[at random]"; [ format as "You have (your text) skin"]
+	now skin entry is "[one of]brown-furred[or]softly furred[or]short fur covered[at random]"; [ format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a long, thick, horse-like tail swaying behind you, almost reaching to the ground. Its long strands of coarse hair cover your ass completely as it flicks this way and that seemingly on its own."; [ write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]equine[or]horse-like[or]blunt[or]powerful[at random]"; [ format as "You have a 'size' (your text) cock ]
 	now face change entry is "its mouth stretches forward, merging with a rapidly flattening nose to form an equine muzzle. A groan escapes your widening lips as your forehead flattens and both eyes shift their position to the sides of your head, creating a strange new perspective to see the world in. Meanwhile, your ears lengthen into larger and pointed horse-like ears, which come to rest atop your now extremely equine face"; [ format as "Your face feels funny as (your text)." ]

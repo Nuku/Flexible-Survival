@@ -89,7 +89,7 @@ When Play begins:
 	now desc entry is "[spritedesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "exceptionally cute and young human female, with elfin ears at either side of your head"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "largely human, if not for the great set of dragonfly wings that rest on your back, with blackened flesh and clear for most of their length. Your form is also quite short and feminine"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "flawless human"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "flawless human"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is ""; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]human[or]uncut[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your ears become long and elfin. As the changes progress, your face becomes pudgy and youthful, you could almost pass for human"; [ face change text. format as "Your face feels funny as (your text)." ]

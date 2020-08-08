@@ -153,7 +153,7 @@ When Play begins:
 	now desc entry is "[choclabdesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "dog's head, a smooth, rich brown and somehow made of chocolate. You have a long, slobbery tongue and drool chocolate syrup. Your eyes are a solid, dark black, as if made of dark chocolate, but still able to see. As if being constantly remolded instead of moving flesh and bone, your expression seems to shift the shape of your face"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "that of an anthropomorphic canine, strangely somehow chocolate in color and composition. Your body is covered in a confectionary imitation of [SkinName of Player] flesh. Your body has become like soft chocolate, bending and reshaping itself to move instead of having any actual bones or muscles[if labhost > 0]. Occasionally, an extra chocolaty tail, or the head of another chocolate lab pushes out of your chocolate form, barking or drooling its thick chocolate saliva as it pants happily, making the presence of your unwanted passenger clear[end if]. The scent of cocoa lingers pleasantly around you. When teased, you leak white chocolate syrup from your nipples"; [ Body Description, format as "Your Body is (your text)."]
-	now skin entry is "a soft layer of milk-chocolate in the place of regular"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "a soft layer of milk-chocolate in the place of regular"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a slender, canine tail made of chocolate that wags happily."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "chocolate-brown, canine"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it seems to lose all internal structure. Your nose and mouth push out to form a canine muzzle while your ears and the rest of your head change as well. Your vision blurs momentarily as your eyes change somehow. The scent of cocoa fills you, exciting you, making you hunger for it. Somehow you know your head is made of chocolate, through and through. Your tongue lolls from your mouth, drooling a chocolaty syrup as your dark chocolate eyes look around"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -184,7 +184,7 @@ When Play begins:
 	now libido entry is 70; [ Set to zero in this monster to control elsewhere ]
 	now loot entry is "chocolate milk"; [ Dropped item. Key will be used later ]
 	now lootchance entry is 25; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "";
+	now MilkItem entry is "chocolate milk";
 	now CumItem entry is "";
 	now TrophyFunction entry is "";
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]

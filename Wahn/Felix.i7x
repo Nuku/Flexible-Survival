@@ -656,7 +656,7 @@ When Play begins:
 	now desc entry is " ";
 	now face entry is "elongated and reptilian, with a tooth-filled mouth and only slits on your snout as a nose. A spined crest runs over the top of your head and down the long neck, ending at the shoulders and giving you a dashing appearance";
 	now body entry is "that of a very large lizard, at least as big as a horse. It's muscular, but sleek, promising agility and speed on your four legs";
-	now skin entry is "scaled, sand-colored"; [ format as "You have (your text) skin"]
+	now skin entry is "scaled, sand-colored"; [ format as "Your body is covered in (your text) skin"]
 	now tail entry is "A long and flexible tail stands out behind you, perfect to keep your balance."; [ write a whole Sentence or leave blank. ]
 	now cock entry is "ridged, reptilian"; [ format as "You have a 'size' (your text) cock ]
 	now face change entry is "it shapes itself into the elongated shape of a lizard, complete with snout and tooth-filled maw. Instead of hair, a spined crest forms on the top of your head, running down the back of your neck and ending between your shoulders"; [ format as "Your face feels funny as (your text)." ]

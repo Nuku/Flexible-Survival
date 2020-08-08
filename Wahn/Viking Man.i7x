@@ -203,7 +203,7 @@ When Play begins:
 	now desc entry is "[VikingManDesc]";
 	now face entry is "a handsome young man's, framed by a mane of shoulder-long, unkempt blond hair. Your cheeks and chin sport a short blond beard";
 	now body entry is "that of a young man, quite fit and healthy. It is garbed in a woolen tunic and pants, plus a pair of leather boots";
-	now skin entry is "smooth, pale"; [ format as "You have (your text) skin"]
+	now skin entry is "smooth, pale"; [ format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a tight, firmly muscled butt."; [ write a whole Sentence or leave blank. ]
 	now cock entry is "human"; [ format as "You have a 'size' (your text) cock ]
 	now face change entry is "it shapes itself into a handsome male visage, the cheeks and chin covered by a short blond beard. Your hair turns into a shoulder-length blond mane"; [ format as "Your face feels funny as (your text)." ]

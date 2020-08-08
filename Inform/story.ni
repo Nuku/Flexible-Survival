@@ -468,6 +468,7 @@ NewGraphicsRatio is a number that varies. NewGraphicsRatio is usually 30.
 NewGraphicsOpened is a truth state that varies. NewGraphicsOpened is usually false. [set to true for entire playthrough if graphics window opened - unless inline/disabled specified at start]
 [For use with new safe restore]
 RestoreMode is a truth state that varies. RestoreMode is usually false.
+CurrentMedkitSupplies is a number that varies.[@Tag:NotSaved] [uses left in the currently open medkit]
 
 A situation is a kind of thing.
 A situation can be resolved or unresolved. A situation is usually unresolved.
@@ -1102,12 +1103,12 @@ Definition: A person (called x) is naked:
 	else:
 		no;
 
-[Definition: A person (called x) is gimpy:
+Definition: A person (called x) is gimpy:
 	if gimp mask is equipped:
 		yes;
 	else:
 		no;
-]
+
 Definition: A person (called x) is conformist:
 	if "Conformist" is listed in feats of x:
 		yes;
@@ -1919,7 +1920,7 @@ title	subtable	description	toggle
 
 Table of Random Critters
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
-false	"Anthro Dragon"	"Anthro Dragoness"	""	""	0	""	""	""	""	"reptilian snout and great teeth. Two horns spiral backwards over your"	"large and reptilian, covered in [Skin of Player] flesh. You are forced to all fours except for brief, awkward, moments. It reminds you of a dragon, if you had to guess."	"[one of]dull red[or]dull orange[or]lustrous blue[sticky random] scaled"	"You have a wide, tapered, dragon's tail with a spade at the tip."	"[one of]draconic[or]normally internal[or]reptilian[at random]"	"your face draws forward into a reptilian snout, covered in [Skin of Player] flesh."	"Your body grows to larger than human norm, becoming quadrupedal, with great spikes along your back. You look very much like a dragon."	"Your skin breaks out in large armored scales that rapidly spread over your body"	"Your spine tingles before it explosively expands backwards into a great, thick, tail with spikes along the top."	"Your cock tingles as it becomes draconic in shape, a vent forming to hold it within you."	20	10	12	12	12	12	"Female"	50	1	20	"Nowhere"	0	0	0	2	10	0	1	15	10	40	""	0	4	"[one of]monstrous[or]large[or]powerful[at random]"	"draconic"	false	false	false	""	0	"default"	false
+false	"Anthro Dragon"	"Anthro Dragoness"	""	""	0	""	""	""	""	"reptilian snout and great teeth. Two horns spiral backwards over your"	"large and reptilian, covered in [Skin of Player] flesh. You are forced to all fours except for brief, awkward, moments. It reminds you of a dragon, if you had to guess."	"[one of]dull red[or]dull orange[or]lustrous blue[sticky random] scaled"	"You have a wide, tapered, dragon's tail with a spade at the tip."	"[one of]draconic[or]normally internal[or]reptilian[at random]"	"your face draws forward into a reptilian snout, covered in [Skin of Player] flesh."	"Your body grows to larger than human norm, becoming quadrupedal, with great spikes along your back. You look very much like a dragon."	"Your skin breaks out in large armored scales that rapidly spread over your body"	"Your spine tingles before it explosively expands backwards into a great, thick, tail with spikes along the top."	"Your cock tingles as it becomes draconic in shape, a vent forming to hold it within you."	20	10	12	12	12	12	"Female"	50	1	20	"Nowhere"	0	0	0	2	10	0	1	15	10	40	""	0	""	""	""	4	"[one of]monstrous[or]large[or]powerful[at random]"	"draconic"	false	false	false	""	0	"default"	false
 
 Table of New Infection Parts
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
@@ -2949,12 +2950,28 @@ To process (x - a grab object):
 			decrease healed by HP of Player minus maxHP of Player;
 			now HP of Player is maxHP of Player;
 		say "Using your medkit, [if Paula is visible]Paula helps you [one of]treat the worst of your wounds[or]bandage up the worst of your wounds[or]spray your cuts with anesthetic[or]clean and dress your wounds[at random], making sure to kiss them to make it all better[else][one of]you spray your cuts with anesthetic[or]you bandage your worst wounds[at random][end if]. You regain [special-style-1][healed][roman type] HP.";
-		if a random chance of 1 in 10 succeeds:
+		decrease CurrentMedkitSupplies by 1;
+		if CurrentMedkitSupplies < 1:
 			say "You have used up the last of the medkit.";
-			if "Expert Medic" is listed in the feats of Player and a random chance of 2 in 10 succeeds:
-				say "You manage to save the medkit with your amazing skills.";
-			else:
-				ItemLoss medkit by 1;
+			ItemLoss medkit by 1 silently;
+			now CurrentMedkitSupplies is 5;
+			if "Expert Medic" is listed in feats of Player:
+				increase CurrentMedkitSupplies by 1;
+	else if x is mothers milk:
+		let healed be 15 + level of Player + ((Stamina of Player minus 10) divided by 2);
+		if "Fertile" is listed in the feats of Player:
+			now healed is ( healed times 120) divided by 100;
+		if "Breeding True" is listed in the feats of Player:
+			now healed is ( healed times 105 ) divided by 100;
+		if "Litter Bearer" is listed in the feats of Player:
+			now healed is ( healed times 125 ) divided by 100;
+		if "Bouncy Bouncy" is listed in the feats of Player:
+			now healed is ( healed times 115 ) divided by 100;
+		if "Wild Womb" is listed in the feats of Player:
+			now healed is ( healed times 105 ) divided by 100;
+		increase HP of Player by healed;
+		if HP of Player > maxHP of Player:
+			now HP of Player is maxHP of Player;
 	else if x is a pepperspray:
 		if inafight is 1:
 			say "[line break][usepepperspray]";
@@ -6399,6 +6416,7 @@ Include Main Storyline by Stripes.
 Include Male Dorm Events by Rikaeus.
 Include Mall Events by Sarokcat.
 Include Mall Expansion by Wahn.
+Include Misc Events by Pandemonium.
 Include Misc 10 by Kaleem mcintyre.
 Include Misc 3 by Kaleem mcintyre.
 Include Misc 4 by Kaleem mcintyre.
@@ -6406,7 +6424,6 @@ Include Misc 6 by Kaleem mcintyre.
 Include Misc 7 by Kaleem mcintyre.
 Include Misc 8 by Kaleem mcintyre.
 Include Misc 9 by Kaleem mcintyre.
-Include Misc Events by Pandemonium.
 Include Misc Scene 5 by Kaleem mcintyre.
 Include More Misc Events by Kaleem mcintyre.
 Include Murder Mystery by Rikaeus.

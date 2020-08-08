@@ -361,7 +361,7 @@ When Play begins:
 	now loot entry is "orc brew";      [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 50;        [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
-	now CumItem entry is "";
+	now CumItem entry is "orc cum";
 	now TrophyFunction entry is "[GenerateTrophyList_Orc_Warrior]";
 	now scale entry is 4;              [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]meaty[or]powerful[or]broad[or]bulky[at random]";
@@ -555,7 +555,7 @@ When Play begins:
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]         [ Width in inches of female sex the infection will try to give a player. ]
 	now libido entry is 70;
 	now MilkItem entry is "";
-	now CumItem entry is "";
+	now CumItem entry is "orc cum";
 	now lootchance entry is 0;                   [ Percentage chance of dropping loot, from 0-100. ]
 	now TrophyFunction entry is "";
 	now scale entry is 3;                             [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -679,14 +679,13 @@ instead of sniffing orc cum:
 say "You open the lid for a moment and take a sniff. Smells rather tasty actually and you're tempted to take a pull from the bottle.";
 
 orc cum is a grab object. orc cum is cum.
+orc cum is infectious. Strain of orc cum is "Orc Breeder".
 the usedesc of orc cum is "[orc cum use]";
 
 to say orc cum use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy orc cum run over your tongue and down your throat. Mmmmh, this stuff has a really great taste that calls for more. You can't help yourself and keep drinking until all of it is gone, filling your mind with a giddy, pleasant buzz. Now where do you get more of this stuff? You're really tempted to find an orc and just suck it right out of his cock.";
 	PlayerDrink 6;
 	SanLoss 10;
-	infect "Orc Breeder";
-
 
 Section 3 - Definitions
 

@@ -133,7 +133,7 @@ When Play begins:
 	now desc entry is "[UrsineDesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "that of a bear, with an elongated snout and big bear teeth set in what is definitely not a teddy bear"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "tall and broad, with heavy shoulders and an undeniable presence that reeks sheer strength"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]shaggy-furred[or]coarsely furred[or]furry, honey-scented[at random]"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "[one of]shaggy-furred[or]coarsely furred[or]furry, honey-scented[at random]"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a short black tail hidden mostly by the sheer size of you."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]pink bulbous[or]ribbed[or]usually sheathed[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your nose changes and darkens as your face draws forward into a bear like muzzle, and your ears become rounded and furry as they move into their new position"; [ face change text. format as "Your face feels funny as (your text)." ]

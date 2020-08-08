@@ -464,7 +464,7 @@ When Play begins:
 	now desc entry is "[ZebraDesc]";
 	now face entry is "a long, zebra-like muzzle. Your ears have lengthened and constantly swivel above your head as they search for danger, though your eyes still stare with human emotion"; [Your face is (your text)."]
 	now body entry is "thickly built. You stand easily on your strong digitigrade legs, balancing easily on your thick hooves. Your four-fingered hands bear a strong resemblance to equine hooves, and you can't seem to manipulate objects quite as well as you could before"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]black-and-white-striped[or]coarse-furred[or]zebra-striped[or]zebra fur[at random]"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "[one of]black-and-white-striped[or]coarse-furred[or]zebra-striped[or]zebra fur[at random]"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a whip-like zebra tail hanging off of your tight, powerful ass. Long, coarse, black hairs extend from part of the sides of the tail and from the tip, extending its length almost to the ground as it swishes behind you."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]equine[or]zebra[or]thick, black[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "you feel it stretch forward into a proper zebra-like muzzle, your teeth flattening and your nose expanding to take in the new scents around you. With a painful stretching feeling, your ears are tugged upwards to rest on top of your head, and black hair sprouts up to form a mohawk-like zebra mane. Soon, the only difference between your face and that of a normal zebra is a slightly humanlike cast to your features, plus your strangely human eyes staring out at the world through an animal's face"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -496,7 +496,7 @@ When Play begins:
 	now loot entry is "zebra fur";  [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 30;  [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
-	now CumItem entry is "";
+	now CumItem entry is "zebra cum";
 	now TrophyFunction entry is "";
 	now scale entry is 3;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]thick[or]barrel-chested[at random]";
@@ -683,14 +683,13 @@ name	desc	weight	object
 "zebra cum"	"A plastic water bottle almost completely filled with a milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Zebra Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	zebra cum
 
 zebra cum is a grab object. zebra cum is cum.
+zebra cum is infectious. Strain of zebra cum is "Zebra Stallion".
 the usedesc of zebra cum is "[zebra cum use]";
 
 to say zebra cum use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy fluid cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
-	if "Iron Stomach" is not listed in feats of player:
-		infect "Zebra Stallion";
 
 instead of sniffing zebra cum:
 	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";

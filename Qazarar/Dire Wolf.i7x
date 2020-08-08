@@ -112,7 +112,7 @@ When Play begins:
 	now desc entry is "[DireWolfDesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "dire wolf face, with a long canine snout filled with the sharp teeth of a powerful predator"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "that of a large and very muscled wolf, with canine features that give you a wild and deadly appearance"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]black furred[or]roughly furred[or]furry[at random]"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "[one of]black furred[or]roughly furred[or]furry[at random]"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a long black tail that trails behind you, your lupine tail displaying your emotions quite clearly."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]feral canine[or]dire wolf[or]lupine[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your face stretches and creaks as it warps into a long canine snout"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -144,7 +144,7 @@ When Play begins:
 	now loot entry is "dire-wolf cum";
 	now lootchance entry is 35; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
-	now CumItem entry is "";
+	now CumItem entry is "dire-wolf cum";
 	now TrophyFunction entry is "";
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]animalistic[or]powerful[or]strong[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
@@ -281,6 +281,7 @@ name	desc	weight	object
 "dire-wolf cum"	"A vial of thick, creamy, white liquid. [']Infection sample - species: dire wolf['] is written on the side."	1	dire-wolf cum
 
 dire-wolf cum is a grab object. dire-wolf cum is cum.
+dire-wolf cum is infectious. The strain of dire-wolf cum is "Dire Wolf".
 
 instead of sniffing dire-wolf cum:
 	say "The dire wolf semen smells of wolves and cum, naturally.";
@@ -292,6 +293,6 @@ to say dire-wolf cum use:
 	if Libido of Player < 75:
 		now Libido of Player is 75;
 
-dire-wolf cum is infectious. The strain of dire-wolf cum is "Dire Wolf".
+
 
 Dire Wolf ends here.

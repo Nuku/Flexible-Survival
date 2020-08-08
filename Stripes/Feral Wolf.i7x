@@ -248,7 +248,7 @@ When Play begins:
 	now desc entry is "[FeralWolfDesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "feral wolf face, with a long canine snout filled with the sharp teeth of a predator"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "that of an average-sized and well-muscled wolf, with large canine features that give you a wild and deadly appearance"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]black furred[or]roughly furred[or]furry[at random]"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "[one of]black furred[or]roughly furred[or]furry[at random]"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a long black tail that trails behind you, your lupine tail displaying your emotions quite clearly."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]feral canine[or]wolf[or]pitch black[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your face stretches and creaks as it warps into a long canine snout"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -280,7 +280,7 @@ When Play begins:
 	now loot entry is "wolf cum";
 	now lootchance entry is 30; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
-	now CumItem entry is "";
+	now CumItem entry is "wolf cum";
 	now TrophyFunction entry is "";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]animalistic[or]powerful[or]strong[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
@@ -441,6 +441,7 @@ name	desc	weight	object
 "wolf cum"	"A vial of thick, creamy, white liquid. [']Infection sample - species: wolf['] is written on the side."	1	wolf cum
 
 wolf cum is a grab object. wolf cum is cum.
+Wolf Cum is infectious. The strain of Wolf Cum is "Feral Wolf".
 
 instead of sniffing wolf cum:
 	say "The wolf semen smells of wolves and cum, naturally.";
@@ -452,6 +453,6 @@ to say Wolf Cum use:
 	if Libido of Player < 75:
 		now Libido of Player is 75;
 
-Wolf Cum is infectious. The strain of Wolf Cum is "Feral Wolf".
+
 
 Feral Wolf ends here.

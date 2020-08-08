@@ -29,7 +29,7 @@ When Play begins:
 	now desc entry is "[slutratdesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "furry and narrow snout, with quivering black nose set in the middle of a very female, but clearly rodent"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "bent to emphasize fertile signals, with wide hips and narrow waist. You feel like you're putting out a constant ready signal to anyone looking at you"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]black furred[or]rat furred[or]softly furred[at random]"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "[one of]black furred[or]rat furred[or]softly furred[at random]"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a long, [Skin of Player] tail. It is segmented, like a rat tail should be, thin and whip-like, moving about in long motions."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]sheathed[or]leaking[or]human like[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your face draws forward into a long snout as hair spills to your shoulders"; [ face change text. format as "Your face feels funny as (your text)." ]

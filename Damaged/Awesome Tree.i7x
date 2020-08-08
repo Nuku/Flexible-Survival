@@ -105,7 +105,7 @@ When Play begins:
 	now desc entry is "[awesome desc]"; [ Description of the creature when you encounter it.]
 	now face entry is "completely human"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "human-looking"; [ Body Description, format as "Your Body is (your text)."]
-	now skin entry is "[if looknow is 1]human[else]normal human, lovely, healthy-looking[end if]"; [ skin Description, format as "You have (your text) skin."]
+	now skin entry is "[if looknow is 1]human[else]normal human, lovely, healthy-looking[end if]"; [ skin Description, format as "Your body is covered in (your text) skin."]
 	now tail entry is ""; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "human"; [ Cock Description, format as you have a 'size' (your text) cock.]
 	now face change entry is "it seems to tingle, moving slightly, with a start you realize it's human"; [ face change text. format as "Your face feels funny as (your text)." ]

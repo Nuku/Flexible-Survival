@@ -366,7 +366,7 @@ gryphon cum is a grab object. gryphon cum is temporary. gryphon cum is cum.
 The usedesc of gryphon cum is "[drinkgryphoncum]";
 
 to say drinkgryphoncum:
-	say "[line break]     Popping the top off the bottle, you catch the heady and arousing scent of masculine gryphon cum. It makes your mouth water and you quickly start guzzling it down. The refined semen drink has a strong, exciting flavor that is also refreshing and satisfying.";
+	say "     Popping the top off the bottle, you catch the heady and arousing scent of masculine gryphon cum. It makes your mouth water and you quickly start guzzling it down. The refined semen drink has a strong, exciting flavor that is also refreshing and satisfying.";
 	increase Libido of Player by 5;
 	PlayerDrink 6;
 	PlayerEat 3;

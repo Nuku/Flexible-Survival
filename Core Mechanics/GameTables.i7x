@@ -135,6 +135,7 @@ Name(text)	Type(text)
 "AlexandraKarelPups"	"number"
 "AlexandraIsaacPups"	"number"
 "AlexandraFarmhandPups"	"number"
+"AlexandraNelsonPups"	"number"
 "AlexandraCarlInteraction"	"number"
 "AlexandraCarlPups"	"number"
 "AlexandraCreampieCount"	"number"

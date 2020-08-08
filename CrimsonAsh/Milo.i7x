@@ -241,7 +241,7 @@ When Play begins:
 	now desc entry is "[MiloDesc]";
 	now face entry is "a small feline face, with a short cat muzzle that has two incisors poking out of your bottom lip. You have two large feline eyes painted a light-golden color that seem to glow in the dark. Your cat ears flick atop your head a moment as they detect some noise off in the distance.";
 	now body entry is "short and lithe but with powerful lean muscles and covered with orange fur. Your digitigrade legs end in clawed feet and your hands in clawed cat-paws.";
-	now skin entry is "a soft amber-orange fur over your"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "a soft amber-orange fur over your"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a short nearly one foot long furry tail that protrudes from your well-rounded backside.";
 	now cock entry is "dark pink, tapered"; [ Cock. Format as "You have a 'size' [Cock of Player] cock."]
 	now face change entry is "it starts to smoosh in on itself and reform in a rather uncomfortable manner into the form of small feline head. You feel yourself over and can feel a new muzzle that has grown on your now furry face. You feel your head and can feel new furry cat ears protruding from the top."; [ face change text. format as "Your face feels funny as (your text)." ]

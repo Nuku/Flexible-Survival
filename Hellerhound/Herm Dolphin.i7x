@@ -153,7 +153,7 @@ When Play begins:
 	now desc entry is "[mongendernum 5]As you [if the location of the player is not Public Beach]swim along[else]walk on the beach[end if], you see a dark shadow following your progress. You move towards it, and a dolphin-like human shoots out of the gloom, saying 'Another for my pod! Yes!'"; [ Description of the creature when you encounter it.]
 	now face entry is "long dolphin snout";
 	now body entry is "silvery with a blue back. A dorsal fin sits on top, and strong muscles contract underneath the surface"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]wet, glistening[or]smooth, silver[or]thick, blubbered[at random]"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "[one of]wet, glistening[or]smooth, silver[or]thick, blubbered[at random]"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a tail that fattens out horizontally at the end, much like a dolphin's. However, it is only half as thick, and the ends are not rounded. It is covered in [Skin of Player] flesh and sways behind you with every step."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]tentacle-like[or]prehensile[or]pink[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "blubber forms. It twists and reforms into the snout of a dolphin. Your hair retracts and disappears, leaving a hole in its place"; [ face change text. format as "Your face feels funny as (your text)." ]

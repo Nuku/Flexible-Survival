@@ -78,7 +78,7 @@ When Play begins:
 	now loot entry is "rhino cum"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 42; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
-	now CumItem entry is "";
+	now CumItem entry is "rhino cum";
 	now TrophyFunction entry is "";
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]beefy[or]muscular[at random]";

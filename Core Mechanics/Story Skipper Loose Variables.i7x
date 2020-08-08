@@ -357,6 +357,8 @@ to NumberVariableSave:
 			now NumberVarValue entry is AlexandraIsaacPups;
 		-- "AlexandraFarmhandPups":
 			now NumberVarValue entry is AlexandraFarmhandPups;
+		-- "AlexandraNelsonPups":
+			now NumberVarValue entry is AlexandraNelsonPups;
 		-- "AlexandraCarlInteraction":
 			now NumberVarValue entry is AlexandraCarlInteraction;
 		-- "AlexandraCarlPups":
@@ -4029,6 +4031,8 @@ to VariableNumberLoad:
 					now AlexandraIsaacPups is numberVarValue entry;
 				-- "AlexandraFarmhandPups":
 					now AlexandraFarmhandPups is numberVarValue entry;
+				-- "AlexandraNelsonPups":
+					now AlexandraNelsonPups is numberVarValue entry;
 				-- "AlexandraCarlInteraction":
 					now AlexandraCarlInteraction is numberVarValue entry;
 				-- "AlexandraCarlPups":

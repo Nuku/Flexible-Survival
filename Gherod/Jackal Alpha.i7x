@@ -212,7 +212,7 @@ When Play begins:
 	now loot entry is "jackal alpha fur";  [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 50;  [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
-	now CumItem entry is "";
+	now CumItem entry is "jackal alpha cum";
 	now TrophyFunction entry is "";
 	now scale entry is 3;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]altered[or]animalistic[at random]";  [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
@@ -348,14 +348,13 @@ name	desc	weight	object
 "jackal alpha cum"	"An odd flask containing a moderate amount of milky white fluid. So this is probably what the alpha jackal refers to as [']oil['], or at least, might be related to it. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. But given its transformative effects, you might catch a change..."	1	jackal alpha cum
 
 jackal alpha cum is a grab object. jackal alpha cum is cum.
+jackal alpha cum is infectious. Strain of jackal alpha cum is "Jackal Femboy".
 the usedesc of jackal alpha cum is "[jackal alpha cum use]";
 
 to say jackal alpha cum use:
 	say "Lifting the flask to your mouth, you take a drink from it, letting the creamy fluid cum run over your tongue and down your throat. Tastes rich, sweet and animal-like. Swishing it around in your mouth a little, you finish the flask off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
-	if "Iron Stomach" is not listed in feats of player:
-		infect "Jackal Femboy";
 
 instead of sniffing jackal alpha cum:
 	say "You open the lid for a moment and take a sniff. You almost feel compelled to drink it once its mesmerizing scent gets caught in your nostrils, so you put it back down in that instant.";

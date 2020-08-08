@@ -178,6 +178,7 @@ the usedesc of red herring is "[HerringUse]";
 
 to say HerringUse:
 	say "     Stroking over the red plush toy, you relax a bit, though your mind keeps wondering if you should use it for something specific, maybe give it to someone?";
+	SanBoost 3;
 
 when play begins:
 	add "red herring" to invent of Zoo Rest Area;

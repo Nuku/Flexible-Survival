@@ -106,7 +106,7 @@ When Play begins:
 	now desc entry is "[emberbreederdesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "an obviously canine head, with long floppy ears"; [ Face. Format as Your face is [Face of Player]. ]
 	now body entry is "deliciously curvy and exposes the tender lip of a pouch. Any breasts present are swollen, dribbling milk upon the floor at a slow, yet constant rate. Your arms are thick, with diminutive claws that yearn to hold and cuddle. Your legs are digitigrade, shapely, and defined with excellent muscular tone. Your feet are exceptionally large paws with long toes"; [ Body. Format as "Your body is [Body of Player]." ]
-	now skin entry is "smooth, tender, yearning"; [ skin Description, format as "You have (your text) skin."]
+	now skin entry is "smooth, tender, yearning"; [ skin Description, format as "Your body is covered in (your text) skin."]
 	now tail entry is "You have a curved, bubbly ass that, when spread, reveals aching flesh. A long, flexible tail thick with muscles covers it."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "ridged, spined, and knotted"; [ Cock Description, format as you have a 'size' (your text) cock.]
 	now face change entry is "your face creaks as your jaw pushes forward, extending into a canine muzzle. Your ears give little shivers as they droop and swell, ending their ticklish torture as a pair of long, floppy ears"; [ face change text. format as "Your face feels funny as (your text)." ]

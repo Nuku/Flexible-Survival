@@ -56,7 +56,7 @@ When Play begins:
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
-	now CumItem entry is "";
+	now CumItem entry is "brown rat cum";
 	now TrophyFunction entry is "";
 	now scale entry is 3;
 	now body descriptor entry is "[one of]slender[or]wiry[as decreasingly likely outcomes]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
@@ -179,13 +179,12 @@ instead of sniffing brown rat cum:
 	say "You open the lid for a moment and take a sniff. Bit of a nutty smell, not too bad.";
 
 brown rat cum is a grab object. brown rat cum is cum.
+brown rat cum is infectious. Strain of brown rat cum is "Brown Rat Male".
 the usedesc of brown rat cum is "[brown rat cum use]";
 
 to say brown rat cum use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy rat cum run over your tongue and down your throat. Not too bad for taking care of thirst in an emergency. You swish it around in your mouth a little as you slowly finish the bottle off, then give a little belch.";
 	PlayerDrink 10;
 	SanLoss 3;
-	if "Iron Stomach" is not listed in Feats of Player:
-		infect "Brown Rat Male";
 
 Brown Rat ends here.

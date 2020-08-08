@@ -142,7 +142,7 @@ When Play begins:
 	now desc entry is "[lizgirl desc]"; [ Description of the creature when you encounter it.]
 	now face entry is "longer and thinner as soft dark colored scales cover your short muzzle, lending your ear less features a very reptilian air"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "compact and solid, yet showing off every curve to perfection, heavy compact muscles belay strength despite their small representation"; [ Body Description, format as "Your Body is (your text)."]
-	now skin entry is "beautiful reptilian scaled"; [ skin Description, format as "You have (your text) skin."]
+	now skin entry is "beautiful reptilian scaled"; [ skin Description, format as "Your body is covered in (your text) skin."]
 	now tail entry is "Long and plump, your lizard-like tail is a solid mass of muscle."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "human-shaped"; [ Cock Description, format as you have a 'size' (your text) cock.]
 	now face change entry is "it draws forward a little, a reptilian muzzle forming as your teeth reshape into delicate sharp points"; [ face change text. format as "Your face feels funny as (your text)." ]

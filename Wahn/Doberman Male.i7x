@@ -80,7 +80,7 @@ When Play begins:
 	now loot entry is "doberman male fur"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 50; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
-	now CumItem entry is "";
+	now CumItem entry is "doberman male cum";
 	now TrophyFunction entry is "[GenerateTrophyList_Doberman_Male]";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]lithe[or]dashing[or]sexy[at random]";

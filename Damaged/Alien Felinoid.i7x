@@ -121,7 +121,7 @@ When Play begins:
 	now desc entry is "[mongendernum 3]What looks like a full-sized maned lion paces up before you, nose raised in the air, sniffing at the wind. You hear the big cat purr and look your way, with a sinking feeling you realize that not only was it your scent he was following, but that he is very pleased to see you at last."; [ Description of the creature when you encounter it.]
 	now face entry is "that of a short muzzled, female lion"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "sleek, muscled, built for surviving, just like the large feline that gave it to you"; [ Body Description, format as "Your Body is (your text)."]
-	now skin entry is "[if looknow is 1]a thick pelt of coarse yellow-gold fur covering your thick, pliable[else]yellow-gold fur covered[end if]"; [ skin Description, format as "You have (your text) skin."]
+	now skin entry is "[if looknow is 1]a thick pelt of coarse yellow-gold fur covering your thick, pliable[else]yellow-gold fur covered[end if]"; [ skin Description, format as "Your body is covered in (your text) skin."]
 	now tail entry is "A lion's tail twitches behind you. You just know that if you find the one who gave it to you, it would be cocked to the side in seconds."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "leonine"; [ Cock Description, format as you have a 'size' (your text) cock.]
 	now face change entry is "it draws forward into a short, feline muzzle, even as your ears perk upwards to perch, rounded, atop your leonine head. Scents burn in your new nose and you find yourself turning in place, trying to catch His scent"; [ face change text. format as "Your face feels funny as (your text)." ]
