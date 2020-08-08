@@ -1215,8 +1215,8 @@ diego's heirloom collar is equipment.
 diego's heirloom collar is cursed.
 It is not temporary.
 The printed name of diego's heirloom collar is "Diego's heirloom collar".
-The plural of diego's heirloom collar is false.
-The taur-compatible of diego's heirloom collar is true.
+Plural of diego's heirloom collar is false.
+Taur-compatible of diego's heirloom collar is true.
 The size of diego's heirloom collar is 0.
 The AC of diego's heirloom collar is 0.
 The effectiveness of diego's heirloom collar is 0.

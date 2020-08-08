@@ -12,8 +12,8 @@ name	desc	weight	object
 scalemail is a grab object.
 scalemail is equipment.
 It is not temporary.
-The plural of scalemail is false.
-The taur-compatible of scalemail is true.
+Plural of scalemail is false.
+Taur-compatible of scalemail is true.
 The size of scalemail is 3.
 The AC of scalemail is 50.
 The effectiveness of scalemail is 60.
@@ -31,8 +31,8 @@ name	desc	weight	object
 Gambeson is a grab object.
 Gambeson is equipment.
 It is not temporary.
-The plural of Gambeson is false.
-The taur-compatible of Gambeson is true.
+Plural of Gambeson is false.
+Taur-compatible of Gambeson is true.
 The size of Gambeson is 3.
 The AC of Gambeson is 30.
 The effectiveness of Gambeson is 80.
@@ -50,8 +50,8 @@ name	desc	weight	object
 Leather Vambraces is a grab object.
 Leather Vambraces is equipment.
 It is not temporary.
-The plural of Leather Vambraces is false.
-The taur-compatible of Leather Vambraces is true.
+Plural of Leather Vambraces is false.
+Taur-compatible of Leather Vambraces is true.
 The size of Leather Vambraces is 3.
 The AC of Leather Vambraces is 60.
 The effectiveness of Leather Vambraces is 30.

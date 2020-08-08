@@ -180,8 +180,8 @@ name	desc	weight	object
 lionskin is a grab object.
 lionskin is equipment.
 It is not temporary.
-The plural of lionskin is false.
-The taur-compatible of lionskin is true.
+Plural of lionskin is false.
+Taur-compatible of lionskin is true.
 The size of lionskin is 3.
 The AC of lionskin is 100.
 The effectiveness of lionskin is 40.

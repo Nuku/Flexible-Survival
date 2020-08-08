@@ -65,171 +65,171 @@ name	desc	weight	object
 ripped jeans is a grab object.
 ripped jeans is equipment.
 It is not temporary.
-The plural of ripped jeans is true.
-The taur-compatible of ripped jeans is false.
-The GenderAppearance of ripped jeans is 0.
-The size of ripped jeans is 3.
-The AC of ripped jeans is 0.
-The effectiveness of ripped jeans is 0.
-The placement of ripped jeans is "waist".
-The descmod of ripped jeans is "A pair of ripped and torn jeans cover your hips and legs. Even though they have holes, wearing them gives you a somewhat protected feeling.".
-The slot of ripped jeans is "waist".
-the scent of ripped jeans is "The jeans have the typical faintly musky scent of pants that have been worn a few days. But surely they're clean enough to wear another week or two at least...".
+Plural of ripped jeans is true.
+Taur-compatible of ripped jeans is false.
+GenderAppearance of ripped jeans is 0.
+Size of ripped jeans is 3.
+AC of ripped jeans is 0.
+Effectiveness of ripped jeans is 0.
+Placement of ripped jeans is "waist".
+Descmod of ripped jeans is "A pair of ripped and torn jeans cover your hips and legs. Even though they have holes, wearing them gives you a somewhat protected feeling.".
+Slot of ripped jeans is "waist".
+Scent of ripped jeans is "The jeans have the typical faintly musky scent of pants that have been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
 black jeans is a grab object.
 black jeans is equipment.
 It is not temporary.
-The plural of black jeans is true.
-The taur-compatible of black jeans is false.
-The GenderAppearance of black jeans is 0.
-The size of black jeans is 3.
-The AC of black jeans is 0.
-The effectiveness of black jeans is 0.
-The placement of black jeans is "waist".
-The descmod of black jeans is "A pair of solid black jeans cover your hips and legs. The sturdy fabric gives you a well-protected feeling.".
-The slot of black jeans is "waist".
-the scent of black jeans is "The jeans have the typical faintly musky scent of pants that have been worn a few days. But surely they're clean enough to wear another week or two at least...".
+Plural of black jeans is true.
+Taur-compatible of black jeans is false.
+GenderAppearance of black jeans is 0.
+Size of black jeans is 3.
+AC of black jeans is 0.
+Effectiveness of black jeans is 0.
+Placement of black jeans is "waist".
+Descmod of black jeans is "A pair of solid black jeans cover your hips and legs. The sturdy fabric gives you a well-protected feeling.".
+Slot of black jeans is "waist".
+Scent of black jeans is "The jeans have the typical faintly musky scent of pants that have been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
 sturdy jeans is a grab object.
 sturdy jeans is equipment.
 It is not temporary.
-The plural of sturdy jeans is true.
-The taur-compatible of sturdy jeans is false.
-The GenderAppearance of sturdy jeans is 0.
-The size of sturdy jeans is 3.
-The AC of sturdy jeans is 0.
-The effectiveness of sturdy jeans is 0.
-The placement of sturdy jeans is "waist".
-The descmod of sturdy jeans is "A pair of dark blue jeans cover your hips and legs. The sturdy fabric gives you a well-protected feeling.".
-The slot of sturdy jeans is "waist".
-the scent of sturdy jeans is "The jeans have the typical faintly musky scent of pants that have been worn a few days. But surely they're clean enough to wear another week or two at least...".
+Plural of sturdy jeans is true.
+Taur-compatible of sturdy jeans is false.
+GenderAppearance of sturdy jeans is 0.
+Size of sturdy jeans is 3.
+AC of sturdy jeans is 0.
+Effectiveness of sturdy jeans is 0.
+Placement of sturdy jeans is "waist".
+Descmod of sturdy jeans is "A pair of dark blue jeans cover your hips and legs. The sturdy fabric gives you a well-protected feeling.".
+Slot of sturdy jeans is "waist".
+Scent of sturdy jeans is "The jeans have the typical faintly musky scent of pants that have been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
 skinny jeans is a grab object.
 skinny jeans is equipment.
 It is not temporary.
-The plural of skinny jeans is true.
-The taur-compatible of skinny jeans is false.
-The GenderAppearance of skinny jeans is 0.
-The size of skinny jeans is 3.
-The AC of skinny jeans is 0.
-The effectiveness of skinny jeans is 0.
-The placement of skinny jeans is "waist".
-The descmod of skinny jeans is "A pair of dark blue jeans cover your hips and legs. They look almost painted onto you, with stretchy fabric that follows every last curve of your legs and hips.".
-The slot of skinny jeans is "waist".
-the scent of skinny jeans is "The jeans have the typical faintly musky scent of pants that have been worn a few days. But surely they're clean enough to wear another week or two at least...".
+Plural of skinny jeans is true.
+Taur-compatible of skinny jeans is false.
+GenderAppearance of skinny jeans is 0.
+Size of skinny jeans is 3.
+AC of skinny jeans is 0.
+Effectiveness of skinny jeans is 0.
+Placement of skinny jeans is "waist".
+Descmod of skinny jeans is "A pair of dark blue jeans cover your hips and legs. They look almost painted onto you, with stretchy fabric that follows every last curve of your legs and hips.".
+Slot of skinny jeans is "waist".
+Scent of skinny jeans is "The jeans have the typical faintly musky scent of pants that have been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
 hot pants is a grab object.
 hot pants is equipment.
 It is not temporary.
-The plural of hot pants is true.
-The taur-compatible of hot pants is false.
-The GenderAppearance of hot pants is -1.
-The size of hot pants is 3.
-The AC of hot pants is 0.
-The effectiveness of hot pants is 0.
-The placement of hot pants is "waist".
-The descmod of hot pants is "A pair of red hot pants cover your hips and legs. They are really skimpy, barely covering a third of your thighs. If they were any tighter, you could call them underwear.".
-The slot of hot pants is "waist".
-the scent of hot pants is "The pants have the typical faintly musky scent of clothing that has been worn a few days. But surely they're clean enough to wear another week or two at least...".
+Plural of hot pants is true.
+Taur-compatible of hot pants is false.
+GenderAppearance of hot pants is -1.
+Size of hot pants is 3.
+AC of hot pants is 0.
+Effectiveness of hot pants is 0.
+Placement of hot pants is "waist".
+Descmod of hot pants is "A pair of red hot pants cover your hips and legs. They are really skimpy, barely covering a third of your thighs. If they were any tighter, you could call them underwear.".
+Slot of hot pants is "waist".
+Scent of hot pants is "The pants have the typical faintly musky scent of clothing that has been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
 gray pants is a grab object.
 gray pants is equipment.
 It is not temporary.
-The plural of gray pants is true.
-The taur-compatible of gray pants is false.
-The GenderAppearance of gray pants is 0.
-The size of gray pants is 3.
-The AC of gray pants is 0.
-The effectiveness of gray pants is 0.
-The placement of gray pants is "waist".
-The descmod of gray pants is "A pair of gray pants cover your hips and legs. They are fairly light and soft, but you worry how long they'll last given the regular fights you can get into.".
-The slot of gray pants is "waist".
-the scent of gray pants is "The pants have the typical faintly musky scent of clothing that has been worn a few days. But surely they're clean enough to wear another week or two at least...".
+Plural of gray pants is true.
+Taur-compatible of gray pants is false.
+GenderAppearance of gray pants is 0.
+Size of gray pants is 3.
+AC of gray pants is 0.
+Effectiveness of gray pants is 0.
+Placement of gray pants is "waist".
+Descmod of gray pants is "A pair of gray pants cover your hips and legs. They are fairly light and soft, but you worry how long they'll last given the regular fights you can get into.".
+Slot of gray pants is "waist".
+Scent of gray pants is "The pants have the typical faintly musky scent of clothing that has been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
 camo pants is a grab object.
 camo pants is equipment.
 It is not temporary.
-The plural of camo pants is true.
-The taur-compatible of camo pants is false.
-The GenderAppearance of camo pants is 1.
-The size of camo pants is 3.
-The AC of camo pants is 0.
-The effectiveness of camo pants is 0.
-The placement of camo pants is "waist".
-The descmod of camo pants is "A pair of camo pants covers your hips and legs. The sturdy fabric gives you a well-protected feeling.".
-The slot of camo pants is "waist".
-the scent of camo pants is "The pants have the typical faintly musky scent of clothing that has been worn a few days. But surely they're clean enough to wear another week or two at least...".
+Plural of camo pants is true.
+Taur-compatible of camo pants is false.
+GenderAppearance of camo pants is 1.
+Size of camo pants is 3.
+AC of camo pants is 0.
+Effectiveness of camo pants is 0.
+Placement of camo pants is "waist".
+Descmod of camo pants is "A pair of camo pants covers your hips and legs. The sturdy fabric gives you a well-protected feeling.".
+Slot of camo pants is "waist".
+Scent of camo pants is "The pants have the typical faintly musky scent of clothing that has been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
 jogging pants is a grab object.
 jogging pants is equipment.
 It is not temporary.
-The plural of jogging pants is true.
-The taur-compatible of jogging pants is false.
-The GenderAppearance of jogging pants is 0.
-The size of jogging pants is 3.
-The AC of jogging pants is 0.
-The effectiveness of jogging pants is 0.
-The placement of jogging pants is "waist".
-The descmod of jogging pants is "A pair of jogging pants cover your hips and legs. They are fairly light and soft, but you worry how long they'll last given the regular fights you can get into.".
-The slot of jogging pants is "waist".
-the scent of jogging pants is "The pants have the typical faintly musky scent of clothing that has been worn a few days. But surely they're clean enough to wear another week or two at least...".
+Plural of jogging pants is true.
+Taur-compatible of jogging pants is false.
+GenderAppearance of jogging pants is 0.
+Size of jogging pants is 3.
+AC of jogging pants is 0.
+Effectiveness of jogging pants is 0.
+Placement of jogging pants is "waist".
+Descmod of jogging pants is "A pair of jogging pants cover your hips and legs. They are fairly light and soft, but you worry how long they'll last given the regular fights you can get into.".
+Slot of jogging pants is "waist".
+Scent of jogging pants is "The pants have the typical faintly musky scent of clothing that has been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
 bermuda shorts is a grab object.
 bermuda shorts is equipment.
 It is not temporary.
-The plural of bermuda shorts is true.
-The taur-compatible of bermuda shorts is false.
-The GenderAppearance of bermuda shorts is 0.
-The size of bermuda shorts is 3.
-The AC of bermuda shorts is 0.
-The effectiveness of bermuda shorts is 0.
-The placement of bermuda shorts is "waist".
-The descmod of bermuda shorts is "A pair of colorful bermuda shorts cover your hips and legs. With their bright and colorful patterns, they'll surely draw attention to you.".
-The slot of bermuda shorts is "waist".
-the scent of bermuda shorts is "The shorts have the typical faintly musky scent of clothing that has been worn a few days. But surely they're clean enough to wear another week or two at least...".
+Plural of bermuda shorts is true.
+Taur-compatible of bermuda shorts is false.
+GenderAppearance of bermuda shorts is 0.
+Size of bermuda shorts is 3.
+AC of bermuda shorts is 0.
+Effectiveness of bermuda shorts is 0.
+Placement of bermuda shorts is "waist".
+Descmod of bermuda shorts is "A pair of colorful bermuda shorts cover your hips and legs. With their bright and colorful patterns, they'll surely draw attention to you.".
+Slot of bermuda shorts is "waist".
+Scent of bermuda shorts is "The shorts have the typical faintly musky scent of clothing that has been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
 black miniskirt is a grab object.
 black miniskirt is equipment.
 It is not temporary.
-The plural of black miniskirt is false.
-The taur-compatible of black miniskirt is false.
-The GenderAppearance of black miniskirt is -1.
+Plural of black miniskirt is false.
+Taur-compatible of black miniskirt is false.
+GenderAppearance of black miniskirt is -1.
 The Traits of black miniskirt is {"Slutty","Stylish"}.
-The size of black miniskirt is 3.
-The AC of black miniskirt is 0.
-The effectiveness of black miniskirt is 0.
-The placement of black miniskirt is "waist".
-The descmod of black miniskirt is "A simple black miniskirt covers your hips and legs. It is really quite easy to accidentally (or on purpose) expose yourself while wearing it.".
-The slot of black miniskirt is "waist".
-the scent of black miniskirt is "The skirt has the typical faintly musky scent of clothing that has been worn a few days. But surelyit is clean enough to wear another week or two at least...".
+Size of black miniskirt is 3.
+AC of black miniskirt is 0.
+Effectiveness of black miniskirt is 0.
+Placement of black miniskirt is "waist".
+Descmod of black miniskirt is "A simple black miniskirt covers your hips and legs. It is really quite easy to accidentally (or on purpose) expose yourself while wearing it.".
+Slot of black miniskirt is "waist".
+Scent of black miniskirt is "The skirt has the typical faintly musky scent of clothing that has been worn a few days. But surelyit is clean enough to wear another week or two at least...".
 
 pencil skirt is a grab object.
 pencil skirt is equipment.
 It is not temporary.
-The plural of pencil skirt is false.
-The taur-compatible of pencil skirt is false.
-The GenderAppearance of pencil skirt is -1.
-The size of pencil skirt is 3.
-The AC of pencil skirt is 0.
-The effectiveness of pencil skirt is 0.
-The placement of pencil skirt is "waist".
-The descmod of pencil skirt is "A dark blue pencil skirt covers your hips and legs. It is long and narrow, giving you a slim look.".
-The slot of pencil skirt is "waist".
-the scent of pencil skirt is "The skirt has the typical faintly musky scent of clothing that has been worn a few days. But surely it is clean enough to wear another week or two at least...".
+Plural of pencil skirt is false.
+Taur-compatible of pencil skirt is false.
+GenderAppearance of pencil skirt is -1.
+Size of pencil skirt is 3.
+AC of pencil skirt is 0.
+Effectiveness of pencil skirt is 0.
+Placement of pencil skirt is "waist".
+Descmod of pencil skirt is "A dark blue pencil skirt covers your hips and legs. It is long and narrow, giving you a slim look.".
+Slot of pencil skirt is "waist".
+Scent of pencil skirt is "The skirt has the typical faintly musky scent of clothing that has been worn a few days. But surely it is clean enough to wear another week or two at least...".
 
 floral skirt is a grab object.
 floral skirt is equipment.
 It is not temporary.
-The plural of floral skirt is false.
-The taur-compatible of floral skirt is false.
-The GenderAppearance of floral skirt is -1.
-The size of floral skirt is 3.
-The AC of floral skirt is 0.
-The effectiveness of floral skirt is 0.
-The placement of floral skirt is "waist".
-The descmod of floral skirt is "A floor length skirt covers your hips and legs. It is covered in a floral pattern that depics cherry blossoms.".
-The slot of floral skirt is "waist".
-the scent of floral skirt is "The skirt has the typical faintly musky scent of clothing that has been worn a few days. But surely it is clean enough to wear another week or two at least...".
+Plural of floral skirt is false.
+Taur-compatible of floral skirt is false.
+GenderAppearance of floral skirt is -1.
+Size of floral skirt is 3.
+AC of floral skirt is 0.
+Effectiveness of floral skirt is 0.
+Placement of floral skirt is "waist".
+Descmod of floral skirt is "A floor length skirt covers your hips and legs. It is covered in a floral pattern that depics cherry blossoms.".
+Slot of floral skirt is "waist".
+Scent of floral skirt is "The skirt has the typical faintly musky scent of clothing that has been worn a few days. But surely it is clean enough to wear another week or two at least...".
 
 
 [ Section 2 - Chest Items ]
@@ -252,93 +252,93 @@ name	desc	weight	object
 black t-shirt is a grab object.
 black t-shirt is equipment.
 It is not temporary.
-The plural of black t-shirt is false.
-The taur-compatible of black t-shirt is true.
-The size of black t-shirt is 3.
-The AC of black t-shirt is 0.
-The effectiveness of black t-shirt is 0.
-The placement of black t-shirt is "chest".
-The descmod of black t-shirt is "Your upper body is covered by a black t-shirt.".
-The slot of black t-shirt is "chest".
-the scent of black t-shirt is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Plural of black t-shirt is false.
+Taur-compatible of black t-shirt is true.
+Size of black t-shirt is 3.
+AC of black t-shirt is 0.
+Effectiveness of black t-shirt is 0.
+Placement of black t-shirt is "chest".
+Descmod of black t-shirt is "Your upper body is covered by a black t-shirt.".
+Slot of black t-shirt is "chest".
+Scent of black t-shirt is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 white t-shirt is a grab object.
 white t-shirt is equipment.
 It is not temporary.
-The plural of white t-shirt is false.
-The taur-compatible of white t-shirt is true.
-The size of white t-shirt is 3.
-The AC of white t-shirt is 0.
-The effectiveness of white t-shirt is 0.
-The placement of white t-shirt is "chest".
-The descmod of white t-shirt is "Your upper body is covered by a white t-shirt.".
-The slot of white t-shirt is "chest".
-the scent of white t-shirt is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Plural of white t-shirt is false.
+Taur-compatible of white t-shirt is true.
+Size of white t-shirt is 3.
+AC of white t-shirt is 0.
+Effectiveness of white t-shirt is 0.
+Placement of white t-shirt is "chest".
+Descmod of white t-shirt is "Your upper body is covered by a white t-shirt.".
+Slot of white t-shirt is "chest".
+Scent of white t-shirt is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 maroon pullover is a grab object.
 maroon pullover is equipment.
 It is not temporary.
-The plural of maroon pullover is false.
-The taur-compatible of maroon pullover is true.
-The size of maroon pullover is 3.
-The AC of maroon pullover is 0.
-The effectiveness of maroon pullover is 0.
-The placement of maroon pullover is "chest".
-The descmod of maroon pullover is "Your upper body is covered by a maroon pullover.".
-The slot of maroon pullover is "chest".
-the scent of maroon pullover is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Plural of maroon pullover is false.
+Taur-compatible of maroon pullover is true.
+Size of maroon pullover is 3.
+AC of maroon pullover is 0.
+Effectiveness of maroon pullover is 0.
+Placement of maroon pullover is "chest".
+Descmod of maroon pullover is "Your upper body is covered by a maroon pullover.".
+Slot of maroon pullover is "chest".
+Scent of maroon pullover is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 zephyr shirt is a grab object.
 zephyr shirt is equipment.
 It is not temporary.
-The plural of zephyr shirt is false.
-The taur-compatible of zephyr shirt is true.
-The size of zephyr shirt is 3.
-The AC of zephyr shirt is 0.
-The effectiveness of zephyr shirt is 0.
-The placement of zephyr shirt is "chest".
-The descmod of zephyr shirt is "Your upper body is covered by a dark gray t-shirt with the Zephyr logo.".
-The slot of zephyr shirt is "chest".
-the scent of zephyr shirt is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Plural of zephyr shirt is false.
+Taur-compatible of zephyr shirt is true.
+Size of zephyr shirt is 3.
+AC of zephyr shirt is 0.
+Effectiveness of zephyr shirt is 0.
+Placement of zephyr shirt is "chest".
+Descmod of zephyr shirt is "Your upper body is covered by a dark gray t-shirt with the Zephyr logo.".
+Slot of zephyr shirt is "chest".
+Scent of zephyr shirt is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 camo shirt is a grab object.
 camo shirt is equipment.
 It is not temporary.
-The plural of camo shirt is false.
-The taur-compatible of camo shirt is true.
-The size of camo shirt is 3.
-The AC of camo shirt is 0.
-The effectiveness of camo shirt is 0.
-The placement of camo shirt is "chest".
-The descmod of camo shirt is "Your upper body is covered by a camo pattern t-shirt in shades of green.".
-The slot of camo shirt is "chest".
-the scent of camo shirt is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Plural of camo shirt is false.
+Taur-compatible of camo shirt is true.
+Size of camo shirt is 3.
+AC of camo shirt is 0.
+Effectiveness of camo shirt is 0.
+Placement of camo shirt is "chest".
+Descmod of camo shirt is "Your upper body is covered by a camo pattern t-shirt in shades of green.".
+Slot of camo shirt is "chest".
+Scent of camo shirt is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 sleeveless shirt is a grab object.
 sleeveless shirt is equipment.
 It is not temporary.
-The plural of sleeveless shirt is false.
-The taur-compatible of sleeveless shirt is true.
-The size of sleeveless shirt is 3.
-The AC of sleeveless shirt is 0.
-The effectiveness of sleeveless shirt is 0.
-The placement of sleeveless shirt is "chest".
-The descmod of sleeveless shirt is "Your upper body is covered by a white sleeveless shirt.".
-The slot of sleeveless shirt is "chest".
-the scent of sleeveless shirt is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Plural of sleeveless shirt is false.
+Taur-compatible of sleeveless shirt is true.
+Size of sleeveless shirt is 3.
+AC of sleeveless shirt is 0.
+Effectiveness of sleeveless shirt is 0.
+Placement of sleeveless shirt is "chest".
+Descmod of sleeveless shirt is "Your upper body is covered by a white sleeveless shirt.".
+Slot of sleeveless shirt is "chest".
+Scent of sleeveless shirt is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 mesh shirt is a grab object.
 mesh shirt is equipment.
 It is not temporary.
-The plural of mesh shirt is false.
-The taur-compatible of mesh shirt is true.
-The size of mesh shirt is 3.
-The AC of mesh shirt is 0.
-The effectiveness of mesh shirt is 0.
-The placement of mesh shirt is "chest".
-The descmod of mesh shirt is "Your upper body is covered by a black mesh shirt. With its sheer fabric, you can literally see right through it.".
-The slot of mesh shirt is "chest".
-the scent of mesh shirt is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Plural of mesh shirt is false.
+Taur-compatible of mesh shirt is true.
+Size of mesh shirt is 3.
+AC of mesh shirt is 0.
+Effectiveness of mesh shirt is 0.
+Placement of mesh shirt is "chest".
+Descmod of mesh shirt is "Your upper body is covered by a black mesh shirt. With its sheer fabric, you can literally see right through it.".
+Slot of mesh shirt is "chest".
+Scent of mesh shirt is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 [ Section 3 - Shoes ]
 
@@ -367,93 +367,93 @@ name	desc	weight	object
 combat boots is a grab object.
 combat boots is equipment.
 It is not temporary.
-The plural of combat boots is true.
-The taur-compatible of combat boots is false.
-The size of combat boots is 3.
-The AC of combat boots is 0.
-The effectiveness of combat boots is 0.
-The placement of combat boots is "feet".
-The descmod of combat boots is "You are wearing sturdy black combat boots. They even have steel caps that protect your toes.".
-The slot of combat boots is "feet".
-the scent of combat boots is "The boots smell like leather and rubber.".
+Plural of combat boots is true.
+Taur-compatible of combat boots is false.
+Size of combat boots is 3.
+AC of combat boots is 0.
+Effectiveness of combat boots is 0.
+Placement of combat boots is "feet".
+Descmod of combat boots is "You are wearing sturdy black combat boots. They even have steel caps that protect your toes.".
+Slot of combat boots is "feet".
+Scent of combat boots is "The boots smell like leather and rubber.".
 
 brown loafers is a grab object.
 brown loafers is equipment.
 It is not temporary.
-The plural of brown loafers is true.
-The taur-compatible of brown loafers is false.
-The size of brown loafers is 3.
-The AC of brown loafers is 0.
-The effectiveness of brown loafers is 0.
-The placement of brown loafers is "feet".
-The descmod of brown loafers is "You are wearing comfortable brown loafers.".
-The slot of brown loafers is "feet".
-the scent of brown loafers is "The loafers smell like leather.".
+Plural of brown loafers is true.
+Taur-compatible of brown loafers is false.
+Size of brown loafers is 3.
+AC of brown loafers is 0.
+Effectiveness of brown loafers is 0.
+Placement of brown loafers is "feet".
+Descmod of brown loafers is "You are wearing comfortable brown loafers.".
+Slot of brown loafers is "feet".
+Scent of brown loafers is "The loafers smell like leather.".
 
 leather sandals is a grab object.
 leather sandals is equipment.
 It is not temporary.
-The plural of leather sandals is true.
-The taur-compatible of leather sandals is false.
-The size of leather sandals is 3.
-The AC of leather sandals is 0.
-The effectiveness of leather sandals is 0.
-The placement of leather sandals is "feet".
-The descmod of leather sandals is "Two leather sandals are strapped to your feet.".
-The slot of leather sandals is "feet".
-the scent of leather sandals is "The sandals smell like leather.".
+Plural of leather sandals is true.
+Taur-compatible of leather sandals is false.
+Size of leather sandals is 3.
+AC of leather sandals is 0.
+Effectiveness of leather sandals is 0.
+Placement of leather sandals is "feet".
+Descmod of leather sandals is "Two leather sandals are strapped to your feet.".
+Slot of leather sandals is "feet".
+Scent of leather sandals is "The sandals smell like leather.".
 
 high heels is a grab object.
 high heels is equipment.
 It is not temporary.
-The plural of high heels is true.
-The taur-compatible of high heels is false.
-The size of high heels is 3.
-The AC of high heels is 0.
-The effectiveness of high heels is 0.
-The placement of high heels is "feet".
-The descmod of high heels is "You are wearing two red high heels. It won't be easy to run in these, but you sure look fabulous like this.".
-The slot of high heels is "feet".
-the scent of high heels is "The shoes smell a bit of laquer and plastic.".
+Plural of high heels is true.
+Taur-compatible of high heels is false.
+Size of high heels is 3.
+AC of high heels is 0.
+Effectiveness of high heels is 0.
+Placement of high heels is "feet".
+Descmod of high heels is "You are wearing two red high heels. It won't be easy to run in these, but you sure look fabulous like this.".
+Slot of high heels is "feet".
+Scent of high heels is "The shoes smell a bit of laquer and plastic.".
 
 stiletto heels is a grab object.
 stiletto heels is equipment.
 It is not temporary.
-The plural of stiletto heels is true.
-The taur-compatible of stiletto heels is false.
-The size of stiletto heels is 3.
-The AC of stiletto heels is 0.
-The effectiveness of stiletto heels is 0.
-The placement of stiletto heels is "feet".
-The descmod of stiletto heels is "You are wearing two black stiletto heels. They're quite extraordinary high and have very narrow heels.".
-The slot of stiletto heels is "feet".
-the scent of stiletto heels is "The shoes smell a bit of laquer and plastic.".
+Plural of stiletto heels is true.
+Taur-compatible of stiletto heels is false.
+Size of stiletto heels is 3.
+AC of stiletto heels is 0.
+Effectiveness of stiletto heels is 0.
+Placement of stiletto heels is "feet".
+Descmod of stiletto heels is "You are wearing two black stiletto heels. They're quite extraordinary high and have very narrow heels.".
+Slot of stiletto heels is "feet".
+Scent of stiletto heels is "The shoes smell a bit of laquer and plastic.".
 
 jogging shoes is a grab object.
 jogging shoes is equipment.
 It is not temporary.
-The plural of jogging shoes is true.
-The taur-compatible of jogging shoes is false.
-The size of jogging shoes is 3.
-The AC of jogging shoes is 0.
-The effectiveness of jogging shoes is 0.
-The placement of jogging shoes is "feet".
-The descmod of jogging shoes is "You are wearing fairly new jogging shoes. Just perfect to run with.".
-The slot of jogging shoes is "feet".
-the scent of jogging shoes is "The shoes smell like plastic and not much else. Good thing these are new.".
+Plural of jogging shoes is true.
+Taur-compatible of jogging shoes is false.
+Size of jogging shoes is 3.
+AC of jogging shoes is 0.
+Effectiveness of jogging shoes is 0.
+Placement of jogging shoes is "feet".
+Descmod of jogging shoes is "You are wearing fairly new jogging shoes. Just perfect to run with.".
+Slot of jogging shoes is "feet".
+Scent of jogging shoes is "The shoes smell like plastic and not much else. Good thing these are new.".
 
 cowboy boots is a grab object.
 cowboy boots is equipment.
 It is not temporary.
-The plural of cowboy boots is true.
-The taur-compatible of cowboy boots is false.
-The size of cowboy boots is 3.
-The AC of cowboy boots is 0.
-The effectiveness of cowboy boots is 0.
-The placement of cowboy boots is "feet".
-The descmod of cowboy boots is "You are wearing a pair of dark brown cowboy boots. You won't have to fear brambles and rattlesnakes with these on, that's for sure.".
-The slot of cowboy boots is "feet".
-the scent of cowboy boots is "The boots smell like leather.".
+Plural of cowboy boots is true.
+Taur-compatible of cowboy boots is false.
+Size of cowboy boots is 3.
+AC of cowboy boots is 0.
+Effectiveness of cowboy boots is 0.
+Placement of cowboy boots is "feet".
+Descmod of cowboy boots is "You are wearing a pair of dark brown cowboy boots. You won't have to fear brambles and rattlesnakes with these on, that's for sure.".
+Slot of cowboy boots is "feet".
+Scent of cowboy boots is "The boots smell like leather.".
 
 
 [ Section 4 - Underwear ]
@@ -481,106 +481,106 @@ name	desc	weight	object
 orc loincloth is a grab object.
 orc loincloth is equipment.
 It is not temporary.
-The plural of orc loincloth is false.
-The taur-compatible of orc loincloth is false.
-The size of orc loincloth is 3.
-The AC of orc loincloth is 0.
-The effectiveness of orc loincloth is 0.
-The placement of orc loincloth is "crotch".
-The descmod of orc loincloth is "An orc loincloth barely covers your crotch. It is fairly easy to expose yourself with the wrong (or right?) move.".
-The slot of orc loincloth is "crotch".
-the scent of orc loincloth is "The cloth has the scent of manly musk clinging to it. Just breathing in with it under your nose makes you think of orcs.".
+Plural of orc loincloth is false.
+Taur-compatible of orc loincloth is false.
+Size of orc loincloth is 3.
+AC of orc loincloth is 0.
+Effectiveness of orc loincloth is 0.
+Placement of orc loincloth is "crotch".
+Descmod of orc loincloth is "An orc loincloth barely covers your crotch. It is fairly easy to expose yourself with the wrong (or right?) move.".
+Slot of orc loincloth is "crotch".
+Scent of orc loincloth is "The cloth has Scent of manly musk clinging to it. Just breathing in with it under your nose makes you think of orcs.".
 
 ragged loincloth is a grab object.
 ragged loincloth is equipment.
 It is not temporary.
-The plural of ragged loincloth is false.
-The taur-compatible of ragged loincloth is false.
-The size of ragged loincloth is 3.
-The AC of ragged loincloth is 0.
-The effectiveness of ragged loincloth is 0.
-The placement of ragged loincloth is "crotch".
-The descmod of ragged loincloth is "A ragged loincloth barely covers your crotch. It is fairly easy to expose yourself with the wrong (or right?) move.".
-The slot of ragged loincloth is "crotch".
-the scent of ragged loincloth is "Smells a little bit musky. Apparently the loincloth has been worn before, but is fairly clean.".
+Plural of ragged loincloth is false.
+Taur-compatible of ragged loincloth is false.
+Size of ragged loincloth is 3.
+AC of ragged loincloth is 0.
+Effectiveness of ragged loincloth is 0.
+Placement of ragged loincloth is "crotch".
+Descmod of ragged loincloth is "A ragged loincloth barely covers your crotch. It is fairly easy to expose yourself with the wrong (or right?) move.".
+Slot of ragged loincloth is "crotch".
+Scent of ragged loincloth is "Smells a little bit musky. Apparently the loincloth has been worn before, but is fairly clean.".
 
 simple loincloth is a grab object.
 simple loincloth is equipment.
 It is not temporary.
-The plural of simple loincloth is false.
-The taur-compatible of simple loincloth is false.
-The size of simple loincloth is 3.
-The AC of simple loincloth is 0.
-The effectiveness of simple loincloth is 0.
-The placement of simple loincloth is "crotch".
-The descmod of simple loincloth is "A simple white loincloth is tied around your crotch.".
-The slot of simple loincloth is "crotch".
-the scent of simple loincloth is "Smells a little bit musky. Apparently the loincloth has been worn before, but is fairly clean.".
+Plural of simple loincloth is false.
+Taur-compatible of simple loincloth is false.
+Size of simple loincloth is 3.
+AC of simple loincloth is 0.
+Effectiveness of simple loincloth is 0.
+Placement of simple loincloth is "crotch".
+Descmod of simple loincloth is "A simple white loincloth is tied around your crotch.".
+Slot of simple loincloth is "crotch".
+Scent of simple loincloth is "Smells a little bit musky. Apparently the loincloth has been worn before, but is fairly clean.".
 
 boxer briefs is a grab object.
 boxer briefs is equipment.
 It is not temporary.
-The plural of boxer briefs is true.
-The taur-compatible of boxer briefs is false.
-The size of boxer briefs is 3.
-The AC of boxer briefs is 0.
-The effectiveness of boxer briefs is 0.
-The placement of boxer briefs is "crotch".
-The descmod of boxer briefs is "A pair of black boxer briefs cover your crotch.".
-The slot of boxer briefs is "crotch".
-the scent of boxer briefs is "Smells a little bit musky. Apparently the underwear has been worn before, but is fairly clean.".
+Plural of boxer briefs is true.
+Taur-compatible of boxer briefs is false.
+Size of boxer briefs is 3.
+AC of boxer briefs is 0.
+Effectiveness of boxer briefs is 0.
+Placement of boxer briefs is "crotch".
+Descmod of boxer briefs is "A pair of black boxer briefs cover your crotch.".
+Slot of boxer briefs is "crotch".
+Scent of boxer briefs is "Smells a little bit musky. Apparently the underwear has been worn before, but is fairly clean.".
 
 white briefs is a grab object.
 white briefs is equipment.
 It is not temporary.
-The plural of white briefs is true.
-The taur-compatible of white briefs is false.
-The size of white briefs is 3.
-The AC of white briefs is 0.
-The effectiveness of white briefs is 0.
-The placement of white briefs is "crotch".
-The descmod of white briefs is "A pair of tight white briefs cover your crotch.".
-The slot of white briefs is "crotch".
-the scent of white briefs is "Smells a little bit musky. Apparently the underwear has been worn before, but is fairly clean.".
+Plural of white briefs is true.
+Taur-compatible of white briefs is false.
+Size of white briefs is 3.
+AC of white briefs is 0.
+Effectiveness of white briefs is 0.
+Placement of white briefs is "crotch".
+Descmod of white briefs is "A pair of tight white briefs cover your crotch.".
+Slot of white briefs is "crotch".
+Scent of white briefs is "Smells a little bit musky. Apparently the underwear has been worn before, but is fairly clean.".
 
 orange jockstrap is a grab object.
 orange jockstrap is equipment.
 It is not temporary.
-The plural of orange jockstrap is false.
-The taur-compatible of orange jockstrap is false.
-The size of orange jockstrap is 3.
-The AC of orange jockstrap is 0.
-The effectiveness of orange jockstrap is 0.
-The placement of orange jockstrap is "crotch".
-The descmod of orange jockstrap is "An orange jockstrap covers your crotch while leaving your ass and back door bare. This makes you feel somewhat exposed, yet at the same time you can't help but want to show off.".
-The slot of orange jockstrap is "crotch".
-the scent of orange jockstrap is "Smells a little bit musky. Apparently the underwear has been worn before, but is fairly clean.".
+Plural of orange jockstrap is false.
+Taur-compatible of orange jockstrap is false.
+Size of orange jockstrap is 3.
+AC of orange jockstrap is 0.
+Effectiveness of orange jockstrap is 0.
+Placement of orange jockstrap is "crotch".
+Descmod of orange jockstrap is "An orange jockstrap covers your crotch while leaving your ass and back door bare. This makes you feel somewhat exposed, yet at the same time you can't help but want to show off.".
+Slot of orange jockstrap is "crotch".
+Scent of orange jockstrap is "Smells a little bit musky. Apparently the underwear has been worn before, but is fairly clean.".
 
 mesh undies is a grab object.
 mesh undies is equipment.
 It is not temporary.
-The plural of mesh undies is true.
-The taur-compatible of mesh undies is false.
-The size of mesh undies is 3.
-The AC of mesh undies is 0.
-The effectiveness of mesh undies is 0.
-The placement of mesh undies is "crotch".
-The descmod of mesh undies is "A pair of mesh undies around your hips expose more than they conceal.".
-The slot of mesh undies is "crotch".
-the scent of mesh undies is "Smells a little bit musky. Apparently the underwear has been worn before, but is fairly clean.".
+Plural of mesh undies is true.
+Taur-compatible of mesh undies is false.
+Size of mesh undies is 3.
+AC of mesh undies is 0.
+Effectiveness of mesh undies is 0.
+Placement of mesh undies is "crotch".
+Descmod of mesh undies is "A pair of mesh undies around your hips expose more than they conceal.".
+Slot of mesh undies is "crotch".
+Scent of mesh undies is "Smells a little bit musky. Apparently the underwear has been worn before, but is fairly clean.".
 
 pink panties is a grab object.
 pink panties is equipment.
 It is not temporary.
-The plural of pink panties is true.
-The taur-compatible of pink panties is false.
-The size of pink panties is 3.
-The AC of pink panties is 0.
-The effectiveness of pink panties is 0.
-The placement of pink panties is "crotch".
-The descmod of pink panties is "A skimpy and frilly pair of pink panties cover your crotch.".
-The slot of pink panties is "crotch".
-the scent of pink panties is "Smells a little bit musky. Apparently the underwear has been worn before, but is fairly clean.".
+Plural of pink panties is true.
+Taur-compatible of pink panties is false.
+Size of pink panties is 3.
+AC of pink panties is 0.
+Effectiveness of pink panties is 0.
+Placement of pink panties is "crotch".
+Descmod of pink panties is "A skimpy and frilly pair of pink panties cover your crotch.".
+Slot of pink panties is "crotch".
+Scent of pink panties is "Smells a little bit musky. Apparently the underwear has been worn before, but is fairly clean.".
 
 [ Section 5 - Glasses ]
 
@@ -609,93 +609,93 @@ name	desc	weight	object
 stylish sunglasses is a grab object.
 stylish sunglasses is equipment.
 It is not temporary.
-The plural of stylish sunglasses is true.
-The taur-compatible of stylish sunglasses is true.
-The size of stylish sunglasses is 0.
-The AC of stylish sunglasses is 0.
-The effectiveness of stylish sunglasses is 0.
-The placement of stylish sunglasses is "eyes".
-The descmod of stylish sunglasses is "An expensive set of sunglasses sits on your nose, giving you a stylish look and protecting your eyes.".
-The slot of stylish sunglasses is "eyes".
-the scent of stylish sunglasses is "The glasses don't smell like anything really.".
+Plural of stylish sunglasses is true.
+Taur-compatible of stylish sunglasses is true.
+Size of stylish sunglasses is 0.
+AC of stylish sunglasses is 0.
+Effectiveness of stylish sunglasses is 0.
+Placement of stylish sunglasses is "eyes".
+Descmod of stylish sunglasses is "An expensive set of sunglasses sits on your nose, giving you a stylish look and protecting your eyes.".
+Slot of stylish sunglasses is "eyes".
+Scent of stylish sunglasses is "The glasses don't smell like anything really.".
 
 basic sunglasses is a grab object.
 basic sunglasses is equipment.
 It is not temporary.
-The plural of basic sunglasses is true.
-The taur-compatible of basic sunglasses is true.
-The size of basic sunglasses is 0.
-The AC of basic sunglasses is 0.
-The effectiveness of basic sunglasses is 0.
-The placement of basic sunglasses is "eyes".
-The descmod of basic sunglasses is "An cheap set of sunglasses sits on your nose, protecting your eyes from bright light.".
-The slot of basic sunglasses is "eyes".
-the scent of basic sunglasses is "The glasses don't smell like anything really.".
+Plural of basic sunglasses is true.
+Taur-compatible of basic sunglasses is true.
+Size of basic sunglasses is 0.
+AC of basic sunglasses is 0.
+Effectiveness of basic sunglasses is 0.
+Placement of basic sunglasses is "eyes".
+Descmod of basic sunglasses is "An cheap set of sunglasses sits on your nose, protecting your eyes from bright light.".
+Slot of basic sunglasses is "eyes".
+Scent of basic sunglasses is "The glasses don't smell like anything really.".
 
 horn-rimmed glasses is a grab object.
 horn-rimmed glasses is equipment.
 It is not temporary.
-The plural of horn-rimmed glasses is true.
-The taur-compatible of horn-rimmed glasses is true.
-The size of horn-rimmed glasses is 0.
-The AC of horn-rimmed glasses is 0.
-The effectiveness of horn-rimmed glasses is 0.
-The placement of horn-rimmed glasses is "eyes".
-The descmod of horn-rimmed glasses is "A pair of horn-rimmed glasses on your nose give you a dignified look.".
-The slot of horn-rimmed glasses is "eyes".
-the scent of horn-rimmed glasses is "The glasses don't smell like anything really.".
+Plural of horn-rimmed glasses is true.
+Taur-compatible of horn-rimmed glasses is true.
+Size of horn-rimmed glasses is 0.
+AC of horn-rimmed glasses is 0.
+Effectiveness of horn-rimmed glasses is 0.
+Placement of horn-rimmed glasses is "eyes".
+Descmod of horn-rimmed glasses is "A pair of horn-rimmed glasses on your nose give you a dignified look.".
+Slot of horn-rimmed glasses is "eyes".
+Scent of horn-rimmed glasses is "The glasses don't smell like anything really.".
 
 aviator goggles is a grab object.
 aviator goggles is equipment.
 It is not temporary.
-The plural of aviator goggles is true.
-The taur-compatible of aviator goggles is true.
-The size of aviator goggles is 0.
-The AC of aviator goggles is 0.
-The effectiveness of aviator goggles is 0.
-The placement of aviator goggles is "eyes".
-The descmod of aviator goggles is "A pair of aviator goggles cover your eyes, protecting them from danger - like spurts of cum, for example.".
-The slot of aviator goggles is "eyes".
-the scent of aviator goggles is "The goggles don't smell like anything really.".
+Plural of aviator goggles is true.
+Taur-compatible of aviator goggles is true.
+Size of aviator goggles is 0.
+AC of aviator goggles is 0.
+Effectiveness of aviator goggles is 0.
+Placement of aviator goggles is "eyes".
+Descmod of aviator goggles is "A pair of aviator goggles cover your eyes, protecting them from danger - like spurts of cum, for example.".
+Slot of aviator goggles is "eyes".
+Scent of aviator goggles is "The goggles don't smell like anything really.".
 
 lab goggles is a grab object.
 lab goggles is equipment.
 It is not temporary.
-The plural of lab goggles is true.
-The taur-compatible of lab goggles is true.
-The size of lab goggles is 0.
-The AC of lab goggles is 0.
-The effectiveness of lab goggles is 0.
-The placement of lab goggles is "eyes".
-The descmod of lab goggles is "A pair of lab goggles cover your eyes, protecting them from danger - like spurts of cum, for example.".
-The slot of lab goggles is "eyes".
-the scent of lab goggles is "The goggles don't smell like anything really.".
+Plural of lab goggles is true.
+Taur-compatible of lab goggles is true.
+Size of lab goggles is 0.
+AC of lab goggles is 0.
+Effectiveness of lab goggles is 0.
+Placement of lab goggles is "eyes".
+Descmod of lab goggles is "A pair of lab goggles cover your eyes, protecting them from danger - like spurts of cum, for example.".
+Slot of lab goggles is "eyes".
+Scent of lab goggles is "The goggles don't smell like anything really.".
 
 prop glasses is a grab object.
 prop glasses is equipment.
 It is not temporary.
-The plural of prop glasses is true.
-The taur-compatible of prop glasses is true.
-The size of prop glasses is 0.
-The AC of prop glasses is 0.
-The effectiveness of prop glasses is 0.
-The placement of prop glasses is "eyes".
-The descmod of prop glasses is "A pair of prop glasses on your nose gives you an intelligent air.".
-The slot of prop glasses is "eyes".
-the scent of prop glasses is "The glasses don't smell like anything really.".
+Plural of prop glasses is true.
+Taur-compatible of prop glasses is true.
+Size of prop glasses is 0.
+AC of prop glasses is 0.
+Effectiveness of prop glasses is 0.
+Placement of prop glasses is "eyes".
+Descmod of prop glasses is "A pair of prop glasses on your nose gives you an intelligent air.".
+Slot of prop glasses is "eyes".
+Scent of prop glasses is "The glasses don't smell like anything really.".
 
 rose-tinted glasses is a grab object.
 rose-tinted glasses is equipment.
 It is not temporary.
-The plural of rose-tinted glasses is true.
-The taur-compatible of rose-tinted glasses is true.
-The size of rose-tinted glasses is 0.
-The AC of rose-tinted glasses is 0.
-The effectiveness of rose-tinted glasses is 0.
-The placement of rose-tinted glasses is "eyes".
-The descmod of rose-tinted glasses is "A pair of somewhat kitschy glasses on your nose gives you a rose-tinted outlook of the world.".
-The slot of rose-tinted glasses is "eyes".
-the scent of rose-tinted glasses is "The glasses don't smell like anything really.".
+Plural of rose-tinted glasses is true.
+Taur-compatible of rose-tinted glasses is true.
+Size of rose-tinted glasses is 0.
+AC of rose-tinted glasses is 0.
+Effectiveness of rose-tinted glasses is 0.
+Placement of rose-tinted glasses is "eyes".
+Descmod of rose-tinted glasses is "A pair of somewhat kitschy glasses on your nose gives you a rose-tinted outlook of the world.".
+Slot of rose-tinted glasses is "eyes".
+Scent of rose-tinted glasses is "The glasses don't smell like anything really.".
 
 [ Section 6 - Helmets ]
 
@@ -720,119 +720,119 @@ name	desc	weight	object
 motorcycle helmet is a grab object.
 motorcycle helmet is equipment.
 It is not temporary.
-The plural of motorcycle helmet is false.
-The taur-compatible of motorcycle helmet is true.
-The size of motorcycle helmet is 3.
-The AC of motorcycle helmet is 60.
-The effectiveness of motorcycle helmet is 80.
-The placement of motorcycle helmet is "head".
-The descmod of motorcycle helmet is "Your head is encased in the thick shell of a motorcycle helmet.".
-The slot of motorcycle helmet is "head".
-the scent of motorcycle helmet is "The helmet smells of plastic and fabric.".
+Plural of motorcycle helmet is false.
+Taur-compatible of motorcycle helmet is true.
+Size of motorcycle helmet is 3.
+AC of motorcycle helmet is 60.
+Effectiveness of motorcycle helmet is 80.
+Placement of motorcycle helmet is "head".
+Descmod of motorcycle helmet is "Your head is encased in the thick shell of a motorcycle helmet.".
+Slot of motorcycle helmet is "head".
+Scent of motorcycle helmet is "The helmet smells of plastic and fabric.".
 
 bike helmet is a grab object.
 bike helmet is equipment.
 It is not temporary.
-The plural of bike helmet is false.
-The taur-compatible of bike helmet is true.
-The size of bike helmet is 3.
-The AC of bike helmet is 20.
-The effectiveness of bike helmet is 40.
-The placement of bike helmet is "head".
-The descmod of bike helmet is "A plastic bike helmet encases the upper half of your head.".
-The slot of bike helmet is "head".
-the scent of bike helmet is "The helmet smells like plastic.".
+Plural of bike helmet is false.
+Taur-compatible of bike helmet is true.
+Size of bike helmet is 3.
+AC of bike helmet is 20.
+Effectiveness of bike helmet is 40.
+Placement of bike helmet is "head".
+Descmod of bike helmet is "A plastic bike helmet encases the upper half of your head.".
+Slot of bike helmet is "head".
+Scent of bike helmet is "The helmet smells like plastic.".
 
 protective helmet is a grab object.
 protective helmet is equipment.
 It is not temporary.
-The plural of protective helmet is false.
-The taur-compatible of protective helmet is true.
-The size of protective helmet is 3.
-The AC of protective helmet is 30.
-The effectiveness of protective helmet is 60.
-The placement of protective helmet is "head".
-The descmod of protective helmet is "A white protective helmet sits on your head, providing some protection.".
-The slot of protective helmet is "head".
-the scent of protective helmet is "The helmet smells like plastic.".
+Plural of protective helmet is false.
+Taur-compatible of protective helmet is true.
+Size of protective helmet is 3.
+AC of protective helmet is 30.
+Effectiveness of protective helmet is 60.
+Placement of protective helmet is "head".
+Descmod of protective helmet is "A white protective helmet sits on your head, providing some protection.".
+Slot of protective helmet is "head".
+Scent of protective helmet is "The helmet smells like plastic.".
 
 tin-foil hat is a grab object.
 tin-foil hat is equipment.
 It is not temporary.
-The plural of tin-foil hat is false.
-The taur-compatible of tin-foil hat is true.
-The size of tin-foil hat is 3.
-The AC of tin-foil hat is 0.
-The effectiveness of tin-foil hat is 0.
-The placement of tin-foil hat is "head".
-The descmod of tin-foil hat is "A tin-foil hat covers your head, providing a dubious level of protection against... something.".
-The slot of tin-foil hat is "head".
-the scent of tin-foil hat is "The hat smells a bit like metal".
+Plural of tin-foil hat is false.
+Taur-compatible of tin-foil hat is true.
+Size of tin-foil hat is 3.
+AC of tin-foil hat is 0.
+Effectiveness of tin-foil hat is 0.
+Placement of tin-foil hat is "head".
+Descmod of tin-foil hat is "A tin-foil hat covers your head, providing a dubious level of protection against... something.".
+Slot of tin-foil hat is "head".
+Scent of tin-foil hat is "The hat smells a bit like metal".
 
 gray fedora is a grab object.
 gray fedora is equipment.
 It is not temporary.
-The plural of gray fedora is false.
-The taur-compatible of gray fedora is true.
-The size of gray fedora is 3.
-The AC of gray fedora is 0.
-The effectiveness of gray fedora is 0.
-The placement of gray fedora is "head".
-The descmod of gray fedora is "A gray fedora covers your head, making you look like a private detective from the prohibition days.".
-The slot of gray fedora is "head".
-the scent of gray fedora is "The hat smells like wool.".
+Plural of gray fedora is false.
+Taur-compatible of gray fedora is true.
+Size of gray fedora is 3.
+AC of gray fedora is 0.
+Effectiveness of gray fedora is 0.
+Placement of gray fedora is "head".
+Descmod of gray fedora is "A gray fedora covers your head, making you look like a private detective from the prohibition days.".
+Slot of gray fedora is "head".
+Scent of gray fedora is "The hat smells like wool.".
 
 baseball cap is a grab object.
 baseball cap is equipment.
 It is not temporary.
-The plural of baseball cap is false.
-The taur-compatible of baseball cap is true.
-The size of baseball cap is 3.
-The AC of baseball cap is 0.
-The effectiveness of baseball cap is 0.
-The placement of baseball cap is "head".
-The descmod of baseball cap is "A blue baseball cap covers your head, providing some protection from the sun with its visor.".
-The slot of baseball cap is "head".
-the scent of baseball cap is "The cap smells like fabric and plastic".
+Plural of baseball cap is false.
+Taur-compatible of baseball cap is true.
+Size of baseball cap is 3.
+AC of baseball cap is 0.
+Effectiveness of baseball cap is 0.
+Placement of baseball cap is "head".
+Descmod of baseball cap is "A blue baseball cap covers your head, providing some protection from the sun with its visor.".
+Slot of baseball cap is "head".
+Scent of baseball cap is "The cap smells like fabric and plastic".
 
 knitted skullcap is a grab object.
 knitted skullcap is equipment.
 It is not temporary.
-The plural of knitted skullcap is false.
-The taur-compatible of knitted skullcap is true.
-The size of knitted skullcap is 3.
-The AC of knitted skullcap is 0.
-The effectiveness of knitted skullcap is 0.
-The placement of knitted skullcap is "head".
-The descmod of knitted skullcap is "A knitted skullcap covers the top of your head.".
-The slot of knitted skullcap is "head".
-the scent of knitted skullcap is "The cap smells like wool.".
+Plural of knitted skullcap is false.
+Taur-compatible of knitted skullcap is true.
+Size of knitted skullcap is 3.
+AC of knitted skullcap is 0.
+Effectiveness of knitted skullcap is 0.
+Placement of knitted skullcap is "head".
+Descmod of knitted skullcap is "A knitted skullcap covers the top of your head.".
+Slot of knitted skullcap is "head".
+Scent of knitted skullcap is "The cap smells like wool.".
 
 football helmet is a grab object.
 football helmet is equipment.
 It is not temporary.
-The plural of football helmet is false.
-The taur-compatible of football helmet is true.
-The size of football helmet is 3.
-The AC of football helmet is 40.
-The effectiveness of football helmet is 80.
-The placement of football helmet is "head".
-The descmod of football helmet is "Your head is encased in the thick shell of a football helmet.".
-The slot of football helmet is "head".
-the scent of football helmet is "The helmet smells of plastic and fabric.".
+Plural of football helmet is false.
+Taur-compatible of football helmet is true.
+Size of football helmet is 3.
+AC of football helmet is 40.
+Effectiveness of football helmet is 80.
+Placement of football helmet is "head".
+Descmod of football helmet is "Your head is encased in the thick shell of a football helmet.".
+Slot of football helmet is "head".
+Scent of football helmet is "The helmet smells of plastic and fabric.".
 
 urban explorer helmet is a grab object.
 urban explorer helmet is equipment.
 It is not temporary.
-The plural of urban explorer helmet is false.
-The taur-compatible of urban explorer helmet is true.
-The size of urban explorer helmet is 3.
-The AC of urban explorer helmet is 30.
-The effectiveness of urban explorer helmet is 80.
-The placement of urban explorer helmet is "head".
-The descmod of urban explorer helmet is "Your head is encased in a protective helmet with crimson-red finish.".
-The slot of urban explorer helmet is "head".
-the scent of urban explorer helmet is "The helmet smells of plastic and fabric.".
+Plural of urban explorer helmet is false.
+Taur-compatible of urban explorer helmet is true.
+Size of urban explorer helmet is 3.
+AC of urban explorer helmet is 30.
+Effectiveness of urban explorer helmet is 80.
+Placement of urban explorer helmet is "head".
+Descmod of urban explorer helmet is "Your head is encased in a protective helmet with crimson-red finish.".
+Slot of urban explorer helmet is "head".
+Scent of urban explorer helmet is "The helmet smells of plastic and fabric.".
 
 [ Section 6 - Helmets ]
 
@@ -856,106 +856,106 @@ name	desc	weight	object
 leather jacket is a grab object.
 leather jacket is equipment.
 It is not temporary.
-The plural of leather jacket is false.
-The taur-compatible of leather jacket is true.
-The size of leather jacket is 3.
-The AC of leather jacket is 30.
-The effectiveness of leather jacket is 70.
-The placement of leather jacket is "body".
-The descmod of leather jacket is "A black leather jacket covers your upper body.".
-The slot of leather jacket is "body".
-the scent of leather jacket is "The jacket smells like leather.".
+Plural of leather jacket is false.
+Taur-compatible of leather jacket is true.
+Size of leather jacket is 3.
+AC of leather jacket is 30.
+Effectiveness of leather jacket is 70.
+Placement of leather jacket is "body".
+Descmod of leather jacket is "A black leather jacket covers your upper body.".
+Slot of leather jacket is "body".
+Scent of leather jacket is "The jacket smells like leather.".
 
 sturdy greatcoat is a grab object.
 sturdy greatcoat is equipment.
 It is not temporary.
-The plural of sturdy greatcoat is false.
-The taur-compatible of sturdy greatcoat is true.
-The size of sturdy greatcoat is 3.
-The AC of sturdy greatcoat is 15.
-The effectiveness of sturdy greatcoat is 80.
-The placement of sturdy greatcoat is "body".
-The descmod of sturdy greatcoat is "A full length woolen greatcoat covers your body.".
-The slot of sturdy greatcoat is "body".
-the scent of sturdy greatcoat is "The coat smells like whool.".
+Plural of sturdy greatcoat is false.
+Taur-compatible of sturdy greatcoat is true.
+Size of sturdy greatcoat is 3.
+AC of sturdy greatcoat is 15.
+Effectiveness of sturdy greatcoat is 80.
+Placement of sturdy greatcoat is "body".
+Descmod of sturdy greatcoat is "A full length woolen greatcoat covers your body.".
+Slot of sturdy greatcoat is "body".
+Scent of sturdy greatcoat is "The coat smells like whool.".
 
 bulletproof vest is a grab object.
 bulletproof vest is equipment.
 It is not temporary.
-The plural of bulletproof vest is false.
-The taur-compatible of bulletproof vest is true.
-The size of bulletproof vest is 3.
-The AC of bulletproof vest is 70.
-The effectiveness of bulletproof vest is 60.
-The placement of bulletproof vest is "body".
-The descmod of bulletproof vest is "A reinforced bulletproof vest covers your upper body.".
-The slot of bulletproof vest is "body".
-the scent of bulletproof vest is "The vest smells slightly of sweat, which isn't too woundrous as these things usually are put on in times of great stress.".
+Plural of bulletproof vest is false.
+Taur-compatible of bulletproof vest is true.
+Size of bulletproof vest is 3.
+AC of bulletproof vest is 70.
+Effectiveness of bulletproof vest is 60.
+Placement of bulletproof vest is "body".
+Descmod of bulletproof vest is "A reinforced bulletproof vest covers your upper body.".
+Slot of bulletproof vest is "body".
+Scent of bulletproof vest is "The vest smells slightly of sweat, which isn't too woundrous as these things usually are put on in times of great stress.".
 
 medieval breastplate is a grab object.
 medieval breastplate is equipment.
 It is not temporary.
-The plural of medieval breastplate is false.
-The taur-compatible of medieval breastplate is true.
-The size of medieval breastplate is 3.
-The AC of medieval breastplate is 65.
-The effectiveness of medieval breastplate is 60.
-The placement of medieval breastplate is "body".
-The descmod of medieval breastplate is "A medieval breastplate covers your chest and back with shiny metal.".
-The slot of medieval breastplate is "body".
-the scent of medieval breastplate is "The breastplate smells like metal".
+Plural of medieval breastplate is false.
+Taur-compatible of medieval breastplate is true.
+Size of medieval breastplate is 3.
+AC of medieval breastplate is 65.
+Effectiveness of medieval breastplate is 60.
+Placement of medieval breastplate is "body".
+Descmod of medieval breastplate is "A medieval breastplate covers your chest and back with shiny metal.".
+Slot of medieval breastplate is "body".
+Scent of medieval breastplate is "The breastplate smells like metal".
 
 roadsign breastplate is a grab object.
 roadsign breastplate is equipment.
 It is not temporary.
-The plural of roadsign breastplate is false.
-The taur-compatible of roadsign breastplate is true.
-The size of roadsign breastplate is 4.
-The AC of roadsign breastplate is 60.
-The effectiveness of roadsign breastplate is 50.
-The placement of roadsign breastplate is "body".
-The descmod of roadsign breastplate is "A roadsign breastplate covers your chest and back in an improvised patchwork of metal.".
-The slot of roadsign breastplate is "body".
-the scent of roadsign breastplate is "The breastplate smells like metal".
+Plural of roadsign breastplate is false.
+Taur-compatible of roadsign breastplate is true.
+Size of roadsign breastplate is 4.
+AC of roadsign breastplate is 60.
+Effectiveness of roadsign breastplate is 50.
+Placement of roadsign breastplate is "body".
+Descmod of roadsign breastplate is "A roadsign breastplate covers your chest and back in an improvised patchwork of metal.".
+Slot of roadsign breastplate is "body".
+Scent of roadsign breastplate is "The breastplate smells like metal".
 
 football pads is a grab object.
 football pads is equipment.
 It is not temporary.
-The plural of football pads is true.
-The taur-compatible of football pads is true.
-The size of football pads is 3.
-The AC of football pads is 30.
-The effectiveness of football pads is 50.
-The placement of football pads is "body".
-The descmod of football pads is "Blue football pads cover chest, abs and shoulders providing protective padding.".
-The slot of football pads is "body".
-the scent of football pads is "The pads smell of plastic, fabric and sweat.".
+Plural of football pads is true.
+Taur-compatible of football pads is true.
+Size of football pads is 3.
+AC of football pads is 30.
+Effectiveness of football pads is 50.
+Placement of football pads is "body".
+Descmod of football pads is "Blue football pads cover chest, abs and shoulders providing protective padding.".
+Slot of football pads is "body".
+Scent of football pads is "The pads smell of plastic, fabric and sweat.".
 
 life jacket is a grab object.
 life jacket is equipment.
 It is not temporary.
-The plural of life jacket is false.
-The taur-compatible of life jacket is true.
-The size of life jacket is 3.
-The AC of life jacket is 20.
-The effectiveness of life jacket is 40.
-The placement of life jacket is "body".
-The descmod of life jacket is "A bright orange life jacket covers your upper body.".
-The slot of life jacket is "body".
-the scent of life jacket is "The life jacket smells of synthetic fabrics.".
+Plural of life jacket is false.
+Taur-compatible of life jacket is true.
+Size of life jacket is 3.
+AC of life jacket is 20.
+Effectiveness of life jacket is 40.
+Placement of life jacket is "body".
+Descmod of life jacket is "A bright orange life jacket covers your upper body.".
+Slot of life jacket is "body".
+Scent of life jacket is "The life jacket smells of synthetic fabrics.".
 
 shoulder pad is a grab object.
 shoulder pad is equipment.
 It is not temporary.
-The plural of shoulder pad is false.
-The taur-compatible of shoulder pad is true.
-The size of shoulder pad is 3.
-The AC of shoulder pad is 13.
-The effectiveness of shoulder pad is 13.
-The placement of shoulder pad is "body".
-The descmod of shoulder pad is "A single, armored pad is strapped to your shoulder.".
-The slot of shoulder pad is "body".
-the scent of shoulder pad is "The shoulder pad stinks of the [']90s.".
+Plural of shoulder pad is false.
+Taur-compatible of shoulder pad is true.
+Size of shoulder pad is 3.
+AC of shoulder pad is 13.
+Effectiveness of shoulder pad is 13.
+Placement of shoulder pad is "body".
+Descmod of shoulder pad is "A single, armored pad is strapped to your shoulder.".
+Slot of shoulder pad is "body".
+Scent of shoulder pad is "The shoulder pad stinks of the [']90s.".
 
 
 Basic Clothing Items ends here.

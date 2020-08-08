@@ -58,8 +58,8 @@ hellhound collar is a grab object.
 hellhound collar is equipment.
 hellhound collar is cursed.
 It is not temporary.
-The plural of hellhound collar is false.
-The taur-compatible of hellhound collar is true.
+Plural of hellhound collar is false.
+Taur-compatible of hellhound collar is true.
 The size of hellhound collar is 0.
 The AC of hellhound collar is 0.
 The effectiveness of hellhound collar is 0.

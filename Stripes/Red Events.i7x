@@ -303,8 +303,8 @@ name	desc	weight	object
 gimp mask is a grab object.
 gimp mask is equipment.
 It is not temporary.
-The plural of gimp mask is false.
-The taur-compatible of gimp mask is true.
+Plural of gimp mask is false.
+Taur-compatible of gimp mask is true.
 The size of gimp mask is 3.
 The AC of gimp mask is 0.
 The effectiveness of gimp mask is 0.

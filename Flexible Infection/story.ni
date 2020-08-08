@@ -3810,7 +3810,7 @@ Section - Boar Man
 
 A boar man is a infection model. The description of a boar man is "This man appear to be a rather fat boar creature, but closer examination reveals his stocky frame carries a good deal of muscle as well. But the stench is absolutely horrid." The TF table of a boar man is Table 12.
 
-The plural of boar man is boar men.
+Plural of boar man is boar men.
 
 The move rate of a boar man is 2.
 The attack rate of a boar man is 2.
@@ -5756,7 +5756,7 @@ There is a Wooden desk in Ranch Office. The Wooden desk is an openable container
 
 A pack of nuts is a kind of thing. A pack of nuts is edible. Understand "nuts" as a pack of nuts. Understand "pack" as a pack of nuts. The TF table of a pack of nuts is table 55. The description of a pack of nuts is "This a package of all-natural, mixed tree nuts. You don't recognize the brand, but they look quite tasty nonetheless.". A pack of nuts is infectitem.
 
-Red T-Shirt is a kind of clothing. Understand "shirt" as a Red T-Shirt. understand "shirts" as the plural of Red T-Shirt. The printed plural name of Red T-Shirt is "Red T-Shirts". The description of Red T-Shirt is "A basic long sleeved shirt that happens to be a red color.";
+Red T-Shirt is a kind of clothing. Understand "shirt" as a Red T-Shirt. understand "shirts" as Plural of Red T-Shirt. The printed plural name of Red T-Shirt is "Red T-Shirts". The description of Red T-Shirt is "A basic long sleeved shirt that happens to be a red color.";
 
 Jeans is a kind of clothing. Understand "pants" as a jeans. The printed plural name of jeans is "pairs of jeans". The description of Jeans is "Stone washed and looking cool". The clothing type of Jeans is "pants".
 

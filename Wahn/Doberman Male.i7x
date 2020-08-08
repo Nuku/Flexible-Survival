@@ -3,59 +3,27 @@ Version 1 of Doberman Male by Wahn begins here.
 Section 1 - Creature Insertion [Doberman Male]
 
 
-to say TrophyList_Doberman_Male: [call from the table of random critters entry for the infection, to be executed when the player wins]
-	truncate CombatTrophyList to 0 entries; [cleaning out the global list]
-	if a random chance of 2 in 10 succeeds: [chances for various items]
-		add "Mesh Shirt" to CombatTrophyList;
-	if a random chance of 8 in 10 succeeds:
-		add "doberman male fur" to CombatTrophyList;
-	[...] [might include different item "sets" for infections that have multiple personas]
-	if CombatTrophyList is non-empty: [at least one possible trophy generated]
-		say "[ChooseCombatTrophy]";
+[ Guide to Trophy Functions                                                                                         ]
+[ - Just add guaranteed drops to the CombatTrophyList, roll a random chance of X + LootBonus in 100 for rarer stuff ]
+[ - Up to +10% come from the player (Perception-10)/2                                                               ]
+[ - Up to +25% come from the Magpie Eyes and Mugger Feats                                                           ]
+[ - A player with high perception and both feats is guaranteed items > 65%                                          ]
+[ Recommended Range for Rare Drops: 1-20 %                                                                          ]
+[ Recommended Range for Uncommon Drops: 21-40%                                                                      ]
+[ Recommended Range for Common Drops: 41-80%                                                                        ]
 
-to say ChooseCombatTrophy: [player can pick an item (just the one), or none]
-	say "     [bold type]Having won the fight, you could claim a trophy from the battleground or from your opponent themselves. [roman type][line break]";
-	[display the list of trophies somehow, with the player able to choose one]
-	say "     You quickly snatch a X for yourself.";
-
-to say CombatTrophyChoosing:
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	repeat with TrophyItem running from 1 to the number of entries in CombatTrophyList:
-		choose a blank row in table of fucking options;
-		now title entry is "[TrophyItem]";
-		now description entry is "Snatch the [TrophyItem]";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
-				now sextablerun is 1;
-				ItemGain nam by 1;
-				wait for any key;
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You decide not to take anything.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-	clear the screen and hyperlink list;
+to say GenerateTrophyList_Doberman_Male: [call from the table of random critters entry for the infection, to be executed when the player wins]
+	[ Reminder: LootBonus can be +35 at maximum - 10 for Magpie Eyes, 15 for Mugger and 10 from Player Perception]
+	add "doberman male fur" to CombatTrophyList; [guaranteed drop]
+	if a random chance of (50 + LootBonus) in 100 succeeds:
+		add "food" to CombatTrophyList;
+	if Debug is at level 10:
+		say "Debug: Trophy List: [CombatTrophyList].";
 
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -111,6 +79,9 @@ When Play begins:
 	now libido entry is 50; [ Target libido the infection will rise towards. ]
 	now loot entry is "doberman male fur"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 50; [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "[GenerateTrophyList_Doberman_Male]";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]lithe[or]dashing[or]sexy[at random]";
 	now type entry is "canine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -125,7 +96,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;

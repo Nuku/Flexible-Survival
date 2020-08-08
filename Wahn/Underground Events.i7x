@@ -318,8 +318,8 @@ name	desc	weight	object
 mindshield helmet is a grab object.
 mindshield helmet is equipment.
 It is not temporary.
-The plural of mindshield helmet is false.
-The taur-compatible of mindshield helmet is true.
+Plural of mindshield helmet is false.
+Taur-compatible of mindshield helmet is true.
 The size of mindshield helmet is 3.
 The AC of mindshield helmet is 10.
 The effectiveness of mindshield helmet is 60.

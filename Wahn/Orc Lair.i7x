@@ -535,8 +535,8 @@ name	desc	weight	object
 
 police vest is equipment.
 It is not temporary.
-The plural of police vest is false.
-The taur-compatible of police vest is true.
+Plural of police vest is false.
+Taur-compatible of police vest is true.
 The size of police vest is 3.
 The AC of police vest is 50.
 The effectiveness of police vest is 55.

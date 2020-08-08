@@ -382,7 +382,7 @@ after looking while player is in Darkened Alcove:
 	project the figure of Map_Library_2F_South_icon;
 
 to say udarkenedalcove desc:
-	say "     This area goes a bit further away from the railing than the rest of the second floor. Under closer inspection, you find the reason why. What was at one point an office had its flimsy walls collapse, but there's no hint as to what caused it. The light from the windows in the back of library don't reach this room due to the walled-off features that were part of the original design. While still light enough to see your surroundings, it does feel gloomier and slightly creepy. From here, you can head northeast towards the garden view windows or northwest to return to the second floor landing. There is also a hatch in the ceiling leading up into the attic.";
+	say "     This area goes a bit further away from the railing than the rest of the second floor. Under closer inspection, you find the reason why. What was at one point a separate room had its flimsy walls collapse, but there's no hint as to what caused it. Must have been a special collection there or so. Now it's a total shambles, with debris and fallen bookshelves everywhere. The light from the windows in the back of library don't reach this room due to the walled-off features that were part of the original design. While still light enough to see your surroundings, it does feel gloomier and slightly creepy. From here, you can head northeast towards the garden view windows or northwest to return to the second floor landing. There is also a hatch in the ceiling leading up into the attic.";
 
 Table of GameRoomIDs (continued)
 Object	Name

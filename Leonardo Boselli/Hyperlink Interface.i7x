@@ -259,7 +259,7 @@ Chapter - Hyperlink Types
 
 A hyperlink type is a kind of thing. object-word is a hyperlink type. direction-word is a hyperlink type. topic-word is a hyperlink type. parser-word is a hyperlink type.
 
-A hyperlink emphasis is a kind of value. The plural of hyperlink emphasis is hyperlink emphases.
+A hyperlink emphasis is a kind of value. Plural of hyperlink emphasis is hyperlink emphases.
 
 A hyperlink type has a hyperlink emphasis called style.
 

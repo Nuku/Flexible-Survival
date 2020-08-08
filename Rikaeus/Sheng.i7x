@@ -598,8 +598,8 @@ sheng's pet collar is equipment.
 sheng's pet collar is cursed.
 It is not temporary.
 The printed name of sheng's pet collar is "sheng's pet collar".
-The plural of sheng's pet collar is false.
-The taur-compatible of sheng's pet collar is true.
+Plural of sheng's pet collar is false.
+Taur-compatible of sheng's pet collar is true.
 The size of sheng's pet collar is 0.
 The AC of sheng's pet collar is 0.
 The effectiveness of sheng's pet collar is 0.

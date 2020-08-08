@@ -45,6 +45,8 @@ monmindbonus is a number that varies.	[ Used to total the enemy's special mental
 playerpoison is a number that varies.	[ Used to track how poisoned the player may be. ]
 monsterpoison is a number that varies.	[ Used to track how poisoned the monster may be (not currently in use). ]
 lastfightround is a number that varies.	[ Used to track the last round during which a fight occurred. ]
+CombatTrophyList is a list of text that varies.[@Tag:NotSaved]
+LootBonus is a number that varies.[@Tag:NotSaved]
 
 [ fightoutcome                         ]
 [ 100*  - starting value               ]
@@ -1155,6 +1157,7 @@ to win:
 	let ok be 1;
 	let voreprompted be false;
 	let ubprompted be false;
+	[Unbirthing and Vore]
 	if Player can vore and inasituation is false and scalevalue of Player >= scale entry and fightoutcome is 10 and vorechoice is not 2:
 		let vorechance be 25 + ( hunger of Player * 2 );
 		if "Automatic Survival" is listed in feats of Player, now vorechance is 75;
@@ -1256,6 +1259,7 @@ to win:
 			now ok is 0;
 			ubbyplayer; [See Alt Vore file]
 			now fightoutcome is 14; [player ub'ed foe]
+	[Vampirism]
 	if ok is 1 and vampiric is true:
 		if nohealmode is true:
 			increase HP of Player by ( 2 * lev entry ) / 3;
@@ -1264,6 +1268,9 @@ to win:
 		PlayerDrink 3;
 		PlayerEat 1;
 		if HP of Player > maxHP of Player, now HP of Player is maxHP of Player;
+	[Trophies and Looting]
+	TrophyLootFunction;
+	[Postcombat Scene]
 	if ok is 1 and "Control Freak" is listed in feats of Player:
 		say "Do you want to perform after combat scene?";
 		if Player consents:
@@ -1271,6 +1278,7 @@ to win:
 		else:
 			now ok is 0;
 	if ok is 1, say "[defeated entry]";
+	[XP Earnings]
 	increase the XP of the player by lev entry times two;
 	if ssxpa is true:
 		increase XP of Player by ( lev entry * 2 ) / 3;
@@ -1289,52 +1297,10 @@ to win:
 		if "Ringmaster" is not listed in feats of Player:
 			decrease the XP of the player by ( lev entry times 2 ) divided by 3;
 	increase the morale of the player by 1;
-	let randomdropchance be lootchance entry;
-	let z be 0;
-	if randomdropchance is 0:
-		now randomdropchance is 0; [no drop = do nothing]
-	else if randomdropchance is 100:
-		now randomdropchance is 100; [always drops = no need to run all the maths]
-		ItemGain loot entry by 1;
-	else:
-		if "Magpie Eyes" is listed in feats of Player and randomdropchance > 50:
-			now z is ( 100 - randomdropchance ) divided by 3; [scaled increase above 50, prevents numbers over 100]
-			increase randomdropchance by z;
-		else if "Magpie Eyes" is listed in feats of Player and randomdropchance > 0:
-			now z is randomdropchance divided by 3;
-			increase randomdropchance by z;
-		if "Mugger" is listed in feats of Player and muggerison is true:		[flat perception based increase]
-			if perception of Player < 30:
-				increase randomdropchance by ( perception of Player / 2 );
-				if randomdropchance > 100, now randomdropchance is 100;
-			else:
-				increase randomdropchance by 15;
-			if randomdropchance > 100, now randomdropchance is 100;
-		let yy be ( ( ( perception of Player - 10 ) / 2 ) * 3 ); [minor perception bonus to looting, maxed at 30 PER]
-		if yy > 30, now yy is 30;
-		if randomdropchance > 50, now yy is ( yy * ( 100 - randomdropchance ) ) divided by 100;
-		if randomdropchance <= 50, now yy is ( yy * randomdropchance ) divided by 100;
-		now randomdropchance is randomdropchance + yy;
-		if a random chance of randomdropchance in 100 succeeds:
-			ItemGain loot entry by 1;
-[	let z be 0;
-	if "Magpie Eyes" is listed in feats of Player and lootchance entry > 50:
-		now z is ( 100 - lootchance entry ) divided by 3; [scaled increase above 50, prevents numbers over 100]
-		increase lootchance entry by z;
-	else if "Magpie Eyes" is listed in feats of Player and lootchance entry > 0:
-		now z is lootchance entry divided by 3;
-		increase lootchance entry by z;
-	let yy be ( ( ( perception of Player - 10 ) / 2 ) * 3 ); [minor perception bonus to looting, maxed at 30 PER]
-	if yy > 30, now yy is 30;
-	if lootchance entry > 50, now yy is ( yy * ( 100 - lootchance entry ) ) divided by 100;
-	if lootchance entry <= 50, now yy is ( yy * lootchance entry ) divided by 100;
-	if a random chance of ( lootchance entry + yy ) in 100 succeeds:
-		say "[bold type]You gain 1 [loot entry]![roman type][line break]";
-		ItemGain loot entry by 1;
-	if "Magpie Eyes" is listed in feats of Player and lootchance entry > 0:
-		decrease lootchance entry by z; ]
+	[Collecting Vials]
 	if fightoutcome is not 13 and fightoutcome is not 14 and fightoutcome is not 18 and fightoutcome is not 19:
 		vialchance (Name entry);
+	[Freecred Earnings]
 	let reward be lev entry * 2;
 	if lev entry > 2, increase reward by 1;
 	if lev entry > 4, increase reward by ( lev entry / 4 );
@@ -1394,6 +1360,74 @@ To lose:
 	now automaticcombatcheck is 0; [combat is over, reset to zero]
 	follow the ngraphics_blank rule;
 
+
+to RefreshLootBonus:
+	now LootBonus is 0; [reset]
+	if "Magpie Eyes" is listed in feats of Player:
+		increase LootBonus by 10; [extra 10% chance for stuff]
+	if "Mugger" is listed in feats of Player and muggerison is true: [2nd check is for turning the feat on/off]
+		increase LootBonus by 15; [extra 15% chance for stuff]
+	let PerceptionLootBonus be ( ( perception of Player - 10 ) / 2 ); [minor perception bonus to looting, maxed at +10%]
+	if PerceptionLootBonus > 10, now PerceptionLootBonus is 10;
+	increase LootBonus by PerceptionLootBonus;
+
+to TrophyLootFunction: [generates either a trophy prompt or loot for the player]
+	if Debug is at level 10:
+		say "Debug: Trophy/Loot Function activated.";
+	choose row MonsterID from Table of Random Critters;
+	RefreshLootBonus; [updates loot bonus with player feats and perception - maximum of a +35% increase]
+	if TrophyFunction entry is not "":
+		if Debug is at level 10:
+			say "Debug: Trophy Fork activated.";
+		truncate CombatTrophyList to 0 entries; [cleaning out the list]
+		say "[TrophyFunction entry]"; [makes the local function in the enemy fill the list]
+		if CombatTrophyList is non-empty: [at least one possible trophy generated]
+			say "     [bold type]This fight is just about over, giving you the time to snatch one item as a trophy from your opponent: [roman type][line break]";
+			now sextablerun is 0;
+			blank out the whole of table of fucking options;
+			[]
+			repeat with X running from 1 to the number of entries in CombatTrophyList:
+				choose a blank row in table of fucking options;
+				now title entry is "[entry X of CombatTrophyList]";
+				now description entry is "Snatch the [entry X of CombatTrophyList]";
+			[]
+			sort the table of fucking options in sortorder order;
+			repeat with y running from 1 to number of filled rows in table of fucking options:
+				choose row y from the table of fucking options;
+				say "[link][y] - [title entry][as][y][end link][line break]";
+			say "[link]0 - Nevermind[as]0[end link][line break]";
+			while sextablerun is 0:
+				say "Pick the corresponding number> [run paragraph on]";
+				get a number;
+				if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+					now current menu selection is calcnumber;
+					choose row calcnumber in table of fucking options;
+					[ confirm disabled for now - doesn't really add anything of value ]
+					[
+					say "[title entry]: [description entry]?";
+					if Player consents:
+						let nam be title entry;
+					]
+					now sextablerun is 1;
+					ItemGain title entry by 1;
+					wait for any key;
+				else if calcnumber is 0:
+					now sextablerun is 1;
+					say "     You decide not to take anything.";
+					wait for any key;
+				else:
+					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+			clear the screen and hyperlink list;
+	else: [Defaulting back to the old Loot System]
+		if Debug is at level 10:
+			say "Debug: Loot Fork activated.";
+		let randomdropchance be lootchance entry;
+		let z be 0;
+		if randomdropchance is 100: [always drops = no need to run all the maths]
+			ItemGain loot entry by 1;
+		else if randomdropchance > 0:
+			if a random chance of (randomdropchance + LootBonus) in 100 succeeds:
+				ItemGain loot entry by 1;
 
 Section 5 - Critter Combat
 
