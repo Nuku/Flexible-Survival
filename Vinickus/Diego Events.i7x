@@ -6,6 +6,7 @@ Object	Name
 Trickster	"Trickster"
 
 Trickster is a situation. The level of Trickster is 4.
+The sarea of Trickster is "Outside".
 wolffight is a number that varies.
 when play begins:
 	add Trickster to BadSpots of FurryList;
@@ -77,6 +78,7 @@ Object	Name
 Prank Aftermath	"Prank Aftermath"
 
 Prank Aftermath is a situation. Prank Aftermath is inactive. The level of Prank Aftermath is 7.
+The sarea of Prank Aftermath is "Outside".
 when play begins:
 	add Prank Aftermath to BadSpots of FurryList;
 	add Prank Aftermath to badspots of HermList;
@@ -110,5 +112,77 @@ instead of resolving a Prank Aftermath:
 	say "     With the second battle over, the other pumas move in to capture you. You manage to dive into a building and bar the door with a filing cabinet. As they pound at it, you find another exit from the building and weave through some side streets to make sure that you've lost the lustful felines.";
 	now Prank Aftermath is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Prankster's Delight	"Prankster's Delight"
+
+Prankster's Delight is a situation. The level of Prankster's Delight is 7.
+The sarea of Prankster's Delight is "Outside".
+when play begins:
+	add Prankster's Delight to BadSpots of FurryList;
+	add Prankster's Delight to Badspots of MaleList;
+
+instead of resolving a Prankster's Delight:
+	say "     It's just another walk through the desolate city. Chaos, moans, some scattered fires, nothing of interest comes about until you hear snickering off to the side. It appears to be coming from an alley up ahead, and as you get closer, you hear the snickering get louder and more familiar. However, just when you round the corner, the laughter stops, and nothing out of the ordinary catches your eye. Chalking it up to something best not messed with, you continue past the alley. Not ten minutes later there's a loud screech, and seconds after that you hear a cacophony of screaming metal and falling rubble. It takes a minute to pin down the exact street to run towards, but the shouts that soon start up help clue you in.";
+	say "     When you get within a good distance to make out what's being yelled about, you perk your ears and hold steady, almost holding your breath as you try to hear exactly what's going on. 'Get this damn truck out of the way!' a gruff voice sounds out. 'With what, sir?!' The second voice sounds shaken, impatient and yet fearful. Whether the accident set him off, his CO, or something else, you can't be sure. Your best guess is that they may have been under a lot of strain and everything is slowly wearing them down. After you begin to relax and move closer, you hear a snickering, the exact same snickering from before: directly above your head. Glancing up you see the orange fur of some kind of canine, his tail flicking back and forth in what looks like amusement. It's hard to make out the rest the person, or even the face, but it's quite clear they're lithe with a bit of muscle.";
+	say "     [if park entrance is unknown]Bewildered by the new appearance, you stay stock still to avoid attention[else]You sigh to yourself as you realize who the assailant is[end if].";
+	LineBreak;
+	say "     With the snickering more or less identified, you manage to stay hidden from [if park entrance is unknown]the crazy entity[else]Diego[end if]. So with little else deterring you, it's quite easy to sneak around the edges of the building and make it within sight of the disturbance. You're currently behind the soldiers, and close to a burned-out car. It is but one of multiple strewn-about wrecks blocking the road. You'd no doubt make a lot of noise if you tried to get around or over all of it, so you simply huddle behind the car. With a good hiding place, and sightlines, you examine the scene more fully. There's a fire truck blocking the road beyond where you're at, probably a good thirty feet from the current blockage. Between you and the firetruck is a squad of ten male soldiers, their urban camo fatigues doing nothing to hide them as they pace back and forth. Eight of them are closer to you than the firetruck, while two examine the wreckage.";
+	say "     'How the fuck did this even get here?' came the voice you figure is the CO. He sounds different now that he's not yelling himself hoarse, but he's still boisterous. The other man by him turns and starts talking, but it's hard to make out what he's saying, all you can tell is that he's quite an animated personality. Even without his voice, his posture and arms waving about give a good impression of his mood. Obviously tensions are running high, and the eight soldiers in the back are themselves looking quite beleaguered. Many pace about or simply lean against walls or in corners. You get ready to leave them to whatever their plans are, but as you step back, there's a sudden burst of motion off to the side.";
+	LineBreak;
+	say "     As you glance towards it, you see nothing but a camo hat on the ground. However, as you think back, you could've sworn a soldier was there moments ago. You count out the numbers again, and realize there is in fact a missing soldier. Another burst of motion catches your attention, this time to the left, and once more all that's left is a camo hat. Whatever is happening, it seems like it's focusing on the soldiers nearest to walls. Maybe you should warn them, but then again you could just leave, or let the little devil in your ear lead the way: a few sexy men getting taken down could be fun to watch.";
+	LineBreak;
+	say "     [bold type]Do you leave, warn them, or stay quiet and watch what's going on?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Leave.";
+	say "     [link](2)[as]2[end link] - Yell out.";
+	say "     [link](3)[as]3[end link] - Simply watch.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 3:
+		say "Choice? (1-3)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to Leave, [link]2[end link] to Yell out or [link]3[end link] to Simply watch.";
+	if calcnumber is 1:
+		LineBreak;
+		say "     You take your time to back away, keeping sightlines as a soldier disappears every few seconds. Soon you're around a corner and out of sight, giving you the chance to book it.";
+		now Prankster's Delight is resolved;
+		now Resolution of Prankster's Delight is 1; [Player ran away.]
+	else if calcnumber is 2:
+		LineBreak;
+		say "     You yell out a warning, trying to give them a heads up that something's after them. They noticably jump, turning and grabbing at the wall nearest them. The soldiers then all glance at each other and then back towards you. 'Where'd the equipment go!?' Their obvious anger forces you to back up, as the men seem eager to direct all of their substantial ire your way, at least before a yell breaks the tension: or redirects it. There were eight soldiers glaring you down seconds ago, but now there are only seven. The two who were yelling by the firetruck rush back to rejoin their squad. They all huddle up back-to-back as the CO looks your way. 'What is going on?' he questions. You only get a momentary second to shrug before he's yanked down into the ground, vanishing completely. Strangely, there aren't any holes or debris anywhere around where he was moments ago. Something's very twisted here.";
+		say "     His second in command is yanked down next, and as soon as this happens, everything goes haywire. The remaining seven split apart and begin running in various directions. The ones farthest from you make a break for the firetruck, moving to clamber over it. As soon as one is almost up the side, a thin, bony hand shoots from the asphalt below and grabs his ankle. The others nearby try to kick at the arm, but there own assailants soon reveal themselves. More bony hands and insectoid-like appendages grip their ankles and wrists. They get yanked into the ground seconds later, leaving the man hanging onto the truck for dear life.";
+		LineBreak;
+		say "     Looking for the other soldiers, you see them getting pulled into the walls by more bony and insect-like appendages. That leaves the last soldier dangling on the firetruck, hoping to get away. His arms clearly shake more and more as the moments tick by, and he's soon too weak to keep a grip, falling back into the hold of more appendages. They break his fall, but they also keep him above ground, not quite yanking him below yet. Various new arms and growths surface from the asphalt like it was merely a placid sea. These new ones seem to be covered in tiny little hairs and no visible hands, but soon they're slicing and flicking through the air all around the soldier, leaving him to struggle as an odd dance is carried out before you. Within seconds every scrap of clothing sheds from the man's form, leaving him in only his bare skin as those new appendages sink back into the earth. The original arms and hands still keep a grip on him though, and hold him a few feet off the ground.";
+		say "     Soon you see new, long and slick looking lengths emerge from the asphalt. They each look rather... phallic, and they even throb in the open air. However, they appear different than even what's often seen around the city. The lengths look almost bony at first, but soon the top halves split like petals in the morning, revealing dozens of red beads clumped together in what can only be described as a mass of throbbing spheres. It all comes together to form a rather thick and bumpy looking structure, and you can only imagine what it'd feel like inside your [if player is male]ass[else if player is female]pussy[else]mouth[end if]. Each bead seems to be about the size of a large marble, and the width of the phallic things is at least three of the beads across. It's hard to tell the true length though, as there could always be more to be revealed under the rest of the boney structure. All you know is that the current revealed length could no doubt reach deep, deep inside one's body.";
+		LineBreak;
+		say "     That's exactly what they do too, the red throbbing lengths angling at the man's mouth and ass, poking and prodding at each newfound entrance. They must be slick With some kind of lube, because the one between the solder's legs quickly slams forward, sinking half-a-dozen inches at once. The man quickly breaks after that, releasing screeching moans as he begins to gyrate his hips, helping to sink the weird phallus deeper into his ass. His tongue also reaches out to the length over his mouth, lapping at it like a man dying of thirst. All of the limbs shutter at once, like they're all one being. It takes no time at all for both phallic shapes to begin taking action, one sinking into the man's mouth and throat, as the other begins to push in and out of the soldier's ass. Another shudder goes through the limbs as you watch the two dick-like things pulse and throb. A thick, white substance bursts from the man's mouth as his head lulls, the same liquid dripping from between his legs as his stomach swells. This keeps going and going, and neither cock stops pushing in and out of the male's form. The hands grip tighter around his arms and legs as he convulses and shakes.";
+		say "     It takes little time for you to see a meager stream of cum shooting up from around the man's waist. It's hard to tell entirely from where you are, but you're certain he's cumming what's left of his brains out. The limbs then begin to shrink, no, sink into the ground, dragging the soldier with them. Soon you only see the soldier's sweaty, cum slick chest, but moments later even that disappears beneath the asphalt. 'Well, that was fun,' came a voice above you. Glancing up there's nothing to see, but you have a feeling as to who, or what, it was.";
+		now Resolution of Prankster's Delight is 2; [Player tried to warn the squad]
+	else:
+		LineBreak;
+		say "     You watch as more and more soldiers disappear from view, soon leaving four soldiers and the two by the firetruck. The CO and his partner soon get yanked down as well. The only ones left glance back at where their superiors were, noticing nothing but camo hats. They split up and jump towards the walls, looking as if they were expecting to find something leaning against them. Each man glances around before bony hands and appendages burst from the walls like breaching whales. But these insect-like things don't immediately drag them from view. They hold them in place, the bony hands gripping tight to their squirming forms. Soon, insect-like lengths that are covered in tiny hairs slip from the walls, surrounding them, slashing and dancing through the air around the pinned soldiers. Your eyes are then met with the sight of the fatigues shedding off the men, the fabric completely shredded and falling to the ground below them.";
+		say "     Each side of the area has two men held from the walls and off the ground, letting you glance right and left to see the nude backs of soldiers. Some of the arms split into almost prehensile fingers, gripping and spreading the ass of each man in view, giving you the full view of their twitching holes. Other arms soon appear and split open to reveal red throbbing beads inside, they look and throb like dicks, but are made up of clusters of red beads compacted into a solid shape. They almost look like anal beads glued together into a thick, long construct. The beads are each the size of large marbles, and each of the lengths are three of these beads across, at least. They hover in-front of each man's face, and even as the males seems to try to lean away, their holes twitch ever more. Your eyes then catch more movement in the middle of the area, right between the four men. A single hand emerges from the asphalt and points a finger at you before pointing at the men to each side of it. It appears to be making an offer.";
+		say "     [bold type]Do you take this appendage up on its offer?[roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - You crawl across the car you've been hiding behind, giving a sly grin as you turn towards two of the men.";
+		say "     ([link]N[as]n[end link]) - You shake your head in respectful refusal.";
+		if player consents:
+			if player is a male: [check for if the player has a cock to penetrate with.]
+				LineBreak;
+				say "     Standing behind the now nude soldiers really gets you going. Their fine, bubble butts are fully on display, and their winking holes draw you in. Your cock was already hard from the show before, but now you can't wait to sink it into one of these fine specimens of masculinity. Unable to decide, but growing lost to lust, you simply step forward and grind against the ass closest to you, hotdogging between his muscular cheeks. With things growing more and more slick down their, and the twitching hole making his need obvious, you find your tip pops in without any attempt by you. With this, you wrap your arms around your temporary mate, shoving balls-deep into him as he gasps out. His gasp lets the throbbing, red length before him pop into his mouth. This seems to make your fucking all the better as the flesh around your cock grips even tighter, drawing your needs to new heights as you begin to pull out to the tip.";
+				say "     You then slam right back in, picking up into a rhythm of vigorous fucking. Your partner soon begins to grind back into your thrusts, begging for more with his muscular body. You try to focus on not cumming so quickly, but it's hard not to when faced with such an eager fuckpuppet, and such a hot one at that. Your efforts are short-lived however, as you feel your balls pull up and cock throb. You slam balls deep once more, holding your hips tight against the soldier's ass as you unload shot after shot of seed. Your cum fills him up enough to where it even begins to dribble out around your shaft. However, this isn't enough for you, and as he is yanked into the wall and off your cock, your eyes turn to his friend. His mouth is already filled with the phallic length before him, making his ass even easier to slip into. That, and all of the cum already caking your cock works as great lube.";
+				LineBreak;
+				say "     You hump and pound into this man even harder than the last, your mind lost to the need to breed this eager soldier. It takes even less time for your needs to reach a peak. Your cock throbs and your hips slap into his ass a few more times before slapping and holding against his cheeks, unloading what feels like pints of cum. Once more the seed spills out of the hole and around your cock, making it easier for the body to be ripped away from you and into the wall. Hunching over, you realize how exhausted you are. Turning and glancing at where the other two were, you realize they're all gone now. Not even the weird disembodied limbs remain in your sight. Sliding down the wall you were just fucking the soldier's against, you rest for a few moments. Cries in the distance remind you that you have to keep moving though, drawing you to stand and return to your exploration.";
+				now Resolution of Prankster's Delight is 3; [Player watched and partook]
+			else:
+				Linebreak;
+				say "     You don't think you're quite equipped for this, so you watch as The hand slips back beneath the asphalt, the four men soon getting yanked into the walls and out of sight. 'Oh well,' a voice says from above. You glance up and see nothing, but are all too aware as to who, or what, it probably was. Straightening yourself up and making sure you're safe to move, you turn away from the pinned in alcove. You then head out and resume your exploration.";
+				now Resolution of Prankster's Delight is 4; [Player watched but weren't equipped to partake]
+		else:
+			LineBreak;
+			say "     The hand slips back beneath the asphalt, the four men soon getting yanked into the walls and out of sight. 'Oh well,' a voice says from above. You glance up and see nothing, but are all too aware as to who, or what, it probably was. Straightening yourself up and making sure you're safe to move, you turn away from the pinned in alcove. You then head out and resume your exploration.";
+			now Resolution of Prankster's Delight is 5; [Player watched but turned down the offer]
 
 Diego Events ends here.

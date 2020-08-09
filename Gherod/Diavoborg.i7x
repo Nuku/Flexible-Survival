@@ -233,7 +233,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 Entrance to Red Rock Lair	"Entrance to Red Rock Lair"
 
-Entrance to Red Rock Lair is a room. It is a fasttravel. It is private.
+Entrance to Red Rock Lair is a room. It is a fasttravel. Entrance to Red Rock Lair is private.
 The earea of Entrance to Red Rock Lair is "Plains".
 The description of Entrance to Red Rock Lair is "[DiavoborgLairEntranceDesc]".
 

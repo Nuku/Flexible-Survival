@@ -1,4 +1,4 @@
-Version 5 of Demonologist by Gherod begins here.
+Version 6 of Demonologist by Gherod begins here.
 
 "Adds Xaedihr, the demonologist, as a NPC and Companion to the game."
 
@@ -7,6 +7,7 @@ Version 5 of Demonologist by Gherod begins here.
 [Version 3 - Demonic Summoning Support, Library Interactions and NPC scenes (Rane, Atticus) - Gherod]
 [Version 4 - Added Dominant Xaedihr route w/ 1st scene - Gherod]
 [Version 5 - Added hints at end of tape and Hell Realm. Additionally, added enchantment and spell system to complement the Void Realm addition]
+[Version 6 - Art added. New way to acquire Ancient Tome]
 
 [***********************************************************]
 [***********************************************************]
@@ -178,8 +179,22 @@ to say DemonicRitualTape:
 	say "     When they're about to disappear, one of the demons turns to the camera. With a curious grunt, he approaches it, tilting his head as he grabs the device with only one of his massive hands. Clearly he doesn't know what it is, but he simply decides to take it with him. This could explain how you were able to find the tape in such an odd manner. However, to your disappointment, the image cuts as soon as he crosses the veil, leaving you only with static noise. With nothing left on the tape to watch, whatever happened to the young man remains a mystery. You haven't seen him turning into one of them as it usually happens, and no ordinary human could flip a tome's pages without touching them. Now, if only you could find this grimoire...";
 	if carried of ancient tome is 0:
 		say "     From what you have seen, this tome looks very [bold type]ancient[roman type]... perhaps there is someone who could help you find it? It is a magical object, might have a will of its own, even, so it should be tricky to search for it yourself, although it seems to have remained at the [bold type]Library[roman type]... Who could you bring here? Someone curious... maybe a [bold type]college student[roman type]... Those never seem to know when to stop reading about something that intrigues them. It is possible that the [bold type]College Campus[roman type] may have someone you could bring to your shelter in order to acquire this grimoire.";
+		say "     Alternatively, [bold type]you could simply try your luck looking around every corner of the Library, especially the dark spots[roman type]. It definitely won't hurt giving it a try...";
 	if resolution of Hellish Trashpile < 3:
 		now Resolution of Hellish Trashpile is 3;
+
+after going to Darkened Alcove while (Resolution of Hellish Trashpile is 3 and ancient tome is not owned):
+	say "     Determined to find that grimoire you saw on the tape, you decide to rummage through most bookshelves you can find in the Library, in hopes that you stumble across the tome somehow.";
+	say "     As you walk through what previously seemed to be a very peaceful corner, full of books and knowledge waiting to be read and had, which is now a silent, desolate room with barely anything noteworthy except for its obvious abandoned state, a cracked window and a rotten wooden chair, you find nothing but the remains of what was once a grand library... and disappointment. The book continues to elude you, no matter how thorough your search is. You begin to think that, perhaps, this is a waste of time... Maybe someone already came here and looted the tome, leaving with it to a far, far away place...";
+	say "     Perhaps you would never find this tome here...";
+	WaitLineBreak;
+	say "     You contemplate alternatives as you continue to mindlessly shove away more old books, some too deteriorated to read, even, and think of potential places where someone could have brought such a curious grimoire, or maybe a place where a group of some sort of cultists get together to perform hellish rituals. A myriad of thoughts storm through your mind as you attempt to make sense of this, a current that is abruptly interrupted by the strangest whisper.";
+	say "     At first, you think someone sneaked up on you, and as you turn around, so sure that you would find a person, or even a creature, your eyes are met with the darkened landscape of the library once more. Nobody was there... No one but you. In fact, it really seemed you were completely alone, with absolutely not even a single soul to be seen. The odd sensation strikes you again, this time not in the form of a sudden whisper, but something else...";
+	WaitLineBreak;
+	say "     You turn around to face the bookshelf you were previously interacting with, and you can't believe your own eyes for a second. There is a book laying in the upper shelf. It is a large, seemingly heavy, and has an ancient look to it, like it belonged in the occult section. Within an instant, you grab and examine it with evident confusion, only to come to the conclusion that this is the [bold type]ancient tome[roman type] that you were looking for!";
+	say "     How could you have missed something that was right in front of your eyes? Or was it...? Whatever the case may be, you are now in possession of the tome that will allow you to replicate that ritual... And perhaps a few other things as well. You immediately feel a strange urge to read it...";
+	now Resolution of Hellish Trashpile is 4;
+	ItemGain ancient tome by 1;
 
 [***********************************************************]
 [***********************************************************]
@@ -849,7 +864,7 @@ to say XaedihrTalkSpells:
 		say "[XaedihrSpellsMenu]";
 	else:
 		say "     Xaedihr hasn't learned any spell, yet. Continue to explore with him and perhaps he will learn some along the way.";
-		say "     << Currently he can only learn one spell in the Void Realm, this will be expanded in future updates. Having the 'Kinky' feat is strongly recommended >>";
+		say "     <<Currently he can only learn one spell in the Void Realm, this will be expanded in future updates. Having the 'Kinky' feat is strongly recommended.>>";
 
 to say XaedihrTalkEnchanting:
 	if carried of Null Essence is 0:
@@ -1124,16 +1139,21 @@ to say XaedihrEnchantMenu:
 to say XaedihrEnchantTome:
 	if carried of null essence < 10:
 		say "     Xaedihr frowns at your request, shaking his head. 'Well, I would gladly use them to upgrade my own arsenal, but, you see... you need at least [bold type]ten[roman type] of these null essence things for an enchantment like this. When you have them, then we can do something about it.' With that, you are forced to give up on the idea.";
+	else if strength of Xaedihr > 9:
+		say "     Xaedihr frowns at your request, shaking his head. 'Well, I would gladly use them to upgrade my own arsenal, but, you see... I think the tome just hit its limit...' he shows you his weapon of choice, but there really isn't any visual difference, so you simply trust his word. With that, you are forced to give up on the idea.";
 	else:
 		say "     'Certainly doable. I shall get onto that. Thank you, by the way, I always appreciate gaining some power for myself.' he tells you, as you hand him the ten null essences...";
 		say "     The sorcerer takes the materials to over his corner and proceeds to perform some magical spells that you don't really understand. After a few flashes, ominous sounds and strange flashes of light, the job is complete.";
 		ItemLoss null essence by 10;
 		say "     [bold type]Xaedihr has gotten stronger![roman type][line break]";
 		increase weapon damage of demonologist by 1;
+		increase strength of Xaedihr by 1;
 
 to say XaedihrEnchantAE:
 	if carried of null essence < 10:
 		say "     Xaedihr frowns at your request, shaking his head. 'Well, I could use these items to further augment the Abyssal Edge's damage, but, you see... you need at least [bold type]ten[roman type] of these null essence things for an enchantment like this. When you have them, then we can do something about it.' With that, you are forced to give up on the idea.";
+	else if Resolution of AbyssEdgeEnchantLevel > 29:
+		say "     Xaedihr frowns at your request, shaking his head. 'Well, I could use these items to further augment the Abyssal Edge's damage, but, you see... I think the sword just hit its limit...' There really isn't any visual difference on the abyssal edge, so you simply trust his word. With that, you are forced to give up on the idea.";
 	else:
 		say "     'Certainly doable. I shall get onto that.' he tells you, as you hand him the ten null essences...";
 		WaitLineBreak;

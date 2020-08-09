@@ -12,33 +12,33 @@ to say HellDemon wins:
 		say ""; [dealt with at the source]
 	else:
 		if HP of Player > 0: [player submits]
-[			if gimp mask is equipped and Hellfire Club is not known:
+			if (gimp mask is equipped) and Hellfire Club is not known:
 				say "     Unable to resist such a powerful presence, you immediately submit to the demon's will, his eyes following your movements with great satisfaction as you kneel down in front of him. 'That easy, huh... Master Mogdraz will indeed love you. Now be a good [boygirl] and stay still.' Following his words, you suddenly feel some kind of clothed bag covering your head before you're lifted from the ground into what seems to be the demon's shoulder. You can't see anything, but you know he's carrying you to some place. Each large step he takes only makes you [if player is submissive]more eager[else]more nervous[end if] to know what your next destination will be. But one thing you're certain, is that you're going to meet this Mogdraz person, whoever they might be.";
 				if companion of player is demonologist:
 					say "     You're also wondering why Xaedihr hasn't done anything to rescue you... Is that why you bring powerful companions with you? To see you being carried around - or worse! - by some random demonic creature?! He better be following you...";
 				say "[MogdrazIntro]";
-			else:]
-			say "     Unable to resist such a powerful presence, you immediately submit to the demon's will, his eyes following your movements with great satisfaction, as you kneel down in front of him. 'Finally someone who knows their place. That's a good start, but let's see how much you can handle.' With that said, the hellish creature prepares to use you as he sees fit...";
-			if a random chance of 1 in 2 succeeds:
-				HellDemonBJForced;
-			else if player is male or player is neuter:
-				HellDemonAnalForced;
-			else if player is female:
-				HellDemonPussyForced;
+			else:
+				say "     Unable to resist such a powerful presence, you immediately submit to the demon's will, his eyes following your movements with great satisfaction, as you kneel down in front of him. 'Finally someone who knows their place. That's a good start, but let's see how much you can handle.' With that said, the hellish creature prepares to use you as he sees fit...";
+				if a random chance of 1 in 2 succeeds:
+					HellDemonBJForced;
+				else if player is male or player is neuter:
+					HellDemonAnalForced;
+				else if player is female:
+					HellDemonPussyForced;
 		else: [player loses]
-[			if gimp mask is equipped and Hellfire Club is not known:
+			if gimp mask is equipped and Hellfire Club is not known:
 				say "     Unable to keep fighting the so mighty and powerful demon, you immediately give in to his will, his eyes following your movements with great satisfaction as you're forced to kneel down in front of him. 'Still putting up a fight, huh... Master Mogdraz will indeed love your spirit. Now be a good [boygirl] and stay still.' Following his words, you suddenly feel some kind of clothed bag covering your head before you're lifted from the ground into what seems to be the demon's shoulder. You can't see anything, but you know he's carrying you to some place. Each large step he takes only makes you [if player is submissive]more eager[else]more nervous[end if] to know what your next destination will be. But one thing you're certain, is that you're going to meet this Mogdraz person, whoever they might be.";
 				if companion of player is demonologist:
 					say "     You're also wondering why Xaedihr hasn't done anything to rescue you... Is that why you bring powerful companions with you? To see you being carried around - or worse! - by some random demonic creature?! He better be following you...";
 				say "[MogdrazIntro]";
-			else:]
-			say "     Unable to continue fighting the so mighty and powerful demon, you immediately give in to his will, his eyes following your movements with great satisfaction as you're forced to kneel down in front of him. 'You know how to put up a fight! That left me all boned up... Perfect, I was just thinking about testing your holes.' With that said, the hellish creature prepares to use you as he sees fit...";
-			if a random chance of 1 in 2 succeeds:
-				HellDemonBJForced;
-			else if player is male or player is neuter:
-				HellDemonAnalForced;
-			else if player is female:
-				HellDemonPussyForced;
+			else:
+				say "     Unable to continue fighting the so mighty and powerful demon, you immediately give in to his will, his eyes following your movements with great satisfaction as you're forced to kneel down in front of him. 'You know how to put up a fight! That left me all boned up... Perfect, I was just thinking about testing your holes.' With that said, the hellish creature prepares to use you as he sees fit...";
+				if a random chance of 1 in 2 succeeds:
+					HellDemonBJForced;
+				else if player is male or player is neuter:
+					HellDemonAnalForced;
+				else if player is female:
+					HellDemonPussyForced;
 
 to HellDemonBJForced:
 	project Figure of HellfireDemon_hard_icon;
@@ -333,10 +333,9 @@ to say HellDemon Desc:
 	else: [standard scene]
 		project Figure of HellfireDemon_clothed_icon;
 		say "     Standing in front of you is yet another intimidating creature of Hell. A deep crimson, tall and powerful demon, with large tauric horns on the top of his head, approaches you from the darkness. Your eyes inevitably land on the massive bulge barely contained by a leather jockstrap, jiggling slightly at each step that he takes. On top of that, his athletic body is covered in muscle, with a simple harness around his hairy pectorals, and while he generally looks more human in appearance than the brutish of demons, his dark sharp claws still prove a threat to you. With a grin on his face, he speaks to you:[line break]";
-[		if gimp mask is equipped and Hellfire Club is not known:
-			say "     'A gimp mask? Such depravity... so delicious! [bold type]You'll make a great slave candidate for Master Mogdraz![roman type] Be a good [boygirl] and I'll take you there. Or don't, and I'll drag you with me anyway! He will be very... very pleased to meet you.' With this, the demon lunges himself at you.";]
-		[else ]
-		if BodyName of Player is "Hellfire Demon" and FaceName of Player is "Hellfire Demon": [player looks like a Hellfire Demon]
+		if gimp mask is equipped and Hellfire Club is not known:
+			say "     'A gimp mask? Such depravity... so delicious! [bold type]You'll make a great slave candidate for Master Mogdraz[roman type]! Be a good [boygirl] and I'll take you there. Or don't, and I'll drag you with me anyway! He will be very... very pleased to meet you.' With this, the demon lunges himself at you.";
+		else if BodyName of Player is "Hellfire Demon" and FaceName of Player is "Hellfire Demon": [player looks like a Hellfire Demon]
 			say "     'Fancy meetin' you here! Did you get fucked so much that you became one of us? Should've just asked Master Mogdraz for a joining pass, I'm sure he'd provide you with enough juice... in exchange for your soul. Now be a good lad and do what you're told, or I'll make you.' With this, the demon lunges himself at you.";
 		else:
 			say "     'Oh... Are you lost? Wrong time to be walking this side of the streets... Master needs more slave candidates, I just deliver. Though I'll enjoy testing you first.' With this, the demon lunges himself at you.";
@@ -366,7 +365,7 @@ When Play begins:
 	now desc entry is "[HellDemon Desc]";
 	now face entry is "of a fiery demon with bright yellow eyes and dark sclera, featuring an wide and chiseled jawline, covered in a short black beard, and very short dark hair on the topside of your head, with pointy ears on both sides. Two large and thick taurus-like horns emerge from your forehead, getting thinner towards the tip";
 	now body entry is "that of an athletic bodybuilder, musclebound and solid, offering both strength and neat posture. There's also some body hair on you";
-	now skin entry is "deep red"; [ format as "Your body is covered in (your text) skin"]
+	now skin entry is "deep red"; [ format as "You have (your text) skin"]
 	now tail entry is "You have powerful, rock-hard glutes, with a long demonic tail that swings back and forth behind you, ending in a classic spaded tip"; [ write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]demonic[or]demon[or]infernal[or]bump-ridden[at random]"; [ format as "You have a 'size' (your text) cock ]
 	now face change entry is "you begin to feel your skull reshaping under your skin, becoming wider and more masculine. A strange feeling in your mouth heralds your canine teeth sharpening and becoming longer to give you a rather intimidating smile. Finally a pair of large horns grow out of the top of your forehead, tauric in shape. Even your eyes have changed, to bright yellow irises enveloped by a darkened sclera"; [ format as "Your face feels funny as (your text)." ]
@@ -374,16 +373,16 @@ When Play begins:
 	now skin change entry is "you begin to feel a strange burning sensation. You look down, and realize that your skin color has turned into a deep shade of red"; [ format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "you feel it becoming tighter, powerful, and more fit. This is followed by a strange feeling at the base of your spine, and then there is a very strange, and painful, burning sensation, as if your flesh is boiling and liquefying. The pain lasts for some time, but, when it finally subsides, you can feel your new, long demon tail sway back and forth behind you, equipped with a spaded tip and everything"; [ format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it begins to grow thicker, large bumps sprouting up all across its surface"; [ format as "Your cock feels funny as (your text)." ]
-	now str entry is 20;
+	now str entry is 22;
 	now dex entry is 18;
 	now sta entry is 14;
 	now per entry is 14;
 	now int entry is 12;
 	now cha entry is 13;
 	now sex entry is "Male";
-	now HP entry is 75;
-	now lev entry is 11;
-	now wdam entry is 14;
+	now HP entry is 115;
+	now lev entry is 13;
+	now wdam entry is 21;
 	now area entry is "Red";         [ Case sensitive]
 	now Cock Count entry is 1;               [ number of cocks if sex is 'Male' or 'Both' ]
 	now Cock Length entry is 17;
