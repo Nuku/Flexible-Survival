@@ -130,7 +130,7 @@ instead of conversing the Fancy:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	else if (Thirst of Fancy >= 3 and Thirst of Fancy < 90) or (fancyquest is 0 and Thirst of Fancy is 1) or (fancyquest is 100 and Thirst of Fancy is 1):
 		say "[PonyQuest]";
-	else if (fancyquest >= 2 or (fancyquest is 1 and (Thirst of Fancy >= 90 or Thirst of Fancy is 0))):
+	else if fancyquest >= 2 or (fancyquest is 1 and (Thirst of Fancy >= 90 or Thirst of Fancy is 0)):
 		say "[NightmareQuest]";
 	else if fancyaroused is 1:
 		say "     'It was nice of you to help Daisy and Onyx out with their distraction I must admit,' the white mare says with a soft smile as she looks up at you with a teasing wink. 'One would almost think you wanted to stay around and help me keep this place running smoothly,' Fancy says with a soft smile as she looks around the mare's quarters before returning to eying you speculatively.";
@@ -188,7 +188,7 @@ to say NightmareQuest:
 			say "'Well OK then, but don't wait too long, we won't have many opportunities at this,' Fancy says nervously as she glances around the Stables, before sighing and settling back down to wait for you to be ready.";
 	else if fancyquest is 14:
 		if hellgatherquest is 6:
-			say "'You[']re back! Do you have the ingredients we need and the item?' Fancy asks nervously as soon as you approach her, and lets out a large sigh of relief as you pull out the small pouch with the ingredients you gathered, as well as the small box containing the collar Nermine made for you. 'What a relief, I don't think I could have put up with the stress much longer,' she says with a smile as she takes the pouch with you and quickly heads into one of the rooms in the mares quarter to mix up your next drink. You find yourself smiling at the numerous mares in the area as you wait, enjoying their submissive and aroused responses, and realizing that if you succeed at becoming the Stablemaster, all the mares in the Stables will belong to you... and the stallions too actually now that you think about it. It isn't long however before Fancy returns with your final drink, a rather larger one this time than the other smaller vials, and you raise one of your rather expressive new equine eyebrows at her questioningly. 'You will need all the help you can get, so I had the girls gather as much of the ingredients needed as possible... besides this should be your last dose,' the white mare says with a smile as she holds the cup up for you to drink.";
+			say "'You're back! Do you have the ingredients we need and the item?' Fancy asks nervously as soon as you approach her, and lets out a large sigh of relief as you pull out the small pouch with the ingredients you gathered, as well as the small box containing the collar Nermine made for you. 'What a relief, I don't think I could have put up with the stress much longer,' she says with a smile as she takes the pouch with you and quickly heads into one of the rooms in the mares quarter to mix up your next drink. You find yourself smiling at the numerous mares in the area as you wait, enjoying their submissive and aroused responses, and realizing that if you succeed at becoming the Stablemaster, all the mares in the Stables will belong to you... and the stallions too actually now that you think about it. It isn't long however before Fancy returns with your final drink, a rather larger one this time than the other smaller vials, and you raise one of your rather expressive new equine eyebrows at her questioningly. 'You will need all the help you can get, so I had the girls gather as much of the ingredients needed as possible... besides this should be your last dose,' the white mare says with a smile as she holds the cup up for you to drink.";
 			say "Feeling rather exposed as she obviously expects you to drink the mixture right here and now, you nervously shrug before putting the cup to your lips and draining the contents. The now familiar burning and tingling sensation rushing through your body and filling you with strange energy, even as you can feel your muscles begin to twist and reshape. You groan slightly as your form shifts, the change spreading through your body faster than ever before as your feet shift and change into powerful flame colored hooves, your legs shifting as well into the proper digitigrade stance of a powerful stallion. The feel of your hands shifting and your arms and body becoming far more muscular and equine is actually increasingly amazing, and you let out a loud low whinny of pleasure as you back shifts and lengthens slightly, before the changes begin to eventually settle down. Even your mane and tail seem to blaze brightly now with an almost fiery energy, and your obsidian black hide seems to shimmer and absorb the light as it shines darkly in the well-lit room. You can tell as you look around that your new form is absolutely the pinnacle of equine power and sexuality from the many admiring and lustful looks all the mares in the area are giving you, and you pause for a minute to stretch and show off your new body before turning back to Fancy.";
 			now fancyquest is 15;
 			say "'Wow, you look... amazingly good,' the obviously aroused mare says rather dreamily, before shaking herself slightly and smiling back up at you. 'This could actually work I think, you just need to beat the Stablemaster now, and get the collar on him, I take it Nermine explained what it does?' she says with a smile, her smile stretching into a rather predatory grin for an equine as you nod in agreement. 'Excellent. Now the only hard part left is actually drawing the Stablemaster out, or getting you in to see him. He has been extremely cautious lately, and with good reason obviously.' Fancy smirks slightly as her eyes linger on your new powerful equine form. 'Now we have a plan for that actually, and we have been keeping her nice and ready just in case things worked out,' she says with a gesture at the almost completely changed mare named Daisy. 'You just me know when you are ready to take him on, and we will get you in to see him! What happens then depends on you... though for my sake at least, I hope you win,' Fancy says with a smile as she looks up at you with a mixture of lust and adoration in her eyes.";
@@ -299,7 +299,7 @@ Section 3 - Pony Quest
 to say PonyQuest:
 	if Thirst of Fancy is 1:
 		if fancyquest <= 1:
-			say "     The mare examines the token and scrap of page you had retrieved from the ledger. 'Well, I can tell you what this place is,' she finally says after a long period of silence. 'This is one of the Stables' suppliers of gear, although we hardly buy from them. It's a warehouse in the Red Light District which has fancier stuff - pardon the pun - than what the stallions normally get: latex, silk, that kind of thing. Most of their orders come from the girlier ones, and they don't get nearly as much leeway to spend as the big guys - the Stablemaster likes his henchmen loyal, so in return they get their picks while the rest of us scrounge for scraps.' A hint of resentment creeps into her voice for just a brief moment.";
+			say "     The mare examines the token and scrap of page you had retrieved from the ledger. 'Well, I can tell you what this place is,' she finally says after a long period of silence. 'This is one of the Stables['] suppliers of gear, although we hardly buy from them. It's a warehouse in the Red Light District which has fancier stuff - pardon the pun - than what the stallions normally get: latex, silk, that kind of thing. Most of their orders come from the girlier ones, and they don't get nearly as much leeway to spend as the big guys - the Stablemaster likes his henchmen loyal, so in return they get their picks while the rest of us scrounge for scraps.' A hint of resentment creeps into her voice for just a brief moment.";
 			if fancyquest is 0 and Ignored Memos is resolved:
 				say "     Shaking her head, her muzzle creases into a frown. 'So why did our dear Stablemaster order several crates of gear from them? The normal orders barely fill a single box, and we have more than enough of the regular stuff anyway. Plus he's being very discreet about this - if I hadn't checked this code, I don't think anyone would have known about this order. He's up to something.' She turns to you and narrows her eyes. 'I know what I said before, and I wasn't intending to ask anything of you again... but this is important, and I'm far too busy to do this myself. If you happen to be passing by the warehouse, you can try exchanging this token for whatever this is meant to redeem. If it looks interesting, I'll be grateful if you were to bring it back here.' She doesn't sound particularly hopeful, however, clearly still stung from your earlier rejection.";
 				now Thirst of Fancy is 2;
@@ -538,24 +538,24 @@ the scent of leather duster is "The leather smells vaguely of saddle oil.".
 
 
 
-Section 7 - Ponysuit
+Section 7 - ponysuit
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"Ponysuit"	"A full-body latex catsuit with a pony-shaped hood and hoof-shaped mitts attached, restricting the fingers of the wearer. Comes with a long tail made of synthetic fibre."	10	Ponysuit
+"ponysuit"	"A full-body latex catsuit with a pony-shaped hood and hoof-shaped mitts attached, restricting the fingers of the wearer. Comes with a long tail made of synthetic fibre."	10	ponysuit
 
-Ponysuit is a grab object.
-Ponysuit is equipment.
+ponysuit is a grab object.
+ponysuit is equipment.
 It is not temporary.
-Plural of Ponysuit is false.
-Taur-compatible of Ponysuit is false.
-The size of Ponysuit is 3.
-The AC of Ponysuit is 0.
-The effectiveness of Ponysuit is 0.
-The placement of Ponysuit is "body".
-The descmod of Ponysuit is "Your body is encased in a full-body latex catsuit with an integrated ponyhood and hoof mitts, as well as a long tail swishing from your rear. The hidden wrist-zips on the sleeves ensure you can use your fingers when necessary.".
-The slot of Ponysuit is "body".
-the scent of Ponysuit is "Smells like rubber, and a hint of horse.".
+Plural of ponysuit is false.
+Taur-compatible of ponysuit is false.
+Size of ponysuit is 3.
+AC of ponysuit is 0.
+Effectiveness of ponysuit is 0.
+Placement of ponysuit is "body".
+Descmod of ponysuit is "Your body is encased in a full-body latex catsuit with an integrated ponyhood and hoof mitts, as well as a long tail swishing from your rear. The hidden wrist-zips on the sleeves ensure you can use your fingers when necessary.".
+Slot of ponysuit is "body".
+Scent of ponysuit is "Smells like rubber, and a hint of horse.".
 
 
 
