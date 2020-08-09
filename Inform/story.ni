@@ -6370,6 +6370,7 @@ Include Chance Meetings by Kernog.
 Include Combat Helmet by Nuku Valente.
 Include Control Pills by Hellerhound.
 [Include Disorganization by Kaleem mcintyre.] [Disabled till review]
+Include Diego Events by Vinickus.
 Include Dmitri the Peacock by Aureas Gigas.
 Include Dry Plains Events by Stripes.
 Include Endings by Darthan.
