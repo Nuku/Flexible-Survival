@@ -554,9 +554,10 @@ When Play begins:
 	now Cunt Depth entry is 0;        [ Depth in inches of female sex the infection will attempt to give a player. ]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]         [ Width in inches of female sex the infection will try to give a player. ]
 	now libido entry is 70;
+	now loot entry is "orc cum";      [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0;        [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "orc cum";
-	now lootchance entry is 0;                   [ Percentage chance of dropping loot, from 0-100. ]
 	now TrophyFunction entry is "";
 	now scale entry is 3;                             [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]well-built[at random]";
