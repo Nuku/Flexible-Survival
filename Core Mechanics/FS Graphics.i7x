@@ -445,6 +445,13 @@ Figure of Violet_face_icon is the file "Violet_face.jpg".
 Figure of Voodoo_Gecko_icon is the file "Voodoo_Gecko.jpg".
 Figure of Warrior Chris_clothed_icon is the file "Warrior Chris_clothed.jpg".
 Figure of Warrior Chris_naked_icon is the file "Warrior Chris_naked.jpg".
+Figure of Xaedihr_Full_icon is the file "Xaedihr_Full.jpg".
+Figure of Xaedihr_FullMagic_icon is the file "Xaedihr_FullMagic.jpg".
+Figure of Xaedihr_FullNoRuby_icon is the file "Xaedihr_FullNoRuby.jpg".
+Figure of Xaedihr_Underwear_icon is the file "Xaedihr_Underwear.jpg".
+Figure of Xaedihr_NudeSoft_icon is the file "Xaedihr_NudeSoft.jpg".
+Figure of Xaedihr_NudeHard_icon is the file "Xaedihr_NudeHard.jpg".
+Figure of Xaedihr_Portrait_icon is the file "Xaedihr_Portrait.jpg".
 Figure of Yatur_clothed_icon is the file "Yatur_clothed.jpg".
 Figure of Yatur_naked_icon is the file "Yatur_naked.jpg".
 Figure of Yolanda_icon is the file "Yolanda_ig.jpg".
@@ -1104,6 +1111,13 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Wrestling Wolf hard"	Figure of WrestlingWolf_hard_icon	"Vashaa"	g-White	"normal"
 "Wrestling Wolf clothed"	Figure of WrestlingWolf_clothed_icon	"Vashaa"	g-White	"normal"
 "Wyvern_female"	Figure of Wyvern_female_icon	"Anonymous"	g-white	"normal"
+"Xaedihr_Full"	Figure of Xaedihr_Full_icon	"Gherod"	g-black	"normal"
+"Xaedihr_FullMagic"	Figure of Xaedihr_FullMagic_icon	"Gherod"	g-black	"normal"
+"Xaedihr_FullNoRuby"	Figure of Xaedihr_FullNoRuby_icon	"Gherod"	g-black	"normal"
+"Xaedihr_Underwear"	Figure of Xaedihr_Underwear_icon	"Gherod"	g-black	"normal"
+"Xaedihr_NudeSoft"	Figure of Xaedihr_NudeSoft_icon	"Gherod"	g-black	"normal"
+"Xaedihr_NudeHard"	Figure of Xaedihr_NudeHard_icon	"Gherod"	g-black	"normal"
+"Xaedihr_Portrait"	Figure of Xaedihr_Portrait_icon	"Gherod"	g-black	"normal"
 "Yatur_clothed"	Figure of Yatur_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Yatur_naked"	Figure of Yatur_naked_icon	"Kupo Klein"	g-white	"normal"
 "Yolanda"	Figure of Yolanda_icon	"SandySchreiber"	g-white	"normal"
@@ -1474,6 +1488,7 @@ carry out artistcredits:
 	say "     Urik by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Valerie by Sususmiles @ furaffinity.net[line break]";
 	say "     Violet Headshot by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
+	say "     Xaedihr by Gherod @ https://twitter.com/gherodv ; https://www.instagram.com/gherodv/[line break]";
 	say "     Yatur by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Yolanda by SandySchreiber @ furaffinity.net[line break]";
 	say "     Zigor by AugurMew @ furaffinity.net[line break]";
