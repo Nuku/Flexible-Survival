@@ -6753,18 +6753,6 @@ Include Sugar Glider by AGentlemanCalledB.
 Include Taurus by Defth.
 Include Teddy Bear by Sarokcat.
 Include Tenrec by StripeGuy.
-[
-Include Testcreature1 by Wahn.
-Include Testcreature2 by Wahn.
-Include Testcreature3 by Wahn.
-Include Testcreature4 by Wahn.
-Include Testcreature5 by Wahn.
-Include Testcreature6 by Wahn.
-Include Testcreature7 by Wahn.
-Include Testcreature8 by Wahn.
-Include Testcreature9 by Wahn.
-Include Testcreature10 by Wahn.
-]
 Include Thought Eater by Wahn.
 Include Tiger by Sarokcat.
 Include Tiger Cop by Stripes.
@@ -6791,6 +6779,7 @@ Include Wyvern by Damaged.
 Include Xeno by Stripes.
 Include Yamato Dragon by Blue Bishop.
 Include Yamato Dragoness by Blue Bishop.
+Include Yinglet by KazeSequeris.
 Include Yuppie Mink by StripeGuy.
 Include Zebra by Vervaine.
 
