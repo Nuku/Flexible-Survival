@@ -60,12 +60,13 @@ Carry out breast milking:
 	if there is a name of Searchstring in the Table of Random Critters:
 		choose a row with name of Searchstring in the Table of Random Critters;
 		if MilkItem Entry is not "" and MilkItem Entry is not " ":
+			say "You milk your own breasts, gathering the rich fluid produced in bottles and labeling them.";
 			if MilkVolume is 9 or MilkVolume is greater than 9:
 				let MilkVolume be 8;
 				say "     As you run out of empty bottles, the remaining milk starts streaming down and forms a puddle on the ground.";
 			ItemGain MilkItem Entry by MilkVolume;
 		else: [no milk item exists]
-			say "<Drinking your own milk?>";
+			say "You milk your own breasts, providing relief from their fullness.";
 
 Cock Milking is an action applying to nothing.
 understand "jerkoff" as Cock milking.
@@ -88,8 +89,9 @@ Carry out Cock milking:
 	if there is a name of Searchstring in the Table of Random Critters:
 		choose a row with name of Searchstring in the Table of Random Critters;
 		if CumItem Entry is not "" and CumItem Entry is not " ":
+			say "You jerk off your [cock of player] cock, holding a plastic bottle to catch what semen you produce. After labeling it, you pack it away.";
 			ItemGain CumItem Entry by CumVolume;
 		else: [no cum item exists]
-			say "<Jizzing on the floor?>";
+			say "You jerk off your [cock of player] cock, spraying your seed onto the ground and providing some relief for your aching balls.";
 
 Milking ends here.

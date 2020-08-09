@@ -2971,7 +2971,9 @@ To process (x - a grab object):
 			now healed is ( healed times 105 ) divided by 100;
 		increase HP of Player by healed;
 		if HP of Player > maxHP of Player:
+			decrease healed by HP of Player minus maxHP of Player;
 			now HP of Player is maxHP of Player;
+		say "Drinking your own milk you feel revitalized as a wave of motherly care sweeps through you. You regain [special-style-1][healed][roman type] HP.";
 	else if x is a pepperspray:
 		if inafight is 1:
 			say "[line break][usepepperspray]";
