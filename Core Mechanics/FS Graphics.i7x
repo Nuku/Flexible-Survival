@@ -114,6 +114,8 @@ Figure of Minotaur_naked_icon is the file "Minotaur_naked.jpg".
 Figure of Naga_icon is the file "Naga.jpg".
 Figure of NinjaCat_F_icon is the file "CatNinja_F_ig.jpg".
 Figure of NinjaCat_M_icon is the file "NinjaCat_M_ig.jpg".
+Figure of Orca_hard_icon is the file "Orca_hard.jpg".
+Figure of Orca_clothed_icon is the file "Orca_clothed.jpg".
 Figure of OrcBreeder_random_icon is the file "OrcBreeder.jpg".
 Figure of OrcWarrior_random_icon is the file "OrcWarrior.jpg".
 Figure of PinkGel_icon is the file "PinkGel.jpg".
@@ -975,6 +977,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Ninja Cat"	Figure of NinjaCat_M_icon	""	g-white	"normal"
 "Orbul_clothed"	Figure of Orbul_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Orbul_naked"	Figure of Orbul_naked_icon	"Kupo Klein"	g-white	"normal"
+"Orca clothed"	Figure of Orca_clothed_icon	"Vashaa"	g-white	"normal"
+"Orca hard"	Figure of Orca_hard_icon	"Vashaa"	g-white	"normal"
 "Orc Breeder"	Figure of OrcBreeder_random_icon	"Gene Lightfoot"	g-black	"normal"
 "Orc Brothers_clothed"	Figure of Orc_Brothers_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Orc Brothers_naked"	Figure of Orc_Brothers_naked_icon	"Kupo Klein"	g-white	"normal"
@@ -1279,6 +1283,7 @@ carry out artistcredits:
 	say "     Ninja Cat (female) by Bix707 @ furaffinity.net[line break]";
 	say "     Ninja Cat (male) by <redacted>[line break]";
 	say "     Naga by Rastear @ y-gallery.net[line break]";
+	say "     Orca by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Orc Breeder by Genelightfoot @ y-gallery.net[line break]";
 	say "     Orc Warrior by Genelightfoot @ y-gallery.net[line break]";
 	say "     Pink Gel by Rastear @ y-gallery.net[line break]";

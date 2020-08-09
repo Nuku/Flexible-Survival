@@ -13,6 +13,7 @@ orcafdom is a number that varies.
 Section 1 - Creature Responses
 
 to say orcadesc:
+	project Figure of Orca_clothed_icon;
 	setmongender 3; [creature is male]
 	say "     Looking over the killer whale, his body is covered in the distinctive patterning of an orca on thick, sleek flesh. His head is sleek and streamlined, drawing to a blunt, rounded muzzle. His mouth is filled with small, sharp, dagger-like teeth. The blowhole on the top of his head occasionally opens to take a breath. His body is large and heavily muscled, but with the sleek shape of a swimmer. He stands easily ten feet tall. The large dorsal fin projecting from his back extends nearly a foot behind him in a sharp, knife-like shape. His arms are dense with sleek muscle. His hands have a thick webbing between his fingers. His legs are humanoid in appearance, thick with powerful muscle. His ass is dense with muscle, supporting a thick and very muscular tail that is four feet in length and ends in a whale's flukes. Between his powerful swimmer's legs he has a titanic, sleek and curving cetacean cock. Beneath his impressive maleness is a large bulge, showing his swollen balls. While they would normally be internal on the oceanic creature, their apparent hugeness cannot be fully contained inside him and bulge out considerably.";
 
@@ -20,6 +21,7 @@ to say losetoorca:
 	if inasituation is true:
 		stop the action; [text taken care of at the source]
 	else:
+		project Figure of Orca_hard_icon;
 		if HP of Player > 0:
 			say "     Not wanting to fight, you immediately drop to your knees and let the Killer Whale advance upon you. Grabbing hold of you, you're given a clear view of the beast's long, curving cock as it commences the ritual of relinquishing itself from its beleaguered confines. 'Suck it!' he orders to you in a deep, rumbling command. ";
 		else:
@@ -79,6 +81,7 @@ to say beattheorca:
 	if inasituation is true:
 		stop the action; [text taken care of at the source]
 	else:
+		project Figure of Orca_hard_icon;
 		if ( Libido of Player - humanity of Player > 15 ) and BodyName of Player is "Killer Whale" and player is not neuter:
 			if Player is herm and anallevel > 1:
 				say "     Having beaten your foe, the heat of battle has gotten your blood pumping and your lustful orca instincts come to the fore.";
