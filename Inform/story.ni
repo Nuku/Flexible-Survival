@@ -6818,6 +6818,7 @@ Include Brian by Vinickus.
 Include Brooke by Stripes.
 Include Bryony by Song.
 Include Bubble by Stripes.
+Include Callidora by Prometheus.
 Include Cassiel by Tin Can.
 Include Cynthia by Prometheus.
 Include Campus Gym by UrsaOmega.
