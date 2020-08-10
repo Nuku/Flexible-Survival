@@ -30,29 +30,36 @@ Nullpet	"Nullpet"
 
 Nullpet is a pet. Nullpet is a part of the player;
 
-Dismissing is an action applying to nothing.
+DismissPlayerPet is an action applying to nothing.
+understand "companion dismiss" and "dismiss" as DismissPlayerPet.
+understand "pet dismiss" and "dismiss" as DismissPlayerPet.
 
-understand "pet dismiss" and "dismiss" as dismissing.
-understand "companion dismiss" and "dismiss" as dismissing.
-
-carry out dismissing:
+carry out DismissPlayerPet:
 	if Player is lonely:
 		say "There is no companion around to dismiss.";
 	else:
 		say "[dismissdesc of companion of Player]";
 		now companion of Player is nullpet;
 
-Calling is an action applying to one thing.
+CallPlayerPet is an action applying to one thing.
+understand "companion [tamed pet]" as CallPlayerPet.
+understand "pet [tamed pet]" as CallPlayerPet.
 
-understand "pet [tamed pet]" as calling.
-understand "companion [tamed pet]" as calling.
+carry out CallPlayerPet a pet (called x):
+	if companion of Player is not x:
+		if Player is not lonely:
+			say "[dismissdesc of companion of Player]";
+			LineBreak;
+		now the companion of Player is x;
+		say "[summondesc of x]";
+	else:
+		say "They are already your current companion.";
 
-Petcounting is an action applying to nothing.
+CountPlayerPets is an action applying to nothing.
+understand "companion" or "companions" as CountPlayerPets.
+understand "pet" or "pets" as CountPlayerPets.
 
-understand "pet" or "pets" as petcounting.
-understand "companion" or "companions" as petcounting.
-
-Carry out petcounting:
+Carry out CountPlayerPets:
 	say "Companions: ";
 	let PetList be a list of texts;
 	repeat with Pet running through tamed pets:
@@ -72,16 +79,6 @@ Carry out petcounting:
 	say "[bold type]companion <name>[roman type] - Make the named companion your active one.";
 	say "[bold type]companion dismiss[roman type] - Send away your companion (for now).";
 	say "[link][bold type]companion overview[roman type][end link] - Display a table with the stats of all currently available companions.";
-
-carry out calling a pet (called x):
-	if companion of Player is not x:
-		if Player is not lonely:
-			say "[dismissdesc of companion of Player]";
-			LineBreak;
-		now the companion of Player is x;
-		say "[summondesc of x]";
-	else:
-		say "They are already your current companion.";
 
 Table of PetOverviewList
 Name (text)	Lvl(number)	Dmg(number)	Dex(number)

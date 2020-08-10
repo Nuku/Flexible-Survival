@@ -116,8 +116,6 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 		increase pldodgebonus by dodgebonus of x;
 		increase pldamagebonus by damagebonus of x;
 		increase plfleebonus by fleebonus of x;
-	if weapon object of Player is unwieldy:
-		decrease plhitbonus by the absolute value of ( scalevalue of Player - objsize of weapon object of Player) to the nearest whole number;
 	if weapon object of Player is bo staff or weapon object of Player is wukongStaff:
 		if "Martial Artist" is listed in feats of Player, increase plhitbonus by 1;
 		if "Black Belt" is listed in feats of Player, increase plhitbonus by 1;
@@ -370,9 +368,19 @@ Chapter 2 - Player Attack
 This is the player attack rule:
 	choose row MonsterID from the Table of Random Critters;
 	let currentmonHP be monsterHP;
+	if Debug is at level 10:
+		say "DEBUG: Dex [Dexterity of Player][line break]";
+		say "DEBUG: Lvl [Level of Player][line break]";
+		say "DEBUG: Plhitbonus [plhitbonus][line break]";
 	let the attack bonus be dexterity of Player + ( level of Player * 2 ) + plhitbonus - 10;
+	if Debug is at level 10:
+		say "DEBUG: Attack Bonus (Player) [attack bonus][line break]";
 	let the defense bonus be dex entry + ( lev entry * 2 ) + mondodgebonus - 10;
+	if Debug is at level 10:
+		say "DEBUG: Defense Bonus (Enemy) [defense bonus][line break]";
 	let the combat bonus be attack bonus - defense bonus;
+	if Debug is at level 10:
+		say "DEBUG: Combat Bonus (Player) [Combat bonus][line break]";
 	if ktcockmatch is true:		[That's what you get for thinking with your crotch.]
 		increase Libido of Player by a random number from 0 to 2;
 	if hardmode is true:
@@ -385,6 +393,21 @@ This is the player attack rule:
 			now combat bonus is 19;
 		else if the combat bonus < -22:
 			now combat bonus is -22;
+	[weapon penalty after the capping]
+	if Debug is at level 10:
+		say "DEBUG: Combat Bonus after Capping: [combat bonus][line break]";
+	if weapon object of Player is not Journal:
+		let PenaltyDifference be the absolute value of ( scalevalue of Player - objsize of weapon object of Player) to the nearest whole number;
+		if Debug is at level 10:
+			say "DEBUG: Is Weapon unwieldly? Penalty Difference is - [PenaltyDifference][line break]";
+		if PenaltyDifference is 2:
+			if Debug is at level 10:
+				say "DEBUG: 5 point hit penalty because of ridiculously large weapon.[line break]";
+			decrease combat bonus by 5;
+		else if PenaltyDifference is 1:
+			if Debug is at level 10:
+				say "DEBUG: 2 point hit penalty because of over/undersized weapon.[line break]";
+			decrease combat bonus by 2;
 	let the roll be a random number from 1 to 50;
 	say "You roll 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: ";
 	if the roll plus the combat bonus > 20:

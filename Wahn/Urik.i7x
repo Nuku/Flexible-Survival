@@ -1320,7 +1320,7 @@ instead of navigating Grey Abbey Library while (Urik is in Sitting Area and Play
 	if companion of Player is orc supersized breeder:
 		now companion of Player is nullpet;
 
-after going to Sitting Area while (Urik is in Sitting Area and Loyalty of Urik is 7 or Loyalty of Urik is 8): [post-bird discussion]
+after going to Sitting Area while (Urik is in Sitting Area and (Loyalty of Urik is 7 or Loyalty of Urik is 8)): [post-bird discussion]
 	if debugactive is 1:
 		say "     DEBUG: Post-bird discussion with Urik, Loyalty of Urik: [Loyalty of Urik ], current turn: [turns][line break]";
 	try looking;
@@ -1395,7 +1395,7 @@ instead of navigating Grey Abbey Library while (PlayerFriended of Urik is true a
 	now Loyalty of Urik is 10; [he offered looting trips]
 	now Perception of Urik is 1; [enabled the talk option]
 
-instead of navigating Grey Abbey Library while (Urik is in Sitting Area and Loyalty of Urik > 8 and Loyalty of Urik < 80 and PlayerFriended of Urik is true and "Selective Breeding" is not listed in Traits of Urik and Candy is in Bunker and CandyUrikInteraction < 1 and (lastfuck of Urik - turns > 10)):
+instead of navigating Grey Abbey Library while (Urik is in Sitting Area and Loyalty of Urik > 8 and Loyalty of Urik < 80 and PlayerFriended of Urik is true and "Selective Breeding" is not listed in Traits of Urik and Loyalty of Urik > 8 and Candy is in Bunker and CandyUrikInteraction < 1 and (lastfuck of Urik - turns > 10)):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;

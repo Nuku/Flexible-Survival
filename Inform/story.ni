@@ -546,7 +546,7 @@ Definition: A grab object (called x) is wielded:
 
 Definition: A grab object (called x) is unwieldy:		[applies to armaments only]
 	if grab object is journal, no;
-	if the absolute value of ( scalevalue of Player - objsize of x ) > 1, yes;
+	if (absolute value of ( scalevalue of Player - objsize of x )) > 0, yes;
 	no;
 
 A person can be asleep. A person is usually not asleep.
@@ -1676,9 +1676,30 @@ The player is wearing a watch.
 The player is wearing a backpack. The description of the backpack is "A backpack, full of stuff. To look inside, type [bold type]item[roman type] To look at an item, type [bold type]look (item name)[roman type] To use an item, type [bold type]use (item name)[roman type]. Do you see something in the room you want to take with you? Type [bold type]grab (item name)[roman type] to snatch it up.".
 
 instead of examining a grab object (called x):
-	say "[the desc corresponding to a object of x in the table of game objects]";
+	say "[the desc corresponding to a object of x in the table of game objects][line break]";
 	if "Weaponsmaster" is listed in feats of Player and x is an armament:
 		say "     Looking over the weapon with your expert knowledge, you assess it to be a [weapon damage of x] damage weapon.";
+	if x is an armament:
+		if (ScaleValue of Player - objsize of x) is:
+		-- 4: [4 size categories difference - huge player (5), size 1 weapon]
+			say "     Trying to use this as a weapon is utterly ridiculous, given your size. Don't even try it!";
+		-- 3: [3 categories difference]
+			say "     Trying to use this as a weapon is fairly ridiculous, given your size.";
+		-- 2: [2 categories difference]
+			say "     Trying to use this as a weapon is incredibly difficult, as it is far to small for you to comfortably hold.";
+		-- 1: [1 category difference]
+			say "     Given that it is made for someone smaller than you, this isn't all that easy to use as a weapon.";
+		-- 0: [proper size for the player]
+			say "     This is just the right size for you to wield comfortably.";
+		-- -1: [1 categories difference]
+			say "     A bit big for comfortable use, but with both hands and some effort, you'll manage.";
+		-- -2: [2 categories difference]
+			say "     Trying to use this as a weapon is incredibly difficult, as its sheer size threatens to pull you over.";
+		-- -3: [3 categories difference]
+			say "     Trying to use this as a weapon is fairly ridiculous, given your size.";
+		-- -4: [4 size categories difference - tiny player (1), size 5 weapon]
+			say "     Don't even think about using this in combat! Well, you might hide under its bulk, but that's about it.";
+
 
 Does the player mean examining a situation: it is very unlikely.
 
@@ -8605,7 +8626,7 @@ to playernaming:
 	now name of Player is playerinput;
 
 to say menuwardlist:
-	if CockVoreList is warded or FurryList is warded or MaleList is warded or FemaleList is warded or HumorousList is warded or DemonList is warded or HermList is warded or IncestList is warded or TransList is warded or MindcontrolList is warded or NonconList is warded or VoreList is warded:
+	if CockVoreList is warded or FurryList is warded or MaleList is warded or FemaleList is warded or HumorousList is warded or DemonList is warded or HermList is warded or CuckList is warded or IncestList is warded or TransList is warded or MindcontrolList is warded or NonconList is warded or VoreList is warded:
 		say "[bold type]Warded: [bracket] ";
 		if CockVoreList is warded:
 			say "Cockvore ";
@@ -8625,6 +8646,8 @@ to say menuwardlist:
 			say "Hellspawn ";
 		if TransList is warded:
 			say "Transgender ";
+		if CuckList is warded:
+			say "Cuck ";
 		if IncestList is warded:
 			say "Incest ";
 		if NonconList is warded:
@@ -8638,7 +8661,7 @@ to say menuwardlist:
 		say "[bold type]None Warded[roman type][line break]";
 
 to say menubanlist:
-	if CockVoreList is banned or FurryList is banned or MaleList is banned or FemaleList is banned or HumorousList is banned or DemonList is banned or HermList is banned or IncestList is banned or TransList is banned or MindcontrolList is banned or NonconList is banned or VoreList is banned:
+	if CockVoreList is banned or FurryList is banned or MaleList is banned or FemaleList is banned or HumorousList is banned or DemonList is banned or HermList is banned or CuckList is banned or IncestList is banned or TransList is banned or MindcontrolList is banned or NonconList is banned or VoreList is banned:
 		say "[bold type]Banned: [bracket] ";
 		if CockVoreList is banned:
 			say "Cockvore ";
@@ -8658,6 +8681,8 @@ to say menubanlist:
 			say "Hellspawn ";
 		if TransList is banned:
 			say "Transgender ";
+		if CuckList is banned:
+			say "Cuck ";
 		if IncestList is banned:
 			say "Incest ";
 		if NonconList is banned:

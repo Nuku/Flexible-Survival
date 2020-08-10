@@ -295,7 +295,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 		now HP of Amy is 10;
 	else if HP of Amy is 10:[mature virgin, told the player she's horny]
 		say "     As you enter the library, you see Amy sitting on her mattress, reading one of those romance novels with a pirate and a half-dressed woman on the front. She's slowly rubbing her breasts, moaning silently - which makes you remember her coming to talk to you about losing her virginity. The young husky woman is clearly aching to be fucked - you should probably just follow her invitation and take care of her - sometime soon.";
-	else if hp of Amy > 10:
+	else if HP of Amy > 10 and CuckList is not banned:
 		say "[AmyNPCSexTable]";
 
 to say AmyNPCSexTable:

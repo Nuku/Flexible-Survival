@@ -285,6 +285,9 @@ The Prereq2 of Sloppy Seconds is Jumping The Dobie.
 The Prereq2Resolution of Sloppy Seconds is { 1, 2 }.
 The sarea of Sloppy Seconds is "Red".
 
+when play begins:
+	add Sloppy Seconds to Badspots of CuckList;
+
 Instead of resolving a Sloppy Seconds:
 	say "     Exploring the red light district, you are just strolling along a street and passing some unimpressive houses that likely have long been looted when a scuffle breaks out on the other side of the street. Looks like a herm hyena and a tigress hooker are having a disagreement about the price of her services. The noise soon draws the feline's pimp, who approaches in a combative manner. For a second it looks like the hyena will get fleeced by those two, but then she calls out loudly and two more of her kind step out of a nearby alley. This escalation heralds trouble, you're sure, and since you have better things to do than getting dragged into that, you take the easy way out by stepping into the building right before you through its leaned-to door. Sounds of a fight start just as you close the door behind you.";
 	say "     You check for a back door, but have little luck, so you shrug and decide to check the building out while you wait for situation outside to die down. Sadly, the interior of the building is about what you expected: Run-down apartments with their flimsy furniture mostly smashed by someone who rifled through them. Going from room to room, you find nothing worth even the effort of bending down to pick it up, and eventually end up on the roof of the two story building. There's a little wooden shack built in the back corner of it, a pigeon coop, but even that is just filled with open cages and a whole lot of scattered feathers. You idly wonder if this means that the owner became a pigeon himself, the birds transformed, or something came and ate them. No way to tell really, so eventually you shrug and leave the shack through its crooked door.";

@@ -1,11 +1,5 @@
 Version 2 of Milking by Core Mechanics begins here.
 [ Version 2 - exported from the story.ni and put into its own file]
-[
-Table of Game Objects (continued)
-name	desc	weight	object
-"mothers milk" "Delicious milk made from your own tender breasts" 1  mothers milk
-
-mothers milk is a grab object.]
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -25,13 +19,13 @@ macho milk is a grab object. Understand "milk" as macho milk. macho milk is infe
 [cum/milk object will come from creatures]
 lastmilking is a number that varies. lastmilking is usually 500.
 
-Breast Milking is an action applying to nothing.
-understand "milkme" as breast milking.
-understand "milk me" as breast milking.
-understand "milk myself" as breast milking.
+PlayerBreastMilking is an action applying to nothing.
+understand "milkme" as PlayerBreastMilking.
+understand "milk me" as PlayerBreastMilking.
+understand "milk myself" as PlayerBreastMilking.
 lastBreastMilking is a number that varies. [@Tag:NotSaved] lastBreastMilking is usually 500.
 
-Check breast milking:
+Check PlayerBreastMilking:
 	if Nipple Count of Player is 0:
 		say "You don't appear to have anything worth milking." instead;
 	if Breast Size of Player < 2:
@@ -41,7 +35,7 @@ Check breast milking:
 	else if lastBreastMilking - turns < 3:
 		say "Your breasts have been drained recently. You'll need to wait before another worthwhile milking." instead;
 
-Carry out breast milking:
+Carry out PlayerBreastMilking:
 	let MilkVolume be 0;[calculate depending on breast count and size]
 	if Breast Size of Player < 16:[max milkvolume number is 8 in itemGain of milk]
 		let bottles be 0;
@@ -68,17 +62,18 @@ Carry out breast milking:
 		else: [no milk item exists]
 			say "You milk your own breasts, providing relief from their fullness.";
 
-Cock Milking is an action applying to nothing.
-understand "jerkoff" as Cock milking.
-understand "jerk off" as Cock milking.
+PlayerCockmilking is an action applying to nothing.
+understand "jerkoff" as PlayerCockmilking.
+understand "jerk off" as PlayerCockmilking.
 lastCockMilking is a number that varies. [@Tag:NotSaved] lastCockMilking is usually 500.
 
-check cock milking:
+check PlayerCockmilking:
 	if Cock count of Player is 0:
 		say "You don't appear to have anything worth milking.";
 	if lastCockMilking - turns < 1:
 		say "Your balls have been drained recently. You'll need to wait before another worthwhile milking.";
-Carry out Cock milking:
+
+Carry out PlayerCockmilking:
 	let CumVolume be 0; [calculate depending on ball size]
 	if Ball Size of Player > 1:
 		increase CumVolume by Ball Size of Player - 1;

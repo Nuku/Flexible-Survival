@@ -1293,7 +1293,7 @@ an everyturn rule:
 				now AlexandraGrowingPups is 0; [no pups in her now]
 				now lust of Alexandra is 0;
 				now HP of Alexandra is 4;
-		else if Fang is booked and Alexandra is booked and player is in Grey Abbey Library:
+		else if Fang is booked and Alexandra is booked and player is in Grey Abbey Library and CuckList is not banned:
 			if XP of Alexandra is 0, now XP of Alexandra is turns; [starts counter on any turn (except turn 0, which will start next turn)]
 			if level of Alexandra is 0: [first time]
 				if (lastfuck of Fang - turns >= 8) and (lastfuck of Alexandra - turns >= 6) and (XP of Alexandra - turns >= 16): [horny wolf, horny dobie, last scene 2 days back]

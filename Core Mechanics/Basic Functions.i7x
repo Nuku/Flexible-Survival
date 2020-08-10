@@ -747,20 +747,33 @@ to wield ( x - a grab object ):
 
 to wield ( x - a grab object ) silence state is (Silence - a number):
 	if x is owned and x is an armament:
-		now weapon object of Player is x;
-		now weapon of Player is weapon of x;
-		now weapon damage of Player is weapon damage of x;
-		now weapon type of Player is weapon type of x;
-		if x is ranged:
-			now weapon type of Player is "Ranged";
+		if (ScaleValue of Player - objsize of x) > -3 and (ScaleValue of Player - objsize of x) < 3:
+			now weapon object of Player is x;
+			now weapon of Player is weapon of x;
+			now weapon damage of Player is weapon damage of x;
+			now weapon type of Player is weapon type of x;
+			if x is ranged:
+				now weapon type of Player is "Ranged";
 		if Silence is 0:
-			say "You ready your [x]";
-			if x is unwieldy:
-				if scalevalue of Player > objsize of x:
-					say ". Your [if scalevalue of Player is 3]normal-size[else if scalevalue of Player is 4]large[else]massive[end if] [BodyName of Player] hand dwarfs the [x], making it [if scalevalue of Player - objsize of x > 3]very[else if scalevalue of Player - objsize of x is 3]rather[else]somewhat[end if] [one of]unwieldy[or]awkward[or]difficult[at random] to use accurately";
-				else:
-					say ". Your [if scalevalue of Player is 3]normal-size[else if scalevalue of Player is 2]small[else]tiny[end if] [BodyName of Player] hands are just too small to comfortably grip your [x], making swinging it a [if objsize of x - scalevalue of Player > 3]very[else if objsize of x - scalevalue of Player is 3]quite[else]a little[end if] [one of]unwieldy[or]awkward[or]difficult[at random]";
-			say ".";
+			if (ScaleValue of Player - objsize of x) is:
+			-- 4: [4 size categories difference - huge player (5), size 1 weapon]
+				say "     You try to ready your [x], but there really is no way you could realistically use this in combat!";
+			-- 3: [3 categories difference]
+				say "     You try to ready your [x], but there really is no way you could realistically use this in combat!";
+			-- 2: [2 categories difference]
+				say "     Carefully taking the far too small [x] in one hand, you can't help but ask yourself if this won't hinder more than help in a fight.";
+			-- 1: [1 category difference]
+				say "     You grab the [x] with your comparatively large hand, finding it somewhat uncomfortable to wield.";
+			-- 0: [proper size for the player]
+				say "     You ready your [x].";
+			-- -1: [1 categories difference]
+				say "     You grab your [x] with your comparatively small hand, finding it somewhat uncomfortable to wield.";
+			-- -2: [2 categories difference]
+				say "     Clutching onto your [x] with both hands, you have trouble controlling its momentum. This will be intensely difficult to use.";
+			-- -3: [3 categories difference]
+				say "     Trying to use your [x] as a weapon is fairly ridiculous, given your size.";
+			-- -4: [4 size categories difference - tiny player (1), size 5 weapon]
+				say "     There is simply no way you could use your [x] as a weapon, given your small stature.";
 
 Section 2 - Stripping
 
