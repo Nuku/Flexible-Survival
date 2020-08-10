@@ -120,7 +120,6 @@ carry out PetOverview:
 			say "[PetOverviewName formatted to 20 characters] | [PetOverviewLvl formatted to 3 characters] | [PetOverviewDmg formatted to 3 characters] | [PetOverviewDex formatted to 3 characters] |[line break]";
 		say "[variable letter spacing]";
 
-[
 Table of GameCharacterIDs (continued)
 object	name
 Latex Vixen	"Latex Vixen"
@@ -140,6 +139,5 @@ instead of sniffing the Latex Vixen:
 
 To say Vixattack:
 	say "Not coded yet.";
-]
 
 Pets ends here.
