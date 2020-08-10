@@ -1065,6 +1065,7 @@ to BeastRestore:
 			let BeastType be enemy type entry;
 			[some small bugfixes due to renamed creatures]
 			if Beastname is "Ogre", now Beastname is "Ogre Male";
+			if Beastname is "Elven Hunter", now Beastname is "Elven Male";
 			if Beastname is "Rubber tigress", now Beastname is "Rubber Tigress";
 			if Beastname is "Football Gorilla", now Beastname is "Football Gorilla Male";
 			if there is a Name of BeastName in the Table of Random Critters:
