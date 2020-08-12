@@ -468,7 +468,7 @@ NewGraphicsRatio is a number that varies. NewGraphicsRatio is usually 30.
 NewGraphicsOpened is a truth state that varies. NewGraphicsOpened is usually false. [set to true for entire playthrough if graphics window opened - unless inline/disabled specified at start]
 [For use with new safe restore]
 RestoreMode is a truth state that varies. RestoreMode is usually false.
-CurrentMedkitSupplies is a number that varies.[@Tag:NotSaved] [uses left in the currently open medkit]
+CurrentMedkitSupplies is a number that varies.[@Tag:NotSaved] [uses left in the currently open medkit]CurrentMedkitSupplies is usually 5.
 
 A situation is a kind of thing.
 A situation can be resolved or unresolved. A situation is usually unresolved.
