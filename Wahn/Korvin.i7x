@@ -944,7 +944,7 @@ Object	Name
 Trucker Bar	"Trucker Bar"
 
 Trucker Bar is a situation. Trucker Bar is inactive.
-The sarea of Trucker Bar is "Downtown".
+The sarea of Trucker Bar is "High".
 The PrereqCompanion of Trucker Bar is gshep.
 
 instead of resolving Trucker Bar:
