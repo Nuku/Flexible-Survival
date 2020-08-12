@@ -5,10 +5,11 @@ Version 2 of Pets by Core Mechanics begins here.
 Pet is a kind of person.
 A pet can be tamed. A pet is usually not tamed.
 A pet has text called summondesc.
-A pet has text called dismissdesc. Dismissdesc is usually "You send your companion away.".
+A pet has text called dismissdesc. Dismissdesc is usually "You send your ally away.".
 A pet has a text called assault.
 A pet has a number called lastfight. lastfight is usually 255.
 The player has a pet called companion.
+
 Definition: A person is lonely:
 	if companion of Player is nullpet, yes;
 
@@ -31,18 +32,19 @@ Nullpet	"Nullpet"
 Nullpet is a pet. Nullpet is a part of the player;
 
 DismissPlayerPet is an action applying to nothing.
-understand "companion dismiss" and "dismiss" as DismissPlayerPet.
-understand "pet dismiss" and "dismiss" as DismissPlayerPet.
+understand "ally dismiss" as DismissPlayerPet.
+understand "pet dismiss" as DismissPlayerPet.
+understand "dismiss" as DismissPlayerPet.
 
 carry out DismissPlayerPet:
 	if Player is lonely:
-		say "There is no companion around to dismiss.";
+		say "There is no ally around to dismiss.";
 	else:
 		say "[dismissdesc of companion of Player]";
 		now companion of Player is nullpet;
 
 CallPlayerPet is an action applying to one thing.
-understand "companion [tamed pet]" as CallPlayerPet.
+understand "ally [tamed pet]" as CallPlayerPet.
 understand "pet [tamed pet]" as CallPlayerPet.
 
 carry out CallPlayerPet a pet (called x):
@@ -53,34 +55,34 @@ carry out CallPlayerPet a pet (called x):
 		now the companion of Player is x;
 		say "[summondesc of x]";
 	else:
-		say "They are already your current companion.";
+		say "They are already your current ally.";
 
 CountPlayerPets is an action applying to nothing.
-understand "companion" as CountPlayerPets.
-understand "companions" as CountPlayerPets.
-understand "pet" as CountPlayerPets.
+understand "allies" as CountPlayerPets.
+understand "ally" as CountPlayerPets.
 understand "pets" as CountPlayerPets.
+understand "pet" as CountPlayerPets.
 
 Carry out CountPlayerPets:
-	say "Companions: ";
+	say "Allies: ";
 	let PetList be a list of texts;
 	repeat with Pet running through tamed pets:
 		add Printed Name of Pet to PetList;
 	sort PetList;
 	if hypernull is 0:
 		repeat with Pet running through PetList:
-			say "[link][Pet][as]companion [Pet][end link] ";
+			say "[link][Pet][as]ally [Pet][end link] ";
 		LineBreak;
 	else:
 		say "[PetList]";
 	if companion of Player is nullpet:
-		say "Active Companion: NONE[line break]";
+		say "Active Ally: NONE[line break]";
 	else:
-		say "Active Companion: [companion of Player][line break]";
-	say "Companion COMMANDS:[line break]";
-	say "[bold type]companion <name>[roman type] - Make the named companion your active one.";
-	say "[bold type]companion dismiss[roman type] - Send away your companion (for now).";
-	say "[link][bold type]companion overview[roman type][end link] - Display a table with the stats of all currently available companions.";
+		say "Active Ally: [companion of Player][line break]";
+	say "Ally COMMANDS:[line break]";
+	say "[bold type]ally <name>[roman type] - Make the named ally your active one.";
+	say "[bold type]ally dismiss[roman type] - Send away your ally (for now).";
+	say "[link][bold type]ally overview[roman type][end link] - Display a table with the stats of all currently available allies.";
 
 Table of PetOverviewList
 Name (text)	Lvl(number)	Dmg(number)	Dex(number)
@@ -88,9 +90,10 @@ Name (text)	Lvl(number)	Dmg(number)	Dex(number)
 with 50 blank rows.
 
 PetOverview is an action applying to nothing.
-
+understand "allies overview" as PetOverview.
+understand "ally overview" as PetOverview.
+understand "pets overview" as PetOverview.
 understand "pet overview" as PetOverview.
-understand "companion overview" as PetOverview.
 
 carry out PetOverview:
 	let PetNumber be 0;
@@ -103,7 +106,7 @@ carry out PetOverview:
 		now Dex Entry is Dexterity of Pet;
 		increase PetNumber by 1;
 	if PetNumber is 0:
-		say "You have no companions!";
+		say "You have no allies!";
 	else:
 		sort the Table of PetOverviewList in Name order;
 		let PetOverviewName be "";

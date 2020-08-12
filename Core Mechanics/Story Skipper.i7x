@@ -1144,7 +1144,7 @@ To say ProgressionExport:
 	if Player consents:
 		LineBreak;
 		if Player is not lonely:
-			say "     Preparing to travel to an alternate reality, you send your current companion away to await this in a safe place.";
+			say "     Preparing to travel to an alternate reality, you send your current ally away to await this in a safe place.";
 			try DismissPlayerPet;
 		if wrcursestatus is 5:
 			wrcurserecede; [puts player back to normal form and restores proper stats for saving]
