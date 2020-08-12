@@ -604,9 +604,6 @@ instead of sniffing elven male cum:
 	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
 
 
-
-purple berries
-
 Section 4 - NPC
 
 

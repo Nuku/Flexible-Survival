@@ -1095,7 +1095,7 @@ instead of navigating Red Apartment Building while (companion of player is gshep
 		say "     'I'm sorry too, Ed- no, you call yourself Korvin, right?' she replies, letting out a halting breath as Korvin nods. 'B-be safe out there, both of you.' With those words still in the air, the human woman slips through the door into her apartment and pushes the door shut.' The sound of a lock being turned, a chain rattling, then whatever it is that blocks the door thumping against it, gives the moment an air of finality. You're left standing on the 4th floor of the apartment building, with the comforting presence of your trusted bodyguard by your side. The giant stick insect sharing the room with you doesn't comment, or even move an inch, serving as a quiet witness of what happened. 'So, let's get going then?' Korvin asks you, his tail hanging limply behind his back.";
 		now Resolution of Trucker Bar is 3; [the player talked Korvin into staying with them]
 	wait for any key;
-	now Player is in Red Apartment Building 4th Floor;
+	now Player is in Red Apartment 4th Floor;
 
 [ *** notes ]
 [

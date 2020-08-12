@@ -468,7 +468,7 @@ Scent of handcuff necklace is "Smells like metal.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"mithril necklace"	"A fairly delicate chain made out of silvery metal. Despite its thin appearance, it seems very strong."	0	silver necklace
+"mithril necklace"	"A fairly delicate chain made out of silvery metal. Despite its thin appearance, it seems very strong."	0	mithril necklace
 
 mithril necklace is a grab object.
 mithril necklace is equipment.
