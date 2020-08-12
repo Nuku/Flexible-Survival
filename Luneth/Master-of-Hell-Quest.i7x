@@ -39,6 +39,11 @@ Timing-
 8-12 hours after previous event
 ]
 
+Table of GameCharacterIDs (continued)
+object	name
+Brutus-MoH	"Brutus-MoH"
+Skarnoth-Moh	"Skarnoth-Moh"
+
 Brutus-MoH is a man.
 Skarnoth-Moh is a man.
 

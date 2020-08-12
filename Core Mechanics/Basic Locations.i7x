@@ -529,21 +529,21 @@ to say RedApt1stDesc:
 	say "     The interior lobby of the red apartment building is marked by the typical sights of the nanite apocalypse: Scattered clothes and possessions of people who were overtaken by feral infected, combined with crusty patches of dried cum on the floor, walls and sometimes even ceiling. The fact that the building has fairly large glass doors on two sides seems to have worked against the inhabitants, making them easily visible for passing predators. Several of the doors are marked with claw-slashes and half-torn out of their frames, while others show more calculated destruction. There must have been a crowbar at work for those, likely from looters going for a quick smash and grab. A stairway allows access to the next floor up.";
 
 Red Apartment 2nd Floor is a room.
-Red Apartment 2nd Floor is above of Red Apartment 1st Floor.
+Red Apartment 2nd Floor is above Red Apartment 1st Floor.
 The description of Red Apartment Building 2nd Floor is "[RedApt2ndDesc]".
 
 to say RedApt2ndDesc:
 	say "     The middle section of the red apartment buildingseems to have been a sort of communal area, with a seating area of several sofas, as well as a vending machine. Of course, the latter has been broken into and cleaned out down to the last chocolate bar, and one sofa has been pushed to block the end of the stairway coming up from below. Two other pieces of furniture seem to be missing entirely, with scratchmarks on the linoleum floor allowing a guess that they were dragged into one apartment in the northeast. Glancing around, you see less damage than on the floor below, with only one or two doors having experienced a looter's touch. A stairway on the other side of the room leads further up in the building.";
 
 Red Apartment 3rd Floor is a room.
-Red Apartment 3rd Floor is above of Red Apartment 2nd Floor.
+Red Apartment 3rd Floor is above Red Apartment 2nd Floor.
 The description of Red Apartment Building 3rd Floor is "[RedApt3rdDesc]".
 
 to say RedApt3rdDesc:
 	say "     The middle section of the red apartment building seems to have been a sort of communal area, with formerly neat rows of chairs lined up before a small podium and whiteboard. The typical chaos of the city shows in the fact that several chairs are knocked over or pushed together in untidy clumps, and someone has scrawled lewd, but surprisingly artistic scenes of varied interspecies sex on the whole board. The doors of apartments all around you appear untouched. A stairway on the other side of the room leads further up in the building.";
 
 Red Apartment 4th Floor is a room.
-Red Apartment 4th Floor is above of Red Apartment 3rd Floor.
+Red Apartment 4th Floor is above Red Apartment 3rd Floor.
 The description of Red Apartment Building 4th Floor is "[RedApt4thDesc]".
 
 to say RedApt4thDesc:
@@ -554,7 +554,7 @@ Object	Name
 Red Apartment Rooftop	"Red Apartment Rooftop"
 
 Red Apartment Rooftop is a room.
-Red Apartment is above Red Apartment Building 4th Floor.
+Red Apartment Rooftop is above Red Apartment Building 4th Floor.
 The description of Red Apartment Rooftop is "[RedRoofDesc]";
 
 to say RedRoofDesc:

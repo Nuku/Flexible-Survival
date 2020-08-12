@@ -108,6 +108,18 @@ The objsize of silver knife is 3.
 The hitbonus of silver knife is 1. [magic]
 The scent of the silver knife is "While the silver knife has no strong scent, something about it makes you uneasy whenever you bring it close.".
 
+Table of Game Objects (continued)
+name	desc	weight	object
+"elven knife"	"A light knife made from some sort of silvery metal, with a grip of fine-grained red wood. The one-sided blade on it is exceptionally sharp, while also able to be used for carving. It comes with a supple leather sheath."	1	elven knife
+
+elven knife is an armament. It is not temporary.
+It has a weapon "[one of]the elven knife[or]the silvery knife[or]the sharp blade[or]the straight blade[at random]".
+The weapon damage of elven knife is 7.
+The weapon type of elven knife is "Melee".
+The objsize of elven knife is 3.
+The hitbonus of elven knife is 1. [magic]
+The scent of the elven knife is "The knife smells pretty nice. The handle must be some sort of sandalwood.".
+
 Section 3 - Large Blades
 
 

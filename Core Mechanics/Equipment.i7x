@@ -11,14 +11,15 @@ Version 1 of Equipment by Core Mechanics begins here.
 [Hair Accessory: Hair Slot                                                      ]
 [Glasses: Eye Slot                                                              ]
 [Mask: Face Slot                                                                ]
-[Neckwear: Throat Slot                                                          ]
-[Necklace: Throat Slot                                                          ]
+[Neckwear: Neck Slot                                                            ]
+[Necklace: Neck Slot                                                            ]
 [Jacket: Back Slot                                                              ]
 [Shirt: Chest Slot                                                              ]
 [Bra: Breast Slot                                                               ]
 [Torso Trainers: Stomach Slot                                                   ]
+[Wristbands: Arms Slot                                                          ]
 [Gloves: Hands Slot                                                             ]
-[Rings: Hands Slot                                                              ]
+[Rings: Ring Slot                                                               ]
 [Belt: Waist Slot                                                               ]
 [Pants: Leg Slot                                                                ]
 [Skirt: Leg Slot                                                                ]
@@ -422,9 +423,9 @@ AC of police badge necklace is 0.
 Effectiveness of police badge necklace is 0.
 GA of police badge necklace is 0.
 Traits of police badge necklace is {"authorative"}.
-Placement of police badge necklace is "throat".
+Placement of police badge necklace is "neck".
 Descmod of police badge necklace is "A shining police badge dangles from a chain laid around your neck.".
-Slot of police badge necklace is "throat".
+Slot of police badge necklace is "neck".
 Scent of police badge necklace is "The police badge smells like metal, and cum - as some seems to have seeped into the leather forming the back of the badge. It reminds you where you got the badge, and what the most likely fate of the policeman was who originally owned it.".
 
 Table of Game Objects (continued)
@@ -441,10 +442,67 @@ AC of tooth necklace is 0.
 Effectiveness of tooth necklace is 0.
 GA of tooth necklace is 0.
 Traits of tooth necklace is {"rebellious"}.
-Placement of tooth necklace is "throat".
+Placement of tooth necklace is "neck".
 Descmod of tooth necklace is "A necklace with a number of large teeth - or rather fangs - is laid around your neck.".
-Slot of tooth necklace is "throat".
+Slot of tooth necklace is "neck".
 Scent of tooth necklace is "Smells like leather, and a hint of blood too.".
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"handcuff necklace"	"A single police handcuff on a chain, perfect to be worn around the neck. The metal ring that held the links to its counterpart once has been snapped, apparently by brute force instead of a tool or anything."	0	handcuff necklace
+
+handcuff necklace is a grab object.
+handcuff necklace is equipment.
+It is not temporary.
+Plural of handcuff necklace is false.
+Taur-compatible of handcuff necklace is true.
+Size of handcuff necklace is 0.
+AC of handcuff necklace is 0.
+Effectiveness of handcuff necklace is 0.
+GA of handcuff necklace is 0.
+Traits of handcuff necklace is {"rebellious"}.
+Placement of handcuff necklace is "neck".
+Descmod of handcuff necklace is "A single police handcuff dangles from a chain laid around your neck.".
+Slot of handcuff necklace is "neck".
+Scent of handcuff necklace is "Smells like metal.".
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"mithril necklace"	"A fairly delicate chain made out of silvery metal. Despite its thin appearance, it seems very strong."	0	silver necklace
+
+mithril necklace is a grab object.
+mithril necklace is equipment.
+It is not temporary.
+Plural of mithril necklace is false.
+Taur-compatible of mithril necklace is true.
+Size of mithril necklace is 0.
+AC of mithril necklace is 0.
+Effectiveness of mithril necklace is 0.
+GA of mithril necklace is 0.
+Traits of mithril necklace is {"rebellious"}.
+Placement of mithril necklace is "neck".
+Descmod of mithril necklace is "A delicate silver chain is laid around your neck.".
+Slot of mithril necklace is "neck".
+Scent of mithril necklace is "Smells like metal.".
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"arrowhead pendant"	"An obsidian arrowhead attached to a fairly delicate but nevertheless strong chain of silvery metal. The outside edges have been covered in golden paint, which creates a quite striking 'V' shape of black glass and gold, as well as blunting it just enough so that the wearer won't cut themselves on it."	0	arrowhead pendant
+
+arrowhead pendant is a grab object.
+arrowhead pendant is equipment.
+It is not temporary.
+Plural of arrowhead pendant is false.
+Taur-compatible of arrowhead pendant is true.
+Size of arrowhead pendant is 0.
+AC of arrowhead pendant is 0.
+Effectiveness of arrowhead pendant is 0.
+GA of arrowhead pendant is 0.
+Traits of arrowhead pendant is {"adventurous"}.
+Placement of arrowhead pendant is "neck".
+Descmod of arrowhead pendant is "An obsidian arrowhead with golden edges dangles from a chain laid around your neck.".
+Slot of arrowhead pendant is "neck".
+Scent of arrowhead pendant is "Smells like metal.".
 
 Section 7 - Jackets
 
@@ -712,8 +770,28 @@ GA of zephyr riot arm guards is 0.
 Traits of zephyr riot arm guards is {"authorative"}.
 Placement of zephyr riot arm guards is "body".
 Descmod of zephyr riot arm guards is "A set of jet black arm guards that encase your arms with the zephyr logo on it.".
-Slot of zephyr riot arm guards is "hands".
+Slot of zephyr riot arm guards is "arms".
 Scent of zephyr riot arm guards is "The riot gear smell of metal and plastic.".
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"fur-lined armguards"	"A set of black leather arm guards that cover the forearms of the wearer. They're lined with white fur on the inside and around the ends, giving a soft, warm and protected feeling."	1	fur-lined armguards
+
+fur-lined armguards is a grab object.
+fur-lined armguards is equipment.
+It is not temporary.
+Plural of fur-lined armguards is true.
+Taur-compatible of fur-lined armguards is true.
+Size of fur-lined armguards is 3.
+AC of fur-lined armguards is 20.
+Effectiveness of fur-lined armguards is 60.
+GA of fur-lined armguards is 0.
+Traits of fur-lined armguards is {"adventurous"}.
+Placement of fur-lined armguards is "body".
+Descmod of fur-lined armguards is "A set of black leather arm guards protects your forearms.".
+Slot of fur-lined armguards is "arms".
+Scent of fur-lined armguards is "Smells like leather and fur.".
+
 
 Part 2 - Lab Gloves
 
@@ -735,6 +813,8 @@ Placement of zephyr armored lab gloves is "body".
 Descmod of zephyr armored lab gloves is "A pair of white rubber lab gloves are fitted over your hands with the zephyr logo patched over the back of your hand.".
 Slot of zephyr armored lab gloves is "hands".
 Scent of zephyr armored lab gloves is "The lab gloves smell of chemicals and rubber.".
+
+Part 3 - Tactical Gloves
 
 Table of Game Objects (continued)
 name	desc	weight	object

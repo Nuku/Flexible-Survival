@@ -56,8 +56,10 @@ carry out CallPlayerPet a pet (called x):
 		say "They are already your current companion.";
 
 CountPlayerPets is an action applying to nothing.
-understand "companion" or "companions" as CountPlayerPets.
-understand "pet" or "pets" as CountPlayerPets.
+understand "companion" as CountPlayerPets.
+understand "companions" as CountPlayerPets.
+understand "pet" as CountPlayerPets.
+understand "pets" as CountPlayerPets.
 
 Carry out CountPlayerPets:
 	say "Companions: ";

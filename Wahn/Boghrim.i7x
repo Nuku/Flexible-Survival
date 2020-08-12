@@ -75,6 +75,8 @@ to say BoghrimSlaveDeal:
 
 Section 2 - NPC
 
+[TODO: Trace the HP values to ensure there is no bug]
+
 [ HP of Boghrim                                   ]
 [ 0: never fucked                                 ]
 [ 1: player got fucked                            ]
@@ -636,6 +638,7 @@ to say BoghrimSex3: [fuck him]
 			say "     Waiting some time longer till the last little spurt of your load is deposited deep inside Boghrim's hole, you eventually pull out of the orc with a wet slurp. A small amount of your cum leaks out as your cockhead pops past the muscled brute's pucker, giving a very nice contrast as it starts to slowly run down between his legs. Seeing it fills you with pride, as it is the visible proof that you bested the orc, in a playful and sexualized wrestling match at least. There is even a little string of cum stretching from your slit to the upper edge of his winking pucker - glistening enticingly in the light and drawing the attention of Jason, who's moved up right next to you on the mattress. He licks his lips and asks in a pleading tone, 'May I -' And that is as far as he gets before you grip his neck softly, pulling him down towards your crotch. The eager human catches your dangling little string of cum with his tongue, slurping it up, then gently pushes against your hip so you make room for him to go down on Boghrim and eat your load out of his ass.";
 			WaitLineBreak;
 			say "     'Oooh yeah, stick your tongue in there deep,' the orc boss groans to his favorite slave, raising his own hips a little bit more to allow Jason easier access. As the human is busy lapping your seed from Boghrim's well-bred hole, you wipe the small amount of cum that stuck to your cock off against his naked side, then move towards the edge of the bed and start looking for your clothes. Giving the two of them one last look and seeing Jason busy pleasing his master -as well as licking up and swallowing the 'evidence' of your activities you left behind, you then close the door properly behind you and make your way back down into the drinking hall.";
+			[TODO: Add douching for him to explain why he doesn't get knocked up]
 			if HP of Boghrim < 3:
 				now HP of Boghrim is 3;
 

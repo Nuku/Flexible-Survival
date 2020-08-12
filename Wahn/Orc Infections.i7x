@@ -18,6 +18,8 @@ to say GenerateTrophyList_Orc_Warrior:
 	if a random chance of (30 + LootBonus) in 100 succeeds: [uncommon drop]
 		add "police badge necklace" to CombatTrophyList;
 	else if a random chance of (30 + LootBonus) in 100 succeeds: [uncommon drop; chained, so there's just one necklace]
+		add "handcuff necklace" to CombatTrophyList;
+	else if a random chance of (30 + LootBonus) in 100 succeeds: [uncommon drop; chained, so there's just one necklace]
 		add "tooth necklace" to CombatTrophyList;
 	if a random chance of (30 + LootBonus) in 100 succeeds: [uncommon drop]
 		add "tactical gloves" to CombatTrophyList;
