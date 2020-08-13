@@ -1433,6 +1433,7 @@ to TrophyLootFunction: [generates either a trophy prompt or loot for the player]
 					]
 					now sextablerun is 1;
 					ItemGain title entry by 1;
+					SpecialTrophyCheck title entry;
 					wait for any key;
 				else if calcnumber is 0:
 					now sextablerun is 1;
@@ -1451,6 +1452,11 @@ to TrophyLootFunction: [generates either a trophy prompt or loot for the player]
 		else if randomdropchance > 0:
 			if a random chance of (randomdropchance + LootBonus) in 100 succeeds:
 				ItemGain loot entry by 1;
+
+to SpecialTrophyCheck (TrophyName - text):
+	if TrophyName is:
+	-- "police whistle":
+		add "Whistle_Taken" to Traits of Alexandra;
 
 Section 5 - Critter Combat
 

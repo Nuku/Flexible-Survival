@@ -17,6 +17,23 @@ an everyturn rule: [bugfixing rules for players that import savegames]
 				break;
 		now AlexandraInfectionArea is 1;
 
+to say GenerateTrophyList_Doberman_Cop:
+	[ Reminder: LootBonus can be +35 at maximum - 10 for Magpie Eyes, 15 for Mugger and 10 from Player Perception]
+	if "Whistle_Taken" is not listed in Traits of Alexandra: [special whistle]
+		add "police whistle" to CombatTrophyList;
+	if a random chance of (80 + LootBonus) in 100 succeeds: [common drop]
+		add "doberman bitch fur" to CombatTrophyList;
+	if a random chance of (50 + LootBonus) in 100 succeeds: [common drop]
+		add "food" to CombatTrophyList;
+	if a random chance of (50 + LootBonus) in 100 succeeds: [common drop]
+		add "water bottle" to CombatTrophyList;
+	if a random chance of (30 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "pepper spray" to CombatTrophyList;
+	if a random chance of (30 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "confiscated pills" to CombatTrophyList;
+	if Debug is at level 10:
+		say "DEBUG: Trophy List: [CombatTrophyList].";
+
 Section 1 - Creature Responses		[Note: Combat related portions deal with the Doberwoman Cop.]
 
 dobieresist is a number that varies.
@@ -527,14 +544,15 @@ to say beatthedobie3:			[high-lust cop player victory]
 	say "     ([link]Y[as]y[end link]) - Take her to be your bad dog bitch.";
 	say "     ([link]N[as]n[end link]) - No, drive her off.";
 	if Player consents:
-		say "     Excited at the prospect of having the Doberman cop as your personal slutty bitch, you run your hand over her head and scritch her ears, telling her that she can come with you if she accepts her proper place as your slutty bad dog bitch. She nods and licks at your hand. 'Oh yes, that's what I want. It was foolish of a bad bitch like me to ever try being a cop, boss.' Grinning, you help her up and lead her back to the library.";
+		say "     Excited at the prospect of having the Doberman cop as your personal slutty bitch, you run your hand over her head and scritch her ears, telling her that she can come with you if she accepts her proper place as your slutty bad dog bitch. She nods and licks at your hand. 'Oh yes, that's what I want. It was foolish of a bad bitch like me to ever try being a cop, boss.' Grinning, you lean down and un-pin the police badge she is wearing, putting the metal shield into your pocket. The anthro dog doesn't resist as you do so, showing how completely you've destroyed the woman she once was. With a whistle, you call for her to get up and follow you, smiling in victory all the way to the library.";
 		now HP of Alexandra is 1;
 		now battleground is "void";
 		move Alexandra to Grey Abbey Library;
 		move player to Grey Abbey Library;
 	else:
-		say "     Not wanting to waste any more of your time on the policewoman, you kick her to the ground. 'Why would anyone want to keep a bad bitch like you? Get out of here, you slut. I don't want to see you again.' She slinks away and you can't help but chuckle, darkly pleased at having broken the cop so fully and then just discarding her like trash. You doubt she'll be troubling you any more.";
+		say "     Not wanting to waste any more of your time on the policewoman, you kick her to the ground. Then you call her a slut and tell the bitch that you don't want a lousy street dog like her, fucked by who knows whom. She's just a fucktoy now, not even a real policewoman anymore. To drive this home, you lean down and un-pin the police badge she is wearing, putting the metal shield into your pocket. The anthro dog doesn't resist as you do so, showing how completely you've destroyed the woman she once was. With a cruel snort you wave her away, telling the canine to fuck off. She slinks away in shame and you can't help but chuckle, darkly pleased at having broken the cop and then just discarding her like trash. You doubt she'll be troubling you any more.";
 		now HP of Alexandra is 100;
+	ItemGain alexandra's badge by 1;
 	now area entry is "Nowhere";
 
 
@@ -600,7 +618,7 @@ When Play begins:
 	now lootchance entry is 50; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "[GenerateTrophyList_Doberman_Cop]";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]lithe[or]unrepentantly strong[or]dashing[or]sexy[at random]";
 	now type entry is "canine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -720,11 +738,10 @@ name	desc	weight	object
 
 doberman bitch fur is a grab object.
 the usedesc of doberman bitch fur is "[DobermanBitchFurUse]".
-it is part of the player.
 It is temporary.
 
 to say DobermanBitchFurUse:
-	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	say "     Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
 	setmonster "Doberman Bitch";
 	choose row MonsterID from the Table of Random Critters;
 	now non-infectious entry is false;
@@ -732,7 +749,75 @@ to say DobermanBitchFurUse:
 	now non-infectious entry is true;
 
 instead of sniffing doberman bitch fur:
-	say "The fur has a pleasing, not too strong, animal-like scent.";
+	say "     The fur has a pleasing, not too strong, animal-like scent.";
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"confiscated pills"	"A plastic baggie containing two nondescript pills. It is labeled in neat handwriting, declaring the contents to have been confiscated some days ago."	0	confiscated pills
+
+confiscated pills is a grab object.
+the usedesc of confiscated pills is "[RandomPillsUse]".
+
+to say RandomPillsUse:
+	say "     Opening the baggie and shaking the pills out of it into your palm, you look at them for a second or two, then throw them into your mouth and swallow them. What could go wrong when taking some unidentified pills, right?";
+	let RandomPillEffect be a random number from 1 to 10;
+	if RandomPillEffect is 1:
+		say "     God, what was in those pills? A few minutes after taking them, you start feeling very woozy and your stomach rebels! Stumbling a few steps, you can't hold back the vomit and chuck up the half-dissolved things, as well as anything else you had in your stomach!";
+		PlayerWounded 25;
+	else if RandomPillEffect is 2:
+		say "     A few minutes after taking the pills, you become aware of the fact that you have seven fingers on one of your hands. Raising it to check out all these digits in detail, your hand leaves a wavy, rainbow-colored aftershadow in your area of sight. Whoo - trippy! After the shadow catches up with your hand eventually, you stare at your hand and try to count just how many fingers you have. It is difficult since they kinda wiggle on their own, and even bringing in your other hand to count them one by one is a challenge, as you kinda keep missing and have to start all over again.";
+		SanLoss 25;
+	else if RandomPillEffect > 2 and RandomPillEffect < 6:
+		say "     You actually feel pretty good after taking the pills. Energized, one could almost say.";
+		PlayerHealed 25;
+	else if RandomPillEffect > 5 and RandomPillEffect < 9:
+		say "     Waiting several minutes, it doesn't seem like anything is happening. Were those things duds?";
+	else if RandomPillEffect is 9:
+		say "     A few minutes after taking the pills, you start feeling quite randy. Time to find a fuck, an inner voice seems to say.";
+		LibidoBoost 25;
+	else if RandomPillEffect is 10:
+		say "     Minutes pass after taking the pills, but you don't feel anything special happening. Though then the realization strikes you that any lustful urges you have felt since this whole mess started are quiet for the moment. Whatever was in those things, it cleared your mind exceptionally well!";
+		LibidoReset;
+
+instead of sniffing confiscated pills:
+	say "     You pull open the plastic baggie and sniff at it. Smells fairly chemical, this stuff.";
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"police whistle"	"A cylindrical police whistle made of metal, complete with a few links of chain and a belt clip. It is well-worn and must be fairly old, as police don't regularly carry whistles of any kind these days. Looking more closely, you can barely make out some letters that were stamped into the metal at one end of it. Hard to make out because the metal has rubbed smooth from frequent touch, but you think you can see 'C.H.' on there."	0	police whistle
+
+police whistle is a grab object.
+
+the usedesc of police whistle is "[PoliceWhistleUse]".
+It is not temporary.
+
+to say PoliceWhistleUse:
+	say "     Bringing the whistle up to your mouth, you blow into it and are rewarded by a sharp, shrill sound. This certainly can be heard quite far and might just bring people or creatures to investigate the noise!";
+	if location of player is not sleepsafe and earea of location of Player is not "void" and a random chance of 3 in 10 succeeds:
+		now battleground is earea of location of Player;
+		fight;
+	else:
+		say "     Thankfully, nothing happens (this time).";
+
+instead of sniffing police whistle:
+	say "     The whistle smells like metal.";
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"alexandra's badge"	"A shining police badge, bearing the number 214 at the lower edge. You took it from Alexandra when you finally broke her will completely. As such, it's a nice little trophy to have. Maybe you could add it to a collection of similar items."	0	alexandra's badge
+
+alexandra's badge is a grab object.
+
+the usedesc of alexandra's badge is "[AlexandraBadgeUse]".
+It is not temporary.
+
+to say AlexandraBadgeUse:
+	say "     You play a little with the police badge, tracing its patterns with a fingertip and staring at the shining metal. As a symbol of everything you have done to Alexandra, it makes you feel powerful, aggressive, and just a bit less constrained by concepts of human morality.";
+	SanLoss 10;
+
+instead of sniffing alexandra's badge:
+	say "     The badge smells like metal.";
 
 Section 3 - Alt Combat Rules
 

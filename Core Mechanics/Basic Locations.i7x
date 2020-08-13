@@ -16,6 +16,7 @@ Object	Name
 Bunker	"Bunker"
 
 Bunker is a room. The description of Bunker is "[bunker desc]".
+Bunker is sleepsafe.
 The invent of Bunker is { "face mask", "medkit", "medkit", "water bottle", "water bottle", "water bottle", "food", "food", "pocketknife", "cot" }.
 Library door is a door. "Solid oak doors lend a stately appearance to the library.".
 The Library Door is east of Main & 7th Street.
@@ -84,8 +85,30 @@ after looking while player is in Maintenance Storeroom:
 
 to say bmaintenance desc:
 	project the Figure of Map_Bunker_Storeroom_icon;
-	say "     The maintenance room you have turned into your own private lodgings. Looking around, it isn't very large by any standards, and much of that is filled with cluttered shelving. Along the back wall is a twin size bed that the old janitor probably used to nap during breaks. The walls on the left and right are haphazardly lined with shelves and filing cabinets. There's nothing of any real interest inside of or on top of them, but you may find a use for the extra storage space in time.";
+	if Memento Collection is not in Maintenance Storeroom:
+		say "     The maintenance room you have turned into your own private lodgings. Looking around, it isn't very large by most standards, and much of that is filled with cluttered shelving. Along the back wall is a twin size bed that the old janitor probably used to nap during breaks. The walls on the left and right are haphazardly lined with shelves and filing cabinets. There's nothing of any real interest inside of in or on top of them, but you may find a use for the extra storage space in time. You'd just need to [link]unclutter[end link] it first.";
+	else:
+		say "     You're in the maintenance room you have turned into your own private lodgings. Looking around, it isn't very large by most, but at least it looks a bit more roomy now that you've taken care of the mess that formerly was strewn about. Now the shelving is straightened out and fairly empty, allowing for you to stash some mementos there. Along the back wall is a twin size bed that the old janitor probably used to nap during breaks, now covered in a fresh bedspread at least.";
 
+UnclutterStoreroom is an action applying to nothing.
+understand "unclutter" as UnclutterStoreroom.
+
+Check UnclutterStoreroom:
+	if location of Player is not Maintenance Storeroom:
+		say "You don't see anything you can unclutter here." instead;
+
+Carry out UnclutterStoreroom:
+	say "     Looking around, you dump out an almost empty box of cleaning supplies, filling it with all the loose items in the shelves that you'd never ever need or want to use anyways. That clears up a bunch of space, and after carrying your box outside and putting it down in the back corner of the larger bunker room, you return to the now seemingly more roomy storeroom. The cleaning supplies are old, but still usable, which allows you to clean up a bit too before you add them into the box of stuff outside. Then, with the shelves not loaded as before, you manage to straighten them out, followed by exploring the filing cabinet that was blocked before. In it, you find various items that people must have lost in the library over the years. One of them is a friendly-looking little figurine of an anthro dinosaur, which you place on the shelves with a chuckle. Finally, in a bottom drawer you find a folded bedspread, which you gladly put onto the bed you've claimed as your own.";
+	say "     Taking a deep breath, you look around and can't help but feel good about what you've accomplished. This'll be a much nicer place to stay in now.";
+	SanBoost 10;
+
+
+[
+now Memento Collection is in Maintenance Storeroom;
+
+Memento Collection is a container. Memento Collection is transparent. Memento Collection is not openable. Memento Collection is not lockable. Memento Collection is not enterable.
+The description of Memento Collection is "     You've made room to stash mementos of your time in the city in the shelves here.".
+]
 
 Table of GameRoomIDs (continued)
 Object	Name
