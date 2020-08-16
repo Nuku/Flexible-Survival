@@ -6,6 +6,7 @@ Object	Name
 Captive Breeding	"Captive Breeding"
 
 Captive Breeding is a situation.
+ResolveFunction of Captive Breeding is "[ResolveEvent Captive Breeding]".
 The sarea of Captive Breeding is "Sealed".
 
 when play begins:
@@ -14,7 +15,7 @@ when play begins:
 
 CaptiveBreederEncounter is a number that varies.
 
-Instead of resolving a Captive Breeding:
+to say ResolveEvent Captive Breeding:
 	if a random chance of 1 in 2 succeeds: [impregnated woman]
 		say "     Walking through the dark passages of the expansive underground warren that is the basement of the Trevor Labs, you hear something from up ahead - moaning. [if CaptiveBreederEncounter is 0]Who might that be, down here in the lair of the tentacle beasts? [else]Could that be... another breeding subject of the tentacle monsters? Just how many people did they drag down here? [end if]Warily, you move closer to the source of the noise. Looking into the doorway of a storage room filled with rows of shelves, you find a woman, lying on the ground. Spread-eagled, her forearms and lower legs are stuck to the ground by some kind of substance, looking like solidified slimy goo. She's naked, and her belly bulges massively upwards in obvious pregnancy.";
 		say "     Moving closer, you try talking to her, but the only answers you're getting are more gasps and moans. Judging from some clear goop smeared around her mouth, you'd guess something's been... feeding her, to keep her alive in captivity. Most likely whatever that is is laden with drugs and aphrodisiacs too, with as unfocused her eyes are right now. Your examination is interrupted by a sudden splashing noise and a gasp from the human woman. Looking down, you see a puddle of slime spread between her legs and the skin of her belly ripple with movement under it.";
@@ -160,6 +161,7 @@ Object	Name
 Trashed Refuge	"Trashed Refuge"
 
 Trashed Refuge is a situation.
+ResolveFunction of Trashed Refuge is "[ResolveEvent Trashed Refuge]".
 The sarea of Trashed Refuge is "Sealed".
 
 when play begins:
@@ -173,7 +175,7 @@ when play begins:
 [3 - seen, searched twice]
 [4 - seen, searched three times]
 
-Instead of resolving a Trashed Refuge:
+to say ResolveEvent Trashed Refuge:
 	if Resolution of Trashed Refuge is 0:
 		say "     You come upon a room in the uppermost level of the underground complex that looks like it was used by people seeking refuge from the things going on out in the city. Sadly, that doesn't seem to have worked out for them. Haphazardly strewn about are a number of sleeping bags, ripped articles of clothing and all kinds of other items. Splotches of partly dried white goop all over the chaotic mess hint that one of the creatures down here came by for a visit...";
 		LineBreak;
@@ -254,9 +256,10 @@ Object	Name
 Hidden Sublevel	"Hidden Sublevel"
 
 Hidden Sublevel is a situation.
+ResolveFunction of Hidden Sublevel is "[ResolveEvent Hidden Sublevel]".
 The sarea of Hidden Sublevel is "Sealed".
 
-Instead of resolving a Hidden Sublevel:
+to say ResolveEvent Hidden Sublevel:
 	say "     You come upon a mid-sized room with an elevator, dark and spooky like the rest of the complex under the Trevor Labs. The opposite wall from that elevator looks interesting - seems like a whole section of it was designed to slide away sideways and is currently in that position. Behind where the wall cover would be, there's a thick reinforced door, large enough to require powerful motors to open and close it. Whether this hidden entrance was constructed to keep something out - or in - it's wide open now, and without power to the building, it's stuck for good that way...";
 	now Hidden Sublevel is resolved;
 
@@ -265,10 +268,11 @@ Object	Name
 Failed Experiments	"Failed Experiments"
 
 Failed Experiments is a situation.
+ResolveFunction of Failed Experiments is "[ResolveEvent Failed Experiments]".
 The Prereq1 of Failed Experiments is Hidden Sublevel.
 The sarea of Failed Experiments is "Sealed".
 
-Instead of resolving a Failed Experiments:
+to say ResolveEvent Failed Experiments:
 	say "     In the depths of the hidden section in this underground complex, you find a room with row after row of glass tanks. Small and large, they're filled with formaldehyde in which... things are preserved. From just clumps of tentacles, to animals sprouting too many limbs or even heads, to... deformed creatures which have a dismaying resemblance to humans. Seems like even before the nanite infection, unnatural things were being done in these labs. With a shiver running down your spine, you turn away from the failed experiments and make your way back to the surface, unsuccessfully trying to forget what you saw.";
 	now Failed Experiments is resolved;
 
@@ -277,12 +281,13 @@ Object	Name
 Mindshield Storage	"Mindshield Storage"
 
 Mindshield Storage is a situation.
+ResolveFunction of Mindshield Storage is "[ResolveEvent Mindshield Storage]".
 The Prereq1 of Mindshield Storage is Hidden Sublevel.
 The sarea of Mindshield Storage is "Sealed".
 
 MSStorageVisited is a number that varies. MSStorageVisited usually is 0.
 
-Instead of resolving a Mindshield Storage:
+to say ResolveEvent Mindshield Storage:
 	if MSStorageVisited is 0:
 		say "     In the depths of the hidden section in this underground complex, you find a storage room with rows of shelves. They hold quite a few boxes, all of them with printed labels saying 'Mindshield 2.361'. Opening one up, you see there's a helmet in there, smooth and shiny on the outside, but with a mesh of hexagonal discs covering the inside.";
 		LineBreak;
@@ -333,11 +338,12 @@ Object	Name
 Holding Cell Four	"Holding Cell Four"
 
 Holding Cell Four is a situation.
+ResolveFunction of Holding Cell Four is "[ResolveEvent Holding Cell Four]".
 The Prereq1 of Holding Cell Four is Hidden Sublevel.
 The sarea of Holding Cell Four is "Sealed".
 CellFourVisits is a number that varies.
 
-Instead of resolving a Holding Cell Four:[repeatable event]
+to say ResolveEvent Holding Cell Four:[repeatable event]
 	[
 	if CellFourVisits is 5:
 		say "     In the depths of the hidden section in this underground complex, you come upon a door bearing the sign 'Holding Cell Four - Warning, danger of mental influence - Wear mindshield helmet before entering.' A red light (which must be on emergency power) glows on the wall next to the word 'unlocked'.";

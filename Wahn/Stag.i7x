@@ -13,13 +13,14 @@ Table of GameEventIDs (continued)
 Object	Name
 Dog Walking	"Dog Walking"
 
-Dog Walking is a situation. The level of Dog Walking is 7.
+Dog Walking is a situation.
+ResolveFunction of Dog Walking is "[ResolveEvent Dog Walking]". The level of Dog Walking is 7.
 The sarea of Dog Walking is "Warehouse".
 when play begins:
 	add Dog Walking to BadSpots of MaleList;
 	add Dog Walking to BadSpots of FurryList;
 
-Instead of resolving a Dog Walking:
+to say ResolveEvent Dog Walking:
 	project the Figure of Mike_face_icon;
 	if HP of Mike is 0: [first meeting]
 		say "     Around a building corner in front of you comes a young naked human woman on all fours. As she trots a bit closer and barks at you, you see she's obviously pregnant and has a collar around her neck. Before you can decide if and what to do now, a bipedal stag walks after her around the corner. He's clothed in jeans and hiking boots, with his shirtless upper body revealing he's in good shape. His skin is covered in short brown fur, getting lighter at the belly and sporting a cream-colored treasure trail that starts at his navel and leads down to his crotch. Atop his head is a large rack of antlers, proud and powerful.";
@@ -253,7 +254,7 @@ When Play begins:
 	now lootchance entry is 0;            [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;                 [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "fit";   [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "cervine";          [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -1049,12 +1050,12 @@ to say XerxesSex6: [male player and felinoid + Xerxes]
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Xerxes a hostile stare. Looks like he's not happy that the big cat is getting ass he hasn't had. Not happy at all. Noting the wolf's interest, the big feline snarls and Fang slinks back to his post for the moment. Oh well, the felinoid seems to be able to intimidate your wolf guard, so there probably won't be any issue, you tell yourself as you doze off...";
 			if HP of Xerxes is 12:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Xerxes a hostile stare. Seeing the felinoid fuck someone he had counted as his to mount and breed doesn't make him happy. Not happy at all. The feline clutches Xerxes closer and growls deeply at Fang, sending the wolf slinking back to his post for the moment. Oh well, Klauz seems to be able to intimidate your wolf guard, so there probably won't be any issue, you tell yourself as you doze off...";
-		else if hp of Fang is 3 or hp of Fang is 4: [Alpha Fang]
+		else if HP of Fang is 3 or HP of Fang is 4: [Alpha Fang]
 			if HP of Xerxes is 11:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Xerxes a hostile stare. Looks like he's not happy that the big cat is getting ass he hasn't had. Not happy at all. Oh well, the rivalry between them will likely work itself out sometime in the end, you tell yourself as you doze off...";
 			if HP of Xerxes is 12:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Xerxes a hostile stare. Seeing the felinoid fuck someone he had counted as his to mount and breed doesn't make him happy. Not happy at all. Oh well, the rivalry between them will likely work itself out sometime in the end, you tell yourself as you doze off...";
-		else if hp of Fang is 5:
+		else if HP of Fang is 5:
 			if HP of Xerxes is 11:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Xerxes a hostile stare. Looks like he's not happy that the big cat is bonding with Xerxes before he has had a chance to. Not happy at all. Oh well, the rivalry between them will likely work itself out sometime in the end, you tell yourself as you doze off...";
 			if HP of Xerxes is 12:
@@ -1221,13 +1222,13 @@ to say XerxesSex8: [female player and felinoid + Xerxes]
 				say "     Since they seem busy with each other, you move over to the nearby cot and lie down on it. As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Xerxes a hostile stare. Looks like he's not happy that the big cat is getting ass he hasn't had. Not happy at all. Noting the wolf's interest, the big feline snarls and Fang slinks back to his post for the moment. Oh well, the felinoid seems to be able to intimidate your wolf guard, so there probably won't be any issue, you tell yourself as you doze off...";
 			if HP of Xerxes is 12:
 				say "     Since they seem busy with each other, you move over to the nearby cot and lie down on it. As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Xerxes a hostile stare. Seeing the felinoid fuck someone he had counted as his to mount and breed doesn't make him happy. Not happy at all. The feline clutches Xerxes closer and growls deeply at Fang, sending the wolf slinking back to his post for the moment. Oh well, Klauz seems to be able to intimidate your wolf guard, so there probably won't be any issue, you tell yourself as you doze off...";
-		else if hp of Fang is 3 or hp of Fang is 4: [Alpha Fang]
+		else if HP of Fang is 3 or HP of Fang is 4: [Alpha Fang]
 			if HP of Xerxes is 11:
 				say "     Since they seem busy with each other, you move over to the nearby cot and lie down on it. As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Xerxes a hostile stare. Looks like he's not happy that the big cat is getting ass he hasn't had. Not happy at all. Oh well, the rivalry between them will likely work itself out sometime in the end, you tell yourself as you doze off...";
 			if HP of Xerxes is 12:
 				say "     Since they seem busy with each other, you move over to the nearby cot and lie down on it. As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Xerxes a hostile stare. Seeing the felinoid fuck someone he had counted as his to mount and breed doesn't make him happy. Not happy at all. Oh well, the rivalry between them will likely work itself out sometime in the end, you tell yourself as you doze off...";
-		else if hp of Fang is 5:
-			if hp of Xerxes is 11:
+		else if HP of Fang is 5:
+			if HP of Xerxes is 11:
 				say "     Since they seem busy with each other, you move over to the nearby cot and lie down on it. As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Xerxes a hostile stare. Looks like he's not happy that the big cat is bonding with Xerxes before he has had a chance to. Not happy at all. Oh well, the rivalry between them will likely work itself out sometime in the end, you tell yourself as you doze off...";
 			if HP of Xerxes is 12:
 				say "     Since they seem busy with each other, you move over to the nearby cot and lie down on it. As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Xerxes a hostile stare. Seeing the felinoid fuck someone he had counted as his packmate doesn't make him happy. Not happy at all. Oh well, the rivalry between them will likely work itself out sometime in the end, you tell yourself as you doze off...";
@@ -1827,7 +1828,7 @@ to say HelenSex4: [Player fucks the felinoid as he shafts Helen]
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Helen a hostile stare. Looks like he's not happy that the big cat is getting pussy he hasn't had. Not happy at all. Noting the wolf's interest, the big feline snarls and Fang slinks back to his post for the moment. Oh well, the felinoid seems to be able to intimidate your wolf guard, so there probably won't be any issue, you tell yourself as you doze off...";
 			if HP of Helen is 12:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Helen a hostile stare. Seeing the felinoid fuck someone he had counted as his to mount and breed doesn't make him happy. Not happy at all. The feline clutches Helen closer and growls deeply at Fang, sending the wolf slinking back to his post for the moment. Oh well, Klauz seems to be able to intimidate your wolf guard, so there probably won't be any issue, you tell yourself as you doze off...";
-		else if hp of Fang is 3 or hp of Fang is 4: [Alpha Fang]
+		else if HP of Fang is 3 or HP of Fang is 4: [Alpha Fang]
 			if HP of Helen is 11:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Helen a hostile stare. Looks like he's not happy that the big cat is getting pussy he hasn't had. Not happy at all. Oh well, the rivalry between them will likely work itself out sometime in the end, you tell yourself as you doze off...";
 			if HP of Helen is 12:
@@ -1994,7 +1995,7 @@ to say HelenSex6: [female player and felinoid + Helen]
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Helen a hostile stare. Looks like he's not happy that the big cat is getting pussy he hasn't had. Not happy at all. Noting the wolf's interest, the big feline snarls and Fang slinks back to his post for the moment. Oh well, the felinoid seems to be able to intimidate your wolf guard, so there probably won't be any issue, you tell yourself as you doze off...";
 			if HP of Helen is 12:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Helen a hostile stare. Seeing the felinoid fuck someone he had counted as his to mount and breed doesn't make him happy. Not happy at all. The feline clutches Helen closer and growls deeply at Fang, sending the wolf slinking back to his post for the moment. Oh well, Klauz seems to be able to intimidate your wolf guard, so there probably won't be any issue, you tell yourself as you doze off...";
-		else if hp of Fang is 3 or hp of Fang is 4: [Alpha Fang]
+		else if HP of Fang is 3 or HP of Fang is 4: [Alpha Fang]
 			if HP of Helen is 11:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Helen a hostile stare. Looks like he's not happy that the big cat is getting pussy he hasn't had. Not happy at all. Oh well, the rivalry between them will likely work itself out sometime in the end, you tell yourself as you doze off...";
 			if HP of Helen is 12:

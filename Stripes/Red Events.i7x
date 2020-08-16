@@ -15,9 +15,10 @@ Object	Name
 Fetish Store	"Fetish Store"
 
 Fetish Store is a situation.
+ResolveFunction of Fetish Store is "[ResolveEvent Fetish Store]".
 The sarea of Fetish Store is "Red".
 
-Instead of resolving a Fetish Store:
+to say ResolveEvent Fetish Store:
 	if Resolution of Fetish Store is 0:
 		say "     While wandering the streets of Red Light District, you come across a gloomy alleyway, which looks somewhat forgotten like the rest of the area. As you take a few steps into the alley, shards of glass from the shattered shop windows crack beneath your feet. It looks like most of the buildings around you have been thoroughly ransacked, but one place still draws your interest with a darkened neon sign reading 'Fetish Store' just above the windows. It used to have mannequins to show the sexy gear on sale, but you can clearly see these no longer occupy their due place, being instead left on the floor in a pitiful state among other types of shop furniture.";
 		say "     There doesn't seem to be anyone around, if the disturbing silence wasn't evident enough. Nonetheless, you could find something of value, or even entertaining, in this kinky emporium, if you chose to search it. You do need to be careful with any traces of sloppy fun some past visitors may have already had with the contents inside, as of course, you know better than to hope that didn't happen already. The faint smell of sex fluids already reaching your nostrils would prove you wrong.";
@@ -319,13 +320,14 @@ Table of GameEventIDs (continued)
 Object	Name
 Raided Corner Store	"Raided Corner Store"
 
-Raided Corner Store is a situation. The level of Raided Corner Store is 3.
+Raided Corner Store is a situation.
+ResolveFunction of Raided Corner Store is "[ResolveEvent Raided Corner Store]". The level of Raided Corner Store is 3.
 The sarea of Raided Corner Store is "Red".
 when play begins:
 	add Raided Corner Store to badspots of HermList;
 	add Raided Corner Store to BadSpots of FurryList;
 
-Instead of resolving a Raided Corner Store:
+to say ResolveEvent Raided Corner Store:
 	say "     You come across a small corner store. While it has been raided, you can see that it's not been as badly damaged as others and may still hold something of interest. You slip inside and glance around, but the shelves, coolers and displays have been emptied of anything useful. The cash register is empty as well. You head to check the back and find that the entrance to the back is locked. Perhaps there is something worthwhile in there. You start by knocking as asking if anyone's still safe in there, but get no response.";
 	say "     [bold type]Do you try to break in?[roman type][line break]";
 	LineBreak;
@@ -365,13 +367,14 @@ Table of GameEventIDs (continued)
 Object	Name
 Flooded Street	"Flooded Street"
 
-Flooded Street is a situation. The level of Flooded Street is 3.
+Flooded Street is a situation.
+ResolveFunction of Flooded Street is "[ResolveEvent Flooded Street]". The level of Flooded Street is 3.
 The sarea of Flooded Street is "Red".
 when play begins:
 	add Flooded Street to BadSpots of MaleList;
 	add Flooded Street to badspots of HumorousList;
 
-Instead of resolving a Flooded Street:
+to say ResolveEvent Flooded Street:
 	say "     You come across a small lake of cum blocking your path. This section of street is literally flooded with cum. Wading through the musky pond are several of those giant walking cocks. At the far side of the cum flood, a pair of them are pleasuring one another, releasing more spurts into the sea of semen. You certainly cannot cross here and expect to remain intact and so start to back away slowly.";
 	WaitLineBreak;
 	if a random chance of 1 in 3 succeeds:
@@ -395,13 +398,14 @@ Object	Name
 Strip Bar	"Strip Bar"
 
 Strip Bar is a situation.
+ResolveFunction of Strip Bar is "[ResolveEvent Strip Bar]".
 The sarea of Strip Bar is "Red".
 stripbarcounter is a number that varies.
 when play begins:
 	add Strip Bar to badspots of HermList;
 	add Strip Bar to BadSpots of FurryList;
 
-Instead of resolving a Strip Bar:
+to say ResolveEvent Strip Bar:
 	if stripbarcounter is 1:
 		say "     After a few hours of fruitless searching among the besieged city, you come across another strip bar that's in fairly good shape. You see no obvious signs of trouble and after the last few hours of getting nowhere, you consider searching inside.";
 		say "     [bold type]Do you enter?[roman type][line break]";
@@ -484,6 +488,7 @@ Object	Name
 Evangelist	"Evangelist"
 
 Evangelist is a situation.
+ResolveFunction of Evangelist is "[ResolveEvent Evangelist]".
 The sarea of Evangelist is "Red".
 when play begins:
 	add Evangelist to BadSpots of FemaleList;
@@ -492,7 +497,7 @@ when play begins:
 	add Evangelist to BadSpots of FurryList;
 	add Evangelist to badspots of HumorousList;
 
-Instead of resolving a Evangelist:
+to say ResolveEvent Evangelist:
 	say "     While trying to cross between stopped cars at a large intersection, you are stopped by the sound of someone climbing onto a car. Still hunkered down, you see an unchanged human. Unshaven for several days and dressed in dirty clothes, he smells strongly of alcohol. He is wild-eyed and waves a bible around as he start yelling at no one. He goes on incoherently about sinners, Babylon, bedding down with animals, damnation and so forth. You try to calm him down, but he will have none of it. Clearly overwrought by witnessing the transforming populous from his hiding spot, he's gone off the deep end. From some of his rambling, you gather he's always been upset by the lascivious nature of the neighborhood around his home.";
 	say "     Before you can get him to be quiet long enough to talk, it's too late. Drawn by the ruckus, the nearby monsters have taken notice and approach the intersection from all sides. Seeing an unchanged human, they go ballistic and charge forward. With you between them, you are forced to struggle against the maddened tide of lustful monsters.";
 	if a random chance of 1 in 3 succeeds, now battleground is "Outside";
@@ -589,11 +594,12 @@ Object	Name
 Business as Usual	"Business as Usual"
 
 Business as Usual is a situation.
+ResolveFunction of Business as Usual is "[ResolveEvent Business as Usual]".
 The sarea of Business as Usual is "Red".
 when play begins:
 	add Business as Usual to BadSpots of FurryList;
 
-Instead of resolving a Business as Usual:
+to say ResolveEvent Business as Usual:
 	say "     You spot a gray mouse person a few buildings away. He's wearing a blue t-shirt and shorts and is carrying a small backpack in one hand. Despite their small size, barely over four feet tall, you take cover to observe him for a moment, trying to decide what to do. He darts intently across the street, stopping short of a tigress who steps from a nearby alleyway.";
 	say "     The tigress is much taller than him and wearing a skimpy outfit that shows off her shapely body. She has a pink half-shirt that barely holds in her large bosom. She has a fishnet undershirt that covers her tight belly and has a cheap, leather skirt around her waist. Her red hair is tied into a ponytail by a small bow. She has another similar bow at the end of her tail.";
 	say "     The mouse stands there nervously for a while, shifting from one foot to another, while she is at ease, almost as if bored by the discussion. Finally, she grows weary of a conversation she's probably had many times before and waves for him to give her the bag's contents. He smiles and pulls out a two-liter carton of milk and the tigress's eyes almost light up. She takes it and rushes him into the alley, paws roaming over his body. It seems that even in these strange times, the world's oldest profession lives on.";
@@ -609,11 +615,12 @@ Object	Name
 Kink Warehouse	"Kink Warehouse"
 
 Kink Warehouse is a situation.
+ResolveFunction of Kink Warehouse is "[ResolveEvent Kink Warehouse]".
 The sarea of Kink Warehouse is "Red".
 when play begins:
 	add Kink Warehouse to BadSpots of FurryList;
 
-Instead of resolving a Kink Warehouse:
+to say ResolveEvent Kink Warehouse:
 	if Thirst of Fancy is 2 or Thirst of Fancy is 3 or Thirst of Fancy is 99:
 		if Resolution of Transformationledger is 1:
 			say "     As you approach the warehouse at the coordinates Fancy gave you, you notice a large horseman loitering outside the main entrance, looking displeased and utterly bored. The brand on his arm marks him as one of the Stablemaster's goons, almost certainly dispatched to intercept you. He doesn't seem to have noticed you, so you have the opportunity to try and sneak past him instead of engaging him directly.";

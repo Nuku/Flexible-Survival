@@ -9,6 +9,7 @@ Object	Name
 Refueling	"Refueling"
 
 Refueling is a situation.
+ResolveFunction of Refueling is "[ResolveEvent Refueling]".
 The Prereq1 of Refueling is Avian Tent.
 The Prereq1Resolution of Refueling is { 1, 2 }.
 The sarea of Refueling is "Forest";
@@ -17,7 +18,7 @@ when play begins:
 	add Refueling to BadSpots of MaleList;
 	add Refueling to BadSpots of FemaleList;
 
-Instead of resolving a Refueling:
+to say ResolveEvent Refueling:
 	say "     As you travel down a dusty path through the forest you come across the ruins of an aged dollar store, the outside looks thoroughly ransacked with shards of glass from broken car windshields and shredded cardboard lies strewn all around park. Some plastic bags flutter listlessly about in the wind. A massive eighteen-wheeler in the back that has been flipped on side by a large redwood and two elms. One of back doors is open, indicating that the truck was being unloaded when P-Day started. Hoping to find some useful you peek inside to see a variety of boxes that have been shredded to bits. Based on the bite and scratch marks it would seem like a pack of wolves found cargo before you. The few boxes that seem relatively untouched contain items like laundry detergent, brooms, and paper towels. Makes sense that the feral beasts would ignore those remnants of society no longer useful in this post-apocalyptic environment. With the truck a scavenging bust you venture in the back area of the store hoping to have more luck inside the storage room in back of the store.";
 	say "     The faintly rusted hinges creak as you open the heavy metal door. Interestingly the storage room seems relatively untouched. Looks like the wolves weren't able to find a way inside this room. You prop open the door with a box of detergent and begin searching inside the storeroom. To your disappointment, the backroom seems relatively bereft of supplies, with only items like toys, electronic fans, and some cleaning products remaining. Unfortunately, it looks like you came here too late, and some other somewhat sane scavengers found and looted the place before you came in in. With the way the world is now, it makes sense that all the places known to have tons of supplies sitting out would be some of the first targets to get looted. As you walk by the door to the storefront, you hear some grunts and moans coming from the other side of the door. It seems like you are not the only one inside the store!";
 	WaitLineBreak;
@@ -55,11 +56,12 @@ Object	Name
 Jetlagged	"Jetlagged"
 
 Jetlagged is a situation.
+ResolveFunction of Jetlagged is "[ResolveEvent Jetlagged]".
 The Prereq1 of Jetlagged is Refueling.
 The Prereq1Resolution of Jetlagged is { 1, 2 }.
 The sarea of Jetlagged is "Forest".
 
-Instead of resolving a Jetlagged:
+to say ResolveEvent Jetlagged:
 	now battleground is "void"; [prevents a random fight, as these are replacement random fights]
 	say "     While traveling through the woods you decide to check on the small settlement where Izzy, Gray, and Ace are located. Walking down the trail leading to the campsite, you notice that the path seems wider and much more well-worn than before. The variety of hoofed, clawed, and taloned footprints in the mud, highlight the variety of foot-traffic that has traveled towards your destination. As you approach a curve in the footpath caused by a massive redwood, you hear variety of clangs, chatter, and flapping of fabric with the wind. The sleepy campsite has surely grown. As you get your first sight of the campgrounds, you notice that the ramshackle makeshift defenses made from bits of wood and scrap metal have been replaced with some proper wooden barriers. You can even see a metal shipping container in the northern section of the camp.";
 	say "     As you gaze upon the changed settlement, a person blurts out, '[']Scuze me. Coming through.' When you move to one side of the trail, you see a white anthro bull who seems vaguely familiar walk past you. Following shortly behind is a portly anthro warthog. Both are wearing large hiking packs. Various items inside clank with every step taken. The shorter porcine fellow inquires, 'Marsden, where are you headed?' The bovine replies, 'Argos Antiques. One of the settlers here found some antique jewelry.' With a wary look in his eyes, the warthog asks, 'Are sure that's a good idea? That Dmitri fellow seems sorta fishy to me.' Giving a flippant shrug, Marsden answers, 'Can't make a profit without taking some risks. Besides, I'm one of his best contacts. That peacock rarely ventures from the high rise district.' From what you can surmise, the pair are traders, some of the few sane people bold enough to venture through the unsafe areas of the city. While the two are out of earshot, you move towards the changed town.";

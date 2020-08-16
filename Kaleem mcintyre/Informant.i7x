@@ -6,7 +6,8 @@ Table of GameEventIDs (continued)
 Object	Name
 Informant	"Informant"
 
-Informant is a situation. The level of Informant is 9.
+Informant is a situation.
+ResolveFunction of Informant is "[ResolveEvent Informant]". The level of Informant is 9.
 
 The sarea of Informant is "High".
 smf is a number that varies.
@@ -14,7 +15,7 @@ when play begins:
 	add Informant to BadSpots of FurryList;
 	add Informant to BadSpots of MaleList;
 
-Instead of resolving a Informant:
+to say ResolveEvent Informant:
 	if smf is 0:
 		say "     Walking through the high rise district, you find yourself bumping into a man clad in a black hoodie. 'Sorry about that fella.' The man apologizes and then steps around you to go about his way. Not thinking anything of the accidental bump, you nod to the retreating back of the other person and then go about your way.";
 	if smf is 1:

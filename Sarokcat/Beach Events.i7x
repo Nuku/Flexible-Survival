@@ -9,9 +9,10 @@ Object	Name
 Beach Bum	"Beach Bum"
 
 Beach Bum is a situation.
+ResolveFunction of Beach Bum is "[ResolveEvent Beach Bum]".
 The sarea of Beach Bum is "Beach".
 
-Instead of resolving a Beach Bum:
+to say ResolveEvent Beach Bum:
 	if Resolution of Beach Bum is 0:
 		say "     Traveling along the rough beach, you hear a voice call out to you from nearby, turning you see what seems to be a rough figure sitting outside a small tent on the edge of the beach. The tent is surrounded by what seems to be a large pile of junk, partially covered in sand, and the figure itself is so covered in rags and a multitude of various different pieces of clothing that its true form is impossible to determine.";
 		say "     The strange person calls out to you again, and against your better judgment you move a bit closer, until a normal conversation is possible. In a raspy, hard to understand voice, the figure explains that they live here, scavenging useful items from the beach and trading for food and other items. Apparently the scavenging has been good lately, with all sorts of strange and unusual items washed up along the beach. Unfortunately, the people he usually deals with for food have all pretty much become too changed to deal with, and he was wondering if you would be willing to take their place doing some trading for him.";
@@ -66,15 +67,17 @@ Section 2 - Flotsam bits
 
 Table of GameEventIDs (continued)
 Object	Name
-Flotsam bits	"Flotsam bits"
+Flotsam Bits	"Flotsam bits"
+Flotsam Bits	"Flotsam Bits"
 
-Flotsam bits is a situation.
-The sarea of Flotsam bits is "Beach".
+Flotsam Bits is a situation.
+ResolveFunction of Flotsam Bits is "[ResolveEvent Flotsam Bits]".
+The sarea of Flotsam Bits is "Beach".
 
-Instead of resolving a Flotsam bits:
+to say ResolveEvent Flotsam Bits:
 	say "     Wandering along the beach, you spy a small pile of flotsam washed up on the beach. Approaching cautiously, everything seems safe enough, so you spend a moment searching through the detritus. The only thing of use that you turn up is a sea hardened bit of wood that could possibly serve as a giant club. It is a large log of driftwood with several branch stubs protruding from it. A couple are placed such that you could swing it like a massive club or battering ram. Despite its time in the salt water, the wood is unusually hard, reminding you of the giant tree creatures you've spotted in the city. Shrugging, you take the bit of wood with you and continue along the beach.";
 	ItemGain flotsam club by 1;
-	now Flotsam bits is resolved;
+	now Flotsam Bits is resolved;
 
 [flotsam club moved to Core Mechanics/Weapons.i7x]
 
@@ -83,100 +86,112 @@ Section 3 - Strange tide
 
 Table of GameEventIDs (continued)
 Object	Name
-Strange tide	"Strange tide"
+Strange Tide	"Strange tide"
+Strange Tide	"Strange Tide"
 
-Strange tide is a situation.
-The sarea of Strange tide is "Beach".
+Strange Tide is a situation.
+ResolveFunction of Strange Tide is "[ResolveEvent Strange Tide]".
+The sarea of Strange Tide is "Beach".
 
-Instead of resolving a Strange tide:
+to say ResolveEvent Strange Tide:
 	say "     Walking along the beach, you notice a strange roiling of the tide. Not far out in the water, pausing to look for a minute, it seems almost as if the tide is being disturbed from below. Closer inspection reveals that you can almost see something large moving around down there, or perhaps several somethings moving together. Realizing how vigorously whatever is down there must be moving, you decide to continue on your way before it notices you.";
-	now Strange tide is resolved;
+	now Strange Tide is resolved;
 
 
 Section 4 - Strange wave
 
 Table of GameEventIDs (continued)
 Object	Name
-Strange wave	"Strange wave"
+Strange Wave	"Strange wave"
+Strange Wave	"Strange Wave"
 
-Strange wave is a situation.
-The sarea of Strange wave is "Beach".
+Strange Wave is a situation.
+ResolveFunction of Strange Wave is "[ResolveEvent Strange Wave]".
+The sarea of Strange Wave is "Beach".
 when play begins:
-	add Strange wave to BadSpots of FemaleList;
-	add Strange wave to BadSpots of FurryList;
+	add Strange Wave to BadSpots of FemaleList;
+	add Strange Wave to BadSpots of FurryList;
 
-Instead of resolving a Strange wave:
+to say ResolveEvent Strange Wave:
 	say "     Walking along the beach, you hear a strange noise all of a sudden, almost like a loud groan, causing you to look towards the water. You are shocked to note that there is a large wave of water coming towards you from the beach, and due to the sheer surprise, you almost don't get out of the way in time. Still a decent amount of the water splashes you as it slams into the beach, causing you to wonder just what happened as you clean the water off of you, some of it seeming to cling to you a bit more than you would expect.";
 	infect "Feral Sea Dragon";
-	now Strange wave is resolved;
+	now Strange Wave is resolved;
 
 
 Section 5 - Smashed boat
 
 Table of GameEventIDs (continued)
 Object	Name
-Smashed boat	"Smashed boat"
+Smashed Boat	"Smashed boat"
+Smashed Boat	"Smashed Boat"
 
-Smashed boat is a situation.
-The sarea of Smashed boat is "Beach".
+Smashed Boat is a situation.
+ResolveFunction of Smashed Boat is "[ResolveEvent Smashed Boat]".
+The sarea of Smashed Boat is "Beach".
 
-Instead of resolving a Smashed boat:
+to say ResolveEvent Smashed Boat:
 	say "     As you go along the beach, you come across a boat smashed up against some rocks. Seeing no one around, you move closer to investigate. From what you can tell, it looks like whoever was on this boat was trying to flee whatever was going on in the city, having stocked up on supplies, and a chart to the next city down the way. Unfortunately, it doesn't look like they made it that far... but you do decide to take some of their supplies with you, since you doubt they will be needing them anymore wherever or whatever they now are.";
 	ItemGain food by 2;
 	ItemGain water bottle by 1;
-	now Smashed boat is resolved;
+	now Smashed Boat is resolved;
 
 
 Section 6 - Dragon voyeurism
 
 Table of GameEventIDs (continued)
 Object	Name
-Dragon voyeurism	"Dragon voyeurism"
+Dragon Voyeurism	"Dragon voyeurism"
+Dragon Voyeurism	"Dragon Voyeurism"
 
-Dragon voyeurism is a situation.
-The sarea of Dragon voyeurism is "Beach".
+Dragon Voyeurism is a situation.
+ResolveFunction of Dragon Voyeurism is "[ResolveEvent Dragon Voyeurism]".
+The sarea of Dragon Voyeurism is "Beach".
 when play begins:
-	add Dragon voyeurism to BadSpots of FemaleList;
-	add Dragon voyeurism to BadSpots of MaleList;
-	add Dragon voyeurism to BadSpots of FurryList;
+	add Dragon Voyeurism to BadSpots of FemaleList;
+	add Dragon Voyeurism to BadSpots of MaleList;
+	add Dragon Voyeurism to BadSpots of FurryList;
 
 
-Instead of resolving a Dragon voyeurism:
+to say ResolveEvent Dragon Voyeurism:
 	say "     Moving along the beach, you hear strange noises from up ahead, causing you to move cautiously as you look around the upcoming dune. You gasp at the strange sight before you, a male sea dragon in the shallows mounting what looks to be a mixture of a human and sea dragoness, shreds of a divers wetsuit still cling to her expanding body as he fucks her roughly. The expression on the woman's face is screwed up into one of the purest ecstasy as he thrusts into her, her happy cries and the strong musk of their mating causing you to grow excited as well. You find yourself unable to move on your eyes locked to the strangely erotic scene in front of you even as your hands begin to roam your body. The woman cooing and writhing wantonly under the dragon, even as her changes continue sweeping over her, until finally the sea dragon roars as he spills his seed into what used to be a human diver, and is now indistinguishable from just another sea dragon. The dragons stay there in the low surf for a minute, shuddering in pleasure, before the male sea dragon pulls out, and drags himself back out into the surf. The newly made dragoness looks around for a minute as if confused by something, before fixating on his retreating form, she quickly dives into the surf after him, swimming along quickly to catch up to the beast that changed her, and now owns her. You gasp in relief tinged with disappointment as they move away, your body tingling both from the sheer erotic nature of the sight you just witnessed, as well as the strong scent of sea dragon mating that covers the area and seems to cling to you strongly.";
 	increase Libido of Player by 30;
 	infect "Feral Sea Dragon";
 	infect "Feral Sea Dragon";
 	infect "Feral Sea Dragon";
-	now Dragon voyeurism is resolved;
+	now Dragon Voyeurism is resolved;
 
 
 Section 7 - relaxing scene
 
 Table of GameEventIDs (continued)
 Object	Name
-relaxing scene	"relaxing scene"
+Relaxing Scene	"relaxing scene"
+Relaxing Scene	"Relaxing Scene"
 
-relaxing scene is a situation.
-The sarea of relaxing scene is "Beach".
+Relaxing Scene is a situation.
+ResolveFunction of Relaxing Scene is "[ResolveEvent Relaxing Scene]".
+The sarea of Relaxing Scene is "Beach".
 
-Instead of resolving a relaxing scene:
+to say ResolveEvent Relaxing Scene:
 	say "     Moving along down the silent beach, a glint on the water catches your attention. You immediately realize that it was just a flash of light on the water, but the view is so impressive you stop and stare anyways. The sounds of the soft waves lapping the beach, the reflected glow of the light on the water, the crisp clean air, it all makes for such an idyllic and relaxing scene that you feel refreshed and happier after even just a moment of standing their soaking it all in..";
 	SanBoost 20;
-	now relaxing scene is resolved;
+	now Relaxing Scene is resolved;
 
 
 Section 8 - Plundered boat
 
 Table of GameEventIDs (continued)
 Object	Name
-Plundered boat	"Plundered boat"
+Plundered Boat	"Plundered boat"
+Plundered Boat	"Plundered Boat"
 
-Plundered boat is a situation.
-The sarea of Plundered boat is "Beach".
+Plundered Boat is a situation.
+ResolveFunction of Plundered Boat is "[ResolveEvent Plundered Boat]".
+The sarea of Plundered Boat is "Beach".
 
-Instead of resolving a Plundered boat:
+to say ResolveEvent Plundered Boat:
 	say "     Walking along the beach, you come across a half sunk boat sticking out of the water, curiosity getting the best of you, you wade over to inspect the boat. Hauling yourself aboard you immediately note signs of a struggle, it looks like several people tried to put up some kind of fight here, but there are no signs of either the winners or the losers. Moving around the boat, you note that someone appears to have already plundered the boat and taken anything of value, although you do find a bit of ripped cloth that looks like it might be from some sort of bandana, the black cloth appears to have the skull and bones of a pirate logo printed on it, although the skulls teeth are pointed and shark-like. Shrugging and unable to find anything of use, you wade back to the beach and continue on your way.";
-	now Plundered boat is resolved;
+	now Plundered Boat is resolved;
 
 
 Section 9 - Tainted yacht
@@ -186,12 +201,13 @@ Object	Name
 Tainted Yacht	"Tainted Yacht"
 
 Tainted Yacht is a situation.
+ResolveFunction of Tainted Yacht is "[ResolveEvent Tainted Yacht]".
 The sarea of Tainted Yacht is "Beach".
 when play begins:
 	add Tainted Yacht to badspots of HermList;
 	add Tainted Yacht to BadSpots of FurryList;
 
-Instead of resolving a Tainted Yacht:
+to say ResolveEvent Tainted Yacht:
 	say "     While moving along the nearly deserted coast, you spot a small, sixty foot yacht anchored nearby. You think with a bit of effort you might be able to swim out to the anchored boat. Do you try?";
 	if Player consents:
 		fight;
@@ -211,45 +227,51 @@ Section 10 - Strange castle
 
 Table of GameEventIDs (continued)
 Object	Name
-Strange castle	"Strange castle"
+Strange Castle	"Strange castle"
+Strange Castle	"Strange Castle"
 
-Strange castle is a situation.
-The sarea of Strange castle is "Beach".
+Strange Castle is a situation.
+ResolveFunction of Strange Castle is "[ResolveEvent Strange Castle]".
+The sarea of Strange Castle is "Beach".
 
-Instead of resolving a Strange castle:
+to say ResolveEvent Strange Castle:
 	say "     Traveling along the beach, you come to an area where someone has obviously recently been hard at work. Just sitting there near the surf is an extremely intricately made sand castle, a magnificent looking edifice with numerous carefully sculpted towers and many fine details. Looking around you can't see any sign of who might have made such a thing, and then just abandoned it here. Shaking your head at the strange little building, you continue along your way, the waves behind you beginning to erode away at the small castle's structure.";
-	now Strange castle is resolved;
+	now Strange Castle is resolved;
 
 
 Section 11 - otter view
 
 Table of GameEventIDs (continued)
 Object	Name
-otter view	"otter view"
+Otter View	"otter view"
+Otter View	"Otter View"
 
-otter view is a situation.
-The sarea of otter view is "Beach".
+Otter View is a situation.
+ResolveFunction of Otter View is "[ResolveEvent Otter View]".
+The sarea of Otter View is "Beach".
 when play begins:
-	add otter view to BadSpots of FurryList;
+	add Otter View to BadSpots of FurryList;
 
-Instead of resolving a otter view:
+to say ResolveEvent Otter View:
 	say "     As you wander along the beach, you hear some laughter and splashing from the cove up ahead. Moving forward to take a closer look, you spy a small group of otters, laughing and frolicking in the shallow water. You smile at the innocently playful creatures for a while, until their play starts to get a bit more 'hands on' with each other. At which point you continue on your journey before they notice you.";
-	now otter view is resolved;
+	now Otter View is resolved;
 
 
 Section 12 - Cream stand
 
 Table of GameEventIDs (continued)
 Object	Name
-Cream stand	"Cream stand"
+Cream Stand	"Cream stand"
+Cream Stand	"Cream Stand"
 
-Cream stand is a situation. The level of Cream stand is 2.
-The sarea of Cream stand is "Beach".
+Cream Stand is a situation.
+ResolveFunction of Cream Stand is "[ResolveEvent Cream Stand]". The level of Cream Stand is 2.
+The sarea of Cream Stand is "Beach".
 when play begins:
-	add Cream stand to badspots of HermList;
-	add Cream stand to BadSpots of FurryList;
+	add Cream Stand to badspots of HermList;
+	add Cream Stand to BadSpots of FurryList;
 
-Instead of resolving a Cream stand:
+to say ResolveEvent Cream Stand:
 	say "     Wandering along the beach, you notice someone seems to have recently set up one of the ice cream stands, though you don't spot anyone nearby. It is something of a hot day - perhaps you should go help yourself to some ice cream?";
 	if Player consents:
 		say "     Deciding to have some ice cream, you move over to the small ice cream stand, and open up the cooler packed full of vanilla ice cream. Picking up a scooper, you place a hefty scoop on one of the cones and begin to eat the white flavorful treat. The taste of the ice cream makes you wonder for a second, as it doesn't taste quite like normal vanilla ice cream does, but since the taste is absolutely delicious, you eagerly finish off the cone anyways. Thinking about getting seconds, all of a sudden you moan as your stomach churns, and your body starts to writhe and change, before you can do more than wonder just what was in that ice cream, a shadow swoops down and takes advantage of your distraction!";
@@ -258,23 +280,25 @@ Instead of resolving a Cream stand:
 		challenge "Blue Gryphon Herm";
 		say "     The gryphon being long gone, you shake your head as you begin to recover from the ice cream and the attack, and take a closer look at the back part of the ice cream stand while you are here. You find some small containers of gryphon milk which were obviously fed into the ice cream machine in order to bait the gryphon's little trap. Sighing at the waste, you continue on your way, though you do take a couple containers of the leftover milk, just in case it might come in handy later... or if you find another ice cream machine, that did taste pretty good after all...";
 		ItemGain gryphon milk by 2;
-		now Resolution of Cream stand is 1; [got ice cream]
+		now Resolution of Cream Stand is 1; [got ice cream]
 	else:
 		say "     Being cautious by nature, you decide to forgo the tasty beach treat, and keep to your own supplies.";
-		now Resolution of Cream stand is 99; [no ice cream]
-	now Cream stand is resolved;
+		now Resolution of Cream Stand is 99; [no ice cream]
+	now Cream Stand is resolved;
 
 
 Section 13 - Lucky seashell
 
 Table of GameEventIDs (continued)
 Object	Name
-Lucky seashell	"Lucky seashell"
+Lucky Seashell	"Lucky seashell"
+Lucky Seashell	"Lucky Seashell"
 
-Lucky seashell is a situation.
-The sarea of Lucky seashell is "Beach".
+Lucky Seashell is a situation.
+ResolveFunction of Lucky Seashell is "[ResolveEvent Lucky Seashell]".
+The sarea of Lucky Seashell is "Beach".
 
-Instead of resolving a Lucky seashell:
+to say ResolveEvent Lucky Seashell:
 	say "     As you wander along the beach, you enjoy the feel of the sand underneath your feet and the beautiful sky overhead... until you nearly trip on something half buried in the sand. Cursing you look down and discover a large seashell was revealed when you nearly tripped over it, curiously you pick the shell up and marvel at the iridescent sheen of the shell. Just holding the thing makes you feel a bit better about things, who knows, maybe finding the shell means today will be a lucky day after all you think to yourself!";
 	let T be a random number between one and five;
 	if T is 1:
@@ -292,6 +316,6 @@ Instead of resolving a Lucky seashell:
 	else:
 		say "     Taking the shell along with you, you find that it seems to make the day brighter as you carry it and makes you feel a bit more human just to have it with you. Eventually reaching the end of your walk, you set the shell back down on the beach so it can brighten someone else's day up like it did yours'";
 		SanBoost 20;
-	now Lucky seashell is resolved;
+	now Lucky Seashell is resolved;
 
 Beach Events ends here.

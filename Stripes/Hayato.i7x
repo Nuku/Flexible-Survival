@@ -15,12 +15,13 @@ Object	Name
 Garage Demon	"Garage Demon"
 
 Garage Demon is a situation.
+ResolveFunction of Garage Demon is "[ResolveEvent Garage Demon]".
 The sarea of Garage Demon is "Capitol".
 when play begins:
 	add Garage Demon to BadSpots of MaleList;
 	add Garage Demon to badspots of DemonList;
 
-Instead of resolving a Garage Demon:
+to say ResolveEvent Garage Demon:
 	if debugactive is 1:
 		say "DEBUG -> HP of Hayato: [HP of Hayato] <- DEBUG[line break]";
 	if HP of Hayato is 0:
@@ -301,12 +302,12 @@ to say hayatosexmenu:
 		now title entry is "Fuck him";
 		now sortorder entry is 5;
 		now description entry is "take your turn on top";
-	if hp of hayato is 50:
+	if HP of hayato is 50:
 		choose a blank row in table of fucking options;
 		now title entry is "Get bent over";
 		now sortorder entry is 6;
 		now description entry is "be taken roughly in the ass";
-	if hp of hayato is 50:
+	if HP of hayato is 50:
 		choose a blank row in table of fucking options;
 		now title entry is "Get face fucked";
 		now sortorder entry is 7;
@@ -424,14 +425,15 @@ Table of GameEventIDs (continued)
 Object	Name
 Noh Mask	"Noh Mask"
 
-Noh Mask is a situation. Noh Mask is inactive. The level of Noh Mask is 9.
+Noh Mask is a situation.
+ResolveFunction of Noh Mask is "[ResolveEvent Noh Mask]". Noh Mask is inactive. The level of Noh Mask is 9.
 The sarea of Noh Mask is "Campus".
 when play begins:
 	add Noh Mask to BadSpots of FurryList;
 	add Noh Mask to BadSpots of MaleList;
 	add Noh Mask to BadSpots of FemaleList;
 
-instead of resolving Noh Mask:
+to say ResolveEvent Noh Mask:
 	if HP of Hayato is 11:
 		say "     Recalling Nermine's mention of the noh mask she wants, you search around some likely possibilities for where it may be. You fortunately find it hanging on the wall of the Japanese Language professor's office. Unfortunately though, that office is busily occupied by a trio of felines in ninja outfits with a humanoid female pinned to the desk beneath them. The woman's clothing is torn, exposing much of her exaggeratedly proportioned body. Her eyes are very large and visible through her overhanging bangs of blue hair. As the ninjas run their greedy paws over her smooth skin and grope her breasts, she moans and squirms. 'Ecchi! No, bad kitties!' she says before breaking down into a long moan as one of them slips a pair of fingers into her wet pussy.";
 		say "     It looks like they'll be here for a while, so you'll have to deal with them if you want to get the mask.";
@@ -508,13 +510,14 @@ Table of GameEventIDs (continued)
 Object	Name
 Oni Lair	"Oni Lair"
 
-Oni Lair is a situation. Oni Lair is inactive. The level of Oni Lair is 9.
+Oni Lair is a situation.
+ResolveFunction of Oni Lair is "[ResolveEvent Oni Lair]". Oni Lair is inactive. The level of Oni Lair is 9.
 The sarea of Oni Lair is "Capitol".
 when play begins:
 	add Oni Lair to BadSpots of MaleList;
 	add Oni Lair to badspots of DemonList;
 
-instead of resolving Oni Lair:
+to say ResolveEvent Oni Lair:
 	if debugactive is 1:
 		say "DEBUG -> HP of Hayato: [HP of Hayato] <- DEBUG[line break]";
 	if HP of Hayato is 19:

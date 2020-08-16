@@ -13,12 +13,14 @@ Section 1 - The Situation
 
 Table of GameEventIDs (continued)
 Object	Name
-potential resources	"potential resources"
+Potential Resources	"Potential Resources"
+Potential Resources	"Potential Resources"
 
-potential resources is a scavevent.
-The sarea of potential resources is "Allzones".
+Potential Resources is a scavevent.
+ResolveFunction of Potential Resources is "[ResolveEvent Potential Resources]".
+The sarea of Potential Resources is "Allzones".
 
-Instead of resolving a potential resources:
+to say ResolveEvent Potential Resources:
 	let difficulty be a random number from 6 to 16;
 	if hardmode is true, increase difficulty by a random number between 0 and 3;
 	let y be "food";

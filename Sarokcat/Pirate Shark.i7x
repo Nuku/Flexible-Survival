@@ -116,7 +116,7 @@ When Play begins:
 	now lootchance entry is 50;  [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]long[or]sleek[or]aquadynamic[at random]";
 	now type entry is "[one of]selachian[or]shark-like[at random]";
@@ -235,7 +235,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "pirate bandana"	"A slightly damp bit of black cloth, with a skull and crossbones on the front, closer inspection reveals that the skull has sharp shark-like teeth."	1	pirate bandana
 
-pirate bandana is a grab object. It is part of the player. Understand "bandana" and "bandana" as pirate bandana. Pirate bandana is infectious. The strain of pirate bandana is "Shark Herm".
+pirate bandana is a grab object. Understand "bandana" and "bandana" as pirate bandana. Pirate bandana is infectious. The strain of pirate bandana is "Shark Herm".
 
 The usedesc of pirate bandana is "Looking at the small piece of cloth, you decide to put it on for a minute, tying it around your head and grinning at the vicious look it gives you. You pose for a minute in your new bandana, before the much abused cloth finally tears and falls to the ground, you sigh sadly at the loss of your new fashion accessory, but still feel much more piratical afterwards.";
 

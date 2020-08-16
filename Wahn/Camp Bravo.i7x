@@ -8,12 +8,13 @@ Object	Name
 Red Light Requisition	"Red Light Requisition"
 
 Red Light Requisition is a situation.
+ResolveFunction of Red Light Requisition is "[ResolveEvent Red Light Requisition]".
 The sarea of Red Light Requisition is "Red".
 when play begins: [these exceptions are based on the second half so people aren't left standing]
 	add Red Light Requisition to BadSpots of MaleList;
 	add Red Light Requisition to BadSpots of FurryList;
 
-Instead of resolving a Red Light Requisition:
+to say ResolveEvent Red Light Requisition:
 	say "     Moving through a seedier area of the city, you come around a corner and spot two soldiers a bit down the road, lugging around a large sack. When they spot you, their faces flush red with embarrassment and they run off, dashing away from you. You run after them, but then slip on something that must have dropped out of the sack as they jostled it while running. It's... a dark blue rubber dildo?";
 	if Camp Bravo is known:
 		say "     Looks like these guys were gathering supplies for the things going on in Camp Bravo. Well, where else would they get those piles of sex toys from...";
@@ -29,12 +30,13 @@ Object	Name
 Trickster's Masterpiece	"Trickster's Masterpiece"
 
 Trickster's Masterpiece is a situation.
+ResolveFunction of Trickster's Masterpiece is "[ResolveEvent Trickster's Masterpiece]".
 The sarea of Trickster's Masterpiece is "Outside".
 when play begins:
 	add Trickster's Masterpiece to BadSpots of MaleList; [male soldiers]
 	add Trickster's Masterpiece to BadSpots of FurryList; [minotaur involved]
 
-Instead of resolving a Trickster's Masterpiece:
+to say ResolveEvent Trickster's Masterpiece:
 	say "     Following lust-filled grunts and bellows, you come upon a mid-sized military encampment on the parking space behind an office building. There you find a strange scene - in the middle of several olive green tents, there is a wooden hitching post - which a buck-naked soldier uses to hold on to. Behind the man is a very tall musclebound humanoid, sporting a horned bull's head and furred legs ending in cloven hooves - a minotaur. He's in a full on mating frenzy, shafting the human in front of him with mighty thrusts of his long cock. A bit to the side, a group of soldiers stands in front of an officer, many of them apprehensively looking over to the rutting minotaur before they turn back to their superior.";
 	say "     Curious what's going on there you sneak forward, staying out of sight behind one of the tents and just peeking around the corner. From your new location, you can hear the briefing the officer shouts at his men to be audible over the grunts and moans of the coupling man and beast.";
 	say "     '...so our local informant identified this creature to us as Patient Zero. Analyzing its bodily fluids could lead to a cure - but [if Diegochanged is 0]he [else]she [end if]also warned us that samples must be kept at body temperature or they won't be usable after a short while. So since we can't guarantee to capture that -' he waves towards the minotaur, hulking over the soldier in front of it, '- alive, we had to move on to a different plan to get those samples to the scientists. Team up in twos, then grab your new equipment from corpsman Jones and follow his instructions. Dismissed.'";
@@ -62,7 +64,8 @@ Table of GameEventIDs (continued)
 Object	Name
 Back at the Camp	"Back at the Camp"
 
-Back at the Camp is a situation. Back at the Camp is inactive. [enabled by the 'Trickster's Masterpiece' event]
+Back at the Camp is a situation.
+ResolveFunction of Back at the Camp is "[ResolveEvent Back at the Camp]". Back at the Camp is inactive. [enabled by the 'Trickster's Masterpiece' event]
 The sarea of Back at the Camp is "Outside".
 
 when play begins:
@@ -70,7 +73,7 @@ when play begins:
 
 lastGuardBeg is a number that varies. lastGuardBeg is usually 555.
 
-Instead of resolving a Back at the Camp:
+to say ResolveEvent Back at the Camp:
 	say "     Following your memory through the chaotic streets of the city, you try to find the military camp where you observed all those men taking a minotaur in the ass before. You think it was somewhere around the block you're right now, and... ah - there it is. Coming round a corner, you see the first of the olive green tents of the camp. And what you also see are two soldiers standing guard, who notice you and give you suspicious looks as they click off the safety of their rifles.";
 	say "     One of them steps forward and looks at you with a grim look on his face. You can see the letters 'Private Cooper' written on his jacket. He calls out 'Halt, this is a restricted military zone. Move away from -' ...he's interrupted by a loud, lust-filled bellow from inside the camp and turns a bit red in the face as he looks there and back to you. 'As I was saying, move away from the perimeter. We're doing... important work here on a cure.'";
 	LineBreak;
@@ -447,7 +450,7 @@ to say MajorPartypooper: [try to make the Major see how he's been tricked]
 	say "     Not being able to accept having been duped, he has his soldiers throw you out of the camp, ordering them to drive you away if you return. Your body bruised from the rough handling, you slowly make your way back to the bunker and resolve not to return to Camp Bravo to avoid any further unpleasantness.";
 	now HP of Player is HP of Player / 2;
 	now Camp Bravo Entrance is not known;
-	now hp of Major Padgett is 100; [banned from Camp Bravo]
+	now HP of Major Padgett is 100; [banned from Camp Bravo]
 	move player to bunker;
 
 to say MajorBreeding:

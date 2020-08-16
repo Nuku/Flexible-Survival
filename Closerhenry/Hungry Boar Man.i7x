@@ -22,10 +22,9 @@ Object	Name
 Hungry Piggy	"Hungry Piggy"
 
 Hungry Piggy is a situation.
+ResolveFunction of Hungry Piggy is "[ResolveEvent Hungry Piggy]".
 
-After resolving a hungry piggy, try looking;
-
-Instead of Resolving a Hungry Piggy:
+to say ResolveEvent Hungry Piggy:
 	if hbmr is 0:
 		say "While exploring the city, you stumble upon an odd sight in the basement of one of the buildings. A water pipe must have burst at some point, because the floor of the entire room is covered in mud. What's even stranger is that it looks like someone is living down here despite all the mud.[line break][line break]You spot a strange boar man rolling in the mud on the floor. He's enjoying himself so much that it takes him awhile to realize that someone is in the room. When he finally does, he stares at you with his beady pig eyes for a moment. Not knowing if he's friendly or not, you mentally brace yourself for a fight.[line break][line break]You relax a little when he smiles and says, 'Hello there! My name is Philip. Don't worry, I'm not like those other creatures that are roaming the streets, humping everything in sight. I am really hungry though, could you please FEED me?'";
 		increase hbmr by 1;

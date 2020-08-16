@@ -13,6 +13,7 @@ Object	Name
 Harmless Joke	"Harmless Joke"
 
 Harmless Joke is a situation.
+ResolveFunction of Harmless Joke is "".
 The sarea of Harmless Joke is "Nowhere".
 
 when play begins:
@@ -34,6 +35,7 @@ Object	Name
 Fool Me Once	"Fool Me Once"
 
 Fool Me Once is a situation.
+ResolveFunction of Fool Me Once is "".
 The sarea of Fool Me Once is "Nowhere".
 
 when play begins:
@@ -53,6 +55,7 @@ Object	Name
 Fool Me Twice	"Fool Me Twice"
 
 Fool Me Twice is a situation.
+ResolveFunction of Fool Me Twice is "".
 The sarea of Fool Me Twice is "Nowhere".
 
 when play begins:

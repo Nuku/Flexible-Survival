@@ -38,13 +38,14 @@ Table of GameEventIDs (continued)
 Object	Name
 Hidden Kitty	"Hidden Kitty"
 
-Hidden Kitty is a situation. The level of Hidden Kitty is 5.
+Hidden Kitty is a situation.
+ResolveFunction of Hidden Kitty is "[ResolveEvent Hidden Kitty]". The level of Hidden Kitty is 5.
 The sarea of Hidden Kitty is "Red".
 when play begins:
 	add Hidden Kitty to BadSpots of MaleList;
 	add Hidden Kitty to BadSpots of FurryList;
 
-Instead of resolving a Hidden Kitty:
+to say ResolveEvent Hidden Kitty:
 	now lastSvendrink is turns + 8;
 	say "     While exploring in one of the older residential areas at the edge of this seedy district of town, you spot the flash of white and gray as something dashes down the steps and quickly shuts the basement door behind it. You catch sight of someone nervously glancing out from behind the curtains covering the basement window, watching you. As this is atypical behavior for someone who's succumbed, you're hopeful that this is a survivor. You wave and head cautiously to the door, trying to look non-threatening while remaining at the ready. You knock and assure them that you are still sane and want to help. It takes a while, always unsure if they're even listening as you can't risk yelling and drawing any infected to the house.";
 	say "     Eventually, it seems you are able to convince him and he opens the door to his small, basement apartment. As you look the young man over, he wrings his fluffy tail in his hands. The tail is a snowy white with gray and black leopard spots. He has a pair of feline ears poking out from his long, blond hair. For a tall, well-built fellow, he seems very timid and nervous as he shyly invites you in before quickly glancing around and then closing the door again. He speaks with a noticeable Nordic accent.";

@@ -9,13 +9,14 @@ Object	Name
 Bobcat Encounter	"Bobcat Encounter"
 
 Bobcat Encounter is a situation.
+ResolveFunction of Bobcat Encounter is "[ResolveEvent Bobcat Encounter]".
 The sarea of Bobcat Encounter is "Forest".
 
 when play begins:
 	add Bobcat Encounter to BadSpots of MaleList;
 	add Bobcat Encounter to BadSpots of FurryList;
 
-instead of resolving Bobcat Encounter:
+to say ResolveEvent Bobcat Encounter:
 	if Resolution of Bobcat Encounter is 0: [first time]
 		say "     As you walk along a narrow dirt trail through the forest that a fair bit of the inner city turned into, you let your eyes roam over your surroundings, looking for anything of even remote significance or value. While doing so, your gaze falls upon a small furry figure a little distance ahead. The creature appears to be a bobcat, slightly taller than three feet high and covered in short orange fur with black and white stripes. Small cat ears atop the head rotate to take in the sounds of your approach, and the little feline's tail moves left and right in urgent twitches. Fumbling with a large carrying bag on the ground, the bobcat then shoves it into the crevice of a large tree that it is standing in front of. Shoving with all the might of its small body, the bobcat manages to force the bag inside before you come anywhere close, vanishing after it into the thick trunk's insides.";
 		say "     Curiosity draws you towards the tree, and soon you're standing a few yards away, looking into the small crevice on its side. Keeping a little distance just in case the inhabitant is aggressive, you call out a greeting and wait for a reply. A minute passes, then two, and as you are about ready to call it quits and move on, an anthropomorphic bobcat's head, then body, pops out of the crevice. The feline has a lithe but fit body, covered in moderately thick fur that makes it a bit hard to tell if you're looking at a male or female. Large amber eyes stare up at you cautiously, and the cat says, 'What?' The tone of voice reveals that your new acquaintance is a male, as does a casual glance down at his nether regions, now that he's standing up straight enough to make out the outline of his soft dick in the surrounding fur.";
@@ -274,7 +275,7 @@ When Play begins:
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "cat-like";
 	now type entry is "feline";

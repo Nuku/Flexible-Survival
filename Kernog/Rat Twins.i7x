@@ -480,9 +480,10 @@ Object	Name
 Pirate Standoff	"Pirate Standoff"
 
 Pirate Standoff is a situation.
+ResolveFunction of Pirate Standoff is "[ResolveEvent Pirate Standoff]".
 The sarea of Pirate Standoff is "Beach".
 
-Instead of resolving a Pirate Standoff:
+to say ResolveEvent Pirate Standoff:
 	say "     You hear a commotion in the distance, behind a dune. Curious what it may be, you climb the small hill prudently, crouching as you reach the top. On the other side, you see a pair of young-looking anthro rats, one male and the other female looking like two peas in a pod, surrounded by a gang of pirate sharks. The aquatic predators growl at the pair of rodents, who stand in the middle, back-to-back. 'Arrr, ye sea rats shouldn't [']ave been snoopin['] around,' one of the sharks says. She seems to be the [']captain['] of the group.";
 	say "     'I told you, stupid,' the female rat says, ignoring the pirate. 'We should have thought twice when Smee mentioned [']pirate booties['].'";
 	say "     'Har, Har! Talking [']bout these, girl?' the pirate asks, as she slaps his generous butt. 'Too bad for ye, rattie. The only bootie that'd get plundered today is your and your brother's.'";
@@ -538,6 +539,7 @@ Object	Name
 Rat Twins Invitation	"Rat Twins Invitation"
 
 Rat Twins Invitation is a situation.
+ResolveFunction of Rat Twins Invitation is "".
 The sarea of Rat Twins Invitation is "Nowhere".
 
 instead of going to Restaurant while (Rat Twins Invitation is active and Rat Twins Invitation is not resolved and HP of Erin is 1):
@@ -593,6 +595,7 @@ Object	Name
 Strange Island	"Strange Island"
 
 Strange Island is a situation.
+ResolveFunction of Strange Island is "".
 The sarea of Strange Island is "Nowhere".
 
 to say strangeIsland:
@@ -650,11 +653,12 @@ Object	Name
 Tied Rat Twins	"Tied Rat Twins"
 
 Tied Rat Twins is a scavevent.
+ResolveFunction of Tied Rat Twins is "[ResolveEvent Tied Rat Twins]".
 When play begins:
 	now Tied Rat Twins is resolved;
 [The sarea of Tied Rat Twins is "Outside".]
 
-instead of resolving Tied Rat Twins:
+to say ResolveEvent Tied Rat Twins:
 	say "     During your exploration, you come upon what looks like an abandoned sex-shop. The place looks deserted, but there is this permanent buzzing sound coming from inside. This is odd.";
 	say "     [bold type]Do you wish to investigate?[roman type][line break]";
 	LineBreak;

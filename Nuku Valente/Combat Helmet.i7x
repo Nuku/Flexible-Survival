@@ -20,9 +20,10 @@ Object	Name
 Lost Gear	"Lost Gear"
 
 Lost Gear is a situation.
+ResolveFunction of Lost Gear is "[ResolveEvent Lost Gear]".
 lgnumber is a number that varies.
 
-instead of resolving Lost Gear:
+to say ResolveEvent Lost Gear:
 	say "You happen across an old army surplus store. Your heart swells at the possibilities, only to sink as you notice that the door's been forced open. The place has already been looted, likely by other, desperate, but faster, survivors. It might be worth a look anyway?";
 	if Player consents:
 		say "You enter the store and begin to forage around. There has to be something worth having in here. A sudden noise comes from behind a rack of rotting clothes. A mutant!";

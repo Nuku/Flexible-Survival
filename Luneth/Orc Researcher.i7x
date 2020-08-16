@@ -8,9 +8,10 @@ Object	Name
 Orc Researcher	"Orc Researcher"
 
 Orc Researcher is a situation.
+ResolveFunction of Orc Researcher is "[ResolveEvent Orc Researcher]".
 The sarea of Orc Researcher is "Warehouse".
 
-Instead of resolving a Orc Researcher:
+to say ResolveEvent Orc Researcher:
 	say "     As you make your way around the buildings in the Warehouse District, you stop in front of a dilapidated building that more than likely wasn't doing very well long before the nanite incident began. You notice a flickering light in one of the rooms on the second floor. Wondering if it might be a potential survivor hiding out, or at the very least a place that might have some supplies, you start heading to the front door. Sadly, the front door is a crumbling mess, almost as if someone or something smashed their way in. You step back and glance around to look for another potential entrance. However, you wonder if you should even attempt to enter this building after seeing the state of the door.";
 	LineBreak;
 	say "     [bold type]Should you still attempt to find a way in?[roman type][line break]";
@@ -52,7 +53,7 @@ name	desc	weight	object
 "orc pill case"	"You have found this slender metal case in a makeshift lab in the Warehouse District. Based on the research found with it, the pills inside were made by distilling the essence of orc cum into an untainted form. With the help of them, a male could impregnate another male without having to worry about being infected with the orc nanite strain."	0	orc pill case
 
 orc pill case is a grab object.
-It is part of the player.
+
 It is not temporary.
 the usedesc of orc pill case is "[OrcPillCaseUse]".
 

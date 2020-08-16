@@ -8,7 +8,8 @@ Table of GameEventIDs (continued)
 Object	Name
 Gourmet Treats	"Gourmet Treats"
 
-Gourmet Treats is a situation. The level of Gourmet Treats is 8.
+Gourmet Treats is a situation.
+ResolveFunction of Gourmet Treats is "[ResolveEvent Gourmet Treats]". The level of Gourmet Treats is 8.
 The sarea of Gourmet Treats is "High".
 
 when play begins:
@@ -16,7 +17,7 @@ when play begins:
 	add Gourmet Treats to BadSpots of FemaleList;     [random encounter may involve female opponents]
 	add Gourmet Treats to BadSpots of FurryList;     [random encounter will involve canine opponents]
 
-Instead of Resolving a Gourmet Treats:
+to say ResolveEvent Gourmet Treats:
 	if HP of Karen is 1:
 		say "     While traveling through the high rise district, you come across what you can only assume is the strange bakery Karen mentioned. While the boarded-up windows prevent you from seeing inside, the large sign above the door makes it clear that this is the place. The weathered sign reads Bone-Appetit and features a rather plump cartoon canine in a chef's uniform. Eager to follow through with your plan to free yourself from Rex, you reach for the door handle. Slowly pulling the door open a crack, you peer inside the building; noticing some movement and groaning near the back counter, you pause for a moment before steeling yourself and swinging the door open.";
 	else:

@@ -3,11 +3,14 @@ Little Old Woman by Kaleem mcintyre begins here.
 
 Table of GameEventIDs (continued)
 Object	Name
-Defenseless old lady	"Defenseless old lady"
+Defenseless Old Lady	"Defenseless old lady"
+Defenseless Old Lady	"Defenseless Old Lady"
 
-Defenseless old lady is a situation. The sarea of Defenseless old lady is "Warehouse".
+Defenseless Old Lady is a situation.
+ResolveFunction of Defenseless Old Lady is "[ResolveEvent Defenseless Old Lady]".
+The sarea of Defenseless Old Lady is "Warehouse".
 
-Instead of resolving a Defenseless old lady:
+to say ResolveEvent Defenseless Old Lady:
 	say "     Making your way down the street, you happen to come across little old lady making her way in the opposite direction that you are going. Thinking that what you are seeing is a mirage, it has to be for a normal HUMAN woman to be walking around untainted by the infections, let's not mention the mutations roaming around, you blink several times to dispel the image from your obviously tired mind. When that fails to work, you find yourself moving on hurried feet over to where the older woman is, concern for her safety gripping your heart as you wonder over the why, how, and what the hell is she doing out here, by herself no less. Upon hearing your panicked footsteps the older woman stops and then turns her bespectacled face in your direction, curious to know what the fuss is all about. Before you can think about asking the older woman a single question you find that, just as you had feared, a number of mutants are making their way towards your and the older woman's direction. Whipping your head around to try and find some cover you barely have time to survey the area around you even halfway before the mutants see you and then begin to race towards you. By the looks on their faces, muzzles, and snouts some of them eager to see you, but not in any platonic sort of way as more than half of the assemble group having cocks dripping and mouths salivating in raw want to have your ass. Literally. However, despite this truth the sheer need to protect this woman overcomes your senses and before the assemble ground is half way towards the both of you, you position yourself in front of your charge so as to shield her from the would be attackers.";
 	LineBreak;
 	let bonus be (( the Strength of the player minus 5 ) divided by 2);

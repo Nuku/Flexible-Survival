@@ -369,10 +369,11 @@ Table of GameEventIDs (continued)
 Object	Name
 Manicotti Shopping	"Manicotti Shopping"
 
-Manicotti Shopping is a situation. The level of Manicotti Shopping is 2. Manicotti Shopping is inactive.
+Manicotti Shopping is a situation.
+ResolveFunction of Manicotti Shopping is "[ResolveEvent Manicotti Shopping]". The level of Manicotti Shopping is 2. Manicotti Shopping is inactive.
 The sarea of Manicotti Shopping is "high".
 
-instead of resolving Manicotti Shopping:
+to say ResolveEvent Manicotti Shopping:
 	say "     As you explore the High Rise, you finally manage to come upon the grocery store that Francois told you about. Staring you in the eyes is a large sign saying 'Shroger', designating it as one of the big grocery chain stores in America. The once sliding doors to the place are torn off, giving sight into the superstore, though not much. From outside all you can notice are where the shopping carts were usually stored and perhaps maybe the cash registers but that's it, so with a shrug you head on in. To your surprise, the inside is actually not abandoned, there are people scattered about, hanging out in the place though to be honest you should have expected this. One of them, a tan-furred male mouse in a simple black shirt and cargo pants ends up approaching you.";
 	say "     'Hey there friend! What brings you to our little neck of the High Rise?' he asks, tilting his head and looking you up and down, as if trying to understand you. You explain that you're attempting to get ingredients for a dish that a friend of yours is homesick for. That ends up causing the rodent to give you a curious look. 'That might be a bit difficult, considering that most of the food here was taken in the beginning of the [']incident['], by the way my name is Wally,' the male informs you, holding out a paw. You shake the paw and tell him that the particular recipe you are trying to make is manicotti and then mention Francois which causes the mouse to chuckle. 'Ah, of course he sent you. Ever the romantic that guy. And he was right, surprisingly we just so happen to have the stuff for it and you may as well see why,' Wally says, gesturing for you to follow.";
 	WaitLineBreak;

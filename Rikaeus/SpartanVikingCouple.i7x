@@ -1,7 +1,7 @@
 Version 1 of SpartanVikingCouple by Rikaeus begins here.
 [Version 1 - War Events, Setup of Couple Sex Menu]
 
-[ hp of Sylvia - relationship variable with the player          ]
+[ HP of Sylvia - relationship variable with the player          ]
 [   0: not met                                                  ]
 [   1: told them her room number                                ]
 [   2: watched her give a BJ + told them her room number        ]
@@ -75,6 +75,7 @@ Object	Name
 War Declaration	"War Declaration"
 
 War Declaration is a situation.
+ResolveFunction of War Declaration is "[ResolveEvent War Declaration]".
 The sarea of War Declaration is "Nowhere".
 
 when play begins:
@@ -84,7 +85,7 @@ instead of going to Pericles' Room while (War Declaration is active and War Decl
 	move player to Pericles' Room;
 	FirstVikingWarEvent;
 
-instead of resolving War Declaration:
+to say ResolveEvent War Declaration:
 	move player to Pericles' Room;
 	FirstVikingWarEvent;
 
@@ -110,6 +111,7 @@ Object	Name
 Assault On The Gym	"Assault On The Gym"
 
 Assault On The Gym is a situation.
+ResolveFunction of Assault On The Gym is "[ResolveEvent Assault On The Gym]".
 Assault On The Gym is inactive.
 The sarea of Assault On The Gym is "Campus".
 
@@ -121,7 +123,7 @@ instead of going to Athletic Street while (Assault On The Gym is active and Assa
 	move player to Athletic Street;
 	SecondVikingWarEvent;
 
-instead of resolving Assault On The Gym:
+to say ResolveEvent Assault On The Gym:
 	move player to Athletic Street;
 	SecondVikingWarEvent;
 
@@ -168,6 +170,7 @@ Object	Name
 Raid On The Fountain	"Raid On The Fountain"
 
 Raid On The Fountain is a situation.
+ResolveFunction of Raid On The Fountain is "[ResolveEvent Raid On The Fountain]".
 Raid On The Fountain is inactive.
 The sarea of Raid On The Fountain is "Campus".
 
@@ -179,12 +182,12 @@ instead of going to College Fountain while (Raid On The Fountain is active and R
 	move player to College Fountain;
 	ThirdVikingWarEvent;
 
-instead of resolving Raid On The Fountain:
+to say ResolveEvent Raid On The Fountain:
 	move player to College Fountain;
 	ThirdVikingWarEvent;
 
 to ThirdVikingWarEvent:
-	if hp of Sylvia is 4:
+	if HP of Sylvia is 4:
 		say "     Deciding that you might want to head to the fountain before the Vikings attack, you make your way there, getting to it in no time. Once at the location you hum and think that you might have some time before the Vikings attack but you're not entirely sure as to what you could do though. Looking around you see a few trees and the burned patches of grass from the arrows that had to have been launched from outside. Taking a closer peak you see that the dirt is overturned, as if you could possibly hide something there. That, combined with the trees gives you an idea, one that causes you to move forward and walk around the area.";
 		say "     To your surprise however when you walk over to one of the large oaks near the fountain you see that it has already been trapped. Moving to a patch of dirt you see the exact same thing, the entire place appears to be booby-trapped but you don't know by who exactly. Sadly though you don't have time to figure that out as soon enough Vikings are marching forward towards the area. Preparing yourself for combat you put your hands forward in a fighting stance, hoping that it doesn't go too terribly. However, you're quite shocked when you hear a yelp and see some of the Norse warriors step into one of the net traps, getting pulled up into it.";
 		WaitLineBreak;
@@ -231,6 +234,7 @@ Object	Name
 Siege Of The Belltower	"Siege Of The Belltower"
 
 Siege Of The Belltower is a situation.
+ResolveFunction of Siege Of The Belltower is "[ResolveEvent Siege Of The Belltower]".
 Siege Of The Belltower is inactive.
 The sarea of Siege Of The Belltower is "Campus".
 
@@ -242,7 +246,7 @@ instead of going to College Belltower while (Siege Of The Belltower is active an
 	move player to College Belltower;
 	FourthVikingWarEvent;
 
-instead of resolving Siege Of The Belltower:
+to say ResolveEvent Siege Of The Belltower:
 	move player to College Belltower;
 	FourthVikingWarEvent;
 
@@ -291,6 +295,7 @@ Object	Name
 Battle For Tenvale Campus	"Battle For Tenvale Campus"
 
 Battle For Tenvale Campus is a situation.
+ResolveFunction of Battle For Tenvale Campus is "[ResolveEvent Battle For Tenvale Campus]".
 Battle For Tenvale Campus is inactive.
 The sarea of Battle For Tenvale Campus is "Campus".
 
@@ -302,7 +307,7 @@ instead of going to College Campus Entrance while (Battle For Tenvale Campus is 
 	move player to College Campus Entrance;
 	FifthVikingWarEvent;
 
-instead of resolving Battle For Tenvale Campus:
+to say ResolveEvent Battle For Tenvale Campus:
 	move player to College Campus Entrance;
 	FifthVikingWarEvent;
 
@@ -344,6 +349,7 @@ Object	Name
 Peace Between Communities	"Peace Between Communities"
 
 Peace Between Communities is a situation.
+ResolveFunction of Peace Between Communities is "[ResolveEvent Peace Between Communities]".
 Peace Between Communities is inactive.
 The sarea of Peace Between Communities is "Campus".
 
@@ -355,7 +361,7 @@ instead of going to Tenvale College Library while (Peace Between Communities is 
 	move player to Tenvale College Library;
 	SixthVikingWarEvent;
 
-instead of resolving Peace Between Communities:
+to say ResolveEvent Peace Between Communities:
 	move player to Tenvale College Library;
 	SixthVikingWarEvent;
 

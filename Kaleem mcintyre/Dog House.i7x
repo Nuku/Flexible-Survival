@@ -6,7 +6,8 @@ Table of GameEventIDs (continued)
 Object	Name
 DogHouse	"DogHouse"
 
-The DogHouse is a situation.
+DogHouse is a situation.
+ResolveFunction of The DogHouse is "[ResolveEvent DogHouse]".
 DogHouse is inactive.
 Fin is a number that varies.
 Tyraffection is a number that varies.
@@ -19,7 +20,7 @@ when play begins:
 	add DogHouse to BadSpots of MaleList;
 	add DogHouse to badspots of HermList;
 
-Instead of resolving DogHouse:
+to say ResolveEvent DogHouse:
 	if fin is 1:
 		say "     Finding yourself coming across the drab-looking warehouse that Homaru had told you about, you walk up to the metal doors of the edifice and knock. A small slot opens a second later and piercing yellow eyes stare back at you accusingly. 'What do you want?' The person on the other side of the door asks with a voice that's more of a growl than a regular human baritone.";
 		say "     Building up your courage, you find your voice and then tell the other that you're here for the [bold type ]Dog Show[roman type]. Feral yellow eyes glare at you before pulling back when the slot suddenly closes. You [FaceName of Player] ears catch the sounds of locks being flicked and latches being unhooked before finally the metal door is pulled open. What you see from the [if daytimer is day]light coming in from the sun[else]strong rays of the moon pouring in behind you[end if] is a powerful husky/wolf hybrid with enough muscles to put a rhino to shame sneering at you implacably.";

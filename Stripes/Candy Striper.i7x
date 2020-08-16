@@ -134,7 +134,7 @@ When Play begins:
 	now lootchance entry is 10; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]girly[or]effeminate[or]slender[at random]";
 	now type entry is "[one of]coon-like[or]raccoon[at random]";
@@ -705,7 +705,7 @@ instead of navigating Grey Abbey Library while (Candy is in the Bunker and (HP o
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
-		say "     DEBUG: HP of Candy: [HP of Candy], HP OF FANG: [HP of Fang][line break]";
+		say "     DEBUG: HP of Candy: [HP of Candy], HP of FANG: [HP of Fang][line break]";
 	say "     You walk in to see Candy petting Fang vigorously, the raccoon showering some rare non-sexual affection on the canine. 'Who's a good boy? Who's a good, big, stud boy?' he asks in a sickeningly cute tone of voice. 'It's you! It's you, you're such a good stud!' he adds in. Fang seems to be enjoying himself, judging from his kicking leg and canine grin. You guess in a world like this, a wolf acting so dog-like is hardly the weirdest thing you've ever seen happen. You continue to watch this show of affection for a little while before deciding to get back to the things you were doing before.";
 	now LastCandyWalkin is turns;
 
@@ -714,7 +714,7 @@ instead of navigating Grey Abbey Library while (Candy is in the Bunker and HP of
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
-		say "     DEBUG: HP of Candy: [HP of Candy], HP OF FANG: [HP of Fang][line break]";
+		say "     DEBUG: HP of Candy: [HP of Candy], HP of FANG: [HP of Fang][line break]";
 	say "     Candy seems a bit troubled as you arrive at the library, occasionally glancing at Fang as he generally pads around his territory. He approaches you as you enter. '...I wonder what John would say about this...' he says. 'Fang, I mean. I'm not going to pretend I haven't been enjoying every second of this, but... well, I'm me, y'know? Hopped up on nanites and my own flamboyant tendencies,' he says, pausing for a little while before shrugging. 'Well, it's a new world, and a new me. And I'm not going to go denying myself just for somebody else. Even if he doesn't like it, he'll have to live with it, right?' Candy says. He turns back to Fang, a devious grin on his face. 'Besides, he always said dogs were man's best friend. Really, he should've seen this coming.'";
 	now LastCandyWalkin is turns;
 
@@ -732,7 +732,7 @@ instead of navigating Grey Abbey Library while (Candy is in the Bunker and HP of
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
-		say "     DEBUG: HP of Candy: [HP of Candy], HP OF ALEXANDRA: [HP of Alexandra][line break]";
+		say "     DEBUG: HP of Candy: [HP of Candy], HP of ALEXANDRA: [HP of Alexandra][line break]";
 	say "     Entering the library, you discover Candy curled up in a reading chair with what appears to be a several-years-old fashion magazing, flipping through the pages with an irritated expression on his face. For a moment, you think he hasn't noticed you, but then he speaks. 'Could you do me a favor, sweetie, and let Alexandra know that just because she says she's your second in command, we don't have to sit there and take it every time she starts yelling at us?' he asks, not even looking up from an article about cross-stitching. 'Because if she decides to start pushing me around again just 'cause I dress like a girl, someone's getting their eyes clawed out,' he announces. Seems there's a bit of trouble between the two at the moment...";
 	now LastCandyWalkin is turns;
 
@@ -741,7 +741,7 @@ instead of navigating Grey Abbey Library while (Candy is in the Bunker and HP of
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
-		say "     DEBUG: HP of Candy: [HP of Candy], HP OF ALEXANDRA: [HP of Alexandra][line break]";
+		say "     DEBUG: HP of Candy: [HP of Candy], HP of ALEXANDRA: [HP of Alexandra][line break]";
 	say "     Candy has an odd look on his face when you arrive at the library. 'Hey, uh, you know better than anyone that I'm definitely a bit of a libertine, but...' he frowns. 'You do realize the military might be a bit pissed if they barge in here and see you turned a law enforcement officer into an aggressive, sex-addled bitch, right?' he shakes his head. 'I mean, you do whatever you want with whoever you want, really, but... maybe try to figure out an alibi before the big men with the bigger guns roll into town?' he says. You're not entirely sure how you feel about Candy openly questioning your authority like that, but the raccoon goes off to do something else before you can formulate a response. You scowl a bit and decide you'll ignore it... this time.";
 	now LastCandyWalkin is turns;
 

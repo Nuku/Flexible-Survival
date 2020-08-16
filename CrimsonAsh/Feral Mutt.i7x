@@ -341,7 +341,7 @@ When Play begins:
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "canine";
 	now type entry is "canine";
@@ -519,7 +519,7 @@ When Play begins:
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "canine";
 	now type entry is "canine";
@@ -642,13 +642,14 @@ Object	Name
 Mutt Pack Submission	"Mutt Pack Submission"
 
 Mutt Pack Submission is a situation.
+ResolveFunction of Mutt Pack Submission is "[ResolveEvent Mutt Pack Submission]".
 Mutt Pack Submission is inactive. [activated by fighting the mutt pack]
 The sarea of Mutt Pack Submission is "Junkyard".
 
 when play begins:
 	add Mutt Pack Submission to BadSpots of FurryList;
 
-Instead of resolving a Mutt Pack Submission:
+to say ResolveEvent Mutt Pack Submission:
 	say "     As you walk the junk yard grounds you hear an unmistakable canine bark behind you. Spinning around to face the noise you spot the feral mutt you had dominated before. And behind that dog is another canine, a large, slightly mangy pit bull. And to the side of him a golden furred shepherd pads a few feet forward. Looking around you see a total of five feral mutts, all males, and all extremely aroused if they're hard red rockets are anything to go off of. They look to you expectantly and you think to ready yourself for a fight until the lead mutt lets out a whine of need and lowers his head before you. Accepting your dominance in their territory and apparently, asking to mate with you.";
 	say "     [bold type]Do you want to have sex with the pack?[roman type][line break]";
 	LineBreak;
@@ -710,13 +711,14 @@ Object	Name
 Mutt Pack Attack	"Mutt Pack Attack"
 
 Mutt Pack Attack is a situation.
+ResolveFunction of Mutt Pack Attack is "[ResolveEvent Mutt Pack Attack]".
 Mutt Pack Attack is inactive.
 The sarea of Mutt Pack Attack is "Junkyard".
 
 when play begins:
 	add Mutt Pack Attack to BadSpots of FurryList;
 
-Instead of resolving a Mutt Pack Attack:
+to say ResolveEvent Mutt Pack Attack:
 	say "     As you walk the junk yard grounds you hear an unmistakable canine bark behind you. Spinning around to face the noise you spot the feral mutt that had bred you earlier. And behind that dog is another canine, a large, slightly mangy pit bull. And to the side of him a golden furred shepherd pads a few feet forward. Looking around you see a total of five feral mutts, all males, and all extremely aroused if they're hard red rockets are anything to go off of. The one that had fucked you before strides closer, growling and standing tall, his veiny cock swaying as he moves. It doesn't take a genius to know what he wants, you, and now.";
 	say "     [bold type]Are you gonna submit like a good bitch or fight back?[roman type][line break]";
 	LineBreak;

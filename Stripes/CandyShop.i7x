@@ -10,7 +10,8 @@ Table of GameEventIDs (continued)
 Object	Name
 CandyShop	"CandyShop"
 
-CandyShop is a situation. The level of CandyShop is 9.
+CandyShop is a situation.
+ResolveFunction of CandyShop is "[ResolveEvent CandyShop]". The level of CandyShop is 9.
 The sarea of CandyShop is "Fair".
 sugarferretfight is a number that varies.
 
@@ -19,7 +20,7 @@ when play begins:
 	add CandyShop to BadSpots of MaleList;
 	add CandyShop to BadSpots of FurryList;
 
-Instead of resolving a CandyShop:
+to say ResolveEvent CandyShop:
 	say "     You are in one of the more permanent sections of the state fair where small shops and booths have been built. Things are a little more peaceful here, giving you a moment to relax and look around. The wild lights and sounds of the fair are more subdued here and you don't spot any crazy creatures running around. In fact, there doesn't seem to be much activity at all.";
 	say "     You carefully start looking around, finding that the buildings have already been broken into and ransacked. The displays are destroyed, the drink fountains drained and sticky messes all over the place. You are about to give up when you hear some jovial laughter coming from a CandyShop. Peeking inside, you see it overrun by a pack of small, ferret people. Their fur comes in a variety of soft, pastel colors. Their cute, tubular bodies bounce around playfully as they share the candy they've clearly hoarded from the neighboring shops. When one of them spots you, he smiles and waves in a friendly manner, holding up a pack of red licorice.";
 	say "     [bold type]Shall you step inside?[roman type][line break]";

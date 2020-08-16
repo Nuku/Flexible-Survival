@@ -181,11 +181,12 @@ Object	Name
 Noteinbottle	"Noteinbottle"
 
 Noteinbottle is a situation.
+ResolveFunction of Noteinbottle is "[ResolveEvent Noteinbottle]".
 The sarea of Noteinbottle is "Beach".
 
 tmapfound is a number that varies.
 
-Instead of resolving a Noteinbottle:
+to say ResolveEvent Noteinbottle:
 	say "     Walking along the beach and enjoying the view of the surf, you notice something bobbing on the waves just out of reach of shore. Do you dive in to try to get it?";
 	if Player consents:
 		now fightoutcome is 100;
@@ -216,12 +217,13 @@ Table of GameEventIDs (continued)
 Object	Name
 Findingboat	"Findingboat"
 
-Findingboat is a situation. The level of Findingboat is 7.
+Findingboat is a situation.
+ResolveFunction of Findingboat is "[ResolveEvent Findingboat]". The level of Findingboat is 7.
 the sarea of Findingboat is "Beach".
 boatfound is a number that varies.	[tracks need for a boat for Bouncy Castle quest]
 [0 = not looking, 1 = looking, 2 = dingy, 3 = boat]
 
-Instead of resolving Findingboat:
+to say ResolveEvent Findingboat:
 	if tmapfound is 2:
 		say "     Wandering along the beach, you come across a large jumbled mess made up of several different abandoned boats from the marina that have all washed up ashore here. Glancing through the tangle of boats shows you that one or two of them might still work, even though they wouldn't go too far, they might be able to get you to the island shown on the map[if boatfound is 2]! While your little dingy won't make to the island, one of these might be able to do the job[else if boatfound is 1]. After you get back, you could probably use this to get to that bouncy castle the dolphins have set up, you think, though the thoughts of gold are in the foremost of your mind right now[else if boatfound is 4]. After you get back, you could probably use this to get to Vohr Island, following the tip of the rat twins, though the thoughts of gold are in the foremost of your mind right now[end if]. Deciding to take a look, you spend some time searching through the boats to find one that could get you where you need to go.";
 		let bonus be (( the Perception of the player minus 10 ) divided by 2);

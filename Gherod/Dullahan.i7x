@@ -81,7 +81,7 @@ when play begins:
 	now lootchance entry is 50;
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4;
 	now body descriptor entry is "[one of]statuesque[or]musclebound[or]massive[or]hulking[at random]";
 	now type entry is "demon";

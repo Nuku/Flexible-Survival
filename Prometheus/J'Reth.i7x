@@ -7,7 +7,7 @@ Version 4 of J'Reth by Prometheus begins here.
 [ Version 4.1 - Sex Scenes for Gendershifted J'Reth Added ]
 
 
-[ hp of J'Reth                                          ]
+[ HP of J'Reth                                          ]
 [ 0 - Unmet                                             ]
 [ 1 - Met in Storeroom                                  ]
 [ 2 - Asked for Peaches                                 ]
@@ -144,19 +144,19 @@ to say J'RethTalkMenu:
 	now sortorder entry is 3;
 	now description entry is "Make general small talk";
 	[]
-	if hp of J'Reth is 3:
+	if HP of J'Reth is 3:
 		choose a blank row in table of fucking options;
 		now title entry is "Discuss His Form";
 		now sortorder entry is 4;
 		now description entry is "Enquire about his draco-mantis form";
 	[]
-	if hp of J'Reth is 4 and (scenario is "Researcher" or nanite collector is equipped):
+	if HP of J'Reth is 4 and (scenario is "Researcher" or nanite collector is equipped):
 		choose a blank row in table of fucking options;
 		now title entry is "Prepare for Gender Shifting";
 		now sortorder entry is 5;
 		now description entry is "Further discuss and prepare for gender shifting the draco-mantis";
 	[]
-	if hp of J'Reth > 4 and (scenario is "Researcher" or nanite collector is equipped) and ((thirst of J'Reth < 2 and J'Reth_MVialsOwned < 14) or (thirst of J'Reth is 2 and J'Reth_HVialsOwned < 14) or (thirst of J'Reth is 3 and J'Reth_FVialsOwned < 14)):
+	if HP of J'Reth > 4 and (scenario is "Researcher" or nanite collector is equipped) and ((thirst of J'Reth < 2 and J'Reth_MVialsOwned < 14) or (thirst of J'Reth is 2 and J'Reth_HVialsOwned < 14) or (thirst of J'Reth is 3 and J'Reth_FVialsOwned < 14)):
 		choose a blank row in table of fucking options;
 		now title entry is "Extract Vial of Draco-mantis Nanites";
 		now sortorder entry is 6;
@@ -276,7 +276,7 @@ to say J'RethTalk4: [Discuss his form]
 	say "     J'Reth pauses and takes another breath, gathering his thoughts in order to continue. 'I haven't met anyone else like me, but considering my hobbies and obsession with them, I doubt that there was anyone else in the city as enthusiastic about this backpackemon as me so that isn't too much of a surprise. I don't seem to be infectious ot susceptible to casual exposure to others either. You've seen how packed the mall can be at times and I eat in the food court surrounded by so many others that if I was going to change or be changed by others that it would have happened already. As for how you can look like me, I may be able to help you with that. I've heard that some of the scientists that managed to gain entry to the city or were here from the beginning have been studying the nanites and their effects, Zephyr especially. If you impress them enough, they might give you a nanite extractor and I could give you a sample of blood for you to use to look like me. It would also give me chance of returning to this form if some infection does manage to shift me.'";
 	WaitLineBreak;
 	say "     'This brings me to my next topic. I've always had a curiosity about what it would have been like to be female, but due to the difficulty of gender reassignment surgery before the nanites and not actually being uncomfortable with being male, I didn't give it much thought beyond a passing wonder. Now though, people seem to be able to swap back and forth seemingly at a whim and my curiosity has an easy way of being assuaged. I want to stay looking the way I do now, but if you find a way that can safely give me a chance to experience being female I would be grateful.' He looks at you almost pleadingly and you automatically reassure him that you will keep it in mind but that he should be patient as you have your own safety to look out for as well. Nodding it acceptance he sits down on the edge of his bed and gives you a smile, hugging his knees gleefully as he revels in his chance to sate his curiosity even if he has to wait a while. Now you just have to come up with an idea of how to fulfil his wish.";
-	now hp of J'Reth is 4;
+	now HP of J'Reth is 4;
 
 to say J'RethTalk5: [Prepare for Gender Shifting]
 	say "     J'Reth's face lights up when you tell him that you have had a few thoughts about how he might be able to become female, or even hermaphroditic if he wants. 'I realize that you agreed to help me, but I wasn't sure whether you would be able to get the nanite extractor or have time to give it some thought with the number of other things happening in the city. What did you come up with?' he asks. You begin to tell him that there are effectively two options available to you, one easier than the other. He could take purposely designed pills that can change him into a man, woman, or herm, which will likely be difficult to obtain from creatures around the city, or if by some slim chance you did manage to find someone who would sell them to you, they would likely cost a fair few free-creds. The other option is to use some of the transformatives that you extract, claim, or otherwise pillage from creatures around the city, which while an easier option has a higher chance of having some side-effects on the draco-mantis.";
@@ -299,7 +299,7 @@ to say J'RethTalk5: [Prepare for Gender Shifting]
 	else: [Pills are fine]
 		say "     Seeing the discomfort that the idea of using creature transformatives is causing J'Reth, you quickly reassure him that you don't mind keeping an eye out for pills, you just wanted to explain the choices to him. A look of relief floods across the draco-mantis['] face and he gives you a brief hug. 'Thank you. I apologize for being difficult, but I really would be happier waiting for you to get the pills than drinking cum from who-knows-what. I can be patient, I've waited this long in my life after all, so don't take any undue risks to get them or bankrupt yourself. Becoming a woman will be more difficult if you become the property of some pimp or packmaster,' he teases you, looking at you with palpable gratitude. Smiling back, you agree to keep an eye out for testosterone, estrogen, and estosterogen pills. J'Reth pats you on the shoulder. 'Even if you don't have much success, just ask if you want to look like me. Consider it an advance reward for your help.' It sounds like J'Reth is now willing to share his draco-mantis infection with you.";
 		now hunger of J'Reth is 1;
-	now hp of J'Reth is 5;
+	now HP of J'Reth is 5;
 
 to say J'RethTalk6: [Take nanites for personal use or as a backup]
 	say "     Bringing up the offer that J'Reth had made to you about allowing you to take a sample of [PosPro of J'Reth] nanites, you ask the draco-mantis whether you would be able to extract some now. 'I don't see why not,' [SubjectPro of J'Reth] replies, 'I'm not exactly busy these days, and if I want to change my sex I'll want the vials as a backup anyway.' [SubjectProCap of J'Reth] sits on the edge of [PosPro of J'Reth] bed and exposes [PosPro of J'Reth] arm as you remove the nanite extractor from your backpack, wiping the needle with one of the seemingly limitless alcohol swabs that came with it. 'I don't know why I'm so calm about this, I'm not particularly fond of needles and I can't believe that it will be particularly easy to get through the chitin. Perhaps aim for a join so that you don't need to use as much force,' J'Reth suggests, eyeing the needle carefully as you approach. You sit down beside [ObjectPro of J'Reth]  and briefly stroke [PosPro of J'Reth] arm comfortingly before aligning the tip of the needle with a gap in [PosPro of J'Reth] protective plates that cover [PosPro of J'Reth] upper arm. Giving you a nod to continue, the draco-mantis closes [PosPro of J'Reth] eyes and waits to feel the prick of the metal going into [PosPro of J'Reth] arm.";
@@ -630,13 +630,13 @@ to say J'RethTalk12: [Use Gryphon Milk]
 Section 4 - Section 4 - Sex
 
 Instead of fucking J'reth:
-	if hp of J'Reth is 1:
+	if HP of J'Reth is 1:
 		say "     When you bring up having sex with him, to your surprise, he declines politely with an apologetic look. 'Sorry, I'm not feeling in the mood for it at the moment. I don't know whether it is because I've partaken of the carnal pleasures too much recently, or whether the climate within the city is getting to me. Either way, I don't feel like doing anything sexual today. I don't suppose you have any peaches, do you? Even tinned will do. They're one of my favorite snacks... Don't worry about it. It would be too much to ask of you,' the draco-mantis finishes with a sigh and turns away, his usually cheerful visage decidedly glum. Resolving to cheer him up, you decide that perhaps some fresh fruit might be what the doctor ordered. Perhaps [bold type]five[roman type] or so [bold type]peaches[roman type] from the park?";
-		now hp of J'Reth is 2;
-	else if hp of J'Reth is 2:
+		now HP of J'Reth is 2;
+	else if HP of J'Reth is 2:
 		if carried of tasty peach > 4:
 			say "     You politely cough to catch J'Reth's attention, the morose draco-mantis slowly looking up as you search through your backpack for the peaches that you got for him. After a moment you find them and present them to the surprised young man, the several small bruises on the fruit's skin doing little to diminish the obvious pleasure spreading across his face at not merely tinned, but fresh peaches. 'Wow... um, I don't know what to say other than thank you. I didn't expect anyone to be willing to devote time to cheering me up. Especially when it likely involved searching around the city. I might have to name my firstborn after you. You know... if I ever have a firstborn... Forget I said that. Please?' J'Reth blushes deeply and attempts to distract himself by taking a bite out of a peach. Letting out a sigh, he relaxes back on his bed for a moment before stirring again as his cock begins to swell from his crotch. 'I've heard of peaches being an aphrodisiac, but that was more effective than I would have expected. I haven't felt this horny in ages. Up for some intimate touching?' It looks like J'Reth is open to your advances now.";
-			now hp of J'Reth is 3;
+			now HP of J'Reth is 3;
 		else:
 			say "     'Sorry. I still feel down at the moment. I'm sure someone else would be willing if you're that desperate for sex.' Perhaps you should get [bold type]five peaches[roman type] from the park?";
 	else if (lastfuck of J'Reth - turns < 6): [he got fucked in the last 18 hours = 6 turns]
@@ -917,6 +917,7 @@ Object	Name
 Introduction By Soup	"Introduction By Soup"
 
 Introduction By Soup is a situation.
+ResolveFunction of Introduction By Soup is "[ResolveEvent Introduction By Soup]".
 The level of Introduction By Soup is 0.
 The sarea of Introduction By Soup is "Nowhere".
 
@@ -926,7 +927,7 @@ when play begins:
 after going to Mall Foodcourt while (Introduction By Soup is not resolved and a random chance of 1 in 3 succeeds):
 	IntroductionBySoupEvent;
 
-Instead of resolving Introduction By Soup:
+to say ResolveEvent Introduction By Soup:
 	IntroductionBySoupEvent;
 
 to IntroductionBySoupEvent:
@@ -945,6 +946,7 @@ Object	Name
 Mantis Meeting	"Mantis Meeting"
 
 Mantis Meeting is a situation.
+ResolveFunction of Mantis Meeting is "[ResolveEvent Mantis Meeting]".
 Mantis meeting is inactive.
 The level of Mantis Meeting is 0.
 The sarea of Mantis Meeting is "Nowhere".
@@ -952,7 +954,7 @@ The sarea of Mantis Meeting is "Nowhere".
 after going to Mall Foodcourt while (Mantis Meeting is active and Introduction By Soup is resolved and Mantis Meeting is not resolved and a random chance of 1 in 3 succeeds):
 	MantisMeetingEvent;
 
-Instead of resolving Mantis Meeting:
+to say ResolveEvent Mantis Meeting:
 	MantisMeetingEvent;
 
 to MantisMeetingEvent:
@@ -969,6 +971,7 @@ Object	Name
 Soup & Sexual Gratification	"Soup & Sexual Gratification"
 
 Soup & Sexual Gratification is a situation.
+ResolveFunction of Soup & Sexual Gratification is "[ResolveEvent Soup & Sexual Gratification]".
 Soup & Sexual Gratification is inactive.
 The level of Soup & Sexual Gratification is 0.
 The sarea of Soup & Sexual Gratification is "Nowhere".
@@ -976,7 +979,7 @@ The sarea of Soup & Sexual Gratification is "Nowhere".
 after going to Mall Foodcourt while (Soup & Sexual Gratification is active and Mantis Meeting is resolved and Soup & Sexual Gratification is not resolved and carried of food > 0 and a random chance of 1 in 3 succeeds):
 	Soup&SexualGratificationEvent;
 
-Instead of resolving Soup & Sexual Gratification:
+to say ResolveEvent Soup & Sexual Gratification:
 	Soup&SexualGratificationEvent;
 
 to Soup&SexualGratificationEvent:
@@ -1012,20 +1015,21 @@ to Soup&SexualGratificationEvent:
 		now resolution of Soup & Sexual Gratification is 3; [Just left tin on floor]
 	now Soup & Sexual Gratification is resolved;
 	ItemLoss food by 1;
-	now hp of J'Reth is 1;
+	now HP of J'Reth is 1;
 
 Table of GameEventIDs (continued)
 Object	Name
 Reciprocal Thanks	"Reciprocal Thanks"
 
 Reciprocal Thanks is a situation.
+ResolveFunction of Reciprocal Thanks is "[ResolveEvent Reciprocal Thanks]".
 The level of Reciprocal Thanks is 0.
 The sarea of Reciprocal Thanks is "Nowhere".
 
-after going to Mall Foodcourt while (Reciprocal Thanks is not resolved and Soup & Sexual Gratification is resolved and hp of J'Reth is 1 and a random chance of 1 in 3 succeeds):
+after going to Mall Foodcourt while (Reciprocal Thanks is not resolved and Soup & Sexual Gratification is resolved and HP of J'Reth is 1 and a random chance of 1 in 3 succeeds):
 	AReciprocalThanksEvent;
 
-Instead of resolving Reciprocal Thanks:
+to say ResolveEvent Reciprocal Thanks:
 	AReciprocalThanksEvent;
 
 to AReciprocalThanksEvent:
@@ -1102,13 +1106,14 @@ Object	Name
 Invitation to Storeroom	"Invitation to Storeroom"
 
 Invitation to Storeroom is a situation.
+ResolveFunction of Invitation to Storeroom is "[ResolveEvent Invitation to Storeroom]".
 The level of Invitation to Storeroom is 0.
 The sarea of Invitation to Storeroom is "Nowhere".
 
-after going to Mall Foodcourt while (Reciprocal Thanks is resolved and Invitation to Storeroom is not resolved and hp of J'Reth is 1 and a random chance of 1 in 3 succeeds):
+after going to Mall Foodcourt while (Reciprocal Thanks is resolved and Invitation to Storeroom is not resolved and HP of J'Reth is 1 and a random chance of 1 in 3 succeeds):
 	InvitationtoStoreroomEvent;
 
-Instead of resolving Invitation to Storeroom:
+to say ResolveEvent Invitation to Storeroom:
 	InvitationtoStoreroomEvent;
 
 to InvitationtoStoreroomEvent:

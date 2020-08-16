@@ -17,6 +17,7 @@ Object	Name
 Panda Inspiration	"Panda Inspiration"
 
 Panda Inspiration is a situation.
+ResolveFunction of Panda Inspiration is "[ResolveEvent Panda Inspiration]".
 The sarea of Panda Inspiration is "Campus".
 
 when play begins:
@@ -34,7 +35,7 @@ instead of going to Tenvale College Male Dorms while (Panda Inspiration is not r
 	move player to Tenvale College Male Dorms;
 	FirstJakeEvent;
 
-instead of resolving Panda Inspiration:
+to say ResolveEvent Panda Inspiration:
 	move player to Tenvale College Male Dorms;
 	FirstJakeEvent;
 
@@ -54,6 +55,7 @@ Object	Name
 Panda Question	"Panda Question"
 
 Panda Question is a situation.
+ResolveFunction of Panda Question is "[ResolveEvent Panda Question]".
 Panda Question is resolved.
 The sarea of Panda Question is "Campus".
 
@@ -64,7 +66,7 @@ instead of going to Creative Street while (Panda Question is not resolved and La
 	move player to Creative Street;
 	SecondJakeEvent;
 
-instead of resolving Panda Question:
+to say ResolveEvent Panda Question:
 	move player to Creative Street;
 	SecondJakeEvent;
 
@@ -86,6 +88,7 @@ Object	Name
 Art Supply Retrieval	"Art Supply Retrieval"
 
 Art Supply Retrieval is a situation.
+ResolveFunction of Art Supply Retrieval is "[ResolveEvent Art Supply Retrieval]".
 Art Supply Retrieval is resolved.
 The sarea of Art Supply Retrieval is "Campus".
 
@@ -96,7 +99,7 @@ instead of going to Lecture Street while (Art Supply Retrieval is not resolved a
 	move player to Lecture Street;
 	ThirdJakeEvent;
 
-instead of resolving Art Supply Retrieval:
+to say ResolveEvent Art Supply Retrieval:
 	move player to Lecture Street;
 	ThirdJakeEvent;
 
@@ -142,6 +145,7 @@ Object	Name
 Grateful Panda	"Grateful Panda"
 
 Grateful Panda is a situation.
+ResolveFunction of Grateful Panda is "[ResolveEvent Grateful Panda]".
 Grateful Panda is resolved.
 The sarea of Grateful Panda is "Campus".
 
@@ -152,7 +156,7 @@ instead of going to Lecture Street while (Grateful Panda is not resolved and Las
 	move player to Lecture Street;
 	FourthJakeEvent;
 
-instead of resolving Grateful Panda:
+to say ResolveEvent Grateful Panda:
 	move player to Lecture Street;
 	FourthJakeEvent;
 

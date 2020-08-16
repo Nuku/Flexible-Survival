@@ -8,9 +8,10 @@ Object	Name
 Gill Fruits Tree	"Gill Fruits Tree"
 
 Gill Fruits Tree is a situation.
+ResolveFunction of Gill Fruits Tree is "[ResolveEvent Gill Fruits Tree]".
 the sarea of Gill Fruits Tree is "Beach".
 
-Instead of resolving a Gill Fruits Tree:
+to say ResolveEvent Gill Fruits Tree:
 	say "You come across an odd tree, half in and half out of the water, with slitted fruits on the branches. This must be the elusive gill fruit tree.";
 	say "Do you wish to pick some?";
 	if Player consents:

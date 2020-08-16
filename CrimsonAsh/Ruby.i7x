@@ -26,12 +26,13 @@ Object	Name
 Urban Cliff	"Urban Cliff"
 
 Urban Cliff is a situation.
+ResolveFunction of Urban Cliff is "[ResolveEvent Urban Cliff]".
 The sarea of Urban Cliff is "Capitol".
 
 when play begins:
 	add Urban Cliff to BadSpots of FemaleList;
 
-Instead of resolving Urban Cliff:
+to say ResolveEvent Urban Cliff:
 	if Resolution of Urban Cliff is 0 or Resolution of Urban Cliff is 99: [first encounter or repeat after postponing]
 		say "     While exploring and walking along the heat scorched, barren ground of the capitol district you turn a corner and find yourself standing at the top end of a steep slope of rock and volcanic ash. Looks like the quakes and eruptions tore up this section of the district particularly bad, creating a cliff that's about 300 feet wide in the middle of the fallen city. A little ways to the side and down the slope, you spot a narrow fissure gaping in the surrounding rock. Curiosity drives you check it out, carefully talking down over the ash and peeking at the opening. The crack in the rock continues into the earth as a sort of tunnel that bends and twists, making it quite hard to tell how deep it will go. Looks dangerous, but it could also be an exciting place to explore...";
 		say "     [bold type]Do you want to journey underground?[roman type][line break]";
@@ -240,7 +241,7 @@ When Play begins:
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "draconic";
 	now type entry is "draconic";

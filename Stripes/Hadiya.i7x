@@ -47,12 +47,13 @@ Object	Name
 Annoyed Hyena	"Annoyed Hyena"
 
 Annoyed Hyena is a situation.
+ResolveFunction of Annoyed Hyena is "[ResolveEvent Annoyed Hyena]".
 The sarea of Annoyed Hyena is "Junkyard".
 when play begins:
 	add Annoyed Hyena to badspots of HermList;
 	add Annoyed Hyena to BadSpots of FurryList;
 
-Instead of Resolving a Annoyed Hyena:
+to say ResolveEvent Annoyed Hyena:
 	say "     While exploring, you accidentally run face first into what at first seems a warm, furry wall. Upon recovering and taking a second look, you realize that it's actually a hyena. A tall, obviously intimidating hyena. Her sharp predatory teeth as well as the oversized tongue hanging out of her muzzle doesn't exactly give her the most pleasant looks, but her distinctive spotted red fur helps her stand out from the other hyenas that you've met in the past. She doesn't seem to be hostile to you, or at least not just yet to say the least... as she just seems to be more amused by your presence than anything else. Her slacks seem to conceal an obvious bulge. Seems she's pretty much the same as the rest of the hyenas around here by the looks of it... though she at least covers it up!";
 	say "     'Well now, just what do we have here? Someone new around to have fun with... suppose I might be up for you visiting me. I definitely need more company. And by company, I mean a warm squealing bitch underneath me, giving me exactly what I want. Come on over and I promise I'll make you regret it later,' she growls with a big wink at you. 'I have a little shack set up nearby. Just come over anytime you want to get treated like the fucktoy that you are[if the player is submissive]. You seem like the type that needs a good, rough mistress[end if].' And with that, she just turns and disappears, leaving you slightly baffled and curious... but also very much wanting to see just what she has in store for you!";
 	now HP of Hadiya is 1;
@@ -284,10 +285,11 @@ Table of GameEventIDs (continued)
 Object	Name
 Goblin Thief	"Goblin Thief"
 
-Goblin Thief is a situation. Goblin Thief is inactive.
+Goblin Thief is a situation.
+ResolveFunction of Goblin Thief is "[ResolveEvent Goblin Thief]". Goblin Thief is inactive.
 The sarea of Goblin Thief is "Junkyard".
 
-Instead of resolving Goblin Thief:
+to say ResolveEvent Goblin Thief:
 	if debugactive is 1:
 		say "DEBUG (Hadiya) -> HP: [HP of Hadiya], hadiyafucked: [hadiyafucked], lastfuck: [lastfuck of Hadiya], Hyena Gang ref: [if hadiyahyg is true]Y[else]N[end if] <- DEBUG[line break]";
 		say "DEBUG (Gobby) -> HP: [HP of Gobby], lastfuck: [lastfuck of Gobby] <- DEBUG[line break]";

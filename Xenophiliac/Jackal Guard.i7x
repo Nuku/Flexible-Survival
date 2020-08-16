@@ -76,7 +76,7 @@ When Play begins:
 	now lootchance entry is 0;
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;
 	now body descriptor entry is "";
 	now type entry is "";

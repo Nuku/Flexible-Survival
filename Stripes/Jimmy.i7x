@@ -21,10 +21,11 @@ Table of GameEventIDs (continued)
 Object	Name
 Automaton Activity	"Automaton Activity"
 
-Automaton Activity is a situation. The level of Automaton Activity is 6. It is inactive.
+Automaton Activity is a situation.
+ResolveFunction of Automaton Activity is "[ResolveEvent Automaton Activity]". The level of Automaton Activity is 6. It is inactive.
 The sarea of Automaton Activity is "Capitol".
 
-instead of resolving Automaton Activity:
+to say ResolveEvent Automaton Activity:
 	if HP of Jimmy is 0:
 		say "ERROR-Jimmy-0E: Premature event activation.";
 		now Automaton Activity is resolved;

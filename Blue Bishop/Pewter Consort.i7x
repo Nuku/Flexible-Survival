@@ -725,7 +725,7 @@ When Play begins:
 	now lootchance entry is 45; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;
 	now body descriptor entry is "[one of]lean[or]feral[or]bestial[at random]";
 	now type entry is "[one of]feral[or]bestial[at random]";

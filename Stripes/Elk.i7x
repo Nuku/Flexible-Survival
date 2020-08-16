@@ -180,7 +180,7 @@ When Play begins:
 	now lootchance entry is 25; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]strong[or]muscled[or]powerful[or]buff[at random]";
 	now type entry is "[one of]cervine[or]elk[at random]";
@@ -310,7 +310,7 @@ name	desc	weight	object
 
 elk antler is a grab object.
 the usedesc of elk antler is "[elkantleruse]".
-it is part of the player.
+
 It is temporary.
 
 to say elkantleruse:

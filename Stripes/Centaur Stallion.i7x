@@ -147,7 +147,7 @@ When Play begins:
 	now lootchance entry is 33; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "centaur cum";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscular[or]centaur[at random]";
 	now type entry is "centaur"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -300,13 +300,13 @@ name	desc	weight	object
 
 centaur cum is a grab object.
 the usedesc of centaur cum is "[centaurcumuse]".
-it is part of the player.
+
 It is temporary.
 centaur cum is cum.
 
 centaur hair is a grab object.
 the usedesc of centaur hair is "[centaurhairuse]".
-it is part of the player.
+
 It is temporary.
 
 to say centaurcumuse:

@@ -494,10 +494,11 @@ Table of GameEventIDs (continued)
 Object	Name
 PridePark	"PridePark"
 
-PridePark is a situation. PridePark is inactive.
+PridePark is a situation.
+ResolveFunction of PridePark is "[ResolveEvent PridePark]". PridePark is inactive.
 The sarea of PridePark is "Park".
 
-Instead of resolving PridePark:
+to say ResolveEvent PridePark:
 	if leoparklist is not empty and a random chance of 2 in 5 succeeds:	[unique situations]
 		sort leoparklist in random order;
 		if entry 1 of leoparklist is 1:

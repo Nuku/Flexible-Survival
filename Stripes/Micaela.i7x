@@ -10,12 +10,13 @@ Object	Name
 Easter Eggs	"Easter Eggs"
 
 Easter Eggs is a scavevent.
+ResolveFunction of Easter Eggs is "[ResolveEvent Easter Eggs]".
 The sarea of Easter Eggs is "Forest".
 when play begins:
 	add Easter Eggs to BadSpots of FurryList;
 	add Easter Eggs to badspots of HermList;
 
-Instead of resolving Easter Eggs:
+to say ResolveEvent Easter Eggs:
 	say "     Entering a small glade between the trees, you look around cautiously before crossing into it. At one edge, you spot a strange splash of color tucked under a bush. You approach and brush the leaves aside to see a mound of decorated eggs. They're colorful, some with solid colors and others striped or spotted - Easter eggs.";
 	say "     Leaning over to pick one up, you get a pair of surprises. The first come in the form of the wet film coating the eggs. The second is the [if level of Player > 5]increasingly [end if]familiar press of a large erection against your rear, lightly humping it.";
 	WaitLineBreak;

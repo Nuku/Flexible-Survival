@@ -21,7 +21,8 @@ Table of GameEventIDs (continued)
 Object	Name
 Paleontology Professor	"Paleontology Professor"
 
-Paleontology Professor is a situation. The level of Paleontology Professor is 7.
+Paleontology Professor is a situation.
+ResolveFunction of Paleontology Professor is "[ResolveEvent Paleontology Professor]". The level of Paleontology Professor is 7.
 The sarea of Paleontology Professor is "Campus".
 
 when play begins:
@@ -29,7 +30,7 @@ when play begins:
 
 utahmet is a truth state that varies. utahmet is usually false.
 
-Instead of resolving a Paleontology Professor:
+to say ResolveEvent Paleontology Professor:
 	if MaleList is banned and FemaleList is banned:
 		say "     You find your way into the biology building in the hopes of finding answers or at least supplies and happen across the door to a paleontology professor's office. On the door is a notice saying that the professor was transferred due to content restrictions. Odd.";
 		say "(This content requires that at least one of Guy or Girl content be available in the game. - Mgmt)[line break]";
@@ -387,7 +388,7 @@ When Play begins:
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sleek[or]animalistic[purely at random]";
 	now type entry is "[one of]wereraptor[or]raptor[or]saurian[or]reptilian[purely at random]";
@@ -819,12 +820,13 @@ Table of GameEventIDs (continued)
 Object	Name
 Greenhouse	"Greenhouse"
 
-Greenhouse is a situation. The level of Greenhouse is 7. Greenhouse is inactive.
+Greenhouse is a situation.
+ResolveFunction of Greenhouse is "[ResolveEvent Greenhouse]". The level of Greenhouse is 7. Greenhouse is inactive.
 The sarea of Greenhouse is "Campus".
 
 grhouse is a truth state that varies. grhouse is usually false.
 
-Instead of resolving Greenhouse:
+to say ResolveEvent Greenhouse:
 	if grhouse is false:
 		say "     Remembering Nermine's instructions, you keep your eyes open as you travel around the campus. Not recalling having seen one there before and unable to find out anywhere, you're about to give up when you swing back around towards the biology building again for another pass. And that's when you spot it as you come around the edge of the chemistry building. Linking it to the biology building, there is a connecting hallway and the topmost level of that passage is a greenhouse.";
 	else:
@@ -873,7 +875,7 @@ name	desc	weight	object
 "wolfsbane"	"A bunch of roots from the monkshood."	1	wolfsbane
 
 wolfsbane is a grab object.
-it is part of the player.
+
 It is not temporary.
 
 instead of using wolfsbane:
@@ -888,12 +890,13 @@ Table of GameEventIDs (continued)
 Object	Name
 Getting the Knife	"Getting the Knife"
 
-Getting the Knife is a situation. The level of Getting the Knife is 7. Getting the Knife is inactive.
+Getting the Knife is a situation.
+ResolveFunction of Getting the Knife is "[ResolveEvent Getting the Knife]". The level of Getting the Knife is 7. Getting the Knife is inactive.
 The sarea of Getting the Knife is "Warehouse".
 
 wrknifefight is a truth state that varies. wrknifefight is usually false.
 
-Instead of resolving Getting the Knife:
+to say ResolveEvent Getting the Knife:
 	say "     Doing your best to circumvent the creatures roaming around here, you make your way to the address Nermine provided. It is a non-descript warehouse like so many others in this area. You start looking around, trying to find a way into the building, only to be interrupted by a growl behind you. Turning around, you find yourself faced with a large, burly wolverine in a security guard uniform.";
 	now wrknifefight is true;
 	challenge "Wolverine Guard";
@@ -944,12 +947,13 @@ Table of GameEventIDs (continued)
 Object	Name
 Dinosaur Skeleton	"Dinosaur Skeleton"
 
-Dinosaur Skeleton is a situation. The level of Dinosaur Skeleton is 9. Dinosaur Skeleton is inactive.
+Dinosaur Skeleton is a situation.
+ResolveFunction of Dinosaur Skeleton is "[ResolveEvent Dinosaur Skeleton]". The level of Dinosaur Skeleton is 9. Dinosaur Skeleton is inactive.
 The sarea of Dinosaur Skeleton is "Museum".
 
 wrdinoskel is a truth state that varies. wrdinoskel is usually false.
 
-Instead of resolving Dinosaur Skeleton:
+to say ResolveEvent Dinosaur Skeleton:
 	if daytimer is day:
 		say "     As you travel through the museum, you end up finding yourself in one of the upper sections of the Dinosaur exhibit. There are several small- to mid-sized skeletons on display there, including one of a raptor. You are momentarily excited at the prospect of being freed from your curse, but then recall that the ritual requires it be done at night. Given the amount of activity around here from the denizens of the museum, you decide against just sticking around until then and resolve to come back after nightfall.";
 	else if silver knife is not owned:

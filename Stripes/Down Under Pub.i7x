@@ -10,6 +10,7 @@ Object	Name
 Aussie Pub	"Aussie Pub"
 
 Aussie Pub is a situation.
+ResolveFunction of Aussie Pub is "[ResolveEvent Aussie Pub]".
 The sarea of Aussie Pub is "Red".
 lastpubvisit is a number that varies.
 pubvisit is a number that varies.
@@ -20,7 +21,7 @@ when play begins:
 	add Aussie Pub to badspots of HermList;
 	add Aussie Pub to BadSpots of FurryList;
 
-Instead of resolving a Aussie Pub:
+to say ResolveEvent Aussie Pub:
 	say "     While exploring the area, you come across an Australian themed pub previously called 'Down Under'. Some bright blue paint has been used to add 'TAKE ME' to the front of its name. Through the windows, you can see there are lots of carousing and arousing kangaroos in the pub. You can see them eating, drinking and/or fucking with uproarious enjoyment inside.";
 	if the BodyName of Player is "Red Kangaroo":
 		say "     [bold type]You feel a longing to join them. Do you enter?[roman type][line break]";

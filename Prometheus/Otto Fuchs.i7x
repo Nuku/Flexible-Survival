@@ -1,6 +1,6 @@
 Version 1 of Otto Fuchs by Prometheus begins here.
 
-[   hp of Otto                          ]
+[   HP of Otto                          ]
 [   0: not met                          ]
 [   1: Met Otto                         ]
 [   2: Watched Otto save the soldier    ]
@@ -13,7 +13,7 @@ Version 1 of Otto Fuchs by Prometheus begins here.
 
 [QUEST LOG]
 to OttoQuestLog:
-	if hp of Otto is:
+	if HP of Otto is:
 		-- 1:
 			say "[bold type]Otto Quest: [roman type]I met a doctor called Otto Fuchs in the city who treated a rabbit who had been shot in the shoulder. Hopefully I'll see him again in future.";
 		-- 2:
@@ -22,7 +22,7 @@ to OttoQuestLog:
 			say "[bold type]Otto Quest: [roman type]I helped Otto move to the Green Apartments. I may be able to visit him there in future.";
 
 An everyturn rule:
-	if hp of Otto > 3:
+	if HP of Otto > 3:
 		if OttoMedkitCounter > 0:
 			decrease OttoMedkitCounter by 1;
 
@@ -91,7 +91,7 @@ OttoForm is a number that varies. OttoForm is usually 0.
 
 to say OttoDesc:
 	if debugactive is 1:
-		say "DEBUG -> HP: [hp of Otto] <- DEBUG[line break]";
+		say "DEBUG -> HP: [HP of Otto] <- DEBUG[line break]";
 	else:
 		if Ottoform is 0: [Human]
 			say "     Doctor Otto Fuchs is a middle-aged man of about five or so feet with messy, faded-brown hair. While not fat, his body shape suggests that he doesn't exercise regularly and enjoys his food, a habit that you wonder how he has managed to maintain in the apocalypse. He is dressed in a white shirt with black trousers that are held up by red suspenders. He has a kind, crinkly face with soft-brown eyes that look at you from behind round, silver spectacles as you examine him. When he speaks, it is with a German accent. Around his neck, in a stereotypical fashion, is a stethoscope.";
@@ -130,7 +130,7 @@ to say OttoTalkMenu:
 		now sortorder entry is 2;
 		now description entry is "Ask Dr. Fuchs whether he could spare you a medkit";
 	[]
-	[if hp of player is not maxHP of player:
+	[if HP of player is not maxHP of player:
 		choose a blank row in table of fucking options;
 		now title entry is "Medical Attention";
 		now sortorder entry is 2;
@@ -189,10 +189,11 @@ Object	Name
 Wounded Civilian	"Wounded Civilian"
 
 Wounded Civilian is a situation.
+ResolveFunction of Wounded Civilian is "[ResolveEvent Wounded Civilian]".
 The level of Wounded Civilian is 0.
 The sarea of Wounded Civilian is "Outside".
 
-Instead of resolving Wounded Civilian:
+to say ResolveEvent Wounded Civilian:
 	WoundedCivilianEvent;
 
 to WoundedCivilianEvent: [Meet Otto Fuchs]
@@ -203,7 +204,7 @@ to WoundedCivilianEvent: [Meet Otto Fuchs]
 	say "     As he leaves, you approach the patient and his healer, asking whether you can be of assistance. The doctor gives you a brief smile, saying, 'I can understand why you did not get closer before, but the difficult bit is past. Now, his body should fix itself. But we should not leave him in the street. Let us take him into my home while he recovers. Ah, but where are my manners? My name is Otto Fuchs. I am a medical doctor, if you still respect the profession after seeing the state of the hospital.' You have to admit, he does seem to be less... sex-crazed than the staff there. 'Can you walk, young sir?' he asks the rabbit, helping him to stand. The leporine doesn't bother to answer, instead refusing the aid and standing alone before taking a few confidant steps. 'He shot me in the shoulder, not the leg, doc, but thank you. I should be alright now,' he says cheerfully, especially for someone recovering from a gunshot wound.";
 	WaitLineBreak;
 	say "     'Suit yourself,' Otto grunts, carefully removing his gloves and stuffing them into a plastic bag. The rabbit walks back up the steps to his home, rolling his shoulder to make sure there isn't any permanent damage. Unsurprisingly, like most of the other infected, his ability to recover from harm seems to be phenomenal and from looking at him, you wouldn't believe he had been shot several minutes ago. As he opens the door, he waves and calls out thanks to you both. You turn back to Dr. Fuchs as he finishes closing his bag and straightens up again. 'I appreciate the concern that you showed for that young man. Many might have run the opposite direction, so thank you. I would say that I hope to see you again, but you might not want to hear that from a doctor,' he says with a chuckle. 'So instead, I shall wish you well and hope to see you under fairer circumstances.' With that, he trudges back across the road and enters his own apartment. As you leave the area, you thank your lucky stars that there are still sane doctors in the city.";
-	now hp of Otto is 1;
+	now HP of Otto is 1;
 	add "Otto Quest" to OpenQuests of Player;
 	now Wounded Civilian is resolved;
 
@@ -212,11 +213,12 @@ Object	Name
 Doctor & Soldier	"Doctor & Soldier"
 
 Doctor & Soldier is a situation.
+ResolveFunction of Doctor & Soldier is "[ResolveEvent Doctor & Soldier]".
 Prereq1 of Doctor & Soldier is Wounded Civilian.
 The level of Doctor & Soldier is 0.
 The sarea of Doctor & Soldier is "Outside".
 
-Instead of resolving Doctor & Soldier:
+to say ResolveEvent Doctor & Soldier:
 	DoctorandSoldierEvent;
 
 to DoctorandSoldierEvent: [Otto saves a soldier's life]
@@ -250,7 +252,7 @@ to DoctorandSoldierEvent: [Otto saves a soldier's life]
 	say "     The only people remaining are yourself, the ex-soldier, the two medical staff, and the three individuals that intimidated the hyenas. 'Thank the Pack for me the next time you see them. That wouldn't have gone nearly as well without you,' Otto addresses the wolf, gratitude obvious on his face. 'It would be a lot easier if you would accept the Den Mother's offer of protection, but we understand that you can help more people out here. But I better report to my Alpha, be careful, Otto.' He drops to all fours and runs down a side street, towards where you heard the howl earlier. Looking surprisingly grim, the larger tiger steps up to the doctor and rests his paw on his shoulder. 'We need to talk in private about what just happened.' Fuchs's shoulders slump, but he nods. A brief flash of anger crosses Genevieve's face at the tiger's words, but she quickly stifles this, giving you a grateful nod before gently guiding the recent patient towards Otto's house.";
 	WaitLineBreak;
 	say "     The doctor turns to you and shakes your hand. 'You seem to turn up when things go pear-shaped, don't you? Almost as if you know when I'll need help. Thank you, hopefully I'll see you again under better circumstances next time.' The words seem foreboding after the tiger's request to him. Bidding them goodbye, you walk away down the street. Unseen by you, the crocodile and the tiger stonily escort Otto into his house and close the door behind themselves.";
-	now hp of Otto is 2;
+	now HP of Otto is 2;
 	now Doctor & Soldier is resolved;
 
 Table of GameEventIDs (continued)
@@ -258,12 +260,13 @@ Object	Name
 Doctor Through the City	"Doctor Through the City"
 
 Doctor Through the City is a situation.
+ResolveFunction of Doctor Through the City is "[ResolveEvent Doctor Through the City]".
 Prereq1 of Doctor Through the City is Doctor & Soldier.
 Prereq1Resolution of Doctor Through City is { 1, 2 }.
 The level of Doctor Through the City is 0.
 The sarea of Doctor Through the City is "Outside".
 
-Instead of resolving Doctor Through the City:
+to say ResolveEvent Doctor Through the City:
 	DoctorThroughtheCityEvent;
 
 to DoctorThroughtheCityEvent: [Otto relocates to the Green Apartments]
@@ -286,18 +289,18 @@ to DoctorThroughtheCityEvent: [Otto relocates to the Green Apartments]
 	say "     'We'll probably be seeing you again in future, I'm sure,' Argos says readying to return to wherever he resides. One of the wolves gives you a salute, much to the amusement of some of his friends. 'I would appreciate it if you had the time to check on Otto every now and again. He's a good man, but he has a tendency to help anyone who needs help. Something to do with the importance of his principles. But as you saw from the outcasts of the hyena gang, some victims have enemies that don't want them saved.' He pats you on the shoulder before dropping to all fours and loping away, followed by his pack-mates. Giving a smile and waving as they leave, you now have to decide what to do next.";
 	move player to Green Apartment Building;
 	AddNavPoint Green Apartment Building;
-	now hp of Otto is 3;
+	now HP of Otto is 3;
 	now Doctor Through the City is resolved;
 
 
-instead of going to Green Lobby while hp of Otto is 3:
+instead of going to Green Lobby while HP of Otto is 3:
 	say "     Entering the lobby of the apartment building, you almost collide with someone, profusely apologizing before you realize that it is Dr. Fuchs. Looking around, you frown as you notice a pile of baggage with Genevieve sitting atop it. She waves as she spots you, hopping up and walking over and give you a quick hug before stepping back so that you can talk to the doctor. You begin to question whether he is being evicted from another home, but he shakes his head. 'Not exactly. Someone seems to have claimed the apartment that I thought would be mine. They are quite determined not to move so Genevieve and I have had to make do with living in the lobby,' Otto explains, noticeably perspiring. 'I don't want to involve the Pack, but nor can I remain out here where it isn't safe.' It would appear that he is in quite the conundrum.";
 	say "     Looking around, you ask whether he has tried the ground-floor apartments to see whether they have anyone living in them. 'That was one of the first things that Genevieve did, but she said that they were occupied too,' Dr. Fuchs replies before the fox chimes in, '1C wasn't, but it didn't have a floor.' You walk over to one of the doors, 1A, and are about to knock but upon noticing the words 'Carnivorous Furniture' spray-painted across it. A quick look reveals that 1B and 1D are simularly marked. With a shrug you turn back to the doctor and explain what the doors say and that you can probably get rid of the monsters inside. 'Carnivorous Furniture? What rot! The nanites are unable to animate inanimate objects or the deceased,' Otto grumbles. 'Next time, tell me what the signs say, girl,' he mutters at the female vulpine, who looks embarrassed. 'It sounded scary and I didn't wish to risk being hurt,' she says defensively, earning a snort from the older man. 'Pull out the nails and lets go in. Genevieve, how about you go first to make sure a table with sharp teeth doesn't get me, ja?' Otto teases her. You're sure that whatever the fox is saying under her breath isn't polite, but she complies anyway once you remove the obstructions from the doorway.";
 	WaitLineBreak;
 	say "     Peering in after her, the room is dark, almost unnaturally so, and you are sure that you can hear skittering. Maybe there is someone living here and that they put up the warnings to deter trespassers. 'I don't like this Otto. I can barely see a thing. Could you get a torch for me sil vous plait?' Genevieve asks, fear soaking her voice. The doctor crouches beside the bags and begins to rifle through, his movement drawing your attention away from the fox. Just as Oto manages to find a torch, the scuttling sound from room becomes louder and the vulpine nurse lets out a shocked gasp and stumbles back against you, tripping and falling to her knees. Turning back, you are in time to see what looks like a chair, its feet tipped with jagged claws and a maw full of teeth on the seat, leap at Genevieve and lash out with one of its legs, slashing down her face and cause her to scream in agony, blood welling past her paws as she puts them up to protect her face. Without giving much thought, you drag her out of the room with one hand and savagely kick the monster, making it leap back with a snarl. As soon as it is back inside, you pull the door closed with a slam, hearing whatever it was angrily battering from the other side, with others joining it as the noise increases. 'Carnivorous Furniture' seems to have been an accurate warning.";
 	say "     Dr. Fuchs reacts swiftly upon the situation taking a disastrous turn, grabbing a medkit from a bag before leaping across to attend to the fox. Genevieve is still sobbing, an increasing amount of blood glistening on her dark fur, but she has enough sense of mind to move her paws aside to allow the doctor to examine the wound. The sharp intake of breath indicates that something is very wrong. 'I need you to search my bags and find an effigy of a fox. Now. Tip everything out if necessary,' Otto orders you, his voice strained with urgency. 'Once you find it, smash it on the floor. The Den Mother gave it to me in case I ever needed her help.' Hurrying past him, you see Genevieve faint, her breaths quick and shallow. 'Oh my sweet girl, hang on a little longer...' Otto says under his breath. As you desperately tip suitcases and bags upside down, the doctor impatiently shouts, 'The wound is all the way down to the bone. If you don't find it soon, there is going to be permanent damage. The nanites usually repair the host, but she isn't healing. I don't know what those creatures were, but they've injured Genvieve beyond the nanite's help, and mine.'";
 	WaitLineBreak;
-	if hp of Cadmea > 1: [Met the leaders of the Pack]
+	if HP of Cadmea > 1: [Met the leaders of the Pack]
 		say "     Finally finding the effigy, you hurl it against the floor and watch as it shatters, sending fragments everywhere. You wait a few seconds for something to happen before the fragments seem to dissolve into a white smoke that obscures everything from view for a moment before clearing again, two additional figures now in the room with you. You recognize them as Cadmea and Sirius, the Den Mother and Pack Alpha of there little group, the larger black-furred wolf standing protectively over the smaller white-furred vulpine. They barely acknowledge your presence before quickly moving to beside the doctor and Genevieve. 'What happened? How can I help?' Cadmea asks before gasping as she sees the state that the injured fox is in. 'We were going to move into the room over there, but some sort of creature attacked Genevieve before I had even reached the door. The wound isn't healing and I didn't know what else to do,' Dr. Fuchs quickly explains on the verge of tears.";
 	else: [Have not met the leaders of the Pack]
 		say "     Finally finding the effigy, you hurl it against the floor and watch as it shatters, sending fragments everywhere. You wait a few seconds for something to happen before the fragments seem to dissolve into a white smoke that obscures everything from view for a moment before clearing again, two additional figures now in the room with you. One is a imposing bipedal wolf with fur so dark that it appears to leech some of the light around him, his posture protective of the other arrival, a smaller white-furred kitsune with seven tails fanning out behind her and wearing a tunic like garb protecting her modesty, though the slight swell of her chest suggests that she is female and in all likelihood the Den Mother that Otto was so desperate to come. They don't even acknowledge your presence, quickly moving to beside the doctor and Genevieve. 'What happened? How can I help?' the kitsune asks before gasping as she sees the state that the injured fox is in. 'We were going to move into the room over there, but some sort of creature attacked Genevieve before I had even reached the door. The wound isn't healing and I didn't know what else to do,' Dr. Fuchs quickly explains on the verge of tears.";
@@ -313,7 +316,7 @@ instead of going to Green Lobby while hp of Otto is 3:
 	say "     'I hope that she will be alright. I feel like this is my fault.' Watching them leave, your thoughts are interrupted by Genevieve's voice, quickly followed by Otto shushing her. 'She knew what the price for helping you would be and she did so willingly. If it is anyone's fault, it is mine for telling you to go into that room. If anything had happened to you...' He doesn't finish the sentence and you turn back to look at them, the older man hugging the vixen with relief, the fox returning his embrace. 'Don't worry about me. With a scar like this, I might get more sympathy from the others in the hotel when I go back. It doesn't hurt either. Think of it as added character rather than a healed wound.' Genevieve is back to her usual cheerful self, looking in a mirror to see the damage, blowing kisses to herself playfully. You wonder how much is natural resilience, and how much is that the kitsune made her forget the agony and fear of the scar's creation...";
 	WaitLineBreak;
 	say "     Don't let us keep you,' Otto calls to you, 'We'll move our things in at our own pace. Those tables have shown me that sitting in the hall for a bit isn't as bad as I had thought.' While he isn't explicitly telling you to leave, you get the impression that he is putting on a brave face for you and that he needs some time to contemplate the recent brush with tragedy. With a smile, you bid the two of them goodbye and walk out the door, leaving the two medical professionals to relax against their luggage, Dr. Fuchs looking distinctly gray and exhausted.";
-	now hp of Otto is 4;
+	now HP of Otto is 4;
 	change the northeast exit of Green Lobby to Otto's Apartment; [connecting the location to the travel room]
 	change the southeast exit of Otto's Apartment to Green Lobby; [connecting the location to the travel room]
 	move Otto to Otto's Apartment;

@@ -9,7 +9,8 @@ Table of GameEventIDs (continued)
 Object	Name
 Central Library	"Central Library"
 
-Central Library is a situation. The level of Central Library is 6.
+Central Library is a situation.
+ResolveFunction of Central Library is "[ResolveEvent Central Library]". The level of Central Library is 6.
 The sarea of Central Library is "High".
 centrallib is a number that varies.
 libfight is a number that varies.
@@ -27,7 +28,7 @@ when play begins:
 	add Central Library to BadSpots of FemaleList;
 	add Central Library to BadSpots of FurryList;
 
-Instead of resolving a Central Library:
+to say ResolveEvent Central Library:
 	if centrallib is 0:
 		now centrallib is 1;
 		say "     You find your way to the city's Central Library, once an impressive stone building that has been suffering due to neglect by the city. And the recent crisis has not helped at all. You can see signs of a fire on one side, blackened with soot. As you get closer, about to cross the street to approach the entrance, you spot a burly security guard on the steps between the stone lions. A large, muscled fellow covered in dark fur and battered jacket. It is one of those crazed wolverines you've seen in the area guarding with manic obsession and great violence.";
@@ -553,7 +554,7 @@ name	desc	weight	object
 "Wild Animals"	"A book on the mating habits of animals that you retrieved from the library. You could use it for a little [']personal['] reading if you'd like to get yourself excited."	2	Wild Animals
 "First Aid Manual"	"A guide to proper first aid that should be handy to hang onto."	1	First Aid Manual
 
-Wild Animals is a grab object. It is part of the player. It is not temporary.
+Wild Animals is a grab object. It is not temporary.
 
 instead of using Wild Animals:
 	say "     You pull out the book and flip through it, letting yourself become excited by the photos and scenes of wild, animal sex described within. You feel hornier after reading it, but also a little less human, having sunk further into the infection's untamed desires.";
@@ -569,7 +570,7 @@ instead of using Wild Animals:
 
 the scent of Wild Animals is "     It smells like an old book, though there's a faintly arousing scent lingering around it as well.".
 
-First Aid Manual is a grab object. It is part of the player. It is not temporary.
+First Aid Manual is a grab object. It is not temporary.
 
 instead of using First Aid Manual:
 	say "     You pull out the book and flip through it, scanning through its procedures for dealing with various injuries. It should be handy if you get hurt out in the city.";

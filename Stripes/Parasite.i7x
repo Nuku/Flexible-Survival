@@ -17,12 +17,13 @@ Object	Name
 Insect Hive	"Insect Hive"
 
 Insect Hive is a situation.
+ResolveFunction of Insect Hive is "[ResolveEvent Insect Hive]".
 The sarea of Insect Hive is "High".
 when play begins:
 	add Insect Hive to BadSpots of MaleList;
 	add Insect Hive to badspots of FeralList;
 
-Instead of resolving a Insect Hive:
+to say ResolveEvent Insect Hive:
 	say "     Searching through the high rise district, you start along a shadowy alley between two towers. You slow as you spot something unusual here. Scattered in clusters along the side are sticky orbs. They have a rather gelatinous appearance and are split open with trails of sticky slime leading from them further into the alley. All of this gives you strong reason to pause, unsure if you want to continue forward.";
 	say "[bracket]Extreme content warning.[close bracket][line break]";
 	say "     [bold type]Shall you proceed?[roman type][line break]";
@@ -240,7 +241,7 @@ When Play begins:
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "segmented"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "insectile"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]

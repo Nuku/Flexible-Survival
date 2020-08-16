@@ -35,6 +35,7 @@ Object	Name
 Labors Introduction	"Labors Introduction"
 
 Labors Introduction is a situation.
+ResolveFunction of Labors Introduction is "[ResolveEvent Labors Introduction]".
 The sarea of Labors Introduction is "Museum".
 The Level of Labors Introduction is 30.
 
@@ -43,7 +44,7 @@ after going to Museum Foyer while (Labors Introduction is active and Labors Intr
 	move player to Museum Foyer;
 	LaborsIntroductionEvent;
 
-Instead of resolving Labors Introduction:
+to say ResolveEvent Labors Introduction:
 	LaborsIntroductionEvent;
 
 to LaborsIntroductionEvent: [Invited to perform the Labors]
@@ -64,6 +65,7 @@ Object	Name
 Meet the Nemean Lion	"Meet the Nemean Lion"
 
 Meet the Nemean Lion is a situation.
+ResolveFunction of Meet the Nemean Lion is "[ResolveEvent Meet the Nemean Lion]".
 Prereq1 of Meet the Nemean Lion is Labors Introduction.
 The level of Meet the Nemean Lion is 30.
 The sarea of Meet the Nemean Lion is "Plains".
@@ -72,7 +74,7 @@ instead of going to Dry Plains while (Meet the Nemean Lion is active and Meet th
 	move player to Dry Plains;
 	MeettheNemeanLionEvent;
 
-Instead of resolving Meet the Nemean Lion:
+to say ResolveEvent Meet the Nemean Lion:
 	MeettheNemeanLionEvent;
 
 to MeettheNemeanLionEvent: [Fight the Nemean Lion]

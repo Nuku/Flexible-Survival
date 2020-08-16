@@ -164,6 +164,7 @@ Object	Name
 JoshiroEncounterTale 1	"JoshiroEncounterTale 1"
 
 JoshiroEncounterTale 1 is a situation.
+ResolveFunction of JoshiroEncounterTale 1 is "".
 The sarea of JoshiroEncounterTale 1 is "Nowhere".
 
 after going to Darius's Crib while (JoshiroEncounterTale 1 is active and JoshiroEncounterTale 1 is not resolved and a random chance of 1 in 3 succeeds and HP of Darius > 0 and Darius is in Darius's Crib):

@@ -181,7 +181,7 @@ When Play begins:
 	now lootchance entry is 40;
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;
 	now body descriptor entry is "[one of]slender[or]curvy[or]mesmerizing[or]hypnotic[at random]";
 	now type entry is "aquatic";
@@ -318,7 +318,7 @@ name		desc	weight	object
 
 hermaid kelp is a grab object.
 It is temporary.
-it is part of the player.
+
 the usedesc of hermaid kelp is "[HKelpUse]".
 
 to say HKelpUse:

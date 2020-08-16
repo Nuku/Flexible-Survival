@@ -187,13 +187,14 @@ Object	Name
 Let's Party	"Let's Party"
 
 Let's Party is a situation.
+ResolveFunction of Let's Party is "[ResolveEvent Let's Party]".
 Let's Party is inactive.
 The sarea of Let's Party is "Campus".
 when play begins:
 	add Let's Party to BadSpots of MaleList;       [frat boys]
 	add Let's Party to BadSpots of FemaleList;      [sorority girls]
 
-Instead of resolving a Let's Party:
+to say ResolveEvent Let's Party:
 	SatyrFratPartyVisit;
 
 instead of going south from Greek Street while (SatyrFratPartyStage > 0 and SatyrFratPartyStage < 99):
@@ -583,7 +584,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "Pan's Special Reserve"	"A tiny bottle holding rich, red wine. Its contents come right from the party-god Pan's private wine-cellar. Quite a special and precious drink you got there."	1	Pan's Special Reserve
 
-Pan's Special Reserve is a grab object. It is part of the player. Understand "wine" as Pan's Special Reserve. Pan's Special Reserve is infectious. The strain of Pan's Special Reserve is "Satyr".
+Pan's Special Reserve is a grab object. Understand "wine" as Pan's Special Reserve. Pan's Special Reserve is infectious. The strain of Pan's Special Reserve is "Satyr".
 
 The usedesc of Pan's Special Reserve is "[SpecialWineUsing]";
 
@@ -604,6 +605,7 @@ Object	Name
 Divine Wine-Cellar	"Divine Wine-Cellar"
 
 Divine Wine-Cellar is a situation.
+ResolveFunction of Divine Wine-Cellar is "[ResolveEvent Divine Wine-Cellar]".
 Divine Wine-Cellar is inactive.
 The sarea of Divine Wine-Cellar is "Museum".
 
@@ -620,7 +622,7 @@ when play begins:
 JaksEncounters is a number that varies.
 LastJaksEncounter is a number that varies. LastJaksEncounter is usually 2500.
 
-Instead of resolving a Divine Wine-Cellar:
+to say ResolveEvent Divine Wine-Cellar:
 	now battleground is "void";
 	if debugactive is 1:
 		say "DEBUG -> JaksEncounters: [JaksEncounters], LastJaksEncounter: [LastJaksEncounter] <- DEBUG[line break]";

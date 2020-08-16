@@ -39,13 +39,14 @@ Object	Name
 Meeting Orthas	"Meeting Orthas"
 
 Meeting Orthas is a situation.
+ResolveFunction of Meeting Orthas is "[ResolveEvent Meeting Orthas]".
 The sarea of Meeting Orthas is "Nowhere".
 
 instead of going to Trevor Labs Lobby while (Meeting Orthas is not resolved and Resolution of Meeting Orthas is 0 and Orthas is in Trevor Labs Lobby):
 	move player to Trevor Labs Lobby;
 	MeetingOrthasEvent;
 
-instead of resolving Meeting Orthas:
+to say ResolveEvent Meeting Orthas:
 	MeetingOrthasEvent;
 
 to MeetingOrthasEvent:
@@ -237,10 +238,11 @@ Table of GameEventIDs (continued)
 Object	Name
 Orthas's House	"Orthas's House"
 
-Orthas's House is a situation. The level of Orthas's House is 5. It is inactive.
+Orthas's House is a situation.
+ResolveFunction of Orthas's House is "[ResolveEvent Orthas's House]". The level of Orthas's House is 5. It is inactive.
 The sarea of Orthas's House is "Red".
 
-instead of resolving Orthas's House:
+to say ResolveEvent Orthas's House:
 	if HP of Orthas is not 5:
 		say "ERROR-Orthas-[HP of Orthas]E: Incorrect event activation.";
 	else if HP of Doctor Matt > 100:
@@ -326,7 +328,7 @@ name	desc	weight	object
 "crossbow"	"A sporting crossbow. More for target practice than actual hunting, but still a fine and intimidating weapon. There's a good-sized set of quarrels to go along with it as well."	8	crossbow
 
 footlocker is a grab object.
-it is part of the player.
+
 It is not temporary.
 
 instead of using footlocker:
@@ -338,7 +340,7 @@ instead of using footlocker:
 
 the scent of the footlocker is "There's no particular scent to this.".
 
-crossbow is armament. It has a weapon "[one of]a quick shot[or]a well-aimed shot[or]your crossbow[or]a crossbow quarrel[or]a launched quarrel[at random]". It is ranged. It is not temporary. It is a part of the player. The weapon damage of crossbow is 6. The objsize of crossbow is 3.
+crossbow is armament. It has a weapon "[one of]a quick shot[or]a well-aimed shot[or]your crossbow[or]a crossbow quarrel[or]a launched quarrel[at random]". It is ranged. It is not temporary. The weapon damage of crossbow is 6. The objsize of crossbow is 3.
 
 
 Section 4 - Sex with Orthas
@@ -591,7 +593,7 @@ When Play begins:
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]powerful[or]strong[or]muscular[at random]";
 	now type entry is "draconic"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]

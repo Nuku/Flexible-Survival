@@ -7,13 +7,14 @@ Object	Name
 Demon Chase	"Demon Chase"
 
 Demon Chase is a situation.
+ResolveFunction of Demon Chase is "[ResolveEvent Demon Chase]".
 The sarea of Demon Chase is "Outside".
 
 when play begins:
 	add Demon Chase to badspots of DemonList;
 	add Demon Chase to badspots of IncestList;
 
-Instead of resolving a Demon Chase:
+to say ResolveEvent Demon Chase:
 	say "     Walking through the trash-strewn streets of the inner city, you follow a meandering path, checking out anything that might perhaps be of some use. As you are stopping to investigate the trunk of a car that crashed into a light pole, only to find it empty, you suddenly hear the rapid patter of running footsteps on asphalt. Raising your head from looking into the open trunk, you don't have long to wait before the source of the noise comes shooting out of a nearby alley, claws scratching over the ground as he takes the corner at a full run. It is an anthro Golden Labrador, a young man from the looks of it, dressed in a colorful t-shirt and shorts, and he seems to be running for his life! The guy dashes down the road your way, a backpack bouncing left and right where it is loosely slung over one shoulder - until it isn't as the strap snaps, and the bag is sent crashing to the ground.";
 	say "     The fleeing anthro glances over his shoulder and calls out, 'Fuck!' Yet by the time he does, he's already a dozen feet ahead of where the backpack dropped. His eyes widen when he sees you standing behind the car, and he shouts, 'RUN!' Slowing down for a step or two before focusing ahead of himself once more, he puts in an additional burst of speed. The reason for his panicked flight is revealed before you can do anything at all to react to his call: A lumbering brute of a purple demon barrels out of the original alley the canine came from, his mouth open in a teeth-filled snarl. You look down the street for the Labrador, but the guy has already fled into another alley it seems. That or maybe he's hiding somewhere.";
 	WaitLineBreak;
@@ -103,12 +104,13 @@ Object	Name
 Intercepted Bike Courier	"Intercepted Bike Courier"
 
 Intercepted Bike Courier is a situation.
+ResolveFunction of Intercepted Bike Courier is "[ResolveEvent Intercepted Bike Courier]".
 The sarea of Intercepted Bike Courier is "Outside".
 
 when play begins:
 	add Intercepted Bike Courier to badspots of FeralList;
 
-instead of resolving a Intercepted Bike Courier:
+to say ResolveEvent Intercepted Bike Courier:
 	say "     As you wander the streets of the inner city, avoiding all sorts of roaming creatures and skirting around piles of trash and some burned-out cars, you come upon a dented bicycle. The front wheel is twisted into more or less a figure-eight shape, and ripped articles of clothing are scattered in front and on top of it. All of that isn't really extraordinary, but a feeling draws you in nonetheless, so you have a closer look: pulling aside a t-shirt crusty with dried cum reveals a bright red backpack lying on the bike, with the logo of the 'Flash Delivery' bike courier company emblazoned on its front. Looks like whatever creature got the courier was too busy fucking him to care one bit about his delivery pouch. With rising curiosity, you undo the zipper and rifle through the pack, finding an energy bar, a bottle of energy drink and a manila envelope inside.";
 	ItemGain food by 1;
 	ItemGain soda by 1;
@@ -143,9 +145,10 @@ Object	Name
 Abandoned Uniform	"Abandoned Uniform"
 
 Abandoned Uniform is a situation.
+ResolveFunction of Abandoned Uniform is "[ResolveEvent Abandoned Uniform]".
 The sarea of Abandoned Uniform is "Outside".
 
-instead of resolving a Abandoned Uniform:
+to say ResolveEvent Abandoned Uniform:
 	say "     Walking through the chaotic streets of the inner city, you are forced to keep an eye out for horny and aggressive creatures all around. At any time, an attack might come from the front, the sides, behind you, or even from above, given that there are flying infected around. All of this results in your attention being elsewhere as you pass one unassuming section of sidewalk and almost slip on a few shell casings scattered on the ground. Catching yourself on a street lantern, you look down and see that someone got off several shots, with more casings forming a little trail towards a nearby alley. Curiosity bids you to follow it, and just a few steps into the alley, you find something left behind the person who must have been the shooter: a shredded police uniform lies on the ground there, still bearing the nametag of 'L. Nielson'. Thankfully, it is free from blood-stains and appears to have simply been ripped apart by explosive growth its wearer went through.";
 	say "     A dried puddle of cum on the ground allows a guess of a fairly typical sex-driven transformation, though who or what might have gotten the man is still a mystery. Or maybe not - as poking around a little reveals the shattered pieces of a bodycam. Looks like someone stepped on it, breaking the little device, but the little box its cables lead to is still clipped to the torn belt, holding a video tape, most likely filled with evidence of the last moments the cop spent as a human. Maybe it'll be an interesting thing to watch sometime, so you push the eject button and stuff the tape into your pocket.";
 	LineBreak;
@@ -176,9 +179,10 @@ Object	Name
 Abandoned Pizza Delivery Car	"Abandoned Pizza Delivery Car"
 
 Abandoned Pizza Delivery Car is a situation.
+ResolveFunction of Abandoned Pizza Delivery Car is "[ResolveEvent Abandoned Pizza Delivery Car]".
 The sarea of Abandoned Pizza Delivery Car is "Outside".
 
-instead of resolving a Pizza Delivery Car:
+to say ResolveEvent Abandoned Pizza Delivery Car:
 	say "     Exploring the city, you come upon an abandoned pizza delivery car. The small red machine bears the logo of 'Tony's Pizza Shop' and is just large enough to hold one person, with a small heated compartment behind the driver for the food to be delivered. On the odd chance that there might be anything left inside, you search the vehicle, but sadly do not come across any food or drink items. What you find instead is a small dash-cam set up under the windshield, complete with a tape inside that seems to have run till its end. Curiosity demands that you take the video tape out and put it into your pack. Maybe there'll be something interesting to see on it?";
 	LineBreak;
 	say "[bold type]'Pizza Delivery Dash Cam Vid' has been added to your tape inventory![roman type][line break]";
@@ -202,13 +206,14 @@ Object	Name
 Dressing Room Spycam	"Dressing Room Spycam"
 
 Dressing Room Spycam is a situation.
+ResolveFunction of Dressing Room Spycam is "[ResolveEvent Dressing Room Spycam]".
 The sarea of Dressing Room Spycam is "High".
 
 when play begins:
 	add Dressing Room Spycam to badspots of HermList;
 
 
-instead of resolving a Dressing Room Spycam:
+to say ResolveEvent Dressing Room Spycam:
 	say "     Checking out one of the more upscale boutiques that dot the streets of the High Rise District, you find yourself standing in the midst of empty clothing racks and displays. Apparently, someone had decided to clean out not only the little fridge for complimentary drinks and snacks, but also all of the designer garments. It's funny how people can prioritize the strangest things even in the midst of an apocalypse. Strolling through the empty shop, you see a few items left here or there, but they have all been stained or torn somehow. Just as you are about to leave, you spot something inside one of the dressing booths that catches your attention. The tiny, enclosed room is thoroughly splattered in dried cum, but the aftermath of a gang-bang isn't actually all that surprising these days. What is, on the other hand, is that one of the ceiling panels above has been opened, and you can see a camera that has been positioned up there.";
 	say "     Looking up at the device, you see a fiber-optics attachment to its lens, suggesting that it was supposed to be hidden from sight - and likely would have remained that way if the panel to obscure it had been replaced. Curiosity pushes you to collect a few of the ruined garments from the rest of the store and throw them down on the sticky mess inside of the dressing room, allowing you to enter and climb up to reach the camera. Checking the small device out, you find that it doesn't respond to your inputs as you press the buttons on the sides. Only the spring-loaded eject button for the tape works, at least giving you access to what the camera recorded last. Apparently, it ran out of power after being left on for too long. Since there's no sign at any kind of loading cable, and electricity is hard to come by these days anyways, you discard the camera and just keep hold of the tape. Who knows, it might contain some explanation what happened here.";
 	LineBreak;
@@ -237,12 +242,13 @@ Object	Name
 Drone Wreckage	"Drone Wreckage"
 
 Drone Wreckage is a situation.
+ResolveFunction of Drone Wreckage is "[ResolveEvent Drone Wreckage]".
 The sarea of Drone Wreckage is "High".
 
 when play begins:
 	add Drone Wreckage to BadSpots of MaleList;
 
-instead of resolving a Drone Wreckage:
+to say ResolveEvent Drone Wreckage:
 	say "     Looking around while exploring the High Rise District, you walk into one of the side alleys behind a number of looted stores. As you turn the corner, a scraping noise can be heard from somewhere ahead, alerting you to the presence of someone or something. Warily moving forward, you edge your way sideways to look behind a big dumpster standing a little distance down the alley and find a small-ish latex fox there, gnawing on a severely mangled technological device. From the looks of it, the creature must have dragged it here to feast on the rubber and plastic components in peace. As soon as the fox spots you, it lets out a frightened screech and flees, sprinting to a nearby storm drain. With a squeak of deforming latex, it then forces its flexible body through the narrow opening into the drain and vanishes into the underground passage.";
 	say "     Left behind in the alley, you check out the device that the latex fox was feeding on. It has a lightweight frame and a white, plastic casing that has been mostly gnawed off, and after a little puzzling around, you realize just what you are looking at. It is a traffic observation drone, part of a prestige project that City Hall rolled out some months ago. This particular example has suffered quite a bit, even before being chewed upon. You can see one of the struts that originally held its plastic propellers bent almost at a right angle. Checking over the wreckage, you manage to salvage a tape marked with the identification number of the drone (#006) and a date that is right around the start of the nanite outbreak. Unable to find any other identifying information, you put the tape in your pocket and make a mental note to watch it later. Maybe there's something that could be of use to you on it?";
 	LineBreak;
@@ -299,12 +305,13 @@ Object	Name
 Lost Explorer	"Lost Explorer"
 
 Lost Explorer is a situation.
+ResolveFunction of Lost Explorer is "[ResolveEvent Lost Explorer]".
 The sarea of Lost Explorer is "Warehouse".
 
 when play begins:
 	add Lost Explorer to badspots of FeralList;
 
-instead of resolving a Lost Explorer:
+to say ResolveEvent Lost Explorer:
 	say "     Roaming the expansive warehouse district in search of anything that might aid your survival in this fallen city, your exploration leads you into a section that has been largely abandoned. Wrecked buildings and long-dead factories dominate your surroundings, creating a fairly creepy ambiance. On top of that, the area seems eerily quiet, missing the usual groans and grunts of creatures rutting in the distance. Maybe there just isn't anything interesting here to attract the post-human denizens of the city, or maybe something is lurking and waiting? You dispel those concerns and soldier on, determined to find some salvage while you're here. Crumbling walls, rusted metal, and countless spray-paint tags are everywhere you look, and [if daytimer is day]even in daylight, the whole area seems tailor-made for a horror movie[else]in the dim moonlight, the whole area appears tailor-made for a horror movie[end if].";
 	say "     Your sense of hopeful exploration wears thinner and thinner as you check out yet another empty building after at least an hour of searching the area. Not even homeless people have occupied these places, and whatever may once have been here has long been looted or willfully destroyed. But just as you are about to give up on this endeavor, a glimpse of crimson draws your attention to an old factory building across the cracked and rubble-covered road. Stepping out of the disappointing ruin, you look up at the factory and see a helmet dangling crookedly from an exposed piece of rebar that sticks out sideways from a landing on the second floor. It looks fairly modern and new, the material still gleaming under the light, and a compact helmet cam has been attached at the front. Letting your gaze wander down, you notice scattered shreds of clothing littering the ground below. Looks like the owner of that helmet didn't fare too well.";
 	say "     [bold type]What do you want to do now?[roman type][line break]";
@@ -355,12 +362,13 @@ Object	Name
 Abandoned Fitness Dojo	"Abandoned Fitness Dojo"
 
 Abandoned Fitness Dojo is a situation.
+ResolveFunction of Abandoned Fitness Dojo is "[ResolveEvent Abandoned Fitness Dojo]".
 The sarea of Abandoned Fitness Dojo is "High".
 
 when play begins:
 	add Abandoned Fitness Dojo to BadSpots of MaleList;
 
-instead of resolving a Abandoned Fitness Dojo:
+to say ResolveEvent Abandoned Fitness Dojo:
 	say "     Checking out one of the more recreational areas of the High Rise District, you come upon a fitness dojo. Looks like martial artists came here to train and have small tournaments. The place clearly hasn't been untouched since the outbreak of the nanite infection, as you can see that the front door has had its glass panes shattered, apparently when someone kicked it open. Checking further into the building, you see that the path of destruction extends further into the building too. In the [']fitness studio['] part of the building with its rows of exercise machines, one of the mirrors on the wall has been severely damaged, cracks radiating out from the impact site of what must have been a significantly large fist. In another spot, the metal disk of a weightlifting set is sticking out of a brick wall, with fragments of shattered bricks on the ground before it. Looks like a fight or something happened in here.";
 	say "     Checking over the further rooms of the building, you find that they are less damaged, though that doesn't mean that others haven't been here before you either. All of the lockers have been rifled through by scavengers, who already made off with everything of value. Well, except possibly what you find in one of the staff only side rooms. Looks like the place had a security camera setup and there still is a tape in the recorder. With any luck, that might contain some explanation what happened here. It is a little bit of a task to pry the tape out of the recorder without power, but you eventually manage it and pocket the thing.";
 	LineBreak;

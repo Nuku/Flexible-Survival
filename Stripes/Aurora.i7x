@@ -11,12 +11,13 @@ Object	Name
 Giant's Frozen Yogurt	"Giant's Frozen Yogurt"
 
 Giant's Frozen Yogurt is a situation.
+ResolveFunction of Giant's Frozen Yogurt is "[ResolveEvent Giant's Frozen Yogurt]".
 The sarea of Giant's Frozen Yogurt is "Capitol".
 the level of Giant's Frozen Yogurt is 5.
 when play begins:
 	add Giant's Frozen Yogurt to BadSpots of FemaleList;
 
-Instead of resolving a Giant's Frozen Yogurt:
+to say ResolveEvent Giant's Frozen Yogurt:
 	if HP of frost giantess is 0:			[first time finding]
 		say "     Turning down some damaged streets, you get to an area where the ground is cracked and there are several flows of molten magma. As you're surveying this, you hear a booming female voice call out to you. Looking over, you find a large figure standing on the opposite side of one of these lava streams. She waves her arms frantically over her head and continues to call out, trying to get your attention. Curiously cautious, you approach.";
 		say "     The giantess stands roughly ten or eleven feet tall and has a strong build with some obvious muscle to it. Her skin is powder blue in color and she has darker blue hair. Her eyes are purple, as are her lips and nipples. These last you can partially see through the stretched material of her torn shirt trying to cope with her enlarged body and bosom. While proportionately about a C-cup to her size, that makes them something more like big F-cup tits. Her pants, now stretched to their limit around her hips, are now tight shorts on her large frame.";

@@ -19,9 +19,10 @@ Object	Name
 Lady Surrounded by Butterflies	"Lady Surrounded by Butterflies"
 
 Lady Surrounded by Butterflies is a situation.
+ResolveFunction of Lady Surrounded by Butterflies is "[ResolveEvent Lady Surrounded by Butterflies]".
 The sarea of Lady Surrounded by Butterflies is "Plains".
 
-Instead of resolving a Lady Surrounded by Butterflies:
+to say ResolveEvent Lady Surrounded by Butterflies:
 	say "     While making your way across the dry plains, you come across the mystical sight of a woman with long black hair being surrounded by butterflies. When her stray tresses begin to flutter through the air you lower your mouth in awe as you watch the woman stroke a tanned hand back behind her billowing hair. Then, before you can move some of the butterflies come over to playful dance alongside her hair. None of the insect-like creatures seem to be remotely interested in sexually trying to entice the woman into relieving herself from the black cowl she has wrapped around her figure. Instead the butterflies seem to be almost trying to make the woman smile as they circle around her, making her eyes track their movements as they move quickly back and forth before her face. This doesn't make the woman's lip rise from their downcast frowning, but her eyes do begin to twinkle slightly. The sight of several other butterflies coming over to aid their friends['] efforts makes you feel something at peace on the inside as you continue to watch the other for several minutes before blinking as you notice the woman turning to start walking away. Thankfully though the woman and her butterfly entourage are moving opposite of where you are. Gulping and feeling like a voyeur you make your way about your business as swiftly as you can. The sight of the woman will stay with you a long while after though.";
 	SanBoost 10;
 	increase score by 1;
@@ -35,9 +36,10 @@ Object	Name
 Dorms Part One	"Dorms Part One"
 
 The Dorms Part One is a situation.
+ResolveFunction of The Dorms Part One is "[ResolveEvent The Dorms Part One]".
 The sarea of The Dorms Part One is "Campus".
 
-Instead of resolving a The Dorms part one:
+to say ResolveEvent The Dorms part one:
 	say "     Heading through the dormitory area of the college campus, you find yourself coming to a slow halt as you hear the rampant sounds of laughter coming from a slightly open doorway. Curious as to what the joke is you walk over to the slightly parted doorway and then push at the wood barrier carefully with your foot to get a better look inside. What you come to find is a small collective of half changed guys all piled around while playing video games together in front of a big screen TV. The dorm boys don't seem to be bothered by the fact that they are losing their humanity as the two collie boys nudging each another on the couch seem much more interested in whatever game their competing against. Back behind them two other students, a cougar and panther, respectfully, stand tall while pointing, jeering and laughing at their friend's antics. Seeing this you pull yourself away from your position by the door to walk away on down the hall. It feels good to know that some things will never change despite the epidemic going on.";
 	increase score by 1;
 	now The Dorms Part One is Resolved;
@@ -50,9 +52,10 @@ Object	Name
 Dorms Part Two	"Dorms Part Two"
 
 The Dorms Part Two is a situation.
+ResolveFunction of The Dorms Part Two is "[ResolveEvent The Dorms Part Two]".
 The sarea of The Dorms Part Two is "Campus".
 
-Instead of resolving a The Dorms Part Two:
+to say ResolveEvent The Dorms Part Two:
 	say "     Moving throughout the dormitories, you stroll through the plush carpeted hallways until you hear the sounds of faint sobbing coming in through an open doorway making you stop in your tracks. Not really sure, but feeling as though you should go and have a look to see what the problem is you make your way over to the half open door and then stick your head inside of the room. What you see is a small puma girl being held in the arms of a larger Siberian tiger girl as the smaller feline cries and nuzzles her forming snout into her friend's shoulder. 'I-I can't go home like this, Carol!' The puma lifts her head to yowl up at the white tiger.";
 	WaitLineBreak;
 	say "     'They'll disown me for sure over this! Bad enough that they ship me out here after finding out that I'm a lesbian! Now I'm turning into a cat too!?' The white tigress, Carol, simply looks at her companion and then leans down to lick the other over the face in a reassuring gesture. The soft sweeps of the bigger cat's tongue over the smaller feline's face seem almost loving as the white tiger consoles her friend. 'It'll be fine Liz.' The tigress starts to say as pulls herself back to stare at the other girl. 'If push comes to shove and they don't take you back then you can just move in with me and my folks!' The tigress purrs to the other before pulling the puma girl close. 'I know my folks would love to have you as a second daughter since all they've got, besides me, is a bunch of good-for-nothing sons.' The white tigress smiles while saying this.";
@@ -71,6 +74,7 @@ Object	Name
 Dorms Part Three	"Dorms Part Three"
 
 The Dorms Part Three is a situation.
+ResolveFunction of The Dorms Part Three is "[ResolveEvent The Dorms Part Three]".
 The sarea of The Dorms Part Three is "Campus".
 When play begins:
 	Add The Dorms Part Three to BadSpots of FurryList;
@@ -78,7 +82,7 @@ When play begins:
 	Add The Dorms Part Three to BadSpots of FemaleList;
 	Add The Dorms Part Three to badspots of HermList;
 
-Instead of resolving a The Dorms Part Three:
+to say ResolveEvent The Dorms Part Three:
 	say "     Making your way through the college dorms, you find yourself stumbling over a large fluffy towel lying prone in the middle of the floor. Wondering who had left that there, you turn your head to regard several distinct noises coming out from the huge co-ed washroom on your left - or at least it's been relabeled as co-ed now. Your suspicions on the situation are confirmed after you kick the offending towel and notice that the cotton material is quite sticky with musky goop. Feeling quite curious to check it out, you do pause to wonder if you should have a look inside... for educational purposes of course.";
 	say "     [bold type]Go in?[roman type][line break]";
 	LineBreak;
@@ -120,12 +124,13 @@ Object	Name
 Training Room	"Training Room"
 
 Training Room is a situation.
+ResolveFunction of Training Room is "[ResolveEvent Training Room]".
 The sarea of Training Room is "Campus".
 When play begins:
 	Add Training Room to BadSpots of FurryList;
 	Add Training Room to BadSpots of MaleList
 
-Instead of resolving a Training Room:
+to say ResolveEvent Training Room:
 	say "     Finding your way through the campus grounds, you end up making your way downstairs inside of the college's gymnasium after jogging across the slightly sticky grass over to the imposing looking building. The musky smell of sweat and testosterone is heavy here, but surprisingly there is little cum or female juice wafting about on either the walls or the training equipment. Raising an eyebrow at this you figure out why as you notice a large wolverine standing by the door you just entered through. The large and slightly hunched over male is draped in barely any clothing, but from what you can see as you walk next to him he is far from aroused as he looks over the students assembled within the room with a calculating look in his dark eyes. Either this man was once one of the gym teachers before the epidemic and watching out over the place to make sure that it stayed in top shape, or either he had been put here by someone else to do the same thing. Either way, from the look the wolverine gives you as you enter into the room, you can see in his eyes that he won't accept any nonsense from you. Nodding to him while making sure to keep an arm's length of space between the two of you, you go over to have a better look at the gym and its surroundings.";
 	WaitLineBreak;
 	say "     All around you, students strain their bodies to become in greater shape than what their individual mutations have bestowed upon them, and upon seeing this, you give a nod to them for their fortitude. Over by the leftmost side of the room, there are several canids and equines busy hitting a bunch of assorted punching bags hanging from the ceiling. Not far from them are several more canines jogging on treadmills, while next to them several athletic felines use various weight machines to strengthen themselves. Over by the rightmost wall are three students - a rabbit, a lemur, and a collie - who are busy doing pushups, and from the looks of things, they are making a contest of it. Seeing everyone working so hard makes you want to try and do something yourself, but looking at the group around you, you wonder if you should just take over a piece of equipment as you aren't [']technically['] a student.";
@@ -171,13 +176,14 @@ Object	Name
 Janitor's Closet	"Janitor's Closet"
 
 Janitor's Closet is a situation.
+ResolveFunction of Janitor's Closet is "[ResolveEvent Janitor's Closet]".
 The sarea of Janitor's Closet is "Campus".
 When play begins:
 	Add Janitor's Closet to BadSpots of FurryList;
 	Add Janitor's Closet to BadSpots of MaleList
 
 
-Instead of resolving a Janitor's Closet:
+to say ResolveEvent Janitor's Closet:
 	say "     Hearing something coming from the closet, you are just now passing you are almost afraid to know what's going on in there, but inquisitiveness makes you step over to the door to place an ear to the flat of the wood. The muffled sounds of someone groaning and whimpering have you tilting your head to the side in curiousness. Wanting to know what's going on and, lacking any thought that you are about to put yourself in danger, you reach a hand out to turn the knob of the door to open it. Pulling the barrier open you find yourself being tackled by a large furry form before you know what's happening. Grunting when your back hits the far wall you shake your head and then blink when you find yourself looking up into the growling, lustful face of a giant wolftaur. Cursing yourself, and wondering if this is what Pandora once felt like, you snarl back at the mutant and then prepare yourself for an inevitable conflict.";
 	challenge "Wolftaur";
 	if lost is 0:
@@ -199,9 +205,10 @@ Object	Name
 Teachers Lounge	"Teachers Lounge"
 
 Teachers Lounge is a situation.
+ResolveFunction of Teachers Lounge is "[ResolveEvent Teachers Lounge]".
 The sarea of Teachers Lounge is "Campus".
 
-Instead of resolving a Teachers Lounge:
+to say ResolveEvent Teachers Lounge:
 	say "     Hearing the voices of people talking, you find yourself turning to see a room marked Teacher's Lounge. Instantly your body freezes up as old memories of how you had been taught not to enter a room marked with this title grab at your heart. However, being the older and much more mature person that you are, you simply disregard these old feelings in favor of going into the room. Once you do, however, you find several eyes immediately locking with yours in confusion as the gathered group of staff turn to look at you. From what you can see, most of the people here have already transformed into more animal-like figures, though each and every one of them appear to be in complete control of themselves as no one is either naked or losing themselves in a rutting haze. You blink twice at seeing two giraffes sitting on a large plush sofa off to the side while drinking something slightly steaming, probably coffee. When a large and bored looking skunk with a red stripe going down his tail grunts to get your attention, you simply chuckle unsurely at the others and then nod to them before stepping back out of the room. Obviously the teachers were trying to get a small break in before having to go out to deal with their students. No sense in bothering them, right?";
 	increase score by 1;
 	now Teachers Lounge is resolved;
@@ -214,9 +221,10 @@ Object	Name
 Campus Rooftop	"Campus Rooftop"
 
 Campus Rooftop is a situation.
+ResolveFunction of Campus Rooftop is "[ResolveEvent Campus Rooftop]".
 The sarea of Campus Rooftop is "Campus".
 
-Instead of resolving a Campus Rooftop:
+to say ResolveEvent Campus Rooftop:
 	say "     Trudging up several flights of stairs, you find way up to the uppermost floor of the college's main building and then come upon a metal door marked [']Roof[']. Smirking at the incredulity of someone needing to actually put a sign up on the only door at the top of the highest floor you throw open the barrier and then step outside. What you see when you head onto the roof make you freeze as you spy several students, some dressed in the college's standard issue uniforms, and some not, busying themselves with this or that or the other. From what you can see there are two gorillas are busily making out over by the left side of the roof's fence. One monkey guy is talking to a smiling and chuckling rat girl. A group of four of leather jacket clad wolves is busy playing cards over by the right side of the roof - most of them are growling and baiting each other with snaps of their muzzles. And one lone female feline wearing a black miniskirt is smoking while looking up to the sky. From what you can see everyone is busy trying to either enjoy themselves or just trying to make the day pass by just a little quicker by ignoring the happenings around them. Deciding to do the same, since you are here and all, you unceremoniously walk over to an empty side of the roof and then grab the fence protecting you from stepping out over the edge of the building. Looking down at the world below you stare in awe at the large campus of the college as the wide open space stretching out for almost miles around you dominates your vision.";
 	WaitLineBreak;
 	say "     From what you can see, there is much more to explore than what you could have been shown in any pamphlet. It takes you a second to recall that you did remembering seeing this place once before in a brochure, but you're not exactly sure when that was. Shaking your head you realize that it doesn't matter now. The breathtaking sight and feel of the college makes you shake your head to ward off the meaningless reminiscence as you watch so many anthros moving around down on the ground. Some were in groups. Some were alone. Some were trying to fuck each other and some were just strolling along without a care in the world. While drifting off as you do you don't feel it when someone comes over to brush up against your back. Too busy being enthralled by all of this awesomeness you also don't take notice when said someone kisses you on the cheek and then places something into your backpack. What you do notice is that after thirty minutes of just staring you are more than ready to head out back into the wide and crazy world down below. When you look around you find that almost everyone else has departed, save for the female feline still smoking her cigarette. You smile to the black skirt wearing feline without her seeing you, more out of politeness than infatuation, really, before heading back down into the main building of the college.";
@@ -249,12 +257,13 @@ Object	Name
 DogAndPony Show	"DogAndPony Show"
 
 DogAndPony Show is a situation.
+ResolveFunction of DogAndPony Show is "[ResolveEvent DogAndPony Show]".
 The sarea of DogAndPony Show is "Campus".
 When play begins:
 	Add DogAndPony Show to BadSpots of FurryList;
 	Add DogAndPony Show to BadSpots of MaleList;
 
-Instead of resolving a DogAndPony Show:
+to say ResolveEvent DogAndPony Show:
 	say "     'I really wish the water would come on already!' A voice rumbles dangerously just as you pop your head into the laundry area nestled downstairs in the campus's main building basement. Having been wandering around all this time you had only come down here because you were wondering about the full extent of the campus and now it would see that your journey has led you to quite an interesting scene. Standing there in the middle of the large expanse of a room jam-packed washers and dryers is a naked shire horse leaning against up against the wall with his muscular arms crossed together over his impressive chest. Over on the left side of the stallion - as you can tell the other is by the prodigious sheath and full testicles swaying between the horse's black legs - is a smaller Doberman scowling at the now defunct washer machine. His clothes sit atop the unusable machine in a bright blue basket. 'Eric, there's nothing we can do about it right now,' the shire says before whinnying in mild vexation. 'Why don't you just go all natural like me and half the other students? It's not like it would be so wrong now with everyone being much more furry and whatnot.'";
 	WaitLineBreak;
 	say "     The Doberman turns to regard the taller male and then shakes his head stubbornly. 'That might be good for you Carl, but the last thing I want is other's seeing how...meager...I am.' The Doberman blushed at this and the stallion couldn't help but laugh as he looked over the boxer short wearing canine. 'Eric, you're a dog, your junk is in your sheath nine times out of ten anyway, so not a lot of people are going to be able to see what you have down there. Not unless you excited by some hot eye candy, that is.' The last statement makes the Dobie duck his head and flick his ears somewhat in embarrassment. 'Hey, if you want I can make you feel better about this whole thing.' Carl says evenly as he walks over to stand behind the Eric. 'How so?' Before the Doberman could come to regret his words the big shire grabs the Doberman's clothes basket, runs over to where the word TRASH is written onto the wall, opens the door to the garbage chute and then tosses the clothes inside. Once the dirty articles disappear down the void of the open doorway Carl kicks the garbage shoot close and then heads back over to the now stunned and sputtering Dobie. 'See, problem solved!'";

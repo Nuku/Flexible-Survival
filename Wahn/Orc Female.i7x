@@ -41,12 +41,13 @@ Table of GameEventIDs (continued)
 Object	Name
 Noteworthy Ruin	"Noteworthy Ruin"
 
-Noteworthy Ruin is a situation. The level of Noteworthy Ruin is 8.
+Noteworthy Ruin is a situation.
+ResolveFunction of Noteworthy Ruin is "[ResolveEvent Noteworthy Ruin]". The level of Noteworthy Ruin is 8.
 The sarea of Noteworthy Ruin is "Plains".
 when play begins:
 	add Noteworthy Ruin to BadSpots of FemaleList;
 
-Instead of resolving a Noteworthy Ruin:
+to say ResolveEvent Noteworthy Ruin:
 	if HP of Katya is 0: [first time]
 		say "     Roaming through the plains, you pass yet another of the small ruins left over from the city that stretched out in this area before the grass came. There are basically just a few sections of roofless wall still standing, as well as a field of scattered stones and high mounds of rubble. Nothing too interesting - until you spot the [if daytimer is day]very faint line of smoke rising from somewhere between those walls[else]faint shine of firelight that illuminates one section of wall sticking up a little higher than the rest[end if]. It's not a lot - someone is being as careful as possible about giving away their location - but with your close proximity, you did notice it no matter what.";
 		say "     [bold type]Seems like someone has set up camp in that ruin. Shall you go over and have a look who it may be?[roman type][line break]";
@@ -434,7 +435,7 @@ When Play begins:
 	now lootchance entry is 0;         [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "orc cum";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4;              [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]meaty[or]powerful[or]broad[or]bulky[at random]";
 	now type entry is "[one of]orc[at random]";
@@ -569,7 +570,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "katya's dildo"	"     A well-crafted silicone dildo shaped like an equine cock. It has a broad base including a hefty pair of balls and is styled like an actual equine dick - speckled in shades of black, brown and pink. After regular use by Katya, it seems to have taken on some characteristics from that - somehow, this sex toy is always a little bit wet and slippery and smells of the orc's femcum."	2	katya's dildo
 
-katya's dildo is a grab object. It is part of the player. It is not temporary.
+katya's dildo is a grab object. It is not temporary.
 
 the scent of the katya's dildo is "[SmellingKatyasDildo]".
 

@@ -26,6 +26,7 @@ Object	Name
 Purifier One	"Purifier One"
 
 Purifier One is a situation.
+ResolveFunction of Purifier One is "[ResolveEvent Purifier One]".
 The sarea of Purifier One is "Campus".
 
 Table of GameEventIDs (continued)
@@ -33,6 +34,7 @@ Object	Name
 Purifier Two	"Purifier Two"
 
 Purifier Two is a situation.
+ResolveFunction of Purifier Two is "[ResolveEvent Purifier Two]".
 The sarea of Purifier Two is "Red".
 
 Table of GameEventIDs (continued)
@@ -40,6 +42,7 @@ Object	Name
 Purifier Three	"Purifier Three"
 
 Purifier Three is a situation.
+ResolveFunction of Purifier Three is "[ResolveEvent Purifier Three]".
 The sarea of Purifier Three is "Mall".
 
 Table of GameEventIDs (continued)
@@ -47,6 +50,7 @@ Object	Name
 Ambush The Purifier	"Ambush The Purifier"
 
 Ambush The Purifier is a situation.
+ResolveFunction of Ambush The Purifier is "".
 The sarea of Ambush The Purifier is "Nowhere".
 
 AraqielTrackerCollege is a number that varies. AraqielTrackerCollege is usually 1. [@Tag:NotSaved]
@@ -185,7 +189,7 @@ Section 1-0-3 - Toron During Pure Path
 
 Section 1-1 - Purifier One
 
-Instead of resolving a Purifier One:
+to say ResolveEvent Purifier One:
 	if HP of Araqiel is 0 or HP of Araqiel is 1 or HP of Araqiel >= 50 or (HP of Araqiel is 2 and Resolution of Purifier One > 0): [normal cycling event for Pure Araqiel]
 		say "     While you're wandering around the College Campus, you come across a rather quiet area, just around the corner of one of the blocks, with the way leading into a narrow alley. You know for a fact that this is one of the spots where Incubi from all around the campus come to do whatever they have in mind with someone they [']invited['] for a good time.";
 		WaitLineBreak;
@@ -233,7 +237,7 @@ Instead of resolving a Purifier One:
 
 Section 1-2 - Purifier Two
 
-Instead of resolving a Purifier Two:
+to say ResolveEvent Purifier Two:
 	if HP of Araqiel is 0 or HP of Araqiel is 1 or HP of Araqiel >= 50 or (HP of Araqiel is 2 and Resolution of Purifier Two > 0): [normal cycling event for Pure Araqiel]
 		say "     Making your way through the streets of Red Light District, you take a turn around a commercial block, or what remains of it. Seems like it was a [one of]simple clothing store[or]gift store[or]jewelery[or]small sex shop[at random] and you don't pay much attention to it, except when you hear some really loud moaning from inside. This particular area is known for its many sexual predators and fetishists, but even this much vocal intensity leaves you curious. Carefully, you sneak inside to try and see what's the source of such sounds.";
 		WaitLineBreak;
@@ -278,7 +282,7 @@ Instead of resolving a Purifier Two:
 
 Section 1-3 - Purifier Three
 
-Instead of resolving a Purifier Three:
+to say ResolveEvent Purifier Three:
 	if HP of Araqiel is 0 or HP of Araqiel is 1 or HP of Araqiel >= 50 or (HP of Araqiel is 2 and Resolution of Purifier Three > 0): [normal cycling event for Pure Araqiel]
 		say "     While exploring the sewers, in the middle of the dark, you hear some really intense grunting coming from nearby. Judging by the large quantity of demon brutes inhabiting the area, it doesn't surprise you, but you keep your presence as quiet as possible. In fact, the noise is quite the distraction to help you cross this area undetected.";
 		WaitLineBreak;

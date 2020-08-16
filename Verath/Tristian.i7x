@@ -168,13 +168,16 @@ Table of GameEventIDs (continued)
 Object	Name
 Tristbrother	"Tristbrother"
 
-Tristbrother is a situation. Tristbrother is inactive.
+Tristbrother is a situation.
+ResolveFunction of Tristbrother is "[ResolveEvent Tristbrother]".
+Tristbrother is inactive.
+
 when play begins:
 	add Tristbrother to badspots of HermList;
 	add Tristbrother to BadSpots of MaleList;
 	add Tristbrother to BadSpots of FurryList;
 
-Instead of resolving Tristbrother:
+to say ResolveEvent Tristbrother:
 	If HP of Tristian is 8:
 		say "     You manage to make your way to the area where Tristian indicated his brother lived. As you're scouting out the area, you hear a loud noise from the small apartment building you're approaching. Rushing inside, you notice a couple of hyenas have broken into an apartment that someone obviously barricaded. From the sounds of things, there is someone inside who is obviously protesting... although they sound more willing by the minute. Looking inside, you see several hyenas holding down what used to be an unchanged human, one of them is already shooting her seed onto the human's chest, while another appears to be ready to take him in the ass while the others hold the young man down. Looking up, one of the hyenas notices you. 'Oh good, another new addition to the gang,' she says before attacking!";
 		Challenge "Hyena Herm";

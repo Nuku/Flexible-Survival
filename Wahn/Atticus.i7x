@@ -80,6 +80,7 @@ Object	Name
 Incubus Offspring Meeting	"Incubus Offspring Meeting"
 
 Incubus Offspring Meeting is a situation.
+ResolveFunction of Incubus Offspring Meeting is "".
 The sarea of Incubus Offspring Meeting is "Nowhere".
 
 when play begins:
@@ -226,6 +227,7 @@ Object	Name
 Atticus_Payback	"Atticus_Payback"
 
 Atticus_Payback is a situation.
+ResolveFunction of Atticus_Payback is "".
 The sarea of Atticus_Payback is "Nowhere".
 
 when play begins:

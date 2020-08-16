@@ -46,12 +46,13 @@ Object	Name
 Shark Warrior	"Shark Warrior"
 
 Shark Warrior is a situation.
+ResolveFunction of Shark Warrior is "[ResolveEvent Shark Warrior]".
 The sarea of Shark Warrior is "Beach".
 when play begins:
 	add Shark Warrior to BadSpots of MaleList;
 	add Shark Warrior to BadSpots of FurryList;
 
-Instead of resolving Shark Warrior:
+to say ResolveEvent Shark Warrior:
 	say "     As usual, you walk parallel to the open sea. The sound of a soft breeze permeates the area, keeping the sea in motion and whirling a bit of the dry sand near your feet around. It also brings the familiar, salty ocean smell to your nostrils. Enjoying the view, you take a moment to just stand there and let the sounds soothe you. Unfortunately, it doesn't last long; the silence is disturbed by a great splash in the water. A feral sea dragon surfaces with a loud and angry roar. Just a moment later you see that the dragon is flailing around, trying to hit something desperately before the struggling creature sinks back into the blue.";
 	project the Figure of TSW_icon;
 	say "     You can briefly spot an ochre humanoid on the creature's belly, wrestling with the angry monster. After a while of staring at the spot where both of them submerged into the water, a tiger shark surfaces. His naked body is pretty built and shows some scars along his hide, proof of his constant strife in this world. He's also adorned with a couple of trinkets; a selection of teeth, presumably some of the dragons['] he beat, are braided together into a ligature around his neck, and there's also a rope tied around his hips. The rope is equipped with a couple of small bags and has a bit of kelp hanging from it. He turns towards you in the banks, appraising the witness of his battle.";
@@ -132,7 +133,7 @@ to say TigerSharkDesc:
 to say Tiger Shark wins:
 	if ts_warrior is true:
 		now tsw_victory is true;
-		if hp of Player > 0:
+		if HP of Player > 0:
 			now tsw_relationship is 51;
 			say "     You cower and sink your head submissively to the sand. The shark seems stumped, as he just stares at you quizzingly. Wanting to give him the right idea, you even turn around to show him your backside. 'That is unusual. But okay. Fine by me!' The dragon-wrestler gets back to his old self in a heartbeat, showing you his toothy grin again. 'Don't worry, I'll still take good care of you!'";
 		else:
@@ -363,7 +364,7 @@ When Play begins:
 	now lootchance entry is 0;           [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;                 [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]firm[or]strong[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "[one of]shark-like[or]aquatic[at random]";
@@ -501,7 +502,7 @@ name	desc	weight	object
 "Devil's Purse"	"A black casing resembling the egg capsule of a shark. It's empty but it still seems warm despite its slippery touch."	1	Devil's Purse
 "Teeth Necklace"	"It's a cord with several teeth of feral sea dragons tied to it. It's the necklace you stole from the wandering, proud tiger shark warrior."	2	Teeth Necklace
 
-Devil's Purse is a grab object. It is part of the player. Understand "dpurse" as Devil's Purse.
+Devil's Purse is a grab object. Understand "dpurse" as Devil's Purse.
 
 The usedesc of Devil's Purse is "[DevilsPurseUsing]";
 

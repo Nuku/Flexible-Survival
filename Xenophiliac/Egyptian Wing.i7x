@@ -11,10 +11,12 @@ Table of GameEventIDs (continued)
 Object	Name
 Egyptian Wing	"Egyptian Wing"
 
-Egyptian Wing is a situation. The level of Egyptian Wing is 10.
+Egyptian Wing is a situation.
+ResolveFunction of Egyptian Wing is "[ResolveEvent Egyptian Wing]".
+The level of Egyptian Wing is 10.
 The sarea of Egyptian Wing is "Museum".
 
-Instead of Resolving a Egyptian Wing:
+to say ResolveEvent Egyptian Wing:
 	say "     Exploring the halls of the city's museum, you're amazed at the sheer amount of archaic objects on display; artifacts and relics from across the globe are here, objects from different times in humanity's lifetime proudly presented throughout the hallways of the Museum. Haphazardly choosing a corridor to follow, you continue to be astounded by the insane amount of history and knowledge present, learning so much in your brief jaunts through the labyrinthine passages. So enraptured by the exhibits within, you almost barge straight into an information sigh standing in the middle of the corridor, barely preventing yourself from bashing yourself against it. Glaring irritatedly at the offending signpost, you take a second to read the notice, wondering what's so important that someone left it in the middle of the hallway. Displayed in bold lettering across the paper tacked to the signpost is:";
 	LineBreak;
 	say "     [bold type]   The Egyptian Wing[roman type][line break]";
@@ -34,6 +36,7 @@ Object	Name
 Finding Winged Orb	"Finding Winged Orb"
 
 Finding Winged Orb is a situation.
+ResolveFunction of Finding Winged Orb is "[ResolveEvent Finding Winged Orb]".
 Finding Winged Orb is inactive. [activated by accepting Amuran's quest]
 The sarea of Finding Winged Orb is "Park".
 
@@ -41,7 +44,7 @@ an everyturn rule:
 	if Finding Winged Orb is inactive and (AmuranAwoken is 2 or AmuranAwoken > 3):
 		now Finding Winged Orb is active;
 
-instead of resolving Finding Winged Orb:
+to say ResolveEvent Finding Winged Orb:
 	say "     Walking through what used to be the city park, you're struck by how much the park has changed. The trees haven't been trimmed in forever, grass is now overrunning the sidewalks; the park is not in a good state. An unfamiliar glint catches your eye as you contemplate the park, however, glimmering out from a nearby tree. Carefully looking around, you check to make sure no one is nearby; seeing no creatures present, you carefully approach the tree, wondering what could be shining so brightly.";
 	say "     You eventually come to the tree that's so brightly shining, still on the lookout for any sex-crazed creatures. Finally glimpsing the object stuck in the tree, surprise soon overwhelms you at what lies buried within it. An elegant, ornate emblem protrudes from the majestic tree, somehow partially buried in the trunk. From the glances you can see, it looks as if the emblem resembles the carving on Amuran's sarcophagus; a circle with two majestic wings protruding from its sides. This has to be one of Amuran's sigils, somehow buried partially within the tree. Taking a large breath and steeling yourself for what you have to do, you grab onto a thick branch and begin to climb the tree; the artifact is only a few feet up.";
 	let bonus be ((dexterity of Player minus 10) divided by 2);
@@ -705,7 +708,7 @@ name	desc	weight	object
 
 jade scarab is a grab object.
 it is not temporary.
-it is part of the player.
+
 the scent of jade scarab is "The metal scarab smells of metal, with a faint hint of something you can't recall...".
 the usedesc of jade scarab is "[JadeScarabUse]".
 
@@ -720,7 +723,7 @@ name	desc	weight	object
 
 winged sun is a grab object.
 it is not temporary.
-it is part of the player.
+
 the scent of winged sun is "You're overwhelmed with the scent of hot, dry air; it's almost like you're standing on the surface of the sun.".
 the usedesc of winged sun is "[WingedSunUse]".
 

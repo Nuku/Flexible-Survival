@@ -6,10 +6,11 @@ Table of GameEventIDs (continued)
 Object	Name
 Secure Area	"Secure Area"
 
-Secure Area is a situation. The level of Secure Area is 12.
+Secure Area is a situation.
+ResolveFunction of Secure Area is "[ResolveEvent Secure Area]". The level of Secure Area is 12.
 halodestroyed is a number that varies.
 
-instead of resolving a Secure Area:
+to say ResolveEvent Secure Area:
 	say "     On your jaunt through the city, you come across a yard, mostly intact, covered with barbed wire and odd defensive technology you could have sworn was science fiction. Behind the barriers, one of which is a shimmering halo in midair, stand two creatures, tall, but their silhouette is blurred by the halo, and you cannot make out if they are human or not. You can still make out the huge doors, made of something clearish white...";
 	if MaleList is banned:
 		say "     There is a large sign on the fence surrounding the facility which reads: [']Please be advised: This facility is now closed due to a lack of male content.[']";

@@ -12,13 +12,14 @@ Object	Name
 Hyena Bikers	"Hyena Bikers"
 
 Hyena Bikers is a situation.
+ResolveFunction of Hyena Bikers is "[ResolveEvent Hyena Bikers]".
 The sarea of Hyena Bikers is "High".
 when play begins:
 	add Hyena Bikers to BadSpots of MaleList;
 	add Hyena Bikers to badspots of HermList;
 	add Hyena Bikers to BadSpots of FurryList;
 
-Instead of resolving a Hyena Bikers:
+to say ResolveEvent Hyena Bikers:
 	setmonster "Hyena Herm";
 	move Grant to Hyena Hideout;
 	say "     As you pass down one street, you see a lot of fresh graffiti sprayed onto the concrete high-rises around you. Looking it over, you see it proclaim the strength of the hyena gang. This puzzles you, as you thought you were well out of hyena territory.";

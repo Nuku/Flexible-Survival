@@ -21,7 +21,8 @@ Table of GameEventIDs (continued)
 Object	Name
 Skunkbeast Battle	"Skunkbeast Battle"
 
-Skunkbeast Battle is a situation. The level of Skunkbeast Battle is 15.
+Skunkbeast Battle is a situation.
+ResolveFunction of Skunkbeast Battle is "[ResolveEvent Skunkbeast Battle]". The level of Skunkbeast Battle is 15.
 The sarea of Skunkbeast Battle is "Forest".
 skunkbeaststatus is a number that varies.
 when play begins:
@@ -29,7 +30,7 @@ when play begins:
 	add Skunkbeast Battle to BadSpots of FemaleList;
 	add Skunkbeast Battle to BadSpots of FurryList;
 
-Instead of resolving a Skunkbeast Battle:
+to say ResolveEvent Skunkbeast Battle:
 	say "     You can hear a great deal of commotion coming from up ahead. You take notice that there's a considerable number of black, gooey patches spread around the area as well as torn remnants of camouflaged clothes. When gunfire breaks out briefly, you duck down and creep forward into the bushes, looking to find out what's happening. Parting some branches at the edge of the next clearing, you can see a raging battle involving numerous of those sexy skunks you've seen around as well as several larger skunk beasts. Looking more carefully, you can see that some of the skunks are actually mostly transformed soldiers, their clothes torn and their bodies being ravaged (much to their increasing delight) by skunkbeasts or teams of the other females. The one still firing the rifle you heard has it torn from her hands by a skunk girl, who tosses it in the nearby creek as two more hold her down to be mounted.";
 	say "     But it is the last soldier standing who is the most successful. While still partially a skunk, he (though well on his way to becoming a she now) has a strange, futuristic gun that fires a stream of green energy at the skunks. The blast from this seems to stun the skunkbeasts and, if held on them long enough, causes them to melt away into goo. She turns towards the largest of the skunkbeasts, more than twice the size of the others as it turns to deal with her. That's when you realize her jacket's not military issue, but instead emblazoned with a stylized Z in a circle: Zephyr. She yells incoherently as she's tackled by several of the skunk girls, including some of her former teammates and the gun is sent flying, landing only a few yards away from your hiding spot.";
 	say "     You eye the strange weapon and the big beast charging towards it. You have but a moment to decide if you'll face the beast so you can turn the gun on it. It is clearly the one in charge and probably the source of all the others. If you could take it down, you may even permanently solve the skunk problem in the forest. Given how well the trained mercenaries fared and all the other skunks around, this could go very badly for you.";
@@ -233,7 +234,7 @@ When Play begins:
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[if skrp is 1][one of]tauric[or]bestial[at random][else][one of]bestial[or]animalistic[or]feral[at random][end if]";
 	now type entry is "[one of][if skrp is 1]skunktaur[else]skunk[end if][or]mephit[or]skunkbeast[at random]";

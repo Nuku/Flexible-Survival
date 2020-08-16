@@ -195,9 +195,10 @@ Object	Name
 Lost Crab	"Lost Crab"
 
 Lost Crab is a situation.
+ResolveFunction of Lost Crab is "[ResolveEvent Lost Crab]".
 The sarea of Lost Crab is "Beach".
 
-Instead of resolving Lost Crab:
+to say ResolveEvent Lost Crab:
 	say "     While you are exploring, you happen across a crab. The crab has unusually large and expressive eyes. It clacks its great pincers at you, but you don't get much feeling of malice from it.";
 	if food is owned:
 		say "     The crab scuttles towards you and reaches out to poke lightly at where your food is stored. Do you want to give it some?";
@@ -362,12 +363,14 @@ Section 2.3 - House Cat Event
 
 Table of GameEventIDs (continued)
 Object	Name
-Lost house cat	"Lost house cat"
+Lost House Cat	"Lost house cat"
+Lost house cat	"Lost House Cat"
 
-Lost house cat is a situation.
-The sarea of Lost house cat is "Outside".
+Lost House Cat is a situation.
+ResolveFunction of Lost House Cat is "[ResolveEvent Lost House Cat]".
+The sarea of Lost House Cat is "Outside".
 
-Instead of resolving Lost house cat:
+to say ResolveEvent Lost House Cat:
 	say "     Heading through the streets of the city, you spy a small form dart down an alleyway ahead of you, the shape moving too quickly for you to get anything more than an impression of four legs and fur. Curious, you pause for a minute, trying to decide whether you should investigate the shape further.";
 	if Player consents:
 		say "     Looking down the alleyway, you don't see anything out of the usual at first, though the alley provides plenty of places for something to hide if it was small enough. Searching carefully, you are about to give up looking when you notice a small cardboard box trembling slightly as you pass close to it. Kneeling down and approaching the shaking box cautiously, you slowly lift the edge of the box up and look underneath it, only to be hissed at by a small cat, before it darts out from under the box and behind a nearby dumpster, its feline eyes shining out at you warily from the darkened space. You realize that the small cat seems to have been given a large enough scare recently that it is still terribly frightened. If you want it to calm down, perhaps you should offer it something that cats like?";
@@ -588,8 +591,10 @@ Object	Name
 Scared Bird	"Scared Bird"
 
 Scared Bird is a situation.
+ResolveFunction of Scared Bird is "[ResolveEvent Scared Bird]".
 The sarea of Scared Bird is "Zoo".
-Instead of resolving Scared Bird:
+
+to say ResolveEvent Scared Bird:
 	say "     Traveling along the Zoo paths, you hear a strange noise from up ahead. Moving carefully to investigate the area where you heard the noise, you look around the tree there but don't actually see anything. You are about to turn to leave when you hear the sound again from up in the branches. Looking up, you are surprised to see a rather scared-looking exotic bird taking shelter up in the branches, its brilliant plumage obvious at this distance as it huddles nervously above you. You realize that it must have escaped from one of the exotic bird exhibits, and you sigh when you realize that its chances of survival in this violent city without help are pretty slim. Maybe you should try convincing it to come along with you instead of just hiding here?";
 	if carried of food is 0:
 		say "     A quick glance shows that you don't have any food with which to try and coax the bird down with. You'll have to try again later once you've found some food.";
@@ -779,11 +784,12 @@ Object	Name
 Mournful Dog	"Mournful Dog"
 
 Mournful Dog is a situation.
+ResolveFunction of Mournful Dog is "[ResolveEvent Mournful Dog]".
 The sarea of Mournful Dog is "Hospital".
 hdog is a number that varies.
 dogfoodcount is a number that varies.
 
-Instead of resolving a Mournful Dog:
+to say ResolveEvent Mournful Dog:
 	if hdog is 0:			[first time finding]
 		say "     While searching through a hallway of patient rooms, you open one to a terrible smell of decay. You retch several times[if humanity of Player < 50], barely hearing the soft growling coming from within,[end if] before recovering and taking stock of the room. There is a body on the hospital bed, clearly long dead and unremoved. On the floor beside it is a [if humanity of Player < 50]growling[else]sad[end if] dog. The dog is a black and white shepherd wearing a bright vest on its bony flanks, denoting it as a helper dog.";
 		say "     It seems that the poor beast's master passed away, and in the ensuing chaos at the Hospital, was left here since. It is unclear if they died before the outbreak took hold or if they were too weak and the infection finished them off before it could change and heal them. The dog, probably hostile to the infected hospital staff, has continued to protect its master and kept them from the removing the body.";

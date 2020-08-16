@@ -17,6 +17,7 @@ Object	Name
 Gargoyle Sentry	"Gargoyle Sentry"
 
 Gargoyle Sentry is a situation.
+ResolveFunction of Gargoyle Sentry is "[ResolveEvent Gargoyle Sentry]".
 The sarea of Gargoyle Sentry is "Outside".
 When play begins:
 	add Gargoyle Sentry to BadSpots of MaleList;
@@ -42,7 +43,7 @@ a postimport rule: [fix for having set the event as resolved prematurely in a pr
 	if Resolution of Gargoyle Sentry < 4:
 		now Gargoyle Sentry is not resolved;
 
-instead of resolving a Gargoyle Sentry:
+to say ResolveEvent Gargoyle Sentry:
 	if GargoyleSentryTracker - turns < 7: [encountered the gargoyle in the current day]
 		say "     It is too early for that. You have already seen the gargoyle sentry today, and he takes time to appear again.";
 	else if resolution of Gargoyle Sentry is 0: [never looked into the chest]
@@ -380,7 +381,7 @@ to SGargoyleScene3:
 			SGargoyleScene3Respect;
 		else: [Not a failure yet, but the player is struggling...]
 			say "     Your first attempt at it is not very successful, as the creature is enormously heavy. 'Oh? Trying to break free and ignoring my request?! Sounds like a punishment, for you.' he threats you as he is about to tighten his constriction around you, but bolstering up what remains of your strength, you do one last try...";
-			WaitLinebreak;
+			WaitLineBreak;
 			let bonus be (( strength of player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]18[roman type] (Strength Check):[line break]";

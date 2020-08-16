@@ -801,9 +801,10 @@ Object	Name
 Abandoned Truck	"Abandoned Truck"
 
 Abandoned Truck is a situation.
+ResolveFunction of Abandoned Truck is "[ResolveEvent Abandoned Truck]".
 the sarea of Abandoned Truck is "Outside".
 
-instead of resolving an Abandoned Truck:
+to say ResolveEvent Abandoned Truck:
 	say "     You come across an abandoned truck, filled with medical supplies. The drivers cab is filled with some sort of goo that covers all the entrances. Maybe some of the supplies can be of use?";
 	if Medeaget is 1:
 		say "     This must be the truck Medea sent you after! Ruffling through it, you gather up the things that she requested.";
@@ -833,10 +834,11 @@ Table of GameEventIDs (continued)
 Object	Name
 Obstetrics Department	"Obstetrics Department"
 
-Obstetrics Department is a situation. Obstetrics Department is inactive.
+Obstetrics Department is a situation.
+ResolveFunction of Obstetrics Department is "[ResolveEvent Obstetrics Department]". Obstetrics Department is inactive.
 the sarea of Obstetrics Department is "Hospital".
 
-instead of resolving Obstetrics Department:
+to say ResolveEvent Obstetrics Department:
 	say "     Making your way through the darkened hospital, you manage to reach the Obstetrics Department and slip inside, searching for the items that Dr. Medea mentioned needing. This area seems to have been particularly [']active['] during the outbreak, with a lot of sticky fluids of all kinds over everything. Aside from pools of what must be semen and feminine juices, there's a variety of placentae and egg shells scattered around as well. The scent of lust, fertility and virility is very strong in here, making you somewhat dizzy with growing excitement.";
 	let playernum be a random number between 0 and ( 200 + humanity of Player - Libido of Player );
 	say "     [special-style-1][playernum][roman type] vs [special-style-2]120[roman type]: ";

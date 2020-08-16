@@ -82,7 +82,7 @@ check turncountdisplay:
 		stop the action;
 
 carry out turncountdisplay:
-	say "DEBUG: CURRENT TURN IS [turns]";
+	say "DEBUG: CURRENT TURN IS [turns]; Current Turn Count is [turn count]";
 
 PregStatus is an action applying to nothing.
 understand "preg status" as PregStatus.

@@ -134,7 +134,7 @@ When Play begins:
 	now lootchance entry is 35; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]brawny[or]beefy[or]sturdy[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "canine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -254,7 +254,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "bandage"	"A thick piece of cloth that looks as though it could be used to brace something."	1	bandage
 
-bandage is a grab object. It is part of the player. Understand "bandage" as bandage. bandage is infectious. The strain of bandage is "Great Dane".
+bandage is a grab object. Understand "bandage" as bandage. bandage is infectious. The strain of bandage is "Great Dane".
 
 The usedesc of bandage is "The strip of cloth you won off of a Great Dane fighter down at Tyr's club. Soft, but kind of scratchy maybe you could make it into a tourniquet if you had more of them?";
 

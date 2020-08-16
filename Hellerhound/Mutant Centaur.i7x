@@ -15,11 +15,12 @@ Table of GameEventIDs (continued)
 Object	Name
 Apple Tree	"Apple Tree"
 
-Apple Tree is a situation. The level of Apple Tree is 6.
+Apple Tree is a situation.
+ResolveFunction of Apple Tree is "[ResolveEvent Apple Tree]". The level of Apple Tree is 6.
 The sarea of Apple Tree is "Plains".
 centaurmate is a number that varies.
 
-Instead of resolving a Apple Tree:
+to say ResolveEvent Apple Tree:
 	say "     Wandering across the plains, you come to one of the few trees scattered throughout it. As you approach, you can see a centaur stallion plucking the apples from the tree and stuffing them into his pack and his mouth. A little wary, but hopeful at the prospect of food, you continue forward cautiously and approach from behind. As you get nearer, you can see that the centaur has become strange and twisted by the apples he's gathering and eating. Each time he gobbles one down, fresh green tentacles under his equine belly writhe and his large cock and balls become greener. Some roots from the tree have started to slide up his legs, moving to further corrupt him.";
 	say "     Shall you call out and continue to approach this tainted centaur?";
 	if Player consents:
@@ -248,7 +249,7 @@ When Play begins:
 	now lootchance entry is 20;        [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscular[or]centaur[or]corrupted[at random]";
 	now type entry is "centaur"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]

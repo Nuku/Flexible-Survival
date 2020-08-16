@@ -42,6 +42,7 @@ Object	Name
 To The Unknown	"To The Unknown"
 
 To The Unknown is a situation.
+ResolveFunction of To The Unknown is "[ResolveEvent To The Unknown]".
 The sarea of To The Unknown is "Red".
 
 [RESOLUTION STAGES]
@@ -57,6 +58,7 @@ Object	Name
 Gift From Abyss	"Gift From Abyss"
 
 Gift From Abyss is a situation.
+ResolveFunction of Gift From Abyss is "".
 The sarea of Gift From Abyss is "Nowhere".
 
 [RESOLUTION STAGES]
@@ -73,6 +75,7 @@ Object	Name
 AbyssEdgeEnchantLevel	"AbyssEdgeEnchantLevel"
 
 AbyssEdgeEnchantLevel is a situation.
+ResolveFunction of AbyssEdgeEnchantLevel is "".
 The sarea of AbyssEdgeEnchantLevel is "Nowhere".
 
 [----------------------------------------]
@@ -84,6 +87,7 @@ Object	Name
 Friend Of The Darkness	"Friend Of The Darkness"
 
 Friend Of The Darkness is a situation.
+ResolveFunction of Friend Of The Darkness is "".
 The sarea of Friend Of The Darkness is "Nowhere".
 
 [RESOLUTION STAGES]
@@ -101,6 +105,7 @@ Object	Name
 Luminous Harem	"Luminous Harem"
 
 Luminous Harem is a situation.
+ResolveFunction of Luminous Harem is "".
 The sarea of Luminous Harem is "Nowhere".
 
 [RESOLUTION STAGES]
@@ -116,6 +121,7 @@ Object	Name
 Odd Treasure	"Odd Treasure"
 
 Odd Treasure is a situation.
+ResolveFunction of Odd Treasure is "".
 The sarea of Odd Treasure is "Nowhere".
 
 [RESOLUTION STAGES]
@@ -129,6 +135,7 @@ Object	Name
 ElkHeadReaperGender	"ElkHeadReaperGender"
 
 ElkHeadReaperGender is a situation.
+ResolveFunction of ElkHeadReaperGender is "".
 The sarea of ElkHeadReaperGender is "Nowhere".
 
 [RESOLUTION STAGES]
@@ -173,6 +180,7 @@ Object	Name
 MirrorsKey	"MirrorsKey"
 
 MirrorsKey is a situation.
+ResolveFunction of MirrorsKey is "".
 The sarea of MirrorsKey is "Nowhere".
 
 [RESOLUTION STAGES]
@@ -182,7 +190,7 @@ The sarea of MirrorsKey is "Nowhere".
 
 [----------------------------------------]
 
-instead of resolving To The Unknown:
+to say ResolveEvent To The Unknown:
 	if Resolution of To The Unknown is 0: [Pre-Event]
 		say "     You go past one of the many buildings in the District and turn to your right. It is another ransacked shop with nothing left, only broken glass scattered around the windows and a complete absence of sound, which worsens the more you proceed forward. There is nothing else around but destruction and abandonment, consequences brought by the apocalypse, but besides this, something seems to be really disturbing you, and you find yourself helplessly unable to explain what it is, exactly. It's just something you feel... A shiver, sudden loss of thoughts, an instant discomfort rapidly growing inside as if a nightmare was chasing after you. The sense of danger, maybe there is a creature approaching...?! Though there is nothing. Paranoia slowly begins to take over your mind, and a cold drop of sweat follows after.";
 		say "     Reality seems pointless, the air around you is heavy, your body refuses to move, and then you can't breathe. But at the same time, there you are, alive, your heart beating, your senses in overdrive, but your brain seems incapable of understanding its surroundings. There is a hiss echoing through, and that is when you see a gigantic scaly body of a snake, passing right by you and through the buildings like a slowly moving train, seemingly endless. Your heart stops at that moment, facing the imminent danger, and it is a feeling you cannot control. You feel powerless, disarmed and tiny, as the serpent makes its way unhindered by any obstacles that prove to be nothing for its titanic dimensions.";
@@ -2550,7 +2558,7 @@ When Play begins:
 	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]elongated[or]serpentine[or]long[or]scaled[at random]";
 	now type entry is "[one of]serpentine[at random]";
@@ -2717,7 +2725,7 @@ When Play begins:
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]gooey[or]slimey[or]towering[or]huge[at random]";
 	now type entry is "[one of]gooey[or]slimey[at random]";
@@ -2884,7 +2892,7 @@ When Play begins:
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]unknown[or]questionable[or]cloaked[or]robed[at random]";
 	now type entry is "[one of]slender[or]unknown[at random]";
@@ -3051,7 +3059,7 @@ When Play begins:
 	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]abominable[or]monstrous[or]obscene[or]disturbing[at random]";
 	now type entry is "[one of]abominable[at random]";
@@ -3218,7 +3226,7 @@ When Play begins:
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]towering[or]muscular[or]ripped[or]cloaked[at random]";
 	now type entry is "[one of][if Resolution of ElkHeadReaperGender is 10]musclebound[else]amazonian[end if][at random]";

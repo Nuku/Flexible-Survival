@@ -192,7 +192,7 @@ When Play begins:
 	now lootchance entry is 100;        [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]strong[or]tall[or]powerful[at random]";
 	now type entry is "lupine";
@@ -315,7 +315,7 @@ name	desc	weight	object
 
 sports drink is a grab object.
 the usedesc of sports drink is "[sportsdrinkuse]".
-it is part of the player.
+
 It is temporary.
 
 to say sportsdrinkuse:
@@ -343,10 +343,12 @@ Table of GameEventIDs (continued)
 Object	Name
 Entrance to the Lair	"Entrance to the Lair"
 
-Entrance to the Lair is a situation. The level of Entrance to the Lair is 5. Entrance to the Lair is inactive.
+Entrance to the Lair is a situation.
+ResolveFunction of Entrance to the Lair is "[ResolveEvent Entrance to the Lair]".
+The level of Entrance to the Lair is 5. Entrance to the Lair is inactive.
 The sarea of Entrance to the Lair is "Outside".
 
-Instead of resolving a Entrance to the Lair:
+to say ResolveEvent Entrance to the Lair:
 	say "     Looking around a bit, you soon find the warehouse Septus mentioned. It's hard to miss, with a large wolf's head painted on the facade. As you come close to the building, two wolfmen guarding the front instantly spot you. One goes inside, the other stays at the entrance door and eyes you warily. Several minutes later, Septus comes out with the other wolfman, visibly perking up as he spots you. 'It's okay, guys. Our visitor is a friend.' He waves you closer, holding open the door to let you in. The warehouse they made into their base is pretty large and surprisingly well equipped. Between improvised walls made from large boxes there are sections filled with exercise equipment, beds, supplies and whatnot. In the main area at least a score of wolfmen is present, most of which are working out - accompanied by three young human women doing stretches and a little naked cheer-leading routine in front of them.";
 	if BodyName of Player is "Football Wolfman":
 		say "     Septus walks up to one of the women and pulls her close, running his strong hands over her body and licks over her nipples before going in for a deep muzzle to mouth kiss. 'Hi mom, I present to you another candidate for the team. As you can see, already in great shape... why don't you show [if Player is male]him[else]her[end if] the benefits of joining us.' He gives her face a last affectionate lick, then grins at you, stepping to the side.";
@@ -1223,7 +1225,7 @@ When Play begins:
 	now lootchance entry is 0;                    [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;                              [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]lithe[or]flexible[at random]";
 	now type entry is "human";

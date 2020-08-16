@@ -272,6 +272,7 @@ Object	Name
 Lonely Gryphoness	"Lonely Gryphoness"
 
 Lonely Gryphoness is a situation.
+ResolveFunction of Lonely Gryphoness is "[ResolveEvent Lonely Gryphoness]".
 The sarea of Lonely Gryphoness is "Outside".
 when play begins:
 	add Lonely Gryphoness to badspots of HermList;
@@ -279,7 +280,7 @@ when play begins:
 
 gryphoncomforted is a number that varies.
 
-Instead of resolving Lonely Gryphoness:
+to say ResolveEvent Lonely Gryphoness:
 	say "     Traveling through the deserted streets, you hear a strange and rather sad song echoing through the empty streets, its strange beautiful notes making you feel somewhat sad and lonely yourself. Looking around for the source, you think the sound is coming from the top of a nearby apartment building. You are torn between the idea of climbing up the fire escape to see who is making the noise or just standing here and basking in the music.";
 	say "     [bold type]Do you climb up to see who is singing?[roman type][line break]";
 	if Player consents:
@@ -293,7 +294,7 @@ Instead of resolving Lonely Gryphoness:
 			now gryphoncomforted is 1;
 			now Resolution of Lonely Gryphoness is 1; [met Denise as a gryphon]
 			now Lonely Gryphoness is resolved;
-			now Gryphoness nest is active;
+			now Gryphoness Nest is active;
 		else:
 			say "The strange gryphon's eyes seem to fill up with panic as she stares at you, slowly backing away towards the edge of the roof and safety, obviously worried about what you might do. Do you try to convince her you mean no harm?";
 			if Player consents:
@@ -309,7 +310,7 @@ Instead of resolving Lonely Gryphoness:
 					now gryphoncomforted is 1;
 					now Resolution of Lonely Gryphoness is 2; [met Denise with charisma check]
 					now Lonely Gryphoness is resolved;
-					now Gryphoness nest is active;
+					now Gryphoness Nest is active;
 				else:
 					LineBreak;
 					say "     Obviously not believing you, the gryphon wastes no time in waiting to hear what you have to say and launches herself into the sky to fly away.";
@@ -322,15 +323,17 @@ Instead of resolving Lonely Gryphoness:
 
 Table of GameEventIDs (continued)
 Object	Name
-Gryphoness nest	"Gryphoness nest"
+Gryphoness Nest	"Gryphoness nest"
+Gryphoness Nest	"Gryphoness Nest"
 
-Gryphoness nest is a situation. Gryphoness nest is inactive.
-The sarea of Gryphoness nest is "Beach".
+Gryphoness Nest is a situation.
+ResolveFunction of Gryphoness Nest is "[ResolveEvent Gryphoness Nest]". Gryphoness Nest is inactive.
+The sarea of Gryphoness Nest is "Beach".
 when play begins:
-	add Gryphoness nest to badspots of HermList;
-	add Gryphoness nest to BadSpots of FurryList;
+	add Gryphoness Nest to badspots of HermList;
+	add Gryphoness Nest to BadSpots of FurryList;
 
-Instead of resolving Gryphoness nest:
+to say ResolveEvent Gryphoness Nest:
 	project Figure of BlueGryphon_icon;
 	if gryphoncomforted is 1:
 		say "     Wandering along the beach, you hear a few haunting notes drifting over the waves, and recalling that strange gryphon from earlier, hurry down the beach to see if she is more willing to stay and talk this time. After a short distance, you round one of the dunes to see what is likely the same gryphon, idly tossing small stones in the waves as they lap up against the beach soothingly. Looking down, you can't help but wonder just what this particular Hermaphrodite Gryphon is thinking, even as she hums and sings softly and stares out over the water. Deciding to approach carefully so as not to startle her this time, you carefully make a bit of noise even as you slowly begin crossing the dunes to where she is sitting.";
@@ -344,18 +347,18 @@ Instead of resolving Gryphoness nest:
 				if fightoutcome >= 10 and fightoutcome <= 19: [won]
 					say "     Recovering from the fight you stagger back out onto the beach, only to find yourself assaulted by a blue furred gryphon instead. You find yourself grinning slightly as the obviously shy gryphon wraps you in her arms, her softly furred body pressing up against your own even as she rubs her gryphon like beak against your [Skin of Player] cheek. The gryphon releases you after a minute, seeming slightly embarrassed at her actions, as she shifts her feline paws around in the sand nervously. 'Um, thank you for your help,' she says in her soft musical voice as she looks at you curiously, 'It was really nice of you to actually help me like that, since everything has changed... well especially since I've changed, most people have been either afraid of or attacked me on sight,' she says with a soft sigh.";
 					say "     'Um, my name is, well it was Denise. I'm not really sure that fits so much now,' the gryphon says as she gestures to where her half erect knotted black gryphon cock is perched above her leonine female entrance. She seems about to say something else, when you both hear something splash in the surf behind you, and she jumps instead, her wings flapping in panic as she looks around. 'Um, maybe this isn't the best place to talk, I have a small alcove up near the beach cliffs where I am staying if you want to stop by and talk sometime,' Denise says as she bunches her hindquarters before leaping into the air. 'I think I would really like having you visit...' you can hear her say, before she turns and flies off, her leonine tail swaying behind her and leaving you with a lot to think about as you continue your journey along the beach.";
-				now Resolution of Gryphoness nest is 1; [won]
+				now Resolution of Gryphoness Nest is 1; [won]
 				now gryphoncomforted is 2;
 			if fightoutcome >= 20 and fightoutcome <= 29: [lost]
 				say "     Sputtering as you drag yourself back out onto the beach after your defeat, you sigh and collapse onto the sand for a minute. After you have recovered slightly, you remember the gryphon they grabbed, and look around to see what happened to her, sadly after looking around for a bit, you realize the beach is completely empty. Sighing you try to think back, and seem to recall seeing a glimpse of her flying off while you were being helplessly abused by the sea creatures, quite probably giving up on ever seeing you again. Picking yourself up, you shrug and continue along the beach, realizing that there is a good chance if you keep looking you will encounter the strange gryphon again soon. Though hopefully she won't be as startled next time...";
-				now Resolution of Gryphoness nest is 2; [lost]
+				now Resolution of Gryphoness Nest is 2; [lost]
 			else if fightoutcome >= 30: [fled]
 				say "     Working to get the creature's attention even as you evade it, you do your best to keep its focus on you, drawing it further and further from the gryphoness before finally losing it and doubling back. By the time you make it back there, it seems she flew off while you were making your own escape. Picking yourself up, you shrug and continue along the beach, realizing that there is a good chance if you keep looking you will encounter the strange gryphon again soon. Though hopefully she won't be as startled next time...";
-				now Resolution of Gryphoness nest is 3; [fled]
+				now Resolution of Gryphoness Nest is 3; [fled]
 		else:
 			say "     You hesitate for a minute, trying to decide if you should risk jumping into the water to try to save the singing gryphon, and possibly ending up sharing whatever fate the beasts have for her. Sadly your hesitation takes the decision out of your hands, as with several splashes, both the beasts and the strange gryphoness have vanished. Scanning the waters, you realize sadly that you will likely not be seeing that particular gryphon again in any recognizable form, or hearing her sing anymore. Sighing you continue along your way down the beach, wondering what else could go wrong today.";
-			now Resolution of Gryphoness nest is 4; [Denise lost]
-			now Gryphoness nest is resolved;
+			now Resolution of Gryphoness Nest is 4; [Denise lost]
+			now Gryphoness Nest is resolved;
 	else if gryphoncomforted is 2:
 		[puts Hermaphrodite Gryphon as lead monster in case of impregnation]
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
@@ -402,8 +405,8 @@ Instead of resolving Gryphoness nest:
 						now gryphoncomforted is 3;
 						infect "Blue Gryphon Herm";
 						say "     (Denise the gryphoness is now a possible companion! You can make her your active companion by typing [bold type][link]companion Denise[end link][roman type] or  [bold type][link]companion gryphoness[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Denise[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
-						now Resolution of Gryphoness nest is 6; [male gryphon player with gryphon cock recruited her]
-						now Gryphoness nest is resolved;
+						now Resolution of Gryphoness Nest is 6; [male gryphon player with gryphon cock recruited her]
+						now Gryphoness Nest is resolved;
 						follow the turnpass rule;
 					else:
 						say "     Her eager teasing of your cock, and her begging are too much for you to resist, and almost before you can realize what you are doing, you are clutching the female gryphoness close. She moans in need as you pull her close, turning her face down on the cushions as you pin her wings down underneath your weight. Denise grips the cushions tightly as her leonine tail moves eagerly to the side, letting your [Cock of Player] cock rub up against her eager passage, your own body almost as eager for this as hers obviously is, you waste no time sheathing yourself in her damp passage.";
@@ -419,8 +422,8 @@ Instead of resolving Gryphoness nest:
 						now gryphoncomforted is 3;
 						infect "Blue Gryphon Herm";
 						say "     (Denise the gryphoness is now a possible companion! You can make her your active companion by typing [bold type][link]companion Denise[end link][roman type] or  [bold type][link]companion gryphoness[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Denise[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
-						now Resolution of Gryphoness nest is 7; [gryphon player with non gryphon cock recruited her]
-						now Gryphoness nest is resolved;
+						now Resolution of Gryphoness Nest is 7; [gryphon player with non gryphon cock recruited her]
+						now Gryphoness Nest is resolved;
 				else:
 					say "     'Of course I darted past him and well, in my rush to get away I ended up jumping off the balcony in a panic,' Denise says with a soft sigh as she rubs her taloned hands over your chest absently, making you grin as you stroke your own talons through the increasingly aroused gryphons feathers. 'Course I nearly crashed before I figured out the wings, I was actually kind of expecting to hit the ground, but I just wanted to get away from him so badly,' Denise says as she nuzzles you softly, 'I didn't want to be his little slutty breeder gryphon right then... or any gryphon's... until I met you...' she says in a happier tone, before seeming to realize just what she said.";
 					say "     'Um I mean... well, you make me feel... so...' she trails off for a minute, seeming to think even as you continue to stroke her soft body with your talons teasingly, the gryphoness almost purring under your touch as she tries to gather her thoughts. 'I think, actually, I wouldn't mind being your gryphoness and you could teach me what it was like to be like this...' she says as she rubs her talon over your damp crotch, making you moan softly at her touch. 'I mean I flew off into the city after that, but... it's been so lonely... and if we could learn together...'";
@@ -440,8 +443,8 @@ Instead of resolving Gryphoness nest:
 					now gryphoncomforted is 3;
 					infect "Blue Gryphon Herm";
 					say "     (Denise the gryphoness is now a possible companion! You can make her your active companion by typing [bold type][link]companion Denise[end link][roman type] or  [bold type][link]companion gryphoness[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Denise[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
-					now Resolution of Gryphoness nest is 8; [female gryphon player recruited her]
-					now Gryphoness nest is resolved;
+					now Resolution of Gryphoness Nest is 8; [female gryphon player recruited her]
+					now Gryphoness Nest is resolved;
 			else:
 				say "     'You want to know about me? Well it's not very interesting, but if you want to know,' Denise says, as she shifts uncomfortably at the memory. 'Well I was pretty much a normal woman before all this happened, nothing special really, just going to work while I was trying to learn to sing, I always did want to be in a band someday you see, not that that is likely to happen now,' she says with a sad sigh as she glances down at her changed body. 'That was up until just a little while ago, when I and most of the rest of the people in my apartment complex found a container of milk out on our doorstep, with a note saying it was from the apartment manager,' she says with a soft sigh as she rubs her fur covered breasts absently.";
 				say "     'I suppose it was kind of silly of me not to wonder about that you know? But the milk just smelled so very good it made my mouth water, and I just couldn't resist having some with my cereal,' Denise says with a sigh as she rubs her beak with her talons in embarrassment. 'Before I knew it I had finished the whole thing of milk, and was moaning in pleasure while my body changed... I managed to get to the bathroom so I could... relieve myself...' the gryphon says with some embarrassment, as her taloned hand strokes her erect barbed cock absently, her actions hinting at just what kind of relief the horny gryphoness needed so badly.";
@@ -469,8 +472,8 @@ Instead of resolving Gryphoness nest:
 						now gryphoncomforted is 3;
 						infect "Blue Gryphon Herm";
 						say "     (Denise the gryphoness is now a possible companion! You can make her your active companion by typing [bold type][link]companion Denise[end link][roman type] or  [bold type][link]companion gryphoness[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Denise[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
-						now Resolution of Gryphoness nest is 9; [male player recruited her]
-						now Gryphoness nest is resolved;
+						now Resolution of Gryphoness Nest is 9; [male player recruited her]
+						now Gryphoness Nest is resolved;
 					else:
 						say "     'Just let me clean things up around here a bit, and then I can come find you in the city,' Denise says happily as she looks around the small cluttered cave for a minute, before looking back at you with mischief in her eyes. 'But first,' she says teasingly as she pulls you in for a soft hug and rubs her gryphon beak softly up against your cheeks. 'I wanted to thank you for taking me with you,' she says with a smile, her erect cock rubbing up against your female body and making you moan slightly as she holds you for a minute before letting you go. Denise grins as she sees how excited you are as well, and practically purrs as she continues, 'And I can't wait to thank you properly later either.'";
 						say "     She teasingly runs one of her talons through her soft fur. 'And maybe if we are lucky you will end up as a gryphoness just like me,' she says with a wink as she rubs her breasts teasingly, before spreading her wings slightly. 'The flying alone is unbelievably amazing, and then we could go find the other gryphons together...' Denise says with excitement, her own eagerness contagious as you find yourself almost nodding along automatically. Seeing your eager response, she hugs you again happily before she proceeds to teach you a few notes of her song so you can call out for her to find you no matter where you are in the city. You find yourself leaving her small cave with a smile on your own face, as you wonder just what kind of wonderful new companion the Denise will be, and wondering if it would really be so bad to become a breeding gryphon just like her as she is so obviously hoping you will...";
@@ -481,12 +484,12 @@ Instead of resolving Gryphoness nest:
 						now gryphoncomforted is 3;
 						infect "Blue Gryphon Herm";
 						say "     (Denise the gryphoness is now a possible companion! You can make her your active companion by typing [bold type][link]companion Denise[end link][roman type] or  [bold type][link]companion gryphoness[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Denise[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
-						now Resolution of Gryphoness nest is 10; [female player recruited her]
-						now Gryphoness nest is resolved;
+						now Resolution of Gryphoness Nest is 10; [female player recruited her]
+						now Gryphoness Nest is resolved;
 				else:
 					say "     Denise sighs as you shake your head, 'It's OK...' she says sadly as she inches away from you and hangs her head down, 'I understand that no one really wants to take the risk of being around something like me now anyways, I might as well just go try to find the other gryphons and see if they at least still want me.' She sighs as she buries her face down in the soft cushions of her bed, ignoring your further attempts to talk to her. You sigh as you eventually work your way down the narrow path outside, wondering if perhaps you shouldn't have handled that differently after all...";
-					now Resolution of Gryphoness nest is 11; [told Denise no]
-					now Gryphoness nest is resolved;
+					now Resolution of Gryphoness Nest is 11; [told Denise no]
+					now Gryphoness Nest is resolved;
 		else: [charisma check fail]
 			say "     Denise shifts uncomfortably as you brush up against her blue furred side, and you notice she seems to be getting aroused by your mere presence. She stammers slightly, before trying to steer the conversation to safer topics such as the strange situation the city is currently in, as well as what strange things you have each seen happen recently. Eventually she gets so distracted and aroused by your presence she asks you timidly to leave for a while, and deciding not to push things too hard right now, you do so. Working your way back down the narrow path, you wonder if you might have better luck stopping by again sometime later, since while you definitely feel a little closer to the strange gryphoness, you have a feeling you could get a lot closer still if you tried...";
 	else: [never met Denise before]

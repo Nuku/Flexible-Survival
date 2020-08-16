@@ -62,7 +62,7 @@ to say GrizzlyLoseCV:
 			ItemLoss glowing mushroom by 1;
 		else: [Not a failure yet, but the player is struggling...]
 			say "     But... it's not quite enough to outright push the bear away. He takes note of your resistance, and reinforces his position above you. 'I said open! Be a good cub, now, or I'll have to get rough...!'";
-			WaitLinebreak;
+			WaitLineBreak;
 			let bonus be (( strength of player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]22[roman type] (Strength Check):[line break]";
@@ -273,7 +273,7 @@ When Play begins:
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]burly[or]strong[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "[one of]ursine[or]grizzly[or]bearlike[at random]"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]

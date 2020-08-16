@@ -11,9 +11,10 @@ Object	Name
 PewterPet	"PewterPet"
 
 PewterPet is a situation.
+ResolveFunction of PewterPet is "[ResolveEvent PewterPet]".
 The sarea of PewterPet is "Capitol".
 
-Instead of resolving PewterPet:
+to say ResolveEvent PewterPet:
 	say "     Your walk down the street is interrupted when a gray feral beast rushes out of a nearby alley. With only a mouth on its otherwise featureless face and its long tail, the beast is none other than a Pewter Consort. You get ready for the creature to come at you, but to your surprise, it bounds off in the opposite direction. You're further surprised when a short, giggling female otter comes running out of the same alleyway. Wearing nothing more than a pink-striped newsboy cap, aqua-blue flower earrings, and a belt-like collar, the small mustelid seems to have no problem showing off her lithe body and an ample ass as she chases after the consort. Following the odd pair from a safe distance, you notice that the both of them have wide smiles on their faces, and you realize that they are simply playing. The game doesn't last much longer though when the otter closes in on her friend, and as she shouts, 'Got you, Ich'Thullain!' she leaps onto her playmate's back, prompting the beast to stop and end the chase.";
 	say "     Now that they have stopped moving, you can see that the otter is around three feet tall and is dwarfed by the consort's larger frame. The otter gives the beast, who is apparently named Ich'Thullain, a pat on its back before climbing off of her mount. Ich'Thullain promptly flops onto its side and rolls onto its back, his legs splayed to expose his belly. The female giggles at the display and swiftly climbs back onto her friend. 'Who's a good boy? Who's a good boy?' she coos as she rubs the consort's belly with her hands. 'You are, Ich'Thullain! Yes, you are!' It's a curious sight to see the usually lustful beast be treated like an ordinary dog, but by his wagging tail and happy growls, Ich'Thullain doesn't mind one bit. In fact, Ich'Thullain might be enjoying his belly rubs a bit too much when you see his cock start to rise, silvery pre drooling from the head, and begins rubbing against the otter's behind.";
 	WaitLineBreak;

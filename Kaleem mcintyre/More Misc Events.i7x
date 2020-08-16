@@ -14,12 +14,13 @@ Object	Name
 Unorthodox Sight	"Unorthodox Sight"
 
 Unorthodox Sight is a situation.
+ResolveFunction of Unorthodox Sight is "[ResolveEvent Unorthodox Sight]".
 The sarea of Unorthodox Sight is "Red".
 when play begins:
 	add Unorthodox Sight to BadSpots of FurryList;
 	add Unorthodox Sight to BadSpots of MaleList;
 
-Instead of resolving a Unorthodox Sight:
+to say ResolveEvent Unorthodox Sight:
 	say "     Suddenly overcome by the sensation that something is wrong, you quickly whip your head around, looking this way and that in an attempt to figure out what is amiss. Due to having managed to brave a great deal of dangers already, you know it is wise to listen to your instincts when they tell you that something is off. For now the street seems empty, with nothing but the burned-out husks of buildings on the side opposite you and a row of uninteresting shops along your side of the street. They seem to be the kind of places that virtually nobody would ever actually bother going into. You assume they only managed to survive at all because the rent was cheap here right at the edge of the red light district. Focusing on your other senses, you then hear movement somewhere down the street and around a corner. Whoever it is doesn't appear to be in a rush, but even so, they'll be here soon enough.";
 	say "     [bold type]What to do you want to do now?[roman type][line break]";
 	LineBreak;
@@ -52,12 +53,13 @@ Object	Name
 Family Fun	"Family Fun"
 
 Family Fun is a situation.
+ResolveFunction of Family Fun is "[ResolveEvent Family Fun]".
 The sarea of Family Fun is "Beach".
 when play begins:
 	add Family Fun to BadSpots of FurryList;
 	add Family Fun to BadSpots of MaleList;
 
-Instead of resolving a Family Fun:
+to say ResolveEvent Family Fun:
 	say "     As you stroll down the beach, you spot a young male fox walking between two muscular wolves. The wolf on the left is the largest, with a wide and burly figure, while the one on the right is comparatively lithe. The fox between the two appears rather young, most likely a teenager. All three of them are completely naked, making no effort to conceal their sizable sheaths and balls. Despite their altered bodies, they hold each other's hands like a family enjoying a vacation at the beach. You watch as the teenage vulpine looks between the two, presumably his guardians or parents, with a happy smile upon his narrow muzzle. You find your gaze locked to them as they continue down the beach.";
 	say "     Curious about the peculiar sight, you follow a few yards behind them so as to not disturb their moment together. As the canine trio reaches a stretch of empty beach, they suddenly let go of their clasped hands and run away from the fox. You wonder why they would do that, only to realize with a start that they're actually playing a game of tag! While you watch, both of the big wolves take turns acting as the [']prey['] for the other two at a seemingly random interval. You take your leave as the game changes from tag to wrestling, quietly pleased that there is still something sweet left in the world despite the chaos and depravity of the city.";
 	increase score by 1;
@@ -75,12 +77,13 @@ Object	Name
 Auto Shop	"Auto Shop"
 
 Auto Shop is a situation.
+ResolveFunction of Auto Shop is "[ResolveEvent Auto Shop]".
 The sarea of Auto Shop is "Red".
 when play begins:
 	add Auto Shop to BadSpots of FurryList;
 	add Auto Shop to BadSpots of MaleList;
 
-Instead of resolving a Auto Shop:
+to say ResolveEvent Auto Shop:
 	say "     As you carefully make your way through the city's most notorious district, your ears twitch at the sound of a car revving. Pausing briefly to figure out where it is coming from, you move towards the source. As you get closer you find yourself slowing, wary of the possibility that although it may be a sane person or persons, it could just as easily be just a sex focused monster screwing around with a car. You continue regardless of your disquiet and soon find yourself looking at the entrance to an auto shop. With surprise, you see that the lights inside are on and quickly realize that it must be running off a generator.";
 	say "     Peering in the open garage door you see an erotic sight. In pairs and trios around the garage various mutants are having very raunchy and open sex. Given that they are mostly wearing pieces of mechanics outfits you figure that they must be sane but horny enough to have an orgy, perhaps having recently been changed. If so, they've certainly not wasted much time in getting it on, as you can literally see whole puddles of cum on the ground in there. The majority of those within the garage appear to be one type or another of canines, but a few felines are scattered about having some fun too. The garage is filled with wet slaps, loud moans, and growls as the group helps each other get off. The smell of musk and jizz is almost overwhelming to your senses as you watch. In the center of the garage is a relatively intact Jeep that you notice to be the source of the revving.";
 	WaitLineBreak;

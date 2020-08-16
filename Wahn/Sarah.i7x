@@ -59,13 +59,15 @@ Table of GameEventIDs (continued)
 Object	Name
 Husky Pack	"Husky Pack"
 
-Husky Pack is a situation. The level of Husky Pack is 8.
+Husky Pack is a situation.
+ResolveFunction of Husky Pack is "[ResolveEvent Husky Pack]".
+The level of Husky Pack is 8.
 the sarea of Husky Pack is "Outside".
 when play begins:
 	add Husky Pack to BadSpots of FemaleList;
 	add Husky Pack to BadSpots of FurryList;
 
-instead of resolving a Husky Pack:
+to say ResolveEvent Husky Pack:
 	say "     Rounding a corner in one of the inner-city blocks, you run right into the leader of a small husky pack, his fur cushioning the impact. As you jump back from the imposing anthro canine, he snarls in your face, drawing back his lips from a muzzle full of white and sharp teeth. 'Fuck off,' the alpha husky growls in annoyance and is immediately supported by the group of husky bitches following behind him. 'You better run, [if Player is female]skank[else]asshole[end if]!' one of them barks and gives you a quite rude gesture, then a second laughs in a shrill tone and adds, 'That's right. Our man will fuck you up otherwise.' Between the group of naked anthro females, you catch a glimpse of a thin human woman with a red leather collar on a leash. She is shoeless, dressed in partly torn jeans and a ragged t-shirt, both clear indications that she's gone through some stuff. From her expression, the young woman is quite uncomfortable with the tight leather band against her throat. And not only that - the leash is stretched taut between her and the male, with him apparently dragging her along by force. Both of the items still bear price tags, so your guess would be that this little gang just came out of the nearby pet store after outfitting the newest unwilling recruit to his harem of bitches.";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Apologize and leave as quickly as you can.";
@@ -332,9 +334,10 @@ Object	Name
 Medkit Parts	"Medkit Parts"
 
 Medkit Parts is a situation.
+ResolveFunction of Medkit Parts is "[ResolveEvent Medkit Parts]".
 HasParts is a number that varies.
 
-instead of resolving Medkit Parts:
+to say ResolveEvent Medkit Parts:
 	say "     Scavenging [one of]in the rubble of a collapsed building[or]in the crumpled remains of a car[or]in the half-melted wreck of a car[or]and looking through the contents of an abandoned backpack[or]and digging through a dumpster[or]and checking out some scattered items on the streets[at random], you find some items that seem to belong in a medkit. Given the source, you're not sure if the stuff is even usable anymore - might be past the expiration date, broken or somehow tainted by nanites. Still, it looks like something that could be useful, so you take it along.";
 	if Sarah is not in the bunker:
 		say "     Maybe you could find some medical professional to sort the good from the bad and put together a usable medkit?";
@@ -1364,7 +1367,7 @@ to say SarahColleenScene2:
 
 Section 4.4 - Alexandra
 
-after going down from Grey Abbey Library while (Sarah is in Bunker and Alexandra is in library and (hp of Alexandra > 0 and hp of Alexandra < 50) and AlexandraSarahInteraction is 0 and SarahCured > 1): [initial Alexandra / Sarah meet]
+after going down from Grey Abbey Library while (Sarah is in Bunker and Alexandra is in library and (HP of Alexandra > 0 and HP of Alexandra < 50) and AlexandraSarahInteraction is 0 and SarahCured > 1): [initial Alexandra / Sarah meet]
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG -> Alexandra & SARAH MEET - AlexandraSarahInteraction: [AlexandraSarahInteraction] <- DEBUG[line break]";
@@ -1508,7 +1511,7 @@ One of them could be all "Yo bitch!" to Sarah, with her getting miffed at Alexan
 
 Section 4.6 - Fang
 
-instead of navigating Grey Abbey Library while (Sarah is in Bunker and Fang is in Grey Abbey Library and (hp of Fang < 5 and hp of Fang > 1) and FangSarahInteraction is 0 and SarahCured > 3):
+instead of navigating Grey Abbey Library while (Sarah is in Bunker and Fang is in Grey Abbey Library and (HP of Fang < 5 and HP of Fang > 1) and FangSarahInteraction is 0 and SarahCured > 3):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -1536,7 +1539,7 @@ instead of navigating Grey Abbey Library while (Sarah is in Bunker and Fang is i
 	now FangSarahInteraction is 1;
 	now lastFangSarahInteraction is turns;
 
-instead of going to Courtyard while (hp of Fang is 3 or hp of Fang is 4) and FangSarahInteraction is 1 and MaleList is not warded and MaleList is not banned and FemaleList is not warded and FemaleList is not banned and a random chance of 1 in 2 succeeds: [Alpha Fang gets his own back against Sane Sarah]
+instead of going to Courtyard while (HP of Fang is 3 or HP of Fang is 4) and FangSarahInteraction is 1 and MaleList is not warded and MaleList is not banned and FemaleList is not warded and FemaleList is not banned and a random chance of 1 in 2 succeeds: [Alpha Fang gets his own back against Sane Sarah]
 	project the figure of Sarah_clothed_icon;
 	say "     As you enter the courtyard, you catch sight of Sarah sitting on the edge of the fountain with her back to you, softly humming to herself. Figuring that you might go and have a conversation with her, you begin to approach but someone barges past you as you take a step forward. Annoyed that someone would be so rude, you turn to give them a piece of your mind but stifle any retort as you discover that is Fang and he looks intent on sneaking up the husky, giving you a firm look to communicate that you should remain quiet. Despite the knowledge that this is unlikely to end well, and any desire that you have to warn Sarah of his approach, you submit to your Alpha's will and step back silently to allow him to proceed unhindered. With a grateful nod, the wolf resumes stalking forward, the female canine oblivious to his presence. You only hope that she'll understand and forgive you, or even better not know that you stood by and did nothing.";
 	say "     Maybe she caught his scent, heard his claws on the path, or merely sensed that something was wrong, but as Fang gets within a couple of meters of her, Sarah turns her head and sees the advancing wolf. Her eyes widen as she hurriedly begins to rise, but as she turns her foot-paws get tangled and she sprawls face-first onto the ground, leaving her exposed as the wolf closes the gap. Before she can recover, Fang is atop her, pressing a paw against her back while remaining clear of her fiercely kicking legs, learning from the last time the force that she can put behind them. 'Be still,' the Alpha snarls, putting more pressure on his paw to hold her down. 'Fuck you. Get off me you flea-ridden mutt. I will never submit to you,' Sarah spits back, wriggling desperately in a futile attempt to get free.";
@@ -1549,7 +1552,7 @@ instead of going to Courtyard while (hp of Fang is 3 or hp of Fang is 4) and Fan
 	now FangSarahInteraction is 2;
 	now lastFangSarahInteraction is turns;
 
-instead of going to Grey Abbey Library while (hp of Fang is 3 or hp of Fang is 4) and Fang is in Grey Abbey Library and Sarah is in Bunker and SarahSlut is 4 and FangSarahInteraction < 1 and lastfuck of Fang - turns > 7 and MaleList is not warded and MaleList is not banned and FemaleList is not warded and FemaleList is not banned and a random chance of 1 in 2 succeeds: [Alpha Fang and Slutty Sarah]
+instead of going to Grey Abbey Library while (HP of Fang is 3 or HP of Fang is 4) and Fang is in Grey Abbey Library and Sarah is in Bunker and SarahSlut is 4 and FangSarahInteraction < 1 and lastfuck of Fang - turns > 7 and MaleList is not warded and MaleList is not banned and FemaleList is not warded and FemaleList is not banned and a random chance of 1 in 2 succeeds: [Alpha Fang and Slutty Sarah]
 	project the figure of Sarah_naked_icon;
 	say " 	Entering the library, you are comforted to see your Alpha in his usual position by the front door, protecting his pack and their home from any creature roaming the city that might take an interest in claiming the library for its own. You also notice Sarah peering around the corner of a bookshelf, the slutty husky outside of the bunker for once and gazing lustfully at the wolf stud by the entrance. You would smirk at her infatuation, but you understand the attraction that she has towards the majestic, dark-furred guardian as you too feel that way. While you consider whether or not to encourage her to make herself available to him, you realize that he will be fully aware of her living in the library and should he be interested in her, that he will take her as is his prerogative as Alpha. It is up to the two of them to make this happen.";
 	say " 	Seemingly coming to a similar conclusion, or more likely having had her caution overwhelmed by horniness, Sarah creeps out from behind the shelf and approaches the wolf, copious fluids leaking from her canine spade, the engorged lips almost throbbing with need and splattering her scent onto the floor behind her. She barely spares you a glance as she passes by you, only halting when she is beside Fang where she rolls on to her back and nuzzles up against his side. With a final glance out the door to ensure that nothing is approaching, the Alpha turns his attention to the display of submission before him, leaning down to sniff at her throat and puffy vulva, his tongue slipping from his mouth to lick at it for a moment before continues to inhale the husky's scent. You can see his crimson shaft beginning to emerge beneath him, the soft skin of his shaft stretching as finally his knot slips free, already partially inflated despite the wolf not having yet begun mating. The effect that this has on Sarah is obvious, the excitement of having such an effect on the pack leader visible on her face as well as her body language.";

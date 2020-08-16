@@ -9,10 +9,11 @@ Object	Name
 Save the Dame	"Save the Dame"
 
 Save the Dame is a situation.
+ResolveFunction of Save the Dame is "[ResolveEvent Save the Dame]".
 Save the Dame is inactive.
 The sarea of Save the Dame is "High".
 
-Instead of resolving a Save the Dame:
+to say ResolveEvent Save the Dame:
 	If dam is 1 and BodyName of Player is "Chocolate Lab" and FaceName of Player is "Chocolate Lab":
 		say "     Padding up to a group of your chocolate lab brothers/sisters hybrids, you find yourself instantly welcomed into the fold by the small pack. Nuzzling and nipping playfully at you, the group seems eager to try and mate with you as they rub themselves up against your flowing chocolate body. Grunting and panting back at them in affection, though not exactly because you want to as your body seems to have taken on desires of its own, you whimper and whine at the canines to show them how much you appreciate their show of adoration.";
 		say "     When a strange scent comes across the wind, you find yourself lifting your dark brown nose up and then sniffing at the sky. The pack follows your example as they catch the same scent and soon, all the labs present are barking and growling happily as thought smelling something delicious. Watching as the others suddenly take off, you try to think over what this strange, but very pleasant odor you're smelling is, right before the image of a chocolate lab - with a pussy ready and waiting for you to use - pops into your head. Shaking such thoughts away, you find yourself snorting as you turn to go about your way.";

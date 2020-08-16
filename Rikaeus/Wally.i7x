@@ -41,12 +41,13 @@ Object	Name
 College Hopeful	"College Hopeful"
 
 College Hopeful is a situation.
+ResolveFunction of College Hopeful is "[ResolveEvent College Hopeful]".
 The sarea of College Hopeful is "Beach".
 
 when play begins:
 	add College Hopeful to BadSpots of MaleList;
 
-instead of resolving College Hopeful:
+to say ResolveEvent College Hopeful:
 	if WallyQuestDenial is 0:
 		say "     Wandering the beach you spot a worried otter looking around. As soon as he notices you, the male rushes up to you with a question in his eyes. Curious, you ask him what's wrong. 'So, uh, I've heard that there's a college on the other side of the city and was hoping to attend,' he says, shuffling his foot in the sand. You raise a brow and say that, yes, you've heard of this college as well and ask him why he's telling you about his desire to go there. 'Well, you look like you could take me there if possible?' He looks at you with an eager look. Inwardly you sigh but contemplate the situation you've been presented with.";
 		say "     [bold type]Do you wish to escort the otter?[roman type][line break]";
@@ -73,7 +74,7 @@ instead of resolving College Hopeful:
 			say "     'Oh! I need to get prepared. A lot of my stuff is back in my little cove I have set up,' he murmurs before taking a look towards the cliffside of the beach. 'How about we meet up outside the beach whenever both of us are ready?' the otter says with a tilt of his head in your direction. You nod and say that's alright though you'll wish to get your escort's name first. Instantly the male blushes, clearly embarrassed for having forgotten to give you his name. 'W-well, my name is Wally,' he stutters out. You tell him it's nice to meet him and that you'll see him soon hopefully. 'Same here!' the otter shouts as he heads off towards the cliffside.";
 			now HP of Wally is 1;
 			now College Hopeful is resolved;
-			now Otter Escort Mission is not resolved;
+			now Otter Escort Mission is active;
 			now PlayerMet of Wally is true;
 			now WallyQuestDenial is 2;
 			increase InsightGained by 1;
@@ -86,13 +87,14 @@ Object	Name
 Otter Escort Mission	"Otter Escort Mission"
 
 Otter Escort Mission is a situation.
-Otter Escort Mission is resolved.
+ResolveFunction of Otter Escort Mission is "[ResolveEvent Otter Escort Mission]".
+The Prereq1 of Otter Escort Mission is College Hopeful.
 The sarea of Otter Escort Mission is "Outside"
 
 when play begins:
 	add Otter Escort Mission to BadSpots of MaleList;
 
-instead of resolving Otter Escort Mission while HP of Wally is 1:
+to say ResolveEvent Otter Escort Mission:
 	now inasituation is true;
 	if WallyOrcFled is 0:
 		say "     Making your way to the entrance of the beach, you wait there, expecting the otter to show up, hoping that he'll show up soon. Thankfully you don't have to stand there long, as Wally walks on up with a heavy looking backpack on him, seeming all ready to go. Just in case, you ask the male if he has everything he needs for the trip. 'Mhm, I have everything I own here with me,' he says gesturing to what he's carrying. Nodding at that, you tell him that the both of you should get going lest it take any longer to get there. Especially as you're pretty sure that the backpack will probably tire out the otter.";
@@ -167,6 +169,7 @@ Object	Name
 Otter Class Sign Up	"Otter Class Sign Up"
 
 Otter Class Sign Up is a situation.
+ResolveFunction of Otter Class Sign Up is "[ResolveEvent Otter Class Sign Up]".
 Otter Class Sign Up is resolved.
 The sarea of Otter Class Sign Up is "Campus"
 
@@ -177,7 +180,7 @@ instead of going to College Administration Building while (Otter Class Sign Up i
 	move player to College Administration Building;
 	ThirdWallyEvent;
 
-instead of resolving Otter Class Sign Up:
+to say ResolveEvent Otter Class Sign Up:
 	move player to College Administration Building;
 	ThirdWallyEvent;
 

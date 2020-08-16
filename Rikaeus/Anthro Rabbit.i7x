@@ -99,7 +99,7 @@ When Play begins:
 	now lootchance entry is 0;          [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 2;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]fit[or]slender[or]cute[at random]";
 	now type entry is "[one of]bunny[or]rabbit[at random]";
@@ -224,7 +224,6 @@ instead of sniffing lucky rabbit foot:
 
 lucky rabbit foot is a grab object.
 the usedesc of lucky rabbit foot is "[lucky rabbit foot use]".
-lucky rabbit foot is part of the player.
 lucky rabbit foot is not temporary.
 
 to say lucky rabbit foot use:

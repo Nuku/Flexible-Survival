@@ -284,7 +284,7 @@ When Play begins:
 	now lootchance entry is 0;          [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "lean"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "human";          [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -405,6 +405,7 @@ Object	Name
 Wandering Helot	"Wandering Helot"
 
 Wandering Helot is a situation.
+ResolveFunction of Wandering Helot is "[ResolveEvent Wandering Helot]".
 The sarea of Wandering Helot is "High".
 
 WanderingHelotTimer is a number that varies. [@TagNotSaved]
@@ -415,7 +416,7 @@ WanderingHelotTimer is usually 20000.
 [ 0: Never seen        ]
 [ 1: Seen once         ]
 
-Instead of Resolving a Wandering Helot:
+to say ResolveEvent Wandering Helot:
 	If resolution of Wandering Helot is 0:
 		say "     While exploring the streets of the once rich and prosper High Rise District, you come across a very unusual event. Far ahead of you, still barely visible from your perspective of view, is a man walking in your direction. From what you can perceive, he's wearing a backpack, holding onto the straps with his posture slightly arched forward, an indicative that whatever he's carrying must be heavy, or that he has found plenty of loot in his last scavenge run. Though what makes your eyes jump is that he, in fact, looks perfectly human... Until his silhouette lightens and his true nature is revealed. A fully fledged, independent and lonesome helot, walking around all by himself, scavenging around the streets of this district, has somehow found a way to escape the college grounds and become a wanderer!";
 		say "     How he managed to do that, you have no idea, but he surely looks a little puffier than the usual helots you encounter under the sometimes cruel ownership of the spartans. This one must have been having success in his adventurous life, and judging by the amount of loot he must have on his back right now, you'd say he's got very good scavenging skills. He hasn't noticed you yet, as you took cover behind a corner to some dark alley before you fell in his line of sight, and he's going to get right past you in a few.";
@@ -585,6 +586,7 @@ Object	Name
 Helot Captive	"Helot Captive"
 
 Helot Captive is a situation.
+ResolveFunction of Helot Captive is "[ResolveEvent Helot Captive]".
 The sarea of Helot Captive is "Campus".
 
 [Single Event at the campus with a captive Helot and a human possibly being turned into a Helot by being fucked by a Spartan]
@@ -592,7 +594,7 @@ The sarea of Helot Captive is "Campus".
 [ 1: Human not saved                         ]
 [ 2: Saved the human                         ]
 
-Instead of resolving a Helot Captive:
+to say ResolveEvent Helot Captive:
 	say "     During your stroll inside the College Campus, you come across a quite intriguing scene around the corner of a building, covered by the surrounding walls in a quite discrete spot. A Spartan is dragging a tied up human with him, what seems to have been a lost soldier among the few squads that were sent to this area, and a Helot, also restrained, laying just to the side as his master arrives with the new acquisition. You remain hidden during the whole sequence, as the warrior brings the human up against the wall, and from your angle, he seems to be preparing himself to fuck the poor soldier into submission. You can either [bold type]choose to stay and observe what happens next if you're curious, fight the Spartan and try to at least save the human from being transformed, or simply take your leave[roman type] and pretend you never saw anything.";
 	LineBreak;
 	say "     [link](1)[as]1[end link] - Rescue the human!";
@@ -646,12 +648,13 @@ Object	Name
 Generous Helot	"Generous Helot"
 
 Generous Helot is a situation.
+ResolveFunction of Generous Helot is "[ResolveEvent Generous Helot]".
 The sarea of Generous Helot is "Campus".
 
 GenerousHelotTimer is a number that varies. [@TagNotSaved]
 GenerousHelotTimer is usually 20000.
 
-Instead of resolving a Generous Helot:
+to say ResolveEvent Generous Helot:
 	if GenerousHelotTimer - turns < 7:
 		say "     While exploring the college campus, you come across a rather athletic man, whose attire is the same as those ancient Spartan servants, a pair of sandals and barely a loincloth to cover their privates. It is a Helot, though instead of lunging himself at you, he gives you a nod and continues on his path. Strangely polite for an unwilling manservant...";
 	else:

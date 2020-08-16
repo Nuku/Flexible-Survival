@@ -17,7 +17,8 @@ Table of GameEventIDs (continued)
 Object	Name
 Fox Adventurer	"Fox Adventurer"
 
-Fox Adventurer is a situation. The level of Fox Adventurer is 5.
+Fox Adventurer is a situation.
+ResolveFunction of Fox Adventurer is "[ResolveEvent Fox Adventurer]". The level of Fox Adventurer is 5.
 The sarea of Fox Adventurer is "Outside".
 
 when play begins:
@@ -25,7 +26,7 @@ when play begins:
 	add Fox Adventurer to badspots of HermList;
 	add Fox Adventurer to BadSpots of FurryList;
 
-Instead of resolving Fox Adventurer:
+to say ResolveEvent Fox Adventurer:
 	if HP of Solstice is 0:
 		say "     Traveling the city streets, you take a moment to glance behind you and, as you return your eyes to your path, you find it blocked by another figure. Before you is a female silver fox with several fluffy tails. She's dressed rather more unusually than most others you've met. Her red, sleeveless top is tight over her breasts and she has a pair of khaki shorts with some pouches belted to it. She has a pair of goggles on her head, worn resting above her brow. Slung over her back is a backpack. Her appearance, save for her sexy, vulpine nature would lead you to imagine her as a character in an adventure movie or video game, perhaps raiding tombs or hunting relics. Aside from her paw resting on the machete strapped to her hip, she doesn't seem aggressive.";
 		WaitLineBreak;
@@ -93,7 +94,8 @@ Table of GameEventIDs (continued)
 Object	Name
 Onyx Crow	"Onyx Crow"
 
-Onyx Crow is a situation. The level of Onyx Crow is 5.
+Onyx Crow is a situation.
+ResolveFunction of Onyx Crow is "[ResolveEvent Onyx Crow]". The level of Onyx Crow is 5.
 Prereq1 of Onyx Crow is Fox Adventurer.
 Prereq1Resolution of Onyx Crow is { 1 }.
 Prereq1ResolvedMandatory of Onyx Crow is false.
@@ -104,7 +106,7 @@ when play begins:
 	add Onyx Crow to badspots of HermList;
 	add Onyx Crow to BadSpots of FurryList;
 
-Instead of resolving Onyx Crow:
+to say ResolveEvent Onyx Crow:
 	if HP of Solstice is not 1:	[should not come up, but just in case, we have this.]
 		say "     You find yourself in the Greek Artifacts wing, but are interrupted by the raucous arrival of a large band of Satyrs. Laden with wine and a few nymphs for them to share, they start up an orgy of drinking and sex. There are far too many of them to fight at one time and while it is tempting to join into their debauchery, you manage to pull yourself away lest you lose yourself to their drunken ways.";
 		now Onyx Crow is resolved;
@@ -137,7 +139,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "Crow Artifact"	"     The black onyx carving is shaped like a crow's head. It is decorated with golden eyes and an ornate golden band around its base."	3	Crow Artifact
 
-Crow Artifact is a grab object. It is part of the player. It is not temporary.
+Crow Artifact is a grab object. It is not temporary.
 
 instead of using Crow Artifact:
 	say "     You probably shouldn't be fiddling around with an expensive, and stolen, artifact. You'd best bring it back to that vulpine adventurer.";
@@ -153,7 +155,7 @@ an everyturn rule:
 
 an everyturn rule:
 	if ( HP of Solstice is 3 or HP of Solstice is 4 ) and Solstice is in Makeshift Rec Room and the player is in the Grey Abbey Library:
-		say "     Returning to the central room of the library, you are startled to find a new person casually waiting for you. Solstice is here, leaning against one of the bookshelves, glancing through a book. The vulpogryph smiles and tucks the book back on the shelf as you come striding over[if HP of Fang is 1 or HP of Fang is 2]. Sparing a quick glance to Fang, who seems as surprised to find the intruder here, the guard wolf dips his ears and slinks back, clearly having failed in his guard duties somehow[else if HP of Fang is 3 or hp of Fang is 4 or hp of Fang is 5]. Fang growls a little from his post at the door, clearly upset that this intruder somehow managed to get past him unnoticed[end if].";
+		say "     Returning to the central room of the library, you are startled to find a new person casually waiting for you. Solstice is here, leaning against one of the bookshelves, glancing through a book. The vulpogryph smiles and tucks the book back on the shelf as you come striding over[if HP of Fang is 1 or HP of Fang is 2]. Sparing a quick glance to Fang, who seems as surprised to find the intruder here, the guard wolf dips his ears and slinks back, clearly having failed in his guard duties somehow[else if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 5]. Fang growls a little from his post at the door, clearly upset that this intruder somehow managed to get past him unnoticed[end if].";
 		say "     'Hey there. Pretty nice setup [if ( number of booked people + number of bunkered people ) > 2]you and your pals have[else]you've[end if] got going here. Not much interest to the critters out there and a reinforced bunker in case things get really bad. Definitely need to get some more supplies for that, though. Things got rather hectic back at my old place, so I figured I could move in here with you, sweetie.' She runs a taloned paw along your side.";
 		if HP of Solstice is 3:
 			say "     Still upset with her about the feather, you push her hand away. 'What? Oh, I'm so sorry, hon. I didn't mean for anything like that to happen. It must've fallen out,' she says apologetically[if the player is partvg]. 'It certainly looks good on you though,' she adds with a grin and another stroke to your altered body[end if]. You calm down, accepting that it could very well have been an accident.";

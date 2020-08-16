@@ -12,10 +12,11 @@ Table of GameEventIDs (continued)
 Object	Name
 Visceral Painting	"Visceral Painting"
 
-Visceral Painting is a situation. [updating "Moving painting" by Sarokcat]
+Visceral Painting is a situation.
+ResolveFunction of Visceral Painting is "[ResolveEvent Visceral Painting]". [updating "Moving painting" by Sarokcat]
 The sarea of Visceral Painting is "Museum".
 
-Instead of Resolving a Visceral Painting:
+to say ResolveEvent Visceral Painting:
 	say "     Wandering the museum hallways, you stop for a minute [one of]to look at some of the artwork [or]to get your bearings [at random]when one of the paintings near you catches your eye. The frame is nothing special, just four plain dark oak pieces of wood, but the subject of the painting is so visceral that you can't help but look at it for a moment. Painted in oil is a young man, athletic and half naked, running away from four pursuers. The young man runs in front of a large oak tree in what looks like the beginning of spring, given the melting snow in the muddy ditch the young man flees through. He's glancing back towards his pursuers, his back facing you, his legs covered in caked mud, his arms stratched up.";
 	say "     The pursuers wear formal attire, almost like French military uniforms but filthy. They carry rifles but they don't aim for the young man. Instead, the four older men, with grins on their faces, hold their rifles as they might pitchforks. One man, presumeably the leader, has very little grime on his clothes, and he's pointing towards the young man. He's biting his lips and leering at the naked man. You can see every wrinkle on his face and it looks like the artist took the time to paint every strand of hair. Clearly, this painting says a lot more now that this scene plays out every day. You look around the painting for a plaque for the name of the piece. 'The Hunt in Spring' is its name, but there's no attribution for the artist.";
 	let bonus be (( Perception of Player minus 20 ) divided by 2);
@@ -40,9 +41,10 @@ Object	Name
 Tide Pool Trouble	"Tide Pool Trouble"
 
 Tide Pool Trouble is a situation.
+ResolveFunction of Tide Pool Trouble is "[ResolveEvent Tide Pool Trouble]".
 The sarea of Tide Pool Trouble is "Beach".
 
-Instead of resolving a Tide Pool Trouble:
+to say ResolveEvent Tide Pool Trouble:
 	say "     As you meander down the beach, waves crash against rocks not too far ahead of you. The rocks litter this part of the shore. You cannot help but walk on some, but most of these are beter described as boulders. Not much farther ahead, there are various boulders jutting out from the shore, towering above you the size of small buildings. You see the tide pools at your feet as you walk towards these towering boulders. Small fish swim as you move from rock to rock. As you approach the tallest rock, you notice something in one of the tide pools under that great boulder causes the water to splash out vigorously. The water seems to bubble out from the shallow water. Could this be the entrance to some underwater cavern? The water seems to positively come alive as you approach.";
 	say "     [bold type]Do you inspect the roiling tide pool?[roman type][line break]";
 	LineBreak;
@@ -68,10 +70,11 @@ Table of GameEventIDs (continued)
 Object	Name
 Lingua Franca	"Lingua Franca"
 
-Lingua Franca is a situation. [revising "Languages Department" by Wahn]
+Lingua Franca is a situation.
+ResolveFunction of Lingua Franca is "[ResolveEvent Lingua Franca]". [revising "Languages Department" by Wahn]
 The sarea of Lingua Franca is "Campus".
 
-Instead of resolving a Lingua Franca:
+to say ResolveEvent Lingua Franca:
 	say "     Passing behind one of the lecture halls, you come across a small group of creatures arguing with one another in multiple languages. Some of these creatures are wearing what you imagine to be their old clothes, the elephant woman wears her old skirt and her top is torn to expose her breasts, but she doesn't seem to notice. You can see a Chinese dragon, not much taller than the rest of them, wearing an open marching band jacket in the colors of Tenvale College. These must all be students. There's also a bear, frog, and a green pheasant. All in different stages of dress.";
 	say "     Each student seems to embody a different cultural stereotype. You probably stumbled upon the languages department, as each student is speaking a different language. Have they lost their ability to speak English?";
 	say "     [bold type]Do you approach the group?[roman type][line break]";
@@ -105,10 +108,11 @@ Table of GameEventIDs (continued)
 Object	Name
 PoliSci	"PoliSci"
 
-PoliSci is a situation. [revising "Politics" by hiccup]
+PoliSci is a situation.
+ResolveFunction of PoliSci is "[ResolveEvent PoliSci]". [revising "Politics" by hiccup]
 the sarea of PoliSci is "Campus".
 
-Instead of Resolving a PoliSci:
+to say ResolveEvent PoliSci:
 	say "     While exploring the campus, you stumble upon the Poli-Sci building. You turn the corner and see two humanoid creatures arguing with one another, but you can only barely make out what's being said. One of them is a donkey boy, who is yelling very loudly, and the other is an elephant girl, who is covering her giant ears as best she can. The boy is in a nice suit with a purple tie and stands over the girl by a solid foot, yelling down at her in her yellow sunday dress. She also wears a bangle with a purple gem in it. The other people walking around them seem to know the couple, as both the elephant and the donkey nod or smile at this person or that one as though nothing is happening. You can't help but wonder what their problem is. Maybe they're poli-sci students and this is just a very intense debate?";
 	say "     [bold type]Do you approach the two arguing students?[roman type][line break]";
 	LineBreak;
@@ -132,10 +136,11 @@ Table of GameEventIDs (continued)
 Object	Name
 Sewer Stalker	"Sewer Stalker"
 
-Sewer Stalker is a situation. [revising "Ritual Location" by Kaleem]
+Sewer Stalker is a situation.
+ResolveFunction of Sewer Stalker is "[ResolveEvent Sewer Stalker]". [revising "Ritual Location" by Kaleem]
 the sarea of Sewer Stalker is "Mall".
 
-Instead of Resolving a Sewer Stalker:
+to say ResolveEvent Sewer Stalker:
 	say "     Exploring the sewers of the mall for some time, you don't find anything of note and decide to head back to the surface. However, when you turn around you see a figure not too far away from you. Once they realize you've turned around, they futilely hug the sewer wall opposite the dim lights. It's pretty clear this person was following you. You call out to them and wait a moment, and you see their silhouette in the dim light lackadaisically walk away from the wall, just barely being touched by the light. They're wearing a cloak, and even in the darkness of the sewers, this person has their hood up concealing their face. In the hand closest to the light, and therefore the better lit side, you can see your stalker holds a crystal ball in their hand.";
 	say "     Before you can ask what it is they want, the cloaked figure raises the ball above their head. It flashes with an intense white light. Though you shield your eyes with your arm the first time, the crystal ball flashes a second time and the light hits your eyes, blinding you temporarily. You hear footsteps as your stalker rushes towards you. You try to ready yourself for a fight, but there's no time. Your stalker is closing in. They're right in front of you. They hold the glass ball up to your face. It flashes again. This time, however, you think you see figures moving in the ball. The person tries to tell you something, but you aren't paying attention to them. A sense of vertigo flows over you as the crystal ball is held to your face, but you probably could still get away from this person if you tried.";
 	LineBreak;
@@ -166,10 +171,11 @@ Object	Name
 Junkyard Utility	"Junkyard Utility"
 
 Junkyard Utility is a situation.
+ResolveFunction of Junkyard Utility is "[ResolveEvent Junkyard Utility]".
 The sarea of Junkyard Utility is "Junkyard".
 searchesUtSit is a number that varies.
 
-Instead of resolving Junkyard Utility:
+to say ResolveEvent Junkyard Utility:
 	say "     As you wander the junkyard, you see a large pile of, well, junk. You search through this heaping mound of other people's garbage and find ";
 	if scaleValue of Player <= 2:
 		if a random chance of 1 in 4 succeeds:

@@ -661,6 +661,7 @@ Object	Name
 Old Stallion Friendship	"Old Stallion Friendship"
 
 Old Stallion Friendship is a situation.
+ResolveFunction of Old Stallion Friendship is "".
 The sarea of Old Stallion Friendship is "Nowhere".
 
 instead of going southeast from Abandoned Lot while (Resolution of Old Stallion Friendship is 0 and Steven is in Steven's Home):
@@ -772,7 +773,7 @@ When play begins:
 	now lootchance entry is 0;
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]powerful[or]muscled[or]muscular[at random]";
 	now type entry is "equine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -920,13 +921,16 @@ Section 2 - Junkyard Digups
 
 Table of GameEventIDs (continued)
 Object	Name
-Junkyard digups	"A pile of garbage"
+Junkyard Digups	"A pile of garbage"
+Junkyard Digups	"Junkyard Digups"
 
-Junkyard digups is a situation. The printed name of Junkyard digups is "A pile of garbage".
-The sarea of junkyard digups is "Junkyard".
+Junkyard Digups is a situation.
+ResolveFunction of Junkyard Digups is "[ResolveEvent Junkyard Digups]".
+The printed name of Junkyard Digups is "A pile of garbage".
+The sarea of Junkyard Digups is "Junkyard".
 jdigup is a number that varies.
 
-Instead of resolving junkyard digups:
+to say ResolveEvent Junkyard Digups:
 	increase jdigup by 1;
 	say "There are plenty of piles in the junkyard to look through. You pick one and search it.";
 	if a random chance of 1 in 3 succeeds:
@@ -938,7 +942,7 @@ Instead of resolving junkyard digups:
 			increment carried of dirty water;
 	else:
 		say "Alas, you do not find anything in this pile. You should try again.";
-	if jdigup is 3, now junkyard digups is resolved;
+	if jdigup is 3, now Junkyard Digups is resolved;
 
 
 Section 3 - Steven's Home
@@ -965,9 +969,10 @@ Object	Name
 Junkyard Home	"Junkyard Home"
 
 Junkyard Home is a situation.
+ResolveFunction of Junkyard Home is "[ResolveEvent Junkyard Home]".
 The sarea of Junkyard Home is "Junkyard".
 
-Instead of resolving Junkyard Home:
+to say ResolveEvent Junkyard Home:
 	if Stevenremoved is 0:
 		say "You come across what looks like an abandoned habitation, filled with old nesting material and various shiny objects. Is it some kind of bird's nest? You decide to leave it alone... for now.";
 	else:
@@ -986,9 +991,10 @@ Object	Name
 Unused Tool	"Unused Tool"
 
 Unused Tool is a situation.
+ResolveFunction of Unused Tool is "[ResolveEvent Unused Tool]".
 The sarea of Unused Tool is "Junkyard".
 
-Instead of resolving Unused Tool:
+to say ResolveEvent Unused Tool:
 	say "As you explore the junkyard, you come across a pile of discarded tools. You search through the pile for something interesting.";
 	let result be a random number from 1 to 3;
 	if result is 1:
@@ -1005,13 +1011,15 @@ Section 5 - Find a random infected object
 
 Table of GameEventIDs (continued)
 Object	Name
-signs of a scuffle	"signs of a scuffle"
+Signs of a Scuffle	"signs of a scuffle"
+Signs of a Scuffle	"Signs of a Scuffle"
 
-signs of a scuffle is a situation.
-The sarea of signs of a scuffle is "Junkyard".
+Signs of a Scuffle is a situation.
+ResolveFunction of Signs of a Scuffle is "[ResolveEvent Signs of a Scuffle]".
+The sarea of Signs of a Scuffle is "Junkyard".
 scufflecount is a number that varies.
 
-Instead of resolving signs of a scuffle:
+to say ResolveEvent Signs of a Scuffle:
 	increase scufflecount by 1;
 	say "It looks like two infected creatures were fighting each other out here. You search the area for any fallen loot:[line break]";
 	let opportunity be 0;
@@ -1029,6 +1037,6 @@ Instead of resolving signs of a scuffle:
 			now opportunity is 1;
 	if opportunity is 0:
 		say "Alas, you found nothing but dirt, dust, and junk.";
-	if scufflecount is 3, now signs of a scuffle is resolved;
+	if scufflecount is 3, now Signs of a Scuffle is resolved;
 
 Junkyard and Warehouse ends here.

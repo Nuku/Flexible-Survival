@@ -156,12 +156,13 @@ Object	Name
 FindingMidnight	"FindingMidnight"
 
 FindingMidnight is a situation.
+ResolveFunction of FindingMidnight is "[ResolveEvent FindingMidnight]".
 the sarea of FindingMidnight is "Zoo".
 
 midnightsighted is a number that varies.
 
 
-Instead of resolving the FindingMidnight:
+to say ResolveEvent FindingMidnight:
 	if midnightsighted is 2:
 		say "     Traveling down the zoo paths yet again, you find your feet leading you back to the area where you encountered the large panther earlier, a smile tugging at your face as you remember how excited Angie looked at the thought of the large cat. Deciding it can't hurt to check, you return to the stage where the cat was lounging earlier, only to find the stage empty, you sigh in disappointment, and turn to leave, wondering how you will break the news to the obviously excited Angie. Though as you turn around, you are shocked to notice the large black panther you were looking for, is lying languidly by the exit to the show area, sprawled out in a picture of feline indolence as he stares at you with amusement. Feeling somewhat nervous and excited in the presence of the large exotic beast, you reach into your pack and pull out the small specially treated bundle of catnip, its exotic scent filling the already pheromone laced air with its own special aroma. Midnight's golden eyes fix on the small bundle as you try to coax the large beast to follow you back to the gift shop where Angie is waiting, any doubts you might have had about bringing the two together completely forgotten in the heady sexually charged situation.";
 		let bonus be (( the Charisma of the player minus 10 ) divided by 2);

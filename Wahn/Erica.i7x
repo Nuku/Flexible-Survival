@@ -95,6 +95,7 @@ Object	Name
 Temple of Hera	"Temple of Hera"
 
 Temple of Hera is a situation.
+ResolveFunction of Temple of Hera is "[ResolveEvent Temple of Hera]".
 Temple of Hera is inactive.
 The sarea of Temple of Hera is "Museum".
 
@@ -102,7 +103,7 @@ when play begins:
 	add Temple of Hera to BadSpots of MaleList;       [male soldiers]
 	add Temple of Hera to BadSpots of FurryList;     [female husky involved]
 
-Instead of resolving a Temple of Hera:
+to say ResolveEvent Temple of Hera:
 	say "     After walking through the labyrinthine passages of the museum for quite a while, it becomes more and more obvious that something strange and unusual happened to this place when all the craziness started. It's a bit hard to say with hallways seemingly looping around and suddenly having developed new forks when you get to a portion that you went through before, but your guess is that you're about half a mile deep in here. At least the glowing 'EXIT' signs that every room and hallway holds give you confidence that you'll find your way back out, as every time you tried, the museum foyer was just two or three rooms back - if one follows the green arrows...";
 	say "     Almost ready to call off the search after stumbling into the Easter Islands exhibit - again - for the third time, your eyes suddenly notice a sign on the wall. 'Ancient Greece' is shown above a doorway flanked by two tall Doric columns. Hopeful that you've finally found what you're looking for, you hastily make your way to the door and step through it - right into a large chamber that might just belong in an ancient temple. Marble plates cover the floor and walls, shining in an unearthly light that radiates from a large golden throne in the middle of the room and also adding in a slight echo. On it, a majestic-looking woman sits, garbed in a magnificent white tunic with gold embroidery at its edges. She sets down the large pomegranate in her hand on the armrest of the golden throne, then turns her beautiful visage to look at you.";
 	WaitLineBreak;
@@ -118,13 +119,14 @@ Object	Name
 Biker Hangout	"Biker Hangout"
 
 Biker Hangout is a situation.
+ResolveFunction of Biker Hangout is "[ResolveEvent Biker Hangout]".
 The Prereq1 of Biker Hangout is Temple of Hera.
 The sarea of Biker Hangout is "Junkyard".
 when play begins:
 	add Biker Hangout to BadSpots of MaleList;
 	add Biker Hangout to BadSpots of FurryList;
 
-Instead of resolving a Biker Hangout:
+to say ResolveEvent Biker Hangout:
 	say "     After a while of searching, you do find a chain-link gate that leads on to the junkyard proper from an adjoining dark alley. Near that back entrance, there is a run-down shack with three bikes parked in front of it. Seems you've found the hideout of the biker gang that kidnapped Joel. There is no one in sight right now, but where the bikes are, the bikers to go with them can't be far... so you decide to scout the place out stealthily first. As you carefully make your way through the piles of rusty cars and metal scrap, always using what concealment from observation through the shack's dirty windows you can get, you soon find out that there is another structure behind the shack - a chain link dog kennel. In it, you see the humanoid figure of an anthro dog lying on the ground, a short chain connecting his collar to an iron ring anchored in the concrete floor. From the looks of it, that chain doesn't even allow him to sit up, only to cower low to the ground or lie flat.";
 	say "     Before you can even think of doing anything, a scruffy-looking, mostly human man comes out of a door at the back of the shack, holding a metal bowl in his hand. He casually strolls over to the kennel, then laughs as his shout of 'Hey Joey!' makes the canine flinch. Setting the bowl of dog kibble down on the ground, the man pulls a key ring from his pocket, unlocking the door into the kennel and stepping inside. 'Time to earn your food, doggie. Let's play hide the boner,' he says with a dark chuckle, rubbing the front of his pants with one hand. Rebecca's transformed fiancée just gives a resigned whine, then lifts himself off the ground to crouch on all fours with his rear end towards his captor, who opens up his fly to pull out an erect cock. Even so, the canine has to lean his head down because the chain just isn't any longer.";
 	LineBreak;
@@ -695,7 +697,7 @@ instead of navigating Grey Abbey Library while (XP of Erica is 0 and Fang is in 
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERICA FIRST FANG SEX WALKIN [line break]";
-	if hp of Fang < 5:
+	if HP of Fang < 5:
 		say "     As you enter the library, you see Erica walk in between two of the long shelves, intently scanning over the titles of the books. Now that you think of it, she's been spending quite a bit of her time up here lately, picking out books and reading. Well, it's something interesting to do at least. Just as you start turning away to leave her to her reading, you see Fang's furred shape silently stalk after Erica. Knowing that he's a wild and horny beast, you see where this might lead...";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Go after them to see what happens and maybe do something about it.";

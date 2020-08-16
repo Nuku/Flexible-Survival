@@ -1,6 +1,6 @@
 Version 1 of Cadmea by Prometheus begins here.
 
-[ hp of Cadmea - relationship variable with the player       ]
+[ HP of Cadmea - relationship variable with the player       ]
 [   0: not met                                               ]
 [   1: Introduced by Cynthia                                 ]
 [   2: Had tea with                                          ]
@@ -69,7 +69,7 @@ The scent of Cadmea is "     The sleek kitsune smells of an amalgamation of flor
 
 to say CadmeaDesc:
 	if debugactive is 1:
-		say "DEBUG -> HP: [hp of Cadmea] <- DEBUG[line break]";
+		say "DEBUG -> HP: [HP of Cadmea] <- DEBUG[line break]";
 	else:
 		say "     Cadmea is a svelte white-furred kitsune with seven fluffy tails, suggesting significant power, should she choose to unleash it. The color of her eyes changes with her mood: red while angry, blue while fearful, and lilac most of the time. Wearing a short tunic-like garb that maintains her decency, it seems to be manifested by willpower as when she is distracted, it seems to disappear. Her C cup breasts are covered in fine, short white fur, similar to the fur on her groin, vulpine face, hands, and feet, while the rest of her body has slightly longer fur.";
 		say "     The female kitsune is a cheerful and mischievous person with a good heart. While she happily carries out good-natured trickery, should the need arise, she will fiercely guard those she views as vulnerable using tooth, claw, and magic. That said, combat is not her forte, forcing her to rely on illusions, a skill that she is more adept at. She catches you observing her and levitates, spreading her tails out like a star behind her. Truly a magnificent being.";
@@ -89,15 +89,16 @@ Object	Name
 Dual Leadership	"Dual Leadership"
 
 Dual Leadership is a situation.
+ResolveFunction of Dual Leadership is "[ResolveEvent Dual Leadership]".
 Prereq1 of Dual Leadership is Den of the Pack.
 Prereq1Resolution of Dual Leadership is { 1 }.
 The level of Dual Leadership is 0.
 The sarea of Dual Leadership is "Nowhere".
 
-after going to Sanctuary Hotel Lobby while (Dual Leadership is active and Dual Leadership is not resolved and hp of Cadmea is 1 and a random chance of 1 in 2 succeeds):
+after going to Sanctuary Hotel Lobby while (Dual Leadership is active and Dual Leadership is not resolved and HP of Cadmea is 1 and a random chance of 1 in 2 succeeds):
 	DualLeadershipEvent;
 
-Instead of resolving Dual Leadership:
+to say ResolveEvent Dual Leadership:
 	DualLeadershipEvent;
 
 to DualLeadershipEvent:
@@ -122,8 +123,8 @@ to DualLeadershipEvent:
 	else: [Be good]
 		say "     You don't want to make a bad impression on them when they barely know you. With Cadmea capable of magic, and Sirius able to walk away from hand to hand combat with a wyvern, making them your enemy seems like a poor life choice. You return to the lobby without succumbing to temptation.";
 		now Resolution of Dual Leadership is 2; [Left Cake]
-	now hp of Cadmea is 2;
-	now hp of Sirius is 1;
+	now HP of Cadmea is 2;
+	now HP of Sirius is 1;
 	[change the up exit of Sanctuary Hotel Lobby to Sanctuary Conference Room; [connecting the location to the travel room]
 	change the down exit of Sanctuary Conference Room to Sanctuary Hotel Lobby; [connecting the location to the travel room]]
 	now Dual Leadership is resolved;

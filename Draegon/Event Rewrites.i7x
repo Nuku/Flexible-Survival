@@ -12,13 +12,14 @@ Object	Name
 Anal Probing	"Anal Probing"
 
 Anal Probing is a situation.
+ResolveFunction of Anal Probing is "[ResolveEvent Anal Probing]".
 The sarea of Anal Probing is "Beach".
 
 when play begins:
 	add Anal Probing to BadSpots of FurryList;
 	add Anal Probing to BadSpots of MaleList;
 
-Instead of resolving Anal Probing:
+to say ResolveEvent Anal Probing:
 	say "     As you climb over the crest of a sand dune you find yourself witnessing a very strange sight. You've seen many weird things in the city as of late but this just might take the cake. Before you is a large, muscled, and very male anthro lion lying on the sand with what appear to be metallic-looking tentacles writhing in and around him. The numerous shiny appendages seem to literally sprout from the ground, with some burrowing to the surface as others retract to who knows what is their source beneath. Meanwhile, the anthro lion is spasming on the ground from what the creature is doing to him, his clawed fingers digging grooves into the sand as he twitches uncontrollably, drool leaking from his open muzzle. Watching from your hiding place at the edge of the dune you see him yowl in helpless pleasure, thrusting his broad hips reflexively into the air.";
 	say "     Reacting to their captive's arousal with what seems to be joyful haste, the tentacles already entering the lion's tailhole and mouth widen their girth, sliding deeper even as they do so. The ecstatic howls and groans from the man make it clear that his prostate is being milked. Writhing and flexing, most of the other tentacles wrap around his torso and pin the anthro feline down as additional and relatively delicate appendages stroke and tease his cock mercilessly. At the same time as they milk precum out of the lion, the maned cat's dark pucker is being forced to stretch what looks to be impossibly wide as the thickest of tentacles wriggle and writhe within him. Thankfully for the guy, they seem to be supplying their own lube, as his hole is slick with an odd, shiny fluid.";
 	WaitLineBreak;

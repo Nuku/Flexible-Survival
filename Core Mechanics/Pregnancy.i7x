@@ -482,8 +482,8 @@ To Birth:
 			WaitLineBreak;
 			say "     You rest there together for several hours, content to idly watch your children breathe and twitch in their sleep while you stroke Fang's side. Eventually they wake though, crawling around on the ground, letting out pitiful whines and squeaks as they blindly explore their surroundings. They seem to be staying together, though as they stray slightly further from you, it is Umbra in the lead, his sister determinedly staying near him but slightly behind. Feeling that they have strayed far enough, Fang walks over to them and lightly grasps them by their scruffs and carries them back to you, placing them on your lap again. You give your children a quick kiss before standing up, deciding that you should get back to doing something. The puppies seem sad, but Fang snuffles at them, settling them down easily. Telling your family that you'll see them soon, Fang escorts Lux and Umbra away. He'll likely keep them near to him in the library, but you should still visit them from time to time as they grow so that you can be part of their lives. They are both your children after all. Dusting yourself off and arranging yourself, you are ready to continue exploring the city.";
 		increase hunger of Fang by 1;
-		now hp of Lux is 1;
-		now hp of Umbra is 1;
+		now HP of Lux is 1;
+		now HP of Umbra is 1;
 		now LuxUmbraMaturityCounter is 120;
 	else if "Wild Womb" is listed in feats of Player:
 		if Player is female and pregtype < 2:

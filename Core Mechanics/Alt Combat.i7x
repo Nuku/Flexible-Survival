@@ -1399,7 +1399,7 @@ to TrophyLootFunction: [generates either a trophy prompt or loot for the player]
 		say "Debug: Trophy/Loot Function activated.";
 	choose row MonsterID from Table of Random Critters;
 	RefreshLootBonus; [updates loot bonus with player feats and perception - maximum of a +35% increase]
-	if TrophyFunction entry is not "":
+	if TrophyFunction entry is not "-":
 		if Debug is at level 10:
 			say "Debug: Trophy Fork activated.";
 		truncate CombatTrophyList to 0 entries; [cleaning out the list]
@@ -1457,6 +1457,8 @@ to SpecialTrophyCheck (TrophyName - text):
 	if TrophyName is:
 	-- "police whistle":
 		add "Whistle_Taken" to Traits of Alexandra;
+	-- "confiscated pills":
+		add "Pills_Taken" to Traits of Alexandra;
 
 Section 5 - Critter Combat
 

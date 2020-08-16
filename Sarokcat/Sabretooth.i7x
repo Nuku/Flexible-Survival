@@ -89,7 +89,7 @@ When Play begins:
 	now lootchance entry is 40;  [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]animalistic[or]powerful[or]quadrupedal[at random]";
 	now type entry is "[one of]feline[or]prehistoric[at random]";  [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -210,7 +210,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "Chipped tooth"	"A rather large chipped piece of tooth, obviously knocked off of something with tremendous fangs"	1	Chipped tooth
 
-Chipped tooth is a grab object. It is part of the player. Understand "tooth" and "chipped" as Chipped tooth. Chipped tooth is infectious. The strain of Chipped tooth is "Sabretooth".
+Chipped tooth is a grab object. Understand "tooth" and "chipped" as Chipped tooth. Chipped tooth is infectious. The strain of Chipped tooth is "Sabretooth".
 
 The usedesc of Chipped tooth is "Looking at the small chipped piece of tooth, you find yourself rubbing it between your hands slightly, enjoying the feel of its strange texture. Suddenly, you let out a small yelp as the sharp part of the tooth cuts you, and you drop the piece of tooth as you rub the small cut. Looking around, you can't see where the bit of tooth ended up, and sigh as you give up on your trophy and continue on your way.".
 

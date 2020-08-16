@@ -9,12 +9,13 @@ Object	Name
 Gryphon Milkman	"Gryphon Milkman"
 
 Gryphon Milkman is a scavevent.
+ResolveFunction of Gryphon Milkman is "[ResolveEvent Gryphon Milkman]".
 The sarea of Gryphon Milkman is "Outside".
 when play begins:
 	add Gryphon Milkman to BadSpots of FurryList;
 	add Gryphon Milkman to badspots of HermList;
 
-Instead of resolving a Gryphon Milkman:
+to say ResolveEvent Gryphon Milkman:
 	project the figure of Garrett_icon;
 	say "     As you're out and about looking for supplies, you hear the flapping of wings overhead. Before you can do much more than look up, a gryphon lands in front of you. This specimen looks like a pure male, judging from the flat manly chest and the half-hard cock between his legs. He's wearing only a white peaked cap and a wire carrier with several bottles.";
 	say "     'Here, have some milk - it's good for you,' he tells you cheerfully, pushing a milk bottle into your hand and tipping his hat to you. Then he jumps in the air and flies away, leaving you standing there alone.";
@@ -27,12 +28,13 @@ Object	Name
 Free Milk	"Free Milk"
 
 Free Milk is a scavevent.
+ResolveFunction of Free Milk is "[ResolveEvent Free Milk]".
 The sarea of Free Milk is "Outside".
 when play begins:
 	add Free Milk to BadSpots of FurryList;
 	add Free Milk to badspots of HermList;
 
-Instead of resolving a Free Milk:
+to say ResolveEvent Free Milk:
 	say "     Your search for edible items leads you into a residential area. As you stand in the middle of the local street, trying to decide which house might contain something useful, you suddenly realize something - there's a milk bottle standing in front of the door of the house over there - and it's full. Walking over to the house, you take the bottle. It has a blue and silver label with the text [']QaL Dairy[']. The milk is rather cold and smells delicious, but there is a faint smell of something almost otherworldly. You can't help but wonder where it came from. You'd have thought that with the apocalypse and all, deliveries by the milkman would stop, and are there even any cows left with these changing infections?";
 	ItemGain gryphon milk by 1;
 	now Free Milk is resolved;
@@ -42,12 +44,13 @@ Object	Name
 Abandoned Milk	"Abandoned Milk"
 
 Abandoned Milk is a scavevent.
+ResolveFunction of Abandoned Milk is "[ResolveEvent Abandoned Milk]".
 The sarea of Abandoned Milk is "Outside".
 when play begins:
 	add Abandoned Milk to BadSpots of FurryList;
 	add Abandoned Milk to badspots of HermList;
 
-Instead of resolving a Abandoned Milk:
+to say ResolveEvent Abandoned Milk:
 	say "     Your search for edible items leads you into a playground and you see near a bench some men's clothing partially torn, as is the wearer had ripped out of them as they changed form. The back of the shirt is badly shredded, almost as if wings or similar had erupted out their back.";
 	say "     On the bench you see an empty milk bottle lying on its side. You also see an intact a milk bottle standing there - and it's full! Walking over to the bench, you take the bottle, it has a blue silver label with the text [']QaL Dairy[']. The milk is rather cold and smells delicious but there is a faint smell of something almost otherworldly. You wonder what became of the person who drank the other bottle, and hope they are happy however they look now!";
 	ItemGain gryphon milk by 1;

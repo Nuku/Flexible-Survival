@@ -201,7 +201,7 @@ name	desc	weight	object
 
 doberman male fur is a grab object.
 the usedesc of doberman male fur is "[DobermanMaleFurUse]".
-it is part of the player.
+
 It is temporary.
 
 to say DobermanMaleFurUse:

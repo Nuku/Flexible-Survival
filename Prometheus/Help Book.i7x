@@ -1,11 +1,11 @@
 Version 1 of Help Book by Prometheus begins here.
 
-[ hp of Help Book             ]
+[ HP of Help Book             ]
 [ 0 - Present                 ]
 [ 1 - Removed                 ]
 
 an everyturn rule:
-	if hp of Help Book is 0:
+	if HP of Help Book is 0:
 		if Help Book is not in Grey Abbey Library:
 			move Help Book to Grey Abbey Library;
 
@@ -138,7 +138,7 @@ to say HelpBookTalk4: [Commands]
 to say HelpBookTalk5: [Remove Book]
 	say "     As you decide that you don't need the book any more, it crumbles to dust in your hands before blowing away on a non-existent wind. You get the impression that it is gone on to help the next person that needs it and won't be back again.";
 	now Help Book is nowhere;
-	now hp of Help Book is 1;
+	now HP of Help Book is 1;
 
 Section 3 - Sex
 

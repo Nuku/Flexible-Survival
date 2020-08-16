@@ -10,13 +10,14 @@ Object	Name
 Sugar Shack	"Sugar Shack"
 
 Sugar Shack is a situation.
+ResolveFunction of Sugar Shack is "[ResolveEvent Sugar Shack]".
 The sarea of Sugar Shack is "Fair".
 when play begins:
 	add Sugar Shack to BadSpots of FurryList;
 	add Sugar Shack to BadSpots of FemaleList;
 	add Sugar Shack to badspots of HumorousList;
 
-Instead of resolving a Sugar Shack:
+to say ResolveEvent Sugar Shack:
 	setmonster "Sugar Glider";
 	choose row MonsterID in Table of Random Critters;
 	say "     Turning a corner you see a rather curious sight ahead down the midway, one of those brightly colored sugar glider girls scampering around a large stall at the end of the row. As you're considering turning back to avoid a confrontation with the excited marsupial, she spots you watching and calls out to you, waving you over eagerly. Finding yourself curious what she's up to you approach slowly, wary of some sort of trap the giggling girl may have set up, but you reach the stall without incident and find it to be, unsurprisingly, a candy stall.";

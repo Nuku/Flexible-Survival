@@ -6,9 +6,10 @@ Object	Name
 Giant Tree Ascension	"Giant Tree Ascension"
 
 Giant Tree Ascension is a situation.
+ResolveFunction of Giant Tree Ascension is "[ResolveEvent Giant Tree Ascension]".
 The sarea of Giant Tree Ascension is "Forest".
 
-instead of resolving Giant Tree Ascension:
+to say ResolveEvent Giant Tree Ascension:
 	say "     Making your way between the buildings, your attention is soon grabbed by an absolutely gigantic tree which seems to have taken roots into a large building. You count five different floors; however, the tree appears to have completely outgrown the building itself, not only becoming as large, but much taller, and culminating in a sea of green leaves that appear so far away that it almost gives you vertigo.";
 	LineBreak;
 	say "     [bold type]You're not sure what you might find inside, but whatever it might be, you have a feeling making your way through the building will not only take up time and effort, but could also lead to your end if you make the wrong decisions. Do you really want to go in right now?[roman type][line break]";

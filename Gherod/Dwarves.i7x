@@ -13,9 +13,10 @@ Object	Name
 Savage Dwarf	"Savage Dwarf"
 
 Savage Dwarf is a situation.
+ResolveFunction of Savage Dwarf is "[ResolveEvent Savage Dwarf]".
 The sarea of Savage Dwarf is "Forest".
 
-Instead of resolving a Savage Dwarf:
+to say ResolveEvent Savage Dwarf:
 	say "     During your exploration efforts within the forest, you come across a grassy path near the base of a cliff. A little further ahead, there is - or was - what seems to be an entrance to a tunnel right through the rocky walls. It has collapsed, though you hear a lot of agitation coming from there, namely a short burly man shouting and hitting on the debris with his stone hammer. You can't quite understand what he's saying from here, you're standing too far to be able to hear him decently, but whatever it is, it looks like the man is having an argument with the rubble, or maybe someone is on the other side? [bold type]You could risk approaching him, but there isn't a lot of hiding area if you get closer, and he might see you.[roman type][line break]";
 	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Get closer.";
@@ -63,10 +64,11 @@ Object	Name
 Collapsed Tunnel	"Collapsed Tunnel"
 
 Collapsed Tunnel is a situation.
+ResolveFunction of Collapsed Tunnel is "[ResolveEvent Collapsed Tunnel]".
 The Prereq1 of Collapsed Tunnel is Savage Dwarf.
 The sarea of Collapsed Tunnel is "Forest".
 
-Instead of resolving a Collapsed Tunnel:
+to say ResolveEvent Collapsed Tunnel:
 	if Resolution of Collapsed Tunnel is 0: [first time]
 		say "     During your walk around the forest, you come across a familiar path near the rocky cliffs where the collapsed tunnel was found, and with it, the horny dwarf who's now roaming around. Tracing your steps back to the place, you remember the rubble that used to cover the entirety of the passage ahead of you, now partially removed to allow anyone to make it across. You suppose this is the work of the dwarf, who was finally able to remove the obstacles in order to make it to the other side. There's a chance that you might find something interesting if you decide to investigate, but beware that you're very likely to be trespassing dwarven territory. If you have any companions with you, they'll stay at the entrance to make sure you won't get stuck inside while exploring. [bold type]Do you wish to go on ahead, or leave the place for now?[roman type][line break]";
 		LineBreak;
@@ -211,6 +213,7 @@ Object	Name
 Wedding Wreckers	"Wedding Wreckers"
 
 Wedding Wreckers is a situation.
+ResolveFunction of Wedding Wreckers is "".
 The sarea of Wedding Wreckers is "Nowhere".
 
 to say DwarfQuest1: [Dwarf has the greathammer]
@@ -978,7 +981,7 @@ When Play begins:
 	now lootchance entry is 50;          [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 2;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "stocky"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "dwarf";          [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -1171,7 +1174,7 @@ When Play begins:
 	now lootchance entry is 50;          [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 2;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "stocky"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "dwarf";          [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]

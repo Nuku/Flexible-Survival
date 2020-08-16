@@ -82,12 +82,13 @@ Object	Name
 Captured Demon	"Captured Demon"
 
 Captured Demon is a situation.
+ResolveFunction of Captured Demon is "[ResolveEvent Captured Demon]".
 The sarea of Captured Demon is "Red".
 when play begins:
 	add Captured Demon to BadSpots of MaleList; [male soldier, demon brute]
 	add Captured Demon to badspots of DemonList; [demon brute]
 
-Instead of resolving a Captured Demon:
+to say ResolveEvent Captured Demon:
 	say "     Moving through an alley in the seedier part of town, you hear voices from the smashed window of a nearby bar. Careful not to step on anything and make a sound, you slowly walk closer and listen.";
 	say "     'The brute smashed our only working radio. Now we got the mission objective locked down, but can't call in the retrieval team. Anderson's dead and that claw-slash on Kowalski's leg doesn't look good.' You peek over the window-still and see a mid-sized bar, its interior devastated by a fight. In the midst of bullet-holed walls and smashed furniture, there is a demon brute slumped down on a chair, bound with leather straps and chains. Near him, there are four soldiers, one of them just being bandaged on the thigh.";
 	say "     The apparent leader watches the wounded man being patched up, then says 'It can't be helped. No way a man supporting a wounded comrade can make it through the streets alone. I'll have to go with them. Private Jackson, guard the captive until the retrieval team arrives. If need be, give him more sedatives.' He nods to a young-looking soldier, who salutes and says 'Yes sir!' You don't want to get shot by stressed out soldiers, so you have to hurry down the alley a bit to hide behind a dumpster not to get spotted as they move out.";
@@ -134,7 +135,8 @@ Table of GameEventIDs (continued)
 Object	Name
 Thankful Soldier	"Thankful Soldier"
 
-Thankful Soldier is a situation. [meeting the guy from 'Captured Demon' again - if you saved him]
+Thankful Soldier is a situation.
+ResolveFunction of Thankful Soldier is "[ResolveEvent Thankful Soldier]". [meeting the guy from 'Captured Demon' again - if you saved him]
 The Prereq1 of Thankful Soldier is Captured Demon.
 The Prereq1Resolution of Thankful Soldier is { 1 }.
 The sarea of Thankful Soldier is "Outside".
@@ -144,7 +146,7 @@ when play begins:
 TSEventCounter is a number that varies. TSEventCounter is usually 0.
 LastTSEvent is a number that varies. LastTSEvent is usually 555.
 
-Instead of resolving a Thankful Soldier:
+to say ResolveEvent Thankful Soldier:
 	if (LastTSEvent - turns < 4):
 		say "     You walk through the alley where you last met David and check the surrounding area - no luck. Seems like your soldier-friend is patrolling or scouting somewhere else right now. Maybe you should try a bit later again...";
 	else:

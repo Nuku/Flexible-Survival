@@ -67,11 +67,10 @@ Object	Name
 Find Building	"Find Building"
 
 Find Building is a situation.
+ResolveFunction of Find Building is "[ResolveEvent Find Building]".
 the sarea of Find Building is "Mall".
 
-After resolving a find building, try looking;
-
-Instead of Resolving a Find Building:
+to say ResolveEvent Find Building:
 	say "While exploring the sewer, you spot a ladder leading up to a manhole. You climb the ladder and push up on the manhole cover. After a bit of effort, you shift the manhole cover to the side and climb the rest of the way up the ladder. You look around and see that you're back on the city streets, in front of an old building. You don't know if you'll find anything of interest inside, but it could be worth exploring. The nearby streets are completely blocked by debris and wrecked cars so you wouldn't have been able to find this place if you hadn't gone through the sewers.";
 	increase the score by 5;
 	move player to Isolated Street;
@@ -259,11 +258,10 @@ Object	Name
 Another Ladder	"Another Ladder"
 
 Another Ladder is a situation.
+ResolveFunction of Another Ladder is "[ResolveEvent Another Ladder]".
 the sarea of Another Ladder is "Mall".
 
-After resolving a another ladder, try looking;
-
-Instead of Resolving a Another Ladder:
+to say ResolveEvent Another Ladder:
 	if NoIntroduction is 0:
 		say "     While exploring the sewer, you spot a ladder leading up to a manhole. You climb the ladder and push up on the manhole cover. Unfortunately something seems to be blocking it from the other side. You should try again later.";
 	else:
@@ -874,6 +872,7 @@ Object	Name
 Dragon Prey	"Dragon Prey"
 
 Dragon Prey is a situation.
+ResolveFunction of Dragon Prey is "[ResolveEvent Dragon Prey]".
 The sarea of Dragon Prey is "Outside".
 Dragon Prey is inactive.
 
@@ -881,7 +880,7 @@ when play begins:
 	add Dragon Prey to BadSpots of FemaleList;
 	add Dragon Prey to BadSpots of FurryList;
 
-Instead of resolving Dragon Prey:
+to say ResolveEvent Dragon Prey:
 	project the Figure of Christy_face_icon;
 	let finale be 0;
 	say "     As you're searching around outdoors in the hopes of finding something to help you out, you are instead found by someone who's been looking for you. While you were on watch for creatures hidden among the buildings, you forgot to check the sky and it's only when a large shadow passes over you that you remember to look up... just as an angry (and familiar) red dragoness slams down atop you, pinning you to the ground. 'Got you, my nasty little [']hero['],' she growls, voice dripping with vitriol as flames and smoke lick at the edge of her fangorious mouth. 'I've been looking all over for you after you ran away before we could finish talking,' she rumbles angrily. 'So, what do you have to say for yourself before I punish you, you wretched liar?' she growls.";
@@ -939,7 +938,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "super spicy sausage"	"A sausage so spicy it makes your eyes water just being near it."	1	super spicy sausage
 
-super spicy sausage is a grab object. It is part of the player. It is not temporary.
+super spicy sausage is a grab object. It is not temporary.
 
 instead of using the super spicy sausage:
 	say "You'd picked up this sausage for [Christy]... besides, you're worried you'll burst into flames just from the first bite.";
@@ -1423,7 +1422,7 @@ When Play begins:
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "bestial";
 	now type entry is "[one of]draconic[or]reptilian[at random]";
@@ -1598,7 +1597,7 @@ When Play begins:
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]fecund[or]bestial[at random]";
 	now type entry is "[one of]draconic[or]reptilian[at random]";

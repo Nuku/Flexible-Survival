@@ -143,7 +143,7 @@ When Play begins:
 	now lootchance entry is 30;
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 2;
 	now body descriptor entry is "[One of]slender[or]flexible[or]noodle[or]noodle-like[at random]";
 	now type entry is "yinglet";

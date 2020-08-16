@@ -23,13 +23,14 @@ Table of GameEventIDs (continued)
 Object	Name
 Injured Felinoid	"Injured Felinoid"
 
-Injured Felinoid is a situation. The level of Injured Felinoid is 6.
+Injured Felinoid is a situation.
+ResolveFunction of Injured Felinoid is "[ResolveEvent Injured Felinoid]". The level of Injured Felinoid is 6.
 The sarea of Injured Felinoid is "Park".
 when play begins:
 	add Injured Felinoid to BadSpots of MaleList;
 	add Injured Felinoid to BadSpots of FurryList;
 
-Instead of resolving Injured Felinoid:
+to say ResolveEvent Injured Felinoid:
 	if felinoidrescued is 2:
 		say "     Traveling through the park trails, keeping a wary eye out for any more strange glades, you notice a small damp red spot on the ground ahead. Moving forward carefully to look at it, you realize with some surprise that it is somethings blood! Looking around you see several other spots of blood leaving a trail heading deeper into the underbrush, whatever went that way was definitely injured pretty badly and might need some help... Do you investigate?";
 		if Player consents:

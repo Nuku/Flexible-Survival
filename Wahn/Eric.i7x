@@ -150,12 +150,13 @@ Table of GameEventIDs (continued)
 Object	Name
 Barricaded Lockerroom	"Barricaded Lockerroom"
 
-Barricaded Lockerroom is a situation. The level of Barricaded Lockerroom is 8.
+Barricaded Lockerroom is a situation.
+ResolveFunction of Barricaded Lockerroom is "[ResolveEvent Barricaded Lockerroom]". The level of Barricaded Lockerroom is 8.
 The sarea of Barricaded Lockerroom is "Campus".
 when play begins:
 	add Barricaded Lockerroom to badspots of HermList; [cuntboy, later a fight against a hulking cheerleader]
 
-Instead of resolving a Barricaded Lockerroom:
+to say ResolveEvent Barricaded Lockerroom:
 	say "     While exploring the sports arena on the campus, you come upon the closed door to the men's locker room, looking rather battered with lots of claw scratches on it. When you try the door-handle, it opens only a crack before bumping into something heavy - accompanied by a loud clanking noise. A man's voice can be heard from inside a moment later: 'Stay away you crazy critters! I'm warning you - I've got a baseball bat and am willing to use it. You're not getting another bite out of me!'";
 	LineBreak;
 	say "     Do you want to try to talk the guy into letting you in? (Y/N)";
@@ -3422,7 +3423,7 @@ instead of navigating Grey Abbey Library while (XP of Erica is 0 and Fang is in 
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Eric first Fang sex walkin, XP of Erica: [Xp of Erica], HP of Eric: [HP of Eric], lastfuck of Eric: [lastfuck of Eric] [line break]";
-	if hp of Fang < 5:
+	if HP of Fang < 5:
 		say "     As you enter the library, you see Eric walk in between two of the long shelves, intently scanning over the titles of the books. Now that you think of it, he's been spending quite a bit of his time up here lately, picking out books and reading. Well, it's something interesting to do at least. Just as you start turning away to leave him to his reading, you see Fang's furred shape silently stalk after Eric. Knowing that he's a wild and horny beast, you see where this might lead...";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Go after them to see what happens and maybe do something about it.";

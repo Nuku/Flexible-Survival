@@ -1,6 +1,6 @@
 Version 1 of Sirius by Prometheus begins here.
 
-[ hp of Sirius - relationship variable with the player       ]
+[ HP of Sirius - relationship variable with the player       ]
 [   0: not met                                               ]
 [   1: Met and had tea with                                  ]
 [   2:                                                       ]
@@ -65,7 +65,7 @@ The scent of Sirius is "     The towering wolf smells like a forest, a mixture o
 
 to say SiriusDesc:
 	if debugactive is 1:
-		say "DEBUG -> HP: [hp of Sirius] <- DEBUG[line break]";
+		say "DEBUG -> HP: [HP of Sirius] <- DEBUG[line break]";
 	else:
 		say "     Sirius is a very tall wolf with fluffy, mottled black, brown, and gray fur covering a toned body. He looks at you appraising him with deep-green eyes. He wears nothing to hide his body from view, unconcerned with roaming eyes or social expectations such as public indecency. Between his legs hangs a black-furred sheath with matching balls, the crimson tip peeking out in response to your uninhibited staring. He stands on two digitigrade legs tipped with dull black claws.";
 		say "     The lushly furred wolf is protective of his pack, but eager to include new members, even those of non-canine species. He seems frustrated at not being able to personally lead a pack into the city but understands that coordinating between sub-packs is key to their success. Having never seen him fight, you do not know how capable he is, but between his size and how he carries himself, you doubt that you would want to fight against him. 'You might want to cut back on the staring. Someone might get jealous,' he teases you, unabashedly allowing you a better view of his body. He truly deserves the title Pack Alpha.";

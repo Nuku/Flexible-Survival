@@ -10,6 +10,7 @@ Object	Name
 Canine Patrol	"Canine Patrol"
 
 Canine Patrol is a situation.
+ResolveFunction of Canine Patrol is "[ResolveEvent Canine Patrol]".
 The sarea of Canine Patrol is "Red".
 when play begins:
 	add Canine Patrol to BadSpots of MaleList;
@@ -19,7 +20,7 @@ when play begins:
 gshepsquad is a number that varies.
 catdogstate is a number that varies.
 
-Instead of resolving a Canine Patrol:
+to say ResolveEvent Canine Patrol:
 	catdogstatecheck;
 	if gshepsquad is 1:
 		say "ERROR - Event closed.";

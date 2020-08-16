@@ -62,7 +62,7 @@ When Play begins:
 	now lootchance entry is 20; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sultry[or]alluring[or]curvaceous[at random]";
 	now type entry is "[one of]murine[or]ratty[or]rodent[at random]";
@@ -614,10 +614,11 @@ Object	Name
 Pool Hall	"Pool Hall"
 
 Pool Hall is a situation.
+ResolveFunction of Pool Hall is "[ResolveEvent Pool Hall]".
 Pool Hall is inactive.
 The sarea of Pool Hall is "High".
 
-Instead of resolving a Pool Hall:
+to say ResolveEvent Pool Hall:
 	if SlutRatDenPoolTable is 1:
 		say "     Passing down a side street between the high rises, you spot a pool hall. Recalling the request from the rats, you head on over to check the place out. It is a rather upscale looking place, probably used by business managers, bankers and lawyers working in the area. A place to go and have [']meetings['] while charging their clients. Looking inside, you find that it's been taken over by a group of pumas. They seem to have polished off most of the contents of the bar and are now playing pool or fucking on the tables. A pair of the herm cougars are even trying to do both at once, lining up a shot on the side pocket while her competitor gets ready to drive her cock into her back hole to make her scratch. Even with this kind of enthusiastic playing going on, some of the tables appear to still be in good condition. Surely the rats could find one to make off with down the subway tunnels to add to the den. The cats are too numerous for you to take on alone. You should go back to the rats and let them know about your find.";
 	now lastratvisit is turns + 8;

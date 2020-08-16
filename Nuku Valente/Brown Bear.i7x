@@ -167,7 +167,7 @@ When Play begins:
 	[ These represent the new additions to the table ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4; [ Number 1-5, rough approx of infected PC body size/height. 1=small, 3=avg, 5=huge ]
 	now body descriptor entry is "burly"; [ one-word adjective descriptor of monster/infected PC's body for use in scenes ]
 	now type entry is "ursine"; [ one-word creature type. Ex: feline, bovine, robotic, cyborg, lupine, canine, human... ]
@@ -300,7 +300,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "honeycomb"	"A red-painted tin containing a wonderfully sweet-smelling slice of coarse honeycomb. From the size of the cells, you know you really don't want to find the hive."	1	honeycomb
 
-honeycomb is a grab object. It is part of the player. It is temporary.
+honeycomb is a grab object. It is temporary.
 
 the usedesc of honeycomb is "[honeycombuse]";
 

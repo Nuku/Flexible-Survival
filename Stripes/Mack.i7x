@@ -23,14 +23,15 @@ Table of GameEventIDs (continued)
 Object	Name
 Finding Mack	"Finding Mack"
 
-Finding Mack is a situation. The level of Finding Mack is 8.
+Finding Mack is a situation.
+ResolveFunction of Finding Mack is "[ResolveEvent Finding Mack]". The level of Finding Mack is 8.
 The sarea of Finding Mack is "Forest".
 
 when play begins:
 	add Finding Mack to BadSpots of MaleList;
 	add Finding Mack to BadSpots of FurryList;
 
-Instead of resolving Finding Mack:
+to say ResolveEvent Finding Mack:
 	if HP of Macadamia is 0:
 		say "     As you're enjoying a peaceful walk through the woods, all that is broken up as a fluffy burst of gray fur bursts out of the wood. 'Come'n through!' it says as you're pushed aside. Suddenly expecting to be in a fight with the gray fluff, you turn to face it to see it already disappearing into the bushes on the other side. As you regather your wits, you turn in time to see a man in green stepping silently from the woods behind you. 'I had thought to give chase to that troublesome rodent, but you look like much better sport,' he says with a musical cadence to his voice. Taking in his smooth and beautiful features, you notice his pointed ears and realize it is an elf before you and not a man at all. And he's now advancing on you with the lust for the hunt flashing in his eyes.";
 		challenge "Elven Hunter";

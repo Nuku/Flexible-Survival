@@ -19,6 +19,7 @@ Object	Name
 Abandoned Camp	"Abandoned Camp"
 
 Abandoned Camp is a situation.
+ResolveFunction of Abandoned Camp is "[ResolveEvent Abandoned Camp]".
 The sarea of Abandoned Camp is "Forest".
 
 Table of GameCharacterIDs (continued)
@@ -58,7 +59,7 @@ when play begins:
 	add Abandoned Camp to badspots of FeralList;
 	add Abandoned Camp to BadSpots of MaleList;
 
-Instead of resolving a Abandoned Camp:
+to say ResolveEvent Abandoned Camp:
 	if HP of Savina is 0:			[First encounter]
 		say "     Your exploration takes you deep into the forest. The trees seem to grow more and more massive the further in you go, many of them being more than several stories tall. Thick branches full of leaves create a canopy that shrouds the area in a perpetual gloom with just enough [if daytimer is day]sun[else]moon[end if]light filtering through for you to guide your way. Surprisingly, you don't have any encounters during your trek. You're not sure if whether your unabated hike is due to the dense foliage obscuring you or other people just not daring to delve this far into the thicket like you, but it makes the walk through nature almost relaxing, even if you do keep alert for any signs of trouble. Eventually, you spy a camping tent that had been set up in a small clearing, and you scope it out from behind the cover of some nearby bushes. Judging by a few scattered items on the ground, the owner had quickly abandoned the area for some reason, which means that there's a good chance that there might be something left behind for you to scavenge.";
 		say "     [bold type]Do you want to search the camp?[roman type][line break]";

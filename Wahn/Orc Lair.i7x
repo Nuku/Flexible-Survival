@@ -31,11 +31,12 @@ Object	Name
 Orcish Slave Raid	"Orcish Slave Raid"
 
 Orcish Slave Raid is a situation.
+ResolveFunction of Orcish Slave Raid is "[ResolveEvent Orcish Slave Raid]".
 The sarea of Orcish Slave Raid is "Warehouse".
 when play begins:
 	add Orcish Slave Raid to BadSpots of MaleList;       [male orcs]
 
-Instead of resolving a Orcish Slave Raid:
+to say ResolveEvent Orcish Slave Raid:
 	project the figure of Orc_Brothers_clothed_icon;
 	if SlaveRaidEncounters is 0: [first time]
 		say "     Walking along a street between some warehouses, you suddenly hear claws scratching on asphalt and shouting voices from an alley ahead. Just a few seconds later, a panicky looking anthro fox guy comes dashing into view, head turned to look over his shoulder - which means he isn't looking where he's going and collides with you at full speed, spilling the two of you onto the ground. Directly behind him, a trio of very muscular men come out of the alley - tall and green as they are, dressed only in loincloths, there's no doubt that they're orcs. [if OrcSlaverStatus is 3]And orcs you know at that - Mul, Yatur and Koghh, the orc slavers that you had a run-in with before[else]From the relatively similar looks, they might be brothers[end if]. One of them grabs the fallen would-be escapee by the neck and lifts him off the ground, then smiles around his sharp tusks and nods towards you. [if OrcSlaverStatus is 0]'Look, our little runner got us an extra treat,' he chuckles, prompting his two friends to move towards you while he pulls a loop of rope from over his shoulder and fastens it around his captive. [else if OrcSlaverStatus is 2]'Look, it's the little bitch that escaped from the lair. What nice coincidence that our runner led us here,' he chuckles, prompting his two friends to move towards you while he pulls a loop of rope from over his shoulder and fastens it around his captive. [else if OrcSlaverStatus is 3]'Look, it's our runaway breeder. Come on little bitch, we'll bring you back home and give you what you really need,' he chuckles, prompting his two friends to move towards you while he pulls a loop of rope from over his shoulder and fastens it around his captive. [else if OrcSlaverStatus is 50]'This time, you're going down. We'll make a breeder out of you yet,' he grunts, prompting his two friends to move towards you while he pulls a loop of rope from over his shoulder and fastens it around his captive. [end if]You barely have time to get up and take a combat stance before the other two orcs are upon you...";
@@ -1387,7 +1388,7 @@ Orc Mob is in Main Hall.
 
 to say OrcMobDesc:
 	if debugactive is 1:
-		say "     DEBUG: HP OF ORC MOB: [HP of orc mob] [line break]";
+		say "     DEBUG: HP of ORC MOB: [HP of orc mob] [line break]";
 	say "     About twenty orc warriors hang around in here and are busy drinking, boasting about themselves, even fucking an orc breeder or two right in the middle of the room. Their brutish impulses really come to the forefront in a group, and you can see games of strength like arm-wrestling and fights where they barely hold back going on. The big room is filled with a constant background noise of deep-voiced cajoling and conversation, in combination with grunts and moans.";
 
 instead of sniffing Orc Mob:

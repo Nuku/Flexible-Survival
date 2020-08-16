@@ -95,7 +95,7 @@ When Play begins:
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[if infvulpstate <= 2][one of]inflatable[or]balloony[or]slender[or]sexy[or]plasticky[or]light[or]buoyant[at random][else][one of]inflatable[or]balloony[or]plump[or]huggable[or]over-inflated[or]rounded[or]plasticky[or]light[or]buoyant[at random][end if]";
 	now type entry is "[one of]vulpine[or]foxish[or]inflatable[as decreasingly likely outcomes]";

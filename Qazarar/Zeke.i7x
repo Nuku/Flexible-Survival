@@ -1,7 +1,7 @@
 Version 1 of Zeke by Qazarar begins here.
 [Version 1 - new NPC]
 
-[ hp of Zeke                                                 ]
+[ HP of Zeke                                                 ]
 [	0: Not met                                                 ]
 [	1: Met                                                     ]
 
@@ -13,7 +13,7 @@ Table of GameCharacterIDs (continued)
 object	name
 Zeke	"Zeke"
 
-Zeke is a man. The hp of Zeke is usually 0.
+Zeke is a man. The HP of Zeke is usually 0.
 [Physical details as of game start]
 ScaleValue of Zeke is 3. [human sized]
 SleepRhythm of Zeke is 0. [0 - awake at all times, 1 - day active, 2 - night active]
@@ -47,7 +47,7 @@ Zeke is in Gaming Den.
 
 to say ZekeDesc:
 	if debugactive is 1:
-		say "DEBUG -> ZekeRelationship: [ZekeRelationship], HP: [hp of Zeke] <- DEBUG[line break]";
+		say "DEBUG -> ZekeRelationship: [ZekeRelationship], HP: [HP of Zeke] <- DEBUG[line break]";
 	say "     Zeke is a fox man, with fluffy ears and a tail. In addition he is wearing a pair of jeans, and a t-shirt that says <SHIRT REDACTED>.";
 
 Section 2 - Talk

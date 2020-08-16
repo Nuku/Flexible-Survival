@@ -21,6 +21,8 @@ to say GenerateTrophyList_Doberman_Cop:
 	[ Reminder: LootBonus can be +35 at maximum - 10 for Magpie Eyes, 15 for Mugger and 10 from Player Perception]
 	if "Whistle_Taken" is not listed in Traits of Alexandra: [special whistle]
 		add "police whistle" to CombatTrophyList;
+	if "Pills_Taken" is not listed in Traits of Alexandra: [special bag of pills]
+		add "confiscated pills" to CombatTrophyList;
 	if a random chance of (80 + LootBonus) in 100 succeeds: [common drop]
 		add "doberman bitch fur" to CombatTrophyList;
 	if a random chance of (50 + LootBonus) in 100 succeeds: [common drop]
@@ -29,8 +31,6 @@ to say GenerateTrophyList_Doberman_Cop:
 		add "water bottle" to CombatTrophyList;
 	if a random chance of (30 + LootBonus) in 100 succeeds: [uncommon drop]
 		add "pepper spray" to CombatTrophyList;
-	if a random chance of (30 + LootBonus) in 100 succeeds: [uncommon drop]
-		add "confiscated pills" to CombatTrophyList;
 	if Debug is at level 10:
 		say "DEBUG: Trophy List: [CombatTrophyList].";
 
@@ -544,7 +544,7 @@ to say beatthedobie3:			[high-lust cop player victory]
 	say "     ([link]Y[as]y[end link]) - Take her to be your bad dog bitch.";
 	say "     ([link]N[as]n[end link]) - No, drive her off.";
 	if Player consents:
-		say "     Excited at the prospect of having the Doberman cop as your personal slutty bitch, you run your hand over her head and scritch her ears, telling her that she can come with you if she accepts her proper place as your slutty bad dog bitch. She nods and licks at your hand. 'Oh yes, that's what I want. It was foolish of a bad bitch like me to ever try being a cop, boss.' Grinning, you lean down and un-pin the police badge she is wearing, putting the metal shield into your pocket. The anthro dog doesn't resist as you do so, showing how completely you've destroyed the woman she once was. With a whistle, you call for her to get up and follow you, smiling in victory all the way to the library.";
+		say "     Excited at the prospect of having the Doberman cop as your personal slutty bitch, you run your hand over her head and scritch her ears, telling her that she can come with you if she accepts her proper place as your slutty bad dog bitch. She nods and licks at your hand. 'Oh yes, that's what I want. It was foolish of a bad bitch like me to ever try being a cop, boss.' Grinning, you lean down and un-pin the police badge she is wearing, putting the metal shield into your pocket. The anthro dog doesn't resist as you do so, showing how completely you've corrupted the woman she once was. With a whistle, you call for her to get up and follow you, smiling in victory all the way to the library.";
 		now HP of Alexandra is 1;
 		now battleground is "void";
 		move Alexandra to Grey Abbey Library;
@@ -754,30 +754,32 @@ instead of sniffing doberman bitch fur:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"confiscated pills"	"A plastic baggie containing two nondescript pills. It is labeled in neat handwriting, declaring the contents to have been confiscated some days ago."	0	confiscated pills
+"confiscated pills"	"A plastic baggie containing countless nondescript pills in all sorts of shapes and colors. It is labeled in neat handwriting, declaring the contents to have been confiscated some days ago. With the nanite apocalypse in full swing, it seems the dobie cop didn't have time to turn them in yet."	0	confiscated pills
 
-confiscated pills is a grab object.
+confiscated pills is a grab object. it is not temporary.
 the usedesc of confiscated pills is "[RandomPillsUse]".
 
 to say RandomPillsUse:
-	say "     Opening the baggie and shaking the pills out of it into your palm, you look at them for a second or two, then throw them into your mouth and swallow them. What could go wrong when taking some unidentified pills, right?";
+	say "     Opening the baggie and picking one of the pills, you look at it for a second or two, then throw it into your mouth and swallow. What could go wrong when taking some unidentified pills, right?";
 	let RandomPillEffect be a random number from 1 to 10;
 	if RandomPillEffect is 1:
-		say "     God, what was in those pills? A few minutes after taking them, you start feeling very woozy and your stomach rebels! Stumbling a few steps, you can't hold back the vomit and chuck up the half-dissolved things, as well as anything else you had in your stomach!";
+		say "     God, what was in that pill? A few minutes after taking it, you start feeling very woozy and your stomach rebels! Stumbling a few steps, you can't hold back the vomit and chuck up the half-dissolved thing, as well as anything else you had in your stomach!";
 		PlayerWounded 25;
+		PlayerHunger 15;
+		PlayerThirst 15;
 	else if RandomPillEffect is 2:
-		say "     A few minutes after taking the pills, you become aware of the fact that you have seven fingers on one of your hands. Raising it to check out all these digits in detail, your hand leaves a wavy, rainbow-colored aftershadow in your area of sight. Whoo - trippy! After the shadow catches up with your hand eventually, you stare at your hand and try to count just how many fingers you have. It is difficult since they kinda wiggle on their own, and even bringing in your other hand to count them one by one is a challenge, as you kinda keep missing and have to start all over again.";
+		say "     A few minutes after taking the pill, you become aware of the fact that you have seven fingers on one of your hands. Raising it to check out all these digits in detail, your hand leaves a wavy, rainbow-colored aftershadow in your area of sight. Whoo - trippy! After the shadow catches up with your hand eventually, you stare at your hand and try to count just how many fingers you have. It is difficult since they kinda wiggle on their own, and even bringing in your other hand to count them one by one is a challenge, as you kinda keep missing and have to start all over again.";
 		SanLoss 25;
 	else if RandomPillEffect > 2 and RandomPillEffect < 6:
-		say "     You actually feel pretty good after taking the pills. Energized, one could almost say.";
+		say "     You actually feel pretty good after taking the pill. Energized, one could almost say.";
 		PlayerHealed 25;
 	else if RandomPillEffect > 5 and RandomPillEffect < 9:
-		say "     Waiting several minutes, it doesn't seem like anything is happening. Were those things duds?";
+		say "     Waiting several minutes, it doesn't seem like anything is happening. Was that thing a dud?";
 	else if RandomPillEffect is 9:
-		say "     A few minutes after taking the pills, you start feeling quite randy. Time to find a fuck, an inner voice seems to say.";
+		say "     A few minutes after taking the pill, you start feeling quite randy. Time to find a fuck, an inner voice seems to say.";
 		LibidoBoost 25;
 	else if RandomPillEffect is 10:
-		say "     Minutes pass after taking the pills, but you don't feel anything special happening. Though then the realization strikes you that any lustful urges you have felt since this whole mess started are quiet for the moment. Whatever was in those things, it cleared your mind exceptionally well!";
+		say "     Minutes pass after taking the pill, but you don't feel anything special happening. Though then the realization strikes you that any lustful urges you have felt since this whole mess started are quiet for the moment. Whatever was in that things, it cleared your mind exceptionally well!";
 		LibidoReset;
 
 instead of sniffing confiscated pills:

@@ -166,7 +166,7 @@ When Play begins:
 	now lootchance entry is 100;  [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sleek[or]winged[at random]";
 	now type entry is "[one of]avian[or]raptor[at random]";  [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -342,7 +342,7 @@ When Play begins:
 	now lootchance entry is 50;  [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "hawkman male cum";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sleek[or]winged[at random]";
 	now type entry is "[one of]avian[or]raptor[at random]";  [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -464,7 +464,7 @@ name	desc	weight	object
 
 hawkman male feathers is a grab object.
 the usedesc of hawkman male feathers is "[HawkmanMaleFeatherUse]".
-it is part of the player.
+
 It is temporary.
 
 to say HawkmanMaleFeatherUse:
@@ -481,7 +481,7 @@ name	desc	weight	object
 
 hawkman female feathers is a grab object.
 the usedesc of hawkman female feathers is "[HawkmanFemaleFeatherUse]".
-it is part of the player.
+
 It is temporary.
 
 to say HawkmanFemaleFeatherUse:

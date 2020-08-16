@@ -11,13 +11,14 @@ Object	Name
 Feline Friend	"Feline Friend"
 
 Feline Friend is a situation.
+ResolveFunction of Feline Friend is "[ResolveEvent Feline Friend]".
 The sarea of Feline Friend is "Park".
 when play begins:
 	add Feline Friend to BadSpots of MaleList;
 	add Feline Friend to BadSpots of FemaleList;
 	add Feline Friend to BadSpots of FurryList;
 
-Instead of resolving a Feline Friend:
+to say ResolveEvent Feline Friend:
 	say "     Move through the trees after being forced off the path by a pack of wolves you spotted, you try your best to remain quiet while moving quickly. As you hear the pack howl, you push aside some branches, hoping to find another section of path, but instead find yourself at a small clearing before a rocky hillside. There is the mouth to a cave in the cliff's face at this edge of the park. Worried about what may lurk there, you start to step back when you hear a voice call out.";
 	say "     'No, you need not go. Do not worry. I shall not attack you unless provoked,' says the deep, male voice, rich with refinement. 'Come inside, let us talk. I would enjoy some company.'";
 	say "     Uncertain, you are about to leave when you hear the howl of those wolves, closer than before, you hesitate again. A leonine figure steps from the cave, motioning quickly for you to come inside. He does not seem aggressive and still has a suit coat on, though his lower body is unclothed. 'Quick! They'll not be able to notice your scent over mine and they don't dare come here.' Deciding to risk it, you enter the cave.";
@@ -653,12 +654,13 @@ Table of GameEventIDs (continued)
 Object	Name
 Music Store	"Music Store"
 
-Music Store is a situation. The level of Music Store is 2.
+Music Store is a situation.
+ResolveFunction of Music Store is "[ResolveEvent Music Store]". The level of Music Store is 2.
 The sarea of Music Store is "Outside".
 Music Store is inactive.
 violinspritefight is a truth state that varies.
 
-Instead of resolving Music Store:
+to say ResolveEvent Music Store:
 	if violinfound is 0 or violinfound is 1:
 		say "     With Leonard's request lingering at the back of your mind as you travel through the city, you stop dead in your tracks when you spot a music store. It seems to have been largely undamaged. You quickly head over to it, failing to notice the signs of activity inside in your eagerness. Pulling the door open, you hear the buzz of little wings from inside the dark store. Suddenly on guard, there's a cry of 'Get [']em, girls!' from a small, high-pitched voice. The volume of the buzzing grows louder and a wave of little, elfin sprites charge out of the doorway, swarming all around you excitedly, forcing you to stumble backwards into the street.";
 	else if violinfound is 2 or violinfound is 3:	[returning]
@@ -690,11 +692,12 @@ Table of GameEventIDs (continued)
 Object	Name
 Concert Hall	"Concert Hall"
 
-Concert Hall is a situation. The level of Concert Hall is 4.
+Concert Hall is a situation.
+ResolveFunction of Concert Hall is "[ResolveEvent Concert Hall]". The level of Concert Hall is 4.
 The sarea of Concert Hall is "High".
 Concert Hall is inactive.
 
-Instead of resolving Concert Hall:
+to say ResolveEvent Concert Hall:
 	say "     You come across a large theater and concert hall in this affluent portion of the city. There are crude drawings on the glass covering the posters for the upcoming shows, but you can see that a classical concert was planned during the time period around when the outbreak began. Very hopeful that you'll find a violin in there for Leonard, you try the doors. Locked. Barricaded even. Searching around the perimeter, you eventually find a back door that's been left open and you slip inside without delay or thought of caution, the needs of the handsome lion more important than the potential risk.";
 	if "One Pair" is listed in feats of Player or "Just One" is listed in feats of Player:
 		say "     You make your way through the backstage area to the orchestra pit. As you're about to start searching through it, you notice a cute bunny head poke out from behind the curtain. But even as you're trying to decide how to peacefully introduce yourself, there appears another bunny elsewhere, and then another and another still, more and more bunnies around you. They don't move in to approach, but begin to speak.";
@@ -744,7 +747,7 @@ name	desc	weight	object
 "violin"	"     It's a violin. You're no judge of quality, but it seems in good shape. Along with its case, you have some spare strings, wax, bows and music to go along with it. Most of the weight comes from the music stand you also snagged."	5	violin
 
 violin is a grab object.
-It is part of the player.
+
 It is not temporary.
 
 instead of using violin:
@@ -765,11 +768,12 @@ Table of GameEventIDs (continued)
 Object	Name
 Hunting Prides	"Hunting Prides"
 
-Hunting Prides is a situation. The level of Hunting Prides is 8.
+Hunting Prides is a situation.
+ResolveFunction of Hunting Prides is "[ResolveEvent Hunting Prides]". The level of Hunting Prides is 8.
 The sarea of Hunting Prides is "Park".
 Hunting Prides is inactive.
 
-Instead of resolving Hunting Prides:
+to say ResolveEvent Hunting Prides:
 	now fightoutcome is 100;
 	if HP of Leonard is 10:
 		say "     As you're traveling through the park, you notice signs that a band of felines has passed by recently. Remembering your promise to Leonard to deal with these roving prides, you start tracking this one down. You follow their trail for a while before hearing some commotion ahead. Following it, you manage to catch up with the group of felines and find them in the midst of attacking another of the feline girls. While you can't be certain, she does seem familiar and may be another of your pride sisters. With a growl, you rush to her aid, charging the band of felines from behind.";

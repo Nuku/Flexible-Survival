@@ -140,7 +140,7 @@ When Play begins:
 	now lootchance entry is 0;            [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;                 [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]lithe[or]sleek[or]toned[at random]";  [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"]
 	now type entry is "[one of]feline[or]cat-like[at random]";    [ one-word creature type. Ex: feline, canine, lupine, robotic, human...]
@@ -264,12 +264,13 @@ Object	Name
 Hunted Survivor	"Hunted Survivor"
 
 Hunted Survivor is a situation.
+ResolveFunction of Hunted Survivor is "[ResolveEvent Hunted Survivor]".
 The sarea of Hunted Survivor is "Sealed".
 
 when play begins:
 	add Hunted Survivor to BadSpots of MaleList;
 
-Instead of resolving a Hunted Survivor:
+to say ResolveEvent Hunted Survivor:
 	say "     As you step through the access door into the underground levels under the Trevor Labs and move down the dark corridor beyond, you hear something. The sound of naked feet on the concrete floor echo from somewhere ahead, quickly getting louder as their source gets closer. Then a man bursts out of one of the side passages, clothed in nothing but a few shreds of tattered clothing and running all out towards the exit.";
 	if the player is not facially human or the player is not bodily human:
 		say "     As he sees your inhuman form, the man gives a panicked scream, scrambling to stop his movement towards you, followed by a mad dash down a side corridor before you can say or do anything. Moments later, a shimmer runs through the darkness where he came from, and for a second you think you can make out a black feline shape, its head turning towards you as it gives a low growl, as if warning you off. Then it is gone again, twisting the shadows around it somehow in an eye-wrenching effect that makes you lose it from view. Further growls echoing along the halls, each one quieter than the one before indicate that it resumed its hunt.";

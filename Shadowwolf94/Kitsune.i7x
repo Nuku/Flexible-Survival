@@ -10,9 +10,10 @@ Object	Name
 Strange Fox	"Strange Fox"
 
 Strange Fox is a situation.
+ResolveFunction of Strange Fox is "[ResolveEvent Strange Fox]".
 KitsuneEventStage is a number that varies.
 
-Instead of Resolving a Strange Fox:
+to say ResolveEvent Strange Fox:
 	If KitsuneEventStage is 0:
 		say "     While walking along the streets, trying to find somewhere that might be useful to your survival, you come across a rather strange sight. What you think you see is something that can't be quite right as you find yourself looking over the sight of an exotic, bipedal silver fox with eight tails draped behind its backside. Curiosity makes you move closer just to see if the vision is real, the allure of the other just too great for you to run away. Getting up closer to the thing you find that - yes - you weren't exactly seeing things as you gaze upon what can only be a silver fox-man. A thick furry pelt covers the creature's body from head down to toe, save for a pure white midsection that frames the fox's neck down to his belly.";
 		say "     All the standard markings that makes the fox creature vulpine in characteristics are present. Two fluffy and pointed ears stand erect up onto the creature's head. A normal fox face stares forward at you with deep and unblinking blue eyes. The neck of the other is thick, but slim as it leads you down to the lithe form of the fox's chest and torso. The creature's arms are somewhat thin, but not so much that the other looks as though he can't fight as you note a defensive tightening of muscles despite the fluff of fur trying to hide the other's biceps. Going down even further with your analysis you see that the silver vulpine has a loin cloth covering its groin, yet in spite of that you can see that there is a small bulge pushing out from the cured animal hide so obviously the other is a male. How much so, well that you can't see at the moment.";
@@ -112,7 +113,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "star bell"	"A strange 'bell' with stars on it. Just holding it close to you makes you remember fond dreams you had as a child."	1	star bell
 
-star bell is a grab object. It is part of the player. It is not temporary.
+star bell is a grab object. It is not temporary.
 
 instead of sniffing star bell:
 	say "The smell of sweet dreams fills the bell and you as well as you hold it close to your nose.";
@@ -122,10 +123,11 @@ Object	Name
 Strange Bell	"Strange Bell"
 
 Strange Bell is a situation.
+ResolveFunction of Strange Bell is "[ResolveEvent Strange Bell]".
 Strange Bell is inactive.
 the sarea of Strange Bell is "Park".
 
-instead of resolving a strange bell:
+to say ResolveEvent Strange Bell:
 	if KitsuneEventStage is 6:
 		say "     You come across a star bell glowing dimly along the bushes of the ground. A feeling of both elation and wonder comes across you as you kneel next to the softly tinkling item. Shall you take it?";
 		if Player consents:

@@ -27,7 +27,7 @@ to say koboldgangdesc:
 		say "     A dull blue kobold steps forward, crossing his arms as he looks at you. 'We were just looking for you! Come, now, it's time for you to take care of your superiors, our little buttslut,' the kobold says menacingly as the creatures prepare to attack.";
 
 to say losetokoboldgang:
-	if hp of Player > 0:
+	if HP of Player > 0:
 		if Player is not male:
 			say "     <Sadly, scenes for a female player surrendering are not yet written for this enemy.>";
 		else:
@@ -294,7 +294,7 @@ When Play begins:
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 2;
 	now body descriptor entry is "[one of]thin[or]lithe[or]scaley[or]wiry[at random]";
 	now type entry is "[one of]draconic[or]reptilian[or]kobold[at random]";

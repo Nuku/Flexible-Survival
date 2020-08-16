@@ -28,14 +28,13 @@ Object	Name
 Needy Rabbit Girl	"Needy Rabbit Girl"
 
 Needy Rabbit Girl is a situation.
+ResolveFunction of Needy Rabbit Girl is "[ResolveEvent Needy Rabbit Girl]".
 
 when play begins:
 	add Needy Rabbit Girl to BadSpots of FemaleList;
 	add Needy Rabbit Girl to BadSpots of FurryList;
 
-After resolving a Needy Rabbit Girl, try looking;
-
-Instead of Resolving a Needy Rabbit Girl:
+to say ResolveEvent Needy Rabbit Girl:
 	if ngrp is 0:
 		say "     Drifting about the city streets is a woman. She is wearing a long skirt and a jean jacket over a bright yellow blouse. Sprouting from her brown, shoulder-length hair are two long white rabbit ears. She doesn't look feral, and she is picking around through the rubble as if searching for something. One of her great ears suddenly lifts. She looks directly at you for a moment, wide eyed, then flees before you can say anything. How odd.";
 		increase ngrp by 1;

@@ -77,6 +77,7 @@ Object	Name
 Birth of a Goddess	"Birth of a Goddess"
 
 Birth of a Goddess is a situation.
+ResolveFunction of Birth of a Goddess is "[ResolveEvent Birth of a Goddess]".
 The level of Birth of a Goddess is 0.
 The sarea of Birth of a Goddess is "Beach".
 
@@ -84,7 +85,7 @@ instead of going to Public Beach while Birth of a Goddess is unresolved and dayt
 	move player to Public Beach;
 	BirthofaGoddessEvent;
 
-Instead of resolving Birth of a Goddess:
+to say ResolveEvent Birth of a Goddess:
 	BirthofaGoddessEvent;
 
 to BirthofaGoddessEvent:
@@ -155,7 +156,7 @@ to BirthofaGoddessEvent:
 		LineBreak;
 		say "     Without giving her any warning, you grab Callidora by the shoulders and shove her away from you, the woman letting out a surprised yelp as she tumbles onto the sand unceremoniously, drawing the attention of nearby beach-goers. Perhaps believing that you intend to assault or rape her, several people rush towards the two of you, shouting for you to back away, an order which you comply with. By the time anyone reaches you, Callidora has regained her feet, rubbing various sore areas of her body. 'That has to be one of the most extreme responses to being hugged that I have ever witnessed. To be honest, I think that you should be ashamed of yourself, but I suppose that social etiquette isn't what it used to be in the city,' she mutters as she looks reproachfully at you. After thanking the concerned onlookers, she stumbles off towards the sea without looking back at you. From the hostile glares that you are receiving, you decide it best to leave the beach until this incident has been forgotten about, confident that Callidora won't want to approach you again.";
 		move Player to Beach Plaza;
-		now hp of Callidora is 99;
+		now HP of Callidora is 99;
 		now resolution of Birth of a Goddess is 3; [Expressed your disinterest. Strongly.]
 		now Birth of a Goddess is resolved;
 	[else if calcnumber is 4: [Skip Event]

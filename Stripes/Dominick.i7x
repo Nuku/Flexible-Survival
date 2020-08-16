@@ -14,12 +14,13 @@ Object	Name
 Corrupt Kennel	"Corrupt Kennel"
 
 Corrupt Kennel is a situation.
+ResolveFunction of Corrupt Kennel is "[ResolveEvent Corrupt Kennel]".
 The sarea of Corrupt Kennel is "Forest".
 when play begins:
 	add Corrupt Kennel to BadSpots of FurryList;
 	add Corrupt Kennel to BadSpots of MaleList;
 
-Instead of resolving Corrupt Kennel:			[Meet Dominick, your friendly Husky dom! Or Sir if you're nasty.]
+to say ResolveEvent Corrupt Kennel:			[Meet Dominick, your friendly Husky dom! Or Sir if you're nasty.]
 	say "     As you're cutting through a quiet neighborhood half-overgrown by trees, the silence is suddenly broke by the sounds of a struggle in the building you're passing. The door flies open as a male husky pushes through. While your first instinct is to expect an attack from him, he barely notices you, pushing past you after knocking into a parked car. With him so close, you can see his blackened eye and broken jaw.";
 	say "     'Don't you come back, you fucking cur! Otherwise you'll end up as one of my bitches!' Turning to this new voice, you find another husky standing in the open doorway. This second husky watches the first run off with his tail between his legs, standing firmly in the doorway of what you now realize is a former kennel. He runs his right hand, knuckles oozing blood, over his left shoulder which looks painfully out of joint. He snaps his shoulder back into place, with just a slight grimace.";
 	say "     'Damn crazies. There's one every now and then coming to sniff around,' he says more calmly as he notices you there. 'Name's Dominick by the way. You're welcome to come in my kennel; you still seem sane enough. [if Player is herm]Though you better not be thinking of getting at my bitches, or you'll get the same.' He pauses and eyes you firmly. 'No. I think you'd prefer to join them[else if Player is male]Though you better not be thinking of getting at my bitches, or you'll get the same.' He pauses and eyes you coldly. 'No. Scratch that. Consider what happened to him as your one and only warning[else]I'd welcome the company of another female.' He eyes you appreciatively. 'Perhaps you might even decide to stay. As you've seen, you'd certainly be safe here as one of my bitches[end if].' He turns to go inside, still rubbing his shoulder, and limps up the stairs.";
@@ -1077,7 +1078,7 @@ to say ForcedSubToDomSex4:			[Step by step Beta TF sequence]
 		else:
 			say "     Using the arms of the chair to brace yourself, you get to fucking your snatch on Dom's dick. Quickly sinking into a cocklust for your master's dick you barely notice the change until your shrinking form makes your current position unsteady. Dom catches you as you begin to fall forward and says, 'Your only had a little ways to go and now you're ready. Let's make sure that you don't fall off my dick too soon though.'";
 		WaitLineBreak;
-		say "     Your master now fully in control of this fuck, you lean back into him, enjoying the pounding. Each stroke gets more and more of his knot into you until it pops into your willing pussy, locking you in place as Dom lets out a howl, flooding your womb with his seed. At long last fulfilled, your body orgasms, clenching around your master's cock, making him a grunt as his sensitive rod is squeezed for a few more spurts of cum. In the long moments as you wait to be freed, not really minding being stuck with your master, Dom says, 'You are forever my bitch now. No matter where you go, or what you do, you'll always be my[if hp of Dominick is 43] sissy[end if] slut. Too soon, his knot slips free from your cunt and he helps you down from his lap. You walk away, head tall, tail wagging, with a sense of purpose you've never known before.";
+		say "     Your master now fully in control of this fuck, you lean back into him, enjoying the pounding. Each stroke gets more and more of his knot into you until it pops into your willing pussy, locking you in place as Dom lets out a howl, flooding your womb with his seed. At long last fulfilled, your body orgasms, clenching around your master's cock, making him a grunt as his sensitive rod is squeezed for a few more spurts of cum. In the long moments as you wait to be freed, not really minding being stuck with your master, Dom says, 'You are forever my bitch now. No matter where you go, or what you do, you'll always be my[if HP of Dominick is 43] sissy[end if] slut. Too soon, his knot slips free from your cunt and he helps you down from his lap. You walk away, head tall, tail wagging, with a sense of purpose you've never known before.";
 		SanLoss 5;
 		increase Libido of Player by 5;
 		now lastfuck of Dominick is turns;

@@ -143,7 +143,8 @@ carry out HuntAction:
 				if diceroll >= 15:
 					now inasituation is true;
 					say "You manage to find your way to [Name entry]!";
-					try resolving object entry;
+					say "[ResolveFunction of object entry]";
+					try looking;
 					now inasituation is false;
 				else:
 					now inasituation is false;
@@ -152,7 +153,8 @@ carry out HuntAction:
 			else:
 				now inasituation is true;
 				say "You manage to find your way to [Name entry]!";
-				try resolving object entry;
+				say "[ResolveFunction of object entry]";
+				try looking;
 				now inasituation is false;
 	else if there is a name of HuntId in the Table of Random Critters: [exact creature match]
 		choose a row with name of HuntId in the Table of Random Critters;
@@ -347,7 +349,8 @@ carry out HuntAction:
 							if diceroll >= 15:
 								now inasituation is true;
 								say "You manage to find your way to [z]!";
-								try resolving z;
+								say "[ResolveFunction of z]";
+								try looking;
 								now inasituation is false;
 							else:
 								now inasituation is false;
@@ -359,7 +362,8 @@ carry out HuntAction:
 						else:
 							now inasituation is true;
 							say "You manage to find your way to [z]!";
-							try resolving z;
+							say "[ResolveFunction of z]";
+							try looking;
 							now inasituation is false;
 						break;
 	if the number of entries in PossibleEncounters is not 0 and Found is 10: [got list of creatures in the area & found the target creature]

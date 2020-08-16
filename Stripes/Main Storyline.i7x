@@ -772,7 +772,7 @@ name	desc	weight	object
 "infection monitor"	"     Cobbled together from various items, Dr Matt's infection analyzer can be used to check your body's infection status. Type [bold type]pism[roman type] to use."	1	infection monitor
 
 infection monitor is a grab object.
-it is part of the player.
+
 It is not temporary.
 
 monitoring is an action applying to nothing.

@@ -1,6 +1,6 @@
 Version 1 of Cynthia by Prometheus begins here.
 
-[ hp of Cynthia - relationship variable with the player      ]
+[ HP of Cynthia - relationship variable with the player      ]
 [   0: not met                                               ]
 [   1: Met Cynthia while fetching meds with Julian           ]
 [   2:                                                       ]
@@ -72,7 +72,7 @@ The scent of Cynthia is "     Cynthia smells very strongly of wolves, which is n
 
 to say CynthiaDesc:
 	if debugactive is 1:
-		say "DEBUG -> HP: [hp of Cynthia] <- DEBUG[line break]";
+		say "DEBUG -> HP: [HP of Cynthia] <- DEBUG[line break]";
 	else:
 		say "     The sniper's face looks human, her neck-length, pale blonde hair hiding her ears from view. It is a pretty face, though not overly beautiful, the strain of constant vigilance showing. She is dressed in a form fitting, but not overly tight, gray uniform, a black beret on her head, black leather gloves on her hands, and has a modified rifle on her back. Deep-blue eyes glance cautiously around, making sure that little surprises her.";
 		say "     Though she seems relatively cheerful, there is a darkness behind her eyes, a remnant of her actions in the past. She seems to genuinely care about the infected in the city, but equally dislike the governmental forces attempting to quarantine everyone. Her usual unwillingness to kill seems strange for a mercenary, but who are you to judge. She sees you studying her and starts to fiddle shyly with a half gas mask that is hooked on her belt, not meeting your eyes.";
@@ -92,15 +92,16 @@ Object	Name
 Den of the Pack	"Den of the Pack"
 
 Den of the Pack is a situation.
+ResolveFunction of Den of the Pack is "[ResolveEvent Den of the Pack]".
 Prereq1 of Den of the Pack is Suppressant Supply Run.
 Prereq1Resolution of Den of the Pack is { 1 }.
 The level of Den of the Pack is 0.
 The sarea of Den of the Pack is "Outside".
 
-after going to Bright Alley while (Den of the Pack is active and Den of the Pack is not resolved and hp of Cynthia is 1 and a random chance of 1 in 2 succeeds):
+after going to Bright Alley while (Den of the Pack is active and Den of the Pack is not resolved and HP of Cynthia is 1 and a random chance of 1 in 2 succeeds):
 	DenofthePackEvent;
 
-Instead of resolving Den of the Pack:
+to say ResolveEvent Den of the Pack:
 	DenofthePackEvent;
 
 to DenofthePackEvent:
@@ -124,7 +125,7 @@ to DenofthePackEvent:
 	WaitLineBreak;
 	say "     You and Cynthia stand up and return the kitsune's goodbye, the vulpine woman bowing in acknowledgment. The door opens, and Sirius enters, the large wolf giving you a nod in passing as you leave. Perhaps the two leaders have important matters to discuss, though the concerned look he gives Cadmea suggest that there is more to it than the hotel's everyday management. 'So what did you think of the Den Mother?' Cynthia asks you as you approach the stairs down again. She continues without waiting for your response, 'She and the Pack Alpha try and protect those that they can, but many don't want to put their trust in otherworldly beings. Having people that are from Earth, or native agents as she calls us, like myself and Argos's pack helps to convince people to give her a chance. Though it does seem strange that a talking fox from another world would be trusted less than a talking wolf that used to be a sight at the zoo. Humans are weird. My employer would have so liked to meet her.'";
 	say "     You follow her back to the side door with its grizzled doorman, the mercenary giving the feline a smile as he lets you leave again. From the filth and griminess of the alleyway you exit into, you wouldn't know how decadent the inside of the hotel was. Cynthia beckons for you to come with her, and you walk together in silence until you are back where she greeted you earlier. 'Sorry that I have to leave you here, but I need to get back to spying on people in the city from the rooftops, and you should be getting back to that library you love so much. I'll have to come and visit you at some point and withdraw a book now that there are unlikely to be late fees,' she jokes. 'I might even test your security just so you know how lucky you are that no one has attacked you there. Be well, and I'll be seeing you, even if you don't see me.' The sniper fastens her gas mask on again and climbs up the ladder, leaving you to decide what to do next.";
-	now hp of Cadmea is 1;
+	now HP of Cadmea is 1;
 	now resolution of Den of the Pack is 1;
 	now Den of the Pack is resolved;
 	AddNavPoint Sanctuary Alleyway;
@@ -134,15 +135,16 @@ Object	Name
 ArcheTech Warehouse	"ArcheTech Warehouse"
 
 ArcheTech Warehouse is a situation.
+ResolveFunction of ArcheTech Warehouse is "[ResolveEvent ArcheTech Warehouse]".
 ArcheTech Warehouse is inactive.
 Prereq1 of ArcheTech Warehouse is Dual Leadership.
 The level of ArcheTech Warehouse is 0.
 The sarea of ArcheTech Warehouse is "Nowhere".
 
-after going to Sanctuary Hotel Lobby while (ArcheTech Warehouse is active and ArcheTech Warehouse is not resolved and ArcheTech Warehouse is PrereqComplete and hp of Cadmea is 2 and a random chance of 1 in 2 succeeds):
+after going to Sanctuary Hotel Lobby while (ArcheTech Warehouse is active and ArcheTech Warehouse is not resolved and ArcheTech Warehouse is PrereqComplete and HP of Cadmea is 2 and a random chance of 1 in 2 succeeds):
 	ArcheTechWarehouseEvent;
 
-Instead of resolving ArcheTech Warehouse:
+to say ResolveEvent ArcheTech Warehouse:
 	ArcheTechWarehouseEvent;
 
 to ArcheTechWarehouseEvent:

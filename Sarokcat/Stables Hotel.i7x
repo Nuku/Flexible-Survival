@@ -10,11 +10,12 @@ Object	Name
 Stabled Situation	"Stabled Situation"
 
 Stabled Situation is a situation.
+ResolveFunction of Stabled Situation is "[ResolveEvent Stabled Situation]".
 Stablesearchstatus is a number that varies.
 when play begins:
 	add Stabled Situation to BadSpots of FurryList;
 
-Instead of Resolving Stabled Situation:
+to say ResolveEvent Stabled Situation:
 	if Stablesearchstatus is 0:
 		say "     Wandering through the streets of the city, you hear a strange noise echoing through the streets, like the sound of numerous hooves hitting the sidewalk repeatedly. As the sound seems to be getting closer, you decide to take cover inside of a nearby abandoned car, peeking out through the windows carefully to see just what is making such a racket. You appear to have gotten under cover just in the nick of time, as a small group of horse-like men come trotting down the street, their equine faces scanning the street carefully as they continue along, most likely looking for a new playmate or two.";
 		say "     The horsemen pass your hiding spot without noticing you fortunately, and continue on their way down the streets. Getting out of the car carefully, you find yourself curious as to just where such a group of horses came from, and after considering for a minute, you follow them to find out, only to sigh as you realize that as alert as that group was, trying to follow them would likely only result in you getting caught by them.";

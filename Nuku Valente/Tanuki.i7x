@@ -47,14 +47,14 @@ Object	Name
 Tanukibell	"Tanukibell"
 
 Tanukibell is a situation.
+ResolveFunction of Tanukibell is "[ResolveEvent Tanukibell]".
 The sarea of Tanukibell is "Nowhere".
 
 check ringing:
 	if the player is not in Shinto Shrine, say "I see nothing to ring here." instead;
-	if SatisfiedTanuki < 1, try resolving tanukibell instead;
+	if SatisfiedTanuki < 1, say "[ResolveFunction of Tanukibell]" instead;
 
-
-Instead of resolving tanukibell:
+to say ResolveEvent Tanukibell:
 	if Tanukigender is -1:
 		say "'You want to keep talking to me?'";
 		say "The voice seems to be coming just beside your ear, familiar from before. 'Well, you are my child now, so I suppose you are due some time with your parent. Would you prefer your parent be a mother or a father?'";
@@ -304,7 +304,7 @@ When Play begins:
 	now lootchance entry is 0; [- Chance of loot dropping 0-100 -]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]plump[or]chubby[or]fat[at random]";
 	now type entry is "[one of]raccoon[or]tanuki[at random]";
@@ -442,7 +442,7 @@ to say tancoindesc:
 
 the scent of tanuki coin is "It has a benign, metallic smell about it.";
 
-tanuki coin is a grab object. It is part of the player. It is fast. It is not temporary. The usedesc of tanuki coin is "[usetancoin]".
+tanuki coin is a grab object. It is fast. It is not temporary. The usedesc of tanuki coin is "[usetancoin]".
 
 to say usetancoin:
 	say "[line break]     You flip the coin";
@@ -630,7 +630,7 @@ instead of conversing the Tanuki Mom:
 			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-				if hp of tanuki mom is 0, now hp of tanuki mom is 1;
+				if HP of tanuki mom is 0, now HP of tanuki mom is 1;
 				if (nam is "Survival"):
 					say "[TanukiSurvivalTalk]";
 				if (nam is "Romance"):

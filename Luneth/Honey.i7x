@@ -27,11 +27,12 @@ Object	Name
 Smashed Hive	"Smashed Hive"
 
 Smashed Hive is a situation.
+ResolveFunction of Smashed Hive is "[ResolveEvent Smashed Hive]".
 The sarea of Smashed Hive is "Park".
 when play begins:
 	add Smashed Hive to BadSpots of FemaleList;
 
-Instead of resolving a Smashed Hive:
+to say ResolveEvent Smashed Hive:
 	if HP of bee girl is 0:
 		say "     As you search through the park, you come across a giant, devastated bee hive. The hive was built around the branches of a large tree and may have been over fifteen feet tall when completed intact. Now, broken fragments of it lay scattered around the area and only some of the upper chunks cling to the top branches to give you a scope of its size. Scattered around the sticky rubble are the bodies of numerous bee girl drones, unmoving. Cautiously, you step between the sticky chunks of honeycomb to take a closer look.";
 		say "     As you follow the bear tracks all around the area, you can see that one or even several bears assaulted the hive for the sweet honey. Much of the honeycomb center has been taken away, though you may be able to retrieve some for yourself. As you look around to find a clean section to pick from, you hear a weak buzz from behind you. Turning, you see one of the bee drone's still alive, struggling to get up despite her injuries.";

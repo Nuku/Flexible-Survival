@@ -33,7 +33,8 @@ Table of GameEventIDs (continued)
 Object	Name
 Snared Vixen	"Snared Vixen"
 
-Snared Vixen is a situation. The level of Snared Vixen is 5.
+Snared Vixen is a situation.
+ResolveFunction of Snared Vixen is "[ResolveEvent Snared Vixen]". The level of Snared Vixen is 5.
 the sarea of Snared Vixen is "Beach".
 
 when play begins:
@@ -47,7 +48,7 @@ when play begins:
 	now entry 9 of dolphinlist is entry 3 of tempList;
 	now entry 11 of dolphinlist is entry 4 of tempList;
 
-Instead of resolving a Snared Vixen:
+to say ResolveEvent Snared Vixen:
 	say "     As you're traveling along the beach, you can hear some giggling in the distance. As you crest the next sandy rise, you can see several bright pink dolphin girls playing with a vixen they've found. She's struggling a little, but her resistance becomes less and less as the playful inflatables tease her body while taking off what few scraps of clothes she has. As they're several hundred yards away, you'd not be able to get there in time to interfere if you wanted to. It's hard to make out all the details at this distance.";
 	say "     [bold type]Are you interested in watching or shall you just continue on your way?[roman type][line break]";
 	LineBreak;
@@ -670,7 +671,7 @@ to say bckingchair:
 			else:
 				say "     Your final attempt to break free seems to require the last of your strength and you sag back into the seat. As the chair continues to bond with you, your thoughts fade away until they're peaceful and placid, like the chair, like your own[if compnumber > 1]. With one of your last conscious thoughts, you glance over at your companions, seeing them getting pressed up against the wall by the knights. There they are flattened out, turning into more knight decals to decorate the castle. You can't help but smile at this, feeling that it's somehow right[else if compnumber is 1]. With one of your last conscious thoughts, you glance over at your companion being pressed up against the wall by the knights. As they are flattened out, they turn into another knight decal to decorate the castle. You can't help but smile at this, feeling that it's somehow right[else]. Happiness grows and swells inside you and you smile[end if]. Your smile stretches and becomes transfixed on your face as your head becomes inflatable. You are left with a smile and big, happy eyes as permanent designs on your face.";
 				say "     As you and the chair continue to merge, your [bodytype of Player] body becomes one with it, reshaping it as you and it become one happy whole. You're now a yellow inflatable chair version of a [BodyName of Player] with a matching head. There's even cute matching prints at the end of the chair's arms to complete the look.";
-				Waitlinebreak;
+				WaitLineBreak;
 				now bcfinalchairform is BodyName of Player;
 				now humanity of Player is 0;
 				trigger ending "Bouncy Castle New Chair";
@@ -2272,14 +2273,15 @@ an everyturn rule:
 			now HP of Bubble is 100;
 
 
-
+[
 Section X - Debug - Not for release
+]
 
 dolphincastletesting is an action applying to nothing.
 understand "dolcastletest" as dolphincastletesting.
 
 carry out dolphincastletesting:
-	try resolving Snared Vixen;
+	say "[ResolveFunction of Snared Vixen]";
 	WaitLineBreak;
 	move player to Bouncy Castle;
 

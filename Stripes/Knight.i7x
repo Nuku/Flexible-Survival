@@ -258,7 +258,7 @@ When Play begins:
 	now lootchance entry is 44; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]toned[or]muscled[or]fit[at random]";
 	now type entry is "human"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -379,7 +379,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "stray links"	"A few stray links of chainmail that appear to have come off of something larger."	1	stray links
 
-stray links is a grab object. It is part of the player. It is infectious. The strain of stray links is "Knight".
+stray links is a grab object. It is infectious. The strain of stray links is "Knight".
 
 The usedesc of stray links is "[straylinkseffect]";
 

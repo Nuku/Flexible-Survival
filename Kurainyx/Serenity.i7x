@@ -52,13 +52,14 @@ Object	Name
 Naga Hybrid	"Naga Hybrid"
 
 Naga Hybrid is a situation.
+ResolveFunction of Naga Hybrid is "[ResolveEvent Naga Hybrid]".
 The sarea of Naga Hybrid is "Plains".
 
 when play begins:
 	add Naga Hybrid to BadSpots of FemaleList;
 	add Naga Hybrid to BadSpots of FurryList;
 
-Instead of resolving a Naga Hybrid:
+to say ResolveEvent Naga Hybrid:
 	if HP of Serenity is 0:			[First encounter]
 		say "     You freeze when you hear the distinctive sound of a rattlesnake's tail from behind. Slowly turning around, you see that instead of an ordinary snake, a naga is staring right at you from a short distance away, its bodily curves and facial features showing that it is female. In her 'standing' position, she is easily several feet taller than most people, and that does not include the rest of her long, snake-like body that trails behind her. A hood expands from the sides of her head, and her body is covered with a few white and black scales, but the majority of them are a brown that is similar in color to the dirt of the surrounding area, which helps explain how she managed to sneak up on you. At the end of her tail, you can see and hear the telltale rattle that initially caught your attention, which suggests that she is a hybrid between a rattlesnake and a cobra. Around her neck is a silver necklace in the shape of a heart with a snake coiled around it.";
 		say "     'And what have we here? I seem to have stumbled upon a lost traveler,' the naga remarks in a teasing tone, her forked tongue flicking out. She begins to rattle her tail in a constant beat as she slowly slithers toward you with a confident smirk. 'Do not worry. I am not here to fight. In fact, why don't you let me take care of you for a while? Let me embrace you, and I will help you forget your worries.' Even though the naga truly seems to not be violent, there is still an obvious danger behind her offer, and yet, there is something about her enticing words and the oddly soothing rattling that tempts you to let this sultry serpent have her way with you.";
@@ -179,6 +180,7 @@ Object	Name
 Large Cave	"Large Cave"
 
 Large Cave is a situation.
+ResolveFunction of Large Cave is "[ResolveEvent Large Cave]".
 Large Cave is inactive.
 Prereq1 of Large Cave is Naga Hybrid.
 Prereq1ResolvedMandatory of Large Cave is false.
@@ -186,7 +188,7 @@ Prereq1Resolution of Large Cave is { 1, 2 }
 
 The sarea of Large Cave is "Plains".
 
-Instead of resolving Large Cave:
+to say ResolveEvent Large Cave:
 	say "     You come across a large cave that is about two or three stories tall. Small holes on the ceiling allow [if daytimer is day]sunlight to illuminate[else]the moon to dimly light up[end if] the interior. The path is straight for only a short distance before it curves to the left, meaning that you will have to enter the cave to explore its depths. However, you hesitate to proceed inside, and for good reason. The area reeks of sex, and judging by the huge patches of dried cum painting the cave's walls, it seems that this is likely the home of a large beast. Still, there's a decent chance that you might be able to find something of interest inside.";
 	say "     [bold type]Should you go inside the cave?[roman type][line break]";
 	LineBreak;
@@ -226,7 +228,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "Lockbox"	"     It's a simple lockbox, and on its cover is a picture of a silver heart with a snake coiled around it. You don't have the key to unlock it."	5	Lockbox
 
-Lockbox is a grab object. It is part of the player. It is not temporary.
+Lockbox is a grab object. It is not temporary.
 
 instead of using Lockbox:
 	say "     You try and pry the lockbox open, but it refuses to open.";
@@ -627,7 +629,7 @@ When Play begins:
 	now lootchance entry is 0;         [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4;              [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "caprine";
 	now type entry is "demon";

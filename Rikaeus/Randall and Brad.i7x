@@ -23,6 +23,7 @@ Object	Name
 Hanging out on the Green	"Hanging out on the Green"
 
 Hanging out on the Green is a situation.
+ResolveFunction of Hanging out on the Green is "[ResolveEvent Hanging out on the Green]".
 Hanging out on the Green is inactive.
 The sarea of Hanging out on the Green is "Campus".
 
@@ -42,7 +43,7 @@ instead of going to College Walkway West while (Hanging out on the Green is acti
 	move player to College Walkway West;
 	FirstRandallEvent;
 
-instead of resolving Hanging out on the Green:
+to say ResolveEvent Hanging out on the Green:
 	move player to College Walkway West;
 	FirstRandallEvent;
 
@@ -62,6 +63,7 @@ Object	Name
 Bunny Eavesdropper	"Bunny Eavesdropper"
 
 Bunny Eavesdropper is a situation.
+ResolveFunction of Bunny Eavesdropper is "[ResolveEvent Bunny Eavesdropper]".
 Bunny Eavesdropper is inactive.
 The sarea of Bunny Eavesdropper is "Campus".
 
@@ -73,7 +75,7 @@ instead of going to College Walkway West while (Bunny Eavesdropper is active and
 	move player to College Belltower;
 	SecondRandallEvent;
 
-instead of resolving Bunny Eavesdropper:
+to say ResolveEvent Bunny Eavesdropper:
 	move player to College Belltower;
 	SecondRandallEvent;
 
@@ -93,6 +95,7 @@ Object	Name
 Operation Horny Bunny	"Operation Horny Bunny"
 
 Operation Horny Bunny is a situation.
+ResolveFunction of Operation Horny Bunny is "[ResolveEvent Operation Horny Bunny]".
 Operation Horny Bunny is inactive.
 The sarea of Operation Horny Bunny is "Campus".
 
@@ -104,7 +107,7 @@ instead of going to Lecture Street while (Operation Horny Bunny is active and Op
 	move player to College Belltower;
 	ThirdRandallEvent;
 
-instead of resolving Operation Horny Bunny:
+to say ResolveEvent Operation Horny Bunny:
 	move player to College Belltower;
 	ThirdRandallEvent;
 
@@ -138,6 +141,7 @@ Object	Name
 New Roommates	"New Roommates"
 
 New Roommates is a situation.
+ResolveFunction of New Roommates is "[ResolveEvent New Roommates]".
 New Roommates is inactive.
 The sarea of New Roommates is "Campus".
 
@@ -149,7 +153,7 @@ instead of going to Dorm Street while (New Roommates is active and New Roommates
 	move player to Dorm Street;
 	FourthRandallEvent;
 
-instead of resolving New Roommates:
+to say ResolveEvent New Roommates:
 	move player to Dorm Street;
 	FourthRandallEvent;
 

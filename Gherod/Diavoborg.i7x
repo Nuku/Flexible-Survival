@@ -26,9 +26,10 @@ Object	Name
 Four Leg Wrath	"Four Leg Wrath"
 
 Four Leg Wrath is a situation.
+ResolveFunction of Four Leg Wrath is "[ResolveEvent Four Leg Wrath]".
 The sarea of Four Leg Wrath is "Plains".
 
-instead of resolving Four Leg Wrath:
+to say ResolveEvent Four Leg Wrath:
 	if BodyName of player is "Behemoth" or BodyName of player is "Human Giant" or scalevalue of player > 4:
 		say "     You walk through the dry plains in an attempt to find the red beast, but you being giant sized on your own makes it impossible to sneak upon it. Perhaps it would be best if you changed that?";
 		stop the action;
@@ -203,11 +204,12 @@ Object	Name
 That Red Cave	"That Red Cave"
 
 That Red Cave is a situation.
+ResolveFunction of That Red Cave is "[ResolveEvent That Red Cave]".
 The PreReq1 of That Red Cave is Four Leg Wrath.
 The PreReq1Resolution of That Red Cave is { 3 }.
 The sarea of That Red Cave is "Plains".
 
-Instead of resolving That Red Cave:
+to say ResolveEvent That Red Cave:
 	say "     After having encountered that one peculiar behemoth person who could actually talk and act with the intelligence of a normal person (which is, by the way, an extremely odd situation, given the fact most behemoths are not talkative at all, grunting and fucking everything that moves... or worse, given their size) and experienced a few events together, he (yes, [']he['], as it was established already that he is an actual person, or something like that) has let you know that he lives in a cave close to the mountains, accessible through the Dry Plains... of all places. Traveling through such a vast area only to arrive at the only visible rocky region from here is, indeed, a chore, but you have gone through worse. In fact, things look particularly calm, you haven't been ambushed by any sex-crazed creature so far.";
 	say "     Just how, exactly, would it happen? A sentient behemoth with a scorpion tail and a spicy fur color, with a personality as big as him, and so almighty and powerful as he is? Would he be the only one who happened to have this condition? Or is there something he is not telling you? Many questions could surge in your mind if you thought well about them, as they easily drift around when walking through a long, long area full of uninteresting things to see, mainly grass and ground. There is also the possibility that he lied to you and there is actually no cave, which would be immensely frustrating and disappointing, but one should not be judged so lightly. After all, you barely know this... beast.";
 	WaitLineBreak;

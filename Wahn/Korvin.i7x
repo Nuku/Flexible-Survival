@@ -942,11 +942,12 @@ Table of GameEventIDs (continued)
 Object	Name
 Trucker Bar	"Trucker Bar"
 
-Trucker Bar is a situation. Trucker Bar is inactive.
+Trucker Bar is a situation.
+ResolveFunction of Trucker Bar is "[ResolveEvent Trucker Bar]". Trucker Bar is inactive.
 The sarea of Trucker Bar is "High".
 The PrereqCompanion of Trucker Bar is gshep.
 
-instead of resolving Trucker Bar:
+to say ResolveEvent Trucker Bar:
 	if Resolution of Trucker Bar is 0: [first time]
 		say "     Wandering through the outskirts of the downtown area, you reach a section of town that's just at the edge of the warehouse district. It is clearly more of a working class neighborhood over here, as there are 'regular' businesses instead of boutiques dominating the streetfront. Of course, most of the shops are closed with heavy iron shutters, and those that are not have already been looted. Turning a corner into another very similar-looking road, you realize that suddenly, a familiar presence is missing from your side. Looking around, you see that Korvin wandered off a few steps and is looking at his surroundings with a thoughtful expression. 'Wait a moment, [K_Boss]. I think this feels familiar! Can we go that way?'";
 		say "     [bold type]What's your reply?[roman type][line break]";

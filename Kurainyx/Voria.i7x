@@ -30,7 +30,7 @@ Table of GameCharacterIDs (continued)
 object	name
 Voria	"Voria"
 
-Voria is a woman. The hp of Voria is usually 0.
+Voria is a woman. The HP of Voria is usually 0.
 [Physical details as of game start]
 ScaleValue of Voria is 4. [large sized]
 SleepRhythm of Voria is 0. [0 - awake at all times, 1 - day active, 2 - night active]
@@ -56,7 +56,7 @@ PenileVirgin of Voria is false.
 SexuallyExperienced of Voria is true.
 TwistedCapacity of Voria is true. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Voria is true. [steriles can't knock people up]
-The description of Voria is "[VoriaDesc]".	[In Section 3 - Scenes]
+The description of Voria is "[VoriaDesc]". [In Section 3 - Scenes]
 The conversation of Voria is { "Plant noises" }.
 The scent of Voria is "     Voria has a distinct floral scent mixed with the smell of sex.".
 
@@ -69,9 +69,10 @@ Object	Name
 Plant Takeover	"Plant Takeover"
 
 Plant Takeover is a situation.
+ResolveFunction of Plant Takeover is "[ResolveEvent Plant Takeover]".
 The sarea of Plant Takeover is "Outside".
 
-Instead of resolving Plant Takeover:
+to say ResolveEvent Plant Takeover:
 	say "     Roving the streets of the infected city, you come across an odd-looking store that makes you pause. While the place is a seemingly ordinary garden store, the reason the place caught your eye is because its storefront window is completely covered by vines, leaves, and other vegetation from the inside. Curious, you decide to investigate the building. Finding the door unobstructed, you walk into the store's interior, cautious for any signs of danger. What you find is an utter mess. Just like the storefront window, all sorts of plants have grown to larger than normal sizes, filling more than half the store with green leaves and a veritable bouquet of flowers larger than your head. It doesn't take long for you to deduce what caused all of this unnatural growth. The scent of sex permeates the air, and behind patches of green, you see dried cum stains spalltered all over the place. It seems that several horny people had decided to have a very messy romp here, and although it seems like it has been a long time since then, they certainly left their mark behind. Their nanite-infused liquid lust has infected the plants, causing them to rapidly grow out of control.";
 	say "     Fortunately, the oversized vegetation don't seem to move or pose any sort of danger, so you go ahead with a search of the area for anything useful while minding any leftover cum that might still be lingering around. While you don't find anything you can use amidst the foliage, there is an open doorway in the back which you go through, leading you to a small outdoor garden. Unfortunately, it seems like this place was not spared the previous occupants' sexy escapades. While not as bad as inside, the plants here have also grown to abnormal sizes, making it difficult to properly search this section. Wading through the greenery, you find that the far corner of the garden seems to have been spared from the orgy. In the safe space, you find a bucket half-filled with water, but judging by the murky liquid, it's very likely that the water is tainted. Still, you decide to take it, just in case, and you manage to fill two bottles with the contaminated water.";
 	say "     Next to the bucket are several potted plants on a stand with a sign indicating that they are of the carnivorous variety. All but one of the displayed plants have wilted, the lone survivor being a sort of venus fly trap with a dark-blue round, bulbous head and two leaves growing on either side of its stem. With it only being the size of the average human's hand, you feel sorry for the small plant, and you debate if you want to take it back to the abbey garden. On the other hand, you remind yourself that just because the plant looks normal doesn't mean that it's not uninfected.";
@@ -84,12 +85,12 @@ Instead of resolving Plant Takeover:
 		say "     Carefully, you reach toward the surviving venus fly trap, taking one last precaution just in case the plant does turn out to be dangerous, but the plant does not budge at all when you pick up the pot holding it. Satisfied with your haul of two bottles of water, albeit dirty ones, and a new green buddy, you exit the garden store and head straight for the abbey. Fortunately, the store is actually located relatively close to your base, and you make it back home without any trouble. Going into the abbey's garden, you transfer the venus fly trap from its pot and into a nice patch of dirt along the wall. With all the work you have done for this little plant, you figure you might as well name the newest addition to the abbey. It takes a bit for you to come up with something suitable, but you eventually recall a period where you browsed some books in the library out of boredom and learned about a genus of flies named 'Voria', which seems like a fitting name for a fly-eating plant. With Voria settled in its new home, you move on to taking care of other matters while also making a note to check on the plant later.";
 		move Player to Grey Abbey Garden;
 		move Voria to Grey Abbey Garden;
-		now hp of Voria is 1;
+		now HP of Voria is 1;
 		now resolution of Plant Takeover is 1;  [Player took Voria back to Abbey]
 	else:
 		LineBreak;
 		say "     Given the state of the store, taking home strange, unknown plants doesn't seem like a good idea. You leave the carnivorous be and exit the store with two more bottles of water, albeit dirty ones, in your pack.";
-		now hp of Voria is 99;
+		now HP of Voria is 99;
 		now resolution of Plant Takeover is 99;	[Player left Voria at garden store]
 	now Plant Takeover is resolved;
 	ItemGain dirty water by 2;

@@ -1628,7 +1628,7 @@
 |Stripes|Assorted Events|peachtreefight|value|
 |Stripes|Assorted Events|foodvendor|value|
 |Nuku Valente|Food And Water Finding|20140908213124/2241:Mon 8 September 2014 21:31|indexing|
-|Nuku Valente|Food And Water Finding|potential resources|scavevent|
+|Nuku Valente|Food And Water Finding|Potential Resources|scavevent|
 |Stripes|Scavevents|20140908213124/9026:Mon 8 September 2014 21:31|indexing|
 |Stripes|Scavevents|Tight Fit|scavevent|
 |Stripes|Scavevents|Protected Supplies|scavevent|

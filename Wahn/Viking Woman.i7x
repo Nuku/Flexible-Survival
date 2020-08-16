@@ -838,7 +838,7 @@ When Play begins:
 	now lootchance entry is 40;            [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;                  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "Nordic"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "human";             [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -960,10 +960,12 @@ Table of GameEventIDs (continued)
 Object	Name
 Chieftain's Challenge	"Chieftain's Challenge"
 
-Chieftain's Challenge is a situation. The level of Chieftain's Challenge is 1. Chieftain's Challenge is inactive.
+Chieftain's Challenge is a situation.
+ResolveFunction of Chieftain's Challenge is "[ResolveEvent Chieftain's Challenge]".
+The level of Chieftain's Challenge is 1. Chieftain's Challenge is inactive.
 The sarea of Chieftain's Challenge is "Beach".
 
-Instead of resolving a Chieftain's Challenge:
+to say ResolveEvent Chieftain's Challenge:
 	if the player is not facially human or the player is not bodily human or the player is not skintone human: [they see the player as a monster]
 		say "     Arriving at the rocky part of the beach, you find an armored gray-bearded Viking waiting for you there. The old man glowers at you as you come closer, then calls in a disparaging tone 'So you actually showed up, outlander monster. I'd have expected you to run like a coward.' Turning from you to climb on the largest of the rocks, he waves to the viking ship out in the ocean, signaling them. You see smaller boats getting lowered into the water, Vikings getting in them and rowing towards the shore. 'It won't be long until the clan is here to witness your death. Chief Frithjof will gut you for what you did to Sonya,' the old man says as he climbs back down and leans against the rocks to watch the ship and boats.";
 		WaitLineBreak;

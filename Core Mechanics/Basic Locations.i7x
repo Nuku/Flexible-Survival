@@ -6,9 +6,13 @@ Object	Name
 NPC Nexus	"NPC Nexus"
 NPC Nexus	"nothing"
 NPC Nexus	"nowhere"
+SituationNexus	"SituationNexus"
 
 NPC Nexus is a room.
 The description of NPC Nexus is "This is the extradimensional storage room for unused NPCs. If you somehow ended up here during an import, please include your 'FSCharacterSave.glkdata' file in a bug report on the FS Discord. Also - DON'T PANIC - Trixie will be along in the next turn to pick you up for a trip back into the bunker".
+
+SituationNexus is a room.
+The description of SituationNexus is "This is the extradimensional storage room for unused Situations. DON'T PANIC - Trixie will be along in the next turn to pick you up for a trip back into the bunker".
 
 
 Table of GameRoomIDs (continued)
@@ -105,10 +109,10 @@ Carry out UnclutterStoreroom:
 
 [
 now Memento Collection is in Maintenance Storeroom;
-
+]
 Memento Collection is a container. Memento Collection is transparent. Memento Collection is not openable. Memento Collection is not lockable. Memento Collection is not enterable.
 The description of Memento Collection is "     You've made room to stash mementos of your time in the city in the shelves here.".
-]
+
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -521,7 +525,7 @@ Green Lobby is a room. Green Lobby is inside from Green Apartment Building.
 The description of Green Lobby is "[GreenLobbyDesc]";
 
 to say GreenLobbyDesc:
-	say "     Just inside the building is a small lobby, with numerous post-boxes on one wall and a (surprisingly) still powered elevator. It opens up freely as you push the dimly glowing button, revealing a generous cabin, complete with a control panel that only has one button, for the lobby. Everything else is keyholes, four to each floor. Someone sure liked their privacy. Checking the interior stairway access door right next to it, you find it jammed; a glance through its little window reveals that about twenty feet of the stairway are completely barricaded by mixed pieces of furniture. Four doorways lead off into what must be the ground floor apartments - 1A, 1B, 1C and 1D. [if hp of Otto < 4]The first two and the last all have been nailed shut and the words 'Carnivorous Furniture' spray-painted on them[else]1A and 1D have been nailed shut and the words 'Closed for Repair' carefully stencilled onto signs hanging from their doorknobs[end if], while the door of apartment 1C is just leaned to[if hp of Otto > 3]. The door marked as 1B looks newly cleaned and you remember that this is where Doctor Fuchs has moved into[end if].";
+	say "     Just inside the building is a small lobby, with numerous post-boxes on one wall and a (surprisingly) still powered elevator. It opens up freely as you push the dimly glowing button, revealing a generous cabin, complete with a control panel that only has one button, for the lobby. Everything else is keyholes, four to each floor. Someone sure liked their privacy. Checking the interior stairway access door right next to it, you find it jammed; a glance through its little window reveals that about twenty feet of the stairway are completely barricaded by mixed pieces of furniture. Four doorways lead off into what must be the ground floor apartments - 1A, 1B, 1C and 1D. [if HP of Otto < 4]The first two and the last all have been nailed shut and the words 'Carnivorous Furniture' spray-painted on them[else]1A and 1D have been nailed shut and the words 'Closed for Repair' carefully stencilled onto signs hanging from their doorknobs[end if], while the door of apartment 1C is just leaned to[if HP of Otto > 3]. The door marked as 1B looks newly cleaned and you remember that this is where Doctor Fuchs has moved into[end if].";
 
 Table of GameRoomIDs (continued)
 Object	Name

@@ -46,7 +46,8 @@ Table of GameEventIDs (continued)
 Object	Name
 Sky Tower	"Sky Tower"
 
-Sky Tower is a situation. The level of Sky Tower is 2.
+Sky Tower is a situation.
+ResolveFunction of Sky Tower is "[ResolveEvent Sky Tower]". The level of Sky Tower is 2.
 Sky Tower is inactive.
 The sarea of Sky Tower is "High".
 
@@ -54,7 +55,7 @@ when play begins:
 	add Sky Tower to BadSpots of MaleList;
 	add Sky Tower to BadSpots of FurryList;
 
-Instead of resolving Sky Tower:
+to say ResolveEvent Sky Tower:
 	if AmuranAwoken > 4:
 		say "     While exploring the High Rise District something catches your sight in the corner of your eyes. It moves past your vision and into a building nearby. Out of interest you make your way towards where you saw it, coming face to face with what you believe to be the largest skyscraper in the city. Shrugging your shoulders you pull open the door and head on in. The inside is rather normal, as it appears to be your average office building, though completely abandoned. Looking around a bit more you notice that it used to be an office space for bank companies, though not much of one as there was a notice on the door saying the connection to the power grid was cut.";
 		say "     You don't have much time to continue searching because soon enough to your shock, lights on the floor brighten up, creating a path for you. Slightly weirded out by it due to the notice on the door, you nevertheless follow it, wondering where it's taking you to. It actually doesn't take long for you to arrive where it wants you to go, as it actually leads you to an elevator of all things. Glancing at it wearily you watch as the doors open up as if beckoning you on inward. With trepidation on your mind you take the steps forward required to enter the boxed lift, it closing behind you as you get in.";
@@ -477,6 +478,7 @@ Object	Name
 Pediatrics Troublemakers	"Pediatrics Troublemakers"
 
 Pediatrics Troublemakers is a situation.
+ResolveFunction of Pediatrics Troublemakers is "[ResolveEvent Pediatrics Troublemakers]".
 Pediatrics Troublemakers is resolved.
 The sarea of Pediatrics Troublemakers is "High"
 
@@ -485,7 +487,7 @@ when play begins:
 	add Pediatrics Troublemakers to BadSpots of FemaleList;
 	add Pediatrics Troublemakers to BadSpots of FurryList;
 
-instead of resolving Pediatrics Troublemakers:
+to say ResolveEvent Pediatrics Troublemakers:
 	if HP of Horus is 6:
 		if TroublemakerLost is true:
 			say "     Having made your way back to where you found the trio before, you look at the dark alleyway with your eyes narrowed and scoff at it. Quickly you head on in, hoping you can get it over with this time. Just like before you find the trio further in, messing around with some of the stray objects sitting around. When they see you they laugh and chuckle, asking if you're here to get 'owned' by them. You shake your head and say they're gonna be the ones defeated before you charge at one of the leopardmen, intent on beating them all.";
@@ -570,10 +572,11 @@ Object	Name
 Patient Zero	"Patient Zero"
 
 Patient Zero is a situation.
+ResolveFunction of Patient Zero is "[ResolveEvent Patient Zero]".
 Patient Zero is resolved.
 The sarea of Patient Zero is "high"
 
-instead of resolving Patient Zero:
+to say ResolveEvent Patient Zero:
 	if HP of Horus is 8:
 		say "     Wandering the streets of the High Rise District you look at the tall buildings, searching for the offices that Medea told you about. Thankfully though you soon enough spot the one you were looking for and pull open the door. You find yourself in a lobby area, which looks typical for a multi-office building like this. Bypassing the desk you look at the directory to search for the suite number that you were given and quickly find it. Noticing a sign by the list of offices you curse when you see it as it tells you the elevator is broken. So even if the power was on somehow, you'll have to use the stairs. So with a groan you make your way to the staircase.";
 		say "     It takes you a while to get up the stairs, due to the large amount of floors you have traverse. Soon enough you reach the required level and open up the door. When you enter the hallway, you're met with a white walled and floored area. Making your way down the tiled passage you look at the various doors, searching for one labeled Jeremiah. Thankfully it doesn't take you long to find it, approaching the entrance. Turning the doorknob you enter the researcher's lab. At first you weren't expecting much but as soon as you get in, those thoughts were wiped away with what sights met you immediately after.";
@@ -598,14 +601,15 @@ Table of GameEventIDs (continued)
 Object	Name
 Nightmare Mutation	"Nightmare Mutation"
 
-Nightmare Mutation is a situation. The level of Nightmare Mutation is 10.
+Nightmare Mutation is a situation.
+ResolveFunction of Nightmare Mutation is "[ResolveEvent Nightmare Mutation]". The level of Nightmare Mutation is 10.
 Nightmare Mutation is inactive.
 The sarea of Nightmare Mutation is "Capitol".
 
 when play begins:
 	add Nightmare Mutation to BadSpots of BodyHorrorList;
 
-Instead of resolving Nightmare Mutation:
+to say ResolveEvent Nightmare Mutation:
 	if HP of Horus is 2:
 		now inasituation is true;
 		say "     Having been a good twenty minutes wandering around the capitol district you wonder if you're ever going to actually run into or find any information about this darkness. Letting out a sigh and kicking a rock that's in your path you continuing to walk around. However, when the piece of stone that you let launch ends up slamming against a knocked down street sign, letting a loud clang ring out. 'Help! Is someone out there!' A scream is uttered seconds later from around the corner of a building. The voice is terrifyingly desperate sounding, exactly as if the person shouting it is fighting for their life rather their body. But... that can't be? The nanites prevent most forms of death other than instantaneous.";
@@ -633,14 +637,15 @@ Table of GameEventIDs (continued)
 Object	Name
 Nightmare Showdown	"Nightmare Showdown"
 
-Nightmare Showdown is a situation. The level of Nightmare Showdown is 15.
+Nightmare Showdown is a situation.
+ResolveFunction of Nightmare Showdown is "[ResolveEvent Nightmare Showdown]". The level of Nightmare Showdown is 15.
 Nightmare Showdown is inactive.
 The sarea of Nightmare Showdown is "capitol".
 
 when play begins:
 	add Nightmare Showdown to BadSpots of BodyHorrorList;
 
-Instead of resolving Nightmare Showdown:
+to say ResolveEvent Nightmare Showdown:
 	if HP of Horus is 11:
 		now inasituation is true;
 		say "     Returning to where you found the creature before, you wonder if it moved elsewhere as you don't spot it. However, that thought doesn't remain for much longer as you see something large out of the corner of your eyes. Turning around quickly you see the rapidly shifting being once more, making its way towards you. The cure is on your person but you don't think you could inject it without getting touched with the intent to be eaten by it. So you more than likely have to fight it and get it weakened to do anything. So, with a deep breath you sink down into a fighting stance and get ready to lunge at it.";
@@ -758,7 +763,7 @@ When Play begins:
 	now lootchance entry is 0;          [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]blobby[at random]";
 	now type entry is "amorphous-blob";
@@ -939,7 +944,7 @@ When Play begins:
 	now lootchance entry is 0;          [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]blobby[at random]";
 	now type entry is "amorphous-mass";
@@ -1116,7 +1121,7 @@ When Play begins:
 	now lootchance entry is 0;          [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]humanoid[at random]";
 	now type entry is "gnome";

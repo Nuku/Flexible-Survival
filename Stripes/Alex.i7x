@@ -88,11 +88,12 @@ Object	Name
 Meet Alex	"Meet Alex"
 
 Meet Alex is a situation.
+ResolveFunction of Meet Alex is "[ResolveEvent Meet Alex]".
 The sarea of meet alex is "High".
 AlexProgress is a number that varies.
 AlexTalk is a number that varies.
 
-Instead of resolving Meet Alex:
+to say ResolveEvent Meet Alex:
 	say "((Quest arc written by Khabi - update & post-quest by Stripes))[line break]";
 	say "     As you explore the High Rise district, you hear a voice calling out to you. Spinning quickly, you see a man walking toward you, who is holding his hands up - he is wearing a business suit, and he is unarmed. Once you lower your hackles from being so surprised - this city has taught you to stay on your toes - he approaches you.";
 	say "     'Good [short time of day], [if Breast Size of Player > 0]Ma'am[else]Sir[end if]. My name is Alex... well, I don't suppose last names are important anymore, are they?'";
@@ -118,6 +119,7 @@ Object	Name
 Find Lorenda	"Find Lorenda"
 
 Find Lorenda is a situation.
+ResolveFunction of Find Lorenda is "[ResolveEvent Find Lorenda]".
 The sarea of Find Lorenda is "Red".
 Find Lorenda is inactive.
 Lisacheat is a number that varies.
@@ -127,7 +129,7 @@ Instead of conversing the Lisa while AlexProgress is 1 and lisacheat is 0:
 	now lisacheat is 1;
 
 
-Instead of resolving Find Lorenda:
+to say ResolveEvent Find Lorenda:
 	let found be 0;
 	if lisacheat is 1:
 		let bonus be (( perception of Player minus 10 ) divided by 2 ) + 5;

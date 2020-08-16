@@ -195,7 +195,7 @@ When Play begins:
 	now lootchance entry is 35;
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;
 	now body descriptor entry is "[one of]beastly[or]strange[or]frightening[or]mutated[at random]";
 	now type entry is "mutant";
@@ -352,7 +352,7 @@ name	desc	weight	object
 
 foul scuttler spit is a grab object.
 It is temporary.
-it is part of the player.
+
 the usedesc of foul scuttler spit is "[FoulScuttlerUse]".
 
 to say FoulScuttlerUse:

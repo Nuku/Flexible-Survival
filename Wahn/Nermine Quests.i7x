@@ -11,8 +11,9 @@ Object	Name
 Strange Shop	"Strange Shop"
 
 Strange Shop is a situation.
+ResolveFunction of Strange Shop is "[ResolveEvent Strange Shop]".
 
-Instead of resolving a Strange Shop:
+to say ResolveEvent Strange Shop:
 	say "     Traveling through the deserted streets of the city, you stumble into a small gathering of ebonflame dragators that appear to be squabbling over which of them gets what looks like a recently captured human. Unfortunately they notice you almost immediately and a cry goes up as a number of them turn your way. Apparently your appearance has helped simplify the argument as they are eager to get another person to breed, and around eight or so of the dangerous fiery beasts immediately head your way. Staring at the large number of creatures arrayed against you, you do the only sensible thing in this situation and run. There really isn't anything you can do for their current captive, even if you tried...";
 	say "     The beasts are hot on your heels as you dart through alleyways and down the mostly deserted streets of the city. You just can't seem to shake your pursuers however, and as you run from them in a reckless sprint, you find that the chase is attracting a good deal of additional from other infected in the city. Glancing back, you are shocked to see that there are now a group of gryphons squabbling with a wyvern above, the only reason one of them hasn't swooped down yet being their disagreement of who gets to do it. Then a pair of harpies joins the throng, further heating up the shouting and screeching match. Man, you really built a train of predators eager to snatch you! And worse yet, the dragators are gaining ground on you too!";
 	WaitLineBreak;
@@ -40,14 +41,15 @@ Table of GameEventIDs (continued)
 Object	Name
 Bacchus Wine	"Bacchus Wine"
 
-Bacchus Wine is a situation. The level of Bacchus Wine is 4.
+Bacchus Wine is a situation.
+ResolveFunction of Bacchus Wine is "[ResolveEvent Bacchus Wine]". The level of Bacchus Wine is 4.
 The Sarea of Bacchus Wine is "Museum".
 WineFound is a number that varies.
 
 when play begins:
 	add Bacchus Wine to BadSpots of MaleList;
 
-Instead of resolving a Bacchus Wine:
+to say ResolveEvent Bacchus Wine:
 	if WineFound is 0 or WineFound is 2: [regular scene or repeat after quest]
 		if WineFound is 2:
 			say "     Wandering through the museum halls, you return once more to the casks full of rich dark satyr wine, you realize that while you don't need any more wine for Nermine, you could still take a drink or two yourself...";
@@ -89,10 +91,11 @@ Object	Name
 Stolen Jewelry	"Stolen Jewelry"
 
 Stolen Jewelry is a situation.
+ResolveFunction of Stolen Jewelry is "[ResolveEvent Stolen Jewelry]".
 The Sarea of Stolen Jewelry is "Museum".
 HyenaTrailing is a number that varies.
 
-Instead of resolving a Stolen Jewelry:
+to say ResolveEvent Stolen Jewelry:
 	if RareQuesting is 8:
 		say "     Traveling through the dimly lit hallways of the museum, you eventually find the room you are looking for in the Egyptian section and wander inside hopefully. Sadly it doesn't take more than a short look for you to determine that just as Nermine feared, the items you are looking for have already been stolen. Sighing at how much more complicated this is going to be you carefully begin searching the room for any sign of who the thief might be, or where they have taken it.";
 		let bonus be (( the perception of the player minus 10 ) divided by 2);
@@ -119,13 +122,14 @@ Table of GameEventIDs (continued)
 Object	Name
 Alternative Entry	"Alternative Entry"
 
-Alternative Entry is a situation. The level of Alternative Entry is 8.
+Alternative Entry is a situation.
+ResolveFunction of Alternative Entry is "[ResolveEvent Alternative Entry]". The level of Alternative Entry is 8.
 The Sarea of Alternative Entry is "Museum".
 when play begins:
 	add Alternative Entry to BadSpots of MaleList;
 	add Alternative Entry to BadSpots of FurryList;
 
-Instead of resolving a Alternative Entry:
+to say ResolveEvent Alternative Entry:
 	if HyenaTrailing is 2:
 		say "     After returning to the Egyptian exhibit you proceed to attempt to backtrack the hyena thieves trail through the dim hallways of the museum, relying on your keen powers of observation to help (and perhaps a little luck as well).";
 		let bonus be (( the perception of the player minus 10 ) divided by 2);
@@ -168,12 +172,13 @@ Table of GameEventIDs (continued)
 Object	Name
 Hyena Challenge	"Hyena Challenge"
 
-Hyena Challenge is a situation. The level of Hyena Challenge is 12.
+Hyena Challenge is a situation.
+ResolveFunction of Hyena Challenge is "[ResolveEvent Hyena Challenge]". The level of Hyena Challenge is 12.
 when play begins:
 	add Hyena Challenge to badspots of HermList;
 	add Hyena Challenge to BadSpots of FurryList;
 
-Instead of resolving a Hyena Challenge:
+to say ResolveEvent Hyena Challenge:
 	if HyenaTrailing is 4:
 		if matriarchdefeated > 0 and matriarchowned is 0: [player is the omega hyena]
 			say "     Moving through the city with purpose, you quickly head to the hyena gang hideout you know so well from your earlier failed attempts to challenge the matriarch. Approaching the building, you find several of the gang members talking about their most recent score from the museum. Realizing they must know what happened to the items Nermine wanted, you try to steel your courage as you go over to demand the more dominant hyenas tell you what they know. Recognizing you as their matriarch's submissive little pet hyena, the other gang members break into laughter at your meek attempt to challenge them.";
@@ -255,10 +260,11 @@ Object	Name
 Anubis Statue	"Anubis Statue"
 
 Anubis Statue is a situation.
+ResolveFunction of Anubis Statue is "[ResolveEvent Anubis Statue]".
 The Sarea of Anubis Statue is "Museum".
 statuequest is a number that varies.
 
-Instead of resolving a Anubis Statue:
+to say ResolveEvent Anubis Statue:
 	if statuequest is 0:
 		say "     Wandering through the twisting (and possibly shifting) corridors of the museum, you find yourself face to face with a large statue of a jackal-man. The statue seems to be made out of some strange black stone and you almost get the feeling that it is looking straight at you. A helpful museum info-plaque tells you that this depicts the god Anubis, who was worshiped in ancient Egypt...";
 	else if statuequest is 1:
@@ -289,14 +295,15 @@ Table of GameEventIDs (continued)
 Object	Name
 Bestial Pheromones	"Bestial Pheromones"
 
-Bestial Pheromones is a situation. The level of Bestial Pheromones is 4.
+Bestial Pheromones is a situation.
+ResolveFunction of Bestial Pheromones is "[ResolveEvent Bestial Pheromones]". The level of Bestial Pheromones is 4.
 The Sarea of Bestial Pheromones is "Zoo".
 anubisrequest is a number that varies.
 when play begins:
 	add Bestial Pheromones to BadSpots of FemaleList;
 	add Bestial Pheromones to BadSpots of FurryList;
 
-Instead of resolving a Bestial Pheromones:
+to say ResolveEvent Bestial Pheromones:
 	if anubisrequest is 0:
 		say "     Traveling through the zoo, you come across one of the medical labs used for treatment of the animals, and decide to look inside. Looking around you realize this is actually one of the labs where they store and keep track of sperm and pheromones collected from the animals in several large coolers. While the coolers still seem to be functioning, probably due to some sort of emergency power supply, many of the vials are strewn across the area and smashed open, showing clearly you aren't the first person to search the area. The broken vials exude a scent that makes your head swim in arousal, and as you look around the room, and you realize that some of the fluids in here is almost certainly from the recent visitors rubbing one out or fucking right in the midst of all this chaos. Looking around quickly in case the arousing smells have attracted anything to the area, you quickly retreat before you run the danger of succumbing to the powerful scents and do something you shouldn't.";
 	else if anubisrequest is 1:
@@ -329,15 +336,17 @@ Instead of resolving a Bestial Pheromones:
 
 Table of GameEventIDs (continued)
 Object	Name
-Twisted fruit grove	"Twisted fruit grove"
+Twisted Fruit Grove	"Twisted fruit grove"
+Twisted Fruit Grove	"Twisted Fruit Grove"
 
-Twisted fruit grove is a situation. The level of twisted fruit grove is 4.
-The Sarea of Twisted fruit grove is "Park".
+Twisted Fruit Grove is a situation.
+ResolveFunction of Twisted Fruit Grove is "[ResolveEvent Twisted Fruit Grove]". The level of twisted fruit grove is 4.
+The Sarea of Twisted Fruit Grove is "Park".
 FelinoidRescued is a number that varies.
 when play begins:
-	add Twisted fruit grove to badspots of HermList;
+	add Twisted Fruit Grove to badspots of HermList;
 
-Instead of resolving a Twisted fruit grove:
+to say ResolveEvent Twisted Fruit Grove:
 	if FelinoidRescued is 1: [player lost the fight to save the Felinoid]
 		say "     Traveling through the twists and turns of the park, you notice the scenery seems to slowly be twisting and changing, again becoming even more vine-covered and lewd with every step you take. Remembering the last time you were here, you grip your weapon tightly as you hurry quickly down the path, eager to get this over with. The landscape seems to grow increasingly disturbing as you travel, until eventually you are back at the thin curtain of vines from before, the strange twisted glade mostly quiet now, save for a large mass of vines near the area where the felinoid who saved you before was dragged off. You can still see some movement as the beast struggles within his viney prison, and hope you aren't too late to help return the favor. Stepping forward you realize as the glade explodes into motion again that without a distraction in the form of a large cat, this is going to be a much harder fight indeed...";
 		let PlantFightCounter be 0;
@@ -623,7 +632,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "strange ankh"	"A small golden ankh with an image of a jackal-headed beastman set into the base. It feels oddly warm in your hands."	5	strange ankh
 
-strange ankh is a grab object. It is part of the player. Understand "ankh" and "strange" as strange ankh.
+strange ankh is a grab object. Understand "ankh" and "strange" as strange ankh.
 
 The usedesc of strange ankh is "[jackalankhmagic].";
 

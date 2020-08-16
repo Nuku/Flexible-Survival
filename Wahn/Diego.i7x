@@ -192,9 +192,9 @@ to say DiegoTalkMenu:
 					say "[DiegoTalk4]";
 				if (nam is "Trick Diego into drinking orc cum"):
 					say "[DiegoTalk5]";
-				if (nam is "Taking part in Diego secret plans after all"):
+				if (nam is "Taking part in Diego's secret plans after all"):
 					say "[DiegoCollarQuest1]";
-				if (nam is "Cancelling your involvement in Diego special plan"):
+				if (nam is "Cancelling your involvement in Diego's special plan"):
 					say "[DiegoCollarQuestRefuse]";
 				wait for any key;
 		else if calcnumber is 0:
@@ -884,10 +884,11 @@ Object	Name
 Hunting down Hunter	"Hunting down Hunter"
 
 Hunting down Hunter is a situation.
+ResolveFunction of Hunting down Hunter is "[ResolveEvent Hunting down Hunter]".
 Hunting down Hunter is inactive. [turned on by taking Diego's quest]
 The sarea of Hunting down Hunter is "Outside".
 
-Instead of resolving a Hunting down Hunter:
+to say ResolveEvent Hunting down Hunter:
 	say "     Following Diego's waypoints through the city, you skip around several dens of dangerous creatures and eventually arrive in a high-class neighborhood that holds the homes of the rich and famous. Of course, that doesn't mean the people here were immune to the nanite apocalypse either, as demonstrated by Diego's warning that a whole roost of horny hawkmen is occupying one place down the road from where you're going. Good thing you knew the right direction to approach from. Coming to the right address, you see a tall brick wall enclosing its grounds, the only opening in it held shut by a sturdy wrought-iron gate. A chain holds both wings of the gate shut, connected on the inside by a shiny new padlock. Besides this, numerous empty cans have been tied to the gate, so that if someone wanted to climb the decorative metalwork, they'd make a whole lot of noise. Past the gate, you see a long driveway winding its way through a sprawling green lawn and leading up to a white-painted villa.";
 	say "     Recognizing that the front door isn't any place you'd care to try, you're thankful that Diego accounted for this too. Following the wall to the left, you duck around its corner and walk into the brush filling a narrow section of no man's land between this property and the next one over. And right where Diego described is the final help from your coyote buddy: a ladder, hidden from sight by a covering of branches. With it, you have a fairly easy time to climb on top of the wall, then pull the ladder up and set it on the other side to get safely down into the villa's garden. Quietly walking towards the building across its green lawn in the [if daytimer is day]bright sunlight[else]dim light of the moon[end if], you soon reach the decorative bushes planted along its walls. Beyond those, a large window is open all the way, most likely to allow some of the seaside breeze in, now that the power is out and aircon isn't a thing anymore.";
 	WaitLineBreak;

@@ -11,6 +11,7 @@ Object	Name
 Lusty Skunk	"Lusty Skunk"
 
 Lusty Skunk is a situation.
+ResolveFunction of Lusty Skunk is "[ResolveEvent Lusty Skunk]".
 The sarea of Lusty Skunk is "Forest".
 
 skrp is a number that varies. skrp is usually -1.
@@ -19,9 +20,6 @@ skunkmulticock is a number that varies. skunkmulticock is usually 0.
 skunkfucked is a number that varies. skunkfucked is usually 0.
 skunksister is a number that varies. skunksister is usually 0.
 skunkspot is a number that varies. skunkspot is usually 0.
-
-
-After resolving a Lusty Skunk, try looking;
 
 Skunkform is an action applying to nothing.
 
@@ -49,7 +47,7 @@ To Skunkform: [TODO: This looks kinda incomplete. Maybe revisit the whole thing?
 		now SleepRhythm of Player is 0;
 
 
-Instead of Resolving a Lusty Skunk:
+to say ResolveEvent Lusty Skunk:
 	if skrp is -1:
 		say "You notice a crudely drawn sign, posted in the grass. 'Beware Double Skunks. If you cherish your privacy, turn away now.'";
 		say "Do you want to proceed?";

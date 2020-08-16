@@ -70,10 +70,11 @@ Object	Name
 China Shop	"China Shop"
 
 China Shop is a situation.
+ResolveFunction of China Shop is "[ResolveEvent China Shop]".
 The level of China Shop is 5.
 The sarea of China Shop is "Outside".
 
-instead of resolving a China Shop: [Meeting Aster]
+to say ResolveEvent China Shop: [Meeting Aster]
 	say "     As you wander through the city, you notice a store display teeming with fancy tablewares. Shockingly, they seem to be almost completely intact, with only a few damaged or destroyed. Before you have a chance to investigate further, however, you notice there is a very large figure moving around inside the shop. Do you want to investigate the shop?";
 	LineBreak;
 	if Player consents:
@@ -89,11 +90,12 @@ Object	Name
 Trial of Courage	"Trial of Courage"
 
 Trial of Courage is a situation.
+ResolveFunction of Trial of Courage is "[ResolveEvent Trial of Courage]".
 The level of Trial of Courage is 5.
 The sarea of Trial of Courage is "Park".
 Trial of Courage is inactive.
 
-instead of resolving a Trial of Courage: [Finding the amulet in the park]
+to say ResolveEvent Trial of Courage: [Finding the amulet in the park]
 	say "     While navigating through the park, you come upon what seems to be a large amphitheater. It looks distinctly Greek, composed of stone in intricate designs, though the details of the works seem to be faded and worn with age. Everything about the structure paints it as something far older than should be in this park. Despite the strangeness of the world, this still stands out as particularly interesting, and the sight of it reminds you of what Aster asked you to look for. After all, there are very few places that look more like they hold forgotten treasures of ancient heroes than this.";
 	say "[bold type]Do you want to investigate?[roman type][line break]";
 	LineBreak;

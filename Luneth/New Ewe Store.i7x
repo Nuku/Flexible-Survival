@@ -23,15 +23,14 @@ Object	Name
 New Ewe Store	"New Ewe Store"
 
 New Ewe Store is a situation.
+ResolveFunction of New Ewe Store is "[ResolveEvent New Ewe Store]".
 The sarea of New Ewe Store is "Outside".
 when play begins:
 	add New Ewe Store to BadSpots of FurryList;
 
 NESProgress is a number that varies.
 
-After resolving a New Ewe Store, try looking;
-
-Instead of Resolving a New Ewe Store:
+to say ResolveEvent New Ewe Store:
 	if NESProgress is 0:
 		say "     You come across a small, locally owned grocery store, and to your surprise notice that the lights inside it are still on. There could be something of value left inside, you think to yourself as you approach, only to be halted by a voice from within telling you to stay away, and a strongly barred door. Murmuring audible after that tells you that there are several people in there.";
 		say "     [bold type]Do you try to convince them to let you in?[roman type][line break]";
@@ -98,10 +97,11 @@ Object	Name
 Little Lost Lamb	"Little Lost Lamb"
 
 Little Lost Lamb is a situation.
+ResolveFunction of Little Lost Lamb is "[ResolveEvent Little Lost Lamb]".
 Little Lost Lamb is inactive.
 The sarea of Little Lost Lamb is "Mall".
 
-Instead of resolving Little Lost Lamb:
+to say ResolveEvent Little Lost Lamb:
 	If NESProgress is 2:
 		say "     After searching through the sewers for an hour, you find an opening into the subway tunnels, remembering the person left trapped down there you attempt to find your way through the tunnels to their location.";
 		let bonus be (( the Perception of the player minus 10 ) divided by 2);

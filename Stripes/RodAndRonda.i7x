@@ -247,7 +247,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "lizard juice"	"A small vial of the creamy, white cum from one of those lizard girls."	1	lizard juice
 
-lizard juice is a grab object. It is part of the player. It is not temporary.
+lizard juice is a grab object. It is not temporary.
 
 instead of using lizard juice:
 	say "You need to save that to help Ronda.";
@@ -261,14 +261,15 @@ Table of GameEventIDs (continued)
 Object	Name
 Art Collector	"Art Collector"
 
-Art Collector is a situation. The level of Art Collector is 9.
+Art Collector is a situation.
+ResolveFunction of Art Collector is "[ResolveEvent Art Collector]". The level of Art Collector is 9.
 Art Collector is inactive.
 The sarea of Art Collector is "High".
 
 artleopardfight is a number that varies.
 artattempt is a number that varies.
 
-Instead of resolving a Art Collector:
+to say ResolveEvent Art Collector:
 	if artattempt is 0:
 		say "     Managing to follow Nermine's directions through the available paths through the chaotic city, you manage to circumvent other creatures and obstacles to make it to the address she's provided you. Looking up at the high rise building, your legs ache at the thought of scaling its stairs to reach the penthouse, but there is no other option. You move quietly inside and carefully make your way to the stairwell to begin your ascent. It is long and tiring, but you press on, not wanting to risk being found in such a confined space with the countless creatures which probably inhabit this building. You can see several wet splotches on the stairs, many quite fresh.";
 		say "     After an ascent which leaves you hungry, thirsty and aching, you make it to the access to the penthouse suite. Opening the door, you step into the antechamber connecting to the inoperative elevator and the large doors to the suite. Finding them unlocked, you slip quietly into the spacious foyer and living room, looking at the various pieces on display. One of them, a veil and simple staff are held in a glass case. The veil is a simple band of old, grayed cloth and the staff is little more than a wooden walking stick made from a straight branch, neither having anything remarkable about them. As you look over the case, you try to decide how best to get at the contents, but are interrupted by an angry growl behind you. Turning, you find a large leopardman stalking out of the nearby bedroom and spot several sexy leopardesses on the bed waiting for his return after dealing with the would-be thief. This creature was once likely the art collector and has since gathered a harem of horny females to add to his collection.";

@@ -171,6 +171,7 @@ Object	Name
 Monkey Duel	"Monkey Duel"
 
 Monkey Duel is a situation.
+ResolveFunction of Monkey Duel is "".
 Monkey Duel is inactive.
 The sarea of Monkey Duel is "Nowhere".
 
@@ -314,7 +315,7 @@ When Play begins:
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "lithe"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "simian"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]

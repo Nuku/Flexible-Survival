@@ -10,6 +10,7 @@ Object	Name
 Hyper Squirrel Girl	"Hyper Squirrel Girl"
 
 Hyper Squirrel Girl is a situation.
+ResolveFunction of Hyper Squirrel Girl is "[ResolveEvent Hyper Squirrel Girl]".
 hsrp is a number that varies.
 squirrelfucked is a number that varies. squirrelfucked is usually 0.
 nosquirrelanal is a truth state that varies. nosquirrelanal is usually false.
@@ -19,9 +20,7 @@ when play begins:
 	add Hyper Squirrel Girl to BadSpots of FurryList;
 	add Hyper Squirrel Girl to badspots of HermList;
 
-After resolving a Hyper Squirrel Girl, try looking;
-
-Instead of Resolving a Hyper Squirrel Girl:
+to say ResolveEvent Hyper Squirrel Girl:
 	project the figure of Snow_icon;
 	if hsrp is 0:
 		say "     As you wander around, you get the feeling that you're being watched. Catching a few brief glances of red fur, you realize your pursuer is playing with you. Growing tired of this, you sit down, and wait. A few minutes pass, when you hear a giggle to you left. You whip your head around, and there stands a squirrel girl, wearing the tattered remains of a buttoned shirt, buttons long gone. Squirrel herm, you correct yourself, as you notice the large bulge in her pants. Before you can call out to her, she takes off... but you have a feeling she'll be back.";
@@ -429,9 +428,10 @@ Object	Name
 Wild Squirrels	"Wild Squirrels"
 
 Wild Squirrels is a situation.
+ResolveFunction of Wild Squirrels is "[ResolveEvent Wild Squirrels]".
 Wild Squirrels is inactive.
 
-Instead of resolving a Wild Squirrels:
+to say ResolveEvent Wild Squirrels:
 	say "     As you wander, you get the feeling that you are being watched somehow...";
 	let bonus be (( the Perception of the player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
@@ -578,7 +578,7 @@ When Play begins:
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]athletic[or]curvy[or]agile[at random]";
 	now type entry is "[one of]rodent[or]squirrel-like[at random]";

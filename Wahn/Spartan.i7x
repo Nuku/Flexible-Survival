@@ -240,7 +240,7 @@ When Play begins:
 	now lootchance entry is 40;         [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "fit"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "human";          [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -361,13 +361,14 @@ Table of GameEventIDs (continued)
 Object	Name
 History Lecture	"History Lecture"
 
-History Lecture is a situation.			[repeatable event infecting with Spartan/Helot strains - source of it all]
+History Lecture is a situation.
+ResolveFunction of History Lecture is "[ResolveEvent History Lecture]". [repeatable event infecting with Spartan/Helot strains - source of it all]
 The sarea of History Lecture is "Campus".
 
 when play begins:
 	add History Lecture to BadSpots of MaleList;
 
-Instead of resolving a History Lecture:
+to say ResolveEvent History Lecture:
 	HistoryLectureVisit;
 
 instead of going west from Lecture Street:

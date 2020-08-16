@@ -537,7 +537,7 @@ When Play begins:
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]inflatable[or]plasticky[or]light[or]buoyant[at random]";
 	now type entry is "[one of]cetacean[or]dolphin-like[or]inflatable[as decreasingly likely outcomes]";

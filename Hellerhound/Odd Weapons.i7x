@@ -20,9 +20,11 @@ Table of GameEventIDs (continued)
 Object	Name
 Fallen Survivor	"Fallen Survivor"
 
-Fallen Survivor is a scavevent. The sarea of Fallen Survivor is "Allzones".
+Fallen Survivor is a scavevent.
+ResolveFunction of Fallen Survivor is "[ResolveEvent Fallen Survivor]".
+The sarea of Fallen Survivor is "Allzones".
 
-instead of resolving a Fallen Survivor:
+to say ResolveEvent Fallen Survivor:
 	say "     You come across a succumbed survivor slumped on the pavement with their back to a crumbling building. The motionless yet still breathing body fails to react to anything you do to try and snap them back to consciousness. Dragging the man under a nearby piece of intact roof, you place him in a way that he at least won't be quite as exposed or get rained upon. Still, his eyes do not even focus on you as you open them, just staring off into empty space. Your inability to help this person or even get any answers of what happened to him causes you to feel intensely uncomfortable, and just being close to the body seems to sap your drive and go on and struggle to survive. Maybe you should just... lay down with him. All of this is pointless, isn't it? You're never going to get out of - *CRASH, YOWL*[line break]";
 	say "     The sudden metallic noise from behind you makes you jump out of your boots almost, whirling around to see what caused it. You see the tail end of a large house-cat zip around the nearby corner, leaving behind a large disc of metal that must have fallen over as it pushed past it. Upon further examination, you see that it is a garbage can lid - one that has been used to create an improvised shield. There are loops of leather riveted to the inside to slip your forearm through, as well as a painted front. Seems like the survivor had a DIY streak before he succumbed to... whatever got to him. Looking back over to the guy, you realize that you were on the best way to join him in his mind-broken state. Getting into contact seems to have negative side effects. That cat really saved your bacon!";
 	WaitLineBreak;
@@ -50,10 +52,11 @@ Object	Name
 Sword Nest	"Sword Nest"
 
 Sword Nest is a situation.
+ResolveFunction of Sword Nest is "[ResolveEvent Sword Nest]".
 washerenest is a number that varies.
 fellforward is a number that varies.
 
-instead of resolving Sword Nest:
+to say ResolveEvent Sword Nest:
 	say "     You come across the remains of a giant nest [if washerenest is 1]again[end if], probably belonging to gryphons. It is scattered, and sexual fluids of all kinds, not all from gryphons, cover the ground. It looks as if several gangs of different species fought here.. or maybe 'played' as well. The ground is so thoroughly coated with it that you cannot enter without touching it.";
 	now washerenest is 1;
 	if the humanity of Player < 60: [falling to the nanites]
@@ -170,10 +173,11 @@ Object	Name
 Destroyed Bushes	"Destroyed Bushes"
 
 Destroyed Bushes is a situation.
+ResolveFunction of Destroyed Bushes is "[ResolveEvent Destroyed Bushes]".
 the sarea of Destroyed Bushes is "Park".
 numwater is a number that varies.
 
-instead of resolving Destroyed Bushes:
+to say ResolveEvent Destroyed Bushes:
 	say "     You come across a circle of bushes crushed flat against the ground, large pools of cum and juices in the revealed space. Horse hoof prints over the ground as well, and the imprint of a human body in one spot testifies to the fact that someone was overtaken by one of the equines.";
 	if the humanity of Player < 50:
 		say "     Do you want to drink from the puddles?";

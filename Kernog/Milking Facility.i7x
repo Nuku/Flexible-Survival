@@ -60,9 +60,10 @@ Table of GameEventIDs (continued)
 Object	Name
 Milking Facility Keycard	"Milking Facility Keycard"
 
-Milking Facility Keycard is a situation. The sarea of Milking Facility Keycard is "Sealed".
+Milking Facility Keycard is a situation.
+ResolveFunction of Milking Facility Keycard is "[ResolveEvent Milking Facility Keycard]". The sarea of Milking Facility Keycard is "Sealed".
 
-Instead of resolving a Milking Facility Keycard:
+to say ResolveEvent Milking Facility Keycard:
 	if Milking Facility Entrance is unvisited:
 		say "     You stumble upon an abandoned office. A metallic plaque is nailed next to the door, and reads [italic type]Emergency Supplies Production Project[roman type]. The only object remaining in the room is a heavy, metallic desk. Inside the drawer, you find a keycard labelled [italic type]Facility 14 -  Dairy Products[roman type]. You take it, in case you find said facility in the city.";
 	else:

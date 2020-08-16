@@ -166,7 +166,7 @@ When Play begins:
 	now lootchance entry is 30;  [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 2;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "stocky";  [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "[one of]satyr[or]mythological[at random]";
@@ -287,7 +287,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "satyr wine"	"A small sample of some dark wine you found left behind by one of those strange Satyr folk, it looks like there is about enough left for a single mouthful."	1	satyr wine
 
-satyr wine is a grab object. It is part of the player. Understand "wine" as satyr wine. satyr wine is infectious. The strain of satyr wine is "Satyr".
+satyr wine is a grab object. Understand "wine" as satyr wine. satyr wine is infectious. The strain of satyr wine is "Satyr".
 
 The usedesc of satyr wine is "[wineusing]";
 

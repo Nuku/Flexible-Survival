@@ -10,6 +10,7 @@ Object	Name
 Captivating Plumage	"Captivating Plumage"
 
 Captivating Plumage is a situation.
+ResolveFunction of Captivating Plumage is "[ResolveEvent Captivating Plumage]".
 The sarea of Captivating Plumage is "High".
 Peacocked is a number that varies. Peacocked is usually 0.
 
@@ -18,7 +19,7 @@ when play begins:
 	add Captivating Plumage to BadSpots of FemaleList;
 	add Captivating Plumage to badspots of HermList;
 
-Instead of resolving a Captivating Plumage:
+to say ResolveEvent Captivating Plumage:
 	if debugactive is 1:
 		say "     DEBUG -> ENCOUNTER # [Peacocked] <- DEBUG[line break]";
 	if Peacocked is 0:

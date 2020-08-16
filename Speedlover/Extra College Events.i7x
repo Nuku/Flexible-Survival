@@ -19,6 +19,7 @@ Object	Name
 Cheetah Cheater	"Cheetah Cheater"
 
 Cheetah Cheater is a situation.
+ResolveFunction of Cheetah Cheater is "[ResolveEvent Cheetah Cheater]".
 The level of Cheetah Cheater is 0.
 The sarea of Cheetah Cheater is "Campus".
 
@@ -26,7 +27,7 @@ after going to College Walkway West while (Cheetah Cheater is active and Cheetah
 	try looking;
 	CheetahCheaterEvent;
 
-Instead of resolving a Cheetah Cheater:
+to say ResolveEvent Cheetah Cheater:
 	CheetahCheaterEvent;
 
 to CheetahCheaterEvent:
@@ -41,6 +42,7 @@ Object	Name
 Pregnant Friend	"Pregnant Friend"
 
 Pregnant Friend is a situation.
+ResolveFunction of Pregnant Friend is "[ResolveEvent Pregnant Friend]".
 The level of Pregnant Friend is 0.
 The sarea of Pregnant Friend is "Campus".
 
@@ -48,7 +50,7 @@ after going to College Walkway East while (Pregnant Friend is active and Pregnan
 	try looking;
 	PregnantFriendEvent;
 
-Instead of resolving a Pregnant Friend:
+to say ResolveEvent Pregnant Friend:
 	PregnantFriendEvent;
 
 to PregnantFriendEvent:
@@ -66,6 +68,7 @@ Object	Name
 Art Class	"Art Class"
 
 Art Class is a situation.
+ResolveFunction of Art Class is "[ResolveEvent Art Class]".
 The level of Art Class is 0.
 The sarea of Art Class is "Campus".
 
@@ -73,7 +76,7 @@ after going to Creative Street while (Art Class is active and Art Class is not r
 	try looking;
 	ArtClassEvent;
 
-Instead of resolving a Art Class:
+to say ResolveEvent Art Class:
 	ArtClassEvent;
 
 to ArtClassEvent:
@@ -93,6 +96,7 @@ Object	Name
 CatsVSDogs	"CatsVSDogs"
 
 CatsVSDogs is a situation.
+ResolveFunction of CatsVSDogs is "[ResolveEvent CatsVSDogs]".
 The level of CatsVSDogs is 0.
 The sarea of CatsVSDogs is "Campus".
 
@@ -100,7 +104,7 @@ after going to Athletic Street while (CatsVSDogs is active and CatsVSDogs is not
 	try looking;
 	CatsVSDogsEvent;
 
-Instead of resolving a CatsVSDogs:
+to say ResolveEvent CatsVSDogs:
 	CatsVSDogsEvent;
 
 to CatsVSDogsEvent:
@@ -123,6 +127,7 @@ Object	Name
 SharkFountain	"SharkFountain"
 
 SharkFountain is a situation.
+ResolveFunction of SharkFountain is "[ResolveEvent SharkFountain]".
 The level of SharkFountain is 0.
 The sarea of SharkFountain is "Campus". [Fountain]
 
@@ -130,7 +135,7 @@ after going to College Fountain while (SharkFountain is active and SharkFountain
 	try looking;
 	SharkFountainEvent;
 
-Instead of resolving a SharkFountain:
+to say ResolveEvent SharkFountain:
 	SharkFountainEvent;
 
 to SharkFountainEvent:
@@ -148,6 +153,7 @@ Object	Name
 Fountain Naiad	"Fountain Naiad"
 
 Fountain Naiad is a situation.
+ResolveFunction of Fountain Naiad is "[ResolveEvent Fountain Naiad]".
 The sarea of Fountain Naiad is "Campus".
 
 when play begins:
@@ -157,7 +163,7 @@ after going to College Fountain while (Fountain Naiad is active and Fountain Nai
 	try looking;
 	NaiadFountainEvent;
 
-instead of resolving a Fountain Naiad:
+to say ResolveEvent Fountain Naiad:
 	NaiadFountainEvent;
 
 to NaiadFountainEvent:
@@ -171,13 +177,14 @@ Object	Name
 Campus Racing	"Campus Racing"
 
 Campus Racing is a situation.
+ResolveFunction of Campus Racing is "[ResolveEvent Campus Racing]".
 The sarea of Campus Racing is "Campus".
 
 after going to Athletic Street while (Campus Racing is active and Campus Racing is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	try looking;
 	CampusRacingEvent;
 
-instead of resolving a Campus Racing:
+to say ResolveEvent Campus Racing:
 	CampusRacingEvent;
 
 to CampusRacingEvent:
@@ -191,6 +198,7 @@ Object	Name
 Frat Party Recruiter	"Frat Party Recruiter"
 
 Frat Party Recruiter is a situation.
+ResolveFunction of Frat Party Recruiter is "[ResolveEvent Frat Party Recruiter]".
 Frat Party Recruiter is inactive.
 The sarea of Frat Party Recruiter is "Campus".
 
@@ -213,7 +221,7 @@ after going to College Walkway Northwest while (Frat Party Recruiter is active a
 	try looking;
 	FratPartyRecruiterEvent;
 
-instead of resolving a Frat Party Recruiter:
+to say ResolveEvent Frat Party Recruiter:
 	FratPartyRecruiterEvent;
 
 to FratPartyRecruiterEvent:
@@ -238,6 +246,7 @@ Object	Name
 Undie Race	"Undie Race"
 
 Undie Race is a situation.
+ResolveFunction of Undie Race is "[ResolveEvent Undie Race]".
 The sarea of Undie Race is "Campus".
 
 after going to College Walkway West while (Undie Race is active and Undie Race is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
@@ -256,7 +265,7 @@ after going to College Walkway Northwest while (Undie Race is active and Undie R
 	try looking;
 	UndieRaceEvent;
 
-instead of resolving Undie Race:
+to say ResolveEvent Undie Race:
 	UndieRaceEvent;
 
 to UndieRaceEvent:
@@ -282,13 +291,14 @@ Object	Name
 Dog Meets Dog	"Dog Meets Dog"
 
 Dog Meets Dog is a situation.
+ResolveFunction of Dog Meets Dog is "[ResolveEvent Dog Meets Dog]".
 The sarea of Dog Meets Dog is "Campus".
 The PrereqCompanion of Dog Meets Dog is gshep.
 
 after going east from College Campus Entrance while (LastCampusWalkin - turns > 2 and gshep is companion of Player and gsd_pet >= 60 and GibsonRelationship is 0 and a random chance of 1 in 3 succeeds):
 	DogMeetsDogEvent;
 
-instead of resolving Dog Meets Dog:
+to say ResolveEvent Dog Meets Dog:
 	DogMeetsDogEvent;
 
 to DogMeetsDogEvent:
@@ -339,6 +349,7 @@ Object	Name
 Course Advice	"Course Advice"
 
 Course Advice is a situation.
+ResolveFunction of Course Advice is "[ResolveEvent Course Advice]".
 The sarea of Course Advice is "Campus".
 
 when play begins:
@@ -357,7 +368,7 @@ after going northwest from College Walkway Northeast while (Course Advice is not
 	try looking;
 	AdminIntro;
 
-after resolving a Course Advice:
+to say ResolveEvent Course Advice:
 	try looking;
 	AdminIntro;
 
@@ -592,6 +603,7 @@ Object	Name
 Campus Patrol	"Campus Patrol"
 
 Campus Patrol is a situation.
+ResolveFunction of Campus Patrol is "[ResolveEvent Campus Patrol]".
 The sarea of Campus Patrol is "Campus".
 
 after going to College Walkway West while (Campus Patrol is active and Campus Patrol is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
@@ -606,7 +618,7 @@ after going to College Campus Entrance while (Campus Patrol is active and Campus
 	try looking;
 	CampusPatrolEvent;
 
-after resolving a Campus Patrol:
+to say ResolveEvent Campus Patrol:
 	try looking;
 	CampusPatrolEvent;
 

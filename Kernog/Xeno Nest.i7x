@@ -32,10 +32,12 @@ Table of GameEventIDs (continued)
 Object	Name
 Xeno Nest	"Xeno Nest"
 
-Xeno Nest is a situation. The sarea of Xeno Nest is "Capitol".
+Xeno Nest is a situation.
+ResolveFunction of Xeno Nest is "[ResolveEvent Xeno Nest]".
+The sarea of Xeno Nest is "Capitol".
 xenoNestisCautious is a number that varies. xenoNestisCautious is usually 0.
 
-Instead of resolving Xeno Nest:
+to say ResolveEvent Xeno Nest:
 	say "     You stumble upon a large building overrun with a thick coat of fleshy mold. The ground floor's wall has crumbled, leaving a big opening leading to what looks like some kind of alien lair. The upper floors look untouched by the pink-brown material.";
 	if Resolution of Xeno Nest is 0:
 		say "     You wonder if you can find some much needed supplies on these last floors. However, you would have to find your way through the strange nest first. You could favor caution and explore the place as stealthily as possible; or you could attempt to rush and make your way to the top as fast as possible. No matter the method, there would always be a risk to encounter whatever built this nest.";

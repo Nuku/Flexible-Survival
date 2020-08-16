@@ -5,6 +5,7 @@ Chapter 1 - Is a
 Husky Group is a situation.
 The validation of it is the Nohusky rule.
 Husky Group Take Two is a situation.
+ResolveFunction of Husky Group Take Two is "[ResolveEvent Husky Group Take Two]".
 Husky Group Take Two is resolved.
 Bloated Hunter is a situation.
 The validation of it is the Dasvalid rule.
@@ -38,12 +39,12 @@ Chapter 4 - Situation Code
 
 Part 1 - Husky Group + Husky Group Take Two (Inter-linked)
 
-Instead of resolving Husky Group:
+to say ResolveEvent Husky Group:
 	say "When your scouts return from their patrol, the head of the group informs you about a pack of mentally lost Husky Bitches that nearly jumped them from the bush. The lead scout blushing some with a wag of his newfound curled tail. Oh dear... oh dear indeed! You insist that he go to the your science adviser to have the nanites overpowered by your species['] own. Unless of course, they wanted to keep the tail, and likely other changes. You assure them that they cannot stay if things get out of hand with their new infection.[line break][line break]";
 	now Husky Group is resolved;
 	now Husky Group Take Two is not resolved;
 
-Instead of resolving Husky Group Take Two:
+to say ResolveEvent Husky Group Take Two:
 	let ohnoes be a random number from 1 to 2;
 	if ohnoes is 1:
 		say "You step into a scene in the village that you were not expecting at all. Remembering one of your scouts had recently been infected by a group of husky females and having been slightly infected by the species['] nanites. Well, it seems allowing them to stay has been a grave mistake on your part. As you head out for the morning rounds, you spot that same scout - only this time they were a completely different image of what they used to be. Completely turned into a panting, drooling, and lost to their lusts, female husky. Straddling one of your villagers as she wiped her heat drenched sex on the other's chest. Quickly calling your guard before things could get further out of hand, they quickly apprehend the female, and other infected villagers before dragging them off and out of the village. Likely never to be seen, nor heard from again. Learning from some mistakes can end up biting you in the ass if you're not careful![line break][line break]";
@@ -57,7 +58,7 @@ Instead of resolving Husky Group Take Two:
 
 Part 2 - Bloated Hunter
 
-Instead of resolving Bloated Hunter:
+to say ResolveEvent Bloated Hunter:
 	if "Male" is listed in the gender of the tribe of Player:
 		say "One of your hunters returns looking rather... round around the middle. His stomach gurgling loudly, bloated beyond recognition, even you yourself were not oblivious enough to know that this particular male wasn't at all overweight, nor pregnant the morning you saw him last. His distended stomach could tell numerous stories, and the most likely one was likely the truth. His hands/paws holding the lip of his bulging stomach up, hoisting and carrying it as he waddled down the road. Mumbling incoherently to himself. Thankfully it didn't look as if he was infected with a different strain of nanites. [if Husky Group is resolved and Husky Group Take Two is resolved]Knowing damn well what the infection could potentially do to your tribe, you stare - quite intently - at the male as he wanders on by. That sickly sloshing stomach most certainly causing your own to be clenching up tightly, churning at the thought of a nanite outbreak in your settlement[else]Watching with a tilted head and cocked brow, you listen to the sounds of the contents of that stomach sickly sloshing about with every step of his[end if].[line break][line break]";
 	else:
@@ -70,13 +71,13 @@ Instead of resolving Bloated Hunter:
 
 Part 3 - Hidden Cache + Nerd's Opinion (Inter-linked)
 
-Instead of resolving Hidden Cache:
+to say ResolveEvent Hidden Cache:
 	say "Returning from their hunt, a group of your hunters are carrying a large wooden crate. Looking cracked and weathered, the panels of wood long since begun their rotting in the dampness of the forest beyond. Setting it down with a thump upon the ground in-front of you, they use a crow-bar to pry the top open - showing you an amazing collection of pre-outbreak books, kept safe for the most part by a thin lining of plastic to keep the humidity and rain from ultimately destroying the books. [if (perception of the tribe of Player) > 50]You find one of them holds a distinct familiarity about it, and upon reading the title, [']Of Mice and Men['], you are greeted with flashing images of your past in your more young adult years, sitting down in a desk with row upon row of eager young peers at your side. [end if]Thinking it best that these be stored and studied by your science team, you instruct the hunters to place them in a safe storage - carefully!";
 	increase science of the tribe of Player by 15;
 	now Hidden Cache is resolved;
 	now Nerd's Opinion is unresolved;
 
-Instead of resolving Nerd's Opinion:
+to say ResolveEvent Nerd's Opinion:
 	say "[italic type]You meet with your science adviser about the recent finding of an antique stash of old, post-world literature.[roman type][line break]";
 	if tribe of Player is huskies:
 		say "She informs you that your hunters did indeed in fact find a stash of pre-outbreak literature, and from what she could gather, it was being sent to a high-school not even fifty miles away, 'Well, considering the importance of literature to the undeveloped mind - you should try and have these stories told in our own words.' She pauses for a moment, letting her pen click against the clip-board she carried before setting it down. Her lips parting once more, 'They may be just stories, but because it isn't about what happens in them, and the most notable factor in these stories is the moral, the theme of a novel. To what we can relate to real-life situations in a singular statement, though not at all too specific. It's a generalization. Such as, [']Animals may seem wild, savage and mindless beasts that prey upon others for a living - though is humanity any different in that regards?['] That may be a little [italic type]too[roman type] general, but the idea stands the same.' She nods to her own words, completely oblivious to if you understood or not. With you finding it best that she decide upon this herself, you allow her to give the books to the entertainers, so they can enact a play of them.[line break][line break]";
@@ -102,7 +103,7 @@ Instead of resolving Nerd's Opinion:
 
 Part 4 - Beast's Den
 
-[Instead of resolving Beast's Den:
+[to say ResolveEvent Beast's Den:
 	if perception of the tribe of Player > 80:
 		say "Your hunters have informed you of a nearby cave, which they believe is inhabited by a large creature of some sort. They decided that it wouldn't be a great idea to explore, and was far too risky to attempt.[line break][line break]";
 	else:
@@ -118,7 +119,7 @@ Part 4 - Beast's Den
 
 Part 5 - Susan Sighting
 
-Instead of resolving Susan Sighting:
+to say ResolveEvent Susan Sighting:
 	say "Spotting an unusual creature off in the distance from your village, you go to take a peek at the grazing creature. She immediately notices your presence with a flicker of her ears. The tan and cream furred doe was completely nude. Involuntarily your eyes were drawn downwards towards the black, swinging human shaft between her legs. Letting out a snort, she falls onto her hooves from her once bipedal stance and runs off. Odd...[line break][line break]";
 	now Susan Sighting is resolved;
 	[now Susan's Location is not resolved;]

@@ -38,12 +38,13 @@ Object	Name
 Poor Kitty	"Poor Kitty"
 
 Poor Kitty is a situation.
+ResolveFunction of Poor Kitty is "[ResolveEvent Poor Kitty]".
 The sarea of Poor Kitty is "Fair".
 when play begins:
 	add Poor Kitty to BadSpots of FemaleList;
 	add Poor Kitty to BadSpots of FurryList;
 
-Instead of resolving a Poor Kitty:
+to say ResolveEvent Poor Kitty:
 	if HP of rubber tigress is 0:
 		say "     As you're cautiously poking into some of the abandoned booths around the fair, you end up startling one of those rubbery tigresses from her hiding spot. She runs out of the cupboard on all fours with a squeaking mrowl of surprise, sending a pile of red plastic drinking cups spilling out around you. As you watch her run towards the exit, you notice two strange things about her. First, despite her feminine curves and rounded bottom, she seems to be stuck on all fours unlike the others of her kind. The second, and even more surprising, is the lack of any gender or genitals to her.";
 		say "     Intrigued, you look down at your feet and pick up one of the red cups at your feet. Turning it around, you notice the cup in your hand has a large bite taken out of it, as if this feline's been slowly dining on them. Cup still in hand, you head to the exit and look around. You spot her hiding around the corner of a nearby booth. She releases a soft, cautious mewl, eyeing the cup. She pads out slowly towards you and mewls again.";
@@ -799,7 +800,7 @@ name	desc	weight	object
 "cup stack"	"A big stack of red, plastic cups you grabbed as treats for Artemis."	1	cup stack
 
 cup stack is a grab object.
-it is part of the player.
+
 It is not temporary.
 cuptrick is a truth state that varies. cuptrick is usually false.
 

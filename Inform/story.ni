@@ -471,6 +471,7 @@ RestoreMode is a truth state that varies. RestoreMode is usually false.
 CurrentMedkitSupplies is a number that varies.[@Tag:NotSaved] [uses left in the currently open medkit]CurrentMedkitSupplies is usually 5.
 
 A situation is a kind of thing.
+A situation has a text called ResolveFunction. ResolveFunction of a situation is usually "[ResolveError]".
 A situation can be resolved or unresolved. A situation is usually unresolved.
 A situation can be active or inactive. A situation is usually active.
 A situation has a number called Resolution.
@@ -492,13 +493,15 @@ A situation has a number called minscore. The minscore of a situation is usually
 A featset is a kind of thing.
 inasituation is a truth state that varies. inasituation is normally false.
 
-PlaceholderSituation is a situation. PlaceholderSituation is resolved. [needs to always be resolved]
+to say ResolveError:
+	say "ERROR: The situation that caused this message to appear is not properly set up. Please report the situation and this message on the Flexible Survival Discord Server!";
 
-instead of sniffing a situation:
-	say "You can't see any such thing.";
+PlaceholderSituation is a situation.
+PlaceholderSituation is resolved. [needs to always be resolved]
+ResolveFunction of PlaceholderSituation is "[ResolveEvent PlaceholderSituation]".
 
-instead of examining a situation:
-	say "You can't see any such thing.";
+to say ResolveEvent PlaceholderSituation:
+	say "This is the placeholder situation. How did you see this?";
 
 Definition: A situation (called x) is available:
 	if sarea of x is "Nowhere", no; [not findable through exploration/hunting]
@@ -1825,7 +1828,7 @@ name	desc	weight	object	sortname (indexed text)
 "medkit"	"A small, white, plastic box with a red cross on it. It has all the things needed for basic medical needs on the go! Using it will restore a lot of HP, more with good intelligence."	3	medkit
 "water bottle"	"A bottle of water. Good for slaking thirst."	1	water bottle
 "dirty water"	"A bottle of contaminated water. Drinker beware."	1	dirty water
-"food"	"Some food. Nothing fancy. Maybe a sandwich, or a husky girl leg, whatever happens to be handy."	2	food
+"food"	"Some food. Nothing fancy. Maybe a sandwich, or a can of beans, whatever happens to be handy."	2	food
 "journal"	"A small, leather-clad book. Spending some time [link]writing[as]use journal[end link] in it can help clear your thoughts and recenter your troubled mind. Or if you have something especially important that you want to remember, you could just [link]write down a note[as]write a note[end link] at the back end of it. [if number of filled rows in Table of JournalNotes > 0]In fact, you remember noting down some things in it that must have been important somehow. You can [link]browse through your notes[as]browse notes[end link] if you want to. Alternatively, [link]ripping them all out[as]rip notes[end link] is also possible.[end if][line break]"	2	journal
 "gryphon milk"	"A small bottle filled with fluid taken from one of those gryphons. You are fairly certain drinking it would be a poor idea, but maybe there is a use for it?"	2	gryphon milk
 "distilled milk"	"Some creature's milk boiled down to a concentrated, powdery, form? That can't be dangerous!"	1	distilled milk
@@ -1844,7 +1847,7 @@ name	desc	weight	object	sortname (indexed text)
 face mask is equipment. It is not temporary.
 The descmod of face mask is "A filtered mask covers nose and mouth in a vain attempt to help. ".
 The placement of face mask is "face".
-journal is a grab object. It is a part of the player. It is not temporary. The carried of journal is 1.
+journal is a grab object. It is not temporary. The carried of journal is 1.
 journal has a number called hitbonus. hitbonus of journal is usually 0.
 cot is a grab object. It is not temporary.
 understand "Bed" as cot.
@@ -1941,7 +1944,7 @@ title	subtable	description	toggle
 
 Table of Random Critters
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
-false	"Anthro Dragon"	"Anthro Dragoness"	""	""	0	""	""	""	""	"reptilian snout and great teeth. Two horns spiral backwards over your"	"large and reptilian, covered in [Skin of Player] flesh. You are forced to all fours except for brief, awkward, moments. It reminds you of a dragon, if you had to guess."	"[one of]dull red[or]dull orange[or]lustrous blue[sticky random] scaled"	"You have a wide, tapered, dragon's tail with a spade at the tip."	"[one of]draconic[or]normally internal[or]reptilian[at random]"	"your face draws forward into a reptilian snout, covered in [Skin of Player] flesh."	"Your body grows to larger than human norm, becoming quadrupedal, with great spikes along your back. You look very much like a dragon."	"Your skin breaks out in large armored scales that rapidly spread over your body"	"Your spine tingles before it explosively expands backwards into a great, thick, tail with spikes along the top."	"Your cock tingles as it becomes draconic in shape, a vent forming to hold it within you."	20	10	12	12	12	12	"Female"	50	1	20	"Nowhere"	0	0	0	2	10	0	1	15	10	40	""	0	""	""	""	4	"[one of]monstrous[or]large[or]powerful[at random]"	"draconic"	false	false	false	""	0	"default"	false
+false	"Anthro Dragon"	"Anthro Dragoness"	""	""	0	""	""	""	""	"reptilian snout and great teeth. Two horns spiral backwards over your"	"large and reptilian, covered in [Skin of Player] flesh. You are forced to all fours except for brief, awkward, moments. It reminds you of a dragon, if you had to guess."	"[one of]dull red[or]dull orange[or]lustrous blue[sticky random] scaled"	"You have a wide, tapered, dragon's tail with a spade at the tip."	"[one of]draconic[or]normally internal[or]reptilian[at random]"	"your face draws forward into a reptilian snout, covered in [Skin of Player] flesh."	"Your body grows to larger than human norm, becoming quadrupedal, with great spikes along your back. You look very much like a dragon."	"Your skin breaks out in large armored scales that rapidly spread over your body"	"Your spine tingles before it explosively expands backwards into a great, thick, tail with spikes along the top."	"Your cock tingles as it becomes draconic in shape, a vent forming to hold it within you."	20	10	12	12	12	12	"Female"	50	1	20	"Nowhere"	0	0	0	2	10	0	1	15	10	40	""	0	""	""	"-"	4	"[one of]monstrous[or]large[or]powerful[at random]"	"draconic"	false	false	false	""	0	"default"	false
 
 Table of New Infection Parts
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
@@ -2549,16 +2552,6 @@ Carry out massusing:
 		else:
 			say "You don't see any [second noun] in your backpack.";
 ]
-
-
-Resolving is an action applying to one thing.
-
-Carry out resolving a situation (called x):
-	say "This situation has not been properly written!";
-
-After resolving a situation:
-	try looking;
-	[follow the ngraphics_blank rule;]
 
 instead of waiting:
 	follow the turnpass rule;
@@ -4754,10 +4747,11 @@ This is the explore rule:
 				say "[one of]After wandering aimlessly for hours, you happen across[or]Following your faint memories, you manage to find[or]Following movement, you end up at[at random] [L].";
 			now something is 1;
 			now inasituation is true;
-			try resolving L;
+			say "[ResolveFunction of L]";
 			now inasituation is false;
 			now battleground is "void";
 			wait for any key;
+			try looking;
 	now inasituation is false;
 	[Chance for new locations - increased by perception]
 	if something is 0 and a random number from 1 to 20 < ( bonus + 7 ) and there is an unknown fasttravel room and battleground is "Outside" and roomfirst is 0:
@@ -4776,9 +4770,6 @@ This is the explore rule:
 		else:
 			say "You decide to go exploring, but after three long hours of wandering the ruined, monster infested city you return to the relative safety of the [location of Player].";
 	follow the turnpass rule;
-[	wait for any key;
-	now the menu depth is 0;]
-	[try looking;]
 	rule succeeds.
 
 exploring is an action applying to nothing.
@@ -5888,9 +5879,6 @@ This is the starting gender rule:
 
 This is the Menu Exit Rule:
 	decrease the menu depth by 1;
-[	carry out the displaying activity;
-	clear the screen;
-	try looking;]
 	rule succeeds.
 
 
@@ -6006,7 +5994,6 @@ This is the finish stats rule:
 		else:
 			say "Type 'm' or 'f'.> [run paragraph on]";
 	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
-[	try looking;]
 	rule succeeds;
 
 ScavengingAction is an action applying to nothing.
@@ -6048,15 +6035,16 @@ carry out ScavengingAction:
 	if dice plus bonus > 9:
 		now inasituation is true;
 		if a random chance of 3 in 4 succeeds:
-			try resolving potential resources;
+			say "[ResolveFunction of Potential Resources]";
 		else:
 			now tempnum is 1;
 			let L be a random available scavevent;
 			If L is not nothing:
 				say "[one of]During your search for supplies, you end up at[or]Searching systematically for resources, you locate[or]Following signs of recent activity, you end up at[or]Doing a slow circuit while scavenging, you manage to find[or]Wandering around aimlessly in search of supplies, you locate[at random] [L].";
-				try resolving L;
+				say "[ResolveFunction of L]";
 			else if L is nothing:
-				try resolving potential resources;
+				say "[ResolveFunction of Potential Resources]";
+		try looking;
 		now inasituation is false;
 		say "[line break]";
 	else:
@@ -7061,11 +7049,6 @@ instead of going through a dangerous door (called x):
 	else:
 		now battleground is marea of x;
 		follow the explore rule;
-[		change the current menu to the table of Basic Actions;
-		carry out the displaying activity;
-		clear the screen;]
-	[try looking.]
-
 
 gsgl is a number that varies. gsgl is usually 1.
 glstart is a number that varies. glstart is usually 2.
@@ -9222,8 +9205,6 @@ to say promptsay:
 	say "[line break]>";
 
 When play begins:
-	repeat with x running through situations:
-		now x is a part of the player;
 	repeat with x running through grab objects:
 		now x is a part of the player;
 	now the command prompt is "[promptsay]";

@@ -56,7 +56,7 @@ Kyrverth	"Kyrverth"
 
 [Declaring a fuckton of variables. Keep scrolling - nothing to see here.					]
 [Compulsory Variables here:														]
-Kyrverth is a man. The hp of Kyrverth is usually 0.
+Kyrverth is a man. The HP of Kyrverth is usually 0.
 [Physical details as of game start]
 ScaleValue of Kyrverth is 2. [4ft tall to start, Starts small and grows with Kyrverthstage, goes from 2->5]
 SleepRhythm of Kyrverth is 0. [0 - awake at all times, 1 - day active, 2 - night active]
@@ -641,9 +641,9 @@ to say KyrverthSex:
 	say "Just a placeholder for Kyrverth sex scenes right now, maybe in a future update?";
 	if "Kinky" is listed in feats of Player and scalevalue of Player is 1:
 		say "The rough sex on your small body has taken its toll, and has not done well for your health.";
-		decrease hp of Player by (maxhp of Player / 4);
-		if hp of Player <= 0:
-			now hp of Player is 1;
+		decrease HP of Player by (maxHP of Player / 4);
+		if HP of Player <= 0:
+			now HP of Player is 1;
 	WaitLineBreak;
 	[if Player has a Cunt Depth between 10 and 18 or they are scalevalue 1 with the kinky trait, Kyrverth stuffs their cunt but can't get balls deep. Cum everywhere.]
 	[If the players Cunt Depth is greater than 18, Kyrverth fucks them in the cunt, gets balls deep, fucks them, knots, and cums. High chance of impregnation?]
@@ -676,9 +676,9 @@ to say KyrverthAnalSex: [For null and male players]
 
 to say KyrverthTinyPlayerAnal:
 	say "     <Kyrverth uses you like a masturbator>.";
-	now hp of Player is (hp of Player - (maxhp of Player / 4));
-	if hp of Player <= 0:
-		now hp of Player is 1;
+	now HP of Player is (HP of Player - (maxHP of Player / 4));
+	if HP of Player <= 0:
+		now HP of Player is 1;
 
 to say KyrverthSmallPlayerAnal:
 	say "     Kyrverth grins at your suggestion, showing off his maw full of razor sharp teeth. Not giving you near enough time to react, he slams his massive paw into you, pinning you to the ground as he leans close to your face, growling dominantly at you. 'Strip,' he commands, his deep voice vibrating through your body as you tremble in excitement. You nod and he lifts his paw up to allow you the ability to undress. While you disrobe, the dragon looks over your [bodydesc of Player] body, rumbling in approval at what he sees. As your final garment falls to the floor, the giant dragon speaks again. 'Get on all fours.'";
@@ -809,6 +809,7 @@ after going to Dragons Den while (KyrverthStage is 6 and a random chance of 1 in
 		increase KyrverthRandomEncounter by 1;
 
 Strange Sighting is a situation.
+ResolveFunction of Strange Sighting is "[ResolveEvent Strange Sighting]".
 The level of Strange Sighting is 5. [minimum level to find the event]
 The sarea of Strange Sighting is "High". [or "Park", or "Museum", ...]
 
@@ -817,7 +818,7 @@ when play begins: [flags for blocking this event]
 	add Strange Sighting to badspots of FeralList;
 	add Strange Sighting to BadSpots of FurryList;
 
-Instead of resolving a Strange Sighting: [Very first meeting with the dragon]
+to say ResolveEvent Strange Sighting: [Very first meeting with the dragon]
 	say "     As you walk down the street you could swear you saw a glimpse of red in a shop window but as you get close all that can be seen through the broken glass is a dark room with overturned or broken tables and chairs.";
 	say "     [bold type]Shall you investigate?[roman type][line break]";
 	LineBreak;
@@ -847,6 +848,7 @@ Instead of resolving a Strange Sighting: [Very first meeting with the dragon]
 	now Strange Sighting is resolved;  [it won't happen again]
 
 Jewel Heist is a situation.
+ResolveFunction of Jewel Heist is "[ResolveEvent Jewel Heist]".
 The level of Jewel Heist is 5. [minimum level to find the event]
 The sarea of Jewel Heist is "High". [or "Park", or "Museum", ...]
 Jewel Heist is resolved.
@@ -856,7 +858,7 @@ when play begins: [flags for blocking this event]
 	add Jewel Heist to badspots of FeralList;
 	add Jewel Heist to BadSpots of FurryList;
 
-Instead of resolving a Jewel Heist:
+to say ResolveEvent Jewel Heist:
 	say "     Walking down the street you spot a good source of jewels, a jewelry shop! The faded blue shop has two windows with bars behind them. Display cases inside catch your eye but a wolverine standing in front of the only entrance gives you pause. It would not be easy to try and fight your way past him, and he does not look friendly enough to trade with. You think about Kyrverth and resolve that this would be the easiest way to start his hoard.";
 	say "     [bold type]Now if only you could get past the guard at the door... Do you try?[roman type][line break]";
 	LineBreak;
@@ -983,6 +985,7 @@ to EnableKyrverthItemEvents: [Enabling events for player to encounter]
 	now Curious Pearl is active;
 
 Valuable Museum Artifact is a situation.
+ResolveFunction of Valuable Museum Artifact is "[ResolveEvent Valuable Museum Artifact]".
 The level of Valuable Museum Artifact is 5. [minimum level to find the event]
 The sarea of Valuable Museum Artifact is "Museum". [or "Park", or "Museum", ...]
 Valuable Museum Artifact is inactive.
@@ -1008,7 +1011,7 @@ when play begins: [flags for blocking these events]
 			add (entry x of eventlist) to badspots of (entry y of badspotlist);]
 
 
-Instead of resolving a Valuable Museum Artifact:
+to say ResolveEvent Valuable Museum Artifact:
 	if KyrverthStage is not 3:
 		say "     How did you get here? It shouldn't be possible. Please report this to the developers on the FS discord.";
 	else:
@@ -1029,11 +1032,12 @@ Instead of resolving a Valuable Museum Artifact:
 		ResolveKyrverthItemEvents;
 
 Valuable Warehouse Artifact is a situation.
+ResolveFunction of Valuable Warehouse Artifact is "[ResolveEvent Valuable Warehouse Artifact]".
 The level of Valuable Warehouse Artifact is 5. [minimum level to find the event]
 The sarea of Valuable Warehouse Artifact is "Warehouse". [or "Park", or "Museum", ...]
 Valuable Warehouse Artifact is inactive.
 
-Instead of resolving a Valuable Warehouse Artifact:
+to say ResolveEvent Valuable Warehouse Artifact:
 	if KyrverthStage is not 3:
 		say "     How did you get here? It shouldn't be possible. Please report this to the developers on the FS discord.";
 	else:
@@ -1055,11 +1059,12 @@ Instead of resolving a Valuable Warehouse Artifact:
 		ResolveKyrverthItemEvents;
 
 Valuable RLD Artifact is a situation.
+ResolveFunction of Valuable RLD Artifact is "[ResolveEvent Valuable RLD Artifact]".
 The level of Valuable RLD Artifact is 5. [minimum level to find the event]
 The sarea of Valuable RLD Artifact is "Red". [or "Park", or "Museum", ...]
 Valuable RLD Artifact is inactive.
 
-Instead of resolving a Valuable RLD Artifact:
+to say ResolveEvent Valuable RLD Artifact:
 	if KyrverthStage is not 3:
 		say "     How did you get here? It shouldn't be possible. Please report this to the developers on the FS discord with KyrverthStage: [KyrverthStage].";
 	else:
@@ -1080,11 +1085,12 @@ Instead of resolving a Valuable RLD Artifact:
 		ResolveKyrverthItemEvents;
 
 Valuable Stables Artifact is a situation.
+ResolveFunction of Valuable Stables Artifact is "[ResolveEvent Valuable Stables Artifact]".
 The level of Valuable Stables Artifact is 5. [minimum level to find the event]
 The sarea of Valuable Stables Artifact is "Stable". [or "Park", or "Museum", ...]
 Valuable Stables Artifact is inactive.
 
-Instead of resolving a Valuable Stables Artifact:
+to say ResolveEvent Valuable Stables Artifact:
 	if KyrverthStage is not 3:
 		say "     How did you get here? It shouldn't be possible. Please report this to the developers on the FS discord with KyrverthStage: [KyrverthStage].";
 	else:
@@ -1235,7 +1241,7 @@ name	desc	weight	object
 
 Anubis Mask is a grab object.
 the usedesc of Anubis Mask is "[anubismaskuse]".
-it is part of the player.
+
 It is temporary.
 
 to say anubismaskuse:
@@ -1258,7 +1264,7 @@ instead of sniffing Anubis Mask:
 
 Racing Horseshoe is a grab object.
 the usedesc of Racing Horseshoe is "[racinghorseshoeuse]".
-it is part of the player.
+
 It is temporary.
 
 to say racinghorseshoeuse:
@@ -1285,7 +1291,7 @@ instead of sniffing Racing Horseshoe:
 
 Golden Sculpture is a grab object.
 the usedesc of Golden Sculpture is "[goldensculptureuse]".
-it is part of the player.
+
 It is temporary.
 
 to say goldensculptureuse:
@@ -1343,7 +1349,7 @@ instead of sniffing Golden Sculpture:
 
 Tiger Suit is a grab object.
 the usedesc of Tiger Suit is "[tigersuituse]".
-it is part of the player.
+
 It is temporary.
 
 to say tigersuituse:

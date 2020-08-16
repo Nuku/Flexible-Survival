@@ -33,6 +33,7 @@ Object	Name
 Hellish Introduction	"Hellish Introduction"
 
 Hellish Introduction is a situation.
+ResolveFunction of Hellish Introduction is "".
 The sarea of Hellish Introduction is "Nowhere".
 
 when play begins:

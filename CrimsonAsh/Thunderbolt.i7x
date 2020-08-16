@@ -23,6 +23,7 @@ Object	Name
 Campus Thunder	"Campus Thunder"
 
 Campus Thunder is a situation.
+ResolveFunction of Campus Thunder is "[ResolveEvent Campus Thunder]".
 The level of Campus Thunder is 0.
 The sarea of Campus Thunder is "Campus". [Fountain]
 
@@ -42,7 +43,7 @@ instead of going west from College Walkway Northeast while (Campus Thunder is ac
 	move player to College Fountain;
 	ThunderboltEncounter1;
 
-Instead of resolving Campus Thunder:
+to say ResolveEvent Campus Thunder:
 	if ThunderTrackingVariable is 0: [never met]
 		ThunderboltEncounter1;
 	else if ThunderTrackingVariable is 1: [first encounter done]

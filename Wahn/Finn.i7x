@@ -5,7 +5,8 @@ Table of GameEventIDs (continued)
 Object	Name
 Missing Farm Hand	"Missing Farm Hand"
 
-Missing Farm Hand is a situation. The level of Missing Farm Hand is 5. Missing Farm Hand is inactive.
+Missing Farm Hand is a situation.
+ResolveFunction of Missing Farm Hand is "[ResolveEvent Missing Farm Hand]". The level of Missing Farm Hand is 5. Missing Farm Hand is inactive.
 The sarea of Missing Farm Hand is "Plains".
 
 FinnTrackingProgress is a number that varies. FinnTrackingProgress is usually 0.
@@ -24,7 +25,7 @@ FinnTrackingProgress is a number that varies. FinnTrackingProgress is usually 0.
 
 Section 1 - Events
 
-Instead of resolving a Missing Farm Hand:
+to say ResolveEvent Missing Farm Hand:
 	if FinnTrackingProgress is 0:
 		say "     Moving to the far end of the farm proper, you check out the usual patrol route along its perimeter, easily visible in the nanite-enhanced fast-growing grass. The stalks of it seem too tenacious to be beaten by being regularly walked on with horseman hooves, so it is just path of trodden-down grass, not actually a dirt track, despite the obvious heavy foot traffic. From what Anthony said and your own observations, one or another of the farmhands makes the circuit around the farm at least once an hour. Now if you only could find a trace of what happened to Finn...";
 		let bonus be (( the Perception of the player minus 10 ) divided by 2);

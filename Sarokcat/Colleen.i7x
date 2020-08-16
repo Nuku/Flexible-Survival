@@ -10,10 +10,11 @@ Object	Name
 WomanFruitTree	"WomanFruitTree"
 
 WomanFruitTree is a situation.
+ResolveFunction of WomanFruitTree is "[ResolveEvent WomanFruitTree]".
 The sarea of WomanFruitTree is "Park".
 ColleenDeclined is a number that varies.
 
-Instead of resolving a WomanFruitTree:
+to say ResolveEvent WomanFruitTree:
 	if ColleenDeclined is 1:
 		say "     Wandering back through the park, you spot the large tree in the distance, and decide to wander over to see what became of the stranded military woman. Upon reaching the tree you find that ";
 		if a random chance of 1 in 2 succeeds:

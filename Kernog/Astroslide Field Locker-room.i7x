@@ -292,6 +292,7 @@ Object	Name
 PeepingRoman	"PeepingRoman"
 
 PeepingRoman is a situation.
+ResolveFunction of PeepingRoman is "".
 The sarea of PeepingRoman is "Nowhere".
 
 instead of going to Astroslide Field Locker-room while (PeepingRoman is active and PeepingRoman is not resolved and FurryList is not banned and FurryList is not warded and a random chance of 1 in 3 succeeds):

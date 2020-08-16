@@ -9,8 +9,9 @@ Object	Name
 Ravaged Power Plant	"Ravaged Power Plant"
 
 Ravaged Power Plant is a situation.
+ResolveFunction of Ravaged Power Plant is "[ResolveEvent Ravaged Power Plant]".
 
-instead of resolving a Ravaged Power Plant:
+to say ResolveEvent Ravaged Power Plant:
 	say "     On your walk, you pass a building that was the power station for the city. Now it is dark and silent, and a large hole is smashed through one of the generators. Claw marks cover the floor and walls, and liquids of every kind litter the floor. The fence is also damaged, a large chunk flattened by some large creature that passed by.";
 	AddNavPoint Plant Overview;
 	now Ravaged Power Plant is resolved;
@@ -22,8 +23,9 @@ Object	Name
 Generator Parts	"Generator Parts"
 
 Generator Parts is a situation.
+ResolveFunction of Generator Parts is "[ResolveEvent Generator Parts]".
 
-instead of resolving a Generator Parts:
+to say ResolveEvent Generator Parts:
 	if foundparts is 0:
 		say "     You find a small pile of what looks to be parts of a machine. Or quite a few machines actually. There are dozens and dozens of spark plugs in it, as well as some small circuit boards and various other bits that are harder to identify. Some parts have US Army Part ID numbers engraved on their sides, so they were removed from military equipment. It seems that someone is going around ripping essential parts out of any motor and generator they can find. This must be hindering recovery efforts quite a bit, with how dependent civilization is on electricity. Sadly, you have no idea where this all came from, so even if you took some bits, there is little chance it would be of any use.";
 		now foundparts is 1;
@@ -107,7 +109,7 @@ Instead of sniffing Administration Offices:
 	say "     The scent of wet ash hangs in the air.";
 
 cat key is a grab object.
-it is part of the player.
+
 It is not temporary.
 
 instead of using cat key:

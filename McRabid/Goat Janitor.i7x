@@ -118,7 +118,7 @@ When Play begins:
 	now lootchance entry is 0;
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;
 	now body descriptor entry is "[one of]scraggly[or]thin[or]bony[as decreasingly likely outcomes]";
 	now type entry is "[one of]caprid[or]goat-like[as decreasingly likely outcomes]";

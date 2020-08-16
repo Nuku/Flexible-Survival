@@ -94,7 +94,7 @@ when play begins:
 	now lootchance entry is 50;
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;
 	now body descriptor entry is "[one of]slender[or]fluffy[or]lithe[at random]";
 	now type entry is "vulpine";

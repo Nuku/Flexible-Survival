@@ -14,7 +14,7 @@ to say bunnyjockdesc:
 to say losetobunnyjock:
 	now bunnyjocknosex is 0;
 	if ( player is female and a random chance of 1 in 4 succeeds ) or ( Cunt Count of Player is 0 and a random chance of 2 in 5 succeeds ) or anallevel is 1:
-		say "     '[if Player is female]That was great, baby,' he says with a grin. 'Now let's have some fun.' [else]And that's how it's done! Ain't no stoppin['] this bunny!' he says, pointing to himself with a double thumbs-up. 'Do me a solid and help me let off some steam. You worked me up real good,' he adds with a grin. [end if]With that, he reaches into his shorts and pulls out his meaty cock. Having gotten quite hard, it's a massive two and a half feet long with the balls to match. 'Practice starts soon, so can you give me a quick blow?' With a strong paw on your head, he presses his glans to your lips, drooling pre across them. [if hp of Player > 0]Despite your attempt to resist, you end up tasting the musky liquid and start to become aroused[else]You lick the musky fluid from his tip, the taste of it making you all the more aroused[end if].";
+		say "     '[if Player is female]That was great, baby,' he says with a grin. 'Now let's have some fun.' [else]And that's how it's done! Ain't no stoppin['] this bunny!' he says, pointing to himself with a double thumbs-up. 'Do me a solid and help me let off some steam. You worked me up real good,' he adds with a grin. [end if]With that, he reaches into his shorts and pulls out his meaty cock. Having gotten quite hard, it's a massive two and a half feet long with the balls to match. 'Practice starts soon, so can you give me a quick blow?' With a strong paw on your head, he presses his glans to your lips, drooling pre across them. [if HP of Player > 0]Despite your attempt to resist, you end up tasting the musky liquid and start to become aroused[else]You lick the musky fluid from his tip, the taste of it making you all the more aroused[end if].";
 		say "     With the lapine jock keeping a steady grip, he strokes his cock while you lick across his glans. As you get more into it, you open your mouth, trying to work that mighty cock of his past your lips. [if scalevalue of Player < 4]It takes some time to get started, but you somehow manage to stretch your mouth open enough to accept it with the help of the bunny's firm thrusting[else]It's a little slow going at first, but soon enough you're taking it past your lips and into your warm mouth[end if]. You lick and suck at the huge shaft as best you can while the big guy grunts and moans in growing pleasure. As his arousal builds higher, he thrusts harder and faster before eventually cumming with a loud '[one of]Awwwww yeah[or]Slam dunk[or]Suck it harder[at random]!' upon release. Once he's emptied a sloshing amount of bunny cum into your belly, he pops his drooling cock free.";
 		say "     'Damn! I'm late for practice! See ya later bud!' he shouts before quickly tucking his dick back into his basketball shorts and then dashing off towards the athletic side of campus. You however lay there, your stomach gurgling from the lapine cum that was released into you..";
 	else if Player is female:
@@ -141,7 +141,7 @@ When Play begins:
 	now lootchance entry is 12; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]super-buff[or]muscular[or]hyper-muscled[at random]";
 	now type entry is "[one of]leporine[or]lapine[or]bunny[or]rabbit[as decreasingly likely outcomes]";
@@ -262,7 +262,7 @@ name	desc	weight	object
 
 bunweiser beer is a grab object.
 the usedesc of bunweiser beer is "[bunweiseruse]".
-it is part of the player.
+
 It is temporary.
 
 to say bunweiseruse:
@@ -294,8 +294,8 @@ this is the powerplay rule:
 		now absorb is dam;
 	if absorb is greater than 0:
 		say "You prevent [absorb] damage!";
-	decrease hp of the player by dam;
-	increase hp of Player by absorb;
+	decrease HP of the player by dam;
+	increase HP of Player by absorb;
 	follow the player injury rule;
 	say "You are [descr].";
 

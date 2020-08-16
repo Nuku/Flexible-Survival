@@ -10,12 +10,13 @@ Object	Name
 Bounty Hunter	"Bounty Hunter"
 
 Bounty Hunter is a situation.
+ResolveFunction of Bounty Hunter is "[ResolveEvent Bounty Hunter]".
 The sarea of Bounty Hunter is "Red".
 when play begins:
 	add Bounty Hunter to BadSpots of FurryList;
 	add Bounty Hunter to BadSpots of MaleList;
 
-Instead of resolving Bounty Hunter:
+to say ResolveEvent Bounty Hunter:
 	follow the breast descr rule;
 	if perception of Player > 15 or "Wary Watcher" is listed in feats of Player:
 		say "     Your exploration of the city takes you past a small bar. Noticing no activity, you pause for a moment and peek inside. It's only moments before you were going to be grabbed from behind that you realize that things were actually too quiet. Going back on alert, you're able to dodge the oncoming grapple and roll to the side. Getting up a few feet away, you find it is a tough looking bull-man confronting you.";

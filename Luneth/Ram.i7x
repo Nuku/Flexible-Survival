@@ -315,7 +315,7 @@ When Play begins:
 	now lootchance entry is 40;
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]strong[or]muscled[or]stocky[at random]";
 	now type entry is "ovine";  [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -434,7 +434,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "tainted wool"	"A small bundle of rough wool you found in the city, strangely enough, it has a rather pleasant musky scent coming from it."	1	tainted wool
 
-tainted wool is a grab object. It is part of the player.
+tainted wool is a grab object. 
 
 The usedesc of tainted wool is "[taintedwooleffect]";
 

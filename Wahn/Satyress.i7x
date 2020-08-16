@@ -188,7 +188,7 @@ When Play begins:
 	now lootchance entry is 30;           [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;                 [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "lithe"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "[one of]satyress[or]mythological[at random]";
@@ -308,7 +308,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "Satyress Wine"	"A red plastic cup with a small sample of some dark wine you found left behind by one of the sexy satyresses on the college campus. It looks like there is about enough left for a single mouthful."	1	Satyress Wine
 
-Satyress Wine is a grab object. It is part of the player. Understand "wine" as Satyress Wine. Satyress Wine is infectious. The strain of Satyress Wine is "Satyress".
+Satyress Wine is a grab object. Understand "wine" as Satyress Wine. Satyress Wine is infectious. The strain of Satyress Wine is "Satyress".
 
 The usedesc of Satyress Wine is "[SatyressWineUsing]";
 

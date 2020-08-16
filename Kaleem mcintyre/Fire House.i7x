@@ -786,11 +786,12 @@ Object	Name
 Finding Pertho	"Finding Pertho"
 
 Finding Pertho is a situation.
+ResolveFunction of Finding Pertho is "[ResolveEvent Finding Pertho]".
 Finding Pertho is inactive.
 LOK is a number that varies.
 The sarea of Finding Pertho is "Red".
 
-Instead of resolving a Finding Pertho:
+to say ResolveEvent Finding Pertho:
 	If lok is 0:
 		say "     Snooping around the red light district, you find yourself coming across a four-legged Dalmatian busily humping at the backside of a tigress hooker. From what you can see, the feral mutant is completely enthralled in fucking the herm feline, who just so happens to be moaning and arching hir rump up into the heavy, thrusting hips of the spotted canine, making this a perfect opportunity for you to try and nab the other. Better be careful though...";
 		let bonus be (( Dexterity of Player minus 10 ) divided by 2);

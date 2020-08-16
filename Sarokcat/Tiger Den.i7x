@@ -36,14 +36,15 @@ Table of GameEventIDs (continued)
 Object	Name
 TigerVSTaur	"TigerVSTaur"
 
-TigerVSTaur is a situation. The level of TigerVSTaur is 9.
+TigerVSTaur is a situation.
+ResolveFunction of TigerVSTaur is "[ResolveEvent TigerVSTaur]". The level of TigerVSTaur is 9.
 The sarea of TigerVSTaur is "Zoo".
 when play begins:
 	add TigerVSTaur to badspots of HermList;
 	add TigerVSTaur to BadSpots of FurryList;
 	add TigerVSTaur to BadSpots of MaleList;
 
-Instead of Resolving a TigerVSTaur:
+to say ResolveEvent TigerVSTaur:
 	say "     Traveling down the zoo pathways, you hear a strange roaring noise nearby, followed by some violent sounds, after a few seconds the sounds fade somewhat, and you cautiously peek through the greenery to see a strange sight on one of the employee travel paths of the zoo. Two creatures appear to have been fighting here, strangely enough it appears to be a couple of the tigertaurs that have been plaguing the zoo. Closer inspection however, reveals that only one of the combatants happens to be a tigertaur, the other combatant appears to be merely an extremely tiger-like humanoid, with no tiger-like lower body at all! The combat is quickly drawing to a close however, as the tigertaurs larger form seems to give it an advantage against the more human-like tiger, and indeed as you watch, the tigerman seems to be growing more and more aroused and less able to resist the tigertaurs advances. You could intervene if you wanted, but it truly doesn't look like the situation is any of your affair. Do you interfere?";
 	if Player consents:
 		say "     You quickly resolve to involve yourself in what is essentially not your conflict, but unable to see it continue without taking some action on your part. You rush from hiding and into the fray, startling both combatants into taking a step back for second startled by your sudden presence, you have only a few seconds however before the conflict will obviously resume, in which to decide just who to aid. The tigertaur seemed to be winning the fight so far, and it might make more sense for you to ally yourself with the obviously superior power, but you could also take the greater risk and try to aid the tiger against the strong tigertaur if you choose. Do you side with the tigertaur?";

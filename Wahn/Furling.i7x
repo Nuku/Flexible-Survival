@@ -7,13 +7,14 @@ Table of GameEventIDs (continued)
 Object	Name
 Cheerleader vs Furling	"Cheerleader vs Furling"
 
-Cheerleader vs Furling is a situation. The level of Cheerleader vs Furling is 5.
+Cheerleader vs Furling is a situation.
+ResolveFunction of Cheerleader vs Furling is "[ResolveEvent Cheerleader vs Furling]". The level of Cheerleader vs Furling is 5.
 The sarea of Cheerleader vs Furling is "Campus".
 when play begins:
 	add Cheerleader vs Furling to badspots of TransList; [shemale vs cuntboy]
 	add Cheerleader vs Furling to BadSpots of FurryList; [Furling]
 
-Instead of resolving a Cheerleader vs Furling:
+to say ResolveEvent Cheerleader vs Furling:
 	say "     As you're exploring the college campus, you suddenly hear crashing noises from inside the building right next to you - one of the male dormitories. Hurriedly throwing yourself behind a nearby hedge, you peek out between its branches. Hm, now it's still agai- your thought is interrupted by the noisy crunch of splintering wood. A large green figure is thrown through the entrance door and lands out on the sidewalk, right in front of your hedge.";
 	LineBreak;
 	say "     The thrown person turns out to be a pretty tall female, having bulging muscles and generous breasts which are barely contained in a tight cheerleader's outfit. With a roar, an orange-red furred humanoid comes after her from inside the building. He pounces, pinning down her body with his and grabbing her by the throat. The sound of ripping fabric follows as he pulls off her skirt, revealing a massive green cock between the cheerleader's legs. Pulling up his own loincloth, the furred guy turns out to have a pussy, which he sinks eagerly down on the cheerleader's erection.";
@@ -188,7 +189,7 @@ When Play begins:
 	now lootchance entry is 30;         [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]large[or]muscular[at random]";
 	now type entry is "humanoid";
@@ -337,7 +338,7 @@ name	desc	weight	object
 
 red fur is a grab object.
 the usedesc of red fur is "[redfuruse]".
-it is part of the player.
+
 It is temporary.
 
 to say redfuruse:

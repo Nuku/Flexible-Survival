@@ -5,10 +5,11 @@ Object	Name
 Hidden Grate	"Hidden Grate"
 
 Hidden Grate is a situation.
+ResolveFunction of Hidden Grate is "[ResolveEvent Hidden Grate]".
 The sarea of Hidden Grate is "Park".
 
 
-instead of resolving a Hidden Grate:
+to say ResolveEvent Hidden Grate:
 	say "As you wander through the bushes in the park, seeking after an old park zone you remember fondly from childhood, you trip, landing face down on a metal grate.";
 	say "The grate doesn't seem to be too heavy. Maybe you could lift it?";
 	if Player consents:
@@ -78,7 +79,8 @@ to searching the sewers: [this is copied from the scavenge function, with minor 
 	let the dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 10: ";
 	if dice plus bonus > 7:
-		try resolving potential resources;
+		say "[ResolveFunction of Potential Resources]";
+		try looking;
 	else:
 		say "Your search turns up empty.";
 	if battleground is "", now battleground is "Mall";

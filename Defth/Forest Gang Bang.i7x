@@ -7,12 +7,13 @@ Object	Name
 Pack Bang	"Pack Bang"
 
 Pack Bang is a situation.
+ResolveFunction of Pack Bang is "[ResolveEvent Pack Bang]".
 The sarea of Pack bang is "Forest".
 When play begins:
 	add Pack Bang to badspots of FeralList;
 	add Pack Bang to BadSpots of MaleList;
 
-Instead of resolving a Pack Bang:
+to say ResolveEvent Pack Bang:
 	say "     Going around what appears to be a darker path in the south part of the forest, you find a place that looks abandoned. Leaves crack under your feet, and branches that have overgrown onto the path get in your way. The only sign that something was here is the path in itself that's big enough for walks or bicycles. It looks really peaceful, but the noises in the background means that you are not alone in here. Howls permeate the place, echoing in the dark part where your eyes can't discern, but you know that you are now likely the prey of a pack of wolves.";
 	now inasituation is true;
 	now FeralWolfSpecialFightNumber is 1; [pack members]

@@ -6,6 +6,7 @@ Object	Name
 Soldier Squad	"Soldier Squad"
 
 Soldier Squad is a situation.
+ResolveFunction of Soldier Squad is "[ResolveEvent Soldier Squad]".
 The sarea of Soldier Squad is "Warehouse".
 when play begins:
 	add Soldier Squad to BadSpots of MaleList;       [male soldiers]
@@ -14,7 +15,7 @@ when play begins:
 
 SquadEncounters is a number that varies. SquadEncounters is usually 0.
 
-Instead of resolving a Soldier Squad:
+to say ResolveEvent Soldier Squad:
 	if debugactive is 1:
 		say "     DEBUG -> ENCOUNTER # [SquadEncounters] <- DEBUG[line break]";
 	if SquadEncounters is 0:
@@ -278,12 +279,13 @@ Object	Name
 Human Urges	"Human Urges"
 
 Human Urges is a situation.
+ResolveFunction of Human Urges is "[ResolveEvent Human Urges]".
 The sarea of Human Urges is "Red".
 when play begins:
 	add Human Urges to BadSpots of MaleList;      [male soldier]
 	add Human Urges to BadSpots of FemaleList;     [female soldier]
 
-Instead of resolving a Human Urges:
+to say ResolveEvent Human Urges:
 	say "     As you wander through one of the residential areas next to this seedy section of town, you hear moaning coming from an open window of a nearby house. Curious what kind of creatures are in there, you slowly walk closer, careful not to make a sound. When you arrive at the window and peek inside, you see that it's... humans. Their city-camouflage clothing strewn about on the floor and rifles leaning against the opposite wall, you see two soldiers in intimate embrace on a bed. It's a man and a woman, with his hips pumping up and down as he fucks her with fast strokes while she holds him close to her body. One doesn't have to be infected with nanites to feel the basic urges of human existence - and with what's going on in the city and the sexual sights around here especially, those two turned to each other to let off some steam.";
 	say "     You silently watch them go at it, sliding your hand down to your own crotch to stroke yourself. Both of the soldiers look pretty good, sweat glistening on their trained bodies as they move in unison. Soon, the woman's moans rise as she gets closer and closer, then turn into full-fledged lustful screams as she orgasms. Her partner isn't far behind, plunging his shaft deep into her pussy and grunting with each shot of semen he cums into her. They lie on the bed in each other's arms for a moment, then the man pulls his cum-dripping cock out of her and stands up, going for a pack of cigarettes lying on a dresser nearby. The woman just lies there, softly stroking her wet pussy lips as she rides out the last bit of her orgasm. Unseen, but deep inside her, her partner's sperm race onwards, doing their duty in the battle to keep humanity going. The fastest of them soon finds a fertile egg, burrowing into it and starts a new life. Only time will tell if its parents succeed in their mission to protect humanity or if it and they will become something different in the end.";
 	increase score by 5;
@@ -295,6 +297,7 @@ Object	Name
 Soldiers & Snowmeows	"Soldiers & Snowmeows"
 
 Soldiers & Snowmeows is a situation.
+ResolveFunction of Soldiers & Snowmeows is "[ResolveEvent Soldiers & Snowmeows]".
 The sarea of Soldiers & Snowmeows is "Red".
 when play begins:
 	add Soldiers & Snowmeows to BadSpots of MaleList;      [male soldier & snow leopard]
@@ -308,7 +311,7 @@ SnowmeowSoldierStatus is a number that varies. SnowmeowSoldierStatus is usually 
 [  2: player bred Bob                     ]
 [  3: Lee transformed in the store        ]
 
-Instead of resolving a Soldiers & Snowmeows:
+to say ResolveEvent Soldiers & Snowmeows:
 	if debugactive is 1:
 		say "     DEBUG -> SNOWMEOWSOLDIERSTATUS [SnowmeowSoldierStatus] <- DEBUG[line break]";
 	if SnowmeowSoldierStatus is 0:
@@ -390,12 +393,13 @@ Object	Name
 Dangerous Load	"Dangerous Load"
 
 Dangerous Load is a situation.
+ResolveFunction of Dangerous Load is "[ResolveEvent Dangerous Load]".
 The sarea of Dangerous Load is "Outside".
 when play begins:
 	add Dangerous Load to BadSpots of MaleList;
 	add Dangerous Load to BadSpots of FurryList;
 
-Instead of resolving a Dangerous Load:
+to say ResolveEvent Dangerous Load:
 	say "     Wandering through the mostly empty streets, skirting around piles of rubble and wrecked cars, you can't help but think how quiet it is - too quiet for comfort really, as this makes you wonder what monster might be hiding behind the next corner. Then, as you come to the next street intersection and peek around the edge of a brick building, you are surprised by the fact that it isn't one of the infected in some sort of strange shape that you see. No, instead there are two humans just a few steps away - dressed in army fatigues and armed with rifles.";
 	say "     The men spot you at the same time as you see them, and the front man - twenty-something, brown-haired and with a manly, square-jawed face, a corporal from his rank markings - brings up his weapon in a flash and calls out to you, 'Step out where I can see you. NOW!' Somewhat intimidated by his threatening pose, you comply, giving the man a questioning look as you slowly raise your hands. 'Are there any more around the corner behind you?' he demands to know, relaxing a little bit again as you shake your head in what seems to be a sufficiently honest way.";
 	WaitLineBreak;
@@ -452,12 +456,13 @@ Object	Name
 Lone Soldier	"Lone Soldier"
 
 Lone Soldier is a situation.
+ResolveFunction of Lone Soldier is "[ResolveEvent Lone Soldier]".
 The sarea of Lone Soldier is "Outside".
 when play begins:
 	add Lone Soldier to BadSpots of MaleList;
 	add Lone Soldier to BadSpots of FurryList;
 
-Instead of resolving a Lone Soldier:
+to say ResolveEvent Lone Soldier:
 	say "     Wandering through the mostly empty streets, skirting around piles of rubble and wrecked cars, you can't help but think how quiet it is - too quiet for comfort really. Therefore you're not really surprised when grunts, growls and shouts echo out of a nearby alley, drawing your attention. Being the curious person that you are, you do a little sprint over to the opening of said alley and peek inside. The fight going on in the alley is between two anthro hyenas in leather jackets and a male soldier. As you stick your head around the corner, the muscular black guy just punches the first of his attackers right in the muzzle, sending her sprawling on the floor. This enrages the second hyena quite a bit, who throws himself on the soldier, earning him a painful punch to the side but also forcing the human into close-up wrestling to keep the hyena's gnashing teeth from his throat.";
 	say "     You find yourself drawn into watching the muscular soldier struggle with his opponent - lots of punching, squeezing, scratching, biting, and even some groping from the hyena. This guy is clearly no novice to fighting and uses ALL weapons available to him - including the fact that the nanites override people's will to resist if they get horny enough. The conclusion of their fight is uncertain for a while - but eventually the soldier starts to get the upper hand as he manages to catch the canine's closed maw in grip. With the threat of being bitten momentarily removed, the human uses his handhold to twist back his enemy's head, then slams a shoulder into the anthro's chest to bull-rush him into the nearest wall. With a hollow thunk, the hyena's head impacts the bricks, after which his human opponent lets go, allowing the canine to crumple bonelessly to the floor. He is still alive, from what you can see - with the nanites, most wounds heal sooner or later after all - but surely out for the count.";
 	WaitLineBreak;
@@ -568,11 +573,12 @@ Object	Name
 Containment Barrier	"Containment Barrier"
 
 Containment Barrier is a situation.
+ResolveFunction of Containment Barrier is "[ResolveEvent Containment Barrier]".
 The sarea of Containment Barrier is "Outside".
 
 ContainmentBarrierEncounters is a number that varies.
 
-Instead of resolving a Containment Barrier:
+to say ResolveEvent Containment Barrier:
 	if ContainmentBarrierEncounters is 0:
 		say "     Moving on and on through the city, you eventually come upon an area where the city just stops suddenly. And not just in one spot, but a wide band extending left and right. Beyond the alley you are standing in, a solid block's worth of buildings has been flattened - through the use of explosives, from the scorched looks of it. Several excavators are actively moving around, pushing rubble to fill the caved-in roads. Seems like someone remembered that the sewers were also a possible access path and destroyed them through the use of more explosives. The question of who is doing all this is easy enough to answer, as there are numerous soldiers visible on the other side of this line cutting through the outer city. And not only that - there's a tank at a street-crossing a little ahead too!";
 		say "     You are still contemplating maybe walking out of the alley and letting them take you in for quarantine or something, when a prerecorded message starts to blare from a series of set-up speakers: 'Please remain in your homes. A red-code quarantine is under effect. We will be forced to shoot at anyone approaching the containment zone.' Well, that's clear enough - you keep your distance and quietly wander back up the alley you are in. Seems like you'll have to survive within the city after all, with this easy out denied to you.";

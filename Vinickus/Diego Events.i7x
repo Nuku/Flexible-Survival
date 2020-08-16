@@ -5,7 +5,8 @@ Table of GameEventIDs (continued)
 Object	Name
 Trickster	"Trickster"
 
-Trickster is a situation. The level of Trickster is 4.
+Trickster is a situation.
+ResolveFunction of Trickster is "[ResolveEvent Trickster]". The level of Trickster is 4.
 The sarea of Trickster is "Outside".
 wolffight is a number that varies.
 when play begins:
@@ -13,7 +14,7 @@ when play begins:
 	add Trickster to BadSpots of MaleList;
 	add Trickster to BadSpots of FemaleList;
 
-instead of resolving a Trickster:
+to say ResolveEvent Trickster:
 	setmonster "Feral Wolf";
 	say "     As you are traveling along, you spot some activity in the distance. At first, fearing that it is another band of monsters, you take cover. But a few moments later, you discover it to be a small team of soldiers moving stealthily through the city. They may be doing recon or on some other kind of mission, but you may be able to get assistance, or even be rescued by them. But even as you're walking up and trying to decide how best to approach them, you see a coyote [if Diegochanged is 0]man[else if Diegochanged is 1]herm[else]woman[end if] carrying a large sack dash into their midst[if PlayerMet of Diego is true and Diegochanged is 0]. You recognize Diego, the coyote trickster, and have to wonder what he is up to this time[else if PlayerMet of Diego is true]. You recognize Diego, the coyote trickster, and have to wonder what she is up to this time[end if][if Diegochanged is 0]. He[else]. She[end if] passes the bag quickly to a flabbergasted soldier with a quick 'Here, hold this' before continuing on with a happy chuckle.";
 	say "     As the stunned soldiers watch the coyote run off in the direction of the city park and look at the mysterious sack, you hear some approaching howls. If you're going to get out of here, you'll have to do it right now.";
@@ -77,13 +78,14 @@ Table of GameEventIDs (continued)
 Object	Name
 Prank Aftermath	"Prank Aftermath"
 
-Prank Aftermath is a situation. Prank Aftermath is inactive. The level of Prank Aftermath is 7.
+Prank Aftermath is a situation.
+ResolveFunction of Prank Aftermath is "[ResolveEvent Prank Aftermath]". Prank Aftermath is inactive. The level of Prank Aftermath is 7.
 The sarea of Prank Aftermath is "Outside".
 when play begins:
 	add Prank Aftermath to BadSpots of FurryList;
 	add Prank Aftermath to badspots of HermList;
 
-instead of resolving a Prank Aftermath:
+to say ResolveEvent Prank Aftermath:
 	say "     As you travel through the city, you hear some moaning mewls coming from up ahead. On your guard, you sneak forward and take in the sight of several of those puma creatures playing with what was once a team of six soldiers. The cougars have the men pinned to the ground and are having their way with them. As you watch, the cougars force them to nurse from their breasts or suck their cocks until they develop a wet, new pussy for the herm kitties to fuck. Outnumbered, the soldiers have no chance to escape and there are several felines waiting for their turn to sate their lusts on the transforming humans.";
 	say "     Not normally native to this part of the city, you start to wonder how such a large band of the felines got here when you spot one of them eating a large fish from a basket while she waits for her next turn with the new breedtoys. Remembering that you told Diego an idea you had about using fish to lure some of the felines around for a prank, it seems you've run into the aftermath of your idea";
 	if Libido of Player - humanity of Player < -25:
@@ -116,13 +118,14 @@ Table of GameEventIDs (continued)
 Object	Name
 Prankster's Delight	"Prankster's Delight"
 
-Prankster's Delight is a situation. The level of Prankster's Delight is 7.
+Prankster's Delight is a situation.
+ResolveFunction of Prankster's Delight is "[ResolveEvent Prankster's Delight]". The level of Prankster's Delight is 7.
 The sarea of Prankster's Delight is "Outside".
 when play begins:
 	add Prankster's Delight to BadSpots of FurryList;
 	add Prankster's Delight to Badspots of MaleList;
 
-instead of resolving a Prankster's Delight:
+to say ResolveEvent Prankster's Delight:
 	say "     It's just another walk through the desolate city. Chaos, moans, some scattered fires, nothing of interest comes about until you hear snickering off to the side. It appears to be coming from an alley up ahead, and as you get closer, you hear the snickering get louder and more familiar. However, just when you round the corner, the laughter stops, and nothing out of the ordinary catches your eye. Chalking it up to something best not messed with, you continue past the alley. Not ten minutes later there's a loud screech, and seconds after that you hear a cacophony of screaming metal and falling rubble. It takes a minute to pin down the exact street to run towards, but the shouts that soon start up help clue you in.";
 	say "     When you get within a good distance to make out what's being yelled about, you perk your ears and hold steady, almost holding your breath as you try to hear exactly what's going on. 'Get this damn truck out of the way!' a gruff voice sounds out. 'With what, sir?!' The second voice sounds shaken, impatient and yet fearful. Whether the accident set him off, his CO, or something else, you can't be sure. Your best guess is that they may have been under a lot of strain and everything is slowly wearing them down. After you begin to relax and move closer, you hear a snickering, the exact same snickering from before: directly above your head. Glancing up you see the orange fur of some kind of canine, his tail flicking back and forth in what looks like amusement. It's hard to make out the rest the person, or even the face, but it's quite clear they're lithe with a bit of muscle.";
 	say "     [if park entrance is unknown]Bewildered by the new appearance, you stay stock still to avoid attention[else]You sigh to yourself as you realize who the assailant is[end if].";

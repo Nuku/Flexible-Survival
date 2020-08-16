@@ -22,9 +22,10 @@ Object	Name
 Working Out	"Working Out"
 
 Working Out is a situation.
+ResolveFunction of Working Out is "[ResolveEvent Working Out]".
 the sarea of Working Out is "Campus".
 
-Instead of resolving a Working Out:
+to say ResolveEvent Working Out:
 	say "     You come across a large building; through the glass windows you can see rows of exercise equipment. The whole setup is still in remarkably good shape. This must have been the campus's gym! Interestingly enough, it appears to still be occupied; you can see some figures moving inside. Do you want to check inside now?";
 	if Player consents:
 		say "You mark the location of the gym on your map before walking through the entrance into the strange gym.";

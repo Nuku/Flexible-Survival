@@ -200,10 +200,11 @@ Table of GameEventIDs (continued)
 Object	Name
 Memories of the Mall	"Memories of the Mall"
 
-Memories of the Mall is a situation. It is inactive.
+Memories of the Mall is a situation.
+ResolveFunction of Memories of the Mall is "[ResolveEvent Memories of the Mall]". It is inactive.
 The sarea of Memories of the Mall is "Outside".
 
-Instead of resolving a Memories of the Mall:
+to say ResolveEvent Memories of the Mall:
 	say "     As you're walking around the city, you find your mind wandering back to the mall, and more specifically, to your rat girlfriend waiting there. Little things you keep seeing remind you of her - stuff like the way that husky's breasts bounce when she runs, or the tight ass on that other mutant, or the unchanged rat you see scurrying between some trash cans. Unable to get your sexy girlfriend off your mind, you change directions and strike off towards the mall to see her again. Once you arrive, you make your way back to the atrium to see her again.";
 	if Libido of Player < 50, increase Libido of Player by 5;
 	increase lastfuck of Lucy by 6; [ready for more sex]

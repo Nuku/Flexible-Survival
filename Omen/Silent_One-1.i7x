@@ -8,6 +8,7 @@ Object	Name
 The Silent One	"The Silent One"
 
 The Silent One is a situation.
+ResolveFunction of The Silent One is "".
 The sarea of The Silent One is "Nowhere".
 
 when play begins:

@@ -17,9 +17,10 @@ Table of GameEventIDs (continued)
 Object	Name
 Intact Fountain	"Intact Fountain"
 
-Intact Fountain is a situation. The sarea of Intact Fountain is "Campus".
+Intact Fountain is a situation.
+ResolveFunction of Intact Fountain is "[ResolveEvent Intact Fountain]". The sarea of Intact Fountain is "Campus".
 
-instead of resolving an intact fountain:
+to say ResolveEvent Intact Fountain:
 	say "     You find a public fountain, intact and even with the water still running despite everything going on in the city and campus. However it looks like the water's purity is less than ensured, judging by the clothing scattered liberally on the ground and sometimes hanging over its edge and dipping into the liquid. The broad rim seems to have been a convenient place for anyone to sit down and fuck on, so you see quite a few splatters of cum and milk on the stone and clouding the formerly clear water. You have no doubt that countless strains of nanites swirl around in this fountain. You could still drink, or maybe collect some samples, but it is at your own risk.";
 	say "Do you drink?";
 	if Player consents:

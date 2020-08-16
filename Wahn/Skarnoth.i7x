@@ -346,7 +346,7 @@ Section 4 - Events
 instead of going northwest from Grey Abbey Library while (HP of Skarnoth > 1):
 	move player to Half-Renovated Room;
 	if debugactive is 1:
-		say "     DEBUG: SKARNOTH WALK-IN - HP OF SKARNOTH: [HP of Skarnoth], THIRST OF Skarnoth: [thirst of Skarnoth][line break]";
+		say "     DEBUG: SKARNOTH WALK-IN - HP of SKARNOTH: [HP of Skarnoth], THIRST OF Skarnoth: [thirst of Skarnoth][line break]";
 	say "     .";
 ]
 
@@ -408,7 +408,7 @@ When Play begins:
 	now lootchance entry is 0;         [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4;              [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]demonic[or]infernal[or]powerful[at random]";
 	now type entry is "[one of]demon[at random]";

@@ -30,6 +30,7 @@ Object	Name
 Forced Adoption	"Forced Adoption"
 
 Forced Adoption is a situation.
+ResolveFunction of Forced Adoption is "[ResolveEvent Forced Adoption]".
 
 The sarea of Forced Adoption is "High".
 when play begins:
@@ -37,7 +38,7 @@ when play begins:
 	add Forced Adoption to BadSpots of FemaleList;
 	add Forced Adoption to BadSpots of FurryList;
 
-Instead of Resolving a Forced Adoption:
+to say ResolveEvent Forced Adoption:
 	if HP of Rex is 0:
 		say "     As you walk down the street of what remains of an upscale neighborhood on the outskirts of the high rise district, you spot a figure up ahead and duck out of sight before they spot you. As the figure gets closer you see that she is an attractive female canine with a thick coat of golden fur, much like the other retriever girls you've seen around the district. From your hiding place you can see she is clutching something against her ample chest with both hands.";
 		say "     She glances around nervously as she walks, when suddenly another figure, a large powerful looking male retriever, steps out of a nearby alley into her path, cutting her off. The retriever girl runs into him and stumbles backward, falling to the ground and dropping whatever she was carrying. Without even acknowledging the male's presence, she begins scrambling around on all fours, looking for her prize, until she comes face to face with his erect canine cock. Slowly she looks up over his body until she is staring lustfully into his eyes. The large male then reaches down and picks up the entranced girl, carrying her back down the alley he emerged from as she whimpers needfully.";

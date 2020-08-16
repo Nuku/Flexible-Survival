@@ -61,6 +61,9 @@ Version 1 of Bad Alexandra by Wahn begins here.
 [ 5 = licked her                                    ]
 [ 6 = tits                                          ]
 [ 7 = 69                                            ]
+[ 79 = Nelson oral                                  ]
+[ 80 = Nelson cunn                                  ]
+[ 81 = Nelson                                       ]
 [ 82 = Farmhand Horsemen oral                       ]
 [ 83 = Farmhand Horsemen cunn                       ]
 [ 84 = Farmhand Horsemen                            ]
@@ -239,7 +242,9 @@ to say alexandradesc_bg:
 			say "There is a damp stain on the ass of her jeans under her short tail from the recent fucking you gave the dobie's backside. ";
 		else if ( lastdobiemess is 5 or lastdobiemess is 7 ): [player licked her]
 			say "The crotch of her jeans is wet with the excess juices from her recent climax. ";
-		else if lastdobiemess is 85 or lastdobiemess is 86 or lastdobiemess is 87: [Karel/Isaac]
+		else if lastdobiemess is 79 or lastdobiemess is 80 or lastdobiemess is 81: [Nelson]
+			say "The crotch of her jeans is wet with the stains of recent sex that smell strongly of zebra. ";
+		else if lastdobiemess is 82 or lastdobiemess is 83 or lastdobiemess is 84 or lastdobiemess is 85 or lastdobiemess is 86 or lastdobiemess is 87: [Horsemen/Karel/Isaac]
 			say "The crotch of her jeans is wet with the stains of recent sex that smell strongly of horseman. ";
 		else if lastdobiemess is 88 or lastdobiemess is 89 or lastdobiemess is 90: [Brutus]
 			say "The crotch of her jeans is wet with the stains of recent sex that smell strongly of demon brute. ";
@@ -273,8 +278,8 @@ to say alexandradesc_bg:
 	if lastfuck of Alexandra - turns < 5:
 		if (lastdobiemess is 3 or lastdobiemess is 6 or lastdobiemess is 97):
 			say "The dobie's muzzle is streaked with dry patches of your cum that she's occasionally licks at. ";
-		else if (lastdobiemess is 85):
-			say "The dobie's muzzle is streaked with dry patches of equine's cum that she's occasionally licks at. ";
+		else if (lastdobiemess is 73 or lastdobiemess is 82 or lastdobiemess is 85):
+			say "The dobie's muzzle is streaked with dry patches of equine cum that she's occasionally licks at. ";
 		else if (lastdobiemess is 88):
 			say "The dobie's muzzle is streaked with dry patches of Brutus's cum that she's occasionally licks at. ";
 		else if (lastdobiemess is 91):
@@ -917,7 +922,7 @@ to say badAlexandraSex10: [Threesome with Fang]
 	if Player is male: [sucks cock]
 		say ". She slides her canine tongue along your cock and balls before sliding her muzzle over your meat. Her long tongue licks eagerly along your shaft while the wolf's thrusts press her forward onto it[if lastdobiemess is 3 or lastdobiemess is 4 or lastdobiemess is 6 or lastdobiemess is 7 or lastdobiemess is 97 or lastdobiemess is 98]. Her muzzle, still a little messy from the last time you used it, opens wide to get another taste of you[end if]. She rubs her paws over your [Ball Size Adjective of Player] [Balls][if Cunt Count of Player > 1] and finger your pussies[else if Cunt Count of Player is 1] and finger your pussy[end if][if Cock Count of Player > 1]. She alternates between your cocks, alternating between paws and muzzle on each of them[end if][if lust of Alexandra > 12]. You can't help but grin as you look down at the pregnant bitch eagerly working over the cock that's knocked her up[end if].";
 		say "     [if Cock Length of Player > 30]The size of your [cock size desc of Player] [Cock of Player] rod makes it difficult for the dobie bitch to cope, but between Fang's insistent pounding from behind and you pushing in from the front, you manage to stuff your massive shaft down her throat, distending her mouth and body around it[else if Cock Length of Player > 20]The size of your [cock size desc of Player] [Cock of Player] rod makes it a little difficult for the dobie bitch to cope, but with the help of Fang's insistent pounding from behind her, you manage to stuff your massive shaft down her throat, causing a visible bulge in her mouth and throat[else if Cock Length of Player > 10]Your [cock size desc of Player] [Cock of Player] rod stuffs your dobie bitch's muzzle and throat nicely, letting you fuck her muzzle and deep throat her while she's getting pounded from behind[else]Your [cock size desc of Player] [Cock of Player] cock is easily handled by the dobie bitch's muzzle, leaving her free to slather it with her tongue while she's getting pounded from behind[end if][if Player is knotted]. She rubs at your swollen knot and slides her tongue across it with a low, muffled moan[end if]. As you fuck her face, you rub a hand over her head and scritch her ears, calling her your slutty bitch who bends over for the animals.";
-		say "     [if Cock Length of Player > 20]She does her best to cope with your [cock size desc of Player] shaft[else]She lavishes attention upon your [cock size desc of Player] shaft[end if] while the wild beast atop her fucks her. Her paws rub and stroke at your exposed length whenever she pulls her muzzle back for a breath and over your [Ball Size Adjective of Player] [Balls][if Cunt Count of Player > 1] and [cunt size desc of Player] cunts[else if Cunt Count of Player is 1] and [cunt size desc of Player] cunt[end if] the rest of the time. You rub Fang's head[if HP of Fang is 3 or HP of Fang is 4], telling your strong alpha to fuck that bitch hard[else if hp of Fang is 5], telling him show her how deep pack-bonds run[else] as you would a dog, telling him to fuck that bitch hard[end if], causing the ex-cop to whimper in shameful delight.";
+		say "     [if Cock Length of Player > 20]She does her best to cope with your [cock size desc of Player] shaft[else]She lavishes attention upon your [cock size desc of Player] shaft[end if] while the wild beast atop her fucks her. Her paws rub and stroke at your exposed length whenever she pulls her muzzle back for a breath and over your [Ball Size Adjective of Player] [Balls][if Cunt Count of Player > 1] and [cunt size desc of Player] cunts[else if Cunt Count of Player is 1] and [cunt size desc of Player] cunt[end if] the rest of the time. You rub Fang's head[if HP of Fang is 3 or HP of Fang is 4], telling your strong alpha to fuck that bitch hard[else if HP of Fang is 5], telling him show her how deep pack-bonds run[else] as you would a dog, telling him to fuck that bitch hard[end if], causing the ex-cop to whimper in shameful delight.";
 		if lust of Alexandra > 12:
 			say "     Alexandra releases a muffled moan around your cock as her hips quiver and her tonguework becomes more frantic. Grinning and knowing she's cumming from the humiliating fuck she's getting, you scritch her ears and call her your good, bad girl through gritted teeth, cumming moments later [if Cock Length of Player > 20]directly into her belly[else if Cock Length of Player > 10]down her throat[else]into her sucking muzzle[end if]. Fang howls as well as he pumps his hot wolf semen into her, having tied with the doggy bitch. Between your [Cum Load Size of Player] load and Fang's, [if Ball Size of Player > 6]her already swollen belly is left so big she can hardly move at all. She can only lie there, rubbing her overfull tummy while moaning in pleasure[else if Ball Size of Player > 5]leaving her with a bloated bellyful of semen that further inflates her rounded belly. She is left her so full and plump that she chooses to lie there, rubbing her bulging belly[else]she happily swallows down all she can get while the wolf's seed fills her womb. She happily rubs her paws over her full belly as she heads back to her post[end if].";
 		else:
@@ -927,7 +932,7 @@ to say badAlexandraSex10: [Threesome with Fang]
 	else: 	[eats pussy]
 		say ". She slides her canine tongue along your wet folds before sliding it into you[if lastdobiemess is 3 or lastdobiemess is 4 or lastdobiemess is 6 or lastdobiemess is 7 or lastdobiemess is 97 or lastdobiemess is 98]. Her muzzle, still a little messy from the last time you used it, sets to work eagerly to get another taste of you[end if]. Her long tongue licks eagerly along your inner walls and lap up your flowing juices while the wolf's thrusts press her cool nose against your clit[if Cunt Count of Player > 1]. For a while, she alternates between your pussies, licking at each of them before finally settling on one and using her fingers to rub at your wet folds[end if][if lust of Alexandra > 12]. You can't help but grin as you look down at the pregnant bitch eagerly lapping at your twat, knowing that you're the one who's knocked her up after fucking her juicy cunt[end if].";
 		say "     [if Cunt Depth of Player > 12 and Cunt Tightness of Player > 8]She licks and laps at your vagina as deeply as she can reach with her tongue while your grind your [cunt size desc of Player] pussy against her muzzle. Wanting more and helped along by Fang's rough pounding, you end up pulling most of her muzzle into your spacious cunt, essentially fucking yourself with it while her tongue dives deeper. She seems quite pleased to be used by you in this manner, the slutty doggy bitch lusting for any way you'd like to use or abuse her[else if Cunt Depth of Player > 6]She licks and laps as deep as she can with her long doggy tongue while Fang's thrusting grinds her muzzle against [cunt size desc of Player] pussy[else]She licks and laps at your vagina, reaching your very depths to brush across your cervix while Fang's thrusting grinds her muzzle against your [cunt size desc of Player] pussy[end if]. Her excited panting brushes across your folds while that broad tongue of hers runs along your inner walls and stimulates you deep inside. As you fuck her face, you rub a hand over her head and scritch her ears, calling her your slutty bitch who bends over for the animals.";
-		say "     [if Cunt Depth of Player > 12 and Cunt Tightness of Player > 8]With her muzzle stuffed in your cunt, she works her tongue frantically, licking at your inner walls and reaching as deep as she can with it as she chases after your juices. She turns and rocks her muzzle inside you as best she can with the wild beast pistoning into her, letting the soft fur over it run across your sensitive walls[else]With her muzzle pressed to your cunt, she works her tongue inside you frantically, licking at your inner walls and chasing after your juices as best she can with the wild beast pistoning into her[end if]. Shivers of delight run through you as you hold her in place, keeping her at her task. With your juices filling her muzzle, your scent filling her nose and wolf cock filling her cunt, the horny bitch whines lustfully and does her best to please you both. You rub Fang's head[if HP of Fang is 3 or HP of Fang is 4], telling your strong alpha to fuck that bitch hard[else if hp of Fang is 5], telling him show her how deep pack-bonds run[else] as you would a dog, telling him to fuck that bitch hard[end if], causing the ex-cop to whimper in shameful delight.";
+		say "     [if Cunt Depth of Player > 12 and Cunt Tightness of Player > 8]With her muzzle stuffed in your cunt, she works her tongue frantically, licking at your inner walls and reaching as deep as she can with it as she chases after your juices. She turns and rocks her muzzle inside you as best she can with the wild beast pistoning into her, letting the soft fur over it run across your sensitive walls[else]With her muzzle pressed to your cunt, she works her tongue inside you frantically, licking at your inner walls and chasing after your juices as best she can with the wild beast pistoning into her[end if]. Shivers of delight run through you as you hold her in place, keeping her at her task. With your juices filling her muzzle, your scent filling her nose and wolf cock filling her cunt, the horny bitch whines lustfully and does her best to please you both. You rub Fang's head[if HP of Fang is 3 or HP of Fang is 4], telling your strong alpha to fuck that bitch hard[else if HP of Fang is 5], telling him show her how deep pack-bonds run[else] as you would a dog, telling him to fuck that bitch hard[end if], causing the ex-cop to whimper in shameful delight.";
 		say "     Alexandra releases a [if Cunt Depth of Player > 12 and Cunt Tightness of Player > 8]muffled moan from inside your clenching pussy[else]long moan[end if] as her hips quiver and her tonguework becomes more frantic. Grinning and knowing she's cumming from the humiliating fuck she's getting, you scritch her ears and call her your good, bad girl through gritted teeth, cumming moments later with a gush of juices. You soak the [if lust of Alexandra > 12]pregnant [end if]bitch's muzzle as she tries her best to lap it all up as Fang starts to howl as he pumps his hot wolf semen into her, having tied with the doggy bitch. This sends you into another orgasm, drawing out your pleasure even further. As you're panting and trying to recover you push her back, popping that tongue out of you with a wet slurp. She smiles up at you and slowly licks your juices from her muzzle while still tied to the wolf cumming inside her.";
 		NPCSexAftermath Alexandra receives "OralPussy" from Player;
 	now lastdobiemess is 98;
@@ -1334,6 +1339,7 @@ Object	Name
 AlexandraHornyTrait	"AlexandraHornyTrait"
 
 AlexandraHornyTrait is a situation.
+ResolveFunction of AlexandraHornyTrait is "".
 AlexandraHornyTrait is inactive.
 The sarea of AlexandraHornyTrait is "Nowhere".
 
@@ -1367,6 +1373,7 @@ Object	Name
 AlexandraBroodmTrait	"AlexandraBroodmTrait"
 
 AlexandraBroodmTrait is a situation.
+ResolveFunction of AlexandraBroodmTrait is "".
 AlexandraBroodmTrait is inactive.
 The sarea of AlexandraBroodmTrait is "Nowhere".
 
@@ -1409,6 +1416,7 @@ Object	Name
 AlexandraPlayersBitch	"AlexandraPlayersBitch"
 
 AlexandraPlayersBitch is a situation.
+ResolveFunction of AlexandraPlayersBitch is "".
 AlexandraPlayersBitch is inactive.
 The sarea of AlexandraPlayersBitch is "Nowhere".
 

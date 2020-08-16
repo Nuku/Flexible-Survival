@@ -19,6 +19,7 @@ Object	Name
 Campus Lovers	"Campus Lovers"
 
 Campus Lovers is a situation.
+ResolveFunction of Campus Lovers is "[ResolveEvent Campus Lovers]".
 The sarea of Campus Lovers is "Campus".
 
 when play begins:
@@ -33,7 +34,7 @@ instead of going to Dorm Street while (Campus Lovers is active and Campus Lovers
 	move player to Dorm Street;
 	CampusLoversEvent;
 
-instead of resolving Campus Lovers:
+to say ResolveEvent Campus Lovers:
 	CampusLoversEvent;
 
 to CampusLoversEvent:

@@ -302,7 +302,7 @@ name	desc	weight	object
 "Janice's blouse"	"This designer blouse is a gift from Janice to Kristen."	1	Janice's blouse
 
 Janice's blouse is a grab object.
-it is part of the player.
+
 It is not temporary.
 
 instead of using Janice's blouse:

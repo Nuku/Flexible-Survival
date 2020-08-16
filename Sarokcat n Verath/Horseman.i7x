@@ -180,7 +180,7 @@ name	desc	weight	object
 
 horse fur is a grab object.
 the usedesc of horse fur is "[HorseFurUse]".
-it is part of the player.
+
 It is temporary.
 
 to say HorseFurUse:
@@ -251,7 +251,7 @@ When Play begins:
 	now lootchance entry is 10;          [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "horseman cum";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]strong[at random]";
 	now type entry is "[one of]equine[or]horse-like[at random]";

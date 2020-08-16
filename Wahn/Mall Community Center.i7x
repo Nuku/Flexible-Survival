@@ -27,9 +27,10 @@ Object	Name
 Free Handouts	"Free Handouts"
 
 Free Handouts is a situation.
+ResolveFunction of Free Handouts is "[ResolveEvent Free Handouts]".
 The sarea of Free Handouts is "Smith Haven".
 
-Instead of resolving a Free Handouts:
+to say ResolveEvent Free Handouts:
 	FreeHandoutsEvent;
 
 after going to Mall West Wing while (Free Handouts is active and Free Handouts is not resolved):

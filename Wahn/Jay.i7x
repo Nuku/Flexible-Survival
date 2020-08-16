@@ -250,10 +250,11 @@ Object	Name
 Harbor Swap Meet	"Harbor Swap Meet"
 
 Harbor Swap Meet is a situation.
+ResolveFunction of Harbor Swap Meet is "[ResolveEvent Harbor Swap Meet]".
 Harbor Swap Meet is inactive.
 The sarea of Harbor Swap Meet is "Warehouse".
 
-Instead of resolving a Harbor Swap Meet:
+to say ResolveEvent Harbor Swap Meet:
 	if thirst of Jay is 2:
 		say "     Seeing a spray-painted sign that reads 'Swap Meet', with an arrow pointing to a nearby warehouse, you remember the request from Santa Claws about checking the place for fabric to make Jay a suit. What awaits you in the warehouse are a number of people of all sorts of species, mostly with tarps spread out on the floor in front of them, covered with various wares being presented. A moderate number of customers are scattered inside of the hall, looking over what is on offer or already bartering for this or that. Joining them, you make a circuit through the room and ask around for any fabric or thread that the vendors might have. Sadly none of them can offer you anything usable. You are almost ready to call it a day when a friendly siren that overheard your request points you to a dark corner of the room and says, 'Maybe the taur will help you. Go ring for him.'";
 		say "     Thanking the woman, you walk the way that she indicated, and after a few steps it becomes apparent that there is one more trader that you haven't yet spoken to. A small hand bell is hanging from a barely visible silk thread in the corner, connected to a sizable structure far above, strung up between the ceiling and wall of the warehouse. Looks like a vaguely oval spider's nest, fit to hold a horse. Taking hold of the bell, you ring it, which draws the inhabitant of the structure above from the inside, lowering himself to your level by a thick strand of silk. This gives you a few seconds to study the large male: his lower body consists of the legs and abdomen of a big spider, sheathed in gleaming black chitin, while his upper body looks human, with rippling muscles under black skin. He has pale-white hair, bound together as a long ponytail behind his back[if SpidertaurRelationship > 3] and you know him by name - it is Aelias, the very spidertaur that you had several encounters with before[end if].";

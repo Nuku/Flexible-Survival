@@ -67,13 +67,14 @@ Object	Name
 Captured Soldier	"Captured Soldier"
 
 Captured Soldier is a situation.
+ResolveFunction of Captured Soldier is "[ResolveEvent Captured Soldier]".
 Captured Soldier is inactive.
 The sarea of Captured Soldier is "Warehouse".
 
 when play begins:
 	add Captured Soldier to BadSpots of MaleList;
 
-Instead of resolving a Captured Soldier:
+to say ResolveEvent Captured Soldier:
 	if lust of Zephias is 0: [first time]
 		say "     As you make your way through the chaos of abandoned, sometimes smashed vehicles on the street, you spot several large shapes in the distance, flying about a hundred feet above the street and getting bigger - it's a trio of wyverns, out hunting together. Best to avoid attracting their attention, so you hurriedly rush over to one of the side alleys, throwing yourself out of sight just moments before the huge shadows of the massive creatures sweep over the street. They screech to each other, seemingly disappointed by the absence of prey around here, then the sounds of large flapping wings abates as they move on. Phew, seems like ...";
 		WaitLineBreak;

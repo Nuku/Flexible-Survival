@@ -139,7 +139,7 @@ When Play begins:
 	now lootchance entry is 25; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]indomitable[or]ginormous[or]monstrous[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "bestial"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -261,7 +261,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "behemoth horn"	"A large piece of a behemoth's horn that was knocked off during battle."	1	  behemoth horn
 
-behemoth horn is a grab object. It is part of the player. Understand "horn" as behemoth horn. behemoth horn is infectious. The strain of behemoth horn is "Behemoth".
+behemoth horn is a grab object. Understand "horn" as behemoth horn. behemoth horn is infectious. The strain of behemoth horn is "Behemoth".
 
 instead of sniffing behemoth horn:
 	say "     The scent coming from the behemoth horn is heavy with musk, both male and female, and some filled with pride.";

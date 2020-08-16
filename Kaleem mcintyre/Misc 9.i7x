@@ -8,9 +8,10 @@ Object	Name
 Clotho	"Clotho"
 
 Clotho is a situation.
+ResolveFunction of Clotho is "[ResolveEvent Clotho]".
 The sarea of Clotho is "Red".
 
-Instead of resolving a Clotho:
+to say ResolveEvent Clotho:
 	say "     'Hold on! Don't move! Just stay right where you are!' It's the volume of the words being spoken that stops you more than the words themselves. Not knowing what's happening, you freeze in place and look around to see what the hoopla is on about. What you find is a very... unusual human looking woman coming over to you and then trying to pull you out of your clothes. Not really understanding you wave the woman, who is less [']human['] than you had thought as she possesses two fluffy cat ears atop her head and a silver chain with an emblem of some kind of cat insignia embroidered into the front of a pendant hanging onto the chain itself, off as best you can. 'Oh will you stop moving around so much? I'm trying to get you out of these clothes so I can take your measurements.'";
 	WaitLineBreak;
 	say "     Asking the other woman who she is nets you a grumpy growl from the other. 'My name's not as important as the fact that I have something I need to make for you. Now hold still.' Not sure you find yourself letting the other woman do as she pleases, which ultimately nets you being stripped, measured, fondled in certain places you really don't want to be, and finally allowed to put back on your clothes after about an hour's time. 'As I thought, you are exactly what I need. [bold type]Atropis[roman type] back at our [bold type]high rise[roman type] condo is going to be so stoked about this!' The feline eared woman squeals and then rushes off like a shot, leaving you thoroughly confused.";
@@ -26,10 +27,11 @@ Object	Name
 Atropis	"Atropis"
 
 Atropis is a situation.
+ResolveFunction of Atropis is "[ResolveEvent Atropis]".
 Atropis is inactive.
 The sarea of Atropis is "High".
 
-Instead of resolving Atropis:
+to say ResolveEvent Atropis:
 	say "     When something small but speedy knocks against your chest, you blink in surprise. Looking, you find a small kitten girl blinking up to you with very wide jade eyes. Smiling and then helping the other to stand on her own, you ask if she's lost before getting a quick shake of the head.";
 	say "     Feeling somewhat like you should do something for the kitten, you reach back behind you to fish out some provisions from inside of your pack. Graciously you offer what you have to the small feline who hesitantly takes it with a small, unsure upturn of her lips. After telling the other to be more careful next time you then offer to take her back home. 'No thank you. My big sister is on her way to get me.' Raising your head to look around the area you give the kitten, who is now munching on the food you just gave her, a curious look.";
 	say "     Just as you are about to ask the little one if she's sure, a cough from behind you makes you turn your head back. What you find at your back just so happens to be a buxom looking panther woman dressed in a flowing black gown staring you down with a cocksure grin onto her stunning feline face. 'She's sure because I'm right here, darling.' In front of you the little kitten meows happily as she runs around your left side to rush over to the much taller black cat. 'I appreciate you trying to look out for Lachesis here, but it's not necessary.' Gaping slightly you cautiously nod to the unnamed panthress.";
@@ -50,13 +52,14 @@ Table of GameEventIDs (continued)
 Object	Name
 Magic Cap	"Magic Cap"
 
-The Magic Cap is a situation. The level of The Magic Cap is 5.
+The Magic Cap is a situation.
+ResolveFunction of The Magic Cap is "[ResolveEvent The Magic Cap]". The level of The Magic Cap is 5.
 The sarea of The Magic Cap is "Museum".
 When play begins:
 	Add The Magic Cap to BadSpots of FurryList;
 	Add The Magic Cap to badspots of HermList;
 
-Instead of resolving a The Magic Cap:
+to say ResolveEvent The Magic Cap:
 	say "     Feeling as though something is drawing you inside of the museum, you find yourself walking into the Egyptian exhibit area of the once prominent edifice without exactly knowing why. Looking around to make sure that nothing dangerous is lurking throughout the hallways, as something usually is given the craziness happening with the city, you find that luck is with you today as there is no one around. Breathing a sigh of relief you continue following this dogged sensation tugging at you all the way until you come to an ornamental Egyptian glass case... which just so happens to be open.";
 	WaitLineBreak;
 	say "     Not knowing why, you reach a hand inside of the case for one of the statues and then pick it up. Looking over the falcon headed artifact you find yourself gaping at it in awe. Though you're not really an expert at hieroglyphs or anything, the characters wrapped around the statue seem... somewhat familiar to you. A growl from behind you has you whipping around just in time to see a large Cerberus Herm baring three sets of ivory fangs into your direction.";
@@ -117,9 +120,10 @@ Object	Name
 Fashion Statement	"Fashion Statement"
 
 Fashion Statement is a situation.
+ResolveFunction of Fashion Statement is "[ResolveEvent Fashion Statement]".
 The sarea of Fashion Statement is "Campus".
 
-Instead of resolving a Fashion Statement:
+to say ResolveEvent Fashion Statement:
 	say "     Wandering through the commercial area at the edge of the campus, you happen to come across a clothing store that looks as though it's just recently been ransacked. Mildly curious to know if anything has survived the mercilessness carnage you meander inside of the store on a whim. Looking around you find the pervasive funk of musk, both male and female, as well as mildew covered shelves, dried stains, glass littering the floor and assorted items tossed around rather appealing.";
 	say "     However, considering the state of the world, you don't really expect too much. That is, until you make your way to the back of the store and into the stockroom. Interesting enough this part of the store seems to have been kept in tack. Maybe there's something salvageable here?";
 	say "     [bold type]Should you check to see?[roman type][line break]";

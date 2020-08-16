@@ -532,10 +532,11 @@ Object	Name
 Feline Relief	"Feline Relief"
 
 Feline Relief is a situation.
+ResolveFunction of Feline Relief is "[ResolveEvent Feline Relief]".
 Feline Relief is a inactive.
 The sarea of Feline Relief is "Red".
 
-instead of resolving Feline Relief:
+to say ResolveEvent Feline Relief:
 	if HP of Tehuantl is 12:
 		say "     As you wander through the red light district, you happen across a surprisingly intact-looking shop. The windows are blackened, preventing you from seeing inside, but the large sign above the door with three simple red Xs leaves little doubt in your mind as to what might be inside. As you stand outside the store, your mind wanders back to your poor heat afflicted kitty back at the library, and you wonder if there might be some 'toys' left inside that could help her take the edge off. Deciding there's no harm in checking, you slowly step up to the door, gripping the handle tightly and slowly pulling it open a crack. Peering inside, you see the small shop is filled with various pieces of BDSM equipment, and it is surprisingly well kept despite the state of the city around it. Not seeing anyone inside the room, you carefully push the door open and step inside. The majority of the wares in the store seem to be bondage equipment, but you do manage to find a couple colorful sex toys your poor kitty may be interested in.";
 		say "     Once you've given the storefront a through search, you quickly glance around the room for a box or bag for the few toys you've selected; it is then that you spot the display of cute leather collars above the store's till. Quickly hopping over the counter, you browse the collection of collars, picking out a nice red one with a cute bell for your pet kitty to go with her new toys. After grabbing a bag from under the counter, you start packing it and prepare to depart.";

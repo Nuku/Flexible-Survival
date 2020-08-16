@@ -193,7 +193,7 @@ When Play begins:
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "lithe"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "simian"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -346,10 +346,11 @@ Object	Name
 Monkey King Service	"Monkey King Service"
 
 Monkey King Service is a situation.
+ResolveFunction of Monkey King Service is "[ResolveEvent Monkey King Service]".
 The sarea of Monkey King Service is "Museum".
 The level of Monkey King Service is 3. [event unlocks at lvl 3]
 
-instead of resolving Monkey King Service:
+to say ResolveEvent Monkey King Service:
 	if "Monkey" is not listed in EncounteredEnemies of Player:
 		say "     You notice an exposition on imperial China exposition during your exploration of the museum. You decide to give it a look, but there is not much to see. All the art pieces have been looted by someone, and only the fake pagodas and other Chinese decorations remain. 'Good timing!' a booming masculine voice startles you. 'You, peasant! Come over here! I have a mission of upmost importance for you!' Whoever it is, he is thinking very high of himself...";
 		say "     [bold type]Should you follow the voice, and check what he wants?[roman type][line break]";
@@ -380,12 +381,13 @@ Object	Name
 Crashing The Satyr Party	"Crashing The Satyr Party"
 
 Crashing The Satyr Party is a situation.
+ResolveFunction of Crashing The Satyr Party is "[ResolveEvent Crashing The Satyr Party]".
 The Prereq1 of Crashing The Satyr Party is Monkey King Service.
 The Prereq1Resolution of Crashing The Satyr Party is { 1 }.
 The sarea of Crashing The Satyr Party is "Museum".
 The level of Crashing The Satyr Party is 3. [event unlocks at lvl 3]
 
-instead of resolving Crashing the Satyr Party:
+to say ResolveEvent Crashing the Satyr Party:
 	say "     During your patrol, you hear the sound of music, and several rowdy voices. You approach carefully, and stumble upon a group of satyrs and nymphs in the middle of an orgy. Vine cups are passed around, while couples or small groups form here and there, and swap members regularly. You remember the [']task['] that Wukong had charged you with, and you fetch the drug-filled pouch from your backpack. Should you go with it? It could be interesting to have the simian as your ally. The thought of giving the monkey a lesson for treating everyone around him like manure also comes to your mind.";
 	say "[bold type]Decisions, decisions...[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Help Wukong.";
@@ -454,12 +456,13 @@ Object	Name
 Hunt Of Mammoth Proportions	"Hunt Of Mammoth Proportions"
 
 Hunt Of Mammoth Proportions is a situation.
+ResolveFunction of Hunt Of Mammoth Proportions is "[ResolveEvent Hunt Of Mammoth Proportions]".
 The Prereq1 of Hunt Of Mammoth Proportions is Crashing the Satyr Party.
 The Prereq1Resolution of Hunt Of Mammoth Proportions is { 1 }. [must have successfully helped]
 The sarea of Hunt Of Mammoth Proportions is "Museum".
 The level of Hunt Of Mammoth Proportions is 8. [event unlocks at lvl 8]
 
-instead of resolving Hunt Of Mammoth Proportions:
+to say ResolveEvent Hunt Of Mammoth Proportions:
 	say "     Your walk into the Museum is interrupted by Wukong saltoing in front of you. 'Ah, if it is not my favorite servant!' The monkey greets you. 'Do you remember what I told you, about my big plans for us? Well, follow me!' Rather than you following him, Wukong grabs your hand and pulls you towards the Paleolithic section of the museum.";
 	say "     He eventually stops, and you with him, behind a rock, and points at a mass of brown fur a dozen meters across. The giant furball actually moves, and you realize that it is a living being: an anthro mammoth, to be precise. Wukong and you dive behind a rock before she can see you, but you had time to notice that [']she['] was a hermaphrodite, and that her private parts were larger than most beings you met in the infected city.";
 	say "     'As you recall from the incident with these goat-men,' Wukong says, 'nobody seems to give me the proper respect, treating me as if I was their [']pal['] and talking to me as if I was a commoner. So, I decided to prove them all that I am worthy of my reputation and my station. To do so, we shall hunt down henceforth the mightiest being in this museum, which is this hideous elephantine thing. Of course, I count on [italic type]you[roman type] to assist me.'";
@@ -533,12 +536,13 @@ Object	Name
 Take My Royal Word For Granite	"Take My Royal Word For Granite"
 
 Take My Royal Word For Granite is a situation.
+ResolveFunction of Take My Royal Word For Granite is "[ResolveEvent Take My Royal Word For Granite]".
 The Prereq1 of Take My Royal Word for Granite is Crashing the Satyr Party.
 The Prereq1Resolution of Take My Royal Word for Granite is { 4 }. [must have successfully sabotaged]
 The sarea of Take My Royal Word For Granite is "Museum".
 The level of Take My Royal Word For Granite is 8. [event unlocks at lvl 8]
 
-instead of resolving Take My Royal Word For Granite:
+to say ResolveEvent Take My Royal Word For Granite:
 	say "     As you are about to leave the reception, Valerie stops you. 'Please, wait a minute. You look strong, and I... We need help.' The sphinx catches up with you and begins to explain. 'You have surely met this [']Wukong['] fellow by now. A little nutty, thinks himself as the Monkey King of Chinese lore. Ever since that incident with the satyrs, he became more and more unhinged, and while he was formerly only a nuisance, he is now a real danger to the inhabitants of the museum. [bold type]Can you help us resolve this issue?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - You don't have to hear it twice. You're in.";
 	say "     ([link]N[as]n[end link]) - This looks like trouble.";

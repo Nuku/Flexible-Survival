@@ -50,9 +50,10 @@ Object	Name
 Policeman	"Policeman"
 
 Policeman is a situation.
+ResolveFunction of Policeman is "[ResolveEvent Policeman]".
 The sarea of Policeman is "High".
 
-Instead of resolving a Policeman:
+to say ResolveEvent Policeman:
 	project the icon of Sgt Marks;
 	if mqstatus is 0:
 		say "     While traveling through the streets of the ravaged city, you encounter a large tigerman wearing a partial police uniform. The jacket is left open, unable to close it over his broad, striped chest. The pants mostly fit, though the bottom of the legs are torn and leave the bottom third of his legs uncovered. To be able to fit his seven foot frame, he was probably a portly man before his transformation into the tall and muscled orange beast.";
@@ -777,7 +778,7 @@ When Play begins:
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sultry[or]alluring[or]curvaceous[or]flexible[at random]";
 	now type entry is "feline"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]

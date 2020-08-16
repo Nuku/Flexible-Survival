@@ -310,7 +310,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "Nightmare Vial"	 "a small vial of some strange whitish liquid, though flashes of red and black can be glimpsed inside the swirling vial"	1	 Nightmare Vial
 
-Nightmare Vial is a grab object. It is part of the player. Understand "Vial" and "Nightmare" as Nightmare Vial.
+Nightmare Vial is a grab object. Understand "Vial" and "Nightmare" as Nightmare Vial.
 
 instead of sniffing Nightmare Vial:
 	say "The scent from the vial's liquid is powerful, equine and sulfurous.";

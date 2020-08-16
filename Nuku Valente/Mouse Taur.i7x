@@ -13,14 +13,13 @@ Object	Name
 Mouse Taur Encounter	"Mouse Taur Encounter"
 
 Mouse Taur Encounter is a situation.
+ResolveFunction of Mouse Taur Encounter is "[ResolveEvent Mouse Taur Encounter]".
 The sarea of Mouse Taur Encounter is "Red".
 When play begins:
 	add Mouse Taur Encounter to BadSpots of FurryList;
 	add Mouse Taur Encounter to BadSpots of FemaleList;
 
-After resolving a Mouse Taur Encounter, try looking;
-
-Instead of Resolving a Mouse Taur Encounter:
+to say ResolveEvent Mouse Taur Encounter:
 	if mtrp is 0:
 		say "     A voice suddenly rises, startling you. Spinning about in alarm, you see a creature approaching you. She has a body that reminds you of a basic house variety mouse, if expanded until it were six feet long. Where its head should be is the belly and upper torso of a humanoid. As she approaches, her two C or D cup breasts sway in counterpoint to her two hips. Her face is mostly human, with fine whiskers, large round rodent ears and just enough snout to know it's there. She smiles at you, showing off bucked teeth. 'Hello,' she says. 'I was watching you roam around and thought you might like some company.' ";
 		if Player is herm:
@@ -42,14 +41,15 @@ Table of GameEventIDs (continued)
 Object	Name
 Find Porn Store	"Find Porn Store"
 
-Find Porn Store is a situation. The level of Find Porn Store is 5.
+Find Porn Store is a situation.
+ResolveFunction of Find Porn Store is "[ResolveEvent Find Porn Store]". The level of Find Porn Store is 5.
 The sarea of Find Porn Store is "Red".
 When play begins:
 	add Find Porn Store to BadSpots of FurryList;
 	add Find Porn Store to BadSpots of FemaleList;
 	add Find Porn Store to badspots of HermList;
 
-Instead of Resolving a Find Porn Store:
+to say ResolveEvent Find Porn Store:
 	FindPornStore;
 
 instead of going northwest from Boundary Street West while mtrp < 2:

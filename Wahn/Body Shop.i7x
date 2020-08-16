@@ -1160,6 +1160,7 @@ Object	Name
 Body Choice Dilemma	"Body Choice Dilemma"
 
 Body Choice Dilemma is a situation.
+ResolveFunction of Body Choice Dilemma is "".
 The sarea of Body Choice Dilemma is "Nowhere".
 
 after going to Body Shop while (Body Choice Dilemma is active and Body Choice Dilemma is not resolved and lastBodyShopEvent - turns > 1 and HP of Moreau > 0 and a random chance of 1 in 3 succeeds):
@@ -1218,6 +1219,7 @@ Object	Name
 Horn Removal	"Horn Removal"
 
 Horn Removal is a situation.
+ResolveFunction of Horn Removal is "".
 The sarea of Horn Removal is "Nowhere".
 
 after going to Body Shop while (Horn Removal is active and Horn Removal is not resolved and lastBodyShopEvent - turns > 1 and HP of Moreau > 0 and GusTalkProgress > 0 and a random chance of 1 in 3 succeeds):
@@ -1234,6 +1236,7 @@ Object	Name
 Drunk Change Party	"Drunk Change Party"
 
 Drunk Change Party is a situation.
+ResolveFunction of Drunk Change Party is "".
 The sarea of Drunk Change Party is "Nowhere".
 
 after going to Body Shop while (Drunk Change Party is active and Drunk Change Party is not resolved and lastBodyShopEvent - turns > 1 and HP of Moreau > 0 and a random chance of 1 in 3 succeeds):
@@ -1276,6 +1279,7 @@ Object	Name
 Body Poke Poke	"Body Poke Poke"
 
 Body Poke Poke is a situation.
+ResolveFunction of Body Poke Poke is "".
 The sarea of Body Poke Poke is "Nowhere".
 
 after going to Body Shop while (Body Poke Poke is active and Body Poke Poke is not resolved and lastBodyShopEvent - turns > 1 and HP of Moreau > 0 and a random chance of 1 in 3 succeeds):
@@ -1291,6 +1295,7 @@ Object	Name
 Body Supplications	"Body Supplications"
 
 Body Supplications is a situation.
+ResolveFunction of Body Supplications is "".
 The sarea of Body Supplications is "Nowhere".
 
 after going to Body Shop while (Body Supplications is active and Body Supplications is not resolved and lastBodyShopEvent - turns > 1 and HP of Moreau > 0 and a random chance of 1 in 3 succeeds):
@@ -1333,7 +1338,8 @@ Table of GameEventIDs (continued)
 Object	Name
 Body Popularity	"Body Popularity"
 
-Body Popularity is a situation. Body Popularity is inactive.
+Body Popularity is a situation.
+ResolveFunction of Body Popularity is "". Body Popularity is inactive.
 The sarea of Body Popularity is "Nowhere".
 
 after going to Body Shop while (Body Popularity is active and Body Popularity is not resolved and lastBodyShopEvent - turns > 1 and HP of Moreau > 0 and a random chance of 1 in 3 succeeds):

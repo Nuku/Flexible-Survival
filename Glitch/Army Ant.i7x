@@ -99,7 +99,7 @@ When Play begins:
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4;
 	now body descriptor entry is "[one of]toned[or]segmented[or]shiny[or]fit[or]masculine[or]lean[or]plated[at random]";
 	now type entry is "[one of]ant[or]insectoid[at random]";

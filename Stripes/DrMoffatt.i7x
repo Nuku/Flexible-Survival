@@ -34,6 +34,7 @@ Object	Name
 Another Doctor	"Another Doctor"
 
 Another Doctor is a situation.
+ResolveFunction of Another Doctor is "[ResolveEvent Another Doctor]".
 The sarea of Another Doctor is "Hospital".
 when play begins:
 	add Another Doctor to badspots of HermList;
@@ -41,7 +42,7 @@ when play begins:
 	add Another Doctor to BadSpots of MaleList;
 	add Another Doctor to BadSpots of FurryList;
 
-Instead of resolving a Another Doctor:
+to say ResolveEvent Another Doctor:
 	say "     While searching through some patient rooms, you hear a noise behind you and freeze. At the door, you spot a large and womanly skunk in a doctor's coat and a short skirt. Her limited clothes can do nothing to contain her considerable assets. Her breasts are each larger than her head and prominently display their plump, round nipples. These melons are so big that she doesn't even bother to try closing the white coat, which you doubt could even be managed. Further down, her hips are very wide and womanly and her thighs are round and meaty to match, all straining the poor skirt's attempt to cover them. But what the skirt completely fails to cover are the skunk woman's huge hanging maleness and oversized balls. The latter are each nearly as large as her breasts and the former hangs down just as low despite its mostly flaccid state.";
 	say "     When you realize that you've been staring at the skunk for some time, you notice that she's been smiling back at you, shifting her position to show off her luscious form all the more. She has a bit of a masculine face, but with full, plump lips with a bit of a predatory smile. Her black hair has a slight wave to it and is kept short at her back. The lighter fur on her skunk pattern is a pale gray and even her darker sections are more a charcoal color than pure black. The only white you can see on her is her pearly white teeth and in her eyes, you realize. Even her irises are an ash gray. This leads you to look again, noting the completely colorless nature of this skunk. The exposed flesh of her nipples and cock are gray and her lips are either naturally black or glossed black.";
 	WaitLineBreak;

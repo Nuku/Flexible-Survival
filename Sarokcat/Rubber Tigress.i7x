@@ -87,7 +87,7 @@ When Play begins:
 	now lootchance entry is 67;  [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "sleek";  [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "[one of]feline[or]tigrine[at random]";
@@ -211,7 +211,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "Tiger patch"	"A strange swatch of sticky rubber that looks somewhat like a bandage or clothing patch, it looks like it could be useful to seal up wounds or for patching things, interestingly enough, it seems to have orange and black tiger stripes on it."	1	Tiger patch
 
-Tiger patch is a grab object. It is part of the player. Understand "patch" as Tiger patch. Tiger patch is infectious. The strain of Tiger patch is "Rubber Tigress".
+Tiger patch is a grab object. Understand "patch" as Tiger patch. Tiger patch is infectious. The strain of Tiger patch is "Rubber Tigress".
 
 The usedesc of Tiger patch is "Taking out the small piece of tiger-striped material, you note it could be useful as either a patch or a stylish accessory or even a bandage. Holding it up to your skin for a minute you smile at how natural it seems to look, almost like part of your body. You blink as you try to pull it away only to realize that it has actually become part of you! You tug futilely on the soft striped rubber, even as you can feel the infection spreading through your body.";
 

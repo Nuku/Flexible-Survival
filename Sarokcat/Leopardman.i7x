@@ -125,7 +125,7 @@ When Play begins:
 	now lootchance entry is 50;  [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sleek[or]powerful[at random]";
 	now type entry is "[one of]feline[or]leopard-like[or]pardine[as decreasingly likely outcomes]";
@@ -245,7 +245,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "Spotted fur"	"A small tuft of black and yellow fur, it is very soft and seems like it would feel nice against your skin."	1	  Spotted fur
 
-Spotted fur is a grab object. It is part of the player. Understand "fur" as Spotted fur. Spotted fur is infectious. The strain of Spotted fur is "Leopardman".
+Spotted fur is a grab object. Understand "fur" as Spotted fur. Spotted fur is infectious. The strain of Spotted fur is "Leopardman".
 
 instead of sniffing Spotted fur:
 	say "The tuft of fur smells faintly of the powerful feline it came from.";

@@ -220,7 +220,13 @@ to say UrikTalkMenu:
 		now title entry is "Ask him about his sister";
 		now sortorder entry is 7;
 		now description entry is "Let Urik tell you about his sister, and what went on with her";
-	[]
+	[
+	if "Yoga" is listed in Traits of Urik:
+		choose a blank row in table of fucking options;
+		now title entry is "Ask him about doing yoga"; [TODO: write this scene]
+		now sortorder entry is 8;
+		now description entry is "Bring up that he seems an odd person to be doing yoga";
+	]
 	if UrikEricInteraction > 0 and Urik is in Grey Abbey Library:
 		choose a blank row in table of fucking options;
 		now title entry is "Talk about Eric";

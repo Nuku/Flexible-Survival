@@ -165,7 +165,7 @@ When Play begins:
 	now loot entry is "ebonflame scale";
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4;
 	now body descriptor entry is "NA";
 	now type entry is "NA";

@@ -6,6 +6,7 @@ Object	Name
 Breeding Pack	"Breeding Pack"
 
 Breeding Pack is a situation.
+ResolveFunction of Breeding Pack is "[ResolveEvent Breeding Pack]".
 The sarea of Breeding Pack is "High".
 
 when play begins:
@@ -13,7 +14,7 @@ when play begins:
 	add Breeding Pack to badspots of FeralList;
 	add Breeding Pack to BadSpots of MaleList;
 
-instead of resolving a Breeding Pack:
+to say ResolveEvent Breeding Pack:
 	say "     You walk down yet another empty street, out to find something that will help you survive in the fallen city. Your path leads past empty buildings and the husks of countless vehicles that used to roam the streets, eerily quiet now that they lie abandoned and mostly wrecked. After checking the inside of a police car, hoping futilely that something might have been left behind by other scavengers that already went through it, you hear the barking of dogs. It isn't directed at you but you can tell it is really close. From the sound of it, they're just behind the abandoned computer store you checked over a little while ago. Curious about what is going on, you sneak into the alley next to the building. There is a chain fence a few feet inside it, which thankfully has a gaping rent in it, which you carefully duck through so you don't make any noise. Reaching the far end of the alley, you peek around the corner and spot a bunch of dogs. A lot of them, at least fifteen.";
 	say "     The members of the pack look like normal dogs as far as you can tell. German shepherds, rottweilers, dobermans, pitbulls, retrievers, and even a few mastiffs are part of that dog pack. In the midst between them, you notice someone or something else. Whatever it is, they all are very intrigued and totally focused on it. You dare not risk getting a closer look in case one of the dogs smells or spots you. They don't look like overgrown transformed beasts, but you seriously doubt you can outrun a whole dog pack, even if they are just regular animals. As if fate is smiling on you, the dogs shuffle around a moment later and you get to see what all the commotion is about. There is a lone, naked human with the dogs. He has pale skin and looks to be of average height. The question of what they might be doing with this man becomes moot as you notice a rottweiler real close to his butt and facing away from him.";
 	WaitLineBreak;

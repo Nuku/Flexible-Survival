@@ -77,7 +77,7 @@ When Play begins:
 	[ These represent the new additions to the table ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4;  [ Number 1-5, rough approx of infected PC body size/height. 1=small, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]powerful[or]muscled[or]chiseled[at random]";
 	now type entry is "[one of]equine[or]horse-like[at random]";

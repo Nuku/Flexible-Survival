@@ -133,7 +133,7 @@ When Play begins:
 	now lootchance entry is 35; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sleek[or]powerful[or]untameable[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "equine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -253,7 +253,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "Pegasus Quill"	"A fine white feather that was dropped off of a Pegasus."	1	Pegasus Quill
 
-Pegasus Quill is a grab object. It is part of the player. Pegasus Quill is infectious. The strain of Pegasus Quill is "Pegasus".
+Pegasus Quill is a grab object. Pegasus Quill is infectious. The strain of Pegasus Quill is "Pegasus".
 
 The usedesc of Pegasus Quill is "The quill you picked up is actually a large feather from the end of a Pegasus mutant. Large and fluffy and very warm you have the strangest notion to make a pillow from the things. Maybe if you find more you will?";
 

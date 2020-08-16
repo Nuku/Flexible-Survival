@@ -26,9 +26,10 @@ Object	Name
 Road Wanderer	"Road Wanderer"
 
 Road Wanderer is a situation.
+ResolveFunction of Road Wanderer is "[ResolveEvent Road Wanderer]".
 The sarea of Road Wanderer is "High".
 
-Instead of resolving a Road Wanderer:
+to say ResolveEvent Road Wanderer:
 	if HP of Joshiro is 0: [never met before]
 		say "     Exploring the streets of the high rise district, you wander past piles of trash, check out abandoned cars and houses, all while taking care not to draw any attention from wandering beasts. Luck is with you today, as your scavenging is soon rewarded by finding a forgotten bag of salted nuts under the seat of one of the cars. It's a bit dusty but still good, even if the best before date makes you guess that the owner of the car must have dropped it under the seat months ago. You pack the food into your backpack with a grin on your face, then set out to see if you'll find more nice stuff today.";
 		ItemGain food by 1;
@@ -91,12 +92,13 @@ Object	Name
 Slut Wanderer	"Slut Wanderer"
 
 Slut Wanderer is a situation.
+ResolveFunction of Slut Wanderer is "[ResolveEvent Slut Wanderer]".
 Prereq1 of Slut Wanderer is Road Wanderer.
 Prereq1Resolution of Slut Wanderer is { 1, 2, 3, 4, 5, 6, 7 }.
 PrereqTime of Slut Wanderer is "Night".
 The sarea of Slut Wanderer is "High".
 
-Instead of resolving a Slut Wanderer:
+to say ResolveEvent Slut Wanderer:
 	say "     Wandering through the streets of the high rise district at night leaves a whole different feeling than during the day. With only the dim light of the moon to illuminate your surroundings, the absence of light, electricity and the sounds of civilization is glaringly obvious. Buildings rise as dark shadows over you, creating long canyons sticking up against the starry expanse of the sky. Yet that doesn't mean there aren't any noises to be heard: The clatter of a can or something being kicked down the road, far-off splintering glass and clawed paws scraping over the asphalt are just a few of the sounds that reach your ears, as if to remind you that this isn't the city you knew anymore. None of it seems to have anything to do with you, as you are careful about any footsteps following you. No, it's just the creatures of the city going about their business - living, scavenging, and all too often noisily fucking.";
 	say "     One of the latter cases is something you become aware of as you pass a small side alley, as unrestrained lewd moans echo from its depth, their pitch and volume marked by what must be rhythmic thrusts against the person being fucked. You're about to just walk past when you hear the same masculine voice call out in a lewd tone, 'Yeah! Pound the tiger, kitty!' A satisfied growl from some sort of large beast follows in reply, combined with another deep thrust. A second later things click in your mind: You recognize the person that is in the alley, it's Joshiro Higashi, whom you met before, wandering the streets of this area. Sounds like he's gotten himself into some sort of sexual situation, which isn't too surprising, given his outlook and the fact that he was walking around in just a pair of skimpy shorts.";
 	LineBreak;
@@ -211,11 +213,12 @@ Object	Name
 Jumping The Dobie	"Jumping The Dobie"
 
 Jumping The Dobie is a situation.
+ResolveFunction of Jumping The Dobie is "[ResolveEvent Jumping The Dobie]".
 The Prereq1 of Jumping The Dobie is Road Wanderer.
 The Prereq1Resolution of Jumping The Dobie is { 1, 2, 3, 4, 5, 6 }.
 The sarea of Jumping The Dobie is "Red".
 
-Instead of resolving a Jumping The Dobie:
+to say ResolveEvent Jumping The Dobie:
 	say "     Strolling through the red light district, you come upon a warehouse or something, fairly inconspicuous even though it is two stories tall. It doesn't really look like anyone has paid the place too much attention since the nanite apocalypse began, which might mean that there is something worthwhile left inside. The front door is locked tight, but through the chain link fence surrounding an adjacent parking lot, you see a small side door at the far end of the building, next to a loading dock. Maybe that could be your way in.";
 	say "     [bold type]Do you try to get access to the building?[roman type][line break]";
 	LineBreak;
@@ -280,6 +283,7 @@ Object	Name
 Sloppy Seconds	"Sloppy Seconds"
 
 Sloppy Seconds is a situation.
+ResolveFunction of Sloppy Seconds is "[ResolveEvent Sloppy Seconds]".
 The Prereq1 of Sloppy Seconds is JoshiroEncounterTale 1.
 The Prereq2 of Sloppy Seconds is Jumping The Dobie.
 The Prereq2Resolution of Sloppy Seconds is { 1, 2 }.
@@ -288,7 +292,7 @@ The sarea of Sloppy Seconds is "Red".
 when play begins:
 	add Sloppy Seconds to Badspots of CuckList;
 
-Instead of resolving a Sloppy Seconds:
+to say ResolveEvent Sloppy Seconds:
 	say "     Exploring the red light district, you are just strolling along a street and passing some unimpressive houses that likely have long been looted when a scuffle breaks out on the other side of the street. Looks like a herm hyena and a tigress hooker are having a disagreement about the price of her services. The noise soon draws the feline's pimp, who approaches in a combative manner. For a second it looks like the hyena will get fleeced by those two, but then she calls out loudly and two more of her kind step out of a nearby alley. This escalation heralds trouble, you're sure, and since you have better things to do than getting dragged into that, you take the easy way out by stepping into the building right before you through its leaned-to door. Sounds of a fight start just as you close the door behind you.";
 	say "     You check for a back door, but have little luck, so you shrug and decide to check the building out while you wait for situation outside to die down. Sadly, the interior of the building is about what you expected: Run-down apartments with their flimsy furniture mostly smashed by someone who rifled through them. Going from room to room, you find nothing worth even the effort of bending down to pick it up, and eventually end up on the roof of the two story building. There's a little wooden shack built in the back corner of it, a pigeon coop, but even that is just filled with open cages and a whole lot of scattered feathers. You idly wonder if this means that the owner became a pigeon himself, the birds transformed, or something came and ate them. No way to tell really, so eventually you shrug and leave the shack through its crooked door.";
 	WaitLineBreak;
@@ -673,7 +677,7 @@ When Play begins:
 	now lootchance entry is 0;         [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;              [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "Human";
 	now type entry is "human";

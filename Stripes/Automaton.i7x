@@ -135,7 +135,7 @@ When Play begins:
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]normal[or]unchanged[at random]";
 	now type entry is "[one of]human[or]humanoid[or]robotic[at random]";
@@ -261,7 +261,7 @@ name	desc	weight	object
 
 silver semen is a grab object.
 the usedesc of silver semen is "[silversemenuse]".
-it is part of the player.
+
 It is temporary.
 silver semen is cum.
 

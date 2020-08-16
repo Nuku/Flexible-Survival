@@ -9,14 +9,15 @@ Table of GameEventIDs (continued)
 Object	Name
 Disorganization	"Disorganization"
 
-Disorganization is a situation. The level of Disorganization is 9.
+Disorganization is a situation.
+ResolveFunction of Disorganization is "[ResolveEvent Disorganization]". The level of Disorganization is 9.
 DRS is a number that varies.[@Tag:NotSaved]
 when play begins:
 	add Disorganization to BadSpots of FurryList;
 	add Disorganization to BadSpots of MaleList;
 	add Disorganization to badspots of HermList;
 
-Instead of resolving Disorganization:
+to say ResolveEvent Disorganization:
 	If drs is 0:
 		say "     Walking through the dimly lit alleyways of the city, you manage to come across a lump of a figure lying prone on the trash strewn ground. Cautious as to who or rather what this might be, you carefully pad your way over to the thing, ready to run away at a moment's notice. Hoping vehemently that the thing is not some lust drunk mutant taking a nap, you pad closer and closer until the rotting scent of decay actually starts to cloy against your sinuses. When the figure doesn't immediately wake after you poke at it several times, you find yourself calming down slightly as you realize that it's you're dealing with the dead body of a soldier instead of some other kind of freak.";
 		say "     It's sad that sights like this are becoming normal. Idle curiosity makes you wonder how the armed forces member died out here like this. The spatter of blood around the other's head has you guessing that it must have been a head wound, but you aren't going to flip the person over to find out, the soldier was lying face down so you can only see his/her backside. Pulling backwards and then saying a quiet utterance of a prayer, you somberly turn from the dead figure to leave, however, before you can do so a voice suddenly calls out making you jumping almost a foot into the air.";

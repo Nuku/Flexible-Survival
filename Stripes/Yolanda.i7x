@@ -569,11 +569,12 @@ Object	Name
 Jewelry Box	"Jewelry Box"
 
 Jewelry Box is a scavevent.
+ResolveFunction of Jewelry Box is "[ResolveEvent Jewelry Box]".
 when play begins:
 	add Jewelry Box to BadSpots of FemaleList;
 	add Jewelry Box to BadSpots of FurryList;
 
-Instead of resolving a Jewelry Box:
+to say ResolveEvent Jewelry Box:
 	say "     While searching some abandoned homes in the hopes of finding something of use, you discover that this one isn't quite as abandoned as you'd assumed. Emerging from a side room, a creature appears.";
 	let T be a random number between 1 and 5;
 	if T is 1:
@@ -600,9 +601,10 @@ Object	Name
 Raven Key Fob	"Raven Key Fob"
 
 Raven Key Fob is a scavevent.
+ResolveFunction of Raven Key Fob is "[ResolveEvent Raven Key Fob]".
 Raven Key Fob is inactive.
 
-Instead of resolving a Raven Key Fob:
+to say ResolveEvent Raven Key Fob:
 	say "     Hoping to find some supplies, you check through some cars in the street. From the looks of it, the drivers either abandoned their vehicles or (in the case of a few) transformed while inside them. In the latter, you find scraps of clothes and messy, musky stains, but little of use. You start to suspect some enterprising survivor or hungry mutant has already gone through these vehicles when you get lucky and find one that still has a small backpack in the passenger's seat. Opening it up, you go through it and find an assortment of stuff you don't need, but also a bottle of water. You're about to take it and go when you notice that the keys are still in the ignition. You decide to give it a shot, but find the car completely dead. The key fob does catch your eye though, being a shiny black bird about two inches long. You grab it and stuff it away in a pocket of your backpack, thinking Yolanda the raven might like it.";
 	now yolandakeyfob is true;
 	ItemGain water bottle by 1;

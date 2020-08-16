@@ -19,13 +19,14 @@ Object	Name
 Grumpy Old Men	"Grumpy Old Men"
 
 Grumpy Old Men is a situation.
+ResolveFunction of Grumpy Old Men is "[ResolveEvent Grumpy Old Men]".
 The sarea of Grumpy Old Men is "Outside".
 
 when play begins:
 	add Grumpy Old Men to BadSpots of FurryList;
 	add Grumpy Old Men to BadSpots of MaleList;
 
-Instead of resolving Grumpy Old Men:
+to say ResolveEvent Grumpy Old Men:
 	say "     While walking down the city streets, you stop when your eyes catch the form of two old men, a tiger and a wolf, arguing with each other while waving their hands up and down wildly at one another. Worrying that the two are about to start a fight, you watch as they move right on down the street past you, completely ignoring you. You wonder if you should speak up to say anything to stop their argument, but you find your words disappearing inside of your throat as you listen to their conversation, if only in bits and pieces.";
 	say "     'Harry, you're too old be this cranky anymore,' the wolf says while walking next to his friend. The lupine seems a bit embarrassed by the feline, though he smiles all the while. 'I'll be too old when they put me in the grave. Until then, keep your fuzzy tail moving so we can find old Alma to see if we can borrow some of that ammunition of hers,' the tiger grumbles. 'Do you really think she survived all of this?' the wolf asks, waving his hand around to denote the mess that the town has become. The graying tiger gives the silver wolf a pointed look. 'I sure as hell do! Hell, knowing her, she's probably taking in refuges!' The tiger lets out a roar of laughter before hissing and leaning over to rub at his lower back. In a heartbeat, the wolf is helping the other by offering a shoulder, though the feline is a little too proud, or stubborn, to take it.";
 	WaitLineBreak;
@@ -41,6 +42,7 @@ Object	Name
 Fleeing Minotaur	"Fleeing Minotaur"
 
 Fleeing Minotaur is a situation.
+ResolveFunction of Fleeing Minotaur is "[ResolveEvent Fleeing Minotaur]".
 The sarea of Fleeing Minotaur is "Outside".
 
 when play begins:
@@ -48,7 +50,7 @@ when play begins:
 	add Fleeing Minotaur to badspots of HermList;
 	add Fleeing Minotaur to BadSpots of MaleList;
 
-Instead of resolving Fleeing Minotaur:
+to say ResolveEvent Fleeing Minotaur:
 	say "     While traversing the city streets, you spot a figure swerving rapidly around a corner. As it sprints closer, you realize that it's some kind of minotaur, and you dodge it just in time to avoid being pulverized. To your surprise, the creature runs straight past you, ignoring your presence entirely and hightailing it at top speeds in the direction you just came from. Seeing the odd creature running so fast makes wonder what the hell could scare it so badly, only for the answer to come in the form of a hyena dominatrix charging down the street with a whip in her hand.";
 	say "     The woman, who can't be more than five foot eight inches tall, is wearing nothing but a black bustier and stiletto boots, and she cackles manically as she follows the minotaur's trail. You're impressed that the hyena could actually frighten a creature almost twice her size and two and half heads taller than her, and you can't help but wonder what's up with that pair. Just before the woman is totally out of sight, you swear that you hear her say something along the lines of 'Call me queen, darling!'";
 	now Fleeing Minotaur is resolved;
@@ -61,13 +63,14 @@ Object	Name
 Scavenging Dalmatian	"Scavenging Dalmatian"
 
 Scavenging Dalmatian is a situation.
+ResolveFunction of Scavenging Dalmatian is "[ResolveEvent Scavenging Dalmatian]".
 The sarea of Scavenging Dalmatian is "Outside".
 
 when play begins:
 	add Scavenging Dalmatian to BadSpots of FurryList;
 	add Scavenging Dalmatian to BadSpots of MaleList;
 
-Instead of resolving Scavenging Dalmatian:
+to say ResolveEvent Scavenging Dalmatian:
 	say "     Walking down the almost deserted streets of the city, you come across a lone Dalmatian scavenging through a trash can. More than likely looking for food, the figure is failing to find anything appetizing inside the smelly waste container, their spotted tail hanging limply behind them.";
 	if food is owned:
 		say "     A part of you wants to feel sorry for the mutant, but do really want to spare some of your food to help?";
@@ -107,13 +110,14 @@ Object	Name
 Captured Wyvern	"Captured Wyvern"
 
 Captured Wyvern is a situation.
+ResolveFunction of Captured Wyvern is "[ResolveEvent Captured Wyvern]".
 The sarea of Captured Wyvern is "Outside".
 
 when play begins:
 	add Captured Wyvern to badspots of FeralList;
 	add Captured Wyvern to BadSpots of FurryList;
 
-Instead of resolving Captured Wyvern:
+to say ResolveEvent Captured Wyvern:
 	say "     Coming across a large group of soldiers, you notice that the uniformed men and women seem to have somehow brought a wyvern down onto the ground and are currently staring at the mutant irritably. The large beast, which has to be almost thirty feet long, cries and chirps loudly as the soldiers begin to shout and kick at it. The desperation in some of the humans['] voices has your body tensing as you watch the assembled collective.";
 	say "     Not saying so much as a word to alert them of your presence, you watch the troops begin to viciously beat at the creature with both their boots and the ends of their long assault rifles. Blood and other fluids slowly start to leak around the defenseless creature's body in a quickly growing pool. Why, if they have already downed the mutant, don't they just kill it already? As the monster's cries of pain grow steadily louder, you feel compelled to interfere and protect it. Do you follow through on the urge?";
 	if Player consents:
@@ -148,6 +152,7 @@ Object	Name
 Secrets	"Secrets"
 
 Secrets is a situation.
+ResolveFunction of Secrets is "[ResolveEvent Secrets]".
 The sarea of Secrets is "Outside".
 
 when play begins:
@@ -155,7 +160,7 @@ when play begins:
 	add Secrets to BadSpots of FemaleList;
 	add Secrets to badspots of HermList;
 
-Instead of resolving Secrets:
+to say ResolveEvent Secrets:
 	say "     While walking through the streets of the city, you come across an old public bathroom and decide to stop in to see if the water is working in here. You doubt it'll still be running, but there's no harm in checking. Walking into the public facility, you step carefully to avoid the globs of cum, milk and urine littering the once white tiled floor and walls. You make your way to the women's side of the restrooms, figuring the men's side is probably a biohazard zone by now. Right before you head to the sinks, which are amazingly free from any kind of stains, you freeze in place as an all too familiar noise reaches your ears. The sounds of moaning and thumping are resounding from off of the stalls of the public washroom, and you immediately feel compelled to flee before trouble finds you. However, before you can beat a retreat, one of the bathroom stalls pops open. The banging you had heard was coming from the cheap tin frame and not the far wall, and quickly two half-dressed soldiers pop out and onto the ground. Both are indeed female, and the larger of the pair catches her bulk with her hands to avoid crushing her fuck buddy. You find it odd that two women could be making so much noise, but your confusion is lifted when you spot the large feline shaft connecting them together. It would seem that the larger valkyrie has been tainted by this unclean world.";
 	say "     You don't say anything as the blonde-haired tigress-in-the-making quietly whispers to her fallen company, her eyes hastily checking over the other to make sure that the smaller brunette is alright. The pig tailed and bespectacled amazon underneath her can only smile shyly and then nod before reaching up to wrap her delicate hands around her would-be mate's neck. While only the blonde seems to have had any changes in her genitals, you take note of the dark stripes slowly spreading over the brunette's face, especially when her partner starts thrusting into her slightly weeping puss. Muscles seem to be forming on the valkyrie's chest and torso, and as you watch, six heavyset breasts rise much more fully from the blonde's already tight chest. Below, the smaller brunette is slimming down and becoming somewhat more demure than she already was compared to her larger lover, shivering and shuddering while her back arches in pure rapture. The sloppy squelching of the tiger cock between them hammering into the smaller woman has you biting at your lower lip while reaching down to rub at your aching groin. They pay no attention to you despite being no more than three feet away, the two moaning and growling together, their infection probably spreading deeper internally before changing their outward appearance.";
 	say "     You can't help but feel that you have little right to impart yourself on this shared moment between the two once you see the lust and love they have for each other shimmering inside of their respective green and brown eyes. Deciding not to bother them, you hastily back away from the pair and turn to leave, but not without shutting the door to the ladies['] room first. You idly wonder if maybe some good has come from this entire fiasco, just in time to hear a thunderous feline roar that shakes the very foundations of the building you're standing in. It's definitely time to go now.";
@@ -169,12 +174,13 @@ Object	Name
 School Spirit	"School Spirit"
 
 School Spirit is a situation.
+ResolveFunction of School Spirit is "[ResolveEvent School Spirit]".
 The sarea of School Spirit is "Outside".
 
 when play begins:
 	add School Spirit to BadSpots of FemaleList;
 
-Instead of resolving School Spirit:
+to say ResolveEvent School Spirit:
 	say "     While exploring the city, you discover a crashed school bus. There is no one on the bus, but you do find a dozen shredded cheerleader uniforms. Judging by the uniforms, the cheerleaders were from the local college. All the uniforms are ripped around the middle, almost as if the bellies of all the cheerleaders grew until they ripped through their uniforms. You can only surmise that a creature must have boarded the bus and impregnated every single cheerleader with its infectious seed. Feeling uneasy, you quietly leave the bus and sneak away before the cheerleaders or their spawn return.";
 	increase the score by 1;
 	now School Spirit is resolved;
@@ -187,13 +193,14 @@ Object	Name
 Another Survivor	"Another Survivor"
 
 Another Survivor is a situation.
+ResolveFunction of Another Survivor is "[ResolveEvent Another Survivor]".
 The sarea of Another Survivor is "Outside".
 
 when play begins:
 	add Another Survivor to BadSpots of FurryList;
 	add Another Survivor to badspots of HermList;
 
-Instead of resolving Another Survivor:
+to say ResolveEvent Another Survivor:
 	say "     While exploring the city, you spot another survivor. Before you get a chance to introduce yourself, a Hermaphrodite Gryphon swoops out of the sky, snatches up the other survivor, and flies away.";
 	increase the score by 1;
 	now Another Survivor is resolved;
@@ -206,13 +213,14 @@ Object	Name
 Masturbating Fox	"Masturbating Fox"
 
 Masturbating Fox is a situation.
+ResolveFunction of Masturbating Fox is "[ResolveEvent Masturbating Fox]".
 The sarea of Masturbating Fox is "Outside".
 
 when play begins:
 	add Masturbating Fox to BadSpots of FurryList;
 	add Masturbating Fox to BadSpots of MaleList;
 
-Instead of resolving Masturbating Fox:
+to say ResolveEvent Masturbating Fox:
 	say "     While exploring the city, you hear a strange sound in the distance.";
 	say "     'Squeak! Squeak! Squeak!'";
 	say "     You follow the strange squeaking sound until you find its source. The sound is coming from a latex fox creature that you find behind a pile of rubble. The creature is vigorously masturbating its rubbery cock, creating a loud squeaking sound with each stroke. When it notices your presence, you brace yourself for a fight. Thankfully, the creature decides to ignore you and goes back to masturbating. You sigh with relief and leave before it can change its mind.";
@@ -227,9 +235,10 @@ Object	Name
 Giant Egg	"Giant Egg"
 
 Giant Egg is a situation.
+ResolveFunction of Giant Egg is "[ResolveEvent Giant Egg]".
 The sarea of Giant Egg is "Outside".
 
-Instead of resolving Giant Egg:
+to say ResolveEvent Giant Egg:
 	say "     You search through the city streets until you come across a giant egg. The egg is the size of a beach ball, and it appears to be freshly laid. You quickly leave the area before its mother can return.";
 	increase the score by 1;
 	now Giant Egg is resolved;
@@ -242,6 +251,7 @@ Object	Name
 Ice Cream Truck	"Ice Cream Truck"
 
 Ice Cream Truck is a situation.
+ResolveFunction of Ice Cream Truck is "[ResolveEvent Ice Cream Truck]".
 The sarea of Ice Cream Truck is "Outside".
 
 when play begins:
@@ -250,7 +260,7 @@ when play begins:
 
 IceCreamTruckBadEnd is a truth state that varies. IceCreamTruckBadEnd is usually false.
 
-Instead of resolving Ice Cream Truck:
+to say ResolveEvent Ice Cream Truck:
 	say "     An abandoned ice cream truck sits on its lonesome in the middle of the street. You quickly investigate it to check if there's anything edible that hasn't already been scavenged. Looking in the cooler in back, you are disappointed to find that the ice cream has melted all over the place, soaking the inside of the truck. Taking a whiff of a strange smell, you realize that the sticky white stuff may not be ice cream after all, but someone or something's cream. You might be able to find something useful here, but it would be messy. Do you try?";
 	if Player consents:
 		if humanity of Player < 10:
@@ -347,12 +357,13 @@ Object	Name
 Wyvern Flight	"Wyvern Flight"
 
 Wyvern Flight is a situation.
+ResolveFunction of Wyvern Flight is "[ResolveEvent Wyvern Flight]".
 The sarea of Wyvern Flight is "Outside".
 
 when play begins:
 	add Wyvern Flight to BadSpots of FurryList;
 
-Instead of resolving Wyvern Flight:
+to say ResolveEvent Wyvern Flight:
 	say "     You spy a small group of wyverns hauling off tables and chairs from a sidewalk café, apparently building a large nest somewhere nearby. You quickly lie low in a nearby storefront until the activity ceases, thankful to not be noticed. It seems the city keeps getting more dangerous every day.";
 	now Wyvern Flight is resolved;
 
@@ -364,13 +375,14 @@ Object	Name
 Strange Preacher	"Strange Preacher"
 
 Strange Preacher is a situation.
+ResolveFunction of Strange Preacher is "[ResolveEvent Strange Preacher]".
 The sarea of Strange Preacher is "Outside".
 
 when play begins:
 	add Strange Preacher to BadSpots of FurryList;
 	add Strange Preacher to badspots of HermList;
 
-Instead of resolving Strange Preacher:
+to say ResolveEvent Strange Preacher:
 	say "     Wandering the deserted streets, you hear what sounds like a loud voice father down the street. Hurrying to see who is talking, you are shocked to see a strange creature shouting out to an empty street. Moving closer in case this is some kind of trick, you get a better look at the creature and find yourself shaking your head in astonishment. With the lower body of one of those panther taurs, she is resting her front legs on a box of some type while her back ones brace her on the street, her spread legs giving you a good look at hir erect feline cock. Behind hir, a long reptilian tail is lashing in time with her words, its scaled length almost as long as her entire furred lower body. Her torso seems to be covered in rough brown dog fur, with a bovine udder hanging off her upper body's stomach. Her arms are twisted around and pulled up into almost wyvern-like wings, obviously not strong enough to lift her even an inch off the ground. It is almost startling to see the rather human head sitting on the shoulders of the creature, her eyes closed as she continues to speak.";
 	say "     Realizing that you've been staring at her form and not paying attention to what she's actually saying, you pause to listen for a minute. Listening to her speak, it quickly becomes obvious that she is singing the praises of something called the church of the maternal beast and someone she calls the Great Mother. She appears to be trying to appeal to the infected by telling them to embrace the changes, and the new sexuality sweeping the city, but not to let it overwhelm them. She continues on in lewd detail about the things that one should be careful of doing, or else you might give in and lose yourself completely. Her body shakes as she depicts several strange lewd acts to be avoided, and you can see her hind legs pumping her erect cock in the empty air eagerly as she continues to get more and more explicit in her descriptions. Shaking your head at the absurdity of it all, you leave the strange thing to its preaching, unsure if it even noticed you stopping to listen for a minute.";
 	now Strange Preacher is resolved;
@@ -383,12 +395,13 @@ Object	Name
 Hyena Kill	"Hyena Kill"
 
 Hyena Kill is a situation.
+ResolveFunction of Hyena Kill is "[ResolveEvent Hyena Kill]".
 The sarea of Hyena Kill is "Outside".
 
 when play begins:
 	add Hyena Kill to BadSpots of FurryList;
 
-Instead of resolving Hyena Kill:
+to say ResolveEvent Hyena Kill:
 	say "     You come across a murder scene in the corner of one of the streets, blood spattered everywhere, on the walls, the sidewalk, the parked cars, and black spotted hair also. Powdered segments of bone are also scattered. It looks like one of the hyenas didn't go for the rape, but for the kill. Ouch. They must have really hated the person. You hope that isn't what they think of you.";
 	now Hyena Kill is resolved;
 
@@ -400,6 +413,7 @@ Object	Name
 Panther Trap	"Panther Trap"
 
 Panther Trap is a situation.
+ResolveFunction of Panther Trap is "[ResolveEvent Panther Trap]".
 The sarea of Panther Trap is "Outside".
 
 when play begins:
@@ -407,7 +421,7 @@ when play begins:
 	add Panther Trap to badspots of HermList;
 	add Panther Trap to badspots of NonconList;
 
-Instead of resolving Panther Trap:
+to say ResolveEvent Panther Trap:
 	say "     You come across two large piles of debris that all but block the way forward. Despite them, you try and squeeze through. Unfortunately, the gray and tall junk piles fall onto you before you get fully through, trapping you with a loud smashing noise that you swear will be audible throughout the city. You wince to think of the attention coming your way and start trying to escape, fast.";
 	if a random number between one and 20 < 12: [the felitaur heard]
 		[puts Panther Taur as lead monster in case of impregnation]
@@ -453,12 +467,13 @@ Object	Name
 CatsandDogs	"CatsandDogs"
 
 CatsandDogs is a situation.
+ResolveFunction of CatsandDogs is "[ResolveEvent CatsandDogs]".
 The sarea of CatsandDogs is "Outside".
 
 when play begins:
 	add CatsandDogs to BadSpots of FurryList;
 
-Instead of resolving CatsandDogs:
+to say ResolveEvent CatsandDogs:
 	say "     As you travel through the city, you come across a pair of old apartment buildings side by side. The windows are open and the tenants are yelling at one another. One building appears to be populated entirely by cats and the other by dogs. They are growling, yowling and making rude gestures at one another. They jeer at one another and toss trash across the alley dividing their buildings. Focused on their mutual hatred, they don't notice you, but you do steer clear, certain that you'd not be able to fight off the horde populating either building... or worse, end up as some sort of prize in a battle between them. You make note of the location and remind yourself to keep away, finding another path around this neighborhood.";
 	now CatsandDogs is resolved;
 

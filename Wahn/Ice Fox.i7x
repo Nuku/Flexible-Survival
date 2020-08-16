@@ -105,7 +105,7 @@ When Play begins:
 	now lootchance entry is 0;         [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;              [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]anthro[or]lithe[or]slender[at random]";
 	now type entry is "[one of]vulpine[at random]";
@@ -382,10 +382,11 @@ Table of GameEventIDs (continued)
 Object	Name
 Carambola Tree	"Carambola Tree"
 
-Carambola Tree is a situation. Carambola Tree is inactive.
+Carambola Tree is a situation.
+ResolveFunction of Carambola Tree is "[ResolveEvent Carambola Tree]". Carambola Tree is inactive.
 The sarea of Carambola Tree is "Zoo".
 
-instead of resolving a Carambola Tree:
+to say ResolveEvent Carambola Tree:
 	say "     Remembering Miyuki's request, you keep an eye out for the tropical carambola tree during your exploration of the expansive City Zoo grounds. With all of the roaming infected, blocked pathways, and whatnot, it isn't easy at all, but eventually, you do spot the characteristic yellow fruit hanging from a tree not far away. You hurry over to it and pick those that look ripe and juicy and are hanging low enough. Yet just as you want to leave with the lucky find, a large tigertaur steps into your way from behind the nearby bushes. 'What do you think you are doing? That's my tree, and my fruit!' she growls, annoyed that you've intruded in what she sees as her territory. Without any further hesitation, the tigress attacks!";
 	challenge "Tigertaur";
 	if fightoutcome < 20: [player won]
@@ -401,10 +402,11 @@ Table of GameEventIDs (continued)
 Object	Name
 Arctic Enclosure	"Arctic Enclosure"
 
-Arctic Enclosure is a situation. Arctic Enclosure is inactive.
+Arctic Enclosure is a situation.
+ResolveFunction of Arctic Enclosure is "[ResolveEvent Arctic Enclosure]". Arctic Enclosure is inactive.
 The sarea of Arctic Enclosure is "Zoo".
 
-instead of resolving a Arctic Enclosure:
+to say ResolveEvent Arctic Enclosure:
 	if HP of Miyuki is 1:
 		say "     Remembering Miyuki's request, you roam through the expansive area of the zoo and search for the arctic animal enclosure. Despite there being numerous signs all over the place with maps, it is actually fairly hard to find. Some areas are completely impassable due to being claimed by overgrown plants or dangerous ferals. Following a quite circuitous route and having to go off-trail into what feels like a tropical jungle, you eventually reach a mid-sized building standing in the shadow of the border wall. There are no lights or power anywhere here, meaning that the whole bank of heat exchange units on the side of the building is sitting still and silent. This doesn't look good for the comfort of anyone who might still be living in there.";
 		say "     Stepping out from between the tropical trees, you move along the remains of the path that once led to the building, making sure that you don't stumble over any roots or debris on the ground. Noticing how far off all of the mating calls and other noises of the zoo seem right now, you wonder why this section is so deathly quiet. Then your gaze falls upon what must be the reason: The large wooden display at the entrance of the arctic enclosure is totally scratched up at one end, with large vertical lines that look like someone sharpened their claws there. The same claws most likely carved a message in the rest of the board - 'Fuck off! They're all mine!' Seems like someone or something territorial claimed this place, explaining why you haven't seen anyone else since you stumbled into the forest to get here.";

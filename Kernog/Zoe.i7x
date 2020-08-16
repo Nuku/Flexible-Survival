@@ -677,6 +677,7 @@ Object	Name
 Rabbit Tagger	"Rabbit Tagger"
 
 Rabbit Tagger is a situation.
+ResolveFunction of Rabbit Tagger is "".
 The sarea of Rabbit Tagger is "Nowhere".
 
 [Event trigger]

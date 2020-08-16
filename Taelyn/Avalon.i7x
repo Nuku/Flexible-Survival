@@ -34,6 +34,7 @@ Object	Name
 Fall-O-the-Wisp	"Fall-O-the-Wisp"
 
 Fall-O-the-Wisp is a situation.
+ResolveFunction of Fall-O-the-Wisp is "[ResolveEvent Fall-O-the-Wisp]".
 The sarea of Fall-O-the-Wisp is "Nowhere".
 
 when play begins:
@@ -41,7 +42,7 @@ when play begins:
 	add Fall-O-the-Wisp to BadSpots of MaleList;
 	add Fall-O-the-Wisp to BadSpots of FurryList;
 
-instead of resolving Fall-O-the-Wisp:
+to say ResolveEvent Fall-O-the-Wisp:
 	WispFollow;
 
 to WispFollow:

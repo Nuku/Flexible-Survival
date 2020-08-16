@@ -575,12 +575,13 @@ Table of GameEventIDs (continued)
 Object	Name
 Bird Troubles	"Bird Troubles"
 
-Bird Troubles is a situation. The level of Bird Troubles is 5. [meeting event in which you can take her home]
+Bird Troubles is a situation.
+ResolveFunction of Bird Troubles is "[ResolveEvent Bird Troubles]". The level of Bird Troubles is 5. [meeting event in which you can take her home]
 The sarea of Bird Troubles is "Campus".
 when play begins:
 	add Bird Troubles to BadSpots of FemaleList;
 
-Instead of resolving a Bird Troubles:
+to say ResolveEvent Bird Troubles:
 	say "     The science faculty of Fairhaven College, once a place that churned out graduates for local organizations like Trevor Labs and the City Hospital, now lie largely abandoned since the outbreak. The teaching laboratories occupy one block near the back of the building, and it's there you find yourself as you wander the campus, examining a couple of trucks parked by a loading dock. The trucks are empty, long looted of anything that might have been valuable, but what catches your attention is a potential entrance into the faculty building by way of a number of shutters and doors set into the rear of the loading dock. These must be the back entrances to the labs, through which bulky materiel is loaded. Perhaps there's something useful remaining inside - after all, the city has been full of surprises so far.";
 	say "     Most of the loading bays are shuttered and locked, but there's a door in the back which has been blocked by a fallen length of thick steel piping that's caught between two others to form a bar of sorts, wedging shut the outward-opening door. It's thick, riddled with claw marks and slightly bent, but isn't too heavy to lift and you're in before too long. Behind the door is a long corridor doors leading to individual laboratories on either side, a draft carrying air in from the small windows set high into the walls. Looking through the glass windows separating them from the corridors proper, most of the specimens have died from thirst and starvation in the cages, an unhappy end even for lab animals. Yet in one of them, the cages have been thrown open - not forced, but thrown - and there's someone collapsed on the ground inside! Carefully, you ease open the door and peer inside, holding your breath.";
 	WaitLineBreak;
@@ -628,13 +629,14 @@ Table of GameEventIDs (continued)
 Object	Name
 Lost Chick	"Lost Chick"
 
-Lost Chick is a situation. The level of Lost Chick is 5. Lost Chick is inactive.
+Lost Chick is a situation.
+ResolveFunction of Lost Chick is "[ResolveEvent Lost Chick]". The level of Lost Chick is 5. Lost Chick is inactive.
 The sarea of Lost Chick is "Campus".
 
 when play begins:
 	add Lost Chick to BadSpots of FemaleList; [female gymnasts]
 
-Instead of resolving a Lost Chick:
+to say ResolveEvent Lost Chick:
 	if HP of Nadia is 2: [first attempt]
 		say "     Remembering Nadia's words, you decide to keep an eye out for her missing chick while exploring the college campus. Most of the small grocery stores that serviced the students living on-campus have long been looted, as have the cafeteria storerooms, but if Nadia's suspicions were right then the little one wouldn't have been very interested in finding anything on the empty shelves anyway. Still, you wander about a little while longer, and it's then that you're rewarded with the faint sound of a brief squawk and set out in that direction. Indeed, a flash of color greets you as you round a corner - one of Nadia's brood is perched on a high ledge, below which a trio of feline gymnasts prowl continuously, occasionally eyeing the colorful avian and trying various ways and means of getting up that seriously suggests that they must have failed the first round of tryouts.";
 		say "     Nevertheless, they keep on trying to get at their prize despite their constant failures - those must have been some truly tenacious girls when they were human. It would have been a comical sight, really, if it weren't your daughter who was perched so high up. The trio of feline gymnasts aren't exactly very successful in their repeated attempts to get at her, leaving her in no immediate danger, but they are preventing her from making an escape. The occasional angry shriek or kick keeps them down - it's a wonder that more mutants haven't been drawn by the spectacle.";

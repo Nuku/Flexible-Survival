@@ -39,12 +39,13 @@ Object	Name
 AngieTrapped	"AngieTrapped"
 
 AngieTrapped is a situation.
+ResolveFunction of AngieTrapped is "[ResolveEvent AngieTrapped]".
 The sarea of AngieTrapped is "Zoo".
 when play begins:
 	add AngieTrapped to badspots of HermList;
 	add AngieTrapped to BadSpots of FurryList;
 
-Instead of Resolving a AngieTrapped:
+to say ResolveEvent AngieTrapped:
 	if AngieHappy is 0:
 		say "     Wandering along the zoo pathways, you hear several of the creatures roaming the zoo apparently fighting nearby. Curious, you move slightly closer to investigate and see that a few of the beasts are indeed fighting outside one of the smaller animal pens. You really aren't sure what they are fighting about, but it could be dangerous to interfere. Do you do so anyways?";
 		if Player consents:
@@ -135,7 +136,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "feline porn"	"     A small stack of pages from various nature books, describing the mating habits of the different types of big cats, intermixed with a number of photographs of a majestic lion. The beast is shown in his enclosure in the zoo, then a few of him mounting a lioness and a picture of him rolled on his back, with a human hand rubbing his belly. The following pics depict said hand (which must be Keith's) rubbing quite a bit lower and soon wrapping around the lion's erect cock. This is definitely a collection for enthusiasts about felines..."	1	feline porn
 
-feline porn is a grab object. It is part of the player. It is not temporary.
+feline porn is a grab object. It is not temporary.
 
 the scent of the feline porn is "The bundle of pornographic texts and photos have a lingering scent of sex to them.".
 

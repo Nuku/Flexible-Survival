@@ -21,6 +21,7 @@ Object	Name
 Surprise Shark Encounter	"Surprise Shark Encounter"
 
 Surprise Shark Encounter is a situation.
+ResolveFunction of Surprise Shark Encounter is "[ResolveEvent Surprise Shark Encounter]".
 The sarea of Surprise Shark Encounter is "Atlantis".
 
 when play begins:
@@ -30,7 +31,7 @@ when play begins:
 after going to Atlantis City Center while (Surprise Shark Encounter is active and Surprise Shark Encounter is not resolved and KurtRelationship is 1):
 	FirstKurtEvent;
 
-instead of resolving Surprise Shark Encounter:
+to say ResolveEvent Surprise Shark Encounter:
 	move player to Atlantis City Center;
 	FirstKurtEvent;
 
@@ -50,6 +51,7 @@ Object	Name
 Predator's Lunch	"Predator's Lunch"
 
 Predator's Lunch is a situation.
+ResolveFunction of Predator's Lunch is "[ResolveEvent Predator's Lunch]".
 Prereq1 of Predator's Lunch is Surprise Shark Encounter.
 Predator's Lunch is inactive.
 The sarea of Predator's Lunch is "Atlantis".
@@ -61,7 +63,7 @@ when play begins:
 after going to Atlantis City Market while (Predator's Lunch is active and Predator's Lunch is not resolved and KurtRelationship is 2 and KurtEvent - turns > 2): [Event has happened within the last 3 hours]
 	SecondKurtEvent;
 
-instead of resolving Predator's Lunch:
+to say ResolveEvent Predator's Lunch:
 	move player to Atlantis City Market;
 	SecondKurtEvent;
 
@@ -85,6 +87,7 @@ Object	Name
 Predator's Club Night	"Predator's Club Night"
 
 Predator's Club Night is a situation.
+ResolveFunction of Predator's Club Night is "[ResolveEvent Predator's Club Night]".
 Predator's Club Night is inactive.
 Prereq1 of Predator's Club Night is Predator's Lunch.
 The sarea of Predator's Club Night is "Nowhere".
@@ -96,7 +99,7 @@ when play begins:
 after going to Atlantis City Entrance while (Predator's Club Night is active and PlayerFucked of Kurt is true and KurtRelationship is 3 and KurtEvent - turns > 2 and The Palomino is known):
 	ThirdKurtEvent;
 
-instead of resolving Predator's Club Night:
+to say ResolveEvent Predator's Club Night:
 	move player to Atlantis City Entrance;
 	ThirdKurtEvent;
 

@@ -7,7 +7,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "old boombox"	"An old jam machine that somehow or another works without power."	10	old boombox
 
-old boombox is a grab object. It is part of the player. It is not temporary.
+old boombox is a grab object. It is not temporary.
 
 instead of sniffing old boombox:
 	say "     The faint scent of good old times seems to waft around the old jam machine. Memories of days gone by, some of them before your time, flitter through your head as you sniff the machine in question. For some reason though, that doesn't bother you much.";
@@ -25,9 +25,10 @@ Object	Name
 Old Record Store	"Old Record Store"
 
 Old Record Store is a situation.
+ResolveFunction of Old Record Store is "[ResolveEvent Old Record Store]".
 The sarea of Old Record Store is "Outside".
 
-Instead of Resolving a Old Record Store:
+to say ResolveEvent Old Record Store:
 	say "     Walking along and scouting for danger around every other turn, you find your steps taking you to someplace that you aren't particularly familiar with. Surprised by the fact that your body has suddenly gained an awareness all its own, you don't think to stop yourself as you follow an unseen path to an old music store that looks as though it has seen much, much better days. Even before the so-called apocalypse, you don't actually remember having seen a music shop in the neighborhood where you lived, not even in the big city really.";
 	say "     After iPods, cell phones and the likes started to come out and the internet became a hospice for people pirating bootleg music via unsecure web links, music stores like this one had become a relic of a past no one remembered or cared about.";
 	WaitLineBreak;

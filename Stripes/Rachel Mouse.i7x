@@ -11,12 +11,13 @@ Object	Name
 Quiet Apartment Building	"Quiet Apartment Building"
 
 Quiet Apartment Building is a situation.
+ResolveFunction of Quiet Apartment Building is "[ResolveEvent Quiet Apartment Building]".
 The sarea of Quiet Apartment Building is "Red".
 when play begins:
 	add Quiet Apartment Building to badspots of HermList;
 	add Quiet Apartment Building to BadSpots of FurryList;
 
-Instead of resolving a Quiet Apartment Building:
+to say ResolveEvent Quiet Apartment Building:
 	say "     Wandering off from the main strip, you come across a small, three story apartment building that seems quiet and relatively untouched. You find yourself looking it over, wondering if you should go in and take a look around. ";
 	if BodyName of Player is "Mental Mouse" and humanity of Player <= 75:
 		say "There's just something about the place that seems to be calling to you, and before you can even consider else, you head in to search it.";

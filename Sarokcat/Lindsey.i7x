@@ -4,7 +4,7 @@ Version 2 of Lindsey by Sarokcat begins here.
 "Adds an NPC to Flexible Survival with a variety of responses and goals."
 
 
-[ Hp of Lindsey                            ]
+[ HP of Lindsey                            ]
 [   0 = not met                            ]
 [   1 = talked                             ]
 

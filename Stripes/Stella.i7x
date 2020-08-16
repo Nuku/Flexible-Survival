@@ -19,12 +19,13 @@ Object	Name
 Eager Dal	"Eager Dal"
 
 Eager Dal is a situation.
+ResolveFunction of Eager Dal is "[ResolveEvent Eager Dal]".
 The sarea of Eager Dal is "Red".
 when play begins:
 	add Eager Dal to badspots of HermList;
 	add Eager Dal to BadSpots of FurryList;
 
-Instead of resolving a Eager Dal:
+to say ResolveEvent Eager Dal:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Stella]. Location: [location of Stella]. Alexandra's hint: [if AT_Stella is true]Given[else]Not given[end if]. <- DEBUG[line break]";
 	if HP of Stella is 0:

@@ -64,14 +64,15 @@ Table of GameEventIDs (continued)
 Object	Name
 Lost Trident	"Lost Trident"
 
-Lost Trident is a situation. The level of Lost Trident is 9.
+Lost Trident is a situation.
+ResolveFunction of Lost Trident is "[ResolveEvent Lost Trident]". The level of Lost Trident is 9.
 
 The sarea of Lost Trident is "Beach".
 When play begins:
 	Add Lost Trident to BadSpots of FurryList;
 	Add Lost Trident to BadSpots of MaleList;
 
-Instead of resolving a Lost Trident:
+to say ResolveEvent Lost Trident:
 	say "     Walking along the beach you watch as the crashing waves of the sea bounce across the shore as the [if daytimer is day]sun rides along the sky[else]moon dances along the night skyline[end if] while listening to the soft intelligible sounds of marine life reverberate all around you. As the minutes pass by, the soothing sounds of the water lapping along the sands makes a sense of nostalgia surge up throughout you, mind lulling you almost to sleep. However, before you can become too lost in the all-encompassing feelings of sleep about to overtake you, you find your gaze drifting over to what looks like a bronze colored trident free-floating like an abandoned surfboard along the waterline.";
 	say "     Curious as to where this strange thing came from, you shrug your backpack off and then walk into the sea to grab the weapon before it can drift further out into the [if daytimer is day]blue[else]black[end if] wonder of the ocean. Testing its weight you find that the trident is fairly light and has a well-worn grip around its smooth handle that fits your hand almost perfectly. Not sure, but not questioning the proverbial gift horse you begin to turn about your way to head back to the shore, but before you can get too far you hear the roar of a sea dragon behind you. Whipping your head around you find several sea dragons glaring at you as they raise themselves up out of the waters, the menacing looks on their faces makes you swallow thickly in turn.";
 	WaitLineBreak;

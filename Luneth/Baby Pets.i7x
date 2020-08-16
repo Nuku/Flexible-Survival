@@ -169,9 +169,10 @@ Object	Name
 Abandoned Fox	"Abandoned Fox"
 
 Abandoned Fox is a situation.
+ResolveFunction of Abandoned Fox is "[ResolveEvent Abandoned Fox]".
 The sarea of Abandoned Fox is "Park".
 
-Instead of resolving Abandoned Fox:
+to say ResolveEvent Abandoned Fox:
 	say "     Traveling through the park, you hear a strange soft noise coming from one of the nearby bushes. It sounds almost like something small calling out. Do you investigate?";
 	if Player consents:
 		project Figure of Dash_icon;
@@ -246,14 +247,14 @@ Section 1.4.3 - Dash/Beta Fang
 after going to Computer Lab while ((HP of Fang is 5 ) and Dash is booked and FangDashRel is 0):
 	project Figure of Dash_icon;
 	say "     Walking into the computer lab you're surprised to find Fang inside, sniffing around the small cubicle that Dash has claimed for himself. After a few moments the large wolf lets out a soft bark at the little fox's den and Dash pokes his head out to see who is disturbing him. He is greeted by the intimidating visage of your beta and begins to retreat again, but Fang's slowly wagging tail and relaxed posture seems to sooth him enough that he remains peeking around the corner of the wall, nose twitching slightly as he takes in the wolf's scent. 'Come out little one, I shall not harm you,' Fang calls, his voice soft and raspy from disuse. Dash, looks hesitant until he sees you, at which point he charges past the startled wolf and [if legsname of player is not listed in infections of SerpentineList and legsname of player is not listed in infections of SlidingList]presses himself up against your legs[else]hides behind you[end if]. Sensing that Fang was sincere in his desire to converse with the baby fox, you approach the lupine and enquire about his sudden interest in Dash.";
-	say "     Fang's luminescent eyes seem sad as he looks up at you. 'The child needs to learn to be strong. You are a good parent, but often busy. I wish to show him that there are others who care about him[if hp of Lux > 0]. Our children view him as their brother. I want to be part of his life too[end if].' A fit of coughing interrupts his explanation, perhaps due to how much he has been talking. Nonetheless, he continues, 'He must learn to defend himself. I can do this when you cannot.' By this time, Dash has summoned the courage to approach Fang, snuffling at his paw before continuing his investigation from snout to tail, the wolf remaining still throughout so as not to frighten the fox again. To his delight, Dash gives his nose a quick lick once he has finished sniffing at him. It looks like the two of them will get on well if you let them.";
+	say "     Fang's luminescent eyes seem sad as he looks up at you. 'The child needs to learn to be strong. You are a good parent, but often busy. I wish to show him that there are others who care about him[if HP of Lux > 0]. Our children view him as their brother. I want to be part of his life too[end if].' A fit of coughing interrupts his explanation, perhaps due to how much he has been talking. Nonetheless, he continues, 'He must learn to defend himself. I can do this when you cannot.' By this time, Dash has summoned the courage to approach Fang, snuffling at his paw before continuing his investigation from snout to tail, the wolf remaining still throughout so as not to frighten the fox again. To his delight, Dash gives his nose a quick lick once he has finished sniffing at him. It looks like the two of them will get on well if you let them.";
 	LineBreak;
 	say "     [bold type]Do you want to allow Fang to work with Dash ([link]Y[as]y[end link])? Or do you want to attempt to keep Fang away from Dash. ([link]N[as]n[end link])";
 	LineBreak;
 	if Player consents:
 		LineBreak;
-		say "     You smile at how well the two of them seem to be bonding, especially after how shaky their initial meeting was. Having finished sniffing each other, Dash and Fang seem at a loss as to what to do, until the fox playfully bows to him in an attempt to initiate a game. 'I am larger than you, little one and-', the wolf begins before Dash interrupts with a pleading yap. 'Fine, but only for a minute.' The fox streaks off around one of the desks, followed by Fang who has to be a lot more careful not to cause any damage. He isn't entirely successful, as you watch several chairs tumble over as he lollops past, the restrictive space hindering his usually fairly graceful movement. You chuckle to yourself at how the small fox has, at least momentarily, made the wolf forget his duties and relax. You just hope that this won't cause too much damage[if hp of Lux is 2]. Hearing the commotion, Lux and Umbra join in too, excitedly barking as they pursue their father and adopted sibling[else if hp of Lux > 2]. Hearing the commotion, Lux and Umbra peer into the room and you are sure that you see them smile before they disappear from view again. Whether or not your children will mention this to their father, you do not know[end if].";
-		say "     Eventually, [if hp of Lux is 2]they [else]the two of them [end if]come to a stop beside you again. Dash smiling wildly[if hp of lux is 2], Lux and Umbra bearing similar expressions[end if], and Fang allowing his tongue to spill from the side of his mouth from enjoyment. Fang seems to have a good bond with Dash, especially after that, and you don't feel you have much right to deny them contact with each other, so there seems little reason not to let him teach Dash to be part of your pack. Seeing your approval, Fang gives a grateful nod and gives Dash one last lick before padding out the door[if hp of Lux is 2], followed by the twin wolves as well as their adoptive brother, the fox kit attempting to walk underneath the larger male, the wolf adapting his gait to allow him to do so[else], followed by the fox kit who attempts to walk underneath the larger male, the wolf adapting his gait to allow him to do so[end if]. Considering Fang thought bonding with Dash was more important than guard duty, you are confident that the fox is in safe paws.";
+		say "     You smile at how well the two of them seem to be bonding, especially after how shaky their initial meeting was. Having finished sniffing each other, Dash and Fang seem at a loss as to what to do, until the fox playfully bows to him in an attempt to initiate a game. 'I am larger than you, little one and-', the wolf begins before Dash interrupts with a pleading yap. 'Fine, but only for a minute.' The fox streaks off around one of the desks, followed by Fang who has to be a lot more careful not to cause any damage. He isn't entirely successful, as you watch several chairs tumble over as he lollops past, the restrictive space hindering his usually fairly graceful movement. You chuckle to yourself at how the small fox has, at least momentarily, made the wolf forget his duties and relax. You just hope that this won't cause too much damage[if HP of Lux is 2]. Hearing the commotion, Lux and Umbra join in too, excitedly barking as they pursue their father and adopted sibling[else if HP of Lux > 2]. Hearing the commotion, Lux and Umbra peer into the room and you are sure that you see them smile before they disappear from view again. Whether or not your children will mention this to their father, you do not know[end if].";
+		say "     Eventually, [if HP of Lux is 2]they [else]the two of them [end if]come to a stop beside you again. Dash smiling wildly[if HP of lux is 2], Lux and Umbra bearing similar expressions[end if], and Fang allowing his tongue to spill from the side of his mouth from enjoyment. Fang seems to have a good bond with Dash, especially after that, and you don't feel you have much right to deny them contact with each other, so there seems little reason not to let him teach Dash to be part of your pack. Seeing your approval, Fang gives a grateful nod and gives Dash one last lick before padding out the door[if HP of Lux is 2], followed by the twin wolves as well as their adoptive brother, the fox kit attempting to walk underneath the larger male, the wolf adapting his gait to allow him to do so[else], followed by the fox kit who attempts to walk underneath the larger male, the wolf adapting his gait to allow him to do so[end if]. Considering Fang thought bonding with Dash was more important than guard duty, you are confident that the fox is in safe paws.";
 	else:
 		LineBreak;
 		say "     You firmly tell Fang that you think Dash would be better just being raised by you and that you would prefer he limit his interactions with the young fox. Fang looks devastated at your order, ears flat against his head and tears forming in his eyes. 'What? But... As my Alpha commands,' Fang haltingly replies with forced civility. 'Goodbye little one. I shall be on guard outside as usual.' From the pained look he gives you, it is evident that he wishes to argue further, but equally doesn't want to challenge your authority in front of Dash. As he lopes out of the computer room, you hear him mumbling, 'Not again. Why again?' You decide to ignore this and instead focus on cuddling the baby fox who appears confused at what has happened. From the accusing look he gives you, he understands enough to know that you are the cause of Fang's misery and that he is upset that you have sent his new friend away.";
@@ -422,19 +423,21 @@ Section 2.3 - Skunk Kit Event
 
 Table of GameEventIDs (continued)
 Object	Name
-Lost skunk kit	"Lost skunk kit"
+Lost Skunk Kit	"Lost skunk kit"
+Lost Skunk Kit	"Lost Skunk Kit"
 
-Lost skunk kit is a situation.
-The sarea of Lost skunk kit is "Forest".
+Lost Skunk Kit is a situation.
+ResolveFunction of Lost Skunk Kit is "[ResolveEvent Lost Skunk Kit]".
+The sarea of Lost Skunk Kit is "Forest".
 when play begins:
-	add Lost skunk kit to BadSpots of FemaleList;
-	add Lost skunk kit to BadSpots of FurryList;
-	add Lost skunk kit to BadSpots of MaleList;
+	add Lost Skunk Kit to BadSpots of FemaleList;
+	add Lost Skunk Kit to BadSpots of FurryList;
+	add Lost Skunk Kit to BadSpots of MaleList;
 
 
 littlelostskunk is a number that varies.
 
-Instead of resolving Lost skunk kit:
+to say ResolveEvent Lost Skunk Kit:
 	if littlelostskunk is 0:
 		say "     Wandering through the woods, you come across what was obviously the remains of a recent combat, the ground torn and savaged, and spots of blood staining the ground, looking around you find it hard to tell exactly what happened here, but you know it was violent. You glance around to see if there is anything of use in the area, or if you can determine what the combatants were and why they fought, finding several strange boot prints and what you think might be a bullet casing, but that makes no sense... Sighing you prepare to go on about your business, when you hear a small whimpering noise from under a nearby bush. Considering the state of the area investigating could be dangerous, do you look anyways?";
 		if Player consents:

@@ -13,10 +13,11 @@ Tight Fit	"Tight Fit"
 Section 1 - Tight Fit
 
 Tight Fit is a scavevent.
+ResolveFunction of Tight Fit is "[ResolveEvent Tight Fit]".
 The sarea of Tight Fit is "Allzones".
 tightfitcount is a number that varies.
 
-Instead of resolving a Tight Fit:
+to say ResolveEvent Tight Fit:
 	let y be "food";
 	let x be a random number from 1 to 8;
 	if x is 1 or x is 2:
@@ -103,9 +104,10 @@ Object	Name
 Protected Supplies	"Protected Supplies"
 
 Protected Supplies is a scavevent.
+ResolveFunction of Protected Supplies is "[ResolveEvent Protected Supplies]".
 The sarea of Protected Supplies is "Allzones".
 
-Instead of resolving a Protected Supplies:
+to say ResolveEvent Protected Supplies:
 	let y be "food";
 	let x be a random number from 1 to 8;
 	if x is 1 or x is 2:
@@ -211,9 +213,10 @@ Object	Name
 Dropped Handbag	"Dropped Handbag"
 
 Dropped Handbag is a scavevent.
+ResolveFunction of Dropped Handbag is "[ResolveEvent Dropped Handbag]".
 the sarea of Dropped Handbag is "Allzones".
 
-Instead of resolving a Dropped Handbag:
+to say ResolveEvent Dropped Handbag:
 	say "     Passing through the city, you find a dropped handbag with torn scraps of clothes around it. Given the messy stains on the torn dress, it seems whoever owned the bag met a rather sticky fate.";
 	say "     [bold type] Do you want to search it? It doesn't seem like they'll be needing it anymore.[roman type][line break]";
 	LineBreak;
@@ -258,10 +261,11 @@ Object	Name
 Dented Bike	"Dented Bike"
 
 Dented Bike is a scavevent.
+ResolveFunction of Dented Bike is "[ResolveEvent Dented Bike]".
 The sarea of Dented Bike is "Allzones".
 dentedbikecount is a number that varies.
 
-Instead of resolving a Dented Bike:
+to say ResolveEvent Dented Bike:
 	say "You find a dented bicycle, lying abandoned on the road. The shreds of its former owner's clothing are hanging from it and a few small tufts of fur are scattered around, leaving you to wonder what happened to him or her.";
 	let difficulty be a random number from 8 to 16;
 	if hardmode is true, increase difficulty by a random number between 0 and 2;
@@ -292,10 +296,11 @@ Object	Name
 Looted Supermarket	"Looted Supermarket"
 
 Looted Supermarket is a scavevent.
+ResolveFunction of Looted Supermarket is "[ResolveEvent Looted Supermarket]".
 The sarea of Looted Supermarket is "Allzones".
 supermarketcount is a number that varies.
 
-Instead of resolving a Looted Supermarket:
+to say ResolveEvent Looted Supermarket:
 	say "You decide to check out a small supermarket on your search for foodstuffs. Sadly, lots of other people had the same idea when this whole chaos started. The shelves are completely empty, with even absolutely useless stuff during an apocalypse looted to the last item.";
 	let t be a random number between 1 and 4;
 	if t is 1:
@@ -360,9 +365,10 @@ Object	Name
 Abandoned Cars	"Abandoned Cars"
 
 Abandoned Cars is a scavevent.
+ResolveFunction of Abandoned Cars is "[ResolveEvent Abandoned Cars]".
 The sarea of Abandoned Cars is "Allzones".
 
-Instead of resolving a Abandoned Cars:
+to say ResolveEvent Abandoned Cars:
 	say "You check out a few abandoned cars - looks like they were in a mid-size accident when the infection hit. They've all been looted - or just shredded inside and out by their changing owners. The trunk of one of them is still closed, and you soon learn why - it's been warped by the impact of another car and won't open.";
 	let x be 0;
 	let difficulty be a random number from 8 to 15;
@@ -400,9 +406,10 @@ Object	Name
 Manna from Heaven	"Manna from Heaven"
 
 Manna from Heaven is a scavevent.
+ResolveFunction of Manna from Heaven is "[ResolveEvent Manna from Heaven]".
 The sarea of Manna from Heaven is "Outside".
 
-Instead of resolving a Manna from Heaven:
+to say ResolveEvent Manna from Heaven:
 	say "Moving through the city, you suddenly hear cawing and shouting from somewhere above. It's a harpy flying in your direction, clutching something in her claws - closely followed by another who keeps insulting her. Sounds like they're having a disagreement of the ownership of the can of peaches the first one has in her talons. Before long, that dissolves into a furious mid-flight clawing match during which the fought-over can is knocked out of the claw holding it - and literally falls into your hands. You quickly dash off with it before the harpies team up and attack you.";
 	ItemGain food by 1;
 	now Manna from Heaven is resolved;
@@ -415,9 +422,10 @@ Object	Name
 Plains Scavenging	"Plains Scavenging"
 
 Plains Scavenging is a scavevent.
+ResolveFunction of Plains Scavenging is "[ResolveEvent Plains Scavenging]".
 The sarea of Plains Scavenging is "Plains"
 
-Instead of resolving a Plains Scavenging:
+to say ResolveEvent Plains Scavenging:
 	let y be "food";
 	let x be a random number from 1 to 12;
 	if x is 1 or x is 2:
@@ -539,6 +547,7 @@ Object	Name
 Garden Veggies	"Garden Veggies"
 
 Garden Veggies is a scavevent.
+ResolveFunction of Garden Veggies is "[ResolveEvent Garden Veggies]".
 The sarea of Garden Veggies is "Outside".
 veggiegardenfight is a number that varies.
 gardenveg is a number that varies.
@@ -547,7 +556,7 @@ when play begins:
 	add Garden Veggies to BadSpots of FurryList;
 
 
-Instead of resolving a Garden Veggies:
+to say ResolveEvent Garden Veggies:
 	if FemaleList is banned and MaleList is banned:
 		say "     During your search for more supplies, you find a small backyard garden, but the plants are shriveled and dying in the parched soil. Between the heat wave and the dry weather, the plants are withering away. You gather up what feeble veggies you can, having to strip the garden bare to get even get enough for a single meal.";
 		ItemGain food by 1;
@@ -590,11 +599,12 @@ Object	Name
 Free Drink	"Free Drink"
 
 Free Drink is a scavevent.
+ResolveFunction of Free Drink is "[ResolveEvent Free Drink]".
 The sarea of Free Drink is "Campus".
 when play begins:
 	add Free Drink to BadSpots of MaleList;
 
-Instead of resolving a Free Drink:
+to say ResolveEvent Free Drink:
 	project the figure of Talov_Kerr_Barrel_icon;
 	say "     As you're searching around the campus for some supplies, you spot a team of Satyr's rolling a heavy cask towards one of the dorm buildings. They seem in rather good spirits, if a little tired, and wave at you in a friendly manner. Deciding to risk it, you approach cautiously. They tell you they're bringing the wine in for an awesome party and are about to grab a quick drink for themselves before they get back to work. You're offered a swig as well.";
 	say "     [bold type]Would you like to take a drink to quench your thirst?[roman type][line break]";
@@ -652,9 +662,10 @@ Object	Name
 DbLD	"DbLD"
 
 DbLD is a scavevent.
+ResolveFunction of DbLD is "[ResolveEvent DbLD]".
 The sarea of DbLD is "Allzones".
 
-Instead of resolving a DbLD:
+to say ResolveEvent DbLD:
 	say "     While searching through the city for supplies, you come across the corpse of an excessively muscled man with a grizzled face. It seems that some creature took rather violent exception to him from the signs of destruction all around. The nearby walls are littered with bullet holes, though you don't spot any blood from his whatever his enemy was. Whatever strange infection this unlucky person had, it really left him unable to fight. Given his lack of actual wrists and ankles, it's clear he'd have trouble standing and fighting, let alone supporting his own top-heavy weight on his small, misshapen feet. Given the hundreds of bullet holes, it seems he had trouble aiming that giant gun of his (now shattered into pieces) thanks to his perpetually squinting eyes.";
 	say "     And while it doesn't seem to have done its previous owner much good, you unbuckle the single, oversized shoulderpad from his malproportioned body and take it with you. You know it's not really going to help much, but it's better than nothing and isn't doing that guy any good now.";
 	ItemGain shoulder pad by 1;
@@ -671,10 +682,11 @@ Object	Name
 Patient Rooms	"Patient Rooms"
 
 Patient Rooms is a scavevent.
+ResolveFunction of Patient Rooms is "[ResolveEvent Patient Rooms]".
 The sarea of Patient Rooms is "Hospital".
 patrooms is a number that varies.
 
-Instead of resolving a Patient Rooms:
+to say ResolveEvent Patient Rooms:
 	let y be "food";
 	let x be a random number from 1 to 12;
 	if x is 1 or x is 2:
@@ -753,9 +765,10 @@ Object	Name
 Shattered House	"Shattered House"
 
 Shattered House is a scavevent.
+ResolveFunction of Shattered House is "[ResolveEvent Shattered House]".
 The sarea of Shattered House is "Allzones".
 
-Instead of resolving a Shattered House:
+to say ResolveEvent Shattered House:
 	say "     As you travel along, you are forced to cut down a side street to avoid a small cluster of creatures lustfully fucking in the road up ahead. Down this street, you pass a few houses, including one that seems to have been partially blown out from the inside. Given the lack of fire damage and excessive amounts of sticky fluids, you'd guess that whoever once lived in there became very large very quickly";
 	let x be a random number from 1 to 5;
 	if x is 1 or x is 2:
@@ -821,9 +834,10 @@ Object	Name
 Scattered Clothing	"Scattered Clothing"
 
 Scattered Clothing is a scavevent.
+ResolveFunction of Scattered Clothing is "[ResolveEvent Scattered Clothing]".
 The sarea of Scattered Clothing is "Allzones".
 
-Instead of resolving a Scattered Clothing:
+to say ResolveEvent Scattered Clothing:
 	say "     Searching [one of]a small store[or]a convenience store[or]a gas station[or]a motel[or]a coffee shop[or]a newsstand[or]a taco truck[at random], you find that another scavenger has already been there before you. Poking around a little on the odd chance that something may have been missed, it sadly turns out that the place has been quite thoroughly ransacked. You're well out of luck for any food or drink to be found here. But then, just as you are about to give up on the location, your gaze falls upon an article of clothing that (for once) isn't torn, shredded, encrusted in dried cum or stained in some other horrible way. Given how hard it is to observe even the most basic levels of cleanliness in a situation like the nanite apocalypse, clean secondhand clothing is actually a quite lucky find, so you quickly add it to your pack.";
 	LineBreak;
 	let randomnumber be a random number from 1 to 4;

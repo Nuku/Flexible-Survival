@@ -13,12 +13,13 @@ Object	Name
 FindingKristen	"FindingKristen"
 
 FindingKristen is a situation.
+ResolveFunction of FindingKristen is "[ResolveEvent FindingKristen]".
 The sarea of FindingKristen is "Outside".
 when play begins:
 	add FindingKristen to BadSpots of FemaleList;
 	add FindingKristen to BadSpots of FurryList;
 
-Instead of resolving FindingKristen:
+to say ResolveEvent FindingKristen:
 	if HP of Kristen is not 0:
 		say "ERROR-Kristen-[HP of Kristen]E: This event should already be resolved!";
 	else:

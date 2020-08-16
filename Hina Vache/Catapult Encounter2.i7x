@@ -10,9 +10,10 @@ Object	Name
 Loaded Catapult	"Loaded Catapult"
 
 Loaded Catapult is a situation.
+ResolveFunction of Loaded Catapult is "[ResolveEvent Loaded Catapult]".
 The sarea of Loaded Catapult is "Outside".
 
-instead of resolving Loaded Catapult:
+to say ResolveEvent Loaded Catapult:
 	if the Bait of Diego is journal:
 		now demandIndex is a random number from 1 to the number of entries in BaitList;
 		now the Bait of Diego is entry demandIndex of BaitList;
@@ -87,7 +88,7 @@ gotcatares is a number that varies.
 catadiff is a number that varies.
 catadiff is 20.
 
-instead of resolving a loaded catapult:
+to say ResolveEvent loaded catapult:
 	say "You find a loaded catapult, a large plastic grocery bag filled with a thick liquid in the cup, and the arms just waiting to let fly.";
 	say "You look up to find the target, tilting your [FaceSpeciesName of Player in lower case] head into the distance. There seems to be a large military blockade there, a huge earthen wall with turrets and barbed wire, giant tanks in lines behind that, and then armed men stretching as far as the eye can see. They are all alert and tense, probably from the one who set this up.";
 	say "Do you want to check out what the bags are filled with?";

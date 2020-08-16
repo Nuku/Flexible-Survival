@@ -7,12 +7,13 @@ Table of GameEventIDs (continued)
 Object	Name
 Cow Hunting	"Cow Hunting"
 
-Cow Hunting is a situation. The level of Cow Hunting is 5.
+Cow Hunting is a situation.
+ResolveFunction of Cow Hunting is "[ResolveEvent Cow Hunting]". The level of Cow Hunting is 5.
 The sarea of Cow Hunting is "Plains".
 when play begins:
 	add Cow Hunting to badspots of HermList; [Cuntboy cowboy]
 
-Instead of resolving a Cow Hunting:
+to say ResolveEvent Cow Hunting:
 	project the Figure of Corbin_face_icon;
 	say "     Roaming through the plains, you see a person off in the distance who waves and starts walking towards you. As he comes closer, you see that it's a guy in the shape of a humanoid horse, wearing a cowboy hat and a nice pair of jeans with an interesting bulge in the crotch area. His chest is bare, showing off a well-built upper body with washboard abs.";
 	say "     'Hi there, I'm Corbin James. I was wondering if you might have seen a cow somewhere... an actual one, I mean. Some critter broke through the fences and the cows got out over at the farm I work at. I found most of them, but the best producer, Wendy, is still missing...'";
@@ -64,12 +65,13 @@ Object	Name
 Missing Cow	"Missing Cow"
 
 Missing Cow is a situation.
+ResolveFunction of Missing Cow is "[ResolveEvent Missing Cow]".
 The Prereq1 of Missing Cow is Cow Hunting.
 The Prereq1Resolution of Missing Cow is { 1, 3 }.
 The level of Missing Cow is 5.
 The sarea of Missing Cow is "Plains".
 
-Instead of resolving a Missing Cow:
+to say ResolveEvent Missing Cow:
 	project the Figure of FeralGryphon_hard_icon;
 	say "     Roaming through the plains, you suddenly hear loud mooing coming from somewhere and as you look around, you spot an... interesting scene a moderate distance away. Looks like a cow - a regular, non-transformed one - who's just being fucked by a pretty large gryphon. The winged predator is holding the bovine only lightly with his taloned paws as he ruts her from behind and it doesn't look like she minds getting fucked by him - in fact, the sounds she makes seem rather pleased.";
 	say "     This must be Wendy, the missing cow Corbin told you about. There's that reward waiting for you if you manage to bring her back to the McDermott Farm. What do you want to do about her now? You could just... wait, hoping the gryphon might fly off after he got his rocks off - on the other hand, there's no guarantee that the feral beast won't just want a quick snack after sex and could eat her.";

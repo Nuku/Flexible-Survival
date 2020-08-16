@@ -39,6 +39,7 @@ Object	Name
 Razorback Fury	"Razorback Fury"
 
 Razorback Fury is a situation.
+ResolveFunction of Razorback Fury is "[ResolveEvent Razorback Fury]".
 The level of Razorback Fury is 7.
 The sarea of Razorback Fury is "Forest".
 
@@ -46,7 +47,7 @@ when play begins:
 	add Razorback Fury to BadSpots of MaleList;
 	add Razorback Fury to BadSpots of FurryList;
 
-Instead of resolving a Razorback Fury:
+to say ResolveEvent Razorback Fury:
 	project the Figure of Garth_face_icon;
 	say "     You hear crashes, shouts and howls from somewhere nearby in the dense forest - sounds like there's quite a scuffle going on. Curiosity drives you to investigate and you walk towards the fight in a slow pace, doing your best to be stealthy. Soon, a small clearing comes into sight - and in it, three anthro wolves and an anthro boar. A very angry anthro boar, with the coarse fur on his bulky yet powerful body bristling. Looking at the thick mane that starts at his head and runs halfway down his back in a raised ridge, it is immediately obvious that this isn't a docile pig - no, you're seeing a feral razorback! He doesn't seem to believe in wearing clothing (not that he has to, with a coat of fur) and is holding one of the wolves raised by his throat, half a foot off the ground. The other two canines lie on the forest floor, one of them knocked out completely, the other whimpering and holding a broken arm.";
 	say "     The boar shakes his captive and growls at him, then says in a snarly tone, 'So how did you think this was gonna go, punk? You and your little buddies become wolves and think you're the top dogs now?' The only reply is a choked gurgle from the wolf - which might have something to do with the razorback pig holding him a bit tight by the throat. 'Bah! Wannabes - I could see it on you a mile away! You become animals and then go trampling into MY forest while still wearing designer jeans?! Humanity is gone, dip-shit!' With that, the boar slams the roughed-up wolf against the trunk of a nearby tree, then lets go of him, sending the canine to collapse at his feet. After a few coughs and groans, the wolf looks up fearfully at the guy standing over him and says, 'Look, we were just gonna...'";
@@ -71,6 +72,7 @@ Object	Name
 Boar Payback	"Boar Payback"
 
 Boar Payback is a situation.
+ResolveFunction of Boar Payback is "[ResolveEvent Boar Payback]".
 The Prereq1 of Boar Payback is Razorback Fury.
 The level of Boar Payback is 7.
 The sarea of Boar Payback is "Forest".
@@ -79,7 +81,7 @@ when play begins:
 	add Boar Payback to BadSpots of MaleList;
 	add Boar Payback to BadSpots of FurryList;
 
-Instead of resolving a Boar Payback:
+to say ResolveEvent Boar Payback:
 	say "     As you wander through the forest, you spot someone moving a little bit ahead of you - it's a dashing young anthro wolf, clad in designer jeans and a tight shirt, bearing a determined expression on his face. After a moment or two, you recall his name being Andy, and you having seen him and two buddies try (and fail) to take on a tough razorback boar out here. Wondering what he's doing out here again after the thrashing and face-fuck Garth the boar gave him, you almost automatically start following him unobtrusively - then suddenly spot the [if daytimer is day]daylight[else]moonlight[end if] glisten on something metallic stuck behind his belt, just above the tail cut-out he put in those jeans. The would-be wolfpack (or gang) leader has a gun! Doesn't take a genius to figure out who he's got a score to settle with.";
 	say "     Uh oh, maybe you should re-think following him - stray bullets don't care if you're just a spectator... Do you still go after Andy and see what happens when he confronts Garth?";
 	if Player consents:
@@ -121,6 +123,7 @@ Object	Name
 Canine Indecision	"Canine Indecision"
 
 Canine Indecision is a situation.
+ResolveFunction of Canine Indecision is "[ResolveEvent Canine Indecision]".
 The Prereq1 of Canine Indecision is Boar Payback.
 Prereq1Resolution of Canine Indecision is { 1, 2 }.
 The level of Canine Indecision is 7.
@@ -129,7 +132,7 @@ when play begins:
 	add Canine Indecision to BadSpots of MaleList;
 	add Canine Indecision to BadSpots of FurryList;
 
-Instead of resolving a Canine Indecision:
+to say ResolveEvent Canine Indecision:
 	say "     As you wander through the outskirts of the forest, where trees and buildings meet and sometimes even meld under the influence of the ever-present nanite infection, you spot something moving a little bit ahead of you. Careful not to give yourself away, you move a little closer to check out what it is - and it turns out to be someone you know (a little bit at least). Not too far away and with his back turned, a dashing young anthro wolf stands, looking rather lost and unsure of himself. It is Andy, the would-be gang-member that you saw before in his meetings with the razorback boar man Garth. To his left, the green and brown expanse of the forest beckons, cool in the shade and full of life - while to his right, a narrow street leads back to the heart of the city, promising some loot and luxury for the ones who can assert themselves in a harsh post-apocalyptic society.";
 	say "     Wondering what the young canine is up to, you step a little bit further still, unseen and silent - until the brittle piece of glass you didn't see under the wet leaves on the ground breaks with a surprisingly loud crunch. Whirling around in shock, the canine teen focuses on you and takes a defensive stance - only to recognize you with widening eyes. 'You... I know you... you were there when I - when he - when I got... spanked, by mister Garth.' Both of you know there was a lot more than just spanking going on, but you decide to not make Andy even more skittish and nervous and just let it go, nodding to the young man in recognition. 'I...' Andy starts, then swallows and distractedly wipes his paws over the tight designer jeans covering his legs, 'I can't decide what to do. Its crazy to just tell someone I don't even know, but... you were there, you know.'";
 	LineBreak;
@@ -164,6 +167,7 @@ Object	Name
 Boar Encounter	"Boar Encounter"
 
 Boar Encounter is a situation.
+ResolveFunction of Boar Encounter is "[ResolveEvent Boar Encounter]".
 Boar Encounter is inactive.
 The level of Boar Encounter is 7.
 The sarea of Boar Encounter is "Forest".
@@ -172,7 +176,7 @@ when play begins:
 	add Boar Encounter to BadSpots of MaleList;
 	add Boar Encounter to BadSpots of FurryList;
 
-Instead of resolving a Boar Encounter:
+to say ResolveEvent Boar Encounter:
 	project the Figure of Garth_face_icon;
 	say "     While wandering through the urban forest, you catch a faint sound of snapping twigs. Pausing to listen more closely, you realize that they're actually getting louder. Eyes focusing in the direction the noises are coming from, you see a large anthro boar step out of the shadows of the forest. It's Garth, who apparently jogged through the woods to get to you. 'I knew you'd be around somewhere,' he says with a smile, taking a few steps closer. 'You still smell of the time I last bred you,' the anthro boar adds and winks at you. 'Just catching your scent when the wind turned a few minutes ago made my balls ache with the urge to fill you again.'";
 	say "     Coming close enough to touch, Garth stands before you in all his naked glory, wearing nothing but the bristles of his own fur. Heavy-set yet muscular, he is a truly awe-inspiring example of an anthro razorback in his prime - and his build isn't the only thing the man can be proud of. Between his legs dangles a thick and weighty shaft, getting harder by the second, and a pair of furry balls ready to churn out enough cum to overfill your holes. Taking notice that you're checking him out, the horny boar gives you a wink before saying, 'Did you come into my forest in order to find me and have some fun, or are you just passing through? Either way, I look forward to taking you again.'";
@@ -244,6 +248,7 @@ Object	Name
 Woodcutting Boar	"Woodcutting Boar"
 
 Woodcutting Boar is a situation.
+ResolveFunction of Woodcutting Boar is "[ResolveEvent Woodcutting Boar]".
 The Prereq1 of Woodcutting Boar is Canine Indecision.
 Prereq1Resolution of Woodcutting Boar is { 4 }. [must have sent Andy to Garth]
 The Prereq2 of Woodcutting Boar is Boar Encounter.
@@ -255,7 +260,7 @@ when play begins:
 	add Woodcutting Boar to BadSpots of MaleList;
 	add Woodcutting Boar to BadSpots of FurryList;
 
-Instead of resolving a Woodcutting Boar:
+to say ResolveEvent Woodcutting Boar:
 	say "     Moving through the expansive urban forest, one sometimes can almost forget that this was once the middle of a city, surrounded by what seem to be ancient trees and all sorts of other vegetation forming thick undergrowth. Yet all too often, the truth is revealed by objects coming into view beyond the thick trunks as you keep walking: roadsigns on crooked poles almost pushed over by roots bursting the concrete below, mounds of rubble that were once buildings, as well as a few wall segments miraculously still standing despite the explosive growth patterns of vegetation hereabouts. Glancing down, you see a large fragment of concrete, complete with several rebar struts sticking out of it. From the looks of it, they snapped under too much strain, showing that even something as simple as a growing tree can bring down what humanity has built - given enough time that is, or an out of control nanite infection to help things along.";
 	say "     Gloomy thoughts come unbidden to your mind as you study this localized destruction of human civilization, gaze wandering over your surroundings and finding more and more things that do not belong in the woods. A green mound not too far away is an overgrown car on closer inspection, and over there is a bicycle twisted into something almost unrecognizable by a tree that grew through the spokes of its wheels until they snapped. Then suddenly, a loud *Thwack* sound reaches your ears. Standing up straight, you listen intently, and after a short moment, an identical noise rings out, followed by another and another, now in quick succession. The way sound echoes in the woods makes you somewhat tentative in your guess, but you think the source of the noise isn't actually that far off.";
 	say "     [bold type]Do you want to go to check it out?[roman type][line break]";
@@ -800,7 +805,7 @@ When Play begins:
 	now lootchance entry is 0;          [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]stocky[or]bulky[or]powerful[at random]";
 	now type entry is "[one of]swine[at random]";

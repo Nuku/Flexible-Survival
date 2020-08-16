@@ -79,21 +79,26 @@ SexuallyExperienced of Ranae is false.
 Section 1 - Events
 
 Starving Frog is a situation.
+ResolveFunction of Starving Frog is "[ResolveEvent Starving Frog]".
 The sarea of Starving Frog is "Mall".
 
 Rundown Boutique is a situation.
+ResolveFunction of Rundown Boutique is "[ResolveEvent Rundown Boutique]".
 The sarea of Rundown Boutique is "Outside".
 Rundown Boutique is inactive.
 
 Boarded-up Building is a situation.
+ResolveFunction of Boarded-up Building is "[ResolveEvent Boarded-up Building]".
 The sarea of Boarded-up Building is "Outside".
 Boarded-up Building is inactive.
 
 Ransacked Shop is a situation.
+ResolveFunction of Ransacked Shop is "[ResolveEvent Ransacked Shop]".
 The sarea of Ransacked Shop is "Outside".
 Ransacked Shop is inactive.
 
 Trench Coat Salesman is a situation.
+ResolveFunction of Trench Coat Salesman is "[ResolveEvent Trench Coat Salesman]".
 The sarea of Trench Coat Salesman is "Outside".
 Trench Coat Salesman is inactive.
 
@@ -101,7 +106,7 @@ when play begins:
 	add Starving Frog to BadSpots of FemaleList;
 	add Starving Frog to BadSpots of FurryList;
 
-Instead of resolving a Starving Frog:
+to say ResolveEvent Starving Frog:
 	now hunger of Ranae is 1;		[Met Ranae]
 	say "     While wandering through the sewers, you hear the splashing of water and someone softly mumbling coming down from one of the passageways. Creeping down the tunnel, you round the corner and spot a frog woman digging through a flooded hole in the wall. She looks rather thin, and her skin is a dull green. 'Come on, come on...' she says to herself as she continues to search the hole. After a few moments, she withdraws her arms from the crevice with a weary sigh. 'Nothing...' The female amphibian moves to leave, but she freezes when she happens to turn in your direction and spots you. With a startled yelp, she hastily backpedals away from you.";
 	if BodyName of Player is "Human" and player is pure:
@@ -138,7 +143,7 @@ Instead of resolving a Starving Frog:
 	move Ranae to Froggy Hideout;
 	move player to Froggy Hideout;
 
-Instead of resolving a Rundown Boutique:
+to say ResolveEvent Rundown Boutique:
 	say "     During your search for supplies, you come to a small shop in the middle of a quiet street. Looking through the display window, you note that the place used to be a clothes boutique for women, judging by the number of dresses that are littering the floor. Seeing that nobody seems to be occupying the building, you decide to go in and look around for supplies. Digging through the wreckage, it soon becomes obvious that a number of people had been here before you since you find nothing of use. All of the clothes that you inspect are either covered in cum or damaged, which is a shame because many of the dresses would've looked beautiful if they had been kept in pristine condition. In the corner, you see a doorway leading to the backroom, as well as a pair of female mannequins that someone had jokingly set up so that they were touching each other's breasts.";
 	say "     Entering the backroom, you find that it's the same story as the front when you don't turn up anything useful. Besides a bunch of empty boxes, the only thing of note are several tall lockers along the wall, presumably for the former employees. All but one had been plundered, and that remaining locker is securely shut by a built-in lock that could only be unlocked by a key. Just as you turn around to give up your search, you lose your balance when you trip on a small box. You flail about and manage to keep yourself from falling, but not before you hit some boxes. As you curse your clumsiness, you pause when you spot a key that had been hidden under the box pile you had just knocked over. Figuring that it was at least worth a try, you pick up the key and use it on the locker. To your surprise, it actually works, and the locker opens to reveal a brown paper bag and a black dress hanging on a hook. Hardly believing your luck, you first look into the paper bag and find a bag of chips, a soda can, and a bottle of water packed inside.";
 	ItemGain chips by 1;
@@ -149,7 +154,7 @@ Instead of resolving a Rundown Boutique:
 	now hunger of Ranae is 5;		[Found black dress]
 	now Rundown Boutique is resolved;
 
-Instead of resolving a Boarded-up Building:		[Figurine]
+to say ResolveEvent Boarded-up Building:		[Figurine]
 	say "     Exploring through one of the city's many streets, you come to a two-story building that has wooden boards covering every window and doorway. Chances are that the building was abandoned and boarded-up before all of the chaos started, but you figure you might as well try your luck and take a look inside. That is, if you can find a way to get in. Examining the boards up close, you find that all of them are securely in place, barring any chance of an easy entrance. You briefly consider trying to force your way in, but you dismiss the idea as it would take too much effort, not to mention that the noise would likely attract unwanted attention. Searching for an alternate route, you move into a small alleyway to the right of the building.";
 	say "     Curiously, you find a ladder peeking out from under a tarp that seems to have been hastily thrown over it. Even more curious is the fact that the ladder is located under a large boarded-up window on the second floor. Figuring that it's at least worth investigating, you pull out the ladder from the tarp, prop it against the wall, and use it to climb up to the window. To your surprise, the wood blocking your way budges when you touch it, and with a bit more pushing, you're able to move the board to the side, finally giving you a way in. When you climb through the window, you're disappointed to find that the room you have snuck into, as well as the adjacent ones, are all completely bare, confirming that the place was abandoned some time ago.";
 	WaitLineBreak;
@@ -159,7 +164,7 @@ Instead of resolving a Boarded-up Building:		[Figurine]
 	now perception of Ranae is 1;		[Found figurine]
 	now Boarded-up Building is resolved;
 
-Instead of resolving a Ransacked Shop:		[Drapes]
+to say ResolveEvent Ransacked Shop:		[Drapes]
 	say "     Walking through a street, the sight of a small shop catches your eye. Though the door remains intact, the display window in the front of the building has been completely shattered, glass shards littering the nearby sidewalk. It's obvious the place was ransacked, but you briefly wonder why this particular shop was robbed, given how the adjacent stores seemed to be untouched, but your question is soon answered when you glance up at the place's storefront sign, or rather, what used to be it. You're unable to read the shop's name because the sign is completely covered with graffiti drawings of dicks and other crude images, along with spray-painted words such as [']cheap bastard,['] [']lying asshole,['] and other spiteful titles. It looks like that the owner of the shop wasn't popular, and you guess that someone took advantage of the city's chaos to take action against the supposed swindler.";
 	say "     Taking a look through the broken window, you see that although the shop has been looted, there still seems to be various items lying around. Figuring that it's at least worth a quick look, you climb in through the window, careful to avoid the broken glass. Searching around, you find an assortment of items, all with handmade price tags attached to them, and you guess that this place used to be a sort of pawn shop. Unfortunately, anything worthwhile seems to already be gone, and all of the things that have been left behind are either of little use or too bulky to safely carry out of here. It doesn't take long for you to finish searching the small storefront, and you head through a doorway in the back, only to find a room barely bigger than a closet. With a small desk and a filing cabinet with three drawers in one corner and several small boxes in another, this tiny space doubled as an office and a storage room.";
 	say "     Searching through the filing cabinet first, you find receipts and business-related papers in the top two drawers that pretty much confirms that the shop had been cheating their customers out of a fair deal. When you open the bottom drawer, you find some books, but more importantly, a bottle of water. With the current state of the place and the reputation of the former store owner, you have no qualms taking the precious supply for yourself. You then move on to the boxes, opening them one by one as you search their contents. At first, all you find are various odd knick-knacks or low-quality items that don't look like they would have sold, but you pause when you eventually come upon a bundle of green fabric, its color reminding you of Ranae. Unfolding your find, you see that the fabric is actually a set of drapes with an embroidered pattern of swirls decorating its front. Thinking that the frog staying in the library might like these drapes to help decorate her living space, you stow them into your bag. Finding nothing else of interest in the shop, you climb back through the broken window and resume your exploration.";
@@ -167,7 +172,7 @@ Instead of resolving a Ransacked Shop:		[Drapes]
 	now intelligence of Ranae is 1;		[Found drapes]
 	now Ransacked Shop is resolved;
 
-Instead of resolving a Trench Coat Salesman:		[Bracelet]
+to say ResolveEvent Trench Coat Salesman:		[Bracelet]
 	say "     As you make your way through the city, you stop when you hear someone call out with a 'Pssst.' Looking around, you see your caller standing in a nearby alleyway, waving you over with a black and brown paw. Though the person doesn't seem to be hostile, the long trench coat that almost reach down to their feet and a fedora hat that covers their face doesn't completely put you at ease. Cautiously walking over to the suspicious figure, you're able to see that the person is a male raccoon. 'Hey, you want to buy something?' the raccoon asks as he uses a hand to grab one side of his coat and pull it wide open. Though this act reveals that he's wearing nothing underneath his coat, essentially showing you his furry body, your gaze is focused on the rings, necklaces, bracelets, watches, and other shiny accessories that adorn the inside of his coat. 'I got only the finest stuff here,' the raccoon says with a smirk. 'C'mon, pick a few. I'll give you a good price on them.' However, you aren't able to browse his wares for long before someone from behind yells, 'Hey, you!'";
 	say "     Spinning around, you see two harpies approaching, but for some reason, they both seem to be ignoring you in favor of angrily glaring at the raccoon. 'You sold us fake jewelry!' one of the winged females accuses, and the other one promptly adds, 'Yeah! You're going to pay for trying to trick us!' The raccoon yelps and swiftly bolts into the alley, and you have to jump out of the way of the two raging harpies as they pursue the sleazy salesman. The din caused by the wild chase soon fades away, leaving you by yourself. Shaking your head over the odd scenario, you're about to leave when something shimmering on the ground catches your eye. Picking up the object, you see that it's a silver-colored bracelet with its center holding several emeralds arranged in a circular pattern. The raccoon must have dropped this bracelet in his haste to escape, but given the unsatisfied harpies from earlier, this is no doubt just another piece of fake jewelry. Still, the bracelet looks nice enough. Perhaps Ranae would like it.";
 	now charisma of Ranae is 1;		[Found bracelet]

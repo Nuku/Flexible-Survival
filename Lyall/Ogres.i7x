@@ -18,6 +18,7 @@ Object	Name
 Ogre Encounter	"Ogre Encounter"
 
 Ogre Encounter is a situation.
+ResolveFunction of Ogre Encounter is "[ResolveEvent Ogre Encounter]".
 The level of Ogre Encounter is 10. [minimum level to find the event]
 The sarea of Ogre Encounter is "Junkyard".
 
@@ -25,7 +26,7 @@ when play begins: [flags for blocking this event]
 	add Ogre Encounter to BadSpots of MaleList;
 	add Ogre Encounter to BadSpots of FurryList;
 
-Instead of resolving a Ogre Encounter:
+to say ResolveEvent Ogre Encounter:
 	setmonster "Ogre Male";
 	if Resolution of Ogre Encounter is 0: [FIRST ENCOUNTER]
 		say "     While exploring the city, you turn a corner and bump into a large creature. Startled, you quickly jump back to create some distance between the two of you and [if weapon object of Player is journal]ready your fists[else]reach for your weapon[end if]. Your resolve to fight wavers when you realize that it's not just one, but three of these beasts that stand in front of you, all easily seven feet tall and imposingly built. The gray-skinned creatures resemble orcs, but with pudgy faces and large, round bellies. Their faces are covered with wrinkles and sport pointed teeth with what look to be a small set of tusks jutting out unevenly from the bottom row. They have large, round ears and dark, dim eyes. You can see a bush of black hair covering their armpits, a light coating across their arms, and a big patch between each pec. They look to be either oiled up from head to toe or just covered in sweat - you assume the latter.";
@@ -510,7 +511,7 @@ When Play begins:
 	now lootchance entry is 0;         [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4;              [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "ogre";
 	now type entry is "ogre";

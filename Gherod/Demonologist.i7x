@@ -29,6 +29,7 @@ Object	Name
 Hellish Trashpile	"Hellish Trashpile"
 
 Hellish Trashpile is a situation.
+ResolveFunction of Hellish Trashpile is "[ResolveEvent Hellish Trashpile]".
 The sarea of Hellish Trashpile is "Warehouse".
 
 when play begins:
@@ -38,7 +39,7 @@ when play begins:
 LastTrashSearchTurn is a number that varies. [@Tag:NotSaved]
 LastTrashSearchTurn is usually 20000.
 
-Instead of resolving a Hellish Trashpile:
+to say ResolveEvent Hellish Trashpile:
 	if Resolution of Hellish Trashpile is 0: [first time]
 		say "     Your exploration efforts take you to a rather foggy area, just around another warehouse you have passed by. The sound of dirt scraping between your feet and the asphalt is only thing you hear now as you keep walking through the cemented field, without any signs of life other than yours. The mist disturbing your vision causes your eyes to itch slightly, forcing you to thread carefully as you try to glance around to get to know your surroundings. It appears you've been caught in the middle of some troubling wind as you're crossing a wide road to the next block of buildings straight ahead. You try to make it through quickly, rubbing your teary eyes in an attempt to clear off the dirt as you slip yourself into a sheltered street. It is easier to proceed now, unhindered from any dusty wind as it is blocked by the buildings surrounding you.";
 		say "     Amidst your walk, you start feeling some sort of reverberation, one that feels unnatural to you. It's as if you were straying near a reactor core, an ominous sound that nearly makes you feel dizzy. It's when you approach a crossroad that you hear a strange, high pitched voice mumbling from the left, a narrow turn leading to a dark alley. With caution, you lean over the wall and slow down your pacing, reaching over to the corner so you can attentively glance towards the area. Doesn't take you long to catch an eye on what seems to be a tiny crimson whirling portal and a small red figure flying. An imp, of all the possible creatures, dumping trash from the wormhole on the floor. There are waste containers about, but you know better than to hope this specific creature would even care about proper places for junk.";
@@ -106,7 +107,7 @@ to HellTrashEvent2:
 	say "     [link](3)[as]3[end link] - Leave for now.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-4)>[run paragraph on]";
+		say "Choice? (1-3)>[run paragraph on]";
 		get a number;
 		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 			break;
@@ -209,6 +210,7 @@ Object	Name
 Hell Realm	"Hell Realm"
 
 Hell Realm is a situation.
+ResolveFunction of Hell Realm is "".
 The sarea of Hell Realm is "Nowhere".
 
 to say HellRealmRitual:
@@ -571,6 +573,7 @@ Object	Name
 Strange Sorcerer	"Strange Sorcerer"
 
 Strange Sorcerer is a situation.
+ResolveFunction of Strange Sorcerer is "".
 The sarea of Strange Sorcerer is "Nowhere".
 
 instead of navigating Grey Abbey Library while (Strange Sorcerer is active and Strange Sorcerer is not resolved and Resolution of Hell Realm > 3):
@@ -1533,6 +1536,7 @@ Object	Name
 Xaedihr Experiments	"Xaedihr Experiments"
 
 Xaedihr Experiments is a situation.
+ResolveFunction of Xaedihr Experiments is "".
 The sarea of Xaedihr Experiments is "Nowhere".
 
 [***********************************************************]
@@ -1611,6 +1615,7 @@ Object	Name
 XaedihrAtticus	"XaedihrAtticus"
 
 XaedihrAtticus is a situation.
+ResolveFunction of XaedihrAtticus is "".
 The sarea of XaedihrAtticus is "Nowhere".
 
 Table of GameEventIDs (continued)
@@ -1618,6 +1623,7 @@ Object	Name
 XaedihrRane	"XaedihrRane"
 
 XaedihrRane is a situation.
+ResolveFunction of XaedihrRane is "".
 The sarea of XaedihrRane is "Nowhere".
 
 [***********************************************************]
@@ -1716,6 +1722,7 @@ Object	Name
 Corruption of Dreams	"Corruption of Dreams"
 
 Corruption of Dreams is a situation.
+ResolveFunction of Corruption of Dreams is "".
 The sarea of Corruption of Dreams is "Nowhere".
 
 when play begins:
@@ -1747,6 +1754,7 @@ Object	Name
 Dullahan Knight	"Dullahan Knight"
 
 Dullahan Knight is a situation.
+ResolveFunction of Dullahan Knight is "".
 The sarea of Dullahan Knight is "Nowhere".
 
 when play begins:

@@ -599,9 +599,10 @@ Object	Name
 Grocery Store Security Camera	"Grocery Store Security Camera"
 
 Grocery Store Security Camera is a situation.
+ResolveFunction of Grocery Store Security Camera is "[ResolveEvent Grocery Store Security Camera]".
 The sarea of Grocery Store Security Camera is "Outside".
 
-instead of resolving Grocery Store Security Camera:
+to say ResolveEvent Grocery Store Security Camera:
 	say "     You find a grocery store on your way. The place has been looted until only the metallic shelves remain, but you still decide to give the place a quick check, just in case. As you have guessed, the store is totally empty. The floor is covered with cum stains, who go all the way to the back room. A soft whirr catches your attention to the ceiling, and your eye meet the one of a small motion-activated security camera. Taken by a sudden inspiration, you fetch a stool lying nearby, and open the security camera to grab its tape. This could prove useful[if Lost Camera is unresolved], provided you find some kind of viewing equipment, like a video camera[end if].";
 	say "[bold type]Grocery Store Tape has been added to your tape inventory![roman type][line break]";
 	add "Grocery Store Tape" to tapes of Player;
@@ -628,9 +629,10 @@ Object	Name
 Orca Volleyball Player	"Orca Volleyball Player"
 
 Orca Volleyball Player is a situation.
+ResolveFunction of Orca Volleyball Player is "[ResolveEvent Orca Volleyball Player]".
 The sarea of Orca Volleyball Player is "Beach".
 
-Instead of resolving a Orca Volleyball Player:
+to say ResolveEvent Orca Volleyball Player:
 	say "     You spot a small crowd nearby. As you approach, you see a volleyball flying in the air, followed by the massive frame of an orca jumping to receive it.";
 	if HP of Roman is not 6:
 		say "     You mix yourself with the crowd and watch the match. While all the players play well, the killer whale is undoubtedly the best one. Despite his large body, he manages to cover a lot of ground, and his smashes leave no chance to its opponents. You do not mind the match to be unbalanced, if it means being able to ogle the orca's generous package flopping in his skin-tight swimming trunks. You take your leave at the same time the gorgeous cetacean leaves the field.";
@@ -660,9 +662,10 @@ Object	Name
 Husky Gang	"Husky Gang"
 
 Husky Gang is a situation.
+ResolveFunction of Husky Gang is "[ResolveEvent Husky Gang]".
 The sarea of Husky Gang is "Outside".
 
-Instead of resolving a Husky Gang:
+to say ResolveEvent Husky Gang:
 	project the Figure of HuskyAlpha_soft_icon;
 	say "     Sounds from an animated discussion echoes through the street, coming from just around the corner. Deciding to act cautiously, you hide behind the rusting remains of a car and wait for the group to pass. Soon, a large pack of Huskies turn the corner. You count at least ten females, escorted by a muscular Alpha Husky.";
 	if HP of Roman is not 10:

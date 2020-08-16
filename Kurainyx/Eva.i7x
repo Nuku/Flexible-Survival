@@ -13,6 +13,7 @@ Object	Name
 Sunbathing Shark	"Sunbathing Shark"
 
 Sunbathing Shark is a situation.
+ResolveFunction of Sunbathing Shark is "[ResolveEvent Sunbathing Shark]".
 The sarea of Sunbathing Shark is "Beach".
 
 when play begins:
@@ -35,7 +36,7 @@ TempEva is a number that varies.
 [  99: Saw Eva but did not interact with her                 ]
 
 [Keep event unresolved to allow repeat encounter and future additions]
-Instead of resolving Sunbathing Shark:
+to say ResolveEvent Sunbathing Shark:
 	if Resolution of Sunbathing Shark > 0 and Resolution of Sunbathing Shark < 99:	[Subsequent meeting]
 		say "     During your beach exploration, you spot the large shark woman, Eva, lying on the sand while[if daytimer is day]sunbathing[else]relaxing under the stars[end if].";
 		if scalevalue of player > 5:	[Eva not interested because the player is too big]
