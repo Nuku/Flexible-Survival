@@ -887,7 +887,7 @@ to say bcknightschambers:
 		if Player consents:
 			say "     Wary of some kind of trap, you cautiously reach out for the white inflatable and give it a gentle poke. When it does nothing more than flap its tiny wings all the more, you touch it again and then let your hand rest on its surface. Not seeing or feeling anything strange happening, you pick it up. The ducky toy flaps its wings excitedly and almost seems to smile. You strongly suspect that this is not another trap of the castle, but an earlier victim of it. Certainly the cute little thing seems safe enough, so you decide to take it with you. You could put it on and wear it or let its air out and store it in your pack.";
 			increase score by 5;
-			now carried of ducky swimring is 1;
+			ItemGain ducky swimring by 1;
 			now floatertaken is true;
 		else:
 			say "     Worried that this might be some new form of trap laid by the castle, you take a step back and leave the duck swim ring where it is. It seems a little sad that you've not touched it, but continues to try and get your attention by what little movement it is capable of.";

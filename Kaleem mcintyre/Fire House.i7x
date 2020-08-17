@@ -348,8 +348,7 @@ To say aidKenaz5:
 	say "     '[italic type]Wuff![roman type] Oh, sorry about that. That's been happening a lot as of late.' Kenaz rubs the back of his head before smirking at you. From what you can see, the other is taking to his new form quite well. 'Anyway, I don't think I have much for you to do for today... oh, wait a minute!' Kenaz makes a mad dash over to where the coat racks are and then pulls off a single firefighter coat and then brings it back over to you. 'Here, this may not be much, but please. I want you to have it for all of the trouble you've gone through for me and everyone else.'";
 	say "     Not seeing a reason why you shouldn't, you take the offered gift and then place it into your backpack. 'I'm sorry that I don't have much else to offer you, but...' You shush the other before he can start. Letting Kenaz know that his souvenir will be cherished regardless of its worth gets a smile from the Dalmatian. 'You're a good friend, you know that?' You can only smirk at the other at that point.";
 	LineBreak;
-	say "[bold type]You gain firefighter coat![roman type][line break]";
-	now carried of firefighter coat is 1;
+	ItemGain firefighter coat by 1;
 	now HelpKenazout is 6;
 	now Kenazdes is turns;
 

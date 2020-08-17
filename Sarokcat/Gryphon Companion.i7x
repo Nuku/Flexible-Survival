@@ -404,7 +404,7 @@ to say ResolveEvent Gryphoness Nest:
 						move Denise to Garden View;
 						now gryphoncomforted is 3;
 						infect "Blue Gryphon Herm";
-						say "     (Denise the gryphoness is now a possible companion! You can make her your active companion by typing [bold type][link]companion Denise[end link][roman type] or  [bold type][link]companion gryphoness[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Denise[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+						say "     (Denise the gryphoness is now a possible companion! You can make her your active companion by typing [bold type][link]companion Denise[end link][roman type] or  [bold type][link]companion gryphoness[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Denise[end link][roman type]. You can see all the companions you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 						now Resolution of Gryphoness Nest is 6; [male gryphon player with gryphon cock recruited her]
 						now Gryphoness Nest is resolved;
 						follow the turnpass rule;
@@ -421,7 +421,7 @@ to say ResolveEvent Gryphoness Nest:
 						move Denise to Garden View;
 						now gryphoncomforted is 3;
 						infect "Blue Gryphon Herm";
-						say "     (Denise the gryphoness is now a possible companion! You can make her your active companion by typing [bold type][link]companion Denise[end link][roman type] or  [bold type][link]companion gryphoness[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Denise[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+						say "     (Denise the gryphoness is now a possible companion! You can make her your active companion by typing [bold type][link]companion Denise[end link][roman type] or  [bold type][link]companion gryphoness[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Denise[end link][roman type]. You can see all the companions you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 						now Resolution of Gryphoness Nest is 7; [gryphon player with non gryphon cock recruited her]
 						now Gryphoness Nest is resolved;
 				else:
@@ -442,7 +442,7 @@ to say ResolveEvent Gryphoness Nest:
 					move Denise to Garden View;
 					now gryphoncomforted is 3;
 					infect "Blue Gryphon Herm";
-					say "     (Denise the gryphoness is now a possible companion! You can make her your active companion by typing [bold type][link]companion Denise[end link][roman type] or  [bold type][link]companion gryphoness[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Denise[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+					say "     (Denise the gryphoness is now a possible companion! You can make her your active companion by typing [bold type][link]companion Denise[end link][roman type] or  [bold type][link]companion gryphoness[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Denise[end link][roman type]. You can see all the companions you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 					now Resolution of Gryphoness Nest is 8; [female gryphon player recruited her]
 					now Gryphoness Nest is resolved;
 			else:
@@ -471,7 +471,7 @@ to say ResolveEvent Gryphoness Nest:
 						move Denise to Garden View;
 						now gryphoncomforted is 3;
 						infect "Blue Gryphon Herm";
-						say "     (Denise the gryphoness is now a possible companion! You can make her your active companion by typing [bold type][link]companion Denise[end link][roman type] or  [bold type][link]companion gryphoness[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Denise[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+						say "     (Denise the gryphoness is now a possible companion! You can make her your active companion by typing [bold type][link]companion Denise[end link][roman type] or  [bold type][link]companion gryphoness[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Denise[end link][roman type]. You can see all the companions you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 						now Resolution of Gryphoness Nest is 9; [male player recruited her]
 						now Gryphoness Nest is resolved;
 					else:
@@ -483,7 +483,7 @@ to say ResolveEvent Gryphoness Nest:
 						move Denise to Garden View;
 						now gryphoncomforted is 3;
 						infect "Blue Gryphon Herm";
-						say "     (Denise the gryphoness is now a possible companion! You can make her your active companion by typing [bold type][link]companion Denise[end link][roman type] or  [bold type][link]companion gryphoness[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Denise[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+						say "     (Denise the gryphoness is now a possible companion! You can make her your active companion by typing [bold type][link]companion Denise[end link][roman type] or  [bold type][link]companion gryphoness[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Denise[end link][roman type]. You can see all the companions you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 						now Resolution of Gryphoness Nest is 10; [female player recruited her]
 						now Gryphoness Nest is resolved;
 				else:

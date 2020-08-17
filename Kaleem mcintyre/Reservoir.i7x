@@ -544,7 +544,7 @@ to say ResolveEvent PassionAfterTheBattle:
 		say "Cold as a winter's morning, blue as the sky during a clear afternoon, sharp with twin lethal edges that beckons to be used against any who stand before you, you see a pair of curved knives gleaming at you somewhat in an otherworldly manner. Not understanding this strange happening you aren't prepared for the twin weapons to float over to you and then stand in front of you. However, a sense of awe makes you reach out for the hilts of the knives before you can stop yourself. A shudder racks throughout your body as a pervasive chill runs down along your spine. When the daggers rest gently into your hand you can feel a sorrowful weight to them as you recall all of those who got trapped inside of the Blob and then frozen with the creature.";
 		say "There are no words that can help you to understand what is going on here, but you have a good feeling that you just received a kind gift that comes around only once in a lifetime. Taking the knives firmly into hand you clutch the twin blades close to your chest before turning to head out of the reservoir.";
 		wait for any key;
-		now carried of icicle knives is 1;
+		ItemGain icicle knives by 1;
 		now waterworks is 1;
 		now PassionAfterTheBattle is resolved;
 		now Sanctuary is resolved;

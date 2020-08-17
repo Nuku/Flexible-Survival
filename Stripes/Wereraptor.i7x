@@ -993,7 +993,7 @@ to say wrcureattempt:
 		say "     You stagger to your feet, feeling very weak and worn from your blood loss, but also as if a great burden has been lifted from you. You watch as the last of your blood bubbles on the fossilized bones and disappears. You're uncertain if it boiled away or was absorbed into the dry bones, but it is gone. In short order, the slashes on your shoulders fade away, healed and gone as if they were never there. Having beaten its power, you know you cannot be tainted by it again.";
 		say "     Not wanting to linger here any longer, you prepare to leave only to notice that the silver knife is missing. You suspect it's somehow already found its way back to Nermine.";
 		if weapon object of Player is silver knife, unwield silver knife silently;
-		now carried of silver knife is 0;
+		ItemLoss all silver knife silently;
 		if humanity of Player < 100:
 			SanBoost 1;
 			increase humanity of Player by ( 100 - humanity of Player ) / 2;
@@ -1011,12 +1011,12 @@ to say wrcureattempt:
 			say "     The wereraptor growls victoriously and grabs the potion with visible trepidation before racing headlong to the balcony overlooking the lower floors. With a hissing laugh, he tosses the vial down as you scream. There is a distance crash as your precious cure is destroyed. Dr. Utah clacks back across the tiled floor and runs his taloned hand across your body. 'Soon you will come to accept your proper nature and forsake your foolish reluctance. It is time for the saurians to rise again, new and stronger.' He leans in closer and runs his tongue along your face. 'I look forward to hunting with you,' he adds with a grope between your legs before turning and leaving.";
 		say "     Once you've recovered enough to stand, you prepare yourself to leave. You glance around and realize that your silver knife is gone. You suspect it's somehow already found its way back to Nermine. With your cure gone and your payment made, you get the feeling that you're on your own now.";
 		if weapon object of Player is silver knife, unwield silver knife silently;
-		now carried of silver knife is 0;
+		ItemLoss all silver knife silently;
 		now wrcurseNermine is 10;
 	else:
 		say "     As you turn and run, the speedy wereraptor makes a final charge and swipes her claws at you. This knocks the potion from your hand, sending it tumbling to the ground and breaking. With its scent in the air, your revulsion kicks in and you move quickly to get away, the transformed professor fleeing as well. When you stop and try to catch your breath now that you're far from the smell of it, you realize that your silver knife is missing as well. You suspect it's somehow already found its way back to Nermine. With your cure gone and your payment made, you get the feeling that you're on your own now.";
 		if weapon object of Player is silver knife, unwield silver knife silently;
-		now carried of silver knife is 0;
+		ItemLoss all silver knife silently;
 		now wrcurseNermine is 10;
 
 

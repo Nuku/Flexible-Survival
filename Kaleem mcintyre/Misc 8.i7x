@@ -203,7 +203,7 @@ to say ResolveEvent Dr Feel Good:
 				say "When he comes back over to you he reveals that what he went to go retrieve was a doctor's uniform, complete with the standardized coat and white pair of pants. 'Here, you can have these. I was going to use them try and sneak around in here to look for my girlfriend, but I think that these will work out better for you.";
 				WaitLineBreak;
 				say "     Shoving the coat and pants into your [BodyName of Player] hands, the youth gives you a shaky smile and then hurries around side of you to run out of the room at top speeds. Turning to watch the other go you wonder how many more people in this city are [']missing['] like that fennec's girlfriend.";
-				now carried of doctor's uniform is 1;
+				ItemGain doctor's uniform by 1;
 				Increase score by 10;
 				now Dr Feel Good is resolved;
 				now Resolution of Dr Feel Good is 1; [fought & won]

@@ -543,8 +543,7 @@ to say RareItemQuestTalk: [this is one of Nermine's talk options from her talk m
 		say "     'Ah, Nermine thanks her brave guest gratefully!' the jackal-woman says with bright grin on her silver-painted muzzle as she takes the basket full of strange fruit from you. 'These are very rare fruit indeed, and will certainly fetch a very high price to the right buyer!' she says brightly as she sets the basket down on the counter next to her, before reaching underneath it to produce the shiny golden ankh she showed you earlier. 'And speaking of price, here is the one that was agreed upon as well,' with a purr in her voice, she hands you the golden ankh, its weight feeling surprisingly good in your hands as you hold it up to inspect the gleaming metal in the candlelight. 'It is more than just a golden trinket,' the jackal-woman says teasingly as she gathers up the basket and heads towards the back room.";
 		say "     You are almost entranced by the beauty of the craftsmanship on your new possession, barely registering anything but the ankh until Nermine's eventual return. Stepping up close beside you, she leans forward and whispers into your ear, 'The treasure Nermine's friend is holding is a very special and powerful ankh indeed. Some might just value it for its gold, but this humble shopkeeper is sure that her visitor will go beyond such trivialities. If [heshe] uses its true power, [heshe] will become ready for further helping Nermine out and earn more rewards.' A sly smile on her muzzle, the jackaless strokes a finger gently along your arm, brushing against the side of your hand holding the ankh, then withdrawing. As she moves back behind the counter afterwards, you can't help but be very curious about what she meant...";
 		LineBreak;
-		say "[bold type]You gain a strange ankh![roman type][line break]";
-		now carried of strange ankh is 1;
+		ItemGain strange ankh by 1;
 		now RareQuesting is 3; [first ankh awarded]
 	else if RareQuesting is 3: [no further progress after the first ankh]
 		say "     As you bring up the rare items laid out under the glass counter again, the jackaless looks you up and down, as if searching for something. She appears slightly disappointed for a second, then brushes the expression aside and gives you a friendly smile more typical of the strange shopkeeper. 'Nermine thinks her brave helper should try using the power of the ankh she has provided. It will surely help [ObjectPro of Player] in the tasks ahead if [heshe] wants to assist the jackaless further.' She doesn't go into any more detail than that as you ask what the ankh will actually do, only giving you a sly smile and answering, 'There is no explaining about these matters, only doing and seeing.'";
@@ -560,7 +559,7 @@ to say RareItemQuestTalk: [this is one of Nermine's talk options from her talk m
 			say "     'Ah, the brave adventurer found [hisher] treasure!' Nermine says with a large smile on her muzzle as she eagerly takes the small handful of golden coins you are holding out from you, leaving you feeling vaguely sad as those precious golden circles disappear behind the counter. When you point out that that was all there was in the pirate stash, she blinks at you in surprise. 'Only so few coins left? Well, then it is especially fortunate that Nermine's helper managed to find them! This makes them far more precious and she will have to adjust the price accordingly,' the jackal-woman says, a smile tugging at the corners of her muzzle. Then she pulls out the small golden ankh she promised you earlier and hands it to you. 'Nermine thinks this was more than earned then, though she also believes there might still be further coins left out there if one were to go and look again,' she says with a grin. As you weigh the warm golden ankh in your hands and wonder whether it was worth the handful of treasure you just traded for it...";
 			LineBreak;
 			say "[bold type]You gain a strange ankh![roman type][line break]";
-			now carried of strange ankh is 1;
+			ItemGain strange ankh by 1;
 			now TreasureFound is 0;
 			now RareQuesting is 6; [gold coins delivered]
 		else:
@@ -579,9 +578,7 @@ to say RareItemQuestTalk: [this is one of Nermine's talk options from her talk m
 		WaitLineBreak;
 		say "     After a moment, Nermine grins again before reaching under the counter. 'Nermine thinks she still needs to pay her tireless helper for all [hisher] help, and she has one last ankh to share now,' the shopkeeper says as she places the golden ankh into your hands. 'Nermine also thinks she has other promise to fulfill as well. Though that can wait until after her new friend has used ankh to look even more handsome.' She smiles as she says those words and runs her tongue along the sides of her muzzle, licking her lips eagerly as she stares at you in anticipation.";
 		now RareQuesting is 10; [museum treasures delivered - ankh #3 awarded]
-		LineBreak;
-		say "[bold type]You gain a strange ankh![roman type][line break]";
-		now carried of strange ankh is 1;
+		ItemGain strange ankh by 1;
 	else if RareQuesting is 10: [third ankh not yet used]
 		say "     'Nermine hopes her new friend will use the ankh sometime soon,' the sultry jackaless says, as she traces the tip of her claw along the edge of her breasts slowly. 'She just can't wait to see how much better her friend will look with a nice proud muzzle of [hisher] own,' Nermine adds, her voice starting to come out in soft lusty breaths, as she stares at you in eager anticipation.";
 	else if RareQuesting is 11: [third ankh used]
@@ -641,24 +638,21 @@ the scent of strange ankh is "The golden ankh smells faintly of desert sand and 
 To say jackalankhmagic:
 	if Nightmaretf > 0:
 		say "     You rub the small golden ankh curiously, only to feel a strange burning sensation in your body as if two great forces were warring within. Letting out a gasp of surprise as the ankh seems to heat up - enough to sear flesh - you drop the item instinctively. Waving your hand and looking down at it, you realize that there is no trace of any damage after all, not even any reddening. Could it be that you've just imagined the feeling? But no, glancing down at the ankh, you see that it has melted into a small puddle of molten gold, sizzling a bit on the ground. Somehow you don't think that was what was supposed to happen...";
-		say "[bold type]You lose a strange ankh![roman type][line break]";
-		now carried of strange ankh is 0;
+		ItemLoss all strange ankh;
 		now JackalManTF is 5;
 		now NermineTalk is 1;
 		stop the action;
 	if wrcursestatus >= 7 and wrcursestatus < 100:
 		say "     You rub the small, golden ankh curiously and hiss in pain as it starts to heat up, scalding your hand. You toss it aside. Something about you seems to be incompatible with it.";
 		now NermineTalk is 1;
-		say "[bold type]You lose a strange ankh![roman type][line break]";
-		now carried of strange ankh is 0;
+		ItemLoss all strange ankh;
 		stop the action;
 	if JackalManTF is 0:
 		say "     You smile as you rub the small golden ankh between your hands, the warm metal feeling nice and almost soft as you rub at it. Suddenly the small ankh almost seems to melt into your hands, leaving a soft tingling dusting of gold where the small trinket was before. As you stare at your palms, you feel a strange shifting sensation in your body, seeming to center on your rear. Glancing over your shoulder, you are surprised to see your ass starting to stretch and change, your rear flattening out as a long predatory black jackal-like tail forms behind you. In a strangely pleasant stretching sensation, your new tail grows until its tip is hanging just below your knees. You stare down at the appendage and can't help but try it out - moving the tail from side to side a little a few times, with it reacting with surprising dexterity. Next, you take a few steps and are pleased to note that it helps your balance greatly. Thinking to yourself, the though of how hot and sexy the jackal tail looks comes unbidden to your mind...";
 		now TailName of Player is "Jackalman";
 		now TailSpeciesName of Player is "Jackal";
 		now Tail of Player is "You have a long sleek jackal's tail attached to your rear, it seems to sway happily over your thickly muscled ass in a predatory manner as you move.";
-		say "[bold type]You lose a strange ankh![roman type][line break]";
-		now carried of strange ankh is 0;
+		ItemLoss strange ankh by 0;
 		StatChange "Dexterity" by 4;
 		now RareQuesting is 4;
 		now JackalManTF is 1;
@@ -669,8 +663,7 @@ To say jackalankhmagic:
 		now SkinName of Player is "Jackalman";
 		now SkinSpeciesName of Player is "Jackal";
 		now Skin of Player is "[one of]dark black[or]sleek black furred[or]jackal-furred[at random]";
-		say "[bold type]You lose a strange ankh![roman type][line break]";
-		now carried of strange ankh is 0;
+		ItemLoss strange ankh by 0;
 		StatChange "Charisma" by 3;
 		StatChange "Stamina" by 3;
 		now RareQuesting is 7;
@@ -684,8 +677,7 @@ To say jackalankhmagic:
 		now Face of Player is "narrow canine face, with a long sleek muzzle and a nicely flattened forehead, your face is painted with a soft shimmering pattern of golden dust, accentuating your deep golden eyes. Your appearance seems both predatory and strangely sexy at the same time.";
 		now RareQuesting is 11;
 		now statuequest is 1;
-		say "[bold type]You lose a strange ankh![roman type][line break]";
-		now carried of strange ankh is 0;
+		ItemLoss strange ankh by 0;
 		StatChange "Charisma" by 4;
 		StatChange "Perception" by 4;
 		now JackalManTF is 3;
@@ -703,14 +695,13 @@ To say jackalankhmagic:
 		now CockName of Player is "Jackalman";
 		now CockSpeciesName of Player is "Jackal";
 		now Cock of Player is "[one of]canine[or]jackalman[or]jackal-like[or]knotted[at random]";
-		say "[bold type]You lose a strange ankh![roman type][line break]";
-		now carried of strange ankh is 0;
+		ItemLoss strange ankh by 0;
 		StatChange "Strength" by 4;
 		StatChange "Dexterity" by 2;
 		now JackalManTF is 4;
 	if JackalManTF is 5:
 		say "     You examine the strange ankh in your hand, but it seems to slip out of your fingers. When you look for it, you can't seem to find it. Oh well, you'd already asked Nermine to reverse its effects, so that's probably for the best.";
-		now carried of strange ankh is 0;
+		ItemLoss all strange ankh;
 
 An everyturn rule:
 	if JackalManTF is 5:

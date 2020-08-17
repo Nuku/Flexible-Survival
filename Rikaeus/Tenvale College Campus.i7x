@@ -9,7 +9,7 @@ Object	Name
 Reaching the College	"Reaching the College"
 
 Reaching the College is a situation.
-ResolveFunction of Reaching the College is "[ResolveEvent Reaching the College]". The level of Reaching the College is 6.
+ResolveFunction of Reaching the College is "[ResolveEvent Reaching the College]".
 The sarea of Reaching the College is "Outside".
 
 to say ResolveEvent Reaching the College:

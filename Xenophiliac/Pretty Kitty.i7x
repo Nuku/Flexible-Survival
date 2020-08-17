@@ -75,7 +75,7 @@ instead of conversing Andromeda:
 	else if HP of Hadiya is 9 or HP of Hadiya is 59:		[Leather jacket for Hadiya's quest]
 		say "     After checking through the racks and not seeing one, you ask Andromeda if she's got a small leather jacket. 'No, my leather items were bou- Oh! Wait a sec,' she says, cutting herself off as she rushes to the back. The catgirl returns shortly with a small leather jacket with red and pink trim and a high waistline. 'I got this in with a shipment of other stuff, but didn't have a chance to send it back. Something with a bare midriff like that is too trashy for me to sell to a little girl. A larger version might look pretty sexy on the right woman though,' she adds with a soft sigh as her eyes glaze over. You wait awkwardly for a bit, but it soon becomes clear she's lost in her imagination. With a shrug, you take the unwanted jacket, hoping Gobby will be satisfied with it.";
 		increase HP of Hadiya by 1;
-		now carried of girl's jacket is 1;
+		ItemGain girl's jacket by 1;
 		now Goblin Thief is active;
 	else if HP of Andromeda is 1:
 		say "     Walking up to the lithe catgirl, you find that she's hopped up on the counter, sitting comfortably on the checkout line. Waving her feet back and forth casually, her ever-constant smile grows even wider when you approach her.";

@@ -463,7 +463,7 @@ to say onelessndm:
 	if weight entry is 0:
 		say "     With the last device in place, you discard the empty carrying case. You should report back to Zephyr now that your task is completed.";
 		increase score by 40;
-		now carried of nanite density monitor is 0;
+		ItemGain nanite density monitor by 0;
 
 
 Zephyr Inc ends here.

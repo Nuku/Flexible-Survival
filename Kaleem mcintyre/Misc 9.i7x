@@ -41,7 +41,7 @@ to say ResolveEvent Atropis:
 	say "     Not sure what that was on about, you reach up to scratch at your head before shrugging all the same. Just as you are about to move yourself along you find nearly dropping the pink box in between your hands, having almost completely forgotten about the thing. Moving your [BodyName of Player] fingers over the silver twine keeping the package closed you remove the material, open the container... and then blush hotly as you find yourself looking at a stunningly beautiful silver dress looking back up at you. A single card with your name, height and other measurements written down onto the front is the only proof that this piece of apparel is really meant for you.";
 	WaitLineBreak;
 	say "     But why in hell's bells would someone...? Not sure, you don't bother to think on it long as you simply slam the top back over the box and then head on your way. Meanwhile, somewhere far away, three sisters are cracking up at a joke they're sharing right about now.";
-	now carried of silver dress is 1;
+	ItemGain silver dress by 1;
 	Increase score by 5;
 	now Atropis is resolved;
 
@@ -85,7 +85,7 @@ to say ResolveEvent The Magic Cap:
 			say "Running as fast as your [BodyName of Player] feet can take you, you rush through the narrow twist and turns of the Museum's hallways and then out of the rear entrance of the building, leaving your three-headed pursuer confusedly trying to follow after your scent. Moving down the alleyway and then on your way back to the bunker you accidentally [one of]trip over the side of the curb[or]slip on a can[or]slip over something hard[or]get your feet tangled over a discarded pair of pants[at random] and end up accidentally dropping the statue you're holding onto.";
 			say "     Cursing your luck, you watch as the falcon headed artifact sails through the air and then crashes onto the ground, breaking into a hundred different pieces. Sighing at the loss, even though you don't understand why, you find yourself gaping in awe as you look to see a bright red... baseball cap... lying admits the rubble of the statue. Finding your balance you cautiously step over to the cap and then reach down to pick up the headwear. If things weren't already weird enough as they are you find that the cap bears the first letter of your name.";
 			say "     Not sure you understand what's going on, you shrug and then flip the headwear onto your head. Seeing that the baseball cap is a perfect fit you step over the ruined statue and then head off onto your way. You never notice how the letter on the hat sparks for a second, as you can feel nothing out of place on top of your head, before going silent.";
-			now carried of red cap is 1;
+			ItemGain red cap by 1;
 			now Resolution of Magic Cap is 2; [ran off with it]
 			increase score by 10;
 			Move player to the Bunker;
@@ -98,7 +98,7 @@ to say ResolveEvent The Magic Cap:
 					say "     Defeating the two canine guardians, you make your way out of the Museum and then down the streets back towards the bunker. Of course, as luck would have it, you end up [one of]tripping over the side of the curb[or]slipping on a can[or]slipping over something hard[or]getting your feet tangled over a discarded pair of pants[at random] and accidentally dropping the statue you are holding onto.";
 					say "Cursing you can only watch as the falcon headed artifact sails through the air and then crashes onto the ground, breaking into a hundred different pieces. Sighing at the loss, even though you don't understand why, you find yourself gaping in awe as you look to see a bright red... baseball cap... lying amidst the rubble of the statue. Finding your balance you slowly walk over to the wreckage of the statue and then reach down up to pick up the headwear before turning it over. On the front of the cap there's a single letter stitched into the material, the beginning of your name no less.";
 					say "     Not sure what's going on here, you shrug and then flip the cap onto your head. Seeing that the headwear is a perfect fit you step over the ruined statue and then head off onto your way. You never notice how the letter on the hat sparks for a second, as you can feel nothing out of place on top of your head, before going silent.";
-					now carried of red cap is 1;
+					ItemGain red cap by 1;
 					now Resolution of Magic Cap is 3; [fought + won]
 					increase score by 10;
 					Move player to the Bunker;
@@ -157,7 +157,7 @@ to say ResolveEvent Fashion Statement:
 			say "     You roll 1d20([dice])+[bonus] = [dice + bonus]: ";
 			if dice + bonus > 15:
 				say "Scrounging up whatever you could you finally manage to find something worth wearing from the leftover inventory back here. Giving the apparel a quick a sniff, just to make sure it's not tainted, you smile approvingly before stuffing the items in question into your backpack. Time to head for home!";
-				now carried of muscle shirt is 1;
+				ItemGain muscle shirt by 1;
 				increase score by 5;
 				now fashion statement is resolved;
 				now Resolution of Fashion Statement is 1; [found a shirt]

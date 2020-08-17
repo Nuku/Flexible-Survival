@@ -949,7 +949,7 @@ the scent of super spicy sausage is "Your eyes and nostrils burn when you bring 
 Section 11 - Making Male Christy
 
 instead of trading the super spicy sausage when the current action involves the Christy:
-	now carried of super spicy sausage is 0;
+	ItemLoss all super spicy sausage silently;
 	now tempnum is 0;
 	say "     Thinking about the spicy sausage you have in your pack, you consider giving it to [Christy], uncertain what (if anything) might happen.";
 	say "     [bold type]Shall you give her a big, hot sausage? There'll be no turning back if you do.[roman type][line break]";

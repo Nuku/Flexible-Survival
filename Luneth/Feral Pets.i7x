@@ -209,7 +209,7 @@ to say ResolveEvent Lost Crab:
 			now cute crab is tamed;
 			add "Tamed" to Traits of cute crab;
 			move Snips to Computer Lab;
-			say "     (Snips the cute crab is now a possible companion! You can make him your active companion by typing [bold type][link]companion Snips[end link][roman type] or [bold type][link]companion crab[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+			say "     (Snips the cute crab is now a possible ally! You can make him your active ally by typing [bold type][link]ally Snips[end link][roman type] or [bold type][link]ally crab[end link][roman type]. You can see all the companions you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 			now Resolution of Lost Crab is 1; [fed the crab]
 		else:
 			say "     The crab scuttles away sadly.";
@@ -412,7 +412,7 @@ to say ResolveEvent Lost House Cat:
 					now house cat is tamed;
 					add "Tamed" to Traits of house cat;
 					move Dinah to Computer Lab;
-					say "     (Dinah the house cat is now a possible companion! You can make her your active companion by typing [bold type][link]companion Dinah[end link][roman type] or [bold type][link]companion house cat[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+					say "     (Dinah the house cat is now a possible companion! You can make her your active companion by typing [bold type][link]companion Dinah[end link][roman type] or [bold type][link]ally house cat[end link][roman type]. You can see all the companions you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 					now Resolution of Lost house cat is 1; [fed and adopted the cat]
 					now Lost house cat is resolved;
 				else:
@@ -612,7 +612,7 @@ to say ResolveEvent Scared Bird:
 				now Exotic Bird is tamed;
 				add "Tamed" to Traits of Exotic Bird;
 				move Chirpy to Computer Lab;
-				say "     (Chirpy the exotic bird is now a possible companion! You can make her your active companion by typing [bold type][link]companion Chirpy[end link][roman type] or [bold type][link]companion exotic bird[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+				say "     (Chirpy the exotic bird is now a possible companion! You can make her your active companion by typing [bold type][link]companion Chirpy[end link][roman type] or [bold type][link]ally exotic bird[end link][roman type]. You can see all the companions you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 				now Resolution of Scared Bird is 1; [adopted the bird]
 				now Scared bird is resolved;
 			else:
@@ -814,7 +814,7 @@ to say ResolveEvent Mournful Dog:
 					now helper dog is tamed;
 					add "Tamed" to Traits of helper dog;
 					move Hobo to Computer Lab;
-					say "     (Hobo the helper dog is now a possible companion! You can make him your active companion by typing [bold type][link]companion Hobo[end link][roman type] or [bold type][link]companion helper dog[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+					say "     (Hobo the helper dog is now a possible ally! You can make him your active ally by typing [bold type][link]ally Hobo[end link][roman type] or [bold type][link]ally helper dog[end link][roman type]. You can see all the companions you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 					increase score by 10;
 					now Resolution of Mournful Dog is 1; [adopted the dog]
 					now Mournful Dog is resolved;

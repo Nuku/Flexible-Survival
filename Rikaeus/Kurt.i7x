@@ -337,7 +337,7 @@ understand "kurt test" as testkurt.
 
 carry out testkurt:
 	say "DEBUG: Trident acquired, Poseidon Relationship is now 2, Alana Relationship is now 1, Triton Relationship is now 1, Atlantis is now unlocked, moved player to Atlantis City Entrance, Kurt Relationship is now 1, Market Visits is now 1, First Atlantis Visit is now 1.";
-	now carried of bronze trident is 1;
+	ItemGain bronze trident by 1;
 	increase score by 10;
 	now PoseidonRelationship is 2;
 	change west exit of Sunken Ship to Atlantis City Entrance;

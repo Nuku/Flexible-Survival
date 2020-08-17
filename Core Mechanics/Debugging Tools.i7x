@@ -15,6 +15,55 @@ RandomGenNumber is a number that varies.[@Tag:NotSaved]
 
 [ Todo: write Debug code to display _all_ NPC variables]
 
+DetachGrabObs is an action applying to nothing.
+understand "DetachGrabObs" as DetachGrabObs.
+
+check DetachGrabObs:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out DetachGrabObs:
+	repeat with x running through grab objects:
+		now x is nowhere;
+
+AttachGrabObs is an action applying to nothing.
+understand "AttachGrabObs" as AttachGrabObs.
+
+check AttachGrabObs:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out AttachGrabObs:
+	repeat with x running through grab objects:
+		now x is a part of the player;
+
+AttachInventory is an action applying to nothing.
+understand "AttachInventory" as AttachInventory.
+
+check AttachInventory:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out AttachInventory:
+	repeat with x running through owned grab objects:
+		now x is a part of the player;
+
+ZTeleport is an action applying to one topic.
+understand "ZTeleport [text]" as ZTeleport.
+
+check ZTeleport:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out ZTeleport:
+	repeat with x running through rooms:
+		if printed name of x exactly matches the text topic understood, case insensitively:
+			now Player is in x;
+
 Chapter 1 - Debug Mode
 
 debugmode is an action applying to nothing.

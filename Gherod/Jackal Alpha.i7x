@@ -299,7 +299,7 @@ to say AlphaJLosesCumMilk:
 	WaitLineBreak;
 	say "     It doesn't take that long until he lets out his load, a huge, massive flood of cum threatening to bath you as it leaves through his giant shaft. Quickly, you attempt to take some of it into the flask, carefully so you don't get caught in the current. His geyser-like load continues for a couple of good minutes until it finally begins to subside, and you wonder if you could have actually gathered more than one single unit with that much quantity of seed laying on the ground. You guess you will have to live with only having added one flask of [bold type]jackal alpha cum[roman type] to your stash.";
 	say "     The jackal has no energy left to say anything, he simply takes the moment to rest after having covered himself in spunk, as you take your leave carrying the spoils.";
-	increase carried of alpha jackal cum by 1;
+	ItemGain alpha jackal cum by 1 silently;
 
 Section 2 - Creature Insertion
 

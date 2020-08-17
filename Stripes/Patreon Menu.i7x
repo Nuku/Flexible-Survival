@@ -140,28 +140,28 @@ carry out supersponsor:
 		else if calcnumber is 7:
 			if ssgpd is false:
 				say "     When you ask for a weapon to help you, Trixie whispers in your ear where one is hidden. Checking there, you find a giant purple dildo. Its handle has a good grip for swinging and it has that right mix of weight, wobble and firmness to make it both an effective and amusing club.";
-				now carried of dildo club is 1;
+				ItemGain dildo club by 1;
 				now ssgpd is true;
 			else:
 				say "     You've already received this reward.";
 		else if calcnumber is 8:
 			if ssbpg is false:
 				say "     Asking Trixie if there's anything around to keep the monster of the city from getting at you, she giggles and tells you to check the 'Lost and Found' box. Digging around in it, all you find of interest is a plastic toy gun. Not quite what you were hoping for, you feel. Still, needing a little levity, you aim the toy at a 'READ!' poster on the wall. But rather than a spray of water or a foam dart, a slimy yellow banana peel splatters onto the cartoony owl's face. You decide to hang onto the odd gun. While probably not a particularly effective weapon, the peels might make your foes off balance if they get hit.";
-				now carried of banana peel gun is 1;
+				ItemGain banana peel gun by 1;
 				now ssbpg is true;
 			else:
 				say "     You've already received this reward.";
 		else if calcnumber is 9:
 			if sshh is false:
 				say "     Worried about some creature cracking your skull or a zombie munching on your brain, you ask if there's anything around to protect yourself. Trixie leads you to a janitorial closet. Among the odds and ends in there, you find a hard hat. According to her, it was forgotten by some contractors the last time some renovations were done. You put the yellow construction helmet on, glad to have something to defend your brain meats from zombies.";
-				now carried of hard hat is 1;
+				ItemGain hard hat by 1;
 				now sshh is true;
 			else:
 				say "     You've already received this reward.";
 		else if calcnumber is 10:
 			if ssos is false:
 				say "     When you say you need some protection if you're going back out there, Trixie points you towards the history section. Mounted on the wall in that disused corner of the library, you find a round shield of bronze mounted on the wall. It is emblazoned with a red-orange 'P' in a ring on its face. How did you never notice it there before now? Taking it down, you find it quite real and in very good shape. The leather straps are solid and the shield itself seems strong enough to take a beating.";
-				now carried of orange shield is 1;
+				ItemGain orange shield by 1;
 				now ssos is true;
 			else:
 				say "     You've already received this reward.";
@@ -177,7 +177,7 @@ carry out supersponsor:
 					add "Tamed" to Traits of petget;
 			say "They are all now yours! (Warning, the code for some pets may react oddly. They are all set as battle-summonable though.)[line break]";
 		else if calcnumber is 13:
-			now carried of Smug Confidence is 1;
+			ItemGain Smug Confidence by 1;
 			say "Ah, there it is. Don't forget to use it.";
 		else if calcnumber is 14:
 			turn the Player into a "Human";

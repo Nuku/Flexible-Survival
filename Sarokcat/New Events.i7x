@@ -8,13 +8,14 @@ Section 1 - Military presence
 
 Table of GameEventIDs (continued)
 Object	Name
-Military presence	"Military presence"
+Military Presence	"Military presence"
+Military Presence	"Military Presence"
 
-Military presence is a situation
-
+Military Presence is a situation.
+ResolveFunction of Military Presence is "[ResolveEvent Military Presence]".
 MTP is a number that varies.
 
-to say ResolveEvent Military presence:
+to say ResolveEvent Military Presence:
 	if mtp is 0:
 		say "     You encounter what appears to be a military jeep parked by the side of the road, and your heart jumps as you think about the potential for rescue or some military equipment. Approaching cautiously, you notice that the interior is covered in what appears to be dried cum. There are no signs of the former occupants, and they sadly appear to have taken anything of use with them.";
 		now mtp is 1;
@@ -74,7 +75,8 @@ Object	Name
 Abandonedplayer	"Abandonedplayer"
 
 Abandonedplayer is a situation.
-ResolveFunction of Abandonedplayer is "[ResolveEvent Abandonedplayer]". The sarea of Abandonedplayer is "Warehouse".
+ResolveFunction of Abandonedplayer is "[ResolveEvent Abandonedplayer]".
+The sarea of Abandonedplayer is "Warehouse".
 
 to say ResolveEvent Abandonedplayer:
 	say "     As you search the deserted streets of the area close to the waterfront, you hear some noise coming from a nearby alley. Cautiously following it, you prepare for combat as you move closer. Gripping your makeshift weapon tightly, you duck around the corner and come face to face with... an abandoned CD player. Sighing, you lower you weapon again before looking around sheepishly. Fortunately, there was no one around to see that. Checking the music player, you decide to leave the instrument of your ridicule where it lies to spare yourself from an embarrassing reminder.";

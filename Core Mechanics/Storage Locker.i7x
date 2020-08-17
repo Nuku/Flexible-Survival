@@ -150,7 +150,7 @@ Check allstashing a grab object (called x):
 Carry out allstashing a grab object (called x):
 	let num be carried of x;
 	increase stashed of x by num;
-	now carried of x is 0;
+	ItemLoss all x silently;
 	say "You put [num] of [x] into the locker for storage.";
 
 Check allretrieving a grab object (called x):
@@ -175,8 +175,8 @@ Carry out massstashing:
 		else:
 			increase yy by 1;
 			increase zz by carried of x;
+			ItemLoss x by carried of x silently;
 			increase stashed of x by carried of x;
-			now carried of x is 0;
 	if zz is 0:
 		say "You have nothing you can store.";
 	else:
@@ -191,7 +191,10 @@ carry out massretrieving:
 	repeat with x running through all stored grab objects:
 		increase yy by 1;
 		increase zz by stashed of x;
+		ItemGain x by stashed of x silently;
+		[
 		increase carried of x by stashed of x;
+		]
 		now stashed of x is 0;
 	if zz is 0:
 		say "The storage locker is already empty.";

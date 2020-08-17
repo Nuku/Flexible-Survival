@@ -48,7 +48,7 @@ to say beattheJaguarWarrior:
 	else if HP of Tehuantl is 3:
 		say "     As you're once again gaining the upper hand over the feline warrior, he tries to slip away once again, but you're ready for it this time. Cutting him off as he attempts to escape, you make a diving tackle towards him. The jaguar stumbles and falls as you nearly catch him, grabbing the back of his shawl as he makes his escape. He quickly scrambles to his feet and rolls away. He looks back at you holding his headdress for a moment, as if considering trying to get it back, but with a shake of his head he turns and slips back into the twisting museum corridors.";
 		now HP of Tehuantl is 4;
-		now carried of Jaguar Headdress is 1;
+		ItemGain Jaguar Headdress by 1;
 	else if HP of Tehuantl is 4:
 		if hoodequipped is 1:
 			say "[JaguarWarriorCaptured]";

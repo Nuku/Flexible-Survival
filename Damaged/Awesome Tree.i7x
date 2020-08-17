@@ -30,8 +30,7 @@ to say awesome attack:
 		now thirst of Player is 0;
 		if a random number between 1 and 100 > 90:
 			if awesome bat is not owned:
-				now carried of awesome bat is 1;
-				say "You get an awesome piece of wood that could be used as, an awesome bat!";
+				ItemGain awesome bat by 1;
 		say "[Give Awesome][combat abort]";
 		now fightoutcome is 20;
 	else:

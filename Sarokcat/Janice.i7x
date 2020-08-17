@@ -107,14 +107,14 @@ instead of conversing the Janice:
 			say "     'I'm really glad to hear that. Please let her know how I'm doing and that I do miss her. I hope she'll be able to come visit me sometime soon. Oh!' she adds, reaching under the divan to pull out a designer blouse, '[bold type]give[roman type] this to her so she'll know it's really me. She's always liked my blouse and wanted one just like it. I don't need it now that I've permanently got this sexy fur coat, so she should have it. I'd [italic type]really[roman type] appreciate it if you did that for me,' she says with a sultry tone in her voice.";
 			say "- Janice's blouse added to your inventory -[line break]";
 			now HP of Kristen is 10;
-			now carried of Janice's blouse is 1;
+			ItemGain Janice's blouse by 1;
 			increase score by 5;
 	else if kristenmsg3 is true and HP of Kristen >= 2 and HP of Kristen < 10:
 		say "     Telling her that you've met Kristen[if kristenmsg1 is true] and that she'd mentioned her[end if], you get a big hug from the sexy vixen. 'Oh, that's simply wonderful. Is she still alright? Did something get her? Turn her into some creature yet or is she still an uninfected human?' she asks with an excited gleam in her eye. You fill her in on her friend, telling her that she's quite safe at the vixen's old place.";
 		say "     'I'm really glad to hear that. Please let her know how I'm doing and that I do miss her. I hope she'll be able to come visit me sometime soon. Oh!' she adds, reaching under the divan to pull out a designer blouse, '[bold type]give[roman type] this to her so she'll know it's really me. She's always liked my blouse and wanted one just like it. I don't need it now that I've permanently got this sexy fur coat, so she should have it. I'd [italic type]really[roman type] appreciate it if you did that for me,' she says with a sultry tone in her voice.";
 		say "- Janice's blouse added to your inventory -[line break]";
 		now HP of Kristen is 10;
-		now carried of Janice's blouse is 1;
+		ItemGain Janice's blouse by 1;
 		increase score by 5;
 	else if HP of Kristen is 10 and a random chance of 1 in 3 succeeds:
 		say "     'Have you gone back to see Kristen yet to [bold type]give[roman type] her my gift? I do so miss her and want her to know that I'm safe and happy. She must be so worried. Please do that for me, sweetie,' she purrs with alluring smile.";
@@ -323,7 +323,7 @@ to say Kristen-giveblouse:
 		say ". That means it's really her.'";
 		say "     Kristen has to dab her eyes a little with the blouse she's so happy to hear the news. 'It's so nice of her to give me this to reassure me. I was always a little jealous about her having one and she'd tease me about it,' she laughs. 'Please thank her for me for the lovely gift.'";
 	now HP of Kristen is 11;
-	now carried of Janice's blouse is 0;
+	ItemLoss Janice's blouse by 1;
 	increase score by 10;
 
 

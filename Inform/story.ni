@@ -3343,23 +3343,23 @@ carry out allburninating something (called x):
 						say "You're wielding that, so you'd best stop using it first.";
 					else:
 						say "You trash all of them but the [x] you're using. Bye-bye.";
-						now carried of x is 1;
+						ItemLoss x by (carried of x - 1) silently;
 				else:
 					say "You trash them all. Bye-bye.";
-					now carried of x is 0;
+					ItemLoss all x silently;
 			else if x is an equipment:
 				if x is equipped:
 					if found is 1:
 						say "You're using that right now. You need to take it off to trash it.";
 					else:
 						say "You trash all of them but the [x] you're wearing. Bye-bye.";
-						now carried of x is 1;
+						ItemLoss x by (carried of x - 1) silently;
 				else:
 					say "You trash them all. Bye-bye.";
-					now carried of x is 0;
+					ItemLoss all x silently;
 			else:
 				say "You trash them all. Bye-bye.";
-				now carried of x is 0;
+				ItemLoss all x silently;
 		else:
 			say "You change your mind.";
 
@@ -4751,7 +4751,6 @@ This is the explore rule:
 			now inasituation is false;
 			now battleground is "void";
 			wait for any key;
-			try looking;
 	now inasituation is false;
 	[Chance for new locations - increased by perception]
 	if something is 0 and a random number from 1 to 20 < ( bonus + 7 ) and there is an unknown fasttravel room and battleground is "Outside" and roomfirst is 0:
@@ -5883,7 +5882,50 @@ This is the Menu Exit Rule:
 
 
 Instead of examining the infection terminal:
-	say "Filled with glowing characters, the terminal lists all identified infections with some stats beside:[line break]";
+	say "     Looking at the terminal, you see a lot of text on its screen. If you want, you can select a category and read it.";
+	LineBreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Infections";
+	now sortorder entry is 1;
+	now description entry is "Check out the list of known infections";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Credits";
+	now sortorder entry is 2;
+	now description entry is "Check out the 'Credits', whatever that may be";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Infections"):
+					say "[TerminalInfections]";
+				else if (nam is "Credits"):
+					say "[TerminalCredits]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You turn away from the terminal.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
+
+to say TerminalInfections:
 	let z be 0;
 	sort Table of Random Critters in lev order;
 	repeat with X running from 1 to number of filled rows in Table of Random Critters:
@@ -5897,9 +5939,9 @@ Instead of examining the infection terminal:
 				now z is 0;
 	say "End Infection list.[line break]";
 	wait for any key; [don't apply waiterhater, used to separate monsters from credits]
-	say "Under it is something called a 'credit' list, how odd.";
+
+to say TerminalCredits:
 	say "[complete list of extension credits]";
-	say "End Credit list.[line break]";
 
 To Plot:
 	let x be the location;
@@ -6044,7 +6086,6 @@ carry out ScavengingAction:
 				say "[ResolveFunction of L]";
 			else if L is nothing:
 				say "[ResolveFunction of Potential Resources]";
-		try looking;
 		now inasituation is false;
 		say "[line break]";
 	else:
@@ -9162,9 +9203,18 @@ to say promptsay:
 	if z > 0:
 		say "Visible Objects: ";
 		repeat with q running through invent of x:
+			if there is a name of q in the Table of Game Objects:
+				choose a row with name of q in the Table of Game Objects;
+				now object entry is part of the player;
 			say "[link][q][as]get [q][end link] ";
 		say " [link]get everything[as]get all[end link]";
 		say "[line break]";
+	else:
+		repeat with k running through grab objects:
+			now k is nowhere;
+	[invisibly attaching the carried objects to keep the rickety FS inventory system going]
+	repeat with j running through owned grab objects:
+		now j is a part of the player;
 	say "Status: ";
 	if hunger of Player > 30:
 		say "[link][bracket]HUNGRY[close bracket][as]eat food[end link] ";
@@ -9205,8 +9255,6 @@ to say promptsay:
 	say "[line break]>";
 
 When play begins:
-	repeat with x running through grab objects:
-		now x is a part of the player;
 	now the command prompt is "[promptsay]";
 
 When play begins:

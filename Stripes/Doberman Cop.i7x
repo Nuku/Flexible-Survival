@@ -28,6 +28,8 @@ to say GenerateTrophyList_Doberman_Cop:
 	if a random chance of (50 + LootBonus) in 100 succeeds: [common drop]
 		add "food" to CombatTrophyList;
 	if a random chance of (50 + LootBonus) in 100 succeeds: [common drop]
+		add "medkit" to CombatTrophyList;
+	if a random chance of (50 + LootBonus) in 100 succeeds: [common drop]
 		add "water bottle" to CombatTrophyList;
 	if a random chance of (30 + LootBonus) in 100 succeeds: [uncommon drop]
 		add "pepper spray" to CombatTrophyList;
@@ -545,14 +547,15 @@ to say beatthedobie3:			[high-lust cop player victory]
 	say "     ([link]N[as]n[end link]) - No, drive her off.";
 	if Player consents:
 		say "     Excited at the prospect of having the Doberman cop as your personal slutty bitch, you run your hand over her head and scritch her ears, telling her that she can come with you if she accepts her proper place as your slutty bad dog bitch. She nods and licks at your hand. 'Oh yes, that's what I want. It was foolish of a bad bitch like me to ever try being a cop, boss.' Grinning, you lean down and un-pin the police badge she is wearing, putting the metal shield into your pocket. The anthro dog doesn't resist as you do so, showing how completely you've corrupted the woman she once was. With a whistle, you call for her to get up and follow you, smiling in victory all the way to the library.";
+		ItemGain alexandra's badge by 1;
 		now HP of Alexandra is 1;
 		now battleground is "void";
 		move Alexandra to Grey Abbey Library;
 		move player to Grey Abbey Library;
 	else:
 		say "     Not wanting to waste any more of your time on the policewoman, you kick her to the ground. Then you call her a slut and tell the bitch that you don't want a lousy street dog like her, fucked by who knows whom. She's just a fucktoy now, not even a real policewoman anymore. To drive this home, you lean down and un-pin the police badge she is wearing, putting the metal shield into your pocket. The anthro dog doesn't resist as you do so, showing how completely you've destroyed the woman she once was. With a cruel snort you wave her away, telling the canine to fuck off. She slinks away in shame and you can't help but chuckle, darkly pleased at having broken the cop and then just discarding her like trash. You doubt she'll be troubling you any more.";
+		ItemGain alexandra's badge by 1;
 		now HP of Alexandra is 100;
-	ItemGain alexandra's badge by 1;
 	now area entry is "Nowhere";
 
 

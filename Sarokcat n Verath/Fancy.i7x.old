@@ -207,7 +207,7 @@ instead of conversing the Fancy:
 				say "     'Still what can we get you for your help.... I know!' she says with a smile as she stands up and stretches slightly. 'Wait right here,' she says as she wanders off, her tail swaying teasingly behind her as she vanishes into one of the nearby rooms. She returns shortly with a rather interesting looking large black leather duster. 'This should help, and look pretty sexy as well,' Fancy says with a wink as she slips the soft leather coat onto you. You note that the leather appears to be not only rather sexy looking, but is also discreetly reinforced in key places. Having this on would help protect you quite well out there as well!";
 				ItemLoss wyvern goop by 5;
 				ItemLoss tiger patch by 5;
-				now carried of leather duster is 1;
+				ItemGain leather duster by 1;
 				now fancyquest is 3;
 			else:
 				say "     'Though it looks like we still need some rubber patches to go with the plaster-like stuff,' Fancy says with a sigh. 'Maybe you should look around somewhere with a lot of balloons or something? Wasn't there a fair in town?' she asks hopefully as she looks at you.";

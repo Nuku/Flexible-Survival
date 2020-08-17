@@ -690,7 +690,7 @@ to say FangSex1: [suck wolf cock]
 	if Libido of Player > 100, now Libido of Player is 100;
 	if HP of Fang < 2:
 		increase FangBetaCounter by 1;
-		say "     [Bold type]You get the impression that Fang likes you a little more.[roman type]";
+		say "     [Bold type]You get the impression that Fang likes you a little more.[roman type][line break]";
 	NPCSexAftermath Player receives "OralCock" from Fang;
 
 to say FangSex2: [Receive vaginal from Fang]
@@ -701,7 +701,7 @@ to say FangSex2: [Receive vaginal from Fang]
 	now Libido of Player is ( ( Libido of Player * 2 ) / 5 );
 	if HP of Fang < 2:
 		increase FangBetaCounter by 1;
-		say "     [Bold type]You get the impression that Fang likes you a little more.[roman type]";
+		say "     [Bold type]You get the impression that Fang likes you a little more.[roman type][line break]";
 	NPCSexAftermath Player receives "PussyFuck" from Fang;
 
 to say FangSex3: [Receive anal from Fang]
@@ -712,7 +712,7 @@ to say FangSex3: [Receive anal from Fang]
 	now Libido of Player is ( ( Libido of Player * 2 ) / 5 );
 	if HP of Fang < 2:
 		increase FangBetaCounter by 1;
-		say "     [Bold type]You get the impression that Fang likes you a little more.[roman type]";
+		say "     [Bold type]You get the impression that Fang likes you a little more.[roman type][line break]";
 	NPCSexAftermath Player receives "AssFuck" from Fang;
 
 to say FangSex4: [pussy licked by Fang]
@@ -723,7 +723,7 @@ to say FangSex4: [pussy licked by Fang]
 	if Libido of Player > 100, now Libido of Player is 100;
 	if HP of Fang < 2:
 		increase FangBetaCounter by 1;
-		say "     [Bold type]You get the impression that Fang likes you a little more.[roman type]";
+		say "     [Bold type]You get the impression that Fang likes you a little more.[roman type][line break]";
 	NPCSexAftermath Fang receives "OralPussy" from Player;
 
 to say FangSex5: [assfuck Fang]
@@ -733,7 +733,7 @@ to say FangSex5: [assfuck Fang]
 	now Libido of Player is ( ( Libido of Player * 2 ) / 5 );
 	if HP of Fang < 2:
 		increase FangBetaCounter by 1;
-		say "     [Bold type]You get the impression that Fang likes you a little more.[roman type]";
+		say "     [Bold type]You get the impression that Fang likes you a little more.[roman type][line break]";
 	NPCSexAftermath Fang receives "AssFuck" from Player;
 
 [See Section 3 for Fang & Sandra Sex]

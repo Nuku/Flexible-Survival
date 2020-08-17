@@ -255,15 +255,15 @@ to say ResolveEvent Orthas's House:
 		challenge "Red Kangaroo";
 		if fightoutcome <= 29:
 			say "     Your encounter with the randy female over, you decide to just make your escape, having had no luck since your initial find aside from the collection of Elvis collector plates you'd been using for crossbow practice. While you suspect the noise of that was the source of your troubles, it was quite a bit of fun. Regardless, you leave the place with the footlocker in tow and your new toy slung to your pack.";
-			now carried of crossbow is 1;
+			ItemGain crossbow by 1;
 		else:
 			say "     Making your escape from the house and the randy roo, you grab the footlocker you came here for, but have to abandon the crossbow and its spent quarrels. Maybe it wasn't such a good idea to use those Elvis collector plates for target practice.";
-		now carried of footlocker is 1;
+		ItemGain footlocker by 1;
 		now HP of Orthas is 6;
 	now Orthas's House is resolved;
 
 to say Orthas_task2_done:
-	now carried of footlocker is 0;
+	ItemLoss footlocker by 1;
 	say "     Giving the footlocker to Orthas, she takes it with less eagerness than you expected. After taking a deep breath, she opens it up and reviews its contents quietly. Among the items you see are a case of medals, a plaque of commendation and a framed photo. She takes out the photo with a sad sigh. It is a picture of a happy couple in front of the house you were in earlier. The strong, handsome man has his arm around the lovely woman, her belly somewhat rounded with her oncoming pregnancy.";
 	say "     'My wife. Well, my ex-. She ended up leaving me before our baby was even two.' She pulls out another photo, showing a brown-eyed baby girl. 'She left me a month after I went back on duty. She didn't even tell me. Just up and left a note saying I was never around because of the service. By the time I got back and found out, she'd left town and shacked up with a new guy.";
 	say "     'That was all years ago,' she says setting the photos upside down. 'I resigned my commission and eventually ended up doing security here. Since this place is military affiliated, an old commander of mine put in a good word and pulled a few strings for me. Besides,' she says tapping her medals['] case, 'spec ops training looks real good when applying for this sort of job.'";
@@ -334,7 +334,7 @@ It is not temporary.
 instead of using footlocker:
 	if HP of Orthas >= 7 or HP of Doctor Matt >= 100:
 		say "     There's no point in hanging onto this bulky thing any longer, so you get rid of it.";
-		now carried of footlocker is 0;
+		ItemLoss footlocker by 1;
 	else:
 		say "     The footlocker's locked. You don't think Orthas would be pleased with you prying into her personal stuff.";
 

@@ -599,7 +599,7 @@ to say GiveToronNullEssence:
 to say GiveToronLooseTentacle:
 	say "     Now, you have this quite odd and slippery tentacle, which might be of interest to Toron. You know, he finds use for strange things, so this one particular item must be as good as any. You call him and show him what you have, and his eyes widen. 'A tentacle?! What do you expect me to do with it?! Cook it, cut it and grind it until it becomes powder, then make a drink with it?!' he answers, to which sounds like an absolutely crazy idea... 'I could actually just make that work. Hand it over.' he asks, and without questioning his undeniable reasoning, you give him the loose tentacle.";
 	say "     Immediately after, he tells you to just come back later, as he will have to experiment with the mixture until he can achieve [']just the right tone of taste[']. His words.";
-	decrease carried of loose tentacle by 1;
+	ItemLoss loose tentacle by 1;
 	now HellfireTentacularSlushieTimer is turns;
 	wait for any key;
 	say "[HellfireClubDrinksMenu]";
@@ -607,7 +607,7 @@ to say GiveToronLooseTentacle:
 to say GiveToronStrangeBean:
 	say "     You almost feel silly by even suggesting this, but you call Toron to give him an odd colored bean that he could probably use for drinks. He doesn't blink, actually treating it with all the naturality in the world. 'A bean you say? Funny... They look like mystery beans. I think I've seen a stash of these in the void,  somewhere. Perhaps...' He looks at you, at the bean, then retreats to the back room. 'Give me a few moments, I will arrange preparations and order someone to get more for me! Oh, what a great drink this one will make...!'";
 	say "     It appears he is actually happy with this ingredient. How peculiar...";
-	decrease carried of strange-colored bean by 1;
+	ItemLoss strange-colored bean by 1;
 	now HellfirePeculiarLiqueurTimer is turns;
 	wait for any key;
 	say "[HellfireClubDrinksMenu]";

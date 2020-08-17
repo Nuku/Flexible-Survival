@@ -1372,7 +1372,7 @@ to say DiegoCollarDeliveryAftermath:
 	else:
 		LineBreak;
 		say "     In a friendly but firm tone, you turn the coyote down. [SubjectProCap of Diego] takes your rejection well enough with little more than a slight dip of [PosAdj of Diego] tail, followed by a shrug. 'Oh well, guess I'll find someone else to help me with this specific plan then. Doesn't mean we can't enjoy hatching some other fun plans together though, alright?'";
-		now carried of diego's heirloom collar is 0;
+		ItemLoss diego's heirloom collar by 1;
 		now XP of Diego is 50; [collar delivered]
 
 

@@ -340,7 +340,7 @@ to say NermineTalk2:
 	else if ( wrcurseNermine is 3 or wrcurseNermine is 4 ) and wrcursestatus >= 3 and wrcursestatus < 100 and wolfsbane is owned:
 		say "     Pulling out the wolfsbane, you set it on the counter. You feel ill just from touching it, but Nermine doesn't seem to have an adverse reaction to its smell. Once she places it in a glass jar you feel a little better, but still suffer from a lingering uneasiness in your stomach. 'Nermine will be preparing the potion while you are to be getting the next thing you are needing.";
 		say "     'There is a shipment of items that were going to be auctioned off. Among them is the silver knife you are wanting. It is looking like this.' She pulls out a published listing from the auction house, pointing out the knife. 'Cure is not needing this specific knife, but knife is special, so should be working better for this. Nermine will be it keeping as her payment, so don't be becoming attached to it,' she adds with a wink. She slips you the listing after circling the lot number in red. She goes on to tell you the location of the warehouse, but cautions you that the Warehouse District was a dangerous part of the city even before the outbreak[if Warehouse District is unknown]. She does provide you with a route she assures you will safely get you to the dockside area[end if].";
-		now carried of wolfsbane is 0;
+		ItemLoss all wolfsbane;
 		AddNavPoint Warehouse District;
 		now wrcurseNermine is 5;
 		now Getting the Knife is active;

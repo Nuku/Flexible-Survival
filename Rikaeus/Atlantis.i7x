@@ -97,7 +97,7 @@ to say ResolveEvent Lost Trident:
 					Challenge "Feral Sea Dragon";
 					if fightoutcome >= 10 and fightoutcome <= 19:
 						say "     Having beaten back the pack of feral dragons you experience a sense of well deserve pride overcome you as you watch the group of feral reptiles scampering away back into the sea. Despite you turning your attention to your prize you catch something out of the corner of your eyes. It is a half naked man with shoulder length black hair and stormy blue eyes. He appears to be looking at you inquisitively before he dives back down into the water. To your shock, a mermaid, or merman?, tail flops out of the water for a split second. From the direction of the ripples he swam towards the arc of rocks in the distance, though you believe he probably went further than that.";
-						now carried of bronze trident is 1;
+						ItemGain bronze trident by 1;
 						increase score by 10;
 						now PoseidonRelationship is 1;
 						change west exit of Sunken Ship to Atlantis City Entrance;

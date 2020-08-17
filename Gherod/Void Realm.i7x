@@ -656,7 +656,7 @@ to say AbyssalEdgeEvent:
 		LineBreak;
 		say "     Well, this is an artifact, which might very well be a valuable treasure. Perhaps the most valuable that you will find in here, not to mention it looks like a powerful weapon. With your decision made, you step towards the pedestal, careful to not step on the puddle of dark liquid, and with one hand, you begin to pull the blade. It needs some strength to come off, but other than that, it seems to actually slide off as if it was rubbing against a slippery and soft surface. Slowly, you pull it more... and more... Until you feel the grasp of whatever it was stuck on release completely. With the sword in your hands, you pull it to you completely, admiring its shape and handiwork. It somehow has a flowing darkness around it...";
 		say "     You have acquired the [bold type]Abyssal Edge[roman type] weapon.";
-		now carried of abyssal remnant is 1;
+		ItemGain abyssal remnant by 1;
 		say "     But... something's wrong. The blade is emptying itself, the dark liquid pouring out through the tip, and the sword is starting to look nothing more than a rusted, useless piece of garbage that can't even cut through paper. Did you actually recover something incredibly weak?! And about the puddle, it is... moving, somehow. You back away in that instant, towards where you came from, as you carefully observe what is happening...";
 		WaitLineBreak;
 		say "     There is an enormous quantity of black liquid surging through the pedestal, and the puddle begins to look less and less like one, taking shape in what seems to be a living blob of something. Then you realize it is making a pair of feet, slowly building into legs, and the whole area around you becomes surrounded by pitch black liquid running towards its core. More and more of it connects, and very quickly, what started with being a displaced pair of dark legs became a monstrous bipedal creature, easily overshadowing you by tripling your height (and still going), absurdly massive in size with a pair of powerful arms of endless strength. Its face is a ghastly visage of perilous eyes, a mouth covered in razor-sharp teeth, and a very, very long drooling tongue that unquietly wiggles around as if craving for something. However, most peculiar of all, your eyes cannot ignore what would be the shape of a human cock, throbbing and pulsing more black liquid as it stands erect, and impossibly gigantic.";
@@ -1436,7 +1436,7 @@ to VROddTreasurePathChoice:
 			say "     A few more inches and you are kicked right back to the relative familiarity of the main void pathway. Now that was some trip...";
 			if a random chance of 1 in 3 succeeds:
 				say "     And it looks like [bold type]a black rock of null essence[roman type] fell just by your feet, rolling several inches towards your position after having fallen from the ceiling. What a strange event, but you suppose this is better than nothing.";
-				increase carried of null essence by 1;
+				ItemGain null essence by 1 silently;
 			WaitLineBreak;
 			say "[VRMoveOptions]";
 	else if calcnumber is 3: [Left]
@@ -1671,7 +1671,7 @@ to say VRMirrors:
 	else:
 		say "     This is the place where you have destroyed the mirrors that haunted you. Looking at it now, shards of mirrors are all over the place, floating in the eternal abyss. Perhaps in the future, this area will change, but for now, it remains only as a reminder of what you have experienced in here. Who know what the void has kept for you...";
 		say "     You have managed to collect a [bold type]single piece of null essence[roman type] that you found lying around.";
-		increase carried of null essence by 1;
+		ItemGain null essence by 1 silently;
 		WaitLineBreak;
 		say "[VRMoveOptions]";
 
@@ -2477,12 +2477,11 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "strange-colored bean"	"It is a bean with a strange color. The texture is similar to a gum."	1	strange-colored bean
 
-strange-colored bean is a grab object.
+strange-colored bean is a grab object. it is not temporary.
 the usedesc of strange-colored bean is "[strange-colored bean use]";
 
 to say strange-colored bean use:
 	say "     It's just a bean, right? And it kind of looks like it tastes good... But you're wrong! Once you push it past your lips and into your mouth, it starts to burn intensely, and tastes like death. You immediately spit it out, and since you lacked the courage to bite it, it still looks intact. Best not do that again.";
-	increase carried of strange-colored bean by 1;
 
 instead of sniffing strange-colored bean:
 	say "The bean is odorless, much like everything else in the void.";
@@ -2493,12 +2492,11 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "unknown void relic one"	"Something you found in the Void. It has a shape like you have never seen before, with strange symbols engraved along its flat surface. "	3	unknown void relic one
 
-unknown void relic one is a grab object.
+unknown void relic one is a grab object. it is not temporary.
 the usedesc of unknown void relic one is "[UVRone use]";
 
 to say UVRone use:
 	say "     You try your best to decipher what is written in the relic, but these symbols are unlike anything you have seen before. After trying for a while, you decide to just put it away, unable to make anything out of it.";
-	ItemGain unknown void relic one by 1 silently;
 
 instead of sniffing unknown void relic one:
 	say "The relic is odorless, much like everything else in the void. However, you can sense something powerful within...";

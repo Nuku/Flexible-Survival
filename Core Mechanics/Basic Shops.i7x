@@ -36,7 +36,7 @@ Carry out BuyingAction:
 			continue the action;
 		say "You purchase [Name entry] for [price entry] creds.";
 		if Name entry is "Zephyr Personal Communicator":
-			now carried of zpc is carried of zpc + 1;
+			ItemGain zpc by 1 silently;
 		else:
 			ItemGain Name entry by 1 silently;
 		if Name entry is "nanite collector", now nanitemeter is 2;

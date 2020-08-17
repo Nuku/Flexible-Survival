@@ -307,7 +307,7 @@ to PossessionRestore:
 			if PossessionIdName is "sturdy jeans", now PossessionIdName is "dark-blue jeans";
 			if there is a name of PossessionIdName in the Table of Game Objects:
 				let PossessionObject be the object corresponding to a name of PossessionIdName in the Table of Game Objects;
-				now carried of PossessionObject is CarriedNumber entry;
+				ItemGain PossessionObject by CarriedNumber entry silently;
 				now stashed of PossessionObject is StoredNumber entry;
 				if PossessionObject is Equipment:
 					if EquippedStatus entry is true:

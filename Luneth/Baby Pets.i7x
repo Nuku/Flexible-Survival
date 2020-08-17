@@ -186,7 +186,7 @@ to say ResolveEvent Abandoned Fox:
 				now little fox is tamed;
 				add "Tamed" to Traits of little fox;
 				move Dash to Computer Lab;
-				say "     (Dash the little fox is now a possible companion! You can make him your active companion by typing [bold type][link]companion Dash[end link][roman type] or [bold type][link]companion fox[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+				say "     (Dash the little fox is now a possible ally! You can make him your active ally by typing [bold type][link]ally Dash[end link][roman type] or [bold type][link]ally fox[end link][roman type]. You can see all the companions you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 				now Resolution of Abandoned Fox is 1; [fed and adopted the fox]
 				now Abandoned Fox is resolved;
 			else:
@@ -457,7 +457,7 @@ to say ResolveEvent Lost Skunk Kit:
 						sblinfect;
 					else:
 						infect "Skunk";
-					say "     (Peppy the skunk kit is now a possible companion! You can make him your active companion by typing [bold type][link]companion Peppy[end link][roman type] or [bold type][link]companion skunk kit[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+					say "     (Peppy the skunk kit is now a possible ally! You can make him your active ally by typing [bold type][link]ally Peppy[end link][roman type] or [bold type][link]ally skunk kit[end link][roman type]. You can see all the companions you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 					now Resolution of Lost skunk kit is 1; [adopted the skunk]
 					now Lost skunk kit is resolved;
 				else:

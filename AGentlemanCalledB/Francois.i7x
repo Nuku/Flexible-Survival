@@ -244,7 +244,7 @@ Instead of conversing the Francois:
 		say "     Without another word Francois gets to work, gathering a few supplies before starting in earnest. Soon the entire bakery is filled with the warm scents of his work, and you find your mouth watering[if BodyName of Player is not listed in the infections of Caninelist and FaceName of Player is not listed in infections of Caninelist], despite knowing they are snacks intended for dogs[end if].";
 		say "     Eventually Francois finishes his work and returns with a small paper bag filled with fresh treats. [if BodyName of Player is listed in the infections of Caninelist or FaceName of Player is listed in infections of Caninelist or hunger of Player > 60]The enticing scent wafting from the bag in your hands proves to be too much, and you eagerly fish a treat out. Francois simply grins at you as he watches you enjoy a sample of his work. Still licking the last few crumbs of your snack from your lips, you[else]You[end if] stow the bag away in your pack and give Francois your regards before deciding on your next move.";
 		now HP of Karen is 3;
-		now carried of Dog Treats is 1;
+		ItemGain Dog Treats by 1;
 	else if HP of Francois is 0:
 		say "     'I must thank you again, mon ami[if Player is purefemale]e[end if],' Francois says as he steps around the counter, 'but perhaps I could ask another favor of you? I have a desire to create, to expand my art, and there must be so many exotic and interesting new flavors out in this city now. Oh how I would love to experiment with them, but sadly, I am no fighter. I fear I cannot go out there to gather these new ingredients myself, but you, mon [if Player is purefemale]héroïne[else]héro[end if], seem more than capable of surviving out there. If you bring back any potential ingredients you find, I would love to bake something for you[if Player is male], and perhaps I could 'reward' you in other ways as well,' he says, licking his lips as his eyes stray to your groin. 'Just[else]. Just[end if] bring back anything you find and let me know you would like me to [link]bake[as]bake Francois[end link] for you.";
 		now HP of Francois is 1;
@@ -900,18 +900,16 @@ to say gingerbreadGet:
 		say "'Oh là!' Francois exclaims as he watches your changes slow to and end. 'I hope you're not still hungry,' he says with a silly grin as he eyes your altered form.";
 	else:
 		say "     Accepting the cookies from Francois, he looks quite disappointed as you stash the snack away in your bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
-		now carried of gingerbread is 2;
+		ItemGain gingerbread by 2;
 
 to say cheesecakeGet:
 	say "     Francois['] expression lights up as he spots the cheese and he plucks it eagerly out of the pile before rummaging through and selecting the pixie dust and pink gel to go with it. 'This will do wonderfully, C'est magnifique!' Francois exclaims as he places the ingredients in a large mixing bowl to carry back into his kitchen. The rich sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a delicate looking strawberry cheesecake, he cuts the cake into slices with a smile, placing a couple small wedges on a plate for you with a grin. Would you like to taste it now? (Y/N)";
 	if Player consents:
-		now carried of cheesecake is 2;
 		say "[cheesecake Use]";
-		now carried of cheesecake is 0;
 		say "'Oh là!' Francois says as he watches your changes slow to and end. 'I guess what they say is true. You really are what you eat,' he says with a silly grin.";
 	else:
 		say "     Accepting the treat from Francois, he looks quite disappointed as you stash the snack away in your bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
-		now carried of cheesecake is 2;
+		ItemGain cheesecake by 2;
 
 Section 5 - Baked Goods
 

@@ -364,7 +364,7 @@ to say ResolveEvent Goblin Thief:
 		else if HP of Hadiya is 61 or HP of Hadiya is 62:
 			now HP of Hadiya is 63;
 		now lastfuck of Hadiya is 255;
-		now carried of girl's jacket is 0;
+		ItemLoss girl's jacket by 1;
 		now Goblin Thief is resolved;
 	else:
 		say "ERROR-Hadiya-[HP of Hadiya]E: You should not be able to get this result. Event should be closed at this time.";

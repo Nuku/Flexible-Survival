@@ -323,7 +323,7 @@ carry out SwordOfSeth:
 		challenge "Jackal Guard";
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			say "     Having vanquished the stone guardians and claimed the ancient sword, you leave the temple as a massive stone door seals it behind you. You're shocked at the sudden thump of the closing door, and you can only wonder if you've earned the ire of a powerful being...";
-			now carried of ancient blade is 1;
+			ItemGain ancient blade by 1;
 			now SethTempleNumber is 1;
 			move player to Golden Doors;
 	if fightoutcome >= 20 and fightoutcome <= 29:
