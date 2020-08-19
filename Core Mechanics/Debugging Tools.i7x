@@ -64,6 +64,19 @@ carry out ZTeleport:
 		if printed name of x exactly matches the text topic understood, case insensitively:
 			now Player is in x;
 
+ZCall is an action applying to one topic.
+understand "ZCall [text]" as ZCall.
+
+check ZCall:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out ZCall:
+	repeat with x running through persons:
+		if printed name of x exactly matches the text topic understood, case insensitively:
+			now x is in location of Player;
+
 Chapter 1 - Debug Mode
 
 debugmode is an action applying to nothing.

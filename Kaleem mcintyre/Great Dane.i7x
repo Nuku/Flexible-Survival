@@ -130,7 +130,7 @@ When Play begins:
 	now Cunt Depth entry is 10; [ Depth of female sex the infection will attempt to give a player. ]
 	now Cunt Tightness entry is 8; [ Width of female sex the infection will try to give a player. ]
 	now libido entry is 56; [ Target libido the infection will rise towards. ]
-	now loot entry is "bandage"; [ Dropped item, blank for none. Case sensitive. ]
+	now loot entry is "trophy bandage"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 35; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
@@ -252,11 +252,11 @@ When Play begins:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"bandage"	"A thick piece of cloth that looks as though it could be used to brace something."	1	bandage
+"trophy bandage"	"A thick piece of cloth that looks as though it could be used to brace something."	1	trophy bandage
 
-bandage is a grab object. Understand "bandage" as bandage. bandage is infectious. The strain of bandage is "Great Dane".
+trophy bandage is a grab object. Understand "bandage" as trophy bandage. trophy bandage is infectious. The strain of trophy bandage is "Great Dane".
 
-The usedesc of bandage is "The strip of cloth you won off of a Great Dane fighter down at Tyr's club. Soft, but kind of scratchy maybe you could make it into a tourniquet if you had more of them?";
+The usedesc of trophy bandage is "The strip of cloth you won off of a Great Dane fighter down at Tyr's club. Soft, but kind of scratchy maybe you could make it into a tourniquet if you had more of them?";
 
 
 Section 3 - Endings

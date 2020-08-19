@@ -185,6 +185,7 @@ object	name
 doberman companion	"doberman companion"
 
 doberman companion is a pet. doberman companion is a part of the player.
+NPCObject of doberman companion is Spike.
 understand "Spike" as doberman companion.
 understand "Doberman" as doberman companion.
 printed name of doberman companion is "Spike".

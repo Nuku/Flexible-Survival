@@ -30,6 +30,7 @@ object	name
 Cute Crab	"Cute Crab"
 
 Cute Crab is a pet. Cute Crab is a part of the player.
+NPCObject of Cute Crab is Snips.
 understand "Snips" as Cute Crab.
 printed name of Cute Crab is "Snips".
 The description of Cute Crab is "[SnipsDesc]".
@@ -226,6 +227,7 @@ object	name
 house cat	"house cat"
 
 house cat is a pet. house cat is a part of the player.
+NPCObject of house cat is Dinah.
 understand "Dinah" as house cat.
 printed name of house cat is "Dinah".
 The description of the house cat is "[DinahDesc]".
@@ -452,6 +454,7 @@ object	name
 Exotic Bird	"Exotic Bird"
 
 Exotic Bird is a pet. Exotic Bird is a part of the player.
+NPCObject of Exotic Bird is Chirpy.
 understand "Chirpy" as Exotic Bird.
 printed name of Exotic Bird is "Chirpy".
 The description of the exotic bird is "[ChirpyDesc]".
@@ -644,6 +647,7 @@ object	name
 helper dog	"helper dog"
 
 helper dog is a pet. helper dog is a part of the player.
+NPCObject of helper dog is Hobo.
 understand "Hobo" as helper dog.
 printed name of helper dog is "Hobo".
 The description of helper dog is "[HoboDesc]".

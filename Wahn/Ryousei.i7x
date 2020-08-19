@@ -255,6 +255,7 @@ object	name
 royal tiger	"royal tiger"
 
 royal tiger is a pet. royal tiger is a part of the player.
+NPCObject of royal tiger is Ryousei.
 understand "Ryousei" as royal tiger.
 understand "Ryo" as royal tiger.
 printed name of royal tiger is "Ryousei".

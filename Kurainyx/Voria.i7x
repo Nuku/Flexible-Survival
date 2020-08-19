@@ -206,6 +206,7 @@ object	name
 Carnivorous Plant	"Carnivorous Plant"
 
 Carnivorous Plant is a pet.
+NPCObject of Carnivorous Plant is Voria.
 understand "Voria" as Carnivorous Plant.
 printed name of Carnivorous Plant is "Voria".
 The description of Carnivorous Plant is "[CarnivorousPlantDesc]".

@@ -605,6 +605,7 @@ object	name
 demon brute	"demon brute"
 
 demon brute is a pet. demon brute is a part of the player.
+NPCObject of demon brute is Brutus.
 understand "Brutus" as demon brute.
 printed name of demon brute is "Brutus".
 ScaleValue of demon brute is 4. [larger than human]
@@ -662,6 +663,9 @@ to say DemonBrutePetDesc:
 instead of sniffing demon brute:
 	say "Smells like fire, ash and brimstone.";
 
+instead of sniffing Brutus:
+	say "Smells like fire, ash and brimstone.";
+
 instead of conversing demon brute:
 	if DBCaptureQuestVar < 5:
 		say "     You don't have a demon brute to talk to right now...";
@@ -669,11 +673,20 @@ instead of conversing demon brute:
 		say "[demon brute summoning]";
 		say "[demon brute talk]";
 
+instead of conversing Brutus:
+	say "[demon brute talk]";
+
 to say sexwithdemonbrutepet:
 	if DBCaptureQuestVar is 6:
 		say "     Having gone through the trouble of freeing this demon from his inner torment, maybe you should talk to him first before ordering him to have sex with you. With a clear mind, he'll be able to talk instead of just growling and threatening like he did before.";
 	else:
 		say "[demon brute summoning]";
+		say "[DemonBruteSexMenu]";
+
+instead of fucking Brutus:
+	if DBCaptureQuestVar is 6:
+		say "     Having gone through the trouble of freeing this demon from his inner torment, maybe you should talk to him first before ordering him to have sex with you. With a clear mind, he'll be able to talk instead of just growling and threatening like he did before.";
+	else:
 		say "[DemonBruteSexMenu]";
 
 to say demon brute summoning:

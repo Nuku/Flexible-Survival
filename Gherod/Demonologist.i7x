@@ -722,6 +722,7 @@ object	name
 demonologist	"demonologist"
 
 demonologist is a pet. demonologist is a part of the player.
+NPCObject of demonologist is Xaedihr.
 understand "Xaedihr" as demonologist.
 printed name of demonologist is "Xaedihr".
 The description of demonologist is "[XaedihrDesc]".

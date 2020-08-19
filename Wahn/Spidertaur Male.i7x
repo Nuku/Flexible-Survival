@@ -384,7 +384,7 @@ Section 3 - Items
 Table of Game Objects (continued)
 name	desc	weight	object
 "spidertaur hair"	"A few long strands of pale-white hair."	1	spidertaur hair
-"silk hammock"	"A large but surprisingly light hammock, made from real spidertaur silk. It has two wooden stability rods at the ends, as well as sticky holding strands to hang it up pretty much anywhere. So you can [bold type]rest[roman type] in comfort wherever you like!"	10	silk hammock
+"silk hammock"	"A large but surprisingly light hammock, made from real spidertaur silk. It has two wooden stability rods at the ends, as well as sticky holding strands to hang it up pretty much anywhere. So you can [bold type]rest[roman type] in comfort wherever you like! You can be sure that it is more restful than any old sleeping bag and the like."	5	silk hammock
 
 instead of sniffing spidertaur hair:
 	say "Doesn't smell of anything, really.";

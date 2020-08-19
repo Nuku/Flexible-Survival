@@ -4,20 +4,46 @@ Version 2 of Milking by Core Mechanics begins here.
 Table of Game Objects (continued)
 name	desc	weight	object
 "mothers milk"	"Delicious milk made from your own tender breasts."	1	mothers milk
+"distilled milk"	"Some creature's milk boiled down to a concentrated, powdery, form? That can't be dangerous!"	1	distilled milk
+"dog milk"	"A bottle of dog milk? Man you will take anything."	1	dog milk
 "panther milk"	"The thick, luscious milk of one of the panther taurs."	1	panther milk
 "chocolate milk"	"The creamy milk with a white chocolate taste."	1	chocolate milk
 "vixen milk"	"A thin milk with a faintly medicinal taste, like the silvery vixens it is from."	1	vixen milk
 "sweet milk"	"A creamy, sweet milk with a faintly honey-like taste."	1	sweet milk
 "macho milk"	"A creamy, energizing milk with a faintly spicy-like taste."	1	macho milk
 
-mothers milk is a grab object. Understand "milk" as mothers milk. mothers milk is milky.
-panther milk is a grab object. Understand "milk" as panther milk. panther milk is infectious. The strain of panther milk is "Panther Taur". The trade of panther milk is "distilled milk". panther milk is milky.
+mothers milk is a grab object. Understand "milk" as mothers milk. The purified of mothers milk is "distilled milk". mothers milk is milky.
+distilled milk is a grab object. It is not milky.
+
+the usedesc of mothers milk is "[mothers milk use]";
+
+to say mothers milk use:
+	let healed be 15 + level of Player + ((Stamina of Player minus 10) divided by 2);
+	if "Fertile" is listed in the feats of Player:
+		now healed is ( healed times 120) divided by 100;
+	if "Breeding True" is listed in the feats of Player:
+		now healed is ( healed times 105 ) divided by 100;
+	if "Litter Bearer" is listed in the feats of Player:
+		now healed is ( healed times 125 ) divided by 100;
+	if "Bouncy Bouncy" is listed in the feats of Player:
+		now healed is ( healed times 115 ) divided by 100;
+	if "Wild Womb" is listed in the feats of Player:
+		now healed is ( healed times 105 ) divided by 100;
+	say "Drinking the special milk, you feel revitalized as a wave of motherly care sweeps through you.";
+	PlayerHealed healed;
+	PlayerDrink 20;
+
+dog milk is a grab object. Understand "milk" as dog milk. It is milky. dog milk is infectious. The strain of dog milk is "Smooth Collie Shemale". The purified of dog milk is "distilled milk". dog milk is milky.
+panther milk is a grab object. Understand "milk" as panther milk. panther milk is infectious. The strain of panther milk is "Panther Taur". The purified of panther milk is "distilled milk". panther milk is milky.
 chocolate milk is a grab object. Understand "milk" as chocolate milk. chocolate milk is infectious. The strain of chocolate milk is "Chocolate Lab". The purified of chocolate milk is "distilled milk". chocolate milk is milky.
 vixen milk is a grab object. Understand "milk" as vixen milk. vixen milk is infectious. The strain of vixen milk is "Vixen Nurse". The purified of vixen milk is "distilled milk". vixen milk is milky.
 sweet milk is a grab object. Understand "milk" as sweet milk. sweet milk is infectious. The strain of sweet milk is "Cow-babe Female". The purified of sweet milk is "distilled milk". sweet milk is milky.
 macho milk is a grab object. Understand "milk" as macho milk. macho milk is infectious. The strain of macho milk is "Cow-boi Male". The purified of macho milk is "distilled milk". macho milk is milky.
 [cum/milk object will come from creatures]
 lastmilking is a number that varies. lastmilking is usually 500.
+
+
+
 
 PlayerBreastMilking is an action applying to nothing.
 understand "milkme" as PlayerBreastMilking.

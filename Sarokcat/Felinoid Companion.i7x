@@ -119,6 +119,7 @@ object	name
 Felinoid Companion	"Felinoid Companion"
 
 Felinoid Companion is a pet. Felinoid Companion is a part of the player.
+NPCObject of Felinoid Companion is Klauz.
 understand "Klauz" as Felinoid Companion.
 printed name of Felinoid Companion is "Klauz".
 The description of Felinoid Companion is "[Klauzdesc]".

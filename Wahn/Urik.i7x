@@ -66,6 +66,7 @@ object	name
 orc supersized breeder	"orc supersized breeder"
 
 orc supersized breeder is a pet. orc supersized breeder is a part of the player.
+NPCObject of orc supersized breeder is Urik.
 understand "Urik" as orc supersized breeder.
 printed name of orc supersized breeder is "Urik".
 The description of orc supersized breeder is "[UrikDesc]".

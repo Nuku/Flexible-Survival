@@ -273,6 +273,8 @@ The objsize of chair is 4.
 The hitbonus of chair is -1. [not a weapon]
 The scent of chair is "The metal chair smells of metal and aging plastic.".
 
+understand "seat" as chair.
+
 Table of Game Objects (continued)
 name	desc	weight	object
 "crowbar"	"A big, heavy crowbar. It's not sharp, but it's heavy enough to strike a good blow."	5	crowbar
@@ -374,6 +376,8 @@ name	desc	weight	object
 "Wukong's staff"	"An simple yet expertly crafted fighting staff, carved then polished with care to provide maximum efficiency. A golden leaf is riveted to the middle of the staff, ornately decorated with detailed figures of various animals, provides your hands with a good grip."	8	wukongStaff
 
 wukongStaff is an armament. It is not temporary.
+understand "Wukong's staff" as wukongStaff.
+understand "staff" as wukongStaff.
 It has a weapon "[one of]your bo staff[or]your fighting staff[or]your staff[or]your bo staff with a hard whack[or]the long pole[or]your staff with a fast jab[at random]".
 The weapon damage of wukongStaff is 18.
 The weapon type of wukongStaff is "Melee".

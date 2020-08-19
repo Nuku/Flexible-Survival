@@ -1823,55 +1823,20 @@ before examining the grab object (called x):
 
 Book 5 - Tables
 
+[ Items moved to Core Mechanics/Misc Items]
+[ Milk moved to Core Mechanics/Milking.i7x]
+
+
 Table of Game Objects
 name	desc	weight	object	sortname (indexed text)
-"medkit"	"A small, white, plastic box with a red cross on it. It has all the things needed for basic medical needs on the go! Using it will restore a lot of HP, more with good intelligence."	3	medkit
-"water bottle"	"A bottle of water. Good for slaking thirst."	1	water bottle
-"dirty water"	"A bottle of contaminated water. Drinker beware."	1	dirty water
-"food"	"Some food. Nothing fancy. Maybe a sandwich, or a can of beans, whatever happens to be handy."	2	food
 "journal"	"A small, leather-clad book. Spending some time [link]writing[as]use journal[end link] in it can help clear your thoughts and recenter your troubled mind. Or if you have something especially important that you want to remember, you could just [link]write down a note[as]write a note[end link] at the back end of it. [if number of filled rows in Table of JournalNotes > 0]In fact, you remember noting down some things in it that must have been important somehow. You can [link]browse through your notes[as]browse notes[end link] if you want to. Alternatively, [link]ripping them all out[as]rip notes[end link] is also possible.[end if][line break]"	2	journal
-"gryphon milk"	"A small bottle filled with fluid taken from one of those gryphons. You are fairly certain drinking it would be a poor idea, but maybe there is a use for it?"	2	gryphon milk
-"distilled milk"	"Some creature's milk boiled down to a concentrated, powdery, form? That can't be dangerous!"	1	distilled milk
-"glob of goo"	"A small bottle of strange, neon colored, goop"	1	glob of goo
-"soda"	"A can of some soda or another. Somehow, it is still cool to the touch"	1	soda
-"chips"	"Not always literally potato chips, but any kind of junk food. Not the best food, but hey, edible."	1	chips
-"cot"	"A folding cot. You could carry it around and [bold type]rest[roman type] anywhere!"	25	cot
-"dog milk"	"A bottle of dog milk? Man you will take anything."	3	dog milk
-"face mask"	"A basic filtered face mask. Maybe it will help? Probably not[first time]. You doubt it was designed with this madness in mind[only]."	3	face mask
-[
-"heuristic processor"	"A small electronic circuit. You've been told it's amazingly adaptive and can learn anything. Probably nonsense, but maybe you can find a use for it, somehow."	1	heuristic processor
-"reprogramming device"	"An attempt by Dr. Mouse to build a device to reprogram the nanites. It's too bulky, and doesn't have the processing capacity to be of any use in the field. Perhaps you could find a way around those limitations?"	13	reprogramming device
-"infection scanner"	"Upgraded Infection Monitor. Or it would have been, it's clearly not finished. It's missing any sort of display to show what it finds. Perhaps you could use it's scanner parts elsewhere?"	7	infection scanner
-]
 
-face mask is equipment. It is not temporary.
-The descmod of face mask is "A filtered mask covers nose and mouth in a vain attempt to help. ".
-The placement of face mask is "face".
 journal is a grab object. It is not temporary. The carried of journal is 1.
 journal has a number called hitbonus. hitbonus of journal is usually 0.
-cot is a grab object. It is not temporary.
-understand "Bed" as cot.
 Understand "book" as journal.
-medkit is a grab object. It is fast. It is not temporary.
-dirty water is a grab object. The trade of dirty water is "chips".
-understand "water" as dirty water.
-water bottle is a grab object. The trade of water bottle is "chips".
-Does the player mean using the dirty water: it is unlikely.
-Does the player mean stashing the dirty water: it is unlikely.
-Does the player mean retrieving the dirty water: it is unlikely.
-dog milk is a grab object. It is milky.
-soda is a grab object.
-chips is a grab object.
-glob of goo is a grab object. glob of Goo is infectious. The strain of glob of goo is "Goo Girl".
-food is a grab object. The trade of food is "soda".
 
 [Pocketknife moved to Core Mechanics/Weapons.i7x]
 [Chair moved to Core Mechanics/Weapons.i7x]
-
-understand "seat" as chair.
-gryphon milk is a grab object. Understand "milk" as gryphon milk. Gryphon milk is infectious. The strain of gryphon milk is "Blue Gryphon Herm". The trade of Gryphon Milk is "distilled milk". gryphon milk is milky.
-distilled milk is a grab object. It is not milky.
-
 
 The invent of the player is { "journal" }.
 
@@ -2529,7 +2494,6 @@ understand "equip [owned grab object]" as using.
 understand "hold [owned grab object]" as using.
 understand "wield [owned grab object]" as using.
 understand "write in [owned grab object]" as using.
-understand "use cot" as resting.
 
 Check using a grab object (called x):
 	if hardmode is true and x is journal and (LastJournaluse minus 8) < turns:
@@ -2853,9 +2817,6 @@ To process (x - a grab object):
 				if morale of Player > 0, now morale of Player is 0;
 				say "You feel better having drunken something.";
 		sfsodadrink;
-	else if x is gryphon milk:
-		say "The milk is thick, like a shake, but warmer, flowing down your throat in sweet creamy waves that send tingles of pleasure through your body as you guzzle it down. Only after you've drunk it all down do you notice that some has run down your chin in your excitement. That is some good milk!";
-		PlayerDrink 15;
 	else if x is manufactured milk:
 		say "The milk is thick, like a shake, flowing down your throat in sweet creamy waves that send tingles of pleasure through your body as you guzzle it down. Only after you've drunk it all down do you notice that some has run down your chin in your excitement. That is some good milk!";
 		PlayerDrink 15;
@@ -2940,54 +2901,6 @@ To process (x - a grab object):
 			else:
 				say "     [bold type]You start wearing the [x].[roman type][line break]";
 				now x is equipped;
-	else if x is a medkit:
-		let healed be 10 + level of Player + ( ( intelligence of Player minus 10 ) divided by 2 );
-		if "Expert Medic" is listed in the feats of Player:
-			if Paula is visible:
-				now healed is ( healed * 133 ) / 100;
-			else:
-				now healed is ( healed times 125 ) divided by 100;
-		else if Paula is visible:
-			now healed is ( healed times 125 ) divided by 100;
-		else if carried of First Aid Manual > 0:
-			increase healed by 2;
-		if "Rapid Healing" is listed in the feats of Player:
-			now healed is ( healed times 115 ) divided by 100;
-		if "Regeneration" is listed in the feats of Player:
-			now healed is ( healed times 115 ) divided by 100;
-		if nohealmode is true:
-			now healed is ( healed * 125 ) / 100;
-		if ssmb is true:
-			now healed is ( healed * 3 ) / 2;
-		increase HP of Player by healed;
-		if HP of Player > maxHP of Player:
-			decrease healed by HP of Player minus maxHP of Player;
-			now HP of Player is maxHP of Player;
-		say "Using your medkit, [if Paula is visible]Paula helps you [one of]treat the worst of your wounds[or]bandage up the worst of your wounds[or]spray your cuts with anesthetic[or]clean and dress your wounds[at random], making sure to kiss them to make it all better[else][one of]you spray your cuts with anesthetic[or]you bandage your worst wounds[at random][end if]. You regain [special-style-1][healed][roman type] HP.";
-		decrease CurrentMedkitSupplies by 1;
-		if CurrentMedkitSupplies < 1:
-			say "You have used up the last of the medkit.";
-			ItemLoss medkit by 1 silently;
-			now CurrentMedkitSupplies is 5;
-			if "Expert Medic" is listed in feats of Player:
-				increase CurrentMedkitSupplies by 1;
-	else if x is mothers milk:
-		let healed be 15 + level of Player + ((Stamina of Player minus 10) divided by 2);
-		if "Fertile" is listed in the feats of Player:
-			now healed is ( healed times 120) divided by 100;
-		if "Breeding True" is listed in the feats of Player:
-			now healed is ( healed times 105 ) divided by 100;
-		if "Litter Bearer" is listed in the feats of Player:
-			now healed is ( healed times 125 ) divided by 100;
-		if "Bouncy Bouncy" is listed in the feats of Player:
-			now healed is ( healed times 115 ) divided by 100;
-		if "Wild Womb" is listed in the feats of Player:
-			now healed is ( healed times 105 ) divided by 100;
-		increase HP of Player by healed;
-		if HP of Player > maxHP of Player:
-			decrease healed by HP of Player minus maxHP of Player;
-			now HP of Player is maxHP of Player;
-		say "Drinking your own milk you feel revitalized as a wave of motherly care sweeps through you. You regain [special-style-1][healed][roman type] HP.";
 	else if x is a pepperspray:
 		if inafight is 1:
 			say "[line break][usepepperspray]";
@@ -4633,6 +4546,8 @@ check resting:
 		say "You rest on the bed in the back of the cell.";
 	else if silk hammock is owned or silk hammock is present:
 		say "You set up your silken hammock at the next appropriate spot and lie in it, resting for a while.";
+	else if sleeping bag is owned or sleeping bag is present:
+		say "You roll out the sleeping bag in an appropriate spot and lie in it, resting for a while.";
 	else if "Roughing It" is listed in feats of Player:
 		say "You hunker down somewhere secluded for a quick nap.";
 		now roughing is true;
@@ -6325,6 +6240,7 @@ Include Inline Hyperlinks by Nuku Valente.
 Include Masturbate by Core Mechanics.
 Include Microwave by Core Mechanics.
 Include Milking by Core Mechanics.
+Include Misc Items by Core Mechanics.
 Include Navigation by Core Mechanics.
 Include Notes by Core Mechanics.
 Include Needy Heat by Core Mechanics.
@@ -9199,6 +9115,8 @@ Book 10 - Let the Games Begin
 
 to say promptsay:
 	let x be the location of the player;
+	if companion of Player is not NullPet and NPCObject of Companion of Player is not Nullpet:
+		now NPCObject of Companion of Player is in location of Player;
 	let z be the number of entries in invent of x;
 	if z > 0:
 		say "Visible Objects: ";

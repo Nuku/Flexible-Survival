@@ -146,7 +146,7 @@ to say Darius's Inventory List:
 	else:
 		say "     A handwritten sign on the kitchen counter tells you that you need to pay with food for anything you want, but it seems that Darius put away his stash before leaving the house. You'll have to wait till he is back if you want to buy something.";
 
-table of Darius Inventory
+Table of Darius Inventory
 name	price	object	allowed
 "bliss tablet"	1	bliss tablet	true rule
 "powerup tablet"	2	powerup tablet	true rule

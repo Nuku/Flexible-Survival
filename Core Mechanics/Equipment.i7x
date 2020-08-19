@@ -405,6 +405,25 @@ Scent of lab goggles is "The goggles don't smell like anything really.".
 
 Section 4 - Masks
 
+Table of Game Objects (continued)
+name	desc	weight	object
+"face mask"	"A basic filtered face mask. Maybe it will help? Probably not[first time]. You doubt it was designed with this madness in mind[only]."	2	face mask
+
+face mask is a grab object.
+face mask is equipment.
+It is not temporary.
+Plural of face mask is false.
+Taur-compatible of face mask is true.
+Size of face mask is 0.
+AC of face mask is 3.
+Effectiveness of face mask is 5.
+GA of face mask is 0.
+Traits of face mask is {"smart"}.
+Placement of face mask is "head".
+Descmod of face mask is "A filtered mask covers nose and mouth in a vain attempt to help.".
+Slot of face mask is "face".
+Scent of face mask is "The face mask doesn't smell like anything really.".
+
 Section 5 - Neckwear
 
 Section 6 - Necklaces

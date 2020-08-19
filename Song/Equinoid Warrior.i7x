@@ -16,6 +16,7 @@ object	name
 equinoid warrior	"equinoid warrior"
 
 equinoid warrior is a pet. equinoid warrior is a part of the player.
+NPCObject of equinoid warrior is Liliana.
 understand "Liliana" as equinoid warrior.
 printed name of equinoid warrior is "Liliana".
 The description of equinoid warrior is "[LilianaDesc]".

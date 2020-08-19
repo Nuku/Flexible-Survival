@@ -39,6 +39,7 @@ object	name
 Retriever Girl	"Retriever Girl"
 
 Retriever Girl is a pet. Retriever Girl is a part of the player.
+NPCObject of Retriever Girl is Karen.
 understand "Karen" as Retriever Girl.
 printed name of Retriever Girl is "Karen".
 [Physical details as of game start]

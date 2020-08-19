@@ -3,6 +3,25 @@ Version 2 of Hermaphrodite Gryphon by Nuku Valente begins here.
 
 "Adds a Hermaphrodite Gryphon creature to Flexible Survival's Wandering Monsters table"
 
+to say GenerateTrophyList_Blue_Gryphon:
+	[ Reminder: LootBonus can be +35 at maximum - 10 for Magpie Eyes, 15 for Mugger and 10 from Player Perception]
+	if a random chance of (80 + LootBonus) in 100 succeeds: [common drop]
+		add "blue gryphon feather" to CombatTrophyList;
+	if a random chance of (50 + LootBonus) in 100 succeeds: [common drop]
+		add "dirty water" to CombatTrophyList;
+	if a random chance of (30 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "food" to CombatTrophyList;
+	if a random chance of (20 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "gryphon milk" to CombatTrophyList;
+	if a random chance of (10 + LootBonus) in 100 succeeds: [rare drop]
+		add "clean bandage" to CombatTrophyList;
+	if a random chance of (10 + LootBonus) in 100 succeeds: [rare drop]
+		add "gryphon coin" to CombatTrophyList;
+	if a random chance of (5 + LootBonus) in 100 succeeds: [rare drop]
+		add "indigo potion" to CombatTrophyList;
+	if Debug is at level 10:
+		say "DEBUG: Trophy List: [CombatTrophyList].";
+
 Section 1 - Creature Responses
 
 nohgryphonsex is a number that varies.
@@ -330,11 +349,11 @@ When Play begins:
 	now Cunt Depth entry is 13; [ Depth in inches of female sex the infection will attempt to give a player. ]
 	now Cunt Tightness entry is 7; [ Width in inches of female sex the infection will try to give a player. ]
 	now libido entry is 80; [ Target libido the infection will rise towards. ]
-	now loot entry is "gryphon milk"; [ Dropped item, blank for none. Case sensitive. ]
+	now loot entry is "blue gryphon feather"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 50; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "gryphon milk";
 	now CumItem entry is "gryphon cum";
-	now TrophyFunction entry is "-";
+	now TrophyFunction entry is "[GenerateTrophyList_Blue_Gryphon]";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]winged[or]alluring[or]curvaceous[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "[one of]gryphon[or]feline[or]hybrid[at random]"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -455,6 +474,51 @@ to fullBlueGryphonHermTF:
 		follow the sex change rule;
 		follow the sex change rule;
 		follow the breast change rule;
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"blue gryphon feather"	"A single azure blue feather. It is nicely soft and shimmer in the light."	0	blue gryphon feather
+
+blue gryphon feather is a grab object.
+It is temporary.
+blue gryphon feather is infectious.
+The strain of blue gryphon feather is "Blue Gryphon Herm".
+the usedesc of blue gryphon feather is "[blue gryphon feather use]";
+
+to say blue gryphon feather use:
+	say "Holding the feather in your hand, you stroke it over your arm, delighted in its softness. Strangely, the feather disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+
+instead of sniffing blue gryphon feather:
+	say "The feather has a pleasing, not too strong, animal-like scent.";
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"gryphon milk"	"A small bottle filled with fluid taken from one of those gryphons."	1	gryphon milk
+
+gryphon milk is a grab object. Understand "milk" as gryphon milk. gryphon milk is infectious. The strain of gryphon milk is "Blue Gryphon Herm". The purified of Gryphon Milk is "distilled milk". gryphon milk is milky.
+the usedesc of gryphon milk is "[gryphon milk use]";
+
+to say gryphon milk use:
+	say "The milk is thick, like a shake, but warmer, flowing down your throat in sweet creamy waves that send tingles of pleasure through your body as you guzzle it down. Only after you've drunk it all down do you notice that some has run down your chin in your excitement. That is some good milk!";
+	PlayerDrink 15;
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"gryphon coin"	"A triangular piece of blue stone, fairly thin and light. On one side, you see a feather, with a single character of an unknown script is on the flip side."	0	gryphon coin
+
+gryphon coin is a grab object.
+the usedesc of gryphon coin is "[gryphon coin use]";
+
+to say gryphon coin use:
+	say "     You throw the coin into the air, watching it tumble end over end a few times before you catch it again and slap it on the back of your hand:";
+	if a random chance of 1 in 2 succeeds:
+		say "     [bold type]Feather![roman type][line break]";
+	else:
+		say "     [bold type]Writing![roman type][line break]";
+
+instead of sniffing gryphon coin:
+	say "The coin has an odd, spicy smell to it.";
 
 Section 3 - Endings
 

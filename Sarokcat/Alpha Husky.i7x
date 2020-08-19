@@ -7,6 +7,23 @@ Version 3 of Alpha Husky by Sarokcat begins here.
 
 "Adds an Alpha Husky to Flexible Survival's Wandering Monsters table, with impreg chance"
 
+to say GenerateTrophyList_Husky_Alpha:
+	[ Reminder: LootBonus can be +35 at maximum - 10 for Magpie Eyes, 15 for Mugger and 10 from Player Perception]
+	if a random chance of (80 + LootBonus) in 100 succeeds: [common drop]
+		add "husky alpha fur" to CombatTrophyList;
+	if a random chance of (50 + LootBonus) in 100 succeeds: [common drop]
+		add "dirty water" to CombatTrophyList;
+	if a random chance of (30 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "food" to CombatTrophyList;
+	if a random chance of (20 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "soda" to CombatTrophyList;
+	if a random chance of (20 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "tennis ball" to CombatTrophyList;
+	if a random chance of (10 + LootBonus) in 100 succeeds: [rare drop]
+		add "clean bandages" to CombatTrophyList;
+	if Debug is at level 10:
+		say "DEBUG: Trophy List: [CombatTrophyList].";
+
 Section 1 - Creature Responses
 
 Alphahuskypet is a number that varies.
@@ -381,9 +398,9 @@ When Play begins:
 	now libido entry is 30;  [ Amount player Libido will go up if defeated ]
 	now loot entry is "husky alpha fur";  [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 50;  [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "";
+	now MilkItem entry is "husky alpha man-milk";
 	now CumItem entry is "husky alpha cum";
-	now TrophyFunction entry is "-";
+	now TrophyFunction entry is "[GenerateTrophyList_Husky_Alpha]";
 	now scale entry is 3;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[if latexhuskymode is true][one of]quadrupedal[or]altered[or]animalistic[at random][else][one of]altered[or]animalistic[at random][end if]";  [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "[one of]canine[or]husky[at random]";
@@ -502,13 +519,13 @@ name	desc	weight	object
 "husky alpha fur"	"A tuft of grey and white fur that looks like it has been pulled out of the coat of a husky. It's nicely soft."	0	husky alpha fur
 
 husky alpha fur is a grab object.
-the usedesc of husky alpha fur is "[HuskyAlphaFurUse]".
-
 It is temporary.
+husky alpha fur is infectious.
+The strain of husky alpha fur is "Husky Alpha".
+the usedesc of husky alpha fur is "[husky alpha cum use]";
 
 to say HuskyAlphaFurUse:
 	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
-	infect "Husky Alpha";
 
 instead of sniffing husky alpha fur:
 	say "The fur has a pleasing, not too strong, animal-like scent.";
@@ -528,8 +545,25 @@ to say husky alpha cum use:
 	PlayerDrink 5;
 	SanLoss 5;
 
+Table of Game Objects (continued)
+name	desc	weight	object
+"husky alpha man-milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Husky Alpha Man-Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	husky alpha man-milk
+
 instead of sniffing husky alpha cum:
 	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
 
+husky alpha man-milk is a grab object.
+husky alpha man-milk is milky.
+The purified of husky alpha man-milk is "distilled milk".
+husky alpha man-milk is infectious.
+The strain of husky alpha man-milk is "Husky Alpha".
+the usedesc of husky alpha man-milk is "[husky alpha man-milk use]";
+
+to say husky alpha man-milk use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the canine man-milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
+
+instead of sniffing husky alpha man-milk:
+	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
 
 Alpha Husky ends here.

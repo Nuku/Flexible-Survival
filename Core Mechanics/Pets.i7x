@@ -8,6 +8,7 @@ A pet has text called summondesc.
 A pet has text called dismissdesc. Dismissdesc is usually "You send your ally away.".
 A pet has a text called assault.
 A pet has a number called lastfight. lastfight is usually 255.
+A pet has a person called NPCObject. NPCObject of a pet is usually NullPet.
 The player has a pet called companion.
 
 Definition: A person is lonely:

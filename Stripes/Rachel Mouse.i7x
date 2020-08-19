@@ -117,6 +117,7 @@ object	name
 mouse girl	"mouse girl"
 
 mouse girl is a pet. mouse girl is a part of the player.
+NPCObject of mouse girl is Rachel.
 understand "Rachel" as mouse girl.
 printed name of mouse girl is "Rachel".
 The description of mouse girl is "[RachelDesc]".

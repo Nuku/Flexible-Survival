@@ -50,6 +50,7 @@ gshep	"gshep"
 
 gshep is a pet. gshep is a part of the player.
 understand "Korvin" as gshep.
+NPCObject of gshep is Korvin.
 printed name of gshep is "Korvin".
 The description of gshep is "[Korvindesc]".
 The conversation of gshep is { "Bark!" }.

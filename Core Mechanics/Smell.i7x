@@ -120,31 +120,11 @@ the scent of Lab Microwave is "The microwave smells a little from the dried stai
 
 the scent of Infection Terminal is "The infection terminal smells like old, vintage electronics from the time of DOS and dinosaurs.".
 
-the scent of water bottle is "The water bottle smells like plastic.".
-
-the scent of dirty water is "The dirty water smells a little off, but is still potable.".
-
-the scent of food is "The food smells [one of]good[or]appetizing[or]tasty[or]edible[at random].".
-
 the scent of journal is "The journal smells of cheap leather, paper and ink.".
-
-the scent of medkit is "The medkit smells like antiseptic.".
-
-the scent of face mask is "It smells pretty normal for a face mask; must still be good.".
-
-the scent of gryphon milk is "The milk smells faintly of those gryphon creatures.".
 
 the scent of distilled milk is "The powder smells faintly of milk.".
 
-the scent of glob of goo is "The goo smells faintly of fruit jelly, though you cannot pin down the specific scent.".
-
-the scent of soda is "The soda smells like a can of soda.".
-
-the scent of chips is "The snack treat smells like it's still good.".
-
 the scent of dog milk is "There is a definite dog scent to this milk.".
-
-the scent of cot is "The small cot smells a little moldy, but otherwise a fine spot to take a much-needed nap.".
 
 the scent of infection monitor is "The small device smells of electronics.".
 

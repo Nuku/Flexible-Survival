@@ -29,6 +29,7 @@ object	name
 Little fox	"Little fox"
 
 Little fox is a pet. little fox is a part of the player.
+NPCObject of Little fox is Dash.
 understand "Dash" as little fox.
 printed name of little fox is "Dash".
 The description of the little fox is "[DashDesc]".
@@ -281,6 +282,7 @@ object	name
 skunk kit	"skunk kit"
 
 skunk kit is a pet. skunk kit is a part of the player.
+NPCObject of skunk kit is Peppy.
 understand "Peppy" as skunk kit.
 printed name of skunk kit is "Peppy".
 The description of the skunk kit is "[Peppydesc]".

@@ -99,6 +99,7 @@ object	name
 frost giantess	"frost giantess"
 
 frost giantess is a pet. frost giantess is a part of the player.
+NPCObject of frost giantess is Aurora.
 understand "Aurora" as frost giantess.
 printed name of frost giantess is "Aurora".
 The description of frost giantess is "[AuroraDesc]".

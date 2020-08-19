@@ -722,6 +722,7 @@ object	name
 human dog	"human dog"
 
 human dog is a pet. human dog is a part of the player.
+NPCObject of human dog is Ares.
 understand "Ares" as human dog.
 printed name of human dog is "Ares".
 The description of human dog is "[AresPetDesc]".

@@ -108,6 +108,7 @@ object	name
 rubber tigress	"rubber tigress"
 
 rubber tigress is a pet. rubber tigress is a part of the player.
+NPCObject of rubber tigress is Artemis.
 understand "Artemis" as rubber tigress.
 printed name of rubber tigress is "Artemis".
 The description of rubber tigress is "[ArtemisDesc]".

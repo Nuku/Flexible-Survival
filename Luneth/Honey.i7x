@@ -171,6 +171,7 @@ object	name
 bee girl	"bee girl"
 
 bee girl is a pet. bee girl is a part of the player.
+NPCObject of bee girl is Honey.
 understand "Honey" as bee girl.
 printed name of bee girl is "Honey".
 The description of bee girl is "[HoneyDesc]".

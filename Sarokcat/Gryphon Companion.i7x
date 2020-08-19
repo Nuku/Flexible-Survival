@@ -14,6 +14,7 @@ object	name
 Gryphoness	"Gryphoness"
 
 Gryphoness is a pet. The description of gryphoness is "[gryphonessdesc]". Gryphoness is a part of the player.
+NPCObject of Gryphoness is Denise.
 understand "Denise" as gryphoness.
 printed name of gryphoness is "Denise".
 The weapon damage of Gryphoness is 10.
