@@ -56,6 +56,8 @@ to say AresDesc:
 		say "He sits right in front of the door to his kennel, watching you intently and hoping for another chance of getting out for a walk with you.";
 	else if HP of Ares is 3 or HP of Ares is 5:
 		say "He sits right in front of the door to his kennel, watching you intently and hoping for another chance of getting out for a walk with you. Looking down at his naked body and the raging hardon between his legs, you see that he's also thinking of mounting you again...";
+	if companion of Player is human dog:
+		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 instead of conversing Ares:
 	if HP of Ares is 1:

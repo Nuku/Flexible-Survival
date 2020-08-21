@@ -100,6 +100,8 @@ to say SnipsScent:
 
 to say Snipsdesc:
 	say "     It's so cute! He has huge eyes that seem to stare into your soul and big pincers that go clackity-clack. The little crab has a reddish-yellow shell, while the tips of its claws are a soft pearly-white. His huge eyes stand on slender stalks that seem to follow you wherever you go. The long spindly legs coming out of his small abdomen carry it side to side, however his steps are clumsy, causing him to fall down on occasion.";
+	if companion of Player is cute crab:
+		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 instead of conversing the Snips:
 	if Player is in Computer Lab and Snips is in Computer Lab:
@@ -297,6 +299,8 @@ to say DinahScent:
 
 to say DinahDesc:
 	say "     Dinah is covered in soft calico fur, and seems to be happy enough to just follow you along and see what happens, and perhaps take care of any extra milk that you might come across. The pink rhinestone collar she has around her neck seems to sparkle with every move she makes. Her whiskers twitch as she smells the area for anything of interest.";
+	if companion of Player is house cat:
+		say "     [bold type]She is currently following you as your battle companion.[roman type][line break]";
 
 instead of sniffing house cat:
 	say "     Your little kitty smells like a normal cat.";
@@ -524,6 +528,8 @@ to say ChirpyScent:
 
 to say ChirpyDesc:
 	say "     This exotic bird is nice and happy now! You aren't sure just what kind of exotic bird Chirpy is, but she has brilliantly colored feathers and lovely plumage on the back of her head. The bird is only slightly larger than a parrot, but she seems to have taken a liking to you, and will occasionally stop and rest on your shoulder, though the rest of the time she is flying nearby.";
+	if companion of Player is exotic bird:
+		say "     [bold type]She is currently following you as your battle companion.[roman type][line break]";
 
 instead of sniffing Exotic Bird:
 	say "     It smells like an exotic bird with a faint, tropical scent to it.";
@@ -720,6 +726,8 @@ to say HoboScent:
 to say Hobodesc:
 	project Figure of Hobo_icon;
 	say "     Hobo is a black and white shepherd with soulful and intelligent brown eyes. He will follow you and loyally assist you with your troubles.";
+	if companion of Player is helper dog:
+		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 instead of conversing the Hobo:
 	if Player is in Computer Lab and Hobo is in Computer Lab:

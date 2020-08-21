@@ -149,6 +149,8 @@ to say AuroraDesc:
 	project the Figure of Aurora_clothed_icon;
 	say "     Aurora the frost giantess is about 10 and a half feet tall and has a strong build with some obvious muscle to it. While not toned to body-builder level, her muscles do have obvious definition as if from regular exercise. Added to her overall size, this makes her quite physically powerful. Her skin is pale blue in color and she has darker blue hair. Her eyes are purple, as are her lips and nipples. These last you can partially see through the stretched material of her torn shirt trying to cope with her enlarged body and bosom. Were she of normal height, they'd be nice C-cups; being as large as she is, they're something more like big F-cup tits. Her pants, now stretched to their limit around her hips, are now tight shorts on her large frame, hugging her strong hips and toned buttocks.";
 	say "     She's friendly and eager to help you, willing to even come along and fight by your side. While no trained warrior, her punches hit like a ton of bricks. The heat of the city does wear on her, which is why she's carries a small retail ice cream freezer like a backpack. It's full of frozen yogurt and somehow is always cold despite not even being plugged in. Fighting will eventually tire her out and overheat her, but she'll keep fighting as long as you do out of loyalty.";
+	if companion of Player is frost giantess:
+		say "     [bold type]She is currently following you as your battle companion.[roman type][line break]";
 
 to say aurora_attack:
 	choose row MonsterID from the Table of Random Critters;

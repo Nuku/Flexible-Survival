@@ -68,6 +68,8 @@ to say LilianaDesc:
 		say "     At the moment, the equinoid warrior is relaxing and just enjoying the courtyard.";
 	else:
 		say "     At the moment, the proud warrior is looking around for any hint of trouble.";
+	if companion of Player is equinoid warrior:
+		say "     [bold type]She is currently following you as your battle companion.[roman type][line break]";
 
 instead of sniffing equinoid warrior:
 	say "[LilianaScent]";

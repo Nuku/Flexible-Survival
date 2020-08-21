@@ -111,10 +111,7 @@ carry out bargainhunting:
 		else if Z is 9: [biting monster]
 			say "     Reaching deep into the bin, you feel something moving under all of those strange items piled in it! A heartbeat later, whatever it is chumps down on your searching fingers, making you withdraw your hand immediately. Looking down at it, you can't help but stare as blood slowly drips from your fingers, trickling down from a [bold type]nasty bite-wound[roman type] on your hand. Nermine seems rather embarrassed by the whole affair as she helps you bandage up your new wound, and the jackal glares at the bin for a minute as if reprimanding whatever bit you. 'Nermine is sorry, sometimes things are not happy to end up in bargain bin. The jackaless apologizes and decides to make good for such a sad misunderstanding,' the jackal says with a shrug, then quickly refunds your food and water, and even places an extra packet of food and bottle of water out for the inconvenience.";
 			LineBreak;
-			say "[bold type]You lose 25 HP![roman type][line break]";
-			decrease HP of Player by 25;
-			if HP of Player < 0:
-				now HP of Player is 1;
+			PlayerWounded 25;
 			ItemGain food by 2;
 			ItemGain water bottle by 2;
 		else if Z is 10: [pocket watch]

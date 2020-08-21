@@ -712,6 +712,8 @@ The scent of Xaedihr is "     Xaedihr smells fresh and masculine, giving out the
 to say XaedihrDesc:
 	project Figure of Xaedihr_Full_icon;
 	say "     The mystic sorcerer you encountered in one of the many Hell realms is, in fact, an half-demon. Nothing gives it away except his looks and aura, a little too out of this world to suggest he's only a human. Xaedihr is a pale redhead with flawless skin, has a short hair styled to his right side, some of it laying softly above his forehead, lime green eyes, a beard to complement his chiseled jawline, and a purple-ish tattoo around his left eye. He's fairly muscular and somewhat bulky even, filling up his clothes just nicely. He wears nothing under his long dark leather jacket, only a pair of tight black pants that gives away his considerable bulge, and some combat boots to complete his edgy look. He wears an earstud on his left ear, and hanging around his neck is a pendant with the Crimson Ruby, gleaming with a mystical energy.";
+	if companion of Player is demonologist:
+		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 [***********************************************************]
 Section 5-1 - As Companion

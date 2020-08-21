@@ -219,7 +219,10 @@ to say HoneyDesc:
 	if Player is in Grey Abbey Garden:
 		say "     At the moment the little bee girl is busy fixing up the garden.";
 	else:
-		say "     At the moment the little bee girl is flying around, buzzing contently.";
+		if companion of Player is felinoid companion:
+			say "     [bold type]She is currently following you as your battle companion.[roman type][line break]";
+		else:
+			say "     At the moment the little bee girl is flying around, buzzing contently.";
 
 instead of sniffing bee girl:
 	say "[HoneyScent]";

@@ -659,6 +659,8 @@ to say DemonBrutePetDesc:
 			say "     Your captured demon brute is certainly impressive in stature, standing tall on his digitigrade legs and showing a broad chest and muscle-packed arms. The humanoid beast has dark purple skin, a frightening face with slits for nostrils, yellow eyes with red slitted pupils, and sharp, intimidating teeth. Three matched pairs of horns crown his head, curved and getting smaller front to back. Between his legs, you see a female's pussy, looking quite inviting. He also has a long, spade-tipped tail protruding from his body somewhere behind, which is constantly flicking back and forth. He wears nothing but a grim expression.";
 		else:
 			say "ERROR-Demon Brute-[DemonBruteStatus]C: He isn't in one of the states he should be in! Please report how you got to this message.";
+	if companion of Player is demon brute:
+		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 instead of sniffing demon brute:
 	say "Smells like fire, ash and brimstone.";

@@ -184,6 +184,8 @@ to say VoriaDesc:
 		add "Tamed" to Traits of Carnivorous Plant;
 	else:
 		say "     Voria has grown a lot since you had found it. Its blue head alone can easily fit the average human inside of its maw, and right under it are its four leaves, each the size of a small bed. At least a dozen or so tentacles slowly slither along the ground and many of them as thick and likely as strong as rope. [if companion of Player is Carnivorous Plant]On its underside, [else]Even though its bottom half is burrowed underground right now, you know that on its underside[end if] there are a couple of short but even thicker tentacles that the plant uses to move around, and in the center of those appendages is a sort of sac which acts as the plant's stomach. Looking behind Voria's head, you see that a pair of tentacles have a miniature version of its head mounted on their ends, each the size of a baseball, while another pair of tentacles have phallic-shaped blue tips on their ends.";
+	if companion of Player is Carnivorous Plant:
+		say "     [bold type]She is currently following you as your battle companion.[roman type][line break]";
 
 Instead of conversing the Voria:
 	if HP of Voria < 23:

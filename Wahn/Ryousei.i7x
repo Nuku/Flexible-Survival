@@ -287,6 +287,7 @@ object	name
 Ryousei	"Ryousei"
 
 Ryousei is a man.
+understand "Ryo" as Ryousei.
 ScaleValue of Ryousei is 3. [human sized]
 Body Weight of Ryousei is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 Body Definition of Ryousei is 8. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -340,6 +341,8 @@ to say RyouseiDesc:
 		say "     Having made himself at home in the library, the large cat usually hangs out on the ground floor - doing Tai Chi exercises, browsing books or meditating while sitting cross-legged on a sofa. He never is far from the front door though, and you notice that he frequently glances over to it, ready to react in case someone - or something - might invade your refuge. As he notices your attention on himself, the tiger gives you a companionable nod and a wink. Seems like he's more than ready to chat - or do other things...";
 	else:
 		say "     Accompanying you on your adventures throughout the city, he is never far away, usually just a step behind and a little to the side - leaving you the lead as his local guide. As he notices your attention on himself, the tiger gives you a companionable nod and a wink. Seems like he's more than ready to chat - or do other things...";
+	if companion of Player is royal tiger:
+		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 instead of sniffing royal tiger:
 	say "[RyouseiScent]";

@@ -198,7 +198,8 @@ to say ArtemisDesc:
 		if Player consents:
 			attempttoclearhyper;
 			artemismodding;
-
+	if companion of Player is rubber tigress:
+		say "     [bold type]She is currently following you as your battle companion.[roman type][line break]";
 
 to say ArtemisAttack:
 	if lust of rubber tigress is 1 and a random chance of 1 in 4 succeeds:

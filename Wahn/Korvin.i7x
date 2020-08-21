@@ -190,6 +190,8 @@ to say Korvindesc:
 			project the figure of Korvin_blackcollar_icon;
 		say "     Korvin, the anthro German shepherd you've trained to be your dog, stands nearby with his arms crossed and a stern look on his canine face. He's got the typical brown and black coat of the breed. He's buff and well-built, though not overly so. His most distinguishing feature is the ragged scar that runs along his cheek and muzzle. Such marks are rare, even with the amount of fighting between mutants in the city. He's also nude, wearing nothing save for the black studded collar you've given him, adding to his air of menace.";
 		say "     Despite being tamed, his mind is definitely more corrupted than human, clearly only retaining shreds of his past life. You've been able to help him better cope with that, letting him recover a little self-control. He still retains some of that independent streak of his, but he accepts you as his friend and master and will follow your orders fairly loyally.";
+	if companion of Player is gshep:
+		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 to say gshep_attack:
 	choose row MonsterID from the Table of Random Critters;

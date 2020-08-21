@@ -440,6 +440,8 @@ the scent of the Candy is "The candy coon smell of cotton candy, male arousal an
 
 to say coondesc:
 	say "     The pink raccoon, now going by the name of Candy, is staying peaceably in the bunker. His fur is a light gray with pink highlights. His raccoon mask is pink, as are the stripes on his body and tail. The raccoon has an effeminate body with a tight ass and slender figure. He's sewed his candy striper uniform and is happily prancing around in it, looking quite cute. Watching him, you do notice that he's found some lace-trimmed panties to add to his ensemble, keeping him from completely showing when he sashays around. He's largely keeping himself out of trouble, though occasionally seems to revert to more primal needs and [if HP of Sven >= 10 and HP of Sven < 30]coaxes your feline pet into some more playtime[else]masturbates furiously until the room smells of cotton candy from his sweet cum[end if]. You find yourself unsure if he's succumbed to the nanites or not, though the fact that he hasn't molested anybody yet instills hope, and you'll just hope for the best for now.";
+	if companion of Player is pink raccoon:
+		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 after going to Bunker while coonstatus is 1:
 	now the player is in the Bunker;
