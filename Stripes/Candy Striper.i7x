@@ -19,7 +19,7 @@ LastCandyWalkin is a number that varies.
 
 to say candycoondesc:
 	setmongender 3; [creature is male]
-	say "     You have encountered a cute raccoon in a pink, candy striper outfit. The uniform is a bright pink with a white apron and skirt. It has a few white stains scattered on it. The raccoon has a slender, feminine build. The fur that should normally be the dark mask around its eyes is a cotton-candy pink, as are the stripes to ring its tail, matching the striped top it wears. The pink raccoon looks you over, licking its lips and smiling at you with a girlish grin, running its paws down its body. That's when you notice that this rather flat-chested girl has a bulge in 'her' skirt. The gay boytoy grins playfully as you notice the growing bump in his mini skirt and moves in to play with you.";
+	say "     You have encountered a cute raccoon in a pink, candy striper outfit. The raccoon has a slender, feminine build. The fur that should normally be the dark mask around its eyes is a cotton-candy pink, as are the stripes to ring its tail, matching the striped top it wears. The pink raccoon looks you over, licking its lips and smiling at you with a girlish grin, running its paws down its body. That's when you notice that this rather flat-chested girl has a bulge in 'her' skirt. The gay boytoy grins playfully as you notice the growing bump in his mini skirt and moves in to play with you.";
 
 to say losetocandycoon:
 	choose row MonsterID from the Table of Random Critters;

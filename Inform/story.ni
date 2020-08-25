@@ -529,12 +529,12 @@ Definition: A situation (called x) is PrereqComplete:
 	yes;
 
 Definition: A situation (called x) is close:
-	if ( sarea of x exactly matches the text battleground, case insensitively ) or ( battleground is "Outside" and ( the sarea of x is "Allzones" or the sarea of x is "allzones" ) ):
+	if ( sarea of x exactly matches the text battleground, case insensitively ) or ( (battleground is "Outside" or battleground is "High" or battleground is "Capitol" or battleground is "Park" or battleground is "Forest" or battleground is "Beach") and ( the sarea of x is "Allzones" or the sarea of x is "allzones" ) ):
 		yes;
 	no;
 
 Definition: A scavevent (called x) is scavable:
-	if ( sarea of x exactly matches the text battleground, case insensitively ) or ( sarea of x is "Allzones" or the sarea of x is "allzones" ):
+	if ( sarea of x exactly matches the text battleground, case insensitively ) or ( (battleground is "Outside" or battleground is "High" or battleground is "Capitol" or battleground is "Park" or battleground is "Forest" or battleground is "Beach") and ( sarea of x is "Allzones" or the sarea of x is "allzones" ) ):
 		if score < minscore of x:
 			no;
 		else if hardmode is true:
@@ -9117,6 +9117,7 @@ to say promptsay:
 	let x be the location of the player;
 	if companion of Player is not NullPet and NPCObject of Companion of Player is not Nullpet:
 		now NPCObject of Companion of Player is in location of Player;
+		now Sleeping of NPCObject of Companion of Player is false;
 	let z be the number of entries in invent of x;
 	if z > 0:
 		say "Visible Objects: ";

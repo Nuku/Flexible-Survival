@@ -153,13 +153,13 @@ to say AlexandraBreedingMenu:
 		now title entry is "Karel and Isaac, the black stallion twins";
 		now sortorder entry is 5;
 		now description entry is "Let the Friesian farmhands double-team Alexandra";
-	[
+	[]
 	if PlayerMet of Nelson is true and Alexandra is in Worker Barracks and Nelson is in Worker Barracks:
 		choose a blank row in table of fucking options;
 		now title entry is "Nelson, the large zebra stud";
 		now sortorder entry is 6;
 		now description entry is "Let the zebra give Alexandra a pounding";
-	]
+	[]
 	if PlayerMet of Farmhand Horsemen is true and FriesianRelationship is 2 and Energy of Alexandra > 0 and Alexandra is not in Worker Barracks: [knows the twins, Alexandra was fucked by horsecock already]
 		choose a blank row in table of fucking options;
 		now title entry is "Take her to the farm for an extended stay in the worker barracks";

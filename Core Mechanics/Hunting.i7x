@@ -27,6 +27,8 @@ Version 2 of Hunting by Core Mechanics begins here.
 [   5. Simple Situation Match                               ]
 [   6. Simple Creature Match                                ]
 
+[ TODO: Check if Sealed and Sewer are exempt from allzones events ]
+
 battleground is a text that varies.
 ishunting is a truth state that varies. ishunting is usually false.
 
@@ -142,7 +144,7 @@ carry out HuntAction:
 				increase diceroll by bonus;
 				if diceroll >= 15:
 					now inasituation is true;
-					say "You manage to find your way to [Name entry]!";
+					say "You manage to find your way to [bold type][Name entry][roman type]!";
 					say "[ResolveFunction of object entry]";
 					now inasituation is false;
 				else:
@@ -151,7 +153,7 @@ carry out HuntAction:
 					huntingfightchance;
 			else:
 				now inasituation is true;
-				say "You manage to find your way to [Name entry]!";
+				say "You manage to find your way to [bold type][Name entry][roman type]!";
 				say "[ResolveFunction of object entry]";
 				now inasituation is false;
 	else if there is a name of HuntId in the Table of Random Critters: [exact creature match]
@@ -346,7 +348,7 @@ carry out HuntAction:
 							increase diceroll by bonus;
 							if diceroll >= 15:
 								now inasituation is true;
-								say "You manage to find your way to [z]!";
+								say "You manage to find your way to [bold type][z][roman type]!";
 								say "[ResolveFunction of z]";
 								now inasituation is false;
 							else:
@@ -358,7 +360,7 @@ carry out HuntAction:
 									say "DEBUG -> Found: [Found], perception check fail.[line break]";
 						else:
 							now inasituation is true;
-							say "You manage to find your way to [z]!";
+							say "You manage to find your way to [bold type][z][roman type]!";
 							say "[ResolveFunction of z]";
 							now inasituation is false;
 						break;

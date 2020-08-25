@@ -224,23 +224,30 @@ to say UrikTalkMenu:
 		now sortorder entry is 7;
 		now description entry is "Let Urik tell you about his sister, and what went on with her";
 	[
+	if "Urik's Past" is listed in Traits of Urik:
+		choose a blank row in table of fucking options;
+		now title entry is "Ask him about Declan"; [TODO: write this scene]
+		now sortorder entry is 8;
+		now description entry is "Carefully ask him about his old friend";
+	]
+	[
 	if "Yoga" is listed in Traits of Urik:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask him about doing yoga"; [TODO: write this scene]
-		now sortorder entry is 8;
+		now sortorder entry is 9;
 		now description entry is "Bring up that he seems an odd person to be doing yoga";
-	]
+	[]
 	if UrikEricInteraction > 0 and Urik is in Grey Abbey Library:
 		choose a blank row in table of fucking options;
 		now title entry is "Talk about Eric";
 		now sortorder entry is 20;
-		now description entry is "Chat with your orc slave about Eric";
-	[]
+		now description entry is "Chat with your orc about Eric";
+	]
 	if Stamina of Spike > 0 and Urik is in Grey Abbey Library:
 		choose a blank row in table of fucking options;
 		now title entry is "Talk about Spike";
 		now sortorder entry is 21;
-		now description entry is "Chat with your orc slave about Spike";
+		now description entry is "Chat with your orc about Spike";
 	[]
 	if orc supersized breeder is not tamed and Urik is in Grey Abbey Library and PlayerFriended of Urik is true and Loyalty of Urik > 5 and Loyalty of Urik < 80:
 		choose a blank row in table of fucking options;
@@ -272,6 +279,12 @@ to say UrikTalkMenu:
 		now sortorder entry is 101;
 		now description entry is "Hand Urik a bottle of potent orcish cum to sate his cravings";
 	[]
+	[
+	choose a blank row in table of fucking options;
+	now title entry is "Ask him about what orc cum"; [TODO: write this scene (rut/heat for Urik, orc cum effects - drunk + bulking up breeders + ...)]
+	now sortorder entry is 102;
+	now description entry is "Inquire about effects of orc cum on Urik";
+	]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;

@@ -175,8 +175,8 @@ Carry out massstashing:
 		else:
 			increase yy by 1;
 			increase zz by carried of x;
-			ItemLoss x by carried of x silently;
 			increase stashed of x by carried of x;
+			ItemLoss all x silently;
 	if zz is 0:
 		say "You have nothing you can store.";
 	else:
@@ -192,9 +192,6 @@ carry out massretrieving:
 		increase yy by 1;
 		increase zz by stashed of x;
 		ItemGain x by stashed of x silently;
-		[
-		increase carried of x by stashed of x;
-		]
 		now stashed of x is 0;
 	if zz is 0:
 		say "The storage locker is already empty.";

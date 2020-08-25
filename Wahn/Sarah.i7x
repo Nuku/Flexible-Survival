@@ -28,6 +28,8 @@ Sarah by Wahn begins here.
 
 [ SarahPups - number of offspring                                                    ]
 
+[ TODO: Move Sarah out of the bunker ]
+
 SarahTalk is a number that varies.
 SarahSlut is a number that varies.
 SarahCured is a number that varies.
