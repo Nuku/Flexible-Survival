@@ -12,7 +12,7 @@ Section 2 - Hyena cages
 
 Table of GameEventIDs (continued)
 Object	Name
-Hyena Cages	"Hyena cages"
+Hyena Cages	"Hyena Cages"
 Hyena Cages	"Hyena cages"
 
 Hyena Cages is a situation.
@@ -93,8 +93,8 @@ Section 5 - Useful pamphlet
 
 Table of GameEventIDs (continued)
 Object	Name
-Useful Pamphlet	"Useful pamphlet"
 Useful Pamphlet	"Useful Pamphlet"
+Useful Pamphlet	"Useful pamphlet"
 
 Useful Pamphlet is a situation.
 ResolveFunction of Useful Pamphlet is "[ResolveEvent Useful Pamphlet]".
@@ -130,7 +130,7 @@ Section 7 - Grizzly gone
 
 Table of GameEventIDs (continued)
 Object	Name
-Grizzly Gone	"Grizzly gone"
+Grizzly Gone	"Grizzly Gone"
 Grizzly Gone	"Grizzly gone"
 
 Grizzly Gone is a situation.
@@ -170,8 +170,8 @@ Section 10 - Panda parade
 
 Table of GameEventIDs (continued)
 Object	Name
-Panda Parade	"Panda parade"
 Panda Parade	"Panda Parade"
+Panda Parade	"Panda parade"
 
 Panda Parade is a situation.
 ResolveFunction of Panda Parade is "[ResolveEvent Panda Parade]".
@@ -187,8 +187,8 @@ Section 11 - Petting zoo
 
 Table of GameEventIDs (continued)
 Object	Name
-Petting Zoo	"Petting zoo"
 Petting Zoo	"Petting Zoo"
+Petting Zoo	"Petting zoo"
 
 Petting Zoo is a situation.
 ResolveFunction of Petting Zoo is "[ResolveEvent Petting Zoo]".
@@ -205,8 +205,8 @@ Section 12 - Instructional video
 
 Table of GameEventIDs (continued)
 Object	Name
-Instructional Video	"Instructional video"
 Instructional Video	"Instructional Video"
+Instructional Video	"Instructional video"
 
 Instructional Video is a situation.
 ResolveFunction of Instructional Video is "[ResolveEvent Instructional Video]".
@@ -222,8 +222,8 @@ Section 13 - Vet supplies
 
 Table of GameEventIDs (continued)
 Object	Name
-Vet Supplies	"Vet supplies"
 Vet Supplies	"Vet Supplies"
+Vet Supplies	"Vet supplies"
 
 Vet Supplies is a situation.
 ResolveFunction of Vet Supplies is "[ResolveEvent Vet Supplies]".
@@ -325,8 +325,8 @@ Section 14 - Feeding time
 
 Table of GameEventIDs (continued)
 Object	Name
-Feeding Time	"Feeding time"
 Feeding Time	"Feeding Time"
+Feeding Time	"Feeding time"
 
 Feeding Time is a situation.
 ResolveFunction of Feeding Time is "[ResolveEvent Feeding Time]". The level of Feeding Time is 9.
@@ -382,8 +382,8 @@ Section 16 - Broken fences
 
 Table of GameEventIDs (continued)
 Object	Name
-Broken Fences	"Broken fences"
 Broken Fences	"Broken Fences"
+Broken Fences	"Broken fences"
 
 Broken Fences is a situation.
 ResolveFunction of Broken Fences is "[ResolveEvent Broken Fences]".
@@ -398,8 +398,8 @@ Section 17 - Wandering beasts
 
 Table of GameEventIDs (continued)
 Object	Name
-Wandering Beasts	"Wandering beasts"
 Wandering Beasts	"Wandering Beasts"
+Wandering Beasts	"Wandering beasts"
 
 Wandering Beasts is a situation.
 ResolveFunction of Wandering Beasts is "[ResolveEvent Wandering Beasts]".
@@ -415,8 +415,8 @@ Section 18 - Roaming spots
 
 Table of GameEventIDs (continued)
 Object	Name
-Roaming Spots	"Roaming spots"
 Roaming Spots	"Roaming Spots"
+Roaming Spots	"Roaming spots"
 
 Roaming Spots is a situation.
 ResolveFunction of Roaming Spots is "[ResolveEvent Roaming Spots]".
@@ -432,8 +432,8 @@ Section 19 - Picture striping
 
 Table of GameEventIDs (continued)
 Object	Name
-Picture Striping	"Picture striping"
 Picture Striping	"Picture Striping"
+Picture Striping	"Picture striping"
 
 Picture Striping is a situation.
 ResolveFunction of Picture Striping is "[ResolveEvent Picture Striping]".
