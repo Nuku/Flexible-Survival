@@ -69,8 +69,8 @@ SexuallyExperienced of Diego is true.
 TwistedCapacity of Diego is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Diego is false. [steriles can't knock people up]
 MainInfection of Diego is "Coyote".
-The description of Diego is "[DiegoDesc]".
-The conversation of Diego is { "Fooled you!" }.
+Description of Diego is "[DiegoDesc]".
+Conversation of Diego is { "Fooled you!" }.
 Diego is in Park Entrance.
 The icon of Diego is Figure of Diego_icon.
 
@@ -355,7 +355,7 @@ carry out Diegotricking:
 	now LastDiegoTricked is turns;
 	say "     Diego gives an impish grin as you approach [ObjectPro of Diego] and say that you got an idea, then says, 'Oh? So you think a new little trickster like you can pull one out of their hat that beats my tricks? Let's see what you got!'";
 	LineBreak;
-	let bonus be (( the Intelligence of the player minus 10 ) divided by 2);
+	let bonus be (( Intelligence of Player minus 10 ) divided by 2);
 	if 2 is listed in bookcollection, increase bonus by 2;
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]18[roman type] (Intelligence Check):[line break]";
@@ -886,7 +886,7 @@ Hunting down Hunter	"Hunting down Hunter"
 Hunting down Hunter is a situation.
 ResolveFunction of Hunting down Hunter is "[ResolveEvent Hunting down Hunter]".
 Hunting down Hunter is inactive. [turned on by taking Diego's quest]
-The sarea of Hunting down Hunter is "Outside".
+Sarea of Hunting down Hunter is "Outside".
 
 to say ResolveEvent Hunting down Hunter:
 	say "     Following Diego's waypoints through the city, you skip around several dens of dangerous creatures and eventually arrive in a high-class neighborhood that holds the homes of the rich and famous. Of course, that doesn't mean the people here were immune to the nanite apocalypse either, as demonstrated by Diego's warning that a whole roost of horny hawkmen is occupying one place down the road from where you're going. Good thing you knew the right direction to approach from. Coming to the right address, you see a tall brick wall enclosing its grounds, the only opening in it held shut by a sturdy wrought-iron gate. A chain holds both wings of the gate shut, connected on the inside by a shiny new padlock. Besides this, numerous empty cans have been tied to the gate, so that if someone wanted to climb the decorative metalwork, they'd make a whole lot of noise. Past the gate, you see a long driveway winding its way through a sprawling green lawn and leading up to a white-painted villa.";
@@ -1208,7 +1208,7 @@ name	desc	weight	object
 "diego's heirloom collar"	"[DCollarDesc]"	1	diego's heirloom collar
 
 diego's heirloom collar is a grab object.
-the usedesc of diego's heirloom collar is "[DCollarUse]".
+Usedesc of diego's heirloom collar is "[DCollarUse]".
 It is not temporary.
 
 diego's heirloom collar is a grab object.

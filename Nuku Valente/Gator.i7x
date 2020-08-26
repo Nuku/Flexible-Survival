@@ -283,8 +283,8 @@ object	name
 Sewer Gator	"Gator Herm"
 
 Sewer Gator is a woman.
-The description of Sewer Gator is "[GatorDesc]".
-The conversation of Sewer Gator is { "Gator stuff" }.
+Description of Sewer Gator is "[GatorDesc]".
+Conversation of Sewer Gator is { "Gator stuff" }.
 The scent of the Sewer Gator is "The gator smells strongly of sex and the sewers.";
 
 to say GatorDesc:

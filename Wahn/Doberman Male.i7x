@@ -200,7 +200,7 @@ name	desc	weight	object
 "doberman male fur"	"A tuft of dark brown fur that looks like it has been pulled out of the coat of a doberman. It's nicely soft."	0	doberman male fur
 
 doberman male fur is a grab object.
-the usedesc of doberman male fur is "[DobermanMaleFurUse]".
+Usedesc of doberman male fur is "[DobermanMaleFurUse]".
 
 It is temporary.
 
@@ -217,7 +217,7 @@ name	desc	weight	object
 "doberman male cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Doberman Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	doberman male cum
 
 doberman male cum is a grab object. doberman male cum is cum.
-the usedesc of doberman male cum is "[doberman male cum use]";
+Usedesc of doberman male cum is "[doberman male cum use]";
 
 to say doberman male cum use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy fluid cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";

@@ -811,7 +811,7 @@ name	desc	weight	object
 pink gel is a grab object.
 It is temporary.
 
-The usedesc of pink gel is "[gel1]";
+Usedesc of pink gel is "[gel1]";
 
 to say gel1:
 	say "     Eating the cup of pink jello makes you a little less hungry and helps quench your thirst a bit, and really, what harm could it be?";
@@ -836,7 +836,7 @@ name	desc	weight	object
 blue gel is a grab object.
 It is temporary.
 
-The usedesc of blue gel is "[gel2]";
+Usedesc of blue gel is "[gel2]";
 
 to say gel2:
 	say "     Eating the cup of blue jello makes you a little less hungry and helps quench your thirst a bit, and really, what harm could it be?";
@@ -861,7 +861,7 @@ name	desc	weight	object
 purple gel is a grab object.
 It is temporary.
 
-The usedesc of purple gel is "[gel3]";
+Usedesc of purple gel is "[gel3]";
 
 to say gel3:
 	say "     Eating the cup of purple jello makes you a little less hungry and helps quench your thirst a bit, and really, what harm could it be?";

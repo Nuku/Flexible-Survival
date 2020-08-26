@@ -53,8 +53,8 @@ SexuallyExperienced of Genevieve is true.
 TwistedCapacity of Genevieve is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Genevieve is true. [steriles can't knock people up]
 MainInfection of Genevieve is "".
-The description of Genevieve is "[GenevieveDesc]".
-The conversation of Genevieve is { "Interesting" }.
+Description of Genevieve is "[GenevieveDesc]".
+Conversation of Genevieve is { "Interesting" }.
 The scent of Genevieve is "     Genevieve smells of a floral perfume, though there are traces coffee behind it."
 
 to say GenevieveDesc:

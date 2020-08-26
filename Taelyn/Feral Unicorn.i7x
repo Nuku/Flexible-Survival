@@ -341,7 +341,7 @@ name	desc	weight	object
 
 cock remover is a grab object. It is temporary.
 
-the usedesc of cock remover is "[unicorn horn use]".
+Usedesc of cock remover is "[unicorn horn use]".
 
 to say cock remover use:
 	if debugactive is 1:

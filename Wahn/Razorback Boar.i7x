@@ -41,7 +41,7 @@ Razorback Fury	"Razorback Fury"
 Razorback Fury is a situation.
 ResolveFunction of Razorback Fury is "[ResolveEvent Razorback Fury]".
 The level of Razorback Fury is 7.
-The sarea of Razorback Fury is "Forest".
+Sarea of Razorback Fury is "Forest".
 
 when play begins:
 	add Razorback Fury to BadSpots of MaleList;
@@ -73,9 +73,9 @@ Boar Payback	"Boar Payback"
 
 Boar Payback is a situation.
 ResolveFunction of Boar Payback is "[ResolveEvent Boar Payback]".
-The Prereq1 of Boar Payback is Razorback Fury.
+Prereq1 of Boar Payback is Razorback Fury.
 The level of Boar Payback is 7.
-The sarea of Boar Payback is "Forest".
+Sarea of Boar Payback is "Forest".
 
 when play begins:
 	add Boar Payback to BadSpots of MaleList;
@@ -124,10 +124,10 @@ Canine Indecision	"Canine Indecision"
 
 Canine Indecision is a situation.
 ResolveFunction of Canine Indecision is "[ResolveEvent Canine Indecision]".
-The Prereq1 of Canine Indecision is Boar Payback.
+Prereq1 of Canine Indecision is Boar Payback.
 Prereq1Resolution of Canine Indecision is { 1, 2 }.
 The level of Canine Indecision is 7.
-The sarea of Canine Indecision is "Forest".
+Sarea of Canine Indecision is "Forest".
 when play begins:
 	add Canine Indecision to BadSpots of MaleList;
 	add Canine Indecision to BadSpots of FurryList;
@@ -170,7 +170,7 @@ Boar Encounter is a situation.
 ResolveFunction of Boar Encounter is "[ResolveEvent Boar Encounter]".
 Boar Encounter is inactive.
 The level of Boar Encounter is 7.
-The sarea of Boar Encounter is "Forest".
+Sarea of Boar Encounter is "Forest".
 
 when play begins:
 	add Boar Encounter to BadSpots of MaleList;
@@ -249,12 +249,12 @@ Woodcutting Boar	"Woodcutting Boar"
 
 Woodcutting Boar is a situation.
 ResolveFunction of Woodcutting Boar is "[ResolveEvent Woodcutting Boar]".
-The Prereq1 of Woodcutting Boar is Canine Indecision.
+Prereq1 of Woodcutting Boar is Canine Indecision.
 Prereq1Resolution of Woodcutting Boar is { 4 }. [must have sent Andy to Garth]
-The Prereq2 of Woodcutting Boar is Boar Encounter.
+Prereq2 of Woodcutting Boar is Boar Encounter.
 Prereq2ResolvedMandatory of Woodcutting Boar is false. [the event doesn't resolve at all, so it can be unresolved]
 Prereq2Resolution of Woodcutting Boar is { 1 }. [encountered at least once]
-The sarea of Woodcutting Boar is "Forest".
+Sarea of Woodcutting Boar is "Forest".
 
 when play begins:
 	add Woodcutting Boar to BadSpots of MaleList;
@@ -962,8 +962,8 @@ SexuallyExperienced of Garth is true.
 TwistedCapacity of Garth is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Garth is false. [steriles can't knock people up]
 MainInfection of Garth is "Razorback Boar Male".
-The description of Garth is "[GarthDesc]".
-The conversation of Garth is { "..." }.
+Description of Garth is "[GarthDesc]".
+Conversation of Garth is { "..." }.
 
 to say GarthDesc:
 	say "...";
@@ -1009,8 +1009,8 @@ SexuallyExperienced of Andy is true.
 TwistedCapacity of Andy is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Andy is false. [steriles can't knock people up]
 MainInfection of Andy is "Alpha Wolf".
-The description of Andy is "[AndyDesc]".
-The conversation of Andy is { "..." }.
+Description of Andy is "[AndyDesc]".
+Conversation of Andy is { "..." }.
 
 to say AndyDesc:
 	say "...";

@@ -556,11 +556,11 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "cow milk"	"A fresh bottle of delicious cow milk straight from the source. There is a cork in the top to keep it closed."	1	cow milk
 
-cow milk is a grab object. It is milky. cow milk is infectious. The strain of cow milk is "Bovine".
+cow milk is a grab object. It is milky. cow milk is infectious. Strain of cow milk is "Bovine".
 
 the scent of cow milk is "The cow milk smells delicious and mouth watering.".
 
-the usedesc of cow milk is "[cow milk use]";
+Usedesc of cow milk is "[cow milk use]";
 
 to say cow milk use:
 	say "You pop the cork off the bottle, tilt your head back and chug the milk down. The taste is sweet and creamy and makes you think of farm life. You sigh happily and release a soft [']moo['] as you finish it off.";

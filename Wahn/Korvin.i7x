@@ -48,15 +48,15 @@ Table of GameCharacterIDs (continued)
 object	name
 gshep	"gshep"
 
-gshep is a pet. gshep is a part of the player.
+gshep is a pet. gshep is a part of Player.
 understand "Korvin" as gshep.
 NPCObject of gshep is Korvin.
 printed name of gshep is "Korvin".
-The description of gshep is "[Korvindesc]".
-The conversation of gshep is { "Bark!" }.
-The weapon damage of gshep is 15.
+Description of gshep is "[Korvindesc]".
+Conversation of gshep is { "Bark!" }.
+Weapon Damage of gshep is 15.
 The level of gshep is 1.
-The Dexterity of gshep is 10.
+Dexterity of gshep is 10.
 The summondesc of gshep is "[SummonKorvin]".
 The dismissdesc of gshep is "[DismissKorvin]".
 The assault of gshep is "[gshep_attack]".
@@ -147,8 +147,8 @@ SexuallyExperienced of Korvin is true.
 TwistedCapacity of Korvin is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Korvin is false. [steriles can't knock people up]
 MainInfection of Korvin is "German Shepherd Male".
-The description of Korvin is "[KorvinDesc]".
-The conversation of Korvin is { "Woof." }.
+Description of Korvin is "[KorvinDesc]".
+Conversation of Korvin is { "Woof." }.
 
 
 instead of fucking Korvin:
@@ -947,7 +947,7 @@ Trucker Bar	"Trucker Bar"
 
 Trucker Bar is a situation.
 ResolveFunction of Trucker Bar is "[ResolveEvent Trucker Bar]". Trucker Bar is inactive.
-The sarea of Trucker Bar is "High".
+Sarea of Trucker Bar is "High".
 The PrereqCompanion of Trucker Bar is gshep.
 
 to say ResolveEvent Trucker Bar:

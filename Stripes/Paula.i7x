@@ -99,8 +99,8 @@ object	name
 Paula	"Paula"
 
 Paula is a woman.
-The description of Paula is "[pauladesc]".
-The conversation of Paula is { "Sexy treatment." }.
+Description of Paula is "[pauladesc]".
+Conversation of Paula is { "Sexy treatment." }.
 The icon of Paula is Figure of Paula_icon.
 
 the scent of the Paula is "The vixen smells of antiseptic, medicine and faintly of vulpine arousal.".

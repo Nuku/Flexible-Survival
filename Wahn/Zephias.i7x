@@ -47,8 +47,8 @@ SexuallyExperienced of Zephias is true.
 TwistedCapacity of Zephias is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Zephias is false. [steriles can't knock people up]
 MainInfection of Zephias is "Spidertaur Male".
-The description of Zephias is "[Zephiasdesc]".
-The conversation of Zephias is { "Meep!" }.
+Description of Zephias is "[Zephiasdesc]".
+Conversation of Zephias is { "Meep!" }.
 
 instead of sniffing Zephias:
 	say "     A";
@@ -69,7 +69,7 @@ Captured Soldier	"Captured Soldier"
 Captured Soldier is a situation.
 ResolveFunction of Captured Soldier is "[ResolveEvent Captured Soldier]".
 Captured Soldier is inactive.
-The sarea of Captured Soldier is "Warehouse".
+Sarea of Captured Soldier is "Warehouse".
 
 when play begins:
 	add Captured Soldier to BadSpots of MaleList;

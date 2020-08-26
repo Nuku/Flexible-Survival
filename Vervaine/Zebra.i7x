@@ -194,7 +194,7 @@ to say Zebra loses:
 				say "     You command the stallion to look at you before you slap him with the full force of your body. He falls to the ground, and you tell him that you don't have time for him now. As you turn to leave, he shouts after you, 'Next time then, [master]?' You don't answer him, but you don't need to.";
 	else if ZebraLossCount > 1:
 		say "     Thinking that it's time for this striped windbag to get taken down a peg or two, you look for a way to do that as the zebra turns to run off. Bending down, you snatch up a large stick lying on the ground, glad that no one cleans up here anymore. Pulling your arm back far, you let it fly after the zebra stallion and...";
-		let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
+		let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 		let xx be ZebraLossCount / 2;
 		if xx > 8, now xx is 8;
 		increase bonus by xx;
@@ -671,12 +671,12 @@ instead of sniffing zebra fur:
 	say "Smells a bit of horse - or rather zebra.";
 
 zebra fur is a grab object.
-the usedesc of zebra fur is "[zebra fur use]";
+Usedesc of zebra fur is "[zebra fur use]";
 
 to say zebra fur use:
 	say "Playing a bit with the coarse strands of hair, you stroke them over your arm. A moment later, they suddenly disintegrate into a fine powder which just seems to melt into your skin...";
 
-zebra fur is infectious. The strain of zebra fur is "Zebra Stallion".
+zebra fur is infectious. Strain of zebra fur is "Zebra Stallion".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -684,7 +684,7 @@ name	desc	weight	object
 
 zebra cum is a grab object. zebra cum is cum.
 zebra cum is infectious. Strain of zebra cum is "Zebra Stallion".
-the usedesc of zebra cum is "[zebra cum use]";
+Usedesc of zebra cum is "[zebra cum use]";
 
 to say zebra cum use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy fluid cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";

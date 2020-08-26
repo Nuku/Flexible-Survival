@@ -252,7 +252,7 @@ name	desc	weight	object
 
 barnacle encrusted gem is a grab object. it is temporary.
 barnacle encrusted gem is infectious. Strain of barnacle encrusted gem is "Yinglet".
-The usedesc of barnacle encrusted gem is "[EncrustedGemUsing]";
+Usedesc of barnacle encrusted gem is "[EncrustedGemUsing]";
 
 to say EncrustedGemUsing:
 	say "You hold out the gem and examine it closely. It's so shiny, catching the light in just the right way. The liquid inside seems to swirl about, adding to how pretty it is. Suddenly, it shatters. At first you're confused, wondering how it broke open so easy, but it's short lived when the fluid splashes your face. You try to wipe it off, but it seems to be soaking into your skin!";

@@ -13,7 +13,7 @@ Chance Meeting	"Chance Meeting"
 
 Chance Meeting is a situation.
 ResolveFunction of Chance Meeting is "[ResolveEvent Chance Meeting]".
-The sarea of Chance Meeting is "Outside".
+Sarea of Chance Meeting is "Outside".
 
 to say ResolveEvent Chance Meeting:
 	say "     As you pass by [one of]a derelict[or]an abandoned[or]an uninhabited[or]a deserted[or]a ransacked[at random] [one of]bar[or]school[or]warehouse[or]book store[or]liquor store[or]supermarket[or]kindergarten[or]small house[or]arcade[or]electronics store[at random], you hear voices and rumbling coming from inside.";

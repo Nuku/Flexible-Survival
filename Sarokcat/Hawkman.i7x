@@ -463,7 +463,7 @@ name	desc	weight	object
 "hawkman male feathers"	"A handful of tan feathers look like they have been pulled out of the feathered coat of a hawk. They're nicely soft."	0	hawkman male feathers
 
 hawkman male feathers is a grab object.
-the usedesc of hawkman male feathers is "[HawkmanMaleFeatherUse]".
+Usedesc of hawkman male feathers is "[HawkmanMaleFeatherUse]".
 
 It is temporary.
 
@@ -480,7 +480,7 @@ name	desc	weight	object
 "hawkman female feathers"	"A handful of tan feathers look like they have been pulled out of the feathered coat of a hawk. They're nicely soft."	0	hawkman female feathers
 
 hawkman female feathers is a grab object.
-the usedesc of hawkman female feathers is "[HawkmanFemaleFeatherUse]".
+Usedesc of hawkman female feathers is "[HawkmanFemaleFeatherUse]".
 
 It is temporary.
 
@@ -495,9 +495,9 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "hawkman male cum"	"A plastic bottle filled with some virile, avian seed."	1	hawkman male cum
 
-hawkman male cum is a grab object. hawkman male cum is infectious. The strain of hawkman male cum is "Hawkman Female". hawkman male cum is cum.
+hawkman male cum is a grab object. hawkman male cum is infectious. Strain of hawkman male cum is "Hawkman Female". hawkman male cum is cum.
 the scent of hawkman male cum is "The swill has an overwhelming, masculine aroma about it.".
-The usedesc of hawkman male cum is "     There's so much of stuff, it's a challenge to consume all of the warm, salty fluid. By the end, you feel dizzy and a little tingly.";
+Usedesc of hawkman male cum is "     There's so much of stuff, it's a challenge to consume all of the warm, salty fluid. By the end, you feel dizzy and a little tingly.";
 
 Section 4 - Endings
 

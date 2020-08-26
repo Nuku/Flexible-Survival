@@ -226,7 +226,7 @@ instead of sniffing batcubus milk:
 say "You open the lid of the bottle and smell the milk. Seems fresh and drinkable, even though it isn't refrigerated. Must be a side effect of the nanites in it.";
 
 batcubus milk is a grab object.
-the usedesc of batcubus milk is "[batcubus milk use]";
+Usedesc of batcubus milk is "[batcubus milk use]";
 
 to say batcubus milk use:
 	say "Taking the cap of the bottle of milk, you greedily drink down its contents, swallowing the tasty milk.";

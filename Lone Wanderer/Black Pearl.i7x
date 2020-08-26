@@ -10,7 +10,7 @@ Curious Pearl	"Curious Pearl"
 
 Curious Pearl is a situation.
 ResolveFunction of Curious Pearl is "[ResolveEvent Curious Pearl]".
-The sarea of Curious Pearl is "Beach".
+Sarea of Curious Pearl is "Beach".
 The level of Curious Pearl is 5. [minimum level to find the event]
 Curious Pearl is inactive.
 
@@ -45,7 +45,7 @@ name	desc	weight	object
 "Black Pearl"	"It's a sphere with a smooth, reflective surface lacking in any color. It's slightly smaller than a soccer ball, which leaves you wondering how large the oyster containing this must have been, yet you have a feeling that the origin of this pearl is something different"	3	Black Pearl
 
 Black Pearl is a grab object.
-the usedesc of Black Pearl is "[blackpearlusing]".
+Usedesc of Black Pearl is "[blackpearlusing]".
 
 It is temporary.
 

@@ -16,7 +16,7 @@ The slot of Hiking Backpack is "back".
 The descmod of Hiking Backpack is "A sturdy backpack made for hauling tents and other various outdoor gear. Fitted with many pockets and deep storage space, it is perfect for people on the move.".
 the scent of Hiking Backpack is "You smell fabric and cedar. Apparently the store tucked an air freshener into one of its pouches.".
 
-the usedesc of Hiking Backpack is "[HBPuse]".
+Usedesc of Hiking Backpack is "[HBPuse]".
 
 to say HBPuse:
 	if Hiking Backpack is equipped:
@@ -31,7 +31,7 @@ Happy Trails	"Happy Trails"
 
 Happy Trails is a scavevent.
 ResolveFunction of Happy Trails is "[ResolveEvent Happy Trails]".
-The sarea of Happy Trails is "Allzones".
+Sarea of Happy Trails is "Allzones".
 
 to say ResolveEvent Happy Trails:
 	say "     By chance you happen to stumble across a small camping store named Happy Trails. Unfortunately, the windows have been smashed out, glass littering the pavement and interior floor. The simple aluminum door is swinging dangerously on only one hinge with a rustic wooden 'Closed' sign on the ground beneath it.";

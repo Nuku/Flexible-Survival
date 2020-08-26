@@ -65,14 +65,14 @@ Table of GameCharacterIDs (continued)
 object	name
 orc supersized breeder	"orc supersized breeder"
 
-orc supersized breeder is a pet. orc supersized breeder is a part of the player.
+orc supersized breeder is a pet. orc supersized breeder is a part of Player.
 NPCObject of orc supersized breeder is Urik.
 understand "Urik" as orc supersized breeder.
 printed name of orc supersized breeder is "Urik".
-The description of orc supersized breeder is "[UrikDesc]".
-The weapon damage of orc supersized breeder is 20.
+Description of orc supersized breeder is "[UrikDesc]".
+Weapon Damage of orc supersized breeder is 20.
 The level of orc supersized breeder is 1.
-The Dexterity of orc supersized breeder is 10.
+Dexterity of orc supersized breeder is 10.
 The summondesc of orc supersized breeder is "[SummonUrik]".
 The dismissdesc of orc supersized breeder is "[DismissUrik]".
 The assault of orc supersized breeder is "[one of]Urik lands some heavy punches on your opponent.[or]The orc gives your opponent a good kick.[or]A bellowed insult by Urik distracts your enemy a moment - long enough for you to score a quick hit![or]Urik lands a back-handed slap on your opponent's face.[at random]".
@@ -149,7 +149,7 @@ SexuallyExperienced of Urik is true.
 TwistedCapacity of Urik is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Urik is false. [steriles can't knock people up]
 MainInfection of Urik is "Orc Warrior".
-The description of Urik is "[UrikDesc]".
+Description of Urik is "[UrikDesc]".
 The icon of Urik is Figure of Urik_clothed_icon.
 
 to say UrikDesc:
@@ -167,7 +167,7 @@ to say UrikDesc:
 	if companion of Player is orc supersized breeder:
 		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
-The conversation of Urik is { "<Placeholder>" }.
+Conversation of Urik is { "<Placeholder>" }.
 
 The scent of Urik is "     Urik has a quite masculine smell, underlined with a little bit of sweat and cum that somehow just makes him more attractive.".
 
@@ -1159,7 +1159,7 @@ object	name
 Territory Marker	"Territory Marker"
 
 Territory Marker is a person. [for easy saving, and in vase some variables are needed in the future]
-The description of Territory Marker is "[MarkerDesc]".
+Description of Territory Marker is "[MarkerDesc]".
 
 to say MarkerDesc:
 	say "     A large sign, constructed of a number of rebar steel rods and the motor hood of a car has been put up in front of the library by Urik. He drove the rods into the asphalt of the street with enough force to shatter it, making sure that this sign is well and truly planted where is. On it, the text that the orc created is well-readable and even has shadows behind the letters for added effect: '[if player is not defaultnamed]Territory of [Name of Player]! Keep Out!' [else]Tribal Territory! Keep Out!' [end if]A snarling orc's face at the upper right corner (similar to Urik himself) and what looks to be a scattering of fallen skulls at the base of the sign drive the message home.";

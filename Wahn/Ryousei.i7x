@@ -254,15 +254,15 @@ Table of GameCharacterIDs (continued)
 object	name
 royal tiger	"royal tiger"
 
-royal tiger is a pet. royal tiger is a part of the player.
+royal tiger is a pet. royal tiger is a part of Player.
 NPCObject of royal tiger is Ryousei.
 understand "Ryousei" as royal tiger.
 understand "Ryo" as royal tiger.
 printed name of royal tiger is "Ryousei".
-The description of royal tiger is "[RyouseiDesc]".
-The weapon damage of royal tiger is 15.
+Description of royal tiger is "[RyouseiDesc]".
+Weapon Damage of royal tiger is 15.
 The level of royal tiger is 1.
-The Dexterity of royal tiger is 15.
+Dexterity of royal tiger is 15.
 The summondesc of royal tiger is "[SummonRyousei]".
 The dismissdesc of royal tiger is "[DismissRyousei]".
 The assault of royal tiger is "[one of]Ryousei wades into the fight with sure strides, swiping his claws to hurt your enemy at a critical moment.[or]The royal tiger charges into combat, roaring at your opponent and making them back down a step.[or]A growled roar by Ryousei distracts your enemy a moment - long enough for you to score a quick hit![or]Snarling, your royal tiger companion slashes your enemy with his claws![at random]".
@@ -323,8 +323,8 @@ SexuallyExperienced of Ryousei is true.
 TwistedCapacity of Ryousei is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Ryousei is false. [steriles can't knock people up]
 MainInfection of Ryousei is "Royal Tiger".
-The description of Ryousei is "[RyouseiDesc]".
-The conversation of Ryousei is { "Placeholder!" }.
+Description of Ryousei is "[RyouseiDesc]".
+Conversation of Ryousei is { "Placeholder!" }.
 
 instead of sniffing Ryousei:
 	say "[RyouseiScent]";

@@ -15,7 +15,7 @@ Apple Tree	"Apple Tree"
 
 Apple Tree is a situation.
 ResolveFunction of Apple Tree is "[ResolveEvent Apple Tree]". The level of Apple Tree is 6.
-The sarea of Apple Tree is "Plains".
+Sarea of Apple Tree is "Plains".
 centaurmate is a number that varies.
 
 to say ResolveEvent Apple Tree:
@@ -62,7 +62,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "fresh apple"	"A rosy red apple."	1	fresh apple
 
-fresh apple is a grab object. Understand "apple" and "fresh" as fresh apple. fresh apple is infectious. The strain of fresh apple is "Mutant Centaur". The purified of fresh apple is "food".
+fresh apple is a grab object. Understand "apple" and "fresh" as fresh apple. fresh apple is infectious. Strain of fresh apple is "Mutant Centaur". Purified of fresh apple is "food".
 
 the scent of fresh apple is "The apple smells fresh and juicy at first, though you notice a strange, rotten smell hidden beneath that.".
 
@@ -76,7 +76,7 @@ To say centaur defeat:
 		say "The centaur is lying on the ground with its tail skewed off to the side, is the perfect target for your [Cock of Player] maleness. You sidle up behind the centaur, ignored by it in the pain and embarrassment of loss, and slowly insert your cock.";
 		WaitLineBreak;
 		say "The centaur starts as it realizes what you are doing, and two green tentacles, covered with bumps, raise out from under the body of the centaur.";
-		if the humanity of Player > 90:
+		if Humanity of Player > 90:
 			say "You instantly pull out, looking at the tentacles like the abomination they are. You kick dirt over the centaur as you leave, stealing an apple from its pack.";
 			ItemGain fresh apple by 1;
 			increase Libido of Player by 20;
@@ -92,11 +92,11 @@ To say centaur defeat:
 			SanLoss 4;
 	if Libido of Player > 50 and Cock Count of Player is 0 and player is female:
 		say "The centaur groans and falls to the ground, his legs crumpling and shoving him onto his side. You get a good view of a massive, green cock with vine-like bumps on the shaft. Its sheath is a darker green, and a matching ball sack hangs down half a foot from the powerful member, two giant round forms stretching the skin. What really gets to you is the two tentacles, like growths, that sprout from stump-like protrusions of the base of its sheath.";
-		if the humanity of Player < 40:
+		if Humanity of Player < 40:
 			say "The sight of those tentacles drives you insane with lust. You grab them and stuff them into your mouth, working your throat to get them down. They then come alive, wriggling down your stomach, into your small intestine, and then out of your hole, causing pain that when mixed with your lust turns to pleasure. The tentacles then enter your pussy, and begin to stimulate it with their wriggling. You are immobilized by the feeling of those long tendrils pumping in and out of more holes in your body than any cock could fuck, and it doesn't take long to come to climax. You cum hard, juices running out of your cunt and pushing the tendrils out with it. Then you hear a moan, and the centaur climaxes, spraying thick green seed all over the dusty ground and its underside. The tendrils retract from your body, and you leave the centaur, accepting an apple that it offers you.";
 			ItemGain fresh apple by 1;
 			now Libido of Player is 0;
-		else if the humanity of Player < 90:
+		else if Humanity of Player < 90:
 			say "The sight of the tentacles doesn't bother your fuzzy mind in the least as you leap onto the centaur's furry belly and rub yourself forward and back, arousing yourself and trying to raise yourself to orgasm. Your dripping pussy leaves streaks of wetness on the centaur's fur, and after a short while, something wet and large pokes at your back, breaking your concentration. You stop and turn back in surprise to see the huge green cock starkly erect, its precum-dripping tip a few inches from your face. A trail of precum leads along your body to your back. It isn't done growing, and pushes you forwards a few inches before it is fully ready.";
 			say "You turn and place the cock at your waiting entrance, smearing your hole with precum as you try and force it in.";
 			if Cunt Tightness of Player < 16:[too small, cock won't fit]
@@ -123,7 +123,7 @@ To say centaur defeat:
 		else:
 			say "The sight of the tentacles puts you off your lunch, and you lose it a short time later, heaving your guts all over the ground.";
 			increase hunger of Player by 10;
-			decrease the HP of the player by 8;
+			decrease HP of Player by 8;
 			say "You feel weaker after losing your lunch. Maybe you aren't good enough to survive the new world.";
 			now Libido of Player is 0;
 		[todo]
@@ -156,7 +156,7 @@ An everyturn rule:
 			now Libido of Player is 0;
 			decrease Cock Length of Player by 4;
 			say "Your cock keeps bleeding, and shrank a little just now.";
-			decrease the HP of the player by 4;
+			decrease HP of Player by 4;
 			say "The loss of blood is making you feel woozy.";
 			if Cock Length of Player < 1:
 				now Cock Count of Player is 0;

@@ -362,7 +362,7 @@ instead of sniffing dried cod:
 	say "Raising the piece of meat to your nose, you can definitively confirm that it is indeed fish.";
 
 dried cod is a grab object.
-the usedesc of dried cod is "[dried cod use]";
+Usedesc of dried cod is "[dried cod use]";
 
 to say dried cod use:
 	say "You stick a corner of the dried fish in your mouth and tear a piece off, chewing it thoroughly. A bit tough at first, but it tastes well enough. A thought comes up in the back of your head, and you wonder if it's such a good idea to share food that someone else has already nibbled on... but then, becoming more like a Viking wouldn't be so bad, would it?";

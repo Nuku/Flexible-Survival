@@ -10,7 +10,7 @@ Tight Space	"Tight Space"
 
 Tight Space is a scavevent.
 ResolveFunction of Tight Space is "[ResolveEvent Tight Space]".
-The sarea of Tight Space is "Mall".
+Sarea of Tight Space is "Mall".
 
 to say ResolveEvent Tight Space:
 	say "     You come across a very narrow opening in the sewers underneath the city. You think you see something gleaming in the back of it, but it would be a really tight squeeze to fit in there and might leave you vulnerable to attack. Do you try to enter the tight space anyways?";
@@ -50,7 +50,7 @@ Strange Echo	"Strange Echo"
 
 Strange Echo is a situation.
 ResolveFunction of Strange Echo is "[ResolveEvent Strange Echo]".
-The sarea of Strange Echo is "Mall".
+Sarea of Strange Echo is "Mall".
 
 to say ResolveEvent Strange Echo:
 	say "     While exploring the sewers, you come across a strange tapping noise, almost like someone is following you. The noise stops when you stop moving and try to determine where it is coming from. Feeling slightly paranoid, you try moving in a different direction, only to have the noise begin again even louder. Panicking slightly you break into a run, only to have the sounds of lots of creatures charging forward surround you. Fearing the worst, you let out a loud shout as you ready for combat! When your shout reverberates back at you from all around you due to the many hollow pipes and arches in the area, you blush as you realize you have been scared by the echo of your own passage.";
@@ -66,7 +66,7 @@ Sewer Worker	"Sewer Worker"
 
 Sewer Worker is a situation.
 ResolveFunction of Sewer Worker is "[ResolveEvent Sewer Worker]".
-The sarea of Sewer Worker is "Mall".
+Sarea of Sewer Worker is "Mall".
 
 to say ResolveEvent Sewer Worker:
 	say "     Traveling through the dim passages under the city, you see a soft gleam of light off in the distance. Worried about a possible trap, you approach the area cautiously, only to find what seems to be an abandoned mining style hat, the light on the front of the hat still shining off into the darkness. Looking around, you can see some shreds of khaki cloth scattered about the area and a small cloth patch lying there in a corner. Bringing the patch into the light, you can see it says 'Sewer workers union 108'. Before you can do more than just glance at the patch however, there is a sound from behind you and one of the creatures of the tunnels attacks.";
@@ -83,7 +83,7 @@ Totally Lost	"Totally Lost"
 
 Totally Lost is a situation.
 ResolveFunction of Totally Lost is "[ResolveEvent Totally Lost]".
-The sarea of Totally Lost is "Mall".
+Sarea of Totally Lost is "Mall".
 
 to say ResolveEvent Totally Lost:
 	say "     After a while of traveling the sewer passages, you try to head back only to realize that you must have somehow got turned around down here, and have no idea just where you are and how to get out. Beginning to panic, you start to run down different passageways at random - only to stumble out right into the area you entered the sewers. Apparently you have been wandering around in circles for hours.";
@@ -98,7 +98,7 @@ Captive Rat	"Captive Rat"
 
 Captive Rat is a situation.
 ResolveFunction of Captive Rat is "[ResolveEvent Captive Rat]". The level of Captive Rat is 6.
-The sarea of Captive Rat is "Mall".
+Sarea of Captive Rat is "Mall".
 when play begins:
 	add Captive Rat to BadSpots of MaleList;
 	add Captive Rat to badspots of HermList;
@@ -129,14 +129,14 @@ Puddle of Goo	"Puddle of Goo"
 
 Puddle of Goo is a situation.
 ResolveFunction of Puddle of Goo is "[ResolveEvent Puddle of Goo]".
-The sarea of Puddle of Goo is "Mall".
+Sarea of Puddle of Goo is "Mall".
 when play begins:
 	add Puddle of Goo to BadSpots of FemaleList;
 
 to say ResolveEvent Puddle of Goo:
 	say "     Looking around in the area under the mall, you find a strange puddle of goo just lying there in the middle of the passageway. You think you could take a sample if you wanted to.";
 	if Player consents:
-		let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
+		let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
@@ -163,7 +163,7 @@ Strange Symbol	"Strange Symbol"
 
 Strange Symbol is a situation.
 ResolveFunction of Strange Symbol is "[ResolveEvent Strange Symbol]".
-The sarea of Strange symbol is "Mall".
+Sarea of Strange symbol is "Mall".
 
 to say ResolveEvent Strange Symbol:
 	say "     Moving through the sewers, you notice a strange white symbol painted on the wall. Moving closer to investigate, you note that the symbol almost seems to writhe and move out of the corner of your eyes. Finally getting to where you can stand in front of the symbol, you find you still can't seem to make heads or tails of the strange pattern, though the longer you stare at it the more it seems like you are just on the edge of figuring it out. You blink as you realize your eyes have gone heavy, and your brain feels somewhat fuzzy as well, you can almost swear that you hear dark whispers in the shadows surrounding you. You quickly realize that the strange symbol is doing something to you, and manage to drag yourself away from its fascinating lines and stumble away, feeling much less human than when you started.";
@@ -178,14 +178,14 @@ Goo Gathering	"Goo Gathering"
 
 Goo Gathering is a situation.
 ResolveFunction of Goo Gathering is "[ResolveEvent Goo Gathering]". The level of Goo Gathering is 2.
-The sarea of Goo Gathering is "Mall".
+Sarea of Goo Gathering is "Mall".
 when play begins:
 	add Goo Gathering to BadSpots of MaleList;
 	add Goo Gathering to BadSpots of FurryList;
 
 to say ResolveEvent Goo Gathering:
 	say "     Traveling through the dim passages under the city, you come across a large open area where several tunnels come together. Looking out into the area, you are surprised to see a large amount of those gooey girls gathered around talking to each other. Deciding discretion is the better part of valor, you try to slip away down the passageway before you can be noticed.";
-	let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
+	let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 	increase diceroll by bonus;
@@ -211,7 +211,7 @@ Old Rail System	"Old Rail System"
 
 Old Rail System is a situation.
 ResolveFunction of Old Rail System is "[ResolveEvent Old Rail System]".
-The sarea of Old Rail System is "Mall".
+Sarea of Old Rail System is "Mall".
 
 to say ResolveEvent Old Rail System:
 	say "     Moving through the deserted passages under the city, you find an old metal door, half concealed by the darkness and rubble. You curiously try the door only to find that while it is unlocked, it is partially rusted shut, you pull and tug on the door, until with a rusty shriek it finally opens. You pause for a second, the silence seeming deafening after the loud noise, hoping nothing down here heard that. ";

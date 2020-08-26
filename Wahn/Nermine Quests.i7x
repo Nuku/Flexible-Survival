@@ -43,7 +43,7 @@ Bacchus Wine	"Bacchus Wine"
 
 Bacchus Wine is a situation.
 ResolveFunction of Bacchus Wine is "[ResolveEvent Bacchus Wine]". The level of Bacchus Wine is 4.
-The Sarea of Bacchus Wine is "Museum".
+Sarea of Bacchus Wine is "Museum".
 WineFound is a number that varies.
 
 when play begins:
@@ -73,7 +73,7 @@ to say ResolveEvent Bacchus Wine:
 			say "     Deciding it is best not to mess with strange casks and other such things in these dark halls, you continue on your way leaving the drink untouched.";
 	else if WineFound is 1: [player is supposed to bring wine to Nermine]
 		say "     Traveling down the museum halls, you spot several satyrs bemoaning their current lack of booze, then setting out to 'get a refill'. They seem fairly focused on getting more wine, not really noticing you as you stand in a shadowy archway when they move past. Remembering Nermine's request for some of the satyr wine straight from the source, you attempt to stealthily follow the nimble goat-men through the halls.";
-		let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
+		let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Dexterity Check):[line break]";
 		increase diceroll by bonus;
@@ -92,13 +92,13 @@ Stolen Jewelry	"Stolen Jewelry"
 
 Stolen Jewelry is a situation.
 ResolveFunction of Stolen Jewelry is "[ResolveEvent Stolen Jewelry]".
-The Sarea of Stolen Jewelry is "Museum".
+Sarea of Stolen Jewelry is "Museum".
 HyenaTrailing is a number that varies.
 
 to say ResolveEvent Stolen Jewelry:
 	if RareQuesting is 8:
 		say "     Traveling through the dimly lit hallways of the museum, you eventually find the room you are looking for in the Egyptian section and wander inside hopefully. Sadly it doesn't take more than a short look for you to determine that just as Nermine feared, the items you are looking for have already been stolen. Sighing at how much more complicated this is going to be you carefully begin searching the room for any sign of who the thief might be, or where they have taken it.";
-		let bonus be (( the perception of the player minus 10 ) divided by 2);
+		let bonus be (( Perception of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Perception Check):[line break]";
 		increase diceroll by bonus;
@@ -124,7 +124,7 @@ Alternative Entry	"Alternative Entry"
 
 Alternative Entry is a situation.
 ResolveFunction of Alternative Entry is "[ResolveEvent Alternative Entry]". The level of Alternative Entry is 8.
-The Sarea of Alternative Entry is "Museum".
+Sarea of Alternative Entry is "Museum".
 when play begins:
 	add Alternative Entry to BadSpots of MaleList;
 	add Alternative Entry to BadSpots of FurryList;
@@ -132,7 +132,7 @@ when play begins:
 to say ResolveEvent Alternative Entry:
 	if HyenaTrailing is 2:
 		say "     After returning to the Egyptian exhibit you proceed to attempt to backtrack the hyena thieves trail through the dim hallways of the museum, relying on your keen powers of observation to help (and perhaps a little luck as well).";
-		let bonus be (( the perception of the player minus 10 ) divided by 2);
+		let bonus be (( Perception of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Perception Check):[line break]";
 		increase diceroll by bonus;
@@ -261,7 +261,7 @@ Anubis Statue	"Anubis Statue"
 
 Anubis Statue is a situation.
 ResolveFunction of Anubis Statue is "[ResolveEvent Anubis Statue]".
-The Sarea of Anubis Statue is "Museum".
+Sarea of Anubis Statue is "Museum".
 statuequest is a number that varies.
 
 to say ResolveEvent Anubis Statue:
@@ -297,7 +297,7 @@ Bestial Pheromones	"Bestial Pheromones"
 
 Bestial Pheromones is a situation.
 ResolveFunction of Bestial Pheromones is "[ResolveEvent Bestial Pheromones]". The level of Bestial Pheromones is 4.
-The Sarea of Bestial Pheromones is "Zoo".
+Sarea of Bestial Pheromones is "Zoo".
 anubisrequest is a number that varies.
 when play begins:
 	add Bestial Pheromones to BadSpots of FemaleList;
@@ -317,7 +317,7 @@ to say ResolveEvent Bestial Pheromones:
 		now inasituation is false; [reset]
 		if fightoutcome < 20: [player won]
 			say "     Driving off the pair of sleek cheetahs, you look inside the room carefully, finding it to be full of several large coolers, several of which are standing open, their contents spilled out upon the floor. You now realize why the felines were so attracted to this place - the mingled musk and pheromones of numerous animals filling the air is quite a potent mixture, making your thoughts wander as you look around. Realizing you can't stay here long without giving in to your primal urges, you quickly pull out the paper the jackal-man gave you and begin to search the area, hoping the vials you need aren't lying among those smashed on the floor.";
-			let bonus be (( the Intelligence of the player minus 10 ) divided by 2);
+			let bonus be (( Intelligence of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Intelligence Check):[line break]";
 			increase diceroll by bonus;
@@ -341,7 +341,7 @@ Twisted Fruit Grove	"Twisted Fruit Grove"
 
 Twisted Fruit Grove is a situation.
 ResolveFunction of Twisted Fruit Grove is "[ResolveEvent Twisted Fruit Grove]". The level of twisted fruit grove is 4.
-The Sarea of Twisted Fruit Grove is "Park".
+Sarea of Twisted Fruit Grove is "Park".
 FelinoidRescued is a number that varies.
 when play begins:
 	add Twisted Fruit Grove to badspots of HermList;
@@ -497,8 +497,8 @@ object	name
 Rare Counter	"Rare Counter"
 
 Rare Counter is a man.
-The description of Rare Counter is "[RareCounterDesc]".
-The conversation of Rare Counter is { "Treasure!" }.
+Description of Rare Counter is "[RareCounterDesc]".
+Conversation of Rare Counter is { "Treasure!" }.
 Rare Counter is in The Mysterious Shop.
 
 to say RareCounterDesc:
@@ -631,7 +631,7 @@ name	desc	weight	object
 
 strange ankh is a grab object. Understand "ankh" and "strange" as strange ankh.
 
-The usedesc of strange ankh is "[jackalankhmagic].";
+Usedesc of strange ankh is "[jackalankhmagic].";
 
 the scent of strange ankh is "The golden ankh smells faintly of desert sand and masculine musk.".
 

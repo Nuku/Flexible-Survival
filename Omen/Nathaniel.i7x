@@ -18,7 +18,7 @@ The Sword in the Stone	"The Sword in the Stone"
 
 The Sword in the Stone is a situation.
 ResolveFunction of The Sword in the Stone is "[ResolveEvent The Sword in the Stone]".
-The sarea of The Sword in the Stone is "Forest".
+Sarea of The Sword in the Stone is "Forest".
 
 when play begins:
 	add The Sword in the Stone to badspots of MaleList;
@@ -73,7 +73,7 @@ The Campsite	"The Campsite"
 The Campsite is a situation.
 ResolveFunction of The Campsite is "[ResolveEvent The Campsite]".
 The Campsite is inactive.
-The sarea of The Campsite is "Forest".
+Sarea of The Campsite is "Forest".
 
 to say ResolveEvent The Campsite
 	say "     You're wandering through the forest when you come across a destroyed campsite. There is a small firepit with what looks to be marshmallows on some sticks. Most of them are burned as if they were left to sit near the fire for too long. You come across two finely made backbacks near the remains of the tent, they look be be designed for hiking. Most of the stuff has been looked through already, but based on the clothing it looks like there were two men at this campsite, one very short and the other very tall. After some digging, you come across some IDs that depict the two men. The first appears to be from the college, he's a tall handsome graduate student with well styled shoulder length hair and a short neatly trimmed beard that goes by the name Nathaniel. The black hair really stands out well on his pale skin. The other is a younger man with a cheerful expression, with platinum blond hair that's short on the sides and long on top that goes by the name Owen. He also has pale white skin, and checking again they both have the same striking ice blue eyes. The younger man's ID It looks to be a temporary university ID, perhaps he was here for orientation or some kind of event.";
@@ -130,7 +130,7 @@ Looking for the Brothers	"Looking for the Brothers"
 Looking for the Brothers is a situation.
 ResolveFunction of Looking for the Brothers is "[ResolveEvent Looking for the Brothers]".
 Looking for the Brothers is inactive.
-The sarea of Looking for the Brothers is "Forest".
+Sarea of Looking for the Brothers is "Forest".
 
 LookingForTheBrothersResolution is a number that varies. LookingForTheBrothersResolution is usually 0.
 

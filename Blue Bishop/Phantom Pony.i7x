@@ -7,7 +7,7 @@ object	name
 Blot	"Blot"
 
 Blot is a person. Blot is in Abandoned Storage Room.
-the description of Blot is "[blotlook]".
+Description of Blot is "[blotlook]".
 the fuckscene of Blot is "[blotfuck]".
 instead of sniffing Blot:
 	say "     The object smells faintly of fresh synthetics, [if blotintense > 3]tinged with the heady aroma of your sex[else]but else isn't noteworthy[end if].";
@@ -33,7 +33,7 @@ Abandoned Storage Room	"Abandoned Storage Room"
 
 Abandoned Storage Room is a room.
 Abandoned Storage Room is northeast of Milking Shed Main Room.
-The description of Abandoned Storage Room is "     Cordoned off from the rest of the milking shed, not too far from the generator, appears to be somewhat dilapidated and disregarded storage room. Dimly lit, there's a few old, obsolete tools stacked up against the walls, but is otherwise sparsely filled save for a rather jarring, brightly colored fixture at the far end.".
+Description of Abandoned Storage Room is "     Cordoned off from the rest of the milking shed, not too far from the generator, appears to be somewhat dilapidated and disregarded storage room. Dimly lit, there's a few old, obsolete tools stacked up against the walls, but is otherwise sparsely filled save for a rather jarring, brightly colored fixture at the far end.".
 
 blotintense is a number that varies. blotintense is usually -1;
 [

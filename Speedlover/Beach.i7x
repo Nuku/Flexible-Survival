@@ -10,7 +10,7 @@ Beach Plaza	"Beach Plaza"
 
 Beach Plaza is a Room.
 The Beach Plaza is fasttravel. The Beach Plaza is not known.
-The description of beach plaza is "[BeachPlazaDesc]".
+Description of beach plaza is "[BeachPlazaDesc]".
 earea of Beach Plaza is "Outside".
 
 to say BeachPlazaDesc:
@@ -35,8 +35,8 @@ object	name
 Bronze Crab	"Bronze Crab"
 
 Bronze Crab is a man. Bronze Crab is in Beach Plaza.
-The description of Bronze Crab is "[BronzeCrabDesc]".
-The conversation of Bronze Crab is { "<This is nothing but a placeholder!>" }.
+Description of Bronze Crab is "[BronzeCrabDesc]".
+Conversation of Bronze Crab is { "<This is nothing but a placeholder!>" }.
 The scent of Bronze Crab is "     The giant statue smells... kinda like hot metal. Not surprising, since it bakes in the sun all day.".
 
 to say BronzeCrabDesc:
@@ -57,7 +57,7 @@ Object	Name
 Boardwalk2	"Boardwalk"
 
 Boardwalk2 is a Room.
-The description of Boardwalk2 is "[BoardwalkDesc]".
+Description of Boardwalk2 is "[BoardwalkDesc]".
 Boardwalk2 is a room with printed name "Boardwalk".
 earea of Boardwalk2 is "Outside".
 
@@ -69,7 +69,7 @@ instead of sniffing the Boardwalk2:
 	say "     The air smells fresh and salty.";
 
 beach overview is an object. It is in Boardwalk2. It is fixed in place. Understand "map" as beach overview.
-the description of beach overview is "[Beach_Overlook_Desc]".
+Description of beach overview is "[Beach_Overlook_Desc]".
 The icon of beach overview is Figure of Beach_Overlook_icon.
 
 to say Beach_Overlook_Desc:
@@ -81,7 +81,7 @@ Restaurant	"Restaurant"
 
 Restaurant is a Room.
 Restaurant is north of Boardwalk2.
-The description of Restaurant is "[RestaurantDesc]".
+Description of Restaurant is "[RestaurantDesc]".
 
 to say RestaurantDesc:
 	say "     The restaurant is an interesting combination of high class and casual that seems to work, at least in your opinion. There are tables scattered throughout the building with some up against the wall and under windows that are open at the moment. In the back end of the food establishment is a bar with stools lined up to allow people to order their alcohol whenever they want it. Overall it's a very nice place.";
@@ -118,7 +118,7 @@ Object	Name
 Public Beach	"Public Beach"
 
 Public Beach is a Room.
-The description of Public Beach is "[PublicBeachDesc]".
+Description of Public Beach is "[PublicBeachDesc]".
 earea of Public Beach is "Beach".
 
 to say PublicBeachDesc:
@@ -137,7 +137,7 @@ Shallow Bay is south of Public beach.
 Shallow Bay is west of Wild Fringe.
 Shallow Bay is southeast of Rocky Cliff.
 Shallow Bay is east of BeachEnd.
-The description of Shallow Bay is "[ShallowBayDesc]".
+Description of Shallow Bay is "[ShallowBayDesc]".
 earea of Shallow Bay is "Beach".
 
 to say ShallowBayDesc:
@@ -154,7 +154,7 @@ Wild Fringe	"Wild Fringe"
 
 Wild Fringe is a Room.
 Wild Fringe is southeast of Public Beach.
-The description of Wild Fringe is "[WildFringeDesc]".
+Description of Wild Fringe is "[WildFringeDesc]".
 earea of Wild Fringe is "Beach".
 
 to say WildFringeDesc:
@@ -175,7 +175,7 @@ BeachDummyRoom	"BeachDummyRoom"
 
 BeachDummyRoom is a room.
 BeachDummyRoom is southeast of Beach Exploration.
-The description of BeachDummyRoom is "This is a dummy room for exploration purposes.".
+Description of BeachDummyRoom is "This is a dummy room for exploration purposes.".
 
 [Dirty Sheds]
 Dirty Sheds is northwest of Public Beach.
@@ -186,7 +186,7 @@ Dirty Sheds	"Dirty Sheds"
 
 Dirty Sheds is a Room.
 Dirty Sheds is north of Rocky Cliff.
-The description of Dirty Sheds is "[DirtyShedsDesc]".
+Description of Dirty Sheds is "[DirtyShedsDesc]".
 earea of Dirty Sheds is "Beach".
 
 to say DirtyShedsDesc:
@@ -207,7 +207,7 @@ Rocky Cliff	"Rocky Cliff"
 
 Rocky Cliff is a Room.
 Rocky Cliff is west of Public Beach.
-The description of Rocky Cliff is "[RockyCliffDesc]".
+Description of Rocky Cliff is "[RockyCliffDesc]".
 earea of Rocky Cliff is "Beach".
 
 to say RockyCliffDesc:
@@ -219,7 +219,7 @@ instead of sniffing the Rocky Cliff:
 
 [BeachEnd]
 BeachEnd is south of Rocky Cliff.
-The description of BeachEnd is "[BeachEndDesc]".
+Description of BeachEnd is "[BeachEndDesc]".
 BeachEnd is southwest of Public Beach.
 BeachEnd is a room with printed name "End of the Beach".
 
@@ -244,7 +244,7 @@ Object	Name
 Rock Arch	"Rock Arch"
 
 Rock Arch is a Room.
-The description of Rock Arch is "[RockArchDesc]".
+Description of Rock Arch is "[RockArchDesc]".
 
 to say RockArchDesc:
 	say "     You're in the ocean close to the coast, right where the water gets deeper than the relatively shallow bay closer to the public beach. Jagged cliffs rise up in the north, northwest and west, while a large arch of weathered rock stretches over the sea in the southern directions. It allows passage through the choppy waters and jagged rocks that otherwise cut the bay off the open ocean. By passing through there, you would be able to move to and from the deeper reaches of the sea. Through the arch and to the south, you can see a shadowy shape beneath the water. Looks like a sunken ship, its broken mast helping you distinguish the shape. There's a [bold type]shipwreck[roman type] to explore! Of course, out there in the open sea, you'd really have to swim against the waves and currents to get to it.";
@@ -261,7 +261,7 @@ Object	Name
 Wyvern Nest	"Wyvern Nest"
 
 Wyvern Nest is a room. [Wyvern Nest is above Rock Arch.]
-the description of Wyvern Nest is "[WyvernNestDesc]".
+Description of Wyvern Nest is "[WyvernNestDesc]".
 
 
 to say WyvernNestDesc:
@@ -278,7 +278,7 @@ Object	Name
 Open Ocean	"Open Ocean"
 
 Open Ocean is a room. Open Ocean is south of Rock Arch.
-The description of Open Ocean is "[AboveShip]";
+Description of Open Ocean is "[AboveShip]";
 
 to say AboveShip:
 	say "     Below you is a large sunken ship and you can see multiple underwater creatures swimming around down there. If you needed to you could go down there but you would need some way to breathe. Of course, if you decided against that then there is the rock arch to the north. You could always swim back.";
@@ -291,7 +291,7 @@ Sunken Ship is a Room.
 Sunken Ship is below Open Ocean.
 understand "Shipwreck" as Sunken Ship.
 understand "Wreck" as Sunken Ship.
-The description of Sunken Ship is "A large ship lays sunken and rotting here. From the breaks in the old hull, it seems the ship ran afoul of the rocky waters and went down long ago. It is now an attraction for divers and sea creatures alike. Maybe going here was a bad idea. There is a cloudy mess of thick seed hanging in the water and stuck to part of the ship, tribute to some huge beast. You'd best be careful. Although in the distance to your west you can see a sparkling sight in the distance. From here, you can barely make out the lighter spot in the rocks that is the [bold type]Rock Arch[roman type] you passed through to get here. You could surface and swim to it if you want to get back to the beach.".
+Description of Sunken Ship is "A large ship lays sunken and rotting here. From the breaks in the old hull, it seems the ship ran afoul of the rocky waters and went down long ago. It is now an attraction for divers and sea creatures alike. Maybe going here was a bad idea. There is a cloudy mess of thick seed hanging in the water and stuck to part of the ship, tribute to some huge beast. You'd best be careful. Although in the distance to your west you can see a sparkling sight in the distance. From here, you can barely make out the lighter spot in the rocks that is the [bold type]Rock Arch[roman type] you passed through to get here. You could surface and swim to it if you want to get back to the beach.".
 
 The invent of Sunken Ship is { "sea dragon cum", "sea dragon cum" }.
 
@@ -302,7 +302,7 @@ Object	Name
 Atlantis City Entrance	"Atlantis City Entrance"
 
 Atlantis City Entrance is a room.
-The description of Atlantis City Entrance is "[CityEntrance]";
+Description of Atlantis City Entrance is "[CityEntrance]";
 
 to say CityEntrance:
 	say "     The entrance to the underwater city is rather gorgeous, filled with golden and coral buildings. Behind you are the magical golden gates of the utopian city that create the amazing bubble that prevents the ocean waters from flooding the city. Standing at the entrance are a merman and a mermaid wearing fancy armor and holding spears. However, out of the two of them, only the merman looks approachable. The female appears to be too focused on her job to even notice you. To the west you see a cobblestone path leading to the center of the city.";

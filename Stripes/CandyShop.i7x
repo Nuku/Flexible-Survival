@@ -12,7 +12,7 @@ CandyShop	"CandyShop"
 
 CandyShop is a situation.
 ResolveFunction of CandyShop is "[ResolveEvent CandyShop]". The level of CandyShop is 9.
-The sarea of CandyShop is "Fair".
+Sarea of CandyShop is "Fair".
 sugarferretfight is a number that varies.
 
 when play begins:

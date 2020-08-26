@@ -120,7 +120,7 @@ Wolverine Guard Station	"Wolverine Guard Station"
 
 Wolverine Guard Station is a room.
 Wolverine Guard Station is east of the Mall Foyer.
-The description of Wolverine Guard Station is "[WolverineGuardStationDesc]".
+Description of Wolverine Guard Station is "[WolverineGuardStationDesc]".
 
 to say WolverineGuardStationDesc:
 	say "     The guard station is situated within a coffee shop. There are tiny little tables where big wolverines are sat at, working on paperwork their boss more than likely has assigned them. The shop counter has a wolverine sitting there with a lot more work than the others. Although judging by the fact that said male is also the receptionist, he surely must have more patience than the others. All in though, the place seems pretty homey and looks to be where the wolverines have also set up home as you can see a door with a sign that says sleeping quarters.";
@@ -132,7 +132,7 @@ Object	Name
 Wolverine Lockup	"Wolverine Lockup"
 
 Wolverine Lockup is a room.
-The description of Wolverine Lockup is "[WolverineLockupDesc]".
+Description of Wolverine Lockup is "[WolverineLockupDesc]".
 
 to say WolverineLockupDesc:
 	say "     The place where they store their criminals seems to be located within a commandeered bank that they have connected to the station. You can tell this by the fact that on one side of the room is a massive vault door that is wide open, showing various security deposit boxes. However, the vault isn't where the suspects are stored, no, you see that they're held within the old cells that held money and other things in the bank. Overall, you think it's a pretty decent setup, and unlikely to fail unless the wolverines decide to hold someone much stronger than them and the bars.";
@@ -170,8 +170,8 @@ object	name
 Dead Body	"Dead Body"
 
 Dead Body is a man.
-The description of Dead Body is "[TylerBodyDesc]".
-The conversation of Dead Body is { "<This is nothing but a placeholder!>" }.
+Description of Dead Body is "[TylerBodyDesc]".
+Conversation of Dead Body is { "<This is nothing but a placeholder!>" }.
 The scent of Dead Body is "     The body smells like a dead body would, disgusting and like copper. Though you think the last bit is due to all the blood.".
 
 to say TylerBodyDesc:
@@ -250,8 +250,8 @@ object	name
 Tawnya	"Tawnya"
 
 Tawnya is a woman.
-The description of Tawnya is "[TawnyaDesc]".
-The conversation of Tawnya is { "<This is nothing but a placeholder!>" }.
+Description of Tawnya is "[TawnyaDesc]".
+Conversation of Tawnya is { "<This is nothing but a placeholder!>" }.
 The scent of Tawnya is "     Tawnya smells rather fresh, at least compared to the other suspects. The perfume coming off of her probably helps".
 
 to say TawnyaDesc:
@@ -405,8 +405,8 @@ object	name
 Cane	"Cane"
 
 Cane is a man.
-The description of Cane is "[CaneDesc]".
-The conversation of Cane is { "<This is nothing but a placeholder!>" }.
+Description of Cane is "[CaneDesc]".
+Conversation of Cane is { "<This is nothing but a placeholder!>" }.
 The scent of Cane is "     The brown-furred doggy smells of musk and food, which is to be expected as the owner of a restaurant.".
 
 to say CaneDesc:
@@ -487,8 +487,8 @@ object	name
 Barry	"Barry"
 
 Barry is a man.
-The description of Barry is "[BarryDesc]".
-The conversation of Barry is { "<this is a placeholder!>" }.
+Description of Barry is "[BarryDesc]".
+Conversation of Barry is { "<this is a placeholder!>" }.
 The scent of Barry is "     The big bear smells heavily like musk, cologne.... and is that cotton candy?".
 
 To say BarryDesc:

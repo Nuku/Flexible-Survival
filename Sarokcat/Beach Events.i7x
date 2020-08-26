@@ -10,7 +10,7 @@ Beach Bum	"Beach Bum"
 
 Beach Bum is a situation.
 ResolveFunction of Beach Bum is "[ResolveEvent Beach Bum]".
-The sarea of Beach Bum is "Beach".
+Sarea of Beach Bum is "Beach".
 
 to say ResolveEvent Beach Bum:
 	if Resolution of Beach Bum is 0:
@@ -72,7 +72,7 @@ Flotsam Bits	"Flotsam Bits"
 
 Flotsam Bits is a situation.
 ResolveFunction of Flotsam Bits is "[ResolveEvent Flotsam Bits]".
-The sarea of Flotsam Bits is "Beach".
+Sarea of Flotsam Bits is "Beach".
 
 to say ResolveEvent Flotsam Bits:
 	say "     Wandering along the beach, you spy a small pile of flotsam washed up on the beach. Approaching cautiously, everything seems safe enough, so you spend a moment searching through the detritus. The only thing of use that you turn up is a sea hardened bit of wood that could possibly serve as a giant club. It is a large log of driftwood with several branch stubs protruding from it. A couple are placed such that you could swing it like a massive club or battering ram. Despite its time in the salt water, the wood is unusually hard, reminding you of the giant tree creatures you've spotted in the city. Shrugging, you take the bit of wood with you and continue along the beach.";
@@ -91,7 +91,7 @@ Strange Tide	"Strange Tide"
 
 Strange Tide is a situation.
 ResolveFunction of Strange Tide is "[ResolveEvent Strange Tide]".
-The sarea of Strange Tide is "Beach".
+Sarea of Strange Tide is "Beach".
 
 to say ResolveEvent Strange Tide:
 	say "     Walking along the beach, you notice a strange roiling of the tide. Not far out in the water, pausing to look for a minute, it seems almost as if the tide is being disturbed from below. Closer inspection reveals that you can almost see something large moving around down there, or perhaps several somethings moving together. Realizing how vigorously whatever is down there must be moving, you decide to continue on your way before it notices you.";
@@ -107,7 +107,7 @@ Strange Wave	"Strange Wave"
 
 Strange Wave is a situation.
 ResolveFunction of Strange Wave is "[ResolveEvent Strange Wave]".
-The sarea of Strange Wave is "Beach".
+Sarea of Strange Wave is "Beach".
 when play begins:
 	add Strange Wave to BadSpots of FemaleList;
 	add Strange Wave to BadSpots of FurryList;
@@ -127,7 +127,7 @@ Smashed Boat	"Smashed Boat"
 
 Smashed Boat is a situation.
 ResolveFunction of Smashed Boat is "[ResolveEvent Smashed Boat]".
-The sarea of Smashed Boat is "Beach".
+Sarea of Smashed Boat is "Beach".
 
 to say ResolveEvent Smashed Boat:
 	say "     As you go along the beach, you come across a boat smashed up against some rocks. Seeing no one around, you move closer to investigate. From what you can tell, it looks like whoever was on this boat was trying to flee whatever was going on in the city, having stocked up on supplies, and a chart to the next city down the way. Unfortunately, it doesn't look like they made it that far... but you do decide to take some of their supplies with you, since you doubt they will be needing them anymore wherever or whatever they now are.";
@@ -145,7 +145,7 @@ Dragon Voyeurism	"Dragon Voyeurism"
 
 Dragon Voyeurism is a situation.
 ResolveFunction of Dragon Voyeurism is "[ResolveEvent Dragon Voyeurism]".
-The sarea of Dragon Voyeurism is "Beach".
+Sarea of Dragon Voyeurism is "Beach".
 when play begins:
 	add Dragon Voyeurism to BadSpots of FemaleList;
 	add Dragon Voyeurism to BadSpots of MaleList;
@@ -170,7 +170,7 @@ Relaxing Scene	"Relaxing Scene"
 
 Relaxing Scene is a situation.
 ResolveFunction of Relaxing Scene is "[ResolveEvent Relaxing Scene]".
-The sarea of Relaxing Scene is "Beach".
+Sarea of Relaxing Scene is "Beach".
 
 to say ResolveEvent Relaxing Scene:
 	say "     Moving along down the silent beach, a glint on the water catches your attention. You immediately realize that it was just a flash of light on the water, but the view is so impressive you stop and stare anyways. The sounds of the soft waves lapping the beach, the reflected glow of the light on the water, the crisp clean air, it all makes for such an idyllic and relaxing scene that you feel refreshed and happier after even just a moment of standing their soaking it all in..";
@@ -187,7 +187,7 @@ Plundered Boat	"Plundered Boat"
 
 Plundered Boat is a situation.
 ResolveFunction of Plundered Boat is "[ResolveEvent Plundered Boat]".
-The sarea of Plundered Boat is "Beach".
+Sarea of Plundered Boat is "Beach".
 
 to say ResolveEvent Plundered Boat:
 	say "     Walking along the beach, you come across a half sunk boat sticking out of the water, curiosity getting the best of you, you wade over to inspect the boat. Hauling yourself aboard you immediately note signs of a struggle, it looks like several people tried to put up some kind of fight here, but there are no signs of either the winners or the losers. Moving around the boat, you note that someone appears to have already plundered the boat and taken anything of value, although you do find a bit of ripped cloth that looks like it might be from some sort of bandana, the black cloth appears to have the skull and bones of a pirate logo printed on it, although the skulls teeth are pointed and shark-like. Shrugging and unable to find anything of use, you wade back to the beach and continue on your way.";
@@ -202,7 +202,7 @@ Tainted Yacht	"Tainted Yacht"
 
 Tainted Yacht is a situation.
 ResolveFunction of Tainted Yacht is "[ResolveEvent Tainted Yacht]".
-The sarea of Tainted Yacht is "Beach".
+Sarea of Tainted Yacht is "Beach".
 when play begins:
 	add Tainted Yacht to badspots of HermList;
 	add Tainted Yacht to BadSpots of FurryList;
@@ -232,7 +232,7 @@ Strange Castle	"Strange Castle"
 
 Strange Castle is a situation.
 ResolveFunction of Strange Castle is "[ResolveEvent Strange Castle]".
-The sarea of Strange Castle is "Beach".
+Sarea of Strange Castle is "Beach".
 
 to say ResolveEvent Strange Castle:
 	say "     Traveling along the beach, you come to an area where someone has obviously recently been hard at work. Just sitting there near the surf is an extremely intricately made sand castle, a magnificent looking edifice with numerous carefully sculpted towers and many fine details. Looking around you can't see any sign of who might have made such a thing, and then just abandoned it here. Shaking your head at the strange little building, you continue along your way, the waves behind you beginning to erode away at the small castle's structure.";
@@ -248,7 +248,7 @@ Otter View	"Otter View"
 
 Otter View is a situation.
 ResolveFunction of Otter View is "[ResolveEvent Otter View]".
-The sarea of Otter View is "Beach".
+Sarea of Otter View is "Beach".
 when play begins:
 	add Otter View to BadSpots of FurryList;
 
@@ -266,7 +266,7 @@ Cream Stand	"Cream Stand"
 
 Cream Stand is a situation.
 ResolveFunction of Cream Stand is "[ResolveEvent Cream Stand]". The level of Cream Stand is 2.
-The sarea of Cream Stand is "Beach".
+Sarea of Cream Stand is "Beach".
 when play begins:
 	add Cream Stand to badspots of HermList;
 	add Cream Stand to BadSpots of FurryList;
@@ -296,7 +296,7 @@ Lucky Seashell	"Lucky Seashell"
 
 Lucky Seashell is a situation.
 ResolveFunction of Lucky Seashell is "[ResolveEvent Lucky Seashell]".
-The sarea of Lucky Seashell is "Beach".
+Sarea of Lucky Seashell is "Beach".
 
 to say ResolveEvent Lucky Seashell:
 	say "     As you wander along the beach, you enjoy the feel of the sand underneath your feet and the beautiful sky overhead... until you nearly trip on something half buried in the sand. Cursing you look down and discover a large seashell was revealed when you nearly tripped over it, curiously you pick the shell up and marvel at the iridescent sheen of the shell. Just holding the thing makes you feel a bit better about things, who knows, maybe finding the shell means today will be a lucky day after all you think to yourself!";

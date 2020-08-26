@@ -73,8 +73,8 @@ AnalVirgin of Kyle is true.
 PenileVirgin of Kyle is true.
 SexuallyExperienced of Kyle is false.
 MainInfection of Kyle is "".
-The description of Kyle is "[KyleDesc]".
-The conversation of Kyle is { "<This is nothing but a placeholder!>" }.
+Description of Kyle is "[KyleDesc]".
+Conversation of Kyle is { "<This is nothing but a placeholder!>" }.
 The scent of Kyle is "     Kyle smells like scales and paper.".
 Kyle is in Brookstone Books.
 
@@ -446,7 +446,7 @@ Angry Snake	"Angry Snake"
 Angry Snake is a situation.
 ResolveFunction of Angry Snake is "[ResolveEvent Angry Snake]".
 The level of Angry Snake is 4.
-The sarea of Angry Snake is "High".
+Sarea of Angry Snake is "High".
 Angry Snake is inactive.
 
 to say ResolveEvent Angry Snake:

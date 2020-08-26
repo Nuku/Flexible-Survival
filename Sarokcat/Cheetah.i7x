@@ -237,9 +237,9 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "cheetah milk"	"The creamy milk collected from a Cheetah. It has a potent smell to it, yet it's slightly enticing."	1	cheetah milk
 
-cheetah milk is a grab object. It is milky. It is temporary. Understand "milk" as cheetah milk. cheetah milk is infectious. The strain of cheetah milk is "Cheetah Woman".
+cheetah milk is a grab object. It is milky. It is temporary. Understand "milk" as cheetah milk. cheetah milk is infectious. Strain of cheetah milk is "Cheetah Woman".
 
-The usedesc of cheetah milk is "[drinkcheetahmilk]";
+Usedesc of cheetah milk is "[drinkcheetahmilk]";
 
 to say drinkcheetahmilk:
 	say "     You drink down the cheetah milk. It has a strangely pleasant taste and it helps quench your thirst a little. You feel a little more lustful and excited.";
@@ -287,7 +287,7 @@ to say cheetahwomaninheat:
 	increase Libido of Player by 5;
 	if Libido of Player > 99, now Libido of Player is 99;
 	if Libido of Player > 90 and slutfucked > 8:
-		if there are no dangerous doors in the location of the player:
+		if there are no dangerous doors in the Location of Player:
 			if location of Player is fasttravel:
 				now battleground is "Outside";
 			else:
@@ -295,7 +295,7 @@ to say cheetahwomaninheat:
 				increase slutfucked by 1;
 				now battleground is "void";
 		else:
-			let y be a random dangerous door in the location of the player;
+			let y be a random dangerous door in the Location of Player;
 			now battleground is marea of y;
 		if battleground is not "void":
 			let cmonlist be a list of numbers;
@@ -322,7 +322,7 @@ to say cheetahwomaninheat:
 				infect;
 				decrease score by 5;
 				decrease morale of Player by 3;
-				if Player is kinky, increase the morale of the player by 6;
+				if Player is kinky, increase Morale of Player by 6;
 			else:
 				say "As your feline heat courses through you, you sniff the air, trying to catch the scent of a nearby feline, but are unsuccessful[if cmonlist is empty]. Perhaps you'd best head somewhere you know there are more kitties to play with, your heat-filled mind decides[end if].";
 				increase slutfucked by 1;

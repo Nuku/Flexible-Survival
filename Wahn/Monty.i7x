@@ -126,8 +126,8 @@ SexuallyExperienced of Monty is true.
 TwistedCapacity of Monty is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Monty is false. [steriles can't knock people up]
 MainInfection of Monty is "Human".
-The description of Monty is "[MontyDesc]".
-The conversation of Monty is { "Oh, hello." }.
+Description of Monty is "[MontyDesc]".
+Conversation of Monty is { "Oh, hello." }.
 
 to say MontyDesc:
 	if debugactive is 1:

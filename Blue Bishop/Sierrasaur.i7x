@@ -311,7 +311,7 @@ to sierrasex:
 		say "     [if scalevalue of Player < 4]Nearly banging you in the head with that perpetually erect dick, it's[else]It's[end if] not particularly graceful as it moves forward to position its slit over your crotch. Descending to slowly grind against your [cock size desc of Player] dick[smn], [if HP of Player < 1]you're not exactly in the mood for this sort of crude foreplay, but when you try to struggle free, it just pins you down and continues grinding until you're finally compelled into arousal[else if sierrapure is true]your strain of infection makes you already pretty hard as it is, and as such it doesn't take much work to render you fully aroused[else]the fairly crude foreplay eventually does compel you into arousal[end if], raising only to slowly sink back down,[if Cock Count of Player > 1] one of[end if] your tool[smn] now between its lips.";
 		say "     The taut cleft is definitely not all that yielding to any sort of intrusion, [if sierrapure is true]though your strain makes you equally as firm, allowing you to impale it with fair ease[else]subjecting you to a fair bit of duress before it finally parts to abide your length[end if], the inner walls only marginally softer on you. Not given much in the way of lubrication, the beast only eases you into the matter by first attempting to engulf the entirety of its length[if Cock Length of Player > 14], a feat not particularly easy given your size[end if]";
 		if Player is knotted and Cock Length of Player > 14:
-			say ". At first, it becomes a confused by your knot, firmly trying to impale itself with it. Too large for its tight hole to abide, it subjects you to the strain of this endeavor for a while before finally giving up, using what it has access to and bracing itself for what is to follow.";
+			say ". At first, it becomes a confused by your knot, firmly trying to impale itself with it. Too large for its tight hole to abide, it subjects you to Strain of this endeavor for a while before finally giving up, using what it has access to and bracing itself for what is to follow.";
 		else:
 			say ". With little work, your tool disappears into its depths[if Player is knotted], knot included[end if]. Shifting slightly, it appears to brace itself for what is to follow.";
 		say "     You guess that it used this to know exactly how long you were, because it immediately raises its crotch just high enough that only a portion of your head remains engulfed, before bearing down firmly once more. It gradually builds a motion of repeating this very deliberate and forceful act, the motion quickly slicked with your pre and the beast's emergent sexual fluids, which ooze down to stain your crotch. [if HP of Player < 1]This ritual isn't particularly pleasing to you, but its persistence eventually starts to get to you[else if sierrapure is true]Built exactly for this use[else]The ritual quickly having an effect on you[end if], the weight of its wanton assault eventually squeezes a moan out of your lips, drowned out by the sound of its sex shamelessly slapping against you, moving you with each descent.";
@@ -566,9 +566,9 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "earthen seed"	"A small vial of peculiar, regenerative ejaculate"	1	earthen seed
 
-earthen seed is a grab object. earthen seed is infectious. The strain of earthen seed is "Sierrasaur". earthen seed is cum.
+earthen seed is a grab object. earthen seed is infectious. Strain of earthen seed is "Sierrasaur". earthen seed is cum.
 the scent of earthen seed is "The warm swill has a heady, masculine scent.".
-The usedesc of earthen seed is "[usesierraseed]";
+Usedesc of earthen seed is "[usesierraseed]";
 
 to say usesierraseed:		[only alters sizes, not gender]
 	choose row MonsterID from Table of Random Critters;

@@ -261,8 +261,8 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "corota venom"	"Some toxic, ochre yellow liquid that you've preserved in a jar... for some reason."	1	corota venom
 
-corota venom is a grab object. corota venom is infectious. The strain of corota venom is "Corota".
-the usedesc of corota venom is "[corotavenomuse]".
+corota venom is a grab object. corota venom is infectious. Strain of corota venom is "Corota".
+Usedesc of corota venom is "[corotavenomuse]".
 
 to say corotavenomuse:
 	say "     Feeling brave or foolish, you try drinking down the snake venom. It stings as it goes down, making you weak in the knees and cough as it starts to burn at your throat and stomach. You curl up in a ball of pain as the heat spreads, setting off something inside you.";

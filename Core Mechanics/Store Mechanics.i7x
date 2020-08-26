@@ -9,7 +9,7 @@ Book 1 - The Black Market [Store within the zephyr building]
 
 Section 1 - Zephyr Black Market Medicine Case [Modification Items]
 
-The medicine case is a backdrop. It is in Zephyr Storeroom. The description of the medicine case is "[medicine case list]".
+The medicine case is a backdrop. It is in Zephyr Storeroom. Description of the medicine case is "[medicine case list]".
 
 Instead of smelling the medicine case:
 	say "The medicine case has little in the way of a scent of its own.";
@@ -52,7 +52,7 @@ name	price	object	allowed
 
 Section 2 - Zephyr Black Market Outfitters Rack [Equipment]
 
-The outfitters rack is a backdrop. It is in Zephyr Storeroom. The description of the outfitters rack is "[outfitters rack list]".
+The outfitters rack is a backdrop. It is in Zephyr Storeroom. Description of the outfitters rack is "[outfitters rack list]".
 
 Instead of smelling the outfitters rack:
 	say "The outfitters rack has little in the way of a scent of its own.";
@@ -96,7 +96,7 @@ Book 2 - The Pretty Kitty [Store within the mall]
 
 Section 1 - TPK male clothing section [Clothing That Increases Masculinity]
 
-TPK male clothing section is a backdrop. It is in Pretty Kitty. The description of TPK male clothing section is "[TPK male clothing section desc]".
+TPK male clothing section is a backdrop. It is in Pretty Kitty. Description of TPK male clothing section is "[TPK male clothing section desc]".
 
 to say TPK male clothing section desc:
 	say "     The male clothing section holds many pieces of clothing and individual outfits, some of which catch your eye. Price tags on each of the articles of clothing have been darkened with a black marker, with the new price listed as in terms of freecreds. You can [link]browse[as]browse TPK male clothing[end link] in the male clothing section if you want.";
@@ -881,7 +881,7 @@ to say BlackCombatBootsTalk: [item selection (level 4)]
 
 Section 2 - TPK female clothing section [Clothing That Increases Femininity]
 
-The TPK female clothing section is a backdrop. It is in Pretty Kitty. The description of the TPK female clothing section is "[TPK female clothing section desc]".
+The TPK female clothing section is a backdrop. It is in Pretty Kitty. Description of the TPK female clothing section is "[TPK female clothing section desc]".
 
 to say TPK female clothing section desc:
 	say "     The female clothing section holds many pieces of clothing and individual outfits, some of which catch your eye. Price tags on each of the articles of clothing have been darkened with a black marker, with the new price listed as in terms of freecreds. You can [link]browse[as]browse TPK female clothing[end link] in the female clothing section if you want.";
@@ -2103,7 +2103,7 @@ Book 3 - Restrained Desire [Store formally known as the "pornstore" within the r
 
 Section 1 - RD costume clothing section
 
-The RD costume clothing section is a backdrop. It is in Restrained Desire. The description of the RD costume clothing section is "[RD costume clothing section desc]".
+The RD costume clothing section is a backdrop. It is in Restrained Desire. Description of the RD costume clothing section is "[RD costume clothing section desc]".
 
 to say RD costume clothing section desc:
 	say "     The costume clothing section holds many pieces of clothing and individual outfits, many of these are part of roleplay outfits. Price tags on each of the articles of clothing have been darkened with black nail polish, with the new price listed as in terms of freecreds. You can [link]browse[as]browse RD costume clothing[end link] in the costume clothing section if you want.";

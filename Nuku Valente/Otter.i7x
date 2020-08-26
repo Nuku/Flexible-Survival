@@ -40,7 +40,7 @@ to say otterdesc:
 to say otterstrike:
 	if MaleList is banned and FemaleList is banned and HermList is banned:
 		say "The otters, shocked by your banning of all genders, join hands in a circle around you and yell 'WTF!' This sonic attack is devastating, crushing your bones into jelly.";
-		decrease the HP of Player by 1000;
+		decrease HP of Player by 1000;
 	else if MaleList is banned and FemaleList is not banned:
 		say "[one of]An otter grabs you around the midsection, her pussy grinding against your hip as she hauls you underwater for a moment of panic.[or]An otter leaps from the water just to land on you, plunging you into the depths. You learn that it is as she as her slender breasts press against you even as you struggle for breath.[or]Two otters grab either of your hands and play tug o war with you, arguing over who gets to play first.[or]Even as you try to defend yourself, you feel something warm descend on your groin, lapping at you eagerly and unexpectedly. You squeak in surprise, but hands grab at you and pull you beneath the waves.[at random]";
 	else if FemaleList is banned and MaleList is not banned:
@@ -332,9 +332,9 @@ name	desc	weight	object
 
 Tasty Fish is a grab object.
 
-Tasty Fish is infectious. The strain of Tasty Fish is "Sea Otter".
+Tasty Fish is infectious. Strain of Tasty Fish is "Sea Otter".
 usedesc of Tasty Fish is "[Fish]".
-The purified of Tasty Fish is "food".
+Purified of Tasty Fish is "food".
 
 To say Tasty Fish:
 	decrease hunger of Player by 15;

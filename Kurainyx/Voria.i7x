@@ -56,8 +56,8 @@ PenileVirgin of Voria is false.
 SexuallyExperienced of Voria is true.
 TwistedCapacity of Voria is true. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Voria is true. [steriles can't knock people up]
-The description of Voria is "[VoriaDesc]". [In Section 3 - Scenes]
-The conversation of Voria is { "Plant noises" }.
+Description of Voria is "[VoriaDesc]". [In Section 3 - Scenes]
+Conversation of Voria is { "Plant noises" }.
 The scent of Voria is "     Voria has a distinct floral scent mixed with the smell of sex.".
 
 
@@ -70,7 +70,7 @@ Plant Takeover	"Plant Takeover"
 
 Plant Takeover is a situation.
 ResolveFunction of Plant Takeover is "[ResolveEvent Plant Takeover]".
-The sarea of Plant Takeover is "Outside".
+Sarea of Plant Takeover is "Outside".
 
 to say ResolveEvent Plant Takeover:
 	say "     Roving the streets of the infected city, you come across an odd-looking store that makes you pause. While the place is a seemingly ordinary garden store, the reason the place caught your eye is because its storefront window is completely covered by vines, leaves, and other vegetation from the inside. Curious, you decide to investigate the building. Finding the door unobstructed, you walk into the store's interior, cautious for any signs of danger. What you find is an utter mess. Just like the storefront window, all sorts of plants have grown to larger than normal sizes, filling more than half the store with green leaves and a veritable bouquet of flowers larger than your head. It doesn't take long for you to deduce what caused all of this unnatural growth. The scent of sex permeates the air, and behind patches of green, you see dried cum stains spalltered all over the place. It seems that several horny people had decided to have a very messy romp here, and although it seems like it has been a long time since then, they certainly left their mark behind. Their nanite-infused liquid lust has infected the plants, causing them to rapidly grow out of control.";
@@ -211,11 +211,11 @@ Carnivorous Plant is a pet.
 NPCObject of Carnivorous Plant is Voria.
 understand "Voria" as Carnivorous Plant.
 printed name of Carnivorous Plant is "Voria".
-The description of Carnivorous Plant is "[CarnivorousPlantDesc]".
-Carnivorous Plant is a part of the player.
-The weapon damage of Carnivorous Plant is 10.
+Description of Carnivorous Plant is "[CarnivorousPlantDesc]".
+Carnivorous Plant is a part of Player.
+Weapon Damage of Carnivorous Plant is 10.
 The level of Carnivorous Plant is 1.
-The Dexterity of Carnivorous Plant is 15.
+Dexterity of Carnivorous Plant is 15.
 The summondesc of Carnivorous Plant is "[CarnivorousPlantSummon]".
 The dismissdesc of Carnivorous Plant is "[CarnivorousPlantDismiss]".
 The assault of Carnivorous Plant is "[CarnivorousPlantAssault]".

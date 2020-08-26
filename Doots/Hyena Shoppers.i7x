@@ -6,7 +6,7 @@ Hyena Shoppers	"Hyena Shoppers"
 
 Hyena Shoppers is a situation.
 ResolveFunction of Hyena Shoppers is "[ResolveEvent Hyena Shoppers]".
-The sarea of Hyena Shoppers is "Outside".
+Sarea of Hyena Shoppers is "Outside".
 
 when play begins:
 	add Hyena Shoppers to BadSpots of FurryList;

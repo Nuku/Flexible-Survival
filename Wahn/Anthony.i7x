@@ -91,8 +91,8 @@ Virgin of Anthony is true.
 AnalVirgin of Anthony is true.
 PenileVirgin of Anthony is false.
 SexuallyExperienced of Anthony is true.
-The description of Anthony is "[AnthonyDesc]".
-The conversation of Anthony is { "Mew!" }.
+Description of Anthony is "[AnthonyDesc]".
+Conversation of Anthony is { "Mew!" }.
 The icon of Anthony is Figure of Anthony_clothed_icon.
 
 instead of sniffing Anthony:

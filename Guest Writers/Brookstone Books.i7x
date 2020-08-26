@@ -15,7 +15,7 @@ Brookstone Books is a room. Brookstone Books entrance is a door. It is south of 
 Instead of examining the Brookstone Books entrance:
 	say "Through the store front windows and entrance, you make out [the other side of the Brookstone Books entrance].";
 
-The description of Brookstone Books is "[bstonebooks]".
+Description of Brookstone Books is "[bstonebooks]".
 
 To say bstonebooks:
 	If findwires is 2 and fixedgens is 3:
@@ -38,8 +38,8 @@ object	name
 Beverly	"Beverly"
 
 Beverly is a woman.
-The description of Beverly is "     Behind a register counter is what looks like a mouse with green eyes intently reading a book, having not noticed you yet. The thick locks of blonde, curly hair on its head fall cutely around their large ears and flows down to frame their slender neck. From the glow of the candles you can make out that the fur of their face and muzzle appears to be a dark, golden-cream in color, and seems to shine even in the low light. Pierced in her right gray ear are a couple of medium-sized gold hooped earrings.".
-The conversation of Beverly is { "Squeak!" }.
+Description of Beverly is "     Behind a register counter is what looks like a mouse with green eyes intently reading a book, having not noticed you yet. The thick locks of blonde, curly hair on its head fall cutely around their large ears and flows down to frame their slender neck. From the glow of the candles you can make out that the fur of their face and muzzle appears to be a dark, golden-cream in color, and seems to shine even in the low light. Pierced in her right gray ear are a couple of medium-sized gold hooped earrings.".
+Conversation of Beverly is { "Squeak!" }.
 
 the scent of Beverly is "She smells like the books surrounding her mixed with a hint of hay.".
 
@@ -84,7 +84,7 @@ Bookshelves	"Bookshelves"
 
 Bookshelves is a man
 
-The description of bookshelves is "     All around the store are bookshelves and tables loaded with old, used, and new books that run the gamut of subjects. Even after having visited the store in the past, you are still amazed by the amount of books the store has to [link][bold type]browse[roman type][as]browse books[end link] and [link][bold type]read[roman type][as]read books[end link] through.".
+Description of bookshelves is "     All around the store are bookshelves and tables loaded with old, used, and new books that run the gamut of subjects. Even after having visited the store in the past, you are still amazed by the amount of books the store has to [link][bold type]browse[roman type][as]browse books[end link] and [link][bold type]read[roman type][as]read books[end link] through.".
 
 the scent of the bookshelves is "The books smell of musty tones mingling with the scent of new papers and the burning candles.".
 
@@ -110,7 +110,7 @@ carry out browsebooks:
 		If bevtalk > 1:
 			say "     Not finding anything of interest right now in the bookstore, you walk over to Beverly to see what she is reading. When you approach, she looks up and smiles at you. 'How's it going?' When you ask what she is reading, she giggles softly. 'Just doing a crossword in this magazine of puzzles I found. Want to help?' Nodding, you help her out with the current crossword she is working on. When it's completed you realize, as you yawn and stretch, that the time just flew by. 'Thanks for your help. Some of those clues were pretty tough, weren't they?' ";
 			If intelligence of Player < 20:
-				Let bonus be ((the intelligence of the player minus 10) divided by 2);
+				Let bonus be ((Intelligence of Player minus 10) divided by 2);
 				Let diceroll be a random number from 1 to 20;
 				Increase diceroll by bonus;
 				If diceroll >= 12:

@@ -519,7 +519,7 @@ name	desc	weight	object
 "hellfire seed"	"The white, gooey seed of one of your past demonic lovers. It smells very sweet, a little like burnt cream, and feels really hot."	1	hellfire seed
 
 hellfire seed is a grab object.
-the usedesc of hellfire seed is "[hellfire seed use]";
+Usedesc of hellfire seed is "[hellfire seed use]";
 
 to say hellfire seed use:
 	say "     The warm, sticky liquid tastes almost too hot, but very sweet, as you drink it. You feel the warm seed going down your throat, leaving the delightful sensation of a tasty and hot beverage.";

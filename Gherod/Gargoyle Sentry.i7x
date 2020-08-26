@@ -18,7 +18,7 @@ Gargoyle Sentry	"Gargoyle Sentry"
 
 Gargoyle Sentry is a situation.
 ResolveFunction of Gargoyle Sentry is "[ResolveEvent Gargoyle Sentry]".
-The sarea of Gargoyle Sentry is "Outside".
+Sarea of Gargoyle Sentry is "Outside".
 When play begins:
 	add Gargoyle Sentry to BadSpots of MaleList;
 	add Gargoyle Sentry to BadSpots of VoreList;
@@ -465,8 +465,8 @@ SexuallyExperienced of Krumirr is false.
 TwistedCapacity of Krumirr is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Krumirr is true. [steriles can't knock people up]
 MainInfection of Krumirr is "Gargoyle".
-The description of Krumirr is "[Krumirrdesc]".
-The conversation of Krumirr is { "<This is nothing but a placeholder!>" }.
+Description of Krumirr is "[Krumirrdesc]".
+Conversation of Krumirr is { "<This is nothing but a placeholder!>" }.
 The scent of Krumirr is "     Krumirr's scent is animalistic, despite him being made of stone, or a hybrid between rock and flesh. It is also a very masculine one, and it is unlike most gargoyles".
 
 to say KrumirrDesc:
@@ -730,7 +730,7 @@ Object	Name
 Chapel Of Abyss	"Chapel Of Abyss"
 
 Chapel Of Abyss is a room. It is sleepsafe.
-The description of Chapel Of Abyss is "[ChapelAbyssDesc]".
+Description of Chapel Of Abyss is "[ChapelAbyssDesc]".
 
 to say ChapelAbyssDesc:
 	say "     This small chapel is surrounded only by darkness when its doors are closed behind you. Inside, you can see various different mementos, artifacts and talismans of different shapes, sizes and colors, all seemingly related to some sort of cult or religion. The floor is made of polished stone, and there is a pedestal in the center of the furthest wall where the Gargoyle Sentry poses during his dormant slumber. When he lets you in, his bright orange eyes are part of the scenery, no matter in which direction you glance towards.";

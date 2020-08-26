@@ -115,7 +115,7 @@ Police Station Twelve	"Police Station Twelve"
 
 Police Station Twelve is a room. It is fasttravel. It is private. It is sleepsafe.
 The earea of Police Station Twelve is "Outside".
-The description of Police Station Twelve is "[policestationdesc]".
+Description of Police Station Twelve is "[policestationdesc]".
 the scent of Police Station Twelve is "Despite the cleanup, there's still a lingering scent of sex in the air.".
 PoliceStationTwelvePopulation is a number that varies.
 PoliceStationTwelveInfpop is a number that varies.
@@ -128,7 +128,7 @@ Object	Name
 Police Lockerroom	"Police Lockerroom"
 
 Police Lockerroom is a room. It is sleepsafe. Police Lockerroom is east of Police Station Twelve.
-The description of Police Lockerroom is "[policelockerdesc]".
+Description of Police Lockerroom is "[policelockerdesc]".
 The scent of Police Lockerroom is "Despite the cleanup, there's still a lingering scent of sex in the air.".
 
 Table of GameRoomIDs (continued)
@@ -136,7 +136,7 @@ Object	Name
 Cell Block A	"Cell Block A"
 
 Cell Block A is a room. It is sleepsafe. Cell Block A is down from Police Station Twelve.
-The description of Cell Block A is "[CellBlockAdesc]".
+Description of Cell Block A is "[CellBlockAdesc]".
 The scent of Cell Block A is "Despite the cleanup, there's still a lingering scent of sweat, sex and other less pleasant odors.".
 
 to say policestationdesc:
@@ -1228,13 +1228,13 @@ Survivor Group	"Survivor Group"
 
 Survivor Group is a situation.
 ResolveFunction of Survivor Group is "[ResolveEvent Survivor Group]". Survivor Group is inactive.
-The sarea of Survivor Group is "Forest".
+Sarea of Survivor Group is "Forest".
 sgtimer is a number that varies. sgtimer is usually 255.
 
 to say ResolveEvent Survivor Group:
 	if HP of Alexandra is 61:
 		say "     While traveling through the forest, you follow the broken paths of streets, sidewalks and buildings torn up by the trees. Reminded of Alexandra's request that you look around for potential survivors, you keep an eye on the scenery for any place which might make a good place to hide as you work your way deeper into the bizarre woods.";
-		let the bonus be (( the perception of the player minus 10 ) divided by 2);
+		let the bonus be (( Perception of Player minus 10 ) divided by 2);
 		let the dice be a random number from 1 to 20;
 		if "Wary Watcher" is listed in feats of Player:
 			increase bonus by 2;
@@ -1249,11 +1249,11 @@ to say ResolveEvent Survivor Group:
 			say "     You talk to this ragtag collection of survivors, learning how William had found this place intact and led several others there during the early days of the outbreak. The forest had spread very quickly, most of it springing up during the first few hours. Some of them had even seen people being grabbed by the trees and turned into fresh saplings themselves. The bingo hall, closed and empty that night, probably remained unscathed because of that. They do inform you that the trees have been slowly edging closer. They're not sure if it's new trees spouting up or those already there moving in when unobserved.";
 			say "     While the bingo hall's concession stand was stocked with snacks and drinks, those are pretty much gone by this point. They've sent off scavenging parties, but it's getting harder and they've got to go further to find safe supplies each time they go out. The wolves of the forest have also been spotted hunting nearer to the parking lot glade, adding to their worries. While you'd been figuring on coming across a handful at most, this group of about thirty is going to be more than you'd anticipated dealing with at once. But with their condition deteriorating, you're hopeful that you'll be able to convince them to follow you back to the security of the police station.";
 			WaitLineBreak;
-			let the bonus be (( the charisma of the player minus 10 ) divided by 2);
+			let the bonus be (( Charisma of Player minus 10 ) divided by 2);
 			let the dice be a random number from 1 to 20;
 			let humanlikebonus be false;
 			if 2 is listed in bookcollection, increase bonus by 2;
-			if the player is facially human and the player is skintone human and the tail of the player is "" and Breast Size of Player <= 6 and Cock Length of Player <= 18 and Ball Size of Player <= 4 and Nipple Count of Player <= 2: [The player appears human to casual scrutiny and does not have hugely oversized junk that cannot be hidden.]
+			if the player is facially human and the player is skintone human and the tail of Player is "" and Breast Size of Player <= 6 and Cock Length of Player <= 18 and Ball Size of Player <= 4 and Nipple Count of Player <= 2: [The player appears human to casual scrutiny and does not have hugely oversized junk that cannot be hidden.]
 				increase bonus by 2;
 				now humanlikebonus is true;
 			say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 14: ";
@@ -1547,7 +1547,7 @@ Microchip Factory	"Microchip Factory"
 
 Microchip Factory is a situation.
 ResolveFunction of Microchip Factory is "[ResolveEvent Microchip Factory]". Microchip Factory is inactive.
-The sarea of Microchip Factory is "Capitol".
+Sarea of Microchip Factory is "Capitol".
 
 to say ResolveEvent Microchip Factory:
 	say "     This area of the district seems a little less hard-hit than most, with minor fire damage and instead thicker coating of volcanic ash. There are some tracks through here, but not human ones and rather those of some four-footed creatures. Staying on your guard, you make your way to the Microchip Factory within a high-tech industrial park. It has a short office tower attached to a larger two-story factory floor.";
@@ -1583,7 +1583,7 @@ ResolveFunction of Overmind's Retaliation is "".
 Overmind's Retaliation is inactive.
 Prereq1 of Overmind's Retaliation is Microchip Factory.
 The level of Overmind's Retaliation is 0.
-The sarea of Overmind's Retaliation is "Nowhere".
+Sarea of Overmind's Retaliation is "Nowhere".
 
 before navigating Police Station Twelve while HP of Alexandra is 70:
 	OvermindsRetaliationEvent;
@@ -1637,7 +1637,7 @@ to OvermindsRetaliationEvent:
 		WaitLineBreak;
 		say "     There is a loud crash, and the sound of shattering glass echoes from the doorway behind you. It sounds like the assault has begun, and Alexandra still isn't here. 'I'll go down and make sure the civilians are alright and doing as they are told, though I suppose I'm a civilian too,' Paula informs you as she tucks the taser into her uniform and begins to descend through the manhole. [if Player is submissive]'You two wait as long as you can for Alexandra to join you, but be careful, I doubt that I can lead these people anywhere without the help that you give.' [else]Jimmy seems determined not to leave without the doberman police officer unless absolutely necessary, so you tell the vixen that you will remain here with him until Alexandra joins you or the automatons require your retreat. [end if]With that, she disappears from view, leaving you to listen to the desecration of the police station. You hear a chillingly calm voice resonate down the passageway, 'Where are you, little police bitch? Where's the bravado and threats now that I'm not a prisoner? Come out, come out wherever you are.' It would appear that the Master Mind is loose, and it would seem that her ire is directed at Alexandra.";
 	else: [Paula not rescued]
-		say "     Entering the locker room, you are met by the business end of a taser, though with how much it is shaking and the short corgi holding it, you doubt that many people would be intimidated. Upon seeing that it is you and not an automaton, Jimmy lowers it and gives [if scalevalue of Player is 5]your leg a quick hug[else if scalevalue of Player is 1]you a wave[else]you a quick hug[end if], the strain of being responsible for evacuating civilians showing on his grim face. 'I was beginning to worry that no one would be coming and that those horrible androids would force there way in here.' He seems to be fighting back tears, and you give him a scratch behind his ears and ask how the evacuation is going. 'That should be the last person,' he says, gesturing at a woman clambering through the manhole. 'Other than us and Alexandra, everyone is out and should be waiting at the bottom of the ladder. Anything hostile down there should be dissuaded from attacking such a large group but just in case, they have a few tasers and batons. Where is Alexandra by the way?' You reply that the doberman should be coming soon, but wanted to make sure everyone else had got out first. The corgi's ears dip for a moment but a reassuring pat on the shoulder from you restores some of his usual cheerfulness. 'I'm sure she'll be fine. She's a tough cookie,' the small dog says in an attempt to reassure himself as well as you.";
+		say "     Entering the locker room, you are met by the business end of a taser, though with how much it is shaking and the short corgi holding it, you doubt that many people would be intimidated. Upon seeing that it is you and not an automaton, Jimmy lowers it and gives [if scalevalue of Player is 5]your leg a quick hug[else if scalevalue of Player is 1]you a wave[else]you a quick hug[end if], Strain of being responsible for evacuating civilians showing on his grim face. 'I was beginning to worry that no one would be coming and that those horrible androids would force there way in here.' He seems to be fighting back tears, and you give him a scratch behind his ears and ask how the evacuation is going. 'That should be the last person,' he says, gesturing at a woman clambering through the manhole. 'Other than us and Alexandra, everyone is out and should be waiting at the bottom of the ladder. Anything hostile down there should be dissuaded from attacking such a large group but just in case, they have a few tasers and batons. Where is Alexandra by the way?' You reply that the doberman should be coming soon, but wanted to make sure everyone else had got out first. The corgi's ears dip for a moment but a reassuring pat on the shoulder from you restores some of his usual cheerfulness. 'I'm sure she'll be fine. She's a tough cookie,' the small dog says in an attempt to reassure himself as well as you.";
 		WaitLineBreak;
 		say "     There is a loud crash, and the sound of shattering glass echoes from the doorway behind you. It sounds like the assault has begun, and Alexandra still isn't here. 'I'll go down and make sure that the civilians are alright and doing as they are told, though I suppose I'm a civilian too,' Jimmy says, clipping the taser to his vest and approaching the hole in the floor. 'I wish I was as brave as you, but I wouldn't want to face Alexandra's fury when she gets here if I let the survivors get carried off by sewer monsters.' While he is making a joke of it, you can see that he is conflicted about staying and waiting for the doberman and ensuring the safety of the people below. As he disappears, you shout reassurance that you will wait for the police woman, no matter what. You continue to wait before hearing a chillingly calm voice resonate down the passageway, 'Where are you, little police bitch? Where's the bravado and threats now that I'm not a prisoner? Come out, come out wherever you are.' It would appear that the Master Mind is loose, and it would seem that her ire is directed at Alexandra.";
 	say "     You are just beginning to worry about the doberman when you hear the hasty patter of paws on concrete, and she appears around the corner. 'Are all of the civilians evacuated? Yes? Good. [if HP of Paula > 2]Jimmy, down the hole now. [end if][if Player is not defaultnamed][name of Player][else]You[end if], with me just in case this doesn't work. To your surprise, she beckons for you to follow her back towards the approaching voice of the Master Mind, the mocking tones reverberating along the walls. As you walk, Alexandra explains what she has in mind, 'They seem to be quite mechanical and electronic in nature, so I'm hoping that I can disable them with water. If I can get them with the sprinklers then we may be able to end their menace to society.' Alexandra produces a lighter from her pocket and gives you a determined look. 'Ready to end this?'";

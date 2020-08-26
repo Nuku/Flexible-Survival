@@ -981,7 +981,7 @@ name	desc	weight	object
 "german shepherd male fur"	"A tuft of tan fur that looks like it has been pulled out of the coat of a German shepherd. It's nicely soft."	0	german shepherd male fur
 
 german shepherd male fur is a grab object.
-the usedesc of german shepherd male fur is "[GermanShepherdMaleFurUse]".
+Usedesc of german shepherd male fur is "[GermanShepherdMaleFurUse]".
 
 It is temporary.
 
@@ -998,7 +998,7 @@ name	desc	weight	object
 
 german shepherd male cum is a grab object. german shepherd male cum is cum.
 german shepherd male cum is infectious. Strain of german shepherd male cum is "German Shepherd Bitch".
-the usedesc of german shepherd male cum is "[GermanShepherdMaleCumUse]";
+Usedesc of german shepherd male cum is "[GermanShepherdMaleCumUse]";
 
 to say GermanShepherdMaleCumUse:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy fluid cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";

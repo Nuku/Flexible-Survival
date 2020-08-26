@@ -282,8 +282,8 @@ name	desc	weight	object
 "psionic egg"	"A strange, purple, fleshy egg that constantly secretes a clear, musky goo. You feel odd while holding it, and you swear you hear someone whispering nearby"	1	psionic egg
 
 psionic egg is a grab object.
-psionic egg is infectious. The strain of psionic egg is "Anthro Shaft Beast".
-the usedesc of psionic egg is "You hold the egg tightly in your hands. As you look at it, you hear a beautiful, enthralling voice calling out at you. When you come to your senses, the egg has melted and is now being absorbed by your skin.";
+psionic egg is infectious. Strain of psionic egg is "Anthro Shaft Beast".
+Usedesc of psionic egg is "You hold the egg tightly in your hands. As you look at it, you hear a beautiful, enthralling voice calling out at you. When you come to your senses, the egg has melted and is now being absorbed by your skin.";
 
 the scent of psionic egg is "The purple, fleshy egg has the musky scent of sex lingering over it.".
 

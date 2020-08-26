@@ -412,8 +412,8 @@ to say PoodleHeatSuccumb:
 	say "[victory entry]";
 	infect "Pink Poodle";
 	decrease the score by 5;
-	decrease the morale of the player by 3;
-	if Player is kinky, increase the morale of the player by 6;
+	decrease Morale of Player by 3;
+	if Player is kinky, increase Morale of Player by 6;
 
 Section 4 - Endings
 

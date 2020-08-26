@@ -223,8 +223,8 @@ instead of sniffing smilodon cum:
 	say "The cum has a strong, somewhat nutty scent.";
 
 smilodon cum is a grab object. smilodon cum is cum.
-smilodon cum is infectious. The strain of smilodon cum is "Saber Kitty".
-the usedesc of smilodon cum is "[smilodon cum use]";
+smilodon cum is infectious. Strain of smilodon cum is "Saber Kitty".
+Usedesc of smilodon cum is "[smilodon cum use]";
 
 to say smilodon cum use:
 	say "Taking out the small bottle you keep your smilodon cum in, you put it to your lips and chug down the creamy liquid. Tasty, and somehow you feel the need for more of it...";

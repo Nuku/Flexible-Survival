@@ -49,7 +49,7 @@ Sky Tower	"Sky Tower"
 Sky Tower is a situation.
 ResolveFunction of Sky Tower is "[ResolveEvent Sky Tower]". The level of Sky Tower is 2.
 Sky Tower is inactive.
-The sarea of Sky Tower is "High".
+Sarea of Sky Tower is "High".
 
 when play begins:
 	add Sky Tower to BadSpots of MaleList;
@@ -88,7 +88,7 @@ Object	Name
 Palace Near The Sun	"Palace Near The Sun"
 
 Palace Near The Sun is a room.
-The description of Palace Near The Sun is "[palacenearthesundesc]"
+Description of Palace Near The Sun is "[palacenearthesundesc]"
 
 to say palacenearthesundesc:
 	say "     The inside of the palace of the Sun God Horus is rather tastefully decorated. From what you saw when you took a much closer look at the entranceway, it had various tapestries hung all over the place, but in a decently put manner. However, each of the pieces of textile had the image of a person on it. What was unique though, was that some looked human a few with features like Horus, a lot of them actually looked like some of the mutants that you saw on the streets below, leaving you to wonder who they were. The Throne Room was a lot less decorated in the sense of objects, instead hieroglyphics were carved all over the place along with murals. Despite this though, it didn't make it any less wondrous.";
@@ -124,8 +124,8 @@ AnalVirgin of Horus is true.
 PenileVirgin of Horus is true.
 SexuallyExperienced of Horus is false.
 MainInfection of Horus is "".
-The description of Horus is "[HorusDesc]".
-The conversation of Horus is { "<This is nothing but a placeholder!>" }.
+Description of Horus is "[HorusDesc]".
+Conversation of Horus is { "<This is nothing but a placeholder!>" }.
 The scent of Horus is "     Horus gives off the pleasant smell of a wonderful summer day, with the sun shining softly onward. Under it is a vague hint of an airy scent with a tinge of an earthy one.".
 
 to say HorusDesc:
@@ -333,8 +333,8 @@ Virgin of Zerbo is false.
 AnalVirgin of Zerbo is true.
 PenileVirgin of Zerbo is false.
 SexuallyExperienced of Zerbo is true.
-The description of Zerbo is "[ZerboDesc]".
-The conversation of Zerbo is { "<This is nothing but a placeholder!>" }.
+Description of Zerbo is "[ZerboDesc]".
+Conversation of Zerbo is { "<This is nothing but a placeholder!>" }.
 The scent of Zerbo is "     Zerbo smells like electricity and chemicals, a combination which to you is a bit odd, but it probably fits the guy.".
 
 to say ZerboDesc:
@@ -480,7 +480,7 @@ Pediatrics Troublemakers	"Pediatrics Troublemakers"
 Pediatrics Troublemakers is a situation.
 ResolveFunction of Pediatrics Troublemakers is "[ResolveEvent Pediatrics Troublemakers]".
 Pediatrics Troublemakers is resolved.
-The sarea of Pediatrics Troublemakers is "High"
+Sarea of Pediatrics Troublemakers is "High"
 
 when play begins:
 	add Pediatrics Troublemakers to BadSpots of MaleList;
@@ -574,7 +574,7 @@ Patient Zero	"Patient Zero"
 Patient Zero is a situation.
 ResolveFunction of Patient Zero is "[ResolveEvent Patient Zero]".
 Patient Zero is resolved.
-The sarea of Patient Zero is "high"
+Sarea of Patient Zero is "high"
 
 to say ResolveEvent Patient Zero:
 	if HP of Horus is 8:
@@ -604,7 +604,7 @@ Nightmare Mutation	"Nightmare Mutation"
 Nightmare Mutation is a situation.
 ResolveFunction of Nightmare Mutation is "[ResolveEvent Nightmare Mutation]". The level of Nightmare Mutation is 10.
 Nightmare Mutation is inactive.
-The sarea of Nightmare Mutation is "Capitol".
+Sarea of Nightmare Mutation is "Capitol".
 
 when play begins:
 	add Nightmare Mutation to BadSpots of BodyHorrorList;
@@ -640,7 +640,7 @@ Nightmare Showdown	"Nightmare Showdown"
 Nightmare Showdown is a situation.
 ResolveFunction of Nightmare Showdown is "[ResolveEvent Nightmare Showdown]". The level of Nightmare Showdown is 15.
 Nightmare Showdown is inactive.
-The sarea of Nightmare Showdown is "capitol".
+Sarea of Nightmare Showdown is "capitol".
 
 when play begins:
 	add Nightmare Showdown to BadSpots of BodyHorrorList;

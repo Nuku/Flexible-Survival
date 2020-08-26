@@ -59,8 +59,8 @@ SexuallyExperienced of Sirius is true.
 TwistedCapacity of Sirius is true. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Sirius is false. [steriles can't knock people up]
 MainInfection of Sirius is "Alpha Wolf".
-The description of Sirius is "[SiriusDesc]".
-The conversation of Sirius is { "Informative" }.
+Description of Sirius is "[SiriusDesc]".
+Conversation of Sirius is { "Informative" }.
 The scent of Sirius is "     The towering wolf smells like a forest, a mixture of earthy scents. How he has managed to do this in the city, you do not know. Probably magic."
 
 to say SiriusDesc:

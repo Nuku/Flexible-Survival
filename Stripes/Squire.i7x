@@ -480,7 +480,7 @@ Serving Your Knight	"Serving Your Knight"
 
 Serving Your Knight is a situation.
 ResolveFunction of Serving Your Knight is "[ResolveEvent Serving Your Knight]".
-The sarea of Serving Your Knight is "Forest".
+Sarea of Serving Your Knight is "Forest".
 PCN is a number that varies. PCN is usually -1. [tracks the player crest]
 
 to say ResolveEvent Serving Your Knight:

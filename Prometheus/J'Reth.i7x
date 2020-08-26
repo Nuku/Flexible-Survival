@@ -56,7 +56,7 @@ Object	Name
 J'Reth's Room	"J'Reth's Room"
 
 J'Reth's Room is a room.
-The description of J'Reth's Room is "[J'RethsRoomDesc]".
+Description of J'Reth's Room is "[J'RethsRoomDesc]".
 
 to say J'RethsRoomDesc:
 	say "     While J'Reth seems to be living in a storage closet at the back of a gaming store that is now filled with sleeping bags and mattresses, it is large enough for a bed, a desk, and several rows of shelves. The shelves are covered in tabletop models such as trolls, dragons, and wolves, rulebooks for assorted games, and small pots of paint. Considering what you know about J'Reth, the room seems to suit [ObjectPro of J'Reth] very well. On the desk pushed into the corner against the wall is a computer but it doesn't appear to be plugged in so you doubt that the draco-mantis has used it recently. The walls are covered in promotional posters for various movies and games, colorful pins holding them in place.";
@@ -103,8 +103,8 @@ SexuallyExperienced of J'Reth is false.
 TwistedCapacity of J'Reth is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of J'Reth is true. [steriles can't knock people up]
 MainInfection of J'Reth is "Draco-Mantis".
-The description of J'Reth is "[J'RethDesc]".
-The conversation of J'Reth is { "Mantis Dragon sounds." }.
+Description of J'Reth is "[J'RethDesc]".
+Conversation of J'Reth is { "Mantis Dragon sounds." }.
 The scent of J'Reth is "     J'Reth smells of Mantis-Dragons and fairies in the woods."
 
 to say J'RethDesc:
@@ -919,7 +919,7 @@ Introduction By Soup	"Introduction By Soup"
 Introduction By Soup is a situation.
 ResolveFunction of Introduction By Soup is "[ResolveEvent Introduction By Soup]".
 The level of Introduction By Soup is 0.
-The sarea of Introduction By Soup is "Nowhere".
+Sarea of Introduction By Soup is "Nowhere".
 
 when play begins:
 	add Introduction By Soup to badspots of MaleList;
@@ -949,7 +949,7 @@ Mantis Meeting is a situation.
 ResolveFunction of Mantis Meeting is "[ResolveEvent Mantis Meeting]".
 Mantis meeting is inactive.
 The level of Mantis Meeting is 0.
-The sarea of Mantis Meeting is "Nowhere".
+Sarea of Mantis Meeting is "Nowhere".
 
 after going to Mall Foodcourt while (Mantis Meeting is active and Introduction By Soup is resolved and Mantis Meeting is not resolved and a random chance of 1 in 3 succeeds):
 	MantisMeetingEvent;
@@ -974,7 +974,7 @@ Soup & Sexual Gratification is a situation.
 ResolveFunction of Soup & Sexual Gratification is "[ResolveEvent Soup & Sexual Gratification]".
 Soup & Sexual Gratification is inactive.
 The level of Soup & Sexual Gratification is 0.
-The sarea of Soup & Sexual Gratification is "Nowhere".
+Sarea of Soup & Sexual Gratification is "Nowhere".
 
 after going to Mall Foodcourt while (Soup & Sexual Gratification is active and Mantis Meeting is resolved and Soup & Sexual Gratification is not resolved and carried of food > 0 and a random chance of 1 in 3 succeeds):
 	Soup&SexualGratificationEvent;
@@ -1024,7 +1024,7 @@ Reciprocal Thanks	"Reciprocal Thanks"
 Reciprocal Thanks is a situation.
 ResolveFunction of Reciprocal Thanks is "[ResolveEvent Reciprocal Thanks]".
 The level of Reciprocal Thanks is 0.
-The sarea of Reciprocal Thanks is "Nowhere".
+Sarea of Reciprocal Thanks is "Nowhere".
 
 after going to Mall Foodcourt while (Reciprocal Thanks is not resolved and Soup & Sexual Gratification is resolved and HP of J'Reth is 1 and a random chance of 1 in 3 succeeds):
 	AReciprocalThanksEvent;
@@ -1108,7 +1108,7 @@ Invitation to Storeroom	"Invitation to Storeroom"
 Invitation to Storeroom is a situation.
 ResolveFunction of Invitation to Storeroom is "[ResolveEvent Invitation to Storeroom]".
 The level of Invitation to Storeroom is 0.
-The sarea of Invitation to Storeroom is "Nowhere".
+Sarea of Invitation to Storeroom is "Nowhere".
 
 after going to Mall Foodcourt while (Reciprocal Thanks is resolved and Invitation to Storeroom is not resolved and HP of J'Reth is 1 and a random chance of 1 in 3 succeeds):
 	InvitationtoStoreroomEvent;

@@ -238,7 +238,7 @@ name	desc	weight	object
 
 estosterogen pill is a grab object. It is temporary.
 
-the usedesc of estosterogen pill is "[estosterogen pill use]";
+Usedesc of estosterogen pill is "[estosterogen pill use]";
 
 before using a grab object (called x):
 	if x is estosterogen pill:

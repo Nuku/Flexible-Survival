@@ -42,7 +42,7 @@ Gryphon's Plot	"Gryphon's Plot"
 
 Gryphon's Plot is a situation.
 ResolveFunction of Gryphon's Plot is "[ResolveEvent Gryphon's Plot]". The level of Gryphon's Plot is 2.
-the sarea of Gryphon's Plot is "Outside".
+Sarea of Gryphon's Plot is "Outside".
 
 when play begins:
 	add Gryphon's Plot to badspots of HermList;

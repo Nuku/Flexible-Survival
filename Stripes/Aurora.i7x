@@ -12,7 +12,7 @@ Giant's Frozen Yogurt	"Giant's Frozen Yogurt"
 
 Giant's Frozen Yogurt is a situation.
 ResolveFunction of Giant's Frozen Yogurt is "[ResolveEvent Giant's Frozen Yogurt]".
-The sarea of Giant's Frozen Yogurt is "Capitol".
+Sarea of Giant's Frozen Yogurt is "Capitol".
 the level of Giant's Frozen Yogurt is 5.
 when play begins:
 	add Giant's Frozen Yogurt to BadSpots of FemaleList;
@@ -98,14 +98,14 @@ Table of GameCharacterIDs (continued)
 object	name
 frost giantess	"frost giantess"
 
-frost giantess is a pet. frost giantess is a part of the player.
+frost giantess is a pet. frost giantess is a part of Player.
 NPCObject of frost giantess is Aurora.
 understand "Aurora" as frost giantess.
 printed name of frost giantess is "Aurora".
-The description of frost giantess is "[AuroraDesc]".
-The weapon damage of frost giantess is 20.
+Description of frost giantess is "[AuroraDesc]".
+Weapon Damage of frost giantess is 20.
 The level of frost giantess is 1.
-The Dexterity of frost giantess is 5.
+Dexterity of frost giantess is 5.
 The summondesc of frost giantess is "[SummonAurora]".
 The dismissdesc of frost giantess is "[DismissAurora]".
 The assault of frost giantess is "[aurora_attack]".
@@ -131,7 +131,7 @@ object	name
 Aurora	"Aurora"
 
 Aurora is a woman.
-The description of Aurora is "[AuroraDesc]".
+Description of Aurora is "[AuroraDesc]".
 
 instead of sniffing Aurora:
 	say "[AuroraScent]";

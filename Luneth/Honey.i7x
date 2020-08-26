@@ -28,7 +28,7 @@ Smashed Hive	"Smashed Hive"
 
 Smashed Hive is a situation.
 ResolveFunction of Smashed Hive is "[ResolveEvent Smashed Hive]".
-The sarea of Smashed Hive is "Park".
+Sarea of Smashed Hive is "Park".
 when play begins:
 	add Smashed Hive to BadSpots of FemaleList;
 
@@ -170,14 +170,14 @@ Table of GameCharacterIDs (continued)
 object	name
 bee girl	"bee girl"
 
-bee girl is a pet. bee girl is a part of the player.
+bee girl is a pet. bee girl is a part of Player.
 NPCObject of bee girl is Honey.
 understand "Honey" as bee girl.
 printed name of bee girl is "Honey".
-The description of bee girl is "[HoneyDesc]".
-The weapon damage of bee girl is 5.
+Description of bee girl is "[HoneyDesc]".
+Weapon Damage of bee girl is 5.
 The level of bee girl is 1.
-The Dexterity of bee girl is 20.
+Dexterity of bee girl is 20.
 The summondesc of bee girl is "[SummonHoney]".
 The dismissdesc of bee girl is "[DismissHoney]".
 The assault of bee girl is "[one of]The bee girl buzzes around, slapping and punching at your foe from behind![or]The bee girl dive bombs the enemy, jabbing with her stinger-less abdomen repeatedly and bashing her fists on their back, buzzing wildly![or]Buzzing angrily, the bumblebee scratches and claws at your foe with her hard, chitinous fingertips![or]The bee drone tosses globs of sticky honey onto your foe, slowing them down while they get unstuck![or]The buzzing drone drops an armload of small rocks and junk onto your enemy from above![at random]".
@@ -203,7 +203,7 @@ Honey	"Honey"
 
 Honey is a woman.
 ScaleValue of Honey is 2. [human sized]
-The description of Honey is "[HoneyDesc]".
+Description of Honey is "[HoneyDesc]".
 
 instead of sniffing Honey:
 	say "[HoneyScent]";

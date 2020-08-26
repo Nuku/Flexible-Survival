@@ -18,7 +18,7 @@ Potential Resources	"Potential Resources"
 
 Potential Resources is a scavevent.
 ResolveFunction of Potential Resources is "[ResolveEvent Potential Resources]".
-The sarea of Potential Resources is "Allzones".
+Sarea of Potential Resources is "Allzones".
 
 to say ResolveEvent Potential Resources:
 	let difficulty be a random number from 6 to 16;

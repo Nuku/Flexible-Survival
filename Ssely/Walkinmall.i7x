@@ -6,7 +6,7 @@ Mall Wandering	"Mall Wandering"
 
 Mall Wandering is a situation.
 ResolveFunction of Mall Wandering is "[ResolveEvent Mall Wandering]".
-The sarea of Mall Wandering is "Smith Haven".
+Sarea of Mall Wandering is "Smith Haven".
 
 to say ResolveEvent Mall Wandering:
 	if debugactive is 1:
@@ -23,7 +23,7 @@ Mall Orgy	"Mall Orgy"
 
 Mall Orgy is a situation.
 ResolveFunction of Mall Orgy is "[ResolveEvent Mall Orgy]".
-The sarea of Mall Orgy is "Smith Haven".
+Sarea of Mall Orgy is "Smith Haven".
 
 when play begins:
 	add Mall Orgy to BadSpots of FurryList;
@@ -82,7 +82,7 @@ OtterBoi Meeting	"OtterBoi Meeting"
 
 OtterBoi Meeting is a situation.
 ResolveFunction of OtterBoi Meeting is "[ResolveEvent OtterBoi Meeting]". OtterBoi Meeting is inactive.
-The sarea of OtterBoi Meeting is "Smith Haven".
+Sarea of OtterBoi Meeting is "Smith Haven".
 
 to say ResolveEvent OtterBoi Meeting:
 	if debugactive is 1:

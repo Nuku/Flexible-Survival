@@ -111,8 +111,8 @@ AnalVirgin of Chase is true.
 SexuallyExperienced of Chase is true.
 MainInfection of Chase is "Tiger".
 
-The description of Chase is "[ChaseDesc]".
-The conversation of Chase is { "mew" }.
+Description of Chase is "[ChaseDesc]".
+Conversation of Chase is { "mew" }.
 Chase is in Tiger Den.
 
 The scent of Chase is "[ChaseScent]";

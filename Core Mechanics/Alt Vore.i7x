@@ -54,7 +54,7 @@ Inner Predator	"Inner Predator"
 Inner Predator is a scavevent.
 ResolveFunction of Inner Predator is "[ResolveEvent Inner Predator]".
 The level of Inner Predator is 4.
-The sarea of Inner Predator is "Allzones".
+Sarea of Inner Predator is "Allzones".
 when play begins:
 	add Inner Predator to BadSpots of FurryList;
 

@@ -82,8 +82,8 @@ SexuallyExperienced of Pet Mutt is true.
 TwistedCapacity of Pet Mutt is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Pet Mutt is false. [steriles can't knock people up]
 MainInfection of Pet Mutt is "Feral Mutt".
-The description of Pet Mutt is "[Pet MuttDesc]".
-The conversation of Pet Mutt is { "<This is nothing but a placeholder!>" }.
+Description of Pet Mutt is "[Pet MuttDesc]".
+Conversation of Pet Mutt is { "<This is nothing but a placeholder!>" }.
 The scent of Pet Mutt is "     [PetMuttName] smells like a dog, a feral musky hound. It's not necessarily unpleasant, but certainly noticeable and distinctive scent to this particular canine, as you well know.".
 
 to say Pet MuttDesc:

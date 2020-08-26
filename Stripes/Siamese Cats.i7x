@@ -79,7 +79,7 @@ to say siameseattack:
 		let absorbby be 0; [***to be fixed***]
 		if "Toughened" is listed in feats of Player:
 			increase absorbby by dammy divided by 5;
-		decrease HP of the player by dammy;
+		decrease HP of Player by dammy;
 		increase HP of Player by absorbby;
 		let T be a random number between 1 and 4;
 		if T is 1:

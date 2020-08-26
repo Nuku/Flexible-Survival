@@ -906,7 +906,7 @@ instead of sniffing dalmatian cum:
 
 dalmatian cum is a grab object. dalmatian cum is cum.
 dalmatian cum is infectious. Strain of dalmatian cum is "Dalmatian Bitch".
-the usedesc of dalmatian cum is "[dalmatian cum use]";
+Usedesc of dalmatian cum is "[dalmatian cum use]";
 
 to say dalmatian cum use:
 	say "     Lifting the tiny plastic bottle to your mouth, you let Darius's creamy cum run over your tongue and down your throat. Mmmmh, this stuff actually tastes fairly nice and your body calls for more. You can't help yourself and keep pouring cum into your mouth, right until you're hungrily sucking at the mouth of the bottle with it turned upside down.";
@@ -928,7 +928,7 @@ instead of sniffing dalmatian fur:
 
 dalmatian fur is a grab object.
 dalmatian fur is temporary.
-the usedesc of dalmatian fur is "[dalmatian fur use]";
+Usedesc of dalmatian fur is "[dalmatian fur use]";
 
 to say dalmatian fur use:
 	say "     Lifting the small tuft of fur with your fingers holding on to the rubber band around it, you brush the hairs over the inside of your other arm. It feels soft and tickles a little, then a lot, as the strands seem to slowly crumble away, leaving minute traces of silvery dust that vanishes into your skin.";

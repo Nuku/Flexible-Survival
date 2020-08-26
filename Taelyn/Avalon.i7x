@@ -35,7 +35,7 @@ Fall-O-the-Wisp	"Fall-O-the-Wisp"
 
 Fall-O-the-Wisp is a situation.
 ResolveFunction of Fall-O-the-Wisp is "[ResolveEvent Fall-O-the-Wisp]".
-The sarea of Fall-O-the-Wisp is "Nowhere".
+Sarea of Fall-O-the-Wisp is "Nowhere".
 
 when play begins:
 	add Fall-O-the-Wisp to BadSpots of FemaleList;
@@ -143,7 +143,7 @@ Mysterious Glade	"Mysterious Glade"
 
 Mysterious Glade is a room.
 Mysterious Glade is south of Forest Burrow Entrance.
-The description of Mysterious Glade is "[MysteriousGlade desc]".
+Description of Mysterious Glade is "[MysteriousGlade desc]".
 The earea of Mysterious Glade is "Forest".
 
 to say MysteriousGlade desc:
@@ -161,7 +161,7 @@ Runestone	"Runestone"
 
 Runestone is a man.
 Runestone is in Mysterious Glade.
-The description of Runestone is "     A small disk-shaped stone with strange markings sits on the ground, covered by the grass. It would have been easy to miss if you were looking in the wrong place. Maybe you should [bold type]inspect[roman type] the runestone further?".
+Description of Runestone is "     A small disk-shaped stone with strange markings sits on the ground, covered by the grass. It would have been easy to miss if you were looking in the wrong place. Maybe you should [bold type]inspect[roman type] the runestone further?".
 the linkaction of Runestone is "Possible Actions: [link]inspect[as]Inspect Runestone[end link][line break]".
 
 [Defining actions possible relating to the Runestone]
@@ -187,7 +187,7 @@ Object	Name
 Virgin's Pass	"Virgin's Pass"
 
 Virgin's Pass is a room.
-The description of Virgin's Pass is "[VirginsPass desc]".
+Description of Virgin's Pass is "[VirginsPass desc]".
 
 to say VirginsPass desc:
 	say "     A long dirt road stretches out from North to South with heavy stones and thick brush on the eastern side, while on the western side, what looks like a stone table stands ominously with shackles chained onto its sides. A wooden sign is posted next to it that reads 'Bind the sullied maiden to the alter and the unicorns will come to restore their purity.'";
@@ -206,7 +206,7 @@ Avalon-Crossroads is a room.
 Avalon-Crossroads is fasttravel.
 Avalon-Crossroads is private.
 Avalon-Crossroads is south of Virgin's Pass.
-The description of Avalon-Crossroads is "[AvCrossroads desc]".
+Description of Avalon-Crossroads is "[AvCrossroads desc]".
 
 to say AvCrossroads desc:
 	say "     You find yourself in a clearing at the center of the forest where the North-South, and East-West roads meet. The area is clearly used for more than passing though as there are clear evidence of burned out campfires, broken wagon wheels, and other useless junk here and there, suggesting that the Crossroads is used as a place to camp, trade, and meet up. At one corner, a wooden sign shows where each road leads.";
@@ -229,7 +229,7 @@ Kobold Caves Gates	"Kobold Caves Gates"
 
 Kobold Caves Gates is a room.
 Avalon-Crossroads is west of Kobold Caves Gates.
-The description of Kobold Caves Gates is "[KoboldCavesGates desc]".
+Description of Kobold Caves Gates is "[KoboldCavesGates desc]".
 
 to say KoboldCavesGates desc:
 	say "     Arriving once more at the cave entrance, the familiar and crudely crafted wall and gate blocks the view and path forwards. On top of the walls, two kobolds patrol with crossbows in hand. Upon noticing you, one of the guards calls out, 'Who goes there!' with enthusiasm. You stand at attention and state your name rank and class, to which the guard nods and gestures to someone behind the wall. A few seconds pass before the doors start to creak, swinging wide to reveal the mouth of the Gildwing fortress to the west.";

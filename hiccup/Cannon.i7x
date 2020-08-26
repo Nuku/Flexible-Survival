@@ -330,7 +330,7 @@ this is the cockcannon rule:
 				now cclosttarget is true;
 				decrease cannonprep by 1;
 	now peppereyes is 0;
-	if HP of the player > 0 and Libido of Player < 110:
+	if HP of Player > 0 and Libido of Player < 110:
 		[wait for any key;]
 		AttemptToWaitBeforeClear;
 	else:

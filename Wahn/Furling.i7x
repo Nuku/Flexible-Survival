@@ -9,7 +9,7 @@ Cheerleader vs Furling	"Cheerleader vs Furling"
 
 Cheerleader vs Furling is a situation.
 ResolveFunction of Cheerleader vs Furling is "[ResolveEvent Cheerleader vs Furling]". The level of Cheerleader vs Furling is 5.
-The sarea of Cheerleader vs Furling is "Campus".
+Sarea of Cheerleader vs Furling is "Campus".
 when play begins:
 	add Cheerleader vs Furling to badspots of TransList; [shemale vs cuntboy]
 	add Cheerleader vs Furling to BadSpots of FurryList; [Furling]
@@ -337,7 +337,7 @@ name	desc	weight	object
 "red fur"	"A tuft of orange-red fur. It's nicely soft."	1	red fur
 
 red fur is a grab object.
-the usedesc of red fur is "[redfuruse]".
+Usedesc of red fur is "[redfuruse]".
 
 It is temporary.
 

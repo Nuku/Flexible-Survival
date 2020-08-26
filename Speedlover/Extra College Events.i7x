@@ -21,7 +21,7 @@ Cheetah Cheater	"Cheetah Cheater"
 Cheetah Cheater is a situation.
 ResolveFunction of Cheetah Cheater is "[ResolveEvent Cheetah Cheater]".
 The level of Cheetah Cheater is 0.
-The sarea of Cheetah Cheater is "Campus".
+Sarea of Cheetah Cheater is "Campus".
 
 after going to College Walkway West while (Cheetah Cheater is active and Cheetah Cheater is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	try looking;
@@ -44,7 +44,7 @@ Pregnant Friend	"Pregnant Friend"
 Pregnant Friend is a situation.
 ResolveFunction of Pregnant Friend is "[ResolveEvent Pregnant Friend]".
 The level of Pregnant Friend is 0.
-The sarea of Pregnant Friend is "Campus".
+Sarea of Pregnant Friend is "Campus".
 
 after going to College Walkway East while (Pregnant Friend is active and Pregnant Friend is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	try looking;
@@ -70,7 +70,7 @@ Art Class	"Art Class"
 Art Class is a situation.
 ResolveFunction of Art Class is "[ResolveEvent Art Class]".
 The level of Art Class is 0.
-The sarea of Art Class is "Campus".
+Sarea of Art Class is "Campus".
 
 after going to Creative Street while (Art Class is active and Art Class is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	try looking;
@@ -98,7 +98,7 @@ CatsVSDogs	"CatsVSDogs"
 CatsVSDogs is a situation.
 ResolveFunction of CatsVSDogs is "[ResolveEvent CatsVSDogs]".
 The level of CatsVSDogs is 0.
-The sarea of CatsVSDogs is "Campus".
+Sarea of CatsVSDogs is "Campus".
 
 after going to Athletic Street while (CatsVSDogs is active and CatsVSDogs is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	try looking;
@@ -129,7 +129,7 @@ SharkFountain	"SharkFountain"
 SharkFountain is a situation.
 ResolveFunction of SharkFountain is "[ResolveEvent SharkFountain]".
 The level of SharkFountain is 0.
-The sarea of SharkFountain is "Campus". [Fountain]
+Sarea of SharkFountain is "Campus". [Fountain]
 
 after going to College Fountain while (SharkFountain is active and SharkFountain is not resolved and LastCampusWalkin - turns > 0 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night)) and a random chance of 1 in 3 succeeds):
 	try looking;
@@ -154,7 +154,7 @@ Fountain Naiad	"Fountain Naiad"
 
 Fountain Naiad is a situation.
 ResolveFunction of Fountain Naiad is "[ResolveEvent Fountain Naiad]".
-The sarea of Fountain Naiad is "Campus".
+Sarea of Fountain Naiad is "Campus".
 
 when play begins:
 	add Fountain Naiad to BadSpots of FemaleList;
@@ -178,7 +178,7 @@ Campus Racing	"Campus Racing"
 
 Campus Racing is a situation.
 ResolveFunction of Campus Racing is "[ResolveEvent Campus Racing]".
-The sarea of Campus Racing is "Campus".
+Sarea of Campus Racing is "Campus".
 
 after going to Athletic Street while (Campus Racing is active and Campus Racing is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	try looking;
@@ -200,7 +200,7 @@ Frat Party Recruiter	"Frat Party Recruiter"
 Frat Party Recruiter is a situation.
 ResolveFunction of Frat Party Recruiter is "[ResolveEvent Frat Party Recruiter]".
 Frat Party Recruiter is inactive.
-The sarea of Frat Party Recruiter is "Campus".
+Sarea of Frat Party Recruiter is "Campus".
 
 when play begins:
 	add Frat Party Recruiter to BadSpots of MaleList;
@@ -247,7 +247,7 @@ Undie Race	"Undie Race"
 
 Undie Race is a situation.
 ResolveFunction of Undie Race is "[ResolveEvent Undie Race]".
-The sarea of Undie Race is "Campus".
+Sarea of Undie Race is "Campus".
 
 after going to College Walkway West while (Undie Race is active and Undie Race is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	try looking;
@@ -276,7 +276,7 @@ to UndieRaceEvent:
 	if royal tiger is companion of Player:
 		say "     Ryousei looks at the scene, dismayed. 'Poor souls! What is their crime, for being punished like this?' he asks. Stifling a laugh, you explain to the tiger that this is a race, and they do it willingly. 'Oh, I see. I was wondering that it was a lot of criminals. But why are they barely clothed?' You smile, then shrug.";
 	say "     A few minutes later, every runner passed, and the crowd begins to disperse, and so do you.";
-	let bonus be (( the Perception of the player minus 10 ) divided by 2);
+	let bonus be (( Perception of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	if diceroll > 15:
 		say "     [bold type]Perception check successful[roman type]: As you leave, you notice that a water bottle is still on the table, unopened. This is tap water, probably infected, but it is better than nothing. You snatch it discreetly and put it in your bag.";
@@ -292,7 +292,7 @@ Dog Meets Dog	"Dog Meets Dog"
 
 Dog Meets Dog is a situation.
 ResolveFunction of Dog Meets Dog is "[ResolveEvent Dog Meets Dog]".
-The sarea of Dog Meets Dog is "Campus".
+Sarea of Dog Meets Dog is "Campus".
 The PrereqCompanion of Dog Meets Dog is gshep.
 
 after going east from College Campus Entrance while (LastCampusWalkin - turns > 2 and gshep is companion of Player and gsd_pet >= 60 and GibsonRelationship is 0 and a random chance of 1 in 3 succeeds):
@@ -350,7 +350,7 @@ Course Advice	"Course Advice"
 
 Course Advice is a situation.
 ResolveFunction of Course Advice is "[ResolveEvent Course Advice]".
-The sarea of Course Advice is "Campus".
+Sarea of Course Advice is "Campus".
 
 when play begins:
 	add Course Advice to BadSpots of FemaleList;
@@ -604,7 +604,7 @@ Campus Patrol	"Campus Patrol"
 
 Campus Patrol is a situation.
 ResolveFunction of Campus Patrol is "[ResolveEvent Campus Patrol]".
-The sarea of Campus Patrol is "Campus".
+Sarea of Campus Patrol is "Campus".
 
 after going to College Walkway West while (Campus Patrol is active and Campus Patrol is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	try looking;

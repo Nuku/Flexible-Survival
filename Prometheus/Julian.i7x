@@ -45,7 +45,7 @@ Object	Name
 Julian's Room	"Julian's Room"
 
 Julian's Room is a room.
-The description of Julian's Room is "[JuliansRoomDesc]".
+Description of Julian's Room is "[JuliansRoomDesc]".
 
 to say JuliansRoomDesc:
 	say "     Julian's room looks like ordered chaos. There are piles of books, games, and other belongings lying around, but he seems to know where things are. His bed is crumpled, but mostly made, strands of fur covering the duvet, and a soft toy of a wolf snuggles in the corner. Beneath the bed, a locked case pokes out, the contents as of yet unknown. Despite the mess, his desk space is clean, a powerless laptop pushed carefully to the side to make space for several pads of paper.";
@@ -92,8 +92,8 @@ SexuallyExperienced of Julian is true.
 TwistedCapacity of Julian is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Julian is false. [steriles can't knock people up]
 MainInfection of Julian is "Alpha Wolf".
-The description of Julian is "[JulianDesc]".
-The conversation of Julian is { "Woof grrr" }.
+Description of Julian is "[JulianDesc]".
+Conversation of Julian is { "Woof grrr" }.
 The scent of Julian is "     Julian, unsurprisingly smells like a wolf. Though there are different undertones..."
 
 to say JulianDesc:
@@ -266,7 +266,7 @@ ResolveFunction of Wolf's Invitation is "[ResolveEvent Wolf's Invitation]".
 Prereq1 of Wolf's Invitation is Unnatural Heat.
 Prereq1Resolution of Wolf's Invitation is { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 }.
 The level of Wolf's Invitation is 0.
-The sarea of Wolf's Invitation is "Campus".
+Sarea of Wolf's Invitation is "Campus".
 
 instead of going to College Walkway East while (Wolf's Invitation is active and Wolf's Invitation is PrereqComplete and Wolf's Invitation is not resolved and (HP of Sylvia > 3 or hpM of Sylvia > 2 or hpF of Sylvia > 2) and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 2):
 	move player to College Walkway East;
@@ -304,7 +304,7 @@ ResolveFunction of Julian's Room Event is "".
 Prereq1 of Julian's Room Event is Wolf's Invitation.
 Prereq1Resolution of Julian's Room Event is { 1 }.
 The level of Julian's Room Event is 0.
-The sarea of Julian's Room Event is "Nowhere".
+Sarea of Julian's Room Event is "Nowhere".
 
 instead of going northeast from Tenvale College Male Dorms while (Julian's Room Event is active and Julian's Room Event is PrereqComplete and Julian's Room Event is not resolved and HP of Julian is 2):
 	JuliansRoomEvent;
@@ -327,7 +327,7 @@ Prereq1Resolution of Suppressant Supply Run is { 1 }.
 Prereq2 of Suppressant Supply Run is Beach Field Research.
 Prereq2Resolution of Suppressant Supply Run is { 1, 2 }.
 The level of Suppressant Supply Run is 0.
-The sarea of Suppressant Supply Run is "Nowhere".
+Sarea of Suppressant Supply Run is "Nowhere".
 
 instead of going northeast from Tenvale College Male Dorms while (Suppressant Supply Run is active and Suppressant Supply Run is PrereqComplete and Suppressant Supply Run is not resolved and HP of Julian is 4 and a random chance of 1 in 2 succeeds):
 	SuppressantSupplyRunEvent;

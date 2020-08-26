@@ -20,7 +20,7 @@ Abandoned Camp	"Abandoned Camp"
 
 Abandoned Camp is a situation.
 ResolveFunction of Abandoned Camp is "[ResolveEvent Abandoned Camp]".
-The sarea of Abandoned Camp is "Forest".
+Sarea of Abandoned Camp is "Forest".
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -148,14 +148,14 @@ Object	Name
 Deep Forest	"Deep Forest"
 
 Deep Forest is a room. It is fasttravel. It is private.
-The description of Deep Forest is "     You are in a small clearing deep inside of the Urban Forest. The trees here are massive and tower over you, and the area is shrouded in perpetual gloom from the thick canopy. Resting among the tree branches up above, Savina waits for you to do her bidding.".
+Description of Deep Forest is "     You are in a small clearing deep inside of the Urban Forest. The trees here are massive and tower over you, and the area is shrouded in perpetual gloom from the thick canopy. Resting among the tree branches up above, Savina waits for you to do her bidding.".
 
 
 Section 3 - Savina
 
 SavinaTempt is a number that varies. SavinaTempt is usually 0.
-The description of Savina is "[SavinaDesc]".
-The conversation of Savina is { "I'm a snek" }.
+Description of Savina is "[SavinaDesc]".
+Conversation of Savina is { "I'm a snek" }.
 The scent of the Savina is "Intertwined with the earthy smell of the forest, Savina has a unique, alluring musk. You're not sure if it's just another side effect of her hold on you, but there is something comforting about that scent that relaxes you a bit.";
 
 to say SavinaDesc:

@@ -25,8 +25,8 @@ object	name
 Seraphis	"Seraphis"
 
 Seraphis is a man.
-The description of Seraphis is "[SeraphisDesc]".
-The conversation of Seraphis is { "<Hello.>"}.
+Description of Seraphis is "[SeraphisDesc]".
+Conversation of Seraphis is { "<Hello.>"}.
 The scent of Seraphis is "     He radiates a strong, equine musk."
 SeraphisRelationship is a number that varies.
 SeraphisContent is a number that varies. [Determines if Seraphis will let the Player through the gate.]
@@ -44,7 +44,7 @@ Conflict within the Plains	"Conflict within the Plains"
 
 Conflict within the Plains is a situation.
 ResolveFunction of Conflict within the Plains is "[ResolveEvent Conflict within the Plains]". The level of Conflict within the Plains is 6.
-The sarea of Conflict within the Plains is "Plains".
+Sarea of Conflict within the Plains is "Plains".
 when play begins:
 	add Conflict within the Plains to Badspots of MaleList;
 	add Conflict within the Plains to Badspots of FurryList;
@@ -179,9 +179,9 @@ Plant Ruins Encounters	"Plant Ruins Encounters"
 Plant Ruins Encounters is a situation.
 ResolveFunction of Plant Ruins Encounters is "[ResolveEvent Plant Ruins Encounters]". The level of Plant Ruins Encounters is 6.
 Plant Ruins Encounters is active.
-The sarea of Plant Ruins Encounters is "Plains".
+Sarea of Plant Ruins Encounters is "Plains".
 
-The Prereq1 of Plant Ruins Encounters is Conflict Within the Plains.
+Prereq1 of Plant Ruins Encounters is Conflict Within the Plains.
 The Prereq1Resolution of Plant Ruins Encounters is { 0 }.
 
 when play begins:

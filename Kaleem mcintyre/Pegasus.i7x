@@ -253,9 +253,9 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "Pegasus Quill"	"A fine white feather that was dropped off of a Pegasus."	1	Pegasus Quill
 
-Pegasus Quill is a grab object. Pegasus Quill is infectious. The strain of Pegasus Quill is "Pegasus".
+Pegasus Quill is a grab object. Pegasus Quill is infectious. Strain of Pegasus Quill is "Pegasus".
 
-The usedesc of Pegasus Quill is "The quill you picked up is actually a large feather from the end of a Pegasus mutant. Large and fluffy and very warm you have the strangest notion to make a pillow from the things. Maybe if you find more you will?";
+Usedesc of Pegasus Quill is "The quill you picked up is actually a large feather from the end of a Pegasus mutant. Large and fluffy and very warm you have the strangest notion to make a pillow from the things. Maybe if you find more you will?";
 
 
 [A sample structure for succumbing/surviving messages at the end of the game.]

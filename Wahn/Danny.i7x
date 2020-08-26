@@ -68,8 +68,8 @@ TwistedCapacity of Danny is false. [Twisted Characters can take any penetration,
 Sterile of Danny is false. [steriles can't knock people up]
 MainInfection of Danny is "Mall Rat".
 The icon of Danny is Figure of Danny_clothed_icon.
-The description of Danny is "[DannyDesc]".
-The conversation of Danny is { "Woof." }.
+Description of Danny is "[DannyDesc]".
+Conversation of Danny is { "Woof." }.
 
 to say DannyDesc:
 	if debugactive is 1:

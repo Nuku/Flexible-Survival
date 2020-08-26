@@ -38,7 +38,7 @@ AnalVirgin of Hanu is true.
 PenileVirgin of Hanu is true.
 SexuallyExperienced of Hanu is false.
 MainInfection of Hanu is "".
-The description of Hanu is "[hanuDesc]";
+Description of Hanu is "[hanuDesc]";
 
 to say hanuDesc:
 	if Monkey Duel is unresolved:
@@ -173,7 +173,7 @@ Monkey Duel	"Monkey Duel"
 Monkey Duel is a situation.
 ResolveFunction of Monkey Duel is "".
 Monkey Duel is inactive.
-The sarea of Monkey Duel is "Nowhere".
+Sarea of Monkey Duel is "Nowhere".
 
 to MonkeyDuel:
 	say "     'About time you showed up[if Player is not defaultnamed], [name of Player][end if].' a familiar voice calls you out as you pass under a large tree. Hanu, the monkey with whom you meditated with earlier, is sitting leisurely on one of the branches, his long tail waving at you. With surprising agility, Hanu jumps down from his perch and makes a perfect landing just in front of you. 'You seem to have a habit of being late for training, my pupil. But no matter, let us practice our kung fu together.'";
@@ -613,7 +613,7 @@ Monkey House	"Monkey House"
 
 Monkey house is south of Main Path 2.
 The earea of Main Path 2 is "Zoo".
-The description of Monkey House is "[monkeyHouseDesc]".
+Description of Monkey House is "[monkeyHouseDesc]".
 
 to say monkeyHouseDesc:
 	if Resolution of Monkey Duel is 2 or Resolution of Monkey Duel is 3:

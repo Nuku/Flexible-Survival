@@ -440,7 +440,7 @@ name	desc	weight	object
 "german shepherd bitch fur"	"A tuft of tan fur that looks like it has been pulled out of the coat of a German shepherd. It's nicely soft."	0	german shepherd bitch fur
 
 german shepherd bitch fur is a grab object.
-the usedesc of german shepherd bitch fur is "[gsbFurUse]".
+Usedesc of german shepherd bitch fur is "[gsbFurUse]".
 
 It is temporary.
 

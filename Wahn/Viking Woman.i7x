@@ -963,7 +963,7 @@ Chieftain's Challenge	"Chieftain's Challenge"
 Chieftain's Challenge is a situation.
 ResolveFunction of Chieftain's Challenge is "[ResolveEvent Chieftain's Challenge]".
 The level of Chieftain's Challenge is 1. Chieftain's Challenge is inactive.
-The sarea of Chieftain's Challenge is "Beach".
+Sarea of Chieftain's Challenge is "Beach".
 
 to say ResolveEvent Chieftain's Challenge:
 	if the player is not facially human or the player is not bodily human or the player is not skintone human: [they see the player as a monster]
@@ -1113,7 +1113,7 @@ Object	Name
 Viking Ship	"Viking Ship"
 
 Viking Ship is a room. It is a fasttravel. Viking Ship is private.
-The description of Viking Ship is "[VShipDesc]".
+Description of Viking Ship is "[VShipDesc]".
 
 to say VShipDesc:
 	if daytimer is day:
@@ -1155,7 +1155,7 @@ Object	Name
 Sonya's Cabin	"Sonya's Cabin"
 
 Sonya's Cabin is a room.
-The description of Sonya's Cabin is "[SCDesc]".
+Description of Sonya's Cabin is "[SCDesc]".
 
 to say SCDesc:
 	say "     Sonya's cabin is relatively big - being the chieftain's daughter has its perks - and sports a bed big enough for two, covered in soft furs. You can see that it's bolted to the wooden floorboards, just like the two chests that stand against the opposite wall. Not much for loose clutter, these vikings - those three items are the only furniture in here. But then, that's just a sensible thing to do, avoiding things being thrown around in a storm... and also allowing to do all kinds of sexy stuff in the bed without it knocking against the neighboring cabin wall.";
@@ -1233,8 +1233,8 @@ SexuallyExperienced of Sonya is true.
 MainInfection of Sonya is "Human".
 The HP of Sonya is normally 0.
 Sonya is in Sonya's Cabin.
-The description of Sonya is "[SonyaDesc]".
-The conversation of Sonya is { "Mew!" }.
+Description of Sonya is "[SonyaDesc]".
+Conversation of Sonya is { "Mew!" }.
 
 instead of sniffing Sonya:
 	say "Sonya has a pleasant feminine smell.";
@@ -1691,7 +1691,7 @@ instead of sniffing mead horn:
 say "You open the stopper for a moment and take a sniff. Mmmh! Delicious honey-wine.";
 
 mead horn is a grab object.
-the usedesc of mead horn is "[mead horn use]";
+Usedesc of mead horn is "[mead horn use]";
 
 
 to say mead horn use:

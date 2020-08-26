@@ -109,8 +109,8 @@ SexuallyExperienced of Nelson is true.
 TwistedCapacity of Nelson is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Nelson is false. [steriles can't knock people up]
 MainInfection of Nelson is "Zebra Stallion".
-The description of Nelson is "[NelsonDesc]".
-The conversation of Nelson is { "Mew!" }.
+Description of Nelson is "[NelsonDesc]".
+Conversation of Nelson is { "Mew!" }.
 
 instead of sniffing Nelson:
 	say "Nelson has a pleasant animalistic smell, masculine and strong.";

@@ -319,7 +319,7 @@ name		desc	weight	object
 hermaid kelp is a grab object.
 It is temporary.
 
-the usedesc of hermaid kelp is "[HKelpUse]".
+Usedesc of hermaid kelp is "[HKelpUse]".
 
 to say HKelpUse:
 	say "You run the moist piece of plant through your hands for a few moments, noting the leafy feel and grainy texture. Giving it only a moments thought, you roll up the leaf and pop it into your mouth. Chewing on the leaf, you find that it tastes remarkably like lettuce, but with a slightly salty taste.";

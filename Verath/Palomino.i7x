@@ -13,7 +13,7 @@ PALOMINO	"PALOMINO"
 PALOMINO is a room. It is fasttravel.
 The earea of Palomino is "Outside".
 
-The description of The Palomino is "[palominodesc]".
+Description of The Palomino is "[palominodesc]".
 
 to say palominodesc:
 	say "     Ducking down a darkened alleyway, you find yourself standing in front of a door that has recently been painted dark red. The sound of a techno rhythm from inside is making the door vibrate. Looking above the door, you see a hand lettered sign that simply says 'The Palomino'. Going through the door, you find yourself in a short, ordinary-looking hallway, set slightly apart from the loud music and flashing lights spreading down the hallway from around the far corner.";

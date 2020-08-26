@@ -302,7 +302,7 @@ name	desc	weight	object
 
 honeycomb is a grab object. It is temporary.
 
-the usedesc of honeycomb is "[honeycombuse]";
+Usedesc of honeycomb is "[honeycombuse]";
 
 to say honeycombuse:
 	say "You are overcome with the need for sweetness. The sticky goodness of the honeycomb makes you drool as you shove it into your suddenly hungry mouth.";

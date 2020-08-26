@@ -13,8 +13,8 @@ object	name
 Master Mind	"Master Mind"
 
 Master Mind is a woman.
-The description of Master Mind is "[masterminddesc]".
-The conversation of Master Mind is { "meatbag" }.
+Description of Master Mind is "[masterminddesc]".
+Conversation of Master Mind is { "meatbag" }.
 The icon of Master Mind is Figure of MasterMind_icon.
 
 the scent of the Master Mind is "Master Mind has little scent of her own, through there is a faintly feminine scent to her, coming from her juicy pussy.".

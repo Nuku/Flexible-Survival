@@ -406,7 +406,7 @@ instead of sniffing tentacle tip:
 say "It smells like... er... maybe calamar- waah! Suddenly, the thing bends up and tries to find its way into your nose. Quickly pulling it away, you think you've done enough smelling with it for now.";
 
 tentacle tip is a grab object.
-the usedesc of tentacle tip is "[tentacle tip use]";
+Usedesc of tentacle tip is "[tentacle tip use]";
 
 to say tentacle tip use:
 	say "Playing around with the piece of tentacle, you interestedly watch as it stretches and moves, then suddenly wraps itself around your finger. There, it seems to... shrink, staying pressed tightly against your digit as it gets thinner and thinner, then finally is absorbed completely into your skin, vanishing without a trace.";

@@ -303,7 +303,7 @@ Dark_Presence_Start	"Dark_Presence_Start"
 Dark_Presence_Start is a situation.
 ResolveFunction of Dark_Presence_Start is "".
 The level of Dark_Presence_Start is 10.
-The sarea of Dark_Presence_Start is "Nowhere".
+Sarea of Dark_Presence_Start is "Nowhere".
 
 when play begins:
 	add Dark_Presence_Start to BadSpots of FemaleList;

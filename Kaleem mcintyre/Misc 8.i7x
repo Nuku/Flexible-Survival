@@ -9,7 +9,7 @@ Old Tale	"Old Tale"
 
 Old Tale is a situation.
 ResolveFunction of Old Tale is "[ResolveEvent Old Tale]".
-The sarea of Old Tale is "High".
+Sarea of Old Tale is "High".
 When play begins:
 	Add Old Tale to BadSpots of FurryList;
 	Add Old Tale to BadSpots of MaleList;
@@ -29,7 +29,7 @@ Peace	"Peace"
 
 Peace is a situation.
 ResolveFunction of Peace is "[ResolveEvent Peace]".
-The sarea of Peace is "Plains".
+Sarea of Peace is "Plains".
 
 to say ResolveEvent Peace:
 	say "     Jogging across the plains, you come across a large bipedal blue and white furred wolf meditating in the middle of an orangish-yellow patch of grass. From the look of the other, with his imposing physique, strong jawline, rich azure and ivory furry and yellow belt strapped around his waist, the strange wolf seems to be oddly out of place given the normal mutants that roam the plains. Not that there was anything wrong with being odd, especially given the fact that this [']is['] a crossed legged blue and white lupine you're seeing after all.";
@@ -47,7 +47,7 @@ Champion	"Champion"
 
 Champion is a situation.
 ResolveFunction of Champion is "[ResolveEvent Champion]".
-The sarea of Champion is "High".
+Sarea of Champion is "High".
 
 to say ResolveEvent Champion:
 	say "     While making your way the streets of the high rise district, you find yourself pausing as you come across a shadow boxing bipedal silver wolf. The graceful form of the large and slightly shaggy furred creature makes you look on in awe as you note the way the wolf is moving around while striking out at his own darkened form mimicking him against a nearby brick wall. With a pair of black jeans strapped onto his lower end and an open orange vest clinging around his back and shoulders the other doesn't seem the least bit out of sorts, given the circumstances that have taken over the city.";
@@ -66,7 +66,7 @@ Cosplay	"Cosplay"
 
 Cosplay is a situation.
 ResolveFunction of Cosplay is "[ResolveEvent Cosplay]".
-The sarea of Cosplay is "Red".
+Sarea of Cosplay is "Red".
 When play begins:
 	Add Cosplay to BadSpots of FurryList;
 	Add Cosplay to BadSpots of MaleList;
@@ -96,7 +96,7 @@ Fantasy	"Fantasy"
 
 Fantasy is a situation.
 ResolveFunction of Fantasy is "[ResolveEvent Fantasy]".
-The sarea of Fantasy is "High".
+Sarea of Fantasy is "High".
 When play begins:
 	Add Fantasy to BadSpots of FurryList;
 	Add Fantasy to BadSpots of MaleList;
@@ -117,7 +117,7 @@ Controversy	"Controversy"
 Controversy is a situation.
 ResolveFunction of Controversy is "[ResolveEvent Controversy]".
 
-The sarea of Controversy is "High".
+Sarea of Controversy is "High".
 When play begins:
 	Add Controversy to badspots of HumorousList;
 
@@ -171,7 +171,7 @@ Dr Feel Good	"Dr Feel Good"
 
 Dr Feel Good is a situation.
 ResolveFunction of Dr Feel Good is "[ResolveEvent Dr Feel Good]".
-The sarea of Dr Feel Good is "Hospital". The level of Dr Feel Good is 5.
+Sarea of Dr Feel Good is "Hospital". The level of Dr Feel Good is 5.
 When play begins:
 	Add Dr Feel Good to BadSpots of FurryList;
 	Add Dr Feel Good to BadSpots of FemaleList;

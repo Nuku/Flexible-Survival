@@ -41,8 +41,8 @@ Virgin of Help Book is true.
 AnalVirgin of Help Book is true.
 SexuallyExperienced of Help Book is false.
 MainInfection of Help Book is "".
-The description of Help Book is "[HelpBookDesc]".
-The conversation of Help Book is { "Words, words, words." }.
+Description of Help Book is "[HelpBookDesc]".
+Conversation of Help Book is { "Words, words, words." }.
 The scent of Help Book is "     The book smells of knowledge and a desire to help. Somehow.".
 
 to say HelpBookDesc:

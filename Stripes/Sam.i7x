@@ -67,7 +67,7 @@ Another Researcher	"Another Researcher"
 
 Another Researcher is a situation.
 ResolveFunction of Another Researcher is "[ResolveEvent Another Researcher]".
-The sarea of Another Researcher is "Outside".
+Sarea of Another Researcher is "Outside".
 when play begins:
 	add Another Researcher to BadSpots of FurryList;
 	add Another Researcher to BadSpots of MaleList;
@@ -105,7 +105,7 @@ Object	Name
 Mini-Lab	"Mini-Lab"
 
 Mini-Lab is a room. It is fasttravel. It is private.
-The description of Mini-Lab is "[minilabdesc]".
+Description of Mini-Lab is "[minilabdesc]".
 The invent of Mini-Lab is { "cot" }.
 
 the scent of Mini-Lab is "[minilabscent]".
@@ -137,8 +137,8 @@ object	name
 Sam	"Sam"
 
 Sam is a man. Sam is in Mini-Lab.
-The description of Sam is "[samdesc]".
-The conversation of Sam is { "Thanks." }.
+Description of Sam is "[samdesc]".
+Conversation of Sam is { "Thanks." }.
 the scent of Sam is "[samscent]".
 samformtalk is a truth state that varies. samformtalk is usually false.
 

@@ -16,7 +16,7 @@ City Hospital	"City Hospital"
 City Hospital is a room. It is fasttravel.
 The earea of City Hospital is "Hospital".
 
-The description of City Hospital is "[CityHospitalDesc]";
+Description of City Hospital is "[CityHospitalDesc]";
 
 to say CityHospitalDesc:
 	say "     The exterior of the hospital is quite disheveled. It seems like a large number of people were here when the outbreak started. You can guess that several people, initially surprised by their changes, came to the hospital, leading to the rampant infection of everyone inside, patient and doctor alike. You have to wonder if it is wise to investigate here further[if hospquest > 0]. But looking up at the hospital, you can see several rooms in one corner on the third floor are fully illuminated. And not with the dim glow of the emergency lighting, nor the flicking flames of candles or fires, but the full, smooth light of electricity[end if].";
@@ -46,7 +46,7 @@ Hung Like A	"Hung Like A"
 
 Hung Like A is a situation.
 ResolveFunction of Hung Like A is "[ResolveEvent Hung Like A]".
-The sarea of Hung Like A is "Hospital".
+Sarea of Hung Like A is "Hospital".
 
 to say ResolveEvent Hung Like A:
 	say "     You come across an examination room that has several patient charts tossed on a rumpled bed. You glance over them quickly, finding them all mention cases of 'strange growths' and 'physiological anomalies' found in patients. Those timestamped as the later ones even start commenting on the strange frequency of such occurrences the preliminary examiner's found that evening. The last one talks about a patient with growing hair spreading over his body along with the stiffening of his fingers and nails. It ends with the doctor's rough scrawls about the patient being hung like a horse, that it's so good and how she's letting him take her like his mare so she can properly test it.";
@@ -59,7 +59,7 @@ Pharmaceutical Storage	"Pharmaceutical Storage"
 
 Pharmaceutical Storage is a situation.
 ResolveFunction of Pharmaceutical Storage is "[ResolveEvent Pharmaceutical Storage]".
-The sarea of Pharmaceutical Storage is "Hospital".
+Sarea of Pharmaceutical Storage is "Hospital".
 
 to say ResolveEvent Pharmaceutical Storage:
 	say "     You manage to find the hospital's pharmaceutical storage room. It has clearly been gone through already by someone, as the shelves are barren. There are a few sticky stains and scattered bottles on the floor you carefully avoid stepping on. Carefully, you poke through the remaining items to see if anything useful remains among the last scattered samples and bottles.";
@@ -105,7 +105,7 @@ Ambulance Dock	"Ambulance Dock"
 
 Ambulance Dock is a situation.
 ResolveFunction of Ambulance Dock is "[ResolveEvent Ambulance Dock]".
-The sarea of Ambulance Dock is "Hospital".
+Sarea of Ambulance Dock is "Hospital".
 
 to say ResolveEvent Ambulance Dock:
 	say "     Most of the ambulances are out of the special parking entrance. The only one here has been crashed into the dock. Stepping over to it, you look in the open back. Unsurprisingly, there is a huge, sticky mess in there. Presumably the last patient they picked up jumped the response team for sex as they were returning to the hospital. You consider searching in there for something that could still be usable, but it seems like a risky venture.";
@@ -138,7 +138,7 @@ Operating Room	"Operating Room"
 
 Operating Room is a situation.
 ResolveFunction of Operating Room is "[ResolveEvent Operating Room]".
-The sarea of Operating Room is "Hospital".
+Sarea of Operating Room is "Hospital".
 
 to say ResolveEvent Operating Room:
 	say "     As you are about to turn a corner, you spot a team of several jaguar orderlies marching down the hall towards you. You duck back quickly before they spot you and dive quietly into the nearest room. As you wait quietly around the edge of the door, you can see that this is one of the hospital's operating rooms. Once you hear the group head past and continue on, you let out a sigh of relief and decide to search the room while you're here.";
@@ -160,7 +160,7 @@ Staff Lounge	"Staff Lounge"
 
 Staff Lounge is a situation.
 ResolveFunction of Staff Lounge is "[ResolveEvent Staff Lounge]".
-The sarea of Staff Lounge is "Hospital".
+Sarea of Staff Lounge is "Hospital".
 when play begins:
 	add Staff Lounge to BadSpots of MaleList;
 	add Staff Lounge to BadSpots of FurryList;
@@ -180,7 +180,7 @@ Interruption	"Interruption"
 
 Interruption is a situation.
 ResolveFunction of Interruption is "[ResolveEvent Interruption]".
-The sarea of Interruption is "Hospital".
+Sarea of Interruption is "Hospital".
 
 to say ResolveEvent Interruption:
 	say "     While moving through the halls of the hospital, you poke into the patient rooms on each side, taking a quick glance for anything of interest. At one, you are surprised to find a large jaguar with one of the vixen nurses in his lap, riding his hard cock. He starts to growl and rise as he notices you, but the nurse, not seeing you, rides him harder and gives him a lustful kiss. He purrrumbles as he settles back down, eyes closed as they kiss. You decide to slip quietly back out of the room to leave the couple to their fun.";
@@ -193,7 +193,7 @@ Maternity Ward	"Maternity Ward"
 
 Maternity Ward is a situation.
 ResolveFunction of Maternity Ward is "[ResolveEvent Maternity Ward]".
-The sarea of Maternity Ward is "Hospital".
+Sarea of Maternity Ward is "Hospital".
 
 to say ResolveEvent Maternity Ward:
 	say "     Reaching the hospital's maternity ward, you suppress a shudder and morbidly take a look in to see what has become of it. Inside you find the place busy with vixen nurses. Several are tending to the bassinets while a few others are nurse feeding little foxcub babies. The staff dutifully tend over the cubs, cooing and playing with them happily. You turn and quietly leave, unsure if you are disturbed by the scene inside or relieved that it was not as you feared within.";
@@ -214,7 +214,7 @@ Radiology	"Radiology"
 
 Radiology is a situation.
 ResolveFunction of Radiology is "[ResolveEvent Radiology]". The level of Radiology is 5.
-The sarea of Radiology is "Hospital".
+Sarea of Radiology is "Hospital".
 when play begins:
 	add Radiology to BadSpots of FemaleList;
 	add Radiology to BadSpots of MaleList;
@@ -312,7 +312,7 @@ Pathology	"Pathology"
 
 Pathology is a situation.
 ResolveFunction of Pathology is "[ResolveEvent Pathology]". The level of Pathology is 5.
-The sarea of Pathology is "Hospital".
+Sarea of Pathology is "Hospital".
 when play begins:
 	add Pathology to BadSpots of FemaleList;
 	add Pathology to BadSpots of MaleList;
@@ -339,7 +339,7 @@ Cafeteria	"Cafeteria"
 
 Cafeteria is a situation.
 ResolveFunction of Cafeteria is "[ResolveEvent Cafeteria]".
-The sarea of Cafeteria is "Hospital".
+Sarea of Cafeteria is "Hospital".
 
 to say ResolveEvent Cafeteria:
 	say "     As you are passing through the dark halls of the hospital, you can hear quite a bit of noise from down one hall. Approaching cautiously, you glance down and see leads to a pair of doors marked 'Cafeteria'. You approach cautiously, glancing between the doors and the hall behind you. At the doors, you peek through the window and see quite a few of the hospital's animal staff inside.";
@@ -358,7 +358,7 @@ Chaplaincy	"Chaplaincy"
 
 Chaplaincy is a situation.
 ResolveFunction of Chaplaincy is "[ResolveEvent Chaplaincy]".
-The sarea of Chaplaincy is "Hospital".
+Sarea of Chaplaincy is "Hospital".
 
 to say ResolveEvent Chaplaincy:
 	say "     You find yourself in front of the hospital's Chaplaincy, there for the spiritual well-being of patients and family members. Glancing around, you decide to slip inside and have a look around, briefly hoping things will be a little better in here. Sadly, that is not the case and there are signs of several lustful outbursts in here just as everywhere else. You even spot the torn remains of the clergyman's suit and clerical collar, as messy as the other piles of cum-laden clothes. You spot several small vials nearby labelled [']libido suppressant['], most of them empty, though one still remains unused. In the end, he must have decided to give in to his urges rather than keep denying them. You pick it up and store it away. Perhaps it will be useful for you in a moment of need.";
@@ -372,7 +372,7 @@ Records Room	"Records Room"
 
 Records Room is a situation.
 ResolveFunction of Records Room is "[ResolveEvent Records Room]". The level of Records Room is 5.
-The sarea of Records Room is "Hospital".
+Sarea of Records Room is "Hospital".
 when play begins:
 	add Radiology to BadSpots of FemaleList;
 	add Radiology to BadSpots of MaleList;
@@ -396,7 +396,7 @@ Surrounding Area	"Surrounding Area"
 
 Surrounding Area is a situation.
 ResolveFunction of Surrounding Area is "[ResolveEvent Surrounding Area]".
-The sarea of Surrounding Area is "Hospital".
+Sarea of Surrounding Area is "Hospital".
 
 to say ResolveEvent Surrounding Area:
 	say "     Deciding to take a some time to check out the neighborhood around the hospital, you proceed away from the large building and into the nearby residential area. As you cautiously move around the houses, a few things stand out right away. The doors to the homes are open or are broken into. A closer examination shows splintered wood, ripped hinges and broken glass, often with heavy claw marks as well. But far more telling is the fact that it is far too quiet. The city certainly isn't as noisy as it used to be, but there's usually some sounds of activity from time to time. Be it some more peaceful mutants skulking around, weaker creatures fleeing from your approach or the noises of conflict and/or sex (for it's often hard to tell the two apart these days), there is usually some background sounds, but not here. It becomes increasingly disconcerting for you.";
@@ -409,7 +409,7 @@ Stairwell	"Stairwell"
 
 Stairwell is a situation.
 ResolveFunction of Stairwell is "[ResolveEvent Stairwell]".
-The sarea of Stairwell is "Hospital".
+Sarea of Stairwell is "Hospital".
 
 to say ResolveEvent Stairwell:
 	if a random chance of 1 in 2 succeeds:
@@ -427,7 +427,7 @@ Missing Powder	"Missing Powder"
 
 Missing Powder is a situation.
 ResolveFunction of Missing Powder is "[ResolveEvent Missing Powder]". [Added by Blue Bishop]
-the sarea of Missing Powder is "Hospital".
+Sarea of Missing Powder is "Hospital".
 
 to say ResolveEvent Missing Powder:
 	say "     You manage to find a small, currently unoccupied patient room. It's unremarkable, save for a small bag with a note laying near it. Picking up the item, you read the note.";
@@ -457,7 +457,7 @@ An everyturn rule:
 Locked stairwell is a door. "Off to one side are a pair of heavy, metal doors leading to a stairwell."
 Locked stairwell is lockable and locked.
 Locked stairwell is above City Hospital.
-The description of Locked stairwell is "Off to one side are a pair of heavy, metal doors leading to a stairwell."
+Description of Locked stairwell is "Off to one side are a pair of heavy, metal doors leading to a stairwell."
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -465,7 +465,7 @@ Hidden Lab	"Hidden Lab"
 
 Hidden Lab is a room.
 Hidden Lab is above Locked stairwell.
-The description of Hidden Lab is "     Part of the hospital testing labs have been converted to be used by the white mouse to work on his analysis of the nanite infection. The short fellow has set up several small experiments that are running, likely analyzing some of the biological changes caused by the nanites. These are on the lab tables in the room while the mouse scurries around between them, occasionally having to climb up onto one of the stools to do his work.[line break]     Part of the room has been cleared out to make space for a small cot and collection of supplies. The cot doesn't look like it's been used recently and the food supplies are in disarray. The mouse is probably just grabbing a snack when he remembers to eat, being so focused on his work.[line break]     Off to one side of the room are a pair of collared and chained hybrids, a duo of those mismatched, patchwork chimeras. They have water and food dishes, as well as a small chemical toilet within reach of their tethers. At the moment, they are [one of]fucking[or]laying down[or]kissing[or]fondling one another[or]sleeping[or]eating[or]drinking[or]masturbating[at random].".
+Description of Hidden Lab is "     Part of the hospital testing labs have been converted to be used by the white mouse to work on his analysis of the nanite infection. The short fellow has set up several small experiments that are running, likely analyzing some of the biological changes caused by the nanites. These are on the lab tables in the room while the mouse scurries around between them, occasionally having to climb up onto one of the stools to do his work.[line break]     Part of the room has been cleared out to make space for a small cot and collection of supplies. The cot doesn't look like it's been used recently and the food supplies are in disarray. The mouse is probably just grabbing a snack when he remembers to eat, being so focused on his work.[line break]     Off to one side of the room are a pair of collared and chained hybrids, a duo of those mismatched, patchwork chimeras. They have water and food dishes, as well as a small chemical toilet within reach of their tethers. At the moment, they are [one of]fucking[or]laying down[or]kissing[or]fondling one another[or]sleeping[or]eating[or]drinking[or]masturbating[at random].".
 
 the scent of the Hidden Lab is "The doctor's lab smells primarily of the chemicals and samples from his experiments, but this only partially masks the scents of sex from his chained chimeras.".
 
@@ -493,7 +493,7 @@ Finding a Way in	"Finding a Way in"
 Finding a Way in is a situation.
 ResolveFunction of Finding a Way is "[ResolveEvent Finding a Way in]".
 Finding a Way in is inactive.		[unable to do this until activated]
-The sarea of Finding a Way in is "Hospital".
+Sarea of Finding a Way in is "Hospital".
 
 an everyturn rule: [to restore the openness of the door after an export/import]
 	if Finding a Way in is resolved and locked stairwell is locked:
@@ -520,10 +520,10 @@ understand "Mouse" as Doctor Mouse.
 understand "Dr Mouse" as Doctor Mouse.
 DoctorMouseProgress is a number that varies.
 
-The description of Doctor Mouse is "     Dr Mouse is a small, white mouse with red eyes and a pink nose and ears. He's only about three feet tall, and that's to the top of his ears. He's dressed in a white labcoat that goes almost to the floor with his rodent-like feet and thin tail poking out from underneath it. He is busily working away in the lab, always scurrying about for equipment or checking on one of his many experiments.".
+Description of Doctor Mouse is "     Dr Mouse is a small, white mouse with red eyes and a pink nose and ears. He's only about three feet tall, and that's to the top of his ears. He's dressed in a white labcoat that goes almost to the floor with his rodent-like feet and thin tail poking out from underneath it. He is busily working away in the lab, always scurrying about for equipment or checking on one of his many experiments.".
 The icon of Doctor Mouse is the figure of DrMouse_icon.
 
-The conversation of Doctor Mouse is { "Squeak!" }.
+Conversation of Doctor Mouse is { "Squeak!" }.
 
 the scent of Doctor Mouse is "The small lab mouse looks at you sternly as you sniff him. He smells of mouse, chemicals and sleepless nights in the lab.".
 
@@ -1363,7 +1363,7 @@ to say tlvictory:
 		extend game by 56;
 		say "     With Dr Matt in good hands, you [if Susan is visible]and Susan [end if]bring your haul down the stairs in stages and then take it out the door. Having called for the helicopter pickup earlier, it arrives and you instruct the orderlies to load up the equipment before you all return to the hospital and the laboratory hidden within.";
 		say "     As the lab fades into the distance you can see the faint sign of incoming choppers coming to land there. It seems that Orthas called in the military to take the transformed doctor and any remaining research material. They've been dealt a sizable setback to their plans.";
-	decrease the humanity of Player by 5;
+	decrease Humanity of Player by 5;
 	increase score by 50;
 	LineBreak;
 	wait for any key;
@@ -1406,12 +1406,12 @@ Object	Name
 Loading Dock	"Loading Dock"
 
 Loading Dock is a room.
-The description of Loading Dock is "This loading dock is discreetly placed behind and down the hill from Trevor Labs. The security gate outside it has been broken open. From the scattered clothes and splatters of dried, musky fluids around, it seems like some of those infected within got out before the security doors were closed. Using the keycard you found, you can slip in this way to go [link]down[end link] into the underground labs if you'd like. Otherwise, you can head [link]east[end link] around the hill again to get back to the main road.".
+Description of Loading Dock is "This loading dock is discreetly placed behind and down the hill from Trevor Labs. The security gate outside it has been broken open. From the scattered clothes and splatters of dried, musky fluids around, it seems like some of those infected within got out before the security doors were closed. Using the keycard you found, you can slip in this way to go [link]down[end link] into the underground labs if you'd like. Otherwise, you can head [link]east[end link] around the hill again to get back to the main road.".
 
 undergroundlab is a door. undergroundlab is dangerous.
 undergroundlab is below Loading Dock.
 darkbasement2 is below undergroundlab.
-The marea of undergroundlab is "Sealed". The description of undergroundlab is "A security-locked door that is armored and sealed. Thankfully, the security card you found opens it.".
+The marea of undergroundlab is "Sealed". Description of undergroundlab is "A security-locked door that is armored and sealed. Thankfully, the security card you found opens it.".
 
 the scent of Loading Dock is "This place has the stale smell of sex, as if nothing's left this place for some time.".
 
@@ -1487,7 +1487,7 @@ Dinosaur Nest	"Dinosaur Nest"
 
 Dinosaur Nest is a situation.
 ResolveFunction of Dinosaur Nest is "[ResolveEvent Dinosaur Nest]".
-The sarea of Dinosaur Nest is "Museum".
+Sarea of Dinosaur Nest is "Museum".
 Dinosaur Nest is inactive.		[unable to do this until activated]
 nesteddino is a number that varies.
 dinonest is a number that varies.
@@ -1600,7 +1600,7 @@ Viking Longboat	"Viking Longboat"
 
 Viking Longboat is a situation.
 ResolveFunction of Viking Longboat is "[ResolveEvent Viking Longboat]".
-The sarea of Viking Longboat is "Museum".
+Sarea of Viking Longboat is "Museum".
 Viking Longboat is inactive.		[unable to do this until activated]
 lbfight is a number that varies.
 longboatfind is a number that varies.

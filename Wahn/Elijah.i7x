@@ -91,7 +91,7 @@ Angel vs Demons	"Angel vs Demons"
 
 Angel vs Demons is a situation.
 ResolveFunction of Angel vs Demons is "[ResolveEvent Angel vs Demons]". The level of Angel vs Demons is 10.
-The sarea of Angel vs Demons is "Red".
+Sarea of Angel vs Demons is "Red".
 when play begins:
 	add Angel vs Demons to BadSpots of MaleList; [Elijah is male]
 	add Angel vs Demons to badspots of DemonList; [demons everywhere - he might even become one]
@@ -185,8 +185,8 @@ TwistedCapacity of Elijah is false. [Twisted Characters can take any penetration
 Sterile of Elijah is false. [steriles can't knock people up]
 MainInfection of Elijah is "Seraphim Warrior".
 
-The description of Elijah is "[Elijahdesc]".
-The conversation of Elijah is { "Mew!" }.
+Description of Elijah is "[Elijahdesc]".
+Conversation of Elijah is { "Mew!" }.
 NPCintCounter is a number that varies. NPCintCounter is normally 555.
 ElijahChar-A is a text that varies. ElijahChar-A is normally "0". [Candy]
 ElijahChar-B is a text that varies. ElijahChar-B is normally "0". [Sarah]
@@ -593,7 +593,7 @@ Sweet Surprise	"Sweet Surprise"
 
 Sweet Surprise is a situation.
 ResolveFunction of Sweet Surprise is "[ResolveEvent Sweet Surprise]". Sweet Surprise is inactive.
-The sarea of Sweet Surprise is "Park".
+Sarea of Sweet Surprise is "Park".
 
 to say ResolveEvent Sweet Surprise:
 	say "     As you're searching through the park, you come across the remains of a picnic site that's been quite torn up. There's some shreds of clothes and sticky pools of sexual fluids scattered around the torn blanket. The dishes and cutlery are scattered and all that remains of the food is crumbs. An overturned bottle of wine's left a large stain on the blanket and you spot an empty ring case beside it. It seems things did not go quite as planned for this romantic picnic, but you hope that the couple are still together in whatever new forms they've gained. You're about to leave when you spot their wicker basket knocked into the nearby bushes. Whatever dessert was once in there has spoiled and become a suspicious green mass, but next to it is a sealed container holding a large honeycomb, probably meant to be used to top the dessert with fresh honey[if HP of Elijah is 2]. Remembering that you're looking for some to possibly heal the angel, you pack it away[end if].";
@@ -609,7 +609,7 @@ Examination Room	"Examination Room"
 
 Examination Room is a situation.
 ResolveFunction of Examination Room is "[ResolveEvent Examination Room]". Examination Room is inactive. The level of Examination Room is 8.
-The sarea of Examination Room is "Hospital".
+Sarea of Examination Room is "Hospital".
 
 to say ResolveEvent Examination Room:
 	say "     Coming across a set of examination rooms, you start searching them in the hopes of finding some useful supplies. Unfortunately, it seems that they've already been searched and much of the useful items have already been gathered. As you're ransacking a third of them in increasing frustration, you hear the door slam open as a jaguar dressed like an orderly comes striding in, clearly upset at having found you snooping around.";

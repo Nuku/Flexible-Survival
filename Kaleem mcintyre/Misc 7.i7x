@@ -7,7 +7,7 @@ Horse Sense	"Horse Sense"
 
 Horse Sense is a situation.
 ResolveFunction of Horse Sense is "[ResolveEvent Horse Sense]".
-The sarea of Horse Sense is "Plains".
+Sarea of Horse Sense is "Plains".
 when play begins:
 	add Horse Sense to BadSpots of FurryList;
 	add Horse Sense to badspots of HermList;
@@ -36,7 +36,7 @@ Victim	"Victim"
 
 Victim is a situation.
 ResolveFunction of Victim is "[ResolveEvent Victim]". The level of Victim is 8.
-The sarea of Victim is "Red".
+Sarea of Victim is "Red".
 when play begins:
 	add Victim to BadSpots of FurryList;
 	add Victim to badspots of HermList;
@@ -75,7 +75,7 @@ Runaway	"Runaway"
 
 Runaway is a situation.
 ResolveFunction of Runaway is "[ResolveEvent Runaway]".
-The sarea of Runaway is "Beach".
+Sarea of Runaway is "Beach".
 
 to say ResolveEvent Runaway:
 	say "     Walking across the sands of the long stretch of beach that the city has to offer you find a curious sight of what looks like a normal person sitting by themselves while shuffling their bare feet across the pale sands. Curious, you go over to them and then grunt to catch their attention when you realize that, yes indeed, the other is a full on human. What you find when the other turns around is a freckled faced boy of about seventeen looking up and down your [BodyName of Player] body somewhat curiously before he smiles up at you. 'Hello, come to watch the waves lap at the shore?' the young man says somewhat quietly. You look out at the small crashing waves and then turn back to the other to give a shake of your head. Telling them that you were actually curious about them and what they are doing here all alone, you find yourself slightly taking a step back when the other chuckles somewhat angrily all of a sudden.";
@@ -105,7 +105,7 @@ Portrait	"Portrait"
 
 Portrait is a situation.
 ResolveFunction of Portrait is "[ResolveEvent Portrait]". The level of Portrait is 9.
-The sarea of Portrait is "Outside".
+Sarea of Portrait is "Outside".
 when play begins:
 	add Portrait to BadSpots of FurryList;
 	add Portrait to BadSpots of MaleList;
@@ -131,7 +131,7 @@ Hurting	"Hurting"
 
 Hurting is a situation.
 ResolveFunction of Hurting is "[ResolveEvent Hurting]".
-The sarea of Hurting is "Hospital".
+Sarea of Hurting is "Hospital".
 when play begins:
 	add Hurting to BadSpots of FurryList;
 	add Hurting to BadSpots of MaleList;
@@ -178,7 +178,7 @@ Conchien	"Conchien"
 
 Conchien is a situation.
 ResolveFunction of Conchien is "[ResolveEvent Conchien]".
-The sarea of Conchien is "Outside".
+Sarea of Conchien is "Outside".
 beauceronmet is a truth state that varies. beauceronmet is usually false.
 
 when play begins:
@@ -200,7 +200,7 @@ Chocolate Treat	"Chocolate Treat"
 
 Chocolate Treat is a situation.
 ResolveFunction of Chocolate Treat is "[ResolveEvent Chocolate Treat]".
-The sarea of Chocolate Treat is "High".
+Sarea of Chocolate Treat is "High".
 
 when play begins:
 	add Chocolate Treat to BadSpots of FurryList;

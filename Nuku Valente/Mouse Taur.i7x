@@ -14,7 +14,7 @@ Mouse Taur Encounter	"Mouse Taur Encounter"
 
 Mouse Taur Encounter is a situation.
 ResolveFunction of Mouse Taur Encounter is "[ResolveEvent Mouse Taur Encounter]".
-The sarea of Mouse Taur Encounter is "Red".
+Sarea of Mouse Taur Encounter is "Red".
 When play begins:
 	add Mouse Taur Encounter to BadSpots of FurryList;
 	add Mouse Taur Encounter to BadSpots of FemaleList;
@@ -43,7 +43,7 @@ Find Porn Store	"Find Porn Store"
 
 Find Porn Store is a situation.
 ResolveFunction of Find Porn Store is "[ResolveEvent Find Porn Store]". The level of Find Porn Store is 5.
-The sarea of Find Porn Store is "Red".
+Sarea of Find Porn Store is "Red".
 When play begins:
 	add Find Porn Store to BadSpots of FurryList;
 	add Find Porn Store to BadSpots of FemaleList;
@@ -134,7 +134,7 @@ Restrained Desire	"Porn Store"
 [^^ mapping the old name of the room to the new room object]
 
 Restrained Desire is a room. It is fasttravel. It is sleepsafe. It is private.
-The description of Restrained Desire is "[pornstoredesc]".
+Description of Restrained Desire is "[pornstoredesc]".
 
 after looking while player is in Restrained Desire:
 	if findwires < 2 and fixedgens < 3:
@@ -149,8 +149,8 @@ object	name
 Lisa	"Lisa"
 
 Lisa is a person. Lisa is in Restrained Desire.
-The description of Lisa is "     A mouse taur. Her mouse-like body is six feet long and about three feet tall where it flows into the curvy form of a well-built, mostly human female. Her hands are somewhat pawlike and she has whiskers and grand round ears. Besides that, she is human from the belly up, with enticing breasts that wobble with her motions for your eyes. Her entire form is covered in soft mouse gray fur, except for the end of the faint snout she has, twitching pinkly.".
-The conversation of Lisa is { "Squeak!" }.
+Description of Lisa is "     A mouse taur. Her mouse-like body is six feet long and about three feet tall where it flows into the curvy form of a well-built, mostly human female. Her hands are somewhat pawlike and she has whiskers and grand round ears. Besides that, she is human from the belly up, with enticing breasts that wobble with her motions for your eyes. Her entire form is covered in soft mouse gray fur, except for the end of the faint snout she has, twitching pinkly.".
+Conversation of Lisa is { "Squeak!" }.
 
 mousefucked is a number that varies. mousefucked is usually 0.
 mousespot is a number that varies. mousespot is usually 0.

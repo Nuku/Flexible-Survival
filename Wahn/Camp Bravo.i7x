@@ -9,7 +9,7 @@ Red Light Requisition	"Red Light Requisition"
 
 Red Light Requisition is a situation.
 ResolveFunction of Red Light Requisition is "[ResolveEvent Red Light Requisition]".
-The sarea of Red Light Requisition is "Red".
+Sarea of Red Light Requisition is "Red".
 when play begins: [these exceptions are based on the second half so people aren't left standing]
 	add Red Light Requisition to BadSpots of MaleList;
 	add Red Light Requisition to BadSpots of FurryList;
@@ -31,7 +31,7 @@ Trickster's Masterpiece	"Trickster's Masterpiece"
 
 Trickster's Masterpiece is a situation.
 ResolveFunction of Trickster's Masterpiece is "[ResolveEvent Trickster's Masterpiece]".
-The sarea of Trickster's Masterpiece is "Outside".
+Sarea of Trickster's Masterpiece is "Outside".
 when play begins:
 	add Trickster's Masterpiece to BadSpots of MaleList; [male soldiers]
 	add Trickster's Masterpiece to BadSpots of FurryList; [minotaur involved]
@@ -66,7 +66,7 @@ Back at the Camp	"Back at the Camp"
 
 Back at the Camp is a situation.
 ResolveFunction of Back at the Camp is "[ResolveEvent Back at the Camp]". Back at the Camp is inactive. [enabled by the 'Trickster's Masterpiece' event]
-The sarea of Back at the Camp is "Outside".
+Sarea of Back at the Camp is "Outside".
 
 when play begins:
 	add Back at the Camp to BadSpots of MaleList; [male soldiers]
@@ -128,7 +128,7 @@ to say ResolveEvent Back at the Camp:
 
 to say GuardLie: [lie to get into the camp]
 	[TODO: Add rejection for people with ungodly huge cocks/breasts]
-	let bonus be (( the Charisma of the player minus 10 ) divided by 2);
+	let bonus be (( Charisma of Player minus 10 ) divided by 2);
 	if 2 is listed in bookcollection, increase bonus by 2;
 	let diceroll be a random number from 1 to 20;
 	say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
@@ -167,7 +167,7 @@ Object	Name
 Camp Bravo Entrance	"Camp Bravo Entrance"
 
 Camp Bravo Entrance is a room. It is a fasttravel. It is private.
-The description of Camp Bravo Entrance is "     You're at the entrance of Camp Bravo, a mid-sized military camp consisting of row after row of olive green tents. Two soldiers are on guard here, using a barricade line of wrecked cars as cover as they vigilantly watch the street. To the north lies the parade ground in the center of the camp.".
+Description of Camp Bravo Entrance is "     You're at the entrance of Camp Bravo, a mid-sized military camp consisting of row after row of olive green tents. Two soldiers are on guard here, using a barricade line of wrecked cars as cover as they vigilantly watch the street. To the north lies the parade ground in the center of the camp.".
 earea of Camp Bravo Entrance is "Outside".
 
 Instead of sniffing Camp Bravo Entrance:
@@ -178,8 +178,8 @@ object	name
 Private Cooper	"Private Cooper"
 
 Private Cooper is a man. Private Cooper is in Camp Bravo Entrance.
-The description of Private Cooper is "     Private Cooper is a bulky man with a grim look on his face most of the time. He constantly scans for approaching intruders coming too close to the Camp Entrance.".
-The conversation of Private Cooper is { "Meep!" };
+Description of Private Cooper is "     Private Cooper is a bulky man with a grim look on his face most of the time. He constantly scans for approaching intruders coming too close to the Camp Entrance.".
+Conversation of Private Cooper is { "Meep!" };
 
 instead of conversing the Private Cooper:
 	if MovingOrwell is 1:
@@ -240,8 +240,8 @@ Sterile of Private Marc Orwell is false. [steriles can't knock people up]
 MainInfection of Private Marc Orwell is "Human".
 understand "Marc" as Private Marc Orwell.
 understand "Orwell" as Private Marc Orwell.
-The description of Private Marc Orwell is "[OrwellDesc]".
-The conversation of Private Marc Orwell is { "Meep!" }.
+Description of Private Marc Orwell is "[OrwellDesc]".
+Conversation of Private Marc Orwell is { "Meep!" }.
 The icon of Private Marc Orwell is Figure of MarcOrwell_icon.
 
 to say OrwellDesc:
@@ -303,7 +303,7 @@ Parade Ground	"Parade Ground"
 
 Parade Ground is a room.
 Parade Ground is north of Camp Bravo Entrance.
-The description of Parade Ground is "     You're in Camp Bravo, surrounded by green military tents. To the north lies the tent of the camp's commanding officer, west is the quartermaster's tent, and to the south is the entrance of the camp. In the middle of the camp is a mostly empty parade ground with a wooden hitching post and a single field bed. There are various patches of dried cum on them and the ground around. An impressively large minotaur sits next to it, munching on vegetables and bread brought to him by a grizzled looking soldier. Seems like caring for the beast is his responsibility.".
+Description of Parade Ground is "     You're in Camp Bravo, surrounded by green military tents. To the north lies the tent of the camp's commanding officer, west is the quartermaster's tent, and to the south is the entrance of the camp. In the middle of the camp is a mostly empty parade ground with a wooden hitching post and a single field bed. There are various patches of dried cum on them and the ground around. An impressively large minotaur sits next to it, munching on vegetables and bread brought to him by a grizzled looking soldier. Seems like caring for the beast is his responsibility.".
 
 Instead of sniffing Parade Ground:
 	say "     The heavy scent of cum and a musky minotaur odor hang in the air. It must be laden with pheromones, as you're getting quite horny just from taking it in.";
@@ -314,7 +314,7 @@ Major's Tent	"Major's Tent"
 
 Major's Tent is a room.
 Major's Tent is north of Parade Ground.
-The description of Major's Tent is "     You're in a sparely furnished military tent, holding only a field desk, a small table, several chairs and a field bed. Major Padgett, the camp's commander sits at the desk, reading scout reports and other paperwork. On top of the table at one wall of the tent rests a military radio.".
+Description of Major's Tent is "     You're in a sparely furnished military tent, holding only a field desk, a small table, several chairs and a field bed. Major Padgett, the camp's commander sits at the desk, reading scout reports and other paperwork. On top of the table at one wall of the tent rests a military radio.".
 
 Instead of sniffing Major's Tent:
 	say "     Even in here, the minotaur cum smell is still pretty strong. No wonder, since the big hunk has been rutting people in the area right before the tent.";
@@ -325,7 +325,7 @@ Quartermaster's Tent	"Quartermaster's Tent"
 
 Quartermaster's Tent is a room.
 West of the Parade Ground is the Quartermaster's Tent.
-The description of Quartermaster's Tent is "     You're in the large tent of Camp Bravo's quartermaster. It holds a long row of filled shelves in the back, combined with various crates stacked high and a few large sacks resting on the floor next to the quartermaster's field desk. A medical corpsman is bent over one of them, counting its contents.".
+Description of Quartermaster's Tent is "     You're in the large tent of Camp Bravo's quartermaster. It holds a long row of filled shelves in the back, combined with various crates stacked high and a few large sacks resting on the floor next to the quartermaster's field desk. A medical corpsman is bent over one of them, counting its contents.".
 
 Instead of sniffing Quartermaster's Tent:
 	say "     Even in here, the minotaur cum smell is still pretty strong. No wonder, since the big hunk has been rutting people in the area right before the tent. The lingering aroma seems to have an effect on everyone here too, as everyone seems a fair bit more randy than you'd have expected from professional soldiers.";
@@ -336,7 +336,7 @@ Soldier Tents	"Soldier Tents"
 
 Soldier Tents is a room.
 East of the Parade Ground is the Soldier Tents.
-The description of Soldier Tents is "[SoldierTentDesc]".
+Description of Soldier Tents is "[SoldierTentDesc]".
 
 to say SoldierTentDesc:
 	say "     You're standing between numerous olive-green army tents, set up to house the various soldiers stationed here. Uniformed men and women come and go from their quarters, or hang around in groups talking to each other[if daytimer is night]. Even after sundown, there is a fair bit of activity here, as some shift or other is always on duty[end if].";
@@ -350,8 +350,8 @@ object	name
 Major Padgett	"Major Padgett"
 
 Major Padgett is a man. Major Padgett is in Major's Tent.
-The description of Major Padgett is "     Major Padgett is an older man in military uniform, sporting a military buzz-cut of graying hair. He's sitting at a field desk and looks busy with scouting reports and other paperwork.".
-The conversation of Major Padgett is { "Attention!" }.
+Description of Major Padgett is "     Major Padgett is an older man in military uniform, sporting a military buzz-cut of graying hair. He's sitting at a field desk and looks busy with scouting reports and other paperwork.".
+Conversation of Major Padgett is { "Attention!" }.
 thirst of Major Padgett usually is 555. [ The thirst value is used for the turn-number the player last tried to talk the Major into allowing women with the minotaur ]
 CampBravoWomenAllowed is a number that varies. CampBravoWomenAllowed is usually 0.
 
@@ -458,7 +458,7 @@ to say MajorBreeding:
 		say "     Maybe you should let your previous arguments sink in for a while before trying to talk the Major into this again...";
 	else:
 		say "     You tell the major that the researchers urgently need more material and also that getting direct offspring of Patient Zero to examine could be greatly beneficial for their progress. Minotaur calves would surely be easier to manage and move than the creature itself, especially if they inherit the habit of obedience to superiors from their soldier mothers - or of course if said women can be brought outside the city before they even give birth.";
-		let bonus be (( the Charisma of the player minus 10 ) divided by 2);
+		let bonus be (( Charisma of Player minus 10 ) divided by 2);
 		if 2 is listed in bookcollection, increase bonus by 2;
 		let diceroll be a random number from 1 to 20;
 		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
@@ -497,8 +497,8 @@ object	name
 Military Radio	"Military Radio"
 
 Military Radio is a man. Military Radio is in Major's Tent.
-The description of Military Radio is "     The radio is a chunky piece of olive-green equipment with a multitude of buttons and dials. A handheld speaker set is attached to it at the end of a long flexible cord.".
-The conversation of Military Radio is { "Beep!" }.
+Description of Military Radio is "     The radio is a chunky piece of olive-green equipment with a multitude of buttons and dials. A handheld speaker set is attached to it at the end of a long flexible cord.".
+Conversation of Military Radio is { "Beep!" }.
 
 instead of sniffing Military Radio:
 	say "     Doesn't really smell of anything out of the ordinary.";
@@ -577,8 +577,8 @@ SexuallyExperienced of Elaine is true.
 TwistedCapacity of Elaine is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Elaine is false. [steriles can't knock people up]
 MainInfection of Elaine is "Human".
-The description of Elaine is "     Elaine Scott is the quartermaster of this camp, responsible for the regular and... more unusual supplies the soldiers need. She's an attractive woman in her thirties, about 4'9' or so in height, with short-cut black hair. [if thirst of Elaine is 1]She has a healthy glow to her[else if thirst of Elaine is 2]Her belly bulges outward in obvious pregnancy[else if thirst of Elaine is 3]She keeps a watchful eye over her son Adam, who's just learning how to manage the inventory here[end if].".
-The conversation of Elaine is { "Huh?" }.
+Description of Elaine is "     Elaine Scott is the quartermaster of this camp, responsible for the regular and... more unusual supplies the soldiers need. She's an attractive woman in her thirties, about 4'9' or so in height, with short-cut black hair. [if thirst of Elaine is 1]She has a healthy glow to her[else if thirst of Elaine is 2]Her belly bulges outward in obvious pregnancy[else if thirst of Elaine is 3]She keeps a watchful eye over her son Adam, who's just learning how to manage the inventory here[end if].".
+Conversation of Elaine is { "Huh?" }.
 ElainePregnant is a number that varies.
 
 An everyturn rule:
@@ -642,7 +642,7 @@ to say CampBravoElaineTalk:
 	choose a blank row in table of fucking options;
 	now title entry is "Do nothing, turn away";
 	now sortorder entry is 7;
-	now description entry is "Break the conversation off";
+	now description entry is "Break Conversation off";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -849,8 +849,8 @@ SexuallyExperienced of Sergeant Alexander is true.
 TwistedCapacity of Sergeant Alexander is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Sergeant Alexander is false. [steriles can't knock people up]
 MainInfection of Sergeant Alexander is "Human".
-The description of Sergeant Alexander is "     Sergeant Alexander is a tough-looking soldier, who's seen a lot in his time. He's about 5'11' and pretty buff and muscular. Looks like he's responsible for caring for the minotaur, as he carries box after box of vegetables and other foodstuffs to the creature from behind one of the nearby tents."
-The conversation of Sergeant Alexander is { "Ick!" }.
+Description of Sergeant Alexander is "     Sergeant Alexander is a tough-looking soldier, who's seen a lot in his time. He's about 5'11' and pretty buff and muscular. Looks like he's responsible for caring for the minotaur, as he carries box after box of vegetables and other foodstuffs to the creature from behind one of the nearby tents."
+Conversation of Sergeant Alexander is { "Ick!" }.
 
 instead of sniffing Sergeant Alexander:
 	say "     He smells a bit of sweat and minotaur cum. Since he's often pretty close to the action on the parade ground, his uniform has a lot of dried cum-splatters responsible for the smell.";
@@ -899,7 +899,7 @@ instead of conversing Sergeant Alexander:
 	choose a blank row in table of fucking options;
 	now title entry is "Do nothing, turn away.";
 	now sortorder entry is 10;
-	now description entry is "Break the conversation off.";
+	now description entry is "Break Conversation off.";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -1182,10 +1182,10 @@ SexuallyExperienced of Tiny Tim is true.
 TwistedCapacity of Tiny Tim is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Tiny Tim is false. [steriles can't knock people up]
 MainInfection of Tiny Tim is "Minotaur".
-The description of Tiny Tim is "     The large minotaur affectionately called 'Tiny Tim' by the soldiers in the camp currently sits on the ground beside the hitching post used in couplings with him. He's a magnificently well-built creature, at least nine feet tall and with large curved horns adoring his bull-like head. His otherwise human upper body shows thick, ropey muscles under bronzed skin. Beginning at the hip downwards, he has dark brown shaggy fur covering strong two-jointed legs that end in hooves. Between his legs dangles a long human-like cock and two large balls. The minotaur almost constantly half-hard, his manhood springing up instantly to its full one and a half feet of erect length every time the creature sees or smells a sexual partner."
+Description of Tiny Tim is "     The large minotaur affectionately called 'Tiny Tim' by the soldiers in the camp currently sits on the ground beside the hitching post used in couplings with him. He's a magnificently well-built creature, at least nine feet tall and with large curved horns adoring his bull-like head. His otherwise human upper body shows thick, ropey muscles under bronzed skin. Beginning at the hip downwards, he has dark brown shaggy fur covering strong two-jointed legs that end in hooves. Between his legs dangles a long human-like cock and two large balls. The minotaur almost constantly half-hard, his manhood springing up instantly to its full one and a half feet of erect length every time the creature sees or smells a sexual partner."
 Tiny Tim is in Parade Ground.
 The icon of Tiny Tim is Figure of TinyTim_icon.
-The conversation of Tiny Tim is { "Moo." }.
+Conversation of Tiny Tim is { "Moo." }.
 thirst of Tiny Tim is usually 255.
 
 instead of conversing Tiny Tim:

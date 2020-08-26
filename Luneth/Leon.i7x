@@ -56,9 +56,9 @@ SexuallyExperienced of Leon is true.
 TwistedCapacity of Leon is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Leon is false. [steriles can't knock people up]
 MainInfection of Leon is "Ram".
-The description of Leon is "[LeonDesc]".
+Description of Leon is "[LeonDesc]".
 The scent of Leon is "[LeonScent]".
-The conversation of Leon is { "Baa, baby!" }.
+Conversation of Leon is { "Baa, baby!" }.
 the fuckscene of Leon is "[sexwithleon]".
 Leon is in New Ewe Storeroom.
 

@@ -12,7 +12,7 @@ Feline Friend	"Feline Friend"
 
 Feline Friend is a situation.
 ResolveFunction of Feline Friend is "[ResolveEvent Feline Friend]".
-The sarea of Feline Friend is "Park".
+Sarea of Feline Friend is "Park".
 when play begins:
 	add Feline Friend to BadSpots of MaleList;
 	add Feline Friend to BadSpots of FemaleList;
@@ -32,7 +32,7 @@ Object	Name
 Lion's Den	"Lion's Den"
 
 Lion's Den is a room. It is fasttravel. It is private.
-The description of Lion's Den is "[lionsdendesc]".
+Description of Lion's Den is "[lionsdendesc]".
 
 the scent of Lion's Den is "There is a faint, damp smell to the lion's den beneath the strong, masculine scent of its occupant.".
 
@@ -50,8 +50,8 @@ object	name
 Leonard	"Leonard"
 
 Leonard is a man. Leonard is in Lion's Den.
-The description of Leonard is "[Leonarddesc]".
-The conversation of Leonard is { "Tut Tut!" }.
+Description of Leonard is "[Leonarddesc]".
+Conversation of Leonard is { "Tut Tut!" }.
 feline_status is a number that varies.
 violinfound is a number that varies.
 Leonardtimer is a number that varies. Leonardtimer is usually 255.
@@ -656,7 +656,7 @@ Music Store	"Music Store"
 
 Music Store is a situation.
 ResolveFunction of Music Store is "[ResolveEvent Music Store]". The level of Music Store is 2.
-The sarea of Music Store is "Outside".
+Sarea of Music Store is "Outside".
 Music Store is inactive.
 violinspritefight is a truth state that varies.
 
@@ -694,7 +694,7 @@ Concert Hall	"Concert Hall"
 
 Concert Hall is a situation.
 ResolveFunction of Concert Hall is "[ResolveEvent Concert Hall]". The level of Concert Hall is 4.
-The sarea of Concert Hall is "High".
+Sarea of Concert Hall is "High".
 Concert Hall is inactive.
 
 to say ResolveEvent Concert Hall:
@@ -770,7 +770,7 @@ Hunting Prides	"Hunting Prides"
 
 Hunting Prides is a situation.
 ResolveFunction of Hunting Prides is "[ResolveEvent Hunting Prides]". The level of Hunting Prides is 8.
-The sarea of Hunting Prides is "Park".
+Sarea of Hunting Prides is "Park".
 Hunting Prides is inactive.
 
 to say ResolveEvent Hunting Prides:

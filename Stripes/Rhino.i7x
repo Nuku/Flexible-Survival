@@ -199,9 +199,9 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "rhino cum"	"Exactly what it sounds like."	1	rhino cum
 
-rhino cum is a grab object. rhino cum is infectious. rhino cum is temporary. The strain of rhino cum is "Rhino". rhino cum is cum.
+rhino cum is a grab object. rhino cum is infectious. rhino cum is temporary. Strain of rhino cum is "Rhino". rhino cum is cum.
 
-The usedesc of rhino cum is "[drinkrhinocum]";
+Usedesc of rhino cum is "[drinkrhinocum]";
 
 to say drinkrhinocum:
 	say "     Following the strange urge you have, you slam back the bottle of rhino cum you found. It has a strong taste to it, but you find it very exciting despite its salty flavor";

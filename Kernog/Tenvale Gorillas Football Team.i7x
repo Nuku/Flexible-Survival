@@ -51,7 +51,7 @@ to say FootballTryouts:
 	now GorillasMemberQuestCounter is turns; [to count the time till the next stage]
 
 to say GorillaCheck1:
-	let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
+	let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]21[roman type] (Dexterity Check):[line break]";
 	increase diceroll by bonus;
@@ -65,7 +65,7 @@ to say GorillaCheck1:
 		increase TryoutScore by 2;
 
 to say GorillaCheck2:
-	let bonus be (( the Strength of the player minus 10 ) divided by 2);
+	let bonus be (( Strength of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]21[roman type] (Strength Check):[line break]";
 	increase diceroll by bonus;
@@ -79,7 +79,7 @@ to say GorillaCheck2:
 		increase TryoutScore by 2;
 
 to say GorillaCheck3:
-	let bonus be (( the Stamina of the player minus 10 ) divided by 2);
+	let bonus be (( Stamina of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Stamina Check):[line break]";
 	increase diceroll by bonus;
@@ -425,12 +425,12 @@ to say FootballMatch:
 
 to say FootballMatchDefense:
 	say "     After a short moment of tension, the Fourmont Wolves play the ball. While most players throw themselves against each other, the Wolves['] quarterback readies a long pass towards the receiver facing you.";
-	let bonus be (( the Perception of the player minus 10 ) divided by 2);
+	let bonus be (( Perception of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Perception Check):[line break]";
 	increase diceroll by bonus;
 	[preparing stamina roll]
-	let bonus be (( the Stamina of the player minus 10 ) divided by 2);
+	let bonus be (( Stamina of Player minus 10 ) divided by 2);
 	if diceroll > 16:
 		say "     The receiver starts his sprint, but you have kept your eyes on him, and you put yourself in an interception course.";
 		increase bonus by 2;
@@ -456,12 +456,12 @@ to say FootballMatchDefense:
 
 to say FootballMatchOffense:
 	say "     You are take your position as a receiver,[if HP of Roman >= 11] as the cheerleaders entice the crowd to cheer for your team,[end if] and wait for your teammates to start the game. You hear Roman shout his orders as the quarterback. It seems he's calling for you to make a sprint down your lane, and grab as much terrain as possible. As soon as the down begins, you start running as fast as you can, while Roman gets ready to throw the ball towards you. The Fourmont Wolves seem to have understood what you were doing, and, like a mirror of the previous phase, the cornerback and the safety are coming for you. You notice the cornerback getting uncomfortably close, in the corner of your vision.";
-	let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
+	let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Dexterity Check):[line break]";
 	increase diceroll by bonus;
 	[preparing strength roll]
-	let bonus be (( the Strength of the player minus 10 ) divided by 2);
+	let bonus be (( Strength of Player minus 10 ) divided by 2);
 	if diceroll > 16:
 		say "     You suddenly jump on the side, and feints the cornerback, as he tries to get his hands on you. He fails, and falls on the ground as he misses your tackle. You look up, and see the ball coming your way. You jump and catch it, and turn around to see the safety running towards you, straight in front of you. You brace yourself for the inescapable impact.";
 		increase bonus by 2;

@@ -80,26 +80,26 @@ Section 1 - Events
 
 Starving Frog is a situation.
 ResolveFunction of Starving Frog is "[ResolveEvent Starving Frog]".
-The sarea of Starving Frog is "Mall".
+Sarea of Starving Frog is "Mall".
 
 Rundown Boutique is a situation.
 ResolveFunction of Rundown Boutique is "[ResolveEvent Rundown Boutique]".
-The sarea of Rundown Boutique is "Outside".
+Sarea of Rundown Boutique is "Outside".
 Rundown Boutique is inactive.
 
 Boarded-up Building is a situation.
 ResolveFunction of Boarded-up Building is "[ResolveEvent Boarded-up Building]".
-The sarea of Boarded-up Building is "Outside".
+Sarea of Boarded-up Building is "Outside".
 Boarded-up Building is inactive.
 
 Ransacked Shop is a situation.
 ResolveFunction of Ransacked Shop is "[ResolveEvent Ransacked Shop]".
-The sarea of Ransacked Shop is "Outside".
+Sarea of Ransacked Shop is "Outside".
 Ransacked Shop is inactive.
 
 Trench Coat Salesman is a situation.
 ResolveFunction of Trench Coat Salesman is "[ResolveEvent Trench Coat Salesman]".
-The sarea of Trench Coat Salesman is "Outside".
+Sarea of Trench Coat Salesman is "Outside".
 Trench Coat Salesman is inactive.
 
 when play begins:
@@ -186,7 +186,7 @@ Object	Name
 Froggy Hideout	"Froggy Hideout"
 
 Froggy Hideout is a room. It is fasttravel. It is private. It is sleepsafe.
-The description of Froggy Hideout is "     You are in Ranae's tiny home in the sewers. There's just enough light for you to make out the frog woman herself as she sits on a few pillows and a ragged blanket, all while looking up at you with an expectant gaze.".
+Description of Froggy Hideout is "     You are in Ranae's tiny home in the sewers. There's just enough light for you to make out the frog woman herself as she sits on a few pillows and a ragged blanket, all while looking up at you with an expectant gaze.".
 
 instead of navigating Froggy Hideout:
 	say "[NavCheck Froggy Hideout]";
@@ -207,8 +207,8 @@ instead of navigating Froggy Hideout:
 
 Section 3 - Ranae
 
-The description of Ranae is "[RanaeDesc]".
-The conversation of Ranae is { "Ribbit" }.
+Description of Ranae is "[RanaeDesc]".
+Conversation of Ranae is { "Ribbit" }.
 The scent of the Ranae is "[RanaeScent]".
 
 to say RanaeDesc:

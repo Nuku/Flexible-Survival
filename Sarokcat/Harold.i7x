@@ -60,9 +60,9 @@ AnalVirgin of Harold is true.
 PenileVirgin of Harold is false.
 SexuallyExperienced of Harold is true.
 MainInfection of Harold is "Unicorn".
-The description of Harold is "     Standing behind the bar is a well-built and rather horse-like man, obviously an experienced bartender by the way he handles himself as he dishes out drinks to the patrons. His slightly hoof-like hands not seeming to slow him down at all. A black leather vest resting against his pure white fur makes him look even more striking due to the sharp contrast of colors. Even more striking however is the spiraling horn emerging from the center of the equine's forehead. Its pearlescent sheen catching and reflecting the colored lights of the club, and making it seem to shimmer and burn with a small rainbow of color every time the unicorn bartender moves his head. Catching you looking in his direction, the equine barkeep winks at you and gestures to an open spot at the bar, obviously inviting you to come talk, even as the shining unicorn puts together another drink for one of the strippers.".
+Description of Harold is "     Standing behind the bar is a well-built and rather horse-like man, obviously an experienced bartender by the way he handles himself as he dishes out drinks to the patrons. His slightly hoof-like hands not seeming to slow him down at all. A black leather vest resting against his pure white fur makes him look even more striking due to the sharp contrast of colors. Even more striking however is the spiraling horn emerging from the center of the equine's forehead. Its pearlescent sheen catching and reflecting the colored lights of the club, and making it seem to shimmer and burn with a small rainbow of color every time the unicorn bartender moves his head. Catching you looking in his direction, the equine barkeep winks at you and gestures to an open spot at the bar, obviously inviting you to come talk, even as the shining unicorn puts together another drink for one of the strippers.".
 The icon of Harold is Figure of Harold_icon.
-The conversation of Harold is { "Glug glug!" }.
+Conversation of Harold is { "Glug glug!" }.
 
 the scent of Harold is "Harold has an equine scent laced faintly with that of several fine alcohols.".
 
@@ -319,7 +319,7 @@ object	name
 Drink bar	"Drink bar"
 
 Drink bar is a man.
-The description of Drink bar is "[drinkbardesc]".
+Description of Drink bar is "[drinkbardesc]".
 
 to say drinkbardesc:
 	say "     This well-stocked bar is full of a number of drinks you have never seen before. Some of them obviously were made on site or probably nearby, as they are stored in all sorts of different bottles that were clearly scavenged and cleaned for the purpose with their labels removed. A small sign on the bar lists the available drinks. To order a specific drink from the bar, merely [']Order <drink name>['], although a small notation on the drink sign does say that there is a daily drink limit. The list of drinks is as follows:";

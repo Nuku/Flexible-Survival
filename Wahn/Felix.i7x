@@ -32,7 +32,7 @@ instead of navigating Dry Plains while (HP of Thomas > 0 and HP of Thomas < 100 
 	say "     What do you answer? Do you want to try looking for Felix mysterious stalker ([link]Y[as]y[end link]), or wave it off as just his imagination ([link]N[as]n[end link]) ?";
 	if Player consents:
 		say "     You ask Felix where he thought to last have noticed something, then make your way out into the high grass.";
-		let bonus be (( the Perception of the player minus 10 ) divided by 2);
+		let bonus be (( Perception of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], (Perception-Check)[line break]";
 		LineBreak;
@@ -67,7 +67,7 @@ to say Stalker1:
 		LineBreak;
 		say "     With that, you wave goodbye to Felix and Thomas and make your way out into the plain in a wholly different direction. Trekking around the camp site in a wide arch, ducking into the grass as good as you can, you find yourself with the rubble mound between you and the centaurs. What next - do you want to climb over the rubble to surprise the watcher by coming from behind ([link]Y[as]y[end link]), or walk around it ([link]N[as]n[end link]) (with a higher chance of being seen)?";
 		if Player consents:
-			let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
+			let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], (Dexterity-Check)[line break]";
 			LineBreak;
@@ -104,7 +104,7 @@ to say Stalker2:
 		say "     You clap Felix on the shoulder and give him a hug, whispering, 'OK, you stay calm and act normally. I'll circle around and come up from behind the rubble. Hopefully I can surprise your lizard stalker this time...";
 		say "     With that, you wave goodbye to Felix and Thomas and make your way out into the plain in a wholly different direction. Trekking around the camp site in a wide arch, ducking into the grass as good as you can, you find yourself with the rubble mound between you and the centaurs. What next - do you want to climb over the rubble to surprise the stalker by coming from behind ([link]Y[as]y[end link]), or walk around it ([link]N[as]n[end link]) (with a higher chance of being seen)?";
 		if Player consents:
-			let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
+			let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], (Dexterity-Check)[line break]";
 			LineBreak;
@@ -198,8 +198,8 @@ SexuallyExperienced of Felix is true.
 TwistedCapacity of Felix is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Felix is false. [steriles can't knock people up]
 MainInfection of Felix is "Centaur Stallion".
-The description of Felix is "[FelixDesc]".
-The conversation of Felix is { "Mew!" }.
+Description of Felix is "[FelixDesc]".
+Conversation of Felix is { "Mew!" }.
 lastFelixTalk is a number that varies. lastFelixTalk is usually 555. [turn-counter for talking delays (humanity restoration)]
 The icon of Felix is Figure of Felix_icon.
 
@@ -310,7 +310,7 @@ to say FelixTalk1:
 
 to say FelixTalk2:
 	say "     You ask Felix where he thought to last have noticed something, then make your way out into the high grass.";
-	let bonus be (( the Perception of the player minus 10 ) divided by 2);
+	let bonus be (( Perception of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], (Perception-Check)[line break]";
 	LineBreak;
@@ -541,8 +541,8 @@ SexuallyExperienced of Andre is true.
 TwistedCapacity of Andre is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Andre is false. [steriles can't knock people up]
 MainInfection of Andre is "Plains Lizard Male".
-The description of Andre is "[AndreDesc]".
-The conversation of Andre is { "Mew!" }.
+Description of Andre is "[AndreDesc]".
+Conversation of Andre is { "Mew!" }.
 lastAndreTalk is a number that varies. lastAndreTalk is usually 555.	     [turn-counter for talking delays (humanity restoration)]
 The icon of Andre is Figure of Andre_icon.
 

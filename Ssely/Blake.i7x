@@ -6,7 +6,7 @@ Dirty Alley	"Dirty Alley"
 
 Dirty Alley is a room.
 Dirty Alley is east of Smith Haven Mall Lot East.
-The description of Dirty Alley is "[DirtyAlleyDesc]".
+Description of Dirty Alley is "[DirtyAlleyDesc]".
 
 to say DirtyAlleyDesc:
 	say "     Dumpsters and trash bags litter the floor, the back-alley of the brothel is coated in a thick layer of grime - the darkness from the corrugated metal overhead shrouds the scene in a thick fog. Before you sits a leather-clad rat - this alleyway seeming to be his home. He doesn't notice you for the meanwhile, your eyes darting around his living quarters. The rat's bed is made up of a couple layers - trash bags being used as the mattress, a few salvaged blankets covering the mattress, and a dirty, unkempt duvet over-top that. Despite his disgusting living conditions, his bed was surprisingly well made - blankets tucked underneath their neighboring bags.";
@@ -18,8 +18,8 @@ Blake	"Blake"
 
 Blake is a man.
 Blake is in Dirty Alley.
-The description of Blake is "[BlakeDesc]".
-The conversation of Blake is { "Mew!" }.
+Description of Blake is "[BlakeDesc]".
+Conversation of Blake is { "Mew!" }.
 
 to say BlakeDesc:
 	say "     <Placeholder. Players should not be able to stand beside him and look at him. Please report on the FS Discord how you saw this.>";

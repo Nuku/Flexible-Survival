@@ -9,7 +9,7 @@ Clothing Store	"Clothing Store"
 
 Clothing Store is a scavevent.
 ResolveFunction of Clothing Store is "[ResolveEvent Clothing Store]".
-The sarea of Clothing Store is "Outside".
+Sarea of Clothing Store is "Outside".
 
 to say ResolveEvent Clothing Store:
 	say "     As you explore the city, you come across an outlet mall. Most of the buildings have been destroyed, the area is littered with debris. Trash cans are blown over, spilling their contents into the streets. All the cars here are damaged beyond repair, though one of them has somehow maintained its car alarm which continues to go off. Most of the cars are simply smoldering chunks of metal, fire having stripped them of anything useful. You keep your distance from these cars, doing your best to avoid the strong smell of burning tires. Some of the buildings are still standing, for now at least, you could try to enter one if you wish.";

@@ -496,7 +496,7 @@ PridePark	"PridePark"
 
 PridePark is a situation.
 ResolveFunction of PridePark is "[ResolveEvent PridePark]". PridePark is inactive.
-The sarea of PridePark is "Park".
+Sarea of PridePark is "Park".
 
 to say ResolveEvent PridePark:
 	if leoparklist is not empty and a random chance of 2 in 5 succeeds:	[unique situations]

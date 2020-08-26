@@ -260,7 +260,7 @@ name	desc	weight	object
 "silver semen"	"Flowing, mercurial cum."	1	silver semen
 
 silver semen is a grab object.
-the usedesc of silver semen is "[silversemenuse]".
+Usedesc of silver semen is "[silversemenuse]".
 
 It is temporary.
 silver semen is cum.

@@ -479,12 +479,12 @@ this is the hydrabeast rule:
 				now absorb is hbdmgtotal;
 			if absorb > 0:
 				say "You prevent [special-style-1][absorb][roman type] damage!";
-			decrease HP of the player by hbdmgtotal;
+			decrease HP of Player by hbdmgtotal;
 			increase HP of Player by absorb;
 			follow the player injury rule;
 			say "You are [descr].";
 		now peppereyes is 0; [pepperspray wears off]
-		if HP of the player > 0 and Libido of Player < 110:
+		if HP of Player > 0 and Libido of Player < 110:
 			wait for any key;
 		else:
 			if HP of Player <= 0, now fightoutcome is 20;

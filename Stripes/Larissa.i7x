@@ -9,7 +9,7 @@ object	name
 Larissa	"Larissa"
 
 Larissa is a woman. "[larissaview]". She is in Zephyr Lobby.
-The conversation of Larissa is { "$$$$$$$$!" }.
+Conversation of Larissa is { "$$$$$$$$!" }.
 
 To say Larissaballs:
 	if Ball Size of Larissa < 3:
@@ -38,7 +38,7 @@ to say larissaview:
 
 Larissa has a list of text called vials.
 
-The description of Larissa is "[larissadesc]".
+Description of Larissa is "[larissadesc]".
 
 the scent of Larissa is "Larissa arches her brow as you sniff the air around her, reaching for something in a nearby drawer. You do catch a faint hint of lilacs, probably a perfume.".
 

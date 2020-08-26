@@ -9,7 +9,7 @@ Orc Tag Team	"Orc Tag Team"
 
 Orc Tag Team is a situation.
 ResolveFunction of Orc Tag Team is "[ResolveEvent Orc Tag Team]".
-The sarea of Orc Tag Team is "Warehouse".
+Sarea of Orc Tag Team is "Warehouse".
 when play begins:
 	add Orc Tag Team to BadSpots of MaleList;       [male orcs]
 	add Orc Tag Team to badspots of TransList;       [male orcs]

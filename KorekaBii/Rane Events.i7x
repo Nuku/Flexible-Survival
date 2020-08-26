@@ -9,7 +9,7 @@ Rane's Good Deed	"Rane's Good Deed"
 Rane's Good Deed is a situation.
 ResolveFunction of Rane's Good Deed is "[ResolveEvent Rane's Good Deed]".
 Rane's Good Deed is inactive.
-the sarea of Rane's Good Deed is "Outside".
+Sarea of Rane's Good Deed is "Outside".
 
 to say ResolveEvent Rane's Good Deed:
 	if RaneDeedsTracker is 0: [first time]

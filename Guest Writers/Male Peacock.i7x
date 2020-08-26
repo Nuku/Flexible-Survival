@@ -73,8 +73,8 @@ to say peacockvictory:
 		else: [STANDARD]
 			say "     Once drained, the peacock's shaft withdraws, and he gently tilts your head up to look at him and his colorful tail. He gives it a mesmerizing wave, and your mind rapidly drifts away. 'It will be better for both of us if you don't remember this... Forget... Forget...' he says softly. You start to feel sleepy as you stare into the swaying spots, and you soon slump over, passing out. When you awaken, you find yourself in an alleyway with no memories of how you got there, the encounter completely forgotten.";
 		decrease XP of Player by lev entry / 2; [no XP from forgotten encounter]
-		if ktspeciesbonus > 0, decrease the XP of the player by 1;
-		if Player is submissive and HP of Player > 0, decrease the XP of the player by ( ( 2 + lev entry ) / 5 );
+		if ktspeciesbonus > 0, decrease XP of Player by 1;
+		if Player is submissive and HP of Player > 0, decrease XP of Player by ( ( 2 + lev entry ) / 5 );
 
 
 Section 2 - Creature Insertion
@@ -270,7 +270,7 @@ this is the peacockhypno rule:
 	else:
 		say "The peacock tries to distract you with his plumage, but is forced to dodge away!";
 	now peppereyes is 0;
-	if HP of the player > 0 and Libido of Player < 110:
+	if HP of Player > 0 and Libido of Player < 110:
 		wait for any key;
 	else:
 		if HP of Player <= 0, now fightoutcome is 20;
@@ -300,21 +300,21 @@ When Play begins:
 
 to say peacockheattrigger:
 	say "You can feel an increasing dampness in your loins. As you find yourself growing increasingly aroused, something hidden at the back of your mind makes you ";
-	if there are no dangerous doors in the location of the player:
+	if there are no dangerous doors in the Location of Player:
 		say "want to leave this place and go... somewhere else...";
 	else:
-		let y be a random dangerous door in the location of the player;
+		let y be a random dangerous door in the Location of Player;
 		if marea of Y is "High":
 			say "want to head out exploring.";
 		else:
 			say "want to leave this place and go... somewhere else...";
 
 to say peacockinheat:
-	if there are no dangerous doors in the location of the player:
+	if there are no dangerous doors in the Location of Player:
 		if a random chance of 3 in 5 succeeds:
 			say "[one of]You moan as a wave of need quivers through your loins, your body needing to be filled to satisfy your heat... but not here...[or]A fresh flow of juices trickles down your thighs as your pussy leaks with need. A corner of your mind keeps calling you to satisfy those urges... but not here.[or]You are forced to pause and finger yourself as your dripping cunt demands satisfaction. The idea of heading back to the high rise district of town to satisfy your need pops into your head.[or]You moan and squeeze your thighs together as the heat in your loins makes you hornier and hornier. Thoughts of finding a sexy peacock to fill you sound very satisfying.[or]The waves of hot lust filling your cunt make you moan as you try to focus, but your thoughts keep wandering back to the high rise district of town.[or]You start to whistle a soft, bird-like call, echoing a song you can hear in the back of your mind, but can't quite remember from where. You grow tired of being here, wanting to go somewhere else now.[purely at random]";
 	else:
-		let y be a random dangerous door in the location of the player;
+		let y be a random dangerous door in the Location of Player;
 		if marea of Y is "High":
 			say "[one of]You moan as a wave of need quivers through your loins, your body needing to be filled to satisfy your heat[or]A fresh flow of juices trickles down your thighs as your pussy leaks with need[or]You are forced to pause and finger yourself as your dripping cunt demands satisfaction[or]You moan and squeeze your thighs together as the heat in your loins makes you hornier and hornier[or]The waves of hot lust filling your cunt make you moan as you try to focus[or]You start to whistle a soft, bird-like call, echoing a song you can hear in the back of your mind, but can't quite remember from where[purely at random][one of]. You feel a compulsion to go out and look for a male right away[or]. Your thoughts keep wandering back to the peacock you encountered before[or]. Thoughts of finding a sexy peacock to fill you sound very satisfying[or]. The urge to go looking around the neighborhood is foremost in your mind[or]. The idea of going exploring, and maybe finding someone to mate with you, is very appealing[or]. A corner of your mind keeps calling you to go out and satisfy those urges[or]. You feel a strong use to venture out in search of a sexy peacock to slake your need[or]. You hear the soft chirping of birdsong and you want to go out to find it[purely at random].";
 		else:
@@ -333,13 +333,13 @@ to say peacockheatend:
 
 Section 5 - Peacock Feather
 
-peacock feather is a grab object. It is temporary. peacock feather is infectious. The strain of peacock feather is "Peacock".
+peacock feather is a grab object. It is temporary. peacock feather is infectious. Strain of peacock feather is "Peacock".
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "peacock feather"	"A peacock feather. It looks pretty."	1	peacock feather
 
-the usedesc of peacock feather is "[peacock feather use]";
+Usedesc of peacock feather is "[peacock feather use]";
 
 to say peacock feather use:
 	say "You remember that many were infected and mutated by contaminated food. It seems... no, it's stupid, but you bite down the feather anyway.";

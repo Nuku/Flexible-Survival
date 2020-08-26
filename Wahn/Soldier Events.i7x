@@ -7,7 +7,7 @@ Soldier Squad	"Soldier Squad"
 
 Soldier Squad is a situation.
 ResolveFunction of Soldier Squad is "[ResolveEvent Soldier Squad]".
-The sarea of Soldier Squad is "Warehouse".
+Sarea of Soldier Squad is "Warehouse".
 when play begins:
 	add Soldier Squad to BadSpots of MaleList;       [male soldiers]
 	add Soldier Squad to BadSpots of FemaleList;      [one changes into a female husky]
@@ -280,7 +280,7 @@ Human Urges	"Human Urges"
 
 Human Urges is a situation.
 ResolveFunction of Human Urges is "[ResolveEvent Human Urges]".
-The sarea of Human Urges is "Red".
+Sarea of Human Urges is "Red".
 when play begins:
 	add Human Urges to BadSpots of MaleList;      [male soldier]
 	add Human Urges to BadSpots of FemaleList;     [female soldier]
@@ -298,7 +298,7 @@ Soldiers & Snowmeows	"Soldiers & Snowmeows"
 
 Soldiers & Snowmeows is a situation.
 ResolveFunction of Soldiers & Snowmeows is "[ResolveEvent Soldiers & Snowmeows]".
-The sarea of Soldiers & Snowmeows is "Red".
+Sarea of Soldiers & Snowmeows is "Red".
 when play begins:
 	add Soldiers & Snowmeows to BadSpots of MaleList;      [male soldier & snow leopard]
 	add Soldiers & Snowmeows to BadSpots of FurryList;    [snow leopard involved]
@@ -394,7 +394,7 @@ Dangerous Load	"Dangerous Load"
 
 Dangerous Load is a situation.
 ResolveFunction of Dangerous Load is "[ResolveEvent Dangerous Load]".
-The sarea of Dangerous Load is "Outside".
+Sarea of Dangerous Load is "Outside".
 when play begins:
 	add Dangerous Load to BadSpots of MaleList;
 	add Dangerous Load to BadSpots of FurryList;
@@ -457,7 +457,7 @@ Lone Soldier	"Lone Soldier"
 
 Lone Soldier is a situation.
 ResolveFunction of Lone Soldier is "[ResolveEvent Lone Soldier]".
-The sarea of Lone Soldier is "Outside".
+Sarea of Lone Soldier is "Outside".
 when play begins:
 	add Lone Soldier to BadSpots of MaleList;
 	add Lone Soldier to BadSpots of FurryList;
@@ -574,7 +574,7 @@ Containment Barrier	"Containment Barrier"
 
 Containment Barrier is a situation.
 ResolveFunction of Containment Barrier is "[ResolveEvent Containment Barrier]".
-The sarea of Containment Barrier is "Outside".
+Sarea of Containment Barrier is "Outside".
 
 ContainmentBarrierEncounters is a number that varies.
 

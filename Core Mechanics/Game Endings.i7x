@@ -242,7 +242,7 @@ This is the Player has died rule:
 		the Player is dead;
 
 This is the Epilogue Intro rule: [The player didn't die or bad ended]
-	if humanity of Player < 10 and HP of the player > 0:
+	if humanity of Player < 10 and HP of Player > 0:
 		if BodyName of Player is "Anthro Dragoness" and HP of Doctor Matt <= 100:
 			trigger ending "Epilogue Intro";
 			say "Following some unknown instinct, you seek out another of your own, and home in on Orthas, the dragon that was guarding the lab. She pets you gently along your neck and makes soothing sounds that has you almost purring. She proves to be a loving and kind mistress and you protect her fiercely for the remainder of your long life.";

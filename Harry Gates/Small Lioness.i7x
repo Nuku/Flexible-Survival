@@ -69,7 +69,7 @@ Section 2 - Small Lioness Definition
 
 A Small Lioness is a kind of monster. The body of a Small Lioness is usually {Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene}. A Small Lioness is monstrous. A Small Lioness is fully infected. A Small Lioness is usually unsuited. A Small Lioness is female. A Small Lioness is tailed. The monster gene of a Small Lioness is Small_Lioness_gene.
 
-The description of Small Lioness is "A small cute girl, about four feet in height, covered in fur with round lion ears and a bright smile. She is quite developed for her size, sporting B cups and wide hips. She seems to be eyeing UOY rather provocatively."
+Description of Small Lioness is "A small cute girl, about four feet in height, covered in fur with round lion ears and a bright smile. She is quite developed for her size, sporting B cups and wide hips. She seems to be eyeing UOY rather provocatively."
 
 The hitdesc of Small Lioness is "scratches YOU in the bodypart, spreading feline infection further!".
 

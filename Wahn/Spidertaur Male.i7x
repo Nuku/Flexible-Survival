@@ -390,7 +390,7 @@ instead of sniffing spidertaur hair:
 	say "Doesn't smell of anything, really.";
 
 spidertaur hair is a grab object.
-the usedesc of spidertaur hair is "[spidertaur hair use]";
+Usedesc of spidertaur hair is "[spidertaur hair use]";
 
 to say spidertaur hair use:
 	say "Playing a bit with the long strands of hair, you twirl them around your finger. After a while, they suddenly disintegrate into a fine powder which just seems to melt into your skin...";
@@ -407,7 +407,7 @@ to SpidertaurInfect:
 	infect "Spidertaur Male";
 	now non-infectious entry is true;
 
-spidertaur hair is infectious. The strain of spidertaur hair is "Spidertaur Male".
+spidertaur hair is infectious. Strain of spidertaur hair is "Spidertaur Male".
 
 instead of sniffing silk hammock:
 	say "It doesn't have any noticeable smell, really. Just a bit of silken fabric, in the end";
@@ -422,7 +422,7 @@ Object	Name
 Spider's Web	"Spider's Web"
 
 Spider's Web is a room. It is a fasttravel. Spider's Web is private. Spider's Web is sleepsafe.
-The description of Spider's Web is "[WebDesc]".
+Description of Spider's Web is "[WebDesc]".
 
 to say WebDesc:
 	say "     Aelias's web lies in one of the abandoned buildings at the edge of the warehouse district. From the looks of it, it was a warehouse or industrial building itself at some point in the past, then got rebuilt into a loft-apartment. Now it has been transformed again, the spidertaur having removed all the furniture and building his home and love-nest in here. Between the hardwood floor and the thick wooden beams high on the ceiling, he's put up what must be hundreds if not thousands of thick silk strands, forming elaborate structures with flowing lines. Some are simply functional, like the storage cocoons stuck to the walls and ceiling, but others speak of Aelias's artistic side - decorative objects dangling from the ceiling as well as geometric patterned webs stretched over one wall. And then there's, of course, the sex sling in which you've had quite a few pleasant experiences...";
@@ -471,8 +471,8 @@ TwistedCapacity of Aelias is false. [Twisted Characters can take any penetration
 Sterile of Aelias is false. [steriles can't knock people up]
 MainInfection of Aelias is "Spidertaur Male".
 Aelias is in Spider's Web.
-The description of Aelias is "[AeliasDesc]".
-The conversation of Aelias is { "You're welcome to stay here as long as you want, my lovely little fly. To rest, or have fun..." }.
+Description of Aelias is "[AeliasDesc]".
+Conversation of Aelias is { "You're welcome to stay here as long as you want, my lovely little fly. To rest, or have fun..." }.
 lastfuck of Aelias is usually 555.
 
 to say AeliasDesc:

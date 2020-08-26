@@ -212,7 +212,7 @@ name	desc	weight	object
 "horsemazon fur"	"A tuft of brown fur that looks like it has been pulled out of the coat of a horsemazon. It's nicely soft."	0	horsemazon fur
 
 horsemazon fur is a grab object.
-the usedesc of horsemazon fur is "[horsemazonFurUse]".
+Usedesc of horsemazon fur is "[horsemazonFurUse]".
 
 It is temporary.
 

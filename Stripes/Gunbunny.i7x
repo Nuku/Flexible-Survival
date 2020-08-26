@@ -365,7 +365,7 @@ to gb_gatling_attack:
 			now absorb is damagetotal;
 		if absorb > 0:
 			say "You prevent [special-style-1][absorb][roman type] damage!";
-		decrease HP of the player by damagetotal;
+		decrease HP of Player by damagetotal;
 		increase HP of Player by absorb;
 		follow the player injury rule;
 		say "You are [descr].";

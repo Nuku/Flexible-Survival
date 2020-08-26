@@ -70,8 +70,8 @@ AnalVirgin of Sonny is true.
 PenileVirgin of Sonny is true.
 SexuallyExperienced of Sonny is false.
 MainInfection of Sonny is "".
-The description of Sonny is "[SonnyDesc]".
-The conversation of Sonny is { "<This is nothing but a placeholder!>" }.
+Description of Sonny is "[SonnyDesc]".
+Conversation of Sonny is { "<This is nothing but a placeholder!>" }.
 The scent of Sonny is "     Sonny smells like berries with an underlying hint of musk. You feel as if it's probably from the conditioner he uses for his wool.".
 
 to say SonnyDesc:
@@ -371,7 +371,7 @@ Manicotti Shopping	"Manicotti Shopping"
 
 Manicotti Shopping is a situation.
 ResolveFunction of Manicotti Shopping is "[ResolveEvent Manicotti Shopping]". The level of Manicotti Shopping is 2. Manicotti Shopping is inactive.
-The sarea of Manicotti Shopping is "high".
+Sarea of Manicotti Shopping is "high".
 
 to say ResolveEvent Manicotti Shopping:
 	say "     As you explore the High Rise, you finally manage to come upon the grocery store that Francois told you about. Staring you in the eyes is a large sign saying 'Shroger', designating it as one of the big grocery chain stores in America. The once sliding doors to the place are torn off, giving sight into the superstore, though not much. From outside all you can notice are where the shopping carts were usually stored and perhaps maybe the cash registers but that's it, so with a shrug you head on in. To your surprise, the inside is actually not abandoned, there are people scattered about, hanging out in the place though to be honest you should have expected this. One of them, a tan-furred male mouse in a simple black shirt and cargo pants ends up approaching you.";

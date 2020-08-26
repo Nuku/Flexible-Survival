@@ -41,8 +41,8 @@ SexuallyExperienced of Lola is true.
 TwistedCapacity of Lola is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Lola is true. [steriles can't knock people up]
 MainInfection of Lola is "". [currently no infection available]
-The description of Lola is "[LolaDesc]".
-The conversation of Lola is { "<This is nothing but a placeholder!>" }.
+Description of Lola is "[LolaDesc]".
+Conversation of Lola is { "<This is nothing but a placeholder!>" }.
 The scent of Lola is "     Lola has a light, floral scent with an underlying note of clean fur.".
 
 to say LolaDesc:

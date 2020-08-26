@@ -11,7 +11,7 @@ Private club room	"Private club room"
 
 Private club room is a room.
 
-The description of Private club room is "This smaller back room of the rather rambunctious club is rather mildly lit, the soft light reflecting off the several divans spaced throughout the room. The soft scent of sex and heat filling the air tells you what this room has been used for most recently, though the room only seems to have a single white-furred occupant currently. The loud club music is only a dimly heard counterpoint to the atmosphere of the room, mostly blocked by the rather thick walls and the cushioned walls. Though for some reason that only serves as a reminder of the fact that it is very unlikely that anyone out in the club could hear anything that goes on in here, no matter how loud or kinky it gets...".
+Description of Private club room is "This smaller back room of the rather rambunctious club is rather mildly lit, the soft light reflecting off the several divans spaced throughout the room. The soft scent of sex and heat filling the air tells you what this room has been used for most recently, though the room only seems to have a single white-furred occupant currently. The loud club music is only a dimly heard counterpoint to the atmosphere of the room, mostly blocked by the rather thick walls and the cushioned walls. Though for some reason that only serves as a reminder of the fact that it is very unlikely that anyone out in the club could hear anything that goes on in here, no matter how loud or kinky it gets...".
 Janice is in Private club room.
 
 Palomino is southeast of Private club room.
@@ -66,8 +66,8 @@ AnalVirgin of Janice is true.
 PenileVirgin of Janice is true.
 SexuallyExperienced of Janice is true.
 MainInfection of Janice is "".
-The description of Janice is "Lying back on one of the comfortable couches in the area, you see a rather striking looking foxy lady. The white furred vixen is eyeing you with amusement as you look over her soft furred form, your eyes drawn to her rather striking curves, and her obviously comfortably state of nakedness. The vixen being clad only in her soft and tempting looking snowy white fur, as her long bushy tailtip twitches from side to side in amusement.".
-The conversation of Janice is { "Foxy!" }.
+Description of Janice is "Lying back on one of the comfortable couches in the area, you see a rather striking looking foxy lady. The white furred vixen is eyeing you with amusement as you look over her soft furred form, your eyes drawn to her rather striking curves, and her obviously comfortably state of nakedness. The vixen being clad only in her soft and tempting looking snowy white fur, as her long bushy tailtip twitches from side to side in amusement.".
+Conversation of Janice is { "Foxy!" }.
 The icon of Janice is figure of Janice_icon.
 the scent of Janice is "Janice smells of vixen and lust, perfume and sex, longing and regret.".
 
@@ -278,7 +278,7 @@ carry out Vixenposing:
 	else if janicearoused > 0:
 		now lastVixenposing is turns;
 		say "     'Ah, so you want to learn how to make the best use of that sexy body of yours? Well I suppose it would be quite fun to show you how to move that sexy tail of yours,' Janice says with an amused grin as she stretches her lithe body for a minute, before beginning to show off several extremely enticing poses, her soft furred form looking amazing even as her long white fox tail swishes behind her teasingly. Soon she is strutting daintily around the room, her every movement setting your blood on fire with desire as she shows off her rather amazing assets for your inspection. After several minutes she stops teasing you, and begins to give you pointers as she makes you walk around the room and pose just like she did, the unusual amount of balance and muscle control required to look so damn enticing is rather surprising, and you try your best to keep up with her increasingly difficult instructions.";
-		let bonus be (( the dexterity of the player minus 10 ) divided by 2);
+		let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 		if Kristen is visible, increase bonus by 2;
 		let diceroll be a random number from 1 to 20;
 		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";

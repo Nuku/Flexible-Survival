@@ -29,7 +29,7 @@ Reservoir "Reservoir"
 
 Reservoir is a room. It is fasttravel.
 
-The description of Reservoir is "[reservoirdesc]".
+Description of Reservoir is "[reservoirdesc]".
 
 To say reservoirdesc:
 	if waterworks is 0:
@@ -53,12 +53,12 @@ Reservoir Main Pathway  "Reservoir Main Pathway"
 Reservoir Main Pathway is a room.
 Reservoir Main Pathway entry is a door. It is dangerous.
 
-The description of Reservoir Main Pathway entry is "There's something you may need important over here!" It is dangerous.
+Description of Reservoir Main Pathway entry is "There's something you may need important over here!" It is dangerous.
 
 Reservoir Main Pathway is west of Reservoir Main Pathway entry.
 Reservoir Main Pathway entry is north of Reservoir.
 
-The description of Reservoir Main Pathway is "[pathwaydesc]".
+Description of Reservoir Main Pathway is "[pathwaydesc]".
 
 to say pathwaydesc:
 	if waterworks is 0:
@@ -142,7 +142,7 @@ Sanctuary is a situation.
 ResolveFunction of Sanctuary is "[ResolveEvent Sanctuary]". Sanctuary is inactive.
 
 
-The sarea of For Purity's Sake is "Reservoir".
+Sarea of For Purity's Sake is "Reservoir".
 
 to say ResolveEvent For Purity's Sake:
 	If resevquest is 0:
@@ -159,7 +159,7 @@ Technical Assistance  "Technical Assistance"
 
 Technical Assistance is a situation.
 ResolveFunction of Technical Assistance is "[ResolveEvent Technical Assistance]".
-The sarea of Technical Assistance is a "Reservoir".
+Sarea of Technical Assistance is a "Reservoir".
 
 to say ResolveEvent Technical Assistance:
 	If resevquest is 1:
@@ -169,7 +169,7 @@ to say ResolveEvent Technical Assistance:
 		say "After dealing with the creature in question you shake your head in pity. A small part of you wonders if the thing you just beat was once one of the technicians you so desperately need right now. Finding that it doesn't matter you go ahead and search around the room for something that will help you clean up the city's water supply.";
 		now bookfind is 0;
 		while bookfind is 0:
-			let bonus be (( the Perception of the player minus 15 ) divided by 3);
+			let bonus be (( Perception of Player minus 15 ) divided by 3);
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 			increase diceroll by bonus;
@@ -220,7 +220,7 @@ Slightly Sidetracked  "Slightly Sidetracked"
 
 Slightly Sidetracked is a situation.
 ResolveFunction of Slightly Sidetracked is "[ResolveEvent Slightly Sidetracked]".
-The sarea of Slightly Sidetracked is "Reservoir".
+Sarea of Slightly Sidetracked is "Reservoir".
 
 to say ResolveEvent Slightly Sidetracked:
 	If resevquest is 2:
@@ -255,7 +255,7 @@ Flight of stairs  "Flight of stairs"
 
 Flight of stairs is a situation.
 ResolveFunction of Flight of stairs is "[ResolveEvent Flight of stairs]".
-The sarea of Flight of stairs is "Reservoir".
+Sarea of Flight of stairs is "Reservoir".
 
 to say ResolveEvent Flight of stairs:
 	If resevquest is 3:
@@ -274,7 +274,7 @@ ThreeDoors  "ThreeDoors"
 
 ThreeDoors is a situation;
 
-The sarea of ThreeDoors is "Reservoir".
+Sarea of ThreeDoors is "Reservoir".
 
 to say ResolveEvent ThreeDoors:
 	If resevquest is 4:
@@ -309,7 +309,7 @@ This is the doorcheck rule:
 			if Player consents:
 				now doorsearch is 0;
 				while doorsearch is 0:
-					let bonus be (( the Strength of the player minus 10 ) divided by 2);
+					let bonus be (( Strength of Player minus 10 ) divided by 2);
 					let diceroll be a random number from 1 to 20;
 					say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 					increase diceroll by bonus;
@@ -355,7 +355,7 @@ This is the doorcheck rule:
 	else if title entry is "Right Door":
 		if rdoor is 0:
 			say "Taking hold of the door's handle you are mildly astonished when the door opens without any protest. That elation doesn't last long because soon said door is taking from your hand and then you are grabbed bodily!";
-			let bonus be (( the Strength of the player minus 10 ) divided by 2);
+			let bonus be (( Strength of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 			increase diceroll by bonus;
@@ -384,7 +384,7 @@ The beast of the tainted waters "The beast of the tainted waters"
 
 The beast of the tainted waters is a situation.
 ResolveFunction of The beast of the tainted waters is "[ResolveEvent The beast of the tainted waters]".
-The sarea of The beast of the tainted waters is "Reservoir".
+Sarea of The beast of the tainted waters is "Reservoir".
 
 to say ResolveEvent The beast of the tainted waters:
 	if resevquest is 5:
@@ -411,7 +411,7 @@ Fight to remember "Fight to remember"
 
 Fight to remember is a situation.
 ResolveFunction of Fight to remember is "[ResolveEvent Fight to remember]".
-The sarea of Fight to remember is "Reservoir".
+Sarea of Fight to remember is "Reservoir".
 
 to say ResolveEvent A Fight to remember:
 	if resevquest is 6:
@@ -420,7 +420,7 @@ to say ResolveEvent A Fight to remember:
 			now a Fight to remember is resolved;
 		else:
 			say "Geared up and ready to roll you head out of the room and then down back the way you came to the main area of the reservoir. Once there you find yourself wincing a little bit in disbelief as you note that the Blob monster is somewhat... bigger... than what you had first thought it should have been.";
-			let bonus be (( the Intelligence of the player minus 10 ) divided by 2);
+			let bonus be (( Intelligence of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 			increase diceroll by bonus;
@@ -457,7 +457,7 @@ to say ResolveEvent A Fight to remember:
 					now lastResevoirfix is turns;
 			else:
 				say "You feel a throng of nervousness come over you as you watch the monster [italic type]burble[roman type] and then turn your way, as if sensing that you were the cause of its current distress. Not feeling the courage that you know you possess your body locks up just as your eyes see massive tentacles surge their way towards you.";
-				let bonus be (( the dexterity of the player minus 8 ) divided by 2);
+				let bonus be (( Dexterity of Player minus 8 ) divided by 2);
 				let diceroll be a random number from 1 to 20;
 				say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 				increase diceroll by bonus;
@@ -533,7 +533,7 @@ PassionAfterTheBattle "PassionAfterTheBattle"
 
 PassionAfterTheBattle is a situation.
 ResolveFunction of PassionAfterTheBattle is "[ResolveEvent PassionAfterTheBattle]".
-The sarea of PassionAfterTheBattle is "Reservoir".
+Sarea of PassionAfterTheBattle is "Reservoir".
 
 to say ResolveEvent PassionAfterTheBattle:
 	If resevquest is 7:
@@ -571,7 +571,7 @@ name	desc	weight	object
 
 icicle knives is an armament.
 
-It has a weapon "[one of]frozen blades of cold[or]whispering twins of water and ice[or]thin, but sharp blades[at random]". The weapon damage of icicle knives is 16. The weapon type of icicle knives is "Melee". It is not temporary. the objsize of icicle knives is 2.
+It has a weapon "[one of]frozen blades of cold[or]whispering twins of water and ice[or]thin, but sharp blades[at random]". Weapon Damage of icicle knives is 16. Weapon Type of icicle knives is "Melee". It is not temporary. Objsize of icicle knives is 2.
 
 Instead of sniffing icicle knives:
 	say "These frozen blades both breathe and smell of a perpetual frost made of the forgotten thoughts and chilled promises left abandoned in a watery reservoir.";

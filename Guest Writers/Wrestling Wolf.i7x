@@ -334,7 +334,7 @@ to wwpowerslam:
 			now absorb is dam;
 		if absorb > 0:
 			say "Your defenses are only able to prevent [absorb] damage from the devastating attack!";
-		decrease HP of the player by dam;
+		decrease HP of Player by dam;
 		increase HP of Player by absorb;
 		decrease humanity of Player by a random number between 8 and 12;
 		if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 2 and 4;
@@ -344,7 +344,7 @@ to wwpowerslam:
 	else:
 		say "The Wrestling Wolf rushes in to grab you, clearly ready to unleash a crowd-pleasing maneuver, but you barely manage to squirm out of his reach and whip him into the ropes. That was a close one.";
 	now peppereyes is 0; [pepperspray wears off]
-	if HP of the player > 0:
+	if HP of Player > 0:
 		wait for any key;
 	else:
 		Lose;

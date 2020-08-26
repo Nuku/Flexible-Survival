@@ -58,8 +58,8 @@ SexuallyExperienced of Lingau is true.
 TwistedCapacity of Lingau is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Lingau is false. [steriles can't knock people up]
 MainInfection of Lingau is "Cane Toad Male".
-The description of Lingau is "[LingauDesc]".
-The conversation of Lingau is { "<This is nothing but a placeholder!>" }.
+Description of Lingau is "[LingauDesc]".
+Conversation of Lingau is { "<This is nothing but a placeholder!>" }.
 The scent of Lingau is "     ...".
 
 to say LingauDesc:

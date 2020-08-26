@@ -67,8 +67,8 @@ SexuallyExperienced of Malik is false.
 TwistedCapacity of Malik is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Malik is false. [steriles can't knock people up]
 MainInfection of Malik is "Orc Breeder".
-The description of Malik is "[MalikDesc]".
-The conversation of Malik is { "Mew!" }.
+Description of Malik is "[MalikDesc]".
+Conversation of Malik is { "Mew!" }.
 
 instead of sniffing Malik:
 	say "     Malik has got an attractive male scent.";

@@ -33,7 +33,7 @@ Object	Name
 Paleontology Office	"Paleontology Office"
 
 Paleontology Office is a room. It is fasttravel. It is private.
-The description of Paleontology Office is "[paleodesc]".
+Description of Paleontology Office is "[paleodesc]".
 
 the scent of Paleontology Office is "The office smells of old books and older bones, but also of the wereraptor occupying it.".
 
@@ -51,8 +51,8 @@ object	name
 Doctor Utah	"Doctor Utah"
 
 Doctor Utah is a person. Doctor Utah is in Paleontology Office.
-The description of Doctor Utah is "[utahdesc]".
-The conversation of Doctor Utah is { "Hiss!" }.
+Description of Doctor Utah is "[utahdesc]".
+Conversation of Doctor Utah is { "Hiss!" }.
 MainInfection of Doctor Utah is "Wereraptor".
 drutah_msg1 is a truth state that varies. drutah_msg1 is usually false.
 

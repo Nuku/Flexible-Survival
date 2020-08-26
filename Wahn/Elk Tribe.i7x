@@ -312,7 +312,7 @@ instead of sniffing elk bull fur:
 	say "The tuft of fur smells a bit musky.";
 
 elk bull fur is a grab object.
-the usedesc of elk bull fur is "[elk bull fur use]";
+Usedesc of elk bull fur is "[elk bull fur use]";
 
 to say elk bull fur use:
 	say "     Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
@@ -627,7 +627,7 @@ instead of sniffing elk cow fur:
 	say "The tuft of fur smells a bit musky.";
 
 elk cow fur is a grab object.
-the usedesc of elk cow fur is "[elk cow fur use]";
+Usedesc of elk cow fur is "[elk cow fur use]";
 
 to say elk cow fur use:
 	say "     Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
@@ -942,7 +942,7 @@ instead of sniffing elk herm fur:
 	say "The tuft of fur smells a bit musky.";
 
 elk herm fur is a grab object.
-the usedesc of elk herm fur is "[elk herm fur use]";
+Usedesc of elk herm fur is "[elk herm fur use]";
 
 to say elk herm fur use:
 	say "     Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
@@ -1258,7 +1258,7 @@ instead of sniffing elk trans bull fur:
 	say "The tuft of fur smells a bit musky.";
 
 elk trans bull fur is a grab object.
-the usedesc of elk trans bull fur is "[elk trans bull fur use]";
+Usedesc of elk trans bull fur is "[elk trans bull fur use]";
 
 to say elk trans bull fur use:
 	say "     Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
@@ -1573,7 +1573,7 @@ instead of sniffing elk trans cow fur:
 	say "The tuft of fur smells a bit musky.";
 
 elk trans cow fur is a grab object.
-the usedesc of elk trans cow fur is "[elk trans cow fur use]";
+Usedesc of elk trans cow fur is "[elk trans cow fur use]";
 
 to say elk trans cow fur use:
 	say "     Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";

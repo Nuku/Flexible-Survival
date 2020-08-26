@@ -218,7 +218,7 @@ carry out navigating:
 	if noun is location of Player:
 		say "You're already there.";
 		stop the action;
-	let the bonus be (( the perception of the player minus 10 ) divided by 2);
+	let the bonus be (( Perception of Player minus 10 ) divided by 2);
 	now battleground is "Outside";
 	if a random number from 1 to 20 < 10 minus bonus and battleground is not "void":
 		if there is a area of Battleground in the Table of Random Critters:

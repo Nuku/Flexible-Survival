@@ -20,7 +20,7 @@ Grumpy Old Men	"Grumpy Old Men"
 
 Grumpy Old Men is a situation.
 ResolveFunction of Grumpy Old Men is "[ResolveEvent Grumpy Old Men]".
-The sarea of Grumpy Old Men is "Outside".
+Sarea of Grumpy Old Men is "Outside".
 
 when play begins:
 	add Grumpy Old Men to BadSpots of FurryList;
@@ -43,7 +43,7 @@ Fleeing Minotaur	"Fleeing Minotaur"
 
 Fleeing Minotaur is a situation.
 ResolveFunction of Fleeing Minotaur is "[ResolveEvent Fleeing Minotaur]".
-The sarea of Fleeing Minotaur is "Outside".
+Sarea of Fleeing Minotaur is "Outside".
 
 when play begins:
 	add Fleeing Minotaur to BadSpots of FurryList;
@@ -64,7 +64,7 @@ Scavenging Dalmatian	"Scavenging Dalmatian"
 
 Scavenging Dalmatian is a situation.
 ResolveFunction of Scavenging Dalmatian is "[ResolveEvent Scavenging Dalmatian]".
-The sarea of Scavenging Dalmatian is "Outside".
+Sarea of Scavenging Dalmatian is "Outside".
 
 when play begins:
 	add Scavenging Dalmatian to BadSpots of FurryList;
@@ -111,7 +111,7 @@ Captured Wyvern	"Captured Wyvern"
 
 Captured Wyvern is a situation.
 ResolveFunction of Captured Wyvern is "[ResolveEvent Captured Wyvern]".
-The sarea of Captured Wyvern is "Outside".
+Sarea of Captured Wyvern is "Outside".
 
 when play begins:
 	add Captured Wyvern to badspots of FeralList;
@@ -153,7 +153,7 @@ Secrets	"Secrets"
 
 Secrets is a situation.
 ResolveFunction of Secrets is "[ResolveEvent Secrets]".
-The sarea of Secrets is "Outside".
+Sarea of Secrets is "Outside".
 
 when play begins:
 	add Secrets to BadSpots of FurryList;
@@ -175,7 +175,7 @@ School Spirit	"School Spirit"
 
 School Spirit is a situation.
 ResolveFunction of School Spirit is "[ResolveEvent School Spirit]".
-The sarea of School Spirit is "Outside".
+Sarea of School Spirit is "Outside".
 
 when play begins:
 	add School Spirit to BadSpots of FemaleList;
@@ -194,7 +194,7 @@ Another Survivor	"Another Survivor"
 
 Another Survivor is a situation.
 ResolveFunction of Another Survivor is "[ResolveEvent Another Survivor]".
-The sarea of Another Survivor is "Outside".
+Sarea of Another Survivor is "Outside".
 
 when play begins:
 	add Another Survivor to BadSpots of FurryList;
@@ -214,7 +214,7 @@ Masturbating Fox	"Masturbating Fox"
 
 Masturbating Fox is a situation.
 ResolveFunction of Masturbating Fox is "[ResolveEvent Masturbating Fox]".
-The sarea of Masturbating Fox is "Outside".
+Sarea of Masturbating Fox is "Outside".
 
 when play begins:
 	add Masturbating Fox to BadSpots of FurryList;
@@ -236,7 +236,7 @@ Giant Egg	"Giant Egg"
 
 Giant Egg is a situation.
 ResolveFunction of Giant Egg is "[ResolveEvent Giant Egg]".
-The sarea of Giant Egg is "Outside".
+Sarea of Giant Egg is "Outside".
 
 to say ResolveEvent Giant Egg:
 	say "     You search through the city streets until you come across a giant egg. The egg is the size of a beach ball, and it appears to be freshly laid. You quickly leave the area before its mother can return.";
@@ -252,7 +252,7 @@ Ice Cream Truck	"Ice Cream Truck"
 
 Ice Cream Truck is a situation.
 ResolveFunction of Ice Cream Truck is "[ResolveEvent Ice Cream Truck]".
-The sarea of Ice Cream Truck is "Outside".
+Sarea of Ice Cream Truck is "Outside".
 
 when play begins:
 	add Ice Cream Truck to BadSpots of FurryList;
@@ -358,7 +358,7 @@ Wyvern Flight	"Wyvern Flight"
 
 Wyvern Flight is a situation.
 ResolveFunction of Wyvern Flight is "[ResolveEvent Wyvern Flight]".
-The sarea of Wyvern Flight is "Outside".
+Sarea of Wyvern Flight is "Outside".
 
 when play begins:
 	add Wyvern Flight to BadSpots of FurryList;
@@ -376,7 +376,7 @@ Strange Preacher	"Strange Preacher"
 
 Strange Preacher is a situation.
 ResolveFunction of Strange Preacher is "[ResolveEvent Strange Preacher]".
-The sarea of Strange Preacher is "Outside".
+Sarea of Strange Preacher is "Outside".
 
 when play begins:
 	add Strange Preacher to BadSpots of FurryList;
@@ -396,7 +396,7 @@ Hyena Kill	"Hyena Kill"
 
 Hyena Kill is a situation.
 ResolveFunction of Hyena Kill is "[ResolveEvent Hyena Kill]".
-The sarea of Hyena Kill is "Outside".
+Sarea of Hyena Kill is "Outside".
 
 when play begins:
 	add Hyena Kill to BadSpots of FurryList;
@@ -414,7 +414,7 @@ Panther Trap	"Panther Trap"
 
 Panther Trap is a situation.
 ResolveFunction of Panther Trap is "[ResolveEvent Panther Trap]".
-The sarea of Panther Trap is "Outside".
+Sarea of Panther Trap is "Outside".
 
 when play begins:
 	add Panther Trap to BadSpots of FurryList;
@@ -450,7 +450,7 @@ to say ResolveEvent Panther Trap:
 					next;
 				break;
 			say "     A nearby monster catches you in the felitaur's trap and proceeds to fight you. In the process, it disrupts the rubble and frees you.";
-			decrease the HP of the player by 10;
+			decrease HP of Player by 10;
 			fight;
 			follow the turnpass rule;
 			now Resolution of Panther Trap is 2; [Fought creature]
@@ -468,7 +468,7 @@ CatsandDogs	"CatsandDogs"
 
 CatsandDogs is a situation.
 ResolveFunction of CatsandDogs is "[ResolveEvent CatsandDogs]".
-The sarea of CatsandDogs is "Outside".
+Sarea of CatsandDogs is "Outside".
 
 when play begins:
 	add CatsandDogs to BadSpots of FurryList;

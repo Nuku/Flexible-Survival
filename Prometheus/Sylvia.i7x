@@ -127,7 +127,7 @@ Object	Name
 Sylvia's Room	"Sylvia's Room"
 
 Sylvia's Room is a room.
-The description of Sylvia's Room is "[SylviasRoomDesc]".
+Description of Sylvia's Room is "[SylviasRoomDesc]".
 
 to say SylviasRoomDesc:
 	say "     The floor of Sylvia's room is clean. The walls, however, are covered in pictures of various canines. Wolves, foxes, corgis, border collies, the list goes on. If she didn't have a window, you would think that side would be plastered with them too. On a bookshelf, there are hundreds of books on various subjects, including biology and mythology. A desk is pushed against the wall in one corner with a dead laptop, a photo frame, a vase with some flowers, and two well-thumbed books. One is Charles Darwin's [']On the Origin of Species['], and the other is a children's book with dogs and a smiling family. Beside the window is a small armchair with a cushion depicting a border collie. Her bed is well made, but there are strands of fur on it, not all of it looks like hers...";
@@ -174,8 +174,8 @@ SexuallyExperienced of Sylvia is true.
 TwistedCapacity of Sylvia is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Sylvia is true. [steriles can't knock people up]
 MainInfection of Sylvia is "".
-The description of Sylvia is "[SylviaDesc]".
-The conversation of Sylvia is { "Woof woof" }.
+Description of Sylvia is "[SylviaDesc]".
+Conversation of Sylvia is { "Woof woof" }.
 The scent of Sylvia is "     The pretty collie smells mostly like a dog. Cleanish, but with undertones of other creatures.".
 [Custom Variables]
 hpM of Sylvia is a number that varies. hpM of Sylvia is usually 0.
@@ -582,7 +582,7 @@ Despairing Biologist	"Despairing Biologist"
 Despairing Biologist is a situation.
 ResolveFunction of Despairing Biologist is "[ResolveEvent Despairing Biologist]".
 The level of Despairing Biologist is 0.
-The sarea of Despairing Biologist is "Campus".
+Sarea of Despairing Biologist is "Campus".
 
 when play begins:
 	add Despairing Biologist to BadSpots of FurryList;
@@ -657,7 +657,7 @@ ResolveFunction of Room 059 is "".
 Prereq1 of Room 059 is Despairing Biologist.
 Prereq1Resolution of Room 059 is { 1, 2, 3 }.
 The level of Room 059 is 0.
-The sarea of Room 059 is "Nowhere".
+Sarea of Room 059 is "Nowhere".
 
 instead of going northeast from Tenvale College Female Dorms while (Room 059 is active and Room 059 is PrereqComplete and Room 059 is not resolved and (HP of Sylvia is 1 or HP of Sylvia is 2) or (hpM of Sylvia is 1) or (hpF of Sylvia is 1)):
 	move player to Tenvale College Female Dorms;
@@ -701,7 +701,7 @@ ResolveFunction of Unnatural Heat is "".
 Prereq1 of Unnatural Heat is Room 059.
 Prereq1Resolution of Unnatural Heat is { 1, 2 }.
 The level of Unnatural Heat is 0.
-The sarea of Unnatural Heat is "Nowhere".
+Sarea of Unnatural Heat is "Nowhere".
 
 instead of going northeast from Tenvale College Female Dorms while (Unnatural Heat is active and Unnatural Heat is PrereqComplete and Unnatural Heat is not resolved and SylviaConv is 5 and (HP of Sylvia is 3 or hpM of Sylvia is 2 or hpF of Sylvia is 2) and a random chance of 1 in 4 succeeds):
 	move player to Tenvale College Female Dorms;
@@ -865,7 +865,7 @@ Prereq2 of Beach Field Research is Julian's Room Event.
 Prereq1Resolution of Beach Field Research is { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 }.
 Prereq2Resolution of Beach Field Research is { 0, 1 }.
 The level of Beach Field Research is 0.
-The sarea of Beach Field Research is "Beach".
+Sarea of Beach Field Research is "Beach".
 
 after going to Public Beach while (Beach Field Research is active and Beach Field Research is PrereqComplete and Beach Field Research is not resolved and daytimer is day and HP of Julian is 3 and a random chance of 1 in 2 succeeds):
 	move player to Public Beach;
@@ -924,7 +924,7 @@ Sylvia's Reward is inactive.
 Prereq1 of Sylvia's Reward is Beach Field Research.
 Prereq1Resolution of Sylvia's Reward is { 1, 2 }.
 The level of Sylvia's Reward is 0.
-The sarea of Sylvia's Reward is "Nowhere".
+Sarea of Sylvia's Reward is "Nowhere".
 
 instead of going northeast from Tenvale College Female Dorms while (Sylvia's Reward is active and Sylvia's Reward is PrereqComplete and Sylvia's Reward is not resolved and (HP of Sylvia is 6 or hpF of Sylvia is 5) and a random chance of 1 in 2 succeeds):
 	move player to Tenvale College Female Dorms;
@@ -1036,7 +1036,7 @@ Bad Breakup is a situation.
 ResolveFunction of Bad Breakup is "[ResolveEvent Bad Breakup]".
 Prereq1 of Bad Breakup is Beach Field Research.
 Prereq1Resolution of Bad Breakup is { 1, 2 }.
-The sarea of Bad Breakup is "Nowhere".
+Sarea of Bad Breakup is "Nowhere".
 
 instead of going north from Dorm Street while (Bad Breakup is active and Bad Breakup is PrereqComplete and Bad Breakup is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
 	move player to Tenvale College Female Dorms;
@@ -1066,7 +1066,7 @@ Cheat's Retribution is a situation.
 ResolveFunction of Cheat's Retribution is "[ResolveEvent Cheat's Retribution]".
 Prereq1 of Cheat's Retribution is Bad Breakup.
 Prereq1Resolution of Cheat's Retribution is { 1 }.
-The sarea of Cheat's Retribution is "Campus".
+Sarea of Cheat's Retribution is "Campus".
 
 instead of going to College Walkway East while (Cheat's Retribution is active and Cheat's Retribution is PrereqComplete and Cheat's Retribution is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 8):
 	move player to Tenvale College Female Dorms;
@@ -1115,7 +1115,7 @@ ResolveFunction of Charming Picnic is "[ResolveEvent Charming Picnic]".
 Prereq1 of Charming Picnic is Unnatural Heat.
 Prereq1Resolution of Charming Picnic is { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 }.
 The level of Charming Picnic is 0.
-The sarea of Charming Picnic is "Campus".
+Sarea of Charming Picnic is "Campus".
 
 instead of going to College Walkway East while (Charming Picnic is active and Charming Picnic is PrereqComplete and Charming Picnic is not resolved and (HP of Sylvia > 3 or hpM of Sylvia > 2 or hpF of Sylvia > 2) and a random chance of 1 in 4 succeeds and LastCampusWalkin - turns > 2):
 	move player to College Walkway East;
@@ -1139,7 +1139,7 @@ ResolveFunction of Badminton One is "[ResolveEvent Badminton One]".
 Prereq1 of Badminton One is Unnatural Heat.
 Prereq1Resolution of Badminton One is { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 }.
 The level of Badminton One is 0.
-The sarea of Badminton One is "Campus".
+Sarea of Badminton One is "Campus".
 
 instead of going to College Walkway East while (Badminton One is active and Badminton One is PrereqComplete and Badminton One is not resolved and (HP of Sylvia > 3 or hpM of Sylvia > 2 or hpF of Sylvia > 2) and a random chance of 1 in 4 succeeds and LastCampusWalkin - turns > 2):
 	move player to College Walkway East;
@@ -1163,7 +1163,7 @@ ResolveFunction of College Canine Lovers is "[ResolveEvent College Canine Lovers
 Prereq1 of College Canine Lovers is Unnatural Heat.
 Prereq1Resolution of College Canine Lovers is { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 }.
 The level of College Canine Lovers is 0.
-The sarea of College Canine Lovers is "Campus".
+Sarea of College Canine Lovers is "Campus".
 
 instead of going to College Walkway East while (College Canine Lovers is PrereqComplete and College Canine Lovers is not resolved and (HP of Sylvia > 3 or hpM of Sylvia > 2 or hpF of Sylvia > 2) and daytimer is day and a random chance of 1 in 4 succeeds and LastCampusWalkin - turns > 2):
 	move player to College Walkway East;
@@ -1255,7 +1255,7 @@ Sylvia's City Research One is a situation.
 ResolveFunction of Sylvia's City Research One is "[ResolveEvent Sylvia's City Research One]". [Huskies]
 Prereq1 of Sylvia's City Research One is Beach Field Research.
 Prereq1Resolution of Sylvia's City Research One is { 1, 2 }.
-The sarea of Sylvia's City Research One is "Outside".
+Sarea of Sylvia's City Research One is "Outside".
 
 to say ResolveEvent Sylvia's City Research One:
 	SylviasCityResearchOneEvent;
@@ -1340,7 +1340,7 @@ Sylvia City Research Two is a situation.
 ResolveFunction of Sylvia City Research Two is "[ResolveEvent Sylvia City Research Two]". [Hyenas]
 Prereq1 of Sylvia City Research Two is Beach Field Research.
 Prereq1Resolution of Sylvia City Research Two is { 1, 2 }.
-The sarea of Sylvia City Research Two is "Outside".
+Sarea of Sylvia City Research Two is "Outside".
 
 to say ResolveEvent Sylvia City Research Two:
 	SylviaCityResearchTwoEvent;

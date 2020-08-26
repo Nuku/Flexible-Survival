@@ -54,7 +54,7 @@ to say ResolveEvent Disorganization:
 			say "     Reaching out and pulling at the other man's arm you fight with him to stop the changing mutant from killing himself, a flashback to the other dead soldier making you somewhat frantic as you don't want to see a repeat of this past happening played out in full detail! The struggle lasts for several seconds, the transforming mutant putting up a really good fight despite your resolve, but eventually his superior skills at hand-to-hand end up with you being pushed back against away from him. 'Why in the hell are you trying to stop me!' The other shouts and you can't help but shout back that this isn't the way to go out.";
 			WaitLineBreak;
 			say "     That he's a soldier and that soldiers are made of harder stuff than this! 'Heheh, soldier? Are you kidding? Look at me!?' The other man points down, and though you don't want to look, knowing what's happening down there already, you find your gaze taking you to the sight of the man's penis shrinking while dribbles of milky white hot female honey oozed down underneath his balls, no doubt from the opening of his new cunt. 'I'll barely be a man in a couple of hours! You really think I want to live like this for the rest of my life? As some bitch to a fucking freak?!";
-			let bonus be (( the Intelligence of the player minus 10 ) divided by 2);
+			let bonus be (( Intelligence of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus]:[line break]";
 			increase diceroll by bonus;
@@ -94,7 +94,7 @@ to say ResolveEvent Disorganization:
 			LineBreak;
 			say "     Common sense fails you as you walk over to the other, warily though, to see if you can offer aid. When you speak out to draw the other's you find yourself flustering however, as the face of a rubbery latex fox looks back at you with a happy smile on its shiny orangish-red muzzle. The moan from before seems to have come from the creature trying to get itself off. You groan as you shake your head and then back away, really you think to yourself, you should have known better than that in this creepy place. However, before you pull away completely you find your eyes catching the sight of something glinting around the vulpine's neck.";
 			say "     A thick gulp makes and a shudder later you nervously you take a few steps closer to the creature. What you see, as you again had feared is that around the critter's throat there are silver dog tags hanging limply down onto the mutant's chest. Looking to the thing and then seeing that it is staring at you with confused, yet intelligent eyes you chance going over to try and grab the things from off of the other's neck. A part of you hoping desperately that the mutant doesn't try to attack you.";
-			let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
+			let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 			increase diceroll by bonus;

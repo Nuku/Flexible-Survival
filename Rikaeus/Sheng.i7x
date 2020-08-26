@@ -33,7 +33,7 @@ White Tiger Alchemy Shop	"White Tiger Alchemy Shop"
 [Room Declaration]
 White Tiger Alchemy Shop is a room.
 White Tiger Alchemy Shop is north of Atlantis City Market.
-The description of White Tiger Alchemy Shop is "[WhiteTiger]".
+Description of White Tiger Alchemy Shop is "[WhiteTiger]".
 earea of White Tiger Alchemy Shop is "Atlantis".
 
 to say WhiteTiger:
@@ -69,8 +69,8 @@ Virgin of Sheng is false.
 AnalVirgin of Sheng is false.
 PenileVirgin of Sheng is false.
 SexuallyExperienced of Sheng is true.
-The description of Sheng is "[ShengDesc]".
-The conversation of Sheng is { "<This is nothing but a placeholder!>" }.
+Description of Sheng is "[ShengDesc]".
+Conversation of Sheng is { "<This is nothing but a placeholder!>" }.
 The scent of Sheng is "     The white tiger gives off a smell of herbs and spices with what appears to be an underlying scent of tea.".
 Sheng is in White Tiger Alchemy Shop.
 
@@ -572,7 +572,7 @@ Petted In Public	"Petted in Public"
 Petted in Public is a situation.
 ResolveFunction of Petted in Public is "".
 Petted in Public is inactive.
-The sarea of Petted in Public is "Atlantis".
+Sarea of Petted in Public is "Atlantis".
 
 when play begins:
 	add Petted in Public to BadSpots of MaleList;
@@ -590,7 +590,7 @@ name	desc	weight	object
 "sheng's pet collar"	"[SCollarDesc]"	1	sheng's pet collar
 
 sheng's pet collar is a grab object.
-the usedesc of sheng's pet collar is "[SCollarUse]".
+Usedesc of sheng's pet collar is "[SCollarUse]".
 
 It is not temporary.
 
@@ -628,7 +628,7 @@ name	desc	weight	object
 
 lust potion is a grab object. It is temporary.
 
-the usedesc of lust potion is "[lust potion use]".
+Usedesc of lust potion is "[lust potion use]".
 
 to say lust potion use:
 	say "     You uncork the bottle and chug it, downing all of the liquid inside. There's a surprisingly chocolatey and nutty taste to it, reminding you of a consistency of chocolate milk. Soon though you're too distracted too think about that as you're feeling hot and aroused, your libido climbing rapidly.";

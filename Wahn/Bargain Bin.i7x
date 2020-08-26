@@ -14,7 +14,7 @@ object	name
 Bargain Bin	"Bargain Bin"
 
 Bargain Bin is a man.
-The description of Bargain Bin is "     This large bin seems filled with a number of small packets, bottles, and charms, boxes, pieces of fabric and who knows what else. You can't even see the bottom of it. Certainly an interesting opportunity to find... something in there. Above the bin someone has posted a recently drawn sign reading, 'Bargain Bin. Pay and draw one item out. Price: One packet of food and one bottle of water. No returns and refunds!' You aren't exactly sure just how much of a bargain this bin really is right now, but you could still find something useful right? Maybe you should try [link]hunt[as]sort Bargain Bin[end link]ing a bargain, or [link]sort[as]sort Bargain Bin[end link]ing through the bin?".
+Description of Bargain Bin is "     This large bin seems filled with a number of small packets, bottles, and charms, boxes, pieces of fabric and who knows what else. You can't even see the bottom of it. Certainly an interesting opportunity to find... something in there. Above the bin someone has posted a recently drawn sign reading, 'Bargain Bin. Pay and draw one item out. Price: One packet of food and one bottle of water. No returns and refunds!' You aren't exactly sure just how much of a bargain this bin really is right now, but you could still find something useful right? Maybe you should try [link]hunt[as]sort Bargain Bin[end link]ing a bargain, or [link]sort[as]sort Bargain Bin[end link]ing through the bin?".
 
 the linkaction of Bargain Bin is "Possible Actions: [link]smell[as]smell Bargain Bin[end link], [link]sort[as]sort Bargain Bin[end link][line break]";
 
@@ -194,7 +194,7 @@ carry out bargainhunting:
 				[TODO: Declare an upper limit to the Dex Gains]
 				say "     Searching through the bin again, you blink as your hand finds a small doll-sized pack and some accessories. Pulling them out, you stare at the items in puzzlement for a minute, before passing them along to your miniature doll self to play with. It never hurts to accessorize right?";
 				LineBreak;
-				say "[bold type]The dexterity of your strange doll increases by 1![roman type][line break]";
+				say "[bold type]The Dexterity of your strange doll increases by 1![roman type][line break]";
 				increase dexterity of strange doll by 1;
 		else if Z is 17: [strength pill]
 			say "     Sorting through the bin, you come across a strange folded piece of paper. Pulling it out and unwrapping it, you barely manage to catch the [bold type]small pill[roman type] that was wrapped in the paper before it falls out. Looking at the pill in confusion for a second, you then notice there seems to be something written on the paper. As it turns out, the pill is some kind of miracle muscle enhancer, though it does warn of side effects...";
@@ -495,7 +495,7 @@ instead of sniffing jackal romance novels:
 	say "     Somehow, the scent of the books makes you think of hot desert sands, as well as the sea.";
 
 jackal romance novels is a grab object. jackal romance novels is not temporary.
-the usedesc of jackal romance novels is "[jackal romance novels use]";
+Usedesc of jackal romance novels is "[jackal romance novels use]";
 
 to say jackal romance novels use:
 	say "     You page through one of the novels and start reading about the adventures of the hero of the book, a dashing jackalman who is a devil with his sword - and an amazing lover too, as it turns out. For books that are really quite explicit and hardcore, you have to say that you do enjoy the writing in its own right as well. Nermine certainly has a good taste in her special literature...";
@@ -515,14 +515,14 @@ object	name
 strange doll	"strange doll"
 
 strange doll is a pet. "The strange-looking doll that you found in the bargain bin of the unusual shop. The small doll seems to always look exactly like you, changes and all. The most unusual part of the whole thing is how it happily follows along behind you loyally wherever you go, its plush body moving on its own through some unknown method. Still, just looking at the little thing manages to bring a smile to your face.".
-strange doll is a part of the player.
+strange doll is a part of Player.
 understand "Your Doll-Twin" as strange doll.
 understand "Doll-Twin" as strange doll.
 understand "Doll" as strange doll.
 printed name of strange doll is "Your doll-twin".
-The weapon damage of strange doll is 5.
+Weapon Damage of strange doll is 5.
 The level of strange doll is 1.
-The Dexterity of strange doll is 15.
+Dexterity of strange doll is 15.
 The summondesc of strange doll is "     You pull the strange little doll from the shop out of your pack, and set it on the ground next to you, the doll lies there for a minute on the ground, before twitching and picking itself up. The little miniature version of you looks around the area, before looking up at you and saluting, obviously ready and willing to help.".
 The assault of strange doll is "[one of]The strange doll picks up something from the ground nearby, and tries to stab your attacker with it![or]Running up under your attacker, your strange plush doll tosses itself at their legs, tangling them up![or]The strange doll of you mimics your attack, striking at your opponent![or]Your opponent suddenly cries out in pain, your little ally having managed to score a hit in a sensitive area.[or]Taking advantage of your foes distraction, your little doll gets in several good hits.[or]All of a sudden your opponent stops fighting and begins to try to claw at their face, taking the opportunity to land an extra hit, you notice your little plush doll managed to climb up and put its hands over their eyes.[or]All of a sudden your opponent is startled by a sudden rain of debris tossed at it by your little ally, causing it to fall backwards[or]Imitating you, your little mini me attacks the beast with wild abandon![at random]".
 the fuckscene of strange doll is "The little doll doesn't respond to your strange offer.".

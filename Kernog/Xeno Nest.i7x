@@ -34,7 +34,7 @@ Xeno Nest	"Xeno Nest"
 
 Xeno Nest is a situation.
 ResolveFunction of Xeno Nest is "[ResolveEvent Xeno Nest]".
-The sarea of Xeno Nest is "Capitol".
+Sarea of Xeno Nest is "Capitol".
 xenoNestisCautious is a number that varies. xenoNestisCautious is usually 0.
 
 to say ResolveEvent Xeno Nest:
@@ -122,7 +122,7 @@ to say nestXenoFight:
 		xenoNestWin;
 
 to say nestFacehugger:
-	let bonus be (( Dexterity of the player - 10 ) divided by 2);
+	let bonus be (( Dexterity of Player - 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]12[roman type] (Dexterity Check):[line break]";
 	increase diceroll by bonus;
@@ -134,7 +134,7 @@ to say nestFacehugger:
 
 
 to say nestTrilobite:
-	let bonus be (( the Strength of the player - 10 ) divided by 2);
+	let bonus be (( Strength of Player - 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]12[roman type] (Strength Check):[line break]";
 	increase diceroll by bonus;

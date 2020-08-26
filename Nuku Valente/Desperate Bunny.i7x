@@ -102,7 +102,7 @@ Rabbit Den	"Rabbit Den"
 Rabbit Den is a room. It is fasttravel. It is private.
 earea of Rabbit Den is "Outside".
 
-The description of Rabbit Den is "     Not a literal rabbit den, a basement actually. It is warm and dark in here. You can see books piled in messy stacks, and a small cot has been set to the side. It seems whoever lives here is stocked for the long haul, with small bottles of water and packaged food up on a shelf. There is a soft, musky scent in the air.".
+Description of Rabbit Den is "     Not a literal rabbit den, a basement actually. It is warm and dark in here. You can see books piled in messy stacks, and a small cot has been set to the side. It seems whoever lives here is stocked for the long haul, with small bottles of water and packaged food up on a shelf. There is a soft, musky scent in the air.".
 
 the scent of Rabbit Den is "     This basement hidey-hole has a soft, musky scent in the air. It smells of female rabbit, heather and clover."
 
@@ -140,9 +140,9 @@ SexuallyExperienced of Sandra is true.
 MainInfection of Sandra is "Anthro Rabbit".
 
 The icon of Sandra is Figure of sandy_icon.
-The description of Sandra is "     A mostly human female, if you don't count the rabbit ears, six breasts, and that cute little white tail that sways behind her. She is usually wearing a yellow blouse, jean jacket, and a long red skirt. Her feet are clad in sneakers, well worn.".
+Description of Sandra is "     A mostly human female, if you don't count the rabbit ears, six breasts, and that cute little white tail that sways behind her. She is usually wearing a yellow blouse, jean jacket, and a long red skirt. Her feet are clad in sneakers, well worn.".
 Sandra is in Rabbit Den.
-The conversation of Sandra is { "Moved!" }
+Conversation of Sandra is { "Moved!" }
 
 Instead of conversing the Sandra:
 	say "[sandtalk][line break]";

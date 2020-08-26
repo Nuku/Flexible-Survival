@@ -10,10 +10,10 @@ Bathroom Stalls	"Bathroom Stalls"
 Bathroom Stalls is a room.
 Bathroom Stalls is inside of Mall Restroom.
 
-The description of Bathroom Stalls is "     These dingy bathroom stalls are separated by cheap plasticized chipboard barriers. Slick patches of white gunk cover the floors and the musty odor of sex fills the air. The doors that still have latches actually have some degree of functionality, though a few stalls are without any doors at all. There is gap beneath the doors, barriers and the floor, as is usual for a cheaply constructed mall bathroom. Holes of varying sizes have been drilled into the stall walls and made less hazardous by the addition of duct tape. Their purpose is obvious.";
+Description of Bathroom Stalls is "     These dingy bathroom stalls are separated by cheap plasticized chipboard barriers. Slick patches of white gunk cover the floors and the musty odor of sex fills the air. The doors that still have latches actually have some degree of functionality, though a few stalls are without any doors at all. There is gap beneath the doors, barriers and the floor, as is usual for a cheaply constructed mall bathroom. Holes of varying sizes have been drilled into the stall walls and made less hazardous by the addition of duct tape. Their purpose is obvious.";
 
 Gloryhole is an object. It is in the Bathroom Stalls. It is fixed in place. Understand "hole" as Gloryhole.
-the description of Gloryhole is "The gloryholes are drilled in both barriers either side of you, at varying heights so anyone can use them. Though this is clearly not the most sanitary of places, it maintains anonymity. Do you want to [link]have some fun[as]use Gloryhole[end link] and get your rocks off with some anonymous partners?";
+Description of Gloryhole is "The gloryholes are drilled in both barriers either side of you, at varying heights so anyone can use them. Though this is clearly not the most sanitary of places, it maintains anonymity. Do you want to [link]have some fun[as]use Gloryhole[end link] and get your rocks off with some anonymous partners?";
 
 UseGloryhole is an action applying to nothing.
 understand "use hole" and "fuck hole" and "fuck gloryhole" and "use gloryhole" and "use ass" and "use cock" and "use pussy" as UseGloryhole.

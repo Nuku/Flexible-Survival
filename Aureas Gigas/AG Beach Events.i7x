@@ -6,7 +6,7 @@ Riptide	"Riptide"
 
 Riptide is a situation.
 ResolveFunction of Riptide is "[ResolveEvent Riptide]".
-The sarea of Riptide is "Beach".
+Sarea of Riptide is "Beach".
 
 to say ResolveEvent Riptide:
 	say "     Walking along the coastline you see a black-furred anthro bear standing a little distance out in the ocean, the water at waist-high level. As the waves approach him, he jumps and bobs up in the water. You see him repeat this action for a couple more times, before a massive one starts to curl and crashes into him. Knocked off his feet, the ursine male tries to scramble to stand up but the strong undertow prevents him getting his bearings before the next wave hits. It seems like the guy is being pulled away from the shore by a strong riptide. With his feet no longer touching any sand, the unskilled swimmer panics and tries swimming straight to shore. Unfortunately, he keeps getting dragged further from the shore with every wave.";
@@ -20,7 +20,7 @@ Object	Name
 Hang Ten	"Hang Ten"
 
 Hang Ten is a situation.
-ResolveFunction of Hang Ten is "[ResolveEvent Hang Ten]". The sarea of Hang Ten is "Beach".
+ResolveFunction of Hang Ten is "[ResolveEvent Hang Ten]". Sarea of Hang Ten is "Beach".
 
 when play begins:
 	add Hang Ten to BadSpots of FemaleList;
@@ -49,7 +49,7 @@ Parasol Nap	"Parasol Nap"
 
 Parasol Nap is a situation.
 ResolveFunction of Parasol Nap is "[ResolveEvent Parasol Nap]".
-The sarea of Parasol Nap is "Beach".
+Sarea of Parasol Nap is "Beach".
 
 to say ResolveEvent Parasol Nap:
 	project the Figure of Parasol_Nap_icon;

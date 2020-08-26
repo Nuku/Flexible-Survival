@@ -32,8 +32,8 @@ AnalVirgin of Nakoma is false.
 PenileVirgin of Nakoma is false.
 SexuallyExperienced of Nakoma is true.
 MainInfection of Nakoma is "Black Equinoid".
-The description of Nakoma is "[NakomaDesc]".
-The conversation of Nakoma is { "I like plains." }.
+Description of Nakoma is "[NakomaDesc]".
+Conversation of Nakoma is { "I like plains." }.
 The scent of Nakoma is "     Nakoma smells of grass, milk, and scented oil. A hint of arousal is also present, though it is obfuscated by the other scents which emanate from her fur.".
 
 to say NakomaDesc:

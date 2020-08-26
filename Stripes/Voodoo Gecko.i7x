@@ -377,7 +377,7 @@ name	desc	weight	object
 
 gecko cum is a grab object. gecko cum is temporary. gecko cum is cum.
 
-The usedesc of gecko cum is "[drinkgeckocum]";
+Usedesc of gecko cum is "[drinkgeckocum]";
 
 to say drinkgeckocum:
 	say "     Feeling drawn to the dark power, you quickly open the container of semen and gulp it down before it can dissipate. You moan softly and exhale a puff of violet mist that leaves a musky scent in the air as a rush of arousal wells up inside you. Even as you feel the cum in your belly start to tingle with infected nanites and strange magicks, you can't help but smile darkly at the rush of excitement you experience.";

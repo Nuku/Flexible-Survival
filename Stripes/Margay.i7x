@@ -317,11 +317,11 @@ this is the margaydance rule:
 			if FaceName of Player is listed in Infections of Felinelist:
 				increase Libido of Player by a random number between 0 and 2;
 			say "[if BodyName of Player is listed in infections of Felinelist or FaceName of Player is listed in infections of Felinelist]Your feline nature is particularly captivated by the suddenly alluring cat before you and you mrowl longingly as you watch her move. [end if]Unable to look away from the [one of]feline[or]margay[purely at random]'s sensual and erotic motions, your feel an increasing need to [one of]be with her[or]snuggle up against that plump body of hers[or]bury your face in her wet crotch[or]curl up in her motherly arms[purely at random]. The entire display drains some of your resistance, arousing you further and tempting you to give in and play with the plump feline! You take [special-style-2][dam][roman type] damage!";
-			decrease HP of the player by dam;
+			decrease HP of Player by dam;
 			follow the player injury rule;
 			say "You are [descr].";
 		now peppereyes is 0; [pepperspray wears off]
-		if HP of the player > 0 and Libido of Player < 110:
+		if HP of Player > 0 and Libido of Player < 110:
 			wait for any key;
 		else:
 			if HP of Player <= 0, now fightoutcome is 20;
@@ -337,9 +337,9 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "margay milk"	"Milk from a hefty feline."	1	margay milk
 
-margay milk is a grab object. margay milk is infectious. margay milk is milky. The strain of margay milk is "Margay".
+margay milk is a grab object. margay milk is infectious. margay milk is milky. Strain of margay milk is "Margay".
 
-The usedesc of margay milk is "[drinkmargaymilk]";
+Usedesc of margay milk is "[drinkmargaymilk]";
 
 to say drinkmargaymilk:
 	say "     Feeling suddenly thirsty for the feline milk, you drink it down, releasing a soft purring soft as you do.";

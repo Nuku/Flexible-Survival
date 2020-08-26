@@ -34,7 +34,7 @@ Unusual Creature	"Unusual Creature"
 
 Unusual Creature is a situation.
 ResolveFunction of Unusual Creature is "[ResolveEvent Unusual Creature]". It is inactive.
-The sarea of Unusual Creature is "Park".
+Sarea of Unusual Creature is "Park".
 
 to say ResolveEvent Unusual Creature:
 	say "     Wandering through the wildly overgrown park, your ears pick up a faint sound and you decide to check it out. Carefully bending aside a branch, you peer into the bushes and see a bipedal deer woman not too far away in the underbrush. She doesn't appear to be wearing clothing and has only the fur on her body to protect her from the elements, which allows you to realize that she's not quite completely female, instead having a thick black shaft dangling between her legs. The hermaphrodite is crying quietly, face buried in her palms and her body curled against a tree. She doesn't react as you slip in closer, not even noticing you until you're almost on top of her. She gasps loudly when she does notice you, throwing herself back against the tree with wide eyes.";
@@ -126,8 +126,8 @@ Table of GameCharacterIDs (continued)
 object	name
 Susan	"Susan"
 
-Susan is a person. "Susan, a bipedal deer.". The description of Susan is "[Susandesc]".
-The conversation of Susan is { "Bleat!" }.
+Susan is a person. "Susan, a bipedal deer.". Description of Susan is "[Susandesc]".
+Conversation of Susan is { "Bleat!" }.
 The fuckscene of Susan is "[sexwithSusan]".
 
 to say Susandesc:

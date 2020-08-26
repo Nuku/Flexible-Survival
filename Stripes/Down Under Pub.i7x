@@ -11,7 +11,7 @@ Aussie Pub	"Aussie Pub"
 
 Aussie Pub is a situation.
 ResolveFunction of Aussie Pub is "[ResolveEvent Aussie Pub]".
-The sarea of Aussie Pub is "Red".
+Sarea of Aussie Pub is "Red".
 lastpubvisit is a number that varies.
 pubvisit is a number that varies.
 
@@ -270,7 +270,7 @@ Object	Name
 Gillian's Flat	"Gillian's Flat"
 
 Gillian's Flat is a room. It is fasttravel. It is private. It is sleepsafe.
-The description of Gillian's Flat is "     Located above the Down Under Pub, Gillian the barmaid's been living here. It's nothing fancy, but it certainly beats living out on the streets, especially these days. The studio apartment is sparsely decorated, having a loveseat and a bed and not much else. The small dining table's pushed up against one wall, probably to leave more room for that big tail of hers to swing around. There's a couple of generic motivational posters up on the wall.[line break]     From here, going [bold type]down[roman type] the stairs will take you to the pub. Exiting and heading [bold type]east[roman type] will lead you back to towards the district's entrance.".
+Description of Gillian's Flat is "     Located above the Down Under Pub, Gillian the barmaid's been living here. It's nothing fancy, but it certainly beats living out on the streets, especially these days. The studio apartment is sparsely decorated, having a loveseat and a bed and not much else. The small dining table's pushed up against one wall, probably to leave more room for that big tail of hers to swing around. There's a couple of generic motivational posters up on the wall.[line break]     From here, going [bold type]down[roman type] the stairs will take you to the pub. Exiting and heading [bold type]east[roman type] will lead you back to towards the district's entrance.".
 [Downtopub is a door. Downtopub is below Gillian's Flat.
 
 Table of GameRoomIDs (continued)
@@ -316,8 +316,8 @@ object	name
 Gillian	"Gillian"
 
 Gillian is a woman. Gillian is in Gillian's Flat.
-The description of Gillian is "[gilliandesc]".
-The conversation of Gillian is { "Work!" }.
+Description of Gillian is "[gilliandesc]".
+Conversation of Gillian is { "Work!" }.
 the scent of the Gillian is "[gillianscent]".
 the fuckscene of Gillian is "[sexwithgillian]".
 The icon of Gillian is Figure of Gillian_icon.

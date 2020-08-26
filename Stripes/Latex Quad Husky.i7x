@@ -11,7 +11,7 @@ Shipping Container	"Shipping Container"
 
 Shipping Container is a situation.
 ResolveFunction of Shipping Container is "[ResolveEvent Shipping Container]".
-The sarea of Shipping Container is "Outside".
+Sarea of Shipping Container is "Outside".
 latexhuskymode is a truth state that varies. latexhuskymode is usually false.
 
 when play begins:

@@ -12,7 +12,7 @@ Mysterious Briefcase	"Mysterious Briefcase"
 
 Mysterious Briefcase is a situation.
 ResolveFunction of Mysterious Briefcase is "[ResolveEvent Mysterious Briefcase]".
-The sarea of Mysterious Briefcase is "Outside".
+Sarea of Mysterious Briefcase is "Outside".
 
 to say ResolveEvent Mysterious Briefcase:
 	say "     Roaming through the city, always on the lookout for supplies or other interesting objects that might help you survive, you spot an abandoned car some distance ahead. Glancing left and right for any creatures that might be lying in ambush for scavengers, you approach slowly, carefully stepping around pieces of glass and trash that might make a noise. There is no trace of the occupant of the car, just a wide-open driver's door. Maybe they tried to escape whatever creature that left some deep dents in the car's hood and brought it to a standstill. A few steps from the car, you spot an unusual briefcase lying on the ground, emblazoned with a rounded company logo. The sturdy case looks intact and was most likely dropped by the fleeing driver, with the chasing monster more interested in the person than their possessions. A lucky break for you, it seems.";

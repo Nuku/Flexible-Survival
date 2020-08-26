@@ -13,7 +13,7 @@ Hyena Bikers	"Hyena Bikers"
 
 Hyena Bikers is a situation.
 ResolveFunction of Hyena Bikers is "[ResolveEvent Hyena Bikers]".
-The sarea of Hyena Bikers is "High".
+Sarea of Hyena Bikers is "High".
 when play begins:
 	add Hyena Bikers to BadSpots of MaleList;
 	add Hyena Bikers to badspots of HermList;
@@ -256,7 +256,7 @@ to say bikeattack:
 	[dodge three times - 10 dmg each]
 	say "[line break]     The hyena bikers laugh derisively as they circle around you as you try to find a way out of this mess. Suddenly one veers out and tries to charge you on hir bike.";
 	[WaitLineBreak]
-	let the bonus be (( the dexterity of the player minus 10 ) divided by 2);
+	let the bonus be (( Dexterity of Player minus 10 ) divided by 2);
 	let the dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 12: ";
 	if dice plus bonus > 12:
@@ -420,8 +420,8 @@ object	name
 Grant	"Grant"
 
 Grant is a man.
-The description of Grant is "[grantdesc]".
-The conversation of Grant is { "Cool!" }.
+Description of Grant is "[grantdesc]".
+Conversation of Grant is { "Cool!" }.
 granttalk is a number that varies.
 grantbitch is a number that varies.
 grantsex is a number that varies.

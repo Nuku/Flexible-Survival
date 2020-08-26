@@ -75,7 +75,7 @@ to say dolphin fuck:
 			say "Her cock head slides into your lubricated tunnel with ease, and she prepares to pump the rest into you. ";
 		if Cunt Depth of Player < 10:[won't go in far, must extend you]
 			say "She slams her cock into you with a cry of success, but it is cut off as she realizes that she can't go halfway inside. She thinks for a moment, her member stimulating your pussy as it wriggles. 'I am going to have to lengthen your cunt, small one. It may hurt.' She begins to slam her cock into you and grunts when it smashes open your cervix. ";
-			if the humanity of Player < 60:
+			if Humanity of Player < 60:
 				say "You wince and hope that your infected body can repair the damage she, no, it, is doing so that you may have children.";
 			else:
 				say "You wince and hope that the damage can be fixed if you wish not to miscarry.";
@@ -150,7 +150,7 @@ When Play begins:
 	now attack entry is "The dolphin takes her fist and punches you with her immense strength."; [Text used when the monster makes an Attack]
 	now defeated entry is "[Dolphin loses]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[Dolphin wins]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[mongendernum 5]As you [if the location of the player is not Public Beach]swim along[else]walk on the beach[end if], you see a dark shadow following your progress. You move towards it, and a dolphin-like human shoots out of the gloom, saying 'Another for my pod! Yes!'"; [ Description of the creature when you encounter it.]
+	now desc entry is "[mongendernum 5]As you [if the Location of Player is not Public Beach]swim along[else]walk on the beach[end if], you see a dark shadow following your progress. You move towards it, and a dolphin-like human shoots out of the gloom, saying 'Another for my pod! Yes!'"; [ Description of the creature when you encounter it.]
 	now face entry is "long dolphin snout";
 	now body entry is "silvery with a blue back. A dorsal fin sits on top, and strong muscles contract underneath the surface"; [ Body Description, format as "Your Body is (your text)"]
 	now skin entry is "[one of]wet, glistening[or]smooth, silver[or]thick, blubbered[at random]"; [ skin Description, format as "Your body is covered in (your text) skin"]
@@ -376,7 +376,7 @@ name	desc	weight	object
 "dolphin milk"	"Thick and nutritious milk from a dolphinoid."	1	dolphin milk
 
 
-dolphin milk is a grab object. It is milky. Understand "milk" as dolphin milk. dolphin milk is infectious. The strain of dolphin milk is "Dolphin Herm". The purified of dolphin milk is "distilled milk".
+dolphin milk is a grab object. It is milky. Understand "milk" as dolphin milk. dolphin milk is infectious. Strain of dolphin milk is "Dolphin Herm". Purified of dolphin milk is "distilled milk".
 
 the scent of dolphin milk is "The dolphin milk smells like milk with an odd, fishy scent mixed in.".
 

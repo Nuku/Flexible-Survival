@@ -542,8 +542,8 @@ instead of sniffing lembas bread:
 	say "Mmmh! Smells like freshly baked, delicious bread.";
 
 lembas bread is a grab object.
-lembas bread is infectious. The strain of lembas bread is "Elven Hunter".
-the usedesc of lembas bread is "[lembas bread use]";
+lembas bread is infectious. Strain of lembas bread is "Elven Hunter".
+Usedesc of lembas bread is "[lembas bread use]";
 
 to say lembas bread use:
 	say "     Unwrapping the thin bread from its leaf, you take a bite from it. Tastes delicious, almost as if it's been freshly baked an hour ago. The meal fills your stomach quite nicely, even though it is just a few bites.";
@@ -555,7 +555,7 @@ name	desc	weight	object
 "purple berries"	"Wrapped in an artfully folded five-pointed leaf, you see a handful purple berries. They look fresh as if recently picked, and you can't help but feel that they'd be tasty and good for you."	0	purple berries
 
 purple berries is a grab object.
-the usedesc of purple berries is "[purple berries use]";
+Usedesc of purple berries is "[purple berries use]";
 
 to say purple berries use:
 	say "     Carefully pulling open the folded leaf, you pick up one of the berries between your fingers and put it into your mouth. Mmmh, tasty! Eagerly grabbing the next and throwing it into your mouth, it doesn't take long at all before you have finished them all off. The sweet taste lingers a little in your mouth, and you can feel a sensation of wellness spread through your whole body.";
@@ -570,7 +570,7 @@ name	desc	weight	object
 "jade coin"	"A thin disk of green stone, with a square hole in the middle. On one side, a dragon with a very long and winding body is wrapped all the way around the hole, the other side is covered in otherworldly symbols that you do not understand."	0	jade coin
 
 jade coin is a grab object.
-the usedesc of jade coin is "[jade coin use]";
+Usedesc of jade coin is "[jade coin use]";
 
 to say jade coin use:
 	say "     You throw the coin into the air, watching it tumble end over end a few times before you catch it again and slap it on the back of your hand:[line break]";
@@ -592,8 +592,8 @@ name	desc	weight	object
 elven male cum is a grab object.
 elven male cum is cum.
 elven male cum is infectious.
-The strain of elven male cum is "Elven Male".
-the usedesc of elven male cum is "[elven male cum use]";
+Strain of elven male cum is "Elven Male".
+Usedesc of elven male cum is "[elven male cum use]";
 
 to say elven male cum use:
 	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy fluid cum run over your tongue and down your throat. Tastes rich and almost... spicy? Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
@@ -647,8 +647,8 @@ SexuallyExperienced of Castien is true.
 TwistedCapacity of Castien is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Castien is false. [steriles can't knock people up]
 MainInfection of Castien is "Elven Male".
-The description of Castien is "[CastienDesc]".
-The conversation of Castien is { "Woof." }.
+Description of Castien is "[CastienDesc]".
+Conversation of Castien is { "Woof." }.
 
 to say CastienDesc:
 	say "...";

@@ -20,7 +20,7 @@ Lady Surrounded by Butterflies	"Lady Surrounded by Butterflies"
 
 Lady Surrounded by Butterflies is a situation.
 ResolveFunction of Lady Surrounded by Butterflies is "[ResolveEvent Lady Surrounded by Butterflies]".
-The sarea of Lady Surrounded by Butterflies is "Plains".
+Sarea of Lady Surrounded by Butterflies is "Plains".
 
 to say ResolveEvent Lady Surrounded by Butterflies:
 	say "     While making your way across the dry plains, you come across the mystical sight of a woman with long black hair being surrounded by butterflies. When her stray tresses begin to flutter through the air you lower your mouth in awe as you watch the woman stroke a tanned hand back behind her billowing hair. Then, before you can move some of the butterflies come over to playful dance alongside her hair. None of the insect-like creatures seem to be remotely interested in sexually trying to entice the woman into relieving herself from the black cowl she has wrapped around her figure. Instead the butterflies seem to be almost trying to make the woman smile as they circle around her, making her eyes track their movements as they move quickly back and forth before her face. This doesn't make the woman's lip rise from their downcast frowning, but her eyes do begin to twinkle slightly. The sight of several other butterflies coming over to aid their friends['] efforts makes you feel something at peace on the inside as you continue to watch the other for several minutes before blinking as you notice the woman turning to start walking away. Thankfully though the woman and her butterfly entourage are moving opposite of where you are. Gulping and feeling like a voyeur you make your way about your business as swiftly as you can. The sight of the woman will stay with you a long while after though.";
@@ -37,7 +37,7 @@ Dorms Part One	"Dorms Part One"
 
 The Dorms Part One is a situation.
 ResolveFunction of The Dorms Part One is "[ResolveEvent The Dorms Part One]".
-The sarea of The Dorms Part One is "Campus".
+Sarea of The Dorms Part One is "Campus".
 
 to say ResolveEvent The Dorms part one:
 	say "     Heading through the dormitory area of the college campus, you find yourself coming to a slow halt as you hear the rampant sounds of laughter coming from a slightly open doorway. Curious as to what the joke is you walk over to the slightly parted doorway and then push at the wood barrier carefully with your foot to get a better look inside. What you come to find is a small collective of half changed guys all piled around while playing video games together in front of a big screen TV. The dorm boys don't seem to be bothered by the fact that they are losing their humanity as the two collie boys nudging each another on the couch seem much more interested in whatever game their competing against. Back behind them two other students, a cougar and panther, respectfully, stand tall while pointing, jeering and laughing at their friend's antics. Seeing this you pull yourself away from your position by the door to walk away on down the hall. It feels good to know that some things will never change despite the epidemic going on.";
@@ -53,7 +53,7 @@ Dorms Part Two	"Dorms Part Two"
 
 The Dorms Part Two is a situation.
 ResolveFunction of The Dorms Part Two is "[ResolveEvent The Dorms Part Two]".
-The sarea of The Dorms Part Two is "Campus".
+Sarea of The Dorms Part Two is "Campus".
 
 to say ResolveEvent The Dorms Part Two:
 	say "     Moving throughout the dormitories, you stroll through the plush carpeted hallways until you hear the sounds of faint sobbing coming in through an open doorway making you stop in your tracks. Not really sure, but feeling as though you should go and have a look to see what the problem is you make your way over to the half open door and then stick your head inside of the room. What you see is a small puma girl being held in the arms of a larger Siberian tiger girl as the smaller feline cries and nuzzles her forming snout into her friend's shoulder. 'I-I can't go home like this, Carol!' The puma lifts her head to yowl up at the white tiger.";
@@ -75,7 +75,7 @@ Dorms Part Three	"Dorms Part Three"
 
 The Dorms Part Three is a situation.
 ResolveFunction of The Dorms Part Three is "[ResolveEvent The Dorms Part Three]".
-The sarea of The Dorms Part Three is "Campus".
+Sarea of The Dorms Part Three is "Campus".
 When play begins:
 	Add The Dorms Part Three to BadSpots of FurryList;
 	Add The Dorms Part Three to BadSpots of MaleList;
@@ -92,7 +92,7 @@ to say ResolveEvent The Dorms Part Three:
 		LineBreak;
 		project the Figure of HuskyAlpha_hard_icon;
 		say "     Deciding that being a bit of a letch won't be the worst thing you've ever done, you tentatively step inside of the bathing/bathroom room to see what's going on.";
-		let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
+		let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus]: ";
 		increase diceroll by bonus;
@@ -125,7 +125,7 @@ Training Room	"Training Room"
 
 Training Room is a situation.
 ResolveFunction of Training Room is "[ResolveEvent Training Room]".
-The sarea of Training Room is "Campus".
+Sarea of Training Room is "Campus".
 When play begins:
 	Add Training Room to BadSpots of FurryList;
 	Add Training Room to BadSpots of MaleList
@@ -177,7 +177,7 @@ Janitor's Closet	"Janitor's Closet"
 
 Janitor's Closet is a situation.
 ResolveFunction of Janitor's Closet is "[ResolveEvent Janitor's Closet]".
-The sarea of Janitor's Closet is "Campus".
+Sarea of Janitor's Closet is "Campus".
 When play begins:
 	Add Janitor's Closet to BadSpots of FurryList;
 	Add Janitor's Closet to BadSpots of MaleList
@@ -206,7 +206,7 @@ Teachers Lounge	"Teachers Lounge"
 
 Teachers Lounge is a situation.
 ResolveFunction of Teachers Lounge is "[ResolveEvent Teachers Lounge]".
-The sarea of Teachers Lounge is "Campus".
+Sarea of Teachers Lounge is "Campus".
 
 to say ResolveEvent Teachers Lounge:
 	say "     Hearing the voices of people talking, you find yourself turning to see a room marked Teacher's Lounge. Instantly your body freezes up as old memories of how you had been taught not to enter a room marked with this title grab at your heart. However, being the older and much more mature person that you are, you simply disregard these old feelings in favor of going into the room. Once you do, however, you find several eyes immediately locking with yours in confusion as the gathered group of staff turn to look at you. From what you can see, most of the people here have already transformed into more animal-like figures, though each and every one of them appear to be in complete control of themselves as no one is either naked or losing themselves in a rutting haze. You blink twice at seeing two giraffes sitting on a large plush sofa off to the side while drinking something slightly steaming, probably coffee. When a large and bored looking skunk with a red stripe going down his tail grunts to get your attention, you simply chuckle unsurely at the others and then nod to them before stepping back out of the room. Obviously the teachers were trying to get a small break in before having to go out to deal with their students. No sense in bothering them, right?";
@@ -222,7 +222,7 @@ Campus Rooftop	"Campus Rooftop"
 
 Campus Rooftop is a situation.
 ResolveFunction of Campus Rooftop is "[ResolveEvent Campus Rooftop]".
-The sarea of Campus Rooftop is "Campus".
+Sarea of Campus Rooftop is "Campus".
 
 to say ResolveEvent Campus Rooftop:
 	say "     Trudging up several flights of stairs, you find way up to the uppermost floor of the college's main building and then come upon a metal door marked [']Roof[']. Smirking at the incredulity of someone needing to actually put a sign up on the only door at the top of the highest floor you throw open the barrier and then step outside. What you see when you head onto the roof make you freeze as you spy several students, some dressed in the college's standard issue uniforms, and some not, busying themselves with this or that or the other. From what you can see there are two gorillas are busily making out over by the left side of the roof's fence. One monkey guy is talking to a smiling and chuckling rat girl. A group of four of leather jacket clad wolves is busy playing cards over by the right side of the roof - most of them are growling and baiting each other with snaps of their muzzles. And one lone female feline wearing a black miniskirt is smoking while looking up to the sky. From what you can see everyone is busy trying to either enjoy themselves or just trying to make the day pass by just a little quicker by ignoring the happenings around them. Deciding to do the same, since you are here and all, you unceremoniously walk over to an empty side of the roof and then grab the fence protecting you from stepping out over the edge of the building. Looking down at the world below you stare in awe at the large campus of the college as the wide open space stretching out for almost miles around you dominates your vision.";
@@ -258,7 +258,7 @@ DogAndPony Show	"DogAndPony Show"
 
 DogAndPony Show is a situation.
 ResolveFunction of DogAndPony Show is "[ResolveEvent DogAndPony Show]".
-The sarea of DogAndPony Show is "Campus".
+Sarea of DogAndPony Show is "Campus".
 When play begins:
 	Add DogAndPony Show to BadSpots of FurryList;
 	Add DogAndPony Show to BadSpots of MaleList;

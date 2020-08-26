@@ -12,7 +12,7 @@ State Fair	"State Fair"
 State Fair is a room. It is fasttravel.
 The earea of State Fair is "Fair".
 
-The description of State Fair is "     The entrance to the state fair. Colorful banners and signs plaster the large open area. Numerous food shops and game booths are set up near the large ticket booth. The fair entrance seems relatively deserted, and the ticketing area is wide open, allowing people to come and go as they please. While most of the shops and booths are closed up, one of the nearby game booths seems to still be open for business, with an automatic prize dispensing system set up. It looks like the prizes have been somewhat mixed up though. In contrast to the eerie emptiness of the fair entry, you can see some signs of activity and hear some fair noises coming from off to the west down the midway.".
+Description of State Fair is "     The entrance to the state fair. Colorful banners and signs plaster the large open area. Numerous food shops and game booths are set up near the large ticket booth. The fair entrance seems relatively deserted, and the ticketing area is wide open, allowing people to come and go as they please. While most of the shops and booths are closed up, one of the nearby game booths seems to still be open for business, with an automatic prize dispensing system set up. It looks like the prizes have been somewhat mixed up though. In contrast to the eerie emptiness of the fair entry, you can see some signs of activity and hear some fair noises coming from off to the west down the midway.".
 
 instead of sniffing State Fair:
 	say "The scents of popcorn and cotton candy and other treats fill the air. Beneath those enticing scents lie the strange scents of arousal, as if those musky scents are trying to hide beneath them. Among those scents, you catch the whiff of [one of]several felines[or]a rubbery scent[or]plush toys[or]male arousal[or]female heat[or]manly sweat[or]lupine cum[at random]";
@@ -29,8 +29,8 @@ object	name
 Boris the lion	"Boris the lion"
 
 Boris the lion is a man.
-The description of Boris the lion is "     Standing over by the side of the deserted ticket booth is a person dressed up as a very recognizable cartoon character that is always used to promote the fair. Even you recognize that the person is dressed up as the (semi)famous Boris the lion suit. Moving closer to the familiar face, you realize as he turns to look at you that the suit is far more realistic than any suit you have ever seen before. A closer look reveals that there are no loose areas of skin on the costume and no signs of seams anywhere. You come to the conclusion that whatever it may have once been, it isn't a suit anymore, it's Boris the lion!".
-The conversation of Boris is { "Welcome!" }.
+Description of Boris the lion is "     Standing over by the side of the deserted ticket booth is a person dressed up as a very recognizable cartoon character that is always used to promote the fair. Even you recognize that the person is dressed up as the (semi)famous Boris the lion suit. Moving closer to the familiar face, you realize as he turns to look at you that the suit is far more realistic than any suit you have ever seen before. A closer look reveals that there are no loose areas of skin on the costume and no signs of seams anywhere. You come to the conclusion that whatever it may have once been, it isn't a suit anymore, it's Boris the lion!".
+Conversation of Boris is { "Welcome!" }.
 Boris the lion is in State Fair.
 
 the scent of Boris is "Boris smells faintly of funfur and lions[if borisquest is 5]. The scent of his new maleness is strong around him[end if].".
@@ -162,7 +162,7 @@ object	name
 Carnival game	"Carnival game"
 
 Carnival game is a man.
-The description of Carnival game is "Standing open and apparently ready for business, one of the automated carnival games is set up here and seems to be working, although who knows what kind of prizes it will hand out in the current circumstances.".
+Description of Carnival game is "Standing open and apparently ready for business, one of the automated carnival games is set up here and seems to be working, although who knows what kind of prizes it will hand out in the current circumstances.".
 Carnival game is in State Fair.
 
 instead of sniffing Carnival game:
@@ -190,7 +190,7 @@ carry out gameplay:
 	else:
 		now lastgameplay is turns;
 		say "     Stepping up to the gaming booth, you hit the button and all sorts of targets pop up and go whizzing around the booth as happy music plays. Quickly you snatch up the fake gun attached to the booth and shoot for all your worth!";
-		let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
+		let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;

@@ -42,7 +42,7 @@ College Hopeful	"College Hopeful"
 
 College Hopeful is a situation.
 ResolveFunction of College Hopeful is "[ResolveEvent College Hopeful]".
-The sarea of College Hopeful is "Beach".
+Sarea of College Hopeful is "Beach".
 
 when play begins:
 	add College Hopeful to BadSpots of MaleList;
@@ -88,8 +88,8 @@ Otter Escort Mission	"Otter Escort Mission"
 
 Otter Escort Mission is a situation.
 ResolveFunction of Otter Escort Mission is "[ResolveEvent Otter Escort Mission]".
-The Prereq1 of Otter Escort Mission is College Hopeful.
-The sarea of Otter Escort Mission is "Outside"
+Prereq1 of Otter Escort Mission is College Hopeful.
+Sarea of Otter Escort Mission is "Outside"
 
 when play begins:
 	add Otter Escort Mission to BadSpots of MaleList;
@@ -171,7 +171,7 @@ Otter Class Sign Up	"Otter Class Sign Up"
 Otter Class Sign Up is a situation.
 ResolveFunction of Otter Class Sign Up is "[ResolveEvent Otter Class Sign Up]".
 Otter Class Sign Up is resolved.
-The sarea of Otter Class Sign Up is "Campus"
+Sarea of Otter Class Sign Up is "Campus"
 
 when play begins:
 	add Otter Class Sign Up to BadSpots of MaleList;
@@ -226,8 +226,8 @@ AnalVirgin of Wally is false.
 PenileVirgin of Wally is true.
 SexuallyExperienced of Wally is true.
 MainInfection of Wally is "".
-The description of Wally is "[WallyDesc]".
-The conversation of Wally is { "<This is nothing but a placeholder!>" }.
+Description of Wally is "[WallyDesc]".
+Conversation of Wally is { "<This is nothing but a placeholder!>" }.
 The scent of Wally is "     Wally gives off a scent of the salty sea which makes you think he occasionally returns to the beach for a swim.".
 
 to say WallyDesc:

@@ -42,8 +42,8 @@ Virgin of Ares is true.
 AnalVirgin of Ares is true.
 PenileVirgin of Ares is false.
 SexuallyExperienced of Ares is true.
-The description of Ares is "[AresDesc]".
-The conversation of Ares is { "Woof." }.
+Description of Ares is "[AresDesc]".
+Conversation of Ares is { "Woof." }.
 AresDannyEncounters is a number that varies.
 
 to say AresDesc:
@@ -723,14 +723,14 @@ Table of GameCharacterIDs (continued)
 object	name
 human dog	"human dog"
 
-human dog is a pet. human dog is a part of the player.
+human dog is a pet. human dog is a part of Player.
 NPCObject of human dog is Ares.
 understand "Ares" as human dog.
 printed name of human dog is "Ares".
-The description of human dog is "[AresPetDesc]".
-The weapon damage of human dog is 10.
+Description of human dog is "[AresPetDesc]".
+Weapon Damage of human dog is 10.
 The level of human dog is 1.
-The Dexterity of human dog is 15.
+Dexterity of human dog is 15.
 The summondesc of human dog is "     Calling out for Ares, the human dog comes to your side pretty quickly, obviously having followed you all this time not too far behind. With a satisfied bark, he takes position beside you and just a step ahead, ready to protect his bitch in any situation.".
 The assault of human dog is "[one of]Ares charges into combat, growling and snapping at your enemy.[or]Loud and insistent barking of your human dog frightens and distracts your enemy a moment - long enough for you to score a quick hit![or]Snarling, your human dog claws at your enemy with his hands, leaving shallow but painful gashes.[at random]".
 the fuckscene of human dog is "[SexWithAresPet]".

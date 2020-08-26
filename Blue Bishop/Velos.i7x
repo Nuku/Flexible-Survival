@@ -11,7 +11,7 @@ Strange Serpent	"Strange Serpent"
 
 Strange Serpent is a situation.
 ResolveFunction of Strange Serpent is "[ResolveEvent Strange Serpent]". The minscore of Strange Serpent is 200.
-The sarea of Strange Serpent is "Mall".
+Sarea of Strange Serpent is "Mall".
 
 to say ResolveEvent Strange Serpent:
 	if HP of Velos is 0 or HP of Velos is 1:
@@ -131,8 +131,8 @@ AnalVirgin of Velos is true.
 PenileVirgin of Velos is true.
 SexuallyExperienced of Velos is false.
 MainInfection of Velos is "".
-The description of Velos is "[velosdesc]".
-The conversation of Velos is { "Snipe." }.
+Description of Velos is "[velosdesc]".
+Conversation of Velos is { "Snipe." }.
 velospostmusings is a list of numbers that varies. velospostmusings is usually {}.
 vpostmusenum is a number that varies.
 velosfleepenalty is a truth state that varies. velosfleepenalty is usually false.
@@ -192,8 +192,8 @@ instead of fucking the Velos:
 Section 3 - Dragging him Around + Effects
 
 Every turn while HP of Velos > 2:
-	if Velos is not in the location of the player:		[traveling w/player]
-		now Velos is in the location of the player;
+	if Velos is not in the Location of Player:		[traveling w/player]
+		now Velos is in the Location of Player;
 		say "[one of][link]Velos[as]look Velos[end link] shifts around inside you slightly.[or]You arrive here with [link]Velos[as]look Velos[end link].[or][link]Velos[as]look Velos[end link], roused by you moving about, shifts his position.[or]Your travels elicit some shifting from [link]Velos[as]look Velos[end link].[or][link]Velos[as]look Velos[end link] twitches in response to your travels.[or]You're forced to contend with [link]Velos[as]look Velos[end link][']s subtle protests in lieu of your movement.[cycling]";
 
 

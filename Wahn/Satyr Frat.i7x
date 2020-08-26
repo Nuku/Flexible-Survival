@@ -60,7 +60,7 @@ to say Satyr Frat Party:
 				say "Invalid choice. Type [link]1[end link] to punch him out, [link]2[end link] to talk your way through this, or [link]3[end link] to have sex with him.";
 		if calcnumber is 1: [knockout]
 			LineBreak;
-			let bonus be (( the Strength of the player minus 10 ) divided by 2);
+			let bonus be (( Strength of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus] (Strength-Check vs 18)";
 			increase diceroll by bonus;
@@ -189,7 +189,7 @@ Let's Party	"Let's Party"
 Let's Party is a situation.
 ResolveFunction of Let's Party is "[ResolveEvent Let's Party]".
 Let's Party is inactive.
-The sarea of Let's Party is "Campus".
+Sarea of Let's Party is "Campus".
 when play begins:
 	add Let's Party to BadSpots of MaleList;       [frat boys]
 	add Let's Party to BadSpots of FemaleList;      [sorority girls]
@@ -303,7 +303,7 @@ to say SatyrFratSexMenu:
 to say SatyrFratSex1: [drinking]
 	say "     Snatching a freshly filled drink from the bar in front of Kerr, you shout out 'Phi Alpha Nu Forever!' and down the cup, drawing a loud cheer from everyone in the room. Now that you've got their attention, you go through a little spiel of praising their accomplishments (getting things mostly right by bringing up what you see on trophies and flags on the wall) - but also insinuating that they may or may not be able to hold their liquor. Before long, you've got three studly hunks of football players stepping forward to defend the frat's honor... and you guide them straight to the bar where a widely grinning Kerr is lining up shot glasses and cutting limes. As he fills one after another of them with golden-yellow Tequila, all four of the contestants take your places at the counter and get ready to drink.";
 	say "     Surrounded by an excited and active crowd, you look at each other, three human guys and you - then the chant of 'Drink! Drink! Drink!' raises among the students. That's your cue - putting some salt on your hand and licking it off, you throw back the first shot with a single move, then hammer the glass down and bite into a slice of lime. Fire-water trickles down your throat as the sour taste hits our mouth, making you twitch and grunt out loud as warmth spreads through your insides. Yeah, that's just like it! Rolling your head from side to side, you reach out to take the next glass. Shot after shot is filled and hammered back and soon, the first of your four is out of the race, swaying for a moment before onlookers have to catch him to keep him from collapsing on the floor. With that guy half-dragged and half-stumbling to a couch, it's down to three now.";
-	let bonus be (( the Stamina of the player minus 10 ) divided by 2);
+	let bonus be (( Stamina of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus] (Stamina-Check vs 18)";
 	increase diceroll by bonus;
@@ -584,9 +584,9 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "Pan's Special Reserve"	"A tiny bottle holding rich, red wine. Its contents come right from the party-god Pan's private wine-cellar. Quite a special and precious drink you got there."	1	Pan's Special Reserve
 
-Pan's Special Reserve is a grab object. Understand "wine" as Pan's Special Reserve. Pan's Special Reserve is infectious. The strain of Pan's Special Reserve is "Satyr".
+Pan's Special Reserve is a grab object. Understand "wine" as Pan's Special Reserve. Pan's Special Reserve is infectious. Strain of Pan's Special Reserve is "Satyr".
 
-The usedesc of Pan's Special Reserve is "[SpecialWineUsing]";
+Usedesc of Pan's Special Reserve is "[SpecialWineUsing]";
 
 to say SpecialWineUsing:
 	say "Taking out the small bottle of wine, you pull the cork keeping it sealed and let the precious liquid breathe, smelling its aroma while you wait. Something about it fills you with the feeling of boundless energy, like you could dance away all night and day, give yourself to endless revels and never stop enjoying yourself. With a last look at the rich, red wine, you take a mouthful and feel the sweet, heady liquid run down your throat - gasping as it overwhelms your taste-buds and you feel a comfortable warmth fill your body and mind. With another, and another gulp, you thirstily drink the rest right away, as the amazing wine's allure is too tempting to hold back even a little. Arousal flares up brightly in your mind and you [if Player is male]realize that you've become fully erect in barely an eye-blink[else if Player is female]realize that your pussy is very, very wet and swollen, ready to be fucked hard[else]feel your skin tingle for someone else's touch[end if]. It's about time you found someone to fuck!";
@@ -607,7 +607,7 @@ Divine Wine-Cellar	"Divine Wine-Cellar"
 Divine Wine-Cellar is a situation.
 ResolveFunction of Divine Wine-Cellar is "[ResolveEvent Divine Wine-Cellar]".
 Divine Wine-Cellar is inactive.
-The sarea of Divine Wine-Cellar is "Museum".
+Sarea of Divine Wine-Cellar is "Museum".
 
 when play begins:
 	add Divine Wine-Cellar to BadSpots of MaleList; [male satyr]

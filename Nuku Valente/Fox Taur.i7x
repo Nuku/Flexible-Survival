@@ -43,7 +43,7 @@ Coat color could be that of a gray fox, a red fox, or arctic fox.
 Human upper torso should have 1 normal set of breasts, default size F cup.
 Lower torso should have 4 sets of small breasts/teats (towards the front), and an udder (closer to the back), because it's my money and why the hell not? :P]
 
-A Fox Taur is a infection model. The description of a Fox Taur is "A strange creature that resembles a centaur, except it's covered in rusty red fur all over, and is made of fox, not horse. Her face is vulpine as well, with black coated ears that swivel towards sounds. She has two large breasts that bounce with each step. At a guess, you would put them around F cups, and you think they are nippleless at first, but catch a glimpse of the black flesh hiding under the fur. Under her lower body, things get more interesting. She has four seats of small breasts that run along the front of the lower, and a large udder." The TF table of a Fox Taur is Table Fox Taur. Fox Taur is neuter. the Fox Taur is not immune. the Fox Taur is horny. the Fox Taur is not benign. The belly of the Fox Taur is the womb.
+A Fox Taur is a infection model. Description of a Fox Taur is "A strange creature that resembles a centaur, except it's covered in rusty red fur all over, and is made of fox, not horse. Her face is vulpine as well, with black coated ears that swivel towards sounds. She has two large breasts that bounce with each step. At a guess, you would put them around F cups, and you think they are nippleless at first, but catch a glimpse of the black flesh hiding under the fur. Under her lower body, things get more interesting. She has four seats of small breasts that run along the front of the lower, and a large udder." The TF table of a Fox Taur is Table Fox Taur. Fox Taur is neuter. the Fox Taur is not immune. the Fox Taur is horny. the Fox Taur is not benign. The belly of the Fox Taur is the womb.
 
 The move rate of a Fox Taur is 2.
 The attack rate of a Fox Taur is 2.
@@ -53,9 +53,9 @@ The secondary attack description of a fox taur is "begins to pant and moan needf
 The primary attack description of a Fox Taur is "[one of]slides up against their victim, pressing their large breasts temptingly while whispering soft nothings in an ear, a hand brushing across[or]leaps at the target of their interest, tackling them to the ground and grinding her groin against[at random]".
 The TF description of a Fox Taur is "lets out a yell of ecstasy as they fall to the ground, writhing and convulsing. Their clothing shreds as their body contorts in strange ways, growing new skeletal and muscular structure. After about of minute of this, they finally rise back to their feet and shake their discarded tatters off as they begin their new life as a".
 
-[Strange Claw is a kind of thing. The description of Strange Claw is "A claw that looks like it's from an animal. Something seems unusual about it, but you can't place what.". The TF Table of Strange Claw is table Fox Taur. 1 Strange Claw is in town border. Strange Claw is an infectitem.]
+[Strange Claw is a kind of thing. Description of Strange Claw is "A claw that looks like it's from an animal. Something seems unusual about it, but you can't place what.". The TF Table of Strange Claw is table Fox Taur. 1 Strange Claw is in town border. Strange Claw is an infectitem.]
 
-A Milking Machine is a thing. "A curious looking milking machine hangs from the wall.". It is in Ranch Office. The description of milking machine is "It's a milking machine. Looks portable, with a milking tank built right at the end of it to carry around."
+A Milking Machine is a thing. "A curious looking milking machine hangs from the wall.". It is in Ranch Office. Description of milking machine is "It's a milking machine. Looks portable, with a milking tank built right at the end of it to carry around."
 
 Understand "use [thing]" as using.
 

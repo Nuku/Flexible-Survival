@@ -285,7 +285,7 @@ instead of sniffing mammoth jerky:
 say "The meat smells like... well, meat.";
 
 mammoth jerky is a grab object.
-the usedesc of mammoth jerky is "[mammoth jerky use]";
+Usedesc of mammoth jerky is "[mammoth jerky use]";
 
 to say mammoth jerky use:
 	say "Taking the mammoth jerky in hand, you start gnawing on it. It's pretty chewy - as dried meat is prone to be - and could use some seasoning or salt. Nevertheless, it has a certain primitive charm and you can't stop eating till the first strip is gone, then immediately start on the next. All in all you end up sated and feel like you just connected with your pre-historic ancestors.";

@@ -63,8 +63,8 @@ SexuallyExperienced of Cadmea is true.
 TwistedCapacity of Cadmea is true. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Cadmea is false. [steriles can't knock people up]
 MainInfection of Cadmea is "Kitsune".
-The description of Cadmea is "[CadmeaDesc]".
-The conversation of Cadmea is { "Interesting" }.
+Description of Cadmea is "[CadmeaDesc]".
+Conversation of Cadmea is { "Interesting" }.
 The scent of Cadmea is "     The sleek kitsune smells of an amalgamation of floral scents, none of which you can place as being recognizable.".
 
 to say CadmeaDesc:
@@ -93,7 +93,7 @@ ResolveFunction of Dual Leadership is "[ResolveEvent Dual Leadership]".
 Prereq1 of Dual Leadership is Den of the Pack.
 Prereq1Resolution of Dual Leadership is { 1 }.
 The level of Dual Leadership is 0.
-The sarea of Dual Leadership is "Nowhere".
+Sarea of Dual Leadership is "Nowhere".
 
 after going to Sanctuary Hotel Lobby while (Dual Leadership is active and Dual Leadership is not resolved and HP of Cadmea is 1 and a random chance of 1 in 2 succeeds):
 	DualLeadershipEvent;

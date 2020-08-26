@@ -14,7 +14,7 @@ Sunbathing Shark	"Sunbathing Shark"
 
 Sunbathing Shark is a situation.
 ResolveFunction of Sunbathing Shark is "[ResolveEvent Sunbathing Shark]".
-The sarea of Sunbathing Shark is "Beach".
+Sarea of Sunbathing Shark is "Beach".
 
 when play begins:
 	add Sunbathing Shark to BadSpots of FemaleList;

@@ -273,12 +273,12 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "tuft of chin fur"	"A soft piece of chinchilla fur."	1	tuft of chin fur
 
-tuft of chin fur is a grab object. tuft of chin fur is infectious. The strain of tuft of chin fur is "Chinchilla".
+tuft of chin fur is a grab object. tuft of chin fur is infectious. Strain of tuft of chin fur is "Chinchilla".
 
 instead of sniffing tuft of chin fur:
 	say "This soft fur smells a little dusty, but quite nice.";
 
-the usedesc of tuft of chin fur is "[tuft of chin fur use]";
+Usedesc of tuft of chin fur is "[tuft of chin fur use]";
 
 to say tuft of chin fur use:
 	choose row MonsterID from Table of Random Critters;

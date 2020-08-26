@@ -7,7 +7,7 @@ One flew into the Cuckoos Nest	"One flew into the Cuckoos Nest"
 
 One flew into the Cuckoos Nest is a situation.
 ResolveFunction of One flew into the Cuckoos Nest is "[ResolveEvent One flew into the Cuckoos Nest]".
-The sarea of One flew into the Cuckoos Nest is "Forest".
+Sarea of One flew into the Cuckoos Nest is "Forest".
 CuckooWatched is a number that varies.
 
 when play begins:
@@ -44,9 +44,9 @@ Two Crash into the Cuckoos Nest	"Two Crash into the Cuckoos Nest"
 
 Two Crash into the Cuckoos Nest is a situation.
 ResolveFunction of Two Crash into the Cuckoos Nest is "[ResolveEvent Two Crash into the Cuckoos Nest]".
-The Prereq1 of Two Crash into the Cuckoos Nest is One flew into the Cuckoos Nest.
+Prereq1 of Two Crash into the Cuckoos Nest is One flew into the Cuckoos Nest.
 The Prereq1Resolution of Two Crash into the Cuckoos Nest is { 1, 2 }.
-The sarea of Two crash into the Cuckoos Nest is "Forest".
+Sarea of Two crash into the Cuckoos Nest is "Forest".
 
 when play begins:
 	add Two crash into the Cuckoos Nest to badspots of HumorousList;
@@ -102,9 +102,9 @@ Avian Tent	"Avian Tent"
 
 Avian Tent is a situation.
 ResolveFunction of Avian Tent is "[ResolveEvent Avian Tent]".
-The Prereq1 of Avian Tent is Two Crash into the Cuckoos Nest.
+Prereq1 of Avian Tent is Two Crash into the Cuckoos Nest.
 The Prereq1Resolution of Avian Tent is { 1, 2 }.
-The sarea of Avian Tent is "Forest";
+Sarea of Avian Tent is "Forest";
 
 when play begins:
 	add Avian Tent to BadSpots of MaleList;
@@ -151,7 +151,7 @@ Sandwich Shop	"Sandwich Shop"
 
 Sandwich Shop is a situation.
 ResolveFunction of Sandwich Shop is "[ResolveEvent Sandwich Shop]".
-The sarea of Sandwich Shop is "Forest".
+Sarea of Sandwich Shop is "Forest".
 
 to say ResolveEvent Sandwich Shop:
 	now battleground is "void"; [prevents a random fight, as these are replacement random fights]
@@ -188,7 +188,7 @@ Thief's Punishment	"Thief's Punishment"
 
 Thief's Punishment is a situation.
 ResolveFunction of Thief's Punishment is "[ResolveEvent Thief's Punishment]".
-The sarea of Thief's Punishment is "Forest".
+Sarea of Thief's Punishment is "Forest".
 BridgetPowellEventVar is a number that varies. BridgetPowellEventVar is usually 0.
 
 when play begins:
@@ -234,9 +234,9 @@ Thief's Reformation	"Thief's Reformation"
 
 Thief's Reformation is a situation.
 ResolveFunction of Thief's Reformation is "[ResolveEvent Thief's Reformation]".
-The Prereq1 of Thief's Reformation is Thief's Punishment.
+Prereq1 of Thief's Reformation is Thief's Punishment.
 The Prereq1Resolution of Thief's Reformation is { 1, 2 }.
-The sarea of Thief's Reformation is "Forest".
+Sarea of Thief's Reformation is "Forest".
 
 when play begins:
 	add Thief's Reformation to BadSpots of MaleList;

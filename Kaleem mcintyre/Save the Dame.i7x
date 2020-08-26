@@ -11,7 +11,7 @@ Save the Dame	"Save the Dame"
 Save the Dame is a situation.
 ResolveFunction of Save the Dame is "[ResolveEvent Save the Dame]".
 Save the Dame is inactive.
-The sarea of Save the Dame is "High".
+Sarea of Save the Dame is "High".
 
 to say ResolveEvent Save the Dame:
 	If dam is 1 and BodyName of Player is "Chocolate Lab" and FaceName of Player is "Chocolate Lab":
@@ -34,7 +34,7 @@ to say ResolveEvent Save the Dame:
 		else if fightoutcome < 20: [player won]
 			say "     Having taken down the others, you watch as the dark chocolate canines back away from you in confusion as they all try to understand why you just assaulted them. However, despite not understanding your actions, they all lower their snouts and ears when you bark at them in warning. Seeing that none of them are likely to make a move towards you, or the human at your back, you turn to regard the woman, only to get the end of her bat pointed directly at your muzzle. 'I don't know what you're on about [italic type]Fido[roman type], but if you think you're going to try and get me to bend over for you, then you've got another thing coming.' The words coming out of the female's mouth are hard and unrelenting, but they are so laced with fear that when you sniff wetly at the air, you can literally taste how frightened she is.";
 			WaitLineBreak;
-			let bonus be (( the Charisma of the player minus 5 ) divided by 2);
+			let bonus be (( Charisma of Player minus 5 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 			increase diceroll by bonus;

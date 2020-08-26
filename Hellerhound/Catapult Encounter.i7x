@@ -59,7 +59,7 @@ to say ResolveEvent loaded catapult:
 			increase catadiff by 10;
 		if Player consents:
 			say "You begin to wriggle into the tangle of ropes.";
-			if a random number between one and catadiff > the dexterity of the player:[the catapult fires]
+			if a random number between one and catadiff > Dexterity of Player:[the catapult fires]
 				say "You accidentally bump a trigger rope, and the contraption begins to swing. You get out of there fast. [catapult fire]";
 			else:
 				say "You manage to get the resources without touching the ropes.";

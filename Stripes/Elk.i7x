@@ -309,7 +309,7 @@ name	desc	weight	object
 "elk antler"	"A chunk of an elk's antler, probably knocked off during a fight."	2	elk antler
 
 elk antler is a grab object.
-the usedesc of elk antler is "[elkantleruse]".
+Usedesc of elk antler is "[elkantleruse]".
 
 It is temporary.
 

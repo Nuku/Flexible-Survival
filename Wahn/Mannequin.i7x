@@ -219,7 +219,7 @@ name	desc	weight	object
 
 nullifying powder is a grab object.
 the scent of nullifying powder is "It has a very obvious, chalky scent about it.".
-The usedesc of nullifying powder is "[nullpowderuse]";
+Usedesc of nullifying powder is "[nullpowderuse]";
 
 to say nullpowderuse:
 	say "     [one of]Upon inspection, it's not particularly infectious and most certainly inedible[or]You briefly inspect the powder[stopping]. You [one of]deduce[or]recall[stopping] that you can apply it to certain parts of your anatomy to reduce their size or remove them outright.";

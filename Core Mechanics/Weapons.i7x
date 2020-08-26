@@ -16,10 +16,10 @@ name	desc	weight	object
 
 abyssal remnant is an armament. It is not temporary.
 It has a weapon "[one of]your broken hilt[or]your broken sword[or]your excuse of a weapon[or]your shattered half-blade[at random]".
-The weapon damage of abyssal remnant is 5.
-The weapon type of abyssal remnant is "Melee".
-The objsize of abyssal remnant is 3.
-The scent of the abyssal remnant is "The broken hilt oozes off an overwhelming, and even unthinkable, scent of absolutely... nothing. It is as odorless as the Void, where it came from. It is very similar to the null essences, perhaps they are related?".
+Weapon Damage of abyssal remnant is 5.
+Weapon Type of abyssal remnant is "Melee".
+Objsize of abyssal remnant is 3.
+Scent of the abyssal remnant is "The broken hilt oozes off an overwhelming, and even unthinkable, scent of absolutely... nothing. It is as odorless as the Void, where it came from. It is very similar to the null essences, perhaps they are related?".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -27,11 +27,11 @@ name	desc	weight	object
 
 bonesaw is an armament. It is not temporary.
 It has a weapon "[one of]the bonesaw[or]your bonesaw[or]your medical blade[or]the stainless steel saw[at random]".
-The weapon damage of bonesaw is 7.
-The weapon type of bonesaw is "Melee".
-The objsize of bonesaw is 3.
-The hitbonus of bonesaw is 0. [nothing special]
-the scent of the bonesaw is "The bonesaw smells faintly of antiseptic and blood.".
+Weapon Damage of bonesaw is 7.
+Weapon Type of bonesaw is "Melee".
+Objsize of bonesaw is 3.
+Hitbonus of bonesaw is 0. [nothing special]
+Scent of the bonesaw is "The bonesaw smells faintly of antiseptic and blood.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -40,11 +40,11 @@ name	desc	weight	object
 pocketknife is an armament. It is not temporary.
 understand "knife" as pocketknife.
 It has a weapon "[one of]your large knife[or]your blade[or]your trusty pocket knife[or]flashing steel[at random]".
-The weapon damage of pocketknife is 5.
-The weapon type of pocketknife is "Melee".
-The objsize of pocketknife is 3.
-The hitbonus of pocketknife is -1. [shitty weapon]
-The scent of pocketknife is "The pocketknife smells like metal.".
+Weapon Damage of pocketknife is 5.
+Weapon Type of pocketknife is "Melee".
+Objsize of pocketknife is 3.
+Hitbonus of pocketknife is -1. [shitty weapon]
+Scent of pocketknife is "The pocketknife smells like metal.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -52,11 +52,11 @@ name	desc	weight	object
 
 scalpel is an armament. It is not temporary.
 It has a weapon "[one of]your small scalpel[or]your blade[at random]".
-The weapon damage of scalpel is 6.
-The weapon type of scalpel is "Melee".
-The objsize of scalpel is 2.
-The hitbonus of scalpel is 0. [nothing special]
-The scent of scalpel is "The scalpel smells like metal.".
+Weapon Damage of scalpel is 6.
+Weapon Type of scalpel is "Melee".
+Objsize of scalpel is 2.
+Hitbonus of scalpel is 0. [nothing special]
+Scent of scalpel is "The scalpel smells like metal.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -64,11 +64,11 @@ name	desc	weight	object
 
 sharp screw is an armament. It is not temporary.
 It has a weapon "[one of]the sharp screw[or]the sharpened screw[or]the weaponized screw[at random]".
-The weapon damage of sharp screw is 6.
-The weapon type of sharp screw is "Melee".
-The objsize of sharp screw is 1.
-The hitbonus of sharp screw is -1. [not a weapon]
-The scent of sharp screw is "The screw smells of metal, with a hint of sawdust."
+Weapon Damage of sharp screw is 6.
+Weapon Type of sharp screw is "Melee".
+Objsize of sharp screw is 1.
+Hitbonus of sharp screw is -1. [not a weapon]
+Scent of sharp screw is "The screw smells of metal, with a hint of sawdust."
 
 Section 2 - Moderate Blades
 
@@ -78,11 +78,11 @@ name	desc	weight	object
 
 cleaver is an armament. It is not temporary.
 It has a weapon "[one of]your cleaver[or]your kitchen knife[or]your cleaver, screaming 'Oneida!' as you swing it[or]your large knife[or]the large blade[or]your cleaver with a heavy chop[at random]".
-The weapon damage of cleaver is 7.
-The weapon type of cleaver is "Melee".
-The objsize of cleaver is 3.
-The hitbonus of cleaver is 0. [nothing special]
-The scent of the cleaver is "The heavy blade smells faintly of blood."
+Weapon Damage of cleaver is 7.
+Weapon Type of cleaver is "Melee".
+Objsize of cleaver is 3.
+Hitbonus of cleaver is 0. [nothing special]
+Scent of the cleaver is "The heavy blade smells faintly of blood."
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -90,11 +90,11 @@ name	desc	weight	object
 
 combat knife is an armament. It is not temporary.
 It has a weapon "[one of]your large knife[or]your combat knife[or]the large blade[or]your combat knife with a strong thrust[or]your large blade with a quick slash[at random]".
-The weapon damage of combat knife is 7.
-The weapon type of combat knife is "Melee".
-The objsize of combat knife is 3.
-The hitbonus of combat knife is 0. [nothing special]
-The scent of the combat knife is "The knife smells like metal".
+Weapon Damage of combat knife is 7.
+Weapon Type of combat knife is "Melee".
+Objsize of combat knife is 3.
+Hitbonus of combat knife is 0. [nothing special]
+Scent of the combat knife is "The knife smells like metal".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -102,11 +102,11 @@ name	desc	weight	object
 
 silver knife is an armament. It is not temporary.
 It has a weapon "[one of]the silver knife[or]the old knife[or]the curved knife[or]the silver dagger[at random]".
-The weapon damage of silver knife is 6.
-The weapon type of silver knife is "Melee".
-The objsize of silver knife is 3.
-The hitbonus of silver knife is 1. [magic]
-The scent of the silver knife is "While the silver knife has no strong scent, something about it makes you uneasy whenever you bring it close.".
+Weapon Damage of silver knife is 6.
+Weapon Type of silver knife is "Melee".
+Objsize of silver knife is 3.
+Hitbonus of silver knife is 1. [magic]
+Scent of the silver knife is "While the silver knife has no strong scent, something about it makes you uneasy whenever you bring it close.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -114,11 +114,11 @@ name	desc	weight	object
 
 elven knife is an armament. It is not temporary.
 It has a weapon "[one of]the elven knife[or]the silvery knife[or]the sharp blade[or]the straight blade[at random]".
-The weapon damage of elven knife is 7.
-The weapon type of elven knife is "Melee".
-The objsize of elven knife is 3.
-The hitbonus of elven knife is 1. [magic]
-The scent of the elven knife is "The knife smells pretty nice. The handle must be some sort of sandalwood.".
+Weapon Damage of elven knife is 7.
+Weapon Type of elven knife is "Melee".
+Objsize of elven knife is 3.
+Hitbonus of elven knife is 1. [magic]
+Scent of the elven knife is "The knife smells pretty nice. The handle must be some sort of sandalwood.".
 
 Section 3 - Large Blades
 
@@ -129,11 +129,11 @@ name	desc	weight	object
 
 abyssal edge is an armament. It is not temporary.
 It has a weapon "[one of]your dark sword[or]your void blade[or]your respectable black sword[or]your Abyssal Edge[at random]".
-The weapon damage of abyssal edge is 19.
-The weapon type of abyssal edge is "Melee".
-The objsize of abyssal edge is 3.
-The hitbonus of abyssal edge is 1. [magic]
-The scent of the abyssal edge is "This powerful sword still smells like absolutely nothing, but it does give you a sense of power. You have to be careful not to cut your nose trying to sniff it, though. It would be pointless, as well.".
+Weapon Damage of abyssal edge is 19.
+Weapon Type of abyssal edge is "Melee".
+Objsize of abyssal edge is 3.
+Hitbonus of abyssal edge is 1. [magic]
+Scent of the abyssal edge is "This powerful sword still smells like absolutely nothing, but it does give you a sense of power. You have to be careful not to cut your nose trying to sniff it, though. It would be pointless, as well.".
 
 a postimport rule: [bugfixing rules for players that import savegames]
 	if Resolution of AbyssEdgeEnchantLevel > 19:
@@ -145,11 +145,11 @@ name	desc	weight	object
 
 ancient blade is an armament. It is not temporary.
 It has a weapon "[one of]the ancient blade[or]the Egyptian blade[or]the warrior's blade[at random]".
-The weapon damage of ancient blade is 15.
-The weapon type of ancient blade is "Melee".
-The objsize of ancient blade is 3.
-The hitbonus of ancient blade is 1. [magic]
-the scent of ancient blade is "The weapon smells of forged metal, with a hint of dirt and dust.".
+Weapon Damage of ancient blade is 15.
+Weapon Type of ancient blade is "Melee".
+Objsize of ancient blade is 3.
+Hitbonus of ancient blade is 1. [magic]
+Scent of ancient blade is "The weapon smells of forged metal, with a hint of dirt and dust.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -157,11 +157,11 @@ name	desc	weight	object
 
 cavalry saber is an armament. It is not temporary.
 It has a weapon "shining steel blade".
-The weapon damage of cavalry saber is 14.
-The weapon type of cavalry saber is "Melee".
-The objsize of cavalry saber is 3.
-The hitbonus of cavalry saber is 0. [nothing special]
-The scent of the cavalry saber is "The blade smells of metal polish. It's an antique, after all.".
+Weapon Damage of cavalry saber is 14.
+Weapon Type of cavalry saber is "Melee".
+Objsize of cavalry saber is 3.
+Hitbonus of cavalry saber is 0. [nothing special]
+Scent of the cavalry saber is "The blade smells of metal polish. It's an antique, after all.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -169,13 +169,13 @@ name	desc	weight	object
 
 infected sword is an armament. It is not temporary.
 It has a weapon "[one of]your cloudy sword[or]your sword[or]your infected sword[or]your glowing sword[at random][hydraharming]".
-The weapon damage of infected sword is 16.
-The weapon type of infected sword is "Melee".
-The objsize of infected sword is 4.
-The hitbonus of infected sword is 1. [magic]
-The purified of infected sword is "Nothing".
+Weapon Damage of infected sword is 16.
+Weapon Type of infected sword is "Melee".
+Objsize of infected sword is 4.
+Hitbonus of infected sword is 1. [magic]
+Purified of infected sword is "Nothing".
 
-the scent of infected sword is "The infected sword smells of a myriad of musky scents, all shifting and changing. You can never seem to identify a scent before a new one appears.".
+Scent of infected sword is "The infected sword smells of a myriad of musky scents, all shifting and changing. You can never seem to identify a scent before a new one appears.".
 
 instead of purifying an infected sword:
 	say "That doesn't even fit in the microwave. Also, putting metal in one is a really bad idea.";
@@ -187,11 +187,11 @@ name	desc	weight	object
 
 viking sword is an armament. It is not temporary.
 It has a weapon "shining steel blade".
-The weapon damage of viking sword is 14.
-The weapon type of viking sword is "Melee".
-The objsize of viking sword is 3.
-The hitbonus of viking sword is 1. [mastercraft]
-The scent of the viking sword is "The blade smells of nothing but metal. Sonya always kept it clean without fail, and you've done the same since you got it.".
+Weapon Damage of viking sword is 14.
+Weapon Type of viking sword is "Melee".
+Objsize of viking sword is 3.
+Hitbonus of viking sword is 1. [mastercraft]
+Scent of the viking sword is "The blade smells of nothing but metal. Sonya always kept it clean without fail, and you've done the same since you got it.".
 
 
 Book 2 - Impact Weapons
@@ -204,11 +204,11 @@ name	desc	weight	object
 
 belaying pin is an armament. It is not temporary.
 It has a weapon "[one of]your belaying pin[or]your stout sailcloth securing system[or]your improvised club[or]your hefty pin[or]your rescued dildo-cum-club[or]your salty beatin['] stick[or]your cock-themed skull-cracker[at random]".
-The weapon damage of belaying pin is 5.
-The weapon type of belaying pin is "Melee".
-The objsize of riding crop is 3.
-The hitbonus of belaying pin is 0. [nothing special]
-The scent of the belaying pin is "The heavy club smells of rum, sodomy, and the lash.".
+Weapon Damage of belaying pin is 5.
+Weapon Type of belaying pin is "Melee".
+Objsize of riding crop is 3.
+Hitbonus of belaying pin is 0. [nothing special]
+Scent of the belaying pin is "The heavy club smells of rum, sodomy, and the lash.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -216,11 +216,11 @@ name	desc	weight	object
 
 claw hammer is an armament. It is not temporary.
 It has a weapon "[one of]your hammer[or]your claw hammer[or]your carpenter's hammer[or]the hammer[or]the claw hammer[at random]".
-The weapon damage of claw hammer is 6.
-The weapon type of claw hammer is "Melee".
-The objsize of claw hammer is 3.
-The hitbonus of claw hammer is 0. [nothing special]
-The scent of the claw hammer is "The sturdy hammer smells of metal and sweat.".
+Weapon Damage of claw hammer is 6.
+Weapon Type of claw hammer is "Melee".
+Objsize of claw hammer is 3.
+Hitbonus of claw hammer is 0. [nothing special]
+Scent of the claw hammer is "The sturdy hammer smells of metal and sweat.".
 
 
 Table of Game Objects (continued)
@@ -229,11 +229,11 @@ name	desc	weight	object
 
 riding crop is an armament. It is not temporary.
 It has a weapon "[one of]your riding crop[or]your crop[or]your leather crop[or]your disciplinary tool[at random]".
-The weapon damage of riding crop is 5.
-The weapon type of riding crop is "Melee".
-The objsize of riding crop is 3.
-The hitbonus of riding crop is 0. [nothing special]
-The scent of the riding crop is "The riding crop smells of leather and discipline.".
+Weapon Damage of riding crop is 5.
+Weapon Type of riding crop is "Melee".
+Objsize of riding crop is 3.
+Hitbonus of riding crop is 0. [nothing special]
+Scent of the riding crop is "The riding crop smells of leather and discipline.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -241,11 +241,11 @@ name	desc	weight	object
 
 tire iron is an armament. It is not temporary.
 It has a weapon "[one of]your tire iron[or]the tire iron[or]your metal tire iron[at random]".
-The weapon damage of tire iron is 6.
-The weapon type of tire iron is "Melee".
-The objsize of tire iron is 3.
-The hitbonus of tire iron is 0. [nothing special]
-The scent of the tire iron is "The tire iron smells of metal and motor oil.".
+Weapon Damage of tire iron is 6.
+Weapon Type of tire iron is "Melee".
+Objsize of tire iron is 3.
+Hitbonus of tire iron is 0. [nothing special]
+Scent of the tire iron is "The tire iron smells of metal and motor oil.".
 
 Section 2 - Moderate
 
@@ -255,11 +255,11 @@ name	desc	weight	object
 
 bo staff is an armament. It is not temporary.
 It has a weapon "[one of]your bo staff[or]your fighting staff[or]your staff[or]your bo staff with a hard whack[or]the long pole[or]your staff with a fast jab[at random]".
-The weapon damage of bo staff is 7.
-The weapon type of bo staff is "Melee".
-The objsize of bo staff is 3.
-The hitbonus of bo staff is 0. [nothing special]
-The scent of bo staff is "The staff smells like wood.".
+Weapon Damage of bo staff is 7.
+Weapon Type of bo staff is "Melee".
+Objsize of bo staff is 3.
+Hitbonus of bo staff is 0. [nothing special]
+Scent of bo staff is "The staff smells like wood.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -267,11 +267,11 @@ name	desc	weight	object
 
 chair is an armament. It is not temporary.
 It has a weapon "[one of]a folding chair[or]your improvised weapon[or]that move you saw on WWE[or]a metal chair to the eyes[at random]".
-The weapon damage of chair is 6.
-The weapon type of chair is "Melee".
-The objsize of chair is 4.
-The hitbonus of chair is -1. [not a weapon]
-The scent of chair is "The metal chair smells of metal and aging plastic.".
+Weapon Damage of chair is 6.
+Weapon Type of chair is "Melee".
+Objsize of chair is 4.
+Hitbonus of chair is -1. [not a weapon]
+Scent of chair is "The metal chair smells of metal and aging plastic.".
 
 understand "seat" as chair.
 
@@ -281,11 +281,11 @@ name	desc	weight	object
 
 crowbar is an armament. It is not temporary.
 It has a weapon "your crowbar".
-The weapon damage of crowbar is 7.
-The weapon type of crowbar is "Melee".
-The objsize of crowbar is 3.
-The hitbonus of crowbar is 0. [nothing special]
-The scent of crowbar is "The crowbar smells of metal and motor oil.".
+Weapon Damage of crowbar is 7.
+Weapon Type of crowbar is "Melee".
+Objsize of crowbar is 3.
+Hitbonus of crowbar is 0. [nothing special]
+Scent of crowbar is "The crowbar smells of metal and motor oil.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -293,11 +293,11 @@ name	desc	weight	object
 
 dildo club is an armament. It is not temporary.
 It has a weapon "[one of]your phallic club[or]your purple latex club[or]your dildo club with a resounding 'Wubba-Wubba-Wubba-Thwack!' sound[or]the three-foot purple schlong[or]the floppy dildo club[or]your oversized dildo[at random]".
-The weapon damage of dildo club is 5.
-The weapon type of dildo club is "Melee".
-The objsize of dildo club is 3.
-The hitbonus of dildo club is 0. [nothing special]
-The scent of the dildo club is "The sex toy club smells of latex and your humiliated foes."
+Weapon Damage of dildo club is 5.
+Weapon Type of dildo club is "Melee".
+Objsize of dildo club is 3.
+Hitbonus of dildo club is 0. [nothing special]
+Scent of the dildo club is "The sex toy club smells of latex and your humiliated foes."
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -305,11 +305,11 @@ name	desc	weight	object
 
 dirty whip is an armament. It is not temporary.
 It has a weapon "[one of]your whip[or]your cum-soaked whip[or]your messy whip[or]white streak[at random]".
-The weapon damage of dirty whip is 9.
-The weapon type of dirty whip is "Melee".
-The objsize of dirty whip is 3.
-The hitbonus of dirty whip is -1. [slick and goopy]
-The scent of dirty whip is "The sticky whip smells of equine cum.".
+Weapon Damage of dirty whip is 9.
+Weapon Type of dirty whip is "Melee".
+Objsize of dirty whip is 3.
+Hitbonus of dirty whip is -1. [slick and goopy]
+Scent of dirty whip is "The sticky whip smells of equine cum.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -317,11 +317,11 @@ name	desc	weight	object
 
 golf club is an armament. It is not temporary.
 It has a weapon "[one of]your golf club[or]your 9 Iron[or]your golf club, getting a bit of a slice on that swing[or]your golf club, calling out FORE! and making a hard swing[at random]".
-The weapon damage of golf club is 5.
-The weapon type of golf club is "Melee".
-The objsize of golf club is 3.
-The hitbonus of golf club is 0. [nothing special]
-The scent of golf club is "The golf club smells faintly of grass, bad slices and bashed heads.".
+Weapon Damage of golf club is 5.
+Weapon Type of golf club is "Melee".
+Objsize of golf club is 3.
+Hitbonus of golf club is 0. [nothing special]
+Scent of golf club is "The golf club smells faintly of grass, bad slices and bashed heads.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -329,11 +329,11 @@ name	desc	weight	object
 
 horse whip is an armament. It is not temporary.
 It has a weapon "[one of]your whip[or]your studded whip[or]your metallic whip[or]brown streak[at random]".
-The weapon damage of horse whip is 8.
-The weapon type of horse whip is "Melee".
-The objsize of horse whip is 3.
-The hitbonus of horse whip is 0. [nothing special]
-The scent of horse whip is "The horse whip smells of leather and oils.".
+Weapon Damage of horse whip is 8.
+Weapon Type of horse whip is "Melee".
+Objsize of horse whip is 3.
+Hitbonus of horse whip is 0. [nothing special]
+Scent of horse whip is "The horse whip smells of leather and oils.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -341,11 +341,11 @@ name	desc	weight	object
 
 iron pipe is an armament. It is not temporary.
 It has a weapon "your iron pipe".
-The weapon damage of iron pipe is 5.
-The weapon type of iron pipe is "Melee".
-The objsize of iron pipe is 3.
-The hitbonus of iron pipe is -1. [not a weapon]
-The scent of iron pipe is "The iron pipe smells like old rust and whatever that hard, dry gunk inside was.".
+Weapon Damage of iron pipe is 5.
+Weapon Type of iron pipe is "Melee".
+Objsize of iron pipe is 3.
+Hitbonus of iron pipe is -1. [not a weapon]
+Scent of iron pipe is "The iron pipe smells like old rust and whatever that hard, dry gunk inside was.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -353,11 +353,11 @@ name	desc	weight	object
 
 metal baseball bat is an armament. It is not temporary.
 It has a weapon "dull steel".
-The weapon damage of metal baseball bat is 8.
-The weapon type of metal baseball bat is "Melee".
-The objsize of metal baseball bat is 3.
-The hitbonus of metal baseball bat is 0. [nothing special]
-The scent of metal baseball bat is  "The bat smells of metal and traces of smoke.".
+Weapon Damage of metal baseball bat is 8.
+Weapon Type of metal baseball bat is "Melee".
+Objsize of metal baseball bat is 3.
+Hitbonus of metal baseball bat is 0. [nothing special]
+Scent of metal baseball bat is  "The bat smells of metal and traces of smoke.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -365,11 +365,11 @@ name	desc	weight	object
 
 nightstick is an armament. It is not temporary.
 It has a weapon "[one of]your nightstick[or]your t-baton[or]your side-handle baton[or]your police nightstick[or]your black nightstick[at random]".
-The weapon damage of nightstick is 6.
-The weapon type of nightstick is "Melee".
-The objsize of nightstick is 3.
-The hitbonus of nightstick is 0. [nothing special]
-The scent of nightstick is "     The nightstick smells faintly of violent authority.".
+Weapon Damage of nightstick is 6.
+Weapon Type of nightstick is "Melee".
+Objsize of nightstick is 3.
+Hitbonus of nightstick is 0. [nothing special]
+Scent of nightstick is "     The nightstick smells faintly of violent authority.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -379,11 +379,11 @@ wukongStaff is an armament. It is not temporary.
 understand "Wukong's staff" as wukongStaff.
 understand "staff" as wukongStaff.
 It has a weapon "[one of]your bo staff[or]your fighting staff[or]your staff[or]your bo staff with a hard whack[or]the long pole[or]your staff with a fast jab[at random]".
-The weapon damage of wukongStaff is 18.
-The weapon type of wukongStaff is "Melee".
-The objsize of wukongStaff is 3.
-The hitbonus of wukongStaff is 1. [magic]
-The scent of wukongStaff is "The staff smells fainly of cedar.".
+Weapon Damage of wukongStaff is 18.
+Weapon Type of wukongStaff is "Melee".
+Objsize of wukongStaff is 3.
+Hitbonus of wukongStaff is 1. [magic]
+Scent of wukongStaff is "The staff smells fainly of cedar.".
 
 Section 3 - Large
 
@@ -393,11 +393,11 @@ name	desc	weight	object
 
 awesome bat is an armament. It is not temporary.
 It has a weapon "[one of]awesome bat, a double rainbow appears for a brief second,[awesome bat proc][or]bat of awesomeness[or]indestructible length of awesome-wood[at random]".
-The weapon damage of awesome bat is 6.
-The weapon type of awesome bat is "Melee".
-The objsize of awesome bat is 4.
-The hitbonus of awesome bat is 0. [nothing special]
-The scent of awesome bat is "The powerful bat smells faintly of wood and the strange fruits that grew on that giant tree.".
+Weapon Damage of awesome bat is 6.
+Weapon Type of awesome bat is "Melee".
+Objsize of awesome bat is 4.
+Hitbonus of awesome bat is 0. [nothing special]
+Scent of awesome bat is "The powerful bat smells faintly of wood and the strange fruits that grew on that giant tree.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -405,11 +405,11 @@ name	desc	weight	object
 
 Broke-Ass Hoe is an armament. It is not temporary.
 It has a weapon "your Broke-Ass Hoe".
-The weapon damage of Broke-Ass Hoe is 5.
-The weapon type of Broke-Ass Hoe is "Melee".
-The objsize of Broke-Ass Hoe is 4.
-The hitbonus of Broke-Ass Hoe is -1. [broken]
-The scent of Broke-Ass Hoe is "Do you normally make a habit of sniffing your hoes?".
+Weapon Damage of Broke-Ass Hoe is 5.
+Weapon Type of Broke-Ass Hoe is "Melee".
+Objsize of Broke-Ass Hoe is 4.
+Hitbonus of Broke-Ass Hoe is -1. [broken]
+Scent of Broke-Ass Hoe is "Do you normally make a habit of sniffing your hoes?".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -417,11 +417,11 @@ name	desc	weight	object
 
 flotsam club is an armament. It is not temporary.
 It has a weapon "[one of]your giant club[or]your rough club[or]your flotsam log[or]your length of sea hardened wood[at random]".
-The weapon damage of flotsam club is 8.
-The weapon type of flotsam club is "Melee".
-The objsize of flotsam club is 5.
-The hitbonus of flotsam club is -1. [not a weapon]
-The scent of flotsam club is "The large club smells of the sea and those giant trees.".
+Weapon Damage of flotsam club is 8.
+Weapon Type of flotsam club is "Melee".
+Objsize of flotsam club is 5.
+Hitbonus of flotsam club is -1. [not a weapon]
+Scent of flotsam club is "The large club smells of the sea and those giant trees.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -429,11 +429,11 @@ name	desc	weight	object
 
 golden greathammer is an armament. It is not temporary.
 It has a weapon "[one of]your golden greathammer[or]your heavy golden greathammer[or]your heavy weapon[or]your beautiful golden greathammer[at random]".
-The weapon damage of golden greathammer is 14.
-The weapon type of golden greathammer is "Melee".
-The objsize of golden greathammer is 4.
-The hitbonus of golden greathammer is -1. [two-handed]
-The scent of golden greathammer is "The beautiful golden greathammer smells of old, due to its age, and has an obvious trace of metallic scent.".
+Weapon Damage of golden greathammer is 14.
+Weapon Type of golden greathammer is "Melee".
+Objsize of golden greathammer is 4.
+Hitbonus of golden greathammer is -1. [two-handed]
+Scent of golden greathammer is "The beautiful golden greathammer smells of old, due to its age, and has an obvious trace of metallic scent.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -441,11 +441,11 @@ name	desc	weight	object
 
 mallet is an armament. It is not temporary.
 It has a weapon "your mallet".
-The weapon damage of mallet is 10.
-The weapon type of mallet is "Melee".
-The objsize of mallet is 3.
-The hitbonus of mallet is 0. [nothing special]
-The scent of mallet is "The mallet smells faintly of the junkyard where you found it.".
+Weapon Damage of mallet is 10.
+Weapon Type of mallet is "Melee".
+Objsize of mallet is 3.
+Hitbonus of mallet is 0. [nothing special]
+Scent of mallet is "The mallet smells faintly of the junkyard where you found it.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -453,11 +453,11 @@ name	desc	weight	object
 
 medium sledge is an armament. It is not temporary.
 It has a weapon "[one of]your sledgehammer[or]your well balanced sledgehammer[or]your heavy weapon[at random]".
-The weapon damage of medium sledge is 12.
-The weapon type of medium sledge is "Melee".
-The objsize of medium sledge is 4.
-The hitbonus of medium sledge is -1. [heavy, two handed]
-The scent of medium sledge is "The large sledge smells of metal and broken concrete, plaster and heads.".
+Weapon Damage of medium sledge is 12.
+Weapon Type of medium sledge is "Melee".
+Objsize of medium sledge is 4.
+Hitbonus of medium sledge is -1. [heavy, two handed]
+Scent of medium sledge is "The large sledge smells of metal and broken concrete, plaster and heads.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -465,11 +465,11 @@ name	desc	weight	object
 
 spiked club is an armament. It is not temporary.
 It has a weapon "[one of]your spiked club[or]your pointed club[or]your improvised weapon[or]your large club[or]your spiked club with a heavy thump[or]your nail board[or]your spiked club, driving one of the nails into them[at random]".
-The weapon damage of spiked club is 6.
-The weapon type of spiked club is "Melee".
-The objsize of spiked club is 4.
-The hitbonus of spiked club is -1. [not a weapon]
-The scent of the spiked club is "The heavy club smells of blood, sweat and anger... so much anger.".
+Weapon Damage of spiked club is 6.
+Weapon Type of spiked club is "Melee".
+Objsize of spiked club is 4.
+Hitbonus of spiked club is -1. [not a weapon]
+Scent of the spiked club is "The heavy club smells of blood, sweat and anger... so much anger.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -477,11 +477,11 @@ name	desc	weight	object
 
 zephyr bashing riot shield is an armament. It is not temporary.
 It has a weapon "[one of]your metal shield[or]your suppressive shield[or]your black shield[at random]".
-The weapon damage of zephyr bashing riot shield is 8.
-The weapon type of zephyr bashing riot shield is "Melee".
-The objsize of zephyr bashing riot shield is 4.
-The hitbonus of zephyr bashing riot shield is 0. [nothing special]
-the scent of the zephyr bashing riot shield is "The zephyr protective riot shield smells faintly of suppressive authority.".
+Weapon Damage of zephyr bashing riot shield is 8.
+Weapon Type of zephyr bashing riot shield is "Melee".
+Objsize of zephyr bashing riot shield is 4.
+Hitbonus of zephyr bashing riot shield is 0. [nothing special]
+Scent of the zephyr bashing riot shield is "The zephyr protective riot shield smells faintly of suppressive authority.".
 
 to say RiotShieldAttackDesc:
 	say "     A black shield that zephyr's riot security use to suppress threats. This one is yours, and you've chosen to use it for bashing people out of the way. You might [link]change your mind[as]riotshieldProtectMode[end link] though, and direct your shield to more defensive purposes instead.";
@@ -511,11 +511,11 @@ name	desc	weight	object
 
 bronze trident is an armament. It is not temporary.
 It has a weapon "[one of]your three-pronged spear[or]your deadly trident[or]your bronze spear[or]your majestic weapon of doom[at random]".
-The weapon damage of bronze trident is 12.
-The weapon type of bronze trident is "Melee".
-The objsize of bronze trident is 4.
-The hitbonus of bronze trident is 1. [magic]
-The scent of bronze trident is "The trident smells like the sea, the moon, the stars and... a strong merman? Weird.".
+Weapon Damage of bronze trident is 12.
+Weapon Type of bronze trident is "Melee".
+Objsize of bronze trident is 4.
+Hitbonus of bronze trident is 1. [magic]
+Scent of bronze trident is "The trident smells like the sea, the moon, the stars and... a strong merman? Weird.".
 
 
 Table of Game Objects (continued)
@@ -524,11 +524,11 @@ name	desc	weight	object
 
 Makeshift-Spear is an armament. It is not temporary.
 It has a weapon "your Makeshift-Spear".
-The weapon damage of Makeshift-Spear is 6.
-The weapon type of Makeshift-Spear is "Melee".
-The objsize of Makeshift-Spear is 4.
-The hitbonus of Makeshift-Spear is -1. [improvised]
-The scent of the Makeshift-Spear is "The wood smells a little musty. It brings back memories of the Urban Forest.".
+Weapon Damage of Makeshift-Spear is 6.
+Weapon Type of Makeshift-Spear is "Melee".
+Objsize of Makeshift-Spear is 4.
+Hitbonus of Makeshift-Spear is -1. [improvised]
+Scent of the Makeshift-Spear is "The wood smells a little musty. It brings back memories of the Urban Forest.".
 
 
 Table of Game Objects (continued)
@@ -537,11 +537,11 @@ name	desc	weight	object
 
 sharp black tusk is an armament. It is not temporary.
 It has a weapon "[one of]your very sharp tusk[or]your void monster's tusk[or]your sharp black tusk[at random]".
-The weapon damage of sharp black tusk is 10.
-The weapon type of sharp black tusk is "Melee".
-The objsize of sharp black tusk is 4.
-The hitbonus of sharp black tusk is -1. [not a weapon]
-the scent of the sharp black tusk is "The void serpent's tusk actually manages to have a scent, despite coming from the void, and you do not like it. It's undescribably bad, something between rotten and death, even with the apparent good condition of the tusk.".
+Weapon Damage of sharp black tusk is 10.
+Weapon Type of sharp black tusk is "Melee".
+Objsize of sharp black tusk is 4.
+Hitbonus of sharp black tusk is -1. [not a weapon]
+Scent of the sharp black tusk is "The void serpent's tusk actually manages to have a scent, despite coming from the void, and you do not like it. It's undescribably bad, something between rotten and death, even with the apparent good condition of the tusk.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -549,11 +549,11 @@ name	desc	weight	object
 
 spear is an armament. It is not temporary.
 It has a weapon "[one of]your spear[or]the Viking spear[at random]".
-The weapon damage of spear is 12.
-The weapon type of spear is "Melee".
-The objsize of spear is 4.
-The hitbonus of spear is 1. [mastercraft]
-The scent of spear is "The Viking spear smells of ancient battles. The scent gets your blood pumping for battle.".
+Weapon Damage of spear is 12.
+Weapon Type of spear is "Melee".
+Objsize of spear is 4.
+Hitbonus of spear is 1. [mastercraft]
+Scent of spear is "The Viking spear smells of ancient battles. The scent gets your blood pumping for battle.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -561,11 +561,11 @@ name	desc	weight	object
 
 rusty nail is an armament. It is not temporary.
 It has a weapon "[one of]your small rusty nail[or]your rusty nail[or]your weaponized nail[at random]".
-The weapon damage of rusty nail is 5.
-The weapon type of rusty nail is "Melee".
-The objsize of rusty nail is 1.
-The hitbonus of rusty nail is -1. [not a weapon]
-The scent of rusty nail is "The rusty nail smells like iron.".
+Weapon Damage of rusty nail is 5.
+Weapon Type of rusty nail is "Melee".
+Objsize of rusty nail is 1.
+Hitbonus of rusty nail is -1. [not a weapon]
+Scent of rusty nail is "The rusty nail smells like iron.".
 
 Book 4 - Ranged Weapons
 

@@ -10,7 +10,7 @@ Wolfrape	"Wolfrape"
 
 Wolfrape is a situation.
 ResolveFunction of Wolfrape is "[ResolveEvent Wolfrape]". The level of Wolfrape is 16.
-The sarea of Wolfrape is "Capitol".
+Sarea of Wolfrape is "Capitol".
 when play begins:
 	add Wolfrape to badspots of HermList;
 	add Wolfrape to BadSpots of FemaleList;
@@ -60,7 +60,7 @@ Object	Name
 Office Den	"Office Den"
 
 Office Den is a room. It is fasttravel. It is private. It is sleepsafe.
-The description of Office Den is "[officedendesc]".
+Description of Office Den is "[officedendesc]".
 
 the scent of Office Den is "[blancheupdate]Unlike the air outside, it's mostly free of the smell of soot and ash. There is a strong, lupine smell in the air from Blanche[if HP of Blanche >= 7] and the others[end if]."
 
@@ -86,8 +86,8 @@ object	name
 Blanche	"Blanche"
 
 Blanche is a woman. Blanche is in Office Den.
-The description of Blanche is "[blanchedesc]".
-The conversation of Blanche is { "Thanks." }.
+Description of Blanche is "[blanchedesc]".
+Conversation of Blanche is { "Thanks." }.
 the fuckscene of Blanche is "[sexwithBlanche]".
 the scent of Blanche is "[blancheupdate]She smells of wolf and half-hidden arousal."
 The icon of blanche is Figure of Blanche1_icon.

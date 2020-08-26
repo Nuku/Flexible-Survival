@@ -9,7 +9,7 @@ Gill Fruits Tree	"Gill Fruits Tree"
 
 Gill Fruits Tree is a situation.
 ResolveFunction of Gill Fruits Tree is "[ResolveEvent Gill Fruits Tree]".
-the sarea of Gill Fruits Tree is "Beach".
+Sarea of Gill Fruits Tree is "Beach".
 
 to say ResolveEvent Gill Fruits Tree:
 	say "You come across an odd tree, half in and half out of the water, with slitted fruits on the branches. This must be the elusive gill fruit tree.";

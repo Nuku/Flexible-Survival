@@ -83,7 +83,7 @@ Captured Demon	"Captured Demon"
 
 Captured Demon is a situation.
 ResolveFunction of Captured Demon is "[ResolveEvent Captured Demon]".
-The sarea of Captured Demon is "Red".
+Sarea of Captured Demon is "Red".
 when play begins:
 	add Captured Demon to BadSpots of MaleList; [male soldier, demon brute]
 	add Captured Demon to badspots of DemonList; [demon brute]
@@ -137,9 +137,9 @@ Thankful Soldier	"Thankful Soldier"
 
 Thankful Soldier is a situation.
 ResolveFunction of Thankful Soldier is "[ResolveEvent Thankful Soldier]". [meeting the guy from 'Captured Demon' again - if you saved him]
-The Prereq1 of Thankful Soldier is Captured Demon.
+Prereq1 of Thankful Soldier is Captured Demon.
 The Prereq1Resolution of Thankful Soldier is { 1 }.
-The sarea of Thankful Soldier is "Outside".
+Sarea of Thankful Soldier is "Outside".
 when play begins:
 	add Thankful Soldier to BadSpots of MaleList; [male soldier]
 
@@ -328,8 +328,8 @@ SexuallyExperienced of David is true.
 TwistedCapacity of David is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of David is false. [steriles can't knock people up]
 MainInfection of David is "Human".
-The description of David is "[DavidDesc]".
-The conversation of David is { "Oh, hello." }.
+Description of David is "[DavidDesc]".
+Conversation of David is { "Oh, hello." }.
 The icon of David is Figure of David_clothed_icon.
 DavidBunkerEntry is a number that varies.
 BrutusEscalationTimer is a number that varies.
@@ -587,7 +587,7 @@ to say DavidTalk4: [talk about Brutus]
 	if Libido of David is 51:
 		say "     Bringing up the topic of Brutus, you explain that your demon companion thinks that the demon who attacked him did something, possibly leaving what Brutus called a 'seal of enslavement'. Continuing with the offer by Brutus to have a look for it, you see David become rather uncomfortable as he imagines stripping before the demon. Still, he might be in real danger from it, if he actually has the seal on him and it draws other demons like it seems to be affecting Brutus. You do your best to convince David to agree to Brutus examining him, and...";
 		LineBreak;
-		let bonus be (( the Charisma of the player minus 10 ) divided by 2);
+		let bonus be (( Charisma of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus] in a Charisma-Check.";
 		increase diceroll by bonus;
@@ -772,7 +772,7 @@ to say DavidTalk4: [talk about Brutus]
 		say "     As you bring your demon companion up, a happy grin spreads over David's features and he gives your shoulder a pat in camaraderie. 'I can't thank you enough for... well, you set it all up, didn't you? Rescuing me, rescuing Brutus, giving us the opportunity to meet, hah - to fuck even. And now this. I - I can feel where he is now, you know. Or at least where the amulet is. Always. And I know in my heart that he'll always be there for me.'";
 	else if Libido of David is 82: [Brutus fucked David before under his dominant urges]
 		say "     As you bring your demon companion up, a flush spreads over David's face and he says, 'I love the big brute. The sex just takes your breath away. I know he can be a bit rough at times, but I... don't mind. He makes me feel soo good.' There may be a smile on David's face and his breathing gets quicker as he gets aroused from speaking about his demon lover, but you heard the little pause he made when talking about getting fucked roughly.";
-		let bonus be (( the Charisma of the player minus 10 ) divided by 2);
+		let bonus be (( Charisma of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		increase diceroll by bonus;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus] (Charisma-Check)";
@@ -1388,7 +1388,7 @@ instead of going to Bunker while HP of David is 4 and (Libido of David is 0 or L
 		now Libido of David is 59; [player knows something is up with Brutus]
 		WaitLineBreak;
 		say "     Looking down at his monster of a cock, Brutus takes a deep breath and composes his face to a stoic expression. You can actually see his erection soften a bit while he gives low grunts, soon becoming as soft as he ever gets. Bowing his head to you, he then says, 'I will control myself better from now on.' With that, your powerful companion stalks down the stairs again, clearly wanting to prove to you - and himself - that he's all better now.";
-		let bonus be (( the Perception of the player minus 10 ) divided by 2);
+		let bonus be (( Perception of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		increase diceroll by bonus;
 		if diceroll > 12:
@@ -1455,7 +1455,7 @@ instead of going to Bunker while HP of David is 4 and companion of Player is dem
 		say "     DEBUG: DAVID/BRUTUS INTERACTION 2[line break]";
 	if Libido of David is 53: [David thanked Brutus after he got hurt - some attraction here]
 		if a random chance of 4 in 10 succeeds: [40% chance]
-			let bonus be (( the Perception of the player minus 10 ) divided by 2);
+			let bonus be (( Perception of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			increase diceroll by bonus;
 			if a random chance of 1 in 2 succeeds: [David watches Brutus - perceptive players notice his looks linger on Brutus's naked body]

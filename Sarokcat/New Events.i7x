@@ -21,7 +21,7 @@ to say ResolveEvent Military Presence:
 		now mtp is 1;
 	else if mtp is 1:
 		say "     While traveling through the deserted city, a sudden glint of light catches your eye on one of the nearby rooftops. Hoping to find signs of another survivor, you start moving to get a better view of the roof, straining your eyes to see what it might have been.";
-		let bonus be (( the Perception of the player minus 10 ) divided by 2);
+		let bonus be (( Perception of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
@@ -76,7 +76,7 @@ Abandonedplayer	"Abandonedplayer"
 
 Abandonedplayer is a situation.
 ResolveFunction of Abandonedplayer is "[ResolveEvent Abandonedplayer]".
-The sarea of Abandonedplayer is "Warehouse".
+Sarea of Abandonedplayer is "Warehouse".
 
 to say ResolveEvent Abandonedplayer:
 	say "     As you search the deserted streets of the area close to the waterfront, you hear some noise coming from a nearby alley. Cautiously following it, you prepare for combat as you move closer. Gripping your makeshift weapon tightly, you duck around the corner and come face to face with... an abandoned CD player. Sighing, you lower you weapon again before looking around sheepishly. Fortunately, there was no one around to see that. Checking the music player, you decide to leave the instrument of your ridicule where it lies to spare yourself from an embarrassing reminder.";
@@ -154,7 +154,7 @@ Locked Utility Room	"Locked Utility Room"
 
 Locked Utility Room is a situation.
 ResolveFunction of Locked Utility Room is "[ResolveEvent Locked Utility Room]".
-The sarea of Locked utility room is "Mall".
+Sarea of Locked utility room is "Mall".
 when play begins:
 	add Locked Utility Room to BadSpots of MaleList;
 	add Locked Utility Room to badspots of DemonList;
@@ -179,7 +179,7 @@ Transformed Seals	"Transformed Seals"
 
 Transformed Seals is a situation.
 ResolveFunction of Transformed Seals is "[ResolveEvent Transformed Seals]".
-The sarea of Transformed Seals is "Beach";
+Sarea of Transformed Seals is "Beach";
 
 to say ResolveEvent Transformed Seals:
 	say "     While walking along the beach, you come across a shiny object half-buried in the sand, and dreams of treasure come over you as you as you quickly uncover it. You are surprised to find just a couple thin pieces of metal, but closer examination reveals that they're a pair of navy seal dog tags. Looking around more carefully, you notice the remains of several stretched and torn wet suits in the surf and a few other telltale signs of a struggle. Quickly brushing the sand off your hands, you move on down the beach before whatever happened to them happens to you.";
@@ -195,7 +195,7 @@ Wrecked Ships	"Wrecked Ships"
 
 Wrecked Ships is a situation.
 ResolveFunction of Wrecked Ships is "[ResolveEvent Wrecked Ships]".
-The sarea of Wrecked Ships is "Beach".
+Sarea of Wrecked Ships is "Beach".
 
 to say ResolveEvent Wrecked ships:
 	say "     You come across the wreckage of several smashed sailboats. It looks like they were broken apart by something trying to get at the people inside. You decide that maybe coming out here alone wasn't your best idea ever and quickly hurry on your way.";
@@ -211,7 +211,7 @@ Dolphin Lotion	"Dolphin Lotion"
 
 Dolphin Lotion is a situation.
 ResolveFunction of Dolphin Lotion is "[ResolveEvent Dolphin Lotion]".
-The sarea of Dolphin Lotion is "Beach".
+Sarea of Dolphin Lotion is "Beach".
 
 
 to say ResolveEvent Dolphin Lotion:
@@ -228,7 +228,7 @@ Broken Fountain	"Broken Fountain"
 
 Broken Fountain is a situation.
 ResolveFunction of Broken Fountain is "[ResolveEvent Broken Fountain]".
-The sarea of Broken Fountain is "Park".
+Sarea of Broken Fountain is "Park".
 
 to say ResolveEvent Broken Fountain:
 	say "     You hear a soft trickling noise while wandering through the park trail, like water softly running over stone. Following the noise, you come to a busted water fountain, apparently destroyed by several of the creatures fighting (or doing other things) in the area. Glancing around, you manage to find an empty container to put some of the water in before heading on your way.";
@@ -244,7 +244,7 @@ Scenic View	"Scenic View"
 
 Scenic View is a situation.
 ResolveFunction of Scenic View is "[ResolveEvent Scenic View]".
-The sarea of Scenic View is "Park".
+Sarea of Scenic View is "Park".
 
 to say ResolveEvent Scenic View:
 	say "     Wandering through the park trails, you come across a beautiful view of nature, almost unimpeded by the skyline of abandoned buildings. You pause in your searching for a minute to take in the view and relax before you have to head back into the city, feeling much better about yourself.";
@@ -261,7 +261,7 @@ Twisted Grove	"Twisted Grove"
 
 Twisted Grove is a situation.
 ResolveFunction of Twisted Grove is "[ResolveEvent Twisted Grove]".
-The sarea of Twisted Grove is "Park".
+Sarea of Twisted Grove is "Park".
 when play begins:
 	add Twisted Grove to BadSpots of FemaleList;
 	add Twisted Grove to BadSpots of FurryList;
@@ -280,7 +280,7 @@ Ominous Hole	"Ominous Hole"
 
 Ominous Hole is a situation.
 ResolveFunction of Ominous Hole is "[ResolveEvent Ominous Hole]".
-The sarea of Ominous Hole is "Park".
+Sarea of Ominous Hole is "Park".
 
 to say ResolveEvent Ominous Hole:
 	say "     As you wander through the park, you notice another survivor in the distance. Quickly waving, you begin to run towards each other. Suddenly, the other survivor seems to disappear into thin air mid-step, causing you to duck and look around. When nothing else happens, you cautiously approach the area you last saw the other person, only to find that there seems to be a large hole dug there that's surrounded by a small mound of dirt, as if made by some burrowing creature of almost human size. You would investigate further, but the loud moans and other noises coming from the hole tell you more than you probably wanted to know about what's happening, as well as the fact that you won't be seeing that person again... as a person, anyways.";
@@ -296,7 +296,7 @@ Squatters Den	"Squatters Den"
 
 Squatters Den is a situation.
 ResolveFunction of Squatters Den is "[ResolveEvent Squatters Den]".
-The sarea of Squatters Den is "Mall".
+Sarea of Squatters Den is "Mall".
 
 to say ResolveEvent Squatters Den:
 	say "     Exploring the sewers underneath the mall, you find signs of a recent struggle. Investigating more closely, you see where something came across what appears to be a recently-inhabited squatter's den. Piles of junk, blankets, and even an old shopping cart have been dragged down here and set up in a small alcove. From the looks of the recent struggle, the den isn't inhabited any longer. Carefully picking through the piles of junk, you look for anything that might be of use. Finding some food and a bottle of water that is none too clean, you leave the den and head about your business.";
@@ -314,7 +314,7 @@ Leaking Pipe	"Leaking Pipe"
 
 Leaking Pipe is a situation.
 ResolveFunction of Leaking Pipe is "[ResolveEvent Leaking Pipe]".
-The sarea of Leaking Pipe is "Mall".
+Sarea of Leaking Pipe is "Mall".
 
 to say ResolveEvent Leaking Pipe:
 	say "     As you travel the sewers and utility corridors under the mall, you hear a steady trickling noise coming from down one of the passageways. The sound grows louder as you move closer, eventually discovering a leaking water pipe. You apparently aren't the only person to have discovered this source of water though, as someone has set up a couple small containers under the steady leak. As the containers are definitely overflowing, whoever set them up obviously hasn't been back in a while. Sensing an opportunity, you quickly gather up a couple of the full containers and place them in your pack, then hurry along before someone comes looking for them.";
@@ -378,7 +378,7 @@ Ruined Supplies	"Ruined Supplies"
 
 Ruined Supplies is a situation.
 ResolveFunction of Ruined Supplies is "[ResolveEvent Ruined Supplies]".
-The sarea of Ruined Supplies is "Mall".
+Sarea of Ruined Supplies is "Mall".
 
 to say ResolveEvent Ruined Supplies:
 	say "     Searching the area under the mall again, you find a small pallet of food supplies, obviously intended for use above at the food court. Unfortunately, you were not the first person to find these supplies, as someone has been here before you and made a pig out of themselves. Boxes are ripped open, food was obviously messily consumed, and almost all of the drinks have been opened, leaving the area strewn with wrappers and empty bottles. Eyeing the mess dubiously, you wonder if it is even worth searching through it all to see if there is anything left. Do you?";

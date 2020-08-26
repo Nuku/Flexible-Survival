@@ -23,7 +23,7 @@ Paleontology Professor	"Paleontology Professor"
 
 Paleontology Professor is a situation.
 ResolveFunction of Paleontology Professor is "[ResolveEvent Paleontology Professor]". The level of Paleontology Professor is 7.
-The sarea of Paleontology Professor is "Campus".
+Sarea of Paleontology Professor is "Campus".
 
 when play begins:
 	add Paleontology Professor to BadSpots of FurryList;
@@ -778,7 +778,7 @@ to wrcurserecede:
 	StatChange "Intelligence" by 2;
 
 to wrcurserampage:
-	if there is a dangerous door in the location of the player or the location of Player is fasttravel:
+	if there is a dangerous door in the Location of Player or the location of Player is fasttravel:
 		say "     You can feel the primitive, feral instincts of your wereraptor body trying to erode your conscious thought as its lust and hunger rise. You catch the scent of prey in the air and your limited control snaps. You head out into the city as nothing more than a wild beast seeking to slake its hunger and lust upon its prey.";
 		now skipturnblocker is 1; [player effectively unconscious, delays/skips end of turn messages]
 		SanLoss 6;
@@ -822,7 +822,7 @@ Greenhouse	"Greenhouse"
 
 Greenhouse is a situation.
 ResolveFunction of Greenhouse is "[ResolveEvent Greenhouse]". The level of Greenhouse is 7. Greenhouse is inactive.
-The sarea of Greenhouse is "Campus".
+Sarea of Greenhouse is "Campus".
 
 grhouse is a truth state that varies. grhouse is usually false.
 
@@ -892,7 +892,7 @@ Getting the Knife	"Getting the Knife"
 
 Getting the Knife is a situation.
 ResolveFunction of Getting the Knife is "[ResolveEvent Getting the Knife]". The level of Getting the Knife is 7. Getting the Knife is inactive.
-The sarea of Getting the Knife is "Warehouse".
+Sarea of Getting the Knife is "Warehouse".
 
 wrknifefight is a truth state that varies. wrknifefight is usually false.
 
@@ -949,7 +949,7 @@ Dinosaur Skeleton	"Dinosaur Skeleton"
 
 Dinosaur Skeleton is a situation.
 ResolveFunction of Dinosaur Skeleton is "[ResolveEvent Dinosaur Skeleton]". The level of Dinosaur Skeleton is 9. Dinosaur Skeleton is inactive.
-The sarea of Dinosaur Skeleton is "Museum".
+Sarea of Dinosaur Skeleton is "Museum".
 
 wrdinoskel is a truth state that varies. wrdinoskel is usually false.
 

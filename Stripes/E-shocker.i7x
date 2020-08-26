@@ -13,7 +13,7 @@ Electric Shockers	"Electric Shockers"
 Electric Shockers is a situation.
 ResolveFunction of Electric Shockers is "[ResolveEvent Electric Shockers]". The level of Electric Shockers is 10.
 [This is to restrict low-level players from unknowingly finding the superweapon.]
-The sarea of Electric Shockers is "Zoo".
+Sarea of Electric Shockers is "Zoo".
 
 Electricprodstatus is a number that varies.
 eptarget is a number that varies.			[hidden number of viable charges]
@@ -54,9 +54,9 @@ to say electproddesc:
 	else:
 		say "While a powerful electric tool designed to shock and incapacitate wild animals, it is unfortunately burned out and unusable, though it may still be repaired with some replacement parts.";
 
-electric prod is a grab object. It is fast. It is not temporary. The usedesc of electric prod is "[useelectricprod]".
+electric prod is a grab object. It is fast. It is not temporary. Usedesc of electric prod is "[useelectricprod]".
 
-[It has a weapon "[one of]shocking stick[or]your electric prod[at random]". The weapon damage of electric prod is 22. The weapon type of electric prod is "Melee". It is not temporary. the objsize of electric prod is 2.]
+[It has a weapon "[one of]shocking stick[or]your electric prod[at random]". Weapon Damage of electric prod is 22. Weapon Type of electric prod is "Melee". It is not temporary. Objsize of electric prod is 2.]
 
 the scent of the electric prod is "The electric stun rod smells faintly of ozone.".
 

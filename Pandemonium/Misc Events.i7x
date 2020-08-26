@@ -14,7 +14,7 @@ Visceral Painting	"Visceral Painting"
 
 Visceral Painting is a situation.
 ResolveFunction of Visceral Painting is "[ResolveEvent Visceral Painting]". [updating "Moving painting" by Sarokcat]
-The sarea of Visceral Painting is "Museum".
+Sarea of Visceral Painting is "Museum".
 
 to say ResolveEvent Visceral Painting:
 	say "     Wandering the museum hallways, you stop for a minute [one of]to look at some of the artwork [or]to get your bearings [at random]when one of the paintings near you catches your eye. The frame is nothing special, just four plain dark oak pieces of wood, but the subject of the painting is so visceral that you can't help but look at it for a moment. Painted in oil is a young man, athletic and half naked, running away from four pursuers. The young man runs in front of a large oak tree in what looks like the beginning of spring, given the melting snow in the muddy ditch the young man flees through. He's glancing back towards his pursuers, his back facing you, his legs covered in caked mud, his arms stratched up.";
@@ -42,7 +42,7 @@ Tide Pool Trouble	"Tide Pool Trouble"
 
 Tide Pool Trouble is a situation.
 ResolveFunction of Tide Pool Trouble is "[ResolveEvent Tide Pool Trouble]".
-The sarea of Tide Pool Trouble is "Beach".
+Sarea of Tide Pool Trouble is "Beach".
 
 to say ResolveEvent Tide Pool Trouble:
 	say "     As you meander down the beach, waves crash against rocks not too far ahead of you. The rocks litter this part of the shore. You cannot help but walk on some, but most of these are beter described as boulders. Not much farther ahead, there are various boulders jutting out from the shore, towering above you the size of small buildings. You see the tide pools at your feet as you walk towards these towering boulders. Small fish swim as you move from rock to rock. As you approach the tallest rock, you notice something in one of the tide pools under that great boulder causes the water to splash out vigorously. The water seems to bubble out from the shallow water. Could this be the entrance to some underwater cavern? The water seems to positively come alive as you approach.";
@@ -72,7 +72,7 @@ Lingua Franca	"Lingua Franca"
 
 Lingua Franca is a situation.
 ResolveFunction of Lingua Franca is "[ResolveEvent Lingua Franca]". [revising "Languages Department" by Wahn]
-The sarea of Lingua Franca is "Campus".
+Sarea of Lingua Franca is "Campus".
 
 to say ResolveEvent Lingua Franca:
 	say "     Passing behind one of the lecture halls, you come across a small group of creatures arguing with one another in multiple languages. Some of these creatures are wearing what you imagine to be their old clothes, the elephant woman wears her old skirt and her top is torn to expose her breasts, but she doesn't seem to notice. You can see a Chinese dragon, not much taller than the rest of them, wearing an open marching band jacket in the colors of Tenvale College. These must all be students. There's also a bear, frog, and a green pheasant. All in different stages of dress.";
@@ -110,7 +110,7 @@ PoliSci	"PoliSci"
 
 PoliSci is a situation.
 ResolveFunction of PoliSci is "[ResolveEvent PoliSci]". [revising "Politics" by hiccup]
-the sarea of PoliSci is "Campus".
+Sarea of PoliSci is "Campus".
 
 to say ResolveEvent PoliSci:
 	say "     While exploring the campus, you stumble upon the Poli-Sci building. You turn the corner and see two humanoid creatures arguing with one another, but you can only barely make out what's being said. One of them is a donkey boy, who is yelling very loudly, and the other is an elephant girl, who is covering her giant ears as best she can. The boy is in a nice suit with a purple tie and stands over the girl by a solid foot, yelling down at her in her yellow sunday dress. She also wears a bangle with a purple gem in it. The other people walking around them seem to know the couple, as both the elephant and the donkey nod or smile at this person or that one as though nothing is happening. You can't help but wonder what their problem is. Maybe they're poli-sci students and this is just a very intense debate?";
@@ -138,7 +138,7 @@ Sewer Stalker	"Sewer Stalker"
 
 Sewer Stalker is a situation.
 ResolveFunction of Sewer Stalker is "[ResolveEvent Sewer Stalker]". [revising "Ritual Location" by Kaleem]
-the sarea of Sewer Stalker is "Mall".
+Sarea of Sewer Stalker is "Mall".
 
 to say ResolveEvent Sewer Stalker:
 	say "     Exploring the sewers of the mall for some time, you don't find anything of note and decide to head back to the surface. However, when you turn around you see a figure not too far away from you. Once they realize you've turned around, they futilely hug the sewer wall opposite the dim lights. It's pretty clear this person was following you. You call out to them and wait a moment, and you see their silhouette in the dim light lackadaisically walk away from the wall, just barely being touched by the light. They're wearing a cloak, and even in the darkness of the sewers, this person has their hood up concealing their face. In the hand closest to the light, and therefore the better lit side, you can see your stalker holds a crystal ball in their hand.";
@@ -172,7 +172,7 @@ Junkyard Utility	"Junkyard Utility"
 
 Junkyard Utility is a situation.
 ResolveFunction of Junkyard Utility is "[ResolveEvent Junkyard Utility]".
-The sarea of Junkyard Utility is "Junkyard".
+Sarea of Junkyard Utility is "Junkyard".
 searchesUtSit is a number that varies.
 
 to say ResolveEvent Junkyard Utility:

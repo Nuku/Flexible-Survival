@@ -11,7 +11,7 @@ Tattoo Parlor	"Tattoo Parlor"
 
 Tattoo Parlor is a room. It is fasttravel. It is private.
 
-The description of Tattoo Parlor is "[TattooParlorDescription]".
+Description of Tattoo Parlor is "[TattooParlorDescription]".
 
 to say TattooParlorDescription:
 	say "     The painted dragon tattoo parlor stands empty. Though there are signs that someone had stockpiled food and water for quite a while, most of the food has been eaten, and what water there is left is of dubious quality. Looking around, you'd guess that whoever was here last has only been gone for a couple of days at best. They were probably hiding here as long as they could before venturing out into the city when their supplies ran low.";
@@ -32,7 +32,7 @@ TattoonPiercing	"TattoonPiercing"
 
 TattoonPiercing is a situation.
 ResolveFunction of TattoonPiercing is "[ResolveEvent TattoonPiercing]".
-The sarea of TattoonPiercing is "Red".
+Sarea of TattoonPiercing is "Red".
 
 to say ResolveEvent TattoonPiercing:
 	if tattoohunter is 0:
@@ -51,7 +51,7 @@ FindingKara	"FindingKara"
 
 FindingKara is a situation.
 ResolveFunction of FindingKara is "[ResolveEvent FindingKara]". The level of FindingKara is 9.
-The sarea of FindingKara is "Red".
+Sarea of FindingKara is "Red".
 
 to say ResolveEvent FindingKara:
 	if tattoohunter is 3:

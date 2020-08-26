@@ -10,7 +10,7 @@ How High	"How High"
 
 How High is a situation.
 ResolveFunction of How High is "[ResolveEvent How High]".
-The sarea of How High is "Park".
+Sarea of How High is "Park".
 when play begins:
 	add How High to BadSpots of FurryList;
 	add How High to BadSpots of MaleList;

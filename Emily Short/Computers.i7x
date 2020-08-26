@@ -15,9 +15,9 @@ Section 1 - Devices
 A computer is a kind of device. Understand "computer" as a computer.
 	A computer has some text called the startup noise. The startup noise of a computer is usually "[The item described] chimes cheerfully."
 
-A screen is a kind of thing. One screen is part of every computer. The description of a screen is usually "[The item described] [is-are] currently blank.". Understand "monitor" as a screen. [Screen information is overridden later.]
+A screen is a kind of thing. One screen is part of every computer. Description of a screen is usually "[The item described] [is-are] currently blank.". Understand "monitor" as a screen. [Screen information is overridden later.]
 
-A keyboard is a kind of thing. One keyboard is part of every computer. The description of a keyboard is usually "The typical arrangement of keys."
+A keyboard is a kind of thing. One keyboard is part of every computer. Description of a keyboard is usually "The typical arrangement of keys."
 	The specification of a keyboard is "Part of every computer by default. The player can only use the TYPE (something) ON action when a keyboard is part of the computer in question."
 
 A selection device is a kind of thing.
@@ -122,9 +122,9 @@ Chapter 3 - Desktop Computers
 
 A desktop computer is a kind of computer.
 	A desktop computer is usually fixed in place.
-	The description of a desktop computer is usually "It has a dull beige exterior and seems to be trying to avoid attracting attention."
+	Description of a desktop computer is usually "It has a dull beige exterior and seems to be trying to avoid attracting attention."
 
-A mouse is a kind of selection device. A mouse is part of every desktop computer. The description of a mouse is usually "Just the ordinary wired variety."
+A mouse is a kind of selection device. A mouse is part of every desktop computer. Description of a mouse is usually "Just the ordinary wired variety."
 
 Book 2 - Software
 
@@ -143,7 +143,7 @@ Chapter 2 - Software Types
 Section 1 - Search Engines
 
 A search engine is a kind of software. Understand "search box" or "search" or "search engine" as a search engine.
-	The description of a search engine is usually "A search box awaits your search terms."
+	Description of a search engine is usually "A search box awaits your search terms."
 	A search engine has some text called the no-records response. The no-records response of a search engine is usually "No records found.".
 	A search engine has some text called the results-found response. The results-found response of a search engine is usually "Your search turns up the following results:".
 	A search engine has a table-name called the data table.
@@ -186,7 +186,7 @@ topic	title	data
 Section 2 - Password Locks
 
 A password lock program is a kind of software. The software priority of a password lock program is usually 1.
-	The description of a password lock program is usually "A box on the screen invites you to type a password to proceed.".
+	Description of a password lock program is usually "A box on the screen invites you to type a password to proceed.".
 	A password lock program has some indexed text called the password.
 	A password lock program has some text called the rejection. The rejection of a password lock program is usually "'Password incorrect.'"
 	A password lock program has some text called the success. The success of a password lock program is usually "The password field vanishes."
@@ -217,7 +217,7 @@ A multiple-choice program is a kind of software.
 	A multiple-choice program has a table-name called the options table.
 	A multiple-choice program has some text called the out of bounds response. The out of bounds response is usually "Your selection, '[topic understood]', is not one of the available choices."
 
-The description of a multiple-choice program is usually "[options-list of the item described]".
+Description of a multiple-choice program is usually "[options-list of the item described]".
 
 To say options-list of (chosen program - a multiple-choice program):
 	say "The following options are visible on the screen:[paragraph break]";
@@ -261,7 +261,7 @@ Section 5 - Email Programs
 An email program is a kind of software.
 	An email program has a table-name called the message table.
 	An email program has some text called the new mail message. The new mail message of an email program is usually "You have new mail on [the random computer which is running the item described].".
-	The description of an email program is usually "[inbox of the item described]".
+	Description of an email program is usually "[inbox of the item described]".
 
 To say inbox of (chosen email - an email program):
 	if the number of filled rows in the message table of the chosen email is 0:
@@ -561,7 +561,7 @@ A given computer may be running one or more pieces of software; whichever softwa
 
 The appearance of the software on the screen is given by the software's description. Thus we might have
 
-	The PC runs a password lock program called rudimentary passcode. The description of rudimentary passcode is "A box on the screen invites you to type a password to proceed."
+	The PC runs a password lock program called rudimentary passcode. Description of rudimentary passcode is "A box on the screen invites you to type a password to proceed."
 
 A computer can run several programs at once, in which case the program with the lowest "software priority" is the one that is considered to be working and receiving input at the moment. By default, most software has a software priority of five, while password lock programs have software priority 1 (meaning they must be dealt with before other software becomes available). If it is intended that the user can change programs manually, we might handle this by changing software priorities during play to make the one in use uppermost; as in
 
@@ -868,13 +868,13 @@ We make the ATM a generic computer that can't be turned on or off. We create the
 	Instead of switching off the ATM:
 		say "Resetting the ATM is only possible for bank employees."
 
-	The player carries a wallet. The wallet contains a debit card. The debit card is a data storage device. The description of the debit card is "It is a red card stamped with numbers and embossed with a hologram of a flying eagle. With a sharp needle, you scratched the PIN 2953 into the upper left corner. You're always forgetting it."
+	The player carries a wallet. The wallet contains a debit card. The debit card is a data storage device. Description of the debit card is "It is a red card stamped with numbers and embossed with a hologram of a flying eagle. With a sharp needle, you scratched the PIN 2953 into the upper left corner. You're always forgetting it."
 
 	The slot is an extension port. It is part of the ATM.
 
 	Does the player mean inserting the debit card into the slot: it is very likely.
 
-	The welcome screen is privately-named software. The description of the welcome screen is "WELCOME, reads the screen. PLEASE INSERT CARD TO PROCEED."
+	The welcome screen is privately-named software. Description of the welcome screen is "WELCOME, reads the screen. PLEASE INSERT CARD TO PROCEED."
 
 	An input handling rule for the welcome screen:
 		say "INSERT CARD TO PROCEED, insists the screen.";

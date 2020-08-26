@@ -385,7 +385,7 @@ name	desc	weight	object
 "smooth collie shemale fur"	"A tuft of sable fur that looks like it has been pulled out of the coat of a smooth collie. It's nicely soft."	0	smooth collie shemale fur
 
 smooth collie shemale fur is a grab object.
-the usedesc of smooth collie shemale fur is "[SmoothCollieShemaleFurUse]".
+Usedesc of smooth collie shemale fur is "[SmoothCollieShemaleFurUse]".
 It is temporary.
 
 to say SmoothCollieShemaleFurUse:
@@ -483,8 +483,8 @@ to say collieinheat:
 			say "[victory entry]";
 			infect;
 			decrease the score by 5;
-			decrease the morale of the player by 3;
-			if Player is kinky, increase the morale of the player by 6;
+			decrease Morale of Player by 3;
+			if Player is kinky, increase Morale of Player by 6;
 		else:
 			say "Hot juices flow down your legs as your body's need starts to become overwhelming. You moan and whimper, finding yourself sniffing at the air for something you don't catch wind of.";
 			increase slutfucked by 1;

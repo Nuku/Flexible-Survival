@@ -43,7 +43,7 @@ Noteworthy Ruin	"Noteworthy Ruin"
 
 Noteworthy Ruin is a situation.
 ResolveFunction of Noteworthy Ruin is "[ResolveEvent Noteworthy Ruin]". The level of Noteworthy Ruin is 8.
-The sarea of Noteworthy Ruin is "Plains".
+Sarea of Noteworthy Ruin is "Plains".
 when play begins:
 	add Noteworthy Ruin to BadSpots of FemaleList;
 
@@ -557,7 +557,7 @@ instead of sniffing orc femcum:
 	say "You open the lid for a moment and take a sniff. Smells rather tasty actually and you're tempted to take a pull from the bottle.";
 
 orc femcum is a grab object. orc femcum is cum.
-the usedesc of orc femcum is "[orc femcum use]";
+Usedesc of orc femcum is "[orc femcum use]";
 
 to say orc femcum use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the thick orc femcum run over your tongue and down your throat. Mmmmh, this stuff has a really great taste that calls for more. You can't help yourself and keep drinking until all of it is gone, filling your mind with a giddy, pleasant buzz. Now where do you get more of this stuff? You're really tempted to return to Katya and milk some more from her.";
@@ -635,7 +635,7 @@ Object	Name
 Inconspicuous Trail	"Inconspicuous Trail"
 
 Inconspicuous Trail is a room.
-The description of Inconspicuous Trail is "     You're on a fairly seldom-used trail through the expansive grassland of the dry plains. If you hadn't known exactly what to look for, there would be little chance you'd even have noticed this trail. Just a little distance further to the northeast is Katya's hidden camp.".
+Description of Inconspicuous Trail is "     You're on a fairly seldom-used trail through the expansive grassland of the dry plains. If you hadn't known exactly what to look for, there would be little chance you'd even have noticed this trail. Just a little distance further to the northeast is Katya's hidden camp.".
 earea of Inconspicuous Trail is "Plains".
 
 Table of GameRoomIDs (continued)
@@ -644,7 +644,7 @@ Hidden Camp	"Hidden Camp"
 
 Hidden Camp is a room.
 Hidden Camp is northeast of Inconspicuous Trail. Hidden Camp is sleepsafe.
-The description of Hidden Camp is "[KatyasCampDesc]".
+Description of Hidden Camp is "[KatyasCampDesc]".
 earea of Hidden Camp is "Plains".
 
 to say KatyasCampDesc:
@@ -847,8 +847,8 @@ object	name
 Katya	"Katya"
 
 Katya is a woman. Katya is in Hidden Camp.
-The description of Katya is "[KatyaDesc]".
-The conversation of Katya is { "placeholder" }.
+Description of Katya is "[KatyaDesc]".
+Conversation of Katya is { "placeholder" }.
 
 instead of sniffing Katya:
 	say "     Katya has an interesting scent, combining masculine and feminine notes with a little bit of honest sweat. She gives a rough chuckle and grins at you with her tusks showing as you lean in and sniff her.";

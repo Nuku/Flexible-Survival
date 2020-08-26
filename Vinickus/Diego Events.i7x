@@ -7,7 +7,7 @@ Trickster	"Trickster"
 
 Trickster is a situation.
 ResolveFunction of Trickster is "[ResolveEvent Trickster]". The level of Trickster is 4.
-The sarea of Trickster is "Outside".
+Sarea of Trickster is "Outside".
 wolffight is a number that varies.
 when play begins:
 	add Trickster to BadSpots of FurryList;
@@ -24,7 +24,7 @@ to say ResolveEvent Trickster:
 	say "     ([link]N[as]n[end link]) - Run.";
 	if Player consents:
 		say "     You dash up to the soldiers and pull out your weapon. Knowing your luck, trouble's on the way. You run up to the soldier left holding the bag. Your sudden appearance after the coyote's keeps him off guard long enough to pull the sack from him, finding it stuffed with gray fur inside. You barely have a chance to look up when a large pack of wolves come running around the corner, slamming into the unexpected team of soldiers. Several of the men are knocked down immediately.";
-		let the bonus be (( the dexterity of the player minus 10 ) divided by 2);
+		let the bonus be (( Dexterity of Player minus 10 ) divided by 2);
 		let the dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 15: ";
 		if dice plus bonus > 15:
@@ -80,7 +80,7 @@ Prank Aftermath	"Prank Aftermath"
 
 Prank Aftermath is a situation.
 ResolveFunction of Prank Aftermath is "[ResolveEvent Prank Aftermath]". Prank Aftermath is inactive. The level of Prank Aftermath is 7.
-The sarea of Prank Aftermath is "Outside".
+Sarea of Prank Aftermath is "Outside".
 when play begins:
 	add Prank Aftermath to BadSpots of FurryList;
 	add Prank Aftermath to badspots of HermList;
@@ -120,7 +120,7 @@ Prankster's Delight	"Prankster's Delight"
 
 Prankster's Delight is a situation.
 ResolveFunction of Prankster's Delight is "[ResolveEvent Prankster's Delight]". The level of Prankster's Delight is 7.
-The sarea of Prankster's Delight is "Outside".
+Sarea of Prankster's Delight is "Outside".
 when play begins:
 	add Prankster's Delight to BadSpots of FurryList;
 	add Prankster's Delight to Badspots of MaleList;

@@ -11,7 +11,7 @@ Floating Balloons	"Floating Balloons"
 
 Floating Balloons is a situation.
 ResolveFunction of Floating Balloons is "[ResolveEvent Floating Balloons]".
-The sarea of Floating Balloons is "Fair".
+Sarea of Floating Balloons is "Fair".
 
 to say ResolveEvent Floating Balloons:
 	say "     Wandering through the cheerful midway of the fair, you hear a strange squeaking noise nearby. Looking all around, you finally look up and notice a bundle of balloons floating by over some of the carnival shops. The sight makes you blink for a minute, as you could almost swear that one of the balloons was shaped like a naked woman, and it was gesturing for help. Taking a second look, you note the balloons have floated out of sight for now, though the strange sight stays with you as you wander around the fair itself.";
@@ -26,7 +26,7 @@ Game Crazy	"Game Crazy"
 
 Game Crazy is a situation.
 ResolveFunction of Game Crazy is "[ResolveEvent Game Crazy]".
-The sarea of Game Crazy is "Fair".
+Sarea of Game Crazy is "Fair".
 
 to say ResolveEvent Game Crazy:
 	say "     Wandering through the cheerful midway of the fair, you hear some shouting from nearby. Deciding to go take a look, you see what appears to be a young man frantically trying to win one of the fair games. You try to move closer and see what is going on, only to watch as the young man curses and throws down the little mallet, obviously frustrated with his failure. He glances around for a second, and tries to just grab one of the prizes and drag it out of the booth instead, and you watch in horrified fascination as his hands seem to sink into the giant stuffed dragon he tried to steal. The man screams and continues to curse, as his body seems to lengthen even as it shrinks, and before you know it he is hauled up into the booth by his stuck hands, and turns green and gold covered in plush dragon fur. By the time you reach the booth, the screaming has stopped and there are now two fancy plush dragons hanging in the prize area, as you stare at them you can swear one of them winked at you for a second. Shaking your head, you decide it's best not to touch anything you didn't win fairly in this crazy place.";
@@ -41,7 +41,7 @@ Fair Food Cart	"Fair Food Cart"
 
 Fair Food Cart is a scavevent.
 ResolveFunction of Fair Food Cart is "[ResolveEvent Fair Food Cart]".
-The sarea of Fair Food Cart is "Fair".
+Sarea of Fair Food Cart is "Fair".
 
 to say ResolveEvent Fair Food Cart:
 	say "     Wandering through the cheerful midway of the fair, you come across one of the fair food carts that seems to still be dispensing popcorn and fair food. Feeling slightly ambiguous about taking anything in this crazy place, you try some of the food, and when nothing bad seems to happen, take some of it with you. What is a fair without some fair food after all?";
@@ -57,7 +57,7 @@ Happy Silly Feeling	"Happy Silly Feeling"
 
 Happy Silly Feeling is a situation.
 ResolveFunction of Happy Silly Feeling is "[ResolveEvent Happy Silly Feeling]".
-The sarea of Happy Silly Feeling is "Fair".
+Sarea of Happy Silly Feeling is "Fair".
 
 to say ResolveEvent Happy Silly Feeling:
 	say "     Wandering through the cheerful midway of the fair, you hear some squeaking from a nearby area. When you cautiously take a look, you see a group of three different latex animals involved in some kind of strange altercation. The squeaky fox appears to be ducking and squeaking out silly commentary, while the latex cat tries to slap some sense into the fox. Which is amusing enough, but when the large latex tiger starts banging their heads together indiscriminately, you can't help but giggle, at the absurd situation, and the looks on the two beasts smooshed together faces. You pause for a minute, afraid you might have attracted their attention, but the beasts spare you only a glance before they go back to their escalating argument, with more silly gestures and slapstick fighting. You find yourself laughing hilariously at the strange situation playing out in front of you, especially when one of them grabs a pie off one of the nearby food carts, and the food starts flying. Still chuckling, you leave the fight before any of the food can start flying your way, but the smile stays on your face for quite a while afterwards, and you feel much better about yourself.";
@@ -73,7 +73,7 @@ Flashing Fair Lights	"Flashing Fair Lights"
 
 Flashing Fair Lights is a situation.
 ResolveFunction of Flashing Fair Lights is "[ResolveEvent Flashing Fair Lights]".
-The sarea of Flashing Fair Lights is "Fair".
+Sarea of Flashing Fair Lights is "Fair".
 
 to say ResolveEvent Flashing Fair Lights:
 	say "     Wandering through the cheerful midway of the fair, you find yourself glancing up only to stop and stare, in the dim twilight lighting the brilliant flashing of the fair lights seems to be absolutely fascinating for a minute. With the strange music of the fair playing in your head, and the lights glittering and flashing in their cheerful pattern, you find yourself falling into a trance, the lights seeming to call out to something inside you. You eventually blink, and tear your gaze away, and stagger onwards, but for some reason your brain is full of images of you staying in the fair, working one of the booths, or being the furry plushie prize for some lucky winner at one of the booths. It is hard to even remember who you are for a bit, and you once more remind yourself just how dangerous this fair is, though it could be a fun place to stay...";
@@ -89,7 +89,7 @@ Salty Taffy	"Salty Taffy"
 
 Salty Taffy is a scavevent.
 ResolveFunction of Salty Taffy is "[ResolveEvent Salty Taffy]".
-The sarea of Salty Taffy is "Fair".
+Sarea of Salty Taffy is "Fair".
 
 to say ResolveEvent Salty Taffy:
 	say "     Wandering through the cheerful midway of the fair, you come across a stand selling old fashioned salt water taffy, the fresh sticky stuff set up on the counter with a sign next to them saying 'free samples'. Deciding to take a chance, you help yourself to one of the pieces of sticky candy. Chewing it as you go on your way, you find the salty and sweet treat to be a wonderful accompaniment to the fair itself. Unfortunately, though, the sticky stuff gums up your mouth and dries it out as you chew, and the salty part of the taste seems to make you even thirstier than before.";
@@ -108,7 +108,7 @@ Prize Winning Toss	"Prize Winning Toss"
 
 Prize Winning Toss is a situation.
 ResolveFunction of Prize Winning Toss is "[ResolveEvent Prize Winning Toss]".
-The sarea of Prize Winning Toss is "Fair".
+Sarea of Prize Winning Toss is "Fair".
 
 to say ResolveEvent Prize Winning Toss:
 	say "     Wandering through the games area of the midway, staring at the shining and sparkling fair games, you eventually give in to temptation and try one of the tossing games, only to be surprised to find it is surprisingly hard, giving up you toss your last ring halfheartedly at the target and turn to leave, only to have to booth light up behind you. Looking backwards you see your last toss actually managed to make it onto the moving prize ring, and you actually won one of the lower tier prizes. Smiling at your lucky toss, you snag a pack of soda from the prize stack, and continue along your way, whistling along with the fair music.";
@@ -124,7 +124,7 @@ Sudden Stampede	"Sudden Stampede"
 
 Sudden Stampede is a situation.
 ResolveFunction of Sudden Stampede is "[ResolveEvent Sudden Stampede]".
-The sarea of Sudden Stampede is "Fair".
+Sarea of Sudden Stampede is "Fair".
 
 to say ResolveEvent Sudden Stampede:
 	say "     Wandering through the cheerful midway of the fair, you think you hear someone scream for a minute. Turning to look, you see someone run by down the other lane arms waving in the air as they obviously panic. Blinking you are about to call out, when you hear a rumbling noise over the carnival music, your mouth open you have no choice but to stare as a large stampede of plush prize animals follows after the screaming individual, everything from plush lions hunting, to giant teddy bears, and even some furry large snakes go charging down the lane, so intent on their target none of the seem to notice you. Closing your mouth with a snap, you definitely decide there isn't anything you can do to help someone that much in demand, you move along down the midway before they can circle back around..";
@@ -139,7 +139,7 @@ Strange Barker	"Strange Barker"
 
 Strange Barker is a situation.
 ResolveFunction of Strange Barker is "[ResolveEvent Strange Barker]".
-The sarea of Strange Barker is "Fair".
+Sarea of Strange Barker is "Fair".
 
 to say ResolveEvent Strange Barker:
 	say "     Wandering through the cheerful midway of the fair, you hear someone shouting out something, and move over to take a look, surprisingly you find a man covered in clown makeup standing in front of a ride shouting out its endorsements, in an attempt to tempt the nonexistent crowd inside, moving closer you try to talk to the man, only to be shouted at directly by the carnival barker. Regardless of what you do, his spiel doesn't seem to change any, and moving closer, you note that his feet seem to have become attached to the barkers stand, anchoring him there as he repeats his speech over and over again. Shuddering slightly at the strangeness of it all, you definitely decide not to try that ride.";
@@ -154,7 +154,7 @@ Ferris Fun Time	"Ferris Fun Time"
 
 Ferris Fun Time is a situation.
 ResolveFunction of Ferris Fun Time is "[ResolveEvent Ferris Fun Time]".
-The sarea of Ferris Fun Time is "Fair".
+Sarea of Ferris Fun Time is "Fair".
 
 to say ResolveEvent Ferris Fun Time:
 	say "     Wandering through the cheerful midway of the fair, you quickly find yourself in trouble as a number of the beasts that inhabit the fair seem to have found you. Realizing there are far too many for you to easily fight, you quickly flee down the shining and sparkling midway, while they give hot pursuit. Eventually taking a chance, you duck into one of the Ferris wheel cages, and slam the door shut, hoping they won't find you. To your surprise the wheel starts up again right away, swinging you up and away from your pursuers, and giving you a great view of the fair itself, as you go higher you can see the entire ruined skyscape of the city spread out before you, and the ominous smoke rising from near the capital building. Still swinging around in the air as the wheel spins is actually kind of fun, and you find yourself smiling as the ride stops, even better your pursuers are long gone, so you continue off into the fairgrounds while whistling a little tune.";
@@ -170,7 +170,7 @@ Rubber Tigerchase	"Rubber Tigerchase"
 
 Rubber Tigerchase is a situation.
 ResolveFunction of Rubber Tigerchase is "[ResolveEvent Rubber Tigerchase]". The level of Rubber Tigerchase is 6.
-The sarea of Rubber Tigerchase is "Fair".
+Sarea of Rubber Tigerchase is "Fair".
 when play begins:
 	add Rubber Tigerchase to BadSpots of FemaleList;
 	add Rubber Tigerchase to BadSpots of FurryList;
@@ -196,7 +196,7 @@ Lion Modifying	"Lion Modifying"
 
 Lion Modifying is a situation.
 ResolveFunction of Lion Modifying is "[ResolveEvent Lion Modifying]".
-The sarea of Lion Modifying is "Fair".
+Sarea of Lion Modifying is "Fair".
 [ Quest requires all three ]
 when play begins:
 	add Lion Modifying to BadSpots of MaleList;
@@ -233,7 +233,7 @@ Locked Lockers	"Locked Lockers"
 
 Locked Lockers is a situation.
 ResolveFunction of Locked Lockers is "[ResolveEvent Locked Lockers]". The level of Locked Lockers is 6.
-The sarea of Locked lockers is "Fair".
+Sarea of Locked lockers is "Fair".
 [ Quest requires all three ]
 when play begins:
 	add Locked Lockers to BadSpots of MaleList;

@@ -43,7 +43,7 @@ To The Unknown	"To The Unknown"
 
 To The Unknown is a situation.
 ResolveFunction of To The Unknown is "[ResolveEvent To The Unknown]".
-The sarea of To The Unknown is "Red".
+Sarea of To The Unknown is "Red".
 
 [RESOLUTION STAGES]
 [0: Never found anything]
@@ -59,7 +59,7 @@ Gift From Abyss	"Gift From Abyss"
 
 Gift From Abyss is a situation.
 ResolveFunction of Gift From Abyss is "".
-The sarea of Gift From Abyss is "Nowhere".
+Sarea of Gift From Abyss is "Nowhere".
 
 [RESOLUTION STAGES]
 [0: Never found the sword]
@@ -76,7 +76,7 @@ AbyssEdgeEnchantLevel	"AbyssEdgeEnchantLevel"
 
 AbyssEdgeEnchantLevel is a situation.
 ResolveFunction of AbyssEdgeEnchantLevel is "".
-The sarea of AbyssEdgeEnchantLevel is "Nowhere".
+Sarea of AbyssEdgeEnchantLevel is "Nowhere".
 
 [----------------------------------------]
 
@@ -88,7 +88,7 @@ Friend Of The Darkness	"Friend Of The Darkness"
 
 Friend Of The Darkness is a situation.
 ResolveFunction of Friend Of The Darkness is "".
-The sarea of Friend Of The Darkness is "Nowhere".
+Sarea of Friend Of The Darkness is "Nowhere".
 
 [RESOLUTION STAGES]
 [0: Dark Tyrant remains natively hostile, nothing happened]
@@ -106,7 +106,7 @@ Luminous Harem	"Luminous Harem"
 
 Luminous Harem is a situation.
 ResolveFunction of Luminous Harem is "".
-The sarea of Luminous Harem is "Nowhere".
+Sarea of Luminous Harem is "Nowhere".
 
 [RESOLUTION STAGES]
 [0: Never communicated with the void fireflies]
@@ -122,7 +122,7 @@ Odd Treasure	"Odd Treasure"
 
 Odd Treasure is a situation.
 ResolveFunction of Odd Treasure is "".
-The sarea of Odd Treasure is "Nowhere".
+Sarea of Odd Treasure is "Nowhere".
 
 [RESOLUTION STAGES]
 [0: Nothing happened so far]
@@ -136,7 +136,7 @@ ElkHeadReaperGender	"ElkHeadReaperGender"
 
 ElkHeadReaperGender is a situation.
 ResolveFunction of ElkHeadReaperGender is "".
-The sarea of ElkHeadReaperGender is "Nowhere".
+Sarea of ElkHeadReaperGender is "Nowhere".
 
 [RESOLUTION STAGES]
 [0: Gender undecided]
@@ -181,7 +181,7 @@ MirrorsKey	"MirrorsKey"
 
 MirrorsKey is a situation.
 ResolveFunction of MirrorsKey is "".
-The sarea of MirrorsKey is "Nowhere".
+Sarea of MirrorsKey is "Nowhere".
 
 [RESOLUTION STAGES]
 [0: Nothing happened so far]
@@ -2435,7 +2435,7 @@ name	desc	weight	object
 "null essence"	"It's pretty much a simple pitch black rock. You have acquired these from your last visits to the Void Realm."	1	null essence
 
 null essence is a grab object.
-the usedesc of null essence is "[null essence use]";
+Usedesc of null essence is "[null essence use]";
 
 to say null essence use:
 	say "     You attempt to eat the rock, and surprisingly, it completely dissolves in your mouth. It tastes terribly, though, like burnt coal, and it stings in your tongue like fire. If this was to be swallowed, you would probably have trouble breathing with so much pain down your throat, so you immediately spit it out. Well, that was a waste, maybe you're not supposed to ingest it?";
@@ -2462,7 +2462,7 @@ name	desc	weight	object
 "loose tentacle"	"A remnant of one of the Tentacle Abomination's many tendrils, which sometimes starts moving on its own."	1	loose tentacle
 
 loose tentacle is a grab object.
-the usedesc of loose tentacle is "[loose tentacle use]";
+Usedesc of loose tentacle is "[loose tentacle use]";
 
 to say loose tentacle use:
 	say "     You try to think of a way to use it, but honestly, you really can't figure out any. Perhaps someone else would?";
@@ -2478,7 +2478,7 @@ name	desc	weight	object
 "strange-colored bean"	"It is a bean with a strange color. The texture is similar to a gum."	1	strange-colored bean
 
 strange-colored bean is a grab object. it is not temporary.
-the usedesc of strange-colored bean is "[strange-colored bean use]";
+Usedesc of strange-colored bean is "[strange-colored bean use]";
 
 to say strange-colored bean use:
 	say "     It's just a bean, right? And it kind of looks like it tastes good... But you're wrong! Once you push it past your lips and into your mouth, it starts to burn intensely, and tastes like death. You immediately spit it out, and since you lacked the courage to bite it, it still looks intact. Best not do that again.";
@@ -2493,7 +2493,7 @@ name	desc	weight	object
 "unknown void relic one"	"Something you found in the Void. It has a shape like you have never seen before, with strange symbols engraved along its flat surface. "	3	unknown void relic one
 
 unknown void relic one is a grab object. it is not temporary.
-the usedesc of unknown void relic one is "[UVRone use]";
+Usedesc of unknown void relic one is "[UVRone use]";
 
 to say UVRone use:
 	say "     You try your best to decipher what is written in the relic, but these symbols are unlike anything you have seen before. After trying for a while, you decide to just put it away, unable to make anything out of it.";

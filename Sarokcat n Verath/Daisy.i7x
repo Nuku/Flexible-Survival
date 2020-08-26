@@ -39,8 +39,8 @@ AnalVirgin of Daisy is true.
 PenileVirgin of Daisy is true.
 SexuallyExperienced of Daisy is false.
 MainInfection of Daisy is "Mareslut".
-The description of Daisy is "[Daisydescribing]".
-The conversation of Daisy is { "Ooo!" }.
+Description of Daisy is "[Daisydescribing]".
+Conversation of Daisy is { "Ooo!" }.
 The fuckscene of Daisy is "[sexwithdaisy]".
 
 to say Daisydescribing:

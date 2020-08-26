@@ -9,7 +9,7 @@ Clotho	"Clotho"
 
 Clotho is a situation.
 ResolveFunction of Clotho is "[ResolveEvent Clotho]".
-The sarea of Clotho is "Red".
+Sarea of Clotho is "Red".
 
 to say ResolveEvent Clotho:
 	say "     'Hold on! Don't move! Just stay right where you are!' It's the volume of the words being spoken that stops you more than the words themselves. Not knowing what's happening, you freeze in place and look around to see what the hoopla is on about. What you find is a very... unusual human looking woman coming over to you and then trying to pull you out of your clothes. Not really understanding you wave the woman, who is less [']human['] than you had thought as she possesses two fluffy cat ears atop her head and a silver chain with an emblem of some kind of cat insignia embroidered into the front of a pendant hanging onto the chain itself, off as best you can. 'Oh will you stop moving around so much? I'm trying to get you out of these clothes so I can take your measurements.'";
@@ -29,7 +29,7 @@ Atropis	"Atropis"
 Atropis is a situation.
 ResolveFunction of Atropis is "[ResolveEvent Atropis]".
 Atropis is inactive.
-The sarea of Atropis is "High".
+Sarea of Atropis is "High".
 
 to say ResolveEvent Atropis:
 	say "     When something small but speedy knocks against your chest, you blink in surprise. Looking, you find a small kitten girl blinking up to you with very wide jade eyes. Smiling and then helping the other to stand on her own, you ask if she's lost before getting a quick shake of the head.";
@@ -54,7 +54,7 @@ Magic Cap	"Magic Cap"
 
 The Magic Cap is a situation.
 ResolveFunction of The Magic Cap is "[ResolveEvent The Magic Cap]". The level of The Magic Cap is 5.
-The sarea of The Magic Cap is "Museum".
+Sarea of The Magic Cap is "Museum".
 When play begins:
 	Add The Magic Cap to BadSpots of FurryList;
 	Add The Magic Cap to badspots of HermList;
@@ -77,7 +77,7 @@ to say ResolveEvent The Magic Cap:
 	else:
 		LineBreak;
 		say "     Not knowing why, you tug the statue tight against your chest and then chuckle nervously up at the three-headed guard dog before darting out the back side of the room.";
-		let bonus be (( the Dexterity of the player minus 5 ) divided by 2);
+		let bonus be (( Dexterity of Player minus 5 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
@@ -121,7 +121,7 @@ Fashion Statement	"Fashion Statement"
 
 Fashion Statement is a situation.
 ResolveFunction of Fashion Statement is "[ResolveEvent Fashion Statement]".
-The sarea of Fashion Statement is "Campus".
+Sarea of Fashion Statement is "Campus".
 
 to say ResolveEvent Fashion Statement:
 	say "     Wandering through the commercial area at the edge of the campus, you happen to come across a clothing store that looks as though it's just recently been ransacked. Mildly curious to know if anything has survived the mercilessness carnage you meander inside of the store on a whim. Looking around you find the pervasive funk of musk, both male and female, as well as mildew covered shelves, dried stains, glass littering the floor and assorted items tossed around rather appealing.";
@@ -151,7 +151,7 @@ to say ResolveEvent Fashion Statement:
 			now battleground is "Campus";
 			say "     With that little pest out of the way, you return to searching for your possible treasures in peace...";
 			let dice be a random number from 1 to 20;
-			let the bonus be (( the perception of the player minus 8 ) divided by 2);
+			let the bonus be (( Perception of Player minus 8 ) divided by 2);
 			if "Scavenger" is listed in feats of Player:
 				increase bonus by 4;
 			say "     You roll 1d20([dice])+[bonus] = [dice + bonus]: ";

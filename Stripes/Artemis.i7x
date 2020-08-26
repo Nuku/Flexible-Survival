@@ -39,7 +39,7 @@ Poor Kitty	"Poor Kitty"
 
 Poor Kitty is a situation.
 ResolveFunction of Poor Kitty is "[ResolveEvent Poor Kitty]".
-The sarea of Poor Kitty is "Fair".
+Sarea of Poor Kitty is "Fair".
 when play begins:
 	add Poor Kitty to BadSpots of FemaleList;
 	add Poor Kitty to BadSpots of FurryList;
@@ -107,14 +107,14 @@ Table of GameCharacterIDs (continued)
 object	name
 rubber tigress	"rubber tigress"
 
-rubber tigress is a pet. rubber tigress is a part of the player.
+rubber tigress is a pet. rubber tigress is a part of Player.
 NPCObject of rubber tigress is Artemis.
 understand "Artemis" as rubber tigress.
 printed name of rubber tigress is "Artemis".
-The description of rubber tigress is "[ArtemisDesc]".
-The weapon damage of rubber tigress is 10.
+Description of rubber tigress is "[ArtemisDesc]".
+Weapon Damage of rubber tigress is 10.
 The level of rubber tigress is 1.
-The Dexterity of rubber tigress is 15.
+Dexterity of rubber tigress is 15.
 The summondesc of rubber tigress is "[SummonArtemis]".
 The dismissdesc of rubber tigress is "[DismissArtemis]".
 The assault of rubber tigress is "[ArtemisAttack]".
@@ -141,7 +141,7 @@ object	name
 Artemis	"Artemis"
 
 Artemis is a woman.
-The description of Artemis is "[ArtemisDesc]".
+Description of Artemis is "[ArtemisDesc]".
 
 instead of sniffing Artemis:
 	say "[ArtemisScent]";

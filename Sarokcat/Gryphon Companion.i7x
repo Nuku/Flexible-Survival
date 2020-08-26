@@ -13,13 +13,13 @@ Table of GameCharacterIDs (continued)
 object	name
 Gryphoness	"Gryphoness"
 
-Gryphoness is a pet. The description of gryphoness is "[gryphonessdesc]". Gryphoness is a part of the player.
+Gryphoness is a pet. Description of gryphoness is "[gryphonessdesc]". Gryphoness is a part of Player.
 NPCObject of Gryphoness is Denise.
 understand "Denise" as gryphoness.
 printed name of gryphoness is "Denise".
-The weapon damage of Gryphoness is 10.
+Weapon Damage of Gryphoness is 10.
 The level of Gryphoness is 1.
-The Dexterity of Gryphoness is 20.
+Dexterity of Gryphoness is 20.
 The summondesc of Gryphoness is "[summongryphoness]".
 The dismissdesc of Gryphoness is "[dismissgryphoness]".
 The assault of Gryphoness is "[gryphonessassault]".
@@ -274,7 +274,7 @@ Lonely Gryphoness	"Lonely Gryphoness"
 
 Lonely Gryphoness is a situation.
 ResolveFunction of Lonely Gryphoness is "[ResolveEvent Lonely Gryphoness]".
-The sarea of Lonely Gryphoness is "Outside".
+Sarea of Lonely Gryphoness is "Outside".
 when play begins:
 	add Lonely Gryphoness to badspots of HermList;
 	add Lonely Gryphoness to BadSpots of FurryList;
@@ -301,7 +301,7 @@ to say ResolveEvent Lonely Gryphoness:
 			if Player consents:
 				LineBreak;
 				say "     As the gryphon backs away in panic, her eyes wide even as she backs away, you lower your weapon and try to convince her you mean her no harm.";
-				let bonus be (( the Charisma of the player minus 10 ) divided by 2);
+				let bonus be (( Charisma of Player minus 10 ) divided by 2);
 				let diceroll be a random number from 1 to 20;
 				say "You roll 1d20([diceroll])+[bonus]= [special-style-1][diceroll + bonus][roman type] vs [special-style-2]14[roman type] (Charisma Check):[line break]";
 				increase diceroll by bonus;
@@ -329,7 +329,7 @@ Gryphoness Nest	"Gryphoness Nest"
 
 Gryphoness Nest is a situation.
 ResolveFunction of Gryphoness Nest is "[ResolveEvent Gryphoness Nest]". Gryphoness Nest is inactive.
-The sarea of Gryphoness Nest is "Beach".
+Sarea of Gryphoness Nest is "Beach".
 when play begins:
 	add Gryphoness Nest to badspots of HermList;
 	add Gryphoness Nest to BadSpots of FurryList;
@@ -373,7 +373,7 @@ to say ResolveEvent Gryphoness Nest:
 		say "     Looking around the small cave, you find that it is actually stuffed with a strange variety of items, small piles of books, anime figurines, and CDs, stacked next to a pile of band posters. At least half of the small alcove however is taken up with a small pile of tattered cushions, that seem to make up the gryphons bed. Following the gryphon inside, you find that the two of you nearly fill up the small space, bumping into each other slightly, as you move around.";
 		say "     'Um just have a seat anywhere,' Denise says as she looks around at the small mess of a cave, before sighing and plopping down on the cushions herself, seeming slightly uncomfortable as you shift around until you are sprawled across the cushions next to her. Noticing she seems rather uncomfortable around you still, you ask her about herself and how she ended up like she currently is as a way to break the ice.";
 		LineBreak;
-		let bonus be (( the Charisma of the player minus 10 ) divided by 2);
+		let bonus be (( Charisma of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]= [special-style-1][diceroll + bonus][roman type] vs [special-style-2]14[roman type] (Charisma Check):[line break]";
 		increase diceroll by bonus;

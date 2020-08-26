@@ -160,7 +160,7 @@ instead of sniffing horseman cum:
 say "You open the lid for a moment and take a sniff. Smells much like amaretto, actually, and you're tempted to take a pull from the bottle.";
 
 horseman cum is a grab object. horseman cum is cum.
-the usedesc of horseman cum is "[horseman cum use]";
+Usedesc of horseman cum is "[horseman cum use]";
 
 to say horseman cum use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the nutty horseman cum run over your tongue and down your throat. This tastes so good, you can't stop yourself from continuing to down it. Suddenly, your head feels like it's stuffed with cotton, and the only thing you can think about is drinking more horse cum. You don't even notice when you've drunken the whole bottle, but eventually you realize you licked the bottle clean as best you could. Your mind returns to normal, but you can feel the cotton in your head lingering. You're not sure if you want to feel so... out of focus. But you know you want more horseman cum.";
@@ -179,7 +179,7 @@ name	desc	weight	object
 "horse fur"	"A tuft of dappled fur that looks like it has been pulled out of the coat of a horseman. It's nicely soft."	0	horse fur
 
 horse fur is a grab object.
-the usedesc of horse fur is "[HorseFurUse]".
+Usedesc of horse fur is "[HorseFurUse]".
 
 It is temporary.
 

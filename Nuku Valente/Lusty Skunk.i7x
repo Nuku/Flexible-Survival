@@ -12,7 +12,7 @@ Lusty Skunk	"Lusty Skunk"
 
 Lusty Skunk is a situation.
 ResolveFunction of Lusty Skunk is "[ResolveEvent Lusty Skunk]".
-The sarea of Lusty Skunk is "Forest".
+Sarea of Lusty Skunk is "Forest".
 
 skrp is a number that varies. skrp is usually -1.
 Lastskunkfuck is a number that varies. Lastskunkfuck is usually 250.

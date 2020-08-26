@@ -13,7 +13,7 @@ This is the Human Ending rule:
 		trigger ending "Human Ending";
 		if the player is pure:
 			say "[purehumanend]";
-		else if the player is facially human and the player is skintone human and the tail of the player is "" and Breast Size of Player <= 6 and Cock Length of Player <= 18 and Ball Size of Player <= 4 and Nipple Count of Player <= 2: [The player appears human to casual scrutiny and does not have hugely oversized junk that cannot be hidden.]
+		else if the player is facially human and the player is skintone human and the tail of Player is "" and Breast Size of Player <= 6 and Cock Length of Player <= 18 and Ball Size of Player <= 4 and Nipple Count of Player <= 2: [The player appears human to casual scrutiny and does not have hugely oversized junk that cannot be hidden.]
 			say "[passhumanend]";
 		else:
 			say "[parthumanend]";

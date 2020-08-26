@@ -66,9 +66,9 @@ SexuallyExperienced of Katherine is true.
 TwistedCapacity of Katherine is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Katherine is false. [steriles can't knock people up]
 MainInfection of Katherine is "German Shepherd Bitch".
-The description of Katherine is "[KatherineDescription]".
+Description of Katherine is "[KatherineDescription]".
 The scent of Katherine is "Katherine has a familiar, somewhat earthly scent common among dogs, but there is a hint of your own scent mixed in from all the times you've claimed her as yours.".
-The conversation of Katherine is { "Woof!" }.
+Conversation of Katherine is { "Woof!" }.
 The fuckscene of Katherine is "[KatherineSexCheck]".
 
 to say KatherineDescription:

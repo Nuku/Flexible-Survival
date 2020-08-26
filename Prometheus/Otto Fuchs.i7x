@@ -36,7 +36,7 @@ Object	Name
 Otto's Apartment	"Otto's Apartment"
 
 Otto's Apartment is a room.
-The description of Otto's Apartment is "[OttosApartmentDesc]".
+Description of Otto's Apartment is "[OttosApartmentDesc]".
 
 to say OttosApartmentDesc:
 	say "     The main room is clean and tidy, with the kitchen off of the living area through an archway. A door marked as the [']surgery['] can be seen in the hallway, presumably where Dr. Fuchs treats patients that don't heal properly. He seems to have done quite well for himself to have such a spacious abode. There isn't a trace of carnivorous furniture anywhere.";
@@ -83,8 +83,8 @@ SexuallyExperienced of Otto is true.
 TwistedCapacity of Otto is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Otto is false. [steriles can't knock people up]
 MainInfection of Otto is "Human".
-The description of Otto is "[OttoDesc]".
-The conversation of Otto is { "Interesting" }.
+Description of Otto is "[OttoDesc]".
+Conversation of Otto is { "Interesting" }.
 The scent of Otto is "[OttoScent]".
 [Custom Variables]
 OttoForm is a number that varies. OttoForm is usually 0.
@@ -191,7 +191,7 @@ Wounded Civilian	"Wounded Civilian"
 Wounded Civilian is a situation.
 ResolveFunction of Wounded Civilian is "[ResolveEvent Wounded Civilian]".
 The level of Wounded Civilian is 0.
-The sarea of Wounded Civilian is "Outside".
+Sarea of Wounded Civilian is "Outside".
 
 to say ResolveEvent Wounded Civilian:
 	WoundedCivilianEvent;
@@ -216,7 +216,7 @@ Doctor & Soldier is a situation.
 ResolveFunction of Doctor & Soldier is "[ResolveEvent Doctor & Soldier]".
 Prereq1 of Doctor & Soldier is Wounded Civilian.
 The level of Doctor & Soldier is 0.
-The sarea of Doctor & Soldier is "Outside".
+Sarea of Doctor & Soldier is "Outside".
 
 to say ResolveEvent Doctor & Soldier:
 	DoctorandSoldierEvent;
@@ -264,7 +264,7 @@ ResolveFunction of Doctor Through the City is "[ResolveEvent Doctor Through the 
 Prereq1 of Doctor Through the City is Doctor & Soldier.
 Prereq1Resolution of Doctor Through City is { 1, 2 }.
 The level of Doctor Through the City is 0.
-The sarea of Doctor Through the City is "Outside".
+Sarea of Doctor Through the City is "Outside".
 
 to say ResolveEvent Doctor Through the City:
 	DoctorThroughtheCityEvent;

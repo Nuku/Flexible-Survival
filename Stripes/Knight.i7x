@@ -379,9 +379,9 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "stray links"	"A few stray links of chainmail that appear to have come off of something larger."	1	stray links
 
-stray links is a grab object. It is infectious. The strain of stray links is "Knight".
+stray links is a grab object. It is infectious. Strain of stray links is "Knight".
 
-The usedesc of stray links is "[straylinkseffect]";
+Usedesc of stray links is "[straylinkseffect]";
 
 to say straylinkseffect:
 	LineBreak;

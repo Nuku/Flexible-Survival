@@ -65,8 +65,8 @@ OralVirgin of Percy is true.
 Virgin of Percy is true.
 AnalVirgin of Percy is true.
 
-The description of Percy is "[PercyDesc]".
-The conversation of Percy is { "mew" }.
+Description of Percy is "[PercyDesc]".
+Conversation of Percy is { "mew" }.
 Percy is in Ironscale Hollow.
 
 The scent of Percy is "[PercyScent]";
@@ -295,7 +295,7 @@ instead of going east from Urban Forest while (HP of Percy < 1):
 		say "     ([link]N[as]n[end link]) - No, you don't know what's behind that door.";
 		if player consents:[Knock]
 			LineBreak;
-			say "     With no other options available to you, you do the one sensible thing left and knock. 'One moment!' you hear from the other side, the voice seeming a little flustered. [if the perception of the player > 16]You can hear some shuffling and mumbling as it sounds as if he's quickly cleaning up before the tip tapping of his claws against the floor get closer to the door. There is a decently loud clunk sound as the door's lock is disengaged at last[else]Things go quiet for a moment, leaving you to wonder if this is such a good idea, until you finally hear the clunk of the lock being released[end if].";
+			say "     With no other options available to you, you do the one sensible thing left and knock. 'One moment!' you hear from the other side, the voice seeming a little flustered. [if Perception of Player > 16]You can hear some shuffling and mumbling as it sounds as if he's quickly cleaning up before the tip tapping of his claws against the floor get closer to the door. There is a decently loud clunk sound as the door's lock is disengaged at last[else]Things go quiet for a moment, leaving you to wonder if this is such a good idea, until you finally hear the clunk of the lock being released[end if].";
 			say "     The door slowly swings open with a creak, revealing the scaly creature from before. Now that you are much closer than your previous encounter, you can see him in more detail. From the front, he has smooth, sand-colored skin that shows off his lean muscles despite his naturally stocky build. The scales that covers his back are a matte-steel color with a yellow-gold trim on the edges. His tail is long and broad, more on the flat side, but still clearly powerful since in his worry, it knocks over a coat rack beside him, sending it rolling across the room for a few feet. His eyes are a mossy-green, and his face bears a mixed expression of nervousness, embarrassment, and slight surprise at seeing you again.";
 			WaitLineBreak;
 			say "     'Oh, uh... It's you again!' he says, then starts fidgeting with his claws. 'I'm sorry about what happened back there. I got a little spooked and... You don't seem dangerous, so why don't you come in for a little bit so that I can make up for being rude earlier,' he says before stepping aside and gesturing for you to enter. 'My name is Perceval, by the way. Most seem to just call me Percy the Pangolin. Not the most creative but it's the one thing people seem to remember about me.' You introduce yourself[if player is not defaultnamed] as [name of player][end if] before looking around.";
@@ -328,7 +328,7 @@ instead of going east from Forest Burrow Entrance while (HP of Percy < 2):
 	say "     ([link]N[as]n[end link]) - No, you don't know what's behind that door";
 	if player consents:[Knock]
 		LineBreak;
-		say "     With no other options available to you, you do the one sensible thing left and knock. 'One moment!' you hear from the other side, the voice seeming a little flustered. [if the perception of the player > 16]You can hear some shuffling and mumbling as it sounds as if he's quickly cleaning up before the tip tapping of his claws against the floor get closer to the door. There is a decently loud clunk sound as the door's lock is disengaged at last[else]Things go quiet for a moment, leaving you to wonder if this is such a good idea, until you finally hear the clunk of the lock being released[end if].";
+		say "     With no other options available to you, you do the one sensible thing left and knock. 'One moment!' you hear from the other side, the voice seeming a little flustered. [if Perception of Player > 16]You can hear some shuffling and mumbling as it sounds as if he's quickly cleaning up before the tip tapping of his claws against the floor get closer to the door. There is a decently loud clunk sound as the door's lock is disengaged at last[else]Things go quiet for a moment, leaving you to wonder if this is such a good idea, until you finally hear the clunk of the lock being released[end if].";
 		say "     The door slowly swings open with a creak, revealing the scaly creature from before. Now that you are much closer than your previous encounter, you can see him in more detail. From the front, he has smooth, sand-colored skin that shows off his lean muscles despite his naturally stocky build. The scales that covers his back are a matte-steel color with a yellow-gold trim on the edges. His tail is long and broad, more on the flat side, but still clearly powerful since in his worry, it knocks over a coat rack beside him, sending it rolling across the room for a few feet. His eyes are a mossy-green, and his face bears a mixed expression of nervousness, embarrassment, and slight surprise at seeing you again.";
 		WaitLineBreak;
 		say "     'Oh, uh... It's you again!' he says, then starts fidgeting with his claws. 'I'm sorry about what happened back there. I got a little spooked and... You don't seem dangerous, so why don't you come in for a little bit so that I can make up for being rude earlier,' he says before stepping aside and gesturing for you to enter. 'My name is Perceval, by the way. Most seem to just call me Percy the Pangolin. Not the most creative but it's the one thing people seem to remember about me.' You introduce yourself[if player is not defaultnamed] as [name of player][end if] before looking around.";
@@ -354,7 +354,7 @@ Object	Name
 Forest Burrow Entrance	"Forest Burrow Entrance"
 
 Forest Burrow Entrance is a room. Forest Burrow Entrance is east of Urban Forest.
-The description of Forest Burrow Entrance is "[ForestBurrow desc]".
+Description of Forest Burrow Entrance is "[ForestBurrow desc]".
 earea of Forest Burrow Entrance is "Forest".
 
 to say ForestBurrow desc:
@@ -374,7 +374,7 @@ Ironscale Hollow	"Ironscale Hollow"
 
 Ironscale Hollow is a room. It is fasttravel. Ironscale Hollow is sleepsafe. It is private.
 Ironscale Hollow is east of Forest Burrow Entrance.
-The description of Ironscale Hollow is "[IronscaleHollow desc]".
+Description of Ironscale Hollow is "[IronscaleHollow desc]".
 
 the scent of Ironscale Hollow is "It smells of dirt and iron.".
 

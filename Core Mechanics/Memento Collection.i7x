@@ -11,7 +11,7 @@ object	name
 Memento Collection	"Memento Collection"
 
 Memento Collection is a person.
-The description of Memento Collection is "     Looking at your memento collection in the empty shelves of your private room in the bunker, you see:  [link]hunt[as]sort Bargain Bin[end link]ing a bargain, or [link]sort[as]sort Bargain Bin[end link]ing through the bin?".
+Description of Memento Collection is "     Looking at your memento collection in the empty shelves of your private room in the bunker, you see:  [link]hunt[as]sort Bargain Bin[end link]ing a bargain, or [link]sort[as]sort Bargain Bin[end link]ing through the bin?".
 
 the linkaction of Bargain Bin is "Possible Actions: [link]smell[as]smell Bargain Bin[end link], [link]sort[as]sort Bargain Bin[end link][line break]";
 

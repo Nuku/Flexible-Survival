@@ -242,8 +242,8 @@ name	desc	weight	object
 "psionic larva"	"A small, wiggling grub. You could certainly keep it as emergency food, but ever since you took it with you, you have had some weird dreams"	1	psionic larva
 
 psionic larva is a grab object.
-psionic larva is infectious. The strain of psionic larva is "Feral Shaft Beast".
-the usedesc of psionic larva is "You feel compelled to devour the wiggling grub, and you repress your inhibitions as you bite off its head. Surprisingly, it has a really good, tangy, familiar taste, and you waste no time in devouring the rest of your 'snack'. After you've finished, you gag a bit at the musky aroma still clinging to your palate, feeling equal parts repulsed and aroused by what you just ate.";
+psionic larva is infectious. Strain of psionic larva is "Feral Shaft Beast".
+Usedesc of psionic larva is "You feel compelled to devour the wiggling grub, and you repress your inhibitions as you bite off its head. Surprisingly, it has a really good, tangy, familiar taste, and you waste no time in devouring the rest of your 'snack'. After you've finished, you gag a bit at the musky aroma still clinging to your palate, feeling equal parts repulsed and aroused by what you just ate.";
 
 the scent of psionic larva is "The musky scent of sex wafts from the wriggling grub.".
 

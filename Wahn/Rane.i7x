@@ -24,7 +24,7 @@ Rooftop Rumble	"Rooftop Rumble"
 
 Rooftop Rumble is a situation.
 ResolveFunction of Rooftop Rumble is "[ResolveEvent Rooftop Rumble]". The level of Rooftop Rumble is 7.
-The sarea of Rooftop Rumble is "Warehouse".
+Sarea of Rooftop Rumble is "Warehouse".
 
 to say ResolveEvent Rooftop Rumble:
 	if HP of Rane is 0:
@@ -184,10 +184,10 @@ Wandering Blue Oni	"Wandering Blue Oni"
 
 Wandering Blue Oni is a situation.
 ResolveFunction of Wandering Blue Oni is "[ResolveEvent Wandering Blue Oni]".
-The Prereq1 of Wandering Blue Oni is Rooftop Rumble.
+Prereq1 of Wandering Blue Oni is Rooftop Rumble.
 The Prereq1Resolution of Wandering Blue Oni is { 1, 2 }.
 The level of Wandering Blue Oni is 5.
-The sarea of Wandering Blue Oni is "Park".
+Sarea of Wandering Blue Oni is "Park".
 
 to say ResolveEvent Wandering Blue Oni:
 	say "     As you move through the overgrown park's wilderness, you have an eye out for Rane, the blue oni whom you met in the warehouse district... without much success. Lots of trees and large bushes everywhere make it easy for someone to conceal himself in the woods, and you don't think there's much chance of finding the blue devil if he doesn't want to be spotted. A bit disappointed from the fruitless search, you wander back towards the entrance of the park - only to suddenly hear a voice from somewhere to the side: 'Hey there, sexy. Been waiting for you slow ass...'";
@@ -603,8 +603,8 @@ SexuallyExperienced of Rane is true.
 TwistedCapacity of Rane is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Rane is false. [steriles can't knock people up]
 MainInfection of Rane is "Blue Oni".
-The description of Rane is "[RaneDesc]".
-The conversation of Rane is { "Oh, hello." }.
+Description of Rane is "[RaneDesc]".
+Conversation of Rane is { "Oh, hello." }.
 lastfuck of Rane is usually 555.
 
 to say RaneDesc:

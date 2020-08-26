@@ -290,8 +290,8 @@ name	desc	weight	object
 "ebonflame scale"	"Coarse and dense, the scale still feels warm in your hand."	1	ebonflame scale
 
 ebonflame scale is a grab object.
-ebonflame scale is infectious. The strain of ebonflame scale is "Ebonflame Drake".
-the usedesc of ebonflame scale is "You swallow the dark scale. It's extremely bitter and hot to the taste, like eating something charred black by an open fire.".
+ebonflame scale is infectious. Strain of ebonflame scale is "Ebonflame Drake".
+Usedesc of ebonflame scale is "You swallow the dark scale. It's extremely bitter and hot to the taste, like eating something charred black by an open fire.".
 
 instead of sniffing ebonflame scale:
 	say "It smells of something burnt to a crisp.";

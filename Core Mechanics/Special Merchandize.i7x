@@ -9,7 +9,7 @@ name	desc	weight	object
 "bliss tablet"	"A purple tablet pressed into the shape of a heart."	1	bliss tablet
 
 bliss tablet is a grab object.
-the usedesc of bliss tablet is "[blissUse]".
+Usedesc of bliss tablet is "[blissUse]".
 It is temporary.
 
 to say blissUse:
@@ -43,7 +43,7 @@ name	desc	weight	object
 "powerup tablet"	"A bright red tablet pressed into the shape of a flexing arm."	1	powerup tablet
 
 powerup tablet is a grab object.
-the usedesc of powerup tablet is "[PowerUpUse]".
+Usedesc of powerup tablet is "[PowerUpUse]".
 It is temporary.
 
 to say PowerUpUse:
@@ -84,7 +84,7 @@ name	desc	weight	object
 
 pixie dust is a grab object. It is temporary.
 
-the usedesc of pixie dust is "[pixie dust use]".
+Usedesc of pixie dust is "[pixie dust use]".
 
 to say pixie dust use:
 	say "     You get the pixie dust out and let a few specks of it trickle between your fingers and back into the container. To use it, you have to choose what size you want to be, then sprinkle the glittery stuff over your body.";

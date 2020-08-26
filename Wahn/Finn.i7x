@@ -7,7 +7,7 @@ Missing Farm Hand	"Missing Farm Hand"
 
 Missing Farm Hand is a situation.
 ResolveFunction of Missing Farm Hand is "[ResolveEvent Missing Farm Hand]". The level of Missing Farm Hand is 5. Missing Farm Hand is inactive.
-The sarea of Missing Farm Hand is "Plains".
+Sarea of Missing Farm Hand is "Plains".
 
 FinnTrackingProgress is a number that varies. FinnTrackingProgress is usually 0.
 
@@ -28,7 +28,7 @@ Section 1 - Events
 to say ResolveEvent Missing Farm Hand:
 	if FinnTrackingProgress is 0:
 		say "     Moving to the far end of the farm proper, you check out the usual patrol route along its perimeter, easily visible in the nanite-enhanced fast-growing grass. The stalks of it seem too tenacious to be beaten by being regularly walked on with horseman hooves, so it is just path of trodden-down grass, not actually a dirt track, despite the obvious heavy foot traffic. From what Anthony said and your own observations, one or another of the farmhands makes the circuit around the farm at least once an hour. Now if you only could find a trace of what happened to Finn...";
-		let bonus be (( the Perception of the player minus 10 ) divided by 2);
+		let bonus be (( Perception of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], (Perception-Check)[line break]";
 		LineBreak;
@@ -249,8 +249,8 @@ SexuallyExperienced of Finn is true.
 TwistedCapacity of Finn is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Finn is false. [steriles can't knock people up]
 MainInfection of Finn is "Horseman".
-The description of Finn is "[FinnDesc]".
-The conversation of Finn is { "<This is nothing but a placeholder!>" }.
+Description of Finn is "[FinnDesc]".
+Conversation of Finn is { "<This is nothing but a placeholder!>" }.
 The scent of Finn is "     Finn smells nicely masculine, with a little bit of fur, straw and sweat in the mix. Seems like he's not adverse to doing some good and solid work for his boss at the farm.".
 
 to say FinnDesc:

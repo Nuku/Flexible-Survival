@@ -210,9 +210,9 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "Chipped tooth"	"A rather large chipped piece of tooth, obviously knocked off of something with tremendous fangs"	1	Chipped tooth
 
-Chipped tooth is a grab object. Understand "tooth" and "chipped" as Chipped tooth. Chipped tooth is infectious. The strain of Chipped tooth is "Sabretooth".
+Chipped tooth is a grab object. Understand "tooth" and "chipped" as Chipped tooth. Chipped tooth is infectious. Strain of Chipped tooth is "Sabretooth".
 
-The usedesc of Chipped tooth is "Looking at the small chipped piece of tooth, you find yourself rubbing it between your hands slightly, enjoying the feel of its strange texture. Suddenly, you let out a small yelp as the sharp part of the tooth cuts you, and you drop the piece of tooth as you rub the small cut. Looking around, you can't see where the bit of tooth ended up, and sigh as you give up on your trophy and continue on your way.".
+Usedesc of Chipped tooth is "Looking at the small chipped piece of tooth, you find yourself rubbing it between your hands slightly, enjoying the feel of its strange texture. Suddenly, you let out a small yelp as the sharp part of the tooth cuts you, and you drop the piece of tooth as you rub the small cut. Looking around, you can't see where the bit of tooth ended up, and sigh as you give up on your trophy and continue on your way.".
 
 instead of sniffing Chipped tooth:
 	say "The large fang somehow smells quite old despite looking rather new.";

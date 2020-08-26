@@ -308,9 +308,9 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "Satyress Wine"	"A red plastic cup with a small sample of some dark wine you found left behind by one of the sexy satyresses on the college campus. It looks like there is about enough left for a single mouthful."	1	Satyress Wine
 
-Satyress Wine is a grab object. Understand "wine" as Satyress Wine. Satyress Wine is infectious. The strain of Satyress Wine is "Satyress".
+Satyress Wine is a grab object. Understand "wine" as Satyress Wine. Satyress Wine is infectious. Strain of Satyress Wine is "Satyress".
 
-The usedesc of Satyress Wine is "[SatyressWineUsing]";
+Usedesc of Satyress Wine is "[SatyressWineUsing]";
 
 to say SatyressWineUsing:
 	say "Taking out the cup with its small mouthful of dark wine, you swirl the liquid around in the cup for a second then toss it back, gasping as the heady wine burns its way down your throat and makes your head spin. That's definitely the good stuff!";

@@ -8,7 +8,7 @@ Demon Chase	"Demon Chase"
 
 Demon Chase is a situation.
 ResolveFunction of Demon Chase is "[ResolveEvent Demon Chase]".
-The sarea of Demon Chase is "Outside".
+Sarea of Demon Chase is "Outside".
 
 when play begins:
 	add Demon Chase to badspots of DemonList;
@@ -105,7 +105,7 @@ Intercepted Bike Courier	"Intercepted Bike Courier"
 
 Intercepted Bike Courier is a situation.
 ResolveFunction of Intercepted Bike Courier is "[ResolveEvent Intercepted Bike Courier]".
-The sarea of Intercepted Bike Courier is "Outside".
+Sarea of Intercepted Bike Courier is "Outside".
 
 when play begins:
 	add Intercepted Bike Courier to badspots of FeralList;
@@ -146,7 +146,7 @@ Abandoned Uniform	"Abandoned Uniform"
 
 Abandoned Uniform is a situation.
 ResolveFunction of Abandoned Uniform is "[ResolveEvent Abandoned Uniform]".
-The sarea of Abandoned Uniform is "Outside".
+Sarea of Abandoned Uniform is "Outside".
 
 to say ResolveEvent Abandoned Uniform:
 	say "     Walking through the chaotic streets of the inner city, you are forced to keep an eye out for horny and aggressive creatures all around. At any time, an attack might come from the front, the sides, behind you, or even from above, given that there are flying infected around. All of this results in your attention being elsewhere as you pass one unassuming section of sidewalk and almost slip on a few shell casings scattered on the ground. Catching yourself on a street lantern, you look down and see that someone got off several shots, with more casings forming a little trail towards a nearby alley. Curiosity bids you to follow it, and just a few steps into the alley, you find something left behind the person who must have been the shooter: a shredded police uniform lies on the ground there, still bearing the nametag of 'L. Nielson'. Thankfully, it is free from blood-stains and appears to have simply been ripped apart by explosive growth its wearer went through.";
@@ -180,7 +180,7 @@ Abandoned Pizza Delivery Car	"Abandoned Pizza Delivery Car"
 
 Abandoned Pizza Delivery Car is a situation.
 ResolveFunction of Abandoned Pizza Delivery Car is "[ResolveEvent Abandoned Pizza Delivery Car]".
-The sarea of Abandoned Pizza Delivery Car is "Outside".
+Sarea of Abandoned Pizza Delivery Car is "Outside".
 
 to say ResolveEvent Abandoned Pizza Delivery Car:
 	say "     Exploring the city, you come upon an abandoned pizza delivery car. The small red machine bears the logo of 'Tony's Pizza Shop' and is just large enough to hold one person, with a small heated compartment behind the driver for the food to be delivered. On the odd chance that there might be anything left inside, you search the vehicle, but sadly do not come across any food or drink items. What you find instead is a small dash-cam set up under the windshield, complete with a tape inside that seems to have run till its end. Curiosity demands that you take the video tape out and put it into your pack. Maybe there'll be something interesting to see on it?";
@@ -207,7 +207,7 @@ Dressing Room Spycam	"Dressing Room Spycam"
 
 Dressing Room Spycam is a situation.
 ResolveFunction of Dressing Room Spycam is "[ResolveEvent Dressing Room Spycam]".
-The sarea of Dressing Room Spycam is "High".
+Sarea of Dressing Room Spycam is "High".
 
 when play begins:
 	add Dressing Room Spycam to badspots of HermList;
@@ -243,7 +243,7 @@ Drone Wreckage	"Drone Wreckage"
 
 Drone Wreckage is a situation.
 ResolveFunction of Drone Wreckage is "[ResolveEvent Drone Wreckage]".
-The sarea of Drone Wreckage is "High".
+Sarea of Drone Wreckage is "High".
 
 when play begins:
 	add Drone Wreckage to BadSpots of MaleList;
@@ -306,7 +306,7 @@ Lost Explorer	"Lost Explorer"
 
 Lost Explorer is a situation.
 ResolveFunction of Lost Explorer is "[ResolveEvent Lost Explorer]".
-The sarea of Lost Explorer is "Warehouse".
+Sarea of Lost Explorer is "Warehouse".
 
 when play begins:
 	add Lost Explorer to badspots of FeralList;
@@ -363,7 +363,7 @@ Abandoned Fitness Dojo	"Abandoned Fitness Dojo"
 
 Abandoned Fitness Dojo is a situation.
 ResolveFunction of Abandoned Fitness Dojo is "[ResolveEvent Abandoned Fitness Dojo]".
-The sarea of Abandoned Fitness Dojo is "High".
+Sarea of Abandoned Fitness Dojo is "High".
 
 when play begins:
 	add Abandoned Fitness Dojo to BadSpots of MaleList;

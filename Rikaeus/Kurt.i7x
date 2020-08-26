@@ -22,7 +22,7 @@ Surprise Shark Encounter	"Surprise Shark Encounter"
 
 Surprise Shark Encounter is a situation.
 ResolveFunction of Surprise Shark Encounter is "[ResolveEvent Surprise Shark Encounter]".
-The sarea of Surprise Shark Encounter is "Atlantis".
+Sarea of Surprise Shark Encounter is "Atlantis".
 
 when play begins:
 	add Surprise Shark Encounter to BadSpots of MaleList;
@@ -54,7 +54,7 @@ Predator's Lunch is a situation.
 ResolveFunction of Predator's Lunch is "[ResolveEvent Predator's Lunch]".
 Prereq1 of Predator's Lunch is Surprise Shark Encounter.
 Predator's Lunch is inactive.
-The sarea of Predator's Lunch is "Atlantis".
+Sarea of Predator's Lunch is "Atlantis".
 
 when play begins:
 	add Predator's Lunch to BadSpots of MaleList;
@@ -90,7 +90,7 @@ Predator's Club Night is a situation.
 ResolveFunction of Predator's Club Night is "[ResolveEvent Predator's Club Night]".
 Predator's Club Night is inactive.
 Prereq1 of Predator's Club Night is Predator's Lunch.
-The sarea of Predator's Club Night is "Nowhere".
+Sarea of Predator's Club Night is "Nowhere".
 
 when play begins:
 	add Predator's Club Night to badspots of MaleList;
@@ -159,8 +159,8 @@ AnalVirgin of Kurt is true.
 PenileVirgin of Kurt is true.
 SexuallyExperienced of Kurt is false.
 MainInfection of Kurt is "".
-The description of Kurt is "[KurtDesc]".
-The conversation of Kurt is { "<This is nothing but a placeholder!>" }.
+Description of Kurt is "[KurtDesc]".
+Conversation of Kurt is { "<This is nothing but a placeholder!>" }.
 The scent of Kurt is "     The shark-morph smells like a variety of spices, foods, varnished wood and water. You kind of expected the variety of smells from the fact he hangs out in the market area playing his guitar. But you inwardly shrug, guessing it fits him.".
 
 to say KurtDesc:

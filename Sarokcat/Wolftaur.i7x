@@ -28,7 +28,7 @@ To say Wolftaur loss:
 	project the Figure of Wolftaur_hard_icon;
 	say "     The large gray-furred wolftaur staggers back, surprise evident on the beast's muzzle as you manage to gain the advantage. Shooting you one last incredulous glance, he turns tail and runs, moving swiftly on all four legs while his arms knock branches and bushes out of the way.";
 	LineBreak;
-	let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
+	let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus] against 15 (Dexterity check)";
 	LineBreak;
@@ -296,7 +296,7 @@ this is the wtaurpounce rule:		[double-damage pouncing]
 		now absorb is dam;
 	if absorb > 0:
 		say "You prevent [special-style-1][absorb][roman type] damage!";
-	decrease HP of the player by dam;
+	decrease HP of Player by dam;
 	increase HP of Player by absorb;
 	follow the player injury rule;
 	say "You are [descr].";

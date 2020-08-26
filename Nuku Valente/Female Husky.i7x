@@ -397,7 +397,7 @@ name	desc	weight	object
 "husky bitch fur"	"A tuft of grey and white fur that looks like it has been pulled out of the coat of a husky. It's nicely soft."	0	husky bitch fur
 
 husky bitch fur is a grab object.
-the usedesc of husky bitch fur is "[HuskyBitchFurUse]".
+Usedesc of husky bitch fur is "[HuskyBitchFurUse]".
 
 It is temporary.
 
@@ -416,8 +416,8 @@ name	desc	weight	object
 husky bitch cum is a grab object.
 husky bitch cum is cum.
 husky bitch cum is infectious.
-The strain of husky bitch cum is "Husky Alpha".
-the usedesc of husky bitch cum is "[husky bitch cum use]";
+Strain of husky bitch cum is "Husky Alpha".
+Usedesc of husky bitch cum is "[husky bitch cum use]";
 
 to say husky bitch cum use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy fluid cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
@@ -433,10 +433,10 @@ instead of sniffing husky bitch cum:
 
 husky bitch milk is a grab object.
 husky bitch milk is milky.
-The purified of husky bitch milk is "distilled milk".
+Purified of husky bitch milk is "distilled milk".
 husky bitch milk is infectious.
-The strain of husky bitch milk is "Husky Bitch".
-the usedesc of husky bitch milk is "[husky bitch milk use]";
+Strain of husky bitch milk is "Husky Bitch".
+Usedesc of husky bitch milk is "[husky bitch milk use]";
 
 to say husky bitch milk use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the canine milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";

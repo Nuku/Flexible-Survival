@@ -12,7 +12,7 @@ Astroslide Field Showers is a room.
 Astroslide Field Showers is north of Astroslide Field Locker-room.
 
 [Not used as a classic room]
-The description of Astroslide Field Showers is "".
+Description of Astroslide Field Showers is "".
 
 instead of going to Astroslide Field Showers:
 	say "[astroslideShowersStart]";

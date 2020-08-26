@@ -184,15 +184,15 @@ Table of GameCharacterIDs (continued)
 object	name
 doberman companion	"doberman companion"
 
-doberman companion is a pet. doberman companion is a part of the player.
+doberman companion is a pet. doberman companion is a part of Player.
 NPCObject of doberman companion is Spike.
 understand "Spike" as doberman companion.
 understand "Doberman" as doberman companion.
 printed name of doberman companion is "Spike".
-The description of doberman companion is "[SpikeDesc]".
-The weapon damage of doberman companion is 15.
+Description of doberman companion is "[SpikeDesc]".
+Weapon Damage of doberman companion is 15.
 The level of doberman companion is 1.
-The Dexterity of doberman companion is 10.
+Dexterity of doberman companion is 10.
 The summondesc of doberman companion is "[SummonSpike]".
 The dismissdesc of doberman companion is "[DismissSpike]".
 The assault of doberman companion is "[one of]Spike pounces your opponent, landing some good hits.[or]The anthro doberman by your side lands a kick on the leg of your opponent, hurting and distracting them.[or]An aggressive bark by Spike distracts your enemy a moment - long enough for you to score a quick hit![or]Snarling, Spike snaps for your enemy with his teeth, leaving a gash as he is fought off.[at random]".
@@ -263,8 +263,8 @@ SexuallyExperienced of Spike is true.
 TwistedCapacity of Spike is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Spike is false. [steriles can't knock people up]
 MainInfection of Spike is "Doberman Male".
-The description of Spike is "[SpikeDesc]".
-The conversation of Spike is { "<This is nothing but a placeholder!>" }.
+Description of Spike is "[SpikeDesc]".
+Conversation of Spike is { "<This is nothing but a placeholder!>" }.
 The scent of Spike is "     Spike's scent of dog is almost drowned out by some sort of after-shave he's found out in the city. It's a good, masculine scent, you only wish he wouldn't be using quite as much of it.".
 
 to say SpikeDesc:

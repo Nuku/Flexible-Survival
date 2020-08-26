@@ -70,7 +70,7 @@ Carry out zpcturnon:
 
 Section 4 - Handling (Internal)
 
-the usedesc of zpc is "[zpc_use]";
+Usedesc of zpc is "[zpc_use]";
 
 to say zpc_use:
 	if emap is 0:

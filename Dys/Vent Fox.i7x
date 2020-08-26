@@ -109,7 +109,7 @@ instead of going east from Mall Atrium while (VentFoxEncounterCount < 2 and a ra
 Section 2 - Location
 
 ventcover is an object. It is in Smith Haven Mall Lot West. It is fixed in place. Understand "cover" as ventcover.
-The description of ventcover is "[VentCoverDescription]".
+Description of ventcover is "[VentCoverDescription]".
 
 KnockOnVent is an action applying to nothing.
 Understand "knock on it" as KnockOnVent.
@@ -192,8 +192,8 @@ AnalVirgin of Vent is true.
 PenileVirgin of Vent is true.
 SexuallyExperienced of Vent is false.
 MainInfection of Vent is "Latex Fox".
-The description of Vent is "[VentDescription]".
-The conversation of Vent is { "blah blah blarg" }.
+Description of Vent is "[VentDescription]".
+Conversation of Vent is { "blah blah blarg" }.
 The scent of Vent is "[VentScent]".
 Vent is in Maintenance Garage.
 The linkaction of Vent is "Possible Actions: [link]talk[as]talk vent[end link], [link]smell[as]smell vent[end link], [link]fuck[as]fuck vent[end link], [link]request[as]request vent[end link][line break]".
@@ -224,7 +224,7 @@ Object	Name
 Maintenance Garage	"Maintenance Garage"
 
 Maintenance Garage is a room.
-The description of Maintenance Garage is "[MaintenanceGarageDescription]".
+Description of Maintenance Garage is "[MaintenanceGarageDescription]".
 
 to say MaintenanceGarageDescription:
 	say "     Vent's new home is sparsely decorated. A few workbenches line the rear wall, and a hydraulic lift is off to one side of the room. Aside from that, there's not much to see. Off to one corner, you can see Vent. He gives you a toothy grin as he sees you, eager to spend time with you.";

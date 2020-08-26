@@ -221,14 +221,14 @@ fox cum is a grab object. fox cum is cum.
 instead of sniffing fox cum:
 	say "The bottled semen has a very distinct and musky smell to it. It reminds you of the woods.";
 
-the usedesc of fox cum is "[FoxCumUse]";
+Usedesc of fox cum is "[FoxCumUse]";
 
 to say FoxCumUse:
 	say "You pop the lid off the container before chugging it down. Dropping the now empty vial, you start scratching all over yourself as your body suddenly heats up.";
 	if Libido of Player < 75:
 		now Libido of Player is 75;
 
-fox cum is infectious. The strain of fox cum is "Feral Fox".
+fox cum is infectious. Strain of fox cum is "Feral Fox".
 
 ]
 Feral Fox ends here.

@@ -57,7 +57,7 @@ when play begins:
 [   1 = Strict sex autofire                                                  ]
 [   2 = Loose sex autofire (wait 2 days after having sex)                    ]
 
-[ DoranPlayerBlueballing - Boolean, Doran Blue-Balling of the player         ]
+[ DoranPlayerBlueballing - Boolean, Doran Blue-Balling the player            ]
 [   false = Initial. Nothing happens                                         ]
 [   true = Player has been blue-balled in the scene                          ]
 
@@ -562,7 +562,7 @@ Rocky Outcropping	"Rocky Outcropping"
 
 Rocky Outcropping is a room. It is fasttravel. It is private. It is sleepsafe.
 Outcropping Exit is a door. Outcropping Exit is dangerous. The marea of Outcropping Exit is "Plains". Outcropping Exit is undescribed. Outcropping Exit is east of Rocky Outcropping.
-the description of Rocky Outcropping is "[RockyOutcroppingDescription]".
+Description of Rocky Outcropping is "[RockyOutcroppingDescription]".
 to say RockyOutcroppingDescription:
 	dorangendercheck;
 	say "     The cavernous alcove, of which Doran resides in, is quite large and spacious for the [gdragon]. You find it littered with various bits and baubles [ghe]'s no doubt stumbled upon and collected for [ghis] amusement, though nothing of particular interest or value catches your eye. It's a little unkempt, but isn't all that bad all things considered. [if daytimer is day]For the most part, light floods in from the cave's entrance, though there's also a campfire near the cave's center which still contains a few errant, glowing embers, indicative of its recent use[else]Faint starlight creeps in from the outside, though the main source of illumination remains [ghis] roaring campfire at the cave's center[end if]. No doubt the surrounding outcropping of stone shields the place from the wind, making the cave relatively calm and quiet.";
@@ -599,7 +599,7 @@ PenileVirgin of Doran is true.
 SexuallyExperienced of Doran is false.
 MainInfection of Doran is "Peculiar Dragon".
 the linkaction of Doran is "Possible Actions: [link]talk[as]talk doran[end link], [link]smell[as]smell doran[end link], [link]fuck[as]fuck doran[end link], [link]request[as]request doran[end link], [link]discuss[as]discuss doran[end link][line break]".
-the description of Doran is "[DoranLook]".
+Description of Doran is "[DoranLook]".
 the fuckscene of Doran is "[DoranSex]".
 
 instead of sniffing Rocky Outcropping:

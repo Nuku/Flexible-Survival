@@ -93,7 +93,7 @@ cur is a text that varies.[@Tag:NotSaved]
 Section - Ranch
 
 Ranch is a Construct.
-The description of it is "This farm clearly specializes in animals. It seems dominated by [one of]cow[or]goats[or]deer[or]chicken[or]sheep[sticky random]. Farmers tend to the flock, protecting them from the dangers of the wasteland in return for a tribute of meat and sustenance. The smell of animal is strong, their bodies and waste creating a distinct 'animal farm' smell[if agricultural zone is adjacent to Ranch]. The nearby plant farm seems to be quite a boon, as grains and plants are brought over to help feed the animals[end if].".
+Description of it is "This farm clearly specializes in animals. It seems dominated by [one of]cow[or]goats[or]deer[or]chicken[or]sheep[sticky random]. Farmers tend to the flock, protecting them from the dangers of the wasteland in return for a tribute of meat and sustenance. The smell of animal is strong, their bodies and waste creating a distinct 'animal farm' smell[if agricultural zone is adjacent to Ranch]. The nearby plant farm seems to be quite a boon, as grains and plants are brought over to help feed the animals[end if].".
 The cost of it is 120.
 The validation of it is ranchcheck rule.
 The proximity of it is "You smell animals to the";
@@ -118,7 +118,7 @@ This is the ranchcheck rule:
 Section - Agricultural Zone
 
 Agricultural Zone is a Construct.
-The description of it is "A massive, flat area filled with rows upon rows of [one of]wheat[or]corn[or]tomato stalks[or]apple trees[or]grape vines[or]marijuana[sticky random]. You feel at peace here, the wildlife of the area unperterbed and singing happily. The rustic look quite an eyesore for the city-folk. (Increases farmers' efficency by offering organized plot of farmland (No effect on hunters))".
+Description of it is "A massive, flat area filled with rows upon rows of [one of]wheat[or]corn[or]tomato stalks[or]apple trees[or]grape vines[or]marijuana[sticky random]. You feel at peace here, the wildlife of the area unperterbed and singing happily. The rustic look quite an eyesore for the city-folk. (Increases farmers' efficency by offering organized plot of farmland (No effect on hunters))".
 The cost of it is 60.
 The validation of agricultural zone is agricheck rule.
 The proximity of it is "You smell tilled earth to the";
@@ -141,7 +141,7 @@ This is the agricheck rule:
 Section - Well
 
 Well is a construct.
-The description of it is "A simple source of water. A salvaged bucket has been provided to lower down and bring up some, mostly delicious, water. You see some [bodyadj of tribe of Player] people hanging around at most times of the day, socializing near the wellspring of life.".
+Description of it is "A simple source of water. A salvaged bucket has been provided to lower down and bring up some, mostly delicious, water. You see some [bodyadj of tribe of Player] people hanging around at most times of the day, socializing near the wellspring of life.".
 The cost of it is 50.
 The validation of it is agricheck rule.
 The proximity of it is "You can see people hanging around a well to the".
@@ -161,7 +161,7 @@ This is the well rule:
 Section - Shelter
 
 Shelter is a construct.
-The description of it is "A crude shelter made by refurbishing a building that was already there. Still, some soft beds and a decent job keeping out cold breezes does a lot to make the people feel at home.".
+Description of it is "A crude shelter made by refurbishing a building that was already there. Still, some soft beds and a decent job keeping out cold breezes does a lot to make the people feel at home.".
 The cost of it is 25.
 The proximity of it is "You can smell someone's dinner coming from the".
 

@@ -27,7 +27,7 @@ Object	Name
 Jadako's Room	"Jadako's Room"
 
 Jadako's Room is a room.
-The description of Jadako's Room is "[jadakoroomdesc]".
+Description of Jadako's Room is "[jadakoroomdesc]".
 
 To say jadakoroomdesc:
 	say "     Jadako's room is a standard college dorm room. It's got different video game and anime posters hanging throughout, most depicting buff male characters. A television sits on a table with a collection of different DVDs, all of some anime or movie. A large, open glass window is on the other end of the room. Atop its windowsill is a collection of exotic sex toys, all proudly on display. The sheets to Jadako's bed are thrown about, suggesting he doesn't do a great job of staying tidy.";
@@ -69,9 +69,9 @@ AnalVirgin of Jadako is false.
 PenileVirgin of Jadako is false.
 SexuallyExperienced of Jadako is true.
 MainInfection of Jadako is "".
-The description of Jadako is "[jadakodesc]".
-The conversation of Jadako is { "<This is nothing but a placeholder!>" }.
-The scent of Jadako is "The lithe feline smells of exotic cologne, covering a heavy scent of sex and sweat.".
+Description of Jadako is "[jadakodesc]".
+Conversation of Jadako is { "<This is nothing but a placeholder!>" }.
+Scent of Jadako is "The lithe feline smells of exotic cologne, covering a heavy scent of sex and sweat.".
 
 To say jadakodesc:
 	say "     Jadako is an anthro feline. His fur has a variety of different colors, mostly oranges, blacks, and whites. His large cat ears stand straight up, with a single piercing in his left ear. His frame is thin and wiry, but not without muscle. He wears no clothes, displaying his sheathed cock and long tail. You can't currently see it, but you know it is a bright red shaft, humanoid looking but covered in smooth barbs. His golfball sized testicles hang below the sheath, covered in his orange fur. Jadako notices you checking him out, as he flexes and performs a couple of poses to show off his body more. He lets out a smooth purr, clearly enjoying the attention.";
@@ -107,9 +107,9 @@ AnalVirgin of Joseph is false.
 PenileVirgin of Joseph is false.
 SexuallyExperienced of Joseph is true.
 MainInfection of Joseph is "".
-The description of Joseph is "[josephdesc]".
-The conversation of Joseph is { "<This is nothing but a placeholder!>" }.
-The scent of Joseph is "The bulky canine smells of sweat and potent male musk.".
+Description of Joseph is "[josephdesc]".
+Conversation of Joseph is { "<This is nothing but a placeholder!>" }.
+Scent of Joseph is "The bulky canine smells of sweat and potent male musk.".
 
 To say josephdesc:
 	say "     Joseph is an anthro canine. He has shaggy brown fur covering his body, uniform in color. Stemming from the sides of his head are floppy canine ears. The man is muscular and bulky, without a single hint of fat. His thighs are thick with muscle, showing how much he works out. The coach wears his official jacket, colored a bright green with gold colored cuffs, zipper collar, and a gold 'W' on the back, most likely standing for Weber. He also wears a pair of short, black athletic shorts which go down a little more than halfway down his thighs. A small hole is cut in the back for Joseph's fluffy tail. You can see a large bulge in his shorts however, which seems to occasionally twitch. Looking up, you see Joseph staring at Jadako's bare ass, tail raised up. Joseph sees that you notice, and looks away with embarrassment.";

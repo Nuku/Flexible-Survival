@@ -20,7 +20,7 @@ Definition: A person is not lonely:
 before examining a pet (called x):
 	if debugactive is 1:
 		say "DEBUG -> Traits of [x]: [Traits of x][line break]";
-	if x is the companion of the player:
+	if x is the Companion of Player:
 		increase score by 0;
 	else:
 		say "I don't see any [x] around here at the moment.";
@@ -30,7 +30,7 @@ Table of GameCharacterIDs (continued)
 object	name
 Nullpet	"Nullpet"
 
-Nullpet is a pet. Nullpet is a part of the player;
+Nullpet is a pet. Nullpet is a part of Player;
 
 DismissPlayerPet is an action applying to nothing.
 understand "ally dismiss" as DismissPlayerPet.
@@ -130,13 +130,13 @@ Table of GameCharacterIDs (continued)
 object	name
 Latex Vixen	"Latex Vixen"
 
-Latex Vixen is a pet. Latex Vixen is a part of the player.
+Latex Vixen is a pet. Latex Vixen is a part of Player.
 understand "Example" as Latex Vixen.
 printed name of Latex Vixen is "Example".
-The description of Latex Vixen is "Sleek latex lines run over hir bright green and black form. Shi has a narrow snout with oddly solid looking teeth, often bared in a grin or smile. She has ripe C cupped breasts, a long shiny tail and a cock that stands out against her black belly, as pink as the belly is deep black.".
-The weapon damage of latex vixen is 10.
+Description of Latex Vixen is "Sleek latex lines run over hir bright green and black form. Shi has a narrow snout with oddly solid looking teeth, often bared in a grin or smile. She has ripe C cupped breasts, a long shiny tail and a cock that stands out against her black belly, as pink as the belly is deep black.".
+Weapon Damage of latex vixen is 10.
 The level of latex vixen is 4.
-The dexterity of latex vixen is 12.
+Dexterity of latex vixen is 12.
 The summondesc of latex vixen is "You feel hands settle on your midsection from behind as soft breasts press against your back. The shiny vixen steps into view from behind, ready to follow you wherever you go and see to your various 'needs'.".
 The assault of latex vixen is "[Vixattack]".
 

@@ -14,7 +14,7 @@ Birthing Time	"Birthing Time"
 
 Birthing Time is a situation.
 ResolveFunction of Birthing Time is "[ResolveEvent Birthing Time]".
-The sarea of Birthing Time is "Zoo".
+Sarea of Birthing Time is "Zoo".
 
 when play begins:
 	add Birthing Time to BadSpots of FurryList;
@@ -46,7 +46,7 @@ Girl Time	"Girl Time"
 
 Girl Time is a situation.
 ResolveFunction of Girl Time is "[ResolveEvent Girl Time]".
-The sarea of Girl Time is "Red".
+Sarea of Girl Time is "Red".
 
 when play begins:
 	add Girl Time to BadSpots of FurryList;
@@ -79,7 +79,7 @@ Snake Charmer	"Snake Charmer"
 
 Snake Charmer is a situation.
 ResolveFunction of Snake Charmer is "[ResolveEvent Snake Charmer]".
-The sarea of Snake Charmer is "Zoo".
+Sarea of Snake Charmer is "Zoo".
 
 to say ResolveEvent Snake Charmer:
 	say "     While making your way through the zoo, you come upon a very attention-grabbing sight. At first, what you think is a man with a large snake curled around him actually turns out to be a giant naga-like creature hissing and flicking its tongue around wildly while bobbing his scaled head back and forth around the front of an entranced and unmutated pelican. The little bird seems not to mind that it is literally within the arms of danger as the naga hisses quietly at the avian before running its blunted nose along the neck of the white feathered creature held aloft into the serpent's mottled hands. Terror laces a cold trail down your spine as you watch what happens next as the snake-man pulls back from the bird and then opens its mouth wide, and then wider, before pulling the captivated bird towards it. You find yourself entrapped the same as the avian getting swallowed alive as you watch the bird slowly disappear down into the naga's throat. It only takes a few seconds for the reptile to be done, and before long the last of the bird's webbed feet are disappearing inside of the hungry serpent's maw. A happy hiss flows out from the naga's mouth as you watch the predator swallow the bulge of the bird down into his throat and, still in your slightly bewildered frame of mind, you can't help but continue to track the pelican as the feathery creature slowly vanishes into the bulge of the snake-man's body.";
@@ -96,7 +96,7 @@ Spiritual Love	"Spiritual Love"
 
 Spiritual Love is a situation.
 ResolveFunction of Spiritual Love is "[ResolveEvent Spiritual Love]".
-The sarea of Spiritual Love is "Park".
+Sarea of Spiritual Love is "Park".
 
 when play begins:
 	add Girl Time to BadSpots of FurryList;

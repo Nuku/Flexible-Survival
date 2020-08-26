@@ -406,7 +406,7 @@ Wandering Helot	"Wandering Helot"
 
 Wandering Helot is a situation.
 ResolveFunction of Wandering Helot is "[ResolveEvent Wandering Helot]".
-The sarea of Wandering Helot is "High".
+Sarea of Wandering Helot is "High".
 
 WanderingHelotTimer is a number that varies. [@TagNotSaved]
 WanderingHelotTimer is usually 20000.
@@ -587,7 +587,7 @@ Helot Captive	"Helot Captive"
 
 Helot Captive is a situation.
 ResolveFunction of Helot Captive is "[ResolveEvent Helot Captive]".
-The sarea of Helot Captive is "Campus".
+Sarea of Helot Captive is "Campus".
 
 [Single Event at the campus with a captive Helot and a human possibly being turned into a Helot by being fucked by a Spartan]
 [Resolution Stages                           ]
@@ -649,7 +649,7 @@ Generous Helot	"Generous Helot"
 
 Generous Helot is a situation.
 ResolveFunction of Generous Helot is "[ResolveEvent Generous Helot]".
-The sarea of Generous Helot is "Campus".
+Sarea of Generous Helot is "Campus".
 
 GenerousHelotTimer is a number that varies. [@TagNotSaved]
 GenerousHelotTimer is usually 20000.

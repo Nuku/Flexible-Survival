@@ -76,7 +76,7 @@ War Declaration	"War Declaration"
 
 War Declaration is a situation.
 ResolveFunction of War Declaration is "[ResolveEvent War Declaration]".
-The sarea of War Declaration is "Nowhere".
+Sarea of War Declaration is "Nowhere".
 
 when play begins:
 	add War Declaration to BadSpots of MaleList;
@@ -113,7 +113,7 @@ Assault On The Gym	"Assault On The Gym"
 Assault On The Gym is a situation.
 ResolveFunction of Assault On The Gym is "[ResolveEvent Assault On The Gym]".
 Assault On The Gym is inactive.
-The sarea of Assault On The Gym is "Campus".
+Sarea of Assault On The Gym is "Campus".
 
 when play begins:
 	add Assault On The Gym to BadSpots of MaleList;
@@ -172,7 +172,7 @@ Raid On The Fountain	"Raid On The Fountain"
 Raid On The Fountain is a situation.
 ResolveFunction of Raid On The Fountain is "[ResolveEvent Raid On The Fountain]".
 Raid On The Fountain is inactive.
-The sarea of Raid On The Fountain is "Campus".
+Sarea of Raid On The Fountain is "Campus".
 
 when play begins:
 	add Raid On The Fountain to BadSpots of MaleList;
@@ -236,7 +236,7 @@ Siege Of The Belltower	"Siege Of The Belltower"
 Siege Of The Belltower is a situation.
 ResolveFunction of Siege Of The Belltower is "[ResolveEvent Siege Of The Belltower]".
 Siege Of The Belltower is inactive.
-The sarea of Siege Of The Belltower is "Campus".
+Sarea of Siege Of The Belltower is "Campus".
 
 when play begins:
 	add Siege Of The Belltower to BadSpots of MaleList;
@@ -297,7 +297,7 @@ Battle For Tenvale Campus	"Battle For Tenvale Campus"
 Battle For Tenvale Campus is a situation.
 ResolveFunction of Battle For Tenvale Campus is "[ResolveEvent Battle For Tenvale Campus]".
 Battle For Tenvale Campus is inactive.
-The sarea of Battle For Tenvale Campus is "Campus".
+Sarea of Battle For Tenvale Campus is "Campus".
 
 when play begins:
 	add Battle For Tenvale Campus to BadSpots of MaleList;
@@ -351,7 +351,7 @@ Peace Between Communities	"Peace Between Communities"
 Peace Between Communities is a situation.
 ResolveFunction of Peace Between Communities is "[ResolveEvent Peace Between Communities]".
 Peace Between Communities is inactive.
-The sarea of Peace Between Communities is "Campus".
+Sarea of Peace Between Communities is "Campus".
 
 when play begins:
 	add Peace Between Communities to BadSpots of MaleList;

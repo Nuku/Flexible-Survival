@@ -134,8 +134,8 @@ AlexandraCreampieCount is a number that varies.
 AlexandraPregCount is a number that varies.
 AlexandraGrowingPups is a number that varies.
 
-The description of Alexandra is "[if HP of Alexandra < 50][alexandradesc_bg][else][alexandradesc_gg][end if]".
-The conversation of Alexandra is { "Yes Boss!" }.
+Description of Alexandra is "[if HP of Alexandra < 50][alexandradesc_bg][else][alexandradesc_gg][end if]".
+Conversation of Alexandra is { "Yes Boss!" }.
 AlexandraBackstory is a number that varies.
 AlexandraNPC is a list of numbers that varies.
 Alexandracoffee is a truth state that varies. Alexandracoffee is usually false.
@@ -1341,7 +1341,7 @@ AlexandraHornyTrait	"AlexandraHornyTrait"
 AlexandraHornyTrait is a situation.
 ResolveFunction of AlexandraHornyTrait is "".
 AlexandraHornyTrait is inactive.
-The sarea of AlexandraHornyTrait is "Nowhere".
+Sarea of AlexandraHornyTrait is "Nowhere".
 
 after going to Grey Abbey Library while (AlexandraHornyTrait is active and AlexandraHornyTrait is not resolved and a random chance of 1 in 2 succeeds):
 	AlexandraHornyTrait_Event;
@@ -1375,7 +1375,7 @@ AlexandraBroodmTrait	"AlexandraBroodmTrait"
 AlexandraBroodmTrait is a situation.
 ResolveFunction of AlexandraBroodmTrait is "".
 AlexandraBroodmTrait is inactive.
-The sarea of AlexandraBroodmTrait is "Nowhere".
+Sarea of AlexandraBroodmTrait is "Nowhere".
 
 after going to Grey Abbey Library while (AlexandraBroodmTrait is active and AlexandraBroodmTrait is not resolved and a random chance of 1 in 2 succeeds):
 	AlexandraBroodmTrait_Event;
@@ -1418,7 +1418,7 @@ AlexandraPlayersBitch	"AlexandraPlayersBitch"
 AlexandraPlayersBitch is a situation.
 ResolveFunction of AlexandraPlayersBitch is "".
 AlexandraPlayersBitch is inactive.
-The sarea of AlexandraPlayersBitch is "Nowhere".
+Sarea of AlexandraPlayersBitch is "Nowhere".
 
 after going to Grey Abbey Library while (AlexandraPlayersBitch is active and AlexandraPlayersBitch is not resolved and a random chance of 1 in 2 succeeds):
 	AlexandraPlayersBitch_Scene;

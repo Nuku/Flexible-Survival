@@ -110,8 +110,8 @@ SexuallyExperienced of Nadia is true.
 TwistedCapacity of Nadia is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Nadia is true. [steriles can't knock people up]
 MainInfection of Nadia is "".
-The description of Nadia is "[NadiaDesc]".
-The conversation of Nadia is { "Mew!" }.
+Description of Nadia is "[NadiaDesc]".
+Conversation of Nadia is { "Mew!" }.
 
 NadiaDescription is a number that varies. NadiaDescription is usually 1.
 NadiaFertilityCounter is a number that varies. NadiaFertilityCounter is usually 0.
@@ -577,7 +577,7 @@ Bird Troubles	"Bird Troubles"
 
 Bird Troubles is a situation.
 ResolveFunction of Bird Troubles is "[ResolveEvent Bird Troubles]". The level of Bird Troubles is 5. [meeting event in which you can take her home]
-The sarea of Bird Troubles is "Campus".
+Sarea of Bird Troubles is "Campus".
 when play begins:
 	add Bird Troubles to BadSpots of FemaleList;
 
@@ -631,7 +631,7 @@ Lost Chick	"Lost Chick"
 
 Lost Chick is a situation.
 ResolveFunction of Lost Chick is "[ResolveEvent Lost Chick]". The level of Lost Chick is 5. Lost Chick is inactive.
-The sarea of Lost Chick is "Campus".
+Sarea of Lost Chick is "Campus".
 
 when play begins:
 	add Lost Chick to BadSpots of FemaleList; [female gymnasts]

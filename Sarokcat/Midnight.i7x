@@ -49,8 +49,8 @@ AnalVirgin of Midnight is true.
 PenileVirgin of Midnight is false.
 SexuallyExperienced of Midnight is true.
 MainInfection of Midnight is "Panther Herm".
-The description of Midnight is "A large and powerful black panther is reclining lazily up against the gift shop counter, its golden eyes watching both you and Angie with lazy arrogance.".
-The conversation of Midnight is { "Mrowl!" }.
+Description of Midnight is "A large and powerful black panther is reclining lazily up against the gift shop counter, its golden eyes watching both you and Angie with lazy arrogance.".
+Conversation of Midnight is { "Mrowl!" }.
 
 instead of linkactioning Midnight:
 	say "Possible Actions: [link]talk[as]talk Midnight[end link], [link]smell[as]smell Midnight[end link], [link]fuck[as]fuck Midnight[end link], [link]mimic[as]mimic Midnight[end link][line break]";
@@ -79,7 +79,7 @@ carry out Midnightmimicking:
 		stop the action;
 	now lastMidnightmimiced is turns;
 	say "     'Ah! You want to learn a few tricks from Midnight?' Angie says happily as you study the large feline closely. 'You can learn a lot about how to move and pounce if you watch a panther for a while, here I'll help you out,' she says as she coaxes Midnight to his feet. You watch with interest as Angie convinces the large cat to stalk around the small shop where you can watch, the powerful feline pouncing and leaping around and seeming to enjoy himself as he does so. Watching the play of those powerful muscles ripple underneath the black panthers skin, you find yourself trying to imitate the large cat's smooth and swift movements as he prowls around the store.";
-	let bonus be (( the Intelligence of the player minus 10 ) divided by 2);
+	let bonus be (( Intelligence of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 	increase diceroll by bonus;
@@ -157,7 +157,7 @@ FindingMidnight	"FindingMidnight"
 
 FindingMidnight is a situation.
 ResolveFunction of FindingMidnight is "[ResolveEvent FindingMidnight]".
-the sarea of FindingMidnight is "Zoo".
+Sarea of FindingMidnight is "Zoo".
 
 midnightsighted is a number that varies.
 
@@ -165,7 +165,7 @@ midnightsighted is a number that varies.
 to say ResolveEvent FindingMidnight:
 	if midnightsighted is 2:
 		say "     Traveling down the zoo paths yet again, you find your feet leading you back to the area where you encountered the large panther earlier, a smile tugging at your face as you remember how excited Angie looked at the thought of the large cat. Deciding it can't hurt to check, you return to the stage where the cat was lounging earlier, only to find the stage empty, you sigh in disappointment, and turn to leave, wondering how you will break the news to the obviously excited Angie. Though as you turn around, you are shocked to notice the large black panther you were looking for, is lying languidly by the exit to the show area, sprawled out in a picture of feline indolence as he stares at you with amusement. Feeling somewhat nervous and excited in the presence of the large exotic beast, you reach into your pack and pull out the small specially treated bundle of catnip, its exotic scent filling the already pheromone laced air with its own special aroma. Midnight's golden eyes fix on the small bundle as you try to coax the large beast to follow you back to the gift shop where Angie is waiting, any doubts you might have had about bringing the two together completely forgotten in the heady sexually charged situation.";
-		let bonus be (( the Charisma of the player minus 10 ) divided by 2);
+		let bonus be (( Charisma of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus] (Charisma-Check)[line break][line break]";
 		increase diceroll by bonus;

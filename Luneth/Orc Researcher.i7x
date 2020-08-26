@@ -9,7 +9,7 @@ Orc Researcher	"Orc Researcher"
 
 Orc Researcher is a situation.
 ResolveFunction of Orc Researcher is "[ResolveEvent Orc Researcher]".
-The sarea of Orc Researcher is "Warehouse".
+Sarea of Orc Researcher is "Warehouse".
 
 to say ResolveEvent Orc Researcher:
 	say "     As you make your way around the buildings in the Warehouse District, you stop in front of a dilapidated building that more than likely wasn't doing very well long before the nanite incident began. You notice a flickering light in one of the rooms on the second floor. Wondering if it might be a potential survivor hiding out, or at the very least a place that might have some supplies, you start heading to the front door. Sadly, the front door is a crumbling mess, almost as if someone or something smashed their way in. You step back and glance around to look for another potential entrance. However, you wonder if you should even attempt to enter this building after seeing the state of the door.";
@@ -55,7 +55,7 @@ name	desc	weight	object
 orc pill case is a grab object.
 
 It is not temporary.
-the usedesc of orc pill case is "[OrcPillCaseUse]".
+Usedesc of orc pill case is "[OrcPillCaseUse]".
 
 instead of sniffing orc pill case:
 	say "     The case itself doesn't have any real smell, but the pills inside have a very strong musky scent.";

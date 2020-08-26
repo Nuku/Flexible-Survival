@@ -68,11 +68,11 @@ AnalVirgin of Zoe is true.
 PenileVirgin of Zoe is true.
 SexuallyExperienced of Zoe is false.
 MainInfection of Zoe is "".
-The Loyalty of Zoe is normally 0.
-The XP of Zoe is normally 0.
+Loyalty of Zoe is usually 0.
+XP of Zoe is usually 0.
 
-The description of Zoe is "[ZoeDesc]".
-The conversation of Zoe is {"Placeholder"}.
+Description of Zoe is "[ZoeDesc]".
+Conversation of Zoe is {"Placeholder"}.
 instead of sniffing Zoe:
 	say "Zoe's fur retains the smell of the paint she uses during her getaways.";
 
@@ -556,7 +556,7 @@ Part B - Suspicious Van
 Suspicious Van is a closed container. It is openable.
 Suspicious Van is locked.
 Suspicious Van is in Smith Haven Mall Lot West.
-The description of Suspicious Van is "[suspiciousVanDesc]".
+Description of Suspicious Van is "[suspiciousVanDesc]".
 
 instead of sniffing Suspicious Van:
 	say "It smells of oil[if Resolution of Rabbit Tagger is 1], and there is a lingering smell of male sweat and cum in the vicinity[end if].";
@@ -600,8 +600,8 @@ Wolverine Pimp is a man.
 Wolverine Pimp is in Nowhere.
 Understand "van guard" as Wolverine Pimp.
 
-The description of Wolverine Pimp is "You gauge the anthro wolverine sitting in a chair, next to the van. He wears a tattered security guard outfit, which he seems to have [']upgraded['] by ripping out the sleeves. His clothes are tattered with stains, which you suspect may not be water or grape juice. The guard raises an eyebrow at you. 'What are you looking at?'".
-The conversation of Wolverine Pimp is { "[one of]'Looking for fun times? [bold type]Trade me[roman type] some food or beverage, and you'll get a turn.'[or]'The girl's here of her own will, I swear. Not that you can disprove anything... Heh heh!'[or]'Watch out if you want a pass with the bunny: she bites. Don't forget to use the ring gag.'[or]'I wonder when the boss will let her go. Hell, I'd rather wonder [italic type]if[roman type] the boss will let her go. Ha ha ha...'[at random]" }.
+Description of Wolverine Pimp is "You gauge the anthro wolverine sitting in a chair, next to the van. He wears a tattered security guard outfit, which he seems to have [']upgraded['] by ripping out the sleeves. His clothes are tattered with stains, which you suspect may not be water or grape juice. The guard raises an eyebrow at you. 'What are you looking at?'".
+Conversation of Wolverine Pimp is { "[one of]'Looking for fun times? [bold type]Trade me[roman type] some food or beverage, and you'll get a turn.'[or]'The girl's here of her own will, I swear. Not that you can disprove anything... Heh heh!'[or]'Watch out if you want a pass with the bunny: she bites. Don't forget to use the ring gag.'[or]'I wonder when the boss will let her go. Hell, I'd rather wonder [italic type]if[roman type] the boss will let her go. Ha ha ha...'[at random]" }.
 
 instead of sniffing Wolverine Pimp:
 	say "The wolverine gives off an intimidating, bestial smell.";
@@ -678,7 +678,7 @@ Rabbit Tagger	"Rabbit Tagger"
 
 Rabbit Tagger is a situation.
 ResolveFunction of Rabbit Tagger is "".
-The sarea of Rabbit Tagger is "Nowhere".
+Sarea of Rabbit Tagger is "Nowhere".
 
 [Event trigger]
 instead of going to Smith Haven Mall Lot West while (a random chance of 1 in 3 succeeds and Rabbit Tagger is not resolved):

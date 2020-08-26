@@ -291,11 +291,11 @@ instead of sniffing spider webbing:
 	say "The spider webbing has a faintly enticing scent.";
 
 spider webbing is a grab object.
-the usedesc of spider webbing is "[spider webbing use]";
+Usedesc of spider webbing is "[spider webbing use]";
 
 to say spider webbing use:
 	say "You pull and tug at the spider webbing. It's surprisingly tough! But it's also quite sticky. You try to clean it off, but eventually it just seems to melt into your skin...";
 
-spider webbing is infectious. The strain of spider webbing is "Spidergirl".
+spider webbing is infectious. Strain of spider webbing is "Spidergirl".
 
 Spidergirl ends here.

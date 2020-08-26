@@ -25,7 +25,7 @@ Injured Felinoid	"Injured Felinoid"
 
 Injured Felinoid is a situation.
 ResolveFunction of Injured Felinoid is "[ResolveEvent Injured Felinoid]". The level of Injured Felinoid is 6.
-The sarea of Injured Felinoid is "Park".
+Sarea of Injured Felinoid is "Park".
 when play begins:
 	add Injured Felinoid to BadSpots of MaleList;
 	add Injured Felinoid to BadSpots of FurryList;
@@ -118,14 +118,14 @@ Table of GameCharacterIDs (continued)
 object	name
 Felinoid Companion	"Felinoid Companion"
 
-Felinoid Companion is a pet. Felinoid Companion is a part of the player.
+Felinoid Companion is a pet. Felinoid Companion is a part of Player.
 NPCObject of Felinoid Companion is Klauz.
 understand "Klauz" as Felinoid Companion.
 printed name of Felinoid Companion is "Klauz".
-The description of Felinoid Companion is "[Klauzdesc]".
-The weapon damage of Felinoid Companion is 15.
+Description of Felinoid Companion is "[Klauzdesc]".
+Weapon Damage of Felinoid Companion is 15.
 The level of Felinoid Companion is 1.
-The Dexterity of Felinoid Companion is 10.
+Dexterity of Felinoid Companion is 10.
 The summondesc of Felinoid Companion is "[SummonKlauz]".
 The dismissdesc of Felinoid Companion is "[DismissKlauz]".
 The assault of Felinoid Companion is "[one of]Your felinoid companion rakes your attacker with his claws![or]Klauz rubs up against your opponent, distracting them greatly![or]Klauz's musk distracts your target, allowing you to get in another strike![or]Taking advantage of your foe's distraction, your companion strikes out with his claws.[or]Your ally manages to grab onto your opponent, providing you with an opening![or]Klauz charges into the melee to protect you, and your opponent seems so startled at the ferocious appearance of this new combat, they leave themselves open to attack.[or]Bracing himself against the pain, your injured companion leaps forward into the combat, knocking your opponent flat.[or]The felinoid you helped returns the favor by running in and tripping your opponent up![or]Klauz pounces on your opponent, trying to wrestle them to the ground.[at random]".
@@ -187,7 +187,7 @@ AnalVirgin of Klauz is true.
 PenileVirgin of Klauz is false.
 SexuallyExperienced of Klauz is true.
 MainInfection of Klauz is "Felinoid".
-The description of Klauz is "[Klauzdesc]".
+Description of Klauz is "[Klauzdesc]".
 
 instead of sniffing the Felinoid companion:
 	say "[KlauzScent]";
@@ -393,7 +393,7 @@ to say felinoidpet_purem:
 		say "     When he's done, the big cat quickly dismounts and pushes you over with a paw. Weak and lost in a haze of lust, you flop onto the ground, welcoming the more dominant cat's cock into your mouth so you can suck it clean of the last traces of semen. Only once you're done cleaning him and he's padded off does the musk-fueled lust gradually leave and you come back to your senses enough to get up and continue on.";
 		NPCSexAftermath Player receives "AssFuck" from Klauz;
 		NPCSexAftermath Player receives "OralCock" from Klauz;
-		now the Libido of Player is Libido of Player / 2;
+		now Libido of Player is Libido of Player / 2;
 	else if the remainder after dividing lust of felinoid companion by 3 is 2:
 		if Nipple Count of Player > 0 and Breast Size of Player > 0:
 			say "     The feline rears up and nuzzles at your chest, burying snout against your soft [breast size desc of Player] breasts, nuzzling slowly from one to the next before he traps a firm teat in his mouth and begins to nurse hungrily at you. Loud slurping sounds fill the area as he bites lightly and pulls at your firm teat, coaxing all the milk that you can produce.";
@@ -403,14 +403,14 @@ to say felinoidpet_purem:
 		say "     You can hold back no longer and grab his head, squeezing at his ears as you begin to fill him with your cum. Each twitch is responded to in kind in him, wriggling in pleasure as he suckles up the treat[if Ball Size of Player > 4]. Your massive balls unload so much seed that he seems to have trouble getting it all down. His belly swells with it and he mewls around the shaft in his mouth, pushing at your balls with a paw as you flex and fire into the captive feline[end if].";
 		say "     When your climax tapers off, he carefully extracts himself from your shaft, licking it clean as he goes. With a last, fond, nuzzle at you, he sits and begins to preen himself. [if Cock Count of Player > 1]This is all the more needed with the seed your extra male meat produced. Streaks of gray fluid against his pelt, being cleaned and swallowed with motions of his cat tongue. [end if]He is soon cleaned and ready to continue, leaving you to straighten yourself up.";
 		NPCSexAftermath Klauz receives "OralCock" from Player;
-		now the Libido of Player is Libido of Player / 2;
+		now Libido of Player is Libido of Player / 2;
 	else:
 		say "     After a few more cursory licks, the felinoid moves to show off his own pulsing erection and hefty balls. Knowing he wants you to return the favor, mewling as you crouch down. Your soft furry fingers tease across the feline member from base to tip before trailing back down to heft his large nuts. He purrs with pleasure at the examination, but clearly wants more, pawing at your side lightly with a soft paw.";
 		say "     Thinking of no better way to satisfy your companion, you get lower and flick your tongue across the tip, tasting the first bits of prefluid that he is already leaking freely in his rut. He loses patience with your slowness and coils on himself, grabbing your head to guide you down onto the member fully, pressing that barbed feline cock across your rough tongue with a loud roar of dominance.";
 		say "     Tail thrashing, he starts to fuck your face in earnest. His paws rub at your cheeks, but also keep a firm grip, giving no room to consider escape, not while he's rutting. His crotch fills your vision as he bumps up into it with that musky groin, sliding his cock back and forth across your wet tongue in increasingly desperate motions. Growing ever more excited, you slip a hand to your own crotch and pump at your feline erection.";
 		say "     Salty cum sprays across your mouth, making you almost gag for a moment before you get to swallowing it as best as you can, but there's just so much of it. It overflows, dripping across your chin and chest as you labor to get as much of it down as you can. Even as you're struggling to get as much of it as you can, you pump at your cock hard and cum, splattering your chest with your own load. The cat draws his now sated shaft from you and helpfully laps his tongue across your lips, then nuzzles against your cheek. At least he's happy.";
 		NPCSexAftermath Player receives "OralCock" from Klauz;
-		now the Libido of Player is ( 4 * Libido of Player ) / 5;
+		now Libido of Player is ( 4 * Libido of Player ) / 5;
 	increase lust of felinoid companion by 1;
 	increase HP of Felinoid companion by 1;
 
@@ -421,7 +421,7 @@ to say felinoidpet_puren:
 	say "     Tail thrashing, he starts to fuck your face in earnest. His paws rub at your cheeks, but also keep a firm grip, giving no room to consider escape, not while he's rutting. His crotch fills your vision as he bumps up into it with that musky groin, sliding his cock back and forth across your wet tongue in increasingly desperate motions.";
 	say "     Salty cum sprays across your mouth, making you almost gag for a moment before you get to swallowing it as best as you can, but there's just so much of it. It overflows, dripping across your chin and chest as you labor to get as much of it down as you can. The cat draws his now sated shaft from you and helpfully laps his tongue across your lips, then nuzzles against your cheek. At least he's happy.";
 	NPCSexAftermath Player receives "OralCock" from Klauz;
-	now the Libido of Player is ( 4 * Libido of Player ) / 5;
+	now Libido of Player is ( 4 * Libido of Player ) / 5;
 	increase HP of Felinoid companion by 1;
 
 

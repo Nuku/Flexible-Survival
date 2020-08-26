@@ -145,7 +145,7 @@ to ItemGain (ItemObj - text) by (N - number) silence state is (Silence - a numbe
 			ItemGain object entry by N;
 		else:
 			ItemGain object entry by N silently;
-		now object entry is part of the player; [keeping the flimsy FS inventory system running]
+		now object entry is part of Player; [keeping the flimsy FS inventory system running]
 	else:
 		say "ERROR! Object [ItemObj] does not exist in the table of Game Objects. Please report this message on the FS Discord!";
 
@@ -157,7 +157,7 @@ to ItemGain (ItemObj - a grab object) by (N - number) silently:
 
 to ItemGain (ItemObj - a grab object) by (N - number) silence state is (Silence - a number):
 	increase carried of ItemObj by N;
-	now ItemObj is part of the player; [keeping the flimsy FS inventory system running]
+	now ItemObj is part of Player; [keeping the flimsy FS inventory system running]
 	if Silence is 0:
 		LineBreak;
 		say "[bold type]You gain [N] [printed name of ItemObj in lower case]![roman type][line break]";

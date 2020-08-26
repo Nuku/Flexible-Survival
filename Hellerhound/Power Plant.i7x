@@ -81,7 +81,7 @@ Control Room is a room. "The Control Room overlooks the plant's generators. Surp
 Control Room is above Plant Lobby.
 
 control panels is a thing. A control panels is in Control Room.
-The description of control panels is "[ControlPanelDesc]".
+Description of control panels is "[ControlPanelDesc]".
 
 to say ControlPanelDesc:
 	if fixedgens < 2:
@@ -94,7 +94,7 @@ to say ControlPanelDesc:
 catwalk door is a door.
 catwalk door is lockable and locked.
 catwalk door is west of Control Room.
-The description of catwalk door is "A door in the west wall allows access to the catwalks in the main power plant hall. It's made from metal and looks pretty solid and thick, most likely to stop the uncomfortably loud noise of a whole powerplant's worth of huge generators from damaging the hearing of the operators in here. Several hooks on the wall besides the door hold ear protectors - though you won't need one of those, with most generators destroyed now.".
+Description of catwalk door is "A door in the west wall allows access to the catwalks in the main power plant hall. It's made from metal and looks pretty solid and thick, most likely to stop the uncomfortably loud noise of a whole powerplant's worth of huge generators from damaging the hearing of the operators in here. Several hooks on the wall besides the door hold ear protectors - though you won't need one of those, with most generators destroyed now.".
 
 when play begins:
 	add { "yellow construction helmet" } to invent of control room;
@@ -104,7 +104,7 @@ Object	Name
 Administration Offices	"Administration Offices"
 
 Administration Offices is a room. Administration Offices is north of Plant Lobby.
-The description of Administration Offices is "There isn't much left of the corridor and adjoining offices that formed the administration of the power plant. Looks like some sort of pyromaniac scattered papers and trashed furniture all throughout and set them ablaze. Thankfully the automatic sprinklers seem to have worked and stopped the whole building from burning down.".
+Description of Administration Offices is "There isn't much left of the corridor and adjoining offices that formed the administration of the power plant. Looks like some sort of pyromaniac scattered papers and trashed furniture all throughout and set them ablaze. Thankfully the automatic sprinklers seem to have worked and stopped the whole building from burning down.".
 Instead of sniffing Administration Offices:
 	say "     The scent of wet ash hangs in the air.";
 
@@ -164,7 +164,7 @@ understand "activate control panels" and "activate controls" and "activate panel
 
 carry out activating:
 	if findwires is 0:
-		if a random number between one and 20 > the intelligence of the player:
+		if a random number between one and 20 > Intelligence of Player:
 			say "The lights stay red, even though you are trying hard to understand the buttons.";
 		else:
 			say "You use your superior intelligence to turn off the emergency shutdown.";
@@ -208,7 +208,7 @@ check towerfixing:
 
 carry out towerfixing:
 	say "After reattaching one power line that must have ripped off when the tower was damaged, you lift the tower top, grunting even though it's somewhat lighter than you expected. You tilt it, and try to align the bottom of the top to the top of the bottom.";
-	if a random number between one and 20 > the strength of the player:
+	if a random number between one and 20 > Strength of Player:
 		say "The tower top slips, and falls. Maybe you could try to fix it again?";
 	else:
 		say "The tower top slides into place, and the stress on the wires is released.";

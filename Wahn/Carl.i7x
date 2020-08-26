@@ -115,8 +115,8 @@ TwistedCapacity of Carl is false. [Twisted Characters can take any penetration, 
 Sterile of Carl is false. [steriles can't knock people up]
 MainInfection of Carl is "Husky Alpha".
 The icon of Carl is Figure of Carl_clothed_icon.
-The description of Carl is "[CarlDesc]".
-The conversation of Carl is { "Woof." }.
+Description of Carl is "[CarlDesc]".
+Conversation of Carl is { "Woof." }.
 CarlLibraryEntry is a number that varies. CarlLibraryEntry is usually 10000. [when he was brought in]
 
 to say CarlDesc:

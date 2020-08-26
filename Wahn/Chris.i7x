@@ -63,8 +63,8 @@ AnalVirgin of Chris is true.
 PenileVirgin of Chris is true.
 SexuallyExperienced of Chris is false.
 The MainInfection of Chris is "Orc Warrior".
-The description of Chris is "[ChrisDesc]".
-The conversation of Chris is { "Mew!" }.
+Description of Chris is "[ChrisDesc]".
+Conversation of Chris is { "Mew!" }.
 The icon of Chris is Figure of Chris_clothed_icon.
 WarriorChrisPlayerFucked is a number that varies. [number of times the player has been fucked by warrior Chris]
 WarriorChrisDominance is a number that varies.

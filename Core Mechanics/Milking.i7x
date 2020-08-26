@@ -12,10 +12,10 @@ name	desc	weight	object
 "sweet milk"	"A creamy, sweet milk with a faintly honey-like taste."	1	sweet milk
 "macho milk"	"A creamy, energizing milk with a faintly spicy-like taste."	1	macho milk
 
-mothers milk is a grab object. Understand "milk" as mothers milk. The purified of mothers milk is "distilled milk". mothers milk is milky.
+mothers milk is a grab object. Understand "milk" as mothers milk. Purified of mothers milk is "distilled milk". mothers milk is milky.
 distilled milk is a grab object. It is not milky.
 
-the usedesc of mothers milk is "[mothers milk use]";
+Usedesc of mothers milk is "[mothers milk use]";
 
 to say mothers milk use:
 	let healed be 15 + level of Player + ((Stamina of Player minus 10) divided by 2);
@@ -33,12 +33,12 @@ to say mothers milk use:
 	PlayerHealed healed;
 	PlayerDrink 20;
 
-dog milk is a grab object. Understand "milk" as dog milk. It is milky. dog milk is infectious. The strain of dog milk is "Smooth Collie Shemale". The purified of dog milk is "distilled milk". dog milk is milky.
-panther milk is a grab object. Understand "milk" as panther milk. panther milk is infectious. The strain of panther milk is "Panther Taur". The purified of panther milk is "distilled milk". panther milk is milky.
-chocolate milk is a grab object. Understand "milk" as chocolate milk. chocolate milk is infectious. The strain of chocolate milk is "Chocolate Lab". The purified of chocolate milk is "distilled milk". chocolate milk is milky.
-vixen milk is a grab object. Understand "milk" as vixen milk. vixen milk is infectious. The strain of vixen milk is "Vixen Nurse". The purified of vixen milk is "distilled milk". vixen milk is milky.
-sweet milk is a grab object. Understand "milk" as sweet milk. sweet milk is infectious. The strain of sweet milk is "Cow-babe Female". The purified of sweet milk is "distilled milk". sweet milk is milky.
-macho milk is a grab object. Understand "milk" as macho milk. macho milk is infectious. The strain of macho milk is "Cow-boi Male". The purified of macho milk is "distilled milk". macho milk is milky.
+dog milk is a grab object. Understand "milk" as dog milk. It is milky. dog milk is infectious. Strain of dog milk is "Smooth Collie Shemale". Purified of dog milk is "distilled milk". dog milk is milky.
+panther milk is a grab object. Understand "milk" as panther milk. panther milk is infectious. Strain of panther milk is "Panther Taur". Purified of panther milk is "distilled milk". panther milk is milky.
+chocolate milk is a grab object. Understand "milk" as chocolate milk. chocolate milk is infectious. Strain of chocolate milk is "Chocolate Lab". Purified of chocolate milk is "distilled milk". chocolate milk is milky.
+vixen milk is a grab object. Understand "milk" as vixen milk. vixen milk is infectious. Strain of vixen milk is "Vixen Nurse". Purified of vixen milk is "distilled milk". vixen milk is milky.
+sweet milk is a grab object. Understand "milk" as sweet milk. sweet milk is infectious. Strain of sweet milk is "Cow-babe Female". Purified of sweet milk is "distilled milk". sweet milk is milky.
+macho milk is a grab object. Understand "milk" as macho milk. macho milk is infectious. Strain of macho milk is "Cow-boi Male". Purified of macho milk is "distilled milk". macho milk is milky.
 [cum/milk object will come from creatures]
 lastmilking is a number that varies. lastmilking is usually 500.
 

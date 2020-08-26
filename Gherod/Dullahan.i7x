@@ -206,12 +206,12 @@ dullahan dust is a grab object.
 instead of sniffing dullahan dust:
 	say "The dust doesn't have any particular smell, though you've got to be careful not to inhale it by accident.";
 
-the usedesc of dullahan dust is "[DullahanDustUse]";
+Usedesc of dullahan dust is "[DullahanDustUse]";
 
 to say DullahanDustUse:
 	say "You shrug before opening your mouth and throwing the dust into your mouth. It tingles in your tongue and seemingly melts, like pop rocks, making your entire mouth numb for a moment.";
 
-dullahan dust is infectious. The strain of dullahan dust is "dullahan".
+dullahan dust is infectious. Strain of dullahan dust is "dullahan".
 
 Section 4 - Sex menu
 

@@ -97,7 +97,7 @@ Temple of Hera	"Temple of Hera"
 Temple of Hera is a situation.
 ResolveFunction of Temple of Hera is "[ResolveEvent Temple of Hera]".
 Temple of Hera is inactive.
-The sarea of Temple of Hera is "Museum".
+Sarea of Temple of Hera is "Museum".
 
 when play begins:
 	add Temple of Hera to BadSpots of MaleList;       [male soldiers]
@@ -120,8 +120,8 @@ Biker Hangout	"Biker Hangout"
 
 Biker Hangout is a situation.
 ResolveFunction of Biker Hangout is "[ResolveEvent Biker Hangout]".
-The Prereq1 of Biker Hangout is Temple of Hera.
-The sarea of Biker Hangout is "Junkyard".
+Prereq1 of Biker Hangout is Temple of Hera.
+Sarea of Biker Hangout is "Junkyard".
 when play begins:
 	add Biker Hangout to BadSpots of MaleList;
 	add Biker Hangout to BadSpots of FurryList;
@@ -193,7 +193,7 @@ instead of sniffing pomegranate seed:
 say "Smells fruity.";
 
 pomegranate seed is a grab object. pomegranate seed is not temporary.
-the usedesc of pomegranate seed is "[pomegranate seed use]";
+Usedesc of pomegranate seed is "[pomegranate seed use]";
 
 to say pomegranate seed use:
 	say "After going through all the trouble of getting this thing in the first place, you shouldn't just eat it yourself. It's highly doubtful that you'd get another from Hera. Better give it to the intended recipient - Eric.";
@@ -240,8 +240,8 @@ SexuallyExperienced of Erica is true.
 TwistedCapacity of Erica is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Erica is false. [steriles can't knock people up]
 MainInfection of Erica is "Human".
-The description of Erica is "[Ericadesc]".
-The conversation of Erica is { "Mew!" }.
+Description of Erica is "[Ericadesc]".
+Conversation of Erica is { "Mew!" }.
 
 instead of sniffing Erica:
 	if thirst of Erica is 0: [Starting state]

@@ -10,7 +10,7 @@ Gryphon Milkman	"Gryphon Milkman"
 
 Gryphon Milkman is a scavevent.
 ResolveFunction of Gryphon Milkman is "[ResolveEvent Gryphon Milkman]".
-The sarea of Gryphon Milkman is "Outside".
+Sarea of Gryphon Milkman is "Outside".
 when play begins:
 	add Gryphon Milkman to BadSpots of FurryList;
 	add Gryphon Milkman to badspots of HermList;
@@ -29,7 +29,7 @@ Free Milk	"Free Milk"
 
 Free Milk is a scavevent.
 ResolveFunction of Free Milk is "[ResolveEvent Free Milk]".
-The sarea of Free Milk is "Outside".
+Sarea of Free Milk is "Outside".
 when play begins:
 	add Free Milk to BadSpots of FurryList;
 	add Free Milk to badspots of HermList;
@@ -45,7 +45,7 @@ Abandoned Milk	"Abandoned Milk"
 
 Abandoned Milk is a scavevent.
 ResolveFunction of Abandoned Milk is "[ResolveEvent Abandoned Milk]".
-The sarea of Abandoned Milk is "Outside".
+Sarea of Abandoned Milk is "Outside".
 when play begins:
 	add Abandoned Milk to BadSpots of FurryList;
 	add Abandoned Milk to badspots of HermList;
@@ -64,8 +64,8 @@ object	name
 Garrett	"Garrett"
 
 Garrett is a man. Garrett is in Qytat Plaza.
-The description of Garrett is "[garrettdesc]".
-The conversation of Garrett is { "Milk!" }.
+Description of Garrett is "[garrettdesc]".
+Conversation of Garrett is { "Milk!" }.
 the scent of the Garrett is "This blue gryphon's scent is quite manly, though there's also the alluring scent of the [']milk['] he delivers as well.".
 The icon of Garrett is Figure of Garrett_icon.
 garrettinfo1 is a truth state that varies. garrettinfo1 is usually false.
@@ -366,7 +366,7 @@ name	desc	weight	object
 
 gryphon cum is a grab object. gryphon cum is temporary. gryphon cum is cum.
 
-The usedesc of gryphon cum is "[drinkgryphoncum]";
+Usedesc of gryphon cum is "[drinkgryphoncum]";
 
 to say drinkgryphoncum:
 	say "     Popping the top off the bottle, you catch the heady and arousing scent of masculine gryphon cum. It makes your mouth water and you quickly start guzzling it down. The refined semen drink has a strong, exciting flavor that is also refreshing and satisfying.";

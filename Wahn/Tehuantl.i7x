@@ -49,8 +49,8 @@ AnalVirgin of Tehuantl is true.
 PenileVirgin of Tehuantl is false.
 SexuallyExperienced of Tehuantl is true.
 MainInfection of Tehuantl is "Jaguar Warrior".
-The description of Tehuantl is "[TehuantlDesc]".
-The conversation of Tehuantl is { "Me-ow!" }.
+Description of Tehuantl is "[TehuantlDesc]".
+Conversation of Tehuantl is { "Me-ow!" }.
 the fuckscene of Tehuantl is "[TehuantlSex]".
 the scent of Tehuantl is "Tehuantl has an exotic earthy aroma which reminds you of the wilds.".
 
@@ -534,7 +534,7 @@ Feline Relief	"Feline Relief"
 Feline Relief is a situation.
 ResolveFunction of Feline Relief is "[ResolveEvent Feline Relief]".
 Feline Relief is a inactive.
-The sarea of Feline Relief is "Red".
+Sarea of Feline Relief is "Red".
 
 to say ResolveEvent Feline Relief:
 	if HP of Tehuantl is 12:
