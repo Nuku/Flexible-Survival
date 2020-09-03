@@ -481,7 +481,7 @@ When Play begins:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"orc brew"	"A stone mug with a simple lid that keeps its contents from sloshing out. The yellow-green fluid inside does look kinda like beer. Though how the orcs might have produced it is a mystery - maybe for the better."	1	orc brew
+"orc brew"	"A beer stein with a tight-fitting metal lid on a hinge that keeps its contents from sloshing out. On the side of it, you see the printed words 'Orctoberfest 2008', with the first 'r' being scrawled on with a sharpie. The yellow-green fluid inside does look kinda like beer. Though how the orcs might have produced it is a mystery - maybe for the better."	1	orc brew
 
 instead of sniffing orc brew:
 say "You open the lid for a moment and take a sniff. Spicy, and definitively alcoholic.";

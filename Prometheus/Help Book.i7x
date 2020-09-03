@@ -50,6 +50,13 @@ to say HelpBookDesc:
 		say "DEBUG -> HP of Help Book: [HP of Help Book] <- DEBUG[line break]";
 	say "     The book looks like a normal book with the title 'Prometheus['] Guide to Surviving the Apocalypse'. It seems to emit an aura of comfort as though it wants to help those in need and you get the impression that it doesn't much care for the rules of this reality.";
 
+HelpBookLookup is an action applying to nothing.
+
+understand "HelpBookLookup" as HelpBookLookup.
+
+carry out HelpBookLookup:
+	say "     You pull out a copy 'Prometheus['] Guide to Surviving the Apocalypse'. It seems to emit an aura of comfort as though it wants to help those in need and you get the impression that it doesn't much care for the rules of this reality.";
+	say "[HelpBookTalkMenu]";
 
 Section 2 - Talking with Help Book
 
@@ -60,7 +67,7 @@ Instead of conversing the Help Book:
 
 to say HelpBookTalkMenu:
 	say "[line break]";
-	say "What do you wish to discuss with Help Book?";
+	say "     [bold type]What do you wish to look up in the Help Book?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

@@ -97,7 +97,7 @@ to say mouseapts:
 		add "Tamed" to Traits of mouse girl;
 		move Rachel to Pantry;
 		now the Companion of Player is mouse girl;
-		say "     (Rachel the mouse girl is now a possible companion! You can make her your active companion by typing [bold type][link]companion Rachel[end link][roman type] or [bold type][link]ally mouse girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Rachel[end link][roman type]. You can see all the companions you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break], but then the mouse collective will be tracking you again.)";
+		say "     (Rachel the mouse girl is now a possible ally!! You can make her your active ally by typing [bold type][link]ally Rachel[end link][roman type] or [bold type][link]ally mouse girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Rachel[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break], but then the mouse collective will be tracking you again.)";
 		increase score by 20;
 		wait for any key;
 

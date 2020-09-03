@@ -696,12 +696,12 @@ carry out StatLossAction:
 to say NonCombatError:
 	say "ERROR! This is a noncombat creature that you should never see in a fight. Please report how you saw this on the FS Discord or Forum.";
 
-understand "rename [text]" as PlayerRenaming.
+understand "rename" as PlayerRenaming.
 
-PlayerRenaming is an action applying to one topic.
+PlayerRenaming is an action applying to nothing.
 
 carry out PlayerRenaming:
-	now name of Player is the topic understood;
+	playernaming;
 
 HighestPlayerStat is a text that varies.
 

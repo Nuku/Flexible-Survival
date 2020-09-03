@@ -456,7 +456,7 @@ Hardmode is a truth state that varies. Hardmode is usually false.
 nohealmode is a truth state that varies. nohealmode is usually false.
 blindmode is a truth state that varies. blindmode is usually false.
 Lastjournaluse is a number that varies. Lastjournaluse is 248.
-Targetturns is a number that varies.
+Targetturns is a number that varies. Targetturns is usually -240.
 Started is a number that varies.
 Freefeats is a number that varies.
 Lost is a number that varies.
@@ -1931,10 +1931,16 @@ To say level up needed:
 
 Table of Fancy Status
 left	central	right
-"Location: [the player's surroundings]"	"Time: [time of day] Lvl: [level of Player]"	"HP:[HP of Player]/[maxHP of Player]"
-"Freecred: [freecred]"	"Hunger: [hunger of Player] Thirst: [thirst of Player] Libido: [Libido of Player]"	"Score:[score]/[maximum score]"
-"Sanity: [humanity of Player]/100"	"Evac: [( turns minus targetturns ) divided by 8] d, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] h[if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 0]  Kids: [(number of filled rows in Table of PlayerChildren + number of entries in childrenfaces)][end if]"	"XP:[XP of Player]/[level up needed]"
-""	"[if NewGraphicsInteger is 0] [else]Current image artist: [ngraphics_currentartist][end if]"	""
+"Location: [Location of Player][if Location of Player is fasttravel] ([link]Navpoint[as]nav[end link])[end if]"	"Name: [if Player is not defaultnamed][Name of Player][else][link]Pick one?[as]rename[end link][end if] | Condition: [SleepMessage] | [link]Inventory[as]i[end link] | [link]Feats[as]FeatList[end link] | [link]Allies[as]Allies[end link]"	"HP: [HP of Player]/[maxHP of Player]"
+"Date: [DateYear]-[DateMonth]-[DateDay], Time: [time of day]"	"STR: [strength of Player] | DEX: [dexterity of Player] | STA: [stamina of Player] | CHA: [Charisma of Player] | INT: [intelligence of Player] | PER: [perception of Player]"	"XP: [XP of Player]/[level up needed]"
+"Evac: [if playon is 0][( turns minus targetturns ) divided by 8] d, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] h[else]UNKNOWN[end if]"	"Hunger: [hunger of Player]/100 | Thirst: [thirst of Player]/100 | Libido: [Libido of Player]/100 | Humanity: [humanity of Player]/100"	"LVL: [level of Player]"
+"Freecred: [freecred]"	"[link]Help[as]HelpBookLookup[end link][if NewGraphicsInteger is 0] [else] | Art by: [ngraphics_currentartist] ([link]art credits[end link])[end if]"	"Score: [score]/[maximum score]"
+[
+"Location: [the player's surroundings]"	"Date: [DateYear]-[DateMonth]-[DateDay] Evac: [if playon is 0][( turns minus targetturns ) divided by 8] d, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] h[else]UNKNOWN[end if]"	"HP:[HP of Player]/[maxHP of Player]"
+"Freecred: [freecred]"	"Time: [time of day]"	"Score:[score]/[maximum score]"
+"Sanity: [humanity of Player]/100"	"Lvl: [level of Player] Hunger: [hunger of Player] Thirst: [thirst of Player] Libido: [Libido of Player] [if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 0] Kids: [(number of filled rows in Table of PlayerChildren + number of entries in childrenfaces)][end if]"	"XP:[XP of Player]/[level up needed]"
+""	"[if NewGraphicsInteger is 0] [else]Current image artist: [ngraphics_currentartist] (see [link]art credits[as]try art credits[end link])[end if]"	""
+]
 
 to say exitlist:
 	repeat with nam running through valid directions:
@@ -2611,8 +2617,67 @@ definition: Daytimer is night:
 		yes;
 
 LastTurnDay is a truth state that varies.
+DateDay is a number that varies. DateDay is usually 11.
+DateMonth is a number that varies. DateMonth is usually 4.
+DateYear is a number that varies. DateYear is usually 2008.
 
 an everyturn rule:
+	if TimekeepingVar is 0 or TimekeepingVar is -8: [early dawn, 0:00-3:00]
+		increase DateDay by 1;
+		if DateMonth is 1: [January]
+			if DateDay is 32:
+				now DateDay is 1;
+				now DateMonth is 2;
+		else if DateMonth is 2: [February]
+			if DateYear is 2008:
+				if DateDay is 30:
+					now DateDay is 1;
+					now DateMonth is 3;
+			else:
+				if DateDay is 29:
+					now DateDay is 1;
+					now DateMonth is 3;
+		else if DateMonth is 3: [March]
+			if DateDay is 32:
+				now DateDay is 1;
+				now DateMonth is 4;
+		else if DateMonth is 4: [April]
+			if DateDay is 31:
+				now DateDay is 1;
+				now DateMonth is 5;
+		else if DateMonth is 5: [May]
+			if DateDay is 32:
+				now DateDay is 1;
+				now DateMonth is 6;
+		else if DateMonth is 6: [June]
+			if DateDay is 31:
+				now DateDay is 1;
+				now DateMonth is 7;
+		else if DateMonth is 7: [July]
+			if DateDay is 32:
+				now DateDay is 1;
+				now DateMonth is 8;
+		else if DateMonth is 8: [August]
+			if DateDay is 32:
+				now DateDay is 1;
+				now DateMonth is 9;
+		else if DateMonth is 9: [September]
+			if DateDay is 31:
+				now DateDay is 1;
+				now DateMonth is 10;
+		else if DateMonth is 10: [October]
+			if DateDay is 32:
+				now DateDay is 1;
+				now DateMonth is 11;
+		else if DateMonth is 11: [November]
+			if DateDay is 31:
+				now DateDay is 1;
+				now DateMonth is 12;
+		else if DateMonth is 12: [December]
+			if DateDay is 32:
+				now DateDay is 1;
+				now DateMonth is 1;
+				increase DateYear by 1;
 	if daytimer is day: [currently day]
 		if LastTurnDay is false: [last turn was night]
 			say "[bold type]The sun rises over the city.[roman type][line break]";
@@ -2641,7 +2706,7 @@ an everyturn rule:
 		now LastTurnDay is false;
 		if Player is in Urban Forest and WerewolfRelationship is 0:
 			if WerewolfWatching is false: [initial message]
-				say "     Here between the untamed trees of the Urban Forest, the shadows seem especially deep and seem to play tricks on your eyes. Every little movement of branches and leaves draws your gaze, and the ominous feeling of being watched fills you with tension. The sensation of something's predatory gaze resing on you can't be all in your head, can it?";
+				say "     Here between the untamed trees of the Urban Forest, the shadows seem especially deep and seem to play tricks on your eyes. Every little movement of branches and leaves draws your gaze, and the ominous feeling of being watched fills you with tension. The sensation of something's predatory gaze resting on you can't be all in your head, can it?";
 				now WerewolfWatching is true;
 			else: [repeat message for following turns]
 				if a random chance of 1 in 3 succeeds:
@@ -4608,6 +4673,16 @@ to Rest:
 				StatChange "Perception" by 2 silently;
 			now WellRestedTimer is 6;
 
+to say Sleepmessage:
+	if Terminatorsleep is true or SleepTimerCount < 5:
+		say "Rested";
+	else if SleepTimerCount < 8:
+		say "[link]Spent[as]rest[end link]";
+	else if SleepTimerCount < 11:
+		say "[link]Tired[as]rest[end link]";
+	else:
+		say "[link]Beat[as]rest[end link]";
+
 carry out resting:
 	if companion of Player is rubber tigress:
 		artemisnap;
@@ -5180,18 +5255,16 @@ carry out showstatting:
 To showstats (x - Person):
 	sort Feats of Player;
 	sort Traits of Player;
-	say "Strength: [strength of the x], Dexterity: [dexterity of the x], Stamina: [stamina of the x], Charisma: [Charisma of the x], Intelligence: [intelligence of the x], Perception: [perception of the x].";
+	say "Strength: [strength of x], Dexterity: [dexterity of x], Stamina: [stamina of x], Charisma: [Charisma of x], Intelligence: [intelligence of x], Perception: [perception of x].";
 	say "Humanity: [humanity of the x]/100, Morale: [morale of the x], HP: [HP of x]/[maxHP of x] Libido: [Libido of x]/100, Hunger: [hunger of x]/100, Thirst: [thirst of x]/100.";
 	let z be ( level of x plus one) times 10;
 	if "Fast Learner" is listed in feats of x:
 		now z is ( level of x plus one) times 8;
 	say "Level: [level of x], XP: [XP of x]/[z]";
 	if the number of entries in feats of the x > 0:
-		say ", Feats: [feats of the x][line break]";
+		say ", [link]Feats[as]FeatsList[end link][line break]";
 	if debugactive is 1:
 		say "DEBUG -> Traits: [Traits of Player][line break]";
-	if debugactive is 1:
-		say "DEBUG -> Invent: [Invent of Player][line break]";
 
 This is the self examine rule:
 	now looknow is 1;
@@ -5667,6 +5740,7 @@ This is the location choice rule:
 					now area entry is "Park";
 					break;
 			increase score by 600;
+			now DateMonth is 6;
 			extend game by 240;
 		if title entry is "Hard mode":
 			now invent of bunker is { };
@@ -5683,6 +5757,7 @@ This is the location choice rule:
 					now area entry is "Park";
 					break;
 			increase score by 900;
+			now DateMonth is 6;
 			extend game by 240;
 			now hardmode is true;
 		if hardmode is false:
@@ -8560,7 +8635,7 @@ to eyecolorsetting: [ Green, Blue, Gray, Brown, Hazel, Amber, Red]
 		now menuexit is 1;
 
 to playernaming:
-	say "Note: You can always change your name at a later point with the 'rename xxx' command.";
+	say "Note: You can always change your name at a later point with the 'rename' command.";
 	say "[bold type]Please enter your new name: [roman type][line break]";
 	get typed command as playerinput;
 	now name of Player is playerinput;
@@ -9134,6 +9209,9 @@ to say promptsay:
 	[invisibly attaching the carried objects to keep the rickety FS inventory system going]
 	repeat with j running through owned grab objects:
 		now j is a part of Player;
+	if Player is in Bunker:
+		repeat with j running through stored grab objects:
+			now j is a part of Player;
 	say "Status: ";
 	if hunger of Player > 30:
 		say "[link][bracket]HUNGRY[close bracket][as]eat food[end link] ";

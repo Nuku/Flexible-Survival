@@ -1003,7 +1003,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Shark Herm"	Figure of PirateShark_icon	"Zealot"	g-white	"normal"
 "Queen Bee"	Figure of QueenBee_icon	"Caltroplay"	g-white	"normal"
 "Rachel"	Figure of Rachel_icon	"o-kemono"	g-white	"normal"
-"Ram"	Figure of Ram_naked_icon	"Vashaa"	g-white	"normal"
+"Ram_hunk"	Figure of Ram_naked_icon	"Vashaa"	g-white	"normal"
 "Rane_clothed"	Figure of Rane_clothed_icon	"Inkydemon"	g-black	"normal"
 "Rane_face"	Figure of Rane_face_icon	"SineAlas"	g-black	"normal"
 "Reindeer"	Figure of Reindeer_icon	"MoT"	g-black	"normal"

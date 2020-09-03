@@ -15,7 +15,7 @@ Section - Initiation
 
 When play begins:
 	request glulx hyperlink event in main window;
-	request glulx hyperlink event in status window.
+	request glulx hyperlink event in status window;
 
 Section - Event handling
 
@@ -25,10 +25,15 @@ A glulx hyperlink rule (this is the default inline hyperlink handling rule):
 		cancel glulx hyperlink request in main window; [just to be safe]
 		cancel glulx hyperlink request in status window; [just to be safe]
 		follow the hyperlink processing rules;
+	[reset in both windows?]
+	request glulx hyperlink event in main window;
+	request glulx hyperlink event in status window;
+	[
 	if the status window is the hyperlink source:
 		request glulx hyperlink event in status window;
 	else:
 		request glulx hyperlink event in main window.
+	]
 
 To request glulx hyperlink event in the/-- main window:
 	(-  if (glk_gestalt(gestalt_Hyperlinks, 0)) glk_request_hyperlink_event(gg_mainwin); -)

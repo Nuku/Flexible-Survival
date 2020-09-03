@@ -32,7 +32,7 @@ Table of GameCharacterIDs (continued)
 object	name
 Slutslave	"Slutslave"
 
-Slutslave is a man. [or woman]
+Slutslave is a woman.
 [Physical details as of game start]
 ScaleValue of Slutslave is 3. [human sized]
 Body Weight of Slutslave is 6. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]

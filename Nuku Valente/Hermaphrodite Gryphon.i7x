@@ -14,7 +14,7 @@ to say GenerateTrophyList_Blue_Gryphon:
 	if a random chance of (20 + LootBonus) in 100 succeeds: [uncommon drop]
 		add "gryphon milk" to CombatTrophyList;
 	if a random chance of (10 + LootBonus) in 100 succeeds: [rare drop]
-		add "clean bandage" to CombatTrophyList;
+		add "clean bandages" to CombatTrophyList;
 	if a random chance of (10 + LootBonus) in 100 succeeds: [rare drop]
 		add "gryphon coin" to CombatTrophyList;
 	if a random chance of (5 + LootBonus) in 100 succeeds: [rare drop]

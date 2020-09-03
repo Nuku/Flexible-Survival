@@ -236,9 +236,9 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 15;
 	now sex entry is "Male";
-	now HP entry is 75;
-	now lev entry is 10;
-	now wdam entry is 10;
+	now HP entry is 55;
+	now lev entry is 9;
+	now wdam entry is 9;
 	now area entry is "Nowhere";          [ Case sensitive]
 	now Cock Count entry is 1;                 [ number of cocks if sex is 'Male' or 'Both' ]
 	now Cock Length entry is 11;
@@ -426,7 +426,6 @@ Sterile of Mike is false. [steriles can't knock people up]
 MainInfection of Mike is "Blacktail Stag".
 Description of Mike is "[MikeDesc]".
 Conversation of Mike is { "Oh, hello." }.
-The icon of Mike is Figure of Mike_icon.
 
 to say MikeDesc:
 	project the Figure of Mike_face_icon;
