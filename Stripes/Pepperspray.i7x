@@ -264,17 +264,18 @@ to say enhancedattack:
 			else:
 				say "Your [z] misses!";
 	else if Player is not lonely and a random chance of 3 in 10 succeeds:
-		now attack bonus is ( ( dexterity of companion of Player minus 4 ) divided by 2 ) plus level of companion of Player; [+3 to hit for pet]
-		let the combat bonus be attack bonus minus defense bonus;
-		if hardmode is true and combat bonus > 12:		[pepperspray increases hardmode bonus limit to +12]
-			now combat bonus is 12;
-		now roll is a random number from 1 to 20;
-		if roll plus the combat bonus > 8:
-			let dam be ( weapon damage of companion of Player times a random number from 80 to 120 ) divided by 100;
-			say "[assault of companion of Player] [special-style-2][dam][roman type] damage inflicted!";
-			decrease monsterHP by dam;
-		else:
-			say "Your [companion of Player] misses!";
+		repeat with companion running through companionList of Player:
+			now attack bonus is ( ( dexterity of companion minus 4 ) divided by 2 ) plus level of companion; [+3 to hit for pet]
+			let the combat bonus be attack bonus minus defense bonus;
+			if hardmode is true and combat bonus > 12:		[pepperspray increases hardmode bonus limit to +12]
+				now combat bonus is 12;
+			now roll is a random number from 1 to 20;
+			if roll plus the combat bonus > 8:
+				let dam be ( weapon damage of companion times a random number from 80 to 120 ) divided by 100;
+				say "[assault of companion] [special-style-2][dam][roman type] damage inflicted!";
+				decrease monsterHP by dam;
+			else:
+				say "Your [companion] misses!";
 
 
 to say weakretaliate:			[no longer used, incorporated into standardhit in Alt Combat]

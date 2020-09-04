@@ -357,7 +357,7 @@ to skspray:						[ignores defenses, requires no hit, hum/lib check instead to re
 		if CockName of Player is "Skunk" or CockName of Player is "Skunk Taur", increase tempnum by 1;
 		if TailName of Player is "Skunk" or TailName of Player is "Skunk Taur", increase tempnum by 1;
 		if skunk kit is tamed, increase tempnum by 1;
-		if companion of Player is skunk kit, increase tempnum by 1;
+		if skunk kit is listed in companionList of Player, increase tempnum by 1;
 		let randomizer be ( a random number from 67 to 80 ) + ( tempnum * tempnum * 2 ) + lev entry;
 		let dam be ( wdam entry times randomizer ) / 100;
 		let libdam be 3 + lev entry + tempnum;

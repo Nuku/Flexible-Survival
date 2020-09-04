@@ -271,9 +271,9 @@ to say ResolveEvent Undie Race:
 to UndieRaceEvent:
 	say "     As you trek down the walkway, you notice that the paved alley is almost deserted, and that people begin to assemble on the side. You eventually reach a gorilla, who looks busy directing people to stay away from the path, while others install a table and put water bottles on them. [if GorillasMember is 3]'Hey, nice to see you,' the ape greets you. 'A race is going to pass through here. Can you wait on the side for a few moments?'[else]'Hey, you!' the ape hailed. 'Stay out of the walkway! Racers are going to pass through here in a few moments.'[end if]";
 	say "     You follow the instructions and, as the gorilla said, a pack of sportsmen jog down the road. They do not wear the usual running garb: they are all in their undergarments and running shoes - for those who do not have pawed feet. Virile bulges and bare breasts jiggle with each stride, under the applause and the cheers of the crowd, on each side of the walkway, cheers on the runners, and some wave their hands in response. The runners pass by the table and pick a water bottle. The first to do so is a young, albinos lizard in a red speedo. He grabs the nearest bottle, then sprinkles its content over his scaly body in order to cool off. His wet scales glisten under the light [if daytimer is night]of the lamp posts[else]of the sun[end if], and several onlookers around you cheer him on even more. The reptile winks at the audience, then begins to run away.";
-	if demon brute is companion of Player:
+	if demon brute is listed in companionList of Player:
 		say "     You hear a grunt beside you, and as you glance to the side, you see Brutus's thick purple shaft standing at full erection. Clearly, the runners - and especially that lizard - have aroused the big demon. [if DBCaptureQuestVar is 5]He looks ready to snatch away one of the passing runners to satiate his lust, but your disapproving look discourages him from doing so[else]You pat his side amicably, praising him on his self-control[end if].";
-	if royal tiger is companion of Player:
+	if royal tiger is listed in companionList of Player:
 		say "     Ryousei looks at the scene, dismayed. 'Poor souls! What is their crime, for being punished like this?' he asks. Stifling a laugh, you explain to the tiger that this is a race, and they do it willingly. 'Oh, I see. I was wondering that it was a lot of criminals. But why are they barely clothed?' You smile, then shrug.";
 	say "     A few minutes later, every runner passed, and the crowd begins to disperse, and so do you.";
 	let bonus be (( the Perception of the player minus 10 ) divided by 2);
@@ -295,7 +295,7 @@ ResolveFunction of Dog Meets Dog is "[ResolveEvent Dog Meets Dog]".
 The sarea of Dog Meets Dog is "Campus".
 The PrereqCompanion of Dog Meets Dog is gshep.
 
-after going east from College Campus Entrance while (LastCampusWalkin - turns > 2 and gshep is companion of Player and gsd_pet >= 60 and GibsonRelationship is 0 and a random chance of 1 in 3 succeeds):
+after going east from College Campus Entrance while (LastCampusWalkin - turns > 2 and gshep is listed in companionList of Player and gsd_pet >= 60 and GibsonRelationship is 0 and a random chance of 1 in 3 succeeds):
 	DogMeetsDogEvent;
 
 to say ResolveEvent Dog Meets Dog:
@@ -457,9 +457,9 @@ carry out browselibrary:
 	Follow the turnpass rule;
 
 to LibrarySexEvent:
-	if (demon brute is companion of Player and CollegeLibraryBrutusEncounter is 0):
+	if (demon brute is listed in companionList of Player and CollegeLibraryBrutusEncounter is 0):
 		BrutusLibraryEvent;
-	else if (royal tiger is companion of Player and CollegeLibraryRyouseiEncounter is 0):
+	else if (royal tiger is listed in companionList of Player and CollegeLibraryRyouseiEncounter is 0):
 		RyouseiLibraryEvent;
 	else:
 		let randomnumber be a random number from 1 to 5;

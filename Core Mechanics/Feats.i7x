@@ -222,7 +222,7 @@ instead of addfeating the basic feats:
 			if "Good Teacher" is listed in feats of Player:
 				addfeat "Ringmaster" with "You will gain full XP while training your pets.";
 		if charisma of Player > 16 and number of entries in list of tamed pets > 2:
-			addfeat "The Horde" with "Your pets will sometimes organize a full-on counterstrike.";
+			addfeat "Double Team" with "You can now take two pets with you.";[continue]
 		if charisma of Player > 11:
 			addfeat "Flash" with "Your skin/fur/scales will occasionally flash bright light, reducing your foe's chance to hit.";
 		if charisma of Player > 13:

@@ -21,9 +21,9 @@ The File of BeastSave (owned by another project) is called "FSBeastSave".
 The File of BeastVariableSave (owned by another project) is called "FSBeastVariableSave".
 The File of NoteSave (owned by another project) is called "FSNoteSave".
 
-PetList is a list of text that varies.[@Tag:NotSaved] [for stashing the pet objects in the Character Nexus]
+[PetList is a list of text that varies.[@Tag:NotSaved] [for stashing the pet objects in the Character Nexus]
 PetList is { "Nullpet", "Latex Vixen", "strange doll", "pink raccoon", "demon brute", "wukong", "human dog", "Retriever Girl", "rubber tigress", "frost giantess", "Little fox", "skunk kit", "equinoid warrior", "Felinoid Companion", "Cute Crab", "house cat", "Exotic Bird", "helper dog", "Gryphoness", "bee girl", "gshep", "mouse girl", "royal tiger", "doberman companion", "demonologist", "Carnivorous Plant", "orc supersized breeder" };
-
+]
 an everyturn rule:
 	if Player is in NPC Nexus:
 		say "     Trixie the fairy flutters into existence right next to you and looks at you with a puzzled expression. 'Now now, you really should be somewhere else. How in the world did you end up here? If you do remember the room where you're supposed to be, please report that on the FS Discord channel as a bug. But for now, let's get you back in the city at least.'";
@@ -307,7 +307,7 @@ to PossessionRestore:
 			if PossessionIdName is "sturdy jeans", now PossessionIdName is "dark-blue jeans";
 			if there is a name of PossessionIdName in the Table of Game Objects:
 				let PossessionObject be the object corresponding to a name of PossessionIdName in the Table of Game Objects;
-				now carried of PossessionObject is CarriedNumber entry;
+				ItemGain PossessionObject by CarriedNumber entry silently;
 				now stashed of PossessionObject is StoredNumber entry;
 				if PossessionObject is Equipment:
 					if EquippedStatus entry is true:
@@ -439,15 +439,12 @@ to CharacterRestore:
 			let CharacterIdName be Name entry;
 			if there is a name of CharacterIdName in the Table of GameCharacterIDs:
 				let CharacterObject be the object corresponding to a name of CharacterIdName in the Table of GameCharacterIDs;
-				if CharacterIdName is listed in PetList:
-					if debug is at level 10:
-						say "DEBUG -> Pets are part of the player, thus they don't get moved.[line break]";
 				[
 				else if CharacterIdName is "yourself":
 					if debug is at level 10:
 						say "DEBUG -> The player doesn't get moved.[line break]";
 				]
-				else if there is a name of LocationName entry in the Table of GameRoomIDs:
+				if there is a name of LocationName entry in the Table of GameRoomIDs:
 					let TargetRoom be the object corresponding to a name of LocationName entry in the Table of GameRoomIDs;
 					move CharacterObject to TargetRoom;
 				else:
@@ -537,15 +534,12 @@ to CharacterRestore:
 			let CharacterIdName be Name entry;
 			if there is a name of CharacterIdName in the Table of GameCharacterIDs:
 				let CharacterObject be the object corresponding to a name of CharacterIdName in the Table of GameCharacterIDs;
-				if CharacterIdName is listed in PetList:
-					if debug is at level 10:
-						say "DEBUG -> Pets are part of the player, thus they don't get moved.[line break]";
 				[
 				else if CharacterIdName is "yourself":
 					if debug is at level 10:
 						say "DEBUG -> The player doesn't get moved.[line break]";
 				]
-				else if there is a name of LocationName entry in the Table of GameRoomIDs:
+				if there is a name of LocationName entry in the Table of GameRoomIDs:
 					let TargetRoom be the object corresponding to a name of LocationName entry in the Table of GameRoomIDs;
 					move CharacterObject to TargetRoom;
 				else:
@@ -1145,7 +1139,8 @@ To say ProgressionExport:
 		LineBreak;
 		if Player is not lonely:
 			say "     Preparing to travel to an alternate reality, you send your current ally away to await this in a safe place.";
-			try DismissPlayerPet;
+			repeat with x running through companionList of Player:
+				DismissFunction  printed name of x;
 		if wrcursestatus is 5:
 			wrcurserecede; [puts player back to normal form and restores proper stats for saving]
 		LineBreak;

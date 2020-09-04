@@ -28,7 +28,7 @@ Table of GameCharacterIDs (continued)
 object	name
 Little fox	"Little fox"
 
-Little fox is a pet. little fox is a part of the player.
+Little fox is a pet.
 NPCObject of Little fox is Dash.
 understand "Dash" as little fox.
 printed name of little fox is "Dash".
@@ -102,13 +102,11 @@ to say DashDesc:
 		say "     DEBUG -> FangDash: [FangDashRel] <- DEBUG[line break]";
 	project Figure of Dash_icon;
 	say "     Dash is so cute and friendly! He has a cute little fox face with eyes that shine with love as they stare up at you. His lithe and quick body is almost constantly in motion as it explores the world around you. The little fox's coloring was a bit of shock at first, with it being more brown and gray than you would have figured. Then again, maybe that is just the normal coloring for fox's when they are young like yours.";
-	if companion of Player is little fox:
-		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 instead of conversing the Dash:
 	if Player is in Computer Lab and Dash is in Computer Lab:
 		say "[DashTalkMenu]";
-	else if companion of Player is little fox:
+	else if little fox is listed in companionList of Player:
 		say "[DashTalkMenu]";
 	else:
 		say "     Dash isn't here.";
@@ -119,7 +117,7 @@ instead of conversing little fox:
 	else:
 		if Player is in Computer Lab and Dash is in Computer Lab:
 			say "[DashTalkMenu]";
-		else if companion of Player is little fox:
+		else if little fox is listed in companionList of Player:
 			say "[DashTalkMenu]";
 		else:
 			say "     Dash isn't here.";
@@ -283,7 +281,7 @@ Table of GameCharacterIDs (continued)
 object	name
 skunk kit	"skunk kit"
 
-skunk kit is a pet. skunk kit is a part of the player.
+skunk kit is a pet.
 NPCObject of skunk kit is Peppy.
 understand "Peppy" as skunk kit.
 printed name of skunk kit is "Peppy".
@@ -354,11 +352,9 @@ to say PeppyScent:
 
 to say Peppydesc:
 	say "     The skunk kit you rescued is obviously the offspring of one of the larger skunk beasts roaming the forest, as even as young as it obviously is, it's already the size of an average dog or perhaps even slightly larger. Peppy stares up at you adoringly however, with love in his eyes for his savior, exploring the world around it with the innocence of youth. How long that innocence will last though as he grows is anyone's guess, but for now its happy skunk-like antics bring a smile to your face.";
-	if companion of Player is skunk kit:
-		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 An everyturn rule:
-	if companion of Player is skunk kit:
+	if skunk kit is listed in companionList of Player:
 		if a random number between one and 20 < 4:
 			say "[one of]The scent from Peppy wafts over you strongly, causing your body to change![or]Peppy comes up to you and nuzzles you, and you find yourself changing.[or]Peppy calls out for his mother, and you find yourself filling in for her.[or]Peppy rubs up against you, his skunky smell teasing your nose with images of mature skunk beasts.[or]Peppy is startled by something and sprays the area, hitting you as well![at random]";
 			if skunkbeaststatus is 1:
@@ -369,7 +365,7 @@ An everyturn rule:
 instead of conversing the Peppy:
 	if Player is in Computer Lab and Peppy is in Computer Lab:
 		say "[PeppyTalkMenu]";
-	else if companion of Player is skunk kit:
+	else if skunk kit is listed in companionList of Player:
 		say "[PeppyTalkMenu]";
 	else:
 		say "     Peppy isn't here.";
@@ -380,7 +376,7 @@ instead of conversing skunk kit:
 	else:
 		if Player is in Computer Lab and Peppy is in Computer Lab:
 			say "[PeppyTalkMenu]";
-		else if companion of Player is skunk kit:
+		else if skunk kit is listed in companionList of Player:
 			say "[PeppyTalkMenu]";
 		else:
 			say "     Peppy isn't here.";

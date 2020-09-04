@@ -511,7 +511,7 @@ gryphon coin is a grab object.
 the usedesc of gryphon coin is "[gryphon coin use]";
 
 to say gryphon coin use:
-	say "     You throw the coin into the air, watching it tumble end over end a few times before you catch it again and slap it on the back of your hand:[line break]";
+	say "     You throw the coin into the air, watching it tumble end over end a few times before you catch it again and slap it on the back of your hand:";
 	if a random chance of 1 in 2 succeeds:
 		say "     [bold type]Feather![roman type][line break]";
 	else:

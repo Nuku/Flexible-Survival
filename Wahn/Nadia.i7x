@@ -734,13 +734,13 @@ instead of trading the fertile pill when the current action involves the Nadia: 
 	else:
 		say "     Nadia whimpers, tears gathering in her large, black eyes, but sinks back into the soft confines of her nest. It's a little hard not to feel a twinge of pity for her, but you do have your reasons.";
 
-instead of going up from Grey Abbey Library while (Nadia is in Garden View and Exotic Bird is tamed and companion of Player is Exotic Bird and NadiaChar-H is "0"):
+instead of going up from Grey Abbey Library while (Nadia is in Garden View and Exotic Bird is tamed and Exotic Bird is listed in companionList of Player and NadiaChar-H is "0"):
 	move player to Garden View;
 	say "     Seeing the exotic bird on your shoulder, Nadia lets out a girlish trill of sheer delight. 'It's so pretty!' She warbles a few notes and the bird obediently flaps over to her, landing on her wrist, and she takes it back into her nest to fuss over it as if it were her very own child. Chirpy is only more than happy to be in Nadia's presence, cozying up to the bird-woman and preening her feathers. As Nadia pets and coos at the exotic bird, you notice the similarity in their colorful plumage and can't help but wonder if the birds that she'd been caring for while trapped were similar, if not of the same species as the one that's now your pet. She did say they'd been on loan from the zoo, after all...";
 	say "     It's a while before Nadia is done with her little affectionate display, and she sings another few notes before throwing Chirpy off her wrist, your pet flapping through the air to return to your shoulder. Thoroughly content and a lot happier than she was a few moments ago, Nadia gives you a small, shy smile before retreating back into the confines of her nest.";
 	now NadiaChar-H is "1";
 
-instead of going up from Grey Abbey Library while (Nadia is in Garden View and Gryphoness is tamed and companion of Player is Gryphoness) and (NadiaChar-A is "0") and (NadiaChickCounter > 0 or NadiaPregCounter1 > 0):
+instead of going up from Grey Abbey Library while (Nadia is in Garden View and Gryphoness is tamed and Gryphoness is listed in companionList of Player) and (NadiaChar-A is "0") and (NadiaChickCounter > 0 or NadiaPregCounter1 > 0):
 	move player to Garden View;
 	say "     As you enter the library's second floor, you leave Denise a little way away as you go and check in with Nadia to make sure she's all right, while the gryphoness passes the time by leaning against one of the second story railings and singing to herself.";
 	say "     At the sound of Denise's singing, Nadia perks up from within her nest and eyes the gryphoness, her interest clearly sparked by the gryphoness's talents. Seeing that introductions are in order, you invite Denise over and introduce the two of them. The two quickly launch into an animated discussion over music and singing in particular, with the two of them comparing their tastes in music. The two are quite similar, although Nadia prefers soothing or upbeat tunes as opposed to Denise's lonely, haunting songs, and dislikes much of contemporary music, finding much of it too jarring for her tastes.";

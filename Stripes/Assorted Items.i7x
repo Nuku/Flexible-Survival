@@ -62,7 +62,7 @@ check pillgiving someone (called x):
 	else if x is a pet:
 		if x is not tamed:
 			say "Who?" instead;
-		else if x is not companion of Player:
+		else if x is not listed in companionList of Player:
 			say "I don't see them around right now. You'll have to call them over first." instead;
 		else if fuckscene of x is empty:
 			say "There's little point in giving a pill to them." instead;

@@ -329,7 +329,7 @@ Section 1-4 - CORRUPTED Intro
 to say MogdrazTalkPurifier:
 	say "     Since everything has been taken care of and moved onto Mogdraz's responsibility, you're on about to ask him what have they done to the angel. He smiles, then begins to explain. 'Well, you will like to know that it was thanks to that feather you gave Toron that we found his weakness. Also, it allowed us to discover a way to block one of his most troublesome abilities, an escape trick that he would have most certainly used to break free. With those off, he fell easily. Poor winged bastard couldn't resist the sight of a group of horny sexy red devils and the feelings they gave him once they started to touch him all over. Hell, he grew a really hard boner and stopped fighting immediately once they got their hands on his shaft. That was some sight to see.'";
 	say "     So it appears the angel was caught successfully and brought somewhere, so you inquire him about that. 'Since you have helped us during all this process and seen none of the action, I could take you there. You see the [bold type]staff door[roman type]? Yeah, the one right next to Toron and the bar. Let him know that you have my authorization to go in and head into the dungeons underground. I'll meet you there, shortly.' he informs you. Looks like he's trusting you enough to let you in his dungeon all by yourself...";
-	if companion of player is demonologist:
+	if demonologist is listed in companionList of Player:
 		WaitLineBreak;
 		say "     'Looks like your efforts were successful' says Xaedihr, tagging right behind you. 'I don't oppose this, I know Mogdraz knows what he's doing, and he wouldn't use this angel for any selfish means. This is just a way to protect himself. Heaven is no better than Hell, if you ask me. Now, just... don't leave me out of the fun if you intend to get to know this big guy, alright?'";
 		if Loyalty of Xaedihr < 30:
@@ -476,7 +476,7 @@ to say CAraqielTalkMenu:
 		now sortorder entry is 3;
 		now description entry is "Have a good sex talk with the hulking fallen seraphim";
 	[]
-	if Energy of Araqiel > 1 and companion of player is demonologist and "Met Xaedihr" is not listed in traits of Araqiel:
+	if Energy of Araqiel > 1 and demonologist is listed in companionList of Player and "Met Xaedihr" is not listed in traits of Araqiel:
 		choose a blank row in table of fucking options;
 		now title entry is "Introduce him to Xaedihr";
 		now sortorder entry is 4;

@@ -573,7 +573,7 @@ jade coin is a grab object.
 the usedesc of jade coin is "[jade coin use]";
 
 to say jade coin use:
-	say "     You throw the coin into the air, watching it tumble end over end a few times before you catch it again and slap it on the back of your hand:[line break]";
+	say "     You throw the coin into the air, watching it tumble end over end a few times before you catch it again and slap it on the back of your hand:";
 	if a random chance of 1 in 20 succeeds:
 		say "     [bold type]Baku![roman type][line break]";
 		say "     ...wait - what?! You don't remember seeing that image on the coin before! Looks like a furry elephant-like creature with a long trunk. As you turn the coin over to check it out, you see the writing on the other side, then the regular dragon again as you flip it back.";

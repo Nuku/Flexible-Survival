@@ -146,7 +146,7 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 		decrease plmindbonus by 1;
 	else if "Strong Psyche" is listed in feats of Player:
 		increase plmindbonus by 1;
-	if companion of Player is mouse girl:
+	if mouse girl is listed in companionList of Player:
 		increase plmindbonus by 2;
 		if Name entry matches the text "Mental Mouse", decrease plmindbonus by 1;
 	if HP of Velos > 2 and scalevalue of Player < 3:
@@ -533,12 +533,37 @@ This is the player attack rule:
 	else:
 		say "You miss!";
 	if Player is not lonely:
-		if a random chance of petchance in 4000 succeeds and "The Horde" is listed in feats of Player:
+		[if a random chance of petchance in 4000 succeeds and ]
+		if "Double Team" is listed in feats of Player:[The Horde]
 			LineBreak;
-			say "Your many pets, always close by, come pouring out en masse and swarm your enemy, battering the [EnemyNameOrTitle] from all sides!";
+			say "Your pets, always close by, aid you in attacking the enemy, synchronizing both their attacks against the [EnemyNameOrTitle]!";
 			LineBreak;
-			repeat with z running through tamed pets:
-				now the attack bonus is dexterity of z + ( level of z * 2 ) + pethitbonus - 10;
+			Repeat with z running through companionList of Player:
+				if z is not NullPet:
+					now the attack bonus is dexterity of z + ( level of z * 2 ) + pethitbonus - 10;
+					let the combat bonus be attack bonus minus defense bonus;
+					if hardmode is true:
+						if the combat bonus > 16:
+							now combat bonus is 16;
+						else if the combat bonus < -25:
+							now combat bonus is -25;
+					else:
+						if the combat bonus > 19:
+							now combat bonus is 19;
+						else if the combat bonus < -22:
+							now combat bonus is -22;
+					now roll is a random number from 1 to 50;
+					if roll plus the combat bonus > 20:
+						let dam be ( weapon damage of z times a random number from 80 to 120 ) divided by 100;
+						say "[z]: [assault of z] [special-style-2][dam][roman type] damage inflicted!";
+						decrease monsterHP by dam;
+					else:
+						say "Your [z] misses!";
+		else if a random chance of petchance in 1000 succeeds:
+			LineBreak;
+			let z be entry 1 of companionList of Player;
+			if z is not NullPet:
+				now attack bonus is dexterity of z + ( level of z * 2 ) + pethitbonus - 10;
 				let the combat bonus be attack bonus minus defense bonus;
 				if hardmode is true:
 					if the combat bonus > 16:
@@ -553,31 +578,10 @@ This is the player attack rule:
 				now roll is a random number from 1 to 50;
 				if roll plus the combat bonus > 20:
 					let dam be ( weapon damage of z times a random number from 80 to 120 ) divided by 100;
-					say "[z]: [assault of z] [special-style-2][dam][roman type] damage inflicted!";
+					say "[assault of z][run paragraph on]  [special-style-2][dam][roman type] damage inflicted!";
 					decrease monsterHP by dam;
 				else:
 					say "Your [z] misses!";
-		else if a random chance of petchance in 1000 succeeds:
-			LineBreak;
-			now attack bonus is dexterity of companion of Player + ( level of companion of Player * 2 ) + pethitbonus - 10;
-			let the combat bonus be attack bonus minus defense bonus;
-			if hardmode is true:
-				if the combat bonus > 16:
-					now combat bonus is 16;
-				else if the combat bonus < -25:
-					now combat bonus is -25;
-			else:
-				if the combat bonus > 19:
-					now combat bonus is 19;
-				else if the combat bonus < -22:
-					now combat bonus is -22;
-			now roll is a random number from 1 to 50;
-			if roll plus the combat bonus > 20:
-				let dam be ( weapon damage of companion of Player times a random number from 80 to 120 ) divided by 100;
-				say "[assault of companion of Player][run paragraph on]  [special-style-2][dam][roman type] damage inflicted!";
-				decrease monsterHP by dam;
-			else:
-				say "Your [companion of Player] misses!";
 	LineBreak;
 	if monsterHP is not currentmonHP:
 		follow the monster injury rule;
@@ -1209,7 +1213,7 @@ to win:
 		if a random chance of vorechance in 300 succeeds:					[chance for ub]
 			if Name entry is not listed in infections of VoreExclusion and enemy type entry is 0: [not on the exclude list and non-unique infection]
 				now ubprompted is true; [player will be prompted for ub]
-	if companion of Player is Carnivorous Plant and hunger of Voria > 7 and Name entry is not listed in infections of VoreExclusion and enemy type entry is 0:
+	if Carnivorous Plant is listed in companionList of Player and hunger of Voria > 7 and Name entry is not listed in infections of VoreExclusion and enemy type entry is 0:
 		now ok is 0;
 		VoriaPostCombat;	[Carnivorous Plant vore scene. Scenes in Voria file]
 		now fightoutcome is 15;	[Voria vored foe]
@@ -1315,10 +1319,11 @@ to win:
 			increase XP of Player by ( lev entry + 2 ) / 5; [10% XP boost]
 	if ktspeciesbonus > 0, increase the XP of the player by (lev entry divided by 2);
 	if the player is not lonely:
-		now lastfight of companion of Player is turns;
-		increase the XP of the companion of the player by lev entry times two;
-		if "Ringmaster" is not listed in feats of Player:
-			decrease the XP of the player by ( lev entry times 2 ) divided by 3;
+		repeat with z running through companionList of Player:
+			now lastfight of z is turns;
+			increase the XP of the z by lev entry times two;
+			if "Ringmaster" is not listed in feats of Player:
+				decrease the XP of the player by ( lev entry times 2 ) divided by 3;
 	increase the morale of the player by 1;
 	[Collecting Vials]
 	if fightoutcome is not 13 and fightoutcome is not 14 and fightoutcome is not 18 and fightoutcome is not 19:
@@ -1336,7 +1341,7 @@ to win:
 	[clear the screen and hyperlink list;]
 	AttemptToClearHyper;
 	now automaticcombatcheck is 0; [combat is over, reset to zero]
-	if gshep is companion of Player:
+	if gshep is listed in companionList of Player:
 		increase gshep_fights by 1;
 		if gshep_postfight is 0 and ( gsd_pet is 12 or gsd_pet is 13 or gsd_pet is 14 ):	[checks on Korvin's post-fight 'feedback']
 			if gshep_fights > 2 and inasituation is false and GShepLastScene - turns >= 4:
@@ -1373,7 +1378,8 @@ To lose:
 		else:
 			increase Libido of Player by 2;
 	if the player is not lonely:
-		now lastfight of companion of Player is turns;
+		repeat with x running through companionList of Player:
+			now lastfight of x is turns;
 	if HP of Player < 1, now HP of Player is 1;
 	now combat abort is 1;
 	increase the XP of the player by lev entry divided by two;

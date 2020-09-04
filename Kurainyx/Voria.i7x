@@ -183,9 +183,12 @@ to say VoriaDesc:
 		now Carnivorous Plant is tamed;
 		add "Tamed" to Traits of Carnivorous Plant;
 	else:
-		say "     Voria has grown a lot since you had found it. Its blue head alone can easily fit the average human inside of its maw, and right under it are its four leaves, each the size of a small bed. At least a dozen or so tentacles slowly slither along the ground and many of them as thick and likely as strong as rope. [if companion of Player is Carnivorous Plant]On its underside, [else]Even though its bottom half is burrowed underground right now, you know that on its underside[end if] there are a couple of short but even thicker tentacles that the plant uses to move around, and in the center of those appendages is a sort of sac which acts as the plant's stomach. Looking behind Voria's head, you see that a pair of tentacles have a miniature version of its head mounted on their ends, each the size of a baseball, while another pair of tentacles have phallic-shaped blue tips on their ends.";
-	if companion of Player is Carnivorous Plant:
-		say "     [bold type]She is currently following you as your battle companion.[roman type][line break]";
+		say "     Voria has grown a lot since you had found it. Its blue head alone can easily fit the average human inside of its maw, and right under it are its four leaves, each the size of a small bed. At least a dozen or so tentacles slowly slither along the ground and many of them as thick and likely as strong as rope. ";
+		if Carnivorous Plant is listed in companionList of Player:
+			say "On its underside, ";
+		else:
+			say "Even though its bottom half is burrowed underground right now, you know that on its underside";
+		say " there are a couple of short but even thicker tentacles that the plant uses to move around, and in the center of those appendages is a sort of sac which acts as the plant's stomach. Looking behind Voria's head, you see that a pair of tentacles have a miniature version of its head mounted on their ends, each the size of a baseball, while another pair of tentacles have phallic-shaped blue tips on their ends.";
 
 Instead of conversing the Voria:
 	if HP of Voria < 23:
@@ -212,7 +215,6 @@ NPCObject of Carnivorous Plant is Voria.
 understand "Voria" as Carnivorous Plant.
 printed name of Carnivorous Plant is "Voria".
 The description of Carnivorous Plant is "[CarnivorousPlantDesc]".
-Carnivorous Plant is a part of the player.
 The weapon damage of Carnivorous Plant is 10.
 The level of Carnivorous Plant is 1.
 The Dexterity of Carnivorous Plant is 15.
@@ -266,7 +268,7 @@ VoriaCocks is a number that varies.
 VoriaCunts is a number that varies.
 
 an everyturn rule:	[Voria will trigger post-combat vore scene after 8 turns while being the player's pet]
-	if companion of Player is Carnivorous Plant and hunger of Voria < 8:
+	if Carnivorous Plant is listed in companionList of Player and hunger of Voria < 8:
 		increase hunger of Voria by 1;
 
 to VoriaPostCombat:	[Voria vore scenes after you win a fight against a voreable enemy]	[TO DO: Make adjustments to post combat scenes for herm enemies]

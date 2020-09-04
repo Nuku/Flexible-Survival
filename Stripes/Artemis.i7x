@@ -107,7 +107,7 @@ Table of GameCharacterIDs (continued)
 object	name
 rubber tigress	"rubber tigress"
 
-rubber tigress is a pet. rubber tigress is a part of the player.
+rubber tigress is a pet.
 NPCObject of rubber tigress is Artemis.
 understand "Artemis" as rubber tigress.
 printed name of rubber tigress is "Artemis".
@@ -198,8 +198,7 @@ to say ArtemisDesc:
 		if Player consents:
 			attempttoclearhyper;
 			artemismodding;
-	if companion of Player is rubber tigress:
-		say "     [bold type]She is currently following you as your battle companion.[roman type][line break]";
+
 
 to say ArtemisAttack:
 	if lust of rubber tigress is 1 and a random chance of 1 in 4 succeeds:
@@ -220,7 +219,7 @@ to say ArtemisAttack:
 instead of conversing the Artemis:
 	if Player is in Courtyard and Artemis is in Courtyard:
 		say "[ArtemisTalkMenu]";
-	else if companion of Player is rubber tigress:
+	else if rubber tigress is listed in companionList of Player:
 		say "[ArtemisTalkMenu]";
 	else:
 		say "     Artemis isn't here.";
@@ -231,7 +230,7 @@ instead of conversing rubber tigress:
 	else:
 		if Player is in Courtyard and Artemis is in Courtyard:
 			say "[ArtemisTalkMenu]";
-		else if companion of Player is rubber tigress:
+		else if rubber tigress is listed in companionList of Player:
 			say "[ArtemisTalkMenu]";
 		else:
 			say "     Artemis isn't here.";
@@ -408,7 +407,7 @@ lastArtemisplay is a number that varies. lastArtemisplay is usually 255.
 artemisstatefairrt is a truth state that varies. artemisstatefairrt is usually false.
 
 An everyturn rule:
-	if companion of Player is rubber tigress and skipturnblocker is 0:
+	if rubber tigress is listed in companionList of Player and skipturnblocker is 0:
 		increase Libido of Player by 3;
 		increase Libido of rubber tigress by 5;
 		if lastfuck of rubber tigress - turns >= 4 and player is not neuter:
@@ -807,7 +806,7 @@ It is not temporary.
 cuptrick is a truth state that varies. cuptrick is usually false.
 
 instead of using cup stack:
-	if companion of Player is rubber tigress:
+	if rubber tigress is listed in companionList of Player:
 		if HP of rubber tigress >= 7 and a random chance of 1 in 2 succeeds and cuptrick is false:	[cup training]
 			say "     Deciding the cups might make a good means to train Artemis, given her fondness for them. You take one out, which quickly draws the kitty's attention. Almost immediately, she's at your side, purring and nuzzling around your legs. You hold the cup up and tell her to sit. She eyes the cup and mrowls needfully. You keep it out of reach and tell her again to sit.";
 			say "     When you ask her a third time, she lowers and down obediently. Or so you think at first. A moment later you notice her continue to sink down past her normal sitting position, her hindquarters being pressed down and deforming. Just as you're taking this in, she springs upward, her reinflating hindquarters propelling her up so she may swat the cup out of your surprised hand. As it skitters across the ground, she walks over to it slowly, tail and ass swishing. She gulps it down in one extra wide, very deliberate bite[if lust of rubber tigress is 2], stretching her vaginal maw open surprisingly wide as she does[end if].";
@@ -831,13 +830,13 @@ instead of sniffing cup stack:
 
 Section 5 - Food/Drink
 
-after using water bottle while companion of Player is rubber tigress:
+after using water bottle while rubber tigress is listed in companionList of Player:
 	say "     After finishing off your drink, you notice Artemis looking up at you... or, more appropriately, at your empty bottle. You toss it to her and she [one of][if lust of rubber tigress is 2]drools her pussy juices onto it[else]chomps onto it[end if], melting the plastic into clear goo and swallowing it down[or]pounces atop it, flattening it down before licking up one end and [if lust of rubber tigress is 2]slurping it into her vaginal muzzle as her pussy juices liquefy the plastic[else]sliding it into her mouth whole to melt and slide down her throat[end if][or]bats it around for a bit before eating it[at random].";
 
-after using dirty water while companion of Player is rubber tigress:
+after using dirty water while rubber tigress is listed in companionList of Player:
 	say "     After finishing off your drink, you notice Artemis looking up at you... or, more appropriately, at your empty bottle. You toss it to her and she [one of][if lust of rubber tigress is 2]drools her pussy juices onto it[else]chomps onto it[end if], melting the plastic into clear goo and swallowing it down[or]pounces atop it, flattening it down before licking up one end and [if lust of rubber tigress is 2]slurping it into her vaginal muzzle as her pussy juices liquefy the plastic[else]sliding it into her mouth whole to melt and slide down her throat[end if][or]bats it around for a bit before eating it[at random].";
 
-after using chips while companion of Player is rubber tigress:
+after using chips while rubber tigress is listed in companionList of Player:
 	say "     From the time you first started opening your snack, [one of]Artemis's eyes have been watching you intently[or]Artemis has been lying down and acting nonchalant, but you can see the corner of her eye watching, waiting[or]Artemis's ears have perked up and she's been purring around your legs, mewling excitedly[at random]. Finished with the snack, you roll the wrapper into a ball and toss it to her. She bats it out of the air and chases it for a bit before licking it up with her tongue. It melts in her mouth and flows down her throat with a soft gulp.";
 
 
@@ -935,7 +934,7 @@ to artemisnap:
 		wait for any key;
 	now skipturnblocker is 1;
 
-after resting while companion of Player is rubber tigress:
+after resting while rubber tigress is listed in companionList of Player:
 	now skipturnblocker is 0;
 	if HP of rubber tigress is 4:
 		say "     You wake up from your nap feeling refreshed[if Libido of Player > 40] and even somewhat less wildly aroused[end if]. As you stretch, you rouse the tigress at your side, who yawns her rubbery mouth wide and comes up to nuzzle you[if Player is not neuter], picking up the faint scent of sex from her[end if]. You feel a little closer to the pretty kitty and snug her in your arms as thanks for keeping watch while you slept.";

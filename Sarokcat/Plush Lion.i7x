@@ -61,7 +61,10 @@ to plushlionvored:
 		say "     As you slumber inside that soft belly, you dream of padded felines and soft hugs. These dreams go on and on, filling your mind with their fuzzy thoughts of plush happiness until that is all that remains. You come to shortly after being let out of the stuffed lion, rising up and nuzzling him with your plush face. You, like him, are a living plush lion creature, both in body and in mind. After a playful, kinky romp together, you pad down the midway, fuzzy side by fuzzy side.";
 		now plionvored is -100;
 		now XP of Player is 0;  [prevents accidental level up]
-		if the player is not lonely, now XP of companion of Player is 0;
+		if the player is not lonely:
+			repeat with x running through companionList of Player:
+				if x is NullPet:
+					now XP of x is 0;
 		now non-infectious entry is true;  [prevents regular plush lion infection from occurring]
 		setmonster "Plush Lion" silently;
 		turn the Player into a "Plush Lion";

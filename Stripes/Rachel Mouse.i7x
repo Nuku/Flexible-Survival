@@ -92,7 +92,7 @@ to say mouseapts:
 		WaitLineBreak;
 		say "     Before you can ask her why, she senses the question (or perhaps just guesses it), and gives you a peck on the cheek. 'Oh, I'm quite sure I'll be able to convince you on my own. I'll just have to show you how wonderful being a mousey can be. I'd much rather convince you. It'll be more fun this way,' she adds with a soft, squeaking giggle. Lacking any other options, it seems best if you let the mouse girl come with you. Certainly, if you try to leave without her, she'll raise the alarm. It is only by her good graces that you're able to leave at all. Besides, she probably wouldn't have let you exit at all if she'd senses you wouldn't take her along.";
 		if the player is not lonely:
-			say "     Rachel stares at your [companion of Player], who had been hiding outside since you got here, and it slinks off. She smiles and takes your hand in hers, chirring softly.";
+			say "     Rachel stares at your companion, who had been hiding outside since you got here, and it slinks off. She smiles and takes your hand in hers, chirring softly.";
 		now mouse girl is tamed;
 		add "Tamed" to Traits of mouse girl;
 		move Rachel to Pantry;
@@ -116,7 +116,7 @@ Table of GameCharacterIDs (continued)
 object	name
 mouse girl	"mouse girl"
 
-mouse girl is a pet. mouse girl is a part of the player.
+mouse girl is a pet.
 NPCObject of mouse girl is Rachel.
 understand "Rachel" as mouse girl.
 printed name of mouse girl is "Rachel".
@@ -171,8 +171,6 @@ to say RachelDesc:
 	say "     Despite her small size, this mouse girl has considerable psychic powers. From what you've seen and sensed, she's probably one of the strongest among them. Having been selected by the mouse collective's hive mind as your intended mate, you sensed her powerful mind and can't help but feel a strong attachment to her. Intent on coaxing you back to them, she has chosen to accompany you to show you the pleasures of mousedom to convince you to return. You'll have to keep her close by if you want to avoid having the mice constantly tracking you down.";
 	say "     As if sensing your mind focused on her, the mouse girl [one of]bends over to pick something up, swishing her tail to lift the back of her dress and flash her pussy at you[or]runs her paws along her feminine body[or]teases her nipples in a little show for you[or]brushes the front of her dress, making the growing erection under it more prominent[or]grins coquettishly[or]sends a fresh wave of her love for you into your mind[or]nibbles at some cheese and crackers she found, somehow making it seem sexy[at random]. You can't help but think as you look at her that joining the mouse collective wouldn't be so bad if it means being with her.";
 	if a random chance of 2 in 5 succeeds, decrease humanity of Player by 1;
-	if companion of Player is mouse girl:
-		say "     [bold type]She is currently following you as your battle companion.[roman type][line break]";
 
 instead of sniffing mouse girl:
 	say "[RachelScent]";
@@ -184,7 +182,7 @@ to say RachelScent:
 instead of conversing the Rachel:
 	if Player is in Pantry and Rachel is in Pantry:
 		say "[RachelTalkMenu]";
-	else if companion of Player is mouse girl:
+	else if mouse girl is listed in companionList of Player:
 		say "[RachelTalkMenu]";
 	else:
 		say "     Rachel isn't here.";
@@ -195,7 +193,7 @@ instead of conversing mouse girl:
 	else:
 		if Player is in Pantry and Rachel is in Pantry:
 			say "[RachelTalkMenu]";
-		else if companion of Player is mouse girl:
+		else if mouse girl is listed in companionList of Player:
 			say "[RachelTalkMenu]";
 		else:
 			say "     Rachel isn't here.";
@@ -292,7 +290,7 @@ to say sexwithmousegirl:
 
 
 An everyturn rule:
-	if companion of Player is mouse girl and skipturnblocker is 0:
+	if mouse girl is listed in companionList of Player and skipturnblocker is 0:
 		increase Libido of Player by 5;
 		let diceroll be a random number from 40 to 200; [lust check vs 200, player libido 40 or less auto-wins]
 		if diceroll < Libido of Player and lastfuck of mouse girl - turns >= 4:

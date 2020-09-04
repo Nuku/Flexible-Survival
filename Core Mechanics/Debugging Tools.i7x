@@ -714,7 +714,7 @@ carry out TestMode:
 	add "Strong Back" to feats of Player;
 	add "Strong Psyche" to feats of Player;
 	add "Survivalist" to feats of Player;
-	add "The Horde" to feats of Player;
+	add "Double Team" to feats of Player;
 	add "Toughened" to feats of Player;
 	add "Unerring Hunter" to feats of Player;
 	add "Vampiric" to feats of Player;

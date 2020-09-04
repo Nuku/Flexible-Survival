@@ -231,7 +231,7 @@ to say Francoisdesc:
 	say "     Francois, the unusual hybrid before you, has an appearance that can only be described as a mutt. His short, stocky canine body and face are covered with a thick, mottled coat of fur made up of several different colors and patterns. There even appear to be small feathers poking out of his pelt in several places. Finally, a rather feline set of ears and tail complete the appearance. He wears a surprisingly clean white apron over his torso, which does a reasonable job of protecting his decency while still allowing his long tail to flit about unhindered.";
 
 Instead of conversing the Francois:
-	if HP of Karen is 6 and companion of Player is Retriever Girl:
+	if HP of Karen is 6 and retriever girl is listed in companionlist:
 		say "     Francois greets you with a smile as you approach. 'Ah, mon ami[if Player is purefemale]e[end if], good to see you again! And who is this you've brought with you?'";
 		say "     'It's me, Karen,' she responds. 'We were hoping you could help me out with-'[line break]";
 		say "     'Karen! Mon Dieu, I had feared the worst mon amie,' Francois interrupts, stepping around the counter and placing a small kiss on each side of her muzzle before pulling her into a hug. After breaking off, Francois motions towards one of the tables near the front of the store. The three of you sit and chat for a while, regaling the mutt with the tale of your escape from Rex before Karen finally asks him about her past. 'Ah, désolé mon amie, we never spoke much of our personal lives, only of our shared interest, les animaux. I recall you mentioning being a student at the college, but I am afraid that's all I know.'";

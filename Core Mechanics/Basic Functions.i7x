@@ -172,18 +172,21 @@ to ItemLoss all (ItemObj - object):
 	if carried of ItemObj < 1:
 		if debug is at level 10:
 			say "DEBUG -> Trying to re-move [ItemObj] from player who doesn't have any.[line break]";
-	else: [found at least one item]
-		ItemLoss ItemObj by carried of ItemObj
+		else: [found at least one item]
+			ItemLoss ItemObj by carried of ItemObj
 
 to ItemLoss all (ItemObj - object) silently:
 	if carried of ItemObj < 1:
 		if debug is at level 10:
 			say "DEBUG -> Trying to re-move [ItemObj] from player who doesn't have any.[line break]";
-	else: [found at least one item]
-		ItemLoss ItemObj by carried of ItemObj silently;
+		else: [found at least one item]
+			ItemLoss ItemObj by carried of ItemObj silently;
 
 to ItemLoss (ItemObj - a grab object) by (N - number) silence state is (Silence - a number):
 	decrease carried of ItemObj by N;
+	[
+	if Carried of ItemObj is 0, now ItemObj is nowhere; [might not be needed after all - walking into an empty room cleans away the ghost items]
+	]
 	if Silence is 0:
 		LineBreak;
 		if N is 1:

@@ -153,13 +153,13 @@ to say AlexandraBreedingMenu:
 		now title entry is "Karel and Isaac, the black stallion twins";
 		now sortorder entry is 5;
 		now description entry is "Let the Friesian farmhands double-team Alexandra";
-	[]
+	[
 	if PlayerMet of Nelson is true and Alexandra is in Worker Barracks and Nelson is in Worker Barracks:
 		choose a blank row in table of fucking options;
 		now title entry is "Nelson, the large zebra stud";
 		now sortorder entry is 6;
 		now description entry is "Let the zebra give Alexandra a pounding";
-	[]
+	]
 	if PlayerMet of Farmhand Horsemen is true and FriesianRelationship is 2 and Energy of Alexandra > 0 and Alexandra is not in Worker Barracks: [knows the twins, Alexandra was fucked by horsecock already]
 		choose a blank row in table of fucking options;
 		now title entry is "Take her to the farm for an extended stay in the worker barracks";
@@ -230,7 +230,7 @@ to AlexandraBrutus_Unchained:
 		say "     As you enter the worker barracks, Alexandra is clearly waiting for you, as she pushes herself off from the wall she was leaning against and saunters closer. Swaying her hips enticingly, the dobie bitch is quite a sight to behold, and you let your memory wander through everything you've done to and with her, which puts a grin on your lips all of its own. 'Hey boss,' the former cop says as she comes to stand before you, one hand straying to her flat and toned belly. 'You know what - I kinda learned to dig having rough sex with your purple beast. Being speared by that arm-thick prick, just a play-toy in the arms of the brute, then carrying his spawn inside me. Little demon dogs. They may look like normal puppies, but they sure got some of his temperament.'";
 	else:
 		say "     ERROR - Alexandra is in an unexpected location. Please report where she is and how she got there on the FS Discord.";
-	if companion of Player is demon brute: [already summoned]
+	if demon brute is listed in companionList of Player: [already summoned]
 		say "     Turning her head towards Brutus, who's still at his usual spot one step behind you to the side, a lusty smirk crosses Alexandra's face. 'I'm ready for another go as your puppy mill. Wanna unleash the demon on me? I can take it, no holds barred this time!' Almost as if to prove this to you, she quickly proceeds to unzip her jeans, tucking open the front and then taking your hand to guide it to her pussy. You can feel wetness between her arousal-swollen nether lips, as the bitch is leaking female juices in anticipation of a huge cock thrusting into her and breeding her once more. In response to the show, Brutus steps forward, grinning down at Alexandra with a hungry expression that shows his frightful collection of sharp teeth. His clawed hand twitches as if to just rip the remaining clothes off Alexandra's body, but apparently is held back by your standing order not to hurt anyone but your enemies. '[Master]?' he asks with an impatient growl, his erection filling out and throbbing.";
 	else: [not the active companion]
 		say "     Laying her hand on your chest and stroking a finger along the curve of your demontooth amulet, a lusty smirk crosses Alexandra's face. 'I'm ready for another go as your puppy mill. Wanna unleash the demon on me? I can take it, no holds barred this time!' Almost as if to prove this to you, she quickly proceeds to unzip her jeans, tucking open the front and then taking your hand to guide it to her pussy. You can feel wetness between her arousal-swollen nether lips, as the bitch is leaking female juices in anticipation of a huge cock thrusting into her and breeding her once more. 'Come on boss, you know you want to see him put another litter in there!'";
@@ -240,14 +240,14 @@ to AlexandraBrutus_Unchained:
 	say "     ([link]N[as]n[end link]) - No. You decide when they can breed, not them!";
 	if Player consents:
 		LineBreak;
-		if companion of Player is not demon brute: [not the active companion]
+		if demon brute is not listed in companionList of Player: [not the active companion]
 			say "     Thrusting in two fingers and feeling the insides your dobie's trembling pussy, you find her snug around your digits, yet at the same time easy to spread open as her dripping snatch stretches out with a little push. Seems that repeated poundings with a dick bigger around than a beer-can left their mark on the breeding bitch, with the nanites fixing her hole up with the needed elasticity to return to normal dimensions instead of gaping open wide all the time. She grinds against your hand and pants lustfully, then bends her head forward to lick your cheek and say, 'Give me what I need. Please boss!' A grin spreads across your face in response to Alexandra's needy begging and you raise your hand to close around the demontooth amulet.";
 			say "     Reciting the tongue-breaker of a magical command phrase that Nermine taught you starts purple smoke to billow out of the very tip of the tooth, quickly improving in volume. Swirling away from you to a spot about ten feet ahead, the cloud becomes thicker and thicker until soon solidifying into the towering shape of your demonic slave Brutus. '[Master]?' the big, purple brute growls out in greeting, turning his horned head to look at you. Yet his usual hateful scowl slips a little as he sees Alexandra plastered against your front, panting audibly as you continue to finger-fuck her. Brutus's nostrils flare as he bends forwards and sniffs the air, followed by the aroused growl of, 'A [if Sterile of Alexandra is true]needy[else]fertile[end if] bitch to breed!' His huge cock throbs visibly, immediately starting to fill out and rising from the place where it was dangling between his muscled legs. Somewhat reluctantly, you pull your fingers out of Alexandra and turn her around to face the demon she begged you for.";
 			WaitLineBreak;
 		say "[AlexandraBreeding_EvilBrutus]";
 	else:
 		LineBreak;
-		if companion of Player is demon brute: [already summoned]
+		if demon brute is listed in companionList of Player: [already summoned]
 			say "     Shaking your head and reminding the two of them that you're their [master], you earn a sullen huff from Alexandra, followed by her walking over to the nearest sofa and flopping down on it. Pushing her pants down over her hips, she starts to frig her pussy in full view, working at getting herself off now that you've denied the fun she wanted. Meanwhile, Brutus rages against his magical binding, the muscles of his towering physique rippling beneath his skin as he attempts to raise his clawed hands to disembowel the cock-blocker standing between him and savagely fucking the dobie bitch. Finally he balls his fists hard enough for claw-tips to dig into his palms, with some drops of dark purple blood welling up. Impotent to cause physical harm, he moves on to a tirade of vile curses that could peel paint of the walls, until you tell him to just shut up and be silent for now.";
 		else: [not the active companion]
 			say "     Shaking your head and reminding the former cop that you're her [master] now, you earn a sullen huff from Alexandra, followed by her walking over to the nearest sofa and flopping down on it. Pushing her pants down over her hips, she starts to frig her pussy in full view, working at getting herself off now that you've denied the fun she wanted. The dobie bitch lets out purposefully loud moans and gasps that echo through the library, even going so far as calling out, 'Breed me! Breed my pussy you brute!' as she gets close to orgasm soon after. One might think she's just fantasizing about the demon as she has her eyes mostly closed by that time, but you see her throwing you quick glances through slitted lids. Seems she's trying to make you jealous or to draw you into the fantasy and change your mind about seeing her bred.";
@@ -255,7 +255,7 @@ to AlexandraBrutus_Unchained:
 to say AlexandraBreeding_EvilBrutus:
 	if AlexandraBrutusInteraction is 0: [first time]
 		project the figure of BrutusEvil_icon;
-		if companion of Player is demon brute: [already summoned]
+		if demon brute is listed in companionList of Player: [already summoned]
 			say "     Instead of saying anything further to the breeding bitch, you raise a hand to stroke the curve of your demontooth amulet and turn your head towards Brutus, the huge purple beast you have taken as your controlled slave. He scowls as he becomes aware of your attention, baring his sharp teeth at the indignity of having to serve. Despite this, the towering brute steps up as you command him to, then says in a growling voice, 'Yes... [master]?' ";
 		else: [not the active companion]
 			say "     Instead of saying anything further to the breeding bitch, you grab your demontooth amulet tightly in your fist, then murmur the magic words Nermine told you. Swirling purple mist flows out of the demon fang's sharp tip, then solidifies in the musclebound figure of your captive demon brute. The towering brute says in a growling voice, 'Yes... [master]?' ";
@@ -293,7 +293,7 @@ to say AlexandraBreeding_EvilBrutus:
 				WaitLineBreak;
 				say "     You can only take so much of the hard fuck your demon pet dishes out, and all the stimulation soon drives your arousal over the edge. [if Player is male]With a loud moan, your [Cock of Player] shaft sprays cum all over your chest[else if Player is female]With a loud moan, you orgasm, femcum running down from your stretched cunt[else]With a loud moan, your body shakes in orgasm[end if]. His duty at getting you off fulfilled, the constraints on the demon's libido fall away and he starts fucking you even harder to get himself off. Soon, he reaches his climax too - and with a deep, satisfied grunt, he begins to pump your bowels full of his infernal seed. With the head of his shaft pushing open your cervix, he easily fills your womb and vagina, with the remaining cum squirting out around the brute's thick cock as he thrusts into you a few more times. As he finally removes his cock with a lout *pop*, your stomach looks distended from the sheer amount of cum he has injected into you, with more of it leaking from your stretched hole to create a white-ish pool under you.";
 				LineBreak;
-				if companion of Player is demon brute: [is the active pet]
+				if demon brute is listed in companionList of Player: [is the active pet]
 					say "     Satisfied, you sink to the floor and tell your captive demon to resume guarding you.";
 				else: [back into the amulet]
 					say "     Satisfied, you sink to the floor and moan the magic words to banish the demon again. Your well-hung fucker turns into a cloud of purple mist and vanishes into the amulet.";
@@ -373,7 +373,7 @@ to say AlexandraBrutusBreedingWarmup:
 	WaitLineBreak;
 	project the figure of Alexandra_naked_icon;
 	say "     You give Alexandra a broad grin and tell her what a good dog she is, then pull your fingers from her pussy and hold them out for her to lick clean, slurping up her own juices. Adding a command for her to strip, the next thing you do is ";
-	if companion of Player is demon brute: [already summoned]
+	if demon brute is listed in companionList of Player: [already summoned]
 		say "stroking the curve of your demontooth amulet and turning your head towards Brutus, the huge purple beast you have taken as your controlled slave. He's standing close by, his huge purple shaft erect and throbbing from the show of Alexandra's domination. With a growling voice, he asks, 'Yes... [master]?' ";
 	else: [not the active companion]
 		say "grabbing your demontooth amulet tightly in your fist and murmuring the magic words Nermine told you. Swirling purple mist flows out of the demon fang's sharp tip, then solidifies in the musclebound figure of your captive demon brute. The towering brute says in a growling voice, 'Yes... [master]?' ";
@@ -413,7 +413,7 @@ to say AlexandraBrutusBreedingThreesome:
 	WaitLineBreak;
 	project the figure of BrutusEvil_icon;
 	say "     You give Alexandra a broad grin and tell her what a good dog she is, then add a command for her to strip and nod over to [if Alexandra is in Grey Abbey Library]one of the library sofas [else if Alexandra is in Worker Barracks]a somewhat worn sofa standing in one of the corners of the room, [else]ERROR, LOCATION NOT SET [end if]not too far away. As the doberwoman saunters towards it, drawing your eye with her wagging tail and enticingly swinging hips, you ";
-	if companion of Player is demon brute: [already summoned]
+	if demon brute is listed in companionList of Player: [already summoned]
 		say "stroke the curve of your demontooth amulet and turn your head towards Brutus, the huge purple beast you have taken as your controlled slave. He's standing close by, his huge purple shaft erect and throbbing from the show he just witnessed. With a growling voice, he asks, 'Yes... [master]?' ";
 	else: [not the active companion]
 		say "grab your demontooth amulet tightly in your fist and murmur the magic words Nermine told you. Swirling purple mist flows out of the demon fang's sharp tip, then solidifies in the musclebound figure of your captive demon brute. The towering brute says in a growling voice, 'Yes... [master]?' ";
@@ -458,7 +458,7 @@ to say AlexandraBrutusBreedingThreesome:
 	NPCSexAftermath Player receives "PussyFuck" from Brutus;
 
 to say AlexandraBrutus_UnchainedBreeding_Intro:
-	if companion of Player is demon brute: [already summoned]
+	if demon brute is listed in companionList of Player: [already summoned]
 		say "     Turning your gaze to the side, you let your eyes wander over Brutus's towering form, packed with bulging muscles and a terrifying sight to behold, with his horns, spikes and the hate-filled scowl on his face. Yet despite all this, he's standing his usual spot as when you're traveling, docile thanks to the magic binding him. His loathing at the subservience is almost palpable, as is his desire to have sex, with the thick pillar of his manhood standing fully erect and dripping pre-cum on the ground. Growling as he tears his red-glowing eyes from giving you murderous looks, he focuses on Alexandra, his hand twitching as if to snatch her up and just rip the remaining clothes off her body. '[Master]?' he asks with an impatient growl, his erection throbbing and sending a spurt of pre flying to almost hit you in the leg.";
 	else: [not the active companion]
 		say "     A grin spreads across your face in response to Alexandra's needy begging and you raise your hand to close around the demontooth amulet. Reciting the tongue-breaker of a magical command phrase that Nermine taught you starts purple smoke to billow out of the very tip of the tooth, quickly improving in volume. Swirling away from you to a spot about ten feet ahead, the cloud becomes thicker and thicker until soon solidifying into the towering shape of your demonic slave Brutus. '[Master]?' the big, purple brute growls out in greeting, turning his horned head to look at you. Yet his usual hateful scowl slips a little as he sees Alexandra plastered against your front, panting audibly as you continue to finger-fuck her. Brutus's nostrils flare as he bends forwards and sniffs the air, followed by the aroused growl of, 'A [if Sterile of Alexandra is true]needy[else]fertile[end if] bitch to breed!' His huge cock throbs visibly, immediately starting to fill out and rising from the place where it was dangling between his muscled legs.";
@@ -493,7 +493,7 @@ to say AlexandraBrutus_UnchainedBreedingThreesome:
 	project the figure of Alexandra_clothed_icon;
 	say "     With your fingers inside her and your thumb on the pleasure-button of her clit, you tell the horny canine that she doesn't have to worry about taking Brutus's girth on her own. You'll be with her all the way and take that thick cock right along your favorite dobie. Her answer is delivered in breathless pants and ecstatic barks, especially as you keep caressing her while she speaks, teasing Alexandra even as she speaks. 'God, boss! You're *nnnghhfffuuckkk!* one kinky [BodyName of Player in lower case]! Shit like this makes me glad I'm your bitch - your breeding bitch! *Oooh, do that again!*' You reward the former cop with some more stroking and touching, basically finger-fucking her for a little while before pulling out and presenting your hand for her to lick clean. After slurping up her own juices like a good little bitch, she puts on a challenging expression and barks out, 'Sure he don't just wanna keep going, just the two of us? Hah, just kidding, I know you want to put that brute of a breeding stud into action!'";
 	say "     You give Alexandra a broad grin and tell her what a good dog she is, then add a command for her to strip and nod over to [if Alexandra is in Grey Abbey Library]one of the library sofas [else if Alexandra is in Worker Barracks]a somewhat worn sofa standing in one of the corners of the room, [else]ERROR, LOCATION NOT SET [end if]. As the doberwoman saunters towards it, drawing your eye with her wagging tail and enticingly swinging hips, you ";
-	if companion of Player is demon brute: [already summoned]
+	if demon brute is listed in companionList of Player: [already summoned]
 		say "stroke the curve of your demontooth amulet and turn your head towards Brutus, the huge purple beast you have taken as your controlled slave. He's standing close by, his huge purple shaft erect and throbbing from the show he just witnessed. With a growling voice, he asks, 'Yes... [master]?' ";
 	else: [not the active companion]
 		say "grab your demontooth amulet tightly in your fist and murmur the magic words Nermine told you. Swirling purple mist flows out of the demon fang's sharp tip, then solidifies in the musclebound figure of your captive demon brute. The towering brute says in a growling voice, 'Yes... [master]?' ";

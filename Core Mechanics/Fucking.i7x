@@ -21,8 +21,9 @@ check fucking:
 	if noun is a pet:
 		if noun is not tamed:
 			say "Who?" instead;
-		else if noun is not companion of Player:
-			say "I don't see them around right now. You'll have to call them over first." instead;
+		else:
+			if noun is listed in companionList of Player:
+				say "I don't see them around right now. You'll have to call them over first." instead;
 
 Carry out fucking:
 	if fuckscene of noun is empty:
