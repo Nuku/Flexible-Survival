@@ -6972,6 +6972,7 @@ Include Joshiro by Wahn.
 Include J'Reth by Prometheus.
 Include Juergen by Wahn.
 Include Julian by Prometheus.
+Include Jana by Kirov.
 Include Kai by WhiteRabbit.
 Include Kara by Sarokcat.
 Include Karen by AGentlemanCalledB.

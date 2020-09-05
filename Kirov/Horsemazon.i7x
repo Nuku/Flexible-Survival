@@ -7,8 +7,7 @@ Section 0 - Monster Variables, Flags, and Markers
 horsemazonVictoryCounter is a number that varies. [@Tag:Notsaved]			[ Not saved to reduce loading, though this means it won't be preserved across loads ]
 horsemazonVictoryCounter is usually 0.
 
-horsemazonIntroduction is truth state that varies.							[ Keeps track of whether or not the player has formally met June ]
-horsemazonIntroduction is usually false.
+[ HP of Jana - Used to track state of Jana ]
 
 Section 1 - Monster Description
 
@@ -30,12 +29,15 @@ to say horsemazonVictory:          [Scene for when the Horsemazon defeats the pl
 	else:
 		if HP of player > 0:	[ Submitted ]
 			say "     Raising your hands in a friendly gesture of peace, you try to deescalate the situation. So focused on winning the fight, she doesn't seem to notice at first, and for a moment, you think you've made a terrible mistake as she swings her lasso around to strike at you. But just before she throws, she notices your gesture and hesitates. You take the opportunity to speak, putting on a friendly smile. 'I'm not here to fight,' you try to calmly explain. 'And I'm not some crazy mutant.' It appears you were convincing, as she lowers her lasso and crop, bringing her hands to her hips with a disapproving glare.";
-			say "     'Well, you ought to not be wandering the streets like one. Otherwise you might get into trouble with a strong woman like me,' she says a bit jokingly. She stows away her 'weapons' on her belt before striding over to you and holding out her hand in greeting. Seeing as she was so quick to start a fight, you're taken by surprise at the sudden shift in the tone of the situation. She seems to have taken you for your word about being friendly. You reach out and shake her hand, finding her grip unsurprisingly strong and firm. 'I'm June, by the way,' she lets you know. The two of you exchange names and pleasantries, and after a little while of chatting, you feel like you've gotten to know June a bit. 'Well,' she says. 'It's been nice, but I really ought to head off. Now that I know who you are, you won't have to worry about being jumped. Just make sure you don't go wild on me,' she says with a teasing smile before heading off. Realizing how much time has passed, you wave goodbye and collect yourself before returning to your own explorations.";
+			say "     'Well, you ought to not be wandering the streets like one. Otherwise you might get into trouble with a strong woman like me,' she says a bit jokingly. She stows away her 'weapons' on her belt before striding over to you and holding out her hand in greeting. Seeing as she was so quick to start a fight, you're taken by surprise at the sudden shift in the tone of the situation. She seems to have taken you for your word about being friendly. You reach out and shake her hand, finding her grip unsurprisingly strong and firm. 'I'm Jana, by the way,' she lets you know. The two of you exchange names and pleasantries, and after a little while of chatting, you feel like you've gotten to know Jana a bit. 'Well,' she says. 'It's been nice, but I really ought to head off. Now that I know who you are, you won't have to worry about being jumped. Just make sure you don't go wild on me,' she says with a teasing smile. As she turns to depart, she looks over her shoulder and adds, 'I'd love if you came to stop by and visit me sometime. I've got a room in the Mare's Quarters.' Realizing how much time has passed, you wave goodbye and collect yourself before returning to your own explorations.";
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
 				if Name entry is "Horsemazon":
 					now area entry is "Nowhere";
 					break;
+			now HP of Jana is 1;
+			change the East exit of Mares Quarters to Janas Bedroom;
+			now Encountering Jana is resolved;
 		else:	[ Defeated ]
 			say "     Falling down on to one knee, you find that you're no longer able to put up a fight. The horse kicks out at you, knocking you flat on your back. Then she slowly saunters over to you, hooves clacking on the ground. You feel her weight come down on your chest as she presses one of those animalistic feet down upon you. She huffs and snorts out of her equine snout as she gazes into your eyes. You feel utterly powerless beneath the strong, dominant woman as she ponders what your fate will be.";
 			if Player is male:
@@ -46,6 +48,7 @@ to say horsemazonVictory:          [Scene for when the Horsemazon defeats the pl
 			else:
 				[Placeholder scene]
 				say "     Coming to a decision, the towering horse-woman presses harder into your chest, using the tip of her riding crop to inspect your face in a dominant display of victory. 'I guess you weren't so worthy an opponent after all. Maybe next time you'll put up more of a fight.' You're terrified of what she might do with you next, but the warrior mare simply stows her weapons and walks away. You quickly stand back up and grab your stuff to depart before she changes her mind.";
+			increase XP of Jana by 1;
 
 Section 3 - Monster Defeat Scenes
 
@@ -100,6 +103,7 @@ to say horsemazonDefeat:           [Scene for when the player defeats the Horsem
 				say "     Deciding you'd rather not play around with her, you turn your back on the defeated woman to leave her in the shame of her defeat.";
 				now sextablerun is 1;
 		clear the screen and hyperlink list;
+		increase XP of Jana by -1;
 
 Section 4 - Monster Sex Scenes
 
@@ -111,7 +115,7 @@ to say horsemazonCowgirl:
 
 to say horsemazonPussyfuck:
 	if "Dominant" is listed in feats of Player:
-		say "     You walk around behind the fallen horse to admire her read end. The Amazon beauty's well-toned butt is a tantalizing sight, and you can't help but reach out and grope it, giving it a firm smack to watch it jiggle and sway. She responds with a whinny and neigh of surprise, but she's still too weak from the fight to stop you. Your eyes are then drawn the horses riding crop, now discarded on the ground, and a wicked idea begins to form in your head. You grab the whip and peel down her leather chaps, then wind up your arm to build the suspense. When you bring the crop back down, it makes contact with a satisfying 'SMACK!', and you don't doubt that her skin is left a beet red beneath all that fur. You smack her again and again, hearing her whinny with each strike, and you notice that she's begun dripping with arousal at your abuse. 'Oh, you're a naughty girl, aren't you?' you tease with another smack from the crop.";
+		say "     You walk around behind the fallen horse to admire her read end. The Amazon beauty's well-toned butt is a tantalizing sight, and you can't help but reach out and grope it, giving it a firm smack to watch it jiggle and sway. She responds with a whinny and neigh of surprise, but she's still too weak from the fight to stop you. Your eyes are then drawn to the horses riding crop, now discarded on the ground, and a wicked idea begins to form in your head. You grab the whip and peel down her leather chaps, then wind up your arm to build the suspense. When you bring the crop back down, it makes contact with a satisfying 'SMACK!', and you don't doubt that her skin is left a beet red beneath all that fur. You smack her again and again, hearing her whinny with each strike, and you notice that she's begun dripping with arousal at your abuse. 'Oh, you're a naughty girl, aren't you?' you tease with another smack from the crop.";
 		say "     Finally deciding that you've head enough of the foreplay, you reposition yourself to be kneeling behind her exposed, fleshy ass. You plop your [Cock of player] cock right between her cheeks, to which she responds with a half-hearted, almost playful struggle to get away. You grip her by the hips and pull her back in place, hotdogging your dick as you do. 'You won't be getting away that easy,' you tell her, playing along with the game. Then you bring your cock down to rub against her pussy, finding it moistened and lubed, aching to be fucked. 'Feels, like you're more than ready to go for a little ride,' you tease her. She shudders and whinnies at your words, trying to deny your claim, but you know she secretly likes it. She's already starting to press back against you, trying to draw you inside.";
 		say "     Not wanting to waste another second after such an invitation, you quickly thrust inside her. Both of you cry aloud in unison as the sensation of your cock piercing her tight sex overtakes you. You hilt yourself in one go, then hold yourself there as she adjusts to your size. You only give her a handful of seconds though, before you begin to thoroughly pound her, sawing rapidly in and out of her sweet pussy. Her eyes glaze over as she revels in being used as your personal fucktoy. You grip her ass firmly as you continue to fuck her, squeezing her malleable flesh and giving a her another slap here and there to remind her of her place. Her tail flicks up and down your chest in rhythm with the rocking of your bodies. Sensing that she's nearing her limit, you give a particularly hard and deep thrust that sends her over the edge. She shouts up into the air as her marehood clamps down tightly around your member and starts to throb as she climaxes. The continuous squeezing and clenching sends you over the edge as well, and you paint her insides with splurt after splurt of cum.";
 		say "     When you've both finally come down from your orgasmic highs, you pull out of her with a wet slurp, watching as your seed slowly drips down her thighs. With a pat on the rump, you stand back up and reequip your gear, leaving her where she is to lie exhausted in the mess.";
@@ -154,7 +158,7 @@ to say horsemazonInsert:
 	add "Horsemazon" to infections of TailList;
 	now Name entry is "Horsemazon";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
-	now enemy Name entry is "June"; [specific name of unique enemy]
+	now enemy Name entry is "Jana"; [specific name of unique enemy]
 	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[horsemazonAttack]";
 	now defeated entry is "[horsemazonDefeat]";
@@ -260,7 +264,7 @@ a postimport rule: [bugfixing rules for players that import savegames]
 		choose row y in Table of Random Critters;
 		if Name entry is "Horsemazon":
 			now MonsterID is y;
-			if horsemazonIntroduction is true:
+			if HP of Jana > 0:
 				now area entry is "Nowhere";
 			else:
 				now area entry is "Plains";
