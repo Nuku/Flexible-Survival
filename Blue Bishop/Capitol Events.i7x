@@ -12,10 +12,9 @@ Object	Name
 dragatorspot	"dragatorspot"
 
 dragatorspot is a situation.
-ResolveFunction of dragatorspot is "[ResolveEvent dragatorspot]".
-Sarea of dragatorspot is "Capitol".
+The sarea of dragatorspot is "Capitol".
 
-to say ResolveEvent dragatorspot:
+Instead of resolving dragatorspot:
 	say "     Down the street, you spot a crocodile-like beast. It has six legs and is covered in dark purple scales - one of the ebonflame dragators. You watch it with sympathy as it knocks over trash cans and uses its huge jaws and teeth to rummage through the refuse. Such a stupid, unclean creature is easily avoided.";
 	increase score by 1;
 	now dragatorspot is resolved;
@@ -25,11 +24,10 @@ Object	Name
 whelpspot	"whelpspot"
 
 whelpspot is a situation.
-ResolveFunction of whelpspot is "[ResolveEvent whelpspot]".
-Sarea of whelpspot is "Capitol".
+The sarea of whelpspot is "Capitol".
 whelpspotnum is a number that varies.
 
-to say ResolveEvent whelpspot:
+Instead of resolving whelpspot:
 	say "     A shadow darts overhead and you instinctively dive for cover. Hiding in an abandoned car, you watch worriedly while a flock of [one of]dark[or]ebonflame[stopping] whelps swoops overhead. They do not linger long, heading off in the direction of the Capitol Building.";
 	increase score by 1;
 	increase whelpspotnum by 1;
@@ -43,10 +41,9 @@ Object	Name
 Ebonflame Nest	"Ebonflame Nest"
 
 Ebonflame Nest is a situation.
-ResolveFunction of Ebonflame Nest is "[ResolveEvent Ebonflame Nest]".
-Sarea of Ebonflame Nest is "Capitol".
+The sarea of Ebonflame Nest is "Capitol".
 
-to say ResolveEvent Ebonflame Nest:
+Instead of resolving Ebonflame Nest:
 	setmonster "Ebonflame Whelp";
 	say "     Upon your travels across this blasted parts of the city, you ";
 	let bonus be ( perception of Player - 10 ) / 2;
@@ -90,7 +87,7 @@ to say ResolveEvent Ebonflame Nest:
 				say "     You decide that it's not worth the trouble, stepping back and departing before you're potentially forced to contend with these creatures or whatever might have birthed them.";
 				now Resolution of Ebonflame Nest is 4; [didn't fight]
 		else:
-			say ". Too slow to react, the pavement gives way, you following in its wake as you descend into a shallow cave, landing on the broken earth with an audible thud";
+			say ". Too slow to react, the pavement gives way, you follow in its wake as it forces you to descend into a shallow cave, landing on the broken earth with an audible thud";
 			let dam be a random number between 1 and 8;
 			if hardmode is true, increase dam by a random number between 0 and 4;
 			if "Toughened" is listed in feats of Player, decrease dam by 2;
@@ -105,11 +102,11 @@ to say ResolveEvent Ebonflame Nest:
 				now HP of Player is 1;
 				say ". The impact is strong enough to render you unconscious, the chittering sound of ebonflame whelps the only thing you can recall before you black out.";
 				say "     Your consciousness is roused once again by strained squeals and yipping of your apparent assailants. The writhing, heated flesh of a few whelps on you, more strewn about, rather exhausted themselves. As you shift, it immediately becomes clear that you're partially doused with the creatures['] glowing seed[if scalevalue of Player > 3], an impressive feat for someone as large as you. These whelps have either been very busy, or you've been out for quite some time[else]. The whelps must have been busy with you while you were lying unconscious[end if].";
-				say "     Though you still feel a couple heaving against your [if scalevalue of Player > 3]large [end if]behind, it's clear they're all too spent to fight you. Embarrassed as you are, you easily shove them off, weakly pulling yourself back up the hole. As you crawl back from whence you came, it's clear by the twisted aftertaste in your mouth that the small creatures made the most of what they could against your helpless form.[impregchance][mimpregchance]";
-				infect "Ebonflame Whelp";
-				infect "Ebonflame Whelp";
-				infect "Ebonflame Whelp";
+				say "     Though you still feel a couple heaving against your [if scalevalue of Player > 3]large [end if]behind, it's clear they're all too spent to fight you. Embarrassed as you are, you easily shove them off, weakly pulling yourself back up the hole. As you crawl back from whence you came, it's clear by the twisted aftertaste in your mouth that the small creatures made the most of what they could against your helpless form.";
 				now Resolution of Ebonflame Nest is 5; [fell into the nest]
+				CreatureSexAftermath "Player" receives "PussyFuck" from "Ebonflame Whelp";
+				CreatureSexAftermath "Player" receives "OralCock" from "Ebonflame Whelp";
+				CreatureSexAftermath "PLayer" receives "PussyFuck" from "Ebonflame Whelp";
 	now Ebonflame Nest is resolved;
 
 to say ebonflamegauntlet:
@@ -127,10 +124,10 @@ to say ebonflamegauntlet:
 			else:
 				say "     Unable to handle this many whelps, [if HP of Player > 0]you concede to submitting to the beasts[else]you eventually fall to one of them, who squawks loudly to brag of its prowess over its kin[end if], those felled prior slowly rising up to recover from your attack before the whole lot of them descend upon you. Engulfed in numerous masses of twisted, ebonflame scales, the chirping, chittering noises they emit are almost unbearable[if Player is submissive]. You are too overwhelmed by your submissive inclinations to resist their wanton, fiery desire[else if HP of Player > 0]. Their wanton, fiery desires is too overwhelming for you to resist[else]. Your impotent attempts at pushing them away too inadequate to dissuade their wanton, fiery desire[end if].";
 			say "     You're briefly forced to cry out, though they will not abide your involvement in their lust-laden song, your mouth immediately plugged by the [if scalevalue of Player > 3]erections of two of the whelps[else]cock of one of these whelps[end if]. [if HP of Player < 1]Weakened[else]Twisted[end if] moans muffled by [if scalevalue of Player > 3]their inadequate tools[else]its inadequate tool[end if], [if Cunt Count of Player > 2]they seek to plug your other holes, two more thrusting into two of your cunts, while the remainder assail your frame with their own irreverent, heaving assault[else if Cunt Count of Player is 2]they seek to plug your other holes, two more thrusting into both of your cunts, while the remainder assail your frame with their own irreverent, heaving assault[else if Cunt Count of Player is 1]they seek to plug your other hole, two of them managing to fit themselves into your cunt, an affair the cramped pair seem to fight over between thrusts, while the remainder assail your frame with their own irreverent, heaving assault[else if anallevel > 1 and scalevalue of Player > 3]they seek to plug your other hole, two of them managing to fit themselves past your anal ring, exploiting your large size to both thrust into your inviting portal, while the remainder assail your frame with their own irreverent, heaving assault[else if anallevel > 1]they seek to plug your other hole, two of them managing to fit themselves past your anal ring, an affair the cramped pair seem to fight over between thrusts, while the remainder assail your frame with their own irreverent, heaving assault[else]the remainder assailing your frame with their own irreverent, heaving thrusts[end if]. A handful of heated, sweat-laden minutes pass before feel one cry out in blissful release, its kin soon following suit.";
-			say "     You are quick to assume that they are finished with their fun, but it's clear that, since you came down on -their- home, they have nowhere else to be, and they thusly continue to use you, new ones falling in place when one becomes too exhausted. What feels like an eternity passes before they're all finally spent and [if HP of Player > 0 or player is submissive]have nothing left to offer you[else]you've recovered enough to push them off[end if]. Exhausted, covered in sexual fluids, and quite embarrassed with yourself, you pull yourself out of the hole and back from whence you came before their parents might return.[mimpregchance][impregchance]";
-			infect "Ebonflame Whelp";
-			infect "Ebonflame Whelp";
-			infect "Ebonflame Whelp";
+			say "     You are quick to assume that they are finished with their fun, but it's clear that, since you came down on -their- home, they have nowhere else to be, and they thusly continue to use you, new ones falling in place when one becomes too exhausted. What feels like an eternity passes before they're all finally spent and [if HP of Player > 0 or player is submissive]have nothing left to offer you[else]you've recovered enough to push them off[end if]. Exhausted, covered in sexual fluids, and quite embarrassed with yourself, you pull yourself out of the hole and back from whence you came before their parents might return.";
+			CreatureSexAftermath "Player" receives "OralCock" from "Ebonflame Whelp";
+			CreatureSexAftermath "Player" receives "PussyFuck" from "Ebonflame Whelp";
+			CreatureSexAftermath "Player" receives "AssFuck" from "Ebonflame Whelp";
 			now Resolution of Ebonflame Nest is 2; [fought and lost]
 			break;
 		else if fightoutcome >= 30:
@@ -151,10 +148,9 @@ Object	Name
 Strange Meeting	"Strange Meeting"
 
 Strange Meeting is a situation.
-ResolveFunction of Strange Meeting is "[ResolveEvent Strange Meeting]".
-Sarea of Strange Meeting is "Capitol".
+The sarea of Strange Meeting is "Capitol".
 
-to say ResolveEvent Strange Meeting:
+Instead of resolving Strange Meeting:
 	say "     Traveling through the ruined area, you happen upon what appears to be a set of ebonflame dragonkin in the distance. Thankfully not being spotted, you duck behind some rubble, watching what they do.";
 	say "     They appear to just be standing there, one drake flanked by a pair of dragators, their intent soon made somewhat clear when a new party - a set of dark elves - calmly advance upon them. You imagine this would be rather odd for the two to meet in this manner, and it's clear that they share this sentiment as they look none too fond of this arrangement.";
 	say "     Too far to hear what they actually say, they seem to be arguing over something, tossing accusations left and right and not really coming to any agreement. It would appear that tension is running high enough that they might turn on each other before they're interrupted when a sound from the open area, opposite to you, draws their attention.";
@@ -169,10 +165,9 @@ Object	Name
 Failed Escape	"Failed Escape"
 
 Failed Escape is a situation.
-ResolveFunction of Failed Escape is "[ResolveEvent Failed Escape]".
-Sarea of Failed Escape is "Capitol".
+The sarea of Failed Escape is "Capitol".
 
-to say ResolveEvent Failed Escape:
+Instead of resolving Failed Escape:
 	say "     You encounter what appears to be a crashed military helicopter. Its equipment is completely roasted and its once-occupants are nowhere to be found. Upon closer inspection, there appears to be the stains of some sexual fluids, long since dried and caked on the charred surfaces, perhaps inferring the fate of those who tried to escape on this.";
 	now Failed Escape is resolved;
 
@@ -184,10 +179,9 @@ Object	Name
 Charred Pickets	"Charred Pickets"
 
 Charred Pickets is a situation.
-ResolveFunction of Charred Pickets is "[ResolveEvent Charred Pickets]".
-Sarea of Charred Pickets is "Capitol".
+The sarea of Charred Pickets is "Capitol".
 
-to say ResolveEvent Charred Pickets:
+Instead of resolving Charred Pickets:
 	say "     You manage to find some peculiar picket signs strewn about a small area, too burnt up to make out what they might have been for. You imagine that the people carrying these signs were rudely interrupted in the middle of their protest.";
 	now charred pickets is resolved;
 

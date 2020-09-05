@@ -657,7 +657,7 @@ When Play begins:
 	now lootchance entry is 40;
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "-";
+	now TrophyFunction entry is "";
 	now scale entry is 5;
 	now body descriptor entry is "[one of]slender[or]serpentine[or]flexible[or]strong[at random]";
 	now type entry is "draconic";

@@ -725,7 +725,7 @@ When Play begins:
 	now lootchance entry is 45; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "-";
+	now TrophyFunction entry is "";
 	now scale entry is 3;
 	now body descriptor entry is "[one of]lean[or]feral[or]bestial[at random]";
 	now type entry is "[one of]feral[or]bestial[at random]";
@@ -885,9 +885,9 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "pewter seed"	"[pewterseeddesc]"	1	pewter seed
 
-pewter seed is a grab object. pewter seed is infectious. Strain of pewter seed is "Pewter Consort". pewter seed is cum.
+pewter seed is a grab object. pewter seed is infectious. The strain of pewter seed is "Pewter Consort". pewter seed is cum.
 the scent of pewter seed is "There's a slight, metallic sweetness hidden under its more masculine aroma.".
-Usedesc of pewter seed is "     You have little difficulty downing the warm fluid. It makes you a little tingly all over...";
+The usedesc of pewter seed is "     You have little difficulty downing the warm fluid. It makes you a little tingly all over...";
 
 to say pewterseeddesc:
 	say "The silvery seed of a strange, eyeless monster";

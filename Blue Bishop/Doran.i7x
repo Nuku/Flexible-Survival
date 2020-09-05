@@ -57,7 +57,7 @@ when play begins:
 [   1 = Strict sex autofire                                                  ]
 [   2 = Loose sex autofire (wait 2 days after having sex)                    ]
 
-[ DoranPlayerBlueballing - Boolean, Doran Blue-Balling the player            ]
+[ DoranPlayerBlueballing - Boolean, Doran Blue-Balling of the player         ]
 [   false = Initial. Nothing happens                                         ]
 [   true = Player has been blue-balled in the scene                          ]
 
@@ -287,10 +287,11 @@ to say DoranVictory_MountHim: [fuck the dragon]
 	say ". It takes you some time to recover, eventually [if scalevalue of Player < 4]climbing[else]pulling yourself[end if] off. The dragon lays there for a bit, panting to himself in the wake of being ravaged. He eventually does crawl back to his feet, looking satisfied.";
 	say "     'I rather enjoyed that, victor! Perhaps they would be interested in another go sometime down the line?' He goes on to explain where he resides. Apparently there's a cave within [bold type]Rocky Outcropping[roman type] not far from here, and his instructions are clear enough that you should have no issue getting there. 'Doran's the name, by the way.'";
 	say "     Finished, he turns to depart in that direction, his prior poise somewhat diminished under the exhausted weight of his cum-stained[if Cock Length of Player > 17] and no doubt quite sore[end if] form.";
+	NPCSexAftermath Doran receives "AssFuck" from Player;
 
 to say DoranVictory_ReceiveBJ: [oral cock]
 	say "     You see no harm in humoring the dragon, freeing yourself of any obstruction that might cover you before gesturing to your [cock size desc of Player] cock[smn], to which he eagerly struts toward. Too eager, in fact...";
-	say "     'Hum, my victor is wont to such simple affections. I'm happy to oblige.' Scaled lips parting to expose his teeth, you no doubt feel slightly concerned that this might be some manner of trick the beast is about to play on you, but the fear is assuaged when those same lips envelop [if Cock Count of Player > 2]one of them, taloned hand moving to stroke one of its brothers[else if Cock Count of Player is 2]one of them, taloned hand moving to stroke its brother[else]it[end if]. Humid breath enveloping your lower torso, you abide his thick tongue's initial, teasing query.";
+	say "     'Hum, my victor is one for such simple affections. I'm happy to oblige.' Scaled lips parting to expose his teeth, you no doubt feel slightly concerned that this might be some manner of trick the beast is about to play on you, but the fear is assuaged when those same lips envelop [if Cock Count of Player > 2]one of your cocks, taloned hand moving to stroke one of its brothers[else if Cock Count of Player is 2]one of your cocks, taloned hand moving to stroke its brother[else]your cock[end if]. Humid breath enveloping your lower torso, you abide his thick tongue's initial, teasing query.";
 	say "     'Oh, my victor [if Cock Length of Player > 17]is so well-endowed, I wonder if I'll properly be able to pleasure them[else]tastes so inviting, I'm going to enjoy this[end if].' He pulls away briefly to offer this remark, '...If I might be so selfish, this offering leaves me quite aroused, might my victor grant me the chance to offer myself some pleasure as I attend to them?' You imagine [ghe][']d not be as capable of pleasuring you with his attention split. Shall you oblige his request? Otherwise, you'll ensure his attention remains solely on you.";
 	if Player consents:
 		say "     You decide to allow him this opportunity, to which he eagerly obliges, hand moving [if Cock Count of Player > 1]away from your spare cock to attend his own[else]over to attend his own cock[end if] before his maw envelops your flesh a second time, his endeavors now much more deliberate. Dexterous, slick appendage eager to wrap around your [cock size desc of Player] tool, he would exhibit a voracious desire to satisfy your need[if Cock Length of Player < 17], frequently pushing the limits of his endurance to engulf your impressive dick[end if]. As his need for self-pleasure rises, so does the pace in which he bobs against you become erratic, driving you ever-closer to bliss along the way.";
@@ -304,10 +305,11 @@ to say DoranVictory_ReceiveBJ: [oral cock]
 		say "     The air is filled with the sound of the dragon's wet affection for but a few minutes before he drives you to orgasm, organ[smn] erupting against his tongue[if Cock Count of Player > 1] and talon[end if]. With a disciplined determination, he milks you dry of every last drop of your [Cum Load Size of Player] payload, [if Cock Count of Player > 2]talon bunching up at your second dick's head that he might lick it clean when he concludes with the first, though he is not so dexterous that he can stop the others from spilling all over the ground[else if Cock Count of Player is 2]talon bunching up at your second dick's head that he might lick it clean when he is concludes with the first[else]licking it clean once you might offer no more for him[end if][if Ball Size of Player > 5]. He doesn't seem even remotely phased by the amount you offer him; rather, [ghe][']d be quite jovial over it, reveling in your excess[end if].";
 	say "     'Alright, I certainly hope my victor was pleased...' It takes him a moment to recover, cleaning himself off and regaining what composure might have slipped from him prior. 'That was satisfying! Perhaps you would be interested in another go sometime down the line?' He goes on to explain where he resides. Apparently there's a cave within [bold type]Rocky Outcropping[roman type] not far from here, and his instructions are clear enough that you should have no issue getting there. 'Doran's the name, by the way.'";
 	say "     Finished, he turns to depart in that direction, scaled and well-toned ass waving at you in his departure, as though to entice you to follow.";
+	NPCSexAftermath Doran receives "OralCock" from Player;
 
 to say DoranVictory_Cunnilingus: [oral cunt]
 	say "     You see no harm in humoring the dragon, freeing yourself of any obstruction that might cover you before gesturing to your [cunt size desc of Player] cunt[sfn], to which he eagerly struts toward. Too eager, in fact...";
-	say "     'Hum, my victor is wont to such simple affections. I'm happy to oblige.' Scaled lips parting to expose his teeth, you no doubt feel slightly concerned that this might be some manner of trick the beast is about to play on you, but the fear is assuaged when those same lips embrace [if Cunt Count of Player > 1]one of them[else]it[end if][if Cock Count of Player > 1], taloned hand moving to stroke one of your exposed dicks[else if Cock Count of Player is 1], taloned hand moving to stroke your exposed dick[else if Cunt Count of Player > 1], taloned hand moving to stroke one of its sisters[else if Cunt Count of Player is 2], taloned hand moving to stroke its sister[end if]. Humid breath enveloping your lower torso, you abide his thick tongue's initial, teasing query, testing your supple folds and their pliability.";
+	say "     'Hum, my victor is one for such simple affections. I'm happy to oblige.' Scaled lips parting to expose his teeth, you no doubt feel slightly concerned that this might be some manner of trick the beast is about to play on you, but the fear is assuaged when those same lips embrace [if Cunt Count of Player > 1]one of them[else]it[end if][if Cock Count of Player > 1], taloned hand moving to stroke one of your exposed dicks[else if Cock Count of Player is 1], taloned hand moving to stroke your exposed dick[else if Cunt Count of Player > 1], taloned hand moving to stroke one of its sisters[else if Cunt Count of Player is 2], taloned hand moving to stroke its sister[end if]. Humid breath enveloping your lower torso, you abide his thick tongue's initial, teasing query, testing your supple folds and their pliability.";
 	say "     'Oh, my victor [if Cunt Depth of Player > 17]is so spacious, I wonder if I'll properly be able to pleasure them[else]tastes so inviting, I'm going to enjoy this[end if].' He pulls away briefly to offer this remark, '...If I might be so selfish, your offering leaves me quite aroused, might you grant me the chance to offer myself some pleasure as I attend to you?' You imagine [ghe][']d not be as capable of pleasuring you with his attention split. Shall you oblige his request? Otherwise, you'll ensure his attention remains solely on you.";
 	if Player consents:
 		say "     You decide to allow him this opportunity, to which he eagerly obliges, hand moving [if Player is male]away from your cock to attend his own[else if Cunt Count of Player > 1]away from your spare portal to attend his dick[else]over to attend his dick[end if] before his maw envelops your pussy a second time, his endeavors now much more deliberate. Dexterous, slick appendage eager to dive within your [cunt size desc of Player] depths, he exhibits a voracious desire to satisfy your need, [if Cunt Depth of Player < 17]your ease compelling his fervor further[end if]. As his need for self-pleasure rises, so does the pace in which his tongue attends you become erratic, driving you ever-closer to bliss along the way.";
@@ -324,6 +326,7 @@ to say DoranVictory_Cunnilingus: [oral cunt]
 		say "     The air is filled with the sound of the dragon's wet affection for but a few minutes before he drives you to orgasm, feminine portal tightening around his tongue[if Player is male] as your cock[smn] erupt, staining yourself with your [Cum Load Size of Player] payload[end if]. With a disciplined dedication, he licks you clean until it is barren with naught but a thin veneer of his saliva.";
 	say "     'Alright, I certainly hope my victor was pleased...' It takes him a moment to recover, cleaning himself off and regaining what composure might have slipped from him prior. 'That was satisfying! Perhaps my victor would be interested in another go sometime down the line?' He goes on to explain where he resides. Apparently there's a cave within [bold type]Rocky Outcropping[roman type] not far from here, and his instructions are clear enough that you should have no issue getting there. 'Doran's the name, by the way.'";
 	say "     Finished, he turns to depart in that direction, scaled and well-toned ass waving at you in his departure, as though to entice you to follow.";
+	NPCSexAftermath Doran receives "OralPussy" from Player;
 
 to say DoranVictory_Vaginal: [cunt sex]
 	say "     With some curiosity, your eyes wander down upon the dragon's more private regions. Already aroused at the prospect of your imminent exploitation, you can see his exposed, fleshy dick already emerged from the ";
@@ -352,6 +355,7 @@ to say DoranVictory_Vaginal: [cunt sex]
 		say "     Eventually, you pull yourself free of the dragon's now-softened organ, stepping off of him.";
 		say "     'Oh, my victor is quite impressive at being able to take me.' He offers his praise before getting back up, taking a moment to regain his posture. 'That was satisfying! Perhaps they would be interested in another go sometime down the line?' He goes on to explain where he resides. Apparently there's a cave within [bold type]Rocky Outcropping[roman type] not far from here, and his instructions are clear enough that you should have no issue getting there. 'Doran's the name, by the way.'";
 	say "     Finished, he turns to depart in that direction, scaled and well-toned ass waving at you in his departure, as though to entice you to follow.";
+	NPCSexAftermath Player receives "PussyFuck" from Doran;
 
 to say DoranVictory_Anal: [anal sex]
 	say "     With some curiosity, your eyes wander down upon the dragon's more private regions. Already aroused at the prospect of your imminent exploitation, you can see his exposed, fleshy dick already emerged from the ";
@@ -380,6 +384,7 @@ to say DoranVictory_Anal: [anal sex]
 		say "     Eventually, you pull yourself free of the dragon's now-softened organ, stepping off of him.";
 		say "     'Oh, my victor quite impressive at being able to take me.' He offers his praise before getting back up, taking a moment to regain his posture. 'That was satisfying! Perhaps they would be interested in another go sometime down the line?' He goes on to explain where he resides. Apparently there's a cave within [bold type]Rocky Outcropping[roman type] not far from here, and his instructions are clear enough that you should have no issue getting there. 'Doran's the name, by the way.'";
 	say "     Finished, he turns to depart in that direction, scaled and well-toned ass waving at you in his departure, as though to entice you to follow.";
+	NPCSexAftermath Player receives "AssFuck" from Doran;
 
 to say DoranVictory_TurnDown: [turn down]
 	say "     Not in the mood, or perhaps weirded out by the creature's odd demeanor and eagerness to submit, you decide to reject his offer. He seems to ponder this for a moment before conceding.";
@@ -439,7 +444,7 @@ When Play begins:
 	now lootchance entry is 0;
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "-";
+	now TrophyFunction entry is "";
 	now scale entry is 4;
 	now body descriptor entry is "draconic";
 	now type entry is "draconic";
@@ -562,7 +567,7 @@ Rocky Outcropping	"Rocky Outcropping"
 
 Rocky Outcropping is a room. It is fasttravel. It is private. It is sleepsafe.
 Outcropping Exit is a door. Outcropping Exit is dangerous. The marea of Outcropping Exit is "Plains". Outcropping Exit is undescribed. Outcropping Exit is east of Rocky Outcropping.
-Description of Rocky Outcropping is "[RockyOutcroppingDescription]".
+the description of Rocky Outcropping is "[RockyOutcroppingDescription]".
 to say RockyOutcroppingDescription:
 	dorangendercheck;
 	say "     The cavernous alcove, of which Doran resides in, is quite large and spacious for the [gdragon]. You find it littered with various bits and baubles [ghe]'s no doubt stumbled upon and collected for [ghis] amusement, though nothing of particular interest or value catches your eye. It's a little unkempt, but isn't all that bad all things considered. [if daytimer is day]For the most part, light floods in from the cave's entrance, though there's also a campfire near the cave's center which still contains a few errant, glowing embers, indicative of its recent use[else]Faint starlight creeps in from the outside, though the main source of illumination remains [ghis] roaring campfire at the cave's center[end if]. No doubt the surrounding outcropping of stone shields the place from the wind, making the cave relatively calm and quiet.";
@@ -599,7 +604,7 @@ PenileVirgin of Doran is true.
 SexuallyExperienced of Doran is false.
 MainInfection of Doran is "Peculiar Dragon".
 the linkaction of Doran is "Possible Actions: [link]talk[as]talk doran[end link], [link]smell[as]smell doran[end link], [link]fuck[as]fuck doran[end link], [link]request[as]request doran[end link], [link]discuss[as]discuss doran[end link][line break]".
-Description of Doran is "[DoranLook]".
+the description of Doran is "[DoranLook]".
 the fuckscene of Doran is "[DoranSex]".
 
 instead of sniffing Rocky Outcropping:
@@ -1117,6 +1122,9 @@ to say DoranDom_Anal: [Anal Sex] [BODY MODDED]
 		DoranVoreProtocol;
 	else:
 		say "     '[one of]Well done[or]Many thanks[or]My thanks[at random], [if DoranRoleIntensity is 0][one of]my [DoranPlayerRegard] takes their [gdragon] like a good slut[or]I always enjoy filling my [DoranPlayerRegard] with their [gdragon]'s cum[or]I look forward to using my [DoranPlayerRegard] in the future[at random][else][one of]my [DoranPlayerRegard] treats their [gdragon] well[or]I always enjoy my [DoranPlayerRegard]'s attention[or]I look forward to having more fun with my [DoranPlayerRegard] in the future[at random][end if].' Following [ghis] adulation [ghe] [if DoranRoleIntensity is 0]nonetheless appears rather fond of leaving you as a mess, letting you off to clean yourself[else]helps to clean you off, tongue's slick affection shared with you[end if] before resting back at the campfire once more.";
+	NPCSexAftermath Player receives "AssFuck" from Doran;
+	NPCSexAftermath Player receives "OralCock" from Doran;
+	[PCSexAftermath Doran receives "" from Player;][Doran rims player's ass]
 
 to say DoranDom_Vaginal: [Cunt Sex] [BODY MODDED]
 	if DoranAutofired is true:
@@ -1131,7 +1139,7 @@ to say DoranDom_Vaginal: [Cunt Sex] [BODY MODDED]
 		say "     Writhing, indignant intrusion encountering [if Cunt Depth of Player > 17]little[else if Cunt Depth of Player > 11]only slight[else]a fair bit of[end if] resistance in its movement through your depths, each shoving advance of the twitching thing forcing another gasp from your lips. [gche] subjects you to this ritual for a [if DoranRoleIntensity is 0]considerable[else]fair[end if] amount of time, leaving your hole a slick[if DoranRoleIntensity is 0] and dripping[end if] mess before [ghe]'s finally satisfied[if DoranRoleIntensity is 0], so aroused by this abuse that you could climax off of it alone, if not for the [gdragon]'s keen eye tempering restraint[end if].";
 	else:
 		say ", spare talon brought within [ghis] maw before it's exposed once more, now-slick digit descending upon your behind, offering its[if DoranRoleIntensity is 0] familiar[end if] caress against your exposed cunt[sfn]. [if DoranRoleIntensity is 0]You beg for [ghim] to force [ghis] finger upon your depths, much to [ghis] amusement, teasing you for but a moment longer before [ghe] obliges, causing you to moan as[else]Briefly teasing you, wanton moans escaping your breath, it's not long before[end if] you feel it plunge its way past [if Cunt Count of Player > 1]the supple folds of one[else]your supple folds[end if].";
-		say "     Firm, curving intrusion contending with [if Cunt Depth of Player > 17]little[else if Cunt Depth of Player > 11]only slight[else]a fair bit of[end if] resistance in its movement through your depths, each shoving advance of the thing forcing another gasp from your lips. [gche] subjects you to this ritual for a [if DoranRoleIntensity is 0]considerable[else]fair[end if] amount of time, leaving your hole a slick and[if DoranRoleIntensity is 0] significantly[end if] loosened up mess before [ghe]'s finally satisfied[if DoranRoleIntensity is 0], so aroused by this abuse that you could climax off of it alone, if not for the [gdragon]'s keen eye tempering restraint[end if].";
+		say "     Firm, curving intrusion contending with [if Cunt Depth of Player > 17]little[else if Cunt Depth of Player > 11]only slight[else]a fair bit of[end if] resistance in its movement through your depths, each shoving advance of the cock forcing another gasp from your lips. [gche] subjects you to this ritual for a [if DoranRoleIntensity is 0]considerable[else]fair[end if] amount of time, leaving your hole a slick and[if DoranRoleIntensity is 0] significantly[end if] loosened up mess before [ghe]'s finally satisfied[if DoranRoleIntensity is 0], so aroused by this abuse that you could climax off of it alone, if not for the [gdragon]'s keen eye tempering restraint[end if].";
 	if DoranRoleIntensity is 0:
 		say "     '[one of]Tsk[or]Oh[or]Hm[or]Ha[or]Heh[at random], [one of]my [DoranPlayerRegard] is quite desperate for their [gdragon]'s cock, aren't they[or]my [DoranPlayerRegard] is desperate to be bred, aren't they[or]Oh, if my [DoranPlayerRegard] could see all the ways they writhe, they'd say they look very silly, wouldn't they[at random]";
 	else:
@@ -1220,7 +1228,9 @@ to say DoranDom_Vaginal: [Cunt Sex] [BODY MODDED]
 		DoranVoreProtocol;
 	else:
 		say "     '[one of]Well done[or]Many thanks[or]My thanks[at random], [if DoranRoleIntensity is 0][one of]my [DoranPlayerRegard] takes their [gdragon] like a good slut[or]I always enjoy filling my [DoranPlayerRegard] with their [gdragon]'s cum[or]I look forward to using my [DoranPlayerRegard] in the future[at random][else][one of]my [DoranPlayerRegard] treats their [gdragon] well[or]I always enjoy my [DoranPlayerRegard]'s attention[or]I look forward to having more fun with my [DoranPlayerRegard] in the future[at random][end if].' Following [ghis] adulation [ghe] [if DoranRoleIntensity is 0]nonetheless appears rather fond of leaving you as a mess, letting you off to clean yourself[else]helps to clean you off, tongue's slick affection shared with you[end if] before resting back at the campfire once more.";
-
+	NPCSexAftermath Player receives "PussyFuck" from Doran;
+	NPCSexAftermath Player receives "OralCock" from Doran;
+[continue]
 to say DoranDom_Oral: [Oral Sex] [BODY MODDED]
 	if DoranAutofired is true:
 		say "     You, rather abruptly, find yourself pulled next to the[if daytimer is day] smoldering[end if] campfire by Doran, a wanton look about [ghim] as [ghe] forces you into giving [ghim] your undivided attention, poised silhouette partially outlined against the [if daytimer is day]creeping daylight[else]fire[end if].";

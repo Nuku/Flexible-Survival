@@ -26,6 +26,7 @@ to say ebdrakevic:
 		say "     Gradually, the monster's sadistic revels melt away to leave her rising, primal needs, thrusting her terrible organ through your bowels with a wild, increasingly blind fervor. Howling terribly, the shrill dragon sharp talons rake along your back, slicked by sweat and soon her tongue's similarly searing saliva, as though the monster has regressed into a rabid, even more monstrous state.";
 		say "     '[one of]Breed - breed - fuck, FUCK[or]Cum - CUM, fuck[or]I-...I must - FUCK[at random]!' Barely coherent by this point, you're afraid she's going to pound you completely into the ground before finally letting out a shrill, deafening howl, still fucking you wildly as the monster's cock gushes what feels like gallons of her burning seed. You're lost in an exhausted haze of tainted agony, but she doesn't relent, and instead seems to get -angry- at you as her lust dies down, wildly fucking you even as she's spent.[movichance]";
 		say "     The dragoness eventually seems to give up. Heavy gouts of smoke puffing with each heavy pant from the creature, she otherwise seems barely exhausted by her rampage, sounding more amused by your wholly abused form. Wrenching herself free at last, she cackles, shoving you along with a foot and taunting you until you finally find the strength to crawl away on your own accord";
+		CreatureSexAftermath "Player" receives "AssFuck" from "Ebonflame Drake";
 		if blanchefight is true:
 			say "...";
 		else:
@@ -38,6 +39,7 @@ to say ebdrakevic:
 		say "     Gradually, the monster's sadistic revels melt away to leave her rising, primal needs, thrusting her terrible organ through your bowels with a wild, increasingly blind fervor. Howling terribly, the shrill dragon sharp talons rake along your back, slicked by sweat and soon her tongue's similarly searing saliva, as though the monster has regressed into a rabid, even more monstrous state.";
 		say "     '[one of]Breed - breed - fuck, FUCK[or]Cum - CUM, fuck[or]I-...I must - FUCK[at random]!' Barely coherent by this point, you're afraid she's going to pound you completely into the ground before finally letting out a shrill, deafening howl, still fucking you wildly as the monster's cock gushes what feels like gallons of her burning seed. You're lost in an exhausted haze of tainted agony, but she doesn't relent, and instead seems to get -angry- at you as her lust dies down, wildly fucking you even as she's spent.[fovichance]";
 		say "     The dragoness eventually seems to give up. Heavy gouts of smoke puffing with each heavy pant from the creature, she otherwise seems barely exhausted by her rampage, sounding more amused by your wholly abused form. Wrenching herself free at last, she cackles, shoving you along with a foot and taunting you until you finally find the strength to crawl away on your own accord";
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Ebonflame Drake";
 		if blanchefight is true:
 			say "...";
 		else:
@@ -47,10 +49,11 @@ to say ebdrakevic:
 		say "     The dragoness circles around your[if scalevalue of Player > 3] larger,[end if] [bodytype of Player] form, she wraps [if scalevalue of Player > 3]both[else]one[end if] of her scaled hands around your neck, pulling your head forward until you're forced to stare down her glowing eyes.";
 		say "     '[one of]Ha[or]Hmm[or]Hmpf[at random], [one of]like what you see[or]don't you find me pretty[or]are you arrogant, or just plain stupid[at random]? [one of]How about a kiss for the lady[or]Would you like to feel this lady's tongue[at random]?' She doesn't seem to care for your response, because immediately she presses her coarse, scaled lip against yours, her powerful tendril-like tongue piercing your maw's depths.";
 		say "     He saliva burns terribly against your soft flesh, [if HP of Player > 0]forced to writhe in protest even with your submission[else]driving you to weakly writhe in protest[end if], making her laugh against the forced kiss. You start to gag and cough as your lungs are flooded with her smoldering breath, and she finally pulls away once your wholly dazed from the affair.";
-		say "     The lizard's hand[if scalevalue of Player > 3]s are[else] is[end if] still gripped around your neck, however, and she immediately plunges your head southwards, until she's rubbing your face against her charred black, throbbing cock. Sharp barbs pressing against you, her precum is just as burning as it's smeared against you.";
+		say "     The lizard's hand[if scalevalue of Player > 3]s are[else] is[end if] still gripped around your neck, however, and she immediately plunges your head southwards, until she's rubbing your face against her charred black, throbbing cock. Sharp barbs pressing against you, her precum equally burning as it's smeared against you.";
 		say "     '[one of]Satisfy my need[or]Pay the tribute[or]Suck me off[at random], [one of]whelp[or]fool[or]plaything[at random], [one of]and maybe I'll let you off[or]and perhaps you'll live to see another day[or]or I'll be sure to prolong your suffering[at random]!' Guided by her forceful grip, the pointed tip of her draconic dick as plunged between your lips, taste flooded with the intense sensation of her molten, glowing seed. Forced to bob against the organ, its barbs do nothing but make your efforts more difficult, though she's dead set on making sure you don't slow down.";
 		say "     As things progress, you become increasingly concerned about the monster's imminent bliss, the dragoness becoming increasingly feral and desperate for release with each passing second, until she's practically clawing at you to give it to her.";
 		say "     '[one of]F-faster - fuck[or]I'm - going to burn a hole straight through you[or]If you don't make me cum r-right now, you can't even imagine - [at random]!' You're instinctively worried about when she finally climaxes, but your desperate attempts to pull away fail with her plunging you back on the burning rod. Your struggle is ultimately in vain as she finally lets out a deafening, shrill howl, pinning your lips firm against her crotch as she sputters thick, successive gouts of her fiery load down your throat.";
+		CreatureSexAftermath "Player" receives "OralCock" from "Ebonflame Drake";
 		if blanchefight is true:
 			say "     You feel like you briefly black out from the intense sensation. You quickly regain consciousness, however, as the cackling monster kicks at you, having left you slumped on the ground...";
 		else:
@@ -141,7 +144,7 @@ When Play begins:
 	now lootchance entry is 75;
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "-";
+	now TrophyFunction entry is "";
 	now scale entry is 3;
 	now body descriptor entry is "[one of]well-toned[or]draconic[or]powerful[or]fearsome[at random]";
 	now type entry is "[one of]draconic[or]reptilian[at random]";
@@ -290,8 +293,8 @@ name	desc	weight	object
 "ebonflame scale"	"Coarse and dense, the scale still feels warm in your hand."	1	ebonflame scale
 
 ebonflame scale is a grab object.
-ebonflame scale is infectious. Strain of ebonflame scale is "Ebonflame Drake".
-Usedesc of ebonflame scale is "You swallow the dark scale. It's extremely bitter and hot to the taste, like eating something charred black by an open fire.".
+ebonflame scale is infectious. The strain of ebonflame scale is "Ebonflame Drake".
+the usedesc of ebonflame scale is "You swallow the dark scale. It's extremely bitter and hot to the taste, like eating something charred black by an open fire.".
 
 instead of sniffing ebonflame scale:
 	say "It smells of something burnt to a crisp.";

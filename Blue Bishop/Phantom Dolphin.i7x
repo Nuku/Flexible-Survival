@@ -7,7 +7,7 @@ object	name
 Discarded Dolphin	"Discarded Dolphin"
 
 Discarded Dolphin is a person. Discarded Dolphin is in Bouncy Castle.
-Description of Discarded Dolphin is "[flotlook]".
+the description of Discarded Dolphin is "[flotlook]".
 the fuckscene of Discarded Dolphin is "[flotfuck]".
 instead of sniffing Discarded Dolphin:
 	say "     The object smells faintly of fresh synthetics and saltwater.";

@@ -681,7 +681,7 @@ to say YamatM_4: [Cunt Catching]
 		if Player consents:
 			say "     '[one of]Oh[or]Hmm[or]What[at random]? [one of]I thought you wanted to be in control[or]Seems someone bit off more than they could chew[or]Not so arrogant now, I imagine[at random]!' Teasing you as the dragon does, he does at least oblige your request, talons wrapping around you a second time. Gradually raising you up the rod, you can feel each ridge leave you, air already heavy with the scent of sex, loud with the organ's wet departure.";
 			say "     At around the halfway point, he harshly plunges you back down on the briefly exposed length, loudly slapping against the serpent's scaled underbelly, before repeating this ritual. He seems a little surprised that you can handle him so easily, so he picks up the motion pretty quickly, all the better for you.";
-			say "     By this point, your impressive size makes you able to withstand Strain of being constantly railed by this terrible organ, and it's the dragon himself that seems to have a bit of difficulty with keeping pace.";
+			say "     By this point, your impressive size makes you able to withstand the strain of being constantly railed by this terrible organ, and it's the dragon himself that seems to have a bit of difficulty with keeping pace.";
 			say "     '[one of]S-such skill[or]S-Still you persist?[run paragraph on][or]I-I will outlast you[at random]!' He tries to force your bliss before his, but eventually he's succumbs to his overwhelming need, bathed in the hot, panting breath of the serpent until the air is filled with his loud roar.";
 			say "     Harshly pumped with gout after successive gout of his massive load, your belly balloons outward[if scalevalue of Player > 4] almost[end if] immediately before it begins to gush out from your hole, the dragon keeping you pinned lest you fire off like a rocket. The whole ordeal more than enough to finally set you off[if Player is male]cock[smn] painting the dragon with your [Cum Load Size of Player] load[else]cunt firmly squeezing against the dragon's overwhelming intrusion[end if].";
 			say "     As his fury subsides, you slowly pull yourself free of the dragon's softening dick, a flood of his seed escaping you in its wake, before climbing off him. Taking a moment to clean himself off of the mess, he seems a little taken aback at how quickly you recover.";
@@ -800,7 +800,7 @@ to say YamatM_5: [Anal Catching]
 		if Player consents:
 			say "     '[one of]Oh[or]Hmm[or]What[at random]? [one of]I thought you wanted to be in control[or]Seems someone bit off more than they could chew[or]Not so arrogant now, I imagine[at random]!' Teasing you as the dragon does, he does at least oblige your request, talons wrapping around you a second time. Gradually raising you up the rod, you can feel each ridge leave you, air already heavy with the scent of sex, loud with the organ's wet departure.";
 			say "     At around the halfway point, he harshly plunges you back down on the briefly exposed length, loudly slapping against the serpent's scaled underbelly, before repeating this ritual. He seems a little surprised that you can handle him so easily, so he picks up the motion pretty quickly, all the better for you.";
-			say "     By this point, your tainted skill makes you strong enough to withstand Strain of being constantly railed by this terrible organ, and it's the dragon himself that seems to have a bit of difficulty with keeping pace.";
+			say "     By this point, your tainted skill makes you strong enough to withstand the strain of being constantly railed by this terrible organ, and it's the dragon himself that seems to have a bit of difficulty with keeping pace.";
 			say "     '[one of]S-such skill[or]H-how is this possible?[run paragraph on][or]T-this is impossible[at random]!' He tries to force your bliss before his, but eventually he's succumbs to his overwhelming need, bathed in the hot, panting breath of the serpent until the air is filled with his loud roar.";
 			say "     Harshly pumped with gout after successive gout of his massive load, your belly balloons outward[if scalevalue of Player > 4] almost[end if] immediately before it begins to gush out from your ass, the dragon keeping you pinned lest you fire off like a rocket. The whole ordeal more than enough to finally set you off [if Player is male]cock[smn] painting the dragon with your [Cum Load Size of Player] load[else if Player is female]cunt[sfn] gushing and staining the dragon[else]much in spite your lack of proper outlet[end if].";
 			say "     As his fury subsides, you slowly pull yourself free of the dragon's softening dick, a flood of his seed escaping you in its wake, before climbing off him. Taking a moment to clean himself off of the mess, he seems a little taken aback at how quickly you recover.";
@@ -967,7 +967,7 @@ When Play begins:
 	now lootchance entry is 40;
 	now MilkItem entry is "";
 	now CumItem entry is "";
-	now TrophyFunction entry is "-";
+	now TrophyFunction entry is "";
 	now scale entry is 5;
 	now body descriptor entry is "[one of]slender[or]serpentine[or]flexible[or]elongated[at random]";
 	now type entry is "[one of]draconic[or]serpentine[at random]";
@@ -1089,9 +1089,9 @@ name	desc	weight	object
 "dragon scale"	"A yellow, slightly shimmering dragon scale."	1	dragon scale
 "dragon hair"	"Some strands of golden hair that shimmer slightly in the light."	1	dragon hair
 
-dragon scale is a grab object. dragon scale is infectious. Strain of dragon scale is "Yamato Dragon".
+dragon scale is a grab object. dragon scale is infectious. The strain of dragon scale is "Yamato Dragon".
 the scent of dragon scale is "The yellow scale smells strange and otherworldly.".
-Usedesc of dragon scale is "[usedragonscale]";
+The usedesc of dragon scale is "[usedragonscale]";
 
 to say usedragonscale:		[only alters sizes, not gender]
 	choose row MonsterID from Table of Random Critters;
@@ -1112,9 +1112,9 @@ to say usedragonscale:		[only alters sizes, not gender]
 		now sex entry is "nochange";
 	say "     Following the strange urge you have, press the large scale to your chest. As the spot starts to tingle, the scale slowly sinks into you and those tingles spread out across your body.";
 
-dragon hair is a grab object. dragon hair is infectious. Strain of dragon hair is "Yamato Dragoness".
+dragon hair is a grab object. dragon hair is infectious. The strain of dragon hair is "Yamato Dragoness".
 the scent of dragon hair is "The golden hair smells of exotic, otherworldly scents.".
-Usedesc of dragon hair is "[usedragonhair]";
+The usedesc of dragon hair is "[usedragonhair]";
 
 to say usedragonhair:
 	choose row MonsterID from Table of Random Critters;
